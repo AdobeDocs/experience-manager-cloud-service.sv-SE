@@ -1,0 +1,105 @@
+---
+title: Betydande ändringar av Adobe Experience Manager (AEM) som en molntjänst
+description: Betydande ändringar av Adobe Experience Manager (AEM) som en molntjänst
+translation-type: tm+mt
+source-git-commit: e76de9b84931dced6383570e384ffdb6fb334daf
+
+---
+
+
+# Betydande ändringar av Adobe Experience Manager (AEM) som en molntjänst {#notable-changes-aem-cloud}
+
+AEM Cloud-tjänsten har många nya funktioner och möjligheter för att hantera dina AEM-projekt. Det finns dock ett antal skillnader mellan AEM-webbplatser lokalt eller i Adobe Managed Service jämfört med AEM Cloud-tjänsten. Det här dokumentet visar de viktiga skillnaderna.
+
+>[!NOTE]
+>Det här dokumentet belyser de anmärkningsvärda förändringarna av AEM som helhet. Information om lösningsspecifika ändringar finns i:
+>
+>* [Betydande ändringar av AEM-webbplatser i AEM Cloud-tjänsten](/help/sites-cloud/sites-cloud-changes.md)
+>* [Betydande ändringar av AEM Assets i AEM Cloud-tjänsten](/help/assets/assets-cloud-changes.md)
+
+
+De största skillnaderna finns i följande områden:
+
+* [/apps och /libs kan inte ändras under körning](#apps-libs-immutable)
+* [OSGi-paket och -inställningar måste vara databasbaserade](#osgi)
+* [Ändringar i publiceringsdatabasen tillåts inte](#changes-to-publish-repo)
+* [Anpassade runmodes tillåts inte](#custom-runmodes)
+* [Borttagning av replikeringsagenter](#replication-agents)
+* [Borttagning av Classic UI](#classic-ui)
+* [Publish-side Delivery](#publish-side-delivery)
+* [Hantering och leverans av tillgångar](#asset-handling)
+
+## /apps och /libs kan inte ändras under körning {#apps-libs-immutable}
+
+Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddade. Funktioner eller anpassad kod som förväntas göra ändringar där kommer inte att kunna göra det. Ett fel returneras om att det här innehållet är skrivskyddat och att skrivåtgärden inte kunde slutföras. Detta påverkar ett antal områden i AEM:
+
+* Inga ändringar i `/libs` tillåts alls.
+   * Detta är inte en ny regel, men den har inte införts i tidigare lokala versioner av AEM.
+* Övertäckningar för områden i `/libs` vilka det är tillåtet att lägga över är fortfarande tillåtna inom `/apps`.
+   * Sådana övertäckningar måste komma från Git via CI/CD-pipeline.
+* Designinformation för statiska mallar som lagras i `/apps` kan inte redigeras via användargränssnittet.
+   * Vi rekommenderar att du använder Redigerbara mallar i stället.
+   * Om statiska mallar fortfarande krävs måste konfigurationsinformationen komma från Git via CI/CD-flödet.
+* MSM Blueprint och anpassade MSM roll-out-konfigurationer måste installeras från Git via CI/CD-pipeline.
+* I18n-översättningsändringar måste komma från Git via CI/CD-pipeline.
+
+## OSGi-paket och -inställningar måste vara databasbaserade {#osgi}
+
+Webbkonsolen, som användes i tidigare versioner av AEM för att ändra OSGi-inställningarna, är inte tillgänglig i AEM Cloud-tjänsten. Därför måste ändringar av OSGi införas via CI/CD-ledningen.
+
+* Ändringar av OSGi-inställningar kan bara göras via Git-beständighet som JCR-baserade OSGi-inställningar.
+* Nya eller uppdaterade OSGi-paket måste introduceras via Git som en del av CI/CD-produktionsprocessen.
+
+## Ändringar i publiceringsdatabasen tillåts inte {#changes-to-publish-repo}
+
+Direktändringar i publiceringsdatabasen tillåts inte i AEM Cloud-tjänsten. I tidigare versioner av lokalt AEM eller AEM på AMS kan kodändringar göras direkt i publiceringsdatabasen, till exempel för att skapa användare, uppdatera användarprofilen och skapa noder. Detta är inte längre möjligt och kan minskas på följande sätt:
+
+* För innehåll- och innehållsbaserad konfiguration: gör ändringarna i författarinstansen och publicerar dem.
+* För kod och konfiguration: gör ändringarna i GIT-databasen och kör CI/CD-flödet för att implementera dem.
+* För användarrelaterade data, t.ex. formuläröverföringar eller profildata: använda den enhetliga profiltjänsten från Experience Cloud Platform eller någon annan sessionsmedveten butik från tredje part.
+
+## Anpassade runmodes tillåts inte {#custom-runmodes}
+
+Följande körningslägen är färdiga för AEM Cloud-tjänsten:
+
+* `author`
+* `publish`
+* `prod`
+* `author.prod`
+* `publish.prod`
+* `stage`
+* `author.stage`
+* `publish.stage`
+* `dev`
+* `author.dev`
+* `publish.dev`
+
+Ytterligare eller anpassade körningslägen är inte möjliga i AEM Cloud-tjänsten.
+
+## Borttagning av replikeringsagenter {#replication-agents}
+
+I AEM Cloud-tjänsten publiceras innehåll med [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html). Replikeringsagenterna som användes i tidigare versioner av AEM används inte längre eller tillhandahålls, vilket kan påverka följande områden i befintliga AEM-projekt:
+
+* Anpassade arbetsflöden som till exempel skickar innehåll till replikeringsagenter för förhandsgranskningsservrar.
+* Anpassning till replikeringsagenter för att omvandla innehåll
+* Använda omvänd replikering för att återföra innehåll från publicering till författaren
+
+## Borttagning av Classic UI {#classic-ui}
+
+Det klassiska användargränssnittet är inte längre tillgängligt i AEM Cloud-tjänsten.
+
+## Publish-side Delivery {#publish-side-delivery}
+
+HTTP-acceleration inklusive CDN och trafikhantering för författare och publiceringstjänster tillhandahålls som standard i AEM Cloud-tjänsten.
+
+För projektövergångar från AMS eller en lokal installation rekommenderar Adobe starkt att man utnyttjar det inbyggda CDN-nätverket eftersom funktionerna i AEM Cloud-tjänsten är optimerade för det CDN som tillhandahålls.
+
+## Hantering och leverans av tillgångar {#asset-handling}
+
+Överföring, hantering och hämtning av resurser har optimerats i AEM Cloud-tjänsten för att bli effektivare och ge bättre skalbarhet och snabbare överföringar och nedladdningar. Detta kan dock påverka en del befintlig anpassad kod.
+
+* Standardarbetsflödet **DAM-resursuppdatering** i tidigare versioner av AEM är inte längre tillgängligt.
+* Webbplatskomponenter som levererar en binär **utan omvandling** bör använda direktnedladdning.
+   * Sling GET-servleten har ändrats så att den gör detta som standard.
+* Webbplatskomponenter som levererar en binär **med omvandling** (till exempel storleksändring via serverlet) kan fortsätta fungera som de har.
+* Resurser som kommer in via Package Manager kräver manuell ombearbetning med åtgärden **Bearbeta resurs** i Assets-gränssnittet.
