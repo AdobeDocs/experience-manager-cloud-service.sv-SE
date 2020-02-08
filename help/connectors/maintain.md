@@ -1,0 +1,17 @@
+---
+title: Underhålla en AEM Connector
+description: Underhålla en AEM Connector
+translation-type: tm+mt
+source-git-commit: 629de3a9f55d2e4c52ef91c9e0bb5d439aebe84f
+
+---
+
+
+Underhålla en AEM Connector
+============================
+
+Den här artikeln innehåller information om underhåll av en AEM Connector och bör läsas tillsammans med artiklar om [implementering](implement.md) och [sändning](submit.md) av anslutningar.
+
+Även efter den första inlämningen kan det finnas skäl för en partner att uppdatera sin AEM Connector, antingen på grund av en ny version av AEM eller oberoende av den, till exempel för att lägga till funktioner eller åtgärda fel. I den här artikeln beskrivs processen för båda scenarierna och även en kunds normala process för validering av anslutningar vid uppgradering av AEM.
+
+AEM som molntjänstprogram uppdateras med AEM-underhållspatchar dagligen, med större ändringar aktiverade månadsvis under en funktionsrelease. AEM-uppdateringar är avsedda att vara bakåtkompatibla och därmed inte bryta mot program, men leverantörspartners rekommenderas att regelbundet kontrollera att deras anslutningar fungerar som de tänkt sig. Partnerteamet avgör om det går att få åtkomst till ett AEM-program/en AEM-miljö.
