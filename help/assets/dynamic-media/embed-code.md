@@ -1,0 +1,52 @@
+---
+title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
+description: Lär dig bädda in Dynamic Media-video eller -bilder på en webbsida
+translation-type: tm+mt
+source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+
+---
+
+
+# Bädda in Dynamic Media Video eller Image Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
+
+Använd funktionen **[!UICONTROL Bädda in kod]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på dina webbsidor. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Bädda in kod]** .
+
+Du bäddar bara in URL:er om du _inte_ använder AEM som WCM. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+
+Se [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+
+Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
+
+>[!NOTE]
+>
+>Inbäddningskoden kan inte kopieras förrän du har publicerat den valda resursen. Dessutom måste du även publicera visningsförinställningen eller bildförinställningen.
+>
+>Se [Publicera resurser](publishing-dynamicmedia-assets.md).
+>
+>Se [Publicera förinställningar](managing-viewer-presets.md#publishing-viewer-presets)för visningsprogram.
+>
+>Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
+
+**Bädda in Dynamic Media Video eller Image Viewer på en webbsida**
+
+1. Navigera till den *publicerade* video- eller bildresurs vars inbäddningskod du vill kopiera.
+
+   Kom ihåg att inbäddningskoden endast är tillgänglig att kopiera *när* du först har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
+
+   Se [Publicera resurser.](publishing-dynamicmedia-assets.md)
+
+   Se [Publicera förinställningar](managing-viewer-presets.md#publishing-viewer-presets)för visningsprogram.
+
+   Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
+
+1. I den vänstra listen väljer du listrutan och trycker på **[!UICONTROL visningsprogram]**.
+1. Tryck på ett namn på en visningsförinställning i den vänstra listen. Visningsförinställningen används på resursen.
+1. Tryck på **[!UICONTROL Bädda in]**.
+1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Bädda in kod]** och tryck sedan på **[!UICONTROL Stäng]**.
+1. Klistra in inbäddningskoden på dina webbsidor.
+
+## Använda HTTP/2 för att leverera dina dynamiska medieresurser {#using-http-to-deliver-your-dynamic-media-assets}
+
+HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
+
+Se [HTTP2 Delivery of Content](http2.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
