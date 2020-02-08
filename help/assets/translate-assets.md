@@ -1,0 +1,271 @@
+---
+title: Skapa och hantera digitala resurser på flera språk och kör översättningsarbetsflöden
+description: Lär dig automatisera arbetsflöden för översättning av resurser, inklusive binära filer, metadata och taggar till flera språk.
+contentOwner: AG
+translation-type: tm+mt
+source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+
+---
+
+
+# Flerspråkiga resurser {#multilingual-assets}
+
+Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt. Med Adobe Experience Manager Assets (AEM) kan ni automatisera översättningsarbetsflöden för resurser (inklusive binärfiler, metadata och taggar) och generera resurser på andra språk för användning i flerspråkiga projekt.
+
+Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med AEM och skapar projekt för översättning av resurser till flera språk. AEM har stöd för arbetsflöden för översättning mellan människor och datorer.
+
+Översättning: De översatta resurserna returneras och importeras till AEM. När din översättningsleverantör är integrerad med AEM skickas resurser automatiskt mellan AEM och översättningsleverantören.
+
+Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart metadata och taggar för resurser.
+
+<!--
+We have multiple articles around translation of assets. For now, dumping all content in this article to remove others and create only 1 master article.
+
+https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/translation-projects.html
+https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/preparing-assets-for-translation.html
+[Apply translation cloud services to folders](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/transition-cloud-services.html)
+
+One of these articles is a copy of [Preparing Content for Translation](https://docs.adobe.com/content/help/en/experience-manager-65/administering/introduction/tc-prep.html
+
+-->
+
+<!-- 
+Translating assets includes the following:
+
+1. [Connecting AEM with the translation service provider](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)
+1. [Creating translation integration framework configurations](/help/sites-administering/tc-tic.md)
+1. [Preparing assets for translation](prepare-assets-for-translation.md)
+1. [Applying translation cloud services to folders](transition-cloud-services.md)
+1. [Create translation projects](translation-projects.md)
+
+If your translation service provider does not provide a connector to integrate with AEM, use an [alternative process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+
+Also see, [Creating translation projects for content fragments](creating-translation-projects-for-content-fragments.md).
+
+-->
+
+## Förbered resurser för översättning {#prepare-assets-for-translation}
+
+Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt.
+
+I Adobe Experience Manager (AEM) Assets inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
+
+Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel `/content/dam/it` är den italienska språkroten för den italienska språkkopian. För språkkopior måste en [korrekt konfigurerad språkrot](#create-a-language-root) användas, så att rätt språk används när översättningar av källresurser utförs.
+
+Språkkopian som du ursprungligen lade till resurser för är språkinställningen. Språkmallsidan är källan som översätts till andra språk. En exempelmapphierarki innehåller flera språkrötter:
+
+```
+/content
+&nbsp; &nbsp; /- dam
+&nbsp; &nbsp; &nbsp; |- en
+&nbsp; &nbsp; &nbsp; |- fr
+&nbsp; &nbsp; &nbsp; |- de
+&nbsp; &nbsp; &nbsp; |- es
+&nbsp; &nbsp; &nbsp; |- it
+&nbsp; &nbsp; &nbsp; |- ja
+&nbsp; &nbsp; &nbsp; |- zh
+```
+
+Utför följande steg för att förbereda dina resurser för översättning:
+
+1. Skapa språkroten för din språkinställning. Språkroten för den engelska språkkopian i exempelmapphierarkin är till exempel */content/dam/en*. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](#create-a-language-root).
+
+1. Lägg till resurser i din språkinställning.
+1. Skapa språkroten för varje målspråk som du behöver en språkkopia för.
+
+### Skapa en språkrot {#create-a-language-root}
+
+Om du vill skapa språkroten skapar du en mapp och använder en ISO-språkkod som värde för egenskapen Namn. När du har skapat språkroten kan du skapa en språkkopia på valfri nivå i språkroten.
+
+Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `it` egenskapen Namn. Egenskapen Namn används som namn på objektnoden i databasen och avgör därför sökvägen till resurserna. (*&lt;server>:&lt;port>/assets.html/content/dam/it/*)
+
+1. I resurskonsolen klickar/trycker du på **[!UICONTROL Skapa]** och väljer **[!UICONTROL Mapp]** på menyn.
+1. I fältet Namn skriver du landskoden i formatet `<language-code>`.
+1. Klicka eller tryck på **[!UICONTROL Skapa]**. Språkroten skapas i resurskonsolen.
+
+### Visa språkrötter {#view-language-roots}
+
+Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista över språkrötter som har skapats i AEM Resurser.
+
+1. I Resurskonsolen väljer du den språkinställning som du vill skapa språkkopior för.
+1. Klicka på eller tryck på ikonen GlobalNav och välj **[!UICONTROL Referenser]** för att öppna referensrutan.
+1. Klicka eller tryck på **[!UICONTROL Språkkopior]** i rutan Referenser. På panelen Språkkopior visas språkkopiorna för resurserna.
+
+### Skapa ett nytt översättningsprojekt {#create-a-new-translation-project}
+
+Om du använder det här alternativet kopieras resurser som ska översättas till språkroten för det språk som du vill översätta till. Beroende på vilka alternativ du väljer skapas ett översättningsprojekt för resurserna i projektkonsolen. Beroende på inställningarna kan översättningsprojektet startas manuellt eller automatiskt så snart översättningsprojektet skapas.
+
+1. I resursgränssnittet väljer du den källmapp som du vill skapa en språkkopia för.
+1. Öppna rutan **[!UICONTROL Referenser]** och klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]**.
+1. Klicka/tryck på **[!UICONTROL Skapa och översätt]** längst ned.
+1. I listan **[!UICONTROL Målspråk]** väljer du det eller de språk som du vill skapa en mappstruktur för.
+1. Välj **[!UICONTROL Skapa ett nytt översättningsprojekt]** i listan **[!UICONTROL Projekt]**.
+1. Ange en rubrik för projektet i fältet **[!UICONTROL Projektnamn]** .
+1. Klicka/tryck på **[!UICONTROL Skapa]**. Resurser från källmappen kopieras till målmapparna för de språkinställningar du valde i steg 4.
+1. Om du vill navigera till mappen markerar du språkkopian och klickar på **[!UICONTROL Visa i Resurser]**.
+1. Navigera till projektkonsolen. Översättningsmappen kopieras till projektkonsolen.
+1. Öppna mappen för att visa översättningsprojektet.
+1. Klicka/tryck på projektet för att öppna informationssidan.
+1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i rutan **[!UICONTROL Översättningsjobb]** . <!-- For more details around job statuses, see [Monitoring the Status of a Translation Job](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job). -->
+1. I Assets-användargränssnittet öppnar du sidan Properties för var och en av de översatta resurserna för att visa översatta metadata.
+
+>[!NOTE]
+>
+>Den här funktionen är tillgänglig både för resurser och mappar. När en resurs väljs i stället för en mapp kopieras hela mapphierarkin upp till språkroten för att skapa en språkkopia för resursen.
+
+### Lägg till i ett befintligt översättningsprojekt {#add-to-existing-translation-project}
+
+Om du använder det här alternativet körs översättningsarbetsflödet för resurser som du lägger till i källmappen efter att ha kört ett tidigare arbetsflöde för översättning. Endast resurser som nyligen lagts till kopieras till målmappen som innehåller tidigare översatta resurser. Inget nytt översättningsprojekt skapas i det här fallet.
+
+1. Navigera till källmappen som innehåller oöversatta resurser i resursgränssnittet.
+1. Markera en resurs som du vill översätta och öppna **[!UICONTROL referensrutan]**. Under **[!UICONTROL Språkkopior]** visas antalet översättningskopior som är tillgängliga.
+1. Klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]**. En lista över tillgängliga översättningskopior visas.
+1. Klicka/tryck på **[!UICONTROL Skapa och översätt]** längst ned.
+1. I listan **[!UICONTROL Målspråk]** väljer du det eller de språk som du vill skapa en mappstruktur för.
+1. I listan **[!UICONTROL Projekt]** väljer du **[!UICONTROL Lägg till i befintligt översättningsprojekt]** för att köra översättningsarbetsflödet i mappen.
+   >[!NOTE]
+   >
+   >Om du väljer alternativet **[!UICONTROL Lägg till i befintligt översättningsprojekt]** läggs ditt översättningsprojekt till i ett befintligt projekt endast om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
+1. I listan **[!UICONTROL Befintliga översättningsprojekt]** väljer du ett projekt som du vill lägga till resursen för översättning.
+1. Klicka/tryck på **[!UICONTROL Skapa]**. Resurserna som ska översättas läggs till i målmappen. Den uppdaterade mappen listas under **[!UICONTROL Språkkopior]** .
+1. Navigera till projektkonsolen och öppna det befintliga översättningsprojektet som du har lagt till i.
+1. Klicka/tryck på sidan med projektinformation för översättning.
+1. Klicka på/tryck på ellipsen längst ned i rutan **Översättningsjobb** för att visa resurserna i översättningsarbetsflödet. I översättningsjobblistan visas även poster för metadata och taggar för resurser. Dessa poster anger att metadata och taggar för resurserna också översätts.
+
+   >[!NOTE]
+   >
+   >* Om du tar bort posten för taggar eller metadata översätts inga taggar eller metadata för resurserna.
+   >* Om du använder maskinöversättning översätts inte resursens binärfiler.
+   >* Om den resurs som du lägger till i översättningsjobbet innehåller delresurser, markerar du delresurserna och tar bort dem för översättningen för att fortsätta utan några fel.
+
+
+1. Om du vill starta översättningen av resurserna klickar/trycker du på pilen på **[!UICONTROL översättningsjobbpanelen]** och väljer **[!UICONTROL Start]** i listan. Ett meddelande meddelar när översättningsjobbet påbörjas.
+1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i rutan **[!UICONTROL Översättningsjobb]** . <!-- For more details, see [Monitoring the Status of a Translation Job](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job). -->
+1. När översättningen är klar ändras statusen till Klart för granskning. Navigera till resursgränssnittet och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
+
+### Uppdatera språkkopior {#update-language-copies}
+
+Kör det här arbetsflödet för att översätta alla ytterligare resurser och inkludera dem i en språkkopia för en viss språkinställning. I det här fallet läggs de översatta resurserna till i målmappen som redan innehåller tidigare översatta resurser. Beroende på vilka alternativ du väljer skapas ett översättningsprojekt eller så uppdateras ett befintligt översättningsprojekt för de nya resurserna. Arbetsflödet för att uppdatera språkkopior innehåller följande alternativ:
+
+* Skapa ett nytt översättningsprojekt
+* Lägg till i befintligt översättningsprojekt
+
+### Lägg till i befintligt översättningsprojekt {#add-to-existing-translation-project-1}
+
+Om du använder det här alternativet läggs resursuppsättningen till i ett befintligt översättningsprojekt för att uppdatera språkkopian för det språkområde du väljer.
+
+1. I resursgränssnittet väljer du den källmapp där du lade till en resursmapp.
+1. Öppna rutan **** Referenser och klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]** för att visa listan med språkkopior.
+1. Markera kryssrutan före **[!UICONTROL Språkkopior]**, där alla språkkopior markeras. Avmarkera andra kopior än den språkkopia (kopior) som motsvarar det eller de språk som du vill översätta till.
+1. Klicka/tryck på **[!UICONTROL Uppdatera språkkopior]** längst ned.
+1. Välj **[!UICONTROL Lägg till i befintligt översättningsprojekt]** i listan **[!UICONTROL Projekt]**.
+1. I listan **[!UICONTROL Befintliga översättningsprojekt]** väljer du ett projekt som du vill lägga till resursen för översättning.
+1. Klicka/tryck på **[!UICONTROL Start]**.
+1. Se steg 9-14 i [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) för att slutföra resten av proceduren.
+
+### Skapa tillfälliga språkkopior {#creating-temporary-language-copies}
+
+När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. AEM Resurser lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
+
+1. Klicka/tryck på källrotmappen under **[!UICONTROL Språkkopior]** som du redan har skapat en språkkopia för och klicka/tryck sedan på **[!UICONTROL Visa i resurser]** för att öppna mappen i AEM Resurser.
+1. I resursgränssnittet markerar du en resurs som du redan har översatt och klickar/trycker på **[!UICONTROL redigeringsikonen]** i verktygsfältet för att öppna resursen i redigeringsläge.
+1. Redigera resursen och spara sedan ändringarna.
+1. Uppdatera språkkopian genom att utföra steg 2-14 i proceduren [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) .
+1. Klicka på/tryck på ellipsen längst ned i rutan **[!UICONTROL Översättningsjobb]** . I listan över resurser på sidan **[!UICONTROL Översättningsjobb]** kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
+1. Markera kryssrutan bredvid **[!UICONTROL Titel]**.
+1. Klicka/tryck på **[!UICONTROL Acceptera översättning]** i verktygsfältet och klicka/tryck sedan på **[!UICONTROL Acceptera]** i dialogrutan för att skriva över den översatta resursen i målmappen med den översatta versionen av den redigerade resursen.
+
+   >[!NOTE]
+   >
+   >Om du vill att översättningsarbetsflödet ska kunna uppdatera målresurserna, godkänner du både resursen och metadata.
+
+   Klicka/tryck på **[!UICONTROL Avvisa översättning]** om du vill behålla den ursprungligen översatta versionen av resursen i målspråkets rot och avvisa den redigerade versionen.
+
+1. Navigera till resurskonsolen och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
+
+Tips om hur du översätter metadata för resurser effektivt finns i [5 steg för att översätta metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)på ett effektivt sätt.
+
+## Skapa översättningsprojekt {#creating-translation-projects}
+
+Om du vill skapa en språkkopia aktiverar du ett av följande språkkopieringsarbetsflöden som finns under referenspunkterna i resursgränssnittet:
+
+**Skapa och översätta**
+
+I det här arbetsflödet kopieras resurser som ska översättas till språkroten för det språk som du vill översätta till. Beroende på vilka alternativ du väljer skapas dessutom ett översättningsprojekt för resurserna i projektkonsolen. Beroende på inställningarna kan översättningsprojektet startas manuellt eller köras automatiskt så fort översättningsprojektet skapas.
+
+**Uppdatera språkkopior**
+
+Du kör det här arbetsflödet för att översätta ytterligare en grupp resurser och inkludera den i en språkkopia för en viss språkinställning. I det här fallet läggs de översatta resurserna till i målmappen som redan innehåller tidigare översatta resurser.
+
+>[!NOTE]
+>
+>Resursbinärfiler översätts bara om översättningstjänsten stöder översättning av binärfiler.
+
+>[!NOTE]
+>
+>Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF-filer och Adobe InDesign-filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
+
+### Skapa och översätta arbetsflöde {#create-and-translate-workflow}
+
+Du använder arbetsflödet för att skapa och översätta för att generera språkkopior för ett visst språk för första gången. Arbetsflödet innehåller följande alternativ:
+
+* Skapa endast struktur
+* Skapa ett nytt översättningsprojekt
+* Lägg till i befintligt översättningsprojekt
+
+### Skapa endast struktur {#create-structure-only}
+
+Använd alternativet **Skapa endast** struktur om du vill skapa en målmappshierarki inom målspråkets rot för att matcha källmappens hierarki inom källspråkets rot. I det här fallet kopieras källresurserna till målmappen. Inget översättningsprojekt genereras emellertid.
+
+1. I resursgränssnittet väljer du den källmapp som du vill skapa en struktur för i målspråkets rot.
+1. Öppna rutan **[!UICONTROL Referenser]** och klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]**.
+1. Klicka/tryck på **[!UICONTROL Skapa och översätt]** längst ned.
+1. I listan **[!UICONTROL Målspråk]** väljer du det språk som du vill skapa en mappstruktur för.
+1. I **[!UICONTROL projektlistan]** väljer du bara **** Skapa struktur.
+1. Klicka/tryck på **[!UICONTROL Skapa]**. Den nya strukturen för målspråket listas under **[!UICONTROL Språkkopior]**.
+1. Klicka på/tryck på strukturen i listan och klicka/tryck sedan på **[!UICONTROL Visa i resurser]** för att navigera till mappstrukturen i målspråket.
+
+## Använd översättningsmolntjänster på mappar {#applying-translation-cloud-services-to-folders}
+
+Med Adobe Experience Manager (AEM) kan ni använda molnbaserade översättningstjänster från den översättningsleverantör ni väljer för att se till att era resurser översätts utifrån era behov.
+
+Du kan använda översättningsmolntjänsten direkt i resursmappen så att den kan användas under översättningsarbetsflöden.
+
+### Använda översättningstjänster {#applying-the-translation-services}
+
+Genom att använda översättningsmolntjänster direkt i resursmappen behöver du inte konfigurera översättningstjänster när du skapar eller uppdaterar översättningsarbetsflöden.
+
+1. I Assets-användargränssnittet väljer du den mapp som du vill använda översättningstjänster på.
+1. Klicka/tryck på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet för att visa sidan **[!UICONTROL Mappegenskaper]** .
+
+   ![chlimage_1-215](assets/chlimage_1-215.png)
+
+1. Gå till fliken **[!UICONTROL Cloud-tjänster]** .
+1. Välj önskad översättningsleverantör i listan Cloud-tjänstkonfigurationer. Om du till exempel vill använda översättningstjänster från Microsoft väljer du **[!UICONTROL Microsoft Translator]**.
+
+   ![chlimage_1-216](assets/chlimage_1-216.png)
+
+1. Välj koppling för översättningsprovidern.
+
+   ![chlimage_1-217](assets/chlimage_1-217.png)
+
+1. Klicka/tryck på **[!UICONTROL Spara]** i verktygsfältet och klicka sedan på **[!UICONTROL OK]** för att stänga dialogrutan.Översättningstjänsten används i mappen.
+
+### Använd anpassad översättningskoppling {#applying-custom-translation-connector}
+
+Om du vill använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Om du vill använda en anpassad koppling måste du först installera kopplingen från Package Manager. Konfigurera sedan anslutningen från molntjänstkonsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över anslutningar på fliken Cloud-tjänster som beskrivs i [Använda översättningstjänsterna](#applying-the-translation-services). När du har tillämpat den anpassade kopplingen och kört översättningsarbetsflöden visas anslutningsinformationen under rubrikens **[!UICONTROL provider]** och **[!UICONTROL metod]** **** i översättningsprojektets översättningssammanfattningssida.
+
+1. Installera kopplingen från Package Manager.
+1. Klicka på/tryck på AEM-logotypen och gå till **[!UICONTROL Verktyg > Distribution > Cloud-tjänster]**.
+1. Leta reda på den koppling du installerade under **[!UICONTROL tredjepartstjänster]** på sidan **[!UICONTROL Cloud-tjänster]** .
+
+   ![chlimage_1-218](assets/chlimage_1-218.png)
+
+1. Klicka på/tryck på länken **[!UICONTROL Konfigurera nu]** för att öppna dialogrutan **[!UICONTROL Skapa konfiguration]** .
+
+   ![chlimage_1-219](assets/chlimage_1-219.png)
+
+1. Ange en titel och ett namn för kopplingen och klicka/tryck sedan på **[!UICONTROL Skapa]**. Den anpassade kopplingen finns i listan över anslutningar på fliken **[!UICONTROL Cloud-tjänster]** som beskrivs i steg 5 i [Använda översättningstjänsterna](#applying-the-translation-services).
+1. Kör ett översättningsarbetsflöde som beskrivs i Skapa översättningsprojekt när du har använt den anpassade kopplingen. Kontrollera informationen om kopplingen i **[!UICONTROL översättningssammanfattningsrutan]** i översättningsprojektet i **[!UICONTROL projektkonsolen]** .
+
+   ![chlimage_1-220](assets/chlimage_1-220.png)
