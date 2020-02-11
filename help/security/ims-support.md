@@ -2,7 +2,7 @@
 title: IMS-stöd för Adobe Experience Manager som en molntjänst
 description: 'IMS-stöd för Adobe Experience Manager som en molntjänst '
 translation-type: tm+mt
-source-git-commit: 7ece752a5f59966e0c6be638c37bcaaf238b629a
+source-git-commit: bef17376f0b7de79511f9ad6ceb00e9f084f45d2
 
 ---
 
@@ -26,7 +26,7 @@ AEM som en molntjänst erbjuder endast stöd för IMS-autentisering för förfat
 
 ## Arkitektur {#architecture}
 
-IMS-autentisering fungerar med OAuth-protokoll mellan AEM och Adobe IMS-slutpunkten. När en användare har lagts till i IMS och har en Adobe-identitet kan han/hon logga in på AEM Managed Services-instanser med IMS-inloggningsuppgifter.
+IMS-autentisering fungerar med OAuth-protokoll mellan AEM och Adobe IMS-slutpunkten. När en användare har lagts till i IMS och har en Adobe-identitet kan han/hon logga in på AEM-författartjänsten med IMS-inloggningsuppgifter.
 
 Inloggningsflödet för användaren visas nedan. Användaren omdirigeras till IMS och eventuellt till kund-ID för enkel inloggning och omdirigeras sedan tillbaka till AEM.
 
