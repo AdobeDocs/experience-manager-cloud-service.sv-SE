@@ -2,7 +2,7 @@
 title: Vad är annorlunda och vad är nytt - Adobe Experience Manager som en molntjänst
 description: 'Vad är annorlunda och vad är nytt - Adobe Experience Manager (AEM) som en molntjänst. '
 translation-type: tm+mt
-source-git-commit: 1548efb4c63c3c5dbd47b1b92a9e8bb998c42267
+source-git-commit: 27a16045ff0c22d65e61468036e6ee0b9ab1d826
 
 ---
 
@@ -121,7 +121,6 @@ Adobe ansvarar aktivt för att uppdatera alla driftsinstanser av tjänsten till 
 >Mer information finns i [Distributionsarkitektur](/help/core-concepts/architecture.md#deployment-architecture).
 
 ## Cloud Manager {#cloud-manager}
-
 
 Adobe Cloud Manager är en väsentlig del av AEM:s kontinuerliga uppgraderingsstrategi som en molntjänst, eftersom det styr alla uppdateringar av dina instanser - detta är obligatoriskt.
 
@@ -347,36 +346,4 @@ Resurserbjudandet omfattar nästa generation av mediehantering i molnet samt hö
 
 Mer information finns i [översikt och introduktion till Assets som en molntjänst](/help/assets/overview.md).
 
-<!--
 
-#### Previous Versions {#previous-versions-aem-sites}
-
-tbc
-
-#### AEM as a Cloud Service {#aem-as-a-cloud-service-aem-sites}
-
-tbc
-
--->
-
-<!--
-
-#### Previous Versions* {#previous-versions-aem-assets}
-
-tbc
-
-#### AEM as a Cloud Service {#aem-as-a-cloud-service-aem-assets}
-
-tbc 
-
--->
-
-<!--
-
-### Miscellaneous {#miscellaneous}
-
-#### AEM as a Cloud Service {#aem-as-a-cloud-service-miscellaneous}
-
-Additionally???
-
--->
