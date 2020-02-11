@@ -2,7 +2,7 @@
 title: Vad är annorlunda och vad är nytt - Adobe Experience Manager som en molntjänst
 description: 'Vad är annorlunda och vad är nytt - Adobe Experience Manager (AEM) som en molntjänst. '
 translation-type: tm+mt
-source-git-commit: b9a32b3ac4c296f4bb02e9a590c1b3e22d53f562
+source-git-commit: 38503961d0d7437511533d122ac1f4e7c8f9f042
 
 ---
 
@@ -136,7 +136,7 @@ Cloud Manager är:
 
 Antalet och typen av AEM-program som kan skapas från Cloud Manager kommer antingen från:
 
-* från kundlicensavtalet, [Shankari- vi kan inte nämna krediter]
+* från kundlicensavtalet,
 
 * från interna aktörer när AEM som molntjänst används för aktivering, eller utbildning,
 
