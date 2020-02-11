@@ -30,7 +30,7 @@ Följande termer används i relation till Adobe Experience Manager (AEM) som en 
 
 <!-- This section of the table must be alphabetic -->
 
-##  Terminologi {#terminology}
+## Terminologi {#terminology}
 
 | Term | Beskrivning |
 |---|---|
