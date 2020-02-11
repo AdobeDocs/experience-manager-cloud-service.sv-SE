@@ -2,7 +2,7 @@
 title: AEM som riktlinjer för utveckling av molntjänster
 description: 'Fylls i '
 translation-type: tm+mt
-source-git-commit: cedc14b0d71431988238d6cb4256936a5ceb759b
+source-git-commit: 13c0a670330532f574c2b38823b8a924c609e8e4
 
 ---
 
@@ -58,7 +58,7 @@ Kunderna har tillgång till CRXDE-stilen i utvecklingsmiljön, men inte i fas el
 
 En uppsättning verktyg för felsökning av AEM som utvecklingsmiljö i molnet finns på Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att författaren eller publiceringstjänstens URL:er justeras enligt följande:
 
-`https://dev-console>-<namespace>.<cluster>.dev.adobeaemcloud.com`
+`https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
 Följande CLI-kommando för Cloud Manager kan användas som en genväg för att starta utvecklarkonsolen baserat på en miljöparameter som beskrivs nedan:
 
