@@ -142,11 +142,9 @@ Så här öppnar du fragmentet för redigering:
    >[!NOTE]
    >
    >1. Ett meddelande visas när fragmentet redan refereras på en innehållssida.
-      >
-      >
-      >
-
-   2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
+   >
+   >
+   >2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
 
 
 3. Navigera genom de tre lägena med ikonerna på sidopanelen:
