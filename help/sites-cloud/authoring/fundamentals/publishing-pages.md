@@ -15,7 +15,7 @@ Detta kallas att publicera en sida. När du vill ta bort en sida från publiceri
 
 Du kan publicera/avpublicera en sida direkt eller vid ett fördefinierat datum/tid i framtiden.
 
-##  Terminologi {#terminology}
+## Terminologi {#terminology}
 
 Du kan stöta på olika termer om publicering när du arbetar med AEM.
 
