@@ -2,7 +2,7 @@
 title: Vad är annorlunda och vad är nytt - Adobe Experience Manager som en molntjänst
 description: 'Vad är annorlunda och vad är nytt - Adobe Experience Manager (AEM) som en molntjänst. '
 translation-type: tm+mt
-source-git-commit: eb28fedae5b87a67460f4cac97959f65972e652a
+source-git-commit: 1548efb4c63c3c5dbd47b1b92a9e8bb998c42267
 
 ---
 
@@ -118,27 +118,10 @@ Adobe ansvarar aktivt för att uppdatera alla driftsinstanser av tjänsten till 
 
 >[!NOTE]
 >
->Detta uppnås med [Cloud Manager](#cloud-manager).
+>Mer information finns i [Distributionsarkitektur](/help/core-concepts/architecture.md#deployment-architecture).
 
 ## Cloud Manager {#cloud-manager}
 
->[!NOTE]
->
->Mer information finns i [Distributionsarkitektur](/help/core-concepts/architecture.md#deployment-architecture).
-
-### Tidigare versioner {#previous-versions-cloud-manager}
-
-Cloud Manager användes som ett distributionsverktyg för instanser av AEM för hanterade tjänster.
-
-De viktigaste skillnaderna mellan Cloud Manager för AMS och Cloud Services är att när en klientorganisation skapas fylls den i med krediter baserade på de SKU:er som kunden har köpt.
-
->[!NOTE]
->Även om begreppet *krediter* är kritiska ur ett operativt perspektiv visas det inte direkt i användargränssnittet i Cloud Manager.
-
-Att skapa ett normalt program tar inte emot några krediter, men det måste finnas en kredit för att man ska kunna skapa ett.
-Mer information om hur olika program skapas finns i [Skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/creating-a-program.md).
-
-### AEM som molntjänst {#aem-as-a-cloud-service-cloud-manager}
 
 Adobe Cloud Manager är en väsentlig del av AEM:s kontinuerliga uppgraderingsstrategi som en molntjänst, eftersom det styr alla uppdateringar av dina instanser - detta är obligatoriskt.
 
