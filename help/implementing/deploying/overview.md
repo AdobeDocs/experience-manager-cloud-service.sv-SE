@@ -2,7 +2,7 @@
 title: Distribuera till AEM som en molntjänst
 description: 'Distribuera till AEM som en molntjänst '
 translation-type: tm+mt
-source-git-commit: 44df22ace403c962ffbabac5eec9302d98fc94f2
+source-git-commit: 6bf4d9d106a35ead10be235237986a60f2bf1148
 
 ---
 
@@ -48,7 +48,7 @@ Precis som för befintliga AEM-versioner som inte finns i molnet stöds en lokal
 > [!NOTE}
 >Det finns små skillnader i hur programmet fungerar på en lokal dator jämfört med Adobe Cloud. Dessa arkitektoniska skillnader måste respekteras under lokal utveckling och kan leda till ett annat beteende vid driftsättning i molninfrastrukturen. På grund av dessa skillnader är det viktigt att utföra de fullständiga testerna på dev- och stage-miljöer innan ny anpassad kod distribueras i produktionen.
 
-Nedan beskrivs processen för en utvecklare att få tillgång till den relevanta versionen av AEM-artefakterna, som vi kallar AEM som en molntjänst-SDK, som behövs för att utveckla anpassad kod för en intern release. Information om dispatchern finns [på den här sidan](/help/implementing/dispatcher/overview.md).
+För att kunna utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM som en molntjänst-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) hämtas och installeras. Mer information om hur du använder som verktyg för Cloud Service Dispatcher finns på [den här sidan](/help/implementing/dispatcher/overview.md).
 
 ## Distribuera innehållspaket via Cloud Manager och Package Manager {#deploying-content-packages-via-cloud-manager-and-package-manager}
 
