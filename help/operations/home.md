@@ -2,7 +2,7 @@
 title: Drift och underhåll av Adobe Experience Manager som en molntjänst
 description: Adobe Experience Manager som en molntjänst för drift och underhåll, självhjälpsresurser och dokumentationslänkar
 translation-type: tm+mt
-source-git-commit: 2312250505f47dc84acd1987b5ebae21fd232e2d
+source-git-commit: 3e379236fb663160209ec973f299cf85f6e3d42e
 
 ---
 
@@ -16,7 +16,6 @@ På den här sidan visas självhjälpsresurser om åtgärder och underhåll av E
 * [Innehållsreplikering](replication.md)
 * [Underhållsaktiviteter](maintenance.md)
 * [Säkerhetskopiera och återställa](backup.md)
-* [Indexering](indexing.md)
 
 ## Experience Manager som en molntjänst {#aem-guides}
 
