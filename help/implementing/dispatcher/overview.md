@@ -2,7 +2,7 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: b7f3122db5b55d515965b638c2b4aa4bc2a67fe6
+source-git-commit: 2ab8a4fb492b85c1a9b42442d868cdbc329756cf
 
 ---
 
@@ -806,9 +806,9 @@ Det finns inte längre stöd för `invalidate.cache` metoden eftersom den bara r
 AEM som en molntjänst arbetar på tjänstenivå, inte på den enskilda nodnivån, och därför är inte längre invalideringsinstruktionerna i [Dispatcher Help](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html) -dokumentationen korrekta.
 Istället bör agenten för tömning av replikering användas. Detta kan göras med replikerings-API:t. Dokumentationen för replikerings-API finns [här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/Replicator.html) . Ett exempel på hur du tömmer cachen finns på exempelsidan [för](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) API. Exemplet `CustomStep` innehållerexempel på hur du skickar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter. Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
 
-Bilden nedan visar detta.
+<!--The diagram below illustrates this.
 
-![](assets/cdn.png "CDNCDN")
+![CDN](assets/cdn.png "CDN")-->
 
 Om det finns oro för att dispatchercachen inte rensas kontaktar du kundsupport som kan tömma dispatchercachen om det behövs.
 
