@@ -2,7 +2,7 @@
 title: Förstå testresultaten - molntjänster
 description: Förstå testresultat - molntjänster
 translation-type: tm+mt
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+source-git-commit: a0630410d281913f35caa5ba33807496e612ef3d
 
 ---
 
@@ -117,7 +117,7 @@ I den här JAR-filen måste klassnamnen för de faktiska tester som ska köras s
 
 En klass med namnet `com.myco.tests.aem.ExampleIT` skulle till exempel köras, men inte en klass med namnet `com.myco.tests.aem.ExampleTest` .
 
-Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad för att vara kompatibel med de konventioner som används av testbiblioteket för aem-testing-clients. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder.
+Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad för att vara kompatibel med de konventioner som används av testbiblioteket för aem-testing-clients. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder. Mer information finns i [Git-länken](https://github.com/adobe/aem-testing-clients) .
 
 ## Anpassad funktionstestning {#custom-functional-test}
 
@@ -126,7 +126,7 @@ Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas ö
 Om JAR-test inte skapas av bygget godkänns testet som standard. Det här steget utförs nu direkt efter scendistributionen.
 
 > Obs!
->Knappen **Hämtningslogg** ger åtkomst till en ZIP-fil som innehåller loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM-körningsprocessen - de kan nås med de vanliga funktionerna för hämtning och spårningsloggar som beskrivs ovan.
+>Knappen **Hämtningslogg** ger åtkomst till en ZIP-fil som innehåller loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM-körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
 
 ## Lokal testkörning {#local-test-execution}
 
