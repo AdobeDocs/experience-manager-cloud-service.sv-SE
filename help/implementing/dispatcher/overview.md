@@ -2,7 +2,7 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: 64475ec492863f713a7cefaedc4c0782014682ae
+source-git-commit: ddc1b21dd14dcded72465e727ce740d481520170
 
 ---
 
@@ -697,45 +697,89 @@ Grattis! Om valideraren inte längre rapporterar något problem och dockningsbeh
 
 ## Dispatcher och CDN {#dispatcher-cdn}
 
+Leverans av publiceringstjänstinnehåll inkluderar:
+
+* CDN (hanteras vanligtvis av Adobe)
+* AEM Dispatcher
+* AEM-publicering
+
 Dataflödet är följande:
 
-1. URL i webbläsare
-2. Begäran gjordes till CDN som mappats i DNS till den domänen
-3. Om innehållet cachelagras fullständigt i CDN skickas det till webbläsaren av CDN
-4. Om innehållet inte är fullständigt cachelagrat anropar CDN (omvänd proxy) till dispatchern
-5. Om innehållet är fullständigt cachelagrat när avsändaren skickar det till CDN
-6. Om innehållet inte är fullständigt cachelagrat anropar avsändaren (omvänd proxy) till AEM-publiceringen
-7. Innehåll som återges av webbläsaren
+1. URL:en läggs till i webbläsaren
+1. Begäran gjordes till CDN som mappats i DNS till den domänen
+1. Om innehållet cachelagras fullständigt i CDN skickas det till webbläsaren av CDN
+1. Om innehållet inte är fullständigt cachelagrat anropar CDN (omvänd proxy) till dispatchern
+1. Om innehållet är fullständigt cachelagrat när avsändaren skickar det till CDN
+1. Om innehållet inte är fullständigt cachelagrat anropar avsändaren (omvänd proxy) till AEM-publiceringen
+1. Innehållet återges av webbläsaren, som också kan cachelagra det beroende på sidhuvudena
+
+Det mesta innehållet upphör att gälla efter fem minuter, vilket är ett tröskelvärde som både dispatcherns cache och CDN respekterar. Under omdistributioner av publiceringstjänsten rensas dispatchercachen och varnas därefter innan den nya publiceringsnoden tar emot trafik.
+
+Avsnitten nedan innehåller mer detaljerad information om innehållsleverans, inklusive CDN-konfiguration och cache-lagring av dispatcher.
+
+Information om replikering från författartjänsten till publiceringstjänsten finns [här](/help/operations/replication.md).
+
+>[!NOTE]
+>Trafiken går igenom en webbserver med apache som har stöd för moduler som dispatchern. Avsändaren används främst som cache för att begränsa bearbetningen av publiceringsnoderna för att öka prestandan.
 
 ### CDN {#cdn}
 
-AEM erbjuder två alternativ:
+AEM erbjuder tre alternativ:
 
-1. Hanterad CDN - AEM:s CDN som är färdig.
-2. Ohanterad CDN - Kunden har ett eget CDN och är helt ansvarig för att hantera det.
+1. Adobe Managed CDN - AEM&#39;s out-of-the-box CDN. Detta är det rekommenderade alternativet eftersom det är väl integrerat.
+1. Kundhanterad CDN - Kunden har ett eget CDN och är helt ansvarig för att hantera det.
+1. Peka på Adobe Managed CDN - kunden pekar på ett CDN till AEM&#39;s out-of-box CDN.
 
-Det första alternativet är mycket rekommenderat och Adobe ansvarar inte för resultatet av någon felkonfiguration när det andra alternativet används.
+>[!CAUTION]
+>Det första alternativet rekommenderas. Adobe kan inte hållas ansvarigt för resultatet av en felkonfiguration om du väljer det andra alternativet.
 
-#### Hanterad CDN {#managed-cdn}
+Det andra och tredje alternativet är tillåtet från fall till fall. Detta innebär att uppfylla vissa krav, inklusive, men inte begränsat till, kunden som har en äldre integrering med sin CDN-leverantör som är svår att ångra.
 
-När Adobe har etablerat CDN bör du skapa en CNAME och mappa programmets domäner till en Adobe-kontrollerad domän som är värd för den hanterade CDN-domänen.
+#### Adobe Managed CDN {#adobe-managed-cdn}
 
-CDN fungerar som en brandvägg för webbaserade applikationer i skikt 7, vilket kräver SSL-terminering, och därför krävs ett kundsignerat SSL-certifikat. Under förhandsversionen måste du tillhandahålla certifikatet till Adobe genom manuella processer.
+Det är enkelt att förbereda sig för innehållsleverans med hjälp av Adobes färdiga CDN enligt beskrivningen nedan:
 
-När GA används bör du överföra certifikatet till Cloud Manager, som i sin tur överför det till CDN. När SSL-certifikat upphör att gälla meddelas du så att du kan uppdatera certifikaten i Cloud Manager.
+1. Du skickar det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller den här informationen. Samordna med kundsupport för den här uppgiften.
+Obs! Aem as a Cloud Service does not support Domain Validated (DV) certificates.
+1. Kundsupport koordinerar sedan med dig tidpunkten för en CNAME DNS-post och pekar på deras FQDN till `adobe-aem.map.fastly.net`.
+1. Du meddelas när SSL-certifikaten upphör att gälla så att du kan skicka om de nya SSL-certifikaten.
 
-#### Ohanterad CDN {#unmanaged-cdn}
+Som standard kan all offentlig trafik för en Adobe-hanterad CDN-installation gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utvecklingsmiljöer och scenmiljöer). Om du vill begränsa trafiken till publiceringstjänsten för en viss miljö (t.ex. begränsa mellanlagring med ett intervall av IP-adresser) bör du tillsammans med kundsupporten arbeta med att konfigurera dessa begränsningar.
+
+#### Kundhanterad CDN {#customer-managed-cdn}
 
 Du får hantera ditt eget CDN, förutsatt att:
 
 1. Du har ett befintligt CDN.
-2. Du kommer att klara det.
-3. Ditt program gör inga omfattande API-anrop till CDN som inte redan finns i AEM-arkitekturen.
-4. AEM som molntjänst kan fastställa att hela systemet fungerar som det ska.
-5. Du måste förse Adobe med en vitlista över CDN-adresser för att tillåta det.
+1. Det måste vara ett CDN som stöds. För närvarande stöds Akamai. Om din organisation vill hantera ett CDN som inte stöds kontaktar du kundsupporten.
+1. Du kommer att klara det.
+1. Du måste kunna konfigurera CDN så att det fungerar med AEM som en molntjänst - se konfigurationsinstruktionerna nedan.
+1. Du har tekniska CDN-experter som är i kontakt om problem uppstår.
+1. Du måste tillhandahålla vitlistor med CDN-noder till Cloud Manager, enligt konfigurationsinstruktionerna.
+1. Du måste utföra och godkänna ett lasttest innan du går till produktion.
 
-Adobe kommer att tillhandahålla en AEM Cloud-URL som du kan använda som ditt CDN-nummer.
+Konfigurationsinstruktioner:
 
+1. Ge CDN-leverantören vitlista till Adobe genom att anropa miljöns create/update API med en lista över CIDR:er som vitlistas.
+1. Ange domännamnet som `X-Forwarded-Host` huvud.
+1. Ange värdhuvudet med ursprungsdomänen, som är AEM som en molntjänst som ingress. Värdet ska komma från Adobe.
+1. Skicka SNI-huvudet till origo. Sni-huvudet måste vara den ursprungliga domänen.
+1. Ange `X-Edge-Key` vilket som behövs för att dirigera trafik korrekt till AEM-servrarna. Värdet ska komma från Adobe.
+
+Innan du godkänner direkttrafik bör du med Adobes kundsupport validera att hela trafikflödet fungerar korrekt.
+
+#### Peka på Adobe Managed CDN {#point-to-point-CDN}
+
+Stöds om du vill använda ditt befintliga CDN, men inte kan uppfylla kraven från ett kundhanterat CDN. I så fall hanterar du ditt eget CDN, men pekar på Adobes hanterade CDN.
+
+Kunderna måste utföra och klara ett lasttest innan de kan börja producera.
+
+Konfigurationsinstruktioner:
+
+1. Ange domännamnet som `X-Forwarded-Host` huvud.
+1. Ange värdhuvudet med ursprungsdomänen, som är Adobes CDN:s ingress. Värdet ska komma från Adobe.
+1. Skicka SNI-huvudet till origo. Precis som med värdhuvudet måste sni-huvudet vara den ursprungliga domänen.
+1. Ange `X-Edge-Key`, vilket krävs för att dirigera trafik korrekt till AEM-servrarna. Värdet ska komma från Adobe.
 
 #### Cacheogiltigförklaring av CDN {#CDN-cache-invalidation}
 
@@ -745,27 +789,36 @@ Cacheogiltigförklaring följer dessa regler:
 * Klientbibliotek (JavaScript och CSS) cachelagras oavbrutet med cachekontrollen inställd på antingen oföränderlig eller 30 dagar för äldre webbläsare som inte respekterar det oföränderliga värdet. Observera att klientbiblioteken hanteras på en unik sökväg som ändras om klientbiblioteken ändras. Med andra ord kommer HTML som refererar till klientbiblioteken att produceras efter behov så att du kan uppleva nytt innehåll när det publiceras.
 * Som standard cachelagras inte bilder.
 
+Innan man kan ta emot direkttrafik bör man med Adobes kundsupport validera att hela trafikflödet fungerar som det ska.
+
 ## Cacheogiltigförklaring av explicit dispatcher {#explicit-invalidation}
+
+Som tidigare nämnts går trafiken igenom en webbserver med huvudfunktioner, som har stöd för moduler som innehåller dispatchern. Avsändaren används främst som cache för att begränsa bearbetningen av publiceringsnoderna för att öka prestandan.
+
+I allmänhet behöver du inte göra innehåll i dispatchern ogiltigt manuellt, men det är möjligt om det behövs, vilket beskrivs nedan.
 
 Före AEM som molntjänst fanns det två sätt att ogiltigförklara dispatchercachen.
 
-1. Anropa replikerings-API:t och ange agenten för rensning av publiceringsdispatcher
+1. Anropa replikeringsagenten och ange agenten för rensning av publiceringsutgivaren
 2. Anropa `invalidate.cache` API:t direkt (t.ex. POST /dispatcher/invalidate.cache)
 
 Det finns inte längre stöd för `invalidate.cache` metoden eftersom den bara riktar sig till en viss dispatchernod.
 AEM som en molntjänst arbetar på tjänstenivå, inte på den enskilda nodnivån, och därför är inte längre invalideringsinstruktionerna i [Dispatcher Help](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html) -dokumentationen korrekta.
-I stället bör replikerings-API:t användas. [API-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/Replicator.html) finns tillgänglig. Ett exempel på tömning av cachen finns på exempelsidan [för](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) API och i exemplet CustomStep som ger alla tillgängliga agenter en replikeringsåtgärd av typen ACTIVATE.
+Istället bör agenten för tömning av replikering användas. Detta kan göras med replikerings-API:t. Dokumentationen för replikerings-API finns [här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/Replicator.html) . Ett exempel på hur du tömmer cachen finns på exempelsidan [för](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) API. Exemplet `CustomStep` innehållerexempel på hur du skickar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter. Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
 
 Bilden nedan visar detta.
 
-<!-- [CDN](assets/cdn.png "CDN") -->
+![](assets/cdn.png "CDNCDN")
 
-<!-- See [Apache and Dispatcher Configuration and Testing](../developing/introduction/developer-experience.md#apache-and-dispatcher-configuration-and-testing) for instructions on how a developer can configure apache and the dispatcher module. -->
+Om det finns oro för att dispatchercachen inte rensas kontaktar du kundsupport som kan tömma dispatchercachen om det behövs.
+
+CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas. Om du misstänker ett problem kan du kontakta kundsupport som kan tömma ett Adobe-hanterat CDN-cache vid behov.
 
 ### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
 
-Den här publiceringsutlösta ogiltigförklaringen är samma sak som snabbstart:
-När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren (via replikerings- och pipeline-kön), används rensningsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatchercachen, tillsammans med dess överordnade, upp till en nivå som du kan konfigurera med [statusfilnivån](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level).
+Precis som i tidigare versioner av AEM rensas innehållet från dispatchercachen när du publicerar eller avpublicerar sidor. Om ett problem med cachning misstänks bör kunderna publicera om sidorna i fråga.
+
+När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatchercachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilnivån](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level)).
 
 ### Enhetligt innehåll och enhetlig version {#content-consistency}
 
