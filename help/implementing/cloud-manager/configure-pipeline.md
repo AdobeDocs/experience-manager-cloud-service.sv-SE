@@ -2,7 +2,7 @@
 title: Konfigurera CI/CD-pipeline - molntjänster
 description: Konfigurera CI/CD-pipeline - molntjänster
 translation-type: tm+mt
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+source-git-commit: e9514d2ba625a7df8a8126f5b0ab74b975eeda51
 
 ---
 
@@ -88,7 +88,7 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
 
    Dessutom kan du konfigurera utlösare för distribution och Beteende för viktigt fel i alternativen för pipeline.
 
-   ![](assets/set-up-pipeline7.png)
+   ![](assets/non-prod-pipe1.png)
 
 1. Klicka på **Spara** och pipeline visas på kortet på startskärmen med tre åtgärder, som visas nedan:
 
@@ -97,8 +97,6 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
    * **Redigera** - tillåter redigering av pipeline-inställningarna
    * **Build** - navigerar till körningssidan, från vilken pipeline kan köras
    * **Hantera Git** - ger användaren tillgång till den information som krävs för att få åtkomst till Cloud Manager Git-databasen
-
-
 
 ## Nästa steg {#the-next-steps}
 
