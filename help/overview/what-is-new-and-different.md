@@ -2,7 +2,7 @@
 title: Vad är annorlunda och vad är nytt - Adobe Experience Manager som en molntjänst
 description: 'Vad är annorlunda och vad är nytt - Adobe Experience Manager (AEM) som en molntjänst. '
 translation-type: tm+mt
-source-git-commit: 78c48e3a669a3142661436f8b996dcbc5c9730d6
+source-git-commit: b8eed5bd68d961a95d0ed15a4e88cee327a82594
 
 ---
 
@@ -37,8 +37,6 @@ Det finns inneboende skillnader mellan dessa tidigare metoder och AEM som molntj
 >[!NOTE]
 >
 >Mer information om On-Premise och Managed Service finns i dokumentationen för [AEM 6.5](https://helpx.adobe.com/support/experience-manager/6-5.html).
-
-<!-- * [Miscellaneous](#miscellaneous) -->
 
 ## Arkitektur {#architecture}
 
@@ -88,11 +86,9 @@ Detta möjliggör autoskalning för olika användningsmönster:
 
 ## Uppgraderingar {#upgrades}
 
-<!--
 >[!NOTE]
 >
->For further details see the [Deploying Introduction](/help/sites/deploying/introduction.md).
--->
+>Mer information finns i Introduktion till [distribution](/help/implementing/deploying/overview.md).
 
 <!--
 ### Previous Versions {#previous-versions-upgrades}
@@ -166,11 +162,9 @@ För närvarande kan Cloud Manager skapa miljöer i tre geografiska regioner (me
 
 ## Onboarding {#onboarding}
 
-<!--
 >[!NOTE]
 >
->For further details see [Onboarding - An Overview](/help/onboarding/overview.md).
--->
+>Mer information finns i [Onboarding](/help/onboarding/home.md).
 
 <!--
 ### Previous Versions {#previous-versions-onboarding}
@@ -208,13 +202,7 @@ Det är också mycket annorlunda nu:
 
 >[!NOTE]
 >
->Mer information finns i dokumentationen till [riktlinjerna](/help/implementing/developing/introduction/development-guidelines.md) för utveckling.
-
-<!--
->[!NOTE]
->
->For further details start with [The Developing Experience](/help/sites/developing/introduction/developer-experience.md, [Developing - The Basics](/help/sites/developing/introduction/the-basics.md) and [Developing Best Practices](/help/sites/best-practices/developing.md).
--->
+>Mer information finns i [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) och [Utvecklingsprogram - WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 <!--
 ### Previous Versions {#previous-versions-developing}
@@ -303,11 +291,9 @@ Inom dessa områden:
 
 ## Identitetshantering {#identity-management}
 
-<!--
 >[!NOTE]
 >
->For further details see [Security - Single Sign-On](/help/sites/security/single-sign-on.md).
--->
+>Mer information finns i [Säkerhet - IMS-stöd](/help/security/ims-support.md).
 
 <!--
 ### Previous Versions {#previous-versions-identity-management}
@@ -336,11 +322,9 @@ Detta kombinerar fördelarna med:
 
 ## Användargränssnitt för redigering {#authoring-user-interface}
 
-<!--
 >[!NOTE]
 >
->For further details, the [Basic Handling](/help/sites/authoring/getting-started/basic-handling.md) and [Best Practices](/help/sites/best-practices/authoring.md) are good starting points.
--->
+>Mer information finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) .
 
 <!--
 ### Previous Versions {#previous-versions-authoring}
