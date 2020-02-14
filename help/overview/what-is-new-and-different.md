@@ -2,7 +2,7 @@
 title: Vad är annorlunda och vad är nytt - Adobe Experience Manager som en molntjänst
 description: 'Vad är annorlunda och vad är nytt - Adobe Experience Manager (AEM) som en molntjänst. '
 translation-type: tm+mt
-source-git-commit: b8eed5bd68d961a95d0ed15a4e88cee327a82594
+source-git-commit: e6465e018ff45638865f9ca2172a8e72e12612a9
 
 ---
 
@@ -32,8 +32,6 @@ Det finns inneboende skillnader mellan dessa tidigare metoder och AEM som molntj
 >
 >Dessa översikter är inte uttömmande, men är avsedda att utgöra en introduktion.
 
-<!-- change link when 6.5 hub page migrated -->
-
 >[!NOTE]
 >
 >Mer information om On-Premise och Managed Service finns i dokumentationen för [AEM 6.5](https://helpx.adobe.com/support/experience-manager/6-5.html).
@@ -43,25 +41,6 @@ Det finns inneboende skillnader mellan dessa tidigare metoder och AEM som molntj
 >[!NOTE]
 >
 >Mer information finns i [Arkitektur](/help/core-concepts/architecture.md).
-
-<!--
-### Previous Versions {#previous-versions-architecture}
-
-Both AEM on-premise, and AEM under Managed Services used a static architecture comprised of a fixed number of machines and instances. 
-
-![Static architecture](assets/introduction-01.png "Static architecture")
-
-These:
-
-* Were sized for *peak* traffic (internet) and *peak* activity (marketing), which resulted in them being idle for significant periods of time:
-![Static structure must cater for varying usage patterns](assets/introduction-02.png "Static structure must cater for varying usage patterns")
-
-* Were monolithic applications (the quickstart).
-
-* Had a single author instance; which was subject to downtime during maintenance windows.
-
-### AEM as a Cloud Service {#aem-as-a-cloud-service-architecture}
--->
 
 AEM som molntjänst har nu:
 
@@ -89,16 +68,6 @@ Detta möjliggör autoskalning för olika användningsmönster:
 >[!NOTE]
 >
 >Mer information finns i Introduktion till [distribution](/help/implementing/deploying/overview.md).
-
-<!--
-### Previous Versions {#previous-versions-upgrades}
-
-Both AEM on-premise, and AEM under Managed Services were subject to a fixed pattern of a yearly major release augmented by service packs, feature packs and hot-fixes. Often instances would run a major version for two or more years. 
-
-Depending on the upgrade type, the process could require significant preparation consisting of analysis, development and testing, followed with a window of downtime for the actual upgrade.
-
-### AEM as a Cloud Service {#aem-as-a-cloud-service-upgrades}
--->
 
 AEM som molntjänst använder nu kontinuerlig integrering och kontinuerlig leverans (CI/CD) för att säkerställa att dina projekt är helt uppdaterade. Detta innebär att alla uppgraderingsåtgärder är helt automatiserade, så du behöver inte avbryta tjänsten för användarna.
 
@@ -166,16 +135,6 @@ För närvarande kan Cloud Manager skapa miljöer i tre geografiska regioner (me
 >
 >Mer information finns i [Onboarding](/help/onboarding/home.md).
 
-<!--
-### Previous Versions {#previous-versions-onboarding}
-
-Implementing an AEM project basically followed traditional project management methods.  
-
-### AEM as a Cloud Service {#aem-as-a-cloud-service-onboarding}
-
-Starting and managing an AEM project is significantly easier when using AEM as a Cloud service as Adobe is responsible for many aspects:
--->
-
 Att starta och hantera ett AEM-projekt är enkelt när man använder AEM som en molntjänst eftersom Adobe ansvarar för många aspekter:
 
 * Baslinje-AEM-bilder är optimerade för specifika användningsområden.
@@ -204,22 +163,7 @@ Det är också mycket annorlunda nu:
 >
 >Mer information finns i [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) och [Utvecklingsprogram - WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
-<!--
-### Previous Versions {#previous-versions-developing}
--->
-
-<!-- needs more detail -->
-
-<!-- 
-Development was an intensive task performed locally, followed by deployment to the production instance. 
-
-### AEM as a Cloud Service {#aem-as-a-cloud-service-developing}
--->
-
-<!-- Will need information for new customers -->
 Den nya arkitekturen som stöder AEM som en molntjänst inbegriper några viktiga förändringar av den övergripande utvecklingsupplevelsen. Ett av de främsta målen för AEM som molntjänst är att göra det möjligt för erfarna kunder (som har använt AEM antingen lokalt eller i Adobe Managed Services) att migrera till AEM som molntjänst så snabbt som möjligt, utan att behöva skriva om huvuddelen av den anpassade koden. Vissa justeringar kan dock fortfarande behövas.
-
-<!-- adjusting title level -->
 
 ### Molnutveckling {#aem-as-a-cloud-service-developing-cloud-development}
 
@@ -231,10 +175,8 @@ För att befintliga AEM-program ska kunna köras på AEM som en molntjänst för
 * Kundprogrammet måste klara alla kodkvalitets-, säkerhets- och prestandagränser som används i pipeline.
 * De bilder som har skapats för kundprogrammet måste distribueras via molnhanterarens pipeline.
 
-<!-- duration of what? -->
 Den här processen kallas vanligtvis för utveckling i molnet först. Eftersom längden från början till slut förväntas ta några minuter (från 20 till 50 beroende på programmets komplexitet), är det nödvändigt att använda snabba utvecklingsmetoder innan det görs ett försök att utföra väntande kodändringar och konfigurationsändringar i molnet.
 
-<!-- is this really relevant at this point? -->
 Webbkonsolen, där OSGI-paket och tillhörande konfigurationer hanteras, och tidigare ingår i AEM QuickStart, är inte längre direkt tillgänglig för användare av en AEM som en molntjänstmiljö. Gränssnittet kan fortfarande nås i skrivskyddat läge med en ny utvecklarkonsol. Med den här konsolen kan utvecklare välja och logga in direkt på en viss nod i en författare eller publiceringstjänst och sedan komma åt de områden som blockerats som standard.
 
 Ett annat vanligt krav för utvecklare är snabb åtkomst till loggfilerna i olika miljöer. Med AEM som molntjänst blir loggfilerna för de olika noderna i författaren och publiceringsnoderna tillgängliga via molnhanteraren, antingen i form av filer som kan hämtas eller via API:er.
@@ -248,8 +190,6 @@ På grund av den tydliga åtskillnaden mellan kod och innehåll kan utvecklare a
 * Behörighetslistor
 
 * Tjänstanvändare och användargrupper
-
-<!-- adjusting title level -->
 
 ### Lokal utveckling {#aem-as-a-cloud-service-developing-local-development}
 
@@ -269,14 +209,6 @@ För att stödja snabba iterationer och utveckling är det också möjligt att u
 >
 >Mer information får du från [Säkerhetskopiering](/help/operations/backup.md), [indexering](/help/operations/indexing.md)och [andra underhållsåtgärder](/help/operations/maintenance.md).
 
-<!--
-### Previous Versions {#previous-versions-operations-and-performance}
-
-In the past, especially on the author side, there was a need to periodically stop an instance; for routine maintenance operations, as well as upgrades and updates. For some customers, this resulted in hours of scheduled downtime on a weekly basis. 
-
-### AEM as a Cloud Service {#aem-as-a-cloud-service-operatioms-and-performance}
--->
-
 Med AEM som molntjänst automatiseras sådana åtgärder så att inga avbrott i tjänsten behövs längre.
 
 Inom dessa områden:
@@ -295,21 +227,6 @@ Inom dessa områden:
 >
 >Mer information finns i [Säkerhet - IMS-stöd](/help/security/ims-support.md).
 
-<!--
-### Previous Versions {#previous-versions-identity-management}
-
-By default, identity management was internal to AEM.
-
->[!NOTE]
->
->AEM 6.4.3.0 introduced:
->
->* Admin Console support for AEM instances. 
->* Adobe IMS (Identity Management System) based authentication for AEM Managed Services customers.
-
-### AEM as a Cloud Service {#aem-as-a-cloud-service-identity-management}
--->
-
 En stor förändring av AEM som en molntjänst är den helintegrerade användningen av Adobe ID:n för att komma åt författarnivån.
 
 Detta kräver att [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) används för att hantera användare och användargrupper. Med användarkontona kan användarna få tillgång till Adobes produkter och tjänster, eftersom användarprofilinformation centraliseras i Adobe Identity Management System (IMS) och delas över alla molntjänster. När AEM tilldelats åtkomst kan användarkontona refereras i AEM som en molntjänst (som tidigare); till exempel för att definiera roller och behörigheter från användargränssnitten i AEM Security.
@@ -325,14 +242,6 @@ Detta kombinerar fördelarna med:
 >[!NOTE]
 >
 >Mer information finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) .
-
-<!--
-### Previous Versions {#previous-versions-authoring}
-
-The user interface of the author instance (UI), for both Sites and Assets, was progressively developed and optimized to cater for all use-cases, using both the touch-enabled and classic UIs.
-
-### AEM as a Cloud Service {#aem-as-a-cloud-service-authoring}
--->
 
 De grundläggande principerna för användargränssnittet, för både Sites och Assets, kommer att vara mycket välkända för alla som har använt AEM tidigare.
 
