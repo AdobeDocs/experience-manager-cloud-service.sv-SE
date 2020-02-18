@@ -2,7 +2,7 @@
 title: Distribuera koden - molntjänster
 description: Distribuera koden - molntjänster
 translation-type: tm+mt
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+source-git-commit: 7758c6df49583dafdf2bf262eae8db466bb3c504
 
 ---
 
@@ -39,15 +39,15 @@ När du har konfigurerat din **pipeline** (databas, miljö och testmiljö) är d
 
    * Validering: Detta steg säkerställer att pipeline är konfigurerad att använda de tillgängliga resurserna, till exempel att den konfigurerade grenen finns, och att miljöerna är tillgängliga.
    * Build &amp; Unit Testing: Det här steget kör en innesluten byggprocess. Mer information om byggmiljön finns i [Skapa ett AEM-programprojekt](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md) .
-   * Kodsökning: I det här steget utvärderas kvaliteten på programkoden. Se [Förstå testresultaten](understand-test-results.md) för mer information om testprocessen.
+   * Kodsökning: I det här steget utvärderas kvaliteten på programkoden. Se [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) för mer information om testprocessen.
    * Skapa bilder: I det här steget finns en loggfil från processen som används för att skapa bilder. Den här processen gör att innehålls- och dispatcherpaketen som skapas i byggsteget omvandlas till Docker-bilder och Kubernetes-konfiguration.
    * Distribuera till scenen
 
       ![](assets/stage-deployment.png)
    Följande steg ingår i **scentestningen**:
 
-   * Funktionstestning: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön. Se [Förstå testresultaten](understand-test-results.md) för mer information om testprocessen.
-   * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard. Se [Förstå testresultaten](understand-test-results.md) för mer information om testprocessen.
+   * Funktionstestning: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön. Se [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) för mer information om testprocessen.
+   * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard. Se [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) för mer information om testprocessen.
 
       ![](assets/stage-testing.png)
 
