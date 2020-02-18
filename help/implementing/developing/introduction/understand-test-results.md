@@ -2,7 +2,7 @@
 title: Förstå testresultaten - molntjänster
 description: Förstå testresultat - molntjänster
 translation-type: tm+mt
-source-git-commit: c34137ba6f49785304ab21355eaad75798f26267
+source-git-commit: e1504c73e443d449f8fc9d5fbad433ea1a298843
 
 ---
 
@@ -125,7 +125,7 @@ Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas ö
 
 Om JAR-test inte skapas av bygget godkänns testet som standard. Det här steget utförs nu direkt efter scendistributionen.
 
-> Obs!
+>[!NOTE]
 >Knappen **Hämtningslogg** ger åtkomst till en ZIP-fil som innehåller loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM-körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
 
 ## Lokal testkörning {#local-test-execution}
