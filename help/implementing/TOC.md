@@ -2,7 +2,7 @@
 sub-product: Implementing for AEM as a Cloud Service
 user-guide-title: Implementing for AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 99dce041a6d7554785fd43eb82c671643e903f23
+source-git-commit: c34137ba6f49785304ab21355eaad75798f26267
 
 ---
 
@@ -14,7 +14,6 @@ source-git-commit: 99dce041a6d7554785fd43eb82c671643e903f23
    + [Hantera miljöer](cloud-manager/manage-environments.md)
    + [Konfigurera CI/CD-pipeline](cloud-manager/configure-pipeline.md)
    + [Distribuera koden](cloud-manager/deploy-code.md)
-   + [Förstå testresultaten](cloud-manager/understand-test-results.md)
    + [Förstå regler för anpassad kodkvalitet](cloud-manager/custom-code-quality-rules.md)
    + [Åtkomst till och hantering av loggar](cloud-manager/manage-logs.md)
    + [Om meddelanden](cloud-manager/notifications.md)
@@ -30,6 +29,7 @@ source-git-commit: 99dce041a6d7554785fd43eb82c671643e903f23
    + [AEM som riktlinjer för utveckling av molntjänster](developing/introduction/development-guidelines.md)
    + [Komma igång med utveckling av AEM-webbplatser - WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
    + [AEM som molntjänst-API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
+   + [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md)
 + Utöka AEM som en molntjänst {#extending}
    + [Upplevelsefragment](developing/extending/experience-fragments.md)
 + Distribuera till AEM som en molntjänst {#deploying}
