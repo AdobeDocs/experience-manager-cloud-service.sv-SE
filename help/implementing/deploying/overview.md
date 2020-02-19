@@ -2,7 +2,7 @@
 title: Distribuera till AEM som en molntjänst
 description: 'Distribuera till AEM som en molntjänst '
 translation-type: tm+mt
-source-git-commit: 5e12f1a0a39b1c60ced583f248aff49bdffc24e5
+source-git-commit: 3cf5d17eab937c99c8bcaeb0ed8074672e71650f
 
 ---
 
@@ -14,6 +14,10 @@ source-git-commit: 5e12f1a0a39b1c60ced583f248aff49bdffc24e5
 De grundläggande funktionerna i kodutveckling liknar i AEM en molntjänst jämfört med lösningarna AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till fjärr-AEM som en molntjänstmiljö. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för hanterade tjänster, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM som en molntjänstmiljö.
 
 Uppdateringen av AEM-versionen är alltid en separat distributionshändelse jämfört med att skicka anpassad kod. Om de visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM-version som är i produktion eftersom det är den version som kommer att användas ovanpå. Uppdateringar av AEM-versioner som görs därefter, som är vanliga i jämförelse med hanterade tjänster idag, tillämpas automatiskt. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
+
+I följande video visas en översikt på hög nivå över hur du distribuerar kod till AEM som en molntjänst:
+
+>[!VIDEO](https://video.tv.adobe.com/v/30191?quality=9)
 
 I resten av det här dokumentet beskrivs hur utvecklare bör anpassa sina rutiner så att de arbetar med både AEM som en Cloud-tjänsts versionsuppdateringar och kunduppdateringar.
 
@@ -45,7 +49,7 @@ För tidigare AEM-lösningar ändrades den senaste AEM-versionen sällan (ungef�
 
 Precis som för befintliga AEM-versioner som inte finns i molnet stöds en lokal offlineutveckling baserad på en viss snabbstart och förväntas vara det verktyg som i de flesta fall är det bästa för felsökning.
 
-> [!NOTE}
+>[!NOTE]
 >Det finns små skillnader i hur programmet fungerar på en lokal dator jämfört med Adobe Cloud. Dessa arkitektoniska skillnader måste respekteras under lokal utveckling och kan leda till ett annat beteende vid driftsättning i molninfrastrukturen. På grund av dessa skillnader är det viktigt att utföra de fullständiga testerna på dev- och stage-miljöer innan ny anpassad kod distribueras i produktionen.
 
 För att kunna utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM som en molntjänst-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) hämtas och installeras. Mer information om hur du använder AEM som verktyg för Cloud Service Dispatcher finns på [den här sidan](/help/implementing/dispatcher/overview.md).
@@ -107,7 +111,8 @@ Efter övergång till en ny version av programmet:
 
 Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Mer information finns i [AEM-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html) om rekommenderad projektomstrukturering.
 
->[!NOTE] Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via Package Manager.
+>[!NOTE]
+> Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via Package Manager.
 
 Det finns heller ingen mekanism för att återställa ändringar i det ändringsbara innehållspaketet efter att de har tillämpats. Om kunderna upptäcker ett problem kan de välja att åtgärda det i nästa kodversion eller som en sista utväg, återställa hela systemet till en tidpunkt före distributionen.
 
@@ -123,7 +128,8 @@ I följande fall är det att föredra att manuellt koda uttryckliga innehållssk
 * Skapa/ta bort grupper
 * Skapa/ta bort användare
 * Lägg till åtkomstkontrollistor
-   > [!NOTE] Definitionen av åtkomstkontrollistor kräver att nodstrukturerna redan finns. Därför kan det vara nödvändigt att skapa en sökvägsprogramsats innan.
+   > [!NOTE]
+   > Definitionen av åtkomstkontrollistor kräver att nodstrukturerna redan finns. Därför kan det vara nödvändigt att skapa en sökvägsprogramsats innan.
 * Lägg till sökväg (t.ex. för rotmappsstrukturer)
 * Lägg till CND (nodetype definition)
 
