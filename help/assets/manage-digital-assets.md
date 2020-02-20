@@ -4,12 +4,12 @@ description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 82dd9bd69fe994f74c7be8a571e386f0e902f6a1
+source-git-commit: 7141e42f53c556c0ac21def6085182ef400f5a71
 
 ---
 
 
-# Hantera resurser {#manag-assets}
+# Hantera resurser {#manage-assets}
 
 I den här artikeln beskrivs hur du hanterar och redigerar resurser i Adobe Experience Manager (AEM) Assets. Mer information om hur du hanterar innehållsfragment finns i [Innehållsfragmentresurser](content-fragments/content-fragments.md) .
 
@@ -32,32 +32,7 @@ Följande (blankstegsavgränsad lista med) tecken stöds inte:
 
 ## Överför resurser {#uploading-assets}
 
-Se [Lägga till digitala resurser i Experience Manager](add-assets.md).
-
-### Strömmade överföringar {#streamed-uploads}
-
-Om du överför många resurser till AEM ökar I/O-begäranden till servern drastiskt, vilket minskar överföringseffektiviteten och kan till och med leda till att vissa överföringsåtgärder tar slut. AEM Assets stöder direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverat som standard i AEM Resurser.
-
->[!NOTE]
->
->Direktuppspelning är inaktiverat för AEM som körs på JEE-server med en servlet-api-version som är lägre än 3.1.
-
-### Extrahera ZIP-arkiv som innehåller resurser {#extractzip}
-
-Du kan överföra ZIP-arkiv precis som andra resurser som stöds. Samma filnamnsregler gäller för ZIP-filer. Med AEM kan du extrahera ett ZIP-arkiv till en DAM-plats. Om arkivfilerna inte innehåller ZIP som tillägg aktiverar du identifiering av filtyp med hjälp av innehåll.
-
-Välj ett ZIP-arkiv i taget, klicka på **[!UICONTROL Extrahera arkiv]** och välj en målmapp. Välj ett alternativ för att hantera eventuella konflikter. Om resurserna i ZIP-filen redan finns i målmappen kan du välja något av följande alternativ: hoppa över extrahering, ersätta befintliga filer, behålla båda resurserna genom att byta namn eller skapa en ny version.
-
-När extraheringen är klar meddelar AEM dig i meddelandefältet. Medan AEM extraherar ZIP kan du gå tillbaka till arbetet utan att avbryta extraheringen.
-
-![Meddelande om ZIP-extrahering](assets/zip_extract_notification.png)
-
-Vissa begränsningar för funktionen är:
-
-* Om det finns en mapp med samma namn på målet extraheras resurserna från ZIP-filen i den befintliga mappen.
-* Om du avbryter extraheringen tas de redan extraherade resurserna inte bort.
-* Du kan inte markera två ZIP-filer samtidigt och extrahera dem. Du kan bara extrahera ett ZIP-arkiv åt gången.
-* När du överför ett ZIP-arkiv och dialogrutan för överföring visar ett 500-serverfel, kan du försöka igen när du har installerat det senaste Service Pack-meddelandet.
+Mer information finns i [Lägga till digitala resurser i Experience Manager](add-assets.md).
 
 ## Förhandsgranska resurser {#previewing-assets}
 
@@ -100,13 +75,7 @@ Följ de här stegen för att förhandsgranska en resurs.
 
    >[!NOTE]
    >
-   >Om du vill skapa taggar måste du ha skrivbehörighet för `/content/cq:tags/default` i CRX-databasen.
-
-1. Om du vill ge resursen en gradering trycker/klickar du på fliken **[!UICONTROL Avancerat]** och sedan på/klickar du på stjärnan vid rätt position för att tilldela den önskade graderingen.
-
-   ![omdömen](assets/ratings.png)
-
-   Värderingspoängen som du tilldelar resursen visas under **[!UICONTROL Dina klassificeringar]**. Det genomsnittliga omdöme som resursen fick från användare som värderade resursen visas under **[!UICONTROL Värdering]**. Dessutom visas uppdelningen av de omdömen som bidrar till det genomsnittliga omdömet under **[!UICONTROL Värderingsfördelning]**. Du kan söka efter resurser baserat på genomsnittliga poäng.
+   >Om du vill skapa taggar måste du ha skrivbehörighet på `/content/cq:tags/default` sökvägen i CRX-databasen.
 
 1. Om du vill visa användningsstatistik för resursen klickar du på/trycker på fliken **[!UICONTROL Insikter]** .
 
@@ -118,7 +87,8 @@ Följ de här stegen för att förhandsgranska en resurs.
    Mer information finns i [Resursinsikter](assets-insights.md).
 
 1. Tryck/klicka på **[!UICONTROL Spara och stäng]**.
-1. Navigera till användargränssnittet Resurser. De redigerade metadataegenskaperna, inklusive titel, beskrivning, omdömen och så vidare, visas på tillgångskortet i kortvyn och under relevanta kolumner i listvyn.
+
+1. Navigera till användargränssnittet Resurser. De redigerade metadataegenskaperna, inklusive rubrik, beskrivning och taggar, visas på resurskortet i kortvyn och under relevanta kolumner i listvyn.
 
 ## Kopiera resurser {#copying-assets}
 
@@ -239,28 +209,6 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Beroende på webbläsaren stöds dessutom olika videoformat.
 
-### Visa delresurser {#viewing-subassets}
-
-I AEM kan delresurser genereras för resurser med flersidiga format som stöds, som PDF, AI, PowerPoint/Apple Keynote och InDesign. Dessa delresurser fungerar som vanliga resurser, men är länkade till sina överordnade resurser och underlättar flersidesvyn i Touch-gränssnittet.
-
-Generering av delresurser är inaktiverat som standard. Om du vill aktivera generering av underresurser lägger du till steget **[!UICONTROL Skapa underresurs]** i arbetsflödet för DAM-uppdatering av tillgångar.
-
-För Word-dokument genererar arbetsflödet för DAM-tolkning av Word-dokument en `cq:Page` komponent från innehållet i Word-dokumentet. De bilder som extraheras från dokumentet refereras från `cq:Page` komponenten. Dessa bilder extraheras även om generering av delresurser är inaktiverat.
-
-1. Om du vill visa delresurser går du till resursens plats och öppnar resurssidan.
-
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Delresurser]** i listan
-
-   ![chlimage_1-223](assets/chlimage_1-223.png)
-
-   >[!NOTE]
-   >
-   >Alternativet **Delresurser** visas bara om delresurserna är tillgängliga/har genererats för resursen.
-
-   När du väljer **Delresurser** i listan visas de delresurser **som är länkade till den överordnade resursen på sidan** Delresurser.
-
-   ![chlimage_1-224](assets/chlimage_1-224.png)
-
 ## Ta bort resurser {#delete-assets}
 
 Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs.
@@ -293,7 +241,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 ## Hämta resurser {#download-assets}
 
-Se [Hämta resurser från AEM](/help/assets/download-assets-from-aem.md).
+See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 
 ## Publicera resurser {#publish-assets}
 
@@ -365,7 +313,7 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
 1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när du har autentiserats av AEM.
 
-## Sök resurser {#search-assets}
+## Söka efter material {#search-assets}
 
 Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
@@ -564,43 +512,11 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du p
 
    ![chlimage_1-247](assets/chlimage_1-247.png)
 
-   >[!NOTE]
-   >
-   >Om resursen har delresurser kan du skriva ut alla delresurser tillsammans med deras specifika sidvisa anteckningar.
-
    Om du vill ändra utseendet på den återgivna PDF-filen, t.ex. teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du PDF-konfigurationen **[!UICONTROL för]** anteckningar i Configuration Manager och ändrar önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg i anteckningar finns i [Anteckningar](/help/assets/manage-digital-assets.md#annotating).
 
    ![chlimage_1-248](assets/chlimage_1-248.png)
 
    Återgå till den återgivna PDF-filen och uppdatera den. Den uppdaterade PDF-filen återspeglar de ändringar du har gjort.
-
-Om en resurs innehåller anteckningar på främmande språk (särskilt icke-latinska språk) måste du först konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager på AEM-servern så att den kan skriva ut anteckningarna. När du konfigurerar Font Manager-tjänsten CQ-DAM-Handler-Gibson anger du sökvägen till teckensnitten för de önskade språken.
-
-1. Öppna konfigurationssidan för CQ-DAM-Handler-Gibson Font Manager Service från URL:en `https://[aem_server]:[port]/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl`.
-1. Gör något av följande om du vill konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager:
-
-   * I katalogalternativet Systemteckensnitt anger du den fullständiga sökvägen till teckensnittskatalogen på datorn. Om du till exempel är Mac-användare kan du ange sökvägen som */Bibliotek/Teckensnitt* i katalogalternativet Systemteckensnitt. AEM hämtar teckensnitten från den här katalogen.
-   * Skapa en katalog med namnet `fonts` inuti ``crx-quickstart`` mappen. Font Manager-tjänsten CQ-DAM-Handler-Gibson hämtar teckensnitten automatiskt på platsen `crx-quickstart/fonts`. Du kan åsidosätta den här standardsökvägen inifrån katalogalternativet Adobe Server Fonts.
-
-   * Skapa en ny mapp för teckensnitt i datorn och lagra önskade teckensnitt i mappen. Ange sedan den fullständiga sökvägen till mappen i katalogalternativet Kundteckensnitt.
-
-1. Öppna PDF-konfigurationen för anteckningen från URL:en `https://[aem_server]:[4502]/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig`.
-1. Konfigurera Antecknings-PDF:en med rätt uppsättning teckensnittsfamiljer enligt följande:
-
-   * Inkludera strängen `<font_family_name_of_custom_font, sans-serif>` i alternativet för teckensnittsfamilj. Om du till exempel vill skriva ut anteckningar i CJK (kinesiska, japanska och koreanska), inkluderar du strängen `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` i alternativet för teckensnittsfamilj. Om du vill skriva ut anteckningar på hindi hämtar du lämpligt teckensnitt och konfigurerar teckensnittsfamiljen som Arial Unicode MS, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif.
-
-1. Starta om AEM-instansen.
-
-Här är ett exempel på hur du kan konfigurera AEM för att skriva ut anteckningar i CJK (kinesiska, japanska och koreanska):
-
-1. Hämta Google Noto CJK-teckensnitt från följande länkar och lagra dem i den teckensnittskatalog som konfigurerats i teckensnittshanterartjänsten.
-
-   * Allt i ett Super CJK-teckensnitt: [https://www.google.com/get/noto/help/cjk/](https://www.google.com/get/noto/help/cjk/)
-   * Noto Sans (för europeiska språk): [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
-   * Teckensnitt för valfritt språk: [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
-
-1. Konfigurera PDF-filen med anteckningen genom att ange parametern font-family till `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. Den här konfigurationen är tillgänglig som standard och fungerar för alla europeiska språk och CJK-språk.
-1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaavgränsad) post i standardteckensnittsfamiljen.
 
 ## Resursversionshantering {#asset-versioning}
 
