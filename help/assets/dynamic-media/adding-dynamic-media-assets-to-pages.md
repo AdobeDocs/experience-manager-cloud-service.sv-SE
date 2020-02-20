@@ -2,12 +2,12 @@
 title: Lägga till dynamiska medieresurser på sidor
 description: Lägga till komponenter för dynamiska media på en sida i AEM
 translation-type: tm+mt
-source-git-commit: 776b089a322cc4f86fdcb9ddf1c3cc207fc85d39
+source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
 
 ---
 
 
-# Lägga till dynamiska medieresurser på sidor{#adding-dynamic-media-assets-to-pages}
+# Adding Dynamic Media Assets to Pages{#adding-dynamic-media-assets-to-pages}
 
 Om du vill lägga till funktionen för dynamiska media i resurser som du använder på dina webbplatser kan du lägga till komponenten **Dynamic Media**, **Interactive Media**, **Panoramic Media** eller **Video 360 Media** direkt på sidan. Det gör du genom att gå in i layoutläget och aktivera komponenterna för dynamiska media. Sedan kan du lägga till de här komponenterna på sidan och lägga till resurser i komponenten. Dynamic Media-komponenterna är smarta - de vet om du lägger till en bild eller en video och de tillgängliga konfigurationsalternativen ändras i enlighet med detta.
 
@@ -15,7 +15,7 @@ Du lägger till Dynamic Media-resurser direkt på sidan om du använder AEM som 
 
 >[!NOTE]
 >
->Du måste publicera resurser innan du lägger till dem på sidor i AEM. Se [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+>Du måste publicera resurser innan du lägger till dem på sidor i AEM. See [Publishing Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 ## Lägga till en Dynamic Media-komponent på en sida {#adding-a-dynamic-media-component-to-a-page}
 
@@ -301,7 +301,7 @@ Om den visningsförinställning du söker efter inte visas kontrollerar du att d
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
-Se [HTTP2 Delivery of Content](/help/assets/dynamic-media/http2.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
+Se [HTTP2 Delivery of Content](/help/assets/dynamic-media/http2faq.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
 
 >[!MORELIKETHIS]
 >
