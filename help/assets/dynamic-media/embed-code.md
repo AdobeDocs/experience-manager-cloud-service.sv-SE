@@ -2,20 +2,20 @@
 title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
 description: Lär dig bädda in Dynamic Media-video eller -bilder på en webbsida
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
 
 ---
 
 
-# Bädda in Dynamic Media Video eller Image Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
+# Embedding the Dynamic Media Video or Image viewer on a web page {#embedding-the-video-or-image-viewer-on-a-web-page}
 
 Använd funktionen **[!UICONTROL Bädda in kod]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på dina webbsidor. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Bädda in kod]** .
 
 Du bäddar bara in URL:er om du _inte_ använder AEM som WCM. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
-Se [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+See [Linking URLs to your Web Application.](linking-urls-to-yourwebapplication.md)
 
-Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
+See [Delivering Optimized Images for a Responsive Site.](responsive-site.md)
 
 >[!NOTE]
 >
@@ -49,4 +49,4 @@ Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
-Se [HTTP2 Delivery of Content](http2.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
+Se [HTTP2 Delivery of Content](http2faq.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
