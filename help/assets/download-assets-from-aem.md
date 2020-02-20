@@ -1,14 +1,14 @@
 ---
-title: Hämta resurser från AEM
+title: Hämta material från AEM
 description: Lär dig hur du hämtar resurser från AEM och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 776b089a322cc4f86fdcb9ddf1c3cc207fc85d39
+source-git-commit: 7141e42f53c556c0ac21def6085182ef400f5a71
 
 ---
 
 
-# Hämta resurser från AEM {#download-assets-from-aem}
+# Hämta material från AEM {#download-assets-from-aem}
 
 Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från AEM Assets. Hämtade resurser paketeras i en ZIP-fil. Den komprimerade ZIP-filen har en maximal filstorlek på 1 GB för exportjobbet. Du tillåts maximalt 500 totala resurser per exportjobb.
 
@@ -26,7 +26,7 @@ Följande är alternativen för export/hämtning. Dynamiska renderingar är unik
 
 | Export- eller nedladdningsalternativ | Beskrivningar |
 |---|---|
-| [!UICONTROL Resurser] | Välj det här om du vill hämta resursen i dess ursprungliga form utan några återgivningar. |
+| [!UICONTROL Assets] | Välj det här om du vill hämta resursen i dess ursprungliga form utan några återgivningar. |
 | [!UICONTROL Återgivningar] | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka renderingar som är tillgängliga beror på vilken resurs du väljer. |
 | [!UICONTROL Dynamiska renderingar] | En dynamisk återgivning genererar andra återgivningar direkt. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan med bildförinställningar. Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla bildmodifierare (t.ex. för att invertera bilden) |
 | [!UICONTROL E-post] | Ett e-postmeddelande skickas till användaren. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> Mallar som du anpassar under distributionen bör finnas på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> |
@@ -61,8 +61,6 @@ Du `Asset Download Servlet` kan inaktivera funktionen på en AEM Publish-instans
 1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en ny regel i [filteravsnittet](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter).
 
    `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
-
-1. Du kan inaktivera OSGi-komponenten manuellt på en Publish-instans genom att navigera till OSGi-konsolen på `<aem-host>/system/console/components`. Leta upp `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` och klicka på **[!UICONTROL Inaktivera]**.
 
 >[!MORELIKETHIS]
 >
