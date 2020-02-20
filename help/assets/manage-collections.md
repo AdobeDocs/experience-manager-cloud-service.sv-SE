@@ -4,7 +4,7 @@ description: Förstå begreppet samling i AEM Assets. Lär dig hur du samlar, ha
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3291f4f5de8c5333013850dad71630689cae7565
+source-git-commit: 7141e42f53c556c0ac21def6085182ef400f5a71
 
 ---
 
@@ -102,7 +102,7 @@ Du kan lägga till resurser i en samling som innehåller en lista med refererade
 Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den [sparade sökningen](#saved-searches).
 
 1. Tryck/klicka på ikonen **[!UICONTROL Sök]** i verktygsfältet i användargränssnittet för Resurser.
-1. Tryck på returtangenten när markören är i Omnissearch-rutan.
+1. Tryck på Retur med markören i rutan Omnisch.
 1. Tryck/klicka på ikonen GlobalNav för att visa panelen Filter.
 1. Välj den smarta samling du vill ändra i listan **[!UICONTROL Sparade sökningar]** . På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
 1. I listan **[!UICONTROL Filer och mappar]** väljer du **[!UICONTROL Filer]**.
@@ -133,7 +133,7 @@ Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen
    >
    >Läget Lägg till fungerar bara för fält som kan innehålla flera värden. För fält som bara kan innehålla ett värde läggs de nya metadata inte till i det befintliga värdet i fältet, även om du väljer **[!UICONTROL Lägg till]**.
 
-## Sök {#searching}
+## Sökning {#searching}
 
 Sökfunktionen i samlingar har stöd för både [Söka efter samlingar](#search-collections) och [Söka efter resurser i en samling](#search-within-collections).
 
@@ -225,7 +225,7 @@ Du kan lägga till en samling i en annan samling och på så sätt skapa en kaps
 
 I användargränssnittet Resurser kan du söka efter eller filtrera resurser baserat på vissa regler, sökvillkor eller anpassade sökfaktorer. Om du sparar dem som **[!UICONTROL sparade sökningar]** kan du komma åt dem senare från listan **[!UICONTROL Sparade sökningar]** på panelen Filter. När du skapar en sparad sökning skapas även en smart samling.
 
-Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Sparade sökningar]** . Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` CRXDE på den relativa platsen `/content/dam/collections/`.
+Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Sparade sökningar]** . Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` CRX på den relativa platsen `/content/dam/collections/`.
 
 >[!NOTE]
 >
