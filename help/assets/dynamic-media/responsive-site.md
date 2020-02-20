@@ -2,7 +2,7 @@
 title: Leverera optimerade bilder för en responsiv webbplats
 description: Så här använder du funktionen för responsiv kod för att leverera optimerade bilder
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
 
 ---
 
@@ -15,7 +15,7 @@ Den här funktionen är användbar om webbplatsen finns på en WCM-fil från tre
 
 Se även [Bädda in videovisningsprogrammet på en webbsida.](embed-code.md)
 
-Se även [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+See also [Linking URLs to your Web Application.](linking-urls-to-yourwebapplication.md)
 
 **Så här levererar du optimerade bilder för en responsiv webbplats**:
 
@@ -44,4 +44,4 @@ Se även [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplicati
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan levereras med HTTP/2 som ger bättre respons och laddningstider.
 
-Se [HTTP2 Delivery of Content](http2.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
+Se [HTTP2 Delivery of Content](http2faq.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
