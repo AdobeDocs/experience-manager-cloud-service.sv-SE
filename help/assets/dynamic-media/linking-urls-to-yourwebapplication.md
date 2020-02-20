@@ -1,13 +1,13 @@
 ---
-title: Länka URL:er till webbprogrammet
+title: Länka URL till ett webbprogram
 description: Länka URL:er till webbprogrammet i dynamiska medier
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
 
 ---
 
 
-# Länka URL:er till webbprogrammet {#linking-urls-to-your-web-application}
+# Länka URL till ett webbprogram {#linking-urls-to-your-web-application}
 
 Dina webbplatser och tillämpningar har åtkomst till Dynamic Media-tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
@@ -19,11 +19,11 @@ Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kop
 >
 >URL-strängar är bara tillgängliga för dynamiska återgivningar av resurser. De är för närvarande inte tillgängliga för statiska resurser som finns i DAM och inte för den dynamiska medieservern. URL-knappen visas inte för återgivningar som är statiska.
 
-Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida.](embed-code.md)
+See also [Embedding the Video or Image Viewer on a Web Page.](embed-code.md)
 
 Se även [Länka YouTube-URL:er till ditt webbprogram.](video.md)
 
-Se även [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
+See also [Delivering Optimized Images for a Responsive Site.](responsive-site.md)
 
 Se även [Överföra resurser.](/help/assets/manage-digital-assets.md#uploading-assets)
 
@@ -205,4 +205,4 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
-Se [HTTP2 Delivery of Content](http2.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
+Se [HTTP2 Delivery of Content](http2faq.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
