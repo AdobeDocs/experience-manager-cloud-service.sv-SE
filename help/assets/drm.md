@@ -3,7 +3,7 @@ title: Digital Rights Management i Adobe Experience Manager Assets
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i AEM.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 7141e42f53c556c0ac21def6085182ef400f5a71
 
 ---
 
@@ -32,9 +32,9 @@ Du kan visa förfallostatusen för en resurs på följande platser:
 
 Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på sökpanelen.
 
-1. Klicka på ikonen Sök i verktygsfältet i resurskonsolen för att visa rutan Omni-sökning.
+1. Klicka på sökikonen i verktygsfältet i resurskonsolen för att visa Omnissearch-fältet.
 
-1. När markören är i rutan Omni Search (Omni-sökning) trycker du på Retur för att visa sidan Sökresultat.
+1. Tryck på Retur när markören är i rutan Sök så visas sökresultatsidan.
 
 1. Klicka på ikonen GlobalNav för att visa sökpanelen.
 
@@ -42,13 +42,13 @@ Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på
 
 1. Välj **[!UICONTROL Förfallen]**. De förfallna resurserna visas i sökresultaten.
 
-När du väljer alternativet **Utgånget** visas bara de förfallna resurserna och delresurserna som sammansatta resurser refererar till i resurskonsolen. De sammansatta resurserna som refererar till utgångna delresurser visas inte omedelbart efter att delresurserna har upphört att gälla. I stället visas de när AEM Resurser har identifierat att de refererar till utgångna delresurser nästa gång som schemaläggaren körs.
+När du väljer alternativet **[!UICONTROL Utgånget]** visas bara de förfallna resurserna och delresurserna som sammansatta resurser refererar till i resurskonsolen. De sammansatta resurserna som refererar till utgångna delresurser visas inte omedelbart efter att delresurserna har upphört att gälla. I stället visas de när AEM Resurser har identifierat att de refererar till utgångna delresurser nästa gång som schemaläggaren körs.
 
 Om du ändrar förfallodatumet för en publicerad resurs till ett datum som är tidigare än den aktuella schemaläggningscykeln, identifierar schemat fortfarande den här resursen som en utgången resurs nästa gång den körs och visar dess status i enlighet med detta.
 
 Om ett fel eller fel dessutom förhindrar att schemaläggaren upptäcker förfallna resurser i den aktuella cykeln, undersöker schemaläggaren om dessa resurser i nästa cykel och identifierar deras förfallna status.
 
-Om du vill att resurskonsolen ska kunna visa de sammansatta resurserna tillsammans med de delresurser som har gått ut, konfigurerar du ett arbetsflöde för **Adobe CQ DAM-meddelande** om förfallodatum i AEM Configuration Manager.
+Om du vill att resurskonsolen ska kunna visa de sammansatta resurserna tillsammans med de delresurser som har gått ut, konfigurerar du ett arbetsflöde för **[!UICONTROL Adobe CQ DAM-meddelande]** om förfallodatum i AEM Configuration Manager.
 
 1. Öppna AEM Configuration Manager.
 1. Välj **[!UICONTROL Adobe CQ DAM Expiry Notification]**. Som standard är **[!UICONTROL Tidsbaserad schemaläggare]** markerad, vilket schemalägger ett jobb att vid en viss tidpunkt kontrollera om en resurs har upphört att gälla eller inte. När jobbet har slutförts visas resurser som har upphört att gälla och refererade resurser som utgångna i sökresultaten.
@@ -90,7 +90,7 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
 
 1. Om du vill söka efter resurser baserat på deras status klickar/trycker du på **[!UICONTROL sökikonen]** för att visa omsökningsfältet.
 
-1. Tryck på returtangenten och klicka/tryck sedan på ikonen **[!UICONTROL GlobalNav]** för att visa sökpanelen.
+1. Tryck på Enter och klicka/tryck sedan på AEM-ikonen för att visa sökpanelen.
 1. På sökpanelen trycker/klickar du på **[!UICONTROL Publiceringsstatus]** och väljer **[!UICONTROL Publicerad]** för att söka efter publicerade resurser i AEM Resurser.
 
 1. Tryck/klicka på **[!UICONTROL Godkännandestatus]** och klicka på lämpligt alternativ för att söka efter godkända eller avvisade resurser.
