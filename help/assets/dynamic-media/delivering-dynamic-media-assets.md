@@ -2,12 +2,12 @@
 title: Leverera dynamiska medieresurser
 description: Lär dig leverera dynamiska medieresurser
 translation-type: tm+mt
-source-git-commit: 5b55a339f466a7a0ffb4900c72e7d95995b28e83
+source-git-commit: 218afb360ec3a13f2f4562a703ca3184083fa7f6
 
 ---
 
 
-# Leverera dynamiska medieresurser{#delivering-dynamic-media-assets}
+# Delivering Dynamic Media Assets{#delivering-dynamic-media-assets}
 
 Hur du kan leverera dynamiska medieresurser - både video och bilder - beror på hur webbplatsen implementeras.
 
@@ -31,12 +31,12 @@ Mer information finns i följande avsnitt:
 * [Aktivera hotlink-skydd i Dynamic Media](/help/assets/dynamic-media/hotlink-protection.md)
 * [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md)
 * [Leverera optimerade bilder för en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md)
-* [HTTP2-leverans av innehåll](/help/assets/dynamic-media/http2.md)
-* [Invaliderar CDN-cachelagrat innehåll](/help/assets/dynamic-media/invalidate-cdn-cached-content.md)
+* [HTTP2-leverans av innehåll](/help/assets/dynamic-media/http2faq.md)
+* [Upphäva CDN-cachelagrat innehåll](/help/assets/dynamic-media/invalidate-cdn-cached-content.md)
 * [Använda regeluppsättningar för att omforma URL:er](/help/assets/dynamic-media/using-rulesets-to-transform-urls.md)
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
 AEM har nu stöd för leverans av allt dynamiskt medieinnehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla dynamiska medieresurser.
 
-Mer information finns i [HTTP/2 Delivery of Content Frequently Asked Questions](/help/assets/dynamic-media/scene7-http2faq.md) .
+Mer information finns i [HTTP/2 Delivery of Content Frequently Asked Questions](/help/assets/dynamic-media/http2faq.md) .
