@@ -1,0 +1,733 @@
+---
+title: Konfigurera sökformulär
+description: Konfigurera sökformulär för Adobe Experience Manager som en molntjänst.
+translation-type: tm+mt
+source-git-commit: d6045b702af683bdc1ffb99bab4d59b5bb359a77
+
+---
+
+
+# Konfigurera sökformulär {#configuring-search-forms}
+
+Använd **sökformulär** för att anpassa urvalet av sökpredikt som används i de sökpaneler som finns i olika AEM-konsoler och/eller paneler i författarmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
+
+Det finns ett [antal](#predicates-and-their-settings)predikat att tillgå direkt.
+
+Du kan [konfigurera sökformulären](#configuring-your-search-forms) som används i olika konsoler och i resursläsaren (när du redigerar sidor). Du hittar [dialogrutorna för att konfigurera dessa formulär](#configuring-your-search-forms) via:
+
+* **Verktyg**
+
+   * **Allmänt**
+
+      * **Sökformulär**
+
+När du först öppnar den här konsolen ser du att alla konfigurationer har en hänglåssymbol. Det här anger att rätt konfiguration är standardkonfigurationen (färdig) och kan inte tas bort. När du har anpassat konfigurationen försvinner låset, såvida du inte [tar bort den anpassade konfigurationen](#deleting-a-configuration-to-reinstate-the-default), och då återställs standardinställningen (och hänglåsindikatorn).
+
+![konfigurera sökformulär, översikt](assets/csf-overview.png)
+
+## Konfigurationer {#configurations}
+
+Standardkonfigurationerna (i alfabetisk ordning) är:
+
+* **Resursadministratörssökväg:**
+
+   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när konsolen Resurser används.
+
+* **Sidredigeraren (dokumentsökning):**
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter dokument i resursläsaren (när du redigerar en sida).
+
+* **Page Editor (Experience Fragments Search):**
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter Experience Fragments i resursläsaren (när du redigerar en sida).
+
+* **Sidredigeraren (bildsökning):**
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter bilder i resursläsaren (när du redigerar en sida).
+
+* **Page Editor (Manuscript search):**
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter manuskript i resursläsaren (när du redigerar en sida).
+
+* **Sidredigeraren (sidsökning):**
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter sidor i resursläsaren (när du redigerar en sida).
+
+* **Page Editor (Styckesökning):**
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter stycken i resursläsaren (när du redigerar en sida).
+
+* **Page Editor (produktsökning):**
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter produkter i resursläsaren (när du redigerar en sida).
+
+* **Page Editor (Scene7-sökning)**:
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter Scene7-resurser i resursläsaren (när du redigerar en sida).
+
+* **Sidredigeraren (videosökning)**:
+
+   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter videoklipp i resursläsaren (när du redigerar en sida).
+
+* **Sökväg för projektadministratör:**
+
+   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i projekt.
+
+* **Sökväg för projektöversättning:**
+
+   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning efter projektöversättningar.
+
+* **Sökväg** för webbplatsadministratörer:
+
+   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när sökfältet i webbplatskonsolen används.
+
+* **Snippets Admin Search Rail**:
+
+   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när han eller hon söker i textutdrag.
+
+* **Stock Admin Search Rail**:
+
+   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i Stock.
+
+## Förutsägelser och deras inställningar {#predicates-and-their-settings}
+
+### Predikat {#predicates}
+
+Följande predikat är tillgängliga, beroende på konfigurationen:
+
+<table>
+ <tbody>
+  <tr>
+   <th>Förutse</th>
+   <th>Syfte</th>
+   <th>Inställningar</th>
+  </tr>
+  <tr>
+   <td>Analyser</td>
+   <td>Sök-/filterfunktioner i webbläsaren Sites när analysdata visas. Analyssökfilter läses in för att matcha mappade anpassade analyskolumner.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Godkännandestatus</td>
+   <td>Sök efter godkännandestatus.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Författare</td>
+   <td>Sök efter författare.</td>
+   <td>
+    <ul>
+     <li>Platshållare</li>
+     <li>Egenskapsnamn*</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Utcheckad av</td>
+   <td>Sök efter resurser som har checkats ut av en viss användare.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Platshållare</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Utcheckningsstatus</td>
+   <td>Sök efter resurser med en viss utcheckningsstatus.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Komponenter</td>
+   <td>Gör att en författare kan söka efter/filtrera sidor som har en viss komponent på sig. Till exempel ett bildgalleri.<br /> </td>
+   <td>
+    <ul>
+     <li>Platshållare</li>
+     <li>Egenskapsnamn*</li>
+     <li>Egenskapsdjup</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Datumintervall</td>
+   <td>Sök efter resurser som skapats inom ett angivet intervall efter en date-egenskap. På sökpanelen kan du ange start- och slutdatum.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Platshållare</li>
+     <li>Egenskapsnamn*</li>
+     <li>Intervalltext (från)*</li>
+     <li>Intervall text (till)*</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Förfallostatus</td>
+   <td>Sök efter resurser baserat på förfallostatus.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Filstorlek</td>
+   <td>Sök efter resurser baserat på deras storlek.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Alternativbana</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Filtyp</td>
+   <td>Sök resurser baserat på fil-/mime-typen.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>MimeType-bana</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Fulltext</td>
+   <td>Sök på predikatet efter fulltextsökningar.</td>
+   <td>
+    <ul>
+     <li>Platshållare</li>
+     <li>Egenskapsnamn</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Grupp</td>
+   <td>Sökpredikat för grupp (används endast inom Insights Predicate).</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Dolt filter</td>
+   <td>Ett filter för egenskap och värde som inte är synligt för användaren.</td>
+   <td>
+    <ul>
+     <li>Egenskapsnamn*</li>
+     <li>Egenskapsvärde*</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Insikter</td>
+   <td>Sök efter ett urval Insights-parametrar.</td>
+   <td>Det här är ett komplext predikat som består av flera predikat:
+    <ul>
+     <li>Grupp</li>
+     <li>Intervall</li>
+     <li>Alternativ</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Samlingsmedlem</td>
+   <td>Sök efter resurser som är medlemmar i en samling</td>
+   <td>
+    <ul>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Flervärdesegenskap</td>
+   <td>Sök efter flera värden för en angiven egenskap.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Platshållare</li>
+     <li>Egenskapsnamn*</li>
+     <li>Stöd för avgränsare</li>
+     <li>Indataavgränsare</li>
+     <li>Ignorera skiftläge</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Alternativ</td>
+   <td><p>Alternativen är innehållsnoder som skapas av användaren.</p> <p>Mer information finns i <a href="#addinganoptionspredicate">Lägga till en alternativpredikat</a> .</p> </td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Enkel markering</li>
+     <li>Lägg till alternativ</li>
+     <li>Manuell</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Alternativ, egenskap</td>
+   <td>Sök efter en eller flera egenskaper för alternativet.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Alternativ nodsökväg</li>
+     <li>Egenskapsdjup</li>
+     <li>Enkel markering</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Sidstatus</td>
+   <td>Sök efter sidor utifrån deras status.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Publicera egenskapsnamn*</li>
+     <li>Egenskapsnamn för låsta sidor*</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Bana</td>
+   <td>Sök efter resurser som finns under en viss sökväg.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Lägg till sökvägar</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Sökvägsläsaren</td>
+   <td>Ange en sökvägsläsare att söka i.</td>
+   <td>
+    <ul>
+     <li>Platshållare</li>
+     <li>Rotsökväg</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Dold bana</td>
+   <td>Ett filter på sökvägen som inte är synligt för användaren.</td>
+   <td>
+    <ul>
+     <li>Egenskapsnamn (`path`)</li>
+     <li>Egenskapsvärde (`/content/dam`)</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Egenskap</td>
+   <td>Sök på en angiven egenskap.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Platshållare</li>
+     <li>Egenskapsnamn</li>
+     <li>Delvis sökning</li>
+     <li>Ignorera skiftläge</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Publiceringsstatus</td>
+   <td>Sök efter resurser baserat på deras publiceringsstatus</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Intervall</td>
+   <td>Sök efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Klassificering</td>
+   <td>Sök efter resurser utifrån deras klassificering.<br /> </td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Alternativbana</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Relativt datum</td>
+   <td>Sök efter resurser baserat på det relativa datumet då de skapades<br /> </td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Relativt datum</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Skjutreglageintervall</td>
+   <td>Ett vanligt sökpredikat som utökar intervallpredikatet med skjutreglaget. Värdet för den egenskap som söks igenom måste vara mellan skjutreglagets gränser.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+     <li>Egenskapsnamn*</li>
+     <li>Alternativ nodsökväg</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Status</td>
+   <td>Sök efter status för godkännande och utcheckning.</td>
+   <td>Det här är ett komplext predikat som består av flera predikat:
+    <ul>
+     <li>Godkännandestatus</li>
+     <li>Utcheckningsstatus</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Taggar</td>
+   <td>Sök baserat på taggar.</td>
+   <td>
+    <ul>
+     <li>Fältlängd</li>
+     <li>Platshållare</li>
+     <li>Egenskapsnamn*</li>
+     <li>Visa alternativet Matcha alla taggar</li>
+     <li>Sökväg till rottaggar</li>
+     <li>Beskrivning</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Mallar</td>
+   <td>Sök enligt den valda mallen.</td>
+   <td>
+    <ul>
+     <li>Platshållare</li>
+     <li>Egenskapsnamn*</li>
+     <li>Beskrivning</li>
+    </ul> 
+   </td>
+  </tr>
+  <tr>
+   <td>Översättningsstatus</td>
+   <td>Sök efter översättningsstatus.</td>
+   <td>
+    <ul>
+     <li>Fältetikett</li>
+    </ul> 
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<!--
+  <tr>
+   <td>Date ???</td>
+   <td>Slider-based search of assets based on a date property.</td>
+   <td>
+    <ul>
+     <li>Field Label</li>
+     <li>Property Name*</li>
+     <li>Description</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Asset Last Modified ?????</td>
+   <td>Date the asset was last modified.<br /> </td>
+   <td>A customized predicate, based on the Date Predicate.</td>
+  </tr>
+  <tr>
+   <td>Range Options ???</td>
+   <td>A specific search predicate for Assets and the same as common Slider Predicate. Is still available due to backward compatibilty issues.</td>
+   <td>
+    <ul>
+     <li>Field Label</li>
+     <li>Property Name*</li>
+     <li>Option Path</li>
+     <li>Description</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td>Tag </td>
+   <td>Search assets based on tags. You can configure the Path property to populate various tags in the Tags list.</td>
+   <td>
+    <ul>
+     <li>Field Label</li>
+     <li>Property Name*</li>
+     <li>Option Path</li>
+     <li>Description</li>
+    </ul> </td>
+  </tr>
+-->
+
+<!--
+>[!NOTE]
+>
+>* The common search predicates are defined in:
+>  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+>
+>
+>* Search predicates related only to siteadmin (classic UI) are located under:
+> `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
+>   * These are deprecated and only available for backward compatibility.
+>
+>This information is for reference only, you must not make changes to `/libs`.
+-->
+
+### Predikatinställningar {#predicate-settings}
+
+Beroende på predikatet finns ett urval av inställningar tillgängliga för konfiguration:
+
+* **Fältetikett**
+
+   Den etikett som visas som ett komprimeringsbart huvud eller som fältetikett för predikatet.
+
+* **Beskrivning**
+
+   Beskrivande information för användaren.
+
+* **Platshållare**
+
+   Tom text eller platshållaren för predikatet om ingen filtreringstext anges.
+
+* **Egenskapsnamn**
+
+   Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` anger djupet för egenskapen i förhållande till `jcr:content` noden (varje asterisk representerar en nodnivå).
+
+   Om du bara vill söka på en underordnad nod på första nivån för resursen som har egenskapen `x` på `jcr:content` noden använder du `*/jcr:content/x`
+
+* **Egenskapsdjup**
+
+   Det maximala djup som ska sökas efter den egenskapen i resurserna. En sökning på den egenskapen kan därför utföras på en resurs och rekursiva underordnade tills nivån på de underordnade är lika med det angivna djupet.
+
+* **Egenskapsvärde**
+
+   Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel, `cq:Page` eller
+
+   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
+
+* **Intervalltext**
+
+   Etiketten för intervallfältet i **datumintervallpredikatet** .
+
+* **Alternativbana**
+
+   Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har markerat ikonen **+** läggs markeringen till i listan med giltiga alternativ (och ikonen **-** tas bort om det behövs).
+
+   Alternativen är innehållsnoder som skapas av användaren och som har följande struktur:
+
+   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
+
+* **Alternativnodssökväg**&#x200B;är i princip samma som **Alternativsökväg**, men bara det här är i det vanliga predikatfältet, det andra är specifikt för resurser.
+
+* **Enkelval** Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter en markering. Om du av misstag markerar kryssrutan kan den avmarkeras.
+
+* **Egenskapsnamn för publicering och live-kopia** Etiketterna för kryssrutorna för publicering och live-kopia för det platsspecifika predikatet.
+
+* &amp;Klona;ast; på fältetiketterna på fliken **Inställningar** betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
+
+## Konfigurera dina sökformulär {#configuring-your-search-forms}
+
+### Skapa/öppna en anpassad konfiguration {#creating-opening-a-customized-configuration}
+
+1. Navigera till **Verktyg**, **Allmänt**, **Sökformulär**.
+
+1. Välj den konfiguration som du vill anpassa.
+1. Använd ikonen **Redigera** för att öppna konfigurationen för uppdatering.
+1. Om du gör en ny anpassning vill du förmodligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om det finns en befintlig anpassning kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
+1. Välj **Klar** för att spara konfigurationen. Ändringarna visas nästa gång konfigurationen används.
+
+   >[!NOTE]
+   >
+   >De anpassade konfigurationerna lagras (om det är lämpligt) under:
+   >
+   >* `/apps/cq/gui/content/facets/<option>`
+   >* `/apps/commerce/gui/content/facets/<option>`
+
+
+### Lägg till/redigera ett prediktionsfält och definiera fältinställningar {#add-edit-a-predicate-field-and-define-field-settings}
+
+Du kan lägga till eller redigera fält och definiera/uppdatera deras inställningar:
+
+1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
+1. Om du vill lägga till ett nytt fält öppnar du fliken **Välj predikat** och drar predikatet till önskad plats. Exempel: **Förutsägelse** av datumintervall:
+
+   ![lägg till ett predikat](assets/csf-add-predicate.png)
+
+1. Beroende på om:
+
+   * Du lägger till ett nytt fält:
+
+      När du har lagt till predikatet öppnas fliken **Inställningar** och egenskaperna som kan definieras visas.
+
+   * Du vill uppdatera ett befintligt predikat:
+
+      Markera predikatfältet (till höger) och öppna sedan fliken **Inställningar** .
+   Till exempel inställningarna för **Förutsägelse** av datumintervall:
+
+   ![ändra predikat](assets/csf-modify-predicate.png)
+
+1. Gör önskade ändringar och bekräfta med **Klar**. Ändringarna visas nästa gång konfigurationen används.
+
+### Förhandsgranska sökkonfigurationen {#previewing-the-search-configuration}
+
+1. Välj ikonen Förhandsgranska:
+
+   ![förhandsgranskningsikon](assets/csf-preview-icon.png)
+
+1. Då visas sökformulären så som de visas (helt expanderade) i kolumnen Sök i lämplig konsol.
+
+   ![förhandsgranska formulär](assets/csf-preview-form.png)
+
+1. **Stäng** förhandsgranskningen för att gå tillbaka och slutföra konfigurationen.
+
+### Ta bort ett predikatfält {#deleting-a-predicate-field}
+
+1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
+1. Markera predikatfältet (till höger), öppna fliken **Inställningar** och välj sedan ikonen **Ta bort** (längst ned till vänster).
+
+   ![ta bort ikon](assets/csf-delete-icon.png)
+
+1. En dialogruta begär att du bekräftar borttagningsåtgärden.
+
+1. Bekräfta detta och andra ändringar med **Klar**.
+
+### Ta bort en konfiguration (för att återställa standardkonfigurationen) {#deleting-a-configuration-to-reinstate-the-default}
+
+När du har anpassat en konfiguration åsidosätter detta standardinställningarna. Du kan återställa standardkonfigurationen genom att ta bort den anpassade konfigurationen.
+
+>[!NOTE]
+>
+>Du kan inte ta bort standardkonfigurationerna.
+
+En anpassad konfiguration tas bort från konsolen:
+
+1. Markera önskad konfiguration (till exempel **sidredigeraren (sökning efter stycken)**) och sedan ikonen **Ta bort** i verktygsfältet:
+
+   ![återställ standard](assets/csf-restore-default.png)
+
+1. Den anpassade konfigurationen tas bort och standardinställningen återställs (detta indikeras av att hänglåssymbolen visas igen i konsolen).
+
+### Förutsägelser för tillägg av alternativ {#adding-options-predicates}
+
+Alternativpredikat (Alternativ, Alternativ-egenskap) gör att du kan konfigurera ett objekt som du vill söka efter. De används vanligtvis för att söka efter något direkt under sidan. till exempel en egenskap på sidnoden.
+
+I följande exempel (som används för att söka efter mallen som används för att skapa en sida) visas stegen som ingår:
+
+1. Skapa noden som definierar den egenskap som du vill söka efter.
+
+   Du måste ha en rotnod som innehåller definitioner av de enskilda alternativen för att vara tillgängliga för användaren.
+
+   Noderna för de enskilda alternativen behöver egenskaperna:
+
+   * `jcr:title` - den fältetikett som ska visas i sökfältet
+   * `value` - egenskapsvärdet som ska genomsökas
+
+<!--
+   ![chlimage_1-379](assets/chlimage_1-379.png)
+-->
+
+>[!NOTE]
+>
+>Du ***får*** inte ändra något i `/libs` banan.
+>
+>Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>
+>Den rekommenderade metoden för konfiguration och andra ändringar är:
+>
+>1. Återskapa önskat objekt, som det finns i `/libs`, under `/apps`. I det här fallet från:
+>1. `/libs/cq/gui/content/common/options/predicates`
+>1. Gör ändringar i `/apps.`
+
+
+1. Öppna konsolen **Sök efter formulär** och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer.
+
+   Klicka/tryck sedan på ikonen **Redigera sökformulär** .
+
+1. Beroende på konfigurationen lägger du till en **Alternativ** - eller **alternativegenskap** i konfigurationen.
+1. Uppdatera fälten, särskilt:
+
+   * **Egenskapsnamn**
+
+      Specificera den nodegenskap som du vill söka efter på målnoderna. Exempel:
+
+      `jcr:content/cq:template`
+
+   * **Alternativ nodsökväg**
+
+      Välj den sökväg där du vill ha dina alternativ. Exempel:
+
+      `/apps/cq/gui/content/common/options/predicates/templatetype`
+
+<!--
+   ![chlimage_1-380](assets/chlimage_1-380.png)
+-->
+
+1. Välj **Klar** för att spara konfigurationen.
+1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **sökfältet** . De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten.
+
+<!--
+   ![chlimage_1-381](assets/chlimage_1-381.png)
+-->
+
+## Användarbehörigheter {#user-permissions}
+
+I följande tabell visas de behörigheter som krävs för att utföra redigerings-, borttagnings- och förhandsgranskningsåtgärder i sökformulär.
+
+<table>
+ <tbody>
+  <tr>
+   <td><strong>Åtgärd</strong></td>
+   <td><strong>Behörigheter</strong></td>
+  </tr>
+  <tr>
+   <td>Redigera </td>
+   <td>Läsa, skriva behörigheter på <code>/apps </code>noden.</td>
+  </tr>
+  <tr>
+   <td>Ta bort</td>
+   <td>Läsa, skriva, ta bort behörigheter på <code>/apps</code> noden</td>
+  </tr>
+  <tr>
+   <td>Förhandsgranska</td>
+   <td>Läsa, skriva, ta bort behörigheter på <code>/var/dam/content</code> noden.<br /> Läs- och skrivbehörigheter på <code>/apps</code> noden.</td>
+  </tr>
+ </tbody>
+</table>
