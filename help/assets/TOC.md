@@ -2,7 +2,7 @@
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
 translation-type: tm+mt
-source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
+source-git-commit: ccfb07b3aef2e357434993cdf87ea9962b3c3566
 
 ---
 
@@ -36,7 +36,6 @@ source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
    + [Metadataschema](metadata-schemas.md)
    + [Hantera videomaterial](manage-video-assets.md)
    + [Hämta material från AEM](download-assets-from-aem.md)
-   + [Lägga till vattenstämplar i material](add-watermark-to-assets.md)
    + [Checka in och checka ut material för redigering](check-out-and-submit-assets.md)
    + [Hantera rättigheter för digitalt material](drm.md)
 + Konfigurera, administrera och utöka Assets {#admin}
