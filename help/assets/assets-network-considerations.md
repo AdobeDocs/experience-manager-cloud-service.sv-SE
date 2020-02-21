@@ -3,7 +3,7 @@ title: Resurser för nätverksaspekter
 description: Diskutera nätverksaspekter när du utformar en AEM Resurser-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: ccfb07b3aef2e357434993cdf87ea9962b3c3566
 
 ---
 
@@ -87,11 +87,9 @@ Här är några saker att tänka på:
 
 * Läsa/skriva XMP-metadata
 * Automatisk aktivering och replikering
-* Vattenstämpel
 * Intag/sidextrahering av delmaterial
 * Överlappande arbetsflöden.
 
 Här är ett kundexempel för definitionen av ett arbetsflöde för resurser.
 
 ![chlimage_1-357](assets/chlimage_1-357.png)
-
