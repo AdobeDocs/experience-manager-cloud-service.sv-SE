@@ -3,14 +3,14 @@ title: Tillämpa arbetsflöden på resurser
 description: Lär dig hur du använder arbetsflöden på resurser, mappar och samlingar i Adobe Experience Manager Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7141e42f53c556c0ac21def6085182ef400f5a71
+source-git-commit: ccfb07b3aef2e357434993cdf87ea9962b3c3566
 
 ---
 
 
 # Tillämpa arbetsflöden på resurser {#applying-workflows-to-assets}
 
-Du använder arbetsflöden i digitala resurser för att aktivera resursen eller skapa vattenstämplar. Vissa av arbetsflödena för resurser är konfigurerade att köras automatiskt baserat på vissa villkor. Arbetsflödet som automatiskt skapar en återgivning körs till exempel automatiskt när en bild har redigerats.
+Du använder arbetsflöden i digitala resurser för att aktivera resursen. Vissa av arbetsflödena för resurser är konfigurerade att köras automatiskt baserat på vissa villkor. Arbetsflödet som automatiskt skapar en återgivning körs till exempel automatiskt när en bild har redigerats.
 
 ## Tillämpa ett arbetsflöde på en AEM-resurs {#apply-a-workflow-to-an-aem-asset}
 
