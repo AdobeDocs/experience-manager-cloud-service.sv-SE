@@ -2,7 +2,7 @@
 title: Lägga till dynamiska medieresurser på sidor
 description: Lägga till komponenter för dynamiska media på en sida i AEM
 translation-type: tm+mt
-source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
+source-git-commit: 454f4c9585b575ae0d904292ddd659148393db0b
 
 ---
 
@@ -199,6 +199,8 @@ Du kan redigera följande dynamiska mediainställningar genom att klicka på **[
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
    Du kan redigera följande avancerade inställningar genom att klicka på **[!UICONTROL Redigera]** i komponenten.
+
+* **[!UICONTROL Aktivera matchning]** av proportioner - Matchar originalbildens proportioner när du väljer en smart beskärningsåtergivning.
 
 * **[!UICONTROL Titel]**- Ändra titeln på bilden för smart beskärning.
 
