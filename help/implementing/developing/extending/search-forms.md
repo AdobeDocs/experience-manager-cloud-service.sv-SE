@@ -2,18 +2,32 @@
 title: Konfigurera sökformulär
 description: Konfigurera sökformulär för Adobe Experience Manager som en molntjänst.
 translation-type: tm+mt
-source-git-commit: c0298d81462138187b04407ba9cfd5041b08873f
+source-git-commit: c9a7eacaf2d811374299a36b4da0108b34318277
 
 ---
 
 
 # Konfigurera sökformulär {#configuring-search-forms}
 
-Använd **sökformulär** för att anpassa de sökfaktorer och filter som finns i de olika sökpanelerna i författarmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
+Adobe Experience Manager som molntjänst har en kraftfull [sökfunktion](/help/sites-cloud/authoring/getting-started/search.md) .
 
-Det finns ett [antal](#predicates-and-their-settings)predikat att tillgå direkt.
+I kombination med detta finns det också en uppsättning fördefinierade alternativ som hjälper dig att filtrera innehållet. Dessa innehåller fördefinierade aspekter som **Ändringsdatum**, **Publiceringsstatus** eller **Livecopy-status** som hjälper dig att snabbt gå ned till de resurser du behöver.
 
-Du kan [konfigurera sökformulären](#configuring-your-search-forms) som används i olika konsoler och i resursläsaren (när du redigerar sidor). Du hittar [dialogrutorna för att konfigurera dessa formulär](#configuring-your-search-forms) via:
+![sök- och filteranvändning](assets/csf-usage.png)
+
+Tillsammans hjälper vi er att snabbt och enkelt hitta ert innehåll:
+
+* [Sök och filtrera](/help/sites-cloud/authoring/getting-started/search.md#search-and-filter)
+* [Järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector)
+* i [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser) (när du redigerar sidor)
+
+>[!NOTE]
+>
+>Du kan konfigurera den underliggande tjänsten [Innehållssökning och indexering](/help/operations/indexing.md) .
+
+Med **sökformulär** kan du anpassa och utöka panelerna efter dina specifika behov.
+
+Med **sökformulären** får du ett urval av [predikat](#predicates-and-their-settings) som du kan kombinera och definiera. Du hittar [dialogrutorna för att konfigurera dessa formulär](#configuring-your-search-forms) via:
 
 * **Verktyg**
 
@@ -21,73 +35,48 @@ Du kan [konfigurera sökformulären](#configuring-your-search-forms) som använd
 
       * **Sökformulär**
 
-När du först öppnar den här konsolen ser du att alla konfigurationer har en hänglåssymbol. Det här anger att rätt konfiguration är standardkonfigurationen (färdig) och kan inte tas bort. När du har anpassat konfigurationen försvinner låset, såvida du inte [tar bort den anpassade konfigurationen](#deleting-a-configuration-to-reinstate-the-default), och då återställs standardinställningen (och hänglåsindikatorn).
+## Standardformulär {#default-forms}
+
+När du först öppnar konsolen **Sök efter formulär** ser du att alla konfigurationer har en hänglåssymbol. Detta anger att motsvarande konfiguration är standardkonfigurationen (ej ifylld) - och kan inte tas bort. När du har anpassat och sparat en konfiguration försvinner låset. Den visas igen när du [tar bort den anpassade konfigurationen](#deleting-a-configuration-to-reinstate-the-default). I så fall återställs standardinställningen (och hänglåsindikatorn).
 
 ![konfigurera sökformulär, översikt](assets/csf-overview.png)
-
-## Konfigurationer {#configurations}
 
 Standardkonfigurationerna (i alfabetisk ordning) är:
 
 * **Resursadministratörssökväg:**
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när konsolen Resurser används.
-
 * **Sidredigeraren (dokumentsökning):**
-
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter dokument i resursläsaren (när du redigerar en sida).
 
 * **Page Editor (Experience Fragments Search):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter Experience Fragments i resursläsaren (när du redigerar en sida).
-
 * **Sidredigeraren (bildsökning):**
-
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter bilder i resursläsaren (när du redigerar en sida).
 
 * **Page Editor (Manuscript search):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter manuskript i resursläsaren (när du redigerar en sida).
-
 * **Sidredigeraren (sidsökning):**
-
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter sidor i resursläsaren (när du redigerar en sida).
 
 * **Page Editor (Styckesökning):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter stycken i resursläsaren (när du redigerar en sida).
-
 * **Page Editor (produktsökning):**
-
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter produkter i resursläsaren (när du redigerar en sida).
 
 * **Page Editor (Scene7-sökning)**:
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter Scene7-resurser i resursläsaren (när du redigerar en sida).
-
 * **Sidredigeraren (videosökning)**:
-
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter videoklipp i resursläsaren (när du redigerar en sida).
 
 * **Sökväg för projektadministratör:**
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i projekt.
-
 * **Sökväg för projektöversättning:**
-
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning efter projektöversättningar.
 
 * **Sökväg** för webbplatsadministratörer:
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när sökfältet i webbplatskonsolen används.
-
 * **Snippets Admin Search Rail**:
-
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när han eller hon söker i textutdrag.
 
 * **Stock Admin Search Rail**:
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i Stock.
+>[!NOTE]
+>
+> Mer information om resursrelaterade sökformulär finns i [Resurser - Sök efter ansikten](/help/assets/search-facets.md)
+
 
 ## Förutsägelser och deras inställningar {#predicates-and-their-settings}
 
@@ -168,7 +157,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Datumintervall</td>
-   <td>Sök efter resurser som skapats inom ett angivet intervall efter en date-egenskap. På sökpanelen kan du ange start- och slutdatum.</td>
+   <td>Sök efter resurser som skapats inom ett angivet intervall efter en datumegenskap. På sökpanelen kan du ange start- och slutdatum.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -191,7 +180,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Filstorlek</td>
-   <td>Sök efter resurser baserat på deras storlek.</td>
+   <td>Filtrera resurser baserat på deras storlek.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -205,7 +194,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
    <td>Sök resurser baserat på fil-/mime-typen.</td>
    <td>
     <ul>
-     <li>Fältetikett</li>
+     <li>Fältetikett</li> 
      <li>Egenskapsnamn*</li>
      <li>MimeType-bana</li>
      <li>Beskrivning</li>
@@ -214,7 +203,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Fulltext</td>
-   <td>Sök på predikatet efter fulltextsökningar.</td>
+   <td>Sök på predikatet efter fulltextsökningar. Den mappas med operatorn "jcr:contains".</td>
    <td>
     <ul>
      <li>Platshållare</li>
@@ -304,7 +293,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Sidstatus</td>
-   <td>Sök efter sidor utifrån deras status.</td>
+   <td>Filtrera sidor efter status.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -315,7 +304,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Bana</td>
-   <td>Sök efter resurser som finns under en viss sökväg.</td>
+   <td>Filtrera efter specifik sökväg. Du kan ange flera banor som alternativ.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -325,7 +314,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Sökvägsläsaren</td>
-   <td>Ange en sökvägsläsare att söka i.</td>
+   <td>Ange en sökvägsläsare att söka i under en fördefinierad rotsökväg.</td>
    <td>
     <ul>
      <li>Platshållare</li>
@@ -360,7 +349,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Publiceringsstatus</td>
-   <td>Sök efter resurser baserat på deras publiceringsstatus</td>
+   <td>Filtrera resurser baserat på deras publiceringsstatus.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -380,7 +369,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Klassificering</td>
-   <td>Sök efter resurser utifrån deras klassificering.<br /> </td>
+   <td>Sök efter resurser utifrån deras genomsnittliga klassificering.<br /> </td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -391,7 +380,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Relativt datum</td>
-   <td>Sök efter resurser baserat på det relativa datumet då de skapades<br /> </td>
+   <td>Filtrera resurser baserat på det relativa datumet då de skapades. Exempel: 1 vecka sedan, 1 månad sedan.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -497,23 +486,24 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
 -->
 
-<!--
 >[!NOTE]
 >
->* The common search predicates are defined in:
->  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+>* De vanliga sökpredikten definieras i:
+   >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
 >
+Informationen är endast avsedd som referens och du får inte ändra den `/libs`.
+
+<!--
 >* Search predicates related only to siteadmin (classic UI) are located under:
 > `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
 >   * These are deprecated and only available for backward compatibility.
 >
->This information is for reference only, you must not make changes to `/libs`.
 -->
 
 ### Predikatinställningar {#predicate-settings}
 
-Beroende på predikatet finns ett urval av inställningar tillgängliga för konfiguration:
+Beroende på predikatet finns ett urval av inställningar tillgängliga för konfiguration, bland annat:
 
 * **Fältetikett**
 
@@ -659,22 +649,19 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    * `jcr:title` - den fältetikett som ska visas i sökfältet
    * `value` - egenskapsvärdet som ska genomsökas
+   ![Förutsägelsedefinition](assets/csf-options-predicate-01.png)
 
-<!--
-   ![chlimage_1-379](assets/chlimage_1-379.png)
--->
-
->[!NOTE]
->
->Du ***får*** inte ändra något i `/libs` banan.
->
->Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
->
->Den rekommenderade metoden för konfiguration och andra ändringar är:
->
->1. Återskapa önskat objekt, som det finns i `/libs`, under `/apps`. I det här fallet från:
->1. `/libs/cq/gui/content/common/options/predicates`
->1. Gör ändringar i `/apps.`
+   >[!NOTE]
+   >
+   >Du ***får*** inte ändra något i `/libs` banan.
+   >
+   >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   >
+   >Den rekommenderade metoden för konfiguration och andra ändringar är:
+   >
+   >1. Återskapa önskat objekt, som det finns i `/libs`, under `/apps`. I det här fallet från:
+   >1. `/libs/cq/gui/content/common/options/predicates`
+   >1. Gör ändringar i `/apps.`
 
 
 1. Öppna konsolen **Sök efter formulär** och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer.
@@ -695,16 +682,13 @@ I följande exempel (som används för att söka efter mallen som används för 
       Välj den sökväg där du vill ha dina alternativ. Exempel:
 
       `/apps/cq/gui/content/common/options/predicates/templatetype`
-
-<!--
-   ![chlimage_1-380](assets/chlimage_1-380.png)
--->
+   ![Alternativpredikat](assets/csf-options-predicate-02.png)
 
 1. Välj **Klar** för att spara konfigurationen.
-1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **sökfältet** . De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten:
+1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **sökfältet** . De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten.
 
 <!--
-   ![chlimage_1-381](assets/chlimage_1-381.png)
+   ![options being used](assets/csf-options-usage.png)
 -->
 
 ## Användarbehörigheter {#user-permissions}
