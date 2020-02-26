@@ -1,20 +1,19 @@
 ---
-title: Hantera materialsamlingar
-description: Förstå begreppet samling i AEM Assets. Lär dig hur du samlar, hanterar, redigerar och samlar med andra användare.
+title: Hantera samlingar av digitala resurser
+description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär dig hur du samlar, hanterar, redigerar och samlar med andra användare.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7141e42f53c556c0ac21def6085182ef400f5a71
+source-git-commit: 8aa693387183e65434da300ccf08f394b48ed9ba
 
 ---
 
 
 # Hantera samlingar {#manage-collections}
 
-En samling är en uppsättning resurser i Adobe Experience Manager (AEM) Assets. Använd samlingar för att dela resurser mellan användare.
+En samling är en uppsättning resurser i Adobe Experience Manager Assets. Använd samlingar för att dela resurser mellan användare. Uppsättningen kan vara en statisk samling eller en dynamisk samling som baseras på sökresultat.
 
-* En samling kan innehålla resurser från olika platser.
-* Du kan dela samlingar med olika användare som har olika behörighetsnivåer, t.ex. visning, redigering och så vidare.
+Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela samlingar med olika användare som har olika behörighetsnivåer, t.ex. visning, redigering och så vidare.
 
 Du kan dela flera samlingar med en användare. Varje samling innehåller referenser till resurser. Resursernas referensintegritet bevaras i alla samlingar.
 
@@ -24,12 +23,11 @@ Samlingar är av följande typer, baserat på det sätt som de samlar resurser p
 
 * En smart samling som dynamiskt inkluderar resurser baserat på sökvillkor.
 
-## Navigera i samlingskonsolen {#navigate-the-collections-console}
+## Åtkomst till samlingskonsolen {#navigate-the-collections-console}
 
 Så här öppnar du konsolen **[!UICONTROL Samlingar]** :
 
-1. Tryck eller klicka på AEM-logotypen.
-1. Gå till **[!UICONTROL Resurser]** > **[!UICONTROL Samlingar]** på navigeringssidan. Konsolen **[!UICONTROL Samlingar]** visas.
+Om du vill öppna **[!UICONTROL Samlingar]** trycker eller klickar du på Experience Manager-logotypen. Gå till **[!UICONTROL Resurser]** > **[!UICONTROL Samlingar]** på navigeringssidan.
 
 ## Skapa en samling {#create-a-collection}
 
@@ -53,15 +51,15 @@ Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser
 
    >[!NOTE]
    >
-   >Med AEM Resurser kan du skapa granskningsåtgärder för en samling på samma sätt som du skapar granskningsåtgärder för en resursmapp.
+   >Med Experience Manager Assets kan du skapa granskningsåtgärder för en samling på samma sätt som du skapar granskningsåtgärder för en resursmapp.
 
    Om du vill lägga till resurser i samlingen går du till användargränssnittet Resurser. Mer information finns i [Lägga till resurser i en samling](#add-assets-to-a-collection).
 
-### Skapa samlingar med Dropzone {#create-collections-using-dropzone}
+### Skapa samlingar med dropzone {#create-collections-using-dropzone}
 
 Du kan dra resurser från resursgränssnittet till en samling. Du kan också skapa en kopia av en samling och dra resurserna dit.
 
-1. I resursgränssnittet väljer du de resurser som du vill lägga till i en samling.
+1. I resursanvändargränssnittet väljer du de resurser som du vill lägga till i en samling.
 1. Dra resurserna till zonen **[!UICONTROL Släpp i samling]** . Du kan också trycka/klicka på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
 1. Tryck/klicka på ikonen **[!UICONTROL Skapa samling]** i verktygsfältet på sidan **[!UICONTROL Lägg till i samling]** . Om du vill lägga till resurserna i en befintlig samling markerar du den på sidan och trycker/klickar på **[!UICONTROL Lägg till]**. Som standard är den senast uppdaterade samlingen markerad.
 1. Ange ett namn för samlingen i dialogrutan **[!UICONTROL Skapa ny samling]** . Om du vill att samlingen ska vara tillgänglig för alla användare väljer du **[!UICONTROL Offentlig samling]**.
@@ -208,7 +206,7 @@ Om du vill anpassa [!UICONTROL egenskapssidan för] metadata, inklusive lägga t
 
 Du kan lägga till en samling i en annan samling och på så sätt skapa en kapslad samling.
 
-1. Välj önskad samling eller grupp med samlingar i konsolen Samlingar och tryck eller klicka på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
+1. Välj önskad samling eller grupp med samlingar i konsolen Samlingar och tryck eller klicka på **[!UICONTROL Till samling]** i verktygsfältet.
 1. På sidan **[!UICONTROL Lägg till i samling]** väljer du den samling där samlingen ska läggas till.
 
    >[!NOTE]
@@ -225,7 +223,7 @@ Du kan lägga till en samling i en annan samling och på så sätt skapa en kaps
 
 I användargränssnittet Resurser kan du söka efter eller filtrera resurser baserat på vissa regler, sökvillkor eller anpassade sökfaktorer. Om du sparar dem som **[!UICONTROL sparade sökningar]** kan du komma åt dem senare från listan **[!UICONTROL Sparade sökningar]** på panelen Filter. När du skapar en sparad sökning skapas även en smart samling.
 
-Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Sparade sökningar]** . Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` CRX på den relativa platsen `/content/dam/collections/`.
+Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Sparade sökningar]** . Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` CRXDE på den relativa platsen `/content/dam/collections/`.
 
 >[!NOTE]
 >
@@ -235,8 +233,9 @@ Att redigera sparade sökningar är detsamma som att redigera smarta samlingar. 
 
 Så här tar du bort sparade sökningar:
 
-1. Navigera till användargränssnittet Resurser och tryck/klicka på **[!UICONTROL Sök]** i verktygsfältet.
-1. Tryck på returtangenten när markören är i Omnissearch-rutan.
+1. I resursanvändargränssnittet: tryck/klicka på sökikonen i verktygsfältet.
+
+1. Tryck på Retur när markören är i omsökningsfältet.
 1. Klicka på eller tryck på ikonen GlobalNav för att visa filterpanelen.
 1. I listan **[!UICONTROL Sparade sökningar]** : tryck/klicka på **[!UICONTROL Ta bort]** bredvid den smarta samling du vill ta bort.
 1. Tryck/klicka på **[!UICONTROL Ta bort]** i dialogrutan för att ta bort den sparade sökningen.
@@ -246,11 +245,11 @@ Så här tar du bort sparade sökningar:
 Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehåller kapslade samlingar körs arbetsflödet även på resurserna i de kapslade samlingarna. Om samlingen och den kapslade samlingen innehåller duplicerade resurser körs arbetsflödet bara en gång för sådana resurser.
 
 1. Välj en samling som du vill köra ett arbetsflöde för i samlingskonsolen.
-1. Tryck/klicka på ikonen GlobalNav och välj **Tidslinje** i listan.
-1. Klicka på eller tryck på ikonen Cirkumflex längst ned på tidslinjen och tryck/klicka sedan på **Starta arbetsflöde**.
-1. I delen **Starta arbetsflöde** väljer du en arbetsflödesmodell i listan. Välj till exempel **DAM Update Asset** -modellen.
-1. Ange en titel för arbetsflödet och tryck/klicka på **Start**.
-1. Tryck/klicka på **Fortsätt** i dialogrutan. Arbetsflödet körs på alla resurser i samlingen.
+1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Tidslinje]** i listan.
+1. Klicka på eller tryck på ikonen Cirkumflex längst ned på tidslinjen och tryck/klicka sedan på **[!UICONTROL Starta arbetsflöde]**.
+1. I delen **[!UICONTROL Starta arbetsflöde]** väljer du en arbetsflödesmodell i listan. Välj till exempel **[!UICONTROL DAM Update Asset]** -modellen.
+1. Ange en titel för arbetsflödet och tryck/klicka på **[!UICONTROL Start]**.
+1. Tryck/klicka på **[!UICONTROL Fortsätt]** i dialogrutan. Arbetsflödet körs på alla resurser i samlingen.
 
 >[!MORELIKETHIS]
 >
