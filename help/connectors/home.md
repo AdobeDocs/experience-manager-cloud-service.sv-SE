@@ -1,44 +1,44 @@
 ---
-title: Adobe Experience Manager som Cloud Service Connectors
-description: Adobe Experience Manager som Cloud Service Connectors självhjälpsresurser och dokumentationslänkar
-translation-type: tm+mt
+title: Anslutningar för Adobe Experience Manager som Cloud Service
+description: Länkar till självhjälp och dokumentation om anslutningar till Adobe Experience Manager som Cloud Service
+translation-type: ht
 source-git-commit: 2312250505f47dc84acd1987b5ebae21fd232e2d
 
 ---
 
 
-# Implementera anslutningar för Experience Manager som en molntjänst {#aem-connectors-guide}
+# Implementera anslutningar för Experience Manager som Cloud Service {#aem-connectors-guide}
 
-På den här sidan visas självhjälpsresurser om anslutningar för Experience Manager som en molntjänst.
+På den här sidan visas självhjälp om anslutningar för Experience Manager som Cloud Service.
 
-## Viktiga artiklar i Experience Manager som en molntjänst {#key-articles}
+## Viktiga artiklar om anslutningar för Experience Manager som Cloud Service {#key-articles}
 
-* [Implementera kopplingar](implement.md)
-* [Skicka kontakter](submit.md)
-* [Underhåll kopplingar](maintain.md)
+* [Implementera anslutningar](implement.md)
+* [Skicka anslutningar](submit.md)
+* [Underhålla anslutningar](maintain.md)
 
-## Experience Manager som en molntjänst {#aem-guides}
+## Handböcker om Experience Manager som Cloud Service {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
-| [Experience Manager som startsida för en molntjänst](/help/landing/home.md) | Börja här om du vill få en översikt över Experience Manager som en molntjänstdokumentation. |
-| [Översikt](/help/overview/home.md) | Den här guiden ger en introduktion till Experience Manager som en molntjänst, inklusive en introduktion, terminologi m.m. |
-| [Versionsinformation](/help/release-notes/home.md) | Den här guiden ger viktig information om den senaste versionen av Experience Manager som en molntjänst, inklusive vad som är nya borttagna funktioner och kända problem. |
-| [Kärnbegrepp](/help/core-concepts/home.md) | Den här guiden ger en introduktion till de viktigaste begreppen i Experience Manager som en molntjänst, inklusive arkitekturen för den nya tjänsten. |
-| [Användarhandbok för säkerhet](/help/security/home.md) | Lär dig mer om viktiga säkerhetsfrågor när det gäller Experience Manager som en molntjänst. |
-| [Onboarding](/help/onboarding/home.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager som en molntjänst, inklusive hur du får åtkomst och viktig dataskyddsinformation. |
-| [Användarhandbok för webbplatser](/help/sites-cloud/home.md) | Lär dig hur du administrerar Experience Manager Sites som en molntjänst. |
-| [Användarhandbok för resurser](/help/assets/home.md) | Lär dig hur du administrerar Experience Manager Assets som en molntjänst. |
-| [Implementera användarhandbok](/help/implementing/home.md) | Lär dig hur du anpassar Experience Manager som en Cloud Service-distribution, inklusive distributionsämnen. |
-| [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-funktionerna i Experience Manager som en molntjänst, till exempel indexerings- och underhållsåtgärder. |
+| [Startsida för Experience Manager som Cloud Service](/help/landing/home.md) | Börja här om du vill få en översikt över dokumentationen om Experience Manager som Cloud Service. |
+| [Översikt](/help/overview/home.md) | Den här guiden ger en inledande översikt över Experience Manager som Cloud Service, med bland annat en introduktion, terminologi med mera. |
+| [Versionsinformation](/help/release-notes/home.md) | Den här guiden innehåller viktig information om den senaste versionen av Experience Manager som Cloud Service, inklusive nyheter, borttagna funktioner och kända fel. |
+| [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden ger en introduktion till de viktigaste begreppen i Experience Manager som Cloud Service, inklusive den nya tjänstens arkitektur. |
+| [Användarhandbok om säkerhet](/help/security/home.md) | Lär dig mer om viktiga säkerhetsfrågor när det gäller Experience Manager som Cloud Service. |
+| [Onboarding](/help/onboarding/home.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager som Cloud Service, bland annat hur du får åtkomst och viktig dataskyddsinformation. |
+| [Användarhandbok för Sites](/help/sites-cloud/home.md) | Lär dig hur du administrerar Experience Manager Sites som Cloud Service. |
+| [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du administrerar Experience Manager Assets som Cloud Service. |
+| [Användarhandbok om implementering](/help/implementing/home.md) | Lär dig hur du anpassar distributionen av Experience Manager som Cloud Service, med bland annat ämnen om utvecklingsdistribution. |
+| [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-funktionerna i Experience Manager som Cloud Service, till exempel indexerings- och underhållsåtgärder. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 
-* [Dispatcher Documentation](/help/implementing/dispatcher/overview.md)
+* [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
-* [Dokumentation för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [Dokumentation för Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
-* [GDPR-beredskap](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md)
-* [Adobe Experience Manager som en självstudiekurs om molntjänster](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#solutions/experience-manager)
-* [AEM Community Forum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Dokumentation om viktiga komponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+* [Dokumentation om Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [GDPR-efterlevnad](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md)
+* [Självstudiekurser om Adobe Experience Manager som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
+* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
+* [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
