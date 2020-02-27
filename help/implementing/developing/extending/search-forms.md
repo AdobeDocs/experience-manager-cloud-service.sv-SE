@@ -664,9 +664,7 @@ I följande exempel (som används för att söka efter mallen som används för 
    >1. Gör ändringar i `/apps.`
 
 
-1. Öppna konsolen **Sök efter formulär** och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer.
-
-   Klicka/tryck sedan på ikonen **Redigera sökformulär** .
+1. Öppna konsolen **Sök efter formulär** och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer. Välj sedan **Redigera**.
 
 1. Beroende på konfigurationen lägger du till en **Alternativ** - eller **alternativegenskap** i konfigurationen.
 1. Uppdatera fälten, särskilt:
@@ -685,11 +683,10 @@ I följande exempel (som används för att söka efter mallen som används för 
    ![Alternativpredikat](assets/csf-options-predicate-02.png)
 
 1. Välj **Klar** för att spara konfigurationen.
-1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **sökfältet** . De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten.
+1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **sökfältet - Filter** . De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten.
 
-<!--
-   ![options being used](assets/csf-options-usage.png)
--->
+   ![alternativ som används](assets/csf-options-usage.png)
+
 
 ## Användarbehörigheter {#user-permissions}
 
