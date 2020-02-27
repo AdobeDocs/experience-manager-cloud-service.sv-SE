@@ -1,8 +1,8 @@
 ---
 sub-product: Onboarding to AEM as a Cloud Service
 user-guide-title: Onboarding to AEM as a Cloud Service
-translation-type: ht
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+translation-type: tm+mt
+source-git-commit: 936e42f273b75f0ea7776c51f57af44ec9e6d96f
 
 ---
 
@@ -13,6 +13,7 @@ source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
 + Detta behövs {#what-is-required}
    + [Åtkomstbehörigheter har beviljats](what-is-required/access-rights-granted.md)
    + [Lägg till användare och roller](what-is-required/add-users-roles.md)
+   + [Rollbaserade behörigheter](what-is-required/role-based-permissions.md)
    + [Databas för källkod](what-is-required/source-code-repository.md)
 + Få åtkomst till AEM i molnet {#getting-access}
    + [Få åtkomst till Experience Manager som Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
@@ -24,3 +25,4 @@ source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
    + [AEM-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/aem-readiness.md)
    + [AEM Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/foundation-readiness.md)
    + [AEM Sites-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/sites-readiness.md)
++ [Översikt över verktygskonsolerna](tools-consoles.md)
