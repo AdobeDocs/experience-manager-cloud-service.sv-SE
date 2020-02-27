@@ -2,12 +2,12 @@
 title: Lägg till användare och roller - vad som krävs
 description: Lägg till användare och roller - vad som krävs
 translation-type: tm+mt
-source-git-commit: 1d2d39ba3dd84b79420da94c985b00aa1bb5b806
+source-git-commit: 936e42f273b75f0ea7776c51f57af44ec9e6d96f
 
 ---
 
 
-# Lägg till användare och roller - vad som krävs {#add-users-roles}
+# Lägg till användare och roller {#add-users-roles}
 
 
 Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter för att fungera. Exempelvis kan bara vissa användare ange KPI:er (Key Performance Indicators) för ett program. Dessa behörigheter är logiskt grupperade i roller.
