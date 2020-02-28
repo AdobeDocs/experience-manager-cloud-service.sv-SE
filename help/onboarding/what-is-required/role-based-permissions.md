@@ -2,7 +2,7 @@
 title: Rollbaserade behörigheter
 description: Rollbaserade behörigheter
 translation-type: tm+mt
-source-git-commit: e59fe55c255d5239a561a9fb878faa81d17b4b48
+source-git-commit: 6cae9b2b719dab687f601a0596d37f99afded9ab
 
 ---
 
@@ -17,19 +17,29 @@ Var och en av rollerna har specifika behörigheter, förkonfigurerade uppgifter 
 
 | Behörighet | Beskrivning | Företagsägare | Distributionshanteraren | Programhanteraren | Utvecklare |
 |--- |--- |--- |--- |--- |--- |
-| Lägg till program | Lägg till nytt program. | x | x | x | x |
-| Läsprogram | Läs Program-KPI:er. | x | x | x | x |
-| Skriv program | Programinstallation eller redigering. | x |  |  |  |  |
-| Läs miljö | Se Miljöinformation. | x | x | x | x |
-| Skapa körning | Starta pipeline. | x | x | x |  |
-| Läskörning | Se körningsstatus. | x | x | x | x |
-| Återuppta körning | Kan återuppta körning när den är pausad. | x | x | x |  | x |
-| Kör Godkänn distribution till produktion | Godkänn Adobe GoLive. | x | x | x |  |  |
-| Distribuera körningsschema till produktion | Schemalägg produktionsdistribution. | x | x | x |
-| Avbryt körning | Avbryt aktuell körning. | x | x | x |  |
-| Fel vid kvalitetshastighet för körning | Godkänn viktiga fel i Quality Gate. | x | x | x |  |
-| Skapa pipeline | Konfigurera/redigera pipeline. |  | x |  |  |
-| Pipeline-läsning | Se Information om pipeline. | x | x | x | x |
-| Pipeline Write | Konfigurera/redigera pipeline. |  | x |  |  |
-| Ändra godkännande av pipeline | Tillåter redigering av alternativet Affärsägare. |  | x |  |  |
-| Läs steg | Se resultaten av mätvärdena för stegkvalitet. | x | x | x | x |
+| Skapa klientorganisation | Skapa en ny klientorganisation. |  |  |  |  |
+| Uppdatera klientorganisation | Uppdatera klientorganisation. |  |  |  |  |
+| Lägg till program | Lägg till ett nytt program. | x |  |  |  |
+| Skapa miljö | Skapa prod+stage-, dev- och Playground-miljöer. | x | x |  |  |
+| Konfigurera miljövariabler | Konfigurera miljövariabler och hemligheter. |  | x |  | x |
+| Lägg till eller ta bort anpassat domännamn, överför eller uppdatera SSL-certifikat | Lägg till/ta bort eget domännamn, Överför/Uppdatera SSL-certifikat. | x | x |  |  |
+| Uppdateringsmiljö | Uppdatera Prod+Stage-, Dev- och Playground-miljöer. | x | x |  |  |
+| Ta bort miljö | Ta bort miljöer som inte är produktiva, dev och Playground. | x | x |  |  |
+| Ta bort miljö | Ta bort Prod+Stage Environment. |  |  |  |  |
+| Vilolägesmiljö | Hibernate Non-prod, Dev, Playground environment. | x | x |  |  |
+| Programinställningar | Konfigurera program (inklusive KPI). | x |  |  |  |
+| Programinställningar | Konfigurera skalningsprinciper (allmänt: konfigurera högsta antal nivåer och horisontell skalning vid behov: Anmäl dig). | x |  |  |  |
+| Programinställningar | Git implementera åtkomst. |  | x |  | x |
+| Inställningar för pipeline | Konfigurera eller redigera pipeline. |  | x |  |  |
+| Körning av pipeline | Starta rörledningen. | x | x |  |  |
+| Körning av pipeline | Avvisa/godkänn viktiga 3-nivåfel. | x | x | x |  |
+| Körning av pipeline | Godkänn Adobe GoLive. | x | x | x |  |
+| Körning av pipeline | Schemalägg produktionsdistribution. | x | x | x |  |
+| Körning av pipeline | Återuppta produktionsförlopp. |  |  |  |  |
+| Anmäl dig till provisionering (eller inte) | Anmäl dig till Vågrät provisionering på begäran från skärmen Programinställningar. Konfigurera de högsta tillåtna P-D-segmenten som kan skalas ut vågrätt i PROD- och icke-PROD-miljöer. | x |  |  |  |
+| Hantera miljö | Lägg till segmentet Publish-Dispatcher från skärmen Manage Environment (Hantera miljö). | x | x |  |  |  |
+| Produktuppdatering | AEM Update Card är synligt och tar användaren till uppdateringsguiden. | x | x | x | x |
+| Produktuppdatering | Produktuppdateringsguiden kan aktiveras. | x | x |  |  |
+| Push-uppdatering | Starta Push Update Pipeline. |  |  |  |  |
+| Generera token för personlig åtkomst | Generera personlig åtkomsttoken. |  | x |  | x |
+
