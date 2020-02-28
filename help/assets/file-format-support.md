@@ -3,26 +3,18 @@ title: Filformat och MIME-typer som stöds av Experience Manager Assets som en m
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som en molntjänst.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 776b089a322cc4f86fdcb9ddf1c3cc207fc85d39
+source-git-commit: 55dd497caaa25cf7c0d8da1c1400b74f7d265d29
 
 ---
 
 
 # Resurser som stöds i filformat {#supported-file-formats}
 
-Adobe Experience Manager som molntjänst har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. Dessutom har programmet utökat stöd för de vanligaste filformaten, som bild, Adobe-material, dokument och video, för att generera förhandsgranskningar och återgivningar samt extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med hjälp av [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
+Adobe Experience Manager som molntjänst har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. Adobe Experience Manager Assets har stöd för ett stort antal filformat och varje produktfunktion har ett varierat stöd för olika format.
 
-En del högdagrar med utökat stöd för filformat är:
+Dessutom har Experience Manager Assets utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med hjälp av [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
 
-* Viktiga [Adobe-filformat](#adobe-formats) som skapats av program och tjänster från Adobe, bland annat Adobe Photoshop, InDesign, Illustrator, XD, Dimension och Acrobat / PDF.
-* Viktiga [bildfilformat](#image-formats)
-* [Camera Raw-filformat](#camera-raw-formats) för en mängd olika kameror, bland annat Canon, Nikon, Fujifilm, Olympus och andra (från Adobe Camera Raw)
-* Vanliga [dokumentformat](#document-formats), inklusive [Microsoft Office](#microsoft-office-formats) (Word, Excel, PowerPoint) och [Open Document](#opendocument-formats) -format
-* Ett stort antal [video](#video-formats) - och [ljudformat](#audio-formats)
-
-## Förklaring till detaljerad supportinformation {#legend-for-detailed-support-information}
-
-Följande förklaring beskriver nivån på stödet för en funktion:
+Följande förklaring beskriver supportnivån.
 
 | Supportnivå | Beskrivning |
 | ------------------------------------------------------------ | --------------------------- |
@@ -30,7 +22,17 @@ Följande förklaring beskriver nivån på stödet för en funktion:
 | * | Se anmärkningarna nedanför tabellen |
 | - | Ej relevant |
 
-Kolumnerna i supporttabellerna innehåller följande information:
+## Konvertering av tillgångar med hjälp av mikrotjänster {#asset-microservices-supported-formats}
+
+Högdagrarna är följande:
+
+* Viktiga [Adobe-filformat](#adobe-formats) som skapats av program och tjänster från Adobe, bland annat Adobe Photoshop, InDesign, Illustrator, XD, Dimension och Acrobat / PDF.
+* Viktiga [bildfilformat](#image-formats).
+* [Camera Raw-filformat](#camera-raw-formats) för en mängd olika kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
+* Vanliga [dokumentformat](#document-formats), inklusive [Microsoft Office](#microsoft-office-formats) (Word, Excel, PowerPoint) och [Open Document](#opendocument-formats) -format.
+* Ett stort antal [video](#video-formats) - och [ljudformat](#audio-formats) .
+
+Kolumnerna i följande tabeller innehåller följande information:
 
 | Kolumn | Beskrivning |
 | ------------ | --------------------------------------------------------------- |
@@ -42,11 +44,7 @@ Kolumnerna i supporttabellerna innehåller följande information:
 | TXT | Extrahering av text från dokument för indexering |
 | Bredd/höjd | Stöd för att definiera bredden och höjden på en återgivning (pixlar) |
 
-<!-- Adding this checkmark icon ✓ does not look good in table. The icon's shade and size has to be toned down for good readability and less clutter.
-@gklebus: I suggest using a checkmark character, either U+2713 ✓ CHECK MARK or U+2714 ✔ HEAVY CHECK MARK
--->
-
-## Adobe-format {#adobe-formats}
+### Adobe-format {#adobe-formats}
 
 | Filformat | GIF | JPEG | PNG | TXT | XMP | Bredd/höjd |
 | ----------- | --- | ---- | --- | --- | --- | ------------ |
@@ -64,7 +62,7 @@ Kolumnerna i supporttabellerna innehåller följande information:
 
 \* För INDD (InDesign-filer) bestäms återgivningens storlek av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i InDesign (**[!UICONTROL Inställningar > Filhantering > Spara alltid förhandsvisningsbilder med dokument, förhandsvisningsstorlek]**) för att bädda in större återgivning.
 
-## Bildformat {#image-formats}
+### Bildformat {#image-formats}
 
 | Filformat | GIF | JPEG | PNG | XMP | Bredd/höjd |
 | ----------- | --- | ---- | --- | --- | ------------ |
@@ -76,8 +74,7 @@ Kolumnerna i supporttabellerna innehåller följande information:
 | SVG | - | - | - | ✓ | - |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-
-## Camera RAW-format {#camera-raw-formats}
+### Camera RAW-format {#camera-raw-formats}
 
 | Filformat | GIF | JPEG | PNG | XMP | Bredd/höjd |
 | ----------- | --- | ---- | --- | --- | ------------ |
@@ -109,7 +106,7 @@ Kolumnerna i supporttabellerna innehåller följande information:
 | SRW | ✓ | ✓ | ✓ | ✓ | ✓ |
 | X3F | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-## Dokumentformat {#document-formats}
+### Dokumentformat {#document-formats}
 
 | Filformat | TXT | XMP |
 | ----------- | --- | --- |
@@ -120,7 +117,7 @@ Kolumnerna i supporttabellerna innehåller följande information:
 | TEXT | ✓ | - |
 | XML | ✓ | - |
 
-## Microsoft Office-format {#microsoft-office-formats}
+### Microsoft Office-format {#microsoft-office-formats}
 
 | Filformat | GIF | JPEG | PNG | TEXT | Bredd/höjd |
 | ----------- | --- | ---- | --- | ---- | ------------ |
@@ -128,7 +125,7 @@ Kolumnerna i supporttabellerna innehåller följande information:
 | PPTX | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XLSX | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-## OpenDocument-format {#opendocument-formats}
+### OpenDocument-format {#opendocument-formats}
 
 | Filformat | GIF | JPEG | PNG | TEXT | Höjd |
 | ----------- | --- | ---- | --- | ---- | ------ |
@@ -139,7 +136,7 @@ Kolumnerna i supporttabellerna innehåller följande information:
 | ODS | ✓ | ✓ | ✓ | ✓ | ✓ |
 | ODT | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-## Videoformat {#video-formats}
+### Videoformat {#video-formats}
 
 | Filformat | GIF | JPEG | PNG | XMP | Bredd/höjd |
 | ----------- | --- | ---- | --- | --- | ------------ |
@@ -166,15 +163,27 @@ Kolumnerna i supporttabellerna innehåller följande information:
 | WEBM | ✓ | ✓ | ✓ | - | ✓ |
 | WMV | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-## Ljudformat {#audio-formats}
+### Ljudformat {#audio-formats}
 
 Resurser som molntjänst ger XMP-stöd för följande ljudformat: AIF, ASF, M4A, MP3, WAV och WMA.
 
-<!-- TBD: Some items from https://helpx.adobe.com/experience-manager/6-5/assets/using/assets-formats.html#SupportedinputvideoformatsforDynamicMediatranscoding may be applicable.
+## Dokumentformat som stöds {#doc-formats}
 
-Bring more parity with https://helpx.adobe.com/experience-manager/6-5/assets/using/assets-formats.html#SupportedMIMEtypes.
-https://helpx.adobe.com/experience-manager/6-5/assets/using/assets-formats.html#Supportedmultimediaformats
--->
+Dokumentformat som stöds för filhanteringsfunktioner är som följer.
+
+| Filformat | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
+|---|---|
+| DOC | ✓ |
+| DOCX | ✓ |
+| ODT | ✓ |
+| PDF | ✓ |
+| HTML | ✓ |
+| RTF | ✓ |
+| TXT | ✓ |
+| XLS | ✓ |
+| XLSX | ✓ |
+| PPT | ✓ |
+| PPTX | ✓ |
 
 >[!MORELIKETHIS]
 >
