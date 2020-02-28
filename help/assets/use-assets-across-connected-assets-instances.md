@@ -3,7 +3,7 @@ title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsf
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager-webbplatsdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 45371da5617a0d87105dbf2f574de15bf0698d98
+source-git-commit: 70ac4bdc284f14012f2e0730f52fb932d04e2a0e
 
 ---
 
@@ -29,7 +29,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
    |  | AEM Sites as a Cloud Service | AEM 6.5 Sites på AMS | AEM 6.5 Sites på plats |
    |---|---|---|---|
-   | **AEM Resurser som en molntjänst** | Stöds | Stöds | Stöds |
+   | **AEM Assets as a Cloud Service** | Stöds | Stöds | Stöds |
    | **AEM 6.5 Assets on AMS** | Stöds inte | Stöds | Stöds |
    | **AEM 6.5 Assets på plats** | Stöds inte | Stöds inte | Stöds inte |
 
@@ -37,14 +37,10 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda de sökbara resurserna i Page Editor. Dokument kan läggas till i `Download` komponenten och bilder kan läggas till i `Image` komponenten. Författare kan också lägga till fjärrresurserna i en anpassad AEM-komponent som utökar standard- `Download` eller `Image` komponenterna.
 
-* Microsoft Word (DOC och DOCX)
-* Microsoft Excel (XLS och XLSX)
-* Microsoft PowerPoint (PPT och PPTX)
-* Adobe PDF (PDF)
-* OpenDocument-text (ODT)
-* RTF (Rich Text Format)
-* Oformaterad text (TXT)
-* Webbsidor (HTML)
+Följande format stöds:
+
+* **Bildformat**: De bildformat som stöds av [bildkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) stöds. Dynamiska mediakomponenter stöds inte.
+* **Dokumentformat**: Se Dokumentformat som stöds [i](file-format-support.md#supported-document-formats)Anslutna resurser.
 
 ### Användare och grupper {#users-and-groups-involved}
 
