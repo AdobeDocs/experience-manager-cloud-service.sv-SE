@@ -3,7 +3,7 @@ title: Se hur Assets microservices kan bearbeta dina digitala resurser i molnet
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 55dd497caaa25cf7c0d8da1c1400b74f7d265d29
 
 ---
 
@@ -26,7 +26,7 @@ Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser 
 * Förbättrad flexibilitet i bearbetningen av resurser. Potentiella problem vid hantering av atypiska filer, som skadade filer eller extremt stora filer, påverkar inte längre distributionens prestanda.
 * Förenklad konfiguration av tillgångsbearbetning för administratörer.
 * Resurshanteringsinställningarna hanteras och underhålls av Adobe för att ge bästa möjliga konfiguration för hantering av återgivningar, metadata och textredigering för olika filtyper
-* Adobes filbehandlingstjänster används där det är tillämpligt, vilket ger exakt återgivning och effektiv hantering av Adobes egna format.
+* Adobes filbehandlingstjänster används där det är tillämpligt, vilket ger exakt återgivning och [effektiv hantering av Adobes egna format](file-format-support.md).
 * Möjlighet att konfigurera efterbehandlingsarbetsflöden för att lägga till användarspecifika åtgärder och integreringar.
 
 Resursmikrotjänsterna hjälper till att undvika behovet av tredjepartsverktyg för återgivning (som ImageMagick) och förenklar konfigurationen av systemet, samtidigt som de tillhandahåller färdiga funktioner för vanliga filtyper.
@@ -82,7 +82,7 @@ Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsfl
 
 >[!MORELIKETHIS]
 >
->* [Kom igång med att använda objektmikrotjänster](asset-microservices-configure-and-use.md)
+>* [Komma igång med mikrotjänster för material](asset-microservices-configure-and-use.md)
 >* [Filformat som stöds](file-format-support.md)
 >* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [AEM-skrivbordsapp](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
