@@ -9,7 +9,7 @@ source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
 
 # Sites {#sites}
 
-+ [AEM Sites som Cloud Service](/help/sites-cloud/home.md)
++ [AEM Sites as a Cloud Service](/help/sites-cloud/home.md)
 + [Viktiga ändringar av AEM Sites i AEM Cloud Service](sites-cloud-changes.md)
 + Redigering {#authoring}
    + Komma igång {#getting-started}
@@ -68,6 +68,6 @@ source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
       + [Hantera målgrupper](authoring/personalization/audiences.md)
       + [Skapa och hantera erbjudanden](authoring/personalization/offers.md)
       + [Förstå segmentering](authoring/personalization/segmentation.md)
-+ Integrera med AEM som Cloud Service {#integrations}
++ Integrera med AEM as a Cloud Service {#integrations}
    + [Integrera med Adobe Analytics](integrating/adobe-analytics.md)
    + [Integrera med Adobe Target](integrating/adobe-target.md)
