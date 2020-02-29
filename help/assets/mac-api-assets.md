@@ -1,14 +1,14 @@
 ---
-title: Resurser för HTTP API
+title: HTTP API för Assets
 description: Lär dig mer om implementering, datamodell och funktioner i Assets HTTP API. Använd Assets HTTP API för att utföra olika åtgärder runt resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3db5a1d668ad88e340a1580900d222c370b8d3e8
+source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
 
 ---
 
 
-# Resurser för HTTP API {#assets-http-api}
+# HTTP API för Assets {#assets-http-api}
 
 ## Översikt {#overview}
 
@@ -58,7 +58,7 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 * `parent`: Länka till överordnad mapp
 * `thumbnail`: (Valfritt) länk till en mappminiatyrbild
 
-### Resurser {#assets}
+### Assets {#assets}
 
 I AEM innehåller en resurs följande element:
 
