@@ -3,12 +3,12 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
 
 ---
 
 
-# Kom igång med att använda objektmikrotjänster {#get-started-using-asset-microservices}
+# Komma igång med mikrotjänster för material {#get-started-using-asset-microservices}
 
 <!--
 
@@ -97,7 +97,7 @@ Ett tomt värde innebär att resursbearbetningen baseras på originalets pixeldi
 
 #### Inkluderingsregler för MIME-typ {#mime-type-inclusion-rules}
 
-När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för renderingsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (&quot;svartlistning&quot;).
+När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för återgivningsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (&quot;svartlistning&quot;).
 
 I annat fall kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den matchar listan genereras återgivningen (&quot;vitlista&quot;).
 
@@ -126,7 +126,7 @@ När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurs
 >
 >När resurser överförs till en mapp kontrollerar Experience Manager om det finns en bearbetningsprofil för den innehållande mappens egenskaper. Om ingen används går den upp i mappträdet tills den hittar en bearbetningsprofil som används och använder den för resursen. Det innebär att en bearbetningsprofil som används för en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används för en undermapp.
 
-Användarna kan kontrollera att bearbetningen faktiskt utfördes genom att öppna en nyligen överförd resurs som bearbetningen är klar för, öppna förhandsgranskningen av resursen och klicka på den vänstra fältets vy **[!UICONTROL Återgivningar]** . De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar MIME-typens inkluderingsregler, bör vara synliga och tillgängliga.
+Användarna kan kontrollera att bearbetningen faktiskt utfördes genom att öppna en nyligen överförd resurs som bearbetningen är klar för, öppna förhandsgranskningen av resursen och klicka på den vänstra fältets vy **[!UICONTROL Återgivningar]** . De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
 
 ![additional-renditions](assets/renditions-additional-renditions.png)*Figure: Exempel på två extra återgivningar som genereras av en bearbetningsprofil som tillämpas på den överordnade mappen*
 
