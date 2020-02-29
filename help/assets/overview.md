@@ -1,14 +1,14 @@
 ---
-title: Introduktion till Assets som molntjänst
+title: Introduktion till Assets as a Cloud Service
 description: Nyheter i Assets som en molntjänst.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
 
 ---
 
 
-# Introduktion av resurser som en molntjänst {#assets-cloud-service-introduction}
+# Assets introduceras as a Cloud Service {#assets-cloud-service-introduction}
 
 <!-- Need review information from gklebus -->
 
@@ -18,7 +18,7 @@ Samtidig inmatning av ett stort antal resurser eller komplexa resurser är en my
 
 Företag behöver stöd för en mängd olika filformat och innehållsupplösningar för användning på flera enheter, i olika geografiska områden och på flera språk. Resurshanterings- och lagringskrav kräver resurser och funktioner som kan överbelasta en traditionell lösning. Ibland ger inte tekniska begränsningar av behandlingen av tillgångar de resultat man önskar och i andra fall är kostnaden för lagring ett hinder för vinstmarginalerna.
 
-Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits). Kolla in de betydande [ändringarna av AEM som en molntjänst](/help/release-notes/aem-cloud-changes.md) som även påverkar Assets och följde upp de betydande [förändringarna av Assets](/help/assets/assets-cloud-changes.md).
+Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits). Kolla in de betydande [ändringarna av AEM som en molntjänst](/help/release-notes/aem-cloud-changes.md) som även påverkar Experience Manager Assets och följ upp de betydande [förändringarna av Assets](/help/assets/assets-cloud-changes.md).
 
 Läs vidare för att få [information om de nya Assets-funktionerna](#whats-new-assets) och de [kända problemen](/help/release-notes/known-issues.md). Se en lista över [borttagna eller borttagna funktioner](/help/release-notes/deprecated-removed-features.md) för att ta reda på vad som tas bort i den här versionen och se den här [listan över kommande funktioner](/help/release-notes/known-issues.md#upcoming-assets-capabilities) för att ta reda på vad som kommer inom den närmaste framtiden. Slutligen, förstå AEM-villkoren med hjälp av den här [ordlistan](/help/overview/terminology.md).
 
@@ -37,5 +37,5 @@ Nedan beskrivs de viktigaste fördelarna med Assets som en molntjänst. Mer info
 
 De viktiga nya funktionerna är:
 
-* [Resursmikrotjänster](/help/assets/asset-microservices-overview.md)
+* [Asset-mikrotjänster](/help/assets/asset-microservices-overview.md)
 * [Metoder för överföring av resurser](/help/assets/add-assets.md)
