@@ -3,7 +3,7 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om olika mediehanterare och hur du använder dem i arbetsflöden för att utföra åtgärder på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
 
 ---
 
@@ -453,7 +453,7 @@ Värdena för **processargument** måste avgränsas med kommatecken och får int
   </tr>
   <tr>
    <td> mime:&lt;mime-type&gt;</td>
-   <td><p>Valfritt argument. Processen används om tillgången har samma MIME-typ som argumentet.</p> <p>Flera MIME-typer kan definieras.</p> </td>
+   <td><p>Valfritt argument. Processen används om resursen har samma MIME-typ som argumentet.</p> <p>Flera MIME-typer kan definieras.</p> </td>
   </tr>
   <tr>
    <td> tn:&lt;width&gt;:&lt;height&gt;</td>
@@ -461,7 +461,7 @@ Värdena för **processargument** måste avgränsas med kommatecken och får int
   </tr>
   <tr>
    <td> cmd: &lt;kommando&gt;</td>
-   <td><p>Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget.</p> <p>Endast ett kommando kan definieras.</p> <p>Följande variabler kan användas för att skapa kommandot:<br/></p> <p><code>${filename}</code>: indatafilens namn, t.ex. original.jpg<br/><code>${file}</code>: den fullständiga sökvägen till indatafilen, t.ex. /tmp/cqdam0816.tmp/original.jpg<br/><code>${directory}</code>: indatafilens katalog, t.ex. /tmp/cqdam0816.tmp.<br/> <code>${basename}</code>: namnet på indatafilen utan filnamnstillägg, t.ex. original<br/> <code>${extension}</code>: tillägg till indatafilen, t.ex. jpg<br/></p></td>
+   <td><p>Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget.</p> <p>Endast ett kommando kan definieras.</p> <p>Följande variabler kan användas för att skapa kommandot:<br/></p> <p><code>${filename}</code>: indatafilens namn, t.ex. "original.jpg"<br/><code>${file}</code>: indatafilens fullständiga sökvägsnamn, till exempel "/tmp/cqdam0816.tmp/original.jpg"<br/><code>${directory}</code>: indatafilens katalog, till exempel "/tmp/cqdam0816.tmp".<br/> <code>${basename}</code>: namnet på indatafilen utan filnamnstillägg, t.ex. original<br/> <code>${extension}</code>: tillägg för indatafilen, till exempel JPG<br/></p></td>
   </tr>
  </tbody>
 </table>
