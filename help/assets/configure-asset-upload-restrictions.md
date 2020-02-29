@@ -3,7 +3,7 @@ title: Konfigurera begränsningar för överföring av resurser
 description: Lär dig hur du konfigurerar Adobe Experience Manager-resurser (AEM) för att begränsa vilken typ av resurser (filer) som användare kan överföra.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
 
 ---
 
@@ -22,4 +22,3 @@ Du kan konfigurera Adobe Experience Manager-resurser (AEM) för att begränsa vi
    ![chlimage_1-379](assets/chlimage_1-379.png)
 
 1. Klicka/tryck på **[!UICONTROL Spara]** för att spara ändringarna. Om du anger MIME-strängar för tillåtna MIME-typer misslyckas överföringen för alla resurser med MIME-typ som inte matchar de konfigurerade MIME-strängarna i dessa fält.
-
