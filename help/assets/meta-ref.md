@@ -3,7 +3,7 @@ title: Metadata Schema Reference
 description: 'Lär dig mer om standardkonventioner för att beskriva metadata för resurser, inklusive Dublin Core, IPTC och andra metadatamatchningar. '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
 
 ---
 
@@ -48,7 +48,7 @@ Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initia
   </tr>
   <tr>
    <td>format</td> 
-   <td>Filformat, fysiskt medium eller dimensioner för resursen. AEM använder <code>dc:format</code> för att beteckna resursens mime-typ.<br /> </td> 
+   <td>Filformat, fysiskt medium eller dimensioner för resursen. AEM använder <code>dc:format</code> för att beteckna resursens MIME-typ.<br /> </td> 
   </tr>
   <tr>
    <td>identifierare</td> 
