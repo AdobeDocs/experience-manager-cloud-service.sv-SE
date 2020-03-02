@@ -1,29 +1,29 @@
 ---
-title: Introduktion till Adobe Experience Manager som molntjänst
-description: 'Introduktion till Adobe Experience Manager (AEM) som molntjänst. '
-translation-type: tm+mt
+title: Introduktion till Adobe Experience Manager as a Cloud Service
+description: 'Introduktion till Adobe Experience Manager (AEM) as a Cloud Service. '
+translation-type: ht
 source-git-commit: eb28fedae5b87a67460f4cac97959f65972e652a
 
 ---
 
 
-# En introduktion till Adobe Experience Manager som en molntjänst {#an-introduction-to-adobe-experience-manager-as-a-cloud-service}
+# En introduktion till Adobe Experience Manager as a Cloud Service {#an-introduction-to-adobe-experience-manager-as-a-cloud-service}
 
-[Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html) (AEM) finns nu som molntjänst.
+[Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html) (AEM) finns nu as a Cloud Service.
 
-Adobe Experience Manager som en molntjänst:
+Adobe Experience Manager as a Cloud Service:
 
-* Är det molnbaserade sättet att utnyttja AEM-programmen.
+* Det molnbaserade sättet att dra nytta av AEM-programmen.
 
-* Gör att ni kan ge kunderna personaliserade, innehållsledda upplevelser genom att kombinera kraften i AEM Content Management System med AEM Digital Asset Management.
+* Gör att ni kan ge kunderna anpassade, innehållsledda upplevelser genom att kombinera kraften i AEM Content Management System med AEM Digital Asset Management.
 
-* Ger kontinuerlig leverans och kontinuerlig integrering för uppdateringar utan driftavbrott.
+* Ger kontinuerlig leverans och integrering för uppdateringar utan driftavbrott.
 
-* Bygger på en dynamisk arkitektur som automatiskt skalas och därmed tar bort infrastrukturöverväganden.
+* Baseras på en dynamisk arkitektur som automatiskt skalas vilket eliminerar anpassningar av infrastrukturen.
 
-* Är inriktat på säkerhet och använder automatiserade tester för att söka efter vanliga sårbarheter.
+* Fokus på säkerhet med automatiserade tester som söker efter vanliga sårbarheter.
 
-* Validerar kundkod med hjälp av automatiska tester.
+* Validerar kundkod med automatiska tester.
 
 * Har prestandatopologier optimerade för maximal flexibilitet och effektivitet.
 
@@ -31,46 +31,46 @@ Adobe Experience Manager som en molntjänst:
 
 * Är nära integrerat med Adobe Experience Cloud.
 
-* Vi presenterar nästa generation av Adobe Experience Manager-produktlinjen, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och funktioner.
+* Vi presenterar nästa generation av Adobe Experience Manager-produktlinjen som bygger på tidigare investeringar och innovationer vilket bevarar och utökar alla användningsområden och funktioner.
 
-Allt detta:
+Det innebär att:
 
-* Utvecklarna koncentrerar sig på att konfigurera och utöka AEM enligt samma mönster som har gjort att AEM har lyckats ännu bättre med det nya molnbaserade utvecklingsmönstret.
+* Utvecklarna kan koncentrera sig på att konfigurera och utöka AEM i det nya molnbaserade systemet genom att följa samma mönster som använts tidigare i AEM.
 
-* Författarna får de senaste innovationerna som de får regelbundet.
+* Författarna får regelbundet nya funktioner.
 
-* Förenkla konfigurationen och infrastrukturen för systemadministratörerna.
+* Systemadministratörer ges förenklad konfiguration och infrastruktur.
 
 * Marknadsförare får snabbare time-to-value.
 
 >[!NOTE]
 >
->Se [Terminologi](terminology.md) för några av de nya termer som har introducerats med AEM som en molntjänst.
+>Se [Terminologi](terminology.md) för några av de nya termer som har introducerats med AEM as a Cloud Service.
 
-## Värde tillagt som molntjänst {#value-added-as-a-cloud-service}
+## Mervärde as a Cloud Service {#value-added-as-a-cloud-service}
 
-AEM uppnår dessa mål genom att anta de viktigaste egenskaperna för moderna molntjänster:
+AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna Cloud Services:
 
-* Det är alltid på:
+* Alltid åtkomlig:
 
    * Hela tjänstens arkitektur har reviderats så att du inte drabbas av några driftavbrott; varken för innehållshantering eller innehållsleverans.
 
-* Den är alltid i skala:
+* Alltid skalad:
 
-   * Alla instanser av AEM som molntjänst skapas på samma sätt. så att tjänstarkitekturen automatiskt skalas upp och ned, beroende på dina behov.
+   * Alla instanser av AEM as a Cloud Service skapas på samma sätt, därför kan tjänstens arkitektur automatiskt skalas upp och ned efter dina behov.
 
-* Den är alltid aktuell:
+* Alltid aktuell:
 
-   * AEM som en molntjänst implementerar en ny, kontinuerlig leveranspipeline för AEM-kodbasen med automatiserade uppdateringar upp till flera gånger i månaden. Detta löser ett av de största problemen med AEM-program genom att du alltid har den senaste versionen.
+   * AEM as a Cloud Service har en ny, kontinuerlig leveranspipeline för AEM-kodbasen med automatiserade uppdateringar flera gånger i månaden. Det löser ett av de största problemen med AEM-program genom att du alltid har den senaste versionen.
 
-* Den utvecklas alltid:
+* Ständig utveckling:
 
-   * AEM som molntjänst utvecklas dagligen baserat på de projekt som våra kunder implementerar. Innehåll, kod och konfigurationer granskas kontinuerligt och kontrolleras mot bästa praxis, vilket gör att vi kan vägleda dig när det gäller att uppnå dina affärsmål.
+   * AEM as a Cloud Service utvecklas dagligen baserat på de projekt som våra kunder implementerar. Innehåll, kod och konfigurationer granskas kontinuerligt och kontrolleras mot bästa praxis, vilket gör att vi kan vägleda dig när det gäller att uppnå dina affärsmål.
 
-## Lär känna Adobe Experience Manager som en molntjänst {#getting-to-know-aem-as-cloud-service}
+## Lär känna Adobe Experience Manager as a Cloud Service {#getting-to-know-aem-as-cloud-service}
 
-* [Vad är nytt och vad är skillnaden](/help/overview/what-is-new-and-different.md) mellan Adobe Experience Manager som en molntjänst och tidigare versioner?
-* Arkitekturen [](/help/core-concepts/architecture.md) i Adobe Experience Manager som en molntjänst
-* [Betydande ändringar av AEM-webbplatser i AEM som molntjänst](/help/sites-cloud/sites-cloud-changes.md)
-* [Introduktion av resurser som en molntjänst](/help/assets/overview.md)
-* [Adobe Experience Manager som en självstudiekurs om molntjänster](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
+* [Nyheter och skillnader](/help/overview/what-is-new-and-different.md) i Adobe Experience Manager as a Cloud Service och tidigare versioner
+* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
+* [Betydande ändringar av AEM Sites i AEM as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Assets introduceras as a Cloud Service](/help/assets/overview.md)
+* [Självstudiekurser för Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
