@@ -2,7 +2,7 @@
 title: Rollbaserade behörigheter
 description: Rollbaserade behörigheter
 translation-type: tm+mt
-source-git-commit: 6cae9b2b719dab687f601a0596d37f99afded9ab
+source-git-commit: 645c1e72adeafe437851930a68c9cf905ef0539f
 
 ---
 
@@ -26,9 +26,7 @@ Var och en av rollerna har specifika behörigheter, förkonfigurerade uppgifter 
 | Uppdateringsmiljö | Uppdatera Prod+Stage-, Dev- och Playground-miljöer. | x | x |  |  |
 | Ta bort miljö | Ta bort miljöer som inte är produktiva, dev och Playground. | x | x |  |  |
 | Ta bort miljö | Ta bort Prod+Stage Environment. |  |  |  |  |
-| Vilolägesmiljö | Hibernate Non-prod, Dev, Playground environment. | x | x |  |  |
 | Programinställningar | Konfigurera program (inklusive KPI). | x |  |  |  |
-| Programinställningar | Konfigurera skalningsprinciper (allmänt: konfigurera högsta antal nivåer och horisontell skalning vid behov: Anmäl dig). | x |  |  |  |
 | Programinställningar | Git implementera åtkomst. |  | x |  | x |
 | Inställningar för pipeline | Konfigurera eller redigera pipeline. |  | x |  |  |
 | Körning av pipeline | Starta rörledningen. | x | x |  |  |
@@ -36,10 +34,7 @@ Var och en av rollerna har specifika behörigheter, förkonfigurerade uppgifter 
 | Körning av pipeline | Godkänn Adobe GoLive. | x | x | x |  |
 | Körning av pipeline | Schemalägg produktionsdistribution. | x | x | x |  |
 | Körning av pipeline | Återuppta produktionsförlopp. |  |  |  |  |
-| Anmäl dig till provisionering (eller inte) | Anmäl dig till Vågrät provisionering på begäran från skärmen Programinställningar. Konfigurera de högsta tillåtna P-D-segmenten som kan skalas ut vågrätt i PROD- och icke-PROD-miljöer. | x |  |  |  |
 | Hantera miljö | Lägg till segmentet Publish-Dispatcher från skärmen Manage Environment (Hantera miljö). | x | x |  |  |  |
-| Produktuppdatering | AEM Update Card är synligt och tar användaren till uppdateringsguiden. | x | x | x | x |
-| Produktuppdatering | Produktuppdateringsguiden kan aktiveras. | x | x |  |  |
 | Push-uppdatering | Starta Push Update Pipeline. |  |  |  |  |
 | Generera token för personlig åtkomst | Generera personlig åtkomsttoken. |  | x |  | x |
 
