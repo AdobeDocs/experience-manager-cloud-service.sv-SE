@@ -2,7 +2,7 @@
 title: Rollbaserade behörigheter
 description: Rollbaserade behörigheter
 translation-type: tm+mt
-source-git-commit: 645c1e72adeafe437851930a68c9cf905ef0539f
+source-git-commit: 1765cc81bcd6b3404642efbd3ddde27047583f85
 
 ---
 
@@ -17,12 +17,8 @@ Var och en av rollerna har specifika behörigheter, förkonfigurerade uppgifter 
 
 | Behörighet | Beskrivning | Företagsägare | Distributionshanteraren | Programhanteraren | Utvecklare |
 |--- |--- |--- |--- |--- |--- |
-| Skapa klientorganisation | Skapa en ny klientorganisation. |  |  |  |  |
-| Uppdatera klientorganisation | Uppdatera klientorganisation. |  |  |  |  |
 | Lägg till program | Lägg till ett nytt program. | x |  |  |  |
 | Skapa miljö | Skapa prod+stage-, dev- och Playground-miljöer. | x | x |  |  |
-| Konfigurera miljövariabler | Konfigurera miljövariabler och hemligheter. |  | x |  | x |
-| Lägg till eller ta bort anpassat domännamn, överför eller uppdatera SSL-certifikat | Lägg till/ta bort eget domännamn, Överför/Uppdatera SSL-certifikat. | x | x |  |  |
 | Uppdateringsmiljö | Uppdatera Prod+Stage-, Dev- och Playground-miljöer. | x | x |  |  |
 | Ta bort miljö | Ta bort miljöer som inte är produktiva, dev och Playground. | x | x |  |  |
 | Ta bort miljö | Ta bort Prod+Stage Environment. |  |  |  |  |
