@@ -1,31 +1,31 @@
 ---
-title: Introduktion till Adobe Experience Manager som molntjänst - terminologi
-description: 'Introduktion till Adobe Experience Manager som molntjänst - terminologi. '
-translation-type: tm+mt
+title: Introduktion till Adobe Experience Manager as a Cloud Service – terminologi
+description: 'Introduktion till Adobe Experience Manager as a Cloud Service – terminologi. '
+translation-type: ht
 source-git-commit: eb28fedae5b87a67460f4cac97959f65972e652a
 
 ---
 
 
-# Adobe Experience Manager som en molntjänst - terminologi {#adobe-experience-manager-as-a-cloud-service-terminology}
+# Adobe Experience Manager as a Cloud Service – terminologi {#adobe-experience-manager-as-a-cloud-service-terminology}
 
-Följande termer används i relation till Adobe Experience Manager (AEM) som en molntjänst:
+Följande termer används i samband med Adobe Experience Manager (AEM) as a Cloud Service:
 
 ## Produkter {#products}
 
 | Produkt | Beskrivning |
 |---|---|
-| AEM som molntjänst | Det molnbaserade sättet att utnyttja AEM-programmen |
-| AEM Resurser som en molntjänst | DAM-funktioner (Digital Asset Management) som molnbaserad, skalbar lösning för import, bearbetning och hantering av digitala resurser, samtidigt som de integreras med det bredare ekosystemet i Adobe Experience Cloud och Adobe Creative Cloud. |
-| AEM Sites as a Cloud Service | En instans av AEM som en molntjänst med programmet AEM Sites. |
+| AEM as a Cloud Service | Det molnbaserade sättet att utnyttja AEM-programmen |
+| AEM Assets as a Cloud Service | DAM-funktioner (Digital Asset Management) som molnbaserad, skalbar lösning för import, bearbetning och hantering av digitala resurser, samtidigt som de integreras med det bredare ekosystemet i Adobe Experience Cloud och Adobe Creative Cloud. |
+| AEM Sites as a Cloud Service | En instans av AEM as a Cloud Service med programmet AEM Sites. |
 
-## Instanser och rörledningar {#instances-and-pipelines}
+## Instanser och pipelines {#instances-and-pipelines}
 
-| Instance | Beskrivning |
+| Instans | Beskrivning |
 |---|---|
-| Adobe Pipeline | Mekanismen för publicering av innehåll från författare till publicering. |
-| AEM Author Tier | Beskriver utvecklingsmiljön för platser och resurser. |
-| AEM-publiceringsnivå | Beskriver publiceringsmiljön för webbplatser. |
+| Adobe Pipeline | En mekanism för publicering av innehåll, från redigering till publicering. |
+| AEM-redigeringsnivå | Redigeringsmiljön i Sites och Assets. |
+| AEM-publiceringsnivå | Publiceringsmiljön i Sites. |
 
 
 <!-- This section of the table must be alphabetic -->
@@ -34,11 +34,11 @@ Följande termer används i relation till Adobe Experience Manager (AEM) som en 
 
 | Term | Beskrivning |
 |---|---|
-| AEM-bild | En driftsättningsbar artefakt som innehåller AEM-produktkoden tillsammans med kundkoden. |
-| Resursmikrotjänster | Molnbaserade tjänster för bearbetning av digitala resurser som är anpassade till olika användningsområden för bearbetning av resurser, t.ex. renderingsgenerering, PDF-processer, hantering av underresurser, textrahering osv. Mer information finns i Översikt över [](/help/assets/asset-microservices-overview.md)tillgångsmikrotjänster. |
-| Git-databas för Cloud Manager | Där kunderna lagrar sina inställningar för kod och konfiguration. |
-| Molnleverantör | AEM som molntjänst har stöd för både Azure och AWS som molnleverantörer. |
-| Innehållsdatabas | Där innehållet är beständigt. |
-| Enterprise Isolation | Varje instans av AEM som en molntjänst isoleras från de andra instanserna. |
-| Golden Master | AEM-publiceringsnivån. |
-| Orchestration Engine | AEM som molntjänst använder en orkestreringsmotor för att säkerställa att alla författar- och publiceringstjänster skalas vid behov. |
+| AEM-bild | En distribuerbar artefakt som innehåller AEM-produktkoden tillsammans med kundkoden. |
+| Asset-mikrotjänster | Molnbaserade tjänster för bearbetning av digitala resurser som är anpassade till olika användningsområden, t.ex. återgivningsgenerering, PDF-processer, hantering av underresurser, textextrahering osv. Mer information finns i [översikten över mikrotjänster för Assets](/help/assets/asset-microservices-overview.md). |
+| Git-databas för Cloud Manager | Där kunderna lagrar kod och konfigurationsinställningar. |
+| Molnleverantör | AEM as a Cloud Service har stöd för både Azure och AWS som molnleverantörer. |
+| Innehållsdatabas | Plats där innehåll lagras. |
+| Oberoende företagsinstanser | Varje instans av AEM as a Cloud Service isoleras från andra instanser. |
+| Huvudnod | En AEM-publiceringsnivå. |
+| Orkestreringsmotor | AEM as a Cloud Service använder en orkestreringsmotor för att säkerställa att alla redigerings- och publiceringstjänster skalas efter behov. |
