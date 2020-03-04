@@ -81,7 +81,7 @@ De dynamiska mediakomponenterna som är tillgängliga omfattar följande:
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
-### Komponent:Dynamiska medier {#dynamic-media-component}
+### Komponent: Dynamiska medier {#dynamic-media-component}
 
 Komponenten Dynamic Media är smart. Beroende på om du lägger till en bild eller en video har du olika alternativ. Komponenten har stöd för bildförinställningar, bildbaserade visningsprogram som bilduppsättningar, snurra, blandade medieuppsättningar och video. Dessutom är visningsprogrammet responsivt - skärmstorleken ändras automatiskt baserat på skärmstorleken. Alla visningsprogram är HTML5-visningsprogram.
 
@@ -115,7 +115,7 @@ Du kan redigera följande dynamiska mediainställningar genom att trycka på iko
 >
 >Som standard är bildkomponenten för dynamiska media adaptiv. Om du vill göra den till en fast storlek anger du den i komponenten på fliken **[!UICONTROL Avancerat]** med **[!UICONTROL Bredd]** och **[!UICONTROL Höjd]**.
 
-* **[!UICONTROL Visningsförinställning]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+* **[!UICONTROL Visningsförinställning]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
 
    Det här är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är också smarta - endast relevanta visningsprogramförinställningar visas.
 
@@ -162,7 +162,7 @@ Du kan redigera följande dynamiska mediainställningar genom att klicka på **[
 >
 >Som standard är videokomponenten för dynamiska media adaptiv. Om du vill göra den till en fast storlek anger du den i komponenten med **[!UICONTROL Bredd]** och **[!UICONTROL Höjd]** på fliken **[!UICONTROL Avancerat]** .
 
-* **[!UICONTROL Viewer preset**- Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram.
+* **[!UICONTROL Viewer preset**- Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se Hantera förinställningar för visningsprogram.
 
 * **[!UICONTROL Viewer modifiers**- Viewer modifiers har formen av name=value-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för Adobe Viewer. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1`
 
@@ -238,7 +238,7 @@ Tänk på att det inte går att tilldela olika visningsprogramförinställningar
 
 Du kan redigera följande **[!UICONTROL allmänna]** inställningar genom att trycka på **[!UICONTROL Redigera]** i komponenten.
 
-* **[!UICONTROL Visningsförinställning]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
+* **[!UICONTROL Visningsförinställning]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
 
 * **[!UICONTROL Titel]**- Ändra videons titel.
 
