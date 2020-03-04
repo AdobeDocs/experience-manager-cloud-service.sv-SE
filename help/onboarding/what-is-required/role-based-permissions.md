@@ -2,7 +2,7 @@
 title: Rollbaserade behörigheter
 description: Rollbaserade behörigheter
 translation-type: tm+mt
-source-git-commit: 1765cc81bcd6b3404642efbd3ddde27047583f85
+source-git-commit: a1b4feced2dd8becc74383fe8a3b835bde7159d2
 
 ---
 
@@ -32,5 +32,5 @@ Var och en av rollerna har specifika behörigheter, förkonfigurerade uppgifter 
 | Körning av pipeline | Återuppta produktionsförlopp. |  |  |  |  |
 | Hantera miljö | Lägg till segmentet Publish-Dispatcher från skärmen Manage Environment (Hantera miljö). | x | x |  |  |  |
 | Push-uppdatering | Starta Push Update Pipeline. |  |  |  |  |
-| Generera token för personlig åtkomst | Generera personlig åtkomsttoken. |  | x |  | x |
+| Generera token för personlig åtkomst | Access Git. |  | x |  | x |
 
