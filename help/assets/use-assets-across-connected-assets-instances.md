@@ -3,14 +3,14 @@ title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsf
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager-webbplatsdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b638539dcaee3df8676176c22e1dd0c900b9b65
+source-git-commit: 1bf3f14b5ef1f971997ec8b19ea7bb300dbaaf24
 
 ---
 
 
 # Använd anslutna resurser för att dela DAM-resurser på AEM-platser {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-I stora företag kan den infrastruktur som krävs för att skapa webbplatser distribueras. Ibland kan funktioner för att skapa webbplatser och digitala resurser som används för att skapa dessa webbplatser finnas i olika distributioner. Det finns vissa skäl till att det krävs en geografisk fördelning av driftsättningarna för att kunna arbeta tillsammans. Förvärv som leder till en heterogen infrastruktur som moderbolaget vill konsolidera. tillväxt som leder till en sådan skala att en dedikerad instans krävs för tillgångshantering.
+I stora företag kan den infrastruktur som krävs för att skapa webbplatser distribueras. Ibland kan funktioner för att skapa webbplatser och digitala resurser som används för att skapa dessa webbplatser finnas i olika distributioner. Det finns vissa skäl till att det krävs en geografisk fördelning av driftsättningarna för att kunna arbeta tillsammans. Förvärv som leder till en heterogen infrastruktur som moderbolaget vill konsolidera. tillväxt som leder till en sådan skala att en dedikerad instans krävs för resurshantering.
 
 AEM Sites erbjuder funktioner för att skapa webbsidor och AEM Assets är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatser. AEM stöder nu ovanstående användningsexempel genom att integrera AEM Sites och AEM Assets.
 
@@ -30,7 +30,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
    |  | AEM Sites as a Cloud Service | AEM 6.5 Sites på AMS | AEM 6.5 Sites på plats |
    |---|---|---|---|
    | **AEM Assets as a Cloud Service** | Stöds | Stöds | Stöds |
-   | **AEM 6.5 Assets on AMS** | Stöds inte | Stöds | Stöds |
+   | **AEM 6.5 Assets on AMS** | Stöds | Stöds | Stöds |
    | **AEM 6.5 Assets på plats** | Stöds inte | Stöds inte | Stöds inte |
 
 ### Filformat som stöds {#mimetypes}
@@ -40,7 +40,7 @@ Författare kan söka efter bilder och följande typer av dokument i Content Fin
 * **Bildformat**: De bildformat som stöds av [bildkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) stöds. Dynamiska mediakomponenter stöds inte.
 * **Dokumentformat**: Se Dokumentformat som stöds [i](file-format-support.md#supported-document-formats)Anslutna resurser.
 
-### Användare och grupper {#users-and-groups-involved}
+### Users and groups involved {#users-and-groups-involved}
 
 De olika roller som används för att konfigurera och använda funktionen och deras motsvarande användargrupper beskrivs nedan. Lokalt omfång används för de fall där en webbsida skapas av en författare. Fjärrscope används för DAM-distributionen som är värd för de nödvändiga resurserna. Webbplatsförfattaren hämtar dessa fjärrresurser.
 
@@ -78,7 +78,7 @@ Följ de här stegen för att konfigurera anslutningsmöjligheter för anslutna 
    1. Välj **[!UICONTROL Datastore Shared with Connected Assets]** om du använder ett datalager för att lagra dina resurser och Datastore är den gemensamma lagringen mellan båda AEM-distributionerna. I det här fallet spelar tröskelvärdet ingen roll eftersom faktiska tillgångsbinärfiler finns i datalagret och inte överförs.
    ![En typisk konfiguration för anslutna resurser](assets/connected-assets-typical-config.png)
 
-   *Bild:En typisk konfiguration för anslutna resurser*
+   *Bild: En typisk konfiguration för anslutna resurser*
 
 1. Inaktivera arbetsflödets startprogram eftersom resurserna redan har bearbetats och återgivningarna hämtas. Justera startkonfigurationerna för den lokala distributionen (AEM Sites) för att exkludera den `connectedassets` mapp där fjärrresurserna hämtas.
 
@@ -164,7 +164,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * Metadata-scheman hämtas inte.
 * Alla webbplatsförfattare har läsbehörighet för de hämtade kopiorna, även om de inte har åtkomst till den fjärranslutna DAM-distributionen.
 * Inget API-stöd för att anpassa integreringen.
-* Funktionen stöder smidig sökning och användning av fjärrresurser. Om du vill göra många fjärrresurser tillgängliga på lokal distribution på en gång bör du överväga att migrera resurserna. Se Handbok för [resursmigrering](assets-migration-guide.md).
+* Funktionen stöder smidig sökning och användning av fjärrresurser. Om du vill göra många fjärrresurser tillgängliga för lokal distribution på en gång bör du överväga att migrera resurserna. Se Handbok för [resursmigrering](assets-migration-guide.md).
 * Det går inte att använda en fjärrresurs som miniatyrbild för en webbsida på fliken [!UICONTROL Miniatyrbilder] i [!UICONTROL Sidegenskaper] genom att klicka på [!UICONTROL Välj bild].
 
 **Konfigurera och licensiera**
