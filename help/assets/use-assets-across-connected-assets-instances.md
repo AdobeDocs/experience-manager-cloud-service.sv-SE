@@ -3,7 +3,7 @@ title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsf
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager-webbplatsdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 64aab464c2d5de0c837ee465a088107a78ba9374
+source-git-commit: 188917fe677a88142c702b9637600db872853974
 
 ---
 
@@ -38,7 +38,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda de sökbara resurserna i Page Editor. Dokument kan läggas till i `Download` komponenten och bilder kan läggas till i `Image` komponenten. Författare kan också lägga till fjärrresurserna i en anpassad AEM-komponent som utökar standard- `Download` eller `Image` komponenterna. Listorna med format som stöds är:
 
 * **Bildformat**: De bildformat som stöds av [bildkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) stöds. Dynamiska mediabilder stöds inte.
-* **Dokumentformat**: Se Dokumentformat som stöds [i](file-format-support.md#supported-document-formats)Anslutna resurser.
+* **Dokumentformat**: Se Dokumentformat som stöds [i](file-format-support.md#doc-formats)Anslutna resurser.
 
 ### Users and groups involved {#users-and-groups-involved}
 
@@ -164,7 +164,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * Metadata-scheman hämtas inte.
 * Alla webbplatsförfattare har läsbehörighet för de hämtade kopiorna, även om de inte har åtkomst till den fjärranslutna DAM-distributionen.
 * Inget API-stöd för att anpassa integreringen.
-* Funktionen stöder smidig sökning och användning av fjärrresurser. Om du vill göra många fjärrresurser tillgängliga för lokal distribution på en gång bör du överväga att migrera resurserna. Se Handbok för [resursmigrering](assets-migration-guide.md).
+* Funktionen stöder smidig sökning och användning av fjärrresurser. Om du vill göra många fjärrresurser tillgängliga på lokal distribution på en gång bör du överväga att migrera resurserna. Se Handbok för [resursmigrering](assets-migration-guide.md).
 * Det går inte att använda en fjärrresurs som miniatyrbild för en webbsida på fliken [!UICONTROL Miniatyrbilder] i [!UICONTROL Sidegenskaper] genom att klicka på [!UICONTROL Välj bild].
 
 **Konfigurera och licensiera**
