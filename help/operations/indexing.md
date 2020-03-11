@@ -2,7 +2,7 @@
 title: Innehållssökning och indexering
 description: 'Innehållssökning och indexering '
 translation-type: tm+mt
-source-git-commit: 99dce041a6d7554785fd43eb82c671643e903f23
+source-git-commit: cec331a8737d8807062046b20f792b1c73e6b22e
 
 ---
 
@@ -45,7 +45,7 @@ AS NOTE: the above is internal for now.
 
 -->
 
-## Så här använder du {#how-to-use}
+## Användning {#how-to-use}
 
 Definitionen av index kan omfatta tre användningsfall:
 
@@ -61,7 +61,7 @@ Du måste förbereda ett nytt indexdefinitionspaket som innehåller den faktiska
 
 `<indexName>[-<productVersion>]-custom-<customVersion>`
 
-som sedan måste gå under `ui.content/src/main/content/jcr_root`. Underrotmappar stöds inte för närvarande.
+som sedan måste gå under `ui.apps/src/main/content/jcr_root`. Underrotmappar stöds inte för närvarande.
 
 <!-- need to review and link info on naming convention from https://wiki.corp.adobe.com/display/WEM/Merging+Customer+and+OOTB+Index+Changes?focusedCommentId=1784917629#comment-1784917629 -->
 
@@ -71,9 +71,9 @@ Paketet från exemplet ovan byggs som `com.adobe.granite:new-index-content:zip:1
 
 Indexdefinitioner har nu markerats som anpassade och versionsindelade:
 
-* Själva indexdefinitionen (till exempel `/oak:index/ntBaseLucene-custom-1`) som är MUTABLE-innehåll
+* Själva indexdefinitionen (till exempel `/oak:index/ntBaseLucene-custom-1`)
 
-För att kunna distribuera ett index bör därför indexdefinitionen (`/oak:index/definitionname`) levereras via det **ändringsbara paketet**, vanligtvis `ui.content` via Git och Cloud Manager-distributionsprocessen.
+För att kunna distribuera ett index måste därför indexdefinitionen (`/oak:index/definitionname`) levereras via `ui.apps` Git och Cloud Manager-distributionsprocessen.
 
 När den nya indexdefinitionen har lagts till måste det nya programmet distribueras via Cloud Manager. När distributionen är klar startas två jobb som ansvarar för att lägga till (och sammanfoga vid behov) indexdefinitionerna i MongoDB och Azure Segment Store för författare respektive publicering. De underliggande databaserna omindexeras med de nya indexdefinitionerna, innan den blå-gröna växlingen äger rum.
 
