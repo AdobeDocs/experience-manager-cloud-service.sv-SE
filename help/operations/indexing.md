@@ -2,7 +2,7 @@
 title: Innehållssökning och indexering
 description: 'Innehållssökning och indexering '
 translation-type: tm+mt
-source-git-commit: cec331a8737d8807062046b20f792b1c73e6b22e
+source-git-commit: 687d85287769a4b9f6324822efcc7662c3e6c213
 
 ---
 
@@ -68,6 +68,10 @@ som sedan måste gå under `ui.apps/src/main/content/jcr_root`. Underrotmappar s
 Paketet från exemplet ovan byggs som `com.adobe.granite:new-index-content:zip:1.0.0-SNAPSHOT`.
 
 ### Distribuera indexdefinitioner {#deploying-index-definitions}
+
+> [!NOTE]
+>
+> Det finns ett känt fel med Jackrabbit Filevault Maven Package Plugin version **1.1.0** som inte tillåter tillägg `oak:index` till moduler i `<packageType>application</packageType>`. Använd version **1.0.4** för att undvika detta.
 
 Indexdefinitioner har nu markerats som anpassade och versionsindelade:
 
