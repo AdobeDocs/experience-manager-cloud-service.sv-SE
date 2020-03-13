@@ -1,7 +1,7 @@
 ---
 title: Verktygskonsoler
 description: Lär dig mer om de olika verktygskonsolerna i AEM.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 0887a00566fc593745bb4df2dd411ae8ae0e01ae
 
 ---
@@ -9,13 +9,13 @@ source-git-commit: 0887a00566fc593745bb4df2dd411ae8ae0e01ae
 
 # Verktygskonsoler{#tools-consoles}
 
-Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållsarkiv.
+Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager.
 
 Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sites-cloud/authoring/getting-started/basic-handling.md#tools-panel).
 
 >[!NOTE]
 >
->När korten i användargränssnittet innehåller information om syftet med varje alternativ ger den här tabellen en snabb referens till var funktionerna finns på verktygspanelen.
+>Korten i användargränssnittet innehåller information om alternativens funktion, den här tabellen är bara en snabb referens till var funktionerna finns på verktygspanelen.
 
 <table>
  <tbody>
@@ -37,7 +37,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Taggning</td>
+   <td>Taggar</td>
   </tr>
   <tr>
    <td> </td>
@@ -49,7 +49,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Konfigurationsläsaren</td>
+   <td>Konfigurationsläsare</td>
   </tr>
   <tr>
    <td> </td>
@@ -73,7 +73,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Startare</td>
+   <td>Startprogram</td>
   </tr>
   <tr>
    <td> </td>
@@ -93,7 +93,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Blueprints</td>
+   <td>Ritningar</td>
   </tr>
   <tr>
    <td> </td>
@@ -117,19 +117,19 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Metadatascheman för mapp<br /> </td>
+   <td>Metadatascheman för mappar<br /> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Metadata-scheman</td>
+   <td>Metadatascheman</td>
   </tr>
   <tr>
    <td> </td>
-   <td>Desktop Tools for AEM<br /> </td>
+   <td>Skrivbordsverktyg för AEM<br /> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Konfiguration av insikter</td>
+   <td>Insights-konfiguration</td>
   </tr>
   <tr>
    <td> </td>
@@ -141,7 +141,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Konfiguration av anslutna resurser</td>
+   <td>Connected Assets-konfiguration</td>
   </tr>
   <tr>
    <td>Resurser</td>
@@ -173,7 +173,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Paketresurs</td>
+   <td>Paketdelning</td>
   </tr>
   <tr>
    <td>Dokumentskydd</td>
@@ -208,24 +208,24 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
    <td>Adobe IMS-konfigurationer</td>
   </tr>
   <tr>
-   <td>Molntjänster<br /> </td>
+   <td>Cloud Services<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Äldre molntjänster</td>
+   <td>Äldre Cloud Services</td>
   </tr>
   <tr>
    <td> </td>
-   <td>Översättningsmolntjänster</td>
+   <td>Cloud Services för översättning</td>
   </tr>
   <tr>
    <td> </td>
-   <td>YouTube Publishing Configuration</td>
+   <td>Konfigurera YouTube-publicering</td>
   </tr>
   <tr>
    <td> </td>
-   <td>Dynamisk mediekonfiguration</td>
+   <td>Dynamic Media-konfiguration</td>
   </tr>
   <tr>
    <td> </td>
@@ -233,7 +233,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Adobe Launch Configurations</td>
+   <td>Startkonfigurationer för Adobe</td>
   </tr>
   <tr>
    <td> </td>
@@ -261,7 +261,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Säkerhetskopiera</td>
+   <td>Säkerhetskopiering</td>
   </tr>
   <tr>
    <td> </td>
@@ -269,7 +269,7 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
   </tr>
   <tr>
    <td> </td>
-   <td>Diagnos</td>
+   <td>Diagnostik</td>
   </tr>
   <tr>
    <td> </td>
