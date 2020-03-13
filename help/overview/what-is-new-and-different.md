@@ -1,7 +1,7 @@
 ---
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: 'Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service. '
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 160db0dabc99eccdef5bd579f8ccc26a861b1380
 
 ---
@@ -20,10 +20,10 @@ Det finns inneboende skillnader mellan dessa tidigare metoder och AEM as a Cloud
 * [Arkitektur](#architecture)
 * [Uppgraderingar](#upgrades)
 * [Cloud Manager](#cloud-manager)
-* [Integrering](#onboarding)
+* [Onboarding](#onboarding)
 * [Utveckling](#developing)
 * [Drift och prestanda](#operations-and-performance)
-* [Identitetshantering](#identity-management)
+* [Identity Management](#identity-management)
 * [Användargränssnitt för redigering](#authoring-user-interface)
 * [AEM Sites](#aem-sites)
 * [AEM Assets](#aem-assets)
@@ -67,7 +67,7 @@ Det möjliggör automatisk skalning för olika användningsmönster:
 
 >[!NOTE]
 >
->Mer information finns i Introduktion till [distribution](/help/implementing/deploying/overview.md).
+>Mer information finns i [Introduktion till distribution](/help/implementing/deploying/overview.md).
 
 AEM as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att säkerställa att dina projekt är helt uppdaterade. Det innebär att alla uppgraderingsåtgärder är helt automatiserade och du behöver inte avbryta tjänsten för användarna.
 
@@ -105,7 +105,7 @@ Cloud Manager:
 
 Antal och typer av AEM-program som kan skapas via Cloud Manager beror på:
 
-* från kundlicensavtalet,
+* kundens licensavtal,
 
 * interna aktörer när AEM as a Cloud Service används för aktivering eller utbildning,
 
@@ -129,13 +129,13 @@ För närvarande kan Cloud Manager skapa miljöer i tre geografiska regioner (fl
 
 * APAC (Australien)
 
-## Integrering {#onboarding}
+## Onboarding {#onboarding}
 
 >[!NOTE]
 >
->For further details see [Onboarding](/help/onboarding/home.md).
+>Mer information finns i [Onboarding](/help/onboarding/home.md).
 
-Att starta och hantera ett AEM-projekt är enkelt när man använder AEM som en molntjänst eftersom Adobe ansvarar för många aspekter:
+Att starta och hantera ett AEM-projekt är enkelt när du använder AEM as a Cloud Service eftersom Adobe ansvarar för många aspekter:
 
 * AEM-baslinjebilder optimeras för specifika användningsområden.
 
@@ -153,7 +153,7 @@ En annan viktig skillnad är att det nu finns:
 
 * Distributionskrav:
 
-   * Koduppdateringar, alla kundapplikationer som utvecklats för en tidigare version av AEM måste granskas och eventuellt uppdateras.
+   * Koduppdateringar, alla kundprogram som utvecklats för en tidigare version av AEM måste granskas och eventuellt uppdateras.
 
    * Migrering av innehåll
 
@@ -161,7 +161,7 @@ En annan viktig skillnad är att det nu finns:
 
 >[!NOTE]
 >
->Mer information finns i [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) och [Utvecklingsprogram - WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
+>Mer information finns i [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) och [Utveckling – WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 Den nya arkitekturen som stöder AEM as a Cloud Service inbegriper några viktiga förändringar av den övergripande utvecklingsupplevelsen. Ett av de främsta målen för AEM as a Cloud Service är att göra det möjligt för erfarna kunder (som har använt AEM antingen lokalt eller i Adobe Managed Services) att migrera till AEM as a Cloud Service så snabbt som möjligt, utan att behöva skriva om en stor mängd av den anpassade koden. Vissa justeringar kan dock fortfarande behövas.
 
@@ -225,11 +225,11 @@ Det innebär att:
 
 Åtgärder för AEM as a Cloud Service stöds också av en ny infrastruktur för övervakning, rapportering och varningar. Detta gör att Adobe SRE:er (Site Reliability Engineers) proaktivt kan underhålla tjänsten. Arkitekturens olika delar är utrustade med en rad olika hälsokontroller. Om en viss nod i arkitekturen av någon anledning inte anses vara felfri tas den bort från tjänsten och ersätts i tysthet med en ny, felfri nod.
 
-## Identitetshantering {#identity-management}
+## Identity Management {#identity-management}
 
 >[!NOTE]
 >
->Mer information finns i [Säkerhet - IMS-stöd](/help/security/ims-support.md).
+>Mer information finns i [Säkerhet – IMS-stöd](/help/security/ims-support.md).
 
 En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön.
 
@@ -245,7 +245,7 @@ Det kombinerar fördelarna med:
 
 >[!NOTE]
 >
->Mer information finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) .
+>Mer information finns till att börja med i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md).
 
 De grundläggande principerna i redigeringsgränssnittet för Sites och Assets är välbekanta för alla som har använt AEM tidigare.
 
