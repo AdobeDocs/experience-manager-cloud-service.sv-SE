@@ -1,7 +1,7 @@
 ---
 sub-product: Onboarding to AEM as a Cloud Service
 user-guide-title: Onboarding to AEM as a Cloud Service
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 936e42f273b75f0ea7776c51f57af44ec9e6d96f
 
 ---
@@ -9,14 +9,14 @@ source-git-commit: 936e42f273b75f0ea7776c51f57af44ec9e6d96f
 
 # Onboarding {#onboarding}
 
-+ [Onboarding för AEM som Cloud Service](/help/onboarding/home.md)
++ [Onboarding för AEM as a Cloud Service](/help/onboarding/home.md)
 + Detta behövs {#what-is-required}
    + [Åtkomstbehörigheter har beviljats](what-is-required/access-rights-granted.md)
    + [Lägg till användare och roller](what-is-required/add-users-roles.md)
    + [Rollbaserade behörigheter](what-is-required/role-based-permissions.md)
    + [Databas för källkod](what-is-required/source-code-repository.md)
 + Få åtkomst till AEM i molnet {#getting-access}
-   + [Få åtkomst till Experience Manager som Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
+   + [Få åtkomst till Experience Manager as a Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
    + [Åtkomst till program](getting-access-to-aem-in-cloud/first-time-login.md)
    + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
    + [Skapa ett program](getting-access-to-aem-in-cloud/creating-a-program.md)
