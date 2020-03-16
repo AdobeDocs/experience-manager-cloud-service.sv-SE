@@ -3,7 +3,7 @@ title: Asynkrona åtgärder
 description: AEM Assets optimerar prestanda genom att utföra vissa resurskrävande uppgifter asynkront.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 6998ee5f3c1c1563427e8739998effe0eba867fc
 
 ---
 
@@ -29,11 +29,11 @@ Du kan visa status för asynkrona jobb på sidan **[!UICONTROL Async Job Status]
 
 ## Övervaka status för asynkrona åtgärder {#monitoring-the-status-of-asynchronous-operations}
 
-När AEM Resurser bearbetar en åtgärd asynkront får du ett meddelande i inkorgen och via e-post.
+När AEM Resurser bearbetar en åtgärd asynkront får du ett meddelande i din inkorg <!-- and through email -->.
 
 Om du vill visa status för asynkrona åtgärder i detalj går du till sidan **[!UICONTROL Async Job Status]** .
 
-1. Tryck/klicka på AEM-logotypen och välj **[!UICONTROL Resurser]** > **[!UICONTROL Jobb]**.
+1. Tap/click the AEM logo, and go **[!UICONTROL Assets]** > **[!UICONTROL Jobs]**.
 1. Granska informationen om åtgärderna på sidan **[!UICONTROL Async Job Status]** .
 
    ![job_status](assets/job_status.png)
@@ -72,12 +72,12 @@ AEM Assets kör ett rensningsjobb varje dag klockan 1:00 för att ta bort slutf�
 
 Du kan ändra schemat för rensningsjobbet och hur länge detaljer om slutförda jobb behålls innan de tas bort. Du kan också konfigurera det maximala antalet slutförda jobb för vilka information sparas när som helst.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
+1. Tap/click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Öppna det schemalagda **[!UICONTROL rensningsjobbet för]** Adobe CQ DAM Async Jobs.
 1. Ange tröskelvärdet för antal dagar efter vilka slutförda jobb tas bort och det maximala antalet jobb för vilka information sparas i historiken.
 
    ![Konfiguration för att schemalägga rensning av asynkrona jobb](assets/configmgr_purge_asyncjobs.png)
-   *Bild:Konfiguration för att schemalägga rensning av asynkrona jobb*
+   *Bild: Konfiguration för att schemalägga rensning av asynkrona jobb*
 
 1. Spara ändringarna.
 
@@ -89,7 +89,7 @@ Du kan konfigurera tröskelvärdet för antal resurser eller referenser för AEM
 
 Om antalet resurser eller mappar som ska tas bort överstiger tröskelvärdet, utförs borttagningsåtgärden asynkront.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
+1. Tap/click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Öppna konfigurationen för **[!UICONTROL Async Delete Operation Job Processing]** i webbkonsolen.
 1. I rutan **[!UICONTROL Tröskelvärde för antal resurser]** anger du tröskelvärdet för antal resurser/mappar för asynkron bearbetning av borttagningsåtgärder.
 
@@ -101,7 +101,7 @@ Om antalet resurser eller mappar som ska tas bort överstiger tröskelvärdet, u
 
 Om antalet resurser/mappar eller referenser som ska flyttas överstiger tröskelvärdet, utförs flyttåtgärden asynkront.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
+1. Tap/click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Öppna konfigurationen för **[!UICONTROL Async Move Operation Job Processing]** i webbkonsolen.
 1. I rutan **[!UICONTROL Tröskelvärde för antal resurser/referenser]** anger du tröskelvärdet för antal resurser/mappar eller referenser för asynkron bearbetning av flyttåtgärder.
 
