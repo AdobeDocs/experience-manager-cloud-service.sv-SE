@@ -2,7 +2,7 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: 'Fylls i '
 translation-type: tm+mt
-source-git-commit: 9777dd5772ab443b5b3dabbc74ed0d362e52df60
+source-git-commit: a95944055d74a14b2b35649105f284df6afc7e7b
 
 ---
 
@@ -83,10 +83,33 @@ Innehållet replikeras från författare till publicering via en pub-sub-mekanis
 
 ### Loggar {#logs}
 
-* För lokal utveckling skrivs loggposterna till lokala filer
-   * `./crx-quickstart/logs`
-* I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att avsluta loggarna. <!-- See the [Cloud Manager documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Note that custom logs are not supported and so all logs should be output to the error log. -->
-* Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att skapa utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
+För lokal utveckling skrivs loggposterna till lokala filer i `/crx-quickstart/logs` mappen.
+
+I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att avsluta loggarna. <!-- See the [Cloud Manager documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Note that custom logs are not supported and so all logs should be output to the error log. -->
+
+**Ange loggnivå**
+
+Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att aktivera utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
+
+**Aktivera felsökningsloggnivån**
+
+Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
+Om du vill aktivera DEBUG-loggnivån använder du CRX-utforskaren för att ange
+
+``` /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level ```
+
+egenskap som ska felsökas. Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom den genererar många loggar.
+En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Exempel:
+
+``` DEBUG 3 WebApp Panel: WebApp successfully deployed ```
+
+Loggnivåerna är följande:
+
+| 0 | Allvarligt fel | Åtgärden misslyckades och installationsprogrammet kan inte fortsätta. |
+|---|---|---|
+| 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av CRX installerades inte korrekt och kommer inte att fungera. |
+| 2 | Varning | Åtgärden har slutförts men problem uppstod. CRX fungerar eventuellt inte korrekt. |
+| 3 | Information | Åtgärden har slutförts. |
 
 ### Trådbitar {#thread-dumps}
 
