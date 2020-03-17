@@ -1,13 +1,13 @@
 ---
-title: Förstå ett projekts innehållspaketstruktur
-description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service på rätt sätt.
+title: AEM-projektstruktur
+description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: cedc14b0d71431988238d6cb4256936a5ceb759b
+source-git-commit: a6efcbb85949e65167ebab0e2a8dae06eaeaa07f
 
 ---
 
 
-# Förstå strukturen för ett projektinnehållspaket i Adobe Experience Manager Cloud-tjänsten {#understand-cloud-service-package-structure}
+# AEM-projektstruktur
 
 >[!TIP]
 >
@@ -17,9 +17,9 @@ I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Mana
 
 AEM-programdistributioner måste bestå av ett enda AEM-paket. Paketet ska i sin tur innehålla underpaket som innehåller allt som programmet behöver för att fungera, inklusive kod, konfiguration och eventuellt baslinjeinnehåll som stöds.
 
-AEM kräver att **innehåll** och **kod** skiljs åt, vilket innebär att ett innehållspaket **inte** kan distribueras till **både** `/apps` - och körningsskrivbara områden (t.ex. `/content`, `/conf`, `/home`eller vad som inte `/apps`) finns i databasen. Programmet måste i stället separera kod och innehåll i separata paket för distribution till AEM.
+AEM kräver att **innehåll** och **kod** skiljs åt, vilket innebär att ett innehållspaket **inte** kan distribueras till **både** `/apps` och områden som är skrivbara vid körning (som `/content`, `/conf`, `/home`eller allt som inte är `/apps`) i databasen. Programmet måste i stället separera kod och innehåll i separata paket för distribution till AEM.
 
-Den paketstruktur som beskrivs i det här dokumentet är kompatibel med **både** lokala utvecklingsdistributioner och AEM Cloud-tjänstdistributioner.
+Den paketstruktur som beskrivs i det här dokumentet är kompatibel med **både** lokala utvecklingsdistributioner och AEM Cloud Service-distributioner.
 
 >[!TIP]
 >
@@ -27,9 +27,9 @@ Den paketstruktur som beskrivs i det här dokumentet är kompatibel med **både*
 
 ## Muterbara kontra oföränderliga områden i databasen {#mutable-vs-immutable}
 
-`/apps` och `/libs` betraktas som **oföränderliga** områden i AEM eftersom de inte kan ändras (skapa, uppdatera, ta bort) efter att AEM startats (dvs. vid körning). Alla försök att ändra ett oföränderligt område vid körning misslyckas.
+`/apps` och `/libs` betraktas som **oföränderliga** områden i AEM, eftersom de inte kan ändras (skapa, uppdatera, ta bort) efter att AEM startats (dvs. vid körning). Alla försök att ändra ett oföränderligt område vid körning misslyckas.
 
-Allt annat i databasen, `/content`, `/conf`, `/var`, `/home`, `/etc`, `/oak:index`, `/system`, `/tmp`osv. är alla **ändringsbara** områden, vilket innebär att de kan ändras under körning.
+Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/system`, `/tmp`osv. är alla **ändringsbara** områden, vilket innebär att de kan ändras under körning.
 
 >[!WARNING]
 >
@@ -58,24 +58,29 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `/apps/settings`
    + ACL-listor (behörigheter)
       + Alla banor `rep:policy` under `/apps`
+   + Repo Init OSGi-konfigurationsdirektiv (och medföljande skript)
+      + [Repo Init](#repo-init) är det rekommenderade sättet att distribuera (muterbart) innehåll som logiskt är en del av AEM-programmet. Repo Init ska användas för att definiera:
+         + Baslinjeinnehållsstrukturer
+            + `/conf/my-app`
+            + `/content/my-app`
+            + `/content/dam/my-app`
+         + Användare
+         + Tjänstanvändare
+         + Grupper
+         + ACL-listor (behörigheter)
+            + Alla `rep:policy` sökvägar (ändringsbara eller oföränderliga)
 + Paketet, eller kodpaketet, innehåller allt innehåll och all konfiguration. `ui.content` Vanliga delar av `ui.content` paketet omfattar, men är inte begränsade till:
    + Kontextmedvetna konfigurationer
       + `/conf`
-   + Baslinjeinnehållsstrukturer (resursmappar, platsens rotsidor)
+   + Nödvändiga, komplexa innehållsstrukturer (t.ex. Innehållsbygge som bygger på och sträcker sig förbi innehållsstrukturer för baslinjen som definierats i Repo Init.
       + `/content`, `/content/dam`osv.
    + Styrda taggar för taxonomier
       + `/content/cq:tags`
-   + Tjänstanvändare
-      + `/home/users`
-   + Användargrupper
-      + `/home/groups`
    + Oak indexes
-      + `/oak:indexes`
+      + `/oak:index`
    + Etc legacy nodes
       + `/etc`
-   + ACL-listor (behörigheter)
-      + Alla `rep:policy` banor som **inte** finns under `/apps`
-+ Paketet är `all` ett behållarpaket som ENDAST innehåller `ui.apps` och `ui.content` paket som inbäddade. Paketet får inte ha `all` något eget innehåll **** , utan ska delegera all distribution till databasen till sina underpaket.
++ Paketet `all` är ett behållarpaket som ENDAST innehåller paketen `ui.apps` och `ui.content` som inbäddade. Paketet `all` får inte ha något **eget innehåll**, utan ska delegera all driftsättning till databasen till sina underpaket.
 
    Paket ingår nu i Maven [FileVault-pluginens inbäddade konfiguration](#embeddeds), i stället för i `<subPackages>` konfigurationen.
 
@@ -95,7 +100,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
 Paket ska märkas med sin deklarerade pakettyp.
 
 + Behållarpaket får inte ha någon `packageType` uppsättning.
-+ Kodpaket (ej ändringsbara) måste anges `packageType` till `application`.
++ Kodpaket (oföränderliga) måste anges `packageType` till `application`.
 + Innehållspaket (mutable) måste anges `packageType` till `content`.
 
 Mer information finns i dokumentationen [till](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType) Apache Jackrabbit FileVault - Package Maven Plugin och konfigurationsfragmentet [för](#marking-packages-for-deployment-by-adoube-cloud-manager) FileVault Maven nedan.
@@ -106,17 +111,46 @@ Mer information finns i dokumentationen [till](https://jackrabbit.apache.org/fil
 
 ## Markera paket för distribution med Adobe Cloud Manager {#marking-packages-for-deployment-by-adoube-cloud-manager}
 
-Som standard hämtar Adobe Cloud Manager alla paket som skapats av Maven-bygget, men eftersom behållarpaketet (`all`) är en enda distributionsartefakt som innehåller all kod och alla innehållspaket måste vi se till att **endast** behållarpaketet (`all`) distribueras. För att säkerställa detta måste andra paket som genereras av Maven-bygget markeras med FileVault Content Package Maven Plug-In-konfigurationen för `<properties><cloudManagerTarget>none</cloudManageTarget></properties>`.
+Som standard hämtar Adobe Cloud Manager alla paket som skapas av Maven-bygget, men eftersom behållarpaketet (`all`) är en enda distributionsartefakt som innehåller all kod och alla innehållspaket måste vi se till att **endast** behållarpaketet (`all`) distribueras. För att säkerställa detta måste andra paket som genereras av Maven-bygget markeras med FileVaults Maven-pluginkonfiguration `<properties><cloudManagerTarget>none</cloudManageTarget></properties>` för innehållspaket.
 
 >[!TIP]
 >
 >Se avsnittet [POM XML-kodfragment](#pom-xml-snippets) nedan för ett fullständigt kodavsnitt.
 
+## Repo Init{#repo-init}
+
+Repo Init innehåller instruktioner, eller skript, som definierar JCR-strukturer, från vanliga nodstrukturer som mappträd till användare, tjänstanvändare, grupper och ACL-definition.
+
+De viktigaste fördelarna med Repo Init är att de har implicit behörighet att utföra alla åtgärder som definieras av deras skript, och att de anropas tidigt under distributionens livscykel för att säkerställa att alla nödvändiga JCR-strukturer finns när koden körs.
+
+Rep Init-skript som finns i projektet fungerar som skript, men de kan och bör användas för att definiera följande muterbara strukturer: `ui.apps`
+
++ Baslinjeinnehållsstrukturer
+   + Examples: `/content/my-app`, `/content/dam/my-app`, `/conf/my-app/settings`
++ Tjänstanvändare
++ Användare
++ Grupper
++ ACL
+
+Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer och kan därmed implicit riktas in i runmode, vilket möjliggör skillnader mellan AEM Author och AEM Publish Services Repo Init-skript, eller till och med mellan Envs (Dev, Stage och Prod).
+
+Observera, att när du definierar Användare, och Grupper, anses bara grupper vara en del av programmet, och att de är en del av dess funktion bör definieras här. Organisationens användare och grupper bör fortfarande definieras vid körning i AEM. Om ett anpassat arbetsflöde till exempel tilldelar arbete till en namngiven grupp, bör den gruppen definieras i via Repo Init i AEM-programmet, men om grupperingen bara är organisatorisk, till exempel&quot;Wendy&#39;s Team&quot; och&quot;Sean&#39;s Team&quot;, är dessa bäst definierade och hanteras vid körning i AEM.
+
+>[!TIP]
+>
+>Repo Init-skript *måste* definieras i det textbundna `scripts` fältet och `references` konfigurationen kommer inte att fungera.
+
+Den fullständiga ordlistan för Repo Init-skript finns i dokumentationen [till](https://sling.apache.org/documentation/bundles/repository-initialization.html#the-repoinit-repository-initialization-language)Apache Sling Repo Init.
+
+>[!TIP]
+>
+>Se avsnittet [Kodfragment för](#snippet-repo-init) upprepning nedan för ett fullständigt kodavsnitt.
+
 ## Databasstrukturpaket {#repository-structure-package}
 
 Kodpaket kräver att konfigurationen för plugin-programmet FileVault Maven konfigureras för att referera till en `<repositoryStructurePackage>` som kräver att strukturella beroenden är korrekta (för att säkerställa att ett kodpaket inte installeras över ett annat). Du kan [skapa ett eget databasstrukturpaket för projektet](repository-structure-package.md).
 
-Detta krävs **** bara för kodpaket, vilket innebär alla paket som är markerade med `<packageType>application</packageType>`.
+Detta **krävs endast** för kodpaket, vilket innebär alla paket som är markerade med `<packageType>application</packageType>`.
 
 Mer information om hur du skapar ett databasstrukturpaket för programmet finns i [Utveckla ett databasstrukturpaket](repository-structure-package.md).
 
@@ -151,16 +185,16 @@ Bryter ned mappstrukturen:
    + `/apps/vendor-packages`
    >[!WARNING]
    >
-   >Underpaketsinbäddade mappar namnges som suffix till `-packages`. Detta garanterar att distributionskoden och innehållspaketen **inte** distribueras till målmappen/målmapparna i något underpaket `/apps/<app-name>/...` som leder till destruktiv och cyklisk installationsfunktion.
+   >Mappar som bäddats in i underpaket namnges med suffixet `-packages`. Detta garanterar att distributionskoden och innehållspaketen **inte** distribueras till målmappen/målmapparna i något underpaket `/apps/<app-name>/...`, vilket skulle leda till destruktivt och cykliskt installationsbeteende.
 
 + Mappen på den tredje nivån måste vara antingen
    `application` eller `content`
    + Mappen innehåller `application` kodpaket
    + Mappens `content` guldfärgade innehållspaketMappnamnet måste motsvara [pakettyperna](#package-types) i de paket som den innehåller.
 + Mappen på den fjärde nivån innehåller underpaketen och måste vara någon av:
-   + `install` för installation på **både** AEM-författare och AEM-publicering
-   + `install.author` för **endast** installation på AEM-författare
-   + `install.publish` för att **endast** installera på AEM publishObservera att endast `install.author` och `install.publish` stöds som mål. Andra körningslägen **stöds inte** .
+   + `install` för installation på **både** AEM-redigerare och AEM-publicering
+   + `install.author` för installation **endast** på AEM-redigerare
+   + `install.publish` för att **endast** installera på AEM publishObservera att endast `install.author` och `install.publish` stöds som mål. Andra körningslägen **stöds inte**.
 
 En distribution som innehåller AEM-författare och publicerar specifika paket kan till exempel se ut så här:
 
@@ -188,9 +222,9 @@ Lägg bara till poster `<filter root="/apps/<my-app>-packages"/>` för mappar p�
 
 Alla paket måste vara tillgängliga via [Adobes publika arkiv](https://repo.adobe.com/nexus/content/groups/public/com/adobe/) för Maven-felaktigheter eller en tillgänglig offentlig databas med referenser från tredje part för Maven-felaktigheter.
 
-Om tredjepartspaketen finns i **Adobes publika Maven-arkiv** behövs ingen ytterligare konfiguration för att Adobe Cloud Manager ska kunna lösa artefakterna.
+Om tredjepartspaketen finns i **Adobes offentliga Maven-databas** behövs ingen ytterligare konfiguration för att Adobe Cloud Manager ska kunna lösa artefakterna.
 
-Om tredjepartspaketen finns i en **offentlig tredjepartsdatabas** för Maven-felaktigheter måste den här databasen registreras i projektets `pom.xml` och bäddas in enligt den metod som [beskrivs ovan](#embeddeds). Om programmet/kopplingen från tredje part kräver både kod- och innehållspaket måste varje paket bäddas in på rätt platser i behållarpaketet (`all`).
+Om tredjepartspaketen finns i en **offentlig tredjepartsdatabas för Maven-felaktigheter** måste den här databasen registreras i projektets `pom.xml` och bäddas in enligt den metod som [beskrivs ovan](#embeddeds). Om programmet/kopplingen från tredje part kräver både kod- och innehållspaket måste varje paket bäddas in på rätt platser i behållarpaketet (`all`).
 
 Om du lägger till Maven-beroenden följer standardMaven-rutiner, och inbäddning av artefakter från tredje part (kod- och innehållspaket) [beskrivs ovan](#embedding-3rd-party-packages).
 
@@ -239,7 +273,7 @@ Nedan följer Maven- `pom.xml` konfigurationsfragment som kan läggas till i Mav
 
 ### Pakettyper {#xml-package-types}
 
-Kod- och innehållspaket, som distribueras som underpaket, måste deklarera en pakettyp för **programmet** eller **innehållet**, beroende på vad de innehåller.
+Kod- och innehållspaket, som distribueras som underpaket, måste deklarera pakettypen **application** eller **content**, beroende på vad de innehåller.
 
 #### Behållarpakettyper {#container-package-types}
 
@@ -301,7 +335,7 @@ I `ui.content/pom.xml`filen deklareras pakettypen av direktivet `<packageType>co
 
 ### Markera paket för distribution av Adobe Cloud Manager {#cloud-manager-target}
 
-I varje projekt som genererar ett paket, **förutom** för behållarprojektet (`all`), lägger du `<cloudManagerTarget>none</cloudManagerTarget>` till `<properties>` konfigurationen för `filevault-package-maven-plugin` plugin-deklarationen för att vara säker på att de inte **** distribueras av Adobe Cloud Manager. Behållarpaketet (`all`) ska vara det enskilda paket som distribueras via Cloud Manager, som i sin tur bäddar in all kod och alla innehållspaket som behövs.
+I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`), lägger du till `<cloudManagerTarget>none</cloudManagerTarget>` i `<properties>`-konfigurationen för plugin-deklarationen `filevault-package-maven-plugin` för att vara säker på att de **inte** distribueras av Adobe Cloud Manager. Behållarpaketet (`all`) ska vara det enda paket som distribueras via Cloud Manager, som i sin tur bäddar in all kod och alla innehållspaket som behövs.
 
 ```xml
 ...
@@ -320,6 +354,28 @@ I varje projekt som genererar ett paket, **förutom** för behållarprojektet (`
     </plugin>
     ...
 ```
+
+### Repo Init{#snippet-repo-init}
+
+Repo Init-skript som innehåller Repo Init-skript definieras i `RepositoryInitializer` OSGi-fabrikskonfigurationen via `scripts` egenskapen. Observera att eftersom dessa skript definieras i OSGi-konfigurationer kan de enkelt omfångas i runmode med hjälp av vanliga `../config.<runmode>` mappsemantik.
+
+Observera att eftersom skript vanligtvis är flerradsdeklarationer är det enklare att definiera dem i `.config` filen än i XML-basformatet `sling:OsgiConfig` .
+
+`/apps/my-app/config.author/org.apache.sling.jcr.repoinit.RepositoryInitializer-author.config`
+
+```plain
+scripts=["
+    create service user my-data-reader-service
+
+    set ACL on /var/my-data
+        allow jcr:read for my-data-reader-service
+    end
+
+    create path (sling:Folder) /conf/my-app/settings
+"]
+```
+
+Egenskapen `scripts` OSGi innehåller direktiv enligt definitionen i [Apache Slings Repo Init-språk](https://sling.apache.org/documentation/bundles/repository-initialization.html#the-repoinit-repository-initialization-language).
 
 ### Databasstrukturpaket {#xml-repository-structure-package}
 
@@ -420,7 +476,7 @@ I `all/pom.xml`lägger du till följande `<embeddeds>` direktiv till `filevault-
 
 ### Behållarpaketets filterdefinition {#xml-container-package-filters}
 
-I `all` projektets `filter.xml` (`all/src/main/content/jcr_root/META-INF/vault/definition/filter.xml`) **inkluderar** du alla `-packages` mappar som innehåller underpaket som ska distribueras:
+I `all`-projektets `filter.xml` (`all/src/main/content/jcr_root/META-INF/vault/definition/filter.xml`) **inkluderar** du alla `-packages`-mappar som innehåller underpaket som ska distribueras:
 
 ```xml
 <filter root="/apps/my-app-packages"/>
@@ -429,6 +485,9 @@ I `all` projektets `filter.xml` (`all/src/main/content/jcr_root/META-INF/vault/d
 Om flera `/apps/*-packages` används i de inbäddade målen måste alla räknas upp här.
 
 ### Maven Repositories från tredje part {#xml-3rd-party-maven-repositories}
+
+>[!WARNING]
+> Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras för behov.
 
 I reaktorprojektets `pom.xml`exempel lägger du till eventuella direktiv från tredje part om databasen för Maven. Den fullständiga `<repository>` konfigurationen bör vara tillgänglig från tredjepartsprovidern.
 
