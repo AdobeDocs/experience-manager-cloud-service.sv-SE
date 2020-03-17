@@ -2,7 +2,7 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: 'Fylls i '
 translation-type: tm+mt
-source-git-commit: a95944055d74a14b2b35649105f284df6afc7e7b
+source-git-commit: 7f4e27d10da1b9cb074223c1c43fc7798942dbe4
 
 ---
 
@@ -89,12 +89,16 @@ I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett
 
 **Ange loggnivå**
 
-Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att aktivera utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
+Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att skapa utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
+
+> [!NOTE]
+> 
+> För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM-instans som en molntjänst. Mer information om hur du gör detta finns i [Distribuera till AEM som en molntjänst](/help/implementing/deploying/overview.md).
 
 **Aktivera felsökningsloggnivån**
 
 Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
-Om du vill aktivera DEBUG-loggnivån använder du CRX-utforskaren för att ange
+Om du vill aktivera DEBUG-loggnivån anger du
 
 ``` /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level ```
 
