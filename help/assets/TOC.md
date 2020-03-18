@@ -2,7 +2,7 @@
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 0dd6ffe72297ffb2e260039c3cce23499b61d62b
+source-git-commit: d872d78feb6cab972282979ec67bf3196c56febf
 
 ---
 
@@ -40,7 +40,6 @@ source-git-commit: 0dd6ffe72297ffb2e260039c3cce23499b61d62b
    + [Hantera rättigheter för digitala resurser](drm.md)
 + Konfigurera, administrera och utöka Assets {#admin}
    + [API:er och referensmaterial](developer-reference-material-apis.md)
-   + [Guide för resursmigrering](assets-migration-guide.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Bearbetar profiler](/help/assets/dynamic-media/processing-profiles.md)
    + [Flerspråkiga resurser och översättning av resurser](translate-assets.md)
