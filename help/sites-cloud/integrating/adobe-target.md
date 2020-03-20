@@ -2,7 +2,7 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: 94ba99acf2d14219d63485e3443b7080b8ba32bd
+source-git-commit: ed8cfc564e198552ae4efabee1ff48950470790a
 
 ---
 
@@ -42,7 +42,7 @@ Utför följande uppgifter för att integrera med Target:
 
 >[!CAUTION]
 >
->I AEM som en molntjänst är den replikeringsagent som synkroniserar erbjudanden och aktiviteter från AEM till Adobe Target inaktiverad som standard. Kontakta [Adobe Support](https://helpx.adobe.com/contact/enterprise-support.ec.html#target) om du behöver aktivera replikeringsagenten igen.
+>I AEM som en molntjänst är den replikeringsagent som synkroniserar erbjudanden och aktiviteter från AEM till Adobe Target inaktiverad som standard. Kontakta [Adobe Support](https://helpx.adobe.com/contact/enterprise-support.ec.html#experience-manager) -teamet om du behöver aktivera replikeringsagenten igen.
 
 >[!NOTE]
 >
