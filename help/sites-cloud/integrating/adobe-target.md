@@ -2,7 +2,7 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: 518c3156b2ee1f6431ea11333c57548a42133aa9
+source-git-commit: 5a7f2d603952b2c5f92363888efedb482d8efea3
 
 ---
 
@@ -34,11 +34,15 @@ Utför följande uppgifter för att integrera med Target:
    * [Integrera AEM med Adobe Launch via Adobe I/O](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)
    * [Om AEM-integrering med Launch från Adobe, Analytics och Target](https://helpx.adobe.com/experience-manager/kt/integration/using/aem-launch-integration-tutorial-understand.html)
 
-1. [Konfigurera aktiviteter](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/activitylib.html): Associera dina aktiviteter med målmolnkonfigurationen.
-
 >[!NOTE]
 >
 >IMS-konfigurationen (tekniska konton) för Launch från Adobe är förkonfigurerad i AEM som en molntjänst. Användare behöver inte skapa den här konfigurationen.
+
+1. [Konfigurera aktiviteter](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/activitylib.html): Associera dina aktiviteter med målmolnkonfigurationen.
+
+>[!CAUTION]
+>
+>&quot;I AEM som en molntjänst är den replikeringsagent som synkroniserar erbjudanden och aktiviteter från AEM till Adobe Target inaktiverad som standard. Kontakta [Adobe Support](https://helpx.adobe.com/contact/enterprise-support.ec.html#target) om du behöver aktivera replikeringsagenten igen.&quot;
 
 >[!NOTE]
 >
