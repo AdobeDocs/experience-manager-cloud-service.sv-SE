@@ -3,7 +3,7 @@ title: Använd Connected Assets när du vill dela DAM-resurser i redigeringsarbe
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager Site-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e3835cd4363a01fdf773831aa6f145a62dda6ae3
+source-git-commit: 77494565596f3d7ac04613c057f0fccc8be71eab
 
 ---
 
@@ -164,7 +164,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * Metadatascheman hämtas inte.
 * Alla Sites-författare har läsbehörighet för de hämtade kopiorna, även om de inte har åtkomst till den fjärranslutna DAM-distributionen.
 * Det finns inte API-stöd för att anpassa integreringen.
-* Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna. Se [Handbok för resursmigrering](assets-migration-guide.md).
+* Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna.
 * It is not possible to use a remote asset as a thumbnail for a web page in the [!UICONTROL Thumbnail] tab in [!UICONTROL Page Properties] by clicking [!UICONTROL Select Image].
 
 **Konfigurera och licensiera**
