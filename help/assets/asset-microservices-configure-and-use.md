@@ -3,7 +3,7 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
+source-git-commit: 45810a3bc5bb333b03d63d56e170388f0a1c082e
 
 ---
 
@@ -56,9 +56,9 @@ För att konfigurera resursmikrotjänster kan administratörer använda konfigur
 
 ### Standardkonfiguration {#default-config}
 
-Med standardkonfigurationen konfigureras bara [!UICONTROL standardbearbetningsprofilen] . Den är inbyggd och kan inte ändras. Den körs alltid för att säkerställa att all bearbetning som krävs för programmet utförs.
+Med standardkonfigurationen konfigureras bara standardbearbetningsprofilen. Standardbearbetningsprofilen visas inte i användargränssnittet och du kan inte ändra den. Det körs alltid för att bearbeta överförda resurser. En standardbearbetningsprofil säkerställer att all grundläggande bearbetning som krävs av Experience Manager är slutförd för alla resurser.
 
-![processing-profiles-standard](assets/processing-profiles-standard.png)
+<!-- ![processing-profiles-standard](assets/processing-profiles-standard.png) -->
 
 Standardbearbetningsprofilen ger följande bearbetningskonfiguration:
 
@@ -103,18 +103,18 @@ I annat fall kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den 
 
 #### Särskild FPO-återgivning {#special-fpo-rendition}
 
-Bearbetningsprofilen kan innehålla en särskild FPO-återgivning, som används när [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) används med Adobe InDesign för att placera direkta länkar till resurser från Experience Manager i InDesign-dokument.
+När du monterar stora resurser från AEM i Adobe InDesign-dokument måste den som arbetar med design vänta en hel del efter att de [monterat materialet](https://helpx.adobe.com/indesign/using/placing-graphics.html). Under tiden är användaren blockerad från att använda InDesign. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Adobe gör det möjligt att tillfälligt placera små återgivningar i InDesign-dokument till att börja med, vilket kan ersättas med högupplösta resurser vid behov senare. Experience Manager innehåller renderingar som bara används för placering (FPO). Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner.
 
-Läs Adobe Asset Link- [dokumentationen](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html) om du behöver aktivera den för din bearbetningsprofil.
+Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Läs [dokumentationen](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html) om Adobe Asset Link om du behöver aktivera den för din bearbetningsprofil. Mer information finns i den fullständiga dokumentationen för [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
 ## Använd resursmikrotjänster för att bearbeta resurser {#use-asset-microservices}
 
-När ytterligare bearbetningsprofiler har skapats måste de tillämpas på specifika mappar för Experience Manager för att de ska kunna användas vid resursbearbetning för resurser som har överförts eller uppdaterats i dessa mappar. Den inbyggda standardbearbetningsprofilen körs alltid.
+Skapa och använd de anpassade bearbetningsprofilerna på specifika mappar för Experience Manager för att bearbeta resurser som har överförts till eller uppdaterats i dessa mappar. Den inbyggda standardbearbetningsprofilen körs alltid som standard, men visas inte i användargränssnittet. Om du lägger till en anpassad profil används båda profilerna för att bearbeta de överförda resurserna.
 
 Det finns två sätt att använda bearbetningsprofiler på mappar:
 
 * Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Verktyg > Resurser > Bearbeta profiler]** och sedan använda åtgärden **[!UICONTROL Använd profil på]** mappar. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
-* Användarna kan välja en mapp i Assets-användargränssnittet, använda åtgärden **[!UICONTROL Egenskaper]** för att öppna fönstret för mappegenskaper, klicka på fliken **[!UICONTROL Bearbeta profiler]** och i listrutan välja rätt bearbetningsprofil för den mappen. Alternativet sparas vid åtgärden **[!UICONTROL Spara och stäng]** .
+* Users can select a folder in the Assets user interface, use **[!UICONTROL Properties]** action to open folder properties screen, click on the **[!UICONTROL Processing Profiles]** tab, and in the drop-down, select the right processing profile for that folder. The choice will be save upon **[!UICONTROL Save &amp; Close]** action.
 
 >[!NOTE]
 >
@@ -149,15 +149,15 @@ Att lägga till en arbetsflödeskonfiguration efter bearbetning i Experience Man
 * Det sista steget i en sådan modell måste vara `DAM Update Asset Workflow Completed Process` steget. Detta krävs för att säkerställa att AEM vet att bearbetningen har avslutats och att resursen kan markeras som bearbetad (&quot;Nytt&quot;)
 * Skapa en konfiguration för tjänsten Custom Workflow Runner, som gör att du kan konfigurera körning av en arbetsflödesmodell efter bearbetning, antingen efter sökväg (mappsökväg) eller reguljärt uttryck
 
-### Skapa arbetsflödesmodeller för efterbearbetning
+### Skapa arbetsflödesmodeller för efterbearbetning {#create-post-processing-workflow-models}
 
-Arbetsflödesmodeller för efterbearbetning är vanliga AEM-arbetsflödesmodeller. Skapa olika om du behöver olika typer av bearbetning för olika databasplatser eller resurstyper.
+Arbetsflödesmodeller för efterbearbetning är vanliga AEM-arbetsflödesmodeller. Skapa olika modeller om du behöver olika bearbetning för olika databasplatser eller resurstyper.
 
-Bearbetningssteg ska läggas till baserat på behov. Du kan använda alla färdiga steg som stöds, samt anpassade arbetsflödessteg.
+Bearbetningssteg ska läggas till baserat på behov. Du kan använda alla steg som stöds, samt alla anpassade arbetsflödessteg.
 
-Det sista steget i alla efterbehandlingsarbetsflöden måste vara `DAM Update Asset Workflow Completed Process`. Detta säkerställer att resursen markeras som&quot;bearbetningen har slutförts&quot;.
+Se till att det sista steget i varje efterbearbetningsarbetsflöde är `DAM Update Asset Workflow Completed Process`. Det sista steget hjälper till att säkerställa att Experience Manager vet när mediebearbetningen är klar.
 
-### Konfigurera körning av arbetsflöde efter bearbetning
+### Konfigurera arbetsflödeskörning efter bearbetning {#configure-post-processing-workflow-execution}
 
 Om du vill konfigurera arbetsflödesmodellerna för efterbearbetning som ska köras för resurser som har överförts eller uppdaterats i systemet efter att bearbetningen av resursmikrotjänsterna har slutförts, måste tjänsten Custom Workflow Runner konfigureras.
 
@@ -171,4 +171,4 @@ Tjänsten Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.
 >Konfigurationen av Custom Workflow Runner är en konfiguration av en OSGi-tjänst. Mer information om hur du distribuerar en OSGi-konfiguration finns i [Distribuera till Experience Manager](/help/implementing/deploying/overview.md) .
 > OSGi-webbkonsolen, till skillnad från AEM-driftsättningar på plats och hanterade tjänster, är inte direkt tillgänglig i distributionen av molntjänster.
 
-Mer information om vilka av de standardarbetsflödesstegen som kan användas i efterbearbetningsarbetsflödet finns i [Arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
+Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
