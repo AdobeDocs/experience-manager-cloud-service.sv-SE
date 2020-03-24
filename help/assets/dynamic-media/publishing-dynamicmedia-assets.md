@@ -2,7 +2,7 @@
 title: Publicera dynamiska medieresurser
 description: Publicera dynamiska medieresurser
 translation-type: tm+mt
-source-git-commit: 218afb360ec3a13f2f4562a703ca3184083fa7f6
+source-git-commit: c8f8598e3e476af529a87b056e66ddb619a2da0a
 
 ---
 
@@ -11,9 +11,9 @@ source-git-commit: 218afb360ec3a13f2f4562a703ca3184083fa7f6
 
 Du publicerar dina dynamiska medieresurser genom att välja resurserna och trycka på **[!UICONTROL Publicera]**. När dina dynamiska medieresurser har publicerats är de tillgängliga för dig så att du kan inkludera dem på en webbsida via URL eller genom att bädda in dem.
 
-Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. See [Configuring Dynamic Media](config-dm.md).
+Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. See [Configuring Dynamic Media](config-dm.md).
 
-I **[!UICONTROL kortvyn]** visas en liten globikon direkt under namnet på en resurs som anger att den är publicerad. I **[!UICONTROL listvyn]** visar en kolumn som är **[!UICONTROL Publicerad]** vilka resurser som är publicerade eller inte.
+In the **[!UICONTROL Card View]**, a small globe icon appears directly below an asset&#39;s name to indicate that it is published. In the **[!UICONTROL List View]**, a **[!UICONTROL Published]** column indicates which assets are published or which are not.
 
 >[!NOTE]
 >
