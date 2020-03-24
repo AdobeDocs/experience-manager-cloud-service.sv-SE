@@ -2,7 +2,7 @@
 title: Konfigurera Dynamic Media Cloud-tjänsten
 description: Information om hur du konfigurerar dynamiska media i Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: 91f1a7c89b3c3122a0d1cd3fde4a45c16bcff317
+source-git-commit: 4b9630dfdc8dfc3a621f307f53c48dec415618e5
 
 ---
 
@@ -65,28 +65,32 @@ Så här konfigurerar du molntjänster för dynamiska media:
 
    * **[!UICONTROL Företagets rotmappsökväg]**
 
-   * **[!UICONTROL Publicera resurser]** - alternativet **[!UICONTROL Omedelbart]** innebär att när resurser överförs, importeras resurserna och URL:en/inbäddningen anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser. Alternativet **[!UICONTROL Vid aktivering]** (standard) innebär att du måste publicera resursen explicit först innan en URL/Embed-länk anges.
+   * **[!UICONTROL Publicera resurser]** - Du kan välja mellan följande tre alternativ:
+      * **[!UICONTROL Omedelbart]** innebär att när resurser överförs, importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.
+      * **[!UICONTROL Vid aktivering]** innebär att du måste publicera resursen explicit innan en URL/Embed-länk anges.
+<!--       * **[!UICONTROL Selective Publish]** means that assets are auto published for secure preview only and can be explicitly published to AEM without publishing to DMS7 for delivery in the public domain. In the future, Adobe will enhance this option to publish assets to AEM and publish assets to Dynamic Media, mutually exclusive of each other. That is, you can publish assets to DMS7 so you can use features such a Smart Crop or dynamic renditions. Or, you can publish assets exclusively in AEM for previewing; those same assets are not published in DMS7 for delivery in the public domain. -->
 
-   * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till den säkra servern för förhandsgranskning av återgivningar. Det innebär att när renderingar har skapats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM-instansen).
-Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe Systems att du låter den här inställningen vara som den är angiven.
+    * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till den säkra servern för förhandsvisning av återgivningar. Det innebär att när renderingar har skapats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM-instansen).
+    Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe Systems att du låter den här inställningen vara som den är angiven.
+    
+    * **[!UICONTROL Synkronisera allt innehåll]** - Markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:
+    
+    * **[!UICONTROL Synkroniseringsläget]för dynamiska media**
+    * **[!UICONTROL Aktiverat som standard]** - Konfigurationen tillämpas på alla mappar som standard om du inte markerar en mapp som är specifikt för exkludering. &lt;!— du kan sedan avmarkera de mappar som du inte vill att konfigurationen ska användas på.—>
+    * **[!UICONTROL Inaktiverat som standard]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till Dynamic Media.
+    Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du sidan Egenskaper för resursmappen. Tap the **[!UICONTROL Details]** tab, then from the **[!UICONTROL Dynamic Media sync mode]** drop-down list, choose from the following three options, then save tap **[!UICONTROL Save]**.
+    * **[!UICONTROL Ärvd]** - Inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
+    * **[!UICONTROL Aktivera för undermappar]** - Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
+    * **[!UICONTROL Inaktiverat för undermappar]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
 
-   * **[!UICONTROL Synkronisera allt innehåll]** - markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:
+>[!NOTE]
+>
+>Det finns inget stöd för versionshantering i Dynamic Media. Also, delayed activation applies only if **[!UICONTROL Publish Assets]** in the Edit Dynamic Media Configuration page is set to **[!UICONTROL Upon Activation]**, and then only until the first time the asset is activated.
+>
+>
+>När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
-   * **[!UICONTROL Synkroniseringsläge för dynamiska media]**
-      * **[!UICONTROL Aktiverat som standard]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
-      * **[!UICONTROL Inaktiverad som standard]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till dynamiska media.
-Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du sidan Egenskaper för resursmappen. Tap the **[!UICONTROL Details]** tab, then from the **[!UICONTROL Dynamic Media sync mode]** drop-down list, choose from the following three options, then save tap **[!UICONTROL Save]**.
-         * **[!UICONTROL Ärvd]** - inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
-         * **[!UICONTROL Aktivera för undermappar]** - Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
-         * **[!UICONTROL Inaktiverat för undermappar]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
-   >[!NOTE]
-   >
-   >Det finns inget stöd för versionshantering i Dynamic Media. Also, delayed activation applies only if **[!UICONTROL Publish Assets]** in the Edit Dynamic Media Configuration page is set to **[!UICONTROL Upon Activation]**, and then only until the first time the asset is activated.
-   >
-   >
-   >När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
-
-   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
+![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
 1. Tryck på **[!UICONTROL Spara]**.
 1. Om du vill förhandsgranska dynamiskt medieinnehåll på ett säkert sätt innan det publiceras måste du vitlista AEM-författarinstansen för att ansluta till Dynamic Media:
@@ -457,7 +461,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet för att Dynamic Media <!--(with `dynamicmedia_scene7` run mode)--> ska fungera smidigt:
 
 * Uppdatera de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
-* Uppdatera det fördefinierade tillfälliga Granite-arbetsflödet (bilder och andra resurser än videor) för köarbetstrådar.
+* Uppdatera de fördefinierade tillfälliga arbetsflödena för Granite (bilder och andra mediefiler) för köarbetstrådar.
 * Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern.
 
 #### Uppdaterar kön för Granska tillfälligt arbetsflöde {#updating-the-granite-transient-workflow-queue}
