@@ -2,7 +2,7 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 0dc1e8d2d9e26473f97ce2606f26e97445501136
 
 ---
 
@@ -164,15 +164,15 @@ Visar sidminiatyrbilden. Du kan:
    * **Aktivera användardelning för Facebook**
    * **Aktivera användardelning för Pinterest**
    * **Önskad XF-variation**
-      * Definiera variant av upplevelsefragment som används för att generera metadata för sidan
+      * Definiera variationen av upplevelsefragment som används för att generera metadata för sidan
 
-### Molntjänster {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* **Molntjänster**
+* **Cloud Services**
 
    * Definiera egenskaper för molntjänster. <!--Define properties for [cloud services](/help/sites-developing/extending-cloud-config.md).-->
 
-### Personalisering {#personalization}
+### Personanpassning {#personalization}
 
 * **ContextHub-konfigurationer**
 
@@ -181,8 +181,10 @@ Visar sidminiatyrbilden. Du kan:
 * **Målkonfiguration**
 
    * Välj ett [varumärke om du vill ange ett omfång för målgruppsanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
+   >[!NOTE]
+   >Det här alternativet kräver att användarkontot finns i `Target Adminstrators`gruppen.
 
-### Permissions {#permissions}
+### Behörigheter {#permissions}
 
 * **Behörigheter**
 
@@ -216,7 +218,7 @@ Visar sidminiatyrbilden. Du kan:
       * För en enstaka sida
       * För flera sidor (endast en deluppsättning av egenskaperna är tillgängliga för redigering av en masse)
 * Från sidredigeraren:
-   * Använda **sidinformation** (och sedan **Öppna egenskaper**)
+   * Med **Sidinformation** (och sedan **Öppna egenskaper**)
 
 ### Från webbplatskonsolen - en sida {#from-the-sites-console-single-page}
 
@@ -236,14 +238,14 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 
 1. Öppna sidan som du vill redigera egenskaper för.
 1. Välj ikonen **Sidinformation** för att öppna markeringsmenyn:
-1. Välj **Öppna egenskaper** så öppnas en dialogruta där du kan redigera egenskaperna, sorterade efter lämplig flik. Följande knappar finns också till höger om verktygsfältet:
+1. Välj **Öppna egenskaper** så öppnas en dialogruta där du kan redigera egenskaperna. Följande knappar finns också till höger om verktygsfältet:
    * **Avbryt**
    * **Spara och stäng**
 1. Spara ändringarna med knappen **Spara och stäng** .
 
 ### Från webbplatskonsolen - flera sidor {#from-the-sites-console-multiple-pages}
 
-På **webbplatskonsolen** kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
+På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
 
 >[!NOTE]
 >
@@ -261,7 +263,7 @@ Du kan välja flera sidor för massredigering på olika sätt, bland annat:
 * När du bläddrar i **webbplatskonsolen**
 * När du har använt **Sök** för att hitta en uppsättning sidor
 
-När du har markerat sidorna och sedan klickat på eller klickat på alternativet **** Egenskaper, visas bulkegenskaperna:
+När du har markerat sidorna och tryckt eller klickat på alternativet **Egenskaper**, visas massegenskaperna:
 
 ![Redigera sidegenskaper gruppvis](/help/sites-cloud/authoring/assets/page-properties-bulk-edit.png)
 
