@@ -2,14 +2,14 @@
 title: Innehållsleverans
 description: 'Innehållsleverans '
 translation-type: tm+mt
-source-git-commit: d1c953e1caf440f18e488f07a32bcf5bc3880f67
+source-git-commit: 91005209eaf0fe1728940c414e28e24960df9e7f
 
 ---
 
 
 # Innehållsleverans i AEM som molntjänst {#content-delivery}
 
-Leverans av publiceringstjänstinnehåll inkluderar:
+Den aktuella sidan innehåller information om publicering av tjänstinnehåll i AEM som en molntjänst. Leverans av publiceringstjänstinnehåll inkluderar:
 
 * CDN (hanteras vanligtvis av Adobe)
 * AEM Dispatcher
