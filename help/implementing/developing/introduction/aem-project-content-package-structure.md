@@ -2,7 +2,7 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: fb398147c5a2635f58250b8de886159b4ace2943
+source-git-commit: 36860ba390b1ba695188746ba9659b920191026b
 
 ---
 
@@ -43,7 +43,7 @@ I det här diagrammet visas en översikt över den rekommenderade projektstruktu
 
 Den rekommenderade programdistributionsstrukturen är följande:
 
-+ Paketet, eller innehållspaketet, innehåller all kod som ska distribueras och endast distribueras till `ui.apps` `/apps`. Vanliga delar av `ui.apps` paketet omfattar, men är inte begränsade till:
++ Paketet, eller kodpaketet, innehåller all kod som ska distribueras och endast distribueras till `ui.apps` `/apps`. Vanliga delar av `ui.apps` paketet omfattar, men är inte begränsade till:
    + OSGi-paket
       + `/apps/my-app/install`
    + OSGi-konfigurationer
@@ -69,7 +69,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
          + Grupper
          + ACL-listor (behörigheter)
             + Alla `rep:policy` sökvägar (ändringsbara eller oföränderliga)
-+ Paketet, eller kodpaketet, innehåller allt innehåll och all konfiguration. `ui.content` Vanliga delar av `ui.content` paketet omfattar, men är inte begränsade till:
++ Paketet, eller innehållspaketet, innehåller allt innehåll och all konfiguration. `ui.content` Vanliga delar av `ui.content` paketet omfattar, men är inte begränsade till:
    + Kontextmedvetna konfigurationer
       + `/conf`
    + Nödvändiga, komplexa innehållsstrukturer (t.ex. Innehållsbygge som bygger på och sträcker sig förbi innehållsstrukturer för baslinjen som definierats i Repo Init.
