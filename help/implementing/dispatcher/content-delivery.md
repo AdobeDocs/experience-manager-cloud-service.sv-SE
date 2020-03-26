@@ -2,7 +2,7 @@
 title: Innehållsleverans
 description: 'Innehållsleverans '
 translation-type: tm+mt
-source-git-commit: 91005209eaf0fe1728940c414e28e24960df9e7f
+source-git-commit: 0284a23051bf10cd0b6455492a709f1b9d2bd8c7
 
 ---
 
@@ -31,43 +31,54 @@ Avsnitten nedan innehåller mer detaljerad information om innehållsleverans, in
 
 Information om replikering från författartjänsten till publiceringstjänsten finns [här](/help/operations/replication.md).
 
->[!NOTE]
->Trafiken går igenom en webbserver med apache som har stöd för moduler som dispatchern. Avsändaren används främst som cache för att begränsa bearbetningen av publiceringsnoderna för att öka prestandan.
-
 ## CDN {#cdn}
 
-AEM erbjuder tre alternativ:
+AEM som molntjänst levereras med ett standard-CDN. Det huvudsakliga syftet är att minska fördröjningen genom att leverera tillgängligt innehåll från CDN-noderna i kanten, nära webbläsaren. Den är helt hanterad och konfigurerad för optimala prestanda för AEM-program.
 
-1. Adobe Managed CDN - AEM&#39;s out-of-the-box CDN. Detta är det rekommenderade alternativet eftersom det är väl integrerat.
-1. Customer CDN pekar på Adobe Managed CDN - kunden pekar på sitt eget CDN till AEM:s körklara CDN. Om det första alternativet inte är genomförbart är det här nästa föredragna alternativ eftersom det fortfarande utnyttjar AEM:s integrering med dess standard-CDN. Kunderna ansvarar fortfarande för att hantera sitt eget CDN.
-1. Kundhanterad CDN - Kunden har ett eget CDN och är helt ansvarig för att hantera det.
+Totalt finns det två alternativ i AEM:
 
->[!CAUTION]
->Det första alternativet rekommenderas. Adobe kan inte hållas ansvarigt för resultatet av en felkonfiguration om du väljer det andra alternativet.
+1. AEM Managed CDN - AEM&#39;s out-of-box CDN. Det är ett nära integrerat alternativ och kräver inga stora kundinvesteringar för att stödja CDN-integreringen med AEM.
+1. Kundhanterad CDN pekar på AEM Managed CDN - kunden pekar på ett eget CDN till AEM:s CDN som är färdig. Kunden måste fortfarande hantera sitt eget CDN, men investeringen i integreringen med AEM är måttlig.
 
-Det andra och tredje alternativet är tillåtet från fall till fall. Detta innebär att uppfylla vissa krav, inklusive, men inte begränsat till, kunden som har en äldre integrering med sin CDN-leverantör som är svår att ångra.
+Det första alternativet bör uppfylla de flesta krav på kundprestanda och säkerhet. Dessutom kräver det minst antal kundinvesteringar och löpande underhåll.
 
-### Adobe Managed CDN {#adobe-managed-cdn}
+Det andra alternativet kommer att tillåtas från fall till fall. Beslutet bygger på att man uppfyller vissa krav, bland annat, men inte begränsat till, den kund som har en äldre integrering med sin CDN-leverantör som är svår att överge.
+
+Nedan finns en beslutsmatris som jämför de två alternativen. Mer detaljerad information finns i följande avsnitt.
+
+| Information | AEM Managed CDN | Kundhanterad CDN pekar på AEM CDN |
+|---|---|---|
+| **Kundansträngning** | Inget, det är helt integrerat. Du behöver bara peka CNAME mot AEM Managed CDN. | Måttlig kundinvestering. Kunden måste hantera sitt eget CDN. |
+| **Krav** | Inget | Befintligt CDN som är betungande att ersätta. Måste visa ett lyckat lastprov innan live. |
+| **CDN-expertis** | Inget | Kräver minst en deltidskonstruktionsresurs med detaljerad CDN-kunskap som kan konfigurera kundens CDN. |
+| **Dokumentskydd** | Hanteras av Adobe. | Hanteras av Adobe (och eventuellt av kunden i deras eget CDN). |
+| **Prestanda** | Optimerat av Adobe. | Kommer att dra nytta av vissa AEM CDN-funktioner, men eventuellt en liten prestandaförsämring på grund av det extra hoppet. **Obs**: Hoppar från kundens CDN till Fast CDN (troligen är effektivt). |
+| **Cachelagring** | Stöder cachehuvuden som används på dispatchernivå. | Stöder cachehuvuden som används på dispatchernivå. |
+| **Komprimeringsfunktioner för bilder och video** | Kan fungera med Adobe Dynamic Media. | Kan användas med Adobe Dynamic Media eller en CDN-lösning för bild/video som hanteras av kunden. |
+
+### AEM Managed CDN {#aem-managed-cdn}
 
 Det är enkelt att förbereda sig för innehållsleverans med hjälp av Adobes färdiga CDN enligt beskrivningen nedan:
 
 1. Du skickar det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller den här informationen. Samordna med kundsupport för den här uppgiften.
-Obs! Aem as a Cloud Service does not support Domain Validated (DV) certificates.
+   **Obs!** Aem as a Cloud Service does not support Domain Validated (DV) certificates.
 1. Kundsupport koordinerar sedan med dig tidpunkten för en CNAME DNS-post och pekar på deras FQDN till `adobe-aem.map.fastly.net`.
 1. Du meddelas när SSL-certifikaten upphör att gälla så att du kan skicka om de nya SSL-certifikaten.
 
+**Begränsa trafik**
+
 Som standard kan all offentlig trafik för en Adobe-hanterad CDN-installation gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utvecklingsmiljöer och scenmiljöer). Om du vill begränsa trafiken till publiceringstjänsten för en viss miljö (t.ex. begränsa mellanlagring med ett intervall av IP-adresser) bör du tillsammans med kundsupporten arbeta med att konfigurera dessa begränsningar.
 
-### Customer CDN points to Adobe Managed CDN {#point-to-point-CDN}
+### Kund-CDN pekar på AEM Managed CDN {#point-to-point-CDN}
 
 Stöds om du vill använda ditt befintliga CDN, men inte kan uppfylla kraven från ett kundhanterat CDN. I så fall hanterar du ditt eget CDN, men pekar på Adobes hanterade CDN.
 
-Tänk på att du måste:
+Tänk på följande:
 
 1. Du måste ha ett befintligt CDN.
-1. Du kommer att klara det.
+1. Du måste hantera det.
 1. Du måste kunna konfigurera CDN så att det fungerar med AEM som en molntjänst - se konfigurationsinstruktionerna nedan.
-1. Du har tekniska CDN-experter som är i kontakt om problem uppstår.
+1. Du måste ha tekniska CDN-experter som är i bruk om det skulle uppstå problem.
 1. Du måste utföra och godkänna ett lasttest innan du går till produktion.
 
 Konfigurationsinstruktioner:
@@ -77,28 +88,6 @@ Konfigurationsinstruktioner:
 1. Skicka SNI-huvudet till origo. Precis som med värdhuvudet måste sni-huvudet vara den ursprungliga domänen.
 1. Ange `X-Edge-Key`, vilket krävs för att dirigera trafik korrekt till AEM-servrarna. Värdet ska komma från Adobe.
 
-### Kundhanterad CDN {#customer-managed-cdn}
-
-Stöds om du behöver använda ditt befintliga CDN.  I så fall hanterar du ditt eget CDN och pekar det mot AEM.
-
-Du får hantera ditt eget CDN, förutsatt att:
-
-1. Du har ett befintligt CDN.
-1. Det måste vara ett CDN som stöds. För närvarande stöds Akamai. Om din organisation vill hantera ett CDN som inte stöds kontaktar du kundsupporten.
-1. Du kommer att klara det.
-1. Du måste kunna konfigurera CDN så att det fungerar med AEM som en molntjänst - se konfigurationsinstruktionerna nedan.
-1. Du har tekniska CDN-experter som är i kontakt om problem uppstår.
-1. Du måste tillhandahålla vitlistor med CDN-noder till Cloud Manager, enligt konfigurationsinstruktionerna.
-1. Du måste utföra och godkänna ett lasttest innan du går till produktion.
-
-Konfigurationsinstruktioner:
-
-1. Ge CDN-leverantören vitlista till Adobe genom att anropa miljöns create/update API med en lista över CIDR:er som vitlistas.
-1. Ange domännamnet som `X-Forwarded-Host` huvud.
-1. Ange värdhuvudet med ursprungsdomänen, som är AEM som en molntjänst som ingress. Värdet ska komma från Adobe.
-1. Skicka SNI-huvudet till origo. SNI-huvudet måste vara ursprungsdomänen.
-1. Ange `X-Edge-Key` vilket som behövs för att dirigera trafik korrekt till AEM-servrarna. Värdet ska komma från Adobe.
-
 Innan du godkänner direkttrafik bör du med Adobes kundsupport validera att hela trafikflödet fungerar korrekt.
 
 ### Cachelagring {#caching}
@@ -107,7 +96,7 @@ Cachelagringsprocessen följer reglerna som presenteras nedan.
 
 ### HTML/text {#html-text}
 
-* som standard, cachelagras av webbläsaren i 5 minuter, baserat på det cachekontrollhuvud som skickas av cache-lagret. CDN respekterar också detta värde.
+* som standard, cachelagras av webbläsaren i fem minuter, baserat på det cachekontrollhuvud som skickas av apache-lagret. CDN respekterar också detta värde.
 * kan åsidosättas för allt HTML-/textinnehåll genom att definiera variabeln i `EXPIRATION_TIME` `global.vars` med hjälp av AEM som ett SDK Dispatcher-verktyg för molntjänster.
 
 Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande regel:
@@ -181,21 +170,20 @@ Före AEM som molntjänst fanns det två sätt att ogiltigförklara dispatcherca
 1. Anropa replikeringsagenten och ange agenten för rensning av publiceringsutgivaren
 2. Anropa `invalidate.cache` API:t direkt (till exempel `POST /dispatcher/invalidate.cache`)
 
-Det finns inte längre stöd för `invalidate.cache` metoden eftersom den bara riktar sig till en viss dispatchernod.
-AEM som en molntjänst arbetar på tjänstenivå, inte på nodnivå. Instruktionerna för ogiltigförklaring på sidan [Invalidera cachelagrade sidor från AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html) är därför inte giltiga för AEM som en molntjänst.
+Avsändarens `invalidate.cache` API-metod stöds inte längre eftersom den bara adresserar en viss dispatchernod. AEM som en molntjänst arbetar på tjänstenivå, inte på nodnivå. Instruktionerna för ogiltigförklaring på sidan [Invalidera cachelagrade sidor från AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html) är därför inte längre giltiga för AEM som en molntjänst.
 Istället bör agenten för tömning av replikering användas. Detta kan du göra med hjälp av replikerings-API:t. Dokumentationen för replikerings-API finns [här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/Replicator.html) . Ett exempel på hur du tömmer cachen finns på exempelsidan [för](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) API. Exemplet `CustomStep` innehållerexempel på hur du skickar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter. Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
 
 Bilden nedan visar detta.
 
 ![](assets/cdnc.png "CDNCDN")
 
-Om det finns oro för att dispatchercachen inte rensas kontaktar du kundsupport som kan tömma dispatchercachen om det behövs.
+Om det finns oro för att dispatchercachen inte rensas kontaktar du [kundsupport](https://helpx.adobe.com/support.ec.html) som kan tömma dispatchercachen om det behövs.
 
-CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas. Om du misstänker ett problem kan du kontakta kundsupport som kan tömma ett Adobe-hanterat CDN-cache vid behov.
+CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas. Om du misstänker ett problem [kontaktar du kundsupporten](https://helpx.adobe.com/support.ec.html) som kan tömma ett Adobe-hanterat CDN-cacheminne efter behov.
 
 ## Bibliotek på klientsidan och versionskonsekvens {#content-consistency}
 
-Sidorna består förstås av HTML, Javascript, CSS och bilder. Kunder uppmuntras att använda ramverket för klientbibliotek (clientlibs) för att importera JavaScript- och CSS-resurser till HTML-sidor, med hänsyn tagen till beroenden mellan JS-bibliotek.
+Sidorna består av HTML, JavaScript, CSS och bilder. Kunder uppmuntras att använda ramverket för klientbibliotek (clientlibs) för att importera JavaScript- och CSS-resurser till HTML-sidor, med hänsyn tagen till beroenden mellan JS-bibliotek.
 
 Med clientlibs Framework får du automatisk versionshantering, vilket innebär att utvecklare kan checka in ändringar i JS-bibliotek i källkontrollen och att den senaste versionen blir tillgänglig när en kund publicerar sin version. Utan detta skulle utvecklare behöva ändra HTML manuellt med referenser till den nya versionen av biblioteket, vilket är särskilt betungande om många HTML-mallar delar samma bibliotek.
 
