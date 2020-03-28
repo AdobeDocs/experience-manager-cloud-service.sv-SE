@@ -1,13 +1,13 @@
 ---
-title: AEM som molntjänst-SDK
+title: AEM as a Cloud Service SDK
 description: 'Fylls i '
 translation-type: tm+mt
-source-git-commit: a7dc007230632bf8343004794b2bc4c5baaf4e05
+source-git-commit: 2142bce6296e671fd1039dec8b0686c609611d98
 
 ---
 
 
-# AEM som molntjänst-SDK {#aem-as-a-cloud-service-sdk}
+# The AEM as a Cloud Service SDK {#aem-as-a-cloud-service-sdk}
 
 AEM som en molntjänst-SDK består av följande artefakter:
 
@@ -24,7 +24,7 @@ Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller ti
 ## Åtkomst till AEM som en molntjänst-SDK {#accessing-the-aem-as-a-cloud-service-sdk}
 
 * Du kan kontrollera ikonen **Om Adobe Experience Manager** på AEM Admin Console för att ta reda på vilken version av AEM du använder i produktionen.
-* Snabbstartsverktyget och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution Portal](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som molntjänster.
+* Snabbstartsverktyget och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som molntjänster.
 * Java API Jar och Javadoc Jar kan laddas ned via maven-verktygen, antingen kommandoraden eller med den IDE du föredrar.
 * Maven project poms ska referera till följande API Jar-paket. Det här beroendet ska också refereras i alla delpaketets omgångar.
 
@@ -75,7 +75,7 @@ Nedan beskrivs den rekommenderade proceduren för uppdatering av en lokal miljö
 1. Skapa en helt ny mapp och placera den nya QuickStart Jar i
 1. Starta den nya snabbstarten med de körningslägen du vill ha (antingen genom att byta namn på filen eller genom att skicka i körningslägen via `-r`).
    * Kontrollera att det inte finns någon kvar av den gamla snabbstarten i mappen.
-1. Bygg din AEM-applikation
+1. Bygg ditt AEM-program
 1. Distribuera ditt AEM-program till lokala AEM via PackageManager
 1. Installera alla ändringsbara innehållspaket som behövs för lokal miljötestning via PackageManager
 1. Fortsätt med utvecklingen och distribuera ändringarna efter behov
