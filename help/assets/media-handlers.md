@@ -3,7 +3,7 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om olika mediehanterare och hur du använder dem i arbetsflöden för att utföra åtgärder på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
+source-git-commit: 068195919c4bf73c41b1156eadb47544e4c41e65
 
 ---
 
@@ -18,7 +18,7 @@ Mediehanterare är tjänster i AEM Resurser som utför specifika åtgärder på 
 
 >[!NOTE]
 >
->På sidan Format [som stöds av](file-format-support.md) Assets finns en beskrivning av alla format som stöds av AEM Assets samt funktioner som stöds för varje format.
+>I artikeln [Filformat](file-format-support.md) som stöds av Assets finns en beskrivning av alla format som stöds av AEM Assets samt de funktioner som stöds för varje format.
 
 ## Standardmediehanterare {#default-media-handlers}
 
@@ -116,7 +116,7 @@ AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa 
 
 Befintliga arbetsflöden kan utökas och nya kan skapas för att bearbeta resurser enligt specifika krav.
 
-I följande exempel visas hur du förbättrar arbetsflödet för synkronisering **[!UICONTROL av]** AEM-resurser så att delresurser genereras för alla resurser utom PDF-dokument.
+The following example shows how to enhance the **[!UICONTROL AEM Assets Synchronization]** workflow so that sub-assets are generated for all assets except PDF documents.
 
 ### Inaktivera/aktivera en mediehanterare {#disabling-enabling-a-media-handler}
 
@@ -153,8 +153,8 @@ Gränssnittet och klasserna omfattar:
 
 * `com.day.cq.dam.api.handler.AssetHandler` gränssnitt: Det här gränssnittet beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en ny MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
 * `com.day.cq.dam.core.AbstractAssetHandler` klass: Den här klassen fungerar som bas för alla andra tillgångshanterarimplementeringar och tillhandahåller vanliga funktioner.
-* `com.day.cq.dam.core.AbstractSubAssetHandler` klass:
-   *  Den här klassen fungerar som bas för alla andra implementeringar av tillgångshanterare och tillhandahåller vanliga funktioner plus vanliga funktioner för subresursextrahering.
+* Klassen `com.day.cq.dam.core.AbstractSubAssetHandler`:
+   * Den här klassen fungerar som bas för alla andra implementeringar av resurshanterare och tillhandahåller vanliga funktioner för extrahering av delresurser.
    * Det bästa sättet att starta en implementering är att ärva från en tillhandahållen abstrakt implementering som tar hand om de flesta saker och tillhandahåller ett rimligt standardbeteende: klassen com.day.cq.dam.core.AbstractAssetHandler.
    * Den här klassen tillhandahåller redan en abstrakt tjänstbeskrivning. Om du ärver från den här klassen och använder maven-sling-plugin-programmet måste du ange att ärvningsflaggan ska vara true.
 
@@ -407,7 +407,7 @@ För att göra detta använder du ImageMagick. ImageMagick är en kostnadsfri pr
 
 Installera först ImageMagick på disken som är värd för AEM-servern:
 
-1. Installera ImageMagick: finns i dokumentationen [till](https://www.imagemagick.org/script/download.php)ImageMagick.
+1. Installera ImageMagick: Se [dokumentationen](https://www.imagemagick.org/script/download.php)för ImageMagick.
 1. Konfigurera verktyget så att du kan köra konverteringen på kommandoraden.
 1. Om du vill se om verktyget är korrekt installerat kör du följande kommando `convert -h` på kommandoraden.
 
@@ -421,7 +421,7 @@ Installera först ImageMagick på disken som är värd för AEM-servern:
 
    En speglad bild läggs till i katalogen.
 
-Lägg sedan till kommandoradsprocessteget i arbetsflödet för **[!UICONTROL DAM-uppdatering av resurser]** :
+Then, add the command line process step to the **[!UICONTROL DAM Update Asset]** workflow:
 
 1. Gå till **[!UICONTROL arbetsflödeskonsolen]** .
 1. Redigera **[!UICONTROL DAM Update Asset]** -modellen på fliken **[!UICONTROL Modeller]** .
