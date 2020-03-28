@@ -3,12 +3,12 @@ title: 'Resurser-API:er för hantering av digitala resurser i Adobe Experience M
 description: Resurs-API:er gör det möjligt att använda grundläggande CRUD-åtgärder (create-read-update-delete) för att hantera resurser, inklusive binära, metadata, återgivningar, kommentarer och innehållsfragment.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: ab79c3dabb658e242df08ed065ce99499c9b7357
 
 ---
 
 
-# Resurser som API:er för molntjänster {#assets-cloud-service-apis}
+# Assets as a Cloud Service APIs {#assets-cloud-service-apis}
 
 <!-- 
 Give a list of and overview of all reference information available.
@@ -90,7 +90,7 @@ Om det lyckas kommer begäran att besvaras med en 201-statuskod och en brödtext
 
 Utdata från initiering av en överföring inkluderar ett eller flera överförda URI-värden. Om mer än en URI anges är det klientens ansvar att dela upp binärfilen i delar och POST för varje del, i ordning, till varje URI. Alla URI:er måste användas, och varje del måste vara större än den minsta storleken och mindre än den största storlek som anges i initieringssvaret. Dessa förfrågningar kommer att hanteras av CDN-kantnoder för att påskynda överföringen av binärfiler.
 
-Ett möjligt sätt att uppnå detta är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. Exempel om den totala storleken för binärfilen är 20 000 byte och antalet överförda URI:er är 2:
+Ett möjligt sätt att uppnå detta är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. Exempel: Om den totala storleken för binärfilen är 20 000 byte och antalet överförda URI:er är 2:
 
 * Beräkna delstorlek genom att dividera den totala storleken med antalet URI:er: 20 000 / 2 = 10 000
 * POST-byteintervallet 0-9 999 för binärfilen till den första URI:n i listan över överförda URI:er
@@ -105,9 +105,9 @@ När alla delar av en binär fil har överförts är det sista steget att skicka
 * `(string) fileName`: Krävs. Namnet på resursen, enligt initieringsdata.
 * `(string) mimeType`: Krävs. HTTP-innehållstypen för binärfilen, som angavs i initieringsdata.
 * `(string) uploadToken`: Krävs. Överför token för binärfilen enligt initieringsdata.
-* `(bool) createVersion`: valfritt. Om värdet är true och det redan finns en resurs med det angivna namnet skapas en ny version av resursen.
-* `(string) versionLabel`: valfritt. Om en ny version skapas är det den etikett som är kopplad till versionen.
-* `(string) versionComment`: valfritt. Om en ny version skapas, kommer kommentarer som är kopplade till versionen att skapas.
+* `(bool) createVersion`: Valfritt. Om värdet är true och det redan finns en resurs med det angivna namnet skapas en ny version av resursen.
+* `(string) versionLabel`: Valfritt. Om en ny version skapas är det den etikett som är kopplad till versionen.
+* `(string) versionComment`: Valfritt. Om en ny version skapas, kommer kommentarer som är kopplade till versionen att skapas.
 * `(bool) replace`: Valfritt: Om värdet är true och det redan finns en resurs med det angivna namnet, kommer instansen att ta bort resursen och sedan återskapa den.
 
 >!![NOTE]
@@ -129,7 +129,7 @@ Adobe tillhandahåller bibliotek och verktyg med öppen källkod som en startpun
 
 ### Inaktuella API:er för överföring av resurser {#deprecated-asset-upload-api}
 
-<!-- #ENGCHECK please review / update the list of deprecated APIs below -->
+<!-- #ENGCHECK review / update the list of deprecated APIs below -->
 
 >[!NOTE]
 För Experience Manager som molntjänst stöds endast de nya överförings-API:erna. API:er från Experience Manager 6.5 är föråldrade.
