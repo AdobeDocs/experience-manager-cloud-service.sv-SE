@@ -2,7 +2,7 @@
 title: Lägg till digitala resurser i Adobe Experience Manager
 description: Lägg till dina digitala resurser i Adobe Experience Manager som en molntjänst
 translation-type: tm+mt
-source-git-commit: 776b089a322cc4f86fdcb9ddf1c3cc207fc85d39
+source-git-commit: 068195919c4bf73c41b1156eadb47544e4c41e65
 
 ---
 
@@ -64,7 +64,7 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
    The ability to resume uploading is especially helpful in low-bandwidth scenarios and network glitches, where it takes a long time to upload a large asset. You can pause the upload operation and continue later when the situation improves. When you resume, uploading starts from the point where you paused it.
 -->
 
-<!-- #ENGCHECK assuming this is not relevant? please remove after confirming#
+<!-- #ENGCHECK assuming this is not relevant? remove after confirming#
    During the upload operation, AEM saves the portions of the asset being uploaded as chunks of data in the CRX repository. When the upload completes, AEM consolidates these chunks into a single block of data in the repository.
 
    To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
@@ -77,7 +77,7 @@ Dessutom visas den senaste resursen som du överför eller den mapp som du skapa
 
 > [!NOTE]
 >
-> Om du behöver överföra kapslade mapphierarkier till AEM, se [Massöverföring av resurser](#bulk-upload)
+> Mer information om hur du överför kapslade mapphierarkier till AEM finns i [Massöverföring av resurser](#bulk-upload).
 
 <!-- #ENGCHECK I'm assuming this is no longer relevant.... If yes, this should be removed#
 
