@@ -3,7 +3,7 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 45810a3bc5bb333b03d63d56e170388f0a1c082e
+source-git-commit: 68b2214a4c8941365120bdef670e89b4c9058966
 
 ---
 
@@ -11,7 +11,6 @@ source-git-commit: 45810a3bc5bb333b03d63d56e170388f0a1c082e
 # Komma igång med mikrotjänster för material {#get-started-using-asset-microservices}
 
 <!--
-
 * Current capabilities of asset microservices offered. If workers have names then list the names and give a one-liner description. (The feature-set is limited for now and continues to grow. So will this article continue to be updated.)
 * How to access the microservices. UI. API. Is extending possible right now?
 * Detailed list of what file formats and what processing is supported by which workflows/workers process.
@@ -19,14 +18,13 @@ source-git-commit: 45810a3bc5bb333b03d63d56e170388f0a1c082e
 * How to create new config or request for new provisioning/purchase.
 
 * [DO NOT COVER?] Exceptions or limitations or link back to lack of parity with AEM 6.5.
-
 -->
 
-Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster, som hanteras av Adobe för optimal hantering av olika resurstyper och bearbetningsalternativ.
+Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar tjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ.
 
-Resursbearbetningen utförs baserat på konfigurationen i **[!UICONTROL Bearbetningsprofiler]**, som tillhandahåller en standardinställning, och som gör att administratören kan lägga till mer specifik konfiguration för bearbetning av resurser. För att möjliggöra utbyggbarhet och fullständig anpassning kan en valfri konfiguration av efterbehandlingsarbetsflöden användas, som sedan skapas och underhålls av administratören.
+Resursbearbetningen beror på konfigurationen i **[!UICONTROL Bearbeta profiler]**, som tillhandahåller en standardinställning, och gör det möjligt för en administratör att lägga till en mer specifik konfiguration för resursbearbetning. Administratörer kan skapa och underhålla konfigurationer för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflöden kan du utöka och göra fullständiga anpassningar.
 
-Ett arbetsflöde på hög nivå för bearbetning av resurser i Experience Manager som en molntjänst presenteras nedan.
+Ett högnivåflöde för bearbetning av tillgångar är under.
 
 <!-- Proposed DRAFT diagram for asset microservices flow - see section "asset-microservices-flow.png (asset-microservices-configure-and-use.md)" in the PPTX deck
 
@@ -37,7 +35,7 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 
 >[!NOTE]
 >
-> För kunder som uppdaterar från tidigare versioner av Experience Manager ersätter resursbearbetningen som beskrivs i det här avsnittet arbetsflödesmodellen&quot;DAM Update Asset&quot; som används för tillgångsbearbetning tidigare. De flesta standardstegen för generering av återgivning och metadatarelaterade steg ersätts av bearbetningen av resursmikrotjänsterna, och eventuella återstående steg kan ersättas av arbetsflödeskonfigurationen för efterbearbetning.
+> Resursbearbetningen som beskrivs här ersätter arbetsflödesmodellen som finns i tidigare versioner av Experience Manager. `DAM Update Asset` De flesta standardstegen för generering av återgivning och metadatarelaterade steg ersätts av bearbetningen av resursmikrotjänsterna, och eventuella återstående steg kan ersättas av arbetsflödeskonfigurationen för efterbearbetning.
 
 ## Kom igång med resurshantering {#get-started}
 
@@ -77,17 +75,18 @@ Ytterligare bearbetningsprofiler kan läggas till med åtgärden **[!UICONTROL S
 
 Varje bearbetningsprofilskonfiguration innehåller en lista med återgivningar. För varje återgivning kan du ange följande:
 
-* renderingsnamn
-* återgivningsformat (JPEG, PNG eller GIF stöds)
-* återgivningens bredd och höjd i pixlar (om inget anges antas den fullständiga pixelstorleken för originalet)
-* återgivningskvalitet (för JPEG) i procent
-* MIME-typer som ingår och utesluts definierar vilka tillgångstyper som bearbetningsprofilen gäller för
+* Återgivningsnamn.
+* Återgivningsformat som stöds, till exempel JPEG, PNG eller GIF.
+* Återgivningens bredd och höjd i pixlar. Om den inte anges används den fullständiga pixelstorleken för den ursprungliga bilden.
+* Återgivningskvalitet för JPEG i procent.
+* Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
 
 ![processing-profiles-adding](assets/processing-profiles-adding.png)
 
-När en ny bearbetningsprofil sparas läggs den till i listan med konfigurerade bearbetningsprofiler. Dessa bearbetningsprofiler kan sedan användas på mappar i mapphierarkin för att göra dem effektiva vid överföringar av resurser och resurser som görs där.
+När du skapar och sparar en ny bearbetningsprofil läggs den till i listan med konfigurerade bearbetningsprofiler. Du kan använda de här bearbetningsprofilerna på mappar i mapphierarkin för att göra dem effektiva vid överföring av resurser och bearbetning av resurser.
 
-![processing-profiles-list](assets/processing-profiles-list.png)
+<!-- Removed per cqdoc-15624 request by engineering.
+ ![processing-profiles-list](assets/processing-profiles-list.png) -->
 
 #### Återgivningens bredd och höjd {#rendition-width-height}
 
