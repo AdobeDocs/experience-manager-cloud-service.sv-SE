@@ -3,12 +3,12 @@ title: Filformat och MIME-typer som stöds av Experience Manager Assets som en m
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som en molntjänst.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9a7d2cff969a7920eb4fa3597846c11aa16392d9
+source-git-commit: 68b2214a4c8941365120bdef670e89b4c9058966
 
 ---
 
 
-# Resurser som stöds i filformat {#supported-file-formats}
+# Assets supported file formats {#supported-file-formats}
 
 Adobe Experience Manager som molntjänst har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. Adobe Experience Manager Assets har stöd för ett stort antal filformat och varje produktfunktion har ett varierat stöd för olika format.
 
@@ -30,7 +30,7 @@ Högdagrarna är följande:
 * Viktiga [bildfilformat](#image-formats).
 * [Camera Raw-filformat](#camera-raw-formats) för en mängd olika kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
 * Vanliga [dokumentformat](#document-formats), inklusive [Microsoft Office](#microsoft-office-formats) (Word, Excel, PowerPoint) och [Open Document](#opendocument-formats) -format.
-* Ett stort antal [video](#video-formats) - och [ljudformat](#audio-formats) .
+* Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
 
 Kolumnerna i följande tabeller innehåller följande information:
 
@@ -169,7 +169,7 @@ Resurser som molntjänst ger XMP-stöd för följande ljudformat: AIF, ASF, M4A,
 
 ## Dokumentformat som stöds {#doc-formats}
 
-Dokumentformat som stöds för filhanteringsfunktioner är som följer.
+Dokumentformat som stöds för filhanteringsfunktioner är följande.
 
 | Filformat | Lagring | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|
