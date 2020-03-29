@@ -3,20 +3,20 @@ title: Dela resurser, mappar och samlingar som en länk
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i Experience Manager Assets som en hyperlänk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6998ee5f3c1c1563427e8739998effe0eba867fc
+source-git-commit: 68b2214a4c8941365120bdef670e89b4c9058966
 
 ---
 
 
 # Dela och distribuera resurser som hanteras i Experience Manager {#share-assets-from-aem}
 
-Med Adobe Experience Manager Assets (AEM) kan ni dela resurser, mappar och samlingar med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Du kan använda följande metoder för att dela resurser från Experience Manager Assets som en molntjänst:
+Med Adobe Experience Manager Assets (AEM) kan ni dela resurser, mappar och samlingar med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Använd följande metoder för att dela resurser från Experience Manager Assets som en molntjänst:
 
-* Dela som länk
-* Hämta resurser
-* Dela via AEM-datorprogrammet
-* Dela via Adobe Asset Link
-* (Kommande funktioner) Dela via varumärkesportalen
+* Dela som en länk.
+* Ladda ned resurser och dela dem separat.
+* Dela via AEM-datorprogrammet.
+* Dela via Adobe Asset Link.
+* (Kommande funktioner) Dela via varumärkesportalen.
 
 ## Dela resurser som en länk {#sharelink}
 
@@ -110,11 +110,13 @@ Användare kan hämta vissa resurser och dela dem utanför Experience Manager. M
 
 Marknadsförare och andra användare kan enkelt dela godkänt material med sina kreatörer genom att
 
-* **AEM-datorprogram**: Appen fungerar i Windows och Mac. Se Översikt över [datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna läser du [Bläddra, söka och förhandsgranska resurser](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa nya resurser och dela dem med sina motsvarigheter som är AEM-användare, till exempel genom att överföra nya bilder. Se [Överföra resurser med skrivbordsappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
+* **AEM-datorprogram**: Appen fungerar i Windows och Mac. Se Översikt över [datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna läser du [Bläddra, söka och förhandsgranska resurser](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är AEM-användare, till exempel genom att överföra nya bilder. Se [Överföra resurser med skrivbordsappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
 
 * **Adobe Asset Link**: Kreatörerna kan söka efter och använda resurser direkt inifrån Adobe InDesign, Adobe Illustrator och Adobe Photoshop.
 
 ## Konfigurera materialdelning {#configure-sharing}
+
+De olika alternativen för att dela resurserna kräver specifik konfiguration och har särskilda krav.
 
 ### Konfigurera delning av resurslänkar {#asset-link-sharing}
 
@@ -162,7 +164,7 @@ Add content or link about how to configure sharing via BP, DA, AAL, etc.
 
 ### Aktivera skrivbordsåtgärder som ska användas med skrivbordsappen {#desktop-actions}
 
-I Assets-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i datorprogrammet. Dessa alternativ kallas skrivbordsåtgärder och om de inte är aktiverade, se [aktivera skrivbordsåtgärder i AEM-webbgränssnittet](https://docs.adobe.com/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2).
+I Assets-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i datorprogrammet. Dessa alternativ kallas skrivbordsåtgärder och för att aktivera dem, se [aktivera skrivbordsåtgärder i AEM-webbgränssnittet](https://docs.adobe.com/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2).
 
 ![Aktivera skrivbordsåtgärder som ska användas som genväg när du arbetar med skrivbordsappen](assets/enable_desktop_actions.png)
 
