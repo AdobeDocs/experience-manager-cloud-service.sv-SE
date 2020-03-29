@@ -2,14 +2,14 @@
 title: Lägg till digitala resurser i Adobe Experience Manager
 description: Lägg till dina digitala resurser i Adobe Experience Manager som en molntjänst
 translation-type: tm+mt
-source-git-commit: 068195919c4bf73c41b1156eadb47544e4c41e65
+source-git-commit: 68b2214a4c8941365120bdef670e89b4c9058966
 
 ---
 
 
 # Lägg till digitala resurser i Adobe Experience Manager {#add-assets-to-experience-manager}
 
-När du överför dina digitala filer till Adobe Experience Manager berikas det binära innehållet i filen med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer (inklusive bilder, PDF-filer, Raw-filer och så vidare) från din lokala mapp eller en nätverksenhet till Experience Manager Assets.
+Adobe Experience Manager berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildsfiler, från den lokala mappen eller en nätverksenhet till Experience Manager Assets.
 
 Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager-skrivbordsappen, överförings- och inmatningsskript som kunderna skulle skapa samt automatiska inmatningsintegreringar som lagts till som AEM-tillägg.
 
@@ -143,7 +143,7 @@ Förutom webbläsarens användargränssnitt har Experience Manager stöd för an
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i dialogrutan **[!UICONTROL Mappegenskaper]** .
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i dialogrutan **[!UICONTROL Mappegenskaper]** .
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
