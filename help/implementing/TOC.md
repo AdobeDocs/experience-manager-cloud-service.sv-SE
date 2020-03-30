@@ -1,7 +1,7 @@
 ---
 sub-product: Implementing for AEM as a Cloud Service
 user-guide-title: Implementing for AEM as a Cloud Service
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: a6efcbb85949e65167ebab0e2a8dae06eaeaa07f
 
 ---
