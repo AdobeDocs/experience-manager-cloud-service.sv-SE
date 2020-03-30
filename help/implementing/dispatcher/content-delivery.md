@@ -2,7 +2,7 @@
 title: Innehållsleverans
 description: 'Innehållsleverans '
 translation-type: tm+mt
-source-git-commit: 0284a23051bf10cd0b6455492a709f1b9d2bd8c7
+source-git-commit: 00912ea1085da2c50ec79ac35bd53d36fd8a9509
 
 ---
 
@@ -27,20 +27,20 @@ Dataflödet är följande:
 
 Innehållstypen HTML/text förfaller efter 300-talet (5 minuter) i dispatcher-lagret, vilket är ett tröskelvärde som både dispatcher cache och CDN respekterar. Under omdistributioner av publiceringstjänsten rensas dispatchercachen och varnas därefter innan den nya publiceringsnoden tar emot trafik.
 
-Avsnitten nedan innehåller mer detaljerad information om innehållsleverans, inklusive CDN-konfiguration och cache-lagring av dispatcher.
+Avsnitten nedan innehåller mer detaljerad information om innehållsleverans, inklusive CDN-konfiguration och cachning.
 
 Information om replikering från författartjänsten till publiceringstjänsten finns [här](/help/operations/replication.md).
 
 ## CDN {#cdn}
 
-AEM som molntjänst levereras med ett standard-CDN. Det huvudsakliga syftet är att minska fördröjningen genom att leverera tillgängligt innehåll från CDN-noderna i kanten, nära webbläsaren. Den är helt hanterad och konfigurerad för optimala prestanda för AEM-program.
+AEM som molntjänst levereras med ett inbyggt CDN. Det huvudsakliga syftet är att minska fördröjningen genom att leverera tillgängligt innehåll från CDN-noderna i kanten, nära webbläsaren. Den är helt hanterad och konfigurerad för optimala prestanda för AEM-program.
 
 Totalt finns det två alternativ i AEM:
 
 1. AEM Managed CDN - AEM&#39;s out-of-box CDN. Det är ett nära integrerat alternativ och kräver inga stora kundinvesteringar för att stödja CDN-integreringen med AEM.
 1. Kundhanterad CDN pekar på AEM Managed CDN - kunden pekar på ett eget CDN till AEM:s CDN som är färdig. Kunden måste fortfarande hantera sitt eget CDN, men investeringen i integreringen med AEM är måttlig.
 
-Det första alternativet bör uppfylla de flesta krav på kundprestanda och säkerhet. Dessutom kräver det minst antal kundinvesteringar och löpande underhåll.
+Det första alternativet bör uppfylla de flesta krav på kundprestanda och säkerhet. Dessutom kräver det minimal kundinsats.
 
 Det andra alternativet kommer att tillåtas från fall till fall. Beslutet bygger på att man uppfyller vissa krav, bland annat, men inte begränsat till, den kund som har en äldre integrering med sin CDN-leverantör som är svår att överge.
 
@@ -53,7 +53,7 @@ Nedan finns en beslutsmatris som jämför de två alternativen. Mer detaljerad i
 | **CDN-expertis** | Inget | Kräver minst en deltidskonstruktionsresurs med detaljerad CDN-kunskap som kan konfigurera kundens CDN. |
 | **Dokumentskydd** | Hanteras av Adobe. | Hanteras av Adobe (och eventuellt av kunden i deras eget CDN). |
 | **Prestanda** | Optimerat av Adobe. | Kommer att dra nytta av vissa AEM CDN-funktioner, men eventuellt en liten prestandaförsämring på grund av det extra hoppet. **Obs**: Hoppar från kundens CDN till Fast CDN (troligen är effektivt). |
-| **Cachelagring** | Stöder cachehuvuden som används på dispatchernivå. | Stöder cachehuvuden som används på dispatchernivå. |
+| **Cachelagring** | Stöder cachehuvuden som används vid dispatchern. | Stöder cachehuvuden som används vid dispatchern. |
 | **Komprimeringsfunktioner för bilder och video** | Kan fungera med Adobe Dynamic Media. | Kan användas med Adobe Dynamic Media eller en CDN-lösning för bild/video som hanteras av kunden. |
 
 ### AEM Managed CDN {#aem-managed-cdn}
@@ -62,6 +62,9 @@ Det är enkelt att förbereda sig för innehållsleverans med hjälp av Adobes f
 
 1. Du skickar det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller den här informationen. Samordna med kundsupport för den här uppgiften.
    **Obs!** Aem as a Cloud Service does not support Domain Validated (DV) certificates.
+1. Informera kundsupporten:
+   * vilken anpassad domän som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id.
+   * om vitlistning av IP-adresser behövs för att begränsa trafiken till en viss miljö.
 1. Kundsupport koordinerar sedan med dig tidpunkten för en CNAME DNS-post och pekar på deras FQDN till `adobe-aem.map.fastly.net`.
 1. Du meddelas när SSL-certifikaten upphör att gälla så att du kan skicka om de nya SSL-certifikaten.
 
@@ -90,9 +93,9 @@ Konfigurationsinstruktioner:
 
 Innan du godkänner direkttrafik bör du med Adobes kundsupport validera att hela trafikflödet fungerar korrekt.
 
-### Cachelagring {#caching}
+## Cachelagring {#caching}
 
-Cachelagringsprocessen följer reglerna som presenteras nedan.
+Cachelagring vid CDN kan konfigureras med hjälp av dispatcherregler. Observera att dispatchern också respekterar de resulterande rubrikerna för cacheförfallodatum om `enableTTL` är aktiverade i dispatcherns konfiguration, vilket innebär att det uppdaterar specifikt innehåll även utanför det innehåll som publiceras om.
 
 ### HTML/text {#html-text}
 
@@ -106,15 +109,15 @@ Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande r
 { /glob "*" /type "allow" }
 ```
 
-* kan åsidosättas på en mer detaljerad nivå av direktiv för apache mod_headers. Exempel:
+* kan åsidosättas på en mer detaljerad nivå med följande direktiv för apache mod_headers:
 
 ```
 <LocationMatch "\.(html)$">
-        Header set Cache-Control "max-age=200 s-maxage=200"
+        Header set Cache-Control "max-age=200"
 </LocationMatch>
 ```
 
-Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande regel:
+Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande regel (som finns i standardkonfigurationen):
 
 ```
 /0000
@@ -128,32 +131,41 @@ Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande r
 * genom att använda AEM:s biblioteksramverk på klientsidan, genereras JavaScript- och CSS-kod på ett sådant sätt att webbläsare kan cachelagra den i oändlighet, eftersom alla ändringar manifesteras som nya filer med en unik sökväg.  Med andra ord kommer HTML som refererar till klientbiblioteken att produceras efter behov så att kunderna kan uppleva nytt innehåll när det publiceras. Cachekontrollen är inställd på&quot;oföränderlig&quot; eller 30 dagar för äldre webbläsare som inte respekterar det oföränderliga&quot; värdet.
 * Mer information finns i avsnittet Bibliotek på [klientsidan och versionskonsekvens](#content-consistency) .
 
-### Bilder {#images}
+### Bilder och allt innehåll som är tillräckligt stort för att lagras i blobben {#images}
 
-* inte cachelagrad
-
-### Andra innehållstyper {#other-content}
-
-* ingen standardcachelagring
-* kan åsidosättas av apache `mod_headers`. Exempel:
+* som standard, inte cachelagrad
+* kan ställas in på en finare kornig nivå genom följande `mod_headers` direktiv:
 
 ```
-<LocationMatch "\.(css|js)$">
-    Header set Cache-Control "max-age=500 s-maxage=500"
+<LocationMatch "^.*.jpeg$">
+    Header set Cache-Control "max-age=222"
 </LocationMatch>
 ```
 
-*Andra metoder för att ange cache-rubriker kan också fungera
+Det är nödvändigt att se till att en fil under src/conf.dispatcher.d/cache har följande regel (som finns i standardkonfigurationen):
 
-Innan man kan ta emot direkttrafik bör man med Adobes kundsupport validera att hela trafikflödet fungerar som det ska.
+```
+/0000
+{ /glob "*" /type "allow" }
+```
+
+Kontrollera att resurser som ska hållas privata i stället för cachelagrade inte ingår i LocationMatch-direktivets filter.
+
+* Observera att andra metoder, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), inte kan åsidosätta värden.
+
+### Andra innehållsfiltyper i nodarkivet {#other-content}
+
+* ingen standardcachelagring
+* standard kan inte anges med den `EXPIRATION_TIME` variabel som används för HTML-/textfiltyper
+* cacheminnets förfallotid kan anges med samma LocationMatch-strategi som beskrivs i avsnittet html/text genom att ange lämplig regex
 
 ## Dispatcher {#disp}
 
 Trafiken går igenom en webbserver med apache som har stöd för moduler som dispatchern. Avsändaren används främst som cache för att begränsa bearbetningen av publiceringsnoderna för att öka prestandan.
 
-Innehåll av typen HTML/text anges med cacherubriker som motsvarar ett förfallodatum på 300-tal (5 minuter).
+Så som beskrivs i CDN:s cachelagringsavsnittet kan regler tillämpas på dispatcherkonfigurationen för att ändra standardinställningarna för cacheförfallotid.
 
-I resten av det här avsnittet beskrivs överväganden som rör invalidering av dispatchercache.
+I resten av det här avsnittet beskrivs överväganden som rör invalidering av dispatchercache. För de flesta kunder bör det inte vara nödvändigt att ogiltigförklara dispatchercachen, i stället förlita sig på att dispatchern uppdaterar cachen när innehållet publiceras om, och CDN respekterar förfallorubriker för cachen.
 
 ### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
 
