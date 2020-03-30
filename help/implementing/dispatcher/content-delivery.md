@@ -2,7 +2,7 @@
 title: Innehållsleverans
 description: 'Innehållsleverans '
 translation-type: tm+mt
-source-git-commit: 663d3c35f9b7f01d5036e852a5afb61a032bd964
+source-git-commit: b1666e7715e8f5715be7a88001869c1042c6c994
 
 ---
 
@@ -101,14 +101,6 @@ Cachelagring vid CDN kan konfigureras med hjälp av dispatcherregler. Observera 
 
 * som standard, cachelagras av webbläsaren i fem minuter, baserat på det cachekontrollhuvud som skickas av apache-lagret. CDN respekterar också detta värde.
 * kan åsidosättas för allt HTML-/textinnehåll genom att definiera variabeln i `EXPIRATION_TIME` `global.vars` med hjälp av AEM som ett SDK Dispatcher-verktyg för molntjänster.
-
-Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande regel:
-
-```
-/0000
-{ /glob "*" /type "allow" }
-```
-
 * kan åsidosättas på en mer detaljerad nivå med följande direktiv för apache mod_headers:
 
 ```
