@@ -2,7 +2,7 @@
 title: Innehållsleverans
 description: 'Innehållsleverans '
 translation-type: tm+mt
-source-git-commit: 00912ea1085da2c50ec79ac35bd53d36fd8a9509
+source-git-commit: 149b7dd07ff06a0053eae3c9b6c22ea612fdb4e3
 
 ---
 
@@ -221,7 +221,7 @@ Strikta versioner av klientlib är aktiverat som standard i alla AEM-miljöer so
 
 Så här aktiverar du strikt versionshantering av klientlib i den lokala SDK-versionen av Quickstart:
 
-1. Navigera till OSGi Configuration Manager <host>/system/console/configMgr
+1. Navigera till OSGi Configuration Manager `<host>/system/console/configMgr`
 1. Hitta OSGi Config för Adobe Granite HTML Library Manager:
    * Markera kryssrutan för att aktivera Strikta versionshantering
    * I fältet Långsiktig cachenyckel på klientsidan anger du värdet /.*;hash
