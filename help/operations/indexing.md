@@ -2,7 +2,7 @@
 title: Innehållssökning och indexering
 description: 'Innehållssökning och indexering '
 translation-type: tm+mt
-source-git-commit: 687d85287769a4b9f6324822efcc7662c3e6c213
+source-git-commit: 7bcd55570cb6996315046865264b39d1a4dc671a
 
 ---
 
@@ -31,7 +31,7 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 1. På en hög nivå på AEM som molntjänst kommer två uppsättningar index att finnas i och med introduktionen av [Blue-Green-distributionsmodellen](#index-management-using-blue-green-deployments) : en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
 
-Den version av indexet som används konfigureras med flaggor i indexdefinitionerna via `useIfExist` flaggan. Ett index kan bara användas i en version av programmet (till exempel endast blått eller endast grönt), eller i båda versionerna. Detaljerad dokumentation finns på [Index Management med Blue-Green Deployments](#index-management-using-blue-green-deployments).
+<!-- The version of the index that is used is configured using flags in the index definitions via the `useIfExist` flag. An index may be used in only one version of the application (for example only blue or only green), or in both versions. Detailed documentation is available at [Index Management using Blue-Green Deployments](#index-management-using-blue-green-deployments). -->
 
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
