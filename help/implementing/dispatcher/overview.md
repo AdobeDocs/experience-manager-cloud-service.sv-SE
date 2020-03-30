@@ -2,7 +2,7 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: a56198a4ca7764d146cb064dd346403c7a5a2c65
+source-git-commit: 00912ea1085da2c50ec79ac35bd53d36fd8a9509
 
 ---
 
@@ -258,13 +258,14 @@ Nedan visas felsökningstekniker för felsökning av vanliga valideringsfel som 
 
 **det går inte att hitta en undermapp`conf.dispatcher.d`i arkivet**
 
-Arkivet bör innehålla mappar `conf.d` och `conf.dispatcher.d`. Observera att du **inte** bör använda prefixet `etc/httpd` i ditt arkiv.
+Arkivet bör innehålla mapparna `conf.d` och `conf.dispatcher.d`. Observera att du **inte** bör
+använda prefixet `etc/httpd` i arkivet.
 
 **det gick inte att hitta någon servergrupp i`conf.dispatcher.d/enabled_farms`**
 
 De aktiverade grupperna ska finnas i den undermappen.
 
-**filen som ingår (..) måste ha följande namn:...**
+**filen som ingår (..) måste ha följande namn: ...**
 
 Det finns två avsnitt i servergruppskonfigurationen som **måste** innehålla en specifik fil: och `/renders` i `/allowedClients` `/cache` avsnittet. De här avsnitten måste se ut så här:
 
@@ -282,7 +283,7 @@ and:
 }
 ```
 
-**filen finns på okänd plats:...**
+**filen finns på okänd plats: ...**
 
 Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera din egen fil: `/clientheaders`, `filters`, `/rules` i `/cache` avsnitt och `/virtualhosts`. De inkluderade filerna måste ha följande namn:
 
@@ -293,9 +294,9 @@ Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera din e
 | `/rules` | `../cache/rules.any` |
 | `/virtualhosts` | `../virtualhosts/virtualhosts.any` |
 
-Du kan också inkludera **standardversionen** av de filer vars namn är föregånget av ordet `default_`, t.ex. `../filters/default_filters.any`.
+Du kan också inkludera **standardversionen** av de filerna, vars namn börjar med ordet `default_`, t.ex. `../filters/default_filters.any`.
 
-**include-sats på (..), utanför känd plats:...**
+**include-sats på (..), utanför känd plats: ...**
 
 Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda programsatsen `$include` . Följande skulle t.ex. generera detta fel:
 
@@ -305,9 +306,9 @@ Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda progra
 }
 ```
 
-**Tillåtna klienter/renderare inkluderas inte från:...**
+**Tillåtna klienter/renderare inkluderas inte från: ...**
 
-Det här felet genereras när du inte anger någon inkludering för `/renders` och `/allowedClients` i `/cache` avsnittet. **Se den** fil som ingår (..) måste ha följande namn:... för mer information.
+Det här felet genereras när du inte anger någon inkludering för `/renders` och `/allowedClients` i `/cache` avsnittet. Se den **fil som ingår (..) måste ha följande namn: ...** för mer information.
 
 **filtret får inte använda glob-mönster för att tillåta förfrågningar**
 
@@ -340,7 +341,7 @@ Det här meddelandet anger att din konfiguration har den föråldrade layouten v
 
 ## Testa Apache- och Dispatcher-konfigurationen lokalt {#testing-apache-and-dispatcher-configuration-locally}
 
-Du kan också testa konfigurationen av Apache och Dispatcher lokalt. Docker måste vara installerat lokalt och konfigurationen måste godkännas enligt den validering som beskrivs ovan.
+Du kan också testa konfigurationen av Apache och Dispatcher lokalt. Docker måste vara installerat lokalt och konfigurationen måste godkännas för den validering som beskrivs ovan.
 
 Genom att använda parametern &quot;`-d`&quot; skickar valideraren en mapp med alla konfigurationsfiler som behövs för dispatchern.
 
@@ -498,7 +499,7 @@ ta bort eller kommentera dem. Programsatserna i de här avsnitten bearbetas inte
 
 Ange katalog `conf.d/rewrites`.
 
-Ta bort alla filer med namn `base_rewrite.rules` och `xforwarded_forcessl_rewrite.rules` komma ihåg att ta bort `Include` programsatser i de virtuella värdfilerna som refererar till dem.
+Ta bort alla filer med namnet `base_rewrite.rules` och `xforwarded_forcessl_rewrite.rules` kom ihåg att ta bort `Include` programsatser i de virtuella värdfilerna som refererar till dem.
 
 Om det `conf.d/rewrites` nu finns en enda fil bör namnet ändras till `rewrite.rules` `Include` och glöm inte att anpassa de programsatser som refererar till den filen i de virtuella värdfilerna.
 
@@ -694,135 +695,3 @@ Detta startar behållaren och visar Apache på den lokala porten 8080.
 Grattis! Om valideraren inte längre rapporterar något problem och dockningsbehållaren startar utan fel eller varningar kan du flytta konfigurationen till en `dispatcher/src` underkatalog i Git-databasen.
 
 **Kunder som använder AMS Dispatcher-konfiguration version 1 bör kontakta kundsupport för att hjälpa dem att migrera från version 1 till version 2 så att instruktionerna ovan kan följas.**
-
-## Dispatcher och CDN {#dispatcher-cdn}
-
-Leverans av publiceringstjänstinnehåll inkluderar:
-
-* CDN (hanteras vanligtvis av Adobe)
-* AEM Dispatcher
-* AEM-publicering
-
-Dataflödet är följande:
-
-1. URL:en läggs till i webbläsaren
-1. Begäran gjordes till CDN som mappats i DNS till den domänen
-1. Om innehållet cachelagras fullständigt i CDN skickas det till webbläsaren av CDN
-1. Om innehållet inte är fullständigt cachelagrat anropar CDN (omvänd proxy) till dispatchern
-1. Om innehållet är fullständigt cachelagrat när avsändaren skickar det till CDN
-1. Om innehållet inte är fullständigt cachelagrat anropar avsändaren (omvänd proxy) till AEM-publiceringen
-1. Innehållet återges av webbläsaren, som också kan cachelagra det beroende på sidhuvudena
-
-Det mesta innehållet upphör att gälla efter fem minuter, vilket är ett tröskelvärde som både dispatcherns cache och CDN respekterar. Under omdistributioner av publiceringstjänsten rensas dispatchercachen och varnas därefter innan den nya publiceringsnoden tar emot trafik.
-
-Avsnitten nedan innehåller mer detaljerad information om innehållsleverans, inklusive CDN-konfiguration och cache-lagring av dispatcher.
-
-Information om replikering från författartjänsten till publiceringstjänsten finns [här](/help/operations/replication.md).
-
->[!NOTE]
->Trafiken går igenom en webbserver med apache som har stöd för moduler som dispatchern. Avsändaren används främst som cache för att begränsa bearbetningen av publiceringsnoderna för att öka prestandan.
-
-### CDN {#cdn}
-
-AEM erbjuder tre alternativ:
-
-1. Adobe Managed CDN - AEM&#39;s out-of-the-box CDN. Detta är det rekommenderade alternativet eftersom det är väl integrerat.
-1. Kundhanterad CDN - Kunden har ett eget CDN och är helt ansvarig för att hantera det.
-1. Peka på Adobe Managed CDN - kunden pekar på ett CDN till AEM&#39;s out-of-box CDN.
-
->[!CAUTION]
->Det första alternativet rekommenderas. Adobe kan inte hållas ansvarigt för resultatet av en felkonfiguration om du väljer det andra alternativet.
-
-Det andra och tredje alternativet är tillåtet från fall till fall. Detta innebär att uppfylla vissa krav, inklusive, men inte begränsat till, kunden som har en äldre integrering med sin CDN-leverantör som är svår att ångra.
-
-#### Adobe Managed CDN {#adobe-managed-cdn}
-
-Det är enkelt att förbereda sig för innehållsleverans med hjälp av Adobes färdiga CDN enligt beskrivningen nedan:
-
-1. Du skickar det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller den här informationen. Samordna med kundsupport för den här uppgiften.
-Obs! Aem as a Cloud Service does not support Domain Validated (DV) certificates.
-1. Kundsupport koordinerar sedan med dig tidpunkten för en CNAME DNS-post och pekar på deras FQDN till `adobe-aem.map.fastly.net`.
-1. Du meddelas när SSL-certifikaten upphör att gälla så att du kan skicka om de nya SSL-certifikaten.
-
-Som standard kan all offentlig trafik för en Adobe-hanterad CDN-installation gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utvecklingsmiljöer och scenmiljöer). Om du vill begränsa trafiken till publiceringstjänsten för en viss miljö (t.ex. begränsa mellanlagring med ett intervall av IP-adresser) bör du tillsammans med kundsupporten arbeta med att konfigurera dessa begränsningar.
-
-#### Kundhanterad CDN {#customer-managed-cdn}
-
-Du får hantera ditt eget CDN, förutsatt att:
-
-1. Du har ett befintligt CDN.
-1. Det måste vara ett CDN som stöds. För närvarande stöds Akamai. Om din organisation vill hantera ett CDN som inte stöds kontaktar du kundsupporten.
-1. Du kommer att klara det.
-1. Du måste kunna konfigurera CDN så att det fungerar med AEM som en molntjänst - se konfigurationsinstruktionerna nedan.
-1. Du har tekniska CDN-experter som är i kontakt om problem uppstår.
-1. Du måste tillhandahålla vitlistor med CDN-noder till Cloud Manager, enligt konfigurationsinstruktionerna.
-1. Du måste utföra och godkänna ett lasttest innan du går till produktion.
-
-Konfigurationsinstruktioner:
-
-1. Ge CDN-leverantören vitlista till Adobe genom att anropa miljöns create/update API med en lista över CIDR:er som vitlistas.
-1. Ange domännamnet som `X-Forwarded-Host` huvud.
-1. Ange värdhuvudet med ursprungsdomänen, som är AEM som en molntjänst som ingress. Värdet ska komma från Adobe.
-1. Skicka SNI-huvudet till origo. Sni-huvudet måste vara den ursprungliga domänen.
-1. Ange `X-Edge-Key` vilket som behövs för att dirigera trafik korrekt till AEM-servrarna. Värdet ska komma från Adobe.
-
-Innan du godkänner direkttrafik bör du med Adobes kundsupport validera att hela trafikflödet fungerar korrekt.
-
-#### Peka på Adobe Managed CDN {#point-to-point-CDN}
-
-Stöds om du vill använda ditt befintliga CDN, men inte kan uppfylla kraven från ett kundhanterat CDN. I så fall hanterar du ditt eget CDN, men pekar på Adobes hanterade CDN.
-
-Kunderna måste utföra och klara ett lasttest innan de kan börja producera.
-
-Konfigurationsinstruktioner:
-
-1. Ange domännamnet som `X-Forwarded-Host` huvud.
-1. Ange värdhuvudet med ursprungsdomänen, som är Adobes CDN:s ingress. Värdet ska komma från Adobe.
-1. Skicka SNI-huvudet till origo. Precis som med värdhuvudet måste sni-huvudet vara den ursprungliga domänen.
-1. Ange `X-Edge-Key`, vilket krävs för att dirigera trafik korrekt till AEM-servrarna. Värdet ska komma från Adobe.
-
-#### Cacheogiltigförklaring av CDN {#CDN-cache-invalidation}
-
-Cacheogiltigförklaring följer dessa regler:
-
-* Vanligtvis cachelagras HTML-innehåll i CDN i 5 minuter, baserat på det cache-kontrollhuvud som skickas av dispatchern.
-* Klientbibliotek (JavaScript och CSS) cachelagras oavbrutet med cachekontrollen inställd på antingen oföränderlig eller 30 dagar för äldre webbläsare som inte respekterar det oföränderliga värdet. Observera att klientbiblioteken hanteras på en unik sökväg som ändras om klientbiblioteken ändras. Med andra ord kommer HTML som refererar till klientbiblioteken att produceras efter behov så att du kan uppleva nytt innehåll när det publiceras.
-* Som standard cachelagras inte bilder.
-
-Innan man kan ta emot direkttrafik bör man med Adobes kundsupport validera att hela trafikflödet fungerar som det ska.
-
-## Cacheogiltigförklaring av explicit dispatcher {#explicit-invalidation}
-
-Som tidigare nämnts går trafiken igenom en webbserver med huvudfunktioner, som har stöd för moduler som innehåller dispatchern. Avsändaren används främst som cache för att begränsa bearbetningen av publiceringsnoderna för att öka prestandan.
-
-I allmänhet behöver du inte göra innehåll i dispatchern ogiltigt manuellt, men det är möjligt om det behövs, vilket beskrivs nedan.
-
-Före AEM som molntjänst fanns det två sätt att ogiltigförklara dispatchercachen.
-
-1. Anropa replikeringsagenten och ange agenten för rensning av publiceringsutgivaren
-2. Anropa `invalidate.cache` API:t direkt (t.ex. POST /dispatcher/invalidate.cache)
-
-Det finns inte längre stöd för `invalidate.cache` metoden eftersom den bara riktar sig till en viss dispatchernod.
-AEM som en molntjänst arbetar på tjänstenivå, inte på den enskilda nodnivån, och därför är inte längre invalideringsinstruktionerna i [Dispatcher Help](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html) -dokumentationen korrekta.
-Istället bör agenten för tömning av replikering användas. Detta kan göras med replikerings-API:t. Dokumentationen för replikerings-API finns [här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/Replicator.html) . Ett exempel på hur du tömmer cachen finns på exempelsidan [för](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) API. Exemplet `CustomStep` innehållerexempel på hur du skickar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter. Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
-
-Bilden nedan visar detta.
-
-![](assets/cdnb.png "CDNCDN")
-
-Om det finns oro för att dispatchercachen inte rensas kontaktar du kundsupport som kan tömma dispatchercachen om det behövs.
-
-CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas. Om du misstänker ett problem kan du kontakta kundsupport som kan tömma ett Adobe-hanterat CDN-cache vid behov.
-
-### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
-
-Precis som i tidigare versioner av AEM rensas innehållet från dispatchercachen när du publicerar eller avpublicerar sidor. Om ett problem med cachning misstänks bör kunderna publicera om sidorna i fråga.
-
-När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatchercachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilnivån](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level)).
-
-### Enhetligt innehåll och enhetlig version {#content-consistency}
-
-* Sidorna består av HTML, Javascript, CSS och bilder.
-* Du bör använda clientlibs-ramverket för att importera JavaScript- och CSS-resurser till HTML-sidor, med hänsyn tagen till beroenden mellan JS-bibliotek.
-* Automatisk versionshantering tillhandahålls, vilket innebär att utvecklare kan checka in ändringar i JS-bibliotek i källkontrollen och att den senaste versionen blir tillgänglig när en release publiceras. Utan detta skulle utvecklare behöva ändra HTML manuellt med referenser till den nya versionen av biblioteket, vilket är särskilt betungande om många HTML-mallar delar samma bibliotek.
-* När de nya versionerna av biblioteken släpps i produktion uppdateras de refererande HTML-sidorna med nya länkar till de uppdaterade biblioteksversionerna. När webbläsarens cache har gått ut för en viss HTML-sida finns det ingen oro för att de gamla biblioteken kommer att läsas in från webbläsarens cache eftersom den uppdaterade sidan (från AEM) nu garanterat refererar till de nya versionerna av biblioteken. En uppdaterad HTML-sida kommer med andra ord att innehålla alla de senaste biblioteksversionerna.
