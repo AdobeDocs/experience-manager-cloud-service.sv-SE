@@ -1,5 +1,5 @@
 ---
-source-git-commit: 1a782e115412a07e09fac1f9657433a20d9a437f
+source-git-commit: 3162a65d19d5ccba5671c40f5184ab4882f77ecb
 translation-type: tm+mt
 
 ---
@@ -17,7 +17,7 @@ För att kontinuerligt förbättra AEM-dokumentationen är hela användargruppen
 
 ## Dokumentationsstandarder
 
-Även om vi välkomnar bidrag till vår dokumentation måste alla bidrag till AEM-dokumentationen, antingen i form av en begäran om att få lämna in en ansökan eller i form av ett problem, överensstämma med våra standarder för bidrag och dokumentation.
+Även om vi välkomnar bidrag till vår dokumentation bör alla bidrag till AEM-dokumentationen, antingen i form av en begäran om att få lämna in en ansökan eller ett problem, överensstämma med våra standarder för bidrag och dokumentation.
 
 Bidrag som inte uppfyller dessa standarder kan avvisas.
 
@@ -33,23 +33,23 @@ Undantag från den här regeln gäller versionsinformationen där kända problem
 
 ### Dokumentationsbidragen är inte till för att besvara tekniska frågor.
 
-Alla idéer du kan behöva för att förbättra AEM-dokumentationen är välkomna som bidrag. Kommentarer, frågor och förfrågningar är dock endast avsedda för *bidrag* . De är inte avsedda att användas för att besvara dina frågor om hur du använder AEM eller löser tekniska problem.
+Alla idéer du kan behöva för att förbättra AEM-dokumentationen är välkomna som bidrag. Kommentarer, frågor och förfrågningar är dock endast avsedda för *bidrag* . De är inte avsedda att användas för att besvara dina frågor om hur du använder AEM, implementerar ditt AEM-projekt eller löser tekniska problem.
 
 Frågor om hur du använder AEM eller tekniska fel som du kan ha gjort ska rapporteras via den normala supportprocessen via [Experience Manager Support Portal](https://daycare.day.com/home.html) eller diskuteras i [Experience Manager-communityn](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html).
 
-***Bidragen från AEM-dokumentationen ersätter inte Adobes support*** och eventuella bidrag som söker svar på supportrelaterade frågor kommer att refuseras.
+***Bidragen från AEM-dokumentationen ersätter inte Adobes support*** och eventuella bidrag som söker svar på supportrelaterade frågor kommer att avvisas.
 
 ### Bidragen ska tydligt hänvisa till berörda dokumentationssidor.
 
-Om du skapar ett problem som kan föreslå förbättringar av dokumentationen måste du inkludera länkar till de berörda sidorna. Om du skapar ett problem genom att använda länken **Redigera den här sidan** på en dokumentationssida skapas problemet automatiskt med en länk till sidan.
+Om du skapar ett ärende för att föreslå förbättringar av dokumentationen måste du inkludera länkar till de berörda sidorna. Om du skapar ett ärende genom att använda länken **Redigera den här sidan** på en dokumentationssida skapas ärendet automatiskt med en länk till sidan.
 
-Detta gäller inte pull-begäranden eftersom pull-begäranden innehåller de berörda sidorna per definition.
+Detta gäller inte för pull-begäranden eftersom pull-begäranden till sin natur refererar till den eller de berörda sidorna.
 
 ## Riktlinjer för dokumentation
 
 Vi ber att eventuella bidrag till vår dokumentation följer vissa riktlinjer för format.
 
-Genom att följa dessa riktlinjer blir det enklare att granska ditt bidrag och det går därför snabbare att integrera det i vår dokumentation. Bristande efterlevnad eller ofullständig efterlevnad av dessa riktlinjer innebär dock inte att bidraget kommer att refuseras.
+Genom att följa dessa riktlinjer blir det enklare att granska ditt bidrag och det går därför snabbare att integrera det i vår dokumentation.
 
 ### Språk och format
 
@@ -69,7 +69,7 @@ Kom ihåg att läsare av AEM-dokumentation finns i hela världen och inte kan f�
 
 | Objekt | Format |
 |---|---|
-| Gränssnittselement eller -alternativ | **fet** |
+| Element eller alternativ i användargränssnittet | **fet** |
 | Filnamn, sökväg, användarindata, parametervärden | `monospaced` |
 | Kod, kommandorad | ```Code Block``` |
 
