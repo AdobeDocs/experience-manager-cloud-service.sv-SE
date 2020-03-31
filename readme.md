@@ -1,11 +1,11 @@
 ---
-source-git-commit: 06351c5fa81d9841f47c086cdbc66c0c1d1cb5cc
+source-git-commit: bec36b0d14dd04d801fedd5f1965aa4705bc4926
 translation-type: tm+mt
 
 ---
 # Tjänstdokumentation för Adobe Experience Manager Cloud
 
-Det här är databasen för [!UICONTROL Adobe Experience Manager] Cloud Service-dokumentationen. Den här dokumentationen beskriver installation, administration, redigeringsanvändning och hur du anpassar AEM med hjälp av molntjänsten.
+Det här är databasen för dokumentationen till Adobe Experience Manager Cloud-tjänsten. Den här dokumentationen beskriver installation, administration, redigeringsanvändning och hur du anpassar AEM med hjälp av molntjänsten.
 
 Dina bidrag till dokumentationen är välkomna. Se följande resurser:
 
