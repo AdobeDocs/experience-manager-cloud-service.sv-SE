@@ -1,68 +1,59 @@
 ---
-source-git-commit: 06351c5fa81d9841f47c086cdbc66c0c1d1cb5cc
+source-git-commit: 3162a65d19d5ccba5671c40f5184ab4882f77ecb
 translation-type: tm+mt
 
 ---
 # Bidra till tjänstdokumentation för Adobe Experience Manager Cloud
 
-Tack för att du har valt att delta i dokumentationen för [!UICONTROL Adobe Experience Manager] Cloud-tjänsten! Vi välkomnar bidrag från vår community och Adobe-anställda utanför dokumentationsteamen.
+Tack för att du har valt att delta i dokumentationen för Adobe Experience Manager Cloud-tjänsten! Vi välkomnar bidrag till innehåll från hela vår läsarcommunity och från andra Adobe-anställda.
 
 I den här filen beskrivs hur du kan bidra samt vilka riktlinjer du ska följa när du gör dina bidrag.
 
 ## Adobes uppförandekod för öppen källkod
 
-Detta projekt har antagit [Adobes uppförandekod](code-of-conduct.md)för öppen källkod. Genom att bidra till AEM-dokumentationen samtycker du till att följa denna uppförandekod. Rapportera oacceptabla beteenden till [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
+Detta projekt har antagit [Adobes uppförandekod](code-of-conduct.md)för öppen källkod. Genom att bidra till AEM-dokumentationen samtycker du till att följa denna uppförandekod. Please report unacceptable behavior to [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
-## Riktlinjer för att bidra till AEM-dokumentation
+## Riktlinjer för bidrag
 
-Även om vi välkomnar alla bidrag till att förbättra dokumentationen för AEM Cloud-tjänsten ber vi dock om att bidragen följer vissa riktlinjer och standarder. Mer information finns i [riktlinjerna för att bidra till AEM-dokumentationen](guidelines.md) .
+Vi välkomnar alla bidrag till att förbättra AEM-dokumentationen, men vi ber att bidragen ska följa vissa riktlinjer och standarder där det är möjligt. Mer information finns i [riktlinjerna för att bidra till AEM-dokumentationen](guidelines.md) .
 
 ## Använda Contribute
 
-Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
+Vi vill göra det så enkelt som möjligt att lämna in dina bidrag. Du kan bidra på två sätt:
 
-### Skapa ett problem
+* [Skapa ett problem](#create-an-issue)
+* [Skapa en pull-begäran](#create-a-pull-request)
 
-Har du ett förslag, synpunkter på aktuella dokument eller frågor om hur något beskrivs? Rapportera ett problem. Problem är också bra om du har något att bidra med, men inte känner dig bekväm med att redigera dokumenten eller göra en pull-förfrågan själv.
+Vilken metod du väljer beror på hur bekväm du själv redigerar dokumentationen i GitHub.
 
-### Mindre ändringar
+>[!NOTE]
+>
+>Bidrag som du skickar in omfattas av [Adobes användarvillkor.](https://www.adobe.com/legal/terms.html)
 
-Klicka på länken **Redigera** i en artikel som öppnar källartikeln i GitHub för att skicka mindre uppdateringar. Använd GitHub-gränssnittet för att göra uppdateringar. Mer information finns i den allmänna handboken [för](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) Adobe Docs Contributor.
+### Skapa ett problem {#create-an-issue}
 
-Mindre korrigeringar och förtydliganden som du lämnar in för dokumentation och kodexempel i den här rapporten omfattas av Adobes användarvillkor.
+Har du ett förslag, synpunkter på aktuella dokument eller frågor om hur något beskrivs? Skapa sedan ett problem. Problem är också bra om du har något att bidra med, men inte känner dig bekväm med att redigera dokumenten eller göra en pull-förfrågan själv.
 
-### Större ändringar eller nya artiklar från communitymedlemmar
+Med hjälp av olika problem kan du enkelt beskriva din idé om hur du kan förbättra dokumentet, och en AEM Docs Team-medlem kan granska den. Klicka bara på länken **Logga ett problem** längst upp i den högra navigeringspanelen på en sida för att skapa ett problem.
 
-Om du är en del av Adobe-communityn och vill skapa en artikel eller skicka större ändringar klickar du på fliken **Problem** i GitHub-databasen för att skicka ett problem. Det här inlämningen startar en konversation med dokumentationsteamet. Du måste arbeta med författaren (eller någon annan av Adobes anställda) för att publicera nytt innehåll.
+### Skapa en pull-begäran {#create-a-pull-request}
 
-Om du skickar in en pull-begäran med betydande ändringar av dokumentation och kodexempel visas ett meddelande i pull-begäran där du ombeds skicka in ett licensavtal för onlinesändning (CLA). Du måste fylla i onlineformuläret innan vi kan granska din begäran.
+Om du ser ett problem och vet exakt hur du ska åtgärda det kan du skapa en pull-begäran. Dragningsbegäranden gör att du kan göra egna ändringar i dokumentationen, som sedan granskas för att inkluderas av en AEM Docs Team-medlem. Klicka bara på länken **Redigera den här sidan** högst upp i den högra navigeringspanelen på en sida för att göra de föreslagna ändringarna och skapa en pull-begäran.
 
-### Större förändringar för Adobes anställda
+Alla pull-begäranden måste åtföljas av ett signerat [bidragsgivarlicensavtal eller CLA.](https://opensource.adobe.com/cla.html)  Detta ger Adobe tillstånd att återdistribuera dina bidrag som en del av projektet. Du behöver bara skicka in ett Adobe CLA en gång, så om du har skickat ett tidigare är du redo att gå!
 
-Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience Cloud-lösning, och det är ditt jobb att bidra till eller skapa tekniska artiklar, bör du använda den privata databasen på `https://git.corp.adobe.com/AdobeDocs`.
+### Introduktion till snabbvideo
 
-Adobe-anställda från andra delar av Adobe bör använda den offentliga rapporten för mindre uppdateringar.
+Titta på följande video för att få en snabb översikt över hur du skapar problem och skickar in förfrågningar.
 
-## Licensavtal för deltagare
+>[!VIDEO](https://video.tv.adobe.com/v/27069)
 
-Alla bidrag från tredje part till detta projekt måste åtföljas av ett undertecknat licensavtal för bidragsgivare. Detta ger Adobe tillstånd att återdistribuera dina bidrag som en del av projektet. [Underteckna vårt CLA-avtal.](https://opensource.adobe.com/cla.html) Du behöver bara skicka in ett Adobe CLA en gång, så om du har skickat ett tidigare är du redo att gå!
+### Bidrag från Adobes anställda
 
-## Verktyg och inställningar
+Om du är Adobe-anställd och vill göra en pull-förfrågan, använd den privata databasen på `https://git.corp.adobe.com/AdobeDocs`.
 
-Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
+Om du har problem kan du använda de offentliga databaserna.
 
-I [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) finns en översikt över hur du använder GitHub-redigeringsplattformen.
+## Ytterligare information
 
-## Så här använder du Markdown för att formatera ditt ämne
-
-Alla artiklar i den här databasen använder smaksatt GitHub-kod. Om du inte är van vid att markera något läser du:
-
-* [Grunderna i markeringar](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
-* [Utskrivbart markeringsdatablad](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
-
-## Etiketter
-
-I den offentliga databasen tilldelas automatiska etiketter för att hämta begäranden som hjälper oss att hantera pull-arbetsflödet och som hjälper dig att få reda på vad som pågår med din pull-begäran:
-
-* **Ändringen har skickats till författaren**: Författaren har underrättats om den väntande pull-begäran.
-* **klar för sammanslagning**: Redo för granskning av vårt team för granskning av pull-förfrågningar.
+Mer information om hur du använder GitHub-redigeringsplattformen finns i [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) .
