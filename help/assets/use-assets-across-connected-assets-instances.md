@@ -3,14 +3,14 @@ title: Använd Connected Assets när du vill dela DAM-resurser i redigeringsarbe
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager Site-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 77494565596f3d7ac04613c057f0fccc8be71eab
+source-git-commit: 0b197a318e696df5b3502de5ce634e9990ab1032
 
 ---
 
 
 # Använd Connected Assets när du vill dela DAM-resurser i AEM Sites {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. Olika skäl kan vara geografiskt spridda distributioner som måste kunna arbeta tillsammans, förvärv som leder till en heterogen infrastruktur som moderbolaget vill konsolidera eller tillväxt som leder till en sådan skala att en dedikerad instans krävs för materialhantering.
+I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. Vissa skäl kan vara geografiskt spridda befintliga driftsättningar som måste fungera tillsammans eller förvärv som leder till heterogen infrastruktur som moderbolaget vill använda tillsammans.
 
 AEM Sites erbjuder funktioner för att skapa webbsidor och AEM Assets är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatserna. AEM stöder nu ovanstående exempel genom att integrera AEM Sites och AEM Assets.
 
