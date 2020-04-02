@@ -1,9 +1,9 @@
 ---
-source-git-commit: 3162a65d19d5ccba5671c40f5184ab4882f77ecb
+source-git-commit: b5380858e0887da017657c653b05529066d95fd8
 translation-type: tm+mt
 
 ---
-# Riktlinjer för att bidra till AEM-dokumentation
+# Riktlinjer för att bidra till Adobe Experience Manager-dokumentationen
 
 ## AEM Documentation Philosophy
 
@@ -13,7 +13,7 @@ Målet med AEM-dokumentationen är att skicka dokumentation till AEM-användarna
 
 ## AEM-dokumentationsbidrag
 
-För att kontinuerligt förbättra AEM-dokumentationen är hela användargruppen välkommen att bidra till dokumentationen. Vare sig det gäller förfrågningar eller frågor kan förbättringar av dokumentationen vara korrigeringar, förtydliganden, tillägg och ytterligare exempel.
+För att kontinuerligt förbättra AEM-dokumentationen är det välkommet att alla AEM-användare bidrar till dokumentationen. Vare sig det gäller förfrågningar eller frågor kan förbättringar av dokumentationen vara korrigeringar, förtydliganden, tillägg och ytterligare exempel.
 
 ## Dokumentationsstandarder
 
@@ -35,13 +35,13 @@ Undantag från den här regeln gäller versionsinformationen där kända problem
 
 Alla idéer du kan behöva för att förbättra AEM-dokumentationen är välkomna som bidrag. Kommentarer, frågor och förfrågningar är dock endast avsedda för *bidrag* . De är inte avsedda att användas för att besvara dina frågor om hur du använder AEM, implementerar ditt AEM-projekt eller löser tekniska problem.
 
-Frågor om hur du använder AEM eller tekniska fel som du kan ha gjort ska rapporteras via den normala supportprocessen via [Experience Manager Support Portal](https://daycare.day.com/home.html) eller diskuteras i [Experience Manager-communityn](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html).
+Frågor om hur du använder AEM eller tekniska fel som du kan ha gjort ska rapporteras via den normala supportprocessen via [Experience Cloud Enterprise Support-portalen](https://helpx.adobe.com/contact/enterprise-support.ec.html) eller diskuteras i [Experience Manager-communityn](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager).
 
-***Bidragen från AEM-dokumentationen ersätter inte Adobes support*** och eventuella bidrag som söker svar på supportrelaterade frågor kommer att avvisas.
+***AEM-dokumentationsbidragen ersätter inte Adobes kundtjänst*** och eventuella bidrag som söker svar på supportrelaterade frågor kommer att refuseras.
 
 ### Bidragen ska tydligt hänvisa till berörda dokumentationssidor.
 
-Om du skapar ett ärende för att föreslå förbättringar av dokumentationen måste du inkludera länkar till de berörda sidorna. Om du skapar ett ärende genom att använda länken **Redigera den här sidan** på en dokumentationssida skapas ärendet automatiskt med en länk till sidan.
+Om du skapar ett problem som kan föreslå förbättringar av dokumentationen måste du inkludera länkar till de sidor som påverkas. Om du skapar ett ärende genom att använda länken **Redigera den här sidan** på en dokumentationssida skapas ärendet automatiskt med en länk till sidan.
 
 Detta gäller inte för pull-begäranden eftersom pull-begäranden till sin natur refererar till den eller de berörda sidorna.
 
