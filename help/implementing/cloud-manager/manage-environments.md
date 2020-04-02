@@ -2,7 +2,7 @@
 title: Hantera miljöer - molntjänst
 description: Hantera miljöer - molntjänst
 translation-type: tm+mt
-source-git-commit: 81f993325b80c0de17d6032a45ebd61c22169d39
+source-git-commit: 81c5112cd72ff3713690a49978f1b6e991d15c3b
 
 ---
 
@@ -32,17 +32,19 @@ Produktionen och scenen finns som duo och används för testning och produktion.
    | Utveckling | Ja | Ja om webbplatser ingår | Ja | Ja | Icke-produktionsflöde |
 
    >[!NOTE]
-   >
-Produktionen och scenen finns som duo och används för testning och produktion.  Användaren kan inte skapa enbart scenen eller enbart produktionsmiljön.
+   >Produktionen och scenen finns som duo och används för testning och produktion.  Användaren kan inte skapa enbart scenen eller enbart produktionsmiljön.
 
 ## Lägga till en miljö {#adding-environments}
 
 
 1. Användaren klickar på knappen **Lägg till miljö** för att lägga till en miljö.
 
+   >[!NOTE]
+   >Den här knappen kan även nås från sidan för miljöer eller från miljökortet. Som användare visas endast det här alternativet om du har nödvändig behörighet. Kontakta din Adobe-representant om du har några frågor.
+
    ![](assets/add-environment.png)
 
-1. Dialogrutan **Lägg till miljö** visas.Användaren måste skicka in information som **miljötyp** och **miljönamn** samt **miljöbeskrivning** (beroende på vad användaren har för avsikt att skapa miljön inom gränserna för vad som är tillgängligt för den specifika klientorganisationen).
+1. Dialogrutan **Lägg till miljö** visas. Användaren måste skicka in information som **miljötyp**, **miljönamn** och **miljöbeskrivning** (beroende på vad användaren har för mål med att skapa miljön inom gränserna för vad som är tillgängligt för den specifika klientorganisationen).
 
    ![](assets/add-environment2.png)
 
@@ -66,7 +68,7 @@ Uppdateringar av utvecklingsmiljöer hanteras av användarna av programmet. När
 ![](assets/manage-environments2.png)
 )
 
-När den här statusen visas är alternativet **Uppdatera** tillgängligt i listrutan, både på miljökortet och på menyn **Hantera** om du klickar på **Detaljer** på **MILJÖkortet** .
+När den här statusen visas är alternativet **Uppdatera** tillgängligt i listrutan, både på miljökortet och på menyn **Hantera** om du klickar på **Detaljer** på **MILJÖ**-kortet.
 
 ![](assets/add-environment4.png)
 
