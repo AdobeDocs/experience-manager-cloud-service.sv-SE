@@ -1,5 +1,5 @@
 ---
-source-git-commit: 3162a65d19d5ccba5671c40f5184ab4882f77ecb
+source-git-commit: 3dd012e70e467be458523ad4a2be4610743e9980
 translation-type: tm+mt
 
 ---
@@ -50,9 +50,9 @@ Titta på följande video för att få en snabb översikt över hur du skapar pr
 
 ### Bidrag från Adobes anställda
 
-Om du är Adobe-anställd och vill göra en pull-förfrågan, använd den privata databasen på `https://git.corp.adobe.com/AdobeDocs`.
+Om du är Adobe-anställd och har ett bidrag, använd `AdobeDocs` organisationen i företagsgruppen.
 
-Om du har problem kan du använda de offentliga databaserna.
+Vi är förstås glada över ditt bidrag och kommer att granska ditt bidrag om det görs i det offentliga arkivet, men förfrågningar från Adobe-anställda är enklare att behandla och kan godkännas snabbare i företagets rapport. Se till att all företagsinformation endast behandlas i företagets rapport.
 
 ## Ytterligare information
 
