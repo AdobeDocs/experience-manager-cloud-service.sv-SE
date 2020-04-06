@@ -2,7 +2,7 @@
 title: AEM as a Cloud Service SDK
 description: 'Fylls i '
 translation-type: tm+mt
-source-git-commit: 2142bce6296e671fd1039dec8b0686c609611d98
+source-git-commit: a7dc007230632bf8343004794b2bc4c5baaf4e05
 
 ---
 
@@ -24,7 +24,7 @@ Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller ti
 ## Åtkomst till AEM som en molntjänst-SDK {#accessing-the-aem-as-a-cloud-service-sdk}
 
 * Du kan kontrollera ikonen **Om Adobe Experience Manager** på AEM Admin Console för att ta reda på vilken version av AEM du använder i produktionen.
-* Snabbstartsverktyget och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som molntjänster.
+* Snabbstartsverktyget och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution Portal](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som molntjänster.
 * Java API Jar och Javadoc Jar kan laddas ned via maven-verktygen, antingen kommandoraden eller med den IDE du föredrar.
 * Maven project poms ska referera till följande API Jar-paket. Det här beroendet ska också refereras i alla delpaketets omgångar.
 
