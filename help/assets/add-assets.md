@@ -2,14 +2,14 @@
 title: Lägg till digitala resurser i Adobe Experience Manager
 description: Lägg till dina digitala resurser i Adobe Experience Manager som en molntjänst
 translation-type: tm+mt
-source-git-commit: 68b2214a4c8941365120bdef670e89b4c9058966
+source-git-commit: 776b089a322cc4f86fdcb9ddf1c3cc207fc85d39
 
 ---
 
 
 # Lägg till digitala resurser i Adobe Experience Manager {#add-assets-to-experience-manager}
 
-Adobe Experience Manager berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildsfiler, från den lokala mappen eller en nätverksenhet till Experience Manager Assets.
+När du överför dina digitala filer till Adobe Experience Manager berikas det binära innehållet i filen med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer (inklusive bilder, PDF-filer, Raw-filer och så vidare) från din lokala mapp eller en nätverksenhet till Experience Manager Assets.
 
 Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager-skrivbordsappen, överförings- och inmatningsskript som kunderna skulle skapa samt automatiska inmatningsintegreringar som lagts till som AEM-tillägg.
 
@@ -64,7 +64,7 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
    The ability to resume uploading is especially helpful in low-bandwidth scenarios and network glitches, where it takes a long time to upload a large asset. You can pause the upload operation and continue later when the situation improves. When you resume, uploading starts from the point where you paused it.
 -->
 
-<!-- #ENGCHECK assuming this is not relevant? remove after confirming#
+<!-- #ENGCHECK assuming this is not relevant? please remove after confirming#
    During the upload operation, AEM saves the portions of the asset being uploaded as chunks of data in the CRX repository. When the upload completes, AEM consolidates these chunks into a single block of data in the repository.
 
    To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
@@ -77,7 +77,7 @@ Dessutom visas den senaste resursen som du överför eller den mapp som du skapa
 
 > [!NOTE]
 >
-> Mer information om hur du överför kapslade mapphierarkier till AEM finns i [Massöverföring av resurser](#bulk-upload).
+> Om du behöver överföra kapslade mapphierarkier till AEM, se [Massöverföring av resurser](#bulk-upload)
 
 <!-- #ENGCHECK I'm assuming this is no longer relevant.... If yes, this should be removed#
 
@@ -143,7 +143,7 @@ Förutom webbläsarens användargränssnitt har Experience Manager stöd för an
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i dialogrutan **[!UICONTROL Mappegenskaper]** .
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i dialogrutan **[!UICONTROL Mappegenskaper]** .
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
