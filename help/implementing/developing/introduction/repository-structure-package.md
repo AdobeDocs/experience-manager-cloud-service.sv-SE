@@ -1,13 +1,13 @@
 ---
-title: 'Strukturpaket för AEM-projektdatabas  '
+title: 'Utveckla ett databasstrukturpaket   '
 description: Adobe Experience Manager som ett molntjänstprojekt i Maven kräver en underpaketsdefinition för databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets kodunderpaket distribueras till.
 translation-type: tm+mt
-source-git-commit: fb398147c5a2635f58250b8de886159b4ace2943
+source-git-commit: 46d556fdf28267a08e5021f613fbbea75872ef21
 
 ---
 
 
-# Strukturpaket för AEM-projektdatabas
+# Utveckla ett databasstrukturpaket
 
 Maven-projekt för Adobe Experience Manager som en molntjänst kräver en underpaketsdefinition för databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets kodunderpaket distribueras till. Detta garanterar att installationen av paket i Experience Manager som en molntjänst automatiskt beställs av JCR-resursberoenden. Saknade beroenden kan leda till scenarier där understrukturer installeras före sina överordnade strukturer och därför tas bort oväntat, vilket bryter distributionen.
 
@@ -51,9 +51,9 @@ Se till att du lägger till det nya delprojektet Maven i `<modules>` listan öve
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>ui.apps.structure</artifactId>
+    <artifactId>my-app.repository-structure</artifactId>
     <packaging>content-package</packaging>
-    <name>UI Apps Structure - Repository Structure Package for /apps</name>
+    <name>My App - Adobe Experience Manager Repository Structure Package</name>
 
     <description>
         Empty package that defines the structure of the Adobe Experience Manager repository the code packages in this project deploy into.
@@ -66,10 +66,6 @@ Se till att du lägger till det nya delprojektet Maven i `<modules>` listan öve
                 <groupId>org.apache.jackrabbit</groupId>
                 <artifactId>filevault-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
-                <properties>
-                    <!-- Set Cloud Manager Target to none, else this package will be deployed and remove all defined filter roots -->
-                    <cloudManagerTarget>none</cloudManagerTarget>
-                </properties>
                 <configuration>
                     <properties>
                         <!-- Set Cloud Manager Target to none, else this package will be deployed and remove all defined filter roots -->
@@ -80,29 +76,14 @@ Se till att du lägger till det nya delprojektet Maven i `<modules>` listan öve
                         <!-- /apps root -->
                         <filter><root>/apps</root></filter>
 
-                        <!--
-                        Examples of complex roots
-
-
-                        Overlays of /libs typically require defining the overlayed structure, at each level here.
-
-                        For example, adding a new section to the main AEM Tools navigation, necessitates the following rules:
-
+                        <!-- Common overlay roots -->
+                        <filter><root>/apps/sling</root></filter>
                         <filter><root>/apps/cq</root></filter>
-                        <filter><root>/apps/cq/core</root></filter>
-                        <filter><root>/apps/cq/core/content</root></filter>
-                        <filter><root>/apps/cq/core/content/nav/</root></filter>
-                        <filter><root>/apps/cq/core/content/nav/tools</root></filter>
+                        <filter><root>/apps/dam</root></filter>
+                        <filter><root>/apps/wcm</root></filter>
 
-
-                        Any /apps level Context-aware configurations need to enumerated here. 
-                        
-                        For example, providing email templates under `/apps/settings/notification-templates/com.day.cq.replication` necessitates the following rules:
-
+                        <!-- Immutable context-aware configurations -->
                         <filter><root>/apps/settings</root></filter>
-                        <filter><root>/apps/settings/notification-templates</root></filter>
-                        <filter><root>/apps/settings/notification-templates/com.day.cq.replication</root></filter>
-                        -->
 
                     </filters>
                 </configuration>
@@ -131,7 +112,7 @@ I `ui.apps/pom.xml`och andra kodpaket lägger du `pom.xml`till en referens till 
         <repositoryStructurePackages>
           <repositoryStructurePackage>
               <groupId>${project.groupId}</groupId>
-              <artifactId>ui.apps.structure</artifactId>
+              <artifactId>my-app.repository-structure</artifactId>
               <version>${project.version}</version>
           </repositoryStructurePackage>
         </repositoryStructurePackages>
@@ -143,7 +124,7 @@ I `ui.apps/pom.xml`och andra kodpaket lägger du `pom.xml`till en referens till 
     <!-- Add the dependency for the repository structure package so it resolves -->
     <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>ui.apps.structure</artifactId>
+        <artifactId>my-app.repository-structure</artifactId>
         <version>${project.version}</version>
         <type>zip</type>
     </dependency>
