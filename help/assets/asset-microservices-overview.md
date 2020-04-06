@@ -3,7 +3,7 @@ title: Se hur Assets microservices kan bearbeta dina digitala resurser i molnet
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 68b2214a4c8941365120bdef670e89b4c9058966
+source-git-commit: 55dd497caaa25cf7c0d8da1c1400b74f7d265d29
 
 ---
 
@@ -13,9 +13,10 @@ source-git-commit: 68b2214a4c8941365120bdef670e89b4c9058966
 <!--
 First half of content at https://git.corp.adobe.com/aklimets/project-nui/blob/master/docs/Project-Nui-Asset-Compute-Service.md is useful for this article.
 TBD: Post-GA we will provide detailed information at \help\assets\asset-microservices-configure-and-use.md. However, for GA, all information is added, in short, in this article.
+
 -->
 
-Adobe Experience Manager som en molntjänst är ett molnbaserat sätt att utnyttja Experience Manager-program och -funktioner. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster.
+Adobe Experience Manager som molntjänst är ett sätt att utnyttja Experience Manager-program och -funktioner på ett molnbaserat sätt. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster.
 
 Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster, som hanteras av Adobe för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna är:
 
@@ -50,21 +51,21 @@ De viktigaste stegen för intag och bearbetning med hjälp av tillgångsmikrotj�
 * Resultaten av bearbetningen, t.ex. renderingar, lagras i det binära molnlagringsutrymmet.
 * Experience Manager får ett meddelande om att bearbetningen är klar tillsammans med direktpekarna till de genererade binärfilerna (renderingar), som sedan är tillgängliga i Experience Manager för den överförda resursen
 
-Detta är det grundläggande flödet av tillgångsintag och bearbetning. Om Experience Manager är konfigurerat kan det även starta kundens arbetsflödesmodell för att utföra efterbearbetning av resursen, till exempel för att utföra vissa anpassade steg som är specifika för kundmiljön, som att hämta information från kundens företagssystem för att lägga till i resursegenskaper.
+Detta är det grundläggande flödet av tillgångsintag och bearbetning. Om Experience Manager är konfigurerat kan det även starta kundens arbetsflödesmodell för att utföra efterbearbetning av resursen, t.ex. för att utföra vissa anpassade steg som är specifika för kundmiljön, som att hämta information från kundens företagssystem för att lägga till i resursegenskaper.
 
-Intag och bearbetningsflöde är viktiga begrepp i resursens mikrotjänstarkitektur för Experience Manager.
+Inmatnings- och bearbetningsflödet visar några viktiga begrepp som utnyttjas av resursmikrotjänstarkitekturen för Experience Manager:
 
-* **Direkt binär åtkomst**: Resurser transporteras (och överförs) till molnbinärarkivet när de har konfigurerats för Experience Manager-miljöer, och sedan får AEM, Assets microservices och slutligen klienterna direktåtkomst för att utföra sitt arbete. Detta minimerar belastningen på nätverk och duplicering av lagrade binärfiler
-* **Extern bearbetning**: Bearbetning av resurser görs utanför AEM-miljön och sparar resurser (CPU, minne) för att tillhandahålla viktiga funktioner för hantering av digitala resurser samt stöd för interaktivt arbete med systemet för slutanvändare
+* **Direkt binär åtkomst** - resurser transporteras (och överförs) till Cloud Binary Store när de har konfigurerats för Experience Manager-miljöer, och sedan får AEM, asset microservices och slutligen klienterna direktåtkomst till dem för att utföra sitt arbete. Detta minimerar belastningen på nätverk och duplicering av lagrade binärfiler
+* **Externanpassad bearbetning** - materialbearbetning görs utanför AEM-miljön och sparar resurser (processor, minne) för att tillhandahålla viktiga funktioner för hantering av digitala resurser samt stöd för interaktivt arbete med systemet för slutanvändare
 
 ## Tillgångsuppladdning med direkt binär åtkomst {#asset-upload-with-direct-binary-access}
 
-Experience Manager-klienter, som ingår i ett produkterbjudande, har som standard stöd för överföring med direkt binär åtkomst. Dessa inkluderar överföring via webbgränssnitt, Adobe Asset Link och AEM-datorprogrammet.
+Experience Manager-klienter, som ingår i produkterbjudandet, har som standard stöd för överföring med direkt binär åtkomst. Dessa inkluderar överföring via webbgränssnitt, Adobe Asset Link och AEM-datorprogrammet.
 
 Du kan använda anpassade överföringsverktyg, som fungerar direkt med AEM HTTP API:er. Du kan använda dessa API:er direkt eller använda och utöka följande öppen källkodsprojekt som implementerar överföringsprotokollet:
 
 * [Överföringsbibliotek med öppen källkod](https://github.com/adobe/aem-upload)
-* [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem)
+* [Kommandoradsverktyget Open source](https://github.com/adobe/aio-cli-plugin-aem)
 
 Mer information finns i [Överföra resurser](add-assets.md).
 
