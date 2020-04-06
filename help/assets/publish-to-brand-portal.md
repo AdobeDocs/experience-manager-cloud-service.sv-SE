@@ -10,12 +10,12 @@ topic-tags: brand-portal
 content-type: reference
 discoiquuid: null
 translation-type: tm+mt
-source-git-commit: 7e0375b6ebdf0959dbe50ad3ae2cd0b77709b4c1
+source-git-commit: abc98974f5507c71e75cdd864a98281f7cdba7f3
 
 ---
 
 
-# Publicera AEM Assets till varumärkesportalen {#publish-aem-assets-to-brand-portal}
+# Publicera resurser, mappar och samlingar på varumärkesportalen {#publish-aem-assets-to-brand-portal}
 
 Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera resurser, mappar och samlingar till instansen AEM Assets Brand Portal. Du kan också schemalägga publiceringsarbetsflödet för en resurs eller mapp till ett senare datum eller en senare tidpunkt. Efter publiceringen kan Brand Portal-användarna komma åt och vidaredistribuera resurser, mappar och samlingar till andra användare.
 
