@@ -3,7 +3,7 @@ title: Asynkrona åtgärder
 description: AEM Assets optimerar prestanda genom att utföra vissa resurskrävande uppgifter asynkront.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6998ee5f3c1c1563427e8739998effe0eba867fc
+source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
 
 ---
 
@@ -29,7 +29,7 @@ Du kan visa status för asynkrona jobb på sidan **[!UICONTROL Async Job Status]
 
 ## Övervaka status för asynkrona åtgärder {#monitoring-the-status-of-asynchronous-operations}
 
-När AEM Resurser bearbetar en åtgärd asynkront får du ett meddelande i din inkorg <!-- and through email -->.
+När AEM Resurser bearbetar en åtgärd asynkront får du ett meddelande i inkorgen och via e-post.
 
 Om du vill visa status för asynkrona åtgärder i detalj går du till sidan **[!UICONTROL Async Job Status]** .
 
