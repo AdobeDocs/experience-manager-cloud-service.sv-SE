@@ -3,7 +3,7 @@ title: 'Resurser-API:er för hantering av digitala resurser i Adobe Experience M
 description: Resurs-API:er gör det möjligt att använda grundläggande CRUD-åtgärder (create-read-update-delete) för att hantera resurser, inklusive binära, metadata, återgivningar, kommentarer och innehållsfragment.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 68b2214a4c8941365120bdef670e89b4c9058966
+source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
 
 ---
 
@@ -55,7 +55,9 @@ Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencode
 * `(string) fileName`: Krävs. Namnet på resursen så som den kommer att visas i instansen.
 * `(number) fileSize`: Krävs. Den totala längden, i byte, på den binärfil som ska överföras.
 
-En enda begäran kan användas för att initiera överföringar för flera binärfiler, förutsatt att varje binärfil innehåller de obligatoriska fälten. Om det lyckas svarar begäran med en `201` statuskod och en brödtext som innehåller JSON-data i följande format:
+Observera att en enda begäran kan användas för att initiera överföringar för flera binärfiler, förutsatt att varje binärfil innehåller de obligatoriska fälten.
+
+Om det lyckas kommer begäran att besvaras med en 201-statuskod och en brödtext som innehåller JSON-data i följande format:
 
 ```
 {
@@ -72,17 +74,17 @@ En enda begäran kan användas för att initiera överföringar för flera binä
         }
     ]
 }
-```
+````
 
-* `completeURI` (sträng): Anropa den här URI:n när den binära filen har överförts. URI:n kan vara en absolut eller relativ URI och klienterna bör kunna hantera båda. Värdet kan alltså vara `"https://author.acme.com/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` Se [hela överföringen](#complete-upload).
-* `folderPath` (sträng): Fullständig sökväg till mappen där binärfilen överförs.
-* `(files)` (array): En lista med element vars längd och ordning matchar längden och ordningen för listan med binär information som tillhandahålls i initieringsbegäran.
-* `fileName` (sträng): Namnet på motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
-* `mimeType` (sträng): Mime-typen för motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
-* `uploadToken` (sträng): En överföringstoken för motsvarande binär fil. Detta värde bör inkluderas i den fullständiga begäran.
-* `uploadURIs` (array): En lista över strängar vars värden är fullständiga URI:er som binärens innehåll ska överföras till (se [Överför binärt](#upload-binary)).
-* `minPartSize` (tal): Den minsta längden, i byte, på data som kan anges till någon av uploadURI:erna, om det finns mer än en URI.
-* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan tillhandahållas till någon av uploadURI:erna, om det finns mer än en URI.
+* `(string) completeURI`: Den URI som ska anropas när binärfilen har överförts. Detta kan vara en absolut eller relativ URI, och klienterna bör kunna hantera båda. dvs. värdet kan vara `"https://author.acme.com/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` (se [Slutför överföring](#complete-upload)).
+* `(string) folderPath`: Fullständig sökväg till mappen där binärfilen överförs.
+* `(array) (files)`: En lista med element vars längd och ordning matchar längden och ordningen för listan med binär information som tillhandahålls i initieringsbegäran.
+* `(string) fileName`: Namnet på motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
+* `(string) mimeType`: Mime-typen för motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
+* `(string) uploadToken`: En överföringstoken för motsvarande binär fil. Detta värde bör inkluderas i den fullständiga begäran.
+* `(array) uploadURIs`: En lista över strängar vars värden är fullständiga URI:er som binärens innehåll ska överföras till (se [Överför binärt](#upload-binary)).
+* `(number) minPartSize`: Den minsta längden, i byte, på data som kan anges till någon av uploadURI:erna, om det finns mer än en URI.
+* `(number) maxPartSize`: Den maximala längden, i byte, på data som kan tillhandahållas till någon av uploadURI:erna, om det finns mer än en URI.
 
 ### Ladda upp binärt {#upload-binary}
 
@@ -127,7 +129,7 @@ Adobe tillhandahåller bibliotek och verktyg med öppen källkod som en startpun
 
 ### Inaktuella API:er för överföring av resurser {#deprecated-asset-upload-api}
 
-<!-- #ENGCHECK review / update the list of deprecated APIs below -->
+<!-- #ENGCHECK please review / update the list of deprecated APIs below -->
 
 >[!NOTE]
 För Experience Manager som molntjänst stöds endast de nya överförings-API:erna. API:er från Experience Manager 6.5 är föråldrade.
