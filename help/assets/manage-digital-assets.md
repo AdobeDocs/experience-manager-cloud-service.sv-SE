@@ -4,7 +4,7 @@ description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a5853626d61e6e7ea34514f4a5797ae47ce121bf
+source-git-commit: fb0a04fac1715d8077e1e69b1dc24bda4d3a667f
 
 ---
 
@@ -19,9 +19,7 @@ När du organiserar en samling resurser, till exempel alla `Nature` bilder, kan 
 
 >[!NOTE]
 >
->* Delning av en resursmapp av den typen `sling:OrderedFolder`stöds inte när den delas till Marketing Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordnad] när du skapar en mapp.
->* Det går inte att använda `subassets` ordet som namn på en mapp i Experience Manager. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser
-
+>Delning av en resursmapp av den typen `sling:OrderedFolder`stöds inte när den delas till Marketing Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordnad] när du skapar en mapp.
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp. Klicka på **[!UICONTROL Skapa]** på menyn. Välj **[!UICONTROL Ny mapp]**.
 1. Ange ett mappnamn i fältet **[!UICONTROL Titel]** . Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
@@ -417,15 +415,13 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
    ![chlimage_1-234](assets/chlimage_1-234.png)
 
-<!--
-1. To notify a user about an annotation, specify the email address of the user and add the comment. For example, to notify Aaron MacDonald about an annotation, enter @aa. Hints for all matching users is displayed in a list. Select Aaron's email address from the list to tag her with the comment. Similarly, you can tag more users anywhere within the annotation or before or after it.
--->
+1. Om du vill meddela en användare om en anteckning anger du användarens e-postadress och lägger till kommentaren. Om du till exempel vill meddela Aaron MacDonald om en anteckning anger du @aa. Tips för alla matchande användare visas i en lista. Välj Aaron e-postadress i listan för att tagga henne med kommentaren. På samma sätt kan du tagga fler användare var som helst i anteckningen eller före eller efter den.
 
->[!NOTE]
->
->För användare som inte är administratörer visas endast förslag om användaren har läsbehörighet i CRXDE `/home` .
+   >[!NOTE]
+   >
+   >För användare som inte är administratörer visas endast förslag om användaren har läsbehörighet på */hemma* i Crx-de.
 
-![chlimage_1-235](assets/chlimage_1-235.png)
+   ![chlimage_1-235](assets/chlimage_1-235.png)
 
 1. När du har lagt till anteckningen klickar du på **[!UICONTROL Lägg till]** för att spara den. Ett meddelande om anteckningen skickas till Aaron.
 
