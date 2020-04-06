@@ -1,13 +1,13 @@
 ---
-title: AEM-projektstruktur
-description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
+title: Förstå ett projekts innehållspaketstruktur
+description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service på rätt sätt.
 translation-type: tm+mt
-source-git-commit: 36860ba390b1ba695188746ba9659b920191026b
+source-git-commit: cedc14b0d71431988238d6cb4256936a5ceb759b
 
 ---
 
 
-# AEM-projektstruktur
+# Förstå strukturen för ett projektinnehållspaket i Adobe Experience Manager Cloud-tjänsten {#understand-cloud-service-package-structure}
 
 >[!TIP]
 >
@@ -29,7 +29,7 @@ Den paketstruktur som beskrivs i det här dokumentet är kompatibel med **både*
 
 `/apps` och `/libs` betraktas som **oföränderliga** områden i AEM, eftersom de inte kan ändras (skapa, uppdatera, ta bort) efter att AEM startats (dvs. vid körning). Alla försök att ändra ett oföränderligt område vid körning misslyckas.
 
-Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/system`, `/tmp`osv. är alla **ändringsbara** områden, vilket innebär att de kan ändras under körning.
+Allt annat i databasen, `/content`, `/conf`, `/var`, `/home`, `/etc`, `/oak:index`, `/system`, `/tmp`osv. är alla **ändringsbara** områden, vilket innebär att de kan ändras under körning.
 
 >[!WARNING]
 >
@@ -43,7 +43,7 @@ I det här diagrammet visas en översikt över den rekommenderade projektstruktu
 
 Den rekommenderade programdistributionsstrukturen är följande:
 
-+ Paketet, eller kodpaketet, innehåller all kod som ska distribueras och endast distribueras till `ui.apps` `/apps`. Vanliga delar av `ui.apps` paketet omfattar, men är inte begränsade till:
++ Paketet, eller innehållspaketet, innehåller all kod som ska distribueras och endast distribueras till `ui.apps` `/apps`. Vanliga delar av `ui.apps` paketet omfattar, men är inte begränsade till:
    + OSGi-paket
       + `/apps/my-app/install`
    + OSGi-konfigurationer
@@ -58,28 +58,23 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `/apps/settings`
    + ACL-listor (behörigheter)
       + Alla banor `rep:policy` under `/apps`
-   + Repo Init OSGi-konfigurationsdirektiv (och medföljande skript)
-      + [Repo Init](#repo-init) är det rekommenderade sättet att distribuera (muterbart) innehåll som logiskt är en del av AEM-programmet. Repo Init ska användas för att definiera:
-         + Baslinjeinnehållsstrukturer
-            + `/conf/my-app`
-            + `/content/my-app`
-            + `/content/dam/my-app`
-         + Användare
-         + Tjänstanvändare
-         + Grupper
-         + ACL-listor (behörigheter)
-            + Alla `rep:policy` sökvägar (ändringsbara eller oföränderliga)
-+ Paketet, eller innehållspaketet, innehåller allt innehåll och all konfiguration. `ui.content` Vanliga delar av `ui.content` paketet omfattar, men är inte begränsade till:
++ Paketet, eller kodpaketet, innehåller allt innehåll och all konfiguration. `ui.content` Vanliga delar av `ui.content` paketet omfattar, men är inte begränsade till:
    + Kontextmedvetna konfigurationer
       + `/conf`
-   + Nödvändiga, komplexa innehållsstrukturer (t.ex. Innehållsbygge som bygger på och sträcker sig förbi innehållsstrukturer för baslinjen som definierats i Repo Init.
+   + Baslinjeinnehållsstrukturer (resursmappar, platsens rotsidor)
       + `/content`, `/content/dam`osv.
    + Styrda taggar för taxonomier
       + `/content/cq:tags`
+   + Tjänstanvändare
+      + `/home/users`
+   + Användargrupper
+      + `/home/groups`
    + Oak indexes
-      + `/oak:index`
+      + `/oak:indexes`
    + Etc legacy nodes
       + `/etc`
+   + ACL-listor (behörigheter)
+      + Alla `rep:policy` banor som **inte** finns under `/apps`
 + Paketet `all` är ett behållarpaket som ENDAST innehåller paketen `ui.apps` och `ui.content` som inbäddade. Paketet `all` får inte ha något **eget innehåll**, utan ska delegera all driftsättning till databasen till sina underpaket.
 
    Paket ingår nu i Maven [FileVault-pluginens inbäddade konfiguration](#embeddeds), i stället för i `<subPackages>` konfigurationen.
@@ -116,35 +111,6 @@ Som standard hämtar Adobe Cloud Manager alla paket som skapas av Maven-bygget, 
 >[!TIP]
 >
 >Se avsnittet [POM XML-kodfragment](#pom-xml-snippets) nedan för ett fullständigt kodavsnitt.
-
-## Repo Init{#repo-init}
-
-Repo Init innehåller instruktioner, eller skript, som definierar JCR-strukturer, från vanliga nodstrukturer som mappträd till användare, tjänstanvändare, grupper och ACL-definition.
-
-De viktigaste fördelarna med Repo Init är att de har implicit behörighet att utföra alla åtgärder som definieras av deras skript, och att de anropas tidigt under distributionens livscykel för att säkerställa att alla nödvändiga JCR-strukturer finns när koden körs.
-
-Rep Init-skript som finns i projektet fungerar som skript, men de kan och bör användas för att definiera följande muterbara strukturer: `ui.apps`
-
-+ Baslinjeinnehållsstrukturer
-   + Examples: `/content/my-app`, `/content/dam/my-app`, `/conf/my-app/settings`
-+ Tjänstanvändare
-+ Användare
-+ Grupper
-+ ACL
-
-Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer och kan därmed implicit riktas in i runmode, vilket möjliggör skillnader mellan AEM Author och AEM Publish Services Repo Init-skript, eller till och med mellan Envs (Dev, Stage och Prod).
-
-Observera, att när du definierar Användare, och Grupper, anses bara grupper vara en del av programmet, och att de är en del av dess funktion bör definieras här. Organisationens användare och grupper bör fortfarande definieras vid körning i AEM. Om ett anpassat arbetsflöde till exempel tilldelar arbete till en namngiven grupp, bör den gruppen definieras i via Repo Init i AEM-programmet, men om grupperingen bara är organisatorisk, till exempel&quot;Wendy&#39;s Team&quot; och&quot;Sean&#39;s Team&quot;, är dessa bäst definierade och hanteras vid körning i AEM.
-
->[!TIP]
->
->Repo Init-skript *måste* definieras i det textbundna `scripts` fältet och `references` konfigurationen kommer inte att fungera.
-
-Den fullständiga ordlistan för Repo Init-skript finns i dokumentationen [till](https://sling.apache.org/documentation/bundles/repository-initialization.html#the-repoinit-repository-initialization-language)Apache Sling Repo Init.
-
->[!TIP]
->
->Se avsnittet [Kodfragment för](#snippet-repo-init) upprepning nedan för ett fullständigt kodavsnitt.
 
 ## Databasstrukturpaket {#repository-structure-package}
 
@@ -355,28 +321,6 @@ I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`)
     ...
 ```
 
-### Repo Init{#snippet-repo-init}
-
-Repo Init-skript som innehåller Repo Init-skript definieras i `RepositoryInitializer` OSGi-fabrikskonfigurationen via `scripts` egenskapen. Observera att eftersom dessa skript definieras i OSGi-konfigurationer kan de enkelt omfångas i runmode med hjälp av vanliga `../config.<runmode>` mappsemantik.
-
-Observera att eftersom skript vanligtvis är flerradsdeklarationer är det enklare att definiera dem i `.config` filen än i XML-basformatet `sling:OsgiConfig` .
-
-`/apps/my-app/config.author/org.apache.sling.jcr.repoinit.RepositoryInitializer-author.config`
-
-```plain
-scripts=["
-    create service user my-data-reader-service
-
-    set ACL on /var/my-data
-        allow jcr:read for my-data-reader-service
-    end
-
-    create path (sling:Folder) /conf/my-app/settings
-"]
-```
-
-Egenskapen `scripts` OSGi innehåller direktiv enligt definitionen i [Apache Slings Repo Init-språk](https://sling.apache.org/documentation/bundles/repository-initialization.html#the-repoinit-repository-initialization-language).
-
 ### Databasstrukturpaket {#xml-repository-structure-package}
 
 I `ui.apps/pom.xml` och andra `pom.xml` som deklarerar ett kodpaket (`<packageType>application</packageType>`) lägger du till följande konfiguration av databasstrukturpaket i plugin-programmet FileVault Maven. Du kan [skapa ett eget databasstrukturpaket för projektet](repository-structure-package.md).
@@ -394,7 +338,7 @@ I `ui.apps/pom.xml` och andra `pom.xml` som deklarerar ett kodpaket (`<packageTy
         <repositoryStructurePackages>
           <repositoryStructurePackage>
               <groupId>${project.groupId}</groupId>
-              <artifactId>ui.apps.structure</artifactId>
+              <artifactId>repository-structure-pkg</artifactId>
               <version>${project.version}</version>
           </repositoryStructurePackage>
         </repositoryStructurePackages>
@@ -485,9 +429,6 @@ I `all`-projektets `filter.xml` (`all/src/main/content/jcr_root/META-INF/vault/d
 Om flera `/apps/*-packages` används i de inbäddade målen måste alla räknas upp här.
 
 ### Maven Repositories från tredje part {#xml-3rd-party-maven-repositories}
-
->[!WARNING]
-> Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras för behov.
 
 I reaktorprojektets `pom.xml`exempel lägger du till eventuella direktiv från tredje part om databasen för Maven. Den fullständiga `<repository>` konfigurationen bör vara tillgänglig från tredjepartsprovidern.
 
