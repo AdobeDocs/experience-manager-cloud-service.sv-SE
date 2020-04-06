@@ -4,7 +4,7 @@ description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6998ee5f3c1c1563427e8739998effe0eba867fc
+source-git-commit: 8aa693387183e65434da300ccf08f394b48ed9ba
 
 ---
 
@@ -170,7 +170,7 @@ När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive m
 
 1. Välj en eller flera samlingar som du vill hämta från samlingskonsolen.
 1. Tryck/klicka på nedladdningsikonen i verktygsfältet.
-1. I dialogrutan **[!UICONTROL Hämta]** trycker/klickar du på **[!UICONTROL Hämta]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Återgivningar]**. <!-- Select the **[!UICONTROL Email]** option to send an email notification to the owner of the collection. -->
+1. I dialogrutan **[!UICONTROL Hämta]** trycker/klickar du på **[!UICONTROL Hämta]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Återgivningar]**. Välj alternativet **[!UICONTROL E-post]** om du vill skicka ett e-postmeddelande till samlingens ägare.
 
    När du väljer en samling som ska hämtas hämtas hela mapphierarkin under samlingen. Om du vill inkludera varje samling som du hämtar (inklusive resurser i underordnade samlingar som är kapslade under den överordnade samlingen) i en enskild mapp väljer du **[!UICONTROL Skapa separata mappar för varje resurs]**.
 
