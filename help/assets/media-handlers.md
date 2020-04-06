@@ -3,7 +3,7 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om olika mediehanterare och hur du använder dem i arbetsflöden för att utföra åtgärder på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 068195919c4bf73c41b1156eadb47544e4c41e65
+source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
 
 ---
 
@@ -18,7 +18,7 @@ Mediehanterare är tjänster i AEM Resurser som utför specifika åtgärder på 
 
 >[!NOTE]
 >
->I artikeln [Filformat](file-format-support.md) som stöds av Assets finns en beskrivning av alla format som stöds av AEM Assets samt de funktioner som stöds för varje format.
+>På sidan Format [som stöds av](file-format-support.md) Assets finns en beskrivning av alla format som stöds av AEM Assets samt funktioner som stöds för varje format.
 
 ## Standardmediehanterare {#default-media-handlers}
 
@@ -407,7 +407,7 @@ För att göra detta använder du ImageMagick. ImageMagick är en kostnadsfri pr
 
 Installera först ImageMagick på disken som är värd för AEM-servern:
 
-1. Installera ImageMagick: Se [dokumentationen](https://www.imagemagick.org/script/download.php)för ImageMagick.
+1. Installera ImageMagick: finns i dokumentationen [till](https://www.imagemagick.org/script/download.php)ImageMagick.
 1. Konfigurera verktyget så att du kan köra konverteringen på kommandoraden.
 1. Om du vill se om verktyget är korrekt installerat kör du följande kommando `convert -h` på kommandoraden.
 
