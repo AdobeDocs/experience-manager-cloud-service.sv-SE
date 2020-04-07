@@ -2,7 +2,7 @@
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
 translation-type: tm+mt
-source-git-commit: c56df26fc1bb1da36d268b08276a555a7c0d03ac
+source-git-commit: 5fe598192f80496bd176804796dbce96c35fc67e
 
 ---
 
@@ -52,17 +52,24 @@ source-git-commit: c56df26fc1bb1da36d268b08276a555a7c0d03ac
    + [XMP-metadata](xmp-metadata.md)
    + [MediaLibrary-funktioner](medialibrary.md)
    + [Importera och exportera metadata för material](metadata-import-export.md)
-&lt;&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt;&lt; HEAD=========
-+ Dela och distribuera resurser {#brandportal}
-   + [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
-   + [Publicera AEM Assets till varumärkesportalen](publish-to-brand-portal.md)
->>>>>>>>>>överordnad till 733b637... update toc=======parent of da6a8ae.. Konfigurera varumärkesportalen med AEM Assets i molnet======överordnad till da6a8ae.. Konfigurera varumärkesportalen med AEM Assets i molnet
+&lt;&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt;&lt; HEAD===============
+>>>>>>>>>>överordnad till 733b637... uppdateringsavsnitt
 
 
 
 
 
 > 
++ Dela och distribuera resurser {#brandportal}
+   + [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
+   + [Publicera AEM Assets till varumärkesportalen](publish-to-brand-portal.md)
+>>>>>>>överordnad till 733b637... update toc=======parent of da6a8ae.. Konfigurera varumärkesportalen med AEM Assets i molnet======överordnad till da6a8ae.. Konfigurera varumärkesportalen med AEM Assets i molnet
+
+
+
+
+
+
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
    + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
