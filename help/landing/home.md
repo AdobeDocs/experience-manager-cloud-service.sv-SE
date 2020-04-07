@@ -2,7 +2,7 @@
 title: Användarhandböcker om Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 587e60678bf92e2a0124da13d3c7fb492a5a7d4e
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
@@ -24,8 +24,6 @@ På den här sidan visas användarhandböckerna för självhjälp för Experienc
 | [Användarhandbok om implementering](/help/implementing/home.md) | Lär dig hur du anpassar distributionen av Experience Manager as a Cloud Service, med bland annat ämnen om utvecklingsdistribution. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar lösningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
-| [Flytta till AEM som molntjänst](/help/move-to-cloud-service/home.md) | Lär dig mer om självhjälpsresurser och verktyg som underlättar övergången till AEM som en molntjänst. |
-
 
 ## Andra Experience Manager-resurser {#other-resources}
 
