@@ -3,7 +3,7 @@ title: Filformat och MIME-typer som stöds av Experience Manager Assets som en m
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som en molntjänst.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9a7d2cff969a7920eb4fa3597846c11aa16392d9
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
@@ -169,7 +169,7 @@ Resurser som molntjänst ger XMP-stöd för följande ljudformat: AIF, ASF, M4A,
 
 ## Dokumentformat som stöds {#doc-formats}
 
-Dokumentformat som stöds för filhanteringsfunktioner är som följer.
+Dokumentformat som stöds för filhanteringsfunktioner är följande.
 
 | Filformat | Lagring | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|
