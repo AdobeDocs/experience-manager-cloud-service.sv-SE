@@ -2,7 +2,7 @@
 title: Introduktion till Adobe Experience Manager as a Cloud Service – terminologi
 description: 'Introduktion till Adobe Experience Manager as a Cloud Service – terminologi. '
 translation-type: tm+mt
-source-git-commit: eb28fedae5b87a67460f4cac97959f65972e652a
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
@@ -38,6 +38,7 @@ Följande termer används i samband med Adobe Experience Manager (AEM) as a Clou
 | Asset-mikrotjänster | Molnbaserade tjänster för bearbetning av digitala resurser som är anpassade till olika användningsområden, t.ex. återgivningsgenerering, PDF-processer, hantering av underresurser, textextrahering osv. Mer information finns i [översikten över mikrotjänster för Assets](/help/assets/asset-microservices-overview.md). |
 | Git-databas för Cloud Manager | Där kunderna lagrar kod och konfigurationsinställningar. |
 | Molnleverantör | AEM as a Cloud Service har stöd för både Azure och AWS som molnleverantörer. |
+| Content Delivery Network (CDN) | AEM as a Cloud Service levereras med ett CDN som standard. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program. |
 | Innehållsdatabas | Plats där innehåll lagras. |
 | Oberoende företagsinstanser | Varje instans av AEM as a Cloud Service isoleras från andra instanser. |
 | Huvudnod | En AEM-publiceringsnivå. |
