@@ -2,7 +2,7 @@
 title: Hantera miljöer - molntjänst
 description: Hantera miljöer - molntjänst
 translation-type: tm+mt
-source-git-commit: 81c5112cd72ff3713690a49978f1b6e991d15c3b
+source-git-commit: 1fe2fea86f933e7cffabf67fda09a2850a5d5730
 
 ---
 
@@ -38,9 +38,6 @@ Produktionen och scenen finns som duo och används för testning och produktion.
 
 
 1. Användaren klickar på knappen **Lägg till miljö** för att lägga till en miljö.
-
-   >[!NOTE]
-   >Den här knappen kan även nås från sidan för miljöer eller från miljökortet. Som användare visas endast det här alternativet om du har nödvändig behörighet. Kontakta din Adobe-representant om du har några frågor.
 
    ![](assets/add-environment.png)
 
