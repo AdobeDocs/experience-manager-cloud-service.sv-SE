@@ -47,8 +47,8 @@ Projektledare som inte följer eller tillämpar uppförandekoden i god tro kan d
 
 &lt;&lt;&lt;&lt;&lt;&lt; HEADT Denna uppförandekod har anpassats från [Contributor-konventionen](https://contributor-covenant.org), version 1.4, som finns på [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).
 =======
-Denna uppförandekod har anpassats från [Contributor-konventionen](https://contributor-covenant.org), version 1.4, som finns på [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)&lt;&lt;&lt;&lt;&lt; HEAD
->>>>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======överordnad till f6e5291.. Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
+Denna uppförandekod har anpassats från [Contributor-konventionen](https://contributor-covenant.org), version 1.4, som finns på [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt; &lt;&lt;&lt; HEAD &lt;&lt; &lt;&lt; HEAD &lt;&lt;
+>>>>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======överordnad till f6e5291.. Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======överordnad till f6e5291.. Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======parent för 190577c... Koppla grenen master till mellanlagring
 
 
 
