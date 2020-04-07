@@ -3,14 +3,14 @@ title: Använd Connected Assets när du vill dela DAM-resurser i redigeringsarbe
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager Site-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 188917fe677a88142c702b9637600db872853974
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
 
 # Använd Connected Assets när du vill dela DAM-resurser i AEM Sites {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. Olika skäl kan vara geografiskt spridda distributioner som måste kunna arbeta tillsammans, förvärv som leder till en heterogen infrastruktur som moderbolaget vill konsolidera eller tillväxt som leder till en sådan skala att en dedikerad instans krävs för materialhantering.
+I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. Vissa skäl kan vara geografiskt spridda befintliga driftsättningar som måste fungera tillsammans eller förvärv som leder till heterogen infrastruktur som moderbolaget vill använda tillsammans.
 
 AEM Sites erbjuder funktioner för att skapa webbsidor och AEM Assets är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatserna. AEM stöder nu ovanstående exempel genom att integrera AEM Sites och AEM Assets.
 
@@ -18,7 +18,7 @@ AEM Sites erbjuder funktioner för att skapa webbsidor och AEM Assets är det DA
 
 När sidor redigeras i Page Editor kan författare enkelt söka efter, bläddra bland och bädda in resurser från en annan AEM Assets-distribution. En AEM-administratör kan göra en engångsintegrering av en lokal AEM Sites-distribution tillsammans med en annan (fjärransluten) AEM Assets-distribution.
 
-Fjärresurserna är tillgängliga som skrivskyddade lokala resurser för Sites-författarna. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. Om du vill göra många fjärresurser tillgängliga för lokal distribution på en gång bör du överväga att migrera resurserna samtidigt. Se [Handbok för resursmigrering](/help/assets/assets-migration-guide.md).
+Fjärresurserna är tillgängliga som skrivskyddade lokala resurser för Sites-författarna. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. Om du vill göra många fjärresurser tillgängliga för lokal distribution på en gång bör du överväga att migrera resurserna samtidigt.
 
 ### Förutsättningar och distributioner som stöds {#prerequisites}
 
@@ -164,7 +164,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * Metadatascheman hämtas inte.
 * Alla Sites-författare har läsbehörighet för de hämtade kopiorna, även om de inte har åtkomst till den fjärranslutna DAM-distributionen.
 * Det finns inte API-stöd för att anpassa integreringen.
-* Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna. Se [Handbok för resursmigrering](assets-migration-guide.md).
+* Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna.
 * It is not possible to use a remote asset as a thumbnail for a web page in the [!UICONTROL Thumbnail] tab in [!UICONTROL Page Properties] by clicking [!UICONTROL Select Image].
 
 **Konfigurera och licensiera**
