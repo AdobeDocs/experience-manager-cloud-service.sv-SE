@@ -2,7 +2,7 @@
 title: Innehållssökning och indexering
 description: 'Innehållssökning och indexering '
 translation-type: tm+mt
-source-git-commit: 99dce041a6d7554785fd43eb82c671643e903f23
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
@@ -31,7 +31,7 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 1. På en hög nivå på AEM som molntjänst kommer två uppsättningar index att finnas i och med introduktionen av [Blue-Green-distributionsmodellen](#index-management-using-blue-green-deployments) : en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
 
-Den version av indexet som används konfigureras med flaggor i indexdefinitionerna via `useIfExist` flaggan. Ett index kan bara användas i en version av programmet (till exempel endast blått eller endast grönt), eller i båda versionerna. Detaljerad dokumentation finns på [Index Management med Blue-Green Deployments](#index-management-using-blue-green-deployments).
+<!-- The version of the index that is used is configured using flags in the index definitions via the `useIfExist` flag. An index may be used in only one version of the application (for example only blue or only green), or in both versions. Detailed documentation is available at [Index Management using Blue-Green Deployments](#index-management-using-blue-green-deployments). -->
 
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
@@ -61,7 +61,7 @@ Du måste förbereda ett nytt indexdefinitionspaket som innehåller den faktiska
 
 `<indexName>[-<productVersion>]-custom-<customVersion>`
 
-som sedan måste gå under `ui.content/src/main/content/jcr_root`. Underrotmappar stöds inte för närvarande.
+som sedan måste gå under `ui.apps/src/main/content/jcr_root`. Underrotmappar stöds inte för närvarande.
 
 <!-- need to review and link info on naming convention from https://wiki.corp.adobe.com/display/WEM/Merging+Customer+and+OOTB+Index+Changes?focusedCommentId=1784917629#comment-1784917629 -->
 
@@ -69,11 +69,15 @@ Paketet från exemplet ovan byggs som `com.adobe.granite:new-index-content:zip:1
 
 ### Distribuera indexdefinitioner {#deploying-index-definitions}
 
+> [!NOTE]
+>
+> Det finns ett känt fel med Jackrabbit Filevault Maven Package Plugin version **1.1.0** som inte tillåter tillägg `oak:index` till moduler i `<packageType>application</packageType>`. Använd version **1.0.4** för att undvika detta.
+
 Indexdefinitioner har nu markerats som anpassade och versionsindelade:
 
-* Själva indexdefinitionen (till exempel `/oak:index/ntBaseLucene-custom-1`) som är MUTABLE-innehåll
+* Själva indexdefinitionen (till exempel `/oak:index/ntBaseLucene-custom-1`)
 
-För att kunna distribuera ett index bör därför indexdefinitionen (`/oak:index/definitionname`) levereras via det **ändringsbara paketet**, vanligtvis `ui.content` via Git och Cloud Manager-distributionsprocessen.
+För att kunna distribuera ett index måste därför indexdefinitionen (`/oak:index/definitionname`) levereras via `ui.apps` Git och Cloud Manager-distributionsprocessen.
 
 När den nya indexdefinitionen har lagts till måste det nya programmet distribueras via Cloud Manager. När distributionen är klar startas två jobb som ansvarar för att lägga till (och sammanfoga vid behov) indexdefinitionerna i MongoDB och Azure Segment Store för författare respektive publicering. De underliggande databaserna omindexeras med de nya indexdefinitionerna, innan den blå-gröna växlingen äger rum.
 
