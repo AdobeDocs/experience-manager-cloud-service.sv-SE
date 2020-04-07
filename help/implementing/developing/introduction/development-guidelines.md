@@ -2,7 +2,7 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: 'Fylls i '
 translation-type: tm+mt
-source-git-commit: 3d2705262d9c82a1486e460247b468259d5ed600
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
@@ -83,7 +83,37 @@ Innehållet replikeras från författare till publicering via en pub-sub-mekanis
 
 ### Loggar {#logs}
 
-Mer information om hur du arbetar med loggar finns i [loggningsdokumentationen](/help/implementing/developing/introduction/logging.md).
+För lokal utveckling skrivs loggposterna till lokala filer i `/crx-quickstart/logs` mappen.
+
+I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att avsluta loggarna. <!-- See the [Cloud Manager documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Note that custom logs are not supported and so all logs should be output to the error log. -->
+
+**Ange loggnivå**
+
+Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att aktivera utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
+
+> [!NOTE]
+> 
+> För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM-instans som en molntjänst. Mer information om hur du gör detta finns i [Distribuera till AEM som en molntjänst](/help/implementing/deploying/overview.md).
+
+**Aktivera felsökningsloggnivån**
+
+Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
+Om du vill aktivera DEBUG-loggnivån anger du
+
+``` /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level ```
+
+egenskap som ska felsökas. Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom den genererar många loggar.
+En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Exempel:
+
+``` DEBUG 3 WebApp Panel: WebApp successfully deployed ```
+
+Loggnivåerna är följande:
+
+| 0 | Allvarligt fel | Åtgärden misslyckades och installationsprogrammet kan inte fortsätta. |
+|---|---|---|
+| 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av CRX installerades inte korrekt och kommer inte att fungera. |
+| 2 | Varning | Åtgärden har slutförts men problem uppstod. CRX fungerar eventuellt inte korrekt. |
+| 3 | Information | Åtgärden har slutförts. |
 
 ### Trådbitar {#thread-dumps}
 
