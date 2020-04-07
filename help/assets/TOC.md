@@ -2,13 +2,14 @@
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 4206534b0f3020b2136729d866eb753eb06d95b1
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
 
 # Assets {#assets}
 
++ [AEM Assets as a Cloud Service](/help/assets/home.md)
 + [Översikt och nyheter](overview.md)
 + [Viktiga ändringar i AEM Assets as a Cloud Service](assets-cloud-changes.md)
 + [Arkitektur](architecture.md)
@@ -39,8 +40,8 @@ source-git-commit: 4206534b0f3020b2136729d866eb753eb06d95b1
    + [Hantera rättigheter för digitala resurser](drm.md)
 + Konfigurera, administrera och utöka Assets {#admin}
    + [API:er och referensmaterial](developer-reference-material-apis.md)
-   + [Konfigurera materialdelning](configure-asset-sharing.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
+   + [Bearbeta profiler](/help/assets/dynamic-media/processing-profiles.md)
    + [Flerspråkiga resurser och översättning av resurser](translate-assets.md)
    + [Söka efter fasetter](search-facets.md)
    + [Utöka materialredigeraren](extend-asset-editor.md)
@@ -51,9 +52,6 @@ source-git-commit: 4206534b0f3020b2136729d866eb753eb06d95b1
    + [XMP-metadata](xmp-metadata.md)
    + [MediaLibrary-funktioner](medialibrary.md)
    + [Importera och exportera metadata för material](metadata-import-export.md)
-+ Dela och distribuera resurser {#brandportal}
-   + [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
-   + [Publicera resurser på varumärkesportalen](publish-to-brand-portal.md)
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
    + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
