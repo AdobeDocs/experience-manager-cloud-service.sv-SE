@@ -1,5 +1,5 @@
 ---
-source-git-commit: 8bdcc1798b2b788c5252e89750ad6ccb86cda333
+source-git-commit: b0abce7f1d911123da37ba279a565c7608e5a4c5
 translation-type: tm+mt
 
 ---
@@ -19,25 +19,7 @@ Vi välkomnar alla bidrag till att förbättra AEM-dokumentationen, men vi ber a
 
 ## Använda Contribute
 
-&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;&lt;&lt;&lt; HEAD&lt;&lt; HUVUDSAK&lt;&lt;&lt;&lt;&lt; HEAD &lt;&lt;&lt;&lt; HUVUDSAK&lt;&lt;&lt;&lt; HEADW &lt;&lt;&lt; HEADW &lt;&lt;&lt;&lt; HEADW &lt;&lt;&lt;&lt; HEADW &lt;&lt;: &quot;HEADWe&quot; gör det enkelt att skicka in dina bidrag. Du kan bidra på två sätt:
-=======
-=======
->>>>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======överordnad till f6e5291.. Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======parent för 190577c... Lägg samman grenen master till stagingHur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
-
-
-
-
-
-> 
-
-### Skapa ett problem
->>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
-
-
-
-
-
-
+Vi vill göra det så enkelt som möjligt att lämna in dina bidrag. Du kan bidra på två sätt:
 
 * [Skapa ett problem](#create-an-issue)
 * [Skapa en pull-begäran](#create-a-pull-request)
@@ -45,7 +27,8 @@ Vi välkomnar alla bidrag till att förbättra AEM-dokumentationen, men vi ber a
 Vilken metod du väljer beror på hur bekväm du själv redigerar dokumentationen i GitHub.
 
 >[!NOTE]
-Bidrag som du skickar in omfattas av [Adobes användarvillkor.](https://www.adobe.com/legal/terms.html)
+>
+>Bidrag som du skickar in omfattas av [Adobes användarvillkor.](https://www.adobe.com/legal/terms.html)
 
 ### Skapa ett problem {#create-an-issue}
 
@@ -55,24 +38,7 @@ Med hjälp av olika problem kan du enkelt beskriva din idé om hur du kan förb�
 
 ### Skapa en pull-begäran {#create-a-pull-request}
 
-&lt;&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;&lt;&lt;&lt; HEAD &lt;&lt;&lt;&lt;&lt;&lt; HEADInvänd om du ser ett problem och vet exakt hur man åtgärdar det, bör du överväga att skapa en pull-begäran. Dragningsbegäranden gör att du kan göra egna ändringar i dokumentationen, som sedan granskas för att inkluderas av en AEM Docs Team-medlem. Klicka bara på länken **Redigera den här sidan** högst upp i den högra navigeringspanelen på en sida för att göra de föreslagna ändringarna och skapa en pull-begäran.
-=======
->=======>
->>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======överordnad till f6e5291.. Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======parent för 190577c... Koppla grenen master till mellanlagring
-
-
-
-
->> 
-
-### Större förändringar för Adobes anställda
->>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
-
-
-
-
-
-
+Om du ser ett problem och vet exakt hur du ska åtgärda det kan du skapa en pull-begäran. Dragningsbegäranden gör att du kan göra egna ändringar i dokumentationen, som sedan granskas för att inkluderas av en AEM Docs Team-medlem. Klicka bara på länken **Redigera den här sidan** högst upp i den högra navigeringspanelen på en sida för att göra de föreslagna ändringarna och skapa en pull-begäran.
 
 Alla pull-begäranden måste åtföljas av ett signerat [bidragsgivarlicensavtal eller CLA.](https://opensource.adobe.com/cla.html)  Detta ger Adobe tillstånd att återdistribuera dina bidrag som en del av projektet. Du behöver bara skicka in ett Adobe CLA en gång, så om du har skickat ett tidigare är du redo att gå!
 
@@ -82,42 +48,11 @@ Titta på följande video för att få en snabb översikt över hur du skapar pr
 
 >[!VIDEO](https://video.tv.adobe.com/v/27069)
 
-&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 ### Bidrag från Adobes anställda
 
-&lt;&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEADIom du är anställd av Adobe och har ett bidrag från Adobe, använd `AdobeDocs` företagsprofilen.
+Om du är Adobe-anställd och vill göra en pull-förfrågan, använd den privata databasen på `https://git.corp.adobe.com/AdobeDocs`.
 
-Vi är förstås glada över ditt bidrag och kommer att granska ditt bidrag om det görs i det offentliga arkivet, men förfrågningar från Adobe-anställda är enklare att behandla och kan godkännas snabbare i företagets rapport. Se till att all företagsinformation endast behandlas i företagets rapport.
-=======
->=======>
->>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======överordnad till f6e5291.. Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till staging======parent för 190577c... Koppla grenen master till mellanlagring
-
-
-
-
->> 
-
-## Verktyg och inställningar
-
-Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
-
-I [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) finns en översikt över hur du använder GitHub-redigeringsplattformen.
-
-## Så här använder du Markdown för att formatera ditt ämne
-
-Alla artiklar i den här databasen använder smaksatt GitHub-kod. Om du inte är van vid att markera något läser du:
-
-* [Grunderna i markeringar](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
-* [Utskrivbart markeringsdatablad](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
-
-## Etiketter
->>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
-
-
-
-
-
-
+Om du har problem kan du använda de offentliga databaserna.
 
 ## Ytterligare information
 
