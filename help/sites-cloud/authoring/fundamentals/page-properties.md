@@ -2,7 +2,7 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
@@ -181,6 +181,8 @@ Visar sidminiatyrbilden. Du kan:
 * **Målkonfiguration**
 
    * Välj ett [varumärke om du vill ange ett omfång för målgruppsanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
+   >[!NOTE]
+   >Det här alternativet kräver att användarkontot finns i `Target Adminstrators`gruppen.
 
 ### Behörigheter {#permissions}
 
