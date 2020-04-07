@@ -2,7 +2,7 @@
 title: Konfigurera Dynamic Media Cloud-tjänsten
 description: Information om hur du konfigurerar dynamiska media i Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: ad621c24e58fba6bcc873e36544505cc50385509
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
@@ -65,15 +65,17 @@ Så här konfigurerar du molntjänster för dynamiska media:
 
    * **[!UICONTROL Företagets rotmappsökväg]**
 
-   * **[!UICONTROL Publicera resurser]** - alternativet **[!UICONTROL Omedelbart]** innebär att när resurser överförs, importeras resurserna och URL:en/inbäddningen anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser. Alternativet **[!UICONTROL Vid aktivering]** (standard) innebär att du måste publicera resursen explicit först innan en URL/Embed-länk anges.
-
+   * **[!UICONTROL Publicera resurser]** - Du kan välja mellan följande tre alternativ:
+      * **[!UICONTROL Omedelbart]** innebär att när resurser överförs, importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.
+      * **[!UICONTROL Vid aktivering]** innebär att du måste publicera resursen explicit innan en URL/Embed-länk anges.
+      * **[!UICONTROL Selektiv publicering]** innebär att resurser endast publiceras automatiskt för säker förhandsvisning och kan publiceras explicit till AEM utan att publiceras till DMS7 för att distribueras offentligt. I framtiden kommer Adobe att förbättra det här alternativet för att publicera resurser till AEM och publicera resurser till Dynamic Media, som utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i AEM för förhandsgranskning. samma resurser inte publiceras i DMS7 för att distribueras offentligt.
    * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till den säkra servern för förhandsgranskning av återgivningar. Det innebär att när renderingar har skapats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM-instansen).
 Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe Systems att du låter den här inställningen vara som den är angiven.
 
    * **[!UICONTROL Synkronisera allt innehåll]** - markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:
 
    * **[!UICONTROL Synkroniseringsläge för dynamiska media]**
-      * **[!UICONTROL Aktiverat som standard]** - Konfigurationen används som standard på alla mappar, såvida du inte markerar en mapp som är speciellt avsedd att exkluderas. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
+      * **[!UICONTROL Aktiverat som standard]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL Inaktiverad som standard]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till dynamiska media.
 Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du sidan Egenskaper för resursmappen. Tap the **[!UICONTROL Details]** tab, then from the **[!UICONTROL Dynamic Media sync mode]** drop-down list, choose from the following three options, then save tap **[!UICONTROL Save]**.
          * **[!UICONTROL Ärvd]** - inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
@@ -457,7 +459,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet för att Dynamic Media <!--(with `dynamicmedia_scene7` run mode)--> ska fungera smidigt:
 
 * Uppdatera de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
-* Uppdatera de fördefinierade tillfälliga arbetsflödena för Granite (bilder och andra mediefiler) för köarbetstrådar.
+* Uppdatera det fördefinierade tillfälliga Granite-arbetsflödet (bilder och andra resurser än videor) för köarbetstrådar.
 * Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern.
 
 #### Uppdaterar kön för Granska tillfälligt arbetsflöde {#updating-the-granite-transient-workflow-queue}
