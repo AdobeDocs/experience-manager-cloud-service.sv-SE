@@ -459,7 +459,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet för att Dynamic Media <!--(with `dynamicmedia_scene7` run mode)--> ska fungera smidigt:
 
 * Uppdatera de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
-* Uppdatera det fördefinierade tillfälliga Granite-arbetsflödet (bilder och andra resurser än videor) för köarbetstrådar.
+* Uppdatera de fördefinierade tillfälliga arbetsflödena för Granite (bilder och andra mediefiler) för köarbetstrådar.
 * Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern.
 
 #### Uppdaterar kön för Granska tillfälligt arbetsflöde {#updating-the-granite-transient-workflow-queue}
