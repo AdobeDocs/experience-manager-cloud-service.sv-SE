@@ -2,13 +2,14 @@
 sub-product: Implementera för AEM som en molntjänst
 user-guide-title: Implementera för AEM som en molntjänst
 translation-type: tm+mt
-source-git-commit: 8a298cdeee23806e1e8cba90add1ac1dbcbabe12
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
 
 # Implementera {#implementing}
 
++ [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
 + Använda Cloud Manager {#using-cloud-manager}
    + [Hantera miljöer](cloud-manager/manage-environments.md)
    + [Konfigurera CI/CD-pipeline](cloud-manager/configure-pipeline.md)
@@ -21,12 +22,11 @@ source-git-commit: 8a298cdeee23806e1e8cba90add1ac1dbcbabe12
    + [Åtkomst till Git](cloud-manager/accessing-git.md)
    + [Integrera Git med Adobe Cloud Manager](cloud-manager/integrating-with-git.md)
 + Utveckla för AEM as a Cloud Service {#developing}
-   + [Struktur för AEM-projektpaket](developing/introduction/aem-project-content-package-structure.md)
-   + [Utveckla ett databasstrukturpaket](developing/introduction/repository-structure-package.md)
+   + [AEM-projektstruktur](developing/introduction/aem-project-content-package-structure.md)
+   + [Strukturpaket för AEM-projektdatabas](developing/introduction/repository-structure-package.md)
    + [AEM as a Cloud Service SDK](developing/introduction/aem-as-a-cloud-service-sdk.md)
    + [Innehållssökning och indexering](/help/operations/indexing.md)
    + [Utvecklingsriktlinjer för AEM as a Cloud Service](developing/introduction/development-guidelines.md)
-   + [Loggning](/help/implementing/developing/introduction/logging.md)
    + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
    + [AEM as a Cloud Service API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
    + [Förstå testresultat](/help/implementing/developing/introduction/understand-test-results.md)
@@ -37,3 +37,4 @@ source-git-commit: 8a298cdeee23806e1e8cba90add1ac1dbcbabe12
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
 + Dispatcher i molnet {#dispatcher}
    + [Dispatcher i molnet](dispatcher/overview.md)
+   + [Innehållsleverans i AEM som molntjänst](dispatcher/content-delivery.md)
