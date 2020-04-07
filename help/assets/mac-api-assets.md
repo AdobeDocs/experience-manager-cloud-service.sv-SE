@@ -3,7 +3,7 @@ title: HTTP API för Assets
 description: Lär dig mer om implementering, datamodell och funktioner i Assets HTTP API. Använd Assets HTTP API för att utföra olika åtgärder runt resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f2e257ff880ca2009c3ad6c8aadd055f28309289
+source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
 
@@ -25,7 +25,7 @@ Efter [!UICONTROL Av-tid]är en resurs och dess återgivningar inte tillgänglig
 
 >[!NOTE]
 >
->Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) dedikeras för AEM som en distribution av molntjänster. Om du vill överföra binära filer ska du använda API:er för [direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
+>Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) dedikeras för AEM som en distribution av molntjänster. Om du vill överföra binära filer använder du API:er för [direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
 
 ## Innehållsfragment {#content-fragments}
 
