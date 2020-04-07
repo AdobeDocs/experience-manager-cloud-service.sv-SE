@@ -2,7 +2,7 @@
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
 translation-type: tm+mt
-source-git-commit: da8b23d7f14cdf5f4f9dee03a0498fe048541cda
+source-git-commit: c56df26fc1bb1da36d268b08276a555a7c0d03ac
 
 ---
 
@@ -52,11 +52,11 @@ source-git-commit: da8b23d7f14cdf5f4f9dee03a0498fe048541cda
    + [XMP-metadata](xmp-metadata.md)
    + [MediaLibrary-funktioner](medialibrary.md)
    + [Importera och exportera metadata för material](metadata-import-export.md)
-&lt;&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt; HEAD===========
+&lt;&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt;&lt; HEAD=========
 + Dela och distribuera resurser {#brandportal}
    + [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
    + [Publicera AEM Assets till varumärkesportalen](publish-to-brand-portal.md)
->>>>>>>>>>överordnad till 733b637... update toc=======parent of da6a8ae.. Konfigurera varumärkesportalen med AEM Assets i molnet
+>>>>>>>>>>överordnad till 733b637... update toc=======parent of da6a8ae.. Konfigurera varumärkesportalen med AEM Assets i molnet======överordnad till da6a8ae.. Konfigurera varumärkesportalen med AEM Assets i molnet
 
 
 
