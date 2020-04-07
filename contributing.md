@@ -1,5 +1,5 @@
 ---
-source-git-commit: 69fb4368528343eb5a85f89df9db73d72d36e4b2
+source-git-commit: 8bdcc1798b2b788c5252e89750ad6ccb86cda333
 translation-type: tm+mt
 
 ---
@@ -19,18 +19,25 @@ Vi välkomnar alla bidrag till att förbättra AEM-dokumentationen, men vi ber a
 
 ## Använda Contribute
 
-&lt;&lt;&lt;&lt;&lt;&lt; HEADWe vill göra det så enkelt som möjligt att lämna in dina bidrag. Du kan bidra på två sätt:
+&lt;&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt; HEADWe vill att det ska vara så enkelt som möjligt att skicka in dina bidrag. Du kan bidra på två sätt:
 =======
-Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
-
-### Skapa ett problem
->>>>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
+=======
+>>>>>>>>>>överordnad till f6e5291... Lägg samman grenen &#39;staging&#39; i https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till stagingHur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
 
 
 
 
 
 > 
+
+### Skapa ett problem
+>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
+
+
+
+
+
+
 
 * [Skapa ett problem](#create-an-issue)
 * [Skapa en pull-begäran](#create-a-pull-request)
@@ -48,8 +55,16 @@ Med hjälp av olika problem kan du enkelt beskriva din idé om hur du kan förb�
 
 ### Skapa en pull-begäran {#create-a-pull-request}
 
-&lt;&lt;&lt;&lt;&lt;&lt; HEADI Om du ser ett problem och vet exakt hur man åtgärdar det kan du skapa en pull-begäran. Dragningsbegäranden gör att du kan göra egna ändringar i dokumentationen, som sedan granskas för att inkluderas av en AEM Docs Team-medlem. Klicka bara på länken **Redigera den här sidan** högst upp i den högra navigeringspanelen på en sida för att göra de föreslagna ändringarna och skapa en pull-begäran.
+&lt;&lt;&lt;&lt;&lt;&lt; HEAD&lt;&lt;&lt;&lt;&lt;&lt; HEADI Om du ser ett problem och vet exakt hur man åtgärdar det bör du överväga att skapa en pull-begäran. Dragningsbegäranden gör att du kan göra egna ändringar i dokumentationen, som sedan granskas för att inkluderas av en AEM Docs Team-medlem. Klicka bara på länken **Redigera den här sidan** högst upp i den högra navigeringspanelen på en sida för att göra de föreslagna ändringarna och skapa en pull-begäran.
 =======
+=======
+>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
+
+
+
+
+
+
 ### Större förändringar för Adobes anställda
 >>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
 
@@ -70,10 +85,18 @@ Titta på följande video för att få en snabb översikt över hur du skapar pr
 &lt;&lt;&lt;&lt;&lt;&lt; HEAD
 ### Bidrag från Adobes anställda
 
-Om du är Adobe-anställd och har ett bidrag, använd `AdobeDocs` organisationen i företagsgruppen.
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEADIom du är anställd av Adobe och har ett bidrag, använd `AdobeDocs` organisationen i företagsgruppen.
 
 Vi är förstås glada över ditt bidrag och kommer att granska ditt bidrag om det görs i det offentliga arkivet, men förfrågningar från Adobe-anställda är enklare att behandla och kan godkännas snabbare i företagets rapport. Se till att all företagsinformation endast behandlas i företagets rapport.
 =======
+=======
+>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
+
+
+
+
+
+
 ## Verktyg och inställningar
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
@@ -88,13 +111,13 @@ Alla artiklar i den här databasen använder smaksatt GitHub-kod. Om du inte är
 * [Utskrivbart markeringsdatablad](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 ## Etiketter
->>>>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
+>>>>>>>överordnad till f6e5291... Sammanfoga grenen &#39;staging&#39; för https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en till mellanlagring
 
 
 
 
 
-> 
+
 
 ## Ytterligare information
 
