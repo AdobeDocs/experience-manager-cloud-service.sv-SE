@@ -2,7 +2,7 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: dbd7b8084445b03beff3b5a96b0fa6b5512e10b8
 
 ---
 
@@ -104,6 +104,7 @@ Egenskaperna fördelas på flera flikar.
    >Till exempel: om du definierar ett alias för `latin-lang` noden `/content/we-retail/spanish` kan du komma åt den här sidan via `/content/we-retail/latin-language`
    >
    >Mer information finns i Lokaliserade sidnamn under SEO och Bästa metoder för URL-hantering.
+
    <!--
   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
   -->
@@ -170,13 +171,17 @@ Visar sidminiatyrbilden. Du kan:
 
 * **Cloud Services**
 
-   * Definiera egenskaper för molntjänster. <!--Define properties for [cloud services](/help/sites-developing/extending-cloud-config.md).-->
+   * Definiera egenskaper för molntjänster.
+   <!--Define properties for [cloud services](/help/sites-developing/extending-cloud-config.md).
+  -->
 
 ### Personanpassning {#personalization}
 
 * **ContextHub-konfigurationer**
 
-   * Välj ContextHub Configuration och Segments Path. <!--Select the [ContextHub Configuration](/help/sites-administering/contexthub-config.md) and [Segments Path](/help/sites-administering/segmentation.md).-->
+   * Välj ContextHub Configuration och Segments Path.
+   <!--Select the [ContextHub Configuration](/help/sites-administering/contexthub-config.md) and [Segments Path](/help/sites-administering/segmentation.md).
+  -->
 
 * **Målkonfiguration**
 
@@ -188,16 +193,24 @@ Visar sidminiatyrbilden. Du kan:
 
 * **Behörigheter**
 
-   * Lägg till behörigheter <!--[Add Permissions](/help/sites-administering/user-group-ac-admin.md) -->
-   * Redigera stängd användargrupp <!-- [Edit Closed User Group](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)-->
-   * Visa gällande behörigheter <!-- View the [Effective Permissions](/help/sites-administering/user-group-ac-admin.md)-->
+   * Lägg till behörigheter
+   * Redigera stängd användargrupp
+   * Visa gällande behörigheter
+   <!--[Add Permissions](/help/sites-administering/user-group-ac-admin.md) -->
+
+   <!-- [Edit Closed User Group](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)-->
+
+   <!-- View the [Effective Permissions](/help/sites-administering/user-group-ac-admin.md)-->
 
 ### Blueprint {#blueprint}
 
 * **Blueprint**
 
-   * Definiera egenskaper för en designsida inom hantering av flera webbplatser. <!--Define properties for a Blueprint page within [multi-site management](/help/sites-administering/msm.md).-->
+   * Definiera egenskaper för en designsida inom hantering av flera webbplatser.
+   <!--Define properties for a Blueprint page within [multi-site management](/help/sites-administering/msm.md).-->
+
    * Styr under vilka omständigheter ändringar ska spridas till Live Copy.
+
 
 ### Live Copy {#live-copy}
 
@@ -252,6 +265,7 @@ På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egen
 >Det finns även massredigering av egenskaper för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i Redigera egenskaper för flera resurser.
 >
 >Här finns också en gruppredigerare som du kan använda för att söka efter innehåll från flera sidor med GQL (Google Query Language) och sedan redigera innehållet direkt i gruppredigeraren innan du sparar ändringarna på originalsidorna.
+
 <!--
 >Bulk editing of properties is also available for Assets. It is very similar, but differs in a few points. See [Editing Properties of Multiple Assets](/help/assets/managing-multiple-assets.md) for details.
 >
@@ -299,6 +313,7 @@ När du har valt Massredigering kan du:
 >[!NOTE]
 >
 >Sidkomponenten kan konfigureras för att ange de fält som är tillgängliga för massredigering. Se Konfigurera sidan för massredigering av sidegenskaper.
+
 <!--
 >The page component can be configured to specify the fields available for bulk editing. See [Configuring your page for bulk editing of page properties](/help/sites-developing/bulk-editing.md).
 -->
