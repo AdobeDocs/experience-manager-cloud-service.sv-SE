@@ -2,7 +2,7 @@
 title: Använda arbetsflöden på sidor
 description: När du redigerar kan du anropa arbetsflöden för att göra något på sidorna; det går även att använda mer än ett arbetsflöde.
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: dbd7b8084445b03beff3b5a96b0fa6b5512e10b8
 
 ---
 
@@ -13,8 +13,8 @@ När du redigerar kan du anropa arbetsflöden för att göra något på sidorna;
 
 När du använder arbetsflödet anger du följande information:
 
-* Arbetsflödet som ska användas.
-   * Du kan tillämpa vilket arbetsflöde som helst (som du har tillgång till, enligt din AEM-administratörs anvisningar).
+* Det arbetsflöde som ska användas.
+   * Du kan använda vilket arbetsflöde som helst (som du fått tillgång till av AEM-administratören).
 * Alternativt kan du använda en titel som hjälper till att identifiera arbetsflödesinstansen i en användares inkorg.
 * Arbetsflödets nyttolast. detta kan vara en eller flera sidor.
 
@@ -30,7 +30,8 @@ Arbetsflöden kan startas från:
 >* Använda arbetsflöden för DAM-resurser.
 >* [Arbeta med projektarbetsflöden](/help/sites-cloud/authoring/projects/workflows.md).
 
-<!--
+
+<!-- 
 >* [How to apply workflows to DAM assets](/help/assets/assets-workflow.md).
 >* [Working with Project Workflows](/help/sites-cloud/authoring/projects/workflows.md).
 -->
@@ -38,7 +39,8 @@ Arbetsflöden kan startas från:
 >[!NOTE]
 >
 >AEM-administratörer kan starta arbetsflöden på flera andra sätt.
-<!--
+
+<!-- 
 >AEM administrators can [start workflows using several other methods](/help/sites-administering/workflows-starting.md).
 -->
 
@@ -101,7 +103,8 @@ Du kan ange information:
       * Du kan ange en rubrik för paketet för att underlätta identifieringen.
    >[!NOTE]
    >
-   >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats för Multi Resource Support och flera resurser har valts.
+   >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats med stöd för flera resurser och flera resurser har valts.
+
    <!--
    >The **Keep workflow package** option is available when the workflow has been configured for [Multi Resource Support](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) and multiple resources have been selected.
    -->
@@ -116,7 +119,7 @@ Du kan ange information:
 
    * En befintlig resurs som visar ytterligare åtgärder:
 
-      * **Inkludera underordnade objekt** för att ange att underordnade för den resursen ska inkluderas i arbetsflödet.
+      * **Inkludera underordnade objekt** för att ange att underordnade resurser ska inkluderas i arbetsflödet.
 En dialogruta öppnas där du kan förfina markeringen enligt:
 
          * Inkludera endast omedelbara barn.
@@ -129,7 +132,7 @@ En dialogruta öppnas där du kan förfina markeringen enligt:
 
    >[!NOTE]
    >
-   >Om du lägger till ytterligare resurser kan du använda **Bakåt** för att justera inställningen för **Behåll arbetsflödespaket** i **egenskapssteget** .
+   >Om du lägger till ytterligare resurser kan du använda **Bakåt** för att justera inställningen för **Behåll arbetsflödespaket** i steget **Egenskaper**.
 
 1. Använd **Skapa** för att stänga guiden och skapa arbetsflödesinstansen. Ett meddelande visas i webbplatskonsolen.
 
