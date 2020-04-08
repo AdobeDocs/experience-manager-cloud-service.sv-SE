@@ -3,7 +3,7 @@ title: Publicera resurser, mappar och samlingar på varumärkesportalen
 description: Publicera resurser, mappar och samlingar på varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 4194f089f87deeb62095703614947a295235edbf
+source-git-commit: c2088896eacfc1f0e4c5b7a1f566ce3c8f99388b
 
 ---
 
@@ -21,8 +21,9 @@ Om du gör senare ändringar i den ursprungliga resursen, mappen eller samlingen
 * [Publicera samlingar på varumärkesportalen](#publish-collections-to-brand-portal)
 
 >[!NOTE]
->>Adobe rekommenderar staggad publicering, helst under icke-topp-timmar, så att AEM-författaren inte upptar för mycket resurser.
 >
+>Adobe rekommenderar att publiceringen staggats, helst under icke-topp-timmar, så att AEM-författaren inte tar upp för mycket resurser.
+
 
 ## Publicera resurser på varumärkesportalen {#publish-assets-to-bp}
 
