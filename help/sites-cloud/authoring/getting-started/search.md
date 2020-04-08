@@ -1,13 +1,13 @@
 ---
-title: Sök
+title: Sökning
 description: Hitta materialet snabbare med omfattande sökfunktioner
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: f04dd39a5a22f44f976f2e473689780099f10f9a
 
 ---
 
 
-# Sök {#search-feature}
+# Sökning {#search-feature}
 
 I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
 
@@ -64,6 +64,7 @@ Så här söker och filtrerar du resurser:
    >
    >* Beroende på vilken resurstyp du har valt; Exempelvis är kriterierna Assets och Communities begripligt specialiserade.
    >* Din instans som sökformulär kan anpassas (lämplig för platsen i AEM).
+
 
 <!--
   >* Your instance as the [Search Forms](/help/sites-administering/search-forms.md) can be customized (appropriate to the location within AEM).
