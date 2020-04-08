@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 73813dd87e3eebfe26673640125ea64916e14789
+source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
 
 ---
 
@@ -122,13 +122,13 @@ De andra paren följer standardkonfigurationen:
 
 Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att aktivera utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
 
-> [!NOTE]
-> 
+>[!NOTE]
+>
 > För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM-instans som en molntjänst. Mer information om hur du gör detta finns i [Distribuera till AEM som en molntjänst](/help/implementing/deploying/overview.md).
 
 ### Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
 
-> [!WARNING]
+>[!WARNING]
 >
 > Om du aktiverar loggnivån DEBUG globalt genereras en stor mängd information som är svår att gå igenom. Vi rekommenderar att du bara aktiverar den för de tjänster som kräver felsökning. Mer information finns i [Loggare and Writers for Individual Services](logging.md#loggers-and-writers-for-individual-services).
 
