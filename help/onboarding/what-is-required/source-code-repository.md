@@ -2,12 +2,12 @@
 title: Källkodslagringsplats - molntjänster
 description: Källkodslagringsplats - molntjänster
 translation-type: tm+mt
-source-git-commit: 6f323f33663f83043eb8a15fe00e6ed872c3cac1
+source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
 
 ---
 
 
-# Källkodslagringsplats {#source-code-repository}
+# Databas för källkod {#source-code-repository}
 
 Cloud Manager-programmet kommer att etableras automatiskt med sin egen Git-databas.
 
@@ -21,5 +21,6 @@ För att börja utveckla AEM Cloud-programmet måste en lokal kopia av programko
 $ git clone {URL}
 ```
 
-> [!NOTE]
+>[!NOTE]
+>
 > En användare kan checka ut en kopia av sin kod och göra ändringar i den lokala koddatabasen. När det är klart kan användaren spara sina kodändringar i fjärrkoddatabasen i Cloud Manager.
