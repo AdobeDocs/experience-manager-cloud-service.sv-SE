@@ -1,8 +1,8 @@
 ---
 title: AEM as a Cloud Service SDK
-description: 'Fylls i '
+description: Fylls i
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
 
 ---
 
@@ -32,12 +32,12 @@ Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller ti
 <dependency>
   <groupId>com.adobe.aem</groupId>
   <artifactId>aem-sdk-api</artifactId>
-  <version>2019.11.3006.20191108T223635Z-191201</version> 
+  <version>2019.11.3006.20191108T223635Z-191201</version>
   <scope>provided</scope>
 </dependency>
 ```
 
-> [!NOTE] Versionsposten för SDK ska matcha versionen av AEM som en molntjänst. Du kan se vilken version du använder genom att logga in på AEM, sedan gå till frågetecknet i skärmens övre högra hörn och välja **[!UICONTROL Om Adobe Experience Manager]**
+>[!NOTE] Versionsposten för SDK ska matcha versionen av AEM som en molntjänst. Du kan se vilken version du använder genom att logga in på AEM, sedan gå till frågetecknet i skärmens övre högra hörn och välja **[!UICONTROL Om Adobe Experience Manager]**
 
 * Fjärrkoordinaten för maven-databasen där paketet finns bör inkluderas i pom-filen.
 
