@@ -2,12 +2,12 @@
 title: Skapa hjälpmedelsanpassat innehåll (WCAG 2.0-överensstämmelse)
 description: Gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: dbd7b8084445b03beff3b5a96b0fa6b5512e10b8
 
 ---
 
 
-# Skapa hjälpmedelsanpassat innehåll (WCAG 2.0-överensstämmelse) {#creating-accessible-content-wcag-conformance}
+# Creating Accessible Content (WCAG 2.0 Conformance) {#creating-accessible-content-wcag-conformance}
 
 WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
 
@@ -18,15 +18,17 @@ WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskri
 >* I vår snabbguide till WCAG 2.0 finns mer information
 >* Konfigurera RTF-redigeraren för att skapa tillgängligt innehåll
 
-<!--
->* our [Quick Guide to WCAG 2.0](/help/managing/qg-wcag.md) for further details
->* [Configuring the Rich Text Editor for producing accessible content](/help/sites-administering/rte-accessible-content.md)
+
+<!-- 
+>* See our [Quick Guide to WCAG 2.0](/help/managing/qg-wcag.md) for further details
+>* [Configuring the Rich Text Editor for producing accessible conten](/help/sites-administering/rte-accessible-content.md)
 -->
+
 Dessa är betygsatta enligt tre överensstämmelsenivåer: Nivå A (lägst), Nivå AA och Nivå AAA (högst). Nivåerna definieras kortfattat enligt följande:
 
-* **** Nivå A: Webbplatsen når en grundläggande, lägsta tillgänglighetsnivå. För att uppnå den här nivån uppfylls alla villkor för att lyckas på nivå A.
-* **** Nivå AA: Detta är en idealisk nivå av hjälpmedel att eftersträva, där din webbplats når en högre grad av tillgänglighet, så att den är tillgänglig för de flesta människor i de flesta situationer som använder de flesta tekniker. För att uppnå den här nivån uppfylls alla kriterier för lyckade resultat på nivå A och nivå AA.
-* **** Nivå AAA: Webbplatsen har mycket hög tillgänglighet. För att uppnå den här nivån uppfylls alla kriterier för lyckade resultat på nivå A, nivå AA och nivå AAA.
+* **Nivå A:** Webbplatsen har en grundläggande, lägsta tillgänglighetsnivå. För att den här nivån ska uppnås måste alla kriterier på nivå A uppfyllas.
+* **Nivå AA:** Detta är en idealisk tillgänglighetsnivå att eftersträva, där webbplatsen har en högre tillgänglighet och är tillgänglig för de flesta människor i de flesta situationer via de flesta tekniker. För att den här nivån ska uppnås måste alla kriterier nivå A och nivå AA uppfyllas.
+* **Nivå AAA:** Webbplatsen har mycket hög tillgänglighet. För att den här nivån ska uppnås måste alla kriterier på nivå A, nivå AA och nivå AAA uppfyllas.
 
 När du skapar din plats bör du bestämma den övergripande nivå som du vill att din plats ska anpassas till.
 
@@ -46,7 +48,7 @@ I följande avsnitt presenteras [WCAG 2.0-riktlinjerna](https://www.w3.org/TR/WC
 
 
 
-## Princip 1: Förväntningsbar {#principle-perceivable}
+## Princip 1: Förutsägbar {#principle-perceivable}
 
 [Princip 1: Perfekt - Information och komponenter i användargränssnittet måste kunna presenteras för användarna på ett sätt som de kan uppfatta.](https://www.w3.org/TR/WCAG20/#perceivable)
 
@@ -72,7 +74,8 @@ För statisk grafik är det grundläggande kravet att tillhandahålla ett motsva
 
 >[!NOTE]
 >
->Vissa färdiga komponenter, som **Carousel** och **Bildspel** , kan inte användas för att lägga till alternativa textbeskrivningar till bilder. När du implementerar versioner av dessa för din AEM-instans måste ditt utvecklingsteam konfigurera sådana komponenter så att de stöder `alt` attributet så att författare kan lägga till dem i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut).
+>I vissa färdiga komponenter, som **karuseller** och **bildspel**, går det inte att lägga till alternativa textbeskrivningar för bilder. När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut).
+
 <!--
 >Some out-of-the-box components, such as **Carousel** and **Slideshow** do not provide a means for adding alternate text descriptions to images. When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 -->
@@ -99,7 +102,7 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 * Illustrativa foton: Det här är bilder på människor, objekt eller platser. Tänk på fotots roll på sidan; det är troligt att en lämplig textmotsvarighet är `Photo of [object]`, men den kan vara beroende av den omgivande texten.
 * Ikoner: Det är små bildspel (grafik) som förmedlar specifik information. De måste användas konsekvent på en sida och en webbplats. Alla förekomster av ikonen på en sida eller på en webbplats bör ha samma korta och koncisa textalternativ, såvida inte detta leder till onödig duplicering av intilliggande text.
 * Diagram och diagram: Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av fältet **Beskrivning** på fliken **Avancerade** bildegenskaper. Dessutom kan du tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
-* Kartor, diagram, flödesscheman: För grafik som tillhandahåller rumsliga data (till exempel. om du vill ha stöd för att beskriva relationer mellan objekt eller en process) kontrollerar du att nyckelmeddelandet finns i textformat. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta rätt väg till en viss plats, kan kartbildens alternativa text kortfattat ange *kartan av X* och sedan ge anvisningar till den platsen i text någon annanstans på sidan eller genom **beskrivningsfältet** på fliken **Avancerat** i **bildkomponenten** .
+* Kartor, diagram, flödesscheman: För grafik som tillhandahåller rumsliga data (till exempel om du vill ha stöd för att beskriva relationer mellan objekt eller en process) kontrollerar du att nyckelmeddelandet finns i textformat. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta rätt väg till en viss plats, kan kartbildens alternativa text kortfattat ange *karta över X* och sedan ge anvisningar till den platsen i text någon annanstans på sidan eller i fältet **Beskrivning** på fliken **Avancerat** i **bildkomponenten**.
 * CAPTCHA: En CAPTCHA är ett *helautomatiserat offentligt kurstest för att skilja på datorer och människor*. Det är en säkerhetskontroll som används på webbsidor för att skilja människor från skadliga program, men som kan orsaka tillgänglighetshinder. Det är bilder som kräver att användarna beskriver vad de ser för att klara ett säkerhetstest. Det är uppenbart att det inte går att ange ett textalternativ för bilden, så du måste istället överväga alternativa icke-grafiska lösningar. W3C ger ett antal förslag, t.ex.: Alla dessa metoder har sina egna fördelar och nackdelar.
    * Logikpussel
    * Användning av ljudutdata i stället för bilder
@@ -148,7 +151,7 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
 * Om innehållet är förinspelat ljud utan video (till exempel en poddsändning):
    * Ange en länk omedelbart före eller efter innehållet till en textavskrift av ljudinnehållet. transkriberingen ska vara en HTML-sida med en textmotsvarighet till allt tal och viktigt icke-talat innehåll, plus en indikation på vem som talar, en beskrivning av inställningen, röstuttryck och en beskrivning av allt annat viktigt ljud.
 * Om innehållet är en animering eller förinspelad video utan ljud:
-   * Ange en länk omedelbart före eller efter innehållet till en motsvarande textbeskrivning av informationen som videon innehåller
+   * Tillhandahåll en länk omedelbart före eller efter innehållet till en motsvarande textbeskrivning av den information som videon ger
    * Eller en motsvarande ljudbeskrivning i ett vanligt ljudformat som MP3.
 
 >[!NOTE]
@@ -215,7 +218,7 @@ Personer med nedsatt syn eller nedsatt syn kommer att uppleva tillgänglighetshi
 Det finns två strategier som kan användas för att uppfylla detta kriterium. Båda är godtagbara:
 
 1. Inkludera ytterligare ljudbeskrivning för videoinnehållet. Detta kan uppnås på ett av tre sätt:
-   * Under pauser i den befintliga dialogen ska du lämna information om ändringar i scenen som inte presenteras som en del av det befintliga ljudspåret.
+   * Under pauser i den befintliga dialogen, lämna information om förändringar i scenen som inte presenteras som en del av det befintliga ljudspåret.
    * Skapa ett nytt, extra och valfritt ljudspår som innehåller det ursprungliga ljudspåret, men även extra ljudinformation om ändringar i scenen.
       * Detta gör att användare kan växla mellan det befintliga ljudspåret (som *inte* innehåller någon ljudbeskrivning) och det nya ljudspåret (som *inte* innehåller någon ljudbeskrivning).
       * Detta förhindrar avbrott för användare som inte behöver den ytterligare beskrivningen.
@@ -301,10 +304,10 @@ AEM gör det enkelt att skapa webbsidor med rätt HTML-element. Öppna sidinneh�
 
 Du kan se till att dina webbsidor får rätt struktur genom att:
 
-* **** Använda rubriker: Så länge du har tillgänglighetsfunktionerna i RTE aktiverat erbjuder AEM tre nivåer för sidrubriken. Du kan använda dessa för att identifiera avsnitt och underavsnitt av innehåll. Rubrik 1 är den högsta rubriknivån, rubrik 3 den lägsta. Systemadministratören kan konfigurera systemet så att fler rubriknivåer tillåts.
+* **Använda rubriker:** Så länge tillgänglighetsfunktionerna i textredigeraren är aktiverade erbjuder AEM tre nivåer för sidrubriker. Du kan använda dessa för att identifiera avsnitt och underavsnitt för innehåll. Rubrik 1 är den högsta rubriknivån, rubrik 3 den lägsta. Systemadministratören kan konfigurera systemet så att fler rubriknivåer tillåts.
 * **Betonad text**: Använd elementet `<strong>` eller `<em>` för att ange betoning. Använd inte rubriker för att markera text i stycken.
    * Markera den text som du vill framhäva;
-   * Klicka på **B** -ikonen (för `<strong>`) eller **I** -ikonen (för `<em>`) som visas på **egenskapspanelen** (kontrollera att HTML är markerat).
+   * Klicka på ikonen **B** (för `<strong>`) eller ikonen **I** (för `<em>`) som visas på panelen **Egenskaper** (kontrollera att HTML är markerat).
 
       >[!NOTE]
       >
@@ -317,11 +320,11 @@ Du kan se till att dina webbsidor får rätt struktur genom att:
 
 
 * **Använd listor**: Du kan använda HTML för att ange tre olika typer av listor:
-   * Elementet `<ul>` används för *punktlistor* . Enskilda listobjekt identifieras med `<li>` elementet.Använd ikonen **Punktlista** i textredigeraren.
-   * Elementet `<ol>` används för *numrerade* listor. Enskilda listobjekt identifieras med hjälp av `<li>` elementet. Använd ikonen **Numrerad lista** i textredigeraren.
+   * Elementet `<ul>` används för *oordnade* punktlistor. Enskilda listobjekt identifieras med elementet `<li>`. Använd ikonen **Punktlista** i textredigeraren.
+   * The `<ol>` element is used for *numbered* lists. Enskilda listobjekt identifieras med hjälp av `<li>` elementet. Använd ikonen **Numrerad lista** i textredigeraren.
    Om du vill ändra befintligt innehåll till en viss listtyp markerar du lämplig text och väljer lämplig listtyp. Precis som i det tidigare exemplet som visar hur stycketext skrivs in, läggs de rätta listelementen automatiskt till i HTML-koden.
 
-   I helskärmsläge visas ikonerna **Punktlista** och **Numrerad lista** . Om du inte arbetar i helskärmsläge är de två alternativen tillgängliga bakom ikonen med en enda **lista** .
+   I helskärmsläge visas ikonerna **Punktlista** och **Numrerad lista**. Om du inte arbetar i helskärmsläge finns de två alternativen bakom den enda **Listor**-ikonen.
 * **Använd tabeller**: Datatabeller måste identifieras med HTML-tabellelement:
    * ett `<table>` element
    * ett `<tr>` element för varje rad i tabellen
@@ -334,19 +337,20 @@ Du kan se till att dina webbsidor får rätt struktur genom att:
    * Attributet `scope` för `<th>` elementet används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
    >[!NOTE]
    >
-   >Som standard är dessa element och attribut inte direkt tillgängliga, men det är möjligt för systemadministratören att lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper** (se Lägga till stöd för ytterligare HTML-element och attribut).
-<!--
->By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+   >Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper** (se Lägga till stöd för ytterligare HTML-element och attribut).
+
+<!-- removed link syntax for ExL
+>By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see Adding Support for Additional HTML Elements and Attributes /help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes).
 -->
 
 Så här öppnar du dialogrutan **Tabell** där du kan välja fliken **Tabellegenskaper** :
 
 * Definiera en lämplig **bildtext**.
-* Ta helst bort alla standardvärden för **Bredd**, **Höjd**, **Kant**, **Cellfyllnad** och **Cellmellanrum**. eftersom dessa egenskaper kan anges i en global formatmall.
+* Ta helst bort alla standardvärden för **Bredd**, **Höjd**, **Kant**, **Cellfyllnad** och **Cellmellanrum** eftersom dessa egenskaper kan anges i en global formatmall.
 
 Du kan sedan använda **cellegenskaperna** för att välja om cellen är en data- eller rubrikcell:
 
-* **Komplexa datatabeller**: I vissa fall, där det finns komplexa tabeller med två eller flera rubriknivåer, kanske de grundläggande tabellegenskaperna inte räcker för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av **rubrikattributen** och **ID** . I tabellen nedan matchar till exempel rubriker och id:n en programmatisk association för hjälpmedelsanvändare.
+* **Komplexa datatabeller**: I vissa fall, där det finns komplexa tabeller med två eller flera rubriknivåer, kanske de grundläggande tabellegenskaperna inte räcker för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av attributen **header** och **id**. I tabellen nedan matchas till exempel rubriker och ID:n för att skapa en programmatisk association för hjälpmedelsanvändare.
 
    >[!NOTE]
    >
@@ -440,7 +444,7 @@ Se till att all information som bygger på visuella egenskaper för sidinnehåll
 
 Färg är ett uppenbart effektivt sätt att förbättra webbsidornas estetiska utseende och är också användbart för att förmedla information. Det finns dock en rad synstörningar, från blindhet till färgssynsbrist, som innebär att vissa personer inte kan skilja mellan olika färger. Detta gör färgkodning till ett otillförlitligt sätt att tillhandahålla information.
 
-En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja på nyanser i grönt och röda nyanser. De kan se båda färgerna som en tredje färg (till exempel brunt), och då kan de inte skilja mellan rött, grönt och brunt.
+En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja på nyanser i grönt och röda toner. De kan se båda färgerna som en tredje färg (till exempel brunt), och då kan de inte skilja mellan rött, grönt och brunt.
 
 Dessutom kan inte färger uppfattas av personer som använder webbläsare som bara innehåller text, enheter för monokrom visning eller som visar en svartvit utskrift av sidan.
 
@@ -471,7 +475,7 @@ Om färg används som en referenspunkt för att ge information bör du ange ytte
 
 Personer med vissa nedsatt syn kanske inte kan skilja mellan vissa färgpar med låg kontrast. Tillgänglighetsproblem kan uppstå för dessa personer om något av följande:
 
-* Texten kontrasteras dåligt med sin bakgrundsfärg.
+* Texten har dålig kontrast mot bakgrundsfärgen.
 * Färgkodningen för text (t.ex. länktext och text som inte är länkad) är viktig för att särskilja information.
 
 >[!NOTE]
@@ -502,7 +506,7 @@ Om det inte går att följa de rekommenderade kontrastnivåerna måste du skapa 
 * Villkor för lyckat resultat 1.4.5
 * Nivå AA
 * Bilder av text: Om den teknik som används kan åstadkomma den visuella presentationen, används text för att förmedla information i stället för bilder av text, med undantag för följande:
-   * Anpassningsbart: Textbilden kan anpassas visuellt efter användarens behov.
+   * Anpassningsbart: Bilden av texten kan anpassas visuellt efter användarens behov.
    * Grundläggande: En viss presentation av texten är väsentlig för den information som förmedlas.
 
 >[!NOTE]
@@ -539,7 +543,7 @@ Poängen är:
 1. Krav som rör flimmer eller blinkande innehåll finns i Designa inte innehåll på ett sätt som är känt för att orsaka kramper (2.3).
 1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG20/#cc5).
 1. Innehåll som uppdateras regelbundet av programvara eller som direktuppspelas till användaragenten behöver inte bevara eller presentera information som genereras eller tas emot mellan inledandet av paus och återupptagandet, eftersom detta kanske inte är tekniskt möjligt, och i många situationer kan det vara vilseledande.
-1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet frystes eller förstörs.
+1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare, och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet har frysts eller brutits.
 
 #### Syfte - Pausa, stoppa, dölj (2.2.2) {#purpose-pause-stop-hide}
 
@@ -604,7 +608,7 @@ Detta kriterium hjälper alla att snabbt identifiera innehållet på en webbsida
 
 När en ny HTML-sida skapas i AEM kan du ange sidans titel. Se till att titeln beskriver sidans innehåll på rätt sätt, så att besökarna snabbt kan identifiera om innehållet verkligen är relevant för deras behov eller inte.
 
-Du kan också redigera sidans titel när du redigerar en sida, som är tillgänglig via **Sidinformation** - **Egenskaper.**
+Du kan också redigera sidans titel när du redigerar en sida, tillgänglig via **Sidinformation** – **Egenskaper**.
 
 #### Mer information - sida titel (2.4.2) {#more-information-page-titled}
 
@@ -703,7 +707,7 @@ För att uppfylla det här kriteriet kan standardspråket på en webbsida identi
 * En sida som ska återges som amerikansk engelska bör anta följande standard:
    `<html lang = “en-us”>`
 
-**I AEM anges sidans standardspråk när du skapar sidan, men det kan också ändras när du redigerar en sida, som är tillgänglig via** Sidspark **-** fliken Sida **-** Sidegenskaper... - **fliken Avancerat** .
+I AEM anges sidans standardspråk när sidan skapas, men det kan också ändras när den redigeras, vilket du gör via **Assistenten** – fliken **Sida** – **Sidegenskaper ...** – fliken **Avancerat**.
 
 #### Mer information - Sidans språk (3.1.1) {#more-information-language-of-page}
 
@@ -729,7 +733,7 @@ Sidor som använder det här framgångsvillkoret tillåter:
 
 #### Hur man uppfyller kraven - Språk för delar (3.1.2) {#how-to-meet-language-of-parts}
 
-Attributet `lang` kan användas för att identifiera ändringar i innehållsspråket. Exempelvis kan en offert på tyska (ISO 639-1-kod &quot;de&quot;) visas på följande sätt:
+Attributet `lang` kan användas för att identifiera ändringar i innehållsspråket. En offert på tyska (ISO 639-1-kod &quot;de&quot;) kan till exempel visas på följande sätt:
 
 ```xml
 <blockquote cite = "John F. Kennedy" lang = "de">
@@ -779,17 +783,18 @@ I AEM läggs en standardetikett till när du lägger till en formulärkomponent,
 
 Det här **titelfältet** måste användas för fältelement eftersom det innehåller en etikett som är tillgänglig för hjälpmedelsteknik. Det räcker inte att bara skriva en etikett bredvid fältet.
 
-För vissa formulärkomponenter går det även att dölja etiketter visuellt med kryssrutan **Dölj rubrik** . Etiketter som döljs på det här sättet är fortfarande tillgängliga för hjälpfunktioner, men visas inte på skärmen. Detta kan vara en bra metod i vissa situationer, men det är oftast bäst att ta med en visuell etikett där det är möjligt, eftersom vissa användare kanske tittar på ett mycket litet avsnitt på skärmen (ett fält i taget) och behöver etiketterna för att kunna identifiera fältet på rätt sätt.
+För vissa formulärkomponenter går det även att dölja etiketter visuellt med kryssrutan **Dölj titel**. Etiketter som döljs på det här sättet är fortfarande tillgängliga för hjälpfunktioner, men de visas inte på skärmen. Detta kan vara en bra metod i vissa situationer, men det är oftast bäst att ta med en visuell etikett om det går, eftersom vissa användare kanske tittar på en mycket liten del på skärmen (ett fält i taget) och behöver etiketterna för att identifiera fältet korrekt.
 
 #### Bildknappar {#image-buttons}
 
-Där bildknappar används (t.ex. **bildknappen** ) innehåller fältet **Titel** på fliken **Titel och Text** i redigeringsdialogrutan den alternativa texten för bilden, i stället för etiketten. I exemplet nedan `Submit` har bilden med texten alt text av `Submit`och lagts till med fältet **Titel** i redigeringsdialogrutan.
+Där bildknappar används (t.ex. komponenten **bildknapp**) innehåller fältet **Titel** på fliken **Titel och text** i redigeringsdialogrutan den alternativa texten för bilden i stället för etiketten. I exemplet nedan har bilden med texten `Submit` Alt-texten `Submit`, som lagts till med fältet **Titel** i redigeringsdialogrutan.
 
 #### Grupper med formulärfält {#groups-of-form-fields}
 
-Om det finns en grupp med relaterade kontroller, t.ex. **alternativknappar**, kan det behövas en rubrik för gruppen samt enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel** , medan enskilda titlar anges som alternativknappar (**Objekt**) skapas.
+Om det finns en grupp med relaterade kontroller, t.ex. **alternativknappar**, kan det behövas en titel för gruppen samt enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset` taggarna och `legend` taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper** (se Lägga till stöd för ytterligare HTML-element och attribut).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper** (se Lägga till stöd för ytterligare HTML-element och attribut).
+
 <!--
 However, there is no programmatic association between the group title and the radio buttons themselves. Template editors would need to wrap the title in the necessary `fieldset` and `legend` tags to create this association and this can only be done by editing the page source code. Alternatively, a system administrator can add support for these elements so that they appear in the **Field Properties** dialog (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 -->
@@ -798,7 +803,7 @@ However, there is no programmatic association between the group title and the ra
 
 Om data ska matas in i ett visst format bör du göra detta tydligt i etikettexten. Om ett datum t.ex. måste anges i `DD-MM-YYYY` formatet, anger du det här som en del av etiketten. Det innebär att när skärmläsaranvändare stöter på fältet visas etiketten automatiskt tillsammans med ytterligare information om formatet.
 
-Om indata för ett formulärfält är obligatoriska, klargör du detta genom att använda ordet required som en del av etiketten. AEM lägger till en asterisk när ett fält är obligatoriskt, men det skulle vara bra att inkludera ordet `required`i själva etiketten (i fältet **Titel** i redigeringsdialogrutan).
+Om indata för ett formulärfält är obligatoriska klargör du detta genom att använda ordet ”required” som en del av etiketten. AEM lägger till en asterisk när ett fält är obligatoriskt, men det är bra att inkludera ordet `required` i själva etiketten (i fältet **Titel** i redigeringsdialogrutan).
 
 Placeringen av etiketter är också viktig eftersom den hjälper dem att hitta rätt fält. Detta är särskilt viktigt när användaren har ett komplext formulär. Följ konventionen nedan:
 
@@ -812,4 +817,4 @@ I enkla formulär med mycket begränsad funktionalitet kan en lämplig etikett p
 #### Mer information - etiketter eller instruktioner (3.3.2) {#more-information-labels-or-instructions}
 
 * [Förstå villkor för framgång 3.3.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
-* [Så här uppfyller du kriterium 3.3.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-cues)
+* [Hur man uppfyller kriterium 3.3.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-cues)
