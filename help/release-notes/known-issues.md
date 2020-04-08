@@ -2,12 +2,12 @@
 title: Kända fel
 description: Versionsinformation som är specifik för Kända problem med Adobe Experience Manager som en molntjänst
 translation-type: tm+mt
-source-git-commit: 82dd9bd69fe994f74c7be8a571e386f0e902f6a1
+source-git-commit: ce82d7c9ca1fd8fe3d6f61213cfee360fc6496fd
 
 ---
 
 
-# Kända fel {#known-issues}
+# Known issues {#known-issues}
 
 I den här artikeln listas kända problem i Adobe Experience Manager som ett molnerbjudande. Listan revideras och uppdateras med varje kontinuerlig version av Experience Manager.
 
@@ -19,23 +19,18 @@ I den här artikeln listas kända problem i Adobe Experience Manager som ett mol
 ## Sites {#sites}
 -->
 
-## Resurser {#assets}
+## Assets {#assets}
 
 <!-- Jira label: assets-cloud-known-issues -->
 
 Några kända fel är:
 
-* **Metadataschema**: Widget för tillgångsklassificering kan orsaka JSP-kompileringsfel. Du kan lösa problemet genom att ta bort resursklassificeringskomponenten från metadataschemat. <!-- CQ-4282865 -->
-
-Vissa begränsningar för Assets-funktionen är:
-
-* Med AEM Assets som molntjänst fungerar funktionen för anslutna resurser när AEM 6.5 Sites distribueras i AMS.
+* **Metadataschema**: Widget för tillgångsklassificering som används för att orsaka JSP-kompileringsfel. Den togs bort från metadataschemat. <!-- CQ-4282865, CQ-4284633 -->
 
 ### Kommande Assets-funktioner {#upcoming-assets-capabilities}
 
 Några av funktionerna i Adobe Experience Manager Assets som är beroende av grundfunktionerna, som ännu inte är tillgängliga i Experience Manager som en distributionsarkitektur för molntjänster, förväntas aktiveras i ett senare skede:
 
-* Publicering till varumärkesportalen är inte aktiverat för närvarande. Du kan utöka och distribuera implementeringen av [Resursdelningskommentarer](https://adobe-marketing-cloud.github.io/asset-share-commons/) för användningsfall för resursdistribution.
 * Förbättrade smarta taggningsfunktioner som utnyttjar AI-tjänster i Adobe I/O är inte tillgängliga just nu.
 * Funktioner som inte är aktiverade i det här skedet på grund av beroendet av API:er i Commerce Integration Framework:
    * Arbetsflödesmodeller för Photoshop.
