@@ -2,7 +2,7 @@
 title: Versionsinformation för version 2020.4.0
 description: Versionsinformation för version 2020.4.0
 translation-type: tm+mt
-source-git-commit: 77163877bea36f854ac8ea6fbc78cbcf4d58ccc0
+source-git-commit: c6c0e93d881762a2b501abb3d8c8356046a5f082
 
 ---
 
@@ -10,6 +10,10 @@ source-git-commit: 77163877bea36f854ac8ea6fbc78cbcf4d58ccc0
 # Versionsinformation för AEM som molntjänst 2020.4.0 {#release-notes}
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som en molntjänst 2020.4.0.
+
+## Releasedatum {#release-date}
+
+Releasedatum för Experience Manager som molntjänst 2020.4.0 är 9 april 2020.
 
 ## Assets {#assets}
 
