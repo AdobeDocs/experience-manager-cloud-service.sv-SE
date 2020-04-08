@@ -2,7 +2,7 @@
 title: Versionsinformation för version 2020.2.0
 description: Versionsinformation för version 2020.2.0
 translation-type: tm+mt
-source-git-commit: e9514d2ba625a7df8a8126f5b0ab74b975eeda51
+source-git-commit: 8796d4bcbfc4089e1e78bd18bdb253386a5f5b6d
 
 ---
 
@@ -11,11 +11,13 @@ source-git-commit: e9514d2ba625a7df8a8126f5b0ab74b975eeda51
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som en molntjänst 2020.2.0.
 
+## Releasedatum {#release-date}
+
+Releasedatum för Experience Manager som molntjänst 2020.2.0 är 13 februari 2020.
+
 ## Cloud Manager {#cloud-manager}
 
-Releasedatum för Cloud Manager version 2020.2.0 är 13 februari 2020.
-
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager version 2020.2.0.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en molntjänst 2020.2.0.
 
 ### Nyheter {#what-is-new}
 
