@@ -2,7 +2,7 @@
 title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 translation-type: tm+mt
-source-git-commit: e88a814a901d7fa0da2675fa6017c66d61a73445
+source-git-commit: f04dd39a5a22f44f976f2e473689780099f10f9a
 
 ---
 
@@ -43,6 +43,7 @@ Beroende på var du befinner dig kan du publicera:
 >* Ett arbetsflöde kommer att utlösas för att meddela lämplig person om din begäran om publicering.
 >* Det här arbetsflödet kan ha anpassats av ditt utvecklingsteam.
 >* Ett meddelande visas kort för att meddela dig att arbetsflödet har utlösts.
+
 
 <!--
 >* This [workflow may have been customized](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6) by your development team.
@@ -86,7 +87,7 @@ I platskonsolen finns det två alternativ för publicering:
 
 #### Snabbpublicering {#quick-publish}
 
-**Snabbpublicering** är avsett för enkla ärenden och publicerar de markerade sidorna direkt utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
+**Snabbpublicering** är avsett för enkla ärenden och publicerar den eller de markerade sidorna direkt utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
 
 Så här publicerar du en sida med Snabbpublicering:
 
@@ -130,7 +131,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    ![Hantera publikationsomfång](/help/sites-cloud/authoring/assets/publishing-manage-publication-scope.png)
 
-   Du kan använda knappen **Lägg till innehåll** för att lägga till ytterligare sidor i listan över sidor som ska publiceras om du inte har valt någon sida innan du startar guiden Hantera publikation.
+   Du kan använda knappen **Lägg till innehåll** för att lägga till ytterligare sidor i listan över sidor som ska publiceras, om du inte valde någon innan du startade guiden Hantera publikation.
 
    När du klickar på knappen Lägg till innehåll startas [sökvägsläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) så att du kan välja innehåll.
 
@@ -182,9 +183,12 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
    Resurserna grupperas efter de arbetsflöden som utlöses och de olika alternativen:
 
    * Definiera arbetsflödets rubrik.
-   * Behåll arbetsflödespaketet, förutsatt att arbetsflödet har stöd för flera resurser. <!--Keep the workflow package, provided that the workflow has [multi-resource support](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support).-->
+   * Behåll arbetsflödespaketet, förutsatt att arbetsflödet har stöd för flera resurser.
+   <!--Keep the workflow package, provided that the workflow has [multi-resource support](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support).
+    -->
+
    * Definiera en titel på arbetsflödespaketet om alternativet att behålla arbetsflödespaketet har valts.
-   Klicka på **Publicera** eller **Publicera senare** för att slutföra publikationen.
+   Klicka på **Publicera** eller **Publicera senare** för att slutföra publiceringen.
 
 ## Avpublicerar sidor {#unpublishing-pages}
 
@@ -250,7 +254,7 @@ Du kan ange en sidas publiceringsstatus:
 
    ![Publikationsstatus i kortvyn](/help/sites-cloud/authoring/assets/publishing-status-console-card.png)
 
-   Publiceringsstatusen visas i [kort](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view)-, [kolumn](/help/sites-cloud/authoring/getting-started/basic-handling.md#column-view)- och [listvyer](/help/sites-cloud/authoring/getting-started/basic-handling.md#list-view) i webbplatskonsolen.
+   Publikationsstatusen visas i [kort](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view)-, [kolumn](/help/sites-cloud/authoring/getting-started/basic-handling.md#column-view)- och [list](/help/sites-cloud/authoring/getting-started/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
 * På [tidslinjen](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)
 
