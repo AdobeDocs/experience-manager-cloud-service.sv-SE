@@ -1,8 +1,8 @@
 ---
 title: Innehållssökning och indexering
-description: 'Innehållssökning och indexering '
+description: Innehållssökning och indexering
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
 
 ---
 
@@ -39,7 +39,7 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 <!-- ## Sizing Considerations {#sizing-considerations}
 
-AEM as a Cloud Service comes with a default capacity model to provide sufficient performance for average web applications. This "average" measure relates to the repository size and even more relevant to the indexing size. If we have reasons to believe that we need extended capacity for a specific customer project, an evaluation with SREs and Engineering will take place to determine the required capacity settings. 
+AEM as a Cloud Service comes with a default capacity model to provide sufficient performance for average web applications. This "average" measure relates to the repository size and even more relevant to the indexing size. If we have reasons to believe that we need extended capacity for a specific customer project, an evaluation with SREs and Engineering will take place to determine the required capacity settings.
 
 AS NOTE: the above is internal for now.
 
@@ -69,7 +69,7 @@ Paketet från exemplet ovan byggs som `com.adobe.granite:new-index-content:zip:1
 
 ### Distribuera indexdefinitioner {#deploying-index-definitions}
 
-> [!NOTE]
+>[!NOTE]
 >
 > Det finns ett känt fel med Jackrabbit Filevault Maven Package Plugin version **1.1.0** som inte tillåter tillägg `oak:index` till moduler i `<packageType>application</packageType>`. Använd version **1.0.4** för att undvika detta.
 
@@ -118,7 +118,8 @@ Med blågröna installationer blir det inga driftstopp. För indexhantering krä
 I följande tabell visas fem indexdefinitioner: index `cqPageLucene` används i båda versionerna medan index endast `damAssetLucene-custom-1` används i version 2.
 
 
-> [!NOTE]
+>[!NOTE]
+>
 > `<indexName>-custom-<customerVersionNumber>` krävs för AEM som molntjänst för att markera detta som en ersättning för ett befintligt index.
 
 | Index | Index som inte är tillgängligt | Använd i version 1 | Använd i version 2 |
