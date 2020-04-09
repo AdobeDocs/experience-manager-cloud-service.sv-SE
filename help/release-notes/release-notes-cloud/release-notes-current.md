@@ -2,7 +2,7 @@
 title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.4.0
 description: Versionsinformation om Experience Manager för 2020.4.0
 translation-type: tm+mt
-source-git-commit: 57df03fe198564a6c02e54e19ef059e46064d163
+source-git-commit: 031e2de3b3e1d7a5d57dbdaf16a96800927e98f2
 
 ---
 
@@ -43,3 +43,25 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 >* [Konfigurera Experience Manager för att arbeta med resurslänk](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html)
 >* [Skapa arbetsflöde i Experience Manager med hjälp av resurser och mikrotjänster](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows)
 
+
+## Uppdateringar för Cloud Manager {#cloud-manager}
+
+## Nyheter i Cloud Manager {#whats-new-cloud-manager}
+
+* Utgivar-URL:er är nu tillgängliga från miljösidan i användargränssnittet för Cloud Manager.
+* Ändringar i navigeringen så att användaren kan redigera, byta eller lägga till ett program från översiktssidan i Cloud Manager.
+* Ändringar som gör att användaren kan redigera program från programkortet på Cloud Managers startsida.
+* Ny pipeline-status **Pipeline som körs** visas mot den miljö som den är associerad med.
+* Förbättringar av förståelsen av sidan för att implementera pipeline. Detta inkluderar visning av Pipeline-namn (endast icke-produktionspipeline) och typ samt ett märke som anger om pipelinestatusen pågår/avbryts/misslyckades.
+* Verktygstips som förbättrar användarupplevelsen och gör det lättare att förstå varför knappen Lägg till program/miljö är inaktiverad.
+* Misslyckade miljöer kan nu tas bort via gränssnittet och API:t.
+* Processen som används för att generera Git-lösenord har gjorts mer flexibel mot problem i det underliggande tjänstskiktet.
+
+## Felkorrigeringar {#bug-fixes-cloud-manager}
+
+* Länkarna till scenmiljön på informationssidan för pipeline-körning navigerade inte konsekvent till rätt plats.
+* Enskilda steg i skapandet av miljön skulle timeout inträffa tidigare än nödvändigt och orsaka att processen misslyckas.
+* Den Maven-konfiguration som används i byggbehållaren har uppdaterats för att undvika dödlägen när artefaktmetadata hämtas.
+* I vissa fall kan steget Skapa bild inte hämta kundpaket.
+* Vissa ovanliga förhållanden kan förhindra att miljöer tas bort.
+* Experience Cloud-meddelanden togs inte emot konsekvent.
