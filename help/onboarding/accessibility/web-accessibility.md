@@ -2,7 +2,7 @@
 title: Adobe Experience Manager som en molntjänst och riktlinjerna för webbtillgänglighet
 seo-title: Adobe Experience Manager som en molntjänst och riktlinjerna för webbtillgänglighet
 translation-type: tm+mt
-source-git-commit: 11f0509334ebe4456612789fd415a3099687dc64
+source-git-commit: 05643cf6498063c88a6d18f8e4acad5882714ba0
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Manager som molntjänst fungerar med [riktlinjerna](#wcag-acces
 
 W3C ( [World Wide Web Consortium)](https://www.w3.org/) är en internationell community som arbetar med att utveckla webbstandarder. Deras [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) publicerar [Web Content Accessibility Guidelines](#wcag-accessibility-guidelines).
 
-## WCAG 2.1 Riktlinjer för hjälpmedel för webbinnehåll {#wcag-accessibility-guideslines}
+## Web Content Accessibility Guidelines (WCAG) 2.1 {#wcag-accessibility-guideslines}
 
 För att hjälpa webbdesigners och utvecklare att producera tillgängliga webbplatser har [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) publicerat Web Content Accessibility Guidelines (WCAG) 2.1 [](https://www.w3.org/TR/WCAG/) i juni 2018.
 
