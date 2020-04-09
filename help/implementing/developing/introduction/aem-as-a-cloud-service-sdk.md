@@ -2,7 +2,7 @@
 title: AEM as a Cloud Service SDK
 description: Fylls i
 translation-type: tm+mt
-source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
+source-git-commit: f15d5087a1bcb7691e159db1a595f6cc20f2b2c6
 
 ---
 
@@ -56,7 +56,7 @@ Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller ti
 </repository>
 ```
 
-## Uppdatera ett lokalt projekt med en ny SDK-version {#refreshing-a-local-prokect-with-a-new-skd-version}
+## Uppdatera ett lokalt projekt med en ny SDK-version {#refreshing-a-local-project-with-a-new-skd-version}
 
 När rekommenderas att det lokala projektet uppdateras med ett nytt SDK?
 
