@@ -2,7 +2,7 @@
 title: Skapa ett program - molntjänst
 description: Skapa ett program - molntjänst
 translation-type: tm+mt
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+source-git-commit: b30d9e37bb7de46aa252aa7030ab0c2de8610431
 
 ---
 
@@ -25,15 +25,14 @@ Beroende på vad användaren har för avsikt att skapa programmet inom gränsern
 ![](assets/create-program-2.png)
 
 >[!NOTE]
->Om det redan finns ett program visas **Lägg till program** överst till höger på landningssidan, vilket visas i bilden nedan.
+>If a program already exists, then you will see **Add Program** on the top right of the landing page, as shown in the figure below.
 
 ![](assets/create-program-add.png)
 
 ## Skapa ett demoprogram {#create-demo-program}
 
 >[!NOTE]
->
-Ett demonstrationsprogram är detsamma som ett sandlådeprogram i användargränssnittet i Cloud Manager.
+>Ett demonstrationsprogram är detsamma som ett sandlådeprogram i användargränssnittet i Cloud Manager.
 
 Följ stegen nedan för att skapa ett sandlådeprogram:
 
@@ -61,6 +60,12 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
 1. När icke-produktionsflödet som distribueras till utvecklingsfasen är klart vägleder guiden användaren till antingen åtkomst till AEM (under utveckling) eller distribution av kod till utvecklingsmiljön:
 
    ![](assets/create-program-setup-deploy.png)
+
+   >[!NOTE]
+   >Du kan också redigera, byta eller lägga till ett program från sidan Översikt över Cloud Manager, enligt nedan:
+
+   ![](assets/create-program-a1.png)
+
 
 
 ## Skapa ett vanligt program {#create-regular-program}
@@ -97,7 +102,7 @@ Följ stegen nedan för att skapa ett vanligt program:
 
    >[!NOTE]
    >
-   >Ett vanligt program har ingen **autoinstallationsfunktion** .
+   >A regular program does not have **Auto-setup** feature.
 
 
 
