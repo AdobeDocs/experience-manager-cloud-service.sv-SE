@@ -3,7 +3,7 @@ title: Konfigurera molntjänsten AEM Assets med varumärkesportalen
 description: Konfigurera molntjänsten AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 9d37fdae4445d0ccbdd6f800fc3ad4cbeec971fe
+source-git-commit: 4677a8771c5891b8c9846e0adb58025304a71bdd
 
 ---
 
@@ -48,7 +48,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
 1. Logga in på din AEM Assets-molninstans
 
-1. Gå till **Säkerhet** > > ![Adobe IMS-konfigurationer](assets/tools.png) på panelen Verktyg **** Verktyg ****.
+1. Gå till **Säkerhet** > ![Adobe IMS-konfigurationer](assets/tools.png) på panelen Verktyg **** Verktyg ****.
 
    ![Användargränssnitt för Adobe IMS-kontokonfiguration](assets/ims-configuration1.png)
 
@@ -163,7 +163,7 @@ Så här skapar du molntjänstkonfigurationen Brand Portal:
 
 1. Logga in på din AEM Assets-molninstans
 
-1. Gå till **Cloud Services >> AEM Brand Portal** i panelen ![Verktyg](assets/tools.png) och **[!UICONTROL Verktyg]**.
+1. Gå till **Cloud Services** > ![AEM Brand Portal](assets/tools.png) på panelen Verktyg **** Verktyg ****.
 
    Sidan Konfigurationer för varumärkesportalen öppnas.
 
@@ -217,7 +217,7 @@ Så här skapar du molntjänstkonfigurationen Brand Portal:
    >Undvik att inaktivera distributionsagenten eftersom det kan göra att distributionen av resurserna (i kö) misslyckas.
 
 
-När varumärkesportalen har konfigurerats med din AEM Assets-molninstans kan du:
+Din AEM Assets-molninstans har konfigurerats med varumärkesportalen och du kan nu:
 
 * [Publicera resurser från AEM Assets till varumärkesportalen](publish-to-brand-portal.md)
 * [Publicera mappar från AEM Assets till varumärkesportalen](publish-to-brand-portal.md#publish-folders-to-brand-portal)
@@ -262,8 +262,9 @@ När resursen publiceras genereras följande begärande- och svarsloggar:
 I exemplet ovan utlöses ytterligare en begäran och ett svar. Systemet kunde inte hitta den överordnade mappen (alias Lägg till sökväg) i varumärkesportalen eftersom resursen publicerades för första gången. Därför utlöses en ytterligare begäran om att skapa en överordnad mapp med samma namn i varumärkesportalen där resursen publiceras.
 
 >[!NOTE]
->>Ytterligare begäran genereras om den överordnade mappen inte finns i varumärkesportalen (i ovanstående exempel) eller om den överordnade mappen har ändrats i AEM Resurser.
 >
+>Ytterligare begäran genereras om den överordnade mappen inte finns i varumärkesportalen (i exemplet ovan) eller om den överordnade mappen har ändrats i AEM Resurser.
+
 
 ## Ytterligare information {#additional-information}
 
