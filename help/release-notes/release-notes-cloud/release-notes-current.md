@@ -2,7 +2,7 @@
 title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.4.0
 description: Versionsinformation om Experience Manager för 2020.4.0
 translation-type: tm+mt
-source-git-commit: 031e2de3b3e1d7a5d57dbdaf16a96800927e98f2
+source-git-commit: 85079ad7ef660a3282540e2cad744fc6d65ad512
 
 ---
 
@@ -44,8 +44,6 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 >* [Skapa arbetsflöde i Experience Manager med hjälp av resurser och mikrotjänster](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows)
 
 
-## Uppdateringar för Cloud Manager {#cloud-manager}
-
 ## Nyheter i Cloud Manager {#whats-new-cloud-manager}
 
 * Utgivar-URL:er är nu tillgängliga från miljösidan i användargränssnittet för Cloud Manager.
@@ -57,7 +55,7 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 * Misslyckade miljöer kan nu tas bort via gränssnittet och API:t.
 * Processen som används för att generera Git-lösenord har gjorts mer flexibel mot problem i det underliggande tjänstskiktet.
 
-## Felkorrigeringar {#bug-fixes-cloud-manager}
+### Felkorrigeringar {#bug-fixes-cloud-manager}
 
 * Länkarna till scenmiljön på informationssidan för pipeline-körning navigerade inte konsekvent till rätt plats.
 * Enskilda steg i skapandet av miljön skulle timeout inträffa tidigare än nödvändigt och orsaka att processen misslyckas.
