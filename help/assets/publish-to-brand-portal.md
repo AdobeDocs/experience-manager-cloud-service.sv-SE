@@ -3,7 +3,7 @@ title: Publicera resurser, mappar och samlingar på varumärkesportalen
 description: Publicera resurser, mappar och samlingar på varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: c2088896eacfc1f0e4c5b7a1f566ce3c8f99388b
+source-git-commit: 9d37fdae4445d0ccbdd6f800fc3ad4cbeec971fe
 
 ---
 
@@ -221,8 +221,13 @@ Så här avpublicerar du en samling:
 1. Klicka på **[!UICONTROL Avpublicera]** i dialogrutan.
 1. Stäng bekräftelsemeddelandet. Samlingen tas bort från gränssnittet för varumärkesportalen.
 
-Mer information om distribution av resurser, mappar och samlingar till slutanvändarna finns i dokumentationen [för](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) varumärkesportalen.
+Förutom ovanstående kan du även publicera metadatamatcheman, bildförinställningar, sökfaktorer och taggar från AEM Assets till Brand Portal.
 
+* [Publicera förinställningar, scheman och ansiktsuttryck på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
+* [Publicera taggar i varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
+
+
+Mer information finns i dokumentationen [till](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) varumärkesportalen.
 
 
 <!--
