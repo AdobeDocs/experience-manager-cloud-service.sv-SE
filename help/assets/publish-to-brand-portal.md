@@ -3,7 +3,7 @@ title: Publicera resurser, mappar och samlingar på varumärkesportalen
 description: Publicera resurser, mappar och samlingar på varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 9d37fdae4445d0ccbdd6f800fc3ad4cbeec971fe
+source-git-commit: 4677a8771c5891b8c9846e0adb58025304a71bdd
 
 ---
 
@@ -215,7 +215,7 @@ Så här avpublicerar du en samling:
 
 1. Från **samlingskonsolen** för din AEM Resurser-instans och välj den samling som du vill avpublicera.
 
-   ![select_collection-1](assets/select_collection-1.png)
+   ![select_collection](assets/select_collection-1.png)
 
 1. Klicka på ikonen **[!UICONTROL Ta bort från varumärkesportalen]** i verktygsfältet.
 1. Klicka på **[!UICONTROL Avpublicera]** i dialogrutan.
