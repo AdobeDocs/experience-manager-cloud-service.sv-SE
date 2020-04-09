@@ -3,7 +3,7 @@ title: Konfigurera molntjänsten AEM Assets med varumärkesportalen
 description: Konfigurera molntjänsten AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 8dc3270b355e9e855179f6b41602a3c28202a5b7
+source-git-commit: 9d37fdae4445d0ccbdd6f800fc3ad4cbeec971fe
 
 ---
 
@@ -204,8 +204,6 @@ Så här skapar du molntjänstkonfigurationen Brand Portal:
    En distributionsagent innehåller två köer:
    * En bearbetningskö för distribution av resurser till varumärkesportalen.
    * En felkö för resurserna där distributionen misslyckades.
-   Du kan testa enskilda köer eller den övergripande konfigurationen.
-
    ![](assets/test-bpconfig3.png)
 
 1. Kontrollera anslutningen mellan AEM Assets och Brand Portal genom att klicka på **[!UICONTROL Testa anslutning]**.
@@ -218,11 +216,20 @@ Så här skapar du molntjänstkonfigurationen Brand Portal:
    >
    >Undvik att inaktivera distributionsagenten eftersom det kan göra att distributionen av resurserna (i kö) misslyckas.
 
-Varumärksportal har konfigurerats med din AEM Assets-molninstans. Nu kan du:
+
+När varumärkesportalen har konfigurerats med din AEM Assets-molninstans kan du:
 
 * [Publicera resurser från AEM Assets till varumärkesportalen](publish-to-brand-portal.md)
 * [Publicera mappar från AEM Assets till varumärkesportalen](publish-to-brand-portal.md#publish-folders-to-brand-portal)
 * [Publicera samlingar från AEM Assets till varumärkesportalen](publish-to-brand-portal.md#publish-collections-to-brand-portal)
+
+Förutom ovanstående kan du även publicera metadatamatcheman, bildförinställningar, sökfaktorer och taggar från AEM Assets till Brand Portal.
+
+* [Publicera förinställningar, scheman och ansiktsuttryck på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
+* [Publicera taggar i varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
+
+
+Mer information finns i dokumentationen [till](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) varumärkesportalen.
 
 
 ## Distributionsloggar {#distribution-logs}
@@ -233,7 +240,7 @@ Vi har till exempel publicerat en resurs från AEM Assets till varumärkesportal
 
 1. Följ stegen (steg 1 till 4) som visas i **[!UICONTROL Testanslutning]** och navigera till distributionsagentsidan.
 
-1. Välj distributionsköns **[!UICONTROL ködistributionsagent0]** och klicka på **[!UICONTROL Loggar]** för att visa distributionsloggarna.
+1. Klicka på **[!UICONTROL Loggar]** för att visa distributionsloggarna. Bearbetnings- och felloggarna visas här.
 
    ![](assets/test-bpconfig5.png)
 
@@ -254,12 +261,9 @@ När resursen publiceras genereras följande begärande- och svarsloggar:
 
 I exemplet ovan utlöses ytterligare en begäran och ett svar. Systemet kunde inte hitta den överordnade mappen (alias Lägg till sökväg) i varumärkesportalen eftersom resursen publicerades för första gången. Därför utlöses en ytterligare begäran om att skapa en överordnad mapp med samma namn i varumärkesportalen där resursen publiceras.
 
-Om den överordnade mappen med samma namn finns (alias a) Lägg till sökväg) i varumärkesportalen aktiveras ingen ytterligare begäran.
-
 >[!NOTE]
+>>Ytterligare begäran genereras om den överordnade mappen inte finns i varumärkesportalen (i ovanstående exempel) eller om den överordnade mappen har ändrats i AEM Resurser.
 >
->Om du vill visa felloggarna markerar du **[!UICONTROL fel-queue-bpdistributagent0]** i distributionskön och klickar på **[!UICONTROL Loggar]**.
-
 
 ## Ytterligare information {#additional-information}
 
@@ -274,6 +278,7 @@ Gå till `/system/console/slingmetrics` för statistik om det distribuerade inne
    * sling: `mac_sync_distribution_duration`
    * sling: `mac_sync_enqueue_package_duration`
    * sling: `mac_sync_setup_request_duration`
+
 
 
 <!--
