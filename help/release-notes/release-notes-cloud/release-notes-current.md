@@ -2,7 +2,7 @@
 title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.4.0
 description: Versionsinformation om Experience Manager för 2020.4.0
 translation-type: tm+mt
-source-git-commit: 85079ad7ef660a3282540e2cad744fc6d65ad512
+source-git-commit: 49137535f4f6a6b62e697de6a7a9934f5b861bbc
 
 ---
 
@@ -32,9 +32,10 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
    * I dialogrutan för ombearbetning av resurser kan du välja en viss bearbetningsprofil och bestämma dig för att bearbeta om i undermappar.
    * [!DNL Dynamic Media]: Lagt till selektiv publiceringskonfiguration så att resurser automatiskt publiceras endast för säker förhandsvisning. Dessutom kan resurserna publiceras explicit till Experience Manager utan att publiceras till DMS7 för att distribueras offentligt.
 
-* Följande problem är åtgärdade:
-   * Anläggningar för tillgångsbearbetningsproblem.
-   * Korrigeringar i [!DNL Dynamic Media] konfiguration och publicering av resurser till [!DNL Dynamic Media] leveranstjänsten.
+### Felkorrigeringar {#assets-bug-fixes}
+
+* Anläggningar för tillgångsbearbetningsproblem.
+* Korrigeringar i [!DNL Dynamic Media] konfiguration och publicering av resurser till [!DNL Dynamic Media] leveranstjänsten.
 
 >[!MORELIKETHIS]
 >
