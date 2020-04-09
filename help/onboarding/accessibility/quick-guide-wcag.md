@@ -2,7 +2,7 @@
 title: En snabbguide till WCAG 2.1
 seo-title: En snabbguide till WCAG 2.1
 translation-type: tm+mt
-source-git-commit: 11f0509334ebe4456612789fd415a3099687dc64
+source-git-commit: 05643cf6498063c88a6d18f8e4acad5882714ba0
 
 ---
 
@@ -89,7 +89,7 @@ Denna förteckning är inte avsedd att vara uttömmande, utan innehåller en int
 
 [Nyheter i WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) ger värdefull information om Delta mellan WCAG och 2.0 och WCAG 2.1.
 
-[WCAG 2.0 och 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/#versions) klargör ytterligare status för deras relation.
+Avsnittet [WCAG 2.0 och 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/#versions) klargör ytterligare statusen för deras relation.
 
 ### Tekniker för WCAG 2.1 {#techniques-for-wcag}
 
