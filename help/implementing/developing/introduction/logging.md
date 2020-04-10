@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
+source-git-commit: 1b10561af9349059aaee97e4f42d2e339f629700
 
 ---
 
@@ -23,25 +23,22 @@ I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett
 >
 >Inloggning av AEM som molntjänst baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html) .
 
-## Global loggning {#global-logging}
+<!-- ## Global Logging {#global-logging}
 
-[Loggningskonfiguration](https://sling.apache.org/documentation/development/logging.html#user-configuration---osgi-based) för Apache Sling används för att konfigurera rotloggaren. Detta definierar de globala inställningarna för inloggning med AEM som en molntjänst:
+[Apache Sling Logging Configuration](https://sling.apache.org/documentation/development/logging.html#user-configuration---osgi-based) is used to configure the root logger. This defines the global settings for logging in AEM as a Cloud Service:
 
-* loggningsnivån
-* platsen för den centrala loggfilen
-* antalet versioner som ska behållas
-* versionsrotation; antingen maximal storlek eller ett tidsintervall
-* det format som ska användas när loggmeddelanden skrivs
+* the logging level
+* the location of the central log file
+* the number of versions to be kept
+* version rotation; either maximum size or a time interval
+* the format to be used when writing the log messages
+-->
 
 ## Loggare och skribenter för enskilda tjänster {#loggers-and-writers-for-individual-services}
 
 Förutom de globala loggningsinställningarna kan du med AEM som molntjänst konfigurera specifika inställningar för en enskild tjänst:
 
 * den specifika loggningsnivån
-* platsen för den enskilda loggfilen
-* antalet versioner som ska behållas
-* versionsrotation; antingen maxstorlek eller tidsintervall
-* det format som ska användas när loggmeddelanden skrivs
 * loggaren (OSGi-tjänsten som tillhandahåller loggmeddelanden)
 
 På så sätt kan du kanalisera loggmeddelanden för en enskild tjänst till en separat fil. Detta kan vara särskilt användbart under utveckling eller testning. om du till exempel behöver en högre loggnivå för en viss tjänst.
@@ -158,14 +155,13 @@ Du kan definiera ett eget par för loggare/skrivare:
 
    1. Ange loggfilen.
    1. Ange loggaren.
-   1. Konfigurera de andra parametrarna efter behov.
 
-1. Skapa en ny instans av Factory Configuration [Apache Sling Logging Writer Configuration](https://sling.apache.org/documentation/development/logging.html#user-configuration---osgi-based).
+<!-- 1. Create a new instance of the Factory Configuration [Apache Sling Logging Writer Configuration](https://sling.apache.org/documentation/development/logging.html#user-configuration---osgi-based).
 
-   1. Ange loggfilen - den måste matcha den som har angetts för loggaren.
-   1. Konfigurera de andra parametrarna efter behov.
+    1. Specify the Log File - this must match that specified for the Logger.
+    1. Configure the other parameters as required. -->
 
-### Skapa en anpassad loggfil {#create-a-custom-log-file}
+### Konfigurera loggning {#configure-logging}
 
 >[!NOTE]
 >
@@ -187,130 +183,172 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    >
    >Även om det inte är ett tekniskt krav är det tillrådligt att göra `<*identifier*>` unikt.
 
-1. Ange följande egenskaper för den här noden:
+<!-- 1. Set the following properties on this node:
 
-   * Namn: `org.apache.sling.commons.log.file`
+    * Name: `org.apache.sling.commons.log.file`
 
-      Typ: Sträng
+      Type: String
 
-      Värde: Ange loggfilen. till exempel `logs/myLogFile.log`
+      Value: specify the Log File; for example, `logs/myLogFile.log`
 
-   * Namn: `org.apache.sling.commons.log.names`
+    * Name: `org.apache.sling.commons.log.names`
 
-      Typ: Sträng[] (String + Multi)
+      Type: String[] (String + Multi)
 
-      Värde: Ange de OSGi-tjänster som loggningsmeddelanden ska användas för. till exempel alla följande:
+      Value: specify the OSGi services for which the Logger is to log messages; for example, all of the following:
 
-      * `org.apache.sling`
-      * `org.apache.felix`
-      * `com.day`
-   * Namn: `org.apache.sling.commons.log.level`
+        * `org.apache.sling`
+        * `org.apache.felix`
+        * `com.day`
 
-      Typ: Sträng
+    * Name: `org.apache.sling.commons.log.level`
 
-      Värde: Ange den loggnivå som krävs ( `debug`, `info`, `warn` eller `error`). till exempel `debug`
+      Type: String
 
-   * Konfigurera de andra parametrarna efter behov:
+      Value: specify the log level required ( `debug`, `info`, `warn` or `error`); for example `debug`
 
-      * Namn: `org.apache.sling.commons.log.pattern`
+    * Configure the other parameters as required:
 
-         Typ: `String`
+        * Name: `org.apache.sling.commons.log.pattern`
 
-         Värde: Ange loggmeddelandets mönster efter behov. till exempel
+          Type: `String`
 
-         `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
+          Value: specify the pattern of the log message as required; for example,
+
+          `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
+
    >[!NOTE]
    >
-   >`org.apache.sling.commons.log.pattern` stöder upp till sex argument.
+   >`org.apache.sling.commons.log.pattern` supports up to six arguments.
 
-   >{0} Tidsstämpeln av typen `java.util.Date`
    >
-   >{1}{2} the log marker the name of the current thread{3} the name of the logger{4} the log level{5} the log message
+   >
+   >{0} The timestamp of type `java.util.Date`
+   >{1} the log marker
+   >{2} the name of the current thread
+   >{3} the name of the logger
+   >{4} the log level
+   >{5} the log message
 
-   >Om logganropet innehåller en `Throwable` stackspårning läggs den till i meddelandet.
-
-   >[!CAUTION]
-   org.apache.sling.Commons.log.names måste ha ett värde.
-
-   >[!NOTE]
-   Loggskrivarsökvägarna är relativa till `crx-quickstart` platsen.
-   Därför har en loggfil angetts som:
-   `logs/thelog.log`
-
-   >skriver till:
-   `` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
-   Och en loggfil har angetts som:
-   `../logs/thelog.log`
-
-   >skriver till en katalog:
-   ` <*cq-installation-dir*>/logs/`
-&quot;(dvs. bredvid ` `&lt;*cq-installation-dir*>/`crx-quickstart/`)
-
-1. Det här steget är bara nödvändigt när ett nytt skrivprogram krävs (dvs. med en konfiguration som inte är densamma som standardskrivaren).
+   >
+   >
+   >If the log call includes a `Throwable` the stacktrace is appended to the message.
 
    >[!CAUTION]
-   En ny loggningsskrivarkonfiguration krävs bara när den befintliga standardinställningen inte är lämplig.
+   >
+   >org.apache.sling.commons.log.names must have a value.
 
-   >Om inget explicit skrivprogram är konfigurerat genereras automatiskt ett implicit skrivprogram baserat på standardvärdet.
-
-   Under `/apps/<*project-name*>/config`skapar du en nod för den nya `Apache Sling Logging Writer` konfigurationen:
-
-   * Namn: `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` (eftersom detta är ett skrivprogram)
-
-      Precis som med Logger `<*identifier*>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Exempel: `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
-
-   * Typ: `sling:OsgiConfig`
    >[!NOTE]
-   Även om det inte är ett tekniskt krav är det tillrådligt att göra `<*identifier*>` unikt.
+   >
+   >Log writer paths are relative to the `crx-quickstart` location.
+   >
+   >
+   >Therefore, a log file specified as:
+   >
+   >
+   >`logs/thelog.log`
 
-   Ange följande egenskaper för den här noden:
+   >
+   >
+   >writes to:
+   >
+   >
+   >`` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
+   >
+   >
+   >And a log file specified as:
+   >
+   >
+   >`../logs/thelog.log`
 
-   * Namn: `org.apache.sling.commons.log.file`
+   >
+   >
+   >writes to a directory:
+   >
+   >
+   >` <*cq-installation-dir*>/logs/`
+   >``(i.e. next to ` `<*cq-installation-dir*>/`crx-quickstart/`)
+ -->
 
-      Typ: `String`
+<!-- open question: see if we need to leave the above warning note in place, but adjust it so that it doesn't mention filenames -->
 
-      Värde: Ange loggfilen så att den överensstämmer med den fil som anges i loggboken.
+<!-- 1. This step is only necessary when a new Writer is required (i.e. with a configuration that is different to the default Writer).
 
-      i det här exemplet, `../logs/myLogFile.log`.
+   >[!CAUTION]
+   >
+   >A new Logging Writer Configuration is only required when the existing default is not suitable.
 
-   * Konfigurera de andra parametrarna efter behov:
+   >
+   >
+   >If no explicit Writer is configured the system will automatically generate an implicit Writer based on the default.
 
-      * Namn: `org.apache.sling.commons.log.file.number`
+   Under `/apps/<*project-name*>/config`, create a node for the new `Apache Sling Logging Writer` Configuration:
 
-         Typ: `Long`
+    * Name: `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` (as this is a Writer)
 
-         Värde: Ange hur många loggfiler du vill behålla. till exempel `5`
+      As with the Logger, `<*identifier*>` is replaced by free text that you (must) enter to identify the instance (you cannot omit this information). For example, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
-      * Namn: `org.apache.sling.commons.log.file.size`
+    * Type: `sling:OsgiConfig`
 
-         Typ: `String`
-
-         Värde: Ange vad som krävs för att kontrollera filens rotation efter storlek/datum. till exempel `'.'yyyy-MM-dd`
    >[!NOTE]
-   `org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
-   * maximal filstorlek
-   * ett tids-/datumschema
-   för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
-   * En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
-   * Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
-   Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
-   Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
-       | `&#39;.&#39;yyyy-MM`|Rotation i början av varje månad|
-    |—|—|
-    | `&#39;.&#39;yyyy-ww`|Rotation på den första dagen i varje vecka (beroende på språkområde). |
-       | `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt varje dag. |
-       | `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt och middag varje dag. |
-       | `&#39;.&#39;yyyy-MM-dd-HH`|Rotation överst i varje timme. |
-       | `&#39;.&#39;yyyy-MM-dd-HH-mm`|Rotation i början av varje minut. |
-     
-     Obs! När du anger tid/datum:
-       1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
-   Detta     gör du för att undvika att vissa tecken tolkas som mönsterbokstäver.
-       1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
-   
+   >
+   >Although not a technical requirement, it is advisable to make `<*identifier*>` unique.
 
-1. Läs den nya loggfilen med det verktyg du valt.
+   Set the following properties on this node:
 
-   Loggfilen som skapas i det här exemplet blir `../crx-quickstart/logs/myLogFile.log`.
+    * Name: `org.apache.sling.commons.log.file`
+
+      Type: `String`
+
+      Value: specify the Log File so that it matches the file specified in the Logger;
+
+      for this example, `../logs/myLogFile.log`.
+
+    * Configure the other parameters as required:
+
+        * Name: `org.apache.sling.commons.log.file.number`
+
+          Type: `Long`
+
+          Value: specify the number of log files you want kept; for example, `5`
+
+        * Name: `org.apache.sling.commons.log.file.size`
+
+          Type: `String`
+
+          Value: specify as required to control file rotation by size/date; for example, `'.'yyyy-MM-dd`
+
+   >[!NOTE]
+   >
+   >`org.apache.sling.commons.log.file.size` controls the rotation of the log file by setting either:
+   >
+   >* a maximum file size
+   >* a time/date schedule
+   >
+   >to indicate when a new file will be created (and the existing file renamed according to the name pattern).
+   >
+   >* A size limit can be specified with a number. If no size indicator is given, then this is taken as the number of bytes, or you can add one of the size indicators - `KB`, `MB`, or `GB` (case is ignored).
+   >* A time/date schedule can be specified as a `java.util.SimpleDateFormat` pattern. This defines the time period after which the file will be rotated; also the suffix appended to the rotated file (for identification).
+   >
+   >The default is '.'yyyy-MM-dd (for daily log rotation).
+   >
+   >So for example, at midnight of January 20th 2010 (or when the first log message after this occurs to be precise), ../logs/error.log will be renamed to ../logs/error.log.2010-01-20. Logging for the 21st of January will be output to (a new and empty) ../logs/error.log until it is rolled over at the next change of day.
+   >
+   >      | `'.'yyyy-MM` |Rotation at the beginning of each month |
+   >      |---|---|
+   >      | `'.'yyyy-ww` |Rotation at the first day of each week (depends on the locale). |
+   >      | `'.'yyyy-MM-dd` |Rotation at midnight each day. |
+   >      | `'.'yyyy-MM-dd-a` |Rotation at midnight and midday of each day. |
+   >      | `'.'yyyy-MM-dd-HH` |Rotation at the top of every hour. |
+   >      | `'.'yyyy-MM-dd-HH-mm` |Rotation at the beginning of every minute. |
+   >
+   >      Note: When specifying a time/date:
+   >      1. You should "escape" literal text within a pair of single quotes (' ');
+   >      this is to avoid certain characters being interpreted as pattern letters.
+   >      1. Only use characters allowed for a valid file name anywhere in the option.
+
+1. Read your new log file with your chosen tool.
+
+   The log file created by this example will be `../crx-quickstart/logs/myLogFile.log`. -->
 
 Felix Console innehåller även information om stöd för loggning på `../system/console/slinglog`. till exempel `https://localhost:4502/system/console/slinglog`.draw
