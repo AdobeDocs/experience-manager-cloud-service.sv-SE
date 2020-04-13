@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 1b10561af9349059aaee97e4f42d2e339f629700
+source-git-commit: 95511543b3393d422e2cfa23f9af246365d3a993
 
 ---
 
@@ -13,7 +13,7 @@ Med AEM som molntjänst kan du konfigurera:
 
 * globala parametrar för den centrala loggningstjänsten
 * begära dataloggning, en särskild loggningskonfiguration för begärandeinformation
-* särskilda inställningar för de enskilda tjänsterna, t.ex. en enskild loggfil och ett format för loggmeddelandena
+* särskilda inställningar för enskilda tjänster
 
 För lokal utveckling skrivs loggposterna till lokala filer i `/crx-quickstart/logs` mappen.
 
@@ -55,23 +55,27 @@ Dessa element är länkade med följande parametrar för de relevanta elementen:
 
    Definiera de tjänster som genererar meddelandena.
 
-* **Loggfil (loggningslogg)**
+<!-- * **Log File (Logging Logger)**
 
-   Definiera den fysiska filen för lagring av loggmeddelanden.
+  Define the physical file for storing the log messages.
 
-   Detta används för att länka en loggningslogg till en loggningsförfattare. Värdet måste vara identiskt med samma parameter i loggningsskrivarens konfiguration för att anslutningen ska kunna upprättas.
+  This is used to link a Logging Logger with a Logging Writer. The value must be identical to the same parameter in the Logging Writer configuration for the connection to be made.
 
-* **Loggfil (loggningsskrivare)**
+* **Log File (Logging Writer)**
 
-   Definiera den fysiska fil som loggmeddelandena ska skrivas till.
+  Define the physical file that the log messages will be written to.
 
-   Detta måste vara identiskt med samma parameter i loggningsskrivarkonfigurationen, annars görs ingen matchning. Om det inte finns någon matchning skapas ett implicit skrivprogram med standardkonfigurationen (daglig loggrotation).
+  This must be identical to the same parameter in the Logging Writer configuration, or the match will not be made. If there is no match then an implicit Writer will be created with default configuration (daily log rotation).
+-->
 
 ### Standardloggare och -författare {#standard-loggers-and-writers}
 
+> [!IMPORTANT]
+> Dessa kan anpassas vid behov, men standardkonfigurationen passar de flesta installationer. Om du behöver anpassa standardloggningskonfigurationerna måste du dock se till att du bara gör det i `dev` miljöer.
+
 Vissa loggare och skrivprogram ingår i en standard-AEM som en molninstallation.
 
-Det första är ett specialfall eftersom det styr både `request.log` och `access.log` filer:
+Det första är ett specialfall eftersom det styr både `request` - och `access` -loggarna:
 
 * Loggaren:
 
@@ -88,8 +92,6 @@ Det första är ett specialfall eftersom det styr både `request.log` och `acces
       (org.apache.sling.engine.impl.log.RequestLogger)
 
    * Skriver meddelanden till antingen `request.log` eller `access.log`.
-
-Dessa kan anpassas vid behov, men standardkonfigurationen passar de flesta installationer.
 
 De andra paren följer standardkonfigurationen:
 
@@ -114,6 +116,56 @@ De andra paren följer standardkonfigurationen:
    * Skriver `Warning` meddelanden till `../logs/error.log` för tjänsten `org.apache.pdfbox`.
 
 * Länkar inte till ett specifikt skrivprogram, så skapar och använder ett implicit skrivprogram med standardkonfiguration (daglig loggrotation).
+
+Förutom de tre typerna av loggar som finns på en AEM som en molntjänstinstans (`request`, `access` och `error` loggar) finns det en annan logg som används för felsökning av Dispatcher-problem. Mer information finns i [Felsöka konfigurationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/dispatcher/overview.html#debugging-apache-and-dispatcher-configuration)av Apache och Dispatcher.
+
+När det gäller god praxis rekommenderar vi att du anpassar dig till de konfigurationer som för närvarande finns i AEM som en molntjänstdeformattyp. Dessa anger olika logginställningar och nivåer för olika miljötyper:
+
+* för `local dev` och `dev` i miljöer ställer du in loggningsvärdet på nivån **DEBUG** på `error.log`
+* för `stage`anger du **WARN** -nivån till `error.log`
+* for `prod`, ställ in logger på **ERROR** -nivå på `error.log`
+
+Se exempel nedan för varje konfiguration:
+
+* `dev` miljöer:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
+    org.apache.sling.commons.log.file="logs/error.log"
+    org.apache.sling.commons.log.level="debug"
+    org.apache.sling.commons.log.names="[${package}]"
+    org.apache.sling.commons.log.additiv="true"
+    org.apache.sling.commons.log.pattern="${symbol_escape}{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}" />
+```
+
+
+* `stage` miljöer:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
+    org.apache.sling.commons.log.file="logs/error.log"
+    org.apache.sling.commons.log.level="warn"
+    org.apache.sling.commons.log.names="[${package}]"
+    org.apache.sling.commons.log.additiv="true"
+    org.apache.sling.commons.log.pattern="${symbol_escape}{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}" />
+```
+
+* `prod` miljöer:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
+    org.apache.sling.commons.log.file="logs/error.log"
+    org.apache.sling.commons.log.level="error"
+    org.apache.sling.commons.log.names="[${package}]"
+    org.apache.sling.commons.log.additiv="true"
+    org.apache.sling.commons.log.pattern="${symbol_escape}{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}" />
+```
 
 ## Ange loggnivå {#setting-the-log-level}
 
@@ -153,7 +205,6 @@ Du kan definiera ett eget par för loggare/skrivare:
 
 1. Skapa en ny instans av loggningskonfigurationen [för](https://sling.apache.org/documentation/development/logging.html#user-configuration---osgi-based)Apache Sling-loggning för fabrikskonfiguration.
 
-   1. Ange loggfilen.
    1. Ange loggaren.
 
 <!-- 1. Create a new instance of the Factory Configuration [Apache Sling Logging Writer Configuration](https://sling.apache.org/documentation/development/logging.html#user-configuration---osgi-based).
@@ -167,7 +218,7 @@ Du kan definiera ett eget par för loggare/skrivare:
 >
 >När du arbetar med Adobe Experience Manager finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster.
 
-I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du kan göra detta i databasen genom att:
+I vissa fall kanske du vill skapa en anpassad logg med en annan loggnivå. Du kan göra detta i databasen genom att:
 
 1. Om den inte redan finns skapar du en ny konfigurationsmapp ( `sling:Folder`) för projektet `/apps/<*project-name*>/config`.
 1. Under `/apps/<*project-name*>/config`skapar du en nod för den nya konfigurationen för loggningsloggning för Apache Sling:
