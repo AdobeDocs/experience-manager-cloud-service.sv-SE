@@ -3,7 +3,7 @@ title: Konfigurera molntjänsten AEM Assets med varumärkesportalen
 description: Konfigurera molntjänsten AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 4677a8771c5891b8c9846e0adb58025304a71bdd
+source-git-commit: f57731e4ab30af1bfcd93a12b2cf80e63efdac79
 
 ---
 
@@ -152,7 +152,7 @@ Kontrollera att du har utfört följande steg:
 
 >[!CAUTION]
 >
->Skapa endast en giltig IMS-konfiguration. Skapa inte flera IMS-konfigurationer.
+>Skapa endast en giltig IMS-konfiguration.
 >
 > Kontrollera att konfigurationen är felfri. Om konfigurationen inte är felfri tar du bort den och skapar en ny felfri konfiguration.
 
