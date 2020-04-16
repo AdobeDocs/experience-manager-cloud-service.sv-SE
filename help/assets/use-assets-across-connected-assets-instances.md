@@ -3,7 +3,7 @@ title: Använd Connected Assets när du vill dela DAM-resurser i redigeringsarbe
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager Site-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 7524f6146c33932677b6c8af49d5fe2638a5c02a
 
 ---
 
@@ -91,9 +91,9 @@ Följ dessa steg när du vill konfigurera anslutningar för Connected Assets och
    1. In the Properties wizard, change the **[!UICONTROL Path]** fields as the following mappings to update their regular expressions to exclude the mount point **[!UICONTROL connectedassets]**.
    | Före | Efter |
    |---|---|
-   | /content/dam(/((?!/subassets).)*/)renditions/original | /content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original |
-   | /content/dam(/.*/)renditions/original | /content/dam(/((?!connectedassets).)*/)renditions/original |
-   | /content/dam(/.*)/jcr:content/metadata | /content/dam(/((?!connectedassets).)*/)jcr:content/metadata |
+   | `/content/dam(/((?!/subassets).)*/)renditions/original` | `/content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original` |
+   | `/content/dam(/.*/)renditions/original` | `/content/dam(/((?!connectedassets).)*/)renditions/original` |
+   | `/content/dam(/.*)/jcr:content/metadata` | `/content/dam(/((?!connectedassets).)*/)jcr:content/metadata` |
 
    >[!NOTE]
    >
