@@ -2,7 +2,7 @@
 title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.4.0
 description: Versionsinformation om Experience Manager för 2020.4.0
 translation-type: tm+mt
-source-git-commit: 2258cc72d10fa85d89832b63016ccb393f453bff
+source-git-commit: 98de3a6674aaef5228e96e0bf72e67de861f858e
 
 ---
 
@@ -20,7 +20,7 @@ Releasedatum för [!DNL Experience Manager] som molntjänst 2020.4.0 är 9 april
 Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experience Manager Assets] och [!DNL Dynamic Media] i den aktuella versionen.
 
 * [Varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) stöder användningsexemplen för resursdistribution för Experience Manager Assets. [!DNL Brand Portal] hjälper organisationer att tillgodose sina marknadsföringsbehov genom att på ett säkert sätt distribuera godkänt varumärke och produktmaterial till externa byråer, partners, interna team och återförsäljare för nedladdning.
-   * [!DNL Brand Portal] konfigurationen slutförs via [!DNL Adobe I/O] konsolen.
+   * [!DNL Brand Portal] konfigurationen slutförs via [!DNL Adobe I/O] konsolen. Se [Konfigurera varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
    * Resurskälla i [!DNL Brand Portal] stöds ännu inte [!DNL Experience Manager] som molntjänst.
 
 * [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) v2.0 fungerar med [!DNL Experience Manager] en molntjänst. [!DNL Adobe Asset Link] effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll genom att ansluta [!DNL Experience Manager Assets] till [!DNL Creative Cloud] datorprogram [!DNL Adobe Photoshop][!DNL Adobe Illustrator]och [!DNL Adobe InDesign] via [!DNL Asset Link] apppanelen.
@@ -29,7 +29,13 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 
 * Användare kan konfigurera [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) så att de startar automatiskt i användargränssnittet för [!UICONTROL mappegenskaper] för de specifika mapphierarkierna.
    * Mappens [!UICONTROL egenskapsgränssnitt] har förenklats med den nya fliken [!UICONTROL Resursbearbetning] som innehåller metadataprofil, bearbetningsprofil och den nya arbetsflödeskonfigurationen för autostart.
-   * I dialogrutan för ombearbetning av resurser kan du välja en viss bearbetningsprofil och bestämma dig för att bearbeta om i undermappar.
+
+      ![Bearbetningsprofiler kan enkelt tillämpas på mappar och allt material som överförs till mappar bearbetas med dessa profiler](/help/assets/assets/asset-processing-folder-properties.png)
+
+   * Med alternativet Återbearbetning av resurser kan du välja en specifik bearbetningsprofil för att bearbeta om användarvalda resurser i undermappar.
+
+      ![Bearbeta markerade resurser med en viss bearbetningsprofil](/help/assets/assets/fpo-existing-asset-reprocess.gif)
+
    * [!DNL Dynamic Media]: Lagt till selektiv publiceringskonfiguration så att resurser automatiskt publiceras endast för säker förhandsvisning. Dessutom kan resurserna publiceras explicit till Experience Manager utan att publiceras till DMS7 för att distribueras offentligt.
 
 ### Felkorrigeringar {#assets-bug-fixes}
