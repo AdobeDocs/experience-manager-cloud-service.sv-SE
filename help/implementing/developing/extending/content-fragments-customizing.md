@@ -2,7 +2,7 @@
 title: Anpassa och utöka innehållsfragment
 description: Ett innehållsfragment utökar en standardresurs.
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 5f266358ed824d3783abb9ba591789ba47d7a521
 
 ---
 
@@ -292,11 +292,9 @@ Det bör noteras att
 
 * Uppgifter som kan kräva ytterligare arbete:
 
-   * När du skapar/tar bort nya element uppdateras inte datastrukturen för enkla fragment (baserat på mallen **Enkelt fragment** ).
-
    * Skapa nya varianter från `ContentFragment` för att uppdatera datastrukturen.
 
-   * Om du tar bort befintliga varianter uppdateras inte datastrukturen.
+   * Om du tar bort befintliga variationer genom ett element med `ContentElement.removeVariation()`, uppdateras inte de globala datastrukturer som är tilldelade variationen. Om du vill vara säker på att dessa datastrukturer är synkroniserade använder du dem `ContentFragment.removeVariation()` istället, vilket tar bort en global variation.
 
 ## API:t för hantering av innehållsfragment - klientsidan {#the-content-fragment-management-api-client-side}
 
@@ -314,84 +312,18 @@ Se följande:
 
 ## Redigera sessioner {#edit-sessions}
 
-En redigeringssession startas när användaren öppnar ett innehållsfragment på någon av redigeringssidorna. Redigeringssessionen avslutas när användaren lämnar redigeraren genom att välja **Spara** eller **Avbryt**.
+>[!CAUTION]
+>
+>Ta hänsyn till den här bakgrundsinformationen. Du ska inte ändra någonting här (eftersom det är markerat som ett *privat område* i databasen), men det kan i vissa fall hjälpa att förstå hur saker och ting fungerar under huven.
 
-### Krav {#requirements}
+Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), är av avgörande betydelse. Eftersom sådana atomiska redigeringsfunktioner för flera vyer inte är ett typiskt AEM-koncept använder innehållsfragment det som kallas *redigeringssession*.
 
-Krav för att styra en redigeringssession är:
+En redigeringssession startas när användaren öppnar ett innehållsfragment i redigeraren. Redigeringssessionen avslutas när användaren lämnar redigeraren genom att välja **Spara** eller **Avbryt**.
 
-* Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), bör vara atomiskt.
+Tekniskt sett görs alla redigeringar av *live* -innehåll, precis som med all annan AEM-redigering. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** görs ingenting specifikt eftersom all redigering utfördes på *direktsänt* innehåll, vilket innebär att alla ändringar redan bevaras. Om du klickar på **Spara** utlöses även bakgrundsbearbetning (som att skapa fulltextsökningsinformation och/eller hantera blandade medieresurser).
 
-* Redigeringen bör också vara *transaktionsstyrd*. i slutet av redigeringssessionen måste ändringarna antingen verkställas (sparas) eller återställas (avbrytas).
-
-* Kantlådor ska hanteras på rätt sätt. Detta kan exempelvis gälla när användaren lämnar sidan genom att ange en URL manuellt eller med global navigering.
-
-* Det bör finnas en periodisk autosparfunktion (var x:e minut) för att förhindra dataförlust.
-
-* Om ett innehållsfragment redigeras av två användare samtidigt bör de inte skriva över varandras ändringar.
-
-<!--
-#### Processes {#processes}
-
-The processes involved are:
-
-* Starting a session
-
-  * A new version of the content fragment is created.
-
-  * Auto save is started.
-
-  * Cookies are set; these define the currently edited fragment and that there is an edit session open.
-
-* Finishing a session
-
-  * Auto save is stopped.
-
-  * Upon commit:
-
-    * The last modified information is updated.
-
-    * Cookies are removed.
-
-  * Upon rollback:
-
-    * The version of the content fragment that was created when the edit session was started is restored.
-
-    * Cookies are removed.
-
-* Editing
-
-  * All changes (auto save included) are done on the active content fragment - not in a separated, protected area.
-
-  * Therefore, those changes are reflected immediately on AEM pages that reference the respective content fragment
-
-#### Actions {#actions}
-
-The possible actions are:
-
-* Entering a page
-
-  * Check if an editing session is already present; by checking the respective cookie.
-
-    * If one exists, verify that the editing session was started for the content fragment that is currently being edited
-
-      * If the current fragment, reestablish the session.
-
-      * If not, try to cancel editing for the previously edited content fragment and remove cookies (no editing session present afterwards).
-
-    * If no edit session exists, wait for the first change made by the user (see below).
-
-  * Check if the content fragment is already referenced on a page and display appropriate information if so.
-
-* Content change
-
-  * Whenever the user changes content and there is no edit session present, a new edit session is created (see [Starting a session](#processes)).
-
--->
-
-* Lämna en sida
-
-   * Om det finns en redigeringssession och ändringarna inte har sparats, visas en modal bekräftelsedialogruta som meddelar användaren om potentiellt förlorat innehåll och låter dem stanna kvar på sidan.
+Det finns vissa säkerhetsåtgärder för kantfall. Om användaren till exempel försöker lämna redigeraren utan att spara eller avbryta redigeringssessionen. Det går även att spara data med jämna mellanrum för att förhindra dataförlust.
+Observera att två användare kan redigera samma innehållsfragment samtidigt och därför skriva över varandras ändringar. För att förhindra detta måste innehållsfragmentet låsas genom att använda DAM-administratörens *utcheckningsåtgärd* för fragmentet.
 
 ## Exempel {#examples}
 
@@ -401,7 +333,7 @@ För att uppnå detta kan du anpassa resursen som representerar API:t till:
 
 `com.adobe.cq.dam.cfm.ContentFragment`
 
-Exempel:
+Till exempel:
 
 ```java
 // first, get the resource
@@ -417,7 +349,7 @@ if (fragmentResource != null) {
 
 Om du vill skapa ett nytt innehållsfragment programmatiskt måste du använda ett`FragmentTemplate` anpassat från en modell- eller mallresurs.
 
-Exempel:
+Till exempel:
 
 ```java
 Resource templateOrModelRsc = resourceResolver.getResource("...");
