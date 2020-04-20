@@ -1,8 +1,8 @@
 ---
 sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
-translation-type: ht
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+translation-type: tm+mt
+source-git-commit: 7bd9c97d4e8c46aa8644560ecbddf24df96325e4
 
 ---
 
@@ -32,6 +32,8 @@ source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
    + [Förstå testresultat](/help/implementing/developing/introduction/understand-test-results.md)
 + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
    + [Utöka Experience Fragments](developing/extending/experience-fragments.md)
+   + [Anpassa och utöka innehållsfragment](developing/extending/content-fragments-customizing.md)
+   + [Innehållsfragment Konfigurera komponenter för återgivning](developing/extending/content-fragments-configuring-components-rendering.md)
    + [Konfigurera sökformulär](developing/extending/search-forms.md)
 + Distribuera till AEM as a Cloud Service {#deploying}
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
