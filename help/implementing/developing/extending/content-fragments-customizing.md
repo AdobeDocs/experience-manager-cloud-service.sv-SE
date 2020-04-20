@@ -2,7 +2,7 @@
 title: Anpassa och utöka innehållsfragment
 description: Ett innehållsfragment utökar en standardresurs.
 translation-type: tm+mt
-source-git-commit: 5f266358ed824d3783abb9ba591789ba47d7a521
+source-git-commit: a5d6a072dfd8df887309f56ad4a61b6b38b32fa7
 
 ---
 
@@ -40,7 +40,7 @@ Beroende på typen av fragment används även modeller eller mallen **Enkelt fra
    * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
    >[!NOTE]
    >
-   >För att du ska kunna visa/återge ett innehållsfragment måste ditt konto ha läsbehörighet för modellen.
+   >För att du ska kunna visa/återge ett innehållsfragment måste ditt konto ha `read` behörighet för modellen.
 
    >[!CAUTION]
    >
@@ -320,7 +320,7 @@ Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HT
 
 En redigeringssession startas när användaren öppnar ett innehållsfragment i redigeraren. Redigeringssessionen avslutas när användaren lämnar redigeraren genom att välja **Spara** eller **Avbryt**.
 
-Tekniskt sett görs alla redigeringar av *live* -innehåll, precis som med all annan AEM-redigering. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** görs ingenting specifikt eftersom all redigering utfördes på *direktsänt* innehåll, vilket innebär att alla ändringar redan bevaras. Om du klickar på **Spara** utlöses även bakgrundsbearbetning (som att skapa fulltextsökningsinformation och/eller hantera blandade medieresurser).
+Tekniskt sett görs alla redigeringar av *live* -innehåll, precis som med all annan AEM-redigering. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** görs inget specifikt eftersom all redigering utfördes på *direktsänt* innehåll, vilket innebär att alla ändringar redan bevaras. Om du klickar på **Spara** utlöses även bakgrundsbearbetning (som att skapa fulltextsökningsinformation och/eller hantera blandade medieresurser).
 
 Det finns vissa säkerhetsåtgärder för kantfall. Om användaren till exempel försöker lämna redigeraren utan att spara eller avbryta redigeringssessionen. Det går även att spara data med jämna mellanrum för att förhindra dataförlust.
 Observera att två användare kan redigera samma innehållsfragment samtidigt och därför skriva över varandras ändringar. För att förhindra detta måste innehållsfragmentet låsas genom att använda DAM-administratörens *utcheckningsåtgärd* för fragmentet.
