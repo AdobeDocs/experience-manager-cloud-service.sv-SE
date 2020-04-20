@@ -1,7 +1,7 @@
 ---
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 8dc3270b355e9e855179f6b41602a3c28202a5b7
 
 ---
@@ -53,7 +53,7 @@ source-git-commit: 8dc3270b355e9e855179f6b41602a3c28202a5b7
    + [MediaLibrary-funktioner](medialibrary.md)
    + [Importera och exportera metadata för material](metadata-import-export.md)
 + Dela och distribuera resurser {#brand-portal}
-   + [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
+   + [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
    + [Publicera resurser på varumärkesportalen](publish-to-brand-portal.md)
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
@@ -96,7 +96,7 @@ source-git-commit: 8dc3270b355e9e855179f6b41602a3c28202a5b7
    + [Leverera optimerade bilder för en responsiv webbplats](dynamic-media/responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](dynamic-media/previewing-assets.md)
    + [Lägga till Dynamic Media-resurser på sidor](dynamic-media/adding-dynamic-media-assets-to-pages.md)
-   + [Bädda in läsare för Dynamic Video  eller -bilder på en webbsida](dynamic-media/embed-code.md)
+   + [Bädda in läsare för Dynamic-video eller -bilder på en webbsida](dynamic-media/embed-code.md)
    + [Länka URL till ett webbprogram](dynamic-media/linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](dynamic-media/using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](dynamic-media/publishing-dynamicmedia-assets.md)
