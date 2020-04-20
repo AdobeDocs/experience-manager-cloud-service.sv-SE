@@ -2,7 +2,7 @@
 title: Adobe Experience Manager som ett molntjänstinnehåll Stöd för innehållsfragment i Assets HTTP API
 description: Lär dig mer om Adobe Experience Manager som stöd för molntjänstinnehållsfragment i Assets HTTP API.
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: a5d6a072dfd8df887309f56ad4a61b6b38b32fa7
 
 ---
 
@@ -32,6 +32,7 @@ Exempelvis kräver Single Page Applications (SPA), ramverksbaserade eller anpass
 Detta är när REST API:t för resurser kan användas. Med det kan utvecklare komma åt resurser (till exempel bilder och innehållsfragment) direkt, utan att först behöva bädda in dem på en sida, och leverera innehållet i serialiserat JSON-format.
 
 >[!NOTE]
+>
 >Det går inte att anpassa JSON-utdata från Assets REST API.
 
 Med Assets REST API kan utvecklare ändra innehåll genom att skapa nya, uppdatera eller ta bort befintliga resurser, innehållsfragment och mappar.
@@ -261,7 +262,7 @@ Användning sker via:
 
 `GET /{cfParentPath}/{cfName}.json`
 
-Exempel:
+Till exempel:
 
 `http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
@@ -386,7 +387,7 @@ Här finns detaljerade API-referenser:
 
    * [Tillgängliga funktioner](/help/assets/mac-api-assets.md#available-features)
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
 Mer information finns i:
 
