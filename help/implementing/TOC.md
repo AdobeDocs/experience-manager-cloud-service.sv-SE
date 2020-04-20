@@ -1,7 +1,7 @@
 ---
-sub-product: Implementera för AEM som en molntjänst
-user-guide-title: Implementera för AEM som en molntjänst
-translation-type: tm+mt
+sub-product: Implementera för AEM as a Cloud Service
+user-guide-title: Implementera för AEM as a Cloud Service
+translation-type: ht
 source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ---
@@ -37,4 +37,4 @@ source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
 + Dispatcher i molnet {#dispatcher}
    + [Dispatcher i molnet](dispatcher/overview.md)
-   + [Innehållsleverans i AEM som molntjänst](dispatcher/content-delivery.md)
+   + [Innehållsleverans i AEM as a Cloud Service](dispatcher/content-delivery.md)
