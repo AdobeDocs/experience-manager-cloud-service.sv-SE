@@ -2,7 +2,7 @@
 title: Innehållsfragment Konfigurera komponenter för återgivning
 description: Innehållsfragment Konfigurera komponenter för återgivning
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: a5d6a072dfd8df887309f56ad4a61b6b38b32fa7
 
 ---
 
@@ -18,7 +18,7 @@ Denna information krävs när
 * Du måste implementera en egen Content Fragment-baserad komponent,
 * Och måste utnyttja de avancerade tjänsterna.
 
-Vi rekommenderar dock att du använder kärnkomponenterna.
+Vi rekommenderar att du använder kärnkomponenterna.
 
 >[!CAUTION]
 >
@@ -56,7 +56,7 @@ Konfigurationen måste bindas till OSGi-tjänstens **Content Fragment Component 
 >
 >Mer information finns i [OSGi Configuration](/help/implementing/deploying/overview.md#osgi-configuration) .
 
-Exempel:
+Till exempel:
 
 ![Konfiguration av OSGi Configuration Content Fragment Component](assets/cf-component-configuration-osgi.png)
 
