@@ -1,13 +1,13 @@
 ---
-title: Innehållsfragment - Ta bort överväganden
-description: Innehållsfragment - Ta bort överväganden
+title: Innehållsfragment – ta bort överväganden
+description: Innehållsfragment – ta bort överväganden
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: bb3d90def8855e8dffdc584c0805da120faf7b12
 
 ---
 
 
-# Innehållsfragment - Ta bort överväganden{#content-fragments-delete-considerations}
+# Innehållsfragment – ta bort överväganden{#content-fragments-delete-considerations}
 
 ## Behörigheter - ta bort eller inte ta bort {#permissions-delete-or-not-delete}
 
@@ -25,11 +25,11 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
    Den grundläggande åtgärden i redigeraren för innehållsfragment kräver att sådana tillfälliga underelement kan tas bort. t.ex. vid manipulering av variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
    * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment - **utan att kunna ta bort ett helt fragment**.
-   * **Behörigheter**: Se Behörigheter krävs endast för redigeringsfunktionen. <!-- See [Permissions Required for Editor Functionality Only](/help/assets/content-fragments-delete.md#permissions-required-for-editor-functionality-only). -->
+   * **Behörigheter**: Se [Behörigheter krävs endast](#permissions-required-for-editor-functionality-only)för redigeringsfunktionen.
 
 >[!NOTE]
 >
->När en användare inte har någon borttagningsbehörighet fungerar redigeraren för innehållsfragment i *skrivskyddat* läge. <!-- When a user does not have any [Delete](/help/sites-administering/security.md#actions) permissions, the Content Fragment editor operates in *read-only* mode. -->
+>When a user does not have any Delete permissions, the Content Fragment editor operates in *read-only* mode. <!-- When a user does not have any [Delete](/help/sites-administering/security.md#actions) permissions, the Content Fragment editor operates in *read-only* mode. -->
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 ## Behörigheter krävs endast för redigeringsfunktionen {#permissions-required-for-editor-functionality-only}
 
-För användare som behöver redigera/uppdatera ett innehållsfragment, **utan att tillåta dem att ta bort ett helt fragment**, måste specifika behörigheter tilldelas eftersom grundläggande åtgärder i innehållsfragmentredigeraren kräver att tillfälliga underelement kan tas bort.
+Användare som behöver redigera/uppdatera ett innehållsfragment, **utan att kunna ta bort ett helt fragment**, måste tilldelas specifika behörigheter, eftersom grundläggande användning av redigeraren för innehållsfragment kräver att tillfälliga underelement kan tas bort.
 
 t.ex. vid manipulering av variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
