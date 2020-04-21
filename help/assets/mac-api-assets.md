@@ -3,7 +3,7 @@ title: HTTP API för Assets
 description: Lär dig mer om implementering, datamodell och funktioner i Assets HTTP API. Använd Assets HTTP API för att utföra olika åtgärder runt resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 7fe5761e14288349bbdce9d2c4e9e89e8d0a9e48
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 ## Översikt {#overview}
 
-Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för resurser, inklusive binära, metadata, återgivningar och kommentarer, tillsammans med strukturerat innehåll med hjälp av AEM Content Fragments. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](content-fragments/content-fragments.md).
+Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för resurser, inklusive binära, metadata, återgivningar och kommentarer, tillsammans med strukturerat innehåll med hjälp av AEM Content Fragments. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](assets-api-content-fragments.md).
 
 Så här kommer du åt API:
 
@@ -31,13 +31,13 @@ Efter [!UICONTROL Av-tid]är en resurs och dess återgivningar inte tillgänglig
 
 Ett [innehållsfragment](content-fragments/content-fragments.md) är en särskild typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard` resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
 
-Mer information finns i Stöd för [innehållsfragment i AEM Assets HTTP API](content-fragments/content-fragments.md).
+Mer information finns i Stöd för [innehållsfragment i AEM Assets HTTP API](assets-api-content-fragments.md).
 
 ## Datamodell {#data-model}
 
 Resursens HTTP-API visar två huvudelement, mappar och resurser (för standardresurser).
 
-Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller](content-fragments/content-fragments.md) för innehållsfragment.
+Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller](assets-api-content-fragments.md#content-models-and-content-fragments) för innehållsfragment.
 
 ### Mappar {#folders}
 
@@ -66,7 +66,7 @@ I AEM innehåller en resurs följande element:
 * Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF eller InDesign.
 * Valfria kommentarer
 
-Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i AEM Assets HTTP API](content-fragments/content-fragments.md).
+Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i AEM Assets HTTP API](assets-api-content-fragments.md).
 
 I AEM har en mapp följande komponenter:
 
