@@ -2,7 +2,7 @@
 title: Arbeta med innehållsfragment
 description: Lär dig hur innehållsfragment gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: bb3d90def8855e8dffdc584c0805da120faf7b12
 
 ---
 
@@ -143,7 +143,7 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Är enkelt tillgängliga för användning (som mellanliggande innehåll) när du använder fragmentet på en sida.
    * Mer information finns i [Associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) .
 
-* Resurser som är tillgängliga från **Assets-webbläsaren** i sidredigeraren
+* Resurser som är tillgängliga från **resursläsaren** i sidredigeraren
 
    * Möjliggör full flexibilitet för val av en resurs.
    * Möjliggör viss flexibilitet för placering.
@@ -161,7 +161,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * För enkla fragment:
 
       * Innehållet finns i ett (eller flera) textfält med flera rader eller element.
-      * Elementen definieras i fragmentmallen (kan inte definieras när fragmentet redigeras, se Mallar för innehållsfragment). <!--    * The elements are defined in the fragment template (cannot be defined when authoring the fragment, see [Content Fragment Templates](/help/sites-developing/content-fragment-templates.md)). -->
+      * Elementen definieras i fragmentmallen (kan inte definieras när fragmentet redigeras).
 
 * **Fragmentera stycken**
 
@@ -169,7 +169,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
       * avgränsat med lodräta blanksteg (vagnretur)
       * i flerradiga textelement, i enkla eller strukturerade fragment
-   * I lägena [RTF](/help/assets/content-fragments/content-fragments-variations.md#rich-text) och [Märken](/help/assets/content-fragments/content-fragments-variations.md#markdown) kan ett stycke formateras som en rubrik. I så fall hör det ihop med ett stycke.
+   * I lägena [RTF](/help/assets/content-fragments/content-fragments-variations.md#rich-text) och [Markdown-kod](/help/assets/content-fragments/content-fragments-variations.md#markdown) kan ett stycke formateras som en rubrik, och då utgör det och det efterföljande stycket en enhet.
 
    * Aktivera innehållskontroll vid sidredigering.
 
@@ -263,8 +263,8 @@ Om du vill skapa, redigera och använda innehållsfragment behöver du också:
 * **Fragmentmall**
 
    * Krävs för att [skapa ett enkelt fragment](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments).
-   * utvecklas vanligen under genomförandet av projektet, kan inte skapas vid redigering. <!--  * Usually [developed during project implementation](/help/sites-developing/content-fragment-templates.md); cannot be created when authoring. -->
-   * Definierar grundläggande egenskaper för ett enkelt fragment (rubrik, antal textelement, taggdefinitioner).
+   * Utvecklas vanligen under projektimplementeringen och kan inte skapas vid redigering.
+   * Definierar grundläggande egenskaper för ett enkelt fragment (titel, antal textelement, taggdefinitioner).
    * Malldefinitioner kräver en titel och ett textelement. allt annat är valfritt. Mallen definierar ett minimalt omfång för fragmentet och standardinnehållet om tillämpligt. Författare kan senare utöka ett fragment utöver det som definieras i mallen.
 
 * **Innehållsfragmentkomponent**
