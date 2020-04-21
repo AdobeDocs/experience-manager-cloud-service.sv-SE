@@ -2,7 +2,7 @@
 title: Hantera innehållsfragment
 description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: 42271e25dc9f0a29962c4c9c587af29319f1f9df
 
 ---
 
@@ -24,13 +24,7 @@ Content Fragments lagras som **Assets**, så hanteras främst från **Assets** C
 
 >[!NOTE]
 >
->Mer information om mallar finns i Utveckla innehållsfragment. används för enkla innehållsfragment.
-
-<!--
->[!NOTE]
->
->See [Developing Content Fragments](/help/sites-developing/customizing-content-fragments.md) for further information on templates; used for simple content fragments.
--->
+>Mer information om mallar finns i [Utveckla innehållsfragment](/help/implementing/developing/extending/content-fragments-customizing.md) . används för enkla innehållsfragment.
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
@@ -42,7 +36,7 @@ Metoden för att skapa ett innehållsfragment är (i princip) densamma för båd
 
    * Detta kan vara en:
 
-      * Mall - till exempel **Enkelt fragment**<!-- [Template](/help/sites-developing/content-fragment-templates.md) - for example **Simple Fragment** -->
+      * Template - for example **Simple Fragment**
 
       * [Modell](/help/assets/content-fragments/content-fragments-models.md) - används för att skapa ett fragment som kräver strukturerat innehåll. till exempel **flygplatsmodellen**
    * Alla tillgängliga mallar och modeller visas.
@@ -50,7 +44,7 @@ Metoden för att skapa ett innehållsfragment är (i princip) densamma för båd
 
    ![fragmentbas](assets/cfm-managing-01.png)
 
-4. Ange följande i **egenskapssteget** :
+4. Ange följande i steget **Egenskaper**:
 
    * **Grundläggande**
 
@@ -72,7 +66,7 @@ Metoden för att skapa ett innehållsfragment är (i princip) densamma för båd
          Obligatoriskt. hämtas automatiskt från titeln, men kan uppdateras.
 
 
-5. Välj **Skapa** för att slutföra åtgärden och välj sedan **Öppna** fragmentet för redigering eller gå tillbaka till konsolen med **Klar**.
+5. Välj **Skapa** för att slutföra åtgärden och **Öppna** sedan fragmentet för redigering eller gå tillbaka till konsolen med **Klar**.
 
 ## Åtgärder för ett innehållsfragment {#actions-for-a-content-fragment}
 
@@ -120,11 +114,9 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 Så här öppnar du fragmentet för redigering:
 
-<!--
 >[!CAUTION]
 >
->To edit a content fragment you need [the appropriate permissions](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Please contact your system administrator if you are experiencing issues.
--->
+>Om du vill redigera ett innehållsfragment behöver du [rätt behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
 >[!CAUTION]
 >
@@ -142,9 +134,11 @@ Så här öppnar du fragmentet för redigering:
    >[!NOTE]
    >
    >1. Ett meddelande visas när fragmentet redan refereras på en innehållssida.
-   >
-   >
-   >2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
+      >
+      >
+      >
+
+   2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
 
 
 3. Navigera genom de tre lägena med ikonerna på sidopanelen:
@@ -160,7 +154,7 @@ Så här öppnar du fragmentet för redigering:
 
    >[!NOTE]
    >
-   >Både **Spara** och **Avbryt** avslutar redigeraren. Mer information om hur båda alternativen fungerar för innehållsfragment finns i [Spara, Avbryt och Versioner](#save-cancel-and-versions) .
+   >Både **Spara** och **Avbryt** avslutar redigeraren. Mer information om hur båda alternativen fungerar för innehållsfragment finns i [Spara, Avbryt och Versioner](#save-cancel-and-versions).
 
 ## Spara, Avbryt och Versioner {#save-cancel-and-versions}
 
@@ -176,13 +170,7 @@ Redigeraren har två alternativ:
 
    >[!CAUTION]
    >
-   >Om du vill redigera ett innehållsfragment måste du ha rätt behörighet. Kontakta systemadministratören om du har problem.
-
-   <!-- 
-  >[!CAUTION]
-  >
-  >To edit a content fragment you need [the appropriate permissions](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Please contact your system administrator if you are experiencing issues. 
-  -->
+   >Om du vill redigera ett innehållsfragment behöver du [rätt behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
    >[!NOTE]
    >
@@ -265,7 +253,7 @@ Anteckningar (för innehållsfragment) är:
 
 
 
-Exempel:
+Till exempel:
 
 ![tidslinje](assets/cfm-managing-05.png)
 
@@ -334,4 +322,4 @@ Så här tar du bort ett fragment:
 4. Bekräfta åtgärden **Ta bort** .
 
    >[!CAUTION]
-   Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med en **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponent fragment, tas bort från alla innehållssidor.
+   Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
