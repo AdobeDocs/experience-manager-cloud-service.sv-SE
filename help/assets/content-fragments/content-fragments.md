@@ -2,7 +2,7 @@
 title: Arbeta med innehållsfragment
 description: Lär dig hur innehållsfragment gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
-source-git-commit: f5dd39bd7379d56c4f7b5e180d35892ba1dd4da1
+source-git-commit: ac071eb00660a06ee3e0502a381c35adece6c87a
 
 ---
 
@@ -93,11 +93,19 @@ Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men in
 
 Innehållsfragment kan antingen vara:
 
-* Enkla fragmentDessa har ingen fördefinierad struktur. De innehåller bara text och bilder.
-De baseras på mallen **Enkelt fragment** .
+* Enkla fragment
 
-* Fragment som innehåller strukturerat innehållDessa baseras på en [innehållsfragmentmodell](/help/assets/content-fragments/content-fragments-models.md), som fördefinierar en struktur för det resulterande fragmentet.
-Dessa kan också användas för att realisera innehållstjänster med JSON-exporteraren.
+   * Dessa har ingen fördefinierad struktur.
+
+   * De innehåller bara text och bilder.
+
+   * De baseras på mallen **Enkelt fragment** .
+
+* Fragment som innehåller strukturerat innehåll
+
+   * Dessa baseras på en [Content Fragment Model](/help/assets/content-fragments/content-fragments-models.md), som fördefinierar en struktur för det resulterande fragmentet.
+
+   * Dessa kan också användas för att realisera innehållstjänster med JSON-exporteraren.
 
 ## Innehållstyp {#content-type}
 
