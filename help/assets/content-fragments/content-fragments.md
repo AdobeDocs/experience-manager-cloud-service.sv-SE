@@ -2,7 +2,7 @@
 title: Arbeta med innehållsfragment
 description: Lär dig hur innehållsfragment gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
-source-git-commit: bb3d90def8855e8dffdc584c0805da120faf7b12
+source-git-commit: f5dd39bd7379d56c4f7b5e180d35892ba1dd4da1
 
 ---
 
@@ -94,7 +94,7 @@ Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men in
 Innehållsfragment kan antingen vara:
 
 * Enkla fragmentDessa har ingen fördefinierad struktur. De innehåller bara text och bilder.
-Dessa baseras på mallen Enkelt fragment.
+De baseras på mallen **Enkelt fragment** .
 
 * Fragment som innehåller strukturerat innehållDessa baseras på en [innehållsfragmentmodell](/help/assets/content-fragments/content-fragments-models.md), som fördefinierar en struktur för det resulterande fragmentet.
 Dessa kan också användas för att realisera innehållstjänster med JSON-exporteraren.
@@ -161,7 +161,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * För enkla fragment:
 
       * Innehållet finns i ett (eller flera) textfält med flera rader eller element.
-      * Elementen definieras i fragmentmallen (kan inte definieras när fragmentet redigeras).
+      * Elementen definieras i mallen **Enkelt fragment** .
 
 * **Fragmentera stycken**
 
@@ -197,7 +197,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * De enskilda resurserna i samlingen är tillgängliga för användning med fragmentet i sidredigeraren när det läggs till på en sida. Det innebär att de är valfria, beroende på den specifika kanalens krav.
    * Resurserna är [kopplade till fragment via samlingar](/help/assets/content-fragments/content-fragments-assoc-content.md). kopplade samlingar låter författaren bestämma vilka resurser som ska användas när de redigerar sidan.
 
-      * Samlingar kan kopplas till fragment via mallar, som standardinnehåll eller av författare vid fragmentredigering.
+      * Samlingar kan kopplas till fragment som standardinnehåll, eller av författare vid fragmentredigering.
       * [DAM-samlingar](/help/assets/manage-collections.md) är grunden för det associerade fragmentinnehållet.
    * Du kan också lägga till själva fragmentet i en samling för att underlätta spårningen.
 
@@ -229,7 +229,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
    * Återgivning av fragmenttext som är specifik för redaktionella ändamål. kan vara relaterat till kanalen men inte obligatoriskt, kan också vara för lokala ad hoc-ändringar.
    * skapas som kopior av **mallsida**, men kan sedan redigeras efter behov, det ofta finns innehållsöverlappning mellan själva variationerna.
-   * Kan definieras under fragmentutveckling eller fördefinieras i fragmentmallar.
+   * Kan definieras vid fragmentredigering.
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
    * Variationer kan [synkroniseras](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med mallsidan om mallinnehållet har uppdaterats.
    * Kan [sammanfattas](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
@@ -262,10 +262,8 @@ Om du vill skapa, redigera och använda innehållsfragment behöver du också:
 
 * **Fragmentmall**
 
-   * Krävs för att [skapa ett enkelt fragment](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments).
-   * Utvecklas vanligen under projektimplementeringen och kan inte skapas vid redigering.
+   * Mallen **Enkelt fragment** krävs för att [skapa ett enkelt fragment](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments).
    * Definierar grundläggande egenskaper för ett enkelt fragment (titel, antal textelement, taggdefinitioner).
-   * Malldefinitioner kräver en titel och ett textelement. allt annat är valfritt. Mallen definierar ett minimalt omfång för fragmentet och standardinnehållet om tillämpligt. Författare kan senare utöka ett fragment utöver det som definieras i mallen.
 
 * **Innehållsfragmentkomponent**
 
