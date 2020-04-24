@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: f7c518d7af321052799888894c40d67e24c5abda
+source-git-commit: a99f6aba99b4f203b8458c69b98a88d4bd7ee4a2
 
 ---
 
@@ -96,7 +96,7 @@ Alla åtkomstbegäranden till AEM WCM och databasen registreras här.
 
 Exempelutdata:
 
-**AEM HTTP Request/Response Access-loggning**
+**AEM HTTP Request/Response Access Logging**
 
 Varje åtkomstbegäran registreras här tillsammans med svaret.
 
