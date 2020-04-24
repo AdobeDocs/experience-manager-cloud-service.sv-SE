@@ -2,12 +2,28 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 95511543b3393d422e2cfa23f9af246365d3a993
+source-git-commit: 75c36cf877501cbf0d97512fd56605348534b4a0
 
 ---
 
 
 # Loggning{#logging}
+
+AEM som molntjänst är en plattform där kunderna kan inkludera anpassad kod för att skapa unika upplevelser för sina kunder. Med detta i åtanke är loggning en viktig funktion för att felsöka anpassad kod i molnmiljöer och mer specifikt för lokala utvecklingsmiljöer.
+
+
+<!-- ## Global Logging {#global-logging}
+
+[Apache Sling Logging Configuration](https://sling.apache.org/documentation/development/logging.html#user-configuration---osgi-based) is used to configure the root logger. This defines the global settings for logging in AEM as a Cloud Service:
+
+* the logging level
+* the location of the central log file
+* the number of versions to be kept
+* version rotation; either maximum size or a time interval
+* the format to be used when writing the log messages
+-->
+
+## AEM som loggning av molntjänster {#aem-as-a-cloud-service-logging}
 
 Med AEM som molntjänst kan du konfigurera:
 
@@ -23,50 +39,7 @@ I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett
 >
 >Inloggning av AEM som molntjänst baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html) .
 
-<!-- ## Global Logging {#global-logging}
-
-[Apache Sling Logging Configuration](https://sling.apache.org/documentation/development/logging.html#user-configuration---osgi-based) is used to configure the root logger. This defines the global settings for logging in AEM as a Cloud Service:
-
-* the logging level
-* the location of the central log file
-* the number of versions to be kept
-* version rotation; either maximum size or a time interval
-* the format to be used when writing the log messages
--->
-
-## Loggare och skribenter för enskilda tjänster {#loggers-and-writers-for-individual-services}
-
-Förutom de globala loggningsinställningarna kan du med AEM som molntjänst konfigurera specifika inställningar för en enskild tjänst:
-
-* den specifika loggningsnivån
-* loggaren (OSGi-tjänsten som tillhandahåller loggmeddelanden)
-
-På så sätt kan du kanalisera loggmeddelanden för en enskild tjänst till en separat fil. Detta kan vara särskilt användbart under utveckling eller testning. om du till exempel behöver en högre loggnivå för en viss tjänst.
-
-AEM som en molntjänst använder följande för att skriva loggmeddelanden till filen:
-
-1. En **OSGi-tjänst** (logger) skriver ett loggmeddelande.
-1. En **loggningsloggare** tar det här meddelandet och formaterar det enligt din specifikation.
-1. En **loggningsskrivare** skriver alla dessa meddelanden till den fysiska filen som du har definierat.
-
-Dessa element är länkade med följande parametrar för de relevanta elementen:
-
-* **Logger (loggningslogg)**
-
-   Definiera de tjänster som genererar meddelandena.
-
-<!-- * **Log File (Logging Logger)**
-
-  Define the physical file for storing the log messages.
-
-  This is used to link a Logging Logger with a Logging Writer. The value must be identical to the same parameter in the Logging Writer configuration for the connection to be made.
-
-* **Log File (Logging Writer)**
-
-  Define the physical file that the log messages will be written to.
-
-  This must be identical to the same parameter in the Logging Writer configuration, or the match will not be made. If there is no match then an implicit Writer will be created with default configuration (daily log rotation).
--->
+## AEM som Java-loggning i molntjänst {#aem-as-a-cloud-service-java-logging}
 
 ### Standardloggare och -författare {#standard-loggers-and-writers}
 
@@ -117,7 +90,25 @@ De andra paren följer standardkonfigurationen:
 
 * Länkar inte till ett specifikt skrivprogram, så skapar och använder ett implicit skrivprogram med standardkonfiguration (daglig loggrotation).
 
-Förutom de tre typerna av loggar som finns på en AEM som en molntjänstinstans (`request`, `access` och `error` loggar) finns det en annan logg som används för felsökning av Dispatcher-problem. Mer information finns i [Felsöka konfigurationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/dispatcher/overview.html#debugging-apache-and-dispatcher-configuration)av Apache och Dispatcher.
+### AEM som loggning av HTTP-begäran om molntjänst {#request-logging}
+
+Alla åtkomstbegäranden till AEM WCM och databasen registreras här.
+
+Exempelutdata:
+
+### AEM HTTP Request/Response Access-loggning {#access-logging}
+
+Varje åtkomstbegäran registreras här tillsammans med svaret.
+
+Exempelutdata:
+
+### Apache Web Server/Dispatcher Logging {#dispatcher-logging}
+
+Detta är en logg som används för felsökning av Dispatcher-problem. Mer information finns i [Felsöka konfigurationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/)av Apache och Dispatcher.
+
+<!-- Besides the three types of logs present on an AEM as a Cloud Service instance (`request`, `access` and `error` logs) there is another dispatcher/overview.html#debugging-apache-and-dispatcher-configuration.
+
+leftover text from the last breakaway chunk (re dispatcher) -->
 
 När det gäller god praxis rekommenderar vi att du anpassar dig till de konfigurationer som för närvarande finns i AEM som en molntjänstdeformattyp. Dessa anger olika logginställningar och nivåer för olika miljötyper:
 
@@ -133,11 +124,8 @@ Se exempel nedan för varje konfiguration:
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
-    org.apache.sling.commons.log.file="logs/error.log"
     org.apache.sling.commons.log.level="debug"
-    org.apache.sling.commons.log.names="[${package}]"
-    org.apache.sling.commons.log.additiv="true"
-    org.apache.sling.commons.log.pattern="${symbol_escape}{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}" />
+    org.apache.sling.commons.log.names="[com.mycompany.myapp]" />
 ```
 
 
@@ -147,11 +135,8 @@ Se exempel nedan för varje konfiguration:
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
-    org.apache.sling.commons.log.file="logs/error.log"
     org.apache.sling.commons.log.level="warn"
-    org.apache.sling.commons.log.names="[${package}]"
-    org.apache.sling.commons.log.additiv="true"
-    org.apache.sling.commons.log.pattern="${symbol_escape}{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}" />
+    org.apache.sling.commons.log.names="[com.mycompany.myapp]" />
 ```
 
 * `prod` miljöer:
@@ -160,12 +145,43 @@ Se exempel nedan för varje konfiguration:
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
-    org.apache.sling.commons.log.file="logs/error.log"
     org.apache.sling.commons.log.level="error"
-    org.apache.sling.commons.log.names="[${package}]"
-    org.apache.sling.commons.log.additiv="true"
-    org.apache.sling.commons.log.pattern="${symbol_escape}{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}" />
+    org.apache.sling.commons.log.names="[com.mycompany.myapp]" />
 ```
+
+### Loggare och skribenter för enskilda tjänster {#loggers-and-writers-for-individual-services}
+
+Förutom de globala loggningsinställningarna kan du med AEM som molntjänst konfigurera specifika inställningar för en enskild tjänst:
+
+* den specifika loggningsnivån
+* loggaren (OSGi-tjänsten som tillhandahåller loggmeddelanden)
+
+På så sätt kan du kanalisera loggmeddelanden för en enskild tjänst till en separat fil. Detta kan vara särskilt användbart under utveckling eller testning. om du till exempel behöver en högre loggnivå för en viss tjänst.
+
+AEM som en molntjänst använder följande för att skriva loggmeddelanden till filen:
+
+1. En **OSGi-tjänst** (logger) skriver ett loggmeddelande.
+1. En **loggningsloggare** tar det här meddelandet och formaterar det enligt din specifikation.
+1. En **loggningsskrivare** skriver alla dessa meddelanden till den fysiska filen som du har definierat.
+
+Dessa element är länkade med följande parametrar för de relevanta elementen:
+
+* **Logger (loggningslogg)**
+
+   Definiera de tjänster som genererar meddelandena.
+
+<!-- * **Log File (Logging Logger)**
+
+  Define the physical file for storing the log messages.
+
+  This is used to link a Logging Logger with a Logging Writer. The value must be identical to the same parameter in the Logging Writer configuration for the connection to be made.
+
+* **Log File (Logging Writer)**
+
+  Define the physical file that the log messages will be written to.
+
+  This must be identical to the same parameter in the Logging Writer configuration, or the match will not be made. If there is no match then an implicit Writer will be created with default configuration (daily log rotation).
+-->
 
 ## Ange loggnivå {#setting-the-log-level}
 
@@ -187,7 +203,7 @@ Om du vill aktivera DEBUG-loggnivån anger du
 ``` /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level ```
 
 egenskap som ska felsökas. Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom den genererar många loggar.
-En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Exempel:
+En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
 ``` DEBUG 3 WebApp Panel: WebApp successfully deployed ```
 
@@ -227,7 +243,7 @@ I vissa fall kanske du vill skapa en anpassad logg med en annan loggnivå. Du ka
 
       Där `<*identifier*>` ersätts av fri text som du (måste) anger för att identifiera förekomsten (du kan inte utelämna den här informationen).
 
-      Exempel: `org.apache.sling.commons.log.LogManager.factory.config-MINE`
+      Till exempel, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
@@ -403,3 +419,70 @@ I vissa fall kanske du vill skapa en anpassad logg med en annan loggnivå. Du ka
    The log file created by this example will be `../crx-quickstart/logs/myLogFile.log`. -->
 
 Felix Console innehåller även information om stöd för loggning på `../system/console/slinglog`. till exempel `https://localhost:4502/system/console/slinglog`.draw
+
+## Komma åt och hantera loggar {#manage-logs}
+
+Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet.  Användarna kan komma åt en lista över tillgängliga loggfiler för den valda miljön.
+
+De här filerna kan hämtas via användargränssnittet, antingen från **översiktssidan** .
+
+![](assets/manage-logs1.png)
+
+Eller **miljösidan** :
+
+![](assets/manage-logs2.png)
+
+>[!Note]
+>Oavsett var den öppnas visas samma dialogruta så att du kan hämta en enskild loggfil.
+
+![](assets/manage-logs3.png)
+
+
+### Loggar via API {#logs-thorugh-api}
+
+Förutom att hämta loggar via användargränssnittet är loggar tillgängliga via API:t och kommandoradsgränssnittet.
+
+Om du till exempel vill hämta loggfilerna för en viss miljö, skulle kommandot vara något alldeles för stort som raderna i
+
+```java
+$ aio cloudmanager:download-logs --programId 5 1884 author aemerror
+```
+
+Med följande kommando kan du anpassa loggar:
+
+```java
+$ aio cloudmanager:tail-log --programId 5 1884 author aemerror
+```
+
+För att få tillgång till miljö-ID (1884 i det här fallet) och tillgängliga service- eller loggnamnsalternativ kan du använda:
+
+```java
+$ aio cloudmanager:list-environments
+Environment Id Name                     Type  Description                          
+1884           FoundationInternal_dev   dev   Foundation Internal Dev environment  
+1884           FoundationInternal_stage stage Foundation Internal STAGE environment
+1884           FoundationInternal_prod  prod  Foundation Internal Prod environment
+ 
+ 
+$ aio cloudmanager:list-available-log-options 1884
+Environment Id Service    Name         
+1884           author     aemerror     
+1884           author     aemrequest   
+1884           author     aemaccess    
+1884           publish    aemerror     
+1884           publish    aemrequest   
+1884           publish    aemaccess    
+1884           dispatcher httpderror   
+1884           dispatcher aemdispatcher
+1884           dispatcher httpdaccess
+```
+
+>[!Note]
+>Det går att hämta **loggfiler** både via användargränssnittet och API:t, men **loggspårning** är bara API/CLI.
+
+### Ytterligare resurser {#resources}
+
+Mer information om API:t för Cloud Manager och Adobe I/O CLI finns i följande extraresurser:
+
+* [API-dokumentation för Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
+* [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)
