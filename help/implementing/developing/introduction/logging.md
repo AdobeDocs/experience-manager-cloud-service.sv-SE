@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: a99f6aba99b4f203b8458c69b98a88d4bd7ee4a2
+source-git-commit: 8a6207596c42c4e1cf85dcccdbd1a1e9501c9073
 
 ---
 
@@ -88,7 +88,7 @@ De andra paren följer standardkonfigurationen:
 
    * Skriver `Warning` meddelanden till `../logs/error.log` för tjänsten `org.apache.pdfbox`.
 
-* Länkar inte till ett specifikt skrivprogram, så skapar och använder ett implicit skrivprogram med standardkonfiguration (daglig loggrotation).
+* Länkar inte till ett specifikt skrivprogram, så skapar och använder ett implicit skrivprogram med standardkonfiguration.
 
 **AEM som loggning av HTTP-begäran om molntjänst**
 
@@ -96,7 +96,7 @@ Alla åtkomstbegäranden till AEM WCM och databasen registreras här.
 
 Exempelutdata:
 
-**AEM HTTP Request/Response Access Logging**
+**AEM som HTTP-begäran för molntjänst/loggning av svarsåtkomst**
 
 Varje åtkomstbegäran registreras här tillsammans med svaret.
 
@@ -183,7 +183,7 @@ Dessa element är länkade med följande parametrar för de relevanta elementen:
   This must be identical to the same parameter in the Logging Writer configuration, or the match will not be made. If there is no match then an implicit Writer will be created with default configuration (daily log rotation).
 -->
 
-## Ange loggnivå {#setting-the-log-level}
+### Ange loggnivå {#setting-the-log-level}
 
 Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att aktivera utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
 
@@ -191,7 +191,7 @@ Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging O
 >
 > För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM-instans som en molntjänst. Mer information om hur du gör detta finns i [Distribuera till AEM som en molntjänst](/help/implementing/deploying/overview.md).
 
-### Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
+**Aktivera felsökningsloggnivån**
 
 >[!WARNING]
 >
