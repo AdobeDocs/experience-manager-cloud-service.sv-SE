@@ -2,7 +2,7 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 translation-type: tm+mt
-source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
+source-git-commit: 0d83e1d956d65fe27b1cf7bce758fc7fa8adf6b2
 
 ---
 
@@ -116,7 +116,6 @@ Under utvecklingen, eller vid användning av lokala installationer, kan index l�
 Med blågröna installationer blir det inga driftstopp. För indexhantering kräver detta dock att index bara används av vissa versioner av programmet. Om du till exempel lägger till ett index i version 2 av programmet, vill du inte att det ska användas av version 1 av programmet än. Det motsatta är fallet när ett index tas bort: ett index som tagits bort i version 2 behövs fortfarande i version 1. När du ändrar en indexdefinition vill vi att den gamla versionen av indexet bara ska användas för version 1 och att den nya versionen av indexet bara ska användas för version 2.
 
 I följande tabell visas fem indexdefinitioner: index `cqPageLucene` används i båda versionerna medan index endast `damAssetLucene-custom-1` används i version 2.
-
 
 >[!NOTE]
 >
