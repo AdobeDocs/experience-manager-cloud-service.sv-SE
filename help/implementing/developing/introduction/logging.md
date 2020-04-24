@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 75c36cf877501cbf0d97512fd56605348534b4a0
+source-git-commit: f7c518d7af321052799888894c40d67e24c5abda
 
 ---
 
@@ -90,19 +90,19 @@ De andra paren följer standardkonfigurationen:
 
 * Länkar inte till ett specifikt skrivprogram, så skapar och använder ett implicit skrivprogram med standardkonfiguration (daglig loggrotation).
 
-### AEM som loggning av HTTP-begäran om molntjänst {#request-logging}
+**AEM som loggning av HTTP-begäran om molntjänst**
 
 Alla åtkomstbegäranden till AEM WCM och databasen registreras här.
 
 Exempelutdata:
 
-### AEM HTTP Request/Response Access-loggning {#access-logging}
+**AEM HTTP Request/Response Access-loggning**
 
 Varje åtkomstbegäran registreras här tillsammans med svaret.
 
 Exempelutdata:
 
-### Apache Web Server/Dispatcher Logging {#dispatcher-logging}
+**Apache Web Server/Dispatcher Logging**
 
 Detta är en logg som används för felsökning av Dispatcher-problem. Mer information finns i [Felsöka konfigurationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/)av Apache och Dispatcher.
 
