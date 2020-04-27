@@ -2,7 +2,7 @@
 title: Skapa och ordna sidor
 description: Skapa och organisera sidor med AEM
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 42b614a120a564e15ff0a9643ab1a0ca0148b3df
 
 ---
 
@@ -79,9 +79,9 @@ När du skapar en ny sida finns det två nyckelfält:
 
 #### Begränsningar för sidnamn och bästa praxis {#page-name-restrictions-and-best-practices}
 
-Sidans **titel** och **namn** kan skapas separat men är relaterade:
+Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas genererar AEM ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten att använda korta sidnamn.
+* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas genererar AEM ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 
 >[!TIP]
@@ -108,9 +108,9 @@ Fullständig information om alla tillåtna tecken finns i namnkonventionen. <!--
 
 #### Titel {#title}
 
-Om du bara anger en **sidtitel** när du skapar en ny sida, kommer AEM att härleda sidans **namn** från den här strängen och validera namnet enligt konventionerna från AEM och JCR. <!--If you supply only a page **Title** when creating a new page, AEM will derive the page **Name** from this string and [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.-->
+Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn** i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. <!--If you supply only a page **Title** when creating a new page, AEM will derive the page **Name** from this string and [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.-->
 
-Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ersätta de ogiltiga tecknen. Exempel:
+Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ersätta de ogiltiga tecknen. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
@@ -132,7 +132,7 @@ När du anger ett **sidnamn** när du skapar en ny sida validerar AEM namnet enl
 >See [Preparing Content for Translation](/help/sites-administering/tc-prep.md) for more information.
 -->
 
-### Templates {#templates}
+### Mallar {#templates}
 
 I AEM anger en mall en speciell typ av sida. En mall kommer att användas som bas för alla nya sidor som skapas.
 
@@ -174,7 +174,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Öppna konsolen Platser (till exempel `https://<host>:<port>/sites.html/content`.
 1. Navigera till den plats där du vill skapa den nya sidan.
-1. Öppna den nedrullningsbara listrutan med **Skapa** i verktygsfältet och välj sedan **Sida** i listan:
+1. Öppna listrutan med **Skapa** i verktygsfältet och välj sedan **Sida** i listan:
 
    ![Skapa en sida](/help/sites-cloud/authoring/assets/organizing-create-page.png)
 
@@ -255,19 +255,21 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
    * [Markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources) och verktygsfältet
    Sedan ikonen **Kopiera** :
 
-   ![Knappen Kopiera](/help/sites-cloud/authoring/assets/copy.png)
+   ![Kopiera](/help/sites-cloud/authoring/assets/copy.png)
 
    >[!NOTE]
    >
    >Om du är i markeringsläge avslutas detta automatiskt så snart sidan kopieras.
 
 1. Navigera till platsen för den nya kopian av sidan.
-1. Använd ikonen **Klistra in** sida:
+1. Ikonen **Klistra in** är tillgänglig med en nedåtpil direkt till höger:
 
-   ![Knappen Klistra in](/help/sites-cloud/authoring/assets/paste.png)
+   ![Klistra in](/help/sites-cloud/authoring/assets/paste.png)
 
-   En kopia av originalsidan och eventuella undersidor skapas på den här platsen.
+   Du kan antingen:
 
+   1. Markera själva ikonen **Klistra in** : En kopia av originalsidan och eventuella underordnade sidor skapas på den här platsen.
+   1. Markera listrutepilen för att visa alternativet **Klistra in utan underordnade** . En kopia av originalsidan kommer att skapas på denna plats. underordnade sidor kopieras inte.
    >[!NOTE]
    >
    >Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om det till exempel `beach` redan finns en ny sida med namnet `beach` blir den `beach1`.
@@ -336,7 +338,7 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
 >[!NOTE]
 >
->Om sidan redan har publicerats avpubliceras den automatiskt när du flyttar den. Som standard publiceras den om när flytten är klar, men detta kan ändras genom att du avmarkerar fältet **Publicera** igen i steget **Justera/Publicera** igen.
+>Om sidan redan har publicerats avpubliceras den automatiskt när du flyttar den. Som standard publiceras den om när flytten är klar, men du kan ändra detta genom att avmarkera fältet **Publicera igen** i steget **Justera/publicera igen**.
 
 >[!NOTE]
 >
@@ -362,7 +364,7 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
    >[!NOTE]
    >
-   >Som en säkerhetsåtgärd är **ikonen Ta bort** inte tillgänglig som en snabbåtgärd.
+   >Som en säkerhetsåtgärd är ikonen **Ta bort** inte tillgänglig som en snabbåtgärd.
 
 1. En dialogruta öppnas där du uppmanas att bekräfta. Använd:
 
@@ -386,7 +388,7 @@ Du kan [låsa/låsa upp en sida](/help/sites-cloud/authoring/fundamentals/editin
 
 Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 
-1. Öppna **webbplatskonsolen** och navigera till önskad plats.
+1. Open the **Sites** console and navigate to the required location.
 1. Om du vill öppna alternativlistan väljer du **Skapa** i verktygsfältet
 1. Öppna dialogrutan genom att välja **Mapp** . Här anger du **namn** och **titel**:
 
