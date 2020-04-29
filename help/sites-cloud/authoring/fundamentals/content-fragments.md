@@ -2,14 +2,14 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager som molntjänst kan ni utforma, skapa, strukturera och använda sidoberoende innehåll
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: c93dfd1ca50933416de1eee7d6d4f820c30afa49
 
 ---
 
 
 # Innehållsfragment {#content-fragments}
 
-Adobe Experience Manager-innehållsfragment (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md).
+Innehållsfragment i Adobe Experience Manager (AEM) som en molntjänst [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md).
 
 Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
@@ -83,14 +83,14 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
    * **Enkelt textelement**
    * **Flera element**
 * **Element**
-   * Standard **Main** är alltid tillgängligt.
+   * The default **Main** will always be available.
    * En markering blir tillgänglig om fragmentet skapades med en lämplig mall.
    >[!NOTE]
    >
    >Vilka element som är tillgängliga beror på vilken mall som används.
 
-* **Variation**
-   * Standardmallsidan **** är alltid tillgänglig.
+* **Variant**
+   * **Standardmastern** är alltid tillgänglig.
    * En markering blir tillgänglig om variationer har skapats för fragmentet.
 * **Stycken**: ange det eller de stycken som ska ingå:
    * **Alla**
