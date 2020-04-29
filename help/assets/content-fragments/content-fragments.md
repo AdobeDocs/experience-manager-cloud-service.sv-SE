@@ -1,15 +1,15 @@
 ---
 title: Arbeta med innehållsfragment
-description: Lär dig hur innehållsfragment gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
+description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en molntjänst gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
-source-git-commit: ac071eb00660a06ee3e0502a381c35adece6c87a
+source-git-commit: c93dfd1ca50933416de1eee7d6d4f820c30afa49
 
 ---
 
 
 # Arbeta med innehållsfragment{#working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) Content Fragments kan ni utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
+Med Adobe Experience Manager (AEM) som molntjänst kan ni utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
 
 Innehållsfragment kan också levereras i JSON-format med JSON-exportfunktionerna (Sling Model) i AEM Core-komponenterna. Leveranssätt:
 
