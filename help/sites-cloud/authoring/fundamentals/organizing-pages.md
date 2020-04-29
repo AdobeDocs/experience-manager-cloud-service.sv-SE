@@ -2,7 +2,7 @@
 title: Skapa och ordna sidor
 description: Skapa och organisera sidor med AEM
 translation-type: tm+mt
-source-git-commit: 42b614a120a564e15ff0a9643ab1a0ca0148b3df
+source-git-commit: 86fa0de81e8398b5b74291840304a2254d1771f4
 
 ---
 
@@ -366,8 +366,13 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
    >
    >Som en säkerhetsåtgärd är ikonen **Ta bort** inte tillgänglig som en snabbåtgärd.
 
-1. En dialogruta öppnas där du uppmanas att bekräfta. Använd:
+1. En dialogruta där du tillfrågas om bekräftelse.
 
+   ![Dialogrutan Ta bort](/help/sites-cloud/authoring/assets/delete-page.png)
+
+   * **Vill du arkivera sidor före borttagning?** - Om det här alternativet är markerat skapas versioner av de sidor som markerats för borttagning när de tas bort.
+      * [Versioner kan återställas vid ett senare tillfälle.](/help/sites-cloud/authoring/features/page-versions.md)
+      * Det går inte att återställa sidor som tagits bort utan tidigare versioner.
    * **Avbryt** om du vill avbryta åtgärden
    * **Ta bort** för att bekräfta åtgärden:
 
