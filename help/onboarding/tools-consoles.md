@@ -1,8 +1,8 @@
 ---
 title: Verktygskonsoler
 description: Lär dig mer om de olika verktygskonsolerna i AEM.
-translation-type: ht
-source-git-commit: 0887a00566fc593745bb4df2dd411ae8ae0e01ae
+translation-type: tm+mt
+source-git-commit: 18841ec94b8dd92ca92deda0869f2698786458aa
 
 ---
 
@@ -18,11 +18,13 @@ Du kommer åt dessa konsoler via [verktygspanelen i Global Navigation](/help/sit
 >Korten i användargränssnittet innehåller information om alternativens funktion, den här tabellen är bara en snabb referens till var funktionerna finns på verktygspanelen.
 
 <table>
- <tbody>
+ <thead>
   <tr>
    <td>Avsnitt</td>
    <td>Alternativ</td>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>Allmänt</td>
    <td> </td>
