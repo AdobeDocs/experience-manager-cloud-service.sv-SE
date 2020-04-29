@@ -2,7 +2,7 @@
 title: Konfigurera sökformulär
 description: Konfigurera sökformulär för Adobe Experience Manager som en molntjänst.
 translation-type: tm+mt
-source-git-commit: c9a7eacaf2d811374299a36b4da0108b34318277
+source-git-commit: 18841ec94b8dd92ca92deda0869f2698786458aa
 
 ---
 
@@ -547,7 +547,7 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Alternativnodssökväg**&#x200B;är i princip samma som **Alternativsökväg**, men bara det här är i det vanliga predikatfältet, det andra är specifikt för resurser.
 
-* **Enkelval** Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter en markering. Om du av misstag markerar kryssrutan kan den avmarkeras.
+* **Enkelval** Om det här alternativet är markerat återges alternativen som kryssrutor som endast tillåter en markering. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
 * **Egenskapsnamn för publicering och live-kopia** Etiketterna för kryssrutorna för publicering och live-kopia för det platsspecifika predikatet.
 
@@ -671,13 +671,13 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    * **Egenskapsnamn**
 
-      Specificera den nodegenskap som du vill söka efter på målnoderna. Exempel:
+      Specificera den nodegenskap som du vill söka efter på målnoderna. Till exempel:
 
       `jcr:content/cq:template`
 
    * **Alternativ nodsökväg**
 
-      Välj den sökväg där du vill ha dina alternativ. Exempel:
+      Välj den sökväg där du vill ha dina alternativ. Till exempel:
 
       `/apps/cq/gui/content/common/options/predicates/templatetype`
    ![Alternativpredikat](assets/csf-options-predicate-02.png)
@@ -693,11 +693,13 @@ I följande exempel (som används för att söka efter mallen som används för 
 I följande tabell visas de behörigheter som krävs för att utföra redigerings-, borttagnings- och förhandsgranskningsåtgärder i sökformulär.
 
 <table>
- <tbody>
+ <thead>
   <tr>
    <td><strong>Åtgärd</strong></td>
    <td><strong>Behörigheter</strong></td>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>Redigera </td>
    <td>Läsa, skriva behörigheter på <code>/apps </code>noden.</td>
