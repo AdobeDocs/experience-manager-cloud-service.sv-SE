@@ -1,60 +1,60 @@
 ---
-title: Adobe Experience Manager som en molntjänst och riktlinjerna för webbtillgänglighet
-seo-title: Adobe Experience Manager som en molntjänst och riktlinjerna för webbtillgänglighet
+title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
+seo-title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 translation-type: tm+mt
-source-git-commit: 05643cf6498063c88a6d18f8e4acad5882714ba0
+source-git-commit: 921334705578626ac0ea75765496d4f379bb00fc
 
 ---
 
 
-# Adobe Experience Manager som en molntjänst och riktlinjerna för webbtillgänglighet{#aem-and-the-web-accessibility-guidelines}
+# Adobe Experience Manager as a Cloud Service  och riktlinjerna för webbtillgänglighet{#aem-and-the-web-accessibility-guidelines}
 
-Det finns många sociala, ekonomiska och juridiska skäl för att se till att webbinnehåll är utformat för att vara så tillgängligt som möjligt för målgruppen, oavsett eventuella funktionshinder eller begränsningar som de har. Webbtillgänglighet är därför en allt viktigare aspekt av god webbdesign.
+Det finns många sociala, ekonomiska och juridiska skäl för att se till att webbinnehåll är utformat för att vara så tillgängligt som möjligt för målgruppen, oavsett eventuella funktionshinder eller begränsningar som de har. Webbtillgänglighet med Adobe Experience Manager (AEM) som molntjänst är därför en allt viktigare aspekt av god webbdesign.
 
-Att skapa tillgängliga webbplatser och innehåll med AEM som en molntjänst påverkar:
+Att skapa tillgängliga webbplatser och innehåll med AEM as a Cloud Service påverkar:
 
-* Administratörer som ansvarar för att konfigurera Adobe Experience Manager (AEM) för att se till att tillgänglighetsfunktionerna är korrekt aktiverade.
+* Administratörer som ansvarar för att konfigurera AEM för att se till att hjälpmedelsfunktionerna är korrekt aktiverade.
 
 * Författare som använder dessa funktioner för att skapa tillgängliga webbplatser.
 
-   * Att skapa tillgängligt innehåll är en process. AEM har de funktioner som behövs, men innehållsförfattarna måste se till att de följer de tekniker som krävs för att skapa tillgängligt innehåll.
+   * Att skapa tillgängligt innehåll är en process. AEM har de funktioner som behövs, men innehållsförfattare måste se till att de följer de tekniker som krävs för att skapa tillgängligt innehåll.
 
-* Mallutvecklare bör också vara medvetna om sådana problem när de implementerar webbplatsdesignen.
+* Mallutvecklare bör också vara medvetna om sådana frågor när de implementerar webbplatsdesignen.
 
-Adobe Experience Manager som molntjänst fungerar med [riktlinjerna](#wcag-accessibility-guideslines) från [World Wide Web Consortium](#world-wide-web-consortium).
+Adobe Experience Manager as a Cloud Service fungerar i enlighet med [riktlinjerna](#wcag-accessibility-guideslines) från [World Wide Web Consortium](#world-wide-web-consortium).
 
 ## World Wide Web Consortium {#world-wide-web-consortium}
 
-W3C ( [World Wide Web Consortium)](https://www.w3.org/) är en internationell community som arbetar med att utveckla webbstandarder. Deras [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) publicerar [Web Content Accessibility Guidelines](#wcag-accessibility-guidelines).
+[W3C (World Wide Web Consortium)](https://www.w3.org/) är en internationell organisation som arbetar med att utveckla webbstandarder. Deras [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) publicerar [Web Content Accessibility Guidelines](#wcag-accessibility-guidelines).
 
 ## Web Content Accessibility Guidelines (WCAG) 2.1 {#wcag-accessibility-guideslines}
 
-För att hjälpa webbdesigners och utvecklare att producera tillgängliga webbplatser har [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) publicerat Web Content Accessibility Guidelines (WCAG) 2.1 [](https://www.w3.org/TR/WCAG/) i juni 2018.
+För att hjälpa webbdesigners och utvecklare att producera tillgängliga webbplatser publicerade [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/) i juni 2018.
 
 >[!NOTE]
 > 
-> WCAG 2.1 uppdaterar den tidigare versionen, WCAG 2.0, från 2008. Se [WCAG 2.1 - Jämförelse med WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
+> WCAG 2.1 uppdaterar den tidigare versionen, WCAG 2.0, från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
 
 >[!NOTE]
 > 
->En [uppdaterad version av riktlinjerna, WCAG 2.2,](https://www.w3.org/TR/WCAG22/) håller på att utvecklas, men kommer inte att tas i beaktande just nu.
+>En [uppdaterad version av riktlinjerna, WCAG 2.2,](https://www.w3.org/TR/WCAG22/) håller på att utvecklas, men kommer inte att behandlas just nu.
 
 
-WCAG 2.1 innehåller [riktlinjer (med relaterade kriterier) som beskriver tillgänglighetsnivåerna och hur de ska anpassas](https://www.w3.org/TR/WCAG/#conformance).
+WCAG 2.1 innehåller [riktlinjer (med relaterade framgångskriterier) som beskriver tillgänglighetsnivåerna och hur man kan uppfylla dem](https://www.w3.org/TR/WCAG/#conformance).
 
-## WCAG 2.1 och AEM som molntjänst {#wcag-aem-cloud-service}
+## WCAG 2.1 och AEM as a Cloud Service {#wcag-aem-cloud-service}
 
-Med Adobe Experience Manager kan skribenter och/eller webbplatsägare skapa webbinnehåll som uppfyller kriterierna för att lyckas med WCAG 2.1-nivå A och nivå AA:
+Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa webbinnehåll som uppfyller framgångskriterierna för WCAG 2.1 nivå A och nivå AA:
 
-* Specifika aspekter av WCAG 2.1 är markerade i vår [snabbguide till WCAG 2.1](/help/onboarding/accessibility/quick-guide-wcag.md).
+* Specifika aspekter av WCAG 2.1 tas upp i vår [snabbguide till WCAG 2.1](/help/onboarding/accessibility/quick-guide-wcag.md).
 
-* [Skapa hjälpmedelsanpassat innehåll](/help/sites-cloud/authoring/fundamentals/accessible-content.md) som beskriver hur det relaterar till AEM.
+* [Skapa hjälpmedelsanpassat innehåll](/help/sites-cloud/authoring/fundamentals/accessible-content.md) beskriver hur de relaterar till AEM.
 
 >[!NOTE]
 > 
->När du skapar din plats bör du bestämma den övergripande nivå som du vill att din plats ska anpassas till.
+>När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 >
->Eftersom det inte är möjligt att uppfylla alla AAA-kriterier på nivå för vissa typer av innehåll, rekommenderas det inte som en obligatorisk nivå av överensstämmelse.
+>Eftersom det inte är möjligt att uppfylla alla framgångskriterier på nivå AAA för vissa typer av innehåll, rekommenderas det inte som en obligatorisk efterlevnadsnivå.
 
 <!--
 * [Configuring the Rich Text Editor for Producing Accessible Sites](/help/sites-administering/rte-accessible-content.md)
