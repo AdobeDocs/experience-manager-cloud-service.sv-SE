@@ -2,7 +2,7 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: ae04553b17fcb7b9660f709565faed791a0c930e
 
 ---
 
@@ -69,7 +69,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
          + Grupper
          + ACL-listor (behörigheter)
             + Alla `rep:policy` sökvägar (ändringsbara eller oföränderliga)
-+ Paketet, eller innehållspaketet, innehåller allt innehåll och all konfiguration. `ui.content` Vanliga delar av `ui.content` paketet omfattar, men är inte begränsade till:
++ Paketet, eller kodpaketet, innehåller all kod som ska distribueras och endast distribueras till `ui.apps` `/apps`. Vanliga delar av `ui.apps` paketet omfattar, men är inte begränsade till: <!-- GRANITE-29128 -->
    + Kontextmedvetna konfigurationer
       + `/conf`
    + Nödvändiga, komplexa innehållsstrukturer (t.ex. Innehållsbygge som bygger på och sträcker sig förbi innehållsstrukturer för baslinjen som definierats i Repo Init.
@@ -560,7 +560,7 @@ Lägg till det plugin-program som `all/pom.xml` `maven-clean-plugin` ska rensa m
 </plugins>
 ```
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
 + [Hantera paket med Maven](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/vlt-mavenplugin.html)
 + [Plugin-programmet FileVault Content Package Maven](http://jackrabbit.apache.org/filevault-package-maven-plugin/)
