@@ -2,7 +2,7 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: 57a5b6b80097938dd63a73734676ff374db3ecce
+source-git-commit: 94182b95cb00923d3e055cb3c2e1d943db70c7a9
 
 ---
 
@@ -69,15 +69,13 @@ Den rekommenderade programdistributionsstrukturen är följande:
          + Grupper
          + ACL-listor (behörigheter)
             + Alla `rep:policy` sökvägar (ändringsbara eller oföränderliga)
-+ Paketet, eller innehållspaketet, innehåller allt innehåll och all konfiguration. `ui.content` Vanliga delar av `ui.content` paketet omfattar, men är inte begränsade till:
++ Paketet, eller innehållspaketet, innehåller allt innehåll och all konfiguration. `ui.content` Innehållspaketet innehåller allt som inte finns i `ui.apps` paketet, eller med andra ord något som inte finns i `/apps` eller `/oak:index`. Vanliga delar av `ui.content` paketet omfattar, men är inte begränsade till:
    + Kontextmedvetna konfigurationer
       + `/conf`
    + Nödvändiga, komplexa innehållsstrukturer (t.ex. Innehållsbygge som bygger på och sträcker sig förbi innehållsstrukturer för baslinjen som definierats i Repo Init.
       + `/content`, `/content/dam`osv.
    + Styrda taggar för taxonomier
       + `/content/cq:tags`
-   + Oak indexes
-      + `/oak:index`
    + Etc legacy nodes
       + `/etc`
 + Paketet `all` är ett behållarpaket som ENDAST innehåller paketen `ui.apps` och `ui.content` som inbäddade. Paketet `all` får inte ha något **eget innehåll**, utan ska delegera all driftsättning till databasen till sina underpaket.
