@@ -2,7 +2,7 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: 6d905c5a29b71c9d05dba910a20ffef21a4eceec
+source-git-commit: 921334705578626ac0ea75765496d4f379bb00fc
 
 ---
 
@@ -476,7 +476,7 @@ Se till att all information som bygger på visuella egenskaper för sidinnehåll
 
 Färg är ett uppenbart effektivt sätt att förbättra webbsidornas estetiska utseende och är också användbart för att förmedla information. Det finns dock en rad synstörningar, från blindhet till färgssynsbrist, som innebär att vissa personer inte kan skilja mellan olika färger. Detta gör färgkodning till ett otillförlitligt sätt att tillhandahålla information.
 
-En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja på nyanser i grönt och röda nyanser. De kan se båda färgerna som en tredje färg (till exempel brunt), och då kan de inte skilja mellan rött, grönt och brunt.
+En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja på nyanser i grönt och röda toner. De kan se båda färgerna som en tredje färg (till exempel brunt), och då kan de inte skilja mellan rött, grönt och brunt.
 
 Dessutom kan inte färger uppfattas av personer som använder webbläsare som bara innehåller text, enheter för monokrom visning eller som visar en svartvit utskrift av sidan.
 
@@ -491,7 +491,7 @@ Om färg används som en referenspunkt för att ge information bör du ange ytte
 #### Mer information - Färganvändning (1.4.1) {#more-information-use-of-color}
 
 * [Om villkor för att lyckas 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
-* [Så här uppfyller du kriterierna för framgång 1.4.3](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color)
+* [Så här uppfyller du kriterierna 1.4.1](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color)
 
 <!-- [Guidance on meeting a 3:1 contrast ratio, containing a list of “web safe” colors](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
 -->
@@ -1278,7 +1278,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 4.1.1
 #### Mer information - Analys (4.1.1) {#more-information-parsing}
 
 * [Om villkor för att lyckas 4.1.1](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
-* [Så här uppfyller du kriterierna för framgång 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)
+* [Hur man uppfyller kriterierna för framgång 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)
 
 ### Namn, roll, värde (4.1.2) {#name-role-value}
 
