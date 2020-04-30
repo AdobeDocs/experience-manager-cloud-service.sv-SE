@@ -2,7 +2,7 @@
 sub-product: Onboarding för AEM as a Cloud Service
 user-guide-title: Onboarding för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 720f45a50591ee9d1d0b95bce04f1bb73ef9cb31
 
 ---
 
@@ -25,4 +25,7 @@ source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
    + [AEM-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/aem-readiness.md)
    + [AEM Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/foundation-readiness.md)
    + [AEM Sites-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/sites-readiness.md)
++ Tillgänglighet {#accessibility}
+   + [AEM som en molntjänst och riktlinjerna för webbtillgänglighet](accessibility/web-accessibility.md)
+   + [En snabbguide till WCAG 2.1](accessibility/quick-guide-wcag.md)
 + [Översikt över verktygskonsolerna](tools-consoles.md)
