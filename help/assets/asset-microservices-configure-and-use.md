@@ -3,7 +3,7 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
+source-git-commit: 37ff6912837ba78c90526e8f8322b9002e9a4304
 
 ---
 
@@ -24,7 +24,7 @@ Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser 
 
 Resursbearbetningen beror på konfigurationen i **[!UICONTROL Bearbeta profiler]**, som tillhandahåller en standardinställning, och gör det möjligt för en administratör att lägga till en mer specifik konfiguration för resursbearbetning. Administratörer kan skapa och underhålla konfigurationer för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflöden kan du utöka och göra fullständiga anpassningar.
 
-Med tillgångsmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara att användas än vad som är möjligt med tidigare versioner av Experience Manager, till exempel miniatyrbildextrahering av PSD- och PSB-format som tidigare krävde tredjepartslösningar som ImageMagick.
+Med tillgångsmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara direkt än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick.
 
 <!-- Proposed DRAFT diagram for asset microservices flow - see section "asset-microservices-flow.png (asset-microservices-configure-and-use.md)" in the PPTX deck
 
