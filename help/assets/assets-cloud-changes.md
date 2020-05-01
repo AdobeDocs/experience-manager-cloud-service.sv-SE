@@ -2,25 +2,22 @@
 title: Betydande förändringar i Adobe Experience Manager Assets som en molntjänst
 description: Betydande ändringar av Adobe Experience Manager Assets i AEM Cloud-tjänsten jämfört med Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
 
 ---
 
 
 # Notable changes to Experience Manager Assets as a Cloud Service {#notable-changes}
 
-Adobe Experience Manager som molntjänst innehåller många nya funktioner och möjligheter för att hantera dina AEM-projekt. Det finns dock många skillnader mellan Experience Manager Assets på plats eller i Adobe Managed Service jämfört med Experience Manager som en molntjänst. Det här dokumentet visar de viktiga skillnaderna.
-
->[!NOTE]
->
->Det här dokumentet markerar de betydande ändringar som är specifika för Experience Manager Assets som en molntjänst. Se de allmänna [ändringarna av Experience Manager som en molntjänst](/help/release-notes/aem-cloud-changes.md).
+Adobe Experience Manager som molntjänst innehåller många nya funktioner och möjligheter för att hantera dina AEM-projekt. Det finns dock många skillnader mellan Experience Manager Assets på plats eller i Adobe Managed Service jämfört med Experience Manager som en molntjänst. Det här dokumentet belyser de viktiga skillnaderna i Assets-funktioner. Andra ändringar finns i de allmänna [ändringarna av Experience Manager som en molntjänst](/help/release-notes/aem-cloud-changes.md).
 
 De största skillnaderna jämfört med Experience Manager 6.5 är inom följande områden:
 
-* [Tillgångsintag](#asset-ingestion)
-* [Borttagning av Classic UI](#classic-ui)
+* [Tillgångsintag och överföring](#asset-ingestion).
+* [Resursmikrotjänster för molnbearbetning](#asset-microservices).
+* [Borttagning av klassiskt gränssnitt](#classic-ui).
 
-## Tillgångsintag {#asset-ingestion}
+## Tillgångsintag och överföring {#asset-ingestion}
 
 Tillgångsuppladdning har optimerats för ökad effektivitet genom bättre skalning av tillgångsintag och snabbare överföringar. Produktfunktionerna (webbanvändargränssnitt, skrivbordsklienter) har uppdaterats. Detta kan dock påverka vissa befintliga anpassningar.
 
@@ -34,12 +31,14 @@ Tillgångsuppladdning har optimerats för ökad effektivitet genom bättre skaln
 
 Standardåtergivningar som genereras med tillgångsmikrotjänster lagras på ett bakåtkompatibelt sätt i resurslagernoderna (samma namnkonventioner).
 
-## Utveckla och testa mikrotjänster {#developing-testing-asset-microservices}
+## Utveckla och testa mikrotjänster {#asset-microservices}
 
-Resursmikrotjänster är en inbyggd molntjänst som automatiskt tillhandahålls och kopplas till Experience Manager i kundprogram och miljöer som hanteras i Cloud Manager. Utvecklare som arbetar med att utöka eller anpassa Experience Manager kan använda befintligt innehåll (eller resurser med återgivningar som genererats i en molnmiljö) för att testa och validera sin kod med, visa och hämta resurser.
+Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. Resursmikrotjänster hjälper till att undvika behovet av verktyg och metoder för återgivning från tredje part (som ImageMagick och FMPEG-omkodning) och förenklar konfigurationer, samtidigt som de ger körklara funktioner för vanliga filtyper. För närvarande är ImageMagick-integrering och FFMmpeg-omkodning inte tillgängliga i molntjänsten.
 
-Om du vill göra en komplett validering av koden och processen, inklusive tillgångsinmatning och bearbetning, distribuerar du kodändringarna till en molnmiljö med hjälp av pipeline och testar med fullständig körning av bearbetning av tillgångsmikrotjänster.
+Resursmikrotjänster är en molnbaserad tjänst som automatiskt tillhandahålls och kopplas till Experience Manager i kundprogram och miljöer som hanteras i Cloud Manager. För att utöka eller anpassa Experience Manager kan utvecklarna använda befintligt innehåll eller befintliga resurser med återgivningar som genereras i en molnmiljö för att testa och validera koden med, visa och hämta resurser.
+
+Om du vill göra en komplett validering av koden och processen, inklusive tillgångsinmatning och bearbetning, distribuerar du kodändringarna till en molnmiljö med hjälp [av pipeline](/help/implementing/cloud-manager/configure-pipeline.md) och testar med fullständig körning av bearbetning av tillgångsmikrotjänster.
 
 ## Borttagning av Classic UI {#classic-ui}
 
-Det klassiska användargränssnittet är inte längre tillgängligt i Experience Manager som molntjänst.
+Det klassiska användargränssnittet är inte längre tillgängligt i Experience Manager som molntjänst. Standardgränssnittet är det pekaktiverade gränssnittet.
