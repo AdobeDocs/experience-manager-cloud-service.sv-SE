@@ -3,7 +3,7 @@ title: Se hur Assets microservices kan bearbeta dina digitala resurser i molnet
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
 
 ---
 
@@ -15,9 +15,7 @@ First half of content at https://git.corp.adobe.com/aklimets/project-nui/blob/ma
 TBD: Post-GA we will provide detailed information at \help\assets\asset-microservices-configure-and-use.md. However, for GA, all information is added, in short, in this article.
 -->
 
-Adobe Experience Manager som en molntjänst är ett molnbaserat sätt att utnyttja Experience Manager-program och -funktioner. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster.
-
-Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster, som hanteras av Adobe för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna är:
+Adobe Experience Manager som molntjänst är en molnbaserad metod för att utnyttja Experience Manager-program och -funktioner. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster. Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna med molnbaserade resurstjänster är:
 
 * Skalbar arkitektur som möjliggör smidig bearbetning för resurskrävande åtgärder.
 * Effektiv indexering och textextrahering som inte påverkar prestandan i Experience Manager-miljöerna.
@@ -28,7 +26,7 @@ Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser 
 * Adobes filbehandlingstjänster används där det är tillämpligt, vilket ger exakt återgivning och [effektiv hantering av Adobes egna format](file-format-support.md).
 * Möjlighet att konfigurera efterbehandlingsarbetsflöden för att lägga till användarspecifika åtgärder och integreringar.
 
-Resursmikrotjänsterna hjälper till att undvika behovet av tredjepartsverktyg för återgivning (som ImageMagick) och förenklar konfigurationen av systemet, samtidigt som de tillhandahåller färdiga funktioner för vanliga filtyper.
+Resursmikrotjänster hjälper till att undvika behovet av verktyg och metoder för återgivning från tredje part (som ImageMagick och FMPEG-omkodning) och förenklar konfigurationer, samtidigt som de ger körklara funktioner för vanliga filtyper.
 
 ## Arkitektur på hög nivå {#asset-microservices-architecture}
 
@@ -45,12 +43,12 @@ De viktigaste stegen för intag och bearbetning med hjälp av tillgångsmikrotj�
 
 * Klienter, som webbläsare eller Adobe Asset Link, skickar en överföringsbegäran till Experience Manager och börjar överföra binärfilen direkt till det binära molnlagringsutrymmet.
 * När den direkta binära överföringen har slutförts meddelar klienten Experience Manager.
-* Experience Manager skickar en bearbetningsbegäran till resursens mikrotjänster. Innehållet i begäran beror på vilken bearbetningsprofilskonfiguration i Experience Manager som anger vilka återgivningar som ska genereras
+* Experience Manager skickar en bearbetningsbegäran till resursens mikrotjänster. Innehållet i begäran beror på vilken bearbetningsprofilskonfiguration i Experience Manager som anger vilka återgivningar som ska genereras.
 * Resurserna för mikrotjänster tar emot begäran och skickar den till en eller flera mikrotjänster baserat på begäran. Varje mikrotjänst får åtkomst till den ursprungliga binärfilen direkt från den binära molnbutiken.
 * Resultaten av bearbetningen, t.ex. renderingar, lagras i det binära molnlagringsutrymmet.
-* Experience Manager får ett meddelande om att bearbetningen är klar tillsammans med direktpekarna till de genererade binärfilerna (renderingar), som sedan är tillgängliga i Experience Manager för den överförda resursen
+* Experience Manager meddelas om att bearbetningen är klar tillsammans med direktpekare till de genererade binärfilerna (återgivningar). De genererade återgivningarna är tillgängliga i Experience Manager för den överförda resursen.
 
-Detta är det grundläggande flödet av tillgångsintag och bearbetning. Om Experience Manager är konfigurerat kan det även starta kundens arbetsflödesmodell för att utföra efterbearbetning av resursen, till exempel för att utföra vissa anpassade steg som är specifika för kundmiljön, som att hämta information från kundens företagssystem för att lägga till i resursegenskaper.
+Detta är det grundläggande flödet av tillgångsintag och bearbetning. Om den är konfigurerad kan Experience Manager även starta en anpassad arbetsflödesmodell för att utföra efterbearbetning av resursen. Du kan till exempel utföra anpassade steg som är specifika för din miljö, som att hämta information från ett företagssystem och lägga till i resursegenskaper.
 
 Intag och bearbetningsflöde är viktiga begrepp i resursens mikrotjänstarkitektur för Experience Manager.
 
