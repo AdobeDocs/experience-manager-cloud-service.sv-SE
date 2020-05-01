@@ -1,16 +1,16 @@
 ---
-title: Hantera videomaterial
+title: Hantera videoresurser
 description: Lär dig hur du överför, förhandsgranskar, kommenterar och publicerar videomaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7141e42f53c556c0ac21def6085182ef400f5a71
+source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
 
 ---
 
 
-# Hantera videomaterial {#manage-video-assets}
+# Hantera videoresurser {#manage-video-assets}
 
-Lär dig hur du hanterar och redigerar videoresurser i Adobe Experience Manager (AEM) Assets. Videokodning och transkodning är bara möjligt med Dynamic Media-integrering. Utan Dynamic Media får du grundläggande stöd för videor, till exempel extrahering av förhandsvisningsminiatyrer för de filformat som stöds och förhandsvisning i användargränssnittet för format som stöds för direktuppspelning i webbläsaren.
+Lär dig hur du hanterar och redigerar videoresurser i Adobe Experience Manager (AEM) Assets. Videokodning och transkodning, till exempel FFmpeg-transkodning, är bara möjligt med Dynamic Media-integrering. Utan Dynamic Media får du grundläggande stöd för videor, till exempel extrahering av förhandsvisningsminiatyrer för de filformat som stöds och förhandsvisning i användargränssnittet för format som stöds för direktuppspelning i webbläsaren.
 
 <!-- Also, if you are licensed to use Dynamic Media, see the [Dynamic Media video documentation](/help/assets/dynamic-media/video.md). -->
 
@@ -32,5 +32,5 @@ När videomaterialet har publicerats kan du inkludera det på en webbsida via en
 1. I resurskonsolen klickar eller trycker du på ikonen [!UICONTROL Redigera] på resurskortet för att visa sidan med resursinformation.
 1. Om du vill spela upp videon klickar eller trycker du på ikonen [!UICONTROL Förhandsgranska] .
 1. Om du vill kommentera videon klickar du på knappen **[!UICONTROL Anteckna]** . En anteckning läggs till vid den särskilda tidspunkten (bildrutan) i videon. När du gör anteckningar kan du rita på arbetsytan och ta med en kommentar med ritningen. Kommentarerna sparas automatiskt. Om du vill avsluta anteckningsguiden klickar du på **[!UICONTROL Stäng]**.
-1. Gå till en viss punkt i videon, ange tiden i sekunder i **textfältet** och klicka på **Hoppa**. Om du till exempel vill hoppa över de första 10 sekunderna av video anger du 20 i textfältet.
+1. Gå till en viss punkt i videon, ange tiden i sekunder i **textfältet** och klicka på **Hoppa**. Om du till exempel vill hoppa över de första 10 sekunderna av videon anger du 20 i textfältet.
 1. Klicka på en anteckning om du vill visa den i tidslinjen. Om du vill ta bort anteckningen från tidslinjen klickar du på **[!UICONTROL Ta bort]**.
