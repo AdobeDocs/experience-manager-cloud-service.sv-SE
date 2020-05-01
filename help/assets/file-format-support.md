@@ -3,7 +3,7 @@ title: Filformat och MIME-typer som stöds av Experience Manager Assets som en m
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som en molntjänst.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
 
 ---
 
@@ -17,7 +17,7 @@ Dessutom har Experience Manager Assets utökat stöd för att generera förhands
 Följande förklaring beskriver supportnivån.
 
 | Supportnivå | Beskrivning |
-| ------------------------------------------------------------ | --------------------------- |
+| ------------- | --------------------------- |
 | ✓ | Stöds |
 | * | Se anmärkningarna nedanför tabellen |
 | - | Ej relevant |
@@ -26,28 +26,26 @@ Följande förklaring beskriver supportnivån.
 
 Högdagrarna är följande:
 
-* Viktiga [Adobe-filformat](#adobe-formats) som skapats av program och tjänster från Adobe, bland annat Adobe Photoshop, InDesign, Illustrator, XD, Dimension och Acrobat / PDF.
+* Viktiga [Adobe-filformat](#adobe-formats) som skapats av program och tjänster från Adobe, bland annat Adobe Photoshop, Adobe InDesign, Adobe Illustrator, Adobe XD, Adobe Dimension och Adobe Acrobat eller PDF.
 * Viktiga [bildfilformat](#image-formats).
 * [Camera Raw-filformat](#camera-raw-formats) för en mängd olika kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
-* Vanliga [dokumentformat](#document-formats), inklusive [Microsoft Office](#microsoft-office-formats) (Word, Excel, PowerPoint) och [Open Document](#opendocument-formats) -format.
+* Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
 * Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
 
 Kolumnerna i följande tabeller innehåller följande information:
 
 | Kolumn | Beskrivning |
 | ------------ | --------------------------------------------------------------- |
-| Format | Filformat (filtillägg) för objektets ursprungliga binära fil |
-| GIF | GIF-format för återgivningsgenerering |
-| JPEG | JPEG-format för återgivningsgenerering |
-| PNG | PNG-format för återgivningsgenerering |
-| XMP | Extrahering av metadata från den ursprungliga binärfilen |
-| TXT | Extrahering av text från dokument för indexering |
-| Bredd/höjd | Stöd för att definiera bredden och höjden på en återgivning (pixlar) |
+| Format | Filformat (filtillägg) för objektets ursprungliga binärfil. |
+| GIF | GIF-format för återgivningsgenerering. |
+| JPEG | JPEG-format för återgivningsgenerering. |
+| PNG | PNG-format för återgivningsgenerering. |
+| Bredd/höjd | Stöd för att definiera bredden och höjden på en återgivning i pixlar. |
 
 ### Adobe-format {#adobe-formats}
 
-| Filformat | GIF | JPEG | PNG | TXT | XMP | Bredd/höjd |
-| ----------- | --- | ---- | --- | --- | --- | ------------ |
+| Filformat | GIF | JPEG | PNG | Extrahering av fulltext | Extrahering av metadata | Bredd/höjd |
+| ----------- | -------- | -------- | -------- | ------------------- | ------------------- | ------------ |
 | AI | ✓ | ✓ | ✓ | - | ✓ | ✓ |
 | COLLAGE | - | - | - | - | ✓ | - |
 | DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |
@@ -64,8 +62,8 @@ Kolumnerna i följande tabeller innehåller följande information:
 
 ### Bildformat {#image-formats}
 
-| Filformat | GIF | JPEG | PNG | XMP | Bredd/höjd |
-| ----------- | --- | ---- | --- | --- | ------------ |
+| Filformat | GIF | JPEG | PNG | Extrahering av metadata | Bredd/höjd |
+| ----------- | -------- | -------- | -------- | ------------------- | ------------ |
 | BMP | ✓ | ✓ | ✓ | - | ✓ |
 | EPS | - | - | - | ✓ | - |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -76,8 +74,8 @@ Kolumnerna i följande tabeller innehåller följande information:
 
 ### Camera RAW-format {#camera-raw-formats}
 
-| Filformat | GIF | JPEG | PNG | XMP | Bredd/höjd |
-| ----------- | --- | ---- | --- | --- | ------------ |
+| Filformat | GIF | JPEG | PNG | Extrahering av metadata | Bredd/höjd |
+| ----------- | -------- | -------- | -------- | ------------------- | ------------ |
 | 3FR | ✓ | ✓ | ✓ | ✓ | ✓ |
 | ARW | ✓ | ✓ | ✓ | ✓ | ✓ |
 | CR2 | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -108,38 +106,34 @@ Kolumnerna i följande tabeller innehåller följande information:
 
 ### Dokumentformat {#document-formats}
 
-| Filformat | TXT | XMP |
-| ----------- | --- | --- |
-| EPUB | ✓ | - |
-| HTML | ✓ | - |
-| PS | - | ✓ |
-| RTF | ✓ | - |
-| TEXT | ✓ | - |
-| XML | ✓ | - |
+Följande dokumentformat stöds för filhanteringsfunktioner.
 
-### Microsoft Office-format {#microsoft-office-formats}
-
-| Filformat | GIF | JPEG | PNG | TEXT | Bredd/höjd |
-| ----------- | --- | ---- | --- | ---- | ------------ |
-| DOCX | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ |
-| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ |
-
-### OpenDocument-format {#opendocument-formats}
-
-| Filformat | GIF | JPEG | PNG | TEXT | Höjd |
-| ----------- | --- | ---- | --- | ---- | ------ |
-| ODF | ✓ | ✓ | ✓ | ✓ | ✓ |
-| OFG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ODM | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ODP | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ODS | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ODT | ✓ | ✓ | ✓ | ✓ | ✓ |
+|  | GIF | JPEG | PNG | Extrahering av fulltext | Bredd/höjd | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
+| ---- | -------- | -------- | -------- | ------------------- | ------------ | ------------------- | ---------------- |
+| PDF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| DOC | - | - | - | - | - | ✓ | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PPT | - | - | - | - | - | ✓ | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| XLS | - | - | - | - | - | ✓ | ✓ |
+| ODF | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
+| OFG | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
+| ODM | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
+| ODP | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
+| ODS | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
+| ODT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| EPUB | - | - | - | ✓ | - | - | - |
+| HTML | - | - | - | ✓ | - | ✓ | ✓ |
+| PS | - | - | - | - | ✓ | - | - |
+| RTF | - | - | - | ✓ | - | ✓ | ✓ |
+| TXT | - | - | - | ✓ | - | ✓ | ✓ |
+| XML | - | - | - | ✓ | - | - | - |
 
 ### Videoformat {#video-formats}
 
-| Filformat | GIF | JPEG | PNG | XMP | Bredd/höjd |
-| ----------- | --- | ---- | --- | --- | ------------ |
+| Filformat | GIF | JPEG | PNG | Extrahering av metadata | Bredd/höjd |
+| ----------- | -------- | -------- | -------- | ------------------- | ------------ |
 | 3G2 | - | - | - | ✓ | - |
 | 3GP | - | - | - | ✓ | - |
 | AVI | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -165,25 +159,7 @@ Kolumnerna i följande tabeller innehåller följande information:
 
 ### Ljudformat {#audio-formats}
 
-Resurser som molntjänst ger XMP-stöd för följande ljudformat: AIF, ASF, M4A, MP3, WAV och WMA.
-
-## Dokumentformat som stöds {#doc-formats}
-
-Dokumentformat som stöds för filhanteringsfunktioner är följande.
-
-| Filformat | Lagring | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
-|---|---|---|---|
-| DOC | ✓ | ✓ | ✓ |
-| DOCX | ✓ | ✓ | ✓ |
-| ODT | ✓ | ✓ | ✓ |
-| PDF | ✓ | ✓ | ✓ |
-| HTML | ✓ | ✓ | ✓ |
-| RTF | ✓ | ✓ | ✓ |
-| TXT | ✓ | ✓ | ✓ |
-| XLS | ✓ | ✓ | ✓ |
-| XLSX | ✓ | ✓ | ✓ |
-| PPT | ✓ | ✓ | ✓ |
-| PPTX | ✓ | ✓ | ✓ |
+Resurser som en molntjänst ger stöd för XMP-metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
 
 >[!MORELIKETHIS]
 >
