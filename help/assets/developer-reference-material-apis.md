@@ -3,7 +3,7 @@ title: 'Resurser-API:er för hantering av digitala resurser i Adobe Experience M
 description: Resurs-API:er gör det möjligt att använda grundläggande CRUD-åtgärder (create-read-update-delete) för att hantera resurser, inklusive binära, metadata, återgivningar, kommentarer och innehållsfragment.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
 
 ---
 
@@ -92,25 +92,27 @@ Ett möjligt sätt att uppnå detta är att beräkna delstorleken baserat på an
 
 * Beräkna delstorlek genom att dividera den totala storleken med antalet URI:er: 20 000 / 2 = 10 000
 * POST-byteintervallet 0-9 999 för binärfilen till den första URI:n i listan över överförda URI:er
-* POST-byteintervallet 10 000-19 999 för binärfilen till den andra URI:n i listan över överförda URI:er
+* POST-byteintervallet 10 000 - 19 999 för binärfilen till den andra URI:n i listan över överförda URI:er
 
 Om det lyckas svarar servern på varje begäran med en `201` statuskod.
 
 ### fullständig överföring {#complete-upload}
 
-När alla delar av en binär fil har överförts är det sista steget att skicka en HTTP POST-begäran till den fullständiga URI som tillhandahålls av initieringsdata. Innehållstypen för begärandetexten ska vara program/`x-www-form-urlencoded` formulärdata, som innehåller följande fält:
+När alla delar av en binär fil har överförts skickar du en HTTP POST-begäran till den fullständiga URI som anges av initieringsdata. Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält.
 
-* `(string) fileName`: Krävs. Namnet på resursen, enligt initieringsdata.
-* `(string) mimeType`: Krävs. HTTP-innehållstypen för binärfilen, som angavs i initieringsdata.
-* `(string) uploadToken`: Krävs. Överför token för binärfilen enligt initieringsdata.
-* `(bool) createVersion`: Valfritt. Om värdet är true och det redan finns en resurs med det angivna namnet skapas en ny version av resursen.
-* `(string) versionLabel`: Valfritt. Om en ny version skapas är det den etikett som är kopplad till versionen.
-* `(string) versionComment`: Valfritt. Om en ny version skapas, kommer kommentarer som är kopplade till versionen att skapas.
-* `(bool) replace`: Valfritt: Om värdet är true och det redan finns en resurs med det angivna namnet, kommer instansen att ta bort resursen och sedan återskapa den.
+| fält | Typ | Obligatoriskt eller inte | Beskrivning |
+|---|---|---|---|
+| `fileName` | Sträng | Krävs | Namnet på resursen, enligt initieringsdata. |
+| `mimeType` | Sträng | Krävs | HTTP-innehållstypen för binärfilen, som angavs i initieringsdata. |
+| `uploadToken` | Sträng | Krävs | Överför token för binärfilen enligt initieringsdata. |
+| `createVersion` | Boolesk | Valfritt | Om det redan finns `True` en resurs med det angivna namnet skapar Experience Manager en ny version av resursen. |
+| `versionLabel` | Sträng | Valfritt | Om en ny version skapas är den etikett som är associerad med den nya versionen av en resurs . |
+| `versionComment` | Sträng | Valfritt | Om en ny version skapas, de kommentarer som är kopplade till versionen. |
+| `replace` | Boolesk | Valfritt | Om det redan finns `True` en resurs med det angivna namnet tar Experience Manager bort resursen och återskapar den. |
 
 >!![NOTE]
 >
-> Om resursen redan finns och varken createVersion eller replace anges, kommer instansen att uppdatera resursens aktuella version med den nya binärfilen.
+> Om resursen redan finns och varken `createVersion` eller `replace` anges, uppdaterar Experience Manager resursens aktuella version med den nya binärfilen.
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
 
@@ -120,46 +122,36 @@ Om det lyckas svarar servern med en `200` statuskod.
 
 ### Överföringsbibliotek med öppen källkod {#open-source-upload-library}
 
-Adobe tillhandahåller bibliotek och verktyg med öppen källkod som en startpunkt för att lära dig mer om överföringsalgoritmerna eller för att bygga egna överföringsskript och verktyg:
+Adobe tillhandahåller bibliotek och verktyg med öppen källkod som en startpunkt för att lära dig mer om överföringsalgoritmerna eller för att bygga egna uppladdningsskript och verktyg:
 
-* [Bibliotek för öppen källkodsöverföring](https://github.com/adobe/aem-upload)
-* [Kommandoradsverktyget Open source](https://github.com/adobe/aio-cli-plugin-aem)
+* [Open-source aem-upload library](https://github.com/adobe/aem-upload)
+* [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem)
 
 ### Inaktuella API:er för överföring av resurser {#deprecated-asset-upload-api}
 
-<!-- #ENGCHECK review / update the list of deprecated APIs below -->
+<!-- #ENGCHECK review / update the list of deprecated APIs below. -->
 
->[!NOTE]
-För Experience Manager som molntjänst stöds endast de nya överförings-API:erna. API:er från Experience Manager 6.5 är föråldrade.
-
-Metoder som relaterar till överföring eller uppdatering av resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
+För Adobe Experience Manager som molntjänst stöds endast de nya överförings-API:erna. API:erna från Adobe Experience Manager 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
 
 * [HTTP-API för AEM Assets](mac-api-assets.md)
 * `AssetManager` Java API, som `AssetManager.createAsset(..)`
 
 >[!MORELIKETHIS]
-* [Bibliotek för öppen källkodsöverföring](https://github.com/adobe/aem-upload)
-* [Kommandoradsverktyget Open source](https://github.com/adobe/aio-cli-plugin-aem)
+* [Uppladdningsbibliotek](https://github.com/adobe/aem-upload)med öppen källkod.
+* [Kommandoradsverktyget](https://github.com/adobe/aio-cli-plugin-aem)med öppen källkod.
 
 
 ## Resurshantering och efterbearbetning {#post-processing-workflows}
 
-Den mesta bearbetningen av resurser utförs baserat på konfigurationen av **[!UICONTROL bearbetningsprofiler]** per [objektmikrotjänst](asset-microservices-configure-and-use.md#get-started-using-asset-microservices), och inga utvecklartillägg krävs.
+I Experience Manager baseras resursbearbetningen på konfigurationen av **[!UICONTROL bearbetningsprofiler]** som använder [objektmikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
 
-För arbetsflödeskonfigurationen för efterbearbetning kan AEM-standardarbetsflöden med tillägg (t.ex. anpassade steg användas). Granska följande underavsnitt för att förstå vilka arbetsflödessteg som kan användas i arbetsflödena för efterbearbetning av resurser.
+Använd standardarbetsflödena med tillägg med anpassade steg för konfiguration av efterbearbetning av arbetsflöde.
 
-### Arbetsflödessteg i efterbearbetningsarbetsflöde {#post-processing-workflows-steps}
+## Stöd för arbetsflödessteg i efterbearbetningsarbetsflödet {#post-processing-workflows-steps}
 
->[!NOTE]
-Det här avsnittet gäller främst kunder som uppdaterar till AEM som en molntjänst från tidigare versioner av AEM.
+Kunder som uppgraderar till Experience Manager som en molntjänst från tidigare versioner av Experience Manager kan använda resursmikrotjänster för bearbetning av resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] i den tidigare versionen stöds inte.
 
-På grund av en ny distributionsmodell som introducerats med Experience Manager som en molntjänst kanske vissa arbetsflödessteg som används i arbetsflödet före introduktionen av resursmikrotjänster inte längre stöds för efterbearbetningsarbetsflöden. `DAM Update Asset` Observera att de flesta av dem ersätts med mycket enklare verktyg för att konfigurera och använda resursmikrotjänster.
-
-Här följer en lista över tekniska arbetsflödesmodeller och deras supportnivå i AEM som en molntjänst:
-
-### Arbetsflödessteg som stöds {#supported-workflow-steps}
-
-Följande arbetsflödessteg stöds i molntjänsten.
+Följande arbetsflödessteg stöds i Experience Manager som en molntjänst.
 
 * `com.day.cq.dam.similaritysearch.internal.workflow.process.AutoTagAssetProcess`
 * `com.day.cq.dam.core.impl.process.CreateAssetLanguageCopyProcess`
@@ -170,8 +162,6 @@ Följande arbetsflödessteg stöds i molntjänsten.
 * `com.day.cq.dam.core.impl.process.UpdateAssetLanguageCopyProcess`
 * `com.adobe.cq.workflow.replication.impl.ReplicationWorkflowProcess`
 * `com.day.cq.dam.core.impl.process.DamUpdateAssetWorkflowCompletedProcess`
-
-### Modeller som inte stöds eller ersätts {#unsupported-replaced-models}
 
 Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller så är support inte tillgänglig.
 
