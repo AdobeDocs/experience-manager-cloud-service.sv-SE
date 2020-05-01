@@ -2,7 +2,7 @@
 title: Betydande förändringar i Adobe Experience Manager Assets som en molntjänst
 description: Betydande ändringar av Adobe Experience Manager Assets i AEM Cloud-tjänsten jämfört med Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
+source-git-commit: 37ff6912837ba78c90526e8f8322b9002e9a4304
 
 ---
 
@@ -33,7 +33,7 @@ Standardåtergivningar som genereras med tillgångsmikrotjänster lagras på ett
 
 ## Utveckla och testa mikrotjänster {#asset-microservices}
 
-Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. Resursmikrotjänster hjälper till att undvika behovet av verktyg och metoder för återgivning från tredje part (som ImageMagick och FMPEG-omkodning) och förenklar konfigurationer, samtidigt som de ger körklara funktioner för vanliga filtyper. För närvarande är ImageMagick-integrering och FFMmpeg-omkodning inte tillgängliga i molntjänsten.
+Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. Resursmikrotjänster hjälper till att undvika behovet av tredjepartsverktyg och -metoder (som ImageMagick) och förenkla konfigurationer, samtidigt som de tillhandahåller färdiga funktioner för vanliga filtyper. Du kan nu bearbeta en [mängd olika filtyper](/help/assets/file-format-support.md) som omfattar fler färdiga format än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick. Du kan inte använda de komplexa konfigurationerna för ImageMagick för konfigurationen av [!UICONTROL Bearbetningsprofiler] . Använd även [!DNL Dynamic Media] för MPEG-omkodning av videofilmer.
 
 Resursmikrotjänster är en molnbaserad tjänst som automatiskt tillhandahålls och kopplas till Experience Manager i kundprogram och miljöer som hanteras i Cloud Manager. För att utöka eller anpassa Experience Manager kan utvecklarna använda befintligt innehåll eller befintliga resurser med återgivningar som genereras i en molnmiljö för att testa och validera koden med, visa och hämta resurser.
 
