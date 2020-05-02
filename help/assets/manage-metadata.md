@@ -4,7 +4,7 @@ description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Mana
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
+source-git-commit: 07ebe0588944fff40157119e658aca00eaed6ec3
 
 ---
 
@@ -161,7 +161,7 @@ De metadatamappningar som stöds listas nedan.
 
 ### Standardmetadata {#standard-metadata}
 
-* dc - [!DNL Dublin Core] är den viktigaste och mest använda uppsättningen metadata.
+* DC - [!DNL Dublin Core] är en viktig och allmänt använd uppsättning metadata.
 * DICOM - Digital Imaging and Communications in Medicine.
 * Iptc4xmpCore och iptc4xmpExt - International Press Communications Standard innehåller många ämnesspecifika metadata.
 * rdf - Resource Description Framework - för generiska semantiska webbmetadata.
@@ -173,45 +173,45 @@ De metadatamappningar som stöds listas nedan.
 Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du använder dessa kanske andra program inte kan använda metadata. Om du t.ex. har en resurs med [!DNL Adobe Photoshop] metadata och ett annat bildåtergivningsprogram försöker få åtkomst till metadata kanske den inte kan få åtkomst till metadata. Om du har mycket programspecifika metadata i dina resurser kan du skapa ett arbetsflödessteg som ändrar en programspecifik egenskap till en standardegenskap.
 
 * ACDSee - metadata som hanteras av [!DNL ACDSee] programmet. Se [www.acdsee.com/](https://www.acdsee.com/).
-* album - [!DNL Adobe Photoshop Album].
-* cq - Används av [!DNL Experience Manager Assets].
-* dam - Används av [!DNL Experience Manager Assets].
-* dex - Optima SC Description Explorer.
-* crs - Adobe Photoshop Camera Raw.
-* lr - [!DNL Adobe Lightroom].
-* mediapro - IView MediaPro.
+* Album - [!DNL Adobe Photoshop Album].
+* CQ - Används av [!DNL Experience Manager Assets].
+* DAM - Används av [!DNL Experience Manager Assets].
+* DEX - [Optima SC Description Explorer](http://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering i Windows.
+* CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html).
+* LR - [!DNL Adobe Lightroom].
+* MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
 * Microsoft Photo &amp; MP - Microsoft Photo.
-* pdf och pdfx.
-* photoshop &amp; psAux - [!DNL Adobe Photoshop].
+* PDF &amp; PDF/X.
+* Photoshop och psAux - [!DNL Adobe Photoshop].
 
 ### Metadata för hantering av digitala rättigheter {#digital-rights-management-metadata}
 
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights].
-* plus - [Picture Licensing Universal System](https://www.useplus.com).
-* prism - https://www.idealliance.org/prism-metadata för publicering av standardmetadata.
+* PLUS - [Picture Licensing Universal System](https://www.useplus.com).
+* PRISM - [publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
 * PRL - PRISM Rights Language.
 * PUR - PRISM-användningsrättigheter.
-* xmpPlus - integrering av PLUS med XMP.
+* `xmpPlus` - Integration av PLUS med XMP.
 
 ### Fotografispecifika metadata {#photography-specific-metadata}
 
 * Exif - Teknisk information från kameran, inklusive GPS-position.
 * CRS - [!DNL Camera Raw] schema.
-* Iptc4xmpCore och iptc4xmpExt.
+* `iptc4xmpCore` and `iptc4xmpExt`.
 * TIFF - bildmetadata (inte bara för TIFF-bilder).
 
 ### Utskriftsspecifika metadata {#print-specific-metadata}
 
-* pdf och pdfx - Adobe PDF och tredjepartsprogram.
-* prism - [www.prismstandard.org](https://www.prismstandard.org) publiceringskrav för branschstandardmetadata.
+* PDF och PDF/X - Adobe PDF och tredjepartsprogram.
+* PRISM - [www.prismstandard.org](https://www.prismstandard.org) för publicering av standardmetadata.
 * XMP.
-* xmpPG - XMP-metadata för växlad text.
+* `xmpPG` - XMP-metadata för växlad text.
 
 ### Multimediaspecifika metadata {#multimedia-specific-metadata}
 
-* xmpDM - [!DNL Dynamic Media].
-* xmpMM - Mediehantering.
+* `xmpDM` - [!DNL Dynamic Media].
+* `xmpMM` - Mediehantering.
 
 ## Metadatastyrda arbetsflöden {#metadata-driven-workflows}
 
