@@ -3,7 +3,7 @@ title: Importera och exportera metadata för resurser i grupp
 description: I den här artikeln beskrivs hur du importerar och exporterar flera metadata samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 823925be9d0777f7d501d9a64e84937172b1028d
 
 ---
 
@@ -21,7 +21,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 >Om du vill importera metadata för anpassade namnutrymmen måste du först registrera namnutrymmena.
 
 1. Navigera till användargränssnittet Resurser och tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet.
-1. Välj **[!UICONTROL Metadata]** på menyn.
+1. From the menu, select **[!UICONTROL Metadata]**.
 1. Tryck/klicka på **[!UICONTROL Välj fil]** på sidan **** Metadataimport. Markera CSV-filen med metadata.
 1. Ange följande parametrar:
 
@@ -34,6 +34,12 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
    | Kolumnnamn för resurssökväg | Definierar kolumnnamnet för CSV-filen med resurser. |
 
 1. Tryck/klicka på **[!UICONTROL Importera]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
+
+Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du `YYYY-MM-DDThh:mm:ss.fff-00:00` formatet för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Exempel: `2020-03-26T11:26:00.000-07:00` är 26 mars 2020 kl. 11:26:00.000 PST.
+
+>[!CAUTION]
+>
+>Om datumformatet inte matchar `YYYY-MM-DDThh:mm:ss.fff-00:00`ställs datumvärdena inte in. Datumformaten för den exporterade CSV-metadatafilen har formatet `YYYY-MM-DDThh:mm:ss-00:00`. Om du vill importera den konverterar du den till ett godkänt format genom att lägga till värdet för nanosekunder som anges av `fff`.
 
 ## Exportera metadata {#export-metadata}
 
@@ -56,7 +62,7 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 1. I fältet **[!UICONTROL Egenskaper som ska exporteras]** anger du om du vill exportera alla eller specifika egenskaper. Om du väljer Selektiva egenskaper som ska exporteras lägger du till de önskade egenskaperna.
 
 1. Tryck/klicka på **[!UICONTROL Exportera]** i verktygsfältet. Ett meddelande bekräftar att metadata exporteras. Stäng meddelandet.
-1. Öppna inkorgsmeddelandet för exportjobbet. Markera jobbet och klicka på **[!UICONTROL Öppna]** i verktygsfältet. Om du vill hämta CSV-filen med metadata trycker/klickar du på **[!UICONTROL CSV-hämtning]** i verktygsfältet. Click **[!UICONTROL Close]**.
+1. Öppna inkorgsmeddelandet för exportjobbet. Select the job and click **[!UICONTROL Open]** from the toolbar. To download the CSV file with the metadata, tap/click **[!UICONTROL CSV Download]** from the toolbar. Click **[!UICONTROL Close]**.
 
    ![Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp](assets/csv_download.png)
    *Bild: Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp*
