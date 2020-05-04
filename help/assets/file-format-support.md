@@ -3,7 +3,7 @@ title: Filformat och MIME-typer som stöds av Experience Manager Assets som en m
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som en molntjänst.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4729f0bdd3cf7e2c6fc80e52bf2f70d689956296
+source-git-commit: 2e73a9bba91f15702bdeb1d57e87b688360661bd
 
 ---
 
@@ -32,130 +32,120 @@ Högdagrarna är följande:
 * Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
 * Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
 
-Kolumnerna i följande tabeller innehåller följande information:
-
-| Kolumn | Beskrivning |
-| ------------ | --------------------------------------------------------------- |
-| Format | Filformat (filtillägg) för objektets ursprungliga binärfil. |
-| GIF | GIF-format för återgivningsgenerering. |
-| JPEG | JPEG-format för återgivningsgenerering. |
-| PNG | PNG-format för återgivningsgenerering. |
-| Bredd/höjd | Stöd för att definiera bredden och höjden på en återgivning i pixlar. |
-
 ### Adobe-format {#adobe-formats}
 
-| Filformat | GIF | JPEG | PNG | Extrahering av fulltext | TIFF | Extrahering av metadata | Bredd/höjd |
-| ----------- | -------- | -------- | -------- | ------------------- | -------- | ------------------- | ------------ |
-| AI | ✓ | ✓ | ✓ | - | ✓ | ✓ | ✓ |
-| COLLAGE | - | - | - | - | - | ✓ | - |
-| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ |
-| IDÉER | - | - | - | - | - | ✓ | - |
-| INDD | ✓ | ✓ | ✓ | - | ✓ | ✓ | ✓* |
-| INDT | - | - | - | - | - | ✓ | - |
-| PDF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PROTO | - | - | - | - | - | ✓ | - |
-| PSB | ✓ | ✓ | ✓ | - | ✓ | ✓ | ✓ |
-| PSD | ✓ | ✓ | ✓ | - | ✓ | ✓ | ✓ |
-| XD | ✓ | ✓ | ✓ | - | ✓ | ✓ | ✓ |
+| Filformat | Generering av miniatyrbilder | Extrahering av fulltext | Extrahering av metadata | Bredd/höjd |
+| ----------- | -------------------- | ------------------- | ------------------- | ------------ |
+| AI | ✓ | - | ✓ | ✓ |
+| COLLAGE | - | - | ✓ | - |
+| DN | ✓ |  | ✓ | ✓ |
+| IDÉER | - | - | ✓ | - |
+| INDD | ✓ | - | ✓ | ✓ * |
+| INDT | - | - | ✓ | - |
+| PDF | ✓ | ✓ | ✓ | ✓ |
+| PROTO | - | - | ✓ | - |
+| PSB | ✓ | - | ✓ | ✓ |
+| PSD | ✓ | - | ✓ | ✓ |
+| XD | ✓ | - | ✓ | ✓ |
 
 \* För INDD (InDesign-filer) bestäms återgivningens storlek av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i InDesign (**[!UICONTROL Inställningar > Filhantering > Spara alltid förhandsvisningsbilder med dokument, förhandsvisningsstorlek]**) för att bädda in större återgivning.
 
 ### Bildformat {#image-formats}
 
-| Filformat | GIF | JPEG | PNG | TIFF | Extrahering av metadata | Bredd/höjd | Beskär |
-| ----------- | -------- | -------- | -------- | -------- | ------------------- | ------------ | -------- |
-| BMP | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
-| EPS | - | - | - | - | ✓ | - | - |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| SVG | - | - | - | - | ✓ | - | - |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd | Beskär |
+| ----------- | -------------------- | ------------------- | ------------ | -------- |
+| BMP | ✓ | - | ✓ | ✓ |
+| EPS | - | ✓ | - | - |
+| GIF | ✓ | ✓ | ✓ | ✓ |
+| JPEG | ✓ | ✓ | ✓ | ✓ |
+| PNG | ✓ | ✓ | ✓ | ✓ |
+| SVG | - | ✓ | - | - |
+| TIFF | ✓ | ✓ | ✓ | - |
 
 ### Camera RAW-format {#camera-raw-formats}
 
-| Filformat | GIF | JPEG | PNG | TIFF | Extrahering av metadata | Bredd/höjd |
-| ----------- | -------- | -------- | -------- | -------- | ------------------- | ------------ |
-| 3FR | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ARW | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| CR2 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| CR3 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| CRW | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| DCR | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| DNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ERF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| FFF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| GPR | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| IIQ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| KDC | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MEF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MFW | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MOS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MRW | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| NEF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| NRW | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ORF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PEF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| RAF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| RAW | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| RW2 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| RWL | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| SRF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| SRW | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| X3F | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
+| ----------- | -------------------- | ------------------- | ------------ |
+| 3FR | ✓ | ✓ | ✓ |
+| ARW | ✓ | ✓ | ✓ |
+| CR2 | ✓ | ✓ | ✓ |
+| CR3 | ✓ | ✓ | ✓ |
+| CRW | ✓ | ✓ | ✓ |
+| DCR | ✓ | ✓ | ✓ |
+| DNG | ✓ | ✓ | ✓ |
+| ERF | ✓ | ✓ | ✓ |
+| FFF | ✓ | ✓ | ✓ |
+| GPR | ✓ | ✓ | ✓ |
+| IIQ | ✓ | ✓ | ✓ |
+| KDC | ✓ | ✓ | ✓ |
+| MEF | ✓ | ✓ | ✓ |
+| MFW | ✓ | ✓ | ✓ |
+| MOS | ✓ | ✓ | ✓ |
+| MRW | ✓ | ✓ | ✓ |
+| NEF | ✓ | ✓ | ✓ |
+| NRW | ✓ | ✓ | ✓ |
+| ORF | ✓ | ✓ | ✓ |
+| PEF | ✓ | ✓ | ✓ |
+| RAF | ✓ | ✓ | ✓ |
+| RAW | ✓ | ✓ | ✓ |
+| RW2 | ✓ | ✓ | ✓ |
+| RWL | ✓ | ✓ | ✓ |
+| SRF | ✓ | ✓ | ✓ |
+| SRW | ✓ | ✓ | ✓ |
+| X3F | ✓ | ✓ | ✓ |
 
 ### Dokumentformat {#document-formats}
 
 Följande dokumentformat stöds för filhanteringsfunktioner.
 
-|  | GIF | JPEG | PNG | Extrahering av fulltext | TIFF | Bredd/höjd | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
-| ---- | -------- | -------- | -------- | ------------------- | -------- | ------------ | ------------------- | ------------------------------------------------------------------- |
-| PDF | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ | ✓ |
-| DOCX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| DOC | - | - | - | - | - | - | ✓ | ✓ |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PPT | - | - | - | - | - | - | ✓ | ✓ |
-| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| XLS | - | - | - | - | - | - | ✓ | ✓ |
-| ODF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
-| OFG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
-| ODM | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
-| ODP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
-| ODS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
-| ODT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| EPUB | - | - | - | ✓ | - | - | - | - |
-| HTML | - | - | - | ✓ | - | - | ✓ | ✓ |
-| PS | - | - | - | - | - | ✓ | - | - |
-| RTF | - | - | - | ✓ | - | - | ✓ | ✓ |
-| TXT | - | - | - | ✓ | - | - | ✓ | ✓ |
-| XML | - | - | - | ✓ | - | - | - | - |
+| Filformat | Generering av miniatyrbilder | Extrahering av fulltext | Bredd/höjd | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
+| ----------- | -------------------- | ------------------- | ------------ | ------------------- | ---------------- |
+| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ | ✓ |
+| DOC | - | - | - | ✓ | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PPT | - | - | - | ✓ | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ |
+| XLS | - | - | - | ✓ | ✓ |
+| ODF | ✓ | ✓ | ✓ | - | - |
+| OFG | ✓ | ✓ | ✓ | - | - |
+| ODM | ✓ | ✓ | ✓ | - | - |
+| ODP | ✓ | ✓ | ✓ | - | - |
+| ODS | ✓ | ✓ | ✓ | - | - |
+| ODT | ✓ | ✓ | ✓ | ✓ | ✓ |
+| EPUB | - | ✓ | - | - | - |
+| HTML | - | ✓ | - | ✓ | ✓ |
+| PS | - | - | ✓ | - | - |
+| RTF | - | ✓ | - | ✓ | ✓ |
+| TXT | - | ✓ | - | ✓ | ✓ |
+| XML | - | ✓ | - | - | - |
 
 ### Videoformat {#video-formats}
 
-| Filformat | GIF | JPEG | PNG | Extrahering av metadata | Bredd/höjd |
-| ----------- | -------- | -------- | -------- | ------------------- | ------------ |
-| 3G2 | - | - | - | ✓ | - |
-| 3GP | - | - | - | ✓ | - |
-| AVI | ✓ | ✓ | ✓ | ✓ | ✓ |
-| DIVX | ✓ | ✓ | ✓ |  | ✓ |
-| F4V | ✓ | ✓ | ✓ | ✓ | ✓ |
-| FLV | ✓ | ✓ | ✓ | ✓ | ✓ |
-| M2T | ✓ | ✓ | ✓ | - | ✓ |
-| M2TS | ✓ | ✓ | ✓ | - | ✓ |
-| M2V | ✓ | ✓ | ✓ | - | ✓ |
-| M4V | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MKV | ✓ | ✓ | ✓ | - | ✓ |
-| MOV | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MP4 | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MPG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MTS | ✓ | ✓ | ✓ | - | ✓ |
-| OGV | ✓ | ✓ | ✓ | - | ✓ |
-| QT | ✓ | ✓ | ✓ | - | ✓ |
-| R3D | ✓ | ✓ | ✓ | - | ✓ |
-| SWF | ✓ | ✓ | ✓ | - | ✓ |
-| WEBM | ✓ | ✓ | ✓ | - | ✓ |
-| WMV | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
+| ----------- | -------------------- | ------------------- | ------------ |
+| 3G2 | - | ✓ | - |
+| 3GP | - | ✓ | - |
+| AVI | ✓ | ✓ | ✓ |
+| DIVX | ✓ |  | ✓ |
+| F4V | ✓ | ✓ | ✓ |
+| FLV | ✓ | ✓ | ✓ |
+| M2T | ✓ | - | ✓ |
+| M2TS | ✓ | - | ✓ |
+| M2V | ✓ | - | ✓ |
+| M4V | ✓ | ✓ | ✓ |
+| MKV | ✓ | - | ✓ |
+| MOV | ✓ | ✓ | ✓ |
+| MP4 | ✓ | ✓ | ✓ |
+| MPEG | ✓ | ✓ | ✓ |
+| MPG | ✓ | ✓ | ✓ |
+| MTS | ✓ | - | ✓ |
+| OGV | ✓ | - | ✓ |
+| QT | ✓ | - | ✓ |
+| R3D | ✓ | - | ✓ |
+| SWF | ✓ | - | ✓ |
+| WEBM | ✓ | - | ✓ |
+| WMV | ✓ | ✓ | ✓ |
 
 ### Ljudformat {#audio-formats}
 
