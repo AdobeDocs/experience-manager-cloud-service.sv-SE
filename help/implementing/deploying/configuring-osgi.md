@@ -2,7 +2,7 @@
 title: Konfigurera OSGi för AEM som en molntjänst
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: c5339a74f948af4c05ecf29bddfe9c0b11722d61
+source-git-commit: e23813aa5d55a9ae6550ff473b030177e37ffffb
 
 ---
 
@@ -268,7 +268,7 @@ Om inget värde har angetts per miljö ersätts inte platshållaren vid körning
 $[env:ENV_VAR_NAME;default=<value>]
 ```
 
-När ett standardvärde anges ersätts platshållaren antingen med det angivna per-environment-värdet eller det angivna standardvärdet.
+När ett standardvärde anges ersätts platshållaren antingen med det angivna per-environment-värdet eller med det angivna standardvärdet.
 
 ### Lokal utveckling {#local-development}
 
@@ -291,7 +291,7 @@ Om `$[secret:server_password]` används måste t.ex. en textfil med namnet **ser
 Om en OSGI-egenskap kräver olika värden för författare jämfört med publicering:
 
 * Separata `config.author` - och `config.publish` OSGi-mappar ska användas, vilket beskrivs i avsnittet [Lösning i körläge](#runmode-resolution).
-* oberoende variabelnamn ska användas. Vi rekommenderar att du använder ett prefix som författare_<variablename> och publicera_<variablename> där variabelnamnen är desamma
+* oberoende variabelnamn ska användas. Vi rekommenderar att du använder ett prefix som `author_<variablename>` och `publish_<variablename>` där variabelnamnen är desamma
 
 ### Konfigurationsexempel {#configuration-examples}
 
