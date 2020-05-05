@@ -2,7 +2,7 @@
 title: Publicera resurser, mappar och samlingar på varumärkesportalen
 description: Publicera resurser, mappar och samlingar på varumärkesportalen.
 contentOwner: Vishabh Gupta
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 4677a8771c5891b8c9846e0adb58025304a71bdd
 
 ---
@@ -10,11 +10,11 @@ source-git-commit: 4677a8771c5891b8c9846e0adb58025304a71bdd
 
 # Publicera resurser på varumärkesportalen {#publish-assets-to-brand-portal}
 
-Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera resurser, mappar och samlingar till instansen AEM Assets Brand Portal. Du kan också schemalägga publiceringsarbetsflödet för en resurs eller mapp till ett senare datum eller en senare tidpunkt. Efter publiceringen kan Brand Portal-användarna komma åt och vidaredistribuera resurser, mappar och samlingar till andra användare.
+Som administratör för Adobe Experience Manager (AEM) Assets kan du publicera resurser, mappar och samlingar på varumärkesportalinstansen för AEM Assets. Du kan även schemalägga publiceringsarbetsflödet för en resurs eller mapp till ett senare datum eller en senare tid. Efter publiceringen kan varumärkesportalens användare komma åt och vidaredistribuera resurser, mappar och samlingar till andra användare.
 
-Du måste dock först konfigurera AEM Assets med Brand Portal. Mer information finns i [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md).
+Du måste dock först konfigurera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md).
 
-Om du gör senare ändringar i den ursprungliga resursen, mappen eller samlingen i AEM Resurser återspeglas inte ändringarna i varumärkesportalen förrän du publicerar om från AEM Resurser. Den här funktionen ser till att pågående ändringar inte är tillgängliga i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör är tillgängliga i varumärkesportalen.
+Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen i AEM Assets återspeglas inte ändringarna i varumärkesportalen förrän du publicerar resursen, mappen eller samlingen på nytt från AEM Assets. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
 
 * [Publicera resurser på varumärkesportalen](#publish-assets-to-bp)
 * [Publicera mappar på varumärkesportalen](#publish-folders-to-brand-portal)
@@ -22,58 +22,58 @@ Om du gör senare ändringar i den ursprungliga resursen, mappen eller samlingen
 
 >[!NOTE]
 >
->Adobe rekommenderar att publiceringen staggats, helst under icke-topp-timmar, så att AEM-författaren inte tar upp för mycket resurser.
+>Adobe rekommenderar stegvis publicering, helst vid tidpunkter med låg belastning, för att AEM-författaren inte ska uppta för mycket resurser.
 
 
 ## Publicera resurser på varumärkesportalen {#publish-assets-to-bp}
 
 Så här publicerar du resurser från AEM Assets till varumärkesportalen:
 
-1. I resurskonsolen öppnar du den överordnade mappen och väljer alla resurser som du vill publicera. Klicka sedan på **[!UICONTROL Snabbpublicering]** i verktygsfältet.
+1. Öppna den överordnade mappen i Assets-konsolen och markera alla resurser som du vill publicera och klicka på alternativet **[!UICONTROL Quick Publish]** i verktygsfältet.
 
    ![publish2bp-2](assets/publish2bp.png)
 
-1. Följande två sätt publicerar resurser:
+1. Du kan publicerar resurser på följande två sätt:
    * [Publicera nu](#publish-to-bp-now) (publicera resurser direkt)
-   * [Publicera senare](#publish-to-bp-later) (schemalägg publiceringsresurser)
+   * [Publicera senare](#publish-to-bp-later) (schemalägg publicering av resurser)
 
 ### Publicera resurser nu {#publish-to-bp-now}
 
-Gör något av följande om du vill publicera de markerade resurserna på varumärkesportalen:
+Gör något av följande för att publicera de markerade resurserna på varumärkesportalen:
 
-* Välj **[!UICONTROL Snabbpublicering]** i verktygsfältet. Klicka sedan på **[!UICONTROL Publicera på varumärkesportalen]** på menyn.
+* Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Klicka sedan på **[!UICONTROL Publish to Brand Portal]** i menyn.
 
-* Välj **[!UICONTROL Hantera publikation]** i verktygsfältet.
+* Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-   1. I **[!UICONTROL Åtgärd]** väljer du **[!UICONTROL Publicera på varumärkesportal]**.
+   1. Välj **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]**.
 
-      Välj **[!UICONTROL Nu]** i **[!UICONTROL Schemaläggning]**.
+      Välj **[!UICONTROL Now]** från **[!UICONTROL Scheduling]**.
 
-      Click **[!UICONTROL Next]**.
+      Klicka på **[!UICONTROL Next]**.
 
-   2. Bekräfta ditt val i **[!UICONTROL Omfång]** och klicka på **[!UICONTROL Publicera på varumärkesportal]**.
+   2. Bekräfta ditt val i **[!UICONTROL Scope]** och klicka på **[!UICONTROL Publish to Brand Portal]**.
 
-Ett meddelande visas som anger att resurserna har placerats i kö för publicering på varumärkesportalen. Logga in på gränssnittet för varumärkesportalen för att se de publicerade resurserna.
+Ett meddelande visas som anger att resurserna har placerats i kö för publicering på varumärkesportalen. Logga in på gränssnittet för varumärkesportalen för att visa de publicerade resurserna.
 
 ### Publicera resurser senare {#publish-to-bp-later}
 
-Så här schemalägger du publicering av resurser på varumärkesportalen till ett senare datum eller en senare tidpunkt:
+Gör så här för att schemalägga publicering av resurser på varumärkesportalen till ett senare datum eller en senare tid:
 
-1. Markera de resurser som du vill schemalägga för publicering och klicka på **[!UICONTROL Hantera publikation]** i verktygsfältet högst upp.
+1. Välj de resurser som du vill schemalägga för publicering och klicka på **[!UICONTROL Manage Publication]** i verktygsfältet högst upp.
 
-1. På sidan **[!UICONTROL Hantera publikation]** väljer du **[!UICONTROL Publicera på varumärkesportal]** från **[!UICONTROL Åtgärd]**.
+1. Välj **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** på sidan **[!UICONTROL Manage Publication]**.
 
-   Välj **[!UICONTROL Senare]** från **[!UICONTROL Schemaläggning]**.
+   Välj **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 
-1. Välj ett **[!UICONTROL aktiveringsdatum]** och ange tid. Click **[!UICONTROL Next]**.
+1. Markera en **[!UICONTROL Activation date]** och ange en tid. Klicka på **[!UICONTROL Next]**.
 
-1. Välj ett **aktiveringsdatum** och ange tid. Click **Next**.
+1. Välj ett **aktiveringsdatum** och ange en tid. Klicka på **Nästa**.
 
-1. Ange en **[!UICONTROL arbetsflödesrubrik]** i **[!UICONTROL arbetsflöden]**. Klicka på **[!UICONTROL Publicera senare]**.
+1. Ange en **[!UICONTROL Workflow title]** i **[!UICONTROL Workflows]**. Klicka på **[!UICONTROL Publish Later]**.
 
-   ![publicerat arbetsflöde](assets/publishworkflow.png)
+   ![publishworkflow](assets/publishworkflow.png)
 
 Logga in på gränssnittet för varumärkesportalen för att visa de publicerade resurserna (beroende på schemalagt datum eller tid).
 
@@ -82,152 +82,152 @@ Logga in på gränssnittet för varumärkesportalen för att visa de publicerade
 
 ## Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal}
 
-Du kan publicera eller avpublicera resursmappar direkt eller schemalägga till ett senare datum eller en senare tidpunkt.
+Du kan publicera eller avpublicera resursmappar direkt eller schemalägga åtgärden till ett senare datum eller en senare tid.
 
 ### Publicera mappar på varumärkesportalen {#publish-folders-to-bp}
 
-1. I resurskonsolen markerar du de mappar som du vill publicera och klickar på **[!UICONTROL Snabbpublicering]** i verktygsfältet.
+1. Markera mapparna som du vill publicera från Assets-konsolen och klicka på **[!UICONTROL Quick Publish]**-alternativet i verktygsfältet.
 
    ![publish2bp](assets/publish2bp.png)
 
 1. **Publicera mappar nu**
 
-   Om du vill publicera de markerade mapparna på varumärkesportalen gör du något av följande:
+   Gör något av följande för att publicera de markerade mapparna på varumärkesportalen:
 
-   * Välj **[!UICONTROL Snabbpublicering]** i verktygsfältet.
+   * Välj **[!UICONTROL Quick Publish]** i verktygsfältet.
 
-      På menyn väljer du **[!UICONTROL Publicera på varumärkesportal]**.
+      Välj **[!UICONTROL Publish to Brand Portal]** i menyn.
 
-   * Välj **[!UICONTROL Hantera publikation]** i verktygsfältet.
+   * Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-      1. I **[!UICONTROL Åtgärd]** väljer du **[!UICONTROL Publicera på varumärkesportal]**.
+      1. Välj **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]**.
 
-         Välj **[!UICONTROL Nu]** i **[!UICONTROL Schemaläggning]**.
+         Välj **[!UICONTROL Now]** från **[!UICONTROL Scheduling]**.
 
-         Click **Next.**
+         Klicka på **Nästa.**
 
-      1. Bekräfta ditt val i **[!UICONTROL Omfång]** och klicka på **[!UICONTROL Publicera på varumärkesportal]**.
-   Det visas ett meddelande om att mappen har placerats i kö för publicering på varumärkesportalen. Logga in i gränssnittet för varumärkesportalen för att visa den publicerade mappen.
+      1. Bekräfta ditt val i **[!UICONTROL Scope]** och klicka på **[!UICONTROL Publish to Brand Portal]**.
+   Ett meddelande visas som anger att mappen har placerats i kö för publicering på varumärkesportalen. Logga in på gränssnittet för varumärkesportalen för att visa den publicerade resursen.
 
 1. **Publicera mappar senare**
 
-   Så här schemalägger du publiceringen av resursmapparna till ett senare datum eller en senare tidpunkt:
+   Gör så här för att schemalägga publicering av resursmappar till ett senare datum eller en senare tid:
 
-   1. Markera de mappar som du vill schemalägga för publicering och välj **[!UICONTROL Hantera publikation]** i verktygsfältet högst upp.
-   1. I **[!UICONTROL Åtgärd]** väljer du **[!UICONTROL Publicera på varumärkesportal]**.
+   1. Välj de mappar som du vill schemalägga för publicering och välj sedan **[!UICONTROL Manage Publication]** i verktygsfältet högst upp.
+   1. Välj **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]**.
 
-      Välj **[!UICONTROL Senare]** i **[!UICONTROL Schemaläggning]**.
+      Välj **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
 
-   1. Välj ett **[!UICONTROL aktiveringsdatum]** och ange tid. Click **[!UICONTROL Next]**.
+   1. Markera en **[!UICONTROL Activation date]** och ange en tid. Klicka på **[!UICONTROL Next]**.
 
-      ![publiclaterbp](assets/publishlaterbp.png)
+      ![publishlaterbp](assets/publishlaterbp.png)
 
-   1. Bekräfta ditt val i **[!UICONTROL Omfång]**. Click **[!UICONTROL Next]**.
+   1. Bekräfta ditt val i **[!UICONTROL Scope]**. Klicka på **[!UICONTROL Next]**.
 
-   1. Ange en arbetsflödesrubrik under **[!UICONTROL Arbetsflöden]**. Klicka på **[!UICONTROL Publicera senare]**.
+   1. Ange en arbetsflödestitel under **[!UICONTROL Workflows]**. Klicka på **[!UICONTROL Publish Later]**.
 
       ![manageschedulepub](assets/manageschedulepub.png)
 
 ### Avpublicera mappar från varumärkesportalen {#unpublish-folders-from-brand-portal}
 
-Du kan ta bort alla resursmappar som publicerats på varumärkesportalen genom att avpublicera dem från AEM Assets-instansen. När du har avpublicerat originalmappen är dess kopia inte längre tillgänglig för användare av varumärkesportalen.
+Du kan ta bort alla resursmappar som publicerats på varumärkesportalen genom att avpublicera dem från instansen av AEM Assets. När du har avpublicerat originalmappen har varumärkesportalens användare har inte längre tillgång till kopian.
 
-Du kan avpublicera resursmappar från varumärkesportalen direkt eller schemalägga till ett senare datum och en senare tidpunkt.
+Du kan avpublicera resursmappar från varumärkesportalen direkt eller schemalägga avpublicering till ett senare datum och en senare tid.
 
-Så här avpublicerar du resursmappar från varumärkesportalen:
+Gör så här för att avpublicerar resursmappar från varumärkesportalen:
 
-1. I resurskonsolen markerar du de resursmappar du vill publicera och klickar på **[!UICONTROL Hantera publikation]** i verktygsfältet.
+1. Markera resursmapparna som du vill avpublicera i Assets-konsolen och klicka på alternativet **[!UICONTROL Manage Publication]** i verktygsfältet.
 
    ![publish2bp-1](assets/publish2bp.png)
 
 1. **Avpublicera resursmappar nu**
 
-   Så här avpublicerar du omedelbart den valda resursmappen från varumärkesportalen:
+   Gör så här för att avpublicera den valda resursmappen från varumärkesportalen direkt:
 
-   1. Välj **[!UICONTROL Hantera publikation]** i verktygsfältet.
+   1. Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-   1. Från **[!UICONTROL Åtgärd]** väljer du **[!UICONTROL Avpublicera från varumärkesportalen]**.
+   1. Välj **[!UICONTROL Unpublish from Brand Portal]** från **[!UICONTROL Action]**.
 
-      Välj **[!UICONTROL Nu]** i **[!UICONTROL Schemaläggning]**.
+      Välj **[!UICONTROL Now]** från **[!UICONTROL Scheduling]**.
 
-      Click **[!UICONTROL Next]**.
+      Klicka på **[!UICONTROL Next]**.
 
-   1. Bekräfta ditt val i **[!UICONTROL Omfång]** och klicka på **[!UICONTROL Avpublicera från varumärkesportalen]**.
+   1. Bekräfta ditt val i **[!UICONTROL Scope]** och klicka på **[!UICONTROL Unpublish from Brand Portal]**.
 
-      ![bekräfta-avpublicera](assets/confirm-unpublish.png)
+      ![confirm-unpublish](assets/confirm-unpublish.png)
 
 1. **Avpublicera resursmappar senare**
 
-   Så här schemalägger du avpublicering av en resursmapp till ett senare datum och en senare tidpunkt:
+   Gör så här för att schemalägga avpublicering av en resursmapp till ett senare datum eller en senare tid:
 
-   1. Välj **[!UICONTROL Hantera publikation]** i verktygsfältet.
+   1. Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-   1. I **[!UICONTROL Åtgärd]** väljer du **[!UICONTROL Avpublicera från varumärkesportalen]**.
+   1. Välj **[!UICONTROL Unpublish from Brand Portal]** från **[!UICONTROL Action]**.
 
-      Välj **[!UICONTROL Senare]** i **[!UICONTROL Schemaläggning]**.
+      Välj **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
 
-   1. Välj ett **[!UICONTROL aktiveringsdatum]** och ange tid. Click **[!UICONTROL Next]**.
+   1. Markera ett **[!UICONTROL Activation date]** och ange tiden. Klicka på **[!UICONTROL Next]**.
 
-   1. Bekräfta ditt val i **[!UICONTROL Omfång]** och klicka på **[!UICONTROL Nästa]**.
+   1. Bekräfta ditt val i **[!UICONTROL Scope]** och klicka på **[!UICONTROL Next]**.
 
-   1. Ange en **[!UICONTROL arbetsflödesrubrik]** i **[!UICONTROL arbetsflöden]**. Klicka på **[!UICONTROL Avpublicera senare]**.
+   1. Ange en **[!UICONTROL Workflow title]** i **[!UICONTROL Workflows]**. Klicka på **[!UICONTROL Unpublish Later]**.
 
-      ![ej publicerade arbetsflöden](assets/unpublishworkflows.png)
+      ![unpublishworkflows](assets/unpublishworkflows.png)
 
 ## Publicera samlingar på varumärkesportalen {#publish-collections-to-brand-portal}
 
-Du kan publicera eller avpublicera samlingar från din AEM Assets-molninstans.
+Du kan publicera eller avpublicera samlingar från molninstansen AEM Assets.
 
 >[!NOTE]
 >
->Det går inte att publicera innehållsfragment till varumärkesportalen. Om du väljer innehållsfragment i AEM Resurser är därför åtgärden **[!UICONTROL Publicera på]** varumärkesportalen inte tillgänglig.
+>Det går inte att publicera innehållsfragment på varumärkesportalen. Därför är åtgärden **[!UICONTROL Publish to Brand Portal]** inte tillgänglig om du väljer innehållsfragment i AEM Assets.
 >
->Om samlingar som innehåller innehållsfragment publiceras från AEM Resurser till varumärkesportalen, replikeras allt innehåll i mappen utom innehållsfragment till gränssnittet för varumärkesportalen.
+>Om samlingar som innehåller innehållsfragment publiceras från AEM Assets till varumärkesportalen, replikeras allt innehåll i mappen förutom innehållsfragmenten till varumärkesportalens gränssnitt.
 
 
 ### Publicera samlingar {#publish-collections}
 
-Så här publicerar du samlingar från AEM Assets till varumärkesportalen:
+Gör så här för att publicera samlingar från AEM Assets till varumärkesportalen:
 
-1. Klicka på AEM-logotypen i användargränssnittet för AEM-resurser.
+1. Klicka på AEM-logotypen i användargränssnittet för AEM Assets.
 
-1. Från **navigeringssidan** går du till **[!UICONTROL Resurser]** > **[!UICONTROL Samlingar]**.
+1. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Collections]** från **navigeringssidan**.
 
-1. På **samlingskonsolen** väljer du de samlingar du vill publicera på varumärkesportalen.
+1. Välj de samlingar som du vill publicera på varumärkesportalen från **samlingskonsolen**.
 
    ![select_collection](assets/select_collection.png)
 
-1. Klicka på **[!UICONTROL Publicera till varumärkesportal]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Publish to Brand Portal]** i verktygsfältet.
 
-1. Klicka på **[!UICONTROL Publicera]** i bekräftelsedialogrutan.
+1. Klicka på **[!UICONTROL Publish]** i bekräftelsedialogrutan.
 
 1. Stäng bekräftelsemeddelandet.
 
-   Logga in på varumärkesportalen som administratör. Den publicerade samlingen är tillgänglig i Samlingar-konsolen.
+   Logga in på varumärkesportalen som administratör. Den publicerade samlingen är tillgänglig i samlingskonsolen.
 
-   ![publicerad samling](assets/published_collection.png)
+   ![published collection](assets/published_collection.png)
 
 ### Avpublicera samlingar {#unpublish-collections}
 
-Du kan ta bort alla samlingar som publicerats på varumärkesportalen genom att avpublicera dem från din AEM Assets-instans. När du har avpublicerat den ursprungliga samlingen är dess kopia inte längre tillgänglig för Brand Portal-användarna.
+Du kan ta bort en samling som publicerats på varumärkesportalen genom att avpublicera den från instansen av AEM Assets. När du har avpublicerat originalsamlingen har varumärkesportalens användare inte längre tillgång till kopian.
 
-Så här avpublicerar du en samling:
+Gör så här för att avpublicera en samling:
 
-1. Från **samlingskonsolen** för din AEM Resurser-instans och välj den samling som du vill avpublicera.
+1. Välj den samling som du vill avpublicera från **samlingskonsolen** för instansen av AEM Assets.
 
    ![select_collection](assets/select_collection-1.png)
 
-1. Klicka på ikonen **[!UICONTROL Ta bort från varumärkesportalen]** i verktygsfältet.
-1. Klicka på **[!UICONTROL Avpublicera]** i dialogrutan.
-1. Stäng bekräftelsemeddelandet. Samlingen tas bort från gränssnittet för varumärkesportalen.
+1. Klicka på ikonen **[!UICONTROL Remove from Brand Portal]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Unpublish]** i dialogrutan.
+1. Stäng bekräftelsemeddelandet. Samlingen tas bort från varumärkesportalens gränssnitt.
 
-Förutom ovanstående kan du även publicera metadatamatcheman, bildförinställningar, sökfaktorer och taggar från AEM Assets till Brand Portal.
+Förutom ovanstående kan du även publicera metadatascheman, bildförinställningar, sökfasetter och taggar från AEM Assets till varumärkesportalen.
 
-* [Publicera förinställningar, scheman och ansiktsuttryck på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
-* [Publicera taggar i varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
+* [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
+* [Publicera taggar på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
 
-Mer information finns i dokumentationen [till](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) varumärkesportalen.
+Mer information finns i [dokumentationen till varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html).
 
 
 <!--
