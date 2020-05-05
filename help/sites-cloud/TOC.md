@@ -2,7 +2,7 @@
 sub-product: Skapa innehåll i AEM som en molntjänst
 user-guide-title: Skapa innehåll i AEM som en molntjänst
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 18d6079ca7ac3fe41f9126b3d0b6e42487076807
 
 ---
 
@@ -33,7 +33,7 @@ source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
       + [Exportera till CSV](authoring/fundamentals/csv-export.md)
       + [Komponenter](authoring/fundamentals/components.md)
       + [Skapa för mobila enheter](authoring/fundamentals/mobile.md)
-      + [Tillgängligt innehåll (WCAG 2.0-överensstämmelse)](authoring/fundamentals/accessible-content.md)
+      + [Skapa hjälpmedelsanpassat innehåll (WCAG 2.1-överensstämmelse)](authoring/fundamentals/accessible-content.md)
       + [Felsökning](authoring/fundamentals/troubleshooting.md)
       + [Kortkommandon](authoring/fundamentals/keyboard-shortcuts.md)
    + Redigeringsfunktioner {#features}
