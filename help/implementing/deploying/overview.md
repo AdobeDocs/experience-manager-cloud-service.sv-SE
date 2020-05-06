@@ -1,13 +1,16 @@
 ---
-title: Distribuera till AEM som en molntjänst
-description: 'Distribuera till AEM som en molntjänst '
+title: Distribuera till AEM as a Cloud Service
+description: 'Distribuera till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 3cf5d17eab937c99c8bcaeb0ed8074672e71650f
+source-git-commit: 10e12a8b15e6ea51e8b022deefaefed52780d48a
+workflow-type: tm+mt
+source-wordcount: '3512'
+ht-degree: 1%
 
 ---
 
 
-# Distribuera till AEM som en molntjänst {#deploying-to-aem-as-a-cloud-service}
+# Distribuera till AEM as a Cloud Service {#deploying-to-aem-as-a-cloud-service}
 
 ## Introduktion {#introduction}
 
@@ -81,11 +84,13 @@ Som nämnts ovan bör OSGI-konfigurationen implementeras för källkontroll i st
 * Göra nödvändiga ändringar i utvecklarens lokala AEM-miljö med konfigurationshanteraren för AEM-webbkonsolen och exportera sedan resultaten till AEM-projektet i det lokala filsystemet
 * Om du skapar OSGI-konfigurationen manuellt i AEM-projektet på det lokala filsystemet refererar AEM-konsolens konfigurationshanterare till egenskapsnamnen.
 
+Läs mer om OSGI-konfigurationen på [Configuring OSGi for AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md).
+
 ## Muterbart innehåll {#mutable-content}
 
 I vissa fall kan det vara användbart att förbereda innehållsändringar i källkontrollen så att den kan distribueras av Cloud Manager när en miljö har uppdaterats. Det kan till exempel vara rimligt att skapa startvärden för vissa rotmappsstrukturer eller att göra ändringar i redigerbara mallar för att aktivera principer i de för komponenter som uppdaterades i programdistributionen.
 
-Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
+Det finns två strategier för att beskriva innehållet som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och poinit-satser.
 
 ### Innehållspaket som kan ändras {#mutable-content-packages}
 
@@ -103,7 +108,7 @@ Under starten av den nya versionen av programmet men före bytet:
 
 Efter övergång till en ny version av programmet:
 
-* Allt annat innehåll som kan definieras via jackrabbit-valvet. Exempel:
+* Allt annat innehåll som kan definieras via jackrabbit-valvet. Till exempel:
    * Mappar (lägg till, ändra, ta bort)
    * Redigerbara mallar (lägg till, ändra, ta bort)
    * Kontextmedveten konfiguration (vad som helst under `/conf`) (lägg till, ändra, ta bort)
@@ -112,7 +117,7 @@ Efter övergång till en ny version av programmet:
 Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Mer information finns i [AEM-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html) om rekommenderad projektomstrukturering.
 
 >[!NOTE]
-> Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via Package Manager.
+>Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via Package Manager.
 
 Det finns heller ingen mekanism för att återställa ändringar i det ändringsbara innehållspaketet efter att de har tillämpats. Om kunderna upptäcker ett problem kan de välja att åtgärda det i nästa kodversion eller som en sista utväg, återställa hela systemet till en tidpunkt före distributionen.
 
@@ -129,9 +134,9 @@ I följande fall är det att föredra att manuellt koda uttryckliga innehållssk
 * Skapa/ta bort användare
 * Lägg till åtkomstkontrollistor
    > [!NOTE]
-   > Definitionen av åtkomstkontrollistor kräver att nodstrukturerna redan finns. Därför kan det vara nödvändigt att skapa en sökvägsprogramsats innan.
+   >Definitionen av åtkomstkontrollistor kräver att nodstrukturerna redan finns. Därför kan det vara nödvändigt att skapa en sökvägsprogramsats innan.
 * Lägg till sökväg (t.ex. för rotmappsstrukturer)
-* Lägg till CND (nodetype definition)
+* Lägga till CND (nodetypdefinitioner)
 
 Repoinit är att föredra för de här användningsområdena för innehållsändringar som stöds på grund av följande fördelar:
 
@@ -143,10 +148,10 @@ Repoinit är att föredra för de här användningsområdena för innehållsänd
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Så här skapar du repoinit-satser:
+Följ nedanstående procedur för att skapa repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp i projektet
-1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentationen](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Exempel: en explicit generering av `/content` before `/content/myfolder`, before `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
+1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentationen](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Exempel: en explicit generering av `/content` before `/content/myfolder`, before `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
 1. Validera på den lokala utvecklingsmiljön vid körning.
 
 <!-- last statement in step 2 to be clarified with Brian -->
@@ -192,7 +197,7 @@ Om det inte går att lagra paketet i en fjärrdatabas kan kunderna placera det i
 
 Alla inkluderade paket från tredje part måste följa AEM som riktlinjer för molntjänstkodning och paketering som beskrivs i den här artikeln, annars leder inkludering till ett distributionsfel.
 
-Följande XML-kodutdrag för Maven POM visar hur paket från tredje part kan bäddas in i projektets &quot;Container&quot;-paket, som vanligtvis kallas **&#39;all&#39;**, via pluginkonfigurationen **filevault-package-maven-plugin** Maven.
+Följande XML-kodfragment för Maven POM visar hur paket från tredje part kan bäddas in i projektets behållarpaket, som vanligtvis kallas **&#39;all&#39;**, via Maven-pluginkonfigurationen **filevault-package-maven-plugin**.
 
 ```
 ...
@@ -279,7 +284,7 @@ I befintliga AEM-lösningar kan kunderna köra instanser med godtyckliga körnin
 
 Å andra sidan är AEM som en molntjänst mer övertygande om vilka körningslägen som finns tillgängliga och hur OSGI-paket och OSGI-konfigurationer kan mappas till dem:
 
-* OSGI-konfigurationens körningslägen måste referera till dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, men dessa måste användas i den här speciella ordningen (till exempel author.dev eller publish.prod). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` metoden, som inte längre inkluderar `environment_type` vid körning.
+* OSGI-konfigurationens körningslägen måste referera till dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa måste användas i just den ordningen (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` metoden, som inte längre inkluderar `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM som en molntjänst](/help/implementing/deploying/configuring-osgi.md).
 * Körningslägena för OSGI-paket är begränsade till tjänsten (författare, publicera). OSGI-paket per körning ska installeras i innehållspaketet under antingen `install/author` eller `install/publish`.
 
 Precis som de befintliga AEM-lösningarna finns det inget sätt att använda körningslägen för att installera enbart innehåll för specifika miljöer eller tjänster. Om man ville skapa en egen utvecklarmiljö med data eller HTML som inte finns på scenen eller i produktionen kunde man använda pakethanteraren.
