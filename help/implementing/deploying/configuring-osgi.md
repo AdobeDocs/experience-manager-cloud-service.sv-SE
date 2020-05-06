@@ -2,9 +2,9 @@
 title: Konfigurera OSGi för AEM som en molntjänst
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: 10e12a8b15e6ea51e8b022deefaefed52780d48a
+source-git-commit: 48a19fb1bb7657d34f31605a3b4a85e656393918
 workflow-type: tm+mt
-source-wordcount: '2509'
+source-wordcount: '2214'
 ht-degree: 0%
 
 ---
@@ -127,64 +127,66 @@ AEM som en molntjänst kräver användning av miljöspecifika konfigurationer (`
 
 Använd hemliga miljöspecifika konfigurationer för att lagra värdet för hemligheter på alla AEM som molntjänstmiljöer, inklusive Stage och Production.
 
-### Lägga till en ny konfiguration i databasen {#adding-a-new-configuration-to-the-repository}
+<!-- ### Adding a New Configuration to the Repository {#adding-a-new-configuration-to-the-repository}
 
-#### Vad du behöver veta {#what-you-need-to-know}
+#### What You Need to Know {#what-you-need-to-know}
 
-Om du vill lägga till en ny konfiguration i databasen måste du känna till följande:
+To add a new configuration to the repository you need to know the following:
 
-1. Tjänstens PID ( **Persistent Identity** ).
+1. The **Persistent Identity** (PID) of the service.
 
-   Referera till fältet **Konfigurationer** i webbkonsolen. Namnet visas inom parentes efter paketnamnet (eller i **konfigurationsinformationen** längst ned på sidan).
+   Reference the **Configurations** field in the Web console. The name is shown in brackets after the bundle name (or in the **Configuration Information** towards the bottom of the page).
 
-   Skapa till exempel en nod `com.day.cq.wcm.core.impl.VersionManagerImpl.` för att konfigurera **AEM WCM Version Manager**.
+   For example, create a node `com.day.cq.wcm.core.impl.VersionManagerImpl.` to configure **AEM WCM Version Manager**.
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. Om ett specifikt körläge krävs. Skapa mappen:
+1. Whether a specific runmode is required. Create the folder:
 
-   * `config` - för alla körningslägen
-   * `config.author` - för redigeringsmiljön
-   * `config.publish` - för publiceringsmiljön
-   * `config.<run-mode>` - i förekommande fall
+    * `config` - for all run modes
+    * `config.author` - for the author environment
+    * `config.publish` - for the publish environment
+    * `config.<run-mode>` - as appropriate
 
-1. Anger om en **konfiguration** eller **fabrikskonfiguration** krävs.
-1. De enskilda parametrar som ska konfigureras. inklusive befintliga parameterdefinitioner som behöver återskapas.
+1. Whether a **Configuration** or **Factory Configuration** is necessary.
+1. The individual parameters to be configured; including any existing parameter definitions that will need to be recreated.
 
-   Referera till det enskilda parameterfältet i webbkonsolen. Namnet visas inom hakparenteser för varje parameter.
+   Reference the individual parameter field in the Web console. The name is shown in brackets for each parameter.
 
-   Skapa till exempel en egenskap
-   `versionmanager.createVersionOnActivation` för att konfigurera **Skapa version vid aktivering**.
+   For example, create a property
+   `versionmanager.createVersionOnActivation` to configure **Create Version on Activation**.
 
    ![chlimage_1-142](assets/chlimage_1-142.png)
 
-1. Finns det redan en konfiguration i `/libs`? Om du vill visa alla konfigurationer i instansen använder du **frågeverktyget** i CRXDE Lite för att skicka följande SQL-fråga:
+1. Does a configuration already exist in `/libs`? To list all configurations in your instance, use the **Query** tool in CRXDE Lite to submit the following SQL query:
 
    `select * from sling:OsgiConfig`
 
-   I så fall kan konfigurationen kopieras till ` /apps/<yourProject>/`och sedan anpassas på den nya platsen.
+   If so, this configuration can be copied to ` /apps/<yourProject>/`, then customized in the new location.
 
-## Skapa konfigurationen i databasen {#creating-the-configuration-in-the-repository}
+## Creating the Configuration in the Repository {#creating-the-configuration-in-the-repository}
 
-Så här lägger du till den nya konfigurationen i databasen:
+To actually add the new configuration to the repository:
 
-1. I ditt ui.apps-projekt skapar du en `/apps/…/config.xxx` mapp efter behov baserat på det runmode du använder
+1. In your ui.apps project, create a `/apps/…/config.xxx` folder as needed based on the runmode you are using
 
-1. Skapa en ny JSON-fil med namnet PID och lägg till `.cfg.json` tillägget
+1. Create a new JSON file with the name of the PID and add the `.cfg.json` extension
 
 
-1. Fyll i JSON-filen med OSGi-konfigurationsnyckelvärdepar
+1. Populate the JSON file with the OSGi configuration key value pairs
 
    >[!NOTE]
    >
-   >Om du konfigurerar en OSGi-tjänst kan du slå upp OSGi-egenskapsnamnen via `/system/console/configMgr`
+   >If you are configuring an out of the box OSGi service, you can look up the OSGi property names via `/system/console/configMgr`
 
 
-1. Spara JSON-filen i ditt projekt.
+1. Save the JSON file to your project. -->
 
 ## Konfigurationsegenskapsformat i källkontroll {#configuration-property-format-in-source-control}
 
-Att skapa en ny OSGI-konfigurationsegenskap beskrivs i avsnittet [Lägga till en ny konfiguration i databasen](#creating-the-configuration-in-the-repository) ovan. Följ de här stegen och ändra syntaxen enligt underavsnitten nedan:
+<!-- Creating a new OSGI configuration property is described in the [Adding a new configuration to the repository](#creating-the-configuration-in-the-repository) section above. -->
+
+Följ de här stegen och ändra syntaxen enligt underavsnitten nedan:
 
 ### Textbundna värden {#inline-values}
 
