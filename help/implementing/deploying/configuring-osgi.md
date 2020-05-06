@@ -2,12 +2,15 @@
 title: Konfigurera OSGi för AEM som en molntjänst
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: e23813aa5d55a9ae6550ff473b030177e37ffffb
+source-git-commit: 10e12a8b15e6ea51e8b022deefaefed52780d48a
+workflow-type: tm+mt
+source-wordcount: '2509'
+ht-degree: 0%
 
 ---
 
 
-# OSGi-konfigurationer {#osgi-configurations}
+# Configuring OSGi for AEM as a Cloud Service {#configuring-osgi-for-aem-as-a-cloud-service}
 
 [OSGi](https://www.osgi.org/) är en grundläggande del i teknikhögen i Adobe Experience Manager (AEM). Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
 
@@ -95,7 +98,7 @@ Det finns tre olika OSGi-konfigurationsvärden som kan användas med AEM som mol
 
 I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för specifika användningsområden där värdet skiljer sig mellan olika utvecklingsmiljöer.
 
-![](assets/choose-configuration-value-type.png)
+![](assets/choose-configuration-value-type_res1.png)
 
 Miljöspecifika konfigurationer utökar de traditionella, statiskt definierade OSGi-konfigurationer som innehåller infogade värden, vilket gör det möjligt att hantera OSGi-konfigurationsvärden externt via Cloud Manager API. Det är viktigt att förstå när den vanliga och traditionella metoden för att definiera textbundna värden och lagra dem i Git ska användas, jämfört med att abstrahera värdena till miljöspecifika konfigurationer.
 
@@ -165,50 +168,19 @@ Om du vill lägga till en ny konfiguration i databasen måste du känna till fö
 
 Så här lägger du till den nya konfigurationen i databasen:
 
-1. Använd CRXDE Lite för att navigera till:
+1. I ditt ui.apps-projekt skapar du en `/apps/…/config.xxx` mapp efter behov baserat på det runmode du använder
 
-   ` /apps/<yourProject>`
+1. Skapa en ny JSON-fil med namnet PID och lägg till `.cfg.json` tillägget
 
-1. Om den inte redan finns skapar du `config` mappen ( `sling:Folder`):
 
-   * `config` - gäller för alla körlägen
-   * `config.<run-mode>` - specifikt för ett visst körläge
+1. Fyll i JSON-filen med OSGi-konfigurationsnyckelvärdepar
 
-1. Skapa en nod under den här mappen:
-
-   * Typ: `sling:OsgiConfig`
-   * Namn: Den beständiga identiteten (PID).
-
-      t.ex. för AEM WCM Version Manager `com.day.cq.wcm.core.impl.VersionManagerImpl`
    >[!NOTE]
    >
-   >När en fabrikskonfiguration läggs till `-<identifier>` i namnet.
-   >
-   >Som i: `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
-   >
-   >Där `<identifier>` ersätts av fri text som du (måste) anger för att identifiera förekomsten (du kan inte utelämna denna information); till exempel:
-   >
-   >`org.apache.sling.commons.log.LogManager.factory.config-MINE`
+   >Om du konfigurerar en OSGi-tjänst kan du slå upp OSGi-egenskapsnamnen via `/system/console/configMgr`
 
-1. Skapa en egenskap på den här noden för varje parameter som du vill konfigurera:
 
-   * Namn: parameternamnet som visas i webbkonsolen, namnet visas inom parentes i slutet av fältbeskrivningen. Till exempel för `Create Version on Activation` användning `versionmanager.createVersionOnActivation`
-   * Typ: i tillämpliga fall.
-   * Värde: efter behov.
-   Du behöver bara skapa egenskaper för de parametrar som du vill konfigurera, andra använder fortfarande standardvärdena som angetts av AEM.
-
-1. Spara alla ändringar.
-
-   Ändringarna tillämpas så snart noden uppdateras genom att tjänsten startas om (som med ändringarna i webbkonsolen).
-
->[!CAUTION]
->
->Du får inte ändra något i `/libs` banan.
-
->[!CAUTION]
->
->Den fullständiga sökvägen till en konfiguration måste vara korrekt för att den ska kunna läsas vid start.
-
+1. Spara JSON-filen i ditt projekt.
 
 ## Konfigurationsegenskapsformat i källkontroll {#configuration-property-format-in-source-control}
 
@@ -268,7 +240,7 @@ Om inget värde har angetts per miljö ersätts inte platshållaren vid körning
 $[env:ENV_VAR_NAME;default=<value>]
 ```
 
-När ett standardvärde anges ersätts platshållaren antingen med det angivna per-environment-värdet eller med det angivna standardvärdet.
+När ett standardvärde anges ersätts platshållaren antingen med det angivna per-environment-värdet eller det angivna standardvärdet.
 
 ### Lokal utveckling {#local-development}
 
