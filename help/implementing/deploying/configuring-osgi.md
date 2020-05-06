@@ -2,9 +2,9 @@
 title: Konfigurera OSGi för AEM som en molntjänst
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: 6643bc74dcf23e147f011fbe4f72a29bcd52ec18
+source-git-commit: 3647715c2c2356657dfb84b71e1447b3124c9923
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2311'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ en OSGi-konfigurationsfil definieras på:
 
 `/apps/example/config/com.example.workflow.impl.ApprovalWorkflow.cfg.json`
 
-följer konfigurationsformatet []cfg.json OSGi (som följer konfigurationsformatetcfg.json OSGi).
+efter konfigurationsformatet cfg.json OSGi.
 
 > [!NOTE]
 >
@@ -96,7 +96,7 @@ Det finns tre olika OSGi-konfigurationsvärden som kan användas med AEM som mol
 
 ## Så här väljer du lämplig OSGi-konfigurationsvärdetyp {#how-to-choose-the-appropriate-osgi-configuration-value-type}
 
-I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för specifika användningsområden där värdet skiljer sig mellan olika utvecklingsmiljöer.
+I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för särskilda ändamål där värdet skiljer sig mellan olika utvecklingsmiljöer.
 
 ![](assets/choose-configuration-value-type_res1.png)
 
@@ -112,7 +112,7 @@ Värden för infogade konfigurationer anses vara standardmetoden och bör använ
 * Värdena är implicit knutna till koddistributioner
 * De kräver inga ytterligare distributionsöverväganden eller samordning
 
-När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden, där du bara väljer hemliga eller miljöspecifika konfigurationer om det behövs för användningsfallet.
+När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden. Om det behövs för användningsfallet väljer du bara hemliga eller miljöspecifika konfigurationer.
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
@@ -242,7 +242,7 @@ Om inget värde har angetts per miljö ersätts inte platshållaren vid körning
 $[env:ENV_VAR_NAME;default=<value>]
 ```
 
-När ett standardvärde anges ersätts platshållaren antingen med det angivna per-environment-värdet eller det angivna standardvärdet.
+När ett standardvärde anges ersätts platshållaren antingen med det angivna per-environment-värdet eller med det angivna standardvärdet.
 
 ### Lokal utveckling {#local-development}
 
