@@ -2,7 +2,10 @@
 sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 61263c10257606040d5d42c4b6a6f9bc6eeb7c4a
+source-git-commit: 10e12a8b15e6ea51e8b022deefaefed52780d48a
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 95%
 
 ---
 
@@ -31,11 +34,12 @@ source-git-commit: 61263c10257606040d5d42c4b6a6f9bc6eeb7c4a
    + [Förstå testresultat](/help/implementing/developing/introduction/understand-test-results.md)
 + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
    + [Utöka Experience Fragments](developing/extending/experience-fragments.md)
-   + [Anpassa och utöka innehållsfragment](developing/extending/content-fragments-customizing.md)
-   + [Innehållsfragment Konfigurera komponenter för återgivning](developing/extending/content-fragments-configuring-components-rendering.md)
+   + [Anpassa och utöka Content Fragments](developing/extending/content-fragments-customizing.md)
+   + [Content Fragments – konfigurera komponenter för återgivning](developing/extending/content-fragments-configuring-components-rendering.md)
    + [Konfigurera sökformulär](developing/extending/search-forms.md)
 + Distribuera till AEM as a Cloud Service {#deploying}
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
+   + [Konfigurera OSGi för AEM som en molntjänst](deploying/configuring-osgi.md)
 + Dispatcher i molnet {#dispatcher}
    + [Dispatcher i molnet](dispatcher/overview.md)
    + [Innehållsleverans i AEM as a Cloud Service](dispatcher/content-delivery.md)
