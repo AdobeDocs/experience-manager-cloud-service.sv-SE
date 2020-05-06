@@ -2,9 +2,9 @@
 title: Konfigurera OSGi för AEM som en molntjänst
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: 48a19fb1bb7657d34f31605a3b4a85e656393918
+source-git-commit: 6643bc74dcf23e147f011fbe4f72a29bcd52ec18
 workflow-type: tm+mt
-source-wordcount: '2214'
+source-wordcount: '2317'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Värden för infogade konfigurationer anses vara standardmetoden och bör använ
 * Värdena är implicit knutna till koddistributioner
 * De kräver inga ytterligare distributionsöverväganden eller samordning
 
-När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden. Om det behövs för användningsfallet väljer du bara hemliga eller miljöspecifika konfigurationer.
+När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden, där du bara väljer hemliga eller miljöspecifika konfigurationer om det behövs för användningsfallet.
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
@@ -162,29 +162,29 @@ To add a new configuration to the repository you need to know the following:
 
    `select * from sling:OsgiConfig`
 
-   If so, this configuration can be copied to ` /apps/<yourProject>/`, then customized in the new location.
+   If so, this configuration can be copied to ` /apps/<yourProject>/`, then customized in the new location. -->
 
-## Creating the Configuration in the Repository {#creating-the-configuration-in-the-repository}
+## Skapa konfigurationen i databasen {#creating-the-configuration-in-the-repository}
 
-To actually add the new configuration to the repository:
+Så här lägger du till den nya konfigurationen i databasen:
 
-1. In your ui.apps project, create a `/apps/…/config.xxx` folder as needed based on the runmode you are using
+1. I ditt ui.apps-projekt skapar du en `/apps/…/config.xxx` mapp efter behov baserat på det runmode du använder
 
-1. Create a new JSON file with the name of the PID and add the `.cfg.json` extension
+1. Skapa en ny JSON-fil med namnet PID och lägg till `.cfg.json` tillägget
 
 
-1. Populate the JSON file with the OSGi configuration key value pairs
+1. Fyll i JSON-filen med OSGi-konfigurationsnyckelvärdepar
 
    >[!NOTE]
    >
-   >If you are configuring an out of the box OSGi service, you can look up the OSGi property names via `/system/console/configMgr`
+   >Om du konfigurerar en OSGi-tjänst kan du slå upp OSGi-egenskapsnamnen via `/system/console/configMgr`
 
 
-1. Save the JSON file to your project. -->
+1. Spara JSON-filen i ditt projekt. -->
 
 ## Konfigurationsegenskapsformat i källkontroll {#configuration-property-format-in-source-control}
 
-<!-- Creating a new OSGI configuration property is described in the [Adding a new configuration to the repository](#creating-the-configuration-in-the-repository) section above. -->
+Att skapa en ny OSGI-konfigurationsegenskap beskrivs i avsnittet [Lägga till en ny konfiguration i databasen](#creating-the-configuration-in-the-repository) ovan.
 
 Följ de här stegen och ändra syntaxen enligt underavsnitten nedan:
 
