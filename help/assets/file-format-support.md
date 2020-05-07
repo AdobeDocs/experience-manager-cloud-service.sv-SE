@@ -3,7 +3,10 @@ title: Filformat och MIME-typer som stöds av Experience Manager Assets som en m
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som en molntjänst.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2e73a9bba91f15702bdeb1d57e87b688360661bd
+source-git-commit: 2830c1cb2a9a0c06e6f8a4a765420706f5ceb093
+workflow-type: tm+mt
+source-wordcount: '771'
+ht-degree: 5%
 
 ---
 
@@ -14,6 +17,14 @@ Adobe Experience Manager som molntjänst har stöd för grundläggande innehåll
 
 Dessutom har Experience Manager Assets utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med hjälp av [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
 
+Några av de viktigaste funktionerna för tillgångskonvertering med hjälp av mikrotjänster:
+
+* Viktiga [Adobe-filformat](#adobe-formats) som skapats av program och tjänster från Adobe, bland annat Adobe Photoshop, Adobe InDesign, Adobe Illustrator, Adobe XD, Adobe Dimension och Adobe Acrobat eller PDF.
+* Viktiga [bildfilformat](#image-formats).
+* [Camera Raw-filformat](#camera-raw-formats) för en mängd olika kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
+* Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
+* Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
+
 Följande förklaring beskriver supportnivån.
 
 | Supportnivå | Beskrivning |
@@ -22,17 +33,7 @@ Följande förklaring beskriver supportnivån.
 | * | Se anmärkningarna nedanför tabellen |
 | - | Ej relevant |
 
-## Konvertering av tillgångar med hjälp av mikrotjänster {#asset-microservices-supported-formats}
-
-Högdagrarna är följande:
-
-* Viktiga [Adobe-filformat](#adobe-formats) som skapats av program och tjänster från Adobe, bland annat Adobe Photoshop, Adobe InDesign, Adobe Illustrator, Adobe XD, Adobe Dimension och Adobe Acrobat eller PDF.
-* Viktiga [bildfilformat](#image-formats).
-* [Camera Raw-filformat](#camera-raw-formats) för en mängd olika kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
-* Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
-* Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
-
-### Adobe-format {#adobe-formats}
+## Adobe-format {#adobe-formats}
 
 | Filformat | Generering av miniatyrbilder | Extrahering av fulltext | Extrahering av metadata | Bredd/höjd |
 | ----------- | -------------------- | ------------------- | ------------------- | ------------ |
@@ -48,9 +49,9 @@ Högdagrarna är följande:
 | PSD | ✓ | - | ✓ | ✓ |
 | XD | ✓ | - | ✓ | ✓ |
 
-\* För INDD (InDesign-filer) bestäms återgivningens storlek av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i InDesign (**[!UICONTROL Inställningar > Filhantering > Spara alltid förhandsvisningsbilder med dokument, förhandsvisningsstorlek]**) för att bädda in större återgivning.
+\* För [!DNL Adobe InDesign] filer (INDD) bestäms återgivningens storlek av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) för att bädda in större återgivning.
 
-### Bildformat {#image-formats}
+## Bildformat {#image-formats}
 
 | Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd | Beskär |
 | ----------- | -------------------- | ------------------- | ------------ | -------- |
@@ -62,7 +63,31 @@ Högdagrarna är följande:
 | SVG | - | ✓ | - | - |
 | TIFF | ✓ | ✓ | ✓ | - |
 
-### Camera RAW-format {#camera-raw-formats}
+## Bildformat i [!DNL Dynamic Media] {#image-support-dynamic-media}
+
+| Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning |
+| ------- | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
+| BMP | ✓ | - | - | - | - |
+| PSD ‡ | ✓ | - | - | - | - |
+| EPS | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PICT | ✓ | - | - | - | - |
+
+‡ Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av [!DNL Adobe Photoshop] och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+
+Följande undertyper av rasterbildfilformat som inte stöds i [!DNL Dynamic Media]:
+
+* PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
+* PSB-filer.
+* PSD-filer med en annan färgrymd än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
+* PSD-filer med ett bitdjup som är större än 16.
+* TIFF-filer som har flyttalsdata.
+* TIFF-filer med Lab-färgrymd.
+
+## [!DNL Camera RAW] format {#camera-raw-formats}
 
 | Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
 | ----------- | -------------------- | ------------------- | ------------ |
@@ -94,7 +119,7 @@ Högdagrarna är följande:
 | SRW | ✓ | ✓ | ✓ |
 | X3F | ✓ | ✓ | ✓ |
 
-### Dokumentformat {#document-formats}
+## Dokumentformat {#document-formats}
 
 Följande dokumentformat stöds för filhanteringsfunktioner.
 
@@ -120,7 +145,15 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | TXT | - | ✓ | - | ✓ | ✓ |
 | XML | - | ✓ | - | - | - |
 
-### Videoformat {#video-formats}
+## Dokumentformat i [!DNL Dynamic Media] {#document-support-dynamic-media}
+
+| Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning |
+| ------ | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
+| AI | ✓ | - | - | - | - |
+| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
+| INDD | ✓ | - | - | - | - |
+
+## Videoformat {#video-formats}
 
 | Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
 | ----------- | -------------------- | ------------------- | ------------ |
@@ -147,7 +180,28 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | WEBM | ✓ | - | ✓ |
 | WMV | ✓ | ✓ | ✓ |
 
-### Ljudformat {#audio-formats}
+## Videoformat i [!DNL Dynamic Media] för omkodning {#video-dynamic-media-transcoding}
+
+| Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
+|------------------------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| MP4 | MPEG-4 | H264/AVC (alla profiler) |  |
+| MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
+| FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
+| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft-skärm (MSS2), Microsoft Photo Story (WVP2) |
+| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 |  |
+| M4V | Apple iTunes | H264/AVC |  |
+| AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft Video 1 (MS-CRAM) |
+| WebM | WebM | Google VP8 |  |
+| OGV, OGG | Ogg | Theora, VP3, Dirac |  |
+| MXF | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro |  |
+| MTS | AVCHD | H264/AVC |  |
+| MKV | Matroska | H264/AVC |  |
+| R3D, RM | Red Raw-video | MJPEG 2000 |  |
+| RAM, RM | RealVideo | Stöds inte | Real G2 (RV20), Real 8 (RV30), Real 10 (RV40) |
+| FLAC | Inbyggd Flash | Kostnadsfri förlustfri ljudkodek |  |
+| MJ2 | Motion JPEG 2000 | Motion JPEG 2000-kodek |  |
+
+## Ljudformat {#audio-formats}
 
 Resurser som en molntjänst ger stöd för XMP-metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
 
