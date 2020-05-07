@@ -2,12 +2,15 @@
 title: Förstå testresultaten - molntjänster
 description: Förstå testresultat - molntjänster
 translation-type: tm+mt
-source-git-commit: e1504c73e443d449f8fc9d5fbad433ea1a298843
+source-git-commit: 4b79f7dd3a55e140869985faa644f7da1f62846c
+workflow-type: tm+mt
+source-wordcount: '997'
+ht-degree: 3%
 
 ---
 
 
-# Förstå testresultaten {#understand-test-results}
+# Förstå testresultat {#understand-test-results}
 
 Körningar av pipeline för Cloud Manager för molntjänster stöder körning av tester som körs mot scenmiljön. Detta är i motsats till tester som körs under steget Build och Unit Testing, som körs offline, utan åtkomst till någon AEM-miljö som körs.
 Det finns två typer av tester som körs i det här sammanhanget:
@@ -23,20 +26,21 @@ Som en del av pipeline skannas källkoden för att säkerställa att distributio
 
 | Namn | Definition | Kategori | Feltröskel |
 |--- |--- |--- |--- |
-| Säkerhetsklassificering | A = 0 Sårbarhet <br/>B = minst 1 Mindre sårbarhet<br/> C = minst 1 Större sårbarhet <br/>D = minst 1 Kritisk sårbarhet <br/>E = minst 1 Blockerare Sårbarhet |  Kritisk | &lt; B |
+| Säkerhetsklassificering | A = 0 Sårbarhet <br/>B = minst 1 Mindre sårbarhet<br/> C = minst 1 Större sårbarhet <br/>D = minst 1 Kritisk sårbarhet <br/>E = minst 1 Blockerare Sårbarhet | Kritisk | &lt; B |
 | Tillförlitlighetsklassificering | A = 0 Fel <br/>B = minst 1 mindre fel <br/>C = minst 1 större fel <br/>D = minst 1 allvarligt fel E = minst 1 blockeringsfel | Viktigt | &lt; C |
 | Underhållbarhetsklassificering | Oöverträffade reparationskostnader för illaluktande kod är: <br/><ul><li>&lt;=5 % av tiden som redan har gått in i programmet är klassificeringen A </li><li>Betyg 6-10 % är B </li><li>Betyg mellan 11 och 20 % är ett C </li><li>Betyg mellan 21 och 50 % är ett D</li><li>över 50 % är ett E</li></ul> | Viktigt | &lt; A |
-| Täckning | En blandning av radens disponering och villkorstäckning med denna formel: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)` <br/>där CT = villkor som har utvärderats till &#39;true&#39; minst en gång under enhetstester <br/>CF = villkor som har utvärderats till &#39;false&#39; minst en gång under enhetstester <br/>LC = täckta linjer = lines_to_cover - uncover_lines <br/><br/> B = totalt antal villkor <br/>EL = totalt antal körbara rader (lines_to_cover) | Viktigt | &lt; 50% |
+| Täckning | En blandning av radens disponering och villkorstäckning med denna formel: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>där: CT = villkor som har utvärderats till &#39;true&#39; minst en gång under enhetstester <br/>CF = villkor som har utvärderats till &#39;false&#39; minst en gång under enhetstester <br/>LC = täckta linjer = lines_to_cover - uncover_lines <br/><br/> B = totalt antal villkor <br/>EL = totalt antal körbara rader (lines_to_cover) | Viktigt | &lt; 50% |
 | Överhoppade enhetstester | Antal överhoppade enhetstester. | Information | > 1 |
-| Öppna ärenden | Generella problemtyper - sårbarheter, fel och kodmellanslag | Information | > 1 |
+| Öppna ärenden | Generella problemtyper - sårbarheter, fel och kodmellanslag | Information | > 0 |
 | Duplicerade rader | Antal rader som ingår i duplicerade block. <br/>För att ett kodblock ska betraktas som duplicerat: <br/><ul><li>**Projekt som inte är Java:**</li><li>Det ska finnas minst 100 efterföljande och duplicerade tokens.</li><li>Dessa tokens bör spridas åtminstone på: </li><li>30 kodrader för COBOL </li><li>20 kodrader för ABAP </li><li>10 kodrader för andra språk</li><li>**Java-projekt:**</li><li> Det ska finnas minst 10 efterföljande och duplicerade satser oavsett antalet tokens och rader.</li></ul> <br/>Skillnader i indrag och i stränglitteraler ignoreras när dubbletter identifieras. | Information | > 1% |
+| Kompatibilitet med molntjänster | Antal identifierade kompatibilitetsproblem med molntjänster. | Information | > 0 |
 
 
 >[!NOTE]
 >
 >Mer detaljerade definitioner finns i [Måttdefinitioner](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) .
 
-Du kan hämta listan med regler här [code-quality-rules.xlsx](/help/implementing/cloud-manager/assets/CodeQuality-Rules-new-one.xlsx)
+Du kan hämta listan med regler här [code-quality-rules.xlsx](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest.xlsx)
 
 >[!NOTE]
 >
@@ -126,7 +130,7 @@ Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas ö
 Om JAR-test inte skapas av bygget godkänns testet som standard. Det här steget utförs nu direkt efter scendistributionen.
 
 >[!NOTE]
->Knappen **Hämtningslogg** ger åtkomst till en ZIP-fil som innehåller loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM-körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
+>Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM-körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
 
 ## Lokal testkörning {#local-test-execution}
 
