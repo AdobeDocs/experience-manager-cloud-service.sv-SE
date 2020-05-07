@@ -2,7 +2,10 @@
 title: Anpassade regler för kodkvalitet - molntjänster
 description: Anpassade regler för kodkvalitet - molntjänster
 translation-type: tm+mt
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+source-git-commit: 4b79f7dd3a55e140869985faa644f7da1f62846c
+workflow-type: tm+mt
+source-wordcount: '2254'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +33,7 @@ I följande avsnitt beskrivs SonarQube Rules:
 
 **Sedan**: Version 2018.4.0
 
-Metoderna ***Thread.stop()*** och ***Thread.Intert()*** kan ge problem som är svåra att återge och i vissa fall även säkerhetsluckor. Deras användning bör övervakas noggrant och valideras. Generellt är meddelandeöverföring ett säkrare sätt att uppnå liknande mål.
+Metoderna ***Thread.stop()*** och ***Thread.interrupt()*** kan skapa problem som är svåra att återge och i vissa fall även skapa säkerhetsluckor. Deras användning bör övervakas noggrant och valideras. I allmänhet är meddelandeöverföring ett säkrare sätt att uppnå samma sak.
 
 #### Icke-kompatibel kod {#non-compliant-code}
 
@@ -189,9 +192,9 @@ public void orDoThis() {
 
 **Sedan**: Version 2018.7.0
 
-AEM API innehåller Java-gränssnitt och -klasser som endast är avsedda att användas, men inte implementeras, av anpassad kod. Gränssnittet *com.day.cq.wcm.api.Page* är till exempel utformat att endast ***implementeras av*** AEM.
+API:t för AEM innehåller Java-gränssnitt och -klasser som bara är avsedda att användas, inte implementeras, av anpassad kod. Gränssnittet *com.day.cq.wcm.api.Page* är till exempel utformat att implementeras av ***enbart AEM***.
 
-När nya metoder läggs till i dessa gränssnitt påverkar inte dessa ytterligare metoder befintlig kod som använder dessa gränssnitt, och därför anses tillägg av nya metoder i dessa gränssnitt vara bakåtkompatibla. Men om anpassad kod ***implementerar*** ett av dessa gränssnitt har den anpassade koden skapat en bakåtkompatibilitetsrisk för kunden.
+När nya metoder läggs till i dessa gränssnitt påverkar inte dessa ytterligare metoder befintlig kod som använder dessa gränssnitt, och därför anses tillägg av nya metoder i dessa gränssnitt vara bakåtkompatibelt. Men om anpassad kod ***implementerar*** ett av dessa gränssnitt har den anpassade koden skapat en risk vad gäller bakåtkompatibilitet för kunden.
 
 Gränssnitt (och klasser) som endast är avsedda att implementeras av AEM kommenteras med *org.osgi.annotation.versioning.ProviderType* (eller, i vissa fall, en liknande äldre anteckning *aQute.bnd.annotation.ProviderType*). Den här regeln identifierar de fall där ett sådant gränssnitt implementeras (eller där en klass utökas) med anpassad kod.
 
@@ -521,7 +524,7 @@ public void doThis() {
 }
 ```
 
-### Undvik hårdkodade/program- och /libs-sökvägar {#avoid-hardcoded-apps-and-libs-paths}
+### Undvik hårdkodade/appar- och/libs-sökvägar {#avoid-hardcoded-apps-and-libs-paths}
 
 **Nyckel**: CQRules:CQBP-71
 
@@ -549,13 +552,42 @@ public void doThis(Resource resource) {
 }
 ```
 
+### Sling Scheduler ska inte användas {#sonarqube-sling-scheduler}
+
+**Nyckel**: CQRules:AMSCORE-554
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2020.5.0
+
+Sling Scheduler får inte användas för aktiviteter som kräver en garanterad körning. Sling Scheduled Jobs garanterar körning och passar bättre för både klustrade och icke-klustrade miljöer.
+
+Läs mer om hur [Sling-jobb hanteras i klustermiljöer i](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) Apache Sling-händelser och jobbhantering.
+
+### AEM-inaktuella API:er får inte användas {#sonarqube-aem-deprecated}
+
+**Nyckel**: AMSCORE-553
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2020.5.0
+
+AEM API-ytan är under ständig revision för att identifiera API:er som inte används och därför betraktas som inaktuella.
+
+I många fall används standardanteckningen Java *@Deprecated* , som identifieras av `squid:CallToDeprecatedMethod`.
+
+Det finns emellertid fall där ett API är inaktuellt i AEM-kontexten men inte kan bli inaktuellt i andra sammanhang. Den här regeln identifierar den andra klassen.
 
 ## OakPAL-innehållsregler {#oakpal-rules}
 
 Nedan finns de OakPAL-kontroller som körs av Cloud Manager.
 
 >[!NOTE]
->OakPAL är ett ramverk som utvecklats av en AEM Partner (och vinnare av 2019 AEM Rockstar North America) som validerar innehållspaket med en fristående Oak-databas.
+>OakPAL är ett ramverk som utvecklats av en AEM-partner (och vinnare av 2019 AEM Rockstar North America) som validerar innehållspaket med en fristående Oak-databas.
 
 ### Kundpaket får inte skapa eller ändra noder under /libs {#oakpal-customer-package}
 
@@ -644,3 +676,62 @@ Ett vanligt problem är att använda noder som namnges `config` i komponentdialo
 **Sedan**: Version 2019.6.0
 
 På liknande sätt som *Paket bör inte innehålla duplicerade OSGi-konfigurationer* är detta ett vanligt problem i komplexa projekt där samma nodsökväg skrivs till av flera separata innehållspaket. Även om beroenden för innehållspaket kan användas för att säkerställa ett konsekvent resultat är det bättre att undvika överlappningar helt och hållet.
+
+### Standardredigeringsläget får inte vara ett klassiskt användargränssnitt {#oakpal-default-authoring}
+
+**Nyckel**: KlassisktUIAuthoringMode
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2020.5.0
+
+OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definierar standardredigeringsläget i AEM. Eftersom det klassiska användargränssnittet har tagits bort sedan AEM 6.4 kommer ett problem nu att uppstå när standardredigeringsläget är konfigurerat till Classic UI.
+
+### Komponenter med dialogrutor bör ha gränssnittsdialogrutor med pekskärmar {#oakpal-components-dialogs}
+
+**Nyckel**: ComponentWithOnlyClassicUIDialog
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2020.5.0
+
+AEM-komponenter som har en klassisk gränssnittsdialogruta bör alltid ha en motsvarande Touch-gränssnittsdialogruta, både för att ge en optimal redigeringsupplevelse och för att vara kompatibel med distributionsmodellen för molntjänsten, där Classic UI inte stöds. Den här regeln verifierar följande scenarier:
+
+* En komponent med en klassisk gränssnittsdialogruta (d.v.s. en underordnad dialogrutenod) måste ha en motsvarande Touch UI-dialogruta (d.v.s. en underordnad nod). `cq:dialog`
+* En komponent med en klassisk dialogruta för användargränssnittsdesign (d.v.s. en design_dialog-nod) måste ha en motsvarande designdialogruta för användargränssnittet (d.v.s. en `cq:design_dialog` underordnad nod).
+* En komponent med både en klassisk användargränssnittsdialogruta och en klassisk dialogruta för användargränssnittsdesign måste ha både en motsvarande dialogruta för användargränssnittet för touchredigering och en motsvarande designdialogruta för användargränssnittet för touchgränssnitt.
+
+Dokumentationen för AEM Modernization Tools innehåller dokumentation och verktyg för hur du konverterar komponenter från Classic UI till Touch UI. Mer information finns [i AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) .
+
+### Paketen får inte innehålla blandbart och oföränderligt innehåll {#oakpal-packages-immutable}
+
+**Nyckel**: ImmutableMutableMixedPackage
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2020.5.0
+
+För att vara kompatibel med driftsättningsmodellen för molntjänster måste enskilda innehållspaket innehålla antingen innehåll för de oföränderliga områdena i databasen (d.v.s. inte ändras av kundkoden och orsakar en separat överträdelse) eller det ändringsbara området (d.v.s. allt annat), men inte båda. `/apps and /libs, although /libs` Ett paket som innehåller båda `/apps/myco/components/text and /etc/clientlibs/myco` är till exempel inte kompatibelt med molntjänsten och orsakar att ett problem rapporteras.
+
+Mer information finns i [AEM-projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) .
+
+### Omvända replikeringsagenter ska inte användas {#oakpal-reverse-replication}
+
+**Nyckel**: ReverseReplication
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2020.5.0
+
+Stöd för omvänd replikering är inte tillgängligt i distributioner av molntjänster, vilket beskrivs i [versionsinformationen: Borttagning av replikeringsagenter](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
+
+Kunder som använder omvänd replikering bör kontakta Adobe för att få alternativa lösningar.
+
