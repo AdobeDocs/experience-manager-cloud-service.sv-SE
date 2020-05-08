@@ -2,9 +2,9 @@
 title: Konfigurera OSGi för AEM som en molntjänst
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: 3647715c2c2356657dfb84b71e1447b3124c9923
+source-git-commit: 2ab998c7acedecbe0581afe869817a9a56ec5474
 workflow-type: tm+mt
-source-wordcount: '2311'
+source-wordcount: '2689'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ Det finns tre olika OSGi-konfigurationsvärden som kan användas med AEM som mol
 
 ## Så här väljer du lämplig OSGi-konfigurationsvärdetyp {#how-to-choose-the-appropriate-osgi-configuration-value-type}
 
-I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för särskilda ändamål där värdet skiljer sig mellan olika utvecklingsmiljöer.
+I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för specifika användningsområden där värdet skiljer sig mellan olika utvecklingsmiljöer.
 
 ![](assets/choose-configuration-value-type_res1.png)
 
@@ -112,7 +112,7 @@ Värden för infogade konfigurationer anses vara standardmetoden och bör använ
 * Värdena är implicit knutna till koddistributioner
 * De kräver inga ytterligare distributionsöverväganden eller samordning
 
-När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden. Om det behövs för användningsfallet väljer du bara hemliga eller miljöspecifika konfigurationer.
+När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden, där du bara väljer hemliga eller miljöspecifika konfigurationer om det behövs för användningsfallet.
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
@@ -164,41 +164,56 @@ To add a new configuration to the repository you need to know the following:
 
    If so, this configuration can be copied to ` /apps/<yourProject>/`, then customized in the new location. -->
 
-## Skapa konfigurationen i databasen {#creating-the-configuration-in-the-repository}
+## Skapa OSGi-konfigurationer
 
-Så här lägger du till den nya konfigurationen i databasen:
+Det finns två sätt att skapa nya OSGi-konfigurationer enligt beskrivningen nedan. Den tidigare metoden används vanligtvis för att konfigurera anpassade OSGi-komponenter som har välkända OSGi-egenskaper och -värden av utvecklaren, och den senare för AEM-tillhandahållna OSGi-komponenter.
 
-1. I ditt ui.apps-projekt skapar du en `/apps/…/config.xxx` mapp efter behov baserat på det runmode du använder
+### Skriver OSGi-konfigurationer
 
-1. Skapa en ny JSON-fil med namnet PID och lägg till `.cfg.json` tillägget
+JSON-formaterade OSGi-konfigurationsfiler kan skrivas för hand direkt i AEM-projektet. Detta är ofta det snabbaste sättet att skapa OSGi-konfigurationer för välkända OSGi-komponenter, och särskilt anpassade OSGi-komponenter som har utformats och utvecklats av samma utvecklare som definierar konfigurationerna. Den här metoden kan även användas för att kopiera/klistra in och uppdatera konfigurationer för samma OSGi-komponent i olika körningslägemappar.
+
+1. Öppna `ui.apps` projektet i den utvecklingsmiljö där du arbetar, leta upp eller skapa konfigurationsmappen (`/apps/.../config.<runmode>`) som anger för de körningslägen som den nya OSGi-konfigurationen ska använda
+1. Skapa en ny `<PID>.cfg.json` fil i den här konfigurationsmappen. PID är den beständiga identiteten för OSGi-komponenten är vanligtvis OSGi-komponentimplementeringens fullständiga klassnamn. Till exempel:
+   `/apps/.../config/com.example.workflow.impl.ApprovalWorkflow.cfg.json`
+Observera att namnet på OSGi-konfigurationsfabriksfilen använder `<PID>-<factory-name>.cfg.json` namnkonventionen
+1. Öppna den nya `.cfg.json` filen och definiera nyckel/värde-kombinationerna för OSGi-egenskapen och värdeparen enligt [JSON OSGi-konfigurationsformatet](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
+1. Spara ändringarna i den nya `.cfg.json` filen
+1. Lägg till och implementera din nya OSGi-konfigurationsfil i Git
+
+### Generera OSGi-konfigurationer med AEM SDK QuickStart
+
+AEM SDK Quickstart Jars AEM Web Console kan användas för att konfigurera OSGi-komponenter och exportera OSGi-konfigurationer som JSON. Detta är användbart när du konfigurerar OSGi-komponenter som tillhandahålls av AEM och vars OSGi-egenskaper och deras värdeformat kanske inte är väl förstådda av den utvecklare som definierar OSGi-konfigurationerna i AEM-projektet. Observera att AEM Web Console-konfigurationens gränssnitt inte skriver `.cfg.json` filer i databasen, så tänk på detta för att undvika oväntade händelser under lokal utveckling när de AEM Project-definierade OSGi-konfigurationerna kan skilja sig från de genererade konfigurationerna.
+
+1. Logga in på AEM SDK Quickstart Jars AEM-webbkonsol som adminanvändare
+1. Navigera till OSGi > Konfiguration
+1. Leta reda på OSGi-komponenten som ska konfigureras och tryck på titeln för att redigera
+   ![OSGi-konfiguration](./assets/configuring-osgi/configuration.png)
+1. Redigera OSGi-konfigurationens egenskapsvärden via webbgränssnittet efter behov
+1. Registrera Persistent Identity (PID) på en säker plats. Den används senare för att generera OSGi-konfigurationens JSON
+1. Tryck på Spara
+1. Navigera till OSGi > OSGi Installer Configuration Printer
+1. Klistra in den PID som kopierats i steg 5, kontrollera att Serialization Format är inställt på OSGi Configurator JSON
+1. Tryck på Skriv ut,
+1. OSGi-konfigurationen i JSON-format visas i avsnittet Serialiserade konfigurationsegenskaper
+   ![Skrivare för OSGi-installationskonfiguration](./assets/configuring-osgi/osgi-installer-configurator-printer.png)
+1. I din utvecklingsmiljö öppnar du `ui.apps` projektet, letar upp eller skapar konfigurationsmappen (`/apps/.../config.<runmode>`) som anger de körningsmiljöer som den nya OSGi-konfigurationen ska ha.
+1. Skapa en ny `<PID>.cfg.json` fil i den här konfigurationsmappen. PID är samma värde från steg 5.
+1. Klistra in serialiserade konfigurationsegenskaper från steg 10 i `.cfg.json` filen.
+1. Spara ändringarna i den nya `.cfg.json` filen.
+1. Lägg till och implementera den nya OSGi-konfigurationsfilen i Git.
 
 
-1. Fyll i JSON-filen med OSGi-konfigurationsnyckelvärdepar
-
-   >[!NOTE]
-   >
-   >Om du konfigurerar en OSGi-tjänst kan du slå upp OSGi-egenskapsnamnen via `/system/console/configMgr`
-
-
-1. Spara JSON-filen i ditt projekt. -->
-
-## Konfigurationsegenskapsformat i källkontroll {#configuration-property-format-in-source-control}
-
-Att skapa en ny OSGI-konfigurationsegenskap beskrivs i avsnittet [Lägga till en ny konfiguration i databasen](#creating-the-configuration-in-the-repository) ovan.
-
-Följ de här stegen och ändra syntaxen enligt underavsnitten nedan:
+## Egenskapsformat för OSGi-konfiguration
 
 ### Textbundna värden {#inline-values}
 
 Som man kan förvänta sig formateras infogade värden som namnvärdespar enligt JSON-standardsyntaxen. Till exempel:
 
 ```json
- {
-
- "my_var1": "val",
- "my_var2": "abc",
- "my_var3": 500
-
+{
+   "my_var1": "val",
+   "my_var2": [ "abc", "def" ],
+   "my_var3": 500
 }
 ```
 
@@ -242,7 +257,7 @@ Om inget värde har angetts per miljö ersätts inte platshållaren vid körning
 $[env:ENV_VAR_NAME;default=<value>]
 ```
 
-När ett standardvärde anges ersätts platshållaren antingen med det angivna per-environment-värdet eller med det angivna standardvärdet.
+När ett standardvärde anges ersätts platshållaren antingen med det angivna per-environment-värdet eller det angivna standardvärdet.
 
 ### Lokal utveckling {#local-development}
 
