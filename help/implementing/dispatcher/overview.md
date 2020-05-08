@@ -2,7 +2,10 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: b7bb84b026c9187cb633e9ccfdc17aa5ec930aff
+workflow-type: tm+mt
+source-wordcount: '3916'
+ht-degree: 1%
 
 ---
 
@@ -15,6 +18,9 @@ I det här avsnittet beskrivs hur du strukturerar AEM som en molntjänst-API- oc
 
 >[!NOTE]
 >Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta är en förutsättning för att du ska kunna köra och felsöka Dispatcher på en lokal dator. Avsnitten nedan innehåller kommandon som använder Mac- eller Linux-versionerna av SDK, men Windows SDK kan användas på liknande sätt.
+
+>[!WARNING]
+> Windowsanvändare: den aktuella versionen av AEM som ett lokalt Dispatcher-verktyg för molntjänster (v2.0.20) är inte kompatibel med Windows. Kontakta [Adobe Support](https://daycare.day.com/home.html) för att få uppdateringar om Windows-kompatibilitet.
 
 ## Dispatcher Tools {#dispatcher-sdk}
 
@@ -267,7 +273,7 @@ De aktiverade grupperna ska finnas i den undermappen.
 
 **filen som ingår (..) måste ha följande namn: ...**
 
-Det finns två avsnitt i servergruppskonfigurationen som **måste** innehålla en specifik fil: och `/renders` i `/allowedClients` `/cache` avsnittet. De här avsnitten måste se ut så här:
+Det finns två avsnitt i servergruppskonfigurationen som **måste** innehålla en specifik fil: `/renders` och `/allowedClients` i `/cache` avsnittet. De här avsnitten måste se ut så här:
 
 ```
 /renders {
@@ -390,7 +396,7 @@ Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `R
 # Define REWRITE_LOG_LEVEL Warn
 ```
 
-När du kör Dispatcher lokalt skrivs loggarna också ut direkt till terminalutdata. Oftast ska loggarna vara i DEBUG, vilket kan uppnås genom att skicka felsökningsnivån som en parameter när Docker körs. Exempel:
+När du kör Dispatcher lokalt skrivs loggarna också ut direkt till terminalutdata. Oftast ska loggarna vara i DEBUG, vilket kan uppnås genom att skicka felsökningsnivån som en parameter när Docker körs. Till exempel:
 
 `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh out docker.for.mac.localhost:4503 8080`
 
