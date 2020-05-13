@@ -2,10 +2,10 @@
 title: En snabbguide till WCAG 2.1
 seo-title: En snabbguide till WCAG 2.1
 translation-type: tm+mt
-source-git-commit: f12bbc1976d3db698ca62260c0bb7c7f43246ba0
+source-git-commit: d5023d8508f7d8c0955e7d741978ad8de073bc0d
 workflow-type: tm+mt
-source-wordcount: '1660'
-ht-degree: 93%
+source-wordcount: '1758'
+ht-degree: 86%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Manager (AEM) as a Cloud Service har utvecklats för att maxime
 
 >[!NOTE]
 > 
-> WCAG 2.1 uppdaterar den tidigare versionen, WCAG 2.0, från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
+> WCAG 2.1 uppdaterar den tidigare versionen WCAG 2.0 från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
 
 >[!NOTE]
 > 
@@ -37,25 +37,19 @@ Därför är det viktigt att förstå syftet med WCAG 2.1 och hur riktlinjerna �
 Syftet med WCAG 2.1 är att tillhandahålla riktlinjer som:
 
 * Är **teknikoberoende:**
-Det vill säga riktlinjer som kan tillämpas på en rad olika format för webbinnehåll, inte bara HTML. WCAG 2.1 kan alltså omfatta innehåll som genereras som eller tillhandahålls i PDF, Flash, JavaScript och andra befintliga och framtida webbtekniker. <!-- This aims to address a recognized weakness of WCAG 1.0, in that it was focused on HTML at the expense of other web content formats. -->
+Det vill säga riktlinjer som kan tillämpas på en rad olika format för webbinnehåll, inte bara HTML. WCAG 2.1 kan alltså omfatta innehåll som genereras som eller tillhandahålls i PDF, Flash, JavaScript och andra befintliga och framtida webbtekniker.
 
 * Kan **testas:**
-Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en allmän grupp tillgänglighetsexperter håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte. <!-- WCAG 2.1 has been written with the aim of reducing the subjectivity that was present in some of the WCAG 1.0 guidelines and checkpoints. -->
+Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en allmän grupp tillgänglighetsexperter håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte.
 
-* Stödjer **prioriterad och sammanhangsbaserad implementering:**
-   <!-- As with WCAG 1.0, --> WCAG 2.1 guidelines are given priorities, relating to the likely impact of not following a guideline on a particular group of users with disabilities. This allows authors to make an informed decision on the most important guidelines for their particular situation. In addition, the concept of *accessibility supported* is introduced. This allows authors to make decisions on how best to use web technologies that may not have full accessibility support, or may require users to have specific assistive technologies and/or browsers in order to benefit from accessibility features.
+* Stöd för **prioriterad och sammanhangsbaserad implementering:**
+Riktlinjer för WCAG 2.1 ges prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet *tillgänglighet som stöds* . Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
 
 Dessa mål har i hög grad påverkat strukturen i WCAG 2.1.
 
 >[!NOTE]
 >
 >Det går inte att skapa en webbplats som tar hänsyn till alla tänkbara funktionshinder eller persontyper. Syftet med WCAG 2.1 är att hjälpa webbförfattare att skapa webbplatser som så långt det rimligen är möjligt är tillgängliga under vissa förhållanden.
-
-<!--
->[!NOTE]
->
->If you are familiar with WCAG 1.0, you will notice some changes in WCAG 2.1. These relate to scope, organization and aim.
--->
 
 ## Struktur {#structure}
 
@@ -115,7 +109,7 @@ Du kan komma åt tekniker:
 * Via samlingar (tekniker kan vara allmänna eller relaterade till en viss teknik eller ett visst format som HTML, CSS eller skript på klientsidan) eller
 * Via relaterade framgångskriterier. Tekniker kan gälla mer än ett framgångskriterium.
 
-Varje teknik har ett unikt nummer som refererar till dess samling. En av ARIA-teknikerna är till exempel *Technique ARIA2: Identifying required fields with the &quot;required&quot; property*.
+Varje teknik har ett unikt nummer som refererar till dess samling. For example, one of the ARIA techniques is [Technique ARIA2: Identifying a required field with the aria-required property](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA2.html).
 
 Tekniker kan vara tillräckliga, rådgivande eller felaktiga:
 
