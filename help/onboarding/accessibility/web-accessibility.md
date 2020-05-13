@@ -2,26 +2,33 @@
 title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 seo-title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 translation-type: tm+mt
-source-git-commit: 921334705578626ac0ea75765496d4f379bb00fc
+source-git-commit: 710365f7934a63710a9158c010d6fac1ca390044
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 96%
 
 ---
 
 
 # Adobe Experience Manager as a Cloud Service  och riktlinjerna för webbtillgänglighet{#aem-and-the-web-accessibility-guidelines}
 
-Det finns många sociala, ekonomiska och juridiska skäl för att se till att webbinnehåll är utformat för att vara så tillgängligt som möjligt för målgruppen, oavsett eventuella funktionshinder eller begränsningar som de har. Webbtillgänglighet med Adobe Experience Manager (AEM) som molntjänst är därför en allt viktigare aspekt av god webbdesign.
+Det finns många sociala, ekonomiska och juridiska skäl för att se till att webbinnehåll är utformat för att vara så tillgängligt som möjligt för målgruppen, oavsett eventuella funktionshinder eller begränsningar som de har. Webbtillgänglighet med Adobe Experience Manager (AEM) as a Cloud Service är därför en allt viktigare aspekt av bra webbdesign.
 
 Att skapa tillgängliga webbplatser och innehåll med AEM as a Cloud Service påverkar:
 
-* Administratörer som ansvarar för att konfigurera AEM för att se till att hjälpmedelsfunktionerna är korrekt aktiverade.
+* Administratörer som ansvarar för att konfigurera AEM så att hjälpmedelsfunktionerna är korrekt aktiverade.
 
 * Författare som använder dessa funktioner för att skapa tillgängliga webbplatser.
 
-   * Att skapa tillgängligt innehåll är en process. AEM har de funktioner som behövs, men innehållsförfattare måste se till att de följer de tekniker som krävs för att skapa tillgängligt innehåll.
+   Att skapa tillgängligt innehåll är en process. AEM har de funktioner som behövs, men innehållsförfattare måste se till att de följer de tekniker som krävs för att skapa tillgängligt innehåll.
 
 * Mallutvecklare bör också vara medvetna om sådana frågor när de implementerar webbplatsdesignen.
 
 Adobe Experience Manager as a Cloud Service fungerar i enlighet med [riktlinjerna](#wcag-accessibility-guideslines) från [World Wide Web Consortium](#world-wide-web-consortium).
+
+>[!NOTE]
+>
+> Mer information finns i [Tillgänglighetskonformationsrapporter för Adobes lösningar](https://www.adobe.com/accessibility/compliance.html) .
 
 ## World Wide Web Consortium {#world-wide-web-consortium}
 
@@ -30,15 +37,6 @@ Adobe Experience Manager as a Cloud Service fungerar i enlighet med [riktlinjern
 ## Web Content Accessibility Guidelines (WCAG) 2.1 {#wcag-accessibility-guideslines}
 
 För att hjälpa webbdesigners och utvecklare att producera tillgängliga webbplatser publicerade [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/) i juni 2018.
-
->[!NOTE]
-> 
-> WCAG 2.1 uppdaterar den tidigare versionen, WCAG 2.0, från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
-
->[!NOTE]
-> 
->En [uppdaterad version av riktlinjerna, WCAG 2.2,](https://www.w3.org/TR/WCAG22/) håller på att utvecklas, men kommer inte att behandlas just nu.
-
 
 WCAG 2.1 innehåller [riktlinjer (med relaterade framgångskriterier) som beskriver tillgänglighetsnivåerna och hur man kan uppfylla dem](https://www.w3.org/TR/WCAG/#conformance).
 
@@ -53,8 +51,6 @@ Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa web
 >[!NOTE]
 > 
 >När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
->
->Eftersom det inte är möjligt att uppfylla alla framgångskriterier på nivå AAA för vissa typer av innehåll, rekommenderas det inte som en obligatorisk efterlevnadsnivå.
 
 <!--
 * [Configuring the Rich Text Editor for Producing Accessible Sites](/help/sites-administering/rte-accessible-content.md)
