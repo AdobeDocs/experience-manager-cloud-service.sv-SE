@@ -1,72 +1,37 @@
 ---
-title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.4.0
-description: Versionsinformation om Experience Manager för 2020.4.0
+title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.5.0
+description: Versionsinformation om Experience Manager för 2020.5.0
 translation-type: tm+mt
-source-git-commit: 98de3a6674aaef5228e96e0bf72e67de861f858e
+source-git-commit: 94a732f56929ad4af23855152e258f82ad61ee2c
+workflow-type: tm+mt
+source-wordcount: '224'
+ht-degree: 0%
 
 ---
 
 
-# Release Notes for Adobe Experience Manager as a Cloud Service 2020.4.0 {#release-notes}
+# Versionsinformation för AEM som molntjänst 2020.5.0 {#release-notes}
 
-I följande avsnitt beskrivs de allmänna versionsinformationen för [!DNL Experience Manager] som molntjänst 2020.4.0.
+I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som en molntjänst 2020.5.0.
 
-## Releasedatum {#release-date}
+## Cloud Manager {#cloud-manager}
 
-Releasedatum för [!DNL Experience Manager] som molntjänst 2020.4.0 är 9 april 2020.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en molntjänst 2020.5.0.
 
-## Nyheter i Assets {#assets}
+### What&#39;s New {#what-is-new}
 
-Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experience Manager Assets] och [!DNL Dynamic Media] i den aktuella versionen.
+* Sex ytterligare regler för kodkvalitet har lagts till för att hjälpa kunderna att identifiera potentiella problem när de planerar en migrering till molntjänsten.
+* Ett nytt mått på *molntjänstkompatibilitet* har lagts till för att sammanfatta antalet kompatibilitetsrelaterade problem.
+* Miljöer som inte har skapats tas nu bort automatiskt cirka 24 timmar efter att de har skapats, om de inte redan har tagits bort.
+* Prestanda för aktivitetssidan och Pipeline Executions List API har förbättrats.
+* Loggen för kodkvalitet innehåller nu fullständiga stackspår för undantag.
 
-* [Varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) stöder användningsexemplen för resursdistribution för Experience Manager Assets. [!DNL Brand Portal] hjälper organisationer att tillgodose sina marknadsföringsbehov genom att på ett säkert sätt distribuera godkänt varumärke och produktmaterial till externa byråer, partners, interna team och återförsäljare för nedladdning.
-   * [!DNL Brand Portal] konfigurationen slutförs via [!DNL Adobe I/O] konsolen. Se [Konfigurera varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
-   * Resurskälla i [!DNL Brand Portal] stöds ännu inte [!DNL Experience Manager] som molntjänst.
+### Bug Fixes  {#bug-fixes}
 
-* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) v2.0 fungerar med [!DNL Experience Manager] en molntjänst. [!DNL Adobe Asset Link] effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll genom att ansluta [!DNL Experience Manager Assets] till [!DNL Creative Cloud] datorprogram [!DNL Adobe Photoshop][!DNL Adobe Illustrator]och [!DNL Adobe InDesign] via [!DNL Asset Link] apppanelen.
-   * [!DNL Experience Manager] är förkonfigurerat för [!DNL Adobe Asset Link], vilket ger [enkel konfiguration](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html) och snabbare utrullning till kreatörer.
-   * [!DNL Asset Link] har nu stöd för en [Experience Manager-miljöväljare](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) som gör att kreativa användare enkelt kan ansluta till en annan [!DNL Experience Manager] miljö. Ett exempel där den här funktionen är användbar är för designers som arbetar med flera klienter med olika [!DNL Experience Manager Assets] installationer.
+* Ett missvisande kort visades på översiktssidan när produktionsflödet kördes.
+* Kodkvalitetsregeln *DontImplementOrExtendProviderTypesPomCheck* kan ibland generera ett Null-pekarundantag.
+* Vissa dokumentationslänkar från översiktssidan fungerade inte korrekt.
+* Dialogrutan Skapa miljö renderades inte korrekt i Safari.
+* Vissa kort på översiktssidan visade inte enhetsnamn korrekt.
+* I vissa fall kommer Build Image inte att kunna hämta kundpaket.
 
-* Användare kan konfigurera [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) så att de startar automatiskt i användargränssnittet för [!UICONTROL mappegenskaper] för de specifika mapphierarkierna.
-   * Mappens [!UICONTROL egenskapsgränssnitt] har förenklats med den nya fliken [!UICONTROL Resursbearbetning] som innehåller metadataprofil, bearbetningsprofil och den nya arbetsflödeskonfigurationen för autostart.
-
-      ![Bearbetningsprofiler kan enkelt tillämpas på mappar och allt material som överförs till mappar bearbetas med dessa profiler](/help/assets/assets/asset-processing-folder-properties.png)
-
-   * Med alternativet Återbearbetning av resurser kan du välja en specifik bearbetningsprofil för att bearbeta om användarvalda resurser i undermappar.
-
-      ![Bearbeta markerade resurser med en viss bearbetningsprofil](/help/assets/assets/fpo-existing-asset-reprocess.gif)
-
-   * [!DNL Dynamic Media]: Lagt till selektiv publiceringskonfiguration så att resurser automatiskt publiceras endast för säker förhandsvisning. Dessutom kan resurserna publiceras explicit till Experience Manager utan att publiceras till DMS7 för att distribueras offentligt.
-
-### Felkorrigeringar {#assets-bug-fixes}
-
-* Anläggningar för tillgångsbearbetningsproblem.
-* Korrigeringar i [!DNL Dynamic Media] konfiguration och publicering av resurser till [!DNL Dynamic Media] leveranstjänsten.
-
->[!MORELIKETHIS]
->
->* [Om Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
->* [Konfigurera varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)
->* [Konfigurera Experience Manager för att arbeta med resurslänk](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html)
->* [Skapa arbetsflöde i Experience Manager med hjälp av resurser och mikrotjänster](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows)
-
-
-## Nyheter i Cloud Manager {#whats-new-cloud-manager}
-
-* Utgivar-URL:er är nu tillgängliga från miljösidan i användargränssnittet för Cloud Manager.
-* Ändringar i navigeringen så att användaren kan redigera, byta eller lägga till ett program från översiktssidan i Cloud Manager.
-* Ändringar som gör att användaren kan redigera program från programkortet på Cloud Managers startsida.
-* Ny pipeline-status **Pipeline som körs** visas mot den miljö som den är associerad med.
-* Förbättringar av förståelsen av sidan för att implementera pipeline. Detta inkluderar visning av Pipeline-namn (endast icke-produktionspipeline) och typ samt ett märke som anger om pipelinestatusen pågår/avbryts/misslyckades.
-* Verktygstips som förbättrar användarupplevelsen och gör det lättare att förstå varför knappen Lägg till program/miljö är inaktiverad.
-* Misslyckade miljöer kan nu tas bort via gränssnittet och API:t.
-* Processen som används för att generera Git-lösenord har gjorts mer flexibel mot problem i det underliggande tjänstskiktet.
-
-### Felkorrigeringar {#bug-fixes-cloud-manager}
-
-* Länkarna till scenmiljön på informationssidan för pipeline-körning navigerade inte konsekvent till rätt plats.
-* Enskilda steg i skapandet av miljön skulle timeout inträffa tidigare än nödvändigt och orsaka att processen misslyckas.
-* Den Maven-konfiguration som används i byggbehållaren har uppdaterats för att undvika dödlägen när artefaktmetadata hämtas.
-* I vissa fall kan steget Skapa bild inte hämta kundpaket.
-* Vissa ovanliga förhållanden kan förhindra att miljöer tas bort.
-* Experience Cloud-meddelanden togs inte emot konsekvent.
