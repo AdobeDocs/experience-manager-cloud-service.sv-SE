@@ -2,10 +2,10 @@
 title: En snabbguide till WCAG 2.1
 seo-title: En snabbguide till WCAG 2.1
 translation-type: tm+mt
-source-git-commit: d5023d8508f7d8c0955e7d741978ad8de073bc0d
+source-git-commit: 11e1a10d92a5023b60e4c2632cf76ca90ba5b68d
 workflow-type: tm+mt
-source-wordcount: '1758'
-ht-degree: 86%
+source-wordcount: '1774'
+ht-degree: 85%
 
 ---
 
@@ -70,7 +70,7 @@ För att förtydliga:
 * Varje riktlinje består av ett eller flera **framgångskriterier**.
 * Framgångskriterier skrivs som programsatser, antingen `True` eller `False` för en given webbsida.
 * Framgångskriterier kan innehålla antingen/eller-alternativ eller undantag för situationer då framgångskriterierna inte behöver uppfyllas.
-* Framgångskriterierna är numrerade enligt den överordnade riktlinjen och principen, från 1.1.1 till 4.1.1. De har också ett kort namn som sammanfattar syftet med kriteriet för enklare referens. Exempel: Godtagandekriterium 1.1.1 är Innehåll som inte är text.
+* Framgångskriterierna är numrerade enligt den överordnade riktlinjen och principen, från 1.1.1 till 4.1.1. De har också ett kort namn som sammanfattar syftet med kriteriet för enklare referens. For example, success criterion [1.1.1 is Non-text Content](https://www.w3.org/TR/WCAG/#non-text-content).
 * Framgångskriterierna inkluderar en lista med relaterade **tekniker** (beskrivs nedan).
 
 ## Stödresurser {#supporting-resources}
@@ -92,9 +92,11 @@ Denna förteckning är inte avsedd att vara uttömmande, utan innehåller en int
 
 ### What is New in WCAG 2.1 {#what-is-new}
 
-[Nyheter i WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) ger värdefull information om Delta mellan WCAG 2.0 och WCAG 2.1.
+Riktlinjerna innehåller information om nyheter i WCAG 2.1:
 
-Avsnittet [WCAG 2.0 and 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/#versions) beskriver förhållandet mellan dem ytterligare.
+* [Nyheter i WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) ger värdefull information om Delta mellan WCAG 2.0 och WCAG 2.1.
+
+* Avsnittet [WCAG 2.0 and 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/#versions) beskriver förhållandet mellan dem ytterligare.
 
 ### Techniques for WCAG 2.1 {#techniques-for-wcag}
 
