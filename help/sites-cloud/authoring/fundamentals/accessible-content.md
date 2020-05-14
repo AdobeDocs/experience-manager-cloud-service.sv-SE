@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: 7d95cf4f25934ea52d4ef5410bbf349f004e5043
+source-git-commit: 11e1a10d92a5023b60e4c2632cf76ca90ba5b68d
 workflow-type: tm+mt
-source-wordcount: '13874'
+source-wordcount: '13873'
 ht-degree: 6%
 
 ---
@@ -38,14 +38,14 @@ Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägst), Niv
 
 När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
-I följande avsnitt presenteras [WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance) med tillhörande kriterier för att uppnå [överensstämmelsenivåer](https://www.w3.org/TR/WCAG/#conformance-to-wcag-2-1)på nivå A och nivå AA.
+I följande avsnitt visas [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance) med relaterade kriterier för att lyckas med nivå A och nivå AA- [överensstämmelsenivåer](https://www.w3.org/TR/WCAG/#conformance-to-wcag-2-1).
 
 >[!NOTE]
 >
 >I det här dokumentet använder vi:
 >
->* The short names for the [WCAG 2.1 Guidelines](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance).
->* Den numrering som används i [WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance) för att underlätta korsreferering med WCAG-webbplatsen.
+>* The [short names for the WCAG 2.1 Guidelines](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance).
+>* Den [numrering som används i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#numbering-in-wcag-2-1) för att underlätta korsreferering med WCAG-webbplatsen.
 
 
 ## Princip 1: Förutsägbar {#principle-perceivable}
@@ -129,7 +129,7 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
 [Riktlinje 1.2 Tidsbaserade medier: Tillhandahåll alternativ för tidsbaserade medier.](https://www.w3.org/TR/WCAG/#time-based-media)
 
-Detta gäller webbinnehåll som är *tidsbaserat*. Detta omfattar innehåll som användaren kan spela upp (t.ex. video, ljud och animerat innehåll) och som kan vara förinspelat eller en liveström.
+Detta gäller webbinnehåll som är *tidsbaserat*. Detta omfattar innehåll som användaren kan spela upp (t.ex. video, ljud och animerat innehåll) och som kan spelas in i förväg eller i en liveström.
 
 ### Endast ljud och endast video (inspelat i förväg) (1.2.1) {#audio-only-and-video-only-prerecorded}
 
@@ -153,7 +153,7 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
 
 #### Så här möts du - endast ljud och endast video (inspelat i förväg) (1.2.1) {#how-to-meet-audio-only-and-video-only-prerecorded}
 
-* Om innehållet är förinspelat ljud utan video (till exempel en poddsändning):
+* Om innehållet spelas in i förväg utan video (till exempel en poddsändning):
    * Ange en länk omedelbart före eller efter innehållet till en textavskrift av ljudinnehållet. transkriberingen ska vara en HTML-sida med en textmotsvarighet till allt tal och viktigt icke-talat innehåll, plus en indikation på vem som talar, en beskrivning av inställningen, röstuttryck och en beskrivning av allt annat viktigt ljud.
 * Om innehållet är en animering eller förinspelad video utan ljud:
    * Tillhandahåll en länk omedelbart före eller efter innehållet till en motsvarande textbeskrivning av den information som videon ger
@@ -195,13 +195,13 @@ Bildtexter kan antingen vara:
 
 Använd undertextning där det är möjligt, eftersom det ger användarna möjlighet att välja om de vill visa undertexter eller inte.
 
-För undertexter måste du skapa och tillhandahålla en synkroniserad bildtextfil i ett lämpligt format (till exempel [SMIL](https://www.w3.org/AudioVideo/)) tillsammans med videofilen (detaljer om hur du gör detta ligger utanför handbokens räckvidd, men vi har tillhandahållit länkar till vissa självstudiekurser under [Mer information - Bildtexter (inspelade i förväg) (1.2.2)](#more-information-captions-pre-recorded)). Se till att du anger en anteckning, eller aktivera bildtextfunktionen i videospelaren, så att användarna vet att bildtexter är tillgängliga för videon.
+För undertexter måste du skapa och tillhandahålla en synkroniserad bildtextfil i ett lämpligt format (till exempel [SMIL](https://www.w3.org/AudioVideo/)) tillsammans med videofilen (information om hur du gör detta ligger utanför handbokens räckvidd, men vi har tillhandahållit länkar till vissa självstudiekurser under [Mer information - Bildtexter (inspelade i förväg) (1.2.2)](#more-information-captions-prerecorded). Se till att du anger en anteckning, eller aktivera bildtextfunktionen i videospelaren, så att användarna vet att bildtexter är tillgängliga för videon.
 
 Om du måste använda öppna bildtexter bäddar du in texten i videospåret. Detta kan du göra med videoredigeringsprogram som tillåter att titlar läggs över i videon.
 
-#### Mer information - bildtexter (inspelad i förväg) (1.2.2) {#more-information-captions-prerecorded}
+#### Mer information - bildtexter (inspelade i förväg) (1.2.2) {#more-information-captions-prerecorded}
 
-* [Förstå villkor 1.2.2](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html):
+* [Förstå villkor 1.2.2](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html)
 * [Så här uppfyller du kriterierna 1.2.2](https://www.w3.org/WAI/WCAG21/quickref/#captions-prerecorded)
 
 <!--
@@ -235,9 +235,12 @@ Exakta detaljer om hur du skapar ljudbeskrivad video ligger utanför den här ha
 
 #### Mer information - Ljudbeskrivning eller mediealternativ (inspelat i förväg) (1.2.3) {#more-information-audio-description-or-media-alternative-prerecorded}
 
-* [Förstå villkor 1.2.3](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html):
+* [Förstå villkor 1.2.3](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html)
 * [Så här uppfyller du kriterierna 1.2.3](https://www.w3.org/WAI/WCAG21/quickref/#audio-description-or-media-alternative-prerecorded)
-* [Adobe Encore](https://www.adobe.com/products/encore.html)
+
+<!--
+* [Adobe Encore](https://www.adobe.com/products/encore.html) - a DVD authoring software tool
+-->
 
 ### Bildtexter (Live) (1.2.4)  {#captions-live}
 
@@ -247,7 +250,7 @@ Exakta detaljer om hur du skapar ljudbeskrivad video ligger utanför den här ha
 
 #### Syfte - Textning (live) (1.2.4) {#purpose-captions-live}
 
-Detta kriterium är identiskt med [bildtexter (inspelade i förväg)](#captions-pre-recorded) eftersom det åtgärdar tillgänglighetshinder som upplevs av döva eller hörselskadade, förutom att detta kriterium gäller live-presentationer som webbsändningar.
+Detta kriterium är identiskt med [bildtexter (inspelade i förväg)](#captions-prerecorded) eftersom det åtgärdar tillgänglighetshinder som upplevs av döva eller hörselskadade, förutom att detta kriterium gäller live-presentationer som webbsändningar.
 
 #### Så här fungerar det - bildtexter (Live) (1.2.4) {#how-to-meet-captions-live}
 
@@ -358,44 +361,46 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
       >De är i princip desamma, men `<strong>` och `<em>` är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE så att den används `<strong>` och `<em>` (i stället för `<b>` och `<i>`) när du utvecklar projektinstansen.
 
 
-* **Komplexa datatabeller**: I vissa fall, där det finns komplexa tabeller med två eller flera rubriknivåer, kanske de grundläggande tabellegenskaperna inte räcker för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av attributen **header** och **id**. I tabellen nedan matchas till exempel rubriker och ID:n för att skapa en programmatisk association för hjälpmedelsanvändare.
+* **Komplexa datatabeller**: I vissa fall, där det finns komplexa tabeller med två eller flera rubriknivåer, kanske de grundläggande tabellegenskaperna inte räcker för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av attributen **header** och **id.**
 
    >[!NOTE]
    >
    >Attributet id är inte tillgängligt i en körklar installation. Den kan aktiveras genom att HTML-regler och serialiseraren konfigureras i textredigeraren.
 
-```xml
- <table>
-    <tr>
-      <th rowspan="2" id="h">Homework</th>
-      <th colspan="3" id="e">Exams</th>
-      <th colspan="3" id="p">Projects</th>
-    </tr>
-    <tr>
-      <th id="e1" headers="e">1</th>
-      <th id="e2" headers="e">2</th>
-      <th id="ef" headers="e">Final</th>
-      <th id="p1" headers="p">1</th>
-      <th id="p2" headers="p">2</th>
-      <th id="pf" headers="p">Final</th>
-    </tr>
-    <tr>
-     <td headers="h">15%</td>
-     <td headers="e e1">15%</td>
-     <td headers="e e2">15%</td>
-     <td headers="e ef">20%</td>
-     <td headers="p p1">10%</td>
-     <td headers="p p2">10%</td>
-     <td headers="p pf">15%</td>
-    </tr>
-   </table>
-```
+   I tabellen nedan matchas till exempel rubriker och ID:n för att skapa en programmatisk association för hjälpmedelsanvändare.
 
-För att uppnå detta i AEM måste du lägga till koden direkt i källredigeringsläget.
+   ```xml
+     <table>
+       <tr>
+         <th rowspan="2" id="h">Homework</th>
+         <th colspan="3" id="e">Exams</th>
+         <th colspan="3" id="p">Projects</th>
+       </tr>
+       <tr>
+         <th id="e1" headers="e">1</th>
+         <th id="e2" headers="e">2</th>
+         <th id="ef" headers="e">Final</th>
+         <th id="p1" headers="p">1</th>
+         <th id="p2" headers="p">2</th>
+         <th id="pf" headers="p">Final</th>
+       </tr>
+       <tr>
+         <td headers="h">15%</td>
+         <td headers="e e1">15%</td>
+         <td headers="e e2">15%</td>
+         <td headers="e ef">20%</td>
+         <td headers="p p1">10%</td>
+         <td headers="p p2">10%</td>
+         <td headers="p pf">15%</td>
+       </tr>
+     </table>
+   ```
 
->[!NOTE]
->
->Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. Den kräver konfiguration av RTE, HTML-regler och serialisering.
+   För att uppnå detta i AEM måste du lägga till koden direkt i källredigeringsläget.
+
+   >[!NOTE]
+   >
+   >Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. Den kräver konfiguration av RTE, HTML-regler och serialisering.
 
 #### Mer information - Info och relationer (1.3.1) {#more-information-info-and-relationships}
 
@@ -490,9 +495,6 @@ Om färg används som en referenspunkt för att ge information bör du ange ytte
 * [Om villkor för att lyckas 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
 * [Så här uppfyller du kriterierna 1.4.1](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color)
 
-<!-- [Guidance on meeting a 3:1 contrast ratio, containing a list of “web safe” colors](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
--->
-
 ### Ljudkontroll (1.4.2)  {#audio-control}
 
 * Villkor för lyckat resultat 1.4.2
@@ -557,7 +559,7 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 
 >[!NOTE]
 >
->Så här hjälper du vid konvertering till andra enheter:
+>Följande sajter kan vara till hjälp vid konvertering till andra enheter:
 >
 >* [Px to Em Calculater - Omni](https://www.omnicalculator.com/conversion/px-to-em)
 >* [Konvertering av teckenstorlek: pixel-point-em-rem-percent](https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/)
@@ -707,7 +709,7 @@ Poängen är:
 1. Krav som rör flimmer eller blinkande innehåll finns i Designa inte innehåll på ett sätt som är känt för att orsaka kramper (2.3).
 1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG20/#cc5).
 1. Innehåll som uppdateras regelbundet av programvara eller som direktuppspelas till användaragenten behöver inte bevara eller presentera information som genereras eller tas emot mellan inledandet av paus och återupptagandet, eftersom detta kanske inte är tekniskt möjligt, och i många situationer kan det vara vilseledande.
-1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare, och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet har frysts eller brutits.
+1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet frystes eller förstörs.
 
 #### Syfte - Pausa, stoppa, dölj (2.2.2) {#purpose-pause-stop-hide}
 
@@ -869,7 +871,7 @@ John Smith’s publications
 >
 >Ovanstående kodutdrag är en illustration. Vi rekommenderar att du använder **Image** -komponenten.
 
-Även om det är tillrådligt att ange länktext som identifierar länkens syfte utan att behöva ytterligare sammanhang, är det inte alltid möjligt. Kontextfria länkar kan användas i följande fall, där HTML-exempel finns i [How to Meet Success Criterion 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
+Även om det är tillrådligt att ange länktext som identifierar länkens syfte utan att behöva ha ytterligare kontext, är det inte alltid möjligt. Kontextfria länkar kan användas i följande fall, där HTML-exempel finns i [How to Meet Success Criterion 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
 
 * Där länktexten är en del av en lista med närbesläktade länkar och när listobjektet som omger länken ger tillräckligt med kontext.
 * Om syftet med en länk tydligt kan identifieras genom *föregående* (inte följande) stycketext.
