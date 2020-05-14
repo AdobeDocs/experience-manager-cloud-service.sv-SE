@@ -2,7 +2,7 @@
 title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 seo-title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 translation-type: tm+mt
-source-git-commit: 710365f7934a63710a9158c010d6fac1ca390044
+source-git-commit: 11e1a10d92a5023b60e4c2632cf76ca90ba5b68d
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 96%
@@ -24,7 +24,7 @@ Att skapa tillgängliga webbplatser och innehåll med AEM as a Cloud Service på
 
 * Mallutvecklare bör också vara medvetna om sådana frågor när de implementerar webbplatsdesignen.
 
-Adobe Experience Manager as a Cloud Service fungerar i enlighet med [riktlinjerna](#wcag-accessibility-guideslines) från [World Wide Web Consortium](#world-wide-web-consortium).
+Adobe Experience Manager as a Cloud Service fungerar i enlighet med [riktlinjerna](#wcag-accessibility-guidelines) från [World Wide Web Consortium](#world-wide-web-consortium).
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ Adobe Experience Manager as a Cloud Service fungerar i enlighet med [riktlinjern
 
 [W3C (World Wide Web Consortium)](https://www.w3.org/) är en internationell organisation som arbetar med att utveckla webbstandarder. Deras [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) publicerar [Web Content Accessibility Guidelines](#wcag-accessibility-guidelines).
 
-## Web Content Accessibility Guidelines (WCAG) 2.1 {#wcag-accessibility-guideslines}
+## Web Content Accessibility Guidelines (WCAG) 2.1 {#wcag-accessibility-guidelines}
 
 För att hjälpa webbdesigners och utvecklare att producera tillgängliga webbplatser publicerade [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/) i juni 2018.
 
