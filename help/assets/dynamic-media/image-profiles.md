@@ -1,19 +1,26 @@
 ---
-title: Dynamiska mediebildprofiler
+title: Bildprofiler för Dynamic Media
 description: Skapa bildprofiler som innehåller inställningar för oskarp mask, smart beskärning eller smarta färgrutor, eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: 937b06829f290b1e5a2108c456a759100c450a14
+workflow-type: tm+mt
+source-wordcount: '2567'
+ht-degree: 11%
 
 ---
 
 
-# Dynamiska mediebildprofiler {#image-profiles}
+# Bildprofiler för Dynamic Media {#image-profiles}
 
 När du överför bilder kan du beskära bilden automatiskt vid överföring genom att tillämpa en bildprofil på mappen.
 
 ## Beskärningsalternativ {#crop-options}
 
 Du kan välja mellan två bildbeskärningsalternativ och ett alternativ för att automatisera skapandet av färg- och bildfärgrutor.
+
+>[!IMPORTANT]
+>
+>Var medveten om att varje generering av Smart Crop som du skapar kräver ytterligare bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du *bara* använder det i mappar där det behövs.
 
 <table>
  <tbody>
@@ -51,13 +58,13 @@ Du kan välja mellan två bildbeskärningsalternativ och ett alternativ för att
 
 ## Oskarp mask {#unsharp-mask}
 
-Du kan använda **[!UICONTROL Oskarp mask]** för att finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra intensiteten för effekten, radien för effekten (mätt i pixlar) och ett kontrasttröskelvärde som ska ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Adobe Photoshop.
+Du använder **[!UICONTROL Unsharp mask]** för att finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra effektens intensitet, dess radie (mätt i pixlar) och ett tröskelvärde för kontrast som ska ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Adobe Photoshop.
 
 >[!NOTE]
 >
 >Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i mönstret inte påverkas av oskarp mask, medan mindre återgivningar som miniatyrbilder ändras (och visar den oskarpa masken).
 
-I **[!UICONTROL Oskarp mask]** finns följande filtreringsalternativ:
+I **[!UICONTROL Unsharp Mask]** finns följande filtreringsalternativ:
 
 <table>
  <tbody>
@@ -82,7 +89,7 @@ I **[!UICONTROL Oskarp mask]** finns följande filtreringsalternativ:
 
 Skärpa beskrivs i [Skärpa](/help/assets/dynamic-media/assets/s7_sharpening_images.pdf).
 
-## Skapa dynamiska mediebildprofiler {#creating-image-profiles}
+## Creating Dynamic Media Image Profiles {#creating-image-profiles}
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera tillgångsbearbetning](config-dm.md#configuring-asset-processing).
 
@@ -92,22 +99,22 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 **Skapa dynamiska mediebildprofiler**
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Verktyg > Resurser > Bildprofiler]**.
-1. Tryck på **[!UICONTROL Skapa]** för att lägga till en ny bildprofil.
+1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles]**.
+1. Tryck för **[!UICONTROL Create]** att lägga till en ny bildprofil.
 1. Ange ett profilnamn och värden för oskarp mask, beskärning eller färgruta, eller båda.
 
    Det kan vara praktiskt att använda ett profilnamn som är specifikt för dess avsedda syfte. Om du till exempel vill skapa en profil som bara genererar färgrutor, d.v.s. smart beskärning är inaktiverat (inaktiverat) och Färg och Bildruta är aktiverat (aktiverat), kan du använda profilnamnet&quot;Smarta färgrutor&quot;.
 
-   Se även Alternativ för [Smart beskärning och Smarta färgrutor](#crop-options) och [Oskarp mask](#unsharp-mask).
+   Se även [Alternativ för smart beskärning och smarta färgrutor](#crop-options) och [Oskarp mask](#unsharp-mask).
 
    ![beskära](assets/crop.png)
 
-1. Tryck på **[!UICONTROL Spara]**. Den nya profilen visas i listan med tillgängliga profiler.
+1. Tryck på **[!UICONTROL Save]**. Den nya profilen visas i listan med tillgängliga profiler.
 
 ## Redigera eller ta bort dynamiska mediebildprofiler {#editing-or-deleting-image-profiles}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Verktyg > Resurser > Bildprofiler]**.
-1. Markera den bildprofil som du vill redigera eller ta bort. Om du vill redigera den väljer du **[!UICONTROL Redigera bildbearbetningsprofil]**. Om du vill ta bort den väljer du **[!UICONTROL Ta bort bildbearbetningsprofil]**.
+1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles]**.
+1. Markera den bildprofil som du vill redigera eller ta bort. Om du vill redigera den väljer du **[!UICONTROL Edit Image Processing Profile]**. Om du vill ta bort den markerar du **[!UICONTROL Delete Image Processing Profile]**.
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
@@ -129,26 +136,26 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig bildprofil som du 
 
 ### Använda dynamiska mediebildprofiler på specifika mappar {#applying-image-profiles-to-specific-folders}
 
-Du kan tillämpa en bildprofil på en mapp från **[!UICONTROL Verktyg]** -menyn eller, om du är i mappen, från **[!UICONTROL Egenskaper]**. I det här avsnittet beskrivs hur du tillämpar bildprofiler på mappar på båda sätten.
+Du kan använda en bildprofil på en mapp från menyn **[!UICONTROL Tools]** eller, om du är i mappen, från **[!UICONTROL Properties]**. I det här avsnittet beskrivs hur du använder bildprofiler på mappar på båda sätten.
 
-Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet.
+För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](/help/assets/dynamic-media/processing-profiles.md#reprocessing-assets).
 
 #### Använda dynamiska mediebildprofiler på mappar från användargränssnittet för profiler {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Verktyg > Resurser > Bildprofiler]**.
+1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles]**.
 1. Välj den bildprofil som du vill använda för en eller flera mappar.
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
-1. Tryck på **[!UICONTROL Använd bearbetningsprofil för mappar]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna. Tryck/klicka sedan på **[!UICONTROL Använd]**. Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet.
+1. Tap **[!UICONTROL Apply Processing Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap/click **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 #### Använda dynamiska mediebildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
 
-1. Tryck på AEM-logotypen, navigera till **[!UICONTROL Resurser]** och sedan till den mapp där du vill tillämpa en bildprofil.
-1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Egenskaper]**.
-1. Tryck på fliken **[!UICONTROL Bildprofiler]** . I listrutan **[!UICONTROL Profilnamn]** markerar du profilen och trycker sedan på **[!UICONTROL Spara och stäng]**. Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet.
+1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Assets]** och sedan till mappen där du vill tillämpa en bildprofil.
+1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
+1. Tryck på fliken **[!UICONTROL Image Profiles]**. Välj profilen i listrutan **[!UICONTROL Profile Name]** och tryck sedan på **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
@@ -162,13 +169,13 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 1. Gör något av följande:
 
-   * Navigera till `https://&lt;AEM server&gt;/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` och använd rätt profil och tryck på **[!UICONTROL Spara]**.
+   * Navigera till `https://&lt;AEM server&gt;/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` och använd rätt profil och tryck **[!UICONTROL Save]**.
 
       ![chlimage_1-257](assets/chlimage_1-257.png)
 
    * Navigera till CRXDE Lite till följande nod: `/content/dam/jcr:content`.
 
-      Lägg till egenskapen `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` och tryck på **[!UICONTROL Spara alla]**.
+      Lägg till egenskapen `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` och tryck **[!UICONTROL Save All]**.
 
       ![configure_image_profiles](assets/configure_image_profiles.png)
 
@@ -184,20 +191,20 @@ Se även [Redigera den smarta beskärningen eller den smarta färgrutan för fle
 
 **Så här redigerar du den smarta beskärningen eller smarta färgrutan för en enskild bild**:
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Resurser]** och sedan till den mapp där en smart beskärningsprofil eller en smart färgruteprofil används.
+1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Assets]** mappen där en smart beskärningsprofil eller en smart färgruteprofil används.
 
 1. Tryck på mappen för att öppna dess innehåll.
 1. Tryck på den bild vars smarta beskärning eller smarta färgruta du vill justera.
-1. Tryck på **[!UICONTROL Smart beskärning]** i verktygsfältet.
+1. Tryck på i verktygsfältet **[!UICONTROL Smart Crop]**.
 
 1. Gör något av följande:
 
    * I närheten av det övre högra hörnet av sidan drar du skjutreglaget åt vänster eller höger för att öka respektive minska visningen av bilden.
    * Dra i ett hörnhandtag på bilden för att justera storleken på det visningsbara området för beskärningen eller färgrutan.
    * Dra rutan/färgrutan till en ny plats på bilden. Du kan bara redigera färgrutor för bilder; färgrutor är statiska.
-   * Ovanför bilden trycker du på **[!UICONTROL Återställ]** för att ångra alla redigeringar och återställa den ursprungliga beskärningen eller färgrutan.
+   * Ovanför bilden: tryck **[!UICONTROL Revert]** för att ångra alla redigeringar och återställa den ursprungliga beskärningen eller färgrutan.
 
-1. I det övre högra hörnet av sidan trycker du på **[!UICONTROL Spara]** och sedan på **[!UICONTROL Stäng]** för att gå tillbaka till resursmappen.
+1. I det övre högra hörnet av sidan trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]** för att gå tillbaka till resursmappen.
 
 ## Redigera den smarta beskärningen eller smarta färgrutan för flera bilder {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
 
@@ -209,10 +216,10 @@ Om det behövs kan du köra smart beskärning igen för att generera ytterligare
 
 **Så här redigerar du den smarta beskärningen eller smarta färgrutan för flera bilder**:
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Resurser]** och sedan till en mapp där en smart beskärningsprofil eller en smart färgruteprofil används.
-1. Tryck på ikonen **[!UICONTROL Fler åtgärder]** (..) i mappen och tryck sedan på **[!UICONTROL Smart beskärning]**.
+1. Tryck på AEM-logotypen och navigera sedan till **[!UICONTROL Assets]** en mapp som har en smart beskärningsprofil eller en smart färgruteprofil.
+1. Tryck på ikonen **[!UICONTROL More Actions]** (..) i mappen och tryck sedan på **[!UICONTROL Smart Crop]**.
 
-1. Gör något av följande på sidan **[!UICONTROL Redigera smarta beskärningar]** :
+1. Gör något av följande på **[!UICONTROL Edit Smart Crops]** sidan:
 
    * Justera visningsstorleken för bilder på sidan.
 
@@ -240,33 +247,33 @@ Om det behövs kan du köra smart beskärning igen för att generera ytterligare
 
    * Ångra alla redigeringar och återställ den ursprungliga smarta beskärningen eller den smarta färgrutan (gäller endast den aktuella redigeringssessionen).
 
-      Tryck på **[!UICONTROL Återställ]** ovanför bilden.
+      Tryck **[!UICONTROL Revert]** ovanför bilden.
 
       ![edit_smart_crop-revert](assets/edit_smart_crops-revert.png)
 
 
 
-1. I det övre högra hörnet av sidan trycker du på **[!UICONTROL Spara]**. Tryck sedan på **[!UICONTROL Stäng]** för att gå tillbaka till resursmappen.
+1. Near the upper-right corner of the page, tap **[!UICONTROL Save]**. sedan trycka för **[!UICONTROL Close]** att gå tillbaka till resursmappen.
 
 ## Ta bort en bildprofil från mappar {#removing-an-image-profile-from-folders}
 
 När du tar bort en bildprofil från en mapp ärver alla undermappar automatiskt borttagningen av profilen från den överordnade mappen. All bearbetning av filer som har inträffat i mapparna förblir dock oförändrad.
 
-Du kan ta bort en bildprofil från en mapp från **[!UICONTROL Verktyg]** -menyn eller, om du är i mappen, från **[!UICONTROL Egenskaper]**. I det här avsnittet beskrivs hur du tar bort bildprofiler från mappar på båda sätten.
+Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** eller, om du är i mappen, från **[!UICONTROL Properties]**. I det här avsnittet beskrivs hur du tar bort bildprofiler från mappar på båda sätten.
 
 ### Ta bort dynamiska mediebildprofiler från mappar via profilanvändargränssnittet {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Verktyg > Resurser > Bildprofiler]**.
+1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles]**.
 1. Markera den bildprofil som du vill ta bort från en eller flera mappar.
-1. Tryck på **[!UICONTROL Ta bort bearbetningsprofil från]** mapp(ar) och markera den eller de mappar du vill ta bort profilen från och tryck sedan på **[!UICONTROL Ta bort]**.
+1. Tryck på **[!UICONTROL Remove Processing Profile from Folder(s)]** och markera den eller de mappar som du vill ta bort profilen från och tryck sedan på **[!UICONTROL Remove]**.
 
    Du kan bekräfta att bildprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
 ### Ta bort dynamiska mediebildprofiler från mappar via Egenskaper {#removing-image-profiles-from-folders-via-properties}
 
-1. Tryck på AEM-logotypen, navigera till **[!UICONTROL Resurser]** och sedan till den mapp du vill ta bort en bildprofil från.
-1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Egenskaper]**.
-1. Välj fliken **[!UICONTROL Bildprofiler]** .
-1. Välj **[!UICONTROL Inget]** i listrutan **[!UICONTROL Profilnamn]** och tryck sedan på **[!UICONTROL Spara och stäng]**.
+1. Tryck på AEM-logotypen och navigera **[!UICONTROL Assets]** sedan till mappen som du vill ta bort en bildprofil från.
+1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
+1. Klicka på **[!UICONTROL Image Profiles]** fliken.
+1. I listrutan **[!UICONTROL Profile Name]** väljer du **[!UICONTROL None]** och sedan trycker du på **[!UICONTROL Save & Close]**.
 
-   Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet.
+   För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
