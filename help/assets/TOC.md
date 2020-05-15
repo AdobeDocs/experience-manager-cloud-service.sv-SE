@@ -1,7 +1,7 @@
 ---
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 7fe5761e14288349bbdce9d2c4e9e89e8d0a9e48
 
 ---
@@ -46,7 +46,7 @@ source-git-commit: 7fe5761e14288349bbdce9d2c4e9e89e8d0a9e48
    + [Söka efter fasetter](search-facets.md)
    + [Utöka materialredigeraren](extend-asset-editor.md)
    + [HTTP API för Assets](mac-api-assets.md)
-   + [Stöd för innehållsfragment i AEM Assets HTTP API](assets-api-content-fragments.md)
+   + [Stöd för Content Fragments i AEM Assets HTTP API](assets-api-content-fragments.md)
    + [Anslutna resurser](use-assets-across-connected-assets-instances.md)
    + [Materialrapporter](asset-reports.md)
    + [Överlappande metadata](cascading-metadata.md)
