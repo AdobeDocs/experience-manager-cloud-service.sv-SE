@@ -3,7 +3,10 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 37ff6912837ba78c90526e8f8322b9002e9a4304
+source-git-commit: 367456bfad25a83a36ffe45e2d6092367740cd92
+workflow-type: tm+mt
+source-wordcount: '1844'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 37ff6912837ba78c90526e8f8322b9002e9a4304
 
 Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar tjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ.
 
-Resursbearbetningen beror på konfigurationen i **[!UICONTROL Bearbeta profiler]**, som tillhandahåller en standardinställning, och gör det möjligt för en administratör att lägga till en mer specifik konfiguration för resursbearbetning. Administratörer kan skapa och underhålla konfigurationer för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflöden kan du utöka och göra fullständiga anpassningar.
+Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**, som tillhandahåller en standardinställning, och gör det möjligt för en administratör att lägga till en mer specifik konfiguration för bearbetning av resurser. Administratörer kan skapa och underhålla konfigurationer för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflöden kan du utöka och göra fullständiga anpassningar.
 
 Med tillgångsmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara direkt än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick.
 
@@ -41,7 +44,7 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 
 Resursbearbetning med tillgångsmikrotjänster är förkonfigurerad med en standardkonfiguration, vilket säkerställer att de standardåtergivningar som krävs av systemet är tillgängliga. Dessutom kan du försäkra dig om att metadataextrahering och textrahering är tillgängliga. Användare kan börja ladda upp eller uppdatera resurser direkt och grundläggande bearbetning är tillgänglig som standard.
 
-För specifika krav på återgivningsgenerering eller resursbearbetning kan en AEM-administratör skapa ytterligare [!UICONTROL bearbetningsprofiler]. Användarna kan tilldela en eller flera av de tillgängliga profilerna till specifika mappar för att få ytterligare bearbetning. Exempel: skapa webb-, mobil- och surfplattesspecifika renderingar. I följande video visas hur du skapar och använder [!UICONTROL bearbetningsprofiler] och hur du får tillgång till de återgivningar som skapas.
+För specifika krav på återgivningsgenerering eller bearbetning av resurser kan en AEM-administratör skapa ytterligare [!UICONTROL Processing Profiles]. Användarna kan tilldela en eller flera av de tillgängliga profilerna till specifika mappar för att få ytterligare bearbetning. Exempel: skapa webb-, mobil- och surfplattesspecifika renderingar. I följande video visas hur du skapar och använder [!UICONTROL Processing Profiles] och hur du får tillgång till de återgivningar som skapas.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29832?quality=9)
 
@@ -50,7 +53,7 @@ Mer information om hur du skapar anpassade bearbetningsprofiler som är specifik
 
 ## Konfigurationer för tillgångsmikrotjänster {#configure-asset-microservices}
 
-För att konfigurera resursmikrotjänster kan administratörer använda konfigurationsgränssnittet under **[!UICONTROL Verktyg > Resurser > Bearbeta profiler]**.
+För att konfigurera resursmikrotjänster kan administratörer använda konfigurationsanvändargränssnittet under **[!UICONTROL Tools > Assets > Processing Profiles]**.
 
 ### Standardkonfiguration {#default-config}
 
@@ -71,7 +74,7 @@ Resursmikrotjänsterna har stöd för en mängd olika filformat när det gäller
 
 ### Lägga till ytterligare bearbetningsprofiler {#processing-profiles}
 
-Ytterligare bearbetningsprofiler kan läggas till med åtgärden **[!UICONTROL Skapa]** .
+Ytterligare bearbetningsprofiler kan läggas till med hjälp av **[!UICONTROL Create]** åtgärden.
 
 Varje bearbetningsprofilskonfiguration innehåller en lista med återgivningar. För varje återgivning kan du ange följande:
 
@@ -112,8 +115,8 @@ Skapa och använd de anpassade bearbetningsprofilerna på specifika mappar för 
 
 Det finns två sätt att använda bearbetningsprofiler på mappar:
 
-* Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Verktyg > Resurser > Bearbeta profiler]** och sedan använda åtgärden **[!UICONTROL Använd profil på]** mappar. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
-* Users can select a folder in the Assets user interface, use **[!UICONTROL Properties]** action to open folder properties screen, click on the **[!UICONTROL Processing Profiles]** tab, and in the drop-down, select the right processing profile for that folder. The choice will be save upon **[!UICONTROL Save &amp; Close]** action.
+* Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools > Assets > Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
+* Användare kan välja en mapp i Assets-gränssnittet, använda åtgärden **[!UICONTROL Properties]** för att öppna fönstret för mappegenskaper, klicka på fliken **[!UICONTROL Processing Profiles]** och i listrutan välja rätt bearbetningsprofil för den mappen. Alternativet sparas vid åtgärden **[!UICONTROL Save & Close]**.
 
 >[!NOTE]
 >
@@ -125,7 +128,7 @@ När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurs
 >
 >När resurser överförs till en mapp kontrollerar Experience Manager om det finns en bearbetningsprofil för den innehållande mappens egenskaper. Om ingen används går den upp i mappträdet tills den hittar en bearbetningsprofil som används och använder den för resursen. Det innebär att en bearbetningsprofil som används för en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används för en undermapp.
 
-Användarna kan kontrollera att bearbetningen faktiskt utfördes genom att öppna en nyligen överförd resurs som bearbetningen är klar för, öppna förhandsgranskningen av resursen och klicka på den vänstra fältets vy **[!UICONTROL Återgivningar]** . De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
+Användarna kan kontrollera att bearbetningen faktiskt utfördes genom att öppna en nyligen överförd resurs som bearbetningen är klar för, öppna förhandsgranskningen av resursen och klicka på den vänstra **[!UICONTROL Renditions]** spårens vy. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
 
 ![additional-renditions](assets/renditions-additional-renditions.png)*Figure: Exempel på två extra återgivningar som genereras av en bearbetningsprofil som tillämpas på den överordnade mappen*
 
@@ -171,3 +174,7 @@ Tjänsten Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.
 > OSGi-webbkonsolen, till skillnad från AEM-driftsättningar på plats och hanterade tjänster, är inte direkt tillgänglig i distributionen av molntjänster.
 
 Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
+
+## God praxis och begränsningar {#best-practices-limitations-tips}
+
+* Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Det går inte att ta bort återgivningar gruppvis efteråt. Oönskade återgivningar kan ta upp mycket lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] för att ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
