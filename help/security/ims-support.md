@@ -1,7 +1,7 @@
 ---
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: IMS-stöd för Adobe Experience Manager as a Cloud Service
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c03e219d8261451e1215cf95babcbd4c1862d321
 
 ---
@@ -197,44 +197,44 @@ Som framgår nedan ärver gruppen **AEM-GRP_008** behörigheterna och privilegie
 
 ### Åtkomst till Cloud Manager {#accessing-cloud-manager}
 
-För att kunna komma åt Cloud Manager eller AEM som en molntjänstmiljö måste du tilldelas Profiler för Cloud Manager-produkten.
+För att kunna komma åt Cloud Manager eller AEM as a Cloud Service-miljöerna måste du tilldelas en profil i Cloud Manager-produkten.
 
-Läs [rolldefinitioner](/help/onboarding/what-is-required/add-users-roles.md#role-definitions) om du vill veta mer om roller för användare som styr tillgängligheten av specifika funktioner i Cloud Manager.
+Läs [Rolldefinitioner](/help/onboarding/what-is-required/add-users-roles.md#role-definitions) om du vill veta mer om roller för användare som styr tillgången till specifika funktioner i Cloud Manager.
 
 >[!NOTE]
->Molnhanteraren har förkonfigurerade roller med lämplig behörighet. Om du vill veta mer om de olika rollerna med specifika behörigheter, förkonfigurerade uppgifter eller behörigheter, som är kopplade till varje roll, kan du läsa [Rollbaserade behörigheter](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/what-is-required/role-based-permissions.html).
+>Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de olika rollerna med specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/what-is-required/role-based-permissions.html).
 
 **Steg för att lägga till en användare**
 
-1. Lägg till en användare till en viss profil antingen från en befintlig användares skärm eller från en ny användarskärm.
+1. Lägg till en användare till en viss profil från en befintlig användarskärm eller en ny användarskärm.
 
-1. Du kan också lägga till en användare från skärmen **Översikt** , vilket visas i bilden nedan.
+1. Du kan också lägga till en användare från skärmen **Overview** som visas i bilden nedan.
 
    ![ACL3](/help/security/assets/ims23.png)
 
    >[!NOTE]
-   >Du kan tilldela mer än en profil till en användare enligt bilden nedan.
+   >Du kan tilldela mer än en profil till en användare som du kan se i bilden nedan.
 
    ![ACL3](/help/security/assets/ims22.png)
 
 
-1. När du har lagts till i rätt profil bör du ha tillgång till respektive innehavare i Cloud Manager via [Adobe Experience Cloud](http://my.cloudmanager.adobe.com) i det övre högra hörnet i användargränssnittet.
+1. När du har lagts till i rätt profil bör du ha tillgång till respektive klientorganisation i Cloud Manager via [Adobe Experience Cloud](http://my.cloudmanager.adobe.com) i det övre högra hörnet i användargränssnittet.
 
 
-### Åtkomst till en instans i AEM som en molntjänst {#accessing-instance-cloud-service}
+### Åtkomst till en instans i AEM as a Cloud Service {#accessing-instance-cloud-service}
 
 >[!IMPORTANT]
->Stegen som nämns i föregående avsnitt måste redan ha slutförts innan du beviljas åtkomst till en instans i AEM som en molntjänst.
+>Stegen som nämns i föregående avsnitt måste vara slutförda innan du beviljas åtkomst till en instans i AEM as a Cloud Service.
 
 För att få tillgång till en AEM-instans i **Admin Console** bör du läsa Cloud Manager-programmet och miljöerna i programmet i produktlistan på **Admin Console**.
 
-I skärmbilden nedan visas två tillgängliga miljöer, *dev-författare* och en *publicering*.
+I skärmbilden nedan visas två tillgängliga miljöer, *dev author* och *publish*.
 
 ![ACL3](/help/security/assets/ims19.png)
 
-För att få tillgång till AEM-instanser måste användaren läggas till i en grupp med lämplig molntjänstprodukt.
+För att få tillgång till AEM-instanser måste användaren läggas till i en grupp för den Cloud Service-produkten.
 
 Alla författarinstanser har en AEM-administratörsprofil och AEM-användarprofil, och alla publiceringsinstanser har en AEM-användarprofil. Du kan lägga till andra profiler efter behov.
 
-Om du vill få åtkomst på administratörsnivå till AEM-instansen lägger du till användaren i AEM-administratörsprofilen för den aktuella produkten.
+Om du vill ge åtkomst på administratörsnivå till AEM-instansen lägger du till användaren i AEM-administratörsprofilen för den aktuella produkten.
 
