@@ -3,19 +3,21 @@ title: Migrera till molntjänsten från Adobe Experience Manager 6.x
 description: Migrera till molntjänsten från Adobe Experience Manager 6.x
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: e399c9f372aa8995abf5cddfbc41d1cfe2b0aa22
+workflow-type: tm+mt
+source-wordcount: '28'
+ht-degree: 0%
 
 ---
 
 
-# Gå över till Adobe Experience Manager Assets som en molntjänst {#move-to-assets-cloud-service}
+# Move to Adobe Experience Manager Assets as a Cloud Service {#move-to-assets-cloud-service}
 
 <!-- About the need to move from previous AEM deployment to a cloud service deployment. And how does Adobe help do it OOTB?
--->
 
-## Om migreringsverktyget {#migration-tool}
 
-<!-- 
+## About the migration tool {#migration-tool}
+
 Link back to information about the tool in the Experience Manager as a Cloud Service docs if the tool works the same for Sites and Assets. Document the Assets-specific information here.
 
 * What is the migration tool called? Is there a branding term for it?
@@ -23,23 +25,21 @@ Link back to information about the tool in the Experience Manager as a Cloud Ser
 * Before migrating using the tool, is any prepping required?
 * See CQ-4271901
 
--->
 
-Med migreringsverktyget kan du uppnå följande:
+The migration tool helps you achieve the following:
 
-* Konvertera befintliga arbetsflödesmodeller till bearbetningsprofiler som fungerar med tjänsten Resurser Compute.
-* Ta bort steg som inte stöds från arbetsflödesmodellerna.
-* Inaktivera startprogram för arbetsflöden.
-* Sammanfoga konfigurationerna, efter användarbekräftelse/validering, i den befintliga källkoden.
+* Convert the existing workflow models to processing profiles that work with the Assets Compute Service.
+* Remove unsupported steps from the workflow models.
+* Disable workflow launchers.
+* Merge the configurations, after user confirmation/validation, in the existing source code.
 
-Migreringsverktyget skapar bearbetningsprofiler i en Maven-modul som användare kan använda på följande två sätt:
+The migration tool creates processing profiles in a Maven module that users can use in the following two ways:
 
-* Sammanfoga i ett av deras befintliga projekt.
-* Lägg till modulen som en ny undermodul.
+* Merge into one of their existing projects.
+* Add the module as new sub-module.
 
-Migreringsverktyget ger en rapport över de ändringar som gjorts och information om ändringarna.
+The migration tool provides a report of the changes it made and information about the changes.
 
-<!--  
 
 What is the output of the tool, besides migrated content.
 
@@ -50,6 +50,7 @@ Give details about reports and logs of the tool.
 * Location of logs. How to read the logs.
 * What common errors to look for. Troubleshooting for these errors.
 
--->
 
-## Migrera innehåll till en ny distribution {#content-migration-across-deployments}
+## Migrate content to a new deployment {#content-migration-across-deployments}
+
+-->
