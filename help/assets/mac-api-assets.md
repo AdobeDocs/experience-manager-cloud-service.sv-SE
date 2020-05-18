@@ -1,9 +1,12 @@
 ---
-title: HTTP API för Assets
-description: Lär dig mer om implementering, datamodell och funktioner i Assets HTTP API. Använd Assets HTTP API för att utföra olika åtgärder runt resurser.
+title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
+description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7fe5761e14288349bbdce9d2c4e9e89e8d0a9e48
+source-git-commit: b96e976b5a2aaff90d7317360b0325dcae21ff26
+workflow-type: tm+mt
+source-wordcount: '1477'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 7fe5761e14288349bbdce9d2c4e9e89e8d0a9e48
 
 ## Översikt {#overview}
 
-Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för resurser, inklusive binära, metadata, återgivningar och kommentarer, tillsammans med strukturerat innehåll med hjälp av AEM Content Fragments. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](assets-api-content-fragments.md).
+Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med hjälp av [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](/help/assets/assets-api-content-fragments.md).
 
 Så här kommer du åt API:
 
@@ -21,7 +24,7 @@ Så här kommer du åt API:
 
 API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt, till exempel för PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
 
-Efter [!UICONTROL Av-tid]är en resurs och dess återgivningar inte tillgängliga vare sig via webbgränssnittet Resurser eller via HTTP-API:t. API:t returnerar 404-felmeddelande om [!UICONTROL På-tid] är i framtiden eller [!UICONTROL Av-tid] är i det förflutna.
+Efter [!UICONTROL Off Time]detta är en resurs och dess återgivningar inte tillgängliga via [!DNL Assets] webbgränssnittet och via HTTP API. API:t returnerar 404-felmeddelande om det [!UICONTROL On Time] finns i framtiden eller om det finns [!UICONTROL Off Time] i det förflutna.
 
 >[!NOTE]
 >
@@ -29,15 +32,15 @@ Efter [!UICONTROL Av-tid]är en resurs och dess återgivningar inte tillgänglig
 
 ## Innehållsfragment {#content-fragments}
 
-Ett [innehållsfragment](content-fragments/content-fragments.md) är en särskild typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard` resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
+Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en särskild typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard` resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
 
-Mer information finns i Stöd för [innehållsfragment i AEM Assets HTTP API](assets-api-content-fragments.md).
+Mer information finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/assets-api-content-fragments.md).
 
 ## Datamodell {#data-model}
 
 Resursens HTTP-API visar två huvudelement, mappar och resurser (för standardresurser).
 
-Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller](assets-api-content-fragments.md#content-models-and-content-fragments) för innehållsfragment.
+Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller](/help/assets/assets-api-content-fragments.md#content-models-and-content-fragments) för innehållsfragment.
 
 ### Mappar {#folders}
 
@@ -46,51 +49,53 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 **Enheter**: Enheterna i en mapp är dess underordnade element, som kan vara mappar och resurser.
 
 **Egenskaper**:
-* `name`  — Namnet på mappen. Detta är samma som det sista segmentet i URL-sökvägen utan tillägget
-* `title` — Valfri rubrik för mappen som kan visas i stället för dess namn
+
+* `name` är namnet på mappen. Detta är samma som det sista segmentet i URL-sökvägen utan tillägget.
+* `title` är en valfri mapptitel som kan visas i stället för dess namn.
 
 >[!NOTE]
 >
 >Vissa egenskaper för mapp eller resurs är mappade till ett annat prefix. Prefixet `jcr` , `jcr:title`och `jcr:description`ersätts med `jcr:language` `dc` prefix. I det returnerade JSON-objektet `dc:title` och `dc:description` innehåller därför värdena för `jcr:title` respektive `jcr:description`.
 
 **Länkmappar** visar tre länkar:
-* `self`: Länka till sig själv
-* `parent`: Länka till överordnad mapp
-* `thumbnail`: (Valfritt) länk till en mappminiatyrbild
+
+* `self`: Länka till sig själv.
+* `parent`: Länka till den överordnade mappen.
+* `thumbnail`: (Valfritt) länka till en mappminiatyrbild.
 
 ### Assets {#assets}
 
-I AEM innehåller en resurs följande element:
+I [!DNL Experience Manager] en resurs innehåller följande element:
 
-* Resursens egenskaper och metadata
-* Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF eller InDesign.
-* Valfria kommentarer
+* Resursens egenskaper och metadata.
+* Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF- eller Adobe InDesign-filer.
+* Valfria kommentarer.
 
-Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i AEM Assets HTTP API](assets-api-content-fragments.md).
+Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i HTTP API](/help/assets/assets-api-content-fragments.md)för Experience Manager Assets.
 
-I AEM har en mapp följande komponenter:
+I [!DNL Experience Manager] en mapp finns följande komponenter:
 
-* Enheter: Resursens underordnade är dess renderingar.
-* Egenskaper
-* Länkar
+* Enheter: Resursernas underordnade är dess återgivningar.
+* Egenskaper.
+* Länkar.
 
 Resursens HTTP-API innehåller följande funktioner:
 
-* Hämta en mapplista
-* Skapa en mapp
-* Skapa en resurs (inaktuell)
-* Uppdatera resursens binärfil (borttagen)
-* Uppdatera metadata för resurs
-* Skapa en resursåtergivning
-* Uppdatera en resursåtergivning
-* Skapa en resurskommentar
-* Kopiera en mapp eller resurs
-* Flytta en mapp eller resurs
-* Ta bort en mapp, resurs eller återgivning
+* Hämta en mapplista.
+* Skapa en mapp.
+* Skapa en resurs (inaktuell).
+* Uppdatera resursens binärfil (borttagen).
+* Uppdatera metadata för resurser.
+* Skapa en resursåtergivning.
+* Uppdatera en resursåtergivning.
+* Skapa en resurskommentar.
+* Kopiera en mapp eller resurs.
+* Flytta en mapp eller resurs.
+* Ta bort en mapp, resurs eller återgivning.
 
 >[!NOTE]
 >
->För att underlätta läsbarheten utelämnar följande exempel den fullständiga cURL-notationen. Faktum är att anteckningen korrelerar med [Resty](https://github.com/micha/resty) , som är en skriptwrapper för cURL.
+>För att underlätta läsbarheten utelämnar följande exempel den fullständiga cURL-notationen. Faktum är att syntaxen korrelerar med [Resty](https://github.com/micha/resty) , som är en skriptwrapper för `cURL`.
 
 <!-- TBD: The Console Manager is not available now. So how to configure the below? 
 
@@ -105,56 +110,35 @@ Resursens HTTP-API innehåller följande funktioner:
 
 Hämtar en siren-representation av en befintlig mapp och av dess underordnade enheter (undermappar eller resurser).
 
-**Begäran**
+**Begäran**: `GET /api/assets/myFolder.json`
 
-```
-GET /api/assets/myFolder.json
-```
+**Svarskoder**: Svarskoderna är:
 
-**Svarskoder**
+* 200 - OK - framgång.
+* 404 - HITTADES INTE - mappen finns inte eller är inte tillgänglig.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
 
-```
-200 - OK - success
-404 - NOT FOUND - folder does not exist or is not accessible
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
-
-**Svar**
-
-Klassen för enheten som returneras är resurser/mapp.
-
-Egenskaper för enheter som ingår är en deluppsättning av alla egenskaper för varje enhet. För att få en fullständig representation av enheten bör kunderna hämta innehållet i den URL som länken pekar på med en `rel` av `self`.
+**Svar**: Klassen för enheten som returneras är en resurs eller en mapp. Egenskaperna för enheter som ingår är en deluppsättning av alla egenskaper för varje enhet. För att få en fullständig representation av enheten bör kunderna hämta innehållet i den URL som länken pekar på med en `rel` av `self`.
 
 ## Skapa en mapp {#create-a-folder}
 
-Skapar en ny `sling`: `OrderedFolder` vid den angivna sökvägen. Om * anges i stället för ett nodnamn kommer serverleten att använda parameternamnet som nodnamn. Data accepteras som begäran antingen som en Siren-representation av den nya mappen eller som en uppsättning namn/värde-par, kodade som `application/www-form-urlencoded` eller `multipart`/ `form`- `data`, vilket är användbart när du skapar en mapp direkt från ett HTML-formulär. Dessutom kan mappens egenskaper anges som URL-frågeparametrar.
+Skapar en ny `sling`: `OrderedFolder` vid den angivna sökvägen. Om ett `*` anges i stället för ett nodnamn används parameternamnet som nodnamn. Data accepteras som begäran antingen som en Siren-representation av den nya mappen eller som en uppsättning namn/värde-par, kodade som `application/www-form-urlencoded` eller `multipart`/ `form`- `data`, vilket är användbart när du skapar en mapp direkt från ett HTML-formulär. Dessutom kan mappens egenskaper anges som URL-frågeparametrar.
 
-Åtgärden misslyckas med en `500` svarskod om den överordnade noden för den angivna sökvägen inte finns. Om mappen redan finns returneras en `409` svarskod.
+Ett API-anrop misslyckas med en `500` svarskod om den överordnade noden för den angivna sökvägen inte finns. Ett anrop returnerar en svarskod `409` om mappen redan finns.
 
-**Parametrar**
-
-* `name` - Mappnamn
+**Parametrar**: `name` är mappnamnet.
 
 **Begäran**
 
-```
-POST /api/assets/myFolder -H"Content-Type: application/json" -d '{"class":"assetFolder","properties":{"title":"My Folder"}}'
-```
+* `POST /api/assets/myFolder -H"Content-Type: application/json" -d '{"class":"assetFolder","properties":{"title":"My Folder"}}'`
+* `POST /api/assets/* -F"name=myfolder" -F"title=My Folder"`
 
-eller
+**Svarskoder**: Svarskoderna är:
 
-```
-POST /api/assets/* -F"name=myfolder" -F"title=My Folder"
-```
-
-**Svarskoder**
-
-```
-201 - CREATED - on successful creation
-409 - CONFLICT - if folder already exist
-412 - PRECONDITION FAILED - if root collection cannot be found or accessed
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
+* 201 - SKAPAD - när den skapades.
+* 409 - CONFLICT - om mappen redan finns.
+* 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
 
 ## Skapa en resurs {#create-an-asset}
 
@@ -166,149 +150,100 @@ Mer information om hur du uppdaterar resursbinärfiler med API:er finns i [Över
 
 ## Uppdatera metadata för en resurs {#update-asset-metadata}
 
-Uppdaterar egenskaperna för resursmetadata.
+Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i `dc:` namnutrymmet uppdaterar API:t samma egenskap i `jcr` namnutrymmet. API:t synkroniserar inte egenskaperna under de två namnutrymmena.
 
-**Begäran**
+**Begäran**: `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"dc:title":"My Asset"}}'`
 
-```
-PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"dc:title":"My Asset"}}'
-```
+**Svarskoder**: Svarskoderna är:
 
-**Svarskoder**
-
-```
-200 - OK - if Asset has been updated successfully
-404 - NOT FOUND - if Asset could not be found or accessed at the provided URI
-412 - PRECONDITION FAILED - if root collection cannot be found or accessed
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
+* 200 - OK - Om resursen har uppdaterats utan fel.
+* 404 - HITTADES INTE - Om det inte gick att hitta eller få åtkomst till resursen på angiven URI.
+* 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
 
 ## Skapa en resursåtergivning {#create-an-asset-rendition}
 
-Skapar en ny resursåtergivning för en resurs. Om parameternamnet för begäran inte anges används filnamnet som återgivningsnamn.
+Skapa en ny resursåtergivning för en resurs. Om parameternamnet för begäran inte anges används filnamnet som återgivningsnamn.
 
-**Parametrar**
-
-* `name` - Återgivningsnamn
-* `file` - Filreferens
+**Parametrar**: Parametrarna är `name` för återgivningens namn och `file` som en filreferens.
 
 **Begäran**
 
-```
-POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"
-```
-
-eller
-
-```
-POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"
-```
+* `POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"`
+* `POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"`
 
 **Svarskoder**
 
-```
-201 - CREATED - if Rendition has been created successfully
-404 - NOT FOUND - if Asset could not be found or accessed at the provided URI
-412 - PRECONDITION FAILED - if root collection cannot be found or accessed
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
+* 201 - SKAPAD - om återgivningen har skapats.
+* 404 - HITTADES INTE - Om det inte gick att hitta eller få åtkomst till resursen på angiven URI.
+* 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
 
 ## Uppdatera en resursåtergivning {#update-an-asset-rendition}
 
 Uppdateringar ersätter en resursåtergivning med nya binära data.
 
-**Begäran**
+**Begäran**: `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
 
-```
-PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png
-```
+**Svarskoder**: Svarskoderna är:
 
-**Svarskoder**
+* 200 - OK - Om återgivningen har uppdaterats.
+* 404 - HITTADES INTE - Om det inte gick att hitta eller få åtkomst till resursen på angiven URI.
+* 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
 
-```
-200 - OK - if Rendition has been updated successfully
-404 - NOT FOUND - if Asset could not be found or accessed at the provided URI
-412 - PRECONDITION FAILED - if root collection cannot be found or accessed
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
-
-## Skapa en resurskommentar {#create-an-asset-comment}
+## Lägga till en kommentar till en resurs {#create-an-asset-comment}
 
 Skapar en ny resurskommentar.
 
-**Parametrar**
+**Parametrar**: Parametrarna är `message` för kommentarens meddelandetext och `annotationData` för anteckningsdata i JSON-format.
 
-* `message` - Meddelande
-* `annotationData` - Anteckningsdata (JSON)
+**Begäran**: `POST /api/assets/myfolder/myasset.png/comments/* -F"message=Hello World." -F"annotationData={}"`
 
-**Begäran**
+**Svarskoder**: Svarskoderna är:
 
-```
-POST /api/assets/myfolder/myasset.png/comments/* -F"message=Hello World." -F"annotationData={}"
-```
-
-**Svarskoder**
-
-```
-201 - CREATED - if Comment has been created successfully
-404 - NOT FOUND - if Asset could not be found or accessed at the provided URI
-412 - PRECONDITION FAILED - if root collection cannot be found or accessed
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
+* 201 - SKAPAD - om kommentaren har skapats.
+* 404 - HITTADES INTE - Om det inte gick att hitta eller få åtkomst till resursen på angiven URI.
+* 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
 
 ## Kopiera en mapp eller en resurs {#copy-a-folder-or-asset}
 
-Kopierar en mapp eller resurs vid den angivna sökvägen till ett nytt mål.
+Kopierar en mapp eller resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
 
-**Begäranrubriker**
+**Begäranrubriker**: Parametrarna är:
 
-```
-X-Destination - a new destination URI within the API solution scope to copy the resource to
-X-Depth - either 'infinity' or '0'. The value '0' only copies the resource and its properties, no children.
-X-Overwrite - 'F' to prevent overwriting an existing destination
-```
+* `X-Destination` - en ny mål-URI inom API-lösningens omfång att kopiera resursen till.
+* `X-Depth` - antingen `infinity` eller `0`. Om du `0` bara använder kopieras resursen och dess egenskaper och inte dess underordnade.
+* `X-Overwrite` - Används `F` för att förhindra att en resurs skrivs över på det befintliga målet.
 
-**Begäran**
+**Begäran**: `COPY /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-copy"`
 
-```
-COPY /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-copy"
-```
+**Svarskoder**: Svarskoderna är:
 
-**Svarskoder**
-
-```
-201 - CREATED - if folder/asset has been copied to a non-existing destination
-204 - NO CONTENT - if the folder/asset has been copied to an existing destination
-412 - PRECONDITION FAILED - if a request header is missing or
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
+* 201 - SKAPAD - om mappen/resursen har kopierats till ett icke-befintligt mål.
+* 204 - INGET INNEHÅLL - om mappen/resursen har kopierats till ett befintligt mål.
+* 412 - PRECONDITION MISSLYCKADES - om ett begärandehuvud saknas.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
 
 ## Flytta en mapp eller en resurs {#move-a-folder-or-asset}
 
 Flyttar en mapp eller resurs vid den angivna sökvägen till ett nytt mål.
 
-**Begäranrubriker**
+**Begäranrubriker**: Parametrarna är:
 
-```
-X-Destination - a new destination URI within the API solution scope to copy the resource to
-X-Depth - either 'infinity' or '0'. The value '0' only copies the resource and its properties, no children.
-X-Overwrite - either 'T' to force deletion of existing resources or 'F' to prevent overwriting an existing resource.
-```
+* `X-Destination` - en ny mål-URI inom API-lösningens omfång att kopiera resursen till.
+* `X-Depth` - antingen `infinity` eller `0`. Om du `0` bara använder kopieras resursen och dess egenskaper och inte dess underordnade.
+* `X-Overwrite` - Använd antingen `T` för att framtvinga borttagning av befintliga resurser eller för `F` att förhindra att en befintlig resurs skrivs över.
 
-**Begäran**
+**Begäran**: `MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
 
-```
-MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"
-```
+**Svarskoder**: Svarskoderna är:
 
-**Svarskoder**
-
-```
-201 - CREATED - if folder/asset has been copied to a non-existing destination
-204 - NO CONTENT - if the folder/asset has been copied to an existing destination
-412 - PRECONDITION FAILED - if a request header is missing or
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
+* 201 - SKAPAD - om mappen/resursen har kopierats till ett icke-befintligt mål.
+* 204 - INGET INNEHÅLL - om mappen/resursen har kopierats till ett befintligt mål.
+* 412 - PRECONDITION MISSLYCKADES - om ett begärandehuvud saknas.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
 
 ## Ta bort en mapp, en resurs eller en återgivning {#delete-a-folder-asset-or-rendition}
 
@@ -316,27 +251,12 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 
 **Begäran**
 
-```
-DELETE /api/assets/myFolder
-```
+* `DELETE /api/assets/myFolder`
+* `DELETE /api/assets/myFolder/myAsset.png`
+* `DELETE /api/assets/myFolder/myAsset.png/renditions/original`
 
-eller
+**Svarskoder**: Svarskoderna är:
 
-```
-DELETE /api/assets/myFolder/myAsset.png
-```
-
-eller
-
-```xml
-DELETE /api/assets/myFolder/myAsset.png/renditions/original
-```
-
-**Svarskoder**
-
-```
-200 - OK - if folder has been deleted successfully
-412 - PRECONDITION FAILED - if root collection cannot be found or accessed
-500 - INTERNAL SERVER ERROR - if something else goes wrong
-```
-
+* 200 - OK - Om mappen har tagits bort.
+* 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
+* 500 - INTERNT SERVERFEL - Om något annat går fel.
