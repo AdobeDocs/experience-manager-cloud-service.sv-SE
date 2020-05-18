@@ -2,10 +2,10 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: 11e1a10d92a5023b60e4c2632cf76ca90ba5b68d
+source-git-commit: 0f1ef5ab6ebc929ced669e47c8737d7401d5ea35
 workflow-type: tm+mt
-source-wordcount: '13873'
-ht-degree: 6%
+source-wordcount: '13935'
+ht-degree: 5%
 
 ---
 
@@ -70,14 +70,18 @@ En annan fördel är att textalternativ gör det möjligt att indexera icke-text
 
 #### Så här möts du - innehåll som inte är text (1.1.1) {#how-to-meet-non-text-content}
 
-För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Detta kan du göra i fältet **Alt-text** :
+För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Detta kan göras i fältet **Alternativ text** . se t.ex. Core Component **[Image](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)**.
 
 >[!NOTE]
 >
->I vissa färdiga komponenter, som **karuseller** och **bildspel**, går det inte att lägga till alternativa textbeskrivningar för bilder. När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut).
+>Vissa färdiga kärnkomponenter, som **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)**, innehåller inte något**alternativt textfält **för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns ett**etikettfält **(fliken**[Tillgänglighet](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** ) för hela komponenten.
+>
+>När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut).
 
 <!--
->Some out-of-the-box components, such as **Carousel** and **Slideshow** do not provide a means for adding alternate text descriptions to images. When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+>Some out-of-the-box Core Components, such as **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)** do not provide an **Alternative Text** field for adding alternate text descriptions to individual images, though there is the **Label** field (**[Accessibility](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** tab) for the entire component. 
+>
+>When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 -->
 
 AEM kräver att fältet **Alternativ text** ska fyllas i som standard. Om bilden är enbart dekorativ och alternativ text inte behövs kan alternativet **Bild** vara dekorativ kontrolleras.
@@ -709,7 +713,7 @@ Poängen är:
 1. Krav som rör flimmer eller blinkande innehåll finns i Designa inte innehåll på ett sätt som är känt för att orsaka kramper (2.3).
 1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG20/#cc5).
 1. Innehåll som uppdateras regelbundet av programvara eller som direktuppspelas till användaragenten behöver inte bevara eller presentera information som genereras eller tas emot mellan inledandet av paus och återupptagandet, eftersom detta kanske inte är tekniskt möjligt, och i många situationer kan det vara vilseledande.
-1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet frystes eller förstörs.
+1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare, och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet har frysts eller brutits.
 
 #### Syfte - Pausa, stoppa, dölj (2.2.2) {#purpose-pause-stop-hide}
 
@@ -728,7 +732,7 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 #### Mer information - Pausa, Stoppa, Dölj (2.2.2) {#more-information-pause-stop-hide}
 
 * [Förstå villkor för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html)
-* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
+* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
 
 ### Kramper och fysiska reaktioner (2.3) {#seizures-and-physcial-reactions}
 
@@ -804,7 +808,7 @@ Du kan också redigera sidans titel när du redigerar en sida, tillgänglig via 
 #### Mer information - sida titel (2.4.2) {#more-information-page-titled}
 
 * [Förstå villkor för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
+* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
 
 ### Fokusordning (2.4.3)  {#focus-order}
 
@@ -1186,19 +1190,21 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 3.3.1
 
 Att ge instruktioner som hjälper människor att fylla i formulär är en grundläggande del av god praxis när det gäller gränssnittsanvändning. Detta är särskilt användbart för personer med nedsatt syn eller kognitiva funktionshinder som annars skulle kunna få svårt att förstå layouten i ett formulär och den typ av data som ska anges i ett visst formulärfält.
 
-I AEM läggs en standardetikett till när du lägger till en formulärkomponent, till exempel ett **textfält**, på sidan. Den här standardtiteln beror på komponenttypen. Du kan lägga till en egen rubrik på fliken **Titel och Text** i redigeringsdialogrutan för det fältet. Det är viktigt att se till att etiketter hjälper användarna att förstå informationen som är kopplad till varje formulärkomponent.
+##### Formulär
+
+I AEM WKND-demoprojektet läggs en standardetikett till när du lägger till en formulärkomponent, till exempel ett **textfält**, på sidan. Den här standardtiteln beror på komponenttypen. Du kan lägga till en egen rubrik på fliken **Titel och Text** i redigeringsdialogrutan för det fältet. Det är viktigt att se till att etiketter hjälper användarna att förstå informationen som är kopplad till varje formulärkomponent.
 
 Det här **titelfältet** måste användas för fältelement eftersom det innehåller en etikett som är tillgänglig för hjälpmedelsteknik. Det räcker inte att bara skriva en etikett bredvid fältet.
 
 För vissa formulärkomponenter går det även att dölja etiketter visuellt med kryssrutan **Dölj titel**. Etiketter som döljs på det här sättet är fortfarande tillgängliga för hjälpfunktioner, men de visas inte på skärmen. Detta kan vara en bra metod i vissa situationer, men det är oftast bäst att ta med en visuell etikett om det går, eftersom vissa användare kanske tittar på en mycket liten del på skärmen (ett fält i taget) och behöver etiketterna för att identifiera fältet korrekt.
 
-#### Bildknappar {#image-buttons}
+###### Bildknappar {#image-buttons}
 
-Där bildknappar används (t.ex. komponenten **bildknapp**) innehåller fältet **Titel** på fliken **Titel och text** i redigeringsdialogrutan den alternativa texten för bilden i stället för etiketten. I exemplet nedan har bilden med texten `Submit` Alt-texten `Submit`, som lagts till med fältet **Titel** i redigeringsdialogrutan.
+Where image buttons are used (for example, the **Image Button** component of the WKND project) the **Title** field in the **Title and Text** tab of the edit dialog actually provides the alt text for the image, rather than the label. I exemplet nedan har bilden med texten `Submit` Alt-texten `Submit`, som lagts till med fältet **Titel** i redigeringsdialogrutan.
 
-#### Grupper med formulärfält {#groups-of-form-fields}
+###### Grupper med formulärfält {#groups-of-form-fields}
 
-Om det finns en grupp med relaterade kontroller, t.ex. **alternativknappar**, kan det behövas en titel för gruppen samt enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
+In the WKND project, where there is a group of related controls, such as **Radio Group**, a title may be needed for the group, as well as individual controls. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
 
 Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper** (se Lägga till stöd för ytterligare HTML-element och attribut).
 
@@ -1206,7 +1212,7 @@ Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativkna
 However, there is no programmatic association between the group title and the radio buttons themselves. Template editors would need to wrap the title in the necessary `fieldset` and `legend` tags to create this association and this can only be done by editing the page source code. Alternatively, a system administrator can add support for these elements so that they appear in the **Field Properties** dialog (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 -->
 
-#### Ytterligare överväganden för formulär {#additional-considerations-for-forms}
+###### Ytterligare överväganden för formulär {#additional-considerations-for-forms}
 
 Om data ska matas in i ett visst format bör du göra detta tydligt i etikettexten. Om ett datum t.ex. måste anges i `DD-MM-YYYY` formatet, anger du det här som en del av etiketten. Det innebär att när skärmläsaranvändare stöter på fältet visas etiketten automatiskt tillsammans med ytterligare information om formatet.
 
@@ -1290,7 +1296,7 @@ Maximera kompatibiliteten med nuvarande och framtida användaragenter, inklusive
 
 * Villkor för lyckat resultat 4.1.1
 * Nivå A
-* Analys: I innehåll som implementeras med hjälp av markeringsspråk har elementen fullständiga start- och sluttaggar, elementen är kapslade enligt deras specifikationer, elementen innehåller inte duplicerade attribut och alla ID:n är unika, utom när specifikationerna tillåter dessa funktioner.
+* Analys: I innehåll som implementeras med hjälp av markeringsspråk har elementen fullständiga start- och sluttaggar, elementen är kapslade enligt deras specifikationer, elementen innehåller inte duplicerade attribut och alla ID:n är unika, förutom där specifikationerna tillåter dessa funktioner.
 
 #### Syfte - Analys (4.1.1) {#purpose-parsing}
 
