@@ -3,7 +3,10 @@ title: Förstå Experience Manager Assets som ett användargränssnitt för moln
 description: Bekanta dig med Assets som en arbetsyta, ett gränssnitt och gränssnittselement i molnet.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: e399c9f372aa8995abf5cddfbc41d1cfe2b0aa22
+workflow-type: tm+mt
+source-wordcount: '37'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,16 @@ source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
 TBD: Removing this article for now from TOC.
 Need to rewrite this getting started content post-GA.
 
--->
-
-Översikt över startsidan.
-Delar av användargränssnittet som leder till olika funktioner här.
-Hur man når Assets-specifikt användargränssnitt och var man ska leta efter DAM-specifika uppgifter.
-Navigera, hitta arbetsflöden, gör konfigurationer, kontrollera rapporter osv.
-Hur man hittar support- och dokumentlänkar, profilinformation osv.
+Topics to be covered:
+* Overview of the home page experience.
+* Parts of the UI that lead to different capabilities accessible from here.
+* How to reach Assets specific UI and where to look to do DAM specific tasks.
+* How to navigate, where to search, find workflows, do configurations, check reports, etc.
+* How to find support and docs links, profile info, etc.
+* Embed videos from Tech Mktg, if any.
+* Look for videos on YT and blog posts on the Internet for introductions to AEMaaCS Assets.
 
 >[!MORELIKETHIS]
-
+>
+>* [Basic handling for Sites]
+-->
