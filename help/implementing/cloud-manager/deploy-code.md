@@ -2,16 +2,19 @@
 title: Distribuera koden - molntjänster
 description: Distribuera koden - molntjänster
 translation-type: tm+mt
-source-git-commit: 7758c6df49583dafdf2bf262eae8db466bb3c504
+source-git-commit: c1301dbe9641a6a35b639628e3f2d3f0c6b3f0d3
+workflow-type: tm+mt
+source-wordcount: '913'
+ht-degree: 3%
 
 ---
 
 
-# Distribuera koden {#deploy-your-code}
+# Distribuera kod {#deploy-your-code}
 
 ## Distribuera kod med Cloud Manager {#deploying-code-with-cloud-manager}
 
-När du har konfigurerat din **pipeline** (databas, miljö och testmiljö) är du redo att distribuera koden.
+När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du redo att driftsätta koden.
 
 1. Klicka på **Distribuera** från Cloud Manager för att starta distributionsprocessen.
 
@@ -35,7 +38,7 @@ När du har konfigurerat din **pipeline** (databas, miljö och testmiljö) är d
    >
    >Dessutom kan du granska stegen från olika distributionsprocesser genom att visa loggar eller granska resultaten för att se testvillkoren.
 
-   Följande steg ingår i **scendistributionen**:
+   Följande steg ingår i **mellanlagringsdistributionen**:
 
    * Validering: Detta steg säkerställer att pipeline är konfigurerad att använda de tillgängliga resurserna, till exempel att den konfigurerade grenen finns, och att miljöerna är tillgängliga.
    * Build &amp; Unit Testing: Det här steget kör en innesluten byggprocess. Mer information om byggmiljön finns i [Skapa ett AEM-programprojekt](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md) .
@@ -44,7 +47,7 @@ När du har konfigurerat din **pipeline** (databas, miljö och testmiljö) är d
    * Distribuera till scenen
 
       ![](assets/stage-deployment.png)
-   Följande steg ingår i **scentestningen**:
+   Följande steg ingår i **mellanlagringstestningen**:
 
    * Funktionstestning: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön. Se [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) för mer information om testprocessen.
    * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard. Se [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) för mer information om testprocessen.
@@ -98,7 +101,7 @@ När Cloud Manager distribuerar till icke-produktionstopologier är målet att s
 
    >[!NOTE]
    >
-   >Du kan hoppa över ändringar av belastningsutjämnaren i utvecklings- och scendistributioner, d.v.s. frigöra och bifoga steg i både icke-produktionspipelines, för utvecklingsmiljöer och i produktionsflödet för scenmiljöer.
+   >Du kan hoppa över ändringar av belastningsutjämnaren i utveckling och scendistributioner, d.v.s. ta bort och bifoga steg i både icke-produktionspipelines, för utvecklarmiljöer och i produktionsflödet för scenmiljöer.
 
 ### Distribution till produktionsfas {#deployment-production-phase}
 
