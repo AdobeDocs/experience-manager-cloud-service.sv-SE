@@ -1,10 +1,10 @@
 ---
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
-description: Gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder
+description: Använd AEM som molntjänst för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: ad0bceb47a2881ad82af4967b135d2adeff3fbf7
+source-git-commit: 6f6038e6669d85230b38dc73cdddae164a01643b
 workflow-type: tm+mt
-source-wordcount: '13936'
+source-wordcount: '13943'
 ht-degree: 5%
 
 ---
@@ -808,7 +808,7 @@ Du kan också redigera sidans titel när du redigerar en sida, tillgänglig via 
 #### Mer information - sida titel (2.4.2) {#more-information-page-titled}
 
 * [Förstå villkor för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
+* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
 
 ### Fokusordning (2.4.3)  {#focus-order}
 
