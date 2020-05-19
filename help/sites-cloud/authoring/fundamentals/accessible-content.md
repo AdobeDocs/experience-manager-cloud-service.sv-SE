@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: 0f1ef5ab6ebc929ced669e47c8737d7401d5ea35
+source-git-commit: ad0bceb47a2881ad82af4967b135d2adeff3fbf7
 workflow-type: tm+mt
-source-wordcount: '13935'
+source-wordcount: '13936'
 ht-degree: 5%
 
 ---
@@ -534,7 +534,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 1.4.2
    * Logotyper: Text som är en del av en logotyp eller ett varumärkesnamn har inget minimikrav på kontrast.
    >[!NOTE]
    >
-   >Mer information finns i [Förstå icke-textkontrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) för att se till att läsarna förstår de extra kraven som finns runt icke-textelement (inklusive ikoner, gränssnittselement med flera).
+   >Mer information finns i [Förstå icke-textkontrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) , som hjälper dig att se till att innehållsförfattare förstår ytterligare krav runt icke-textelement (inklusive ikoner, gränssnittselement med flera).
 
 #### Syfte - Kontrast (minimum) (1.4.3) {#purpose-contrast-minimum}
 
@@ -713,7 +713,7 @@ Poängen är:
 1. Krav som rör flimmer eller blinkande innehåll finns i Designa inte innehåll på ett sätt som är känt för att orsaka kramper (2.3).
 1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG20/#cc5).
 1. Innehåll som uppdateras regelbundet av programvara eller som direktuppspelas till användaragenten behöver inte bevara eller presentera information som genereras eller tas emot mellan inledandet av paus och återupptagandet, eftersom detta kanske inte är tekniskt möjligt, och i många situationer kan det vara vilseledande.
-1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare, och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet har frysts eller brutits.
+1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet frystes eller förstörs.
 
 #### Syfte - Pausa, stoppa, dölj (2.2.2) {#purpose-pause-stop-hide}
 
@@ -808,7 +808,7 @@ Du kan också redigera sidans titel när du redigerar en sida, tillgänglig via 
 #### Mer information - sida titel (2.4.2) {#more-information-page-titled}
 
 * [Förstå villkor för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
+* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
 
 ### Fokusordning (2.4.3)  {#focus-order}
 
