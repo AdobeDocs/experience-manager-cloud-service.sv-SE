@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM som molntjänst för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: 6f6038e6669d85230b38dc73cdddae164a01643b
+source-git-commit: 84b69fb72b2fe28617417fd5a70c5ad1428c3535
 workflow-type: tm+mt
-source-wordcount: '13943'
+source-wordcount: '13955'
 ht-degree: 5%
 
 ---
@@ -713,7 +713,7 @@ Poängen är:
 1. Krav som rör flimmer eller blinkande innehåll finns i Designa inte innehåll på ett sätt som är känt för att orsaka kramper (2.3).
 1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG20/#cc5).
 1. Innehåll som uppdateras regelbundet av programvara eller som direktuppspelas till användaragenten behöver inte bevara eller presentera information som genereras eller tas emot mellan inledandet av paus och återupptagandet, eftersom detta kanske inte är tekniskt möjligt, och i många situationer kan det vara vilseledande.
-1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet frystes eller förstörs.
+1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare, och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet har frysts eller brutits.
 
 #### Syfte - Pausa, stoppa, dölj (2.2.2) {#purpose-pause-stop-hide}
 
@@ -1159,7 +1159,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 3.2.4
 
 #### Syfte - Felidentifiering (3.3.1) {#purpose-error-identification}
 
-Syftet med detta villkor är att se till att användarna är medvetna om att ett fel har inträffat och kan avgöra vad som är fel. Felmeddelandet ska vara så specifikt som möjligt. Om ett formulär inte kan skickas räcker det att återvisa formuläret och ange felfälten för att vissa användare ska inse att ett fel har inträffat. Användare med skärmläsare vet till exempel inte om ett fel har inträffat förrän de stöter på en av indikatorerna. De kan hoppa över hela formuläret innan felindikatorn påträffas, eftersom de tror att sidan helt enkelt inte fungerar. Enligt definitionen i WCAG 2.0 är ett indatafel information som användaren anger och som inte accepteras. Detta omfattar följande:
+Syftet med detta villkor är att se till att användarna är medvetna om att ett fel har inträffat och kan avgöra vad som är fel. Felmeddelandet ska vara så specifikt som möjligt. Om ett formulär inte kan skickas räcker det att återvisa formuläret och ange felfälten för att vissa användare ska inse att ett fel har inträffat. Användare med skärmläsare vet till exempel inte om ett fel har inträffat förrän de stöter på en av indikatorerna. De kan hoppa över hela formuläret innan felindikatorn påträffas, eftersom de tror att sidan helt enkelt inte fungerar. Enligt definitionen i WCAG är ett [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) information som användaren anger och som inte accepteras. Detta omfattar följande:
 
 information som krävs av webbsidan men utelämnas av användaren, eller information som tillhandahålls av användaren men som ligger utanför det obligatoriska dataformatet eller tillåtna värden.
 Till exempel:
@@ -1240,7 +1240,7 @@ I enkla formulär med mycket begränsad funktionalitet kan en lämplig etikett p
 
 #### Syfte - Felförslag (3.3.3) {#purpose-error-suggestion}
 
-Syftet med detta villkor är att se till att användarna får lämpliga förslag på hur ett indatafel kan korrigeras om det är möjligt. WCAG 2.0-definitionen av &quot;indatafel&quot; anger att det är &quot;information som användaren tillhandahåller som inte accepteras&quot; av systemet. Några exempel på information som inte accepteras är information som är obligatorisk men utelämnad av användaren och information som tillhandahålls av användaren men som ligger utanför det obligatoriska dataformatet eller tillåtna värden.
+Syftet med detta villkor är att se till att användarna får lämpliga förslag på hur ett indatafel kan korrigeras om det är möjligt. WCAG-definitionen av [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) anger att det är &quot;information som användaren tillhandahåller som inte accepteras&quot; av systemet. Några exempel på information som inte accepteras är information som är obligatorisk men utelämnad av användaren och information som tillhandahålls av användaren men som ligger utanför det obligatoriska dataformatet eller tillåtna värden.
 
 Success Criterion 3.3.1 innehåller meddelanden om fel. Personer med kognitiva begränsningar kan dock finna det svårt att förstå hur felen ska korrigeras. Personer med visuella funktionshinder kanske inte kan komma på exakt hur felet ska korrigeras. Om formuläret inte kan skickas kan användaren överge det eftersom han/hon kanske inte vet hur felet ska åtgärdas trots att han/hon vet att det har inträffat.
 
