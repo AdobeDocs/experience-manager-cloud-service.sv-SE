@@ -2,9 +2,9 @@
 title: Hantera miljöer - molntjänst
 description: Hantera miljöer - molntjänst
 translation-type: tm+mt
-source-git-commit: 1b788b10ab8ea7c5e2aa0d628f10a42737752d34
+source-git-commit: a19ffdd0afa484343096cb09c47219e3fdb13fb7
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 14%
 
 ---
@@ -48,7 +48,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
 
    ![](assets/no-environments.png)
 
-   >[!OBS!)
+   >[!NOTE]
    >Alternativet **Lägg till miljö** inaktiveras beroende på brist på behörigheter eller vad som kommer att ingå i avtalet.
 
 1. Dialogrutan **Lägg till miljö** visas. Användaren måste skicka in information som **miljötyp**, **miljönamn** och **miljöbeskrivning** (beroende på vad användaren har för mål med att skapa miljön inom gränserna för vad som är tillgängligt för den specifika klientorganisationen).
