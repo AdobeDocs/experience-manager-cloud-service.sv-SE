@@ -2,7 +2,10 @@
 title: Hantera miljöer - molntjänst
 description: Hantera miljöer - molntjänst
 translation-type: tm+mt
-source-git-commit: 1fe2fea86f933e7cffabf67fda09a2850a5d5730
+source-git-commit: 1b788b10ab8ea7c5e2aa0d628f10a42737752d34
+workflow-type: tm+mt
+source-wordcount: '595'
+ht-degree: 14%
 
 ---
 
@@ -37,9 +40,16 @@ Produktionen och scenen finns som duo och används för testning och produktion.
 ## Lägga till en miljö {#adding-environments}
 
 
-1. Användaren klickar på knappen **Lägg till miljö** för att lägga till en miljö.
+1. Klicka på **Lägg till miljö** för att lägga till en miljö. Den här knappen kommer att vara tillgänglig från skärmen **Miljö** .
+   ![](assets/no-environment-2.png)
 
-   ![](assets/add-environment.png)
+
+   Alternativet **Lägg till miljö** är också tillgängligt på **miljökortet** när det inte finns några miljöer i programmet.
+
+   ![](assets/no-environments.png)
+
+   >[!OBS!)
+   >Alternativet **Lägg till miljö** inaktiveras beroende på brist på behörigheter eller vad som kommer att ingå i avtalet.
 
 1. Dialogrutan **Lägg till miljö** visas. Användaren måste skicka in information som **miljötyp**, **miljönamn** och **miljöbeskrivning** (beroende på vad användaren har för mål med att skapa miljön inom gränserna för vad som är tillgängligt för den specifika klientorganisationen).
 
@@ -72,3 +82,15 @@ När den här statusen visas är alternativet **Uppdatera** tillgängligt i list
 Om du väljer detta i listrutan kan en Distributionshanterare uppdatera pipelinen som är associerad med den här miljön till den senaste versionen och sedan köra pipelinen.
 
 Om pipeline redan har uppdaterats uppmanas användaren att köra pipelinen.
+
+## Tar bort miljö {#deleting-environment}
+
+Användare med nödvändig behörighet kan ta bort en utvecklingsmiljö.
+
+Delete option will be available from the dropdown menu, both on the **Environments** Card and the **Manage** menu if you click on Details from the **ENVIRONMENTS** card.
+
+![](assets/deleting-environment1.png)
+
+>[!NOTE]
+Den här funktionen är inte tillgänglig för produktions-/scenmiljö som angetts i ett reguljärt program som konfigurerats för produktion. Funktionen är dock tillgänglig för produktions-/scenmiljöer i ett sandlådeprogram.
+
