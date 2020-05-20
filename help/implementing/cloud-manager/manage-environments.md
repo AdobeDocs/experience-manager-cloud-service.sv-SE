@@ -2,10 +2,10 @@
 title: Hantera miljöer - molntjänst
 description: Hantera miljöer - molntjänst
 translation-type: tm+mt
-source-git-commit: a19ffdd0afa484343096cb09c47219e3fdb13fb7
+source-git-commit: 1f72e8c935dc6cfe1124afd9f1a0fe37a97ded34
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 14%
+source-wordcount: '629'
+ht-degree: 8%
 
 ---
 
@@ -44,7 +44,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
    ![](assets/no-environment-2.png)
 
 
-   Alternativet **Lägg till miljö** är också tillgängligt på **miljökortet** när det inte finns några miljöer i programmet.
+   Alternativet **Lägg till miljö** finns också på **miljökortet** när det inte finns några miljöer i programmet.
 
    ![](assets/no-environments.png)
 
@@ -65,7 +65,6 @@ Produktionen och scenen finns som duo och används för testning och produktion.
    >[!NOTE]
    >Om du ännu inte har konfigurerat produktionsflödet för icke-produktion visas kortet *Översikt* där du kan skapa produktionsflödet.
 
-
 ## Uppdaterar miljö {#updating-dev-environment}
 
 Uppdateringar av scen- och produktionsmiljöer hanteras automatiskt av Adobe.
@@ -73,11 +72,12 @@ Uppdateringar av scen- och produktionsmiljöer hanteras automatiskt av Adobe.
 Uppdateringar av utvecklingsmiljöer hanteras av användarna av programmet. När en miljö inte kör den senaste allmänt tillgängliga AEM-versionen visas **UPDATE AVAILABLE (TILLGÄNGLIG**) på miljökortet på hemskärmen.
 
 ![](assets/manage-environments2.png)
-)
 
-När den här statusen visas är alternativet **Uppdatera** tillgängligt i listrutan, både på miljökortet och på menyn **Hantera** om du klickar på **Detaljer** på **MILJÖ**-kortet.
 
-![](assets/add-environment4.png)
+Alternativet **Uppdatera** finns i listrutan i **miljökortet** .
+Det här alternativet är också tillgängligt från knappen **Hantera** om du klickar på **Information** från **miljökortet** .
+
+![](assets/update-environment2.png)
 
 Om du väljer detta i listrutan kan en Distributionshanterare uppdatera pipelinen som är associerad med den här miljön till den senaste versionen och sedan köra pipelinen.
 
@@ -87,10 +87,19 @@ Om pipeline redan har uppdaterats uppmanas användaren att köra pipelinen.
 
 Användare med nödvändig behörighet kan ta bort en utvecklingsmiljö.
 
-Delete option will be available from the dropdown menu, both on the **Environments** Card and the **Manage** menu if you click on Details from the **ENVIRONMENTS** card.
+Alternativet **Ta bort** finns i listrutan i **miljökortet** .
+Det här alternativet är också tillgängligt från knappen **Hantera** om du klickar på **Information** från **miljökortet** .
 
 ![](assets/deleting-environment1.png)
 
 >[!NOTE]
 Den här funktionen är inte tillgänglig för produktions-/scenmiljö som angetts i ett reguljärt program som konfigurerats för produktion. Funktionen är dock tillgänglig för produktions-/scenmiljöer i ett sandlådeprogram.
+
+## Åtkomst till Developer Console {#accessing-developer-console}
+
+Välj **Developer Console** i listrutan i **miljökortet** .
+
+![](assets/dev-console1.png)
+
+Du kan också välja det här alternativet från knappen **Hantera** om du klickar på **Detaljer** från **miljökortet** .
 
