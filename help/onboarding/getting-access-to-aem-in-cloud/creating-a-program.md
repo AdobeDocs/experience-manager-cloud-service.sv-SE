@@ -2,7 +2,10 @@
 title: Skapa ett program - molntjänst
 description: Skapa ett program - molntjänst
 translation-type: tm+mt
-source-git-commit: b30d9e37bb7de46aa252aa7030ab0c2de8610431
+source-git-commit: ed421718a8287e693c7961cbc19ad36db912efb0
+workflow-type: tm+mt
+source-wordcount: '559'
+ht-degree: 0%
 
 ---
 
@@ -29,10 +32,7 @@ Beroende på vad användaren har för avsikt att skapa programmet inom gränsern
 
 ![](assets/create-program-add.png)
 
-## Skapa ett demoprogram {#create-demo-program}
-
->[!NOTE]
->Ett demonstrationsprogram är detsamma som ett sandlådeprogram i användargränssnittet i Cloud Manager.
+## Skapa ett sandlådeprogram {#create-demo-program}
 
 Följ stegen nedan för att skapa ett sandlådeprogram:
 
