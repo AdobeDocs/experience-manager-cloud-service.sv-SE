@@ -2,9 +2,9 @@
 title: Sandlådeprogram - molntjänst
 description: Sandlådeprogram - molntjänst
 translation-type: tm+mt
-source-git-commit: e25e22c5d61defb3402e51b97c1d5364465e1027
+source-git-commit: 17e0c4fb87e67b369cf465b65df973a170fb8ed6
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Ett sandlådeprogram är ett av de två typer av program som är tillgängliga i
 
 En sandlåda skapas vanligtvis för utbildning, löpande demonstrationer, aktivering eller korrektur av begrepp (POC). De är inte avsedda att bära livstrafik.
 
-Sandlådeprogram innehåller Sites and Assets och är automatiskt ifyllda med en Git-gren som innehåller exempelkod, en utvecklingsmiljö och en icke-produktionsprocess.
+Sandlådeprogram innehåller Sites and Assets och är automatiskt ifyllda med en Git-databas, en utvecklingsmiljö och en icke-produktionsprocess.  Git-databasen fylls i med ett exempelprojekt baserat på AEM-projekttypen.
 
 Mer information om programtyperna finns i [Förstå program och programtyper](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/understand-program-types.html) .
 
@@ -41,7 +41,7 @@ Sandlådeprogram har följande attribut:
 
 Med en guide kan du skapa ett sandlådeprogram.
 
-Mer information om hur du skapar ett sandlådeprogram finns i.
+Mer information om hur du skapar ett sandlådeprogram finns i [Skapa ett sandlådeprogram](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/creating-a-program.html#create-sandbox-program) .
 
 ### Skapa sandlådemiljöer {#creating-sandbox-environments}
 
@@ -74,6 +74,9 @@ Viloläge kategoriseras som:
 * **Automatiska** sandlådeprogrammiljöer försätts automatiskt i viloläge efter åtta timmars inaktivitet, vilket innebär att varken författaren eller publiceringstjänsterna får begäran.
 
 * **Manuell**: Som användare kan du förvara en sandlådeprogrammiljö manuellt, men du behöver inte göra det eftersom viloläget inträffar automatiskt efter en viss inaktivitetsperiod (åtta timmar).
+
+>[!CAUTION]
+>I den senaste versionen går det inte att förvara sandlådeprogrammiljön genom att länka till Developer Console i Cloud Manager.
 
 #### Använda manuell viloläge {#using-manual-hibernation}
 
@@ -149,6 +152,17 @@ En användare med **Cloud Manager - Utvecklarroll** kan klicka på **utvecklarko
 >[!NOTE]
 > Många funktioner i Cloud Manager kräver specifika behörigheter för att fungera. Om du vill veta mer om roller för användare som styr tillgängligheten för specifika funktioner kan du läsa[i Lägg till användare och roller](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/what-is-required/add-users-roles.html).
 
+#### Viktiga överväganden {#important-considerations}
+
+Några viktiga saker att tänka på när det gäller miljöer med viloläge och viloläge är:
+
+* En användare kan använda en pipeline för att distribuera anpassad kod till miljöer med viloläge. Miljön förblir i viloläge och den nya koden visas i miljön när den har tagits bort från viloläget.
+
+* AEM-uppgraderingar kan användas i miljöer i viloläge, som kunderna manuellt kan aktivera via Cloud Manager. Miljön förblir i viloläge och den nya versionen visas i miljön när den har tagits bort från viloläget.
+
+>[!NOTE]
+>För närvarande anges det inte om en miljö är i viloläge i molnhanteraren.
+
 ## AEM-uppdateringar i sandlådemiljöer {#aem-updates-sandbox}
 
 Mer information finns i [AEM-versionsuppdateringar](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#version-updates) .
@@ -158,13 +172,9 @@ Användaren kan manuellt tillämpa AEM-uppdateringar på miljöer i ett sandlåd
 Mer information om hur du uppdaterar en miljö finns i [Uppdatera miljö](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#updating-dev-environment) .
 
 >[!NOTE]
->En *icke-produktionspipeline* som distribueras till den aktuella utvecklingsmiljön måste konfigureras för att en manuell uppdateringsprocess ska kunna initieras.
+>* En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.
+>* En manuell uppdatering av antingen *Production* - eller *Stage* -miljön uppdateras automatiskt. Miljöuppsättningen Production+Stage måste finnas i samma AEM-version.
 
->[!NOTE]
->En *produktionspipeline* måste konfigureras för att en manuell uppdateringspipeline till Production+Stage-miljö ska initieras.
-
->[!NOTE]
->Manuell uppdatering av antingen *produktions* - eller *scenmiljö* uppdaterar automatiskt den andra. Miljöuppsättningen Production+Stage måste finnas i samma AEM-version.
 
 
 
