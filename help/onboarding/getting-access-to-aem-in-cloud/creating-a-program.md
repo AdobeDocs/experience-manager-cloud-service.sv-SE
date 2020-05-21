@@ -2,7 +2,7 @@
 title: Skapa ett program - molntjänst
 description: Skapa ett program - molntjänst
 translation-type: tm+mt
-source-git-commit: ed421718a8287e693c7961cbc19ad36db912efb0
+source-git-commit: 89da3b16c133a423f4c4aa630c8e1dd7d008fb17
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 0%
@@ -32,13 +32,13 @@ Beroende på vad användaren har för avsikt att skapa programmet inom gränsern
 
 ![](assets/create-program-add.png)
 
-## Skapa ett sandlådeprogram {#create-demo-program}
+## Skapa ett sandlådeprogram {#create-sandbox-program}
 
 Följ stegen nedan för att skapa ett sandlådeprogram:
 
 1. Välj **Konfigurera en demo** i guiden Skapa program. Användaren skickar programnamnet innan han/hon väljer **Skapa**.
 
-   ![](assets/create-program-setupdemo.png)
+   ![](assets/create-sandbox.png)
 
 1. Användaren ser det nya sandlådeprogramkortet på landningssidan och kan hovra över det för att välja molnhanterarikonen för att navigera till översiktssidan för Cloud Manager. Kortet informerar användaren om status för automatisk installation av det nyskapade sandlådeprogrammet. Användaren ser förloppet.
 
