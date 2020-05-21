@@ -2,9 +2,9 @@
 title: Sandlådeprogram - molntjänst
 description: Sandlådeprogram - molntjänst
 translation-type: tm+mt
-source-git-commit: 168b3d28a36e4ec5258b2d2f391af25c466be6c6
+source-git-commit: e25e22c5d61defb3402e51b97c1d5364465e1027
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Sandlådeprogram har följande attribut:
 
 Med en guide kan du skapa ett sandlådeprogram.
 
-Mer information om hur du skapar ett sandlådeprogram finns i [Skapa ett sandlådeprogram](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/creating-a-program.html#create-demo-program).
+Mer information om hur du skapar ett sandlådeprogram finns i.
 
 ### Skapa sandlådemiljöer {#creating-sandbox-environments}
 
@@ -51,7 +51,7 @@ Miljöuppsättningen för produktionsscenen kan läggas till manuellt i sandlåd
 
 Mer information om hur du skapar en miljö manuellt finns i [Lägga till miljöer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#adding-environments) .
 
-### Tar bort sandlådemiljöer  {#deleting-sandbox-environments}
+### Tar bort sandlådemiljöer {#deleting-sandbox-environments}
 
 Användare med nödvändig behörighet kan ta bort en utvecklings- eller produktions-/scenmiljö eller uppsättningar.
 
@@ -87,9 +87,16 @@ Följ stegen nedan om du vill förvara sandlådeprogrammiljöer manuellt:
 1. Gå till **Developer Console**.
 Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
 
-1. Klicka på Viloläge så som visas i figuren nedan
+1. Klicka på **Viloläge** enligt bilden nedan:
 
    ![](assets/hibernate-1.png)
+
+   Eller
+
+   Klicka på **Viloläge** i listan Miljöer, enligt bilden nedan:
+
+   ![](assets/hibernate-1b.png)
+
 1. Bekräfta steget genom att klicka på **Viloläge** .
 
    ![](assets/hibernate-2.png)
@@ -97,14 +104,6 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 1. När viloläget är slutfört visas ett meddelande om viloläget för din miljö på skärmen **Developer Console** .
 
    ![](assets/hibernate-4.png)
-
-#### Åtkomst till en miljö i viloläge {#accessing-hibernated-environment}
-
-När användaren gör en webbläsarbegäran mot antingen författaren eller publiceringsskiktet i en miljö i viloläge, kommer användaren att få en landningssida som beskriver miljöns viloläge, vilket visas nedan:
-
-En användare med **Cloud Manager - Utvecklarroll** kan klicka på knappen Developer Console för att få åtkomst till utvecklarkonsolen och för att avplacera miljön. Information om hur du anger roller finns i dokumentationen för Cloud Manager.
-
-Om en användare i en organisation inte kan klicka på knappen Developer Console för att komma till Developer Console, är det troligt att de måste få rollen&quot;Cloud Manager - Utvecklare&quot;.
 
 
 ### Avviloläge {#de-hibernation-introduction}
@@ -119,6 +118,13 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
    ![](assets/de-hibernation-img1.png)
 
+   Eller
+
+   Klicka på **Avviloläge** i listan **Miljö** , enligt bilden nedan:
+
+   ![](assets/de-hibernate-1b.png)
+
+
 1. Bekräfta steget genom att klicka på **Avsluta** .
 
    ![](assets/de-hibernation-img2.png)
@@ -131,15 +137,25 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
    ![](assets/de-hibernation-img4.png)
 
+#### Åtkomst till en miljö i viloläge {#accessing-hibernated-environment}
+
+När användaren gör en webbläsarbegäran mot antingen författaren eller publiceringsnivån i en miljö i viloläge, kommer användaren att få en landningssida som beskriver miljöns viloläge, vilket visas i bilden nedan:
+
+![](assets/de-hibernation-img5.png)
+
+
+En användare med **Cloud Manager - Utvecklarroll** kan klicka på **utvecklarkonsolen** för att få åtkomst till utvecklarkonsolen och för att avplacera miljön i viloläge.
+
+>[!NOTE]
+> Många funktioner i Cloud Manager kräver specifika behörigheter för att fungera. Om du vill veta mer om roller för användare som styr tillgängligheten för specifika funktioner kan du läsa[i Lägg till användare och roller](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/what-is-required/add-users-roles.html).
 
 ## AEM-uppdateringar i sandlådemiljöer {#aem-updates-sandbox}
 
-
 Mer information finns i [AEM-versionsuppdateringar](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#version-updates) .
 
-En användare kan manuellt tillämpa AEM-uppdateringar på miljöer i ett sandlådeprogram (se figur nedan). Detta kan göras när statusen som visas är **UPPDATERINGSTILLGÄNGLIG**.
+Användaren kan manuellt tillämpa AEM-uppdateringar på miljöer i ett sandlådeprogram.
 
-Alternativet Uppdatera finns i listrutan på **miljökortet** . Det här alternativet är också tillgängligt från knappen **Hantera** om du klickar på **Information** från **miljökortet** .
+Mer information om hur du uppdaterar en miljö finns i [Uppdatera miljö](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#updating-dev-environment) .
 
 >[!NOTE]
 >En *icke-produktionspipeline* som distribueras till den aktuella utvecklingsmiljön måste konfigureras för att en manuell uppdateringsprocess ska kunna initieras.
