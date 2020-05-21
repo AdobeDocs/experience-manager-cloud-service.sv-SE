@@ -1,8 +1,11 @@
 ---
 sub-product: Onboarding för AEM as a Cloud Service
 user-guide-title: Onboarding för AEM as a Cloud Service
-translation-type: ht
-source-git-commit: 720f45a50591ee9d1d0b95bce04f1bb73ef9cb31
+translation-type: tm+mt
+source-git-commit: 17e0c4fb87e67b369cf465b65df973a170fb8ed6
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 96%
 
 ---
 
@@ -17,9 +20,11 @@ source-git-commit: 720f45a50591ee9d1d0b95bce04f1bb73ef9cb31
    + [Databas för källkod](what-is-required/source-code-repository.md)
 + Få åtkomst till AEM i molnet {#getting-access}
    + [Få åtkomst till Experience Manager as a Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
-   + [Åtkomst till program](getting-access-to-aem-in-cloud/first-time-login.md)
-   + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
-   + [Skapa ett program](getting-access-to-aem-in-cloud/creating-a-program.md)
+   + Tjänstprogram i molnet {#cloud-service-programs}
+      + [Åtkomst till program](getting-access-to-aem-in-cloud/first-time-login.md)
+      + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
+      + [Skapa ett program](getting-access-to-aem-in-cloud/creating-a-program.md)
+      + [Sandlådeprogram](getting-access-to-aem-in-cloud/sandbox-programs.md)
    + [Skapa ett AEM-programprojekt](getting-access-to-aem-in-cloud/creating-aem-application-project.md)
 + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
    + [AEM-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/aem-readiness.md)
