@@ -2,9 +2,9 @@
 title: Sandlådeprogram - molntjänst
 description: Sandlådeprogram - molntjänst
 translation-type: tm+mt
-source-git-commit: e7cad0cd67f04eac5627e72339ccb1c4f54cc8c8
+source-git-commit: 168b3d28a36e4ec5258b2d2f391af25c466be6c6
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ En sandlåda skapas vanligtvis för utbildning, löpande demonstrationer, aktive
 
 Sandlådeprogram innehåller Sites and Assets och är automatiskt ifyllda med en Git-gren som innehåller exempelkod, en utvecklingsmiljö och en icke-produktionsprocess.
 
-Mer information om programtyper finns i [Förstå program och programtyper](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/understand-program-types.html).
+Mer information om programtyperna finns i [Förstå program och programtyper](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/understand-program-types.html) .
 
 ### Attribut för sandlådeprogram {#attributes-sandbox}
 
@@ -86,9 +86,17 @@ Följ stegen nedan om du vill förvara sandlådeprogrammiljöer manuellt:
 
 1. Gå till **Developer Console**.
 Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
-1. Klicka på Viloläge enligt bilden nedan:
-1. Klicka på **Viloläge** för att bekräfta steget
-1. När viloläget är klart visas följande skärm.
+
+1. Klicka på Viloläge så som visas i figuren nedan
+
+   ![](assets/hibernate-1.png)
+1. Bekräfta steget genom att klicka på **Viloläge** .
+
+   ![](assets/hibernate-2.png)
+
+1. När viloläget är slutfört visas ett meddelande om viloläget för din miljö på skärmen **Developer Console** .
+
+   ![](assets/hibernate-4.png)
 
 #### Åtkomst till en miljö i viloläge {#accessing-hibernated-environment}
 
