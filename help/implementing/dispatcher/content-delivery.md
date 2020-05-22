@@ -2,12 +2,15 @@
 title: Innehållsleverans
 description: 'Innehållsleverans '
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: a07de761dd9aedb3469f256e08ecf05b2102889d
+workflow-type: tm+mt
+source-wordcount: '2268'
+ht-degree: 1%
 
 ---
 
 
-# Innehållsleverans i AEM som molntjänst {#content-delivery}
+# Innehållsleverans i AEM as a Cloud Service {#content-delivery}
 
 Den aktuella sidan innehåller information om publicering av tjänstinnehåll i AEM som en molntjänst. Leverans av publiceringstjänstinnehåll inkluderar:
 
@@ -52,11 +55,11 @@ Nedan finns en beslutsmatris som jämför de två alternativen. Mer detaljerad i
 | **Krav** | Inget | Befintligt CDN som är betungande att ersätta. Måste visa ett lyckat lastprov innan live. |
 | **CDN-expertis** | Inget | Kräver minst en deltidskonstruktionsresurs med detaljerad CDN-kunskap som kan konfigurera kundens CDN. |
 | **Dokumentskydd** | Hanteras av Adobe. | Hanteras av Adobe (och eventuellt av kunden i deras eget CDN). |
-| **Prestanda** | Optimerat av Adobe. | Kommer att dra nytta av vissa AEM CDN-funktioner, men eventuellt en liten prestandaförsämring på grund av det extra hoppet. **Obs**: Hoppar från kundens CDN till Fast CDN (troligen är effektivt). |
+| **Prestanda** | Optimerat av Adobe. | Kommer att dra nytta av vissa AEM CDN-funktioner, men eventuellt en liten prestandaförsämring på grund av det extra hoppet. **Obs**: Hoppar från kundens CDN till Adobes CDN (snart klart). |
 | **Cachelagring** | Stöder cachehuvuden som används vid dispatchern. | Stöder cachehuvuden som används vid dispatchern. |
 | **Komprimeringsfunktioner för bilder och video** | Kan fungera med Adobe Dynamic Media. | Kan användas med Adobe Dynamic Media eller en CDN-lösning för bild/video som hanteras av kunden. |
 
-### AEM Managed CDN {#aem-managed-cdn}
+### AEM Managed CDN  {#aem-managed-cdn}
 
 Det är enkelt att förbereda sig för innehållsleverans med hjälp av Adobes färdiga CDN enligt beskrivningen nedan:
 
@@ -65,7 +68,7 @@ Det är enkelt att förbereda sig för innehållsleverans med hjälp av Adobes f
 1. Informera kundsupporten:
    * vilken anpassad domän som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id.
    * om vitlistning av IP-adresser behövs för att begränsa trafiken till en viss miljö.
-1. Kundsupport koordinerar sedan med dig tidpunkten för en CNAME DNS-post och pekar på deras FQDN till `adobe-aem.map.fastly.net`.
+1. Kundsupport koordinerar sedan med dig tidpunkten för en CNAME DNS-post och pekar på deras FQDN till `cdn.adobeaemcloud.com`.
 1. Du meddelas när SSL-certifikaten upphör att gälla så att du kan skicka om de nya SSL-certifikaten.
 
 **Begränsa trafik**
