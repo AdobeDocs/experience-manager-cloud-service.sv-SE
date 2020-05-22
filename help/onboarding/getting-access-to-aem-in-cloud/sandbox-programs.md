@@ -2,9 +2,9 @@
 title: Sandlådeprogram - molntjänst
 description: Sandlådeprogram - molntjänst
 translation-type: tm+mt
-source-git-commit: 4539744f8574bfa925d40cf685d02e4bc7ad4416
+source-git-commit: da965462eddae8b359a6d327a7fe3caf6bfe95ae
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1276'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 Ett sandlådeprogram är ett av de två typer av program som är tillgängliga i AEM Cloud Service, och det andra är ett vanligt program.
 
-En sandlåda skapas vanligtvis för utbildning, löpande demonstrationer, aktivering eller korrektur av begrepp (POC). De är inte avsedda att bära livstrafik.
+En sandlåda skapas vanligtvis för utbildning, löpande demonstrationer, aktivering eller korrektur av begrepp (POC). De är inte avsedda att bära livstrafik. De omfattas inte av [AEM som en molntjänst](https://www.adobe.com/legal/service-commitments.html).
+
+Miljöerna som skapas i en sandlåda är inte konfigurerade för automatisk skalning. Därför är de inte lämpliga för prestanda- eller belastningstestning.
 
 Sandlådeprogram innehåller Sites and Assets och är automatiskt ifyllda med en Git-databas, en utvecklingsmiljö och en icke-produktionsprocess.  Git-databasen fylls i med ett exempelprojekt baserat på AEM-projekttypen.
 
@@ -89,8 +91,8 @@ Följ stegen nedan om du vill förvara sandlådeprogrammiljöer manuellt:
 
 1. Gå till **Developer Console**.
 Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
-   >[!NOTE]
-   >genom att länka till Developer Console direkt från Cloud Manager kan du inte förlägga en sandlådeprogrammiljö i viloläge. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
+   >[!IMPORTANT]
+   >Genom att länka till **utvecklarkonsolen** direkt från Cloud Manager kan du inte förvara en sandlådeprogrammiljö. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
 
 1. Klicka på **Viloläge** enligt bilden nedan:
 
@@ -115,6 +117,9 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
 1. Gå till **Developer Console**.
 Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
+
+   >[!IMPORTANT]
+   >Om du länkar till **utvecklarkonsolen** direkt från Cloud Manager kan du inte avplacera en sandlådeprogrammiljö. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
 
    >[!NOTE]
    >Du kan också navigera till **Developer Console** för att avaktivera viloläget genom att försöka komma åt författaren eller publiceringstjänsten i en miljö som redan är i viloläge. I så fall visas en landningssida med en länk till Developer Console. Se avsnittet Accessing a Hibernated Environment nedan.
