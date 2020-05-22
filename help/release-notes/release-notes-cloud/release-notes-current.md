@@ -2,9 +2,9 @@
 title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.5.0
 description: Versionsinformation om Experience Manager för 2020.5.0
 translation-type: tm+mt
-source-git-commit: 94a732f56929ad4af23855152e258f82ad61ee2c
+source-git-commit: 8fe1f6f1c7c6a608ee1ca42836ee91e83487428d
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,22 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som en molntjänst 2020.5.0.
 
-## Cloud Manager {#cloud-manager}
+## Releasedatum {#release-date}
+
+Releasedatum för [!DNL Experience Manager] som molntjänst 2020.5.0 är 7 maj 2020.
+
+## Nyheter i AEM Sites {#aem-sites}
+
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för AEM Sites i AEM som en Cloud Service Release 2020.5.0.
+
+* Detaljerad jobbinformation är nu tillgänglig efter bearbetning av flyttning av gruppsidor och utlöses som asynkrona jobb.
+* När du kopierar/klistrar in ett sidträd kan du nu välja mellan att bara klistra in rotsidan eller även undersidorna i trädet.
+* AEM Experience Fragments som exporteras till Adobe Target-arbetsytor visas nu som unika erbjudandetyper och erbjudandekällor i Target.
+* MSM - med *publiceringsutlösaren* kan du nu ta bort borttagningshändelser för komponenter i live-kopieringskällan, det vill säga ta bort komponenter i en live-kopia som har tagits bort i live-kopiekällan.
+* MSM - komponenterna för live-kopiering byter nu namn till *_msm_move* efter att samma komponent har rullats ut från live-kopiekälla.
+
+
+## Nyheter i Cloud Manager {#cloud-manager}
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en molntjänst 2020.5.0.
 
