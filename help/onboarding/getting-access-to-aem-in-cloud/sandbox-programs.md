@@ -2,9 +2,9 @@
 title: Sandlådeprogram - molntjänst
 description: Sandlådeprogram - molntjänst
 translation-type: tm+mt
-source-git-commit: 17e0c4fb87e67b369cf465b65df973a170fb8ed6
+source-git-commit: 4539744f8574bfa925d40cf685d02e4bc7ad4416
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1192'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Mer information om hur du skapar ett sandlådeprogram finns i [Skapa ett sandlå
 
 ### Skapa sandlådemiljöer {#creating-sandbox-environments}
 
-Sandlådeprogram levereras i en utvecklingsmiljö när programmet skapas automatiskt. Utvecklingsmiljön innehåller som standard en författare och en publiceringsnivå.
+Sandlådeprogram levereras till en utvecklingsmiljö när programmet skapas automatiskt. Utvecklingsmiljön innehåller som standard en författare och en publiceringsnivå.
 
 Miljöuppsättningen för produktionsscenen kan läggas till manuellt i sandlådeprogrammet när användaren är redo att ställa in en produktionspipeline.
 
@@ -71,12 +71,12 @@ Viloläge kan antingen inträffa automatiskt eller manuellt. Det kan ta upp till
 
 Viloläge kategoriseras som:
 
-* **Automatiska** sandlådeprogrammiljöer försätts automatiskt i viloläge efter åtta timmars inaktivitet, vilket innebär att varken författaren eller publiceringstjänsterna får begäran.
+* **Automatiska** sandlådeprogrammiljöer försätts automatiskt i viloläge efter åtta timmars inaktivitet, vilket innebär att varken författaren eller publiceringstjänsterna får begäranden.
 
 * **Manuell**: Som användare kan du förvara en sandlådeprogrammiljö manuellt, men du behöver inte göra det eftersom viloläget inträffar automatiskt efter en viss inaktivitetsperiod (åtta timmar).
 
 >[!CAUTION]
->I den senaste versionen går det inte att förvara sandlådeprogrammiljön genom att länka till Developer Console i Cloud Manager.
+>I den senaste versionen, som du länkar till utvecklarkonsolen direkt från Cloud Manager, kan du inte förlägga en sandlådeprogrammiljö i viloläge. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
 
 #### Använda manuell viloläge {#using-manual-hibernation}
 
@@ -89,6 +89,8 @@ Följ stegen nedan om du vill förvara sandlådeprogrammiljöer manuellt:
 
 1. Gå till **Developer Console**.
 Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
+   >[!NOTE]
+   >genom att länka till Developer Console direkt från Cloud Manager kan du inte förlägga en sandlådeprogrammiljö i viloläge. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
 
 1. Klicka på **Viloläge** enligt bilden nedan:
 
@@ -96,7 +98,7 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
    Eller
 
-   Klicka på **Viloläge** i listan Miljöer, enligt bilden nedan:
+   Klicka på länken **Miljö** längst upp till vänster för att visa miljölistan och klicka sedan på **Viloläge**, enligt bilden nedan:
 
    ![](assets/hibernate-1b.png)
 
@@ -114,6 +116,9 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 1. Gå till **Developer Console**.
 Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
 
+   >[!NOTE]
+   >Du kan också navigera till **Developer Console** för att avaktivera viloläget genom att försöka komma åt författaren eller publiceringstjänsten i en miljö som redan är i viloläge. I så fall visas en landningssida med en länk till Developer Console. Se avsnittet Accessing a Hibernated Environment nedan.
+
    >[!IMPORTANT]
    >Åtkomst till Developer Console definieras av **Cloud Manager - Developer Role** i **Admin Console**. En användare med en utvecklarrollbehörighet kan avplacera en sandlådeprogrammiljö.
 
@@ -123,7 +128,7 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
    Eller
 
-   Klicka på **Avviloläge** i listan **Miljö** , enligt bilden nedan:
+   Klicka på länken **Miljö** i det övre vänstra hörnet för att visa miljölistan och klicka sedan på **Avviloläge**, vilket visas i figuren nedan
 
    ![](assets/de-hibernate-1b.png)
 
@@ -152,7 +157,7 @@ En användare med **Cloud Manager - Utvecklarroll** kan klicka på **utvecklarko
 >[!NOTE]
 > Många funktioner i Cloud Manager kräver specifika behörigheter för att fungera. Om du vill veta mer om roller för användare som styr tillgängligheten för specifika funktioner kan du läsa[i Lägg till användare och roller](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/what-is-required/add-users-roles.html).
 
-#### Viktiga överväganden {#important-considerations}
+### Viktiga överväganden {#important-considerations}
 
 Några viktiga saker att tänka på när det gäller miljöer med viloläge och viloläge är:
 
