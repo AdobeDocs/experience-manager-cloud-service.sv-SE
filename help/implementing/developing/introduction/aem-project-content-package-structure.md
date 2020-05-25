@@ -2,7 +2,10 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: 94182b95cb00923d3e055cb3c2e1d943db70c7a9
+source-git-commit: 9a8d47db7f8ab90748d24c646bd5a8844cf24448
+workflow-type: tm+mt
+source-wordcount: '2352'
+ht-degree: 18%
 
 ---
 
@@ -130,7 +133,7 @@ Rep Init-skript som finns i projektet fungerar som skript, men de kan och bör a
 + Grupper
 + ACL
 
-Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer och kan därmed implicit riktas in i runmode, vilket möjliggör skillnader mellan AEM Author och AEM Publish Services Repo Init-skript, eller till och med mellan Envs (Dev, Stage och Prod).
+Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer, och kan därför implicit användas i runmode, vilket möjliggör skillnader mellan AEM Author och AEM Publish Services Repo Init-skript, eller till och med mellan Envs (Dev, Stage och Prod).
 
 Observera, att när du definierar Användare, och Grupper, anses bara grupper vara en del av programmet, och att de är en del av dess funktion bör definieras här. Organisationens användare och grupper bör fortfarande definieras vid körning i AEM. Om ett anpassat arbetsflöde till exempel tilldelar arbete till en namngiven grupp, bör den gruppen definieras i via Repo Init i AEM-programmet, men om grupperingen bara är organisatorisk, till exempel&quot;Wendy&#39;s Team&quot; och&quot;Sean&#39;s Team&quot;, är dessa bäst definierade och hanteras vid körning i AEM.
 
@@ -188,7 +191,7 @@ Bryter ned mappstrukturen:
 + Mappen på den tredje nivån måste vara antingen
    `application` eller `content`
    + Mappen innehåller `application` kodpaket
-   + Mappens `content` guldfärgade innehållspaketMappnamnet måste motsvara [pakettyperna](#package-types) i de paket som den innehåller.
+   + Mappen innehåller `content` innehållspaket. Mappnamnet måste motsvara [pakettyperna](#package-types) i de paket som den innehåller.
 + Mappen på den fjärde nivån innehåller underpaketen och måste vara någon av:
    + `install` för installation på **både** AEM-redigerare och AEM-publicering
    + `install.author` för installation **endast** på AEM-redigerare
@@ -218,7 +221,7 @@ Lägg bara till poster `<filter root="/apps/<my-app>-packages"/>` för mappar p�
 
 ## Bädda in paket från tredje part {#embedding-3rd-party-packages}
 
-Alla paket måste vara tillgängliga via [Adobes publika arkiv](https://repo.adobe.com/nexus/content/groups/public/com/adobe/) för Maven-felaktigheter eller en tillgänglig offentlig databas med referenser från tredje part för Maven-felaktigheter.
+Alla paket måste vara tillgängliga via [Adobes publika arkiv](https://repo.adobe.com/nexus/content/groups/public/com/adobe/) för Maven-felaktigheter eller en tillgänglig offentlig, refererbar databas för Maven-felaktigheter från tredje part.
 
 Om tredjepartspaketen finns i **Adobes offentliga Maven-databas** behövs ingen ytterligare konfiguration för att Adobe Cloud Manager ska kunna lösa artefakterna.
 
@@ -333,7 +336,7 @@ I `ui.content/pom.xml`filen deklareras pakettypen av direktivet `<packageType>co
 
 ### Markera paket för distribution av Adobe Cloud Manager {#cloud-manager-target}
 
-I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`), lägger du till `<cloudManagerTarget>none</cloudManagerTarget>` i `<properties>`-konfigurationen för plugin-deklarationen `filevault-package-maven-plugin` för att vara säker på att de **inte** distribueras av Adobe Cloud Manager. Behållarpaketet (`all`) ska vara det enda paket som distribueras via Cloud Manager, som i sin tur bäddar in all kod och alla innehållspaket som behövs.
+I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`), lägger du till `<cloudManagerTarget>none</cloudManagerTarget>` i `<properties>`-konfigurationen för plugin-deklarationen `filevault-package-maven-plugin` för att vara säker på att de **inte** distribueras av Adobe Cloud Manager. The container (`all`) package should be the singular package deployed via Cloud Manager, which in turn embeds all required code and content packages.
 
 ```xml
 ...
@@ -485,7 +488,7 @@ Om flera `/apps/*-packages` används i de inbäddade målen måste alla räknas 
 ### Maven Repositories från tredje part {#xml-3rd-party-maven-repositories}
 
 >[!WARNING]
-> Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras för behov.
+> Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras om det finns beroenden.
 
 I reaktorprojektets `pom.xml`exempel lägger du till eventuella direktiv från tredje part om databasen för Maven. Den fullständiga `<repository>` konfigurationen bör vara tillgänglig från tredjepartsprovidern.
 
