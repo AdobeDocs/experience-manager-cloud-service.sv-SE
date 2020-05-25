@@ -4,7 +4,7 @@ description: Sandlådeprogram - molntjänst
 translation-type: tm+mt
 source-git-commit: da965462eddae8b359a6d327a7fe3caf6bfe95ae
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1276'
 ht-degree: 0%
 
 ---
@@ -91,8 +91,8 @@ Följ stegen nedan om du vill förvara sandlådeprogrammiljöer manuellt:
 
 1. Gå till **Developer Console**.
 Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
-   >[!NOTE]
-   >genom att länka till Developer Console direkt från Cloud Manager kan du inte förlägga en sandlådeprogrammiljö i viloläge. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
+   >[!IMPORTANT]
+   >Genom att länka till **utvecklarkonsolen** direkt från Cloud Manager kan du inte förvara en sandlådeprogrammiljö. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
 
 1. Klicka på **Viloläge** enligt bilden nedan:
 
@@ -117,6 +117,9 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
 1. Gå till **Developer Console**.
 Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
+
+   >[!IMPORTANT]
+   >Om du länkar till **utvecklarkonsolen** direkt från Cloud Manager kan du inte avplacera en sandlådeprogrammiljö. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
 
    >[!NOTE]
    >Du kan också navigera till **Developer Console** för att avaktivera viloläget genom att försöka komma åt författaren eller publiceringstjänsten i en miljö som redan är i viloläge. I så fall visas en landningssida med en länk till Developer Console. Se avsnittet Accessing a Hibernated Environment nedan.
