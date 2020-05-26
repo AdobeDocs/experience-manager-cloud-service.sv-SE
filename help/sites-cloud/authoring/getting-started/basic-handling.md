@@ -2,7 +2,10 @@
 title: Grundläggande hantering
 description: Bekväm navigering i AEM och dess grundläggande användning
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 996a1b49889816d3b887d8d568ec56b72bd99074
+workflow-type: tm+mt
+source-wordcount: '2864'
+ht-degree: 4%
 
 ---
 
@@ -60,19 +63,21 @@ Navigeringspanelen:
 
 ![Navigeringspanelen](/help/sites-cloud/authoring/assets/navigation.png)
 
+Titeln på webbläsarfliken uppdateras för att återspegla din position när du navigerar genom konsolerna och innehållet.
+
 Följande konsoler finns i Navigation:
 
 | Konsol | Syfte |
 |---|---|
 | Projekt | Med projektkonsolen får du direktåtkomst till dina projekt. [Projekt är virtuella kontrollpaneler](/help/sites-cloud/authoring/projects/overview.md) som kan användas för att skapa ett team. Sedan kan ni ge teamet tillgång till resurser, arbetsflöden och uppgifter och på så sätt låta andra arbeta mot ett gemensamt mål. |
-| Webbplatser | Med platskonsolerna kan du [skapa, visa och hantera webbplatser](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) som körs på din AEM-instans. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
-| Upplevelsefragment | En [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en fristående upplevelse som kan återanvändas i alla kanaler och ha variationer, vilket sparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger. |
-| Resurser | Med Resurskonsolen kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans.<!--add some kind of assets link--> |
-| Personalisering | Den här konsolen innehåller ett ramverk med verktyg för att [skapa riktat innehåll och presentera personaliserade upplevelser.](/help/sites-cloud/authoring/personalization/overview.md) |
+| Sites | Med platskonsolerna kan du [skapa, visa och hantera webbplatser](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) som körs på din AEM-instans. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
+| Experience Fragments | En [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en fristående upplevelse som kan återanvändas i alla kanaler och ha variationer, vilket sparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger. |
+| Assets | Med Resurskonsolen kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans.<!--add some kind of assets link--> |
+| Personanpassning | Den här konsolen innehåller ett ramverk med verktyg för att [skapa riktat innehåll och presentera personaliserade upplevelser.](/help/sites-cloud/authoring/personalization/overview.md) |
 
 ## Panelen Verktyg {#tools-panel}
 
-På verktygspanelen finns en sidopanel som innehåller en rad kategorier som grupperar liknande verktygskonsoler. Verktygskonsolerna ger tillgång till ett antal specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av ditt innehållslager. <!--The [Tools consoles](/help/sites-administering/tools-consoles.md) provide access to a number of specialized tools and consoles that help you administer your websites, digital assets, and other aspects of your content repository.-->
+På verktygspanelen finns en sidopanel som innehåller en rad kategorier som grupperar liknande verktygskonsoler. The Tools consoles provide access to a number of specialized tools and consoles that help you administer your websites, digital assets, and other aspects of your content repository. <!--The [Tools consoles](/help/sites-administering/tools-consoles.md) provide access to a number of specialized tools and consoles that help you administer your websites, digital assets, and other aspects of your content repository.-->
 
 ![Verktygspanelen](/help/sites-cloud/authoring/assets/tools-panel.png)
 
@@ -88,7 +93,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
    ![Global navigering](/help/sites-cloud/authoring/assets/global-navigation.png)
 
-* [Sök](/help/sites-cloud/authoring/getting-started/search.md)
+* [Sökning](/help/sites-cloud/authoring/getting-started/search.md)
 
    ![Sökknapp](/help/sites-cloud/authoring/assets/search-button.png)
 
@@ -148,7 +153,15 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
    >[!NOTE]
    >
-   >Alternativet **Visa inställningar** är bara tillgängligt i **listvyn** .
+   >Alternativet **Visa inställningar** är bara tillgängligt i **listvyn**.
+
+* Tangentbordsnavigering
+
+   Du kan bara navigera på en webbplats med hjälp av tangentbordet. Då används standardwebbläsarfunktionen för **TABB** -tangenten (eller **OPT+TAB**) för att flytta dig mellan element på sidan som är fokuserbara.
+
+   I **webbplatskonsolen** finns alternativet att **hoppa till huvudinnehållet**. Detta blir synligt när du bläddrar mellan rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
+
+   ![Hoppa till huvudinnehåll](/help/sites-cloud/authoring/assets/skip-to-main-content.png)
 
 ## Få hjälp {#accessing-help}
 
@@ -204,7 +217,7 @@ Den åtgärd som är tillgänglig i verktygsfältet ändras så att den återspe
 
 Hur du [väljer en resurs](#viewing-and-selecting-resources) beror på vyn.
 
-På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **platskonsolen** :
+På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **Sites**-konsolen:
 
 ![Ytterligare alternativ](/help/sites-cloud/authoring/assets/additional-options.png)
 
@@ -216,7 +229,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 I [kortvyn](#card-view) finns vissa åtgärder som snabbikoner och som finns i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
 
-Snabbåtgärderna är synliga när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i konsolen **Platser** :
+Snabbåtgärderna visas när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i konsolen **Platser** :
 
 ![Ytterligare alternativ](/help/sites-cloud/authoring/assets/quick-actions.png)
 
@@ -413,13 +426,13 @@ I tidslinjekolumnen kan du:
       * Kommentarer
       * [Anteckningar](/help/sites-cloud/authoring/fundamentals/annotations.md)
       * [Verksamhet](/help/sites-cloud/authoring/personalization/activities.md)
-      * [Startar](/help/sites-cloud/authoring/launches/overview.md)
+      * [Launches](/help/sites-cloud/authoring/launches/overview.md)
       * [Versioner](/help/sites-cloud/authoring/features/page-versions.md)
       * [Arbetsflöden](/help/sites-cloud/authoring/workflows/overview.md)
          * Med undantag för tillfälliga arbetsflöden eftersom ingen historikinformation sparas för dessa <!--With the exception of [transient workflows](/help/sites-developing/workflows.md#transient-workflows) as no history information is saved for these-->
       * Visa alla
 
-* Lägg till/visa kommentarer om det markerade objektet. Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** är markerat.
+* Lägg till/visa kommentarer om det markerade objektet. Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** markeras.
 
 * Specifika konsoler har ytterligare funktioner. I Platskonsolen kan du till exempel:
 
@@ -434,7 +447,7 @@ De här alternativen är tillgängliga via markeringen bredvid **kommentarsfält
 
 **Referenser** visar alla anslutningar till den valda resursen. I **Sites** Console [visas t.ex. följande referenser](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references) för sidor:
 
-* [Startar](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)
+* [Launches](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)
 * Live-kopior<!--[Live copies](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)-->
 * Språkversioner<!--[Language copies](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)-->
 * Innehållsreferenser:
