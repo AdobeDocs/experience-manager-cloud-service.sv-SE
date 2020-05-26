@@ -1,11 +1,11 @@
 ---
 sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 10e12a8b15e6ea51e8b022deefaefed52780d48a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '181'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 95%
    + [Konfigurera sökformulär](developing/extending/search-forms.md)
 + Distribuera till AEM as a Cloud Service {#deploying}
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
-   + [Konfigurera OSGi för AEM som en molntjänst](deploying/configuring-osgi.md)
+   + [Konfigurera OSGI för AEM as a Cloud Service](deploying/configuring-osgi.md)
 + Dispatcher i molnet {#dispatcher}
    + [Dispatcher i molnet](dispatcher/overview.md)
    + [Innehållsleverans i AEM as a Cloud Service](dispatcher/content-delivery.md)
