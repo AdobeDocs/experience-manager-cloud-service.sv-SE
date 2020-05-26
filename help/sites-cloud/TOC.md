@@ -1,8 +1,11 @@
 ---
-sub-product: Skapa innehåll i AEM som en molntjänst
-user-guide-title: Skapa innehåll i AEM som en molntjänst
-translation-type: tm+mt
+sub-product: Redigera innehåll i AEM as a Cloud Service
+user-guide-title: Redigera innehåll i AEM as a Cloud Service
+translation-type: ht
 source-git-commit: 18d6079ca7ac3fe41f9126b3d0b6e42487076807
+workflow-type: ht
+source-wordcount: '200'
+ht-degree: 100%
 
 ---
 
@@ -33,7 +36,7 @@ source-git-commit: 18d6079ca7ac3fe41f9126b3d0b6e42487076807
       + [Exportera till CSV](authoring/fundamentals/csv-export.md)
       + [Komponenter](authoring/fundamentals/components.md)
       + [Skapa för mobila enheter](authoring/fundamentals/mobile.md)
-      + [Skapa hjälpmedelsanpassat innehåll (WCAG 2.1-överensstämmelse)](authoring/fundamentals/accessible-content.md)
+      + [Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse)](authoring/fundamentals/accessible-content.md)
       + [Felsökning](authoring/fundamentals/troubleshooting.md)
       + [Kortkommandon](authoring/fundamentals/keyboard-shortcuts.md)
    + Redigeringsfunktioner {#features}
