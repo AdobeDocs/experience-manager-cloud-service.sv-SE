@@ -2,9 +2,9 @@
 title: Sandlådeprogram - molntjänst
 description: Sandlådeprogram - molntjänst
 translation-type: tm+mt
-source-git-commit: da965462eddae8b359a6d327a7fe3caf6bfe95ae
+source-git-commit: 22c6a79e68bbcd7329c7b1774d8445c216cdf8a8
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -150,17 +150,17 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
    ![](assets/de-hibernation-img4.png)
 
+#### Behörigheter att ta bort viloläge {#permissions-de-hibernate}
+
+Alla användare med en produktprofil som ger dem tillgång till AEM som molntjänst bör ha tillgång till **Developer Console** så att de kan avplacera miljön i viloläge.
+
+Läs [Lägg till användare och roller](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) i Cloud Manager om hur du ställer in användarbehörigheter.
+
 #### Åtkomst till en miljö i viloläge {#accessing-hibernated-environment}
 
 När användaren gör en webbläsarbegäran mot antingen författaren eller publiceringsnivån i en miljö i viloläge, kommer användaren att få en landningssida som beskriver miljöns viloläge, vilket visas i bilden nedan:
 
 ![](assets/de-hibernation-img5.png)
-
-
-En användare med **Cloud Manager - Utvecklarroll** kan klicka på **utvecklarkonsolen** för att få åtkomst till utvecklarkonsolen och för att avplacera miljön i viloläge.
-
->[!NOTE]
-> Många funktioner i Cloud Manager kräver specifika behörigheter för att fungera. Om du vill veta mer om roller för användare som styr tillgängligheten för specifika funktioner kan du läsa[i Lägg till användare och roller](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/what-is-required/add-users-roles.html).
 
 ### Viktiga överväganden {#important-considerations}
 
