@@ -2,7 +2,10 @@
 title: Din inkorg
 description: Hantera dina uppgifter med inkorgen
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 672f1483c017d791365173c91b0bee5c44c33535
+workflow-type: tm+mt
+source-wordcount: '913'
+ht-degree: 15%
 
 ---
 
@@ -13,7 +16,7 @@ Du kan få meddelanden från olika AEM-områden, inklusive arbetsflöden och pro
 
 * Uppgifter:
    * Dessa kan också skapas vid olika tillfällen i AEM-gränssnittet, till exempel under **Projekt**.
-   * Detta kan vara produkten av ett arbetsflöde **Skapa uppgift** eller **Skapa projektuppgift** .
+   * Dessa kan ha sitt ursprung i arbetsflödessteget **Skapa uppgift** eller **Skapa projektuppgift**.
 * Arbetsflöden:
    * Arbetsobjekt som representerar åtgärder som du behöver utföra på sidinnehåll
       * Detta är produkten av arbetsflödets **deltagarsteg** .
@@ -46,7 +49,7 @@ Så här öppnar du Inkorgen för AEM-meddelanden:
 
 1. Klicka/tryck på indikatorn i verktygsfältet.
 
-1. Välj **Visa alla**. AEM **Inbox** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
+1. Välj **Visa alla**. **AEM -inkorgen** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
    För båda vyerna kan du även definiera [visningsinställningar](#inbox-view-settings). Vilka alternativ som är tillgängliga beror på den aktuella vyn.
@@ -55,7 +58,7 @@ Så här öppnar du Inkorgen för AEM-meddelanden:
 
 >[!NOTE]
 >
->Inkorgen fungerar som en konsol, så använd [Global navigering](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) eller [Sök](/help/sites-cloud/authoring/getting-started/search.md) för att navigera till en annan plats när du är klar.
+>Inkorgen fungerar som en konsol, och du kan använda [Global navigering](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) eller [Sök](/help/sites-cloud/authoring/getting-started/search.md) för att navigera till en annan plats när du är klar.
 
 ### Inkorg - listvy {#inbox-list-view}
 
@@ -72,7 +75,7 @@ I den här vyn visas objekt efter deras placering i kalendern:
 Du kan:
 
 * Välj en specifik vy: **Tidslinje**, **kolumn**, **lista**
-* Ange de uppgifter som ska visas enligt **schema**: **Alla**, **Planerat**, **Pågår**, **Förfaller snart**, **Förfallodatum**
+* Ange de uppgifter som ska visas enligt **Schema**: **Alla**, **Planerade**, **Pågående**, **Förfaller snart**, **Förfallna**
 * Detaljerad information om ett objekt
 * Välj ett datumintervall som vyn ska fokuseras i:
 
@@ -87,7 +90,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    I **kalendervyn** kan du konfigurera:
 
    * **Gruppera efter**
-   * **Schemalägg** eller **ingen**
+   * **Schema** eller **Ingen**
    * **Kortstorlek**
    ![Visningsinställningar för inkorgskalender](/help/sites-cloud/authoring/assets/inbox-calendar-settings.png)
 
@@ -104,6 +107,10 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    ![Visningsdelegeringsinställningar för inkorgslista](/help/sites-cloud/authoring/assets/inbox-delegation.png)
 
 ## Vidta åtgärder för ett objekt {#taking-action-on-an-item}
+
+>[!NOTE]
+>
+>Även om det går att markera mer än ett objekt, kan åtgärder bara vidtas för ett objekt i taget.
 
 1. Om du vill utföra en åtgärd för ett objekt markerar du miniatyrbilden för det aktuella objektet. Ikoner för de åtgärder som är tillämpliga på det objektet visas i verktygsfältet:
 
@@ -128,7 +135,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    >* Arbetsflödesobjekt - [delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
 
 
-1. Beroende på vilket objekt som är markerat startas en åtgärd, till exempel:
+2. Beroende på vilket objekt som är markerat startas en åtgärd, till exempel:
 
    * En dialogruta som är lämplig för åtgärden öppnas
    * En åtgärdsguide startas
@@ -183,7 +190,7 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-cloud/authoring/proj
    >Arbetsobjekt (från ett arbetsflöde) kan inte användas för att skapa ett projekt.
 
 1. Välj **Skapa projekt** i verktygsfältet för att öppna guiden.
-1. Välj lämplig mall och sedan **Nästa**.
+1. Select the appropriate template, then **Next**.
 1. Ange de nödvändiga egenskaperna:
 
    * **Grundläggande**
@@ -212,7 +219,7 @@ Du kan filtrera objekten i listan:
 
    ![Inkorgssökning](/help/sites-cloud/authoring/assets/inbox-search.png)
 
-1. Du kan filtrera de listade objekten enligt ett intervall med villkor, varav många kan förfinas. Exempel:
+1. Du kan filtrera de listade objekten enligt ett intervall med villkor, varav många kan förfinas. Till exempel:
 
    ![Inkorgssökfilter](/help/sites-cloud/authoring/assets/inbox-search-filter.png)
 
