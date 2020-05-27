@@ -2,7 +2,7 @@
 title: Skapa ett program - molntjänst
 description: Skapa ett program - molntjänst
 translation-type: tm+mt
-source-git-commit: 89da3b16c133a423f4c4aa630c8e1dd7d008fb17
+source-git-commit: 7c611cdedaba7f21b88fbafdb207160817e20320
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Om det är första gången du får tillgång till Cloud Manager eller om det int
 
 Beroende på vad användaren har för avsikt att skapa programmet inom gränserna för vad som är tillgängligt för den specifika kunden/organisationen, uppmanas användaren att skicka in en eller flera uppgifter.
 
-![](assets/create-program-2.png)
+![](assets/create-sandbox.png)
 
 >[!NOTE]
 >If a program already exists, then you will see **Add Program** on the top right of the landing page, as shown in the figure below.
@@ -36,7 +36,7 @@ Beroende på vad användaren har för avsikt att skapa programmet inom gränsern
 
 Följ stegen nedan för att skapa ett sandlådeprogram:
 
-1. Välj **Konfigurera en demo** i guiden Skapa program. Användaren skickar programnamnet innan han/hon väljer **Skapa**.
+1. Välj **Konfigurera en sandlåda** i guiden Skapa program. Användaren skickar programnamnet innan han/hon väljer **Skapa**.
 
    ![](assets/create-sandbox.png)
 
@@ -57,7 +57,7 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
 
    ![](assets/create-program-5.png)
 
-1. När icke-produktionsflödet som distribueras till utvecklingsfasen är klart vägleder guiden användaren till antingen åtkomst till AEM (under utveckling) eller distribution av kod till utvecklingsmiljön:
+1. När icke-produktionsflödet distribueras till utvecklingsfasen är klart vägleder guiden användaren till att antingen få åtkomst till AEM (under utveckling) eller distribuera kod till utvecklingsmiljön:
 
    ![](assets/create-program-setup-deploy.png)
 
