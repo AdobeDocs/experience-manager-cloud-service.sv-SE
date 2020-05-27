@@ -2,10 +2,10 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: 9a8d47db7f8ab90748d24c646bd5a8844cf24448
+source-git-commit: 60093232710426d919a45742b1775239944d266d
 workflow-type: tm+mt
-source-wordcount: '2352'
-ht-degree: 18%
+source-wordcount: '2417'
+ht-degree: 17%
 
 ---
 
@@ -237,7 +237,9 @@ Om du lägger till Maven-beroenden följer standardMaven-rutiner, och inbäddnin
 
 För att paketen ska kunna installeras på rätt sätt rekommenderar vi att du skapar beroenden mellan paketen.
 
-Den allmänna regeln är paket som innehåller muterbart innehåll (`ui.content`) som ska vara beroende av det oföränderliga innehållet (`ui.apps`) som stöder återgivning och användning av det muterbara innehållet.
+Den allmänna regeln är paket som innehåller muterbart innehåll (`ui.content`) som ska vara beroende av den oföränderliga koden (`ui.apps`) som stöder återgivning och användning av det muterbara innehållet.
+
+Ett betydande undantag från den här allmänna regeln är om det oföränderliga kodpaketet (`ui.apps` eller något annat) __endast__ innehåller OSGi-paket. I så fall ska inget AEM-paket deklarera ett beroende av det. Detta beror på att oföränderliga kodpaket som __bara__ innehåller OSGi-paket inte är registrerade med AEM Package Manager, och därför kommer alla AEM-paket som är beroende av det att ha ett otillfredsställande beroende och inte kunna installeras.
 
 >[!TIP]
 >
