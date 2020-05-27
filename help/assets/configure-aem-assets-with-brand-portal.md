@@ -2,8 +2,11 @@
 title: Konfigurera AEM Assets as a Cloud Service med varumärkesportalen
 description: Konfigurera AEM Assets as a Cloud Service med varumärkesportalen.
 contentOwner: Vishabh Gupta
-translation-type: ht
-source-git-commit: bbb3327d4bc7cef8eede3169bc14a1d247ee2bdc
+translation-type: tm+mt
+source-git-commit: 00e37e9493bc3dde8a4d83c562a889a67587ada0
+workflow-type: tm+mt
+source-wordcount: '1240'
+ht-degree: 99%
 
 ---
 
@@ -20,7 +23,7 @@ Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 * Varumärkesportalens klientorganisations-URL.
 * En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient.
 
-**Kontakta supporten** för mer information.
+**Kontakta kundtjänst** om du vill ha fler frågor.
 
 ## Skapa en konfiguration {#create-new-configuration}
 
