@@ -3,9 +3,9 @@ title: Konfigurera AEM Assets as a Cloud Service med varumärkesportalen
 description: Konfigurera AEM Assets as a Cloud Service med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 6627f6454430d25f29bc743ad2f81e89f932219f
+source-git-commit: a67acc6b3204d0b590f5eec86e0a9476aeccb0b3
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1703'
 ht-degree: 38%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Manager Assets (AEM) är konfigurerat med varumärkesportalen v
 
 **Hur konfigurationen fungerar?**
 
-Att konfigurera en AEM Assets-molninstans med din varumärkesportal (organisation) är en flerstegsprocess som kräver konfigurationer i båda, AEM Assets-molninstansen samt i Adobe Developer Console.
+När du konfigurerar AEM Assets-molninstansen med en varumärkesportal-klient (organisation) måste du konfigurera båda, AEM Assets-molninstansen samt Adobe Developer Console.
 
 1. I AEM Assets-molninstansen skapar du ett IMS-konto och skapar ett offentligt certifikat (offentlig nyckel).
 1. Skapa ett projekt för din varumärksportal (organisation) i Adobe Developer Console.
@@ -28,9 +28,11 @@ Att konfigurera en AEM Assets-molninstans med din varumärkesportal (organisatio
 1. Testa konfigurationen genom att publicera en resurs från AEM Assets-molninstansen på varumärkesportalen.
 
 >[!NOTE]
->>En innehavare av en varumärkesportal får endast konfigureras med en AEM Assets-molninstans.
->>Konfigurera inte en varumärksportal-klient med flera AEM Assets-molninstanser.
 >
+>En innehavare av en varumärkesportal får endast konfigureras med en instans i molnet för AEM Assets.
+>
+>Konfigurera inte en varumärksportal-klient med flera AEM Assets-molninstanser.
+
 
 ## Förutsättningar {#prerequisites}
 
