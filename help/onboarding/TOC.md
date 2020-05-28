@@ -2,10 +2,10 @@
 sub-product: Onboarding för AEM as a Cloud Service
 user-guide-title: Onboarding för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 17e0c4fb87e67b369cf465b65df973a170fb8ed6
+source-git-commit: 9dda30b0ea72329e26b820b19aeeb6a03f863751
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 96%
+source-wordcount: '133'
+ht-degree: 91%
 
 ---
 
@@ -33,4 +33,6 @@ ht-degree: 96%
 + Tillgänglighet {#accessibility}
    + [AEM as a Cloud Service och riktlinjerna för webbtillgänglighet](accessibility/web-accessibility.md)
    + [En snabbguide till WCAG 2.1](accessibility/quick-guide-wcag.md)
++ Bästa praxis {#best-practices}
+   + [SEO och URL-hantering](best-practices/seo-and-url-management.md)
 + [Översikt över verktygskonsolerna](tools-consoles.md)
