@@ -2,10 +2,10 @@
 title: Hantera miljöer - molntjänst
 description: Hantera miljöer - molntjänst
 translation-type: tm+mt
-source-git-commit: 1f72e8c935dc6cfe1124afd9f1a0fe37a97ded34
+source-git-commit: a4d4e5fb1743d7fe8b7b16bac904dac51143d6f7
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 8%
+source-wordcount: '702'
+ht-degree: 7%
 
 ---
 
@@ -97,7 +97,12 @@ Den här funktionen är inte tillgänglig för produktions-/scenmiljö som anget
 
 ## Åtkomst till Developer Console {#accessing-developer-console}
 
-Välj **Developer Console** i listrutan i **miljökortet** .
+Välj **Developer Console** i listrutan i **miljökortet** . Då öppnas en ny flik i webbläsaren med inloggningssidan på **Developer Console**.
+
+Endast en användare i utvecklarrollen har åtkomst till **utvecklarkonsolen**. Undantaget är för sandlådeprogram, där alla användare med tillgång till Cloud Manager Sandbox Program har tillgång till **Developer Console**.
+
+Mer information finns i [Viloläge och Viloläge i sandlådemiljöer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/sandbox-programs.html#hibernating-introduction) .
+
 
 ![](assets/dev-console1.png)
 
