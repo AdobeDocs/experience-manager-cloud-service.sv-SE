@@ -1,8 +1,11 @@
 ---
 title: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 seo-title: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
-translation-type: ht
-source-git-commit: 70e76205e82b491fa77f65cd4257a79dda17b882
+translation-type: tm+mt
+source-git-commit: c8759ba41813a891664c1cf2d12eaeddbd4aabeb
+workflow-type: tm+mt
+source-wordcount: '3124'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +26,7 @@ Det finns vissa allmänt vedertagna bästa metoder för URL:er.
 
 Ställ följande fråga när du utvärderar URL:er i ett AEM-projekt:
 
-”Skulle en användare kunna beskriva vad sidan är om han/hon bara kunde se URL:en och inget av sidans innehåll?”
+*”Skulle en användare kunna beskriva vad sidan är om han/hon bara kunde se URL:en och inget av sidans innehåll?”*
 
 Om svaret är ja är det troligt att URL:en är lämplig för en sökmotor.
 
