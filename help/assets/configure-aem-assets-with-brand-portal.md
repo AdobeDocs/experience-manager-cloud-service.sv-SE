@@ -3,9 +3,9 @@ title: Konfigurera AEM Assets as a Cloud Service med varumärkesportalen
 description: Konfigurera AEM Assets as a Cloud Service med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: a67acc6b3204d0b590f5eec86e0a9476aeccb0b3
+source-git-commit: 3cb9ea561dbe55ac7ed43ff47e5b57563eaa3f67
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1659'
 ht-degree: 38%
 
 ---
@@ -69,7 +69,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer 
 
 1. Logga in på din AEM Assets-molninstans.
 
-1. Gå till **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]** från **verktygspanelen** ![Tools](assets/tools.png).
+1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
    ![Användargränssnittet för konfiguration av Adobe IMS-kontot](assets/ims-configuration1.png)
 
@@ -134,9 +134,11 @@ Utför följande steg för att generera autentiseringsuppgifter för tjänstkont
 
 1. Verifiera det offentliga certifikatet och klicka på **[!UICONTROL Next]**.
 
-1. I varumärkesportalen skapas en standardprofil för varje organisation. Produktprofilerna skapas i Admin Console för att tilldela användare till grupper (baserat på roller och behörigheter). För konfiguration med varumärkesportalen skapas OAuth-token på organisationsnivå. Därför måste du konfigurera standardproduktprofilen för din organisation.
+1. Select the default product profile **[!UICONTROL Assets Brand Portal]** and click **[!UICONTROL Save configuration]**.
 
-   Välj standardproduktprofil **[!UICONTROL Assets Brand Portal]**.
+   <!-- 
+   In Brand Portal, a default profile is created for each organization. The Product Profiles are created in admin console for assigning users to groups (based on the roles and permissions). For configuration with Brand Portal, the OAuth token is created at organization level. Therefore, you must configure the default Product Profile for your organization. 
+   -->
 
    ![Välj produktprofil](assets/service-account4.png)
 
@@ -144,7 +146,7 @@ Utför följande steg för att generera autentiseringsuppgifter för tjänstkont
 
    >[!NOTE]
    >
-   >Du kan visa autentiseringsuppgifterna och utföra andra åtgärder (generera JWT-tokens, kopiera autentiseringsuppgifter, hämta klienthemligheter osv.) efter behov.
+   >Du kan visa autentiseringsuppgifterna och utföra andra åtgärder (generera JWT-tokens, kopiera autentiseringsuppgifter, hämta klienthemlighet o.s.v.) efter behov.
 
 1. Kopiera från **[!UICONTROL Client Credentials]** fliken **[!UICONTROL client ID]**.
 
@@ -237,7 +239,7 @@ Så här konfigurerar du molntjänsten Brand Portal:
 
 1. Logga in på din AEM Assets-molninstans.
 
-1. Gå till **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]** från **verktygspanelen** ![Tools](assets/tools.png).
+1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
 
 1. Klicka på **[!UICONTROL Create]** på sidan Varumärksportal-konfigurationer.
 
@@ -257,7 +259,7 @@ Utför följande steg för att validera konfigurationen:
 
 1. Logga in på din AEM Assets-molninstans.
 
-1. Gå till **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]** från **verktygspanelen** ![Tools](assets/tools.png).
+1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]**.
 
    ![](assets/test-bpconfig1.png)
 
@@ -315,7 +317,7 @@ Du kan kontrollera loggarna för detaljerad information om de åtgärder som utf
 
 Vi har till exempel publicerat en resurs från AEM Assets till varumärkesportalen för att validera konfigurationen.
 
-1. Follow the steps (from 1 to 4) as shown in **[!UICONTROL Test Connection]** and navigate to the distribution agent page.
+1. Följ stegen (från 1 till 4) som visas i avsnittet [för](#test-configuration) testanslutning och navigera till sidan för distributionsagenten.
 
 1. Klicka på **[!UICONTROL Logs]** för att visa distributionsloggarna. Bearbetnings- och felloggarna visas här.
 
