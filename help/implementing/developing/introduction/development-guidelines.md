@@ -2,7 +2,10 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Fylls i
 translation-type: tm+mt
-source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
+source-git-commit: 8e8863d390132ff8df943548b04e9d7c636c4248
+workflow-type: tm+mt
+source-wordcount: '1588'
+ht-degree: 1%
 
 ---
 
@@ -103,7 +106,7 @@ Om du vill aktivera DEBUG-loggnivån anger du
 ``` /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level ```
 
 egenskap som ska felsökas. Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom den genererar många loggar.
-En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Exempel:
+En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
 ``` DEBUG 3 WebApp Panel: WebApp successfully deployed ```
 
@@ -156,6 +159,10 @@ Som framgår nedan kan utvecklare lösa paketberoenden och -servrar:
 Utvecklarkonsolen är också användbar vid felsökning och har en länk till verktyget Förklara fråga:
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
+
+För vanliga program definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som en molntjänst. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+
+
 
 ### AEM Staging and Production Service {#aem-staging-and-production-service}
 
