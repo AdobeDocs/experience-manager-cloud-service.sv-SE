@@ -2,9 +2,9 @@
 title: Sandlådeprogram - molntjänst
 description: Sandlådeprogram - molntjänst
 translation-type: tm+mt
-source-git-commit: 22c6a79e68bbcd7329c7b1774d8445c216cdf8a8
+source-git-commit: a4d4e5fb1743d7fe8b7b16bac904dac51143d6f7
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1285'
 ht-degree: 0%
 
 ---
@@ -86,6 +86,9 @@ Du kan manuellt förvara ditt sandlådeprogram från utvecklarkonsolen på två 
 
 * Skärm för miljödetaljer
 * Miljölistskärm
+
+>[!NOTE]
+>Alla användare av Cloud Manager har tillgång till Developer Console för ett sandlådeprogram.
 
 Följ stegen nedan om du vill förvara sandlådeprogrammiljöer manuellt:
 
