@@ -2,7 +2,7 @@
 title: Skapa ett program - molntjänst
 description: Skapa ett program - molntjänst
 translation-type: tm+mt
-source-git-commit: 7c611cdedaba7f21b88fbafdb207160817e20320
+source-git-commit: 9dd6cd0661cceb680f36a382aec16fad7c281301
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Följ stegen nedan för att skapa ett vanligt program:
 
 1. Välj **Konfigurera för produktion** i guiden Skapa program för att skapa ett vanligt program. Användaren kan godkänna standardprogramnamnet eller redigera det innan du väljer **Fortsätt**.
 
-   ![](assets/set-up-prod1.png)
+   ![](assets/create-prod1.png)
 
 1. Användaren väljer lösningar som ska inkluderas i programmet på skärmen som visas efter skärmen ovan.
 
