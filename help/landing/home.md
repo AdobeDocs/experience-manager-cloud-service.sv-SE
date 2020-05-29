@@ -2,10 +2,10 @@
 title: Användarhandböcker om Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 45e17deb7a08deaaf2af07ca6ab3b8ee80bcb21f
+source-git-commit: 1ce5e25ff9cfe36e43abb765318a9ffc10b0678c
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 94%
+source-wordcount: '315'
+ht-degree: 95%
 
 ---
 
@@ -24,7 +24,7 @@ På den här sidan visas användarhandböckerna för självhjälp för Experienc
 | [Onboarding](/help/onboarding/home.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du får åtkomst och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Lär dig hur du administrerar Experience Manager Sites as a Cloud Service. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du administrerar Experience Manager Assets as a Cloud Service. |
-| [Gå till AEM som användarhandbok för molntjänster](/help/move-to-cloud-service/home.md) | Förstå övergången till molntjänster. |
+| [Gå till AEM som molntjänst](/help/move-to-cloud-service/home.md) | Förstå övergången till molntjänster. |
 | [Användarhandbok om implementering](/help/implementing/home.md) | Lär dig hur du anpassar distributionen av Experience Manager as a Cloud Service, med bland annat ämnen om utvecklingsdistribution. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar lösningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
