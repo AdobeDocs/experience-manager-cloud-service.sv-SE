@@ -2,7 +2,7 @@
 title: Flytta till AEM som molntjänst
 description: Adobe Experience Manager som en molntjänst som går över till AEM som självhjälp för molntjänster och dokumentationslänkar
 translation-type: tm+mt
-source-git-commit: 3478827949356c4a4f5133b54c6cf809f416efef
+source-git-commit: d269ed7dbc99480fa15aff30304b1c58a589d2f6
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 57%
