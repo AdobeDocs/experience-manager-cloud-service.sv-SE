@@ -2,10 +2,10 @@
 title: Använda verktyget Innehållsöverföring
 description: Använda verktyget Innehållsöverföring
 translation-type: tm+mt
-source-git-commit: 3478827949356c4a4f5133b54c6cf809f416efef
+source-git-commit: f154ffacbeeee1993a9cc3bd3bd274be33dca7a7
 workflow-type: tm+mt
-source-wordcount: '1412'
-ht-degree: 2%
+source-wordcount: '1527'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,8 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du kör verkt
 
 * Om du använder en *sandlådemiljö* måste du uppgradera din miljö till version 29 maj 2020 eller senare. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
+* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra administrationsgruppen i den molntjänstinstans som du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda verktyget Innehållsöverföring.
+
 * Under extraheringsfasen körs verktyget Innehållsöverföring på en aktiv AEM-källinstans.
 
 * Författarens *matningsfas* kommer att skalas ned för hela författardistributionen. Detta innebär att författaren AEM inte är tillgänglig under hela importen.
@@ -29,7 +31,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du kör verkt
 Verktyget Innehållsöverföring kan laddas ned som en zip-fil från portalen för programdistribution. Du kan installera paketet via Package Manager på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
->Mer information finns i [Åtkomst till AEM som en molntjänst-SDK](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html#accessing-the-aem-as-a-cloud-service-sdk) .
+>Hämta verktyget Innehållsöverföring från [Adobe Experience Cloud](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
 
 ## Använda verktyget Innehållsöverföring {#running-tool}
 
@@ -120,7 +122,8 @@ Följ stegen nedan för att extrahera din migreringsuppsättning från verktyget
    ![image](/help/move-to-cloud-service/content-transfer-tool/assets/extract-4.png)
 
    >[!NOTE]
-   > Du måste uppdatera sidan för att visa den uppdaterade statusen.
+   >Du måste uppdatera sidan för att visa den uppdaterade statusen.
+   >När extraheringsfasen startas skapas ett skrivlås som släpps efter *60 sekunder*. Om extraheringen stoppas måste du alltså vänta en minut på att låset ska frisläppas innan du startar extraheringen igen.
 
 #### Extrahering uppifrån och ned {#top-up-extraction-process}
 
@@ -250,10 +253,12 @@ Filerna som skapas i *OUT_DIR* som anges ovan för enhetlighet kan sedan kontrol
 
 Som användare kan du se följande beteendeförändringar i användargränssnittet för verktyget Innehållsöverföring:
 
-1. Användaren skapar en migreringsuppsättning för en författares URL (Utveckling/scen/Produktion) och utför extrahering och förtäring.
+* Användaren skapar en migreringsuppsättning för en författares URL (Utveckling/scen/Produktion) och utför extrahering och förtäring.
 
-1. Användaren skapar sedan en ny migreringsuppsättning för samma författar-URL och utför extrahering och förtäring på den nya migreringsuppsättningen. Gränssnittet visar att den första migreringsuppsättningens inmatningsstatus ändras till **MISSLYCKAD** och att inga loggar är tillgängliga.
+* Användaren skapar sedan en ny migreringsuppsättning för samma författar-URL och utför extrahering och förtäring på den nya migreringsuppsättningen. Gränssnittet visar att den första migreringsuppsättningens inmatningsstatus ändras till **MISSLYCKAD** och att inga loggar är tillgängliga.
 
-1. Detta innebär inte att det inte gick att lägga till den första migreringsuppsättningen. Det här beteendet syns eftersom det tidigare intagningsjobbet tas bort när ett nytt intagsjobb startas. Därför bör ändringsstatusen för den första migreringsuppsättningen ignoreras.
+* Detta innebär inte att det inte gick att lägga till den första migreringsuppsättningen. Det här beteendet syns eftersom det tidigare intagningsjobbet tas bort när ett nytt intagsjobb startas. Därför bör ändringsstatusen för den första migreringsuppsättningen ignoreras.
+
+* Ikonerna i gränssnittet för verktyget Innehållsöverföring kan se annorlunda ut än skärmbilderna som visas i den här guiden, eller så visas de inte alls beroende på version av AEM-källinstansen.
 
 
