@@ -2,9 +2,9 @@
 title: Bildprofiler för Dynamic Media
 description: Skapa bildprofiler som innehåller inställningar för oskarp mask, smart beskärning eller smarta färgrutor, eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
 translation-type: tm+mt
-source-git-commit: 937b06829f290b1e5a2108c456a759100c450a14
+source-git-commit: 16fa9a9783f42d0a9dcf541613aedb890cb41158
 workflow-type: tm+mt
-source-wordcount: '2567'
+source-wordcount: '2570'
 ht-degree: 11%
 
 ---
@@ -16,11 +16,11 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 ## Beskärningsalternativ {#crop-options}
 
-Du kan välja mellan två bildbeskärningsalternativ och ett alternativ för att automatisera skapandet av färg- och bildfärgrutor.
+<!-- CQDOC-16069 -->Smart Crop coordinates are aspect ratio dependent. That is, for the various smart crop settings in an image profile, if the aspect ratio is the same for the added dimensions that are in the image profile, then the same aspect ratio is sent to Dynamic media. Because of this, Adobe recommends that you use the same crop area. Doing so will ensure that there is no impact to different dimensions used in the image profile.
 
->[!IMPORTANT]
->
->Var medveten om att varje generering av Smart Crop som du skapar kräver ytterligare bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du *bara* använder det i mappar där det behövs.
+Tänk på att varje generering av SmartCrop som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du *bara* använder det i mappar där det behövs.
+
+Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera skapandet av färg- och bildfärgrutor.
 
 <table>
  <tbody>
@@ -39,7 +39,7 @@ Du kan välja mellan två bildbeskärningsalternativ och ett alternativ för att
      <li>Startpunkt för beskärning: Vänster är X och Överkant är Y</li>
      <li>Vågrät beräkning: vågrät pixeldimension för originalbilden minus vänster och sedan minus höger.</li>
      <li>Lodrät beräkning: vertikal pixelhöjd minus överkant och sedan minus underkant.</li>
-    </ul> <p>Anta till exempel att du har en bild på 4 000 x 3 000 pixlar. Du använder värden: Top=250; Bottom=500; Vänster=300; Höger=700.</p> <p>Från övre vänstra (300,250) beskär med fyllningsutrymmet (4000-300-700, 3000-250-500 eller 3000,2250).</p> </td>
+    </ul> <p>Anta till exempel att du har en bild på 4 000 x 3 000 pixlar. Du använder värden: Top=250, Bottom=500, Left=300, Right=700.</p> <p>Från övre vänstra (300,250) beskär med fyllningsutrymmet (4000-300-700, 3000-250-500 eller 3000,2250).</p> </td>
   </tr>
   <tr>
    <td>Smart beskärning</td>
@@ -49,7 +49,7 @@ Du kan välja mellan två bildbeskärningsalternativ och ett alternativ för att
   <tr>
    <td>Färg och bildfärgruta</td>
    <td>Generera en färgruta för varje bild gruppvis.</td>
-   <td><p><strong>Obs</strong>: Smarta färgrutor stöds inte i Dynamic Media Classic.</p> <p>Hitta och generera högkvalitativa färgrutor automatiskt från produktbilder som visar färg eller textur.</p> <p>Om du vill använda färg- och bildfärgruta väljer du <strong>Smart beskärning</strong> i listrutan Beskärningsalternativ. Aktivera sedan funktionen till höger om Färg och Bildfärgruta. Ange ett pixelvärde i textrutorna Bredd och Höjd.</p> <p>Alla bildbeskärningar är tillgängliga från renderingslisten, men färgrutor används bara via funktionen Kopiera URL. Observera att du måste använda en egen visningskomponent för att återge färgrutan på webbplatsen. (Undantaget är Carousel banners. Dynamic Media är visningskomponenten för den färgruta som används i karusellbanderoller.)</p> <p><strong>Använda färgrutor</strong></p> <p>URL:en för färgrutor är okomplicerad. Det vill säga:</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>där <code>:Swatch</code> läggs till i tillgångsbegäran.</p> <p><strong>Använda färgrutor</strong></p> <p>Om du vill använda färgrutor gör du en <code>req=userdata</code> begäran med följande:</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>Följande är till exempel en färgruteresurs i Dynamic Media Classic (Scene7):</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>och här är färgruteresursens motsvarande <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>Svaret är <code>req=userdata</code> följande:</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>Obs</strong>: Smarta färgrutor stöds inte i Dynamic Media Classic.</p> <p>Hitta och generera högkvalitativa färgrutor automatiskt från produktbilder som visar färg eller textur.</p> <p>Om du vill använda färg- och bildfärgruta väljer du <strong>Smart beskärning</strong> i listrutan Beskärningsalternativ. Aktivera sedan funktionen till höger om Färg och Bildfärgruta. Ange ett pixelvärde i textrutorna Bredd och Höjd.</p> <p>Alla bildbeskärningar är tillgängliga från renderingslisten, men färgrutor används bara via funktionen Kopiera URL. Observera att du måste använda en egen visningskomponent för att återge färgrutan på webbplatsen. (Undantaget är Carousel banners. Dynamic Media tillhandahåller visningskomponenten för den färgruta som används i karusellbanderoller.)</p> <p><strong>Använda färgrutor</strong></p> <p>URL:en för färgrutor är okomplicerad. Det vill säga:</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>där <code>:Swatch</code> läggs till i tillgångsbegäran.</p> <p><strong>Använda färgrutor</strong></p> <p>Om du vill använda färgrutor gör du en <code>req=userdata</code> begäran med följande:</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>Följande är till exempel en färgruteresurs i Dynamic Media Classic (Scene7):</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>och här är färgruteresursens motsvarande <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>Svaret är <code>req=userdata</code> följande:</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
@@ -274,6 +274,6 @@ Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** el
 1. Tryck på AEM-logotypen och navigera **[!UICONTROL Assets]** sedan till mappen som du vill ta bort en bildprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Klicka på **[!UICONTROL Image Profiles]** fliken.
-1. I listrutan **[!UICONTROL Profile Name]** väljer du **[!UICONTROL None]** och sedan trycker du på **[!UICONTROL Save & Close]**.
+1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save & Close]**.
 
    För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
