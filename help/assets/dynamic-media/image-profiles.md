@@ -2,9 +2,9 @@
 title: Bildprofiler för Dynamic Media
 description: Skapa bildprofiler som innehåller inställningar för oskarp mask, smart beskärning eller smarta färgrutor, eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
 translation-type: tm+mt
-source-git-commit: 39c4bb1fe5af9746ee824677f3de018d8ec36641
+source-git-commit: 59dacf83fd3df03bf9cc62d7816b8b7d7ee5ab9b
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2651'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,9 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 ## Beskärningsalternativ {#crop-options}
 
-<!-- CQDOC-16069 -->Smart Crop coordinates are aspect ratio dependent. That is, for the various smart crop settings in an image profile, if the aspect ratio is the same for the added dimensions that are in the image profile, then the same aspect ratio is sent to Dynamic media. Because of this, Adobe recommends that you use the same crop area. Doing so will ensure that there is no impact to different dimensions used in the image profile.
+<!-- CQDOC-16069 for the paragraph directly below -->
+
+Koordinaterna för smart beskärning är proportionella. Det vill säga, för de olika inställningarna för smart beskärning i en bildprofil, skickas samma proportioner till Dynamic Media om proportionerna är desamma för de nya måtten i bildprofilen. Därför rekommenderar Adobe att du använder samma beskärningsområde. Om du gör det påverkas inte de olika måtten som används i bildprofilen.
 
 Tänk på att varje generering av SmartCrop som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du *bara* använder det i mappar där det behövs.
 
