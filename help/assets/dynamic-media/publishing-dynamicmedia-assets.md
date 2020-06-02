@@ -1,19 +1,23 @@
 ---
 title: Publicera dynamiska medieresurser
 description: Publicera dynamiska medieresurser
+contentOwner: Rick Brough
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: d84a6692f2d0aae496bd2bd98ac99c2663f3fe52
+workflow-type: tm+mt
+source-wordcount: '428'
+ht-degree: 3%
 
 ---
 
 
 # Publishing Dynamic Media Assets {#publishing-dynamic-media-assets}
 
-Du publicerar dina dynamiska medieresurser genom att välja resurserna och trycka på **[!UICONTROL Publicera]**. När dina dynamiska medieresurser har publicerats är de tillgängliga för dig så att du kan inkludera dem på en webbsida via URL eller genom att bädda in dem.
+Du publicerar dina dynamiska medieresurser genom att välja de resurser du redan har överfört och trycka **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in kod på sidan.
 
 Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. See [Configuring Dynamic Media](config-dm.md).
 
-In the **[!UICONTROL Card View]**, a small globe icon appears directly below an asset&#39;s name to indicate that it is published. In the **[!UICONTROL List View]**, a **[!UICONTROL Published]** column indicates which assets are published or which are not.
+I **[!UICONTROL Card View]** visas en liten globikon direkt under namnet på en resurs och till vänster om datumet och tiden för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
 >[!NOTE]
 >
@@ -23,7 +27,7 @@ Om du tänker publicera videomaterial direkt efter kodningen bör du kontrollera
 
 See also [Linking URLs to your Web Application](linking-urls-to-yourwebapplication.md).
 
-Se även [Bädda in videovisningsprogrammet på en webbsida.](embed-code.md)
+Se även [Bädda in Dynamic Media Video Viewer eller Image Viewer på en webbsida.](embed-code.md)
 
 >[!NOTE]
 >
