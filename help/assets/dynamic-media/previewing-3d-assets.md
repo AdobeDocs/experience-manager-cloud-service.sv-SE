@@ -2,25 +2,25 @@
 title: Förhandsgranska 3D-resurser
 description: Lär dig hur du förhandsgranskar 3D-resurser
 translation-type: tm+mt
-source-git-commit: e8b6f7e80c1a19c645e1c848a6bfe5c082935d21
+source-git-commit: d84a6692f2d0aae496bd2bd98ac99c2663f3fe52
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '560'
 ht-degree: 4%
 
 ---
 
 
-# Förhandsgranska 3D-resurser{#previewing-3d-assets}
+# Förhandsgranska 3D-resurser i AEM{#previewing-3d-assets}
 
-Experience Manager stöder överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
+Adobe Experience Manager har stöd för överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
 
 Det interaktiva 3D-visningsprogrammet finns på sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/dynamic-media/assets-3d.md). -->
 
-## Format som stöds för 3D-förhandsgranskning{#supported-3d-previewing-assets}
+## Format som stöds för 3D-förhandsgranskning i AEM{#supported-3d-previewing-assets}
 
-Interaktiv 3D-förhandsgranskning stöder följande filformat:
+Interaktiv 3D-förhandsgranskning i AEM stöder följande filformat:
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
@@ -40,13 +40,13 @@ Interaktiv 3D-förhandsgranskning stöder följande filformat:
     material_0_baseColor.
     jpegmaterial_0_normal.jpeg
 
-## Prestandaöverväganden när du förhandsgranskar 3D-resurser{#performance-3d-previewing-assets}
+## Prestandaöverväganden när du förhandsgranskar 3D-resurser i AEM{#performance-3d-previewing-assets}
 
 Hur lång tid det tar att öppna en 3D-resurs på visningssidan för resursinformation beror på flera faktorer, till exempel bandbredd, bildkomplexitet och fördröjningar för servern.
 
 Dessutom är funktioner i klientdatorn - t.ex. en arbetsstation, bärbar dator eller en mobil touchenhet - också viktiga att tänka på när du manipulerar kameran interaktivt. Ett relativt kraftfullt system med bra grafikfunktioner kan göra den interaktiva 3D-visningen smidigare och mer gynnsam.
 
-**Förhandsgranska 3D-resurser**
+**Förhandsgranska 3D-resurser i AEM**
 
 1. Kontrollera att du har överfört 3D-resurser till AEM.
 See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/manage-digital-assets.md#uploading-assets).
