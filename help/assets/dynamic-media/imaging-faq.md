@@ -2,7 +2,10 @@
 title: Smart bildbehandling
 description: Smart bildbehandling utnyttjar varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang.
 translation-type: tm+mt
-source-git-commit: a934f28f74f0ff9ae68d7507290851dc5ca907e5
+source-git-commit: d84a6692f2d0aae496bd2bd98ac99c2663f3fe52
+workflow-type: tm+mt
+source-wordcount: '1669'
+ht-degree: 0%
 
 ---
 
@@ -87,7 +90,7 @@ Nej. Smart Imaging fungerar sömlöst med befintliga bild-URL:er och bildförins
 
 Se även [Är jag berättigad att använda Smart Imaging?](#am-i-eligible-to-use-smart-imaging) för att förstå vad som krävs för smart bildbehandling.
 
-## Fungerar Smart Mmaging med HTTPS? Vad sägs om HTTP/2? {#does-smart-imaging-working-with-https-how-about-http}
+## Fungerar Smart Imaging med HTTPS? Vad sägs om HTTP/2? {#does-smart-imaging-working-with-https-how-about-http}
 
 Smart Imaging fungerar med bilder som levereras via HTTP eller HTTPS. Dessutom fungerar det även över HTTP/2.
 
@@ -100,7 +103,7 @@ För att kunna använda Smart Imaging måste företagets konto för Dynamic Medi
 
 Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
 
-Tryck på **[!UICONTROL Inställningar > Programinställningar > Allmänna inställningar]**. Leta efter fältet **[!UICONTROL Publicerat servernamn]**. Om du för närvarande använder en allmän domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången när du skickar in en teknisk supportanmälan.
+Tryck på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet som är märkt **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången när du skickar in en teknisk supportanmälan.
 
 Din första anpassade domän kostar inget extra med en Dynamic Media-licens.
 
@@ -116,17 +119,17 @@ Du måste initiera begäran om att använda smart bildåtergivning; den inte akt
 
       Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
 
-      Klicka på **[!UICONTROL Inställningar > Programinställningar > Allmänna inställningar]**.
+      Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**.
 
-      Leta efter fältet **[!UICONTROL Publicerat servernamn]**.
+      Leta efter fältet som är märkt **[!UICONTROL Published Server Name]**.
    1. Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
    1. Kontrollera att du använder en dedikerad domän som `images.company.com` eller `mycompany.scene7.com`och inte en allmän domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
 
       Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
 
-      Klicka på **[!UICONTROL Inställningar > Programinställningar > Allmänna inställningar]**.
+      Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**.
 
-      Leta efter fältet **[!UICONTROL Publicerat servernamn]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+      Leta efter fältet som är märkt **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
    1. Ange om du även vill att detta ska fungera över HTTP/2.
 
 1. Den tekniska supporten lägger till dig i väntelistan för Smart Imaging-kunder baserat på i vilken ordning begäranden skickades.
@@ -135,8 +138,8 @@ Du måste initiera begäran om att använda smart bildåtergivning; den inte akt
 1. Du meddelas när du är klar via supporten.
 1. För att maximera prestandaförbättringarna av Smart Imaging rekommenderar Adobe att du anger TTL-värdet (Time To Live) till 24 timmar eller längre. TTL-värdet definierar hur länge resurser cachas av CDN. Så här ändrar du den här inställningen:
 
-   1. Om du använder Dynamic Media Classic klickar du på **[!UICONTROL Inställningar > Programinställningar > Publiceringsinställningar > Bildserver]**. Ange **[!UICONTROL standardvärdet för Klientcachetstid till Live]** till 24 eller längre.
-   1. Om du använder Dynamic Media följer du [dessa anvisningar](config-dm.md). Ange **[!UICONTROL utgångsvärdet]** 24 timmar eller längre.
+   1. Om du använder Dynamic Media Classic klickar du på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]** värdet 24 eller längre.
+   1. Om du använder Dynamic Media följer du [dessa anvisningar](config-dm.md). Ange **[!UICONTROL Expiration]** värdet 24 timmar eller längre.
 
 ## När kan jag förvänta mig att mitt konto ska aktiveras med Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
@@ -154,12 +157,12 @@ Under den första övergången träffar de icke-cachelagrade bilderna direkt Ado
 ## Hur kan jag verifiera om smart bildbehandling fungerar som väntat?  {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. När ditt konto har konfigurerats med smart bildåtergivning läser du in en URL-adress för en bild i Dynamic Media Classic (Scene7)/Dynamic Media i webbläsaren.
-1. Öppna panelen Chrome developer genom att klicka på **[!UICONTROL View > Developer > Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
+1. Öppna Chrome-utvecklarfönstret genom att klicka **[!UICONTROL View > Developer > Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
 
 1. Kontrollera att cache är inaktiverat när utvecklingsverktygen är öppna.
 
-   * I Windows navigerar du till inställningarna i rutan för utvecklarverktyget och markerar kryssrutan **[!UICONTROL Inaktivera cache (när utvecklingsverktygen är öppna)]** .
-   * On Mac – in the developer pane, under the **[!UICONTROL Network]** tab, select **[!UICONTROL disable cache]** .
+   * I Windows navigerar du till inställningarna i rutan för utvecklarverktyget och markerar sedan **[!UICONTROL Disable cache (while devtools is open)]** kryssrutan.
+   * På Mac - i utvecklarrutan, under **[!UICONTROL Network]** fliken, väljer du **[!UICONTROL disable cache]** .
 
 1. Observera att innehållstypen har omvandlats till lämpligt format. På följande skärmbild visas en PNG-bild som konverteras dynamiskt till WebP i Chrome.
 1. Upprepa testet i olika webbläsare och under olika användarförhållanden.
