@@ -2,7 +2,10 @@
 title: AEM as a Cloud Service SDK
 description: Fylls i
 translation-type: tm+mt
-source-git-commit: f15d5087a1bcb7691e159db1a595f6cc20f2b2c6
+source-git-commit: df6e6bc95b5f0489d0da034c27d8f3a4314a6e27
+workflow-type: tm+mt
+source-wordcount: '1023'
+ht-degree: 0%
 
 ---
 
@@ -37,24 +40,8 @@ Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller ti
 </dependency>
 ```
 
->[!NOTE] Versionsposten för SDK ska matcha versionen av AEM som en molntjänst. Du kan se vilken version du använder genom att logga in på AEM, sedan gå till frågetecknet i skärmens övre högra hörn och välja **[!UICONTROL Om Adobe Experience Manager]**
+>[!NOTE] Versionsposten för SDK ska matcha versionen av AEM som en molntjänst. Du kan se vilken version du använder genom att logga in på AEM, sedan gå till frågetecknet i skärmens övre högra hörn och välja **[!UICONTROL About Adobe Experience Manager]**
 
-* Fjärrkoordinaten för maven-databasen där paketet finns bör inkluderas i pom-filen.
-
-```
-<repository>
-    <id>adobe-aem-releases</id>
-    <name>Adobe AEM Repository</name>
-    <url>https://downloads.experiencecloud.adobe.com/content/maven/public</url>
-    <releases>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-    </releases>
-    <snapshots>
-        <enabled>false</enabled>
-    </snapshots>
-</repository>
-```
 
 ## Uppdatera ett lokalt projekt med en ny SDK-version {#refreshing-a-local-project-with-a-new-skd-version}
 
