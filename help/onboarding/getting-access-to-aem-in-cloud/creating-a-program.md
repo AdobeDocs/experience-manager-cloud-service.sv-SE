@@ -2,9 +2,9 @@
 title: Skapa ett program - molntjänst
 description: Skapa ett program - molntjänst
 translation-type: tm+mt
-source-git-commit: 9dd6cd0661cceb680f36a382aec16fad7c281301
+source-git-commit: b2549ac13f996449bc41ac18ba6afbf22e116597
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
 
    ![](assets/create-program-5.png)
 
-1. När icke-produktionsflödet distribueras till utvecklingsfasen är klart vägleder guiden användaren till att antingen få åtkomst till AEM (under utveckling) eller distribuera kod till utvecklingsmiljön:
+1. När icke-produktionsflödet som distribueras till utvecklingsfasen är klart vägleder guiden användaren till antingen åtkomst till AEM (under utveckling) eller distribution av kod till utvecklingsmiljön:
 
    ![](assets/create-program-setup-deploy.png)
 
@@ -66,7 +66,11 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
 
    ![](assets/create-program-a1.png)
 
+## Ta bort ett sandlådeprogram {#delete-sandbox-program}
 
+En sandlådeprogramanvändare i *Business Owner* eller *Deployment Manager* -rollen i Cloud Manager kan ta bort sin produktions- och scenmiljö som angetts via användargränssnittet i Cloud Manager.
+
+Alternativet Ta bort är tillgängligt både på miljökortet på sidan *Översikt* och på sidan **Miljö** . Om du väljer borttagningsalternativet för antingen produktion eller scen tas även det andra bort i uppsättningen.
 
 ## Skapa ett vanligt program {#create-regular-program}
 
