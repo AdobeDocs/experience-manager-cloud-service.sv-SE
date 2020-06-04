@@ -1,8 +1,11 @@
 ---
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
-translation-type: ht
-source-git-commit: 7fe5761e14288349bbdce9d2c4e9e89e8d0a9e48
+translation-type: tm+mt
+source-git-commit: fd66d7015fb2722eec07d58908844e3232e3150a
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 99%
 
 ---
 
@@ -83,6 +86,7 @@ source-git-commit: 7fe5761e14288349bbdce9d2c4e9e89e8d0a9e48
    + [Smart bildbehandling](dynamic-media/imaging-faq.md)
    + [Leverera Dynamic Media-resurser](dynamic-media/delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](dynamic-media/hotlink-protection.md)
+   + [Dimensionella 3D-bilder](dynamic-media/assets-3d.md)
    + [Bilduppsättningar](dynamic-media/image-sets.md)
    + [Panoramabilder](dynamic-media/panoramic-images.md)
    + [Blandade medieuppsättningar](dynamic-media/mixed-media-sets.md)
