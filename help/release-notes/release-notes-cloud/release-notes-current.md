@@ -2,9 +2,9 @@
 title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
 translation-type: tm+mt
-source-git-commit: c5ee964fad3e1430e7c08f0cca76aecfae8bd44f
+source-git-commit: 41684858f1fe516046b9601c1d869fff180320e0
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -120,17 +120,12 @@ Utbilda förbättrade smarta taggar för mer intuitiv utbildning i Smarta taggar
 
 **Stöd för konsumtion, förgranskning och leverans av 3D-material**
 
-Organisationer kan nu lagra och använda 3D-filer i AEM Resurser. Användaren kan ladda upp, förhandsgranska och använda en mängd olika centrala 3D-filer, t.ex. .obj-, .stl-, .gltf- och .glb-filer. Med tillägg av [!DNL Dynamic Media]kan 3D-upplevelser konfigureras och levereras via agnostiska URL:er eller visningsprogram. Detta inkluderar en [!DNL Dynamic Media] 3D Experience Viewer, Sites 3D Viewer-komponent och möjligheten att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR).
-
-<!-- TBD: Add link to the DM help article, if any. -->
+Organisationer kan nu lagra och använda 3D-filer i AEM Resurser. Användaren kan ladda upp, förhandsgranska och använda en mängd olika centrala 3D-filer, t.ex. .obj-, .stl-, .gltf- och .glb-filer. Med tillägg av [!DNL Dynamic Media]kan 3D-upplevelser konfigureras och levereras via agnostiska URL:er eller visningsprogram. Detta inkluderar en [!DNL Dynamic Media] 3D Experience Viewer, Sites 3D Viewer-komponent och möjligheten att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR). Se [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
 
 <!-- Hiding this as the GA is at a later date. 
-TBD: Add link to the AAL help article. 
-
 **Adobe Asset Link support for Adobe XD**
 
-With the latest release, [!DNL Experience Manager Assets] provides support for a new [!DNL Adobe Asset Link] plug-in that is released with [!DNL Adobe XD] v29. The integration allows designers to access and use assets from [!DNL Experience Manager] in their designs, without the need to leave [!DNL Adobe XD] application.
-
+With the latest release, [!DNL Experience Manager Assets] provides support for a new [!DNL Adobe Asset Link] plug-in that is released with [!DNL Adobe XD] v29. The integration allows designers to access and use assets from [!DNL Experience Manager] in their designs, without the need to leave [!DNL Adobe XD] application. See [Adobe Asset Link documentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 -->
 
 **Förbättrad tillgänglighet**
@@ -141,18 +136,15 @@ With the latest release, [!DNL Experience Manager Assets] provides support for a
 * Element, kontroller och inmatningsfält i användargränssnittet är tillgängliga via tangentbordet.
 * Ändrar färg eller kontrast på vissa gränssnittselement för att göra dem tydligare för användare med begränsad syn och utan att förstå färger. Resurser har till exempel nu rätt kontrast i stjärngraderingsikonerna på [!UICONTROL Properties] sidan och i kortvyn.
 
-<!-- TBD: Add link to the a11y help article if created. Else add it post-GA. -->
-
 **Andra förbättringar**
 
 Versionen innehåller följande ytterligare förbättringar:
 
-* Hjälpmedelsförbättringar för användargränssnittet Resurser.
 * Möjlighet att bearbeta om resurser med tillgångsbearbetningsprofiler, ge användarna full kontroll över processen (kör full bearbetning av resurser, bara tillämpa en viss bearbetningsprofil och bestämma om arbetsflödet ska köras efter bearbetning).
 * Sökfrågor returnerar resultat snabbare nu när den underliggande klusterinstansen har startats om bakom scenerna (den inledande sökningen kan ta längre tid i ett sådant fall tidigare).
-* Sortera efter Namn när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten.
-* Sortera efter&quot;Skapad&quot; (Datum) när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten.
-* Stöd för konvertering av EPS-filer till bilder.
+* Sortera efter Namn när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten. Se [Sökresurser](/help/assets/search-assets.md#sort).
+* Sortera efter&quot;Skapad&quot; (Datum) när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten. Se [Sökresurser](/help/assets/search-assets.md#sort).
+* Stöd för att konvertera EPS-filer till bilder med hjälp av objektmikrotjänster.
 
 ### Bug Fixes {#assets-bug-fixes}
 
