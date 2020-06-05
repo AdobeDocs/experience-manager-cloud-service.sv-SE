@@ -4,9 +4,9 @@ description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d262d4493939f0fc60a98ef4ff892fbce5f526ab
+source-git-commit: d4b4b5fbbd07851485d216b502c66037cccef134
 workflow-type: tm+mt
-source-wordcount: '4251'
+source-wordcount: '4274'
 ht-degree: 11%
 
 ---
@@ -43,7 +43,7 @@ Se [Lägga till digitala resurser i Experience Manager](add-assets.md).
 
 <!-- TBD: This feature may not work as documented. See CQ-4283718. Get PM review done. -->
 
-Om det finns en dubblettresurs i DAM-databasen identifieras den av Resurser och användaren meddelas om detta. Dubblettidentifiering är inaktiverat som standard. Om du vill aktivera funktionen konfigurerar du [!UICONTROL Adobe AEM Cloud Asset Duplication Detector]. Se [hur du gör OSGi-konfigurationer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html). Dubblettidentifieringen baseras på det unika `dam:sha1` värdet som lagras på `jcr:content/metadata/dam:sha1`. Det innebär att duplicerade resurser identifieras även om filnamnen är olika.
+Om en DAM-användare överför en eller flera resurser som redan finns i databasen, upptäcker [!DNL Experience Manager] dupliceringen och meddelar användaren. Dubblettidentifiering är inaktiverat som standard eftersom det kan påverka prestanda beroende på databasens storlek och antalet överförda resurser. Om du vill aktivera funktionen konfigurerar du [!UICONTROL Adobe AEM Cloud Asset Duplication Detector]. Se [hur du gör OSGi-konfigurationer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html). Dubblettidentifieringen baseras på det unika `dam:sha1` värdet som lagras på `jcr:content/metadata/dam:sha1`. Det innebär att duplicerade resurser identifieras även om filnamnen är olika.
 
 ![Identifiera duplicerad OSGi-konfiguration för resurs](assets/duplicate-detection.png)
 
