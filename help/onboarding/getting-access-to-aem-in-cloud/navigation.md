@@ -2,7 +2,7 @@
 title: Navigering
 description: Navigering - molntjänst
 translation-type: tm+mt
-source-git-commit: 289c0dc65b16b486d6ea75c5c78f999ec2f353c6
+source-git-commit: c5ee964fad3e1430e7c08f0cca76aecfae8bd44f
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 1%
@@ -59,6 +59,8 @@ Mer information finns i [Åtkomst till en instans i AEM som en molntjänst](http
    ![](assets/sys-admin4.png)
 
 1. När du klickar på **Hantera åtkomst** navigeras du till **Admin Console** där du har åtkomst till författarinstansen av miljön.
+
+   ![](assets/sys-admin-2.png)
 
 ## För befintliga AMS-kunder {#existing-aem}
 
