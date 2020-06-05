@@ -2,7 +2,10 @@
 title: Kända fel
 description: Versionsinformation som är specifik för Kända problem med Adobe Experience Manager som en molntjänst
 translation-type: tm+mt
-source-git-commit: ce82d7c9ca1fd8fe3d6f61213cfee360fc6496fd
+source-git-commit: 165dc4af656ce1bc431d2f921775ebda4cf4de9f
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 1%
 
 ---
 
@@ -31,13 +34,12 @@ Några kända fel är:
 
 Några av funktionerna i Adobe Experience Manager Assets som är beroende av grundfunktionerna, som ännu inte är tillgängliga i Experience Manager som en distributionsarkitektur för molntjänster, förväntas aktiveras i ett senare skede:
 
-* Förbättrade smarta taggningsfunktioner som utnyttjar AI-tjänster i Adobe I/O är inte tillgängliga just nu.
 * Funktioner som inte är aktiverade i det här skedet på grund av beroendet av API:er i Commerce Integration Framework:
    * Arbetsflödesmodeller för Photoshop.
    * Fliken Produktinformation i användargränssnittet för resursegenskaper har inte fyllts i.
 * Funktioner som inte är aktiverade i det här skedet på grund av beroendet av InDesign Server-integrering:
    * Resursmallar och tillgångskataloger.
-   * Flersidig förhandsgranskning av InDesign-filer.
+   * Flersidig förhandsgranskning av Adobe InDesign-filer.
 
 >[!MORELIKETHIS]
 >
