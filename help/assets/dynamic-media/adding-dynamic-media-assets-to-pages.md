@@ -2,9 +2,9 @@
 title: Lägga till dynamiska medieresurser på sidor
 description: Lägga till komponenter för dynamiska media på en sida i AEM
 translation-type: tm+mt
-source-git-commit: d84a6692f2d0aae496bd2bd98ac99c2663f3fe52
+source-git-commit: a4c06ed7a01cd61ab1e53bba8acc5e276c8bad99
 workflow-type: tm+mt
-source-wordcount: '3004'
+source-wordcount: '2993'
 ht-degree: 8%
 
 ---
@@ -34,10 +34,6 @@ Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panorami
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
 1. Dra en **[!UICONTROL Dynamic Media]** komponent och släpp den på önskad plats på sidan.
-
-   I exemplet nedan används **[!UICONTROL Video 360 Media]** komponenten.
-
-   ![6_5_360video_wcmComponentdrag](assets/6_5_360video_wcmcomponentdrag.png)
 
 1. Håll muspekaren direkt på komponenten. När komponenten är omgiven av en blå ruta trycker du en gång för att visa komponentens verktygsfält. Tryck på **[!UICONTROL Configuration (wrench)]** ikonen.
 
