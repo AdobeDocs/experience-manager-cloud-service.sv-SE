@@ -4,7 +4,10 @@ description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7141e42f53c556c0ac21def6085182ef400f5a71
+source-git-commit: 7317a5db6ed348f99b2290d72ddf6e540fae5456
+workflow-type: tm+mt
+source-wordcount: '4491'
+ht-degree: 6%
 
 ---
 
@@ -15,7 +18,7 @@ Ni kan uppnå högre innehållshastighet med användarvänliga alternativ för t
 
 AEM stöder följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsområden.
 
-| Söka efter material | Konfiguration och administration | Arbeta med sökresultat |
+| Söka efter resurser | Konfiguration och administration | Arbeta med sökresultat |
 |--- |--- |--- |
 | [Grundläggande sökningar](#searchbasics) | [Sökindex](#searchindex) | [Sortera resultat](#sort) |
 | [Förstå sökgränssnittet](#searchui) |  | [Kontrollera egenskaper och metadata för en resurs](#checkinfo) |
@@ -23,14 +26,14 @@ AEM stöder följande användningsfall och den här artikeln beskriver användni
 | [Förstå sökresultat och beteenden](#searchbehavior) | [Ändra sökfaktorer](#searchfacets) | [Massmetadatauppdateringar](#metadataupdates) |
 | [Sökrankning och förstärkning](#searchrank) | [Textextrahering](#extracttextupload) | [Smarta samlingar](#collections) |
 | [Avancerad sökning: filtrering och sökningens omfattning](#scope) | [Anpassade predikat](#custompredicates) | [Förstå oväntade resultat](#unexpectedresults) och [felsökning](#troubleshoot) |
-| [Sök bland andra lösningar och appar](#beyondomnisearch): <br />Asset Link [](#aal)<br />Desktop app [](#desktopapp)<br />     [Adobe Stock-bilder](#adobestock)<br />     [Dynamic Media-resurser](#dynamicmedia) |  |  |
+| [Sök bland andra lösningar och appar](#beyondomnisearch): <br />     [Tillgångslänk](#aal) <br />för [skrivbord](#desktopapp) <br />     [Adobe Stock-bilder](#adobestock) <br />     [Dynamiska medieresurser](#dynamicmedia) |  |  |
 | [Resursväljare/väljare](#assetselector) |  |  |
 | [Begränsningar](#tips) och [tips](#limitations) |  |  |
 | [Illustrerade exempel](#samples) |  |  |
 
-Sök efter resurser med Omnissearch-fältet högst upp i AEM-webbgränssnittet. Gå till **[!UICONTROL Resurser]** > **[!UICONTROL Filer]** i AEM, klicka på ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot för nyckelord `/` (snedstreck) för att öppna omsökningsfältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. Du kan göra avancerade sökningar för att öka eller begränsa [sökningens](#scope)omfattning.
+Sök efter resurser med Omnissearch-fältet högst upp i AEM-webbgränssnittet. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** i AEM, klicka på ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot för nyckelord `/` (snedstreck) för att öppna omsökningsfältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. Du kan göra avancerade sökningar för att öka eller begränsa [sökningens](#scope)omfattning.
 
-Använd panelen **[!UICONTROL Filter]** för att söka efter resurser, mappar, taggar och metadata. Du kan filtrera sökresultat baserat på de olika alternativen (predikaten), t.ex. filtyp, filstorlek, datum då filen senast ändrades, status för resursen, insiktdata och Adobe Stock-licensiering. Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorer med [sökfaktorer](/help/assets/search-facets.md).
+Använd panelen för att **[!UICONTROL Filters]** söka efter resurser, mappar, taggar och metadata. Du kan filtrera sökresultat baserat på de olika alternativen (predikaten), t.ex. filtyp, filstorlek, datum då filen senast ändrades, status för resursen, insiktdata och Adobe Stock-licensiering. Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorer med [sökfaktorer](/help/assets/search-facets.md).
 
 AEM-sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/manage-collections.md).
 
@@ -38,9 +41,9 @@ AEM-sökfunktionen stöder sökning efter samlingar och sökning efter resurser 
 
 Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
 
-![](assets/aem_search_results.png) Förstå delar av gränssnittet *för sökresultat för Assets-* bilder: Förstå delar av gränssnittet för resurssökningsresultat
+![Förstå delar av gränssnittet](assets/aem_search_results.png)för sökresultat för Assets-*bilder:* Förstå delar av gränssnittet för resurssökningsresultat
 
-**** S. Spara sökningen som en smart samling. **** B. Filter (predikat) för att begränsa sökresultaten. **C.** Visa filer, mappar eller båda i sökresultatet. **** D. Klicka på Filter för att öppna eller stänga den vänstra listen. **** E. Sökplatsen är DAM. ************ F. Omsökningsfält med användardefinierat söknyckelord **G. Markera kryssrutan för att markera alla sökresultat** H. Antal visade sökresultat av totalt antal sökresultat **I. Stäng sökningen** J. Växla mellan kortvyn och listvyn
+**A.** Spara sökningen som en smart samling. **B.** Filter (predikat) för att begränsa sökresultatet. **C.** Visa filer, mappar eller båda i sökresultatet. **D.** Klicka på Filter för att öppna eller stänga den vänstra rutan. **E.** Sökplatsen är DAM. **F.** Fält för omnisökning med användardefinierat söknyckelord **G.** Kryssruta för att markera alla sökresultat **H.** Antal visade sökresultat av totalt antal sökresultat **I.** Stäng sökningen **J.** Växla mellan kortvyn och listvyn
 
 ### Dynamiska sökfaktorer {#dynamicfacets}
 
@@ -72,7 +75,7 @@ För att snabbt hitta relevanta resurser innehåller det avancerade gränssnitte
 
 Ibland kan du se oväntade resurser i sökresultaten. Mer information finns i [oväntade resultat](#unexpectedresults).
 
-AEM kan söka i många filformat och sökfiltren kan anpassas efter företagets behov. Kontakta dina administratörer för att få en förståelse för vilka sökalternativ som är tillgängliga för DAM-databasen och vilka begränsningar som din inloggning kan ha.
+AEM kan söka i många filformat och sökfiltren kan anpassas efter företagets behov. Kontakta dina administratörer för att få veta vilka sökalternativ som är tillgängliga för din DAM-databas och vilka begränsningar din inloggning kan ha.
 
 <!-- 
 ### Results with and without Enhanced Smart Tags {#withsmarttags}
@@ -101,9 +104,9 @@ Sökresultaten som matchar alla söktermer i metadatafält visas först, följt 
 
 Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökningen baserat på nyckelorden. Det innebär att de bilder som du befordrar särskilda nyckelord för visas högst upp i sökresultatet när du söker baserat på dessa nyckelord.
 
-1. Öppna egenskapssidan för resursen från resursanvändargränssnittet. Klicka på **[!UICONTROL Avancerat]** och klicka/tryck på **[!UICONTROL Lägg till]** under **[!UICONTROL Upphöjd för att söka efter nyckelord]**.
-1. I rutan **[!UICONTROL Sök efter]** ökning anger du ett nyckelord som du vill öka sökningen efter bilden för och klickar/trycker sedan på **[!UICONTROL Lägg till]**. Du kan ange flera nyckelord på samma sätt.
-1. Klicka/tryck på **[!UICONTROL Spara och stäng]**. Den resurs som du befordrade för det här nyckelordet visas bland de översta sökresultaten.
+1. Öppna egenskapssidan för resursen i Assets-gränssnittet. Klicka på **[!UICONTROL Advanced]** och klicka/tryck på **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
+1. I **[!UICONTROL Search Promote]** rutan anger du ett nyckelord som du vill öka sökningen efter bilden för och klickar/trycker sedan på **[!UICONTROL Add]**. Du kan ange flera nyckelord på samma sätt.
+1. Klicka/tryck på **[!UICONTROL Save & Close]**. Den resurs som du befordrade för det här nyckelordet visas bland de översta sökresultaten.
 
 Du kan använda detta till din fördel genom att öka rankningen för vissa resurser i sökresultaten för nyckelordet target. Se exempelvideon nedan. Mer information finns i [Söka i AEM](https://helpx.adobe.com/experience-manager/kt/help/assets/search-feature-video-use.html).
 
@@ -115,9 +118,9 @@ Du kan använda detta till din fördel genom att öka rankningen för vissa resu
 
 I AEM finns olika metoder, till exempel filter som gäller för de sökda resurserna, så att du snabbare kan hitta de önskade resurserna. Nedan beskrivs några vanliga metoder. Några [illustrerade exempel](#samples) visas nedan.
 
-**Sök efter filer eller mappar**: Se antingen filer, mappar eller båda i sökresultaten. På **[!UICONTROL filterpanelen]** kan du välja lämpligt alternativ. Se [sökgränssnitt](#searchui).
+**Sök efter filer eller mappar**: Se antingen filer, mappar eller båda i sökresultaten. På **[!UICONTROL Filters]** panelen kan du välja rätt alternativ. Se [sökgränssnitt](#searchui).
 
-**Sök efter resurser i en mapp**: Du kan begränsa sökningen till en viss mapp. Lägg till en mappsökväg på panelen **[!UICONTROL Filter]** . Du kan bara markera en mapp i taget.
+**Sök efter resurser i en mapp**: Du kan begränsa sökningen till en viss mapp. Lägg till en mappsökväg på **[!UICONTROL Filters]** panelen. Du kan bara markera en mapp i taget.
 
 ![Begränsa sökresultaten till en mapp genom att lägga till en mappsökväg i panelen Filter](assets/search_folder_select.gif)
 
@@ -138,7 +141,7 @@ I AEM-användargränssnittet kan användare söka efter [Adobe Stock-mediefiler]
 
 ### Dynamiska medieresurser {#dmassets}
 
-Du kan filtrera efter dynamiska mediabilder genom att välja **[!UICONTROL Dynamiska media > Uppsättningar]** på panelen **[!UICONTROL Filter]** . Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och snurruppsättningar.
+You can filter for Dynamic Media images by selecting **[!UICONTROL Dynamic Media > Sets]** from the **[!UICONTROL Filters]** panel. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar.
 
 ### Söka med specifika värden i metadatafält {#gqlsearch}
 
@@ -188,7 +191,7 @@ Adobe Experience Manager (AEM) kopplar DAM-databasen till olika andra AEM-lösni
 
 ### Söka efter resurser från Adobe Asset Link-panelen {#aal}
 
-Med Adobe Asset Link kan formgivarna nu komma åt innehåll som lagras i AEM Assets, utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen i Creative Cloud-programmen kan du enkelt söka efter, söka efter, checka ut och checka in resurser: Photoshop, Illustrator och InDesign. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Senseis maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
+Med Adobe Asset Link kan formgivarna nu komma åt innehåll som lagras i AEM Assets, utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen i Creative Cloud-programmen kan du smidigt söka efter, söka efter, checka ut och checka in resurser: Photoshop, Illustrator och InDesign. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Senseis maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
 
 ### Sök efter resurser i AEM-skrivbordsappen {#desktopapp}
 
@@ -200,11 +203,11 @@ Affärsanvändare och marknadsförare använder Brand Portal för att effektivt 
 
 ### Sök efter Adobe Stock-bilder {#adobestock-1}
 
-I AEM-användargränssnittet kan användarna söka efter Adobe Stock-mediefiler och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i Omnissearch-fältet. Du kan också använda **[!UICONTROL filterpanelen]** för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret. Se [Hantera Adobe Stock-bilder i AEM](/help/assets/aem-assets-adobe-stock.md#usemanage).
+I AEM-användargränssnittet kan användarna söka efter Adobe Stock-mediefiler och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i Omnissearch-fältet. Du kan också använda **[!UICONTROL Filters]** panelen för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret. Se [Hantera Adobe Stock-bilder i AEM](/help/assets/aem-assets-adobe-stock.md#usemanage).
 
 ### Sök efter Dynamic Media-resurser {#dynamicmedia}
 
-Du kan filtrera efter dynamiska mediabilder genom att välja **[!UICONTROL Dynamiska media]** > **[!UICONTROL Uppsättningar]** på panelen **[!UICONTROL Filter]** . Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och snurruppsättningar. När du redigerar webbsidor kan författarna söka efter uppsättningar inifrån Content Finder. Ett filter för uppsättningar är tillgängligt på en snabbmeny.
+Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar. När författarna redigerar webbsidor kan de söka efter uppsättningar inifrån Content Finder. Det finns ett filter för uppsättningar på en snabbmeny.
 
 ### Söka efter resurser i Content Finder vid redigering av webbsidor {#contentfinder}
 
@@ -229,10 +232,10 @@ Du kan skicka följande frågeparametrar i en URL för att starta resursväljare
 |---|---|---|---|
 | resurssuffix (B) | Mappsökväg som resurssuffix i URL:[https://localhost:4502/aem/assetpicker.html/&lt;mappsökväg>](https://localhost:4502/aem/assetpicker.html) | Om du vill starta resursväljaren med en viss mapp markerad, till exempel med mappen /content/dam/we-retail/en/tasks markerad, ska URL:en ha formatet: [https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | Om du vill att en viss mapp ska väljas när resursväljaren startas, skickar du den som ett resurssuffix. |
 | läge | en, flera | [https://localhost:4502/aem/assetpicker.html?mode=multiplehttps://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=multiplehttps://localhost:4502/aem/assetpicker.html?mode=single) | I flera lägen kan du markera flera resurser samtidigt med resursväljaren. |
-| mimeType | mimtyp(er) (`/jcr:content/metadata/dc:format`) av en resurs (jokertecken stöds också) | <ul><li>[https://localhost:4502/aem/assetpicker.html?mimetype=image/png](https://localhost:4502/aem/assetpicker.html?mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&mimetype=*png)</li></ul> | Använd det för att filtrera resurser baserat på MIME-typ(er) |
+| mimeType | mimtyp(er) (`/jcr:content/metadata/dc:format`) av en resurs (jokertecken stöds också) | <ul><li>[https://localhost:4502/aem/assetpicker.html?mimetype=image/png](https://localhost:4502/aem/assetpicker.html?mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png)</li></ul> | Använd det för att filtrera resurser baserat på MIME-typ(er) |
 | dialog | true, false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | Använd de här parametrarna för att öppna resursväljaren som Granite-dialogrutan. Det här alternativet kan bara användas när du startar resursväljaren via fältet Bevilja sökväg och konfigurerar den som URL för pickerSrc. |
 | assettype (S) | bilder, dokument, multimedia, arkiv | <ul><li>[https://localhost:4502/aem/assetpicker.html?assettype=images](https://localhost:4502/aem/assetpicker.html?assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=multimedia](https://localhost:4502/aem/assetpicker.html?assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=archives](https://localhost:4502/aem/assetpicker.html?assettype=archives)</li></ul> | Använd det här alternativet om du vill filtrera resurstyper baserat på det skickade värdet. |
-| root | &lt;mappsökväg> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities) | Använd det här alternativet om du vill ange rotmappen för resursväljaren. I det här fallet kan du bara välja underordnade resurser (direkt/indirekt) under rotmappen. |
+| root | &lt;mappsökväg> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities) | Använd det här alternativet om du vill ange rotmappen för resursväljaren. I det här fallet kan du bara välja underordnade resurser (direkt/indirekt) under rotmappen. |
 
 Om du vill komma åt resursväljargränssnittet går du till `https://[AEM server]:[port]/aem/assetpicker`. Navigera till önskad mapp och markera en eller flera resurser. Du kan också söka efter den önskade resursen i rutan Sök, tillämpa det filter som behövs och sedan markera den.
 
@@ -276,7 +279,7 @@ Använd citattecken runt nyckelord för att hitta resurser som innehåller den e
 
 Sökbeteende med och utan citattecken
 
-**Sök med asterisk som jokertecken**: Om du vill bredda sökningen använder du en asterisk före eller efter sökordet för att matcha ett valfritt antal tecken. Om du till exempel söker efter en körning utan asterisk returneras inga resurser som innehåller någon variant av ordet (inklusive i metadata). En asterisk ersätter ett valfritt antal tecken. Exempel:
+**Sök med asterisk som jokertecken**: Om du vill bredda sökningen använder du en asterisk före eller efter sökordet för att matcha ett valfritt antal tecken. Om du till exempel söker efter en körning utan asterisk returneras inga resurser som innehåller någon variant av ordet (inklusive i metadata). En asterisk ersätter ett valfritt antal tecken. Till exempel,
 
 * `run` returnerar resurser med nyckelordet exakt run
 * `run*` returnerar resurser som körs, körs, körs och så vidare.
@@ -301,7 +304,7 @@ Illustration use of question mark wildcard in Asset search using a example
 
 **Exkludera ett nyckelord**: Använd streck för att söka efter resurser som inte innehåller något nyckelord. Frågan returnerar till exempel resurser som innehåller `running -shoe` men inte `running``shoe`. På samma sätt returnerar frågan resurser som innehåller `camp -night` men inte `camp` `night`. Observera att `camp-night` frågan returnerar resurser som innehåller både `camp` och `night`.
 
-![Användning av bindestreck för att söka efter resurser som inte innehåller ett exkluderat nyckelord](assets/search_dash_exclude_keyword.gif)*:Användning av bindestreck för att söka efter resurser som inte innehåller ett exkluderat nyckelord*
+![Användning av bindestreck för att söka efter resurser som inte innehåller ett exkluderat nyckelord](assets/search_dash_exclude_keyword.gif)*: Användning av bindestreck för att söka efter resurser som inte innehåller ett exkluderat nyckelord*
 
 <!--
 ## Configuration and administration tasks related to search functionality {#configadmin}
@@ -309,10 +312,6 @@ Illustration use of question mark wildcard in Asset search using a example
 ### Search index configurations {#searchindex}
 
 Asset discovery relies on indexing of DAM contents, including the metadata. Faster and accurate asset discovery relies on optimized indexing and appropriate configurations. See [indexing](/help/operations/indexing.md).
-
-### Sort on Name column {#sortbyname}
-
-In list view, you can sort the search results just as you can sort assets in any folder. Sorting does not work on the `Name` column by default. To sort by the `Name` column, overlay `/libs/dam/gui/content/commons/availablecolumns` and change the value of sortable to `True`.
 
 <!--
 ### Visual or similarity search {#configvisualsearch}
@@ -349,8 +348,8 @@ Visual search uses smart tagging and requires AEM 6.5.2.0 or later. After config
 For related information, see [understand smart tags in AEM](https://helpx.adobe.com/experience-manager/kt/help/assets/smart-tags-feature-video-understand.html) and [how to manage smart tags](/help/assets/smart-tags.md).
 
 -->
-<!--
 
+<!--
 ### Mandatory metadata {#mandatorymetadata}
 
 Business users, administrators, or DAM librarians can define some metadata as mandatory metadata that is a must for the business processes to work. For various reasons, some assets may be missing this metadata, such as legacy assets or assets migrated in bulk. Assets with missing or invalid metadata are detected and reported based on the indexed metadata property. To configure it, see [mandatory metadata](/help/assets/metadata-schemas.md#defining-mandatory-metadata).
@@ -401,19 +400,19 @@ När du ser sökningar efter resurser som matchar dina villkor kan du utföra f�
 
 ### Sortera sökresultat {#sort}
 
-Genom att sortera sökresultaten blir det enklare att hitta den mediefil du behöver snabbare. Sortering av sökresultat fungerar endast i listvyn och när du väljer **[!UICONTROL [Filer](#searchui)]**på panelen**[!UICONTROL  Filter ]**. I AEM Resurser används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller resultaten av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
+Om du sorterar sökresultatet hittar du snabbare den resurs du behöver. Sortering av sökresultat fungerar i listvyn och endast när du väljer **[!UICONTROL [Filer](#searchui)]** på panelen **[!UICONTROL Filters]**. [!DNL Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
 
-I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna: Rubrik, Status, Dimensioner, Storlek, Klassificering, Användning, (Datum) ändrad, Publicerat (Datum), Arbetsflöde och Utcheckat.
+I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapad (Datum), Ändrad (Datum), Publicerad, Arbetsflöde och Utcheckad.
 
-Se [Konfigurera sortering i kolumnen](#sortbyname)Namn. Begränsningar av sorteringsfunktioner finns i [Begränsningar](#limitations).
+Begränsningar av sorteringsfunktioner finns i [Begränsningar](#limitations).
 
 ### Kontrollera detaljerad information om en resurs {#checkinfo}
 
 Du kan kontrollera detaljerad information om en sökresurs från sökresultatsidan.
 
-Om du vill visa alla metadata för en resurs markerar du resursen och klickar på **[!UICONTROL egenskaper]** i verktygsfältet.
+Om du vill visa alla metadata för en resurs markerar du resursen och klickar på **[!UICONTROL properties]** i verktygsfältet.
 
-Om du vill kontrollera kommentarerna för en resurs eller versionshistorik för en resurs klickar du på resursen för att öppna en stor förhandsvisning. Öppna tidslinjen i den vänstra listen och välj **[!UICONTROL Kommentarer]** eller **[!UICONTROL versioner]**. Du kan också sortera tidslinjeaktiviteten som kommentarer eller versioner i kronologisk ordning.
+Om du vill kontrollera kommentarerna för en resurs eller versionshistoriken för en resurs klickar du på resursen för att öppna en stor förhandsvisning. Öppna tidslinjen i den vänstra rutan och välj **[!UICONTROL Comments]** eller **[!UICONTROL Versions]**. Du kan också sortera tidslinjeaktiviteter, som kommentarer eller versioner, i kronologisk ordning.
 
 ![Sortera tidslinjeposter för en sökresurs](assets/sort_timeline_search_results.gif)
 
@@ -421,11 +420,11 @@ Sortera tidslinjeposter för en sökresurs
 
 ### Hämta sökbara resurser {#download}
 
-Du kan hämta de sökda resurserna och deras återgivningar på samma sätt som du hämtar vanliga resurser från mappar. Välj en eller flera resurser från sökresultaten och klicka på **[!UICONTROL Hämta]** i verktygsfältet.
+Du kan hämta de sökda resurserna och deras återgivningar på samma sätt som du hämtar vanliga resurser från mappar. Välj en eller flera resurser från sökresultaten och klicka på **[!UICONTROL Download]** i verktygsfältet.
 
 ### Uppdatera metadataegenskaper gruppvis {#metadataupdates}
 
-Det går att göra satsvisa uppdateringar av de gemensamma metadatafälten för flera resurser. Välj en eller flera resurser från sökresultaten. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet och uppdatera metadata efter behov. Klicka på **[!UICONTROL Spara och stäng]** när du är klar. De befintliga metadata i de uppdaterade fälten skrivs över.
+Det går att göra satsvisa uppdateringar av de gemensamma metadatafälten för flera resurser. Välj en eller flera resurser från sökresultaten. Klicka **[!UICONTROL Properties]** i verktygsfältet och uppdatera metadata efter behov. Klicka **[!UICONTROL Save and Close]** när du är klar. De befintliga metadata i de uppdaterade fälten skrivs över.
 
 För resurser som är tillgängliga i en enda mapp eller en samling är det enklare att [uppdatera metadata gruppvis](/help/assets/manage-metadata.md#manage-assets-metadata). För resurser som är tillgängliga i olika mappar eller matchar ett gemensamt villkor är det snabbare att uppdatera metadata i grupp via sökning.
 
@@ -436,7 +435,7 @@ En samling är en ordnad uppsättning resurser som kan innehålla resurser från
 * En statisk referenslista med resurser, mappar och andra samlingar.
 * En dynamisk lista (smart samling) som fyller i resurser i samlingen baserat på sökvillkor.
 
-Du kan skapa smarta samlingar baserat på sökvillkoren. På **[!UICONTROL filterpanelen]** väljer du **[!UICONTROL Filer]** och klickar på **[!UICONTROL Spara smart samling]**. Se [Hantera samlingar](/help/assets/manage-collections.md).
+Du kan skapa smarta samlingar baserat på sökvillkoren. På panelen **[!UICONTROL Filters]** väljer du **[!UICONTROL Files]** och klickar på **[!UICONTROL Save Smart Collection]**. Läs mer i [Hantera samlingar](/help/assets/manage-collections.md).
 
 ## Oväntade sökresultat {#unexpectedresults}
 
