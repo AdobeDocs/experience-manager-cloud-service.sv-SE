@@ -1,11 +1,11 @@
 ---
 title: En snabbguide till WCAG 2.1
 description: En snabbguide till WCAG 2.1
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 6f6038e6669d85230b38dc73cdddae164a01643b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1774'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Manager (AEM) as a Cloud Service har utvecklats för att maxime
 
 >[!NOTE]
 > 
-> WCAG 2.1 uppdaterar den tidigare versionen WCAG 2.0 från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
+> WCAG 2.1 uppdaterar den föregående versionen, WCAG 2.0, från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
 
 >[!NOTE]
 > 
@@ -28,7 +28,7 @@ WCAG 2.1 består av en uppsättning teknikoberoende riktlinjer och framgångskri
 
 Om du till exempel beskriver en bild (eller annat innehåll som inte är text) genom att använda attributet `alt` i HTML blir det till stor fördel för personer som är blinda eller har nedsatt syn. Textbeskrivningen i attributet `alt` kan antingen konverteras till tal eller överföras till elektroniska, uppdateringsbara blindskriftsskärmar. 
 
-Additionally, WCAG 2.1 can result in advantages for other beneficiaries, including people who may be considered *situationally disabled*. Det kan vara personer som på grund av omständigheter som surfteknik, nätverksanslutningshastighet eller surfmiljö kan uppleva hinder som liknar de personer med funktionshinder har.
+Dessutom kan WCAG 2.1 leda till fördelar för andra mottagare, inklusive personer som kan begränsas beroende på en viss *situation*. Det kan vara personer som på grund av omständigheter som surfteknik, nätverksanslutningshastighet eller surfmiljö kan uppleva hinder som liknar de personer med funktionshinder har.
 
 Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa webbinnehåll som uppfyller relevanta framgångskriterier för WCAG 2.1 nivå A och nivå AA.
 
@@ -43,7 +43,7 @@ Det vill säga riktlinjer som kan tillämpas på en rad olika format för webbin
 Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en allmän grupp tillgänglighetsexperter håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte.
 
 * Stöd för **prioriterad och sammanhangsbaserad implementering:**
-Riktlinjer för WCAG 2.1 ges prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet *tillgänglighet som stöds* . Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
+Riktlinjer för WCAG 2.1 är prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet *tillgänglighet som stöds*. Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
 
 Dessa mål har i hög grad påverkat strukturen i WCAG 2.1.
 
@@ -70,14 +70,14 @@ För att förtydliga:
 * Varje riktlinje består av ett eller flera **framgångskriterier**.
 * Framgångskriterier skrivs som programsatser, antingen `True` eller `False` för en given webbsida.
 * Framgångskriterier kan innehålla antingen/eller-alternativ eller undantag för situationer då framgångskriterierna inte behöver uppfyllas.
-* Framgångskriterierna är numrerade enligt den överordnade riktlinjen och principen, från 1.1.1 till 4.1.1. De har också ett kort namn som sammanfattar syftet med kriteriet för enklare referens. For example, success criterion [1.1.1 is Non-text Content](https://www.w3.org/TR/WCAG/#non-text-content).
+* Framgångskriterierna är numrerade enligt den överordnade riktlinjen och principen, från 1.1.1 till 4.1.1. De har också ett kort namn som sammanfattar syftet med kriteriet för enklare referens. [Framgångskriterium 1.1.1 är till exempel ett innehåll som inte är text](https://www.w3.org/TR/WCAG/#non-text-content).
 * Framgångskriterierna inkluderar en lista med relaterade **tekniker** (beskrivs nedan).
 
 ## Stödresurser {#supporting-resources}
 
 Förutom WCAG 2.1-huvudkomponenterna som principer, riktlinjer och framgångskriterier finns det en rad stöddokument. Vissa av dem ger specifika råd om hur man uppfyller vissa aspekter av riktlinjerna, andra är mer allmänna referenser som hjälper webbförfattare, designers och utvecklare att förstå och använda WCAG 2.1 så effektivt som möjligt.
 
-Även om WCAG 2.1 i sig är ett stabilt dokument som inte kommer att ändras är de flesta av dessa stödresurser dynamiska dokument. de kommer att förändras och växa med tiden, allt eftersom nya tekniker dyker upp, och nya exempel visas på hur webbtillgänglighet kan uppnås.
+WCAG 2.1 i sig är ett stabilt dokument och kommer inte att ändras, men de flesta av stödresurserna är dynamiska dokument som kommer att förändras och växa med tiden allt eftersom nya tekniker utvecklas och nya exempel upptäcks på hur webbtillgänglighet kan uppnås.
 
 ### WCAG 2.1-resurser {#wcag-resources}
 
@@ -94,7 +94,7 @@ Denna förteckning är inte avsedd att vara uttömmande, utan innehåller en int
 
 Riktlinjerna innehåller information om nyheter i WCAG 2.1:
 
-* [Nyheter i WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) ger värdefull information om Delta mellan WCAG 2.0 och WCAG 2.1.
+* [What&#39;s New in WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) ger värdefull information om delta mellan WCAG 2.0 och WCAG 2.1.
 
 * Avsnittet [WCAG 2.0 and 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/#versions) beskriver förhållandet mellan dem ytterligare.
 
@@ -111,7 +111,7 @@ Du kan komma åt tekniker:
 * Via samlingar (tekniker kan vara allmänna eller relaterade till en viss teknik eller ett visst format som HTML, CSS eller skript på klientsidan) eller
 * Via relaterade framgångskriterier. Tekniker kan gälla mer än ett framgångskriterium.
 
-Varje teknik har ett unikt nummer som refererar till dess samling. For example, one of the ARIA techniques is [Technique ARIA2: Identifying a required field with the aria-required property](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA2.html).
+Varje teknik har ett unikt nummer som refererar till dess samling. En av ARIA-teknikerna är till exempel [Technique ARIA2: Identifying a required field with the aria-required property](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA2.html).
 
 Tekniker kan vara tillräckliga, rådgivande eller felaktiga:
 
@@ -145,7 +145,7 @@ Ett exempel finns på: [Understanding Success Criterion 1.1.1 (&quot;Non-text co
 
 ### Så här uppfyller du WCAG 2.1 {#how-to-meet-wcag}
 
-Avsnittet How to Meet finns på sidan [How To Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/). I detta avsnitt ges en alternativ presentation av WCAG, som gör det möjligt för läsarna att förfina innehållet i riktlinjerna till dem som är mest relevanta för deras egna intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
+Avsnittet How to Meet finns på sidan [How To Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/). Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
 
 Utan filtrering visar den här resursen alla framgångskriterier grupperade efter riktlinjer. För varje framgångskriterium anges följande:
 
