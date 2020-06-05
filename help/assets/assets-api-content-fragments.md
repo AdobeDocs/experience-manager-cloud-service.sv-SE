@@ -2,12 +2,15 @@
 title: Adobe Experience Manager som ett molntjänstinnehåll Stöd för innehållsfragment i Assets HTTP API
 description: Lär dig mer om Adobe Experience Manager som stöd för molntjänstinnehållsfragment i Assets HTTP API.
 translation-type: tm+mt
-source-git-commit: a5d6a072dfd8df887309f56ad4a61b6b38b32fa7
+source-git-commit: d4a377e963f088f72b34f01103a3877cd699ccb2
+workflow-type: tm+mt
+source-wordcount: '1892'
+ht-degree: 1%
 
 ---
 
 
-# Stöd för innehållsfragment i AEM Assets HTTP API{#content-fragments-support-in-aem-assets-http-api}
+# Stöd för Content Fragments i AEM Assets HTTP API{#content-fragments-support-in-aem-assets-http-api}
 
 ## Översikt {#overview}
 
@@ -62,8 +65,8 @@ Till exempel för att få åtkomst `/content/dam/wknd/en/adventures/cycling-tusc
 
 >[!NOTE]
 >Åtkomst över:
->* `/api/assets` behöver **inte** använda `.model` väljaren.
->* `/content/assets` kräver **** att `.model` väljaren används.
+>* `/api/assets` **behöver inte** använda `.model` väljaren.
+>* `/content/assets` **kräver** att `.model` väljaren används.
 
 
 HTTP-metoden avgör vilken åtgärd som ska utföras:
@@ -310,7 +313,7 @@ Det finns några begränsningar:
 
 Följande statuskoder kan ses under de relevanta omständigheterna:
 
-1. 200 (OK)
+* **200** (OK)
 
    Returneras när:
 
@@ -318,19 +321,19 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
 
    * uppdaterar ett innehållsfragment via `PUT`
 
-1. 201 (skapad)
+* **201** (skapad)
 
    Returneras när:
 
    * har skapat ett innehållsfragment via `POST`
 
-1. 404 (Hittades inte)
+* **404** (Hittades inte)
 
    Returneras när:
 
    * det begärda innehållsfragmentet inte finns
 
-1. 500 (Internt serverfel)
+* **500** (Internt serverfel)
 
    >[!NOTE]
    >
