@@ -2,10 +2,10 @@
 sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 0080ace746f4a7212180d2404b356176d5f2d72c
+source-git-commit: 83c2b37f10b46c1a88e36e49b448b38137bda1c0
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 89%
+source-wordcount: '203'
+ht-degree: 83%
 
 ---
 
@@ -37,6 +37,9 @@ ht-degree: 89%
    + [Anpassa och utöka Content Fragments](developing/extending/content-fragments-customizing.md)
    + [Content Fragments – konfigurera komponenter för återgivning](developing/extending/content-fragments-configuring-components-rendering.md)
    + [Konfigurera sökformulär](developing/extending/search-forms.md)
+   + [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)
+   + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
+   + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
 + Distribuera till AEM as a Cloud Service {#deploying}
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
    + [Konfigurera OSGI för AEM as a Cloud Service](deploying/configuring-osgi.md)
