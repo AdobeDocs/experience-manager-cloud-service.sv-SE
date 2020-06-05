@@ -2,9 +2,9 @@
 title: Skapa ett program - molntjänst
 description: Skapa ett program - molntjänst
 translation-type: tm+mt
-source-git-commit: 02160a9fa713b3758698aa3330a5ccaef8b830fb
+source-git-commit: 5658b2cc853ff7e6222a7f35e56527577d2c7324
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Borttagningsalternativet är tillgängligt från landningssidan enligt nedan:
 
 Eller
 
-Välj **Ta bort program** på sidan *Översikt* om du vill ta bort ditt sandlådeprogram.
+Välj **Ta bort program** på sidan **Programöversikt** för att ta bort ditt sandlådeprogram.
 
 ![](assets/delete-sandbox2.png)
 
