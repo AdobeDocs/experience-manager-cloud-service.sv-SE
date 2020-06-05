@@ -3,9 +3,9 @@ title: Konfigurera RTE för att skapa tillgängliga webbsidor och webbplatser.
 description: Lär dig hur du konfigurerar RTF-redigeraren för att skapa tillgängliga webbplatser i Adobe Experience Manager.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 165dc4af656ce1bc431d2f921775ebda4cf4de9f
+source-git-commit: 78ec0ed2a1473797a07905baa346a83376779419
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -149,4 +149,5 @@ In a `Table`, set the attribute to the DOM element or or remove it from the DOM 
 >[!MORELIKETHIS]
 >
 >* [En snabbguide till WCAG-standarder](/help/onboarding/accessibility/quick-guide-wcag.md)
+>* [Skapa tillgängligt innehåll i Experience Manager](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
 
