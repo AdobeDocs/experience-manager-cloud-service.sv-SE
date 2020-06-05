@@ -3,15 +3,15 @@ title: Tagga bilder med artificiellt intelligenta tjänster.
 description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar med hjälp av Adobe Sensei-tjänster.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bf7bb91dd488f39181a08adc592971d6314817de
+source-git-commit: 41684858f1fe516046b9601c1d869fff180320e0
 workflow-type: tm+mt
-source-wordcount: '2329'
+source-wordcount: '2331'
 ht-degree: 5%
 
 ---
 
 
-# Tagga dina bilder med smarta tjänster {#smart-tag-assets}
+# Utbilda tjänsten Smart Tag och tagga dina bilder {#train-service-tag-assets}
 
 Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter sina digitala resurser. Genom att tagga resurser med taxonomistyrd vokabulär kan du enkelt identifiera och hämta dem genom taggbaserade sökningar.
 
@@ -25,7 +25,7 @@ I bakgrunden använder smarta taggar en artificiell intelligensramverk från [Ad
 
 Utför följande uppgifter om du vill använda smart taggning:
 
-* [Integrera Experience Manager med Adobe I/O](#integrate-aem-with-aio).
+* [Integrera Experience Manager med Adobe Developer Console](#integrate-aem-with-aio).
 * [Förstå taggmodeller och riktlinjer](#understand-tag-models-guidelines).
 * [Tåla modellen](#train-model).
 * [Tagga dina digitala resurser](#tag-assets).
@@ -35,11 +35,11 @@ Smarta taggar gäller endast för [!DNL Adobe Experience Manager Assets] kunder.
 
 <!-- TBD: Is there a link to buy SCS or initiate a sales call. How are AIO services sold? -->
 
-## Integrera [!DNL Experience Manager] med Adobe I/O {#integrate-aem-with-aio}
+## Integrera [!DNL Experience Manager] med Adobe Developer Console {#integrate-aem-with-aio}
 
-Du kan integrera [!DNL Adobe Experience Manager] med smarta taggar med hjälp av Adobe I/O. Använd den här konfigurationen för att komma åt tjänsten Smarta taggar inifrån [!DNL Experience Manager].
+Du kan integrera [!DNL Adobe Experience Manager] med smarta taggar med Adobe Developer Console. Använd den här konfigurationen för att komma åt tjänsten Smarta taggar inifrån [!DNL Experience Manager].
 
-Se [Konfigurera Experience Manager för smart taggning av resurser](smart-tags-configuration.md) för uppgifter om hur du konfigurerar smarta taggar. I bakänden autentiserar [!DNL Experience Manager] servern dina tjänstinloggningsuppgifter med Adobe I/O-gatewayen innan din begäran vidarebefordras till tjänsten Smarta taggar.
+Se [Konfigurera Experience Manager för smart taggning av resurser](smart-tags-configuration.md) för uppgifter om hur du konfigurerar smarta taggar. I bakänden autentiserar [!DNL Experience Manager] servern dina inloggningsuppgifter med Adobe Developer Console-gatewayen innan din begäran vidarebefordras till tjänsten Smarta taggar.
 
 ## Förstå taggmodeller och riktlinjer {#understand-tag-models-guidelines}
 
