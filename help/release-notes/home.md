@@ -2,7 +2,10 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) som en molntjänst.
 description: 'Versionsinformation för Adobe Experience Manager (AEM) som en molntjänst. '
 translation-type: tm+mt
-source-git-commit: 650f6dbc50934f2989a7b9ed51623e80a9202af2
+source-git-commit: f3bc33191c66e48ce995c8656e9669f9015f7755
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 87%
 
 ---
 
@@ -11,7 +14,7 @@ source-git-commit: 650f6dbc50934f2989a7b9ed51623e80a9202af2
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2020.04.0 |
+| Version | 2020.6.0 |
 | Typ | Kontinuerlig uppdatering |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 
