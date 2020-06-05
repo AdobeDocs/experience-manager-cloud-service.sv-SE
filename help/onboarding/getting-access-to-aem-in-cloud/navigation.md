@@ -2,10 +2,10 @@
 title: Navigering
 description: Navigering - molntjänst
 translation-type: tm+mt
-source-git-commit: b2549ac13f996449bc41ac18ba6afbf22e116597
+source-git-commit: 02160a9fa713b3758698aa3330a5ccaef8b830fb
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 2%
+source-wordcount: '492'
+ht-degree: 1%
 
 ---
 
@@ -18,20 +18,44 @@ När inloggningen är klar dirigeras du till landningssidan för Cloud Manager e
 
 ![](assets/first_timelogin1.png)
 
-## SysAdmin-åtkomst {#sysadmin-access}
+## SysAdmin-uppgifter {#sysadmin-tasks}
 
-En användare i rollen SysAdmin har tillgång till den plats i Admin Console där användarroller och behörigheter för Cloud Manager hanteras med ett enda klick.
+En användare med rollen SysAdmin kan nu få direkt åtkomst till Admin Console för att hantera roller och behörigheter och få åtkomst till AEM-instanser.
 
 ### Hantera roller {#manage-roles}
 
-Som användare i SysAdmin finns alternativet **Hantera roller** på landningssidan bredvid **Lägg till program**. Detta ger dig tillgång till den plats i Admin Console där användarroller och behörigheter till Cloud Manager kan hanteras med ett enda klick.
+Som användare med rollen SysAdmin har du tillgång till den plats i **Admin Console** där användarroller och behörigheter för Cloud Manager hanteras med ett enda klick.
 
-Mer information om hur du lägger till användare i en profil finns i Åtkomst till [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#accessing-cloud-manager) i Använda Cloud Manager.
+Mer information om hur du lägger till användare i en profil finns i [Åtkomst till Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#accessing-cloud-manager) .
 
-### Hantera åtkomst till AEM {#manage-access-aem}
+>[!NOTE]
+>För vissa organisationer som fick tillgång till AEM som molntjänst före januari 2020 kommer dessa att hämtas till Adobe Admin Console och produkt- och miljöproduktprofilen måste väljas.
 
-Som användare i SysAdmin har du tillgång till författarinstansen med ett enda klick direkt från Cloud Manager.
+1. Navigera till landningssidan för Cloud Manager och klicka på **Hantera åtkomst**.
+
+   ![](assets/sys-admin1.png)
+
+1. Om du klickar på **Hantera åtkomst** kommer du till **Admin Console** där du kan hantera användarroller och behörigheter för Cloud Manager.
+
+   ![](assets/sys-admin2.png)
+
+### Hantera åtkomst till författarinstans {#manage-access-aem}
+
+Som användare med rollen SysAdmin har du tillgång till **Admin Console** där du kan navigera direkt till författarinstansen och hantera åtkomsten med ett enda klick.
+
+>[!NOTE]
+>För vissa organisationer som fick tillgång till AEM som molntjänst före januari 2020 kommer dessa att hämtas till Adobe Admin Console och produkt- och miljöproduktprofilen måste väljas.
+
 Mer information finns i [Åtkomst till en instans i AEM som en molntjänst](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#accessing-instance-cloud-service) .
+
+1. Navigera till **miljökortet** från sidan *Översikt* eller till sidan **Miljö** om du vill använda alternativet **Hantera åtkomst** , vilket visas i bilden nedan.
+
+   ![](assets/manage-access1.png)
+
+1. Om du klickar på **Hantera åtkomst** navigeras du till **Admin Console** från den plats där du har tillgång till författarinstansen av en miljö.
+
+   ![](assets/sys-admin3.png)
+
 
 ## För befintliga AMS-kunder {#existing-aem}
 
