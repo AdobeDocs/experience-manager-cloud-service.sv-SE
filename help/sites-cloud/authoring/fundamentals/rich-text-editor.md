@@ -1,8 +1,11 @@
 ---
-title: Använda RTF-redigeraren för att skapa innehåll
-description: Använda RTF-redigeraren för att skapa innehåll
+title: Använd RTF-redigeraren i Adobe Experience Manager för att skapa innehåll.
+description: Använd Experience Manager Rich Text Editor för att skapa innehåll.
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 165dc4af656ce1bc431d2f921775ebda4cf4de9f
+workflow-type: tm+mt
+source-wordcount: '285'
+ht-degree: 0%
 
 ---
 
@@ -11,7 +14,7 @@ source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
 
 RTE (Rich Text Editor) är en grundläggande byggsten för att infoga textinnehåll i AEM. Det utgör grunden för olika komponenter
 
-## Direktredigering {#in-place-editing}
+## In-place-redigering {#in-place-editing}
 
 Om du markerar en textbaserad komponent med ett enda tryck eller klick visas [komponentens verktygsfält](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) som alla andra komponenter.
 
@@ -23,19 +26,17 @@ Om du trycker/klickar igen eller först markerar komponenten med en långsam dub
 
 Det här verktygsfältet innehåller följande alternativ:
 
-* **Format**: På så sätt kan du ange Fet, Kursiv och Understruken.
-* **Listor**: Med det här alternativet kan du skapa punktlistor eller numrerade listor eller ange indrag.
-* **Hyperlänk**
-* **Bryt länk**
-* **Helskärm**
-* **Stäng**
-* **Spara**
+* **Format**: Framhäv text som fet, kursiv eller understruken text.
+* **Listor**: Skapa punktlistor eller numrerade listor och ange indrag.
+* **Hyperlänk**: Skapa länkar.
+* **Bryt länk**: Ta bort hyperlänk.
+* **Helskärm**: Öppna redigeraren i helskärmsläge.
+* **Stäng**: Sluta redigera.
+* **Spara**: Spara ändringar.
 
-## Redigering i helskärmsläge {#full-screen-editing}
+## Helskärmsredigering {#full-screen-editing}
 
-Om du trycker på helskärmsläget för textbaserade komponenter i [verktygsfältet](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) öppnas textredigeraren och resten av sidinnehållet döljs.
-
-![Knappen RTE i helskärmsläge](/help/sites-cloud/authoring/assets/editing-full-screen.png)
+För textbaserade komponenter: tryck på helskärmsläget ![RTE-helskärmsknappen](/help/sites-cloud/authoring/assets/editing-full-screen.png) i [verktygsfältet](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) för att öppna RTF-redigeraren och dölja resten av sidinnehållet.
 
 I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Vilka alternativ som är tillgängliga beror på konfigurationen. <!--Full screen mode displays all the configured options that you can use for authoring. The availability of options [depends on the configuration](/help/sites-administering/rich-text-editor.md).-->
 
@@ -43,15 +44,15 @@ I helskärmsläge visas alla konfigurerade alternativ som du kan använda för a
 
 Fler alternativ för textredigering:
 
-* **Ankarpunkt**: Skapa en ankarpunkt i texten som du senare kan länka till/referera till.
+* **Ankarpunkt**: Skapa en ankarpunkt i texten som du senare kan länka till eller skapa en referens till.
 * **Vänsterjustera text**
 * **Centrera text**
 * **Högerjustera text**
 
-Stäng helskärmsläget genom att klicka på minimeringsikonen.
+Klicka på Minimera för att stänga helskärmsläget.
 
 ![Knappen Minimera med hastighet](/help/sites-cloud/authoring/assets/rte-minimize.png)
 
->[!NOTE]
+>[!Tip]
 >
->Om du kopierar kapslade listor från Microsoft Word till textredigeraren kan det ge inkonsekventa resultat och du kan behöva justera texten manuellt efter att du har klistrat in den i textredigeraren.
+>Om du kopierar kapslade listor från Microsoft Word till textredigeraren kan resultatet bli inkonsekvent. Klistra i stället in som text och gör manuell justering.
