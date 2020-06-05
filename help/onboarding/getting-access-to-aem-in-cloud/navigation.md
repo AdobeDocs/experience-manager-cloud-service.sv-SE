@@ -2,9 +2,9 @@
 title: Navigering
 description: Navigering - molntjänst
 translation-type: tm+mt
-source-git-commit: 072c93eb367a4497d94b73d7f9e54bda862605fa
+source-git-commit: 289c0dc65b16b486d6ea75c5c78f999ec2f353c6
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '505'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,9 @@ Mer information om hur du lägger till användare i en profil finns i [Åtkomst 
 
    ![](assets/sys-admin5.png)
 
-1. Om du klickar på **Hantera åtkomst** kommer du till **Admin Console** där du kan hantera användarroller och behörigheter för Cloud Manager.
+1. När du klickar på **Hantera åtkomst** navigeras du till **Admin Console** där du kan hantera användarroller och behörigheter för Cloud Manager.
+
+   ![](assets/sys-admin1.png)
 
 ### Hantera åtkomst till författarinstans {#manage-access-aem}
 
@@ -46,17 +48,17 @@ Som användare med rollen SysAdmin har du tillgång till **Admin Console** där 
 
 Mer information finns i [Åtkomst till en instans i AEM som en molntjänst](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#accessing-instance-cloud-service) .
 
-1. Gå till **miljökortet** från sidan **Programöversikt** .
+1. Navigera till **miljökortet** från sidan **Programöversikt** och klicka på **Hantera åtkomst**.
 
    ![](assets/sys-admin6.png)
 
    Eller
 
-   Klicka på **Information** från **miljökortet** för att öppna sidan för miljöer. Klicka på **Hantera** -> **Hantera åtkomst**.
+   **Hantera åtkomst** är också tillgängligt från knappen **Hantera** om du klickar på **Information** från **miljökortet** .
 
    ![](assets/sys-admin4.png)
 
-1. Om du klickar på **Hantera åtkomst** navigeras du till **Admin Console** från den plats där du har tillgång till författarinstansen av en miljö.
+1. När du klickar på **Hantera åtkomst** navigeras du till **Admin Console** där du har åtkomst till författarinstansen av miljön.
 
 ## För befintliga AMS-kunder {#existing-aem}
 
