@@ -1,13 +1,16 @@
 ---
-title: Authoring Concepts
+title: Redigeringsbegrepp
 description: Begrepp att skapa i AEM
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '358'
+ht-degree: 1%
 
 ---
 
 
-# Authoring Concepts {#authoring-concepts}
+# Redigeringsbegrepp {#authoring-concepts}
 
 En AEM-installation består vanligtvis av minst två miljöer:
 
