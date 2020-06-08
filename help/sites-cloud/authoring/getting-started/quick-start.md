@@ -1,20 +1,23 @@
 ---
-title: Snabbstartsguide till framtagning av sidor
+title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '1585'
+ht-degree: 4%
 
 ---
 
 
-# Snabbstartsguide till framtagning av sidor {#quick-guide-to-authoring-pages}
+# Snabbstartsguide till redigering av sidor {#quick-guide-to-authoring-pages}
 
 Det här dokumentet är avsett som en snabbstartguide på hög nivå för de viktigaste redigeringsåtgärderna för sidor i AEM. Det här dokumentet:
 
 * Är inte avsedd som omfattande täckning.
 * Tillhandahåller länkar till detaljerad dokumentation.
 
-Mer information om hur du skapar med AEM finns i:
+Mer information om redigering med AEM finns i:
 
 * [Designbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
 * [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md)
@@ -194,7 +197,7 @@ Det finns två (huvudsakliga) metoder för [redigering av sidegenskaper](/help/s
 * När du [redigerar sidan](#editing-your-page-content):
 
    1. Öppna menyn **Sidinformation** .
-   1. Välj **Öppna egenskaper** för att öppna dialogrutan där du kan redigera egenskaperna.
+   1. Select **Open Properties** to open the dialog for editing the properties.
 
       ![Sidinformation, knapp](/help/sites-cloud/authoring/assets/page-information.png)
 
@@ -217,7 +220,7 @@ Det finns två huvudmetoder för att [publicera sidan](/help/sites-cloud/authori
    1. Öppna menyn **Sidinformation** .
    1. Välj **Publicera sida**.
 
-* Du kan bara avpublicera en sida från konsolen via alternativet **Hantera publikation** , som bara är tillgängligt i verktygsfältet (inte via snabbåtgärderna).
+* Du kan bara avpublicera en sida från konsolen via alternativet **Hantera publikation**, som bara är tillgängligt i verktygsfältet (inte via snabbåtgärderna).
 
    ![Knappen Hantera publikation](/help/sites-cloud/authoring/assets/manage-publication.png)
 
@@ -230,7 +233,7 @@ Det finns två huvudmetoder för att [publicera sidan](/help/sites-cloud/authori
 Alla dessa åtgärder kan utlösas av:
 
 1. [Navigera till sidan](#finding-your-page) som du vill flytta, kopiera och klistra in eller ta bort.
-1. Markera kopian (och klistra sedan in), flytta eller ta bort ikonen efter behov med någon av följande metoder:
+1. Välj ikonen för kopiera (och sedan klistra in), flytta eller ta bort efter behov på något av följande sätt:
 
    * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för den begärda resursen.
    * Verktygsfältet när [sidan har markerats](#selecting-your-page-for-further-action).
@@ -251,7 +254,7 @@ Alla dessa åtgärder kan utlösas av:
 
 ### Låser sidan (låser upp) {#locking-your-page-then-unlocking}
 
-[När du låser en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md#locking-a-page) kan inte andra författare arbeta med den medan du är. Ikonen/knappen Lås (och Lås upp) finns:
+[När du låser en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md#locking-a-page) kan andra författare inte arbeta med den. Ikonen/knappen Lås (och Lås upp) finns:
 
 * Verktygsfältet när [sidan har markerats](#selecting-your-page-for-further-action).
 * Listrutan [Sidinformation](#editing-the-page-properties) när du redigerar en sida.
