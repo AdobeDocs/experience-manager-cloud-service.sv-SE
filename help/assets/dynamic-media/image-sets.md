@@ -3,6 +3,9 @@ title: Bilduppsättningar
 description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media
 translation-type: tm+mt
 source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+workflow-type: tm+mt
+source-wordcount: '1986'
+ht-degree: 20%
 
 ---
 
@@ -11,7 +14,7 @@ source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
 
 Bilduppsättningar ger användarna en integrerad visningsupplevelse, där användarna kan se olika vyer av ett objekt genom att klicka på en miniatyrbild. Med bilduppsättningar kan du visa alternativa vyer av ett objekt och visningsprogrammet har zoomverktyg som gör att du kan granska bilder noggrant.
 
-Bilduppsättningar definieras av en banderoll med ordet `IMAGESET`. In addition, if the Image Set is published, then the publish date, indicated by the **[!UICONTROL World]** icon is on the banner along with the last modification date, indicated by the **[!UICONTROL Pencil]** icon displays.
+Bilduppsättningar definieras av en banderoll med ordet `IMAGESET`. Om bilduppsättningen publiceras visas dessutom det publiceringsdatum som anges av ikonen **[!UICONTROL World]** på banderollen tillsammans med det senaste ändringsdatumet, som anges av ikonen **[!UICONTROL Pencil]**.
 
 ![chlimage_1-133](assets/chlimage_1-339.png)
 
@@ -37,7 +40,7 @@ Så här kommer du igång snabbt:
 
    I Bilduppsättningar klickar användare på miniatyrbilder i Bilduppsättningsvisningsprogrammet.
 
-   Om du vill skapa en bilduppsättning i Resurser trycker eller klickar du på **[!UICONTROL Skapa > Bilduppsättningar]**. Lägg sedan till bilder och klicka på **[!UICONTROL Spara]**.
+   Om du vill skapa en bilduppsättning i Resurser trycker eller klickar du på **[!UICONTROL Create > Image Sets]**. Lägg sedan till bilder och klicka **[!UICONTROL Save]**.
 
    You can also create image sets automatically through [batch set presets](/help/assets/dynamic-media/config-dm.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
@@ -53,12 +56,12 @@ Så här kommer du igång snabbt:
 
    Administratörer kan skapa eller ändra förinställningar för bildspelsvisningsprogrammet. To see your image set with a viewer preset, select the image set, and in the left-rail drop-down menu, select **[!UICONTROL Viewers]**.
 
-   Se **[!UICONTROL Verktyg > Resurser > Visningsförinställningar]** för att skapa eller redigera visningsprogramförinställningar.
+   Se **[!UICONTROL Tools > Assets > Viewer Presets]** för att skapa eller redigera visningsförinställningar.
 
 1. (Valfritt) [Visa bilduppsättningar](/help/assets/dynamic-media/image-sets.md#viewing-image-sets) som har skapats med gruppuppsättningsförinställningar.
 1. [Förhandsgranska bilduppsättningar.](/help/assets/dynamic-media/previewing-assets.md)
 
-   Markera bilduppsättningen och du kan förhandsgranska den. Klicka på miniatyrbildikonerna för att undersöka bilduppsättningen i det valda visningsprogrammet. Du kan välja olika visningsprogram på menyn **[!UICONTROL Visare]** , som finns i den vänstra listrutan.
+   Markera bilduppsättningen och du kan förhandsgranska den. Klicka på miniatyrbildikonerna för att undersöka bilduppsättningen i det valda visningsprogrammet. Du kan välja olika visningsprogram på **[!UICONTROL Viewers]** menyn, som finns i den vänstra listrutan.
 
 1. [Publicera bilduppsättningar.](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
 
@@ -68,7 +71,7 @@ Så här kommer du igång snabbt:
 
    AEM Resurser skapar URL-anrop för bilduppsättningar och aktiverar dem när du har publicerat bilduppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
 
-   Select the Image Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers]**.
+   Markera bilduppsättningen och välj sedan **[!UICONTROL Viewers]** i listrutan till vänster.
 
    Läs mer i [Länka en bilduppsättning till en webbsida](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
 
@@ -119,24 +122,24 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 **Skapa en bilduppsättning**
 
-1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Navigation > Assets]**. Navigate to where you want to create an image set, then tap **[!UICONTROL Create > Image Set]** to open the Image Set Editor page.
+1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Navigation > Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och tryck sedan på **[!UICONTROL Create > Image Set]** för att öppna sidan Redigerare för bilduppsättningar.
 
    Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
 
    ![6_5_imagesets-createpulldown](assets/6_5_imagesets-createpulldown.png)
 
-1. Ange ett namn för bilduppsättningen i fältet **[!UICONTROL Titel]** på sidan Bilduppsättningsredigerare. Namnet visas i banderollen över bilduppsättningen. Du kan också ange en beskrivning.
+1. Ange ett namn för bilduppsättningen på sidan Bilduppsättningsredigerare i **[!UICONTROL Title]** fältet. Namnet visas i banderollen över bilduppsättningen. Du kan också ange en beskrivning.
 
    ![6_5_imageset-creating-newset](assets/6_5_imageset-creatingnewset.png)
 
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL Lägg till resurs]** i det övre vänstra hörnet på sidan för redigering av bilduppsättning.
+   * Tryck på i det övre vänstra hörnet på sidan för redigering av bilduppsättning **[!UICONTROL Add Asset]**.
 
-   * I mitten av sidan för redigering av bilduppsättning trycker du på **[!UICONTROL Tryck för att öppna resursväljaren]**.
+   * I mitten av sidan för redigering av bilduppsättning trycker du på **[!UICONTROL Tap to open Asset Selector]**.
    Tryck för att välja resurser som du vill inkludera i din bilduppsättning. De markerade resurserna visas med en bock. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select]**.
 
-   With the Asset Selector, you can search for assets by typing in a keyword and tapping or clicking **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Select the filter and then tap the **[!UICONTROL Filter]** icon on the toolbar. Ändra vyn genom att trycka på ikonen Visa och välja **[!UICONTROL Kolumnvy]**, **[!UICONTROL Kortvy]** eller **[!UICONTROL Listvy]**.
+   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka eller klicka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
 
    See [Working with Selectors.](/help/assets/dynamic-media/working-with-selectors.md)
 
@@ -148,18 +151,18 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
    ![6_5_imageset-reorderassets](assets/6_5_imageset-reorderassets.png)
 
-   Om du vill ändra en miniatyrbild eller färgruta klickar du på ikonen **+** **miniatyr** bredvid bilden och navigerar till den miniatyrbild eller färgruta som du vill använda. When done selecting all the images click **[!UICONTROL Save]**.
+   Om du vill ändra en miniatyrbild eller färgruta klickar du på ikonen **+** **miniatyr** bredvid bilden och navigerar till den miniatyrbild eller färgruta som du vill använda. När du har markerat alla bilderna klickar du på **[!UICONTROL Save]**.
 
 1. (Valfritt) Gör något av följande:
 
-   * Om du vill ta bort en bild markerar du bilden och trycker på **[!UICONTROL Ta bort resurs]**.
+   * Om du vill ta bort en bild markerar du bilden och trycker på **[!UICONTROL Delete Asset]**.
 
    * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a preset to apply to all the assets at once.
    >[!NOTE]
    >
-   >När du skapar bilduppsättningen kan du ändra miniatyrbilden för bilduppsättningen eller tillåta att AEM väljer miniatyrbild automatiskt baserat på resurserna i bilduppsättningen. To select a thumbnail, tap **[!UICONTROL Change thumbnail]** above the Title field on the Image Set Editor page, then select any image (you can navigate to other folders to find images as well). If you have selected a thumbnail and then decide that you want AEM to generate one from the image set, select **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail]**.
+   >När du skapar bilduppsättningen kan du ändra miniatyrbilden för bilduppsättningen eller tillåta att AEM väljer miniatyrbild automatiskt baserat på resurserna i bilduppsättningen. Om du vill välja en miniatyrbild trycker du på **[!UICONTROL Change thumbnail]** ovanför fältet Titel på sidan Redigerare för bilduppsättningar och väljer sedan en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har valt en miniatyrbild och sedan bestämmer dig för att du vill att AEM ska generera en från bilduppsättningen väljer du **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail]**.
 
-1. Click **[!UICONTROL Save]**. Den nya bilduppsättningen visas i den mapp du skapade den i.
+1. Klicka på **[!UICONTROL Save]**. Den nya bilduppsättningen visas i den mapp du skapade den i.
 
 ## Visa bilduppsättningar {#viewing-image-sets}
 
@@ -179,9 +182,9 @@ Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte*
 
    ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* From search, you can select **[!UICONTROL Filter**, then expand **[!UICONTROL Dynamic Media** and select **[!UICONTROL Sets]**.
+* Från sökningen kan du välja **[!UICONTROL Filter]**, expandera **[!UICONTROL Dynamic Media]** och markera **[!UICONTROL Sets]**.
 
-   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiserade uppsättningar utförs sökfrågan med sökvillkoren &quot;Börjar med&quot;, som skiljer sig från AEM-sökning, som baseras på sökvillkoren &quot;Innehåller&quot;. Att ställa in filtret på **[!UICONTROL Anger]** är det enda sättet att söka efter automatiska uppsättningar.
+   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiserade uppsättningar utförs sökfrågan med sökvillkoren &quot;Börjar med&quot;, som skiljer sig från AEM-sökning, som baseras på sökvillkoren &quot;Innehåller&quot;. Om du anger att filtret ska vara **[!UICONTROL Sets]** det enda sättet att söka efter automatiska uppsättningar.
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
@@ -203,27 +206,27 @@ Du kan utföra en mängd redigeringsåtgärder på bilduppsättningar, till exem
 
 1. Gör något av följande:
 
-   * Håll pekaren över en resurs i Bilduppsättning och tryck sedan på **[!UICONTROL Redigera]** (pennikon).
-   * Håll muspekaren över en bilduppsättningsresurs, tryck på **[!UICONTROL Välj]** (bockmarkeringsikon) och sedan på **[!UICONTROL Redigera]** i verktygsfältet.
-   * Tryck på en bilduppsättningsresurs och tryck sedan på **[!UICONTROL Redigera]** (pennikon) i verktygsfältet.
+   * Håll pekaren över en resurs i Bilduppsättning och tryck sedan på **[!UICONTROL Edit]** (pennikon).
+   * Håll muspekaren över en resurs i Bilduppsättning, tryck **[!UICONTROL Select]** (bockmarkeringsikon) och tryck sedan **[!UICONTROL Edit]** på verktygsfältet.
+   * Tryck på en bilduppsättningsresurs och tryck sedan på **[!UICONTROL Edit]** (pennikon) i verktygsfältet.
 
 1. Gör något av följande om du vill redigera bilderna i bilduppsättningen:
 
    * Om du vill ändra ordning på resurser drar du en bild till en ny plats (markera sorteringsikonen för att flytta objekt).
    * Om du vill sortera objekt i stigande eller fallande ordning klickar du på kolumnrubriken.
-   * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Lägg till resurs]**. Navigera till en resurs, markera den och tryck sedan på **[!UICONTROL Välj]** i det övre högra hörnet på sidan.
+   * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Add Asset]**. Navigera till en resurs, markera den och tryck sedan **[!UICONTROL Select]** i det övre högra hörnet på sidan.
       >[!NOTE]
       >
       >Om du tar bort den bild som AEM använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
-   * Om du vill ta bort en resurs markerar du den och trycker eller klickar på **[!UICONTROL Ta bort resurs]**.
+   * Om du vill ta bort en resurs markerar du den och trycker eller klickar på **[!UICONTROL Delete Asset]**.
    * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a viewer preset.
-   * Om du vill lägga till eller ändra en miniatyrbild markerar du miniatyrbildikonen bredvid resursens högra sida. Navigera till den nya miniatyrbilden eller färgruteresursen, markera den och tryck sedan på **[!UICONTROL Välj]**.
+   * Om du vill lägga till eller ändra en miniatyrbild markerar du miniatyrbildikonen bredvid resursens högra sida. Navigera till den nya miniatyrbilden eller färgruteresursen, markera den och tryck sedan på **[!UICONTROL Select]**.
    * Om du vill ta bort en hel bilduppsättning går du till bilduppsättningen, markerar den och trycker på **[!UICONTROL Delete]**.
    >[!NOTE]
    >
-   >You can edit the images in an Image Set by navigating to the set, tap **[!UICONTROL Set Members]** in the left rail, and then tap the Pencil icon on an individual asset to open the editing window.
+   >Du kan redigera bilderna i en bilduppsättning genom att gå till uppsättningen, trycka på **[!UICONTROL Set Members]** i den vänstra rutan och sedan trycka på pennikonen på en enskild resurs för att öppna redigeringsfönstret.
 
-1. Tryck på **[!UICONTROL Spara]** när du är klar med redigeringen.
+1. Tryck **[!UICONTROL Save]** när du är klar med redigeringen.
 
 ## Förhandsvisa bilduppsättningar {#previewing-image-sets}
 
