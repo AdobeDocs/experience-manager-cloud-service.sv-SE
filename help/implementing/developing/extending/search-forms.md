@@ -3,6 +3,9 @@ title: Konfigurera sökformulär
 description: Konfigurera sökformulär för Adobe Experience Manager som en molntjänst.
 translation-type: tm+mt
 source-git-commit: 18841ec94b8dd92ca92deda0869f2698786458aa
+workflow-type: tm+mt
+source-wordcount: '2030'
+ht-degree: 2%
 
 ---
 
