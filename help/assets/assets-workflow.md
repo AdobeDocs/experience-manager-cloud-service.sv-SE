@@ -4,6 +4,9 @@ description: Lär dig hur du använder arbetsflöden på resurser, mappar och sa
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: ccfb07b3aef2e357434993cdf87ea9962b3c3566
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 7%
 
 ---
 
@@ -19,12 +22,12 @@ Mer information finns i [Starta ett arbetsflöde för en resurs](/help/assets/ma
 Så här använder du ett arbetsflöde för flera resurser:
 
 1. I resurskonsolen navigerar du till platsen för de resurser som du vill starta ett arbetsflöde för och väljer resurser.
-1. Klicka på AEM-ikonen och välj **[!UICONTROL Tidslinje]** på menyn för att visa tidslinjen.
+1. Klicka på AEM-ikonen och välj **[!UICONTROL Timeline]** på menyn för att visa tidslinjen.
 1. Klicka på ikonen Åtgärder längst ned.
-1. Klicka på **[!UICONTROL Starta arbetsflöde]**.
-1. Välj en arbetsflödesmodell i listan i dialogrutan **[!UICONTROL Starta arbetsflöde]** .
+1. Klicka på **[!UICONTROL Start Workflow]**.
+1. Välj en arbetsflödesmodell i listan i **[!UICONTROL Start Workflow]** dialogrutan.
 1. (Valfritt) Ange en rubrik för arbetsflödet som kan användas som referens för arbetsflödesinstansen.
-1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Bekräfta]** i dialogrutan. Arbetsflödet körs på alla resurser som du har valt.
+1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]** i dialogrutan. Arbetsflödet körs på alla resurser som du har valt.
 
 ## Tillämpa ett arbetsflöde på flera mappar {#applying-a-workflow-to-multiple-folders}
 
