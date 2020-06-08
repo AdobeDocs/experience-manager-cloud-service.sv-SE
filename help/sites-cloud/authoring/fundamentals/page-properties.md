@@ -3,6 +3,9 @@ title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
 source-git-commit: dbd7b8084445b03beff3b5a96b0fa6b5512e10b8
+workflow-type: tm+mt
+source-wordcount: '1523'
+ht-degree: 6%
 
 ---
 
@@ -69,7 +72,7 @@ Egenskaperna fördelas på flera flikar.
    * Om Vanity-URL:en till exempel är inställd på `welcome` den sida som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`är `http://example.com/welcome` det vanity-URL:en för `http://example.com/content/v1.0/startpage`
    >[!CAUTION]
    >
-   >Vanity URL:er:
+   >Alternativa URL:er:
    >
    >* Måste vara unikt så du bör vara försiktig med att värdet inte redan används av en annan sida.
    >* Använd inte regex-mönster.
