@@ -3,6 +3,9 @@ title: Associerat innehåll
 description: Associerat innehåll ger anslutningen så att resurser (valfritt) kan användas med fragmentet när det läggs till på en innehållssida.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '218'
+ht-degree: 13%
 
 ---
 
@@ -23,7 +26,7 @@ För att kunna skapa en association måste du först lägga [till dina mediefile
 
    ![Associerat innehåll](assets/cfm-assoc-content-01.png)
 
-2. Välj **Associera innehåll** eller **Associera samling** (beroende på om några samlingar redan har associerats eller inte).
+2. Välj **Associera innehåll** eller **Associera samling** (beroende på om några samlingar har associerats eller inte).
 3. Välj önskad samling.
 
    Du kan också lägga till själva fragmentet i den valda samlingen; detta hjälper till att spåra.
