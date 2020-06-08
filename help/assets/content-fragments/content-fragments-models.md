@@ -3,6 +3,9 @@ title: Modeller för innehållsfragment
 description: Content Fragment Models används för att skapa innehållsfragment med strukturerat innehåll.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 21%
 
 ---
 
@@ -11,7 +14,7 @@ source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
 
 Modeller för innehållsfragment definierar innehållsstrukturen för dina [innehållsfragment](/help/assets/content-fragments/content-fragments.md).
 
-## Aktivera modeller för innehållsfragment {#enable-content-fragment-models}
+## Enable Content Fragment Models {#enable-content-fragment-models}
 
 >[!CAUTION]
 >
@@ -40,7 +43,7 @@ Om du vill [skapa en ny modell](#creating-a-content-fragment-model) för innehå
 
 När konfigurationen **global** är aktiverad för innehållsfragmentmodeller kan alla modeller som användarna skapar användas i alla resursmappar.
 
-Om du vill använda andra konfigurationer (d.v.s. exkludera globala) med en jämförbar resursmapp måste du definiera anslutningen. Detta gör du genom att välja lämplig **konfiguration** på fliken **Cloud-tjänster** i **Mappegenskaper** för rätt mapp.
+Om du vill använda andra konfigurationer (dvs. exkludera globala) med en jämförbar Assets-mapp måste du definiera kopplingen. Detta gör du genom att välja lämplig **konfiguration** på fliken **Cloud Services** i **Mappegenskaper** för rätt mapp.
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 
@@ -74,10 +77,10 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
    När du har öppnat modellredigeraren visas följande:
 
    * vänster: fält har redan definierats
-   * höger: **Datatyper** som är tillgängliga för att skapa fält (och **egenskaper** som kan användas när fält har skapats)
+   * höger: **Datatyper** som är tillgängliga för att skapa fält (och **egenskaper** som kan användas när fälten har skapats)
    >[!NOTE]
    >
-   >När ett fält är **obligatoriskt** markeras den **etikett** som visas i den vänstra rutan med en asterix (*****).
+   >När ett fält är **obligatoriskt** markeras den **etikett** som visas i den vänstra rutan med en asterisk (*****).
 
    ![egenskaper](assets/cfm-models-03.png)
 
@@ -86,16 +89,16 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
    * Dra en obligatorisk datatyp till önskad plats för ett fält:
    ![datatyp till fält](assets/cfm-models-04.png)
 
-   * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet. Exempel:
+   * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet. Till exempel:
    ![fältegenskaper](assets/cfm-models-05.png)
 
    >[!NOTE]
-   För datatypen **Flerradstext** går det att definiera **standardtypen** som antingen:
+   För datatypen **Flerradig text** går det att definiera **standardtypen** som endera:
    * **RTF-text**
-   * **Markering**
+   * **Markdown**
    * **Oformaterad text**
    Om inget anges används standardvärdet **RTF** för det här fältet.
-   Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar det bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
+   Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
 
 1. **Ta bort ett fält**
 
@@ -103,7 +106,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    ![remove](assets/cfm-models-06.png)
 
-1. När du har lagt till alla obligatoriska fält och definierat egenskaperna använder du **Spara** för att behålla definitionen. Exempel:
+1. När du har lagt till alla obligatoriska fält och definierat egenskaperna använder du **Spara** för att behålla definitionen. Till exempel:
 
    ![save](assets/cfm-models-07.png)
 
