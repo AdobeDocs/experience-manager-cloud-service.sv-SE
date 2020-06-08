@@ -1,13 +1,16 @@
 ---
-title: Arbeta med dynamiska media
+title: Arbeta med Dynamic Media
 description: Dynamic Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Dynamic Media använder en uppsättning masterresurser för att generera och leverera olika varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 4%
 
 ---
 
 
-# Arbeta med dynamiska media{#working-with-dynamic-media}
+# Arbeta med Dynamic Media{#working-with-dynamic-media}
 
 [Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med hjälp av en uppsättning masterresurser genererar och levererar Dynamic Media flera varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
