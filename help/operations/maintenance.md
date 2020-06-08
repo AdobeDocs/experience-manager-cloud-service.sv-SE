@@ -3,6 +3,9 @@ title: Underhållsaktiviteter i AEM som en molntjänst
 description: 'Underhållsaktiviteter i AEM som en molntjänst '
 translation-type: tm+mt
 source-git-commit: 8fba31951276d7e0de1f3bd079e42e431edaff4e
+workflow-type: tm+mt
+source-wordcount: '892'
+ht-degree: 0%
 
 ---
 
