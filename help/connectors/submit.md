@@ -1,16 +1,19 @@
 ---
-title: Skicka en AEM Connector
-description: Skicka en AEM Connector
+title: Skicka en AEM-anslutning
+description: Skicka en AEM-anslutning
 translation-type: tm+mt
 source-git-commit: 629de3a9f55d2e4c52ef91c9e0bb5d439aebe84f
+workflow-type: tm+mt
+source-wordcount: '266'
+ht-degree: 12%
 
 ---
 
 
-Skicka en AEM Connector
+Skicka en AEM-anslutning
 ===========================
 
-Nedan finns användbar information för att skicka in AEM Connectors och den bör läsas tillsammans med artiklar om [implementering](implement.md) och [underhåll](maintain.md) av anslutningar.
+Nedan finns användbar information om hur du skickar in AEM-kopplingar och den bör läsas tillsammans med artiklarna om [implementering](implement.md) och [underhåll](maintain.md) av kopplingar.
 
 AEM Connectors listas på [Adobe Exchange](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace.html).
 
