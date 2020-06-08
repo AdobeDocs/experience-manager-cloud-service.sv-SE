@@ -3,6 +3,9 @@ title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna och borttagna funktioner i Adobe Experience Manager som en molntjänst.
 translation-type: tm+mt
 source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 10%
 
 ---
 
