@@ -1,9 +1,9 @@
 ---
 title: En snabbguide till WCAG 2.1
 description: En snabbguide till WCAG 2.1
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 6f6038e6669d85230b38dc73cdddae164a01643b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 100%
 
