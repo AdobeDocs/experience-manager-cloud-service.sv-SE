@@ -3,13 +3,16 @@ title: Rollbaserade behörigheter
 description: Rollbaserade behörigheter
 translation-type: tm+mt
 source-git-commit: 3c56d94f9922cb65b91912dd96eb8aa60efc2b53
+workflow-type: tm+mt
+source-wordcount: '233'
+ht-degree: 19%
 
 ---
 
 
 # Rollbaserade behörigheter {#role-based-permissions}
 
-[!UICONTROL Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. ] En utvecklare utvecklar till exempel kod och har behörighet att skicka koden till **Git-databasen**. En företagsägare har också olika behörigheter för att definiera KPI:er (Key Performance Indicators) och godkänna distributioner.
+[!UICONTROL Cloud Manager] har förkonfigurerade roller med lämplig behörighet. En utvecklare utvecklar till exempel kod och har behörighet att skicka koden till **Git-databasen**. En företagsägare har också olika behörigheter för att definiera KPI:er (Key Performance Indicators) och godkänna distributioner.
 
 ## Användarbehörigheter {#user-permissions}
 
