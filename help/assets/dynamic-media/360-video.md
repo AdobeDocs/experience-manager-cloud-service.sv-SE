@@ -3,11 +3,14 @@ title: 360/VR-video
 description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i Dynamic Media.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 0%
 
 ---
 
 
-# 360/VR-video {#vr-video}
+# 360/VR Video {#vr-video}
 
 360-gradersvyer spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.
 
@@ -91,41 +94,41 @@ Se även [Redigera visningsförinställningar](/help/assets/dynamic-media/managi
 
 När du är nöjd med 360-videon kan du publicera den.
 
-Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.
-Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+See [Embedding the Video or Image Viewer on a Web Page](/help/assets/dynamic-media/embed-code.md).
+See [Linking URLs to your web application](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.
+See [Adding Dynamic Media Assets to pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
 **Så här förhandsgranskar du 360-videoklipp**
 
-1. Navigera i **[!UICONTROL Resurser]** till en befintlig 360-video som du har skapat. Tryck på 360-videoresursen för att öppna den i förhandsgranskningsläge.
+1. Navigera **[!UICONTROL Assets]** till en befintlig 360-video som du har skapat. Tryck på 360-videoresursen för att öppna den i förhandsgranskningsläge.
 
    ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
 
    Tryck på 360-videoresursen för att förhandsgranska videon.
 
-1. Tryck på listrutan på förhandsgranskningssidan i det övre vänstra hörnet av sidan och välj sedan **[!UICONTROL Visare]**.
+1. Tryck på listrutan på förhandsvisningssidan, i det övre vänstra hörnet av sidan, och välj sedan **[!UICONTROL Viewers]**.
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
    Tryck på **[!UICONTROL Video360_social]** i visningslistan och gör sedan något av följande:
 
    * Dra muspekaren över videon om du vill ändra visningsvinkeln för den statiska scenen.
-   * Tryck på videons **[!UICONTROL uppspelningsknapp]** för att påbörja uppspelningen; När videon spelas upp drar du muspekaren över videon för att ändra visningsvinkeln.
+   * Tryck på videoknappen för att börja spela upp videon **[!UICONTROL Play]** . När videon spelas upp drar du muspekaren över videon för att ändra visningsvinkeln.
    ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360 video, skärmdump.*
 
-   * Tryck på **[!UICONTROL Video360VR]** i visningslistan.
+   * Tryck på i visningslistan **[!UICONTROL Video360VR]**.
 
       VR-video (Virtual Reality) är engagerande videomaterial som nås via virtuella verklighetshuvuden. Precis som med vanliga videor skapar du VR-videor i början när en video spelas in eller spelas in med 360-graderskameror.
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *En 360 VR-videobildskärm.*
 
-1. Tryck på **[!UICONTROL Stäng]** i det övre högra hörnet på förhandsvisningssidan.
+1. Tryck på i det övre högra hörnet på förhandsvisningssidan **[!UICONTROL Close]**.
 
 ## Publicera 360-video {#publishing-video}
 
 Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och prestandaoptimerad leverans.
 
 Mer information om hur du publicerar 360-video finns i [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) .
-Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se även [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.
-Se även [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+See also [Embedding the Video or Image Viewer on a Web Page](/help/assets/dynamic-media/embed-code.md).
+See also [Linking URLs to your web application](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.
+See also [Adding Dynamic Media Assets to pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
