@@ -3,6 +3,9 @@ title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '5351'
+ht-degree: 6%
 
 ---
 
@@ -137,7 +140,7 @@ När du har [påbörjat målinriktningsprocessen](#the-targeting-process-create-
 >
 >Ett erbjudande är innehållet i en riktad komponent.
 
-Erfarenheter visas i rutan Publiker. I följande exempel innehåller upplevelserna **Default**, **Hona**, **Hona över 30** och **Hona under 30**. I det här exemplet visas standarderbjudandet för en riktad **Image** -komponent.
+Upplevelserna visas i rutan Målgrupper. I följande exempel finns upplevelserna **Standard**, **Kvinna**, **Kvinna över 30** och **Kvinna under 30**. I det här exemplet visas standarderbjudandet för en riktad **bildkomponent**.
 
 ![Målbildskomponent](/help/sites-cloud/authoring/assets/targeted-image-component.png)
 
@@ -145,7 +148,7 @@ När en annan upplevelse väljs visas erbjudandet för den upplevelsen i bildkom
 
 ![Målbildskomponenten har ändrats](/help/sites-cloud/authoring/assets/targeted-image-different.png)
 
-När en upplevelse väljs och målkomponenten inte innehåller något erbjudande för den upplevelsen, visar komponenten **Lägg till erbjudande** som läggs ovanpå det halvgenomskinliga standarderbjudandet. När inget erbjudande har skapats för en upplevelse visas **standarderbjudandet** för det segment som är mappat till upplevelsen.
+När en upplevelse väljs och målkomponenten inte innehåller något erbjudande för den upplevelsen, visas **Lägg till erbjudande** ovanpå det halvgenomskinliga standarderbjudandet. När inget erbjudande har skapats för en upplevelse visas **standarderbjudandet** för det segment som är mappat till upplevelsen.
 
 ![Lägg till erbjudande](/help/sites-cloud/authoring/assets/targeted-add-offer.png)
 
@@ -283,7 +286,7 @@ Om du redigerar målinnehåll måste du klicka eller trycka på **Start Targetin
    >
    >Administratörer kan bestämma om den här konfigurationen måste anges på `https://<host>:<port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet`
    >
-   >Om du vill att användare ska ange en plats markerar du kryssrutan **Tvinga plats** .
+   >Om du vill att användare ska ange en plats markerar du kryssrutan **Tvinga plats**.
 
 1. Välj den upplevelse som du vill skapa erbjudandet för.
 1. Skapa erbjudandet:
@@ -436,7 +439,7 @@ Om du använder Adobe Target som målmotor:
 
 ![Adobe Target som målmotor](/help/sites-cloud/authoring/assets/targeted-engine.png)
 
-Om du använder Adobe Target som målmotor och har A4T Analytics konfigurerat för kontot har du en extra **listruta för rapportkälla** :
+Om du använder Adobe Target som målinriktningsmotor och har A4T Analytics konfigurerat för kontot har du en extra listruta för **Rapportkälla**:
 
 ![A4T](/help/sites-cloud/authoring/assets/targeted-source.png)
 
@@ -491,17 +494,17 @@ Så här konfigurerar du mål och inställningar om du använder Adobe Target:
    * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger tidpunkten för att avsluta aktiviteten.
 
 1. Om du vill ange en prioritet för aktiviteten använder du skjutreglaget för att välja **Låg**, **Normal** eller **Hög**.
-1. Om du har konfigurerat Adobe Analytics med ditt Adobe Target-konto visas listrutan **Rapporteringskälla** . Välj **Adobe Target** eller **Adobe Analytics** som källa.
+1. Om du har konfigurerat Adobe Analytics med ert Adobe Target-konto visas listrutan **Rapportkälla**. Välj **Adobe Target** eller **Adobe Analytics** som källa.
 
    Om du väljer **Adobe Analytics** väljer du företaget och rapportsviten. Om du väljer **Adobe Target** krävs ingen åtgärd.
 
    ![Rapporteringskälla](/help/sites-cloud/authoring/assets/targeted-reporting-source.png)
 
-1. Under **Mitt primära mål** i området **Mått** väljer du det framgångsmått som du vill spåra - Konvertering, Inkomster, Insats - och anger hur mätningen görs (eller vilka åtgärder publiken vidtar för att ange att ett mål har uppnåtts). Se definitionen av målmåtten i föregående tabell och [Adobe Target-dokumentationen](https://marketing.adobe.com/resources/help/en_US/target/target/r_success_metrics.html) om framgångsmått.
+1. I området **Målmått**, under **Mitt primära mål** väljer du det framgångsmått som du vill spåra – som konvertering, intäkter eller engagemang – och anger hur mätningen görs (eller vilka åtgärder målgruppen vidtar för att ange att ett mål har nåtts). Definitioner av målmått anges i föregående tabell och [Adobe Target-dokumentationen](https://marketing.adobe.com/resources/help/en_US/target/target/r_success_metrics.html) innehåller mer information om framgångsmått.
 
    Du kan byta namn på målet genom att klicka på de tre punkterna i det övre högra hörnet och välja **Byt namn**.
 
-   Om du behöver ta bort alla fält klickar du på de tre punkterna i det övre högra hörnet och väljer **Rensa alla fält**.
+   Om du vill rensa alla fält klickar du på de tre punkterna i det övre högra hörnet och väljer **Rensa alla fält**.
 
    Alla mätvärden har också avancerade inställningar som du kan definiera. Välj **Avancerade inställningar** för att komma åt dem. Se en definition av hur framgångsmått räknas i föregående tabell och läs [Adobe Target-dokumentationen](https://marketing.adobe.com/resources/help/en_US/target/target/r_success_metrics.html).
 
