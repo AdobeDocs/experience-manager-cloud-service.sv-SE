@@ -2,9 +2,9 @@
 title: Använda verktyget Innehållsöverföring
 description: Använda verktyget Innehållsöverföring
 translation-type: tm+mt
-source-git-commit: f154ffacbeeee1993a9cc3bd3bd274be33dca7a7
+source-git-commit: 7a0fa12198c69791caf7e44bfbfe7d71e389a984
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1538'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Följ det här avsnittet för att lära dig hur du använder verktyget Innehåll
    1. **Åtkomsttoken**: Ange åtkomsttoken.
 
       >[!NOTE]
-      >Du kan hämta åtkomsttoken från författarinstansen genom att gå till `/libs/granite/migration/token.json`.
+      >Du kan hämta åtkomsttoken från författarinstansen genom att gå till `/libs/granite/migration/token.json`. Åtkomsttoken hämtas från molntjänstens författarinstans.
 
    1. **Parametrar**: Välj följande parametrar för att skapa migreringsuppsättningen:
 
