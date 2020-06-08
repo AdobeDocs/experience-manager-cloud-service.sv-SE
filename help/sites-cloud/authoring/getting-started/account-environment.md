@@ -3,15 +3,18 @@ title: Konfigurerar din kontomiljö
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 4%
 
 ---
 
 
-# Konfigurerar din kontomiljö {#configuring-your-account-environment}
+# Configuring Your Account Environment {#configuring-your-account-environment}
 
 AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
-Med alternativet [Användare](#user-settings) i [sidhuvudet](/help/sites-cloud/authoring/getting-started/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ, till exempel.
+Med alternativet [Användare](#user-settings) i [sidhuvudet](/help/sites-cloud/authoring/getting-started/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
 
 Börja med att gå till alternativet [Användare](#user-settings) i sidhuvudet.
 
@@ -71,7 +74,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    * **Visa alltid exakt datum**: Det exakta datumet visas alltid (aldrig ett relativt datum).
    * **1 dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
-   * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, annars visas ett exakt datum.
+   * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, i annat fall visas ett exakt datum.
    * **1 månad**: Det relativa datumet visas för datum inom en månad, annars visas ett exakt datum.
    * **1 år**: Det relativa datumet visas för datum inom ett år, annars visas ett exakt datum.
    * **Visa alltid relativt datum**: Exakta datum visas aldrig och endast relativa datum visas.
