@@ -3,6 +3,9 @@ title: Versionshantering för Maven Project
 description: Maven Project Version Handlingt - Cloud Services
 translation-type: tm+mt
 source-git-commit: cedc14b0d71431988238d6cb4256936a5ceb759b
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 6%
 
 ---
 
@@ -10,7 +13,7 @@ source-git-commit: cedc14b0d71431988238d6cb4256936a5ceb759b
 # Versionshantering för Maven Project {#maven-project-version-handling}
 
 
-## Om versionshantering för Maven-projekt {#understanding-project-version}
+## Understanding Maven Project Version Handling {#understanding-project-version}
 
 För driftsättningar på scen- och produktionsstadier genererar Cloud Manager en unik, stegvis version.
 
