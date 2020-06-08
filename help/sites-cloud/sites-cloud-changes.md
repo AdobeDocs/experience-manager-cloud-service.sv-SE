@@ -1,13 +1,16 @@
 ---
-title: Betydande ändringar av AEM-webbplatser i AEM Cloud-tjänsten
-description: 'Betydande ändringar av AEM-webbplatser i AEM Cloud-tjänsten '
+title: Viktiga ändringar av AEM Sites i AEM Cloud Service
+description: 'Viktiga ändringar av AEM Sites i AEM Cloud Service '
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '468'
+ht-degree: 5%
 
 ---
 
 
-# Betydande ändringar av AEM-webbplatser som en molntjänst {#notable-changes}
+# Viktiga ändringar i AEM Sites as a Cloud Service {#notable-changes}
 
 AEM Sites som en molntjänst tillhandahåller upplevelsehanteringsfunktioner som en del av molnbaserade AEM som en plattform för molntjänster. Förutom de viktigaste fördelarna med AEM som molntjänst, till exempel molnbaserad skalbarhet, drifttid och ständigt uppdaterade, erbjuder AEM Sites som molntjänst även ett antal webbplatsspecifika ändringar och tillägg.
 
@@ -50,4 +53,4 @@ På grund av att det inte går att komma åt innehåll som inte kan ändras unde
 * i18n-ordlisteöversättning
 * Utvecklarläge i sidredigeraren AEM Sites
 
-Dessa funktioner kan användas via lokala, fristående utvecklarinstanser av AEM som en molntjänst för att uppdatera innehåll och kod i AEM som en GIT-databas för molntjänster, men inte i värdbaserade körningsmiljöer.
+Dessa funktioner kan användas via lokala, fristående utvecklarinstanser av AEM som en molntjänst för att uppdatera innehåll och kod i AEM som en GIT-databas för molntjänster, men inte i värdmiljöer.
