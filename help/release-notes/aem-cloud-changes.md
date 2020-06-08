@@ -3,11 +3,14 @@ title: Betydande ändringar av Adobe Experience Manager (AEM) som en molntjänst
 description: Betydande ändringar av Adobe Experience Manager (AEM) som en molntjänst
 translation-type: tm+mt
 source-git-commit: e76de9b84931dced6383570e384ffdb6fb334daf
+workflow-type: tm+mt
+source-wordcount: '820'
+ht-degree: 0%
 
 ---
 
 
-# Betydande ändringar av Adobe Experience Manager (AEM) som en molntjänst {#notable-changes-aem-cloud}
+# Notable Changes to Adobe Experience Manager (AEM) as a Cloud Service {#notable-changes-aem-cloud}
 
 AEM Cloud-tjänsten har många nya funktioner och möjligheter för att hantera dina AEM-projekt. Det finns dock ett antal skillnader mellan AEM-webbplatser lokalt eller i Adobe Managed Service jämfört med AEM Cloud-tjänsten. Det här dokumentet visar de viktiga skillnaderna.
 
