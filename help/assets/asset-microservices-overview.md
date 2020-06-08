@@ -4,6 +4,9 @@ description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrot
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0686acbc61b3902c6c926eaa6424828db0a6421a
+workflow-type: tm+mt
+source-wordcount: '845'
+ht-degree: 0%
 
 ---
 
