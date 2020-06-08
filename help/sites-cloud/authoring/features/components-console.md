@@ -3,6 +3,9 @@ title: Komponentkonsol
 description: Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för din instans
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 17%
 
 ---
 
@@ -11,7 +14,7 @@ source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
 
 Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för instansen och visa nyckelinformation för varje komponent.
 
-Den finns under **Verktyg ->** Allmänt -> **** Komponenter ****. Eftersom det inte finns någon trädstruktur för komponenter är endast listvyn tillgänglig.
+Den finns under **Verktyg ->** **Allmänt ->** **Komponenter**. Eftersom det inte finns någon trädstruktur för komponenter är endast listvyn tillgänglig.
 
 ![Komponentkonsolen](/help/sites-cloud/authoring/assets/components-console.png)
 
@@ -19,9 +22,9 @@ Den finns under **Verktyg ->** Allmänt -> **** Komponenter ****. Eftersom det i
 >
 >Komponentkonsolen visar alla komponenter i systemet. I [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) visas komponenter som är tillgängliga för författare och alla komponentgrupper som börjar med en punkt ( `.`) döljs.
 
-## Sök {#search-field}
+## Sökning {#search-field}
 
-Med ikonen Endast **** innehåll (överst till vänster) kan du öppna **sökpanelen** och söka efter och/eller filtrera komponenterna:
+Med ikonen **Endast innehåll** (överst till vänster) kan du öppna **sökpanelen** och söka efter och/eller filtrera komponenterna:
 
 ![Söka i komponentkonsolen](/help/sites-cloud/authoring/assets/components-console-search.png)
 
