@@ -3,6 +3,9 @@ title: Hantera målgrupper
 description: Med Audiences-konsolen kan du skapa, ordna och hantera målgrupper för ditt Adobe Target-konto eller hantera segment för ContextHub
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '976'
+ht-degree: 11%
 
 ---
 
@@ -31,7 +34,7 @@ Du kan skapa ett ContextHub-segment antingen i publikkonsolen eller under målin
 
 Så här skapar du ett ContextHub-segment i publikkonsolen:
 
-1. Klicka eller tryck på **Personalisering** i navigeringskonsolen. Klicka eller tryck på **Publiker**.
+1. In the Navigation console, click or tap **Personalization**. Klicka eller tryck på **Publiker**.
 1. Tryck eller klicka på **Skapa ContextHub-segment**.
 
    ![Skapa ett segment](/help/sites-cloud/authoring/assets/audiences-create-segment.png)
@@ -40,7 +43,7 @@ Så här skapar du ett ContextHub-segment i publikkonsolen:
 
    >[!NOTE]
    >
-   >Du kan sortera den ändrade listan genom att trycka eller klicka på **Ändrad** för att sortera i fallande ordning för att se alla nya målgrupper.
+   >Du kan sortera den ändrade listan genom att trycka eller klicka på **Ändrad** och sortera i fallande ordning för att se alla nya målgrupper.
 
 Mer information om hur du skapar segment med ContextHub finns i Configuring Segmentation with ContextHub-dokumentationen. <!--For further detail about creating segments using ContextHub, please see the [Configuring Segmentation with ContextHub](/help/sites-administering/segmentation.md) documentation.-->
 
@@ -54,11 +57,11 @@ När du använder mer än en regel kombineras dessa regler av operatorn AND, vil
 
 >[!NOTE]
 >
->Om du inte ser **Skapa målgrupp** på menyn **Skapa** har du inte de behörigheter som krävs för att skapa en målgrupp. Du måste ha skrivbehörighet under `/etc/segmentation` för att kunna skapa målgrupper. Gruppens innehållsförfattare har skrivbehörighet som standard.
+>Om du inte ser **Skapa målgrupp** på menyn **Skapa** har du inte de behörigheter som krävs för att skapa en målgrupp. Du måste ha skrivbehörighet för `/etc/segmentation` för att kunna skapa målgrupper. Gruppens innehållsförfattare har skrivbehörighet som standard.
 
 Så här skapar du en Adobe Target-målgrupp:
 
-1. Klicka eller tryck på **Personalisering** i navigeringskonsolen. Klicka eller tryck på **Publiker**.
+1. In the Navigation console, click or tap **Personalization**. Klicka eller tryck på **Publiker**.
 
    ![Navigera till målgrupper](/help/sites-cloud/authoring/assets/audiences-navigation.png)
 
@@ -68,7 +71,7 @@ Så här skapar du en Adobe Target-målgrupp:
 
 1. I dialogrutan **Adobe Target Configuration** väljer du målkonfigurationen och trycker eller klickar på **OK**.
 1. I området Regel#1 trycker eller klickar du på attributtypen och anger eventuell attributinformation i fälten som är tillgängliga. När du är klar markerar du kryssrutan till höger om attributet för att spara det. Mer information om alla attribut finns i [Attribut och deras alternativ](#attributes-and-their-options) .
-1. Klicka på **Lägg till regel** för att lägga till en annan regel. Ange så många regler som behövs. Reglerna kombineras med den booleska operatorn AND, vilket innebär att publiken måste uppfylla alla krav i varje regel för att kunna delta i en aktivitet.
+1. Klicka på **Lägg till regel** för att lägga till en regel. Ange så många regler som behövs. Reglerna kombineras med den booleska operatorn AND, vilket innebär att målgruppen måste uppfylla alla krav i alla regler för att kunna delta i en aktivitet.
 1. Tryck eller klicka på **Nästa**.
 1. Ange ett namn för målgruppen och tryck eller klicka på **Spara**.
 1. Tryck eller klicka på **Spara**. Din publik listas i målgruppslistan.
@@ -95,6 +98,6 @@ Du kan skapa målregler för följande attribut:
 
 Du kan redigera alla ContextHub-målgrupper från publikkonsolen. Du kan också redigera målgrupper i Adobe Target, men bara de som har skapats i AEM:
 
-1. Klicka eller tryck på **Personalisering** i navigeringskonsolen. Klicka eller tryck på **Publiker**.
+1. In the Navigation console, click or tap **Personalization**. Klicka eller tryck på **Publiker**.
 1. Tryck eller klicka på ikonen bredvid det ContextHub-segment som du vill redigera och tryck eller klicka på **Redigera**.
 1. Gör eventuella redigeringar i segmentredigeraren. Mer information finns i ContextHub-dokumentationen. <!--See the [ContextHub](/help/sites-administering/contexthub-config.md) documentation for more information.-->
