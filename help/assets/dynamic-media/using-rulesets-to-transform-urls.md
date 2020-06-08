@@ -3,6 +3,9 @@ title: Använda regeluppsättningar för att omforma URL:er
 description: Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 3%
 
 ---
 
@@ -58,19 +61,19 @@ Se även [Använda&quot;resurs&quot; i stället för&quot;is&quot;-bild i en reg
 
 1. Överför regeluppsättningsfilen genom att göra följande:
 
-   * Klicka på **[!UICONTROL Överför]** i fältet Global navigering.
-   * Klicka på **[!UICONTROL Bläddra på sidan]** Överför **[!UICONTROL , i det övre vänstra hörnet]**.
-   * I dialogrutan **[!UICONTROL Öppna]** bläddrar du till regeluppsättningsfilen (XML).
-   * Markera filen och klicka sedan på **[!UICONTROL Öppna]**.
-   * Till höger på sidan **[!UICONTROL Överför]** väljer du en målmapp för regeluppsättningsfilen.
-   * Kontrollera att **[!UICONTROL Publicera efter överföring]** är markerat längst ned på sidan.
-   * Klicka på **[!UICONTROL Skicka överföring]** längst ned till höger på sidan.
-   * Klicka på **[!UICONTROL Jobb]** i fältet Global navigering för att kontrollera överföringsjobbets status. När kolumnen **[!UICONTROL Status]** på sidan **[!UICONTROL Jobb]** säger Överför slutförd fortsätter du till nästa steg.
+   * Klicka på i fältet Global navigering **[!UICONTROL Upload]**.
+   * Klicka på på **[!UICONTROL Upload]** sidan i det övre vänstra hörnet **[!UICONTROL Browse]**.
+   * Bläddra till regeluppsättningsfilen (XML) i dialogrutan **[!UICONTROL Open]** .
+   * Markera filen och klicka sedan på **[!UICONTROL Open]**.
+   * On the right side of the **[!UICONTROL Upload]** page, select a destination folder for the rule set file.
+   * Kontrollera att **[!UICONTROL Publish After Uploading]** är markerat i närheten av sidans nederkant.
+   * In the bottom right corner of the page, click **[!UICONTROL Submit Upload]**.
+   * Klicka på i fältet Global navigering för **[!UICONTROL Jobs]** att kontrollera överföringsjobbets status. Fortsätt till nästa steg när **[!UICONTROL Status]** kolumnen på **[!UICONTROL Job]** sidan visar Överför klar.
 
-1. Klicka på **[!UICONTROL Inställningar > Programinställningar > Publiceringsinställningar > Bildserver]** i navigeringsfältet uppe på sidan.
-1. Gå till gruppen **[!UICONTROL Kataloghantering]** på **[!UICONTROL Image Server Publish]** -sidan och leta reda på sökvägen **[!UICONTROL till]** regeluppsättningsdefinitionsfilen. Klicka sedan på **[!UICONTROL Välj]**.
-1. På sidan **[!UICONTROL Välj XML (Rule Set Definition File)]** bläddrar du till regeluppsättningsfilen och klickar sedan på **[!UICONTROL Välj]** i det nedre högra hörnet på sidan.
-1. Klicka på **[!UICONTROL Stäng]** i det nedre högra hörnet på sidan Inställningar.
+1. Klicka på i navigeringsfältet uppe på sidan **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
+1. På sidan **[!UICONTROL Image Server Publish]**, under gruppen **[!UICONTROL Catalog Management]**, letar du upp **[!UICONTROL Rule Set Definition File Path]** och klickar sedan på **[!UICONTROL Select]**.
+1. På sidan **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och klickar sedan på **[!UICONTROL Select]** i den nedre högra hörnet av sidan.
+1. In the lower-right corner of the Setup page, click **[!UICONTROL Close]**.
 1. Kör ett Image Server-publiceringsjobb.
 
    Regeluppsättningsvillkoren tillämpas på begäranden till dynamiska mediabildsservrar.
