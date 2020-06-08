@@ -1,13 +1,16 @@
 ---
-title: Skapa startprogram
+title: Skapa Launches
 description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny version av befintliga webbsidor för framtida aktivering.
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '1000'
+ht-degree: 14%
 
 ---
 
 
-# Skapa startprogram {#creating-launches}
+# Skapa Launches {#creating-launches}
 
 Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan:
 
@@ -15,7 +18,7 @@ Skapa en startsida för att möjliggöra uppdatering av en ny version av befintl
 * Källsidans underordnade sidor inkluderas som standard i starten. Du kan bara använda källsidan om du vill.
 * Som standard uppdateras startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar. <!--By default, [Live Copy](/help/sites-administering/msm.md) automatically updates the launch pages as the source pages change. You can specify that a static copy is created to prevent automatic changes.-->
 
-Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. Startdatumet **** fungerar dock endast i kombination med flaggan **Production Ready** (se [Redigera en startkonfiguration](/help/sites-cloud/authoring/launches/editing.md#editing-a-launch-configuration)). för att åtgärderna ska inträffa automatiskt måste båda anges.
+Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. **Startdatumet** fungerar dock endast i kombination med flaggan **Produktionsklar** (se [Redigera en startkonfiguration](/help/sites-cloud/authoring/launches/editing.md#editing-a-launch-configuration)). För att åtgärderna ska köras automatiskt måste båda anges.
 
 ## Skapa en Launch {#creating-a-launch}
 
@@ -28,14 +31,14 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    >När du använder **Sites** Console är det vanligt att navigera till källsidans plats, men det är inte obligatoriskt eftersom du kan navigera när du väljer **Startkälla** i guiden.
 
 1. Beroende på vilken konsol du använder:
-   * **Startar**:
-      1. Välj **Skapa start** i verktygsfältet för att öppna guiden.
-   * **Webbplatser**:
+   * **Launches**:
+      1. Select **Create Launch** from the toolbar to open the wizard.
+   * **Sites**:
       1. Välj **Skapa** i verktygsfältet för att öppna markeringsrutan.
       1. Välj **Skapa start** för att öppna guiden.
    >[!NOTE]
    >
-   >I **webbplatskonsolen** kan du även använda [markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) för att välja en sida innan du väljer **Skapa**.
+   >I **Sites**-konsolen kan du även använda [markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) för att välja en sida innan du väljer **Skapa**.
    >
    >Då används den valda sidan som den ursprungliga källsidan.
 
@@ -130,7 +133,7 @@ Så här skapar du en kapslad start från **Sites** -konsolen, baserat på en be
 1. Ange **starttitel** och annan nödvändig information (som vid normal start).
 1. Använd **Skapa** för att slutföra processen och skapa en ny start. I bekräftelsedialogrutan får du frågan om du vill öppna starten direkt.
 
-Om du väljer **Klar**&#x200B;återgår du till **Referenser** i **Sites** Console om du väljer rätt sida som visas när du startar programmet.
+Om du väljer **Klar** återgår du till rutan **Referenser** i **Sites**-konsolen och om du väljer rätt sida visas den nya startsidan.
 
 ### Ta bort en start {#deleting-a-launch}
 
