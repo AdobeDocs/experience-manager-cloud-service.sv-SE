@@ -3,6 +3,9 @@ title: Dataskydd och dataintegritet - Adobe Experience Manager som en beredskap 
 description: 'Läs om Adobe Experience Manager som stöd för molnbaserade tjänster för de olika dataskydds- och datasekretessreglerna. inklusive EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentsekretesslag och hur man ska följa detta när man implementerar en ny AEM som ett molntjänstprojekt. '
 translation-type: tm+mt
 source-git-commit: 2b7ee2b7b0ce351ed48aeb2f3135c947eafe7247
+workflow-type: tm+mt
+source-wordcount: '501'
+ht-degree: 5%
 
 ---
 
@@ -27,7 +30,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
 ### Manuella steg {#manual-steps}
 
-1. Öppna konsolen för användaradministration genom att gå till **[!UICONTROL Verktyg - Säkerhet - Användare]** eller genom att gå direkt till `https://<serveraddress>:<serverport>/security/users.html`
+1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Tools - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/security/users.html`
 
 <!--
    ![useradmin2](assets/useradmin2.png)
@@ -37,11 +40,11 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
    ![sök efter konto](assets/dpp-foundation-01.png)
 
-1. Slutligen öppnar du användarprofilen genom att klicka på den och kontrollerar sedan under fliken **[!UICONTROL Detaljer]** .
+1. Öppna sedan användarprofilen genom att klicka på den och markera den på **[!UICONTROL Details]** fliken.
 
    ![användarprofil](assets/dpp-foundation-02.png)
 
-### HTTP-API {#http-api}
+### HTTP API {#http-api}
 
 Som vi nämnt tillhandahåller Adobe API:er för åtkomst av användardata för att underlätta automatisering. Det finns flera typer av API:er som du kan använda:
 
@@ -95,9 +98,9 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 >
 > För AEM som molntjänst finns det ingen manuell procedur tillgänglig från gränssnittet för borttagning av en användarprofil eftersom CRXDE inte är tillgängligt.
 
-### HTTP-API {#http-api-1}
+### HTTP API {#http-api-1}
 
-I följande procedurer används kommandoradsverktyget för att illustrera hur du inaktiverar användaren med `curl` kaveriet **** `userId` och tar bort de profiler som finns på standardplatsen.
+Följande procedurer använder kommandoradsverktyget `curl` för att visa hur du inaktiverar användaren med `userId` **[!UICONTROL cavery]** och tar bort dennes profiler på standardplatsen.
 
 **Identifierar användarens hemsida:**
 
