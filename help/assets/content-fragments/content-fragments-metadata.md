@@ -1,13 +1,16 @@
 ---
-title: Metadata - Fragmentegenskaper
+title: Metadata – fragmentegenskaper
 description: Du kan visa och redigera metadata (egenskaper) för innehållsfragment.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '99'
+ht-degree: 10%
 
 ---
 
 
-# Metadata - Fragmentegenskaper{#metadata-fragment-properties}
+# Metadata – fragmentegenskaper{#metadata-fragment-properties}
 
 ## Redigera egenskaper/metadata {#editing-properties-meta-data}
 
