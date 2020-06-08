@@ -3,13 +3,16 @@ title: Beviljade åtkomsträttigheter - vad som krävs
 description: Beviljade åtkomsträttigheter - vad som krävs
 translation-type: tm+mt
 source-git-commit: 1511e24cbc4a845b1d7673438b8b7c4171d173e6
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 32%
 
 ---
 
 
-# Beviljade åtkomsträttigheter {#access-rights-granted}
+# Åtkomstbehörigheter har beviljats {#access-rights-granted}
 
-Adobe skapar en **organisationsidentifierare** för ditt företag i Adobe Identity Management System (IMS), där alla användare och deras behörigheter kan hanteras. Varje användare, som måste vara medlem i den här organisationen och beviljas åtkomst till någon av [!UICONTROL Experience Cloud] -tjänsterna, måste ha ett eget **Adobe ID**.
+Adobe skapar en **organisationsidentifierare** för ditt företag i Adobe Identity Management System (IMS), där alla användare och deras behörigheter kan hanteras. Varje användare som måste vara medlem i den här organisationen och som får åtkomst till någon av [!UICONTROL Experience Cloud] tjänsterna måste ha ett eget **Adobe-ID**.
 
 ## Typer av användaridentitet {#user-identity-types}
 
@@ -17,6 +20,6 @@ Om du vill komma igång med ett Adobe-ID går du till [Hantera Adobe-identitetst
 
 ## Användare och roller {#users-and-roles}
 
-När Adobe har skapat en organisation för ditt företag läggs din administratör till som den första medlemmen i den här organisationen. Administratören får administratörsbehörighet som standard och tilldelas [!UICONTROL AEM Managed Services] **Product** och en eller flera [!UICONTROL Cloud Manager] - **produktprofiler**. Gå till [Lägg till användare och roller](add-users-roles.md) om du vill veta mer om hur du konfigurerar och hanterar dina teamanvändare med Admin Console.
+När Adobe har skapat en organisation för företaget läggs administratören till som den första medlemmen i den här organisationen. Administratören får som standard administratörsbehörighet och tilldelas **produkten** [!UICONTROL AEM Managed Services] och en eller flera **produktfiler** för [!UICONTROL Cloud Manager]. Gå till [Lägg till användare och roller](add-users-roles.md) om du vill veta mer om hur du konfigurerar och hanterar teamanvändare med Admin Console.
 
-Med de här rättigheterna beviljade har administratören nu en enda inloggning (med Adobe-id) för åtkomst till [!UICONTROL Experience Cloud] -tjänsterna, inloggning i dina AEM-molnmiljöer och användning av [!UICONTROL Cloud Manager].
+Med de här rättigheterna beviljade har administratören nu en enda inloggning (med Adobe-id) för att få tillgång till [!UICONTROL Experience Cloud] tjänsterna, logga in i din AEM-molnmiljö och använda [!UICONTROL Cloud Manager].
