@@ -4,6 +4,9 @@ description: Lär dig hur du checkar ut resurser för redigering och checkar in 
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+workflow-type: tm+mt
+source-wordcount: '399'
+ht-degree: 4%
 
 ---
 
@@ -22,11 +25,11 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 
    ![chlimage_1-468](assets/chlimage_1-468.png)
 
-1. Klicka/tryck på ikonen **[!UICONTROL Checka ut]** i verktygsfältet.
+1. Klicka/tryck på **[!UICONTROL Checkout]** ikonen i verktygsfältet.
 
    ![chlimage_1-469](assets/chlimage_1-469.png)
 
-   Observera att ikonen **[!UICONTROL Checka ut]** växlar till ikonen **[!UICONTROL Checka in]** när låset är öppet.
+   Observera att ikonen växlar **[!UICONTROL Checkout]** till **[!UICONTROL Checkin]** ikonen när låset är öppet.
 
    ![chlimage_1-470](assets/chlimage_1-470.png)
 
@@ -38,7 +41,7 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   Du kan emellertid klicka/trycka på ikonen **[!UICONTROL Visa egenskaper]** för att redigera metadata för den låsta resursen.
+   Du kan emellertid klicka/trycka på **[!UICONTROL View Properties]** -ikonen för att redigera metadata för den låsta resursen.
 
 1. Klicka på/tryck på ikonen Redigera för att öppna resursen i redigeringsläge.
 
@@ -50,7 +53,7 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 
    Du kan också välja att anteckna eller publicera resursen.
 
-1. Välj den redigerade resursen i resursgränssnittet och klicka/tryck på ikonen **[!UICONTROL Checka in]** i verktygsfältet.
+1. Välj den redigerade resursen i Assets-gränssnittet och klicka/tryck på ikonen **[!UICONTROL Checkin]** i verktygsfältet.
 
    ![chlimage_1-475](assets/chlimage_1-475.png)
 
@@ -65,6 +68,6 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. Klicka/tryck på ikonen **[!UICONTROL Frigör lås]** i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
+1. Klicka/tryck på **[!UICONTROL Release Lock]** ikonen i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
 
    ![chlimage_1-477](assets/chlimage_1-477.png)
