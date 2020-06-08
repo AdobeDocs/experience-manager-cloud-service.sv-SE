@@ -4,6 +4,9 @@ description: Lär dig mer om metadata för resurser i AEM Resurser och olika sä
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+workflow-type: tm+mt
+source-wordcount: '415'
+ht-degree: 8%
 
 ---
 
@@ -20,12 +23,12 @@ Så här redigerar du metadata:
 
 1. Gör något av följande:
 
-   * I resursgränssnittet markerar du resursen och klickar/trycker på ikonen **[!UICONTROL Visa egenskaper]** i verktygsfältet.
-   * Välj snabbåtgärden **[!UICONTROL Visa egenskaper]** i miniatyrbilden av resursen.
-   * Klicka/tryck på **[!UICONTROL Visa egenskaper]** i verktygsfältet på resurssidan.
+   * I resursgränssnittet markerar du resursen och klickar/trycker på **[!UICONTROL View Properties]** -ikonen i verktygsfältet.
+   * Välj snabbåtgärden från miniatyrbilden av resursen **[!UICONTROL View Properties]** .
+   * Klicka/tryck **[!UICONTROL View Properties]** från verktygsfältet på resurssidan.
    Resurssidan visar alla metadata för resursen. Dessa metadata extraherades automatiskt när de överfördes (överfördes) till AEM Assets.
 
-1. Redigera metadata på de olika flikarna efter behov och klicka/tryck sedan på **[!UICONTROL Spara]** i verktygsfältet när du är klar. Klicka/tryck på **[!UICONTROL Stäng]** för att återgå till webbgränssnittet Resurser.
+1. Redigera metadata på de olika flikarna efter behov och klicka/tryck sedan på **[!UICONTROL Save]** i verktygsfältet för att spara ändringarna. Klicka/tryck på **[!UICONTROL Close]** för att gå tillbaka till Assets-webbgränssnittet.
 
    >[!NOTE]
    >
@@ -44,7 +47,7 @@ Mer information om hur du redigerar metadatamatchema finns i [Redigera metadatam
 Du kan lägga till egna namnutrymmen i AEM. Precis som det finns fördefinierade namnutrymmen som cq, jcr och sling kan du ha ett namnutrymme för databasens metadata och XML-bearbetning.
 
 1. Gå till administrationssidan för nodtypen *https://&lt;host>:&lt;port>/crx/explorer/nodetypes/index.jsp*.
-1. Klicka eller tryck på **[!UICONTROL Namnutrymmen]** högst upp på sidan. Namnutrymmesadministrationssidan visas i ett fönster.
+1. Klicka eller tryck **[!UICONTROL Namespaces]** längst upp på sidan. Namnutrymmesadministrationssidan visas i ett fönster.
 
-1. Om du vill lägga till ett namnutrymme klickar eller trycker du på **[!UICONTROL Nytt]** längst ned.
-1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen (ange id:t i form av en URI och ett associerat prefix för id:t) och klicka eller tryck på **[!UICONTROL Spara]**.
+1. Om du vill lägga till ett namnutrymme klickar eller trycker du **[!UICONTROL New]** längst ned.
+1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen (ange id:t i form av en URI och ett associerat prefix för id:t) och klicka eller tryck **[!UICONTROL Save]**.
