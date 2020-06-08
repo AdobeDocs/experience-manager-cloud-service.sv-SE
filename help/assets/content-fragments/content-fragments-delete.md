@@ -3,6 +3,9 @@ title: Innehållsfragment – ta bort överväganden
 description: Innehållsfragment – ta bort överväganden
 translation-type: tm+mt
 source-git-commit: bb3d90def8855e8dffdc584c0805da120faf7b12
+workflow-type: tm+mt
+source-wordcount: '408'
+ht-degree: 12%
 
 ---
 
