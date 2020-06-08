@@ -3,6 +3,9 @@ title: 'Strukturpaket för AEM-projektdatabas  '
 description: Adobe Experience Manager som ett molntjänstprojekt i Maven kräver en underpaketsdefinition för databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets kodunderpaket distribueras till.
 translation-type: tm+mt
 source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 9%
 
 ---
 
@@ -155,7 +158,7 @@ I `ui.apps/pom.xml`och andra kodpaket lägger du `pom.xml`till en referens till 
 
 Ett mindre vanligt och mer komplicerat användningsfall är stöd för driftsättning av flera kodpaket som installeras i samma områden i JCR-databasen.
 
-Exempel:
+Till exempel:
 
 + Kodpaket A distribuerar till `/apps/a`
 + Kodpaket B distribueras till `/apps/a/b`
