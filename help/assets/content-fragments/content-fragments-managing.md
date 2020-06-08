@@ -3,6 +3,9 @@ title: Hantera innehållsfragment
 description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
 translation-type: tm+mt
 source-git-commit: f5dd39bd7379d56c4f7b5e180d35892ba1dd4da1
+workflow-type: tm+mt
+source-wordcount: '1470'
+ht-degree: 10%
 
 ---
 
@@ -140,7 +143,7 @@ Så här öppnar du fragmentet för redigering:
 
 3. Navigera genom de tre lägena med ikonerna på sidopanelen:
 
-   * Variationer: Redigera [innehållet](#editing-the-content-of-your-fragment) och [hantera dina variationer](#creating-and-managing-variations-within-your-fragment)
+   * Variationer: [Redigera innehåll](#editing-the-content-of-your-fragment) och [hantera variationer](#creating-and-managing-variations-within-your-fragment)
 
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
    * [Associerat innehåll](#associating-content-with-your-fragment)
@@ -281,7 +284,7 @@ Du kan inte redigera fragmentinnehållet när du jämför fragment.
 
 ![jämföra](assets/cfm-managing-06.png)
 
-## Återställa till en version {#reverting-to-a-version}
+## Återställa till en version  {#reverting-to-a-version}
 
 Du kan återgå till en viss version av fragmentet:
 
