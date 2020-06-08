@@ -1,8 +1,11 @@
 ---
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: 'Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service. '
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5a846d34ee094e7d2f7fc71dbeef65f3fa58e86c
+workflow-type: tm+mt
+source-wordcount: '1679'
+ht-degree: 100%
 
 ---
 
