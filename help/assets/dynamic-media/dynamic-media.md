@@ -1,13 +1,16 @@
 ---
-title: Arbeta med dynamiska media
+title: Arbeta med Dynamic Media
 description: Lär dig hur du använder Dynamic Media för att leverera material för webben, mobiler och sociala medier.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 7%
 
 ---
 
 
-# Arbeta med dynamiska media {#working-with-dynamic-media}
+# Arbeta med Dynamic Media {#working-with-dynamic-media}
 
 [Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med hjälp av en uppsättning masterresurser genererar och levererar Dynamic Media flera varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
@@ -23,14 +26,14 @@ Med Dynamic Media kan du hantera dina resurser innan du publicerar dem. Hur du a
 
 Funktioner som bara är dynamiska media inkluderar följande:
 
-* [Carousel Banners](carousel-banners.md)
+* [Karusellbanner](carousel-banners.md)
 * [Bilduppsättningar](image-sets.md)
 * [Interaktiva bilder](interactive-images.md)
 * [Interaktiva videoklipp](interactive-videos.md)
 * [Blandade medieuppsättningar](mixed-media-sets.md)
 * [Panoramabilder](panoramic-images.md)
 
-* [Snurra uppsättningar](spin-sets.md)
+* [Snurrande uppsättningar](spin-sets.md)
 * [Video](video.md)
 * [Leverera dynamiska medieresurser](delivering-dynamic-media-assets.md)
 * [Hantera resurser](managing-assets.md)
@@ -59,7 +62,7 @@ När du klickar på en bildresurs ser resursen annorlunda ut med Dynamic Media a
 
 ### Dynamiska renderingar {#dynamic-renditions}
 
-Dynamiska renderingar som bild- och visningsförinställningar (under **[!UICONTROL Dynamisk]**) är tillgängliga när Dynamic Media är aktiverat.
+Dynamiska återgivningar som bild- och visningsinställningar (under **[!UICONTROL Dynamic]**) är tillgängliga när Dynamic Media är aktiverat.
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
