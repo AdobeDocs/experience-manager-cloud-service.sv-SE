@@ -1,13 +1,16 @@
 ---
-title: Upplevelsefragment
+title: Experience Fragments
 description: Använd Adobe Experience Manager som molntjänstefunktioner för att göra era upplevelser återanvändbara och flexibla.
 translation-type: tm+mt
 source-git-commit: b7a2e86de27dbfcdecaf3a2bc1984678b7b69375
+workflow-type: tm+mt
+source-wordcount: '1492'
+ht-degree: 7%
 
 ---
 
 
-# Upplevelsefragment {#experience-fragments}
+# Experience Fragments {#experience-fragments}
 
 I Adobe Experience Manager som en molntjänst, en upplevelsefragment:
 * är en grupp med en eller flera komponenter
@@ -112,7 +115,7 @@ Om du vill skapa och konfigurera en mapp för dina Experience Fragments bör du:
 
 1. Ange det reguljära uttrycket för hämtning av de mallar som krävs i fältet **Tillåtna mallar** .
 
-   Exempel:
+   Till exempel:
    `/conf/(.*)/settings/wcm/templates/experience-fragment(.*)?`
 
    Se:
@@ -170,7 +173,7 @@ Så här skapar du ett Experience Fragment:
    ![Välja en upplevelsefragmentmall](/help/sites-cloud/authoring/assets/xf-03.png)
 
 
-1. Ange **egenskaperna** för **Experience Fragment**.
+1. Ange **egenskaperna** för **upplevelsefragmentet**.
 
    En **titel** är obligatorisk. Om **namnet** lämnas tomt hämtas det från **titeln**.
 
@@ -201,7 +204,7 @@ Följande exempelprocedur visar hur du skapar ett teaser för en produkt:
 
 1. Lägg till fler komponenter efter behov.
 
-Exempel: `http://<host>:<port>/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/master.html`
+Till exempel: `http://<host>:<port>/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/master.html`
 
 ![Experience Fragment on page](/help/sites-cloud/authoring/assets/xf-05.png)
 
@@ -216,7 +219,7 @@ Ni kan skapa olika upplevelsefragment beroende på era behov:
 
 1. **Med Skapa** kan du skapa:
 
-   * **Variation**
+   * **Variant**
    * **Variation som live-copy**.
 
 1. Definiera de nödvändiga egenskaperna:
@@ -226,7 +229,7 @@ Ni kan skapa olika upplevelsefragment beroende på era behov:
    * **Namn** - Om det lämnas tomt hämtas det från titeln
    * **Beskrivning**
    * **Variationstaggar**
-   Exempel:
+   Till exempel:
 
    ![Variantegenskaper](/help/sites-cloud/authoring/assets/xf-07.png)
 
@@ -243,12 +246,12 @@ Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 1. Lägg till den faktiska Experience Fragment-funktionen i komponentinstansen. antingen:
 
    * Dra det önskade fragmentet från Resursläsaren och släpp det på komponenten.
-   * Välj **Konfigurera** i komponentverktygsfältet och ange vilket fragment som ska användas, bekräfta med **Klar**.
+   * Select **Configure** from the component toolbar and specify the fragment to use, confirm with **Done**.
    >[!NOTE]
    >
    >Redigera i komponentverktygsfältet fungerar som ett kortkommando för att öppna fragmentet i fragmentredigeraren.
 
-Exempel: `http://<host>:<port>/editor.html/content/wknd/language-masters/en/about-us.html`
+Till exempel: `http://<host>:<port>/editor.html/content/wknd/language-masters/en/about-us.html`
 
 ![Upplevelsefragment i sidredigeraren](/help/sites-cloud/authoring/assets/xf-08.png)
 
@@ -280,7 +283,7 @@ Så här skapar du ett nytt byggblock:
 
 Byggblocket visas på fliken **Byggblock** . Följande åtgärder är tillgängliga för varje block:
 
-* **Gå till mallsida**: öppna mallvarianten på en ny flik
+* **Gå till master**: öppna mastervarianten på en ny flik
 * **Byt namn på**
 * **Ta bort**
 
@@ -302,7 +305,7 @@ När du redigerar ett Experience Fragment visas tillgängliga byggblock på flik
 Information om ditt fragment kan ses:
 
 1. Navigera till platsen för dina Experience Fragments (navigera inte längre till variationerna i fragmentet).
-Detaljer visas i alla vyer av konsolen **Experience Fragments** , med **listvyn** inklusive information om en export till Target: <!--Details are shown in all views of the **Experience Fragments** console, with the **List View** including details of an [export to Target](/help/sites-administering/experience-fragments-target.md):-->
+Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn** visar även information om export till Target: <!--Details are shown in all views of the **Experience Fragments** console, with the **List View** including details of an [export to Target](/help/sites-administering/experience-fragments-target.md):-->
 
    ![Information om Experience Fragment](/help/sites-cloud/authoring/assets/xf-15.png)
 
@@ -316,7 +319,7 @@ Detaljer visas i alla vyer av konsolen **Experience Fragments** , med **listvyn*
    >
    >Dessa flikar visas när du öppnar **Egenskaper** från konsolen Experience Fragments.
    >
-   >Om du **öppnar Egenskaper** när du redigerar ett Experience Fragment visas rätt [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md) .
+   >Om du **öppnar egenskaperna** när du redigerar ett upplevelsefragment visas rätt [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
 
    ![Experience Fragment-egenskaper](/help/sites-cloud/authoring/assets/xf-17.png)
 
@@ -328,7 +331,7 @@ Detaljer visas i alla vyer av konsolen **Experience Fragments** , med **listvyn*
       * **Antal webbvarianter** - endast information
       * **Antal icke-webbvarianter** - endast information
       * **Antal sidor som använder det här fragmentet** - endast information
-   * **Molntjänster**
+   * **Cloud Services**
       * **Molnkonfiguration**
       * **Konfigurationer av molntjänster**
       * **ID för Facebook-sida**
