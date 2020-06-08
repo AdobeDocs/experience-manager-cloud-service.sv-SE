@@ -4,6 +4,9 @@ description: Läs om metadatastandarden XMP (Extensible Metadata Platform) för 
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+workflow-type: tm+mt
+source-wordcount: '1386'
+ht-degree: 18%
 
 ---
 
@@ -18,7 +21,7 @@ Förutom universell metadatakodning som kan bäddas in i alla filformat, erbjude
 
 AEM Assets stöder metadatastandarden XMP. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
-Produktionspersonal kan till exempel använda det inbyggda XMP-stödet i Adobes program för att skicka information till olika filformat. AEM Assets-databasen extraherar XMP-metadata och använder dem för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
+Produktionspersonal kan till exempel använda det inbyggda XMP-stödet i Adobes program för att skicka information över flera filformat. AEM Assets-databasen extraherar XMP-metadata och använder dem för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
 
 XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillhandahålla en datamodell, en lagringsmodell och scheman. Alla dessa begrepp beskrivs i detta avsnitt.
 
@@ -26,9 +29,9 @@ Alla äldre metadata från EXIF, ID3 eller Microsoft Office översätts automati
 
 Metadata i XMP består av en uppsättning egenskaper. Dessa egenskaper är alltid kopplade till en specifik enhet som kallas resurs. Egenskaperna är alltså&quot;om&quot; resursen. För XMP är resursen alltid resursen.
 
-XMP definierar en [metadatamodell](https://en.wikipedia.org/wiki/Metadata) som kan användas med alla definierade metadataobjekt. XMP definierar också särskilda [scheman](https://en.wikipedia.org/wiki/XML_schema) för grundläggande egenskaper som är användbara för att spela in en resurshistorik när den går igenom flera bearbetningssteg, från att fotograferas, [skannas](https://en.wikipedia.org/wiki/Image_scanner)eller redigeras som text, genom fotoredigeringssteg (som [beskärning](https://en.wikipedia.org/wiki/Cropping_%28image%29) eller färgjustering), till att sammanfoga en slutbild. Med XMP kan varje program eller enhet läggas in i en digital resurs, som sedan kan sparas i den slutliga digitala filen.
+XMP definierar en [metadatamodell](https://sv.wikipedia.org/wiki/Metadata) som kan användas med alla definierade metadataobjekt. XMP definierar också särskilda [scheman](https://en.wikipedia.org/wiki/XML_schema) för grundläggande egenskaper som är användbara för att logga en resurs historik genom olika bearbetningssteg – från fotografering, [skanning](https://sv.wikipedia.org/wiki/Bildl%C3%A4sare) och textredigering via fotoredigeringssteg (som [beskärning](https://sv.wikipedia.org/wiki/Bildbesk%C3%A4rning) eller färgjustering) till den slutliga bilden. Med XMP kan alla program och enheter längs vägen lägga till egen information i en digital resurs, som sedan sparas i den slutliga digitala filen.
 
-XMP är oftast serialiserat och lagras med en delmängd av [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) [Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF), som i sin tur uttrycks i [XML](https://en.wikipedia.org/wiki/XML).
+XMP serialiseras och lagras oftast med en underuppsättning av [W3C](https://sv.wikipedia.org/wiki/World_Wide_Web_Consortium) [Resource Description Framework](https://sv.wikipedia.org/wiki/Resource_Description_Framework) (RDF), som i sin tur uttrycks i [XML](https://sv.wikipedia.org/wiki/XML).
 
 ### Fördelar med XMP {#advantages-of-xmp}
 
@@ -78,7 +81,7 @@ Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resurs
 
 ![metadata](assets/metadata.png)
 
-I det här fallet sparar AEM Resurser ändringarna av egenskapen **[!UICONTROL Title]** i parametern `dc:title` för resursens metadata som lagras i resurshierarkin.
+I det här fallet sparar AEM Resurser ändringarna av **[!UICONTROL Title]** egenskapen i `dc:title` parametern för resursens metadata som lagras i resurshierarkin.
 
 ![metadata_stored](assets/metadata_stored.png)
 
@@ -91,28 +94,28 @@ Med XMP-återskrivningsfunktionen kan du sprida metadataändringarna till alla e
 <!-- asgupta, Engg: Need attention here to update the configuration manager changes.
 -->
 
-Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du konfigurationen **[!UICONTROL Adobe CQ DAM Rendition Maker]** i Configuration Manager.
+Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfigurationen i Configuration Manager.
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** -konfigurationen.
-1. Välj alternativet **[!UICONTROL Sprid XMP]** och spara sedan ändringarna.
+1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfigurationen.
+1. Markera **[!UICONTROL Propagate XMP]** alternativet och spara sedan ändringarna.
 
 ### Aktivera XMP-återskrivning för specifika återgivningar {#enable-xmp-writeback-for-specific-renditions}
 
-Om du vill att XMP-återskrivningsfunktionen ska kunna sprida metadataändringar för att välja återgivningar, anger du dessa återgivningar i arbetsflödet för [!UICONTROL XMP-återskrivningsprocessen] i arbetsflödet för DAM-metadata WriteBack. Som standard konfigureras det här steget med den ursprungliga återgivningen.
+Om du vill att XMP-återskrivningsfunktionen ska kunna sprida metadataändringar för att välja återgivningar, anger du dessa återgivningar i arbetsflödessteget för DAM-metadata WriteBack-arbetsflödet. [!UICONTROL XMP Writeback Process] Som standard konfigureras det här steget med den ursprungliga återgivningen.
 
 Utför dessa steg för att XMP-återskrivningsfunktionen ska kunna sprida metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
 
-1. Tryck/klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Verktyg]** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Modeller]**.
-1. Öppna arbetsflödesmodellen **[!UICONTROL DAM Metadata Writeback]** på sidan Modeller.
-1. Öppna steget för **[!UICONTROL XMP-återskrivningsprocess]** på sidan med egenskaper för **[!UICONTROL DAM-metadataåterställning]** .
-1. I dialogrutan **[!UICONTROL Stegegenskaper]** trycker/klickar du på fliken **[!UICONTROL Process]** .
-1. Lägg till i rutan **[!UICONTROL Argument]** `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`och tryck/klicka sedan på **[!UICONTROL OK]**.
+1. Tryck/klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. Öppna arbetsflödesmodellen på sidan **[!UICONTROL DAM Metadata Writeback]** Modeller.
+1. På egenskapssidan för **[!UICONTROL DAM Metadata Writeback]** öppnar du steget **[!UICONTROL XMP Writeback Process]**.
+1. I dialogrutan **[!UICONTROL Step Properties]** trycker/klickar du på fliken **[!UICONTROL Process]**.
+1. Lägg till i **[!UICONTROL Arguments]** rutan `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`och tryck/klicka sedan **[!UICONTROL OK]**.
 
    ![step_properties](assets/step_properties.png)
 
 1. Spara ändringarna.
-1. Om du vill återskapa Pyramid TIFF-återgivningar (PTIFF) för dynamiska mediabilder med de nya attributen lägger du till steget **[!UICONTROL Dynamic Media Process Image Assets]** i arbetsflödet för DAM-metadataåterskrivning. PTIFF-renderingar skapas och lagras bara lokalt i en Dynamic Media Hybrid-implementering.
+1. Om du vill återskapa Pyramid TIFF-återgivningar (PTIFF) för Dynamic Media-bilder med de nya attributen lägger du till steget **[!UICONTROL Dynamic Media Process Image Assets]** i arbetsflödet för DAM-metadataåterskrivning. PTIFF-återgivningar skapas och lagras bara lokalt i en Dynamic Media-hybridimplementering.
 
 1. Spara arbetsflödet.
 
@@ -139,14 +142,14 @@ Vitlistsfiltrering av XMP-metadata löser problemet genom att du kan definiera d
 >Filtrering fungerar bara för egenskaper som härletts från XMP-källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, t.ex. EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . AEM berättar det här värdet i metadatafältet med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP-källa fungerar inte filtrering på den här egenskapen.
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** -konfigurationen.
-1. Om du vill använda vitlistsfiltrering väljer du **[!UICONTROL Använd vitlista på XMP-egenskaper]** och anger de egenskaper som ska importeras i rutan XML-namn i listan **[!UICONTROL över godkända för XMP-filtrering]** .
+1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfigurationen.
+1. Om du vill använda vitlistefiltrering markerar du **[!UICONTROL Apply Whitelist to XMP Properties]** och anger de egenskaper som ska importeras i rutan **[!UICONTROL Whitelisted XML Names for XMP filtering]**.
 
-1. Om du vill filtrera bort svartlistade XMP-egenskaper efter att ha använt vitlistsfiltrering anger du dem i rutan XML-namn med **[!UICONTROL svartlistning för XMP-filtrering]** .
+1. Om du vill filtrera bort svartlistade XMP-egenskaper efter att ha använt vitlistefiltrering anger du dem i rutan **[!UICONTROL Blacklisted XML Names for XMP filtering]**.
 
    >[!NOTE]
    >
-   >Alternativet **[!UICONTROL Använd svartlista för XMP-egenskaper]** är markerat som standard. Svartlistsfiltrering är alltså aktiverat som standard. Om du vill inaktivera svartlistsfiltrering avmarkerar du alternativet **[!UICONTROL Använd svartlista för XMP-egenskaper]** .
+   >The **[!UICONTROL Apply Blacklist to XMP Properties]** option is selected by default. Svartlistsfiltrering är alltså aktiverat som standard. Om du vill inaktivera filtrering av svarta listor avmarkerar du **[!UICONTROL Apply Blacklist to XMP Properties]** alternativet.
 
 1. Spara ändringarna.
 
