@@ -3,6 +3,9 @@ title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 translation-type: tm+mt
 source-git-commit: f04dd39a5a22f44f976f2e473689780099f10f9a
+workflow-type: tm+mt
+source-wordcount: '1694'
+ht-degree: 5%
 
 ---
 
