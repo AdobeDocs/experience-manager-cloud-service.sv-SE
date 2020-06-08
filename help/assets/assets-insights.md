@@ -4,6 +4,9 @@ description: Lär dig hur funktionen för tillgångsinsikter gör att du kan sp�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 2%
 
 ---
 
@@ -26,27 +29,27 @@ Om du vill att tillgångsinsikter ska visa användningsstatistik för resurser m
 
 Du kan visa poängen för resursinsikter från metadatasidan.
 
-1. Välj bilden i användargränssnittet Resurser och tryck sedan på **[!UICONTROL Egenskaper]** i verktygsfältet.
-1. Tryck på **[!UICONTROL Insights]** på sidan Egenskaper.
-1. Granska användningsinformationen för resursen på fliken **[!UICONTROL Insikter]** . I avsnittet **[!UICONTROL Poäng]** beskrivs den totala resursanvändningen och prestandan för en tillgång.
+1. Välj bilden i användargränssnittet Resurser och tryck sedan på **[!UICONTROL Properties]** i verktygsfältet.
+1. Tryck på egenskapssidan **[!UICONTROL Insights]**.
+1. Granska användningsinformationen för resursen på **[!UICONTROL Insights]** fliken. I avsnittet **[!UICONTROL Score]** beskrivs den totala resursanvändningen och prestandan för en tillgång.
 
    Användningspoäng beskriver hur många gånger resursen används i olika lösningar.
 
-   Poängen **[!UICONTROL Impressions]** är antalet gånger som resursen läses in på webbplatsen. Antalet som visas under **[!UICONTROL Klickningar]** är antalet gånger som användaren klickar på resursen.
+   Poängen **[!UICONTROL Impressions]** är antalet gånger som resursen läses in på webbplatsen. Siffran som visas under **[!UICONTROL Clicks]** är antalet gånger som användaren klickar på resursen.
 
-1. I avsnittet **[!UICONTROL Användningsstatistik]** ser du vilka enheter resursen ingick i och vilka kreativa lösningar som nyligen använt den. Ju högre användning, desto större chans att resursen är populär bland användarna. Användningsdata visas under följande rubriker:
+1. Läs igenom **[!UICONTROL Usage Statistics]** avsnittet för att ta reda på vilka enheter resursen ingick i och vilka kreativa lösningar som nyligen använt den. Ju högre användning, desto större chans att resursen är populär bland användarna. Användningsdata visas under följande rubriker:
 
-   * **[!UICONTROL Resurs]**: Antalet gånger som tillgången ingick i en samling eller sammansatt tillgång.
-   * **[!UICONTROL Webb och mobil]**: Antalet gånger som resursen ingick i webbplatser och appar.
-   * **[!UICONTROL Socialt]**: Antalet gånger som resursen användes i lösningar som Adobe Social och Adobe Campaign.
-   * **[!UICONTROL E-post]**: Antalet gånger som resursen användes i e-postkampanjer.
+   * **[!UICONTROL Asset]**: Antalet gånger som tillgången ingick i en samling eller sammansatt tillgång.
+   * **[!UICONTROL Web & Mobile]**: Antalet gånger som resursen ingick i webbplatser och appar.
+   * **[!UICONTROL Social]**: Antalet gånger som resursen användes i lösningar som Adobe Social och Adobe Campaign.
+   * **[!UICONTROL Email]**: Antalet gånger som resursen användes i e-postkampanjer.
    ![användningsstatistik](assets/usage_statistics.png)
 
    >[!NOTE]
    >
    >Eftersom funktionen för tillgångsinsikter vanligtvis hämtar data från lösningar från Adobe Analytics med jämna mellanrum, kan det hända att avsnittet Lösningar inte visar de senaste data. Den tidsperiod som data visas för beror på schemat för hämtningsåtgärden som resursinsikter körs för att hämta analysdata.
 
-1. Om du vill visa resultatstatistik för resursen grafiskt över en tidsperiod väljer du period i avsnittet **[!UICONTROL Resultatstatistik]**. Detaljer, inklusive klick och visningar, visas som trendlinjer i ett diagram.
+1. To view performance statistics for the asset graphically over a period of time, select period in the **[!UICONTROL Performance Statistics]** section. Detaljer, inklusive klick och visningar, visas som trendlinjer i ett diagram.
 
    ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
@@ -54,24 +57,24 @@ Du kan visa poängen för resursinsikter från metadatasidan.
    >
    >Till skillnad från data i avsnittet Lösningar visar avsnittet Prestandastatistik de senaste data.
 
-1. Om du vill hämta inbäddningskoden för resursen som du inkluderar på webbplatser för att få prestandadata trycker/klickar du på **[!UICONTROL Hämta inbäddningskod]** under miniatyrbilden för resursen. <!-- For more information on how to include your Embed code in third-party web pages, see [Using Page Tracker and Embed code in web pages](/help/assets/use-page-tracker.md). -->
+1. Om du vill hämta inbäddningskoden för resursen som du inkluderar på webbplatser för att få prestandadata trycker/klickar du **[!UICONTROL Get Embed Code]** nedanför miniatyrbilden för resursen. <!-- For more information on how to include your Embed code in third-party web pages, see [Using Page Tracker and Embed code in web pages](/help/assets/use-page-tracker.md). -->
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
 ## Visa sammanställd statistik för bilder {#viewing-aggregate-statistics-for-images}
 
-Du kan visa resultat för alla resurser i en mapp samtidigt med hjälp av **[!UICONTROL Insights-vyn]**.
+You can view scores of all assets within a folder simultaneously using **[!UICONTROL Insights View]**.
 
 1. I resursgränssnittet navigerar du till den mapp som innehåller de resurser som du vill visa insikter för.
-1. Tryck/klicka på layoutikonen i verktygsfältet och välj sedan **[!UICONTROL Insights-vy]**.
+1. Tryck/klicka på layoutikonen i verktygsfältet och välj sedan **[!UICONTROL Insights View]**.
 1. På sidan visas användningsresultat för resurserna. Jämför omdömen om de olika tillgångarna och få insikter.
 
 ## Schemalägg bakgrundsjobb {#scheduling-background-job}
 
-Resursinsikter hämtar användningsdata för resurser från Adobe Analytics-rapportsviter regelbundet. Som standard körs ett bakgrundsjobb var 24:e timme i resursinsikter för att hämta data. Du kan dock ändra både frekvens och tid genom att konfigurera **[!UICONTROL tjänsten Synkroniseringsjobb]** för Adobe CQ DAM-resursprestandarapport från webbkonsolen.
+Resursinsikter hämtar användningsdata för resurser från Adobe Analytics-rapportsviter regelbundet. Som standard körs ett bakgrundsjobb var 24:e timme i resursinsikter för att hämta data. Du kan dock ändra både frekvens och tid genom att konfigurera **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** tjänsten från webbkonsolen.
 
-1. Tryck på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
-1. Öppna konfigurationen för tjänsten **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** .
+1. Tap the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Öppna **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** tjänstkonfigurationen.
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
@@ -85,30 +88,30 @@ Adobe Experience Manager (AEM) Assets hämtar användningsdata om AEM-resurser s
 >
 >Insikter stöds endast och tillhandahålls för bilder.
 
-1. I AEM klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]**.
+1. I AEM klickar du **[!UICONTROL Tools]** > **[!UICONTROL Assets]**.
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Klicka på kortet **[!UICONTROL Insights-konfiguration]**.
+1. Klicka på **[!UICONTROL Insights Configuration]** kortet.
 1. Välj ett datacenter i guiden och ange dina autentiseringsuppgifter, inklusive namnet på din organisation, användarnamn och delad hemlighet.
 
    ![Konfigurera Adobe Analytics för Assets Insights i AEM](assets/insights_config2.png)
 
    *Bild: Konfigurera Adobe Analytics för Assets Insights i AEM*
 
-1. Klicka/tryck på **[!UICONTROL Autentisera]**. När AEM har autentiserat dina inloggningsuppgifter väljer du en Adobe Analytics-rapportssvit från **[!UICONTROL Report Suite]** -listan, där du vill att resursinsikter ska hämta data. Click **[!UICONTROL Add]**.
-1. När AEM har konfigurerat rapportsviten trycker du på **[!UICONTROL Klar]**.
+1. Klicka/tryck på **[!UICONTROL Authenticate]**. När AEM har autentiserat dina inloggningsuppgifter väljer du en Adobe Analytics-rapportsserie från vilken du vill att resursinsikter ska hämta data från **[!UICONTROL Report Suite]** listan. Klicka på **[!UICONTROL Add]**.
+1. När AEM har konfigurerat rapportsviten trycker du **[!UICONTROL Done]**.
 
 ### Sidspårare {#page-tracker}
 
 När du har konfigurerat ditt Adobe Analytics-konto genereras sidspårningskoden åt dig. Om du vill göra det möjligt för Assets Insights att spåra AEM-resurser som används på tredjepartswebbplatser, inkluderar du sidspårningskoden i webbplatskoden. Använd sidspårningsverktyget i AEM Resurser för att generera sidspårningskod. <!--  For more information on how to include your Page Tracker code in third-party web pages, see [Using Page Tracker and Embed code in web pages](/help/assets/use-page-tracker.md). -->
 
-1. I AEM klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]**.
+1. I AEM klickar du **[!UICONTROL Tools]** > **[!UICONTROL Assets]**.
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
-1. På **[!UICONTROL navigeringssidan]** klickar du på kortet **[!UICONTROL Insights Page Tracker]**.
-1. Klicka på **[!UICONTROL Hämta]** för att hämta sidspårningskoden.
+1. På **[!UICONTROL Navigation]** sidan klickar du på **[!UICONTROL Insights Page Tracker]** kortet.
+1. Klicka **[!UICONTROL Download]** för att hämta sidspårningskoden.
 
 <!--
 
