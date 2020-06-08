@@ -3,6 +3,9 @@ title: Innehållsfragment
 description: Med Adobe Experience Manager som molntjänst kan ni utforma, skapa, strukturera och använda sidoberoende innehåll
 translation-type: tm+mt
 source-git-commit: c93dfd1ca50933416de1eee7d6d4f820c30afa49
+workflow-type: tm+mt
+source-wordcount: '1154'
+ht-degree: 5%
 
 ---
 
