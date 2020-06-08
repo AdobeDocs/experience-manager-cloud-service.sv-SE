@@ -1,8 +1,11 @@
 ---
 title: Viktiga begrepp i Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om viktiga begrepp i Adobe Experience Manager as a Cloud Service
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: b7f0896adbfad31597ea8224f1daaa12a2f40180
+workflow-type: tm+mt
+source-wordcount: '338'
+ht-degree: 100%
 
 ---
 
