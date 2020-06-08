@@ -3,6 +3,9 @@ title: Skapa och hantera erbjudanden
 description: Använd offertkonsolen för att skapa erbjudanden som du kan använda i aktivitetsupplevelser
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '875'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +21,7 @@ Erbjudandekonsolen organiserar erbjudanden efter varumärke. Varje varumärke in
 
 ## Lägg till ett varumärke med hjälp av offertkonsolen {#add-a-brand-using-the-offers-console}
 
-Skapa ett varumärke som era erbjudanden är kopplade till. Öppna ett varumärke i offertkonsolen för att komma åt dess erbjudandebibliotek där du kan skapa mappar och erbjudanden.
+Skapa ett varumärke som era erbjudanden är kopplade till. Öppna ett varumärke i Offers-konsolen för att komma åt dess erbjudandebibliotek där du kan skapa mappar och erbjudanden.
 
 När du skapar ett varumärke med hjälp av konsolen Erbjudanden visas det också i [aktivitetskonsolen](/help/sites-cloud/authoring/personalization/activities.md) där du kan lägga till och administrera aktiviteter för varumärket.
 
