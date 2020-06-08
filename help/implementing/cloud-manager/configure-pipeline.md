@@ -3,6 +3,9 @@ title: Konfigurera CI/CD-pipeline - molntjänster
 description: Konfigurera CI/CD-pipeline - molntjänster
 translation-type: tm+mt
 source-git-commit: e9514d2ba625a7df8a8126f5b0ab74b975eeda51
+workflow-type: tm+mt
+source-wordcount: '569'
+ht-degree: 2%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: e9514d2ba625a7df8a8126f5b0ab74b975eeda51
 
 ## Förstå flödet {#understanding-the-flow}
 
-Du kan konfigurera din pipeline från panelen **Inställningar** för pipeline i användargränssnittet för [!UICONTROL Cloud Manager] .
+Du kan konfigurera pipeline från panelen **Pipeline-inställningar** i [!UICONTROL Cloud Manager].
 
 Distributionshanteraren ansvarar för att ställa in pipeline. När du gör det väljer du först en gren i **Git-databasen**.
 
@@ -34,9 +37,9 @@ Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställn
 >
 >Du kan ändra pipeline-inställningarna efter den första konfigurationen.
 
-## Konfigurera pipeline-inställningarna från [!UICONTROL Cloud Manager]{#configuring-the-pipeline-settings-from-cloud-manager}
+## Konfigurera Pipeline-inställningarna från [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
 
-När du har konfigurerat ditt program och har minst en miljö med hjälp av [!UICONTROL användargränssnittet i molnhanteraren] är du redo att konfigurera ditt distributionsflöde.
+När du har konfigurerat programmet och har minst en miljö med [!UICONTROL Cloud Manager] användargränssnittet är du redo att konfigurera ditt distributionsflöde.
 
 Följ de här stegen för att konfigurera beteendet och inställningarna för din pipeline:
 
