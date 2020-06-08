@@ -5,6 +5,9 @@ description: På den här sidan beskrivs hur du kan komma åt och hantera Git-da
 seo-description: Följ den här sidan för att lära dig hur du får åtkomst till och hanterar din Git-databas.
 translation-type: tm+mt
 source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
+workflow-type: tm+mt
+source-wordcount: '218'
+ht-degree: 7%
 
 ---
 
