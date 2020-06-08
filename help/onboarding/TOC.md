@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 9dda30b0ea72329e26b820b19aeeb6a03f863751
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 91%
+ht-degree: 95%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 91%
    + [Databas för källkod](what-is-required/source-code-repository.md)
 + Få åtkomst till AEM i molnet {#getting-access}
    + [Få åtkomst till Experience Manager as a Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
-   + Tjänstprogram i molnet {#cloud-service-programs}
+   + Cloud Service-program {#cloud-service-programs}
       + [Åtkomst till program](getting-access-to-aem-in-cloud/first-time-login.md)
       + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
       + [Skapa ett program](getting-access-to-aem-in-cloud/creating-a-program.md)
