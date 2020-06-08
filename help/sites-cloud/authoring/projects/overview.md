@@ -3,6 +3,9 @@ title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '1269'
+ht-degree: 10%
 
 ---
 
@@ -54,10 +57,10 @@ Du kan associera följande rutor med ditt projekt. Var och en av dem beskrivs i 
 * Landningssidor
 * E-post
 * Arbetsflöden
-* Startar
+* Launches
 * Uppgifter
 
-### Resurser {#assets}
+### Assets {#assets}
 
 I **resurspanelen** kan du samla alla resurser som du använder för ett visst projekt.
 
@@ -81,7 +84,7 @@ I **panelen Erfarenheter** kan du lägga till en mobilapp, en webbplats eller en
 
 ![Erfarenheter](/help/sites-cloud/authoring/assets/project-experiences.png)
 
-Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapplikation eller publikation. Lägg till upplevelser genom att klicka på plustecknet eller klicka på **Lägg till upplevelse** och välja typ av upplevelse.
+Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapp eller publikation. Lägg till upplevelser genom att klicka på plustecknet (+) eller på **Lägg till upplevelse** och välja typ av upplevelse.
 
 ![Lägg till en upplevelse](/help/sites-cloud/authoring/assets/projects-add-experience.png)
 
@@ -137,11 +140,11 @@ Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Beroende på v
 
 Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-cloud/authoring/projects/workflows.md)
 
-### Startar {#launches}
+### Launches {#launches}
 
 I rutan Launches (Starta) visas alla starter som har begärts i ett arbetsflöde för att starta en [begäran.](/help/sites-cloud/authoring/projects/workflows.md)
 
-![Startar](/help/sites-cloud/authoring/assets/project-launches.png)
+![Launches](/help/sites-cloud/authoring/assets/project-launches.png)
 
 ### Uppgifter {#tasks}
 
@@ -176,4 +179,4 @@ Alla projekt har stöd för följande standardroller så att du kan administrera
 
 >[!NOTE]
 >
->När du skapar projektet och lägger till användare till de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors**, **Myproject Observers**. Om projektet däremot tas bort tas de grupperna inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
+>När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**. Om projektet tas bort tas de grupperna dock inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Säkerhet** > **Grupper**.
