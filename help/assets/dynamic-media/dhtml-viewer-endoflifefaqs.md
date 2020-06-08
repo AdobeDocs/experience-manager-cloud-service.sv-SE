@@ -1,13 +1,16 @@
 ---
-title: Vanliga frågor om slutdatum för DHTML Viewer
+title: Vanliga frågor om att DHTML Viewer upphör
 description: Från och med den 31 januari 2014 upphör Scene7:s DHTML-visningsprogramplattform officiellt. I det här meddelandet får du svar på vanliga frågor så att du kan förbereda dig för den här övergången till vår nya HTML5-visningsprogramplattform.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '1615'
+ht-degree: 1%
 
 ---
 
 
-# Vanliga frågor om slutdatum för DHTML Viewer{#dhtml-viewer-end-of-life-faqs}
+# Vanliga frågor om att DHTML Viewer upphör{#dhtml-viewer-end-of-life-faqs}
 
 Från och med den 31 januari 2014 upphör Scene7:s DHTML-visningsprogramplattform officiellt. I det här meddelandet får du svar på vanliga frågor så att du kan förbereda dig för den här övergången till vår nya HTML5-visningsprogramplattform.
 
@@ -120,4 +123,4 @@ Om du ser den inzoomade bilden genom att hålla musen över huvudbilden eller dr
 
 **Vem kontaktar jag för mer information?**
 
-Om dessa frågor och svar inte besvarar alla dina frågor kan du kontakta supporten ([s7support@adobe.com](mailto:s7support@adobe.com)) eller din kontoansvarige på Adobe.
+Om dessa frågor och svar inte besvarar alla dina frågor kan du kontakta supporten ([s7support@adobe.com](mailto:s7support@adobe.com)) eller er kontoansvarige hos Adobe.
