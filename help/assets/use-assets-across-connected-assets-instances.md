@@ -4,6 +4,9 @@ description: Använd resurser som är tillgängliga på en [!DNL Adobe Experienc
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 5e89a44cb727547af9db783662e035c4e2102a4e
+workflow-type: tm+mt
+source-wordcount: '1986'
+ht-degree: 51%
 
 ---
 
@@ -50,7 +53,7 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 | DAM-användare | Lokalt | `Authors` | `ksaner` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
 | [!DNL Sites] author | Lokalt | `Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst lokalt [!DNL Sites]) | `ksaner` | End user are [!DNL Sites] authors who use this integration to improve their content velocity. The authors search and browse assets in remote DAM using [!UICONTROL Content Finder] and using the required images in local web pages. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
 | [!DNL Assets] administratör | Fjärr | [!DNL Experience Manager] `administrators` | `admin` på fjärrkontrollen [!DNL Experience Manager] | Konfigurerar CORS (Cross-Origin Resource Sharing). |
-| DAM-användare | Fjärr | `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | Author role on the remote [!DNL Experience Manager] deployment. Search and browse assets in Connected Assets using the [!UICONTROL Content Finder]. |
+| DAM-användare | Fjärr | `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | Author role on the remote [!DNL Experience Manager] deployment. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av [!UICONTROL Content Finder]. |
 | DAM-distributör (teknisk användare) | Fjärr | [!DNL Sites] `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | This user present on the remote deployment is used by [!DNL Experience Manager] local server (not the [!DNL Sites] author role) to fetch the remote assets, on behalf of [!DNL Sites] author. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
 
 ## Configure a connection between [!DNL Sites] and [!DNL Assets] deployments {#configure-a-connection-between-sites-and-assets-deployments}
@@ -68,13 +71,13 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 1. Ensure that the users and roles with local scope exist on the [!DNL Sites] deployment and on the [!DNL Assets] deployment on AMS. Create a technical user on [!DNL Assets] deployment and add to the user group mentioned in [users and groups involved](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved).
 
-1. Åtkomst till den lokala [!DNL Sites] distributionen på `https://[local_sites]:4502`. Klicka på **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > Konfiguration **[!UICONTROL av]** anslutna resurser och ange följande värden:
+1. Åtkomst till den lokala [!DNL Sites] distributionen på `https://[local_sites]:4502`. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Connected Assets Configuration]** och ange följande värden:
 
    1. [!DNL Assets] platsen är `https://[assets_servername_ams]:[port]`.
    1. Autentiseringsuppgifter för en DAM-distributör (teknisk användare).
-   1. I fältet **[!UICONTROL Monteringspunkt]** anger du den lokala [!DNL Experience Manager] sökvägen där [!DNL Experience Manager] resurserna hämtas. Till exempel, mappen `remoteassets`.
+   1. In **[!UICONTROL Mount Point]** field, enter the local [!DNL Experience Manager] path where [!DNL Experience Manager] fetches the assets. Till exempel, mappen `remoteassets`.
 
-   1. Justera värdena för det **[!UICONTROL ursprungliga tröskelvärdet för optimering av binär överföring]** beroende på nätverket. En resursåtergivning med en storlek som är större än detta tröskelvärde överförs asynkront.
+   1. Justera värdena för **[!UICONTROL Original Binary transfer optimization Threshold]** beroende på ditt nätverk. En resursåtergivning med en storlek som är större än detta tröskelvärde överförs asynkront.
    1. Select **[!UICONTROL Datastore Shared with Connected Assets]**, if you use a datastore to store your assets and the Datastore is the common storage between both deployments. I det här fallet spelar tröskelvärdet ingen roll eftersom resursernas binärfiler finns i datalagret och de inte överförs.
       ![En typisk konfiguration för Connected Assets](assets/connected-assets-typical-config.png)
 
@@ -82,11 +85,11 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 1. Inaktivera arbetsflödets startprogram eftersom resurserna redan har bearbetats och återgivningarna hämtas. Adjust the launcher configurations on the local ([!DNL Sites]) deployment to exclude the `connectedassets` folder, in which the remote assets are fetched.
 
-   1. Vid [!DNL Sites] distributionen klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Startprogram]**.
+   1. Vid [!DNL Sites] distributionen klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
 
-   1. Sök efter startare med arbetsflöden som **[!UICONTROL DAM Update Asset]** och **[!UICONTROL DAM Metadata Writeback]**.
+   1. Sök efter startprogram med arbetsflöden som **[!UICONTROL DAM Update Asset]** och **[!UICONTROL DAM Metadata Writeback]**.
 
-   1. Select the workflow launcher and click **[!UICONTROL Properties]** on the action bar.
+   1. Välj startprogrammet för arbetsflödet och klicka på **[!UICONTROL Properties]** i åtgärdsfältet.
 
    1. In the [!UICONTROL Properties] wizard, change the **[!UICONTROL Path]** fields as the following mappings to update their regular expressions to exclude the mount point **[!UICONTROL connectedassets]**.
    | Före | Efter |
@@ -97,13 +100,13 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
    >[!NOTE]
    >
-   >Alla återgivningar som är tillgängliga på fjärrdistributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
+   >Alla återgivningar som är tillgängliga på fjärrdistributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. Arbetsflödet [!UICONTROL DAM Update Asset] aktiveras och skapar fler återgivningar. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
-1. Lägg till [!DNL Sites] instansen som ett av **[!UICONTROL Tillåtna original]** i fjärr- [!DNL Assets'] CORS-konfigurationen.
+1. Add the [!DNL Sites] instance as one of the **[!UICONTROL Allowed Origins]** on the remote [!DNL Assets'] CORS configuration.
 
-   1. Logga in med administratörsautentiseringsuppgifterna. Search for `Cross-Origin`. Öppna **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
+   1. Logga in med administratörsautentiseringsuppgifterna. Search for `Cross-Origin`. Öppna **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-   1. Om du till [!DNL Sites] exempel vill skapa en CORS-konfiguration klickar du på ![ikonen aem_assets_add_icon](assets/do-not-localize/aem_assets_add_icon.png) bredvid **[!UICONTROL Adobe Granite-resursdelningspolicy]** för korsursprung.
+   1. To create a CORS configuration for [!DNL Sites] instance, click ![aem_assets_add_icon](assets/do-not-localize/aem_assets_add_icon.png) icon next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
 
    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Spara konfigurationen.
 
@@ -119,13 +122,13 @@ Only those tags of remote assets are fetched that have an exact corresponding ta
 
 Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur den fungerar. Använd de dokument eller bilder du vill ha på den fjärranslutna DAM-distributionen.
 
-1. Navigera till [!DNL Assets] gränssnittet på fjärrdistributionen genom att gå till **[!UICONTROL Resurser]** > **[!UICONTROL Filer]** från [!DNL Experience Manager] arbetsytan. Du kan även få åtkomst till `https://[assets_servername_ams]:[port]/assets.html/content/dam` i en webbläsare. Ladda upp de resurser du vill ha.
-1. On the [!DNL Sites] instance, in the profile activator in the upper-right corner, click **[!UICONTROL Impersonate as]**. Provide `ksaner` as user name, select the option provided, and click **[!UICONTROL OK]**.
-1. Öppna en webbsida för Vi.Butiker på **[!UICONTROL Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL us]** > **[!UICONTROL en]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` i en webbläsare när du vill redigera en sida.
+1. Navigate to the [!DNL Assets] interface on the remote deployment by accessing **[!UICONTROL Assets]** > **[!UICONTROL Files]** from [!DNL Experience Manager] workspace. Du kan även få åtkomst till `https://[assets_servername_ams]:[port]/assets.html/content/dam` i en webbläsare. Ladda upp de resurser du vill ha.
+1. On the [!DNL Sites] instance, in the profile activator in the upper-right corner, click **[!UICONTROL Impersonate as]**. Ange `ksaner` som användarnamn, markera det angivna alternativet och klicka på **[!UICONTROL OK]**.
+1. Öppna en We.Retail-webbsida på **[!UICONTROL Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL us]** > **[!UICONTROL en]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` i en webbläsare när du vill redigera en sida.
 
-   Klicka på **[!UICONTROL Växla sidopanel]** i det övre vänstra hörnet på sidan.
+   Klicka på **[!UICONTROL Toggle Side Panel]** överst till vänster på sidan.
 
-1. Öppna fliken [!UICONTROL Resurser] och klicka på **[!UICONTROL Logga in på Anslutna resurser]**.
+1. Open the [!UICONTROL Assets] tab and click **[!UICONTROL Log in to Connected Assets]**.
 1. Ange inloggningsuppgifterna, `ksaner` som användarnamn och `password` som lösenord. This user has authoring permissions on both the [!DNL Experience Manager] deployments.
 1. Sök efter resursen som du har lagt till i DAM. Fjärresurserna visas i den vänstra panelen. Filtrera efter bilder eller dokument och filtrera efter olika typer av dokument som stöds. Dra bilderna till en `Image`-komponent och dokument till en `Download`-komponent.
 
@@ -149,7 +152,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
 >[!CAUTION]
 >
->När de hämtade fjärresurserna har använts på en webbsida är de sökbara och användbara för alla som har behörighet att komma åt den lokala mappen där de hämtade resurserna lagras (`connectedassets` i ovanstående genomgång). The assets are also searchable and visible in the local repository via [!UICONTROL Content Finder].
+>När de hämtade fjärresurserna har använts på en webbsida är de sökbara och användbara för alla som har behörighet att komma åt den lokala mappen där de hämtade resurserna lagras (`connectedassets` i ovanstående genomgång). Resurserna är också sökbara och synliga i det lokala datalagret via [!UICONTROL Content Finder].
 
 De hämtade resurserna kan användas som andra lokala resurser, förutom att associerade metadata inte kan redigeras.
 
@@ -165,7 +168,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * All [!DNL Sites] authors have read permissions on the fetched copies, even if authors do not have access to the remote DAM deployment.
 * Det finns inte API-stöd för att anpassa integreringen.
 * Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna.
-* Det går inte att använda en fjärrresurs som sidminiatyr i [!UICONTROL användargränssnittet för Sidegenskaper] . Du kan ange en miniatyrbild för en webbsida i [!UICONTROL användargränssnittet för Sidegenskaper] från [!UICONTROL miniatyrbilden] genom att klicka på [!UICONTROL Välj bild].
+* Det går inte att använda en fjärrresurs som sidminiatyr i [!UICONTROL Page Properties] användargränssnittet. Du kan ange en miniatyrbild för en webbsida i [!UICONTROL Page Properties] användargränssnittet från [!UICONTROL Thumbnail] genom att klicka på [!UICONTROL Select Image].
 
 ### Konfigurera och licensiera {#setup-licensing}
 
@@ -177,7 +180,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 ### Användning {#usage}
 
 * De enda funktioner som stöds är sökning efter fjärresurser och att dra fjärresurserna till den lokala sidan för att skapa innehåll.
-* Tidsgränsen för hämtning är 5 sekunder. Författare kan ha problem med att hämta resurser, till exempel om det råder nätverksproblem. Författare kan försöka igen genom att dra fjärrresursen från [!UICONTROL Content Finder] till [!UICONTROL Page Editor].
+* Tidsgränsen för hämtning är 5 sekunder. Författare kan ha problem med att hämta resurser, till exempel om det råder nätverksproblem. Authors can reattempt by dragging the remote asset from [!UICONTROL Content Finder] to [!UICONTROL Page Editor].
 * Enkla redigeringar som är icke-destruktiva och redigering som stöds via `Image`-komponenten kan tillämpas på hämtade resurser. Resurserna är skrivskyddade.
 
 ## Felsöka problem {#troubleshoot}
