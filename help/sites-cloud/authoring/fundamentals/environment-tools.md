@@ -3,6 +3,9 @@ title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '2163'
+ht-degree: 12%
 
 ---
 
@@ -13,7 +16,7 @@ I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehå
 
 ## Hantera din webbplats {#managing-your-site}
 
-Med **platskonsolen** kan du navigera och hantera webbplatsen med hjälp av sidhuvudsfältet, verktygsfältet, åtgärdsikonerna (som gäller för den valda resursen), vägbeskrivningar och, när du väljer det här alternativet, sekundära spår (till exempel tidslinje och referenser).
+Med **Sites**-konsolen kan du navigera och hantera webbplatsen med hjälp av sidhuvudsfältet, verktygsfältet, åtgärdsikonerna (som gäller för den valda resursen), vägbeskrivningar och, om det är valt, sekundära rutor (till exempel tidslinje och referenser).
 
 Till exempel kolumnvy:
 
@@ -21,7 +24,7 @@ Till exempel kolumnvy:
 
 ## Redigera sidinnehåll {#editing-page-content}
 
-Du kan redigera en sida med sidredigeraren. Exempel:
+Du kan redigera en sida med sidredigeraren. Till exempel:
 
 `http://<host>:<port>/editor.html/content/wknd/en/sports/la-skateparks.html`
 
@@ -38,7 +41,7 @@ Du kan redigera en sida med sidredigeraren. Exempel:
 När du redigerar en sida kan du komma åt **hjälpen** från:
 
 * Väljaren [**Sidinformation **](/help/sites-cloud/authoring/fundamentals/page-properties.md#page-properties)som visar introduktionsbilderna (som visas första gången du öppnar redigeraren)
-* Dialogrutan för [konfiguration](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) av specifika komponenter (med ? ikonen i dialogrutans verktygsfält), som visar sammanhangsberoende hjälp
+* Dialogrutan för [konfiguration](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) av specifika komponenter (med ? ikon i dialogrutans verktygsfält), som visar sammanhangsberoende hjälp
 
 Ytterligare [hjälprelaterade resurser finns på konsoler](/help/sites-cloud/authoring/getting-started/basic-handling.md#accessing-help).
 
@@ -48,7 +51,7 @@ Komponenterna är byggstenarna i AEM-innehåll. Du placerar flera komponenter p�
 
 Komponentwebbläsaren visar alla komponenter som är tillgängliga för användning på den aktuella sidan. Dessa kan dras till rätt plats och sedan redigeras för att lägga till ditt innehåll.
 
-Komponentwebbläsaren är en flik i sidopanelen (tillsammans med [resursläsaren](#assets-browser) och [innehållsträdet](#content-tree)). Om du vill öppna (eller stänga) sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
+Komponentläsaren är en flik i sidopanelen (tillsammans med [resursläsaren](#assets-browser) och [innehållsträdet](#content-tree)). Om du vill öppna (eller stänga) sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
 ![Växla sida](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
 
@@ -77,13 +80,13 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
    * Komponentnamn
    * Komponentgrupp (i grått)
    * Ikon eller förkortning
-      * Standardkomponentens ikoner är monokroma.
+      * Standardkomponenternas ikoner är monokroma.
       * Förkortningar är alltid de två första tecknen i komponentnamnet.
    I det övre verktygsfältet i **komponentwebbläsaren** kan du:
 
    * Filtrera komponenter efter namn.
    * Begränsa visningen till en viss grupp med listrutan.
-   Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentwebbläsaren** (om den är tillgänglig). För **innehållsfragment**:
+   Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **innehållsfragment**:
 
    ![Information om komponentwebbläsare](/help/sites-cloud/authoring/assets/component-browser-information.png)
 
@@ -97,7 +100,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 Resursläsaren visar alla resurser som är tillgängliga för direkt användning på den aktuella sidan. <!--The assets browser shows all [assets](/help/assets/home.md) that are available for direct use on your current page.-->
 
-Resursläsaren är en flik i sidopanelen tillsammans med [komponentwebbläsaren](#components-browser) och [innehållsträdet](#content-tree). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
+Resursläsaren är en flik i sidopanelen tillsammans med [komponentläsaren](#components-browser) och [innehållsträdet](#content-tree). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
 ![Växla sida](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
 
@@ -200,8 +203,8 @@ Om sidan innehåller innehållsfragment får du även åtkomst till [webbläsare
 
 **Referenser** visar anslutningar till den valda sidan:
 
-* Blueprints
-* Startar
+* Ritningar
+* Launches
 * Live-kopior
 * Språkversioner
 * Inkommande länkar
@@ -238,7 +241,7 @@ För lämpliga resurser (t.ex. sidor från konsolen **Platser** eller resurser f
 
 ## Sidinformation {#page-information}
 
-Sidinformation (ikonen för utjämning) öppnar en meny som även innehåller information om den senaste redigeringen och det senaste dokumentet. Beroende på sidans egenskaper, dess plats och din instans kan det finnas fler eller färre alternativ:
+Sidinformation (equalizer-ikonen) öppnar en meny som även innehåller information om den senaste redigeringen och det senaste dokumentet. Beroende på sidans egenskaper, dess plats och din instans kan det finnas fler eller färre alternativ:
 
 ![Sidinformation, alternativ](/help/sites-cloud/authoring/assets/page-information.png)
 
@@ -277,7 +280,7 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Beroende på sidans egenskaper kanske vissa lägen inte är tillgängliga.
 >* Åtkomst till vissa lägen kräver lämplig behörighet/behörighet.
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
->* Det finns ett [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) ( `Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera**, **Layout**).
+>* Det finns ett [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) (`Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera** eller **Layout**).
 >
 
 
@@ -307,7 +310,7 @@ Sökvägsläsaren är organiserad som [kolumnvyn](/help/sites-cloud/authoring/ge
 ![Sökvägsläsaren](/help/sites-cloud/authoring/assets/path-browser.png)
 
 * När en resurs har valts aktiveras knappen **Välj** i dialogrutans övre högra hörn. Klicka eller tryck för att bekräfta markeringen eller **Avbryt** för att avbryta.
-* Om kontexten tillåter val av flera resurser aktiveras även knappen **Välj** när du väljer en resurs, men även antalet markerade resurser läggs till i fönstrets övre högra hörn. Klicka på **X** bredvid talet för att avmarkera alla.
+* Om det går att välja flera resurser aktiveras även knappen **Välj** när du väljer en resurs och antalet valda resurser läggs till i det övre högra hörnet fönstret. Klicka på **X** bredvid talet för att avmarkera alla.
 * När du navigerar genom trädet visas platsen i de synliga kolumnerna högst upp i dialogrutan. Dessa vägbeskrivningar kan också användas för att snabbt hoppa in i resurshierarkin.
 * Du kan när som helst använda sökfältet högst upp i dialogrutan. Klicka på **X** i sökfältet för att rensa sökningen.
 * Om du vill begränsa sökningen kan du visa filteralternativen och filtrera resultaten baserat på en viss bana.
