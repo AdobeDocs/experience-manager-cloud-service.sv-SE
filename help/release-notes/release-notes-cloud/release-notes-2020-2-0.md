@@ -3,6 +3,9 @@ title: Versionsinformation för version 2020.2.0
 description: Versionsinformation för version 2020.2.0
 translation-type: tm+mt
 source-git-commit: 8796d4bcbfc4089e1e78bd18bdb253386a5f5b6d
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ Releasedatum för Experience Manager som molntjänst 2020.2.0 är 13 februari 20
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en molntjänst 2020.2.0.
 
-### Nyheter {#what-is-new}
+### What&#39;s New {#what-is-new}
 
 * Adobe Experience Managers arkivtypsversion har uppdaterats till version 22.
 * Scen- och produktionsmiljöerna i sandbox-/demoprogrammen kan nu uppdateras via användargränssnittet i Cloud Manager.
@@ -28,7 +31,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 * Kodsökningssteget har nu en hämtningsbar logg.
 * Kalkylbladet som innehåller problem som upptäcks vid kodskanning har nu en kolumn med en länk till dokumentationen för den specifika regeln.
 
-### Felkorrigeringar {#bug-fixes}
+### Bug Fixes  {#bug-fixes}
 
 * Säkerhetsprofiler för webbläsare kan ibland förhindra att vissa knappar i pipeline-körningsskärmen fungerar som de ska.
 * Länkarna Översikt, Miljö och Aktivitet var ibland tillgängliga på landningssidan för Cloud Manager.
