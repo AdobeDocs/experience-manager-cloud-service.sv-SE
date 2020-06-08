@@ -3,11 +3,14 @@ title: Panoramabilder
 description: Lär dig hur du arbetar med panoramabilder i Dynamic Media.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 15%
 
 ---
 
 
-# Panoramabilder{#panoramic-images}
+# Panoramic images{#panoramic-images}
 
 I det här avsnittet beskrivs hur du arbetar med visningsprogrammet för panoramabilder för att återge sfäriska panoramabilder så att du får en totalupplevelse på 360° i ett rum, en egenskap, en plats eller ett landskap.
 
@@ -24,7 +27,7 @@ För att en överförd resurs ska kvalificeras som en sfärisk panoramabild som 
   `/conf/global/settings/cloudconfigs/dmscene7/jcr:content` -->
 * Taggad med nyckelorden `equirectangular`, eller `spherical`och `panorama`, eller `spherical` och `panoramic`. Se [Använda taggar](/help/sites-cloud/authoring/features/tags.md).
 
-Både proportionerna och nyckelordskriterierna gäller för panoramaresurser för sidan med resursinformation och för `Panoramic Media` WCM-komponenten.
+Kriterierna för proportioner och nyckelord gäller även för panoramaresurser på sidan med resursinformation och för komponenten `Panoramic Media` i innehållshanteringssystemet.
 
 Information om hur du överför resurser som ska användas med panoramabildsvisningsprogrammet finns i [Överföra resurser](/help/assets/manage-digital-assets.md#uploading-assets).
 
