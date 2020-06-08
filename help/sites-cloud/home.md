@@ -1,8 +1,11 @@
 ---
 title: Adobe Experience Manager Sites as a Cloud Service
 description: Länkar till självhjälp och dokumentation om Sites för Adobe Experience Manager as a Cloud Service
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 2312250505f47dc84acd1987b5ebae21fd232e2d
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 100%
 
 ---
 
