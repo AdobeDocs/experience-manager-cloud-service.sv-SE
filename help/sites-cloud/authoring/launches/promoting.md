@@ -1,13 +1,16 @@
 ---
-title: Befordra lanseringar
+title: Marknadsföra Launches
 description: 'Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. '
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '771'
+ht-degree: 1%
 
 ---
 
 
-# Befordra lanseringar {#promoting-launches}
+# Marknadsföra Launches {#promoting-launches}
 
 Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan. Följande alternativ är tillgängliga när du befordrar en startsida:
 
@@ -18,7 +21,7 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 
 >[!NOTE]
 >
->När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktionssidorna** som en enhet (så att processen går snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM-arbetsflöde](#processing-promoted-pages-using-aem-workflow).
+>När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktionssidorna** som en enhet (så att processen går snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. See [Processing Promoted Pages Using AEM Workflow](#processing-promoted-pages-using-aem-workflow).
 
 >[!CAUTION]
 >
@@ -93,7 +96,7 @@ När du har skapat en kapslad start kan du befordra den tillbaka till någon av 
 1. Välj **Befordra start** för att öppna guiden.
 1. Ange nödvändig information:
    * **Mål**
-      * **Kampanjmål** - Du kan befordra till någon av källorna.
+      * **Erbjudandemål** - Du kan göra reklam för alla källor.
       * **Ta bort start efter befordran** - När den valda starten har befordrats och alla starter som är kapslade i den tas de bort.
    * **Omfång** - Här kan du välja om du vill befordra hela starten eller bara de sidor som faktiskt har redigerats. Om det är det senare kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
       * **Befordra en fullständig lansering**
