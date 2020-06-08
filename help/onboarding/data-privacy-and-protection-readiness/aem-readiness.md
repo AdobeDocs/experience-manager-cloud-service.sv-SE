@@ -3,6 +3,9 @@ title: Dataskydd och dataintegritet - Adobe Experience Manager som en molntjäns
 description: 'Lär dig mer om Adobe Experience Manager som molntjänst för de olika dataskydds- och datasekretessreglerna. inklusive EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentsekretesslag och hur man ska följa detta när man implementerar en ny AEM som ett molntjänstprojekt. '
 translation-type: tm+mt
 source-git-commit: 2b7ee2b7b0ce351ed48aeb2f3135c947eafe7247
+workflow-type: tm+mt
+source-wordcount: '733'
+ht-degree: 1%
 
 ---
 
@@ -79,13 +82,13 @@ Följande diagram visar hur ett arbetsflöde för sekretesspolicy kan se ut (ill
 
 Se avsnitten nedan för dokumentation av gällande bestämmelser om produktområden för AEM som en molntjänst.
 
-## Adobe Experience Manager som en molntjänst {#aem-foundation}
+## Adobe Experience Manager as a Cloud Service Foundation {#aem-foundation}
 
-Se [AEM Foundation-beredskap för dataskydd och](/help/onboarding/data-privacy-and-protection-readiness/foundation-readiness.md)dataintegritet.
+See [AEM Foundation Readiness for Data Protection and Data Privacy Regulations](/help/onboarding/data-privacy-and-protection-readiness/foundation-readiness.md).
 
-## Adobe Experience Manager som en molntjänst {#aem-sites}
+## Adobe Experience Manager Sites as a Cloud Service {#aem-sites}
 
-Se [AEM Sites Readiness for Data Protection and Data Privacy Regulations.](/help/onboarding/data-privacy-and-protection-readiness/sites-readiness.md)
+See [AEM Sites Readiness for Data Protection and Data Privacy Regulations.](/help/onboarding/data-privacy-and-protection-readiness/sites-readiness.md)
 
 ## Adobe Experience Manager som en molntjänstintegrering med Adobe Target och Adobe Analytics {#aem-integration-with-adobe-target-adobe-analytics}
 
