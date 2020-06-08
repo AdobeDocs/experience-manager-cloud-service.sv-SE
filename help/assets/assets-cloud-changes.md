@@ -3,6 +3,9 @@ title: Betydande förändringar i Adobe Experience Manager Assets som en molntj�
 description: Betydande ändringar av Adobe Experience Manager Assets i AEM Cloud-tjänsten jämfört med Adobe Experience Manager 6.5.
 translation-type: tm+mt
 source-git-commit: 37ff6912837ba78c90526e8f8322b9002e9a4304
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
@@ -24,16 +27,16 @@ Tillgångsuppladdning har optimerats för ökad effektivitet genom bättre skaln
 * I Experience Manager används principen om direkt binär åtkomst för överföring och hämtning och mikrotjänster för mediefiler för bearbetning. Se [översikt över tillgångsintag](/help/assets/asset-microservices-overview.md).
    * Tillgångsuppladdning [med direkt binär åtkomst](/help/assets/asset-microservices-overview.md#asset-upload-with-direct-binary-access).
    * Mer teknisk information finns i avsnittet om [direkt binär överföring av protokoll och API:er](/help/assets/developer-reference-material-apis.md#overview-binary-upload).
-* Standardarbetsflödet **[!UICONTROL DAM-resursuppdatering]** i tidigare versioner av AEM är inte längre tillgängligt. I stället erbjuder mikrotjänsterna en skalbar, lättillgänglig tjänst som täcker det mesta av standardbearbetningen av mediefiler (återgivningar, metadataextrahering, textrahering för indexering).
+* Standardarbetsflödet **[!UICONTROL DAM Asset Update]** i tidigare versioner av AEM är inte längre tillgängligt. I stället erbjuder mikrotjänsterna en skalbar, lättillgänglig tjänst som täcker det mesta av standardbearbetningen av mediefiler (återgivningar, metadataextrahering, textrahering för indexering).
    * Se [konfigurera och använda asset microservices](/help/assets/asset-microservices-configure-and-use.md)
    * Om du vill ha anpassade arbetsflödessteg i bearbetningen kan du använda [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) .
-* Resurser som kommer in via Package Manager kräver manuell ombearbetning med åtgärden **[!UICONTROL Återbearbeta resurs]** i Assets-gränssnittet.
+* Resurser som kommer in via Package Manager kräver manuell ombearbetning med hjälp av åtgärden **[!UICONTROL Reprocess Asset]** i Assets-gränssnittet.
 
 Standardåtergivningar som genereras med tillgångsmikrotjänster lagras på ett bakåtkompatibelt sätt i resurslagernoderna (samma namnkonventioner).
 
 ## Utveckla och testa mikrotjänster {#asset-microservices}
 
-Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. Resursmikrotjänster hjälper till att undvika behovet av tredjepartsverktyg och -metoder (som ImageMagick) och förenkla konfigurationer, samtidigt som de tillhandahåller färdiga funktioner för vanliga filtyper. Du kan nu bearbeta en [mängd olika filtyper](/help/assets/file-format-support.md) som omfattar fler färdiga format än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick. Du kan inte använda de komplexa konfigurationerna för ImageMagick för konfigurationen av [!UICONTROL Bearbetningsprofiler] . Använd även [!DNL Dynamic Media] för MPEG-omkodning av videofilmer.
+Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. Resursmikrotjänster hjälper till att undvika behovet av tredjepartsverktyg och -metoder (som ImageMagick) och förenkla konfigurationer, samtidigt som de tillhandahåller färdiga funktioner för vanliga filtyper. Du kan nu bearbeta en [mängd olika filtyper](/help/assets/file-format-support.md) som omfattar fler färdiga format än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick. Du kan inte använda de komplexa konfigurationerna för ImageMagick för [!UICONTROL Processing Profiles] konfigurationen. Använd även [!DNL Dynamic Media] för MPEG-omkodning av videofilmer.
 
 Resursmikrotjänster är en molnbaserad tjänst som automatiskt tillhandahålls och kopplas till Experience Manager i kundprogram och miljöer som hanteras i Cloud Manager. För att utöka eller anpassa Experience Manager kan utvecklarna använda befintligt innehåll eller befintliga resurser med återgivningar som genereras i en molnmiljö för att testa och validera koden med, visa och hämta resurser.
 
