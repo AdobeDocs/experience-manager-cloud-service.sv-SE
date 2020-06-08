@@ -3,7 +3,7 @@ title: Tagga bilder med artificiellt intelligenta tjänster.
 description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar med hjälp av Adobe Sensei-tjänster.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 41684858f1fe516046b9601c1d869fff180320e0
+source-git-commit: cc24b16cf17f146e773e7974c649adae1bd10ddf
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 5%
@@ -99,7 +99,7 @@ Du kan inte ångra kursen. Riktlinjerna ovan bör hjälpa dig att välja bra bil
 Följ de här stegen för att skapa och utbilda en modell för dina företagsspecifika taggar:
 
 1. Skapa nödvändiga taggar och rätt taggstruktur. Överför relevanta bilder i DAM-databasen.
-1. I [!DNL Experience Manager] användargränssnittet går du till **[!UICONTROL Assets]** > **[!UICONTROL Training Model]**.
+1. I [!DNL Experience Manager] användargränssnittet går du till **[!UICONTROL Assets]** > **[!UICONTROL Smart Tag Training]**.
 1. Klicka på **[!UICONTROL Create]**. Ange en **[!UICONTROL Title]**, **[!UICONTROL Description]**.
 1. Bläddra och välj taggarna från de befintliga taggarna i `cq:tags` som du vill utbilda modellen för. Klicka på **[!UICONTROL Next]**.
 1. Klicka **[!UICONTROL Select Assets]** mot varje tagg i **[!UICONTROL Add Assets]** dialogrutan. Sök i DAM-databasen eller bläddra i databasen för att välja minst 10 och högst 50 bilder. Välj resurser och inte mappen. När du har markerat bilderna klickar du på **[!UICONTROL Select]**.
