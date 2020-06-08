@@ -3,6 +3,9 @@ title: Lägg till digitala resurser i Adobe Experience Manager
 description: Lägg till dina digitala resurser i Adobe Experience Manager som en molntjänst
 translation-type: tm+mt
 source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
+workflow-type: tm+mt
+source-wordcount: '1340'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +35,7 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
 1. I Assets-användargränssnittet navigerar du till den plats där du vill lägga till digitala resurser.
 1. Gör något av följande om du vill överföra resurserna:
 
-   * Tryck på ikonen **[!UICONTROL Skapa]** i verktygsfältet. Tryck sedan på **[!UICONTROL Filer]** på menyn. Du kan byta namn på filen i den dialogruta som visas om det behövs.
+   * Tryck på **[!UICONTROL Create]** ikonen i verktygsfältet. Tryck sedan på menyn **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
    * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till användargränssnittet Resurser. Dialogrutan för att byta namn på filen visas inte.
    ![create_menu](assets/create_menu.png)
 
@@ -106,17 +109,17 @@ Du kan välja att ersätta en befintlig resurs, skapa en annan version eller beh
 
 >[!NOTE]
 >
->När du väljer **[!UICONTROL Ersätt]** i dialogrutan [!UICONTROL Namnkonflikt] , genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
+>När du väljer **[!UICONTROL Replace]** i [!UICONTROL Name Conflict] dialogrutan genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
 >
 >Om tillgångsinsikter är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som samlats in för resursen i Analytics.
 
-Om du vill behålla den duplicerade resursen i AEM Resurser trycker/klickar du på **[!UICONTROL Behåll]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du på **[!UICONTROL Ta bort]**.
+Om du vill behålla den duplicerade resursen i AEM Resurser trycker/klickar du **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du **[!UICONTROL Delete]**.
 
 ### Hantering av filnamn och förbjudna tecken {#filename-handling}
 
 AEM Resurser förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande i AEM Resurser och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn.
 
-I dialogrutan [!UICONTROL Överför resurser] kan du ange långa namn för de filer som du överför, så att den passar organisationens specifika namnkonventioner.
+I dialogrutan kan du ange långa namn för de filer som du överför, så att de passar organisationens specifika regler för filnamn. [!UICONTROL Upload Assets]
 
 Följande (blankstegsavgränsad lista med) tecken stöds emellertid inte:
 
@@ -143,7 +146,7 @@ Förutom webbläsarens användargränssnitt har Experience Manager stöd för an
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i dialogrutan **[!UICONTROL Mappegenskaper]** .
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
@@ -154,14 +157,14 @@ Följande profiler är tillgängliga:
 
 Om Dynamic Media är aktiverat i din miljö:
 
-* [Med hjälp av bildprofiler](dynamic-media/image-profiles.md) kan du tillämpa en viss beskärningskonfiguration (**[!UICONTROL smart beskärning]** och pixelbeskärning) och skärpekonfiguration på de överförda resurserna
+* Med [bildprofiler](dynamic-media/image-profiles.md) kan du använda en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna
 * [Med videoprofiler](dynamic-media/video-profiles.md) kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar)
 
 >[!NOTE]
 >
 > Dynamisk mediebeskärning och andra åtgärder för resurser är icke-förstörande, d.v.s. de ändrar inte det överförda originalet, utan tillhandahåller i stället parametrar för beskärning eller medieomvandling som ska utföras när resurserna levereras
 
-För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i kolumnen **[!UICONTROL Bearbeta profil]** .
+För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i **[!UICONTROL Processing Profile]** kolumnen.
 
 ## Överför eller importera resurser med API:er {#upload-using-apis}
 
