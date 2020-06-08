@@ -1,13 +1,16 @@
 ---
-title: Redigeringsövningar
+title: Redigera Launches
 description: 'När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna. '
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '494'
+ht-degree: 19%
 
 ---
 
 
-# Redigeringsövningar {#editing-launches}
+# Redigera Launches {#editing-launches}
 
 ## Redigera startsidor {#editing-launch-pages}
 
@@ -23,12 +26,12 @@ Om lanseringen baseras på en live-kopia kommer du att: <!--If your launch is ba
 * Se låsa symboler (små hänglås) när du redigerar en komponent (innehåll och/eller egenskaper).
 * Se fliken **Live-kopia** i **Sidegenskaper**
 
-En livecopy används för att synkronisera innehåll *från* källgrenen *till* startgrenen (för att hålla igång programmet uppdaterat med ändringarna i källan).
+En live-kopia används för att synkronisera innehåll *från* källgrenen *till* startgrenen (för att hålla startsidan uppdaterad med ändringarna i källan).
 
 Du kan göra ändringar på samma sätt som du kan redigera en vanlig Live-kopia; till exempel:
 
 * Om du klickar på ett stängt hänglås bryts synkroniseringen och du kan göra nya uppdateringar av innehållet när du startar programmet. När du har låst upp (öppet hänglås) skrivs inte ändringarna över av ändringar som gjorts på samma plats i källgrenen.
-* **Skjut upp** (och **återuppta**) arv för en viss sida.
+* **Gör uppehåll i** (och **återuppta**) arv för en viss sida.
 
 Mer information finns i Ändra Live Copy-innehåll. <!--See [Changing Live Copy Content](/help/sites-administering/msm-livecopy.md#changing-live-copy-content) for further information.-->
 
@@ -70,10 +73,10 @@ Du kan när som helst redigera egenskaperna för en start:
    * konsolen [](/help/sites-cloud/authoring/launches/overview.md#the-launches-console)Launches:
       * Välj **Egenskaper**.
    * [Referenser (platskonsolen)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
-      * Välj **Redigera egenskaper**.
+      * Select **Edit Properties**.
       * Detaljerna visas.
 1. Gör önskade ändringar och bekräfta sedan med **Spara**.
-   * Se [Startprogram - Evenemangsordningen](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events) för information om syftet med och interaktionen mellan fälten **Startdatum** och **Produktionsklar** .
+   * Avsnittet [Startsidor och händelseordning](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events) innehåller information om syftet med och interaktionen mellan fälten **Startdatum** och **Produktionsklar**.
 
 ## Identifiera startstatus för en sida {#discovering-the-launch-status-of-a-page}
 
