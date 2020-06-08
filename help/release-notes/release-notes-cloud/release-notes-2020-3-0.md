@@ -3,6 +3,9 @@ title: Versionsinformation för version 2020.3.0
 description: Versionsinformation för version 2020.3.0
 translation-type: tm+mt
 source-git-commit: 27225bf4b918f39892ac9ab6f46deb97479f08e8
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -20,12 +23,12 @@ Releasedatum för Experience Manager som molntjänst 2020.3.0 är 5 mars 2020.
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en molntjänst 2020.3.0.
 
-### Nyheter {#what-is-new}
+### What&#39;s New {#what-is-new}
 
 * Loggen för byggsteget är nu tillgänglig medan byggsteget körs.
 * Vissa av meddelandena på informationssidan för pipeline-körning har redigerats för tydlighet.
 
-### Felkorrigeringar {#bug-fixes}
+### Bug Fixes  {#bug-fixes}
 
 * Det gick inte att hämta loggfiler för anpassade och funktionella teststeg via användargränssnittet.
 * När Git-databasen för ett molntjänstprogram inte kunde skapas kunde användare i distributionshanterarrollen ibland inte återställas från det här felet.
