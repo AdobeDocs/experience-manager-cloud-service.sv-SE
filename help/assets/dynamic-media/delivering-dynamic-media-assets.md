@@ -3,6 +3,9 @@ title: Leverera dynamiska medieresurser
 description: Lär dig leverera dynamiska medieresurser
 translation-type: tm+mt
 source-git-commit: 218afb360ec3a13f2f4562a703ca3184083fa7f6
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 3%
 
 ---
 
