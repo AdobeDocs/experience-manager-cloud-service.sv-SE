@@ -20,7 +20,7 @@ Du kan få meddelanden från olika AEM-områden, inklusive arbetsflöden och pro
 * Arbetsflöden:
    * Arbetsobjekt som representerar åtgärder som du behöver utföra på sidinnehåll
       * Detta är produkten av arbetsflödets **deltagarsteg** .
-   * Misslyckade objekt, för att tillåta administratörer att försöka igen
+   * Misslyckade objekt, så att administratörer kan försöka igen
 
 Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtgärder.
 
