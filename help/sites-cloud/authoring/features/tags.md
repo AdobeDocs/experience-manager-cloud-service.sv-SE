@@ -3,6 +3,9 @@ title: Använda taggar
 description: Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 6%
 
 ---
 
@@ -33,7 +36,7 @@ När du utformar innehållsstrukturen för en plats och metadatarammet för resu
 
 I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i fältet **Taggar/nyckelord** .
 
-Om du vill använda fördefinierade taggar använder du fältet **Taggar** och fönstret **Markera taggar** i fönstret **Sidegenskaper** . Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att det inte finns något `namespace-string:` prefix till taxonomin. <!-- To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the **Tags** field and the **Select Tags** window.-->
+Om du vill använda fördefinierade taggar använder du fältet **Taggar** och fönstret **Markera taggar** i fönstret **Sidegenskaper**. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att taxonomin inte har prefixet `namespace-string:`. <!-- To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the **Tags** field and the **Select Tags** window.-->
 
 ![Markera flera taggar](/help/sites-cloud/authoring/assets/tags-select.png)
 
