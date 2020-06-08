@@ -3,6 +3,9 @@ title: Hantera loggar - molntjänst
 description: Hantera loggar - molntjänst
 translation-type: tm+mt
 source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+workflow-type: tm+mt
+source-wordcount: '209'
+ht-degree: 11%
 
 ---
 
@@ -67,7 +70,7 @@ Environment Id Service    Name
 >[!Note]
 >Det går att hämta **loggfiler** både via användargränssnittet och API:t, men **loggspårning** är bara API/CLI.
 
-### Additional Resources {#resources}
+### Ytterligare resurser {#resources}
 
 Mer information om API:t för Cloud Manager och Adobe I/O CLI finns i följande extraresurser:
 
