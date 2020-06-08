@@ -3,11 +3,14 @@ title: Förhandsgranska sidor med ContextHub-data
 description: Verktygsfältet ContextHub visar data från ContextHub-butiker och gör att du kan ändra lagringsdata. Det är användbart för förhandsgranskning av innehåll
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 2%
 
 ---
 
 
-# Förhandsgranska sidor med ContextHub-data {#previewing-pages-using-contexthub-data}
+# Förhandsgranska sidor med ContextHub-data  {#previewing-pages-using-contexthub-data}
 
 Verktygsfältet ContextHub visar data från ContextHub-arkiv och gör att du kan ändra lagringsdata. Verktygsfältet ContextHub är användbart när du vill förhandsgranska innehåll som bestäms av data i ett ContextHub-lager.<!--The [ContextHub](/help/sites-developing/contexthub.md) toolbar displays data from ContextHub stores and enables you to change store data. The ContextHub toolbar is useful for previewing content that is determined by data in a ContextHub store.-->
 
@@ -34,7 +37,7 @@ Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verkt
 
 ## Funktioner i gränssnittsmodul {#ui-module-features}
 
-Varje gränssnittsmodul innehåller olika uppsättningar funktioner, men följande typer av funktioner är vanliga. Eftersom gränssnittsmodulerna kan utökas kan utvecklaren implementera andra funktioner efter behov.
+Varje gränssnittsmodul innehåller olika uppsättningar funktioner, men följande typer av funktioner är vanliga. Eftersom gränssnittsmoduler kan utökas kan utvecklaren implementera andra funktioner efter behov.
 
 ### Innehåll i verktygsfält {#toolbar-content}
 
