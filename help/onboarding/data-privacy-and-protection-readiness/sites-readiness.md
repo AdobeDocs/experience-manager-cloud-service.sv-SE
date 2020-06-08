@@ -3,6 +3,9 @@ title: Dataskydd och dataintegritet - Adobe Experience Manager som beredskap fö
 description: 'Lär dig mer om Adobe Experience Manager som stöd för molntjänster för de olika dataskydds- och datasekretessreglerna. inklusive EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentsekretesslag och hur man ska följa detta när man implementerar en ny AEM som ett molntjänstprojekt. '
 translation-type: tm+mt
 source-git-commit: 1130e8a07bc3826380483a7560ebda7e8a17e238
+workflow-type: tm+mt
+source-wordcount: '1036'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +30,7 @@ Mer information finns i [Adobes sekretesscenter](https://www.adobe.com/privacy.h
 >
 >Mer information finns i [Adobe Experience Manager som en molntjänstberedskap för dataskydd och](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md) sekretesspolicyer.
 
-## AEM Author Tier {#aem-author-tier}
+## AEM-redigeringsnivå {#aem-author-tier}
 
 Användarkonton och UGC-innehåll på författarservern beskrivs i [AEM Foundation-dokumentationen](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md).
 
