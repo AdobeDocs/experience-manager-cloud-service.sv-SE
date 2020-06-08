@@ -3,6 +3,9 @@ title: Arbeta med projektarbetsflöden
 description: Det finns en mängd olika projektarbetsflöden att välja mellan.
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '546'
+ht-degree: 12%
 
 ---
 
@@ -32,7 +35,7 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
 >[!NOTE]
 >
-> &amp;ast; Dessa arbetsflöden startas inte från **arbetsflödespanelen** i Projekt. Se Skapa språkkopior för resurser.
+>&amp;ast; Dessa arbetsflöden startas inte från **arbetsflödespanelen** i Projekt. Se Skapa språkkopior för resurser.
 <!--
 >&ast; These workflows are not started from the **Workflow** tile in Projects. See [Creating Language Copies for Assets.](/help/sites-administering/tc-manage.md)
 -->
@@ -53,7 +56,7 @@ I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projek
 
 Med det här arbetsflödet kan du begära ett manuskript från en användare och sedan godkänna det. Så här startar du arbetsflödet för begärandekopia:
 
-1. I ditt medieprojekt väljer du **+** -signeringen i rutan **Arbetsflöden** och väljer **Begär kopieringsarbetsflöde**.
+1. I medieprojektet väljer du plustecknet (**+**) i rutan **Arbetsflöden** och väljer **arbetsflödet Begär kopiering**.
 1. Ange en titel och en kort sammanfattning av vad du begär. Ange ett målordsantal, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
    ![Arbetsflödet Begär kopia](/help/sites-cloud/authoring/assets/projects-request-copy.png)
@@ -66,7 +69,7 @@ Med det här arbetsflödet kan du begära ett manuskript från en användare och
 
 I arbetsflödet för projektgodkännande tilldelar du innehåll till en användare, granskar och godkänner sedan innehållet.
 
-1. I det enkla projektet väljer du **`+`** signering i rutan **Arbetsflöden** och väljer **Projektgodkännandearbetsflöde**.
+1. In your Simple project, select the **`+`** sign in the **Workflows** tile and select **Project Approval Workflow**.
 1. Ange en titel och välj vem du vill tilldela den till i grupplistan. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
    ![Begär godkännande](/help/sites-cloud/authoring/assets/projects-approval.png)
@@ -79,12 +82,12 @@ I arbetsflödet för projektgodkännande tilldelar du innehåll till en använda
 
 Med det här arbetsflödet kan du begära att programmet startas.
 
-1. I ditt enkla projekt väljer du **+** -signeringen i rutan **Arbetsflöden** och väljer **Begär startarbetsflöde**.
+1. I det enkla projektet väljer du plustecknet (**+**) i rutan **Arbetsflöden** och väljer **arbetsflödet Begär start**.
 1. Ange en rubrik för startprogrammet och ange startkällans sökväg. Du kan också lägga till en beskrivning och ett live-datum, om du vill. Välj Ärv källsidans livedata eller exkludera undersidor beroende på hur du vill att startsidan ska fungera.
 
    ![Begär start](/help/sites-cloud/authoring/assets/projects-request-launch.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. **Arbetsflödet visas i listan** Arbetsflöden **(klicka på ovaler**..). på panelen **Arbetsflöden** för att komma åt den här listan).
+1. Klicka på **Skapa**. Arbetsflödet startar. Arbetsflödet visas i listan **Arbetsflöden** (klicka på ovaler **..).** på panelen **Arbetsflöden** för att komma åt den här listan).
 
 ## Skapa (och översätt) språkkopieringsarbetsflöde för resurser {#create-and-translate-language-copy-workflow-for-assets}
 
