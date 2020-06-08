@@ -4,6 +4,9 @@ description: Ordna era digitala resurser med hjälp av olika metoder i Adobe Exp
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+workflow-type: tm+mt
+source-wordcount: '447'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +26,9 @@ När du organiserar en samling resurser, till exempel alla *naturbilder* , kan d
 >Det går inte att dela en resursmapp (i Marketing Cloud) av den typen `sling:OrderedFolder`. Om du vill dela en mapp ska du inte välja Ordnad när du skapar en mapp.
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp.
-1. Klicka på **[!UICONTROL Skapa]** på menyn. Välj **[!UICONTROL Ny mapp]**.
-1. Ange ett mappnamn i fältet **[!UICONTROL Titel]** . Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
-1. Klicka på **[!UICONTROL Skapa]**. Mappen visas i mappen med digitala resurser.
+1. In the menu, click **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
+1. Ange ett mappnamn i **[!UICONTROL Title]** fältet. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
+1. Klicka på **[!UICONTROL Create]**. Mappen visas i mappen med digitala resurser.
 
 ## Lägga till CUG-egenskaper i mappar {#add-cug-properties-to-folders}
 
