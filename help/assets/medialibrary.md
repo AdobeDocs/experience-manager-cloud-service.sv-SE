@@ -4,6 +4,9 @@ description: Vanliga frågor och svar om AEM Assets och. AEM Media Library, inkl
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 82dd9bd69fe994f74c7be8a571e386f0e902f6a1
+workflow-type: tm+mt
+source-wordcount: '699'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +36,7 @@ Dessa funktioner kräver en giltig licens för AEM Assets.
 
 ## Finns AEM Assets som separat paket? {#is-aem-assets-available-as-a-separate-package}
 
-Nej. För att underlätta installation och driftsättning levereras alla AEM-program och tillägg i ett enda paket med alla funktioner inkluderade. Det innebär inte att du har behörighet att använda alla funktioner i paketet.
+Nej. För att underlätta installation och driftsättning levereras alla AEM-program och tillägg i ett enda paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
 
 ## Jag vill redigera metadata för digitala resurser. Behöver jag AEM Assets? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
 
@@ -67,7 +70,7 @@ I det här fallet behöver man inte köpa AEM Assets, inte ens mediebiblioteket 
 * Avancerade metadataegenskaper och hantering
 * Adobe Asset Link (anslut till Creative Cloud for enterprise)
 * AEM-skrivbordsapp
-* Bearbetar profiler
+* Bearbeta profiler
 * InDesign-serverintegration
 * Resursmallar och katalogproduktionsramverk
 * Länkade resurser för Adobe Photoshop, Illustrator och InDesign
@@ -77,7 +80,7 @@ I det här fallet behöver man inte köpa AEM Assets, inte ens mediebiblioteket 
 * Stöd för Camera RAW
 * Hantering och konfiguration av sökfaktorer
 * Färdiga DAM-arbetsflöden (till exempel fotografering)
-* Resursrapportering och analys:Resursinsikter
+* Resursrapportering och analys: Resursinsikter
 * 3D-resurshantering
 * Anslutna resurser
 * Varumärkesportal
