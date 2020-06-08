@@ -29,7 +29,7 @@ Följande exempelsidor finns i geometrixx:
 
 ### Konfigurerar Clientlib {#configuring-clientlib}
 
-AEM Resurskomponenter använder ett tillägg till WCM-klienten för redigering. Klientlibs läses vanligtvis in i `init.jsp`.
+AEM Resurskomponenter använder ett tillägg till klienten för WCM-redigering. Klientlibs läses vanligtvis in i `init.jsp`.
 
 Jämfört med standardinläsningen av klientlib (i kärnan `init.jsp`) måste en AEM Assets-mall ha följande:
 
