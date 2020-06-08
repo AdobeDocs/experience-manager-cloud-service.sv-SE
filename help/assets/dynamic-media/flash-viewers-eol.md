@@ -1,13 +1,16 @@
 ---
-title: Meddelande om att Flash-visningsprogrammet har upphört att gälla
+title: Meddelande om att Flash Viewer har upphört
 description: Från och med den 31 januari 2017 kommer Adobe Scene7 officiellt att ha stöd för Flash-visningsprogrammets plattform.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '70'
+ht-degree: 11%
 
 ---
 
 
-# Meddelande om att Flash-visningsprogrammet har upphört att gälla{#flash-viewers-end-of-life-notice}
+# Meddelande om att Flash Viewer har upphört{#flash-viewers-end-of-life-notice}
 
 *Från och med den 31 januari 2017 upphörde stödet för Flash-visningsprogrammets plattform officiellt i Adobe Dynamic Media Classic (Scene7).*
 
