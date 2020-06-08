@@ -4,6 +4,9 @@ description: Resurs-API:er gör det möjligt att använda grundläggande CRUD-å
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 27e72bbc0d852eb2c2eb059967c91e6108613965
+workflow-type: tm+mt
+source-wordcount: '1244'
+ht-degree: 1%
 
 ---
 
@@ -143,13 +146,13 @@ För Adobe Experience Manager som molntjänst stöds endast de nya överförings
 
 ## Resurshantering och efterbearbetning {#post-processing-workflows}
 
-I Experience Manager baseras resursbearbetningen på konfigurationen av **[!UICONTROL bearbetningsprofiler]** som använder [objektmikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
+I Experience Manager baseras resurshanteringen på **[!UICONTROL Processing Profiles]** konfiguration som använder [resursens mikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
 
 Använd standardarbetsflödena med tillägg med anpassade steg för konfiguration av efterbearbetning av arbetsflöde.
 
 ## Stöd för arbetsflödessteg i efterbearbetningsarbetsflödet {#post-processing-workflows-steps}
 
-Kunder som uppgraderar till Experience Manager som en molntjänst från tidigare versioner av Experience Manager kan använda resursmikrotjänster för bearbetning av resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] i den tidigare versionen stöds inte.
+Kunder som uppgraderar till Experience Manager som en molntjänst från tidigare versioner av Experience Manager kan använda resursmikrotjänster för bearbetning av resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i arbetsflödet i den tidigare versionen stöds inte [!UICONTROL DAM Update Asset] .
 
 Följande arbetsflödessteg stöds i Experience Manager som en molntjänst.
 
