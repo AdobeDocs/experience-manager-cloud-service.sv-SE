@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 description: En introduktion till Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 6f6038e6669d85230b38dc73cdddae164a01643b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 100%
 
