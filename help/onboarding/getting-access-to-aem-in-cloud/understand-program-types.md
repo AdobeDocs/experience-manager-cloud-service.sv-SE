@@ -3,6 +3,9 @@ title: Program- och programtyper
 description: Program- och programtyper - molntjänster
 translation-type: tm+mt
 source-git-commit: 14da491cf09ed46ea425a8d65670d8b851aef388
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 3%
 
 ---
 
