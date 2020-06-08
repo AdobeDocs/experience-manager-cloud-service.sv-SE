@@ -1,16 +1,16 @@
 ---
-title: Konfigurera OSGi för AEM som en molntjänst
+title: Konfigurera OSGI för AEM as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
 source-git-commit: 2ab998c7acedecbe0581afe869817a9a56ec5474
 workflow-type: tm+mt
 source-wordcount: '2689'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Configuring OSGi for AEM as a Cloud Service {#configuring-osgi-for-aem-as-a-cloud-service}
+# Konfigurera OSGI för AEM as a Cloud Service {#configuring-osgi-for-aem-as-a-cloud-service}
 
 [OSGi](https://www.osgi.org/) är en grundläggande del i teknikhögen i Adobe Experience Manager (AEM). Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
 
@@ -96,7 +96,7 @@ Det finns tre olika OSGi-konfigurationsvärden som kan användas med AEM som mol
 
 ## Så här väljer du lämplig OSGi-konfigurationsvärdetyp {#how-to-choose-the-appropriate-osgi-configuration-value-type}
 
-I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för specifika användningsområden där värdet skiljer sig mellan olika utvecklingsmiljöer.
+I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för särskilda ändamål där värdet skiljer sig mellan olika utvecklingsmiljöer.
 
 ![](assets/choose-configuration-value-type_res1.png)
 
@@ -112,7 +112,7 @@ Värden för infogade konfigurationer anses vara standardmetoden och bör använ
 * Värdena är implicit knutna till koddistributioner
 * De kräver inga ytterligare distributionsöverväganden eller samordning
 
-När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden, där du bara väljer hemliga eller miljöspecifika konfigurationer om det behövs för användningsfallet.
+När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden. Om det behövs för användningsfallet väljer du bara hemliga eller miljöspecifika konfigurationer.
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
