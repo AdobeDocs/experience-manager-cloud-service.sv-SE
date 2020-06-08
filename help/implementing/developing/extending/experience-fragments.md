@@ -1,13 +1,16 @@
 ---
-title: Upplevelsefragment
+title: Experience Fragments
 description: Utöka Adobe Experience Manager som en Cloud Service Experience Fragments.
 translation-type: tm+mt
 source-git-commit: 625e56efdab2f41026988fb90b72c31ff876db57
+workflow-type: tm+mt
+source-wordcount: '1660'
+ht-degree: 0%
 
 ---
 
 
-# Upplevelsefragment{#experience-fragments}
+# Experience Fragments{#experience-fragments}
 
 ## Grunderna {#the-basics}
 
@@ -31,9 +34,9 @@ Den rena HTML-återgivningen lägger till protokoll, värd och kontextsökväg t
 
 * av typen: `src`, `href`eller `action`
 
-* eller avsluta med: `-src`eller `-href`
+* eller avsluta med: `-src`, eller `-href`
 
-Exempel:
+Till exempel:
 
 `.../brooklyn-coat/master.plain.html`
 
@@ -209,7 +212,7 @@ Om du vill använda gränssnittet måste du först skapa ett paket som innehåll
 
 Den här tjänsten kommer att användas för att ansluta till Experience Fragment Export till Target för att få tillgång till de olika länkarna.
 
-Exempel, `ComponentService`:
+Till exempel, `ComponentService`:
 
 ```java
 import com.adobe.cq.xf.ExperienceFragmentLinkRewriterProvider;
@@ -254,7 +257,7 @@ Du måste ange för systemet om länkarna behöver skrivas om när du anropar Ex
 
 `shouldRewrite(ExperienceFragmentVariation experienceFragment);`
 
-Exempel:
+Till exempel:
 
 ```java
 @Override
