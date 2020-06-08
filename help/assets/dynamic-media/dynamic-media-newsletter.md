@@ -3,6 +3,9 @@ description: 'Dynamic Media Newsletter från Experience League är ett månatlig
 title: Dynamic Media Newsletter
 translation-type: tm+mt
 source-git-commit: 1ee8cd31a83850d0d6c90cb5452015a57ee728ef
+workflow-type: tm+mt
+source-wordcount: '1200'
+ht-degree: 0%
 
 ---
 
