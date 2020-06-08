@@ -1,13 +1,16 @@
 ---
-title: Felsökning av dynamiska media
-description: Felsökning av dynamiska media.
+title: Felsöka Dynamic Media
+description: Felsöka Dynamic Media.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '1157'
+ht-degree: 1%
 
 ---
 
 
-# Felsökning av dynamiska media {#troubleshooting-dynamic-media-scene-mode}
+# Felsöka Dynamic Media {#troubleshooting-dynamic-media-scene-mode}
 
 I följande dokument beskrivs felsökning för Dynamic Media.
 
