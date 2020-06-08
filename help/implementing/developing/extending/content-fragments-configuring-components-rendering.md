@@ -1,13 +1,16 @@
 ---
-title: Innehållsfragment Konfigurera komponenter för återgivning
-description: Innehållsfragment Konfigurera komponenter för återgivning
+title: Content Fragments – konfigurera komponenter för återgivning
+description: Content Fragments – konfigurera komponenter för återgivning
 translation-type: tm+mt
 source-git-commit: a5d6a072dfd8df887309f56ad4a61b6b38b32fa7
+workflow-type: tm+mt
+source-wordcount: '518'
+ht-degree: 5%
 
 ---
 
 
-# Innehållsfragment Konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
+# Content Fragments – konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
 
 Det finns flera [avancerade tjänster](#definition-of-advanced-services-that-need-configuration) som rör återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
 
