@@ -174,7 +174,7 @@ above appears to be internal, to confirm with Brian -->
 
 I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. I dessa scenarier kan Package Manager användas i AEM som molntjänstmiljöer.
 
-Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt) installeras endast det muterbara innehållet.
+Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt innehåll) installeras endast det muterbara innehållet.
 
 Alla innehållspaket som installeras via Cloud Manager (både ändringsbart och oföränderligt) visas i ett låst läge i användargränssnittet för AEM Package Manager. Dessa paket kan inte installeras om, byggas om eller laddas ned, och visas med suffixet **&quot;cp2fm&quot;** , vilket anger att installationen hanterades av Cloud Manager.
 
