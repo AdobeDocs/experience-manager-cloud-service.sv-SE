@@ -1,13 +1,16 @@
 ---
-title: Komma igång med utveckling av AEM-webbplatser - WKND-självstudiekurs
+title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
 description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är nybörjare på AEM hur man implementerar en webbplats i AEM med hjälp av de senaste standarderna och teknologierna.
 translation-type: tm+mt
 source-git-commit: cedc14b0d71431988238d6cb4256936a5ceb759b
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 10%
 
 ---
 
 
-# Komma igång med utveckling av AEM-webbplatser - WKND-självstudiekurs{#getting-started-developing-aem-sites-wknd-tutorial}
+# Komma igång med utveckling i AEM Sites – WKND-självstudiekurs{#getting-started-developing-aem-sites-wknd-tutorial}
 
 ## Översikt {#overview}
 
@@ -21,7 +24,7 @@ Målet med den här självstudiekursen är att lära en utvecklare som är nybö
 
 [WKND Developer Tutorial finns här](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM-projekt med hjälp av den senaste tekniken och de bästa metoderna.
 
-## Kärnbegrepp {#core-concepts}
+## Viktiga begrepp {#core-concepts}
 
 Implementeringen av självstudiekurserna utnyttjar många kraftfulla funktioner i AEM. Webbplatsen kommer att implementeras med:
 
