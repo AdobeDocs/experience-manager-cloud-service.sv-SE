@@ -3,6 +3,9 @@ title: Hantera projekt
 description: Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet som du kan komma åt och hantera i projektkonsolen
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '919'
+ht-degree: 11%
 
 ---
 
@@ -26,9 +29,9 @@ När du skapar ett projekt innehåller AEM följande mallar som du kan välja me
 * Fotoprojekt för produkt
 * Översättningsprojekt
 
-Du skapar ett projekt på samma sätt, från projekt till projekt. Skillnaden mellan projekttyperna inkluderar tillgängliga [användarroller](/help/sites-cloud/authoring/projects/overview.md) och [arbetsflöden](/help/sites-cloud/authoring/projects/workflows.md).  Så här skapar du ett nytt projekt:
+Du skapar ett projekt på samma sätt med alla projekt. Projekttyperna skiljer sig åt bland annat vad gäller tillgängliga [användarroller](/help/sites-cloud/authoring/projects/overview.md) och [arbetsflöden](/help/sites-cloud/authoring/projects/workflows.md).  Så här skapar du ett nytt projekt:
 
-1. I **Projekt**: tryck/klicka på **Skapa** för att öppna guiden **Skapa projekt** :
+1. I **Projekt** trycker/klickar du på **Skapa** för att öppna guiden **Skapa projekt**:
 1. Välj en mall och klicka på **Nästa**.
 
    ![Skapa ett projekt](/help/sites-cloud/authoring/assets/projects-create.png)
@@ -72,7 +75,7 @@ Samma metod används för att ta bort ett projekt från konsolen eller en länka
 
 >[!NOTE]
 >
->När du skapar projektet och lägger till användare till de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors**, **Myproject Observers**. Om projektet däremot tas bort tas de grupperna inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
+>När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**. Om projektet tas bort tas de grupperna dock inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Säkerhet** > **Grupper**.
 
 ### Lägga till objekt i en platta {#adding-items-to-a-tile}
 
