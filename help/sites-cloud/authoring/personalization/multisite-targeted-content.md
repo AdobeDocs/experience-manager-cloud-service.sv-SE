@@ -3,6 +3,9 @@ title: Arbeta med riktat innehåll på flera webbplatser
 description: Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM:s inbyggda stöd för flera webbplatser för riktat innehåll
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '2900'
+ht-degree: 5%
 
 ---
 
@@ -61,13 +64,13 @@ Målinriktat innehåll kapslas in i så kallade områden, som definierar omfång
 
 Med stöd för flera webbplatser för riktat innehåll kan du till exempel ha två (eller fler) webbplatser med **ett** varumärke som har något av följande:
 
-* En helt *distinkt* uppsättning målinnehåll - redigering av målinnehåll i det ena påverkar inte det andra. Webbplatser som länkar till olika områden läser och skriver till sina egna konfigurerade områden. Exempel:
+* En helt *distinkt* uppsättning målinnehåll - redigering av målinnehåll i det ena påverkar inte det andra. Webbplatser som länkar till olika områden läser och skriver till sina egna konfigurerade områden. Till exempel:
    * Plats A-länkar till område X
    * Plats B-länkar till område Y
-* En *gemensam* uppsättning målinriktat innehåll - redigering i ett har en direkt effekt på båda webbplatserna. Du kan konfigurera detta genom att låta två platser referera till samma område. Webbplatser som länkar till samma område delar målinnehållet i det här området. Exempel:
+* En *gemensam* uppsättning målinriktat innehåll - redigering i ett har en direkt effekt på båda webbplatserna. Du kan konfigurera detta genom att låta två platser referera till samma område. Webbplatser som länkar till samma område delar målinnehållet i det här området. Till exempel:
    * Plats A-länkar till område X
    * Plats B-länkar till område X
-* En distinkt uppsättning målinriktat innehåll som *ärvs* från en annan webbplats via MSM - innehållet kan introduceras individuellt från masterversion till live-kopia. Exempel:
+* En distinkt uppsättning målinriktat innehåll som *ärvs* från en annan webbplats via MSM - innehållet kan introduceras individuellt från masterversion till live-kopia. Till exempel:
    * Plats A-länkar till område X
    * Site B-länkar till Area Y (som är en live-kopia av Area X)
 
@@ -147,11 +150,11 @@ Områden kan omfatta aktiviteter och erbjudanden. När du har skapat ett område
 
 >[!NOTE]
 >
->Standardområdet som kallas mallområde komprimeras som standard när du trycker eller klickar på namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke i konsolen **Aktivitet** eller **Erbjudanden** visas **Area** -konsolen.
+>Standardområdet som kallas masterområde komprimeras som standard när du trycker eller klickar på namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke på konsolen **Aktivitet** eller **Erbjudanden** visas konsolen **Område**.
 
 Så här skapar du ett nytt område:
 
-1. Navigera till **Personalisering** > **Verksamheter** eller **Erbjudanden** eller till ert varumärke.
+1. Navigera till **Personalisering** > **Aktiviteter** eller **Erbjudanden** och sedan till ert varumärke.
 1. Tryck eller klicka på **Skapa område**.
 
    ![Skapa område](/help/sites-cloud/authoring/assets/multisite-create-area.png)
@@ -170,7 +173,7 @@ Du skapar ett område som en live-kopia för att ärva målinnehållet i olika w
 
 Så här skapar du ett område som en livecopy:
 
-1. Navigera till **Personalisering** > **Verksamheter** eller **Erbjudanden** och sedan till ert varumärke.
+1. Navigera till **Personalisering** > **Aktiviteter** eller **Erbjudanden** och sedan till ert varumärke.
 1. Tryck eller klicka på **Skapa område som Live-kopia**.
 
    ![Skapa område som live-kopia](/help/sites-cloud/authoring/assets/multisite-area-as-livecopy.png)
@@ -179,7 +182,7 @@ Så här skapar du ett område som en livecopy:
 
    ![Skapa live copy](/help/sites-cloud/authoring/assets/multisite-livecopy.png)
 
-1. I fältet **Namn** anger du ett namn för live-kopian. Som standard inkluderas undersidor. exkludera dem genom att markera kryssrutan **Uteslut undersidor** .
+1. I fältet **Namn** anger du ett namn för live-kopian. Som standard inkluderas undersidor. Exkludera dem genom att markera kryssrutan **Uteslut undersidor**.
 
    ![Skapa live copy](/help/sites-cloud/authoring/assets/multisite-create-livecopy.png)
 
@@ -249,7 +252,7 @@ Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en
 1. Gör något av följande om du vill göra uppehåll i en aktivitet:
 
    1. Välj ett element i aktiviteten, till exempel målgruppen. AEM visar automatiskt en bekräftelseruta för att pausa Live Copy. (Du kan göra uppehåll i live-kopieringen genom att trycka eller klicka på ett element under målprocessen.)
-   1. Välj **Gör uppehåll i Live Copy** i listrutan i verktygsfältet.
+   1. Select **Suspend Live Copy** from the drop-down menu in the toolbar.
    ![Skjut upp live-kopia](/help/sites-cloud/authoring/assets/multisite-suspend-livecopy.png)
 
 1. Tryck eller klicka på **Gör uppehåll** för att pausa aktiviteten. Avbrutna aktiviteter markeras med rött.
@@ -262,7 +265,7 @@ Så här bryter du arv av riktat innehåll i en aktivitet:
 
 1. Navigera till sidan där du vill koppla loss den aktiva kopian från mallen och tryck eller klicka på **Mål** i listrutan Läge.
 1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Tryck eller klicka på **Start Targeting**.
-1. Välj **Frigör Live-kopia** i listrutan i verktygsfältet. AEM bekräftar att du vill frigöra live-kopian.
+1. Välj **Koppla loss live-kopia** i listrutan i verktygsfältet. AEM bekräftar att du vill koppla loss live-kopian.
 1. Tryck eller klicka på **Koppla loss** för att koppla loss live-kopian från aktiviteten. När den har kopplats loss visas inte längre listrutan för arv. Aktiviteten är nu en lokal aktivitet.
 
    ![Lokal aktivitet](/help/sites-cloud/authoring/assets/multisite-winter.png)
@@ -287,6 +290,6 @@ När du tar bort ett område tar du bort alla aktiviteter i det området. AEM va
 
 Så här tar du bort ett område:
 
-1. Navigera till **Personalisering** > **Verksamheter** eller **Erbjudanden** och sedan till ert varumärke.
+1. Navigate to **Personalization** > **Activities** or **Offers** and then your brand.
 1. Tryck eller klicka på ikonen bredvid det område du vill ta bort.
 1. Tryck eller klicka på **Ta bort** och bekräfta att du vill ta bort området.
