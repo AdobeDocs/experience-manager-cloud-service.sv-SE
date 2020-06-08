@@ -3,6 +3,9 @@ title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 translation-type: tm+mt
 source-git-commit: 0d83e1d956d65fe27b1cf7bce758fc7fa8adf6b2
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 2%
 
 ---
 
