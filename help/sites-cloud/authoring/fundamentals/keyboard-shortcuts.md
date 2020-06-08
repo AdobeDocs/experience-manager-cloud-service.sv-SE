@@ -3,6 +3,9 @@ title: Kortkommandon för sidredigering
 description: Det finns olika kortkommandon i hela AEM, bland annat för sidredigering
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 2%
 
 ---
 
