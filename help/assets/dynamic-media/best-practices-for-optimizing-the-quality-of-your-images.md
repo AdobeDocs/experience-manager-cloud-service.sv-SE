@@ -1,13 +1,16 @@
 ---
-title: Bästa tillvägagångssätt för att optimera bildkvaliteten
+title: Bästa tillvägagångssätt för att optimera bildkvalitet
 description: Lär dig de bästa sätten att optimera bildkvaliteten i Dynamic Media
 translation-type: tm+mt
 source-git-commit: 21b2541b6a3c5011b6eca7edf85299291c361147
+workflow-type: tm+mt
+source-wordcount: '1476'
+ht-degree: 5%
 
 ---
 
 
-# Bästa tillvägagångssätt för att optimera bildkvaliteten {#best-practices-for-optimizing-the-quality-of-your-images}
+# Bästa tillvägagångssätt för att optimera bildkvalitet {#best-practices-for-optimizing-the-quality-of-your-images}
 
 Att optimera bildkvaliteten kan vara en tidskrävande process eftersom många faktorer bidrar till att återge godtagbara resultat. Resultatet är delvis subjektivt eftersom individer upplever olika bildkvalitet. Strukturerade experiment är avgörande.
 
@@ -50,14 +53,14 @@ Det finns två metoder för bildskärpa:
 
    * `&op_sharpen=`belopp,radie,tröskelvärde
 
-      * **[!UICONTROL mängd]** (0-5, effektens styrka).
-      * **[!UICONTROL radie]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt det skarpa objektet, mätt i pixlar.)
+      * **[!UICONTROL amount]** (0-5, effektens styrka.)
+      * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
 
          Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
 
-      * **[!UICONTROL tröskelvärde]** (0-255, effektkänslighet).
+      * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
 
-         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Parametern **[!UICONTROL threshold]** undviker du för mycket skärpa i områden med liknande färger, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till&quot;brus&quot;, medan kantkontrasten läggs till i områden med hög kontrast, till exempel där ögonfransarna möter huden.
+         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. The **[!UICONTROL threshold]** parameter helps to avoid over-sharpening areas with similar colors, such as skin tones. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
       Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
 
       AEM Help topic on Sharpening an image.
@@ -69,10 +72,10 @@ Det finns två metoder för bildskärpa:
 
 Det bästa sättet är att börja med parametern oskarp maskradie. Radie-inställningar som du kan börja med är följande:
 
-* **[!UICONTROL Webbplats]**: 0,2-0,3 pixlar
-* **[!UICONTROL Fotografisk utskrift (250-300 ppi)]**: 0,3-0,5 pixlar
-* **[!UICONTROL Offsettryck (266-300 ppi)]**: 0,7-1,0 pixlar
-* **[!UICONTROL Arbetsyteutskrift (150 ppi)]**: 1,5-2,0 pixlar
+* **[!UICONTROL Website]**: 0,2-0,3 pixlar
+* **[!UICONTROL Photographic printing (250-300 ppi)]**: 0,3-0,5 pixlar
+* **[!UICONTROL Offset printing (266-300 ppi)]**: 0,7-1,0 pixlar
+* **[!UICONTROL Canvas printing (150 ppi)]**: 1,5-2,0 pixlar
 
 Öka mängden gradvis från 1,75 till 4. Om skärpan fortfarande inte är som du vill ha den ökar du radien med ett decimalkomma och kör mängden igen från 1,75 till 4. Upprepa vid behov.
 
