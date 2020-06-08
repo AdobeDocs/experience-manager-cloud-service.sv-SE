@@ -3,6 +3,9 @@ title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
 translation-type: tm+mt
 source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
+workflow-type: tm+mt
+source-wordcount: '714'
+ht-degree: 1%
 
 ---
 
@@ -42,7 +45,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
    Om du vill hitta dina domäner [loggar du in på din instans av Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto.
 
-   Klicka på **[!UICONTROL Inställningar > Programinställningar > Allmänna inställningar]**. Leta efter fältet **Publicerat servernamn**. Om du för närvarande använder en allmän Scene7-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+   Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **Publicerat servernamn**. Om du för närvarande använder en allmän Scene7-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media Classic-konto? {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
@@ -54,14 +57,14 @@ Du måste initiera en begäran från Adobe Technical Support (`s7support@adobe.c
    * Alla domäner som ska överföras till HTTP2. Det vill säga, `images.company.com` eller `mycompany.scene7.com`.
    Om du vill hitta dina domäner [loggar du in på din instans av Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto.
 
-   Klicka på **[!UICONTROL Inställningar > Programinställningar > Allmänna inställningar]**. Leta efter fältet **[!UICONTROL Publicerat servernamn]**.
+   Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet som är märkt **[!UICONTROL Published Server Name]**.
 
    * Verifiera att du använder säkra HTTPS för multimedieförfrågningar.
    * Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
    * Kontrollera att du använder en dedikerad domän. Det vill säga `images.company.com` eller `mycompany.scene7.com`inte en allmän Scene7-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
    Om du vill hitta dina domäner [loggar du in på din instans av Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto.
 
-   Klicka på **[!UICONTROL Inställningar > Programinställningar > Allmänna inställningar]**. Leta efter fältet **[!UICONTROL Publicerat servernamn]**. Om du för närvarande använder en allmän Scene7-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+   Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet som är märkt **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Scene7-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
    1. Teknisk support lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
    1. När Adobe är redo att hantera din förfrågan kontaktar supporten dig för att koordinera övergången och ange ett måldatum.
@@ -85,4 +88,4 @@ Det icke-cachelagrade innehållet träffar direkt på Adobes originalservrar til
 
 ## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-Du måste ladda ned en extern version för att kunna använda den i webbläsaren. För Firefox och Chrome finns ett tillägg som kallas **[!UICONTROL HTTP/2 och SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges detta av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
+Du måste ladda ned en extern version för att kunna använda den i webbläsaren. För Firefox och Chrome finns ett tillägg som kallas **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges detta av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
