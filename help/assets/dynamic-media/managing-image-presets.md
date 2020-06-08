@@ -3,6 +3,9 @@ title: Hantera bildförinställningar
 description: Lär dig förinställningar för bilder och hur du skapar, ändrar och hanterar förinställningar för bilder
 translation-type: tm+mt
 source-git-commit: 82dd9bd69fe994f74c7be8a571e386f0e902f6a1
+workflow-type: tm+mt
+source-wordcount: '3529'
+ht-degree: 10%
 
 ---
 
@@ -33,7 +36,7 @@ Administratörer kan skapa bildförinställningar. Om du vill skapa en bildföri
 
 ## Hantera bildförinställningar {#managing-image-presets-1}
 
-Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycka eller klicka på verktygsikonen och navigera till **[!UICONTROL Resurser > Bildförinställningar]**.
+Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycka eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets]**.
 
 ![6_5_tools-assets-imageppresets](assets/6_5_tools-assets-imagepresets.png)
 
@@ -47,7 +50,7 @@ Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka 
 
 >[!NOTE]
 >
->Systemet visar en mängd olika återgivningar när du väljer **[!UICONTROL Återgivningar]** i en tillgångs detaljvy. Du kan öka eller minska antalet bildförinställningar som visas. Se [Öka antalet bildförinställningar som visas](#increasing-or-decreasing-the-number-of-image-presets-that-display).
+>Systemet visar en mängd olika återgivningar när du väljer **[!UICONTROL Renditions]** i en tillgångs detaljvy. Du kan öka eller minska antalet bildförinställningar som visas. See [Increasing the number of image presets that display](#increasing-or-decreasing-the-number-of-image-presets-that-display).
 
 ### Filformaten Adobe Illustrator (AI), Postscript (EPS) och PDF {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
@@ -58,11 +61,11 @@ Filformatet i Adobe Illustrator är en variant av PDF. De största skillnaderna 
 * Adobe Illustrator-dokument består av en sida med flera lager. Varje lager extraheras som en PNG-underresurs under Illustrator-huvudresursen.
 * PDF-dokument består av en eller flera sidor. Varje sida extraheras som en enda PDF-delresurs under det huvudsakliga flersidiga PDF-dokumentet.
 
-Delresurserna skapas av `Create Sub Asset process` komponenten i det övergripande `DAM Update Asset` arbetsflödet. Om du vill visa den här processkomponenten i arbetsflödet trycker du på **[!UICONTROL Verktyg > Arbetsflöde > Modeller > DAM-uppdateringsresurs > Redigera]**.
+Delresurserna skapas av `Create Sub Asset process` komponenten i det övergripande `DAM Update Asset` arbetsflödet. Tryck på **[!UICONTROL Tools > Workflow > Models > DAM Update Asset > Edit]** om du vill se den här processkomponenten i arbetsflödet.
 
 <!-- See also [Viewing pages of a multi-page file](/help/assets/manage-linked-subassets.md#view-pages-of-a-multi-page-file). -->
 
-Du kan visa delresurserna eller sidorna när du öppnar resursen, trycka på menyn Innehåll och välja **[!UICONTROL Delresurser]** eller **[!UICONTROL Sidor]**. Undertillgångarna är verkliga tillgångar. Det vill säga, PDF-sidor extraheras av `Create Sub Asset` arbetsflödeskomponenten. De lagras sedan som `page1.pdf`, `page2.pdf`och så vidare nedanför huvudresursen. När de har lagrats bearbetas de av arbetsflödet `DAM Update Asset` .
+Du kan visa underresurserna eller sidorna när du öppnar resursen, trycka på menyn Innehåll och välja **[!UICONTROL Subassets]** eller **[!UICONTROL Pages]**. Undertillgångarna är verkliga tillgångar. Det vill säga, PDF-sidor extraheras av `Create Sub Asset` arbetsflödeskomponenten. De lagras sedan som `page1.pdf`, `page2.pdf`och så vidare nedanför huvudresursen. När de har lagrats bearbetas de av arbetsflödet `DAM Update Asset` .
 
 Om du vill använda Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-, EPS- eller PDF-filer måste du utföra följande steg:
 
@@ -72,7 +75,7 @@ Om du vill använda Dynamic Media för att förhandsgranska och generera dynamis
 
 >[!NOTE]
 >
->I arbetsflödet för DAM-uppdatering av resurser genererar steget **[!UICONTROL EPS-miniatyrbilder]** miniatyrbilder för EPS-filer.
+>I arbetsflödet för DAM-uppdatering av resurser genererar steget **[!UICONTROL EPS thumbnails]** miniatyrer för EPS-filer.
 
 #### Metadataegenskaper för PDF/AI/EPS-resurs {#pdf-ai-eps-asset-metadata-properties}
 
@@ -83,9 +86,9 @@ Om du vill använda Dynamic Media för att förhandsgranska och generera dynamis
 
 Du kommer åt alternativen för `Rasterize PDF/AI Image Preview Rendition` processkomponenter via `DAM Update Asset` arbetsflödet.
 
-Tryck på Adobe Experience Manager i det övre vänstra hörnet och gå till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**. På sidan Arbetsflödesmodeller väljer du **[!UICONTROL DAM-uppdateringsresurs]** och sedan **[!UICONTROL Redigera]** i verktygsfältet. Dubbeltryck på processkomponenten på arbetsflödessidan för DAM-uppdatering av resurser för att öppna dialogrutan Stegegenskaper för den `Rasterize PDF/AI Image Preview Rendition` .
+Tryck på Adobe Experience Manager i det övre vänstra hörnet och navigera till **[!UICONTROL Tools > Workflow > Models]**. På sidan Arbetsflödesmodeller väljer du **[!UICONTROL DAM Update Asset]** och sedan trycker du på i verktygsfältet **[!UICONTROL Edit]**. Dubbeltryck på processkomponenten på arbetsflödessidan för DAM-uppdatering av resurser för att öppna dialogrutan Stegegenskaper för den `Rasterize PDF/AI Image Preview Rendition` .
 
-#### Rastrera renderingsalternativen PDF/AI-förhandsvisning {#rasterize-pdf-ai-image-preview-rendition-options}
+#### Rastrera alternativ för PDF/AI-förhandsvisning av återgivning {#rasterize-pdf-ai-image-preview-rendition-options}
 
 ![Argument för att rastrera PDF- eller AI-arbetsflödet](assets/rasterize_pdf_ai_image_preview.png)
 
@@ -170,40 +173,40 @@ Följande skript används av integreringen med Dynamic Media:
 
 ### Konfigurera miniatyrstorlek för bild {#configuring-image-thumbnail-size}
 
-Du kan konfigurera storleken på miniatyrbilder genom att konfigurera de inställningarna i arbetsflödet för **[!UICONTROL DAM-uppdatering]** . I arbetsflödet finns två steg där du kan konfigurera miniatyrstorlek för bildresurser. Även om ett (**[!UICONTROL Dynamic Media Process Image Assets]**) används för dynamiska bildresurser och det andra (**[!UICONTROL Process Thumbnails]**) för statisk miniatyrbildsgenerering eller när alla andra processer inte kan generera miniatyrbilder, bör *båda* ha samma inställningar.
+Du kan konfigurera storleken på miniatyrbilder genom att konfigurera inställningarna i **[!UICONTROL DAM Update Asset]** arbetsflödet. I arbetsflödet finns två steg där du kan konfigurera miniatyrstorlek för bildresurser. Även om det ena (**[!UICONTROL Dynamic Media Process Image Assets]**) används för dynamiska bildresurser och det andra (**[!UICONTROL Process Thumbnails]**) för att generera statiska miniatyrbilder eller när alla andra processer inte kan generera miniatyrbilder, bör *båda* ha samma inställningar.
 
-Med steget **[!UICONTROL Dynamic Media Process Image Assets]** (Dynamiska medieprocessbildresurser) genereras miniatyrbilder av bildservern och den här konfigurationen är oberoende av den konfiguration som används i steget **[!UICONTROL Bearbeta miniatyrbilder]** . Det långsammaste och mest minneskrävande sättet att skapa miniatyrbilder är att skapa miniatyrbilder genom steget **[!UICONTROL Bearbeta miniatyrbilder]** .
+I steget **[!UICONTROL Dynamic Media Process Image Assets]** genereras miniatyrbilder av bildservern och den här konfigurationen är oberoende av den konfiguration som används i steget **[!UICONTROL Process Thumbnails]**. Att skapa miniatyrbilder med steget **[!UICONTROL Process Thumbnails]** är det långsammaste och mest minneskrävande sättet att skapa miniatyrbilder.
 
 Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTROL width:height:center]**, till exempel *80:80:false*. Bredden och höjden avgör miniatyrbildens storlek i pixlar. värdet center är antingen false eller true och om värdet är true betyder det att miniatyrbilden har exakt den storlek som anges i konfigurationen. Om den storleksändrade bilden är mindre centreras den i miniatyrbilden.
 
 >[!NOTE]
 >
->* Miniatyrbildsstorleken för EPS-filer konfigureras i steget **[!UICONTROL EPS-miniatyrer]** på fliken **[!UICONTROL Argument]** under Miniatyrer.
+>* Miniatyrbildsstorleken för EPS-filer konfigureras i steget **[!UICONTROL EPS thumbnails]** på fliken **[!UICONTROL Arguments]** under Miniatyrbilder.
    >
    >
-* Miniatyrbildsstorleken för videoklipp konfigureras i **[!UICONTROL steget för miniatyrbilder]** i Flash på fliken **[!UICONTROL Process]** under **[!UICONTROL Argument]**.
+* Miniatyrbildsstorleken för videoklipp konfigureras i steget **[!UICONTROL FFmpeg thumbnails]** på fliken **[!UICONTROL Process]** under **[!UICONTROL Arguments]**.
 >
 
 
 
 **Så här konfigurerar du miniatyrbildens storlek**
 
-1. Tryck på **[!UICONTROL Verktyg > Arbetsflöde > Modeller > DAM-uppdateringsresurs > Redigera]**.
-1. Tryck på steget **[!UICONTROL Dynamic Media Process Image Assets]** och tryck på fliken **[!UICONTROL Miniatyrbilder]** . Ändra miniatyrstorleken efter behov och tryck sedan på **[!UICONTROL OK]**.
+1. Tryck på **[!UICONTROL Tools > Workflow > Models > DAM Update Asset > Edit]**.
+1. Tap the **[!UICONTROL Dynamic Media Process Image Assets]** step and tap the **[!UICONTROL Thumbnails]** tab. Ändra miniatyrstorleken efter behov och tryck sedan på **[!UICONTROL OK]**.
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. Tryck på steget **[!UICONTROL Bearbeta miniatyrer]** och tryck sedan på fliken **[!UICONTROL Miniatyrer]** . Ändra miniatyrstorleken efter behov och tryck sedan på **[!UICONTROL OK]**.
+1. Tryck på steget **[!UICONTROL Process Thumbnails]** och sedan på fliken **[!UICONTROL Thumbnails]**. Ändra miniatyrstorleken efter behov och tryck sedan på **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
-   >Värdena i argumentet för miniatyrbilder i steget **[!UICONTROL Bearbeta miniatyrbilder]** måste matcha argumentet för miniatyrbilder i steget **[!UICONTROL Dynamic Media Process Image Assets]** .
+   >Värdena i thumbnails-argumentet i steget **[!UICONTROL Process Thumbnails]** måste matcha thumbnails-argumentet i steget **[!UICONTROL Dynamic Media Process Image Assets]**.
 
-1. Tryck på **[!UICONTROL Spara]** för att spara ändringarna i arbetsflödet.
+1. Tryck **[!UICONTROL Save]** för att spara ändringarna i arbetsflödet.
 
 ### Öka eller minska antalet bildförinställningar som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
-De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. AEM visar en mängd olika dynamiska återgivningar när du visar resurser från **[!UICONTROL detaljvyn > Återgivningar]**. Du kan öka eller minska gränsen för de återgivningar som visas.
+De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. AEM visar en mängd olika dynamiska återgivningar när du visar resurser från **[!UICONTROL Detail View > Renditions]**. Du kan öka eller minska gränsen för de återgivningar som visas.
 
 **Öka eller minska antalet bildförinställningar som visas**
 
@@ -212,13 +215,13 @@ De bildförinställningar du skapar är tillgängliga som dynamiska återgivning
 
    ![ökning_minskningEnumberofimagepresetsthatdisplay](assets/increase_decreasethenumberofimagepresetsthatdisplay.png)
 
-1. I **[!UICONTROL limit]** -egenskapen ändrar du **[!UICONTROL Value]**, som är inställt på 15 som standard, till önskat tal.
+1. I egenskapen **[!UICONTROL limit]** ändrar du **[!UICONTROL Value]**, som är inställt på 15 som standard, till önskat tal.
 1. Navigera till bildförinställningens datakälla på `/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist/datasource`
 
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. I egenskapen limit ändrar du talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. Tryck på **[!UICONTROL Spara alla]**.
+1. Tryck på **[!UICONTROL Save All]**.
 
 ### Skapa en bildförinställning {#creating-image-presets}
 
@@ -236,30 +239,30 @@ Se [Filformat](#indesign-indd-file-format)för InDesign (INDD).
 
 **Skapa en bildförinställning**
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Verktyg > Resurser > Bildförinställningar]**.
-1. Klicka på **[!UICONTROL Skapa]**. Fönstret **[!UICONTROL Redigera bildförinställning]** öppnas.
+1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Tools > Assets > Image Presets]**.
+1. Klicka på **[!UICONTROL Create]**. Fönstret **[!UICONTROL Edit Image Preset]** öppnas.
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
 
    >[!NOTE]
    >
-   >Om du vill göra den här bildförinställningen responsiv raderar du värdena i fälten **[!UICONTROL för bredd]** och **[!UICONTROL höjd]** och lämnar dem tomma.
+   >Om du vill att den här bildförinställningen ska vara responsiv raderar du värdena i fälten **[!UICONTROL width]** och **[!UICONTROL height]** och lämnar dem tomma.
 
-1. Ange värden på flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** , inklusive ett namn. Alternativen beskrivs i Alternativ för [bildförinställningar](#image-preset-options). Förinställningar visas i den vänstra rutan och kan användas direkt tillsammans med andra resurser.
+1. Ange önskade värden på flikarna **[!UICONTROL Basic]** och **[!UICONTROL Advanced]**, inklusive ett namn. Alternativen beskrivs i [Alternativ för bildförinställningar](#image-preset-options). Förinställningarna visas i den vänstra rutan och kan användas direkt tillsammans med andra resurser.
 
    ![6_5_imagepreset-edit](assets/6_5_imagepreset-edit.png)
 
 1. Klicka på **[!UICONTROL Save**.
 
-### Skapa en responsiv bildförinställning {#creating-a-responsive-image-preset}
+### Creating a responsive Image Preset {#creating-a-responsive-image-preset}
 
-Om du vill skapa en responsiv bildförinställning utför du stegen i [Skapa bildförinställningar](#creating-image-presets). När du anger höjd och bredd i fönstret **[!UICONTROL Redigera bildförinställning]** raderar du värdena och låter dem vara tomma.
+Om du vill skapa en responsiv bildförinställning utför du stegen i [Skapa bildförinställningar](#creating-image-presets). När du anger höjd och bredd i **[!UICONTROL Edit Image Preset]** fönstret raderar du värdena och låter dem vara tomma.
 
 Om du lämnar dem tomma visas information om att den här bildförinställningen är responsiv. Du kan justera de andra värdena efter behov.
 
 >[!NOTE]
 >
->Om du vill visa knapparna **[!UICONTROL URL]** och **[!UICONTROL RESS]** när du använder en bildförinställning för en resurs måste resursen publiceras.
+>Om du vill visa knapparna **[!UICONTROL URL]** och **[!UICONTROL RESS]** när du använder en bildförinställning på en resurs måste resursen publiceras.
 >
 >![chlimage_1-79](assets/chlimage_1-498.png)
 >
@@ -269,11 +272,11 @@ Om du lämnar dem tomma visas information om att den här bildförinställningen
 
 När du skapar eller redigerar bildförinställningar finns alternativen som beskrivs i det här avsnittet. Dessutom rekommenderar Adobe att du börjar med följande alternativ:
 
-* **[!UICONTROL-format** (**[!UICONTROL fliken Grundläggande]** ) - Välj **[!UICONTROL JPEG]** eller något annat format som uppfyller dina krav. Alla webbläsare stöder JPEG-bildformatet. den ger en bra balans mellan små filstorlekar och bildkvalitet. I JPEG-formatbilder används dock ett förlustkomprimeringsschema som kan ge upphov till oönskade bildartefakter om komprimeringsinställningen är för låg. Därför rekommenderar Adobe att du ställer in komprimeringskvaliteten på 75. Den här inställningen ger en bra balans mellan bildkvalitet och liten filstorlek.
+* **[!UICONTROL Format]** (fliken **[!UICONTROL Basic]**) – Välj **[!UICONTROL JPEG]** eller ett annat format som uppfyller kraven. Alla webbläsare har stöd för JPEG-bildformatet. Det ger en bra balans mellan små filstorlekar och bildkvalitet. I bilder med JPEG-format används dock förstörande komprimering, som kan ge upphov till oönskade bildartefakter om komprimeringsinställningen är för låg. Därför rekommenderar Adobe att du ställer in komprimeringskvaliteten på 75. Den här inställningen ger en bra balans mellan bildkvalitet och liten filstorlek.
 
-* **[!UICONTROL Aktivera enkel skärpa]** - Markera inte **[!UICONTROL Aktivera enkel skärpa]** (det här skärpefiltret ger mindre kontroll än inställningarna för Oskarp mask).
+* **[!UICONTROL Enable Simple Sharpening]** – Markera inte **[!UICONTROL Enable Simple Sharpening]** (det här skärpefiltret ger mindre kontroll än inställningarna för Oskarp mask).
 
-* **[!UICONTROL Skärpa: Omsamplingsläge]** - Välj **[!UICONTROL Bi-Cubic]**.
+* **[!UICONTROL Sharpening: Resampling Mode]** - Välj **[!UICONTROL Bi-Cubic]**.
 
 #### Alternativ på fliken Grundläggande {#basic-tab-options}
 
@@ -302,7 +305,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
       Om du väljer <strong>GIF</strong> eller <strong>GIF med alfa</strong> finns följande alternativ för <strong>GIF-färgkvantifiering</strong> :
     </div>
     <ul>
-     <li><strong>Typ </strong>- Välj <strong>Adaptiv</strong> (standard), <strong>Webb</strong>eller <strong>Macintosh</strong>. Om du väljer <strong>GIF med alfa</strong>är Macintosh-alternativet inte tillgängligt.</li>
+     <li><strong>Typ </strong>- Välj <strong>Adaptiv</strong> (standard), <strong>Webb</strong>eller <strong>Macintosh</strong>. If you select <strong>GIF with Alpha</strong>, the Macintosh option is not available.</li>
      <li><strong>Gitter</strong> - Välj <strong>Diffusera</strong> eller <strong>Av</strong>.</li>
      <li><strong>Antal färger </strong>- Ange ett tal mellan 2 och 256.</li>
      <li><strong>Färglista</strong> - Ange en kommaavgränsad lista. För vitt, grått och svart anger du 00000,888888,ffff.</li>
@@ -361,10 +364,10 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     <ul>
      <li>Välj <strong>Ingen</strong> om du vill inaktivera skärpan.</li>
      <li>Välj <strong>Skärpa </strong>om du vill använda ett grundläggande skärpefilter på bilden när all skalning har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. </li>
-     <li>Välj<strong> Oskarp mask</strong> för att finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra effektens intensitet, radie (mätt i pixlar) och ett kontrasttröskelvärde som ska ignoreras. Den här effekten använder samma alternativ som Photoshop-filtret Oskarp mask.</li>
+     <li>Select<strong> Unsharp mask</strong> to fine-tune a sharpening filter effect on the final downsampled image. Du kan styra effektens intensitet, radie (mätt i pixlar) och ett kontrasttröskelvärde som ska ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Photoshop.</li>
     </ul> <p>I <strong>Oskarp mask</strong>finns följande alternativ:</p>
     <ul>
-     <li><strong>Mängd</strong> - Styr mängden kontrast som används på kantpixlar. Standardvärdet för reella tal är 1,0. För högupplösta bilder kan du öka den till upp till 5.0.Tänk på Mängd som ett mått på filterintensiteten.</li>
+     <li><strong>Mängd</strong> - Styr mängden kontrast som används på kantpixlar. Standardvärdet för reella tal är 1,0. För högupplösta bilder kan du öka den till upp till 5.0. Tänk på Mängd som ett mått på filterintensiteten.</li>
      <li><strong>Radie</strong> - Anger antalet pixlar runt kantpixlarna som påverkar skärpan. För högupplösta bilder anger du ett reellt tal mellan 1 och 2. Med ett lågt värde ökas endast kantpixlarna skärpan. ett högt värde ökar skärpan i ett större antal pixlar. Vilket värde som är korrekt beror på bildens storlek.</li>
      <li><strong>Tröskelvärde</strong> - Anger vilket kontrastintervall som ska ignoreras när filtret för oskarp mask används. Med andra ord, det här alternativet avgör hur olika de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och blir skarpare. Experimentera med heltalsvärden mellan 2 och 20 för att undvika brus. </li>
      <li><strong>Gäller för</strong> - Avgör om den oskarpa inställningen gäller för varje färg eller intensitet.</li>
@@ -457,12 +460,12 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
 ### Redigera bildförinställningar {#modifying-image-presets}
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Verktyg > Resurser > Bildförinställningar]**.
+1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Tools > Assets > Image Presets]**.
 
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
-1. Markera en förinställning och klicka sedan på **[!UICONTROL Redigera]**. Fönstret **[!UICONTROL Redigera bildförinställning]** öppnas.
-1. Gör ändringarna och klicka på **[!UICONTROL Spara]** för att spara ändringarna eller **[!UICONTROL Avbryt]** för att avbryta ändringarna.
+1. Markera en förinställning och klicka sedan på **[!UICONTROL Edit]**. Fönstret **[!UICONTROL Edit Image Preset]** öppnas.
+1. Gör ändringar och klicka på **[!UICONTROL Save]** för att spara ändringarna eller **[!UICONTROL Cancel]** för att avbryta ändringarna.
 
 ### Förinställningar för publicering {#publishing-image-presets}
 
@@ -470,5 +473,5 @@ Bildförinställningar publiceras automatiskt åt dig.
 
 ### Ta bort bildförinställningar {#deleting-image-presets}
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och trycker eller klickar på verktygsikonen och navigerar till **[!UICONTROL Resurser > Bildförinställningar]**.
-1. Markera en förinställning och klicka sedan på **[!UICONTROL Delete**. Dynamic Media bekräftar att du vill ta bort det. Tryck på **[!UICONTROL Ta bort]** för att ta bort eller tryck på **[!UICONTROL Avbryt]** för att avbryta.
+1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och trycker eller klickar på verktygsikonen och navigerar till **[!UICONTROL Assets > Image Presets]**.
+1. Markera en förinställning och klicka sedan på **[!UICONTROL Delete**. Dynamic Media bekräftar att du vill ta bort det. Tryck för **[!UICONTROL Delete]** att ta bort eller tryck för **[!UICONTROL Cancel]** att avbryta.
