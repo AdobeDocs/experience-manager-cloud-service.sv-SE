@@ -3,6 +3,9 @@ title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '4554'
+ht-degree: 11%
 
 ---
 
@@ -11,7 +14,7 @@ source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
 
 När du skapar en sida måste du välja en mall som ska användas som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas.
 
-Med **mallredigeraren**&#x200B;är det inte längre bara utvecklare som skapar och underhåller mallar. En typ av avancerade användare, som kallas **mallskapare**, kan också involveras. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa komponenter som ska användas, men när dessa grunder väl är på plats kan mallskaparen **** skapa och konfigurera mallar utan ett utvecklingsprojekt.
+Tack vare **mallredigeraren** är det inte längre bara utvecklare som kan skapa och underhålla mallar. En typ av superanvändare, som kallas **mallskapare**, kan också arbeta med detta. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när dessa grunder väl är på plats kan **mallskaparen** skapa och konfigurera mallar utan något utvecklingsprojekt.
 
 Med **mallkonsolen** kan mallskapare:
 
@@ -30,7 +33,7 @@ Detaljerad information om hur redigerbara mallar fungerar på teknisk nivå finn
 
 >[!NOTE]
 >
->Mallredigeraren **** har inte stöd för direkt målinriktning på mallnivå. Sidor som skapas baserat på en redigerbar mall kan ha som mål, men det går inte att använda själva mallarna.
+>**Mallredigeraren** har inte stöd för direkt målinriktning på mallnivå. Sidor som skapas utifrån en redigerbar mall kan användas för målinriktning, men inte själva mallarna.
 
 ## Before You Start {#before-you-start}
 
@@ -42,12 +45,12 @@ Innan du börjar är det viktigt att tänka på att det krävs samarbete för at
 
 ### Roller {#roles}
 
-Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren** måste du samarbeta mellan följande roller:
+Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren** måste följande roller samarbeta:
 
 * **Administratör**:
    * Skapar en ny mapp för mallar som kräver `admin` rättigheter.
    * Sådana uppgifter kan ofta även utföras av en utvecklare
-* **Utvecklare**:
+* **Developer**:
    * Koncentrerar sig på tekniska/interna detaljer
    * Kräver erfarenhet av utvecklingsmiljön.
    * Förser mallskaparen med nödvändig information.
@@ -140,7 +143,7 @@ En mall kan ha följande egenskaper:
 Så här visar och/eller redigerar du egenskaperna:
 
 1. Välj mallen på **mallkonsolen**.
-1. Välj **Visa egenskaper** i verktygsfältet eller snabbalternativ för att öppna dialogrutan.
+1. Välj **Visa egenskaper** i verktygsfältet eller från snabbalternativen för att öppna dialogrutan.
 1. Nu kan du visa eller redigera mallegenskaperna.
 
 >[!NOTE]
@@ -188,9 +191,9 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
 1. Öppna [Sidegenskaperna](/help/sites-cloud/authoring/fundamentals/page-properties.md) för rotsidan i grenen där du vill att mallen ska vara tillgänglig.
 1. Öppna fliken **Avancerat** .
-1. Under **Mallinställningar** använder du fältet **** Lägg till för att ange sökvägen/sökvägarna till mallarna.
+1. Under **Mallinställningar** använder du **Lägg till fält** för att ange sökvägen/sökvägarna till mallarna.
 
-   Sökvägen kan vara explicit eller använda mönster. Exempel:
+   Sökvägen kan vara explicit eller använda mönster. Till exempel:
 
    `/conf/<your-folder>/settings/wcm/templates/.*`
 
@@ -214,7 +217,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 När det refereras till mallen när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
 1. Välj mallen på **mallkonsolen**.
-1. Välj **Publicera** i verktygsfältet för att öppna guiden.
+1. Select **Publish** from the toolbar to open the wizard.
 1. Markera de **innehållsprinciper** som ska publiceras tillsammans.
 1. Välj **Publicera** i verktygsfältet för att slutföra åtgärden.
 
@@ -262,7 +265,7 @@ När en komponent har låsts upp kan du definiera det [ursprungliga innehållet]
 
 #### Layout {#template-layout}
 
-Med [layouten](#editing-a-template-layout-template-author) kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som [**layoutläget **för sidredigering](/help/sites-cloud/authoring/features/responsive-layout.md#defining-layouts-layout-mode).
+Med hjälp av [layouten](#editing-a-template-layout-template-author) kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som [**layoutläget ** för sidredigering](/help/sites-cloud/authoring/features/responsive-layout.md#defining-layouts-layout-mode).
 
 #### Sidprofiler {#template-page-policies}
 
@@ -292,7 +295,7 @@ Det finns ett antal åtgärder du kan utföra i **strukturläget** i mallrediger
 Det finns flera sätt att lägga till komponenter i mallen:
 
 * Från **komponentwebbläsaren** på sidopanelen.
-* Genom att använda alternativet **Infoga komponent** som finns i verktygsfältet för komponenter som redan finns i mallen eller **Dra komponenter hit** .
+* Du kan använda alternativet **Infoga komponent** som finns i verktygsfältet för komponenter som redan finns i mallen eller **Dra komponenter hit**.
 * Genom att dra en resurs (från **Assets** -webbläsaren på sidpanelen) direkt till mallen för att generera rätt komponent på plats.
 
 När de lagts till markeras varje komponent med:
@@ -303,7 +306,7 @@ När de lagts till markeras varje komponent med:
 
 >[!NOTE]
 >
->När du lägger till en körklar **titelkomponent** i mallen kommer den att innehålla **standardtextstrukturen**.
+>När du lägger till en färdig **titelkomponent** i mallen innehåller den **standardtextstrukturen**.
 >
 >Om du ändrar detta och lägger till egen text används den uppdaterade texten när en sida skapas från mallen.
 >
@@ -383,7 +386,7 @@ Under rubriken **Egenskaper** kan du definiera komponentens inställningar. Rubr
 
 ###### Huvud {#main}
 
-De viktigaste inställningarna för komponenten definieras på fliken **Main** .
+På fliken **Main** (Main) definieras komponentens viktigaste inställningar.
 
 För en bildkomponent kan till exempel de tillåtna bredderna definieras tillsammans med aktivering av lazy loading.
 
@@ -477,13 +480,13 @@ När en komponent har låsts upp:
 
 ![Lås komponentknapp](/help/sites-cloud/authoring/assets/templates-unlock-component.png)
 
-Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre i **strukturläge** , men de visas i **ursprungligt innehåll** . I **strukturläge** visas bara behållarkomponenten med dess lista över **tillåtna komponenter**.
+Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i läget **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre i **strukturläget**, men de visas i **ursprungligt innehåll**. I **strukturläget** visas bara själva behållarkomponenten med dess lista över **tillåtna komponenter**.
 
 ![Tillåtna komponenter](/help/sites-cloud/authoring/assets/templates-allowed-components.png)
 
 För att spara utrymme växer inte layoutbehållaren så att den rymmer listan med tillåtna komponenter. Behållaren blir i stället en rullningsbar lista.
 
-Komponenter som kan konfigureras visas med en **principikon** , som du kan trycka på eller klicka på för att redigera principen och egenskaperna för den komponenten.
+Komponenter som kan konfigureras visas med en **policyikon**, som du kan trycka eller klicka på för att redigera policyn och egenskaperna för den komponenten.
 
 ![Ikon för konfigurerbar komponent](/help/sites-cloud/authoring/assets/templates-configurable-component.png)
 
@@ -511,9 +514,9 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 
    ![Olåst komponent](/help/sites-cloud/authoring/assets/templates-unlocked-components.png)
 
-* Om en behållarkomponent har låsts upp (i **strukturläge** ) kan du lägga till nya komponenter i behållaren (i **ursprungligt innehåll** ). Komponenter som läggs till i **ursprungligt innehåll** kan flyttas till eller tas bort från resultatsidor.
+* Om en behållarkomponent har låsts upp (i **strukturläget**) kan du lägga till nya komponenter i behållaren (i **ursprungligt innehåll**). Komponenter som läggs till i **ursprungligt innehåll** kan flyttas på eller tas bort från resultatsidor.
 
-   Du kan lägga till en komponent med hjälp av antingen **Dra komponenter här** eller alternativet **Infoga ny komponent** i verktygsfältet i lämplig behållare.
+   Du kan lägga till en komponent med hjälp av antingen **Dra komponenter hit** eller **Infoga ny komponent** i verktygsfältet för lämplig behållare.
 
    ![Lägg till komponent](/help/sites-cloud/authoring/assets/templates-add-component.png)
    ![Lägg till komponent](/help/sites-cloud/authoring/assets/templates-add-component-dialog.png)
@@ -538,7 +541,7 @@ Du kan definiera mallayouten för ett antal olika enheter. [Responsiv layout](/h
 
 ### Redigera en mall - Sidprincip - Mallförfattare/utvecklare {#editing-a-template-page-policy-template-author-developer}
 
-Sidprofilen med nödvändiga klientbibliotek hanteras under alternativet **Sidprofil** på menyn **Sidinformation** .
+Sidpolicyn med nödvändiga klientbibliotek hanteras under alternativet **Sidpolicy** på menyn **Sidinformation**.
 
 Så här öppnar du dialogrutan **Sidprofil** :
 
