@@ -3,6 +3,9 @@ title: Leverera optimerade bilder för en responsiv webbplats
 description: Så här använder du funktionen för responsiv kod för att leverera optimerade bilder
 translation-type: tm+mt
 source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 12%
 
 ---
 
@@ -19,7 +22,7 @@ See also [Linking URLs to your Web Application.](linking-urls-to-yourwebapplicat
 
 **Så här levererar du optimerade bilder för en responsiv webbplats**:
 
-1. Navigera till bilden som du vill ange responsiv kod för och tryck på **[!UICONTROL Återgivningar]** i listrutan.
+1. Navigera till bilden som du vill ange responsiv kod för och tryck på **[!UICONTROL Renditions]** i listrutan.
 
    ![chlimage_1-408](assets/chlimage_1-408.png)
 
@@ -29,7 +32,7 @@ See also [Linking URLs to your Web Application.](linking-urls-to-yourwebapplicat
 
    >[!NOTE]
    >
-   >Den valda resursen *och* den valda bildförinställningen eller visningsförinställningen måste publiceras för att **[!UICONTROL URL-]** eller **[!UICONTROL RESS]** -knapparna ska vara tillgängliga.
+   >Den valda resursen *och* den valda bildförinställningen eller visningsförinställningen måste publiceras för att knappen **[!UICONTROL URL]** eller **[!UICONTROL RESS]** ska vara tillgänglig.
    >
    >Bildförinställningar publiceras automatiskt.
 
@@ -37,7 +40,7 @@ See also [Linking URLs to your Web Application.](linking-urls-to-yourwebapplicat
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
-1. I dialogrutan **[!UICONTROL Bädda in responsiv bild]** markerar och kopierar du den responsiva kodtexten och klistrar in den på din webbplats för att komma åt den responsiva resursen.
+1. I dialogrutan **[!UICONTROL Embed Responsive Image]** markerar och kopierar du den responsiva kodtexten och klistrar in den på din webbplats för att komma åt den responsiva resursen.
 1. Redigera standardbrytpunkterna i inbäddningskoden så att de matchar dem för den responsiva webbplatsen direkt i koden. Testa dessutom de olika bildupplösningarna som används vid olika sidbrytpunkter.
 
 ## Använda HTTP/2 för att leverera dina dynamiska medieresurser {#using-http-to-delivery-your-dynamic-media-assets}
