@@ -505,7 +505,7 @@ ta bort eller kommentera dem. Programsatserna i de här avsnitten bearbetas inte
 
 Ange katalog `conf.d/rewrites`.
 
-Ta bort alla filer med namn `base_rewrite.rules` och `xforwarded_forcessl_rewrite.rules` komma ihåg att ta bort `Include` programsatser i de virtuella värdfilerna som refererar till dem.
+Ta bort alla filer med namnet `base_rewrite.rules` och `xforwarded_forcessl_rewrite.rules` kom ihåg att ta bort `Include` programsatser i de virtuella värdfilerna som refererar till dem.
 
 Om det `conf.d/rewrites` nu finns en enda fil bör namnet ändras till `rewrite.rules` `Include` och glöm inte att anpassa de programsatser som refererar till den filen i de virtuella värdfilerna.
 
