@@ -4,6 +4,9 @@ description: I den här artikeln beskrivs hur du delar resurser, mappar och saml
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+workflow-type: tm+mt
+source-wordcount: '886'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +32,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
 
 1. I Assets-användargränssnittet väljer du den resurs som ska delas som en länk.
-1. Klicka/tryck på **[!UICONTROL Dela länk]** i verktygsfältet. En resurslänk skapas automatiskt i fältet **[!UICONTROL Dela länk]** . Kopiera den här länken och dela den med användarna. Länkens standardförfallotid är en dag.
+1. From the toolbar, click/tap the **[!UICONTROL Share Link]**. En resurslänk skapas automatiskt i **[!UICONTROL Share Link]** fältet. Kopiera den här länken och dela den med användarna. Länkens standardförfallotid är en dag.
 
    >[!NOTE]
    >
@@ -153,9 +156,9 @@ Before you can share assets as links, configure the email service.
 
 När du hämtar resurser från den länk som delas med funktionen Länkdelning komprimerar AEM resurshierarkin från databasen och returnerar sedan resursen i en ZIP-fil. I avsaknad av begränsningar för den mängd data som kan komprimeras i en ZIP-fil utsätts stora mängder data för komprimering, vilket leder till minnesfel i JVM. För att skydda systemet från en potentiell denial of service-attack på grund av den här situationen kan du konfigurera den maximala storleken på de hämtade filerna. Om resursens okomprimerade storlek överskrider det konfigurerade värdet, avvisas begäranden om hämtning av resurser. Standardvärdet är 100 MB.
 
-1. Klicka/tryck på AEM-logotypen och gå sedan till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
-1. På webbkonsolen går du till **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Server]** .
-1. Öppna konfigurationen i redigeringsläge och ändra värdet på parametern **[!UICONTROL Max. innehållsstorlek (okomprimerad)]** .
+1. Click/Tap the AEM logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Leta reda på konfigurationen från webbkonsolen **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** .
+1. Öppna konfigurationen i redigeringsläge och ändra värdet på **[!UICONTROL Max Content Size (uncompressed)]** parametern.
 1. Spara ändringarna.
 
 <!--
