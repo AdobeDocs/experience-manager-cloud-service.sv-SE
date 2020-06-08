@@ -1,13 +1,16 @@
 ---
-title: Variationer - innehåll för redigeringsfragment
+title: Variationer – redigera innehållsfragment
 description: Med variationer kan du skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte (om det behövs).
 translation-type: tm+mt
 source-git-commit: bac825a45a9d915fd1828ff6adf90c073b52f967
+workflow-type: tm+mt
+source-wordcount: '1710'
+ht-degree: 15%
 
 ---
 
 
-# Variationer - innehåll för redigeringsfragment{#variations-authoring-fragment-content}
+# Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
 
 [Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i innehållsfragment, eftersom de gör att du kan skapa och redigera kopior av huvudinnehållet för användning i specifika kanaler och/eller scenarier.
 
@@ -36,7 +39,7 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallsidor eller andra varianter som du har. Du kan:
+När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallen eller eventuella varianter som du har. Du kan:
 
 * gör redigeringar direkt på fliken **Variationer**
 * öppna [helskärmsredigeraren](#full-screen-editor) för att:
@@ -46,7 +49,7 @@ När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variati
 
    * få tillgång till ett antal [åtgärder](#actions)
 
-Exempel:
+Till exempel:
 
 * Redigera ett enkelt fragment
 
@@ -95,7 +98,7 @@ Vilka alternativ du kan använda för att redigera text med flera rader beror p�
 
 * [RTF-text](#rich-text)
 * [Oformaterad text](#plain-text)
-* [Markering](#markdown)
+* [Markdown](#markdown)
 
 Formatet kan väljas när helskärmsredigeraren används.
 
@@ -117,7 +120,7 @@ Med textredigering kan du formatera:
    * Infoga en tabell
    * Styckeformat: Stycke, Rubrik 1/2/3
    * [Infoga visuella resurser](#inserting-assets-into-your-fragment)
-   * Sök
+   * Sökning
    * Sök/ersätt
    * Stavningskontroll
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
@@ -130,9 +133,9 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 
 >[!CAUTION]
 >
->Om du väljer **Oformaterad text** kan du förlora formatering, markeringar och/eller resurser som du har infogat i **RTF** eller **Markering**.
+>Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markering {#markdown}
+### Markdown {#markdown}
 
 >[!NOTE]
 >
@@ -154,13 +157,13 @@ Du kan även öppna helskärmsredigeraren för ytterligare [åtgärder](#actions
 
 >[!CAUTION]
 >
->Om du växlar mellan **RTF** och **Markdown** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa två format kan ha skillnader i hur de hanteras.
+>Om du växlar mellan **RTF** och **Markdown-kod** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa båda format kan hanteras på olika sätt.
 
 ### Visa nyckelstatistik {#viewing-key-statistics}
 
-När helskärmsredigeraren är öppen visas ett intervall med information om texten i **textstatistiken** .
+När helskärmsredigeraren är öppen visar åtgärden **Textstatistik** information om texten.
 
-Exempel:
+Till exempel:
 
 ![statistik](assets/cfm-variations-04.png)
 
@@ -270,8 +273,8 @@ Det finns olika metoder för att lägga till [bilder](/help/assets/content-fragm
 
    >[!CAUTION]
    Om du efter att ha lagt till en resurs ändrar formatet till:
-   * **Oformaterad text**: resursen kommer att förloras helt från fragmentet.
-   * **Markering**: resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
+   * **Oformaterad text**: Resursen kommer att förloras helt från fragmentet.
+   * **Markdown-kod**: Resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
 
 
 ## Hantera variationer {#managing-variations}
@@ -286,7 +289,7 @@ Så här skapar du en ny variant:
 1. Välj **Variationer** i ikonfältet på sidpanelen.
 1. Välj **Skapa variation**.
 1. En dialogruta öppnas där du anger **titel** och **beskrivning** för den nya varianten.
-1. Välj **Lägg till**; fragmentmallsidan **** kopieras till den nya varianten som nu är öppen för [redigering](#editing-a-variation).
+1. Välj **Lägg till**. **Fragmentmastern** kopieras till den nya varianten, som nu är öppen för [redigering](#editing-a-variation).
 
    >[!NOTE]
    När du skapar en ny variant är det alltid **mallsida** som kopieras, inte varianten som är öppen.
@@ -304,7 +307,7 @@ Du kan ändra variantinnehållet efter antingen:
 
 Så här byter du namn på en befintlig variant:
 
-1. Öppna fragmentet och välj **Variationer** på sidpanelen.
+1. Open your fragment and select **Variations** from the side panel.
 1. Välj önskad variant.
 1. Välj **Byt namn** i listrutan **Åtgärder** .
 
@@ -319,7 +322,7 @@ Detta påverkar bara **varianttiteln**.
 
 Så här tar du bort en befintlig variant:
 
-1. Öppna fragmentet och välj **Variationer** på sidpanelen.
+1. Open your fragment and select **Variations** from the side panel.
 1. Välj önskad variant.
 1. Välj **Ta bort** i listrutan **Åtgärder** .
 
@@ -335,10 +338,10 @@ Du kan inte ta bort **mallsida**.
 När du redigerar en variant har du tillgång till åtgärden för att synkronisera det aktuella elementet i variationen med mallsidan. På så sätt kan du automatiskt kopiera ändringar som gjorts i mallsidan till den önskade varianten.
 
 >[!CAUTION]
-Synkronisering är bara tillgängligt för att kopiera ändringar *från **mallsida**till varianten*.
+Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 Endast det aktuella elementet i variationen synkroniseras.
-Synkronisering fungerar bara på datatypen **Flerradig text** .
-Du kan inte överföra ändringar *från en variant till **mallsida ***.
+Synkronisering fungerar bara på datatypen **Flerradig text**.
+Du kan inte överföra ändringar *från en variant till **mastern ***.
 
 1. Öppna ditt innehållsfragment i fragmentredigeraren. Kontrollera att **mallsidan** har redigerats.
 1. Välj en specifik variant och sedan lämplig synkroniseringsåtgärd från antingen:
