@@ -3,6 +3,9 @@ title: Säkerhetskopiera och återställ i AEM som en molntjänst
 description: 'Säkerhetskopiera och återställ i AEM som en molntjänst '
 translation-type: tm+mt
 source-git-commit: 8fba31951276d7e0de1f3bd079e42e431edaff4e
+workflow-type: tm+mt
+source-wordcount: '288'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +19,7 @@ Om en kunds distribution, dvs. den distribuerade programkoden antingen är trasi
 >
 >Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll. De senaste data mellan tidpunkten för den återställda säkerhetskopieringen och den aktuella kommer att gå förlorade. Mellanlagring återställs också till den gamla versionen.
 
-## Så här använder du
+## Användning
 
 Kunderna ska lämna in en supportanmälan som beskriver det problem som uppstår. Detta kommer att leda till en utredning av Adobes support som kommer att avgöra om en återställning är nödvändig.
 
