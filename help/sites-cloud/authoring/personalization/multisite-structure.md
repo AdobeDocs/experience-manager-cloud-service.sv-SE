@@ -1,13 +1,16 @@
 ---
-title: Hur hantering av flera webbplatser för riktat innehåll är strukturerad
+title: Så här struktureras hantering av flera webbplatser för riktat innehåll
 description: Ett diagram visar hur stöd för flera webbplatser för riktat innehåll är strukturerat
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 8%
 
 ---
 
 
-# Hur hantering av flera webbplatser för riktat innehåll är strukturerad {#how-multisite-management-for-targeted-content-is-structured}
+# Så här struktureras hantering av flera webbplatser för riktat innehåll {#how-multisite-management-for-targeted-content-is-structured}
 
 I följande diagram visas hur stöd för flera webbplatser för riktat innehåll är strukturerat.
 
