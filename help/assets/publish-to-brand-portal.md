@@ -2,8 +2,11 @@
 title: Publicera resurser, mappar och samlingar på varumärkesportalen
 description: Publicera resurser, mappar och samlingar på varumärkesportalen.
 contentOwner: Vishabh Gupta
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 4677a8771c5891b8c9846e0adb58025304a71bdd
+workflow-type: tm+mt
+source-wordcount: '1027'
+ht-degree: 100%
 
 ---
 
