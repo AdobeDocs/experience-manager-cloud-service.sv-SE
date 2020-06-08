@@ -1,13 +1,16 @@
 ---
-title: Startar
+title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '806'
+ht-degree: 6%
 
 ---
 
 
-# Startar {#launches}
+# Launches {#launches}
 
 Med lanseringar kan du effektivt utveckla innehåll för en framtida release.
 
@@ -27,9 +30,9 @@ Startar kan också vara:
 
 I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och vid behov [tar](/help/sites-cloud/authoring/launches/creating.md#deleting-a-launch)bort) startsidor i Sites-konsolen eller [i Launches-konsolen](#the-launches-console):
 
-* [Skapa startprogram](/help/sites-cloud/authoring/launches/creating.md)
-* [Redigeringsövningar](/help/sites-cloud/authoring/launches/editing.md)
-* [Befordra lanseringar](/help/sites-cloud/authoring/launches/promoting.md)
+* [Skapa Launches](/help/sites-cloud/authoring/launches/creating.md)
+* [Redigera Launches](/help/sites-cloud/authoring/launches/editing.md)
+* [Marknadsföra Launches](/help/sites-cloud/authoring/launches/promoting.md)
 
 ## Startar - ordningen för händelser {#launches-the-order-of-events}
 
@@ -38,23 +41,23 @@ Med den här funktionen kan du effektivt utveckla innehåll för en framtida rel
 Med Launes kan du:
 
 * Skapa en kopia av källsidorna:
-   * Copy is your launch.
+   * Kopian är startsida.
    * Källsidorna på den översta nivån kallas **Produktion**.
       * Källsidorna kan tas från flera (separata) grenar.
    ![Operationsordning för starter](/help/sites-cloud/authoring/assets/launches-order.png)
 
 * Redigera startkonfigurationen:
    * Lägg till eller ta bort sidor och/eller grenar till/från starten.
-   * Redigera startegenskaper; som **Title**, **Launch Date**, **Production Ready** flag.
+   * Redigera startegenskaper, som flaggorna **Titel**, **Startdatum** och **Produktionsklar**.
 * Du kan befordra och publicera innehållet antingen manuellt eller automatiskt:
    * Manuellt:
       * Befordra startinnehållet tillbaka till **Target** (källsidor) när det är klart att publiceras.
       * Publicera innehållet från källsidorna (efter att ha befordrat dem).
       * Befordra antingen alla sidor eller endast ändrade sidor.
    * Automatiskt - det innebär följande:
-      * Fältet **Startdatum**(**Live**) **för** datum: detta kan anges när du skapar eller redigerar en programstart.
+      * The **Launch**(**Live**) **date** field: this can be set when creating or editing a launch.
       * The **Production Ready** flag: detta kan bara anges när du redigerar en programstart.
-      * Om flaggan **Production Ready** är inställd befordras starten automatiskt till produktionssidorna på det angivna **startdatumet**(**Live**) ****. Efter kampanjen publiceras produktionssidorna automatiskt.\
+      * If the **Production Ready** flag is set, the launch will be automatically promoted to the production pages on the specified **Launch**(**Live**) **date**. Efter kampanjen publiceras produktionssidorna automatiskt.\
          Om inget datum har angetts har flaggan ingen effekt.
 * Uppdatera käll- och startsidor parallellt:
    * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). dvs. som en live-kopia).
