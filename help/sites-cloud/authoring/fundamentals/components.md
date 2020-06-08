@@ -3,6 +3,9 @@ title: Komponenter
 description: Komponenterna är den grundläggande byggstenen för innehållssidor i AEM
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 3%
 
 ---
 
