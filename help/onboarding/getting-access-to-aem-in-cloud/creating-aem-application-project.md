@@ -3,6 +3,9 @@ title: AEM Application Project - Cloud Service
 description: AEM Application Project - Cloud Service
 translation-type: tm+mt
 source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+workflow-type: tm+mt
+source-wordcount: '1184'
+ht-degree: 11%
 
 ---
 
@@ -16,11 +19,11 @@ För att hjälpa nya kunder att komma igång kan Cloud Manager nu skapa ett mini
 
 Följ stegen nedan för att skapa ett AEM-programprojekt i Cloud Manager:
 
-1. När du har loggat in på Cloud Manager och den grundläggande programkonfigurationen är klar, visas ett särskilt åtgärdskort på skärmen **Översikt** , om databasen är tom.
+1. När du har loggat in på Cloud Manager och den grundläggande programkonfigurationen är klar, visas ett särskilt CTA-kort på skärmen **Översikt**, om databasen är tom.
 
    ![](assets/create-wizard1.png)
 
-1. Klicka på **Skapa** för att gå till skärmen **Skapa en gren och projekt** .
+1. Klicka på **Skapa** för att gå till skärmen **Skapa gren och projekt**.
 
    ![](assets/create-wizard2.png)
 
@@ -28,7 +31,7 @@ Följ stegen nedan för att skapa ett AEM-programprojekt i Cloud Manager:
 
    ![](assets/create-wizard3.png)
 
-1. När programmet har skapats visas rutan **Lägg till miljö** på sidan *Programöversikt* .
+1. När programmet har skapats visas rutan **Lägg till miljö** på sidan *Programöversikt*.
    ![](assets/create-wizard4.png)
 
    Mer information om hur du lägger till och hanterar miljöer [finns i](/help/implementing/cloud-manager/manage-environments.md) Hantera miljöer.
@@ -262,7 +265,7 @@ Samma teknik kan användas för att installera språkspecifika paket, dvs. med `
 I Cloud Manager kan byggen producera valfritt antal innehållspaket.
 Det kan av olika skäl vara önskvärt att skapa ett innehållspaket men inte distribuera det. Detta kan till exempel vara användbart när du skapar innehållspaket som bara används för testning eller som paketeras om med ett annat steg i byggprocessen, det vill säga som ett underpaket till ett annat paket.
 
-För att hantera dessa scenarier söker Cloud Manager efter egenskapen ***cloudManagerTarget*** i egenskaperna för det inbyggda innehållspaketet. Om den här egenskapen är inställd på Ingen hoppas paketet över och distribueras inte. Mekanismen för att ange den här egenskapen beror på hur innehållspaketet skapas. Med till exempel filevault-maven-plugin konfigurerar du plugin-programmet så här:
+För att hantera dessa scenarier söker Cloud Manager efter egenskapen ***cloudManagerTarget*** i egenskaperna för de byggda innehållspaketen. Om den här egenskapen är inställd på ”ingen” hoppas paketet över och driftsätts inte. Mekanismen för hur den här egenskapen anges beror på hur innehållspaketet skapas. Med till exempel filevault-maven-plugin konfigurerar du plugin-programmet så här:
 
 ```xml
         <plugin>
