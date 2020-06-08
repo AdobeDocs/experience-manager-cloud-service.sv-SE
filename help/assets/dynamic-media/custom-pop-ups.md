@@ -3,6 +3,9 @@ title: Använda snabbvyer för att skapa anpassade popup-fönster
 description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
 translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+workflow-type: tm+mt
+source-wordcount: '1161'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
 
 1. Skapa en snabbvy för en överförd resurs.
 
-   Vanligtvis skapar du en snabbvy samtidigt som du redigerar en resurs som ska användas med det visningsprogram du använder.
+   Vanligtvis skapar du en snabbvy samtidigt som du redigerar en resurs för användning med det visningsprogram du använder.
 
    <table>
     <tbody>
@@ -40,7 +43,7 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
     <td><a href="/help/assets/dynamic-media/interactive-videos.md#adding-interactivity-to-your-video" target="_blank">Lägga till interaktivitet i videon</a>.</td>
     </tr>
     <tr>
-    <td>Carousel Banners</td>
+    <td>Karusellbanner</td>
     <td><a href="/help/assets/dynamic-media/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">Lägga till aktiveringspunkter eller bildscheman i en banderoll</a>.<br /> </td>
     </tr>
     </tbody>
@@ -101,9 +104,9 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
 
 1. Nu måste du konfigurera `quickViewActivate` hanteraren.
 
-   Hanteraren `quickViewActivate` styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn samt ett exempel på ett `loadQuickView` funktionsanrop.
+   Hanteraren `quickViewActivate` styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn samt ett exempel på `loadQuickView` funktionsanrop.
 
-   **Variabelmappning** Kartvariabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i QuickView:
+   **Variabelmappning** Kartvariabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i snabbvyn:
 
    `var *variable1*= inData.*quickviewVariable*`
 
