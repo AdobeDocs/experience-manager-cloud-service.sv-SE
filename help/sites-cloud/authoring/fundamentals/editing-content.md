@@ -3,6 +3,9 @@ title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+workflow-type: tm+mt
+source-wordcount: '2974'
+ht-degree: 6%
 
 ---
 
@@ -142,13 +145,13 @@ Du kan lägga till en ny komponent genom att använda rutan **Dra komponenter h�
 1. Kontrollera att sidan är i [**redigeringsläge **](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
 1. Det finns två sätt att markera och lägga till en ny komponent från styckesystemet:
 
-   * Välj alternativet **Infoga komponent** (+) antingen i verktygsfältet för en befintlig komponent eller i rutan **Dra komponenter hit** .
+   * Select the **Insert Component** option (+) from either the toolbar of an existing component or the **Drag components here** box.
 
       ![Infoga en komponent](/help/sites-cloud/authoring/assets/editing-insert-component.png)
 
    * Om du använder en stationär enhet kan du dubbelklicka på **Dra komponenter här** .
 
-   * Dialogrutan **Infoga ny komponent** öppnas så att du kan välja önskad komponent:
+   * The **Insert New Component** dialog will open to allow you to select your required component:
 
       ![Infoga ny komponent, dialogruta](/help/sites-cloud/authoring/assets/editing-insert-component-selection.png)
 
@@ -270,7 +273,7 @@ Det finns två sätt att lägga till och/eller redigera innehåll i komponenter:
 
 Du kan öppna en komponent och redigera innehållet med ikonen [Redigera (penna) i komponentverktygsfältet](#component-toolbar).
 
-De exakta redigeringsalternativen beror på komponenten. För vissa komponenter är [alla åtgärder bara tillgängliga i helskärmsläge](#edit-content-full-screen-mode). Exempel:
+De exakta redigeringsalternativen beror på komponenten. För vissa komponenter är [alla åtgärder bara tillgängliga i helskärmsläge](#edit-content-full-screen-mode). Till exempel:
 
 * Textkomponent
 
@@ -288,7 +291,7 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
 * Bildkomponent - helskärm
 
-   [Om du aktiverar helskärmsläget](#edit-content-full-screen-mode) för bildkomponenten får du mer utrymme för redigering av bilden och dessutom visas extra redigeringsalternativ som **Starta karta** och **Återställ zoomning**. Med helskärmsläge kan du dessutom välja förinställningar för beskärning.
+   [Om du aktiverar helskärmsläget](#edit-content-full-screen-mode) för bildkomponenten får du mer plats att redigera bilden och dessutom visas extra redigeringsalternativ som **Startkarta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
 
    ![Bildkomponentens helskärmsläge](/help/sites-cloud/authoring/assets/editing-image-component-full-screen.png)
 
@@ -329,7 +332,7 @@ Så här flyttar du en styckekomponent:
 
 ## Redigera komponentlayout {#edit-component-layout}
 
-I stället för att behöva växla från redigeringsläge till [layoutläge](/help/sites-cloud/authoring/features/responsive-layout.md) flera gånger för att justera en komponent, kan du välja åtgärden **Layout** för en komponent för att ändra komponentens layout och spara tid genom att inte behöva lämna redigeringsläget.
+I stället för att växla från redigeringsläge till [layoutläge](/help/sites-cloud/authoring/features/responsive-layout.md) gång på gång för att justera en komponent, kan du välja åtgärden **Layout** för en komponent när du vill ändra dess layout och spara tid eftersom du slipper lämna redigeringsläget.
 
 1. När du väljer en komponent i **redigeringsläget** för platskonsolen visas komponentens verktygsfält.
 
@@ -369,7 +372,7 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
 
 ![Ett komponentverktygsfält som visar arvsrelation](/help/sites-cloud/authoring/assets/editing-component-toolbar-inheritance.png)
 
-Exempel:
+Till exempel:
 
 * Avbryt arv
 
@@ -385,7 +388,7 @@ Exempel:
 
 ## Redigera sidmallen {#editing-the-page-template}
 
-Du kan enkelt växla till [mallredigeraren](/help/sites-cloud/authoring/features/templates.md#editing-templates-template-authors) genom att välja **Redigera mall** på menyn [](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information)Sidinformation.
+Du kan enkelt växla till [mallredigeraren](/help/sites-cloud/authoring/features/templates.md#editing-templates-template-authors) genom att välja **Redigera mall** på menyn [Sidinformation](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information).
 
 Du kan enkelt se vilken mall sidan baseras på när du markerar sidan i [kolumnvyn](/help/sites-cloud/authoring/getting-started/basic-handling.md#column-view) eller [listvyn](/help/sites-cloud/authoring/getting-started/basic-handling.md#list-view).
 
@@ -396,7 +399,7 @@ I [läget](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-mo
 * Grön kantlinje: Ärvd
 * Rosa kantlinje: Arvet har annullerats
 
-Exempel:
+Till exempel:
 
 ![Exempel på live-kopieringsstatus som visas](/help/sites-cloud/authoring/assets/editing-live-copy-status.png)
 
@@ -446,7 +449,7 @@ En sida kan låsas från:
 
 * **Platskonsol**
 
-   1. Markera sidan i [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
+   1. Markera sidan med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
    1. Välj låsikonen.
 
       ![Knappen Lås](/help/sites-cloud/authoring/assets/lock.png)
@@ -454,7 +457,7 @@ En sida kan låsas från:
 * **Page Editor**
 
    1. Öppna menyn genom att klicka på ikonen **Sidinformation** .
-   1. Välj alternativet **Lås sida** .
+   1. Select the **Lock Page** option.
 
 När konsolvyn är låst uppdateras informationen och när du redigerar en låssymbol visas den i verktygsfältet.
 
@@ -473,7 +476,7 @@ När konsolvyn är låst uppdateras informationen och när du redigerar en låss
 
 Att låsa upp en sida påminner mycket om att [låsa sidan](#locking-a-page). När sidan är låst ersätts låsalternativen av upplåsningsåtgärder.
 
-På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen i platskonsolen ersätts av en **Lås upp** -ikon.
+På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen på Sites-konsolen ersätts av en **Lås upp**-ikon.
 
 ![Knappen Lås upp](/help/sites-cloud/authoring/assets/unlock.png)
 
