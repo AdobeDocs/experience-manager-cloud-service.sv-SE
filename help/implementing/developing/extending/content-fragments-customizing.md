@@ -1,13 +1,16 @@
 ---
-title: Anpassa och utöka innehållsfragment
+title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 translation-type: tm+mt
 source-git-commit: a5d6a072dfd8df887309f56ad4a61b6b38b32fa7
+workflow-type: tm+mt
+source-wordcount: '2119'
+ht-degree: 0%
 
 ---
 
 
-# Anpassa och utöka innehållsfragment{#customizing-and-extending-content-fragments}
+# Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
 
 I Adobe Experience Manager som molntjänst utökar ett innehållsfragment en standardresurs; se:
 
