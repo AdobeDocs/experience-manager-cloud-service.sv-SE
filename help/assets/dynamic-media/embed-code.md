@@ -2,15 +2,15 @@
 title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
 description: Lär dig bädda in Dynamic Media-video eller -bilder på en webbsida
 translation-type: tm+mt
-source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
+source-git-commit: 7dae5c0ed82687415719cd2d72f98028cf0a8e64
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '362'
 ht-degree: 21%
 
 ---
 
 
-# Embedding the Dynamic Media Video or Image viewer on a web page {#embedding-the-video-or-image-viewer-on-a-web-page}
+# Bädda in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
 
 Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
