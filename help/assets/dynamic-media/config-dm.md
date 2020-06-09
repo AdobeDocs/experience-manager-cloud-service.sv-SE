@@ -2,7 +2,7 @@
 title: Konfigurera Dynamic Media Cloud-tjänsten
 description: Information om hur du konfigurerar dynamiska media i Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: bc0852120580065a93923e7fe730485012afba6e
+source-git-commit: 668908770505b24eae4652106471925d1dcfc18b
 workflow-type: tm+mt
 source-wordcount: '4796'
 ht-degree: 8%
@@ -94,7 +94,7 @@ Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du
    ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
 1. Tryck på **[!UICONTROL Save]**.
-1. Om du vill förhandsgranska dynamiskt medieinnehåll på ett säkert sätt innan det publiceras måste du vitlista AEM-författarinstansen för att ansluta till Dynamic Media:
+1. Om du vill förhandsgranska dynamiskt mediematerial på ett säkert sätt innan det publiceras måste du&quot;tillåta&quot; AEM-författarinstansen för att ansluta till Dynamic Media:
 
    * Logga in på ditt konto för Dynamic Media Classic: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html). Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
    * Klicka på i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
