@@ -2,9 +2,9 @@
 title: Länka URL till ett webbprogram
 description: Länka URL:er till webbprogrammet i dynamiska medier
 translation-type: tm+mt
-source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
+source-git-commit: 7dae5c0ed82687415719cd2d72f98028cf0a8e64
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1210'
 ht-degree: 10%
 
 ---
@@ -22,13 +22,13 @@ Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kop
 >
 >URL-strängar är bara tillgängliga för dynamiska återgivningar av resurser. De är för närvarande inte tillgängliga för statiska resurser som finns i DAM och inte för den dynamiska medieservern. URL-knappen visas inte för återgivningar som är statiska.
 
-See also [Embedding the Video or Image Viewer on a Web Page.](embed-code.md)
+See also [Embedding the Video or Image Viewer on a Web Page](embed-code.md).
 
-Se även [Länka YouTube-URL:er till ditt webbprogram.](video.md)
+Se även [Länka YouTube-URL:er till ditt webbprogram](video.md).
 
-See also [Delivering Optimized Images for a Responsive Site.](responsive-site.md)
+See also [Delivering Optimized Images for a Responsive Site](responsive-site.md).
 
-Se även [Överföra resurser.](/help/assets/manage-digital-assets.md#uploading-assets)
+Se även [Överföra resurser](/help/assets/manage-digital-assets.md#uploading-assets).
 
 ## Hämta en URL för en resurs {#obtaining-a-url-for-an-asset}
 
@@ -52,7 +52,7 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
    Kom ihåg att URL:er endast går att kopiera *efter* att du har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
 
-   Se [Publicera resurser.](publishing-dynamicmedia-assets.md)
+   Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
    Se [Publicera förinställningar](managing-viewer-presets.md#publishing-viewer-presets)för visningsprogram.
 
@@ -84,6 +84,7 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
 Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare resurser utöver bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
 
+* 3D-filer
 * Animerad GIF
 * Ljudfiler
 * CSS
@@ -99,7 +100,7 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 
    Remember that URLs are only available to copy *after* you have first *published* the static asset.
 
-   Se [Publicera resurser.](publishing-dynamicmedia-assets.md)
+   Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
 1. Använd någon av följande metoder för att hämta URL:en för den publicerade statiska resursen:
 
@@ -108,7 +109,7 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
       * `https://*<server_name>*/is/content/*<company_name>*/*<static_asset_filename>*.*<extension>*`
 
          Till exempel, `https://aem.com/is/content/adobe/image.gif`.
-   * klicka **[!UICONTROL Asset > Dynamic Renditions]** och tryck sedan på en dynamisk återgivning av den statiska resursen och kopiera URL:en.
+   * Tryck **[!UICONTROL Asset > Dynamic Renditions]** och tryck sedan på en dynamisk återgivning av den statiska resursen och kopiera URL:en.
 
       Ändra den kopierade URL-adressen som ska användas `is/content` i sökvägen i stället för `is/image/`.
 
