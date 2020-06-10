@@ -2,9 +2,9 @@
 title: Cachelagra i AEM som en molntjänst
 description: 'Cachelagra i AEM som en molntjänst '
 translation-type: tm+mt
-source-git-commit: 0080ace746f4a7212180d2404b356176d5f2d72c
+source-git-commit: 9d99a7513a3a912b37ceff327e58a962cc17c627
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,10 @@ ht-degree: 0%
 
 # Introduktion {#intro}
 
-Cachelagring vid CDN kan konfigureras med hjälp av dispatcherregler. Observera att dispatchern också respekterar de resulterande rubrikerna för cacheförfallodatum om `enableTTL` är aktiverade i dispatcherns konfiguration, vilket innebär att det uppdaterar specifikt innehåll även utanför det innehåll som publiceras om.
+Trafiken passerar genom CDN till ett webbserverlager i Apache, som har stöd för moduler som dispatchern. För att öka prestandan används dispatchern främst som ett cacheminne för att begränsa bearbetningen av publiceringsnoderna.
+Regler kan tillämpas på dispatcherns konfiguration för att ändra standardinställningarna för cacheförfallotid, vilket resulterar i cachelagring vid CDN. Observera att dispatchern också respekterar de resulterande rubrikerna för cacheförfallodatum om `enableTTL` är aktiverat i dispatcherns konfiguration, vilket innebär att det uppdaterar specifikt innehåll även utanför det innehåll som publiceras om.
+
+Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur cachning fungerar på webbläsarnivå med avseende på klientbibliotek.
 
 ## Cachelagring {#caching}
 
@@ -33,6 +36,14 @@ Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande r
 ```
 /0000
 { /glob "*" /type "allow" }
+```
+
+* Om du vill förhindra att visst innehåll cachelagras anger du rubriken Cache-Control till &quot;private&quot;. Följande förhindrar till exempel att HTML-innehåll under en katalog med namnet &quot;myfolder&quot; cachelagras:
+
+```
+<LocationMatch "\/myfolder\/.*\.(html)$">.  // replace with the right regex
+    Header set Cache-Control “private”
+</LocationMatch>
 ```
 
 * Observera att andra metoder, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), inte kan åsidosätta värden.
@@ -70,13 +81,9 @@ Kontrollera att resurser som ska hållas privata i stället för cachelagrade in
 * standard kan inte anges med den `EXPIRATION_TIME` variabel som används för HTML-/textfiltyper
 * cacheminnets förfallotid kan anges med samma LocationMatch-strategi som beskrivs i avsnittet html/text genom att ange lämplig regex
 
-## Dispatcher {#disp}
+## Invalidering av Dispatcher-cache {#disp}
 
-Trafiken går igenom en webbserver med apache som har stöd för moduler som dispatchern. Avsändaren används främst som cache för att begränsa bearbetningen av publiceringsnoderna för att öka prestandan.
-
-Så som beskrivs i CDN:s cachelagringsavsnittet kan regler tillämpas på dispatcherkonfigurationen för att ändra standardinställningarna för cacheförfallotid.
-
-I resten av det här avsnittet beskrivs överväganden som rör invalidering av dispatchercache. För de flesta kunder bör det inte vara nödvändigt att ogiltigförklara dispatchercachen, i stället förlita sig på att dispatchern uppdaterar cachen när innehållet publiceras om, och CDN respekterar förfallorubriker för cachen.
+I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i stället förlita dig på att dispatchern uppdaterar sin cache när innehållet publiceras om, och att CDN respekterar förfallorubriker för cache.
 
 ### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
 
