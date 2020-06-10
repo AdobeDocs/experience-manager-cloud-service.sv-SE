@@ -2,9 +2,9 @@
 title: CDN i AEM som molntjänst
 description: CDN i AEM som molntjänst
 translation-type: tm+mt
-source-git-commit: 0080ace746f4a7212180d2404b356176d5f2d72c
+source-git-commit: 9d99a7513a3a912b37ceff327e58a962cc17c627
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '889'
 ht-degree: 2%
 
 ---
@@ -37,14 +37,16 @@ Nedan finns en beslutsmatris som jämför de två alternativen. Mer detaljerad i
 
 ## AEM Managed CDN  {#aem-managed-cdn}
 
-Det är enkelt att förbereda sig för innehållsleverans med hjälp av Adobes färdiga CDN enligt beskrivningen nedan:
+Följ dessa för att förbereda materialet för leverans med hjälp av Adobes färdiga CDN:
 
 1. Du skickar det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller den här informationen. Samordna med kundsupport för den här uppgiften.
    **Obs!** Aem as a Cloud Service does not support Domain Validated (DV) certificates.
 1. Informera kundsupporten:
-   * vilken anpassad domän som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id.
+   * vilken anpassad domän som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id. Observera att anpassade domäner på författarsidan inte stöds.
    * om vitlistning av IP-adresser behövs för att begränsa trafiken till en viss miljö.
-1. Kundsupport koordinerar sedan med dig tidpunkten för en CNAME DNS-post och pekar på deras FQDN till `cdn.adobeaemcloud.com`.
+1. Ni bör samordna med kundsupporten om tidpunkten för de nödvändiga ändringarna av DNS-posterna. Instruktionerna är olika beroende på om en apex-post behövs:
+   * Om en apex-post inte behövs ska kunderna ange CNAME DNS-posten till att peka FQDN till `cdn.adobeaemcloud.com`.
+   * Om en apex-post behövs skapar du en A-post som pekar på följande IP-adresser: 151.101.3.10, 151.101.67.10, 151.101.131.10, 151.101.195.10. Kunderna behöver en apex-post om det önskade FQDN matchar DNS-zonen. Detta kan testas med Unix-kommandot för att se om SOA-värdet för utdata matchar domänen. Kommandot `dig anything.dev.adobeaemcloud.com` returnerar till exempel SOA (Start of Authority, d.v.s. zonen) för `dev.adobeaemcloud.com` att inte vara en APEX-post, medan `dig dev.adobeaemcloud.com` returnerar SOA på `dev.adobeaemcloud.com` så sätt att det är en apex-post.
 1. Du meddelas när SSL-certifikaten upphör att gälla så att du kan skicka om de nya SSL-certifikaten.
 
 **Begränsa trafik**
