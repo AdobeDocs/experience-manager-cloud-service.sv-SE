@@ -2,9 +2,9 @@
 description: 'Dynamic Media Newsletter från Experience League är ett månatligt nyhetsbrev. Den är utformad för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du kan börja få värde direkt. Det här enda nyhetsbrevet innehåller värdefulla resurser för att bygga upp kunskap, bland annat videor, översikter över lösningar och introduktioner av några av de viktigaste funktionerna som förinställningar för bilder, visningsinställningar, videoprofiler med mera. '
 title: Dynamic Media Newsletter
 translation-type: tm+mt
-source-git-commit: 1ee8cd31a83850d0d6c90cb5452015a57ee728ef
+source-git-commit: 6eb9f2fd6f692df26e4bd1b56cbc18db84b2f53f
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,21 @@ I det här enastående nyhetsbrevet får du uppleva värdefulla resurser för ku
 [Registrera dig](https://www.adobe.com/subscription/dynamic-media-newsletter.html) för att få Dynamic Media Newsletter månadsvis i din inkorg.
 
 ## Missade du ett nummer av Dynamic Media Newsletter?
+
+* **[maj 2020, utgåva 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
+
+   I detta nummer:
+
+   * Vilken affärskontinuitet innebär i osäkra tider.
+   * Viktiga steg från det första heldigitala Adobe Summit.
+   * Uppdelade Experience Manager-sessioner måste övervakas.
+   * Nöjda kunder: Under Armor.
+   * Missa aldrig något Experience Insider-webbinarium.
+   * Offentlig sektor: Det akuta behovet av digital registrering.
+   * Se vad som är nytt i Experience Manager Innovation.
+   * Bygg upp dina färdigheter i Experience Manager *live* med Adobes proffs.
+   * Anslut till Adobe Experience Manager Community.
+   * Snabbspåra din Adobe-expertis med Adobe Experience League.
 
 * **[April 2020, utgåva 3](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@DRPFipWV_3bgH_oxl1monOhd4auNDxFVTBWB-uKB6lM_BixlVqja2E5Ml7DbtOy6pARL78LPxljqgxEEAr7RBsRp8WOyn-Zw6hQ8MNoFn9i9WMXm.html)**
 
