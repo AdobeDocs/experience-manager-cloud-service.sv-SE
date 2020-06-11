@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 3d818278c53f3d3b4c5b53aa5b78d06d876bf05f
+source-git-commit: 47773a56f8bb24342281068a8c4d03d6edfb9277
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -16,18 +16,18 @@ ht-degree: 0%
 
 Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på när du kör Cloud Readiness Analyzer (CRA):
 
-* CRA stöds på AEM-källinstanser med version 6.1 och senare.
-* CRA kan köras i alla miljöer.
+* CRA stöds på AEM-källinstanser med version 6.1 och senare
+* CRA kan köras i alla miljöer (helst *scenmiljöer* )
 
    >[!NOTE]
-   >För att öka avkänningsfrekvensen och undvika flaskhalsar i affärskritiska instanser rekommenderar vi att CRA körs i källförfattarens stagningsmiljöer som ligger så nära produktionsmiljöer som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Den kan också köras på en klon av publiceringsmiljön.
+   >För att öka avkänningsfrekvensen och undvika flaskhalsar i affärskritiska instanser rekommenderar vi att CRA körs i källförfattarens stagningsmiljöer som ligger så nära produktionsmiljöer som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Den kan även köras på en klon av *publiceringsmiljön* .
 
 ## Tillgänglighet {#availability}
 
-Cloud Readiness Analyzer (CRA) kan hämtas som en zip-fil från Software Distribution Portal. Du kan installera paketet via Package Manager på din källinstans av Adobe Experience Manager (AEM).
+Cloud Readiness Analyzer kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via Package Manager på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
->Hämta Cloud Readiness Analyzer (CRA) från *väntande*.
+>Hämta Cloud Readiness Analyzer från portalen för programvarudistribution som *väntar*.
 
 ## Köra Cloud Readiness Analyzer {#running-tool}
 
@@ -37,20 +37,32 @@ Följ det här avsnittet för att lära dig hur du kör Cloud Readiness Analyzer
 
 ### Visa resultaten {#viewing-the-results}
 
-Det finns två sätt att visa CRA-utdata:
+>[!IMPORTANT]
+>Rapporterna som genereras från Cloud Readiness Analyzer baseras på mönsteridentifierare. Mer information finns i [Mönsteridentifierare](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html) .
 
-1. Använda den strukturerade rapporten
+Det finns två sätt att visa utdata från Cloud Readiness Analyzer:
+
+1. **Använda den sorterade rapporten**
 
    >[!NOTE]
    >Den ordnade rapporten finns på AEM version 6.3 och senare.
 
-Se CRA-dokumentplanering och status för att beskriva prioritetsnivåer i rapporten
+   Eller
 
-1. Visa CRA-utdata (kan användas med AEM version 6.1 och senare):
+1. **Visa CRA:s utdata**
 
-   1. Navigera till AEM Web Console genom att gå till.
+   Följ stegen nedan för att visa utdata från Cloud Readiness Analyzer:
 
-   1. Välj Status - Cloud Readiness Analyzer enligt bilden nedan.
+   >[!NOTE]
+   >Stegen nedan gäller för AEM version 6.1 och senare.
+
+   1. Navigera till **AEM Web Console** med `https://serveraddress:serverport/system/console/configMgr`.
+
+   1. Välj **Status - Mönsteravkännare** enligt bilden nedan.
+
+#### Visa rapporten i AEM 6.1-instanser {#aem-instances-report}
+
+Du kan hämta CSV-rapporten för AEM 6.1. Detta väntar.
 
 #### Om prioritetsnivåer i rapporten {#importance-levels}
 
