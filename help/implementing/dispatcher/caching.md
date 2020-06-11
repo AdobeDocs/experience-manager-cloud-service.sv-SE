@@ -2,7 +2,7 @@
 title: Cachelagra i AEM som en molntjänst
 description: 'Cachelagra i AEM som en molntjänst '
 translation-type: tm+mt
-source-git-commit: 9d99a7513a3a912b37ceff327e58a962cc17c627
+source-git-commit: 18c2f70acd33c83a0d98ccb658d3e9be18b34c8b
 workflow-type: tm+mt
 source-wordcount: '1358'
 ht-degree: 0%
@@ -83,7 +83,7 @@ Kontrollera att resurser som ska hållas privata i stället för cachelagrade in
 
 ## Invalidering av Dispatcher-cache {#disp}
 
-I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i stället förlita dig på att dispatchern uppdaterar sin cache när innehållet publiceras om, och att CDN respekterar förfallorubriker för cache.
+I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i stället förlita dig på att dispatchern uppdaterar sin cache när innehållet publiceras om och att CDN respekterar förfallorubriker för cache.
 
 ### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
 
