@@ -4,9 +4,9 @@ description: Bästa tillvägagångssätt för att integrera en AEM-instans med A
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 82dd9bd69fe994f74c7be8a571e386f0e902f6a1
+source-git-commit: 496ad0831d20eb7653a3c5727999a2abc5728ec7
 workflow-type: tm+mt
-source-wordcount: '3300'
+source-wordcount: '3302'
 ht-degree: 18%
 
 ---
@@ -173,7 +173,7 @@ AEM Assets stöder två typer av användare baserat på deras åtkomst till AEM 
 
 #### Kreativa användare med direkt åtkomst till DAM {#creative-users-with-direct-access-to-dam}
 
-Vanligtvis har interna kreativa team, byråer/kreatörer som är anställda på det interna nätverket tillgång till DAM-instansen, inklusive AEM-inloggning. AEM och nätverksinfrastruktur kan konfigureras för att ge direktåtkomst till externa parter - vanligen betrodda organisationer som byråer som arbetar för en kund - för att få åtkomst till AEM via nätverket, till exempel via VPN eller IP-vitlista.
+Vanligtvis har interna kreativa team, byråer/kreatörer som är anställda på det interna nätverket tillgång till DAM-instansen, inklusive AEM-inloggning. AEM och nätverksinfrastruktur kan konfigureras för att ge direktåtkomst till externa parter - vanligen betrodda organisationer som byråer som arbetar för en klient - för att få åtkomst till AEM via nätverket, till exempel via listan över tillåtna VPN- eller IP-adresser.
 
 I sådana fall ger Adobe Asset Link eller AEM-skrivbordsappen enkel åtkomst till det slutliga/godkända materialet och gör att du kan spara kreativa resurser på DAM.
 
@@ -181,12 +181,12 @@ I sådana fall ger Adobe Asset Link eller AEM-skrivbordsappen enkel åtkomst til
 
 Externa byråer och frilansare som inte har direkt åtkomst till DAM-instansen kan behöva åtkomst till godkända resurser eller lägga till sina nya designer i DAM.
 
-Använd följande strategier för att ge tillgång till slutliga/godkända mediefiler:
+Använd följande strategier för att ge åtkomst till slutliga/godkända mediefiler:
 
 * Använd skrivbordsappen om Asset Link inte fungerar.
 * Använd [AEM Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för säker distribution av material till externa partners
 * Använd en anpassad implementering av en distributions- och källportal baserad på [resursdelningskommentarer](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* Använd åtkomstkontrollen som konfigurerats i AEM och nödvändig nätverksinfrastruktur (till exempel vitlista för VPN och IP) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda AEM Web UI för att hämta resurser och överföra nytt innehåll till din DAM.
+* Använd åtkomstkontrollen som konfigurerats i AEM och nödvändig nätverksinfrastruktur (till exempel VPN och IP-tillåtna listor) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda AEM Web UI för att hämta resurser och överföra nytt innehåll till din DAM.
 
 #### Pågående arbete med resurser från AEM {#work-in-progress-on-assets-from-aem}
 
