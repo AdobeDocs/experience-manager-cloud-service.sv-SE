@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 367456bfad25a83a36ffe45e2d6092367740cd92
+source-git-commit: 496ad0831d20eb7653a3c5727999a2abc5728ec7
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1846'
 ht-degree: 3%
 
 ---
@@ -99,9 +99,9 @@ Ett tomt värde innebär att resursbearbetningen baseras på originalets pixeldi
 
 #### Inkluderingsregler för MIME-typ {#mime-type-inclusion-rules}
 
-När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för återgivningsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (&quot;svartlistning&quot;).
+När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för återgivningsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (blockerad lista).
 
-I annat fall kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den matchar listan genereras återgivningen (&quot;vitlista&quot;).
+I annat fall kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den matchar listan genereras återgivningen (lista över tillåtna).
 
 #### Särskild FPO-återgivning {#special-fpo-rendition}
 
