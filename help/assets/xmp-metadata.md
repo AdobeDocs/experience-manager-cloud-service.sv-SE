@@ -3,10 +3,10 @@ title: XMP-metadata
 description: Läs om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 496ad0831d20eb7653a3c5727999a2abc5728ec7
 workflow-type: tm+mt
-source-wordcount: '1386'
-ht-degree: 18%
+source-wordcount: '1413'
+ht-degree: 15%
 
 ---
 
@@ -21,7 +21,7 @@ Förutom universell metadatakodning som kan bäddas in i alla filformat, erbjude
 
 AEM Assets stöder metadatastandarden XMP. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
-Produktionspersonal kan till exempel använda det inbyggda XMP-stödet i Adobes program för att skicka information över flera filformat. AEM Assets-databasen extraherar XMP-metadata och använder dem för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
+Produktionspersonal kan till exempel använda det inbyggda XMP-stödet i Adobes program för att skicka information till flera filformat. AEM Assets-databasen extraherar XMP-metadata och använder dem för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
 
 XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillhandahålla en datamodell, en lagringsmodell och scheman. Alla dessa begrepp beskrivs i detta avsnitt.
 
@@ -131,11 +131,11 @@ Metadataändringarna sprids till miniatyrbilden för återgivningarna.140.100.pn
 
 ### Filtrera XMP-metadata {#filtering-xmp-metadata}
 
-AEM Resurser stöder både svartlistsfiltrering och vitlistsfiltrering av egenskaper/noder för XMP-metadata som läses från resurbinärfiler och lagras i JCR när resurser hämtas.
+AEM Resurser har stöd för filtrering av egenskaper/noder för XMP-metadata som läses från objektbinärfiler och lagras i JCR när resurser hämtas. Filtrering är möjlig via en blockerad lista och en tillåten lista.
 
-Med svartlistsfiltrering kan du importera alla XMP-metadataegenskaper utom de egenskaper som anges för uteslutning. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om svartlistsfiltrering tillåter ett stort antal resurser med flera XMP-metadata att importeras, kan AEM-instansen/klustret stöta på stabilitetsproblem, till exempel övervakningsköer som stoppats.
+Genom att filtrera med hjälp av en blockerad lista kan du importera alla XMP-metadataegenskaper utom de egenskaper som har angetts för undantag. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om filtrering med hjälp av en blockerad lista tillåter att ett stort antal resurser med flera XMP-metadata importeras, kan AEM-instansen/klustret stöta på stabilitetsproblem, till exempel övervakningskö med stoppning.
 
-Vitlistsfiltrering av XMP-metadata löser problemet genom att du kan definiera de XMP-egenskaper som ska importeras. På så sätt ignoreras andra/okända XMP-egenskaper. Du kan lägga till några av dessa egenskaper i svartlistningsfiltret för bakåtkompatibilitet.
+Filtrering av XMP-metadata via tillåten lista löser problemet genom att du kan definiera XMP-egenskaperna som ska importeras. På så sätt ignoreras andra/okända XMP-egenskaper. För bakåtkompatibilitet kan du lägga till några av dessa egenskaper i filtret som använder en blockerad lista.
 
 >[!NOTE]
 >
@@ -143,16 +143,17 @@ Vitlistsfiltrering av XMP-metadata löser problemet genom att du kan definiera d
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfigurationen.
-1. Om du vill använda vitlistefiltrering markerar du **[!UICONTROL Apply Whitelist to XMP Properties]** och anger de egenskaper som ska importeras i rutan **[!UICONTROL Whitelisted XML Names for XMP filtering]**.
+1. Om du vill använda filtrering via en tillåten lista markerar du **[!UICONTROL Apply Whitelist to XMP Properties]** och anger de egenskaper som ska importeras i **[!UICONTROL Whitelisted XML Names for XMP filtering]** rutan.
 
-1. Om du vill filtrera bort svartlistade XMP-egenskaper efter att ha använt vitlistefiltrering anger du dem i rutan **[!UICONTROL Blacklisted XML Names for XMP filtering]**.
+1. Om du vill filtrera bort blockerade XMP-egenskaper efter att ha använt filtrering via tillåten lista anger du dem i **[!UICONTROL Blacklisted XML Names for XMP filtering]** rutan.
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Apply Blacklist to XMP Properties]** option is selected by default. Svartlistsfiltrering är alltså aktiverat som standard. Om du vill inaktivera filtrering av svarta listor avmarkerar du **[!UICONTROL Apply Blacklist to XMP Properties]** alternativet.
+   >The **[!UICONTROL Apply Blacklist to XMP Properties]** option is selected by default. Som standard är filtrering med hjälp av en blockerad lista aktiverat. Om du vill inaktivera sådan filtrering avmarkerar du **[!UICONTROL Apply Blacklist to XMP Properties]** alternativet.
 
 1. Spara ändringarna.
 
 >[!MORELIKETHIS]
 >
 >* [XMP-specifikation av Adobe](https://www.adobe.com/devnet/xmp.html)
+
