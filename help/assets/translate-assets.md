@@ -3,9 +3,9 @@ title: Skapa och hantera digitala resurser på flera språk och kör översättn
 description: Lär dig automatisera arbetsflöden för översättning av resurser, inklusive binära filer, metadata och taggar till flera språk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c978be66702b7f032f78a1509f2a11315d1ed89f
+source-git-commit: 496ad0831d20eb7653a3c5727999a2abc5728ec7
 workflow-type: tm+mt
-source-wordcount: '2468'
+source-wordcount: '2465'
 ht-degree: 19%
 
 ---
@@ -55,7 +55,7 @@ I Adobe Experience Manager (AEM) Assets inkluderas flerspråkiga resurser i mapp
 
 Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel `/content/dam/it` är den italienska språkroten för den italienska språkkopian. För språkkopior måste en [korrekt konfigurerad språkrot](#create-a-language-root) användas, så att rätt språk används när översättningar av källresurser utförs.
 
-Språkkopian som du ursprungligen lade till resurser för är språkinställningen. Språkmallsidan är källan som översätts till andra språk. En exempelmapphierarki innehåller flera språkrötter:
+Språkkopian som du ursprungligen lade till resurser för är det primära språket. Språkets primära språk är källan som översätts till andra språk. En exempelmapphierarki innehåller flera språkrötter:
 
 ```shell
 /content
@@ -71,9 +71,9 @@ Språkkopian som du ursprungligen lade till resurser för är språkinställning
 
 Utför följande steg för att förbereda dina resurser för översättning:
 
-1. Skapa språkroten för din språkinställning. Språkroten för den engelska språkkopian i exempelmapphierarkin är till exempel */content/dam/en*. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](#create-a-language-root).
+1. Skapa språkroten för det primära språket. Språkroten för den engelska språkkopian i exempelmapphierarkin är till exempel `/content/dam/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](#create-a-language-root).
 
-1. Lägg till resurser i din språkinställning.
+1. Lägg till resurser i ditt primära språk.
 1. Skapa språkroten för varje målspråk som du behöver en språkkopia för.
 
 ### Skapa en språkrot {#create-a-language-root}
@@ -90,7 +90,7 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
 Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista över språkrötter som har skapats i AEM Resurser.
 
-1. I resurskonsolen väljer du den språkinställning som du vill skapa språkkopior för.
+1. I resurskonsolen väljer du det språk som är primärt för vilket du vill skapa språkkopior.
 1. Klicka på eller tryck på ikonen GlobalNav och välj **[!UICONTROL References]** att öppna referensrutan.
 1. Klicka eller tryck på **[!UICONTROL Language Copies]** referensrutan. På panelen Språkkopior visas språkkopiorna för resurserna.
 
