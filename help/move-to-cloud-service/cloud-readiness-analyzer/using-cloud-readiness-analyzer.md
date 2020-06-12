@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 47773a56f8bb24342281068a8c4d03d6edfb9277
+source-git-commit: f0e69dba5d670d141c82e762069f4831c2527dbe
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -35,42 +35,54 @@ Följ det här avsnittet för att lära dig hur du kör Cloud Readiness Analyzer
 
 1. Välj Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Cloud Readiness Analyzer**.
 
-### Visa resultaten {#viewing-the-results}
+   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-1.png)
+
+1. När du klickar på **Cloud Readiness Analyzer** börjar verktyget generera rapporten och efter några minuter visas den genererade rapporten.
+
+   >[!NOTE]
+   >Du måste rulla nedåt på sidan för att se hela rapporten.
+
+   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-2.png)
+
+### Visa resultaten i sammanfattningsrapporten {#viewing-the-results}
 
 >[!IMPORTANT]
 >Rapporterna som genereras från Cloud Readiness Analyzer baseras på mönsteridentifierare. Mer information finns i [Mönsteridentifierare](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html) .
 
-Det finns två sätt att visa utdata från Cloud Readiness Analyzer:
+När du rullar nedåt på sidan för att visa den fullständiga sammanfattningsrapporten kan du se följande information för varje kategori som markeras i rapporten:
 
-1. **Använda den sorterade rapporten**
+1. **Prioritetsnivå**
 
-   >[!NOTE]
-   >Den ordnade rapporten finns på AEM version 6.3 och senare.
+   I följande tabell beskrivs innebörden av de olika prioritetsnivåerna för Mönsteravkännare och Molnberedskapsanalys.
 
-   Eller
+   | Prioritetsnivå | Beskrivning |
+   |--- |--- |
+   | INFO/0 | Denna slutsats lämnas i informationssyfte. |
+   | RÅDGIVNING/1 | Detta kan vara ett uppgraderingsproblem. Ytterligare undersökningar rekommenderas. |
+   | MAJOR/2 | Denna slutsats är sannolikt ett uppgraderingsproblem som bör åtgärdas. |
+   | KRITISK/3 | Detta är sannolikt ett uppgraderingsproblem som måste åtgärdas för att förhindra funktionsförlust eller prestanda. |
 
-1. **Visa CRA:s utdata**
+1. **Beskrivning** Beskrivningen innehåller information om den rapporterade kategorin.
 
-   Följ stegen nedan för att visa utdata från Cloud Readiness Analyzer:
+1. **Dokumentations-URL** Med dokumentations-URL kan du visa den tekniska dokumentationen för den associerade typen.
 
-   >[!NOTE]
-   >Stegen nedan gäller för AEM version 6.1 och senare.
+1. **Meddelande** En beskrivning av sökningen i ett enda meddelande.
 
-   1. Navigera till **AEM Web Console** med `https://serveraddress:serverport/system/console/configMgr`.
+### Visa resultaten i ett CSV-format {#viewing-the-results-csv}
 
-   1. Välj **Status - Mönsteravkännare** enligt bilden nedan.
+Sammanfattningsrapporten finns i AEM-användargränssnittet. Du kan hämta den fullständiga rapporten i ett kommaseparerat värdeformat (CSV) som är användbart under omfaktoriseringsprocessen.
+
+Följ stegen nedan för att skapa ett CSV-format för sammanfattningsrapporten:
+
+1. 
+   1. Välj Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Cloud Readiness Analyzer**.
+
+1. När rapporten har skapats klickar du på **CSV** för att hämta den fullständiga sammanfattningsrapporten i CSV-format (kommaavgränsade värden), vilket visas i bilden nedan.
+
+![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-3.png)
+
 
 #### Visa rapporten i AEM 6.1-instanser {#aem-instances-report}
 
 Du kan hämta CSV-rapporten för AEM 6.1. Detta väntar.
 
-#### Om prioritetsnivåer i rapporten {#importance-levels}
-
-I följande tabell beskrivs innebörden av de olika prioritetsnivåerna för Mönsteravkännare och Molnberedskapsanalys.
-
-| Prioritetsnivå | Beskrivning |
-|--- |--- |
-| INFO/0 | Denna slutsats lämnas i informationssyfte. |
-| RÅDGIVNING/1 | Detta kan vara ett uppgraderingsproblem. Ytterligare undersökningar rekommenderas. |
-| MAJOR/2 | Denna slutsats är sannolikt ett uppgraderingsproblem som bör åtgärdas. |
-| KRITISK/3 | Detta är sannolikt ett uppgraderingsproblem som måste åtgärdas för att förhindra funktionsförlust eller prestanda. |
