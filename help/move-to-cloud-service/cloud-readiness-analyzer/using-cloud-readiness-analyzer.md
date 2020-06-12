@@ -2,10 +2,10 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: f0e69dba5d670d141c82e762069f4831c2527dbe
+source-git-commit: 1739f81d4894f3e04cc4119f344a3bea5bd042d8
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 0%
+source-wordcount: '556'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ Följ det här avsnittet för att lära dig hur du kör Cloud Readiness Analyzer
 
    ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-1.png)
 
-1. När du klickar på **Cloud Readiness Analyzer** börjar verktyget generera rapporten och efter några minuter visas den genererade rapporten.
+1. När du klickar på **Cloud Readiness Analyzer** börjar verktyget generera rapporten och efter några minuter är sammanfattningsrapporten tillgänglig på din AEM-instans.
 
    >[!NOTE]
    >Du måste rulla nedåt på sidan för att se hela rapporten.
@@ -77,12 +77,21 @@ Följ stegen nedan för att skapa ett CSV-format för sammanfattningsrapporten:
 1. 
    1. Välj Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Cloud Readiness Analyzer**.
 
-1. När rapporten har skapats klickar du på **CSV** för att hämta den fullständiga sammanfattningsrapporten i CSV-format (kommaavgränsade värden), vilket visas i bilden nedan.
+1. När rapporten är tillgänglig klickar du på **CSV** för att hämta den fullständiga sammanfattningsrapporten i CSV-format (kommaavgränsade värden), vilket visas i bilden nedan.
 
 ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-3.png)
 
 
 #### Visa rapporten i AEM 6.1-instanser {#aem-instances-report}
 
-Du kan hämta CSV-rapporten för AEM 6.1. Detta väntar.
+Följ stegen nedan för att hämta CSV-rapporten för Adobe Experience Manager (AEM) 6.1:
+
+1.Navigera till **Adobe Experience Manager Web ConsoleConfiguration** med `https://serveraddress:serverport/system/console/configMgr`.
+
+1. Välj fliken **Status** och sök efter **Mönsteravkännare** i listrutan enligt bilden nedan.
+
+   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-4.png)
+
+1. Du kan hämta sammanfattningsrapporten i en ZIP-mapp eller i JSON-format.
+
 
