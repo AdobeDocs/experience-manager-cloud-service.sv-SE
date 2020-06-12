@@ -2,9 +2,9 @@
 title: Översikt över Cloud Readiness Analyzer
 description: Översikt över Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 64b685a7c9fbb105ed66dc4b3212b2bf91dee4af
+source-git-commit: f0e69dba5d670d141c82e762069f4831c2527dbe
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ Ytterligare information om kategorierna och eventuella konsekvenser och lösning
 >[!NOTE]
 >Rapporten Cloud Readiness Analyzer snabbar upp processen att beräkna den tid och kostnad som krävs för att gå över till AEM som molntjänst genom att tillhandahålla information som annars skulle behöva samlas in och utvärderas manuellt.
 
-Sammanfattningsrapporten finns i AEM-användargränssnittet. Det finns ett alternativ för att hämta den fullständiga rapporten i ett kommaavgränsat värdeformat (CSV) som är användbart under omfaktoriseringsprocessen.
+Du kan även hämta sammanfattningsrapporten från AEM-användargränssnittet. Se **Visa resultaten i ett CSV-format** om du vill ha mer information.
