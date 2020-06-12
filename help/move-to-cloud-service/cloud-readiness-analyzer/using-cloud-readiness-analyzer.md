@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: d72f02f76f9be61ef4c3eefd790ff8abbb23a3d8
+source-git-commit: 1ca9b2091befbafad0878d83fc7963c779146b2a
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1768'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på n
 
 * CRA-rapporten byggs med hjälp av utdata från Adobe Experience Manager (AEM) [Pattern Detector](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Mönsteravkännare som används av CRA ingår i CRA-installationspaketet.
 
-* CRA-listan kan bara köras av `admin` användaren eller en användare i `Administrators` gruppen.
+* CRA kan bara köras av *administratörsanvändaren* eller en användare i gruppen **Administratörer** .
 
 * CRA stöds på AEM-instanser med version 6.1 och senare.
 
@@ -27,7 +27,7 @@ Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på n
    >[!NOTE]
    >För att undvika påverkan på verksamhetskritiska instanser rekommenderar vi att du kör CRA i en *Author* staging-miljö som ligger så nära produktionsmiljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktionen.
 
-* Genereringen av CRA-rapporter kan ta lång tid, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storleken och typen av AEM-databasinnehåll, AEM-versionen och andra faktorer.
+* Genereringen av CRA-rapporter kan ta lång tid, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
 * På grund av den stora tid som krävs för att generera rapporten, lagras resultaten i ett cacheminne och är tillgängliga för efterföljande visning och hämtning tills cacheminnet upphör att gälla eller rapporten uppdateras explicit.
 
@@ -57,30 +57,47 @@ Följ det här avsnittet för att lära dig hur du kör Cloud Readiness Analyzer
 
 För AEM 6.3 och senare är det primära sättet att köra Cloud Readiness Analyzer att:
 
-1. Använd användargränssnittet i Adobe Experience Manager för att navigera till Verktyg -> **Åtgärder** -> **Cloud Readiness Analyzer**.
+1. Välj instansen av Adobe Experience Manager och navigera till verktygen -> **Åtgärder** -> **Cloud Readiness Analyzer**.
 
    >[!NOTE]
    >CRA påbörjar en bakgrundsprocess för att generera rapporten så fort verktyget öppnas. Den visar en indikation på att rapportgenereringen pågår tills rapporten är klar. Du kan stänga webbläsarfliken och komma tillbaka senare för att visa rapporten när den är klar.
 
-När CRA-rapporten har genererats och visats kan du hämta rapporten i ett kommaseparerat format (CSV) genom att klicka på **CSV** -knappen i det övre högra hörnet av verktygssidan.
+1. När CRA-rapporten genereras och visas kan du välja att hämta rapporten med kommaseparerade värden (CSV). Klicka på **CSV** för att ladda ned den fullständiga sammanfattningsrapporten i CSV-format (kommaavgränsade värden), vilket visas i bilden nedan.
 
-Du kan tvinga CRA att rensa sin cache och generera om rapporten genom att klicka på knappen &quot;Uppdatera rapport&quot; i det övre vänstra hörnet.
+   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-3.png)
+
+   >[!NOTE]
+   >Du kan tvinga CRA att rensa sin cache och återskapa rapporten genom att klicka på knappen **Uppdatera rapport** i det övre vänstra hörnet.
 
 ### AEM 6.2 och 6.1 {#aem-specific-versions}
 
-CRA-användargränssnittet är begränsat i AEM 6.2 till en länk som genererar och hämtar CSV-rapporten. I AEM 6.1 fungerar inte användargränssnittet och endast HTTP-gränssnittet kan användas.
+Användargränssnittet i Cloud Readiness Analyzer är begränsat i AEM 6.2 till en länk som genererar och hämtar CSV-rapporten. I AEM 6.1 fungerar inte användargränssnittet och endast HTTP-gränssnittet kan användas.
 
 I alla versioner kan den inkluderade mönsteravkännaren köras oberoende av varandra.
 
+Följ stegen nedan för att hämta CSV-rapporten för Adobe Experience Manager (AEM) 6.1 och 6.2:
+
+1.Navigera till **Adobe Experience Manager Web ConsoleConfiguration** med `https://serveraddress:serverport/system/console/configMgr`.
+
+1. Välj fliken **Status** och sök efter **Mönsteravkännare** i listrutan enligt bilden nedan.
+
+   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-4.png)
+
+1. Du kan hämta sammanfattningsrapporten i en ZIP-mapp eller i JSON-format.
+
 ## Sammanfattningsrapport för CRA {#cra-summary-report}
 
-När CRA körs i AEM-användargränssnittet visas rapporten som resultat i verktygsfönstret. Rapportens format är:
+När Cloud Readiness Analyzer körs i AEM-användargränssnittet visas rapporten som resultat i verktygsfönstret.
 
-* Rapportöversikt: Information om själva rapporten, inklusive när den skapades.
-* Systemöversikt: Information om det AEM-system som CRA kördes på.
-* Söker efter kategorier: Flera avsnitt som åtgärdar en eller flera brister i samma kategori. Varje avsnitt innehåller följande: Kategorinamn, undertyper, antal sökningar och deras betydelse, sammanfattning, länk till kategoridokumentation och information om enskild sökning.
+Rapportens format är:
 
-Varje upptäckt tilldelas en prioritetsnivå som anger en grov prioritet för åtgärder. Följande prioritetsnivåer används:
+* *Rapportöversikt*: Information om själva rapporten, inklusive när den skapades.
+* *Systemöversikt*: Information om det AEM-system som CRA kördes på.
+* *Söker efter kategorier*: Flera avsnitt som åtgärdar en eller flera brister i samma kategori. Varje avsnitt innehåller följande: Kategorinamn, undertyper, antal sökningar och deras betydelse, sammanfattning, länk till kategoridokumentation och information om enskild sökning.
+
+Varje upptäckt tilldelas en prioritetsnivå som anger en grov prioritet för åtgärder.
+
+Följ tabellen nedan för att förstå prioritetsnivåerna:
 
 | Prioritet | Beskrivning |
 |--- |--- |
@@ -91,16 +108,7 @@ Varje upptäckt tilldelas en prioritetsnivå som anger en grov prioritet för å
 
 ## CRA CSV-rapport {#crs-csv-report}
 
-När CSV-knappen trycks ned byggs CSV-formatet för CRA-rapporten från resultatcachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas den här rapporten automatiskt som en fil med standardnamnet `results.csv`. Om cacheminnet har gått ut genereras rapporten om innan CSV-filen skapas och hämtas.
-
-Följ stegen nedan för att skapa ett CSV-format för sammanfattningsrapporten från din AEM-instans:
-
-1. 
-   1. Välj Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Cloud Readiness Analyzer**.
-
-1. När rapporten är tillgänglig klickar du på **CSV** för att hämta den fullständiga sammanfattningsrapporten i CSV-format (kommaavgränsade värden), vilket visas i bilden nedan.
-
-   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-3.png)
+När du klickar på alternativet **CSV** från din AEM-instans skapas CSV-formatet för Cloud Readiness Analyzer-rapporten från resultatcachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas den här rapporten automatiskt som en fil med standardnamnet `results.csv`. Om cacheminnet har gått ut genereras rapporten om innan CSV-filen skapas och hämtas.
 
 CSV-formatet för rapporten innehåller information som genereras från utdata för Mönsteravkännare, sorterat och organiserat efter kategorityp, undertyp och prioritetsnivå. Formatet är lämpligt för visning och redigering i program som Microsoft Excel. Avsikten är att ge all sökinformation i ett upprepningsbart format som kan vara användbar vid jämförelse av rapporter över tiden för att mäta förloppet.
 
@@ -133,8 +141,10 @@ HTTP-gränssnittet kan användas på flera olika sätt.
 
 Ett enkelt sätt är att öppna en webbläsarflik i samma webbläsare där du redan har loggat in på AEM som administratör. Du kan ange URL-adressen på fliken Webbläsare och låta resultatet visas eller hämtas av webbläsaren.
 
-Du kan också använda ett kommandoradsverktyg som `curl` eller `wget` alla HTTP-klientprogram. Om du inte använder en webbläsarflik med en autentiserad session måste du ange ett administratörsanvändarnamn och lösenord som en del av kommentaren. Följande är ett exempel på hur detta kan göras:
-`curl -u admin:admin 'http://localhost:4502/apps/readiness-analyzer/analysis/result.csv' > result.csv`
+Du kan också använda ett kommandoradsverktyg som `curl` eller `wget` alla HTTP-klientprogram. Om du inte använder en webbläsarflik med en autentiserad session måste du ange ett administratörsanvändarnamn och lösenord som en del av kommentaren.
+
+Följande är ett exempel på hur detta kan göras:
+`curl -u admin:admin 'http://localhost:4502/apps/readiness-analyzer/analysis/result.csv' > result.csv`.
 
 ### Sidhuvuden och parametrar {#http-headers-and-parameters}
 
@@ -151,7 +161,7 @@ Följande HTTP-frågeparametrar är bekväma när det är svårt att använda HT
 När det finns både en HTTP-rubrik och motsvarande frågeparameter får frågeparametern företräde.
 
 Ett enkelt sätt att initiera genereringen av rapporten via HTTP-gränssnittet är med följande kommando:
-`curl -u admin:admin 'http://localhost:4502/apps/readiness-analyzer/analysis/result.json?max-age=0&respond-async=true'`
+`curl -u admin:admin 'http://localhost:4502/apps/readiness-analyzer/analysis/result.json?max-age=0&respond-async=true'`.
 
 När en begäran har gjorts behöver klienten inte vara aktiv för att rapporten ska kunna genereras. Rapportgenereringen kan initieras med en klient med en HTTP GET-begäran och när rapporten har genererats visas den från cachen i en annan klient eller CSV-verktyget i AEM-användargränssnittet.
 
@@ -175,16 +185,7 @@ Livslängdsvärdet för cacheminnet lagras som egenskapen `maxCacheAge` på föl
 
 Värdet för den här egenskapen är cachelivstiden i sekunder. En administratör kan justera cachelivstiden med CRX/DE Lite-gränssnittet till AEM.
 
-## Visa rapporten i AEM 6.1-instanser {#aem-instances-report}
 
-Följ stegen nedan för att hämta CSV-rapporten för Adobe Experience Manager (AEM) 6.1:
 
-1.Navigera till **Adobe Experience Manager Web ConsoleConfiguration** med `https://serveraddress:serverport/system/console/configMgr`.
-
-1. Välj fliken **Status** och sök efter **Mönsteravkännare** i listrutan enligt bilden nedan.
-
-   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-4.png)
-
-1. Du kan hämta sammanfattningsrapporten i en ZIP-mapp eller i JSON-format.
 
 
