@@ -2,9 +2,9 @@
 title: Använda verktyget Innehållsöverföring
 description: Använda verktyget Innehållsöverföring
 translation-type: tm+mt
-source-git-commit: f2a6b67e3673bf6dfeb63d445074f6d1e05971cf
+source-git-commit: 0ab2631dc5ae67a50522b3a6b29d1cb4c674d193
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1582'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du kör verkt
 
 * Systemkravet för verktyget Innehållsöverföring är AEM 6.3 + och JAVA 8. Om du har en lägre AEM-version måste du uppgradera din innehållsdatabas till AEM 6.5 för att kunna använda verktyget för innehållsöverföring.
 
-* Om du använder en *sandlådemiljö* måste du uppgradera din miljö till version 10 juni 2020 eller senare. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
+* Om du använder en *sandlådemiljö* måste du se till att din miljö uppgraderas till version 10 juni 2020 eller senare. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
 * Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra gruppen AEM-administratörer i den molntjänstinstans du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda verktyget Innehållsöverföring.
 
@@ -26,9 +26,11 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du kör verkt
 
 * Författarens *matningsfas* kommer att skalas ned för hela författardistributionen. Detta innebär att författaren AEM inte är tillgänglig under hela importen.
 
+* Den rekommenderade övre gränsen för den databasstorlek som Content Transfer Tool har stöd för samtidigt är 20 GB.
+
 ## Tillgänglighet {#availability}
 
-Verktyget Innehållsöverföring kan laddas ned som en zip-fil (Content Transfer Tool v1.0.0) från portalen för programdistribution. Du kan installera paketet via Package Manager på din källinstans av Adobe Experience Manager (AEM).
+Innehållsöverföringsverktyget kan laddas ned som en zip-fil (Content Transfer Tool v1.0.0) från Software Distribution Portal. Du kan installera paketet via Package Manager på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
 >Hämta verktyget Innehållsöverföring från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
@@ -207,6 +209,8 @@ Följ stegen nedan:
    Du kan även visa loggar för din migreringsuppsättning från *översiktsskärmen* . Välj migreringsuppsättningen och klicka på statusen under **EXTRACTION** -fältet. I så fall klickar du på **FINISHED** för att visa loggarna på en ny flik.
 
    ![image](/help/move-to-cloud-service/content-transfer-tool/assets/view-log3.png)
+
+1. Om du vill svepa loggarna utan att använda användargränssnittet, kan du SSH in i AEM-källmiljön och svepa igenom `crx-quickstart/cloud-migration/extraction-XXXXX/output.log file`.
 
 ### Ta bort en migreringsuppsättning {#deleting-migration-set}
 
