@@ -2,9 +2,9 @@
 title: Översikt över verktyget Innehållsöverföring
 description: Översikt över verktyget Innehållsöverföring
 translation-type: tm+mt
-source-git-commit: f2a6b67e3673bf6dfeb63d445074f6d1e05971cf
+source-git-commit: 0ab2631dc5ae67a50522b3a6b29d1cb4c674d193
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -54,3 +54,11 @@ Följ nedanstående avsnitt för att få information om riktlinjer och bästa me
 * I inmatningsfasen rekommenderas att du kör inmatningen med *svepningsläget* aktiverat där den befintliga databasen (författaren eller publiceringen) i AEM Cloud-måltjänstmiljön tas bort helt och sedan uppdateras med migreringsuppsättningsdata. Det här läget är mycket snabbare än icke-svepningsläget, där migreringsuppsättningen används ovanpå det aktuella innehållet.
 
 * När innehållsöverföringsaktiviteten har slutförts krävs rätt projektstruktur i molntjänstmiljön för att se till att innehållet återges korrekt i molntjänstmiljön.
+
+* Innan du kör verktyget Innehållsöverföring måste du se till att det finns tillräckligt med diskutrymme i AEM-källinstansens `crx-quickstart` underkatalog. Detta beror på att verktyget Innehållsöverföring skapar en lokal kopia av databasen som senare överförs till migreringsuppsättningen.
+Den allmänna formeln för att beräkna hur mycket ledigt diskutrymme som krävs är följande:
+   *datalagringsstorlek + nodlagringsstorlek * 1.5*
+
+   * För *datalagringsstorleken* används 64 GB för innehållsöverföringsverktyget, även om det faktiska datalagret är större.
+   * Storleken på *nodarkivet* är segmentlagringskatalogen eller databasstorleken MongoDB.
+För en segmentbutik på 20 GB krävs därför 94 GB ledigt diskutrymme.
