@@ -2,9 +2,9 @@
 title: Översikt över verktyget Innehållsöverföring
 description: Översikt över verktyget Innehållsöverföring
 translation-type: tm+mt
-source-git-commit: 0ab2631dc5ae67a50522b3a6b29d1cb4c674d193
+source-git-commit: 1ca9b2091befbafad0878d83fc7963c779146b2a
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -57,8 +57,8 @@ Följ nedanstående avsnitt för att få information om riktlinjer och bästa me
 
 * Innan du kör verktyget Innehållsöverföring måste du se till att det finns tillräckligt med diskutrymme i AEM-källinstansens `crx-quickstart` underkatalog. Detta beror på att verktyget Innehållsöverföring skapar en lokal kopia av databasen som senare överförs till migreringsuppsättningen.
 Den allmänna formeln för att beräkna hur mycket ledigt diskutrymme som krävs är följande:
-   *datalagringsstorlek + nodlagringsstorlek * 1.5*
+   `data store size + node store size * 1.5`
 
-   * För *datalagringsstorleken* används 64 GB för innehållsöverföringsverktyget, även om det faktiska datalagret är större.
-   * Storleken på *nodarkivet* är segmentlagringskatalogen eller databasstorleken MongoDB.
+   * *datalagringsstorlek*: Innehållsöverföringsverktyget använder 64 GB, även om det faktiska datalagret är större.
+   * *nodarkivstorlek*: storlek på segmentlagringskatalog eller storlek på MongoDB-databas.
 För en segmentbutik på 20 GB krävs därför 94 GB ledigt diskutrymme.
