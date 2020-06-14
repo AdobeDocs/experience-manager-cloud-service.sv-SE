@@ -3,9 +3,9 @@ title: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience M
 description: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience Manager som en molntjänst.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 165dc4af656ce1bc431d2f921775ebda4cf4de9f
+source-git-commit: 6e0ba39fadcea5929f593bcb5077708656179f48
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2061'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,9 @@ Författare kan skapa och redigera textinnehåll i Experience Manager med hjälp
 | Redigeringsläge | Redigeringsområde | Rekommenderade funktioner som ska aktiveras |
 |--- |--- |--- |
 | Textbunden | On-place editing for quick, minor edits; Formatera utan att öppna en dialogruta | Minimala RTE-funktioner |
-| RTE helskärm | Täcker hela sidan | Alla RTE-funktioner som krävs |
+| RTE i helskärmsläge | Täcker hela sidan | Alla RTE-funktioner som krävs |
 | Dialog | Dialogrutan visas ovanpå sidinnehållet men täcker inte hela sidan | Aktivera funktioner snabbt och effektivt |
-| Dialogruta i helskärmsläge | Samma som helskärmsläge. innehåller fält i dialogrutan vid sidan om textredigeringsprojektet | Alla RTE-funktioner som krävs |
+| Dialogruta i helskärmsläge | Samma som helskärmsläge, innehåller fält i dialogrutan vid sidan om textredigeringsprojektet | Alla RTE-funktioner som krävs |
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ När innehållet öppnas (med ett långsamt dubbelklick) kan det redigeras på s
 
 *Bild: Inline-redigering med grundläggande alternativ i verktygsfältet.*
 
-### Helskärmsredigering {#full-screen-editing}
+### Redigering i helskärmsläge {#full-screen-editing}
 
 Experience Manager-komponenter kan öppnas i helskärmsläge som döljer sidinnehållet och tar upp den tillgängliga skärmen. Överväg att redigera i helskärmsläge som en detaljerad version av den infogade redigeringen eftersom den erbjuder de flesta redigeringsalternativen. Du kan öppna den genom att klicka på ![rte_fullscreen](assets/rte_fullscreen.png)i det kompakta verktygsfältet när du använder det infogade redigeringsläget.
 
@@ -113,7 +113,7 @@ I följande tabell visas de aktuella plugin-programmen:
 
 >[!NOTE]
 >
->Plugin-programmet för helskärm stöds inte i dialogruteläge. Använd inställningen för `dialogFullScreen` att konfigurera verktygsfältet för helskärmsläge.
+>Plugin-programmet för helskärmsläge stöds inte i dialogruteläge. Använd inställningen för `dialogFullScreen` att konfigurera verktygsfältet för helskärmsläge.
 
 ## Förstå konfigurationssökvägar och -platser {#understand-the-configuration-paths-and-locations}
 
@@ -213,13 +213,13 @@ Använd följande exempelkonfiguration om du vill konfigurera verktygsfältet f�
 </uiSettings>
 ```
 
-Olika gränssnittsinställningar används för textbundet läge och helskärmsläge. Verktygsfältsegenskapen används för att ange knapparna i verktygsfältet.
+Olika gränssnittsinställningar används för infogat läge och helskärmsläge. Egenskapen toolbar anger verktygsfältets alternativ.
 
-Om knappen i sig själv är en funktion (till exempel `Bold`), anges den som `PluginName#FeatureName` (till exempel `links#modifylink`).
+Om alternativet i sig själv är en funktion (till exempel `Bold`) anges det som `PluginName#FeatureName` (till exempel `links#modifylink`).
 
-Om knappen är en pekare (som innehåller vissa funktioner i ett plugin-program) anges den som `#PluginName` (till exempel `#format`).
+Om alternativet är en pover (som innehåller vissa funktioner i ett plugin-program) anges det som `#PluginName` (till exempel `#format`).
 
-Avgränsare (`|`) mellan en grupp knappar kan anges med `-`.
+Avgränsare (`|`) mellan en grupp alternativ kan anges med `-`.
 
 Popup-noden under infogat läge eller helskärmsläge innehåller en lista över de poseringar som används. Varje underordnad nod under popopovers-noden namnges efter plugin-programmet (till exempel format). Den har egenskapen &quot;items&quot; som innehåller en lista med funktioner för plugin-programmet (till exempel format#bold).
 
