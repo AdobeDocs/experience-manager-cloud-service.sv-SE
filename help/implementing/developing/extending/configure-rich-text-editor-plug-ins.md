@@ -4,7 +4,7 @@ description: Lär dig konfigurera plugin-programmen för AEM Rich Text Editor s�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b5af8cad55c8644ba613370cf65b6a04b3abf9ed
+source-git-commit: 78f1e6427d5918639e56a89ca1f94fc402e34fee
 workflow-type: tm+mt
 source-wordcount: '4334'
 ht-degree: 0%
@@ -490,7 +490,7 @@ I CRXDE visas det representerade tecknet när egenskapen har sparats. Se exemple
 
 ### Definiera ett teckenintervall {#definerangechar}
 
-1. Använd steg 1 till 3 från [Definiera ett enskilt tecken](#definingasinglecharacter).
+1. Använd steg 1 till 3 från [Definiera ett enskilt tecken](#definesinglechar).
 1. Under `chars` Lägg till en ny nod som ska innehålla definitionen av teckenintervallet:
 
    * **Namn** som du kan ange, men som ska återspegla teckenintervallet; t.ex. pennor.
