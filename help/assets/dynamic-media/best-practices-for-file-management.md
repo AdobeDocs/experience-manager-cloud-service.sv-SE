@@ -2,9 +2,9 @@
 title: Bästa metoderna för att ordna dina digitala resurser för att använda profiler
 description: Tips och vedertagna metoder för att namnge, ordna och hantera metadata för filer med digitala resurser.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: 78e3f5f0324383578c8f4f91f7d07a2bd12f01d4
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för att organisera digitala resurser så att de använder profiler {#best-practices-for-organizing-your-digital-assets-for-using-profiles}
 
-Ett viktigt koncept när det gäller användningen av profiler i AEM Resurser är att de tilldelas mappar. I en profil finns inställningar i form av metadataprofiler, tillsammans med videoprofiler eller bildprofiler. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Därför har hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar stor betydelse för hur resurserna bearbetas av en profil.
+Ett viktigt koncept när det gäller användningen av profiler i AEM Assets är att de tilldelas mappar. I en profil finns inställningar i form av metadataprofiler, tillsammans med videoprofiler eller bildprofiler. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Därför har hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar stor betydelse för hur resurserna bearbetas av en profil.
 
 Genom att använda konsekventa och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan du få ut det mesta av din digitala resurssamling och se till att rätt filer bearbetas med rätt profil.
 
@@ -30,7 +30,7 @@ Här följer några tips om hur du kan ordna dina digitala resursfiler.
 
    * **Utvecklingsmappar** - innehåller digitala resurser som du för närvarande arbetar med.
    * **Klientmappar** - innehåller digitala resurser baserade på klienter eller projektnamn.
-   * **Huvudmappar** - innehåller digitala källresurser.
+   * **Primära källmappar** - innehåller digitala källresurser.
    * **Återgivningsmappar** - innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
    * **Filstorleksmappar** - innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
    * **Mellanlagringsmappar** - innehåller digitala resurser som är klara att publiceras live på din webbplats.
