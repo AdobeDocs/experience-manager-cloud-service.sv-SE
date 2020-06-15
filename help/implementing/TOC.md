@@ -2,10 +2,10 @@
 sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 83c2b37f10b46c1a88e36e49b448b38137bda1c0
+source-git-commit: cd35b7b4dbdd434f367871ae5d6584b1ad1de341
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 83%
+source-wordcount: '213'
+ht-degree: 79%
 
 ---
 
@@ -43,6 +43,9 @@ ht-degree: 83%
 + Distribuera till AEM as a Cloud Service {#deploying}
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
    + [Konfigurera OSGI för AEM as a Cloud Service](deploying/configuring-osgi.md)
++ Författarnivå {#author-tier}
+   + [Åtkomst till författarnivå](/help/implementing/author-tier/accessing-the-author-tier.md)
+   + [Skydda författarnivå](/help/implementing/author-tier/securing-the-author-tier.md)
 + Översikt över innehållsleverans {#content-delivery}
    + [Leveransflöde för innehåll](dispatcher/overview.md)
    + [Dispatcher i molnet](dispatcher/disp-overview.md)
