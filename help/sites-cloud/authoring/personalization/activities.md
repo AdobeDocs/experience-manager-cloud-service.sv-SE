@@ -2,9 +2,9 @@
 title: Hantera aktiviteter
 description: Med aktivitetskonsolen kan ni skapa, organisera och hantera marknadsföringsaktiviteter för era varumärken
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: dba848cb8d7bc42f37fb64131150c136e07dd24e
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '2002'
 ht-degree: 18%
 
 ---
@@ -130,7 +130,7 @@ Du måste publicera aktiviteter för att göra dem tillgängliga. Omvänt kanske
 
 >[!NOTE]
 >
->När en aktivitet avpubliceras
+>När du avpublicerar en aktivitet ändras inte aktivitetens status om du inte uppdaterar sidan.
 
 Så här publicerar eller avpublicerar du aktiviteter:
 
