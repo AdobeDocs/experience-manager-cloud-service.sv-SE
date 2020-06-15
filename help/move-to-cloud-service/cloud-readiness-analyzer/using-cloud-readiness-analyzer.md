@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: daa281745540e6446adecd2501e26135d6000844
+source-git-commit: ae38a1300ef2d8f2b344313195ec904fca48d86b
 workflow-type: tm+mt
-source-wordcount: '1775'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
@@ -46,14 +46,14 @@ Följ det här avsnittet för att lära dig hur du kör Cloud Readiness Analyzer
 
    ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-1.png)
 
-1. När du klickar på **Cloud Readiness Analyzer** börjar verktyget generera rapporten och efter några minuter är sammanfattningsrapporten tillgänglig på din AEM-instans.
+1. När du klickar på **Cloud Readiness Analyzer** börjar verktyget generera rapporten och efter några minuter är CRA-rapporten tillgänglig på din AEM-instans.
 
    >[!NOTE]
    >Du måste rulla nedåt på sidan för att se hela rapporten.
 
    ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-2.png)
 
-## Tolka den sorterade rapporten för Cloud Readiness Analyzer {#organized-report}
+## Tolka Cloud Readiness Analyzer-rapporten {#cra-report}
 
 När Cloud Readiness Analyzer körs i AEM-instansen visas rapporten som resultat i verktygsfönstret.
 
@@ -83,7 +83,7 @@ För AEM 6.3 och senare är det primära sättet att köra Cloud Readiness Analy
    >[!NOTE]
    >CRA påbörjar en bakgrundsprocess för att generera rapporten så fort verktyget öppnas. Den visar en indikation på att rapportgenereringen pågår tills rapporten är klar. Du kan stänga webbläsarfliken och komma tillbaka senare för att visa rapporten när den är klar.
 
-1. När CRA-rapporten genereras och visas kan du välja att hämta rapporten med kommaseparerade värden (CSV). Klicka på **CSV** för att ladda ned den fullständiga sammanfattningsrapporten i CSV-format (kommaavgränsade värden), vilket visas i bilden nedan.
+1. När CRA-rapporten genereras och visas kan du välja att hämta rapporten med kommaseparerade värden (CSV). Klicka på **CSV** för att ladda ned den fullständiga CRA-rapporten i CSV-format (kommaseparerade värden), vilket visas i bilden nedan.
 
    ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-3.png)
 
@@ -92,29 +92,18 @@ För AEM 6.3 och senare är det primära sättet att köra Cloud Readiness Analy
 
 ### Adobe Experience Manager 6.2 och 6.1 {#aem-specific-versions}
 
-Cloud Readiness Analyzer är begränsad i Adobe Experience Manager (AEM) 6.2 till en länk som genererar och hämtar CSV-rapporten.
+Cloud Readiness Analyzer är begränsad i Adobe Experience Manager 6.2 till en länk som genererar och hämtar CSV-rapporten.
+
+För Adobe Experience Manager 6.1 fungerar inte verktyget och bara HTTP-gränssnittet kan användas.
 
 >[!NOTE]
->
->* För Adobe Experience Manager 6.1 fungerar inte verktyget och bara HTTP-gränssnittet kan användas.
-   >
-   >
-* I alla versioner kan den inkluderade mönsteravkännaren köras oberoende av varandra.
+>I alla versioner kan den inkluderade mönsteravkännaren köras oberoende av varandra.
 
+## Tolka CSV-rapporten för Cloud Readiness Analyzer {#cra-csv-report}
 
-Följ stegen nedan för att hämta CSV-rapporten för Adobe Experience Manager (AEM) 6.1 och 6.2:
+När du klickar på alternativet **CSV** från din AEM-instans skapas CSV-formatet för Cloud Readiness Analyzer-rapporten från resultatcachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas den här rapporten automatiskt som en fil med standardnamnet `results.csv`.
 
-1. Navigera till **Adobe Experience Manager Web ConsoleConfiguration** med `https://serveraddress:serverport/system/console/configMgr`.
-
-1. Välj fliken **Status** och sök efter **Mönsteravkännare** i listrutan enligt bilden nedan.
-
-   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-4.png)
-
-1. Du kan hämta sammanfattningsrapporten i en ZIP-mapp eller i JSON-format.
-
-## Tolka CSV-rapporten för Cloud Readiness Analyzer {#crs-csv-report}
-
-När du klickar på alternativet **CSV** från din AEM-instans skapas CSV-formatet för Cloud Readiness Analyzer-rapporten från resultatcachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas den här rapporten automatiskt som en fil med standardnamnet `results.csv`. Om cacheminnet har gått ut genereras rapporten om innan CSV-filen skapas och hämtas.
+Om cacheminnet har gått ut genereras rapporten om innan CSV-filen skapas och hämtas.
 
 CSV-formatet för rapporten innehåller information som genereras från utdata för Mönsteravkännare, sorterat och organiserat efter kategorityp, undertyp och prioritetsnivå. Formatet är lämpligt för visning och redigering i program som Microsoft Excel. Avsikten är att ge all sökinformation i ett upprepningsbart format som kan vara användbar vid jämförelse av rapporter över tiden för att mäta förloppet.
 
@@ -189,7 +178,7 @@ Standardlivstiden för CRA-cache är 24 timmar. Med alternativet att uppdatera e
 Livslängdsvärdet för cacheminnet lagras som egenskapen `maxCacheAge` på följande databasnod:
 `/apps/readiness-analyzer/content/CloudReadinessReport/jcr:content`
 
-Värdet för den här egenskapen är cachelivstiden i sekunder. Administratören kan justera cachelivstiden med CRX/DE Lite.
+Värdet för den här egenskapen är cachelivstiden i sekunder. Administratören kan justera cachelivstiden med **CRXDE Lite**.
 
 
 
