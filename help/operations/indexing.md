@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 translation-type: tm+mt
-source-git-commit: 0d83e1d956d65fe27b1cf7bce758fc7fa8adf6b2
+source-git-commit: 5594792b84bdb5a0c72bfb6d034ca162529e4ab2
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1450'
 ht-degree: 2%
 
 ---
@@ -83,6 +83,10 @@ Indexdefinitioner har nu markerats som anpassade och versionsindelade:
 För att kunna distribuera ett index måste därför indexdefinitionen (`/oak:index/definitionname`) levereras via `ui.apps` Git och Cloud Manager-distributionsprocessen.
 
 När den nya indexdefinitionen har lagts till måste det nya programmet distribueras via Cloud Manager. När distributionen är klar startas två jobb som ansvarar för att lägga till (och sammanfoga vid behov) indexdefinitionerna i MongoDB och Azure Segment Store för författare respektive publicering. De underliggande databaserna omindexeras med de nya indexdefinitionerna, innan den blå-gröna växlingen äger rum.
+
+>[!TIP]
+>
+>Mer information om den paketstruktur som krävs för AEM som en molntjänst finns i dokumentet [AEM Project Structure.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
 
 ## Indexhantering med användning av blå-gröna distributioner {#index-management-using-blue-green-deployments}
 
