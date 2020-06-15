@@ -2,10 +2,10 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
 translation-type: tm+mt
-source-git-commit: 60093232710426d919a45742b1775239944d266d
+source-git-commit: 5594792b84bdb5a0c72bfb6d034ca162529e4ab2
 workflow-type: tm+mt
-source-wordcount: '2417'
-ht-degree: 17%
+source-wordcount: '2522'
+ht-degree: 16%
 
 ---
 
@@ -37,6 +37,16 @@ Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/sys
 >[!WARNING]
 >
 > Precis som i tidigare versioner av AEM bör `/libs` du inte ändra. Endast AEM-produktkod kan distribueras till `/libs`.
+
+### Oak Index {#oak-indexes}
+
+Oak-index (`/oak:index`) hanteras specifikt av distributionsprocessen för AEM Cloud-tjänster. Detta beror på att Cloud Manager måste vänta tills ett nytt index har distribuerats och indexerats om fullständigt innan det går över till den nya kodbilden.
+
+Därför måste Oak-index, även om de kan ändras vid körning, distribueras som kod så att de kan installeras innan några ändringsbara paket installeras. Därför är konfigurationer en del av kodpaketet och inte en del av innehållspaketet `/oak:index` [enligt beskrivningen nedan.](#recommended-package-structure)
+
+>[!TIP]
+>
+>Mer information om hur du indexerar i AEM som en molntjänst finns i dokumentet [Innehållssökning och indexering.](/help/operations/indexing.md)
 
 ## Rekommenderad paketstruktur {#recommended-package-structure}
 
