@@ -1,10 +1,10 @@
 ---
-title: Distribuera koden - molntjänster
-description: Distribuera koden - molntjänster
+title: Distribuera koden - Cloud Service
+description: Distribuera koden - Cloud Service
 translation-type: tm+mt
-source-git-commit: c1301dbe9641a6a35b639628e3f2d3f0c6b3f0d3
+source-git-commit: 44e32343767878016a991f443e5911bfb2877a92
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '912'
 ht-degree: 3%
 
 ---
@@ -58,8 +58,8 @@ När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du re
 
 
 
->Varning:
->Följande avsnitt måste uppdateras för Cloud Manager för AEM Cloud Services och är under utveckling.
+>[!IMPORTANT]:
+>Följande avsnitt måste uppdateras för Cloud Manager för AEM cloud services och pågår.
 
 ## Distributionsprocess {#deployment-process}
 
