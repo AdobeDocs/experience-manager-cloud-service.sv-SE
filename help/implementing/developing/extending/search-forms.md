@@ -1,6 +1,6 @@
 ---
 title: Konfigurera sökformulär
-description: Konfigurera sökformulär för Adobe Experience Manager som en molntjänst.
+description: Konfigurera sökformulär för Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
 source-git-commit: 18841ec94b8dd92ca92deda0869f2698786458aa
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Konfigurera sökformulär {#configuring-search-forms}
 
-Adobe Experience Manager som molntjänst har en kraftfull [sökfunktion](/help/sites-cloud/authoring/getting-started/search.md) .
+Adobe Experience Manager som Cloud Service har en kraftfull [sökfunktion](/help/sites-cloud/authoring/getting-started/search.md) .
 
 I kombination med detta finns det också en uppsättning fördefinierade alternativ som hjälper dig att filtrera innehållet. Dessa innehåller fördefinierade aspekter som **Ändringsdatum**, **Publiceringsstatus** eller **Livecopy-status** som hjälper dig att snabbt gå ned till de resurser du behöver.
 
@@ -95,8 +95,8 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
    <th>Inställningar</th>
   </tr>
   <tr>
-   <td>Analyser</td>
-   <td>Sök-/filterfunktioner i webbläsaren Sites när analysdata visas. Analyssökfilter läses in för att matcha mappade anpassade analyskolumner.</td>
+   <td>Analytics</td>
+   <td>Sök-/filterfunktioner i webbläsaren Sites när analysdata visas. Analytics sökfilter läses in för att matcha mappade anpassade analyskolumner.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
