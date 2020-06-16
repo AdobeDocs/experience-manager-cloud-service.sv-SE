@@ -2,7 +2,7 @@
 title: Översikt över verktyget Innehållsöverföring
 description: Översikt över verktyget Innehållsöverföring
 translation-type: tm+mt
-source-git-commit: 1ca9b2091befbafad0878d83fc7963c779146b2a
+source-git-commit: bb5cedab9bb3f7413d323e21bb6112364a38b2bb
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 0%
@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Översikt {#overview-content-transfer-tool}
 
-Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM-källinstans (lokalt eller AMS) till målinstansen av AEM Cloud-tjänsten.
+Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM-källinstans (lokal eller AMS) till AEM-målinstansen.
 
 Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt.
 
 Det finns två faser som är associerade med innehållsöverföring:
 
-1. **Extrahering**:  Extrahering avser att extrahera innehåll från AEM-källinstansen till ett temporärt område som kallas *migreringsuppsättning*. En *migreringsuppsättning* är ett molnlagringsutrymme som tillhandahålls av Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och AEM-instansen i molntjänsten.
+1. **Extrahering**:  Extrahering avser att extrahera innehåll från AEM-källinstansen till ett temporärt område som kallas *migreringsuppsättning*. En *migreringsuppsättning* är ett molnlagringsutrymme som tillhandahålls av Adobe för att tillfälligt lagra det överförda innehållet mellan källans AEM-instans och Cloud Servicens AEM-instans.
 
    Mer information finns i [Extraheringsprocess i Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#extraction-process) .
 
-2. **Inmatning**: Inmatning avser att hämta innehåll från *migreringsuppsättningen* till målmolntjänstinstansen.
+2. **Inmatning**: Inmatning avser att hämta innehåll från *migreringsuppsättningen* till målinstansen för Cloud Service.
 
    Mer information finns i [Inmatningsprocessen i Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#ingestion-process) .
 
@@ -36,7 +36,7 @@ En *migreringsuppsättning* har följande attribut:
 Verktyget Innehållsöverföring har en funktion som har stöd för differentiell innehållsuppsättning där det endast är möjligt att överföra ändringar som gjorts sedan föregående innehållsöverföringsaktivitet.
 
 >[!NOTE]
-> Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda molntjänsten.
+> Efter den initiala innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du publicerar på Cloud Servicen.
 
 I extraheringsfasen måste alternativet för ***överskrivning*** vara inaktiverat för att en befintlig migreringsuppsättning ska kunna visas ** överst. Mer information finns i Extrahering [uppifrån](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#top-up-extraction-process) .
 
@@ -49,11 +49,11 @@ Följ nedanstående avsnitt för att få information om riktlinjer och bästa me
 
 * Det är tillrådligt att köra komprimering, konsekvenskontroller av datalager på databaserna innan du upptäcker potentiella problem och även minska skräpinsamlingen i databasen.
 
-* Om konfigurationen för AEM Cloud Author Content Delivery Network (CDN) har en vitlista över IP-adresser måste du se till att även IP-adresserna för källmiljön läggs till i vitlistan så att källmiljön och AEM Cloud-miljön kan kommunicera med varandra.
+* Om konfigurationen för AEM Cloud Author Content Delivery Network (CDN) är konfigurerad att ha en vitlista över IP-adresser, bör du se till att även IP-adresserna för källmiljön läggs till i listan så att källmiljön och AEM Cloud-miljön kan kommunicera med varandra.
 
-* I inmatningsfasen rekommenderas att du kör inmatningen med *svepningsläget* aktiverat där den befintliga databasen (författaren eller publiceringen) i AEM Cloud-måltjänstmiljön tas bort helt och sedan uppdateras med migreringsuppsättningsdata. Det här läget är mycket snabbare än icke-svepningsläget, där migreringsuppsättningen används ovanpå det aktuella innehållet.
+* I inmatningsfasen bör du köra inmatningen med *svepningsläget* aktiverat där den befintliga databasen (författaren eller publiceringen) i målmiljön för AEM-Cloud Service tas bort helt och sedan uppdateras med migreringsuppsättningsdata. Det här läget är mycket snabbare än icke-svepningsläget, där migreringsuppsättningen används ovanpå det aktuella innehållet.
 
-* När innehållsöverföringsaktiviteten har slutförts krävs rätt projektstruktur i molntjänstmiljön för att se till att innehållet återges korrekt i molntjänstmiljön.
+* När innehållsöverföringsaktiviteten har slutförts krävs rätt projektstruktur i projektmiljön för att se till att Cloud Servicen återges korrekt i Cloud Servicen.
 
 * Innan du kör verktyget Innehållsöverföring måste du se till att det finns tillräckligt med diskutrymme i AEM-källinstansens `crx-quickstart` underkatalog. Detta beror på att verktyget Innehållsöverföring skapar en lokal kopia av databasen som senare överförs till migreringsuppsättningen.
 Den allmänna formeln för att beräkna hur mycket ledigt diskutrymme som krävs är följande:
