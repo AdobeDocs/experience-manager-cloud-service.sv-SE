@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 2ba653988962ca7b9abf9dba3093d8c13720321a
+source-git-commit: f65580a4608167a869669b03cec5d8ab730a848a
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1749'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ När det finns både en HTTP-rubrik och motsvarande frågeparameter får frågep
 Ett enkelt sätt att initiera genereringen av rapporten via HTTP-gränssnittet är med följande kommando:
 `curl -u admin:admin 'http://localhost:4502/apps/readiness-analyzer/analysis/result.json?max-age=0&respond-async=true'`.
 
-När en begäran har gjorts behöver klienten inte vara aktiv för att rapporten ska kunna genereras. Rapportgenereringen kan initieras med en klient med en HTTP GET-begäran och när rapporten har genererats visas den från cachen i en annan klient eller CSV-verktyget i AEM-instansen.
+När en begäran har gjorts behöver klienten inte vara aktiv för att rapporten ska kunna genereras. Rapportgenereringen kan initieras med en klient med en HTTP GET-begäran och när rapporten har genererats visas den från cachen i en annan klient eller CSV-verktyget i användargränssnittet i AEM.
 
 ### Svar (#http-responses)
 
