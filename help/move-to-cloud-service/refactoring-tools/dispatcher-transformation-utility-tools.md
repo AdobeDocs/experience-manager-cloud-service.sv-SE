@@ -2,7 +2,7 @@
 title: AEM Dispatcher Converter Tool
 description: AEM Dispatcher Converter Tool
 translation-type: tm+mt
-source-git-commit: d3593edcfee660d5ce0b0a8774fe3c61025cbe36
+source-git-commit: 66cf4fc7b5a336968dd3f8757cc56a11d6e4843e
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Läs [Dispatcher Overview](https://docs.adobe.com/content/help/en/experience-man
 
 Du måste lära dig att strukturera AEM som en Cloud Service-Apache och Dispatcher-konfigurationer samt att validera och köra den lokalt innan du distribuerar den i molnmiljöer.
 
-Mer information finns i [Dispatcher i molnet](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/dispatcher/overview.html) .
+Mer information finns i [Dispatcher i molnet](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html) .
 
 ## AEM Dispatcher Converter {#aem-dispatcher-converter}
 
