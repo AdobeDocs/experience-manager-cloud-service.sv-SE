@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
 
-I Adobe Experience Manager som molntjänst utökar ett innehållsfragment en standardresurs; se:
+Inom Adobe Experience Manager som Cloud Service utökar ett innehållsfragment en standardresurs. se:
 
 * [Skapa och hantera innehållsfragment](/help/assets/content-fragments/content-fragments.md) och [sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) för mer information om innehållsfragment.
 
@@ -65,7 +65,7 @@ Beroende på typen av fragment används även modeller eller mallen **Enkelt fra
 
 ### Integrering av webbplatser med resurser {#integration-of-sites-with-assets}
 
-CFM (Content Fragment Management) ingår i AEM Assets som:
+Content Fragment Management (CFM) ingår i AEM Assets som:
 
 * Innehållsfragment är resurser.
 * De använder befintliga Assets-funktioner.
