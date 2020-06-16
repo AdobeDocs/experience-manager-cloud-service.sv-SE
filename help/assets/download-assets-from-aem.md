@@ -3,42 +3,49 @@ title: Hämta resurser från AEM
 description: Lär dig hur du hämtar resurser från AEM och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c978be66702b7f032f78a1509f2a11315d1ed89f
+source-git-commit: 748255ef2b3bae9ecca900cdfe7d3be594fb2552
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
 
 
-# Hämta resurser från AEM {#download-assets-from-aem}
+# Download assets from [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
-Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Hämtade resurser paketeras i en ZIP-fil. Den komprimerade ZIP-filen har en maximal filstorlek på 1 GB för exportjobbet. Du tillåts maximalt 500 totala resurser per exportjobb.
+Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från [!DNL Adobe Experience Manager Assets]. Hämtade resurser paketeras i en ZIP-fil. Den komprimerade ZIP-filen har en maximal filstorlek på 1 GB för exportjobbet. Högst 500 resurser per exportjobb tillåts.
 
 >[!NOTE]
 >
->För att kunna hämta resurserna måste medlemmarna ha behörighet att starta arbetsflöden som utlöser hämtning av resurser.
-
-Om du vill hämta resurser går du till en resurs, markerar resursen och trycker/klickar på **[!UICONTROL Download]** ikonen i verktygsfältet. I den dialogruta som visas anger du dina hämtningsalternativ.
+>Mottagare av e-postmeddelanden måste vara medlemmar i gruppen för att få åtkomst till länken för ZIP-hämtning i e-postmeddelandet. `dam-users` För att kunna hämta resurserna måste medlemmarna ha behörighet att starta arbetsflöden som utlöser hämtning av resurser.
 
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
-![Tillgängliga alternativ vid hämtning av resurser från AEM Assets](assets/asset_download_dialog.png)
+**Om du vill hämta resurser**
 
-*Bild: Tillgängliga alternativ när du hämtar resurser från AEM Resurser.*
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
+1. Tryck på **[!UICONTROL Assets > Files]** på navigeringssidan.
+1. Navigera till en mapp som innehåller resurser som du vill hämta.
+1. Markera mappen eller välj en eller flera resurser i mappen.
+1. Tryck på i verktygsfältet **[!UICONTROL Download]**.
 
-Följande är alternativen för export/hämtning. Dynamiska renderingar är unika för Dynamic Media och gör att du kan generera renderingar direkt utöver den resurs du valt - det alternativet är bara tillgängligt om du har Dynamic Media aktiverat.
+   ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download.png)
 
-| Export- eller nedladdningsalternativ | Beskrivningar |
-|---|---|
-| [!UICONTROL Assets] | Välj det här om du vill hämta resursen i dess ursprungliga form utan några återgivningar. |
-| [!UICONTROL Renditions] | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka renderingar som är tillgängliga beror på vilken resurs du väljer. |
-| [!UICONTROL Dynamic Renditions] | En dynamisk återgivning genererar andra återgivningar direkt. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan med bildförinställningar. Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla bildmodifierare (t.ex. för att invertera bilden) |
-| [!UICONTROL Create separate folder for each asset] | Välj det här om du vill bevara mapphierarkin när du hämtar resurser. Som standard ignoreras mapphierarkin och alla resurser hämtas i en mapp på det lokala systemet. |
+   *Alternativ i dialogrutan Hämta.*
 
-Alternativet för återgivningar är tillgängligt om resursen har några återgivningar. Alternativet Delresurser är tillgängligt om tillgången innehåller delresurser.
+1. I dialogrutan Hämta väljer du de hämtningsalternativ som du vill använda.
 
-När du väljer en mapp att hämta hämtas hela resurshierarkin under mappen. Om du vill inkludera varje resurs som du hämtar (inklusive resurser i underordnade mappar som är kapslade under den överordnade mappen) i en enskild mapp väljer du **[!UICONTROL Create separate folder for each asset]**.
+   | Hämtningsalternativ | Beskrivning |
+   |---|---|
+   | **[!UICONTROL Create separate folder for each asset]** | Välj det här alternativet om du vill inkludera varje resurs som du hämtar, inklusive resurser, i underordnade mappar som är kapslade under resursens överordnade mapp i en mapp på den lokala datorn. När det här alternativet *inte* är markerat ignoreras mapphierarkin som standard och alla resurser hämtas till en mapp på den lokala datorn. |
+   | **[!UICONTROL Email]** | Välj det här alternativet om du vill att ett e-postmeddelande ska skickas till mottagaren. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> Mallar som du anpassar under distributionen finns på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
+   | **[!UICONTROL Asset(s)]** | Välj det här alternativet om du vill hämta resursen i dess ursprungliga form utan några återgivningar.<br>Alternativet Delresurser är tillgängligt om den ursprungliga tillgången har delresurser. |
+   | **[!UICONTROL Rendition(s)]** | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka återgivningar som är tillgängliga beror på vilken resurs du har valt. |
+   | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar av den valda resursen från AEM. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
+   | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](/help/assets/dynamic-media/image-presets.md) . <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
+
+1. In the dialog box, tap **[!UICONTROL Download]**.
+
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
@@ -60,7 +67,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 
 ## Inaktivera resurshämtningsserver {#disable-asset-download-servlet}
 
-Du `Asset Download Servlet` kan inaktivera funktionen på en AEM Publish-instans genom att uppdatera dispatcherns konfiguration för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
+Du `Asset Download Servlet` kan inaktivera funktionen på en AEM Publish-instans genom att uppdatera dispatcherkonfigurationen för att blockera hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
 1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en ny regel i [filteravsnittet](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter).
 
