@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 36faf20506a6a3e1a428d1da462f530aaf84d6a6
+source-git-commit: 7e169ccc09aab9e1646ad324f5b80c8af18cd4af
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1708'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ Ett enkelt sätt att initiera genereringen av rapporten via HTTP-gränssnittet �
 
 När en begäran har gjorts behöver klienten inte vara aktiv för att rapporten ska kunna genereras. Rapportgenereringen kan initieras med en klient med en HTTP GET-begäran och när rapporten har genererats visas den från cachen i en annan klient eller CSV-verktyget i användargränssnittet i AEM.
 
-### Svar (#http-responses)
+### Svar {#http-responses}
 
 Följande svarsvärden är möjliga:
 
