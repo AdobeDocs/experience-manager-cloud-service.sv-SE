@@ -2,19 +2,19 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Fylls i
 translation-type: tm+mt
-source-git-commit: 8e8863d390132ff8df943548b04e9d7c636c4248
+source-git-commit: 21fa1bab926aec2f013492a0f5f4a30c1744357c
 workflow-type: tm+mt
 source-wordcount: '1588'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
 # Utvecklingsriktlinjer för AEM as a Cloud Service {#aem-as-a-cloud-service-development-guidelines}
 
-Kod som körs i AEM som molntjänst måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs. Koden måste vara flexibel, särskilt eftersom en instans kan stoppas när som helst.
+Kod som körs i AEM som Cloud Service måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs. Koden måste vara flexibel, särskilt eftersom en instans kan stoppas när som helst.
 
-Under uppdateringen av AEM som en molntjänst kommer det att finnas instanser där gammal och ny kod körs parallellt. Därför får gammal kod inte bryta med innehåll som skapas av ny kod och ny kod måste kunna hantera gammalt innehåll.
+Under uppdateringen av AEM som Cloud Service kommer det att finnas instanser där gammal och ny kod körs parallellt. Därför får gammal kod inte bryta med innehåll som skapas av ny kod och ny kod måste kunna hantera gammalt innehåll.
 <!--
 
 >[!NOTE]
@@ -22,7 +22,7 @@ Under uppdateringen av AEM som en molntjänst kommer det att finnas instanser d�
 
 -->
 
-Om du behöver identifiera huvudpersonen i klustret kan API:t för Apache Sling Discovery användas för att identifiera det.
+Om det finns ett behov av att identifiera det primära klustret kan API:t för identifiering av Apache Sling användas för att identifiera det.
 
 ## Läge i minnet {#state-in-memory}
 
@@ -30,7 +30,7 @@ Tillståndet får inte sparas i minnet utan sparas i databasen. Annars kan det h
 
 ## Läge i filsystemet {#state-on-the-filesystem}
 
-Instansens filsystem bör inte användas i AEM som molntjänst. Disken är tillfällig och kommer att kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
+Instansens filsystem bör inte användas i AEM som Cloud Service. Disken är tillfällig och kommer att kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
 
 Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som behöver vara beständiga skickas iväg till en extern tjänst för längre lagring.
 
@@ -40,7 +40,7 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 ## Bakgrundsuppgifter och tidskrävande jobb {#background-tasks-and-long-running-jobs}
 
-Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Koden måste därför vara flexibel och de flesta importer kan återupptas. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Detta är inte ett nytt krav för den här typen av kod, men i AEM som en molntjänst är det mer sannolikt att en instans kommer att försvinna.
+Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Koden måste därför vara flexibel och de flesta importer kan återupptas. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Detta är inte ett nytt krav för den här typen av kod, men i AEM som Cloud Service är det troligare att en instans kommer att tas bort.
 
 För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda schemaläggaren för [delningsjobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) så här igen med minst en gång.
 
@@ -50,7 +50,7 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 ## Utgående HTTP-anslutningar {#outgoing-http-connections}
 
-Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästidsgränser. För kod som inte tillämpar dessa tidsgränser kommer AEM-instanser som körs på AEM som en molntjänst att tillämpa en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar som används av följande populära Java-bibliotek:
+Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästidsgränser. För kod som inte tillämpar dessa tidsgränser kommer AEM-instanser som körs på AEM som Cloud Service att tillämpa en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar som används av följande populära Java-bibliotek:
 
 Adobe rekommenderar att du använder det medföljande biblioteket [](https://hc.apache.org/httpcomponents-client-ga/) Apache HttpComponents Client 4.x för att skapa HTTP-anslutningar.
 
@@ -62,13 +62,13 @@ Alternativ som är kända för att fungera, men som kan kräva att du själv ang
 
 ## Inga klassiska gränssnittsanpassningar {#no-classic-ui-customizations}
 
-AEM som en molntjänst har endast stöd för Touch UI för kundkod från tredje part. Klassiskt användargränssnitt är inte tillgängligt för anpassning.
+AEM som Cloud Service stöder endast Touch-gränssnittet för kundkod från tredje part. Klassiskt användargränssnitt är inte tillgängligt för anpassning.
 
 ## Undvik inbyggda binärfiler {#avoid-native-binaries}
 
 Koden kommer inte att kunna hämta binärfiler vid körning och inte heller ändra dem. Den kan till exempel inte packa upp `jar` eller packa upp `tar` filer.
 
-## Inga bindningar för direktuppspelning via AEM som molntjänst {#no-streaming-binaries}
+## Inga bindningar för direktuppspelning via AEM som Cloud Service {#no-streaming-binaries}
 
 Binärfiler bör nås via CDN, som kan användas för binärfiler utanför de centrala AEM-tjänsterna.
 
@@ -76,7 +76,7 @@ Använd till exempel inte `asset.getOriginal().getStream()`, vilket medför att 
 
 ## Inga omvända replikeringsagenter {#no-reverse-replication-agents}
 
-Omvänd replikering från Publicera till Författare stöds inte i AEM som en molntjänst. Om en sådan strategi behövs kan du använda ett externt beständigt arkiv som delas mellan gruppen med publiceringsinstanser och eventuellt klustret Författare.
+Omvänd replikering från Publicera till Författare stöds inte i AEM som Cloud Service. Om en sådan strategi behövs kan du använda ett externt beständigt arkiv som delas mellan gruppen med publiceringsinstanser och eventuellt klustret Författare.
 
 ## Vidarebefordra replikeringsagenter kan behöva porteras {#forward-replication-agents}
 
@@ -92,11 +92,11 @@ I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett
 
 **Ange loggnivå**
 
-Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att aktivera utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
+Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte sker omedelbart bör du vara försiktig med att skapa utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer för att snabbare ändra loggnivån.
 
 >[!NOTE]
 >
->För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM-instans som en molntjänst. Mer information om hur du gör detta finns i [Distribuera till AEM som en molntjänst](/help/implementing/deploying/overview.md).
+>För att kunna utföra konfigurationsändringarna som listas nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan skicka dem till en AEM-Cloud Service som en instans. Mer information om hur du gör detta finns i [Distribuera till AEM som en Cloud Service](/help/implementing/deploying/overview.md).
 
 **Aktivera felsökningsloggnivån**
 
@@ -134,7 +134,7 @@ Observera att vid lokal utveckling (med molnklar snabbstart) `/apps` och `/libs`
 
 Kunderna har tillgång till CRXDE-stilen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det kommer det att leda till fel.
 
-En uppsättning verktyg för felsökning av AEM som utvecklingsmiljö i molnet finns på Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
+En uppsättning verktyg för felsökning av AEM som utvecklarmiljö för Cloud Service finns på Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
 `https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
@@ -160,7 +160,7 @@ Utvecklarkonsolen är också användbar vid felsökning och har en länk till ve
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-För vanliga program definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som en molntjänst. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+För vanliga program definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 
 
