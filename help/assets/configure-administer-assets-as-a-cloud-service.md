@@ -1,9 +1,9 @@
 ---
-title: Konfigurera och administrera Adobe Experience Manager Assets som en molntjänst
-description: Lär dig mer om de konfigurations- och administrationsuppgifter som krävs för Assets som en molntjänst
+title: Konfigurera och administrera Adobe Experience Manager Assets som en Cloud Service
+description: Lär dig mer om vilka konfigurations- och administrationsuppgifter som krävs för Assets som Cloud Service
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: b0436c74389ad0b3892d1258d993c00aa470c3ab
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera och administrera resurser som en molntjänst {#config-administer-assets-cloud-service}
+# Konfigurera och administrera resurser som en Cloud Service {#config-administer-assets-cloud-service}
 
-I artikeln listas de konfigurations- eller administrationsuppgifter på den översta nivån som krävs för att komma igång med att använda Adobe Experience Manager Assets som en molntjänst.
+I artikeln listas de konfigurations- eller administrationsuppgifter på den översta nivån som krävs för att komma igång med att använda Adobe Experience Manager Assets som Cloud Service.
 
 <!-- SCOPE 
 
@@ -24,7 +24,7 @@ Some idea is at https://helpx.adobe.com/experience-manager/6-5/assets/using/asse
 * How to monitor health of services
 * How to see the running statuses
 * How to get service-level reports like usage, performance, uptime, etc.
-* Enable asset download by configuring the download servlet. It is disbaled to prevent DDOS kind of situations.
+* Enable asset download by configuring the download servlet. It is disabled to prevent DDOS kind of situations.
 * Configure SMTP to enable email notifications.
 * Configure search index and visual search's separate index.
 * Cloud Manager usage, if any that’s relevant here.
