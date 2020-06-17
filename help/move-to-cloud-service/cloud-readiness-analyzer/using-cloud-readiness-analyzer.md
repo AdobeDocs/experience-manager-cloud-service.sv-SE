@@ -2,7 +2,7 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 7e169ccc09aab9e1646ad324f5b80c8af18cd4af
+source-git-commit: 1d5023e49288cfa922f8fff8264b857ac66ec97a
 workflow-type: tm+mt
 source-wordcount: '1708'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på n
    >[!NOTE]
    >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör CRA i en *författarmiljö* som är så nära *produktionsmiljön* som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktionen.
 
-* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storleken och typen av AEM-databasinnehåll, AEM-versionen och andra faktorer.
+* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
 * På grund av den stora tid som kan behövas för att generera rapportinnehållet, genereras de av en bakgrundsprocess och lagras i ett cacheminne. Det bör gå relativt snabbt att visa och hämta rapporten eftersom den använder innehållscachen tills den upphör att gälla eller tills rapporten uppdateras explicit. Under genereringen av rapportinnehåll kan du stänga webbläsarfliken och sedan gå tillbaka och visa rapporten när dess innehåll är tillgängligt i cachen.
 
@@ -164,7 +164,7 @@ Följande svarsvärden är möjliga:
 
 * `200 OK`: Svaret innehåller upptäckter från mönsteravkännaren som genererades under cachelagringens aktualitetstid.
 * `202 Accepted, processing cache`: Tillhandahålls för asynkrona svar för att indikera att cachen var inaktuell och att en uppdatering pågår.
-* `400 Bad Request`: Anger att det uppstod ett fel med begäran. Ett meddelande i formatet Probleminformation (se [RFC 7807](https://tools.ietf.org/html/rfc7807)) innehåller mer information.
+* `400 Bad Request`: Anger att det uppstod ett fel med begäran. Ett meddelande i formatet Probleminformation (se [RFC 7807](https://tools.ietf.org/html/rfc7807)) för mer information.
 * `401 Unauthorized`: Begäran var inte auktoriserad.
 * `500 Internal Server Error`: Anger att ett internt serverfel uppstod. Ett meddelande i formatet Probleminformation innehåller mer information.
 * `503 Service Unavailable`: Anger att servern är upptagen med ett annat svar och kan inte hantera denna begäran i tid. Detta inträffar troligtvis bara när synkrona begäranden görs. Ett meddelande i formatet Probleminformation innehåller mer information.
