@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: f65580a4608167a869669b03cec5d8ab730a848a
+source-git-commit: 2064dd6c647780dc149c51b7ff166779ba0a2212
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
@@ -36,11 +36,13 @@ Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på n
 Cloud Readiness Analyzer kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via Package Manager på Adobe Experience Manager-källinstansen (AEM).
 
 >[!NOTE]
->Hämta Cloud Readiness Analyzer från portalen för programvarudistribution som *väntar*.
+>Hämta Cloud Readiness Analyzer från Software Distribution Portal.
 
-## Köra Cloud Readiness Analyzer {#running-tool}
+## Visa Cloud Readiness Analyzer-rapporten {#viewing-report}
 
-Följ det här avsnittet för att lära dig hur du kör Cloud Readiness Analyzer:
+### Adobe Experience Manager 6.3 och senare {#aem-later-versions}
+
+Följ det här avsnittet för att lära dig hur du visar Cloud Readiness Analyzer-rapporten:
 
 1. Välj Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Cloud Readiness Analyzer**.
 
@@ -51,41 +53,11 @@ Följ det här avsnittet för att lära dig hur du kör Cloud Readiness Analyzer
    >[!NOTE]
    >Du måste rulla nedåt på sidan för att se hela rapporten.
 
-   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-2.png)
-
-## Tolka Cloud Readiness Analyzer-rapporten {#cra-report}
-
-När Cloud Readiness Analyzer körs i AEM-instansen visas rapporten som resultat i verktygsfönstret.
-
-Rapportens format är:
-
-* *Rapportöversikt*: Information om själva rapporten, inklusive när den skapades.
-* *Systemöversikt*: Information om det AEM-system som CRA kördes på.
-* *Söker efter kategorier*: Flera avsnitt som åtgärdar en eller flera brister i samma kategori. Varje avsnitt innehåller följande: Kategorinamn, undertyper, antal sökningar och deras betydelse, sammanfattning, länk till kategoridokumentation och information om enskild sökning.
-
-Varje upptäckt tilldelas en prioritetsnivå som anger en grov prioritet för åtgärder.
-
-Följ tabellen nedan för att förstå prioritetsnivåerna:
-
-| Prioritet | Beskrivning |
-|--- |--- |
-| INFORMATION | Denna slutsats lämnas i informationssyfte. |
-| RÅDGIVNING | Detta kan vara ett uppgraderingsproblem. Ytterligare undersökningar rekommenderas. |
-| STÖRRE | Denna slutsats är sannolikt ett uppgraderingsproblem som bör åtgärdas. |
-| KRITISK | Detta är sannolikt ett uppgraderingsproblem som måste åtgärdas för att förhindra funktionsförlust eller prestanda. |
-
-### Adobe Experience Manager 6.3 och senare {#aem-older-version}
-
-För AEM 6.3 och senare är det primära sättet att köra Cloud Readiness Analyzer att:
-
-1. Markera instansen Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Cloud Readiness Analyzer**.
-
-   >[!NOTE]
-   >CRA påbörjar en bakgrundsprocess för att generera rapporten så fort verktyget öppnas. Den visar en indikation på att rapportgenereringen pågår tills rapporten är klar. Du kan stänga webbläsarfliken och komma tillbaka vid ett senare tillfälle för att visa rapporten när den är klar.
+   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-1.png)
 
 1. När CRA-rapporten genereras och visas kan du välja att hämta rapporten med kommaseparerade värden (CSV). Klicka på **CSV** för att ladda ned den fullständiga CRA-rapporten i CSV-format (kommaseparerade värden), vilket visas i bilden nedan.
 
-   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-3.png)
+   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-2.png)
 
    >[!NOTE]
    >Du kan tvinga CRA att rensa sin cache och återskapa rapporten genom att klicka på **Uppdatera rapport**.
@@ -98,6 +70,32 @@ För Adobe Experience Manager 6.1 fungerar inte verktyget och bara HTTP-gränssn
 
 >[!NOTE]
 >I alla versioner kan den inkluderade mönsteravkännaren köras oberoende av varandra.
+
+## Tolka Cloud Readiness Analyzer-rapporten {#cra-report}
+
+När verktyget Cloud Readiness Analyzer körs i AEM-instansen visas rapporten som resultat i verktygsfönstret.
+
+Rapportens format är:
+
+* **Rapportöversikt**: Information om själva rapporten och information som:
+   * *Rapporttid*: När rapportinnehållet genererades och gjordes tillgängligt för första gången.
+   * *Förfallotid*: När cachen för rapportinnehåll upphör att gälla.
+   * *Tidsperiod* för generering: Den tid som används för att generera rapportinnehåll.
+   * *Sökningsantal*: Det totala antalet resultat som ingår i rapporten.
+* **Systemöversikt**: Information om det AEM-system som CRA kördes på.
+* **Söker efter kategorier**: Flera avsnitt som åtgärdar en eller flera brister i samma kategori. Varje avsnitt innehåller följande: Kategorinamn, undertyper, antal sökningar och deras betydelse, sammanfattning, länk till kategoridokumentation och information om enskild sökning.
+
+Varje upptäckt tilldelas en prioritetsnivå som anger en grov prioritet för åtgärder.
+
+Följ tabellen nedan för att förstå prioritetsnivåerna:
+
+| Prioritet | Beskrivning |
+|--- |--- |
+| INFORMATION | Denna slutsats lämnas i informationssyfte. |
+| RÅDGIVNING | Detta kan vara ett uppgraderingsproblem. Ytterligare undersökningar rekommenderas. |
+| STÖRRE | Denna slutsats är sannolikt ett uppgraderingsproblem som bör åtgärdas. |
+| KRITISK | Detta är sannolikt ett uppgraderingsproblem som måste åtgärdas för att förhindra funktionsförlust eller prestanda. |
+
 
 ## Tolka CSV-rapporten för Cloud Readiness Analyzer {#cra-csv-report}
 
