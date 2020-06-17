@@ -2,7 +2,7 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 0565d053b6040bc99ae79823711d56eb9aecdfb3
+source-git-commit: 36faf20506a6a3e1a428d1da462f530aaf84d6a6
 workflow-type: tm+mt
 source-wordcount: '1709'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på n
    >[!NOTE]
    >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör CRA i en *författarmiljö* som är så nära *produktionsmiljön* som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktionen.
 
-* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
+* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storleken och typen av AEM-databasinnehåll, AEM-versionen och andra faktorer.
 
 * På grund av den stora tid som kan behövas för att generera rapportinnehållet, genereras de av en bakgrundsprocess och lagras i ett cacheminne. Det bör gå relativt snabbt att visa och hämta rapporten eftersom den använder innehållscachen tills den upphör att gälla eller tills rapporten uppdateras explicit. Under genereringen av rapportinnehåll kan du stänga webbläsarfliken och sedan gå tillbaka och visa rapporten när dess innehåll är tillgängligt i cachen.
 
@@ -167,7 +167,7 @@ Följande svarsvärden är möjliga:
 * `400 Bad Request`: Anger att det uppstod ett fel med begäran. Ett meddelande i formatet Probleminformation (se [RFC 7807](https://tools.ietf.org/html/rfc7807)) innehåller mer information.
 * `401 Unauthorized`: Begäran var inte auktoriserad.
 * `500 Internal Server Error`: Anger att ett internt serverfel uppstod. Ett meddelande i formatet Probleminformation innehåller mer information.
-* `503 Service Unavailable`: Anger att servern är upptagen med ett annat svar och kan inte hantera denna begäran i tid. Detta fungerar bara som när synkrona begäranden görs. Ett meddelande i formatet Probleminformation innehåller mer information.
+* `503 Service Unavailable`: Anger att servern är upptagen med ett annat svar och kan inte hantera denna begäran i tid. Detta inträffar troligtvis bara när synkrona begäranden görs. Ett meddelande i formatet Probleminformation innehåller mer information.
 
 ## Cache-livstidsjustering {#cache-adjustment}
 
