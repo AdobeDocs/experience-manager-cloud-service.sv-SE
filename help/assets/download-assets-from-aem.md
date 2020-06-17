@@ -3,7 +3,7 @@ title: Hämta resurser från AEM
 description: Lär dig hur du hämtar resurser från AEM och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 748255ef2b3bae9ecca900cdfe7d3be594fb2552
+source-git-commit: 12575cd2f046d3a382786811dd28fec8df3be8bd
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 1. Markera mappen eller välj en eller flera resurser i mappen.
 1. Tryck på i verktygsfältet **[!UICONTROL Download]**.
 
-   ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download.png)
+   ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download1.png)
 
    *Alternativ i dialogrutan Hämta.*
 
