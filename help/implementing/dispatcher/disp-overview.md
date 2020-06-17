@@ -2,9 +2,9 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: dd32e9357bfbd8a9b23db1167cecc4e713cccd99
+source-git-commit: 6951b6ff255513f5865e1f92a09c5ac439271a26
 workflow-type: tm+mt
-source-wordcount: '3913'
+source-wordcount: '3914'
 ht-degree: 9%
 
 ---
@@ -236,7 +236,7 @@ Tabellen nedan visar vilka cachemoduler som stöds:
 | `mod_substitute` | [https://httpd.apache.org/docs/2.4/mod/mod_substitute.html](https://httpd.apache.org/docs/2.4/mod/mod_substitute.html) |
 | `mod_userdir` | [https://httpd.apache.org/docs/2.4/mod/mod_userdir.html](https://httpd.apache.org/docs/2.4/mod/mod_userdir.html) |
 
-Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för att ingå i produkten i framtiden. Kunderna hittar listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra&quot;validator whitelist&quot; i SDK:n enligt beskrivningen ovan.
+Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för att ingå i produkten i framtiden. Kunderna hittar listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens allowlist-kommando i SDK enligt beskrivningen ovan.
 
 Tillståndslistan innehåller en lista över Apache-direktiv som tillåts i en kundkonfiguration. Om ett direktiv inte tillåts loggas ett fel och en avslutningskod som inte är noll returneras. Om ingen tillåten lista anges på kommandoraden (vilket är det sätt som det ska anropas) använder verktyget en standardtillåten lista som Cloud Manager använder för validering innan det distribueras till molnmiljöer.
 
@@ -351,7 +351,7 @@ Du kan också testa din Apache- och Dispatcher-konfiguration lokalt. Docker mås
 
 Genom att använda parametern &quot;`-d`&quot; skickar valideraren en mapp med alla konfigurationsfiler som behövs för dispatchern.
 
-Sedan kan skriptet peka på den mappen och påbörja `docker_run.sh` behållaren med din konfiguration.
+Sedan kan skriptet peka på den mappen och påbörja behållaren med din konfiguration. `docker_run.sh`
 
 ```
 $ validator full -d out src/dispatcher
