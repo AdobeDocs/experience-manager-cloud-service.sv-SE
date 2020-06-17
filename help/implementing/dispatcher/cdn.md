@@ -1,18 +1,18 @@
 ---
-title: CDN i AEM som molntjänst
-description: CDN i AEM som molntjänst
+title: CDN i AEM as a Cloud Service
+description: CDN i AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: a9bf697f65febcd9ba99539d8baa46f7a8d165e3
+source-git-commit: dd32e9357bfbd8a9b23db1167cecc4e713cccd99
 workflow-type: tm+mt
 source-wordcount: '646'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
 
-# CDN i AEM som molntjänst {#cdn}
+# CDN i AEM as a Cloud Service {#cdn}
 
-AEM som molntjänst levereras med ett inbyggt CDN. Det huvudsakliga syftet är att minska fördröjningen genom att leverera tillgängligt innehåll från CDN-noderna i kanten, nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program.
+AEM som Cloud Service levereras med ett inbyggt CDN. Det huvudsakliga syftet är att minska fördröjningen genom att leverera tillgängligt innehåll från CDN-noderna i kanten, nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program.
 
 Det hanterade CDN-nätverket uppfyller de flesta kunders krav på prestanda och säkerhet. Kunderna kan också peka på det från sitt eget CDN, som de måste hantera. Detta kommer att tillåtas från fall till fall, baserat på att vissa krav uppfylls, inklusive, men inte begränsat till, den kund som har en äldre integrering med sin CDN-leverantör som är svår att överge.
 
@@ -24,7 +24,7 @@ Följ dessa för att förbereda materialet för leverans med hjälp av Adobes f�
    **Obs!** Aem as a Cloud Service does not support Domain Validated (DV) certificates.
 1. Informera kundsupport:
    * vilken anpassad domän som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id. Observera att anpassade domäner på författarsidan inte stöds.
-   * om vitlistning av IP-adresser behövs för att begränsa trafiken till en viss miljö.
+   * om någon IP-tilldelning behövs för att begränsa trafiken till en viss miljö.
 1. Koordinera med kundsupport om timing för nödvändiga ändringar av DNS-posterna. Instruktionerna är olika beroende på om en apex-post behövs:
    * Om en apex-post inte behövs ska kunderna ange CNAME DNS-posten till att peka FQDN till `cdn.adobeaemcloud.com`.
    * Om en apex-post behövs skapar du en A-post som pekar på följande IP-adresser: 151.101.3.10, 151.101.67.10, 151.101.131.10, 151.101.195.10. Kunderna behöver en apex-post om det önskade FQDN matchar DNS-zonen. Detta kan testas med Unix-kommandot för att se om SOA-värdet för utdata matchar domänen. Kommandot `dig anything.dev.adobeaemcloud.com` returnerar till exempel SOA (Start of Authority, d.v.s. zonen) för `dev.adobeaemcloud.com` att inte vara en APEX-post, medan `dig dev.adobeaemcloud.com` returnerar SOA på `dev.adobeaemcloud.com` så sätt att det är en apex-post.
@@ -40,7 +40,7 @@ Om en kund måste använda sitt befintliga CDN kan han eller hon hantera det och
 
 * Kunden måste ha ett befintligt CDN som är betungande att ersätta.
 * Kunden måste hantera det.
-* Kunden måste kunna konfigurera CDN så att den fungerar med AEM som en molntjänst - se konfigurationsinstruktionerna nedan.
+* Kunden måste kunna konfigurera CDN så att den fungerar med AEM som Cloud Service - se konfigurationsinstruktionerna nedan.
 * Kunden måste ha tekniska CDN-experter som är i drift om det uppstår problem.
 * Kunden måste utföra och klara ett lasttest innan han/hon kan börja producera.
 
