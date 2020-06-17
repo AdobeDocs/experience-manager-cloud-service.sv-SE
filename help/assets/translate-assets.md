@@ -3,7 +3,7 @@ title: Skapa och hantera digitala resurser på flera språk och kör översättn
 description: Lär dig automatisera arbetsflöden för översättning av resurser, inklusive binära filer, metadata och taggar till flera språk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 496ad0831d20eb7653a3c5727999a2abc5728ec7
+source-git-commit: b0436c74389ad0b3892d1258d993c00aa470c3ab
 workflow-type: tm+mt
 source-wordcount: '2465'
 ht-degree: 19%
@@ -13,7 +13,7 @@ ht-degree: 19%
 
 # Flerspråkiga resurser {#multilingual-assets}
 
-Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt. Med Adobe Experience Manager Assets (AEM) kan ni automatisera översättningsarbetsflöden för resurser (inklusive binärfiler, metadata och taggar) och generera resurser på andra språk för användning i flerspråkiga projekt.
+Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt. Med Adobe Experience Manager (AEM) Assets kan du automatisera översättningsarbetsflöden för resurser (inklusive binärfiler, metadata och taggar) och generera resurser på andra språk för användning i flerspråkiga projekt.
 
 Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med AEM och skapar projekt för översättning av resurser till flera språk. AEM har stöd för arbetsflöden för översättning mellan människor och datorer.
 
@@ -22,7 +22,7 @@ Om du vill automatisera översättningsarbetsflöden integrerar du översättnin
 Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart metadata och taggar för resurser.
 
 <!--
-We have multiple articles around translation of assets. For now, dumping all content in this article to remove others and create only 1 master article.
+We have multiple articles around translation of assets. For now, dumping all content in this article to remove others and create only ONE UBER article.
 
 https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/translation-projects.html
 https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/preparing-assets-for-translation.html
@@ -51,7 +51,7 @@ Also see, [Creating translation projects for content fragments](creating-transla
 
 Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt.
 
-I Adobe Experience Manager (AEM) Assets inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
+I Adobe Experience Manager (AEM) inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
 
 Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel `/content/dam/it` är den italienska språkroten för den italienska språkkopian. För språkkopior måste en [korrekt konfigurerad språkrot](#create-a-language-root) användas, så att rätt språk används när översättningar av källresurser utförs.
 
@@ -88,7 +88,7 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
 ### Visa språkrötter {#view-language-roots}
 
-Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista över språkrötter som har skapats i AEM Resurser.
+Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista över språkrötter som har skapats i AEM Assets.
 
 1. I resurskonsolen väljer du det språk som är primärt för vilket du vill skapa språkkopior.
 1. Klicka på eller tryck på ikonen GlobalNav och välj **[!UICONTROL References]** att öppna referensrutan.
@@ -168,7 +168,7 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
 ### Skapa tillfälliga språkkopior {#creating-temporary-language-copies}
 
-När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. AEM Resurser lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
+När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. AEM Assets lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
 
 1. Klicka/tryck på källrotmappen i **[!UICONTROL Language Copies]** som du redan har skapat en språkkopia för och klicka/tryck sedan på mappen **[!UICONTROL Reveal in Assets]** för att öppna den i AEM Assets.
 1. I resursgränssnittet markerar du en resurs som du redan har översatt och klickar på/trycker på **[!UICONTROL Edit]** ikonen i verktygsfältet för att öppna resursen i redigeringsläge.
@@ -230,7 +230,7 @@ Använd alternativet **Skapa endast struktur** om du vill skapa en målmappshier
 
 ## Använd översättningsmolntjänster på mappar {#applying-translation-cloud-services-to-folders}
 
-Med Adobe Experience Manager (AEM) kan ni använda molnbaserade översättningstjänster från den översättningsleverantör ni väljer för att se till att era resurser översätts utifrån era behov.
+Med Adobe Experience Manager (AEM) kan du använda molnbaserade översättningstjänster från den översättningsleverantör du väljer för att se till att dina resurser översätts baserat på dina behov.
 
 Du kan använda översättningsmolntjänsten direkt i resursmappen så att den kan användas under översättningsarbetsflöden.
 
@@ -244,7 +244,7 @@ Genom att använda översättningsmolntjänster direkt i resursmappen behöver d
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
 1. Navigera till fliken **[!UICONTROL Cloud Services]**.
-1. Välj önskad översättningsleverantör i listan Cloud-tjänstkonfigurationer. Om du till exempel vill använda översättningstjänster från Microsoft väljer du **[!UICONTROL Microsoft Translator]**.
+1. I listan Cloud Service Configurations väljer du önskad översättningsleverantör. Om du till exempel vill använda översättningstjänster från Microsoft väljer du **[!UICONTROL Microsoft Translator]**.
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
