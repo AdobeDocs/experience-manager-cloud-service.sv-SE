@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: a53ab47fe954bd48dc34840968a9a47cdcc34556
+source-git-commit: 0565d053b6040bc99ae79823711d56eb9aecdfb3
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på n
 
 * CRA-rapporten byggs med hjälp av utdata från Adobe Experience Manager (AEM) [mönsteravkännaren](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Mönsteravkännare som används av CRA ingår i CRA-installationspaketet.
 
-* CRA kan bara köras av **administratörsanvändaren** eller en användare i **administratörerna**.
+* CRA kan bara köras av **administratörsanvändaren** eller en användare i gruppen **Administratörer** .
 
 * CRA stöds på AEM-instanser med version 6.1 och senare.
 
@@ -55,7 +55,7 @@ Följ det här avsnittet för att lära dig hur du visar Cloud Readiness Analyze
 
    ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-1.png)
 
-1. När CRA-rapporten genereras och visas kan du välja att hämta rapporten med kommaseparerade värden (CSV). Klicka på **CSV** för att ladda ned den fullständiga CRA-rapporten i CSV-format (kommaseparerade värden), vilket visas i bilden nedan.
+1. När CRA-rapporten genereras och visas kan du välja att hämta rapporten i ett kommaseparerat format (CSV) genom att klicka på **CSV**, vilket visas i bilden nedan.
 
    ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-2.png)
 
@@ -77,7 +77,7 @@ När verktyget Cloud Readiness Analyzer körs i AEM-instansen visas rapporten so
 
 Rapportens format är:
 
-* **Rapportöversikt**: Information om själva rapporten och innehåller följande information:
+* **Rapportöversikt**: Information om själva rapporten som innehåller följande information:
    * **Rapporttid**: När rapportinnehållet genererades och gjordes tillgängligt för första gången.
    * **Förfallotid**: När cachen för rapportinnehåll upphör att gälla.
    * **Tidsperiod** för generering: Den tid som används för att generera rapportinnehåll.
@@ -176,7 +176,7 @@ Standardlivstiden för CRA-cache är 24 timmar. Med alternativet att uppdatera e
 Livslängdsvärdet för cacheminnet lagras som egenskapen `maxCacheAge` på följande databasnod:
 `/apps/readiness-analyzer/content/CloudReadinessReport/jcr:content`
 
-Värdet för den här egenskapen är cachelivstiden i sekunder. Administratören kan justera cachelivstiden med CRXDE Lite.
+Värdet för den här egenskapen är cachelivstiden i sekunder. Administratören kan justera cachelivstiden med CRX/DE Lite.
 
 
 
