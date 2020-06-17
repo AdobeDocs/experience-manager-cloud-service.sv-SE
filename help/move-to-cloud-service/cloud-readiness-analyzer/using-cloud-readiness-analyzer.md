@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 2064dd6c647780dc149c51b7ff166779ba0a2212
+source-git-commit: a53ab47fe954bd48dc34840968a9a47cdcc34556
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Cloud Readiness Analyzer kan laddas ned som en zip-fil från Software Distributi
 
 ## Visa Cloud Readiness Analyzer-rapporten {#viewing-report}
 
-### Adobe Experience Manager 6.3 och senare {#aem-later-versions}
+### Adobe Experience Manager 6.3.0 och senare {#aem-later-versions}
 
 Följ det här avsnittet för att lära dig hur du visar Cloud Readiness Analyzer-rapporten:
 
@@ -64,7 +64,7 @@ Följ det här avsnittet för att lära dig hur du visar Cloud Readiness Analyze
 
 ### Adobe Experience Manager 6.2 och 6.1 {#aem-specific-versions}
 
-Cloud Readiness Analyzer är begränsad i Adobe Experience Manager 6.2 till en länk som genererar och hämtar CSV-rapporten.
+Verktyget Cloud Readiness Analyzer är i Adobe Experience Manager 6.2 begränsat till en länk som genererar och hämtar CSV-rapporten.
 
 För Adobe Experience Manager 6.1 fungerar inte verktyget och bara HTTP-gränssnittet kan användas.
 
@@ -77,11 +77,11 @@ När verktyget Cloud Readiness Analyzer körs i AEM-instansen visas rapporten so
 
 Rapportens format är:
 
-* **Rapportöversikt**: Information om själva rapporten och information som:
-   * *Rapporttid*: När rapportinnehållet genererades och gjordes tillgängligt för första gången.
-   * *Förfallotid*: När cachen för rapportinnehåll upphör att gälla.
-   * *Tidsperiod* för generering: Den tid som används för att generera rapportinnehåll.
-   * *Sökningsantal*: Det totala antalet resultat som ingår i rapporten.
+* **Rapportöversikt**: Information om själva rapporten och innehåller följande information:
+   * **Rapporttid**: När rapportinnehållet genererades och gjordes tillgängligt för första gången.
+   * **Förfallotid**: När cachen för rapportinnehåll upphör att gälla.
+   * **Tidsperiod** för generering: Den tid som används för att generera rapportinnehåll.
+   * **Sökningsantal**: Det totala antalet resultat som ingår i rapporten.
 * **Systemöversikt**: Information om det AEM-system som CRA kördes på.
 * **Söker efter kategorier**: Flera avsnitt som åtgärdar en eller flera brister i samma kategori. Varje avsnitt innehåller följande: Kategorinamn, undertyper, antal sökningar och deras betydelse, sammanfattning, länk till kategoridokumentation och information om enskild sökning.
 
