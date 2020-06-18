@@ -1,28 +1,28 @@
 ---
-title: Distribuera till AEM as a Cloud Service
-description: 'Distribuera till AEM as a Cloud Service '
+title: Driftsätta till AEM as a Cloud Service
+description: 'Driftsätta till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 10e12a8b15e6ea51e8b022deefaefed52780d48a
+source-git-commit: 6fee9a7abd17615c607f01b869a9c1eaed5793a3
 workflow-type: tm+mt
-source-wordcount: '3512'
+source-wordcount: '3523'
 ht-degree: 1%
 
 ---
 
 
-# Distribuera till AEM as a Cloud Service {#deploying-to-aem-as-a-cloud-service}
+# Driftsätta till AEM as a Cloud Service {#deploying-to-aem-as-a-cloud-service}
 
 ## Introduktion {#introduction}
 
-De grundläggande funktionerna i kodutveckling liknar i AEM en molntjänst jämfört med lösningarna AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till fjärr-AEM som en molntjänstmiljö. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för hanterade tjänster, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM som en molntjänstmiljö.
+De grundläggande funktionerna för kodutveckling liknar i AEM som en Cloud Service jämfört med lösningarna AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till fjärr-AEM som en Cloud Service-miljö. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för hanterade tjänster, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM som en Cloud Service-miljö.
 
 Uppdateringen av AEM-versionen är alltid en separat distributionshändelse jämfört med att skicka anpassad kod. Om de visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM-version som är i produktion eftersom det är den version som kommer att användas ovanpå. Uppdateringar av AEM-versioner som görs därefter, som är vanliga i jämförelse med hanterade tjänster idag, tillämpas automatiskt. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
 
-I följande video visas en översikt på hög nivå över hur du distribuerar kod till AEM som en molntjänst:
+I följande video visas en översikt över hur du distribuerar kod till AEM som Cloud Service:
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=9)
 
-I resten av det här dokumentet beskrivs hur utvecklare bör anpassa sina rutiner så att de arbetar med både AEM som en Cloud-tjänsts versionsuppdateringar och kunduppdateringar.
+I resten av det här dokumentet beskrivs hur utvecklare bör anpassa sina rutiner så att de kan arbeta med både AEM som Cloud Servicens versionsuppdateringar och kunduppdateringar.
 
 >[!NOTE]
 >Vi rekommenderar att kunder med befintliga kodbaser genomgår en omstrukturering av databasen som beskrivs i [AEM-dokumentationen](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
@@ -38,7 +38,7 @@ Det är viktigt att förstå att AEM uppdateras ofta, eventuellt så ofta som en
 
 Med jämna mellanrum kommer en ny funktion att publiceras med fokus på funktionstillägg och förbättringar som kommer att påverka användarupplevelsen mer än med de dagliga versionerna. En funktionsrelease aktiveras inte av driftsättningen av en stor ändringslista, utan snarare genom att en versionsväxling aktiveras som har ackumulerats under flera dagar eller veckor genom de dagliga uppdateringarna.
 
-Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM-uppdatering som en molntjänst, fortsätter inte releasen för den miljön och Adobe undersöker varför uppdateringen orsakade det oväntade beteendet.
+Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM-Cloud Service som en uppdatering fortsätter inte releasen för den miljön och Adobe undersöker varför uppdateringen orsakade detta oväntade beteende.
 
 ### Sammansatt nodarkiv {#composite-node-store}
 
@@ -48,22 +48,22 @@ Som vi nämnt ovan kommer uppdateringarna i de flesta fall att innebära noll dr
 
 ### Kodning mot rätt AEM-version {#coding-against-the-right-aem-version}
 
-För tidigare AEM-lösningar ändrades den senaste AEM-versionen sällan (ungefär en gång per år med kvartalsvisa servicepaket) och kunderna skulle uppdatera produktionsinstanserna till den senaste snabbstarten på egen tid med referens till API Jar. Men AEM som en molntjänst uppdateras automatiskt till den senaste versionen av AEM oftare, så anpassad kod för interna releaser bör byggas mot de nyare AEM-gränssnitten.
+För tidigare AEM-lösningar ändrades den senaste AEM-versionen sällan (ungefär en gång per år med kvartalsvisa servicepaket) och kunderna skulle uppdatera produktionsinstanserna till den senaste snabbstarten på egen tid med referens till API Jar. Men AEM som Cloud Service uppdateras automatiskt till den senaste versionen av AEM oftare, så anpassad kod för interna releaser bör byggas mot de nyare AEM-gränssnitten.
 
 Precis som för befintliga AEM-versioner som inte finns i molnet stöds en lokal offlineutveckling baserad på en viss snabbstart och förväntas vara det verktyg som i de flesta fall är det bästa för felsökning.
 
 >[!NOTE]
 >Det finns små skillnader i hur programmet fungerar på en lokal dator jämfört med Adobe Cloud. Dessa arkitektoniska skillnader måste respekteras under lokal utveckling och kan leda till ett annat beteende vid driftsättning i molninfrastrukturen. På grund av dessa skillnader är det viktigt att utföra de fullständiga testerna på dev- och stage-miljöer innan ny anpassad kod distribueras i produktionen.
 
-För att kunna utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM som en molntjänst-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) hämtas och installeras. Mer information om hur du använder AEM som verktyg för Cloud Service Dispatcher finns på [den här sidan](/help/implementing/dispatcher/overview.md).
+För att kunna utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM som SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) -Cloud Service laddas ned och installeras. Mer information om hur du använder AEM som en Cloud Service i Dispatcher Tools finns på [den här sidan](/help/implementing/dispatcher/overview.md).
 
 ## Distribuera innehållspaket via Cloud Manager och Package Manager {#deploying-content-packages-via-cloud-manager-and-package-manager}
 
 ### Distributioner via Cloud Manager {#deployments-via-cloud-manager}
 
-Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, som är hur ett AEM-program som molntjänst beskrivs när det körs i en molnmiljö. När du tittar på paketen i Package Manager i Cloud-miljöer kommer namnet därför att innehålla &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren finns [här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
+Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, som är hur ett AEM-program som Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i Package Manager i Cloud-miljöer kommer namnet därför att innehålla &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren finns [här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
 
-Innehållspaket som skrivits för AEM som ett molntjänstprogram måste ha en ren separation mellan oföränderligt och muterbart innehåll, och Cloud Manager kommer att framtvinga det genom att misslyckas med bygget och skicka ett meddelande som:
+Innehållspaket som skrivits för AEM som ett Cloud Service-program måste ha en ren separation mellan oföränderligt och muterbart innehåll, och Cloud Manager kommer att framtvinga det genom att misslyckas med bygget och skicka ett meddelande som:
 
 `Generated content-package <PACKAGE_ID> located in file <PATH> is of MIXED type`
 
@@ -121,7 +121,7 @@ Det går att begränsa installation av muterbart innehåll för författare elle
 
 Det finns heller ingen mekanism för att återställa ändringar i det ändringsbara innehållspaketet efter att de har tillämpats. Om kunderna upptäcker ett problem kan de välja att åtgärda det i nästa kodversion eller som en sista utväg, återställa hela systemet till en tidpunkt före distributionen.
 
-Alla inkluderade paket från tredje part måste valideras som AEM som en molntjänst som är kompatibel med, annars leder detta till ett distributionsfel.
+Alla paket från tredje part som ingår måste valideras som AEM-kompatibla som en Cloud Service Service-kompatibel, annars leder inkludering till ett distributionsfel.
 
 Som nämnts ovan bör kunder med befintliga kodbaser följa den struktureringsövning av databasen som beskrivs i [AEM-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/repository-restructuring.html).
 
@@ -150,7 +150,7 @@ När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende 
 
 Följ nedanstående procedur för att skapa repoinit-satser:
 
-1. Lägg till OSGi-konfiguration för PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp i projektet
+1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp i projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentationen](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Exempel: en explicit generering av `/content` before `/content/myfolder`, before `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
 1. Validera på den lokala utvecklingsmiljön vid körning.
 
@@ -172,7 +172,7 @@ above appears to be internal, to confirm with Brian -->
 
 ### Package Manager &quot;one offs&quot; för paket med olika innehåll {#package-manager-oneoffs-for-mutable-content-packages}
 
-I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. I dessa scenarier kan Package Manager användas i AEM som molntjänstmiljöer.
+I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. I dessa scenarier kan Package Manager användas i AEM som Cloud Service-miljöer.
 
 Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt innehåll) installeras endast det muterbara innehållet.
 
@@ -195,7 +195,7 @@ Om det inte går att lagra paketet i en fjärrdatabas kan kunderna placera det i
 
 <!-- formatting appears broken in the code sample above, check how it appears on AEM -->
 
-Alla inkluderade paket från tredje part måste följa AEM som riktlinjer för molntjänstkodning och paketering som beskrivs i den här artikeln, annars leder inkludering till ett distributionsfel.
+Alla paket från tredje part som ingår måste följa AEM som riktlinjer för kodning och paketering av Cloud Service Service som beskrivs i den här artikeln, annars leder inkludering till ett distributionsfel.
 
 Följande XML-kodfragment för Maven POM visar hur paket från tredje part kan bäddas in i projektets behållarpaket, som vanligtvis kallas **&#39;all&#39;**, via Maven-pluginkonfigurationen **filevault-package-maven-plugin**.
 
@@ -262,7 +262,7 @@ För att kunna utveckla och testa med replikering med molnförberedda AEM Quicks
 
 ## Bakåtkompatibel kod för rullande distributioner {#backwards-compatible-code-for-rolling-deployments}
 
-Som anges ovan innebär AEM som en strategi för rullande driftsättning i molnet att både den gamla och den nya versionen kan användas samtidigt. Var därför försiktig med kodändringar som inte är bakåtkompatibla med den gamla AEM-versionen som fortfarande används.
+Som anges ovan innebär AEM som strategi för rullande driftsättning att både den gamla och den nya Cloud Servicen kan köras samtidigt. Var därför försiktig med kodändringar som inte är bakåtkompatibla med den gamla AEM-versionen som fortfarande används.
 
 Dessutom bör den gamla versionen testas för kompatibilitet med nya ändringsbara innehållsstrukturer som tillämpas i den nya versionen i händelse av återställning, eftersom det ändringsbara innehållet inte tas bort.
 
@@ -282,9 +282,9 @@ Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att
 
 I befintliga AEM-lösningar kan kunderna köra instanser med godtyckliga körningslägen och använda OSGI-konfiguration eller installera OSGI-paket för dessa specifika instanser. Körningslägen som definieras omfattar vanligtvis *tjänsten* (författare och publicering) och miljön (dev, stage, prod).
 
-Å andra sidan är AEM som en molntjänst mer övertygande om vilka körningslägen som finns tillgängliga och hur OSGI-paket och OSGI-konfigurationer kan mappas till dem:
+Å andra sidan är AEM som Cloud Service mer övertygande om vilka körlägen som finns tillgängliga och hur OSGI-paket och OSGI-konfigurationer kan mappas till dem:
 
-* OSGI-konfigurationens körningslägen måste referera till dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa måste användas i just den ordningen (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` metoden, som inte längre inkluderar `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM som en molntjänst](/help/implementing/deploying/configuring-osgi.md).
+* OSGI-konfigurationens körningslägen måste referera till dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa måste användas i just den ordningen (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` metoden, som inte längre inkluderar `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM som Cloud Service](/help/implementing/deploying/configuring-osgi.md).
 * Körningslägena för OSGI-paket är begränsade till tjänsten (författare, publicera). OSGI-paket per körning ska installeras i innehållspaketet under antingen `install/author` eller `install/publish`.
 
 Precis som de befintliga AEM-lösningarna finns det inget sätt att använda körningslägen för att installera enbart innehåll för specifika miljöer eller tjänster. Om man ville skapa en egen utvecklarmiljö med data eller HTML som inte finns på scenen eller i produktionen kunde man använda pakethanteraren.
@@ -296,7 +296,7 @@ De runmode-konfigurationer som stöds är:
 * **config.author.dev** (*Gäller AEM Dev Author service*)
 * **config.author.stage** (*Gäller AEM Staging Author service*)
 * **config.author.prod** (*Gäller AEM Production Author service*)
-* **config.publish** (*Gäller AEM Publish-tjänsten*)
+* **config.publish** (*Gäller tjänsten* AEM Publish)
 * **config.publish.dev** (*Gäller AEM Dev Publish-tjänsten*)
 * **config.publish.stage** (*Gäller publiceringstjänsten* AEM Staging)
 * **config.publish.prod** (*Gäller AEM Production Publish-tjänsten*)
