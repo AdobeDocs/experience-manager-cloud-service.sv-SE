@@ -2,10 +2,10 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 1d5023e49288cfa922f8fff8264b857ac66ec97a
+source-git-commit: 3da4c659893e55f5ffe104ea08ea89cc296050c1
 workflow-type: tm+mt
-source-wordcount: '1708'
-ht-degree: 0%
+source-wordcount: '1715'
+ht-degree: 1%
 
 ---
 
@@ -27,16 +27,16 @@ Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på n
    >[!NOTE]
    >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör CRA i en *författarmiljö* som är så nära *produktionsmiljön* som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktionen.
 
-* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
+* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storleken och typen av AEM-databasinnehåll, AEM-versionen och andra faktorer.
 
 * På grund av den stora tid som kan behövas för att generera rapportinnehållet, genereras de av en bakgrundsprocess och lagras i ett cacheminne. Det bör gå relativt snabbt att visa och hämta rapporten eftersom den använder innehållscachen tills den upphör att gälla eller tills rapporten uppdateras explicit. Under genereringen av rapportinnehåll kan du stänga webbläsarfliken och sedan gå tillbaka och visa rapporten när dess innehåll är tillgängligt i cachen.
 
 ## Tillgänglighet {#availability}
 
-Cloud Readiness Analyzer kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via Package Manager på Adobe Experience Manager-källinstansen (AEM).
+Cloud Readiness Analyzer kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
->Hämta Cloud Readiness Analyzer från Software Distribution Portal.
+>Hämta Cloud Readiness Analyzer från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) Portal.
 
 ## Visa Cloud Readiness Analyzer-rapporten {#viewing-report}
 
@@ -46,18 +46,18 @@ Följ det här avsnittet för att lära dig hur du visar Cloud Readiness Analyze
 
 1. Välj Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Cloud Readiness Analyzer**.
 
-   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-1.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-1.png)
 
 1. När du klickar på **Cloud Readiness Analyzer** börjar verktyget generera rapporten och visar den när den är tillgänglig.
 
    >[!NOTE]
    >Du måste rulla nedåt på sidan för att se hela rapporten.
 
-   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-1.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-1.png)
 
 1. När CRA-rapporten genereras och visas kan du välja att hämta rapporten i ett kommaseparerat format (CSV) genom att klicka på **CSV**, vilket visas i bilden nedan.
 
-   ![image](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-2.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-2.png)
 
    >[!NOTE]
    >Du kan tvinga CRA att rensa sin cache och återskapa rapporten genom att klicka på **Uppdatera rapport**.
