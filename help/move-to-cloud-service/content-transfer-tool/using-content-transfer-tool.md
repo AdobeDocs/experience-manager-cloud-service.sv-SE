@@ -2,7 +2,7 @@
 title: Använda verktyget för innehållsöverföring
 description: Använda verktyget för innehållsöverföring
 translation-type: tm+mt
-source-git-commit: 3da4c659893e55f5ffe104ea08ea89cc296050c1
+source-git-commit: 7648adc4b1d9c5849363beb4162de2f42eac7cfd
 workflow-type: tm+mt
 source-wordcount: '1582'
 ht-degree: 91%
@@ -36,6 +36,8 @@ Innehållsöverföringsverktyget kan laddas ned som en zip-fil (Content Transfer
 >Hämta verktyget Innehållsöverföring från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portal.
 
 ## Använda verktyget för innehållsöverföring {#running-tool}
+
+>[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
 
 Följ det här avsnittet för att lära dig hur du använder verktyget för innehållsöverföring för att migrera innehållet till AEM as a Cloud Service (Author/Publish):
 
@@ -198,7 +200,7 @@ När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatnin
 Du kan visa loggar för en befintlig migreringsuppsättning på sidan *Overview*.
 Följ stegen nedan:
 
-1. Navigera till sidan *Overview*  och markera den migreringsuppsättning som du vill ta bort. Klicka sedan på **View Log** i åtgärdsfältet.
+1. Navigera till sidan *Overview* och markera den migreringsuppsättning som du vill ta bort. Klicka sedan på **View Log** i åtgärdsfältet.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/view-log1.png)
 
@@ -213,7 +215,7 @@ Eller:
 
 1. Om du vill svepa loggarna utan att använda användargränssnittet, kan du SSH in i AEM-källmiljön och svepa igenom `crx-quickstart/cloud-migration/extraction-XXXXX/output.log file`.
 
-### Ta bort en migreringsuppsättning  {#deleting-migration-set}
+### Ta bort en migreringsuppsättning {#deleting-migration-set}
 
 Du kan ta bort migreringsuppsättningen från sidan *Overview*.
 Följ stegen nedan:
@@ -256,7 +258,7 @@ Filerna som skapas i *OUT_DIR* som anges ovan för överensstämmelse, kan sedan
 
 ### Gränssnittsbeteende {#ui-behavior}
 
-Som användare kan du se följande beteendeförändringar i användargränssnittet för verktyget  för innehållsöverföring:
+Som användare kan du se följande beteendeförändringar i användargränssnittet för verktyget för innehållsöverföring:
 
 * Användaren skapar en migreringsuppsättning för en författares URL (Development/Stage/Production) och utför extrahering och inmatning.
 
