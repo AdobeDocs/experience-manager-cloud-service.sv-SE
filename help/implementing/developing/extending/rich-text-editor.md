@@ -1,11 +1,11 @@
 ---
-title: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience Manager som en molntjänst.
-description: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience Manager som en molntjänst.
+title: Konfigurera RTF-redigeraren så att den kan skapa innehåll i Adobe Experience Manager som en Cloud Service.
+description: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience Manager som en Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6e0ba39fadcea5929f593bcb5077708656179f48
+source-git-commit: ba7209cbb78a112b85e4d28cdc30d40ae9083c66
 workflow-type: tm+mt
-source-wordcount: '2061'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Configure the Rich Text Editor {#configure-the-rich-text-editor}
 
-Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Mer information om hur du använder RTE-funktioner för redigering finns i [Använda RTF-redigerare för redigering](rich-text-editor.md). Se hur författare [använder RTE för att skapa](/help/sites-cloud/authoring/fundamentals/rich-text-editor.md) webbinnehåll.
+Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använder RTE för att skapa](/help/sites-cloud/authoring/fundamentals/rich-text-editor.md) webbinnehåll.
 
 De RTE-begrepp och -steg som krävs för att konfigurera den listas nedan.
 
@@ -98,7 +98,7 @@ I följande tabell visas de aktuella plugin-programmen:
 | redigera | cut copy paste-default paste-plaintext paste-wordhtml | [Klipp ut, kopiera och, de tre inklistringslägena](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
 | [findreplace](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | sök och ersätt | Sök och ersätt. |
 | [format](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | fet kursiv understrykning | [Grundläggande textformatering](configure-rich-text-editor-plug-ins.md#textstyles). |
-| [image](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | image | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
+| [bild](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | bild | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
 | [tangenter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | Mer information om hur du definierar det här värdet finns i [Tabbstorlek](configure-rich-text-editor-plug-ins.md#tabsize). |
 | [justera](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justera vänster justera mitten justera höger | Styckejustering. |
 | [länkar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | ändra länkavlänkningsankarpunkt | [Hyperlänkar och ankare](configure-rich-text-editor-plug-ins.md#linkstyles). |
@@ -170,7 +170,7 @@ Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stä
 
 ## Verktygsfältet Konfigurera RTE {#dialogfullscreen}
 
-Med Experience Manager kan du konfigurera gränssnittet för textredigeraren på olika sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov. Du anpassar bara de verktygsfältsfunktioner som du vill ge författarna. Du behöver inte ange alla verktygsfältskonfigurationer.
+I Experience Manager kan du konfigurera gränssnittet för textredigeraren på olika sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov. Du anpassar bara de verktygsfältsfunktioner som du vill ge författarna. Du behöver inte ange alla verktygsfältskonfigurationer.
 
 Använd följande exempelkonfiguration om du vill konfigurera verktygsfältet för `dialogFullScreen`.
 
@@ -268,7 +268,7 @@ Nedan finns ett exempelfragment som kopplar kommandot Fet till ikonen Koral med 
 
 ## Kända begränsningar {#known-limitations}
 
-Experience Manager RTE-funktionen har följande begränsningar:
+Funktionen Experience Manager RTE har följande begränsningar:
 
 * RTE-funktioner stöds endast i Experience Manager-komponentdialogrutor. RTE stöds inte i guider eller Foundation-formulär.
 
