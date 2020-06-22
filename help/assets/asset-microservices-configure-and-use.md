@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 496ad0831d20eb7653a3c5727999a2abc5728ec7
+source-git-commit: b63f62790973be59b1437a6406563638f63eeb28
 workflow-type: tm+mt
-source-wordcount: '1846'
+source-wordcount: '1843'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser 
 
 Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**, som tillhandahåller en standardinställning, och gör det möjligt för en administratör att lägga till en mer specifik konfiguration för bearbetning av resurser. Administratörer kan skapa och underhålla konfigurationer för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflöden kan du utöka och göra fullständiga anpassningar.
 
-Med tillgångsmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara direkt än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick.
+Med tillgångsmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara att användas än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick.
 
 <!-- Proposed DRAFT diagram for asset microservices flow - see section "asset-microservices-flow.png (asset-microservices-configure-and-use.md)" in the PPTX deck
 
@@ -57,7 +57,7 @@ För att konfigurera resursmikrotjänster kan administratörer använda konfigur
 
 ### Standardkonfiguration {#default-config}
 
-Med standardkonfigurationen konfigureras bara standardbearbetningsprofilen. Standardbearbetningsprofilen visas inte i användargränssnittet och du kan inte ändra den. Det körs alltid för att bearbeta överförda resurser. En standardbearbetningsprofil säkerställer att all grundläggande bearbetning som krävs av Experience Manager är slutförd för alla resurser.
+Med standardkonfigurationen konfigureras bara standardbearbetningsprofilen. Standardbearbetningsprofilen visas inte i användargränssnittet och du kan inte ändra den. Det körs alltid för att bearbeta överförda resurser. Med en standardbearbetningsprofil säkerställs att all grundläggande bearbetning som krävs av Experience Manager utförs på alla tillgångar.
 
 <!-- ![processing-profiles-standard](assets/processing-profiles-standard.png) -->
 
@@ -105,13 +105,13 @@ I annat fall kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den 
 
 #### Särskild FPO-återgivning {#special-fpo-rendition}
 
-När du monterar stora resurser från AEM i Adobe InDesign-dokument måste den som arbetar med design vänta en hel del efter att de [monterat materialet](https://helpx.adobe.com/indesign/using/placing-graphics.html). Under tiden är användaren blockerad från att använda InDesign. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Adobe gör det möjligt att tillfälligt placera små återgivningar i InDesign-dokument till att börja med, vilket kan ersättas med högupplösta resurser vid behov senare. Experience Manager innehåller renderingar som bara används för placering (FPO). Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner.
+När du monterar stora resurser från AEM i Adobe InDesign-dokument måste den som arbetar med design vänta en hel del efter att de [monterat materialet](https://helpx.adobe.com/indesign/using/placing-graphics.html). Under tiden är användaren blockerad från att använda InDesign. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Adobe gör det möjligt att tillfälligt placera små återgivningar i InDesign-dokument till att börja med, vilket kan ersättas med högupplösta resurser vid behov senare. Experience Manager tillhandahåller renderingar som endast används för placering (FPO). Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner.
 
 Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Läs [dokumentationen](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) om Adobe Asset Link om du behöver aktivera den för din bearbetningsprofil. Mer information finns i den fullständiga dokumentationen för [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
 ## Använd resursmikrotjänster för att bearbeta resurser {#use-asset-microservices}
 
-Skapa och använd de anpassade bearbetningsprofilerna på specifika mappar för Experience Manager för att bearbeta resurser som har överförts till eller uppdaterats i dessa mappar. Den inbyggda standardbearbetningsprofilen körs alltid som standard, men visas inte i användargränssnittet. Om du lägger till en anpassad profil används båda profilerna för att bearbeta de överförda resurserna.
+Skapa och använd de extra anpassade bearbetningsprofilerna på specifika mappar som Experience Manager kan bearbeta för resurser som har överförts till eller uppdaterats i dessa mappar. Den inbyggda standardbearbetningsprofilen körs alltid som standard, men visas inte i användargränssnittet. Om du lägger till en anpassad profil används båda profilerna för att bearbeta de överförda resurserna.
 
 Det finns två sätt att använda bearbetningsprofiler på mappar:
 
@@ -126,7 +126,7 @@ När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurs
 
 >[!NOTE]
 >
->När resurser överförs till en mapp kontrollerar Experience Manager om det finns en bearbetningsprofil för den innehållande mappens egenskaper. Om ingen används går den upp i mappträdet tills den hittar en bearbetningsprofil som används och använder den för resursen. Det innebär att en bearbetningsprofil som används för en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används för en undermapp.
+>När resurser överförs till en mapp kontrollerar Experience Manager egenskaperna för den innehållande mappen för att hitta en bearbetningsprofil. Om ingen används går den upp i mappträdet tills den hittar en bearbetningsprofil som används och använder den för resursen. Det innebär att en bearbetningsprofil som används för en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används för en undermapp.
 
 Användarna kan kontrollera att bearbetningen faktiskt utfördes genom att öppna en nyligen överförd resurs som bearbetningen är klar för, öppna förhandsgranskningen av resursen och klicka på den vänstra **[!UICONTROL Renditions]** spårens vy. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
 
@@ -136,20 +136,18 @@ Användarna kan kontrollera att bearbetningen faktiskt utfördes genom att öppn
 
 Om det krävs ytterligare bearbetning av resurser som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Detta gör att du kan lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
 
-Efterbehandlingsarbetsflöden, om de är konfigurerade, körs automatiskt av AEM när bearbetningen av mikrotjänsterna har slutförts. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa dem.
+Efterbehandlingsarbetsflöden, om de är konfigurerade, körs automatiskt av AEM när bearbetningen av mikrotjänsterna har slutförts. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa dem. Exemplen innehåller:
 
-Exempel:
-
-* anpassade arbetsflödessteg för att bearbeta resurser, till exempel Java-kod, för att generera återgivningar från egna filformat.
-* integreringar för att lägga till metadata eller egenskaper i resurser från externa system, till exempel produkt- eller processinformation.
-* ytterligare bearbetning utförd av externa tjänster
+* Anpassade arbetsflödessteg för att bearbeta resurser.
+* Integreringar för att lägga till metadata eller egenskaper i resurser från externa system, till exempel produkt- eller processinformation.
+* Ytterligare bearbetning utförd av externa tjänster.
 
 Att lägga till en arbetsflödeskonfiguration efter bearbetning i Experience Manager består av följande steg:
 
-* Skapa en eller flera arbetsflödesmodeller. Vi kallar dem&quot;arbetsflödesmodeller för efterbearbetning&quot;, men de är vanliga arbetsflödesmodeller för AEM.
-* Lägga till specifika arbetsflödessteg i dessa modeller. De här stegen körs på resurserna baserat på arbetsflödesmodellkonfigurationen.
-* Det sista steget i en sådan modell måste vara `DAM Update Asset Workflow Completed Process` steget. Detta krävs för att säkerställa att AEM vet att bearbetningen har avslutats och att resursen kan markeras som bearbetad (&quot;Nytt&quot;)
-* Skapa en konfiguration för tjänsten Custom Workflow Runner, som gör att du kan konfigurera körning av en arbetsflödesmodell efter bearbetning, antingen efter sökväg (mappsökväg) eller reguljärt uttryck
+* Skapa en eller flera arbetsflödesmodeller. I dokumenten anges det som *arbetsflödesmodeller* för efterbearbetning, men dessa är vanliga arbetsflödesmodeller för Experience Manager.
+* Lägg till specifika arbetsflödessteg i dessa modeller. Stegen körs på resurserna baserat på en arbetsflödesmodellkonfiguration.
+* Lägg till [!UICONTROL DAM Update Asset Workflow Completed Process] steg i slutet. Om du lägger till det här steget vet Experience Manager när bearbetningen avslutas och resursen kan markeras som bearbetad, vilket innebär att *Nytt* visas på resursen.
+* Skapa en konfiguration för tjänsten Custom Workflow Runner som gör att du kan konfigurera körning av en arbetsflödesmodell efter bearbetning antingen med en sökväg (mappsökväg) eller med ett reguljärt uttryck.
 
 ### Skapa arbetsflödesmodeller för efterbearbetning {#create-post-processing-workflow-models}
 
@@ -157,7 +155,7 @@ Arbetsflödesmodeller för efterbearbetning är vanliga AEM-arbetsflödesmodelle
 
 Bearbetningssteg ska läggas till baserat på behov. Du kan använda alla steg som stöds, samt alla anpassade arbetsflödessteg.
 
-Se till att det sista steget i varje efterbearbetningsarbetsflöde är `DAM Update Asset Workflow Completed Process`. Det sista steget hjälper till att säkerställa att Experience Manager vet när mediebearbetningen är klar.
+Se till att det sista steget i varje efterbearbetningsarbetsflöde är `DAM Update Asset Workflow Completed Process`. I det sista steget ser du till att Experience Manager vet när bearbetningen av mediefiler är klar.
 
 ### Konfigurera arbetsflödeskörning efter bearbetning {#configure-post-processing-workflow-execution}
 
