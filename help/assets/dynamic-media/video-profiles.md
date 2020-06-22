@@ -1,16 +1,16 @@
 ---
-title: Videoprofiler
+title: Videoprofiler för Dynamic Media
 description: Dynamic Media har redan en fördefinierad Adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. Du kan också lägga till smart beskärning i videoklipp.
 translation-type: tm+mt
-source-git-commit: a5e94003a3e9023155dc95ceba1a5531e4f20d8f
+source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
 workflow-type: tm+mt
-source-wordcount: '3501'
-ht-degree: 17%
+source-wordcount: '3505'
+ht-degree: 14%
 
 ---
 
 
-# Videoprofiler{#video-profiles}
+# Videoprofiler för Dynamic Media{#video-profiles}
 
 Dynamic Media har redan en fördefinierad Adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. När du kodar dina primära källvideofilmer med den adaptiva videokodningsprofilen justeras videospelaren automatiskt i videoströmmens kvalitet under uppspelningen baserat på internetanslutningshastigheten hos dina kunder. Detta kallas adaptiv strömning.
 
@@ -34,11 +34,11 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 >
 >Metadata är användbara när du söker efter resurser. Miniatyrbilderna är statiska videobilder som genereras under kodningen. De krävs av AEM-systemet och används i användargränssnittet för att visuellt identifiera videoklipp i vyn Kort, i sökresultatvyn och i resurslista. Du kan se de genererade miniatyrbilderna när du trycker på ikonen Återgivning (en målares palett) för en kodad video.
 
-När du har skapat videoprofilen använder du den på en mapp eller flera mappar. Se [Använda en videoprofil för mappar.](#applying-a-video-profile-to-folders)
+När du är klar med att skapa videoprofilen använder du den på en mapp eller flera mappar. Se [Använda en videoprofil på mappar.](#applying-a-video-profile-to-folders)
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera tillgångsbearbetning](/help/assets/dynamic-media/config-dm.md#configuring-asset-processing).
 
-Se även [Profiler för bearbetning av metadata, bilder och videoklipp](/help/assets/dynamic-media/processing-profiles.md).
+Se även [Profiler för bearbetning av metadata, bilder och videoklipp](/help/assets/dynamic-media/about-image-video-profiles.md).
 
 ## Förinställningar för adaptiv videokodning {#adaptive-video-encoding-presets}
 
@@ -107,17 +107,17 @@ Observera att Adobe Sensei för närvarande är begränsat till 9 000 bildrutor.
 
 >[!IMPORTANT]
 >
->För att smart beskärning av video ska fungera måste du inkludera en eller flera förinställningar för videokodning i videoprofilen.
+>För att smart beskärning av video ska fungera måste du inkludera en eller flera förinställningar för videokodning med din videoprofil.
 
 Om du vill använda smart beskärning för video skapar du en adaptiv eller progressiv videokodningsprofil. Som en del av din profil använder du verktyget **[!UICONTROL Smart Crop Ratio]** för att välja fördefinierade proportioner. När du har definierat dina förinställningar för videokodning kan du till exempel lägga till en&quot;Mobile Landscape&quot;-definition med proportionerna 16x9 och en&quot;Mobile Portrait&quot;-definition med proportionerna 9x16. Andra proportioner eller beskärningsproportioner som du kan välja mellan är 1x1, 4x3 och 4x5.
 
 ![Redigera en videokodningsprofil med smart beskärning](assets/edit-smart-crop-video2.png)
 
-Observera att du kan växla mellan att aktivera och inaktivera smart beskärning för video i videoprofilen med hjälp av skjutreglaget längst till höger om **[!UICONTROL Smart Crop Ratio]** i användargränssnittet.
+Note that you can toggle video smart crop in the Video Profile to either on or off using the slider to the far right of **[!UICONTROL Smart Crop Ratio]** in the user interface.
 
-När du har skapat och sparat videoprofilen kan du använda den på de mappar du vill använda.
+När du har skapat och sparat din videoprofil kan du använda den på de mappar du vill använda.
 
-Se [Använda videoprofiler på specifika mappar](#applying-video-profiles-to-specific-folders) eller [Använda en videoprofil globalt](#applying-a-video-profile-globally).
+Se [Använda videoprofiler på särskilda mappar](#applying-video-profiles-to-specific-folders) eller [Använda en videoprofil globalt](#applying-a-video-profile-globally).
 
 Se även [Smart beskärning för bilder](image-profiles.md).
 
@@ -140,7 +140,7 @@ För alla kodningsförinställningar för MP4 H.264-video i profilen valideras f
 * H264-profil
 * Samplingsfrekvens för ljud
 
-Om värdena inte är desamma kan du fortsätta skapa profilen som den är. Tänk dock på att adaptiv strömning inte kommer att vara möjlig. I stället får användarna direktuppspelning med en bithastighet. Vi rekommenderar att du redigerar kodningsinställningarna så att samma värden används för de enskilda kodningsförinställningarna i profilen. (Observera att videoprofilen/förinställningsredigeraren bör använda samma paritet som de adaptiva videokodningsinställningarna om &quot;Koda för adaptiv strömning&quot; är aktiverat.)
+Om värdena inte är desamma kan du fortsätta skapa profilen som den är. Tänk dock på att adaptiv strömning inte kommer att vara möjlig. I stället får användarna direktuppspelning med en bithastighet. Vi rekommenderar att du redigerar kodningsinställningarna så att samma värden används för de enskilda kodningsförinställningarna i profilen. (Observera att redigeraren för videoprofil/förinställning bör tillämpa paritet för de adaptiva videokodningsinställningarna om &quot;Koda för adaptiv strömning&quot; är aktiverat.)
 
 Se även [Skapa en videokodningsprofil för progressiv direktuppspelning](#creating-a-video-encoding-profile-for-progressive-streaming).
 
@@ -318,7 +318,7 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 **Så här redigerar du en videoprofil**:
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
-1. Markera ett videoprofilnamn på sidan Videoprofiler.
+1. Markera ett namn på videoprofilen på sidan Videoprofiler.
 1. Tryck på i verktygsfältet **[!UICONTROL Edit]**.
 1. Redigera namn och beskrivning på sidan Video Encoding Profile.
 1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive streaming]** är markerad.
@@ -332,10 +332,10 @@ Tryck på informationsikonen om du vill se en beskrivning av adaptiv strömning.
 ### Kopiera en videoprofil {#copying-a-video-encoding-profile}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
-1. Markera ett videoprofilnamn på sidan Videoprofiler.
+1. Markera ett namn på videoprofilen på sidan Videoprofiler.
 1. Tryck på i verktygsfältet **[!UICONTROL Copy]**.
 1. Ange ett nytt namn för profilen på sidan Video Encoding Profile.
-1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive streaming]** är markerad. Tryck på informationsikonen om du vill se en beskrivning av adaptiv strömning. (Om du kopierar en progressiv videoprofil markerar du inte kryssrutan.)
+1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive streaming]** är markerad. Tryck på informationsikonen om du vill se en beskrivning av adaptiv strömning. (Om du kopierar en progressiv videoprofil ska du inte markera kryssrutan.)
 
    I Dynamic Media - hybrid-läge, om en WebM-videoförinställning är en del av videoprofilen, **[!UICONTROL Encode for adaptive streaming]** är det inte möjligt eftersom alla förinställningar måste vara MP4.
 1. Under rubriken Förinställningar för videokodning lägger du till, redigerar eller tar bort förinställningar för videokodning som utgör profilen.
@@ -363,36 +363,36 @@ Mappar som har tilldelats en profil visas i användargränssnittet med namnet p�
 
 Du kan tillämpa videoprofiler på specifika mappar eller globalt på alla resurser.
 
-Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp](/help/assets/dynamic-media/processing-profiles.md#reprocessing-assets).
+Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
 ### Tillämpa en videoprofil på specifika mappar {#applying-video-profiles-to-specific-folders}
 
-Du kan använda en videoprofil på en mapp från menyn **[!UICONTROL Tools]** eller, om du är i mappen, från **[!UICONTROL Properties]**. I det här avsnittet beskrivs hur du använder videoprofiler på mappar på båda sätten.
+You can apply a Video Profile to a folder from within the **[!UICONTROL Tools]** menu or if you are in the folder, from the **[!UICONTROL Properties]**. I det här avsnittet beskrivs hur du använder videoprofiler på mappar på båda sätten.
 
 För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-Se även [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](/help/assets/dynamic-media/processing-profiles.md#reprocessing-assets).
+Se även [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
-#### Använda en videoprofil på mappar med hjälp av användargränssnittet Profiler {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
+#### Använda en videoprofil på mappar med hjälp av profilanvändargränssnittet {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
-1. Välj den videoprofil som du vill använda för en eller flera mappar.
+1. Markera den videoprofil som du vill använda för en eller flera mappar.
 1. Tryck på **[!UICONTROL Apply Profile to Folder(s)]** och markera den eller de mappar som du vill ska ta emot de nyligen överförda resurserna och tryck sedan på **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet i **[!UICONTROL Card View]**.
 Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
 
 #### Tillämpa en videoprofil på mappar från Egenskaper {#applying-video-profiles-to-folders-from-properties}
 
-1. Tryck eller klicka på AEM-logotypen och navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill tillämpa en videoprofil på.
+1. Tryck eller klicka på AEM-logotypen och navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill tillämpa en videoprofil på.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Video Profiles]**, välj profilen i listrutan och klicka sedan på **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
    ![chlimage_1-518](assets/chlimage_1-518.png)Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
 
-### Tillämpa en videoprofil globalt {#applying-a-video-profile-globally}
+### Använda en videoprofil globalt {#applying-a-video-profile-globally}
 
 Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till AEM-resurser i en mapp har den valda profilen.
 
-Se även [Bearbeta resurser i en mapp](/help/assets/dynamic-media/processing-profiles.md#reprocessing-assets).
+Se även [Bearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
 **Om du vill använda en videoprofil globalt**,
 
@@ -411,9 +411,9 @@ Du kan också visa filen för att övervaka `error.log` förloppet för ett kodn
 
 När du tar bort en videoprofil från en mapp ärver alla undermappar automatiskt borttagningen av profilen från den överordnade mappen. All bearbetning av filer som har inträffat i mapparna förblir dock oförändrad.
 
-Du kan ta bort en videoprofil från en mapp från menyn **[!UICONTROL Tools]** eller, om du är i mappen, från **[!UICONTROL Folder Settings]**. I det här avsnittet beskrivs hur du tar bort videoprofiler från mappar på båda sätten.
+You can remove a Video Profile from a folder from within the **[!UICONTROL Tools]** menu or if you are in the folder, from the **[!UICONTROL Folder Settings]**. I det här avsnittet beskrivs hur du tar bort videoprofiler från mappar på båda sätten.
 
-### Ta bort en videoprofil från mappar via användargränssnittet Profiler {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
+### Ta bort en videoprofil från mappar via profilens användargränssnitt {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera den videoprofil som du vill ta bort från en eller flera mappar.
