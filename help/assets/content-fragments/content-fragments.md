@@ -1,18 +1,22 @@
 ---
 title: Arbeta med innehållsfragment
-description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en molntjänst gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
+description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
-source-git-commit: c93dfd1ca50933416de1eee7d6d4f820c30afa49
+source-git-commit: aefa7d6493ade255e06eaaa7676f8e018f311994
 workflow-type: tm+mt
-source-wordcount: '1936'
-ht-degree: 3%
+source-wordcount: '1804'
+ht-degree: 2%
 
 ---
 
 
 # Arbeta med innehållsfragment{#working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) som molntjänst kan ni utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
+Med Adobe Experience Manager (AEM) som Cloud Service kan du med Content Fragments utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
+
+Innehållsfragment innehåller strukturerat innehåll:
+
+* De baseras på en [innehållsfragmentmodell](/help/assets/content-fragments/content-fragments-models.md), som fördefinierar en struktur för det resulterande fragmentet.
 
 Innehållsfragment kan också levereras i JSON-format med JSON-exportfunktionerna (Sling Model) i AEM Core-komponenterna. Leveranssätt:
 
@@ -59,7 +63,7 @@ De levererar innehåll till kanaler som inte är traditionella AEM-webbsidor med
 * Inbyggda mobilprogram
 * andra kanaler och kontaktytor utanför AEM
 
-Leveransen görs i JSON-format.
+Leveransen görs i JSON-format med JSON-exporteraren.
 
 AEM Content Fragments kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper. inklusive text, numeriska data, boolesk information, datum och tid med mera.
 
@@ -76,12 +80,6 @@ Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men in
 >
 >Mer information finns också i [Förstå innehållsfragment och Upplevelsefragment i AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/content-fragments-experience-fragments-article-understand.html).
 
->[!CAUTION]
->
->Innehållsfragment är inte tillgängliga i det klassiska användargränssnittet.
->
->Komponenten Content Fragment kan ses i den klassiska användargränssnittets sidospark, men ytterligare funktioner är inte tillgängliga.
-
 >[!NOTE]
 >
 >AEM har även stöd för översättning av fragmentinnehåll. Mer information finns i Skapa översättningsprojekt för innehållsfragment.
@@ -91,24 +89,6 @@ Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men in
 >
 >AEM also supports the translation of fragment content. See [Creating Translation Projects for Content Fragments](/help/assets/creating-translation-projects-for-content-fragments.md) for further information.
 -->
-
-## Typer av innehållsfragment {#types-of-content-fragment}
-
-Innehållsfragment kan antingen vara:
-
-* Enkla fragment
-
-   * Dessa har ingen fördefinierad struktur.
-
-   * De innehåller bara text och bilder.
-
-   * De baseras på mallen **Enkelt fragment** .
-
-* Fragment som innehåller strukturerat innehåll
-
-   * Dessa baseras på en [Content Fragment Model](/help/assets/content-fragments/content-fragments-models.md), som fördefinierar en struktur för det resulterande fragmentet.
-
-   * Dessa kan också användas för att realisera innehållstjänster med JSON-exporteraren.
 
 ## Innehållstyp {#content-type}
 
@@ -168,18 +148,14 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 * **Fragmentelement**
 
    * Elementen korrelerar till de datafält som innehåller innehåll.
-   * För fragment med strukturerat innehåll använder du en innehållsmodell för att skapa innehållsfragmentet. De element (fält) som anges i modellen definierar fragmentets struktur. Dessa element (fält) kan vara av olika datatyper.
-   * För enkla fragment:
-
-      * Innehållet finns i ett (eller flera) textfält med flera rader eller element.
-      * Elementen definieras i mallen **Enkelt fragment** .
+   * Du använder en innehållsmodell för att skapa innehållsfragmentet. De element (fält) som anges i modellen definierar fragmentets struktur. Dessa element (fält) kan vara av olika datatyper.
 
 * **Fragmentera stycken**
 
    * Textblock, det vill säga:
 
       * avgränsat med lodräta blanksteg (vagnretur)
-      * i flerradiga textelement, i enkla eller strukturerade fragment
+      * i textelement med flera rader
    * I lägena [RTF](/help/assets/content-fragments/content-fragments-variations.md#rich-text) och [Markdown-kod](/help/assets/content-fragments/content-fragments-variations.md#markdown) kan ett stycke formateras som en rubrik, och då utgör det och det efterföljande stycket en enhet.
 
    * Aktivera innehållskontroll vid sidredigering.
@@ -271,11 +247,6 @@ Om du vill skapa, redigera och använda innehållsfragment behöver du också:
    * Definierar strukturen för ett fragment (rubrik, innehållselement, taggdefinitioner).
    * Innehållsmodelldefinitioner kräver en titel och ett dataelement. allt annat är valfritt. Modellen definierar ett minimalt omfång för fragmentet och standardinnehållet om tillämpligt. Författare kan inte ändra den definierade strukturen när de redigerar fragmentinnehåll.
 
-* **Fragmentmall**
-
-   * Mallen **Enkelt fragment** krävs för att [skapa ett enkelt fragment](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments).
-   * Definierar grundläggande egenskaper för ett enkelt fragment (titel, antal textelement, taggdefinitioner).
-
 * **Innehållsfragmentkomponent**
 
    * Instrumentellt för att leverera fragmentet i HTML- och/eller JSON-format.
@@ -290,6 +261,6 @@ Ett fragment, med dess element och variationer, kan användas för att skapa sam
 
 ### WKND-exempel {#wknd-sample}
 
-WKND- [webbplatsexemplen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) finns för att hjälpa dig att lära dig mer om AEM som molntjänst. Den innehåller exempelfragment som kan ses vid:
+WKND [Site](/help/implementing/developing/introduction/develop-wknd-tutorial.md) -exemplen är till för att du ska kunna lära dig mer om AEM som Cloud Service. Den innehåller exempelfragment som kan ses vid:
 
 `hhttp://<host>:<port>/assets.html/content/dam/wknd/en/adventures`
