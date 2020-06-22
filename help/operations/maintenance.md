@@ -1,8 +1,8 @@
 ---
-title: Underhållsaktiviteter i AEM som en molntjänst
-description: 'Underhållsaktiviteter i AEM som en molntjänst '
+title: Underhållsaktiviteter i AEM som Cloud Service
+description: 'Underhållsaktiviteter i AEM som Cloud Service '
 translation-type: tm+mt
-source-git-commit: 8fba31951276d7e0de1f3bd079e42e431edaff4e
+source-git-commit: e9ee1064c5fa62b56c822a18ad6ca8cc4d09fa75
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 0%
@@ -10,9 +10,9 @@ ht-degree: 0%
 ---
 
 
-# Underhållsaktiviteter i AEM som en molntjänst
+# Underhållsaktiviteter i AEM som Cloud Service
 
-Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM som molntjänst är behovet för kunderna att konfigurera driftsegenskaperna för underhållsåtgärder minimal. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och överlåta infrastrukturåtgärderna till Adobe.
+Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM som Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimal. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och överlåta infrastrukturåtgärderna till Adobe.
 
 Mer information om underhållsåtgärder finns på följande sidor:
 
@@ -21,13 +21,13 @@ Mer information om underhållsåtgärder finns på följande sidor:
 
 ## Konfigurera underhållsåtgärder
 
-I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet är inte längre tillgängligt för AEM som molntjänst, så konfigurationer bör implementeras med källkontroll och distribueras med hjälp av Cloud Manager. Adobe hanterar underhållsåtgärder som inte kräver kundbeslut (t.ex. Datastore Garbage Collection) medan andra underhållsåtgärder kan konfigureras av kunden (se tabellen nedan).
+I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). För AEM som Cloud Service är underhållskortet inte längre tillgängligt, så konfigurationer bör implementeras för källkontroll och distribueras med hjälp av Cloud Manager. Adobe hanterar underhållsåtgärder som inte kräver kundbeslut (t.ex. Datastore Garbage Collection) medan andra underhållsåtgärder kan konfigureras av kunden (se tabellen nedan).
 
 >[!CAUTION]
 >
 >Adobe förbehåller sig rätten att åsidosätta en kunds konfigurationsinställningar för underhållsaktiviteter för att minska problem som prestandaförsämringar.
 
-I följande tabell visas underhållsuppgifterna som är tillgängliga när AEM släpps som en molntjänst.
+I följande tabell visas underhållsuppgifterna som är tillgängliga när AEM släpps som en Cloud Service.
 
 | Underhållsaktivitet | Vem äger konfigurationen | Konfigurera (valfritt) |
 |---|---|---|
@@ -35,9 +35,9 @@ I följande tabell visas underhållsuppgifterna som är tillgängliga när AEM s
 | Rensa version | Adobe | Helägd av Adobe, men i framtiden kommer kunderna att kunna konfigurera vissa parametrar. |
 | Rensa granskningslogg | Adobe | Helägd av Adobe, men i framtiden kommer kunderna att kunna konfigurera vissa parametrar. |
 | Lucene Binaries Cleanup | Adobe | Oanvänd och därför inaktiverad av Adobe. |
-| Ad hoc-aktivitetsrensning | Kund | Måste göras i github. <br> Åsidosätt konfigurationsnoden i underhållsfönstret under `/libs` och `/apps` med `/conf/global/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den `granite_TaskPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaperna i dokumentationen för [underhållsaktiviteten för AEM 6.5](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
-| Rensa arbetsflöde | Kund | Måste göras i github. <br> Åsidosätt konfigurationsnoden i underhållsfönstret under `/libs` och `/apps` med `/conf/global/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den `granite_WorkflowPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaperna i dokumentationen för [underhållsaktiviteten för AEM 6.5](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
-| Rensa projekt | Kund | Måste göras i github. <br> Åsidosätt konfigurationsnoden i underhållsfönstret under `/libs` och `/apps` med `/conf/global/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en nod under noden ovan (namnge den `granite_ProjectPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaper i dokumentationen för [underhållsaktiviteter för AEM 6.5](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
+| Ad hoc-aktivitetsrensning | Kund | Måste göras i github. <br> Åsidosätt den färdiga konfigurationsnoden i underhållfönstret under `/libs` genom att skapa egenskaper under mappen `/apps/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den `granite_TaskPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaperna i dokumentationen för [underhållsaktiviteten för AEM 6.5](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
+| Rensa arbetsflöde | Kund | Måste göras i github. <br> Åsidosätt den färdiga konfigurationsnoden i underhållfönstret under `/libs` genom att skapa egenskaper under mappen`/apps/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den `granite_WorkflowPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaperna i dokumentationen för [underhållsaktiviteten för AEM 6.5](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
+| Rensa projekt | Kund | Måste göras i github. <br> Åsidosätt den färdiga konfigurationsnoden i underhållfönstret under `/libs` genom att skapa egenskaper under mappen `/apps/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en nod under noden ovan (namnge den `granite_ProjectPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaper i dokumentationen för [underhållsaktiviteter för AEM 6.5](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
 
 Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-hoc-aktivitetsrensning och projekttömning som ska utföras under underhållsperioden varje dag, vecka eller månad. Dessa konfigurationer bör redigeras direkt i källkontrollen. Tabellen nedan beskriver de konfigurationsparametrar som är tillgängliga för varje fönster.
 
@@ -54,7 +54,7 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Dagligen</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td><code>/conf/global/settings/granite/operations/maintenance/granite_daily </code> (som åsidosätter noden i <code>/apps</code> och <code>/libs</code>)</td>
+    <td><code>/apps/settings/granite/operations/maintenance/granite_daily </code></td>
     <td>Se kodexempel 1 nedan</td>
    <td>
     <ul>
@@ -67,7 +67,7 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Vecka</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td><code>/conf/global/settings/granite/operations/maintenance/granite_weekly</code> (som åsidosätter noden i <code>/apps</code> och <code>/libs</code>)</td>
+    <td><code>/apps/settings/granite/operations/maintenance/granite_weekly</code></td>
     <td>Se kodexempel 2 nedan</td>
      <td>
     <ul>
@@ -81,7 +81,7 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Månadsvis</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td><code>/conf/global/settings/granite/operations/maintenance/granite_monthly</code> (som åsidosätter noden i <code>/apps</code> och <code>/libs</code>)</td>
+    <td><code>/apps/settings/granite/operations/maintenance/granite_monthly</code></td>
     <td>Se kodexempel 3 nedan</td>
      <td>
     <ul>
