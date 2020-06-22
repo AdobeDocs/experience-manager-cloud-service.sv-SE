@@ -2,9 +2,9 @@
 title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
 translation-type: tm+mt
-source-git-commit: b0436c74389ad0b3892d1258d993c00aa470c3ab
+source-git-commit: fcae90c8e24dbd2994e8700daf22f5dff039b299
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1918'
 ht-degree: 0%
 
 ---
@@ -109,12 +109,12 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 Förbättrade smarta taggar gör det möjligt för organisationer att utbilda smarta taggningsmodeller för att identifiera bilder som baseras på kundspecifika företagstaggar utöver generiska smarta taggar.
 
-I den här versionen finns det en ny, guidad användarupplevelse som hjälper dig att skapa smarta taggar för uppsättningar av kundspecifika taggar och utbilda dem med resurser, som bör kännas igen och taggas med dem i framtiden. Detta är en mer intuitiv upplevelse.
+I den här versionen finns det en ny, guidad användarupplevelse som hjälper dig att skapa smarta taggar för uppsättningar av kundspecifika taggar och utbilda dem med resurser, som bör kännas igen och taggas med dem i framtiden. Upplevelsen är nu mer intuitiv.
 Utbilda förbättrade smarta taggar för mer intuitiv utbildning i Smarta taggar. Se [hur du lägger till smarta taggar i resurser](/help/assets/smart-tags.md) och [konfigurerar smart taggning](/help/assets/smart-tags-configuration.md).
 
 **Stöd för konsumtion, förgranskning och leverans av 3D-material**
 
-Organisationer kan nu lagra och använda 3D-filer i AEM Assets. Användaren kan ladda upp, förhandsgranska och använda en mängd olika centrala 3D-filer, t.ex. .obj-, .stl-, .gltf- och .glb-filer. Med tillägg av [!DNL Dynamic Media]kan 3D-upplevelser konfigureras och levereras via agnostiska URL:er eller visningsprogram. Detta inkluderar en [!DNL Dynamic Media] 3D Experience Viewer, Sites 3D Viewer-komponent och möjligheten att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR). Se [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
+Organisationer kan nu lagra och använda 3D-filer i AEM Assets. Användaren kan ladda upp, förhandsgranska och använda olika centrala 3D-filer, inklusive OBJ-, STL-, GLTF- och GLB-filer. Dessutom [!DNL Dynamic Media]kan ni konfigurera och leverera 3D-upplevelser med hjälp av agnostiska URL:er eller visningsprogram. Detta inkluderar en [!DNL Dynamic Media] 3D Experience Viewer, Sites 3D Viewer-komponent och möjligheten att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR). Se [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
 
 **Stöd för Adobe Asset Link i Adobe XD**
 
@@ -128,17 +128,17 @@ I den här versionen kan kreativa användare och designers nu arbeta med resurse
 
 Elementen i användargränssnittet är skärmläsarvänliga, går att komma åt via ett tangentbord och har bättre kontrast. Nedan följer en detaljerad lista över förbättringar:
 
-* Indikatorerna för [!UICONTROL Options], [!UICONTROL Scope]och [!UICONTROL Workflows] förlopp på [!UICONTROL Manage Publication] sidan läses inte ut av skärmläsaren som förloppsindikatorer. I stället ser skärmläsaranvändare dessa statusindikatorer som en fliklista. (CQ-4273015)
+* Staplarna [!UICONTROL Options], [!UICONTROL Scope]och [!UICONTROL Workflows] förloppsindikatorn på [!UICONTROL Manage Publication] sidan läses inte ut av skärmläsaren som förloppsindikator. I stället ser skärmläsaranvändare dessa statusindikatorer som en fliklista. (CQ-4273015)
 
 * När du lägger till taggar på en [!UICONTROL Properties] sida i en resurs navigerar användarna i en trädstruktur med taggar. Trädstrukturen är inte tillgänglig eftersom skärmläsaranvändare inte hör något när de navigerar i den. (CQ-4272964)
 
 * Skärmläsaren visas i dialogrutan för länkdelning när du navigerar i bläddringsläge,
 
-   * visar tabellinformationen så snart dialogrutan har lästs in.
-   * kan inte navigera till alla automatiska förslag i listan.
-   * lägger inte till en berättarröst för de automatiska förslag som visas för [!UICONTROL Add Email Address/Search] kombinationsrutan. (CQ-4294232)
+   * Visar tabellinformationen direkt när dialogrutan läses in.
+   * Det går inte att navigera till alla automatiska förslag som visas.
+   * Berättar inte om de automatiska förslagen som visas för [!UICONTROL Add Email Address/Search] kombinationsrutan. (CQ-4294232)
 
-* Sidan och dess element är nu tillgängliga och läsvänliga för skärmläsare. [!UICONTROL Metadata Schema Editor] Alternativen kan användas med ett tangentbord. (CQ-4272953) Användare kan dra komponenterna med tangentbordet i NVDA-bläddringsläge. (CQ-4296326)
+* Sidan och dess element är nu tillgängliga via ett tangentbord och är läsvänliga för skärmläsare. [!UICONTROL Metadata Schema Editor] (CQ-4272953) Användare kan dra komponenterna med tangentbordet i NVDA-bläddringsläge. (CQ-4296326)
 
 * I Assets-användargränssnittet är visningsinställningarna inte tillgängliga via tangentbordet. (CQ-4289038)
 
@@ -146,17 +146,17 @@ Elementen i användargränssnittet är skärmläsarvänliga, går att komma åt 
 
 * Färgen och kontrasten i vissa element i användargränssnittet uppdateras så att användare med begränsad syn eller användare utan att uppfatta färger kan särskilja dessa element i användargränssnittet. Färgen på stjärngraderingsikonerna i [!UICONTROL Rating] avsnittet på [!UICONTROL Advanced] fliken i [!UICONTROL Properties] en resurs och i kortvyn ändras för att ge rätt kontrast. (CQ-4295106)
 
-* Popup-menyn för listrutor i kombinationsrutan (i olika fält på olika sidor) visar nu poster som en lista med alternativ som skärmläsare kan meddela. (CQ-4294017)
+* Skärmläsarna kan nu läsa posterna på snabbmenyn i kombinationsrutan (i olika fält på olika sidor) som en lista med alternativ. (CQ-4294017)
 
 * Om du vill använda ett arbetsflöde på en resurs kan du få åtkomst till den med hjälp av ett tangentbord. [!UICONTROL Timeline] (CQ-4289268)
 
-* Användare kan ta bort markerade taggar i [!UICONTROL Tags] fältet på [!UICONTROL Basic] fliken på en tillgångs [!UICONTROL Properties] sida med hjälp av `x` symbol. Dess syfte presenteras nu av skärmläsare tillsammans med antalet markerade taggar (CQ-4273033).
+* Användare kan ta bort markerade taggar i [!UICONTROL Tags] fältet på [!UICONTROL Basic] fliken på en tillgångs [!UICONTROL Properties] sida med hjälp av `x` symbol. Skärmläsarna meddelar nu syfte och antal markerade taggar (CQ-4273033).
 
 * De skrivskyddade formulärfälten kan fokuseras på att använda ett tangentbord. Till exempel de inaktiverade fälten på [!UICONTROL Basic] fliken på en tillgångs [!UICONTROL Properties] sida. (CQ-4273031)
 
 * Du kan nu använda ett tangentbord till att filtrera resurser i det vänstra sidofältet. (CQ-4273018)
 
-* Ändamålet med olika kombinationsruteelement, t.ex. fältet Bana och alternativet att öppna dialogrutan Markering på [!UICONTROL Basic] fliken på en resurs [!UICONTROL Properties] sida, presenteras nu korrekt av skärmläsare. (CQ-4273016)
+* Skärmläsaren meddelar syftet med olika kombinationsruteelement, t.ex. fältet Bana och alternativet att öppna dialogrutan Markering på [!UICONTROL Basic] fliken på en resurs [!UICONTROL Properties] sida. (CQ-4273016)
 
 * Volymkontrollerna för videoklipp är tillgängliga via ett tangentbord. (CQ-4272696)
 
@@ -172,7 +172,7 @@ Elementen i användargränssnittet är skärmläsarvänliga, går att komma åt 
 
 **Andra förbättringar**
 
-Versionen innehåller följande ytterligare förbättringar:
+Versionen innehåller följande andra förbättringar:
 
 * Möjlighet att bearbeta om resurser med tillgångsbearbetningsprofiler, ge användarna full kontroll över processen (kör full bearbetning av resurser, bara tillämpa en viss bearbetningsprofil och bestämma om arbetsflödet ska köras efter bearbetning).
 * Sökfrågor returnerar resultat snabbare nu när den underliggande klusterinstansen har startats om bakom scenerna (den inledande sökningen kan ta längre tid i ett sådant fall tidigare).
@@ -191,7 +191,7 @@ Förutom de nya funktionerna ovan innehåller den aktuella versionen följande f
 
 * För MP3-musikfiler fungerar inte den uppspelningsknapp som visas på miniatyrbilden i DAM-förhandsvisningen. (CQ-4294731)
 * Pekaren placeras på kortvyn och skärmen rullas som ett resultat av (automatisk) fokus på de snabbåtgärder som är tillgängliga på kortet. (GRANITE-26895)
-* För många bilder visas när du har bläddrat igenom ett stort antal sökresultat, vilket gör att webbläsaren kraschar. (GRANITE-26432)
+* För många bilder visas när du har bläddrat igenom många sökresultat vilket gör att webbläsaren kraschar. (GRANITE-26432)
 * När du hämtar en resurs är inte nedladdningsalternativet tillgängligt om du har valt e-postalternativ och även om du har angett ett giltigt e-post-ID. (CQ-4296535)
 * Anpassade filter som sparats som smarta samlingar används inte korrekt på resurser. (CQ-4294942)
 * Flera förbättringar av sökning och indexering samt felkorrigeringar för att förbättra prestandan. (CQ-4286373)
