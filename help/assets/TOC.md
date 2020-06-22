@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: bf7bb91dd488f39181a08adc592971d6314817de
 workflow-type: tm+mt
 source-wordcount: '404'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 98%
    + [XMP-metadata](xmp-metadata.md)
    + [MediaLibrary-funktioner](medialibrary.md)
    + [Importera och exportera metadata för material](metadata-import-export.md)
-+ Dela och distribuera resurser {#brand-portal}
++ Dela och driftsätta resurser {#brand-portal}
    + [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
    + [Publicera resurser på varumärkesportalen](publish-to-brand-portal.md)
 + Innehållsfragment {#content-fragments}
