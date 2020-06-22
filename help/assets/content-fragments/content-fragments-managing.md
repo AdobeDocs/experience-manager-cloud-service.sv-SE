@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment
 description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
 translation-type: tm+mt
-source-git-commit: f5dd39bd7379d56c4f7b5e180d35892ba1dd4da1
+source-git-commit: 5f332f247cc8a9baafb3e80a362a04410a9d036f
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1454'
 ht-degree: 10%
 
 ---
@@ -22,24 +22,19 @@ Content Fragments lagras som **Assets**, så hanteras främst från **Assets** C
 
 ### Skapa en innehållsmodell {#creating-a-content-model}
 
-
 [Modeller](/help/assets/content-fragments/content-fragments-models.md) för innehållsfragment kan aktiveras och skapas innan du skapar innehållsfragment med strukturerat innehåll.
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
-Metoden för att skapa ett innehållsfragment är (i princip) densamma för både enkla och strukturerade fragment:
+Metoden för att skapa ett innehållsfragment är:
 
 1. Navigera till mappen **Resurser** där du vill skapa fragmentet.
 2. Välj **Skapa** och sedan **Innehållsfragment** för att öppna guiden.
 3. I det första steget i guiden måste du ange grunden för det nya fragmentet.
 
-   * Detta kan vara:
+   * [Modell](/help/assets/content-fragments/content-fragments-models.md) - används för att skapa ett fragment som kräver strukturerat innehåll. till exempel **Adventure** -modellen
 
-      * mallen **Enkelt** fragment
-
-      * [Modell](/help/assets/content-fragments/content-fragments-models.md) - används för att skapa ett fragment som kräver strukturerat innehåll. till exempel **flygplatsmodellen**
-
-         * Alla tillgängliga modeller visas.
+      * Alla tillgängliga modeller visas.
    Efter markeringen använder du **Nästa** för att fortsätta.
 
    ![fragmentbas](assets/cfm-managing-01.png)
