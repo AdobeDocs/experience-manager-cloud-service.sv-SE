@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Manager som ett molntjänstinnehåll Stöd för innehållsfragment i Assets HTTP API
-description: Lär dig mer om Adobe Experience Manager som stöd för molntjänstinnehållsfragment i Assets HTTP API.
+title: Adobe Experience Manager som Cloud Service Content Fragments Support in Assets HTTP API
+description: Lär dig mer om Adobe Experience Manager som stöd för innehållsfragment i Cloud Service i Assets HTTP API.
 translation-type: tm+mt
-source-git-commit: d4a377e963f088f72b34f01103a3877cd699ccb2
+source-git-commit: efbd21aa7d8aa5b32d0af720466e4ffe92a012dd
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1891'
 ht-degree: 1%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 1%
 >
 Den aktuella implementeringen av Assets HTTP API baseras på arkitekturformatet [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) .
 
-Med [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Experience Manager som en molntjänst få åtkomst till innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
+Med [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare för Adobe Experience Manager som Cloud Service få åtkomst till innehåll (som lagras i AEM) direkt via HTTP API, via CRUD-åtgärder (Create, Read, Update, Delete).
 
-Med API:t kan du använda Adobe Experience Manager som en molntjänst som ett headless CMS (Content Management System) genom att tillhandahålla innehållstjänster till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
+Med API kan du använda Adobe Experience Manager som en Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
 Exempelvis kräver Single Page Applications (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 
@@ -48,7 +48,7 @@ Resursens REST API:
 
 ## Förutsättningar {#prerequisites}
 
-Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager som en molntjänstversion.
+Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager som Cloud Service-version.
 
 ## Viktiga begrepp {#key-concepts}
 
@@ -74,7 +74,7 @@ HTTP-metoden avgör vilken åtgärd som ska utföras:
 * **GET** - för att hämta en JSON-representation av en resurs eller en mapp
 * **POST** - för att skapa nya resurser eller mappar
 * **PUT** - för att uppdatera egenskaperna för en resurs eller mapp
-* **TA BORT** - för att ta bort en resurs eller mapp
+* **DELETE** - för att ta bort en resurs eller mapp
 
 >[!NOTE]
 >
@@ -346,11 +346,10 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
    I följande exempel visas vanliga scenarier när den här felstatusen returneras, tillsammans med felmeddelandet (monospace) som genereras:
 
    * Den överordnade mappen finns inte (när du skapar ett innehållsfragment via `POST`)
-   * Ingen innehållsfragmentmodell har angetts (cq:model saknas), kan inte läsas (på grund av en ogiltig sökväg eller ett behörighetsproblem) eller så finns det ingen giltig fragmentmodell/mall:
+   * Ingen innehållsfragmentmodell har angetts (cq:model saknas), kan inte läsas (på grund av en ogiltig sökväg eller ett behörighetsproblem) eller så finns det ingen giltig fragmentmodell:
 
       * `No content fragment model specified`
       * `Cannot create a resource of given model '/foo/bar/qux'`
-      * `Cannot adapt the resource '/foo/bar/qux' to a content fragment template`
    * Det gick inte att skapa innehållsfragmentet (eventuellt ett behörighetsproblem):
 
       * `Could not create content fragment`
