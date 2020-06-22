@@ -1,22 +1,22 @@
 ---
-title: Bästa metoderna för att ordna dina digitala resurser för att använda profiler
-description: Tips och vedertagna metoder för att namnge, ordna och hantera metadata för filer med digitala resurser.
+title: Bästa tillvägagångssätt för att ordna dina digitala resurser så att du kan använda Dynamic Media-bildprofiler eller videoprofiler
+description: Tips och vedertagna metoder för att namnge, ordna och hantera bilder och videofiler i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 78e3f5f0324383578c8f4f91f7d07a2bd12f01d4
+source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
 
 
-# Bästa tillvägagångssätt för att organisera digitala resurser så att de använder profiler {#best-practices-for-organizing-your-digital-assets-for-using-profiles}
+# Bästa tillvägagångssätt för att ordna digitala resurser för att använda bildprofiler eller videoprofiler{#best-practices-for-organizing-your-digital-assets-for-using-profiles}
 
-Ett viktigt koncept när det gäller användningen av profiler i AEM Assets är att de tilldelas mappar. I en profil finns inställningar i form av metadataprofiler, tillsammans med videoprofiler eller bildprofiler. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Därför har hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar stor betydelse för hur resurserna bearbetas av en profil.
+Ett viktigt koncept när det gäller användning av Dynamic Media-bildprofiler eller videoprofiler är att de tilldelas mappar. Inom en profil finns inställningar för en bild eller video. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Det innebär att hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar har stor inverkan på hur dessa resurser bearbetas av profilen.
 
 Genom att använda konsekventa och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan du få ut det mesta av din digitala resurssamling och se till att rätt filer bearbetas med rätt profil.
 
-Se [Profiler för att bearbeta video, metadata och bilder](processing-profiles.md).
+Se [Om Dynamic Media bildprofil och videoprofiler](about-image-video-profiles.md).
 
 Här följer några tips om hur du kan ordna dina digitala resursfiler.
 
