@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: cd35b7b4dbdd434f367871ae5d6584b1ad1de341
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 79%
+ht-degree: 88%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 79%
 + Använda Cloud Manager {#using-cloud-manager}
    + [Hantera miljöer](cloud-manager/manage-environments.md)
    + [Konfigurera CI/CD-pipeline](cloud-manager/configure-pipeline.md)
-   + [Distribuera kod](cloud-manager/deploy-code.md)
+   + [Driftsätta kod](cloud-manager/deploy-code.md)
    + [Förstå regler för anpassad kodkvalitet](cloud-manager/custom-code-quality-rules.md)
    + [Komma åt och hantera loggar](cloud-manager/manage-logs.md)
    + [Förstår aviseringar](cloud-manager/notifications.md)
@@ -40,14 +40,14 @@ ht-degree: 79%
    + [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)
    + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
    + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
-+ Distribuera till AEM as a Cloud Service {#deploying}
-   + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
++ Driftsätta till AEM as a Cloud Service {#deploying}
+   + [Driftsätta till AEM as a Cloud Service](deploying/overview.md)
    + [Konfigurera OSGI för AEM as a Cloud Service](deploying/configuring-osgi.md)
 + Författarnivå {#author-tier}
    + [Åtkomst till författarnivå](/help/implementing/author-tier/accessing-the-author-tier.md)
    + [Skydda författarnivå](/help/implementing/author-tier/securing-the-author-tier.md)
 + Översikt över innehållsleverans {#content-delivery}
-   + [Leveransflöde för innehåll](dispatcher/overview.md)
+   + [Flöde för innehållsleverans](dispatcher/overview.md)
    + [Dispatcher i molnet](dispatcher/disp-overview.md)
-   + [CDN i AEM som molntjänst](dispatcher/cdn.md)
-   + [Cachelagra i AEM som en molntjänst](dispatcher/caching.md)
+   + [CDN i AEM as a Cloud Service](dispatcher/cdn.md)
+   + [Cache i AEM as a Cloud Service](dispatcher/caching.md)
