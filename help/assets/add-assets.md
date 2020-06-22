@@ -1,30 +1,30 @@
 ---
-title: Lägg till digitala resurser i Adobe Experience Manager
-description: Lägg till dina digitala resurser i Adobe Experience Manager som en molntjänst
+title: Lägg till dina digitala resurser i Adobe Experience Manager
+description: Lägg till dina digitala resurser i Adobe Experience Manager som en Cloud Service
 translation-type: tm+mt
-source-git-commit: 114bc678fc1c6e3570d6d2a29bc034feb68aa56d
+source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 1%
+source-wordcount: '1344'
+ht-degree: 0%
 
 ---
 
 
 # Lägg till digitala resurser i Adobe Experience Manager {#add-assets-to-experience-manager}
 
-Adobe Experience Manager berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildsfiler, från den lokala mappen eller en nätverksenhet till Experience Manager Assets.
+Adobe Experience Manager förbättrar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildfiler, från den lokala mappen eller en nätverksenhet till Experience Manager Assets.
 
-Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager-skrivbordsappen, överförings- och inmatningsskript som kunderna skulle skapa samt automatiska inmatningsintegreringar som lagts till som AEM-tillägg.
+Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager-datorprogram, överförings- och inmatningsskript som kunderna skulle skapa samt automatiserade inmatningsintegreringar som lagts till som AEM-tillägg.
 
-Vi fokuserar på överföringsmetoder för slutanvändare här och tillhandahåller länkar till artiklar som beskriver tekniska aspekter av överföring av resurser och förtäring med Experience Manager API:er och SDK:er.
+Vi fokuserar på överföringsmetoder för slutanvändare här och tillhandahåller länkar till artiklar som beskriver tekniska aspekter av överföring och förtäring av resurser med hjälp av API:er för Experience Manager och SDK:er.
 
-Du kan överföra och hantera binära filer i Experience Manager, men de vanligaste filformaten har stöd för ytterligare tjänster, som extrahering av metadata eller generering av förhandsgranskning/återgivning. Mer information finns i de [filformat](file-format-support.md) som stöds.
+Du kan överföra och hantera binära filer i Experience Manager, men de vanligaste filformaten har stöd för ytterligare tjänster, som metadataextrahering eller generering av förhandsgranskning/återgivning. Mer information finns i de [filformat](file-format-support.md) som stöds.
 
 Du kan också välja att utföra ytterligare bearbetning av de överförda resurserna. Ett antal resursbearbetningsprofiler kan konfigureras för mappen, till vilken resurserna överförs, för att lägga till specifika metadata, återgivningar eller bildbehandlingstjänster. Mer information finns i [Ytterligare bearbetning](#additional-processing) nedan.
 
 >[!NOTE]
 >
-> Experience Manager som molntjänst utnyttjar ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av de färdiga produktfunktionerna och klienterna, som AEM-användargränssnittet, Adobe Asset Link och AEM-appen, och är därmed genomskinlig för slutanvändarna.
+> Experience Manager som Cloud Service utnyttjar ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av de färdiga produktfunktionerna och klienterna, som AEM-användargränssnittet, Adobe Asset Link och AEM-appen, och är därmed genomskinlig för slutanvändarna.
 >
 > Ladda upp kod som är anpassad eller utökad av kunder som tekniska team behöver för att kunna använda de nya överförings-API:erna och protokollen.
 
@@ -58,9 +58,9 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
    ![chlimage_1-212](assets/chlimage_1-212.png)
 -->
 
-1. Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort.
+1. Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort av AEM Assets.
 
-   Om du avbryter överföringen innan filerna har överförts slutar AEM Resurser att överföra den aktuella filen och uppdaterar innehållet. Filer som redan har överförts tas dock inte bort.
+   Om du avbryter överföringen innan filerna har överförts slutar AEM Assets att överföra den aktuella filen och uppdaterar innehållet. Filer som redan har överförts tas dock inte bort.
 
 
 <!-- #ENGCHECK do we support pausing? I couldn't get pause to show with 1.5GB upload.... If not, this should be removed#
@@ -74,7 +74,7 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
 -->
 
 
-1. I dialogrutan för överföring i AEM Resurser visas antalet överförda filer och de filer som inte kunde överföras.
+1. I dialogrutan för överföring i AEM Assets visas antalet överförda filer och de filer som inte kunde överföras.
 
 Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet för Resurser.
 
@@ -111,13 +111,13 @@ Du kan välja att ersätta en befintlig resurs, skapa en annan version eller beh
 >
 >När du väljer **[!UICONTROL Replace]** i [!UICONTROL Name Conflict] dialogrutan genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
 >
->Om tillgångsinsikter är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som samlats in för resursen i Analytics.
+>Om resursinsikter är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på Analytics.
 
-Om du vill behålla den duplicerade resursen i AEM Resurser trycker/klickar du **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du **[!UICONTROL Delete]**.
+Om du vill behålla den duplicerade resursen i AEM Assets trycker/klickar du **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du **[!UICONTROL Delete]**.
 
 ### Hantering av filnamn och förbjudna tecken {#filename-handling}
 
-AEM Resurser förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande i AEM Resurser och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn.
+AEM Assets förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande i AEM Assets och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn.
 
 I dialogrutan kan du ange långa namn för de filer som du överför, så att de passar organisationens specifika regler för filnamn. [!UICONTROL Upload Assets]
 
@@ -135,18 +135,18 @@ Om du vill överföra fler filer, särskilt om de finns i en kapslad mapphierark
 
 >[!NOTE]
 >
-> Massöverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till Experience Manager kräver noggrann planering, övervägande och val av verktyg. I [distributionsguiden](/help/implementing/deploying/overview.md) finns riktlinjer för innehållsmigreringsmetoder.
+> Bulköverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till Experience Manager kräver noggrann planering, övervägande och val av verktyg. I [distributionsguiden](/help/implementing/deploying/overview.md) finns riktlinjer för innehållsmigreringsmetoder.
 
 ## Överför resurser med skrivbordsklienter {#upload-assets-desktop-clients}
 
 Förutom webbläsarens användargränssnitt har Experience Manager stöd för andra klienter på datorn. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
 * [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från AEM i Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till AEM direkt från Adobe Asset Link-användargränssnittet från dessa datorprogram.
-* [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) förenklar arbetet med resurser på datorn, oberoende av filtyp eller vilket program de hanteras i. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
+* [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) förenklar arbetet med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
@@ -155,14 +155,14 @@ Följande profiler är tillgängliga:
 * [Med metadataprofiler](metadata-profiles.md) kan du använda standardmetadataegenskaper för resurser som överförs till den mappen
 * [Med bearbetningsprofiler](asset-microservices-configure-and-use.md#processing-profiles) kan du använda återgivningsbearbetning och generera återgivningar utöver de vanliga
 
-Om Dynamic Media är aktiverat i din miljö:
+Om Dynamic Media är aktiverade i din miljö:
 
-* Med [bildprofiler](dynamic-media/image-profiles.md) kan du använda en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna
-* [Med videoprofiler](dynamic-media/video-profiles.md) kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar)
+* [Med Dynamic Media-bildprofiler](dynamic-media/image-profiles.md) kan du använda en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna.
+* [Med Dynamic Media-videoprofiler](dynamic-media/video-profiles.md) kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
 
 >[!NOTE]
 >
-> Dynamisk mediebeskärning och andra åtgärder för resurser är icke-förstörande, d.v.s. de ändrar inte det överförda originalet, utan tillhandahåller i stället parametrar för beskärning eller medieomvandling som ska utföras när resurserna levereras
+> Dynamic Media för beskärning och andra åtgärder för resurser är icke-förstörande, vilket innebär att de inte ändrar det överförda originalet utan i stället anger parametrar för beskärning eller mediaomvandling som ska utföras när resurserna levereras
 
 För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i **[!UICONTROL Processing Profile]** kolumnen.
 
@@ -172,7 +172,7 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager-datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
+>* [Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
 >* [Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
 >* [Dokumentation för Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [Teknisk referens för överföring av tillgångar](developer-reference-material-apis.md#asset-upload-technical)
