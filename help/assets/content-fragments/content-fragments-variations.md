@@ -2,9 +2,9 @@
 title: Variationer – redigera innehållsfragment
 description: Med variationer kan du skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte (om det behövs).
 translation-type: tm+mt
-source-git-commit: bac825a45a9d915fd1828ff6adf90c073b52f967
+source-git-commit: 5f332f247cc8a9baafb3e80a362a04410a9d036f
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1686'
 ht-degree: 15%
 
 ---
@@ -50,12 +50,6 @@ När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variati
    * få tillgång till ett antal [åtgärder](#actions)
 
 Till exempel:
-
-* Redigera ett enkelt fragment
-
-   Ett enkelt fragment består av ett textfält med flera rader (visuella resurser kan läggas till i helskärmsredigeraren).
-
-   ![enkelt fragment](assets/cfm-variations-01.png)
 
 * Redigera ett fragment med strukturerat innehåll
 
