@@ -2,10 +2,10 @@
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
+source-git-commit: 792e5f7ab7c64404e6c8e1bad956e328edb32044
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 99%
+source-wordcount: '406'
+ht-degree: 96%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 99%
 + Konfigurera, administrera och utöka Assets {#admin}
    + [API:er och referensmaterial](developer-reference-material-apis.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
-   + [Bearbeta profiler](/help/assets/dynamic-media/about-image-video-profiles.md)
+   + [Arbeta med bildprofiler och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
    + [Konfigurera smarta taggar](smart-tags-configuration.md)
    + [Flerspråkiga resurser och översättning av resurser](translate-assets.md)
    + [Söka efter fasetter](search-facets.md)
@@ -82,8 +82,8 @@ ht-degree: 99%
    + [Använda förinställningar för Dynamic Media Viewer](dynamic-media/viewer-presets.md)
    + [Hantera förinställningar för Dynamic Media-bilder](dynamic-media/managing-image-presets.md)
    + [Använda förinställningar för Dynamic Media-bilder](dynamic-media/image-presets.md)
-   + [Videoprofiler för Dynamic Media](dynamic-media/video-profiles.md)
-   + [Bildprofiler för Dynamic Media](dynamic-media/image-profiles.md)
+   + [Bildprofiler](dynamic-media/image-profiles.md)
+   + [Videoprofiler](dynamic-media/video-profiles.md)
    + [Smart bildbehandling](dynamic-media/imaging-faq.md)
    + [Leverera Dynamic Media-resurser](dynamic-media/delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](dynamic-media/hotlink-protection.md)
