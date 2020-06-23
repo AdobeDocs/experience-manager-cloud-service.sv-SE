@@ -2,10 +2,10 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
-source-git-commit: dbd7b8084445b03beff3b5a96b0fa6b5512e10b8
+source-git-commit: 5d72645aa3a5296e7b616101955734f03425ab59
 workflow-type: tm+mt
-source-wordcount: '1523'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -39,6 +39,10 @@ Egenskaperna fördelas på flera flikar.
 * **Dölj i navigering**
 
    * Anger om sidan visas eller döljs i sidnavigeringen på den slutliga platsen.
+
+* **HTML-ID**
+
+   * HTML-id som ska användas för komponenten.
 
 * **Sidrubrik**
 
@@ -97,6 +101,10 @@ Egenskaperna fördelas på flera flikar.
 
    * Ange den sida som den här sidan automatiskt ska omdirigeras till.
 
+* **Design**
+
+   * Anger om sidan visas eller döljs i sidnavigeringen på den slutliga platsen.
+
 * **Alias**
 
    * Ange ett alias som ska användas med den här sidan.
@@ -112,9 +120,11 @@ Egenskaperna fördelas på flera flikar.
   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
   -->
 
-* **Ärvs från &lt;*path*>**
+<!--
+* **Inherited from &lt;*path*&gt;**
 
-   * Anger om sidan ärvs. och varifrån kommer.
+  * Indicates whether the page is inherited. and where from.
+-->
 
 * **Molnkonfiguration**
 
@@ -172,7 +182,7 @@ Visar sidminiatyrbilden. Du kan:
 
 ### Cloud Services {#cloud-services}
 
-* **Cloud Services**
+* **Cloud Service Configurations**
 
    * Definiera egenskaper för molntjänster.
    <!--Define properties for [cloud services](/help/sites-developing/extending-cloud-config.md).
