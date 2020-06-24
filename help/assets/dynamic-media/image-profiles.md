@@ -2,9 +2,9 @@
 title: Bildprofiler för Dynamic Media
 description: Skapa Dynamic Media-bildprofiler som innehåller inställningar för oskarp mask och smart beskärning, eller smarta färgrutor eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
 translation-type: tm+mt
-source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
+source-git-commit: 1713cddf713afc24103a841a7dbae923941f6322
 workflow-type: tm+mt
-source-wordcount: '2654'
+source-wordcount: '2647'
 ht-degree: 8%
 
 ---
@@ -93,7 +93,7 @@ I **[!UICONTROL Unsharp Mask]** finns följande filtreringsalternativ:
  </tbody>
 </table>
 
-Skärpa beskrivs i [Skärpa](/help/assets/dynamic-media/assets/s7_sharpening_images.pdf).
+Skärpa beskrivs i [Skärpebilder.](/help/assets/dynamic-media/assets/s7_sharpening_images.pdf)
 
 ## Creating Dynamic Media Image Profiles {#creating-image-profiles}
 
