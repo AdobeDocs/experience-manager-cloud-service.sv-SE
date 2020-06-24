@@ -2,9 +2,9 @@
 title: Skicka en AEM-anslutning
 description: Skicka en AEM-anslutning
 translation-type: tm+mt
-source-git-commit: 629de3a9f55d2e4c52ef91c9e0bb5d439aebe84f
+source-git-commit: bffc335fdafe6bf12a66bcd2f7aacf029fce567e
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '262'
 ht-degree: 12%
 
 ---
@@ -15,9 +15,9 @@ Skicka en AEM-anslutning
 
 Nedan finns användbar information om hur du skickar in AEM-kopplingar och den bör läsas tillsammans med artiklarna om [implementering](implement.md) och [underhåll](maintain.md) av kopplingar.
 
-AEM Connectors listas på [Adobe Exchange](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace.html).
+AEM Connectors listas på [Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud).
 
-I tidigare AEM-lösningar användes Package Manager för att installera anslutningar på olika AEM-instanser. Men med AEM som molntjänst distribueras anslutningar under CI/CD-processen i Cloud Manager. För att anslutningarna ska kunna distribueras måste det finnas referenser till anslutningarna i maven-projektets pom.xml.
+I tidigare AEM-lösningar användes Package Manager för att installera anslutningar på olika AEM-instanser. Men med AEM som Cloud Service distribueras anslutningar under CI/CD-processen i Cloud Manager. För att anslutningarna ska kunna distribueras måste det finnas referenser till anslutningarna i maven-projektets pom.xml.
 
 Det finns olika alternativ för hur paketen kan inkluderas i ett projekt:
 
