@@ -1,11 +1,11 @@
 ---
 title: Konfigurera RTE för att skapa tillgängliga webbsidor och webbplatser.
-description: Lär dig hur du konfigurerar RTF-redigeraren för att skapa tillgängliga webbplatser i Adobe Experience Manager.
+description: Lär dig hur du konfigurerar RTF-redigeraren för att skapa tillgängliga webbplatser i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 78ec0ed2a1473797a07905baa346a83376779419
+source-git-commit: 96c59974a868779df6979818bea0d942060cf5bc
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -13,19 +13,19 @@ ht-degree: 0%
 
 # Konfigurera RTE för att skapa tillgängliga webbplatser {#configure-rte-accessible-sites}
 
-Adobe Experience Manager har stöd för vanliga tillgänglighetsfunktioner, till exempel alternativ text för bilder, och ytterligare funktioner som är tillgängliga när du skapar innehåll. Innehållsförfattare använder dessa funktioner med komponenter som använder textredigeraren. Detta inkluderar att lägga till alternativ text, strukturinformation via rubriker och styckeelement och så vidare.
+[!DNL Adobe Experience Manager] har stöd för vanliga hjälpmedelsfunktioner, som alternativ text för bilder, och extra funktioner som är tillgängliga när du skapar innehåll. Innehållsförfattare använder dessa funktioner med komponenter som använder textredigeraren. Funktionerna innefattar att lägga till alt-text, strukturinformation via rubriker och styckeelement och så vidare.
 
 Mer information om typiska konfigurationer av RTE finns i [Konfigurera RTE](rich-text-editor.md) och [konfigurera RTE-plugin-program för specifika funktioner](configure-rich-text-editor-plug-ins.md).
 
-Använd RTE-pluginkonfigurationen för att konfigurera och anpassa tillgänglighetsrelaterade funktioner. Du kan t.ex. använda `paraformat` för att lägga till ytterligare semantiska element på blocknivå, inklusive att utöka antalet rubriknivåer som stöds utanför den grundläggande `H1`nivån `H2` och som `H3` anges som standard. RTF-redigeringen är möjlig med många komponenter från redigeringsgränssnittet. De vanligaste komponenterna är text, bilder, nedladdningar och så vidare.
+Använd RTE-pluginkonfigurationen för att konfigurera och anpassa tillgänglighetsrelaterade funktioner. Du kan t.ex. använda `paraformat` för att lägga till semantiska element på extra blocknivå, inklusive att utöka antalet rubriknivåer som stöds utanför den grundläggande `H1`nivån `H2` och som `H3` anges som standard. RTF-redigeringen är möjlig med många komponenter från redigeringsgränssnittet. De vanligaste komponenterna är text, bilder, nedladdningar och så vidare.
 
 RTE-funktionen kan göras tillgänglig i många komponenter. Den primära komponenten är `Text` komponenten.
 
-För `Text` komponenten i Experience Manager visar följande skärmbild textredigeraren med ett intervall av plugin-program aktiverade, inklusive `paraformat`:
+För `Text` komponenten i [!DNL Experience Manager]visas följande skärmbild textredigeraren med ett antal plugin-program aktiverade, inklusive `paraformat`:
 
 ![Komponenten RTE-text i helskärmsläge](assets/rte-toolbar-full-screen-mode.png)
 
-## Konfigurera plugin-programfunktionerna {#configuring-the-plugin-features}
+## Konfigurera plug-in-funktionerna {#configuring-the-plugin-features}
 
 Anvisningar om hur du konfigurerar RTE finns i [Konfigurera RTF-redigeraren](rich-text-editor.md) . Artikeln omfattar
 
@@ -34,41 +34,41 @@ Anvisningar om hur du konfigurerar RTE finns i [Konfigurera RTF-redigeraren](ric
 * [Aktivera ett plugin-program och konfigurera egenskapen features](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 * [Konfigurera andra funktioner i RTE](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 
-Om du vill aktivera ett par eller alla funktioner för ett plugin-program konfigurerar du plugin-programmet inom rätt `rtePlugins` underavdelning i CRXDE Lite.
+Om du vill aktivera några eller alla funktioner för ett plugin-program konfigurerar du plugin-programmet inom rätt `rtePlugins` underavdelning i CRXDE Lite.
 
-![CRXDE Lite med exempelplugin-programmet ratePlugin.](assets/chlimage_1-208.png)
+![CRXDE Lite med exempelplugin](assets/example-rteplugin-crxde-lite.png)
 
-### Exempel - Ange vilka styckeformat som är tillgängliga i markeringsfältet för textredigering {#example-specifying-paragraph-formats-available-in-rte-selection-field}
+### Exempel på hur du anger styckeformat i markeringsfältet för textredigering {#example-specifying-paragraph-formats-available-in-rte-selection-field}
 
-Nya semantiska blockformat kan göras tillgängliga för markering genom att:
+Nya semantiska blockformat är tillgängliga för markering.
 
 1. Beroende på vilken RTE du använder kan du bestämma och navigera till [konfigurationsplatsen](rich-text-editor.md#understand-the-configuration-paths-and-locations).
 1. [Aktivera styckemarkeringsfältet](rich-text-editor.md) genom [att aktivera plugin-programmet](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
 1. [Ange de format som du vill ha i styckemarkeringsfältet](rich-text-editor.md).
 1. Styckeformaten är sedan tillgängliga för innehållsförfattaren från markeringsfälten i textredigeraren.
 
-Eftersom strukturella element är tillgängliga i textredigeraren via alternativen för styckeformat, är Experience Manager en bra grund för utveckling av hjälpmedelsanpassat innehåll. Innehållsförfattare kan inte använda textredigeraren för att formatera teckenstorlek, färger eller andra relaterade attribut, vilket förhindrar att textbunden formatering skapas. I stället måste de markera lämpliga strukturella element, t.ex. rubriker, och använda globala format som du väljer med alternativet Format. Detta garanterar ren markering, fler alternativ för användare som bläddrar med egna formatmallar och korrekt strukturerat innehåll.
+Strukturella element som är tillgängliga i textredigeraren via alternativen för styckeformat utgör en bra grund för utveckling av hjälpmedelsanpassat innehåll. [!DNL Experience Manager] Innehållsförfattare kan inte använda textredigeraren för att formatera teckenstorlek, färger eller andra relaterade attribut, vilket förhindrar att textbunden formatering skapas. I stället kan författarna välja lämpliga strukturella element, t.ex. rubriker, och använda globala format som valts med alternativet Format för att säkerställa ren markering och fler alternativ för användare som bläddrar med egna formatmallar och korrekt strukturerat innehåll.
 
-## Användning av funktionen för källredigering {#use-of-the-source-edit-feature}
+## Användning av funktionen Källredigering {#use-of-the-source-edit-feature}
 
-I vissa fall måste innehållsförfattare granska och justera HTML-källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva ytterligare kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigeringsalternativet](rich-text-editor.md#aboutplugins) i textredigeraren. Du kan ange [`sourceedit` funktionen i `misctools` plugin-programmet](rich-text-editor.md#aboutplugins).
+I vissa fall måste innehållsförfattare granska och justera HTML-källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva mer kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigeringsalternativet](rich-text-editor.md#aboutplugins) i textredigeraren. Du kan ange [`sourceedit` funktionen för `misctools` plugin-programmet](rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
->Använd `sourceedit` funktionen noggrant. Skrivfel och/eller funktioner som inte stöds kan orsaka fler problem.
+>Använd `sourceedit` funktionen noggrant. Skrivfel och funktioner som inte stöds kan orsaka problem.
 
 <!--
 TBD ENGREVIEW: Is this only applicable to Classic UI? 
 
-## Adding Support for Additional HTML Elements and Attributes {#adding-support-for-additional-html-elements-and-attributes}
+## Adding Support for further HTML Elements and Attributes {#adding-support-for-additional-html-elements-and-attributes}
 
-To further extend the accessibility features of Experience Manager, it is possible to extend the existing components based on the RTE (such as the `Text` and `Table` components) with additional elements and attributes.
+To further extend the accessibility features of [!DNL Experience Manager], it is possible to extend the existing components based on the RTE (such as the `Text` and `Table` components) with extra elements and attributes.
 
 The following procedure illustrates how to extend the `Table` component with a `Caption` element that provides information about a data table to assistive technology users:
 
 ### Example: Add a caption to a table properties dialog {#example-adding-the-caption-to-the-table-properties-dialog}
 
-In the constructor of the `TablePropertiesDialog`, add an additional text input field that is used for editing the caption. Set the `itemId` to `caption` (the DOM attribute’s name) to automatically handle its content.
+In the constructor of the `TablePropertiesDialog`, add an extra text input field that is used for editing the caption. Set the `itemId` to `caption` (the DOM attribute’s name) to automatically handle its content.
 
 In a `Table`, set the attribute to the DOM element or or remove it from the DOM element. The dialog in the `config` object passed the value. Set or remove the DOM attributes using the corresponding `CQ.form.rte.Common` methods (`com` is a shortcut for `CQ.form.rte.Common`). Using `CQ.form.rte.Common` methods avoids common pitfalls with browser implementations.
 
@@ -140,7 +140,7 @@ In a `Table`, set the attribute to the DOM element or or remove it from the DOM 
 ## Best practices and limitations {#best-practices-limitations-tips}
 
 * A plain text field is not the only type of input allowed for the value of the caption element. You can use any ExtJS widget, that provides the caption’s value through its `getValue()` method.
-* To add editing capabilities for further additional elements and attributes, ensure that:
+* To add editing capabilities for more elements and attributes, ensure that:
 
   * The `itemId` property for each corresponding field is set to the name of the appropriate DOM attribute (`TablePropertiesDialog`).
   * The attribute is set and/or removed on the DOM element explicitly (`Table`).
