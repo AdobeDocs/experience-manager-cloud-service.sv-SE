@@ -2,9 +2,9 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: bffc335fdafe6bf12a66bcd2f7aacf029fce567e
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '743'
 ht-degree: 1%
 
 ---
@@ -12,40 +12,40 @@ ht-degree: 1%
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Marketing Cloud gör [Adobe Target](http://www.adobe.com/solutions/testing-targeting/testandtarget.html) att ni kan öka innehållets relevans genom målinriktning och mätning i alla kanaler. Adobe Target används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser. AEM som molntjänst har antagit målarbetsflödet som används i Adobe Target Standard. Om du använder Target kommer du att känna till målredigeringsmiljön i AEM som en molntjänst.
+Som en del av Adobe Marketing Cloud kan [Adobe Target](http://www.adobe.com/solutions/testing-targeting/testandtarget.html) öka innehållets relevans genom målinriktning och mätning över alla kanaler. Adobe Target används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser. AEM som Cloud Service har antagit målarbetsflödet som används i Adobe Target Standard. Om du använder Target kommer du att känna till målredigeringsmiljön i AEM som Cloud Service.
 
-Integrera era AEM-sajter med Adobe Target för att personalisera innehåll på era sidor:
+Integrera dina AEM-sajter med Adobe Target för att anpassa innehållet på dina sidor:
 
 * Implementera målinriktning av innehåll.
-* Använd målgrupper för att skapa personaliserade upplevelser.
+* Använd Target målgrupper för att skapa personaliserade upplevelser.
 * Skicka kontextdata till Target när besökarna interagerar med era sidor.
 * Spåra konverteringsgrader.
 
 >[!NOTE]
 >
->Adobe Experience Manager som molntjänstkunder som inte har något befintligt Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud.  Foundation Pack ger begränsad volymanvändning av Target.
+>Adobe Experience Manager som Cloud Service som inte har något Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud.  Foundation Pack ger begränsad användning av Target i volymprocent.
 
 
-Utför följande uppgifter för att integrera med Target:
+Gör så här om du vill integrera med Target:
 
-* [Utför nödvändiga uppgifter](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html): Registrera dig hos Adobe Target och konfigurera vissa aspekter av AEM-författarinstansen. Ditt Adobe Target-konto måste ha **minst behörigheter på** godkännarnivå. Dessutom måste du skydda aktivitetsinställningarna på publiceringsnoden så att den inte är tillgänglig för användarna.
+* [Utför nödvändiga uppgifter](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html): Registrera dig hos Adobe Target och konfigurera vissa aspekter av AEM-författarinstansen. Ditt Adobe Target-konto måste ha **minst behörighet på** godkännarnivå. Dessutom måste du skydda aktivitetsinställningarna på publiceringsnoden så att den inte är tillgänglig för användarna.
 
-* Launch från Adobe är de facto-verktyget för att skapa en AEM-webbplats med Target-funktioner (JS-bibliotek). Integrering av AEM som en molntjänst med Launch och Adobe Target går därför hand i hand (se länkarna nedan).
+* Launch från Adobe är de facto-verktyget för att skapa en AEM-webbplats med Target-funktioner (JS-bibliotek). Integrering av AEM som Cloud Service med Launch och Adobe Target går därför hand i hand (se länkarna nedan).
 
-   * [Integrering med Adobe Target med Adobe I/O](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/integration-ims-adobe-io.html)
+   * [Integrering med Adobe Target med hjälp av Adobe I/O](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/integration-ims-adobe-io.html)
    * [Integrera Launch från Adobe](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
    * [Integrera AEM med Adobe Launch via Adobe I/O](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)
-   * [Om AEM-integrering med Launch från Adobe, Analytics och Target](https://helpx.adobe.com/experience-manager/kt/integration/using/aem-launch-integration-tutorial-understand.html)
+   * [AEM-integrering med Launch från Adobe, Analytics och Target](https://helpx.adobe.com/experience-manager/kt/integration/using/aem-launch-integration-tutorial-understand.html)
 
 >[!NOTE]
 >
->IMS-konfigurationen (tekniska konton) för Launch från Adobe är förkonfigurerad i AEM som en molntjänst. Användare behöver inte skapa den här konfigurationen.
+>IMS-konfigurationen (tekniska konton) för Launch från Adobe är förkonfigurerad i AEM som en Cloud Service. Användare behöver inte skapa den här konfigurationen.
 
-1. [Konfigurera aktiviteter](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/activitylib.html): Associera dina aktiviteter med målmolnkonfigurationen.
+1. [Konfigurera aktiviteter](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/activitylib.html): Associera dina aktiviteter med Target molnkonfiguration.
 
 >[!CAUTION]
 >
->I AEM som en molntjänst är den replikeringsagent som synkroniserar erbjudanden och aktiviteter från AEM till Adobe Target inaktiverad som standard. Kontakta [Adobe Support](https://helpx.adobe.com/contact/enterprise-support.ec.html#experience-manager) -teamet om du behöver aktivera replikeringsagenten igen.
+>I AEM som Cloud Service är den replikeringsagent som synkroniserar erbjudanden och aktiviteter från AEM till Adobe Target inaktiverad som standard. Kontakta [Adobe Support](https://helpx.adobe.com/contact/enterprise-support.ec.html#experience-manager) -teamet om du behöver aktivera replikeringsagenten igen.
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Utför följande uppgifter för att integrera med Target:
 
 >[!CAUTION]
 >
->Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** i publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska endast vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
+>Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** i publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 >
 >Mer information finns i [Förutsättningar för att integrera med Adobe Target](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html#securing-the-activity-settings-node) .
 
@@ -67,19 +67,19 @@ När integreringen är klar kan du [skapa riktat innehåll](https://docs.adobe.c
 
 >[!NOTE]
 >
->När du riktar in dig på en komponent i AEM-författaren gör komponenten ett antal serveranrop till Adobe Target för att registrera kampanjen, konfigurera erbjudanden och hämta Adobe Target-segment (om de är konfigurerade). Inga serversamtal görs från AEM-publicering till Adobe Target.
+>När du riktar in dig på en komponent i AEM-författaren gör komponenten ett antal serveranrop till Adobe Target för att registrera kampanjen, konfigurera erbjudanden och hämta Adobe Target-segment (om de är konfigurerade). Inga serveranrop görs från AEM-publicering till Adobe Target.
 
 ## Källor för bakgrundsinformation {#background-information-sources}
 
-Att integrera AEM som en molntjänst med Adobe Target kräver kunskap om Adobe Target, AEM Activity Management och AEM Audiences Management. Du bör känna till följande information:
+Att integrera AEM som en Cloud Service med Adobe Target kräver kunskap om Adobe Target, AEM Activity Management och AEM Audiences Management. Du bör känna till följande information:
 
-* Adobe Target (se dokumentationen [till](https://marketing.adobe.com/resources/help/en_US/target/)Adobe Target).
+* Adobe Target (Se dokumentationen [för](https://docs.adobe.com/content/help/en/target/using/target-home.html)Adobe Target).
 * AEM Activity console (Se [Hantera aktiviteter](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/activitylib.html)).
 * AEM-målgrupper (Se [Hantera målgrupper](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/managing-audiences.html).
 
 >[!NOTE]
 >
->När du arbetar med Adobe Target är det högsta antalet artefakter som tillåts i en kampanj:
+>När du arbetar med Adobe Target är det högsta tillåtna antalet artefakter i en kampanj:
 >
 >* 50 platser
 >* 2 000 upplevelser
