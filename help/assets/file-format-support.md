@@ -1,11 +1,11 @@
 ---
-title: Filformat och MIME-typer som stöds av Experience Manager Assets som en molntjänst
-description: Filformat och MIME-typer som stöds av Experience Manager Assets som en molntjänst.
+title: Filformat och MIME-typer som stöds av Experience Manager Assets som Cloud Service
+description: Filformat och MIME-typer som stöds av Experience Manager Assets som Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2830c1cb2a9a0c06e6f8a4a765420706f5ceb093
+source-git-commit: b44e6a522b6f2363daa40c6c6f9640ba2fadd35e
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '810'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 # Assets supported file formats {#supported-file-formats}
 
-Adobe Experience Manager som molntjänst har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. Adobe Experience Manager Assets har stöd för ett stort antal filformat och varje produktfunktion har ett varierat stöd för olika format.
+Adobe Experience Manager som Cloud Service har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. Adobe Experience Manager Assets har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
 
 Dessutom har Experience Manager Assets utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med hjälp av [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
 
@@ -86,6 +86,21 @@ Följande undertyper av rasterbildfilformat som inte stöds i [!DNL Dynamic Medi
 * PSD-filer med ett bitdjup som är större än 16.
 * TIFF-filer som har flyttalsdata.
 * TIFF-filer med Lab-färgrymd.
+
+## Stöd för 3D-format {#support-3d-formats}
+
+Följande lista över 3D-format stöds.
+
+Se [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/assets-3d.md)
+
+| Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans av Dynamic Media |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| gLTF | ✓ | ✓ | ✓ |  | ✓ |  | ✓ |  |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| STL | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 
 ## [!DNL Camera RAW] format {#camera-raw-formats}
 
@@ -203,7 +218,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Ljudformat {#audio-formats}
 
-Resurser som en molntjänst ger stöd för XMP-metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
+Assets as a Cloud Service provides XMP metadata extraction support for AIF, ASF, M4A, MP3, WAV, and WMA audio formats.
 
 >[!MORELIKETHIS]
 >
