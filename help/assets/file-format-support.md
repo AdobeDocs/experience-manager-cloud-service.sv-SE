@@ -3,7 +3,7 @@ title: Filformat och MIME-typer som stöds av Experience Manager Assets som Clou
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b44e6a522b6f2363daa40c6c6f9640ba2fadd35e
+source-git-commit: c65a5ebf204e25e56d518db3b354b95aef631621
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 5%
@@ -87,11 +87,11 @@ Följande undertyper av rasterbildfilformat som inte stöds i [!DNL Dynamic Medi
 * TIFF-filer som har flyttalsdata.
 * TIFF-filer med Lab-färgrymd.
 
-## Stöd för 3D-format {#support-3d-formats}
+## 3D-format {#support-3d-formats}
 
 Följande lista över 3D-format stöds.
 
-Se [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/assets-3d.md)
+Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/assets-3d.md)
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans av Dynamic Media |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
