@@ -2,10 +2,10 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 translation-type: tm+mt
-source-git-commit: a5d6a072dfd8df887309f56ad4a61b6b38b32fa7
+source-git-commit: 33ed1ab1e8a4c4d7d61981270b0a6c959c8ba3a3
 workflow-type: tm+mt
-source-wordcount: '2119'
-ht-degree: 0%
+source-wordcount: '1786'
+ht-degree: 1%
 
 ---
 
@@ -26,21 +26,13 @@ De grundläggande [beståndsdelarna](/help/assets/content-fragments/content-frag
 * bestående av ett eller flera *innehållselement*,
 * och som kan ha en eller flera *innehållsvariationer*.
 
-Beroende på typen av fragment används även modeller eller mallen **Enkelt fragment** :
+De enskilda innehållsfragmenten baseras på modeller för innehållsfragment:
 
->[!CAUTION]
->
->[Modeller](/help/assets/content-fragments/content-fragments-models.md) för innehållsfragment rekommenderas nu för att skapa alla dina fragment.
->
->Modeller för innehållsfragment används för alla exempel i WKND.
+* Modeller för innehållsfragment definierar strukturen för ett innehållsfragment när det skapas.
+* Ett fragment refererar till modellen. så ändringar i modellen kan/kommer att påverka beroende fragment.
+* Modeller är inbyggda i datatyper.
+* Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
 
-* Modeller för innehållsfragment:
-
-   * Används för att definiera innehållsfragment som innehåller strukturerat innehåll.
-   * Modeller för innehållsfragment definierar strukturen för ett innehållsfragment när det skapas.
-   * Ett fragment refererar till modellen. så ändringar i modellen kan/kommer att påverka beroende fragment.
-   * Modeller är inbyggda i datatyper.
-   * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
    >[!NOTE]
    >
    >För att du ska kunna visa/återge ett innehållsfragment måste ditt konto ha `read` behörighet för modellen.
@@ -48,20 +40,6 @@ Beroende på typen av fragment används även modeller eller mallen **Enkelt fra
    >[!CAUTION]
    >
    >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
-
-* Mallar för innehållsfragment - **enkelt fragment**:
-
-   * Används för att definiera enkla innehållsfragment.
-
-   * Den här mallen definierar den (grundläggande, endast text) strukturen för ett innehållsfragment när det skapas.
-
-   * Mallen kopieras till fragmentet när den skapas.
-
-   * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
-
-   * Mallen för innehållsfragment (**enkelt fragment**) fungerar på ett annat sätt än andra mallfunktioner i AEM-ekosystemet (t.ex. sidmallar). Den bör därför beaktas separat.
-
-   * När MIME-typen för innehållet baseras på mallen **Enkelt fragment** hanteras det faktiska innehållet. det innebär att varje element och variant kan ha olika MIME-typer.
 
 ### Integrering av webbplatser med resurser {#integration-of-sites-with-assets}
 
@@ -75,11 +53,11 @@ Innehållsfragment betraktas som en webbplatsfunktion som:
 
 * De används när du redigerar sidorna.
 
-#### Mappa strukturerade innehållsfragment till resurser {#mapping-structured-content-fragments-to-assets}
+#### Mappa innehållsfragment till resurser {#mapping-content-fragments-to-assets}
 
-![innehållsfragment till strukturerade tillgångar](assets/content-fragment-to-assets-structured.png)
+![innehållsfragment till resurser](assets/content-fragment-to-assets.png)
 
-Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfragmentmodell) mappas till en enda resurs:
+Innehållsfragment, som baseras på en innehållsfragmentmodell, mappas till en enda resurs:
 
 * Allt innehåll lagras under resursens `jcr:content/data` nod:
 
@@ -93,22 +71,6 @@ t.ex. `jcr:content/data/myvariation`
 Elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
 * Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på `jcr:content`
-
-#### Mappa enkla innehållsfragment till resurser {#mapping-simple-content-fragments-to-assets}
-
-![innehållsfragment till resurser enkelt](assets/content-fragment-to-assets-simple.png)
-
-Enkla innehållsfragment (som baseras på mallen **Enkelt fragment** ) mappas till en sammansatt resurs som består av en huvudresurs och (valfritt) underresurser:
-
-* All icke-innehållsinformation i ett fragment (som titel, beskrivning, metadata, struktur) hanteras exklusivt på huvudresursen.
-* Innehållet i det första elementet i ett fragment mappas till den ursprungliga återgivningen av huvudresursen.
-
-   * Variationerna (om det finns några) för det första elementet mappas till andra återgivningar av huvudresursen.
-
-* Ytterligare element (om sådana finns) mappas till deltillgångar i huvudtillgången.
-
-   * Huvudinnehållet i dessa ytterligare element mappas till den ursprungliga återgivningen av respektive underresurs.
-   * Andra variationer (om tillämpligt) av eventuella ytterligare element överensstämmer med andra återgivningar av respektive deltillgång.
 
 #### Resursplats {#asset-location}
 
@@ -158,11 +120,9 @@ Innehållsfragment kan refereras från AEM-sidor, precis som andra resurstyper. 
 >
 >**Content Fragment Model:**
 >
->När du använder ett innehållsfragment som har baserats på en innehållsfragmentmodell på en sida, refereras modellen. Det innebär att om modellen inte har publicerats när du publicerar sidan, kommer den att flaggas och läggas till i resurserna som ska publiceras med sidan.
+>När ett innehållsfragment används på en sida refereras innehållsfragmentmodellen som det baseras på.
 >
->**Mallar för innehållsfragment - enkelt fragment:**
->
->När du använder ett innehållsfragment som är baserat på mallen för innehållsfragment **Enkelt fragment** på en sida, finns det ingen referens eftersom mallen kopierades när fragmentet skapades.
+>Det innebär att om modellen inte har publicerats när du publicerar sidan, kommer den att flaggas och läggas till i resurserna som ska publiceras med sidan.
 
 ### Integrering med andra ramar {#integration-with-other-frameworks}
 
@@ -237,7 +197,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Listsamlingar
       * Lägg till samlingar
       * Ta bort samlingar
-   * Åtkomst till fragmentets modell eller mall
+   * Åtkomst till fragmentets modell
    Gränssnitt som representerar de primära elementen i ett fragment är:
 
    * **Innehållselement** ([ContentElement](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
@@ -350,13 +310,13 @@ if (fragmentResource != null) {
 
 ### Exempel: Skapa ett nytt innehållsfragment {#example-creating-a-new-content-fragment}
 
-Om du vill skapa ett nytt innehållsfragment programmatiskt måste du använda ett`FragmentTemplate` anpassat från en modell- eller mallresurs.
+Om du vill skapa ett nytt innehållsfragment programmatiskt måste du använda ett`FragmentTemplate` anpassat från en modellresurs.
 
 Till exempel:
 
 ```java
-Resource templateOrModelRsc = resourceResolver.getResource("...");
-FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
+Resource ModelRsc = resourceResolver.getResource("...");
+FragmentTemplate tpl = ModelRsc.adaptTo(FragmentTemplate.class);
 ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
 ```
 
