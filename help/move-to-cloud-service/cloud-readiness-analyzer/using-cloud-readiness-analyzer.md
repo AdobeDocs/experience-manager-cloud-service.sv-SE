@@ -2,9 +2,9 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 3da4c659893e55f5ffe104ea08ea89cc296050c1
+source-git-commit: a0e58c626f94b778017f700426e960428b657806
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1871'
 ht-degree: 1%
 
 ---
@@ -18,16 +18,19 @@ Följ avsnittet nedan om du vill veta mer om de viktiga sakerna att tänka på n
 
 * CRA-rapporten byggs med hjälp av utdata från Adobe Experience Manager (AEM) [mönsteravkännaren](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Mönsteravkännare som används av CRA ingår i CRA-installationspaketet.
 
-* CRA kan bara köras av **administratörsanvändaren** eller en användare i gruppen **Administratörer** .
+* CRA kan bara köras av **administratörsanvändaren** eller en användare i **administratörsgruppen** .
 
 * CRA stöds på AEM-instanser med version 6.1 och senare.
+
+   >[!NOTE]
+   > Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av CRA på AEM 6.1.
 
 * CRA kan köras i vilken miljö som helst, men det är bättre att ha det på en *scenmiljö* .
 
    >[!NOTE]
    >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör CRA i en *författarmiljö* som är så nära *produktionsmiljön* som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktionen.
 
-* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storleken och typen av AEM-databasinnehåll, AEM-versionen och andra faktorer.
+* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
 * På grund av den stora tid som kan behövas för att generera rapportinnehållet, genereras de av en bakgrundsprocess och lagras i ett cacheminne. Det bör gå relativt snabbt att visa och hämta rapporten eftersom den använder innehållscachen tills den upphör att gälla eller tills rapporten uppdateras explicit. Under genereringen av rapportinnehåll kan du stänga webbläsarfliken och sedan gå tillbaka och visa rapporten när dess innehåll är tillgängligt i cachen.
 
@@ -169,7 +172,9 @@ Följande svarsvärden är möjliga:
 * `500 Internal Server Error`: Anger att ett internt serverfel uppstod. Ett meddelande i formatet Probleminformation innehåller mer information.
 * `503 Service Unavailable`: Anger att servern är upptagen med ett annat svar och kan inte hantera denna begäran i tid. Detta inträffar troligtvis bara när synkrona begäranden görs. Ett meddelande i formatet Probleminformation innehåller mer information.
 
-## Cache-livstidsjustering {#cache-adjustment}
+## Administratörsinformation
+
+### Cache-livstidsjustering {#cache-adjustment}
 
 Standardlivstiden för CRA-cache är 24 timmar. Med alternativet att uppdatera en rapport och återskapa cachen, både i AEM-instansen och i HTTP-gränssnittet, är det här standardvärdet troligtvis lämpligt för de flesta användningsområden för CRA. Om rapportgenereringstiden är särskilt lång för AEM-instansen kanske du vill justera cachelivstiden för att minimera omgenereringen av rapporten.
 
@@ -178,7 +183,12 @@ Livslängdsvärdet för cacheminnet lagras som egenskapen `maxCacheAge` på föl
 
 Värdet för den här egenskapen är cachelivstiden i sekunder. Administratören kan justera cachelivstiden med CRX/DE Lite.
 
+### Installera på AEM 6.1 {#installing-on-aem61}
 
+CRA använder ett användarkonto för systemtjänster med namnet `repository-reader-service` för att köra mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. På AEM 6.1 måste det här kontot skapas *innan* CRA installeras genom följande steg:
 
+1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security-service-users.html#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom och klicka sedan på den gröna bockmarkeringen.
 
+2. Följ instruktionerna på [Hantera användare och grupper](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security.html#managing-users-and-groups), särskilt instruktionerna för hur du lägger till användare i en grupp för att lägga till `repository-reader-service` användaren i `administrators` gruppen.
 
+3. Installera CRA-paketet via Package Manager på AEM-källinstansen. (Detta lägger till den nödvändiga konfigurationsändringen i ServiceUserMapper-konfigurationen för `repository-reader-service` systemtjänstanvändaren.)
