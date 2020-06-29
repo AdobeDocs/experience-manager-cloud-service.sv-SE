@@ -2,10 +2,10 @@
 title: Introduktion till Adobe Experience Manager as a Cloud Service
 description: 'Introduktion till Adobe Experience Manager (AEM) as a Cloud Service. '
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: e381807d7c199113689304e9481dfe2022ee5f93
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 100%
+source-wordcount: '518'
+ht-degree: 94%
 
 ---
 
@@ -76,6 +76,8 @@ AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna
 
 * [Nyheter och skillnader](/help/overview/what-is-new-and-different.md) i Adobe Experience Manager as a Cloud Service och tidigare versioner
 * [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
-* [Betydande ändringar av AEM Sites i AEM as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Noterbara ändringar i AEM som Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Betydande ändringar av AEM Sites som en Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Betydande ändringar av AEM Assets som en Cloud Service](/help/assets/assets-cloud-changes.md)
 * [Assets as a Cloud Service introduceras](/help/assets/overview.md)
 * [Självstudiekurser för Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
