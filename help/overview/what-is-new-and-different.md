@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: 'Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service. '
 translation-type: tm+mt
-source-git-commit: 160db0dabc99eccdef5bd579f8ccc26a861b1380
+source-git-commit: e381807d7c199113689304e9481dfe2022ee5f93
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 100%
+source-wordcount: '1809'
+ht-degree: 97%
 
 ---
 
@@ -267,3 +267,15 @@ Adobe Experience Manager Assets as a Cloud Service är en inbyggd SaaS-lösning 
 Assets inkluderar nästa generations materialbearbetning i molnet samt högpresterande materialimport och sökning.
 
 Mer information finns i [Översikt och introduktion till Assets as a Cloud Service](/help/assets/overview.md).
+
+## Lär känna Adobe Experience Manager as a Cloud Service {#getting-to-know-aem-as-cloud-service}
+
+Mer information finns i:
+
+* [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
+* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
+* [Noterbara ändringar i AEM som Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Betydande ändringar av AEM Sites som en Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Betydande ändringar av AEM Assets som en Cloud Service](/help/assets/assets-cloud-changes.md)
+* [AEM Assets som Cloud Service](/help/assets/overview.md)
+* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
