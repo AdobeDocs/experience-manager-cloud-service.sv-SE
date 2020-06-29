@@ -1,10 +1,10 @@
 ---
 title: Vad är nytt?
-description: 'Nyheter i Adobe Experience Manager (AEM) som en molntjänst. '
+description: 'Nyheter i Adobe Experience Manager (AEM) som Cloud Service. '
 translation-type: tm+mt
-source-git-commit: e76de9b84931dced6383570e384ffdb6fb334daf
+source-git-commit: e381807d7c199113689304e9481dfe2022ee5f93
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,19 @@ ht-degree: 0%
 
 <!-- For the pre-release of Adobe Experience Manager (AEM) as a Cloud Service everything is new. -->
 
-AEM Cloud-tjänsten är en molnbaserad plattform som optimerar arbetsflöden för marknadsförare och utvecklare för hela innehållets livscykel, inklusive funktioner för webbinnehåll och hantering av digitala resurser. Eftersom programmet är inbyggt i molnet har det skalbara prestanda, en säker infrastruktur, får smidiga uppdateringar för att hålla sig uppdaterade och möjliggör problemfri driftsättning och administration.
+Adobe Experience Manager (AEM) som Cloud Service är en molnbaserad plattform som optimerar arbetsflöden för marknadsförare och utvecklare för hela innehållets livscykel, inklusive funktioner för webbinnehåll och hantering av digitala resurser. Eftersom programmet är inbyggt i molnet har det skalbara prestanda, en säker infrastruktur, får smidiga uppdateringar för att hålla sig uppdaterade och möjliggör problemfri driftsättning och administration.
 
-En översikt över molntjänsten finns i [Introduktion till AEM som molntjänst](/help/overview/introduction.md).
+En översikt över Adobe Experience Manager som Cloud Service finns i:
+* the [Introduction to AEM as a Cloud Service](/help/overview/introduction.md)
+* the [Architecture](/help/core-concepts/architecture.md) of Adobe Experience Manager as a Cloud Service
+* En [översikt över AEM som en Cloud Service - Vad är nytt och Vad är annorlunda?](/help/overview/what-is-new-and-different.md)
 
 <!-- Please link to introduction or what's new of Sites. -->
 
-En översikt över resurser finns i Introduktion [till resurser som en molntjänst](/help/assets/overview.md)
+En översikt över resurser finns i [Introduktion till resurser som en Cloud Service](/help/assets/overview.md)
 
-Om du känner till tidigare versioner av AEM kan du läsa följande för att få en översikt över de betydande ändringarna i AEM som en molntjänst:
+Om du känner till tidigare versioner av AEM kan du läsa följande för att få en översikt över de betydande ändringarna i AEM som en Cloud Service:
 
-* [Betydande ändringar av Experience Manager som en molntjänst](/help/release-notes/aem-cloud-changes.md)
-* [Betydande ändringar av AEM Sites som en AEM Cloud-tjänst](/help/sites-cloud/sites-cloud-changes.md)
-* [Betydande ändringar i AEM Assets som en molntjänst](/help/assets/assets-cloud-changes.md)
+* [Noterbara ändringar i AEM som Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Betydande ändringar av AEM Sites som en Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Betydande ändringar av AEM Assets som en Cloud Service](/help/assets/assets-cloud-changes.md)
