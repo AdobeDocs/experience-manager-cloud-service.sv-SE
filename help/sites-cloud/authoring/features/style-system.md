@@ -2,9 +2,9 @@
 title: Formatsystem
 description: Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 translation-type: tm+mt
-source-git-commit: e7efa3739ef386fdff9c86de238c64df09fb845f
+source-git-commit: 130b372a9450c5c632715b098fd5c5ebf61bdf0d
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1329'
 ht-degree: 1%
 
 ---
@@ -116,10 +116,13 @@ Följande steg är bara nödvändiga för att aktivera Style System för dina eg
 
 ### Aktivera fliken Format i designdialogrutan {#enable-styles-tab-design}
 
-För att en komponent ska kunna fungera med AEM:s Style System och visa style-fliken i sin designdialogruta måste komponentutvecklaren inkludera style-fliken med följande inställningar för komponenten:
+För att en komponent ska kunna arbeta med AEM:s stilsystem och visa stilfliken i sin designdialogruta måste komponentutvecklaren inkludera stilfliken med följande inställningar för komponenten:
 
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
+
+>[!NOTE]
+>Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md)med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 När komponenten är konfigurerad infogas de format som har konfigurerats av sidförfattarna automatiskt av AEM i det dekorationselement som AEM automatiskt omsluter runt varje redigerbar komponent. Själva komponenten behöver inte göra något annat för att detta ska hända.
 
@@ -131,6 +134,9 @@ Fliken för redigeringsdialogrutan kan läggas in på ungefär samma sätt som f
 
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_edit/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
+
+>[!NOTE]
+>Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md)med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 >[!NOTE]
 >
