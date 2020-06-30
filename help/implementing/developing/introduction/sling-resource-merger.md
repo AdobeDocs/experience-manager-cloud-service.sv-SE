@@ -2,9 +2,9 @@
 title: Använda Sling Resource Merger i Adobe Experience Manager som Cloud Service
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
 translation-type: tm+mt
-source-git-commit: 987d2cd91e0d1ab604ea7de755c5568e0c0a4295
+source-git-commit: 1a8a9781da7390d25ec687d46af8d8a976c069bc
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ Med Sling Resource Merger sammanfogas överläggnings-/åsidosättningsresursern
 
 >[!CAUTION]
 >
->Sling Resource Merger och relaterade metoder kan bara användas med [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html). Detta innebär också att det bara är lämpligt för det vanliga användargränssnittet med pekskärm. särskilt åsidosättningar som definieras på det här sättet gäller bara för en komponents dialogruta med pekfunktioner.
+>Sling Resource Merger och relaterade metoder kan bara användas med [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html). Detta innebär också att det endast är lämpligt för det pekaktiverade standardgränssnittet. särskilt åsidosättningar som definieras på det här sättet gäller bara för en komponents dialogruta med pekfunktioner.
 >
->Övertäckningar/åsidosättningar för andra områden (inklusive andra aspekter av en beröringsaktiverad komponent eller det klassiska användargränssnittet) innefattar att kopiera lämplig nod och struktur från originalet till den plats där anpassningen ska definieras.
+>Övertäckningar/åsidosättningar för andra områden (inklusive andra aspekter av en beröringsaktiverad komponent) innefattar kopiering av lämplig nod och struktur från originalet till den plats där anpassningen ska definieras.
 
 ### Mål för AEM {#goals-for-aem}
 
