@@ -3,56 +3,90 @@ title: Förbättrade smarta taggar
 description: Använd kontextuella och beskrivande taggar med Adobe Senseis AI- och ML-tjänst för att förbättra resursidentifieringen och innehållets hastighet.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 41684858f1fe516046b9601c1d869fff180320e0
+source-git-commit: c24fa22178914b1186b7f29bdab64d3bca765fe5
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 40%
+source-wordcount: '863'
+ht-degree: 97%
 
 ---
 
 
 # Konfigurera Experience Manager för smart taggning av resurser {#configure-aem-for-smart-tagging}
 
-Genom att tagga resurser med taxonomistyrd vokabulär kan du enkelt identifiera och hämta dem genom taggbaserade sökningar. Adobe tillhandahåller smarta taggar som använder artificiell intelligens och algoritmer för maskininlärning för att utbilda bilder. Smart Tags uses an artificial intelligence framework of [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) to train its image recognition algorithm on your tag structure and business taxonomy.
+Genom att tagga resurser med taxonomistyrd vokabulär kan du enkelt identifiera och hämta dem genom taggbaserade sökningar. Adobe tillhandahåller Smart Tags som använder algoritmer för artificiell intelligens och maskininlärning för att lära in bilder. Smart Tags använder ett AI-ramverk från [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna bildigenkänningsalgoritmen i er taggstruktur och er affärstaxonomi.
 
-The Smart Tags functionality is available for purchase as an add-on to [!DNL Experience Manager]. När du har köpt programmet skickas ett e-postmeddelande till administratören för organisationen med en länk till Adobe Developer Console. Administratören kommer åt länken för att integrera smarta taggar med [!DNL Experience Manager] Adobe Developer Console.
+Smart Tags-funktionen kan köpas som tillägg till [!DNL Experience Manager]. När du har köpt funktionen skickas ett e-postmeddelande till administratören för organisationen med en länk till Adobe Developer Console. Administratören använder länken för att integrera Smart Tags med [!DNL Experience Manager] via Adobe Developer Console.
 
 <!-- TBD: 
 1. Can a similar flowchart be created about how training works in CS? ![flowchart](assets/flowchart.gif)
 2. Is there a link to buy SCS or initiate a sales call.
 3. Keystroke all steps and check all screenshots.
-4. Post-GA, if time permits, create a video.
 -->
 
 ## Integrera med Adobe Developer Console {#aio-integration}
 
-Innan du kan tagga bilderna med SCS måste du integrera [!DNL Adobe Experience Manager] med tjänsten Smarta taggar med Adobe Developer Console. At the back end, the [!DNL Experience Manager] server authenticates your service credentials with the Adobe Developer Console gateway before forwarding your request to the service.
+Innan du kan tagga bilderna med SCS måste du integrera [!DNL Adobe Experience Manager] med Smart Tags-tjänsten med Adobe Developer Console. I backend-funktionerna autentiserar [!DNL Experience Manager]-servern dina inloggningsuppgifter med Adobe Developer Console-gatewayen innan din begäran vidarebefordras till tjänsten.
 
-* Create a configuration in [!DNL Experience Manager] to generate a public key. Hämta ett offentligt certifikat för OAuth-integrering.
-* Skapa en integrering i Adobe Developer Console och överför den genererade offentliga nyckeln.
-* Configure your [!DNL Experience Manager] instance using the API key and other credentials from Adobe Developer Console.
-* Du kan även aktivera automatisk taggning vid överföring av resurser.
+* Skapa en konfiguration i [!DNL Experience Manager] för att generera en offentlig nyckel. [Hämta ett offentligt certifikat för OAuth-integrering.](#obtain-public-certificate)
+* [Skapa en integrering i Adobe Developer Console och överför den genererade offentliga nyckeln.](#create-aio-integration)
+* [Konfigurera smarta taggar](#configure-smart-content-service) i din [!DNL Experience Manager] instans med API-nyckeln och andra autentiseringsuppgifter från Adobe Developer Console.
+* [Testa konfigurationen](#validate-the-configuration).
+* [Konfigurera om när certifikatet har upphört att gälla](#certrenew).
 
-### Krav för Adobe Developer Console-integrering {#prerequisite-for-aio-integration}
+### Förutsättningar för Adobe Developer Console-integrering {#prerequisite-for-aio-integration}
 
-Innan du kan använda smarta taggar måste du göra följande för att skapa en integrering på Adobe Developer Console:
+Innan du kan använda Smart Tags måste du ha/se till att/göra följande för att kunna integrera med Adobe Developer Console:
 
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
-* Smarta taggar är aktiverade för din organisation.
+* Smart Tags är aktiverat för din organisation.
 
 ### Hämta ett offentligt certifikat {#obtain-public-certificate}
 
-Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer Console. Du skapar ett certifikat inifrån [!DNL Experience Manager].
+Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer Console. Du skapar ett certifikat i [!DNL Experience Manager].
 
 1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
-1. On the [!UICONTROL Adobe IMS Configurations] page, click **[!UICONTROL Create]**. From **[!UICONTROL Cloud Solution]** menu, select **[!UICONTROL Smart Tags]**.
+1. På sidan [!UICONTROL Adobe IMS Configurations] klickar du på **[!UICONTROL Create]**. På menyn **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Smart Tags]**.
 
 1. Välj **[!UICONTROL Create new certificate]**. Ange ett namn och klicka på **[!UICONTROL Create certificate]**. Klicka på **[!UICONTROL OK]**.
 
 1. Klicka på **[!UICONTROL Download Public Key]**.
 
-   ![Smarta taggar i Experience Manager skapar en offentlig nyckel](assets/aem_smarttags-config1.png)
+   ![Smart Tags i Experience Manager skapar en offentlig nyckel](assets/aem_smarttags-config1.png)
+
+### Skapa en integrering {#create-aio-integration}
+
+Om du vill använda Smart Tags skapar du en integrering i Adobe Developer Console för att generera API-nyckel, ID för tekniskt konto, organisations-ID och klienthemlighet.
+
+1. Öppna [https://console.adobe.io](https://console.adobe.io/) i en webbläsare. Välj lämpligt konto och kontrollera att den associerade organisationsrollen är systemadministratör.
+1. Skapa ett projekt med valfritt namn. Klicka på **[!UICONTROL Add API]**.
+1. På sidan **[!UICONTROL Add an API]** markerar du **[!UICONTROL Experience Cloud]** och väljer **[!UICONTROL Smart Content]**. Klicka på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Upload your public key]**. Ange certifikatfilen som hämtats från [!DNL Experience Manager]. Ett meddelande [!UICONTROL Public key(s) uploaded successfully] visas. Klicka på **[!UICONTROL Next]**.
+1. Sidan [!UICONTROL Create a new Service Account (JWT) credential] visar den offentliga nyckeln för det tjänstekonto som just konfigurerats. Klicka på **[!UICONTROL Next]**.
+1. På sidan **[!UICONTROL Select product profiles]** markerar du **[!UICONTROL Smart Content Services]**. Klicka på **[!UICONTROL Save configured API]**. En sida visar mer information om konfigurationen. Håll den sidan öppen för att kopiera och lägga till dessa värden i Experience Manager när du konfigurerar Smart Tags i [!DNL Experience Manager].
+
+   ![På fliken Overview kan du granska den information som finns för integrering.](assets/integration_details.png)
+
+### Konfigurera Smart Tags {#configure-smart-content-service}
+
+Om du vill konfigurera integreringen använder du värdena för fälten Payload, Client Secret, Authorization Server och API Key från Adobe Developer Console-integreringen.
+
+1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
+1. Öppna sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** och ange **[!UICONTROL Title]**.
+1. I fältet **[!UICONTROL Authorization Server]** anger du URL till `https://ims-na1.adobelogin.com`.
+1. I fältet **[!UICONTROL API Key]** anger du **[!UICONTROL Client ID]** från [!DNL Adobe Developer Console].
+1. I fältet **[!UICONTROL Client Secret]** anger du **[!UICONTROL Client Secret]** från [!DNL Adobe Developer Console]. Klicka på alternativet **[!UICONTROL Retrieve Client Secret]** om du vill se det.
+1. I [!DNL Adobe Developer Console] i ditt projekt klickar du på **[!UICONTROL Service Account (JWT)]** från den vänstra marginalen. Klicka på fliken **[!UICONTROL Generate JWT]**. Klicka på **[!UICONTROL Copy]** för att kopiera **[!UICONTROL JWT Payload]** som visas. Ange det här värdet i fältet **[!UICONTROL Payload]** i [!DNL Experience Manager]. Klicka på **[!UICONTROL Create]**.
+
+### Validera konfigurationen {#validate-the-configuration}
+
+När du har slutfört konfigurationen följer du dessa steg för att validera den.
+
+1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
+
+1. Välj konfigurationen för Smart Tags. Klicka på **[!UICONTROL Check Health]** i verktygsfältet. Klicka på **[!UICONTROL Check]**. En dialogruta med meddelandet [!UICONTROL Healthy configuration] bekräftar att konfigurationen fungerar.
+
+![Verifiera konfigurationen för Smart Tags](assets/smart-tag-config-validation.png)
 
 ### Konfigurera om när ett certifikat upphör att gälla {#certrenew}
 
@@ -65,45 +99,11 @@ När certifikatet upphör att gälla är det inte längre tillförlitligt. Följ
 
    ![Ta bort befintlig likhetssökningspost i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat](assets/smarttags_delete_similaritysearch_keystore.png)
 
-   *Bild: Ta bort den befintliga`similaritysearch`posten i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat.*
+   *Bild: Ta bort den befintliga`similaritysearch`-posten i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat.*
 
-1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Öppna den tillgängliga konfigurationen för smarta taggar. Om du vill hämta ett offentligt certifikat klickar du på **[!UICONTROL Download Public Certificate]**.
+1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Öppna den tillgängliga konfigurationen för Smart Tags. Om du vill hämta ett offentligt certifikat klickar du på **[!UICONTROL Download Public Certificate]**.
 
-1. Gå till [https://console.adobe.io](https://console.adobe.io) och navigera till den befintliga tjänsten i projektet. Överför det nya certifikatet och konfigurera det. Mer information om konfiguration finns i anvisningarna i Integrering [med](#create-aio-integration)Skapa Adobe Developer Console.
-
-### Skapa en integrering {#create-aio-integration}
-
-Om du vill använda smarta taggar skapar du en integrering i Adobe Developer Console för att generera API-nyckel, ID för tekniskt konto, organisations-ID och klienthemlighet.
-
-1. Öppna [https://console.adobe.io](https://console.adobe.io/) i en webbläsare. Välj rätt konto och kontrollera att den associerade organisationsrollen är systemadministratör.
-1. Skapa ett projekt med valfritt namn. Klicka på **[!UICONTROL Add API]**.
-1. Markera **[!UICONTROL Add an API]** och markera på **[!UICONTROL Experience Cloud]** sidan **[!UICONTROL Smart Content]**. Klicka på **[!UICONTROL Next]**.
-1. Välj **[!UICONTROL Upload your public key]**. Ange certifikatfilen som hämtats från [!DNL Experience Manager]. Ett meddelande [!UICONTROL Public key(s) uploaded successfully] visas. Klicka på **[!UICONTROL Next]**.
-1. [!UICONTROL Create a new Service Account (JWT) credential] visas den offentliga nyckeln för det tjänstkonto som precis konfigurerats. Klicka på **[!UICONTROL Next]**.
-1. På sidan **[!UICONTROL Select product profiles]** markerar du **[!UICONTROL Smart Content Services]**. Klicka på **[!UICONTROL Save configured API]**. På en sida visas mer information om konfigurationen. Håll den här sidan öppen för att kopiera och lägga till dessa värden i Experience Manager när du konfigurerar smarta taggar i [!DNL Experience Manager].
-
-   ![På fliken Overview kan du granska den information som finns för integrering.](assets/integration_details.png)
-
-### Konfigurera smarta taggar {#configure-smart-content-service}
-
-Om du vill konfigurera integreringen använder du nyckelfälten Payload, Client Secret, Authorization Server och API från Adobe Developer Console-integreringen.
-
-1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
-1. Öppna **[!UICONTROL Adobe IMS Technical Account Configuration]** sidan, ange önskat **[!UICONTROL Title]**.
-1. Ange **[!UICONTROL Authorization Server]** URL i `https://ims-na1.adobelogin.com` fältet.
-1. I **[!UICONTROL API Key]** fältet anger du **[!UICONTROL Client ID]** från [!DNL Adobe Developer Console].
-1. I **[!UICONTROL Client Secret]** fältet anger du **[!UICONTROL Client Secret]** från [!DNL Adobe Developer Console]. Klicka på **[!UICONTROL Retrieve Client Secret]** alternativet om du vill se det.
-1. I [!DNL Adobe Developer Console]ditt projekt klickar du **[!UICONTROL Service Account (JWT)]** från den vänstra marginalen. Klicka på **[!UICONTROL Generate JWT]** flik. Klicka **[!UICONTROL Copy]** för att kopiera den visade bilden **[!UICONTROL JWT Payload]**. Ange det här värdet i **[!UICONTROL Payload]** fältet i [!DNL Experience Manager]. Klicka på **[!UICONTROL Create]**.
-
-### Validera konfigurationen {#validate-the-configuration}
-
-När du har slutfört konfigurationen följer du de här stegen för att validera konfigurationen.
-
-1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
-
-1. Välj konfigurationen för smarta taggar. Klicka på **[!UICONTROL Check Health]** i verktygsfältet. Klicka på **[!UICONTROL Check]**. En dialogruta med [!UICONTROL Healthy configuration] ett meddelande bekräftar att konfigurationen fungerar.
-
-![Verifiera konfigurationen av smarta taggar](assets/smart-tag-config-validation.png)
+1. Gå till [https://console.adobe.io](https://console.adobe.io) och navigera till den befintliga tjänsten i projektet. Överför det nya certifikatet och konfigurera det. Mer information om konfiguration finns i anvisningarna i [Integrering med Adobe Developer Console](#create-aio-integration).
 
 ## Aktivera smart taggning för nyligen överförda resurser (valfritt) {#enable-smart-tagging-for-uploaded-assets}
 
