@@ -2,9 +2,9 @@
 title: Övertäckningar för Adobe Experience Manager som Cloud Service
 description: AEM som Cloud Service använder övertäckningsprincipen för att utöka och anpassa konsoler och andra funktioner
 translation-type: tm+mt
-source-git-commit: e9fa89753289563edd59e3d75413c90efe3ff0b2
+source-git-commit: 58440cb565039becd5b08333994b70f2ea77cc99
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ I en standardinstans lagras den fördefinierade funktionen under `/libs` och du 
 
       * Rekonstruera lämplig `/libs` struktur under `/apps`.
 
-         Detta kräver ingen 1:1-kopia, [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md) används för att korsreferera till de ursprungliga definitioner som krävs. Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser på olika sätt (differentiering).
+         Detta kräver ingen 1:1-kopia eftersom [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md) används för att korsreferera till de ursprungliga definitioner som krävs. Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser på olika sätt (differentiering).
 
       * Gör eventuella ändringar under `/apps`.
    * Fördelar
