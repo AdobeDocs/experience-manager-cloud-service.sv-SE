@@ -1,11 +1,11 @@
 ---
 title: AEM-projektstruktur
-description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud-tjänsten.
+description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: 5594792b84bdb5a0c72bfb6d034ca162529e4ab2
+source-git-commit: c2c6ee59849cbe041019e0a4395a499e81a671e0
 workflow-type: tm+mt
-source-wordcount: '2522'
-ht-degree: 16%
+source-wordcount: '2530'
+ht-degree: 17%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >
 >Bekanta dig med grundläggande [AEM Project Archetype-användning](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)och plugin-programmet [FileVault Content Maven](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/vlt-mavenplugin.html) när den här artikeln bygger vidare på dessa inlärningar och koncept.
 
-I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Manager Maven-projekt som är kompatibla med AEM Cloud-tjänsten, eftersom de säkerställer att de respekterar delningen av ändringsbart och oföränderligt innehåll. att nödvändiga beroenden har fastställts för att skapa icke-konfliktskapande, deterministiska driftsättningar, och att de paketeras i en installerbar struktur.
+I denna artikel beskrivs de ändringar som krävs för Adobe Experience Manager Maven-projekt som är kompatibla med AEM-Cloud Service genom att säkerställa att de respekterar uppdelningen av muterbart och oföränderligt innehåll. att nödvändiga beroenden har fastställts för att skapa icke-konfliktskapande, deterministiska driftsättningar, och att de paketeras i en installerbar struktur.
 
 AEM-programdistributioner måste bestå av ett enda AEM-paket. Paketet ska i sin tur innehålla underpaket som innehåller allt som programmet behöver för att fungera, inklusive kod, konfiguration och eventuellt baslinjeinnehåll som stöds.
 
@@ -30,9 +30,9 @@ Den paketstruktur som beskrivs i det här dokumentet är kompatibel med **både*
 
 ## Muterbara kontra oföränderliga områden i databasen {#mutable-vs-immutable}
 
-`/apps` och `/libs` betraktas som **oföränderliga** områden i AEM, eftersom de inte kan ändras (skapa, uppdatera, ta bort) efter att AEM startats (dvs. vid körning). Alla försök att ändra ett oföränderligt område vid körning misslyckas.
+`/apps` och `/libs`**betraktas som oföränderliga områden i AEM, eftersom de inte kan ändras (skapa, uppdatera, ta bort) efter att AEM startats (dvs. vid körning).** Alla försök att ändra ett oföränderligt område vid körning misslyckas.
 
-Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/system`, `/tmp`osv. är alla **ändringsbara** områden, vilket innebär att de kan ändras under körning.
+Everything else in the repository, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/system`, `/tmp`, etc. are all **mutable** areas, meaning they can be changed at runtime.
 
 >[!WARNING]
 >
@@ -46,11 +46,11 @@ Därför måste Oak-index, även om de kan ändras vid körning, distribueras so
 
 >[!TIP]
 >
->Mer information om hur du indexerar i AEM som en molntjänst finns i dokumentet [Innehållssökning och indexering.](/help/operations/indexing.md)
+>Mer information om hur du indexerar i AEM som en Cloud Service finns i dokumentet [Innehållssökning och indexering.](/help/operations/indexing.md)
 
 ## Rekommenderad paketstruktur {#recommended-package-structure}
 
-![Projektpaketstruktur för Experience Manager](assets/content-package-organization.png)
+![Experience Manager projektpaketstruktur](assets/content-package-organization.png)
 
 I det här diagrammet visas en översikt över den rekommenderade projektstrukturen och artefakter för paketdistribution.
 
@@ -59,13 +59,13 @@ Den rekommenderade programdistributionsstrukturen är följande:
 + Paketet, eller kodpaketet, innehåller all kod som ska distribueras och endast distribueras till `ui.apps` `/apps`. Vanliga delar av `ui.apps` paketet omfattar, men är inte begränsade till:
    + OSGi-paket
       + `/apps/my-app/install`
-   + OSGi-konfigurationer
+   + [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md)
       + `/apps/my-app/config`
-   + HTML-skript
+   + [HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) -skript
       + `/apps/my-app/components`
    + JavaScript och CSS (via klientbibliotek)
       + `/apps/my-app/clientlibs`
-   + Övertäckningar för /libs
+   + [Övertäckningar](/help/implementing/developing/introduction/overlays.md) för /libs
       + `/apps/cq`, `/apps/dam/`osv.
    + Kontextmedvetna reservkonfigurationer
       + `/apps/settings`
@@ -549,7 +549,7 @@ I `ui.content/pom.xml`lägger du till följande `<dependencies>` direktiv till `
 ...
 ```
 
-### Rensa behållarprojektets målmapp {#xml-clean-container-package}
+### Rensa Target-mappen för behållarprojektet {#xml-clean-container-package}
 
 Lägg till det plugin-program som `all/pom.xml` `maven-clean-plugin` ska rensa målkatalogen innan en Maven byggs.
 
