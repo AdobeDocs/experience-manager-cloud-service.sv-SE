@@ -2,9 +2,9 @@
 title: Övertäckningar för Adobe Experience Manager som Cloud Service
 description: AEM som Cloud Service använder övertäckningsprincipen för att utöka och anpassa konsoler och andra funktioner
 translation-type: tm+mt
-source-git-commit: 58440cb565039becd5b08333994b70f2ea77cc99
+source-git-commit: 8028682f19ba6ba7db6b60a2e5e5f5843f7ac11f
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Manager as a Cloud Service uses the principle of overlays to al
 
 Övertäckning är en term som kan användas i många sammanhang. I det här sammanhanget (utökning av AEM som Cloud Service) innebär en övertäckning att du tar de fördefinierade funktionerna och lägger in egna definitioner över dem (för att anpassa standardfunktionerna).
 
-I en standardinstans lagras den fördefinierade funktionen under `/libs` och du rekommenderas att definiera övertäckningen (anpassningar) under `/apps` grenen. AEM använder en söksökväg för att hitta en resurs, söker först i `/apps` grenen och sedan i `/libs` grenen ( [söksökvägen kan konfigureras](#configuring-the-search-paths)). Den här mekanismen innebär att övertäckningen (och de anpassningar som definieras där) kommer att ha prioritet.
+I en standardinstans lagras den fördefinierade funktionen under `/libs` och du rekommenderas att definiera övertäckningen (anpassningar) under `/apps` grenen (använda en [sökväg](#search-paths) för att matcha resurserna).
 
 * Det beröringskänsliga användargränssnittet använder [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)-relaterade övertäckningar:
 
@@ -49,38 +49,15 @@ I en standardinstans lagras den fördefinierade funktionen under `/libs` och du 
 Overlays are the recommended method for many changes, such as [configuring your consoles](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console) or [creating your selection category to the asset browser in the side panel](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser) (used when authoring pages). They are required as:
 -->
 
-* Du ***får inte *göra ändringar i`/libs`grenen **. Alla ändringar du gör kan gå förlorade eftersom den här grenen kan ändras när du:
-
-   * uppgradera till din instans
-   * tillämpa en snabbkorrigering
-   * installera ett funktionspaket
+* Du ***får inte *göra ändringar i`/libs`grenen **. Alla ändringar du gör kan gå förlorade, eftersom den här grenen kan ändras när uppgraderingar tillämpas på din instans.
 
 * De koncentrerar dina ändringar på ett ställe; gör det enklare för dig att spåra, migrera, säkerhetskopiera och/eller felsöka ändringar efter behov.
 
-## Konfigurera sökvägar {#configuring-the-search-paths}
+## Sökvägar {#search-paths}
 
-För övertäckningar är den levererade resursen en sammanställning av resurser och egenskaper som har hämtats, beroende på sökvägar som kan definieras:
+I AEM används en söksökväg för att hitta en resurs, som söker (som standard) först i `/apps` grenen och sedan i `/libs` grenen. Den här mekanismen innebär att överlagringen i `/apps` (och de anpassningar som definieras där) har prioritet.
 
-* Resurslösarens **söksökväg** enligt definitionen i [OSGi-konfigurationen](/help/implementing/deploying/configuring-osgi.md) för **Apache Sling Resource Resolver Factory**.
-
-   * Sökvägarnas övre och nedre ordning anger deras respektive prioriteringar.
-   * I en standardinstallation är de primära standardvärdena `/apps`, `/libs` vilket innebär att innehållet i `/apps` har högre prioritet än `/libs` (d.v.s. att det *övertäcker* det).
-
-* Två tjänstanvändare behöver JCR:READ-åtkomst till den plats där skripten lagras. Dessa användare är: components-search-service (används av komponenterna com.day.cq.wcm.coreto access/cache) och sling-scripting (används av org.apache.sling.servlets.resolver för att hitta servrar).
-* Följande konfiguration måste även konfigureras efter var du placerade dina skript (i det här exemplet under /etc, /libs eller /apps).
-
-   ```
-   PID = org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl
-   resource.resolver.searchpath=["/etc","/apps","/libs"]
-   resource.resolver.vanitypath.whitelist=["/etc/","/apps/","/libs/","/content/"]
-   ```
-
-* Slutligen måste även Serverlösaren konfigureras (i det här exemplet lägger du till /etc)
-
-   ```
-   PID = org.apache.sling.servlets.resolver.SlingServletResolver
-   servletresolver.paths=["/bin/","/libs/","/apps/","/etc/","/system/","/index.servlet","/login.servlet","/services/"]
-   ```
+För övertäckningar är den levererade resursen en sammanställning av resurser och egenskaper som hämtats, beroende på sökvägar som definierats i OSGi-konfigurationen.
 
 <!--
 ## Example of Usage {#example-of-usage}
