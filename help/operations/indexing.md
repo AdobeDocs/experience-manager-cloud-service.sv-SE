@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 translation-type: tm+mt
-source-git-commit: 5594792b84bdb5a0c72bfb6d034ca162529e4ab2
+source-git-commit: 093883d0afe62bf9d1d08f82180eccd3f75bca05
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1475'
 ht-degree: 2%
 
 ---
@@ -12,9 +12,9 @@ ht-degree: 2%
 
 # Innehållssökning och indexering {#indexing}
 
-## Ändringar i AEM som molntjänst {#changes-in-aem-as-a-cloud-service}
+## Changes in AEM as a Cloud Service {#changes-in-aem-as-a-cloud-service}
 
-Med AEM som molntjänst går Adobe från en AEM-instanscentrerad modell till en tjänstbaserad vy med n-x AEM-behållare som drivs av CI/CD-ledningar i Cloud Manager. I stället för att konfigurera och underhålla index för enskilda AEM-instanser måste indexkonfigurationen anges före en distribution. Konfigurationsförändringar i produktionen bryter helt klart CI/CD-reglerna. Detsamma gäller för indexändringar eftersom det kan påverka systemets stabilitet och prestanda om det inte anges testat och omindexerat innan de tas i produktion.
+Med AEM som Cloud Service går Adobe från en AEM-instanscentrerad modell till en tjänstbaserad vy med n-x AEM Containers, som drivs av CI/CD-ledningar i Cloud Manager. I stället för att konfigurera och underhålla index för enskilda AEM-instanser måste indexkonfigurationen anges före en distribution. Konfigurationsförändringar i produktionen bryter helt klart CI/CD-reglerna. Detsamma gäller för indexändringar eftersom det kan påverka systemets stabilitet och prestanda om det inte anges testat och omindexerat innan de tas i produktion.
 
 Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och tidigare versioner:
 
@@ -32,13 +32,11 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 1. Indexkonfigurationen ändras via distributioner. Ändringar av indexdefinitioner konfigureras på samma sätt som andra innehållsändringar.
 
-1. På en hög nivå på AEM som molntjänst kommer två uppsättningar index att finnas i och med introduktionen av [Blue-Green-distributionsmodellen](#index-management-using-blue-green-deployments) : en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
-
-<!-- The version of the index that is used is configured using flags in the index definitions via the `useIfExist` flag. An index may be used in only one version of the application (for example only blue or only green), or in both versions. Detailed documentation is available at [Index Management using Blue-Green Deployments](#index-management-using-blue-green-deployments). -->
+1. På en hög nivå på AEM som Cloud Service kommer två uppsättningar index att finnas i och med introduktionen av [Blue-Green-distributionsmodellen](#index-management-using-blue-green-deployments) : en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
 
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
-1. Begränsningar: För närvarande stöds indexhantering på AEM som en molntjänst endast för index av typen lucene.
+1. Begränsningar: För närvarande stöds indexhantering på AEM som en Cloud Service endast för index av typen lucene.
 
 <!-- ## Sizing Considerations {#sizing-considerations}
 
@@ -56,7 +54,7 @@ Definitionen av index kan omfatta tre användningsfall:
 1. Uppdaterar en befintlig indexdefinition. Detta innebär att en ny version av en befintlig indexdefinition läggs till
 1. Tar bort ett befintligt index som är överflödigt eller föråldrat.
 
-För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM som molntjänstdokumentation](/help/implementing/deploying/overview.md).
+För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM som Cloud Service-dokumentation](/help/implementing/deploying/overview.md).
 
 ### Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
 
@@ -86,7 +84,7 @@ När den nya indexdefinitionen har lagts till måste det nya programmet distribu
 
 >[!TIP]
 >
->Mer information om den paketstruktur som krävs för AEM som en molntjänst finns i dokumentet [AEM Project Structure.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
+>Mer information om den paketstruktur som krävs för AEM som Cloud Service finns i dokumentet [AEM Project Structure.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
 
 ## Indexhantering med användning av blå-gröna distributioner {#index-management-using-blue-green-deployments}
 
@@ -126,7 +124,7 @@ I följande tabell visas fem indexdefinitioner: index `cqPageLucene` används i 
 
 >[!NOTE]
 >
-> `<indexName>-custom-<customerVersionNumber>` krävs för AEM som molntjänst för att markera detta som en ersättning för ett befintligt index.
+> `<indexName>-custom-<customerVersionNumber>` krävs för AEM som Cloud Service för att markera detta som en ersättning för ett befintligt index.
 
 | Index | Index som inte är tillgängligt | Använd i version 1 | Använd i version 2 |
 |---|---|---|---|
@@ -161,7 +159,9 @@ Om ett index ska tas bort i en senare version av programmet kan du definiera ett
 
 Om du vill lägga till ett index med namnet &quot;/oak:index/acmeProduct-custom-1&quot; som ska användas i en ny version av programmet och senare, måste indexet konfigureras enligt följande:
 
-`/oak:index/acmeProduct-custom-1`
+`*mk.*assetLuceneIndex-1-custom-1`
+
+Detta fungerar genom att en anpassad identifierare försätts i indexnamnet, följt av en punkt (**.**). Identifieraren måste vara mellan 1 och 4 tecken lång.
 
 Som ovan säkerställer detta att indexet bara används av den nya versionen av programmet.
 
