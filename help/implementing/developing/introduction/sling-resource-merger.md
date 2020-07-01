@@ -2,9 +2,9 @@
 title: Använda Sling Resource Merger i Adobe Experience Manager som Cloud Service
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
 translation-type: tm+mt
-source-git-commit: 1a8a9781da7390d25ec687d46af8d8a976c069bc
+source-git-commit: 8028682f19ba6ba7db6b60a2e5e5f5843f7ac11f
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser. Den innehåller olika mekanismer (differentiering) för båda:
 
-* **[Överlappar](/help/implementing/developing/introduction/overlays.md)**resurser med de[konfigurerade sökvägarna](/help/implementing/developing/introduction/overlays.md#configuring-the-search-paths).
+* **[Övertäckningar](/help/implementing/developing/introduction/overlays.md)**av resurser som använder[sökvägarna](/help/implementing/developing/introduction/overlays.md#search-paths).
 
 * **Åsidosätter** komponentdialogrutor för det beröringsaktiverade användargränssnittet (`cq:dialog`) med resurstyphierarkin (med egenskapen `sling:resourceSuperType`).
 
@@ -30,9 +30,7 @@ Med Sling Resource Merger sammanfogas överläggnings-/åsidosättningsresursern
 
 >[!CAUTION]
 >
->Sling Resource Merger och relaterade metoder kan bara användas med [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html). Detta innebär också att det endast är lämpligt för det pekaktiverade standardgränssnittet. särskilt åsidosättningar som definieras på det här sättet gäller bara för en komponents dialogruta med pekfunktioner.
->
->Övertäckningar/åsidosättningar för andra områden (inklusive andra aspekter av en beröringsaktiverad komponent) innefattar kopiering av lämplig nod och struktur från originalet till den plats där anpassningen ska definieras.
+>Sling Resource Merger och relaterade metoder kan bara användas med det beröringsaktiverade användargränssnittet (som är det enda användargränssnittet som är tillgängligt för AEM som Cloud Service).
 
 ### Mål för AEM {#goals-for-aem}
 
@@ -43,26 +41,17 @@ Målet med Sling Resource Merger i AEM är att
 
    När du använder Sling Resource Merger rekommenderar vi inte att du kopierar hela strukturen från `/libs` eftersom det skulle resultera i att för mycket information sparas i anpassningen (vanligtvis `/apps`). Om du duplicerar information i onödan ökar risken för problem när systemet uppgraderas på något sätt.
 
->[!NOTE]
->
->Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
->
->Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
-
 >[!CAUTION]
 >
 >Du ***får*** inte ändra något i `/libs` banan.
 >
->Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på att innehållet i `/libs` kan skrivas över när uppgraderingar tillämpas på din instans.
 >
->Den rekommenderade metoden för konfiguration och andra ändringar är:
->
->1. Återskapa önskat objekt (t.ex. som det finns i `/libs`) under `/apps`
+>* Övertäckningar är beroende av [sökvägar](/help/implementing/developing/introduction/overlays.md#search-paths).
    >
    >
-1. Gör ändringar i `/apps`
->
-
+* Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
+   >  Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
 
 
 ### Egenskaper {#properties}
