@@ -1,58 +1,60 @@
 ---
-title: Flytta till AEM som molntjänst
-description: Adobe Experience Manager som en molntjänst som går över till AEM som självhjälp för molntjänster och dokumentationslänkar
+title: Flytta till AEM as a Cloud Service
+description: Länkar till självhjälp och dokumentation för Adobe Experience Manager as a Cloud Service som flyttar till AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 43c5af886ccddea73b68008a372f192ff8c1f26f
+source-git-commit: b00c837e0de6e3ca00c9bc637bc3c53e26fff156
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 57%
+source-wordcount: '526'
+ht-degree: 76%
 
 ---
 
 
-# Moving to AEM as a Cloud Service {#aem-moving-to-aem-guide}
+# Flytta till AEM as a Cloud Service {#aem-moving-to-aem-guide}
 
-## Fördelar med att gå över till AEM som molntjänst {#benefits-aem-moving-to-aem-guide}
+## Fördelar med att flytta till AEM as a Cloud Service {#benefits-aem-moving-to-aem-guide}
 
-AEM som en molntjänst ger en skalbar, säker och flexibel teknikgrund för Experience Manager Sites and Assets, vilket gör att marknadsförare och IT kan fokusera på att leverera slagkraftiga upplevelser i stor skala.
+AEM as a Cloud Service ger en skalbar, säker och flexibel teknikgrund för Experience Manager Sites and Assets, vilket gör att marknadsförare och IT kan fokusera på att leverera slagkraftiga upplevelser i stor skala.
 
-Med AEM som molntjänst kan era team fokusera på innovationer istället för att planera för produktuppgraderingar. De nya funktionerna testas grundligt och levereras till era team utan avbrott så att de alltid har tillgång till den senaste programvaran.
+Med AEM as a Cloud Service kan era team fokusera på innovationer i stället för att planera för produktuppgraderingar. De nya funktionerna testas grundligt och levereras till era team utan avbrott så att de alltid har tillgång till den senaste programvaran.
 
-## Förstå processen för övergång till molntjänster {#understanding-move}
+## Förstå processen för övergång till Cloud Service {#understanding-move}
 
-Övergången till molntjänsten omfattar tre faser - Planering, Körning och Publicera-publicering.
+Övergången till Cloud Service omfattar tre faser – Planering, Körning och Efter publicering.
 
 För en lyckad och smidig övergång bör du säkerställa korrekt planering och följa bästa praxis som beskrivs i den här handboken.
 
-Bilden nedan visar en illustrativ representation av den rekommenderade övergångsresan till molntjänsten.
+Bilden nedan visar en illustrativ representation av den rekommenderade övergångsprocessen till Cloud Service.
 
-![image](/help/move-to-cloud-service/assets/home-img1.png)
+![bild](/help/move-to-cloud-service/assets/home-img1.png)
 
-Läs mer om de olika faserna i övergången till molntjänsten:
+Läs mer om de olika faserna i övergången till Cloud Service:
 
 * **[Planering](/help/move-to-cloud-service/planning.md)**
 * **[Körning](/help/move-to-cloud-service/execution.md)**
-* **[Post GoLive](/help/move-to-cloud-service/post-go-live.md)**
+* **[Efter publicering](/help/move-to-cloud-service/post-go-live.md)**
 
 
 ## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
-| [Startsida för Experience Manager as a Cloud Service](/help/landing/home.md) | Börja här om du vill få en översikt över dokumentationen om Experience Manager as a Cloud Service. |
+| [Startsida för Experience Manager as a Cloud Service](/help/landing/home.md) | Börja här om du vill se en översikt över Experience Manager som Cloud Service. |
 | [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över Experience Manager as a Cloud Service, med bland annat en introduktion, terminologi med mera. |
-| [Versionsinformation](/help/release-notes/home.md) | Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service, inklusive nyheter, borttagna funktioner och kända fel. |
-| [Användarhandbok om säkerhet](/help/security/home.md) | Lär dig mer om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
+| [Versionsinformation](/help/release-notes/home.md) | Denna handbok innehåller viktig information om den senaste releasen av Experience Manager som Cloud Service, inklusive vad som är nya, borttagna och borttagna funktioner samt kända fel. |
 | [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden ger en introduktion till de viktigaste begreppen i Experience Manager as a Cloud Service, inklusive den nya tjänstens arkitektur. |
-| [Användarhandbok för Sites](/help/sites-cloud/home.md) | Lär dig hur du administrerar Experience Manager Sites as a Cloud Service. |
-| [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du administrerar Experience Manager Assets as a Cloud Service. |
-| [Gå till AEM som användarhandbok för molntjänster](/help/move-to-cloud-service/home.md) | Förstå övergången till molntjänster. |
-| [Användarhandbok om implementering](/help/implementing/home.md) | Lär dig hur du anpassar distributionen av Experience Manager as a Cloud Service, med bland annat ämnen om utvecklingsdistribution. |
-| [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar lösningar i Experience Manager as a Cloud Service. |
-| [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
+| [Användarhandbok om säkerhet](/help/security/home.md) | Lär dig mer om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
+| [Introduktion](/help/onboarding/home.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du får åtkomst och viktig dataskyddsinformation. |
+| [Användarhandbok för Sites](/help/sites-cloud/home.md) | Lär dig hur du redigerar och administrerar Experience Manager Sites som en Cloud Service. |
+| [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du använder och administrerar Experience Manager Assets som en Cloud Service. |
+| [Användarhandbok om flyttning till AEM as a Cloud Service](/help/move-to-cloud-service/home.md) | Förstå övergången till Cloud Service. |
+| [Användarhandbok för implementering](/help/implementing/home.md) | Lär dig hur du anpassar Experience Manager som Cloud Service, inklusive utvecklings- och driftsättningsfrågor. |
+| [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar Connectors i Experience Manager som en Cloud Service. |
+| [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-operationer i Experience Manager som en Cloud Service, till exempel indexerings- och underhållsuppgifter. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 
+* [Senaste dokumentationsuppdateringar](https://helpx.adobe.com/experience-manager/documentation-updates.html#AEMasaCloudService)
 * [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
