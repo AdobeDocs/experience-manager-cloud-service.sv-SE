@@ -2,10 +2,10 @@
 title: Anslutningar för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om anslutningar till Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: b00c837e0de6e3ca00c9bc637bc3c53e26fff156
+source-git-commit: ffdb0a39684f1ccc587bf1cc401811a7ca6d649d
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 68%
+source-wordcount: '379'
+ht-degree: 70%
 
 ---
 
@@ -34,7 +34,6 @@ På den här sidan visas självhjälp om anslutningar för Experience Manager as
 | [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du använder och administrerar Experience Manager Assets som en Cloud Service. |
 | [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md) | Förstå övergången till Cloud Service. |
 | [Användarhandbok för implementering](/help/implementing/home.md) | Lär dig hur du anpassar Experience Manager som Cloud Service, inklusive utvecklings- och driftsättningsfrågor. |
-| [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar Connectors i Experience Manager som en Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-operationer i Experience Manager som en Cloud Service, till exempel indexerings- och underhållsuppgifter. |
 
 ## Andra Experience Manager-resurser {#other-resources}
