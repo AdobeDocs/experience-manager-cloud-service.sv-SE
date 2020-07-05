@@ -1,11 +1,11 @@
 ---
 title: Efter publicering-fas
 description: Efter publicering-fas
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 0565d053b6040bc99ae79823711d56eb9aecdfb3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '242'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -29,12 +29,12 @@ Mer information om utvecklingsverktyg finns i [Implementera för AEM as a Cloud 
 
 ## CRX/DE Lite {#crxde-lite}
 
-Som användare har du åtkomst till CRX/DE Lite i utvecklingsmiljön, men inte till scenen eller produktionen.
+Som användare har du åtkomst till CRX/DE Lite i utvecklingsmiljön, men inte i mellanlagrings- eller produktionsmiljön.
 
 >[VIKTIGT]
 >Skrivning till oföränderliga databaser som `/libs` och `/apps` under körning ger upphov till fel. Som kund har du dessutom inte tillgång till utvecklarverktyg för mellanlagrings- och produktionsmiljöer.
 
-Refer to [Developing with CRX/DE Lite](https://docs.adobe.com/help/en/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) to learn how to develop your AEM application using CRX/DE Lite.
+Läs mer i [Utveckla med CRX/DE Lite](https://docs.adobe.com/help/en/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) om du vill veta hur du utvecklar AEM-programmet med CRX/DE Lite.
 
 ## Hantera loggar {#managing-logs}
 
