@@ -1,36 +1,36 @@
 ---
 title: Översikt över Cloud Readiness Analyzer
 description: Översikt över Cloud Readiness Analyzer
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 2064dd6c647780dc149c51b7ff166779ba0a2212
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '256'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # Översikt {#overview-cloud-readiness-analyzer}
 
-Cloud Readiness Analyzer snabbar upp processerna för att bedöma beredskap att gå över från en befintlig Adobe Experience Manager-distribution (AEM) till AEM som Cloud Service.
+Cloud Readiness Analyzer gör det enklare att bedöma beredskap för att gå från en befintlig Adobe Experience Manager-distribution (AEM) till AEM as a Cloud Service.
 
-Det här verktyget genererar en rapport som identifierar områden med potentiell omfaktorisering, vilket är det första steget i övergångsprocessen till AEM som Cloud Service.
+Verktyget genererar en rapport som identifierar områden med potentiell refaktorisering, vilket är det första steget i övergångsprocessen till AEM as a Cloud Service.
 
 ## Rapport från Cloud Readiness Analyzer {#cra-report}
 
-Cloud Readiness Analyzer-rapporten används för att få en övergripande förståelse för den allmänna uppgraderingsberedskapen. Rapporten innehåller information i olika kategorier som måste åtgärdas innan en lyckad distribution till AEM som Cloud Service kan genomföras.
+Cloud Readiness Analyzer-rapporten används för att få en övergripande förståelse av den allmänna uppgraderingsberedskapen. Rapporten innehåller information i olika kategorier om saker som måste åtgärdas innan en distribution till AEM as a Cloud Service kan genomföras.
 
-Rapporten Cloud Readiness Analyzer innehåller följande kategorier:
+Cloud Readiness Analyzer-rapporten innehåller följande kategorier:
 
-* Programfunktioner som måste ändras
+* Programfunktioner som måste refaktoriseras
 * Databasobjekt som måste flyttas till en plats som stöds
 * Äldre dialogrutor och komponenter i användargränssnittet som måste moderniseras
 * Problem med distribution och konfiguration
-* AEM 6.x-funktioner som har ersatts av nya funktioner eller som för närvarande inte stöds av AEM som Cloud Service
+* AEM 6.x-funktioner som har ersatts av nya funktioner eller som för närvarande inte stöds av AEM as a Cloud Service
 
 Mer information om kategorier och möjliga konsekvenser och lösningar som är kopplade till dessa kategorier finns via länkar i Cloud Readiness Analyzer-rapporten.
 
 >[!NOTE]
->Cloud Readiness Analyzer-rapporten snabbar upp processen att beräkna den tid och kostnad som krävs för att gå över till AEM som en Cloud Service genom att tillhandahålla information som annars skulle behöva samlas in och utvärderas manuellt.
+>Cloud Readiness Analyzer-rapporten förenklar processen för att beräkna den tid och kostnad som krävs för att gå över till AEM as a Cloud Service genom att tillhandahålla information som annars måste samlas in och utvärderas manuellt.
 
-Du kan även hämta Cloud Readiness Analyzer-rapporten från din AEM-instans. Mer information finns i [Visa Cloud Readiness Analyzer-rapporten](/help/move-to-cloud-service/cloud-readiness-analyzer/using-cloud-readiness-analyzer.md#viewing-report) .
+Du kan även hämta Cloud Readiness Analyzer-rapporten från din AEM-instans. Mer information finns i [Visa Cloud Readiness Analyzer-rapporten](/help/move-to-cloud-service/cloud-readiness-analyzer/using-cloud-readiness-analyzer.md#viewing-report).
