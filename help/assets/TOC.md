@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 792e5f7ab7c64404e6c8e1bad956e328edb32044
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 96%
    + [API:er och referensmaterial](developer-reference-material-apis.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Arbeta med bildprofiler och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
-   + [Konfigurera smarta taggar](smart-tags-configuration.md)
+   + [Konfigurera Smart Tags](smart-tags-configuration.md)
    + [Flerspråkiga resurser och översättning av resurser](translate-assets.md)
    + [Söka efter fasetter](search-facets.md)
    + [Utöka materialredigeraren](extend-asset-editor.md)
