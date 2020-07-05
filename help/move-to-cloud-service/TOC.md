@@ -1,11 +1,11 @@
 ---
 sub-product: Flytta till AEM as a Cloud Service
 user-guide-title: Flytta till AEM as a Cloud Service
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: fe2c098b55bf501dc0ae68d01139b828d92d90f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '68'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 89%
    + Cloud Readiness Analyzer {#cloud-readiness-analyzer}
       + [Översikt](/help/move-to-cloud-service/cloud-readiness-analyzer/overview-cloud-readiness-analyzer.md)
       + [Använda Cloud Readiness Analyzer](/help/move-to-cloud-service/cloud-readiness-analyzer/using-cloud-readiness-analyzer.md)
-   + Verktyget för innehållsöverföring {#content-transfer-tool}
+   + Content Transfer Tool {#content-transfer-tool}
       + [Översikt](/help/move-to-cloud-service/content-transfer-tool/overview-content-transfer-tool.md)
-      + [Använda verktyget för innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
+      + [Använda Content Transfer Tool](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
 + Verktyg för omstrukturering av kod {#refactoring-tools}
    + [Resursarbetsflödesmigrering](/help/move-to-cloud-service/moving-to-aem-assets/asset-workflow-migration-tool.md)
    + [AEM Dispatcher Converter](/help/move-to-cloud-service/refactoring-tools/dispatcher-transformation-utility-tools.md)
