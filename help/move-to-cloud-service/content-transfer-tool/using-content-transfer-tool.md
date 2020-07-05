@@ -1,45 +1,45 @@
 ---
-title: Använda verktyget för innehållsöverföring
-description: Använda verktyget för innehållsöverföring
-translation-type: tm+mt
+title: Använda Content Transfer Tool
+description: Använda Content Transfer Tool
+translation-type: ht
 source-git-commit: 7648adc4b1d9c5849363beb4162de2f42eac7cfd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1582'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 
-# Använda verktyget för innehållsöverföring {#using-content-transfer-tool}
+# Använda Content Transfer Tool {#using-content-transfer-tool}
 
-## Viktigt att tänka på när du använder verktyget för innehållsöverföring {#pre-reqs}
+## Viktigt att tänka på när du använder Content Transfer Tool {#pre-reqs}
 
-Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder verktyget för innehållsöverföring:
+Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder Content Transfer Tool:
 
-* Lägsta systemkrav för verktyget för innehållsöverföring är AEM 6.3 + och JAVA 8. Om du har en tidigare AEM-version måste du uppgradera din innehållsdatabas till AEM 6.5 för att kunna använda verktyget för innehållsöverföring.
+* Lägsta systemkrav för Content Transfer Tool är AEM 6.3 + och JAVA 8. Om du har en tidigare AEM-version måste du uppgradera din innehållsdatabas till AEM 6.5 för att kunna använda Content Transfer Tool.
 
-* If you are using a *Sandbox Environment*, ensure that your environment is upgraded to June 10 2020 Release or later. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
+* Om du använder en *sandlådemiljö* måste du uppgradera din miljö till version 10 juni 2020 eller senare. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
-* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra gruppen AEM-administratörer i den Cloud Service du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda verktyget för innehållsöverföring.
+* Om du vill använda Content Transfer Tool måste du vara adminanvändare i källinstansen och tillhöra administrationsgruppen för AEM i den Cloud Service-instans som du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
 
-* Under extraheringsfasen körs verktyget för innehållsöverföring på en aktiv AEM-källinstans.
+* Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 
 * Författarens *inmatningsfas* kommer att skalas ned för hela författardriftsättningen. Detta innebär att författar-AEM inte är tillgängligt under hela importen.
 
-* Den rekommenderade övre gränsen för den databasstorlek som Content Transfer Tool har stöd för samtidigt är 20 GB.
+* Den rekommenderade övre storleksgränsen på databasen som Content Transfer Tool har stöd för är 20 GB.
 
 ## Tillgänglighet {#availability}
 
-Innehållsöverföringsverktyget kan laddas ned som en zip-fil (Content Transfer Tool v1.0.0) från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
+Content Transfer Tool kan laddas ned som en zip-fil (Content Transfer Tool v1.0.0) från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
->Hämta verktyget Innehållsöverföring från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portal.
+>Hämta Content Transfer Tool från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen.
 
-## Använda verktyget för innehållsöverföring {#running-tool}
+## Köra Content Transfer Tool {#running-tool}
 
->[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on&captions=swe)
 
-Följ det här avsnittet för att lära dig hur du använder verktyget för innehållsöverföring för att migrera innehållet till AEM as a Cloud Service (Author/Publish):
+Följ det här avsnittet för att lära dig hur du använder Content Transfer Tool för att migrera innehållet till AEM as a Cloud Service (Author/Publish):
 
 1. Välj Adobe Experience Manager och navigera till tools -> **Operations** -> **Content Transfer**.
 
@@ -64,13 +64,13 @@ Följ det här avsnittet för att lära dig hur du använder verktyget för inne
    1. **Cloud Service Configuration**: Ange målförfattar-URL för AEM as a Cloud Service.
 
       >[!NOTE]
-      >Du kan skapa och underhålla högst fyra migreringsuppsättningar åt gången under innehållsöverföringsaktiviteten.
+      >Du kan skapa och underhålla högst fyra migreringsuppsättningar åt gången under innehållsöverföringen.
       >Dessutom måste du skapa en migrering separat för varje specifik miljö – *Stage*, *Development* eller *Production*.
 
    1. **Access Token**: Ange åtkomsttoken.
 
       >[!NOTE]
-      >Du kan hämta åtkomsttoken från författarinstansen genom att gå till `/libs/granite/migration/token.json`. Åtkomsttoken hämtas från Cloud Servicens författarinstans.
+      >Du kan hämta åtkomsttoken från författarinstansen genom att gå till `/libs/granite/migration/token.json`. Åtkomsttoken hämtas från Cloud Service-författarinstansen.
 
    1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
 
@@ -86,9 +86,9 @@ Följ det här avsnittet för att lära dig hur du använder verktyget för inne
          >* `/etc`
 
 
-1. Klicka på **Save** när du har fyllt i alla fält på skärmen **Content Migrations Set details** .
+1. Klicka på **Save** när du har fyllt i alla fält på skärmen **Content Migrations Set details**.
 
-1. Migreringsuppsättningen visas på sidan *Overview* .
+1. Migreringsuppsättningen visas på sidan *Overview*.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ctt-img4.png)
 
@@ -104,7 +104,7 @@ Följ det här avsnittet för att lära dig hur du använder verktyget för inne
 
 ### Extraheringsprocess i innehållsöverföring {#extraction-process}
 
-Följ stegen nedan för att extrahera migreringsuppsättningen från verktyget för innehållsöverföring:
+Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 
 1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Extract** för att påbörja extraheringen.
 
@@ -131,7 +131,7 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från verktyget f
 
 #### Uppdateringsextrahering {#top-up-extraction-process}
 
-Verktyget för innehållsöverföring har en funktion som har stöd för differentiell innehållsuppdatering där det är möjligt att endast överföra ändringar som gjorts sedan föregående innehållsöverföringsaktivitet.
+Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
 >[!NOTE]
 >Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service.
@@ -147,12 +147,12 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 1. Dialogrutan **Migration Set extraction** visas.
 
    >[!IMPORTANT]
-   >Du bör inaktivera alternativet **Overwrite staging container during extraction** .
+   >Du bör inaktivera alternativet **Overwrite staging container during extraction**.
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/extract-topup-1.png)
 
 ### Inmatningsprocess i innehållsöverföring {#ingestion-process}
 
-Följ stegen nedan för att importera migreringsuppsättningen från verktyget för innehållsöverföring:
+Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 
 1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen.
 
@@ -176,7 +176,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från verktyget f
 
 #### Uppdatera inmatning {#top-up-ingestion-process}
 
-Verktyget för innehållsöverföring har en funktion som har stöd för *uppdatering* av differentiellt innehåll där det är möjligt att endast överföra ändringar som gjorts sedan den tidigare aktiviteten för innehållsöverföring.
+Content Transfer Tool har en funktion för differentiell *innehållsuppdatering* som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
 >[!NOTE]
 >Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service.
@@ -213,7 +213,7 @@ Eller:
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/view-log3.png)
 
-1. Om du vill svepa loggarna utan att använda användargränssnittet, kan du SSH in i AEM-källmiljön och svepa igenom `crx-quickstart/cloud-migration/extraction-XXXXX/output.log file`.
+1. Om du vill bifoga loggarna utan att använda användargränssnittet kan du använda SSH i AEM-källmiljön och lägga till `crx-quickstart/cloud-migration/extraction-XXXXX/output.log file`.
 
 ### Ta bort en migreringsuppsättning {#deleting-migration-set}
 
@@ -258,7 +258,7 @@ Filerna som skapas i *OUT_DIR* som anges ovan för överensstämmelse, kan sedan
 
 ### Gränssnittsbeteende {#ui-behavior}
 
-Som användare kan du se följande beteendeförändringar i användargränssnittet för verktyget för innehållsöverföring:
+Som användare kan du se följande beteendeförändringar i användargränssnittet i Content Transfer Tool:
 
 * Användaren skapar en migreringsuppsättning för en författares URL (Development/Stage/Production) och utför extrahering och inmatning.
 
