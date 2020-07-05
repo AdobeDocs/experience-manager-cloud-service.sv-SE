@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 1a8a9781da7390d25ec687d46af8d8a976c069bc
 workflow-type: tm+mt
 source-wordcount: '231'
-ht-degree: 81%
+ht-degree: 92%
 
 ---
 
@@ -39,15 +39,15 @@ ht-degree: 81%
    + [Anpassa och utöka Content Fragments](developing/extending/content-fragments-customizing.md)
    + [Content Fragments – konfigurera komponenter för återgivning](developing/extending/content-fragments-configuring-components-rendering.md)
    + [Konfigurera sökformulär](developing/extending/search-forms.md)
-   + [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)
+   + [Konfigurera RTE-redigeraren](/help/implementing/developing/extending/rich-text-editor.md)
    + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
    + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
 + Driftsätta till AEM as a Cloud Service {#deploying}
    + [Driftsätta till AEM as a Cloud Service](deploying/overview.md)
    + [Konfigurera OSGI för AEM as a Cloud Service](deploying/configuring-osgi.md)
 + Författarnivå {#author-tier}
-   + [Åtkomst till författarnivå](/help/implementing/author-tier/accessing-the-author-tier.md)
-   + [Skydda författarnivå](/help/implementing/author-tier/securing-the-author-tier.md)
+   + [Åtkomst till författarnivån](/help/implementing/author-tier/accessing-the-author-tier.md)
+   + [Skydda författarnivån](/help/implementing/author-tier/securing-the-author-tier.md)
 + Översikt över innehållsleverans {#content-delivery}
    + [Flöde för innehållsleverans](dispatcher/overview.md)
    + [Dispatcher i molnet](dispatcher/disp-overview.md)
