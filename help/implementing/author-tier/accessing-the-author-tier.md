@@ -1,24 +1,24 @@
 ---
-title: Åtkomst till författarnivå
-description: Åtkomst till författarnivå
-translation-type: tm+mt
+title: Åtkomst till författarnivån
+description: Åtkomst till författarnivån
+translation-type: ht
 source-git-commit: e772687c4034a364912aa426a133134571246db9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '69'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Åtkomst till författarnivå {#accessing-the-author-tier}
+# Åtkomst till författarnivån {#accessing-the-author-tier}
 
-Åtkomst till författarnivån i en AEM-Cloud Service görs via en standard och en icke-anpassningsbar URL.
+Åtkomst till författarnivån i AEM as a Cloud Service sker via en standardadress som inte kan anpassas.
 
-URL-formatet är för närvarande följande:
+Adressformatet är för närvarande följande:
 
 * `https://author-p[Program ID]-e[EnvironmentID].adobeaemcloud.com/`
 
-Så småningom kommer det här formatet att ersättas med ett standardformat för Adobe Experience Cloud-URL:
+Så småningom kommer det formatet att ersättas med ett standardformat för Adobe Experience Cloud:
 
 * `https://experience.adobe.com/#/@[TenantId]/`
 
