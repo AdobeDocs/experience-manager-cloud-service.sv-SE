@@ -2,7 +2,7 @@
 title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 description: En introduktion till Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 translation-type: tm+mt
-source-git-commit: 6f6038e6669d85230b38dc73cdddae164a01643b
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 100%
@@ -28,7 +28,7 @@ Adobe Experience Manager as a Cloud Service fungerar i enlighet med [riktlinjern
 
 >[!NOTE]
 >
-> Mer information finns i [tillgänglighetsöverensstämmelserapporter för Adobes lösningar](https://www.adobe.com/accessibility/compliance.html).
+>Mer information finns i [tillgänglighetsöverensstämmelserapporter för Adobes lösningar](https://www.adobe.com/accessibility/compliance.html).
 
 ## World Wide Web Consortium {#world-wide-web-consortium}
 
@@ -49,7 +49,7 @@ Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa web
 * [Skapa hjälpmedelsanpassat innehåll](/help/sites-cloud/authoring/fundamentals/accessible-content.md) beskriver hur de relaterar till AEM.
 
 >[!NOTE]
-> 
+>
 >När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
 <!--
