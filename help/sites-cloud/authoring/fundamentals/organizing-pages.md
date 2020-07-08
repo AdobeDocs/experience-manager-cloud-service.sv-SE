@@ -2,9 +2,9 @@
 title: Skapa och ordna sidor
 description: Skapa och organisera sidor med AEM
 translation-type: tm+mt
-source-git-commit: 86fa0de81e8398b5b74291840304a2254d1771f4
+source-git-commit: b9c7e476ad8efebeff44d88302484893edbf1469
 workflow-type: tm+mt
-source-wordcount: '2357'
+source-wordcount: '2550'
 ht-degree: 5%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 5%
 
 # Skapa och ordna sidor {#creating-and-organizing-pages}
 
-I det här dokumentet beskrivs hur du skapar och hanterar sidor med Adobe Experience Manager Cloud-tjänsten så att du sedan kan [skapa innehåll](/help/sites-cloud/authoring/fundamentals/editing-content.md) på dessa sidor.
+I det här dokumentet beskrivs hur du skapar och hanterar sidor med Adobe Experience Manager Cloud Service så att du sedan kan [skapa innehåll](/help/sites-cloud/authoring/fundamentals/editing-content.md) på dessa sidor.
 
 >[!NOTE]
 >
@@ -186,6 +186,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * Välj den mall som du vill använda för att skapa den nya sidan och klicka/tryck sedan på **Nästa** för att fortsätta.
 
    * **Avbryt** om du vill avbryta processen.
+
    ![Välja en mall för en ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-template.png)
 
 1. Från det sista steget i guiden kan du antingen:
@@ -193,6 +194,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * Använd de tre flikarna för att ange de [sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md) som du vill tilldela den nya sidan och klicka/tryck sedan på **Skapa** för att skapa sidan.
 
    * Använd **Bakåt** för att återgå till mallval.
+
    Nyckelfält är:
 
    * **Titel**:
@@ -203,6 +205,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
       * Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
       * Om du anger ett **sidnamn** när du skapar en ny sida validerar AEM namnet enligt konventionerna från AEM och JCR. <!--If you supply a page **Name** when creating a new page, AEM will [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.-->
       * Du **kan inte skicka ogiltiga tecken** i **namnfältet** . När AEM identifierar ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+
    >[!TIP]
    >
    >Se [Namnkonventioner](#page-naming-conventions)för sidor.
@@ -237,6 +240,7 @@ När du har skapat en sida eller navigerat till en befintlig sida (i konsolen) k
 
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
    * [Markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources) och verktygsfältet
+
    Välj sedan ikonen **Redigera** :
 
    ![Knappen Redigera](/help/sites-cloud/authoring/assets/edit.png)
@@ -256,6 +260,7 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
    * [Markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources) och verktygsfältet
+
    Sedan ikonen **Kopiera** :
 
    ![Kopiera](/help/sites-cloud/authoring/assets/copy.png)
@@ -273,6 +278,7 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
    1. Markera själva ikonen **Klistra in** : En kopia av originalsidan och eventuella underordnade sidor skapas på den här platsen.
    1. Markera listrutepilen för att visa alternativet **Klistra in utan underordnade** . En kopia av originalsidan kommer att skapas på denna plats. underordnade sidor kopieras inte.
+
    >[!NOTE]
    >
    >Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om det till exempel `beach` redan finns en ny sida med namnet `beach` blir den `beach1`.
@@ -292,6 +298,7 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
    * [Markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources) och verktygsfältet
+
    Välj sedan ikonen **Flytta** sida:
 
    ![Knappen Flytta](/help/sites-cloud/authoring/assets/move.png)
@@ -302,6 +309,7 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
    * Ange det namn du vill att sidan ska ha när den har flyttats och klicka/tryck sedan på **Nästa** för att fortsätta.
    * **Avbryt** om du vill avbryta processen.
+
    ![Flytta och byta namn på sida](/help/sites-cloud/authoring/assets/move-page-rename.png)
 
    Sidnamnet kan vara detsamma om du bara flyttar sidan.
@@ -317,6 +325,7 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
       * Markera målet genom att klicka på målets miniatyrbild.
       * Klicka på **Nästa** för att fortsätta.
    * Använd **Bakåt** för att återgå till sidnamnsspecifikationen.
+
    >[!NOTE]
    >
    >Som standard väljs den överordnade sidan för sidan som du flyttar/byter namn på som mål.
@@ -357,6 +366,27 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 <!--
 >A page can only be moved to a location where the template upon which the page is based is allowed. See [Template Availability](/help/sites-developing/templates.md#template-availability) for more information.
 -->
+
+#### Asynkrona åtgärder {#asynchronous-actions}
+
+Vanligtvis utförs en åtgärd för att flytta eller byta namn på en sida direkt. Detta betraktas som synkron bearbetning och ytterligare åtgärder i gränssnittet blockeras tills åtgärden är klar.
+
+Om antalet sidor som påverkas ligger över en angiven gräns, kommer åtgärden att bearbetas asynkront, vilket gör att användaren kan fortsätta att redigera i gränssnittet utan att detta hindras av åtgärden för att flytta sidan eller byta namn.
+
+* När du klickar på **Flytta** i det sista steget ovan kontrollerar AEM den konfigurerade gränsen.
+* Om antalet sidor som påverkas ligger under gränsen utförs en synkron åtgärd.
+* Om antalet sidor som påverkas ligger över gränsen utförs en asynkron åtgärd.
+   * Användaren måste definiera när den asynkrona åtgärden ska utföras
+      * **Nu** börjar körningen av det asynkrona jobbet omedelbart.
+      * **Senare** kan användaren definiera när det asynkrona jobbet ska starta.
+
+         ![Asynkron flyttning av sida](/help/sites-cloud/authoring/assets/asynchronous-page-move.png)
+
+Statusen för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs Status **på](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)** Global Navigation **->** Tools **->** Operations **->** Jobb **
+
+>[!NOTE]
+>
+>Mer information om asynkron jobbbearbetning och hur du konfigurerar gränsen för åtgärder för att flytta/byta namn på sidor finns i dokumentet [Asynkrona jobb](/help/operations/asynchronous-jobs.md) i användarhandboken för Operations.
 
 ### Ta bort en sida {#deleting-a-page}
 
