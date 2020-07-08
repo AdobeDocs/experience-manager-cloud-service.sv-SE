@@ -1,11 +1,11 @@
 ---
-title: Använd Anslutna resurser för att dela DAM-resurser i arbetsflödet för att skapa webbplatser i [!DNL Adobe Experience Manager].
-description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] när du skapar webbsidor på en annan distribution av [!DNL Adobe Experience Manager Sites].
+title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manager Sites] authoring workflow.
+description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5e89a44cb727547af9db783662e035c4e2102a4e
+source-git-commit: be817ff8265d9d45a80557c0e44949ba6562993c
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '1963'
 ht-degree: 51%
 
 ---
@@ -92,6 +92,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    1. Välj startprogrammet för arbetsflödet och klicka på **[!UICONTROL Properties]** i åtgärdsfältet.
 
    1. In the [!UICONTROL Properties] wizard, change the **[!UICONTROL Path]** fields as the following mappings to update their regular expressions to exclude the mount point **[!UICONTROL connectedassets]**.
+
    | Före | Efter |
    | ------------------------------------------------------- | -------------------------------------------------------------------------- |
    | `/content/dam(/((?!/subassets).)*/)renditions/original` | `/content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original` |
@@ -138,13 +139,13 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
    *Bild: Alternativ för att filtrera dokumenttyper och bilder vid sökning efter resurser på DAM-fjärrdistribution.*
 
-1. En Sites-författare meddelas om en resurs hämtas asynkront och om en hämtningsåtgärd misslyckas. Under eller efter redigeringen kan författare se detaljerad information om hämtningsåtgärder och fel i användargränssnittet för [asynkrona jobb](/help/assets/asynchronous-jobs.md).
+1. En Sites-författare meddelas om en resurs hämtas asynkront och om en hämtningsåtgärd misslyckas. Under eller efter redigeringen kan författare se detaljerad information om hämtningsåtgärder och fel i användargränssnittet för [asynkrona jobb](/help/operations/asynchronous-jobs.md).
 
    ![Meddelande om asynkron hämtning av resurser som sker i bakgrunden.](assets/assets_async_transfer_fails.png)
 
    *Bild: Meddelande om asynkron hämtning av resurser som sker i bakgrunden.*
 
-1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used in the page. Kontrollera att fjärresurserna har hämtats vid publiceringen. Se [användargränssnittet för asynkrona jobb](/help/assets/asynchronous-jobs.md) om du vill kontrollera status för varje hämtad resurs.
+1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used in the page. Kontrollera att fjärresurserna har hämtats vid publiceringen. Se [användargränssnittet för asynkrona jobb](/help/operations/asynchronous-jobs.md) om du vill kontrollera status för varje hämtad resurs.
 
    >[!NOTE]
    >
@@ -188,4 +189,4 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 Följ dessa steg för att felsöka vanliga fel:
 
 * If you cannot search for remote assets from the [!UICONTROL Content Finder], recheck and ensure that the required roles and permissions are in place.
-* En resurs som hämtats från en DAM-fjärrdistribution kanske inte publiceras på en webbsida av följande skäl: Den finns inte i fjärrdistributionen, lämplig behörighet saknas för att hämta den eller nätverksfel. Se till att resursen inte tas bort från fjärr-DAM eller att behörigheterna inte ändras. Kontrollera att rätt förutsättningar uppfylls. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/assets/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
+* En resurs som hämtats från en DAM-fjärrdistribution kanske inte publiceras på en webbsida av följande skäl: Den finns inte i fjärrdistributionen, lämplig behörighet saknas för att hämta den eller nätverksfel. Se till att resursen inte tas bort från fjärr-DAM eller att behörigheterna inte ändras. Kontrollera att rätt förutsättningar uppfylls. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/operations/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
