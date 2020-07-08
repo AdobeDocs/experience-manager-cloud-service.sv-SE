@@ -2,7 +2,7 @@
 title: Konfigurera sökformulär
 description: Konfigurera sökformulär för Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 18841ec94b8dd92ca92deda0869f2698786458aa
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '2030'
 ht-degree: 2%
@@ -78,7 +78,7 @@ Standardkonfigurationerna (i alfabetisk ordning) är:
 
 >[!NOTE]
 >
-> Mer information om resursrelaterade sökformulär finns i [Resurser - Sök efter ansikten](/help/assets/search-facets.md)
+>Mer information om resursrelaterade sökformulär finns i [Resurser - Sök efter ansikten](/help/assets/search-facets.md)
 
 
 ## Förutsägelser och deras inställningar {#predicates-and-their-settings}
@@ -491,11 +491,10 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
 
 >[!NOTE]
 >
->* De vanliga sökpredikten definieras i:
-   >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+>De vanliga sökpredikten definieras i:
+>  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
->
-Informationen är endast avsedd som referens och du får inte ändra den `/libs`.
+>Informationen är endast avsedd som referens och du får inte ändra den `/libs`.
 
 <!--
 >* Search predicates related only to siteadmin (classic UI) are located under:
