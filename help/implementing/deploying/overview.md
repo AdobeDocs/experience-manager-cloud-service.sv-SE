@@ -2,7 +2,7 @@
 title: Driftsätta till AEM as a Cloud Service
 description: 'Driftsätta till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 6fee9a7abd17615c607f01b869a9c1eaed5793a3
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '3523'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Det är viktigt att förstå att AEM uppdateras ofta, eventuellt så ofta som en
 
 >[!NOTE]
 >
-> Om anpassad kod publicerades till mellanlagring och sedan avvisades av dig, kommer nästa AEM-uppdatering att ta bort dessa ändringar för att återspegla Git-taggen för den senaste lyckade kundreleasen till produktionen.
+>Om anpassad kod publicerades till mellanlagring och sedan avvisades av dig, kommer nästa AEM-uppdatering att ta bort dessa ändringar för att återspegla Git-taggen för den senaste lyckade kundreleasen till produktionen.
 
 Med jämna mellanrum kommer en ny funktion att publiceras med fokus på funktionstillägg och förbättringar som kommer att påverka användarupplevelsen mer än med de dagliga versionerna. En funktionsrelease aktiveras inte av driftsättningen av en stor ändringslista, utan snarare genom att en versionsväxling aktiveras som har ackumulerats under flera dagar eller veckor genom de dagliga uppdateringarna.
 
@@ -133,8 +133,11 @@ I följande fall är det att föredra att manuellt koda uttryckliga innehållssk
 * Skapa/ta bort grupper
 * Skapa/ta bort användare
 * Lägg till åtkomstkontrollistor
-   > [!NOTE]
+
+   >[!NOTE]
+   >
    >Definitionen av åtkomstkontrollistor kräver att nodstrukturerna redan finns. Därför kan det vara nödvändigt att skapa en sökvägsprogramsats innan.
+
 * Lägg till sökväg (t.ex. för rotmappsstrukturer)
 * Lägga till CND (nodetypdefinitioner)
 
