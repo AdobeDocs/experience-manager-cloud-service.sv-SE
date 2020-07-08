@@ -3,7 +3,7 @@ title: Konfigurera AEM Assets as a Cloud Service med varumärkesportalen
 description: Konfigurera AEM Assets as a Cloud Service med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: d5ac2fca30fd1614f21ad784bc4d59fe03a3162c
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1659'
 ht-degree: 37%
@@ -32,7 +32,6 @@ Konfigurationen av molninstansen AEM Assets med en Brand Portal-klientorganisati
 >En innehavare av en varumärkesportal får endast konfigureras med en molninstans i AEM Assets.
 >
 >Konfigurera inte en Brand Portal-klientorganisation med flera AEM Assets-molninstanser.
-
 
 ## Förutsättningar {#prerequisites}
 
@@ -231,8 +230,6 @@ Utför följande steg för att konfigurera det IMS-konto som du har skapat i [er
 >
 >Kontrollera att IMS-konfigurationen klarar hälsokontrollen. Om konfigurationen inte godkänns i hälsokontrollen är den ogiltig. Du måste ta bort den och skapa en ny, giltig konfiguration.
 
-
-
 ### Konfigurera molntjänsten{#configure-the-cloud-service}
 
 Så här konfigurerar du molntjänsten Brand Portal:
@@ -343,8 +340,6 @@ I exemplet ovan utlöses ytterligare en begäran och ett svar. Systemet kunde in
 >[!NOTE]
 >
 >Ytterligare en begäran skapas om den överordnade mappen inte finns i varumärkesportalen (som i exemplet ovan) eller om den överordnade mappen har ändrats i AEM Assets.
-
-
 
 <!--
 
