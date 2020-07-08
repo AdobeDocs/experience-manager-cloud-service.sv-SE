@@ -2,7 +2,7 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: 6951b6ff255513f5865e1f92a09c5ac439271a26
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '3914'
 ht-degree: 9%
@@ -17,10 +17,12 @@ ht-degree: 9%
 I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apache- och Dispatcher-konfiguration samt hur du validerar och kör den lokalt innan du distribuerar den i molnmiljöer. Det beskriver även felsökning i molnmiljöer. Mer information om Dispatcher finns i dokumentationen [till](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)AEM Dispatcher.
 
 >[!NOTE]
+>
 >Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta är en förutsättning för att du ska kunna köra och felsöka Dispatcher på en lokal dator. Avsnitten nedan innehåller kommandon som använder Mac- eller Linux-versionerna av SDK, men Windows SDK kan användas på liknande sätt.
 
 >[!WARNING]
-> Windowsanvändare: den aktuella versionen av AEM som en Cloud Service lokal Dispatcher Tools (v2.0.20) är inte kompatibel med Windows. Kontakta [Adobe Support](https://daycare.day.com/home.html) för att få uppdateringar om Windows-kompatibilitet.
+>
+>Windowsanvändare: den aktuella versionen av AEM som en Cloud Service lokal Dispatcher Tools (v2.0.20) är inte kompatibel med Windows. Kontakta [Adobe Support](https://daycare.day.com/home.html) för att få uppdateringar om Windows-kompatibilitet.
 
 ## Dispatcher Tools {#dispatcher-sdk}
 
@@ -197,7 +199,7 @@ Valideringsverktyget finns i SDK på `bin/validator` en binär Mac OS-, Linux- e
 
 Den anropas som: `validator full [-d folder] [-w whitelist] zip-file | src folder`
 
-Verktyget validerar Apache- och Dispatcher-konfigurationen. Den söker igenom alla filer med mönster `conf.d/enabled_vhosts/*.vhost` och kontrollerar att endast tillåtna direktiv används. De direktiv som tillåts i Apache-konfigurationsfiler kan listas genom att köra validerarens allowlist-kommando:
+Verktyget validerar Apache- och Dispatcher-konfigurationen. Den söker igenom alla filer med mönster `conf.d/enabled_vhosts/*.vhost` och kontrollerar att endast tillåtelselistad direktiv används. De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
 
 ```
 $ validator whitelist
@@ -236,9 +238,9 @@ Tabellen nedan visar vilka cachemoduler som stöds:
 | `mod_substitute` | [https://httpd.apache.org/docs/2.4/mod/mod_substitute.html](https://httpd.apache.org/docs/2.4/mod/mod_substitute.html) |
 | `mod_userdir` | [https://httpd.apache.org/docs/2.4/mod/mod_userdir.html](https://httpd.apache.org/docs/2.4/mod/mod_userdir.html) |
 
-Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för att ingå i produkten i framtiden. Kunderna hittar listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens allowlist-kommando i SDK enligt beskrivningen ovan.
+Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för att ingå i produkten i framtiden. Kunderna hittar listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens tillåtelselista-kommando i SDK enligt beskrivningen ovan.
 
-Tillståndslistan innehåller en lista över Apache-direktiv som tillåts i en kundkonfiguration. Om ett direktiv inte tillåts loggas ett fel och en avslutningskod som inte är noll returneras. Om ingen tillåten lista anges på kommandoraden (vilket är det sätt som det ska anropas) använder verktyget en standardtillåten lista som Cloud Manager använder för validering innan det distribueras till molnmiljöer.
+tillåtelselista innehåller en lista över Apache-direktiv som tillåts i en kundkonfiguration. Om ett direktiv inte är tillåtelselistad loggas ett fel och en avslutningskod som inte är noll returneras. Om ingen tillåtelselista anges på kommandoraden (vilket är det sätt som det ska anropas) använder verktyget en tillåtelselista som Cloud Manager använder som standard för validering innan det distribueras till molnmiljöer.
 
 Dessutom genomsöks alla filer med mönster `conf.dispatcher.d/enabled_farms/*.farm` och följande kontrolleras:
 
@@ -256,7 +258,7 @@ Cloud manager validator 1.0.4
  conf.dispatcher.d/enabled_farms/999_ams_publish_farm.any: filter allows access to CRXDE
 ```
 
-Observera att valideringsverktyget endast rapporterar förbjuden användning av Apache-direktiv som inte är tillåtna. Den rapporterar inte syntaktiska eller semantiska problem med din Apache-konfiguration eftersom den här informationen endast är tillgänglig för Apache-moduler i en körningsmiljö.
+Observera att valideringsverktyget endast rapporterar förbjuden användning av Apache-direktiv som inte har tillåtelselistad. Den rapporterar inte syntaktiska eller semantiska problem med din Apache-konfiguration eftersom den här informationen endast är tillgänglig för Apache-moduler i en körningsmiljö.
 
 När inga valideringsfel rapporteras är konfigurationen klar för distribution.
 
@@ -351,7 +353,7 @@ Du kan också testa din Apache- och Dispatcher-konfiguration lokalt. Docker mås
 
 Genom att använda parametern &quot;`-d`&quot; skickar valideraren en mapp med alla konfigurationsfiler som behövs för dispatchern.
 
-Sedan kan skriptet peka på den mappen och påbörja behållaren med din konfiguration. `docker_run.sh`
+Sedan kan skriptet peka på den mappen och påbörja `docker_run.sh` behållaren med din konfiguration.
 
 ```
 $ validator full -d out src/dispatcher
@@ -529,7 +531,7 @@ forget to adapt the `Include` statements referring to that file in the virtual h
 If the folder however contains multiple, virtual host specific files, their contents should be
 copied to the `Include` statement referring to them in the virtual host files.
 
-### Ta bort tillåtna listor
+### Ta bort tillåtelselista
 
 Remove the folder `conf.d/whitelists` and remove `Include` statements in the virtual host files referring to
 some file in that subfolder.
@@ -550,7 +552,7 @@ $ validator httpd .
 
 Om felmeddelanden om saknade inkluderingsfiler visas, ska du kontrollera om du har bytt namn på filerna korrekt.
 
-Om Apache-direktiv som inte är tillåtna visas tar du bort dem.
+Om Apache-direktiv som inte är tillåtelselistad visas tar du bort dem.
 
 ### Ta bort alla icke-publicerade servergrupper
 
