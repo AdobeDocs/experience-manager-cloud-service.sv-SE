@@ -1,9 +1,9 @@
 ---
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
-translation-type: ht
-source-git-commit: 7648adc4b1d9c5849363beb4162de2f42eac7cfd
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+workflow-type: tm+mt
 source-wordcount: '1582'
 ht-degree: 100%
 
@@ -37,7 +37,7 @@ Content Transfer Tool kan laddas ned som en zip-fil (Content Transfer Tool v1.0.
 
 ## Köra Content Transfer Tool {#running-tool}
 
->[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
 
 Följ det här avsnittet för att lära dig hur du använder Content Transfer Tool för att migrera innehållet till AEM as a Cloud Service (Author/Publish):
 
@@ -238,7 +238,8 @@ Om blobb-ID saknas, som nämns nedan, måste en konsekvenskontroll utföras i de
 Följande kommando körs
 
 >[!NOTE]
-> `--verbose` -flaggan krävs för att rapportera nodsökvägar som refererar till blobbarna.
+>
+>`--verbose`-flaggan krävs för att rapportera nodsökvägar som refererar till blobbarna.
 
 **För databaser AEM 6.5 (Oak 1.8 och tidigare)**
 
