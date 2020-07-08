@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: ae04553b17fcb7b9660f709565faed791a0c930e
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Loggning{#logging}
 
-AEM som molntjänst är en plattform där kunderna kan inkludera anpassad kod för att skapa unika upplevelser för sina kunder. Med detta i åtanke är loggning en viktig funktion för att felsöka anpassad kod i molnmiljöer och mer specifikt för lokala utvecklingsmiljöer.
+AEM som Cloud Service är en plattform där kunderna kan inkludera anpassad kod för att skapa unika upplevelser för sina kunder. Med detta i åtanke är loggning en viktig funktion för att felsöka anpassad kod i molnmiljöer och mer specifikt för lokala utvecklingsmiljöer.
 
 
 <!-- ## Global Logging {#global-logging}
@@ -26,9 +26,9 @@ AEM som molntjänst är en plattform där kunderna kan inkludera anpassad kod f�
 * the format to be used when writing the log messages
 -->
 
-## AEM som loggning av molntjänster {#aem-as-a-cloud-service-logging}
+## AEM som Cloud Service Logging {#aem-as-a-cloud-service-logging}
 
-Med AEM som molntjänst kan du konfigurera:
+AEM som Cloud Service ger dig möjlighet att konfigurera:
 
 * globala parametrar för den centrala loggningstjänsten
 * begära dataloggning, en särskild loggningskonfiguration för begärandeinformation
@@ -40,16 +40,17 @@ I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett
 
 >[!NOTE]
 >
->Inloggning av AEM som molntjänst baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html) .
+>Inloggning av AEM som Cloud Service baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html) .
 
-## AEM som Java-loggning i molntjänst {#aem-as-a-cloud-service-java-logging}
+## AEM som Cloud Service Java Logging {#aem-as-a-cloud-service-java-logging}
 
 ### Standardloggare och -författare {#standard-loggers-and-writers}
 
-> [!IMPORTANT]
-> Dessa kan anpassas vid behov, men standardkonfigurationen passar de flesta installationer. Om du behöver anpassa standardloggningskonfigurationerna måste du dock se till att du bara gör det i `dev` miljöer.
+>[!IMPORTANT]
+>
+>Dessa kan anpassas vid behov, men standardkonfigurationen passar de flesta installationer. Om du behöver anpassa standardloggningskonfigurationerna måste du dock se till att du bara gör det i `dev` miljöer.
 
-Vissa loggare och skrivprogram ingår i en standard-AEM som en molninstallation.
+Vissa loggare och skrivprogram ingår i en standard-AEM som Cloud Service-installation.
 
 Det första är ett specialfall eftersom det styr både `request` - och `access` -loggarna:
 
@@ -93,13 +94,13 @@ De andra paren följer standardkonfigurationen:
 
 * Länkar inte till ett specifikt skrivprogram, så skapar och använder ett implicit skrivprogram med standardkonfiguration.
 
-**AEM som loggning av HTTP-begäran om molntjänst**
+**AEM som Cloud Service HTTP Request Logging**
 
 Alla åtkomstbegäranden till AEM WCM och databasen registreras här.
 
 Exempelutdata:
 
-**AEM som HTTP-begäran för molntjänst/loggning av svarsåtkomst**
+**AEM som Cloud Service HTTP Request/Response Access Logging**
 
 Varje åtkomstbegäran registreras här tillsammans med svaret.
 
@@ -107,13 +108,13 @@ Exempelutdata:
 
 **Apache Web Server/Dispatcher Logging**
 
-Detta är en logg som används för felsökning av Dispatcher-problem. Mer information finns i [Felsöka konfigurationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/)av Apache och Dispatcher.
+Detta är en logg som används för felsökning av Dispatcher-problem. Mer information finns i [Felsöka Apache- och Dispatcher-konfigurationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/).
 
 <!-- Besides the three types of logs present on an AEM as a Cloud Service instance (`request`, `access` and `error` logs) there is another dispatcher/overview.html#debugging-apache-and-dispatcher-configuration.
 
 leftover text from the last breakaway chunk (re dispatcher) -->
 
-När det gäller god praxis rekommenderar vi att du anpassar dig till de konfigurationer som för närvarande finns i AEM som en molntjänstdeformattyp. Dessa anger olika logginställningar och nivåer för olika miljötyper:
+När det gäller god praxis rekommenderar vi att du följer de konfigurationer som för närvarande finns i AEM som en Cloud Service Maven-arketyp. Dessa anger olika logginställningar och nivåer för olika miljötyper:
 
 * för `local dev` och `dev` i miljöer ställer du in loggningsvärdet på nivån **DEBUG** på `error.log`
 * för `stage`anger du **WARN** -nivån till `error.log`
@@ -154,14 +155,14 @@ Se exempel nedan för varje konfiguration:
 
 ### Loggare och skribenter för enskilda tjänster {#loggers-and-writers-for-individual-services}
 
-Förutom de globala loggningsinställningarna kan du med AEM som molntjänst konfigurera specifika inställningar för en enskild tjänst:
+Förutom de globala loggningsinställningarna kan du med AEM som Cloud Service konfigurera specifika inställningar för en enskild tjänst:
 
 * den specifika loggningsnivån
 * loggaren (OSGi-tjänsten som tillhandahåller loggmeddelanden)
 
 På så sätt kan du kanalisera loggmeddelanden för en enskild tjänst till en separat fil. Detta kan vara särskilt användbart under utveckling eller testning. om du till exempel behöver en högre loggnivå för en viss tjänst.
 
-AEM som en molntjänst använder följande för att skriva loggmeddelanden till filen:
+AEM som Cloud Service använder följande för att skriva loggmeddelanden till filen:
 
 1. En **OSGi-tjänst** (logger) skriver ett loggmeddelande.
 1. En **loggningsloggare** tar det här meddelandet och formaterar det enligt din specifikation.
@@ -192,13 +193,13 @@ Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging O
 
 >[!NOTE]
 >
-> För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM-instans som en molntjänst. Mer information om hur du gör detta finns i [Distribuera till AEM som en molntjänst](/help/implementing/deploying/overview.md).
+>För att kunna utföra konfigurationsändringarna som listas nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan skicka dem till en AEM-Cloud Service som en instans. Mer information om hur du gör detta finns i [Distribuera till AEM som en Cloud Service](/help/implementing/deploying/overview.md).
 
 **Aktivera felsökningsloggnivån**
 
 >[!WARNING]
 >
-> Om du aktiverar loggnivån DEBUG globalt genereras en stor mängd information som är svår att gå igenom. Vi rekommenderar att du bara aktiverar den för de tjänster som kräver felsökning. Mer information finns i [Loggare and Writers for Individual Services](logging.md#loggers-and-writers-for-individual-services).
+>Om du aktiverar loggnivån DEBUG globalt genereras en stor mängd information som är svår att gå igenom. Vi rekommenderar att du bara aktiverar den för de tjänster som kräver felsökning. Mer information finns i [Loggare and Writers for Individual Services](logging.md#loggers-and-writers-for-individual-services).
 
 Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
 Om du vill aktivera DEBUG-loggnivån anger du
