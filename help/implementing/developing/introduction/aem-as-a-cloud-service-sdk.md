@@ -2,32 +2,32 @@
 title: AEM as a Cloud Service SDK
 description: Fylls i
 translation-type: tm+mt
-source-git-commit: df6e6bc95b5f0489d0da034c27d8f3a4314a6e27
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1023'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # The AEM as a Cloud Service SDK {#aem-as-a-cloud-service-sdk}
 
-AEM som en molntjänst-SDK består av följande artefakter:
+AEM som Cloud Service-SDK består av följande artefakter:
 
 * **QuickStart JAR** - AEM-miljön som används för lokal utveckling
-* **Java API Jar** - Java Jar/Maven Dependency, som visar alla Java API:er som kan användas för att utveckla mot AEM som molntjänst. Tidigare kallad Uberjar
+* **Java API Jar** - Java Jar/Maven Dependency, som visar alla Java API:er som kan användas för att utveckla mot AEM som Cloud Service. Tidigare kallad Uberjar
 * **Javadoc Jar** - javadokarna för Java API Jar
 * **Dispatcher Tools** - den uppsättning verktyg som används för att utveckla mot Dispatcher lokalt. Separata artefakter för unix och windows
 
-Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller tidigare att använda artefakterna nedan. Om den lokala kompileringen inte fungerar med QuickStart-behållaren och du misstänker att den beror på gränssnitt som har tagits bort från AEM distribuerat som en molntjänst, kontaktar du kundsupporten för att avgöra om du behöver åtkomst. Detta kräver ändringar i serverdelen.
+Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller tidigare att använda artefakterna nedan. Om den lokala kompileringen inte fungerar med Quickstart-behållaren och du misstänker att den beror på gränssnitt som har tagits bort från AEM distribuerats som en Cloud Service, kontaktar du kundsupporten för att avgöra om du behöver åtkomst. Detta kräver ändringar i serverdelen.
 
 * **6.5 Föråldrad Java API Jar** - ytterligare en uppsättning gränssnitt som har tagits bort sedan AEM 6.5
 * **6.5 Borttagen Javadoc Jar** - Javadocs för den extra uppsättningen gränssnitt
 
-## Åtkomst till AEM som en molntjänst-SDK {#accessing-the-aem-as-a-cloud-service-sdk}
+## Åtkomst till AEM som Cloud Service-SDK {#accessing-the-aem-as-a-cloud-service-sdk}
 
-* Du kan kontrollera ikonen **Om Adobe Experience Manager** på AEM Admin Console för att ta reda på vilken version av AEM du använder i produktionen.
-* Snabbstartsverktyget och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som molntjänster.
+* Du kan kontrollera ikonen AEM Admin Console **About Adobe Experience Manager** om du vill ta reda på vilken version av AEM du använder i produktionen.
+* Snabbstartsburken och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som en Cloud Service-miljö.
 * Java API Jar och Javadoc Jar kan laddas ned via maven-verktygen, antingen kommandoraden eller med den IDE du föredrar.
 * Maven project poms ska referera till följande API Jar-paket. Det här beroendet ska också refereras i alla delpaketets omgångar.
 
@@ -40,7 +40,9 @@ Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller ti
 </dependency>
 ```
 
->[!NOTE] Versionsposten för SDK ska matcha versionen av AEM som en molntjänst. Du kan se vilken version du använder genom att logga in på AEM, sedan gå till frågetecknet i skärmens övre högra hörn och välja **[!UICONTROL About Adobe Experience Manager]**
+>[!NOTE]
+>
+>Versionsposten för SDK ska matcha versionen av AEM som en Cloud Service. Du kan se vilken version du använder genom att logga in på AEM, sedan gå till frågetecknet i skärmens övre högra hörn och välja **[!UICONTROL About Adobe Experience Manager]**
 
 
 ## Uppdatera ett lokalt projekt med en ny SDK-version {#refreshing-a-local-project-with-a-new-skd-version}
