@@ -2,7 +2,7 @@
 title: Betydande förändringar i Adobe Experience Manager Assets som en Cloud Service
 description: Betydande förändringar av Adobe Experience Manager Assets i AEM Cloud Service jämfört med Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: e381807d7c199113689304e9481dfe2022ee5f93
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 5%
@@ -21,6 +21,7 @@ De största skillnaderna jämfört med Experience Manager 6.5 är inom följande
 * [Borttagning av klassiskt gränssnitt](#classic-ui).
 
 >[!NOTE]
+>
 >Det här dokumentet markerar de anmärkningsvärda ändringarna av AEM Assets. Om du vill se ändringar som gäller för AEM som Cloud Service och andra moduler går du till:
 >
 >* [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
