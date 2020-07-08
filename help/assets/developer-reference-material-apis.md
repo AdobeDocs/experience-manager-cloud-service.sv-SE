@@ -1,9 +1,9 @@
 ---
-title: 'Resurser-API:er för hantering av digitala resurser i Adobe Experience Manager som en molntjänst '
+title: 'Assets APIs for digital asset management in Adobe Experience Manager as a Cloud Service '
 description: Resurs-API:er gör det möjligt att använda grundläggande CRUD-åtgärder (create-read-update-delete) för att hantera resurser, inklusive binära, metadata, återgivningar, kommentarer och innehållsfragment.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 27e72bbc0d852eb2c2eb059967c91e6108613965
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 1%
@@ -42,8 +42,9 @@ Viktiga skillnader jämfört med tidigare versioner av AEM är bland annat:
 
 Den här metoden bör ge en mer skalbar och prestandaanpassad hantering av överföringar av resurser.
 
-> !![NOTE]
-Om du vill granska klientkod som implementerar den här metoden, se biblioteket för [aem-upload med öppen källkod](https://github.com/adobe/aem-upload)
+>[!NOTE]
+>
+>Om du vill granska klientkod som implementerar den här metoden, se biblioteket för [aem-upload med öppen källkod](https://github.com/adobe/aem-upload)
 
 ### Initiera överföring {#initiate-upload}
 
@@ -114,8 +115,7 @@ När alla delar av en binär fil har överförts skickar du en HTTP POST-begära
 | `replace` | Boolesk | Valfritt | Om det redan finns `True` en resurs med det angivna namnet tar Experience Manager bort resursen och återskapar den. |
 
 >!![NOTE]
->
-> Om resursen redan finns och varken `createVersion` eller `replace` anges, uppdaterar Experience Manager resursens aktuella version med den nya binärfilen.
+Om resursen redan finns och varken `createVersion` eller `replace` anges, uppdaterar Experience Manager resursens aktuella version med den nya binärfilen.
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
 
@@ -134,9 +134,9 @@ Adobe tillhandahåller bibliotek och verktyg med öppen källkod som en startpun
 
 <!-- #ENGCHECK review / update the list of deprecated APIs below. -->
 
-För Adobe Experience Manager som molntjänst stöds endast de nya överförings-API:erna. API:erna från Adobe Experience Manager 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
+För Adobe Experience Manager som Cloud Service stöds endast de nya överförings-API:erna. API:erna från Adobe Experience Manager 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
 
-* [HTTP-API för AEM Assets](mac-api-assets.md)
+* [AEM Assets HTTP API](mac-api-assets.md)
 * `AssetManager` Java API, som `AssetManager.createAsset(..)`
 
 >[!MORELIKETHIS]
@@ -146,15 +146,15 @@ För Adobe Experience Manager som molntjänst stöds endast de nya överförings
 
 ## Resurshantering och efterbearbetning {#post-processing-workflows}
 
-I Experience Manager baseras resurshanteringen på **[!UICONTROL Processing Profiles]** konfiguration som använder [resursens mikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
+I Experience Manager baseras resursbearbetningen på **[!UICONTROL Processing Profiles]** konfiguration som använder [tillgångsmikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
 
 Använd standardarbetsflödena med tillägg med anpassade steg för konfiguration av efterbearbetning av arbetsflöde.
 
 ## Stöd för arbetsflödessteg i efterbearbetningsarbetsflödet {#post-processing-workflows-steps}
 
-Kunder som uppgraderar till Experience Manager som en molntjänst från tidigare versioner av Experience Manager kan använda resursmikrotjänster för bearbetning av resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i arbetsflödet i den tidigare versionen stöds inte [!UICONTROL DAM Update Asset] .
+Kunder som uppgraderar till Experience Manager som en Cloud Service från tidigare versioner av Experience Manager kan använda tillgångsmikrotjänster för bearbetning av resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i arbetsflödet i den tidigare versionen stöds inte [!UICONTROL DAM Update Asset] .
 
-Följande arbetsflödessteg stöds i Experience Manager som en molntjänst.
+Följande arbetsflödessteg stöds i Experience Manager som Cloud Service.
 
 * `com.day.cq.dam.similaritysearch.internal.workflow.process.AutoTagAssetProcess`
 * `com.day.cq.dam.core.impl.process.CreateAssetLanguageCopyProcess`
