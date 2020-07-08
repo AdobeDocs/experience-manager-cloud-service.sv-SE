@@ -1,8 +1,8 @@
 ---
-title: Dataskydd och dataintegritet - Adobe Experience Manager som en beredskap för molntjänster
-description: 'Läs om Adobe Experience Manager som stöd för molnbaserade tjänster för de olika dataskydds- och datasekretessreglerna. inklusive EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentsekretesslag och hur man ska följa detta när man implementerar en ny AEM som ett molntjänstprojekt. '
+title: Dataskydd och dataintegritet - Adobe Experience Manager som Cloud Service Foundation Readiness
+description: 'Läs mer om Adobe Experience Manager som en Cloud Service Foundation-support för de olika dataskydds- och dataintegritetsreglerna. inklusive EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt. '
 translation-type: tm+mt
-source-git-commit: 2b7ee2b7b0ce351ed48aeb2f3135c947eafe7247
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 5%
@@ -10,7 +10,7 @@ ht-degree: 5%
 ---
 
 
-# Adobe Experience Manager som molntjänst för Foundations beredskap för dataskydd och dataintegritet {#aem-foundation-readiness-for-data-protection-and-data-privacy-regulations}
+# Adobe Experience Manager som Cloud Service Foundation Readiness for Data Protection and Data Privacy Regulations {#aem-foundation-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -96,7 +96,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 >[!NOTE]
 >
-> För AEM som molntjänst finns det ingen manuell procedur tillgänglig från gränssnittet för borttagning av en användarprofil eftersom CRXDE inte är tillgängligt.
+>För AEM som Cloud Service finns det ingen manuell procedur i användargränssnittet för att ta bort en användarprofil, eftersom CRXDE inte är tillgängligt.
 
 ### HTTP API {#http-api-1}
 
