@@ -2,10 +2,10 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager som Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 translation-type: tm+mt
-source-git-commit: 5d72645aa3a5296e7b616101955734f03425ab59
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1127'
+ht-degree: 5%
 
 ---
 
@@ -62,7 +62,7 @@ Innehållsfragmenten aktiverar:
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-4. Inledningsvis visas innehållet från **Huvudelementet** och **mallsidan** (variant). Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+4. Inledningsvis visas innehållet från **Main** Element och **Överordnad** (variation). Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
    ![Innehållsfragment i Resursläsaren](/help/sites-cloud/authoring/assets/content-fragments.png)
 
@@ -138,7 +138,9 @@ För mellanliggande innehåll kan du:
 >När detta inträffar behålls det mellanliggande innehållet som det är:
 >
 >* Mellanliggande komponenter har en absolut position inom komponentsekvensen i fragmentflödet. Den här positionen ändras inte, även när innehållet i styckena i fragmentet ändras.
-   >  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
+>
+>  
+Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
 >* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
 
 
