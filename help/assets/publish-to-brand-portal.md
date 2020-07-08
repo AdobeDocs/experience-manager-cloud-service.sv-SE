@@ -3,7 +3,7 @@ title: Publicera resurser, mappar och samlingar på varumärkesportalen
 description: Publicera resurser, mappar och samlingar på varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 4677a8771c5891b8c9846e0adb58025304a71bdd
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 100%
@@ -26,7 +26,6 @@ Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen
 >[!NOTE]
 >
 >Adobe rekommenderar stegvis publicering, helst vid tidpunkter med låg belastning, för att AEM-författaren inte ska uppta för mycket resurser.
-
 
 ## Publicera resurser på varumärkesportalen {#publish-assets-to-bp}
 
@@ -186,7 +185,6 @@ Du kan publicera eller avpublicera samlingar från molninstansen AEM Assets.
 >Det går inte att publicera innehållsfragment på varumärkesportalen. Därför är åtgärden **[!UICONTROL Publish to Brand Portal]** inte tillgänglig om du väljer innehållsfragment i AEM Assets.
 >
 >Om samlingar som innehåller innehållsfragment publiceras från AEM Assets till varumärkesportalen, replikeras allt innehåll i mappen förutom innehållsfragmenten till varumärkesportalens gränssnitt.
-
 
 ### Publicera samlingar {#publish-collections}
 
