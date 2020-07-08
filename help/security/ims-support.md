@@ -2,7 +2,7 @@
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: IMS-stöd för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: c03e219d8261451e1215cf95babcbd4c1862d321
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 100%
@@ -91,7 +91,7 @@ Verktyget för användarsynkronisering distribueras via Adobe Github-databasen p
 
 >[!NOTE]
 >
-> En förhandsversion, **2.4RC1**, med stöd för att skapa dynamiska grupper finns [här](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1).
+>En förhandsversion, **2.4RC1**, med stöd för att skapa dynamiska grupper finns [här](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1).
 
 De viktigaste funktionerna i den här versionen är möjligheten att dynamiskt mappa nya LDAP-grupper för användarmedlemskap i Admin Console samt att skapa dynamiska användargrupper.
 
@@ -159,7 +159,8 @@ Andra användare kan använda IMS-baserad inloggning när IMS har konfigurerats 
 
 
 >[!NOTE]
-> Alla användare som skapas i IMS kan skapas med Adobe ID eller Federated ID. Om en användare konfigureras med Adobe ID autentiseras de med hjälp av företagets identitetsleverantör för inloggning.
+>
+>Alla användare som skapas i IMS kan skapas med Adobe ID eller Federated ID. Om en användare konfigureras med Adobe ID autentiseras de med hjälp av företagets identitetsleverantör för inloggning.
 
 De dirigeras sedan om till inloggningsskärmen för IMS där de måste ange sina inloggningsuppgifter:
 
