@@ -2,7 +2,7 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: c2c6ee59849cbe041019e0a4395a499e81a671e0
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '2530'
 ht-degree: 17%
@@ -36,7 +36,7 @@ Everything else in the repository, `/content`, `/conf`, `/var`, `/etc`, `/oak:in
 
 >[!WARNING]
 >
-> Precis som i tidigare versioner av AEM bör `/libs` du inte ändra. Endast AEM-produktkod kan distribueras till `/libs`.
+>Precis som i tidigare versioner av AEM bör `/libs` du inte ändra. Endast AEM-produktkod kan distribueras till `/libs`.
 
 ### Oak Index {#oak-indexes}
 
@@ -500,7 +500,8 @@ Om flera `/apps/*-packages` används i de inbäddade målen måste alla räknas 
 ### Maven Repositories från tredje part {#xml-3rd-party-maven-repositories}
 
 >[!WARNING]
-> Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras om det finns beroenden.
+>
+>Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras om det finns beroenden.
 
 I reaktorprojektets `pom.xml`exempel lägger du till eventuella direktiv från tredje part om databasen för Maven. Den fullständiga `<repository>` konfigurationen bör vara tillgänglig från tredjepartsprovidern.
 
