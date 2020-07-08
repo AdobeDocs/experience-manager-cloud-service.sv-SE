@@ -2,7 +2,7 @@
 title: Konfigurera OSGI för AEM as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: 2ab998c7acedecbe0581afe869817a9a56ec5474
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '2689'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Konfigurera OSGI för AEM as a Cloud Service {#configuring-osgi-for-aem-as-a-cloud-service}
 
-[OSGi](https://www.osgi.org/) är en grundläggande del i teknikhögen i Adobe Experience Manager (AEM). Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
+[OSGi](https://www.osgi.org/) är en grundläggande del i Adobe Experience Manager (AEM) teknologi. Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
 
 OSGi innehåller standardmallar som gör att applikationer kan byggas av små, återanvändbara och samverkande komponenter. Dessa komponenter kan sättas samman till ett program och distribueras. Detta gör det enkelt att hantera OSGi-paket eftersom de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent finns i ett av de olika paketen. Mer information finns i [OSGi-specifikationen](https://www.osgi.org/Specifications/HomePage).
 
@@ -36,9 +36,9 @@ en OSGi-konfigurationsfil definieras på:
 
 efter konfigurationsformatet cfg.json OSGi.
 
-> [!NOTE]
+>[!NOTE]
 >
-> Tidigare versioner av AEM-stödda OSGi-konfigurationsfiler med olika filformat som .cfg., .config och som resursdefinitioner för XML-sling:OsgiConfig. Dessa format har ersatts av konfigurationsformatet cfg.json OSGi.
+>Tidigare versioner av AEM-stödda OSGi-konfigurationsfiler med olika filformat som .cfg., .config och som resursdefinitioner för XML-sling:OsgiConfig. Dessa format har ersatts av konfigurationsformatet cfg.json OSGi.
 
 ## Upplösning för körningsläge {#runmode-resolution}
 
@@ -58,7 +58,7 @@ Vid lokal utveckling kan en startparameter för körningsläge skickas in för a
 
 ## Typer av OSGi-konfigurationsvärden {#types-of-osgi-configuration-values}
 
-Det finns tre olika OSGi-konfigurationsvärden som kan användas med AEM som molntjänst.
+Det finns tre sorters OSGi-konfigurationsvärden som kan användas med AEM som Cloud Service.
 
 1. **Textbundna värden**, som är värden som är hårdkodade i OSGi-konfigurationen och lagrade i Git. Till exempel:
 
@@ -76,7 +76,7 @@ Det finns tre olika OSGi-konfigurationsvärden som kan användas med AEM som mol
    } 
    ```
 
-1. **Miljöspecifika värden**, som är värden som varierar mellan olika utvecklingsmiljöer, och som därför inte kan användas korrekt i körningsläge (eftersom det finns ett enda `dev` körningsläge i AEM som en molntjänst). Till exempel:
+1. **Miljöspecifika värden**, som är värden som varierar mellan olika utvecklingsmiljöer, och som därför inte kan anges korrekt av körningsläget (eftersom det finns ett enda `dev` körningsläge i AEM som Cloud Service). Till exempel:
 
    ```json
    {
@@ -96,7 +96,7 @@ Det finns tre olika OSGi-konfigurationsvärden som kan användas med AEM som mol
 
 ## Så här väljer du lämplig OSGi-konfigurationsvärdetyp {#how-to-choose-the-appropriate-osgi-configuration-value-type}
 
-I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för särskilda ändamål där värdet skiljer sig mellan olika utvecklingsmiljöer.
+I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för specifika användningsområden där värdet skiljer sig mellan olika utvecklingsmiljöer.
 
 ![](assets/choose-configuration-value-type_res1.png)
 
@@ -112,20 +112,20 @@ Värden för infogade konfigurationer anses vara standardmetoden och bör använ
 * Värdena är implicit knutna till koddistributioner
 * De kräver inga ytterligare distributionsöverväganden eller samordning
 
-När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden. Om det behövs för användningsfallet väljer du bara hemliga eller miljöspecifika konfigurationer.
+När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden, där du bara väljer hemliga eller miljöspecifika konfigurationer om det behövs för användningsfallet.
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
-Använd bara miljöspecifika konfigurationer (`$[env:ENV_VAR_NAME]`) för icke-hemliga konfigurationsvärden när värdena varierar mellan olika utvecklingsmiljöer. Detta inkluderar lokala utvecklingsinstanser och alla AEM-miljöer som en molntjänstutvecklingsmiljö. Undvik att använda icke-hemliga miljöspecifika konfigurationer för AEM som molntjänststadium eller produktionsmiljöer.
+Använd bara miljöspecifika konfigurationer (`$[env:ENV_VAR_NAME]`) för icke-hemliga konfigurationsvärden när värdena varierar mellan olika utvecklingsmiljöer. Detta omfattar lokala utvecklingsinstanser och alla AEM som en Cloud Service Development-miljö. Undvik att använda icke-hemliga miljöspecifika konfigurationer för AEM som Cloud Service- eller produktionsmiljöer.
 
 * Använd bara icke-hemliga miljöspecifika konfigurationer för konfigurationsvärden som skiljer sig åt mellan utvecklingsmiljöer, inklusive lokala utvecklingsinstanser.
 * Använd i stället standardvärdena för intern användning i OSGi-konfigurationerna för icke-hemliga värden för scenen och produktionen.  I samband med detta rekommenderas inte att miljöspecifika konfigurationer används för att underlätta konfigurationsändringar under körning till scen- och produktionsmiljöer. dessa ändringar bör införas via källkodshantering.
 
 ### När hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-secret-environment-specific-configuration-values}
 
-AEM som en molntjänst kräver användning av miljöspecifika konfigurationer (`$[secret:SECRET_VAR_NAME]`) för alla hemliga OSGi-konfigurationsvärden, till exempel lösenord, privata API-nycklar eller andra värden som inte kan lagras i Git av säkerhetsskäl.
+AEM som Cloud Service kräver att miljöspecifika konfigurationer (`$[secret:SECRET_VAR_NAME]`) används för alla hemliga OSGi-konfigurationsvärden, till exempel lösenord, privata API-nycklar eller andra värden som inte kan lagras i Git av säkerhetsskäl.
 
-Använd hemliga miljöspecifika konfigurationer för att lagra värdet för hemligheter på alla AEM som molntjänstmiljöer, inklusive Stage och Production.
+Använd hemliga miljöspecifika konfigurationer för att lagra värdet för hemligheter på alla AEM som en Cloud Service, inklusive scenen och produktionen.
 
 <!-- ### Adding a New Configuration to the Repository {#adding-a-new-configuration-to-the-repository}
 
@@ -503,9 +503,9 @@ $ aio cloudmanager:set-environment-variables ENVIRONMENT_ID --variable MY_VAR1 "
 $ aio cloudmanager:set-environment-variables ENVIRONMENT_ID --delete MY_VAR1 MY_VAR2
 ```
 
-> [!NOTE]
+>[!NOTE]
 >
-> På [den här sidan](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) finns mer information om hur du konfigurerar värden med plugin-programmet Cloud Manager för Adobe I/O CLI.
+>På [den här sidan](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) finns mer information om hur du konfigurerar värden med plugin-programmet Cloud Manager för Adobe I/O CLI.
 
 ### Antal variabler {#number-of-variables}
 
@@ -513,7 +513,7 @@ Upp till 20 variabler kan deklareras.
 
 ## Distributionsöverväganden för Hemliga och miljöspecifika konfigurationsvärden {#deployment-considerations-for-secret-and-environment-specific-configuration-values}
 
-Eftersom de hemliga och miljöspecifika konfigurationsvärdena finns utanför Git, och därför inte är en del av den formella AEM som en distributionsmekanism för molntjänster, bör kunden hantera, styra och integrera i AEM som en distributionsprocess för molntjänster.
+Eftersom de hemliga och miljöspecifika konfigurationsvärdena finns utanför Git, och därför inte är en del av den formella AEM som en distributionsmekanism för Cloud Service, bör kunden hantera, styra och integrera i AEM som en distributionsprocess för Cloud Service.
 
 Som nämnts ovan kommer anrop till API att distribuera de nya variablerna och värdena till molnmiljöer, ungefär som en vanlig pipeline för kundkoddistribution. Skapare- och publiceringstjänsterna startas om och de nya värdena anges, vilket normalt tar några minuter. Observera att de kvalitetsportar och tester som körs av Cloud Manager under en vanlig koddistribution inte utförs under den här processen.
 
