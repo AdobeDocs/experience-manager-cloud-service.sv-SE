@@ -3,7 +3,7 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b63f62790973be59b1437a6406563638f63eeb28
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1843'
 ht-degree: 3%
@@ -38,7 +38,7 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 
 >[!NOTE]
 >
-> Resursbearbetningen som beskrivs här ersätter arbetsflödesmodellen som finns i tidigare versioner av Experience Manager. `DAM Update Asset` De flesta standardstegen för generering av återgivning och metadatarelaterade steg ersätts av bearbetningen av resursmikrotjänsterna, och eventuella återstående steg kan ersättas av arbetsflödeskonfigurationen för efterbearbetning.
+>Resursbearbetningen som beskrivs här ersätter arbetsflödesmodellen som finns i tidigare versioner av Experience Manager. `DAM Update Asset` De flesta standardstegen för generering av återgivning och metadatarelaterade steg ersätts av bearbetningen av resursmikrotjänsterna, och eventuella återstående steg kan ersättas av arbetsflödeskonfigurationen för efterbearbetning.
 
 ## Kom igång med resurshantering {#get-started}
 
@@ -99,9 +99,9 @@ Ett tomt värde innebär att resursbearbetningen baseras på originalets pixeldi
 
 #### Inkluderingsregler för MIME-typ {#mime-type-inclusion-rules}
 
-När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för återgivningsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (blockerad lista).
+När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för återgivningsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (blockeringslista).
 
-I annat fall kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den matchar listan genereras återgivningen (lista över tillåtna).
+Annars kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den matchar listan genereras återgivningen (tillåtelselista).
 
 #### Särskild FPO-återgivning {#special-fpo-rendition}
 
@@ -169,7 +169,7 @@ Tjänsten Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.
 >[!NOTE]
 >
 >Konfigurationen av Custom Workflow Runner är en konfiguration av en OSGi-tjänst. Mer information om hur du distribuerar en OSGi-konfiguration finns i [Distribuera till Experience Manager](/help/implementing/deploying/overview.md) .
-> OSGi-webbkonsolen, till skillnad från AEM-driftsättningar på plats och hanterade tjänster, är inte direkt tillgänglig i distributionen av molntjänster.
+>OSGi-webbkonsolen, till skillnad från AEM-driftsättningar på plats och hanterade tjänster, är inte direkt tillgänglig i distributionen av molntjänster.
 
 Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
 
