@@ -2,7 +2,7 @@
 title: Använda Sling Resource Merger i Adobe Experience Manager som Cloud Service
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
 translation-type: tm+mt
-source-git-commit: 8028682f19ba6ba7db6b60a2e5e5f5843f7ac11f
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 0%
@@ -51,8 +51,9 @@ Målet med Sling Resource Merger i AEM är att
    >
    >
 * Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
-   >  Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
-
+>
+>
+Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
 
 ### Egenskaper {#properties}
 
