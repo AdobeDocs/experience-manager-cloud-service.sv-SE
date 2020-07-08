@@ -1,16 +1,16 @@
 ---
-title: Konvertera en AMS till en Adobe Experience Manager som en konfiguration för Cloud Service Dispatcher
-description: Konvertera en AMS till en Adobe Experience Manager som en konfiguration för Cloud Service Dispatcher
+title: Konvertera en AMS till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
+description: Konvertera en AMS till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
 translation-type: tm+mt
-source-git-commit: 3478827949356c4a4f5133b54c6cf809f416efef
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Konvertera en AMS till en Adobe Experience Manager (AEM) som en konfiguration för Cloud Service Dispatcher
+# Konvertera en AMS till en Adobe Experience Manager (AEM) as a Cloud Service Dispatcher-konfiguration
 
 ## Introduktion {#introduction}
 
@@ -19,93 +19,94 @@ I det här avsnittet finns stegvisa instruktioner för hur du konverterar en AMS
 >[!NOTE]
 >Det förutsätter att du har ett arkiv med en struktur som liknar den som beskrivs i [Hantera dina Dispatcher-konfigurationer](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html).
 
-## Steg för konvertering av en AMS till AEM som konfiguration av Cloud Service Dispatcher
+## Steg för konvertering av en AMS till AEM as a Cloud Service Dispatcher-konfigurering
 
 1. **Extrahera arkivet och ta bort ett eventuellt prefix**
 
-   Extrahera arkivet till en mapp och se till att de omedelbara undermapparna börjar med conf, conf.d, conf.dispatcher.d och conf.modules.d. Om de inte gör det flyttar du dem uppåt i hierarkin.
+   Extrahera arkivet till en mapp och se till att de omedelbara undermapparna börjar med conf, conf.d, conf.dispatcher.d och conf.modules.d. I annat fall flyttar du dem uppåt i hierarkin.
 
 1. **Ta bort oanvända undermappar och filer**
 
    Ta bort undermapparna conf och conf.modules.d samt filer som matchar conf.d/*.conf.
 
-1. **Ta bort alla virtuella värdar som inte är publicerade**
+1. **Ta bort alla virtuella värdar som inte är publicerade** 
 
-1. **Ta bort en virtuell värdfil**
+1. **Ta bort en virtuell värd-fil**
 
-   I conf.d/enabled_vhosts som har författare, felfri, hälsotillstånd, lc eller tömt sitt namn. Alla virtuella värdfiler i conf.d/available_vhosts som inte är länkade till kan också tas bort.
+   I conf.d/enabled_vhosts som har author, unhealthy, health, lc eller flush i sitt namn. Alla virtuell värd-filer i conf.d/available_vhosts som inte är länkade kan också tas bort.
 
-1. Ta bort eller kommentera virtuella värdsektioner som inte refererar till port 80
+1. Ta bort eller kommentera virtuell värd-sektioner som inte refererar till port 80
 
-   Om du fortfarande har avsnitt i dina virtuella värdfiler som endast refererar till andra portar än port 80, t.ex.
+   Om du fortfarande har avsnitt i dina virtuell värd-filer som endast refererar till andra portar än port 80, t.ex.
 
    `<VirtualHost *:443>`
    `...`
    `</VirtualHost>`
-ta bort eller kommentera dem. Programsatser i de här avsnitten bearbetas inte, men om du behåller dem kan du ändå redigera dem utan någon effekt, vilket är förvirrande.
+ska du ta bort eller kommentera dem. Programsatser i de här avsnitten bearbetas inte, men om du behåller dem kan du ändå redigera dem utan någon effekt, vilket är förvirrande.
 
 1. **Kontrollera återskrivningar**
 
    * Ange katalogen conf.d/rewrites.
 
-   * Ta bort alla filer med namnen base_rewrite.rules och xforward_forcessl_rewrite.rules och kom ihåg att ta bort Include-satser i de virtuella värdfilerna som refererar till dem.
+   * Ta bort alla filer med namnen base_rewrite.rules och xforward_forcessl_rewrite.rules och kom ihåg att ta bort Include-satser i de virtuell värd-filerna som refererar till dem.
 
-   * Om conf.d/rewrites nu innehåller en enda fil bör namnet ändras till rewrite.rules och glöm inte att anpassa de Include-satser som refererar till den filen även i de virtuella värdfilerna.
+   * Om conf.d/rewrites nu innehåller en enstaka fil bör namnet ändras till rewrite.rules och glöm inte att anpassa de Include-satser som refererar till den filen även i virtuell värd-filerna.
 
-   * Om mappen däremot innehåller flera, virtuella värdspecifika filer, ska deras innehåll kopieras till programsatsen Include som refererar till dem i de virtuella värdfilerna.
+   * Om mappen däremot innehåller flera virtuell värd-specifika filer, ska deras innehåll kopieras till programsatsen Include som refererar till dem i virtuell värd-filerna.
 
 1. **Kontrollera variabler**
 
    1. Ange katalogen conf.d/variables.
 
-   1. Ta bort alla filer med namnet ams_default.vars och kom ihåg att ta bort Include-satser i de virtuella värdfiler som refererar till dem.
+   1. Ta bort alla filer med namnet ams_default.vars och kom ihåg att ta bort Include-satser i de virtuell värd-filer som refererar till dem.
 
-   1. Om conf.d/variables now contains a single file, ska namnet på filen ändras till custom.vars och glöm inte att anpassa programsatserna Include som refererar till den filen även i de virtuella värdfilerna.
+   1. Om conf.d/variables nu innehåller en enstaka fil bör namnet ändras till custom.vars och glöm inte att anpassa de Include-satser som refererar till den filen även i virtuell värd-filerna.
 
-   1. Om mappen däremot innehåller flera, virtuella värdspecifika filer, ska deras innehåll kopieras till programsatsen Include som refererar till dem i de virtuella värdfilerna.
+   1. Om mappen däremot innehåller flera virtuell värd-specifika filer, ska deras innehåll kopieras till programsatsen Include som refererar till dem i virtuell värd-filerna.
 
 1. **Ta bort vitlistor**
 
-   Ta bort mappen conf.d/whitelists och ta bort Include-satser i de virtuella värdfilerna som refererar till en fil i den undermappen.
+   Ta bort mappen conf.d/whitelists och ta bort Include-satser i de virtuell värd-filer som refererar till en fil i den undermappen.
 
 1. **Ersätt alla variabler som inte längre är tillgängliga**
 
-   I alla virtuella värdfiler:
+   I alla virtuell värd-filer:
 
-   Byt namn på PUBLISH_DOCROOT till DOCROOTRa bort avsnitt som refererar till variabler med namnen DISP_ID, PUBLISH_FORCE_SSL eller PUBLISH_WHITELIST_ENABLED
+   Byt namn på PUBLISH_DOCROOT till DOCROOT
+Ta bort avsnitt som refererar till variabler med namnen DISP_ID, PUBLISH_FORCE_SSL eller PUBLISH_WHITELIST_ENABLED
 
-1. **Kontrollera ditt tillstånd genom att köra valideraren**
+1. **Kontrollera status genom att köra valideraren**
 
    Kör dispatchervalideraren i din katalog med underkommandot httpd:
 
    `$ validator httpd`
-Om du ser fel om saknade inkluderingsfiler ska du kontrollera om du har bytt namn på filerna korrekt.
+Om felmeddelanden om saknade inkluderingsfiler visas, ska du kontrollera om du har bytt namn på filerna korrekt.
 
    Om Apache-direktiv som inte är vitlistade visas tar du bort dem.
 
 1. **Ta bort alla icke-publicerade servergrupper**
 
-   Ta bort alla servergruppsfiler i conf.dispatcher.d/enabled_farm som har författare, felfri, hälsosam, lc eller tömt sitt namn. Alla servergruppsfiler i conf.dispatcher.d/available_farm som inte är länkade till kan också tas bort.
+   Ta bort alla servergruppsfiler i conf.dispatcher.d/enabled_farms som har author, unhealthy, health, lc eller flush i sitt namn. Alla servergruppsfiler i conf.dispatcher.d/available_farms som inte är länkade kan också tas bort.
 
-1. **Byt namn på servergruppsfiler**
+1. **Byta namn på servergruppsfiler**
 
-   Alla grupper i conf.dispatcher.d/enabled_farm måste byta namn så att de matchar mönstret *.farm, så t.ex. en servergruppsfil med namnet customerX_farm.any bör byta namn till customerX.farm.
+   Alla grupper i conf.dispatcher.d/enabled_farms måste byta namn så att de matchar mönstret *.farm, och t.ex. en servergruppsfil med namnet customerX_farm.any bör byta namn till customerX.farm.
 
 1. **Kontrollera cache**
 
    Ange katalogen conf.dispatcher.d/cache.
 
-   Ta bort eventuella filer med prefix-namn_.
+   Ta bort eventuella filer med prefixet ams_.
 
-   Om conf.dispatcher.d/cache nu är tom kopierar du filen conf.dispatcher.d/cache/rules.any. Standarddispatcherkonfigurationen finns i mappsrc för denna SDK. Glöm inte att anpassa $include-satserna som refererar till ams_*_cache.alla regelfiler i servergruppsfilerna också.
+   Om conf.dispatcher.d/cache nu är tom kopierar du filen conf.dispatcher.d/cache/rules.any från standarddispatcherkonfigurationen till den här mappen. Standarddispatcherkonfigurationen finns i mappen src för denna SDK. Glöm inte att också anpassa $include-satserna som refererar till ams_*_cache.any-regelfiler i servergruppsfilerna.
 
-   Om i stället conf.dispatcher.d/cache nu innehåller en enda fil med suffixet _cache.any bör namnet på filen ändras till rules.any och glöm inte att anpassa $include-satserna som refererar till den filen i servergruppsfilerna.
+   Om i stället conf.dispatcher.d/cache nu innehåller en enstaka fil med suffixet _cache.any bör namnet på filen ändras till rules.any och glöm inte också att anpassa $include-satserna som refererar till den filen i servergruppsfilerna.
 
-   Om mappen emellertid innehåller flera, gruppspecifika filer med det mönstret, ska innehållet i dem kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
+   Om mappen emellertid innehåller flera gruppspecifika filer med det mönstret, ska innehållet i dem kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
 
    Ta bort alla filer som har suffixet _invalidate_allowed.any.
 
-   Kopiera filen conf.dispatcher.d/cache/default_invalidate_any från standardkonfigurationen för dispatcher till den platsen.
+   Kopiera filen conf.dispatcher.d/cache/default_invalidate_any från standarddispatcherkonfigurationen till den platsen.
 
    I varje servergruppsfil tar du bort allt innehåll i avsnittet cache/allowedClients och ersätter det med:
 
@@ -115,11 +116,11 @@ Om du ser fel om saknade inkluderingsfiler ska du kontrollera om du har bytt nam
 
    Ange katalogen conf.dispatcher.d/clientheaders.
 
-   Ta bort eventuella filer med prefix-namn_.
+   Ta bort eventuella filer med prefixet ams_.
 
-   Om conf.dispatcher.d/clientheaders nu innehåller en enda fil med suffixet _clientheaders.any, bör namnet ändras till clientheaders.any och glöm inte att anpassa $include-satserna som refererar till den filen i servergruppsfilerna också.
+   Om i stället conf.dispatcher.d/clientheaders nu innehåller en enstaka fil med suffixet _clientheaders.any bör namnet på filen ändras till clientheaders.any och glöm inte också att anpassa $include-satserna som refererar till den filen i servergruppsfilerna.
 
-   Om mappen emellertid innehåller flera, gruppspecifika filer med det mönstret, ska innehållet i dem kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
+   Om mappen emellertid innehåller flera gruppspecifika filer med det mönstret, ska innehållet i dem kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
 
    Kopiera filen conf.dispatcher/clientheaders/default_clientheaders.any från standarddispatcherkonfigurationen till den platsen.
 
@@ -137,17 +138,18 @@ Om du ser fel om saknade inkluderingsfiler ska du kontrollera om du har bytt nam
 
    * Ange katalogen conf.dispatcher.d/filters.
 
-   * Ta bort eventuella filer med prefix-namn_.
+   * Ta bort eventuella filer med prefixet ams_.
 
-   * Om conf.dispatcher.d/filters nu innehåller en enda fil bör namnet ändras till filters.any och glöm inte att anpassa $include-satserna som refererar till den filen i servergruppsfilerna också.
+   * Om i stället conf.dispatcher.d/filters nu innehåller en enstaka fil bör namnet på filen ändras till filters.any och glöm inte också att anpassa $include-satserna som refererar till den filen i servergruppsfilerna.
 
-   * Om mappen emellertid innehåller flera, gruppspecifika filer med det mönstret, ska innehållet i dem kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
+   * Om mappen emellertid innehåller flera gruppspecifika filer med det mönstret, ska innehållet i dem kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
 
    * Kopiera filen conf.dispatcher/filters/default_filters.any från standarddispatcherkonfigurationen till den platsen.
 
-   * Ersätt alla filter med programsatser som ser ut så här i varje servergruppsfil:
+   * Ersätt alla filter med programsatser som ser ut så här i varje servergruppsfil: 
 
-   * $include `"/etc/httpd/conf.dispatcher.d/filters/ams_publish_filters.any"`med programsatsen:
+   * $include `"/etc/httpd/conf.dispatcher.d/filters/ams_publish_filters.any"`
+med programsatsen:
 
       `$include "../filters/default_filters.any"`
 
@@ -167,11 +169,11 @@ Om du ser fel om saknade inkluderingsfiler ska du kontrollera om du har bytt nam
 
    * Byt namn på katalogen `conf.dispatcher.d/vhosts to conf.dispatcher.d/virtualhosts` och ange den.
 
-   * Ta bort alla filer som har prefix `ams_`.
+   * Ta bort alla filer som har prefixet `ams_`.
 
-   * Om conf.dispatcher.d/virtualhosts nu innehåller en enda fil bör namnet ändras till virtualhosts.any och glöm inte att anpassa $include-satserna som refererar till den filen i servergruppsfilerna.
+   * Om conf.dispatcher.d/virtualhosts nu innehåller en enstaka fil bör namnet ändras till virtualhosts.any och glöm inte också att anpassa $include-satserna som refererar till den filen i servergruppsfilerna.
 
-   * Om mappen emellertid innehåller flera, gruppspecifika filer med det mönstret, ska innehållet i dem kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
+   * Om mappen emellertid innehåller flera gruppspecifika filer med det mönstret, ska innehållet i dem kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
 
    * Kopiera filen conf.dispatcher/virtualhosts/default_virtualhosts.any från standarddispatcherkonfigurationen till den platsen.
 
@@ -183,31 +185,32 @@ med programsatsen:
       `$include "../virtualhosts/default_virtualhosts.any"`
 
 
-1. **Kontrollera ditt tillstånd genom att köra valideraren**
+1. **Kontrollera status genom att köra valideraren**
 
    * Kör dispatchervalideraren i din katalog med dispatcherunderkommandot:
 
       `$ validator dispatcher`
 
-   * Om du ser fel om saknade inkluderingsfiler ska du kontrollera om du har bytt namn på filerna korrekt.
+   * Om felmeddelanden om saknade inkluderingsfiler visas, ska du kontrollera om du har bytt namn på filerna korrekt.
 
-   * Om du ser fel som rör en odefinierad variabel `PUBLISH_DOCROOT`ändrar du namnet till `DOCROOT`.
+   * Om felmeddelanden som rör en odefinierad variabel `PUBLISH_DOCROOT` visas, ändrar du namnet till `DOCROOT`.
 
-   * Alla andra fel finns i felsökningsavsnittet i dokumentationen för valideringsverktyget.
+   * Alla andra fel finns i felsökningsavsnittet i dokumentationen för valideringsverktyget. 
 
-## Testa konfigurationen med en lokal distribution {#testing-config-local-deployment}
+## Testa konfigurationen med en lokal driftsättning {#testing-config-local-deployment}
 
 >[!IMPORTANT]
-> Testningen av konfigurationen med en lokal driftsättning kräver installation av Docker.
+>
+>Testningen av konfigurationen med en lokal driftsättning kräver installation av Docker.
 
-Med hjälp av skriptet `docker_run.sh` i Dispatcher SDK kan du testa att konfigurationen inte innehåller några andra fel som bara skulle visas i distributionen:
+Med hjälp av skriptet `docker_run.sh` i Dispatcher SDK kan du testa att konfigurationen inte innehåller några andra fel som bara skulle visas i driftsättningen:
 
-1. Generera distributionsinformation med valideraren
+1. Generera driftsättningsinformation med valideraren
 
    `validator full -d out`
-Detta validerar den fullständiga konfigurationen och genererar distributionsinformation som
+Detta validerar den fullständiga konfigurationen och genererar driftsättningsinformation
 
-1. Starta dispatchern i en buffertavbildning med den distributionsinformationen
+1. Starta dispatchern i en Docker-avbildning med den driftsättningsinformationen
 
    När AEM-publiceringsservern körs på din macOS-dator och lyssnar på port 4503 kan du köra dispatchern framför den servern enligt följande:
 
@@ -217,4 +220,4 @@ Detta validerar den fullständiga konfigurationen och genererar distributionsinf
 
 ## Använda din nya dispatcherkonfiguration {#using-dispatcher-config}
 
-Om valideraren inte längre rapporterar något problem och dockningsbehållaren startar utan fel eller varningar kan du flytta konfigurationen till en`ispatcher/src` underkatalog i Git-databasen.
+Om valideraren inte längre rapporterar något problem och Docker-behållaren startar utan fel eller varningar kan du flytta konfigurationen till en`ispatcher/src` underkatalog i Git-databasen.
