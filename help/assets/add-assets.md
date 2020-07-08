@@ -2,7 +2,7 @@
 title: Lägg till dina digitala resurser i Adobe Experience Manager
 description: Lägg till dina digitala resurser i Adobe Experience Manager som en Cloud Service
 translation-type: tm+mt
-source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
+source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 0%
@@ -24,9 +24,9 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 
 >[!NOTE]
 >
-> Experience Manager som Cloud Service utnyttjar ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av de färdiga produktfunktionerna och klienterna, som AEM-användargränssnittet, Adobe Asset Link och AEM-appen, och är därmed genomskinlig för slutanvändarna.
+>Experience Manager som Cloud Service utnyttjar ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av de färdiga produktfunktionerna och klienterna, som AEM-användargränssnittet, Adobe Asset Link och AEM-appen, och är därmed genomskinlig för slutanvändarna.
 >
-> Ladda upp kod som är anpassad eller utökad av kunder som tekniska team behöver för att kunna använda de nya överförings-API:erna och protokollen.
+>Ladda upp kod som är anpassad eller utökad av kunder som tekniska team behöver för att kunna använda de nya överförings-API:erna och protokollen.
 
 ## Överför resurser {#upload-assets}
 
@@ -80,7 +80,7 @@ Dessutom visas den senaste resursen som du överför eller den mapp som du skapa
 
 >[!NOTE]
 >
-> Mer information om hur du överför kapslade mapphierarkier till AEM finns i [Massöverföring av resurser](#bulk-upload).
+>Mer information om hur du överför kapslade mapphierarkier till AEM finns i [Massöverföring av resurser](#bulk-upload).
 
 <!-- #ENGCHECK I'm assuming this is no longer relevant.... If yes, this should be removed#
 
@@ -135,7 +135,7 @@ Om du vill överföra fler filer, särskilt om de finns i en kapslad mapphierark
 
 >[!NOTE]
 >
-> Bulköverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till Experience Manager kräver noggrann planering, övervägande och val av verktyg. I [distributionsguiden](/help/implementing/deploying/overview.md) finns riktlinjer för innehållsmigreringsmetoder.
+>Bulköverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till Experience Manager kräver noggrann planering, övervägande och val av verktyg. I [distributionsguiden](/help/implementing/deploying/overview.md) finns riktlinjer för innehållsmigreringsmetoder.
 
 ## Överför resurser med skrivbordsklienter {#upload-assets-desktop-clients}
 
@@ -146,7 +146,7 @@ Förutom webbläsarens användargränssnitt har Experience Manager stöd för an
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
@@ -162,7 +162,7 @@ Om Dynamic Media är aktiverade i din miljö:
 
 >[!NOTE]
 >
-> Dynamic Media för beskärning och andra åtgärder för resurser är icke-förstörande, vilket innebär att de inte ändrar det överförda originalet utan i stället anger parametrar för beskärning eller mediaomvandling som ska utföras när resurserna levereras
+>Dynamic Media för beskärning och andra åtgärder för resurser är icke-förstörande, vilket innebär att de inte ändrar det överförda originalet utan i stället anger parametrar för beskärning eller mediaomvandling som ska utföras när resurserna levereras
 
 För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i **[!UICONTROL Processing Profile]** kolumnen.
 
