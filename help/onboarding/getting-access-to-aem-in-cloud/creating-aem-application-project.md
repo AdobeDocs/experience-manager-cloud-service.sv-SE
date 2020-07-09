@@ -2,9 +2,9 @@
 title: AEM Application Project - Cloud Service
 description: AEM Application Project - Cloud Service
 translation-type: tm+mt
-source-git-commit: e3370b7a7f543ae93b25ead8c174796fd27067f2
+source-git-commit: 3979cad8f9e51756113971c81a601e8cba21c8a2
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1252'
 ht-degree: 10%
 
 ---
@@ -99,12 +99,11 @@ Det gör du genom att lägga till en post som ser ut så här i filen pom.xml: `
                     </jdk>
                 </toolchains>
             </configuration>
+        </plugin>
 ```
 
 >[!NOTE]
->* De leverantörer som stöds är `oracle` och `sun`.
->* De versioner som stöds är `1.8`, `1.11`och `11`.
-
+>De `vendor` värden som stöds är `oracle` och `sun` och de `version` värden som stöds är `1.8`, `1.11`och `11`.
 
 ## Miljövariabler {#environment-variables}
 
