@@ -1,11 +1,11 @@
 ---
-title: Hantera miljöer - molntjänst
-description: Hantera miljöer - molntjänst
+title: Hantera miljöer - Cloud Service
+description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: a4d4e5fb1743d7fe8b7b16bac904dac51143d6f7
+source-git-commit: 39566698cf73539cc75b467be24f29c60926d06f
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 7%
+source-wordcount: '695'
+ht-degree: 8%
 
 ---
 
@@ -41,8 +41,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
 
 
 1. Klicka på **Lägg till miljö** för att lägga till en miljö. Den här knappen kommer att vara tillgänglig från skärmen **Miljö** .
-   ![](assets/no-environment-2.png)
-
+   ![](assets/environments-tab.png)
 
    Alternativet **Lägg till miljö** finns också på **miljökortet** när det inte finns några miljöer i programmet.
 
@@ -74,12 +73,12 @@ Uppdateringar av utvecklingsmiljöer hanteras av användarna av programmet. När
 ![](assets/manage-environments2.png)
 
 
-Alternativet **Uppdatera** finns i listrutan i **miljökortet** .
+Alternativet **Uppdatera** är tillgängligt från **miljökortet** .
 Det här alternativet är också tillgängligt från knappen **Hantera** om du klickar på **Information** från **miljökortet** .
 
-![](assets/update-environment2.png)
+![](assets/environments-screen-update.png)
 
-Om du väljer detta i listrutan kan en Distributionshanterare uppdatera pipelinen som är associerad med den här miljön till den senaste versionen och sedan köra pipelinen.
+Om du väljer det här alternativet kan en Distributionshanterare uppdatera den pipeline som är associerad med den här miljön till den senaste versionen och sedan köra pipelinen.
 
 Om pipeline redan har uppdaterats uppmanas användaren att köra pipelinen.
 
