@@ -2,10 +2,10 @@
 title: AEM Application Project - Cloud Service
 description: AEM Application Project - Cloud Service
 translation-type: tm+mt
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+source-git-commit: 39566698cf73539cc75b467be24f29c60926d06f
 workflow-type: tm+mt
-source-wordcount: '1184'
-ht-degree: 11%
+source-wordcount: '1255'
+ht-degree: 10%
 
 ---
 
@@ -48,7 +48,7 @@ För att kunna byggas och driftsättas med Cloud Manager måste befintliga AEM-p
 * Du kan lägga till referenser till ytterligare Maven-artefaktdatabaser i dina *pom.xml* -filer. Åtkomst till lösenordsskyddade eller nätverksskyddade artefaktarkiv stöds dock inte.
 * Distribuerbara innehållspaket upptäcks genom att söka efter *zip* -filer för innehållspaket som finns i en katalog med namnet *target*. Ett valfritt antal undermoduler kan producera innehållspaket.
 
-* Distribuerbara Dispatcher-artefakter upptäcks genom att söka efter *zip* -filer (återigen i en katalog med namnet *target*) som har kataloger med namnen *conf* och *conf.d*.
+* Distribuerbara Dispatcher-artefakter upptäcks genom att söka efter *zip* -filer (återigen i en katalog med namnet *target*) som har katalogerna *conf* och *conf.d*.
 
 * Om det finns mer än ett innehållspaket är det inte säkert att paketdistributioner ordnas. Om en viss ordning behövs kan innehållspaketets beroenden användas för att definiera ordningen. Paket kan [hoppas över](#skipping-content-packages) från distributionen.
 
@@ -59,7 +59,7 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
 * Apache Maven 3.6.0 är installerad.
-* Den installerade Java-versionen är Oracle JDK 8u202.
+* Java-versionen installerade Oracle JDK 8u202 och 11.0.2.
 * Det finns ytterligare systempaket installerade som är nödvändiga:
 
    * bzip2
@@ -73,6 +73,37 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 * Maven körs alltid med kommandot: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * Maven konfigureras på systemnivå med filen settings.xml som automatiskt inkluderar den offentliga Adobe **Artifact** -databasen. (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/) .)
 
+### Använda Java 11 {#using-java-11}
+
+Cloud Manager har nu stöd för att bygga kundprojekt med både Java 8 och Java 11. Som standard byggs projekt med Java 8. Kunder som tänker använda Java 11 i sina projekt kan göra det med [Apache Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/).
+
+Det gör du genom att lägga till en post som ser ut så här i filen pom.xml: `<plugin>`
+
+```xml
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-toolchains-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>toolchain</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <toolchains>
+                    <jdk>
+                    <version>11</version>
+                    <vendor>oracle</vendor>
+                    </jdk>
+                </toolchains>
+            </configuration>
+        </plugin>
+```
+
+>[!NOTE]
+>De leverantörer som stöds är Oracle och Sun Microsystems och de versioner som stöds är 1.8, 1.11 och 1.11.
 
 ## Miljövariabler {#environment-variables}
 
@@ -258,7 +289,7 @@ Samma teknik kan användas för att installera språkspecifika paket, dvs. med `
 
 >[!NOTE]
 >
->Om du installerar ett systempaket på det här sättet installeras det **inte** i den körningsmiljö som används för att köra Adobe Experience Manager. Kontakta din Adobe-representant om du behöver ett systempaket som är installerat i AEM-miljön.
+>Om du installerar ett systempaket på det här sättet installeras det **inte** i körningsmiljön som används för att köra Adobe Experience Manager. Kontakta din Adobe-representant om du behöver ett systempaket som är installerat i AEM-miljön.
 
 ## Hoppar över innehållspaket {#skipping-content-packages}
 
