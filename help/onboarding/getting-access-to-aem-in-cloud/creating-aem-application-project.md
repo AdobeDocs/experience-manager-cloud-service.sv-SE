@@ -2,10 +2,10 @@
 title: AEM Application Project - Cloud Service
 description: AEM Application Project - Cloud Service
 translation-type: tm+mt
-source-git-commit: 3979cad8f9e51756113971c81a601e8cba21c8a2
+source-git-commit: 528873fec97958646b2a0d7d64281c76ee1d021d
 workflow-type: tm+mt
-source-wordcount: '1252'
-ht-degree: 10%
+source-wordcount: '1120'
+ht-degree: 11%
 
 ---
 
@@ -125,31 +125,6 @@ Som stöd för detta lägger Cloud Manager till dessa standardmiljövariabler i 
 | CM_PROGRAM_NAME | Programnamnet |
 | ARTIFACTS_VERSION | Den syntetiska versionen som genererats av Cloud Manager för en fas eller produktionsprocess |
 | CM_AEM_PRODUCT_VERSION | Versionsnamnet |
-
-
-### Anpassade miljövariabler {#custom-environ-variables}
-
-I vissa fall kan en kunds byggprocess vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen. Med Cloud Manager kan dessa variabler konfigureras av en Adobe-representant per kund. Dessa variabler lagras på en säker lagringsplats och visas bara i byggbehållaren för den specifika kunden. Kunder som vill använda den här funktionen måste kontakta sin Adobe-representant för att konfigurera sina variabler.
-
-När variablerna har konfigurerats är de tillgängliga som miljövariabler. Om du vill använda dem som en Maven-egenskap kan du referera till dem i filen pom.xml, eventuellt inom en profil enligt beskrivningen ovan:
-
-```xml
-        <profile>
-            <id>cmBuild</id>
-            <activation>
-                  <property>
-                        <name>env.CM_BUILD</name>
-                  </property>
-            </activation>
-            <properties>
-                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
-            </properties>
-        </profile>
-```
-
->[!NOTE]
->
->Miljövariabelnamn får endast innehålla alfanumeriska tecken och understreck (_). Namnen ska vara versaler.
 
 ## Aktivera Maven-profiler i Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
