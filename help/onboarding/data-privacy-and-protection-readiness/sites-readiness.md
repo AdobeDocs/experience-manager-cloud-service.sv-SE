@@ -2,9 +2,9 @@
 title: Dataskydd och dataintegritet - Adobe Experience Manager som Cloud Service Sites Readiness
 description: 'Läs mer om Adobe Experience Manager som stöd för Cloud Service Sites för de olika dataskydds- och dataintegritetsreglerna. inklusive EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt. '
 translation-type: tm+mt
-source-git-commit: bffc335fdafe6bf12a66bcd2f7aacf029fce567e
+source-git-commit: 7b5a427853075054d56bc7ea6569d5d839e282a1
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1036'
 ht-degree: 1%
 
 ---
@@ -68,13 +68,9 @@ Så här avanmäler du:
       Opt-in - Inkludera mig i sessionsaggregering och analys för besökare (installera inte cookie för `amcglobal.sc.omtrdc.net` avanmälan) - klicka här.
    Följ stegen ovan för att komma åt de faktiska länkarna.
 
-   <!--
-    NOTE TO WRITER: Change link to https://www.adobe.com/legal/terms.html and edit note.
-    -->
-
    >[!NOTE]
    >
-   > Det finns ytterligare en beskrivning i avsnittet **Integritetspolicy** i [Användarvillkoren](https://marketing.adobe.com/resources/help/en_US/terms.html).
+   > Det finns ytterligare en beskrivning i **2. Integritet.** i [Adobes allmänna användarvillkor](https://www.adobe.com/legal/terms.html).
 
 ## Analytics Foundation {#analytics-foundation}
 
@@ -177,6 +173,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
       * `ContextHub.Utils.Persistence.Modes.SESSION`
       * `ContextHub.Utils.Persistence.Modes.COOKIE`
       * `ContextHub.Utils.Persistence.Modes.WINDOW`
+
       ContextHub-arkivet definierar vilket beständigt lager som ska användas, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
 
 
@@ -206,6 +203,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
       * `ContextHub.Utils.Persistence.Modes.SESSION`
       * `ContextHub.Utils.Persistence.Modes.COOKIE`
       * `ContextHub.Utils.Persistence.Modes.WINDOW`
+
       ContextHub-arkivet definierar vilket beständigt lager som ska användas, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
 
 
