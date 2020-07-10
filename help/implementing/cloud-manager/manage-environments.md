@@ -2,10 +2,10 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 11ea429fefcb4b38aa8a89acb3a5a2da5c3ecaeb
+source-git-commit: 92b7388f5050c47f4cc00fd1e0e2d48f28a1f424
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 8%
+source-wordcount: '753'
+ht-degree: 7%
 
 ---
 
@@ -74,7 +74,7 @@ Uppdateringar av utvecklingsmiljöer hanteras av användarna av programmet. När
 
 
 Alternativet **Uppdatera** är tillgängligt från **miljökortet** .
-Det här alternativet är också tillgängligt från knappen **Hantera** om du klickar på **Information** från **miljökortet** .
+Det här alternativet är också tillgängligt om du klickar på **Information** från **miljökortet** . Sidan **Miljö** öppnas och när du har valt utvecklingsmiljön klickar du på **...** och väljer **Uppdatera** enligt bilden nedan:
 
 ![](assets/environments-screen-update.png)
 
@@ -90,7 +90,7 @@ Alternativet **Ta bort** finns i listrutan i **miljökortet** . Klicka på **..*
 
 ![](assets/environ-delete.png)
 
-Du kan även ta bort en miljö om du klickar på **Information** på **miljökortet** .
+Alternativet Ta bort är också tillgängligt om du klickar på **Information** på **miljökortet** . Sidan **Miljö** öppnas och när du har valt utvecklingsmiljön klickar du på **...** och väljer **Ta bort** enligt bilden nedan:
 
 ![](assets/environ-delete-2.png)
 
@@ -109,5 +109,5 @@ Mer information finns i [Viloläge och Viloläge i sandlådemiljöer](https://do
 
 ![](assets/environ-dev-console.png)
 
-Du kan också välja det här alternativet från knappen **Hantera** om du klickar på **Detaljer** från **miljökortet** .
+Det här alternativet är också tillgängligt om du klickar på **Information** från **miljökortet** . Sidan **Miljö** öppnas och när du har valt en miljö klickar du på **...** och väljer **Developer Console**.
 
