@@ -2,7 +2,7 @@
 title: Hantera visningsförinställningar
 description: Skapa och hantera visningsförinställningar
 translation-type: tm+mt
-source-git-commit: 1713cddf713afc24103a841a7dbae923941f6322
+source-git-commit: 7b5a427853075054d56bc7ea6569d5d839e282a1
 workflow-type: tm+mt
 source-wordcount: '4166'
 ht-degree: 17%
@@ -150,7 +150,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
 
 I följande tabell visas alla fördefinierade, färdiga visningsförinställningar som medföljer Dynamic Media.
 
-Se även <!-- KEEP REFERENCE [Viewers Reference Library Examples](https://marketing.adobe.com/resources/help/en_US/s7/vlist/vlist.html) and --> [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
+Se även [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
 
 Information om vilka webbläsare och operativsystemversioner som stöds för visningsprogram finns i Viewer Release Notes.
 
