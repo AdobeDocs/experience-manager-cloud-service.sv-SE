@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 39566698cf73539cc75b467be24f29c60926d06f
+source-git-commit: 11ea429fefcb4b38aa8a89acb3a5a2da5c3ecaeb
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '702'
 ht-degree: 8%
 
 ---
@@ -70,7 +70,7 @@ Uppdateringar av scen- och produktionsmiljöer hanteras automatiskt av Adobe.
 
 Uppdateringar av utvecklingsmiljöer hanteras av användarna av programmet. När en miljö inte kör den senaste allmänt tillgängliga AEM-versionen visas **UPDATE AVAILABLE (TILLGÄNGLIG**) på miljökortet på hemskärmen.
 
-![](assets/manage-environments2.png)
+![](assets/update-environ-1.png)
 
 
 Alternativet **Uppdatera** är tillgängligt från **miljökortet** .
@@ -86,10 +86,14 @@ Om pipeline redan har uppdaterats uppmanas användaren att köra pipelinen.
 
 Användare med nödvändig behörighet kan ta bort en utvecklingsmiljö.
 
-Alternativet **Ta bort** finns i listrutan i **miljökortet** .
-Det här alternativet är också tillgängligt från knappen **Hantera** om du klickar på **Information** från **miljökortet** .
+Alternativet **Ta bort** finns i listrutan i **miljökortet** . Klicka på **..** för en utvecklingsmiljö som du vill ta bort.
 
-![](assets/deleting-environment1.png)
+![](assets/environ-delete.png)
+
+Du kan även ta bort en miljö om du klickar på **Information** på **miljökortet** .
+
+![](assets/environ-delete-2.png)
+
 
 >[!NOTE]
 Den här funktionen är inte tillgänglig för produktions-/scenmiljö som angetts i ett reguljärt program som konfigurerats för produktion. Funktionen är dock tillgänglig för produktions-/scenmiljöer i ett sandlådeprogram.
@@ -103,7 +107,7 @@ Endast en användare i utvecklarrollen har åtkomst till **utvecklarkonsolen**. 
 Mer information finns i [Viloläge och Viloläge i sandlådemiljöer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/sandbox-programs.html#hibernating-introduction) .
 
 
-![](assets/dev-console1.png)
+![](assets/environ-dev-console.png)
 
 Du kan också välja det här alternativet från knappen **Hantera** om du klickar på **Detaljer** från **miljökortet** .
 
