@@ -1,18 +1,18 @@
 ---
-title: Hantera loggar - molntjänst
-description: Hantera loggar - molntjänst
+title: Hantera loggar - Cloud Service
+description: Hantera loggar - Cloud Service
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: 92b7388f5050c47f4cc00fd1e0e2d48f28a1f424
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 11%
+ht-degree: 17%
 
 ---
 
 
 # Komma åt och hantera loggar {#manage-logs}
 
-Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet.  Användarna kan komma åt en lista över tillgängliga loggfiler för den valda miljön.
+Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet.  Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
 De här filerna kan hämtas via användargränssnittet, antingen från **översiktssidan** .
 
@@ -20,7 +20,7 @@ De här filerna kan hämtas via användargränssnittet, antingen från **översi
 
 Eller **miljösidan** :
 
-![](assets/manage-logs2.png)
+![](assets/download-logs.png)
 
 >[!Note]
 >Oavsett var den öppnas visas samma dialogruta så att du kan hämta en enskild loggfil.
