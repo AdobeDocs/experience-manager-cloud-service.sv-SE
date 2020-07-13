@@ -2,9 +2,9 @@
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media
 translation-type: tm+mt
-source-git-commit: 1713cddf713afc24103a841a7dbae923941f6322
+source-git-commit: d59b193730e2135390386eab8ef83abae5f7eac0
 workflow-type: tm+mt
-source-wordcount: '9760'
+source-wordcount: '9686'
 ht-degree: 9%
 
 ---
@@ -23,6 +23,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 >Innan du arbetar med video i Dynamic Media måste du kontrollera att AEM-administratören redan har aktiverat och konfigurerat Dynamic Media-Cloud Service.
 >
 >* Se [Konfigurera Dynamic Media-Cloud Service](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media och [Felsöka Dynamic Media](/help/assets/dynamic-media/troubleshoot-dm.md).
+
 >
 
 
@@ -424,7 +425,6 @@ När du publicerar videomaterial till YouTube-servrar utför du följande uppgif
 1. [Konfigurera inställningar för Google Cloud](#configuring-google-cloud-settings)
 1. [Skapa en YouTube-kanal](#creating-a-youtube-channel)
 1. [Lägga till taggar för publicering](#adding-tags-for-publishing)
-1. [Aktivera YouTube Publish Replication Agent](#enabling-the-youtube-publish-replication-agent)
 1. [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem)
 1. [(Valfritt) Automatisera inställningen av YouTube-standardegenskaper för dina överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [Publicera videor i din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
@@ -472,6 +472,7 @@ Så här konfigurerar du Google Cloud-inställningar:
 
    * Tryck på Komma igång-kortet på Dashboard för projektet **[!UICONTROL Explore and enable APIs]**.
    * Tryck på i API-kortet på Dashboard för ditt projekt **[!UICONTROL Go to APIs overview]**.
+
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
 1. I början av API:erna och tjänsterna trycker du på **[!UICONTROL Enable APIs and Services]**.
@@ -491,6 +492,7 @@ Så här konfigurerar du Google Cloud-inställningar:
    * I listrutan **[!UICONTROL Where will you be calling the API from?]** väljer du **[!UICONTROL Web Server (e.g. node.js, Tomcat)]**
 
    * From the **[!UICONTROL What data will you be accessing?]** drop-down list, tap **[!UICONTROL User data]**.
+
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
 1. Tryck på **[!UICONTROL What credentials do I need?]**
@@ -548,7 +550,7 @@ Så här skapar du en YouTube-kanal:
 1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
 1. Klicka på din profilbild i det övre högra hörnet på YouTube-sidan (kan också visas som en bokstav i en enfärgad cirkel) och klicka sedan på **[!UICONTROL YouTube settings]** (den runda kugghjulsikonen).
 1. På sidan Översikt, under rubriken Ytterligare funktioner, klickar du på **[!UICONTROL See all my channels or create a new channel]**.
-1. På sidan Kanaler klickar du på **[!UICONTROL Create a new channel]**.
+1. On the Channels page, click **[!UICONTROL Create a new channel]**.
 1. På sidan Varumärkeskonto anger du ett företagsnamn eller något annat kanalnamn i fältet Namn på varumärkeskonto. Klicka sedan på **[!UICONTROL Create]**.
 
    Kom ihåg det namn du anger här eftersom du måste ange det igen när du konfigurerar YouTube i AEM.
@@ -561,19 +563,21 @@ Så här skapar du en YouTube-kanal:
 
 Om du vill publicera till dina videor på YouTube associerar AEM taggar till en eller flera YouTube-kanaler. Mer information om hur du lägger till taggar för publicering finns i [Administrera taggar](/help/sites-cloud/authoring/features/tags.md).
 
-Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgiften och gå till [Aktivera YouTube Publish-replikeringsagenten](#enabling-the-youtube-publish-replication-agent).
+Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgiften och gå till [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem).
 
-### Aktivera YouTube Publish-replikeringsagenten {#enabling-the-youtube-publish-replication-agent}
+>[!NOTE]
+>
+>När molntjänsten har konfigurerats krävs ingen ytterligare konfiguration för att aktivera YouTube Publish-replikeringsagenten som denna punkt. Orsaken är att den aktiverades när molntjänstkonfigurationen sparades.
 
-När du har aktiverat YouTube Publish-replikeringsagenten trycker du på **[!UICONTROL Test Connection]** om du vill testa anslutningen till Google Cloud-kontot. Anslutningsresultaten visas på en flik i webbläsaren. Om du har lagt till YouTube-kanaler visas en lista över dessa som en del av testet.
+<!-- ### Enabling the YouTube Publish replication agent {#enabling-the-youtube-publish-replication-agent}
 
-1. Klicka på AEM-logotypen i det övre vänstra hörnet av AEM och klicka sedan på **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author]** i den vänstra rutan.
-1. På sidan Agents of Author klickar du på **[!UICONTROL YouTube Publish (youtube)]**.
-1. Klicka på till höger om Inställningar i verktygsfältet **[!UICONTROL Edit]**.
-1. Markera kryssrutan för att aktivera replikeringsagenten **[!UICONTROL Enabled]** .
-1. Klicka på **[!UICONTROL OK]**.
+After you enable the YouTube Publish replication agent, if you want to test the connection to the Google Cloud account, tap **[!UICONTROL Test Connection]**. A browser tab displays the connection results. If you have added YouTube Channels, then a listing of those is displayed as part of the test.
 
-   Nu ska du konfigurera YouTube i AEM.
+1. In the upper-left corner of AEM, click the AEM logo, then in the left rail, click **[!UICONTROL Tools]** &gt; **[!UICONTROL Deployment]** &gt; **[!UICONTROL Replication]** &gt; **[!UICONTROL Agents on Author]**.
+1. On the Agents of Author page, click **[!UICONTROL YouTube Publish (youtube)]**.
+1. On the toolbar, to the right of Settings, click **[!UICONTROL Edit]**.
+1. Select the **[!UICONTROL Enabled]** checkbox to turn on the replication agent.
+1. Click **[!UICONTROL OK]**. -->
 
 ### Konfigurera YouTube i AEM {#setting-up-youtube-in-aem}
 
@@ -746,17 +750,14 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. Denna proce
 >
 >Observera att Publicera direkt inte automatiskt publicerar på YouTube. När Dynamic Media har konfigurerats finns det två publiceringsalternativ att välja mellan, **[!UICONTROL Immediately]** och **[!UICONTROL Upon Activation]**.
 >
->**[!UICONTROL Publish Immediately]** betyder att den överförda resursen - när den har synkroniserats med IPS - publiceras automatiskt till leveranssystemet. Detta gäller för Dynamic Media, men inte för YouTube. Om du vill publicera på YouTube måste du publicera via AEM Author.
+>**[!UICONTROL Publish Immediately]** betyder att den överförda resursen - efter att den har synkroniserats med IPS - automatiskt publiceras till leveranssystemet. Detta gäller för Dynamic Media, men inte för YouTube. Om du vill publicera på YouTube måste du publicera via AEM Author.
 
 >[!NOTE]
->
->För att publicera innehåll från YouTube använder AEM arbetsflödet, vilket gör att du kan övervaka förloppet och visa felinformation. **[!UICONTROL Publish to YouTube]**
->
->Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
->
->Mer detaljerad förloppsinformation finns i YouTube-loggen under replikering. Tänk dock på att en sådan övervakning kräver administratörsåtkomst.
+För att publicera innehåll från YouTube använder AEM arbetsflödet, vilket gör att du kan övervaka förloppet och visa felinformation. **[!UICONTROL Publish to YouTube]**
+Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
+Mer detaljerad förloppsinformation finns i YouTube-loggen under replikering. Tänk dock på att sådan övervakning kräver administratörsåtkomst.
 
-Så här publicerar du videor till din YouTube-kanal:
+**Så här publicerar du videor till din YouTube-kanal**:
 
 1. I AEM navigerar du till en videoresurs som du vill publicera i din YouTube-kanal.
 1. Välj videoresurs (den adaptiva videouppsättningen).
@@ -789,8 +790,7 @@ Efter åtta timmar, om du fortfarande ser ett statusmeddelande, kan du försöka
 Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media efter att du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidorna på webbplatsen eller i programmet.
 
 >[!NOTE]
->
->YouTube-URL:en är inte tillgänglig för kopiering förrän du har publicerat videoresursen på YouTube.
+YouTube-URL:en är inte tillgänglig för kopiering förrän du har publicerat videoresursen på YouTube.
 
 Så här länkar du YouTube-URL:er till ditt webbprogram:
 
@@ -807,14 +807,11 @@ Så här länkar du YouTube-URL:er till ditt webbprogram:
 När du avpublicerar en videoresurs i AEM tas videon bort från YouTube.
 
 >[!CAUTION]
->
->Om du tar bort en video direkt från YouTube känner AEM inte av det och fortsätter bete sig som om videon fortfarande publiceras på YouTube. Avpublicera alltid en videoresurs från YouTube med hjälp av AEM.
+Om du tar bort en video direkt från YouTube känner AEM inte av det och fortsätter bete sig som om videon fortfarande publiceras på YouTube. Avpublicera alltid en videoresurs från YouTube med hjälp av AEM.
 
 >[!NOTE]
->
->För att ta bort innehåll från YouTube använder AEM arbetsflödet, vilket gör att du kan övervaka förloppet och visa felinformation. **[!UICONTROL Unpublish from YouTube]**
->
->Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
+För att ta bort innehåll från YouTube använder AEM arbetsflödet, vilket gör att du kan övervaka förloppet och visa felinformation. **[!UICONTROL Unpublish from YouTube]**
+Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 Så här avpublicerar du videoklipp för att ta bort dem från YouTube:
 
@@ -836,9 +833,11 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 1. Visa kodningsförloppet för video i resursmappen:
 
    * I kortvyn visas videokodningsförloppet för resursen i procent. Om ett fel uppstår visas även den här informationen på resursen.
+
    ![chlimage_1-429](assets/chlimage_1-429.png)
 
    * In list view, video encoding progress displays in the **[!UICONTROL Processing Status]** column. Om ett fel uppstår visas det här meddelandet i samma kolumn.
+
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
    Den här kolumnen visas inte som standard. Om du vill aktivera kolumnen väljer du **[!UICONTROL View Settings]** i listrutan Vyer, lägger till kolumnen **[!UICONTROL Processing Status]** och trycker eller klickar på **[!UICONTROL Update]**.
@@ -852,20 +851,17 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
    All arbetsflödesinformation, till exempel kodning, visas på tidslinjen. För YouTube-publicering innehåller tidslinjen i arbetsflödet även namnet på YouTube-kanalen och YouTubes video-URL. Dessutom visas felmeddelanden på tidslinjen i arbetsflödet när publiceringen är klar.
 
    >[!NOTE]
-   >
-   >Det kan ta lång tid innan fel/felmeddelanden slutligen registreras på grund av flera arbetsflödeskonfigurationer för **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
-   >
-   >    * Konfiguration av Apache Sling-jobbkö
-   >    * Extern processhanterare för Adobe Granite-arbetsflöde
-   >    * Timeoutkö för Granite-arbetsflöde
-   >
-   >Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
+   Det kan ta lång tid innan fel/felmeddelanden slutligen registreras på grund av flera arbetsflödeskonfigurationer för **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
+   * Konfiguration av Apache Sling-jobbkö
+   * Extern processhanterare för Adobe Granite-arbetsflöde
+   * Timeoutkö för Granite-arbetsflöde
+
+   Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
 
 1. Information om pågående arbetsflöden finns i Arbetsflödesinstanser som är tillgängliga i **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Instances]**.
 
    >[!NOTE]
-   >
-   >Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Tools]** menyn.
+   Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Tools]** menyn.
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
@@ -878,29 +874,22 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 1. Information om misslyckade jobb finns i Arbetsflödesfel i **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Failures]**. I listan **[!UICONTROL Workflow Failure]** visas alla misslyckade arbetsflödesaktiviteter.
 
    >[!NOTE]
-   >
-   >Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Tools]** menyn.
+   Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Tools]** menyn.
 
    ![chlimage_1-435](assets/chlimage_1-435.png)
 
    >[!NOTE]
-   >
-   >Det kan ta lång tid innan felmeddelandet slutligen registreras på grund av flera arbetsflödeskonfigurationer för **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
-   >
-   >
-   >
-   >    * Konfiguration av Apache Sling-jobbkö
-   >    * Extern processhanterare för Adobe Granite-arbetsflöde
-   >    * Timeoutkö för Granite-arbetsflöde
-   >
-   >
-   >Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
+   Det kan ta lång tid innan felmeddelandet slutligen registreras på grund av flera arbetsflödeskonfigurationer för **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
+   * Konfiguration av Apache Sling-jobbkö
+   * Extern processhanterare för Adobe Granite-arbetsflöde
+   * Timeoutkö för Granite-arbetsflöde
+
+   Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
 
 1. Information om slutförda arbetsflöden finns i Arbetsflödesarkiv som är tillgängligt från **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Archive]**. **[!UICONTROL Workflow Archive]** visar alla slutförda arbetsflödesaktiviteter.
 
    >[!NOTE]
-   >
-   >Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Tools]** menyn.
+   Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Tools]** menyn.
 
    ![chlimage_1-436](assets/chlimage_1-436.png)
 
@@ -955,8 +944,7 @@ For YouTube publishing jobs, do the following:
 ## Visa videorapporter {#viewing-video-reports}
 
 >[!NOTE]
->
->Videorapporter är bara tillgängliga när du kör Dynamic Media - hybrid-läge.
+Videorapporter är bara tillgängliga när du kör Dynamic Media - hybrid-läge.
 
 Videorapporter visar flera sammanställda mätvärden under en angiven tidsperiod för att hjälpa dig att övervaka att *publicerade *enskilda och sammanställda videor fungerar som förväntat. Följande viktigaste mätdata samlas in för alla publicerade videor på hela webbplatsen:
 
@@ -973,8 +961,7 @@ När du trycker på ett videonamn i listan visas videons rapport för att behål
 Om videon kodades utanför Adobe Experience Manager-Dynamic Media är inte målgruppsinnehållandediagrammet (drop-off) och uppspelningsprocentdata i tabellen tillgängliga.
 
 >[!NOTE]
->
->Spårnings- och rapportdata baseras uteslutande på användningen av Dynamic Medias egen videospelare och tillhörande videospelarförinställning. Därför kan du inte spåra och rapportera om videofilmer som spelas upp med andra videospelare.
+Spårnings- och rapportdata baseras uteslutande på användningen av Dynamic Medias egen videospelare och tillhörande videospelarförinställning. Därför kan du inte spåra och rapportera om videofilmer som spelas upp med andra videospelare.
 
 Första gången du anger Videorapporter visas som standard videodata från och med den första i den aktuella månaden och till och med den aktuella månadens datum. Du kan dock åsidosätta standarddatumintervallet genom att ange ett eget datumintervall. Nästa gång du anger Videorapporter används det datumintervall du har angett.
 
@@ -990,6 +977,7 @@ Du behöver bara använda Uppdatera om rapportens slutdatum är den aktuella dag
 
    * I det övre högra hörnet trycker du på ikonen **[UICONTROL Date Picker]** (UIKONTROLLdatumväljaren).
 Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Run Report]**.
+
    I grupprutan Top Metrics (Toppvärden) identifieras olika aggregerade mått för alla *publicerade *videor på webbplatsen.
 
 1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
@@ -1068,8 +1056,7 @@ Du kan utöka räckvidden för dina videor till globala marknader genom att läg
 Bildtext ger också bättre tillgänglighet genom att använda undertexter för personer som är döva eller hörselskadade.
 
 >[!NOTE]
->
->Den videospelare som du använder måste ha stöd för visning av bildtexter.
+Den videospelare som du använder måste ha stöd för visning av bildtexter.
 
 Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript Object Notation). Den här konverteringen innebär att du kan bädda in JSON-texten på en webbsida som en dold men fullständig utskrift av videon. Sökmotorerna kan sedan crawla och indexera innehållet så att videoklippen blir lättare att hitta och ge kunderna ytterligare information om videoinnehållet.
 
@@ -1094,8 +1081,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Servera st
    Följ nu instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget .vtt.
 
    >[!NOTE]
-   >
-   >Om du vill ha globalt stöd för videoundertexter på flera språk måste du skapa separata VTT-filer och anropa varje språk som du vill ha stöd för.
+   Om du vill ha globalt stöd för videoundertexter på flera språk måste du skapa separata VTT-filer och anropa varje språk som du vill ha stöd för.
 
    I allmänhet vill du ge bildtexten ett namn som är detsamma som videofilen och bifoga den med språkinställningen -EN, -FR eller -DE osv. Genom att göra det kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga system för hantering av webbinnehåll.
 
@@ -1125,8 +1111,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Servera st
 Du kan göra det enklare att titta på och navigera i videoklipp med långa formulär genom att lägga till kapitelmarkörer i enstaka videor eller i adaptiva videouppsättningar. När en användare spelar upp videon kan han/hon klicka på kapitelmarkörerna på tidslinjen (kallas även videoscubbaren) för att enkelt navigera till sin intressanta punkt eller omedelbart hoppa till nytt innehåll, demonstrationer, självstudiekurser och så vidare.
 
 >[!NOTE]
->
->Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att de använder tredjepartsvideospelare.
+Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att de använder tredjepartsvideospelare.
 
 Om du vill kan du skapa och märka ut ett eget anpassat visningsprogram med kapitel i stället för att använda en förinställning för visningsprogrammet för video. Instruktioner om hur du skapar ett eget HTML5-visningsprogram med kapitelnavigering finns i handboken Adobe Scene7 Viewer SDK för HTML5 under klasserna `s7sdk.video.VideoPlayer` och `s7sdk.video.VideoScrubber`. Adobe Scene7 Viewer SDK kan hämtas från [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html).
 
