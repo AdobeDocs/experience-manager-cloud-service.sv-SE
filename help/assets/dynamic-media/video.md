@@ -2,7 +2,7 @@
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media
 translation-type: tm+mt
-source-git-commit: d59b193730e2135390386eab8ef83abae5f7eac0
+source-git-commit: 591e33f255a82371dea6fbe07ed9c9b43764b12c
 workflow-type: tm+mt
 source-wordcount: '9686'
 ht-degree: 9%
@@ -567,7 +567,7 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 
 >[!NOTE]
 >
->När molntjänsten har konfigurerats krävs ingen ytterligare konfiguration för att aktivera YouTube Publish-replikeringsagenten som denna punkt. Orsaken är att den aktiverades när molntjänstkonfigurationen sparades.
+>När molntjänsten har konfigurerats krävs ingen ytterligare konfiguration för att aktivera replikeringsagenten för YouTube-publicering. Orsaken är att den aktiverades när molntjänstkonfigurationen sparades.
 
 <!-- ### Enabling the YouTube Publish replication agent {#enabling-the-youtube-publish-replication-agent}
 
