@@ -2,9 +2,9 @@
 title: Konfigurera OSGI för AEM as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: 024518cca45463afb5cbb4c9cd66bf1cd2a7c210
 workflow-type: tm+mt
-source-wordcount: '2689'
+source-wordcount: '2691'
 ht-degree: 1%
 
 ---
@@ -96,7 +96,7 @@ Det finns tre sorters OSGi-konfigurationsvärden som kan användas med AEM som C
 
 ## Så här väljer du lämplig OSGi-konfigurationsvärdetyp {#how-to-choose-the-appropriate-osgi-configuration-value-type}
 
-I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för specifika användningsområden där värdet skiljer sig mellan olika utvecklingsmiljöer.
+I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för särskilda ändamål där värdet skiljer sig mellan olika utvecklingsmiljöer.
 
 ![](assets/choose-configuration-value-type_res1.png)
 
@@ -112,7 +112,7 @@ Värden för infogade konfigurationer anses vara standardmetoden och bör använ
 * Värdena är implicit knutna till koddistributioner
 * De kräver inga ytterligare distributionsöverväganden eller samordning
 
-När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden, där du bara väljer hemliga eller miljöspecifika konfigurationer om det behövs för användningsfallet.
+När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden. Om det behövs för användningsfallet väljer du bara hemliga eller miljöspecifika konfigurationer.
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
@@ -509,7 +509,7 @@ $ aio cloudmanager:set-environment-variables ENVIRONMENT_ID --delete MY_VAR1 MY_
 
 ### Antal variabler {#number-of-variables}
 
-Upp till 20 variabler kan deklareras.
+Upp till 200 variabler per miljö kan deklareras.
 
 ## Distributionsöverväganden för Hemliga och miljöspecifika konfigurationsvärden {#deployment-considerations-for-secret-and-environment-specific-configuration-values}
 
