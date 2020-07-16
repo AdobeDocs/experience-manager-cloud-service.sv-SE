@@ -1,11 +1,11 @@
 ---
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 792e5f7ab7c64404e6c8e1bad956e328edb32044
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '406'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 97%
    + [Vanliga åtgärder för hantering av material](manage-digital-assets.md)
    + [Smarta taggar](smart-tags.md)
    + [Organisera resurser](organize-assets.md)
-   + [Använda Adobe Stock-material i AEM](aem-assets-adobe-stock.md)
+   + [Använda Adobe Stock-resurser i AEM](aem-assets-adobe-stock.md)
    + [Hantera samlingar](manage-collections.md)
    + [Översikt över metadata](manage-metadata.md)
    + [Integrera med Adobe Creative Cloud](aem-cc-integration-best-practices.md)
@@ -44,7 +44,7 @@ ht-degree: 97%
 + Konfigurera, administrera och utöka Assets {#admin}
    + [API:er och referensmaterial](developer-reference-material-apis.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
-   + [Arbeta med bildprofiler och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
+   + [Om att arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
    + [Konfigurera Smart Tags](smart-tags-configuration.md)
    + [Flerspråkiga resurser och översättning av resurser](translate-assets.md)
    + [Söka efter fasetter](search-facets.md)
