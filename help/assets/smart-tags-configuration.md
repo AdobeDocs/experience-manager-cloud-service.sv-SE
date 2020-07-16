@@ -2,11 +2,11 @@
 title: Förbättrade smarta taggar
 description: Använd kontextuella och beskrivande taggar med Adobe Senseis AI- och ML-tjänst för att förbättra resursidentifieringen och innehållets hastighet.
 contentOwner: AG
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c24fa22178914b1186b7f29bdab64d3bca765fe5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '863'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -27,11 +27,11 @@ Smart Tags-funktionen kan köpas som tillägg till [!DNL Experience Manager]. N�
 
 Innan du kan tagga bilderna med SCS måste du integrera [!DNL Adobe Experience Manager] med Smart Tags-tjänsten med Adobe Developer Console. I backend-funktionerna autentiserar [!DNL Experience Manager]-servern dina inloggningsuppgifter med Adobe Developer Console-gatewayen innan din begäran vidarebefordras till tjänsten.
 
-* Skapa en konfiguration i [!DNL Experience Manager] för att generera en offentlig nyckel. [Hämta ett offentligt certifikat för OAuth-integrering.](#obtain-public-certificate)
-* [Skapa en integrering i Adobe Developer Console och överför den genererade offentliga nyckeln.](#create-aio-integration)
-* [Konfigurera smarta taggar](#configure-smart-content-service) i din [!DNL Experience Manager] instans med API-nyckeln och andra autentiseringsuppgifter från Adobe Developer Console.
+* Skapa en konfiguration i [!DNL Experience Manager] för att generera en offentlig nyckel. [Hämta ett offentligt certifikat](#obtain-public-certificate) för OAuth-integrering.
+* [Skapa en integrering i Adobe Developer Console](#create-aio-integration) och överför den genererade offentliga nyckeln.
+* [Konfigurera Smart Tags](#configure-smart-content-service) i din [!DNL Experience Manager]-instans med API-nyckeln och andra autentiseringsuppgifter från Adobe Developer Console.
 * [Testa konfigurationen](#validate-the-configuration).
-* [Konfigurera om när certifikatet har upphört att gälla](#certrenew).
+* [Konfigurera om när certifikatet upphör att gälla](#certrenew).
 
 ### Förutsättningar för Adobe Developer Console-integrering {#prerequisite-for-aio-integration}
 
