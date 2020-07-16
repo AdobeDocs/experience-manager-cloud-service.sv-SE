@@ -1,11 +1,11 @@
 ---
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: a0e58c626f94b778017f700426e960428b657806
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1871'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -18,12 +18,12 @@ Läs avsnittet nedan när du vill veta mer om viktiga aspekter när du använder
 
 * CRA-rapporten byggs med utdata från Adobe Experience Manager (AEM) [Pattern Detector](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Pattern Detector som används av CRA ingår i CRA-installationspaketet.
 
-* CRA may only be run by the **admin** user or a user in the **administrators** group.
+* CRA kan bara köras av **administratörsanvändaren** eller en användare i gruppen **Administratörer**.
 
 * CRA stöds på AEM-instanser med version 6.1 och senare.
 
    >[!NOTE]
-   > Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av CRA på AEM 6.1.
+   > Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav gällande installation av CRA på AEM 6.1.
 
 * CRA kan köras i vilken miljö som helst, men det är bättre att köra det i en *mellanlagringsmiljö*.
 
@@ -36,7 +36,7 @@ Läs avsnittet nedan när du vill veta mer om viktiga aspekter när du använder
 
 ## Tillgänglighet {#availability}
 
-Cloud Readiness Analyzer kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
+Cloud Readiness Analyzer kan hämtas som en zip-fil från Software Distribution portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
 >Hämta Cloud Readiness Analyzer från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) Portal.
@@ -185,10 +185,10 @@ Värdet för den här egenskapen är cachelivslängden i sekunder. Administratö
 
 ### Installera på AEM 6.1 {#installing-on-aem61}
 
-CRA använder ett användarkonto för systemtjänster med namnet `repository-reader-service` för att köra mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. På AEM 6.1 måste det här kontot skapas *innan* CRA installeras genom följande steg:
+CRA använder ett användarkonto för systemtjänster vid namn `repository-reader-service` för att köra Mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. På AEM 6.1 måste det här kontot skapas *innan* CRA installeras via följande steg:
 
-1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security-service-users.html#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom och klicka sedan på den gröna bockmarkeringen.
+1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security-service-users.html#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom. Klicka sedan på den gröna bockmarkeringen.
 
-2. Följ instruktionerna på [Hantera användare och grupper](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security.html#managing-users-and-groups), särskilt instruktionerna för hur du lägger till användare i en grupp för att lägga till `repository-reader-service` användaren i `administrators` gruppen.
+2. Följ instruktionerna i [Hantera användare och grupper](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security.html#managing-users-and-groups). Särskilt instruktionerna för hur man lägger till användare i en grupp för att lägga till `repository-reader-service`-användaren i `administrators`-gruppen.
 
-3. Installera CRA-paketet via Package Manager på AEM-källinstansen. (Detta lägger till den nödvändiga konfigurationsändringen i ServiceUserMapper-konfigurationen för `repository-reader-service` systemtjänstanvändaren.)
+3. Installera CRA-paketet via Package Manager på AEM-källinstansen. (Detta lägger till den nödvändiga konfigurationsändringen i konfigurationen ServiceUserMapper för `repository-reader-service`-systemtjänstanvändaren.)
