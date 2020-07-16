@@ -2,9 +2,9 @@
 title: AEM Application Project - Cloud Service
 description: AEM Application Project - Cloud Service
 translation-type: tm+mt
-source-git-commit: 528873fec97958646b2a0d7d64281c76ee1d021d
+source-git-commit: 610e00a8669a7d81482d99685d200bd705b1848f
 workflow-type: tm+mt
-source-wordcount: '1120'
+source-wordcount: '1138'
 ht-degree: 11%
 
 ---
@@ -72,6 +72,9 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 * Varje bygge görs i en riktig miljö. byggbehållaren behåller inte något läge mellan körningar.
 * Maven körs alltid med kommandot: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * Maven konfigureras på systemnivå med filen settings.xml som automatiskt inkluderar den offentliga Adobe **Artifact** -databasen. (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/) .)
+
+>[!NOTE]
+>Även om Cloud Manager inte definierar en specifik version av `jacoco-maven-plugin`filen måste den version som används vara minst `0.7.5.201505241946`.
 
 ### Använda Java 11 {#using-java-11}
 
