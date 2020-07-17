@@ -2,10 +2,10 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager som Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: be65ba65fb6bbd7634da882ef8337565f1fce477
 workflow-type: tm+mt
-source-wordcount: '1127'
-ht-degree: 5%
+source-wordcount: '1165'
+ht-degree: 3%
 
 ---
 
@@ -24,6 +24,7 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Upplevelsefragment** är helt utformat för innehåll och därmed delar av en webbsida.
+
 >
 >
 Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
@@ -58,6 +59,7 @@ Innehållsfragmenten aktiverar:
 3. Du kan antingen:
    * Öppna **resursläsaren** och filtrera efter **innehållsfragment** (standardvärdet är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
    * Markera innehållskomponenten och **Konfigurera** sedan i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat **innehållsfragment**.
+
    >[!NOTE]
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
@@ -78,6 +80,10 @@ Innehållsfragmenten aktiverar:
 
 Öppna fragmentets dialogruta **Konfiguration** för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
 
+>[!NOTE]
+>
+>Se även [kärnkomponenter, komponenten Content Fragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
+
 I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland annat:
 
 * **Innehållsfragment**
@@ -87,6 +93,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
    * **Flera element**
 * **Element**
    * En markering är tillgänglig beroende på vilken modell som används.
+
    >[!NOTE]
    >
    >Vilka element som är tillgängliga beror på vilken modell som används.
@@ -129,7 +136,7 @@ För mellanliggande innehåll kan du:
 >
 >Du kan också [infoga visuella resurser (bilder) i själva](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)fragmentet.
 >
->Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke.
+>Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke. Om du behöver den här anslutningsnivån kan du lägga till bilden i fragmentet (som ett [blandat mediefragment](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)).
 
 >[!CAUTION]
 >
@@ -146,7 +153,7 @@ Detta kan få det att se ut som om den relativa placeringen har ändrats, efters
 
 ### Använda associerat innehåll {#using-associated-content}
 
-Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/assets/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments).
+Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/assets/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associated content is effectively a special source of content for [in-between content](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments).
 
 >[!NOTE]
 >
@@ -164,7 +171,7 @@ Här kan du dra resurserna till önskad plats (antingen till en befintlig kompon
 
 ### Resurser som infogats i fragmentet {#assets-inserted-into-the-fragment}
 
-Om resurser (t.ex. bilder) har infogats i själva fragmentet är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
+Om resurser (t.ex. bilder) har infogats i själva fragmentet (som [blandade mediefragment](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)) är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
 
 För en bild kan du till exempel
 
