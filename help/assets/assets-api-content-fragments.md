@@ -2,7 +2,7 @@
 title: Adobe Experience Manager som Cloud Service Content Fragments Support in Assets HTTP API
 description: Lär dig mer om Adobe Experience Manager som stöd för innehållsfragment i Cloud Service i Assets HTTP API.
 translation-type: tm+mt
-source-git-commit: 4687e797362b5532c8b806bcef46778e8e8554ce
+source-git-commit: 0dbec9bde44780958332f6f4cd82c05b4ec9206d
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 2%
@@ -211,7 +211,7 @@ Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, tit
 
 Om en resurs begärs returneras dess metadata. som titel, namn och annan information som definieras av respektive resursschema.
 
-En tillgångs binära data visas som en SIREN-länk av typen `content` (kallas även `rel attribute`).
+Den binära informationen för en resurs visas som en SIREN-länk av typen `content`.
 
 Resurser kan ha flera renderingar. Dessa visas vanligtvis som underordnade enheter, och ett undantag är en miniatyrrendering, som visas som en länk av typen `thumbnail` ( `rel="thumbnail"`).
 
@@ -244,7 +244,7 @@ Associerat innehåll visas för närvarande inte.
 
 Användningssättet kan variera beroende på om du använder en AEM-författare eller publiceringsmiljö, tillsammans med ditt specifika användningsexempel.
 
-* Skapandet är strikt bundet till en författarinstans ([och det finns för närvarande inget sätt att replikera ett fragment för publicering med denna API](/help/assets/assets-api-content-fragments.md#limitations)).
+* Vi rekommenderar att skapandet binds till en författarinstans ([och det finns för närvarande inget sätt att replikera ett fragment för publicering med denna API](/help/assets/assets-api-content-fragments.md#limitations)).
 * Leverans är möjlig från båda, eftersom AEM endast skickar begärt innehåll i JSON-format.
 
    * Lagring och leverans från en AEM-författarinstans bör räcka för program bakom brandväggen, mediabibliotek.
