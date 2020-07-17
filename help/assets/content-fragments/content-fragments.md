@@ -2,7 +2,7 @@
 title: Arbeta med innehållsfragment
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
-source-git-commit: 4687e797362b5532c8b806bcef46778e8e8554ce
+source-git-commit: a5b0d8789a50974c5b633feb5a84824b5999916c
 workflow-type: tm+mt
 source-wordcount: '1828'
 ht-degree: 2%
@@ -249,7 +249,7 @@ Om du vill skapa, redigera och använda innehållsfragment behöver du också:
    * Innehållsmodelldefinitioner kräver en titel och ett dataelement. allt annat är valfritt.
    * Modellen kan definiera standardinnehåll, om tillämpligt.
    * Författare kan inte ändra den definierade strukturen när de redigerar fragmentinnehåll.
-   * Ändringar som görs i en modell efter att beroende innehållsfragment har skapats kommer att påverka dessa innehållsfragment.
+   * Ändringar som görs i en modell efter att beroende innehållsfragment har skapats kan påverka dessa innehållsfragment.
 
 * **Innehållsfragmentkomponent**
 
