@@ -2,10 +2,10 @@
 title: Adobe Experience Manager som Cloud Service Content Fragments Support in Assets HTTP API
 description: Lär dig mer om Adobe Experience Manager som stöd för innehållsfragment i Cloud Service i Assets HTTP API.
 translation-type: tm+mt
-source-git-commit: efbd21aa7d8aa5b32d0af720466e4ffe92a012dd
+source-git-commit: 4687e797362b5532c8b806bcef46778e8e8554ce
 workflow-type: tm+mt
 source-wordcount: '1891'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 1%
 >
 >* Resurser REST API
 >* inklusive stöd för innehållsfragment
+
 >
 >
 Den aktuella implementeringen av Assets HTTP API baseras på arkitekturformatet [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) .
@@ -66,7 +67,7 @@ Till exempel för att få åtkomst `/content/dam/wknd/en/adventures/cycling-tusc
 >[!NOTE]
 >Åtkomst över:
 >* `/api/assets` **behöver inte** använda `.model` väljaren.
->* `/content/assets` **kräver** att `.model` väljaren används.
+>* `/content/path/to/page` **kräver** att `.model` väljaren används.
 
 
 HTTP-metoden avgör vilken åtgärd som ska utföras:
@@ -147,6 +148,7 @@ Om REST API:t för resurser används i en miljö utan särskilda autentiseringsk
 >
 >* [CORS/AEM - förklaring](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 >* [Video - Developing for CORS with AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+
 >
 
 
@@ -363,6 +365,7 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
 
       * `Could not update content element`
       * `Could not update fragment data of element`
+
    De detaljerade felmeddelandena returneras vanligtvis på följande sätt:
 
    ```xml
