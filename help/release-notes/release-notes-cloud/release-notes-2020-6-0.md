@@ -2,9 +2,9 @@
 title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
 translation-type: tm+mt
-source-git-commit: 74abf1c4cc6ae449a81e3e40d073bfcb23b056e8
+source-git-commit: d25129d8e2ad5f1501aec3b8491f6327b91fcc53
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '1925'
 ht-degree: 0%
 
 ---
@@ -182,11 +182,6 @@ Versionen innehåller följande andra förbättringar:
 
 ### Bug Fixes {#assets-bug-fixes}
 
-<!-- TBD: Add enhancements above and bug fixes below.
-Seek DM bug fixes if any.
-Add Nui update as shared on Slack: https://git.corp.adobe.com/nui/app/releases/tag/22
--->
-
 Förutom de nya funktionerna ovan innehåller den aktuella versionen följande felkorrigeringar som baseras på kundfeedback för [!DNL Assets].
 
 * För MP3-musikfiler fungerar inte den uppspelningsknapp som visas på miniatyrbilden i DAM-förhandsvisningen. (CQ-4294731)
@@ -195,3 +190,4 @@ Förutom de nya funktionerna ovan innehåller den aktuella versionen följande f
 * När du hämtar en resurs är inte nedladdningsalternativet tillgängligt om du har valt e-postalternativ och även om du har angett ett giltigt e-post-ID. (CQ-4296535)
 * Anpassade filter som sparats som smarta samlingar används inte korrekt på resurser. (CQ-4294942)
 * Flera förbättringar av sökning och indexering samt felkorrigeringar för att förbättra prestandan. (CQ-4286373)
+* Mappegenskaperna visar 500 interna serverfel. (CQ-4295701)
