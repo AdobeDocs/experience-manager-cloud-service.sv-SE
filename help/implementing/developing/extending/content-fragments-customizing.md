@@ -2,9 +2,9 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 translation-type: tm+mt
-source-git-commit: 33ed1ab1e8a4c4d7d61981270b0a6c959c8ba3a3
+source-git-commit: bfdb862f07dc37b540c07f267b2bdcc2100bcca2
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1849'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ Innehållsfragment, som baseras på en innehållsfragmentmodell, mappas till en 
 
 * Allt innehåll lagras under resursens `jcr:content/data` nod:
 
-   * Elementdata lagras under huvudundernoden:
+   * Elementdata lagras under den överordnad undernoden:
       `jcr:content/data/master`
 
    * Variationer lagras under en undernod som har variantens namn:
@@ -70,7 +70,8 @@ t.ex. `jcr:content/data/myvariation`
    * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet:
 Elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
-* Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på `jcr:content`
+* Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på 
+`jcr:content`
 
 #### Resursplats {#asset-location}
 
@@ -165,7 +166,7 @@ Innehållsfragment kan integreras med:
 
 Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
 
-[com.adobe.cq.dam.cfm](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/package-frame.html)
+[com.adobe.cq.dam.cfm](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/package-summary.html#package.description)
 
 >[!CAUTION]
 >
@@ -198,6 +199,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Lägg till samlingar
       * Ta bort samlingar
    * Åtkomst till fragmentets modell
+
    Gränssnitt som representerar de primära elementen i ett fragment är:
 
    * **Innehållselement** ([ContentElement](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
@@ -217,6 +219,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
       * Enkel synkronisering, baserat på den senast ändrade informationen
+
    Alla tre gränssnitten (, `ContentFragment`, `ContentElement`, `ContentVariation`) utökar `Versionable` gränssnittet, med nya versionshanteringsfunktioner som krävs för innehållsfragment:
 
    * Skapa en ny version av elementet
@@ -241,7 +244,9 @@ Följande kan anpassas:
 
 * `ContentElement` kan anpassas till
 
-   * `ElementTemplate` - för åtkomst till elementets strukturinformation.
+   * [`ElementTemplate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/ElementTemplate.html) - för åtkomst till elementets strukturinformation.
+
+* [`FragmentTemplate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html)
 
 * `Resource` kan anpassas till
 
@@ -255,7 +260,7 @@ Det bör noteras att
 
 * Uppgifter som kan kräva ytterligare arbete:
 
-   * Skapa nya varianter från `ContentFragment` för att uppdatera datastrukturen.
+   * Vi rekommenderar starkt att du skapar nya varianter från `ContentFragment`. Detta garanterar att alla element delar den här variationen och att lämpliga globala datastrukturer uppdateras efter behov för att återspegla den nyligen skapade variationen i innehållsstrukturen.
 
    * Om du tar bort befintliga variationer genom ett element med `ContentElement.removeVariation()`, uppdateras inte de globala datastrukturer som är tilldelade variationen. Om du vill vara säker på att dessa datastrukturer är synkroniserade använder du dem `ContentFragment.removeVariation()` istället, vilket tar bort en global variation.
 
@@ -315,8 +320,8 @@ Om du vill skapa ett nytt innehållsfragment programmatiskt måste du använda e
 Till exempel:
 
 ```java
-Resource ModelRsc = resourceResolver.getResource("...");
-FragmentTemplate tpl = ModelRsc.adaptTo(FragmentTemplate.class);
+Resource modelRsc = resourceResolver.getResource("...");
+FragmentTemplate tpl = modelRsc.adaptTo(FragmentTemplate.class);
 ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
 ```
 
@@ -341,6 +346,6 @@ Om du vill ange ett intervall för automatiskt sparande på 5 minuter måste du 
 
 ## Komponenter för sidredigering {#components-for-page-authoring}
 
-Mer information finns på
+Mer information finns i
 
 * [Kärnkomponenter - Innehållsfragmentkomponent](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html) (rekommenderas)
