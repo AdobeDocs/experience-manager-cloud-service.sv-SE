@@ -3,10 +3,10 @@ title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manage
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: be817ff8265d9d45a80557c0e44949ba6562993c
+source-git-commit: 97830590ba66e90c324770fa57b3ff11a760677f
 workflow-type: tm+mt
-source-wordcount: '1963'
-ht-degree: 51%
+source-wordcount: '1996'
+ht-degree: 42%
 
 ---
 
@@ -27,7 +27,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
-* Användarna ingår i lämpliga användargrupper för varje distribution.
+* Användarna ingår i rätt användargrupper för varje distribution.
 * Ett av villkoren som stöds är uppfyllt för [!DNL Adobe Experience Manager] distributionstyper. Mer information om [!DNL Experience Manager] 6.5 finns i [Funktionen för anslutna resurser i Experience Manager 6.5-resurser](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
 
    |  | [!DNL Sites] som en Cloud Service | [!DNL Experience Manager] 6.5 [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5 [!DNL Sites] på plats |
@@ -38,10 +38,10 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 ### Filformat som stöds {#mimetypes}
 
-Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda resurserna i Page Editor. Dokument kan läggas till i `Download`-komponenten och bilder kan läggas till i `Image`-komponenten. Authors can also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. De format som stöds är:
+Författare söker efter bilder och följande typer av dokument i Content Finder och använder de sökbara resurserna i Page Editor. Dokument läggs till i `Download` komponenten och bilder i `Image` komponenten. Authors also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. De format som stöds är:
 
 * **Bildformat**: De format som stöds av [bildkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) . [!DNL Dynamic Media] bilder stöds inte.
-* **Dokumentformat**: Se [Dokumentformat som stöds i Connected Assets](file-format-support.md#document-formats).
+* **Dokumentformat**: Se vilka [dokumentformat](file-format-support.md#document-formats)som stöds.
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
 
@@ -58,9 +58,9 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 
 ## Configure a connection between [!DNL Sites] and [!DNL Assets] deployments {#configure-a-connection-between-sites-and-assets-deployments}
 
-An [!DNL Experience Manager] administrator can create this integration. Once created, the permissions required to use it are established via user groups that are defined on the [!DNL Sites] deployment and on the DAM deployment.
+An [!DNL Experience Manager] administrator can create this integration. Behörigheterna som krävs för att använda det skapas via användargrupper när de har skapats. Användargrupperna definieras för [!DNL Sites] distributionen och för DAM-distributionen.
 
-To configure Connected Assets and local [!DNL Sites] connectivity, follow these steps.
+To configure Connected Assets and local [!DNL Sites] connectivity, follow these steps:
 
 1. Access an existing [!DNL Sites] deployment or create a deployment using the following command:
 
@@ -75,13 +75,14 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
    1. [!DNL Assets] platsen är `https://[assets_servername_ams]:[port]`.
    1. Autentiseringsuppgifter för en DAM-distributör (teknisk användare).
-   1. In **[!UICONTROL Mount Point]** field, enter the local [!DNL Experience Manager] path where [!DNL Experience Manager] fetches the assets. Till exempel, mappen `remoteassets`.
+   1. In the **[!UICONTROL Mount Point]** field, enter the local [!DNL Experience Manager] path where [!DNL Experience Manager] fetches the assets. Till exempel, mappen `remoteassets`.
 
    1. Justera värdena för **[!UICONTROL Original Binary transfer optimization Threshold]** beroende på ditt nätverk. En resursåtergivning med en storlek som är större än detta tröskelvärde överförs asynkront.
    1. Select **[!UICONTROL Datastore Shared with Connected Assets]**, if you use a datastore to store your assets and the Datastore is the common storage between both deployments. I det här fallet spelar tröskelvärdet ingen roll eftersom resursernas binärfiler finns i datalagret och de inte överförs.
-      ![En typisk konfiguration för Connected Assets](assets/connected-assets-typical-config.png)
 
-      *Bild: En typisk konfiguration för Connected Assets.*
+   ![En typisk konfiguration för Connected Assets](assets/connected-assets-typical-config.png)
+
+   *Bild: En typisk konfiguration för Connected Assets.*
 
 1. Inaktivera arbetsflödets startprogram eftersom resurserna redan har bearbetats och återgivningarna hämtas. Adjust the launcher configurations on the local ([!DNL Sites]) deployment to exclude the `connectedassets` folder, in which the remote assets are fetched.
 
@@ -103,28 +104,28 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    >
    >Alla återgivningar som är tillgängliga på fjärrdistributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. Arbetsflödet [!UICONTROL DAM Update Asset] aktiveras och skapar fler återgivningar. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
-1. Add the [!DNL Sites] instance as one of the **[!UICONTROL Allowed Origins]** on the remote [!DNL Assets'] CORS configuration.
+1. Lägg till [!DNL Sites] distributionen som en av **[!UICONTROL Allowed Origins]** i fjärrkonfigurationen [!DNL Assets'] av CORS.
 
    1. Logga in med administratörsautentiseringsuppgifterna. Search for `Cross-Origin`. Öppna **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-   1. To create a CORS configuration for [!DNL Sites] instance, click ![aem_assets_add_icon](assets/do-not-localize/aem_assets_add_icon.png) icon next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
+   1. Om du vill skapa en CORS-konfiguration för [!DNL Sites] distribution klickar du på Lägg till ![alternativikon](assets/do-not-localize/aem_assets_add_icon.png) bredvid **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
 
    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Spara konfigurationen.
 
 ## Använda fjärresurser {#use-remote-assets}
 
-Webbplatsförfattare använder Content Finder för att ansluta till DAM-instansen. Författarna kan bläddra bland, söka efter och dra fjärresurserna till en komponent. Om du vill autentisera med DAM-fjärrdistributionen bör du ha DAM-användarens autentiseringsuppgifter som du fått av administratören till hands.
+Webbplatsens författare använder Content Finder för att ansluta till DAM-distributionen. Författarna kan bläddra bland, söka efter och dra fjärresurserna till en komponent. Om du vill autentisera med DAM-fjärrdistributionen bör du ha DAM-användarens autentiseringsuppgifter som du fått av administratören till hands.
 
-Upphovsmannen kan använda resurserna som finns på den lokala DAM- och fjärrinstansen av DAM på en enda webbsida. Använd Content Finder för att växla mellan att söka i det lokala DAM-systemet eller söka i det fjärranslutna DAM-systemet.
+Författare kan använda resurserna som finns på den lokala DAM-resursen och den fjärranslutna DAM-distributionen på en enda webbsida. Använd Content Finder för att växla mellan att söka i det lokala DAM-systemet eller söka i det fjärranslutna DAM-systemet.
 
-Only those tags of remote assets are fetched that have an exact corresponding tag along with the same taxonomy hierarchy, available on the local [!DNL Sites] instance. Alla andra taggar tas bort. Authors can search for remote assets using all the tags present on the remote [!DNL Experience Manager] deployment, as it offers a full-text search.
+Endast de taggar för fjärrresurser som har en exakt motsvarande tagg tillsammans med samma taxonomihierarki, som är tillgängliga för den lokala [!DNL Sites] distributionen, hämtas. Alla andra taggar tas bort. Authors can search for remote assets using all the tags present on the remote [!DNL Experience Manager] deployment, as it offers a full-text search.
 
 ### Genomgång av användningen {#walk-through-of-usage}
 
 Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur den fungerar. Använd de dokument eller bilder du vill ha på den fjärranslutna DAM-distributionen.
 
 1. Navigate to the [!DNL Assets] interface on the remote deployment by accessing **[!UICONTROL Assets]** > **[!UICONTROL Files]** from [!DNL Experience Manager] workspace. Du kan även få åtkomst till `https://[assets_servername_ams]:[port]/assets.html/content/dam` i en webbläsare. Ladda upp de resurser du vill ha.
-1. On the [!DNL Sites] instance, in the profile activator in the upper-right corner, click **[!UICONTROL Impersonate as]**. Ange `ksaner` som användarnamn, markera det angivna alternativet och klicka på **[!UICONTROL OK]**.
+1. On the [!DNL Sites] deployment, in the profile activator in the upper-right corner, click **[!UICONTROL Impersonate as]**. Ange `ksaner` som användarnamn, markera det angivna alternativet och klicka på **[!UICONTROL OK]**.
 1. Öppna en We.Retail-webbsida på **[!UICONTROL Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL us]** > **[!UICONTROL en]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` i en webbläsare när du vill redigera en sida.
 
    Klicka på **[!UICONTROL Toggle Side Panel]** överst till vänster på sidan.
@@ -145,7 +146,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
    *Bild: Meddelande om asynkron hämtning av resurser som sker i bakgrunden.*
 
-1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used in the page. Kontrollera att fjärresurserna har hämtats vid publiceringen. Se [användargränssnittet för asynkrona jobb](/help/operations/asynchronous-jobs.md) om du vill kontrollera status för varje hämtad resurs.
+1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used on the page. Kontrollera att fjärresurserna har hämtats vid publiceringen. Se [användargränssnittet för asynkrona jobb](/help/operations/asynchronous-jobs.md) om du vill kontrollera status för varje hämtad resurs.
 
    >[!NOTE]
    >
@@ -153,20 +154,20 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
 >[!CAUTION]
 >
->När de hämtade fjärresurserna har använts på en webbsida är de sökbara och användbara för alla som har behörighet att komma åt den lokala mappen där de hämtade resurserna lagras (`connectedassets` i ovanstående genomgång). Resurserna är också sökbara och synliga i det lokala datalagret via [!UICONTROL Content Finder].
+>Once used in a web page, the fetched remote assets are searchable and usable by anyone who has permissions to access the local folder. The fetched assets are stored (`connectedassets` in the above walk-through). Resurserna är också sökbara och synliga i det lokala datalagret via [!UICONTROL Content Finder].
 
 De hämtade resurserna kan användas som andra lokala resurser, förutom att associerade metadata inte kan redigeras.
 
 ## Begränsningar {#limitations}
 
-### Behörigheter och hantering av resurser {#permissions-and-managing-assets}
+### Tillstånd och resurshantering {#permissions-and-managing-assets}
 
 * Lokala resurser synkroniseras inte med de ursprungliga resurserna i fjärrdistributionen. Ändringar, borttagningar eller återkallande av behörigheter i DAM-distributionen sprids inte längre ned i kedjan.
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
 * Lokalt hämtade resurser är endast tillgängliga för redigeringsändamål. Det går inte att använda arbetsflöden för resursuppdatering och metadata kan inte redigeras.
 * Endast bilder och dokumentformaten i listan stöds. [!DNL Dynamic Media] resurser, innehållsfragment och Experience Fragments stöds inte.
 * Metadatascheman hämtas inte.
-* All [!DNL Sites] authors have read permissions on the fetched copies, even if authors do not have access to the remote DAM deployment.
+* Alla [!DNL Sites] författare har läsbehörighet för de hämtade kopiorna, även om författare inte har åtkomst till fjärdistributionen av DAM.
 * Det finns inte API-stöd för att anpassa integreringen.
 * Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna.
 * Det går inte att använda en fjärrresurs som sidminiatyr i [!UICONTROL Page Properties] användargränssnittet. Du kan ange en miniatyrbild för en webbsida i [!UICONTROL Page Properties] användargränssnittet från [!UICONTROL Thumbnail] genom att klicka på [!UICONTROL Select Image].
@@ -180,13 +181,14 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 
 ### Användning {#usage}
 
-* De enda funktioner som stöds är sökning efter fjärresurser och att dra fjärresurserna till den lokala sidan för att skapa innehåll.
+* Användare kan söka efter fjärrresurser och dra dem på den lokala sidan när de redigerar. Inga andra funktioner stöds.
 * Tidsgränsen för hämtning är 5 sekunder. Författare kan ha problem med att hämta resurser, till exempel om det råder nätverksproblem. Authors can reattempt by dragging the remote asset from [!UICONTROL Content Finder] to [!UICONTROL Page Editor].
 * Enkla redigeringar som är icke-destruktiva och redigering som stöds via `Image`-komponenten kan tillämpas på hämtade resurser. Resurserna är skrivskyddade.
+* Det enda sättet att hämta resursen på nytt är att dra den till en sida. Det finns inget API-stöd eller andra metoder för att hämta om en resurs för att uppdatera den.
 
 ## Felsöka problem {#troubleshoot}
 
-Följ dessa steg för att felsöka vanliga fel:
+Följ de här stegen för att felsöka det vanliga felscenariot:
 
-* If you cannot search for remote assets from the [!UICONTROL Content Finder], recheck and ensure that the required roles and permissions are in place.
-* En resurs som hämtats från en DAM-fjärrdistribution kanske inte publiceras på en webbsida av följande skäl: Den finns inte i fjärrdistributionen, lämplig behörighet saknas för att hämta den eller nätverksfel. Se till att resursen inte tas bort från fjärr-DAM eller att behörigheterna inte ändras. Kontrollera att rätt förutsättningar uppfylls. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/operations/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
+* If you cannot search for remote assets from the [!UICONTROL Content Finder], then ensure that the required roles and permissions are in place.
+* En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/operations/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
