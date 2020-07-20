@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1774'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -43,7 +43,8 @@ Det vill säga riktlinjer som kan tillämpas på en rad olika format för webbin
 Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en allmän grupp tillgänglighetsexperter håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte.
 
 * Stöd för **prioriterad och sammanhangsbaserad implementering:**
-Riktlinjer för WCAG 2.1 är prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet *tillgänglighet som stöds*. Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
+Riktlinjer för WCAG 2.1 är prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom innehåller begreppet 
+*hjälpmedel* införs. Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
 
 Dessa mål har i hög grad påverkat strukturen i WCAG 2.1.
 
