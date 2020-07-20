@@ -2,9 +2,9 @@
 title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.7.0
 description: Versionsinformation om Experience Manager för 2020.7.0
 translation-type: tm+mt
-source-git-commit: 610e00a8669a7d81482d99685d200bd705b1848f
+source-git-commit: f96a9b89bb704b8b8b8eb94cdb5f94cc42890ec8
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,9 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.7.0 är 9 juli 2020.
 * Antalet miljövariabler per miljö har ökat till 200.
 
 * Molnhanterarens byggbehållare har nu stöd för både Java 8 och Java 11.
+
+* Molnhanterarens pipelines har nu stöd för kundspecifika variabler och hemligheter.
+Mer information finns i [Pipeline-variabler](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#pipeline-variables) .
 
 ### Bug Fixes {#bug-fixes-cm}
 
