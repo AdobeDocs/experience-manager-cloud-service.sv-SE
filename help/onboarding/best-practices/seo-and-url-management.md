@@ -48,7 +48,8 @@ Här följer några allmänna tips om hur du skapar URL:er för SEO:
    * Om en användare inte kan läsa URL:en kan inte en sökmotor heller göra det.
    * Till exempel:
       `mybrand.com/products/product-detail.product-category.product-name.html`
-är att föredra framför `mybrand.com/products/product-detail.1234.html`
+är att föredra framför 
+`mybrand.com/products/product-detail.1234.html`
 
 * Undvik underdomäner när det är möjligt eftersom sökmotorer behandlar dem som andra enheter, vilket fragmenterar webbplatsens SEO-värde.
 
@@ -219,7 +220,8 @@ I en vanlig AEM-installation:
 
 * för OSGi-konfigurationen
    **Apache Sling Resource Resolver Factory**
-( `org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`)
+( 
+`org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`)
 
 * egenskapen
    **Mappningsplats** ( `resource.resolver.map.location`)
@@ -251,6 +253,7 @@ Det finns dock ett enklare sätt att hantera det här på:
    Du kan konfigurera Sling Resource Resolver med webbkonsolen (till exempel localhost:4502/system/console/configMgr):
 
    * **Apache Sling Resource Resolver Factory**
+
       `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`.
    Vi rekommenderar att du skapar de mappningar som krävs för att korta ned URL:er som reguljära uttryck och sedan definierar konfigurationerna under en OSGi-konfigurationsnod, `config.publish`, som ingår i bygget.
 
@@ -266,11 +269,12 @@ Det finns dock ett enklare sätt att hantera det här på:
 
    * från `/content/my-brand/my-page.html`
    * till bara `/my-page.html`
+
    Vilket är i linje med rekommendationen att hålla URL:erna så korta som möjligt.
 
 1. **Mappa URL-utdata på sidor**
 
-   När du har definierat mappningarna i Apache Sling Resource Resolver måste du använda mappningarna i dina komponenter för att se till att de URL:er som du skapar på sidorna är korta och tydliga. Du kan göra det med mappningsunktionen i `ResourceResolver`.
+   När du har definierat mappningarna i Apache Sling Resource Resolver måste du använda mappningarna i dina komponenter för att se till att de URL:er som du skapar på sidorna är korta och tydliga. Du kan göra det med Mappningsfunktionen i `ResourceResolver`.
 
    Om du till exempel implementerade en anpassad navigeringskomponent som listar de underordnade sidorna för den aktuella sidan kan du använda mappningsmetoden så här:
 
