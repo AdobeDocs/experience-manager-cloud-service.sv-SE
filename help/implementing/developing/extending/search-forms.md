@@ -547,7 +547,8 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
    `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
-* **Alternativnodssökväg**&#x200B;är i princip samma som **Alternativsökväg**, men bara det här är i det vanliga predikatfältet, det andra är specifikt för resurser.
+* **Alternativnodens sökväg**&#x200B;är i princip densamma som 
+**Alternativsökväg**, bara detta är i det vanliga predikatfältet, den andra är specifik för resurser.
 
 * **Enkelval** Om det här alternativet är markerat återges alternativen som kryssrutor som endast tillåter en markering. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
@@ -651,6 +652,7 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    * `jcr:title` - den fältetikett som ska visas i sökfältet
    * `value` - egenskapsvärdet som ska genomsökas
+
    ![Förutsägelsedefinition](assets/csf-options-predicate-01.png)
 
    >[!NOTE]
