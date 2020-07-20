@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Ett [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor.
 
-En Experience Fragment Master och/eller Variant använder:
+En Experience Fragment-Överordnad och/eller Variant använder:
 
 * `sling:resourceType` : `/libs/cq/experience-fragments/components/xfpage`
 
@@ -96,7 +96,8 @@ Om du vill skapa en upplevelsefragmentmall som identifieras av guiden **Skapa Ex
 
    1. Och mallens namn måste börja med:
       `experience-fragments`
-Detta gör att användare kan skapa upplevelsefragment i /content/experience-fragments eftersom den här mappens egenskap `cq:allowedTemplates` innehåller alla mallar som har namn som börjar med `experience-fragment`. Kunder kan uppdatera den här egenskapen så att den omfattar sina egna namngivningsscheman eller mallplatser.
+Detta gör att användare kan skapa upplevelsefragment i /content/experience-fragments som 
+`cq:allowedTemplates` i den här mappen innehåller alla mallar som har namn som börjar med `experience-fragment`. Kunder kan uppdatera den här egenskapen så att den omfattar sina egna namngivningsscheman eller mallplatser.
 
 1. [Tillåtna mallar](/help/sites-cloud/authoring/fundamentals/experience-fragments.md#configure-allowed-templates-folder) kan konfigureras i Experience Fragments-konsolen.
 
@@ -165,6 +166,7 @@ När du har genererat HTML-sidan ändrar Sling Rewriter-flödet utdata:
    2. `href` attributes
    3. `*-src` attribut (t.ex. data-src, custom-src)
    4. `*-href` attribut (som `data-href`, `custom-href`, `img-href`osv.)
+
    >[!NOTE]
    >
    >I de flesta fall är de interna länkarna i HTML relativa länkar, men det kan finnas fall när anpassade komponenter tillhandahåller fullständiga URL:er i HTML. Som standard ignorerar AEM dessa fullständiga URL:er och inga ändringar görs.
@@ -288,7 +290,8 @@ För den Experience Fragment-variation som påverkas av omskrivningsprocessen fo
 Som indata tar metoden emot parametrarna:
 
 * `link`
-Representationen `String` av länken som bearbetas just nu. Detta är vanligtvis en relativ URL som pekar på resursen på författarinstansen.
+The 
+`String` återgivning av länken som bearbetas just nu. Detta är vanligtvis en relativ URL som pekar på resursen på författarinstansen.
 
 * `tag`
 Namnet på det HTML-element som bearbetas.
