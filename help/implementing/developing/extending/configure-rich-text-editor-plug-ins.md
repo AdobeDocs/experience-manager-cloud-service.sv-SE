@@ -1,12 +1,12 @@
 ---
-title: Konfigurera plugin-programmen för RTF-redigeraren i [!DNL Adobe Experience Manager].
-description: Lär dig att konfigurera plugin-programmen för RTF-redigeraren i [!DNL Adobe Experience Manager].
+title: Konfigurera plugin-programmen [!DNL Adobe Experience Manager]för RTF-redigeraren.
+description: Lär dig konfigurera [!DNL Adobe Experience Manager] plugin-program för textredigeraren.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
 source-git-commit: 739dde6f9a6a7f4fe773e27e53f23a395f2881dc
 workflow-type: tm+mt
-source-wordcount: '4287'
+source-wordcount: '4279'
 ht-degree: 0%
 
 ---
@@ -150,6 +150,7 @@ Så här konfigurerar du vilka format som tillåts när du klistrar in text i [!
    * **Namn** `underline`
    * **Namn** `anchor` (för både länkar och namngivna ankare)
    * **Namn** `image`
+
    Alla egenskaper är av **typen** `Boolean`, så i rätt **värde** kan du antingen markera eller ta bort markeringen för att aktivera eller inaktivera funktionen.
 
    >[!NOTE]
@@ -234,6 +235,7 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
    * **Namn** `externalStyleSheets`
    * **Typ** `String[]` (multisträng; klicka på **Flera** i CRXDE)
    * **Värden** Sökvägen och filnamnet för alla formatmallar som du vill ta med. Använd databassökvägar.
+
    >[!NOTE]
    >
    >Du kan när som helst lägga till referenser till ytterligare formatmallar.
@@ -302,7 +304,8 @@ Så här skapar du det format som författare kan använda på japansk text:
 
 1. Lägg till egenskapstexten i samma nod. Värdet är namnet på formatet som författarna ser när de väljer formatet.
    * Namn: `text`
-*Typ: `String`
+*Typ: 
+`String`
    * Värde: `Japanese word-wrap`
 
 1. Skapa en formatmall och ange dess sökväg. Se [Ange plats för formatmallen](#locationofstylesheet). Lägg till följande innehåll i formatmallen. Ändra bakgrundsfärgen efter behov.
@@ -450,10 +453,12 @@ I CRXDE visas det representerade tecknet när egenskapen har sparats. Se exemple
 1. Lägg till följande två egenskaper under den här noden (namngivna enligt ditt teckenintervall):
 
    * **Namn** `rangeStart`
+
       **Typ** `Long`
       **Värde** för [Unicode](https://unicode.org/) -representationen (decimal) för det första tecknet i intervallet
 
    * **Namn** `rangeEnd`
+
       **Typ** `Long`
       **Värde** för [Unicode](https://unicode.org/) -representationen (decimal) av det sista tecknet i intervallet
 
@@ -483,6 +488,7 @@ Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläs
    * **Namn** `features`
    * **Typ** `String`
    * **Värde** `*`
+
    >[!NOTE]
    Om du inte vill aktivera alla tabellfunktioner kan du skapa `features` egenskapen som:
    * **Typ** `String[]`
@@ -640,11 +646,13 @@ När du lägger till länkar i [!DNL Experience Manager]kan du definiera de CSS-
 
    * **Namn** `htmlRules`
    * **Typ** `nt:unstructured`
+
    >[!NOTE]
    Noden har `../items/text` egenskapen:
    * **Namn** `xtype`
    * **Typ** `String`
    * **Värde** `richtext`
+
    Platsen för `../items/text` noden kan variera beroende på strukturen i dialogrutan. Två exempel är `/apps/myProject>/components/text/dialog/items/text` och `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
 
 1. Skapa en nod `htmlRules`under.
@@ -678,6 +686,7 @@ När du lägger till länkar i [!DNL Experience Manager]kan du definiera de CSS-
 
       * **Namn** `targetConfig`
       * **Typ** `nt:unstructured`
+
       På noden `targetConfig`: definiera de egenskaper som krävs:
 
       * Ange målläge:
