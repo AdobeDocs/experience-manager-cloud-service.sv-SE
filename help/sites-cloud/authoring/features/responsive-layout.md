@@ -97,16 +97,19 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierad med en bredd på 540
    Emulatorverktygsfältet innehåller ytterligare layoutalternativ:
 
    * **Rotera enhet** - Gör att du kan rotera en enhet från lodrät (stående) orientering till vågrät (liggande) orientering och tvärtom.
+
    ![Rotera enhetens liggande knapp](/help/sites-cloud/authoring/assets/responsive-layout-rotate-device-landscape-button.png)
    ![Rotera enhetens stående knapp](/help/sites-cloud/authoring/assets/responsive-layout-rotate-device-portrait-button.png)
 
    * **Välj Enhet** - Definiera en specifik enhet som ska emuleras från en lista (se nästa steg för mer information)
+
    ![Välj enhetsknapp](/help/sites-cloud/authoring/assets/responsive-layout-select-device-button.png)
 
 1. Om du vill välja en specifik enhet som ska emuleras kan du antingen:
 
    * Använd ikonen Välj enhet och välj i en nedrullningsbar väljare.
    * Tryck/klicka på enhetsindikatorn i emulatorns verktygsfält.
+
    ![Listrutan Välj enhet](/help/sites-cloud/authoring/assets/responsive-layout-select-device-dropdown.png)
 
 1. När en viss enhet har valts kan du:
@@ -114,6 +117,7 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierad med en bredd på 540
    * Se den aktiva markören för den valda enheten, till exempel **iPad.**
    * Se den aktiva markören för rätt [brytpunkt](#layout-definitions-device-emulation-and-breakpoints) , t.ex. **Tablet.**
    * Den blå prickade linjen representerar *vikningen* för den valda enheten (här finns en **iPhone 6 Plus** i liggande format).
+
    ![Flödet](/help/sites-cloud/authoring/assets/responsive-layout-fold.png)
 
    * Flödet kan också betraktas som sidradbrytningen (ska inte blandas ihop med [brytpunkterna](#layout-definitions-device-emulation-and-breakpoints)) för innehållet. Detta visas för att underlätta för användaren att visa vilken del av innehållet som kommer att visas på enheten före rullning.
@@ -160,6 +164,7 @@ Precis som med andra komponenter kan du markera och sedan vidta åtgärder för 
 
    * Den lägsta kapslade layoutbehållaren visas med blå kontur.
    * Varje efterföljande behållare linjeras med en ljusare nyans av blått.
+
    ![Kapslade behållare](/help/sites-cloud/authoring/assets/responsive-layout-nested.png)
 
 1. Då markeras hela stödrastret med dess innehåll. Åtgärdsverktygsfältet visas där du kan välja en åtgärd som **Ta bort.**
@@ -195,6 +200,7 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
    * **Överordnad** - Gör att du kan markera hela layoutbehållarkomponenten för att utföra en åtgärd på hela layouten.
    * **Flyt till ny rad** - Komponenten flyttas till en ny rad, beroende på det tillgängliga utrymmet i rutnätet.
    * **Dölj komponent** - Komponenten blir osynlig (den kan återställas från layoutbehållarens verktygsfält).
+
    ![Dölj komponent](/help/sites-cloud/authoring/assets/responsive-layout-hide.png)
 
 * I **layoutläget** kan du trycka/klicka på **Drag-komponenterna här** för att markera hela komponenten. Då visas verktygsfältet för det här läget.
@@ -224,7 +230,8 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
    >
    >I exemplet ovan är åtgärderna float och hide tillgängliga eftersom den här layoutbehållaren är kapslad i en överordnad layoutbehållare.
 
-   * **Visa komponenter** Välj de överordnade komponenterna för att visa åtgärdsverktygsfältet med alternativet **Visa dolda komponenter** . I det här exemplet är två komponenter dolda.
+   * **Visa komponenter** Välj de överordnade komponenterna för att visa åtgärdsverktygsfältet med 
+**Visa alternativ för dolda komponenter** . I det här exemplet är två komponenter dolda.
 
       ![Visa komponenter](/help/sites-cloud/authoring/assets/responsive-layout-unhide.png)
    Om du väljer alternativet **Visa dolda komponenter** visas de dolda komponenterna i blått i sina ursprungliga positioner.
