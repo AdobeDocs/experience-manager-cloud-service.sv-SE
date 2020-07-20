@@ -2,9 +2,9 @@
 title: Arbeta med innehållsfragment
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
-source-git-commit: a5b0d8789a50974c5b633feb5a84824b5999916c
+source-git-commit: 85f47a417e73432d776c0ed4f5cdb7673ce41a70
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1818'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men in
 
 >[!NOTE]
 >
->AEM har även stöd för översättning av fragmentinnehåll. Mer information finns i Skapa översättningsprojekt för innehållsfragment.
+>AEM har även stöd för översättning av fragmentinnehåll.
 
 <!--
 >[!NOTE]
