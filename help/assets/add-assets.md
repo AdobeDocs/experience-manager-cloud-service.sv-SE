@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i Adobe Experience Manager
 description: Lägg till dina digitala resurser i Adobe Experience Manager som en Cloud Service
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: 6a0568be09ece4b8b06c66c706bcffe2316bebc2
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,7 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
 
    * Tryck på **[!UICONTROL Create]** ikonen i verktygsfältet. Tryck sedan på menyn **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
    * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till användargränssnittet Resurser. Dialogrutan för att byta namn på filen visas inte.
+
    ![create_menu](assets/create_menu.png)
 
    Om du vill markera flera filer trycker du på Ctrl- eller Kommando-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
@@ -126,7 +127,7 @@ Följande (blankstegsavgränsad lista med) tecken stöds emellertid inte:
 * resursens filnamn får inte innehålla `* / : [ \\ ] | # % { } ? &`
 * resursmappens namn får inte innehålla `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
 
-## Massöverföring av resurser {#bulk-upload}
+## Överför resurser gruppvis {#bulk-upload}
 
 Om du vill överföra fler filer, särskilt om de finns i en kapslad mapphierarki på disken, kan du använda följande metoder:
 
@@ -146,7 +147,7 @@ Förutom webbläsarens användargränssnitt har Experience Manager stöd för an
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
