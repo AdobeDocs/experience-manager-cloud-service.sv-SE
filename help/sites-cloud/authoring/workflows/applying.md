@@ -2,7 +2,7 @@
 title: Använda arbetsflöden på sidor
 description: När du redigerar kan du anropa arbetsflöden för att göra något på sidorna; det går även att använda mer än ett arbetsflöde.
 translation-type: tm+mt
-source-git-commit: dbd7b8084445b03beff3b5a96b0fa6b5512e10b8
+source-git-commit: b551a0b0d85d264feabf78942a381c4239fdbadb
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 11%
@@ -23,8 +23,8 @@ När du använder arbetsflödet anger du följande information:
 
 Arbetsflöden kan startas från:
 
-* [på **Sites** -konsolen](#starting-a-workflow-from-the-sites-console).
-* [när du redigerar en sida, från **Sidinformation **](#starting-a-workflow-from-the-page-editor).
+* [Sites-konsolen](#starting-a-workflow-from-the-sites-console).
+* [när du redigerar en sida, från Sidinformation](#starting-a-workflow-from-the-page-editor).
 
 >[!NOTE]
 >
@@ -51,8 +51,8 @@ Arbetsflöden kan startas från:
 
 Du kan starta ett arbetsflöde från:
 
-* [alternativet **Skapa** i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
-* [tidslinjen **i** platskonsolen](#starting-a-workflow-from-the-timeline).
+* [alternativet Skapa i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
+* [tidslinjen i webbplatskonsolen](#starting-a-workflow-from-the-timeline).
 
 I båda fallen måste du:
 
@@ -87,8 +87,8 @@ Guiden **Skapa arbetsflöde** hjälper dig att välja arbetsflöde och ange nöd
 
 När du har öppnat guiden **Skapa arbetsflöde** från:
 
-* [alternativet **Skapa** i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
-* [tidslinjen **i** platskonsolen](#starting-a-workflow-from-the-timeline).
+* [alternativet Skapa i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
+* [tidslinjen i webbplatskonsolen](#starting-a-workflow-from-the-timeline).
 
 Du kan ange information:
 
@@ -98,6 +98,7 @@ Du kan ange information:
    * **Arbetsflödets titel**
 
       * Du kan ange en titel för den här instansen så att du lättare kan identifiera den i ett senare skede.
+
    Beroende på arbetsflödesmodellen är följande alternativ också tillgängliga. Dessa gör att det paket som skapas som nyttolast kan behållas när arbetsflödet har slutförts.
 
    * **Behåll arbetsflödespaket**
@@ -128,9 +129,11 @@ En dialogruta öppnas där du kan förfina markeringen enligt:
          * Inkludera endast omedelbara barn.
          * Inkludera endast ändrade sidor.
          * Inkludera endast redan publicerade sidor.
+
          Alla underordnade objekt läggs till i listan över resurser som arbetsflödet gäller för.
 
       * **Ta bort markeringen** för att ta bort resursen från arbetsflödet.
+
    ![Definiera arbetsflödesomfång](/help/sites-cloud/authoring/assets/workflows-scope.png)
 
    >[!NOTE]
