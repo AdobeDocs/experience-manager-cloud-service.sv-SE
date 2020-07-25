@@ -1,11 +1,12 @@
 ---
 sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
+user-guide-description: Learn how to customize your Experience Manager as a Cloud Service deployment, including development and deployment topics.
 translation-type: tm+mt
-source-git-commit: 69de631457966383b537fdf5aeddf9157adae73b
+source-git-commit: c6de895d9d7e876096efe98238b9b0558224a4e6
 workflow-type: tm+mt
 source-wordcount: '236'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -30,10 +31,10 @@ ht-degree: 97%
    + [AEM as a Cloud Service SDK](developing/introduction/aem-as-a-cloud-service-sdk.md)
    + [Utvecklingsriktlinjer för AEM as a Cloud Service](developing/introduction/development-guidelines.md)
    + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
-   + [Sling Cheatsheet](developing/introduction/sling-cheatsheet.md)
-   + [Använda delningsadaptrar](developing/introduction/sling-adapters.md)
+   + [Fusklapp för Sling](developing/introduction/sling-cheatsheet.md)
+   + [Använda Sling-adaptrar](developing/introduction/sling-adapters.md)
    + [Använda Sling Resource Merger i AEM as a Cloud Service](developing/introduction/sling-resource-merger.md)
-   + [Övertäckning i AEM as a Cloud Service](developing/introduction/overlays.md)
+   + [Övertäckningar i AEM as a Cloud Service](developing/introduction/overlays.md)
    + [AEM as a Cloud Service API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
    + [Förstå testresultat](/help/implementing/developing/introduction/understand-test-results.md)
 + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
