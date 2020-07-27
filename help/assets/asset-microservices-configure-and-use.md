@@ -3,10 +3,10 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: 9c5dd93be316417014fc665cc813a0d83c3fac6f
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 3%
+source-wordcount: '1829'
+ht-degree: 0%
 
 ---
 
@@ -113,24 +113,26 @@ Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering).
 
 Skapa och använd de extra anpassade bearbetningsprofilerna på specifika mappar som Experience Manager kan bearbeta för resurser som har överförts till eller uppdaterats i dessa mappar. Den inbyggda standardbearbetningsprofilen körs alltid som standard, men visas inte i användargränssnittet. Om du lägger till en anpassad profil används båda profilerna för att bearbeta de överförda resurserna.
 
-Det finns två sätt att använda bearbetningsprofiler på mappar:
+Använd bearbetningsprofiler på mappar på något av följande sätt:
 
 * Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools > Assets > Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
-* Användare kan välja en mapp i Assets-gränssnittet, använda åtgärden **[!UICONTROL Properties]** för att öppna fönstret för mappegenskaper, klicka på fliken **[!UICONTROL Processing Profiles]** och i listrutan välja rätt bearbetningsprofil för den mappen. Alternativet sparas vid åtgärden **[!UICONTROL Save & Close]**.
+* Users can select a folder in the Assets user interface, use **[!UICONTROL Properties]** action to open folder properties screen, click on the **[!UICONTROL Processing Profiles]** tab, and in the popup list, select the correct processing profile for that folder. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
 
 >[!NOTE]
 >
->Endast en bearbetningsprofil kan användas för en viss mapp. Om du behöver fler genererade återgivningar kan du lägga till fler återgivningsdefinitioner i bearbetningsprofilen.
+>Endast en bearbetningsprofil kan användas för en viss mapp. Om du vill generera fler återgivningar lägger du till fler återgivningsdefinitioner i den befintliga bearbetningsprofilen.
 
-När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurser som har överförts (eller uppdaterats) i den här mappen eller någon av dess undermappar med hjälp av den extra bearbetningsprofil som har konfigurerats. Den här extra bearbetningen är utöver standardprofilen. Om du tillämpar flera profiler på en mapp bearbetas de överförda eller uppdaterade resurserna med hjälp av var och en av dessa profiler.
+När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurser som har överförts (eller uppdaterats) i den här mappen eller någon av dess undermappar med hjälp av den extra bearbetningsprofil som har konfigurerats. Den här bearbetningen är utöver standardprofilen. Om du tillämpar flera profiler på en mapp bearbetas de överförda eller uppdaterade resurserna med hjälp av var och en av dessa profiler.
 
 >[!NOTE]
 >
->När resurser överförs till en mapp kontrollerar Experience Manager egenskaperna för den innehållande mappen för att hitta en bearbetningsprofil. Om ingen används går den upp i mappträdet tills den hittar en bearbetningsprofil som används och använder den för resursen. Det innebär att en bearbetningsprofil som används för en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används för en undermapp.
+>En bearbetningsprofil som används på en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används på en undermapp. När resurser överförs till en mapp kontrollerar Experience Manager egenskaperna för den innehållande mappen för att hitta en bearbetningsprofil. Om ingen används kontrolleras en överordnad mapp i hierarkin för att en bearbetningsprofil ska användas.
 
 Användarna kan kontrollera att bearbetningen faktiskt utfördes genom att öppna en nyligen överförd resurs som bearbetningen är klar för, öppna förhandsgranskningen av resursen och klicka på den vänstra **[!UICONTROL Renditions]** spårens vy. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
 
-![additional-renditions](assets/renditions-additional-renditions.png)*Figure: Exempel på två extra återgivningar som genereras av en bearbetningsprofil som tillämpas på den överordnade mappen*
+![additional-renditions](assets/renditions-additional-renditions.png)
+
+*Bild: Exempel på två extra återgivningar som genereras av en bearbetningsprofil som tillämpas på den överordnade mappen.*
 
 ## Efterbehandlingsarbetsflöden {#post-processing-workflows}
 
