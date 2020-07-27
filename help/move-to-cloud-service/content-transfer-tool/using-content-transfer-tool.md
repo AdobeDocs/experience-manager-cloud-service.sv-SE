@@ -1,9 +1,9 @@
 ---
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1582'
 ht-degree: 100%
 
@@ -37,7 +37,7 @@ Content Transfer Tool kan laddas ned som en zip-fil (Content Transfer Tool v1.0.
 
 ## Köra Content Transfer Tool {#running-tool}
 
->[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on&captions=swe)
 
 Följ det här avsnittet för att lära dig hur du använder Content Transfer Tool för att migrera innehållet till AEM as a Cloud Service (Author/Publish):
 
