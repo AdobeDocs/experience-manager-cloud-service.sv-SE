@@ -1,10 +1,10 @@
 ---
-title: Lägg till dina digitala resurser i Adobe Experience Manager
-description: Lägg till dina digitala resurser i Adobe Experience Manager som en Cloud Service
+title: Lägg till era digitala resurser [!DNL Adobe Experience Manager]i.
+description: Lägg till era digitala resurser [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 6a0568be09ece4b8b06c66c706bcffe2316bebc2
+source-git-commit: 9c5dd93be316417014fc665cc813a0d83c3fac6f
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # Lägg till digitala resurser i Adobe Experience Manager {#add-assets-to-experience-manager}
 
-Adobe Experience Manager förbättrar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildfiler, från den lokala mappen eller en nätverksenhet till Experience Manager Assets.
+[!DNL Adobe Experience Manager] berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
 
-Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager-datorprogram, överförings- och inmatningsskript som kunderna skulle skapa samt automatiserade inmatningsintegreringar som lagts till som AEM-tillägg.
+Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager-datorprogram, överförings- och förtäringsskript som kunderna skulle skapa samt automatiserade importfunktioner som lagts till som tillägg för Experience Manager.
 
 Vi fokuserar på överföringsmetoder för slutanvändare här och tillhandahåller länkar till artiklar som beskriver tekniska aspekter av överföring och förtäring av resurser med hjälp av API:er för Experience Manager och SDK:er.
 
@@ -24,19 +24,19 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 
 >[!NOTE]
 >
->Experience Manager som Cloud Service utnyttjar ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av de färdiga produktfunktionerna och klienterna, som AEM-användargränssnittet, Adobe Asset Link och AEM-appen, och är därmed genomskinlig för slutanvändarna.
+>Experience Manager som Cloud Service utnyttjar ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av produktfunktioner och -klienter som Experience Manager, Adobe Asset Link, Experience Manager och är därmed genomskinliga för slutanvändarna.
 >
 >Ladda upp kod som är anpassad eller utökad av kunder som tekniska team behöver för att kunna använda de nya överförings-API:erna och protokollen.
 
 ## Överför resurser {#upload-assets}
 
-Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra och släppa dem i användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet.
+Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet.
 
-1. I Assets-användargränssnittet navigerar du till den plats där du vill lägga till digitala resurser.
+1. Navigera till den plats där du vill lägga till digitala resurser i [!DNL Assets] användargränssnittet.
 1. Gör något av följande om du vill överföra resurserna:
 
    * Tryck på **[!UICONTROL Create]** ikonen i verktygsfältet. Tryck sedan på menyn **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
-   * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till användargränssnittet Resurser. Dialogrutan för att byta namn på filen visas inte.
+   * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till [!DNL Assets] användargränssnittet. Dialogrutan för att byta namn på filen visas inte.
 
    ![create_menu](assets/create_menu.png)
 
@@ -59,9 +59,9 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
    ![chlimage_1-212](assets/chlimage_1-212.png)
 -->
 
-1. Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort av AEM Assets.
+1. Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort [!DNL Assets] .
 
-   Om du avbryter överföringen innan filerna har överförts slutar AEM Assets att överföra den aktuella filen och uppdaterar innehållet. Filer som redan har överförts tas dock inte bort.
+   Om du avbryter överföringen innan filerna har överförts, avbryter du överföringen av den aktuella filen och uppdaterar innehållet [!DNL Assets] . Filer som redan har överförts tas dock inte bort.
 
 
 <!-- #ENGCHECK do we support pausing? I couldn't get pause to show with 1.5GB upload.... If not, this should be removed#
@@ -69,13 +69,13 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
 -->
 
 <!-- #ENGCHECK assuming this is not relevant? remove after confirming#
-   During the upload operation, AEM saves the portions of the asset being uploaded as chunks of data in the CRX repository. When the upload completes, AEM consolidates these chunks into a single block of data in the repository.
+   During the upload operation, [!DNL Experience Manager] saves the portions of the asset being uploaded as chunks of data in the CRX repository. When the upload completes, [!DNL Experience Manager] consolidates these chunks into a single block of data in the repository.
 
    To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 -->
 
 
-1. I dialogrutan för överföring i AEM Assets visas antalet överförda filer och de filer som inte kunde överföras.
+1. I dialogrutan för överföringsförlopp [!DNL Assets] visas antalet överförda filer och de filer som inte kunde överföras.
 
 Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet för Resurser.
 
@@ -87,19 +87,19 @@ Dessutom visas den senaste resursen som du överför eller den mapp som du skapa
 
 ### Serial uploads {#serialuploads}
 
-Uploading numerous assets in bulk consumes significant I/O resources, which may adversely impact the performance of your AEM Assets instance. In particular, if you have a slow internet connection, the time to upload drastically increases due to a spike in disk I/O. Moreover, your web browser may introduce additional restrictions to the number of POST requests AEM Assets can handle for concurrent asset uploads. As a result, the upload operation fails or terminate prematurely. In other words, AEM assets may miss some files while ingesting a bunch of files or altogether fail to ingest any file.
+Uploading numerous assets in bulk consumes significant I/O resources, which may adversely impact the performance of [!DNL Assets]. In particular, if you have a slow internet connection, the time to upload drastically increases due to a spike in disk I/O. Moreover, your web browser may introduce additional restrictions to the number of POST requests [!DNL Assets] can handle for concurrent asset uploads. As a result, the upload operation fails or terminate prematurely. In other words, [!DNL Assets] may miss some files while ingesting a bunch of files or altogether fail to ingest any file.
 
-To overcome this situation, AEM Assets ingests one asset at a time (serial upload) during a bulk upload operation, instead of the concurrently ingesting all the assets.
+To overcome this situation, [!DNL Assets] ingests one asset at a time (serial upload) during a bulk upload operation, instead of the concurrently ingesting all the assets.
 
 Serial uploading of assets is enabled by default. To disable the feature and allow concurrent uploading, overlay the `fileupload` node in Crx-de and set the value of the `parallelUploads` property to `true`.
 
 ### Streamed uploads {#streamed-uploads}
 
-If you upload many assets to AEM, the I/O requests to server increase drastically, which reduces the upload efficiency and can even cause some upload task to time out. AEM Assets supports streamed uploading of assets. Streamed uploading reduces the disk I/O during the upload operation by avoiding asset storage in a temporary folder on the server before copying it to the repository. Instead, the data is transferred directly to the repository. This way, the time to upload large assets and the possibility of timeouts is reduced. Streamed upload is enabled by default in AEM Assets.
+If you upload many assets to [!DNL Experience Manager], the I/O requests to server increase drastically, which reduces the upload efficiency and can even cause some upload task to time out. [!DNL Assets] supports streamed uploading of assets. Streamed uploading reduces the disk I/O during the upload operation by avoiding asset storage in a temporary folder on the server before copying it to the repository. Instead, the data is transferred directly to the repository. This way, the time to upload large assets and the possibility of timeouts is reduced. Streamed upload is enabled by default in [!DNL Assets].
 
 >[!NOTE]
 >
->Streaming upload is disabled for AEM running on JEE server with servlet-api version lower than 3.1.
+>Streaming upload is disabled for [!DNL Experience Manager] running on JEE server with servlet-api version lower than 3.1.
 -->
 
 ### Hantera överföringar när det redan finns en resurs {#handling-upload-existing-file}
@@ -114,11 +114,11 @@ Du kan välja att ersätta en befintlig resurs, skapa en annan version eller beh
 >
 >Om resursinsikter är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på Analytics.
 
-Om du vill behålla den duplicerade resursen i AEM Assets trycker/klickar du **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du **[!UICONTROL Delete]**.
+Om du vill behålla den duplicerade resursen i [!DNL Assets]klickar du på **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du **[!UICONTROL Delete]**.
 
 ### Hantering av filnamn och förbjudna tecken {#filename-handling}
 
-AEM Assets förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande i AEM Assets och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn.
+[!DNL Experience Manager Assets] förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn. [!DNL Assets]
 
 I dialogrutan kan du ange långa namn för de filer som du överför, så att de passar organisationens specifika regler för filnamn. [!UICONTROL Upload Assets]
 
@@ -142,12 +142,12 @@ Om du vill överföra fler filer, särskilt om de finns i en kapslad mapphierark
 
 Förutom webbläsarens användargränssnitt har Experience Manager stöd för andra klienter på datorn. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
-* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från AEM i Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till AEM direkt från Adobe Asset Link-användargränssnittet från dessa datorprogram.
+* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från Adobe Asset Link-användargränssnittet från dessa datorprogram.
 * [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) förenklar arbetet med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
