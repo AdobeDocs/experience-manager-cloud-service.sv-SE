@@ -1,17 +1,17 @@
 ---
 title: Ordna digitala resurser
-description: Ordna era digitala resurser med hjälp av olika metoder i Adobe Experience Manager Assets.
+description: Organisera dina digitala resurser med hjälp av olika metoder i Adobe Experience Manager Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 9c5dd93be316417014fc665cc813a0d83c3fac6f
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
 
 
-# Ordna digitala resurser{#organize-digital-assets}
+# Ordna digitala resurser {#organize-digital-assets}
 
 Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokument extraheras och görs sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar fullt ut rätt behörigheter. Metadata beskrivs i detalj i Metadata i Digital Asset Management.
 
@@ -19,7 +19,7 @@ AEM Assets har stöd för flera sätt att ordna innehåll. Du kan ordna dem hier
 
 ## Skapa mappar {#create-folders}
 
-När du organiserar en samling resurser, till exempel alla *naturbilder* , kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Resurser kräver inte att du ordnar resurser i mappar för att de ska fungera bättre.
+När du organiserar en samling resurser, till exempel alla *naturbilder* , kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Assets kräver inte att du ordnar resurser i mappar för att fungera bättre.
 
 >[!NOTE]
 >
@@ -44,5 +44,5 @@ Du kan begränsa vem som kan få åtkomst till vissa mappar i Resurser genom att
 Du kan använda mappar eller taggar, eller båda, för att ordna resurser. Om du lägger till taggar i resurser blir det enklare att hämta dem vid en sökning. Så här lägger du till taggar i en resurs:
 
 1. Öppna resursen genom att dubbelklicka på den i Digital Asset Manager.
-1. Klicka på listruteknappen i området **Taggar** för att visa de tillgängliga taggarna. Välj de taggar du vill använda för att lägga till en tagg. Om du vill ta bort en tagg håller du musen över taggen och klickar på **x** för att ta bort den.
+1. I området **Taggar** öppnar du menyn för att visa de tillgängliga taggarna. Välj taggar efter behov. Om du vill ta bort en tagg håller du pekaren över taggen och klickar `X` för att ta bort den.
 1. Klicka på **Spara** för att spara taggar som du har lagt till.
