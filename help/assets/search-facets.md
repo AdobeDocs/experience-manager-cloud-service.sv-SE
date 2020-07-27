@@ -1,10 +1,10 @@
 ---
-title: Söka efter fasetter
+title: Söka efter fasetter.
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
 translation-type: tm+mt
-source-git-commit: c978be66702b7f032f78a1509f2a11315d1ed89f
+source-git-commit: 9c5dd93be316417014fc665cc813a0d83c3fac6f
 workflow-type: tm+mt
-source-wordcount: '2274'
+source-wordcount: '2258'
 ht-degree: 18%
 
 ---
@@ -12,9 +12,7 @@ ht-degree: 18%
 
 # Söka efter fasetter {#search-facets}
 
-Lär dig hur du skapar, ändrar och använder sökfunktioner i AEM.
-
-En företagsövergripande driftsättning av Adobe Experience Manager Assets (AEM) kan lagra många resurser. Ibland kan det vara besvärligt och tidskrävande att hitta rätt resurs om du bara använder de allmänna sökfunktionerna i AEM.
+En företagsövergripande driftsättning av Adobe Experience Manager (AEM) Assets har kapacitet att lagra många resurser. Ibland kan det vara besvärligt och tidskrävande att hitta rätt resurs om du bara använder de allmänna sökfunktionerna i AEM.
 
 Använd sökfaktorer på panelen Filter för att göra sökningen mer detaljerad och göra sökfunktionen mer effektiv och flexibel. Sökfaktorer lägger till flera dimensioner (predikat) som gör att du kan utföra mer komplicerade sökningar. Panelen Filter innehåller några standardaspekter. Du kan också lägga till anpassade sökfaktorer.
 
@@ -35,34 +33,30 @@ Lägg till predikatet i formuläret för fulltextsökningar `Fulltext` . Använd
 
 1. In the Edit Search Forms page, drag a predicate from the **[!UICONTROL Select Predicate]** tab to the main pane. Dra till exempel **[!UICONTROL Property Predicate]**.
 
-   ![Anpassa sökfiltren genom att dra och släppa ett predikat](assets/drag_predicate.png)
+   ![Tryck och flytta ett predikat för att anpassa sökfiltren](assets/drag_predicate.png)
 
-   Anpassa sökfiltren genom att dra och släppa ett predikat
+   *Bild: Tryck och flytta ett predikat för att anpassa sökfiltren.*
 
-1. Ange en fältetikett, platshållartext och beskrivning för predikatet på fliken Inställningar. Ange ett giltigt namn för metadataegenskapen som du vill associera med predikatet.
-
-   Rubriketiketten på fliken Inställningar identifierar det valda predikatets typ.
+1. Ange en fältetikett, platshållartext och beskrivning för predikatet på fliken Inställningar. Ange ett giltigt namn för metadataegenskapen som du vill associera med predikatet. Rubriketiketten på fliken Inställningar identifierar det valda predikatets typ.
 
    ![Använd fliken Inställningar för att ange de alternativ som krävs för ett predikat](assets/settings.png)
 
-   Använd fliken Inställningar för att ange de alternativ som krävs för ett predikat
+   *Bild: Använd fliken Inställningar för att ange önskade alternativ för ett predikat.*
 
-1. I fältet **[!UICONTROL Property Name]** anger du ett giltigt namn för den metadataegenskap som du vill associera med predikatet. Det är det namn som sökningen baseras på. Skriv till exempel `jcr:content/metadata/dc:description` eller `./jcr:content/metadata/dc:description`.
-
-   Du kan också välja en befintlig nod i urvalsdialogrutan.
+1. I fältet **[!UICONTROL Property Name]** anger du ett giltigt namn för den metadataegenskap som du vill associera med predikatet. Det är det namn som sökningen baseras på. Skriv till exempel `jcr:content/metadata/dc:description` eller `./jcr:content/metadata/dc:description`. Du kan också välja en befintlig nod i urvalsdialogrutan.
 
    ![Associera en metadataegenskap med ett predikat i fältet Egenskapsnamn](assets/property_settings.png)
 
-   Associera en metadataegenskap med ett predikat i fältet Egenskapsnamn
+   *Bild: Associera en metadataegenskap med ett predikat i fältet Egenskapsnamn.*
 
-1. Tryck/klicka på **[!UICONTROL Preview]** förhandsgranskningen ![](assets/preview.png) för att generera en förhandsgranskning av panelen Filter så som den visas när du har lagt till predikatet.
+1. Klicka på **[!UICONTROL Preview]** förhandsgranskningen ![](assets/preview.png) för att generera en förhandsgranskning av panelen Filter så som den visas när du har lagt till predikatet.
 1. Granska layouten för predikatet i förhandsgranskningsläget.
 
    ![Förhandsgranska sökformuläret innan ändringarna skickas](assets/preview-1.png)
 
    Förhandsgranska sökformuläret innan ändringarna skickas
 
-1. Om du vill stänga förhandsgranskningen trycker/klickar du på **[!UICONTROL Close]** stängningen ![](assets/do-not-localize/close_icon.png) i det övre högra hörnet av förhandsvisningen.
+1. Om du vill stänga förhandsgranskningen klickar du på **[!UICONTROL Close]** stängningen ![](assets/do-not-localize/close_icon.png) i förhandsvisningens övre högra hörn.
 1. Tryck **[!UICONTROL Done]** för att spara inställningarna.
 1. Navigera till sökpanelen i användargränssnittet Resurser. Egenskapspredikatet läggs till på panelen.
 1. Ange en beskrivning av resursen som ska genomsökas i textrutan. Ange t.ex.&quot;Adobe.&quot; När du gör en sökning visas resurser med en beskrivning som matchar&quot;Adobe&quot; i sökresultaten.
@@ -121,7 +115,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 
 ## Lägg till ett egenskapspredikat för flera värden {#adding-a-multi-value-property-predicate}
 
-Med predikatet kan du söka efter resurser efter flera värden. `Multi Value Property` Tänk dig ett scenario där du har bilder på flera produkter i AEM Resurser och metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
+Med predikatet kan du söka efter resurser efter flera värden. `Multi Value Property` Tänk dig ett scenario där du har bilder på flera produkter i AEM Assets och där metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
 
 1. Klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök efter formulär väljer du **[!UICONTROL Assets Admin Search Rail]** knappen **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
@@ -134,18 +128,16 @@ Med predikatet kan du söka efter resurser efter flera värden. `Multi Value Pro
 
 ## Lägg till ett taggpredikat {#adding-a-tags-predicate}
 
-Med `Tags` predikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker AEM Resurser efter resurser efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
+Med `Tags` predikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker AEM Assets efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
 
 1. Klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök efter formulär väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. In the Edit Search Form page, drag **[!UICONTROL Tags Predicate]** from the Select Predicate tab to the main pane.
-1. Ange en platshållartext för predikatet på fliken Inställningar. Specify the property name based on which the search is to be performed in the property field, for example *jcr:content/metadata/cq:tags*. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
+1. Ange en platshållartext för predikatet på fliken Inställningar. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/cq:tags`. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
 1. Konfigurera sökvägsegenskapen för rottaggar för det här predikatet för att fylla i olika taggar i listan Taggar.
 1. Välj **[!UICONTROL Show match all tags option]** om du vill söka efter resurser som innehåller alla taggar du anger.
 
    ![Vanliga inställningar för taggar-predikat](assets/tags_predicate.png)
-
-   Vanliga inställningar för taggar-predikat
 
 1. Ange en valfri beskrivning i **[!UICONTROL Description]** fältet och klicka/tryck sedan på **[!UICONTROL Done]**.
 1. Navigera till sökpanelen. The **[!UICONTROL Tags]** predicate is added to the Search panel.
@@ -330,28 +322,13 @@ Så här återställer du standardsökaspekten:
 
 Om du inte har tilldelats en administratörsroll finns det en lista med behörigheter som du behöver för att utföra redigerings-, borttagnings- och förhandsgranskningsåtgärder som omfattar sökfaktorer.
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Åtgärd</strong></td>
-   <td><strong>Behörigheter</strong></td>
-  </tr>
-  <tr>
-   <td>Redigera </td>
-   <td>Läsa och skriva behörigheter på <code>/apps</code> noden i CRX<br /> </td>
-  </tr>
-  <tr>
-   <td>Ta bort</td>
-   <td>Läsa, skriva och ta bort behörigheter på <code>/apps</code> noden i CRX</td>
-  </tr>
-  <tr>
-   <td>Förhandsgranska</td>
-   <td>Läsa, skriva och ta bort behörigheter på noden i CRX <code>/var/dam/content</code> . Läs- och skrivbehörigheter på <code>/apps</code> noden.</td>
-  </tr>
- </tbody>
-</table>
+| Åtgärd | Behörighet |
+|---|---|
+| Redigera | Läs- och skrivbehörigheter på `/apps` noden i CRX. |
+| Ta bort | Läsa, skriva och ta bort behörigheter på `/apps` noden i CRX. |
+| Förhandsgranska | Läsa, skriva och ta bort behörigheter på `/var/dam/content` noden i CRX. Läs- och skrivbehörigheter på `/apps` noden. |
 
 >[!MORELIKETHIS]
 >
->* [Söka efter digitala resurser](search-assets.md)
+>* [Sök efter digitala resurser](search-assets.md).
 
