@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Fylls i
 translation-type: tm+mt
-source-git-commit: 0a2ae4e40cd342056fec9065d226ec064f8b2d1f
+source-git-commit: 171284a6f629dcf13d1fadfc6b7b5f0e69e41d84
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1949'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Tillståndet får inte sparas i minnet utan sparas i databasen. Annars kan det h
 
 ## Läge i filsystemet {#state-on-the-filesystem}
 
-Instansens filsystem bör inte användas i AEM som Cloud Service. Disken är tillfällig och kommer att kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
+Instansens filsystem ska inte användas i AEM som Cloud Service. Disken är tillfällig och kommer att kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
 
 Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som behöver vara beständiga skickas iväg till en extern tjänst för längre lagring.
 
@@ -40,17 +40,17 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 ## Bakgrundsuppgifter och tidskrävande jobb {#background-tasks-and-long-running-jobs}
 
-Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Koden måste därför vara flexibel och de flesta importer kan återupptas. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Detta är inte ett nytt krav för den här typen av kod, men i AEM som Cloud Service är det troligare att en instans kommer att tas bort.
+Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Koden måste därför vara flexibel och de flesta importer kan återupptas. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det mer sannolikt att en instans kommer att tas bort i AEM som en Cloud Service.
 
 För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda schemaläggaren för [delningsjobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) så här igen med minst en gång.
 
 Schemaläggaren för Sling Commons ska inte användas för schemaläggning eftersom körning inte kan garanteras. Det är bara mer sannolikt att det kommer att planeras.
 
-På samma sätt kan man inte garantera att allt som sker asynkront, som att agera på observationshändelser (som JCR-händelser eller Sling-resurshändelser), utförs och därför måste användas med försiktighet. Detta gäller redan för AEM-distributioner i nuläget.
+På samma sätt kan man inte garantera att allt som sker asynkront, som att agera på observationshändelser (som JCR-händelser eller Sling-resurshändelser), utförs och därför måste användas med försiktighet. Detta gäller redan för AEM distributioner i det här läget.
 
 ## Utgående HTTP-anslutningar {#outgoing-http-connections}
 
-Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästidsgränser. För kod som inte tillämpar dessa tidsgränser kommer AEM-instanser som körs på AEM som Cloud Service att tillämpa en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar som används av följande populära Java-bibliotek:
+Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästidsgränser. För kod som inte tillämpar dessa tidsgränser AEM instanser som körs på AEM som en Cloud Service en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar som används av följande populära Java-bibliotek:
 
 Adobe rekommenderar att du använder det medföljande biblioteket [](https://hc.apache.org/httpcomponents-client-ga/) Apache HttpComponents Client 4.x för att skapa HTTP-anslutningar.
 
@@ -68,11 +68,11 @@ AEM som Cloud Service stöder endast Touch-gränssnittet för kundkod från tred
 
 Koden kommer inte att kunna hämta binärfiler vid körning och inte heller ändra dem. Den kan till exempel inte packa upp `jar` eller packa upp `tar` filer.
 
-## Inga bindningar för direktuppspelning via AEM som Cloud Service {#no-streaming-binaries}
+## Ingen direktuppspelande binärfiler via AEM som Cloud Service {#no-streaming-binaries}
 
-Binärfiler bör nås via CDN, som kan användas för binärfiler utanför de centrala AEM-tjänsterna.
+Binärfiler bör nås via CDN, som kommer att betjäna binärfiler utanför de centrala AEM.
 
-Använd till exempel inte `asset.getOriginal().getStream()`, vilket medför att en binärfil laddas ned till AEM-tjänstens tillfälliga disk.
+Använd till exempel inte `asset.getOriginal().getStream()`, vilket medför att en binär fil laddas ned till AEM.
 
 ## Inga omvända replikeringsagenter {#no-reverse-replication-agents}
 
@@ -96,7 +96,7 @@ Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging O
 
 >[!NOTE]
 >
->För att kunna utföra konfigurationsändringarna som listas nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan skicka dem till en AEM-Cloud Service som en instans. Mer information om hur du gör detta finns i [Distribuera till AEM som en Cloud Service](/help/implementing/deploying/overview.md).
+>För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM som en Cloud Service-instans. Mer information om hur du gör detta finns i [Distribuera till AEM som en Cloud Service](/help/implementing/deploying/overview.md).
 
 **Aktivera felsökningsloggnivån**
 
@@ -120,7 +120,7 @@ Loggnivåerna är följande:
 
 ### Trådbitar {#thread-dumps}
 
-Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande inte hämtas på ett självbetjäningssätt. Under tiden kontaktar du AEM-supporten om tråddumpar behövs för att felsöka ett problem och ange exakt tidsfönster.
+Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande inte hämtas på ett självbetjäningssätt. Under tiden kontaktar du AEM om tråddumpar behövs för att felsöka ett problem och ange exakt tidsfönster.
 
 ## CRX/DE Lite och System Console {#crxde-lite-and-system-console}
 
@@ -134,7 +134,7 @@ Observera att vid lokal utveckling (med molnklar snabbstart) `/apps` och `/libs`
 
 Kunderna har tillgång till CRXDE-stilen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det kommer det att leda till fel.
 
-En uppsättning verktyg för felsökning av AEM som utvecklarmiljö för Cloud Service finns på Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
+Det finns en uppsättning verktyg för felsökning AEM som utvecklarmiljöer på Cloud Servicen i Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
 `https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
@@ -160,16 +160,16 @@ Utvecklarkonsolen är också användbar vid felsökning och har en länk till ve
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-För vanliga program definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och användare måste också definieras i produktprofilen AEM Users eller AEM Administrators på både författare och publiceringstjänster för att kunna visa statusdumpdata från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+För vanliga program definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer på både författare och publiceringstjänster för att kunna visa statusdumpdata från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 
-### AEM Staging and Production Service {#aem-staging-and-production-service}
+### AEM för mellanlagring och produktion {#aem-staging-and-production-service}
 
 Kunderna har inte tillgång till utvecklarverktyg för staging- och produktionsmiljöer.
 
 ### Prestandaövervakning {#performance-monitoring}
 
-Adobe övervakar programprestanda och vidtar åtgärder för att åtgärda eventuella försämringar. För närvarande kan inte programmått beaktas.
+Adobe övervakar applikationernas prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte programmått beaktas.
 
 ## IP-adress för dedikerad utpressning
 
@@ -177,13 +177,13 @@ På begäran kommer AEM som Cloud Service att tillhandahålla en statisk, dedike
 
 ### Fördelar
 
-Denna dedikerade IP-adress kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM som en Cloud Service som erbjuder en tillåtelselista av IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från kundens AEM-Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
+Den här dedikerade IP-adressen kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM som en Cloud Service som erbjuder en tillåtelselista IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från kundens AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
 
 Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM som en Cloud Service genom en uppsättning IP-adresser som delas med andra kunder.
 
 ### Konfiguration
 
-Om du vill aktivera en dedikerad IP-adress skickar du en begäran till kundsupporten som ska ange IP-adressinformationen. En begäran bör göras för varje miljö, inklusive alla nya miljöer som skapas efter den ursprungliga begäran.
+Om du vill aktivera en dedikerad IP-adress skickar du en begäran till kundsupporten som ska ange IP-adressinformationen. I begäran bör varje miljö anges, och ytterligare förfrågningar bör göras om nya miljöer behöver funktionen efter den ursprungliga begäran. Sandlådeprogrammiljöer stöds inte.
 
 ### Funktionsanvändning
 
@@ -205,7 +205,7 @@ public JSONObject getJsonObject(String relativePath, String queryString) throws 
 }
 ```
 
-Samma dedikerade IP-adress används för alla kundprogram i Adobe-organisationen och för alla miljöer i respektive program. Det gäller både författare och publiceringstjänster.
+Samma dedikerade IP-adress används för alla kundprogram i Adobe och för alla miljöer i respektive program. Det gäller både författare och publiceringstjänster.
 
 Endast HTTP- och HTTPS-portar stöds. Detta inkluderar HTTP/1.1 och HTTP/2 när de är krypterade.
 
