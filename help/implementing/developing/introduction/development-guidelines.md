@@ -2,7 +2,7 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Fylls i
 translation-type: tm+mt
-source-git-commit: 171284a6f629dcf13d1fadfc6b7b5f0e69e41d84
+source-git-commit: eb2f944b4cc4311c6e0c10d34d02eafa6128f6aa
 workflow-type: tm+mt
 source-wordcount: '1949'
 ht-degree: 1%
@@ -171,21 +171,21 @@ Kunderna har inte tillgång till utvecklarverktyg för staging- och produktionsm
 
 Adobe övervakar applikationernas prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte programmått beaktas.
 
-## IP-adress för dedikerad utpressning
+## IP-adress för dedikerad utpressning {#dedicated-egress-ip-address}
 
 På begäran kommer AEM som Cloud Service att tillhandahålla en statisk, dedikerad IP-adress för HTTP (port 80) och HTTPS (port 443) utgående trafik som programmerats i Java-kod.
 
-### Fördelar
+### Fördelar {#benefits}
 
 Den här dedikerade IP-adressen kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM som en Cloud Service som erbjuder en tillåtelselista IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från kundens AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
 
 Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM som en Cloud Service genom en uppsättning IP-adresser som delas med andra kunder.
 
-### Konfiguration
+### Konfiguration {#configuration}
 
 Om du vill aktivera en dedikerad IP-adress skickar du en begäran till kundsupporten som ska ange IP-adressinformationen. I begäran bör varje miljö anges, och ytterligare förfrågningar bör göras om nya miljöer behöver funktionen efter den ursprungliga begäran. Sandlådeprogrammiljöer stöds inte.
 
-### Funktionsanvändning
+### Funktionsanvändning {#feature-usage}
 
 Funktionen är kompatibel med Java-kod eller bibliotek som resulterar i utgående trafik, förutsatt att de använder Java-standardegenskaper för proxykonfigurationer. I praktiken bör detta omfatta de vanligaste biblioteken.
 
@@ -209,6 +209,6 @@ Samma dedikerade IP-adress används för alla kundprogram i Adobe och för alla 
 
 Endast HTTP- och HTTPS-portar stöds. Detta inkluderar HTTP/1.1 och HTTP/2 när de är krypterade.
 
-### Felsökningsöverväganden
+### Felsökningsöverväganden {#debugging-considerations}
 
 Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. I annat fall kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/ip](https://ifconfig.me/ip), som returnerar den anropande IP-adressen.
