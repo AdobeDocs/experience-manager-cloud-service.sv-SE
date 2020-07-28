@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: a7c8e1ab8e0196a3a79d8e0963192775e64a2400
+source-git-commit: 436b4d05c88ba227144052fdd63ea78cbf1f03ba
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 3%
@@ -34,48 +34,62 @@ Observera att HTTP-begäranden som opereras från publiceringsskiktets Dispatche
 AEM som en Cloud Services ger åtkomst till Java-loggsatser. Utvecklare av program för AEM bör följa allmänna bästa praxis för Java-loggning, logga relevanta satser om exekvering av anpassad kod på följande loggnivåer:
 
 <table>
-<tbody>
 <tr>
-<td> <b>AEM</b></td>
-<td> <b>Loggnivå</b></td>
-<td> <b>Beskrivning</b></td>
-<td> <b>Logguttryckstillgänglighet</b></td>
+<td>
+<b>AEM</b></td>
+<td>
+<b>Loggnivå</b></td>
+<td>
+<b>Beskrivning</b></td>
+<td>
+<b>Logguttryckstillgänglighet</b></td>
 </tr>
 <tr>
-<td> Utveckling</td>
-<td> FELSÖKNING</td>
-<td> Beskriver vad som händer i programmet.
+<td>
+Utveckling</td>
+<td>
+FELSÖKNING</td>
+<td>
+Beskriver vad som händer i programmet.<br>
 
 När DEBUG-loggning är aktiv loggas programsatser som ger en tydlig bild av vilka aktiviteter som utförs samt alla nyckelparametrar som påverkar bearbetningen.</td>
-<td> <ul>
+<td>
+<ul>
 <li> Lokal utveckling</li>
 <li>Utveckling</li>
 </ul></td>
 </tr>
 <tr>
-<td> Scen</td>
-<td> VARNING</td>
-<td> Beskriver villkor som kan bli fel.
+<td>
+Scen</td>
+<td>
+VARNING</td>
+<td>
+Beskriver villkor som kan bli fel.<br>
 
 När WARN-loggning är aktiv loggas bara programsatser som anger att villkoren närmar sig suboptimaliteten.</td>
-<td> <ul>
+<td>
+<ul>
 <li> Lokal utveckling</li>
 <li>Utveckling</li>
 <li>Scen</li>
 </ul></td>
 </tr>
 <tr>
-<td> Produktion</td>
-<td> FEL</td>
-<td> Beskriver villkor som indikerar ett fel och som måste åtgärdas.
+<td>
+Produktion</td>
+<td>
+FEL</td>
+<td>
+Beskriver villkor som indikerar ett fel och som måste åtgärdas.<br>
 
 När FELloggning är aktiv loggas bara programsatser som anger fel. FELloggsatser indikerar ett allvarligt problem som bör lösas så snart som möjligt.</td>
-<td> <ul>
+<td>
+<ul>
 <li> Lokal utveckling</li>
 <li>Utveckling</li>
 <li>Scen</li>
 <li>Produktion</li>
 </ul></td>
 </tr>
-</tbody>
 </table>
