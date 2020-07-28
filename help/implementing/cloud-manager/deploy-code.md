@@ -2,7 +2,7 @@
 title: Distribuera koden - Cloud Service
 description: Distribuera koden - Cloud Service
 translation-type: tm+mt
-source-git-commit: 44e32343767878016a991f443e5911bfb2877a92
+source-git-commit: 164d2d3b4dabfa2b06da245dc33ef90b5b77192b
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 3%
@@ -10,7 +10,7 @@ ht-degree: 3%
 ---
 
 
-# Distribuera kod {#deploy-your-code}
+# Driftsätta kod {#deploy-your-code}
 
 ## Distribuera kod med Cloud Manager {#deploying-code-with-cloud-manager}
 
@@ -34,6 +34,7 @@ När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du re
    1. Scendistribution
    1. Scentestning
    1. Produktionsdistribution
+
    >[!NOTE]
    >
    >Dessutom kan du granska stegen från olika distributionsprocesser genom att visa loggar eller granska resultaten för att se testvillkoren.
@@ -58,7 +59,8 @@ När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du re
 
 
 
->[!IMPORTANT]:
+>[!IMPORTANT]
+>
 >Följande avsnitt måste uppdateras för Cloud Manager för AEM cloud services och pågår.
 
 ## Distributionsprocess {#deployment-process}
@@ -93,6 +95,7 @@ När Cloud Manager distribuerar till icke-produktionstopologier är målet att s
    1. Artefakten extraheras till katalogen httpd.  Oändringsbara filer skrivs inte över. Alla ändringar du gör i oföränderliga filer i Git-databasen ignoreras vid distributionen.  Dessa filer är viktiga för AMS-dispatcherramverket och kan inte ändras.
    1. Apache utför ett config-test. Om inga fel hittas läses tjänsten in igen. Om ett fel inträffar återställs konfigurationerna från en säkerhetskopia, tjänsten läses in igen och felet rapporteras tillbaka till Cloud Manager.
    1. Varje sökväg som anges i pipeline-konfigurationen görs ogiltig eller töms från dispatchercachen.
+
    >[!NOTE]
    >
    >Dispatcher-artefakten förväntas innehålla hela filuppsättningen.  Alla konfigurationsfiler för dispatcher måste finnas i Git-databasen. Om filer eller mappar saknas kommer distributionen att misslyckas.
