@@ -2,10 +2,10 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 1cee93310d84ea21b626f456163de6855056db5b
+source-git-commit: 161dc733d335fc62d7c3017647fe27c64a8dd26f
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 3%
+source-wordcount: '1077'
+ht-degree: 2%
 
 ---
 
@@ -51,7 +51,6 @@ Utveckling</td>
 FELSÖKNING</td>
 <td>
 Beskriver vad som händer i programmet.<br>
-
 När DEBUG-loggning är aktiv loggas programsatser som ger en tydlig bild av vilka aktiviteter som utförs samt alla nyckelparametrar som påverkar bearbetningen.</td>
 <td>
 <ul>
@@ -207,3 +206,19 @@ cm-p1234-e26813-aem-author-59555cb5b8-8kgr2 - example@adobe.com 30/Apr/2020:17:3
 cm-p1234-e26813-aem-author-59555cb5b8-8kgr2 - example@adobe.com 30/Apr/2020:17:37:14 +0000  "GET /libs/dam/gui/coral/components/admin/customthumb/clientlibs.lc-60e4443805c37afa0c74b674b141f1df-lc.min.css HTTP/1.1" 200 809 "https://author-p10711-e26813.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/en/images/example.jpeg&_charset_=utf8" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"
 cm-p1234-e26813-aem-author-59555cb5b8-8kgr2 - example@adobe.com 30/Apr/2020:17:37:14 +0000  "GET /libs/dam/gui/coral/components/admin/metadataeditor/clientlibs/metadataeditor.lc-4a2226d8232f8b7ab27d24820b9ddd64-lc.min.js HTTP/1.1" 200 7965 "https://author-p10711-e26813.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/en/images/example.jpeg&_charset_=utf8" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"
 ```
+
+### Konfigurera HTTP-åtkomstloggen {#configuring-the-http-access-log}
+
+HTTP-åtkomstloggen kan inte konfigureras som en Cloud Service i AEM.
+
+## Apache Web Server/Dispatcher Logging {#dispatcher-logging}
+
+AEM som en Cloud Service innehåller tre loggar för Apache-webbservrar och dispatcherskiktet i publiceringslagret:
+
+* Åtkomstlogg för Apache HTTPD-webbserver
+* Fellogg för Apache HTTPD-webbserver
+* Dispatcher-logg
+
+Observera att dessa loggar endast är tillgängliga för publiceringsnivån.
+
+Den här uppsättningen loggar ger information om HTTP-begäranden till AEM som en Cloud Service-publiceringsnivå innan dessa begäranden når det AEM programmet. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrar betjänas av cachelagrat innehåll från Apache HTTPD-webbservern och AEM Dispatcher, och aldrig når själva AEM-programmet, vilket innebär att det inte finns några loggsatser för dessa begäranden i AEM Java-, Request- eller Access-loggar.
