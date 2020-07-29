@@ -2,7 +2,7 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: 495332d7ea421133e29f73f8930bb069bb5b4ebd
+source-git-commit: fe4202cafcab99d22e05728f58974e1a770a99ed
 workflow-type: tm+mt
 source-wordcount: '3824'
 ht-degree: 9%
@@ -373,7 +373,7 @@ Detta startar dispatchern i en behållare med dess serverdel pekande på en AEM 
 
 ## Felsöka Apache- och Dispatcher-konfigurationen {#debugging-apache-and-dispatcher-configuration}
 
-Loggnivåer definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL` i `conf.d/variables/global.var`s&quot;. Mer information finns i [loggningsdokumentationen](/help/implementing/developing/introduction/logging.md) .
+Loggnivåer definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL` i `conf.d/variables/global.var`s&quot;. Mer information finns i [loggningsdokumentationen](/help/implementing/developing/introduction/logging.md#apache-web-server-and-dispatcher-logging) .
 
 ## Olika Dispatcher-konfigurationer per miljö {#different-dispatcher-configurations-per-environment}
 
