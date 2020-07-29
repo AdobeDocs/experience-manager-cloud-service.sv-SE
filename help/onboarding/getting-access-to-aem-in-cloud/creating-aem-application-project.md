@@ -1,23 +1,23 @@
 ---
-title: AEM Application Project - Cloud Service
-description: AEM Application Project - Cloud Service
+title: AEM - Cloud Service
+description: AEM - Cloud Service
 translation-type: tm+mt
-source-git-commit: 38be3237eb3245516d3ccf51d0718505ee5102f0
+source-git-commit: 9e27ff9510fda5ed238a25b2d63d1d9a3099a8b5
 workflow-type: tm+mt
-source-wordcount: '1482'
-ht-degree: 8%
+source-wordcount: '1414'
+ht-degree: 9%
 
 ---
 
 
 # Skapa ett AEM-programprojekt {#aem-application-project}
 
-## Använda guiden för att skapa ett AEM-programprojekt {#using-wizard-to-create-an-aem-application-project}
+## Använda guiden för att skapa ett AEM {#using-wizard-to-create-an-aem-application-project}
 
-För att hjälpa nya kunder att komma igång kan Cloud Manager nu skapa ett minimalt AEM-projekt som utgångspunkt. Processen bygger på [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+För att hjälpa nya kunder att komma igång kan Cloud Manager nu skapa ett minimalt AEM som utgångspunkt. Den här processen baseras på [**AEM projekttyp **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 
-Följ stegen nedan för att skapa ett AEM-programprojekt i Cloud Manager:
+Följ stegen nedan för att skapa ett AEM programprojekt i Cloud Manager:
 
 1. När du har loggat in på Cloud Manager och den grundläggande programkonfigurationen är klar, visas ett särskilt CTA-kort på skärmen **Översikt**, om databasen är tom.
 
@@ -40,7 +40,7 @@ Följ stegen nedan för att skapa ett AEM-programprojekt i Cloud Manager:
 
 ### Ändra projektinställningsinformation {#modifying-project-setup-details}
 
-För att kunna byggas och driftsättas med Cloud Manager måste befintliga AEM-projekt följa vissa grundläggande regler:
+För att kunna byggas och driftsättas med Cloud Manager måste befintliga AEM följa vissa grundläggande regler:
 
 * Projekt måste byggas med Apache Maven.
 * Det måste finnas en *pom.xml* -fil i Git-databasens rot. Den här *pom.xml* -filen kan referera till så många undermoduler (som i sin tur kan ha andra undermoduler osv.) vid behov.
@@ -71,42 +71,11 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 * Andra paket kan installeras vid byggtillfället enligt beskrivningen [nedan](#installing-additional-system-packages).
 * Varje bygge görs i en riktig miljö. byggbehållaren behåller inte något läge mellan körningar.
 * Maven körs alltid med kommandot: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
-* Maven konfigureras på systemnivå med filen settings.xml som automatiskt inkluderar den offentliga Adobe **Artifact** -databasen. (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/) .)
+* Maven är konfigurerad på systemnivå med filen settings.xml som automatiskt inkluderar databasen för Adobe **Artifact** . (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/) .)
 
 >[!NOTE]
 >Även om Cloud Manager inte definierar en specifik version av `jacoco-maven-plugin`filen måste den version som används vara minst `0.7.5.201505241946`.
 
-### Använda Java 11 {#using-java-11}
-
-Cloud Manager har nu stöd för att bygga kundprojekt med både Java 8 och Java 11. Som standard byggs projekt med Java 8. Kunder som tänker använda Java 11 i sina projekt kan göra det med [Apache Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/).
-
-Det gör du genom att lägga till en post som ser ut så här i filen pom.xml: `<plugin>`
-
-```xml
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-toolchains-plugin</artifactId>
-            <version>1.1</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>toolchain</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <toolchains>
-                    <jdk>
-                        <version>11</version>
-                        <vendor>oracle</vendor>
-                    </jdk>
-                </toolchains>
-            </configuration>
-        </plugin>
-```
-
->[!NOTE]
->De `vendor` värden som stöds är `oracle` och `sun` och de `version` värden som stöds är `1.8`, `1.11`och `11`.
 
 ## Miljövariabler {#environment-variables}
 
@@ -368,7 +337,7 @@ Samma teknik kan användas för att installera språkspecifika paket, dvs. med `
 
 >[!NOTE]
 >
->Om du installerar ett systempaket på det här sättet installeras det **inte** i körningsmiljön som används för att köra Adobe Experience Manager. Kontakta din Adobe-representant om du behöver ett systempaket som är installerat i AEM-miljön.
+>Om du installerar ett systempaket på det här sättet installeras det **inte** i körningsmiljön som används för att köra Adobe Experience Manager. Om du behöver ett systempaket som är installerat i AEM ska du kontakta Adobe.
 
 ## Hoppar över innehållspaket {#skipping-content-packages}
 
