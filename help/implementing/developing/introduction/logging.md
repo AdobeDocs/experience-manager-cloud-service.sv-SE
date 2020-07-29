@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 436b4d05c88ba227144052fdd63ea78cbf1f03ba
+source-git-commit: 49bb443019edc6bdec22e24b8a8c7733abe54e35
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 3%
@@ -66,7 +66,6 @@ Scen</td>
 VARNING</td>
 <td>
 Beskriver villkor som kan bli fel.<br>
-
 När WARN-loggning är aktiv loggas bara programsatser som anger att villkoren närmar sig suboptimaliteten.</td>
 <td>
 <ul>
@@ -82,7 +81,6 @@ Produktion</td>
 FEL</td>
 <td>
 Beskriver villkor som indikerar ett fel och som måste åtgärdas.<br>
-
 När FELloggning är aktiv loggas bara programsatser som anger fel. FELloggsatser indikerar ett allvarligt problem som bör lösas så snart som möjligt.</td>
 <td>
 <ul>
