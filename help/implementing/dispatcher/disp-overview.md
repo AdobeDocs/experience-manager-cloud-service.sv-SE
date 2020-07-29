@@ -2,7 +2,7 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: a6820eab30f2b318d62d2504cb17c12081a320a3
 workflow-type: tm+mt
 source-wordcount: '3914'
 ht-degree: 9%
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 ## Apache and Dispatcher configuration and testing {#apache-and-dispatcher-configuration-and-testing}
 
-I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apache- och Dispatcher-konfiguration samt hur du validerar och kör den lokalt innan du distribuerar den i molnmiljöer. Det beskriver även felsökning i molnmiljöer. Mer information om Dispatcher finns i dokumentationen [till](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)AEM Dispatcher.
+I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apache och Dispatcher-konfigurationer samt hur du validerar och kör den lokalt innan du distribuerar den i molnmiljöer. Det beskriver även felsökning i molnmiljöer. Mer information om Dispatcher finns i [AEM Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html).
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apach
 
 ## Dispatcher Tools {#dispatcher-sdk}
 
-Dispatcher-verktygen ingår i den övergripande AEM-lösningen som en Cloud Service-SDK och tillhandahåller:
+Dispatcher-verktygen utgör en del av den övergripande AEM som en Cloud Service-SDK och tillhandahåller:
 
 * En vaniljfilstruktur som innehåller de konfigurationsfiler som ska ingå i ett maven-projekt för dispatcher.
 * Verktyg för att kunderna ska kunna validera en dispatcherkonfiguration lokalt.
@@ -253,9 +253,9 @@ När programmet körs mot din maven-artefakt eller din `dispatcher/src` underkat
 $ validator full dispatcher/src
 Cloud manager validator 1.0.4
 2019/06/19 15:41:37 Apache configuration uses non-whitelisted directives:
- conf.d/enabled_vhosts/aem_publish.vhost:46: LogLevel
+  conf.d/enabled_vhosts/aem_publish.vhost:46: LogLevel
 2019/06/19 15:41:37 Dispatcher configuration validation failed:
- conf.dispatcher.d/enabled_farms/999_ams_publish_farm.any: filter allows access to CRXDE
+  conf.dispatcher.d/enabled_farms/999_ams_publish_farm.any: filter allows access to CRXDE
 ```
 
 Observera att valideringsverktyget endast rapporterar förbjuden användning av Apache-direktiv som inte har tillåtelselistad. Den rapporterar inte syntaktiska eller semantiska problem med din Apache-konfiguration eftersom den här informationen endast är tillgänglig för Apache-moduler i en körningsmiljö.
@@ -353,7 +353,7 @@ Du kan också testa din Apache- och Dispatcher-konfiguration lokalt. Docker mås
 
 Genom att använda parametern &quot;`-d`&quot; skickar valideraren en mapp med alla konfigurationsfiler som behövs för dispatchern.
 
-Sedan kan skriptet peka på den mappen och påbörja `docker_run.sh` behållaren med din konfiguration.
+Sedan kan skriptet peka på den mappen och påbörja behållaren med din konfiguration. `docker_run.sh`
 
 ```
 $ validator full -d out src/dispatcher
@@ -368,7 +368,7 @@ Starting httpd server
 ...
 ```
 
-Detta startar dispatchern i en behållare med dess serverdel som pekar på en AEM-instans som körs på din lokala Mac OS-dator vid port 4503.
+Detta startar dispatchern i en behållare med dess serverdel pekande på en AEM som körs på din lokala Mac OS-dator vid port 4503.
 
 ## Felsöka Apache- och Dispatcher-konfigurationen {#debugging-apache-and-dispatcher-configuration}
 
@@ -406,7 +406,7 @@ Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 
 ## Olika Dispatcher-konfigurationer per miljö {#different-dispatcher-configurations-per-environment}
 
-Nu används samma dispatcherkonfiguration för alla AEM-Cloud Service som en -systemmiljö. Körningsmiljön kommer att ha en miljövariabel `ENVIRONMENT_TYPE` som innehåller det aktuella körningsläget (dev, stage eller prod) samt en definition. Definitionen kan vara `ENVIRONMENT_DEV`, `ENVIRONMENT_STAGE` eller `ENVIRONMENT_PROD`. I Apache-konfigurationen kan variabeln användas direkt i ett uttryck. Definitionen kan också användas för att skapa logik:
+Nu används samma dispatcherkonfiguration för alla AEM som en Cloud Service-miljö. Körningsmiljön kommer att ha en miljövariabel `ENVIRONMENT_TYPE` som innehåller det aktuella körningsläget (dev, stage eller prod) samt en definition. Definitionen kan vara `ENVIRONMENT_DEV`, `ENVIRONMENT_STAGE` eller `ENVIRONMENT_PROD`. I Apache-konfigurationen kan variabeln användas direkt i ett uttryck. Definitionen kan också användas för att skapa logik:
 
 ```
 # Simple usage of the environment variable
@@ -465,17 +465,17 @@ $ docker exec d75fbd23b29 httpd-test
 
 ## De viktigaste skillnaderna mellan AMS Dispatcher och AEM som Cloud Service {#main-differences-between-ams-dispatcher-configuration-and-aem-as-a-cloud-service}
 
-Såsom beskrivs på referenssidan ovan liknar Apache- och Dispatcher-konfigurationen i AEM som en Cloud Service AMS-konfigurationen. De viktigaste skillnaderna är:
+Som beskrivs på referenssidan ovan liknar Apache- och Dispatcher-konfigurationen i AEM som en Cloud Service AMS-konfigurationen. De viktigaste skillnaderna är:
 
 * I AEM som Cloud Service kan vissa Apache-direktiv inte användas (till exempel `Listen` eller `LogLevel`)
 * I AEM som Cloud Service kan endast vissa delar av Dispatcher-konfigurationen placeras i inkluderingsfiler och deras namn är viktigt. Filterregler som du vill återanvända på olika värdar måste till exempel läggas i en fil som kallas `filters/filters.any`. Mer information finns på referenssidan.
-* I AEM som Cloud Service finns det extra validering för att förhindra säkerhetsproblem och förhindra att filterregler skrivs med `/glob` . Eftersom `deny *` används i stället för `allow *` (vilket inte kan användas) har man nytta av att köra Dispatcher lokalt och göra en testversion och felsökning. Loggarna visar exakt vilka vägar Dispatcher-filtren blockerar för att dessa ska kunna läggas till.
+* I AEM som Cloud Service finns det extra validering för att förhindra att filterregler skrivs med `/glob` för att förhindra säkerhetsproblem. Eftersom `deny *` används i stället för `allow *` (vilket inte kan användas) har man nytta av att köra Dispatcher lokalt och göra en testversion och felsökning. Loggarna visar exakt vilka vägar Dispatcher-filtren blockerar för att dessa ska kunna läggas till.
 
-## Riktlinjer för migrering av dispatcherkonfiguration från AMS till AEM som Cloud Service
+## Riktlinjer för att migrera dispatcher-konfiguration från AMS till AEM som Cloud Service
 
-Konfigurationsstrukturen för dispatcher har skillnader mellan hanterade tjänster och AEM som en Cloud Service. Nedan visas en steg-för-steg-guide om hur du migrerar från AMS Dispatcher version 2 till AEM som Cloud Service.
+Dispatcher-konfigurationsstrukturen har olika Managed Services och AEM som en Cloud Service. Nedan visas en steg-för-steg-guide om hur du migrerar från AMS Dispatcher version 2 till AEM som Cloud Service.
 
-## Konvertera en AMS till en AEM-tjänst som en konfiguration för Cloud Service Dispatcher
+## Konvertera en AMS till en AEM som en konfiguration för Cloud-tjänstdispatcher
 
 I följande avsnitt ges stegvisa instruktioner för hur du konverterar en AMS-konfiguration. It assumes
 that you have an archive with a structure similar to the one described in [Cloud Manager dispatcher configuration](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
@@ -694,7 +694,7 @@ $include "../virtualhosts/default_virtualhosts.any"
 
 ### Kontrollera status genom att köra valideraren
 
-Kör AEM som Cloud Service dispatcher-validerare i din katalog med `dispatcher` underkommandot:
+Kör AEM som en Cloud Service dispatcher-validerare i din katalog med `dispatcher` underkommandot:
 
 ```
 $ validator dispatcher .
