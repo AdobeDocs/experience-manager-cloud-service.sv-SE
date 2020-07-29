@@ -2,9 +2,9 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 161dc733d335fc62d7c3017647fe27c64a8dd26f
+source-git-commit: bbcadf29dbac89191a3a1ad31ee6721f8f57ef95
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1081'
 ht-degree: 2%
 
 ---
@@ -195,9 +195,41 @@ Loggen är användbar för att snabbt förstå vilka HTTP-begäranden som görs 
 
 ### Loggformat {#access-log-format}
 
-| AEM som Cloud Service-nod-ID | Klientens IP-adress | Användare |  | Datum och tid |  | HTTP-metod | Webbadress | Protokoll |  | HTTP-svar | HTTP-begärandetid i millisekunder | Referent | Användaragent |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| cm-p1235-e2644-aem-author-59555cb5b8-8kgr2 | - | `myuser@adobe.com` | 30/Apr/2020:17:37:14 +000 | &quot; | GET | /libs/granite/ui/references/clientlibs/references.lc-5188e85840c529149e6cd29d94e74ad5-lc.min.css |  | HTTP/1.1 | &quot; | 200 | 1141 | `"https://author-p1234-e4444.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/wknd/en/adventures/surf-camp-in-costa-rica/adobestock_266405335.jpeg&_charset_=utf8"` | &quot;Mozilla/5.0 (Macintosh); Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, t.ex. Gecko) Chrome/81.0.4044.122 Safari/537.36&quot; |
+<table>
+<tbody>
+<tr>
+<td><b>AEM som Cloud Service-nod-ID</b></td>
+<td><b>Klientens IP-adress</b></td>
+<td><b>Användare</b></td>
+<td><b>Datum och tid</b></td>
+<td><b>Tom</b></td>
+<td><b>HTTP-metod</b></td>
+<td><b>Webbadress</b></td>
+<td><b>Protokoll</b></td>
+<td><b>Tom</b></td>
+<td><b>HTTP-svarsstatus</b></td>
+<td><b>HTTP-svarstid i millisekunder</b></td>
+<td><b>Referent</b></td>
+<td><b>Användaragent</b></td>
+</tr>
+<tr>
+<td>cm-p1235-e2644-aem-author-59555cb5b8-8kgr2</td>
+<td>-</td>
+<td>myuser@adobe.com</td>
+<td>30/Apr/2020:17:37:14 +000</td>
+<td>"</td>
+<td>GET</td>
+<td>/libs/granite/ui/references/clientlibs/references.lc-5188e85840c529149e6cd29d94e74ad5-lc.min.css</td>
+<td>HTTP/1.1</td>
+<td>"</td>
+<td>200</td>
+<td>1141</td>
+<td><code>"https://author-p1234-e4444.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/wknd/en/adventures/surf-camp-in-costa-rica/adobestock_266405335.jpeg&_charset_=utf8"</code></td>
+<td>"Mozilla/5.0 (Macintosh); Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, t.ex. Gecko) Chrome/81.0.4044.122 Safari/537.36"</td>
+</tr>
+</tbody>
+</table>
+
 
 **Exempel**
 
