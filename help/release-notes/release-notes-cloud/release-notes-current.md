@@ -2,9 +2,9 @@
 title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.7.0
 description: Versionsinformation om Experience Manager för 2020.7.0
 translation-type: tm+mt
-source-git-commit: f96a9b89bb704b8b8b8eb94cdb5f94cc42890ec8
+source-git-commit: 9e27ff9510fda5ed238a25b2d63d1d9a3099a8b5
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 ## Nyheter i Cloud Manager {#cloud-manager}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en Cloud Service version 2020.7.0.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en Cloud Service-version 2020.7.0.
 
 ### Releasedatum {#release-date}
 
@@ -29,8 +29,6 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.7.0 är 9 juli 2020.
 * Vilolägen miljöer har nu en diskret status i Cloud Manager när de är i viloläge.
 
 * Antalet miljövariabler per miljö har ökat till 200.
-
-* Molnhanterarens byggbehållare har nu stöd för både Java 8 och Java 11.
 
 * Molnhanterarens pipelines har nu stöd för kundspecifika variabler och hemligheter.
 Mer information finns i [Pipeline-variabler](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#pipeline-variables) .
@@ -71,5 +69,5 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * CRA upptäckte dubbletter av anpassade komponenter.
 
-* På AEM 6.1 avslutades innehållsinspektionen innan den fullständiga undersökningen slutfördes. Undantagshantering har lagts till så att inspektören kan hoppa över och fortsätta tills den fullständiga inspektionen är slutförd.
+* AEM 6.1 avslutades innehållsinspektionen innan den fullständiga undersökningen slutfördes. Undantagshantering har lagts till så att inspektören kan hoppa över och fortsätta tills den fullständiga inspektionen är slutförd.
 
