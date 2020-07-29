@@ -2,9 +2,9 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: bbcadf29dbac89191a3a1ad31ee6721f8f57ef95
+source-git-commit: 68445e086aeae863520d14cb712f0cbebbffb5ab
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1304'
 ht-degree: 2%
 
 ---
@@ -195,41 +195,18 @@ Loggen är användbar för att snabbt förstå vilka HTTP-begäranden som görs 
 
 ### Loggformat {#access-log-format}
 
-<table>
-<tbody>
-<tr>
-<td><b>AEM som Cloud Service-nod-ID</b></td>
-<td><b>Klientens IP-adress</b></td>
-<td><b>Användare</b></td>
-<td><b>Datum och tid</b></td>
-<td><b>Tom</b></td>
-<td><b>HTTP-metod</b></td>
-<td><b>Webbadress</b></td>
-<td><b>Protokoll</b></td>
-<td><b>Tom</b></td>
-<td><b>HTTP-svarsstatus</b></td>
-<td><b>HTTP-svarstid i millisekunder</b></td>
-<td><b>Referent</b></td>
-<td><b>Användaragent</b></td>
-</tr>
-<tr>
-<td>cm-p1235-e2644-aem-author-59555cb5b8-8kgr2</td>
-<td>-</td>
-<td>myuser@adobe.com</td>
-<td>30/Apr/2020:17:37:14 +000</td>
-<td>"</td>
-<td>GET</td>
-<td>/libs/granite/ui/references/clientlibs/references.lc-5188e85840c529149e6cd29d94e74ad5-lc.min.css</td>
-<td>HTTP/1.1</td>
-<td>"</td>
-<td>200</td>
-<td>1141</td>
-<td><code>"https://author-p1234-e4444.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/wknd/en/adventures/surf-camp-in-costa-rica/adobestock_266405335.jpeg&_charset_=utf8"</code></td>
-<td>"Mozilla/5.0 (Macintosh); Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, t.ex. Gecko) Chrome/81.0.4044.122 Safari/537.36"</td>
-</tr>
-</tbody>
-</table>
-
+| AEM som Cloud Service-nod-ID | cm-p1234-e26813-aem-publish-5c787687c-lqlxr |
+|---|---|
+| Klientens IP-adress | - |
+| Användare | myuser@adobe.com |
+| Datum och tid | 30/Apr/2020:17:37:14 +000 |
+| HTTP-metod | GET |
+| Webbadress | /libs/granite/ui/references/clientlibs/references.lc-5188e85840c529149e6cd29d94e74ad5-lc.min.css |
+| Protokoll | HTTP/1.1 |
+| HTTP-svarsstatus | 200 |
+| HTTP-begärandetid i millisekunder | 1141 |
+| Referent | `"https://author-p1234-e4444.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/wknd/en/adventures/surf-camp-in-costa-rica/adobestock_266405335.jpeg&_charset_=utf8"` |
+| Användaragent | &quot;Mozilla/5.0 (Macintosh); Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, t.ex. Gecko) Chrome/81.0.4044.122 Safari/537.36&quot; |
 
 **Exempel**
 
@@ -243,7 +220,7 @@ cm-p1234-e26813-aem-author-59555cb5b8-8kgr2 - example@adobe.com 30/Apr/2020:17:3
 
 HTTP-åtkomstloggen kan inte konfigureras som en Cloud Service i AEM.
 
-## Apache Web Server/Dispatcher Logging {#dispatcher-logging}
+## Apache Web Server och Dispatcher Logging {#apache-web-server-and-dispatcher-logging}
 
 AEM som en Cloud Service innehåller tre loggar för Apache-webbservrar och dispatcherskiktet i publiceringslagret:
 
@@ -253,4 +230,74 @@ AEM som en Cloud Service innehåller tre loggar för Apache-webbservrar och disp
 
 Observera att dessa loggar endast är tillgängliga för publiceringsnivån.
 
-Den här uppsättningen loggar ger information om HTTP-begäranden till AEM som en Cloud Service-publiceringsnivå innan dessa begäranden når det AEM programmet. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrar betjänas av cachelagrat innehåll från Apache HTTPD-webbservern och AEM Dispatcher, och aldrig når själva AEM-programmet, vilket innebär att det inte finns några loggsatser för dessa begäranden i AEM Java-, Request- eller Access-loggar.
+Den här uppsättningen loggar ger information om HTTP-begäranden till AEM som en Cloud Service-publiceringsnivå innan dessa begäranden når det AEM programmet. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrarna vanligtvis hanteras av innehåll som cachas av Apache HTTPD-webbservern och AEM Dispatcher, och som aldrig når själva AEM. Därför finns det inga loggsatser för dessa förfrågningar i AEM Java-, Request- eller Access-loggar.
+
+### Åtkomstlogg för Apache HTTPD-webbserver {#apache-httpd-web-server-access-log}
+
+Åtkomstloggen för Apache HTTP Web Server innehåller programsatser för varje HTTP-begäran som når publiceringsskiktets webbserver/Dispatcher. Observera att förfrågningar som hanteras från ett CDN i ett tidigare flöde inte återspeglas i dessa loggar.
+
+Mer information om felloggformatet finns i den [officiella dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#accesslog)för cacheminnet.
+
+**Loggformat**
+
+<!--blank until prod build finishes-->
+
+**Exempel**
+
+```
+cm-p1234-e5678-aem-publish-b86c6b466-qpfvp - - 17/Jul/2020:09:14:41 +0000  "GET /etc.clientlibs/wknd/clientlibs/clientlib-site/resources/images/favicons/favicon-32.png HTTP/1.1" 200 715 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:78.0) Gecko/20100101 Firefox/78.0"
+cm-p1234-e5678-aem-publish-b86c6b466-qpfvp - - 17/Jul/2020:09:14:41 +0000  "GET /etc.clientlibs/wknd/clientlibs/clientlib-site/resources/images/favicons/favicon-512.png HTTP/1.1" 200 9631 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:78.0) Gecko/20100101 Firefox/78.0"
+cm-p1234-e5678-aem-publish-b86c6b466-qpfvp - - 17/Jul/2020:09:14:42 +0000  "GET /etc.clientlibs/wknd/clientlibs/clientlib-site/resources/images/country-flags/US.svg HTTP/1.1" 200 810 "https://publish-p6902-e30226.adobeaemcloud.com/content/wknd/us/en.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:78.0) Gecko/20100101 Firefox/78.0"
+```
+
+### Konfigurera åtkomstloggen för Apache HTTPD-webbservern {#configuring-the-apache-httpd-webs-server-access-log}
+
+Loggen kan inte konfigureras i AEM som en Cloud Service.
+
+## Fellogg för Apache HTTPD-webbserver {#apache-httpd-web-server-error-log}
+
+Felloggen för Apache HTTP Web Server innehåller programsatser för varje fel i Publish-skiktets webbserver/Dispatcher.
+
+Mer information om felloggformatet finns i den [officiella dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#errorlog)för cacheminnet.
+
+**Loggformat**
+
+<!--placeholder-->
+
+**Exempel**
+
+```
+Fri Jul 17 02:19:48.093820 2020 [mpm_worker:notice] [pid 1:tid 140272153361288] [cm-p1234-e30226-aem-publish-b86c6b466-b9427] AH00292: Apache/2.4.43 (Unix) Communique/4.3.4-20200424 mod_qos/11.63 configured -- resuming normal operations
+Fri Jul 17 02:19:48.093874 2020 [core:notice] [pid 1:tid 140272153361288] [cm-p1234-e30226-aem-publish-b86c6b466-b9427] AH00094: Command line: 'httpd -d /etc/httpd -f /etc/httpd/conf/httpd.conf -D FOREGROUND -D ENVIRONMENT_PROD'
+Fri Jul 17 02:29:34.517189 2020 [mpm_worker:notice] [pid 1:tid 140293638175624] [cm-p1234-e30226-aem-publish-b496f64bf-5vckp] AH00295: caught SIGTERM, shutting down
+```
+
+### Konfigurerar felloggen för Apache HTTPD-webbservern {#configuring-the-apache-httpd-web-server-error-log}
+
+Loggnivåerna mod_rewrite definieras av variabeln REWRITE_LOG_LEVEL i filen `conf.d/variables/global.var`.
+
+Den kan anges till Error, Warn, Info, Debug och Trace1 - Trace8, med standardvärdet Warn. Om du vill felsöka RewriteRules rekommenderar vi att du höjer loggnivån till Trace2.
+
+Mer information finns i dokumentationen [för modulen](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#logging) mod_rewrite.
+
+Om du vill ange loggnivån per miljö använder du lämplig villkorsgren i filen global.var enligt beskrivningen nedan:
+
+```
+Define REWRITE_LOG_LEVEL Debug
+  
+<IfDefine ENVIRONMENT_STAGE>
+  ...
+  Define REWRITE_LOG_LEVEL Warn
+  ...
+</IfDefine>
+<IfDefine ENVIRONMENT_PROD>
+  ...
+  Define REWRITE_LOG_LEVEL Error
+  ...
+</IfDefine>
+```
+
+## Dispatcher Log {#dispatcher-log}
+
+**Loggformat**
+
