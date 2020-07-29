@@ -2,10 +2,10 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 49bb443019edc6bdec22e24b8a8c7733abe54e35
+source-git-commit: c7100f53ce38cb8120074ec4eb9677fb7303d007
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 3%
+source-wordcount: '873'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,7 @@ Loggning på AEM programnivå hanteras av tre loggar:
 
 Observera att HTTP-begäranden som opereras från publiceringsskiktets Dispatcher-cache eller CDN i det överordnade flödet inte återspeglas i dessa loggar.
 
-### AEM Java-loggning {#aem-java-logging}
+## AEM Java-loggning {#aem-java-logging}
 
 AEM som en Cloud Services ger åtkomst till Java-loggsatser. Utvecklare av program för AEM bör följa allmänna bästa praxis för Java-loggning, logga relevanta satser om exekvering av anpassad kod på följande loggnivåer:
 
@@ -91,3 +91,105 @@ När FELloggning är aktiv loggas bara programsatser som anger fel. FELloggsatse
 </ul></td>
 </tr>
 </table>
+
+Java-loggning har stöd för flera andra nivåer av loggningsgranularitet, men AEM som en Cloud Service rekommenderar att du använder de tre nivåer som beskrivs ovan.
+
+AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur är implementerade för Git, och distribueras via Cloud Manager för att AEM som en Cloud Service. På grund av detta är det bäst att hålla loggsatserna konsekventa och välkända för miljötyper, för att säkerställa att loggarna som är tillgängliga via AEM eftersom Cloud Service är tillgänglig på optimal loggnivå utan att programmet behöver distribueras om med den uppdaterade loggnivåkonfigurationen.
+
+### Loggformat {#log-format}
+
+| Datum och tid | AEM som Cloud Service-ID | Loggnivå | Tråd | Java-klass | Loggmeddelande |
+|---|---|---|---|---|---|
+| 29.04.2020 21:50:13.398 | `[cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]` | `*DEBUG*` | qtp2130572036-1472 | com.example.approval.workflow.impl.CustomApprovalWorkflow | Ingen angiven godkännare, standardinställning för användargruppen [ Creative Approvers ] |
+
+**Exempel på loggutdata**
+
+`22.06.2020 18:33:30.120 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *ERROR* [qtp501076283-1809] io.prometheus.client.dropwizard.DropwizardExports Failed to get value from Gauge`
+`22.06.2020 18:33:30.229 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *INFO* [qtp501076283-1805] org.apache.sling.auth.core.impl.SlingAuthenticator getAnonymousResolver: Anonymous access not allowed by configuration - requesting credentials`
+`22.06.2020 18:33:30.370 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *INFO* [73.91.59.34 [1592850810364] GET /libs/granite/core/content/login.html HTTP/1.1] org.apache.sling.i18n.impl.JcrResourceBundle Finished loading 0 entries for 'en_US' (basename: <none>) in 4ms`
+`22.06.2020 18:33:30.372 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *INFO* [FelixLogListener] org.apache.sling.i18n Service [5126, [java.util.ResourceBundle]] ServiceEvent REGISTERED`
+`22.06.2020 18:33:30.372 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *WARN* [73.91.59.34 [1592850810364] GET /libs/granite/core/content/login.html HTTP/1.1] libs.granite.core.components.login.login$jsp j_reason param value 'unknown' cannot be mapped to a valid reason message: ignoring`
+
+### Konfigurationsloggare {#configuration-loggers}
+
+AEM Java-loggar definieras som OSGi-konfiguration och anger därmed specifika AEM som en Cloud Service-miljö med körlägesmappar.
+
+Konfigurera java-loggning för anpassade Java-paket via OSGi-konfigurationer för Sling LogManager-fabriken. Det finns två konfigurationsegenskaper som stöds:
+
+| OSGi Configuration-egenskap | Beskrivning |
+|---|---|
+| org.apache.sling.commons.log.names | Java-paketen som loggsatser ska samlas in för. |
+| org.apache.sling.commons.log.level | Loggnivån som Java-paketen ska loggas på, som anges av org.apache.sling.Commons.log.names |
+
+Om du ändrar andra konfigurationsegenskaper för LogManager OSGi kan det leda till tillgänglighetsproblem i AEM som Cloud Service.
+
+Följande är exempel på de rekommenderade loggningskonfigurationerna (med platshållarens Java-paket från `com.example`) för de tre AEM som en Cloud Service-miljötyp.
+
+### Utveckling {#development}
+
+/apps/my-app/config/org.apache.sling.Commons.log.LogManager.factory.config-example.cfg.json
+
+```
+{
+    "org.apache.sling.commons.log.names": ["com.example"],
+    "org.apache.sling.commons.log.level": "debug"
+}
+```
+
+### Scen {#stage}
+
+/apps/my-app/config.stage/org.apache.sling.Commons.log.LogManager.factory.config-example.cfg.json
+
+```
+{
+    "org.apache.sling.commons.log.names": ["com.example"],
+    "org.apache.sling.commons.log.level": "warn"
+}
+```
+
+### Produktion {#productiomn}
+
+/apps/my-app/config.prod/org.apache.sling.Commons.log.LogManager.factory.config-example.cfg.json
+
+```
+{
+    "org.apache.sling.commons.log.names": ["com.example"],
+    "org.apache.sling.commons.log.level": "error"
+}
+```
+
+## Loggning av AEM HTTP-begäran {#aem-http-request-logging}
+
+AEM som en Cloud Services loggning av HTTP-begäran ger insikt i HTTP-begäranden som gjorts till AEM och deras HTTP-svar i tidsordning. Loggen är användbar för att förstå HTTP-begäranden som gjorts till AEM och i vilken ordning de bearbetas och besvaras.
+
+Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och svarspar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Observera att ofta förfrågningar och deras motsvarande svar har andra HTTP-förfrågningar och svar som har intervjuats mellan dem i loggen.
+
+### Loggformat {#http-request-logging-format}
+
+| Datum och tid | ID för fråge-/svarspar |  | HTTP-metod | Webbadress | Protokoll | AEM som Cloud Service-nod-ID |
+|---|---|---|---|---|---|---|
+| 29/Apr/2020:19:14:21 +000 | `[137]` | -> | POST | /conf/global/settings/dam/adminui-extension/metadataprofile/ | HTTP/1.1 | `[cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]` |
+
+**Exempellogg**
+
+```
+29/Apr/2020:19:14:21 +0000 [137] -> POST /conf/global/settings/dam/adminui-extension/metadataprofile/ HTTP/1.1 [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
+...
+29/Apr/2020:19:14:22 +0000 [139] -> GET /mnt/overlay/dam/gui/content/processingprofilepage/metadataprofiles/editor.html/conf/global/settings/dam/adminui-extension/metadataprofile/main HTTP/1.1 [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
+...
+29/Apr/2020:19:14:21 +0000 [137] <- 201 text/html 111ms [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
+...
+29/Apr/2020:19:14:22 +0000 [139] <- 200 text/html;charset=utf-8 637ms [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
+```
+
+### Konfigurera loggen {#configuring-the-log}
+
+Loggen för AEM HTTP-begäran kan inte konfigureras i AEM som en Cloud Service.
+
+## Loggning av AEM HTTP-åtkomst {#aem-http-access-logging}
+
+AEM när HTTP-åtkomstloggning för Cloud Service visar HTTP-begäranden i tidsordning. Varje loggpost representerar den HTTP-begäran som AEM åtkomst till.
+
+Loggen är användbar för att snabbt förstå vilka HTTP-begäranden som görs till AEM, om de lyckas genom att titta på den tillhörande HTTP-svarsstatuskoden och hur lång tid det tog att slutföra HTTP-begäran. Den här loggen kan också vara användbar om du vill felsöka en viss användares aktivitet genom att filtrera loggposter efter användare.
+
+### Loggformat {#access-log-format}
