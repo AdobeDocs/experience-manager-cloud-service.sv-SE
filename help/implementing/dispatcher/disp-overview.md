@@ -2,9 +2,9 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: a6820eab30f2b318d62d2504cb17c12081a320a3
+source-git-commit: 495332d7ea421133e29f73f8930bb069bb5b4ebd
 workflow-type: tm+mt
-source-wordcount: '3914'
+source-wordcount: '3824'
 ht-degree: 9%
 
 ---
@@ -189,6 +189,7 @@ Den här filen genereras vid start och ingår i det grundläggande ramverket. Du
 Standardvärdglobbning som passar för ett standardprojekt. Ändra `virtualhosts.any`om du behöver anpassa. När du anpassar bör du inte ta med standardvärddatorns ordlista, eftersom den matchar **varje** inkommande begäran.
 
 >[!NOTE]
+>
 >AEM som en Cloud Service maven-arkityp genererar samma konfigurationsfilstruktur för dispatcher.
 
 Avsnitten nedan beskriver hur konfigurationen valideras lokalt så att den kan skicka den associerade kvalitetsgaten i Cloud Manager när en intern release distribueras.
@@ -353,7 +354,7 @@ Du kan också testa din Apache- och Dispatcher-konfiguration lokalt. Docker mås
 
 Genom att använda parametern &quot;`-d`&quot; skickar valideraren en mapp med alla konfigurationsfiler som behövs för dispatchern.
 
-Sedan kan skriptet peka på den mappen och påbörja behållaren med din konfiguration. `docker_run.sh`
+Sedan kan skriptet peka på den mappen och påbörja `docker_run.sh` behållaren med din konfiguration.
 
 ```
 $ validator full -d out src/dispatcher
@@ -372,37 +373,7 @@ Detta startar dispatchern i en behållare med dess serverdel pekande på en AEM 
 
 ## Felsöka Apache- och Dispatcher-konfigurationen {#debugging-apache-and-dispatcher-configuration}
 
-Följande strategi kan användas för att öka loggutdata för dispatchermodulen och för att se resultatet av `RewriteRule` utvärderingen i både lokala miljöer och molnmiljöer.
-
-Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL`. De kan ställas in i filen `conf.d/variables/global.vars`. Den relevanta delen är följande:
-
-```
-# Log level for the dispatcher
-#
-# Possible values are: Error, Warn, Info, Debug and Trace1
-# Default value: Warn
-#
-# Define DISP_LOG_LEVEL Warn
- 
-# Log level for mod_rewrite
-#
-# Possible values are: Error, Warn, Info, Debug and Trace1 - Trace8
-# Default value: Warn
-#
-# To debug your RewriteRules, it is recommended to raise your log
-# level to Trace2.
-#
-# More information can be found at:
-# https://httpd.apache.org/docs/current/mod/mod_rewrite.html#logging
-#
-# Define REWRITE_LOG_LEVEL Warn
-```
-
-När du kör Dispatcher lokalt skrivs loggar även ut direkt till slututdata. Oftast ska loggarna vara i DEBUG, vilket kan uppnås genom att skicka felsökningsnivån som en parameter när Docker körs. Till exempel:
-
-`DISP_LOG_LEVEL=Debug ./bin/docker_run.sh out docker.for.mac.localhost:4503 8080`
-
-Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
+Loggnivåer definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL` i `conf.d/variables/global.var`s&quot;. Mer information finns i [loggningsdokumentationen](/help/implementing/developing/introduction/logging.md) .
 
 ## Olika Dispatcher-konfigurationer per miljö {#different-dispatcher-configurations-per-environment}
 
