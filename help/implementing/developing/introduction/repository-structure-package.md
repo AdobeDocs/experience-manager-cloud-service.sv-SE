@@ -1,8 +1,8 @@
 ---
 title: 'Strukturpaket för AEM-projektdatabas  '
-description: Adobe Experience Manager som ett molntjänstprojekt i Maven kräver en underpaketsdefinition för databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets kodunderpaket distribueras till.
+description: Adobe Experience Manager som ett Cloud Service Maven-projekt kräver en definition av underpaketet Databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets Code-underpaket distribueras till.
 translation-type: tm+mt
-source-git-commit: 26833f59f21efa4de33969b7ae2e782fe5db8a14
+source-git-commit: a6820eab30f2b318d62d2504cb17c12081a320a3
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 9%
@@ -12,7 +12,7 @@ ht-degree: 9%
 
 # Strukturpaket för AEM-projektdatabas
 
-Maven-projekt för Adobe Experience Manager som en molntjänst kräver en underpaketsdefinition för databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets kodunderpaket distribueras till. Detta garanterar att installationen av paket i Experience Manager som en molntjänst automatiskt beställs av JCR-resursberoenden. Saknade beroenden kan leda till scenarier där understrukturer installeras före sina överordnade strukturer och därför tas bort oväntat, vilket bryter distributionen.
+Maven-projekt för Adobe Experience Manager som en Cloud Service kräver en underpaketsdefinition för databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets kodunderpaket distribueras till. Detta garanterar att installationen av paket i Experience Manager som en Cloud Service automatiskt beställs av JCR-resursberoenden. Saknade beroenden kan leda till scenarier där understrukturer installeras före sina överordnade strukturer och därför tas bort oväntat, vilket bryter distributionen.
 
 Om kodpaketet distribueras till en plats som **inte täcks** av kodpaketet måste alla överordnade resurser (JCR-resurser som ligger närmare JCR-roten) räknas upp i databasstrukturpaketet för att dessa beroenden ska kunna etableras.
 
