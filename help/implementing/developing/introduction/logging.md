@@ -2,9 +2,9 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 0bb5ff11762a4a3a158d211f8bba2ff77d1d3201
+source-git-commit: db0ea2367e8ecf645694a0f33b9f3b99010ec491
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2212'
 ht-degree: 2%
 
 ---
@@ -97,8 +97,6 @@ Java-loggning har stöd för flera andra nivåer av loggningsgranularitet, men A
 
 AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur är implementerade för Git, och distribueras via Cloud Manager för att AEM som en Cloud Service. På grund av detta är det bäst att hålla loggsatserna konsekventa och välkända för miljötyper, för att säkerställa att loggarna som är tillgängliga via AEM eftersom Cloud Service är tillgänglig på optimal loggnivå utan att programmet behöver distribueras om med den uppdaterade loggnivåkonfigurationen.
 
-### Loggformat {#log-format}
-
 **Exempel på loggutdata**
 
 ```
@@ -108,6 +106,8 @@ AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur �
 22.06.2020 18:33:30.372 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *INFO* [FelixLogListener] org.apache.sling.i18n Service [5126, [java.util.ResourceBundle]] ServiceEvent REGISTERED
 22.06.2020 18:33:30.372 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *WARN* [73.91.59.34 [1592850810364] GET /libs/granite/core/content/login.html HTTP/1.1] libs.granite.core.components.login.login$jsp j_reason param value 'unknown' cannot be mapped to a valid reason message: ignoring
 ```
+
+**Loggformat**
 
 <table>
 <tbody>
@@ -192,8 +192,6 @@ AEM som en Cloud Services loggning av HTTP-begäran ger insikt i HTTP-begärande
 
 Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och svarspar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Observera att ofta förfrågningar och deras motsvarande svar har andra HTTP-förfrågningar och svar som har intervjuats mellan dem i loggen.
 
-### Loggformat {#http-request-logging-format}
-
 **Exempellogg**
 
 ```
@@ -205,6 +203,8 @@ Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och sva
 ...
 29/Apr/2020:19:14:22 +0000 [139] <- 200 text/html;charset=utf-8 637ms [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
 ```
+
+**Loggformat**
 
 <table>
 <tbody>
@@ -246,15 +246,15 @@ AEM när HTTP-åtkomstloggning för Cloud Service visar HTTP-begäranden i tidso
 
 Loggen är användbar för att snabbt förstå vilka HTTP-begäranden som görs till AEM, om de lyckas genom att titta på den tillhörande HTTP-svarsstatuskoden och hur lång tid det tog att slutföra HTTP-begäran. Den här loggen kan också vara användbar om du vill felsöka en viss användares aktivitet genom att filtrera loggposter efter användare.
 
-### Loggformat {#access-log-format}
-
-**Exempel**
+**Exempel på loggutdata**
 
 ```
 cm-p1234-e26813-aem-author-59555cb5b8-8kgr2 - example@adobe.com 30/Apr/2020:17:37:14 +0000  "GET /libs/granite/ui/references/clientlibs/references.lc-5188e85840c529149e6cd29d94e74ad5-lc.min.css HTTP/1.1" 200 1141 "https://author-p10711-e26813.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/en/images/example.jpeg&_charset_=utf8" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"
 cm-p1234-e26813-aem-author-59555cb5b8-8kgr2 - example@adobe.com 30/Apr/2020:17:37:14 +0000  "GET /libs/dam/gui/coral/components/admin/customthumb/clientlibs.lc-60e4443805c37afa0c74b674b141f1df-lc.min.css HTTP/1.1" 200 809 "https://author-p10711-e26813.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/en/images/example.jpeg&_charset_=utf8" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"
 cm-p1234-e26813-aem-author-59555cb5b8-8kgr2 - example@adobe.com 30/Apr/2020:17:37:14 +0000  "GET /libs/dam/gui/coral/components/admin/metadataeditor/clientlibs/metadataeditor.lc-4a2226d8232f8b7ab27d24820b9ddd64-lc.min.js HTTP/1.1" 200 7965 "https://author-p10711-e26813.adobeaemcloud.com/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html?item=/content/dam/en/images/example.jpeg&_charset_=utf8" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"
 ```
+
+**Loggformat**
 
 <table>
 <tbody>
@@ -327,17 +327,64 @@ Den här uppsättningen loggar ger information om HTTP-begäranden till AEM som 
 
 Mer information om felloggformatet finns i den [officiella dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#accesslog)för cacheminnet.
 
-**Loggformat**
-
-<!--blank until prod build finishes-->
-
-**Exempel**
+**Exempel på loggutdata**
 
 ```
 cm-p1234-e5678-aem-publish-b86c6b466-qpfvp - - 17/Jul/2020:09:14:41 +0000  "GET /etc.clientlibs/wknd/clientlibs/clientlib-site/resources/images/favicons/favicon-32.png HTTP/1.1" 200 715 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:78.0) Gecko/20100101 Firefox/78.0"
 cm-p1234-e5678-aem-publish-b86c6b466-qpfvp - - 17/Jul/2020:09:14:41 +0000  "GET /etc.clientlibs/wknd/clientlibs/clientlib-site/resources/images/favicons/favicon-512.png HTTP/1.1" 200 9631 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:78.0) Gecko/20100101 Firefox/78.0"
 cm-p1234-e5678-aem-publish-b86c6b466-qpfvp - - 17/Jul/2020:09:14:42 +0000  "GET /etc.clientlibs/wknd/clientlibs/clientlib-site/resources/images/country-flags/US.svg HTTP/1.1" 200 810 "https://publish-p6902-e30226.adobeaemcloud.com/content/wknd/us/en.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:78.0) Gecko/20100101 Firefox/78.0"
 ```
+
+**Loggformat**
+
+<table>
+<tbody>
+<tr>
+<td>AEM som molntjänstnod-ID</td>
+<td>cm-p1234-e26813-aem-publish-5c787687c-lqlxr</td>
+</tr>
+<tr>
+<td>Klientens IP-adress</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Användare</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Datum och tid</td>
+<td>01/May/2020:00:09:46 +000</td>
+</tr>
+<tr>
+<td>HTTP-metod</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>Webbadress</td>
+<td>/content/example.html</td>
+</tr>
+<tr>
+<td>Protokoll</td>
+<td>HTTP/1.1</td>
+</tr>
+<tr>
+<td>HTTP-svarsstatus</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Storlek</td>
+<td>310</td>
+</tr>
+<tr>
+<td>Referent</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Användaragent</td>
+<td>"Mozilla/5.0 (Macintosh); Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, t.ex. Gecko) Chrome/81.0.4044.122 Safari/537.36"</td>
+</tr>
+</tbody>
+</table>
 
 ### Konfigurera åtkomstloggen för Apache HTTPD-webbservern {#configuring-the-apache-httpd-webs-server-access-log}
 
@@ -349,17 +396,40 @@ Felloggen för Apache HTTP Web Server innehåller programsatser för varje fel i
 
 Mer information om felloggformatet finns i den [officiella dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#errorlog)för cacheminnet.
 
-**Loggformat**
-
-<!--placeholder-->
-
-**Exempel**
+**Exempel på loggutdata**
 
 ```
 Fri Jul 17 02:19:48.093820 2020 [mpm_worker:notice] [pid 1:tid 140272153361288] [cm-p1234-e30226-aem-publish-b86c6b466-b9427] AH00292: Apache/2.4.43 (Unix) Communique/4.3.4-20200424 mod_qos/11.63 configured -- resuming normal operations
 Fri Jul 17 02:19:48.093874 2020 [core:notice] [pid 1:tid 140272153361288] [cm-p1234-e30226-aem-publish-b86c6b466-b9427] AH00094: Command line: 'httpd -d /etc/httpd -f /etc/httpd/conf/httpd.conf -D FOREGROUND -D ENVIRONMENT_PROD'
 Fri Jul 17 02:29:34.517189 2020 [mpm_worker:notice] [pid 1:tid 140293638175624] [cm-p1234-e30226-aem-publish-b496f64bf-5vckp] AH00295: caught SIGTERM, shutting down
 ```
+
+**Loggformat**
+
+<table>
+<tbody>
+<tr>
+<td>Datum och tid</td>
+<td>Fri Jul 17 02:16:42.608913 2020</td>
+</tr>
+<tr>
+<td>Händelsenivå</td>
+<td>[mpm_worker:notice]</td>
+</tr>
+<tr>
+<td>Process-ID</td>
+<td>[pid 1:tid 140715149343624]</td>
+</tr>
+<tr>
+<td>Pod name</td>
+<td>[cm-p1234-e56789-aem-publish-b86c6b466-qpfvp]</td>
+</tr>
+<tr>
+<td>Meddelande</td>
+<td>AH00094: Kommandorad: 'httpd -d /etc/httpd -f /etc/httpd/conf/httpd.conf -D FOREGROUND -D </td>
+</tr>
+</tbody>
+</table>
 
 ### Konfigurerar felloggen för Apache HTTPD-webbservern {#configuring-the-apache-httpd-web-server-error-log}
 
@@ -388,8 +458,6 @@ Define REWRITE_LOG_LEVEL Debug
 
 ## Dispatcher Log {#dispatcher-log}
 
-<!--de completat-->
-
 **Exempel**
 
 ```
@@ -398,7 +466,48 @@ Define REWRITE_LOG_LEVEL Debug
 [17/Jul/2020:23:48:07 +0000] [I] [cm-p12904-e25628-aem-publish-6c5f7c9dbd-mzcvr] "GET /content/wknd/us/en/adventures/ski-touring-mont-blanc/_jcr_content/root/responsivegrid/carousel/item_1571168419252.coreimg.jpeg/1572047288089/adobestock-238230356.jpeg" 302 11ms [publishfarm/0] [action none] "publish-p12904-e25628.adobeaemcloud.com"
 ```
 
-### Loggformat {#dispatcher-log-format}
+**Loggformat**
+
+<table>
+<tbody>
+<tr>
+<td>Datum och tid</td>
+<td>[17/Jul/2020:23:48:16 +000]</td>
+</tr>
+<tr>
+<td>Pod Name</td>
+<td>[cm-p12904-e25628-aem-publish-6c5f7c9dbd-mzcvr]</td>
+</tr>
+<tr>
+<td>Protokoll</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>Webbadress</td>
+<td>/content/experience-fragments/wknd/language-masters/en/contributors/sofia-sjoeberg/master/_jcr_content/root/responsivegrid/image.coreimg.100.500.jpeg/1572236359031/ayo-ogunseinde-237739.jpeg</td>
+</tr>
+<tr>
+<td>Dispatcher svarsstatuskod</td>
+<td>/content/experience-fragments/wknd/language-masters/en/contributors/sofia-sjoeberg/master/_jcr_content/root/responsivegrid/image.coreimg.100.500.jpeg/1572236359031/ayo-ogunseinde-237739.jpeg</td>
+</tr>
+<tr>
+<td>Varaktighet</td>
+<td>1949ms</td>
+</tr>
+<tr>
+<td>Farm</td>
+<td>[publishfarm/0]</td>
+</tr>
+<tr>
+<td>Cachestatus</td>
+<td>[åtgärd saknas]</td>
+</tr>
+<tr>
+<td>Värd</td>
+<td>"publish-p12904-e25628.adobeaemcloud.com"</td>
+</tr>
+</tbody>
+</table>
 
 ### Konfigurera Dispatcher fellogg {#configuring-the-dispatcher-error-log}
 
