@@ -2,9 +2,9 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 23f7b4b41abf9b909ec55a7f37b6b8e78c689b9b
+source-git-commit: 0bb5ff11762a4a3a158d211f8bba2ff77d1d3201
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '2053'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,9 @@ Loggning på AEM programnivå hanteras av tre loggar:
 1. HTTP-begärandeloggar, som loggar information om HTTP-begäranden och deras svar som hanteras av AEM
 1. HTTP Access-loggar, som loggar sammanfattad information och HTTP-begäranden som hanteras av AEM
 
-Observera att HTTP-begäranden som opereras från publiceringsskiktets Dispatcher-cache eller CDN i det överordnade flödet inte återspeglas i dessa loggar.
+> [!NOTE]
+> 
+> HTTP-begäranden som opereras från publiceringsskiktets Dispatcher-cache eller CDN för uppströms återspeglas inte i dessa loggar.
 
 ## AEM Java-loggning {#aem-java-logging}
 
@@ -97,10 +99,6 @@ AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur �
 
 ### Loggformat {#log-format}
 
-| Datum och tid | AEM som Cloud Service-ID | Loggnivå | Tråd | Java-klass | Loggmeddelande |
-|---|---|---|---|---|---|
-| 29.04.2020 21:50:13.398 | `[cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]` | `*DEBUG*` | qtp2130572036-1472 | com.example.approval.workflow.impl.CustomApprovalWorkflow | `No specified approver, defaulting to [ Creative Approvers user group ]` |
-
 **Exempel på loggutdata**
 
 ```
@@ -110,6 +108,35 @@ AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur �
 22.06.2020 18:33:30.372 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *INFO* [FelixLogListener] org.apache.sling.i18n Service [5126, [java.util.ResourceBundle]] ServiceEvent REGISTERED
 22.06.2020 18:33:30.372 [cm-p12345-e6789-aem-author-86657cbb55-xrnzq] *WARN* [73.91.59.34 [1592850810364] GET /libs/granite/core/content/login.html HTTP/1.1] libs.granite.core.components.login.login$jsp j_reason param value 'unknown' cannot be mapped to a valid reason message: ignoring
 ```
+
+<table>
+<tbody>
+<tr>
+<td>Datum och tid</td>
+<td>29.04.2020 21:50:13.398</td>
+</tr>
+<tr>
+<td>AEM som Cloud Service-nod-ID</td>
+<td>[cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]</td>
+</tr>
+<tr>
+<td>Loggnivå</td>
+<td>FELSÖKNING</td>
+</tr>
+<tr>
+<td>Tråd</td>
+<td>qtp2130572036-1472</td>
+</tr>
+<tr>
+<td>Java, klass</td>
+<td>com.example.approval.workflow.impl.CustomApprovalWorkflow</td>
+</tr>
+<tr>
+<td>Loggmeddelande</td>
+<td>Ingen angiven godkännare, standard är [ Creative Approvers user group ]</td>
+</tr>
+</tbody>
+</table>
 
 ### Konfigurationsloggare {#configuration-loggers}
 
@@ -167,10 +194,6 @@ Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och sva
 
 ### Loggformat {#http-request-logging-format}
 
-| Datum och tid | ID för fråge-/svarspar |  | HTTP-metod | Webbadress | Protokoll | AEM som Cloud Service-nod-ID |
-|---|---|---|---|---|---|---|
-| 29/Apr/2020:19:14:21 +000 | `[137]` | -> | POST | /conf/global/settings/dam/adminui-extension/metadataprofile/ | HTTP/1.1 | `[cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]` |
-
 **Exempellogg**
 
 ```
@@ -182,6 +205,36 @@ Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och sva
 ...
 29/Apr/2020:19:14:22 +0000 [139] <- 200 text/html;charset=utf-8 637ms [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
 ```
+
+<table>
+<tbody>
+<tr>
+<td>Datum och tid</td>
+<td>29/Apr/2020:19:14:21 +000</td>
+</tr>
+<tr>
+<td>ID för fråge-/svarspar</td>
+<td><code>[137]</code></td>
+</tr>
+<tr>
+<td>HTTP-metod</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>Webbadress</td>
+<td>/conf/global/settings/dam/adminui-extension/metadataprofile/</td>
+</tr>
+<tr>
+<td>Protokoll</td>
+<td>HTTP/1.1
+</td>
+</tr>
+<tr>
+<td>AEM som Cloud Service-nod-ID</td>
+<td>[cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]</td>
+</tr>
+</tbody>
+</table>
 
 ### Konfigurera loggen {#configuring-the-log}
 
@@ -335,5 +388,145 @@ Define REWRITE_LOG_LEVEL Debug
 
 ## Dispatcher Log {#dispatcher-log}
 
-**Loggformat**
+<!--de completat-->
 
+**Exempel**
+
+```
+[17/Jul/2020:23:48:06 +0000] [I] [cm-p12904-e25628-aem-publish-6c5f7c9dbd-mzcvr] "GET /content/wknd/us/en/adventures.html" - 475ms [publishfarm/0] [action miss] "publish-p12904-e25628.adobeaemcloud.com"
+[17/Jul/2020:23:48:07 +0000] [I] [cm-p12904-e25628-aem-publish-6c5f7c9dbd-mzcvr] "GET /content/wknd/us/en/adventures/climbing-new-zealand/_jcr_content/root/responsivegrid/carousel/item_1571266094599.coreimg.jpeg/1473680817282/sport-climbing.jpeg" 302 10ms [publishfarm/0] [action none] "publish-p12904-e25628.adobeaemcloud.com"
+[17/Jul/2020:23:48:07 +0000] [I] [cm-p12904-e25628-aem-publish-6c5f7c9dbd-mzcvr] "GET /content/wknd/us/en/adventures/ski-touring-mont-blanc/_jcr_content/root/responsivegrid/carousel/item_1571168419252.coreimg.jpeg/1572047288089/adobestock-238230356.jpeg" 302 11ms [publishfarm/0] [action none] "publish-p12904-e25628.adobeaemcloud.com"
+```
+
+### Loggformat {#dispatcher-log-format}
+
+### Konfigurera Dispatcher fellogg {#configuring-the-dispatcher-error-log}
+
+Loggnivåer för dispatcher definieras av variabeln DISP_LOG_LEVEL i filen `conf.d/variables/global.var`.
+
+Den kan anges till Error, Warn, Info, Debug och Trace1 med standardvärdet Warn.
+
+Även om Dispatcher-loggning har stöd för flera andra nivåer av loggningsgranularitet rekommenderar Cloud Servicen att du använder de nivåer som beskrivs nedan.
+
+Om du vill ange loggnivån per miljö använder du lämplig villkorsgren i `global.var` filen enligt beskrivningen nedan:
+
+```
+Define DISP_LOG_LEVEL Debug
+  
+<IfDefine ENVIRONMENT_STAGE>
+  ...
+  Define DISP_LOG_LEVEL Warn
+  ...
+</IfDefine>
+<IfDefine ENVIRONMENT_PROD>
+  ...
+  Define DISP_LOG_LEVEL Error
+  ...
+</IfDefine>
+```
+
+## Åtkomst till loggar {#how-to-access-logs}
+
+### Molnmiljöer {#cloud-environments}
+
+Du kan komma åt AEM som en Cloud Service för molntjänster antingen genom att hämta via Cloud Manager-gränssnittet eller genom att svepa loggar på kommandoraden med hjälp av kommandoradsgränssnittet i Adobe. Mer information finns i loggningsdokumentationen [för](/help/implementing/cloud-manager/manage-logs.md)Cloud Manager.
+
+### Lokal SDK {#local-sdk}
+
+AEM som Cloud Service-SDK tillhandahåller loggfiler som stöder lokal utveckling.
+
+AEM loggar finns i mappen `crx-quickstart/logs`där följande loggar kan visas:
+
+* AEM Java-logg: `error.log`
+* Logg för AEM HTTP-begäran: `request.log`
+* AEM HTTP Access-logg: `access.log`
+
+Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Läs [Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html) om hur du startar Dispatcher.
+
+Så här hämtar du loggarna:
+
+1. På kommandoraden skriver du `docker ps` en lista över dina behållare
+1. Om du vill logga in i behållaren skriver du&quot;`docker exec -it <container> /bin/sh`&quot;, där `<container>` är avsändarens behållar-ID från föregående steg
+1. Navigera till cacheroten under `/mnt/var/www/html`
+1. Loggarna är under `/etc/httpd/logs`
+1. Inspect loggarna: De kan nås under mappen XYZ, där följande loggar kan visas:
+   * Åtkomstlogg för Apache HTTPD-webbserver - `httpd_access.log`
+   * Felloggar för Apache HTTPD-webbserver - `httpd_error.log`
+   * Dispatcher loggar - `dispatcher.log`
+
+Loggar skrivs också ut direkt till terminalutdata. Oftast ska loggarna vara DEBUG, vilket kan uppnås genom att skicka felsökningsnivån som en parameter när Docker körs. Till exempel:
+
+`DISP_LOG_LEVEL=Debug ./bin/docker_run.sh out docker.for.mac.localhost:4503 8080`
+
+## Felsöka produktion och scen {#debugging-production-and-stage}
+
+I undantagsfall måste loggnivåerna ändras för att logga med en finare granularitet i scen- eller produktionsmiljöer.
+
+Detta är möjligt men kräver ändringar av loggnivåerna i konfigurationsfilerna i Git från Varna och Fel till felsökning, och en distribution AEM som Cloud Service för att registrera konfigurationsändringarna i miljöerna.
+
+Beroende på trafiken och mängden loggsatser som skrivits av Debug kan detta resultera i en negativ prestandapåverkan på miljön, och därför rekommenderas att ändringar i felsökningsnivåerna för Stage och Production är:
+
+* Klar med omdöme och endast när det är absolut nödvändigt
+* Återställs till rätt nivå och återdriftsätts så snart som möjligt
+
+## Splunk-loggar {#splunk-logs}
+
+Kunder som har Splunk-konton kan via kundsupportbiljetten begära att deras AEM Cloud Service-loggar vidarebefordras till lämpligt index. Loggningsinformationen motsvarar vad som är tillgängligt via hämtningen av loggen i Cloud Manager, men det kan vara praktiskt för kunderna att utnyttja de frågefunktioner som finns i Splunk-produkten.
+
+Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas som en del av kundens I/O-användning i nätverket.
+
+### Aktivera vidarebefordran av segment {#enabling-splunk-forwarding}
+
+I supportärendet ska man ange
+
+* Splunk-värden
+* Splunk-indexvärdet
+* Splunk-porten
+* Splunk HEC-token. Mer information finns [på den här sidan](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples) .
+
+Egenskaperna ovan bör anges för varje relevant kombination av program- och miljötyp.  Om en kund till exempel vill ha utvecklings-, staging- och produktionsmiljöer bör de tillhandahålla tre uppsättningar information enligt nedan.
+
+> [!NOTE]
+>
+> Skräppostvidarebefordran för sandlådeprogrammiljöer stöds inte.
+
+Här nedan hittar du ett exempel på en kundsupportförfrågan:
+
+Program 123, Production Env
+
+* Splunk-värd: `splunk-hec-ext.acme.com`
+* Segmentindex: acme_123prod (kunden kan välja vilken namnkonvention man vill)
+* Splunk-port: 443
+* Splunk HEC-token: ABC123
+
+Program 123, Stage Env
+
+* Splunk-värd: `splunk-hec-ext.acme.com`
+* Segmentindex: acme_123stage
+* Splunk-port: 443
+* Splunk HEC-token: ABC123
+
+Program 123, Dev Envs
+
+* Splunk-värd: `splunk-hec-ext.acme.com`
+* Segmentindex: acme_123dev
+* Splunk-port: 443
+* Splunk HEC-token: ABC123
+
+Det kan räcka för att samma Splunk-index ska användas för varje miljö. I så fall kan antingen `aem_env_type` fältet användas för att differentiera baserat på värdena dev, stage och prod. Om det finns flera utvecklingsmiljöer kan även `aem_env_id` fältet användas. Vissa organisationer kan välja ett separat index för produktionsmiljöns loggar om det associerade indexet begränsar åtkomsten till en reducerad uppsättning Splunk-användare.
+
+Här är ett exempel på loggpost:
+
+```
+aem_env_id: 1242
+aem_env_type: dev
+aem_program_id: 12314
+aem_tier: author
+file_path: /var/log/aem/error.log
+host: 172.34.200.12 
+level: INFO
+msg: [FelixLogListener] com.adobe.granite.repository Service [5091, [org.apache.jackrabbit.oak.api.jmx.SessionMBean]] ServiceEvent REGISTERED
+orig_time: 16.07.2020 08:35:32.346
+pod_name: aemloggingall-aem-author-77797d55d4-74zvt
+splunk_customer: true
+```
