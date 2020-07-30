@@ -2,9 +2,9 @@
 title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
 translation-type: tm+mt
-source-git-commit: d25129d8e2ad5f1501aec3b8491f6327b91fcc53
+source-git-commit: 3dc0d1d77595f7b3e890fb4b390eef5bcf84ecd8
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Versionsinformation för AEM som Cloud Service 2020.6.0 {#release-notes}
 
-I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.6.0.
+På den här sidan beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.6.0.
 
 ## Releasedatum {#release-date}
 
@@ -20,13 +20,13 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.6.0 är 4 juni 20
 
 ## Nyheter i AEM Sites {#aem-sites}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för AEM Sites i AEM som Cloud Service Release 2020.6.0.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för AEM Sites i AEM som en Cloud Service version 2020.6.0.
 
 ### What&#39;s New {#whats-new-2020.6.0}
 
 Version 2.9.0 av [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) finns nu som en del av AEM Sites, inklusive:
 
-* Integrering mellan [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer) och Core Components
+* Integrering mellan [Adobe-klientdatalagret](https://github.com/adobe/adobe-client-data-layer) och kärnkomponenterna
 * Konfigurerbara HTML ID-attribut för alla komponenter
 * En ny Progress Bar-komponent
 * Många felkorrigeringar
@@ -37,7 +37,7 @@ Version 2.9.0 av [Core Components](https://docs.adobe.com/content/help/en/experi
 
 * Korrigerat problem med storleksändring av layoutkomponent.
 
-* Lagt till möjlighet att hantera sidor med enbart routningsvinkel och sidor med AEM/vinkeler.
+* Lagt till möjlighet att hantera endast sidor med routningsvinkel och AEM/vinkelsidor.
 
 ### Tillgänglighet {#accessibility}
 
@@ -49,13 +49,13 @@ Version 2.9.0 av [Core Components](https://docs.adobe.com/content/help/en/experi
 
 ## What&#39;s New in Foundations in AEM as a Cloud Service {#foundations}
 
-AEM-projektens byggtider förbättras genom att alla referenser i AEM-projektets pom.xml tas bort från fjärrdatabasen `https://downloads.experiencecloud.adobe.com/content/maven/public`.
+AEM projekttider förbättras genom att alla referenser i det AEM projektets pom.xml tas bort från fjärrdatabasen `https://downloads.experiencecloud.adobe.com/content/maven/public`.
 
-AEM som Cloud Service-SDK API Jar, som tidigare var värd på den platsen, finns nu i Maven Central, som är Maven standarddatabas för artefakter.
+AEM som en Cloud Service-SDK API Jar, som tidigare var värd på den platsen, finns nu i Maven Central, som är Maven standarddatabas för artefakter.
 
 ## Nyheter i Cloud Manager {#cloud-manager}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som Cloud Service version 2020.6.0.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en Cloud Service-version 2020.6.0.
 
 ### What&#39;s New {#what-is-new-cloud-manager}
 
@@ -93,7 +93,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * I vissa situationer var ikonerna i dialogrutan **Skapa program** feljusterade.
 
-* Identifieraren för AEM-versionen visades inte konsekvent på sidan **Programöversikt** .
+* Den AEM releaseidentifieraren visades inte konsekvent på sidan **Programöversikt** .
 
 * När produktionsflödet konfigurerades var alternativet **Schemalagd distribution** inte synligt för vissa kunder.
 
@@ -105,7 +105,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ## Nyheter i [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-**Guidad användarupplevelse för förbättrade smarta taggar från Adobe Sensei**
+**Guided User Experience for Enhanced Smart Tags från Adobe Sensei**
 
 Förbättrade smarta taggar gör det möjligt för organisationer att utbilda smarta taggningsmodeller för att identifiera bilder som baseras på kundspecifika företagstaggar utöver generiska smarta taggar.
 
@@ -116,11 +116,11 @@ Utbilda förbättrade smarta taggar för mer intuitiv utbildning i Smarta taggar
 
 Organisationer kan nu lagra och använda 3D-filer i AEM Assets. Användaren kan ladda upp, förhandsgranska och använda olika centrala 3D-filer, inklusive OBJ-, STL-, GLTF- och GLB-filer. Dessutom [!DNL Dynamic Media]kan ni konfigurera och leverera 3D-upplevelser med hjälp av agnostiska URL:er eller visningsprogram. Detta inkluderar en [!DNL Dynamic Media] 3D Experience Viewer, Sites 3D Viewer-komponent och möjligheten att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR). Se [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
 
-**Stöd för Adobe Asset Link i Adobe XD**
+**Stöd för Adobe Asset Link för Adobe XD**
 
 I den senaste versionen har [!DNL Experience Manager Assets] stöd för en ny [!DNL Adobe Asset Link] plugin som släpps med [!DNL Adobe XD] v29.3. Tack vare integreringen kan designers komma åt och använda resurser från [!DNL Experience Manager] sin design, utan att behöva lämna [!DNL Adobe XD] programmet. Se [Adobe Asset Link för Adobe XD-dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link-for-xd.html).
 
-I den här versionen kan kreativa användare och designers nu arbeta med resurser som hanteras i [!DNL AEM Assets] med [!DNL Adobe Asset Link] en rad olika Creative Cloud-program, inklusive [!DNL Adobe XD], [!DNL Photoshop], [!DNL Illustrator]och [!DNL InDesign].
+I den här versionen kan kreativa användare och designers nu arbeta med resurser som hanteras i [!DNL AEM Assets] med [!DNL Adobe Asset Link] en rad olika datorprogram i Creative Cloud, inklusive [!DNL Adobe XD], [!DNL Photoshop], [!DNL Illustrator]och [!DNL InDesign].
 
 **Förbättrad tillgänglighet**
 
