@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.7.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.7.0.'
 translation-type: tm+mt
-source-git-commit: 3dc0d1d77595f7b3e890fb4b390eef5bcf84ecd8
+source-git-commit: ffde99214fecb151408500c6ba315f55aa28e57d
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '938'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,8 @@ Version 2.11.0 av [AEM Core Components](https://docs.adobe.com/content/help/en/e
 
 * Introduktion till en ny [PDF Viewer-komponent](https://aemcomponents.dev/content/core-components-examples/library/page-authoring/pdf-viewer.html).
 
-* Stödet för AMP (Accelerated Mobile Pages) i Core Components hjälper till att skapa snabbare kundupplevelser genom att göra sidövergången direkt när du kommer in på webbplatsen från ett Google Mobile Search-resultat, vilket förbättrar användarengagemanget och SEO.
+* Stöd för AMP (Accelerated Mobile Pages) för kärnkomponenter finns nu. Det hjälper till att skapa snabbare kundupplevelser genom att göra sidövergången omedelbart när du kommer in på webbplatsen från ett Google-sökresultat för mobiler, vilket förbättrar användarengagemanget och SEO.
+Mer information finns i [AMP-stödet för kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/amp.html) .
 
 * Kompatibilitet med version 1.0.2 av [Adobe-klientdatalagret](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html).
 
