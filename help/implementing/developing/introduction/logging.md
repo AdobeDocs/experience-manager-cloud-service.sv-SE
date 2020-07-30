@@ -2,7 +2,7 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: db0ea2367e8ecf645694a0f33b9f3b99010ec491
+source-git-commit: 86103b40e931ec00e0c15e9dbcbdf396c8eb05c9
 workflow-type: tm+mt
 source-wordcount: '2212'
 ht-degree: 2%
@@ -27,9 +27,9 @@ Loggning på AEM programnivå hanteras av tre loggar:
 1. HTTP-begärandeloggar, som loggar information om HTTP-begäranden och deras svar som hanteras av AEM
 1. HTTP Access-loggar, som loggar sammanfattad information och HTTP-begäranden som hanteras av AEM
 
-> [!NOTE]
-> 
-> HTTP-begäranden som opereras från publiceringsskiktets Dispatcher-cache eller CDN för uppströms återspeglas inte i dessa loggar.
+>[!NOTE]
+>
+>HTTP-begäranden som opereras från publiceringsskiktets Dispatcher-cache eller CDN för uppströms återspeglas inte i dessa loggar.
 
 ## AEM Java-loggning {#aem-java-logging}
 
@@ -595,9 +595,9 @@ I supportärendet ska man ange
 
 Egenskaperna ovan bör anges för varje relevant kombination av program- och miljötyp.  Om en kund till exempel vill ha utvecklings-, staging- och produktionsmiljöer bör de tillhandahålla tre uppsättningar information enligt nedan.
 
-> [!NOTE]
+>[!NOTE]
 >
-> Skräppostvidarebefordran för sandlådeprogrammiljöer stöds inte.
+>Skräppostvidarebefordran för sandlådeprogrammiljöer stöds inte.
 
 Här nedan hittar du ett exempel på en kundsupportförfrågan:
 
