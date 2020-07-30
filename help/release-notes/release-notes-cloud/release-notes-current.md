@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.7.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.7.0.'
 translation-type: tm+mt
-source-git-commit: ffde99214fecb151408500c6ba315f55aa28e57d
+source-git-commit: a454bcce2d4db89c0ac8dc27fd187a822bacf7e6
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '964'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.7.0 är 30 juli 2
 
 * En ny implementering av användargränssnittet ersätter implementeringen som baseras på det klassiska användargränssnittet.
 
-* Förenklade dialogrutor i användargränssnittet, vilket gör att ramverket skapas för variabelmappning och andra konfigurationer [!DNL Adobe Launch].
+* Förenklade dialogrutor i användargränssnittet, vilket gör att ramverket skapas för variabelmappning och andra konfigurationer [!DNL Adobe Launch]. Se [Integrera Adobe Analytics](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/integrations/integrating-adobe-analytics.html) och [Integrera Adobe Target](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/integrations/integrating-adobe-target.html).
 
 * Konfigurationer lagras nu i `/conf` stället `/etc/cloudsettings` för i Experience Manager-databasen.
 
