@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation om Adobe Experience Manager som molntjänst för 2020.4.0
+title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.4.0
 description: Versionsinformation om Experience Manager för 2020.4.0
 translation-type: tm+mt
-source-git-commit: 94a732f56929ad4af23855152e258f82ad61ee2c
+source-git-commit: 3dc0d1d77595f7b3e890fb4b390eef5bcf84ecd8
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '650'
 ht-degree: 1%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # Release Notes for Adobe Experience Manager as a Cloud Service 2020.4.0 {#release-notes}
 
-I följande avsnitt beskrivs de allmänna versionsinformationen för [!DNL Experience Manager] som molntjänst 2020.4.0.
+På den här sidan beskrivs den allmänna versionsinformationen för [!DNL Experience Manager] som Cloud Service 2020.4.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Experience Manager] som molntjänst 2020.4.0 är 9 april 2020.
+Releasedatum för [!DNL Experience Manager] Cloud Service 2020.4.0 är 9 april 2020.
 
 ## Nyheter i Assets {#assets}
 
@@ -24,9 +24,9 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 
 * [Varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) stöder användningsexemplen för resursdistribution för Experience Manager Assets. [!DNL Brand Portal] hjälper organisationer att tillgodose sina marknadsföringsbehov genom att på ett säkert sätt distribuera godkänt varumärke och produktmaterial till externa byråer, partners, interna team och återförsäljare för nedladdning.
    * [!DNL Brand Portal] konfigurationen slutförs via [!DNL Adobe I/O] konsolen. Se [Konfigurera varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
-   * Resurskälla i [!DNL Brand Portal] stöds ännu inte [!DNL Experience Manager] som molntjänst.
+   * Resurskälla i [!DNL Brand Portal] stöds ännu inte [!DNL Experience Manager] som Cloud Service.
 
-* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) v2.0 fungerar med [!DNL Experience Manager] en molntjänst. [!DNL Adobe Asset Link] effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll genom att ansluta [!DNL Experience Manager Assets] till [!DNL Creative Cloud] datorprogram [!DNL Adobe Photoshop][!DNL Adobe Illustrator]och [!DNL Adobe InDesign] via [!DNL Asset Link] apppanelen.
+* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) v2.0 fungerar med [!DNL Experience Manager] som Cloud Service. [!DNL Adobe Asset Link] effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll genom att ansluta [!DNL Experience Manager Assets] till [!DNL Creative Cloud] datorprogram [!DNL Adobe Photoshop][!DNL Adobe Illustrator]och [!DNL Adobe InDesign] via [!DNL Asset Link] apppanelen.
    * [!DNL Experience Manager] är förkonfigurerat för [!DNL Adobe Asset Link], vilket ger [enkel konfiguration](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html) och snabbare utrullning till kreatörer.
    * [!DNL Asset Link] har nu stöd för en [Experience Manager-miljöväljare](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) som gör att kreativa användare enkelt kan ansluta till en annan [!DNL Experience Manager] miljö. Ett exempel där den här funktionen är användbar är för designers som arbetar med flera klienter med olika [!DNL Experience Manager Assets] installationer.
 
@@ -39,7 +39,7 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 
       ![Bearbeta markerade resurser med en viss bearbetningsprofil](/help/assets/assets/fpo-existing-asset-reprocess.gif)
 
-   * [!DNL Dynamic Media]: Lagt till selektiv publiceringskonfiguration så att resurser automatiskt publiceras endast för säker förhandsvisning. Dessutom kan resurserna publiceras explicit till Experience Manager utan att publiceras till DMS7 för att distribueras offentligt.
+   * [!DNL Dynamic Media]: Lagt till selektiv publiceringskonfiguration så att resurser automatiskt publiceras endast för säker förhandsvisning. Dessutom kan resurserna publiceras explicit på Experience Manager utan att publiceras till DMS7 för att levereras offentligt.
 
 ### Bug Fixes {#assets-bug-fixes}
 
@@ -72,4 +72,4 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 * Den Maven-konfiguration som används i byggbehållaren har uppdaterats för att undvika dödlägen när artefaktmetadata hämtas.
 * I vissa fall kan steget Skapa bild inte hämta kundpaket.
 * Vissa ovanliga förhållanden kan förhindra att miljöer tas bort.
-* Experience Cloud-meddelanden togs inte emot konsekvent.
+* Meddelanden från Experience Cloud mottogs inte konsekvent.
