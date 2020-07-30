@@ -2,7 +2,7 @@
 title: Integrera med Adobe Analytics
 description: 'Integrera med Adobe Analytics '
 translation-type: tm+mt
-source-git-commit: ec747361935b94a729cdd5b6712aee6d3ce1b8a2
+source-git-commit: f2ed74afd2df43e31ff1002cd42a60f372d0b769
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Jämfört med tidigare versioner av AEM finns inte ramverksstöd i Analytics Con
 
 1. Navigera till **Verktyg** → **Cloud Service**.
 2. Välj **Adobe Analytics Configurations**.
-   ![Analytics](assets/analytics_screen.png "WindowAnalytics Window")
+   ![Analytics](assets/analytics_screen1.png "WindowAnalytics Window")
 3. Klicka på **Skapa** .
 4. Fyll i informationen (se nedan) och klicka på **Anslut**.
 
@@ -35,7 +35,7 @@ Jämfört med tidigare versioner av AEM finns inte ramverksstöd i Analytics Con
 
 Konfigurationsfälten som finns i konfigurationsfönstret i Adobe Analytics är:
 
-![Configuration](assets/properties_field.png "ParametersConfiguration Parameters")
+![Configuration](assets/properties_field1.png "ParametersConfiguration Parameters")
 
 | Egenskap | Beskrivning |
 |---|---|
