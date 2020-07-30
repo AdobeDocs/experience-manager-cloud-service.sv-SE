@@ -2,7 +2,7 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: ec747361935b94a729cdd5b6712aee6d3ce1b8a2
+source-git-commit: f2ed74afd2df43e31ff1002cd42a60f372d0b769
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 1%
@@ -26,12 +26,12 @@ Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analy
 ## Skapa konfigurationen för Adobe Target {#create-configuration}
 
 1. Navigera till **Verktyg** → **Cloud Service**.
-   ![](assets/cloudservice.png "NavigationNavigation")
+   ![](assets/cloudservice1.png "NavigationNavigation")
 2. Markera **Adobe Target**.
 3. Klicka på **Skapa** .
-   ![](assets/tenant.png "CreateCreate")
+   ![](assets/tenant1.png "CreateCreate")
 4. Fyll i informationen (se nedan) och välj **Anslut**.
-   ![](assets/open_screen.png "ConnectConnect")
+   ![](assets/open_screen1.png "ConnectConnect")
 
 ### IMS-konfiguration
 
@@ -44,7 +44,7 @@ Så här redigerar du Target-konfigurationen:
 1. Välj en befintlig konfiguration och klicka på **Egenskaper**.
 2. Redigera egenskaperna.
 3. Välj **Återanslut till Adobe Target**.
-   ![Återanslut](assets/edit_config_page.png "Återanslut")
+   ![Återanslut](assets/edit_config_page1.png "Återanslut")
 4. Välj **Spara och stäng**.
 
 ### Lägga till en konfiguration till en plats {#add-configuration}
@@ -75,7 +75,7 @@ En egenskap är en behållare som fylls med tillägg, regler och dataelement.
 2. Ange ett namn för egenskapen.
 3. Som domän anger du den IP/värddator som du vill läsa in startbiblioteket för.
 4. Klicka på knappen **Spara** .
-   ![](assets/properties_newproperty.png "LaunchpropertyLaunchproperty")
+   ![](assets/properties_newproperty1.png "LaunchpropertyLaunchproperty")
 
 ### Lägga till nödvändiga tillägg {#add-extension}
 
@@ -83,10 +83,10 @@ En egenskap är en behållare som fylls med tillägg, regler och dataelement.
 
 1. Välj alternativet Tilläggskatalog och sök efter Target i filtret.
 2. Markera **Adobe Target** at.js och klicka på alternativet Installera.
-   ![Target](assets/search_ext.png "SearchTarget Search")
+   ![Target](assets/search_ext1.png "SearchTarget Search")
 3. Välj knappen **Konfigurera** . Lägg märke till konfigurationsfönstret med kontoinloggningsuppgifterna för Target importerade och till at.js-versionen för det här tillägget.
 4. Välj **Spara** för att lägga till måltillägget i Launch-egenskapen. Du bör kunna se måltillägget i listan **Installerade tillägg** .
-   ![Spara](assets/configure_extension.png "tilläggSpara tillägg")
+   ![Spara](assets/configure_extension1.png "tilläggSpara tillägg")
 5. Upprepa stegen ovan om du vill söka efter **Adobe ContextHub** -tillägget och installera det (detta krävs för integrering med ContextHub-parametrar, baserat på vilken målanpassning som ska göras).
 
 ### Skapa ett dataelement {#data-element}
@@ -97,16 +97,16 @@ En egenskap är en behållare som fylls med tillägg, regler och dataelement.
 2. Välj **Lägg till dataelement**.
 3. Ange namnet på dataelementet och mappa det till en kontextnavparameter.
 4. välj **Spara**.
-   ![Data](assets/data_elem.png "ElementData-element")
+   ![Data](assets/data_elem1.png "ElementData-element")
 
 ### Skapa en sidregel {#page-rule}
 
 I **regel** definierar och ordnar vi en sekvens av åtgärder som ska utföras på plats för att uppnå målinriktning.
 
 1. Lägg till en uppsättning åtgärder som visas i skärmbilden.
-   ![](assets/rules.png "ÅtgärderÅtgärder")
+   ![](assets/rules1.png "ÅtgärderÅtgärder")
 2. I Lägg till parametrar i alla Mboxes lägger du till dataelementet som konfigurerats tidigare (se dataelementet ovan) i den parameter som ska skickas i mbox-anropet.
-   ![](assets/map_data.png "MboxActions")
+   ![](assets/map_data1.png "MboxActions")
 
 ### Bygg och publicera {#build-publish}
 
