@@ -2,9 +2,9 @@
 title: Lägg till era digitala resurser [!DNL Adobe Experience Manager]i.
 description: Lägg till era digitala resurser [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 9c5dd93be316417014fc665cc813a0d83c3fac6f
+source-git-commit: 3e9697d27337b39f5667cc94930de6ea7f0b68c5
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager] berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
 
-Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager-datorprogram, överförings- och förtäringsskript som kunderna skulle skapa samt automatiserade importfunktioner som lagts till som tillägg för Experience Manager.
+Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager, överförings- och förtäringsskript som kunderna skulle skapa samt automatiserade importfunktioner som lagts till som Experience Manager-tillägg.
 
 Vi fokuserar på överföringsmetoder för slutanvändare här och tillhandahåller länkar till artiklar som beskriver tekniska aspekter av överföring och förtäring av resurser med hjälp av API:er för Experience Manager och SDK:er.
 
@@ -24,7 +24,7 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 
 >[!NOTE]
 >
->Experience Manager som Cloud Service utnyttjar ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av produktfunktioner och -klienter som Experience Manager, Adobe Asset Link, Experience Manager och är därmed genomskinliga för slutanvändarna.
+>Experience Manager som Cloud Service utnyttjar ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av produktfunktioner och -klienter, som Experience Manager användargränssnitt, Adobe Asset Link och Experience Manager, och är därmed genomskinlig för slutanvändarna.
 >
 >Ladda upp kod som är anpassad eller utökad av kunder som tekniska team behöver för att kunna använda de nya överförings-API:erna och protokollen.
 
@@ -63,7 +63,6 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
 
    Om du avbryter överföringen innan filerna har överförts, avbryter du överföringen av den aktuella filen och uppdaterar innehållet [!DNL Assets] . Filer som redan har överförts tas dock inte bort.
 
-
 <!-- #ENGCHECK do we support pausing? I couldn't get pause to show with 1.5GB upload.... If not, this should be removed#
    The ability to resume uploading is especially helpful in low-bandwidth scenarios and network glitches, where it takes a long time to upload a large asset. You can pause the upload operation and continue later when the situation improves. When you resume, uploading starts from the point where you paused it.
 -->
@@ -74,14 +73,13 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
    To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 -->
 
-
 1. I dialogrutan för överföringsförlopp [!DNL Assets] visas antalet överförda filer och de filer som inte kunde överföras.
 
 Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet för Resurser.
 
 >[!NOTE]
 >
->Mer information om hur du överför kapslade mapphierarkier till AEM finns i [Massöverföring av resurser](#bulk-upload).
+>Mer information om hur du överför kapslade mapphierarkier till AEM finns i [Överför resurser](#bulk-upload)gruppvis.
 
 <!-- #ENGCHECK I'm assuming this is no longer relevant.... If yes, this should be removed#
 
@@ -142,19 +140,19 @@ Om du vill överföra fler filer, särskilt om de finns i en kapslad mapphierark
 
 Förutom webbläsarens användargränssnitt har Experience Manager stöd för andra klienter på datorn. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
-* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från Adobe Asset Link-användargränssnittet från dessa datorprogram.
+* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link från dessa skrivbordsprogram.
 * [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) förenklar arbetet med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
 Följande profiler är tillgängliga:
 
 * [Med metadataprofiler](metadata-profiles.md) kan du använda standardmetadataegenskaper för resurser som överförs till den mappen
-* [Med bearbetningsprofiler](asset-microservices-configure-and-use.md#processing-profiles) kan du använda återgivningsbearbetning och generera återgivningar utöver de vanliga
+* [Genom att bearbeta profiler](asset-microservices-configure-and-use.md) kan du generera fler återgivningar än vad som är möjligt som standard.
 
 Om Dynamic Media är aktiverade i din miljö:
 
@@ -175,6 +173,6 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 >
 >* [Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
 >* [Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
->* [Dokumentation för Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [Adobe Asset Link-dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [Teknisk referens för överföring av tillgångar](developer-reference-material-apis.md#asset-upload-technical)
 
