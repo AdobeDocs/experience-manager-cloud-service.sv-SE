@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.7.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.7.0.'
 translation-type: tm+mt
-source-git-commit: 5103d54bcb71d6c78894a30edafccf288a51368f
+source-git-commit: 3dc0d1d77595f7b3e890fb4b390eef5bcf84ecd8
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '914'
 ht-degree: 2%
 
 ---
@@ -51,15 +51,15 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.7.0 är 30 juli 2
 
 ### What&#39;s New {#what-is-new-core-components}
 
-Version 2.11.0 av [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) finns nu som en del av AEM Sites, inklusive:
+Version 2.11.0 av [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) finns nu som en del av AEM Sites, inklusive:
 
-* Introduktion till en ny [PDF Viewer-komponent](https://aemcomponents.dev/content/core-components-examples/library/page-authoring/pdf-viewer.html)
+* Introduktion till en ny [PDF Viewer-komponent](https://aemcomponents.dev/content/core-components-examples/library/page-authoring/pdf-viewer.html).
 
-* [Stödet för AMP (Accelerated Mobile Pages) i Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/developing/amp.html) hjälper till att skapa snabbare kundupplevelser genom att göra sidövergången direkt när du kommer in på webbplatsen från ett Google Mobile-sökresultat, vilket förbättrar användarengagemanget och SEO.
+* Stödet för AMP (Accelerated Mobile Pages) i Core Components hjälper till att skapa snabbare kundupplevelser genom att göra sidövergången direkt när du kommer in på webbplatsen från ett Google Mobile Search-resultat, vilket förbättrar användarengagemanget och SEO.
 
-* Kompatibilitet med version 1.0.2 av [Adobe-klientdatalagret](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
+* Kompatibilitet med version 1.0.2 av [Adobe-klientdatalagret](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html).
 
-* Felkorrigeringar och förbättringar av kodkvaliteten
+* Felkorrigeringar och förbättringar av kodkvaliteten.
 
 ## Cloud Manager {#cloud-manager}
 
