@@ -2,9 +2,9 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: 8063a41d079b8b959b903aa0f97068a42a22d840
+source-git-commit: ec747361935b94a729cdd5b6712aee6d3ce1b8a2
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '857'
 ht-degree: 1%
 
 ---
@@ -17,18 +17,18 @@ Som en del av Adobe Marketing Cloud kan ni med Adobe Target öka innehållets re
 * med Touch-gränssnittet för att skapa en Analytics-konfiguration i AEM som en Cloud Service (IMS-konfiguration krävs).
 * lägga till och konfigurera Adobe Analytics som ett tillägg i [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html).
 
-Integrering med Launch krävs för&quot;upplevelseanpassning&quot;. För Experience Fragments export till Target behöver du bara Adobe Target Configuration och IMS.
+Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM sidor (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;upplevelseanpassning&quot;. För Experience Fragments export till Target behöver du bara Adobe Target Configuration och IMS.
 
 >[!NOTE]
 >
->Adobe Experience Manager som Cloud Service som inte har något Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud.  Foundation Pack ger begränsad användning av Target i volymprocent.
+>Adobe Experience Manager som Cloud Service som inte har något Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad användning av Target i volymprocent.
 
 ## Skapa konfigurationen för Adobe Target {#create-configuration}
 
 1. Navigera till **Verktyg** → **Cloud Service**.
    ![](assets/cloudservice.png "NavigationNavigation")
 2. Markera **Adobe Target**.
-3. Klicka på knappen **Skapa** .
+3. Klicka på **Skapa** .
    ![](assets/tenant.png "CreateCreate")
 4. Fyll i informationen (se nedan) och välj **Anslut**.
    ![](assets/open_screen.png "ConnectConnect")
@@ -59,10 +59,6 @@ AEM erbjuder en färdig integrering med Experience Platform Launch. Genom att l�
 >
 >Befintliga (äldre) ramverk fungerar fortfarande, men de kan inte konfigureras i Touch-gränssnittet. Du bör återskapa variabelmappningskonfigurationerna i Launch.
 
->[!NOTE]
->
->Befintliga (äldre) ramverk fungerar fortfarande, men de kan inte konfigureras i Touch-gränssnittet. Du bör återskapa variabelmappningskonfigurationerna i Launch.
-
 Som en allmän översikt är integrationsstegen:
 
 1. Skapa en startegenskap
@@ -83,7 +79,7 @@ En egenskap är en behållare som fylls med tillägg, regler och dataelement.
 
 ### Lägga till nödvändiga tillägg {#add-extension}
 
-Tillägg är den behållare som hanterar huvudbiblioteksinställningarna. Tillägget Adobe Target stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben, at.js. Du måste lägga till både **Adobe Target** och **Adobe ContextHub** .
+**Tillägg** är den behållare som hanterar huvudbiblioteksinställningarna. Tillägget Adobe Target stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Du måste lägga till både **Adobe Target** och **Adobe ContextHub** .
 
 1. Välj alternativet Tilläggskatalog och sök efter Target i filtret.
 2. Markera **Adobe Target** at.js och klicka på alternativet Installera.
@@ -95,7 +91,7 @@ Tillägg är den behållare som hanterar huvudbiblioteksinställningarna. Tillä
 
 ### Skapa ett dataelement {#data-element}
 
-Dataelement är platshållare som du kan mappa kontextnavparametrar till.
+**Dataelement** är platshållare som du kan mappa kontextnavparametrar till.
 
 1. Välj **dataelement**.
 2. Välj **Lägg till dataelement**.
@@ -105,7 +101,7 @@ Dataelement är platshållare som du kan mappa kontextnavparametrar till.
 
 ### Skapa en sidregel {#page-rule}
 
-I regel definierar och ordnar vi en sekvens av åtgärder, som ska utföras på plats, för att uppnå målinriktning.
+I **regel** definierar och ordnar vi en sekvens av åtgärder som ska utföras på plats för att uppnå målinriktning.
 
 1. Lägg till en uppsättning åtgärder som visas i skärmbilden.
    ![](assets/rules.png "ÅtgärderÅtgärder")
