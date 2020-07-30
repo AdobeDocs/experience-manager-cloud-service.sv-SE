@@ -2,9 +2,9 @@
 title: Integrera med Adobe Analytics
 description: 'Integrera med Adobe Analytics '
 translation-type: tm+mt
-source-git-commit: e5e199c4a457935119e3a02b87ced72d2f2de6cf
+source-git-commit: ec747361935b94a729cdd5b6712aee6d3ce1b8a2
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '528'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 Genom att integrera Adobe Analytics och AEM som en Cloud Service kan du spåra webbsidans aktivitet. Integreringen kräver:
 
 * med Touch-gränssnittet för att skapa en Analytics-konfiguration i AEM som en Cloud Service.
-* lägga till och konfigurera Adobe Analytics som ett tillägg i [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html).
+* lägga till och konfigurera Adobe Analytics som ett tillägg i [Adobe Launch].(https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html).
 
-Jämfört med tidigare versioner av AEM finns inte ramverksstöd i Analytics Configuration in AEM som Cloud Service. Istället görs det nu via Adobe Launch, som är det defacto-verktyg för att skapa en AEM sajt med Analytics-funktioner (JS-bibliotek). I Adobe Launch skapas en egenskap där Adobe Analytics-tillägget kan konfigureras och regler skapas för att skicka data till Adobe Analytics. Adobe Launch har ersatt uppgiften med analys från sitecatalyst.
+Jämfört med tidigare versioner av AEM finns inte ramverksstöd i Analytics Configuration in AEM som Cloud Service. I stället görs det nu via Adobe Launch, som är det defaceverktyg som används för att skapa en AEM sajt med Analytics-funktioner (JS-bibliotek). I Adobe Launch skapas en egenskap där Adobe Analytics-tillägget kan konfigureras och regler skapas för att skicka data till Adobe Analytics. Adobe Launch har ersatt uppgiften med analys från sitecatalyst.
 
 >[!NOTE]
 >
->Adobe Experience Manager som Cloud Service som inte har något Analytics-konto kan begära åtkomst till Analytics Foundation Pack för Experience Cloud.  Detta Foundation Pack ger begränsad användning av Analytics i volymprocent.
+>Adobe Experience Manager som Cloud Service som inte har något Analytics-konto kan begära åtkomst till Analytics Foundation Pack för Experience Cloud. Detta Foundation Pack ger begränsad användning av Analytics i volymprocent.
 
 ## Skapa Analytics-konfigurationen {#analytics-configuration}
 
@@ -33,7 +33,7 @@ Jämfört med tidigare versioner av AEM finns inte ramverksstöd i Analytics Con
 
 ### Konfigurationsparametrar {#configuration-parameters}
 
-Konfigurationsfälten i Adobe Analytics konfigurationsfönster är följande:
+Konfigurationsfälten som finns i konfigurationsfönstret i Adobe Analytics är:
 
 ![Configuration](assets/properties_field.png "ParametersConfiguration Parameters")
 
@@ -52,7 +52,7 @@ Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **W
 
 ## Integrera Adobe Analytics på AEM sajter med Adobe Launch
 
-Adobe Analytics kan läggas till som ett tillägg i startegenskapen. Regler kan definieras för att mappa och göra ett postanrop till Adobe Analytics.
+Adobe Analytics kan läggas till som ett tillägg i startegenskapen. Regler kan definieras för mappning och postanrop till Adobe Analytics:
 
 * I [den här videon](https://docs.adobe.com/content/help/en/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html) får du lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
 
@@ -60,7 +60,7 @@ Adobe Analytics kan läggas till som ett tillägg i startegenskapen. Regler kan 
 
 >[!NOTE]
 >
->Befintliga ramverk fungerar fortfarande, men de kan inte konfigureras i Touch-gränssnittet. Du bör återskapa variabelmappningskonfigurationerna i Launch.
+>Befintliga (äldre) ramverk fungerar fortfarande, men de kan inte konfigureras i Touch-gränssnittet. Du bör återskapa variabelmappningskonfigurationerna i Launch.
 
 >[!NOTE]
 >
