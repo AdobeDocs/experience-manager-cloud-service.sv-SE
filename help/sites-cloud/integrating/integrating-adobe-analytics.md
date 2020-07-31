@@ -2,9 +2,9 @@
 title: Integrera med Adobe Analytics
 description: 'Integrera med Adobe Analytics '
 translation-type: tm+mt
-source-git-commit: f2ed74afd2df43e31ff1002cd42a60f372d0b769
+source-git-commit: 96e1d775a98584f12e4571c708955a9ded57e3c4
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '530'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 Genom att integrera Adobe Analytics och AEM som en Cloud Service kan du spåra webbsidans aktivitet. Integreringen kräver:
 
 * med Touch-gränssnittet för att skapa en Analytics-konfiguration i AEM som en Cloud Service.
-* lägga till och konfigurera Adobe Analytics som ett tillägg i [Adobe Launch].(https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html).
+* lägga till och konfigurera Adobe Analytics som ett tillägg i [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html).
 
 Jämfört med tidigare versioner av AEM finns inte ramverksstöd i Analytics Configuration in AEM som Cloud Service. I stället görs det nu via Adobe Launch, som är det defaceverktyg som används för att skapa en AEM sajt med Analytics-funktioner (JS-bibliotek). I Adobe Launch skapas en egenskap där Adobe Analytics-tillägget kan konfigureras och regler skapas för att skicka data till Adobe Analytics. Adobe Launch har ersatt uppgiften med analys från sitecatalyst.
 
@@ -23,11 +23,11 @@ Jämfört med tidigare versioner av AEM finns inte ramverksstöd i Analytics Con
 >
 >Adobe Experience Manager som Cloud Service som inte har något Analytics-konto kan begära åtkomst till Analytics Foundation Pack för Experience Cloud. Detta Foundation Pack ger begränsad användning av Analytics i volymprocent.
 
-## Skapa Analytics-konfigurationen {#analytics-configuration}
+## Skapa Adobe Analytics-konfigurationen {#analytics-configuration}
 
 1. Navigera till **Verktyg** → **Cloud Service**.
-2. Välj **Adobe Analytics Configurations**.
-   ![Analytics](assets/analytics_screen1.png "WindowAnalytics Window")
+2. Välj **Adobe Analytics**.
+   ![Adobe Analytics](assets/analytics_screen2.png "WindowAdobe Analytics Window")
 3. Klicka på **Skapa** .
 4. Fyll i informationen (se nedan) och klicka på **Anslut**.
 
