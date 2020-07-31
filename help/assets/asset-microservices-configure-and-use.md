@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 253231d2c9bafbba72696db36e9ed46b8011c9b3
+source-git-commit: f5ebd1ae28336e63d8f3a89d7519cf74b46a3bfd
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2159'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Så här skapar du en standardbearbetningsprofil:
    * Kvalitet i procent av varje JPEG-återgivning.
    * Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
 
-![processing-profiles-adding](assets/processing-profiles-adding.png)
+   ![processing-profiles-adding](assets/processing-profiles-adding.png)
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -106,23 +106,22 @@ I följande video visas hur användbar och användbar standardprofilen är.
 
 ## Anpassade profil- och användningsfall {#custom-config}
 
-**TBD-objekt**:
+<!-- **TBD items**:
 
-* Övergripande korslänkning med utökningsbart innehåll.
-* Ange hur du hämtar URL för arbetare. Arbetar-URL för Dev-, Stage- och Prod-miljöer.
-* Omnämnande av mappning av tjänstparametrar. Länk till datortjänstartikeln.
-* Granska från flödesperspektiv som delas i Jira-biljett.
+* Overall cross-linking with the extensibility content.
+* Mention how to get URL of worker. Worker URL for Dev, Stage, and Prod environments.
+* Mention mapping of service parameters. Link to compute service article.
+* Review from flow perspective shared in Jira ticket.
+-->
 
 Vissa användningsområden för avancerad tillgångsbearbetning kan inte utföras med standardkonfigurationer eftersom organisationens behov varierar. Adobe erbjuder [!DNL Asset Compute Service] sådana användningsområden. Det är en skalbar och utbyggbar tjänst för bearbetning av digitala resurser. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
 
-Utvecklare kan använda tjänsten Resursberäkning för att skapa specialanpassade medarbetare som klarar fördefinierade, komplexa användningsfall. [!DNL Experience Manager] kan anropa dessa anpassade arbetare från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden:
+Utvecklare kan använda tjänsten Resursberäkning för att skapa specialanpassade medarbetare som klarar fördefinierade, komplexa användningsfall. [!DNL Experience Manager] kan anropa dessa anpassade arbetare från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
 
-* Skapa egna smarta taggar för digitalt material med Adobe Sensei.
-* Generera en beskärningsmask för ett objekt med Adobe Sensei.
-* Hämta produktmetadatainformation från PIM-systemet och gör metadatan till en del av resursens binära fil när resursen används.
-* Ändra bakgrundsfärgen för en genomskinlig bild med [!DNL Adobe Photoshop] API.
-* Retuschera en bild med [!DNL Photoshop] API.
-* Räta upp en bild med [!DNL Adobe Lightroom] API.
+* Anropa [!DNL Adobe Photoshop] till API:t för bildbortfall och spara resultatet som återgivning.
+* Anropa tredjepartssystem för att uppdatera data, till exempel ett PIM-system.
+* Använd [!DNL Photoshop] API för att generera olika renderingar baserat på Photoshop-mallen.
+* Använd [!DNL Adobe Lightroom] API för att optimera inkapslade resurser och spara dem som återgivningar.
 
 >[!NOTE]
 >
@@ -216,3 +215,4 @@ Mer information om vilket standardarbetsflödessteg som kan användas i efterbea
 ## God praxis och begränsningar {#best-practices-limitations-tips}
 
 * Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Det går inte att ta bort återgivningar gruppvis efteråt. Oönskade återgivningar kan ta upp mycket lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] för att ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
+* Stödet är för närvarande begränsat till att generera renderingar. Generering av ny resurs stöds inte.
