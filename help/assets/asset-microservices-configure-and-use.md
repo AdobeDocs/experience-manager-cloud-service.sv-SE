@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f5ebd1ae28336e63d8f3a89d7519cf74b46a3bfd
+source-git-commit: a29b00ed6b216fb83f6a7c6bb7b34e1f317ffa57
 workflow-type: tm+mt
-source-wordcount: '2159'
+source-wordcount: '2349'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Resursmikrotjänsterna erbjuder skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar tjänsterna för optimal hantering av olika tillgångstyper och bearbetningsalternativ.
 
-Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**, som tillhandahåller en standardinställning, och gör det möjligt för en administratör att lägga till en mer specifik konfiguration för bearbetning av resurser. Administratörer kan skapa och underhålla konfigurationer för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflöden kan du utöka och göra fullständiga anpassningar.
+Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**, som tillhandahåller en standardinställning, och låter en administratör lägga till en mer specifik konfiguration för tillgångsbearbetning. Administratörer kan skapa och underhålla konfigurationer för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflöden kan du utöka och göra fullständiga anpassningar.
 
 Med tillgångsmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara att användas än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick.
 
@@ -44,17 +44,18 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 
 Experience Manager tillåter följande bearbetningsnivåer.
 
-| Konfiguration | Beskrivning | Användningsexempel |
+| Alternativ | Beskrivning | Användningsexempel |
 |---|---|---|
-| [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | Standardminiatyrbilder som används i [!DNL Assets] användargränssnittet (48, 140 och 319 px). Stor förhandsgranskning (webbåtergivning - 1 280 pixlar); Metadata och textrahering. |
-| [Standardkonfiguration](#standard-config) | Konfigureras endast av administratörer via användargränssnittet. Ger fler alternativ för generering av återgivning än standardkonfigurationen ovan. | Ändra bildformat och upplösning, generera FPO-återgivningar. |
-| [Anpassad konfiguration](#custom-config) | Konfigureras av administratörer via användargränssnittet för att anropa anpassade arbetare som stöder mer komplexa krav. Utnyttjar ett molnbaserat [!DNL Asset Compute Service]program. | Se [tillåtna användningsfall](#custom-config). |
+| [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används i [!DNL Assets] användargränssnittet (48, 140 och 319 px) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
+| [Anpassad konfiguration](#standard-config) | Konfigureras av administratörer via användargränssnittet. Ger fler alternativ för generering av återgivning genom att utöka standardalternativet. Utöka medarbetaren så att du kan skapa olika format och renderingar. | <ul><li>FPO-återgivning. </li> <li>Ändra filformat och upplösning för bilder</li> <li> Tillämpa villkoren på konfigurerade filtyper. </li> </ul> |
+| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade arbetare för att anropa [!DNL Asset Compute Service]. Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
 
-Mer information om hur du skapar anpassade bearbetningsprofiler som är specifika för dina egna behov, t.ex. för integrering med andra system, finns i [Efterbehandlingsarbetsflöden](#post-processing-workflows).
+<!-- To create custom processing profiles specific to your custom requirements, say to integrate with other systems, see [post-processing workflows](#post-processing-workflows).
+-->
 
 ## Filformat som stöds {#supported-file-formats}
 
-Resursmikrotjänsterna har stöd för en mängd olika filformat när det gäller möjligheten att generera återgivningar eller extrahera metadata. En fullständig lista finns i [filformat](file-format-support.md) som stöds.
+Resursmikrotjänsterna har stöd för en mängd olika filformat för att bearbeta, generera renderingar eller extrahera metadata. Se [Filformat](file-format-support.md) som stöds för en fullständig lista över MIME-typer och de funktioner som stöds för varje typ.
 
 ## Standardkonfiguration {#default-config}
 
@@ -65,7 +66,7 @@ Med standardkonfigurationen konfigureras bara den mest grundläggande bearbetnin
 <!-- ![processing-profiles-standard](assets/processing-profiles-standard.png)
 -->
 
-## Standardprofil {#standard-config}
+## Standardkonfiguration {#standard-config}
 
 [!DNL Experience Manager] har funktioner för att generera mer specifika renderingar för vanliga format efter användarens behov. En administratör kan skapa ytterligare [!UICONTROL Processing Profiles] för att underlätta skapandet av en sådan återgivning. Användarna tilldelar sedan en eller flera av de tillgängliga profilerna till specifika mappar för att få den ytterligare bearbetningen klar. Den extra bearbetningen kan till exempel generera renderingar för webben, mobiler och surfplattor. I följande video visas hur du skapar och använder [!UICONTROL Processing Profiles] och hur du får tillgång till de återgivningar som skapas.
 
@@ -96,11 +97,14 @@ Så här skapar du en standardbearbetningsprofil:
 
 1. Klicka på **[!UICONTROL Save]**.
 
-I följande video visas hur användbar och användbar standardprofilen är.
+<!-- TBD: Update the video link when a new video is available from Tech Marketing.
+
+The following video demonstrates the usefulness and usage of standard profile.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29832?quality=9)
+-->
 
-<!-- Removed per cqdoc-15624 request by engineering.
+<!-- This image was removed per cqdoc-15624, as requested by engineering.
  ![processing-profiles-list](assets/processing-profiles-list.png) 
  -->
 
@@ -114,14 +118,20 @@ I följande video visas hur användbar och användbar standardprofilen är.
 * Review from flow perspective shared in Jira ticket.
 -->
 
-Vissa användningsområden för avancerad tillgångsbearbetning kan inte utföras med standardkonfigurationer eftersom organisationens behov varierar. Adobe erbjuder [!DNL Asset Compute Service] sådana användningsområden. Det är en skalbar och utbyggbar tjänst för bearbetning av digitala resurser. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
+Programmet har stöd för en mängd olika användningsområden, till exempel standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer och implementering av anpassad eller organisationsspecifik bearbetning. [!DNL Asset Compute Service] Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen som standard eller via konfigurationen av bearbetningsprofiler i användargränssnittet. Om affärsbehoven inte tillgodoses av den här bearbetningen rekommenderar Adobe att man utvecklar och använder tjänsten Asset Compute för att utöka standardfunktionerna.
 
-Utvecklare kan använda tjänsten Resursberäkning för att skapa specialanpassade medarbetare som klarar fördefinierade, komplexa användningsfall. [!DNL Experience Manager] kan anropa dessa anpassade arbetare från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
+>[!NOTE]
+>
+>Adobe rekommenderar att du endast använder en anpassad arbetare när företaget inte kan utföra arbetet med standardkonfigurationer eller standardprofilen.
 
-* Anropa [!DNL Adobe Photoshop] till API:t för bildbortfall och spara resultatet som återgivning.
+Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
+
+Utvecklare kan använda verktyget för [!DNL Asset Compute Service] att skapa specialanpassade arbetare som klarar fördefinierade användningsfall. [!DNL Experience Manager] kan anropa dessa anpassade arbetare från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
+
+* Använd [!DNL Adobe Photoshop]API:t [för](https://github.com/AdobeDocs/photoshop-api-docs-pre-release#imagecutout) ImageCutout och spara resultatet som rendering.
 * Anropa tredjepartssystem för att uppdatera data, till exempel ett PIM-system.
 * Använd [!DNL Photoshop] API för att generera olika renderingar baserat på Photoshop-mallen.
-* Använd [!DNL Adobe Lightroom] API för att optimera inkapslade resurser och spara dem som återgivningar.
+* Använd API:t [för](https://github.com/AdobeDocs/lightroom-api-docs#supported-features) Adobe Lightroom för att optimera inkapslade resurser och spara dem som återgivningar.
 
 >[!NOTE]
 >
@@ -133,18 +143,30 @@ Så här skapar du en anpassad profil:
 
 1. Administratörer har åtkomst **[!UICONTROL Tools > Assets > Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
 1. Klicka på fliken **[!UICONTROL Custom]**. Klicka på **[!UICONTROL Add New]**. Ange önskat filnamn för återgivningen.
-1. Ange följande information och klicka på **[!UICONTROL Save]**.
+1. Ange följande information.
 
    * Filnamn för varje återgivning och ett filtillägg som stöds.
    * Slutpunkts-URL för en standardanpassad app. Appen måste komma från samma organisation som Experience Manager-kontot.
-   * Lägg till tjänstparametrar efter behov.
+   * Lägg till [!UICONTROL Service Parameters] för att skicka extra information eller parametrar till den anpassade arbetaren.
    * Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
 
-![custom-processing-profile](assets/custom-processing-profile.png)
+   Klicka på **[!UICONTROL Save]**.
 
 >[!CAUTION]
 >
 >Om appen och [!DNL Experience Manager] kontot Fireworks inte kommer från samma organisation fungerar inte integreringen.
+
+### Ett exempel på en anpassad profil {#custom-profile-example}
+
+För att illustrera hur den anpassade profilen används ska vi överväga ett användningsexempel för att använda anpassad text på kampanjbilder. Du kan skapa en bearbetningsprofil som använder Photoshop API för att redigera bilderna.
+
+Integreringen av tjänsten Resursberäkning gör att Experience Manager kan skicka dessa parametrar till den anpassade arbetaren med hjälp av [!UICONTROL Service Parameters] fältet. Den anpassade arbetaren anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
+
+![custom-processing-profile](assets/custom-processing-profile.png)
+
+*Bild: Använd[!UICONTROL Service Parameters]fältet för att skicka tillagd information till fördefinierade parametrar som byggs in i den anpassade arbetaren.*
+
+När kampanjbilder överförs till den mapp som den här bearbetningsprofilen används i uppdateras bilderna med `Jumanji` text i `Arial-BoldMT` teckensnittet.
 
 ## Använda bearbetningsprofiler för att bearbeta resurser {#use-profiles}
 
@@ -152,7 +174,7 @@ Skapa och använd de extra anpassade bearbetningsprofilerna på specifika mappar
 
 Använd bearbetningsprofiler på mappar på något av följande sätt:
 
-* Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools > Assets > Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
+* Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
 * Users can select a folder in the Assets user interface, use **[!UICONTROL Properties]** action to open folder properties screen, click on the **[!UICONTROL Processing Profiles]** tab, and in the popup list, select the correct processing profile for that folder. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
 
 >[!NOTE]
@@ -165,7 +187,7 @@ När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurs
 >
 >En bearbetningsprofil som används på en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används på en undermapp. När resurser överförs till en mapp kontrollerar Experience Manager egenskaperna för den innehållande mappen för att hitta en bearbetningsprofil. Om ingen används kontrolleras en överordnad mapp i hierarkin för att en bearbetningsprofil ska användas.
 
-Användarna kan kontrollera att bearbetningen faktiskt utfördes genom att öppna en nyligen överförd resurs som bearbetningen är klar för, öppna förhandsgranskningen av resursen och klicka på den vänstra **[!UICONTROL Renditions]** spårens vy. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
+Alla genererade återgivningar är tillgängliga i den vänstra [!UICONTROL Renditions] vyn. Öppna förhandsgranskningen av resursen och öppna den vänstra listen för att komma åt **[!UICONTROL Renditions]** vyn. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
 
 ![additional-renditions](assets/renditions-additional-renditions.png)
 
