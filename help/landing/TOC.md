@@ -1,11 +1,11 @@
 ---
-sub-product: Adobe Experience Manager som hjälp för molntjänster
-user-guide-title: Adobe Experience Manager som hjälp för molntjänster
+sub-product: Hjälp för Adobe Experience Manager as a Cloud Service
+user-guide-title: 'Hjälp för Adobe Experience Manager as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 2d6c91dac4fec04cb5f1a6d050f0464bc724a09b
+source-git-commit: 14c553f2b9e8cbaf27be74ba7efefc68ef740d3e
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 83%
+source-wordcount: '200'
+ht-degree: 93%
 
 ---
 
@@ -17,10 +17,11 @@ ht-degree: 83%
 + [Versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/home.html)
 + [Viktiga begrepp för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/core-concepts/home.html)
 + [Säkerhet för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/home.html)
-+ [Onboarding för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/home.html)
++ [Introduktion till AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/home.html) 
 + [AEM Sites as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html)
 + [AEM Assets as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/home.html)
-+ [Gå till AEM som molntjänst](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/home.html)
++ [AEM Commerce som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/commerce/home.html)
++ [Flytta till AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/home.html)
 + [Implementera program för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/home.html)
 + [Implementera anslutningar för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/connectors/home.html)
 + [Använda och underhålla AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/operations/home.html)
