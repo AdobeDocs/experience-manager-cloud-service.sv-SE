@@ -1,11 +1,11 @@
 ---
 title: Flytta till AEM as a Cloud Service
 description: Länkar till självhjälp och dokumentation för Adobe Experience Manager as a Cloud Service som flyttar till AEM as a Cloud Service
-translation-type: ht
-source-git-commit: ffdb0a39684f1ccc587bf1cc401811a7ca6d649d
-workflow-type: ht
-source-wordcount: '510'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: bb81fbf0952719c6ea364d008506faad73a60b8f
+workflow-type: tm+mt
+source-wordcount: '524'
+ht-degree: 97%
 
 ---
 
@@ -50,6 +50,7 @@ Läs mer om de olika faserna i övergången till Cloud Service:
 | [Användarhandbok för implementering](/help/implementing/home.md) | Lär dig hur du anpassar driftsättningen av Experience Manager as a Cloud Service med bland annat ämnen om utveckling och driftsättning. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar anslutningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-funktionerna i Experience Manager as a Cloud Service såsom indexerings- och underhållsåtgärder. |
+| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM som en Cloud Service. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 
