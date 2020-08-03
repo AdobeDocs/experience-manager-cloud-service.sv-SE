@@ -2,10 +2,10 @@
 title: Adobe Experience Manager Sites as a Cloud Service
 description: Länkar till självhjälp och dokumentation om Sites för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 85398c51f2ce7931039a9771661c9ba7edb30d08
+source-git-commit: 6c2215cdc83aaaf15e9ef9905805d3da10c1e8f6
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 100%
+source-wordcount: '412'
+ht-degree: 96%
 
 ---
 
@@ -42,6 +42,7 @@ På den här sidan visas självhjälp om Sites i Experience Manager as a Cloud S
 | [Användarhandbok för implementering](/help/implementing/home.md) | Lär dig hur du anpassar driftsättningen av Experience Manager as a Cloud Service med bland annat ämnen om utveckling och driftsättning. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar anslutningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-funktionerna i Experience Manager as a Cloud Service såsom indexerings- och underhållsåtgärder. |
+| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM som en Cloud Service. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 
