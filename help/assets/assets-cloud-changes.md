@@ -2,34 +2,34 @@
 title: Betydande förändringar i Adobe Experience Manager Assets som en Cloud Service
 description: Betydande förändringar av Adobe Experience Manager Assets i AEM Cloud Service jämfört med Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: 60f11cd86ecfeb47a46f9809d8ae9f1c45a4a25f
 workflow-type: tm+mt
 source-wordcount: '612'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 
 # Notable changes to Experience Manager Assets as a Cloud Service {#notable-changes}
 
-Adobe Experience Manager som Cloud Service har många nya funktioner och möjligheter att hantera dina AEM-projekt. Det finns dock många skillnader mellan Experience Manager Assets på plats eller i Adobe Managed Service jämfört med Experience Manager som Cloud Service. Det här dokumentet belyser de viktiga skillnaderna i Assets-funktioner.
+Adobe Experience Manager som Cloud Service har många nya funktioner och möjligheter att hantera dina AEM projekt. Det finns dock många skillnader mellan Experience Manager Assets på plats eller i Adobe Managed Service jämfört med Experience Manager som Cloud Service. Det här dokumentet belyser de viktiga skillnaderna i Assets-funktioner.
 
 De största skillnaderna jämfört med Experience Manager 6.5 är inom följande områden:
 
 * [Tillgångsintag och överföring](#asset-ingestion).
-* [Resursmikrotjänster för molnbearbetning](#asset-microservices).
+* [Resursmikrotjänster för molnbaserad bearbetning](#asset-microservices).
 * [Borttagning av klassiskt gränssnitt](#classic-ui).
 
 >[!NOTE]
 >
->Det här dokumentet markerar de anmärkningsvärda ändringarna av AEM Assets. Om du vill se ändringar som gäller för AEM som Cloud Service och andra moduler går du till:
+>Det här dokumentet markerar de anmärkningsvärda ändringarna av AEM Assets. Om du vill ändra AEM som en Cloud Service och andra moduler läser du:
 >
 >* [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
 >* En [översikt över AEM som en Cloud Service - Vad är nytt och Vad är annorlunda?](/help/overview/what-is-new-and-different.md)
 >* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
->* [Noterbara ändringar i AEM som Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
->* [Betydande ändringar av AEM Sites som en Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
->* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
+>* [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+>* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+>* [Adobe Experience Manager as a Cloud Service Tutorials](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
 
 
 ## Tillgångsintag och överföring {#asset-ingestion}
