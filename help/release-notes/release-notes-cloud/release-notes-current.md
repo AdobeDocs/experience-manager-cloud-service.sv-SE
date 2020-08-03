@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.7.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.7.0.'
 translation-type: tm+mt
-source-git-commit: a454bcce2d4db89c0ac8dc27fd187a822bacf7e6
+source-git-commit: af6603725ff42583e01c62eb8e8cf11aaea41437
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '948'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,6 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.7.0 är 30 juli 2
 * Konfigurationer lagras nu i `/conf` stället `/etc/cloudsettings` för i Experience Manager-databasen.
 
 ## Adobe Experience Manager Assets as a Cloud Service {#assets}
-
->[!NOTE]
->AEM Assets som Cloud Service kommer att lanseras under de närmaste dagarna.
 
 ### What&#39;s New {#what-is-new-assets}
 
