@@ -2,7 +2,7 @@
 title: Hantera innehållsfragment
 description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
 translation-type: tm+mt
-source-git-commit: bec541b49540f8794859803e0a56fc04c33de0f9
+source-git-commit: bb664c48c31aa19f71e881d31fcde5fdc3bb35a1
 workflow-type: tm+mt
 source-wordcount: '1454'
 ht-degree: 10%
@@ -131,9 +131,7 @@ Så här öppnar du fragmentet för redigering:
    >[!NOTE]
    >
    >1. Ett meddelande visas när fragmentet redan refereras på en innehållssida.
-      >
-      >
-   2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
+   >2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
 
 
 3. Navigera genom de tre lägena med ikonerna på sidopanelen:
