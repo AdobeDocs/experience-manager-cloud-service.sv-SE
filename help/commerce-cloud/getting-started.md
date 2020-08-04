@@ -2,7 +2,7 @@
 title: Komma igång med AEM Commerce som Cloud Service
 description: Komma igång med AEM Commerce som Cloud Service
 translation-type: tm+mt
-source-git-commit: 170a6f4f3aa07b9aa917014b7a682ead9ed595c1
+source-git-commit: 1fcdfa60c134491c781906e4a757a3a10399bde1
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 3%
@@ -13,6 +13,8 @@ ht-degree: 3%
 # Komma igång med AEM Commerce som Cloud Service {#start}
 
 För att komma igång med AEM Commerce som Cloud Service måste Experience Manager Cloud Servicen etableras med tillägget Commerce Integration Framework (CIF). Tillägget CIF är ytterligare en modul ovanpå [AEM Sites som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html).
+
+>[!VIDEO](https://video.tv.adobe.com/v/37843?quality=12&learn=on)
 
 ## Introduktion till {#onboarding}
 
