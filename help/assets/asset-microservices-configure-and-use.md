@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a29b00ed6b216fb83f6a7c6bb7b34e1f317ffa57
+source-git-commit: 9bef70df01192161b3dcca479b9faafa876d561f
 workflow-type: tm+mt
-source-wordcount: '2349'
+source-wordcount: '2426'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Experience Manager tillåter följande bearbetningsnivåer.
 |---|---|---|
 | [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används i [!DNL Assets] användargränssnittet (48, 140 och 319 px) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
 | [Anpassad konfiguration](#standard-config) | Konfigureras av administratörer via användargränssnittet. Ger fler alternativ för generering av återgivning genom att utöka standardalternativet. Utöka medarbetaren så att du kan skapa olika format och renderingar. | <ul><li>FPO-återgivning. </li> <li>Ändra filformat och upplösning för bilder</li> <li> Tillämpa villkoren på konfigurerade filtyper. </li> </ul> |
-| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade arbetare för att anropa [!DNL Asset Compute Service]. Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
+| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade arbetare för att anropa [tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Asset Compute. Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
 
 <!-- To create custom processing profiles specific to your custom requirements, say to integrate with other systems, see [post-processing workflows](#post-processing-workflows).
 -->
@@ -118,7 +118,7 @@ The following video demonstrates the usefulness and usage of standard profile.
 * Review from flow perspective shared in Jira ticket.
 -->
 
-Programmet har stöd för en mängd olika användningsområden, till exempel standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer och implementering av anpassad eller organisationsspecifik bearbetning. [!DNL Asset Compute Service] Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen som standard eller via konfigurationen av bearbetningsprofiler i användargränssnittet. Om affärsbehoven inte tillgodoses av den här bearbetningen rekommenderar Adobe att man utvecklar och använder tjänsten Asset Compute för att utöka standardfunktionerna.
+Programmet har stöd för en mängd olika användningsområden, till exempel standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer och implementering av anpassad eller organisationsspecifik bearbetning. [!DNL Asset Compute Service] Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller via konfiguration av bearbetningsprofiler. Om de här bearbetningsalternativen inte uppfyller affärsbehoven rekommenderar Adobe att du utvecklar och använder standardfunktionerna [!DNL Asset Compute Service] för att utöka dem. En översikt finns i [Lär dig mer om utbyggbarhet och när du ska använda den](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html).
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ Programmet har stöd för en mängd olika användningsområden, till exempel sta
 
 Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
 
-Utvecklare kan använda verktyget för [!DNL Asset Compute Service] att skapa specialanpassade arbetare som klarar fördefinierade användningsfall. [!DNL Experience Manager] kan anropa dessa anpassade arbetare från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
+Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade arbetare](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-worker.html) som passar de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade arbetare från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
 
 * Använd [!DNL Adobe Photoshop]API:t [för](https://github.com/AdobeDocs/photoshop-api-docs-pre-release#imagecutout) ImageCutout och spara resultatet som rendering.
 * Anropa tredjepartssystem för att uppdatera data, till exempel ett PIM-system.
@@ -238,3 +238,10 @@ Mer information om vilket standardarbetsflödessteg som kan användas i efterbea
 
 * Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Det går inte att ta bort återgivningar gruppvis efteråt. Oönskade återgivningar kan ta upp mycket lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] för att ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
 * Stödet är för närvarande begränsat till att generera renderingar. Generering av ny resurs stöds inte.
+
+>[!MORELIKETHIS]
+>
+>* [Introduktion till tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Resursberäkning.
+>* [Förstå utbyggbarhet och när den ska användas](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html).
+>* [Skapa egna arbetare](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-worker.html).
+
