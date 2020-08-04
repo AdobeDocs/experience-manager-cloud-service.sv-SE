@@ -1,25 +1,38 @@
 ---
-title: Migreringsverktyg för arbetsflöde för resurs
-description: 'Migreringsverktyg för arbetsflöde för resurs '
+title: Verktyg för resursarbetsflödesmigrering
+description: 'Verktyg för resursarbetsflödesmigrering '
 translation-type: tm+mt
-source-git-commit: 3478827949356c4a4f5133b54c6cf809f416efef
+source-git-commit: 3a438de3c460d4dc5a8b8617f0ec0eefc56f1665
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 0%
+source-wordcount: '232'
+ht-degree: 46%
 
 ---
 
 
-# Migreringsverktyg för arbetsflöde för resurs {#asset-workflow-migration}
+# Verktyg för resursarbetsflödesmigrering {#asset-workflow-migration}
 
-Verktyget för resursarbetsflödesmigrering används för att automatiskt migrera arbetsflöden för resursbearbetning från AEM- eller AMS-distributioner till bearbetningsprofiler och OSGi-konfigurationer för användning i AEM Assets som en molntjänst.
+Verktyget för resursarbetsflödesmigrering används för att automatiskt migrera arbetsflöden för resursbearbetning från On-premise- eller AMS-driftsättningar till bearbetningsprofiler och OSGi-konfigurationer för användning i AEM Assets as a Cloud Service.
 
 ## Introduktion {#introduction}
 
-I det här avsnittet beskrivs resurser och implementeringsinformation för verktyget Resursarbetsflödesmigrering.
+I det här avsnittet beskrivs resurser och implementeringsinformation för verktyget för resursarbetsflödesmigrering.
 
-Med det här verktyget kan AEM-utvecklare migrera befintliga arbetsflöden för bearbetning av AEM-resurser till AEM som en molntjänst.
+Med det här verktyget kan AEM-utvecklare migrera befintliga arbetsflöden för bearbetning av AEM-resurser till AEM as a Cloud Service.
 
-## Installerar verktyget för arbetsflödesmigrering {#installing-tool}
+## Arbetsflöden som stöds {#migration-support-for-workflows}
 
-Se **[Git-resurs: AEM Assets som en molntjänst - Arbetsflödesmigrering](https://github.com/adobe/aem-cloud-migration)**för att lära dig hur du installerar och bygger kod från källan.
+Arbetsflödena har olika nivå av migreringsstöd. Se den här [listan över specifika arbetsflöden](https://github.com/adobe/aem-cloud-migration/blob/master/src/main/resources/workflowSteps.properties). Arbetsflödena kategoriseras i följande kategorier baserat på det stöd som ges. Adobe har stöd för migrering av arbetsflöden som finns i `SUPPORTED`, `REQUIRED`eller `OPTIONAL` kategorier. Arbetsflödesstegen som anges i de andra kategorierna stöds inte.
+
+* `SUPPORTED`: Funktioner som stöds i [!DNL Experience Manager Assets] som Cloud Service.
+* `OPTIONAL`: Ytterligare funktioner i [!DNL Experience Manager Assets] som Cloud Service.
+* `REQUIRED`: Ett obligatoriskt steg som läggs till i arbetsflödet.
+* `UNNECESSARY`: Funktioner är inte nödvändiga i [!DNL Experience Manager Assets] som Cloud Service.
+* `NUI_OOTB`: Funktioner som tillhandahålls av [tjänsten](/help/assets/asset-microservices-configure-and-use.md)Asset Compute.
+* `DMS7_OOTB`: Funktioner som tillhandahålls av standardanslutningar [!DNL Dynamic Media] .
+* `NUI_MIGRATED`: Flyttad till en [bearbetningsprofil för tjänsten](/help/assets/asset-microservices-configure-and-use.md)Resursberäkning.
+* `UNSUPPORTED`: Stöds för närvarande inte i [!DNL Experience Manager Assets] som Cloud Service.
+
+## Installera verktyget för arbetsflödesmigrering {#installing-tool}
+
+Läs **[Git-resurs: AEM Assets as a Cloud Service – arbetsflödesmigrering](https://github.com/adobe/aem-cloud-migration)**för information om hur du installerar och skapar kod från källan.
