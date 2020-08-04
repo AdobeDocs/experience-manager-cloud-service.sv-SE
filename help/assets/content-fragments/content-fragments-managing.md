@@ -2,7 +2,7 @@
 title: Hantera innehållsfragment
 description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
 translation-type: tm+mt
-source-git-commit: 5f332f247cc8a9baafb3e80a362a04410a9d036f
+source-git-commit: bec541b49540f8794859803e0a56fc04c33de0f9
 workflow-type: tm+mt
 source-wordcount: '1454'
 ht-degree: 10%
@@ -35,6 +35,7 @@ Metoden för att skapa ett innehållsfragment är:
    * [Modell](/help/assets/content-fragments/content-fragments-models.md) - används för att skapa ett fragment som kräver strukturerat innehåll. till exempel **Adventure** -modellen
 
       * Alla tillgängliga modeller visas.
+
    Efter markeringen använder du **Nästa** för att fortsätta.
 
    ![fragmentbas](assets/cfm-managing-01.png)
@@ -103,7 +104,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 >[!NOTE]
 >
->Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/manage-digital-assets.md) och/eller [AEM-datorprogrammet](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
+>Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/manage-digital-assets.md) och/eller [AEM](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -122,6 +123,7 @@ Så här öppnar du fragmentet för redigering:
 
    * Klicka/tryck på fragment- eller fragment-länken (detta beror på konsolvyn).
    * Markera fragmentet och **redigera** sedan i verktygsfältet.
+
    Fragmentredigeraren öppnas:
 
    ![fragmentredigerare](assets/cfm-managing-03.png)
@@ -131,8 +133,6 @@ Så här öppnar du fragmentet för redigering:
    >1. Ett meddelande visas när fragmentet redan refereras på en innehållssida.
       >
       >
-      >
-
    2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
 
 
@@ -143,6 +143,7 @@ Så här öppnar du fragmentet för redigering:
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
    * [Associerat innehåll](#associating-content-with-your-fragment)
    * [Metadata](#viewing-and-editing-the-metadata-properties-of-your-fragment)
+
    ![lägen](assets/cfm-managing-04.png)
 
 4. När du har gjort ändringarna använder du **Spara** eller **Avbryt** efter behov.
@@ -182,9 +183,9 @@ Redigeraren har två alternativ:
 
    Redigeraren avslutas utan att de senaste ändringarna sparas.
 
-När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **avbryter** dina ändringar:
+När du redigerar ditt innehållsfragment skapas AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **avbryter** dina ändringar:
 
-1. När ett innehållsfragment öppnas för redigering söker AEM efter den cookie-baserade token som anger om det finns en *redigeringssession* :
+1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession* :
 
    1. Om token hittas betraktas fragmentet som en del av den befintliga redigeringssessionen.
    2. Om token *inte* är tillgänglig och användaren börjar redigera innehåll, skapas en version och en token för den nya redigeringssessionen skickas till klienten, där den sparas i en cookie.
@@ -207,7 +208,7 @@ När du har öppnat fragmentet kan du använda fliken [Variationer](/help/assets
 
 ## Skapa och hantera variationer i fragment {#creating-and-managing-variations-within-your-fragment}
 
-När du har skapat mallinnehållet kan du skapa och hantera [varianter](/help/assets/content-fragments/content-fragments-variations.md) av det innehållet.
+När du har skapat det Överordnad innehållet kan du skapa och hantera [varianter](/help/assets/content-fragments/content-fragments-variations.md) av det innehållet.
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
