@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9bef70df01192161b3dcca479b9faafa876d561f
+source-git-commit: f51700dad918e5152c1af70686531d1ce5f544e7
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2447'
 ht-degree: 0%
 
 ---
@@ -146,8 +146,8 @@ Så här skapar du en anpassad profil:
 1. Ange följande information.
 
    * Filnamn för varje återgivning och ett filtillägg som stöds.
-   * Slutpunkts-URL för en standardanpassad app. Appen måste komma från samma organisation som Experience Manager-kontot.
-   * Lägg till [!UICONTROL Service Parameters] för att skicka extra information eller parametrar till den anpassade arbetaren.
+   * [Slutpunkts-URL för en standardanpassad app](https://docs.adobe.com/content/help/en/asset-compute/using/extend/deploy-custom-worker.html). Appen måste komma från samma organisation som Experience Manager-kontot.
+   * Lägg till tjänstparametrar för att [skicka extra information eller parametrar till den anpassade arbetaren](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-worker.html#pass-custom-parameters).
    * Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
 
    Klicka på **[!UICONTROL Save]**.
