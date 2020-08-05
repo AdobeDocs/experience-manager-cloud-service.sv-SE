@@ -1,10 +1,10 @@
 ---
-title: Distribuera koden - Cloud Service
-description: Distribuera koden - Cloud Service
+title: Distribuera koden - Cloud Services
+description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: 164d2d3b4dabfa2b06da245dc33ef90b5b77192b
+source-git-commit: ebab226b7d45994cc00c1abe42d84dab47391f5d
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '895'
 ht-degree: 3%
 
 ---
@@ -59,10 +59,6 @@ När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du re
 
 
 
->[!IMPORTANT]
->
->Följande avsnitt måste uppdateras för Cloud Manager för AEM cloud services och pågår.
-
 ## Distributionsprocess {#deployment-process}
 
 I följande avsnitt beskrivs hur AEM- och dispatcherpaket distribueras i scenfasen och i produktionsfasen.
@@ -80,13 +76,13 @@ När Cloud Manager distribuerar till icke-produktionstopologier är målet att s
    >
    >Den här funktionen förväntas främst användas av 1-1-1-kunder.
 
-1. Varje AEM-artefakt distribueras till varje AEM-instans via API:er för Package Manager, där paketberoenden avgör distributionsordningen.
+1. Varje AEM-artefakt distribueras till varje AEM via API:er för Package Manager, där paketberoenden avgör distributionsordningen.
 
    Mer information om hur du kan använda paket för att installera nya funktioner, överföra innehåll mellan instanser och säkerhetskopiera databasinnehåll finns i Så här arbetar du med paket.
 
    >[!NOTE]
    >
-   >Alla AEM-artefakter distribueras till både författaren och utgivaren. Körningslägena bör utnyttjas när nodspecifika konfigurationer krävs. Mer information om hur du kan trimma AEM-instansen för ett visst ändamål med hjälp av runmodes finns i Körningslägen.
+   >Alla AEM artefakter distribueras till både författaren och utgivaren. Körningslägena bör utnyttjas när nodspecifika konfigurationer krävs. Om du vill veta mer om hur du kan trimma AEM för ett visst ändamål med hjälp av runmodes kan du läsa Körningslägen.
 
 1. Dispatchartefakten distribueras till varje dispatcher enligt följande:
 
@@ -100,7 +96,7 @@ När Cloud Manager distribuerar till icke-produktionstopologier är målet att s
    >
    >Dispatcher-artefakten förväntas innehålla hela filuppsättningen.  Alla konfigurationsfiler för dispatcher måste finnas i Git-databasen. Om filer eller mappar saknas kommer distributionen att misslyckas.
 
-1. Efter den lyckade distributionen av alla AEM- och dispatcherpaket till alla noder läggs utskickarna till i belastningsutjämnaren och distributionen är klar.
+1. Efter den lyckade distributionen av alla AEM- och dispatcherpaket till alla noder läggs avsändarna tillbaka till belastningsutjämnaren och distributionen är klar.
 
    >[!NOTE]
    >
@@ -108,16 +104,16 @@ När Cloud Manager distribuerar till icke-produktionstopologier är målet att s
 
 ### Distribution till produktionsfas {#deployment-production-phase}
 
-Processen för att distribuera till produktionstopologier skiljer sig något för att minimera påverkan för AEM Site-besökare.
+Processen för att distribuera till produktionstopologier skiljer sig något för att minimera påverkan för AEM webbplatsbesökare.
 
 Produktionsinstallationer följer i allmänhet samma steg som ovan, men på ett rullande sätt:
 
-1. Distribuera AEM-paket till författaren.
+1. Distribuera AEM som ska författas.
 1. Koppla loss dispatcher1 från belastningsutjämnaren.
-1. Distribuera AEM-paket till publish1 och dispatcherns paket till dispatcher1, flush dispatcher cache.
+1. Distribuera AEM paket till publish1 och dispatcherpaketet till dispatcher1, flush dispatcher cache.
 1. Placera dispatcher1 i belastningsutjämnaren igen.
 1. När dispatcher1 är tillbaka i tjänst frigör du dispatcher2 från belastningsutjämnaren.
-1. Distribuera AEM-paket till publish2 och dispatcherpaketet till dispatcher2, flush dispatcher cache.
+1. Distribuera AEM paket till publish2 och dispatcherpaketet till dispatcher2, flush dispatcher cache.
 1. Placera dispatcher2 i belastningsutjämnaren igen.
 Den här processen fortsätter tills distributionen har nått alla utgivare och utgivare i topologin.
 
