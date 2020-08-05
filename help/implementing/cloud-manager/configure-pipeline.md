@@ -1,11 +1,11 @@
 ---
-title: Konfigurera CI/CD-pipeline - molntjänster
-description: Konfigurera CI/CD-pipeline - molntjänster
+title: Konfigurera CI/CD-pipeline - Cloud Services
+description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: e9514d2ba625a7df8a8126f5b0ab74b975eeda51
+source-git-commit: 8d82bb8ee2b7aa234fc6b9b8efe23f04f4c66c87
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 2%
+source-wordcount: '570'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## Förstå flödet {#understanding-the-flow}
 
-Du kan konfigurera pipeline från panelen **Pipeline-inställningar** i [!UICONTROL Cloud Manager].
+You can configure your production pipeline from the **Pipeline Settings** tile in the [!UICONTROL Cloud Manager] UI.
 
 Distributionshanteraren ansvarar för att ställa in pipeline. När du gör det väljer du först en gren i **Git-databasen**.
 
@@ -59,6 +59,7 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
    * **Manuell** - med användargränssnittet startar du pipelinen manuellt.
    * **På Git Changes** - startar CI/CD-pipeline när implementeringar har lagts till i den konfigurerade Git-grenen. Även om du väljer det här alternativet kan du alltid starta pipelinen manuellt.
+
    Under pipeline-konfigurationen eller -redigeringen kan Deployment Manager välja att definiera pipeline-beteendet när ett viktigt fel påträffas i någon av kvalitetsportarna.
 
    Detta är användbart för kunder som vill ha mer automatiserade processer. De tillgängliga alternativen är:
