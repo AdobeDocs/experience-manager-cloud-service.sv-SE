@@ -2,7 +2,7 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: 96e1d775a98584f12e4571c708955a9ded57e3c4
+source-git-commit: 7d3b5199333a60d69957819d874f8ce1bafdd797
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 1%
@@ -12,22 +12,22 @@ ht-degree: 1%
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Marketing Cloud kan ni med Adobe Target öka innehållets relevans genom att målinrikta och mäta i alla kanaler. För att integrera Adobe Target och AEM som en Cloud Service krävs följande:
+Som en del av Adobe Marketing Cloud kan Adobe Target öka innehållets relevans genom målinriktning och mätning i alla kanaler. För att integrera Adobe Target och AEM som en Cloud Service krävs följande:
 
-* med Touch-gränssnittet för att skapa en Analytics-konfiguration i AEM som en Cloud Service (IMS-konfiguration krävs).
+* med Touch-gränssnittet för att skapa en målkonfiguration i AEM som en Cloud Service (IMS-konfiguration krävs).
 * lägga till och konfigurera Adobe Target som ett tillägg i [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html).
 
-Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM sidor (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;upplevelseanpassning&quot;. För Experience Fragments export till Target behöver du bara Adobe Target Configuration och IMS.
+Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;upplevelseanpassning&quot;. För Experience Fragments export till Target behöver du bara Adobe Target Configuration och IMS.
 
 >[!NOTE]
 >
->Adobe Experience Manager som Cloud Service som inte har något Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad användning av Target i volymprocent.
+>Adobe Experience Manager som Cloud Service-kunder som inte har något befintligt Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad volymanvändning av Target.
 
-## Skapa konfigurationen för Adobe Target {#create-configuration}
+## Skapa Adobe Target-konfigurationen {#create-configuration}
 
-1. Navigera till **Verktyg** → **Cloud Service**.
+1. Navigera till **Verktyg** → **Cloud Services**.
    ![](assets/cloudservice1.png "NavigationNavigation")
-2. Markera **Adobe Target**.
+2. Välj **Adobe Target**.
 3. Klicka på **Skapa** .
    ![](assets/tenant1.png "CreateCreate")
 4. Fyll i informationen (se nedan) och välj **Anslut**.
@@ -35,11 +35,11 @@ Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analy
 
 ### IMS-konfiguration
 
-En IMS-konfiguration för både Launch och Target krävs för att integrera Target med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM som en Cloud Service, men Target IMS-konfigurationen måste skapas (när Target har etablerats). Se [den här videon](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html) och [den här sidan](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/integration-ims-adobe-io.html) för att lära dig hur du skapar Target IMS-konfigurationen.
+En IMS-konfiguration för både Launch och Target krävs för att Target ska kunna integreras korrekt med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM som en Cloud Service, men IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). Se [den här videon](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html) och [den här sidan](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/integration-ims-adobe-io.html) för att lära dig hur du skapar IMS-konfigurationen för mål.
 
-### Redigera Target-konfigurationen {#edit-target-configuration}
+### Redigera målkonfigurationen {#edit-target-configuration}
 
-Så här redigerar du Target-konfigurationen:
+Så här redigerar du målkonfigurationen:
 
 1. Välj en befintlig konfiguration och klicka på **Egenskaper**.
 2. Redigera egenskaperna.
@@ -53,7 +53,7 @@ Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **W
 
 ## Integrera Adobe Target på AEM sajter med Adobe Launch {#integrate-target-launch}
 
-AEM erbjuder en färdig integrering med Experience Platform Launch. Genom att lägga till tillägget Adobe Target i Experience Platform Launch kan du använda funktionerna i Adobe Target på AEM webbsidor. Target-bibliotek återges endast med Launch.
+AEM erbjuder en färdig integrering med Experience Platform Launch. Genom att lägga till Adobe Target-tillägget i Experience Platform Launch kan du använda funktionerna i Adobe Target på AEM webbsidor. Målbibliotek återges bara med Launch.
 
 >[!NOTE]
 >
@@ -79,12 +79,12 @@ En egenskap är en behållare som fylls med tillägg, regler och dataelement.
 
 ### Lägga till nödvändiga tillägg {#add-extension}
 
-**Tillägg** är den behållare som hanterar huvudbiblioteksinställningarna. Tillägget Adobe Target stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Du måste lägga till både **Adobe Target** och **Adobe ContextHub** .
+**Tillägg** är den behållare som hanterar huvudbiblioteksinställningarna. Adobe Target-tillägget stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Du måste lägga till både **Adobe Target** och **Adobe ContextHub** .
 
-1. Välj alternativet Tilläggskatalog och sök efter Target i filtret.
-2. Markera **Adobe Target** at.js och klicka på alternativet Installera.
-   ![Target](assets/search_ext1.png "SearchTarget Search")
-3. Välj knappen **Konfigurera** . Lägg märke till konfigurationsfönstret med kontoinloggningsuppgifterna för Target importerade och till at.js-versionen för det här tillägget.
+1. Välj alternativet Tilläggskatalog och sök efter mål i filtret.
+2. Välj **Adobe Target** at.js och klicka på alternativet Installera.
+   ![Målsökning](assets/search_ext1.png "Målsökning")
+3. Välj knappen **Konfigurera** . Observera konfigurationsfönstret med Target-kontots autentiseringsuppgifter importerade och at.js-versionen för det här tillägget.
 4. Välj **Spara** för att lägga till måltillägget i Launch-egenskapen. Du bör kunna se måltillägget i listan **Installerade tillägg** .
    ![Spara](assets/configure_extension1.png "tilläggSpara tillägg")
 5. Upprepa stegen ovan om du vill söka efter **Adobe ContextHub** -tillägget och installera det (detta krävs för integrering med ContextHub-parametrar, baserat på vilken målanpassning som ska göras).
@@ -116,7 +116,7 @@ Mer information om hur du skapar och publicerar finns på den här [sidan](https
 
 | **Ändra** | **Konfiguration av klassiskt användargränssnitt** | **Konfiguration av pekskärmsgränssnitt** | **Konsekvenser** |
 |---|---|---|---|
-| Plats för Target Configuration. | /etc/cloudservices/testandtarget/ | /conf/tenant/settings/cloudservices/target | Tidigare fanns det flera konfigurationer under /etc/cloudservices/the standtarget, men nu finns en enda konfiguration under en klientorganisation. |
+| Sökväg till målkonfigurationen. | /etc/cloudservices/testandtarget/ | /conf/tenant/settings/cloudservices/target | Tidigare fanns det flera konfigurationer under /etc/cloudservices/the standtarget, men nu finns en enda konfiguration under en klientorganisation. |
 
 >[!NOTE]
 >
