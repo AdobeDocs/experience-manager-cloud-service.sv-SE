@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: 0789eb6ea2fb128d7b6b87cffd44a92187535642
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1474'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 ## Changes in AEM as a Cloud Service {#changes-in-aem-as-a-cloud-service}
 
-Med AEM som Cloud Service går Adobe från en AEM-instanscentrerad modell till en tjänstbaserad vy med n-x AEM Containers, som drivs av CI/CD-ledningar i Cloud Manager. I stället för att konfigurera och underhålla index för enskilda AEM-instanser måste indexkonfigurationen anges före en distribution. Konfigurationsförändringar i produktionen bryter helt klart CI/CD-reglerna. Detsamma gäller för indexändringar eftersom det kan påverka systemets stabilitet och prestanda om det inte anges testat och omindexerat innan de tas i produktion.
+Med AEM som Cloud Service går Adobe från en AEM instanscentrerad modell till en tjänstbaserad vy med n-x-AEM-behållare, som drivs av CI/CD-pipelines i Cloud Manager. I stället för att konfigurera och underhålla index för enskilda AEM måste indexkonfigurationen anges före en distribution. Konfigurationsförändringar i produktionen bryter helt klart CI/CD-reglerna. Detsamma gäller för indexändringar eftersom det kan påverka systemets stabilitet och prestanda om det inte anges testat och omindexerat innan de tas i produktion.
 
 Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och tidigare versioner:
 
-1. Användare har inte längre åtkomst till indexhanteraren för en enskild AEM-instans för att felsöka, konfigurera eller underhålla indexering. Det används endast för lokal utveckling och lokal driftsättning.
+1. Användare har inte längre åtkomst till indexhanteraren för en enskild AEM för att felsöka, konfigurera eller underhålla indexering. Det används endast för lokal utveckling och lokal driftsättning.
 
-1. Användare ändrar inte index för en enskild AEM-instans och behöver inte längre bekymra sig om konsekvenskontroller eller omindexering.
+1. Användare ändrar inte index för en enskild AEM och behöver inte längre bekymra sig om konsekvenskontroller eller omindexering.
 
 1. I allmänhet inleds indexändringar innan produktionen påbörjas för att inte kringgå kvalitetsgatewayer i Cloud Managers CI/CD-pipelines och inte påverka affärs-KPI:er i produktionen.
 
@@ -32,11 +32,11 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 1. Indexkonfigurationen ändras via distributioner. Ändringar av indexdefinitioner konfigureras på samma sätt som andra innehållsändringar.
 
-1. På en hög nivå på AEM som Cloud Service kommer två uppsättningar index att finnas i och med introduktionen av [Blue-Green-distributionsmodellen](#index-management-using-blue-green-deployments) : en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
+1. På en hög nivå AEM som Cloud Service kommer två uppsättningar index att finnas i och med introduktionen av [Blue-Green-distributionsmodellen](#index-management-using-blue-green-deployments) : en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
 
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
-1. Begränsningar: För närvarande stöds indexhantering på AEM som en Cloud Service endast för index av typen lucene.
+1. Begränsningar: För närvarande stöds bara indexhantering på AEM som en Cloud Service för index av typen lucene.
 
 <!-- ## Sizing Considerations {#sizing-considerations}
 
@@ -54,7 +54,7 @@ Definitionen av index kan omfatta tre användningsfall:
 1. Uppdaterar en befintlig indexdefinition. Detta innebär att en ny version av en befintlig indexdefinition läggs till
 1. Tar bort ett befintligt index som är överflödigt eller föråldrat.
 
-För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM som Cloud Service-dokumentation](/help/implementing/deploying/overview.md).
+För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM som en Cloud Service-dokumentation](/help/implementing/deploying/overview.md).
 
 ### Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
 
@@ -84,7 +84,7 @@ När den nya indexdefinitionen har lagts till måste det nya programmet distribu
 
 >[!TIP]
 >
->Mer information om den paketstruktur som krävs för AEM som Cloud Service finns i dokumentet [AEM Project Structure.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
+>Mer information om den paketstruktur som krävs för AEM som Cloud Service finns i dokumentet [AEM Projektstruktur.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
 
 ## Indexhantering med användning av blå-gröna distributioner {#index-management-using-blue-green-deployments}
 
@@ -105,7 +105,7 @@ Vissa delar av databasen (skrivskyddade delar av databasen) kan vara olika i den
 * **/content**
 * */libs (skrivskyddad)*
 * **/oak:index**
-* **/oak:index/acme**
+* **/oak:index/acme.**
 * **/jcr:system**
 * **/system**
 * **/var**
@@ -124,21 +124,21 @@ I följande tabell visas fem indexdefinitioner: index `cqPageLucene` används i 
 
 >[!NOTE]
 >
->`<indexName>-custom-<customerVersionNumber>` krävs för AEM som Cloud Service för att markera detta som en ersättning för ett befintligt index.
+>`<indexName>-custom-<customerVersionNumber>` behövs för AEM som Cloud Service för att markera detta som en ersättning för ett befintligt index.
 
 | Index | Index som inte är tillgängligt | Använd i version 1 | Använd i version 2 |
 |---|---|---|---|
 | /oak:index/damAssetLucene | Ja | Ja | Nej |
 | /oak:index/damAssetLucene-custom-1 | Ja (anpassad) | Nej | Ja |
-| /oak:index/acmeProduct-custom-1 | Nej | Ja | Nej |
-| /oak:index/acmeProduct-custom-2 | Nej | Nej | Ja |
+| /oak:index/acme.product-custom-1 | Nej | Ja | Nej |
+| /oak:index/acme.product-custom-2 | Nej | Nej | Ja |
 | /oak:index/cqPageLucene | Ja | Ja | Ja |
 
 Versionsnumret ökas stegvis varje gång indexvärdet ändras. För att undvika att egna indexnamn kolliderar med indexnamnen för själva produkten måste anpassade index samt ändringar i index utanför rutan avslutas med `-custom-<number>`.
 
 ### Ändringar av färdiga index {#changes-to-out-of-the-box-indexes}
 
-När Adobe ändrar ett körklart index som &quot;damAssetLucene&quot; eller &quot;cqPageLucene&quot; skapas ett nytt index med namnet `damAssetLucene-2` eller `cqPageLucene-2` om indexet redan har anpassats sammanfogas den anpassade indexdefinitionen med ändringarna i det körklara indexet enligt nedan. Ändringarna sammanfogas automatiskt. Det innebär att du inte behöver göra något om ett index som inte finns i kartongen ändras. Det går dock att anpassa indexet igen senare.
+När Adobe ändrar ett körklart index som &quot;damAssetLucene&quot; eller &quot;cqPageLucene&quot; skapas ett nytt index med namnet `damAssetLucene-2` eller `cqPageLucene-2` om indexet redan har anpassats sammanfogas den anpassade indexdefinitionen med ändringarna i det körklara indexet, vilket visas nedan. Ändringarna sammanfogas automatiskt. Det innebär att du inte behöver göra något om ett index som inte finns i kartongen ändras. Det går dock att anpassa indexet igen senare.
 
 | Index | Index som inte är tillgängligt | Använd i version 2 | Använd i version 3 |
 |---|---|---|---|
@@ -153,26 +153,26 @@ Indexhantering stöds för närvarande bara för index av typen `lucene`.
 
 ### Ta bort ett index {#removing-an-index}
 
-Om ett index ska tas bort i en senare version av programmet kan du definiera ett tomt index (ett index utan data att indexera) med ett nytt namn. Du kan till exempel ge den ett namn `/oak:index/acmeProduct-custom-3`. Detta ersätter indexvärdet `/oak:index/acmeProduct-custom-2`. När systemet har `/oak:index/acmeProduct-custom-2` tagit bort det tomma indexet `/oak:index/acmeProduct-custom-3` kan det också tas bort.
+Om ett index ska tas bort i en senare version av programmet kan du definiera ett tomt index (ett index utan data att indexera) med ett nytt namn. Du kan till exempel ge den ett namn `/oak:index/acme.product-custom-3`. Detta ersätter indexvärdet `/oak:index/acme.product-custom-2`. När systemet har `/oak:index/acme.product-custom-2` tagit bort det tomma indexet `/oak:index/acme.product-custom-3` kan det också tas bort.
 
 ### Lägga till ett index {#adding-an-index}
 
-Om du vill lägga till ett index med namnet &quot;/oak:index/acmeProduct-custom-1&quot; som ska användas i en ny version av programmet och senare, måste indexet konfigureras enligt följande:
+Om du vill lägga till ett index med namnet &quot;/oak:index/acme.product-custom-1&quot; som ska användas i en ny version av programmet och senare, måste indexet konfigureras enligt följande:
 
-`*mk.*assetLuceneIndex-1-custom-1`
+`acme.product-1-custom-1`
 
-Detta fungerar genom att en anpassad identifierare försätts i indexnamnet, följt av en punkt (**.**). Identifieraren måste vara mellan 1 och 4 tecken lång.
+Detta fungerar genom att en anpassad identifierare försätts i indexnamnet, följt av en punkt (**`.`**). Identifieraren ska vara mellan 2 och 5 tecken lång.
 
 Som ovan säkerställer detta att indexet bara används av den nya versionen av programmet.
 
 ### Ändra ett index {#changing-an-index}
 
-När ett befintligt index ändras måste ett nytt index läggas till med den ändrade indexdefinitionen. Anta till exempel att det befintliga indexet &quot;/eke:index/acmeProduct-custom-1&quot; ändras. Det gamla indexet lagras under `/oak:index/acmeProduct-custom-1`och det nya indexet lagras under `/oak:index/acmeProduct-custom-2`.
+När ett befintligt index ändras måste ett nytt index läggas till med den ändrade indexdefinitionen. Anta till exempel att det befintliga indexet &quot;/eke:index/acme.product-custom-1&quot; ändras. Det gamla indexet lagras under `/oak:index/acme.product-custom-1`och det nya indexet lagras under `/oak:index/acme.product-custom-2`.
 
 I den gamla versionen av programmet används följande konfiguration:
 
-`/oak:index/acmeProduct-custom-1`
+`/oak:index/acme.product-custom-1`
 
 I den nya versionen av programmet används följande (ändrade) konfiguration:
 
-`/oak:index/acmeProduct-custom-2`
+`/oak:index/acme.product-custom-2`
