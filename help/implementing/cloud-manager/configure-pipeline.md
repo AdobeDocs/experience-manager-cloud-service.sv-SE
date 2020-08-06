@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: 3b600d197b835dcd24dfc0c301de8d87d49b9fc5
+source-git-commit: 560c3436ae24e77e96ac3acd1987fe2f3dc3a9b5
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '762'
 ht-degree: 2%
 
 ---
@@ -12,6 +12,14 @@ ht-degree: 2%
 
 # Konfigurera CI-CD-pipeline {#configure-ci-cd-pipeline}
 
+I Cloud Manager finns det två typer av pipeline:
+
+* **Produktionspipelines**:
+En produktionspipeline kan bara läggas till när en produktions- och scenmiljö har skapats. Mer information finns i [Konfigurera förloppsindikatorn](configure-pipeline.md#setting-up-the-pipeline) .
+
+* **Icke-produktionsförlopp**:
+
+   En icke-produktionspipeline kan läggas till från sidan **Översikt** från användargränssnittet i Cloud Manager. Mer information finns i [Icke-produktion och Endast källkodsrör](configure-pipeline.md#non-production-pipelines) .
 
 ## Förstå flödet {#understanding-the-flow}
 
@@ -78,14 +86,18 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
    Mer information finns i [Om resultat](/help/implementing/developing/introduction/understand-test-results.md#content-audit-testing) av innehållsgranskning.
 
-   ![](assets/set-up-pipeline4.png)
+   ![](assets/content-audit-1.png)
 
-1. Click **Save**. På sidan *Översikt* visas nu **Distribuera ditt program** . Klicka på **Distribuera** för att distribuera programmet.
+   Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i innehållsgranskningen. När du har lagt till sökvägen klickar du på **Spara**.
+
+   ![](assets/content-audit-2.png)
+
+1. Klicka på **Spara** på skärmen **Redigera** pipeline. På sidan **Översikt** visas nu **Distribuera ditt program** . Klicka på **Distribuera** för att distribuera programmet.
 
    ![](assets/configure-pipeline5.png)
 
 
-## Icke-produktion och endast kodkvalitet, rörledningar
+## Icke-produktion och endast kodkvalitet, rörledningar {#non-production-pipelines}
 
 Förutom den huvudsakliga rörledningen som distribuerar till scenen och produktionen kan kunderna även lägga upp ytterligare rörledningar, så kallade **icke-produktionsrörledningar**. Dessa pipelines kör alltid stegen för bygg- och kodkvalitet. De kan också distribuera till Adobes miljö för hanterade tjänster.
 
