@@ -2,9 +2,9 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: ebab226b7d45994cc00c1abe42d84dab47391f5d
+source-git-commit: 3b600d197b835dcd24dfc0c301de8d87d49b9fc5
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '994'
 ht-degree: 3%
 
 ---
@@ -50,8 +50,14 @@ När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du re
       ![](assets/stage-deployment.png)
    Följande steg ingår i **mellanlagringstestningen**:
 
-   * Funktionstestning: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön. Se [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) för mer information om testprocessen.
-   * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard. Se [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) för mer information om testprocessen.
+   * Funktionstestning: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön.
+Mer information om testprocessen finns i [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) .
+
+   * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard.\
+      Mer information om testprocessen finns i [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) .
+
+   * Innehållsgranskning: Det här steget i pipeline finns alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett innehållsgranskningssteg efter en anpassad funktionstestning som kör kontrollerna. De konfigurerade sidorna skickas till tjänsten och utvärderas. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
+Mer information finns i [Om resultat](/help/implementing/developing/introduction/understand-test-results.md#content-audit-testing) av innehållsgranskning.
 
       ![](assets/stage-testing.png)
 
