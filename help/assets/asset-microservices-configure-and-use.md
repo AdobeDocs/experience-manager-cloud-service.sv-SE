@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f51700dad918e5152c1af70686531d1ce5f544e7
+source-git-commit: a2b7ca2ab6ab3c95b07de49a43c8b119a792a7ac
 workflow-type: tm+mt
-source-wordcount: '2447'
+source-wordcount: '2468'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 # Använda mikrotjänster och bearbetningsprofiler {#get-started-using-asset-microservices}
 
 <!--
-* Current capabilities of asset microservices offered. If workers have names then list the names and give a one-liner description. (The feature-set is limited for now and continues to grow. So will this article continue to be updated.)
+* Current capabilities of asset microservices offered. If applications have names then list the names and give a one-liner description. (The feature-set is limited for now and continues to grow. So will this article continue to be updated.)
 * How to access the microservices. UI. API. Is extending possible right now?
-* Detailed list of what file formats and what processing is supported by which workflows/workers process.
+* Detailed list of what file formats and what processing is supported by which workflows/application process.
 * How/where can admins check what's already configured and provisioned.
 * How to create new config or request for new provisioning/purchase.
 
@@ -47,8 +47,8 @@ Experience Manager tillåter följande bearbetningsnivåer.
 | Alternativ | Beskrivning | Användningsexempel |
 |---|---|---|
 | [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används i [!DNL Assets] användargränssnittet (48, 140 och 319 px) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
-| [Anpassad konfiguration](#standard-config) | Konfigureras av administratörer via användargränssnittet. Ger fler alternativ för generering av återgivning genom att utöka standardalternativet. Utöka medarbetaren så att du kan skapa olika format och renderingar. | <ul><li>FPO-återgivning. </li> <li>Ändra filformat och upplösning för bilder</li> <li> Tillämpa villkoren på konfigurerade filtyper. </li> </ul> |
-| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade arbetare för att anropa [tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Asset Compute. Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
+| [Anpassad konfiguration](#standard-config) | Konfigureras av administratörer via användargränssnittet. Ger fler alternativ för generering av återgivning genom att utöka standardalternativet. Utöka det färdiga alternativet om du vill ha olika format och renderingar. | <ul><li>FPO-återgivning. </li> <li>Ändra filformat och upplösning för bilder</li> <li> Tillämpa villkoren på konfigurerade filtyper. </li> </ul> |
+| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade program för att anropa [tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Asset Compute. Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
 
 <!-- To create custom processing profiles specific to your custom requirements, say to integrate with other systems, see [post-processing workflows](#post-processing-workflows).
 -->
@@ -113,7 +113,7 @@ The following video demonstrates the usefulness and usage of standard profile.
 <!-- **TBD items**:
 
 * Overall cross-linking with the extensibility content.
-* Mention how to get URL of worker. Worker URL for Dev, Stage, and Prod environments.
+* Mention how to get URL of application. Application URL for Dev, Stage, and Prod environments.
 * Mention mapping of service parameters. Link to compute service article.
 * Review from flow perspective shared in Jira ticket.
 -->
@@ -122,11 +122,11 @@ Programmet har stöd för en mängd olika användningsområden, till exempel sta
 
 >[!NOTE]
 >
->Adobe rekommenderar att du endast använder en anpassad arbetare när företaget inte kan utföra arbetet med standardkonfigurationer eller standardprofilen.
+>Adobe rekommenderar att du bara använder ett anpassat program när affärskraven inte kan uppfyllas med standardkonfigurationerna eller standardprofilen.
 
 Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
 
-Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade arbetare](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-worker.html) som passar de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade arbetare från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
+Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html) som passar de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
 
 * Använd [!DNL Adobe Photoshop]API:t [för](https://github.com/AdobeDocs/photoshop-api-docs-pre-release#imagecutout) ImageCutout och spara resultatet som rendering.
 * Anropa tredjepartssystem för att uppdatera data, till exempel ett PIM-system.
@@ -135,7 +135,7 @@ Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade a
 
 >[!NOTE]
 >
->Du kan inte redigera standardmetadata med hjälp av anpassade arbetare. Du kan bara ändra anpassade metadata.
+>Du kan inte redigera standardmetadata med de anpassade programmen. Du kan bara ändra anpassade metadata.
 
 ### Skapa en anpassad profil {#create-custom-profile}
 
@@ -146,11 +146,13 @@ Så här skapar du en anpassad profil:
 1. Ange följande information.
 
    * Filnamn för varje återgivning och ett filtillägg som stöds.
-   * [Slutpunkts-URL för en standardanpassad app](https://docs.adobe.com/content/help/en/asset-compute/using/extend/deploy-custom-worker.html). Appen måste komma från samma organisation som Experience Manager-kontot.
-   * Lägg till tjänstparametrar för att [skicka extra information eller parametrar till den anpassade arbetaren](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-worker.html#pass-custom-parameters).
+   * [Slutpunkts-URL för en standardanpassad app](https://docs.adobe.com/content/help/en/asset-compute/using/extend/deploy-custom-application.html). Appen måste komma från samma organisation som Experience Manager-kontot.
+   * Lägg till tjänstparametrar för att [skicka extra information eller parametrar till det anpassade programmet](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#pass-custom-parameters).
    * Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
 
    Klicka på **[!UICONTROL Save]**.
+
+Anpassat program får alla angivna filer om de är konfigurerade med en bearbetningsprofil. Programmet måste filtrera filerna.
 
 >[!CAUTION]
 >
@@ -160,11 +162,11 @@ Så här skapar du en anpassad profil:
 
 För att illustrera hur den anpassade profilen används ska vi överväga ett användningsexempel för att använda anpassad text på kampanjbilder. Du kan skapa en bearbetningsprofil som använder Photoshop API för att redigera bilderna.
 
-Integreringen av tjänsten Resursberäkning gör att Experience Manager kan skicka dessa parametrar till den anpassade arbetaren med hjälp av [!UICONTROL Service Parameters] fältet. Den anpassade arbetaren anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
+Integreringen av tjänsten Resursberäkning gör att Experience Manager kan skicka dessa parametrar till det anpassade programmet med hjälp av [!UICONTROL Service Parameters] fältet. Det anpassade programmet anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
 
 ![custom-processing-profile](assets/custom-processing-profile.png)
 
-*Bild: Använd[!UICONTROL Service Parameters]fältet för att skicka tillagd information till fördefinierade parametrar som byggs in i den anpassade arbetaren.*
+*Bild: Använd[!UICONTROL Service Parameters]fältet för att skicka tillagd information till fördefinierade parametrar som byggs in i det anpassade programmet.*
 
 När kampanjbilder överförs till den mapp som den här bearbetningsprofilen används i uppdateras bilderna med `Jumanji` text i `Arial-BoldMT` teckensnittet.
 
@@ -243,5 +245,5 @@ Mer information om vilket standardarbetsflödessteg som kan användas i efterbea
 >
 >* [Introduktion till tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Resursberäkning.
 >* [Förstå utbyggbarhet och när den ska användas](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html).
->* [Skapa egna arbetare](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-worker.html).
+>* [Skapa anpassade program](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html).
 
