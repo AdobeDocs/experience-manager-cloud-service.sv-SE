@@ -2,7 +2,7 @@
 title: Versionsinformation för 2020.7.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.7.0.'
 translation-type: tm+mt
-source-git-commit: 7f089e15deff87706e0ed3c38630b52832b277d4
+source-git-commit: a2b7ca2ab6ab3c95b07de49a43c8b119a792a7ac
 workflow-type: tm+mt
 source-wordcount: '988'
 ht-degree: 2%
@@ -34,7 +34,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.7.0 är 30 juli 2
 
 ### What&#39;s New {#what-is-new-assets}
 
-* [!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst för att bearbeta resurser. Administratörer kan konfigurera Experience Manager att anropa anpassad arbetare som skapats med [!DNL Asset Compute Service]. Utvecklare kan använda tjänsten för att skapa specialarbetare som klarar komplexa användningsfall. Den här webbtjänsten kan generera miniatyrbilder för olika filtyper, bildåtergivning av hög kvalitet från filformat i Adobe, koda videor (framtida), extrahera metadata, extrahera full text som prekursor för indexering och köra en resurs via alla tillgängliga Sensei-tjänster. se [Använda mikrotjänster och bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
+* [!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst för att bearbeta resurser. Administratörer kan konfigurera Experience Manager att anropa anpassade program som skapats med [!DNL Asset Compute Service]. Utvecklare kan använda tjänsten för att skapa specialanpassade program som klarar komplexa användningsfall. Den här webbtjänsten kan generera miniatyrbilder för olika filtyper, bildåtergivning av hög kvalitet från filformat i Adobe, koda videor (framtida), extrahera metadata, extrahera full text som prekursor för indexering och köra en resurs via alla tillgängliga Sensei-tjänster. se [Använda mikrotjänster och bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
 
 * Den initiala konfigurationen av [!DNL Dynamic Media] som Cloud Service i [!DNL Experience Manager] förbättras för att bli mer robust. Det ger nu administratörerna förlopp för processerna.
 
