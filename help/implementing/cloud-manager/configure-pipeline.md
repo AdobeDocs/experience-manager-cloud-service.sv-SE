@@ -2,10 +2,10 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: 8d82bb8ee2b7aa234fc6b9b8efe23f04f4c66c87
+source-git-commit: 3b600d197b835dcd24dfc0c301de8d87d49b9fc5
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 0%
+source-wordcount: '668'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Förstå flödet {#understanding-the-flow}
 
-You can configure your production pipeline from the **Pipeline Settings** tile in the [!UICONTROL Cloud Manager] UI.
+Du kan konfigurera pipeline från panelen **Pipeline-inställningar** i [!UICONTROL Cloud Manager].
 
 Distributionshanteraren ansvarar för att ställa in pipeline. När du gör det väljer du först en gren i **Git-databasen**.
 
@@ -69,7 +69,14 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
    * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 
-1. Klicka på **Nästa** för att gå till fliken **Testning** och definiera testvillkoren för programmet.
+1. Produktionens pipeline-inställningar innehåller en tredje flik med namnet **Content Audit**(Innehållsgranskning).
+
+   Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i innehållsgranskningen. Användaren kan ange en URL-sökväg som ska inkluderas manuellt. Högst 25 rader kan inkluderas. Om användaren inte har skickat in några sidor i det här avsnittet, kommer webbplatsens hemsida att inkluderas som standard i innehållsgranskningen.
+
+   >[!NOTE]
+   > De konfigurerade sidorna skickas till tjänsten och utvärderas utifrån prestanda, tillgänglighet, SEO (Search Engine Optimization), bästa praxis och PWA (Progressive Web App)-tester.
+
+   Mer information finns i [Om resultat](/help/implementing/developing/introduction/understand-test-results.md#content-audit-testing) av innehållsgranskning.
 
    ![](assets/set-up-pipeline4.png)
 
