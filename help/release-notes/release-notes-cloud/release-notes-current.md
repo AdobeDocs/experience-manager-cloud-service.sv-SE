@@ -2,7 +2,7 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: fe2439e506f84a191922416e9c99b496fd90016c
+source-git-commit: cd307cb8806f30892b40b20974e19d4a0a34f8dc
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 
 * Nyligen skapade miljöer i Assets-program konfigureras nu automatiskt med Smart Content Services.
 
-* Vilolägen miljöer kan tas bort från viloläget via översiktssidan för Cloud Manager.
+* Vilolägda miljöer kan tas bort från vänteläget på sidan **Översikt** i Cloud Manager.
 
 * Stöd finns nu för autentiseringsbundna privata Maven-databaser.
 
@@ -52,7 +52,7 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 
 * Översiktssidan innehöll en färgmatchning.
 
-### Kända fel {#known-issues}
+### Kända fel {#known-issues-cm}
 
 * Ogiltiga sidor inkluderas för att få medelpoängen för innehållsgranskning under vad de ska vara.
 
