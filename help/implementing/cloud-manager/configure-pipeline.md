@@ -2,7 +2,7 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: 9cfdf421db39dd08e8b772241f1f750fb73375b8
+source-git-commit: c21c4e8c71b9427dee2402815df1660a12af8bdc
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 2%
@@ -15,11 +15,15 @@ ht-degree: 2%
 I Cloud Manager finns det två typer av pipeline:
 
 * **Produktionspipelines**:
-En produktionspipeline kan bara läggas till när en produktions- och scenmiljö har skapats. Mer information finns i [Konfigurera förloppsindikatorn](configure-pipeline.md#setting-up-the-pipeline) .
+En produktionspipeline kan bara läggas till när en produktions- och scenmiljö har skapats.
+
+   Mer information finns i [Konfigurera förloppsindikatorn](configure-pipeline.md#setting-up-the-pipeline) .
 
 * **Icke-produktionsförlopp**:
 
-   En icke-produktionspipeline kan läggas till från sidan **Översikt** från användargränssnittet i Cloud Manager. Mer information finns i [Icke-produktion och Endast källkodsrör](configure-pipeline.md#non-production-pipelines) .
+   En icke-produktionspipeline kan läggas till från sidan **Översikt** från användargränssnittet i Cloud Manager.
+
+   Mer information finns i [Icke-produktion och Endast källkodsrör](configure-pipeline.md#non-production-pipelines) .
 
 ## Förstå flödet {#understanding-the-flow}
 
@@ -90,7 +94,7 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
    Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i innehållsgranskningen. När du har lagt till sökvägen klickar du på **Spara**.
 
-   ![](assets/content-audit-2.png)
+   ![](assets/content-audit2.png)
 
 1. Klicka på **Spara** på skärmen **Redigera** pipeline. På sidan **Översikt** visas nu **Distribuera ditt program** . Klicka på **Distribuera** för att distribuera programmet.
 
