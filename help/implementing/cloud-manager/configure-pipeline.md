@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: c21c4e8c71b9427dee2402815df1660a12af8bdc
+source-git-commit: cd307cb8806f30892b40b20974e19d4a0a34f8dc
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '785'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,10 @@ ht-degree: 2%
 I Cloud Manager finns det två typer av pipeline:
 
 * **Produktionspipelines**:
-En produktionspipeline kan bara läggas till när en produktions- och scenmiljö har skapats.
 
-   Mer information finns i [Konfigurera förloppsindikatorn](configure-pipeline.md#setting-up-the-pipeline) .
+   En produktionspipeline kan bara läggas till när en produktions- och scenmiljö har skapats.
+
+   Mer information finns i [Konfigurera pipeline](configure-pipeline.md#setting-up-the-pipeline) .
 
 * **Icke-produktionsförlopp**:
 
@@ -83,6 +84,8 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
 1. Produktionens pipeline-inställningar innehåller en tredje flik med namnet **Content Audit**(Innehållsgranskning).
 
+   ![](assets/content-audit-1.png)
+
    Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i innehållsgranskningen. Användaren kan ange en URL-sökväg som ska inkluderas manuellt. Högst 25 rader kan inkluderas. Om användaren inte har skickat in några sidor i det här avsnittet, kommer webbplatsens hemsida att inkluderas som standard i innehållsgranskningen.
 
    >[!NOTE]
@@ -90,9 +93,10 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
    Mer information finns i [Om resultat](/help/implementing/developing/introduction/understand-test-results.md#content-audit-testing) av innehållsgranskning.
 
-   ![](assets/content-audit-1.png)
-
    Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i innehållsgranskningen. När du har lagt till sökvägen klickar du på **Spara**.
+
+   >[!NOTE]
+   >För att aktivera steget Innehållsgranskning måste användarna redigera pipeline och, om så önskas, lägga till sidor. Mer information finns i [Kända fel](/help/release-notes/release-notes-cloud/release-notes-current.md#known-issues-cm) .
 
    ![](assets/content-audit2.png)
 
