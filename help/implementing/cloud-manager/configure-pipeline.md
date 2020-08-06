@@ -2,10 +2,10 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: cd307cb8806f30892b40b20974e19d4a0a34f8dc
+source-git-commit: f0f49b935cb0ec2a7fe6115294be2b79cc8bac3d
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 2%
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 I Cloud Manager finns det två typer av pipeline:
 
-* **Produktionspipelines**:
+* **Produktionspipeline**:
 
-   En produktionspipeline kan bara läggas till när en produktions- och scenmiljö har skapats.
+   En produktionspipeline kan bara läggas till när en produktions- och scenmiljöuppsättning har skapats.
 
-   Mer information finns i [Konfigurera pipeline](configure-pipeline.md#setting-up-the-pipeline) .
+   Mer information finns i [Konfigurera produktionspipeline](configure-pipeline.md#setting-up-the-pipeline) .
 
 * **Icke-produktionsförlopp**:
 
@@ -26,23 +26,19 @@ I Cloud Manager finns det två typer av pipeline:
 
    Mer information finns i [Icke-produktion och Endast källkodsrör](configure-pipeline.md#non-production-pipelines) .
 
-## Förstå flödet {#understanding-the-flow}
+>[!NOTE]
+>Om du vill konfigurera din pipeline måste du:
+> * Definiera den utlösare som ska starta pipelinen.
+> * Definiera parametrarna som styr produktionsdistributionen.
+> * konfigurera prestandatestparametrarna.
 
-Du kan konfigurera pipeline från panelen **Pipeline-inställningar** i [!UICONTROL Cloud Manager].
 
-Distributionshanteraren ansvarar för att ställa in pipeline. När du gör det väljer du först en gren i **Git-databasen**.
+## Ställ in produktionspipeline {#setting-up-production-pipeline}
 
-För att konfigurera din pipeline måste användaren:
+Distributionshanteraren ansvarar för att ställa in produktionspipelinen.
 
-* Definiera den utlösare som ska starta pipelinen.
-* Definiera parametrarna som styr produktionsdistributionen.
-* konfigurera prestandatestparametrarna.
-
-## Konfigurera pipeline {#setting-up-the-pipeline}
-
->[!CAUTION]
->
->Det går inte att konfigurera pipeline förrän ett program har skapats och Git-databasen har minst en gren.
+>[!NOTE]
+>Det går inte att konfigurera en produktionspipeline förrän ett program har skapats, Git-databasen har minst en gren och en Production- och Stage-miljöuppsättning har skapats.
 
 Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställningar från [!UICONTROL Cloud Manager].
 
