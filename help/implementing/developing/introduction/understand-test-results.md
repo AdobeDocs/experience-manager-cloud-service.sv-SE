@@ -157,7 +157,7 @@ Content Audit ger aggregerade och detaljerade testresultat på sidnivå via kör
 
 #### Sammanställd bakgrundsmusik {#aggregate-scores}
 
-Det finns en sammanställd nivå för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
+Det finns ett aggregerat nivåpoäng för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
 
 Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i körningen. Ändringen på aggregeringsnivå representerar medelpoängen för sidorna i den aktuella körningen jämfört med medelvärdet för poängen från föregående körning, även om den sidsamling som konfigurerats att inkluderas har ändrats mellan körningar.
 
@@ -171,13 +171,10 @@ Värdet för Change-måttet kan vara något av följande:
 
 * **Ej tillämpligt** - det fanns ingen tidigare poäng att jämföra med
 
-   ![](assets/content-audit-test1.png)
-
 #### Poäng på sidnivå {#page-level-scores}
 
 Genom att gå in i något av testerna kan man se en mer detaljerad sidnivåbedömning. Användaren kommer att kunna se hur de enskilda sidorna sparades för det specifika testet tillsammans med ändringen från den föregående gången testet kördes.
 Om du klickar på Information om en enskild sida visas information om de element på sidan som har utvärderats och vägledning för att åtgärda problem om möjligheter till förbättring upptäcks. Detaljer om testerna och tillhörande vägledning tillhandahålls av Google Lighthuse.
-![](assets/page-level-scores.png)
 
 ## Lokal testkörning {#local-test-execution}
 
