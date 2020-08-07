@@ -2,10 +2,10 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: 85f5262c2af7502e98fcb60b51b9b13d2c2c0f2c
+source-git-commit: dafdbffa96cd565379a700c696586222f43022c2
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 0%
+source-wordcount: '492'
+ht-degree: 1%
 
 ---
 
@@ -67,4 +67,18 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 * På fliken Innehållsgranskning visas bas-URL:en felaktigt med författardomänen i stället för publiceringsdomänen.
 
 * För att aktivera steget Innehållsgranskning måste användarna redigera pipeline och, om så önskas, lägga till sidor. Om inga sidor läggs till granskas hemsidan.
+
+## Content Transfer Tool {#content-transfer-tool}
+
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Content Transfer Tool Release v1.0.4.
+
+### What&#39;s New {#what-is-new-ctt}
+
+* Innehållsöverföringsverktyget har nu stöd för Shared S3 DataStore.
+
+### Bug Fixes {#ctt-bug-fixes}
+
+* Ytterligare tidsgränser har lagts till för att verktyget ska kunna slutföra åtgärder.
+
+* Tidigare version av användargränssnittet kunde ibland extraheras trots att loggen visade fel.
 
