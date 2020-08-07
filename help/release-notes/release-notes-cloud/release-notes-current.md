@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: 19ad5567b94912eb4ea254b36f45feb46ad96255
+source-git-commit: 85f5262c2af7502e98fcb60b51b9b13d2c2c0f2c
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 
 * I vissa fall kunde slutförda pipeline-körningar inte registreras som slutförda, vilket hindrade nya körningar av pipeline.
 
-* Körningar av rörledningar kommer ibland att fastna på grund av interna kommunikationsproblem.
+* Körningar av rörledningar *fastnar* ibland på grund av interna kommunikationsproblem.
 
 * När en ny organisation etablerades fick vissa användare med andra administrativa roller än systemadministratörer felaktigt åtkomst till Cloud Manager.
 
@@ -58,7 +58,7 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 
 * Användargränssnittet tillät felaktigt försök att utföra åtgärder i en miljö medan det togs bort.
 
-* Översiktssidan innehöll en färgmatchning.
+* Det fanns ett färgmatchningsfel på sidan **Översikt** i Cloud Manager.
 
 ### Kända fel {#known-issues-cm}
 
