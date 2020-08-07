@@ -2,10 +2,10 @@
 title: Flytta till AEM as a Cloud Service
 description: Länkar till självhjälp och dokumentation för Adobe Experience Manager as a Cloud Service som flyttar till AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: bb81fbf0952719c6ea364d008506faad73a60b8f
+source-git-commit: b458d6d8c7a87495267a1132155ac58a30fb3458
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 97%
+source-wordcount: '526'
+ht-degree: 95%
 
 ---
 
@@ -58,7 +58,7 @@ Läs mer om de olika faserna i övergången till Cloud Service:
 * [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [Dokumentation om Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Dokumentation om Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/first-time-login.html)
 * [GDPR-efterlevnad](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Adobe Experience Manager as a Cloud Service Tutorials](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
