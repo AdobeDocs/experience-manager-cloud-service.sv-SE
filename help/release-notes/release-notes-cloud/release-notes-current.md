@@ -2,10 +2,10 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: cd307cb8806f30892b40b20974e19d4a0a34f8dc
+source-git-commit: 19ad5567b94912eb4ea254b36f45feb46ad96255
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 1%
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 1%
 # Versionsinformation för [!DNL Adobe Experience Manager] som Cloud Service 2020.8.0 {#release-notes}
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.8.0.
+
+## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
+
+### What&#39;s New {#what-is-new-commerce}
+
+* Funktionen produktkonsol är nu tillgänglig. Detta gör att marknadsförare/författare i AEM kan visa och navigera bland kategorier och produkter som lagras i e-handelsservern. Det finns även stöd för egenskaper för kategorier och produkter i produktkonsolen.
+
+* Produkt- och kategoriväljarna har förbättrats så att marknadsförarna kan välja produkt via SKU eller välja kategori via kategori-ID.
 
 ## Cloud Manager {#cloud-manager}
 
