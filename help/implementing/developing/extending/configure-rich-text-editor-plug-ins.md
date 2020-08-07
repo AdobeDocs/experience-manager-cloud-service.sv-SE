@@ -4,7 +4,7 @@ description: Lär dig konfigurera [!DNL Adobe Experience Manager] plugin-program
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 739dde6f9a6a7f4fe773e27e53f23a395f2881dc
+source-git-commit: 6db201f00e8f304122ca8c037998b363ff102c1f
 workflow-type: tm+mt
 source-wordcount: '4279'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Mer information om de andra RTE-konfigurationerna finns i [Konfigurera RTF-redig
 
 >[!NOTE]
 >
->När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med [!UICONTROL Save All] alternativet.
+>När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med [!UICONTROL Save All] hjälp av ett alternativ.
 
 ## Aktivera ett plugin-program och konfigurera egenskapen features {#activateplugin}
 
@@ -32,7 +32,7 @@ Som standard aktiveras `format`plugin-program, `link`, `list`, `justify`och `con
 >
 >Motsvarande `rtePlugins` nod kallas `<rtePlugins-node>` för att undvika dubbletter i den här artikeln.
 
-1. Använd CRXDE Lite för att leta upp textkomponenten för ditt projekt.
+1. Leta reda på textkomponenten för ditt projekt med CRXDE Lite.
 1. Skapa den överordnade noden för `<rtePlugins-node>` om den inte finns innan du konfigurerar några RTE-plugin-program:
 
    * Beroende på vilken komponent du har är de överordnade noderna:
@@ -541,7 +541,7 @@ Ibland kan du skapa datatabeller utan visuell text i en kolumnrubrik om rubriken
 RTE har stöd för dolda rubrikceller för att förbättra tillgängligheten i sådana scenarier. Dessutom innehåller den konfigurationsinställningar för dolda rubriker i tabeller. Med de här inställningarna kan du använda CSS-format på dolda rubriker i redigerings- och förhandsgranskningslägena. Om du vill hjälpa författare att identifiera dolda rubriker i redigeringsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderEditingCSS`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen när RTE redigeras.
-* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i cellen med dolda rubriker när textredigeringsredigering används.
+* `hiddenHeaderEditingStyle`: Anger en formatsträng som används på cellen med dolda rubriker när textredigeringsredigering används.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
@@ -641,7 +641,7 @@ Du kan ange höjden på det redigerbara området som visas i komponentdialogruta
 
 När du lägger till länkar i [!DNL Experience Manager]kan du definiera de CSS-format som ska användas och de protokoll som ska accepteras automatiskt. Om du vill konfigurera hur länkar läggs till i [!DNL Experience Manager] från ett annat program definierar du HTML-reglerna.
 
-1. Använd CRXDE Lite för att leta upp textkomponenten för ditt projekt.
+1. Leta reda på textkomponenten för ditt projekt med CRXDE Lite.
 1. Skapa en nod på samma nivå som `<rtePlugins-node>`, d.v.s. skapa noden under den överordnade noden för `<rtePlugins-node>`:
 
    * **Namn** `htmlRules`
@@ -705,7 +705,7 @@ När du lägger till länkar i [!DNL Experience Manager]kan du definiera de CSS-
 
          * **Namn** `targetInternal`
          * **Typ** `String`
-         * **Ange ett värde** för målet för interna länkar (används endast när läget är `auto`)
+         * **Värde** målet för interna länkar (används endast när läget är `auto`)
       * Målet för externa länkar:
 
          * **Namn** `targetExternal`
