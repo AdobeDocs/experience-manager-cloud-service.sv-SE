@@ -3,15 +3,15 @@ title: 'Assets APIs for digital asset management in Adobe Experience Manager as 
 description: Resurs-API:er gör det möjligt att använda grundläggande CRUD-åtgärder (create-read-update-delete) för att hantera resurser, inklusive binära, metadata, återgivningar, kommentarer och innehållsfragment.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: 6db201f00e8f304122ca8c037998b363ff102c1f
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1248'
 ht-degree: 1%
 
 ---
 
 
-# Assets as a Cloud Service APIs {#assets-cloud-service-apis}
+# Resurser som Cloud Service-API:er {#assets-cloud-service-apis}
 
 <!-- 
 Give a list of and overview of all reference information available.
@@ -30,7 +30,7 @@ Experience Manager som molntjänst är ett nytt sätt att överföra resurser ti
 Den högnivåalgoritm som ska överföra en binär fil är:
 
 1. Skicka en HTTP-begäran som informerar AEM om avsikten att överföra en ny binär fil.
-1. POST the contents of the binary to one or more URIs provided by the initial request.
+1. POST innehållet i binärfilen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
 1. Skicka en HTTP-begäran för att informera servern om att innehållet i binärfilen har överförts.
 
 ![Översikt över protokollet för direkt binär överföring](assets/add-assets-technical.png)
@@ -48,11 +48,7 @@ Den här metoden bör ge en mer skalbar och prestandaanpassad hantering av över
 
 ### Initiera överföring {#initiate-upload}
 
-Det första steget är att skicka en HTTP POST-begäran till den mapp där resursen ska skapas eller uppdateras. inkludera väljaren `.initiateUpload.json` för att ange att begäran ska påbörja en binär överföring. Sökvägen till mappen där resursen ska skapas är `/assets/folder`:
-
-```
-POST https://[aem_server]/content/dam/assets/folder.initiateUpload.json
-```
+Det första steget är att skicka en begäran om HTTP-POST till den mapp där resursen ska skapas eller uppdateras. inkludera väljaren `.initiateUpload.json` för att ange att begäran ska påbörja en binär överföring. Sökvägen till mappen där resursen ska skapas är till exempel `/assets/folder`. POSTENS begäran är `POST https://[aem_server]:[port]/content/dam/assets/folder.initiateUpload.json`.
 
 Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält:
 
@@ -61,7 +57,7 @@ Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencode
 
 En enda begäran kan användas för att initiera överföringar för flera binärfiler, förutsatt att varje binärfil innehåller de obligatoriska fälten. Om det lyckas svarar begäran med en `201` statuskod och en brödtext som innehåller JSON-data i följande format:
 
-```
+```json
 {
     "completeURI": "(string)",
     "folderPath": (string)",
@@ -90,19 +86,19 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 
 ### Ladda upp binärt {#upload-binary}
 
-Utdata från initiering av en överföring inkluderar ett eller flera överförda URI-värden. Om mer än en URI anges är det klientens ansvar att dela upp binärfilen i delar och POST för varje del, i ordning, till varje URI. Alla URI:er måste användas, och varje del måste vara större än den minsta storleken och mindre än den största storlek som anges i initieringssvaret. Dessa förfrågningar kommer att hanteras av CDN-kantnoder för att påskynda överföringen av binärfiler.
+Utdata från initiering av en överföring inkluderar ett eller flera överförda URI-värden. Om mer än en URI anges är det kundens ansvar att dela upp binärfilen i delar och POST varje del, i ordning, till varje URI. Alla URI:er måste användas, och varje del måste vara större än den minsta storleken och mindre än den största storlek som anges i initieringssvaret. Dessa förfrågningar kommer att hanteras av CDN-kantnoder för att påskynda överföringen av binärfiler.
 
 Ett möjligt sätt att uppnå detta är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. Exempel: Om den totala storleken för binärfilen är 20 000 byte och antalet överförda URI:er är 2:
 
 * Beräkna delstorlek genom att dividera den totala storleken med antalet URI:er: 20 000 / 2 = 10 000
-* POST-byteintervallet 0-9 999 för binärfilen till den första URI:n i listan över överförda URI:er
-* POST-byteintervallet 10 000 - 19 999 för binärfilen till den andra URI:n i listan över överförda URI:er
+* POSTENS byteintervall 0-9 999 för binärfilen till den första URI:n i listan över överförda URI:er
+* POSTENS byteintervall 10 000 - 19 999 för binärfilen till den andra URI:n i listan över överförda URI:er
 
 Om det lyckas svarar servern på varje begäran med en `201` statuskod.
 
 ### fullständig överföring {#complete-upload}
 
-När alla delar av en binär fil har överförts skickar du en HTTP POST-begäran till den fullständiga URI som anges av initieringsdata. Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält.
+När alla delar av en binär fil har överförts skickar du en begäran om HTTP-POST till den fullständiga URI som anges av initieringsdata. Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält.
 
 | fält | Typ | Obligatoriskt eller inte | Beskrivning |
 |---|---|---|---|
@@ -112,7 +108,7 @@ När alla delar av en binär fil har överförts skickar du en HTTP POST-begära
 | `createVersion` | Boolesk | Valfritt | Om det redan finns `True` en resurs med det angivna namnet skapar Experience Manager en ny version av resursen. |
 | `versionLabel` | Sträng | Valfritt | Om en ny version skapas är den etikett som är associerad med den nya versionen av en resurs . |
 | `versionComment` | Sträng | Valfritt | Om en ny version skapas, de kommentarer som är kopplade till versionen. |
-| `replace` | Boolesk | Valfritt | Om det redan finns `True` en resurs med det angivna namnet tar Experience Manager bort resursen och återskapar den. |
+| `replace` | Boolesk | Valfritt | Om `True` och det redan finns en resurs med det angivna namnet tar Experience Manager bort resursen och återskapar den. |
 
 >!![NOTE]
 Om resursen redan finns och varken `createVersion` eller `replace` anges, uppdaterar Experience Manager resursens aktuella version med den nya binärfilen.
@@ -125,7 +121,7 @@ Om det lyckas svarar servern med en `200` statuskod.
 
 ### Överföringsbibliotek med öppen källkod {#open-source-upload-library}
 
-Adobe tillhandahåller bibliotek och verktyg med öppen källkod som en startpunkt för att lära dig mer om överföringsalgoritmerna eller för att bygga egna uppladdningsskript och verktyg:
+För att lära dig mer om överföringsalgoritmerna eller för att skapa egna överföringsskript och verktyg tillhandahåller Adobe bibliotek och verktyg med öppen källkod som utgångspunkt:
 
 * [Open-source aem-upload library](https://github.com/adobe/aem-upload)
 * [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem)
