@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a2b7ca2ab6ab3c95b07de49a43c8b119a792a7ac
+source-git-commit: 568e5d2906fe6c9415eebcab7e3e4e1fb4a738fa
 workflow-type: tm+mt
-source-wordcount: '2468'
+source-wordcount: '2483'
 ht-degree: 0%
 
 ---
@@ -110,14 +110,6 @@ The following video demonstrates the usefulness and usage of standard profile.
 
 ## Anpassade profil- och användningsfall {#custom-config}
 
-<!-- **TBD items**:
-
-* Overall cross-linking with the extensibility content.
-* Mention how to get URL of application. Application URL for Dev, Stage, and Prod environments.
-* Mention mapping of service parameters. Link to compute service article.
-* Review from flow perspective shared in Jira ticket.
--->
-
 Programmet har stöd för en mängd olika användningsområden, till exempel standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer och implementering av anpassad eller organisationsspecifik bearbetning. [!DNL Asset Compute Service] Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller via konfiguration av bearbetningsprofiler. Om de här bearbetningsalternativen inte uppfyller affärsbehoven rekommenderar Adobe att du utvecklar och använder standardfunktionerna [!DNL Asset Compute Service] för att utöka dem. En översikt finns i [Lär dig mer om utbyggbarhet och när du ska använda den](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html).
 
 >[!NOTE]
@@ -148,11 +140,11 @@ Så här skapar du en anpassad profil:
    * Filnamn för varje återgivning och ett filtillägg som stöds.
    * [Slutpunkts-URL för en standardanpassad app](https://docs.adobe.com/content/help/en/asset-compute/using/extend/deploy-custom-application.html). Appen måste komma från samma organisation som Experience Manager-kontot.
    * Lägg till tjänstparametrar för att [skicka extra information eller parametrar till det anpassade programmet](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#pass-custom-parameters).
-   * Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
+   * Inkluderade och exkluderade MIME-typer för att begränsa bearbetningen till ett fåtal specifika filformat.
 
    Klicka på **[!UICONTROL Save]**.
 
-Anpassat program får alla angivna filer om de är konfigurerade med en bearbetningsprofil. Programmet måste filtrera filerna.
+De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs/project-firefly) -appar. Anpassat program får alla angivna filer om de är konfigurerade med en bearbetningsprofil. Programmet måste filtrera filerna.
 
 >[!CAUTION]
 >
