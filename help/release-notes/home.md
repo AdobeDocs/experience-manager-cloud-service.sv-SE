@@ -2,10 +2,10 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) som en Cloud Service.
 description: 'Versionsinformation för Adobe Experience Manager (AEM) som en Cloud Service. '
 translation-type: tm+mt
-source-git-commit: 4c5e49e1bba5b936958a7bb4edb493b5e06902c5
+source-git-commit: b458d6d8c7a87495267a1132155ac58a30fb3458
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 84%
+source-wordcount: '378'
+ht-degree: 82%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 84%
 * [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [Dokumentation om Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Dokumentation om Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/first-time-login.html)
 * [GDPR-efterlevnad](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Adobe Experience Manager as a Cloud Service Tutorials](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
