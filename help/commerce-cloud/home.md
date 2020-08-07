@@ -2,10 +2,10 @@
 title: AEM Commerce som Cloud Service
 description: AEM Commerce som Cloud Service självhjälp och dokumentationslänkar
 translation-type: tm+mt
-source-git-commit: db2e6745f73ad95fe7e5a01945e95a386dc9e95f
+source-git-commit: b458d6d8c7a87495267a1132155ac58a30fb3458
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 84%
+source-wordcount: '362'
+ht-degree: 82%
 
 ---
 
@@ -41,7 +41,7 @@ På den här sidan visas självhjälpsresurser för AEM Commerce som en Cloud Se
 * [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [Dokumentation om Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Dokumentation om Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/first-time-login.html)
 * [GDPR-efterlevnad](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Adobe Experience Manager as a Cloud Service Tutorials](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
