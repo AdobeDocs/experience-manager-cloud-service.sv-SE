@@ -3,9 +3,9 @@ title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b96e976b5a2aaff90d7317360b0325dcae21ff26
+source-git-commit: 1a307b065beff721cad35def4f812c3bee8eb8dd
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Efter [!UICONTROL Off Time]detta är en resurs och dess återgivningar inte till
 
 >[!NOTE]
 >
->Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) dedikeras för AEM som en distribution av molntjänster. Om du vill överföra binära filer använder du API:er för [direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
+>Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är dedikerade för AEM som en Cloud Service-distribution. Om du vill överföra binära filer använder du API:er för [direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
 
 ## Innehållsfragment {#content-fragments}
 
@@ -71,13 +71,15 @@ I [!DNL Experience Manager] en resurs innehåller följande element:
 * Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF- eller Adobe InDesign-filer.
 * Valfria kommentarer.
 
-Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i HTTP API](/help/assets/assets-api-content-fragments.md)för Experience Manager Assets.
+Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/assets-api-content-fragments.md).
 
 I [!DNL Experience Manager] en mapp finns följande komponenter:
 
 * Enheter: Resursernas underordnade är dess återgivningar.
 * Egenskaper.
 * Länkar.
+
+## Tillgängliga funktioner {#available-features}
 
 Resursens HTTP-API innehåller följande funktioner:
 
