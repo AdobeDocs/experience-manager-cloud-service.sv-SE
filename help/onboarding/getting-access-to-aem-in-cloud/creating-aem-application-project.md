@@ -2,9 +2,9 @@
 title: AEM - Cloud Service
 description: AEM - Cloud Service
 translation-type: tm+mt
-source-git-commit: 9e27ff9510fda5ed238a25b2d63d1d9a3099a8b5
+source-git-commit: 4bcae8f2bb74838497323125ebf7015f955bb374
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1406'
 ht-degree: 9%
 
 ---
@@ -48,7 +48,7 @@ För att kunna byggas och driftsättas med Cloud Manager måste befintliga AEM f
 * Du kan lägga till referenser till ytterligare Maven-artefaktdatabaser i dina *pom.xml* -filer. Åtkomst till [lösenordsskyddade artefaktarkiv](#password-protected-maven-repositories) stöds vid konfigurering. Åtkomst till nätverksskyddade artefaktdatabaser stöds dock inte.
 * Distribuerbara innehållspaket upptäcks genom att söka efter *zip* -filer för innehållspaket som finns i en katalog med namnet *target*. Ett valfritt antal undermoduler kan producera innehållspaket.
 
-* Distribuerbara Dispatcher-artefakter upptäcks genom att söka efter *zip* -filer (återigen i en katalog med namnet *target*) som har katalogerna *conf* och *conf.d*.
+* Distribuerbara Dispatcher-artefakter upptäcks genom att söka efter *zip* -filer (återigen i en katalog med namnet *target*) som har kataloger med namnen *conf* och *conf.d*.
 
 * Om det finns mer än ett innehållspaket är det inte säkert att paketdistributioner ordnas. Om en viss ordning behövs kan innehållspaketets beroenden användas för att definiera ordningen. Paket kan [hoppas över](#skipping-content-packages) från distributionen.
 
@@ -59,7 +59,6 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
 * Apache Maven 3.6.0 är installerad.
-* Java-versionen installerade Oracle JDK 8u202 och 11.0.2.
 * Det finns ytterligare systempaket installerade som är nödvändiga:
 
    * bzip2
@@ -337,7 +336,7 @@ Samma teknik kan användas för att installera språkspecifika paket, dvs. med `
 
 >[!NOTE]
 >
->Om du installerar ett systempaket på det här sättet installeras det **inte** i körningsmiljön som används för att köra Adobe Experience Manager. Om du behöver ett systempaket som är installerat i AEM ska du kontakta Adobe.
+>Om du installerar ett systempaket på det här sättet installeras det **inte** i den körningsmiljö som används för att köra Adobe Experience Manager. Om du behöver ett systempaket som är installerat i AEM ska du kontakta Adobe.
 
 ## Hoppar över innehållspaket {#skipping-content-packages}
 
