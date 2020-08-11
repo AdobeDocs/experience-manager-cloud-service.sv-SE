@@ -2,7 +2,7 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: cd307cb8806f30892b40b20974e19d4a0a34f8dc
+source-git-commit: 938e83ccb5dfbd69cb1e137667601408185473e0
 workflow-type: tm+mt
 source-wordcount: '1484'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 # Förstå testresultat {#understand-test-results}
 
 Körningar av pipeline för Cloud Manager för Cloud Services stöder körning av tester som körs mot mellanlagringsmiljön. Detta är i motsats till tester som körs under steget Skapa och Enhetstestning som körs offline, utan åtkomst till någon AEM miljö som körs.
-Det finns två typer av tester som körs i det här sammanhanget:
+Det finns tre typer av tester som körs i det här sammanhanget:
 * Kundskrivna tester
 * Prov skrivna av Adobe
 * Verktyg med öppen källkod från Google från Lightroom
@@ -157,7 +157,7 @@ Content Audit ger aggregerade och detaljerade testresultat på sidnivå via kör
 
 #### Sammanställd bakgrundsmusik {#aggregate-scores}
 
-Det finns en sammanställd nivå för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
+Det finns ett aggregerat nivåpoäng för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
 
 Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i körningen. Ändringen på aggregeringsnivå representerar medelpoängen för sidorna i den aktuella körningen jämfört med medelvärdet för poängen från föregående körning, även om den sidsamling som konfigurerats att inkluderas har ändrats mellan körningar.
 
