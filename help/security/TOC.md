@@ -2,11 +2,11 @@
 sub-product: Säkerhet för AEM as a Cloud Service
 user-guide-title: Säkerhet för AEM as a Cloud Service
 user-guide-description: Learn about important security topics regarding Experience Manager as a Cloud Service.
-translation-type: ht
-source-git-commit: c6de895d9d7e876096efe98238b9b0558224a4e6
-workflow-type: ht
-source-wordcount: '30'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 75d9e5817448489790cc0e4004db59e0f330af71
+workflow-type: tm+mt
+source-wordcount: '38'
+ht-degree: 78%
 
 ---
 
@@ -14,4 +14,5 @@ ht-degree: 100%
 # Dokumentskydd {#security}
 
 + [Säkerhet för AEM as a Cloud Service](/help/security/home.md)
++ [Säkerhetsöversikt för AEM som Cloud Service](/help/security/cloud-service-security-overview.md)
 + [IMS-stöd för AEM as a Cloud Service](ims-support.md)
