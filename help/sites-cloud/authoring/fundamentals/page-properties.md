@@ -2,10 +2,10 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
-source-git-commit: 5d72645aa3a5296e7b616101955734f03425ab59
+source-git-commit: abb45225e880f3d08b9d26c29e243037564acef0
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1675'
+ht-degree: 6%
 
 ---
 
@@ -62,18 +62,27 @@ Egenskaperna fördelas på flera flikar.
 
 * **I tid**
 
-   * Det datum och den tidpunkt då den publicerade sidan ska aktiveras. När den publiceras kommer den här sidan att vara vilande tills den angivna tiden.
-   * Lämna dessa fält tomma för sidor som du vill publicera omedelbart (det normala scenariot).
+   * Det datum och den tidpunkt då den publicerade sidan blir synlig (återgiven) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
+
+      >[!NOTE]
+      >
+      > Information om hur du konfigurerar den relaterade automatiska replikeringen finns i [På- och Av-tider - Utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration) .
+
+      * Om sidan redan är [publicerad (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) kommer den att vara vilande (dold) tills den återges vid den angivna tidpunkten.
+      * Om sidan inte publiceras och konfigureras för automatisk replikering kommer den att publiceras automatiskt och sedan återges vid den angivna tidpunkten.
+      * Om sidan inte publiceras och inte är konfigurerad för automatisk replikering, kommer den inte att publiceras automatiskt. Därför visas 404 när du försöker komma åt sidan.
+   * Lämna dessa fält (**I tid** och **fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenario).
 
 * **Fråntid**
 
-   * Den tidpunkt då den publicerade sidan inaktiveras.
-   * Lämna dessa fält tomma för omedelbar åtgärd.
+   * Parallellt med **På tid** anger detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
+   * Lämna dessa fält (**I tid** och **fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenario).
 
 * **Vanity URL**
 
    * Gör att du kan ange en fågel-URL för den här sidan, vilket kan ge dig en kortare och/eller mer uttrycksfull URL.
    * Om Vanity-URL:en till exempel är inställd på `welcome` den sida som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`är `http://example.com/welcome` det vanity-URL:en för `http://example.com/content/v1.0/startpage`
+
    >[!CAUTION]
    >
    >Alternativa URL:er:
@@ -185,6 +194,7 @@ Visar sidminiatyrbilden. Du kan:
 * **Cloud Service Configurations**
 
    * Definiera egenskaper för molntjänster.
+
    <!--Define properties for [cloud services](/help/sites-developing/extending-cloud-config.md).
   -->
 
@@ -193,6 +203,7 @@ Visar sidminiatyrbilden. Du kan:
 * **ContextHub-konfigurationer**
 
    * Välj ContextHub Configuration och Segments Path.
+
    <!--Select the [ContextHub Configuration](/help/sites-administering/contexthub-config.md) and [Segments Path](/help/sites-administering/segmentation.md).
   -->
 
@@ -209,6 +220,7 @@ Visar sidminiatyrbilden. Du kan:
    * Lägg till behörigheter
    * Redigera stängd användargrupp
    * Visa gällande behörigheter
+
    <!--[Add Permissions](/help/sites-administering/user-group-ac-admin.md) -->
 
    <!-- [Edit Closed User Group](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)-->
@@ -220,6 +232,7 @@ Visar sidminiatyrbilden. Du kan:
 * **Blueprint**
 
    * Definiera egenskaper för en designsida inom hantering av flera webbplatser.
+
    <!--Define properties for a Blueprint page within [multi-site management](/help/sites-administering/msm.md).-->
 
    * Styr under vilka omständigheter ändringar ska spridas till Live Copy.
