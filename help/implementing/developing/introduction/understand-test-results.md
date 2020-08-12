@@ -2,9 +2,9 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: 64644b2377eb152a6033fcade79aa820d3e6ff26
+source-git-commit: 2fa0ef7893fd4f06896402e33bf45d525f0817a5
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: '1618'
 ht-degree: 3%
 
 ---
@@ -91,7 +91,7 @@ Den rätta lösningen är sedan att ta bort det hårdkodade lösenordet.
 >Även om det är en god vana att göra anteckningen så specifik som möjligt, dvs. bara anteckna den specifika programsats eller det block som orsakar problemet, är det möjligt att anteckna på klassnivå. `@SuppressWarnings`
 
 >[!NOTE]
->Även om det inte finns något explicit steg för säkerhetstestning finns det fortfarande säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Mer information finns i [Säkerhetsöversikt AEM en Cloud Service](/help/security/cloud-service-security-overview.md) .
+>Även om det inte finns något explicit steg för säkerhetstestning finns det fortfarande säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Se [säkerhetsöversikt för AEM som Cloud Service](/help/security/cloud-service-security-overview.md) om du vill veta mer om Cloud Service.
 
 ## Funktionstestning {#functional-testing}
 
@@ -104,7 +104,9 @@ Funktionstestning indelas i två typer:
 
 Funktionstester för produkter är en uppsättning stabila HTTP-integrationstester (IT) runt kärnfunktioner i AEM (till exempel redigering och replikering) som förhindrar att kundändringar i programkoden distribueras om kärnfunktionen bryts.
 
-Funktionstester för produkter körs automatiskt när en kund distribuerar ny kod till Cloud Manager.
+Funktionstester för produkter körs automatiskt när en kund distribuerar ny kod till Cloud Manager och kan inte hoppas över.
+
+Se [Produktfunktionstester](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) för exempeltester.
 
 ### Anpassad funktionstestning {#custom-functional-testing}
 
