@@ -2,10 +2,10 @@
 title: Leverera dynamiska medieresurser
 description: Lär dig leverera dynamiska medieresurser
 translation-type: tm+mt
-source-git-commit: 218afb360ec3a13f2f4562a703ca3184083fa7f6
+source-git-commit: ea6a1bddaab6819d1f89268ceba3c4d4981729a2
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 3%
+source-wordcount: '315'
+ht-degree: 1%
 
 ---
 
@@ -16,8 +16,8 @@ Hur du kan leverera dynamiska medieresurser - både video och bilder - beror på
 
 Med Dynamic Media har du flera alternativ:
 
-* Om din webbplats ligger hos AEM vill du lägga till de dynamiska medieresurserna direkt på sidan.
-* Om din webbplats inte finns på AEM kan du välja något av följande:
+* Om du har AEM som värd för webbplatsen vill du lägga till de dynamiska medieresurserna direkt på sidan.
+* Om webbplatsen inte finns AEM kan du välja mellan följande:
 
    * Bädda in videon eller bilden på webbplatsen.
    * Länka URL:er till webbprogrammet. Använd länkning när du vill leverera en videospelare som ett popup-fönster eller modalt fönster.
@@ -35,7 +35,8 @@ Mer information finns i följande avsnitt:
 * [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md)
 * [Leverera optimerade bilder för en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md)
 * [HTTP2-leverans av innehåll](/help/assets/dynamic-media/http2faq.md)
-* [Upphäva CDN-cachelagrat innehåll](/help/assets/dynamic-media/invalidate-cdn-cached-content.md)
+* [Invalidera CDN-cachen med hjälp av Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md)
+* [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](/help/assets/dynamic-media/invalidate-cdn-cache-dm-classic.md)
 * [Använda regeluppsättningar för att omforma URL:er](/help/assets/dynamic-media/using-rulesets-to-transform-urls.md)
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
