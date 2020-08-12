@@ -2,9 +2,9 @@
 title: AEM - Cloud Service
 description: AEM - Cloud Service
 translation-type: tm+mt
-source-git-commit: 1dfc9cfaba4c7701ebca58346d6eec6b946dd517
+source-git-commit: ff9823f3d083ebc1dc5d130919144fe3678a13ed
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1472'
 ht-degree: 9%
 
 ---
@@ -374,3 +374,12 @@ Med content-package-maven-plugin är den ungefär så här:
             </configuration>
         </plugin>
 ```
+
+## Ytterligare resurser {#additional-resources}
+
+Läs mer i avsnitten nedan om hur du använder Cloud Manager i Cloud Servicen:
+
+* [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md)
+* [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md)
+* [Distribuera kod](/help/implementing/cloud-manager/deploy-code.md)
+* [Förstå testresultat](/help/implementing/developing/introduction/understand-test-results.md)
