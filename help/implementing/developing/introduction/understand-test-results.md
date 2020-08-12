@@ -2,9 +2,9 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: c5d5b75f19c5b3d96ed4cd79f9e305b26709675b
+source-git-commit: ff9823f3d083ebc1dc5d130919144fe3678a13ed
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1612'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Dessa tester kan vara:
 
 * Kundskriven
 * Adobe-skriven
-* Verktyg med öppen källkod från Google från Lightroom
+* Powered by Lighthouse från Google as an open source tool
 
    >[!NOTE]
    > Både kundskrivna tester och Adobe-skrivna tester körs i en containerinfrastruktur som är utformad för att köra dessa typer av tester.
@@ -90,6 +90,9 @@ Den rätta lösningen är sedan att ta bort det hårdkodade lösenordet.
 >
 >Även om det är en god vana att göra anteckningen så specifik som möjligt, dvs. bara anteckna den specifika programsats eller det block som orsakar problemet, är det möjligt att anteckna på klassnivå. `@SuppressWarnings`
 
+>[!NOTE]
+>Även om det inte finns något explicit steg för säkerhetstestning finns det fortfarande säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Mer information finns i [Säkerhetsöversikt AEM en Cloud Service](/help/security/cloud-service-security-overview.md) .
+
 ## Funktionstestning {#functional-testing}
 
 Funktionstestning indelas i två typer:
@@ -111,7 +114,7 @@ Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas ö
 Om JAR-test inte skapas av bygget godkänns testet som standard.
 
 >[!NOTE]
->Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
+>Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
 
 
 #### Skriva funktionstester {#writing-functional-tests}
@@ -180,7 +183,7 @@ Content Audit ger aggregerade och detaljerade testresultat på sidnivå via kör
 
 #### Sammanställd bakgrundsmusik {#aggregate-scores}
 
-Det finns ett aggregerat nivåpoäng för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
+Det finns en sammanställd nivå för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
 
 Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i körningen. Ändringen på aggregeringsnivå representerar medelpoängen för sidorna i den aktuella körningen jämfört med medelvärdet för poängen från föregående körning, även om den sidsamling som konfigurerats att inkluderas har ändrats mellan körningar.
 
