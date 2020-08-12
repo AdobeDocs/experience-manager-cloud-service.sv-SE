@@ -2,11 +2,11 @@
 sub-product: AEM Assets as a Cloud Service
 user-guide-title: AEM Assets as a Cloud Service
 user-guide-description: Understand how to use and administer Experience Manager Assets as a Cloud Service.
-translation-type: ht
-source-git-commit: c6de895d9d7e876096efe98238b9b0558224a4e6
-workflow-type: ht
-source-wordcount: '406'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 5fa5dbd664d4b1e1c93ca03037b8c8340ba6e96f
+workflow-type: tm+mt
+source-wordcount: '411'
+ht-degree: 97%
 
 ---
 
@@ -107,7 +107,7 @@ ht-degree: 100%
    + [Länka URL till ett webbprogram](dynamic-media/linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](dynamic-media/using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](dynamic-media/publishing-dynamicmedia-assets.md)
-   + [Upphäva CDN-cachelagrat innehåll](dynamic-media/invalidate-cdn-cached-content.md)
+   + [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](dynamic-media/invalidate-cdn-cache-dm-classic.md)
    + [Arbeta med väljare](dynamic-media/working-with-selectors.md)
    + [Vanliga frågor om att DHTML Viewer upphör](dynamic-media/dhtml-viewer-endoflifefaqs.md)
    + [Meddelande om att Flash Viewer har upphört](dynamic-media/flash-viewers-eol.md)
