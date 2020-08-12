@@ -2,7 +2,7 @@
 title: Invalidera CDN-cachen med hjälp av Dynamic Media
 description: Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska förfalla.
 translation-type: tm+mt
-source-git-commit: aae3dcb0f44ef8e8d1401274fbf1fd47ea718b09
+source-git-commit: 68ee2c58588ad519aac673652349e0fefd20ee57
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 0%
@@ -37,10 +37,9 @@ Se även Översikt över [cachelagring i Dynamic Media](https://helpx.adobe.com/
 
    ![CDN-valideringsmall - Skapa](/help/assets/assets-dm/cdn-invalidation-template-create-2.png)
 
-1. I det övre högra hörnet av sidan CDN-mall för validering trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL OK]**.<br>
+1. I det övre högra hörnet av sidan CDN-mall för validering trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL OK]**.
 
-   ***Del 2: Ange alternativ för CDN-validering***
-<br>
+   *Del 2: Ange alternativ för CDN-validering*
 
 1. In AEM as a Cloud Service, tap **[!UICONTROL Tools > Assets > CDN Invalidation.]**
 
