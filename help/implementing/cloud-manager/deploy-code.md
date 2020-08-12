@@ -2,9 +2,9 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: c5d5b75f19c5b3d96ed4cd79f9e305b26709675b
+source-git-commit: ff9823f3d083ebc1dc5d130919144fe3678a13ed
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '986'
 ht-degree: 3%
 
 ---
@@ -51,10 +51,10 @@ När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du re
    Följande steg ingår i **mellanlagringstestningen**:
 
    * Funktionstestning: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön.
-Mer information om testprocessen finns i [Funktionstestning](/help/implementing/developing/introduction/understand-test-results.md#product-functional-testing) av produkten.
+Mer information finns i [Funktionstestning](/help/implementing/developing/introduction/understand-test-results.md#product-functional-testing) .
 
    * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard.\
-      Mer information om testprocessen finns i [Anpassad funktionstestning](/help/implementing/developing/introduction/understand-test-results.md#custom-functional-testing) .
+      Mer information finns i [Anpassad funktionstestning](/help/implementing/developing/introduction/understand-test-results.md#custom-functional-testing) .
 
    * Innehållsgranskning: Det här steget i pipeline finns alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett innehållsgranskningssteg efter en anpassad funktionstestning som kör kontrollerna. De konfigurerade sidorna skickas till tjänsten och utvärderas. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
 Mer information finns i [Om resultat](/help/implementing/developing/introduction/understand-test-results.md#content-audit-testing) av innehållsgranskning.
