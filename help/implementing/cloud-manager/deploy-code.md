@@ -2,9 +2,9 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: ff9823f3d083ebc1dc5d130919144fe3678a13ed
+source-git-commit: 2fa0ef7893fd4f06896402e33bf45d525f0817a5
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '983'
 ht-degree: 3%
 
 ---
@@ -42,8 +42,8 @@ När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du re
    Följande steg ingår i **mellanlagringsdistributionen**:
 
    * Validering: Detta steg säkerställer att pipeline är konfigurerad att använda de tillgängliga resurserna, till exempel att den konfigurerade grenen finns, och att miljöerna är tillgängliga.
-   * Build &amp; Unit Testing: Det här steget kör en innesluten byggprocess. Mer information om byggmiljön finns i [Skapa ett AEM-programprojekt](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md) .
-   * Kodsökning: I det här steget utvärderas kvaliteten på programkoden. Se [Förstå testresultaten](/help/implementing/developing/introduction/understand-test-results.md) för mer information om testprocessen.
+   * Build &amp; Unit Testing: Det här steget kör en innesluten byggprocess. Mer information om byggmiljön finns i [Information](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#build-environment-details) om byggmiljö.
+   * Kodsökning: I det här steget utvärderas kvaliteten på programkoden. Mer information om testprocessen finns i [Kodkvalitetstestning](/help/implementing/developing/introduction/understand-test-results.md#code-quality-testing) .
    * Skapa bilder: I det här steget finns en loggfil från processen som används för att skapa bilder. Den här processen gör att innehålls- och dispatcherpaketen som skapas i byggsteget omvandlas till Docker-bilder och Kubernetes-konfiguration.
    * Distribuera till scenen
 
