@@ -4,9 +4,9 @@ description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d4b4b5fbbd07851485d216b502c66037cccef134
+source-git-commit: a088aa3cd5fda428477c985d1edacf59cfe71a67
 workflow-type: tm+mt
-source-wordcount: '4274'
+source-wordcount: '4290'
 ht-degree: 11%
 
 ---
@@ -18,12 +18,12 @@ I den här artikeln beskrivs hur du hanterar och redigerar resurser i Adobe Expe
 
 ## Skapa mappar {#creating-folders}
 
-När du organiserar en samling resurser, till exempel alla `Nature` bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Resurser kräver inte att du ordnar resurser i mappar för att de ska fungera bättre.
+När du organiserar en samling resurser, till exempel alla `Nature` bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Assets kräver inte att du ordnar resurser i mappar för att fungera bättre.
 
 >[!NOTE]
 >
->* Delning av en resursmapp av den typen `sling:OrderedFolder`stöds inte när den delas till Marketing Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordered] när du skapar en mapp.
->* Det går inte att använda `subassets` ordet som namn på en mapp i Experience Manager. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser
+>* Delning av en resursmapp av den typen `sling:OrderedFolder`stöds inte vid delning till Marketing Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordered] när du skapar en mapp.
+>* Experience Manager tillåter inte att `subassets` ord används som mappnamn. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser
 
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp. In the menu, click **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
@@ -37,7 +37,7 @@ Följande (blankstegsavgränsad lista med) tecken stöds inte:
 
 ## Överför resurser {#uploading-assets}
 
-Se [Lägga till digitala resurser i Experience Manager](add-assets.md).
+Se [lägga till digitala resurser i Experience Manager](add-assets.md).
 
 ## Identifiera duplicerade resurser {#detect-duplicate-assets}
 
@@ -47,7 +47,16 @@ Om en DAM-användare överför en eller flera resurser som redan finns i databas
 
 ![Identifiera duplicerad OSGi-konfiguration för resurs](assets/duplicate-detection.png)
 
-När Experience Manager har aktiverats skickas meddelanden om duplicerade resurser till inkorgen. Det är ett aggregerat resultat för flera dubbletter. Användarna kan välja att ta bort resurserna baserat på resultatet.
+Du kan lägga till konfigurationsfilen `/apps/example/config.author/com.adobe.cq.assetcompute.impl.assetprocessor.AssetDuplicationDetector.cfg.json` i anpassad kod och filen kan innehålla följande:
+
+```json
+{
+  "enabled":true,
+  "detectMetadataField":"dam:sha1"
+}
+```
+
+När den är aktiverad skickar Experience Manager meddelanden om duplicerade resurser till inkorgen. Det är ett aggregerat resultat för flera dubbletter. Användarna kan välja att ta bort resurserna baserat på resultatet.
 
 ![Inkorgsmeddelande för duplicerade resurser](assets/duplicate-detect-inbox-notification.png)
 
@@ -101,6 +110,7 @@ Följ de här stegen för att förhandsgranska en resurs.
    * Antal gånger som resursen visats eller hämtats
    * Kanaler/enheter som resursen användes via
    * Kreativa lösningar där resursen nyligen användes
+
    Mer information finns i [Resursinsikter](assets-insights.md).
 
 1. Tryck/klicka på **[!UICONTROL Save & Close]**.
@@ -129,7 +139,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >Om du kopierar en resurs på samma plats, genererar AEM automatiskt en variant av namnet. Om du till exempel kopierar en resurs med namnet `Square`genererar AEM automatiskt titeln för kopian som `Square1`.
+   >Om du kopierar en resurs på samma plats, genererar AEM automatiskt en variant av namnet. Om du t.ex. kopierar en resurs med namnet `Square`genererar AEM automatiskt titeln för kopian som `Square1`.
 
 1. Click the **[!UICONTROL Paste]** asset icon from the toolbar. Resurser kopieras till den här platsen.
 
@@ -172,6 +182,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    * Tryck/klicka för **[!UICONTROL Back]** att gå tillbaka till **[!UICONTROL Select Destination]** skärmen.
 
    * Tryck/klicka för **[!UICONTROL Cancel]** att avbryta flyttningen.
+
    Om du inte uppdaterar referenser fortsätter de att peka på resursens tidigare sökväg. Om du justerar referenserna uppdateras de till den nya resurssökvägen.
 
 ### Hantera återgivningar {#managing-renditions}
@@ -192,7 +203,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >Som standard visas inte den ursprungliga återgivningen av resursen i förhandsgranskningsläget i AEM Resurser. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Resurser så att de ursprungliga återgivningarna visas i förhandsgranskningsläget.
+   >Som standard visas inte den ursprungliga återgivningen av resursen i förhandsgranskningsläget i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas i förhandsgranskningsläget.
 
 1. Välj en återgivning om du vill visa eller ta bort återgivningen.
 
@@ -212,7 +223,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Om du väljer en återgivning på panelen **[!UICONTROL Renditions]** ändras sammanhanget för verktygsfältet och endast de åtgärder som är relevanta visas. Alternativ som ikonen Överför återgivning visas inte. Om du vill visa de här alternativen i verktygsfältet går du till informationssidan för resursen.
 
-   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Baserat på de dimensioner du anger visar AEM Resurser återgivningen med de exakta eller närmaste dimensionerna.
+   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Beroende på de dimensioner du anger visas återgivningen med de exakta eller närmaste måtten i AEM Assets.
 
    Om du vill konfigurera återgivningsdimensionerna för en bild på resursdetaljnivån överlagrar du noden `renditionpicker` (`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`) och konfigurera värdet för breddegenskapen (width). Konfigurera egenskapen **[!UICONTROL size (Long) in KB]** i stället för bredden för att anpassa återgivningen på resursdetaljsidan utifrån bildstorleken. För storleksbaserad anpassning prioriterar egenskapen `preferOriginal` originalet om storleken på den matchade återgivningen är större än originalet.
 
@@ -245,6 +256,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
       * Om resursen inte har några referenser tas resursen bort.
       * Om resursen har referenser visas ett felmeddelande om att det finns referenser till **en eller flera resurser.** Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
+
    >[!NOTE]
    >
    >Du måste ha behörighet att ta bort en resurs för att den ska kunna tas bort. Om du bara har ändringsbehörighet kan du bara redigera metadata för resursen och lägga till anteckningar till resursen. Du kan dock inte ta bort resursen eller dess metadata.
@@ -304,6 +316,7 @@ See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 
    * **[!UICONTROL Cancel]** för att stoppa åtgärden
    * **[!UICONTROL Unpublish]** för att bekräfta att resurserna är opublicerade (inte längre tillgängliga i publiceringsmiljön) vid det angivna datumet.
+
    >[!NOTE]
    >
    >När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
@@ -319,16 +332,16 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 
    ![add_user](assets/add_user.png)
 
-1. Om du vill visa en inloggningsskärm när användare öppnar mappen väljer du **[!UICONTROL Enable]** alternativet. Välj sedan sökvägen till en inloggningssida i AEM och spara ändringarna.
+1. Om du vill visa en inloggningsskärm när användare öppnar mappen väljer du **[!UICONTROL Enable]** alternativet. Markera sedan sökvägen till en inloggningssida i AEM och spara ändringarna.
 
    ![login_page](assets/login_page.png)
 
    >[!NOTE]
    >
-   >Om du inte anger sökvägen till en inloggningssida visar AEM standardinloggningssidan i publiceringsinstansen.
+   >Om du inte anger sökvägen till en inloggningssida visas AEM standardinloggningssidan i publiceringsinstansen.
 
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
-1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när du har autentiserats av AEM.
+1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när AEM autentiserar dig.
 
 ## Söka efter resurser {#search-assets}
 
@@ -345,7 +358,7 @@ Snabbåtgärdsikoner är tillgängliga för en enskild resurs i taget. Beroende 
 
 ## Redigera bilder {#editing-images}
 
-Med redigeringsverktygen i AEM Resurser-gränssnittet kan du utföra små redigeringsjobb på bildresurser. Du kan beskära, rotera, vända och utföra andra redigeringsjobb på bilder. Du kan också lägga till bildscheman till resurser.
+Med redigeringsverktygen i AEM Assets gränssnitt kan du utföra små redigeringsjobb på bildresurser. Du kan beskära, rotera, vända och utföra andra redigeringsjobb på bilder. Du kan också lägga till bildscheman till resurser.
 
 >[!NOTE]
 >
@@ -356,6 +369,7 @@ Med redigeringsverktygen i AEM Resurser-gränssnittet kan du utföra små redige
    * Select the asset and then click/tap the **[!UICONTROL Edit]** icon in the toolbar.
    * Tryck/klicka på **[!UICONTROL Edit]** ikonen som visas på en resurs i kortvyn.
    * In the asset page, tap/click the **[!UICONTROL Edit]** icon in the toolbar.
+
    ![edit_icon](assets/edit_icon.png)
 
 1. Om du vill beskära bilden trycker/klickar du på ikonen **Beskär** .
@@ -426,6 +440,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
    * [Snabbåtgärder](#quick-actions)
    * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
+
    ![chlimage_1-233](assets/chlimage_1-233.png)
 
 1. Lägg till en kommentar i rutan **[!UICONTROL Comment]** längst ned på tidslinjen. Du kan också markera ett område i bilden och lägga till en anteckning i dialogrutan **[!UICONTROL Add Annotation]**.
@@ -521,7 +536,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du p
 
    >[!NOTE]
    >
-   >Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar anteckningarna till 50 ord.
+   >Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
 
 1. Tryck/klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
 
@@ -543,9 +558,9 @@ Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tid
 
 Här följer exempel där du skapar versioner:
 
-* Du ändrar en bild i ett annat program och överför den till AEM Resurser. En version av bilden skapas så att originalbilden inte skrivs över.
+* Du ändrar en bild i ett annat program och överför den till AEM Assets. En version av bilden skapas så att originalbilden inte skrivs över.
 * Du redigerar metadata för en resurs.
-* Du använder AEM-datorprogrammet för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
+* Du använder AEM datorprogram för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
 
 Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du skapar en version för en resurs sparas metadata och återgivningar tillsammans med versionen. Återgivningar är renderingsalternativ för samma bilder, till exempel en PNG-återgivning av en överförd JPEG-fil.
 
