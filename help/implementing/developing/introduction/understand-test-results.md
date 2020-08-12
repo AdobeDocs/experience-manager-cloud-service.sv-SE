@@ -2,9 +2,9 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: f878421950bac58702f9d4b418fbcc2dc3e397b2
+source-git-commit: 65c9446dc3c70ce593512e2358f23368f7c97f89
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: '1596'
 ht-degree: 3%
 
 ---
@@ -104,7 +104,7 @@ Funktionstestning indelas i två typer:
 
 Funktionstester för produkter är en uppsättning stabila HTTP-integrationstester (IT) runt kärnfunktioner i AEM (till exempel redigering och replikering) som förhindrar att kundändringar i programkoden distribueras om kärnfunktionen bryts.
 
-De körs automatiskt när en kund distribuerar ny kod till Cloud Manager.
+Funktionstester för produkter körs automatiskt när en kund distribuerar ny kod till Cloud Manager.
 
 ### Anpassad funktionstestning {#custom-functional-testing}
 
