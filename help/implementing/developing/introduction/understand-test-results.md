@@ -2,9 +2,9 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: 938e83ccb5dfbd69cb1e137667601408185473e0
+source-git-commit: c5d5b75f19c5b3d96ed4cd79f9e305b26709675b
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1576'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,17 @@ ht-degree: 3%
 # Förstå testresultat {#understand-test-results}
 
 Körningar av pipeline för Cloud Manager för Cloud Services stöder körning av tester som körs mot mellanlagringsmiljön. Detta är i motsats till tester som körs under steget Skapa och Enhetstestning som körs offline, utan åtkomst till någon AEM miljö som körs.
-Det finns tre typer av tester som körs i det här sammanhanget:
-* Kundskrivna tester
-* Prov skrivna av Adobe
+
+Det finns tre olika testkategorier som stöds av Cloud Manager för Cloud Services i pipeline:
+
+1. [Testning av kodkvalitet](#code-quality-testing)
+1. [Funktionstestning](#functional-testing)
+1. [Testning av innehållsgranskning](#content-audit-testing)
+
+Dessa tester kan vara:
+
+* Kundskriven
+* Adobe-skriven
 * Verktyg med öppen källkod från Google från Lightroom
 
    >[!NOTE]
@@ -82,7 +90,31 @@ Den rätta lösningen är sedan att ta bort det hårdkodade lösenordet.
 >
 >Även om det är en god vana att göra anteckningen så specifik som möjligt, dvs. bara anteckna den specifika programsats eller det block som orsakar problemet, är det möjligt att anteckna på klassnivå. `@SuppressWarnings`
 
-## Skriva funktionstester {#writing-functional-tests}
+## Funktionstestning {#functional-testing}
+
+Funktionstestning indelas i två typer:
+
+* Funktionstestning av produkten
+* Anpassad funktionstestning
+
+### Funktionstestning av produkten {#product-functional-testing}
+
+Funktionstester för produkter är en uppsättning stabila HTTP-integrationstester (IT) för utveckling, replikering, som förhindrar att kundändringar i programkoden distribueras om de bryter grundfunktionerna i AEM.
+De körs automatiskt när en kund distribuerar ny kod till Cloud Manager.
+
+Produktfunktionstestningssteget i pipeline finns alltid och kan inte hoppas över. Det här steget utförs omedelbart efter scendistributionen.
+
+### Anpassad funktionstestning {#custom-functional-testing}
+
+Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas över.
+
+Om JAR-test inte skapas av bygget godkänns testet som standard.
+
+>[!NOTE]
+>Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
+
+
+#### Skriva funktionstester {#writing-functional-tests}
 
 Funktionstester som skrivs av kunden måste paketeras som en separat JAR-fil som skapas av samma Maven-bygge som de artefakter som ska distribueras till AEM. I allmänhet är detta en separat Maven-modul. Den resulterande JAR-filen måste innehålla alla nödvändiga beroenden och skapas vanligtvis med maven-assembly-plugin med hjälp av jar-with-berodencies-beskrivningen.
 
@@ -124,15 +156,6 @@ I den här JAR-filen måste klassnamnen för de faktiska tester som ska köras s
 En klass med namnet `com.myco.tests.aem.ExampleIT` skulle till exempel köras, men inte en klass med namnet `com.myco.tests.aem.ExampleTest` .
 
 Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad för att vara kompatibel med de konventioner som används av testbiblioteket för aem-testing-clients. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder. Mer information finns i [Git-länken](https://github.com/adobe/aem-testing-clients) .
-
-## Anpassad funktionstestning {#custom-functional-test}
-
-Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas över.
-
-Om JAR-test inte skapas av bygget godkänns testet som standard. Det här steget utförs nu direkt efter scendistributionen.
-
->[!NOTE]
->Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
 
 ## Testning av innehållsgranskning {#content-audit-testing}
 
