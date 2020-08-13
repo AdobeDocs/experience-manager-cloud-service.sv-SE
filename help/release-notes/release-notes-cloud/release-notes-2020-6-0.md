@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.6.0
+title: Adobe Experience Manager som Cloud Service Release Notes for 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
 translation-type: tm+mt
-source-git-commit: 3dc0d1d77595f7b3e890fb4b390eef5bcf84ecd8
+source-git-commit: c3922be7da1e76fee51e2ae2f59f16e260727001
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1931'
 ht-degree: 0%
 
 ---
@@ -190,4 +190,4 @@ Förutom de nya funktionerna ovan innehåller den aktuella versionen följande f
 * När du hämtar en resurs är inte nedladdningsalternativet tillgängligt om du har valt e-postalternativ och även om du har angett ett giltigt e-post-ID. (CQ-4296535)
 * Anpassade filter som sparats som smarta samlingar används inte korrekt på resurser. (CQ-4294942)
 * Flera förbättringar av sökning och indexering samt felkorrigeringar för att förbättra prestandan. (CQ-4286373)
-* Mappegenskaperna visar 500 interna serverfel. (CQ-4295701)
+* Fliken för mappegenskaper kan inte öppnas i Resurser och returnerar ett 500-fel. (CQ-4295701)
