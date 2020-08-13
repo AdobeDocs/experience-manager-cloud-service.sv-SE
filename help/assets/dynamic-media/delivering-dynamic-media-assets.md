@@ -2,9 +2,9 @@
 title: Leverera dynamiska medieresurser
 description: Lär dig leverera dynamiska medieresurser
 translation-type: tm+mt
-source-git-commit: ea6a1bddaab6819d1f89268ceba3c4d4981729a2
+source-git-commit: a09e82278df1adfb225a01e60ae7ef188375b800
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '306'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,6 @@ Mer information finns i följande avsnitt:
 * [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md)
 * [Leverera optimerade bilder för en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md)
 * [HTTP2-leverans av innehåll](/help/assets/dynamic-media/http2faq.md)
-* [Invalidera CDN-cachen med hjälp av Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md)
 * [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](/help/assets/dynamic-media/invalidate-cdn-cache-dm-classic.md)
 * [Använda regeluppsättningar för att omforma URL:er](/help/assets/dynamic-media/using-rulesets-to-transform-urls.md)
 
