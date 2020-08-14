@@ -2,11 +2,11 @@
 title: Förbättrade smarta taggar
 description: Använd kontextuella och beskrivande taggar med Adobe Senseis AI- och ML-tjänst för att förbättra resursidentifieringen och innehållets hastighet.
 contentOwner: AG
-translation-type: ht
-source-git-commit: c24fa22178914b1186b7f29bdab64d3bca765fe5
-workflow-type: ht
-source-wordcount: '863'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 33ce255e126f2a49f1c1a6e94955aade2ca0d240
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 96%
 
 ---
 
@@ -22,6 +22,10 @@ Smart Tags-funktionen kan köpas som tillägg till [!DNL Experience Manager]. N�
 2. Is there a link to buy SCS or initiate a sales call.
 3. Keystroke all steps and check all screenshots.
 -->
+
+>[!IMPORTANT]
+>
+>De nya [!DNL Experience Manager Assets] distributionerna är integrerade med [!DNL Adobe Developer Console] som standard. Det hjälper till att konfigurera smarta taggar snabbare. I befintliga distributioner följer administratörer de här stegen för att konfigurera den.
 
 ## Integrera med Adobe Developer Console {#aio-integration}
 
