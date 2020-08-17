@@ -2,9 +2,9 @@
 title: AEM - Cloud Service
 description: AEM - Cloud Service
 translation-type: tm+mt
-source-git-commit: ff9823f3d083ebc1dc5d130919144fe3678a13ed
+source-git-commit: 2a89c8039f3d2135d8944822d3a4381142bbdb75
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1543'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 ## Använda guiden för att skapa ett AEM {#using-wizard-to-create-an-aem-application-project}
 
-För att hjälpa nya kunder att komma igång kan Cloud Manager nu skapa ett minimalt AEM som utgångspunkt. Den här processen baseras på [**AEM projekttyp **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+För att hjälpa nya kunder att komma igång kan Cloud Manager nu skapa ett minimalt AEM som utgångspunkt. Den här processen baseras på [**AEM projekttyp**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 
 Följ stegen nedan för att skapa ett AEM programprojekt i Cloud Manager:
@@ -59,6 +59,7 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
 * Apache Maven 3.6.0 är installerad.
+* De installerade Java-versionerna är Oracle JDK 8u202 och 11.0.2.
 * Det finns ytterligare systempaket installerade som är nödvändiga:
 
    * bzip2
@@ -75,6 +76,38 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 >[!NOTE]
 >Även om Cloud Manager inte definierar en specifik version av `jacoco-maven-plugin`filen måste den version som används vara minst `0.7.5.201505241946`.
 
+### Använda Java 11-stöd {#using-java-support}
+
+Cloud Manager har nu stöd för att bygga kundprojekt med både Java 8 och Java 11. Som standard byggs projekt med Java 8. Kunder som vill använda Java 11 i sina projekt kan göra det med pluginen Maven Toolchains.
+
+Det gör du genom att lägga till en post som ser ut så här i filen pom.xml: `<plugin>`
+
+```
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-toolchains-plugin</artifactId>
+    <version>1.1</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>toolchain</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <toolchains>
+            <jdk>
+                <version>11</version>
+                <vendor>oracle</vendor>
+           </jdk>
+        </toolchains>
+    </configuration>
+</plugin>
+```
+
+>[!NOTE]
+>Leverantörsvärden som stöds är `oracle` och `sun`.
+>Versionsvärden som stöds är `1.8`, `1.11`och `11`.
 
 ## Miljövariabler {#environment-variables}
 
