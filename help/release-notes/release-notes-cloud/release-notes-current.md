@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: bb5bf9527da7ed9039740ef6d0bab27cfd21b84e
+source-git-commit: 5a53e13a3692fbb8ab3ae7760f13b6908d15db3a
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '542'
 ht-degree: 1%
 
 ---
@@ -43,6 +43,9 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 * Vilolägda miljöer kan tas bort från vänteläget på sidan **Översikt** i Cloud Manager.
 
 * Stöd finns nu för autentiseringsbundna privata Maven-databaser.
+
+* Molnhanterarens byggbehållare har nu stöd för både Java 8 och Java 11.
+Mer information finns i [Använda Java 11-stöd](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#using-java-support) .
 
 ### Bug Fixes {#bug-fixes-cm}
 
