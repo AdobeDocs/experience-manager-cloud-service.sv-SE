@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.7.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.7.0.'
 translation-type: tm+mt
-source-git-commit: 85f5262c2af7502e98fcb60b51b9b13d2c2c0f2c
+source-git-commit: ded8f565ac80b5819eeee15396da5987da43dfd0
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1014'
 ht-degree: 2%
 
 ---
@@ -84,6 +84,11 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.7.0 är 9 juli 2020.
 * Molnhanterarens pipelines har nu stöd för kundspecifika variabler och hemligheter.
 
    Mer information finns i [Pipeline-variabler](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#pipeline-variables) .
+
+* Stöd finns nu för autentiseringsbundna privata Maven-databaser.
+
+* Molnhanterarens byggbehållare har nu stöd för både Java 8 och Java 11.
+Mer information finns i [Använda Java 11-stöd](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#using-java-support) .
 
 ### Bug Fixes {#bug-fixes-cm}
 
