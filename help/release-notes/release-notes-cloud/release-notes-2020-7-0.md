@@ -2,10 +2,10 @@
 title: Versionsinformation för 2020.7.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.7.0.'
 translation-type: tm+mt
-source-git-commit: ded8f565ac80b5819eeee15396da5987da43dfd0
+source-git-commit: 4211a4d95be6e625b283e3142609923245da8d31
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 2%
+source-wordcount: '1052'
+ht-degree: 1%
 
 ---
 
@@ -30,11 +30,11 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.7.0 är 30 juli 2
 
 * Konfigurationer lagras nu i `/conf` stället `/etc/cloudsettings` för i Experience Manager-databasen.
 
-## Adobe Experience Manager Assets as a Cloud Service {#assets}
+## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
-### What&#39;s New {#what-is-new-assets}
+### What is new in [!DNL Assets] {#what-is-new-assets}
 
-* [!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst för att bearbeta resurser. Administratörer kan konfigurera Experience Manager att anropa anpassade program som skapats med [!DNL Asset Compute Service]. Utvecklare kan använda tjänsten för att skapa specialanpassade program som klarar komplexa användningsfall. Den här webbtjänsten kan generera miniatyrbilder för olika filtyper, bildåtergivning av hög kvalitet från filformat i Adobe, koda videor (framtida), extrahera metadata, extrahera full text som prekursor för indexering och köra en resurs via alla tillgängliga Sensei-tjänster. se [Använda mikrotjänster och bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
+* [!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst för att bearbeta resurser. Administratörer kan konfigurera [!DNL Experience Manager] att anropa anpassade program som skapats med [!DNL Asset Compute Service]. Utvecklare kan använda tjänsten för att skapa specialanpassade program som klarar komplexa användningsfall. Den här webbtjänsten kan generera miniatyrbilder för olika filtyper, bildåtergivning av hög kvalitet från filformat i Adobe, koda videor (framtida), extrahera metadata, extrahera full text som prekursor för indexering och köra en resurs via alla tillgängliga [!DNL Sensei] tjänster. se [använda mikrotjänster och bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
 
 * Den initiala konfigurationen av [!DNL Dynamic Media] som Cloud Service i [!DNL Experience Manager] förbättras för att bli mer robust. Det ger nu administratörerna förlopp för processerna.
 
@@ -42,7 +42,13 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.7.0 är 30 juli 2
 
 * Arbetsflödessteg som inte är kompatibla med en Cloud Service-distribution har nu markerats med en varning i [!UICONTROL workflow model] redigeraren. När du kör de befintliga arbetsflödena i Cloud Service-miljön hoppas dessutom de inkompatibla arbetsflödesstegen över.
 
-* Arbetsflödesmodeller som skapats av kunder som distribueras till `/conf/global` i Git-projektet som är kopplat till miljön i Cloud Manager distribueras automatiskt till `/var` och är därmed tillgängliga i Experience Manager. Arbetsflödesmodellerna för produkter `/libs` som ändrats av kunden distribueras inte automatiskt till `/var`.
+* Arbetsflödesmodeller som skapats av kunder som distribueras till `/conf/global` i Git-projektet som är kopplat till miljön i [!DNL Cloud Manager] distribueras automatiskt till `/var` och är därmed tillgängliga i [!DNL Experience Manager]. Arbetsflödesmodellerna för produkter `/libs` som ändrats av kunden distribueras inte automatiskt till `/var`.
+
+### Fel har åtgärdats {#assets-bugs-fixed}
+
+* Guiden Flytta resurs läses inte in som förväntat för resurserna som ingår i samlingar. (CQ-4296756)
+* Värdena för `dam:size` och `dam:sha1` exkluderas från XMP. (CQ-4237355)
+* När resurser avpubliceras i grupp [!DNL Brand Portal] genereras ett fel som anger att URI:n för begäran är för lång. (CQ-4299474)
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
