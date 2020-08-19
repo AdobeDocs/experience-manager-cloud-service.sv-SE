@@ -2,7 +2,7 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: 6eee78f2883b15f793662dc1474b7b7874903702
+source-git-commit: 25ba5798de175b71be442d909ee5c9c37dcf10d4
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Once you have configured your Production **Pipeline** (repository, environment, 
 
    * Validering: Detta steg säkerställer att pipeline är konfigurerad att använda de tillgängliga resurserna, till exempel att den konfigurerade grenen finns, och att miljöerna är tillgängliga.
    * Build &amp; Unit Testing: Det här steget kör en innesluten byggprocess. Mer information om byggmiljön finns i [Information](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#build-environment-details) om byggmiljö.
-   * Kodsökning: I det här steget utvärderas kvaliteten på programkoden. Mer information om testprocessen finns i [Kodkvalitetstestning](/help/implementing/developing/introduction/understand-test-results.md#code-quality-testing) .
+   * Kodsökning: I det här steget utvärderas kvaliteten på programkoden. Mer information om testprocessen finns i [Kodkvalitetstestning](/help/implementing/cloud-manager/code-quality-testing.md) .
    * Skapa bilder: I det här steget finns en loggfil från processen som används för att skapa bilder. Den här processen gör att innehålls- och dispatcherpaketen som skapas i byggsteget omvandlas till Docker-bilder och Kubernetes-konfiguration.
    * Distribuera till scenen
 
@@ -51,13 +51,13 @@ Once you have configured your Production **Pipeline** (repository, environment, 
    Följande steg ingår i **mellanlagringstestningen**:
 
    * Funktionstestning: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön.
-Mer information finns i [Funktionstestning](/help/implementing/developing/introduction/understand-test-results.md#product-functional-testing) .
+Mer information finns i [Funktionstestning](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) .
 
    * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard.\
-      Mer information finns i [Anpassad funktionstestning](/help/implementing/developing/introduction/understand-test-results.md#custom-functional-testing) .
+      Mer information finns i [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) .
 
    * Innehållsgranskning: Det här steget i pipeline finns alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett innehållsgranskningssteg efter en anpassad funktionstestning som kör kontrollerna. De konfigurerade sidorna skickas till tjänsten och utvärderas. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
-Mer information finns i [Om resultat](/help/implementing/developing/introduction/understand-test-results.md#content-audit-testing) av innehållsgranskning.
+Mer information finns i [Om resultat](/help/implementing/cloud-manager/content-audit-testing.md) av innehållsgranskning.
 
       ![](assets/testing-tab.png)
 
