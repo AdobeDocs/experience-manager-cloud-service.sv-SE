@@ -2,10 +2,10 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: 2fa0ef7893fd4f06896402e33bf45d525f0817a5
+source-git-commit: 6eee78f2883b15f793662dc1474b7b7874903702
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 3%
+source-wordcount: '984'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## Distribuera kod med Cloud Manager {#deploying-code-with-cloud-manager}
 
-När du har konfigurerat **pipeline** (databas, miljö och testmiljö) är du redo att driftsätta koden.
+Once you have configured your Production **Pipeline** (repository, environment, and testing environment), you are ready to deploy your code.
 
 1. Klicka på **Distribuera** från Cloud Manager för att starta distributionsprocessen.
 
