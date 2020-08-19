@@ -2,9 +2,9 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: 6eee78f2883b15f793662dc1474b7b7874903702
+source-git-commit: bf0ecdfa4685d7ce9b26266e19af71199dd117a4
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1701'
 ht-degree: 3%
 
 ---
@@ -36,9 +36,13 @@ I det här steget utvärderas kvaliteten på programkoden. Det är huvudmålet f
 
 Mer information om olika typer av pipelines finns i [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md) .
 
+### Förstå regler för anpassad kodkvalitet {#understanding-code-quality-rules}
+
 I Kodkvalitetstestning skannas källkoden så att den uppfyller vissa kvalitetskriterier. För närvarande implementeras detta genom en kombination av SonarQube och granskning på innehållspaketnivå med hjälp av OakPAL. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa av de AEM specifika reglerna skapas baserat på bästa praxis från AEM och kallas [anpassade regler](/help/implementing/cloud-manager/custom-code-quality-rules.md)för kodkvalitet.
 
-Resultatet av det här steget visas som *klassificering*. I tabellen nedan sammanfattas klassificeringarna för olika testkriterier:
+Du kan hämta listan med regler [här](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest.xlsx).
+
+Resultatet av det här steget visas som *klassificering*. I följande tabell sammanfattas klassificeringen för testkriterier:
 
 | Namn | Definition | Kategori | Feltröskel |
 |--- |--- |--- |--- |
@@ -50,9 +54,6 @@ Resultatet av det här steget visas som *klassificering*. I tabellen nedan samma
 | Öppna ärenden | Generella problemtyper - sårbarheter, fel och kodmellanslag | Information | > 0 |
 | Duplicerade rader | Antal rader som ingår i duplicerade block. <br/>För att ett kodblock ska betraktas som duplicerat: <br/><ul><li>**Projekt som inte är Java:**</li><li>Det ska finnas minst 100 efterföljande och duplicerade tokens.</li><li>Dessa tokens bör spridas åtminstone på: </li><li>30 kodrader för COBOL </li><li>20 kodrader för ABAP </li><li>10 kodrader för andra språk</li><li>**Java-projekt:**</li><li> Det ska finnas minst 10 efterföljande och duplicerade satser oavsett antalet tokens och rader.</li></ul> <br/>Skillnader i indrag och i stränglitteraler ignoreras när dubbletter identifieras. | Information | > 1% |
 | Cloud Service-kompatibilitet | Antal identifierade kompatibilitetsproblem för Cloud Service. | Information | > 0 |
-
-
-Du kan hämta listan med regler här [code-quality-rules.xlsx](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest.xlsx)
 
 >[!NOTE]
 >
