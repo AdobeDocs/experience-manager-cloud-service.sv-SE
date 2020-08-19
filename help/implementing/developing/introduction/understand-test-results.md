@@ -2,9 +2,9 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: 2fa0ef7893fd4f06896402e33bf45d525f0817a5
+source-git-commit: 6eee78f2883b15f793662dc1474b7b7874903702
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1698'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,13 @@ Dessa tester kan vara:
 
 ## Testning av kodkvalitet {#code-quality-testing}
 
-Som en del av pipeline skannas källkoden för att säkerställa att distributionerna uppfyller vissa kvalitetskriterier. För närvarande implementeras detta genom en kombination av SonarQube och granskning på innehållspaketnivå med hjälp av OakPAL. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. I följande tabell sammanfattas klassificeringen för testkriterier:
+I det här steget utvärderas kvaliteten på programkoden. Det är huvudmålet för en rörledning med enbart kodkvalitet och genomförs omedelbart efter byggsteget i alla rörledningar för icke-produktion och produktion.
+
+Mer information om olika typer av pipelines finns i [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md) .
+
+I Kodkvalitetstestning skannas källkoden så att den uppfyller vissa kvalitetskriterier. För närvarande implementeras detta genom en kombination av SonarQube och granskning på innehållspaketnivå med hjälp av OakPAL. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa av de AEM specifika reglerna skapas baserat på bästa praxis från AEM och kallas [anpassade regler](/help/implementing/cloud-manager/custom-code-quality-rules.md)för kodkvalitet.
+
+Resultatet av det här steget visas som *klassificering*. I tabellen nedan sammanfattas klassificeringarna för olika testkriterier:
 
 | Namn | Definition | Kategori | Feltröskel |
 |--- |--- |--- |--- |
@@ -46,11 +52,12 @@ Som en del av pipeline skannas källkoden för att säkerställa att distributio
 | Cloud Service-kompatibilitet | Antal identifierade kompatibilitetsproblem för Cloud Service. | Information | > 0 |
 
 
+Du kan hämta listan med regler här [code-quality-rules.xlsx](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest.xlsx)
+
 >[!NOTE]
 >
 >Mer detaljerade definitioner finns i [Måttdefinitioner](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) .
 
-Du kan hämta listan med regler här [code-quality-rules.xlsx](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest.xlsx)
 
 >[!NOTE]
 >
