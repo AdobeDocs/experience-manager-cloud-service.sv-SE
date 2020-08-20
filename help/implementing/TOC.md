@@ -3,10 +3,10 @@ sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
 user-guide-description: Learn how to customize your Experience Manager as a Cloud Service deployment, including development and deployment topics.
 translation-type: tm+mt
-source-git-commit: 25ba5798de175b71be442d909ee5c9c37dcf10d4
+source-git-commit: b3548e3920fed45f6d1de54a49801d3971aa6bba
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 96%
+source-wordcount: '245'
+ht-degree: 94%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 96%
    + Förstå testresultat {#test-results}
       + [Översikt](/help/implementing/cloud-manager/overview-test-results.md)
       + [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md)
+      + [Anpassade regler för kodkvalitet](cloud-manager/custom-code-quality-rules.md)
       + [Funktionstestning](/help/implementing/cloud-manager/functional-testing.md)
       + [Testning av innehållsgranskning](/help/implementing/cloud-manager/content-audit-testing.md)
-   + [Förstå regler för anpassad kodkvalitet](cloud-manager/custom-code-quality-rules.md)
    + [Komma åt och hantera loggar](cloud-manager/manage-logs.md)
    + [Förstår aviseringar](cloud-manager/notifications.md)
 + Hantera kod {#managing-code}
