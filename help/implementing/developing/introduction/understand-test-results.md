@@ -2,9 +2,9 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: 25ba5798de175b71be442d909ee5c9c37dcf10d4
+source-git-commit: b3548e3920fed45f6d1de54a49801d3971aa6bba
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1695'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Dessa tester kan vara:
 
 * Kundskriven
 * Adobe-skriven
-* Verktyg med öppen källkod (från Google)
+* Verktyget Open Source
 
    >[!NOTE]
    > Både kundskrivna tester och Adobe-skrivna tester körs i en containerinfrastruktur som är utformad för att köra dessa typer av tester.
@@ -211,7 +211,7 @@ Content Audit ger aggregerade och detaljerade testresultat på sidnivå via kör
 
 #### Sammanställd bakgrundsmusik {#aggregate-scores}
 
-Det finns ett aggregerat nivåpoäng för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
+Det finns en sammanställd nivå för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
 
 Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i körningen. Ändringen på aggregeringsnivå representerar medelpoängen för sidorna i den aktuella körningen jämfört med medelvärdet för poängen från föregående körning, även om den sidsamling som konfigurerats att inkluderas har ändrats mellan körningar.
 
