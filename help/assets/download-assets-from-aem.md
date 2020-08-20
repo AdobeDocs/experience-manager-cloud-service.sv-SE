@@ -1,12 +1,12 @@
 ---
-title: Hämta resurser från AEM
-description: Lär dig hur du hämtar resurser från AEM och aktiverar eller inaktiverar hämtningsfunktionen.
+title: Download assets from [!DNL Adobe Experience Manager Assets].
+description: Hämta resurser [!DNL Adobe Experience Manager Assets] från och aktivera eller inaktivera hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12575cd2f046d3a382786811dd28fec8df3be8bd
+source-git-commit: 3cbf0cc85c7c415f6585e92e509eb7fefb5ede82
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 1%
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
@@ -21,17 +21,14 @@ Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan 
 
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
-**Om du vill hämta resurser**
+Så här hämtar du resurser:
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
-1. Tryck på **[!UICONTROL Assets > Files]** på navigeringssidan.
-1. Navigera till en mapp som innehåller resurser som du vill hämta.
-1. Markera mappen eller välj en eller flera resurser i mappen.
-1. Tryck på i verktygsfältet **[!UICONTROL Download]**.
+1. Klicka på **[!UICONTROL Assets]** > **[!UICONTROL Files]** i användargränssnittet i Experience Manager.
+1. Navigera till de resurser du vill hämta. Markera mappen eller välj en eller flera resurser i mappen. On the toolbar, click **[!UICONTROL Download]**.
 
-   ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download1.png)
+   ![Tillgängliga alternativ vid hämtning av resurser från [!DNL Experience Manager Assets]](/help/assets/assets/asset-download1.png)
 
-   *Alternativ i dialogrutan Hämta.*
+   *Bild: Alternativ i dialogrutan Hämta.*
 
 1. I dialogrutan Hämta väljer du de hämtningsalternativ som du vill använda.
 
@@ -44,14 +41,13 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
    | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar av den valda resursen från AEM. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
    | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](/help/assets/dynamic-media/image-presets.md) . <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
 
-1. In the dialog box, tap **[!UICONTROL Download]**.
-
+1. In the dialog box, click **[!UICONTROL Download]**.
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
 Med standardservleten i AEM kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och nätverket. För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser.
 
-Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar kraven för den dagliga hämtningen. Ett högt värde kan påverka prestandan.
+Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar den dagliga hämtningen. Ett högt värde kan påverka prestandan.
 
 1. Skapa en mapp med en namnkonvention som anger publiceringsmiljön som mål, det vill säga `config.publish`:
 
@@ -67,7 +63,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 
 ## Inaktivera resurshämtningsserver {#disable-asset-download-servlet}
 
-Du `Asset Download Servlet` kan inaktivera funktionen på en AEM Publish-instans genom att uppdatera dispatcherkonfigurationen för att blockera hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
+Du `Asset Download Servlet` kan inaktivera funktionen på en AEM Publish-instans genom att uppdatera dispatcherns konfiguration för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
 1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en ny regel i [filteravsnittet](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter).
 
@@ -76,6 +72,6 @@ Du `Asset Download Servlet` kan inaktivera funktionen på en AEM Publish-instans
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md)
->* [Hämta resurser med hjälp av AEM-datorprogrammet på Win- eller Mac-datorer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
->* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-program som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [Hämta resurser med skrivbordsappen Experience Manager på Win eller Mac](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
+>* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-appar som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
 
