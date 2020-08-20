@@ -2,9 +2,9 @@
 title: Testning av innehållsgranskning - Cloud Services
 description: Testning av innehållsgranskning - Cloud Services
 translation-type: tm+mt
-source-git-commit: ce25ec1472dc349937fdbd5f7265d4295fe111e8
+source-git-commit: 4c4e0724185695279801c55db1b6874f351805a4
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '482'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Testning av innehållsgranskning {#content-audit-testing}
 
-Content Audit är en funktion som finns i Cloud Manager Sites Production pipelines som drivs av Lighthuse, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager.
+Content Audit är en funktion som finns i Cloud Manager Sites Production pipelines, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager.
 
 Den validerar distributionsprocessen och säkerställer att ändringar som distribueras:
 
@@ -33,7 +33,7 @@ Content Audit ger aggregerade och detaljerade testresultat på sidnivå via kör
 
 ### Sammanställd bakgrundsmusik {#aggregate-scores}
 
-Det finns ett aggregerat nivåpoäng för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
+Det finns en sammanställd nivå för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
 
 Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i körningen. Ändringen på aggregeringsnivå representerar medelpoängen för sidorna i den aktuella körningen jämfört med medelvärdet för poängen från föregående körning, även om den sidsamling som konfigurerats att inkluderas har ändrats mellan körningar.
 
