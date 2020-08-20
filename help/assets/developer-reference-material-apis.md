@@ -1,59 +1,47 @@
 ---
-title: 'Assets APIs for digital asset management in Adobe Experience Manager as a Cloud Service '
-description: Resurs-API:er gör det möjligt att använda grundläggande CRUD-åtgärder (create-read-update-delete) för att hantera resurser, inklusive binära, metadata, återgivningar, kommentarer och innehållsfragment.
+title: Utvecklarreferenser för hantering av digitala resurser [!DNL Adobe Experience Manager] i en Cloud Service.
+description: Med [!DNL Assets] API:er och utvecklarreferensinnehåll kan du hantera resurser, inklusive binära filer, metadata, återgivningar, kommentarer och [!DNL Content Fragments].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6db201f00e8f304122ca8c037998b363ff102c1f
+source-git-commit: cfcb9fb85cffeabc5d5af94c30bd8ace8039ac83
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1239'
 ht-degree: 1%
 
 ---
 
 
-# Resurser som Cloud Service-API:er {#assets-cloud-service-apis}
+# [!DNL Assets] API:er och referensmaterial för utvecklare {#assets-cloud-service-apis}
 
-<!-- 
-Give a list of and overview of all reference information available.
-* New upload method
-* Javadocs
-* Assets HTTP API documented at [https://helpx.adobe.com/experience-manager/6-5/assets/using/mac-api-assets.html](https://helpx.adobe.com/experience-manager/6-5/assets/using/mac-api-assets.html)
-
--->
+Artikeln innehåller referensmaterial och resurser för utvecklare av [!DNL Assets] som en Cloud Service. Det innehåller en ny överföringsmetod, API-referens och information om stödet i efterbehandlingsarbetsflödena.
 
 ## Överföring av tillgångar {#asset-upload-technical}
 
-Experience Manager som molntjänst är ett nytt sätt att överföra resurser till databasen - direkt binär överföring till binär molnlagring. Det här avsnittet innehåller en teknisk översikt.
+[!DNL Experience Manager] som Cloud Service innehåller en ny metod för att överföra resurser till databasen. Användare kan överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil är:
 
-### Översikt över direkt binär överföring {#overview-binary-upload}
-
-Den högnivåalgoritm som ska överföra en binär fil är:
-
-1. Skicka en HTTP-begäran som informerar AEM om avsikten att överföra en ny binär fil.
-1. POST innehållet i binärfilen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
-1. Skicka en HTTP-begäran för att informera servern om att innehållet i binärfilen har överförts.
+1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]eller distribuerar om din avsikt att överföra en ny binär fil.
+1. [POST innehållet i binärfilen](#upload-binary) till en eller flera URI:er som tillhandahålls av initieringsbegäran.
+1. [Skicka en HTTP-begäran](#complete-upload) för att informera servern om att innehållet i binärfilen har överförts.
 
 ![Översikt över protokollet för direkt binär överföring](assets/add-assets-technical.png)
 
-Viktiga skillnader jämfört med tidigare versioner av AEM är bland annat:
+Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser. Skillnaderna jämfört med [!DNL Experience Manager] 6.5 är:
 
-* Binärfilerna går inte igenom AEM, som nu helt enkelt koordinerar överföringsprocessen med det binära molnlagringsutrymmet som är konfigurerat för distributionen
-* Binärt molnlagringsutrymme hanteras av ett CDN-nätverk (Content Delivery Network), som tar slutpunkten för överföringen närmare klienten och därmed förbättrar överföringsprestanda och användarupplevelsen, särskilt för distribuerade team som överför resurser
-
-Den här metoden bör ge en mer skalbar och prestandaanpassad hantering av överföringar av resurser.
+* Binärfiler går inte igenom [!DNL Experience Manager]vilket innebär att överföringsprocessen nu samordnas med det binära molnlagringsutrymmet som är konfigurerat för distributionen.
+* Binär molnlagring fungerar med ett CDN-nätverk (Content Delivery Network) eller Edge-nätverk. Ett CDN väljer en slutpunkt för överföring som är närmare för en klient. När data flyttas kortare tid till en närliggande slutpunkt förbättras överföringsprestanda och användarupplevelsen, särskilt för geografiskt utspridda team.
 
 >[!NOTE]
 >
->Om du vill granska klientkod som implementerar den här metoden, se biblioteket för [aem-upload med öppen källkod](https://github.com/adobe/aem-upload)
+>Se klientkoden för att implementera den här metoden i open-source- [biblioteket](https://github.com/adobe/aem-upload)aem-upload.
 
 ### Initiera överföring {#initiate-upload}
 
-Det första steget är att skicka en begäran om HTTP-POST till den mapp där resursen ska skapas eller uppdateras. inkludera väljaren `.initiateUpload.json` för att ange att begäran ska påbörja en binär överföring. Sökvägen till mappen där resursen ska skapas är till exempel `/assets/folder`. POSTENS begäran är `POST https://[aem_server]:[port]/content/dam/assets/folder.initiateUpload.json`.
+Skicka en begäran om HTTP-POST till den önskade mappen. Resurser skapas eller uppdateras i den här mappen. Inkludera väljaren `.initiateUpload.json` för att ange att begäran är att initiera överföringen av en binär fil. Sökvägen till mappen där resursen ska skapas är till exempel `/assets/folder`. POSTENS begäran är `POST https://[aem_server]:[port]/content/dam/assets/folder.initiateUpload.json`.
 
 Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält:
 
-* `(string) fileName`: Krävs. Namnet på resursen så som den kommer att visas i instansen.
-* `(number) fileSize`: Krävs. Den totala längden, i byte, på den binärfil som ska överföras.
+* `(string) fileName`: Krävs. Namnet på resursen så som den visas i [!DNL Experience Manager].
+* `(number) fileSize`: Krävs. Filstorleken, i byte, för resursen som överförs.
 
 En enda begäran kan användas för att initiera överföringar för flera binärfiler, förutsatt att varje binärfil innehåller de obligatoriska fälten. Om det lyckas svarar begäran med en `201` statuskod och en brödtext som innehåller JSON-data i följande format:
 
@@ -75,7 +63,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 ```
 
 * `completeURI` (sträng): Anropa den här URI:n när den binära filen har överförts. URI:n kan vara en absolut eller relativ URI och klienterna bör kunna hantera båda. Värdet kan alltså vara `"https://author.acme.com/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` Se [hela överföringen](#complete-upload).
-* `folderPath` (sträng): Fullständig sökväg till mappen där binärfilen överförs.
+* `folderPath` (sträng): Fullständig sökväg till mappen som binärfilen överförs till.
 * `(files)` (array): En lista med element vars längd och ordning matchar längden och ordningen för listan med binär information som tillhandahålls i initieringsbegäran.
 * `fileName` (sträng): Namnet på motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
 * `mimeType` (sträng): Mime-typen för motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
@@ -86,15 +74,15 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 
 ### Ladda upp binärt {#upload-binary}
 
-Utdata från initiering av en överföring inkluderar ett eller flera överförda URI-värden. Om mer än en URI anges är det kundens ansvar att dela upp binärfilen i delar och POST varje del, i ordning, till varje URI. Alla URI:er måste användas, och varje del måste vara större än den minsta storleken och mindre än den största storlek som anges i initieringssvaret. Dessa förfrågningar kommer att hanteras av CDN-kantnoder för att påskynda överföringen av binärfiler.
+Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges delar klienten upp binärfilen i delar och begär POST av varje del till varje URI, i ordning. Använd alla URI:er. Se till att storleken på varje del ligger inom de minimi- och maximistorlekar som anges i initieringssvaret. CDN-kantnoder snabbar upp begärd överföring av binärfiler.
 
-Ett möjligt sätt att uppnå detta är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. Exempel: Om den totala storleken för binärfilen är 20 000 byte och antalet överförda URI:er är 2:
+En möjlig metod för att uppnå detta är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. Anta till exempel att binärfilens totala storlek är 20 000 byte och att antalet överförda URI är 2. Följ sedan dessa steg:
 
-* Beräkna delstorlek genom att dividera den totala storleken med antalet URI:er: 20 000 / 2 = 10 000
-* POSTENS byteintervall 0-9 999 för binärfilen till den första URI:n i listan över överförda URI:er
-* POSTENS byteintervall 10 000 - 19 999 för binärfilen till den andra URI:n i listan över överförda URI:er
+* Beräkna delstorlek genom att dividera den totala storleken med antalet URI:er: 20 000 / 2 = 10 000.
+* POSTENS byteintervall är 0-9 999 för binärfilen till den första URI:n i listan över överförda URI:er.
+* POSTENS byteintervall 10 000 - 19 999 för binärfilen till den andra URI:n i listan över överförda URI:er.
 
-Om det lyckas svarar servern på varje begäran med en `201` statuskod.
+Om överföringen lyckas svarar servern på varje begäran med en `201` statuskod.
 
 ### fullständig överföring {#complete-upload}
 
@@ -105,34 +93,34 @@ När alla delar av en binär fil har överförts skickar du en begäran om HTTP-
 | `fileName` | Sträng | Krävs | Namnet på resursen, enligt initieringsdata. |
 | `mimeType` | Sträng | Krävs | HTTP-innehållstypen för binärfilen, som angavs i initieringsdata. |
 | `uploadToken` | Sträng | Krävs | Överför token för binärfilen enligt initieringsdata. |
-| `createVersion` | Boolesk | Valfritt | Om det redan finns `True` en resurs med det angivna namnet skapar Experience Manager en ny version av resursen. |
+| `createVersion` | Boolesk | Valfritt | Om det finns `True` en resurs med det angivna namnet [!DNL Experience Manager] skapas en ny version av resursen. |
 | `versionLabel` | Sträng | Valfritt | Om en ny version skapas är den etikett som är associerad med den nya versionen av en resurs . |
 | `versionComment` | Sträng | Valfritt | Om en ny version skapas, de kommentarer som är kopplade till versionen. |
-| `replace` | Boolesk | Valfritt | Om `True` och det redan finns en resurs med det angivna namnet tar Experience Manager bort resursen och återskapar den. |
+| `replace` | Boolesk | Valfritt | Om det finns `True` en resurs med det angivna namnet tar [!DNL Experience Manager] bort resursen och återskapar den. |
 
 >!![NOTE]
-Om resursen redan finns och varken `createVersion` eller `replace` anges, uppdaterar Experience Manager resursens aktuella version med den nya binärfilen.
+Om resursen finns och varken `createVersion` eller `replace` anges, [!DNL Experience Manager] uppdateras resursens aktuella version med den nya binärfilen.
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
 
-Överföringen av en binär fil utförs inte förrän den fullständiga URL:en anropas för filen. Även om en fils binära fil överförs i sin helhet, kommer resursen inte att bearbetas av instansen förrän överföringen är klar.
+Överföringen av en binär fil utförs inte förrän den fullständiga URL:en anropas för filen. En resurs bearbetas när överföringen är klar. Bearbetningen startar inte även om resursens binära fil överförs helt, men överföringen inte slutförs.
 
 Om det lyckas svarar servern med en `200` statuskod.
 
 ### Överföringsbibliotek med öppen källkod {#open-source-upload-library}
 
-För att lära dig mer om överföringsalgoritmerna eller för att skapa egna överföringsskript och verktyg tillhandahåller Adobe bibliotek och verktyg med öppen källkod som utgångspunkt:
+För att lära dig mer om överföringsalgoritmerna eller för att skapa egna överföringsskript och verktyg kan Adobe tillhandahålla bibliotek och verktyg med öppen källkod:
 
-* [Open-source aem-upload library](https://github.com/adobe/aem-upload)
-* [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem)
+* [Uppladdningsbibliotek](https://github.com/adobe/aem-upload)med öppen källkod.
+* [Kommandoradsverktyget](https://github.com/adobe/aio-cli-plugin-aem)med öppen källkod.
 
 ### Inaktuella API:er för överföring av resurser {#deprecated-asset-upload-api}
 
 <!-- #ENGCHECK review / update the list of deprecated APIs below. -->
 
-För Adobe Experience Manager som Cloud Service stöds endast de nya överförings-API:erna. API:erna från Adobe Experience Manager 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
+Den nya överföringsmetoden stöds endast för [!DNL Adobe Experience Manager] som Cloud Service. API:erna från [!DNL Adobe Experience Manager] 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
 
-* [AEM Assets HTTP API](mac-api-assets.md)
+* [Experience Manager Assets HTTP API](mac-api-assets.md)
 * `AssetManager` Java API, som `AssetManager.createAsset(..)`
 
 >[!MORELIKETHIS]
@@ -142,15 +130,15 @@ För Adobe Experience Manager som Cloud Service stöds endast de nya överförin
 
 ## Resurshantering och efterbearbetning {#post-processing-workflows}
 
-I Experience Manager baseras resursbearbetningen på **[!UICONTROL Processing Profiles]** konfiguration som använder [tillgångsmikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
+I [!DNL Experience Manager]är resursbearbetningen baserad på **[!UICONTROL Processing Profiles]** konfiguration som använder [tillgångsmikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
 
 Använd standardarbetsflödena med tillägg med anpassade steg för konfiguration av efterbearbetning av arbetsflöde.
 
 ## Stöd för arbetsflödessteg i efterbearbetningsarbetsflödet {#post-processing-workflows-steps}
 
-Kunder som uppgraderar till Experience Manager som en Cloud Service från tidigare versioner av Experience Manager kan använda tillgångsmikrotjänster för bearbetning av resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i arbetsflödet i den tidigare versionen stöds inte [!UICONTROL DAM Update Asset] .
+Kunder som uppgraderar från tidigare versioner av [!DNL Experience Manager] kan använda tillgångsmikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i arbetsflödet i den tidigare versionen stöds inte [!UICONTROL DAM Update Asset] .
 
-Följande arbetsflödessteg stöds i Experience Manager som Cloud Service.
+[!DNL Experience Manager] som Cloud Service stöder följande arbetsflödessteg:
 
 * `com.day.cq.dam.similaritysearch.internal.workflow.process.AutoTagAssetProcess`
 * `com.day.cq.dam.core.impl.process.CreateAssetLanguageCopyProcess`
@@ -162,7 +150,7 @@ Följande arbetsflödessteg stöds i Experience Manager som Cloud Service.
 * `com.adobe.cq.workflow.replication.impl.ReplicationWorkflowProcess`
 * `com.day.cq.dam.core.impl.process.DamUpdateAssetWorkflowCompletedProcess`
 
-Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller så är support inte tillgänglig.
+Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller så är support inte tillgänglig:
 
 * `com.day.cq.dam.core.impl.process.DamMetadataWritebackWorkflowCompletedProcess`
 * `com.day.cq.dam.core.process.DeleteImagePreviewProcess`
@@ -203,3 +191,7 @@ Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller 
 <!-- PPTX source: slide in add-assets.md - overview of direct binary upload section of 
 https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestaccess.aspx?guestaccesstoken=jexDC5ZnepXSt6dTPciH66TzckS1BPEfdaZuSgHugL8%3D&docid=2_1ec37f0bd4cc74354b4f481cd420e07fc&rev=1&e=CdgElS
 -->
+
+>[!MORELIKETHIS]
+* [Experience Cloud som Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
+
