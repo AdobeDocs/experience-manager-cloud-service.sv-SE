@@ -2,10 +2,10 @@
 title: Testning av kodkvalitet - Cloud Services
 description: Testning av kodkvalitet - Cloud Services
 translation-type: tm+mt
-source-git-commit: 25ba5798de175b71be442d909ee5c9c37dcf10d4
+source-git-commit: b3548e3920fed45f6d1de54a49801d3971aa6bba
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 2%
+source-wordcount: '829'
+ht-degree: 1%
 
 ---
 
@@ -16,14 +16,26 @@ Kodkvalitetstestningen utvärderar kvaliteten på programkoden. Det är huvudmå
 
 Mer information om olika typer av pipelines finns i [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md) .
 
-## Förstå regler för anpassad kodkvalitet {#understanding-code-quality-rules}
+## Understanding Code Quality Rules {#understanding-code-quality-rules}
 
 I Kodkvalitetstestning skannas källkoden så att den uppfyller vissa kvalitetskriterier. För närvarande implementeras detta genom en kombination av SonarQube och granskning på innehållspaketnivå med hjälp av OakPAL. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa av de AEM specifika reglerna skapas baserat på bästa praxis från AEM och kallas [anpassade regler](/help/implementing/cloud-manager/custom-code-quality-rules.md)för kodkvalitet.
 
 >[!NOTE]
 >Du kan hämta den fullständiga listan med regler [här](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest.xlsx).
 
-Resultatet av det här steget visas som *klassificering*. I följande tabell sammanfattas klassificeringen för testkriterier:
+**Treskiktsgrind**
+
+Det finns en struktur på tre nivåer i det här steget för kodkvalitetstestning för de identifierade problemen:
+
+* **Kritisk**: Detta är frågor som identifieras av porten och som orsakar ett omedelbart fel i rörledningen.
+
+* **Viktigt**: Det här är problem som identifieras av porten och som gör att pipeline försätts i pausläge. Distributionshanteraren, projektledaren eller företagsägaren kan antingen åsidosätta problemen, i vilket fall pipeline fortsätter, eller så kan de acceptera problemen. I så fall upphör pipeline med ett fel.
+
+* **Info**: Detta är frågor som identifieras av porten och som endast tillhandahålls i informationssyfte och som inte har någon inverkan på genomförandet av pipelinen
+
+Resultatet av det här steget visas som *omdömen*.
+
+I följande tabell sammanfattas betygs- och feltrösklarna för var och en av kategorierna Kritisk, Viktig och Information:
 
 | Namn | Definition | Kategori | Feltröskel |
 |--- |--- |--- |--- |
