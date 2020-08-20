@@ -2,15 +2,15 @@
 title: Lägg till era digitala resurser [!DNL Adobe Experience Manager]i.
 description: Lägg till era digitala resurser [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 3e9697d27337b39f5667cc94930de6ea7f0b68c5
+source-git-commit: 06cba29b131ada6a1c0fe2bd8ccad95ce5ff7160
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
 
 
-# Lägg till digitala resurser i Adobe Experience Manager {#add-assets-to-experience-manager}
+# Lägg till digitalt material i Adobe Experience Manager {#add-assets-to-experience-manager}
 
 [!DNL Adobe Experience Manager] berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
 
@@ -110,7 +110,7 @@ Du kan välja att ersätta en befintlig resurs, skapa en annan version eller beh
 >
 >När du väljer **[!UICONTROL Replace]** i [!UICONTROL Name Conflict] dialogrutan genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
 >
->Om resursinsikter är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på Analytics.
+>Om resursinsikter är aktiverat för att spåra visningar/klick med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som har samlats in för resursen i Analytics.
 
 Om du vill behålla den duplicerade resursen i [!DNL Assets]klickar du på **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du **[!UICONTROL Delete]**.
 
@@ -152,16 +152,16 @@ Om du vill få mer bearbetning av de överförda resurserna kan du använda resu
 Följande profiler är tillgängliga:
 
 * [Med metadataprofiler](metadata-profiles.md) kan du använda standardmetadataegenskaper för resurser som överförs till den mappen
-* [Genom att bearbeta profiler](asset-microservices-configure-and-use.md) kan du generera fler återgivningar än vad som är möjligt som standard.
+* [Med bearbetningsprofiler](asset-microservices-configure-and-use.md) kan du generera fler återgivningar än vad som är möjligt som standard.
 
-Om Dynamic Media är aktiverade i din miljö:
+Om Dynamic Media är aktiverat i din miljö:
 
-* [Med Dynamic Media-bildprofiler](dynamic-media/image-profiles.md) kan du använda en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna.
-* [Med Dynamic Media-videoprofiler](dynamic-media/video-profiles.md) kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
+* [Med dynamiska mediebildprofiler](dynamic-media/image-profiles.md) kan du använda en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna.
+* [Med dynamiska videoprofiler](dynamic-media/video-profiles.md) kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
 
 >[!NOTE]
 >
->Dynamic Media för beskärning och andra åtgärder för resurser är icke-förstörande, vilket innebär att de inte ändrar det överförda originalet utan i stället anger parametrar för beskärning eller mediaomvandling som ska utföras när resurserna levereras
+>Dynamisk mediebeskärning och andra åtgärder för resurser är icke-förstörande, d.v.s. de ändrar inte det överförda originalet, utan tillhandahåller i stället parametrar för beskärning eller medieomvandling som ska utföras när resurserna levereras
 
 För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i **[!UICONTROL Processing Profile]** kolumnen.
 
@@ -171,7 +171,7 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
+>* [Adobe Experience Manager-datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
 >* [Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
 >* [Adobe Asset Link-dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [Teknisk referens för överföring av tillgångar](developer-reference-material-apis.md#asset-upload-technical)
