@@ -3,7 +3,7 @@ title: Konfigurera och använda resursmikrotjänster för bearbetning av resurse
 description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 568e5d2906fe6c9415eebcab7e3e4e1fb4a738fa
+source-git-commit: 2917f14bea5e2a31c436577d9fd74135cca93118
 workflow-type: tm+mt
 source-wordcount: '2483'
 ht-degree: 0%
