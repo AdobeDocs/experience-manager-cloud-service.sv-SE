@@ -1,8 +1,8 @@
 ---
 title: Skapa och ordna sidor
-description: Skapa och organisera sidor med AEM
+description: Skapa och ordna sidor med AEM
 translation-type: tm+mt
-source-git-commit: b9c7e476ad8efebeff44d88302484893edbf1469
+source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
 workflow-type: tm+mt
 source-wordcount: '2550'
 ht-degree: 5%
@@ -16,7 +16,7 @@ I det här dokumentet beskrivs hur du skapar och hanterar sidor med Adobe Experi
 
 >[!NOTE]
 >
->Ditt konto behöver rätt behörighet] och behörighet för att kunna utföra åtgärder på sidor som att skapa, kopiera, flytta, redigera och ta bort.
+>Ditt konto behöver rätt behörighet för att kunna utföra åtgärder på sidor som skapa, kopiera, flytta, redigera och ta bort.
 >
 >Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministratören.
 
@@ -30,7 +30,7 @@ I det här dokumentet beskrivs hur du skapar och hanterar sidor med Adobe Experi
 
 ## Organisera din webbplats {#organizing-your-website}
 
-Som författare måste du ordna din webbplats i AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
+Som författare måste du ordna din webbplats inom AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
 
 * Du kan enkelt hitta dem i redigeringsmiljön
 * Besökare på webbplatsen kan enkelt hitta dem i publiceringsmiljön
@@ -84,7 +84,7 @@ När du skapar en ny sida finns det två nyckelfält:
 
 Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas genererar AEM ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
+* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas, kommer AEM att generera ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 
 >[!TIP]
@@ -93,7 +93,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >Tänk också på att vissa webbläsare (t.ex. äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
-När du skapar en ny sida validerar AEM sidnamnet i enlighet med de konventioner som gäller av AEM och JCR. <!--When creating a new page, AEM will [validate the page name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and the JCR.-->
+När du skapar en ny sida validerar AEM sidnamnet enligt de konventioner som AEM och JCR har infört. <!--When creating a new page, AEM will [validate the page name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and the JCR.-->
 
 Minsta tillåtna tecken är:
 
@@ -122,7 +122,7 @@ Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda
 
 #### Namn {#name}
 
-När du anger ett **sidnamn** när du skapar en ny sida validerar AEM namnet enligt konventionerna från AEM och JCR. Du kan inte skicka ogiltiga tecken i fältet **Namn** . När AEM identifierar ogiltiga tecken markeras fältet. <!--When you supply a page **Name** when creating a new page, AEM will [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR. You cannot submit invalid characters in the **Name** field. When AEM detects invalid characters the field will be highlighted with an explanatory message.-->
+När du anger ett **sidnamn** när du skapar en ny sida validerar AEM namnet enligt konventionerna som AEM och JCR har angett. Du kan inte skicka ogiltiga tecken i fältet **Namn** . När AEM upptäcker ogiltiga tecken markeras fältet. <!--When you supply a page **Name** when creating a new page, AEM will [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR. You cannot submit invalid characters in the **Name** field. When AEM detects invalid characters the field will be highlighted with an explanatory message.-->
 
 ![Exempel på att ange ett ogiltigt sidnamn](/help/sites-cloud/authoring/assets/organizing-invalid-name.png)
 
@@ -155,7 +155,7 @@ AEM innehåller flera färdiga mallar. Vilka mallar som är tillgängliga beror 
 
 ### Komponenter {#components}
 
-Komponenterna är de element som tillhandahålls av AEM så att du kan lägga till specifika typer av innehåll. AEM har en rad färdiga komponenter med omfattande funktionalitet. Bland dessa finns:
+Komponenterna är de element som AEM tillhandahåller så att du kan lägga till specifika typer av innehåll. AEM innehåller en rad färdiga komponenter som ger omfattande funktionalitet. Bland dessa finns:
 
 * Text
 * Bild
@@ -203,8 +203,8 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Namn**:
 
       * Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
-      * Om du anger ett **sidnamn** när du skapar en ny sida validerar AEM namnet enligt konventionerna från AEM och JCR. <!--If you supply a page **Name** when creating a new page, AEM will [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.-->
-      * Du **kan inte skicka ogiltiga tecken** i **namnfältet** . När AEM identifierar ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+      * Om du anger ett **sidnamn** när du skapar en ny sida validerar AEM namnet enligt konventionerna som AEM och JCR har angett. <!--If you supply a page **Name** when creating a new page, AEM will [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.-->
+      * Du **kan inte skicka ogiltiga tecken** i **namnfältet** . När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
    >[!TIP]
    >
@@ -291,7 +291,7 @@ Proceduren för att flytta eller byta namn på en sida är i princip densamma oc
 * Flytta sidan utan att byta namn på den
 * Flytta och byt namn samtidigt
 
-Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn/flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
+I AEM finns funktioner för att uppdatera interna länkar som refererar till sidan som byter namn/flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
 
 1. Navigera tills du hittar sidan som du vill flytta.
 1. Välj sida med någon av följande metoder:
@@ -382,7 +382,7 @@ Om antalet sidor som påverkas ligger över en angiven gräns, kommer åtgärden
 
          ![Asynkron flyttning av sida](/help/sites-cloud/authoring/assets/asynchronous-page-move.png)
 
-Statusen för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs Status **på](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)** Global Navigation **->** Tools **->** Operations **->** Jobb **
+Statusen för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs Status** på](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) **Global Navigation** -> **Tools** -> **Operations** -> **Jobb**
 
 >[!NOTE]
 >
