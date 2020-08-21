@@ -2,7 +2,7 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: ded8f565ac80b5819eeee15396da5987da43dfd0
+source-git-commit: 27f9f4441a95964a4ae0db798577510c726133c5
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 
 * Content Audit är en funktion som är aktiverad i produktionsstegen för Cloud Manager Sites. Konfigurationen av produktionspipeline för program med platser innehåller nu en tredje flik med namnet **Content Audit**. När en produktionsprocess körs inkluderas ett nytt Content Audit-steg i produktionsflödet efter anpassad funktionstestning som utvärderar webbplatsen mot ett antal dimensioner, inklusive prestanda, SEO (sökmotoroptimering), tillgänglighet, bästa praxis och PWA (Progressive Web App).
 
-   Refer to [Content Audit Testing](/help/implementing/developing/introduction/understand-test-results.md#content-audit-testing) for more details.
+   Refer to [Content Audit Testing](/help/implementing/cloud-manager/content-audit-testing.md) for more details.
 
 * Nyligen skapade miljöer i Assets-program konfigureras nu automatiskt med Smart Content Services.
 
