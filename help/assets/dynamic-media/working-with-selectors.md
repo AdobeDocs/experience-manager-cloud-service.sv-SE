@@ -2,10 +2,10 @@
 title: Arbeta med väljare
 description: Välja resurser för interaktiva bilder, interaktiv video och karusellbanderoller
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 16%
+source-wordcount: '700'
+ht-degree: 19%
 
 ---
 
@@ -22,7 +22,7 @@ I den här Carousel-banderollen använder du produktväljaren om du länkar en h
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
-När du väljer (i stället för att ange manuellt) vart hotspot-områden eller bildscheman ska gå, använder du väljaren. Platsväljaren fungerar bara om du är en AEM Sites-kund. Produktväljaren kräver också AEM Commerce.
+När du väljer (i stället för att ange manuellt) vart hotspot-områden eller bildscheman ska gå, använder du väljaren. Webbplatsväljaren fungerar bara om du är AEM Sites-kund. Produktväljaren kräver också AEM.
 
 ## Välja produkter i Dynamic Media {#selecting-products}
 
@@ -30,7 +30,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
 1. Navigera till karuselluppsättningen, den interaktiva bilden eller den interaktiva videon och tryck på fliken **[!UICONTROL Actions]** (endast tillgänglig om du har definierat ett hotspot-område eller bildschema).
 
-   Produktväljaren finns i området **[!UICONTROL-åtgärdstyp** .
+   The Product selector is in the **[!UICONTROL Action Type]** area.
 
    ![chlimage_1-521](assets/chlimage_1-521.png)
 
@@ -46,7 +46,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
    ![chlimage_1-524](assets/chlimage_1-524.png)
 
-   Tryck **[!UICONTROL Sort]** på för att ändra om AEM sorterar efter nyaste till äldsta eller äldsta till nyaste.
+   Tryck **[!UICONTROL Sort]** på för att ändra om AEM sorterar efter senaste till äldsta eller äldsta till nyaste.
 
    ![chlimage_1-525](assets/chlimage_1-525.png)
 
@@ -64,7 +64,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
 ## Välja platser i dynamiska medier {#selecting-sites}
 
-Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras inom AEM-webbplatser.
+Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras AEM webbplatser.
 
 1. Navigera till karuselluppsättningen, den interaktiva bilden eller den interaktiva videon och tryck på fliken **[!UICONTROL Actions]** (endast tillgänglig om du har definierat ett hotspot-område eller bildschema).
 
@@ -80,7 +80,7 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
    ![chlimage_1-531](assets/chlimage_1-531.png)
 
-1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]** läget går du till den angivna AEM-webbplatssidan.
+1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]** läget navigerar du till den AEM webbplatssida du angav.
 
 ## Välja resurser i Dynamic Media {#selecting-assets}
 
@@ -109,4 +109,5 @@ Mer information finns även i [Resursväljaren](/help/assets/search-assets.md#as
 
 1. Tryck på bockmarkeringen för att markera resursen. Resursen visas.
 
-   ![chlimage_1-536](assets/chlimage_1-536.png)—>
+   ![chlimage_1-536](assets/chlimage_1-536.png)
+-->
