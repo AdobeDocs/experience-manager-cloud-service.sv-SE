@@ -2,9 +2,9 @@
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media
 translation-type: tm+mt
-source-git-commit: df0374c58150780c373780051aeb7dda0c111e45
+source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
 workflow-type: tm+mt
-source-wordcount: '9684'
+source-wordcount: '9681'
 ht-degree: 9%
 
 ---
@@ -689,7 +689,7 @@ Så här automatiserar du inställningen av YouTube-standardegenskaper för dina
 
 1. I det övre vänstra hörnet av AEM klickar du på AEM-logotypen och sedan i den vänstra rutan klickar du på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 1. Klicka på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
-1. På sidan **[!UICONTROL default]** markerar du rutan till vänster om **[!UICONTROL video]** och klickar sedan på **[Redigera]**.
+1. På sidan **[!UICONTROL default]** markerar du rutan till vänster om **[!UICONTROL video]** och klickar sedan på **[[Redigera]**.
 1. Klicka på **[!UICONTROL Advanced]** fliken på sidan Redigerare för metadataschema.
 1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Category]**.
 1. Gör följande till höger på sidan, under **[!UICONTROL Settings]** fliken:
@@ -723,7 +723,7 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * (Valfritt) Till höger på sidan anger du `YouTube Publishing`under fliken Inställningar i textfältet Fältetikett.
    * Klicka på **[!UICONTROL Build Form]** fliken och dra sedan komponenten med etiketten **[!UICONTROL Multi Value Text]** och släpp den under den **[!UICONTROL YouTube Publishing]** rubrik du just skapade.
 
-   * Click **[!UICONTROL Field Label** to select the component.
+   * Klicka **[!UICONTROL Field Label]** för att markera komponenten.
    * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube-publiceringsvärden (värdet Fältetikett och värdet för Mappa till egenskap) som du kopierade tidigare, i respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
 
 1. Lägg till de kopierade sekretessvärdena för YouTube till profilen genom att göra följande:
