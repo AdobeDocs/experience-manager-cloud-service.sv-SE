@@ -2,9 +2,9 @@
 title: Hantera bildförinställningar
 description: Lär dig förinställningar för bilder och hur du skapar, ändrar och hanterar förinställningar för bilder
 translation-type: tm+mt
-source-git-commit: df0374c58150780c373780051aeb7dda0c111e45
+source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
 workflow-type: tm+mt
-source-wordcount: '3519'
+source-wordcount: '3517'
 ht-degree: 9%
 
 ---
@@ -253,7 +253,7 @@ Se [Filformatet](#indesign-indd-file-format)InDesign (INDD).
 
    ![6_5_imagepreset-edit](assets/6_5_imagepreset-edit.png)
 
-1. Klicka på **[!UICONTROL Save**.
+1. Klicka på **[!UICONTROL Save]**.
 
 ### Creating a responsive Image Preset {#creating-a-responsive-image-preset}
 
@@ -343,7 +343,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Återgivningsmetod</strong></td>
-   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden avgör vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
+   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden bestämmer vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
     <ul>
      <li>Välj <strong>Perceptuell</strong> om du vill komprimera det totala färgomfånget från en färgrymd till en annan om en eller flera färger i den ursprungliga bilden ligger utanför färgomfånget för målfärgrymden.</li>
      <li>Välj <strong>Relativa färgvärden</strong> när en färg i den aktuella färgrymden ligger utanför färgomfånget i målfärgrymden och du vill mappa den till den närmaste möjliga färgen inom färgomfånget för målfärgrymden utan att påverka några andra färger. </li>
