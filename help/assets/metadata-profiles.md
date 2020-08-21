@@ -3,7 +3,7 @@ title: Metadataprofiler
 description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du skapar en metadataprofil och använder den på mappresurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
+source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 24%
@@ -17,7 +17,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
 ## Lägg till en metadataprofil {#adding-a-metadata-profile}
 
-1. Tryck på AEM-logotypen, navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]** och tryck sedan på **[!UICONTROL Create]**.
+1. Tryck på AEM logotyp, navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]** och tryck sedan på **[!UICONTROL Create]**.
 1. Ange en rubrik för metadataprofilen, till exempel Exempelmetadata, och tryck på **[!UICONTROL Submit]**. Redigera formulär för metadataprofilen visas.
 1. Klicka på en komponent och konfigurera dess egenskaper på **[!UICONTROL Settings]** fliken. Klicka till exempel på **[!UICONTROL Description]** komponenten och redigera dess egenskaper.
 Redigera följande egenskaper för **[!UICONTROL Description]** komponenten:
@@ -89,11 +89,11 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 1. Gå **[!UICONTROL Assets]** sedan till den mapp som du vill använda en metadataprofil på i den vänstra listen.
 1. På mappen: tryck eller klicka på bockmarkeringen för att markera den och tryck eller klicka sedan på **Egenskaper**.
-1. Markera fliken **[!UICONTROL Metadata Profiles]**, välj profilen i listrutan och tryck på **[Spara]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+1. Markera fliken **[!UICONTROL Metadata Profiles]**, välj profilen i listrutan och tryck på **[[Spara]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 ### Använd en metadataprofil globalt {#applying-a-metadata-profile-globally}
 
-Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till AEM-resurser i en mapp har den valda profilen.
+Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till AEM resurser i en mapp har den valda profilen.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig metadataprofil som du senare ändrade. <!--See [Reprocessing assets in a folder after you have edited its processing profile](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile). -->
 
@@ -119,6 +119,6 @@ Du kan ta bort en metadataprofil från en mapp från menyn **Verktyg** eller, om
 
 ### Ta bort metadataprofiler från mappar via Egenskaper {#removing-metadata-profiles-from-folders-via-properties}
 
-1. Tryck på AEM-logotypen och navigera **[!UICONTROL Assets]** sedan till mappen som du vill ta bort en metadataprofil från.
+1. Tryck på AEM logotyp och navigera **[!UICONTROL Assets]** sedan till mappen som du vill ta bort en metadataprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Metadata Profiles]**, välj **[!UICONTROL None]** i listrutan och klicka på **[!UICONTROL Save]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
