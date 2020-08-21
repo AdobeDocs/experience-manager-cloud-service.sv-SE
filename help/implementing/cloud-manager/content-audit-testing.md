@@ -2,7 +2,7 @@
 title: Testning av innehållsgranskning - Cloud Services
 description: Testning av innehållsgranskning - Cloud Services
 translation-type: tm+mt
-source-git-commit: 4c4e0724185695279801c55db1b6874f351805a4
+source-git-commit: 27f9f4441a95964a4ae0db798577510c726133c5
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Content Audit ger aggregerade och detaljerade testresultat på sidnivå via kör
 
 ### Sammanställd bakgrundsmusik {#aggregate-scores}
 
-Det finns en sammanställd nivå för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
+Det finns ett aggregerat nivåpoäng för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
 
 Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i körningen. Ändringen på aggregeringsnivå representerar medelpoängen för sidorna i den aktuella körningen jämfört med medelvärdet för poängen från föregående körning, även om den sidsamling som konfigurerats att inkluderas har ändrats mellan körningar.
 
