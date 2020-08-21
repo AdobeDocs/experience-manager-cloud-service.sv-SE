@@ -2,9 +2,9 @@
 title: Länka URL till ett webbprogram
 description: Länka URL:er till webbprogrammet i dynamiska medier
 translation-type: tm+mt
-source-git-commit: 7dae5c0ed82687415719cd2d72f98028cf0a8e64
+source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1207'
 ht-degree: 10%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 Dina webbplatser och tillämpningar har åtkomst till Dynamic Media-tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
-Du länkar bara till URL:er om du *inte* använder AEM som WCM. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du länkar bara till URL:er om du *inte* använder AEM som WCM-fil. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
 Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kopierar du dem från Dynamic Media.
 
@@ -116,7 +116,7 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 
 ## Hämta en video-URL för en publicerad videoåtergivning {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. I AEM går du till **[!UICONTROL Tools > Deployment > Cloud > Cloud Services]**.
+1. Navigera AEM till **[!UICONTROL Tools > Deployment > Cloud > Cloud Services]**.
 1. På sidan **[!UICONTROL Cloud Services]** bläddrar du nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** och trycker sedan på **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** trycker du på namnet på den konfiguration du vill använda.
 
@@ -132,7 +132,7 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 
    Om registrerings-ID:t till exempel är `87654321|MyCompany`det blir kundens namn `MyCompany`.
 
-1. I det övre vänstra hörnet av sidan trycker du på **[!UICONTROL Cloud Services**, sedan på AEM-ikonen och går till **[!UICONTROL General > CRXDE Lite]**.
+1. I närheten av det övre vänstra hörnet på sidan trycker du **[!UICONTROL Cloud Services]** och sedan på ikonen AEM och navigerar till **[!UICONTROL General > CRXDE Lite]**.
 1. Kopiera ned hela videouppdateringssökvägen från JCR-filen (Java Content Repository).
 
    Videons återgivningssökväg kan till exempel se ut ungefär så här:
@@ -153,12 +153,13 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 
 ## Hämta en video-URL för adaptiv direktuppspelning (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. I AEM går du till **[!UICONTROL Tools > Deployment > Cloud > Cloud Services]**.
+1. Navigera AEM till **[!UICONTROL Tools > Deployment > Cloud > Cloud Services]**.
 1. På sidan **[!UICONTROL Cloud Services]** bläddrar du nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** och trycker sedan på **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** trycker du på namnet på den konfiguration du vill använda.
 1. Gör följande på **[!UICONTROL Dynamic Media Cloud Services Settings]** sidan:
 
    * Under **[!UICONTROL Video Service URL]** kopierar du hela URL-sökvägen. Du behöver den kopierade URL-sökvägen senare i dessa steg. URL-sökvägen kan till exempel se ut ungefär så här:
+
    `https://gateway-na.assetsadobe.com/DMGateway/`
 
    (Banan ovan är endast avsedd som illustration. det är inte den faktiska sökvägen som du kopierar.)
