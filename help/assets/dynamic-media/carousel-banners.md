@@ -2,9 +2,9 @@
 title: Karusellbanner
 description: Lär dig hur du arbetar med karusellbanners i Dynamic Media
 translation-type: tm+mt
-source-git-commit: 82dd9bd69fe994f74c7be8a571e386f0e902f6a1
+source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
 workflow-type: tm+mt
-source-wordcount: '4524'
+source-wordcount: '4522'
 ht-degree: 4%
 
 ---
@@ -36,7 +36,7 @@ Titta på en genomgång på 10 minuter och 33 sekunder om [hur karusellbanners s
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** gruppen för att kunna skapa eller redigera karusellbanderoller. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **D[!UICONTROL am-users]**-gruppen.
+>Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** gruppen för att kunna skapa eller redigera karusellbanderoller. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **D[!UICONTROL am-users]** -gruppen.
 
 ## Snabbstart: Carousel Banners {#quick-start-carousel-banners}
 
@@ -83,21 +83,19 @@ Så här kommer du igång snabbt:
 
 1. Gör något av följande:
 
-   * [Lägg till en karusellbanderoll på din webbsida
-      ](#adding-a-carousel-banner-to-your-website-page)Du kan lägga till karusellbanderollens URL eller inbäddningskod som du har kopierat till webbsidan.
+   * [Lägg till en karusellbanderoll på webbplatsens](#adding-a-carousel-banner-to-your-website-page)sidaDu kan lägga till karusellbanderollens URL eller inbäddningskod som du har kopierat till webbplatsens sida.
 
       * [Integrera karusellbanderollen med en befintlig QuickView](#integrating-the-carousel-banner-with-an-existing-quickview). Om du använder ett webbinnehållshanteringssystem från tredje part måste du integrera den nya Carousel-banderollen med den befintliga Quickview-implementeringen på din webbplats.
-   * [Lägg till en karusellbanderoll på din webbplats i AEM
-      ](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)Om du är kund hos AEM Sites kan du lägga till karuselluppsättningen direkt på sidan i AEM med hjälp av komponenten Interactive Media.
+   * [Lägg till en karusellbanderoll på din webbplats i](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)AEMIom du är AEM Sites-kund kan du lägga till karuselluppsättningen direkt på sidan i AEM med hjälp av komponenten Interactive Media.
 
 
 Om du behöver redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar.](#editing-carousel-sets) Dessutom kan du visa och redigera [Carousel Set-egenskaper](/help/assets/manage-digital-assets.md#editing-properties).
 
 ## Identifiera variabler för aktiveringspunkt och bildschema {#identifying-hotspot-and-image-map-variables}
 
-Börja med att identifiera dynamiska variabler som används i den befintliga snabbvyimplementeringen så att du kan ange aktiveringspunkter eller data för bildscheman på rätt sätt när du skapar karuselluppsättningar i AEM Resurser.
+Börja med att identifiera dynamiska variabler som används i den befintliga snabbvyimplementeringen så att du kan ange aktiveringspunkter eller data för bildscheman korrekt när du skapar karuselluppsättningar i AEM Assets.
 
-När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i AEM Resurser måste du tilldela en SKU och valfria ytterligare variabler till varje hotspot eller bildschema. Sådana variabler används senare för att matcha aktiveringspunkter eller bildscheman med snabbvyinnehåll.
+När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i AEM Assets måste du tilldela varje hotspot eller bildschema en SKU och valfria ytterligare variabler. Sådana variabler används senare för att matcha aktiveringspunkter eller bildscheman med snabbvyinnehåll.
 
 <!-- LEAVE; COMMERCE BEING ADDED LATER
 
@@ -201,7 +199,7 @@ Mer information om hur du överför bildbanderoller finns i [Överföra resurser
    * Near the upper-left corner of the page, tap **[!UICONTROL Add Slide]** icon.
 
    * Tryck mitt på sidan **[!UICONTROL Tap to open Asset Selector]**.
-   Tryck här för att välja resurser som du vill inkludera i karuselluppsättningen. De markerade resurserna visas med en bock. När du är klar trycker du på **[!UICONTROL Välj]** längst upp till höger på sidan.
+   Tryck här för att välja resurser som du vill inkludera i karuselluppsättningen. De markerade resurserna visas med en bock. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select]**.
 
    Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka eller klicka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
 
@@ -273,6 +271,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 
    * För aktiveringspunkter: Tryck på den plats i bilden där du vill att hotspot-området ska visas.
    * För bildscheman: Klicka på bilden och dra sedan från det övre vänstra hörnet till det nedre högra hörnet för att skapa bildschemaområdet. Du kan justera storleken på bildschemat genom att dra i hörnen.
+
    Om det behövs drar du hotspot- eller bildschemat till en ny plats. Lägg till ytterligare hotspot-områden eller bildscheman efter behov.
 
    Tryck på fliken **[!UICONTROL Actions]** om du vill ta bort ett hotspot-område eller bildschema. Under rubriken **[!UICONTROL Maps & Hotspots]** i listrutan **[!UICONTROL Selected Type]** väljer du namnet på det hotspot-område eller bildschema som du vill ta bort. Tryck på ikonen **[!UICONTROL Trash]** bredvid menyn och tryck sedan på **[!UICONTROL Delete]**.
@@ -282,8 +281,8 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 
    * Tryck på **[!UICONTROL Quickview]**.
 
-      * Om du är en AEM Sites <!-- and Ecommerce customer-->trycker du på produktväljarens ikon (förstoringsglas) för att öppna sidan Select Product (Välj produkt). Tryck på den produkt du vill använda och tryck sedan på bockmarkeringen i det övre högra hörnet av sidan för att gå tillbaka till Carousel Banner Editor.
-      * Om du inte är en AEM Sites <!-- or Ecommerce customer -->
+      * Om du är AEM Sites <!-- and Ecommerce customer-->trycker du på produktväljarikonen (förstoringsglas) för att öppna produktsidan. Tryck på den produkt du vill använda och tryck sedan på bockmarkeringen i det övre högra hörnet av sidan för att gå tillbaka till Carousel Banner Editor.
+      * Om du inte är AEM Sites <!-- or Ecommerce customer -->
 
          * Se [Identifiera hotspot-variabler](#identifying-hotspot-and-image-map-variables) eftersom du kanske vill definiera dessa variabler.
          * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av snabbvymallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU-snabbvy.
@@ -292,18 +291,19 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
          * Mer information finns i [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md) .
    * Tryck på **[!UICONTROL Hyperlink]**.
 
-      * Om du är kund hos AEM Sites trycker du på ikonen för webbplatsväljaren (mappen) för att navigera till en URL.
+      * Om du är kund hos AEM Sites trycker du på ikonen Platsväljare (mapp) för att navigera till en URL.
          >[!NOTE]
-         Den URL-baserade länkningsmetoden är inte möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.
+         Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.
+
    Var noga med att ange om länken ska öppnas på en ny webbläsarflik (rekommenderat standardvärde) eller på samma flik.
 
    Mer information finns i [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md) .
 
    * Tryck på **[!UICONTROL Experience Fragment]**.
 
-      * Om du är kund hos AEM Sites trycker du på ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Tryck eller klicka på det Experience Fragment som du vill använda och tryck sedan på Select (Välj) längst upp till höger på sidan för att återgå till sidan för hantering av hotspot.
+      * Om du är AEM Sites-kund trycker du på ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Tryck eller klicka på det Experience Fragment som du vill använda och tryck sedan på Select (Välj) längst upp till höger på sidan för att återgå till sidan för hantering av hotspot.
 Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
 
       * Ange bredd och höjd för Experience Fragment så som det kommer att visas på banderollen.
@@ -316,7 +316,7 @@ Du kan undvika detta genom att använda eller skapa visningsförinställningar s
    Du kan också förhandsvisa hur karusellbanderollen kommer att se ut. Se [(valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
 
 1. Tryck på **[!UICONTROL Save]**.
-1. Publicera karuselluppsättningen. Publicering skapar den inbäddningskod eller URL som du kan använda på din webbsida. Om du använder AEM Sites kan du lägga till karuselluppsättningen direkt på din webbsida.
+1. Publicera karuselluppsättningen. Publicering skapar den inbäddningskod eller URL som du kan använda på din webbsida. Om du är kund hos AEM Sites kan du lägga till karuselluppsättningen direkt på din webbsida.
 
    Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
@@ -355,6 +355,7 @@ Du kan utföra en mängd redigeringsuppgifter på Carousel Sets, till exempel:
    * Om du vill ta bort en bildruta markerar du den och trycker sedan **[!UICONTROL Delete Slide]** på verktygsfältet.
    * To apply a preset, near the upper-right corner of the page, tap the **[!UICONTROL Preset]** drop-down list, then select a viewer preset.
    * Om du vill ta bort en hel Carousel-uppsättning går du till Carousel-uppsättningen, markerar den och trycker sedan på **[!UICONTROL Delete]**.
+
    >[!NOTE]
    Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
@@ -364,7 +365,7 @@ Du kan använda Förhandsgranska för att se hur karusellbanderollen kommer att 
 
 När du är nöjd med karusellbanderollen kan du publicera den.
 See [Embedding the Video or Image Viewer on a Web Page](/help/assets/dynamic-media/embed-code.md).
-See [Linking URLs to your web application](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.
+See [Linking URLs to your web application](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 See [Adding Dynamic Media Assets to pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
 Du kan förhandsgranska karusellbanderoller från Carousel Editor (önskad metod) eller från **[!UICONTROL Viewers]** listan.
@@ -377,7 +378,7 @@ Du kan förhandsgranska karusellbanderoller från Carousel Editor (önskad metod
 
    ![experience_fragment-carouselbanner-viewerdropdown](assets/experience_fragment-carouselbanner-viewerdropdown.png)
 
-1. Tryck på **Förhandsgranska]**.
+1. Tryck på **[Förhandsgranska]**.
 1. Tryck på hotspot-områden eller bildscheman på bilden för att testa deras associerade åtgärder.
 
 **Förhandsgranska karusellbanners från visningslistan**
@@ -402,14 +403,14 @@ Mer information om hur du publicerar karusellbanderoller finns i [Publicera dyna
 När du har överfört banderollbilder för att skapa en karusell, lagt till hotspot-områden och/eller bildscheman i banderollen och publicerat karuselluppsättningen är du nu redo att lägga till den på din befintliga webbsida.
 
 >[!NOTE]
-Om du använder AEM Sites kan du lägga till karusellbanderollen direkt på sidan genom att dra Interactive Media-komponenten till sidan. See [Adding Dynamic Media Assets to Pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Om du är kund hos AEM Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. See [Adding Dynamic Media Assets to Pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
-Om du är en fristående AEM-kund kan du dock manuellt lägga till Carousel-banderollen på webbplatsens landningssida enligt beskrivningen i detta avsnitt.
+Om du är en fristående AEM kan du dock manuellt lägga till karusellbanderollen på webbplatsens landningssida enligt beskrivningen i detta avsnitt.
 
 1. Kopiera den publicerade Carousel-uppsättningens inbäddningskod.
 See [Embedding the Video or Image Viewer on a Web Page](/help/assets/dynamic-media/embed-code.md).
 
-1. Lägg till den inbäddningskod som du kopierade från AEM Resurser på din webbsida.
+1. Lägg till den inbäddningskod som du kopierade från AEM Assets på din webbsida.
 Den kopierade inbäddningskoden är responsiv så den bör automatiskt passa inbäddningsområdet på sidan.
 
 ## Integrera Carousel-banderollen med en befintlig snabbvy {#integrating-the-carousel-banner-with-an-existing-quickview}
@@ -438,7 +439,7 @@ I en sådan händelsehanterare gör koden längst fram följande:
 * Skapar en URL för snabbvyn baserat på hotspot- eller bildschemats data.
 * Startar processen att läsa in snabbvyn från backend-objektet och återge den på skärmen för visning.
 
-Den inbäddningskod som returneras av AEM Assets har redan en färdig händelsehanterare som kommenteras ut.
+Den inbäddningskod som returneras av AEM Assets har redan en färdig händelsehanterare på plats som kommenteras ut.
 
 Därför är det bara nödvändigt att avkommentera koden och ersätta dummy-hanterarens brödtext med koden som är specifik för den aktuella webbsidan.
 
