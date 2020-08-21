@@ -2,7 +2,7 @@
 title: Interaktiva videoklipp
 description: Lär dig hur du arbetar med interaktiv video och köpbar video i Dynamic Media
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
 workflow-type: tm+mt
 source-wordcount: '5964'
 ht-degree: 5%
@@ -52,7 +52,7 @@ Titta på en sju och en halv minuts genomgång om [hur interaktiva videofilmer s
 
 ### Adobe Customer Success Webinar {#adobe-customer-success-webinar}
 
-På [webbseminariet Using Interactive Video, Link Sharing och YouTube som finns i AEM Assets](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/) får du lära dig hur du använder interaktiv video och andra funktioner för att knyta konverteringsdrivna händelser till ditt videomarknadsföringsmaterial.
+Delningen [Using Interactive Video, Link Sharing och YouTube i AEM Assets](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/) webbinarium visar hur du använder interaktiv video och andra funktioner för att knyta konverteringsdrivna händelser till ert videomarknadsföringsmaterial.
 
 ## Snabbstart: Interaktiva videoklipp {#quick-start-interactive-videos}
 
@@ -71,7 +71,7 @@ Interaktiva videosteg:
 1. **(Valfritt) Identifiera QuickView-variabler** - Börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen. Du använder variablerna för att mappa produktminiatyrbilder till deras motsvarande produkt-snabbvyn när du skapar en interaktiv video. Se [(Valfritt) Identifiera QuickView-variabler](#optional-identifying-quickview-variables).
    **Det här steget är bara obligatoriskt om alla följande är uppfyllda**:
 ・ Du vill lägga till interaktivitet i videon genom att aktivera snabbvyer.
-・ Er implementering av AEM använder *inte* ett ramverk för e-handelsintegrering för att hämta produktdata till AEM från någon e-handelslösning som IBM Websphere Commerce, Elastic Path, hybris eller Intershop.
+・ Er implementering av AEM använder *inte* ett ramverk för e-handelsintegrering för att hämta in produktdata AEM från någon e-handelslösning som IBM Websphere Commerce, Elastic Path, hybris eller Intershop.
 
 1. **(Valfritt) Skapa en förinställning** för Interactive Video Viewer - Anpassa utseendet och beteendet för olika komponenter som utgör spelaren, t.ex. videobandspelaren och de interaktiva miniatyrbilderna.
 Det är inte nödvändigt att skapa en egen förinställning för Interactive Video Viewer om du tänker använda förinställningarna för Interactive Video Viewer `Shoppable_Video_Light` eller `Shoppable_Video_Dark` istället.
@@ -85,7 +85,7 @@ Se [Överföra en video och dess tillhörande miniatyrbildsresurser](#uploading-
 Slutför genom att publicera det interaktiva videomaterialet. Publicering skapar den inbäddningskod eller URL som du så småningom kommer att kopiera och använda på webbplatsens landningssida.Se [Lägga till interaktivitet i videon](#adding-interactivity-to-your-video).
 Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
-1. **Lägga till en interaktiv video till din webbplats eller till din webbplats i AEM** Om du använder AEM Sites, AEM eCommerce eller båda, kan du lägga till den interaktiva videon direkt till en webbsida i AEM genom att dra den interaktiva mediekomponenten till sidan. See [Adding Dynamic Media Assets to Pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+1. **Lägga till en interaktiv video på en webbplats eller på en webbplats i AEM** Om du använder AEM Sites eller AEM e-handel, eller båda, kan du lägga till den interaktiva videon direkt på en webbsida i AEM genom att dra komponenten Interactive Media till sidan. See [Adding Dynamic Media Assets to Pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 Använd inbäddningskoden eller URL-adressen för att integrera interaktiv video med webbplatsupplevelserna. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
 Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv video med en befintlig snabbvy](#integrating-an-interactive-video-with-an-existing-quickview).
    [](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
@@ -95,7 +95,7 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part måste du int
 >[!NOTE]
 Den här aktiviteten krävs bara om följande är sant:
 * Du vill lägga till interaktivitet i videon genom att aktivera snabbvyer.
-* Din implementering av AEM använder *inte* ett ramverk för e-handelsintegrering för att hämta produktdata till AEM från någon e-handelslösning som IBM Websphere Commerce, Elastic Path, hybris eller Intershop. <!-- See [eCommerce concepts in AEM Assets](/help/sites-administering/concepts.md).-->
+* Er implementering av AEM använder *inte* ett ramverk för e-handelsintegration för att hämta in produktdata till AEM från någon e-handelslösning som IBM Websphere Commerce, Elastic Path, hybris eller Intershop. <!-- See [eCommerce concepts in AEM Assets](/help/sites-administering/concepts.md).-->
 
 Om din implementering av AEM använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
 
@@ -120,7 +120,7 @@ Normalt behöver du inte använda några specialverktyg för felsökning. Modern
 
 * Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på **F12** (Windows) eller **Command+Options+I** (Mac) för att öppna panelen Utvecklarverktyg och klickar sedan på fliken **Nätverk** .
 
-* I Firefox kan du antingen aktivera plugin-programmet Firebug genom att trycka på **F12** (Windows) eller **Kommando+Alt+I** (Mac) och använda fliken **[Net]**. Du kan också använda den inbyggda inspektören och dess nätverksflik.
+* In Firefox, you can either activate the Firebug plug-in by pressing **F12** (Windows) or **Command+Option+I** (Mac) and use its **[Net]** tab, or you can use the built-in Inspector tool and its Network tab.
 
 * Aktivera felsökningsverktyget i Internet Explorer genom att trycka på **F12**.
 
@@ -155,7 +155,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande miniatyr
       <li><p><code>https://server/product/6422350843</code></p> </li>
       <li><p><code>https://server/product/1607745002</code></p> </li>
       <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>Variabeldelen finns i den sista delen av banan och blir SKU-värdet för AEM-miniatyrbilder: <strong><code>6422350843</code></strong>, <strong><code>1607745002</code></strong>, <strong><code>0086724882</code></strong>.</p> </td>
+    </ul> <p>Variabeldelen finns i den sista delen av banan och blir SKU-värdet för AEM miniatyrbilder: <strong><code>6422350843</code></strong>, <strong><code>1607745002</code></strong>, <strong><code>0086724882</code></strong>.</p> </td>
   </tr>
   <tr>
     <td><p>SKU och kategori-ID i frågesträngen.</p> </td>
@@ -256,10 +256,10 @@ När du har lagt till tidslinjesegment lägger du till miniatyrbilder i varje se
 Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
 
 >[!NOTE]
-Tänk på att verktygen för delning av sociala medier i interaktiv video inte stöds när du bäddar in visningsprogrammet i ett Experience Fragment.  Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
+Tänk på att verktygen för delning av sociala medier i interaktiv video inte stöds när du bäddar in visningsprogrammet i ett Experience Fragment. Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
 >[!NOTE]
-Den URL-baserade länkningsmetoden är inte möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.
+Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
 Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöds under den aktuella skaps-/redigeringssessionen.
 
@@ -354,6 +354,7 @@ Så här lägger du till interaktivitet i videon:
       * Tryck på den blå inledande ovalen för att söka efter videon direkt till början av det segmentet.
       * Tryck på den efterföljande blå ovalen för att söka efter videon direkt till slutet av det segmentet.
       * Tryck på hela segmentet för att återställa videouppspelningen till början av segmentet
+
    ![chlimage_1-26](assets/chlimage_1-132.png)
 
    Flytta slutet av ett tidslinjesegment
@@ -398,11 +399,11 @@ Så här lägger du till interaktivitet i videon:
     <tbody> 
       <tr> 
       <td>Associera den markerade miniatyrbilden med en snabbvy</td> 
-      <td><p>Tryck på <strong>Snabbvy</strong>under Åtgärdstyp.</p> <p>Om du är AEM Sites and Ecommerce-kund:</p> 
+      <td><p>Tryck på <strong>Snabbvy</strong>under Åtgärdstyp.</p> <p>Om du är kund inom AEM Sites och e-handel:</p> 
        <ul> 
-       <li>Observera att textfältet SKU-värde är förifyllt med den valda produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Detta fylls i automatiskt när bilden är kopplad till en produkt i AEM Commerce.</li> 
+       <li>Observera att textfältet SKU-värde är förifyllt med den valda produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Detta fylls i automatiskt när bilden associeras med en produkt i AEM Commerce.</li> 
        <li>Om den i förväg ifyllda SKU:n är felaktig trycker eller klickar du på produktväljarens ikon (förstoringsglas) för att öppna sidan Välj produkt. Tryck eller klicka på den produkt du vill använda och tryck sedan på bockmarkeringen i det övre högra hörnet av sidan för att gå tillbaka till Interactive Video Editor.</li> 
-       </ul> <p> Om du <em>inte</em> är AEM Sites- eller Ecommerce-kund</p> 
+       </ul> <p> Om du <em>inte</em> är AEM Sites- eller e-handelskund</p> 
        <ul> 
        <li>Se <a href="/help/assets/dynamic-media/carousel-banners.md#identifying-hotspot-and-image-map-variables">Identifiera hotspot-variabler</a>. Du måste definiera dessa variabler. </li> 
        <li>Som standard använder det här SKU-fältet bildresursens filnamn utan tillägget. Om du använder en standardnamnkonvention för dina filer som baseras på SKU, behöver du vanligtvis inte göra några ytterligare redigeringar. </li> 
@@ -413,7 +414,7 @@ Så här lägger du till interaktivitet i videon:
       <td>Associera den markerade miniatyrbilden med en hyperlänk</td> 
       <td><p>Tryck på <strong>Hyperlänk</strong>under Åtgärdstyp och gör sedan något av följande:</p> 
        <ul> 
-       <li>Om du är kund hos AEM Sites trycker du på ikonen för webbplatsväljaren (mappen) för att navigera till en webbsida. Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.</li> 
+       <li>Om du är AEM Sites-kund går du till en webbsida genom att trycka på ikonen Platsväljare (mapp). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.</li> 
        <li>Om du är en fristående kund av Dynamic Media anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.</li> 
        </ul> <p>Var noga med att ange om länken ska öppnas på en ny flik i webbläsaren eller på den aktuella fliken.</p> </td> 
       </tr> 
@@ -421,7 +422,7 @@ Så här lägger du till interaktivitet i videon:
       <td>Associera den markerade miniatyrbilden med ett Experience Fragment</td> 
       <td><p>Under Åtgärdstyp trycker du på <strong>Experience Fragment</strong>och gör sedan följande:<p> 
        <ul> 
-       <li>Om du använder AEM Sites trycker eller klickar du på ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Tryck eller klicka på det Experience Fragment som du vill använda och tryck sedan på <strong>Select (Välj) </strong>i det övre högra hörnet av sidan för att gå tillbaka till åtgärdspanelen på föregående sida.<br /> Se <a href="/help/sites-cloud/authoring/fundamentals/experience-fragments.md">Upplevelsefragment</a>.</li> 
+       <li>Om du är AEM Sites-kund trycker eller klickar du på ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Tryck eller klicka på det Experience Fragment som du vill använda och tryck sedan på <strong>Select (Välj) </strong>i det övre högra hörnet av sidan för att gå tillbaka till åtgärdspanelen på föregående sida.<br /> Se <a href="/help/sites-cloud/authoring/fundamentals/experience-fragments.md">Upplevelsefragment</a>.</li> 
       </ul> 
        <ul> 
        <li>Ange bredd och höjd för Experience Fragment så som det kommer att visas på videon.</li>
@@ -500,9 +501,9 @@ Mer information om hur du publicerar interaktiva videoresurser finns i [Publicer
 
 När du har överfört en video, lagt till tidslinjesegment i den och publicerat den interaktiva videon är du nu redo att lägga till den på din befintliga webbplats.
 
-Om du använder AEM Sites kan du lägga till den interaktiva videon genom att dra komponenten Interactive Media till sidan. See [Adding Dynamic Media Assets to Pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Om du är kund hos AEM Sites kan du lägga till den interaktiva videon genom att dra Interactive Media-komponenten till din sida. See [Adding Dynamic Media Assets to Pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
-Om du är en fristående AEM Assets-kund kan du lägga till den interaktiva videon manuellt på webbplatsen enligt beskrivningen i det här avsnittet.
+Om du är en fristående AEM Assets-kund kan du lägga till den interaktiva videon manuellt på din webbplats enligt beskrivningen i det här avsnittet.
 
 1. Kopiera den publicerade interaktiva videons inbäddningskod eller URL.
 See [Embedding the Video or Image Viewer on a Web Page](/help/assets/dynamic-media/embed-code.md).
@@ -556,7 +557,7 @@ Integrationen är lika enkel som att ta bort inbäddningskoden för video och er
 ## Integrera en interaktiv video med en befintlig snabbvy {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
-Denna uppgift gäller endast om du är en fristående AEM Assets-kund.
+Detta gäller endast om du är en fristående AEM Assets-kund.
 
 Det sista steget i den här processen är att integrera din interaktiva video med en befintlig QuickView-implementering som används på din webbplats. Det finns ingen lösning på integreringen som fungerar i alla fall. Alla QuickView-implementeringar är unika. Därför behövs ett specifikt tillvägagångssätt som sannolikt inbegriper hjälp av en IT-handläggare på frontend.
 
@@ -564,7 +565,7 @@ Den befintliga Quickview-implementeringen representerar normalt en kedja av inte
 
 1. En användare utlöser ett element i användargränssnittet för webbplatsen.
 1. FrontEnd-koden hämtar en QuickView-URL som baseras på användargränssnittselementet som utlöstes i steg 1.
-1. Front-end-koden skickar en AJAX-begäran med den URL som fås i steg 2.
+1. Slutkoden skickar en AJAX med den URL som du får i steg 2.
 1. Bakåtlogiken returnerar motsvarande QuickView-data eller -innehåll tillbaka till slutkoden.
 1. Slutkoden läser in QuickView-data eller -innehåll.
 1. Om du vill kan du konvertera den inlästa QuickView-informationen till en HTML-representation med hjälp av koden längst fram.
@@ -572,7 +573,7 @@ Den befintliga Quickview-implementeringen representerar normalt en kedja av inte
 
 Dessa anrop kanske inte representerar oberoende offentliga API-anrop som kan anropas av webbsidans logik från ett godtyckligt steg. I stället är det ett kedjat anrop där varje steg döljs i den sista fasen (återanrop) av föregående steg.
 
-Samtidigt som den interaktiva videon ersätter steg 1, och delvis steg 2, när en användare klickar på en miniatyrbild i den interaktiva videon, hanteras denna användarinteraktion av användaren av användaren. Visningsprogrammet returnerar en händelse på webbsidan som innehåller alla miniatyrbildsdata som tidigare lagts till i AEM.
+Samtidigt som den interaktiva videon ersätter steg 1, och delvis steg 2, när en användare klickar på en miniatyrbild i den interaktiva videon, hanteras denna användarinteraktion av användaren av användaren. Visningsprogrammet returnerar en händelse till webbsidan som innehåller alla miniatyrbildsdata som tidigare lagts till i AEM.
 
 I en sådan händelsehanterare gör koden för den främre änden följande:
 
