@@ -2,9 +2,9 @@
 title: Betydande förändringar av AEM Commerce som en Cloud Service
 description: Betydande förändringar av AEM Commerce som Cloud Service jämfört med Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: df6f679b70a7cc70e4f76612c0a72a31443cd1b8
+source-git-commit: 5a90db8791dd92cceb811b9ed2beda3ecb4a974d
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '596'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ Nedan visas olika distributionsmodeller för Commerce Integration Framework för
 | Så här distribuerar du CIF-redigeringsverktyg för Magento backend | [Se CIF Connector](https://github.com/adobe/commerce-cif-connector/blob/master/README.md) som stöds i AEM 6.5 | [Se CIF Connector](https://github.com/adobe/commerce-cif-connector/blob/master/README.md) som stöds i AEM 6.5 | AEM som Cloud Service måste etableras med CIF-tillägg. Kontakta din säljare för mer information |
 | Distribuera [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) | Installera AEM | Distribuering via [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) | Projektet har flyttats till [molnhanterarens Git-databas](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/managing-code/integrating-with-git.html) och distributionen har gjorts via [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html) |
 
->[!Note]
+>[!NOTE]
 >
 >CIF Classic/Quickstart-versionen av Commerce Integration Framework kan användas AEM lokal-erbjudanden för mycket begränsad användning. Detta är dock inte den rekommenderade lösningen.
 
@@ -48,6 +48,6 @@ De viktigaste skillnaderna här är:
 * OSGI-paketet för GraphQL-klienten **får inte** längre ingå i AEM, det distribueras via CIF-tillägget
 * OSGI-konfigurationer för GraphQL-klienten och Graphql Data Service **får inte** längre ingå i AEM
 
->[!Tip]
+>[!TIP]
 >
 >Ta en titt på [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia) -projekt på GitHub. Detta projekt innehåller Maven-profiler för AEM som Cloud Service och lokal driftsättning som tar hänsyn till de olika ramverksvillkoren.
