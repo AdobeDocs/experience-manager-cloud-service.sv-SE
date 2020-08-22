@@ -2,9 +2,9 @@
 title: Komma igång med AEM Commerce som Cloud Service
 description: Komma igång med AEM Commerce som Cloud Service
 translation-type: tm+mt
-source-git-commit: 1fcdfa60c134491c781906e4a757a3a10399bde1
+source-git-commit: 5a90db8791dd92cceb811b9ed2beda3ecb4a974d
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '571'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Komma igång med AEM Commerce som Cloud Service {#start}
 
-För att komma igång med AEM Commerce som Cloud Service måste Experience Manager Cloud Servicen etableras med tillägget Commerce Integration Framework (CIF). Tillägget CIF är ytterligare en modul ovanpå [AEM Sites som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html).
+För att komma igång med AEM Commerce som Cloud Service måste Experience Manager Cloud Servicen etableras med tillägget Commerce Integration Framework (CIF). Tillägget CIF är en extra modul ovanpå [AEM Sites som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/37843?quality=12&learn=on)
 
@@ -56,7 +56,7 @@ Så här ansluter du AEM Commerce till Magento:
 >
 >Du kan visa alla Cloud Manager-variabler med följande kommando för att dubbelkontrollera: `aio cloudmanager:list-environment-variables ENVIRONMENT_ID`
 
->[!Note]
+>[!NOTE]
 >
 >Du kan även använda API:t [för](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html) Cloud Manager för att konfigurera Cloud Manager-variabler.
 
