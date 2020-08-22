@@ -1,10 +1,10 @@
 ---
-title: Använd RTF-redigeraren i [!DNL Adobe Experience Manager] för att skapa innehåll.
-description: Använd RTF-redigeraren i [!DNL Experience Manager] för att skapa innehåll.
+title: Använd RTF-redigeraren [!DNL Adobe Experience Manager] för att skapa innehåll.
+description: Använd [!DNL Experience Manager] RTF-redigeraren för att skapa innehåll.
 translation-type: tm+mt
-source-git-commit: 5437329c55bd7da6d8b966a7f01c9e57ff1feb59
+source-git-commit: 5a90db8791dd92cceb811b9ed2beda3ecb4a974d
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Använda RTF-redigeraren för att skapa innehåll {#use-rich-text-editor-to-author-content}
 
-RTE (Rich Text Editor) är en grundläggande byggsten för att lägga till textinnehåll [!DNL Adobe Experience Manager]. Många andra komponenter som tillåter redigering är också baserade på RTE. Utvecklare i Experience Manager kan anpassa RTE och administratörer konfigurerar RTE för författare.
+RTE (Rich Text Editor) är en grundläggande byggsten för att lägga till textinnehåll [!DNL Adobe Experience Manager]. Många andra komponenter som tillåter redigering baseras på RTE. Utvecklare i Experience Manager kan anpassa RTE och administratörer konfigurerar RTE för författare.
 
 ## In-place-redigering {#in-place-editing}
 
@@ -51,7 +51,7 @@ Fler alternativ för textredigering:
 
 Klicka på Minimera för att stänga helskärmsläget.
 
->[!Tip]
+>[!TIP]
 >
 >Om du kopierar kapslade listor från [!DNL Microsoft Word] till textredigeraren kan resultatet bli inkonsekvent. Klistra i stället in som text och gör manuell justering.
 
