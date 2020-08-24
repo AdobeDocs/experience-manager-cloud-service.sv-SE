@@ -2,9 +2,9 @@
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: 07d60f1ae6be824af07bc51f989a5c2029a3422a
 workflow-type: tm+mt
-source-wordcount: '9681'
+source-wordcount: '9670'
 ht-degree: 9%
 
 ---
@@ -690,7 +690,7 @@ Så här automatiserar du inställningen av YouTube-standardegenskaper för dina
 1. I det övre vänstra hörnet av AEM klickar du på AEM-logotypen och sedan i den vänstra rutan klickar du på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 1. Klicka på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
 1. På sidan **[!UICONTROL default]** markerar du rutan till vänster om **[!UICONTROL video]** och klickar sedan på **[[Redigera]**.
-1. Klicka på **[!UICONTROL Advanced]** fliken på sidan Redigerare för metadataschema.
+1. Klicka på **[!UICONTROL Advanced]** fliken på sidan Redigerare för metadatamatchning.
 1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Category]**.
 1. Gör följande till höger på sidan, under **[!UICONTROL Settings]** fliken:
 
@@ -972,10 +972,10 @@ Så här visar du videorapporter:
 1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]**.
 1. Gör något av följande på sidan Videorapporter:
 
-   * I det övre högra hörnet trycker du på ikonen **[UICONTROL Refresh Video Report]** (Uppdatera videorapport).
+   * I det övre högra hörnet trycker du på **[!UICONTROL Refresh Video Report]** -ikonen.
 Du behöver bara använda Uppdatera om rapportens slutdatum är den aktuella dagen. På så sätt ser du den videospårning som har utförts sedan du senast körde rapporten.
 
-   * I det övre högra hörnet trycker du på ikonen **[UICONTROL Date Picker]** (UIKONTROLLdatumväljaren).
+   * I det övre högra hörnet trycker du på **[!UICONTROL Date Picker]** -ikonen.
 Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Run Report]**.
 
    I grupprutan Top Metrics (Toppvärden) identifieras olika aggregerade mått för alla *publicerade *videor på webbplatsen.
@@ -1011,7 +1011,7 @@ Så här visar du videorapporter baserade på ett videovisningsprogram som du ha
 
    Parametern `config2` aktiverar spårning i HTML5-visningsprogram. Det är också en företagsspecifik förinställning som innehåller konfigurationsinformationen för Videorapportering och för kundspecifika Adobe Analytics-konfigurationer.
 
-   Det korrekta värdet för parametern config2 finns både i **[!UICONTROL Embed Code]** och i kopieringsfunktionen **[UICONTROL URL]**. I URL:en från kopieringskommandot **[UICONTROL URL]** letar du efter parametern `&config2=<value>`. Värdet är nästan alltid `companypreset`, men i vissa fall kan det också vara `companypreset-1`, `companypreset-2` osv.
+   Det korrekta värdet för parametern config2 finns både i **[!UICONTROL Embed Code]** och i kopieringsfunktionen **[!UICONTROL URL]**. I URL:en från kopieringskommandot **[!UICONTROL URL]** letar du efter parametern `&config2=<value>`. Värdet är nästan alltid `companypreset`, men i vissa fall kan det också vara `companypreset-1`, `companypreset-2` osv.
 
 1. Lägg till AppMeasurementBridge .jsp på visningsprogramsidan i din anpassade videovisningsprogramkod genom att göra följande:
 
