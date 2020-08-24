@@ -2,9 +2,9 @@
 title: Utveckla AEM för AEM som Cloud Service
 description: Utveckla AEM för AEM som Cloud Service
 translation-type: tm+mt
-source-git-commit: e30086c546d9efcc1da07ac5862c012a0db02c09
+source-git-commit: 19fa6391913f556b80607f8dd5215489082b50ab
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '809'
 ht-degree: 9%
 
 ---
@@ -20,11 +20,13 @@ Utveckla AEM handelsprojekt som bygger på Commerce Integration Framework (CIF) 
 
 ## Lokal utveckling med AEM som Cloud Service-SDK {#local}
 
+>[!VIDEO](https://video.tv.adobe.com/v/39476/?quality=12&learn=on)
+
 En lokal utvecklingsmiljö rekommenderas för arbete med CIF-projekt. CIF-tillägget för AEM som en Cloud Service-miljö är även tillgängligt för lokal utveckling. Den kan laddas ned från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
 
-CIF-tillägget tillhandahålls som ett arkiv för försäljningsfunktioner. ZIP-filen som finns på Software Distribution Portal innehåller två Sling Feature-arkivfiler, en för AEM författare och en för AEM publiceringsinstanser.
+CIF-tillägget tillhandahålls som ett arkiv för försäljningsfunktioner. ZIP-filen som finns på Software Distribution Portal innehåller två Sling Feature-arkivfiler, en för AEM och en för AEM publiceringsinstanser.
 
-**Är du inte AEM som Cloud Service?** Ta en titt på [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+**Är du inte AEM som Cloud Service?** Ta en titt på [en mer detaljerad guide till hur du konfigurerar en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
 ### Nödvändig programvara
 
@@ -39,7 +41,7 @@ Följande bör installeras lokalt:
 
 ### Åtkomst till CIF-tillägget
 
-The CIF add-on can be downloaded as a zip file from the [Software Distribution portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). ZIP-filen innehåller CIF-tillägget som Sling Feature Archive, det är inte ett AEM. Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM som Cloud Service-licens.
+The CIF add-on can be downloaded as a zip file from the [Software Distribution portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). ZIP-filen innehåller CIF-tillägget som arkiv för **Sling-funktioner**, det är inte ett AEM. Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM som Cloud Service-licens.
 
 >[!TIP]
 >
@@ -59,7 +61,7 @@ För lokal utveckling av CIF-tillägg med AEM som Cloud Service-SDK följer du s
 3. Skapa en `crx-quickstart/install` mapp
 4. Kopiera rätt fil för Sling Feature archive för CIF-tillägget till `crx-quickstart/install` mappen.
 
-   ZIP-tilläggsfilen CIF innehåller två Sling Feature Archive- `.far` filer. Se till att du använder rätt för AEM Author eller AEM Publish, beroende på hur du tänker köra den lokala AEM som en Cloud Service-SDK.
+   ZIP-tilläggsfilen CIF innehåller två Sling Feature Archive- `.far` filer. Se till att använda rätt för AEM Author eller AEM Publish, beroende på hur du tänker köra den lokala AEM som en Cloud Service-SDK.
 
 5. Skapa en lokal systemmiljövariabel med namnet `COMMERCE_ENDPOINT` som innehåller Magento GraphQL-slutpunkten.
 
