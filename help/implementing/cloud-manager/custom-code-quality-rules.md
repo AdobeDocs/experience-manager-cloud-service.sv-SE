@@ -1,19 +1,19 @@
 ---
-title: Anpassade regler för kodkvalitet - molntjänster
-description: Anpassade regler för kodkvalitet - molntjänster
+title: Anpassade regler för kodkvalitet - Cloud Services
+description: Anpassade regler för kodkvalitet - Cloud Services
 translation-type: tm+mt
-source-git-commit: f2fa2adeec74bfa687ed59d3e0847e6246028040
+source-git-commit: 437652f9ed5d0fc4abae22e470b650bd1c2bedb6
 workflow-type: tm+mt
-source-wordcount: '2254'
-ht-degree: 5%
+source-wordcount: '2253'
+ht-degree: 6%
 
 ---
 
 
-# Förstå regler för anpassad kodkvalitet {#custom-code-quality-rules}
+# Custom Code Quality Rules {#custom-code-quality-rules}
 
 
-Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager och som baseras på god praxis från AEM Engineering.
+Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager och som baseras på de bästa metoderna från AEM.
 
 >[!NOTE]
 >
@@ -114,7 +114,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 **Sedan**: Version 2018.6.0
 
-När HTTP-begäranden körs inifrån ett AEM-program är det viktigt att se till att rätt tidsgränser är konfigurerade för att undvika onödig trådförbrukning. Tyvärr är standardbeteendet för både Java:s standard-HTTP-klient (java.net.HttpUrlConnection) och den vanligaste Apache HTTP Components-klienten att aldrig timeout, så timeout måste anges explicit. Dessutom bör dessa timeout inte vara längre än 60 sekunder.
+När du kör HTTP-begäranden inifrån ett AEM-program är det viktigt att se till att rätt tidsgränser är konfigurerade för att undvika onödig trådförbrukning. Tyvärr är standardbeteendet för både Java:s standard-HTTP-klient (java.net.HttpUrlConnection) och den vanligaste Apache HTTP Components-klienten att aldrig timeout, så timeout måste anges explicit. Dessutom bör dessa timeout inte vara längre än 60 sekunder.
 
 #### Icke-kompatibel kod {#non-compliant-code-2}
 
@@ -196,7 +196,7 @@ API:t för AEM innehåller Java-gränssnitt och -klasser som bara är avsedda at
 
 När nya metoder läggs till i dessa gränssnitt påverkar inte dessa ytterligare metoder befintlig kod som använder dessa gränssnitt, och därför anses tillägg av nya metoder i dessa gränssnitt vara bakåtkompatibelt. Men om anpassad kod ***implementerar*** ett av dessa gränssnitt har den anpassade koden skapat en risk vad gäller bakåtkompatibilitet för kunden.
 
-Gränssnitt (och klasser) som endast är avsedda att implementeras av AEM kommenteras med *org.osgi.annotation.versioning.ProviderType* (eller, i vissa fall, en liknande äldre anteckning *aQute.bnd.annotation.ProviderType*). Den här regeln identifierar de fall där ett sådant gränssnitt implementeras (eller där en klass utökas) med anpassad kod.
+Gränssnitt (och klasser) som bara är avsedda att implementeras av AEM kommenteras med *org.osgi.annotation.versioning.ProviderType* (eller, i vissa fall, en liknande äldre anteckning *aQute.bnd.annotation.ProviderType*). Den här regeln identifierar de fall där ett sådant gränssnitt implementeras (eller där en klass utökas) med anpassad kod.
 
 #### Icke-kompatibel kod {#non-compliant-code-3}
 
@@ -350,7 +350,7 @@ public void doThis() throws Exception {
 }
 ```
 
-### Undvik att logga på INFO när du hanterar GET- eller HEAD-begäranden {#avoid-logging-at-info-when-handling-get-or-head-requests}
+### Undvik att logga på INFO när du hanterar GET- eller HEAD-förfrågningar {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
 **Nyckel**: CQRules:CQBP-44—LogInfoInGetOrHeadRequests
 
@@ -358,7 +358,7 @@ public void doThis() throws Exception {
 
 **Allvarlighetsgrad**: Mindre
 
-I allmänhet bör INFO-loggnivån användas för att avgränsa viktiga åtgärder och som standard är AEM konfigurerad för att logga på INFO-nivå eller högre. GET- och HEAD-metoder bör aldrig vara skrivskyddade och därför inte utgöra några viktiga åtgärder. Loggning på INFO-nivå som svar på GET- eller HEAD-förfrågningar skapar troligen avsevärt loggbrus, vilket gör det svårare att identifiera användbar information i loggfiler. Loggning vid hantering av GET- eller HEAD-begäranden bör finnas antingen på WARN- eller ERROR-nivå när något har gått fel eller på DEBUG- eller TRACE-nivå om mer detaljerad felsökningsinformation skulle vara till hjälp.
+I allmänhet bör INFO-loggnivån användas för att avgränsa viktiga åtgärder och AEM är som standard konfigurerad för att logga på INFO-nivå eller högre. Metoderna GET och HEAD bör aldrig vara skrivskyddade och därför inte utgöra några viktiga åtgärder. Loggning på INFO-nivå som svar på GET- eller HEAD-förfrågningar skapar troligen avsevärt loggbrus, vilket gör det svårare att identifiera användbar information i loggfiler. Loggning vid hantering av GET- eller HEAD-begäranden bör finnas antingen på WARN- eller FEL-nivå när något har gått fel eller på DEBUG- eller TRACE-nivå om mer detaljerad felsökningsinformation skulle vara till hjälp.
 
 >[!CAUTION]
 >
@@ -462,7 +462,7 @@ public void doThis() {
 
 **Sedan**: Version 2018.4.0
 
-Som vi nämnt är sammanhang viktigt när du ska förstå loggmeddelanden. Om du använder Exception.printStackTrace() genereras **endast** stackspårningen som utdata till standardfelströmmen och därmed förlorar all kontext. I ett program med flera trådar, som AEM, kan dessutom stackspårningarna överlappa varandra om flera undantag skrivs ut med den här metoden parallellt, vilket kan skapa stor förvirring. Undantag bör endast loggas via loggningsramverket.
+Som vi nämnt är sammanhang viktigt när du ska förstå loggmeddelanden. Om du använder Exception.printStackTrace() genereras **endast** stackspårningen som utdata till standardfelströmmen och därmed förlorar all kontext. I ett program med flera trådar, som AEM om flera undantag skrivs ut med den här metoden parallellt, kan stackspårningarna överlappa vilket kan skapa en betydande förvirring. Undantag bör endast loggas via loggningsramverket.
 
 #### Icke-kompatibel kod {#non-compliant-code-11}
 
@@ -498,7 +498,7 @@ public void doThis() {
 
 **Sedan**: Version 2018.4.0
 
-Inloggning med AEM bör alltid göras via loggningsramverket (SLF4J). Om du matar ut direkt till standardutdata eller standardfelströmmar förlorar du den strukturella och kontextuella information som tillhandahålls av loggningsramverket och kan i vissa fall orsaka prestandaproblem.
+Loggning AEM alltid ske via loggningsramverket (SLF4J). Om du matar ut direkt till standardutdata eller standardfelströmmar förlorar du den strukturella och kontextuella information som tillhandahålls av loggningsramverket och kan i vissa fall orsaka prestandaproblem.
 
 #### Icke-kompatibel kod {#non-compliant-code-12}
 
@@ -566,7 +566,7 @@ Sling Scheduler får inte användas för aktiviteter som kräver en garanterad k
 
 Läs mer om hur [Sling-jobb hanteras i klustermiljöer i](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) Apache Sling-händelser och jobbhantering.
 
-### AEM-inaktuella API:er får inte användas {#sonarqube-aem-deprecated}
+### AEM inaktuella API:er ska inte användas {#sonarqube-aem-deprecated}
 
 **Nyckel**: AMSCORE-553
 
@@ -576,18 +576,18 @@ Läs mer om hur [Sling-jobb hanteras i klustermiljöer i](https://sling.apache.o
 
 **Sedan**: Version 2020.5.0
 
-AEM API-ytan är under ständig revision för att identifiera API:er som inte används och därför betraktas som inaktuella.
+AEM API-yta är under ständig revision för att identifiera API:er som inte används och därför betraktas som inaktuella.
 
 I många fall används standardanteckningen Java *@Deprecated* , som identifieras av `squid:CallToDeprecatedMethod`.
 
-Det finns emellertid fall där ett API är inaktuellt i AEM-kontexten men inte kan bli inaktuellt i andra sammanhang. Den här regeln identifierar den andra klassen.
+Det finns dock fall där ett API är inaktuellt i AEM men inte i andra sammanhang. Den här regeln identifierar den andra klassen.
 
 ## OakPAL-innehållsregler {#oakpal-rules}
 
 Nedan finns de OakPAL-kontroller som körs av Cloud Manager.
 
 >[!NOTE]
->OakPAL är ett ramverk som utvecklats av en AEM-partner (och vinnare av 2019 AEM Rockstar North America) som validerar innehållspaket med en fristående Oak-databas.
+>OakPAL är ett ramverk som utvecklats av en AEM partner (och vinnare av 2019 AEM Rockstar North America) som validerar innehållspaket med en fristående Oak-databas.
 
 ### Kundpaket får inte skapa eller ändra noder under /libs {#oakpal-customer-package}
 
@@ -599,7 +599,7 @@ Nedan finns de OakPAL-kontroller som körs av Cloud Manager.
 
 **Sedan**: Version 2019.6.0
 
-Det har varit en god praxis sedan länge att /libs-innehållsträdet i AEM-innehållsarkivet ska betraktas som skrivskyddat av kunderna. Att ändra noder och egenskaper under */libs* skapar en betydande risk för större och mindre uppdateringar. Modifieringar av */libs* får endast göras av Adobe via officiella kanaler.
+Det har varit en god praxis sedan länge att innehållsträdet /libs i AEM ska betraktas som skrivskyddat av kunderna. Att ändra noder och egenskaper under */libs* skapar en betydande risk för större och mindre uppdateringar. Ändringar av */libs* bör endast göras av Adobe via officiella kanaler.
 
 ### Paket får inte innehålla dubbletter av OSGi-konfigurationer {#oakpal-package-osgi}
 
@@ -699,13 +699,13 @@ OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` defin
 
 **Sedan**: Version 2020.5.0
 
-AEM-komponenter som har en klassisk gränssnittsdialogruta bör alltid ha en motsvarande Touch-gränssnittsdialogruta, både för att ge en optimal redigeringsupplevelse och för att vara kompatibel med distributionsmodellen för molntjänsten, där Classic UI inte stöds. Den här regeln verifierar följande scenarier:
+AEM som har en klassisk användargränssnittsdialogruta ska alltid ha en motsvarande användargränssnittsdialogruta för att både tillhandahålla en optimal redigeringsupplevelse och vara kompatibel med distributionsmodellen för Cloud Servicen, där det klassiska användargränssnittet inte stöds. Den här regeln verifierar följande scenarier:
 
 * En komponent med en klassisk gränssnittsdialogruta (d.v.s. en underordnad dialogrutenod) måste ha en motsvarande Touch UI-dialogruta (d.v.s. en underordnad nod). `cq:dialog`
 * En komponent med en klassisk dialogruta för användargränssnittsdesign (d.v.s. en design_dialog-nod) måste ha en motsvarande designdialogruta för användargränssnittet (d.v.s. en `cq:design_dialog` underordnad nod).
 * En komponent med både en klassisk användargränssnittsdialogruta och en klassisk dialogruta för användargränssnittsdesign måste ha både en motsvarande dialogruta för användargränssnittet för touchredigering och en motsvarande designdialogruta för användargränssnittet för touchgränssnitt.
 
-Dokumentationen för AEM Modernization Tools innehåller dokumentation och verktyg för hur du konverterar komponenter från Classic UI till Touch UI. Mer information finns [i AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) .
+Dokumentationen för AEM Moderniseringsverktyg innehåller dokumentation och verktyg för hur du konverterar komponenter från det klassiska gränssnittet till Touch-gränssnittet. Mer information finns [i AEM Moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) .
 
 ### Paketen får inte innehålla blandbart och oföränderligt innehåll {#oakpal-packages-immutable}
 
@@ -717,9 +717,9 @@ Dokumentationen för AEM Modernization Tools innehåller dokumentation och verkt
 
 **Sedan**: Version 2020.5.0
 
-För att vara kompatibel med driftsättningsmodellen för molntjänster måste enskilda innehållspaket innehålla antingen innehåll för de oföränderliga områdena i databasen (d.v.s. inte ändras av kundkoden och orsakar en separat överträdelse) eller det ändringsbara området (d.v.s. allt annat), men inte båda. `/apps and /libs, although /libs` Ett paket som innehåller båda `/apps/myco/components/text and /etc/clientlibs/myco` är till exempel inte kompatibelt med molntjänsten och orsakar att ett problem rapporteras.
+För att vara kompatibel med databasens distributionsmodell måste enskilda innehållspaket innehålla antingen innehåll för de oföränderliga områdena i databasen (d.v.s. inte ändras av kundkoden och orsakar en separat överträdelse) eller det ändringsbara området (d.v.s. allt annat), men inte båda. `/apps and /libs, although /libs` Ett paket som innehåller båda `/apps/myco/components/text and /etc/clientlibs/myco` är till exempel inte kompatibelt med Cloud Service och orsakar att ett problem rapporteras.
 
-Mer information finns i [AEM-projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) .
+Refer to [AEM Project Structure](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) for more details.
 
 ### Omvända replikeringsagenter ska inte användas {#oakpal-reverse-replication}
 
@@ -731,7 +731,7 @@ Mer information finns i [AEM-projektstruktur](https://docs.adobe.com/content/hel
 
 **Sedan**: Version 2020.5.0
 
-Stöd för omvänd replikering är inte tillgängligt i distributioner av molntjänster, vilket beskrivs i [versionsinformationen: Borttagning av replikeringsagenter](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
+Stöd för omvänd replikering är inte tillgängligt i distributioner av Cloud Service, vilket beskrivs i [versionsinformationen: Borttagning av replikeringsagenter](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
 
 Kunder som använder omvänd replikering bör kontakta Adobe för att få alternativa lösningar.
 
