@@ -2,9 +2,9 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 translation-type: tm+mt
-source-git-commit: bfdb862f07dc37b540c07f267b2bdcc2100bcca2
+source-git-commit: a829a70350464e0d96ae302aa305e140affbc63a
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1842'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,11 @@ Inom Adobe Experience Manager som Cloud Service utökar ett innehållsfragment e
 
 * [Skapa och hantera innehållsfragment](/help/assets/content-fragments/content-fragments.md) och [sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) för mer information om innehållsfragment.
 
-* [Hantera resurser](/help/assets/manage-digital-assets.md) och [anpassa och utöka resursredigeraren](/help/assets/extend-asset-editor.md) för mer information om standardresurser.
+* [Hantera resurser](/help/assets/manage-digital-assets.md) för mer information om standardresurser.
+
+<!-- Removing the extend-asset-editor article for now as I'm unsure of its accuracy. Hence commenting this link.
+* [Managing Assets](/help/assets/manage-digital-assets.md) and [Customizing and Extending the Asset Editor](/help/assets/extend-asset-editor.md) for further information about standard assets.
+-->
 
 ## Arkitektur {#architecture}
 
@@ -99,7 +103,7 @@ Integrera med Assets Core:
 >
 >Komponenten [Innehållsfragment är en del av kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html). Mer information finns i [Utveckla kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html) .
 
-Innehållsfragment kan refereras från AEM-sidor, precis som andra resurstyper. AEM innehåller kärnkomponenten **[](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)**Content Fragment - en[komponent som gör att du kan ta med innehållsfragment på sidorna](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här kärnkomponenten för**[innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html)** .
+Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM innehåller kärnkomponenten **[för](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)** innehållsfragment - en [komponent som gör att du kan ta med innehållsfragment på sidorna](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här kärnkomponenten för **[innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html)** .
 
 * Komponenten använder egenskapen `fragmentPath` för att referera till det faktiska innehållsfragmentet. Egenskapen hanteras på samma sätt som liknande egenskaper för andra tillgångstyper. `fragmentPath` till exempel när innehållsfragmentet flyttas till en annan plats.
 
@@ -131,7 +135,7 @@ Innehållsfragment kan integreras med:
 
 * **Översättningar**
 
-   Content Fragments är helt integrerat med arbetsflödet för AEM-översättning. Arkitekturnivå innebär följande:
+   Content Fragments är helt integrerat med arbetsflödet för AEM. Arkitekturnivå innebär följande:
 
    * De enskilda översättningarna av ett innehållsfragment är i själva verket separata fragment. till exempel:
 
@@ -145,7 +149,7 @@ Innehållsfragment kan integreras med:
    * Förutom de regelbaserade sökvägarna finns det ingen ytterligare koppling mellan de olika språkversionerna av ett innehållsfragment. De hanteras som två separata fragment, även om användargränssnittet ger möjlighet att navigera mellan språkvarianterna.
    >[!NOTE]
    >
-   >Arbetsflödet för AEM-översättning fungerar med `/content`:
+   >Det AEM arbetsflödet för översättning fungerar med `/content`:
    >
    >* När innehållsfragmentmodellerna finns i `/conf`inkluderas de inte i sådana översättningar. Du kan internationalisera gränssnittssträngarna.
 
@@ -284,11 +288,11 @@ Se följande:
 >
 >Ta hänsyn till den här bakgrundsinformationen. Du ska inte ändra någonting här (eftersom det är markerat som ett *privat område* i databasen), men det kan i vissa fall hjälpa att förstå hur saker och ting fungerar under huven.
 
-Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), är av avgörande betydelse. Eftersom sådana atomiska redigeringsfunktioner för flera vyer inte är ett typiskt AEM-koncept använder innehållsfragment det som kallas *redigeringssession*.
+Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), är av avgörande betydelse. Eftersom sådana atomiska redigeringsfunktioner för flera vyer inte är ett vanligt AEM, används det som kallas *redigeringssession* i innehållsfragment.
 
 En redigeringssession startas när användaren öppnar ett innehållsfragment i redigeraren. Redigeringssessionen avslutas när användaren lämnar redigeraren genom att välja **Spara** eller **Avbryt**.
 
-Tekniskt sett görs alla redigeringar av *live* -innehåll, precis som med all annan AEM-redigering. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** görs inget specifikt eftersom all redigering utfördes på *direktsänt* innehåll, vilket innebär att alla ändringar redan bevaras. Om du klickar på **Spara** utlöses även bakgrundsbearbetning (som att skapa fulltextsökningsinformation och/eller hantera blandade medieresurser).
+Tekniskt sett görs alla redigeringar i *direktinnehåll* , precis som med all annan AEM. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** görs inget specifikt eftersom all redigering utfördes på *direktsänt* innehåll, vilket innebär att alla ändringar redan bevaras. Om du klickar på **Spara** utlöses även bakgrundsbearbetning (som att skapa fulltextsökningsinformation och/eller hantera blandade medieresurser).
 
 Det finns vissa säkerhetsåtgärder för kantfall. Om användaren till exempel försöker lämna redigeraren utan att spara eller avbryta redigeringssessionen. Det går även att spara data med jämna mellanrum för att förhindra dataförlust.
 Observera att två användare kan redigera samma innehållsfragment samtidigt och därför skriva över varandras ändringar. För att förhindra detta måste innehållsfragmentet låsas genom att använda DAM-administratörens *utcheckningsåtgärd* för fragmentet.
