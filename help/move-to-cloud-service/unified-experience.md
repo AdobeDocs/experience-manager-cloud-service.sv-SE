@@ -2,9 +2,9 @@
 title: Enhetlig upplevelse för verktyg för kodkorrigering
 description: Enhetlig upplevelse för verktyg för kodkorrigering
 translation-type: tm+mt
-source-git-commit: c00b10b4d564e05099740b9ff991624db4f37a3d
+source-git-commit: c554506aea99518c94666f5d2e6151a3dce3b91e
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 # Enhetlig upplevelse för verktyg för kodkorrigering {#unified-experience}
 
-Flera verktyg med olika interaktionspunkter för kunderna skapar en osammanhängande upplevelse och ökar komplexiteten i att använda verktyg, där var och en har olika körningskrav vad gäller installation, konfiguration och utförande.
+Med verktygen för enhetlig upplevelse av kodkorrigering förenas upplevelsen för körning av AEM som ett verktyg för omfaktorisering av Cloud Service som används för dispatcherfiler, kod och databaser.
+
+Det här verktyget minskar komplexiteten med att använda verktyg för kodomfaktorisering, där varje verktyg har olika körningskrav när det gäller installation, konfiguration och körning.
 
 ## Fördelar {#benefits}
 
@@ -26,9 +28,12 @@ Med verktygen för enhetlig upplevelse av omfaktorisering och tillhörande datab
 
 * Förenkla framtidens tillägg av nya verktyg som att lägga till nya verktyg i plugin-programmet genom att lägga till ett nytt kommando för utvecklare och en enkel plugin-uppdatering för användaren, så att upplevelsen blir mer enhetlig med mer värdetillägg.
 
-### Programdesignen
+## Om plugin-programmet {#understanding-plugin}
 
-Med dessa verktyg kombineras alla verktyg för kodomfaktorisering i ett node.js-program som exponeras för `aio-cli plugin` att ge användaren en konsekvent användarupplevelse.
+Kundernas kod, databasstruktur eller konfigurationer `aio-cli-plugin-aem-cloud-service-migration` omformas på kundens lokala dator. Den här sidan innehåller detaljerade krav och designbeslut för den enhetliga upplevelsen.
+Det finns som en öppen källkod för communityn som kan utökas för anpassade användningsfall.
+
+Med dessa verktyg kombineras alla verktyg för kodomfaktorisering i ett node.js-program som exponeras för `aio-cli plugin` att ge användaren en konsekvent användarupplevelse. Pluginen skannar kundens lokala kodbas och producerar AEM som en Cloud Service-kompatibel kod, konfigurationer och paket som sedan kan distribueras till Cloud Service.
 
 Plugin-programmet består av två huvuddelar:
 
@@ -44,16 +49,12 @@ Plugin-programmet består av två huvuddelar:
 
    * Inspelning av åtgärder som utförts under migreringen, i en konsekvent ordning för att skapa en sammanfattningsrapport.
 
-## Använda plugin-programmet {#using-plugin}
-
-Kundernas kod, databasstruktur eller konfigurationer `aio-cli-plugin-aem-cloud-service-migration` omformas på kundens lokala dator. Den här sidan innehåller detaljerade krav och designbeslut för den enhetliga upplevelsen.
-Det finns som en öppen källkod för communityn som kan utökas för anpassade användningsfall.
-
 ## Tillgänglighet {#availability}
 
-Du kan installera och använda `aio-cli-plugin-aem-cloud-service-migration` via `aio-cli` (som för närvarande bara är integrerat med dispatcherns konverterare).
+Du kan installera och använda `aio-cli-plugin-aem-cloud-service-migration` via `aio-cli`.
 
-Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) för att lära dig mer om användningen och hur du kan bidra till det här verktyget.
+>[!NOTE]
+>För närvarande är det här verktyget bara integrerat med Dispatcher Converter.
 
-Plugin-koden har öppnats i Github.
+Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) för att lära dig mer om användningen och hur du kan bidra till denna plugin-kod som är öppen från GitHub.
 
