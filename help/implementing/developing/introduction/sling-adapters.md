@@ -2,9 +2,9 @@
 title: Använda Sling-adaptrar
 description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 translation-type: tm+mt
-source-git-commit: 88d18d0fbfa83243f7fb02e67e8b7d171f019a34
+source-git-commit: 4201207acb48ab61892f4dd5de05d7f5f9f7ba83
 workflow-type: tm+mt
-source-wordcount: '2333'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Det finns följande användningsområden:
 
 * Skapa genvägar för objekt som kräver att interna kontextobjekt skickas.
 
-   Den JCR-baserade referensen [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) innehåller till exempel en referens till begäran [`JCR Session`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html)som i sin tur behövs för många objekt som ska fungera baserat på den begärandesessionen, till exempel [`PageManager`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) eller [`UserManager`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/UserManager.html).
+   Den JCR-baserade referensen [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) innehåller till exempel en referens till begäran [`JCR Session`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html)som i sin tur behövs för många objekt som ska fungera baserat på den begärandesessionen, till exempel [`PageManager`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/PageManager.html) eller [`UserManager`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/security/UserManager.html).
 
 * Genväg till tjänster.
 
@@ -64,7 +64,7 @@ Det finns olika sätt att `Adaptable.adaptTo()` implementera:
 * själva objektet, implementera själva metoden och mappa till vissa objekt.
 * Med en [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)som kan mappa godtyckliga objekt.
 
-   Objekten måste fortfarande implementera `Adaptable` gränssnittet och måste utöka [`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (som skickar `adaptTo` anropet till en central adapterhanterare).
+   Objekten måste fortfarande implementera `Adaptable` gränssnittet och måste utöka [`SlingAdaptable`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (som skickar `adaptTo` anropet till en central adapterhanterare).
 
    Detta gör att det går att ansluta till `adaptTo` mekanismen för befintliga klasser, till exempel `Resource`.
 
@@ -76,7 +76,7 @@ I det första fallet kan javadocs visa vad som `adaptTo-targets` är möjligt. D
 
 ### Sling {#sling}
 
-[**Resursen **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html)anpassas till:
+[**Resursen**](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/Resource.html) anpassas till:
 
 <table>
  <tbody>
@@ -97,16 +97,16 @@ I det första fallet kan javadocs visa vad som `adaptTo-targets` är möjligt. D
    <td>Returnerar en karta över egenskaperna, om detta är en JCR-nodbaserad resurs (eller annan resurs som stöder värdekartor).</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a></td>
-   <td>Returnerar en användbar karta över egenskaperna, om detta är en JCR-nodbaserad resurs (eller annan resurs som stöder värdekartor). Kan också uppnås (enklare) med<br /> hjälp av <code><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceUtil.html#getvaluemap%28org.apache.sling.api.resource.resource%29">ResourceUtil.getValueMap(Resource)</a></code> (hanterar null-skiftläge etc.).</td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a></td>
+   <td>Returnerar en användbar karta över egenskaperna, om detta är en JCR-nodbaserad resurs (eller annan resurs som stöder värdekartor). Kan också uppnås (enklare) med<br /> hjälp av <code><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/ResourceUtil.html#getvaluemap%28org.apache.sling.api.resource.resource%29">ResourceUtil.getValueMap(Resource)</a></code> (hanterar null-skiftläge etc.).</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/inherit/InheritanceValueMap.html">ArvValueMap</a></td>
-   <td>Tillägg för <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a> som gör det möjligt att ta hänsyn till resurshierarkin vid sökning efter egenskaper.</td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/commons/inherit/InheritanceValueMap.html">ArvValueMap</a></td>
+   <td>Tillägg för <a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a> som gör det möjligt att ta hänsyn till resurshierarkin vid sökning efter egenskaper.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ModifiableValueMap.html">ModiitableValueMap</a></td>
-   <td>Ett tillägg till <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a>som gör att du kan ändra egenskaper på den noden.</td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/ModifiableValueMap.html">ModiitableValueMap</a></td>
+   <td>Ett tillägg till <a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a>som gör att du kan ändra egenskaper på den noden.</td>
   </tr>
   <tr>
    <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td>
@@ -133,81 +133,81 @@ I det första fallet kan javadocs visa vad som `adaptTo-targets` är möjligt. D
    <td>Returnerar värdet/värdena om detta är en JCR-egenskapsbaserad resurs (och värdet passar).</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html">EtiketteradResurs</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/commons/LabeledResource.html">EtiketteradResurs</a></td>
    <td>Om detta är en JCR-nodbaserad resurs.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html">Sidan</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/Page.html">Sidan</a></td>
    <td>Om detta är en JCR-nodbaserad resurs och noden är en <code>cq:Page</code> (eller <code>cq:PseudoPage</code>).</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html">Komponent</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/components/Component.html">Komponent</a></td>
    <td>Om detta är en <code>cq:Component</code> nodresurs.</td>
   </tr>  
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Design.html">Design</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/designer/Design.html">Design</a></td>
    <td>Om detta är en designnod (<code>cq:Page</code>).</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Template.html">Mall</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/Template.html">Mall</a></td>
    <td>Om detta är en <code>cq:Template</code> nodresurs.</td>
   </tr>  
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/Blueprint.html">Blueprint</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/msm/api/Blueprint.html">Blueprint</a></td>
    <td>Om detta är en <code>cq:Template</code> nodresurs.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Asset.html">Tillgång</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/dam/api/Asset.html">Tillgång</a></td>
    <td>Om detta är en resurs för dam:Asset-noden.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Rendition.html">Återgivning</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/dam/api/Rendition.html">Återgivning</a></td>
    <td>Om det här är en dam:Asset-rendering (not:file under renderingsmappen för en dam:Assert)</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/Tag.html">Tagg</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/tagging/Tag.html">Tagg</a></td>
    <td>Om detta är en <code>cq:Tag</code> nodresurs.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/UserManager.html">UserManager</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/security/UserManager.html">UserManager</a></td>
    <td>Baserat på JCR-sessionen om detta är en JCR-baserad resurs och användaren har behörighet att komma åt UserManager.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">Auktoriserbar</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">Auktoriserbar</a></td>
    <td>Authorizable är det gemensamma grundgränssnittet för Användare och Grupp.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/User.html">Användare</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/jackrabbit/api/security/user/User.html">Användare</a></td>
    <td>Användaren är en särskild auktoriseringsfunktion som kan autentiseras och personifieras.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/SimpleSearch.html">SimpleSearch</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/search/SimpleSearch.html">SimpleSearch</a></td>
    <td>Söker under resursen (eller använder setSearchIn()) om detta är en JCR-baserad resurs.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/status/WorkflowStatus.html">WorkflowStatus</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/workflow/status/WorkflowStatus.html">WorkflowStatus</a></td>
    <td>Arbetsflödesstatus för den angivna sidans/arbetsflödets nyttolastnod.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/ReplicationStatus.html">ReplicationStatus</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/replication/ReplicationStatus.html">ReplicationStatus</a></td>
    <td>Replikeringsstatus för den angivna resursen eller dess jcr:content-undernod (markerad först).</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/connector/ConnectorResource.html">KopplingResurs</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/connector/ConnectorResource.html">KopplingResurs</a></td>
    <td>Returnerar en anpassad anslutningsresurs för vissa typer, om detta är en JCR-nodbaserad resurs.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/config/package-summary.html">Konfig</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/contentsync/config/package-summary.html">Konfig</a></td>
    <td>Om detta är en <code>cq:ContentSyncConfig</code> nodresurs.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/config/package-summary.html">ConfigEntry</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/contentsync/config/package-summary.html">ConfigEntry</a></td>
    <td>Om detta ligger under en <code>cq:ContentSyncConfig</code> nodresurs.</td>
   </tr>
  </tbody>
 </table>
 
-[**ResourceResolver **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver.html)anpassas till:
+[**ResourceResolver**](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/ResourceResolver.html) anpassas till:
 
 <table>
  <tbody>
@@ -216,54 +216,54 @@ I det första fallet kan javadocs visa vad som `adaptTo-targets` är möjligt. D
    <td>JCR-sessionen för begäran, om det här är en JCR-baserad resurslösare (standard).</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html">PageManager</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/PageManager.html">PageManager</a></td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/ComponentManager.html">ComponentManager</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/components/ComponentManager.html">ComponentManager</a></td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Designer.html">Designer</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/designer/Designer.html">Designer</a></td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/AssetManager.html">AssetManager</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/dam/api/AssetManager.html">AssetManager</a></td>
    <td>Baserat på JCR-sessionen, om detta är en JCR-baserad resurslösare.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/TagManager.html">TagManager</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/tagging/TagManager.html">TagManager</a></td>
    <td>Baserat på JCR-sessionen, om detta är en JCR-baserad resurslösare.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/UserManager.html">UserManager</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/jackrabbit/api/security/user/UserManager.html">UserManager</a></td>
    <td>UserManager ger åtkomst till och möjlighet att underhålla auktoriserbara objekt, dvs. användare och grupper. UserManager är bundet till en viss session.
    </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">Auktoriserbar</a> </td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">Auktoriserbar</a> </td>
    <td>Den aktuella användaren.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/User.html">Användare</a><br /> </td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/jackrabbit/api/security/user/User.html">Användare</a><br /> </td>
    <td>Den aktuella användaren.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html">QueryBuilder</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/search/QueryBuilder.html">QueryBuilder</a></td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html">Externalizer</a></td>
-   <td>För att göra absoluta URL:er externaliserade, även med objektet request.<br /> </td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/commons/Externalizer.html">Externalizer</a></td>
+   <td>För att externa absoluta URL:er ska kunna skapas, även med objektet request.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-[**SlingHttpServletRequest **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html)anpassas till:
+[**SlingHttpServletRequest**](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) anpassas till:
 
 Inga mål ännu, men implementerar Adaptable och kan användas som källa i en anpassad AdapterFactory.
 
-[**SlingHttpServletResponse **](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletResponse.html)anpassas till:
+[**SlingHttpServletResponse**](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/SlingHttpServletResponse.html) anpassas till:
 
 <table>
  <tbody>
@@ -276,16 +276,16 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 #### WCM {#wcm}
 
-**[Sidan](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)**anpassas till:
+**[Sidan](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/Page.html)** anpassas till:
 
 <table>
  <tbody>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resurs</a><br /> </td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/Resource.html">Resurs</a><br /> </td>
    <td>Sidans resurs.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html">EtiketteradResurs</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/commons/LabeledResource.html">EtiketteradResurs</a></td>
    <td>Etiketterad resurs (== this).</td>
   </tr>
   <tr>
@@ -299,24 +299,24 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
  </tbody>
 </table>
 
-**[Komponenten](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html)**anpassas till:
+**[Komponenten](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/components/Component.html)** anpassas till:
 
-| [Resurs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | Komponentens resurs. |
+| [Resurs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/Resource.html) | Komponentens resurs. |
 |---|---|
-| [EtiketteradResurs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html) | Etiketterad resurs (== this). |
+| [EtiketteradResurs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/commons/LabeledResource.html) | Etiketterad resurs (== this). |
 | [Nod](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Komponentens nod. |
 | ... | Allt som komponentens resurs kan anpassas till. |
 
-**[Mallen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Template.html)**anpassas till:
+**[Mallen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/Template.html)** anpassas till:
 
 <table>
  <tbody>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resurs</a><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/Resource.html">Resurs</a><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td>
    <td>Mallens resurs.</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html">EtiketteradResurs</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/commons/LabeledResource.html">EtiketteradResurs</a></td>
    <td>Etiketterad resurs (== this).</td>
   </tr>
   <tr>
@@ -336,13 +336,13 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 | [Nod](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Returnerar hemnoden för användaren/gruppen. |
 |---|---|
-| [ReplicationStatus](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/ReplicationStatus.html) | Returnerar replikeringsstatusen för användarens/gruppens hemnod. |
+| [ReplicationStatus](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/replication/ReplicationStatus.html) | Returnerar replikeringsstatusen för användarens/gruppens hemnod. |
 
 #### DAM {#dam}
 
 **Tillgången** anpassas till:
 
-| [Resurs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | Resurs för tillgången. |
+| [Resurs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/Resource.html) | Resurs för tillgången. |
 |---|---|
 | [Nod](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Nod för resursen. |
 | ... | Allt som resursen kan anpassas till. |
@@ -351,7 +351,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 **Taggen** anpassas till:
 
-| [Resurs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | Resurs för taggen. |
+| [Resurs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/org/apache/sling/api/resource/Resource.html) | Resurs för taggen. |
 |---|---|
 | [Nod](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Taggens nod. |
 | ... | Allt som taggens resurs kan anpassas till. |
