@@ -89,7 +89,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 1. Gå **[!UICONTROL Assets]** sedan till den mapp som du vill använda en metadataprofil på i den vänstra listen.
 1. På mappen: tryck eller klicka på bockmarkeringen för att markera den och tryck eller klicka sedan på **Egenskaper**.
-1. Markera fliken **[!UICONTROL Metadata Profiles]**, välj profilen i listrutan och tryck på **[[Spara]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+1. Markera fliken **[!UICONTROL Metadata Profiles]**, välj profilen i listrutan och tryck på **[Spara]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 ### Använd en metadataprofil globalt {#applying-a-metadata-profile-globally}
 
