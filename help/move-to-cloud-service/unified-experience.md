@@ -2,7 +2,7 @@
 title: Enhetlig upplevelse för verktyg för kodkorrigering
 description: Enhetlig upplevelse för verktyg för kodkorrigering
 translation-type: tm+mt
-source-git-commit: 03434343829e1a1fb95256a607619b55626c6afc
+source-git-commit: ae60d0b472ed6368aeb5806329ff1d5c689e0827
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -30,8 +30,8 @@ Plugin- `aio-cli-plugin-aem-cloud-service-migration` programmet består av två 
 
 * **Användargränssnitt**
 
-   * `aio-cli` kommandon för att köra ett eller flera verktyg för kodomfaktorisering (genom att kedja verktygen som ska köras sekventiellt)
-   * `config.yaml` som har de indataparametrar som krävs
+   * `aio-cli` kommandon för att köra ett eller flera verktyg för kodomfaktorisering (genom att kedja verktygen som ska köras sekventiellt).
+   * `config.yaml` som har de indataparametrar som krävs.
 
 * **Underliggande Code Refactoring Tool Suite**
 
