@@ -1,20 +1,20 @@
 ---
 title: Sök efter digitala resurser och bilder i AEM
-description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp av panelen Filter och hur du använder de resurser som visas i sökningen.
+description: Lär dig hur du söker efter nödvändiga resurser i AEM genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7317a5db6ed348f99b2290d72ddf6e540fae5456
+source-git-commit: c0c5663999158e326bb4617f3bf34e96e7615f64
 workflow-type: tm+mt
-source-wordcount: '4491'
+source-wordcount: '4489'
 ht-degree: 6%
 
 ---
 
 
-# Söka efter resurser i AEM {#search-assets-in-aem}
+# Sök efter resurser i AEM {#search-assets-in-aem}
 
-Ni kan uppnå högre innehållshastighet med användarvänliga alternativ för tillgångsidentifiering i Experience Manager. Teamen kan korta time-to-market med smidiga, intelligenta sökfunktioner som är körklara och anpassade metoder. Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer. Enkla, avancerade och anpassade sökningar som du kan utföra via användargränssnittet i AEM Resurser eller andra appar och ytor hjälper dig att fylla i dessa användningsområden.
+Du kan uppnå högre innehållshastighet med användarvänliga alternativ för tillgångsidentifiering i Experience Manager. Teamen kan korta time-to-market med smidiga, intelligenta sökfunktioner som är körklara och anpassade metoder. Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer. Enkla, avancerade och anpassade sökningar som du kan utföra via AEM Assets användargränssnitt eller andra appar och ytor hjälper dig att klara dessa användningar.
 
 AEM stöder följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsområden.
 
@@ -31,11 +31,11 @@ AEM stöder följande användningsfall och den här artikeln beskriver användni
 | [Begränsningar](#tips) och [tips](#limitations) |  |  |
 | [Illustrerade exempel](#samples) |  |  |
 
-Sök efter resurser med Omnissearch-fältet högst upp i AEM-webbgränssnittet. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** i AEM, klicka på ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot för nyckelord `/` (snedstreck) för att öppna omsökningsfältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. Du kan göra avancerade sökningar för att öka eller begränsa [sökningens](#scope)omfattning.
+Sök efter resurser med hjälp av Omnissearch-fältet högst upp i AEM webbgränssnitt. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** i AEM, klicka på ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot för nyckelord `/` (snedstreck) för att öppna omsökningsfältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. Du kan göra avancerade sökningar för att öka eller begränsa [sökningens](#scope)omfattning.
 
-Använd panelen för att **[!UICONTROL Filters]** söka efter resurser, mappar, taggar och metadata. Du kan filtrera sökresultat baserat på de olika alternativen (predikaten), t.ex. filtyp, filstorlek, datum då filen senast ändrades, status för resursen, insiktdata och Adobe Stock-licensiering. Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorer med [sökfaktorer](/help/assets/search-facets.md).
+Använd panelen för att **[!UICONTROL Filters]** söka efter resurser, mappar, taggar och metadata. Du kan filtrera sökresultaten baserat på de olika alternativen (predikaten), t.ex. filtyp, filstorlek, datum då filen senast ändrades, status för resursen, information om insikter och Adobe Stock-licensiering. Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorer med [sökfaktorer](/help/assets/search-facets.md).
 
-AEM-sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/manage-collections.md).
+AEM kan söka efter samlingar och söka efter resurser i en samling. Se [söksamlingar](/help/assets/manage-collections.md).
 
 ## Förstå sökgränssnittet {#searchui}
 
@@ -69,7 +69,7 @@ När du börjar skriva ett nyckelord föreslår AEM möjliga söknyckelord eller
 
 Du kan köra nyckelordssökningar från OmniSearch-fältet. Nyckelordssökningen är inte skiftlägeskänslig och är en fulltextsökning (i alla vanliga metadatafält). Om mer än ett nyckelord används är `AND` standardoperatorn mellan nyckelorden. Resultatet sorteras efter relevans, med början med närmast matchande. För flera nyckelord är mer relevanta resultat de resurser som innehåller båda termerna i sina metadata. I metadata rangordnas nyckelord som visas som smarta taggar högre än nyckelord som visas i andra metadatafält.
 
-Med AEM kan du ge en viss sökterm högre vikt. Det är också möjligt att höja rankningen för ett antal målinriktade resurser för specifika söktermer. AEM-administratörer kan göra dessa konfigurationer enligt beskrivningen nedan.
+AEM gör det möjligt att ge ett visst sökord högre vikt. Det är också möjligt att höja rankningen för ett antal målinriktade resurser för specifika söktermer. AEM administratörer kan göra dessa konfigurationer enligt beskrivningen nedan.
 
 För att snabbt hitta relevanta resurser innehåller det avancerade gränssnittet funktioner för filtrering, sortering och markering. Du kan filtrera resultat baserat på flera villkor och se antalet sökningar efter olika filter. Du kan också köra sökningen igen genom att ändra frågan i fältet Omnissearch. När du ändrar söktermer eller filter används de andra filtren för att bevara sökkontexten.
 
@@ -116,7 +116,7 @@ Du kan använda detta till din fördel genom att öka rankningen för vissa resu
 
 ## Avancerad sökning {#scope}
 
-I AEM finns olika metoder, till exempel filter som gäller för de sökda resurserna, så att du snabbare kan hitta de önskade resurserna. Nedan beskrivs några vanliga metoder. Några [illustrerade exempel](#samples) visas nedan.
+AEM innehåller olika metoder, som filter som används för de sökda resurserna, så att du snabbare kan hitta de önskade resurserna. Nedan beskrivs några vanliga metoder. Några [illustrerade exempel](#samples) visas nedan.
 
 **Sök efter filer eller mappar**: Se antingen filer, mappar eller båda i sökresultaten. På **[!UICONTROL Filters]** panelen kan du välja rätt alternativ. Se [sökgränssnitt](#searchui).
 
@@ -137,7 +137,7 @@ To find images that are visually similar to a user-selected image, click **[!UIC
 
 ### Adobe Stock-bilder {#adobestock}
 
-I AEM-användargränssnittet kan användare söka efter [Adobe Stock-mediefiler](/help/assets/aem-assets-adobe-stock.md) och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i omsökningsfältet. Du kan också använda panelen Filter för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret.
+I det AEM användargränssnittet kan användare söka efter [Adobe Stock-resurser](/help/assets/aem-assets-adobe-stock.md) och licensiera de nödvändiga resurserna. Lägg till `Location: Adobe Stock` i omsökningsfältet. Du kan också använda panelen Filter för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock filnummer.
 
 ### Dynamiska medieresurser {#dmassets}
 
@@ -163,7 +163,7 @@ Du kan söka efter resurser baserat på exakta värden för specifika metadataf�
 | Fråntid | offtime:YYY-MM-DDTHH |
 | Tidsintervall (förfaller dateontime, offtime) | faktafält: nedsänkt..upperbound |
 | Bana | /content/dam/&lt;mappnamn> |
-| PDF-titel | pdftitle:&quot;Adobe Document&quot; |
+| PDF-titel | pdftitle:&quot;Adobe-dokument&quot; |
 | Ämne | ämne:&quot;Utbildning&quot; |
 | Taggar | taggar:&quot;Plats och resa&quot; |
 | Typ | type:&quot;image\png&quot; |
@@ -183,27 +183,27 @@ Här är några exempel på sökformat för komplexa frågor:
 * Så här visar du resurser med egenskapsvärden som börjar med en viss sträng (till exempel: heter Scott Reynolds): `title:Scott*`
 * Så här visar du resurser med egenskapsvärden som slutar med en viss sträng (till exempel: heter Scott Reynolds): `title:*Reynolds`
 * Så här visar du resurser med ett egenskapsvärde som innehåller en viss sträng (till exempel: title = Basel Meeting Room): `title:*Meeting*`
-* Så här visar du resurser som innehåller en viss sträng och har ett specifikt egenskapsvärde (till exempel: sök efter Adobe-strängen i resurser med title=John Doe): `*Adobe* title:"John Doe"`
+* Så här visar du resurser som innehåller en viss sträng och har ett specifikt egenskapsvärde (till exempel: sök efter strängen Adobe i resurser med rubriken=John Doe): `*Adobe* title:"John Doe"`
 
-## Sök efter resurser från andra AEM-erbjudanden eller gränssnitt {#beyondomnisearch}
+## Sök efter resurser från andra AEM eller gränssnitt {#beyondomnisearch}
 
-Adobe Experience Manager (AEM) kopplar DAM-databasen till olika andra AEM-lösningar för att ge snabbare åtkomst till digitalt material och effektivisera de kreativa arbetsflödena. Alla resursidentifieringar börjar med bläddring eller sökning. Sökfunktionen är i stort sett densamma på de olika ytorna och lösningarna. Vissa sökmetoder ändras när målgruppen, användningsexemplen och användargränssnittet varierar mellan olika AEM-lösningar. De specifika metoderna beskrivs för de enskilda lösningarna på länkarna nedan. De universellt tillämpliga tipsen och beteendena beskrivs i den här artikeln.
+Adobe Experience Manager (AEM) kopplar DAM-databasen till olika andra AEM lösningar för att ge snabbare åtkomst till digitalt material och effektivisera de kreativa arbetsflödena. Alla resursidentifieringar börjar med bläddring eller sökning. Sökfunktionen är i stort sett densamma på de olika ytorna och lösningarna. Vissa sökmetoder ändras när målgruppen, användningsexemplen och användargränssnittet varierar mellan olika AEM. De specifika metoderna beskrivs för de enskilda lösningarna på länkarna nedan. De universellt tillämpliga tipsen och beteendena beskrivs i den här artikeln.
 
-### Söka efter resurser från Adobe Asset Link-panelen {#aal}
+### Söka efter resurser från panelen Resurslänk i Adobe {#aal}
 
-Med Adobe Asset Link kan formgivarna nu komma åt innehåll som lagras i AEM Assets, utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen i Creative Cloud-programmen kan du smidigt söka efter, söka efter, checka ut och checka in resurser: Photoshop, Illustrator och InDesign. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Senseis maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
+Med Adobe Asset Link kan formgivare nu komma åt innehåll som lagras i AEM Assets utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen i Creative Cloud-apparna kan du smidigt bläddra bland, söka efter, checka ut och checka in resurser: Photoshop, Illustrator och InDesign. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Sensei maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
 
-### Sök efter resurser i AEM-skrivbordsappen {#desktopapp}
+### Söka efter resurser i AEM datorprogram {#desktopapp}
 
-Kreatörer använder datorprogrammet för att göra AEM Resurser enkelt sökbara och tillgängliga lokalt på datorn (Win eller Mac). Kreatörerna kan enkelt visa de önskade resurserna i Finder eller Utforskaren i Mac, öppna i skrivbordsprogram och ändra lokalt - ändringarna sparas tillbaka till AEM med en ny version som skapas i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, * och ? jokertecken och operatorn AND. Se [Bläddra bland, söka efter och förhandsgranska resurser](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
+Kreatörer använder datorprogrammet för att göra AEM Assets enkelt sökbart och tillgängligt på sin lokala dator (Win eller Mac). Det är enkelt att visa de önskade resurserna i Finder eller Utforskaren i Windows, som har öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan i AEM med en ny version som har skapats i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, * och ? jokertecken och operatorn AND. Se [Bläddra bland, söka efter och förhandsgranska resurser](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
 
 ### Sök efter resurser i varumärkesportalen {#brandportal}
 
 Affärsanvändare och marknadsförare använder Brand Portal för att effektivt och säkert dela godkänt digitalt material med interna team, partners och återförsäljare. Se [Sök resurser på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html).
 
-### Sök efter Adobe Stock-bilder {#adobestock-1}
+### Sök i Adobe Stock-bilder {#adobestock-1}
 
-I AEM-användargränssnittet kan användarna söka efter Adobe Stock-mediefiler och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i Omnissearch-fältet. Du kan också använda **[!UICONTROL Filters]** panelen för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret. Se [Hantera Adobe Stock-bilder i AEM](/help/assets/aem-assets-adobe-stock.md#usemanage).
+I det AEM användargränssnittet kan användare söka efter Adobe Stock-resurser och licensiera de nödvändiga resurserna. Lägg till `Location: Adobe Stock` i Omnissearch-fältet. Du kan också använda **[!UICONTROL Filters]** panelen för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock filnummer. Se [Hantera Adobe Stock-bilder i AEM](/help/assets/aem-assets-adobe-stock.md#usemanage).
 
 ### Sök efter Dynamic Media-resurser {#dynamicmedia}
 
@@ -218,7 +218,7 @@ Författare kan använda Content Finder för att söka i DAM-databasen efter rel
 
 ### Sök i samlingar {#collections}
 
-AEM-sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/manage-collections.md).
+AEM kan söka efter samlingar och söka efter resurser i en samling. Se [söksamlingar](/help/assets/manage-collections.md).
 
 ## Resursväljare {#assetselector}
 
@@ -250,12 +250,12 @@ Sökfunktionen i AEM Assets har följande begränsningar:
 * Ange inget radavståndsutrymme i sökfrågan, annars fungerar inte sökningen.
 * AEM kan fortsätta att visa söktermen efter att du har valt egenskaper för en resurs bland sökresultaten och sedan avbryta sökningen (CQ-4273540).
 * När du söker efter mappar, filer och mappar kan sökresultaten inte sorteras efter någon parameter.
-* Om du trycker på retur utan att skriva något i Omnissearch bar, returnerar AEM en lista över endast filer och inte mappar. Om du söker specifikt efter mappar utan att använda ett nyckelord returnerar AEM inga resultat.
+* Om du trycker på retur utan att skriva något i omsökningsfältet, returnerar AEM en lista med bara filer och inte mappar. Om du söker specifikt efter mappar utan att använda ett nyckelord returnerar AEM inga resultat.
 
 Visuell sökning eller likhetssökning har följande begränsningar:
 
 * Visuell sökning fungerar bäst med större databaser. Även om det inte finns något minsta antal bilder som krävs för bra resultat, kanske inte matchningskvaliteten för ett fåtal bilder är lika bra som matchningarna från en stor databas.
-* Du kan inte ändra modell eller utbilda AEM för att hitta liknande bilder. Modellen ändras inte om du till exempel lägger till eller tar bort smarta taggar för ett fåtal resurser. Resurserna tas inte med i de visuellt liknande sökresultaten.
+* Du kan inte ändra modell eller AEM för att hitta liknande bilder. Modellen ändras inte om du till exempel lägger till eller tar bort smarta taggar för ett fåtal resurser. Resurserna tas inte med i de visuellt liknande sökresultaten.
 
 ## Söktips {#tips}
 
@@ -267,7 +267,7 @@ Visuell sökning eller likhetssökning har följande begränsningar:
 * Fulltextsökning stöder operatorer som -, ^ och så vidare. Om du vill söka efter de här bokstäverna som stränglitteraler omger du sökuttrycket med citattecken. Använd till exempel &quot;Anteckningsbok - Skönhet&quot; i stället för Anteckningsbok - Skönhet.
 * Om sökresultaten är för många kan du begränsa [sökningen](#scope) till noll för de önskade resurserna. Det fungerar bäst om du har en aning om hur du ska söka efter de önskade resurserna, till exempel en viss filtyp, en viss plats, specifika metadata och så vidare.
 
-* **Taggning**: Taggar hjälper dig att kategorisera resurser som du kan bläddra bland och söka efter mer effektivt. Taggning hjälper till att sprida rätt taxonomi till andra användare och arbetsflöden. AEM erbjuder metoder för att automatiskt tagga resurser med hjälp av Adobe Senseis artificiellt intelligenta tjänster som hela tiden blir bättre på att tagga upp materialet med användning och utbildning. När du söker efter resurser tas smarta taggar med i beräkningen om funktionen är aktiverad på ditt konto. Det fungerar tillsammans med de inbyggda sökfunktionerna. Se [sökbeteende](#searchbehavior). Om du vill optimera den ordning i vilken sökresultaten visas kan du [öka sökrankningen](#searchrank) för några utvalda resurser.
+* **Taggning**: Taggar hjälper dig att kategorisera resurser som du kan bläddra bland och söka efter mer effektivt. Taggning hjälper till att sprida rätt taxonomi till andra användare och arbetsflöden. AEM erbjuder metoder för att automatiskt tagga resurser med hjälp av Adobe Sensei artificiellt intelligenta tjänster som hela tiden blir bättre på att tagga materialet med användning och utbildning. När du söker efter resurser tas smarta taggar med i beräkningen om funktionen är aktiverad på ditt konto. Det fungerar tillsammans med de inbyggda sökfunktionerna. Se [sökbeteende](#searchbehavior). Om du vill optimera den ordning i vilken sökresultaten visas kan du [öka sökrankningen](#searchrank) för några utvalda resurser.
 
 * **Indexering**: Endast indexerade metadata och resurser returneras i sökresultatet. För bättre täckning och prestanda bör du se till att indexeringen är korrekt och följa bästa praxis. Se [indexering](#searchindex).
 
@@ -400,9 +400,9 @@ När du ser sökningar efter resurser som matchar dina villkor kan du utföra f�
 
 ### Sortera sökresultat {#sort}
 
-Om du sorterar sökresultatet hittar du snabbare den resurs du behöver. Sortering av sökresultat fungerar i listvyn och endast när du väljer **[!UICONTROL [Filer](#searchui)]** på panelen **[!UICONTROL Filters]**. [!DNL Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
+Om du sorterar sökresultatet hittar du snabbare den resurs du behöver. Sorting search results works in list view and only when you select **[[!UICONTROL Files]](#searchui)** from the **[!UICONTROL Filters]** panel. [!DNL Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
 
-I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapad (Datum), Ändrad (Datum), Publicerad, Arbetsflöde och Utcheckad.
+I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapat (Datum), Ändrat (Datum), Publicerat (Datum), Arbetsflöde och Utcheckat.
 
 Begränsningar av sorteringsfunktioner finns i [Begränsningar](#limitations).
 
@@ -450,7 +450,7 @@ Du kan skapa smarta samlingar baserat på sökvillkoren. På panelen **[!UICONTR
 **Partially related or unrelated search results**: AEM may display seemingly partially related or unrelated assets, alongside the desired assets in the search results. If you enable Enhanced Smart Tags, the search behavior changes slightly. See how it changes [after smart tagging](#withsmarttags).
 -->
 
-**Inga förslag för automatisk komplettering av nyligen överförda resurser**: Metadata (titlar, taggar o.s.v.) för de nyligen överförda resurserna är inte omedelbart tillgängliga som förslag när du börjar skriva ett söknyckelord i omsökningsfältet. AEM Resurser väntar tills en timeout-period har gått ut (en timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda eller uppdaterade resurser och lägger sedan till metadata i listan med förslag.
+**Inga förslag för automatisk komplettering av nyligen överförda resurser**: Metadata (titlar, taggar o.s.v.) för de nyligen överförda resurserna är inte omedelbart tillgängliga som förslag när du börjar skriva ett söknyckelord i omsökningsfältet. AEM Assets väntar tills en timeout-period har gått ut (en timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda eller uppdaterade resurser och lägger sedan till metadata i listan med förslag.
 
 **Inga sökresultat**: Om AEM och visar en tom sida för en sökfråga kan det bero på följande:
 
@@ -468,4 +468,4 @@ Se problemen och ett möjligt tillvägagångssätt nedan:
 
 * Om ett förväntat sökfilter eller predikat inte visas kontaktar du administratören.
 * När du söker efter bilder som är visuellt lika kan det hända att en förväntad bild saknas i sökresultatet. Kontrollera om sådana resurser är indexerade och smarta taggade.
-* När du söker efter bilder som är visuellt lika kan ibland en bild som verkar irrelevant visas i sökresultaten. AEM visar så många potentiellt relevanta resurser som möjligt. Mindre relevanta bilder, om sådana finns, läggs till i resultatet men med en lägre sökrankning. Kvaliteten på matchningarna och relevansen hos de sökda resurserna minskar när du bläddrar nedåt i sökresultaten.
+* När du söker efter bilder som är visuellt lika kan ibland en bild som verkar irrelevant visas i sökresultaten. AEM visar så många resurser som möjligt av betydelse. Mindre relevanta bilder, om sådana finns, läggs till i resultatet men med en lägre sökrankning. Kvaliteten på matchningarna och relevansen hos de sökda resurserna minskar när du bläddrar nedåt i sökresultaten.
