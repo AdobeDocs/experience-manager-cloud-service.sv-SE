@@ -2,9 +2,9 @@
 title: Enhetlig upplevelse för verktyg för kodkorrigering
 description: Enhetlig upplevelse för verktyg för kodkorrigering
 translation-type: tm+mt
-source-git-commit: c554506aea99518c94666f5d2e6151a3dce3b91e
+source-git-commit: df41244712e1792e5265e4e6c8104962899c9b26
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -16,17 +16,19 @@ Med verktygen för enhetlig upplevelse av kodkorrigering förenas upplevelsen f�
 
 Det här verktyget minskar komplexiteten med att använda verktyg för kodomfaktorisering, där varje verktyg har olika körningskrav när det gäller installation, konfiguration och körning.
 
+![bild](/help/move-to-cloud-service/assets/unified-1.png)
+
 ## Fördelar {#benefits}
 
-Unified Experience for Code Refactoring Tools anropar och kör alla verktyg för kodomfaktorisering som fungerar på källkoden från samma plats.
+Med verktygen för enhetlig upplevelse av omfaktorisering anropas och verkställs alla verktyg för omfaktorisering av kod som fungerar på källkoden från samma plats.
 
-Med verktygen för enhetlig upplevelse av omfaktorisering och tillhörande databaser kan du:
+Dessa verktyg tillsammans med de övriga databaserna gör att du kan:
 
-* Sammanställ alla verktyg som arbetar med källkodsmigrering till ett `node.js` program som exponeras som `aio-cli plugin` för att ge användaren en konsekvent användarupplevelse.
+* Alla verktyg som fungerar med källkodmigrering till ett `node.js` program som exponeras `aio-cli plugin` för att ge användaren en konsekvent användarupplevelse.
 
 * Möjlighet att utföra den övergripande migreringen via ett enda kommando, samtidigt som det ger flexibilitet att köra ett visst verktyg efter behov.
 
-* Förenkla framtidens tillägg av nya verktyg som att lägga till nya verktyg i plugin-programmet genom att lägga till ett nytt kommando för utvecklare och en enkel plugin-uppdatering för användaren, så att upplevelsen blir mer enhetlig med mer värdetillägg.
+* För att förenkla framtida tillägg av nya verktyg, som att lägga till nya verktyg i plugin-programmet, behöver du bara lägga till ett nytt kommando för utvecklaren och en enkel plugin-uppdatering för användaren, så att upplevelsen är konsekvent med mer värdetillägg.
 
 ## Om plugin-programmet {#understanding-plugin}
 
