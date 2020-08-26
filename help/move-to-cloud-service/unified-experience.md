@@ -2,7 +2,7 @@
 title: Enhetlig upplevelse för verktyg för kodkorrigering
 description: Enhetlig upplevelse för verktyg för kodkorrigering
 translation-type: tm+mt
-source-git-commit: df41244712e1792e5265e4e6c8104962899c9b26
+source-git-commit: 9ef0681f93c8c25a1e5115cccb987d2db32c318e
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -16,7 +16,7 @@ Med verktygen för enhetlig upplevelse av kodkorrigering förenas upplevelsen f�
 
 Det här verktyget minskar komplexiteten med att använda verktyg för kodomfaktorisering, där varje verktyg har olika körningskrav när det gäller installation, konfiguration och körning.
 
-![bild](/help/move-to-cloud-service/assets/unified-1.png)
+![bild](/help/move-to-cloud-service/assets/unified-one.png)
 
 ## Fördelar {#benefits}
 
