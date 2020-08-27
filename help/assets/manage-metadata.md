@@ -1,12 +1,12 @@
 ---
-title: Hantera metadata för digitala resurser i [!DNL Adobe Experience Manager].
-description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] hjälper dig att hantera metadata för resurser så att det blir enklare att kategorisera och ordna resurser. Med [!DNL Experience Manager] går det att automatiskt ordna och bearbeta resurser baserat på deras metadata.
+title: Hantera metadata för era digitala resurser i [!DNL Adobe Experience Manager].
+description: Lär dig mer om metadatatyperna och [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] hur du automatiskt kan ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 643d31998989e9ebe73e124313379fb64ec86cd5
+source-git-commit: d6a0848547a6dcbb058576827d3cacbc8045ae79
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1908'
 ht-degree: 4%
 
 ---
@@ -65,7 +65,7 @@ De två grundläggande metadatatyperna är tekniska metadata och beskrivande met
 Tekniska metadata är användbara för program som hanterar digitala resurser och bör inte underhållas manuellt. [!DNL Experience Manager Assets] och andra program bestämmer automatiskt tekniska metadata och metadata kan ändras när resursen ändras. Vilka tekniska metadata som är tillgängliga för en mediefil beror till stor del på filtypen för resursen. Några exempel på tekniska metadata är:
 
 * Storlek på en fil.
-* Bildens mått (höjd och bredd).
+* Dimensioner (höjd och bredd) för en bild.
 * Bithastighet för en ljud- eller videofil.
 * Upplösning (detaljnivå) för en bild.
 
@@ -84,7 +84,7 @@ Det finns olika sätt att bädda in metadata i filer. Ett urval kodningsstandard
 
 ### XMP {#xmp}
 
-[!DNL Extensible Metadata Platform] (XMP) är en öppen standard som används av [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP-standarden eftersom den erbjuder en innehållsmodell med mycket innehåll. Användare av XMP-standard och av [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. For more information, see [XMP](https://www.adobe.com/products/xmp.html).
+[!DNL Extensible Metadata Platform] (XMP) är en öppen standard som används av [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP standard eftersom de erbjuder en innehållsmodell med mycket innehåll. Användare av XMP som är standard och av [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. For more information, see [XMP](https://www.adobe.com/products/xmp.html).
 
 ### ID3 {#id}
 
@@ -104,7 +104,7 @@ Exchangeable image file format (Exif) är det vanligaste metadataformatet som an
 
 En stor begränsning för Exif är att ett fåtal populära bildfilsformat som BMP, GIF och PNG inte har stöd för det.
 
-Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har begränsad användning för beskrivande metadatahantering. Därför erbjuder [!DNL Experience Manager Assets] mappning av Exif-egenskaper till [vanliga metadatamatchningar](metadata-schemas.md) och till XMP.
+Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har begränsad användning för beskrivande metadatahantering. Av den anledningen erbjuder mappning av Exif-egenskaper till [!DNL Experience Manager Assets] vanliga metadatamatchningar [](metadata-schemas.md) och till XMP.
 
 #### Andra metadata {#other-metadata}
 
@@ -141,6 +141,16 @@ Med Enterprise Manager Assets kan du redigera metadata för flera resurser samti
    >[!CAUTION]
    >
    >För fält med ett enda värde läggs de nya metadata inte till det befintliga värdet i fältet, även om du väljer **[!UICONTROL Append mode]**.
+
+## Anpassade metadata med bearbetningsprofil {#metadata-compute-service}
+
+Resurser som Cloud Service kan generera anpassade metadata för en resurs med molnbaserade tjänster. Konfigurera en bearbetningsprofil för att generera anpassade metadata. Se [hur du använder bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
+
+![Metadataåtergivning i bearbetningsprofil](assets/processing-profile-metadata.png)
+
+>[!TIP]
+>
+>Endast en bearbetningsprofil kan användas för en mapp. Om du vill använda flera bearbetningar på resurser i en mapp lägger du till fler alternativ i en enda bearbetningsprofil. En enskild profil kan till exempel generera återgivningar, omkoda resurser, generera anpassade metadata och så vidare. Du kan använda MIME-typfilter för varje åtgärd så att rätt åtgärd aktiveras för det filformat som krävs.
 
 ## Konfigurera gräns för uppdatering av massmetadata {#configlimit}
 
@@ -183,7 +193,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * PDF och PDF/X.
 * Photoshop och psAux - [!DNL Adobe Photoshop].
 
-### Metadata för hantering av digitala rättigheter {#digital-rights-management-metadata}
+### Digital Rights Management metadata {#digital-rights-management-metadata}
 
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights].
@@ -205,7 +215,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * PDF och PDF/X - Adobe PDF och tredjepartsprogram.
 * PRISM - [publiceringskrav för branschstandardmetadata](https://www.prismstandard.org).
 * XMP - [!DNL Extensible Metadata Platform].
-* `xmpPG` - XMP-metadata för växlad text.
+* `xmpPG` - XMP metadata för sidindelad text.
 
 ### Multimediaspecifika metadata {#multimedia-specific-metadata}
 
