@@ -2,10 +2,10 @@
 title: Arbeta med sidversioner
 description: Skapa, jämföra och återställa versioner av en sida
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 2d5c7ee7866f8334e67a36b120fdb8ad7a34e7f1
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 6%
+source-wordcount: '1510'
+ht-degree: 4%
 
 ---
 
@@ -15,8 +15,14 @@ ht-degree: 6%
 Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med versionshantering kan du utföra följande åtgärder:
 
 * Skapa en version av en sida.
-* Återställ en sida till en tidigare version för att ångra en ändring som du har gjort på en sida, till exempel.
-* Jämför den aktuella versionen av en sida med en tidigare version med skillnader i markerad text och bild.
+* Återskapa en tidigare version av en eller flera sidor till:
+   * Ångra ändringar som gjorts på sidorna.
+   * Återställ sidor som har tagits bort.
+   * Återställ ett träd (som angivet datum och tid).
+* Förhandsgranska en version.
+* Jämför den aktuella versionen av en sida med en tidigare version.
+   * Skillnader i text och bilder markeras.
+* Timewarp använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
 
 ## Skapa en ny version {#creating-a-new-version}
 
@@ -53,9 +59,23 @@ Du kan skapa en version av resursen från:
 
 Tidslinjen öppnas och informationen uppdateras för att ange den nya versionen.
 
-## Återställa till en sidversion {#reverting-to-a-page-version}
+## Återställer versioner {#reinstating-versions}
 
-När en version har skapats kan du vid behov återgå till den versionen.
+När du har skapat en version av sidan finns det olika metoder för att återställa en tidigare version:
+
+* alternativet **Återställ till den här versionen** från [tidslinjen](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)
+
+   Återskapa en tidigare version av en markerad sida.
+
+* alternativen för **återställning** i det övre [åtgärdsverktygsfältet](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)
+
+   * **Återställ version**
+
+      Återställa versioner av angivna sidor i den markerade mappen; detta kan även omfatta återställning av sidor som tidigare har tagits bort.
+
+   * **Återställ träd**
+
+      återinför en version av ett helt träd vid ett angivet datum och en viss tidpunkt, kan innehålla sidor som tidigare har tagits bort.
 
 >[!NOTE]
 >
@@ -65,21 +85,78 @@ När en version har skapats kan du vid behov återgå till den versionen.
 >
 >1. Skapa versioner av valfri sida.
 >1. De inledande etiketterna och versionsnodnamnen är 1.0, 1.1, 1.2 och så vidare.
->1. Återställa den första versionen. dvs. 1.0.
+>1. återställ den första versionen, dvs. 1.0.
 >1. Skapa nya versioner igen.
 >1. De genererade etiketterna och nodnamnen blir nu 1.0.0, 1.0.1, 1.0.2 osv.
 
 
-Så här återgår du till en tidigare version:
+### Återgå till en version {#revert-to-a-version}
+
+Så här **återställer** du den markerade sidan till en tidigare version:
 
 1. Navigera till sidan som du vill återställa till en tidigare version.
 1. Markera sidan i [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
 1. Öppna kolumnen **Tidslinje** och välj antingen **Visa alla** eller **Versioner**. Sidversionerna för den valda sidan visas.
 1. Välj den version som du vill återställa till. Möjliga alternativ visas:
 
-   ![Återställ version](/help/sites-cloud/authoring/assets/versions-revert.png)
+   ![Återgå till den här versionen](/help/sites-cloud/authoring/assets/versions-revert.png)
 
 1. Välj **Återställ till den här versionen**. Den valda versionen återställs och informationen på tidslinjen uppdateras.
+
+### Återställ version {#restore-version}
+
+Denna metod kan användas för att återställa versioner av angivna sidor i den aktuella mappen; Detta kan även omfatta återställning av sidor som tidigare har tagits bort:
+
+1. Navigera till och [markera](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)den önskade mappen.
+
+1. Välj **Återställ** och sedan **Återställ version** i det övre [verktygsfältet](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)för åtgärder.
+
+   >[!NOTE]
+   >
+   >Om:
+   >* du har valt en sida som aldrig har haft några underordnade sidor,
+   >* eller ingen av sidorna i mappen har versioner,
+
+   >
+   >Då är visningen tom eftersom det inte finns några tillämpliga versioner.
+
+1. De tillgängliga versionerna visas:
+
+   ![Återställ version - Lista över alla sidor i mappen](/help/sites-cloud/authoring/assets/versions-restore-version-01.png)
+
+1. För en viss sida använder du listruteväljaren under **ÅTERSTÄLL TILL VERSION** för att välja önskad version för den sidan.
+
+   ![Återställ version - Välj version](/help/sites-cloud/authoring/assets/versions-restore-version-02.png)
+
+1. Markera den sida som ska återställas i huvudskärmen:
+
+   ![Återställ version - Välj sida](/help/sites-cloud/authoring/assets/versions-restore-version-03.png)
+
+1. Välj **Återställ** för den valda versionen av den valda sidan som ska återställas som den *aktuella* versionen.
+
+>[!NOTE]
+>
+>Den ordning i vilken du väljer en obligatorisk sida och den relaterade versionen är utbytbara.
+
+### Återställ träd {#restore-tree}
+
+Den här metoden kan användas för att återställa en version av ett träd vid ett angivet datum och en viss tidpunkt. detta kan omfatta sidor som tidigare har tagits bort:
+
+1. Navigera till och [markera](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)den önskade mappen.
+
+1. Välj **Återställ** och sedan **Återställ träd** i det övre [verktygsfältet](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)för åtgärder. Trädets senaste version visas:
+
+   ![Återställ träd](/help/sites-cloud/authoring/assets/versions-restore-tree-01.png)
+
+1. Använd datum- och tidsväljaren vid **senaste versioner vid datum** för att välja en annan version av trädet, den som ska återställas.
+
+1. Ställ in flaggan **Bevarade icke-versionshanterade sidor** efter behov:
+
+   * Om den är aktiv (markerad) bevaras alla sidor som inte är versionshanterade och påverkas inte av återställningen.
+
+   * Om alternativet är inaktivt (omarkerat) tas alla sidor som inte är versionshanterade bort eftersom de inte fanns i versionsträdet.
+
+1. Välj **Återställ** för den valda versionen av trädet som ska återställas som den *aktuella* versionen.
 
 ## Förhandsgranska en version {#previewing-a-version}
 
