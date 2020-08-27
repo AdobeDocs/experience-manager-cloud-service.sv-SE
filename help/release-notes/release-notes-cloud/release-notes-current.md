@@ -2,10 +2,10 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: b47b4d0c84e814a43ca14c2efd4f553694ab6c2b
+source-git-commit: 7bd917067667af2f9f03a153a26303daade996fc
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 1%
+source-wordcount: '1031'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +44,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 * Inbyggda förhandsgranskningar av PDF-dokument med hög originalåtergivning finns nu tillgängliga i varumärkesportalen. Se Översikt över [dokumentvisningsprogrammet](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html#doc-viewer).
 
-* Användargränssnittet för att göra cacheminnet ogiltigt är nu tillgängligt i [!DNL Dynamic Media].
+* Nu kan du göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] AEM som en Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]) för att se till att de senaste resurserna hanteras på några minuter istället för timmar. Se [Invalidera CDN-cachen med hjälp av Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md)
 
 * Förbättrat stöd för hjälpmedel finns i användargränssnittskontroller, navigering, bläddring och sökupplevelser i [!DNL Assets].
 
