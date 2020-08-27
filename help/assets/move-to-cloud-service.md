@@ -1,11 +1,11 @@
 ---
-title: Migrera till molntjänsten från Adobe Experience Manager 6.x
-description: Migrera till molntjänsten från Adobe Experience Manager 6.x
+title: Migrera till Experience Manager som Cloud Service från Adobe Experience Manager 6.x.
+description: Migrera till Experience Manager som Cloud Service från Adobe Experience Manager 6.x.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e399c9f372aa8995abf5cddfbc41d1cfe2b0aa22
+source-git-commit: d9237a0121a346fc16e67e52300c3a5a263e5af3
 workflow-type: tm+mt
-source-wordcount: '28'
+source-wordcount: '36'
 ht-degree: 0%
 
 ---
