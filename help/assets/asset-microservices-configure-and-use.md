@@ -1,11 +1,11 @@
 ---
-title: Konfigurera och använda resursmikrotjänster för bearbetning av resurser
-description: Lär dig hur du konfigurerar och använder molnbaserade resursmeritjänster för att bearbeta resurser i stor skala.
+title: Konfigurera och använda resursmikrotjänster för bearbetning av resurser.
+description: Konfigurera och använd de molnbaserade resursmeritjänsterna för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2917f14bea5e2a31c436577d9fd74135cca93118
+source-git-commit: ee3dfaee39f05dbcc37ae77789431af115b1c115
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2476'
 ht-degree: 0%
 
 ---
@@ -13,21 +13,11 @@ ht-degree: 0%
 
 # Använda mikrotjänster och bearbetningsprofiler {#get-started-using-asset-microservices}
 
-<!--
-* Current capabilities of asset microservices offered. If applications have names then list the names and give a one-liner description. (The feature-set is limited for now and continues to grow. So will this article continue to be updated.)
-* How to access the microservices. UI. API. Is extending possible right now?
-* Detailed list of what file formats and what processing is supported by which workflows/application process.
-* How/where can admins check what's already configured and provisioned.
-* How to create new config or request for new provisioning/purchase.
+Resursmikrotjänster ger skalbar och flexibel bearbetning av resurser med molnbaserade program (kallas även arbetare). Adobe hanterar tjänsterna för optimal hantering av olika tillgångstyper och bearbetningsalternativ.
 
-* [DO NOT COVER?] Exceptions or limitations or link back to lack of parity with AEM 6.5.
--->
+Med tillgångsmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara att användas än vad som är möjligt med tidigare versioner av [!DNL Experience Manager]. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick.
 
-Resursmikrotjänsterna erbjuder skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar tjänsterna för optimal hantering av olika tillgångstyper och bearbetningsalternativ.
-
-Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**, som tillhandahåller en standardinställning, och låter en administratör lägga till en mer specifik konfiguration för tillgångsbearbetning. Administratörer kan skapa och underhålla konfigurationer för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflöden kan du utöka och göra fullständiga anpassningar.
-
-Med tillgångsmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara att användas än vad som är möjligt med tidigare versioner av Experience Manager. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick.
+Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**. Experience Manager har en grundläggande standardkonfiguration och låter administratörer lägga till mer specifik konfiguration för bearbetning av resurser. Administratörer kan skapa, underhålla och ändra konfigurationerna för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflödena kan utvecklarna utöka standarderbjudandet.
 
 <!-- Proposed DRAFT diagram for asset microservices flow - see section "asset-microservices-flow.png (asset-microservices-configure-and-use.md)" in the PPTX deck
 
@@ -93,7 +83,7 @@ Så här skapar du en standardbearbetningsprofil:
    * Kvalitet i procent av varje JPEG-återgivning.
    * Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
 
-   ![processing-profiles-adding](assets/processing-profiles-adding.png)
+   ![processing-profiles-adding](assets/processing-profiles-image.png)
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -158,9 +148,7 @@ Integreringen av tjänsten Resursberäkning gör att Experience Manager kan skic
 
 ![custom-processing-profile](assets/custom-processing-profile.png)
 
-*Bild: Använd[!UICONTROL Service Parameters]fältet för att skicka tillagd information till fördefinierade parametrar som byggs in i det anpassade programmet.*
-
-När kampanjbilder överförs till den mapp som den här bearbetningsprofilen används i uppdateras bilderna med `Jumanji` text i `Arial-BoldMT` teckensnittet.
+*Bild: Använd[!UICONTROL Service Parameters]fältet för att skicka tillagd information till fördefinierade parametrar som byggs in i det anpassade programmet. I det här exemplet uppdateras bilderna med text i`Jumanji``Arial-BoldMT`teckensnitt när kampanjbilder överförs.*
 
 ## Använda bearbetningsprofiler för att bearbeta resurser {#use-profiles}
 
@@ -169,19 +157,20 @@ Skapa och använd de extra anpassade bearbetningsprofilerna på specifika mappar
 Använd bearbetningsprofiler på mappar på något av följande sätt:
 
 * Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
-* Users can select a folder in the Assets user interface, use **[!UICONTROL Properties]** action to open folder properties screen, click on the **[!UICONTROL Processing Profiles]** tab, and in the popup list, select the correct processing profile for that folder. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
+* Users can select a folder in the Assets user interface, use **[!UICONTROL Properties]** action to open folder properties screen, click on the **[!UICONTROL Processing Profiles]** tab, and in the popup list, select the appropriate processing profile for that folder. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
+   ![Använda bearbetningsprofil på en mapp från fliken Resursegenskaper](assets/folder-properties-processing-profile.png)
 
->[!NOTE]
+>[!TIP]
 >
->Endast en bearbetningsprofil kan användas för en viss mapp. Om du vill generera fler återgivningar lägger du till fler återgivningsdefinitioner i den befintliga bearbetningsprofilen.
+>Endast en bearbetningsprofil kan användas för en mapp. Om du vill generera fler återgivningar lägger du till fler återgivningsdefinitioner i den befintliga bearbetningsprofilen.
 
-När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurser som har överförts (eller uppdaterats) i den här mappen eller någon av dess undermappar med hjälp av den extra bearbetningsprofil som har konfigurerats. Den här bearbetningen är utöver standardprofilen. Om du tillämpar flera profiler på en mapp bearbetas de överförda eller uppdaterade resurserna med hjälp av var och en av dessa profiler.
+När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurser som har överförts (eller uppdaterats) i den här mappen eller någon av dess undermappar med hjälp av den extra bearbetningsprofil som har konfigurerats. Den här bearbetningen är utöver standardprofilen.
 
 >[!NOTE]
 >
 >En bearbetningsprofil som används på en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används på en undermapp. När resurser överförs till en mapp kontrollerar Experience Manager egenskaperna för den innehållande mappen för att hitta en bearbetningsprofil. Om ingen används kontrolleras en överordnad mapp i hierarkin för att en bearbetningsprofil ska användas.
 
-Alla genererade återgivningar är tillgängliga i den vänstra [!UICONTROL Renditions] vyn. Öppna förhandsgranskningen av resursen och öppna den vänstra listen för att komma åt **[!UICONTROL Renditions]** vyn. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
+Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade återgivningarna i [!UICONTROL Renditions] vyn i den vänstra listen. Öppna förhandsgranskningen av resursen och öppna den vänstra listen för att komma åt **[!UICONTROL Renditions]** vyn. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
 
 ![additional-renditions](assets/renditions-additional-renditions.png)
 
@@ -238,4 +227,10 @@ Mer information om vilket standardarbetsflödessteg som kan användas i efterbea
 >* [Introduktion till tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Resursberäkning.
 >* [Förstå utbyggbarhet och när den ska användas](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html).
 >* [Skapa anpassade program](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html).
+>* [MIME-typer som stöds för olika användningsområden](/help/assets/file-format-support.md).
 
+
+<!-- TBD: 
+* How/where can admins check what's already configured and provisioned.
+* How/where to request for new provisioning/purchase.
+-->
