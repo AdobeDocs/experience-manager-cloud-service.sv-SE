@@ -2,7 +2,7 @@
 title: Invalidera CDN-cachen med hjälp av Dynamic Media Classic
 description: Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska förfalla.
 translation-type: tm+mt
-source-git-commit: e4822ae72d133bb502bc2c2fa1eb07a625f2a507
+source-git-commit: 8f555f2cf97aaeabfae24919ad5861a2512b0903
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 25%
