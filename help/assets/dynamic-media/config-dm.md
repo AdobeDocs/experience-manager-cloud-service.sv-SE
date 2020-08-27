@@ -2,7 +2,7 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: ed904a95768fb1965506187932d4f9d6464ed190
 workflow-type: tm+mt
 source-wordcount: '4786'
 ht-degree: 8%
@@ -81,7 +81,7 @@ Om du inte har ett särskilt arrangemang för att använda ditt företags server
       * **[!UICONTROL Enabled by default]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till Dynamic Media.
 Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du sidan Egenskaper för resursmappen. Tryck på **[!UICONTROL Details]** fliken och välj sedan ett av följande tre alternativ i **[!UICONTROL Dynamic Media sync mode]** listrutan. Spara sedan knappen **[!UICONTROL Save]**.
-         * **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
+         * **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
          * **[!UICONTROL Enable for sub-folders]** - Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
          * **[!UICONTROL Disabled for sub-folders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
 
