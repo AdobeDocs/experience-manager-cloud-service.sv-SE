@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: 27f9f4441a95964a4ae0db798577510c726133c5
+source-git-commit: b47b4d0c84e814a43ca14c2efd4f553694ab6c2b
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '996'
 ht-degree: 1%
 
 ---
@@ -14,9 +14,51 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.8.0.
 
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
+
+### What is new in [!DNL Sites] {#what-is-new-sites}
+
+* Möjlighet att återställa sidor och undersidor (sidträd) till en tidigare version.
+
+* Möjlighet att skapa startprogram AEM SPA Editor.
+
 ## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
-* De nya [!DNL Experience Manager Assets] distributionerna är integrerade med [!DNL Adobe Developer Console] som standard. Det hjälper till att konfigurera smarta taggar snabbare. I befintliga distributioner [konfigurerar administratörer smart taggintegrering](/help/assets/smart-tags-configuration.md#aio-integration) som tidigare.
+### What is new in [!DNL Assets] {#what-is-new-assets}
+
+* Videoomkodning stöds nu med tillgångsmikrotjänster, med ett nytt Video-avsnitt på skärmen som stöder konfiguration av videobithastighet och dimensioner (utdataformatet är MP4 med H.264-kodek). [!UICONTROL Processing Profiles] Mer information finns i [Hantera videomaterial](/help/assets/manage-video-assets.md#transcode-video). För fler omkodningsalternativ och [!DNL Dynamic Media] tillägg för videoleverans kan användas.
+
+* I nya [!DNL Experience Manager Assets] distributioner är funktionen för smart taggning nu konfigurerad som standard. Du behöver inte integrera manuellt med [!DNL Adobe Developer Console]. I befintliga distributioner [konfigurerar administratörer smart taggintegrering](/help/assets/smart-tags-configuration.md#aio-integration) som tidigare.
+
+* Med en ny [resurshämtning](/help/assets/download-assets-from-aem.md) kan
+
+   * Asynkron nedladdning för stora nedladdningar så att användarna inte behöver vänta.
+
+   * Ett nytt modulärt API för utbyggbarhet för utvecklare.
+
+* [!DNL Experience Manager] har förbättrat prestandan för metadataextrahering för tillgångsmikrotjänster. Det ökar den totala genomströmningen av tillgångsintag.
+
+* Använd bearbetningsprofil för att generera anpassade metadata med hjälp av beräkningstjänsten. Se [Anpassade metadata med bearbetningsprofil](/help/assets/manage-metadata.md#metadata-compute-service)
+
+* En enklare nedladdningsupplevelse för användare av varumärkesportalen som administratörer kan konfigurera. Se Översikt över [nedladdningsupplevelsen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html#download-configurations).
+
+* Inbyggda förhandsgranskningar av PDF-dokument med hög originalåtergivning finns nu tillgängliga i varumärkesportalen. Se Översikt över [dokumentvisningsprogrammet](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html#doc-viewer).
+
+* Användargränssnittet för att göra cacheminnet ogiltigt är nu tillgängligt i [!DNL Dynamic Media].
+
+* Förbättrat stöd för hjälpmedel finns i användargränssnittskontroller, navigering, bläddring och sökupplevelser i [!DNL Assets].
+
+   * Om du trycker på Esc när du har valt [!UICONTROL Add Rendition] alternativet återgår fokus till verktygsfältet. <!-- via CQ-4293594-->
+   * Tangentbordsfokus fungerar som väntat när kombinationsrutan E-post används. <!-- via CQ-4286215 -->
+   * Elementen dragspelspaneler i sökfilteravsnittet tolkas som utökningsbara standarddragspel. <!-- via CQ-4273103 -->
+   * När du använder en tagg på en resurs visas taggarna som trädelement i dialogrutan. ARIA-attributen tillämpas på trädelementen så att de blir tillgängliga nu. <!-- via CQ-4272964 -->
+
+* [!DNL AEM Desktop app] 2.0.3-versionen är nu tillgänglig, vilket förbättrar kompatibiliteten med [!DNL AEM] 6.5.5 [!DNL Service Pack] och uppdaterar klientens OS-kompatibilitetslista (7 och [!DNL Windows] [!DNL MacOS] tidigare versioner än 10.14 tas bort).
+
+### Fel som har åtgärdats i [!DNL Assets] {#bugs-fixed}
+
+* Alternativet Relatera och ta bort relatering fungerar inte när användaren klickar på det för första gången. (CQ-4299022)
+* När du hämtar en resurs skickas inte e-postmeddelandet om du väljer att ta emot den via e-post. (CQ-4299146)
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
@@ -42,6 +84,7 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 
 * Vilolägda miljöer kan tas bort från vänteläget på sidan **Översikt** i Cloud Manager.
 
+* Möjlighet att utföra Experience Checks på sidor med Google Lighthuse som bas. Som en del av molnhanterarens pipeline kan upp till 25 sidor kontrolleras och valideras mot upplevelsenyckeltal, och poängen visas i användargränssnittet för molnhanteraren.
 
 ### Bug Fixes {#bug-fixes-cm}
 
@@ -85,3 +128,14 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Tidigare version av användargränssnittet kunde ibland extraheras trots att loggen visade fel.
 
+## Verktyg för omstrukturering av kod {#code-refactoring-tools}
+
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för verktygen för kodkorrigering.
+
+### What&#39;s New {#what-is-new-refactoring}
+
+* AIO-CLI-plugin för att sammanställa kodomfaktoriseringsverktygen så att utvecklare kan anropa och köra verktyg för kodomfaktorisering från ett och samma ställe. Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) för mer information.
+
+* AEM Dispatcher Converter har utökats med stöd för konverteringar av konfigurationer för lokal och Adobe Managed Services Dispatcher till AEM som en Cloud Service-kompatibel Dispatcher-konfigurationer. Se [Git-resurs: AEM Cloud Service Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter) för mer information.
+
+* AEM Dispatcher Converter skrivs om i ` node.js ` och integreras med AIO-CLI-pluginprogrammet.
