@@ -1,28 +1,28 @@
 ---
-title: Konfigurera AEM Assets med varumärkesportalen
+title: Konfigurera AEM Assets som en Cloud Service med varumärkesportalen
 description: Konfigurera AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: db5299d353d6a5e46f2d1707379cd6c364531e47
+source-git-commit: 830fd3a61d479a47b03cffc117f7192dd2c740cc
 workflow-type: tm+mt
 source-wordcount: '1547'
-ht-degree: 25%
+ht-degree: 21%
 
 ---
 
 
-# Konfigurera AEM Assets med varumärkesportalen {#configure-aem-assets-with-brand-portal}
+# Configure AEM Assets as a Cloud Service with Brand Portal {#configure-aem-assets-with-brand-portal}
 
-Adobe Experience Manager (AEM) Assets konfigureras med Brand Portal via Adobe Developer Console, som anskaffar en IMS-token för auktorisering av din varumärksportal.
+När du konfigurerar Adobe Experience Manager Assets Brand Portal kan du publicera godkända varumärkesresurser från Adobe Experience Manager Assets som en instans av Cloud Servicen på Brand Portal och distribuera dem till Brand Portal-användare.
 
-**Hur konfigurationen fungerar?**
+**Arbetsflöde för konfiguration**
 
-Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både AEM Assets och Adobe Developer Console.
+AEM Assets som Cloud Service konfigureras med Brand Portal via Adobe Developer Console, som anskaffar en IMS-token för godkännande av Brand Portal-klienten. Det kräver konfigurationer i båda programmen, AEM Assets och Adobe Developer Console.
 
-1. Skapa ett IMS-konto i AEM Assets och generera ett offentligt certifikat (offentlig nyckel).
+1. I AEM Assets skapar du ett Adobe Identity Management Services-konto (IMS) och skapar en offentlig nyckel (certifikat).
 1. Skapa ett projekt för din varumärksportal (organisation) i Adobe Developer Console.
-1. Under projektet konfigurerar du ett API med den offentliga nyckeln för att skapa en JWT-anslutning (Service Account).
-1. Hämta tjänstkontots autentiseringsuppgifter och information om JWT-nyttolast.
+1. Under projektet konfigurerar du ett API med den offentliga nyckeln för att skapa en tjänstkontoanslutning.
+1. Hämta tjänstkontots autentiseringsuppgifter och JSON Web Token-nyttolastinformation (JWT).
 1. I AEM Assets konfigurerar du IMS-kontot med tjänstkontots autentiseringsuppgifter och JWT-nyttolast.
 1. Konfigurera molntjänsten Brand Portal i AEM Assets med hjälp av IMS-kontot och varumärkesportalens slutpunkt (organisations-URL).
 1. Testa konfigurationen genom att publicera en resurs från AEM Assets till varumärkesportalen.
@@ -36,9 +36,9 @@ Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både A
 
 Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
-* En AEM Assets som körs som Cloud Service.
-* En innehavar-URL för en varumärkesportal.
-* En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient.
+* En AEM Assets som körs som en Cloud Service
+* En klientorganisations-URL
+* En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient
 
 ## Skapa en konfiguration {#create-new-configuration}
 
@@ -65,19 +65,16 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer 
 
 1. Logga in på AEM Assets.
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
+1. From the **Tools** panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
-   ![Användargränssnittet för konfiguration av Adobe IMS-kontot](assets/ims-configuration1.png)
 
-1. Klicka på Adobe IMS-konfigurationer **[!UICONTROL Create]**.
+1. Klicka på Adobe IMS-konfigurationer **[!UICONTROL Create]**. Det dirigeras om till **[!UICONTROL Adobe IMS Technical Account Configuration]** sidan. By default, the **Certificate** tab opens.
 
-1. Du omdirigeras till **[!UICONTROL Adobe IMS Technical Account Configuration]** sidan. By default, the **Certificate** tab opens.
+1. Välj molnlösning **[!UICONTROL Adobe Brand Portal]**.
 
-   Välj molnlösning **[!UICONTROL Adobe Brand Portal]**.
+1. Aktivera **[!UICONTROL Create new certificate]** kryssrutan och ange ett **alias** för den offentliga nyckeln. Aliaset används som namn på den offentliga nyckeln.
 
-1. Mark the **[!UICONTROL Create new certificate]** checkbox and specify an **alias** for the certificate. Aliaset fungerar som namn på certifikatet.
-
-1. Klicka på **[!UICONTROL Create certificate]**. Klicka sedan på **[!UICONTROL OK]** i dialogrutan för att generera det offentliga certifikatet.
+1. Klicka på **[!UICONTROL Create certificate]**. Klicka sedan på **[!UICONTROL OK]** för att generera den offentliga nyckeln.
 
    ![Skapa ett certifikat](assets/ims-config2.png)
 
@@ -89,19 +86,17 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer 
 
 1. Klicka på **[!UICONTROL Next]**.
 
-   På fliken **Konto** skapas Adobe IMS-kontot, men för det behöver du inloggningsuppgifterna för tjänstkontot som genereras i Adobe Developer Console. Håll den här sidan öppen tills vidare.
+   På fliken **Konto** skapas ett Adobe IMS-konto som kräver inloggningsuppgifterna för tjänstkontot som genereras i Adobe Developer Console. Håll den här sidan öppen tills vidare.
 
    Öppna en ny flik och [skapa en JWT-anslutning i Adobe Developer Console](#createnewintegration) för att hämta autentiseringsuppgifter och JWT-nyttolast för konfigurering av IMS-kontot.
 
 ### Skapa JWT-anslutning (Service Account) {#createnewintegration}
 
-I Adobe Developer Console konfigureras projekt och API:er på innehavarnivå för varumärkesportalen (organisation). När du konfigurerar ett API skapas en JWT-anslutning (Service Account) i Adobe Developer Console. Det finns två metoder för att konfigurera API, genom att generera ett nyckelpar (privata och offentliga nycklar) eller genom att överföra en offentlig nyckel. Om du vill konfigurera AEM Assets med varumärkesportalen måste du skapa ett offentligt certifikat (offentlig nyckel) i AEM Assets och skapa autentiseringsuppgifter i Adobe Developer Console genom att överföra den offentliga nyckeln. Den här offentliga nyckeln används för att konfigurera API för den valda innehavaren av varumärkesportalen och genererar autentiseringsuppgifter och JWT-nyttolast för tjänstkontot. Dessa autentiseringsuppgifter används vidare för att konfigurera IMS-kontot i AEM Assets. När IMS-kontot har konfigurerats kan du konfigurera molntjänsten Brand Portal i AEM Assets.
+I Adobe Developer Console konfigureras projekt och API:er på innehavarnivå för varumärkesportalen (organisation). När du konfigurerar ett API skapas en JWT-anslutning (Service Account). Det finns två metoder för att konfigurera API, genom att generera ett nyckelpar (privata och offentliga nycklar) eller genom att överföra en offentlig nyckel. Om du vill konfigurera AEM Assets med varumärkesportalen måste du skapa ett offentligt certifikat (offentlig nyckel) i AEM Assets och skapa autentiseringsuppgifter i Adobe Developer Console genom att överföra den offentliga nyckeln. Den här offentliga nyckeln används för att konfigurera API för den valda innehavaren av varumärkesportalen och genererar autentiseringsuppgifter och JWT-nyttolast för tjänstkontot. Dessa autentiseringsuppgifter krävs för att konfigurera IMS-kontot i AEM Assets. När IMS-kontot har konfigurerats kan du konfigurera molntjänsten Brand Portal i AEM Assets.
 
 Utför följande steg för att generera autentiseringsuppgifter för tjänstkontot och JWT-nyttolast:
 
-1. Logga in på Adobe Developer Console med systemadministratörsbehörighet för IMS-organisationen (innehavaren av varumärkesportalen). Standardwebbadressen är
-
-   [https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui)
+1. Logga in på Adobe Developer Console med systemadministratörsbehörighet för IMS-organisationen (innehavaren av varumärkesportalen). Standardwebbadressen är [https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui).
 
 
    >[!NOTE]
@@ -112,11 +107,7 @@ Utför följande steg för att generera autentiseringsuppgifter för tjänstkont
 
    Klicka **[!UICONTROL Edit project]** för att uppdatera **[!UICONTROL Project Title]** och **[!UICONTROL Description]** klicka sedan på **[!UICONTROL Save]**.
 
-   ![Skapa projekt](assets/service-account1.png)
-
 1. In the **[!UICONTROL Project overview]** tab, click **[!UICONTROL Add API]**.
-
-   ![Lägg till API](assets/service-account2.png)
 
 1. In the **[!UICONTROL Add an API window]**, select **[!UICONTROL AEM Brand Portal]** and click **[!UICONTROL Next]**.
 
@@ -138,11 +129,11 @@ Utför följande steg för att generera autentiseringsuppgifter för tjänstkont
 
    ![Välj produktprofil](assets/service-account4.png)
 
-1. När API:t har konfigurerats omdirigeras du till API-översikten. Klicka på i den vänstra navigeringen under **[!UICONTROL Credentials]** på **[!UICONTROL Service Account (JWT)]**.
+1. När API:t har konfigurerats omdirigeras du till API-översiktssidan. Klicka på i den vänstra navigeringen under **[!UICONTROL Credentials]** på **[!UICONTROL Service Account (JWT)]**.
 
    >[!NOTE]
    >
-   >Du kan visa autentiseringsuppgifterna och utföra andra åtgärder (generera JWT-tokens, kopiera autentiseringsuppgifter, hämta klienthemlighet o.s.v.) efter behov.
+   >Du kan visa autentiseringsuppgifterna och utföra åtgärder som att generera JWT-tokens, kopiera autentiseringsuppgifter, hämta klienthemlighet osv.
 
 1. Kopiera från **[!UICONTROL Client Credentials]** fliken **[!UICONTROL client ID]**.
 
@@ -204,9 +195,9 @@ Utför följande steg för att konfigurera IMS-kontot.
 
 1. Ange en **[!UICONTROL Title]** för IMS-kontot.
 
-   Ange URL:en [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/) i **[!UICONTROL Authorization Server]**.
+   Ange URL-adressen i **[!UICONTROL Authorization Server]** fältet: [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/)
 
-   Klistra in **[!UICONTROL API key]** (klient-ID), **[!UICONTROL Client Secret]** och **[!UICONTROL Payload]** (JWT-nyttolast) som du kopierade när du [skapade JWT-anslutningen](#createnewintegration).
+   Ange klient-ID i **[!UICONTROL API key]** fältet, **[!UICONTROL Client Secret]** och **[!UICONTROL Payload]** (JWT-nyttolast) som du kopierade när du [skapade tjänstkontoanslutningen](#createnewintegration).
 
    Klicka på **[!UICONTROL Create]**.
 
@@ -243,7 +234,7 @@ Så här konfigurerar du molntjänsten Brand Portal:
 
    Välj den IMS-konfiguration som du skapade när du [konfigurerade IMS-kontot](#create-ims-account-configuration).
 
-   In the **[!UICONTROL Service URL]**, enter your Brand Portal tenant (organization URL).
+   I **[!UICONTROL Service URL]** fältet anger du din webbadress till innehavaren av varumärkesportalen (organisation).
 
    ![](assets/create-cloud-service.png)
 
@@ -257,7 +248,7 @@ Utför följande steg för att validera konfigurationen:
 
 1. Logga in på AEM Assets.
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]**.
+1. From the **Tools** panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]**.
 
    ![](assets/test-bpconfig1.png)
 
@@ -283,7 +274,7 @@ Utför följande steg för att validera konfigurationen:
 
    ![](assets/test-bpconfig3.png)
 
-1. Kontrollera anslutningen mellan AEM Assets och varumärkesportalen genom att klicka på **[!UICONTROL Test Connection]**.
+1. Om du vill verifiera anslutningen mellan AEM Assets som Cloud Service och varumärkesportal klickar du på **[!UICONTROL Test Connection]** -ikonen.
 
    ![](assets/test-bpconfig4.png)
 
@@ -300,13 +291,11 @@ Du kan nu:
 * [Publicera mappar från AEM Assets till varumärkesportalen](publish-to-brand-portal.md#publish-folders-to-brand-portal)
 * [Publicera samlingar från AEM Assets till varumärkesportalen](publish-to-brand-portal.md#publish-collections-to-brand-portal)
 
-Förutom ovanstående kan du även publicera metadatamatcheman, taggar, bildförinställningar och sökfaktorer från AEM Assets till Brand Portal.
-
 * [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
 * [Publicera taggar på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
 
-Mer information finns i [dokumentationen till varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html).
+See [Brand Portal documentation](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) for more information.
 
 
 ## Distributionsloggar {#distribution-logs}
@@ -317,13 +306,13 @@ Vi har till exempel publicerat en resurs från AEM Assets till varumärkesportal
 
 1. Följ stegen (från 1 till 4) som visas i avsnittet [Testa konfiguration](#test-configuration) och navigera till distributionsagentsidan.
 
-1. Klicka på **[!UICONTROL Logs]** för att visa distributionsloggarna. Bearbetnings- och felloggarna visas här.
+1. Klicka **[!UICONTROL Logs]** för att visa bearbetnings- och felloggarna.
 
    ![](assets/test-bpconfig5.png)
 
 Distributionsagenten genererar följande loggar:
 
-* INFORMATION: Detta är en systemgenererad logg som utlöser lyckad konfiguration av distributionsagenten.
+* INFORMATION: Detta är en systemgenererad logg som utlöser en lyckad konfiguration av distributionsagenten.
 * DSTRQ1 (Begäran 1): Utlöses vid testanslutning.
 
 Följande begärande- och svarsloggar genereras när resursen publiceras:
@@ -336,7 +325,7 @@ Följande begärande- och svarsloggar genereras när resursen publiceras:
 * queue-bpdistributionagent0 (DSTRQ2): Resursen publiceras på varumärkesportalen.
 * queue-bpdistributagent0 (DSTRQ3): Systemet replikerar AEM Assets-mappen (som innehåller resursen) i varumärkesportalen.
 
-I exemplet ovan utlöses ytterligare en begäran och ett svar. Systemet kunde inte hitta den överordnade mappen (alias Lägg till sökväg) i varumärkesportalen eftersom resursen publicerades för första gången. Därför utlöstes en ytterligare begäran om att skapa en överordnad mapp med samma namn i varumärkesportalen där resursen publiceras.
+I exemplet ovan utlöses ytterligare en begäran och ett svar. Det gick inte att hitta den överordnade mappen (Lägg till sökväg) i varumärkesportalen eftersom resursen publicerades för första gången. Därför utlöstes en ytterligare begäran om att skapa en överordnad mapp med samma namn i varumärkesportalen där resursen publiceras.
 
 >[!NOTE]
 >
