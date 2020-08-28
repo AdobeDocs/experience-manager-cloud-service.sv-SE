@@ -2,9 +2,9 @@
 title: Invalidera CDN-cachen med hjälp av Dynamic Media
 description: Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska förfalla.
 translation-type: tm+mt
-source-git-commit: 42788d6a64c5bca7bddd563cb26634db80b2e75d
+source-git-commit: d025a44fea539e1d7a0d76fe20dd818a88c43fd8
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,11 @@ Se även Översikt över [cachelagring i Dynamic Media](https://helpx.adobe.com/
 
 **Inaktivera CDN-cachen med hjälp av dynamiska medier**
 
-*Del 1: Skapa en mall för CDN-invalidering*
+*Del 1 av 2: Skapa en mall för CDN-invalidering*
 
 1. In AEM as a Cloud Service, tap **[!UICONTROL Tools > Assets > CDN Invalidation Template.]**
 
-<!--
-    ![CDN Validation feature](/help/assets/assets-dm/cdn-invalidation-template.png)
--->
+   ![CDN-valideringsfunktion](/help/assets/assets-dm/cdn-invalidation-template.png)
 
 1. Gör något av följande på **[!UICONTROL CDN Invalidation Template]** sidan baserat på ditt scenario:
 
@@ -39,9 +37,10 @@ Se även Översikt över [cachelagring i Dynamic Media](https://helpx.adobe.com/
 
    ![CDN-valideringsmall - Skapa](/help/assets/assets-dm/cdn-invalidation-template-create-2.png)
 
-1. I det övre högra hörnet av sidan CDN-mall för validering trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL OK]**.
+1. I det övre högra hörnet av sidan CDN-mall för validering trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL OK]**.<br>
 
-   *Del 2: Ange alternativ för CDN-validering*
+   *Del 2 av 2: Ange alternativ för CDN-validering*
+   <br>
 
 1. In AEM as a Cloud Service, tap **[!UICONTROL Tools > Assets > CDN Invalidation.]**
 
