@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 translation-type: tm+mt
-source-git-commit: 0789eb6ea2fb128d7b6b87cffd44a92187535642
+source-git-commit: 610615534cb5a798e37d34fadb9a3bf341565526
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
@@ -138,7 +138,7 @@ Versionsnumret ökas stegvis varje gång indexvärdet ändras. För att undvika 
 
 ### Ändringar av färdiga index {#changes-to-out-of-the-box-indexes}
 
-När Adobe ändrar ett körklart index som &quot;damAssetLucene&quot; eller &quot;cqPageLucene&quot; skapas ett nytt index med namnet `damAssetLucene-2` eller `cqPageLucene-2` om indexet redan har anpassats sammanfogas den anpassade indexdefinitionen med ändringarna i det körklara indexet, vilket visas nedan. Ändringarna sammanfogas automatiskt. Det innebär att du inte behöver göra något om ett index som inte finns i kartongen ändras. Det går dock att anpassa indexet igen senare.
+När Adobe ändrar ett körklart index som &quot;damAssetLucene&quot; eller &quot;cqPageLucene&quot; skapas ett nytt index med namnet `damAssetLucene-2` eller `cqPageLucene-2` om indexet redan anpassats sammanfogas den anpassade indexdefinitionen med ändringarna i det körklara indexet, vilket visas nedan. Ändringarna sammanfogas automatiskt. Det innebär att du inte behöver göra något om ett index som inte finns i kartongen ändras. Det går dock att anpassa indexet igen senare.
 
 | Index | Index som inte är tillgängligt | Använd i version 2 | Använd i version 3 |
 |---|---|---|---|
@@ -176,3 +176,7 @@ I den gamla versionen av programmet används följande konfiguration:
 I den nya versionen av programmet används följande (ändrade) konfiguration:
 
 `/oak:index/acme.product-custom-2`
+
+### Index-Availability/Fault-Tolerance {#index-availability}
+
+Vi rekommenderar att du skapar dubblettindex för funktioner som är mycket viktiga (med tanke på namnkonventionen för index som nämns ovan), så om indexet är skadat eller en sådan oförutsedd händelse finns det ett reservindex som kan svara på frågor.
