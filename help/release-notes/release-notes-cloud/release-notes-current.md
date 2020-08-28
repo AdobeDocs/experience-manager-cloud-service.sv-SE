@@ -2,7 +2,7 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: 7bd917067667af2f9f03a153a26303daade996fc
+source-git-commit: 9a54fda87ffb26ad9e811a27a40ee8d7c81b6bea
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 0%
@@ -18,7 +18,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 ### What is new in [!DNL Sites] {#what-is-new-sites}
 
-* Möjlighet att återställa sidor och undersidor (sidträd) till en tidigare version.
+* Möjlighet att [återställa sidor och undersidor (sidträd) till en tidigare version](/help/sites-cloud/authoring/features/page-versions.md#reinstating-versions).
 
 * Möjlighet att skapa startprogram AEM SPA Editor.
 
