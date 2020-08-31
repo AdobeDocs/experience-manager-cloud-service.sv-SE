@@ -3,10 +3,10 @@ sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
 user-guide-description: Learn how to customize your Experience Manager as a Cloud Service deployment, including development and deployment topics.
 translation-type: tm+mt
-source-git-commit: b3548e3920fed45f6d1de54a49801d3971aa6bba
+source-git-commit: 769364dc0a70e081a1a0cc9b86f616ccb99c93ab
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 94%
+source-wordcount: '365'
+ht-degree: 67%
 
 ---
 
@@ -36,12 +36,42 @@ ht-degree: 94%
    + [AEM as a Cloud Service SDK](developing/introduction/aem-as-a-cloud-service-sdk.md)
    + [Utvecklingsriktlinjer för AEM as a Cloud Service](developing/introduction/development-guidelines.md)
    + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
+   + [Struktur för AEM](developing/introduction/ui-structure.md)
    + [Fusklapp för Sling](developing/introduction/sling-cheatsheet.md)
    + [Använda Sling-adaptrar](developing/introduction/sling-adapters.md)
    + [Använda Sling Resource Merger i AEM as a Cloud Service](developing/introduction/sling-resource-merger.md)
    + [Övertäckningar i AEM as a Cloud Service](developing/introduction/overlays.md)
    + [Loggning](developing/introduction/logging.md)
    + [AEM as a Cloud Service API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
+   + [Förstå testresultat](/help/implementing/developing/introduction/understand-test-results.md)
++ Komponenter och mallar {#components-templates}
+   + [Komponenter - översikt](developing/components/overview.md)
+   + [Mallar](developing/components/templates.md)
+   + [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+   + [Formatsystem](/help/sites-cloud/authoring/features/style-system.md)
+   + [JSON-exporterare för innehållstjänster](developing/components/json-exporter.md)
+   + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
+   + [Bildredigeraren](developing/components/image-editor.md)
+   + [Dekoration-taggar](developing/components/decoration-tag.md)
+   + [Använda Dölj villkor](developing/components/hide-conditions.md)
++ Headless Experience Management {#headless}
+   + [Headless och Hybrid with AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
+   + Enkelsidiga program {#spa}
+      + [Introduktion och genomgång av SPA](developing/spa/introduction.md)
+      + [SPA WKND - självstudiekurs](developing/spa/wknd-tutorial.md)
+      + [Komma igång med React](developing/spa/getting-started-react.md)
+      + [Komma igång med vinkelrät](developing/spa/getting-started-angular.md)
+      + [SPA Deep Dives](developing/spa/deep-dives.md)
+      + [Utveckla SPA för AEM](developing/spa/developing.md)
+      + [SPA Editor - översikt](developing/spa/editor-overview.md)
+      + [SPA Blueprint](developing/spa/blueprint.md)
+      + [SPA-sidkomponent](developing/spa/page-component.md)
+      + [Dynamisk mappning av modell till komponent](developing/spa/model-to-component-mapping.md)
+      + [Modellroutning](developing/spa/routing.md)
+      + [Starta integrering](developing/spa/launch-integration.md)
+      + [Återgivning på serversidan](developing/spa/ssr.md)
+      + [JavaScript API-referenser](developing/spa/reference-materials.md)
 + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
    + [Utöka Experience Fragments](developing/extending/experience-fragments.md)
    + [Anpassa och utöka Content Fragments](developing/extending/content-fragments-customizing.md)
