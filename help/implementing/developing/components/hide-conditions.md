@@ -2,7 +2,7 @@
 title: Använda Dölj villkor
 description: Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte.
 translation-type: tm+mt
-source-git-commit: 6902b40232ae0b704c5e29f09844cab018598c24
+source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 1%
@@ -58,22 +58,22 @@ Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, s
 
 1. Som standard kan sidförfattaren använda listkärnkomponenten för att skapa en lista med underordnade sidor genom att välja alternativet **Underordnade sidor**.
 
-   ![Inställningar för listkomponent](/help/implementing/developing/introduction/assets/hide-conditions-list-settings.png)
+   ![Inställningar för listkomponent](assets/hide-conditions-list-settings.png)
 
 1. I designdialogrutan för listkärnkomponenten kan mallskaparen välja alternativet **Inaktivera underordnade** för att förhindra att alternativet genererar en lista baserad på underordnade sidor som visas för sidförfattaren.
 
-   ![Designdialogruta för List-komponent](/help/implementing/developing/introduction/assets/hide-conditions-list-design.png)
+   ![Designdialogruta för List-komponent](assets/hide-conditions-list-design.png)
 
 1. En principnod skapas under `/conf/wknd/settings/wcm/policies/wknd/components/list` med en egenskap `disableChildren` som är inställd på `true`.
 
-   ![Nodstruktur för dolt villkor](/help/implementing/developing/introduction/assets/hide-conditions-node-structure.png)
+   ![Nodstruktur för dolt villkor](assets/hide-conditions-node-structure.png)
 
 1. Villkoret hide definieras som värdet för en `granite:hide` egenskap i egenskapsnoden dialog `/libs/core/wcm/components/list/v2/list/cq:dialog/content/items/tabs/items/listSettings/items/columns/items/column/items/listFrom/items/children`
 
-![Utvärdering av dolt villkor](/help/implementing/developing/introduction/assets/hide-conditions-evaluation.png)
+   ![Utvärdering av dolt villkor](assets/hide-conditions-evaluation.png)
 
 1. Värdet för `disableChildren` hämtas från designkonfigurationen och uttrycket `${cdDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
 
 1. Alternativet **Underordnade sidor** återges inte längre för sidförfattaren när listkomponenten används.
 
-   ![List Component with child option disabled](/help/implementing/developing/introduction/assets/hide-conditions-child-disabled.png)
+   ![List Component with child option disabled](assets/hide-conditions-child-disabled.png)
