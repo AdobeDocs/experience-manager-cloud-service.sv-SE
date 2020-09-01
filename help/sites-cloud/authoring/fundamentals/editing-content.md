@@ -2,7 +2,7 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
 source-wordcount: '2974'
 ht-degree: 6%
@@ -129,7 +129,7 @@ Komponentplatshållaren är en indikator som visar var en komponent placeras nä
 
 Du kan lägga till en ny komponent med [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). Platshållaren [för](#component-placeholder) komponenten visar var komponenten kommer att placeras:
 
-1. Kontrollera att sidan är i [**redigeringsläge **](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
+1. Kontrollera att sidan är i [**redigeringsläge**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
 1. Öppna [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser).
 1. Dra den önskade komponenten till [önskad plats](#component-placeholder).
 1. [Redigera](#edit-content) komponenten.
@@ -142,7 +142,7 @@ Du kan lägga till en ny komponent med [komponentwebbläsaren](/help/sites-cloud
 
 Du kan lägga till en ny komponent genom att använda rutan **Dra komponenter här** i styckesystemet:
 
-1. Kontrollera att sidan är i [**redigeringsläge **](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
+1. Kontrollera att sidan är i [**redigeringsläge**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
 1. Det finns två sätt att markera och lägga till en ny komponent från styckesystemet:
 
    * Select the **Insert Component** option (+) from either the toolbar of an existing component or the **Drag components here** box.
@@ -165,7 +165,7 @@ Det här beteendet kan konfigureras för din installation. Mer information finns
 
 Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
-1. Kontrollera att sidan är i [**redigeringsläge **](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
+1. Kontrollera att sidan är i [**redigeringsläge**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
 1. Öppna [resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser).
 1. Dra den önskade resursen till önskad position. Platshållaren [för](#component-placeholder) komponenten visar var komponenten kommer att placeras.
 
@@ -177,7 +177,7 @@ Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 >
 >På en mobil enhet fyller resursläsaren hela skärmen. När du börjar dra en resurs stängs webbläsaren och sidan visas igen så att du kan montera resursen.
 
-Om du behöver göra en snabb ändring i en resurs när du bläddrar bland resurserna kan du starta resursredigeraren direkt från webbläsaren genom att klicka på redigeringsikonen bredvid resursens namn. <!--If when browsing the assets you find that you need to make a quick change to an asset, you can start the [asset editor](/help/assets/manage-digital-assets.md) directly from the browser by clicking the edit icon next to the asset's name.-->
+Om du behöver göra en snabb ändring i en resurs när du bläddrar bland resurserna kan du starta [resursredigeraren](/help/assets/manage-digital-assets.md) direkt från webbläsaren genom att klicka på redigeringsikonen bredvid resursens namn.
 
 ![Knappen Resursredigering](/help/sites-cloud/authoring/assets/asset-edit-button.png)
 
@@ -232,6 +232,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
    * Du kan klistra in på samma sida eller på en annan sida.
    * Det inklistrade objektet klistras in ovanför objektet där du väljer åtgärden Klistra in.
    * Åtgärden Klistra in visas bara om det finns innehåll i Urklipp.
+
    ![Knappen Klistra in](/help/sites-cloud/authoring/assets/editing-component-toolbar-paste.png)
 
    >[!NOTE]
@@ -347,6 +348,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
    * Storlekshandtagen för komponentvisningen.
    * Emulatorverktygsfältet visas högst upp på skärmen.
    * Layoutåtgärder i stället för standardredigeringsåtgärder visas i komponentverktygsfältet.
+
    ![En komponent i layoutläge](/help/sites-cloud/authoring/assets/editing-layout-mode.png)
 
    Nu kan du ändra komponentens layout på samma sätt som i [layoutläget](/help/sites-cloud/authoring/features/responsive-layout.md#defining-layouts-layout-mode).
@@ -443,7 +445,7 @@ Alternativet **Visa som publicerad** finns på menyn [Sidinformation](/help/site
 
 ## Låsa en sida {#locking-a-page}
 
-Med AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
+AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
 
 En sida kan låsas från:
 
