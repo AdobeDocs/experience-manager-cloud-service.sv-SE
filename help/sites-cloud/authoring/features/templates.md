@@ -2,9 +2,9 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
-source-wordcount: '4554'
+source-wordcount: '4551'
 ht-degree: 11%
 
 ---
@@ -29,7 +29,7 @@ Med **mallredigeraren** kan mallförfattare:
 
 Det här dokumentet förklarar hur en **mallskapare** kan använda mallkonsolen och redigeraren för att skapa och hantera redigerbara mallar.
 
-Detaljerad information om hur redigerbara mallar fungerar på teknisk nivå finns i utvecklardokumentet Sidmallar - redigerbara för mer information. <!-- For detailed information about how editable templates work at a technical level, please see the developer document [Page Templates - Editable](/help/sites-developing/page-templates-editable.md) for more information.-->
+Mer information om hur redigerbara mallar fungerar på teknisk nivå finns i utvecklardokumentet [Sidmallar](/help/implementing/developing/components/templates.md) .
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ När du skapar en ny redigerbar mall:
 
 * Använd **mallkonsolen** . Detta finns i avsnittet **Allmänt** i **verktygskonsolen** .
    * Eller direkt på: `https://<host>:<port>/libs/wcm/core/content/sites/templates.html/conf`
-* Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) vid behov
+* Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) om det behövs
 * [Skapa en ny mall](#creating-a-new-template-template-author)som till att börja med är tom
 * [Definiera ytterligare egenskaper](#defining-template-properties-template-author) för mallen om det behövs
 * [Redigera mallen](#editing-templates-template-authors) för att definiera:
@@ -96,7 +96,7 @@ När du skapar en ny redigerbar mall:
 
 ### Skapa en mallmapp - administratör {#creating-a-template-folder-admin}
 
-Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. Det här är en administratörsåtgärd och beskrivs i dokumentet Sidmallar - redigerbart. <!-- A template folder should be created for your project to hold your project-specific templates. This is an admin task and is described in the document [Page Templates - Editable](/help/sites-developing/page-templates-editable.md#template-folders).-->
+Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. Detta är en administratörsuppgift och beskrivs i dokumentets [sidmallar](/help/implementing/developing/components/templates.md#template-folders).—>
 
 ### Skapa en ny mall - mallskapare {#creating-a-new-template-template-author}
 
@@ -104,9 +104,9 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
 
    >[!NOTE]
    >
-   >I en standard-AEM-instans finns den **globala** mappen redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen.
+   >I en AEM finns den **globala** mappen redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen.
    >
-   >Vi rekommenderar att du använder en mallmapp som skapats för ditt projekt. <!-- It is recommended best practice to use a [template folder created for your project](/help/sites-developing/page-templates-editable.md#template-folders).-->
+   >Vi rekommenderar att du använder en [mallmapp som skapats för ditt projekt](/help/implementing/developing/components/templates.md#template-folders).
 
 1. Välj **Skapa**, följt av **Skapa mall** för att öppna guiden.
 
@@ -114,7 +114,7 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
 
    >[!NOTE]
    >
-   >Malltyper är fördefinierade malllayouter och kan ses som mallar för en mall. Dessa är fördefinierade av utvecklare eller systemadministratören. Mer information finns i utvecklardokumentet Sidmallar - Redigerbart. <!-- More information can be found in the developer document [Page Templates - Editable](/help/sites-developing/page-templates-editable.md#template-type).-->
+   >Malltyper är fördefinierade malllayouter och kan ses som mallar för en mall. Dessa är fördefinierade av utvecklare eller systemadministratören. Mer information finns i utvecklardokumentet [Sidmallar](/help/implementing/developing/components/templates.md#template-type).—>
 
 1. Fyll i **mallinformation**:
 
@@ -204,7 +204,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
    >Om listan **Tillåtna mallar** lämnas tom kommer trädet att ökas tills ett värde/en lista hittas.
    >
    >
-   >Se Malltillgänglighet - principerna för tillåtna mallar är desamma. <!--See [Template Availability](/help/sites-developing/templates.md#template-availability) - the principles for allowed templates remain the same.-->
+   >Se [Malltillgänglighet](/help/implementing/developing/components/templates.md#template-availability) - principerna för tillåtna mallar är desamma.
 
 1. Klicka på **Spara** för att spara ändringarna i sidegenskaperna.
 
@@ -265,7 +265,7 @@ När en komponent har låsts upp kan du definiera det [ursprungliga innehållet]
 
 #### Layout {#template-layout}
 
-Med hjälp av [layouten](#editing-a-template-layout-template-author) kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som [**layoutläget ** för sidredigering](/help/sites-cloud/authoring/features/responsive-layout.md#defining-layouts-layout-mode).
+Med hjälp av [layouten](#editing-a-template-layout-template-author) kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som [**layoutläget** för sidredigering](/help/sites-cloud/authoring/features/responsive-layout.md#defining-layouts-layout-mode).
 
 #### Sidprofiler {#template-page-policies}
 
@@ -410,11 +410,11 @@ För en bildkomponent kan du till exempel definiera beskärningsproportionerna, 
 
 >[!CAUTION]
 >
->Observera att i AEM definieras beskärningsproportioner som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **namnet** tydligt eftersom det är det som visas i användargränssnittet.
+>Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **namnet** tydligt eftersom det är det som visas i användargränssnittet.
 
 >[!NOTE]
 >
->Innehållspolicyer för komponenter som implementerar RTF-redigeraren kan bara definieras för alternativ som är tillgängliga av RTE via dess gränssnittsinställningar. <!--[Content policies for components implementing the rich text editor](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638) can only be defined for options made available by the RTE through its UI settings.-->
+>[Innehållspolicyer för komponenter som implementerar RTF-redigeraren](/help/implementing/developing/extending/rich-text-editor.md) kan bara definieras för alternativ som är tillgängliga av RTE via dess gränssnittsinställningar.
 
 #### Princip och egenskaper (layoutbehållare) {#policy-and-properties-layout-container}
 
@@ -454,7 +454,7 @@ På fliken **Tillåtna komponenter** definierar du vilka komponenter som är til
 
 ###### Standardkomponenter {#default-components}
 
-På fliken **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till de angivna medietyperna så att AEM vet vilken komponent som ska kopplas när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
+På fliken **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till de angivna medietyperna, så att när en författare drar en resurs från resursläsaren AEM vet med vilken komponent den ska kopplas. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
 
 Klicka eller tryck på **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
 
@@ -504,9 +504,9 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 
 >[!NOTE]
 >
->**Du kan använda det inledande innehållsläget** för redigeringsläge för sidor som skapas med den mallen. Därför definieras inte profiler i **läget Inledande innehåll** utan i [**strukturläget **](#editing-a-template-structure-template-author).
+>**Du kan använda det inledande innehållsläget** för redigeringsläge för sidor som skapas med den mallen. Därför definieras inte profiler i **läget Inledande innehåll** utan i [**strukturläget**](#editing-a-template-structure-template-author).
 
-* Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kantlinje:
+* Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kant:
 
    ![Läget Inledande innehåll](/help/sites-cloud/authoring/assets/templates-initial-content-mode.png)
 
@@ -550,6 +550,7 @@ Så här öppnar du dialogrutan **Sidprofil** :
 
    * Den vänstra halvan definierar [sidans profiler](#page-policies)
    * Den högra halvan definierar [sidegenskaperna](#page-properties)
+
    ![Siddesign](/help/sites-cloud/authoring/assets/templates-page-design.png)
 
 #### Sidprofiler {#page-policies}
@@ -601,7 +602,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 >[!NOTE]
 >
->Mallförfattaren kan ange sidprincipen för mallen, men han eller hon måste få information om lämpliga klientbibliotek från utvecklaren.
+>Även om mallskaparen kan ange sidprincipen för mallen måste han eller hon hämta information om lämpliga klientbibliotek från utvecklaren.
 
 ### Redigera en mall - Inledande sidegenskaper - Författare {#editing-a-template-initial-page-properties-author}
 
@@ -638,6 +639,7 @@ När du skapar mallar bör du tänka på följande:
 
       * Endast struktur - används omedelbart
       * Innehåller ursprungligt innehåll - endast på sidor som skapats efter ändringen
+
    Var särskilt försiktig när du:
 
    * Låsa eller låsa upp komponenter på aktiverade mallar.
@@ -645,9 +647,10 @@ När du skapar mallar bör du tänka på följande:
 
       * Upplåsning av komponenter (som var låsta) saknas på befintliga sidor.
       * Om du låser komponenter (som var redigerbara) döljs innehållet så att det inte visas på sidorna.
+
    >[!NOTE]
    >
-   >AEM ger explicita varningar när komponenternas låsstatus ändras i mallar som inte längre är utkast.
+   >AEM ger uttryckliga varningar när komponenternas låsstatus ändras i mallar som inte längre är utkast.
 
 1. [Skapa egna mappar](#creating-a-template-folder-admin) för webbplatsspecifika mallar.
 1. [Publicera mallarna](#publishing-a-template-template-author) från **mallkonsolen** .
