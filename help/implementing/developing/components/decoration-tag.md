@@ -2,7 +2,7 @@
 title: Dekoration-tagg
 description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
 translation-type: tm+mt
-source-git-commit: 78afd53eaa4945e4933ef80a175fdf97c63b388e
+source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 1%
@@ -62,7 +62,7 @@ Mer information om hur du utvecklar i HTML finns i [HTML-dokumentationen](https:
 
 Detta beslutsträd sammanfattar logiken som bestämmer beteendet för wrapper-taggarna.
 
-![Beslutsträd](/help/implementing/developing/introduction/assets/decoration-tag-decision-tree.png)
+![Beslutsträd](assets/decoration-tag-decision-tree.png)
 
 ### Användningsexempel {#use-cases}
 
