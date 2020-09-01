@@ -2,7 +2,7 @@
 title: SPA Blueprint
 description: I detta dokument beskrivs det allmänna, ramverksoberoende kontrakt som alla SPA-ramverk ska uppfylla för att implementera redigerbara SPA-komponenter inom AEM.
 translation-type: tm+mt
-source-git-commit: f7d90d9cb41077a3a510f97a9f9f89f4b2b13cd9
+source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Om du vill att författaren ska kunna använda AEM SPA-redigerare för att redigera innehållet i en SPA-fil, finns det krav som SPA-programmet måste uppfylla.
 
-## Introduktion {#introdcution}
+## Introduktion {#introduction}
 
 I det här dokumentet beskrivs det allmänna kontraktet att alla SPA-ramverk ska uppfylla (dvs. typ av AEM stödlager) för att implementera redigerbara SPA-komponenter i AEM.
 
@@ -283,4 +283,3 @@ Se hur en enkel SPA fungerar och experimentera med en SPA själv genom att forts
 Mer information om SPA i AEM finns i följande dokument:
 
 * [Översikt över](editor-overview.md) SPA-redigeraren för en översikt över SPA-program i AEM och kommunikationsmodellen
-
