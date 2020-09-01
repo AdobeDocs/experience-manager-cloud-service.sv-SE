@@ -2,7 +2,7 @@
 title: Använd RTF-redigeraren [!DNL Adobe Experience Manager] för att skapa innehåll.
 description: Använd [!DNL Experience Manager] RTF-redigeraren för att skapa innehåll.
 translation-type: tm+mt
-source-git-commit: 5a90db8791dd92cceb811b9ed2beda3ecb4a974d
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Verktygsfältet innehåller vanligtvis följande alternativ:
 
 För textbaserade komponenter klickar du på fullskärmsläget ![RTE-helskärmsknappen](/help/sites-cloud/authoring/assets/editing-full-screen.png) i [verktygsfältet](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) för att öppna RTF-redigeraren och döljer resten av sidinnehållet.
 
-I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Vilka alternativ som är tillgängliga beror på konfigurationen. <!--Full screen mode displays all the configured options that you can use for authoring. The availability of options [depends on the configuration](/help/sites-administering/rich-text-editor.md).-->
+I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Vilka alternativ som är tillgängliga beror [på konfigurationen](/help/implementing/developing/extending/rich-text-editor.md).
 
 ![RTE i helskärmsläge](/help/sites-cloud/authoring/assets/rte-full-screen.png)
 
