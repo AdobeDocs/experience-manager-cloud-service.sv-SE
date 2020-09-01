@@ -2,7 +2,7 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
 translation-type: tm+mt
-source-git-commit: 0508311b997789ada07856a73d29e38d1b735979
+source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
 workflow-type: tm+mt
 source-wordcount: '3244'
 ht-degree: 0%
@@ -512,7 +512,7 @@ Sidor skapade från redigerbara mallar:
 
    * `cq:templateType` - Tillhandahåller en referens till malltypen.
 
-![Hur mallar, innehåll och komponenter samverkar](/help/implementing/developing/introduction/assets/templates-content-components.png)
+![Hur mallar, innehåll och komponenter samverkar](assets/templates-content-components.png)
 
 Diagrammet ovan visar hur mallar, innehåll och komponenter samverkar:
 
@@ -565,7 +565,7 @@ Utvärderingen fungerar enligt följande:
 
 I följande diagram visas mallutvärderingsprocessen:
 
-![Mallutvärderingsprocess](/help/implementing/developing/introduction/assets/template-evaluation.png)
+![Mallutvärderingsprocess](assets/template-evaluation.png)
 
 >[!CAUTION]
 >
