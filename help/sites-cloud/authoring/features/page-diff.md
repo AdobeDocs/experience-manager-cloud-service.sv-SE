@@ -2,7 +2,7 @@
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 >
 >Användaren måste ha behörigheten **Ändra/Skapa/Ta bort** på noden `/content/versionhistory` för att kunna använda funktionen.
 >
->Mer teknisk information om den här funktionen finns i Developing and Page Diff. <!-- See [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) for more technical details on this feature.-->
+>Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/implementing/developing/introduction/page-diff.md#operation-details) .
 
 ## Use {#use}
 
@@ -105,4 +105,4 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 >[!NOTE]
 >
->Mer information om hur sidskillnader fungerar samt om begränsningar som kan påverka sidskillnader finns i utvecklardokumentationen för den här funktionen. <!-- For more details about the operation of the page diff mechanism as well as limitations which can affect page diff, please see the [developer documentation](/help/sites-developing/pagediff.md) of this feature.-->
+>Mer information om hur sidskillnader fungerar samt om begränsningar som kan påverka sidskillnader finns i [utvecklardokumentationen](/help/implementing/developing/introduction/page-diff.md) för den här funktionen.
