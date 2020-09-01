@@ -2,7 +2,7 @@
 title: Konfigurerar din kontomiljö
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 4%
@@ -57,7 +57,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Visa skrivbordsåtgärder för Assets**
 
-   Det här alternativet kräver att AEM-datorprogrammet används.
+   Det här alternativet kräver AEM datorprogram.
 
 * **Anteckningsfärg**
 
@@ -85,6 +85,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    * [Kortkommandon för att redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
    * [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
+
    Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras om en användare har vissa tillgänglighetskrav.
 
 * **Aktivera startsidan för resurser**
@@ -93,4 +94,4 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Stock-konfiguration**
 
-   Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat Adobe Stock-integrering. <!--This option allows to specify the preferred Adobe Stock configuration and is only be available if your system administrator has enabled [Adobe Stock integration](/help/assets/aem-assets-adobe-stock.md).-->
+   Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md).
