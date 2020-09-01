@@ -2,9 +2,9 @@
 title: Struktur för AEM
 description: Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement
 translation-type: tm+mt
-source-git-commit: 0ae4a4695f3d869b9372694396711ca8626e1df1
+source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -169,4 +169,4 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 <!--For more details about the concepts around the touch-enabled UI, continue to the article [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).-->
 
-Mer teknisk information finns i [JS-dokumentationen för den beröringsaktiverade sidredigeraren](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) .
+Mer teknisk information finns i [JS-dokumentationen som angetts](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.
