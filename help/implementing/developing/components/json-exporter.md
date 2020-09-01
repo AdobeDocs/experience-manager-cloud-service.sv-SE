@@ -2,7 +2,7 @@
 title: JSON-exporterare för innehållstjänster
 description: AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder.
 translation-type: tm+mt
-source-git-commit: 02d95b7c45cb4d6d2fbfd9699690ecc1b80e1202
+source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 4%
@@ -38,7 +38,7 @@ Inom AEM levereras med väljaren `model` och `.json` tillägget.
 
 1. Levererar innehåll som:
 
-   ![JSON-modell för WKND-innehåll](/help/implementing/developing/introduction/assets/json-model-wknd.png)
+   ![JSON-modell för WKND-innehåll](assets/json-model-wknd.png)
 
 Du kan också leverera innehållet i ett strukturerat innehållsfragment genom att specifikt rikta in det på det.
 
@@ -56,7 +56,7 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
 * Levererar innehåll som:
 
-   ![JSON-modell för WKND-innehållsfragment](/help/implementing/developing/introduction/assets/json-model-wknd-content-fragment.png)
+   ![JSON-modell för WKND-innehållsfragment](assets/json-model-wknd-content-fragment.png)
 
    >[!NOTE]
    >
