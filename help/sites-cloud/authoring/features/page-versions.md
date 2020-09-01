@@ -2,7 +2,7 @@
 title: Arbeta med sidversioner
 description: Skapa, jämföra och återställa versioner av en sida
 translation-type: tm+mt
-source-git-commit: 87da152f21abe379d70e0a8d04f3155901f013dd
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 4%
@@ -132,7 +132,7 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
 
    ![Återställ version - Välj sida](/help/sites-cloud/authoring/assets/versions-restore-version-03.png)
 
-1. Välj **Återställ** för den valda versionen av den valda sidan som ska återställas som den *aktuella* versionen.
+1. Välj **Återställ** för den valda versionen av den valda sidan som ska återställas som den aktuella versionen.
 
 >[!NOTE]
 >
