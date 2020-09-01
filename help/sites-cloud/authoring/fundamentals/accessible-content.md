@@ -1,10 +1,10 @@
 ---
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
-description: Använd AEM som molntjänst för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
+description: Använd AEM som Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: 84b69fb72b2fe28617417fd5a70c5ad1428c3535
+source-git-commit: fb6c90078e9da011a71093fcdab1a50faded5daa
 workflow-type: tm+mt
-source-wordcount: '13955'
+source-wordcount: '14057'
 ht-degree: 5%
 
 ---
@@ -23,12 +23,10 @@ Som en introduktion tillhandahåller konsortiet en serie sektioner och styrkande
 * [WCAG-dokument](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
 
 Se även:
+
 * Our [Quick Guide to WCAG 2.1](/help/onboarding/accessibility/quick-guide-wcag.md).
 * The [Accessibility Conformance reports for Adobe solutions](https://www.adobe.com/accessibility/compliance.html).
-
-<!-- 
->* [Configuring the Rich Text Editor for producing accessible conten](/help/sites-administering/rte-accessible-content.md)
--->
+* [Konfigurera RTF-redigeraren för att skapa tillgängligt innehåll](/help/implementing/developing/extending/rte-accessible-content.md)
 
 Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägst), Nivå AA och Nivå AAA (högst). Nivåerna definieras kortfattat enligt följande:
 
@@ -48,7 +46,7 @@ I följande avsnitt visas [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/
 >* Den [numrering som används i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#numbering-in-wcag-2-1) för att underlätta korsreferering med WCAG-webbplatsen.
 
 
-## Princip 1: Förutsägbar {#principle-perceivable}
+## Princip 1: Förväntningsbar {#principle-perceivable}
 
 [Princip 1: Perfekt - Information och komponenter i användargränssnittet måste kunna presenteras för användarna på ett sätt som de kan uppfatta.](https://www.w3.org/TR/WCAG/#perceivable)
 
@@ -74,15 +72,13 @@ För statisk grafik är det grundläggande kravet att tillhandahålla ett motsva
 
 >[!NOTE]
 >
->Vissa färdiga kärnkomponenter, som **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)**, innehåller inte något**alternativt textfält **för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns ett**etikettfält **(fliken**[Tillgänglighet](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** ) för hela komponenten.
+>Vissa färdiga kärnkomponenter, som **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)** , innehåller inte något **alternativt textfält** för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns ett **etikettfält** (fliken **[Tillgänglighet](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** ) för hela komponenten.
 >
 >När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut).
-
-<!--
->Some out-of-the-box Core Components, such as **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)** do not provide an **Alternative Text** field for adding alternate text descriptions to individual images, though there is the **Label** field (**[Accessibility](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** tab) for the entire component. 
 >
->When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
--->
+>Vissa färdiga kärnkomponenter, som **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)** , innehåller inte något **alternativt textfält** för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns ett **etikettfält** (fliken **[Tillgänglighet](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** ) för hela komponenten.
+>
+>När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
 AEM kräver att fältet **Alternativ text** ska fyllas i som standard. Om bilden är enbart dekorativ och alternativ text inte behövs kan alternativet **Bild** vara dekorativ kontrolleras.
 
@@ -151,7 +147,7 @@ Hjälpmedelsproblem för video och ljud kan uppstå om:
 * Personer med nedsatt hörsel eller som är döva och som inte kan höra ljudspåret.
 * Personer som kan höra ljudspåret, men som inte förstår vad som talas (till exempel för att det är på ett språk som de inte förstår).
 
-Video eller ljud kan också vara otillgängligt för personer som använder webbläsare eller enheter som inte har stöd för uppspelning av innehåll i särskilda medieformat, som Adobe Flash.
+Video eller ljud kan också vara otillgängligt för personer som använder webbläsare eller enheter som inte har stöd för uppspelning av innehåll i vissa medieformat, till exempel Adobe Flash.
 
 Om du anger den här informationen i ett annat format, till exempel text (eller ljud för video utan ljud), kan det göra den tillgänglig för personer som inte kan komma åt det ursprungliga innehållet.
 
@@ -160,7 +156,7 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
 * Om innehållet spelas in i förväg utan video (till exempel en poddsändning):
    * Ange en länk omedelbart före eller efter innehållet till en textavskrift av ljudinnehållet. transkriberingen ska vara en HTML-sida med en textmotsvarighet till allt tal och viktigt icke-talat innehåll, plus en indikation på vem som talar, en beskrivning av inställningen, röstuttryck och en beskrivning av allt annat viktigt ljud.
 * Om innehållet är en animering eller förinspelad video utan ljud:
-   * Tillhandahåll en länk omedelbart före eller efter innehållet till en motsvarande textbeskrivning av den information som videon ger
+   * Ange en länk omedelbart före eller efter innehållet till en motsvarande textbeskrivning av informationen som videon innehåller
    * Eller en motsvarande ljudbeskrivning i ett vanligt ljudformat som MP3.
 
 >[!NOTE]
@@ -169,7 +165,7 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
 >
 >Riktlinjerna, [Förstå WCAG 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html), innehåller mer information.
 
-Att infoga multimedia på dina AEM-webbsidor liknar att infoga en bild. Men eftersom multimediainnehållet är mycket mer än en stillbild finns det olika inställningar och alternativ för att styra hur multimediainnehållet spelas upp.
+Att infoga multimedia i dina AEM webbsidor påminner om att infoga en bild. Men eftersom multimediainnehållet är mycket mer än en stillbild finns det olika inställningar och alternativ för att styra hur multimediainnehållet spelas upp.
 
 >[!NOTE]
 >
@@ -314,15 +310,16 @@ Detta kriterium gäller för att se till att sådan strukturinformation tillhand
 
 #### Hur man möter - Information och relationer (1.3.1) {#how-to-meet-info-and-relationships}
 
-AEM gör det enkelt att skapa semantiskt meningsfullt webbinnehåll med hjälp av lämpliga HTML-element. Öppna sidinnehållet i textredigeraren (en textkomponent) och använd menyn **Paraformat** (styckesymbol) för att ange lämpligt strukturelement (till exempel stycke, rubrik osv.).
+AEM gör det enkelt att skapa semantiskt meningsfullt webbinnehåll med lämpliga HTML-element. Öppna sidinnehållet i textredigeraren (en textkomponent) och använd menyn **Paraformat** (styckesymbol) för att ange lämpligt strukturelement (till exempel stycke, rubrik osv.).
 
 Du kan se till att dina webbsidor får rätt struktur genom att använda följande element där det är tillämpligt:
 
-* **Rubriker:** Så länge du har tillgänglighetsfunktionerna i RTE aktiverat erbjuder AEM tre nivåer för sidrubriken. Du kan använda dessa för att identifiera avsnitt och underavsnitt för innehåll. Rubrik 1 är den högsta rubriknivån, rubrik 3 den lägsta. Systemadministratören kan konfigurera systemet så att fler rubriknivåer tillåts.
+* **Rubriker:** Så länge du har tillgänglighetsfunktionerna i textredigeraren aktiverade kan AEM erbjuda tre rubriknivåer. Du kan använda dessa för att identifiera avsnitt och underavsnitt för innehåll. Rubrik 1 är den högsta rubriknivån, rubrik 3 den lägsta. Systemadministratören kan konfigurera systemet så att fler rubriknivåer tillåts.
 
 * **Listor**: Du kan använda HTML för att ange tre olika typer av listor:
    * Elementet `<ul>` används för *oordnade* punktlistor. Enskilda listobjekt identifieras med elementet `<li>`. Använd ikonen **Punktlista** i textredigeraren.
    * The `<ol>` element is used for *numbered* lists. Enskilda listobjekt identifieras med hjälp av `<li>` elementet. Använd ikonen **Numrerad lista** i textredigeraren.
+
    Om du vill ändra befintligt innehåll till en viss listtyp markerar du lämplig text och väljer lämplig listtyp. Precis som i det tidigare exemplet som visar hur stycketext skrivs in, läggs de rätta listelementen automatiskt till i HTML-koden.
 
    I helskärmsläge visas ikonerna **Punktlista** och **Numrerad lista**. Om du inte arbetar i helskärmsläge finns de två alternativen bakom den enda **Listor**-ikonen.
@@ -332,23 +329,22 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
    * ett `<tr>` element för varje rad i tabellen
    * ett element `<th>` för varje rad och kolumnrubrik
    * ett `<td>` element för varje datacell
+
    Tillgängliga tabeller använder dessutom följande element och attribut:
 
    * Elementet `<caption>` används för att ge en synlig bildtext för tabellen. Bildtexter visas som standard centrerade ovanför tabellen, men kan placeras korrekt med CSS. Bildtexten är programmatiskt kopplad till tabellen och är därför en användbar metod för att ge en introduktion till innehållet.
    * Elementet gör det enklare för användare som inte är synkade att förstå den information som presenteras i en tabell genom att ge en sammanfattning av vad en synkad användare kan se. `<summary>` Detta är särskilt användbart när komplexa eller okonventionella tabellayouter används (det här attributet visas inte i webbläsaren, det läses bara ut för hjälpfunktioner).
    * Attributet `scope` för `<th>` elementet används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
+
    >[!NOTE]
    >
-   >Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper** (se Lägga till stöd för ytterligare HTML-element och attribut).
-
-   <!-- removed link syntax for ExL - Bob Bringhurst
-  >By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see Adding Support for Additional HTML Elements and Attributes /help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes).
-  -->
+   >Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
    Så här öppnar du dialogrutan **Tabell** där du kan välja fliken **Tabellegenskaper** :
 
    * Definiera en lämplig **bildtext**.
    * Ta helst bort alla standardvärden för **Bredd**, **Höjd**, **Kant**, **Cellfyllnad** och **Cellmellanrum** eftersom dessa egenskaper kan anges i en global formatmall.
+
    Du kan sedan använda **cellegenskaperna** för att välja om cellen är en data- eller rubrikcell:
 
 * **Betoning**: Använd elementet `<strong>` eller `<em>` för att ange betoning. Använd inte rubriker för att markera text i stycken.
@@ -357,10 +353,11 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
 
       >[!NOTE]
       >
-      >RTE i en standard-AEM-installation är konfigurerad att använda:
+      >RTE i en AEM standardinstallation är konfigurerad att använda:
       >
       >* `<b>` for `<strong>`
       >* `<i>` for `<em>`
+
       >
       >De är i princip desamma, men `<strong>` och `<em>` är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE så att den används `<strong>` och `<em>` (i stället för `<b>` och `<i>`) när du utvecklar projektinstansen.
 
@@ -480,7 +477,7 @@ Se till att all information som bygger på visuella egenskaper för sidinnehåll
 
 Färg är ett uppenbart effektivt sätt att förbättra webbsidornas estetiska utseende och är också användbart för att förmedla information. Det finns dock en rad synstörningar, från blindhet till färgssynsbrist, som innebär att vissa personer inte kan skilja mellan olika färger. Detta gör färgkodning till ett otillförlitligt sätt att tillhandahålla information.
 
-En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja på nyanser i grönt och röda toner. De kan se båda färgerna som en tredje färg (till exempel brunt), och då kan de inte skilja mellan rött, grönt och brunt.
+En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja på nyanser i grönt och röda nyanser. De kan se båda färgerna som en tredje färg (till exempel brunt), och då kan de inte skilja mellan rött, grönt och brunt.
 
 Dessutom kan inte färger uppfattas av personer som använder webbläsare som bara innehåller text, enheter för monokrom visning eller som visar en svartvit utskrift av sidan.
 
@@ -532,6 +529,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 1.4.2
    * Stor text: Storskalig text och bilder av storskalig text har ett kontrastförhållande på minst 3:1.
    * Oavsiktlig: Text eller bilder av text som är en del av ett inaktivt användargränssnitt, som är [rena dekorationer](https://www.w3.org/TR/WCAG/#dfn-pure-decoration), som inte är synliga för någon eller som är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
    * Logotyper: Text som är en del av en logotyp eller ett varumärkesnamn har inget minimikrav på kontrast.
+
    >[!NOTE]
    >
    >Mer information finns i [Förstå icke-textkontrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) , som hjälper dig att se till att innehållsförfattare förstår ytterligare krav runt icke-textelement (inklusive ikoner, gränssnittselement med flera).
@@ -541,7 +539,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 1.4.2
 Personer med vissa nedsatt syn kanske inte kan skilja mellan vissa färgpar med låg kontrast. Tillgänglighetsproblem kan uppstå för dessa personer om något av följande:
 
 * Texten har dålig kontrast mot bakgrundsfärgen.
-* Färgkodningen för text (t.ex. länktext och text som inte är länkad) är viktig för att särskilja information.
+* Färgkodningen för text (t.ex. länktext och icke-länktext) är viktig för att kunna skilja information åt.
 
 >[!NOTE]
 >
@@ -605,7 +603,7 @@ Förutom att följa riktlinjerna under [How to Meet Success Criteria 1.4.4](http
 * Villkor för lyckat resultat 1.4.5
 * Nivå AA
 * Bilder av text: Om den teknik som används kan åstadkomma den visuella presentationen, används text för att förmedla information i stället för bilder av text, med undantag för följande:
-   * Anpassningsbart: Bilden av texten kan anpassas visuellt efter användarens behov.
+   * Anpassningsbart: Textbilden kan anpassas visuellt efter användarens behov.
    * Grundläggande: En viss presentation av texten är väsentlig för den information som förmedlas.
 
 >[!NOTE]
@@ -738,28 +736,28 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 
 [Riktlinje 2.3 Kriser: Utforma inte innehåll på ett sätt som är känt för att orsaka kramper eller fysiska reaktioner.](https://www.w3.org/TR/WCAG/#seizures-and-physical-reactions)
 
-### Tre blinkningar eller under tröskelvärde (2.3.1) {#three-flashes-or-below-threshold}
+### Tre Flash eller under tröskelvärde (2.3.1) {#three-flashes-or-below-threshold}
 
 * Villkor för lyckat resultat 2.3.1
 * Nivå A
-* Tre blinkningar eller under tröskelvärde: Webbsidor innehåller inte något som blinkar mer än tre gånger under en sekund, eller så är blixten under de allmänna tröskelvärdena för blixt och rött.
+* Tre Flash eller under tröskelvärde: Webbsidor innehåller inte något som blinkar mer än tre gånger under en sekund, eller så är blixten under de allmänna tröskelvärdena för blixt och rött.
 
 >[!NOTE]
 >
 >Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG/#cc5).
 
-#### Syfte - Tre blinkningar eller under tröskelvärde (2.3.1) {#purpose-three-flashes-or-below-threshold}
+#### Syfte - Tre Flash eller under tröskelvärde (2.3.1) {#purpose-three-flashes-or-below-threshold}
 
 I vissa fall kan blinkande innehåll orsaka fotokänsliga anfall. Detta kriterium ger användarna möjlighet att få tillgång till och uppleva allt innehåll utan att behöva oroa sig för att innehållet blinkar.
 
-#### Så här möts - tre blinkningar eller under tröskelvärdet (2.3.1) {#how-to-meet-three-flashes-or-below-threshold}
+#### Så här möts du - tre Flash eller lägre tröskelvärde (2.3.1) {#how-to-meet-three-flashes-or-below-threshold}
 
 Du bör vidta åtgärder för att se till att följande tekniker används:
 
 * Se till att komponenterna inte blinkar mer än tre gånger under en 1-sekundersperiod.
 * Om villkoret ovan inte kan uppfyllas visas blinkande innehåll i ett *litet säkert område* i pixlar på skärmen. Detta område beräknas med hjälp av en komplex formel som omfattas av [G176: Se till att blinkningsområdet är tillräckligt](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G176)litet, så denna teknik bör endast följas om blinkande innehåll är *absolut* nödvändigt.
 
-#### Mer information - tre blinkningar eller under tröskelvärde (2.3.1) {#more-information-three-flashes-or-below-threshold}
+#### Mer information - tre Flash eller lägre tröskelvärde (2.3.1) {#more-information-three-flashes-or-below-threshold}
 
 * [Förstå villkor för framgång 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)
 * [Hur man uppfyller kriterierna för framgång 2.3.1](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)
@@ -778,7 +776,7 @@ Det handlar om att säkerställa att innehållet är enkelt och enkelt att navig
 
 #### Syfte - Kringgå block (2.4.1) {#purpose-bypass-blocks}
 
-Syftet med detta villkor är att personer som navigerar sekventiellt genom innehållet ska kunna få mer direkt åtkomst till det primära innehållet på webbsidan. Webbsidor och program har ofta innehåll som visas på andra sidor eller skärmar. Exempel på upprepade innehållsblock är bland annat navigeringslänkar, rubrikgrafik, menyer och reklamramar, men är inte begränsade till dem. Små upprepade avsnitt, t.ex. enskilda ord, fraser eller enstaka länkar, anses inte utgöra block i denna bestämmelse.
+Syftet med detta villkor är att personer som navigerar sekventiellt genom innehållet ska få mer direkt åtkomst till det primära innehållet på webbsidan. Webbsidor och program har ofta innehåll som visas på andra sidor eller skärmar. Exempel på upprepade innehållsblock är bland annat navigeringslänkar, rubrikgrafik, menyer och reklamramar, men är inte begränsade till dem. Små upprepade avsnitt, t.ex. enskilda ord, fraser eller enstaka länkar, anses inte utgöra block i denna bestämmelse.
 
 #### Så här möts du - kringgå block (2.4.1) {#how-to-meet-bypass-blocks}
 
@@ -801,7 +799,7 @@ Detta kriterium hjälper alla att snabbt identifiera innehållet på en webbsida
 
 #### Så här möts du - sida titel (2.4.2) {#how-to-meet-page-titled}
 
-När en ny HTML-sida skapas i AEM kan du ange sidans titel. Se till att titeln på rätt sätt beskriver sidans innehåll och syfte, särskilt eventuella unika aspekter, så att besökarna snabbt kan identifiera om innehållet faktiskt är relevant för deras behov eller inte.
+När en ny HTML-sida skapas i AEM kan du ange sidrubriken. Se till att titeln på rätt sätt beskriver sidans innehåll och syfte, särskilt eventuella unika aspekter, så att besökarna snabbt kan identifiera om innehållet faktiskt är relevant för deras behov eller inte.
 
 Du kan också redigera sidans titel när du redigerar en sida, tillgänglig via **Sidinformation** – **Egenskaper**.
 
@@ -852,7 +850,7 @@ Se framför allt till att länkens syfte tydligt beskrivs i länktexten.
 
 Länkarna ska vara enhetliga på olika sidor, särskilt för navigeringsfält. Om till exempel en länk till en viss sida heter **Publikationer** på en sida kan du använda den texten på andra sidor för att säkerställa konsekvens.
 
-När du skriver finns det vissa problem med användningen av rubrikattribut som säkerställer att liknande länkar som visas på en sida ger unik information om destinationen (till exempel &quot;läs mer&quot; avser ofta en rad olika destinationer):
+När du skriver finns det vissa problem med användningen av rubrikattribut som säkerställer att liknande länkar som visas på en sida ger unik information om målet (t.ex. &quot;läs mer&quot; avser ofta en rad olika destinationer):
 
 * Texten i rubrikattributet är i allmänhet bara tillgänglig för musanvändare som popup-fönster med verktygstips och kan inte öppnas konsekvent med tangentbordet eller av mobilanvändare.
 * Skärmläsare kan läsa upp rubrikattribut, men denna funktion kanske inte är aktiverad som standard. så att användare kanske inte känner till att det finns ett rubrikattribut.
@@ -991,7 +989,7 @@ I AEM anges sidans standardspråk när du skapar sidan, men det kan också ändr
 
 >[!NOTE]
 >
->AEM erbjuder ytterligare finjustering för variationer av ett rotspråk. till exempel amerikansk engelska - en-us, brittisk engelska - en-gb och kanadensisk engelska - en-ca. Denna detaljnivå är ofta överflödig för hjälpmedelstekniker, men kan användas för regionala variationer av sidinnehåll.
+>AEM erbjuder ytterligare finjusteringar för variationer av ett rotspråk. till exempel amerikansk engelska - en-us, brittisk engelska - en-gb och kanadensisk engelska - en-ca. Denna detaljnivå är ofta överflödig för hjälpmedelstekniker, men kan användas för regionala variationer av sidinnehåll.
 
 #### Mer information - Sidans språk (3.1.1) {#more-information-language-of-page}
 
@@ -1039,10 +1037,7 @@ På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig 
 >
 >Det är inte nödvändigt att följa detta kriterium när man inkluderar namn eller städer på olika språk, eller när man använder låneord eller fraser som har blivit vanliga på standardspråket (t.ex. *schadenfreude* på engelska).
 
-Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses som ovan. Alternativt kan attributet inkluderas i textredigeringsfilen av en systemadministratör (se Lägga till stöd för ytterligare HTML-element och attribut). `lang`
-<!--
-To add the span element, with an appropriate language, you can manually edit your HTML markup in the source edit mode of the RTE so that it reads as above. Alternatively the `lang` attribute can be included in the RTE by a system administrator (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
--->
+Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses som ovan. Alternativt kan attributet inkluderas i textredigeringsfilen av en systemadministratör (se `lang` Lägga till stöd för ytterligare HTML-element och attribut [](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
 #### Mer information - Språk för delar (3.1.2) {#more-information-language-of-parts}
 
@@ -1134,7 +1129,7 @@ Syftet med detta kriterium är att säkerställa en konsekvent identifiering av 
 
 Den här konsekvensen omfattar även textalternativen. Om ikoner eller andra icke-textobjekt har samma funktioner bör deras textalternativ också vara konsekventa.
 
-Om det finns två komponenter på en webbsida som båda har samma funktioner som en komponent på en annan sida i en uppsättning webbsidor, måste alla tre vara konsekventa. Därför kommer de två sidorna på samma sida att vara konsekventa.
+Om det finns två komponenter på en webbsida som båda har samma funktioner som en komponent på en annan sida i en uppsättning webbsidor, måste alla tre vara konsekventa. Därför kommer de båda på samma sida att vara konsekventa.
 
 Det är önskvärt och bästa praxis att alltid vara konsekvent på en enda webbsida, men 3.2.4 behandlar endast konsekvens inom en uppsättning webbsidor där något upprepas på mer än en sida i uppsättningen.
 
@@ -1190,9 +1185,9 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 3.3.1
 
 Att ge instruktioner som hjälper människor att fylla i formulär är en grundläggande del av god praxis när det gäller gränssnittsanvändning. Detta är särskilt användbart för personer med nedsatt syn eller kognitiva funktionshinder som annars skulle kunna få svårt att förstå layouten i ett formulär och den typ av data som ska anges i ett visst formulärfält.
 
-##### Formulär
+##### Forms
 
-I AEM WKND-demoprojektet läggs en standardetikett till när du lägger till en formulärkomponent, till exempel ett **textfält**, på sidan. Den här standardtiteln beror på komponenttypen. Du kan lägga till en egen rubrik på fliken **Titel och Text** i redigeringsdialogrutan för det fältet. Det är viktigt att se till att etiketter hjälper användarna att förstå informationen som är kopplad till varje formulärkomponent.
+I AEM WKND-demoprojekt läggs en standardetikett till när du lägger till en formulärkomponent, till exempel ett **textfält**, på sidan. Den här standardtiteln beror på komponenttypen. Du kan lägga till en egen rubrik på fliken **Titel och Text** i redigeringsdialogrutan för det fältet. Det är viktigt att se till att etiketter hjälper användarna att förstå informationen som är kopplad till varje formulärkomponent.
 
 Det här **titelfältet** måste användas för fältelement eftersom det innehåller en etikett som är tillgänglig för hjälpmedelsteknik. Det räcker inte att bara skriva en etikett bredvid fältet.
 
@@ -1206,13 +1201,9 @@ Where image buttons are used (for example, the **Image Button** component of the
 
 In the WKND project, where there is a group of related controls, such as **Radio Group**, a title may be needed for the group, as well as individual controls. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper** (se Lägga till stöd för ytterligare HTML-element och attribut).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md)).
 
-<!--
-However, there is no programmatic association between the group title and the radio buttons themselves. Template editors would need to wrap the title in the necessary `fieldset` and `legend` tags to create this association and this can only be done by editing the page source code. Alternatively, a system administrator can add support for these elements so that they appear in the **Field Properties** dialog (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
--->
-
-###### Ytterligare överväganden för formulär {#additional-considerations-for-forms}
+###### Ytterligare överväganden för Forms {#additional-considerations-for-forms}
 
 Om data ska matas in i ett visst format bör du göra detta tydligt i etikettexten. Om ett datum t.ex. måste anges i `DD-MM-YYYY` formatet, anger du det här som en del av etiketten. Det innebär att när skärmläsaranvändare stöter på fältet visas etiketten automatiskt tillsammans med ytterligare information om formatet.
 
@@ -1311,7 +1302,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 4.1.1
 #### Mer information - Analys (4.1.1) {#more-information-parsing}
 
 * [Om villkor för att lyckas 4.1.1](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
-* [Så här uppfyller du kriterierna för framgång 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)
+* [Hur man uppfyller kriterierna för framgång 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)
 
 ### Namn, roll, värde (4.1.2)  {#name-role-value}
 
