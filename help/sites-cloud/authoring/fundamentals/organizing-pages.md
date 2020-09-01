@@ -2,9 +2,9 @@
 title: Skapa och ordna sidor
 description: Skapa och ordna sidor med AEM
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2554'
 ht-degree: 5%
 
 ---
@@ -93,7 +93,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >Tänk också på att vissa webbläsare (t.ex. äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
-När du skapar en ny sida validerar AEM sidnamnet enligt de konventioner som AEM och JCR har infört. <!--When creating a new page, AEM will [validate the page name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and the JCR.-->
+När du skapar en ny sida [validerar AEM sidnamnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som AEM och JCR har infört.
 
 Minsta tillåtna tecken är:
 
@@ -103,7 +103,7 @@ Minsta tillåtna tecken är:
 * `_` (understreck)
 * `-` (minus/bindestreck)
 
-Fullständig information om alla tillåtna tecken finns i namnkonventionen. <!--Full details of all characters allowed can be found in [the naming conventions](/help/sites-developing/naming-conventions.md).-->
+Fullständig information om alla tillåtna tecken finns i [namnkonventionen](/help/implementing/developing/introduction/naming-conventions.md).
 
 >[!NOTE]
 >
@@ -111,7 +111,7 @@ Fullständig information om alla tillåtna tecken finns i namnkonventionen. <!--
 
 #### Titel {#title}
 
-Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn** i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. <!--If you supply only a page **Title** when creating a new page, AEM will derive the page **Name** from this string and [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.-->
+Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR.](/help/implementing/developing/introduction/naming-conventions.md)
 
 Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ersätta de ogiltiga tecknen. Till exempel:
 
@@ -122,7 +122,7 @@ Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda
 
 #### Namn {#name}
 
-När du anger ett **sidnamn** när du skapar en ny sida validerar AEM namnet enligt konventionerna som AEM och JCR har angett. Du kan inte skicka ogiltiga tecken i fältet **Namn** . När AEM upptäcker ogiltiga tecken markeras fältet. <!--When you supply a page **Name** when creating a new page, AEM will [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR. You cannot submit invalid characters in the **Name** field. When AEM detects invalid characters the field will be highlighted with an explanatory message.-->
+När du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som AEM och JCR har infört. Du kan inte skicka ogiltiga tecken i fältet **Namn** . När AEM upptäcker ogiltiga tecken markeras fältet med en förklaring.
 
 ![Exempel på att ange ett ogiltigt sidnamn](/help/sites-cloud/authoring/assets/organizing-invalid-name.png)
 
@@ -203,7 +203,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Namn**:
 
       * Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
-      * Om du anger ett **sidnamn** när du skapar en ny sida validerar AEM namnet enligt konventionerna som AEM och JCR har angett. <!--If you supply a page **Name** when creating a new page, AEM will [validate the name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.-->
+      * Om du anger ett **sidnamn** när du skapar en ny sida kommer AEM att [validera namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som AEM och JCR har infört.
       * Du **kan inte skicka ogiltiga tecken** i **namnfältet** . När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
    >[!TIP]
@@ -362,10 +362,8 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
 >[!NOTE]
 >
->En sida kan bara flyttas till en plats där mallen som sidan baseras på tillåts. Mer information finns i Malltillgänglighet.
-<!--
->A page can only be moved to a location where the template upon which the page is based is allowed. See [Template Availability](/help/sites-developing/templates.md#template-availability) for more information.
--->
+>En sida kan bara flyttas till en plats där mallen som sidan baseras på tillåts. Mer information finns i [Malltillgänglighet](/help/implementing/developing/components/templates.md#template-availability) .
+—>
 
 #### Asynkrona åtgärder {#asynchronous-actions}
 
