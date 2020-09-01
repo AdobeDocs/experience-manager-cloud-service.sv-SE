@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
-source-git-commit: abb45225e880f3d08b9d26c29e243037564acef0
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1687'
 ht-degree: 6%
 
 ---
@@ -129,11 +129,9 @@ Egenskaperna fördelas på flera flikar.
   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
   -->
 
-<!--
-* **Inherited from &lt;*path*&gt;**
+* **Ärvs från &lt;path>**
 
-  * Indicates whether the page is inherited. and where from.
--->
+   * Anger om sidan ärvs. och varifrån kommer.
 
 * **Molnkonfiguration**
 
@@ -148,7 +146,7 @@ Egenskaperna fördelas på flera flikar.
    * Aktivera (eller inaktivera) autentisering för att få åtkomst till sidan.
    >[!NOTE]
    >
-   >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](#permissions)**.
+   >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](#permissions)** .
 
 * **Inloggningssida**
 
@@ -187,7 +185,7 @@ Visar sidminiatyrbilden. Du kan:
    * **Aktivera användardelning för Facebook**
    * **Aktivera användardelning för Pinterest**
    * **Önskad XF-variation**
-      * Definiera variationen av upplevelsefragment som används för att generera metadata för sidan
+      * Definiera variant av upplevelsefragment som används för att generera metadata för sidan
 
 ### Cloud Services {#cloud-services}
 
@@ -209,7 +207,7 @@ Visar sidminiatyrbilden. Du kan:
 
 * **Målkonfiguration**
 
-   * Välj ett [varumärke om du vill ange ett omfång för målgruppsanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
+   * Välj ett [varumärke för att ange ett omfång för målgruppsanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
    >[!NOTE]
    >Det här alternativet kräver att användarkontot finns i `Target Adminstrators`gruppen.
 
@@ -290,7 +288,7 @@ På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egen
 >
 >Det finns även massredigering av egenskaper för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i Redigera egenskaper för flera resurser.
 >
->Här finns också en gruppredigerare som du kan använda för att söka efter innehåll från flera sidor med GQL (Google Query Language) och sedan redigera innehållet direkt i gruppredigeraren innan du sparar ändringarna på originalsidorna.
+>Det finns också en gruppredigerare som du kan använda för att söka efter innehåll från flera sidor med GQL (Google Query Language) och sedan redigera innehållet direkt i gruppredigeraren innan du sparar ändringarna på originalsidorna.
 
 <!--
 >Bulk editing of properties is also available for Assets. It is very similar, but differs in a few points. See [Editing Properties of Multiple Assets](/help/assets/managing-multiple-assets.md) for details.
