@@ -2,7 +2,7 @@
 title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 10%
@@ -12,7 +12,7 @@ ht-degree: 10%
 
 # Projekt {#projects}
 
-Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas i AEM för plattor. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
+Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
 
 >[!CAUTION]
 >
@@ -33,7 +33,7 @@ Se följande ytterligare ämnen:
 
 ## Projektkonsol {#projects-console}
 
-Projektkonsolen är där du får åtkomst till och hanterar dina projekt i AEM.
+Projektkonsolen är den plats där du får åtkomst till och hanterar dina projekt i AEM.
 
 ![Projects-konsolen](/help/sites-cloud/authoring/assets/projects-console.png)
 
@@ -72,7 +72,7 @@ Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, 
 
 ### Resurssamlingar {#asset-collections}
 
-På samma sätt som resurser kan du lägga till resurssamlingar direkt i projektet. Du definierar samlingar i Resurser. <!--Similar to assets, you can add [asset collections](/help/assets/managing-collections-touch-ui.md) directly to your project. You define collections in Assets.-->
+Precis som resurser kan du lägga till [resurssamlingar](/help/assets/manage-collections.md) direkt i projektet. Du definierar samlingar i Resurser.
 
 ![Resurssamling](/help/sites-cloud/authoring/assets/projects-asset-collections.png)
 
@@ -112,7 +112,7 @@ Teammedlemmar kan tilldelas och tas bort från den här panelen (eller få sina 
 
 ### Översättningsjobb {#translation-job}
 
-Översättningsjobbrutan är där du startar en översättning och även där du ser statusen för dina översättningar. Mer information om hur du konfigurerar översättningen finns i Skapa översättningsprojekt. <!--To set up your translation, see [Creating Translation Projects](/help/assets/translation-projects.md).-->
+Översättningsjobbrutan är där du startar en översättning och även där du ser statusen för dina översättningar. Mer information om hur du konfigurerar översättningen finns i [Skapa översättningsprojekt](/help/assets/translate-assets.md).
 
 ![Översättningsjobb](/help/sites-cloud/authoring/assets/projects-translation-job.png)
 
