@@ -2,7 +2,7 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
 source-wordcount: '2163'
 ht-degree: 12%
@@ -40,14 +40,14 @@ Du kan redigera en sida med sidredigeraren. Till exempel:
 
 När du redigerar en sida kan du komma åt **hjälpen** från:
 
-* Väljaren [**Sidinformation **](/help/sites-cloud/authoring/fundamentals/page-properties.md#page-properties)som visar introduktionsbilderna (som visas första gången du öppnar redigeraren)
-* Dialogrutan för [konfiguration](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) av specifika komponenter (med ? ikon i dialogrutans verktygsfält), som visar sammanhangsberoende hjälp
+* Väljaren [**Sidinformation**](/help/sites-cloud/authoring/fundamentals/page-properties.md#page-properties) som visar introduktionsbilderna (som visas första gången du öppnar redigeraren)
+* Dialogrutan för [konfiguration](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) av specifika komponenter (med ? ikonen i dialogrutans verktygsfält), som visar sammanhangsberoende hjälp
 
 Ytterligare [hjälprelaterade resurser finns på konsoler](/help/sites-cloud/authoring/getting-started/basic-handling.md#accessing-help).
 
 ## Komponentbläddraren {#components-browser}
 
-Komponenterna är byggstenarna i AEM-innehåll. Du placerar flera komponenter på en sida och konfigurerar deras alternativ för att skapa din innehållssida med AEM.
+Komponenterna utgör byggstenarna i AEM. Du placerar flera komponenter på en sida och konfigurerar deras alternativ för att skapa din innehållssida med AEM.
 
 Komponentwebbläsaren visar alla komponenter som är tillgängliga för användning på den aktuella sidan. Dessa kan dras till rätt plats och sedan redigeras för att lägga till ditt innehåll.
 
@@ -80,12 +80,14 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
    * Komponentnamn
    * Komponentgrupp (i grått)
    * Ikon eller förkortning
-      * Standardkomponenternas ikoner är monokroma.
+      * Standardkomponentens ikoner är monokroma.
       * Förkortningar är alltid de två första tecknen i komponentnamnet.
+
    I det övre verktygsfältet i **komponentwebbläsaren** kan du:
 
    * Filtrera komponenter efter namn.
    * Begränsa visningen till en viss grupp med listrutan.
+
    Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **innehållsfragment**:
 
    ![Information om komponentwebbläsare](/help/sites-cloud/authoring/assets/component-browser-information.png)
@@ -98,7 +100,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 ## Resursläsaren {#assets-browser}
 
-Resursläsaren visar alla resurser som är tillgängliga för direkt användning på den aktuella sidan. <!--The assets browser shows all [assets](/help/assets/home.md) that are available for direct use on your current page.-->
+Resursläsaren visar alla [resurser](/help/assets/home.md) som är tillgängliga för direkt användning på den aktuella sidan.
 
 Resursläsaren är en flik i sidopanelen tillsammans med [komponentläsaren](#components-browser) och [innehållsträdet](#content-tree). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
@@ -137,7 +139,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
    Resursläsaren täcker hela sidan som redigeras.
 
-   Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den nödvändiga komponenten.
+   Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen där du kan lägga till resursen i den nödvändiga komponenten.
 
    ![Resursläsaren på mobilen](/help/sites-cloud/authoring/assets/assets-browser-mobile.png)
 
@@ -153,7 +155,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 >
 >En mobil enhet upptäcks när bredden är mindre än 1024px. dvs. även i ett litet skrivbordsfönster.
 
-Om du snabbt behöver göra en ändring i en resurs kan du starta resursredigeraren direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn. <!--If you need to quickly make a change to an asset, you can start the [asset editor](/help/assets/manage-digital-assets.md) directly from the asset browser by clicking the edit icon shown next to the asset's name.-->
+Om du snabbt behöver göra en ändring i en resurs kan du starta [resursredigeraren](/help/assets/manage-digital-assets.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
 
 ![Knappen Resursredigering](/help/sites-cloud/authoring/assets/asset-edit-button.png)
 
@@ -281,6 +283,7 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Åtkomst till vissa lägen kräver lämplig behörighet/behörighet.
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
 >* Det finns ett [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) (`Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera** eller **Layout**).
+
 >
 
 
@@ -299,7 +302,7 @@ Om du klickar på knappen **Öppna dialogrutan** för markering i sökvägsfält
 
 ![Öppna dialogrutan Markering, knapp](/help/sites-cloud/authoring/assets/open-selection-dialog-button.png)
 
-Du kan också börja skriva i sökvägsfältet så kommer AEM att erbjuda matchande sökvägar när du skriver.
+Du kan också börja skriva i sökvägsfältet och AEM erbjuder matchande sökvägar när du skriver.
 
 ![Öppna dialogrutan Markering, knapp](/help/sites-cloud/authoring/assets/path-selection-completion.png)
 
