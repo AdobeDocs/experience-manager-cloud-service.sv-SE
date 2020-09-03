@@ -2,7 +2,7 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: 7b764262370631982c4f9f8b760fbec5fd0e05c6
+source-git-commit: e1bf1a42ff81352c4946a2e5e5c731255234d5f3
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 0%
@@ -78,21 +78,21 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
    * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 
-1. Produktionens pipeline-inställningar innehåller en tredje flik med namnet **Content Audit**(Innehållsgranskning).
+1. Produktionens pipeline-inställningar innehåller en tredje flik med etiketten **Experience Audit**.
 
    ![](assets/content-audit-1.png)
 
-   Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i innehållsgranskningen. Användaren kan ange en URL-sökväg som ska inkluderas manuellt. Högst 25 rader kan inkluderas. Om användaren inte har skickat in några sidor i det här avsnittet, kommer webbplatsens hemsida att inkluderas som standard i innehållsgranskningen.
+   Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit. Användaren kan ange en URL-sökväg som ska inkluderas manuellt. Högst 25 rader kan inkluderas. Om användaren inte har skickat in några sidor i det här avsnittet, kommer webbplatsens hemsida att inkluderas som standard i upplevelsegranskningen.
 
    >[!NOTE]
    > De konfigurerade sidorna skickas till tjänsten och utvärderas utifrån prestanda, tillgänglighet, SEO (Search Engine Optimization), bästa praxis och PWA (Progressive Web App)-tester.
 
-   Mer information finns i [Om resultat](/help/implementing/cloud-manager/content-audit-testing.md) av innehållsgranskning.
+   Mer information finns i [Understanding Experience Audit Results](/help/implementing/cloud-manager/experience-audit-testing.md) .
 
-   Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i innehållsgranskningen. När du har lagt till sökvägen klickar du på **Spara**.
+   Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i Experience Audit. När du har lagt till sökvägen klickar du på **Spara**.
 
    >[!NOTE]
-   >För att aktivera steget Innehållsgranskning måste användarna redigera pipeline och, om så önskas, lägga till sidor. Mer information finns i [Kända fel](/help/release-notes/release-notes-cloud/release-notes-current.md#known-issues-cm) .
+   >För att aktivera steget Experience Audit måste användarna redigera pipeline och eventuellt lägga till sidor. Mer information finns i [Kända fel](/help/release-notes/release-notes-cloud/release-notes-current.md#known-issues-cm) .
 
    ![](assets/content-audit2.png)
 
