@@ -2,7 +2,7 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: e1bf1a42ff81352c4946a2e5e5c731255234d5f3
+source-git-commit: 561345f58ce8e448176507e3bba114324dc18256
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 0%
@@ -58,11 +58,11 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
 1. Skärmen **Konfigurera pipeline** visas. Markera grenen och klicka på **Nästa**.
 
-   ![](assets/setup-pipeline-1.png)
+   ![](assets/setup-1.png)
 
 1. Konfigurera distributionsalternativen.
 
-   ![](assets/setup-pipeline-2.png)
+   ![](assets/setup-2.png)
 
    Du kan definiera utlösaren för att starta pipelinen:
 
@@ -80,7 +80,7 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
 1. Produktionens pipeline-inställningar innehåller en tredje flik med etiketten **Experience Audit**.
 
-   ![](assets/content-audit-1.png)
+   ![](assets/setup-3.png)
 
    Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit. Användaren kan ange en URL-sökväg som ska inkluderas manuellt. Högst 25 rader kan inkluderas. Om användaren inte har skickat in några sidor i det här avsnittet, kommer webbplatsens hemsida att inkluderas som standard i upplevelsegranskningen.
 
@@ -94,7 +94,7 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
    >[!NOTE]
    >För att aktivera steget Experience Audit måste användarna redigera pipeline och eventuellt lägga till sidor. Mer information finns i [Kända fel](/help/release-notes/release-notes-cloud/release-notes-current.md#known-issues-cm) .
 
-   ![](assets/content-audit2.png)
+   ![](assets/exp-audit2.png)
 
 1. Klicka på **Spara** på skärmen **Redigera** pipeline. På sidan **Översikt** visas nu **Distribuera ditt program** . Klicka på **Distribuera** för att distribuera programmet.
 
