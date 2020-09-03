@@ -2,9 +2,9 @@
 title: Information om byggmiljö
 description: Information om byggmiljö - Cloud Services
 translation-type: tm+mt
-source-git-commit: 3344e6a8c0c09903f44606673106d884516b4471
+source-git-commit: 87d41dc311e96c41be230046f511d2c3301d48f1
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,10 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 
 * Andra paket kan installeras vid byggtillfället enligt beskrivningen [nedan](#installing-additional-system-packages).
 * Varje bygge görs i en riktig miljö. byggbehållaren behåller inte något läge mellan körningar.
-* Maven körs alltid med kommandot: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
+* Maven körs alltid med följande tre kommandon:
+   * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
+   * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
+   * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent packageco-maven-plugin:prepare-agent package`
 * Maven är konfigurerad på systemnivå med filen settings.xml som automatiskt inkluderar databasen för Adobe **Artifact** . (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/) .)
 
 >[!NOTE]
