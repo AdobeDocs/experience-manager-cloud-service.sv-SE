@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: 561345f58ce8e448176507e3bba114324dc18256
+source-git-commit: 3b9592117d2eb48c1cec30027f5a15f2a45dc3a9
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '741'
 ht-degree: 0%
 
 ---
@@ -90,9 +90,6 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
    Mer information finns i [Understanding Experience Audit Results](/help/implementing/cloud-manager/experience-audit-testing.md) .
 
    Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i Experience Audit. När du har lagt till sökvägen klickar du på **Spara**.
-
-   >[!NOTE]
-   >För att aktivera steget Experience Audit måste användarna redigera pipeline och eventuellt lägga till sidor. Mer information finns i [Kända fel](/help/release-notes/release-notes-cloud/release-notes-current.md#known-issues-cm) .
 
    ![](assets/exp-audit2.png)
 
