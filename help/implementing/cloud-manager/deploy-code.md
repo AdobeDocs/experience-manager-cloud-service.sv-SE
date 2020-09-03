@@ -2,9 +2,9 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: 18ef67e6b8450e4220a5d40c1da8b126136e39f2
+source-git-commit: e1bf1a42ff81352c4946a2e5e5c731255234d5f3
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '985'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ När du har konfigurerat produktionspipelinen (databas, miljö och testmiljö) �
    Följande steg ingår i **mellanlagringsdistributionen**:
 
    * Validering: Detta steg säkerställer att pipeline är konfigurerad att använda de tillgängliga resurserna, till exempel att den konfigurerade grenen finns, och att miljöerna är tillgängliga.
-   * Build &amp; Unit Testing: Det här steget kör en innesluten byggprocess. Mer information om byggmiljön finns i [Information](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#build-environment-details) om byggmiljö.
+   * Build &amp; Unit Testing: Det här steget kör en innesluten byggprocess. Mer information om byggmiljön finns i [Information](/help/onboarding/getting-access-to-aem-in-cloud/build-environment-details.md) om byggmiljö.
    * Kodsökning: I det här steget utvärderas kvaliteten på programkoden. Mer information om testprocessen finns i [Kodkvalitetstestning](/help/implementing/cloud-manager/code-quality-testing.md) .
    * Skapa bilder: I det här steget finns en loggfil från processen som används för att skapa bilder. Den här processen gör att innehålls- och dispatcherpaketen som skapas i byggsteget omvandlas till Docker-bilder och Kubernetes-konfiguration.
    * Distribuera till scenen
@@ -56,8 +56,8 @@ Mer information finns i [Funktionstestning](/help/implementing/cloud-manager/fun
    * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard.\
       Mer information finns i [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) .
 
-   * Innehållsgranskning: Det här steget i pipeline finns alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett innehållsgranskningssteg efter en anpassad funktionstestning som kör kontrollerna. De konfigurerade sidorna skickas till tjänsten och utvärderas. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
-Mer information finns i [Om resultat](/help/implementing/cloud-manager/content-audit-testing.md) av innehållsgranskning.
+   * Experience Audit: Det här steget i pipeline finns alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna. De konfigurerade sidorna skickas till tjänsten och utvärderas. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
+Mer information finns i [Understanding Experience Audit results](/help/implementing/cloud-manager/experience-audit-testing.md) .
 
       ![](assets/testing-tab.png)
 
@@ -88,7 +88,7 @@ När Cloud Manager distribuerar till icke-produktionstopologier är målet att s
 
    >[!NOTE]
    >
-   >Alla AEM artefakter distribueras till både författaren och utgivaren. Körningslägena bör utnyttjas när nodspecifika konfigurationer krävs. Om du vill veta mer om hur du kan trimma AEM för ett visst ändamål med hjälp av runmodes kan du läsa Körningslägen.
+   >Alla AEM artefakter distribueras till både författaren och utgivaren. Körningslägena bör utnyttjas när nodspecifika konfigurationer krävs. Om du vill veta mer om hur du kan använda körningslägena för att justera AEM för ett visst ändamål, se Körningslägen.
 
 1. Dispatchartefakten distribueras till varje dispatcher enligt följande:
 
