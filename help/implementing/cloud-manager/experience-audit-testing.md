@@ -2,9 +2,9 @@
 title: Experience Audit Testing - Cloud Services
 description: Experience Audit Testing - Cloud Services
 translation-type: tm+mt
-source-git-commit: d03ef0afe91760e35ef4e8fb3e3f2c833cbf945c
+source-git-commit: 87d41dc311e96c41be230046f511d2c3301d48f1
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
@@ -26,14 +26,18 @@ Experience Audit i Cloud Manager säkerställer att slutanvändarnas digitala up
 
 Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via sidan för körning av produktionspipeline.
 
-* Mätvärden för aggregerad nivå mäter medelpoängen för de sidor som granskades.
+* Mätvärden för aggregerad nivå mäter medelpoängen på de sidor som granskats med avseende på prestanda, tillgänglighet, bästa praxis, SEO (sökmotoroptimering).
+   >[!NOTE]
+   >Progressive Web App-poäng (PWA) ingår inte i sammanfattningspoängen och visas endast på informationsskärmen på sidnivå.
 * Enskilda sidnivåpoäng kan också göras via fördjupning.
 * Det finns uppgifter om poängen för att se vilka resultat de enskilda testerna ger, tillsammans med vägledning om hur man åtgärdar eventuella problem som upptäcktes under innehållsgranskningen.
 * En historik över testresultaten sparas i Cloud Manager så att kunderna kan se om de ändringar som införs i pipeline-körningen innehåller några regressioner från föregående körning.
 
 ### Sammanställd bakgrundsmusik {#aggregate-scores}
 
-Det finns en sammanställd nivå för varje testtyp (prestanda, hjälpmedel, SEO, bästa praxis och PWA).
+Det finns en sammanställd nivå för varje testtyp, som prestanda, tillgänglighet, SEO och bästa praxis.
+>[!NOTE]
+>Progressive Web App-poäng (PWA) ingår inte i sammanfattningspoängen och visas endast på informationsskärmen på sidnivå.
 
 Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i körningen. Ändringen på aggregeringsnivå representerar medelpoängen för sidorna i den aktuella körningen jämfört med medelvärdet för poängen från föregående körning, även om den sidsamling som konfigurerats att inkluderas har ändrats mellan körningar.
 
