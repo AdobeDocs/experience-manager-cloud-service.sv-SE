@@ -2,7 +2,7 @@
 title: Översikt över testresultat - Cloud Services
 description: Översikt över testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: b3548e3920fed45f6d1de54a49801d3971aa6bba
+source-git-commit: d03ef0afe91760e35ef4e8fb3e3f2c833cbf945c
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -24,9 +24,9 @@ Det finns tre olika testkategorier som stöds av Cloud Manager för Cloud Servic
 
    Funktionstestningen är en del av scentestningsfasen i en produktionspipeline.
 
-1. [Testning av innehållsgranskning](/help/implementing/cloud-manager/content-audit-testing.md)
+1. [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
 
-   Testning av innehållsgranskning är aktiverat i alla produktionsförlopp för Cloud Manager och kan inte hoppas över.
+   Experience Audit Testing är aktiverat i alla produktionspipeliner för Cloud Manager och kan inte hoppas över.
 
 Dessa tester kan vara:
 
