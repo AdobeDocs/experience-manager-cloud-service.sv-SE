@@ -2,7 +2,7 @@
 title: Driftsätta till AEM as a Cloud Service
 description: 'Driftsätta till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: bb810684a513718ddb7232f1a2da725b2df7f36c
+source-git-commit: d4e376ab30bb3e1fb533ed32f6ac43580775787c
 workflow-type: tm+mt
 source-wordcount: '3537'
 ht-degree: 1%
@@ -183,7 +183,7 @@ Alla innehållspaket som installeras via Cloud Manager (både ändringsbart och 
 
 ### Inklusive paket från tredje part {#including-third-party}
 
-Det är vanligt att kunder inkluderar färdiga paket från tredjepartskällor som programvaruleverantörer som Adobe översättning partners. Rekommendationen är att lagra dessa paket i en fjärrdatabas och referera till dem i `pom.xml`. Detta är möjligt för offentliga databaser och även för privata databaser med lösenordsskydd, vilket beskrivs i [lösenordsskyddade maven-databaser](/help/onboarding/getting-access-to-aem-in-cloud/creating-aem-application-project.md#password-protected-maven-repositories).
+Det är vanligt att kunder inkluderar färdiga paket från tredjepartskällor som programvaruleverantörer som Adobe översättning partners. Rekommendationen är att lagra dessa paket i en fjärrdatabas och referera till dem i `pom.xml`. Detta är möjligt för offentliga databaser och även för privata databaser med lösenordsskydd, vilket beskrivs i [lösenordsskyddade maven-databaser](/help/onboarding/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repositories).
 
 Om det inte går att lagra paketet i en fjärrdatabas kan kunderna placera det i en lokal, filsystemsbaserad Maven-databas som är kopplad till SCM som en del av projektet och som refereras av det som beror på det. Databasen skulle deklareras i projektforumen som visas nedan:
 
