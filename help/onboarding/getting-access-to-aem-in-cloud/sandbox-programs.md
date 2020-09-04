@@ -1,10 +1,10 @@
 ---
-title: Sandlådeprogram - molntjänst
-description: Sandlådeprogram - molntjänst
+title: Sandlådeprogram - Cloud Service
+description: Sandlådeprogram - Cloud Service
 translation-type: tm+mt
-source-git-commit: a4d4e5fb1743d7fe8b7b16bac904dac51143d6f7
+source-git-commit: 81f2d4f4f956edbf88135a703df0162afd92bc43
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Ett sandlådeprogram är ett av de två typer av program som är tillgängliga i AEM Cloud Service, och det andra är ett vanligt program.
+Ett sandlådeprogram är en av de två typer av program som finns i AEM Cloud Service, och det andra är ett vanligt program.
 
-En sandlåda skapas vanligtvis för utbildning, löpande demonstrationer, aktivering eller korrektur av begrepp (POC). De är inte avsedda att bära livstrafik. De omfattas inte av [AEM som en molntjänst](https://www.adobe.com/legal/service-commitments.html).
+En sandlåda skapas vanligtvis för utbildning, löpande demonstrationer, aktivering eller korrektur av begrepp (POC). De är inte avsedda att bära livstrafik. De omfattas inte av [AEM som åtaganden](https://www.adobe.com/legal/service-commitments.html)i Cloud Servicen.
 
 Miljöerna som skapas i en sandlåda är inte konfigurerade för automatisk skalning. Därför är de inte lämpliga för prestanda- eller belastningstestning.
 
-Sandlådeprogram innehåller Sites and Assets och är automatiskt ifyllda med en Git-databas, en utvecklingsmiljö och en icke-produktionsprocess.  Git-databasen fylls i med ett exempelprojekt baserat på AEM-projekttypen.
+Sandlådeprogram innehåller Sites and Assets och är automatiskt ifyllda med en Git-databas, en utvecklingsmiljö och en icke-produktionsprocess.  Git-databasen innehåller ett exempelprojekt baserat på AEM projekttyp.
 
 Mer information om programtyperna finns i [Förstå program och programtyper](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/understand-program-types.html) .
 
@@ -31,11 +31,11 @@ Sandlådeprogram har följande attribut:
 1. **Skapa program:** När du skapar sandlådeprogram skapas följande automatiska funktioner:
    * konfiguration av projekt med exempelkod och innehåll
    * utvecklingsmiljö
-   * skapande av icke-produktionsförlopp för distribution till utvecklingsmiljö (huvudgrendistribution till utvecklingsmiljö)
+   * skapande av icke-produktionsförlopp för distribution till utvecklingsmiljö (överordnad filial distribuering till utvecklingsmiljö)
 
 1. **Lösningar:** Sandlådeprogram innehåller AEM Sites och Assets.
 
-1. **AEM-uppdateringar:** AEM-uppdateringar kan användas manuellt i miljöer i ett sandlådeprogram och skickas inte automatiskt.
+1. **AEM:** AEM uppdateringar kan tillämpas manuellt i sandlådemiljöer och skickas inte automatiskt.
 
 1. **Viloläge:** Miljöer i ett sandlådeprogram försätts automatiskt i viloläge om ingen aktivitet identifieras under en viss tid. Vilolägen miljöer kan avaktiveras manuellt.
 
@@ -155,7 +155,7 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
 #### Behörigheter att ta bort viloläge {#permissions-de-hibernate}
 
-Alla användare med en produktprofil som ger dem tillgång till AEM som molntjänst bör ha tillgång till **Developer Console** så att de kan avplacera miljön i viloläge.
+Alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service bör ha tillgång till **Developer Console**, så att de kan avplacera miljön i viloläge.
 
 Läs [Lägg till användare och roller](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) i Cloud Manager om hur du ställer in användarbehörigheter.
 
@@ -171,22 +171,22 @@ Några viktiga saker att tänka på när det gäller miljöer med viloläge och 
 
 * En användare kan använda en pipeline för att distribuera anpassad kod till miljöer med viloläge. Miljön förblir i viloläge och den nya koden visas i miljön när den har tagits bort från viloläget.
 
-* AEM-uppgraderingar kan användas i miljöer i viloläge, som kunderna manuellt kan aktivera via Cloud Manager. Miljön förblir i viloläge och den nya versionen visas i miljön när den har tagits bort från viloläget.
+* AEM uppgraderingar kan användas i miljöer i viloläge, som kunderna manuellt kan aktivera via Cloud Manager. Miljön förblir i viloläge och den nya versionen visas i miljön när den har tagits bort från viloläget.
 
 >[!NOTE]
 >För närvarande anges det inte om en miljö är i viloläge i molnhanteraren.
 
-## AEM-uppdateringar i sandlådemiljöer {#aem-updates-sandbox}
+## AEM till sandlådemiljöer {#aem-updates-sandbox}
 
-Mer information finns i [AEM-versionsuppdateringar](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#version-updates) .
+Mer information finns i [AEM versionsuppdateringar](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#version-updates) .
 
-Användaren kan manuellt tillämpa AEM-uppdateringar på miljöer i ett sandlådeprogram.
+Användaren kan manuellt uppdatera miljöerna AEM sandlådeprogrammet.
 
 Mer information om hur du uppdaterar en miljö finns i [Uppdatera miljö](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#updating-dev-environment) .
 
 >[!NOTE]
 >* En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.
->* En manuell uppdatering av antingen *Production* - eller *Stage* -miljön uppdateras automatiskt. Miljöuppsättningen Production+Stage måste finnas i samma AEM-version.
+>* En manuell uppdatering av antingen *Production* - eller *Stage* -miljön uppdateras automatiskt. Miljöuppsättningen Production+Stage måste finnas i samma AEM.
 
 
 
