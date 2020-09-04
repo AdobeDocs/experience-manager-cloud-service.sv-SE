@@ -2,9 +2,9 @@
 title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 38b69b96011b7920adaf7f6cca0edff10f387b41
+source-git-commit: 50c5be6adf265eac9c9c7a7b36d03cb30ba4e5d2
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '689'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Det AEM hanterade CDN uppfyller de flesta kunders krav på prestanda och säkerh
 Följ de här stegen för att förbereda innehållsleverans genom att använda Adobe i körklart CDN:
 
 1. Tillhandahåll det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller denna information. Samordna med kundsupport för den här uppgiften.
-   **Obs!** Aem as a Cloud Service does not support Domain Validated (DV) certificates.
+   **Obs!** Aem as a Cloud Service does not support Domain Validated (DV) certificates. Dessutom måste det vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
 1. Informera kundsupport:
    * vilken anpassad domän som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id. Observera att anpassade domäner på författarsidan inte stöds.
    * om någon IP-tillåtelselistning behövs för att begränsa trafiken till en viss miljö.
