@@ -2,7 +2,7 @@
 title: Förstå testresultaten - Cloud Services
 description: Förstå testresultat - Cloud Services
 translation-type: tm+mt
-source-git-commit: b3548e3920fed45f6d1de54a49801d3971aa6bba
+source-git-commit: 736a7c8d56a957e511451b0ba06affd9643f75e5
 workflow-type: tm+mt
 source-wordcount: '1695'
 ht-degree: 3%
@@ -225,7 +225,7 @@ Värdet för Change-måttet kan vara något av följande:
 
 * **Ej tillämpligt** - det fanns ingen tidigare poäng att jämföra med
 
-   ![](assets/content-audit-test1.png)
+   <!-- ![](assets/content-audit-test1.png) -->
 
 #### Poäng på sidnivå {#page-level-scores}
 
@@ -233,5 +233,5 @@ Genom att gå in i något av testerna kan man se en mer detaljerad sidnivåbedö
 
 Om du klickar på detaljerna för en enskild sida visas information om de element på sidan som har utvärderats och vägledning för att åtgärda problem om möjligheter till förbättring upptäcks. Detaljer om testerna och tillhörande vägledning tillhandahålls av Google Lighthuse.
 
-![](assets/page-level-scores.png)
+<!-- ![](assets/page-level-scores.png) -->
 
