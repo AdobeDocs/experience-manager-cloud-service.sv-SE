@@ -1,10 +1,10 @@
 ---
-title: Meddelanden - molntjänst
-description: Meddelanden - molntjänst
+title: Meddelanden - Cloud Service
+description: Meddelanden - Cloud Service
 translation-type: tm+mt
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+source-git-commit: 81f2d4f4f956edbf88135a703df0162afd92bc43
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '178'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Förstår aviseringar {#notifications}
 
-[!UICONTROL Cloud Manager] gör att användaren kan ta emot meddelanden när produktionsflödet startar och slutförs (utan fel eller slutförs) i början av en produktionsdistribution. Dessa meddelanden skickas via Adobes [!UICONTROL Experience Cloud] meddelandesystem.
+[!UICONTROL Cloud Manager] gör att användaren kan ta emot meddelanden när produktionsflödet startar och slutförs (utan fel eller slutförs) i början av en produktionsdistribution. Dessa meddelanden skickas via meddelandesystemet i Adobe [!UICONTROL Experience Cloud] .
 
 >[!NOTE]
 >
@@ -30,13 +30,12 @@ I sidlisten visas de senaste meddelandena.
 
 ## E-postmeddelanden {#email-notifications}
 
-Som standard är meddelanden tillgängliga i webbanvändargränssnittet för alla Adobes [!UICONTROL Experience Cloud] lösningar. Enskilda användare kan också välja att dessa meddelanden ska skickas via e-post, antingen direkt eller i sammandrag.
+Som standard är meddelanden tillgängliga i webbanvändargränssnittet för olika Adobe- [!UICONTROL Experience Cloud] lösningar. Enskilda användare kan också välja att dessa meddelanden ska skickas via e-post, antingen direkt eller i sammandrag.
 
-
-Användaren kommer då till skärmen Notifications Preferences i Adobe [!UICONTROL Experience Cloud].
+Användaren kommer då till skärmen Meddelandeinställningar i Adobe [!UICONTROL Experience Cloud].
 
 Användarna kan aktivera e-postmeddelanden och (valfritt) välja vilka typer av meddelanden de vill ta emot via e-post.
 
 >[!NOTE]
 >
->Du kan även aktivera datainhämtning från Adobe [!UICONTROL Experience Cloud]enligt nedan:
+>Du kan också aktivera hämtning från Adobe [!UICONTROL Experience Cloud].
