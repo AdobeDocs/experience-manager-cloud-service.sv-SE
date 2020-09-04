@@ -1,8 +1,8 @@
 ---
-title: Testning av kodkvalitet - Cloud Services
-description: Testning av kodkvalitet - Cloud Services
+title: Kodkvalitetstestning - Cloud Services
+description: Kodkvalitetstestning - Cloud Services
 translation-type: tm+mt
-source-git-commit: b3548e3920fed45f6d1de54a49801d3971aa6bba
+source-git-commit: ba20916bf6048cb7dff054d9c10f6e1606ae8506
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 1%
@@ -59,7 +59,7 @@ I följande tabell sammanfattas betygs- och feltrösklarna för var och en av ka
 
 ## Hantera med falskt positiva {#dealing-with-false-positives}
 
-Kvalitetsskanningsprocessen är inte perfekt och kan ibland felaktigt identifiera problem som inte är problematiska. Detta kallas &quot;falskt positivt&quot;.
+Kvalitetsskanningsprocessen är inte perfekt och kan ibland felaktigt identifiera problem som inte är problematiska. Detta kallas en *falsk positiv*.
 
 I dessa fall kan källkoden kommenteras med Java- `@SuppressWarnings` standardanteckningen som anger regel-ID som anteckningsattribut. Ett vanligt problem är att regeln SonarQube för att identifiera hårdkodade lösenord kan vara aggressiv om hur ett hårdkodat lösenord identifieras.
 
