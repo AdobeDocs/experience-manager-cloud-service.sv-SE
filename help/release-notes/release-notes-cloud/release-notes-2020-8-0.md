@@ -2,7 +2,7 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: 3b9592117d2eb48c1cec30027f5a15f2a45dc3a9
+source-git-commit: 5a3a8638bbb9fc8c0b28929bcc9c91c404d608d3
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.8.0 är 27 august
 
 * Möjlighet att [återställa sidor och undersidor (sidträd) till en tidigare version](/help/sites-cloud/authoring/features/page-versions.md#reinstating-versions).
 
-* Möjlighet att skapa startprogram AEM SPA Editor.
+* Möjlighet att [skapa startprogram](/help/sites-cloud/authoring/launches/overview.md) i AEM [SPA Editor.](/help/implementing/developing/spa/introduction.md)
 
 ## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
