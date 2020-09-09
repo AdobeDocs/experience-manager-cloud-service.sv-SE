@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: 0f9d9cc0c1a7a50e5ac5fb1da2227537e75ac8ed
+source-git-commit: 4d5ad99e44446ac40d9798df1c7fabb862065495
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,10 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
    * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 
-1. Produktionens pipeline-inställningar innehåller en tredje flik med etiketten **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit. Användaren måste klicka på **Lägg till ny sida** för att definiera en egen anpassad länk.
+1. Produktionens pipeline-inställningar innehåller en tredje flik med etiketten **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit.
+
+   >[!NOTE]
+   >Du måste klicka på **Lägg till ny sida** för att definiera en egen anpassad länk.
 
    ![](assets/setup-3.png)
 
