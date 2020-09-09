@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 92b7388f5050c47f4cc00fd1e0e2d48f28a1f424
+source-git-commit: 3130b1af089d67bcdca2b1da5bdb7fede8bcafbb
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '791'
 ht-degree: 7%
 
 ---
@@ -40,7 +40,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
 ## Lägga till en miljö {#adding-environments}
 
 
-1. Klicka på **Lägg till miljö** för att lägga till en miljö. Den här knappen kommer att vara tillgänglig från skärmen **Miljö** .
+1. Klicka på **Lägg till miljö** för att lägga till en miljö. Den här knappen kommer att vara tillgänglig från skärmen **för miljöer** .
    ![](assets/environments-tab.png)
 
    Alternativet **Lägg till miljö** finns också på **miljökortet** när det inte finns några miljöer i programmet.
@@ -55,11 +55,11 @@ Produktionen och scenen finns som duo och används för testning och produktion.
    ![](assets/add-environment2.png)
 
    >[!NOTE]
-   >När du skapar en miljö skapas en eller flera *integreringar* i Adobe I/O. De är synliga för kunder som har tillgång till Adobe I/O-konsolen och får inte tas bort. Detta tas inte med i beskrivningen i Adobe I/O-konsolen.
+   >När du skapar en miljö skapas en eller flera *integreringar* i Adobe I/O. De är synliga för kundanvändare som har åtkomst till Adobe I/O-konsolen och får inte tas bort. Detta tas inte med i beskrivningen i Adobe I/O-konsolen.
 
    ![](assets/add-environment-image1.png)
 
-1. Klicka på **Spara** för att lägga till en miljö med de ifyllda villkoren.  Nu visas *översiktsskärmen* på kortet där du kan ställa in din pipeline.
+1. Klicka på **Spara** för att lägga till en miljö med de ifyllda villkoren.  På skärmen *Översikt* visas kortet där du kan ställa in din pipeline.
 
    >[!NOTE]
    >Om du ännu inte har konfigurerat produktionsflödet för icke-produktion visas kortet *Översikt* där du kan skapa produktionsflödet.
@@ -68,7 +68,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
 
 Uppdateringar av scen- och produktionsmiljöer hanteras automatiskt av Adobe.
 
-Uppdateringar av utvecklingsmiljöer hanteras av användarna av programmet. När en miljö inte kör den senaste allmänt tillgängliga AEM-versionen visas **UPDATE AVAILABLE (TILLGÄNGLIG**) på miljökortet på hemskärmen.
+Uppdateringar av utvecklingsmiljöer hanteras av användarna av programmet. När en miljö inte kör den senaste allmänt tillgängliga AEM visar statusen för miljökortet på hemskärmen **UPDATE AVAILABLE (TILLGÄNGLIG**).
 
 ![](assets/update-environ-1.png)
 
@@ -97,6 +97,15 @@ Alternativet Ta bort är också tillgängligt om du klickar på **Information** 
 
 >[!NOTE]
 Den här funktionen är inte tillgänglig för produktions-/scenmiljö som angetts i ett reguljärt program som konfigurerats för produktion. Funktionen är dock tillgänglig för produktions-/scenmiljöer i ett sandlådeprogram.
+
+## Hantera åtkomst {#managing-access}
+
+Välj **Hantera åtkomst** i listrutan i **miljökortet** . Du kan navigera till författarinstansen direkt och hantera åtkomsten för din miljö.
+
+Mer information finns i [Hantera åtkomst till författarinstansen](/help/onboarding/getting-access-to-aem-in-cloud/navigation.md#manage-access-aem) .
+
+![](assets/environ-manage-access.png)
+
 
 ## Åtkomst till Developer Console {#accessing-developer-console}
 
