@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: b94cd6c5bce641e50491f5c1fd30f5cb2f92646c
+source-git-commit: e85f06b1f1431cfe8955c84bdb96ea27f566ff95
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -78,27 +78,23 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
    * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 
-1. Produktionens pipeline-inställningar innehåller en tredje flik med etiketten **Experience Audit**.
+1. Produktionens pipeline-inställningar innehåller en tredje flik med etiketten **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit. Användaren måste fylla i inmatningsfältet för att definiera sin egen anpassade länk.
 
    ![](assets/setup-3.png)
 
-   Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit. Användaren måste fylla i inmatningsfältet för att definiera sin egen anpassade länk.
+   Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i Experience Audit.
 
    Om du till exempel vill inkludera `https://wknd.site/us/en/about-us.html` i Experience Audit anger du sökvägen `us/en/about-us.html` i det här fältet.
 
-   ![](assets/set-up-5.png)
+   ![](assets/exp-audit4.png)
 
-   Den URL som visas i tabellen blir `https://publish-p7719-e13204.adobeaemcloud.com/us/en/about-us.html`.
+   Den URL som visas i tabellen blir `https://publish-p14253-e43686.adobeaemcloud.com/us/en/about-us.html`.
 
-   ![](assets/set-up-4.png)
+   ![](assets/exp-audit5.png)
 
    Högst 25 rader kan inkluderas. Om användaren inte har skickat in några sidor i det här avsnittet, kommer webbplatsens hemsida som standard att inkluderas i Experience Audit.
 
    Mer information finns i [Understanding Experience Audit Results](/help/implementing/cloud-manager/experience-audit-testing.md) .
-
-   Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i Experience Audit. När du har lagt till sökvägen klickar du på **Spara**.
-
-   ![](assets/exp-audit2.png)
 
    >[!NOTE]
    > De konfigurerade sidorna skickas till tjänsten och utvärderas utifrån prestanda, tillgänglighet, SEO (Search Engine Optimization), bästa praxis och PWA (Progressive Web App)-tester.
