@@ -2,7 +2,7 @@
 title: Meddelanden - Cloud Service
 description: Meddelanden - Cloud Service
 translation-type: tm+mt
-source-git-commit: 81f2d4f4f956edbf88135a703df0162afd92bc43
+source-git-commit: 0f9d9cc0c1a7a50e5ac5fb1da2227537e75ac8ed
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 1%
@@ -37,5 +37,4 @@ Användaren kommer då till skärmen Meddelandeinställningar i Adobe [!UICONTRO
 Användarna kan aktivera e-postmeddelanden och (valfritt) välja vilka typer av meddelanden de vill ta emot via e-post.
 
 >[!NOTE]
->
 >Du kan också aktivera hämtning från Adobe [!UICONTROL Experience Cloud].
