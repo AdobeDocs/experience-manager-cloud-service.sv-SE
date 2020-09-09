@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: e85f06b1f1431cfe8955c84bdb96ea27f566ff95
+source-git-commit: bf07f6cba245ac8bc671264e5af24b0c72c68c5d
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -82,9 +82,9 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
    ![](assets/setup-3.png)
 
-   Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i Experience Audit.
+   Klicka på **Lägg till ny sida** för att ange en URL-sökväg som ska inkluderas i Experience Audit.
 
-   Om du till exempel vill inkludera `https://wknd.site/us/en/about-us.html` i Experience Audit anger du sökvägen `us/en/about-us.html` i det här fältet.
+   Om du till exempel vill inkludera `https://wknd.site/us/en/about-us.html` i Experience Audit anger du sökvägen `us/en/about-us.html` i det här fältet och klickar på **Spara**.
 
    ![](assets/exp-audit4.png)
 
