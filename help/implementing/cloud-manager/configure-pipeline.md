@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 translation-type: tm+mt
-source-git-commit: 3b9592117d2eb48c1cec30027f5a15f2a45dc3a9
+source-git-commit: b94cd6c5bce641e50491f5c1fd30f5cb2f92646c
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -82,16 +82,26 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
    ![](assets/setup-3.png)
 
-   Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit. Användaren kan ange en URL-sökväg som ska inkluderas manuellt. Högst 25 rader kan inkluderas. Om användaren inte har skickat in några sidor i det här avsnittet, kommer webbplatsens hemsida att inkluderas som standard i upplevelsegranskningen.
+   Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit. Användaren måste fylla i inmatningsfältet för att definiera sin egen anpassade länk.
 
-   >[!NOTE]
-   > De konfigurerade sidorna skickas till tjänsten och utvärderas utifrån prestanda, tillgänglighet, SEO (Search Engine Optimization), bästa praxis och PWA (Progressive Web App)-tester.
+   Om du till exempel vill inkludera `https://wknd.site/us/en/about-us.html` i Experience Audit anger du sökvägen `us/en/about-us.html` i det här fältet.
+
+   ![](assets/set-up-5.png)
+
+   Den URL som visas i tabellen blir `https://publish-p7719-e13204.adobeaemcloud.com/us/en/about-us.html`.
+
+   ![](assets/set-up-4.png)
+
+   Högst 25 rader kan inkluderas. Om användaren inte har skickat in några sidor i det här avsnittet, kommer webbplatsens hemsida som standard att inkluderas i Experience Audit.
 
    Mer information finns i [Understanding Experience Audit Results](/help/implementing/cloud-manager/experience-audit-testing.md) .
 
    Klicka på **Lägg till åsidosättning** av ny sida för att ange en URL-sökväg som ska inkluderas i Experience Audit. När du har lagt till sökvägen klickar du på **Spara**.
 
    ![](assets/exp-audit2.png)
+
+   >[!NOTE]
+   > De konfigurerade sidorna skickas till tjänsten och utvärderas utifrån prestanda, tillgänglighet, SEO (Search Engine Optimization), bästa praxis och PWA (Progressive Web App)-tester.
 
 1. Klicka på **Spara** på skärmen **Redigera** pipeline. På sidan **Översikt** visas nu **Distribuera ditt program** . Klicka på **Distribuera** för att distribuera programmet.
 
