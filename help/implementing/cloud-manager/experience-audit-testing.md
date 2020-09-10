@@ -2,9 +2,9 @@
 title: Experience Audit Testing - Cloud Services
 description: Experience Audit Testing - Cloud Services
 translation-type: tm+mt
-source-git-commit: 561345f58ce8e448176507e3bba114324dc18256
+source-git-commit: 28ba5412190560b21b27068832ba05cfff24c079
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Testning av Experience Audit {#experience-audit-testing}
 
-Experience Audit är en funktion som finns i Cloud Manager Sites Production pipelines, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager.
+Experience Audit är en funktion som finns i Cloud Manager Sites Production pipelines, som drivs av Google Lighthuse, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager.
 
 Den validerar distributionsprocessen och säkerställer att ändringar som distribueras:
 
