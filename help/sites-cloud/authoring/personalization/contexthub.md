@@ -2,7 +2,7 @@
 title: Förhandsgranska sidor med ContextHub-data
 description: Verktygsfältet ContextHub visar data från ContextHub-butiker och gör att du kan ändra lagringsdata. Det är användbart för förhandsgranskning av innehåll
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: e361f24b943eff68982a37ac0dc2597f92450026
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 2%
@@ -12,14 +12,14 @@ ht-degree: 2%
 
 # Förhandsgranska sidor med ContextHub-data  {#previewing-pages-using-contexthub-data}
 
-Verktygsfältet ContextHub visar data från ContextHub-arkiv och gör att du kan ändra lagringsdata. Verktygsfältet ContextHub är användbart när du vill förhandsgranska innehåll som bestäms av data i ett ContextHub-lager.<!--The [ContextHub](/help/sites-developing/contexthub.md) toolbar displays data from ContextHub stores and enables you to change store data. The ContextHub toolbar is useful for previewing content that is determined by data in a ContextHub store.-->
+Verktygsfältet ContextHub visar data från ContextHub-arkiv och gör att du kan ändra lagringsdata. Verktygsfältet ContextHub är användbart när du vill förhandsgranska innehåll som bestäms av data i ett ContextHub-lager.
 
 Verktygsfältet består av en serie användargränssnittslägen som innehåller en eller flera användargränssnittsmoduler.
 
 * Gränssnittslägen är ikoner som visas till vänster i verktygsfältet. När du klickar på eller trycker på en ikon visas de gränssnittsmoduler som finns i verktygsfältet.
 * Gränssnittsmoduler visar data från en eller flera ContextHub-butiker. Vissa gränssnittsmoduler gör det även möjligt för dig att ändra lagrade data.
 
-ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din administratör kan ha konfigurerat ContextHub så att andra visas.<!--ContextHub installs several UI modes and UI modules. Your administrator may have [configured ContextHub](/help/sites-administering/contexthub-config.md) to display different ones.-->
+ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din administratör kan ha [konfigurerat ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md) för att visa olika.
 
 ## Visa verktygsfältet ContextHub {#revealing-the-contexthub-toolbar}
 
@@ -37,7 +37,7 @@ Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verkt
 
 ## Funktioner i gränssnittsmodul {#ui-module-features}
 
-Varje gränssnittsmodul innehåller olika uppsättningar funktioner, men följande typer av funktioner är vanliga. Eftersom gränssnittsmoduler kan utökas kan utvecklaren implementera andra funktioner efter behov.
+Varje gränssnittsmodul innehåller olika uppsättningar funktioner, men följande typer av funktioner är vanliga. Eftersom gränssnittsmodulerna kan utökas kan utvecklaren implementera andra funktioner efter behov.
 
 ### Innehåll i verktygsfält {#toolbar-content}
 
@@ -51,9 +51,9 @@ Vissa gränssnittsmoduler visar en popup-övertäckning när de klickas eller tr
 
 ![Profilinformation för ContextHub](/help/sites-cloud/authoring/assets/contexthub-profile.png)
 
-### Popup-formulär {#popup-forms}
+### Popup Forms {#popup-forms}
 
-Popup-överlägget för en modul kan innehålla formulärelement som gör att du kan ändra data i ContextHub-arkivet. Om sidinnehållet avgörs av lagringsdata kan du använda formuläret och observera ändringar i sidinnehållet.
+Popup-överlägget för en modul kan innehålla formulärelement som gör att du kan ändra data i ContextHub-arkivet. Om sidinnehållet bestäms av lagringsdata kan du använda formuläret och observera ändringar i sidinnehållet.
 
 ### Helskärmsläge {#fullscreen-mode}
 
