@@ -3,7 +3,7 @@ title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1a307b065beff721cad35def4f812c3bee8eb8dd
+source-git-commit: 8aa2585e85b0ed23d68597857cda09dc301df4f6
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med hjälp av [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](/help/assets/assets-api-content-fragments.md).
+Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med hjälp av [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 Så här kommer du åt API:
 
@@ -34,13 +34,13 @@ Efter [!UICONTROL Off Time]detta är en resurs och dess återgivningar inte till
 
 Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en särskild typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard` resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
 
-Mer information finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/assets-api-content-fragments.md).
+Mer information finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 ## Datamodell {#data-model}
 
 Resursens HTTP-API visar två huvudelement, mappar och resurser (för standardresurser).
 
-Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller](/help/assets/assets-api-content-fragments.md#content-models-and-content-fragments) för innehållsfragment.
+Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments) för innehållsfragment.
 
 ### Mappar {#folders}
 
@@ -71,7 +71,7 @@ I [!DNL Experience Manager] en resurs innehåller följande element:
 * Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF- eller Adobe InDesign-filer.
 * Valfria kommentarer.
 
-Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/assets-api-content-fragments.md).
+Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 I [!DNL Experience Manager] en mapp finns följande komponenter:
 
@@ -211,7 +211,7 @@ Skapar en ny resurskommentar.
 
 ## Kopiera en mapp eller en resurs {#copy-a-folder-or-asset}
 
-Kopierar en mapp eller resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
+Kopierar en mapp eller en resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
 
 **Begäranrubriker**: Parametrarna är:
 
