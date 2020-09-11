@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.9.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.9.0.'
 translation-type: tm+mt
-source-git-commit: a2037fb3a315db801423c33671e1885a0b655391
+source-git-commit: cca8aff3ada327252bfabd2207e7aa86fdf00033
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,12 @@ ht-degree: 0%
 # Versionsinformation för [!DNL Adobe Experience Manager] som Cloud Service 2020.9.0 {#release-notes}
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.9.0.
+
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
+
+### What is new in [!DNL Sites] {#what-is-new-sites}
+
+* SPA-redigeraren (Single Page Application) JavaScript SDK [är nu öppen källkod.](/help/implementing/developing/spa/reference-materials.md)
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
@@ -31,7 +37,6 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 ### Bug Fixes {#bug-fixes-commerce}
 
 * Commerce Cloud-konfigurationer respekterar inte arv. Detta har åtgärdats för att säkerställa att konfigurationen ärver värden.
-
 
 ## Cloud Manager {#cloud-manager}
 
