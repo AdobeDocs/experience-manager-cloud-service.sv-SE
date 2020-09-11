@@ -2,7 +2,7 @@
 title: Komma igång med SPA i AEM med React
 description: I den här artikeln presenteras ett exempel på ett SPA-program, som förklarar hur det sätts ihop och gör att du snabbt kan komma igång med ditt eget SPA-program med hjälp av React Framework.
 translation-type: tm+mt
-source-git-commit: 4652ab5a064d1ad397eb8eebd9dd92f7c8bb1c21
+source-git-commit: 8bdb7bbe80a4e22bb2b750c0719c6db745133392
 workflow-type: tm+mt
 source-wordcount: '1145'
 ht-degree: 0%
@@ -48,9 +48,9 @@ Filen definierar kraven för det övergripande SPA-paketet `package.json` . Här
 
 ```
   "dependencies": {
-    "@adobe/cq-react-editable-components": "~1.0.3",
-    "@adobe/cq-spa-component-mapping": "~1.0.3",
-    "@adobe/cq-spa-page-model-manager": "~1.0.4"
+    "@adobe/aem-react-editable-components": "~1.0.4",
+    "@adobe/aem-spa-component-mapping": "~1.0.5",
+    "@adobe/aem-spa-page-model-manager": "~1.0.3"
   }
 ```
 
@@ -123,7 +123,7 @@ Ingångspunkten i produktresumén är förstås den fil som visas här förenkla
 ```
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ModelManager, Constants } from "@adobe/cq-spa-page-model-manager";
+import { ModelManager, Constants } from "@adobe/aem-spa-page-model-manager";
 
 ...
 
@@ -148,7 +148,7 @@ När komponenten instansieras statiskt med komponentmallen (t.ex. JSX), måste v
 Genom att återge programmet anropar `index.js` du `App.js`som visas här i en förenklad version för att fokusera på det viktiga innehållet.
 
 ```
-import {Page, withModel } from '@adobe/cq-react-editable-components';
+import {Page, withModel } from '@adobe/aem-react-editable-components';
 
 ...
 
@@ -166,7 +166,7 @@ export default withModel(App);
 Genom att återge sidan ringer du `App.js` upp `Page.js` här i en förenklad version.
 
 ```
-import {Page, MapTo, withComponentMappingContext } from "@adobe/cq-react-editable-components";
+import {Page, MapTo, withComponentMappingContext } from "@adobe/aem-react-editable-components";
 
 ...
 
@@ -187,7 +187,7 @@ När sidan återges kan komponenterna som `Image.js` visas här återges.
 
 ```
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Image.css');
 
@@ -230,7 +230,7 @@ Du kan exportera en komponent och göra den redigerbar.
 
 ```
 import React, { Component } from 'react';
-import { MapTo } from '@cq/cq-react-editable-components';
+import { MapTo } from '@adobe/aem-react-editable-components';
 
 ...
 
