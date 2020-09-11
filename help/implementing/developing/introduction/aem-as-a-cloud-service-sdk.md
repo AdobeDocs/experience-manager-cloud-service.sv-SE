@@ -1,10 +1,10 @@
 ---
 title: AEM as a Cloud Service SDK
-description: Fylls i
+description: Översikt över AEM som Cloud Service Software Development Kit
 translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: 1ebc4f833d4a01f1144c585dc71057f007031e43
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1032'
 ht-degree: 1%
 
 ---
@@ -14,20 +14,20 @@ ht-degree: 1%
 
 AEM som Cloud Service-SDK består av följande artefakter:
 
-* **QuickStart JAR** - AEM-miljön som används för lokal utveckling
+* **QuickStart JAR** - AEM som används för lokal utveckling
 * **Java API Jar** - Java Jar/Maven Dependency, som visar alla Java API:er som kan användas för att utveckla mot AEM som Cloud Service. Tidigare kallad Uberjar
 * **Javadoc Jar** - javadokarna för Java API Jar
 * **Dispatcher Tools** - den uppsättning verktyg som används för att utveckla mot Dispatcher lokalt. Separata artefakter för unix och windows
 
 Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller tidigare att använda artefakterna nedan. Om den lokala kompileringen inte fungerar med Quickstart-behållaren och du misstänker att den beror på gränssnitt som har tagits bort från AEM distribuerats som en Cloud Service, kontaktar du kundsupporten för att avgöra om du behöver åtkomst. Detta kräver ändringar i serverdelen.
 
-* **6.5 Föråldrad Java API Jar** - ytterligare en uppsättning gränssnitt som har tagits bort sedan AEM 6.5
+* **6.5 Borttagen Java API JAR** - ytterligare en uppsättning gränssnitt som har tagits bort sedan AEM 6.5
 * **6.5 Borttagen Javadoc Jar** - Javadocs för den extra uppsättningen gränssnitt
 
-## Åtkomst till AEM som Cloud Service-SDK {#accessing-the-aem-as-a-cloud-service-sdk}
+## Åtkomst till AEM som en Cloud Service-SDK {#accessing-the-aem-as-a-cloud-service-sdk}
 
-* Du kan kontrollera ikonen AEM Admin Console **About Adobe Experience Manager** om du vill ta reda på vilken version av AEM du använder i produktionen.
-* Snabbstartsburken och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som en Cloud Service-miljö.
+* Du kan ta reda på vilken version av AEM som du använder i produktionen genom att titta på AEM Admin Console **Om Adobe Experience Manager** .
+* Snabbstartsverktyget och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som en Cloud Service-miljö.
 * Java API Jar och Javadoc Jar kan laddas ned via maven-verktygen, antingen kommandoraden eller med den IDE du föredrar.
 * Maven project poms ska referera till följande API Jar-paket. Det här beroendet ska också refereras i alla delpaketets omgångar.
 
@@ -42,7 +42,7 @@ Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller ti
 
 >[!NOTE]
 >
->Versionsposten för SDK ska matcha versionen av AEM som en Cloud Service. Du kan se vilken version du använder genom att logga in på AEM, sedan gå till frågetecknet i skärmens övre högra hörn och välja **[!UICONTROL About Adobe Experience Manager]**
+>Versionsposten för SDK ska matcha versionen av AEM som en Cloud Service. Du kan se vilken version du använder genom att logga in på AEM och sedan gå till frågetecknet i skärmens övre högra hörn och välja **[!UICONTROL About Adobe Experience Manager]**
 
 
 ## Uppdatera ett lokalt projekt med en ny SDK-version {#refreshing-a-local-project-with-a-new-skd-version}
@@ -51,7 +51,7 @@ När rekommenderas att det lokala projektet uppdateras med ett nytt SDK?
 
 Vi *rekommenderar* att du uppdaterar den minst efter en månadsvis underhållsrelease.
 
-Det är *valfritt* att uppdatera den efter en daglig underhållsrelease. Kunderna informeras när deras produktionsinstans har uppgraderats till en ny AEM-version. För de dagliga underhållsreleaserna förväntas inte att det nya SDK-värdet kommer att ha ändrats avsevärt, om något alls. Vi rekommenderar dock att du ibland uppdaterar den lokala AEM-utvecklingsmiljön med den senaste SDK:n och sedan återskapar och testar det anpassade programmet. Den månatliga underhållsreleasen innehåller vanligtvis mer omfattande ändringar och utvecklare bör därför omedelbart uppdatera, återskapa och testa.
+Det är *valfritt* att uppdatera den efter en daglig underhållsrelease. Kunderna informeras när deras produktionsinstans har uppgraderats till en ny AEM. För de dagliga underhållsreleaserna förväntas inte att det nya SDK-värdet kommer att ha ändrats avsevärt, om något alls. Vi rekommenderar dock att du ibland uppdaterar den lokala AEM utvecklingsmiljön med den senaste SDK:n och sedan återskapar och testar det anpassade programmet. Den månatliga underhållsreleasen innehåller vanligtvis mer omfattande ändringar och utvecklare bör därför omedelbart uppdatera, återskapa och testa.
 
 Nedan beskrivs den rekommenderade proceduren för uppdatering av en lokal miljö:
 
@@ -59,23 +59,23 @@ Nedan beskrivs den rekommenderade proceduren för uppdatering av en lokal miljö
 1. Lokalt utvecklingstestinnehåll måste lagras separat så att det inte distribueras som en del av molnhanterarens pipeline-bygge. Detta beror på att det bara behöver användas för lokal utveckling
 1. Stoppa snabbstart som körs
 1. Flytta `crx-quickstart` mappen till en annan mapp för säker lagring
-1. Observera den nya AEM-versionen, som beskrivs i Cloud Manager (används för att identifiera den nya QuickStart Jar-versionen som du kan ladda ned ytterligare)
+1. Observera den nya AEM-versionen som beskrivs i Cloud Manager (används för att identifiera den nya QuickStart Jar-versionen som du kan ladda ned ytterligare)
 1. Ladda ned QuickStart JAR vars version matchar Production AEM-versionen från Software Distribution Portal
 1. Skapa en helt ny mapp och placera den nya QuickStart Jar i
 1. Starta den nya snabbstarten med de körningslägen du vill ha (antingen genom att byta namn på filen eller genom att skicka i körningslägen via `-r`).
    * Kontrollera att det inte finns någon kvar av den gamla snabbstarten i mappen.
-1. Bygg ditt AEM-program
-1. Distribuera ditt AEM-program till lokala AEM via PackageManager
+1. Bygg AEM
+1. Distribuera AEM till lokala AEM via PackageManager
 1. Installera alla ändringsbara innehållspaket som behövs för lokal miljötestning via PackageManager
 1. Fortsätt med utvecklingen och distribuera ändringarna efter behov
 
-Om det finns innehåll som ska installeras med varje ny AEM snabbstartsversion inkluderar du det i ett innehållspaket och i projektets källkontroll. Installera det sedan varje gång.
+Om det finns innehåll som ska installeras med varje ny AEM snabbstartversion, inkluderar du det i ett innehållspaket och i projektets källkontroll. Installera det sedan varje gång.
 
 Rekommendationen är att uppdatera SDK ofta (t.ex. varannan vecka) och ta bort hela lokala tillstånd varje dag för att inte vara beroende av tillståndskänsliga data i programmet.
 
-Om du är beroende av CryptoSupport ([antingen genom att konfigurera inloggningsuppgifterna för Cloudservices eller SMTP Mail-tjänsten i AEM eller genom att använda CryptoSupport API i ditt program](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/crypto/CryptoSupport.html)), krypteras de krypterade egenskaperna av en nyckel som genereras automatiskt första gången en AEM-miljö startas. Molnkonfigurationen tar hand om automatisk återanvändning av den miljöspecifika CryptoKey, men du måste injicera kryptonyckeln i den lokala utvecklingsmiljön.
+Om du är beroende av CryptoSupport ([antingen genom att konfigurera inloggningsuppgifterna för Cloudservices eller SMTP Mail-tjänsten i AEM eller genom att använda CryptoSupport API i ditt program](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/crypto/CryptoSupport.html)), krypteras de krypterade egenskaperna av en nyckel som genereras automatiskt första gången en AEM startas. Molnkonfigurationen tar hand om automatisk återanvändning av den miljöspecifika CryptoKey, men du måste injicera kryptonyckeln i den lokala utvecklingsmiljön.
 
-Som standard är AEM konfigurerad för att lagra nyckeldata i en mapps datamapp, men för att underlätta återanvändning vid utveckling kan AEM-processen initieras vid första starten med&quot;`-Dcom.adobe.granite.crypto.file.disable=true`&quot;. Detta genererar krypteringsdata på &quot;`/etc/key`&quot;.
+Som standard är AEM konfigurerat för att lagra nyckeldata i en mapps datamapp, men för att underlätta återanvändning under utvecklingen kan AEM initieras vid första starten med &quot;`-Dcom.adobe.granite.crypto.file.disable=true`&quot;. Detta genererar krypteringsdata på &quot;`/etc/key`&quot;.
 
 För att kunna återanvända innehållspaket som innehåller de krypterade värdena måste du följa dessa steg:
 
