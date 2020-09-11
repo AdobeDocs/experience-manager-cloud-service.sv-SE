@@ -2,9 +2,9 @@
 title: Betydande förändringar av AEM Commerce som en Cloud Service
 description: Betydande förändringar av AEM Commerce som Cloud Service jämfört med Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: 5a90db8791dd92cceb811b9ed2beda3ecb4a974d
+source-git-commit: ed81d08d9775f61c0ab1e305710ac7ecf29d4229
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '624'
 ht-degree: 5%
 
 ---
@@ -21,7 +21,7 @@ De största skillnaderna jämfört med Experience Manager 6.5 är inom följande
 
 ## Stöd för CIF Classic/Quickstart på Experience Manager som Cloud Service {#cif-classic}
 
-Classic Commerce Integration Framework, som inkluderade en produktimporterare för att importera och lagra produktkataloger i Experience Manager, är inte längre tillgängligt i Experience Manager som Cloud Service. Klassisk CIF stöds inte i Experience Manager som Cloud Service och projekt som använder klassisk CIF måste ersätta den klassiska CIF-implementeringen med den version som stöds enligt vad som beskrivs i [CIF på Experience Manager som en Cloud Service](https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en/blob/cif/help/commerce-cloud/architecture.md)
+Classic Commerce Integration Framework, som inkluderade en produktimporterare för att importera och lagra produktkataloger i Experience Manager, är inte längre tillgängligt i Experience Manager som Cloud Service. Klassisk CIF stöds inte i Experience Manager som Cloud Service och projekt som använder klassisk CIF måste ersätta den klassiska CIF-implementeringen med den version som stöds enligt vad som beskrivs i [CIF på Experience Manager som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/commerce/architecture/magento.html#overview)
 
 ## Distribution av CIF {#deployment}
 
@@ -33,6 +33,10 @@ Nedan visas olika distributionsmodeller för Commerce Integration Framework för
 | Distribuera [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) | Installera AEM | Distribuering via [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) | Projektet har flyttats till [molnhanterarens Git-databas](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/managing-code/integrating-with-git.html) och distributionen har gjorts via [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html) |
 
 >[!NOTE]
+>
+>Mer information om hur du använder CIF med AEM hanterade tjänster eller AEM lokalt finns i [Commerce Integration Framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)
+
+>[!Note]
 >
 >CIF Classic/Quickstart-versionen av Commerce Integration Framework kan användas AEM lokal-erbjudanden för mycket begränsad användning. Detta är dock inte den rekommenderade lösningen.
 
