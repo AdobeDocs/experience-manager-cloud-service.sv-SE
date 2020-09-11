@@ -1,11 +1,11 @@
 ---
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
-description: Fylls i
+description: Utvecklingsriktlinjer för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: eb2f944b4cc4311c6e0c10d34d02eafa6128f6aa
+source-git-commit: 1ebc4f833d4a01f1144c585dc71057f007031e43
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 1%
+source-wordcount: '1953'
+ht-degree: 2%
 
 ---
 
@@ -134,7 +134,7 @@ Observera att vid lokal utveckling (med molnklar snabbstart) `/apps` och `/libs`
 
 Kunderna har tillgång till CRXDE-stilen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det kommer det att leda till fel.
 
-Det finns en uppsättning verktyg för felsökning AEM som utvecklarmiljöer på Cloud Servicen i Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
+En uppsättning verktyg för felsökning AEM som utvecklingsmiljö finns i Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
 `https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
@@ -169,7 +169,7 @@ Kunderna har inte tillgång till utvecklarverktyg för staging- och produktionsm
 
 ### Prestandaövervakning {#performance-monitoring}
 
-Adobe övervakar applikationernas prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte programmått beaktas.
+Adobe övervakar programmets prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte programmått beaktas.
 
 ## IP-adress för dedikerad utpressning {#dedicated-egress-ip-address}
 
