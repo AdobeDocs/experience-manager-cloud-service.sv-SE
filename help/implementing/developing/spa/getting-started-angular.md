@@ -2,7 +2,7 @@
 title: Komma igång med SPA i AEM med hjälp av vinkeln
 description: I den här artikeln beskrivs ett exempel på ett SPA-program, hur det sätts samman och hur du snabbt kommer igång med ditt eget SPA med hjälp av det vinkelbaserade ramverket.
 translation-type: tm+mt
-source-git-commit: ccde1459090bb9f801d753cb7314e2bc7249f72e
+source-git-commit: 8bdb7bbe80a4e22bb2b750c0719c6db745133392
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 0%
@@ -48,9 +48,9 @@ Filen definierar kraven för det övergripande SPA-paketet `package.json` . Här
 
 ```
 "dependencies": {
-  "@adobe/cq-angular-editable-components": "~1.0.3",
-  "@adobe/cq-spa-component-mapping": "~1.0.3",
-  "@adobe/cq-spa-page-model-manager": "~1.0.4"
+  "@adobe/aem-angular-editable-components": "~1.0.3",
+  "@adobe/aem-spa-component-mapping": "~1.0.5",
+  "@adobe/aem-spa-page-model-manager": "~1.0.3"
 }
 ```
 
@@ -118,7 +118,7 @@ Startpunkten i SPA är den fil som visas här förenklad för att fokusera på d
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { SpaAngularEditableComponentsModule } from '@adobe/cq-angular-editable-components';
+import { SpaAngularEditableComponentsModule } from '@adobe/aem-angular-editable-components';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -147,8 +147,8 @@ När `app.module.ts` programmet har startats `AppComponent`kan det initiera appe
 ```
 // app.component.ts
 import { Component } from '@angular/core';
-import { ModelManager } from '@adobe/cq-spa-page-model-manager';
-import { Constants } from "@adobe/cq-angular-editable-components";
+import { ModelManager } from '@adobe/aem-spa-page-model-manager';
+import { Constants } from "@adobe/aem-angular-editable-components";
 
 @Component({
   selector: 'app-root',
@@ -182,7 +182,7 @@ Genom att bearbeta sidan kan du ringa samtal `app.component.ts` `main-content.co
 import { Component } from '@angular/core';
 import { ModelManagerService }     from '../model-manager.service';
 import { ActivatedRoute } from '@angular/router';
-import { Constants } from "@adobe/cq-angular-editable-components";
+import { Constants } from "@adobe/aem-angular-editable-components";
 
 @Component({
   selector: 'app-main',
