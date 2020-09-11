@@ -2,7 +2,7 @@
 title: SPA Editor - översikt
 description: I den här artikeln finns en omfattande översikt över SPA-redigeraren och hur den fungerar. Här finns detaljerade arbetsflöden för samverkan mellan SPA-redigeraren i AEM.
 translation-type: tm+mt
-source-git-commit: 9b52d94b9f00be30c21dece9b34b0b56056dcbd6
+source-git-commit: 8bdb7bbe80a4e22bb2b750c0719c6db745133392
 workflow-type: tm+mt
 source-wordcount: '1641'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess undero
 
 ### Sidmodellshantering {#page-model-management}
 
-Upplösningen och hanteringen av sidmodellen delegeras till ett angivet `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket för att kunna initieras och redigeras av SPA-redigeraren. Sidmodellbiblioteket som indirekt tillhandahålls AEM sidkomponenten via `cq-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats `cq.authoring.pagemodel.messaging` måste ytterligare ett bibliotek läggas till för att kommunikationen med sidredigeraren ska kunna aktiveras.
+Upplösningen och hanteringen av sidmodellen delegeras till ett angivet `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket för att kunna initieras och redigeras av SPA-redigeraren. Sidmodellbiblioteket som indirekt tillhandahålls AEM sidkomponenten via `aem-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats `cq.authoring.pagemodel.messaging` måste ytterligare ett bibliotek läggas till för att kommunikationen med sidredigeraren ska kunna aktiveras.
 
 Om SPA-sidkomponenten ärver från sidhuvudkomponenten finns det två alternativ för att göra klientbibliotekskategorin tillgänglig: `cq.authoring.pagemodel.messaging`
 
