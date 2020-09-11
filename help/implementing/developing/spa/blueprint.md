@@ -2,7 +2,7 @@
 title: SPA Blueprint
 description: I detta dokument beskrivs det allmänna, ramverksoberoende kontrakt som alla SPA-ramverk ska uppfylla för att implementera redigerbara SPA-komponenter inom AEM.
 translation-type: tm+mt
-source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
+source-git-commit: 8bdb7bbe80a4e22bb2b750c0719c6db745133392
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 0%
@@ -97,7 +97,7 @@ npm-modul: [@adobe/aem-rea-editable-components](https://www.npmjs.com/package/@a
 
 #### Vinkel {#angular}
 
-npm-modul: [@adobe/cq-angular-editable-components](https://www.npmjs.com/package/@adobe/cq-angular-editable-components)
+npm-modul: [@adobe/aem-angular-editable-components](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
 ## Huvudsakliga tjänster och komponenter {#main-services-and-components}
 
