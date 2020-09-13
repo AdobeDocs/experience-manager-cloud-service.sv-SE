@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: 5a3a8638bbb9fc8c0b28929bcc9c91c404d608d3
+source-git-commit: 130603301212cdb29ae7f395ebc05fc58f64686e
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -30,25 +30,24 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.8.0 är 27 august
 
 ### What is new in [!DNL Assets] {#what-is-new-assets}
 
-* Videoomkodning stöds nu med tillgångsmikrotjänster, med ett nytt Video-avsnitt på skärmen som stöder konfiguration av videobithastighet och dimensioner (utdataformatet är MP4 med H.264-kodek). [!UICONTROL Processing Profiles] Mer information finns i [Hantera videomaterial](/help/assets/manage-video-assets.md#transcode-video). För fler omkodningsalternativ och [!DNL Dynamic Media] tillägg för videoleverans kan användas.
+* Videoomkodning stöds nu med tillgångsmikrotjänster. Med ett nytt avsnitt i [!UICONTROL Processing Profiles] konfigurationen kan du ange videobithastighet och -mått. Utdataformatet är MP4 med H.264-kodeken. Mer information finns i [Hantera videomaterial](/help/assets/manage-video-assets.md#transcode-video). Om du vill ha fler omkodningsalternativ och för videoleverans använder du [!DNL Dynamic Media] tillägget.
 
 * I nya [!DNL Experience Manager Assets] distributioner är funktionen för smart taggning nu konfigurerad som standard. Du behöver inte integrera manuellt med [!DNL Adobe Developer Console]. I befintliga distributioner [konfigurerar administratörer smart taggintegrering](/help/assets/smart-tags-configuration.md#aio-integration) som tidigare.
 
 * Med en ny [resurshämtning](/help/assets/download-assets-from-aem.md) kan
 
    * Asynkron nedladdning för stora nedladdningar så att användarna inte behöver vänta.
-
    * Ett nytt modulärt API för utbyggbarhet för utvecklare.
 
-* [!DNL Experience Manager] har förbättrat prestandan för metadataextrahering för tillgångsmikrotjänster. Det ökar den totala genomströmningen av tillgångsintag.
+* Extrahering av metadata för tillgångsmikrotjänster har förbättrat prestandan. Det ökar den totala genomströmningen av tillgångsintag.
 
-* Använd bearbetningsprofil för att generera anpassade metadata med hjälp av beräkningstjänsten. Se [Anpassade metadata med bearbetningsprofil](/help/assets/manage-metadata.md#metadata-compute-service)
+* Använd en bearbetningsprofil för att generera anpassade metadata med hjälp av beräkningstjänsten. Se [Anpassade metadata med bearbetningsprofil](/help/assets/manage-metadata.md#metadata-compute-service).
 
 * En enklare nedladdningsupplevelse för användare av varumärkesportalen som administratörer kan konfigurera. Se Översikt över [nedladdningsupplevelsen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html#download-configurations).
 
 * Inbyggda förhandsgranskningar av PDF-dokument med hög originalåtergivning finns nu tillgängliga i varumärkesportalen. Se Översikt över [dokumentvisningsprogrammet](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html#doc-viewer).
 
-* Nu kan du göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] AEM som en Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]) för att se till att de senaste resurserna hanteras på några minuter istället för timmar. Se [Invalidera CDN-cachen med hjälp av Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md)
+* Nu kan du göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] AEM som en Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]). Det säkerställer att de senaste tillgångarna hanteras på några minuter istället för timmar. Se [Invalidera CDN-cachen med hjälp av Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
 
 * Förbättrat stöd för hjälpmedel finns i användargränssnittskontroller, navigering, bläddring och sökupplevelser i [!DNL Assets].
 
@@ -57,7 +56,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.8.0 är 27 august
    * Elementen dragspelspaneler i sökfilteravsnittet tolkas som utökningsbara standarddragspel. <!-- via CQ-4273103 -->
    * När du använder en tagg på en resurs visas taggarna som trädelement i dialogrutan. ARIA-attributen tillämpas på trädelementen så att de blir tillgängliga nu. <!-- via CQ-4272964 -->
 
-* [!DNL AEM Desktop app] 2.0.3-versionen är nu tillgänglig, vilket förbättrar kompatibiliteten med [!DNL AEM] 6.5.5 [!DNL Service Pack] och uppdaterar klientens OS-kompatibilitetslista (7 och [!DNL Windows] [!DNL MacOS] tidigare versioner än 10.14 tas bort).
+* [!DNL AEM Desktop app] 2.0.3-versionen är nu tillgänglig. Den förbättrar kompatibiliteten med [!DNL Experience Manager] 6.5.5 Service Pack och har en uppdaterad lista över kompatibiliteten för klientoperativsystem. [!DNL Windows] 7 och [!DNL macOS] tidigare versioner än 10.14 stöds inte.
 
 ### Fel som har åtgärdats i [!DNL Assets] {#bugs-fixed}
 
