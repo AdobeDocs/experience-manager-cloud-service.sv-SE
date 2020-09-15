@@ -2,9 +2,9 @@
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media
 translation-type: tm+mt
-source-git-commit: 07d60f1ae6be824af07bc51f989a5c2029a3422a
+source-git-commit: 3a56bee9236702d22fc7159c744271be49f4a9a6
 workflow-type: tm+mt
-source-wordcount: '9670'
+source-wordcount: '9674'
 ht-degree: 9%
 
 ---
@@ -341,7 +341,7 @@ VBR tar längre tid att koda men ger det mest fördelaktiga resultatet. mediefil
 När ska du använda VBR jämfört med CRB?
 När det gäller att välja VBR eller CBR rekommenderar vi nästan alltid att du använder VBR för dina mediefiler. VBR ger filer av högre kvalitet med konkurrenskraftiga bithastigheter. När du använder VBR måste du vara säker på att du använder kodning i två omgångar och ställa in den maximala bithastigheten till 1,5 gånger målvideobithastigheten.
 
-När du väljer en förinställning för videokodning ska du ta hänsyn till slutanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1 000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
+När du väljer en förinställning för videokodning ska du ta hänsyn till slutanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
 
 I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter.
 
@@ -412,9 +412,9 @@ Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställ
 
 ## Publicera videor på YouTube {#publishing-videos-to-youtube}
 
-Du kan publicera lokalt AEM videomaterial direkt till en YouTube-kanal som du tidigare har skapat.
+Du kan publicera videoresurser som hanteras i AEM Assets direkt till en YouTube-kanal som du tidigare har skapat.
 
-Om du vill publicera videomaterial på YouTube skapar du AEM Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om taggen för en videoresurs matchar taggen för en YouTube-kanal publiceras videon på YouTube. Publicera på YouTube sker tillsammans med en normal publicering av videon så länge som en associerad tagg används.
+Om du vill publicera videomaterial på YouTube taggar du videomaterial i AEM Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om taggen för en videoresurs matchar taggen för en YouTube-kanal publiceras videon på YouTube. Publicera på YouTube sker tillsammans med en normal publicering av videon så länge som en associerad tagg används.
 
 YouTube gör sin egen kodning. Den ursprungliga videofilen som överfördes till AEM publiceras på YouTube i stället för en videoåtergivning som har skapats med Dynamic Medias kodning. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media, förväntas de göra det om en visningsförinställning behövs för uppspelning.
 
@@ -689,7 +689,7 @@ Så här automatiserar du inställningen av YouTube-standardegenskaper för dina
 
 1. I det övre vänstra hörnet av AEM klickar du på AEM-logotypen och sedan i den vänstra rutan klickar du på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 1. Klicka på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
-1. På sidan **[!UICONTROL default]** markerar du rutan till vänster om **[!UICONTROL video]** och klickar sedan på **[Redigera]**.
+1. På sidan **[!UICONTROL default]** markerar du rutan till vänster om **[!UICONTROL video]** och klickar sedan på **[[Redigera]**.
 1. Klicka på **[!UICONTROL Advanced]** fliken på sidan Redigerare för metadatamatchning.
 1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Category]**.
 1. Gör följande till höger på sidan, under **[!UICONTROL Settings]** fliken:
