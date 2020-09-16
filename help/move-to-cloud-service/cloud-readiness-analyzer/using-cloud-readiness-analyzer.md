@@ -1,11 +1,11 @@
 ---
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
-translation-type: ht
-source-git-commit: a0e58c626f94b778017f700426e960428b657806
-workflow-type: ht
-source-wordcount: '1871'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: ba2105d389617fe0c7e26642799b3a7dd3adb8a1
+workflow-type: tm+mt
+source-wordcount: '2091'
+ht-degree: 77%
 
 ---
 
@@ -146,29 +146,33 @@ Nedan visas ett exempel på hur du gör det:
 
 Följande HTTP-sidhuvuden används i gränssnittet:
 
-* `Cache-Control: max-age=<seconds>`: Ange livslängd för cacheminnet i sekunder. (Se [RFC 7234](https://tools.ietf.org/html/rfc7234#section-5.2.2.8).)
+* `Cache-Control: max-age=<seconds>`: Anger livstid för cachefrihet i sekunder. (Se [RFC 7234](https://tools.ietf.org/html/rfc7234#section-5.2.2.8).)
 * `Prefer: respond-async`: Anger att servern ska svara asynkront. (Se [RFC 7240](https://tools.ietf.org/html/rfc7240#section-4.1).)
+* `Prefer: return=minimal`: Anger att servern ska returnera ett minimalt svar. (Se [RFC 7240](https://tools.ietf.org/html/rfc7240#section-4.2).)
 
 Följande HTTP-frågeparametrar är praktiska när det är svårt att använda HTTP-sidhuvuden:
 
-* `max-age` (tal, valfritt): Ange livslängd för cacheminnet i sekunder. Siffran måste vara 0 eller större. Utan den här parametern eller motsvarande sidhuvud är standardlivslängden 86 400 sekunder, vilket innebär att ett nytt cacheminne används för förfrågningar i 24 timmar innan rapporten måste genereras igen. Om du använder `max-age=0` kommer cachen att rensas och rapporten genereras igen. Direkt efter begäran återställs livslängden till det senaste värdet som inte är noll.
-* `respond-async` (booleskt, valfritt): Anger att svaret ska tillhandahållas asynkront. Om du använder `respond-async=true` när cachen är gammal kommer servern att returnera svaret `202 Accepted, processing cache` utan att vänta på att rapporten genereras och att cachen uppdateras. Om cacheminnet är uppdaterat har den här parametern ingen effekt. Standardvärdet är `false`, vilket innebär att utan den här parametern eller motsvarande sidhuvud kommer servern att svara synkront, vilket kan ta lång tid och kräva en justering av den maximala svarstiden för HTTP-klienten.
+* `max-age` (tal, valfritt): Anger livstid för cachefrihet i sekunder. Siffran måste vara 0 eller större. Standardlivstiden för färskhet är 86400 sekunder. Utan den här parametern eller motsvarande rubrik används ett nytt cacheminne för att hantera begäranden i 24 timmar, och då måste cacheminnet genereras om. Om du använder `max-age=0` kommer cachen att rensas och en omgenerering av rapporten påbörjas, med den tidigare icke-nollvaraktigheten för det nyligen genererade cacheminnet.
+* `respond-async` (boolesk, valfritt): Anger att svaret ska anges asynkront. Using `respond-async=true` when the cache is stale will cause the server to return a response of `202 Accepted` without waiting for the cache to be refreshed and for the report to be generated. Om cacheminnet är uppdaterat har den här parametern ingen effekt. The default value is `false`. Without this parameter or the corresponding header the server will respond synchronously, which may require a significant amount of time and require an adjustment to the maximum response time for the HTTP client.
+* `may-refresh-cache` (boolesk, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. Om `may-refresh-cache=true`eller om det inte anges kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. Om `may-refresh-cache=false` så inte är fallet kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha utförts om cachen är tom eller inaktuell. I så fall kommer rapporten att vara tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
+* `return-minimal` (boolesk, valfritt): Anger att svaret från servern endast ska innehålla statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. Om `return-minimal=true`så är svarstexten begränsad till statusobjektet. Om `return-minimal=false`eller om det inte anges kommer ett fullständigt svar att ges.
+* `log-findings` (boolesk, valfritt): Anger att servern ska logga innehållet i cachen när den skapas eller uppdateras för första gången. Varje sökning från cachen loggas som en JSON-sträng. Denna loggning sker endast om `log-findings=true` och begäran genererar ett nytt cacheminne.
 
 När det finns både ett HTTP-sidhuvud och motsvarande frågeparameter har frågeparametern företräde.
 
 Ett enkelt sätt att initiera rapportgenereringen via HTTP-gränssnittet är med följande kommando:
 `curl -u admin:admin 'http://localhost:4502/apps/readiness-analyzer/analysis/result.json?max-age=0&respond-async=true'`.
 
-När en begäran har skickats behöver klienten inte vara aktiv för att rapporten ska genereras. Rapportgenereringen kan initieras via en klient med en HTTP GET-begäran. När rapporten har genererats visas den från cachen i en annan klient eller i CSV-verktyget i användargränssnittet i AEM.
+När en begäran har skickats behöver klienten inte vara aktiv för att rapporten ska genereras. Rapportgenereringen kan initieras med en klient med en HTTP GET-begäran och när rapporten har genererats visas den från cachen med en annan klient eller med CRA-verktyget i AEM användargränssnitt.
 
 ### Svar {#http-responses}
 
 Följande svarsvärden är möjliga:
 
-* `200 OK`: Svaret innehåller resultat från Pattern Detector som genererades under cacheminnets livstid.
-* `202 Accepted, processing cache`: Tillhandahålls för asynkrona svar för att indikera att cachen var inaktuell och att en uppdatering pågår.
-* `400 Bad Request`: Anger att det uppstod ett fel med begäran. Ett meddelande i formatet Problem Details (se [RFC 7807](https://tools.ietf.org/html/rfc7807)) för mer information.
-* `401 Unauthorized`: Begäran var inte auktoriserad.
+* `200 OK`: Anger att svaret innehåller upptäckter från mönsteravkännaren som genererades under cachelagringens aktualitetstid.
+* `202 Accepted`: Används för att ange att cachen är inaktuell. När `respond-async=true` och `may-refresh-cache=true` det här svaret anger att en uppdateringsåtgärd pågår. När `may-refresh-cache=false` det här svaret indikerar att cachen är inaktuell.
+* `400 Bad Request`: Anger att det uppstod ett fel med begäran. A message in Problem Details format (see [RFC 7807](https://tools.ietf.org/html/rfc7807)) provides more details.
+* `401 Unauthorized`: Anger att begäran inte var auktoriserad.
 * `500 Internal Server Error`: Anger att ett internt serverfel uppstod. Ett meddelande i formatet Problem Details innehåller mer information.
 * `503 Service Unavailable`: Anger att servern är upptagen med ett annat svar och inte kan hantera begäran i tid. Detta inträffar troligtvis bara när synkrona förfrågningar görs. Ett meddelande i formatet Problem Details innehåller mer information.
 
