@@ -2,7 +2,7 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: 6459a3eae03ec75ed9449f27ad717b90bddf6dec
+source-git-commit: 99e721e373f34d72f75393b0771a069b9c1f8631
 workflow-type: tm+mt
 source-wordcount: '2209'
 ht-degree: 70%
@@ -106,7 +106,7 @@ Rapportens format är:
 * **System Overview**: Information om det AEM-system som CRA kördes på.
 * **Finding Categories**: Flera avsnitt som vart och ett handlar om ett eller flera resultat i samma kategori. Varje avsnitt innehåller följande: kategorinamn, undertyper, antal resultat och viktighetsgrad, sammanfattning, länk till kategoridokumentation och information om enskilda resultat.
 
-Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder. Mer information om varje sökkategori finns i Kategorier för [mönsteravkännare](https://docs.adobe.com/content/help/en/experience-manager-pattern-detection/table-of-contents/aso.html)
+Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder. Mer information om varje sökkategori finns i Kategorier för [mönsteravkännare](https://docs.adobe.com/content/help/en/experience-manager-pattern-detection/table-of-contents/aso.html).
 
 Läs tabellen nedan för mer information om viktighetsgrad:
 
