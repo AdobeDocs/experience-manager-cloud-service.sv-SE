@@ -2,7 +2,7 @@
 title: Använda Cloud Readiness Analyzer
 description: Använda Cloud Readiness Analyzer
 translation-type: tm+mt
-source-git-commit: b15969e7cdbd8c3affc6a51b0bc0b0f3f5fdb0f0
+source-git-commit: 6459a3eae03ec75ed9449f27ad717b90bddf6dec
 workflow-type: tm+mt
 source-wordcount: '2209'
 ht-degree: 70%
@@ -62,20 +62,20 @@ Läs det här avsnittet för att få veta hur du visar Cloud Readiness Analyzer-
 
 1. När CRA-rapporten har genererats visar den en sammanfattning och antalet resultat i ett tabellformat, ordnade efter typ av fynd och prioritetsnivå. Om du vill ha mer information om en viss sökning kan du klicka på talet som motsvarar sökningstypen i tabellen.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-summary-table.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/report-cra-4.png)
 
    Ovanstående åtgärd rullar automatiskt till platsen för sökningen i rapporten.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-summary-table-1.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/report-cra-5.png)
 
 1. You have the option of downloading the report in a comma-separated values (CSV) format by clicking on **CSV**, as shown in the figure below.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-download-csv.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/report-cra-6.png)
 
    >[!NOTE]
    >Du kan tvinga CRA att rensa cachen och återskapa rapporten genom att klicka på **Refresh Report**.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-refresh.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/report-cra-7.png)
 
    >[!NOTE]
    >Medan rapporten återskapas visas förloppet i procent som slutförts enligt bilden nedan.
