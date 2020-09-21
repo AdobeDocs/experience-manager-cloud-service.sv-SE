@@ -10,7 +10,7 @@ audience: developer
 kt: 4279
 thumbnail: 4279-customize-cif.jpg
 translation-type: tm+mt
-source-git-commit: 34b4dc697d3fb8c3f81e16ee3cab5d768e42b99c
+source-git-commit: a88595f3fab37f4406e607cb104a27de51cdbef6
 workflow-type: tm+mt
 source-wordcount: '2550'
 ht-degree: 0%
@@ -176,7 +176,7 @@ Använd sedan en GraphQL IDE för att verifiera att `eco_friendly` attributet ha
    }
    ```
 
-   ![Exempel på GraphlQL-svar](../assets/customize-cif-components/sample-graphql-query.png)
+   ![Exempel på GraphQL-svar](../assets/customize-cif-components/sample-graphql-query.png)
 
    Observera att värdet för **Yes** är ett heltal på **1**. Detta är användbart när vi skriver GraphQL-frågan i Java.
 
