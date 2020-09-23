@@ -4,10 +4,10 @@ user-guide-title: Redigera innehåll i AEM as a Cloud Service
 breadcrumb-title: Authoring Guide
 user-guide-description: Understand how to author with, and administer, Experience Manager Sites as a Cloud Service.
 translation-type: tm+mt
-source-git-commit: 82ad2cda70dd664ac9456a04f34e2d5831687fc1
+source-git-commit: d5b92dda6b79407988eea3126f10fe875a0176ea
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 98%
+source-wordcount: '207'
+ht-degree: 96%
 
 ---
 
@@ -74,6 +74,8 @@ ht-degree: 98%
       + [Skapa och hantera erbjudanden](authoring/personalization/offers.md)
       + [Förstå segmentering](authoring/personalization/segmentation.md)
       + [Konfigurera segmentering med ContextHub](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
++ Administratör {#administering}
+   + [Administrera arbetsflöden](administering/workflows-administering.md)
 + Integrera med AEM as a Cloud Service {#integrations}
    + [Integrera med Adobe Analytics](integrating/integrating-adobe-analytics.md)
    + [Integrera med Adobe Target](integrating/integrating-adobe-target.md)
