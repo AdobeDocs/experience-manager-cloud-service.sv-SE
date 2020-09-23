@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: a56ced81d0e1db44f156204eb6ff0c6860b395f6
+source-git-commit: 5627904800600386d186fdf9123cacbb55c57a49
 workflow-type: tm+mt
-source-wordcount: '1640'
-ht-degree: 95%
+source-wordcount: '1667'
+ht-degree: 84%
 
 ---
 
@@ -18,7 +18,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Lägsta systemkrav för Content Transfer Tool är AEM 6.3 + och JAVA 8. Om du har en tidigare AEM-version måste du uppgradera din innehållsdatabas till AEM 6.5 för att kunna använda Content Transfer Tool.
 
-* Verktyget Innehållsöverföring kan användas med följande typer av datalager: File Data Store, S3 Data Store och Shared S3 Data Store. Den stöder för närvarande inte Azure Blob Store-datalagret.
+* Verktyget Innehållsöverföring kan användas med följande typer av datalager: File Data Store, S3 Data Store, Shared S3 Data Store och Azure Blob Store Data Store.
 
 * Om du använder en *sandlådemiljö* måste du uppgradera din miljö till version 10 juni 2020 eller senare. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
@@ -47,16 +47,16 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/content1.png)
 
-1. Klicka på **Create Migration Set** om du vill skapa en ny migreringsuppsättning. Information om **innehållsmigreringsuppsättningen** visas.
+1. Konsolen nedan visas när du skapar den första migreringsuppsättningen. Klicka på **Create Migration Set** om du vill skapa en ny migreringsuppsättning.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/01-migration-set-overview.png)
 
    >[!NOTE]
-   >Du kommer att visa de befintliga migreringsuppsättningarna på den här skärmen med deras aktuella status.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ctt-img4.png)
+   >Om du har befintliga migreringsuppsättningar visas en lista med befintliga migreringsuppsättningar med aktuell status.
 
 1. Fyll i fälten på skärmen för **innehållsmigreringsuppsättningen** enligt beskrivningen nedan.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/content-3.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/02-migration-set-creation.png)
 
 
    1. **Name**: Ange namnet på migreringsuppsättningen.
@@ -72,13 +72,13 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    1. **Access Token**: Ange åtkomsttoken.
 
       >[!NOTE]
-      >Du kan hämta åtkomsttoken från författarinstansen genom att gå till `/libs/granite/migration/token.json`. Åtkomsttoken hämtas från Cloud Service-författarinstansen.
+      >Du kan hämta åtkomsttoken med knappen **Öppna åtkomsttoken** . Du måste kontrollera att du tillhör gruppen AEM administratörer i målinstansen av Cloud Service.
 
    1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
 
       1. **Include Version**: Välj det som behövs.
 
-      1. **Paths to be included**: Använd sökvägsläsaren för att välja sökvägar som behöver migreras.
+      1. **Paths to be included**: Använd sökvägsläsaren för att välja sökvägar som behöver migreras. Banväljaren accepterar indata genom att skriva eller genom att välja.
 
          >[!IMPORTANT]
          >Följande sökvägar är begränsade när du skapar en migreringsuppsättning:
@@ -92,43 +92,40 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
 1. Migreringsuppsättningen visas på sidan *Overview*.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ctt-img4.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/04-item-selection-and-quick-actions.png)
 
-   Alla befintliga migreringsuppsättningar på den här skärmen visas på sidan *Overview* med aktuell status och statusinformation.
+   Alla befintliga migreringsuppsättningar på den här skärmen visas på sidan *Overview* med aktuell status och statusinformation. Du kan se några av dessa ikoner som beskrivs nedan.
 
    * Ett *rött moln* anger att du inte kan slutföra extraheringsprocessen.
    * Ett *grönt moln* anger att du kan slutföra extraheringsprocessen.
    * En *gul ikon* anger att du inte har skapat den befintliga migreringsuppsättningen och att den specifika skapas av en annan användare i samma instans.
 
-1. Välj en migreringsuppsättning från översiktssidan och klicka på **Properties** för att visa eller redigera migreringsuppsättningens egenskaper.
+1. Välj en migreringsuppsättning från översiktssidan och klicka på **Properties** för att visa eller redigera migreringsuppsättningens egenskaper. När du redigerar egenskaper går det inte att ändra behållarnamnet eller tjänst-URL:en.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ctt-img6.png)
+
 
 ### Extraheringsprocess i innehållsöverföring {#extraction-process}
 
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 
-1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Extract** för att påbörja extraheringen.
+1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Extract** för att påbörja extraheringen. The **Migration Set extraction** dialog box displays and click on **Extract** to start the extraction phase.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/extraction-img1.png)
-
-1. Dialogrutan **Migration Set extraction** visas och du klickar på **Extract** för att slutföra extraheringsfasen.
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/06-content-extraction.png)
 
    >[!NOTE]
    >Du kan skriva över mellanlagringsbehållaren under extraheringsfasen.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/extract-2.png)
 
-1. Fältet **EXTRACTION** visar nu **körningsstatus** för den pågående extraheringsprocessen.
+1. Fältet **EXTRACTION** visar nu statusen **KÖRNING** för att ange att extraheringen pågår.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/extract-3.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/07-extraction-job-running.png)
 
    När extraheringen är klar uppdateras migreringsuppsättningens status till **FINISHED** och en *solid grön* molnikon visas under **INFO**-fältet.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/extract-4.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/10-extraction-complete.png)
 
    >[!NOTE]
-   >Du måste uppdatera sidan för att visa den uppdaterade statusen.
+   >Gränssnittet har en automatisk inläsningsfunktion som laddar om översiktssidan var 30:e sekund.
    >När extraheringsfasen startas skapas ett skrivlås som frisläpps efter *60 sekunder*. Om extraheringen avbryts måste du alltså vänta en minut på att låset ska frisläppas innan du startar extraheringen igen.
 
 #### Uppdateringsextrahering {#top-up-extraction-process}
@@ -140,41 +137,25 @@ Content Transfer Tool har en funktion för differentiell innehållsuppdatering s
 
 När extraheringen är klar kan du överföra delta-innehåll med extraheringsmetoden för uppdateringar. Följ stegen nedan:
 
-1. Gå till sidan *Overview* och välj den migreringsuppsättning som du vill utföra ändringsextraheringen för.
-
-1. Klicka på **Extract** för att starta uppdateringsextraheringen.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/extraction-img1.png)
-
-1. Dialogrutan **Migration Set extraction** visas.
+1. Gå till sidan *Overview* och välj den migreringsuppsättning som du vill utföra ändringsextraheringen för. Klicka på **Extract** för att starta uppdateringsextraheringen. Dialogrutan **Migration Set extraction** visas.
 
    >[!IMPORTANT]
    >Du bör inaktivera alternativet **Overwrite staging container during extraction**.
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/extract-topup-1.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/11-topup-extraction.png)
 
 ### Inmatningsprocess i innehållsöverföring {#ingestion-process}
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 
-1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen.
+1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen. Dialogrutan **Migration Set ingestion** visas. Click on **Ingest** to start the ingestion phase. I demonstrationssyfte är alternativet **Ingest content to Author instance** inaktiverat. Det går att importera innehåll till Author och Publish samtidigt.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ingest-1.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/12-content-ingestion.png)
 
-1. Dialogrutan **Migration Set ingestion** visas.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ingest-2.png)
+1. När åtkomsten är klar uppdateras statusen i fältet **PUBLISH INGESTION** till **FINISHED**.
 
-   I demonstrationssyfte är alternativet **Ingest content to Author instance** inaktiverat. Det går att importera innehåll till Author och Publish samtidigt.
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/15-ingestion-complete.png)
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ingest-3.png)
-
-   Klicka på **Ingest** för att slutföra inmatningen.
-
-1. När inmatningen är klar uppdateras statusen i fältet **AUTHOR INGESTION** till **FINISHED** och en solid grön molnikon visas under **INFO**.
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ingest-4.png)
-
-   >[!NOTE]
-   > Du måste uppdatera sidan för att visa den uppdaterade statusen.
 
 #### Uppdatera inmatning {#top-up-ingestion-process}
 
@@ -185,17 +166,11 @@ Content Transfer Tool har en funktion för differentiell *innehållsuppdatering*
 
 När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatningsmetoden för uppdateringar. Följ stegen nedan:
 
-1. Navigera till sidan *Overview* och välj den migreringsuppsättning som du vill utföra uppdateringsinmatningen för.
+1. Navigera till sidan *Overview* och välj den migreringsuppsättning som du vill utföra uppdateringsinmatningen för. Klicka på **Ingest** för att starta uppdateringsextraheringen. Dialogrutan **Migration Set Ingestion** visas.
 
-1. Klicka på **Ingest** för att starta uppdateringsextraheringen.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ingest-1.png)
-
-1. Dialogrutan **Migration Set Ingestion** visas.
-
-   >[!NOTE]
-   >Du bör inaktivera alternativet *Wipe* för att förhindra att befintligt innehåll tas bort från den tidigare inmatningsaktiviteten.
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ingest-topup-1.png)
+   >[!IMPORTANT]
+   >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag** , för att förhindra att befintligt innehåll tas bort från den tidigare inmatningsaktiviteten.
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/16-topup-ingestion.png)
 
 ### Visa loggar för en migreringsuppsättning {#viewing-logs-migration-set}
 
