@@ -2,9 +2,9 @@
 title: Lägg till era digitala resurser [!DNL Adobe Experience Manager]i.
 description: Lägg till era digitala resurser [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 06cba29b131ada6a1c0fe2bd8ccad95ce5ff7160
+source-git-commit: 28dddf8282d2489e97fae6247476dee54b72fe0d
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
@@ -30,18 +30,6 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 
 ## Överför resurser {#upload-assets}
 
-Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet.
-
-1. Navigera till den plats där du vill lägga till digitala resurser i [!DNL Assets] användargränssnittet.
-1. Gör något av följande om du vill överföra resurserna:
-
-   * Tryck på **[!UICONTROL Create]** ikonen i verktygsfältet. Tryck sedan på menyn **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
-   * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till [!DNL Assets] användargränssnittet. Dialogrutan för att byta namn på filen visas inte.
-
-   ![create_menu](assets/create_menu.png)
-
-   Om du vill markera flera filer trycker du på Ctrl- eller Kommando-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
-
 <!-- #ENGCHECK do we support pausing? I couldn't get pause to show with 1.5GB upload.... If not, this should be removed#
 
    You can pause the uploading of large assets (greater than 500 MB) and resume it later from the same page. Tap the **[!UICONTROL Pause]** icon beside progress bar that appears when an upload starts.
@@ -59,10 +47,6 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
    ![chlimage_1-212](assets/chlimage_1-212.png)
 -->
 
-1. Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort [!DNL Assets] .
-
-   Om du avbryter överföringen innan filerna har överförts, avbryter du överföringen av den aktuella filen och uppdaterar innehållet [!DNL Assets] . Filer som redan har överförts tas dock inte bort.
-
 <!-- #ENGCHECK do we support pausing? I couldn't get pause to show with 1.5GB upload.... If not, this should be removed#
    The ability to resume uploading is especially helpful in low-bandwidth scenarios and network glitches, where it takes a long time to upload a large asset. You can pause the upload operation and continue later when the situation improves. When you resume, uploading starts from the point where you paused it.
 -->
@@ -73,13 +57,29 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
    To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 -->
 
+Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet.
+
+1. Navigera till den plats där du vill lägga till digitala resurser i [!DNL Assets] användargränssnittet.
+1. Gör något av följande om du vill överföra resurserna:
+
+   * Tryck på **[!UICONTROL Create]** ikonen i verktygsfältet. Tryck sedan på menyn **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
+   * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till [!DNL Assets] användargränssnittet. Dialogrutan för att byta namn på filen visas inte.
+
+   ![create_menu](assets/create_menu.png)
+
+   Om du vill markera flera filer trycker du på Ctrl- eller Kommando-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
+
+1. Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort [!DNL Assets] .
+
+   Om du avbryter överföringen innan filerna har överförts, avbryter du överföringen av den aktuella filen och uppdaterar innehållet [!DNL Assets] . Filer som redan har överförts tas dock inte bort.
+
 1. I dialogrutan för överföringsförlopp [!DNL Assets] visas antalet överförda filer och de filer som inte kunde överföras.
 
-Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet för Resurser.
+   Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet för Resurser.
 
 >[!NOTE]
 >
->Mer information om hur du överför kapslade mapphierarkier till AEM finns i [Överför resurser](#bulk-upload)gruppvis.
+>Mer information om hur du överför kapslade mapphierarkier finns i [Massöverföring av resurser](#bulk-upload).
 
 <!-- #ENGCHECK I'm assuming this is no longer relevant.... If yes, this should be removed#
 
@@ -145,7 +145,7 @@ Förutom webbläsarens användargränssnitt har Experience Manager stöd för an
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i den mapp till vilken resurserna överförs. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
