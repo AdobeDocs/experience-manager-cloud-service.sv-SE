@@ -2,9 +2,9 @@
 title: Databasmodernisering
 description: Databasmodernisering
 translation-type: tm+mt
-source-git-commit: 30aa03b97bfe94b63e6c6b1208504d1362e9ad8b
+source-git-commit: 5d2b14c827603297a59cba7180fc1a68de0c841a
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '301'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,9 @@ Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service
 
 * `all` paketet är ett behållarpaket som innehåller underpaketen `ui.apps` och `ui.content`.
 
+>[!NOTE]
+>Projektstrukturen baseras på *Arketyp 24* för paket och deras `pom.xml/filter.xml files`. Mer information finns i [Archetype 24](https://github.com/adobe/aem-project-archetype) .
+
 ## Använda Repository Modernizer {#using-repo-modernizer}
 
 * Via Adobe I/O CLI: Vi rekommenderar att du använder Repository Modernizer via `aio-cli-plugin-aem-cloud-service-migration` (AEM som ett plugin-program för omfaktorisering av Cloud Service för Adobe I/O CLI).
@@ -36,5 +39,5 @@ Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service
 
    Se **[Git-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)** om du vill lära dig hur du använder det här verktyget.
 
->[!NOTE]
->Databasmodernisering utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.
+   >[!NOTE]
+   >Databasmoderniseringen utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.
