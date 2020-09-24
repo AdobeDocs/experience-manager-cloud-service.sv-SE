@@ -2,7 +2,7 @@
 title: Experience Audit Testing - Cloud Services
 description: Experience Audit Testing - Cloud Services
 translation-type: tm+mt
-source-git-commit: 28ba5412190560b21b27068832ba05cfff24c079
+source-git-commit: c1ce44fb8a7b12818b58ff5ef661b9b447b9cd5c
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via s
    >[!NOTE]
    >Progressive Web App-poäng (PWA) ingår inte i sammanfattningspoängen och visas endast på informationsskärmen på sidnivå.
 * Enskilda sidnivåpoäng kan också göras via fördjupning.
-* Det finns uppgifter om poängen för att se vilka resultat de enskilda testerna ger, tillsammans med vägledning om hur man åtgärdar eventuella problem som upptäcktes under innehållsgranskningen.
+* Det finns uppgifter om poängen för att se vilka resultat de enskilda testerna ger, tillsammans med vägledning om hur man åtgärdar eventuella problem som upptäcktes under granskningen av erfarenheterna.
 * En historik över testresultaten sparas i Cloud Manager så att kunderna kan se om de ändringar som införs i pipeline-körningen innehåller några regressioner från föregående körning.
 
 ### Sammanställd bakgrundsmusik {#aggregate-scores}
