@@ -2,7 +2,7 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: 97b4d8bba29ddaea959b41c2690b8ff11860413d
+source-git-commit: ab9255dd28f1c20f1085810e63f0b56e30fa8c5a
 workflow-type: tm+mt
 source-wordcount: '4775'
 ht-degree: 8%
@@ -64,26 +64,35 @@ Så här konfigurerar du molntjänster för dynamiska media:
 
 1. När anslutningen lyckas kan du ange följande:
 
-   * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media-konton för olika undervarumärken, divisioner eller olika miljöer för staging/produktion.
+* **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media-konton för olika undervarumärken, divisioner eller olika miljöer för staging/produktion.
 
-   * **[!UICONTROL Company Root Folder Path]**
+* **[!UICONTROL Company Root Folder Path]**
 
-   * **[!UICONTROL Publishing Assets]** - Du kan välja mellan följande tre alternativ:
-      * **[!UICONTROL Immediately]** betyder att när resurser överförs, importeras resurserna och URL:en/inbäddningen anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.
-      * **[!UICONTROL Upon Activation]** betyder att du måste publicera resursen explicit innan en URL/Embed-länk anges.
-      * **[!UICONTROL Selective Publish]** betyder att resurser automatiskt publiceras för säker förhandsvisning och kan publiceras explicit till AEM utan publicering till DMS7 för att distribueras offentligt. I framtiden kommer Adobe att förbättra detta alternativ för att publicera resurser till AEM och publicera resurser till Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i AEM för förhandsgranskning. samma resurser inte publiceras i DMS7 för att distribueras offentligt.
-   * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när renderingar har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM).
+* **[!UICONTROL Publishing Assets]** - Du kan välja mellan följande tre alternativ:
+
+* **[!UICONTROL Immediately]** betyder att när resurser överförs, importeras resurserna och URL:en/inbäddningen anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.
+
+* **[!UICONTROL Upon Activation]** betyder att du måste publicera resursen explicit innan en URL/Embed-länk anges.
+
+* **[!UICONTROL Selective Publish]** betyder att resurser automatiskt publiceras för säker förhandsvisning och kan publiceras explicit till AEM utan publicering till DMS7 för att distribueras offentligt. I framtiden kommer Adobe att förbättra detta alternativ för att publicera resurser till AEM och publicera resurser till Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i AEM för förhandsgranskning. samma resurser inte publiceras i DMS7 för att distribueras offentligt.
+
+* **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när renderingar har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM).
 Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe Systems att du låter den här inställningen vara kvar som den har angetts.
 
-   * **[!UICONTROL Sync all content]** - Markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:
+* **[!UICONTROL Sync all content]** - Markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:
 
-   * **[!UICONTROL Dynamic Media sync mode]**
-      * **[!UICONTROL Enabled by default]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
-      * **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till Dynamic Media.
+* **[!UICONTROL Dynamic Media sync mode]**
+
+* **[!UICONTROL Enabled by default]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
+
+* **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till Dynamic Media.
 Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du sidan Egenskaper för resursmappen. Tryck på **[!UICONTROL Details]** fliken och välj sedan ett av följande tre alternativ i **[!UICONTROL Dynamic Media sync mode]** listrutan. Spara sedan knappen **[!UICONTROL Save]**.
-         * **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
-         * **[!UICONTROL Enable for sub-folders]** - Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
-         * **[!UICONTROL Disabled for sub-folders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
+
+* **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
+
+* **[!UICONTROL Enable for sub-folders]** - Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
+
+* **[!UICONTROL Disabled for sub-folders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
 
    >[!NOTE]
    >
@@ -176,10 +185,10 @@ Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering akti
 
    Du kan ange följande egenskaper för färgkorrigering:
 
-   * **[!UICONTROL CMYK Default Color Space]** - Namnet på CMYK-standardfärgprofilen.
-   * **[!UICONTROL Gray-Scale Default Color Space]** - Namnet på standardfärgprofilen för grått.
-   * **[!UICONTROL RGB Default Color Space]** - Namnet på standardfärgprofilen för RGB.
-   * **[!UICONTROL Color Conversion Rendering Intent]** - Anger återgivningsmetod. Godtagbara värden är: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric.]** Adobe rekommenderar **[!UICONTROL relative]** som standard.
+   **[!UICONTROL CMYK Default Color Space]** - Namnet på CMYK-standardfärgprofilen.
+   **[!UICONTROL Gray-Scale Default Color Space]** - Namnet på standardfärgprofilen för grått.
+   **[!UICONTROL RGB Default Color Space]** - Namnet på standardfärgprofilen för RGB.
+   **[!UICONTROL Color Conversion Rendering Intent]** - Anger återgivningsmetod. Godtagbara värden är: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric.]** Adobe rekommenderar **[!UICONTROL relative]** som standard.
 
 1. Tryck på **[!UICONTROL Save]**.
 
@@ -190,7 +199,7 @@ Om du gör det gör du så här:
 * Aktiverar färgkorrigering för RGB- och CMYK-bilder.
 * RGB-bilder som inte har någon färgprofil antas finnas i *färgrymden sRGB* .
 * CMYK-bilder som inte har någon färgprofil antas finnas i *WebCoated* -färgmodellen.
-* Dynamiska renderingar som returnerar RGB-utdata returnerar den i färgrymden *sRGB *.
+* Dynamiska återgivningar som returnerar RGB-utdata returnerar det i *färgrymden sRGB* .
 * Dynamiska återgivningar som returnerar CMYK-utdata returnerar det i *WebCoated* -färgrymden.
 
 #### Konfigurera bearbetning av resurser {#configuring-asset-processing}
