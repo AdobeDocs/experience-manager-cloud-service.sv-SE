@@ -2,17 +2,21 @@
 title: Versionsinformation för 2020.9.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.9.0.'
 translation-type: tm+mt
-source-git-commit: 24f7e9c1a99286d38332b1d4fa1b0ff9a7335069
+source-git-commit: 615adbe6597f05a1cc2150a265f217d21026be8a
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 3%
+source-wordcount: '627'
+ht-degree: 1%
 
 ---
 
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som Cloud Service 2020.9.0 {#release-notes}
 
-I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.7.0.
+I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.9.0.
+
+## Releasedatum {#release-date}
+
+Releasedatum för [!DNL Adobe Experience Manager] Cloud Service 2020.9.0 är 24 september 2020.
 
 ## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
@@ -20,9 +24,32 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 * SPA-redigeraren (Single Page Application) JavaScript SDK [är nu öppen källkod.](/help/implementing/developing/spa/reference-materials.md)
 
+## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
+
+### What is new in [!DNL Assets] {#what-is-new-assets}
+
+* Vattenstämplar i PNG-bilder stöds för återgivningar som genereras med objektmikrotjänster. Den kan konfigureras som en bearbetningsprofil. &lt;!— TBD: Länk till hjälpartikeln.>
+
+* Förbättringar i [!DNL Dynamic Media]
+
+   * Selektiv publicering - ett marknadsföringsteam kan nu få tillgång till smarta beskärningsbilder och dynamiska återgivningar som synkroniseras med [!DNL Dynamic Media] så att de kan skapa marknadsföringsmaterial, allt utan att behöva publicera dessa resurser [!DNL Dynamic Media] [!DNL Dynamic Media] för global leverans. AEM och [!DNL Dynamic Media] publicering är fristående och kan göras separat för att uppnå detta.
+   * Administratörer kan återställa lösenord för [!DNL Dynamic Media] Cloud Service som tagits emot vid etablering direkt i AEM användargränssnitt, utan att behöva använda [!DNL Dynamic Media Classic] datorprogrammet.
+
+* Om du vill veta mer om följande förbättringar kan du läsa [vad som är nytt i varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html).
+
+   * Förbättrad PDF-förhandsgranskning med integrering med Adobe Document Cloud View SDK.
+   * Ladda ned med ett klick.
+   * Nya administrationskonfigurationer för nedladdningen.
+
+<!--
+### Bugs Fixed {#bugs-fixed-assets}
+
+TBD: list of Assets aaCS bugs that are fixed.
+-->
+
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
-### Nyheter {#what-is-new-commerce}
+### Vad är nytt? {#what-is-new-commerce}
 
 * Frisläppta CIF-kärnkomponenter v1.3.0. Mer information finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.3.0) .
 
@@ -58,7 +85,7 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.9.0 är 3 september 20
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Readiness Analyzer version 1.1.0.
 
-### Nyheter {#what-is-new-cra}
+### Vad är nytt? {#what-is-new-cra}
 
 * Cloud Readiness Analyzer (CRA) har en startstatuskonsol som visar en explicit **Generate Report** -knapp som användaren kan klicka på för att köra CRA.
 
