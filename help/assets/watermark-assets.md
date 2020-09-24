@@ -3,7 +3,7 @@ title: Vattenstämpla dina resurser
 description: Lägg till vattenstämpel i era digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a9ebb97541b44140d0155bcfa5d0228c79dbffec
+source-git-commit: f1fcddf196a1a2bfa2629dbd6a8fe0ac057a3d07
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Så här konfigurerar du Experience Manager till vattenstämpelresurser:
 
 1. [Skapa en bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-custom-profile) för att använda vattenstämpeln med hjälp av tillgångsmikrotjänster.
 
-![Resursbearbetningsprofil för att skapa vattenstämpel](assets/watermark-processing-profile.png)
+   ![Resursbearbetningsprofil för att skapa vattenstämpel](assets/watermark-processing-profile.png)
 
 1. [Använd bearbetningsprofilerna på en mapp](/help/assets/asset-microservices-configure-and-use.md#use-profiles) för att skapa material med vattenstämpel.
 
