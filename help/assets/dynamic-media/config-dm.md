@@ -2,7 +2,7 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: 4b967e8b738171f0997df7cd433e1d7a418751e8
+source-git-commit: 500d8795176fa21f79a8d67954fc9352b9a349f8
 workflow-type: tm+mt
 source-wordcount: '4786'
 ht-degree: 8%
@@ -155,7 +155,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 
 #### Konfigurera allmänna inställningar för programmet {#configuring-application-general-settings}
 
-Du öppnar sidan Allmänna inställningar för programmet genom att klicka på **[!UICONTROL Setup > Application Setup > General Settings]** i fältet Global navigering i Dynamic Media Classic.
+Öppna sidan Allmänna inställningar för programmet genom att klicka på i fältet Global navigering i Dynamic Media Classic **[!UICONTROL Setup > Application Setup > General Settings.]**
 
 * **[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner om att göra det av AEM.
 * **[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
@@ -232,7 +232,7 @@ Se [Överföra resurser](/help/assets/add-assets.md).
 1. Gör något av följande:
 
    * Upprepa steg 3-4 om du vill redigera ytterligare MIME-typer.
-   * Klicka på på menyraden på CRXDE Lite-sidan **[!UICONTROL Save All]**.
+   * På menyraden på CRXDE Lite-sidan klickar du på **[!UICONTROL Save All.]**
 
 1. Tryck för **[!UICONTROL CRXDE Lite]** att gå tillbaka till AEM i det övre vänstra hörnet på sidan.
 
@@ -242,7 +242,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets
 
 **Lägga till anpassade MIME-typer för format som inte stöds**
 
-1. Från AEM, tryck **[!UICONTROL Tools > Operations > Web Console]**.
+1. Från AEM, tryck **[!UICONTROL Tools > Operations > Web Console.]**
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
