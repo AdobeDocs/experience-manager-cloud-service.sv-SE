@@ -2,10 +2,10 @@
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
 translation-type: tm+mt
-source-git-commit: 130603301212cdb29ae7f395ebc05fc58f64686e
+source-git-commit: fe769e8acecbc173f2437edc292eeba2585f0509
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 0%
+source-wordcount: '1048'
+ht-degree: 1%
 
 ---
 
@@ -14,9 +14,6 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.8.0.
 
-## Releasedatum {#release-date}
-
-Releasedatum för [!DNL Experience Manager] Cloud Service 2020.8.0 är 27 augusti 2020.
 
 ## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
@@ -25,6 +22,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.8.0 är 27 august
 * Möjlighet att [återställa sidor och undersidor (sidträd) till en tidigare version](/help/sites-cloud/authoring/features/page-versions.md#reinstating-versions).
 
 * Möjlighet att [skapa startprogram](/help/sites-cloud/authoring/launches/overview.md) i AEM [SPA Editor.](/help/implementing/developing/spa/introduction.md)
+
 
 ## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
@@ -65,7 +63,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.8.0 är 27 august
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
-### What&#39;s New {#what-is-new-commerce}
+### Nyheter {#what-is-new-commerce}
 
 * Funktionen produktkonsol är nu tillgänglig. Detta gör att marknadsförare/författare i AEM kan visa och navigera bland kategorier och produkter som lagras i e-handelsservern. Det finns även stöd för egenskaper för kategorier och produkter i produktkonsolen.
 
@@ -77,9 +75,10 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.8.0 är 27 august
 
 Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020.
 
-### What&#39;s New {#what-is-new-cloud-manager}
+### Nyheter {#what-is-new-cloud-manager}
 
 * Content Audit är en funktion som är aktiverad i produktionsstegen för Cloud Manager Sites. Konfigurationen av produktionspipeline för program med platser innehåller nu en tredje flik med namnet **Content Audit**. När en produktionsprocess körs inkluderas ett nytt Content Audit-steg i produktionsflödet efter anpassad funktionstestning som utvärderar webbplatsen mot ett antal dimensioner, inklusive prestanda, SEO (sökmotoroptimering), tillgänglighet, bästa praxis och PWA (Progressive Web App).
+
 
    >[!NOTE]
    >Namnet på Content Audit har ändrats till Experience Audit.
@@ -124,7 +123,7 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Content Transfer Tool Release v1.0.4.
 
-### What&#39;s New {#what-is-new-ctt}
+### Nyheter {#what-is-new-ctt}
 
 * Innehållsöverföringsverktyget har nu stöd för Shared S3 DataStore.
 
@@ -138,7 +137,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för verktygen för kodkorrigering.
 
-### What&#39;s New {#what-is-new-refactoring}
+### Nyheter {#what-is-new-refactoring}
 
 * AIO-CLI-plugin för att sammanställa kodomfaktoriseringsverktygen så att utvecklare kan anropa och köra verktyg för kodomfaktorisering från ett och samma ställe. Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) för mer information.
 
