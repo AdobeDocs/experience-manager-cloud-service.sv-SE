@@ -2,7 +2,7 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: 500d8795176fa21f79a8d67954fc9352b9a349f8
+source-git-commit: c5c2f5d9f0fd539591972382f197cb83b3d7e60e
 workflow-type: tm+mt
 source-wordcount: '4786'
 ht-degree: 8%
@@ -158,7 +158,9 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 Öppna sidan Allmänna inställningar för programmet genom att klicka på i fältet Global navigering i Dynamic Media Classic **[!UICONTROL Setup > Application Setup > General Settings.]**
 
 * **[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner om att göra det av AEM.
+
 * **[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
+
 * **[!UICONTROL Overwrite in current folder, same base image name/extension]** - Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett.
 
    >[!NOTE]
@@ -166,7 +168,9 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
    >Välj alltid den här inställningen om du vill att AEM ska vara konsekvent: **Skriv över i den aktuella mappen, samma basbildens namn/tillägg**
 
 * **[!UICONTROL Overwrite in any folder, same base asset name/extension]** - Kräver att ersättningsbilden har samma filnamnstillägg som originalbilden (t.ex. måste stol.jpg ersätta stol.jpg, inte stol.tif). Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats.
+
 * **[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** - Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
+
 * **[!UICONTROL Default Color Profiles]** - Mer information finns i [Konfigurera färghantering](#configuring-color-management) .
 
    >[!NOTE]
@@ -213,7 +217,7 @@ Du kan definiera vilka resurstyper som ska bearbetas av Dynamic Media och anpass
 
 Se [Överföra resurser](/help/assets/add-assets.md).
 
-**Så här konfigurerar du bearbetning av resurser**
+Så här konfigurerar du bearbetning av resurser:
 
 1. In AEM, click the AEM logo to access the global navigation console, then click **[!UICONTROL General > CRXDE Lite]**.
 1. Navigera till följande i den vänstra listen:
@@ -230,7 +234,6 @@ Se [Överföra resurser](/help/assets/add-assets.md).
    * dubbelklicka **[!UICONTROL jobParam]** för att öppna det tillhörande textfältet. Se [Mime-typer](/help/assets/file-format-support.md) som stöds för en lista över tillåtna värden för processparametrar som du kan använda för en viss MIME-typ.
 
 1. Gör något av följande:
-
    * Upprepa steg 3-4 om du vill redigera ytterligare MIME-typer.
    * På menyraden på CRXDE Lite-sidan klickar du på **[!UICONTROL Save All.]**
 
@@ -240,7 +243,7 @@ Se [Överföra resurser](/help/assets/add-assets.md).
 
 Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets. För att säkerställa att nya noder som du lägger till i CRXDE Lite inte tas bort av AEM måste du se till att du placerar MIME-typen före `image_` och att dess aktiverade värde är inställt på **[!UICONTROL false]**.
 
-**Lägga till anpassade MIME-typer för format som inte stöds**
+Så här lägger du till anpassade MIME-typer för format som inte stöds:
 
 1. Från AEM, tryck **[!UICONTROL Tools > Operations > Web Console.]**
 
@@ -306,7 +309,7 @@ Observera också att du kan använda **[!UICONTROL View Code]** utan formulärf�
 
 Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan du definiera alla element i en namnkonvention och identifiera den del av konventionen som används för att namnge den uppsättning i vilken de finns. Ett företags personliga namnkonvention kan använda en eller flera definitionsrader för vart och ett av dessa element. Du kan använda så många rader för din unika definition och gruppera dem i distinkta element, t.ex. för Huvudbild, Färgelement, Alternativa vyer och Färgruteelement.
 
-**Konfigurera standardnamn**
+Så här konfigurerar du standardnamn:
 
 1. Logga in på ditt konto för Dynamic Media Classic (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -340,7 +343,7 @@ Du kan skapa, redigera och hantera dina gruppuppsättningsförinställningar. De
 
 Du kan antingen använda formulärfältsmetoden för att definiera en gruppuppsättningsförinställning eller kodmetoden, som gör att du kan använda reguljära uttryck. Precis som i Standardnamn kan du välja Visa kod samtidigt som du definierar i formulärvyn och använda reguljära uttryck för att skapa definitioner. Du kan också avmarkera en vy om du vill använda den ena eller den andra enbart.
 
-**Skapa en förinställning för gruppuppsättning**
+Så här skapar du en förinställning för gruppuppsättning:
 
 1. Logga in på ditt konto för Dynamic Media Classic (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -503,7 +506,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media brukade det bearbeta video med **[!UICONTROL Dynamic Media Encode Video]** arbetsflödet.
 
-**Så här uppdaterar du arbetsflödeskön för Granite**
+Så här uppdaterar du arbetsflödeskön för Granite:
 
 1. Navigera till `https://<server>/system/console/configMgr` och sök efter **kö: Begränsa arbetsflödeskö**.
 
@@ -525,7 +528,7 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
 Inställningen Scene7 Upload Connection synkroniserar AEM till Dynamic Media Classic-servrar.
 
-**Så här uppdaterar du Scene7 överföringsanslutning**
+Så här uppdaterar du Scene7 överföringsanslutning:
 
 1. Navigera till `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. I **[!UICONTROL Number of connections]** fältet och/eller i **[!UICONTROL Active job timeout]** fältet ändrar du numret.
@@ -538,7 +541,7 @@ Inställningen Scene7 Upload Connection synkroniserar AEM till Dynamic Media Cla
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. Tryck på **[!UICONTROL Save]**.
+1. Tryck på **[!UICONTROL Save.]**
 
 <!-- NOTE - OBSOLETE that customisations to replication agents to transform content are no longer used; the following content is obsolete now 
 
