@@ -1,23 +1,25 @@
 ---
-title: Adobe Experience Manager Assets as a Cloud Service
+title: Resurser som en Cloud Service Guide
 description: Länkar till självhjälp och dokumentation om Adobe Experience Manager Assets as a Cloud Service
 translation-type: tm+mt
-source-git-commit: d9237a0121a346fc16e67e52300c3a5a263e5af3
+source-git-commit: 181e1f1526726154232f25eac95db05e290756d6
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 90%
+ht-degree: 85%
 
 ---
 
 
-# Adobe Experience Manager Assets as a Cloud Service {#aem-assets-guide}
+# Resurser som en Cloud Service Guide {#aem-assets-guide}
 
 Här följer självhjälpsresurserna för Experience Manager Assets as a Cloud Service.
 
 ## Viktiga Assets-artiklar {#key-articles}
 
-* [Introduktion till Assets as a Cloud Service](overview.md)
+* [Översikt och nyheter](overview.md)
+* [Betydande ändringar](/help/assets/assets-cloud-changes.md)
 * [Arkitektur för Assets as a Cloud Service](architecture.md)
+* [Översikt över mikrotjänster för material](/help/assets/asset-microservices-overview.md)
 
 ## Experience Manager-handböcker{#aem-guides}
 
