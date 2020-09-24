@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.9.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.9.0.'
 translation-type: tm+mt
-source-git-commit: 615adbe6597f05a1cc2150a265f217d21026be8a
+source-git-commit: f39b03455fc03104932952b892b88403d0c9eca7
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '621'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Releasedatum för [!DNL Adobe Experience Manager] Cloud Service 2020.9.0 är 24 
 
 ### What is new in [!DNL Assets] {#what-is-new-assets}
 
-* Vattenstämplar i PNG-bilder stöds för återgivningar som genereras med objektmikrotjänster. Den kan konfigureras som en bearbetningsprofil. &lt;!— TBD: Länk till hjälpartikeln.>
+* Vattenstämplar i PNG-bilder stöds för återgivningar som genereras med objektmikrotjänster. Den kan konfigureras som en bearbetningsprofil.
 
 * Förbättringar i [!DNL Dynamic Media]
 
