@@ -2,9 +2,9 @@
 title: Enhetlig upplevelse för verktyg för kodkorrigering
 description: Enhetlig upplevelse för verktyg för kodkorrigering
 translation-type: tm+mt
-source-git-commit: d6fa0d8bb7d5e251e51a3e4ffd93d6aaa1c7980c
+source-git-commit: 5d2b14c827603297a59cba7180fc1a68de0c841a
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -46,4 +46,4 @@ Plugin- `aio-cli-plugin-aem-cloud-service-migration` programmet består av två 
 Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) för att lära dig mer om användningen och hur du kan bidra till denna plugin-kod som är öppen från GitHub.
 
 >[!NOTE]
->För närvarande är det bara Dispatcher Converter som är integrerad med plugin-programmet.
+>För närvarande är plugin-programmet integrerat med AEM Dispatcher Converter och Repository Modernizer.
