@@ -2,9 +2,9 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: ab9255dd28f1c20f1085810e63f0b56e30fa8c5a
+source-git-commit: 6319b8dcbddda9910b6745d1594dd81f5ba986ba
 workflow-type: tm+mt
-source-wordcount: '4775'
+source-wordcount: '5216'
 ht-degree: 8%
 
 ---
@@ -46,53 +46,43 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 -->
 
-## Konfigurera Dynamic Media Cloud Service {#configuring-dynamic-media-cloud-services}
+## Skapa en ny dynamisk mediekonfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
 
-**Innan du konfigurerar Dynamic Media Cloud Service**: När du har fått ditt e-postmeddelande med inloggningsuppgifter för Dynamic Media måste du [logga in](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) på Dynamic Media Classic för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
-
-Så här konfigurerar du molntjänster för dynamiska media:
+<!-- **Before you creating a Dynamic Media Configuration in Cloud Services**: After you receive your provisioning email with Dynamic Media credentials, you must [log in](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) to Dynamic Media Classic to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials. -->
 
 1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen.
-1. Till vänster om konsolen, under rubriken **[!UICONTROL Tools]**, trycker du på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
+1. Tryck på verktygsikonen till vänster om konsolen och tryck sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. På sidan Läsare för Dynamic Media-konfiguration trycker du i den vänstra rutan på **[!UICONTROL global]** (tryck inte på och välj inte mappikonen till vänster om **[!UICONTROL global]**) och sedan trycker du på **[!UICONTROL Create]**.
-1. På sidan Skapa dynamisk mediekonfiguration anger du en titel, e-postadress för Dynamic Media-kontot, lösenord och väljer sedan region. Dessa tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta supporten om du inte fått detta.
+1. På **[!UICONTROL Create Dynamic Media Configuration]** sidan anger du en titel, e-postadress för Dynamic Media-kontot, lösenord och väljer sedan region. Dessa tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta supporten om du inte fått detta.
 1. Klicka på **[!UICONTROL Connect to Dynamic Media]**.
+1. I **[!UICONTROL Change Password]** dialogrutan anger du ett nytt lösenord som består av 8-25 tecken i **[!UICONTROL New Password]** fältet. Lösenordet måste innehålla minst ett av följande:
 
-   >[!NOTE]
-   >
-   >När du har fått ditt e-postmeddelande med inloggningsuppgifter för Dynamic Media loggar du [in på](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att molntjänsten Dynamic Media är konfigurerad med rätt autentiseringsuppgifter.
+   * Versaler
+   * Gemener
+   * Siffra
+   * Specialtecken: `# $ & . - _ : { }`
+
+   Observera att **[!UICONTROL Current Password]** fältet avsiktligt är förifyllt och dolt för interaktion.
+
+   Om det behövs kan du kontrollera stavningen av ett lösenord som du har skrivit eller skrivit in igen genom att trycka på lösenordsikonen för att visa lösenordet. Tryck på ikonen igen för att dölja lösenordet.
+
+1. Skriv det nya lösenordet igen i **[!UICONTROL Repeat Password]** fältet och tryck sedan på **[!UICONTROL Done.]**
+
+   Det nya lösenordet sparas när du trycker **[!UICONTROL Save]** i det övre högra hörnet på **[!UICONTROL Create Dynamic Media Configuration]** sidan.
+
+   Om du trycker **[!UICONTROL Cancel]** i **[!UICONTROL Change Password]** dialogrutan måste du fortfarande ange ett nytt lösenord när du trycker på **[!UICONTROL Save]** för att spara den nya Dynamic Media-konfigurationen.
+
+   Se även [Ändra lösenordet till Dynamic Media](#change-dm-password).
 
 1. När anslutningen lyckas kan du ange följande:
 
-* **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media-konton för olika undervarumärken, divisioner eller olika miljöer för staging/produktion.
-
-* **[!UICONTROL Company Root Folder Path]**
-
-* **[!UICONTROL Publishing Assets]** - Du kan välja mellan följande tre alternativ:
-
-* **[!UICONTROL Immediately]** betyder att när resurser överförs, importeras resurserna och URL:en/inbäddningen anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.
-
-* **[!UICONTROL Upon Activation]** betyder att du måste publicera resursen explicit innan en URL/Embed-länk anges.
-
-* **[!UICONTROL Selective Publish]** betyder att resurser automatiskt publiceras för säker förhandsvisning och kan publiceras explicit till AEM utan publicering till DMS7 för att distribueras offentligt. I framtiden kommer Adobe att förbättra detta alternativ för att publicera resurser till AEM och publicera resurser till Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i AEM för förhandsgranskning. samma resurser inte publiceras i DMS7 för att distribueras offentligt.
-
-* **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när renderingar har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM).
-Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe Systems att du låter den här inställningen vara kvar som den har angetts.
-
-* **[!UICONTROL Sync all content]** - Markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:
-
-* **[!UICONTROL Dynamic Media sync mode]**
-
-* **[!UICONTROL Enabled by default]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
-
-* **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till Dynamic Media.
-Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du sidan Egenskaper för resursmappen. Tryck på **[!UICONTROL Details]** fliken och välj sedan ett av följande tre alternativ i **[!UICONTROL Dynamic Media sync mode]** listrutan. Spara sedan knappen **[!UICONTROL Save]**.
-
-* **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
-
-* **[!UICONTROL Enable for sub-folders]** - Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
-
-* **[!UICONTROL Disabled for sub-folders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
+   | Egenskap | Beskrivning |
+   |---|---|
+   | Företag | Namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media-konton för olika undervarumärken, divisioner eller olika miljöer för staging/produktion. |
+   | Företagets rotmappsökväg | Företagets rotmappsökväg. |
+   | Publicera resurser | Du kan välja mellan följande tre alternativ:<br>**[!UICONTROL Immediately]**: När resurser överförs importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.<br>**[!UICONTROL Upon Activation]**: Du måste publicera resursen explicit innan en URL/Embed-länk anges.<br>**[!UICONTROL Selective Publish]**: Resurser publiceras automatiskt för säker förhandsgranskning och kan publiceras explicit till AEM utan publicering till DMS7 för att distribueras offentligt. I framtiden kommer Adobe att förbättra detta alternativ för att publicera resurser till AEM och publicera resurser till Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i AEM för förhandsgranskning. samma resurser inte publiceras i DMS7 för att distribueras offentligt. |
+   | Secure Preview Server | Här kan du ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när renderingar har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM).<br>Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe Systems att du låter den här inställningen vara kvar som den har angetts. |
+   | Synkronisera allt innehåll | Markerad som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:<br>**[!UICONTROL Dynamic Media sync mode]**<br>**[!UICONTROL Enable by default]**: Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad.<!-- you can then deselect the folders that you do not want the configuration applied to.--><br>**[!UICONTROL Disabled by default]**: Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till dynamiska media.<br>Om du vill markera en markerad mapp för synkronisering till Dynamic Media väljer du en resursmapp och trycker sedan på **[!UICONTROL Properties]** i verktygsfältet. Välj bland följande tre alternativ i **[!UICONTROL Details]** listrutan på **[!UICONTROL Dynamic Media sync mode]** fliken. När du är klar trycker du **[!UICONTROL Save]**. *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare.* Se även [Arbeta med selektiv publicering på mappnivå i Dynamic Media.](/help/assets/dynamic-media/selective-publishing.md)<br>**[!UICONTROL Inherited]**: Det finns inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.<br>**[!UICONTROL Enable for sub-folders]**: Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.<br>**[!UICONTROL Disabled for sub-folders]**: Uteslut allt i det här underträdet från synkronisering till Dynamic Media. |
 
    >[!NOTE]
    >
@@ -101,10 +91,19 @@ Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du
    >
    >När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
-   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
+   ![dynamicmediaconfiguration2updated](/help/assets/assets-dm/dynamicmediaconfigurationupdated.png)
 
-1. Tryck på **[!UICONTROL Save]**.
-1. Om du vill förhandsgranska dynamiskt mediematerial på ett säkert sätt innan det publiceras måste du &quot;tillåtslista&quot; den AEM författarinstansen för att ansluta till Dynamic Media:
+1. Tryck på **[!UICONTROL Save]**. Det nya lösenordet och den nya konfigurationen för Dynamic Media sparas. Om du trycker **[!UICONTROL Cancel]** i stället sker ingen lösenordsuppdatering.
+1. Starta konfigurationen genom **[!UICONTROL Configuring Dynamic Media]** att trycka på i **[!UICONTROL OK]** dialogrutan.
+
+   >[!IMPORTANT]
+   >
+   >När konfigurationen av den nya dynamiska mediekonfigurationen är klar får du ett statusmeddelande AEM Inkorgen.
+   >
+   >Det här inkorgsmeddelandet informerar dig om konfigurationen lyckades eller inte.
+   > Mer information finns i [Felsöka en ny konfiguration](#troubleshoot-dm-config) för dynamiska media och [Inkorgen](/help/sites-cloud/authoring/getting-started/inbox.md) .
+
+1. Om du vill förhandsgranska dynamiskt mediematerial på ett säkert sätt innan det publiceras måste du &quot;tillåtslista&quot; den AEM författarinstansen för att ansluta till Dynamic Media. Så här konfigurerar du den:
 
    * Logga in på ditt konto för Dynamic Media Classic: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html). Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
    * Klicka på i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
@@ -117,6 +116,58 @@ Om du vill markera en vald mapp för synkronisering med Dynamic Media öppnar du
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media.
 
 Om du vill anpassa konfigurationen ytterligare kan du utföra alla uppgifter under [Konfigurera avancerade inställningar i Dynamic Media](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
+
+### Felsöka en ny dynamisk mediekonfiguration {#troubleshoot-dm-config}
+
+När konfigurationen av en ny dynamisk mediekonfiguration är klar får du ett statusmeddelande i AEM Inkorg. Det här meddelandet informerar dig om konfigurationen lyckades eller inte, vilket visas i följande bilder från Inkorgen.
+
+![aeminbox success](/help/assets/dynamic-media/assets/dmconfig-inbox-success.png)
+
+![aeminboxfailed](/help/assets/dynamic-media/assets/dmconfig-inbox-failure.png)
+
+Se även [Inkorgen](/help/sites-cloud/authoring/getting-started/inbox.md).
+
+**Felsöka en ny konfiguration för dynamiska media**
+
+1. I närheten av det övre högra hörnet på AEM, tryck på klockikonen och sedan på **[!UICONTROL View All]**.
+1. På sidan Inkorg trycker du på meddelandet om att åtgärden lyckades för att läsa en översikt över konfigurationens status och loggar.
+
+   Om konfigurationen misslyckas trycker du på felmeddelandet som liknar följande skärmbild.
+
+   ![dmsetupfailed](/help/assets/dynamic-media/assets/dmconfig-fail-notification.png)
+
+1. Granska konfigurationsinformationen som beskriver felet på **[!UICONTROL DMSETUP]** sidan. Tänk särskilt på eventuella felmeddelanden eller felkoder. Du måste kontakta Adobe Care med denna information.
+
+   ![dmsetuppage](/help/assets/dynamic-media/assets/dmconfig-fail-page.png)
+
+### Ändra lösenordet till Dynamic Media {#change-dm-password}
+
+Lösenordets giltighetstid i Dynamic Media är inställd på 100 år från det aktuella systemdatumet.
+
+Lösenordet måste innehålla minst ett av följande:
+
+* Versaler
+* Gemener
+* Siffra
+* Specialtecken: `# $ & . - _ : { }`
+
+Om det behövs kan du kontrollera stavningen av ett lösenord som du har skrivit eller skrivit in igen genom att trycka på lösenordsikonen för att visa lösenordet. Tryck på ikonen igen för att dölja lösenordet.
+
+Det ändrade lösenordet sparas när du trycker **[!UICONTROL Save]** i det övre högra hörnet på **[!UICONTROL Edit Dynamic Media Configuration]** sidan.
+
+1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen.
+1. Tryck på verktygsikonen till vänster om konsolen och tryck sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration.]**
+1. På sidan Läsare för Dynamic Media-konfiguration trycker du i den vänstra rutan på **[!UICONTROL global]** (tryck inte på och välj inte mappikonen till vänster om **[!UICONTROL global]**) och sedan trycker du på **[!UICONTROL Edit.]**
+1. Tryck på på **[!UICONTROL Edit Dynamic Media Configuration]** sidan, direkt nedanför **[!UICONTROL Password]** fältet **[!UICONTROL Change Password.]**
+1. Gör följande i **[!UICONTROL Change Password]** dialogrutan:
+
+   * Ange ett nytt lösenord i **[!UICONTROL New Password]** fältet.
+
+      Observera att **[!UICONTROL Current Password]** fältet avsiktligt är förifyllt och dolt för interaktion.
+
+   * Skriv det nya lösenordet igen i **[!UICONTROL Repeat Password]** fältet och tryck sedan på **[!UICONTROL Done.]**
+
+1. I det övre högra hörnet på **[!UICONTROL Edit Dynamic Media Configuration]** sidan trycker du **[!UICONTROL Save]** och sedan på **[!UICONTROL OK.]**
 
 ## (Valfritt) Konfigurera avancerade inställningar i Dynamic Media{#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
@@ -182,13 +233,14 @@ Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering akti
 1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med de autentiseringsuppgifter som angavs under etableringen. Navigera till **[!UICONTROL Setup > Application Setup]**.
 1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
 1. Bläddra till den egenskap som du behöver ändra, till exempel en egenskap i **[!UICONTROL Color Management Attributes]** området.
+Du kan ange följande egenskaper för färgkorrigering:
 
-   Du kan ange följande egenskaper för färgkorrigering:
-
-   **[!UICONTROL CMYK Default Color Space]** - Namnet på CMYK-standardfärgprofilen.
-   **[!UICONTROL Gray-Scale Default Color Space]** - Namnet på standardfärgprofilen för grått.
-   **[!UICONTROL RGB Default Color Space]** - Namnet på standardfärgprofilen för RGB.
-   **[!UICONTROL Color Conversion Rendering Intent]** - Anger återgivningsmetod. Godtagbara värden är: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric.]** Adobe rekommenderar **[!UICONTROL relative]** som standard.
+   | Egenskap | Beskrivning |
+   |---|---|
+   | Standardfärgmodell för CMYK | Namn på CMYK-standardfärgprofilen. |
+   | Standardfärgmodell för gråskala | Namnet på standardfärgprofilen för grått. |
+   | RGB-standardfärgmodell | Namn på standardfärgprofilen för RGB. |
+   | Återgivningsmetod för färgkonvertering | Anger återgivningsmetod. Godtagbara värden är: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric.]** Adobe rekommenderar **[!UICONTROL relative]** som standard. |
 
 1. Tryck på **[!UICONTROL Save]**.
 
@@ -474,7 +526,7 @@ Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametr
 | Postscript | `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Rasterize&airesolution=150&aicolorspace=Auto&aialpha=false` |
 | PSD | `process=None&layerNaming=Layername&anchor=Center&createTemplate=false&extractText=false&extendLayers=false` |
 
-Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)för MIME-typbaserade resurser/Dynamic Media Classic-överföringsjobbparametrar.
+<!-- To update any of these parameters, follow the steps in [Enabling MIME type-based Assets/Dynamic Media Classic upload job parameter support](#enabling-mime-type-based-assets-scene-upload-job-parameter-support). -->
 
 #### Uppdaterar kön för Granska tillfälligt arbetsflöde {#updating-the-granite-transient-workflow-queue}
 
