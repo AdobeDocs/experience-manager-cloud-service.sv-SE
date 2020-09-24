@@ -1,18 +1,18 @@
 ---
-sub-product: AEM Assets as a Cloud Service
-user-guide-title: AEM Assets as a Cloud Service
+sub-product: Adobe Experience Manager Assets as a Cloud Service
+user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Assets Guide
 user-guide-description: Understand how to use and administer Experience Manager Assets as a Cloud Service.
 translation-type: tm+mt
-source-git-commit: 62cb875355691ebfde6ce1240011782fb59f77ab
+source-git-commit: 181e1f1526726154232f25eac95db05e290756d6
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 92%
+source-wordcount: '432'
+ht-degree: 90%
 
 ---
 
 
-# Assets {#assets}
+# Resurser som en Cloud Service Guide {#assets}
 
 + [AEM Assets as a Cloud Service](/help/assets/home.md)
 + [Översikt och nyheter](overview.md)
