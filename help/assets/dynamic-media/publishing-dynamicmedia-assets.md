@@ -3,10 +3,10 @@ title: Publicera dynamiska medieresurser
 description: Publicera dynamiska medieresurser
 contentOwner: Rick Brough
 translation-type: tm+mt
-source-git-commit: d84a6692f2d0aae496bd2bd98ac99c2663f3fe52
+source-git-commit: 9a4f8b4470a0850f4044f799b2af6cf836fd402d
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 3%
+source-wordcount: '458'
+ht-degree: 2%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 3%
 
 Du publicerar dina dynamiska medieresurser genom att välja de resurser du redan har överfört och trycka **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in kod på sidan.
 
-Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. See [Configuring Dynamic Media](config-dm.md).
+Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. See [Configuring Dynamic Media](config-dm.md). Eller så kan du selektivt publicera resurser till antingen Dynamic Media eller AEM, som inte är ömsesidigt oberoende av varandra, med hjälp **[!UICONTROL Selective Publish]** av mappnivån. Se [Arbeta med selektiv publicering i dynamiska media.](/help/assets/dynamic-media/selective-publishing.md)
 
 I **[!UICONTROL Card View]** visas en liten globikon direkt under namnet på en resurs och till vänster om datumet och tiden för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
 >[!NOTE]
 >
->Om en resurs redan är publicerad använder du AEM för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen, är den ursprungliga publicerade resursplatsen fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock&quot;förlorad&quot; för AEM och kan inte avpubliceras. Därför bör du avpublicera resurser först innan du flyttar dem till en annan mapp.
+>Om en resurs redan är publicerad använder du AEM för att flytta resursen till en annan mapp och publicera på nytt från den nya platsen, men den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock&quot;förlorad&quot; för AEM och kan inte avpubliceras. Därför bör du avpublicera resurser först innan du flyttar dem till en annan mapp.
 
 Om du tänker publicera videomaterial direkt efter kodningen bör du kontrollera att kodningen är helt klar. När videoklipp fortfarande kodas visas ett arbetsflöde för videobearbetning. När videokodningen är klar bör du kunna förhandsgranska videoåtergivningarna. Då är det säkert att publicera videoklippen utan att det uppstår några publiceringsfel.
 
@@ -33,6 +33,7 @@ Se även [Bädda in Dynamic Media Video Viewer eller Image Viewer på en webbsid
 >
 >* Resurser måste publiceras för att kunna använda URL:en. Om resurserna inte publiceras kommer det inte att gå att kopiera och klistra in URL-adressen i en webbläsare.
 >* Bildförinställningar och visningsförinställningar måste aktiveras och publiceras för direktleverans.
+
 >
 
 
