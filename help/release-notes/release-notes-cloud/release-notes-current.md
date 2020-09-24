@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.9.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.9.0.'
 translation-type: tm+mt
-source-git-commit: 9d73b8339a327643be9f2ea674857b401346087a
+source-git-commit: c78e0514efa3937b876c15be1cac35e8e01daa03
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som Cloud Service 2020.9.0 {#release-notes}
 
-I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.9.0.
+I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Experience Manager] Cloud Service 2020.9.0.
 
 ## Releasedatum {#release-date}
 
@@ -28,12 +28,12 @@ Releasedatum för [!DNL Adobe Experience Manager] Cloud Service 2020.9.0 är 24 
 
 ### What is new in [!DNL Assets] {#what-is-new-assets}
 
-* Vattenstämplar i PNG-bilder stöds för återgivningar som genereras med objektmikrotjänster. Den kan konfigureras som en bearbetningsprofil.
+* Vattenstämplingsbildfiler stöds för återgivningar som genereras med objektmikrotjänster. Den kan konfigureras som en bearbetningsprofil och använder en PNG-fil som vattenstämpel. Se [vattenstämpla dina resurser](/help/assets/watermark-assets.md).
 
 * Förbättringar i [!DNL Dynamic Media]
 
-   * Selektiv publicering - ett marknadsföringsteam kan nu få tillgång till smarta beskärningsbilder och dynamiska återgivningar som synkroniseras med [!DNL Dynamic Media] så att de kan skapa marknadsföringsmaterial, allt utan att behöva publicera dessa resurser [!DNL Dynamic Media] [!DNL Dynamic Media] för global leverans. AEM och [!DNL Dynamic Media] publicering är fristående och kan göras separat för att uppnå detta.
-   * Administratörer kan återställa lösenord för [!DNL Dynamic Media] Cloud Service som tagits emot vid etablering direkt i AEM användargränssnitt, utan att behöva använda [!DNL Dynamic Media Classic] datorprogrammet.
+   * Selektiv publicering - Nu kan marknadsföringsteamet få tillgång till smarta beskärningsbilder och dynamiska återgivningar som är synkroniserade med [!DNL Dynamic Media] så att de kan skapa marknadsföringsmaterial, utan att behöva publicera dessa resurser [!DNL Dynamic Media] [!DNL Dynamic Media] för global leverans. [!DNL Experience Manager] och [!DNL Dynamic Media] publiceringen är fristående och kan ske separat för att uppnå detta. Se [selektiv publicering](/help/assets/dynamic-media/selective-publishing.md).
+   * Administratörer kan nu återställa [!DNL Dynamic Media] Cloud Servicens lösenord som tas emot vid etablering. Återställningen kan göras i [!DNL Experience Manager] användargränssnittet utan att du behöver använda [!DNL Dynamic Media Classic] skrivbordsappen.
 
 * Om du vill veta mer om följande förbättringar kan du läsa [vad som är nytt i varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html).
 
