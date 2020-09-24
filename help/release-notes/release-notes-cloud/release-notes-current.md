@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.9.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.9.0.'
 translation-type: tm+mt
-source-git-commit: f39b03455fc03104932952b892b88403d0c9eca7
+source-git-commit: 9d73b8339a327643be9f2ea674857b401346087a
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -110,3 +110,18 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 * Knappen har lagts till i CTT-användargränssnittet för att enkelt hämta *åtkomsttoken* .
 
 * Beskrivande valideringsmeddelande har lagts till för *URL* och *migreringsuppsättningsnamn*.
+
+## Verktyg för omstrukturering av kod {#code-refactoring}
+
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för verktygen för kodkorrigering.
+
+### Vad är nytt? {#what-is-new-refactoring}
+
+* AIO-CLI-plugin-programmet har stöd för Repository Modernizer och gör att användare kan köra verktyget med plugin-programmet.
+
+   Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) för mer information.
+
+* Verktyget Databasmoderering kan användas för att strukturera om befintliga projektpaket till paket som är kompatibla med den projektstruktur som har definierats för AEM som en Cloud Service.
+
+   Se [Git-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) för mer information.
+
