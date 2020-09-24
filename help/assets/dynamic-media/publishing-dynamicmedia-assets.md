@@ -3,7 +3,7 @@ title: Publicera dynamiska medieresurser
 description: Publicera dynamiska medieresurser
 contentOwner: Rick Brough
 translation-type: tm+mt
-source-git-commit: 9a4f8b4470a0850f4044f799b2af6cf836fd402d
+source-git-commit: b65ce0af6281f60272322744f0e6f81b7eb6b96a
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Du publicerar dina dynamiska medieresurser genom att välja de resurser du redan har överfört och trycka **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in kod på sidan.
 
-Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. See [Configuring Dynamic Media](config-dm.md). Eller så kan du selektivt publicera resurser till antingen Dynamic Media eller AEM, som inte är ömsesidigt oberoende av varandra, med hjälp **[!UICONTROL Selective Publish]** av mappnivån. Se [Arbeta med selektiv publicering i dynamiska media.](/help/assets/dynamic-media/selective-publishing.md)
+Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. See [Configuring Dynamic Media.](config-dm.md) Eller så kan du selektivt publicera resurser till antingen Dynamic Media eller AEM, som inte är ömsesidigt oberoende av varandra, med hjälp **[!UICONTROL Selective Publish]** av mappnivån. Se [Arbeta med selektiv publicering i dynamiska media.](/help/assets/dynamic-media/selective-publishing.md)
 
 I **[!UICONTROL Card View]** visas en liten globikon direkt under namnet på en resurs och till vänster om datumet och tiden för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
@@ -25,7 +25,7 @@ I **[!UICONTROL Card View]** visas en liten globikon direkt under namnet på en 
 
 Om du tänker publicera videomaterial direkt efter kodningen bör du kontrollera att kodningen är helt klar. När videoklipp fortfarande kodas visas ett arbetsflöde för videobearbetning. När videokodningen är klar bör du kunna förhandsgranska videoåtergivningarna. Då är det säkert att publicera videoklippen utan att det uppstår några publiceringsfel.
 
-See also [Linking URLs to your Web Application](linking-urls-to-yourwebapplication.md).
+See also [Linking URLs to your Web Application.](linking-urls-to-yourwebapplication.md)
 
 Se även [Bädda in Dynamic Media Video Viewer eller Image Viewer på en webbsida.](embed-code.md)
 
