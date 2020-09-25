@@ -2,7 +2,7 @@
 title: Introduktion och genomgång av SPA
 description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur ett grundläggande SPA-program används för att skapa, vilket visar hur det relaterar till den underliggande AEM SPA-redigeraren.
 translation-type: tm+mt
-source-git-commit: 78ce5113d97b0fa2e0172598d374c924f4306395
+source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
 workflow-type: tm+mt
 source-wordcount: '1930'
 ht-degree: 0%
@@ -151,7 +151,7 @@ Så om sidan inte läses in igen när du navigerar genom de underordnade sidorna
 
 I nästa avsnitt, [Läsa in ett SPA-program](#loading-a-spa-application), beskrivs hur du läser in SPA-filen och hur innehåll kan läsas in synkront och asynkront.
 
-### Läsa in ett SPA-program {#loading-an-spa-application}
+### Läsa in ett SPA-program {#loading-a-spa-application}
 
 1. Om den inte redan är inläst läser du in programmet We.Retail Journal på publiceringsservern eller med alternativet **Visa som publicerad** på menyn **Sidinformation** i sidredigeraren.
 
