@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
 translation-type: tm+mt
-source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
+source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
 workflow-type: tm+mt
-source-wordcount: '3244'
+source-wordcount: '3221'
 ht-degree: 0%
 
 ---
@@ -292,7 +292,7 @@ När du skapar en ny mall måste du ange en malltyp:
 
    * Sidkomponentens resurstyp.
    * Rotnodens princip, som definierar vilka komponenter som tillåts i mallredigeraren.
-   * Vi rekommenderar att du definierar brytpunkter för responsiva rutnät och inställningar för mobilemulatorn på malltypen. Detta är valfritt eftersom konfigurationen också kan definieras för den enskilda mallen (se avsnittet [Malltyp och Mobila enhetsgrupper](#p-template-type-and-mobile-device-groups-br-p)).
+   * Vi rekommenderar att du definierar brytpunkter för responsiva rutnät och inställningar för mobilemulatorn på malltypen.
 
 * AEM innehåller ett litet urval av färdiga malltyper som HTML5 Page och Adaptive Form Page.
 
@@ -476,7 +476,7 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
 
    Innan en mall kan användas måste den aktiveras av något av följande:
 
-   * [Aktivera mallen](/help/sites-cloud/authoring/features/templates.md#enablingatemplateauthor) från **mallkonsolen** .
+   * [Aktivera mallen](/help/sites-cloud/authoring/features/templates.md) från **mallkonsolen** .
 
    * Anger egenskapen status på `jcr:content` noden.
 
