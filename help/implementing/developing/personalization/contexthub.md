@@ -2,7 +2,7 @@
 title: ContextHub
 description: ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata
 translation-type: tm+mt
-source-git-commit: 75d6b51c0148a21ca401d98a5eaf644fc6b0e8cc
+source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
@@ -43,8 +43,8 @@ Varje ContextHub-butik är en instans av en fördefinierad lagringstyp:
 * ContextHub innehåller flera [exempelarkivtyper](sample-stores.md).
 * Använd AEM konsoler för att [skapa butiker](configuring-contexthub.md#creating-a-contexthub-store).
 * Utvecklare kan [skapa anpassade butikstyper](extending-contexthub.md#creating-custom-store-candidates).
-* Utvecklare kan [komma åt lagringsdata](configuring-contexthub.md#interacting-with-contexthub-stores) via Javascript.
+* Utvecklare kan [komma åt lagringsdata](adding-contexthub.md#interacting-with-contexthub-stores) via Javascript.
 
 ## Segmentering {#segmentation}
 
-ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda Javascript-API:t för att [identifiera lösta segment](configuring-contexthub.md#determining-resolved-contexthub-segments).
+ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda Javascript-API:t för att [identifiera lösta segment](adding-contexthub.md#determining-resolved-contexthub-segments).
