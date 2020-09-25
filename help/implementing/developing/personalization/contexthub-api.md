@@ -2,7 +2,7 @@
 title: ContextHub Javascript API-referens
 description: ContextHub Javascript-API:t är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
 translation-type: tm+mt
-source-git-commit: e361f24b943eff68982a37ac0dc2597f92450026
+source-git-commit: 3277d7470c1abdcc1f759c87e2c1a7ffb3390f47
 workflow-type: tm+mt
 source-wordcount: '4621'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # ContextHub Javascript API-referens {#contexthub-javascript-api-reference}
 
-ContextHub Javascript-API:t är tillgängligt för dina skript när [ContextHub-komponenten har lagts till på sidan](configuring-contexthub.md#adding-contexthub-to-a-page-component).
+ContextHub Javascript-API:t är tillgängligt för dina skript när [ContextHub-komponenten har lagts till på sidan](adding-contexthub.md).
 
 ## ContextHub-konstanter {#contexthub-constants}
 
@@ -20,7 +20,7 @@ Konstantvärden som definieras av ContextHub Javascript-API:t.
 
 ### Händelsekonstanter {#event-constants}
 
-I följande tabell visas namnen på händelser som inträffar för ContextHub Stores. Se även [ContextHub.Utils.Eventing](contexthub-api.md#contexthub-utils-eventing).
+I följande tabell visas namnen på händelser som inträffar för ContextHub Stores. Se även [ContextHub.Utils.Eventing](#contexthub-utils-eventing).
 
 | Konstant | Beskrivning | Värde |
 |---|---|---|
@@ -482,7 +482,7 @@ Matchar den angivna parametern.
 
 ## ContextHub.Store.PersistedJSONPStore {#contexthub-store-persistedjsonpstore}
 
-`ContextHub.Store.PersistedJSONPStore` utökar [ContextHub.Store.JSONPStore](#contexthub-store-jsonpstore) så att den ärver alla funktioner i den klassen. Data som hämtas från JSONP-tjänsten sparas dock enligt konfigurationen för ContextHub-beständighet. (Se [Persistenslägen:](configuring-contexthub.md#persistence-modes))
+`ContextHub.Store.PersistedJSONPStore` utökar [ContextHub.Store.JSONPStore](#contexthub-store-jsonpstore) så att den ärver alla funktioner i den klassen. Data som hämtas från JSONP-tjänsten sparas dock enligt konfigurationen för ContextHub-beständighet. (Se [Persistenslägen:](adding-contexthub.md#persistence-modes))
 
 ## ContextHub.Store.PersistedStore {#contexthub-store-persistedstore}
 
