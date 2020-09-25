@@ -2,9 +2,9 @@
 title: Exempeltyper för ContextHub-gränssnittsmodul
 description: ContextHub innehåller flera exempelmoduler för användargränssnitt som du kan använda i dina lösningar
 translation-type: tm+mt
-source-git-commit: 2a589ff554a5cced3d7ad45d981697debb73992f
+source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Instanser av gränssnittsmodulen contexthub.browserinfo kräver inget värde fö
 
 ## kontexthub.datetime, gränssnittsmodultyp {#contexthub-datetime-ui-module-type}
 
-I `contexthub.datetime` gränssnittsmodulen visas datumet och tiden som lagras i en butik med namnet datetime som baseras på [contexthub.datetime](sample-stores.md#contexthub-datetime-sample-store-candidate) -lagringskanalen.
+I modulen `contexthub.datetime` Användargränssnitt visas datumet och tiden som lagras i en butik med namnet datetime som baseras på `contexthub.datetime` butikskandidaten.
 
 ![contexthub.datetime-modul](assets/datetime-module.png)
 
@@ -187,7 +187,7 @@ Instanser av `contexthub.screen-orientation` UI-modulen kräver inget värde fö
 
 ## contexthub.tagcloud-modultyp {#contexthub-tagcloud-ui-module-type}
 
-I modulen `contexthub.tagcloud` Gränssnitt visas information om taggar. I verktygsfältet visar gränssnittsmodulen antalet taggar. Popup-fönstret visar ett tagcloud och en textruta för att lägga till nya taggar. Användargränssnittsmodulen hämtar information från ett ContextHub-arkiv med namnet tagcloud som är baserat på [contexthub.tagcloud](sample-stores.md#contexthub-tagcloud-sample-data-store) -butikskandidaten.
+I modulen `contexthub.tagcloud` Gränssnitt visas information om taggar. I verktygsfältet visar gränssnittsmodulen antalet taggar. Popup-fönstret visar ett tagcloud och en textruta för att lägga till nya taggar. Användargränssnittsmodulen hämtar information från ett ContextHub-arkiv med namnet tagcloud som är baserat på `contexthub.tagcloud` butikskandidaten.
 
 ![contexthub.tagcloud-modul](assets/tagcloud-module.png)
 
