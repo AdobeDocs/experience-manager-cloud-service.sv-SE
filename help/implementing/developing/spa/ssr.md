@@ -2,9 +2,9 @@
 title: SPA och serversidesrendering
 description: Om du använder SSR (server side rendering) i SPA-filen kan det snabba upp den inledande inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
 translation-type: tm+mt
-source-git-commit: c2c338061d72ae6c5054d18308a2ea1038eaea39
+source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1436'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 >
 >Adobe rekommenderar en separat Adobe I/O Runtime-instans för varje AEM (författare, publicering, scen osv.).
 
-## Fjärrrenderarkonfiguration {#remote-renderer-configuration}
+## Fjärrrenderarkonfiguration {#remote-content-renderer-configuration}
 
 AEM måste veta var det fjärråtergivna innehållet kan hämtas. Oavsett [vilken modell du väljer att implementera för SSR,](#adobe-i-o-runtime) måste du ange hur du AEM åtkomst till den här fjärråtergivningstjänsten.
 
@@ -67,8 +67,6 @@ Följande fält är tillgängliga för konfigurationen:
 >[!NOTE]
 >
 >Oavsett om du väljer att implementera det [AEM kommunikationsflödet](#aem-driven-communication-flow) eller det [Adobe I/O Runtime-drivna flödet](#adobe-i-o-runtime-driven-communication-flow) måste du definiera en fjärrkonfiguration för innehållsåtergivning.
->
->Den här konfigurationen måste också definieras om du väljer att [använda en anpassad Node.js-server.](#using-node-js)
 
 >[!NOTE]
 >
@@ -76,7 +74,7 @@ Följande fält är tillgängliga för konfigurationen:
 
 ## AEM kommunikationsflöde {#aem-driven-communication-flow}
 
-När du använder SSR innehåller [komponentarbetsflödet](introduction.md#workflow) för SPA i AEM en fas i vilken det inledande innehållet i programmet genereras på Adobe I/O Runtime.
+När du använder SSR innehåller [komponentarbetsflödet](introduction.md#interaction-with-the-spa-editor) för SPA i AEM en fas i vilken det inledande innehållet i programmet genereras på Adobe I/O Runtime.
 
 1. Webbläsaren begär SSR-innehåll från AEM.
 1. AEM skickar modellen till Adobe I/O Runtime.
@@ -164,7 +162,7 @@ Den `RemoteContentRendererRequestHandlerServlet` kan användas för att ställa 
 
 Implementera `RemoteContentRendererRequestHandler` gränssnittet om du vill lägga till en anpassad begärandehanterare. Var noga med att ange egenskapen `Constants.SERVICE_RANKING` component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
 
-```
+```javascript
 @Component(immediate = true,
         service = RemoteContentRendererRequestHandler.class,
         property={
@@ -188,7 +186,7 @@ Så här hämtar du en servlet och returnerar innehåll som kan injiceras på si
 
 Vanligtvis är HTML-mallen för en sidkomponent huvudmottagaren för en sådan funktion.
 
-```
+```html
 <sly data-sly-resource="${resource @ resourceType='cq/remote/content/renderer/request/handler'}" />
 ```
 
