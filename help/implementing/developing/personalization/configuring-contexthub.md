@@ -2,9 +2,9 @@
 title: ContextHub konfigureras
 description: Lär dig hur du konfigurerar kontextnavet.
 translation-type: tm+mt
-source-git-commit: 2a589ff554a5cced3d7ad45d981697debb73992f
+source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1683'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,6 @@ Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguratio
 | [contexthub.base](sample-modules.md#contexthub-base-ui-module-type) | En allmän gränssnittsmodultyp | Konfigureras i gränssnittsmodulens egenskaper |
 | [contexthub.browserinfo](sample-modules.md#contexthub-browserinfo-ui-module-type) | Visar information om webbläsaren | `surferinfo` |
 | [contexthub.datetime](sample-modules.md#contexthub-datetime-ui-module-type) | Visar datum- och tidsinformation | `datetime` |
-| [contexthub.device](sample-modules.md#contexthub-device-ui-module-type) | Visa klientenheten | `emulators` |
 | [contexthub.location](sample-modules.md#contexthub-location-ui-module-type) | Visar klientens latitud och longitud samt platsen på en karta. Gör att du kan ändra platsen. | `geolocation` |
 | [contexthub.screen-orientation](sample-modules.md#contexthub-screen-orientation-ui-module-type) | Visar enhetens skärmorientering (liggande eller stående) | `emulators` |
 | [contexthub.tagcloud](sample-modules.md#contexthub-tagcloud-ui-module-type) | Visar statistik om sidtaggar | `tagcloud` |
@@ -112,14 +111,10 @@ AEM innehåller följande exempel på butikskandidater som du kan basera en buti
 | Butikstyp | Beskrivning |
 |---|---|
 | [aem.segmentation](sample-stores.md#aem-segmentation-sample-store-candidate) | Lagra för lösta och olösta ContextHub-segment. Hämtar automatiskt segment från ContextHub SegmentManager |
-| [aem.resolvedsegments](sample-stores.md#aem-resolvedsegments-sample-store-candidate) | Lagrar de segment som är lösta just nu. Lyssnar på tjänsten ContextHub SegmentManager för att automatiskt uppdatera butiken |
 | [contexthub.geolocation](sample-stores.md#contexthub-geolocation-sample-store-candidate) | Lagrar latitud och longitud för webbläsarplatsen. |
-| [contexthub.datetime](sample-stores.md#contexthub-datetime-sample-store-candidate) | Lagrar aktuellt datum, aktuell tid och aktuell säsong för webbläsarplatsen |
 | [granite.emulators](sample-stores.md#granite-emulators-sample-store-candidate) | Definierar egenskaper och funktioner för ett antal enheter och identifierar den aktuella klientenheten |
-| [contexthub.generic-jsonp](sample-stores.md#contexthub-generic-jsonp-sample-store-candidate) | Hämtar och lagrar data från en JSONP-tjänst |
 | [granite.profile](sample-stores.md#granite-profile-sample-store-candidate) | Lagrar profildata för den aktuella användaren |
 | [contexthub.surferinfo](sample-stores.md#contexthub-surferinfo-sample-store-candidate) | Lagrar information om klienten, t.ex. enhetsinformation, webbläsartyp och fönsterorientering |
-| [contexthub.tagcloud](sample-stores.md#contexthub-tagcloud-sample-data-store) | Lagrar sidtaggar och antal taggar |
 
 1. Klicka eller tryck på Verktyg > Platser > ContextHub på Experience Manager-listen.
 1. Klicka eller tryck på standardkonfigurationsbehållaren.
@@ -144,7 +139,7 @@ I det här exemplet visas hur du konfigurerar en lagringsplats och visar data i 
 
 Ett contexthub.generic-jsonp-arkiv har konfigurerats så att det lagrar data för serviceanropet `https://md5.jsontest.com/?text=%22text%20to%20md5%22`. Tjänsten returnerar följande data som visas i en gränssnittsmodul:
 
-```xml
+```javascript
 {
    "md5": "919a56ab62b6d5e1219fe1d95248a2c5",
    "original": "\"text to md5\""
@@ -165,7 +160,7 @@ Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen använder
 * **Aktiverad:** Välj
 * **Detaljkonfiguration (JSON):**
 
-   ```xml
+   ```javascript
    {
     "service": {
     "jsonp": false,
@@ -193,7 +188,7 @@ Använd proceduren i [Lägga till en gränssnittsmodul](#adding-a-ui-module) fö
 * **Modultyp:** contexthub.base
 * **Detaljkonfiguration (JSON):**
 
-   ```xml
+   ```javascript
    {
     "icon": "coral-Icon--data",
     "title": "MD5 Conversion",
@@ -222,6 +217,15 @@ Använd CRXDE Lite för att ställa in egenskapen `debug` på **true** under:
 
 * `/conf/global/settings/cloudsettings` eller
 * `/conf/<site>/settings/cloudsettings`
+
+### Felsökningsmeddelanden för loggning för ContextHub {#logging-debug-messages-for-contexthub}
+
+Konfigurera Adobe Granite ContextHub OSGi-tjänsten (PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`) för att logga detaljerade felsökningsmeddelanden som är användbara vid utveckling.
+
+Om du vill konfigurera tjänsten kan du antingen använda [webbkonsolen](/help/implementing/deploying/configuring-osgi.md) eller en JCR-nod i databasen:
+
+* Webbkonsol: Om du vill logga felsökningsmeddelanden väljer du egenskapen Felsökning.
+* JCR-nod: Om du vill logga felsökningsmeddelanden anger du den booleska `com.adobe.granite.contexthub.debug` egenskapen till `true`.
 
 ### Tyst läge {#silent-mode}
 
