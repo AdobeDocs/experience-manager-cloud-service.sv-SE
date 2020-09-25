@@ -2,7 +2,7 @@
 title: SPA Blueprint
 description: I detta dokument beskrivs det allmänna, ramverksoberoende kontrakt som alla SPA-ramverk ska uppfylla för att implementera redigerbara SPA-komponenter inom AEM.
 translation-type: tm+mt
-source-git-commit: 8bdb7bbe80a4e22bb2b750c0719c6db745133392
+source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 0%
@@ -164,7 +164,7 @@ SPA-komponenten mappas till en grafisk behållare som t.ex. det responsiva stöd
 
 Till exempel:
 
-```
+```html
 <div data-cq-data-path={"path/to/the/responsivegrid/*"} className="new section aem-Grid-newComponent"/>
 ```
 
@@ -183,7 +183,7 @@ Till exempel:
 
 Det underliggande [`Component Mapping`](#componentmapping) biblioteket och dess `MapTo` funktion kan kapslas in och utökas för att ge funktioner i förhållande till redigeringskonfigurationen som finns bredvid den aktuella komponentklassen.
 
-```
+```javascript
 const EditConfig = {
 
     emptyLabel: 'My Component',
@@ -205,7 +205,7 @@ MapTo('component/resource/path')(MyComponent, EditConfig);
 
 I implementeringen ovan utökas projektkomponenten med tomrumsfunktionen innan den registreras i [komponentmappningsarkivet](#componentmapping) . Detta gör du genom att kapsla in och utöka [`ComponentMapping`](#componentmapping) biblioteket för att ge stöd för `EditConfig` konfigurationsobjektet:
 
-```
+```javascript
 /**
  * Configuration object in charge of providing the necessary data expected by the page editor to initiate the authoring. The provided data will be decorating the associated component
  *
@@ -245,9 +245,9 @@ Följande fragment illustrerar den typiska HTML-representationen av en sidinneh�
 * Det responsiva rutnätselementet innehåller klassnamn med prefixet `aem-Grid--`
 * Det responsiva kolumnelementet innehåller klassnamn som föregås av `aem-GridColumn--`
 * Ett responsivt stödraster som också är kolumnen i ett överordnat stödraster kapslas, t.ex. de två föregående prefixen visas inte i samma element
-* Element som motsvarar redigerbara resurser har en `data-cq-data-path` egenskap. Se [Kontrakt med sidredigeraren](#contract-wtih-the-page-editor) i det här dokumentet.
+* Element som motsvarar redigerbara resurser har en `data-cq-data-path` egenskap. Se [Kontrakt med sidredigeraren](#contract-with-the-page-editor) i det här dokumentet.
 
-```
+```javascript
 <div data-cq-data-path="/content/page">
     <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
         <div class="aem-container aem-GridColumn aem-GridColumn--default--12" data-cq-data-path="/content/page/jcr:content/root/responsivegrid">
