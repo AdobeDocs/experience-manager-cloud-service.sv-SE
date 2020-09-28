@@ -1,11 +1,11 @@
 ---
-title: Filformat och MIME-typer som stöds av Experience Manager Assets som Cloud Service
+title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c65a5ebf204e25e56d518db3b354b95aef631621
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '802'
 ht-degree: 5%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 5%
 
 # Assets supported file formats {#supported-file-formats}
 
-Adobe Experience Manager som Cloud Service har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. Adobe Experience Manager Assets har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
+Adobe Experience Manager som Cloud Service har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. Adobe Experience Manager Assets har stöd för en mängd olika filformat och alla funktioner har olika stöd för olika format.
 
 Dessutom har Experience Manager Assets utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med hjälp av [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
 
 Några av de viktigaste funktionerna för tillgångskonvertering med hjälp av mikrotjänster:
 
-* Viktiga [Adobe-filformat](#adobe-formats) som skapats av program och tjänster från Adobe, bland annat Adobe Photoshop, Adobe InDesign, Adobe Illustrator, Adobe XD, Adobe Dimension och Adobe Acrobat eller PDF.
+* Filformaten [för](#adobe-formats) Adobe som skapats av program och tjänster från Adobe, t.ex. Adobe Photoshop, Adobe InDesign, Adobe Illustrator, Adobe XD, Adobe Dimension och Adobe Acrobat eller PDF.
 * Viktiga [bildfilformat](#image-formats).
-* [Camera Raw-filformat](#camera-raw-formats) för en mängd olika kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
+* [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw i botten).
 * Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
 * Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
 
@@ -93,7 +93,7 @@ Följande lista över 3D-format stöds.
 
 Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/assets-3d.md)
 
-| Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans av Dynamic Media |
+| Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Dynamisk medieleverans |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
 | gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
