@@ -1,11 +1,11 @@
 ---
-title: Arkitektur för Adobe Experience Manager Assets som en molntjänst
-description: Arkitektur för Adobe Experience Manager Assets som en molntjänst
+title: Arkitektur för [!DNL Assets]
+description: Arkitektur för Adobe Experience Manager Assets som Cloud Service
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 776b089a322cc4f86fdcb9ddf1c3cc207fc85d39
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '103'
 ht-degree: 7%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 # Architecture of Assets as a Cloud Service solution {#assets-architecture}
 
-AEM Assets som molntjänst bygger på Adobe Experience Manager och är en bra jämförelse med det senaste erbjudandet för Experience Manager 6.5. Molntjänsten erbjuder en anpassad arkitektur och funktionalitet som är en molnbaserad tjänst. Ändringar i den underliggande arkitekturen gör att alla Experience Manager 6.5-funktioner inte kan ingå i molntjänsten.
+AEM Assets som Cloud Service bygger på Adobe Experience Manager och jämför väl med det senaste Experience Manager 6.5-erbjudandet. Cloud Servicen erbjuder en anpassad arkitektur och funktionalitet som är en molnbaserad tjänst. Ändringar i den underliggande arkitekturen gör att alla funktioner i Experience Manager 6.5 inte kan ingå i Cloud Servicen.
 
 Arkitektur - översikt över mikrotjänster för resurser finns i den här översikten över [mikrotjänster för](asset-microservices-overview.md#asset-microservices-architecture)resurser.
 
