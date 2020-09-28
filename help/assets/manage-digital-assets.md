@@ -1,12 +1,12 @@
 ---
-title: Hantera era digitala resurser i Experience Manager
+title: Hantera digitala resurser
 description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a088aa3cd5fda428477c985d1edacf59cfe71a67
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '4290'
+source-wordcount: '4286'
 ht-degree: 11%
 
 ---
