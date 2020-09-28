@@ -1,11 +1,11 @@
 ---
-title: Rapporter om användning och delning av digitala resurser.
+title: Rapporter om användning och delning
 description: Rapporter om era resurser [!DNL Adobe Experience Manager Assets] som hjälper er att förstå användningen, aktiviteten och delningen av era digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ab9a3bfa3536e25243e9752f9f034e31a57e136c
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '948'
 ht-degree: 10%
 
 ---
@@ -58,7 +58,7 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
 
    >[!NOTE]
    >
-   >I [!UICONTROL Download] rapporten visas endast information om de resurser som har laddats ned efter att du har valt ett enskilt program eller som har laddats ned med Snabbåtgärd. Den innehåller dock inte information om resurserna som finns i en hämtad mapp.
+   >I [!UICONTROL Download] rapporten visas endast information om de resurser som har laddats ned efter att du har markerat dem separat eller som har laddats ned med Snabbåtgärd. Den innehåller dock inte information om resurserna som finns i en hämtad mapp.
 
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
 
@@ -80,7 +80,7 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
 
    ![Sidan Information om rapporten Diskanvändning](assets/disk_usage_configuration.png)
 
-   När du skapar **[!UICONTROL Files]** rapporten kan du inkludera/exkludera undermappar. Du kan dock inte inkludera resursåtergivningar för den här rapporten.
+   När du skapar en **[!UICONTROL Files]** rapport kan du inkludera/exkludera undermappar. Du kan dock inte inkludera resursåtergivningar för den här rapporten.
 
    ![Detaljsida för rapporten Filer](assets/files_report.png)
 
