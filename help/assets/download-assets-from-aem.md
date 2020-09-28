@@ -1,11 +1,11 @@
 ---
-title: Download assets from [!DNL Adobe Experience Manager Assets].
+title: Hämta resurser
 description: Hämta resurser [!DNL Adobe Experience Manager Assets] från och aktivera eller inaktivera hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c4a642541a3c8f69c0efff0dbbe036374a1d6f6b
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
