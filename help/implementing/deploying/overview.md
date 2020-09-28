@@ -2,9 +2,9 @@
 title: Driftsätta till AEM as a Cloud Service
 description: 'Driftsätta till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: d4e376ab30bb3e1fb533ed32f6ac43580775787c
+source-git-commit: ca37f00926fc110b865e6db2e61ff1198519010b
 workflow-type: tm+mt
-source-wordcount: '3537'
+source-wordcount: '3202'
 ht-degree: 1%
 
 ---
@@ -16,39 +16,19 @@ ht-degree: 1%
 
 De grundläggande funktionerna för kodutveckling liknar i AEM Cloud Service jämfört med lösningarna AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till AEM som en Cloud Service-miljö. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för Managed Services, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM som en Cloud Service-miljö.
 
-Uppdateringen av den AEM versionen är alltid en separat distributionshändelse jämfört med att skicka anpassad kod. Om den visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som kommer att distribueras ovanpå. AEM versionsuppdateringar som görs därefter, som är vanliga i jämförelse med Managed Services idag, tillämpas automatiskt. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
+Uppdateringen av den [AEM versionen](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse jämfört med att skicka [anpassad kod](#customer-releases). Om den visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som kommer att distribueras ovanpå. AEM versionsuppdateringar som görs därefter, som kommer att vara vanliga och automatiskt tillämpas. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
 
-I följande video visas en översikt på hög nivå över hur du distribuerar kod till AEM som en Cloud Service:
-
->[!VIDEO](https://video.tv.adobe.com/v/30191?quality=9)
 
 I resten av det här dokumentet beskrivs hur utvecklare ska anpassa sina rutiner så att de kan arbeta med både AEM som en Cloud Services versionsuppdateringar och kunduppdateringar.
 
 >[!NOTE]
 >Vi rekommenderar att kunder med befintliga kodbaser genomgår den strukturering av databasen som beskrivs i [AEM](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
 
-
-## AEM versionsuppdateringar {#version-updates}
-
-Det är viktigt att förstå att AEM uppdateras ofta, eventuellt så ofta som en gång om dagen, och kommer att fokusera på felkorrigeringar och prestandaförbättringar. Uppdateringen görs transparent och utan driftstopp. Uppdateringen är avsedd att vara bakåtkompatibel, vilket innebär att du inte behöver ändra egen kod. Faktum är att AEM är oberoende händelser från kundkoddistributioner. Den AEM uppdateringen distribueras ovanpå den senaste lyckade kodningen, vilket innebär att ändringar som har implementerats sedan den senaste push-åtgärden inte kommer att distribueras.
-
->[!NOTE]
->
->Om anpassad kod publicerades till mellanlagring och sedan avvisades av dig, kommer nästa AEM att ta bort dessa ändringar för att återspegla Git-taggen för den senaste lyckade kundreleasen till produktionen.
-
-Med jämna mellanrum kommer en ny funktion att publiceras med fokus på funktionstillägg och förbättringar som kommer att påverka användarupplevelsen mer än med de dagliga versionerna. En funktionsrelease aktiveras inte av driftsättningen av en stor ändringslista, utan snarare genom att en versionsväxling aktiveras som har ackumulerats under flera dagar eller veckor genom de dagliga uppdateringarna.
-
-Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM som en Cloud Service-uppdatering fortsätter inte releasen för den miljön och Adobe undersöker varför uppdateringen orsakade det oväntade beteendet.
-
-### Sammansatt nodarkiv {#composite-node-store}
-
-Som vi nämnt ovan kommer uppdateringarna i de flesta fall att innebära noll driftavbrott, även för författaren, som är ett kluster med noder. Rullande uppdateringar är möjliga på grund av funktionen&quot;composite node store&quot; i Oak. Med den här funktionen kan AEM referera till flera databaser samtidigt. I en rullande driftsättning innehåller den nya versionen av den gröna AEM en egen `/libs` (den TjärMK-baserade, oföränderliga databasen), som skiljer sig från den äldre versionen av den blå AEM, även om båda refererar till en delad DocumentMK-baserad, ändringsbar databas som innehåller områden som `/content`, `/conf`och `/etc` andra. Eftersom både den blå och den gröna har sina egna versioner av `/libs`kan de båda vara aktiva under den rullande uppdateringen, som båda tar trafik tills den blå har ersatts helt av den gröna.
-
 ## Kundreleaser {#customer-releases}
 
 ### Kodning mot rätt AEM {#coding-against-the-right-aem-version}
 
-För tidigare AEM ändrades den senaste AEM versionen sällan (ungefär en gång om året med kvartalsvisa servicepaket) och kunderna uppdaterar produktionsinstanserna till den senaste snabbstarten på egen tid med referens till API Jar. AEM som en Cloud Service-applikation uppdateras automatiskt till den senaste versionen av AEM oftare, så att anpassad kod för interna releaser byggs mot dessa nyare AEM gränssnitt.
+För tidigare AEM ändrades den senaste AEM versionen sällan (ungefär en gång om året med kvartalsvisa servicepaket) och kunderna uppdaterar produktionsinstanserna till den senaste snabbstarten på egen tid med referens till API Jar. AEM som en Cloud Service uppdateras automatiskt till den senaste versionen av AEM oftare, så att anpassad kod för interna releaser byggs mot den senaste AEM versionen.
 
 Precis som för befintliga AEM som inte är molnbaserade stöds en lokal offlineutveckling baserad på en viss snabbstart och förväntas vara det verktyg som i de flesta fall är det bästa för felsökning.
 
@@ -56,6 +36,13 @@ Precis som för befintliga AEM som inte är molnbaserade stöds en lokal offline
 >Det finns små skillnader i hur programmet fungerar på en lokal dator jämfört med Adobe Cloud. Dessa arkitektoniska skillnader måste respekteras under lokal utveckling och kan leda till ett annat beteende vid driftsättning i molninfrastrukturen. På grund av dessa skillnader är det viktigt att utföra de fullständiga testerna på dev- och stage-miljöer innan ny anpassad kod distribueras i produktionen.
 
 För att kunna utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) hämtas och installeras. Mer information om hur du använder AEM som Cloud Service Dispatcher Tools finns på [den här sidan](/help/implementing/dispatcher/overview.md).
+
+I följande video visas en översikt på hög nivå över hur du distribuerar kod till AEM som en Cloud Service:
+
+>[!VIDEO](https://video.tv.adobe.com/v/30191?quality=9)
+
+>[!NOTE]
+>Vi rekommenderar att kunder med befintliga kodbaser genomgår den strukturering av databasen som beskrivs i [AEM](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
 
 ## Distribuera innehållspaket via Cloud Manager och Package Manager {#deploying-content-packages-via-cloud-manager-and-package-manager}
 
@@ -309,7 +296,7 @@ De runmode-konfigurationer som stöds är:
 
 Den OSGI-konfiguration som har de mest matchande körlägena används.
 
-När du utvecklar lokalt kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
+Vid lokal utveckling kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
 
 <!-- ### Performance Monitoring {#performance-monitoring}
 
