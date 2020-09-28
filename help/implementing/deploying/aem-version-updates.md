@@ -2,9 +2,9 @@
 title: AEM versionsuppdateringar
 description: 'AEM versionsuppdateringar '
 translation-type: tm+mt
-source-git-commit: ca37f00926fc110b865e6db2e61ff1198519010b
+source-git-commit: 4e164812cc489959f615dc683f07c362af1555a1
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '395'
 ht-degree: 5%
 
 ---
@@ -21,15 +21,12 @@ AEM som Cloud Service använder nu Continuous Integration och Continuous Deliver
 
 AEM versionsuppdateringar är av två typer:
 
-* **Push-uppdateringar**
+* **AEM Push-uppdateringar**
 
    * Kan släppas dagligen.
    * Mest underhållet, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
 
-   Eftersom ändringarna utförs regelbundet blir effekten inkrementell vilket minskar påverkan på tjänsten.
-
->[!NOTE]
->Mer information om AEM push-uppdateringar finns i faktabladet på [Adobe Experience Manager som en Cloud Service Continuous Delivery Model (leveransmodell för kontinuerlig leverans)](https://fieldreadiness-adobe.highspot.com/items/5ea322e1c714336c23b32599#2)
+      Eftersom ändringarna utförs regelbundet blir effekten inkrementell vilket minskar påverkan på tjänsten.
 
 * **Nya funktionsuppdateringar**
 
