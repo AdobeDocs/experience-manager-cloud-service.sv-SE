@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: 'Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service. '
 translation-type: tm+mt
-source-git-commit: 9882c95972675ee1e0af5de30119d764638f53f3
+source-git-commit: 338f4b8d291bd0dca1c2f0de7bd6f721156d8df9
 workflow-type: tm+mt
-source-wordcount: '1856'
-ht-degree: 97%
+source-wordcount: '2154'
+ht-degree: 79%
 
 ---
 
@@ -66,31 +66,46 @@ Det möjliggör automatisk skalning för olika användningsmönster:
 ![Automatisk skalning för olika användningsmönster](assets/introduction-04.png "Automatisk skalning för olika användningsmönster")
 
 
-## Uppgraderingar {#upgrades}
+## Uppdateringar {#upgrades}
 
 >[!NOTE]
 >
 >Mer information finns i [Introduktion till distribution](/help/implementing/deploying/overview.md).
 
-AEM as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att säkerställa att dina projekt är helt uppdaterade. Det innebär att alla uppgraderingsåtgärder är helt automatiserade och du behöver inte avbryta tjänsten för användarna.
-
-Adobe uppdaterar alla driftinstanser av tjänsten proaktivt till den senaste versionen av AEM-kodbasen:
-
-* Felkorrigeringar:
-
-   * Kan släppas dagligen.
-
-   * Instanser uppdateras ofta med de senaste felkorrigeringarna. Eftersom ändringarna utförs regelbundet blir effekten inkrementell vilket minskar påverkan på tjänsten.
-
-   * De flesta uppdateringar utförs av underhålls- och säkerhetsskäl.
-
-* Nya funktioner:
-
-   * Släpps enligt ett förutsägbart månadsschema.
+AEM som Cloud Service använder nu Continuous Integration och Continuous Delivery (CI/CD) för att säkerställa att dina projekt finns i den senaste AEM versionen. Detta innebär att alla uppgraderingsåtgärder är helt automatiserade, så du behöver inte avbryta tjänsten för användarna.
 
 >[!NOTE]
->
->Mer information finns i [Distributionsarkitektur](/help/core-concepts/architecture.md#deployment-architecture).
+>Om uppdateringen till produktionsmiljön misslyckas kommer Cloud Manager automatiskt att återställa scenmiljön. Detta görs automatiskt för att säkerställa att både fas- och produktionsmiljöer har samma AEM när uppdateringen är klar.
+
+AEM versionsuppdateringar är av två typer:
+
+* **Push-uppdateringar**
+
+   * Kan släppas dagligen.
+   * Mest underhållet, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
+
+   Eftersom ändringarna utförs regelbundet blir effekten inkrementell vilket minskar påverkan på tjänsten.
+
+>[!NOTE]
+>Mer information om AEM push-uppdateringar finns i faktabladet på [Adobe Experience Manager som en Cloud Service Continuous Delivery Model (leveransmodell för kontinuerlig leverans)](https://fieldreadiness-adobe.highspot.com/items/5ea322e1c714336c23b32599#2)
+
+* **Nya funktionsuppdateringar**
+
+   * Frisläppt via ett förutsägbart månadsschema.
+
+AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalideringsplan som omfattar flera steg, vilket säkerställer att ingen tjänst avbryts för system i produktionen. Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM som en Cloud Service-uppdatering fortsätter inte releasen och Adobe undersöker varför uppdateringen orsakade detta oväntade beteende.
+
+[Produkttester och kundfunktionstester](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#functional-testing) som förhindrar att produktuppgraderingar och kundkodspush bryter produktionen valideras också under en AEM versionsuppdatering.
+
+>[ANMÄRKNING]
+>Om anpassad kod publicerades till mellanlagring och sedan avvisades av dig, kommer nästa AEM att ta bort dessa ändringar för att återspegla Git-taggen för den senaste lyckade kundreleasen till produktionen.
+
+
+### Sammansatt nodarkiv {#composite-node-structure}
+
+Som vi nämnt ovan kommer uppdateringarna i de flesta fall att innebära noll driftavbrott, även för författaren, som är ett kluster med noder.
+
+Rullande uppdateringar är möjliga på grund av den *sammansatta nodbutiksfunktionen* i Oak. Med den här funktionen kan AEM referera till flera databaser samtidigt. I en rullande driftsättning innehåller den nya versionen av Green AEM en egen `/libs`, dvs. den tjärMK-baserade, oföränderliga databasen), som skiljer sig från den äldre versionen av Blue AEM, även om båda refererar till en delad DocumentMK-baserad ändringsbar databas som innehåller områden som `/content` , `/conf` `/etc` och andra. Eftersom både den blå och den gröna har sina egna versioner av `/libs`kan de båda vara aktiva under den rullande uppdateringen, som båda tar trafik tills den blå har ersatts helt av den gröna.
 
 ## Cloud Manager {#cloud-manager}
 
