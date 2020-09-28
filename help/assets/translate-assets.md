@@ -1,11 +1,11 @@
 ---
-title: Skapa och hantera digitala resurser på flera språk och kör översättningsarbetsflöden
+title: Skapa och hantera digitala resurser på flera språk
 description: Lär dig automatisera arbetsflöden för översättning av resurser, inklusive binära filer, metadata och taggar till flera språk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b0436c74389ad0b3892d1258d993c00aa470c3ab
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2461'
 ht-degree: 19%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 19%
 
 # Flerspråkiga resurser {#multilingual-assets}
 
-Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt. Med Adobe Experience Manager (AEM) Assets kan du automatisera översättningsarbetsflöden för resurser (inklusive binärfiler, metadata och taggar) och generera resurser på andra språk för användning i flerspråkiga projekt.
+Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt. Med Adobe Experience Manager (AEM) Assets kan du automatisera arbetsflöden för översättning av resurser (inklusive binärfiler, metadata och taggar) för att generera resurser på andra språk för användning i flerspråkiga projekt.
 
 Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med AEM och skapar projekt för översättning av resurser till flera språk. AEM har stöd för arbetsflöden för översättning mellan människor och datorer.
 
-Översättning: De översatta resurserna returneras och importeras till AEM. När din översättningsleverantör är integrerad med AEM skickas resurser automatiskt mellan AEM och översättningsleverantören.
+Översättning: De översatta resurserna returneras och importeras till AEM. När översättningsleverantören är integrerad med AEM skickas resurser automatiskt mellan AEM och översättningsleverantören.
 
 Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart metadata och taggar för resurser.
 
@@ -51,7 +51,7 @@ Also see, [Creating translation projects for content fragments](creating-transla
 
 Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt.
 
-I Adobe Experience Manager (AEM) inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
+I Adobe Experience Manager (AEM) Assets inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
 
 Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel `/content/dam/it` är den italienska språkroten för den italienska språkkopian. För språkkopior måste en [korrekt konfigurerad språkrot](#create-a-language-root) användas, så att rätt språk används när översättningar av källresurser utförs.
 
@@ -206,7 +206,7 @@ Du kör det här arbetsflödet för att översätta ytterligare en grupp resurse
 
 >[!NOTE]
 >
->Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF-filer och Adobe InDesign-filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
+>Om du startar ett översättningsarbetsflöde för komplexa resurser, t.ex. PDF-filer och Adobe InDesign-filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
 
 ### Skapa och översätta arbetsflöde {#create-and-translate-workflow}
 
