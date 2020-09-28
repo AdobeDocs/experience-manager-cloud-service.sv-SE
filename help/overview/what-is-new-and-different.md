@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: 'Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service. '
 translation-type: tm+mt
-source-git-commit: 58f9023519a98ae28dc2b0986d6e25e8804e6e72
+source-git-commit: 4e164812cc489959f615dc683f07c362af1555a1
 workflow-type: tm+mt
-source-wordcount: '1884'
-ht-degree: 91%
+source-wordcount: '1856'
+ht-degree: 92%
 
 ---
 
@@ -66,7 +66,7 @@ Det möjliggör automatisk skalning för olika användningsmönster:
 ![Automatisk skalning för olika användningsmönster](assets/introduction-04.png "Automatisk skalning för olika användningsmönster")
 
 
-## Uppdateringar {#upgrades}
+## AEM {#upgrades}
 
 >[!NOTE]
 >Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
@@ -83,9 +83,6 @@ AEM versionsuppdateringar är av två typer:
    * Mest underhållet, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
 
       Eftersom ändringarna utförs regelbundet blir effekten inkrementell vilket minskar påverkan på tjänsten.
-
-      >[!NOTE]
-      >Mer information om AEM push-uppdateringar finns i faktabladet på [Adobe Experience Manager som en Cloud Service Continuous Delivery Model.](https://fieldreadiness-adobe.highspot.com/items/5ea322e1c714336c23b32599#2)
 
 * **Nya funktionsuppdateringar**
 
