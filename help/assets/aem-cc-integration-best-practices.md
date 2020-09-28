@@ -1,12 +1,12 @@
 ---
-title: Bästa praxis för integrering mellan Adobe Experience Manager och Adobe Creative Cloud
-description: De bästa sätten att integrera en driftsättning i Experience Manager med Adobe Creative Cloud för att effektivisera arbetsflöden för överföring av resurser och uppnå maximal effektivitet.
+title: Bästa tillvägagångssätt att integrera med [!DNL Adobe Creative Cloud]
+description: Bästa praxis är att integrera driftsättning i Experience Manager med Adobe Creative Cloud för att effektivisera arbetsflöden för överföring av resurser och uppnå maximal effektivitet.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9c5dd93be316417014fc665cc813a0d83c3fac6f
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '3302'
+source-wordcount: '3297'
 ht-degree: 18%
 
 ---
@@ -16,30 +16,30 @@ ht-degree: 18%
 
 Adobe Experience Manager (AEM) Assets är en DAM-lösning (Digital Asset Management) som kan integreras med Adobe Creative Cloud för att hjälpa DAM-användare att samarbeta med kreativa team och effektivisera samarbetet när innehåll skapas.
 
-Adobe Creative Cloud ger kreativa team ett ekosystem av lösningar och tjänster som hjälper dem att skapa digitala resurser. Det omfattar program för dator och mobil, molntjänster som lagring med datorsynkronisering eller webbupplevelse, liksom marknadsplatser som Adobe Stock.
+Adobe Creative Cloud förser kreativa team med ett ekosystem av lösningar och tjänster som hjälper dem att skapa digitala resurser. Det omfattar dator- och mobilapplikationer, molntjänster som lagring med datorsynkronisering eller webbupplevelse, liksom marknadsplatser som Adobe Stock.
 
 Läs vidare för att ta reda på vilka integreringar som du ska välja mellan stationär dator och företagsspecifik DAM baserat på ditt användningsfall och vilka metoder som är associerade med de sammankopplade arbetsflödena.
 
 >[!NOTE]
 >
->AEM i Creative Cloud-mappdelning är nu föråldrat och beskrivs inte längre nedan. Adobe rekommenderar nyare funktioner som Adobe Asset Link eller AEM-skrivbordsappen för att ge kreativa användare tillgång till resurserna som hanteras i AEM.
+>AEM till mappdelning mellan Creative Cloud är nu föråldrat och beskrivs inte längre nedan. Adobe rekommenderar nyare funktioner som Adobe Asset Link eller AEM för att ge kreativa användare tillgång till de resurser som hanteras i AEM.
 
 ## Samarbete mellan kreatörer, marknadsförare och DAM-användare {#collaboration-need-of-creatives-marketers-and-dam-users}
 
 
 | Krav | Använd skiftläge | Involverade ytor |
 |---|---|---|
-| Förenkla för kreatörer på datorn | Effektivisera åtkomsten till mediefiler från ett DAM-system (AEM Assets) för kreatörer, eller användare på datorer som arbetar med program för att skapa mediefiler. De behöver ett enkelt och enkelt sätt att upptäcka, använda (öppna), redigera och spara ändringar i AEM samt överföra nya filer. | Skrivbordet Win eller Mac. Creative Cloud-program |
-| Tillhandahåll högkvalitativa, färdiga mediefiler från Adobe Stock | Marknadsförarna hjälper till att snabba upp processen för att skapa innehåll genom att hjälpa till med materialanskaffning och identifiering. Kreatörer använder det godkända materialet direkt inifrån sina kreativa verktyg. | AEM Assets, Adobe Stock Marketplace; metadatafält |
+| Förenkla för kreatörer på datorn | Effektivisera åtkomsten till mediefiler från en DAM (AEM Assets) för kreatörer, eller mer allmänt för användare på datorer som arbetar med program för att skapa egna mediefiler. De behöver ett enkelt och enkelt sätt att upptäcka, använda (öppna), redigera och spara ändringar i AEM samt överföra nya filer. | Skrivbordet Win eller Mac. Creative Cloud-appar |
+| Tillhandahåll högklassiga färdiga resurser från Adobe Stock | Marknadsförarna hjälper till att snabba upp processen för att skapa innehåll genom att hjälpa till med materialanskaffning och identifiering. Kreatörer använder det godkända materialet direkt inifrån sina kreativa verktyg. | AEM Assets Adobe Stock Marketplace metadatafält |
 | Distribuera och dela resurser efter organisationer | Interna avdelningar/lokala kontor och externa partners, distributörer och byråer använder det godkända material som delas av huvudorganisationen. Organisationen vill säkert och smidigt dela de skapade resurserna för vidare återanvändning. | Varumärkesportal, Resursdelningskommentarer |
 
-## Adobes lösningar för samverkan {#adobe-offerings-to-support-the-collaboration-need}
+## Adobe för samarbete {#adobe-offerings-to-support-the-collaboration-need}
 
-| Värdeförslag för berörda personer | Erbjudande | Involverade ytor |
+| Värdeförslag för berörda personer | Adobe | Involverade ytor |
 |---|---|---|
-| Creative-användare upptäcker resurser från AEM, öppnar och använder dem, redigerar och överför ändringar till AEM samt överför nya filer till AEM, utan att behöva lämna Creative Cloud-programmen. | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Photoshop, Illustrator och InDesign |
-| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar till AEM samt överföring av nya filer till AEM från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda datorprogrammet, inklusive sådana som inte kommer från Adobe. | [AEM-skrivbordsapp](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | AEM-skrivbordsapp på Win och Mac |
-| Marknadsförare och företagsanvändare upptäcker, förhandsgranskar, licensierar och sparar Adobe Stock-mediefiler från AEM. Licensierade och sparade mediefiler innehåller utvalda Adobe Stock-metadata för bättre styrning. | [Integrering av Experience Manager och Adobe Stock](aem-assets-adobe-stock.md) | AEM-webbgränssnitt |
+| Creative users upptäcker resurser från AEM, öppnar och använder dem, redigerar och överför ändringar till AEM samt överför nya filer till AEM, utan att lämna Creative Cloud-programmen. | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Photoshop, Illustrator och InDesign |
+| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar i AEM samt överföring av nya filer till AEM från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda skrivbordsprogrammet, inklusive andra typer än Adobe. | [AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | AEM datorprogram på Win och Mac |
+| Marknadsförare och affärsanvändare upptäcker, förhandsgranskar, licensierar och sparar samt hanterar Adobe Stock-resurser inifrån AEM. Licensierade och sparade mediefiler innehåller utvalda Adobe Stock-metadata för bättre styrning. | [Integrering med Experience Manager och Adobe Stock](aem-assets-adobe-stock.md) | AEM webbgränssnitt |
 
 Den här artikeln fokuserar främst på de två första aspekterna av samarbetsbehovet. Distribution och anskaffning av resurser i stor skala omnämns kortfattat som ett användningsexempel. Överväg Adobes varumärkesportal eller Assets Share Commons för sådana behov. Alternativa lösningar som [varumärkesportalen i AEM Assets](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html), lösningar som kan byggas med [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/)-komponenter, [Link Share](share-assets.md) eller [AEM Assets-webbgränssnittet](/help/assets/manage-digital-assets.md) bör granskas utifrån specifika krav.
 
@@ -47,22 +47,22 @@ Den här artikeln fokuserar främst på de två första aspekterna av samarbetsb
 
 Bestäm vilka funktioner som ska användas
 
-### Mappning av användningsfall och Adobe-lösningar {#mapping-of-use-cases-and-adobe-solutions}
+### Kartläggning av användningsfall och Adobe-lösningar {#mapping-of-use-cases-and-adobe-solutions}
 
-| Använd skiftläge | Adobe Asset Link | AEM-skrivbordsapp | Anmärkningar eller alternativa metoder |
+| Använd skiftläge | Adobe Asset Link | AEM | Anmärkningar eller alternativa metoder |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Upptäck - bläddra bland AEM-mappar | Ja | AEM Web UI + skrivbordsåtgärder | När du bläddrar i nätverksresursen ska du inaktivera miniatyrbilderna för att undvika att hämta binära filer med resurser. |
-| Upptäck - få tillgång till AEM-samlingar | Ja | AEM Web UI + skrivbordsåtgärder |  |
-| Upptäck - sök efter resurser från AEM | Ja | AEM Web UI + skrivbordsåtgärder |  |
+| Upptäck - bläddra AEM mappar | Ja | AEM webbgränssnitt + skrivbordsåtgärder | När du bläddrar i nätverksresursen ska du inaktivera miniatyrbilderna för att undvika att hämta binära filer med resurser. |
+| Upptäck - åtkomst AEM samlingar | Ja | AEM webbgränssnitt + skrivbordsåtgärder |  |
+| Upptäck - sök efter resurser från AEM | Ja | AEM webbgränssnitt + skrivbordsåtgärder |  |
 | Använd - öppen resurs | Ja | Ja - för alla appar | [Öppna från webbgränssnittet](/help/assets/manage-digital-assets.md#previewing-assets) eller från Finder |
-| Använd - placera resurser från AEM i ett dokument | Ja - inbäddning | Ja - länkning eller inbäddning | AEM-skrivbordsappen ger åtkomst till resurser som filer i det lokala filsystemet. De här länkarna i de ursprungliga programmen representeras av lokala sökvägar. |
-| Redigera - öppna för redigering | Ja - utcheckningsåtgärd | Ja - Öppna åtgärd (i nätverksresursen) | [Checka ut i AAL](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) sparar resursen i användarens Creative Cloud-lagringskonto (synkroniserat med Creative Cloud-programmet) som standard. |
-| Redigera - pågående arbete utanför AEM | Ja - Tillgängliga resurser i användarens Creative Cloud-lagringskonto synkroniserat med skrivbordet. | Ja |  |
+| Använd - placera resurser från AEM i ett dokument | Ja - inbäddning | Ja - länkning eller inbäddning | AEM ger åtkomst till resurser som filer i det lokala filsystemet. De här länkarna i de ursprungliga programmen representeras av lokala sökvägar. |
+| Redigera - öppna för redigering | Ja - utcheckningsåtgärd | Ja - Öppna åtgärd (i nätverksresursen) | [Checka ut i AAL](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) sparar resursen i användarens Creative Cloud-lagringskonto (synkroniserat med appen Creative Cloud) som standard. |
+| Redigera - pågående arbete utanför AEM | Ja - Tillgångar som är tillgängliga i användarens Creative Cloud-lagringskonto synkroniserade med skrivbordet. | Ja |  |
 | Redigera - ladda upp ändringar | Ja - [incheckningsåtgärd](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) med valfri kommentar | Ja |  |
 | Överför - en fil | Ja - överför aktuellt aktivt dokument | Ja | [Överför via webbgränssnitt](/help/assets/manage-digital-assets.md#uploading-assets) |
 | Överför - flera filer/hierarkiska mappstrukturer | Nej | Ja | [Ladda upp via webbgränssnitt](/help/assets/manage-digital-assets.md#uploading-assets); Anpassade skript eller verktyg |
-| Diverse - användare och inloggning | Creative Cloud-användare som är inloggad på Creative Cloud-datorprogrammet blir igenkända (SSO) | AEM-användare/inloggning | Användare av båda lösningarna räknas av mot AEM-användarkvoten. |
-| Diverse - nätverk och åtkomst | Kräver åtkomst från användarens skrivbord till AEM-distribution via nätverk | Kräver åtkomst från användarens skrivbord till AEM-distribution via nätverk | Adobe Asset Link delar inte nätverksproxymiljö. |
+| Diverse - användare och inloggning | Creative Cloud-användare som är inloggad på Creative Cloud datorprogram känns igen (SSO) | AEM användare/inloggning | Användare av båda lösningarna räknas av mot AEM användarkvot. |
+| Diverse - nätverk och åtkomst | Kräver åtkomst från användarens skrivbord för AEM driftsättning över nätverket | Kräver åtkomst från användarens skrivbord för AEM driftsättning över nätverket | Adobe Asset Link delar inte nätverksproxymiljö. |
 
 
 <!-- Removing this row from table as migration guide is not yet final.
@@ -71,11 +71,11 @@ Bestäm vilka funktioner som ska användas
 
 För att stödja användningsexemplen på resursfördelning bör andra lösningar beaktas:
 
-* [AEM Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för ett konfigurerbart SaaS-tillägg till AEM Assets för publicering av resurser.
+* [AEM Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för ett konfigurerbart SaaS-tillägg i AEM Assets för publicering av resurser.
 
 * Anpassade lösningar skapas baserat på kodbasen [Resursdelningskommentarer](https://adobe-marketing-cloud.github.io/asset-share-commons/) .
-* AEM [link share](/help/assets/share-assets.md) to share assets ad hoc using links.
-* [AEM Assets webbgränssnitt](/help/assets/manage-digital-assets.md) med områden för externa parter som skyddas av AEM Access Control-installationen och med nödvändiga IT-/nätverkskonfigurationsjusteringar, vilket ger dessa externa användare åtkomst till AEM.
+* AEM [länkdelning](/help/assets/share-assets.md) för att dela resurser för särskilda ändamål med hjälp av länkar.
+* [AEM Assets webbgränssnitt](/help/assets/manage-digital-assets.md) med områden för externa parter som skyddas av AEM Access Control Setup och med nödvändiga IT-/nätverkskonfigurationsjusteringar, vilket ger dessa externa användare tillgång till AEM.
 
 ## Viktiga begrepp och användningsområden {#key-concepts-and-use-cases}
 
@@ -93,7 +93,7 @@ För att stödja användningsexemplen på resursfördelning bör andra lösninga
 * **Designanvändare:** En kreatör som skapar digitalt material med Creative Cloud-program och -tjänster. I vissa fall är designanvändaren medlem i ett designteam och kan använda Creative Cloud, men skapar inte digitala resurser (som en designchef eller designteamschef).
 * **DAM-användare:** En typisk användare av ett DAM-system. Beroende på organisationen kan en DAM-användare vara en marknadsföringsanvändare eller en icke-marknadsföringsanvändare, till exempel en affärsområdesanvändare, bibliotekarie eller säljare.
 
-### Att tänka på när du använder AEM och Creative Cloud-integrering {#considerations-when-using-aem-and-creative-cloud-integration}
+### Att tänka på när du använder AEM och Creative Cloud {#considerations-when-using-aem-and-creative-cloud-integration}
 
 <!--incomplete and TBD: 
 
@@ -104,7 +104,7 @@ För att stödja användningsexemplen på resursfördelning bör andra lösninga
 
 -->
 
-Detta är en kort sammanfattning av de effektivaste strategierna för AEM- och Creative Cloud-integrering. Läs resten av det här dokumentet för att få en mer detaljerad förståelse för dessa.
+Detta är en kort sammanfattning av de bästa sätten för integrering av AEM och Creative Cloud. Läs resten av det här dokumentet för att få en mer detaljerad förståelse för dessa.
 
 * **För designanvändare som arbetar i Photoshop, InDesign eller Illustrator:** Adobe Asset Link ger den bästa användarupplevelsen, inklusive ren hantering av pågående arbeten för resurser som checkats ut från AEM
 * **För att förenkla tillgången till resurser från skrivbordet för alla generiska filformat eller program:** använd datorversionen av AEM
@@ -113,18 +113,18 @@ Detta är en kort sammanfattning av de effektivaste strategierna för AEM- och C
 * **Förstå resursers livscykel:** Ta reda på hur resurser hanteras i organisationen av olika team
 * **Var försiktig med ofta sparade resurser:** Adobe Asset Link tar hand om det med PS, AI och ID. För andra program bör du inte utföra pågående arbete i mappade/delade mappar om du behöver alla ändringar i DAM
 
-### Åtkomst till Adobe Stock-mediefiler från AEM Assets {#access-to-adobe-stock-assets-from-aem-assets}
+### Tillgång till Adobe Stock-material från AEM Assets {#access-to-adobe-stock-assets-from-aem-assets}
 
-[AEM- och Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md) ger AEM-användare möjlighet att söka, förhandsgranska, licensiera och spara resurser från Adobe Stock i AEM. Licensierade och sparade Adobe Stock-mediefiler har valt Stock-metadata som kan användas för att söka efter dem med extra filter.
+[Integreringen](/help/assets/aem-assets-adobe-stock.md) med AEM och Adobe Stock ger AEM möjlighet att söka, förhandsgranska, licensiera och spara resurser från Adobe Stock i AEM. Licensierade och sparade Adobe Stock-resurser har valt Stock-metadata som kan användas för att söka efter dem med extra filter.
 
 Några viktiga punkter om den här integreringen:
 
-* När resurser från Adobe Stock sparas till AEM blir de ett vanligt AEM Assets med binära lager sparade i AEM-databasen. Vissa metadata som är relaterade till Adobe Stock sparas för resursen i AEM, annars ser importen ut på samma sätt som för andra filer. Om till exempel smarta taggar är aktiva läggs taggarna till i de här resurserna när de sparas.
+* När resurser från Adobe Stock sparas i AEM blir de ett vanligt AEM Assets med binärfiler sparade i AEM. Vissa metadata som är relaterade till Adobe Stock sparas för resursen i AEM, annars ser det ut som för andra filer. Om till exempel smarta taggar är aktiva läggs taggarna till i de här resurserna när de sparas.
 * Resursen som sparas till AEM är en kopia, inte en länk tillbaka till Adobe Stock.
 
-**Arbeta med resurser som sparats från Adobe Stock till AEM i Creative Cloud**. Den här integreringen är oberoende av Adobe Asset Link, men Adobe Asset Link känner igen dessa resurser som sparats från Stock på det sättet och visar ytterligare metadata och Stock-ikoner för dessa resurser i Adobe Asset Link-tilläggsgränssnittet i Photoshop, Illustrator eller InDesign. Filerna är tillgängliga för att bläddra, öppna och så vidare, eftersom de är vanliga AEM-resurser när de sparas i AEM.
-Creative-användare som arbetar i Creative Cloud-program med Adobe Asset Link-tillägget närvarande kan, förutom att ha tillgång till redan licensierade mediefiler från Adobe Stock till AEM, även använda Creative Cloud Libraries-panelen för att söka efter, förhandsgranska och licensiera Adobe Stock-mediefiler.
-Resurser från Adobe Stock som licensierats och sparats i AEM blir tillgängliga för de större team som har tillgång till AEM Assets-distributionen, medan kreatörer som licensierar mediefiler från Adobe Stock via Creative Cloud Libraries-panelen gör dem tillgängliga endast som standard i sina Creative Cloud-konton.
+**Arbeta med resurser som sparats från Adobe Stock till AEM i Creative Cloud**. Den här integreringen är oberoende av Adobe Asset Link, men Adobe Asset Link känner igen dessa resurser som sparats från Stock på det sättet och visar ytterligare metadata och Stock-ikoner för dessa resurser i gränssnittet för tillägget Adobe Asset Link i Photoshop, Illustrator eller InDesign. Filerna är tillgängliga för att bläddra, öppna och så vidare, eftersom de är vanliga AEM resurser när de sparas i AEM.
+Creative-användare som arbetar i Creative Cloud-program med tillägget Adobe Asset Link kan, förutom att ha tillgång till redan licensierade mediefiler från Adobe Stock till AEM, även använda Creative Cloud Libraries-panelen för att söka efter, förhandsgranska och licensiera Adobe Stock-mediefiler.
+Resurser från Adobe Stock som licensierats och sparats i AEM blir tillgängliga för de större team som har tillgång till AEM Assets-distributionen, medan kreatörer som licensierar mediefiler från Adobe Stock via Creative Cloud Libraries endast gör dem tillgängliga för sig själva som standard på sitt Creative Cloud-konto.
 
 ## Lagra resurser i ett resurshanteringssystem {#about-storing-assets-in-a-dam}
 
@@ -134,7 +134,7 @@ För att skapa ett effektivt arbetsflöde mellan kreatörer och marknadsförare/
 
 Genom att lagra resurser i DAM blir de enkelt tillgängliga och sökbara. Det ser till att resurserna kan utnyttjas av många användare i organisationen eller ekosystemet, bland annat partners, kunder och så vidare.
 
-De flesta organisationer väljer att endast lagra resurser som är relevanta för marknadsförings-/LOB-processerna längre fram i kedjan (publicera till kanaler som webbkanal via AEM Sites eller andra kanaler som hanteras av Adobe Experience Cloud - Marketing Cloud, Advertising Cloud, och som mäts av Analytics Cloud, som tillhandahålls användare/partner och så vidare). Dessutom lagrar organisationer resurser som kan bli föremål för en gransknings-/godkännandeprocess i DAM. På så sätt lagrar DAM de flesta resurser som har stora chanser att utnyttjas och undviker att lagra inaktiva resurser.
+De flesta organisationer väljer att endast lagra resurser som är relevanta för marknadsförings-/LOB-processerna längre fram i kedjan (publicera till kanaler som webbkanaler via AEM Sites eller andra kanaler som tillhandahålls av Adobe Experience Cloud - Marketing Cloud, Advertising Cloud och mäts av Analytics Cloud, som tillhandahåller till användare/partners osv.). Dessutom lagrar organisationer resurser som kan bli föremål för en gransknings-/godkännandeprocess i DAM. På så sätt lagrar DAM de flesta resurser som har stora chanser att utnyttjas och undviker att lagra inaktiva resurser.
 
 Lagring av resurser är också beroende av tekniska aspekter och resursutnyttjande. DAM tillhandahåller ytterligare tjänster runt lagrade resurser, inklusive extrahering av metadata, versionshantering, generering av förhandsgranskning/omkodning, hantering av referenser och tillägg av åtkomstkontrollsinformation. Dessa tjänster kräver extra tid och infrastrukturresurser.
 
@@ -169,40 +169,40 @@ Nedan följer exempel på uppdateringar som vanligtvis inte är relevanta:
 
 ### Användaråtkomst till DAM {#user-access-to-dam}
 
-AEM Assets stöder två typer av användare baserat på deras åtkomst till distributionen av AEM Assets. Vanligtvis har användare i företagsnätverket (brandväggen) direktåtkomst till DAM. Andra användare utanför företagsnätverket skulle inte ha direkt åtkomst. Användartypen avgör vilka integreringar som kan användas ur teknisk synpunkt.
+AEM Assets stöder två typer av användare baserat på deras åtkomst till AEM Assets-distributionen. Vanligtvis har användare i företagsnätverket (brandväggen) direktåtkomst till DAM. Andra användare utanför företagsnätverket skulle inte ha direkt åtkomst. Användartypen avgör vilka integreringar som kan användas ur teknisk synpunkt.
 
 #### Kreativa användare med direkt åtkomst till DAM {#creative-users-with-direct-access-to-dam}
 
-Vanligtvis har interna kreativa team, byråer/kreatörer som är anställda på det interna nätverket tillgång till DAM-instansen, inklusive AEM-inloggning. AEM och nätverksinfrastruktur kan konfigureras för att ge direktåtkomst till externa parter - vanligen betrodda organisationer som byråer som arbetar för en kund - för att få tillgång till AEM via nätverket, till exempel via VPN eller IP tillåtelselista.
+Vanligtvis har interna kreativa team, byråer/kreatörer som är anställda i det interna nätverket tillgång till DAM-instansen, inklusive AEM. AEM och nätverksinfrastruktur kan konfigureras för att ge direktåtkomst till externa parter - vanligen betrodda organisationer som byråer som arbetar för en kund - för att få tillgång till AEM via nätverket, till exempel via VPN eller IP tillåtelselista.
 
-I sådana fall ger Adobe Asset Link eller AEM-skrivbordsappen enkel åtkomst till det slutliga/godkända materialet och gör att du kan spara kreativa resurser på DAM.
+I sådana fall ger Adobe Asset Link eller AEM datorprogrammet enkel åtkomst till det slutliga/godkända materialet och gör att du kan spara kreativa resurser på DAM.
 
 #### Kreativa användare utan åtkomst till DAM {#creative-users-without-access-to-dam}
 
 Externa byråer och frilansare som inte har direkt åtkomst till DAM-instansen kan behöva åtkomst till godkända resurser eller lägga till sina nya designer i DAM.
 
-Använd följande strategier för att ge åtkomst till slutliga/godkända mediefiler:
+Använd följande strategier för att ge tillgång till slutliga/godkända mediefiler:
 
 * Använd skrivbordsappen om Asset Link inte fungerar.
 * Använd [AEM Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för säker distribution av material till externa partners
 * Använd en anpassad implementering av en distributions- och källportal baserad på [resursdelningskommentarer](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* Använd åtkomstkontrollen som konfigurerats i AEM och nödvändig nätverksinfrastruktur (till exempel VPN och IP-tillåtna listor) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda AEM Web UI för att hämta resurser och överföra nytt innehåll till din DAM.
+* Använd den åtkomstkontroll som har konfigurerats i AEM och nödvändig nätverksinfrastruktur (till exempel VPN och IP-tillstånd) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda AEM webbgränssnitt för att hämta resurser och överföra nytt innehåll till din DAM.
 
 #### Pågående arbete med resurser från AEM {#work-in-progress-on-assets-from-aem}
 
 Som beskrivs i det här dokumentet rekommenderar vi att du utför större uppdateringar av resurser, ibland kallat pågående arbete, utan att ha alla redigeringar sparade i den lokala filen överförda till AEM som ändringar. Detta snabbar upp arbetet för en stationär användare, begränsar den nätverksbandbredd som används och håller resursernas tidslinje ren och fokuserad på kontrollerade, viktiga uppdateringar.
 
-Adobe Asset Link har ett bra stöd för detta:
+Adobe Asset Link har bra stöd för detta:
 
-* När användare i Photoshop, InDesign eller Illustrator tänker redigera en fil utför de en utcheckningsåtgärd på den angivna resursen
-* Resursen hämtas i bakgrunden, läggs till användare Creative Cloud-kontot synkroniserat med disken av Creative Cloud-datorprogrammet och utcheckningsflaggan aktiveras i AEM på resursen för att minimera redigeringskonflikter
+* När användare i Photoshop, InDesign eller Illustrator vill redigera en fil utför de en utcheckningsåtgärd för den aktuella resursen
+* Resursen hämtas i bakgrunden, läggs i användarkontot Creative Cloud som synkroniseras med disken av Creative Cloud-datorprogrammet och utcheckningsflaggan aktiveras AEM på resursen för att minimera redigeringskonflikter
 * Därifrån arbetar användaren i en fil som lagras lokalt på den synkroniserade platsen och kan fortsätta att arbeta och spara nödvändiga ändringar med den frekvens som behövs
 * Eftersom resursen finns på Creative Cloud-kontot är den dessutom tillgänglig på andra enheter som användaren kan ha (till exempel kan öppnas eller redigeras i en dedikerad Creative Cloud-mobilapp) och kan delas med andra Creative Cloud-användare i samarbetssyfte.
-* När den kreativa användaren är klar med ändringarna kan han/hon utföra en incheckningsåtgärd för filen i sitt Creative Cloud-program, med en valfri kommentar. Motsvarande resurs i AEM versionshanteras och uppdateras till med den nya binärfilen. AEM-användare som marknadsförare eller LOB-användare har tillgång till större förändringar av tillgångar, eller milstolpar, via tidslinjen för AEM-resurser.
+* När den kreativa användaren är klar med ändringarna kan han/hon utföra en incheckningsåtgärd för filen i Creative Cloud-programmet, med en valfri kommentar. Motsvarande resurs i AEM versionshanteras och uppdateras till med den nya binärfilen. AEM som marknadsförare eller LOB-användare har tillgång till större förändringar av tillgångar, eller milstolpar, via AEM tidslinjegränssnitt.
 
-AEM-skrivbordsappen ger en nätverksresurs för resurser som öppnas i det ursprungliga programmet. Som standard överförs alla ändringar som görs lokalt till AEM automatiskt efter en kort stund. Med en sådan konfiguration överförs frekventa besparingar under den pågående arbetsfasen till AEM och versionshantering, vilket skapar en stor mängd nätverkstrafik och potentiella skalbarhetsproblem - för att inte tala om onödiga versioner i AEM.
+AEM datorprogram tillhandahåller en nätverksresurs för resurser som öppnas i det ursprungliga programmet. Som standard överförs alla ändringar som görs lokalt till AEM automatiskt efter en kort stund. Med en sådan konfiguration överförs ofta sparande under den pågående arbetsfasen till AEM och versionshantering, vilket skapar en hel del nätverkstrafik och potentiella skalbarhetsproblem - för att inte tala om onödiga versioner i AEM.
 
-Det rekommenderade sättet här är att använda ett alternativ i AEM-skrivbordsappen för att inaktivera automatiska uppdateringar och överföra ändringar av resurser till AEM manuellt, med hjälp av åtgärden för överföring av ändringar i programmets resursstatusgränssnitt.
+Det rekommenderade sättet här är att använda ett alternativ i AEM datorprogram för att inaktivera automatiska uppdateringar och överföra ändringar av resurser till AEM manuellt, med hjälp av åtgärden för överföring av ändringar i programmets resursstatusgränssnitt.
 
 #### Massöverföring till DAM {#bulk-upload-to-dam}
 
@@ -216,15 +216,15 @@ Observera att den här beskrivningen avser att överföra filer operativt (till 
 
 Du kan använda följande överföringsfunktioner:
 
-* Om du vill överföra stora/hierarkiska mappar i grupp använder du AEM-datorprogrammet som har funktioner för [mappöverföring](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html#bulkupload) . Du kan också överföra hierarkiska mappstrukturer. Resurserna överförs i bakgrunden och är därför inte knutna till en webbläsarsession
-* Om du vill överföra några filer från en enda mapp drar du filerna direkt till webbgränssnittet eller använder alternativet Skapa i webbgränssnittet i AEM Assets.
+* Om du vill överföra stora/hierarkiska mappar samtidigt använder du AEM datorprogram som har funktioner för [mappöverföring](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html#bulkupload) . Du kan också överföra hierarkiska mappstrukturer. Resurserna överförs i bakgrunden och är därför inte knutna till en webbläsarsession
+* Om du vill överföra några filer från en enda mapp drar du filerna direkt till webbgränssnittet eller använder alternativet Skapa i AEM Assets webbgränssnitt.
 * Beroende på vilka affärskrav du har kan du även använda en anpassad överförare.
 
 #### Hantera digitala resurser direkt från datorn {#managing-digital-assets-directly-from-desktop}
 
-Om du använder Network File Shares för att hantera digitala resurser kan du se att bara den nätverksresurs som är mappad av AEM-skrivbordsappen används som ett praktiskt alternativ. När du övergår från filresurser i nätverk innehåller AEM-webbgränssnittet en omfattande uppsättning funktioner för hantering av digitala resurser, som går mycket längre än vad som är möjligt på en nätverksresurs (sökning, samlingar, metadata, samarbete, förhandsvisningar och så vidare), och AEM-datorprogrammet är en praktisk länk för att ansluta DAM-databasen på serversidan med datorarbetet.
+Om du använder Network File Shares för att hantera digitala resurser kan du se att bara den nätverksresurs som mappas av AEM datorprogram används som ett praktiskt alternativ. När du övergår från filresurser i nätverk innehåller AEM webbgränssnitt en mängd funktioner för hantering av digitala resurser som går mycket längre än vad som är möjligt på en nätverksresurs (sökning, samlingar, metadata, samarbete, förhandsvisningar och så vidare), och AEM datorprogrammet erbjuder en praktisk länk för att ansluta DAM-databasen på serversidan med datorarbetet.
 
-Undvik att använda AEM-skrivbordsappen för att hantera resurser direkt i AEM Assets nätverksresurs. Undvik till exempel att använda AEM-skrivbordsappen för att flytta/kopiera flera filer. Använd i stället webbgränssnittet i AEM Assets för att dra mappar från Finder/Utforskaren till nätverksresursen eller använd AEM Assets Mappöverföring.
+Undvik att använda AEM datorprogram för att hantera resurser direkt i AEM Assets nätverksresurs. Undvik till exempel att använda AEM datorprogram för att flytta/kopiera flera filer. Använd i stället AEM Assets webbgränssnitt för att dra mappar från Finder/Utforskaren till nätverksresursen eller använd funktionen AEM Assets mappöverföring.
 
 <!-- 
 #### Asset migration {#asset-migration}
