@@ -1,11 +1,11 @@
 ---
-title: Tagga bilder med artificiellt intelligenta tjänster.
+title: Tagga bilder med smarta tjänster
 description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar med hjälp av Adobe Sensei tjänster.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 33ce255e126f2a49f1c1a6e94955aade2ca0d240
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2354'
 ht-degree: 6%
 
 ---
