@@ -1,11 +1,11 @@
 ---
-title: Digital Rights Management i [!DNL Adobe Experience Manager Assets] som en molntjänst.
-description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager] som en molntjänst.
+title: Digital Rights Management in [!DNL Assets]
+description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler [!DNL Experience Manager] som en Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 45dd1e4e038f15840329fedc549f245360594e49
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1276'
 ht-degree: 7%
 
 ---
@@ -77,7 +77,7 @@ Konsolen kan [!DNL Assets] visa olika lägen för resurser. Beroende på det akt
 
 1. Välj en resurs i [!DNL Assets] användargränssnittet.
 
-1. Klicka **[!UICONTROL Publish]** i verktygsfältet. Om du inte ser **Publicera** i verktygsfältet klickar du **[!UICONTROL More]** i verktygsfältet och letar upp **[!UICONTROL Publish]** alternativet.
+1. Klicka på **[!UICONTROL Publish]** i verktygsfältet. Om du inte ser **Publicera** i verktygsfältet klickar du **[!UICONTROL More]** i verktygsfältet och letar upp **[!UICONTROL Publish]** alternativet.
 
 1. Välj **[!UICONTROL Publish]** på menyn och stäng sedan bekräftelsedialogrutan.
 1. Avsluta markeringsläget. Publiceringsstatusen för resursen visas längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visar kolumnen Publicerad den tidpunkt då resursen publicerades.
@@ -104,7 +104,7 @@ Konsolen kan [!DNL Assets] visa olika lägen för resurser. Beroende på det akt
 
 1. Du kan också söka efter resurser baserat på en kombination av statusvärden under olika sökfaktorer. Du kan till exempel söka efter publicerade resurser som har godkänts i en granskningsåtgärd och ännu inte har förfallit genom att välja lämpliga alternativ i sökfunktionerna.
 
-## Digital Rights Management i [!DNL Assets] {#digital-rights-management-in-assets-1}
+## Digital Rights Management in [!DNL Assets] {#digital-rights-management-in-assets-1}
 
 Den här funktionen tvingar till godkännande av licensavtalet innan du kan hämta en licensierad mediefil från [!DNL Adobe Experience Manager Assets].
 
