@@ -1,19 +1,19 @@
 ---
-title: Checka in och checka ut filer i resurser
+title: Checka in och checka ut filer i [!DNL Assets]
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 4%
+source-wordcount: '398'
+ht-degree: 6%
 
 ---
 
 
 # Checka in och checka ut filer i Resurser {#check-in-and-check-out-files-in-assets}
 
-Med Adobe Experience Manager Assets (AEM) kan du checka ut resurser för redigering och checka in dem igen när du är klar med ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen på AEM Resurser igen. De kan dock fortfarande ändra metadata för den låsta resursen.
+Med Adobe Experience Manager (AEM) Assets kan du checka ut resurser för redigering och checka in dem igen när du är klar med ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen på AEM Assets igen. De kan dock fortfarande ändra metadata för den låsta resursen.
 
 Om du vill kunna checka ut/in resurser måste du ha skrivbehörighet för dem.
 
@@ -57,7 +57,7 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 
    ![chlimage_1-475](assets/chlimage_1-475.png)
 
-   Den ändrade resursen checkas in i AEM Resurser och är tillgänglig för andra användare för redigering.
+   Den ändrade resursen checkas in i AEM Assets och är tillgänglig för andra användare för redigering.
 
 ## Tvingad incheckning {#forced-check-in}
 
