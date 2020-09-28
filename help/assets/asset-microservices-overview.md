@@ -1,11 +1,11 @@
 ---
-title: Se hur Assets microservices kan bearbeta dina digitala resurser i molnet
+title: Bearbeta resurser med hjälp av mikrotjänster för resurser
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0c915b32d676ff225cbe276be075d3ae1a865f11
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Manager som Cloud Service erbjuder en molnbaserad metod för at
 * Förbättrad flexibilitet i bearbetningen av resurser. Potentiella problem vid hantering av atypiska filer, som skadade filer eller extremt stora filer, påverkar inte längre distributionens prestanda.
 * Förenklad konfiguration av tillgångsbearbetning för administratörer.
 * Resurshanteringsinställningarna hanteras och underhålls av Adobe för att ge bästa möjliga konfiguration för hantering av återgivningar, metadata och textredigering för olika filtyper
-* Adobes filbehandlingstjänster används där det är tillämpligt, vilket ger exakt återgivning och [effektiv hantering av Adobes egna format](file-format-support.md).
+* Filbehandlingstjänster i Adobe används där det är tillämpligt, vilket ger exakt återgivning och [effektiv hantering av Adobe egna format](file-format-support.md).
 * Möjlighet att konfigurera efterbehandlingsarbetsflöden för att lägga till användarspecifika åtgärder och integreringar.
 
 Resursmikrotjänster hjälper till att undvika behovet av verktyg och metoder för återgivning från tredje part (som ImageMagick och FMPEG-omkodning) och förenklar konfigurationer, samtidigt som de ger körklara funktioner för vanliga filtyper.
@@ -50,12 +50,12 @@ Detta är det grundläggande flödet av tillgångsintag och bearbetning. Om den 
 
 Intag och bearbetningsflöde är viktiga begrepp i arkitekturen för tillgångsmikrotjänster för Experience Manager.
 
-* **Direkt binär åtkomst**: Resurser transporteras (och överförs) till molnbinärarkivet när de har konfigurerats för Experience Manager-miljöer, och sedan får AEM, asset microservices och slutligen klienterna direktåtkomst för att utföra sitt arbete. Detta minimerar belastningen på nätverk och duplicering av lagrade binärfiler
-* **Extern bearbetning**: Bearbetning av resurser görs utanför AEM-miljön och sparar resurser (CPU, minne) för att tillhandahålla viktiga funktioner för hantering av digitala resurser samt stöd för interaktivt arbete med systemet för slutanvändare
+* **Direkt binär åtkomst**: Resurser transporteras (och överförs) till molnbinärarkivet när de har konfigurerats för Experience Manager-miljöer, och sedan AEM, och slutligen får klienterna direktåtkomst för att utföra sitt arbete. Detta minimerar belastningen på nätverk och duplicering av lagrade binärfiler
+* **Extern bearbetning**: Bearbetning av resurser görs utanför AEM miljö och sparar resurser (CPU, minne) för att tillhandahålla viktiga funktioner för hantering av digitala resurser samt stöd för interaktivt arbete med systemet för slutanvändare
 
 ## Tillgångsuppladdning med direkt binär åtkomst {#asset-upload-with-direct-binary-access}
 
-Experience Manager-klienter, som ingår i produkterbjudandet, stöder som standard överföring med direkt binär åtkomst. Dessa inkluderar överföring via webbgränssnitt, Adobe Asset Link och AEM-datorprogrammet.
+Experience Manager-klienter, som ingår i produkterbjudandet, stöder som standard överföring med direkt binär åtkomst. Dessa inkluderar överföring via webbgränssnittet, Adobe Asset Link och AEM datorprogrammet.
 
 Du kan använda anpassade överföringsverktyg, som fungerar direkt med AEM HTTP API:er. Du kan använda dessa API:er direkt eller använda och utöka följande öppen källkodsprojekt som implementerar överföringsprotokollet:
 
@@ -68,9 +68,9 @@ Mer information finns i [Överföra resurser](add-assets.md).
 
 De flesta kunder bör få alla sina behov av tillgångsbearbetning från de konfigurerbara tillgångsmikrotjänsterna, men vissa kan behöva ytterligare bearbetning av resurser. Detta gäller särskilt om resurser behöver bearbetas baserat på information som kommer från andra system via integreringar. I sådana fall kan anpassade efterbearbetningsarbetsflöden användas.
 
-Efterbehandlingsarbetsflöden är vanliga arbetsflödesmodeller för AEM, som skapas och hanteras i AEM Workflow Editor. Kunderna kan konfigurera arbetsflödena så att de kan utföra ytterligare bearbetningssteg för en mediefil, inklusive använda tillgängliga körklara arbetsflödessteg och anpassade arbetsflöden.
+Efterbehandlingsarbetsflöden är vanliga AEM arbetsflödesmodeller som skapas och hanteras i AEM. Kunderna kan konfigurera arbetsflödena så att de kan utföra ytterligare bearbetningssteg för en mediefil, inklusive använda tillgängliga körklara arbetsflödessteg och anpassade arbetsflöden.
 
-Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsflöden automatiskt startar när bearbetningen av resurser har slutförts.
+Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsflöden automatiskt startar när bearbetningen av materialet har slutförts.
 
 <!-- TBD asgupta, Engg: Create some asset-microservices-data-flow-diagram.
 -->
@@ -80,6 +80,6 @@ Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsfl
 >* [Komma igång med mikrotjänster för material](asset-microservices-configure-and-use.md)
 >* [Filformat som stöds](file-format-support.md)
 >* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
->* [AEM-skrivbordsapp](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
+>* [AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
 >* [Apache Oak-dokumentation om direkt binär åtkomst](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)
 
