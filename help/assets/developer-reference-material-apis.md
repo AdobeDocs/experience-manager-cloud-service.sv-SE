@@ -1,11 +1,11 @@
 ---
-title: Utvecklarreferenser för hantering av digitala resurser [!DNL Adobe Experience Manager] i en Cloud Service.
+title: Utvecklarreferenser för [!DNL Assets]
 description: Med [!DNL Assets] API:er och utvecklarreferensinnehåll kan du hantera resurser, inklusive binära filer, metadata, återgivningar, kommentarer och [!DNL Content Fragments].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cfcb9fb85cffeabc5d5af94c30bd8ace8039ac83
+source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1231'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Artikeln innehåller referensmaterial och resurser för utvecklare av [!DNL Asse
 
 Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser. Skillnaderna jämfört med [!DNL Experience Manager] 6.5 är:
 
-* Binärfiler går inte igenom [!DNL Experience Manager]vilket innebär att överföringsprocessen nu samordnas med det binära molnlagringsutrymmet som är konfigurerat för distributionen.
+* Binärfiler fungerar inte [!DNL Experience Manager]som nu helt enkelt koordinerar överföringsprocessen med det binära molnlagringsutrymmet som är konfigurerat för distributionen.
 * Binär molnlagring fungerar med ett CDN-nätverk (Content Delivery Network) eller Edge-nätverk. Ett CDN väljer en slutpunkt för överföring som är närmare för en klient. När data flyttas kortare tid till en närliggande slutpunkt förbättras överföringsprestanda och användarupplevelsen, särskilt för geografiskt utspridda team.
 
 >[!NOTE]
