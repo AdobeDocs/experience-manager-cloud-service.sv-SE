@@ -2,7 +2,7 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: 'Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service. '
 translation-type: tm+mt
-source-git-commit: 98514867fba8c998cb653abea059e15a99cbd007
+source-git-commit: 78c0802a0703e81941013347a3f4b57cb106c927
 workflow-type: tm+mt
 source-wordcount: '1875'
 ht-degree: 90%
@@ -71,9 +71,7 @@ Det möjliggör automatisk skalning för olika användningsmönster:
 >[!NOTE]
 >Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
 
-AEM som Cloud Service använder nu Continuous Integration och Continuous Delivery (CI/CD) för att säkerställa att dina projekt finns i den senaste AEM versionen.
-
-Det innebär att instanser av Production och Stage uppdateras till den senaste AEM utan att tjänsten avbryts för användarna.
+AEM som Cloud Service använder nu Continuous Integration och Continuous Delivery (CI/CD) för att säkerställa att dina projekt finns i den senaste AEM versionen. Det innebär att instanser av Production och Stage uppdateras till den senaste AEM utan att tjänsten avbryts för användarna.
 
 >[!NOTE]
 > Om uppdateringen till produktionsmiljön misslyckas kommer Cloud Manager automatiskt att återställa scenmiljön. Detta görs automatiskt för att säkerställa att både fas- och produktionsmiljöer har samma AEM när uppdateringen är klar.
