@@ -2,9 +2,9 @@
 title: Driftsätta till AEM as a Cloud Service
 description: 'Driftsätta till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: ca37f00926fc110b865e6db2e61ff1198519010b
+source-git-commit: b0d0ada16662c6edf6068b9de8a296ccfd410216
 workflow-type: tm+mt
-source-wordcount: '3202'
+source-wordcount: '3210'
 ht-degree: 1%
 
 ---
@@ -16,8 +16,7 @@ ht-degree: 1%
 
 De grundläggande funktionerna för kodutveckling liknar i AEM Cloud Service jämfört med lösningarna AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till AEM som en Cloud Service-miljö. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för Managed Services, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM som en Cloud Service-miljö.
 
-Uppdateringen av den [AEM versionen](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse jämfört med att skicka [anpassad kod](#customer-releases). Om den visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som kommer att distribueras ovanpå. AEM versionsuppdateringar som görs därefter, som kommer att vara vanliga och automatiskt tillämpas. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
-
+Uppdateringen av den [AEM versionen](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse jämfört med att skicka [anpassad kod](#customer-releases). Om den visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som kommer att distribueras högst upp. AEM versionsuppdateringar som görs därefter, som kommer att vara vanliga och automatiskt tillämpas. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
 
 I resten av det här dokumentet beskrivs hur utvecklare ska anpassa sina rutiner så att de kan arbeta med både AEM som en Cloud Services versionsuppdateringar och kunduppdateringar.
 
@@ -236,19 +235,19 @@ Precis som AEM uppdateringar distribueras kundreleaser med hjälp av en strategi
 
 ## Index {#indexes}
 
-Nya eller ändrade index kommer att orsaka ytterligare ett indexerings- eller omindexeringssteg innan den nya (gröna) versionen kan ta över trafiken. Information om indexhantering i Skyline finns i [den här artikeln](/help/operations/indexing.md). Du kan kontrollera statusen för indexeringsjobbet på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
+Nya eller ändrade index kommer att orsaka ytterligare ett indexerings- eller omindexeringssteg innan den nya (gröna) versionen kan ta över trafiken. Information om indexhantering i AEM som en Cloud Service finns i [den här artikeln](/help/operations/indexing.md). Du kan kontrollera statusen för indexeringsjobbet på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
 >[!NOTE]
 >
 >Den tid som krävs för en rullande distribution varierar beroende på indexets storlek, eftersom den gröna versionen inte kan ta emot trafik förrän det nya indexet har genererats.
 
-För närvarande fungerar inte Skyline med verktyg för indexhantering som ACS Commons Sörja för ekindexering.
+För närvarande fungerar inte AEM som Cloud Service med indexhanteringsverktyg som ACS Commons Sörja för läckage.
 
 ## Replikering {#replication}
 
 Publiceringsmekanismen är bakåtkompatibel med Java-API:erna för [AEM-replikering](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.day.cq.replication.Replicator.html).
 
-För att kunna utveckla och testa med replikering med molnet AEM QuickStart måste de klassiska replikeringsfunktionerna användas med en författare-/publiceringsinställning. Om användargränssnittets startpunkt på AEM Author har tagits bort för molnet går användarna till `http://localhost:4502/etc/replication` för konfiguration.
+För att kunna utveckla och testa med replikering med molnklart AEM snabbstart måste de klassiska replikeringsfunktionerna användas med en författar-/publiceringskonfiguration. Om användargränssnittets startpunkt på AEM Author har tagits bort för molnet går användarna till `http://localhost:4502/etc/replication` för konfiguration.
 
 ## Bakåtkompatibel kod för rullande distributioner {#backwards-compatible-code-for-rolling-deployments}
 
@@ -296,7 +295,7 @@ De runmode-konfigurationer som stöds är:
 
 Den OSGI-konfiguration som har de mest matchande körlägena används.
 
-Vid lokal utveckling kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
+När du utvecklar lokalt kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
 
 <!-- ### Performance Monitoring {#performance-monitoring}
 
