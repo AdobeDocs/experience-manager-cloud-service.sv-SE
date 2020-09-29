@@ -4,9 +4,9 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Assets Guide
 user-guide-description: Understand how to use and administer Experience Manager Assets as a Cloud Service.
 translation-type: tm+mt
-source-git-commit: 0f3f34d8871462bf94f596d04c04c99db6488fa5
+source-git-commit: cea753a0783397c7fd9b757b2246c87ffa698f82
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '428'
 ht-degree: 90%
 
 ---
@@ -36,7 +36,6 @@ ht-degree: 90%
    + [Lägga till och redigera metadata](meta-edit.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Använda och konfigurera Asset Insights](assets-insights.md)
-   + [Asynkrona jobb](asynchronous-jobs.md)
    + [Metadataprofiler](metadata-profiles.md)
    + [Metadataschema](metadata-schemas.md)
    + [Hantera videoresurser](manage-video-assets.md)
