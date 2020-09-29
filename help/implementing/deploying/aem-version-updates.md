@@ -2,9 +2,9 @@
 title: AEM versionsuppdateringar
 description: 'AEM versionsuppdateringar '
 translation-type: tm+mt
-source-git-commit: 4e164812cc489959f615dc683f07c362af1555a1
+source-git-commit: 5032c503be8972879eff82d4919bb07dcff1db2a
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '394'
 ht-degree: 5%
 
 ---
@@ -36,7 +36,8 @@ AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalidering
 
 [Produkttester och kundfunktionstester](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#functional-testing) som förhindrar att produktuppgraderingar och kundkodspush bryter produktionen valideras också under en AEM versionsuppdatering.
 
->[ANMÄRKNING]
+>[!NOTE]
+>
 >Om anpassad kod publicerades till mellanlagring och sedan avvisades av dig, kommer nästa AEM att ta bort dessa ändringar för att återspegla Git-taggen för den senaste lyckade kundreleasen till produktionen.
 
 ## Sammansatt nodarkiv {#composite-node-store}
