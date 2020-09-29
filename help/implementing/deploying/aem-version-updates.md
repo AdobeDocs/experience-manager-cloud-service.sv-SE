@@ -2,7 +2,7 @@
 title: AEM versionsuppdateringar
 description: 'AEM versionsuppdateringar '
 translation-type: tm+mt
-source-git-commit: 5032c503be8972879eff82d4919bb07dcff1db2a
+source-git-commit: 3d9ed5ea31344bf4e25c37368cca01856cdbbd01
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 5%
@@ -24,6 +24,7 @@ AEM versionsuppdateringar är av två typer:
 * **AEM Push-uppdateringar**
 
    * Kan släppas dagligen.
+
    * Mest underhållet, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
 
       Eftersom ändringarna utförs regelbundet blir effekten inkrementell vilket minskar påverkan på tjänsten.
