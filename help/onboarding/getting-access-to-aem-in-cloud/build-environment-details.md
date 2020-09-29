@@ -2,9 +2,9 @@
 title: Information om byggmiljö
 description: Information om byggmiljö - Cloud Services
 translation-type: tm+mt
-source-git-commit: 81f2d4f4f956edbf88135a703df0162afd92bc43
+source-git-commit: 34087724d41de1fc4303ddbbb92122760d360e77
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -71,9 +71,10 @@ Det gör du genom att lägga till en post som ser ut så här i filen pom.xml: `
 ```
 
 >[!NOTE]
->Leverantörsvärden som stöds är `oracle` och `sun`.
->
->Versionsvärden som stöds är `1.8`, `1.11`och `11`.
+>Leverantörsvärden som stöds är `oracle` och `sun`och de versionsvärden som stöds är `1.8`, `1.11`och `11`.
+
+>[!NOTE]
+>I Cloud Managers projektbygge används fortfarande Java 8 för att anropa Maven. Därför fungerar inte kontrollen eller verkställandet av den Java-version som konfigurerats i plugin-programmet för verktygskedjan via plugin-program som [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) , och sådana plugin-program får inte användas.
 
 ## Miljövariabler {#environment-variables}
 
