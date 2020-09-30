@@ -3,10 +3,10 @@ title: Tillgänglighet i [!DNL Experience Manager Assets].
 description: Know how accessibility features in [!DNL Adobe Experience Manager] as a Cloud Service help disabled users.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0bb58d910fed91e4627e1fd8e1f9af47a1b2f4df
+source-git-commit: 5d129538618630faff4bb2542668b8e47ef0e5f6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1816'
+ht-degree: 1%
 
 ---
 
@@ -172,7 +172,7 @@ För metadataåtgärder som vanligtvis utförs av roller som marknadsförare och
 * Dragningsfunktionen med tangentbordet fungerar på rätt sätt i metadatamodigeraren i bläddringsläge i skärmläsaren.
 * En användare kan flytta fokus med tangentbordet till fältet Lägg till användare eller grupp under Stängd användargrupp på fliken Behörigheter i mappegenskaperna.
 
-## Söka efter digitala resurser {#search}
+## Söka efter digitala resurser {#search-assets}
 
 En snabb och smidig sökupplevelse av resurser ökar innehållets hastighet. Användningsexempel för snabb innehållshantering är en del av kärnfunktionaliteten [!DNL Assets] . Om du vill starta en sökning från omsökningsfältet kan användarna använda kortkommandon `/` eller använda `Tab` tillsammans med skärmläsare för att snabbt hitta sökalternativet. Skärmläsaren visar namnet på alternativet som [!UICONTROL Search Button] när fokus är på ![sökalternativet](assets/do-not-localize/search_icon.png)för sökalternativ. Användarna kan trycka på `Return` för att öppna rutan Sök. Skärmläsaren lägger inte bara till en berättarröst för det nyckelord som skrivs i sökrutan, utan lägger även till en berättarröst för de förslag till automatisk komplettering som finns i [!DNL Experience Manager Assets]. Användare kan använda en kombination av piltangenter `Return`och `Tab` för att komma åt de olika alternativen för att utlösa en sökning.
 
