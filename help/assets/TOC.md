@@ -4,24 +4,24 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Assets Guide
 user-guide-description: Understand how to use and administer Experience Manager Assets as a Cloud Service.
 translation-type: tm+mt
-source-git-commit: 942eb1424af119c4dda6b8286a20ff030c807802
+source-git-commit: 1f575a2bc844e108477a86d4f653928442165c8e
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 90%
+source-wordcount: '406'
+ht-degree: 76%
 
 ---
 
 
-# Resurshandbok {#assets}
+# [!DNL Assets] Guide {#assets}
 
-+ [AEM Assets as a Cloud Service](/help/assets/home.md)
++ [[!DNL Assets] som en Cloud Service](/help/assets/home.md)
 + [Översikt och nyheter](overview.md)
-+ [Viktiga ändringar i AEM Assets as a Cloud Service](assets-cloud-changes.md)
-+ [Arkitektur](architecture.md)
++ [Betydande ändringar [!DNL Assets] som en Cloud Service](assets-cloud-changes.md)
++ [[!DNL Assets] arkitektur](architecture.md)
 + [Filformat som stöds](file-format-support.md)
 + [Översikt över mikrotjänster för material](asset-microservices-overview.md)
 + [Tillgänglighet i [!DNL Assets]](accessibility.md)
-+ Hantera digitala resurser med AEM {#manage}
++ Hantera digitala resurser {#manage}
    + [Dela resurser](share-assets.md)
    + [Övervaka aktiviteter och DAM-uppgifter](assets-activity-history.md)
    + [Komma igång med mikrotjänster för material](asset-microservices-configure-and-use.md)
@@ -30,29 +30,29 @@ ht-degree: 90%
    + [Vanliga åtgärder för hantering av material](manage-digital-assets.md)
    + [Smarta taggar](smart-tags.md)
    + [Organisera resurser](organize-assets.md)
-   + [Använda Adobe Stock-resurser i AEM](aem-assets-adobe-stock.md)
+   + [Använd [!DNL Adobe Stock] resurser i AEM](aem-assets-adobe-stock.md)
    + [Hantera samlingar](manage-collections.md)
    + [Översikt över metadata](manage-metadata.md)
-   + [Integrera med Adobe Creative Cloud](aem-cc-integration-best-practices.md)
+   + [Integrera med [!DNL Adobe Creative Cloud]](aem-cc-integration-best-practices.md)
    + [Lägga till och redigera metadata](meta-edit.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Använda och konfigurera Asset Insights](assets-insights.md)
    + [Metadataprofiler](metadata-profiles.md)
    + [Metadataschema](metadata-schemas.md)
    + [Hantera videoresurser](manage-video-assets.md)
-   + [Hämta resurser från AEM](download-assets-from-aem.md)
+   + [Hämta resurser](download-assets-from-aem.md)
    + [Checka in och checka ut resurser för redigering](check-out-and-submit-assets.md)
    + [Hantera rättigheter för digitala resurser](drm.md)
    + [Vattenstämpelresurser](watermark-assets.md)
-+ Konfigurera, administrera och utöka Assets {#admin}
++ Configure, administer and extend [!DNLAssets] {#admin}
    + [Dokumentreferenser för utvecklare och API:er](developer-reference-material-apis.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
-   + [Om att arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
-   + [Konfigurera Smart Tags](smart-tags-configuration.md)
-   + [Flerspråkiga resurser och översättning av resurser](translate-assets.md)
+   + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
+   + [Konfigurera smarta taggar](smart-tags-configuration.md)
+   + [Flerspråkiga resurser och översättning](translate-assets.md)
    + [Söka efter fasetter](search-facets.md)
    + [HTTP API för Assets](mac-api-assets.md)
-   + [Stöd för Content Fragments i AEM Assets HTTP API](content-fragments/assets-api-content-fragments.md)
+   + [Content Fragments support in Assets HTTP API](content-fragments/assets-api-content-fragments.md)
    + [Anslutna resurser](use-assets-across-connected-assets-instances.md)
    + [Materialrapporter](asset-reports.md)
    + [Överlappande metadata](cascading-metadata.md)
@@ -60,8 +60,8 @@ ht-degree: 90%
    + [MediaLibrary-funktioner](medialibrary.md)
    + [Importera och exportera metadata för material](metadata-import-export.md)
 + Dela och driftsätta resurser {#brand-portal}
-   + [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
-   + [Publicera resurser på varumärkesportalen](publish-to-brand-portal.md)
+   + [ [!DNL Assets] Konfigurera med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
+   + [Publicera resurser på [!DNL Brand Portal]](publish-to-brand-portal.md)
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
    + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
