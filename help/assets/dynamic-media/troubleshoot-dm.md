@@ -2,9 +2,9 @@
 title: Felsöka Dynamic Media
 description: Felsöka Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: a0b4f04aaafbaef86728c8bd23cc026f43c72dde
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '995'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,11 @@ ht-degree: 1%
 
 # Felsöka Dynamic Media {#troubleshooting-dynamic-media-scene-mode}
 
-I följande dokument beskrivs felsökning för Dynamic Media.
+I följande avsnitt beskrivs felsökning för Dynamic Media.
+
+## Ny konfiguration för dynamiska media {#new-dm-config}
+
+Se [Felsöka en ny konfiguration för dynamiska media.](/help/assets/dynamic-media/config-dm.md#troubleshoot-dm-config)
 
 ## Allmänt (alla resurser) {#general-all-assets}
 
@@ -20,7 +24,7 @@ Här följer några allmänna tips och tricks för alla resurser.
 
 ### Egenskaper för resurssynkroniseringsstatus {#asset-synchronization-status-properties}
 
-Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta den lyckade synkroniseringen av resursen från AEM till Dynamic Media:
+Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att resursen har synkroniserats från AEM till Dynamic Media:
 
 | **Egenskap** | **Exempel** | **Beskrivning** |
 |---|---|---|
@@ -31,15 +35,7 @@ Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta den lyck
 
 ### Synkroniseringsloggning {#synchronization-logging}
 
-Synkroniseringsfel och problem loggas in `error.log` (AEM-serverkatalog `/crx-quickstart/logs/`). Tillräcklig loggning finns för att fastställa orsaken till de flesta problemen, men du kan öka loggningen till DEBUG på `com.adobe.cq.dam.ips` paketet via Sling Console ([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)) för att samla in mer information.
-
-### Flytta, kopiera, ta bort {#move-copy-delete}
-
-Gör följande innan du utför någon av åtgärderna Flytta, Kopiera eller Ta bort:
-
-* För bilder och videoklipp bekräftar du att ett `<object_node>/jcr:content/metadata/dam:scene7ID` värde finns innan du utför åtgärderna flytta, kopiera eller ta bort.
-* För bild- och visningsprogramförinställningar måste du bekräfta att det finns ett `https://<server>/crx/de/index.jsp#/etc/dam/presets/viewer/testpreset/jcr%3Acontent/metadata` värde innan du utför åtgärderna flytta, kopiera eller ta bort.
-* Om ovanstående metadatavärde saknas måste du överföra resurser på nytt innan du flyttar, kopierar eller tar bort åtgärder.
+Synkroniseringsfel och problem loggas in `error.log` (AEM serverkatalog `/crx-quickstart/logs/`). Tillräcklig loggning finns för att fastställa orsaken till de flesta problemen, men du kan öka loggningen till DEBUG på `com.adobe.cq.dam.ips` paketet via Sling Console ([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)) för att samla in mer information.
 
 ### Versionskontroll {#version-control}
 
@@ -66,7 +62,7 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
     <ol>
      <li><p>Gå till CRX/DE:</p>
       <ul>
-       <li>Kontrollera om förinställningen i den JCR- <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> definition som används. Observera att den här platsen gäller om du uppgraderade från AEM 6.x till 6.4 och avanmälde dig från migrering. I annat fall är platsen <code>/conf/global/settings/dam/dm/presets/viewer</code>.</li>
+       <li>Kontrollera om förinställningen i den JCR- <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> definition som används. Observera att den här platsen gäller om du har uppgraderat från AEM 6.x till 6.4 och valt att inte migrera. I annat fall är platsen <code>/conf/global/settings/dam/dm/presets/viewer</code>.</li>
        <li>Kontrollera att resursen i JCR-filen har <code>dam:scene7FileStatus</code><strong> under Metadata shows som </strong><code>PublishComplete</code>.</li>
       </ul> </li>
     </ol> </td>
@@ -77,28 +73,18 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
     </ul> </td>
   </tr>
   <tr>
-   <td>Resursväljaren i set editor fastnade i permanent inläsning</td>
-   <td><p>Känt fel som ska åtgärdas i 6.4</p> </td>
-   <td><p>Stäng väljaren och öppna den igen.</p> </td>
-  </tr>
-  <tr>
-   <td><strong>Markeringsknappen är inte aktiv när du har valt en resurs som en del av redigeringen av en uppsättning</strong></td>
-   <td><p> </p> <p>Känt fel som ska åtgärdas i 6.4</p> <p> </p> </td>
-   <td><p>Klicka först på en annan mapp i Resursväljaren och gå tillbaka och välj resursen.</p> </td>
-  </tr>
-  <tr>
    <td>Carousel hotspot flyttas runt efter växling mellan bildrutor</td>
    <td><p>Kontrollera att alla bildrutor har samma storlek.</p> </td>
    <td><p>Använd endast bilder med samma storlek för karusellen.</p> </td>
   </tr>
   <tr>
    <td>Bilden förhandsvisas inte med Dynamic Media Viewer</td>
-   <td><p>Kontrollera att resursen innehåller metadataegenskaper <code>dam:scene7File</code> (CRXDE Lite)</p> </td>
+   <td><p>Kontrollera att resursen innehåller metadataegenskaperna <code>dam:scene7File</code> (CRXDE Lite)</p> </td>
    <td><p>Kontrollera att alla resurser har avslutat bearbetningen.</p> </td>
   </tr>
   <tr>
    <td>Den överförda resursen visas inte i resursväljaren</td>
-   <td><p>Kontrollera resurs har egenskap <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> = <code>processed</code> (CRXDE Lite)</p> </td>
+   <td><p>Check-resursen har egenskapen <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> = <code>processed</code> (CRXDE Lite)</p> </td>
    <td><p>Kontrollera att alla resurser har avslutat bearbetningen.</p> </td>
   </tr>
   <tr>
@@ -160,7 +146,6 @@ Om du har problem med video kan du läsa följande felsökningsguide.
    <td><p>Så här avgör du om videokodning fortfarande pågår eller om den har försatts i ett feltillstånd:</p>
     <ul>
      <li>Kontrollera videostatus <code>https://localhost:4502/crx/de/index.jsp#/content/dam/folder/videomp4/jcr%3Acontent</code> &gt; <code>dam:assetState</code></li>
-     <li>Övervaka videon från arbetsflödeskonsolen <code>https://localhost:4502/libs/cq/workflow/content/console.html</code> &gt; Flikarna Instanser, Arkiv och Fel.</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -220,19 +205,16 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
     </ol> </td>
    <td><p>Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet inte har synkroniserats eller publicerats startar du om hela kopierings-/synkroniseringsprocessen:</p>
     <ol>
-     <li>Navigera till CRXDE Lite.
-      <ul>
-       <li>Ta bort <code>&lt;sync-folder&gt;/_CSS/_OOTB</code>.</li>
-      </ul> </li>
-     <li>Navigera till CRX-pakethanteraren: <code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>
+     <li>Navigera till <code>/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code>
+     </li>
+     <li>Välj följande åtgärder i ordning:
       <ol>
-       <li>Sök efter visningsprogrampaket i listan (börjar med <code>cq-dam-scene7-viewers-content</code>)</li>
-       <li>Klicka på <strong>Installera</strong>om.</li>
+       <li>Ta bort synkroniseringsmappar.</li>
+       <li>Avmarkera mappen Förinställning (nedan <code>/conf</code>).
+       <li>Utlös DM Setup Async Job.</li>
       </ol> </li>
-     <li>Gå till sidan Dynamisk mediekonfiguration under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
-      <ul>
-       <li>Klicka på <strong>Spara</strong>om du inte vill göra några ändringar. Detta utlöser logiken igen för att skapa och synkronisera exempelresurserna, CSS för visningsförinställningar och teckningar.<br />  </li>
-      </ul> </li>
+     <li>Vänta på meddelande om att synkroniseringen har slutförts i AEM Inkorg.
+     </li>
     </ol> </td>
   </tr>
  </tbody>
