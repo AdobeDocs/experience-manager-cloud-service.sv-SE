@@ -2,10 +2,10 @@
 title: Utveckla AEM för AEM som Cloud Service
 description: Utveckla AEM för AEM som Cloud Service
 translation-type: tm+mt
-source-git-commit: 19fa6391913f556b80607f8dd5215489082b50ab
+source-git-commit: 1c39ddefbeceb52e6a7adefe1d32d4cef164ef3b
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 9%
+source-wordcount: '962'
+ht-degree: 8%
 
 ---
 
@@ -80,6 +80,34 @@ För lokal utveckling av CIF-tillägg med AEM som Cloud Service-SDK följer du s
    Den här variabeln måste även ställas in för AEM som en Cloud Service-miljö.
 
 6. Starta AEM som en Cloud Service-SDK
+
+7. Starta den lokala GraphQL-proxyservern
+
+   Om du vill göra Magento GraphQL-slutpunkten tillgänglig lokalt för CIF-tillägget och CIF-komponenterna använder du följande kommando. GraphQL-slutpunkten är sedan tillgänglig på `http://localhost:3002/graphql`.
+Exempel på Mac OSX:
+
+   ```bash
+   npx local-cors-proxy --proxyUrl https://demo.magentosite.cloud --port 3002 --proxyPartial ''
+   ```
+
+   Exempelfönster:
+
+   ```bash
+   npx local-cors-proxy --proxyUrl https://demo.magentosite.cloud --port 3002 --proxyPartial '""'
+   ```
+   Argumentet `--proxyPartial` måste ta emot en tom sträng.
+
+   Du kan testa den lokala GraphQL-proxyn genom att peka på ett GraphQL-frågeverktyg för att `http://localhost:3002/graphql` testa några frågor.
+
+8. Logga in på AEM SDK och konfigurera CIF så att den lokala GraphQL-proxyservern används
+
+   Navigera till CIF-Cloud Servicens konfiguration (Verktyg > Cloud Services > CIF-konfiguration). Öppna egenskapsvyn för den konfiguration som används av ditt projekt.
+
+   Använd den lokala proxyserverslutpunkten för egenskapen `GraphQL Proxy Path` för `http://localhost:3002/graphql`egenskapen. Spara konfigurationen.
+
+>[!NOTE]
+>
+>Skjut inte in konfigurationen för steg 8 i projektrapporten. Den här konfigurationen krävs bara för en lokal utvecklingsinställning. AEM som en Cloud Service-miljö har redan konfigurerats med GraphQL-proxyn under introduktionen.
 
 Verifiera konfigurationen via OSGI-konsolen:`http://localhost:4502/system/console/osgi-installer`. Listan ska innehålla CIF-tilläggsrelaterade paket, innehållspaket och OSGI-konfigurationer enligt definitionen i funktionsmodellfilen.
 
