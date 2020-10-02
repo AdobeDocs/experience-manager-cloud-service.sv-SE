@@ -1,11 +1,11 @@
 ---
-title: Tillgänglighet i [!DNL Experience Manager Assets].
+title: Tillgänglighet i [!DNL Experience Manager Assets]
 description: Know how accessibility features in [!DNL Adobe Experience Manager] as a Cloud Service help disabled users.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d129538618630faff4bb2542668b8e47ef0e5f6
+source-git-commit: a277d647e3ae95ab18cf13b76ceaaeef6d64cc26
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1834'
 ht-degree: 1%
 
 ---
@@ -43,11 +43,12 @@ Om du vill få tillgång till rapporten med information om efterlevnadsnivåerna
 
 ## Hjälpmedel {#at-support}
 
-Användare med funktionshinder förlitar sig ofta på maskinvara och programvara för att få tillgång till webbinnehåll. Dessa verktyg kallas hjälpmedelstekniker. [!DNL Adobe Experience Manager Assets] arbeta med följande hjälpmedelstekniker så att användarna kan använda de centrala funktionerna:
+Användare med funktionshinder förlitar sig ofta på maskinvara och programvara för att få tillgång till webbinnehåll. Dessa verktyg kallas hjälpmedelstekniker. [!DNL Adobe Experience Manager Assets] arbeta med följande typer av hjälpmedelstekniker för att ge användarna support när de använder programvarans kärnfunktioner:
 
 * Skärmläsare.
 * Programvara för taligenkänning.
 * Tangentbordsanvändning - navigering och genvägar.
+* Hjälpmaskinvara, inklusive switchkontroller, uppdateringsbara blindskriftsskärmar och andra indataenheter.
 * Förstoringsverktygen i användargränssnittet.
 
 ## [!DNL Experience Manager Assets] användningsfall som är tillgängliga {#accessible-assets-use-cases}
