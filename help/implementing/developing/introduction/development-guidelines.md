@@ -2,7 +2,7 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: d7b3306f2415960669a60472ba343bfb394a1012
+source-git-commit: 82f50e50bb93baa280a981708277dd63004b101f
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 1%
@@ -232,9 +232,9 @@ CQ [Mail Service OSGI-tjänsten](https://docs.adobe.com/content/help/en/experien
 
 AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
 
-> [!NOTE]
+>[!NOTE]
 >
-> Observera att Adobe inte stöder SMTP-komprimering över en unik dedikerad IP-adress.
+>Observera att Adobe inte stöder SMTP-komprimering över en unik dedikerad IP-adress.
 
 ### Konfiguration {#email-configuration}
 
