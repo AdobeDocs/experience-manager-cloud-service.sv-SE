@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 5627904800600386d186fdf9123cacbb55c57a49
+source-git-commit: 1f0e6805dc5acd21f323a5ce502363c63bfb0f0a
 workflow-type: tm+mt
-source-wordcount: '1667'
-ht-degree: 84%
+source-wordcount: '1688'
+ht-degree: 79%
 
 ---
 
@@ -20,15 +20,15 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Verktyget Innehållsöverföring kan användas med följande typer av datalager: File Data Store, S3 Data Store, Shared S3 Data Store och Azure Blob Store Data Store.
 
-* Om du använder en *sandlådemiljö* måste du uppgradera din miljö till version 10 juni 2020 eller senare. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
+* Om du använder en *sandlådemiljö* måste du se till att din miljö är aktuell och uppgraderad till den senaste versionen. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
-* Om du vill använda Content Transfer Tool måste du vara adminanvändare i källinstansen och tillhöra administrationsgruppen för AEM i den Cloud Service-instans som du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
+* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra den lokala gruppen AEM administratörer i den Cloud Service du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 
 * Författarens *inmatningsfas* kommer att skalas ned för hela författardriftsättningen. Detta innebär att författar-AEM inte är tillgängligt under hela importen.
 
-* Den rekommenderade övre storleksgränsen på databasen som Content Transfer Tool har stöd för är 20 GB.
+* För närvarande är standardstorleken för MongoDB för en AEM som författarinstans för Cloud Service 32 GB. Vi rekommenderar att du skickar en supportanmälan för att öka storleken på MongoDB för segmentbutiker som är större än 20 GB.
 
 ## Tillgänglighet {#availability}
 
