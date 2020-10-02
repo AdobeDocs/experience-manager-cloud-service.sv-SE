@@ -2,10 +2,10 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 1ebc4f833d4a01f1144c585dc71057f007031e43
+source-git-commit: 90c3fd9a4293821568700148eb8d186b929988a1
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 2%
+source-wordcount: '2237'
+ht-degree: 1%
 
 ---
 
@@ -184,6 +184,47 @@ Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM som e
 ### Konfiguration {#configuration}
 
 Om du vill aktivera en dedikerad IP-adress skickar du en begäran till kundsupporten som ska ange IP-adressinformationen. I begäran bör varje miljö anges, och ytterligare förfrågningar bör göras om nya miljöer behöver funktionen efter den ursprungliga begäran. Sandlådeprogrammiljöer stöds inte.
+
+### Skickar e-post {#sending-email}
+
+AEM som en Cloud Service kräver att utgående e-post krypteras. Avsnitten nedan beskriver hur du begär, konfigurerar och skickar e-post.
+
+**Begär åtkomst**
+
+Som standard är utgående e-post inaktiverad. Aktivera den genom att skicka en supportanmälan med:
+
+1. Det fullständiga domännamnet för e-postservern (till exempel `smtp.sendgrid.net`)
+1. Den port som ska användas. Den bör vara port 465 om den stöds av e-postservern, annars port 587 Observera att port 587 bara kan användas om e-postservern kräver och tillämpar TLS på den porten
+1. Program-id och miljö-id för miljöer som de vill skicka ut från
+1. Oavsett om SMTP-åtkomst krävs för författare, publicering eller båda.
+
+**Skicka e-post**
+
+CQ [Mail Service OSGI-tjänsten](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) bör användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
+
+AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
+
+> [!NOTE]
+>
+> Observera att Adobe inte stöder SMTP-komprimering över en unik dedikerad IP-adress.
+
+**Konfiguration**
+
+E-post i AEM ska skickas med [Day CQ Mail Service OSGi-tjänsten](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
+
+Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html) . För AEM CS måste följande justeringar göras för `com.day.cq.mailer.DefaultMailService OSGI` tjänsten:
+
+Om port 465 har begärts:
+
+* ange `smtp.port` till `465`
+* ange `smtp.ssl` till `true`
+* ange `smtp.starttls` till `false`
+
+Om port 587 har begärts (endast tillåtet om e-postservern inte stöder port 465):
+
+* ange `smtp.port` till `587`
+* ange `smtp.ssl` till `false`
+* ange `smtp.starttls` till `true`
 
 ### Funktionsanvändning {#feature-usage}
 
