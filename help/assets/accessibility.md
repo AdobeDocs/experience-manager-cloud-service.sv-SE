@@ -3,9 +3,9 @@ title: Tillgänglighet i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna [!DNL Adobe Experience Manager] i en Cloud Service kan hjälpa användare med funktionshinder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b866d9317ba1795b34f7e308426240c44bd1131c
+source-git-commit: d0be8ff6c8f9e0c37bd4dc9f66d80e19ab7e1508
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1833'
 ht-degree: 1%
 
 ---
@@ -175,7 +175,7 @@ För metadataåtgärder som vanligtvis utförs av roller som marknadsförare och
 
 ## Söka efter digitala resurser {#search-assets}
 
-En snabb och smidig sökupplevelse av resurser ökar innehållets hastighet. Användningsexempel för snabb innehållshantering är en del av kärnfunktionaliteten [!DNL Assets] . Om du vill starta en sökning från omsökningsfältet kan användarna använda kortkommandon `/` eller använda `Tab` tillsammans med skärmläsare för att snabbt hitta sökalternativet. Skärmläsaren visar namnet på alternativet som [!UICONTROL Search Button] när fokus är på ![sökalternativet](assets/do-not-localize/search_icon.png)för sökalternativ. Användarna kan trycka på `Return` för att öppna rutan Sök. Skärmläsaren lägger inte bara till en berättarröst för det nyckelord som skrivs i sökrutan, utan lägger även till en berättarröst för de förslag till automatisk komplettering som finns i [!DNL Experience Manager Assets]. Användare kan använda en kombination av piltangenter `Return`och `Tab` för att komma åt de olika alternativen för att utlösa en sökning.
+En snabb och smidig sökupplevelse av resurser ökar innehållets hastighet. Användningsexempel för snabb innehållshantering är en del av kärnfunktionaliteten [!DNL Assets] . Om du vill starta en sökning från omsökningsfältet kan användarna använda kortkommandon `/` eller använda `Tab` tillsammans med skärmläsare för att snabbt hitta sökalternativet. Skärmläsaren visar namnet på alternativet som [!UICONTROL Search Button] när fokus är på ![sökalternativet](assets/do-not-localize/search_icon.png)för sökalternativ. Användarna kan trycka på `Return` för att öppna rutan Sök. Skärmläsaren lägger inte bara till en berättarröst för det nyckelord som skrivs i sökrutan utan lägger även till en berättarröst för de förslag som ges av [!DNL Experience Manager Assets]. Användare kan använda en kombination av piltangenter `Return`och `Tab` för att komma åt de olika alternativen för att utlösa en sökning.
 
 Sökfunktionen är mer tillgänglig med följande funktioner:
 
@@ -187,7 +187,7 @@ Sökfunktionen är mer tillgänglig med följande funktioner:
 
 Vid filtrering av sökresultat:
 
-* Sökresultatsidan innehåller informativa titlar som ger en bättre förståelse för användare med skärmläsare.
+* Sökresultatsidan har en informativ titel som ger en bättre förståelse för skärmläsaranvändare.
 * En skärmläsare meddelar alternativen i sökfiltret som utökningsbara dragspelspaneler.
 * Förutsägelser med knappar för blandat läge meddelas av skärmläsare.
 
@@ -203,8 +203,8 @@ Följande funktioner förbättrar tillgängligheten när du delar resurser:
 * Skärmläsarna visas i dialogrutan för länkdelning när du navigerar i bläddringsläge.
 
    * Lägg inte till en berättarröst i tabellinformationen så fort dialogrutan har lästs in.
-   * Kan navigera till alla automatiska förslag som visas.
-   * Lägg till en berättarröst för de automatiska förslagen i fälten Lägg till e-postadress och Sök.
+   * Kan navigera till alla förslag i listan.
+   * Lägg till en berättarröst för de förslag som visas för fälten Lägg till e-postadress och Sök.
 
 ## Tillgänglighet i [!DNL Dynamic Media] {#dynamic-media-accessibility}
 
