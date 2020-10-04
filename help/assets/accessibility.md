@@ -3,9 +3,9 @@ title: Tillgänglighet i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna [!DNL Adobe Experience Manager] i en Cloud Service kan hjälpa användare med funktionshinder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bd27bb5da82c9997f4c562a3d1efad77df66728f
+source-git-commit: b866d9317ba1795b34f7e308426240c44bd1131c
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1834'
 ht-degree: 1%
 
 ---
