@@ -3,9 +3,9 @@ title: Vattenstämpel för resurserna
 description: Lägg till vattenstämpel i era digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: 7ea7af1cf784b6866f3c2484475a8072ff76be2c
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager Assets] Med kan du lägga till en digital vattenstämpel i bilder. [!DNL Assets] har stöd för att använda en bild som vattenstämpel på andra bildfiler. Vattenstämplar kan hjälpa användare att verifiera autenticitet och upphovsrättsskydd för resurserna. En vattenstämpel kan också användas för att ange ett dokuments status, t.ex. konfidentiellt, utkast, giltighet.
 
-Så här konfigurerar du Experience Manager till vattenstämpelresurser:
+Så här konfigurerar du [!DNL Experience Manager] till vattenstämpelresurser:
 
 1. En PNG-fil används som en vattenstämpel. Överför den här filen till DAM-databasen.
 
-1. Gå till Cloud Manager Git-databasen som är kopplad till din miljö. Bekräfta en fil med namnet `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.json` i deras Cloud Manager Git-databas med följande innehåll. Mer information finns i [Så här gör du OSGi-konfiguration i Experience Manager som Cloud Service](/help/implementing/deploying/configuring-osgi.md).
+1. Få åtkomst till [!DNL Cloud Manager] Git-databasen som är kopplad till din miljö. Genomför en fil med namnet `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.json` i deras [!DNL Cloud Manager] Git-databas med följande innehåll. Mer information finns i [Så här gör du OSGi-konfiguration [!DNL Experience Manager] som en Cloud Service](/help/implementing/deploying/configuring-osgi.md).
 
    ```json
    {
