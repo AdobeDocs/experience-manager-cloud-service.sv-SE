@@ -2,9 +2,9 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 86103b40e931ec00e0c15e9dbcbdf396c8eb05c9
+source-git-commit: 0b648e1a0da141f8393c62cb269e5498e2ecd23f
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2219'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ AEM som Cloud Service är en plattform där kunderna kan inkludera anpassad kod 
 AEM loggnings- och loggnivåer hanteras i konfigurationsfiler som lagras som en del av det AEM projektet i Git och distribueras som en del av det AEM projektet via Cloud Manager. Inloggning AEM som en Cloud Service kan delas upp i två logiska uppsättningar:
 
 * AEM loggning, som utför loggning på AEM programnivå
-* Apache HTTPD Web Server/Dispatcher-loggning, som utför loggning av webbservern och Dispatcher på publiceringsnivån.
+* Apache HTTPD Web Server/Dispatcher-loggning, som utför loggning av webbservern och Dispatcher på Publiceringsnivå.
 
 ## AEM loggning {#aem-loggin}
 
@@ -29,7 +29,7 @@ Loggning på AEM programnivå hanteras av tre loggar:
 
 >[!NOTE]
 >
->HTTP-begäranden som opereras från publiceringsskiktets Dispatcher-cache eller CDN för uppströms återspeglas inte i dessa loggar.
+>HTTP-begäranden som hanteras från Dispatcher-cachen för publiceringsnivån eller CDN för det överordnade flödet återspeglas inte i dessa loggar.
 
 ## AEM Java-loggning {#aem-java-logging}
 
@@ -190,7 +190,7 @@ Följande är exempel på de rekommenderade loggningskonfigurationerna (med plat
 
 AEM som en Cloud Services loggning av HTTP-begäran ger insikt i HTTP-begäranden som gjorts till AEM och deras HTTP-svar i tidsordning. Loggen är användbar för att förstå HTTP-begäranden som gjorts till AEM och i vilken ordning de bearbetas och besvaras.
 
-Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och svarspar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Observera att ofta förfrågningar och deras motsvarande svar har andra HTTP-förfrågningar och svar som har intervjuats mellan dem i loggen.
+Nyckeln till att förstå den här loggen är att mappa HTTP-par för begäran och svar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Observera att ofta förfrågningar och deras motsvarande svar har andra HTTP-förfrågningar och svar som har intervjuats mellan dem i loggen.
 
 **Exempellogg**
 
@@ -315,11 +315,11 @@ AEM som en Cloud Service innehåller tre loggar för Apache-webbservrar och disp
 
 * Åtkomstlogg för Apache HTTPD-webbserver
 * Fellogg för Apache HTTPD-webbserver
-* Dispatcher-logg
+* Sändningslogg
 
 Observera att dessa loggar endast är tillgängliga för publiceringsnivån.
 
-Den här uppsättningen loggar ger information om HTTP-begäranden till AEM som en Cloud Service-publiceringsnivå innan dessa begäranden når det AEM programmet. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrarna vanligtvis hanteras av innehåll som cachas av Apache HTTPD-webbservern och AEM Dispatcher, och som aldrig når själva AEM. Därför finns det inga loggsatser för dessa förfrågningar i AEM Java-, Request- eller Access-loggar.
+Den här uppsättningen loggar ger information om HTTP-begäranden till AEM som en Cloud Service-publiceringsnivå innan dessa begäranden når det AEM programmet. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrar betjänas av innehåll som cachas av Apache HTTPD-webbservern och AEM Dispatcher, och som aldrig når själva AEM. Därför finns det inga loggsatser för dessa förfrågningar i AEM Java-, Request- eller Access-loggar.
 
 ### Åtkomstlogg för Apache HTTPD-webbserver {#apache-httpd-web-server-access-log}
 
@@ -456,7 +456,7 @@ Define REWRITE_LOG_LEVEL Debug
 </IfDefine>
 ```
 
-## Dispatcher Log {#dispatcher-log}
+## Dispatcher-logg {#dispatcher-log}
 
 **Exempel**
 
@@ -487,7 +487,7 @@ Define REWRITE_LOG_LEVEL Debug
 <td>/content/experience-fragments/wknd/language-masters/en/contributors/sofia-sjoeberg/master/_jcr_content/root/responsivegrid/image.coreimg.100.500.jpeg/1572236359031/ayo-ogunseinde-237739.jpeg</td>
 </tr>
 <tr>
-<td>Dispatcher svarsstatuskod</td>
+<td>Statuskod för avsändarens svar</td>
 <td>/content/experience-fragments/wknd/language-masters/en/contributors/sofia-sjoeberg/master/_jcr_content/root/responsivegrid/image.coreimg.100.500.jpeg/1572236359031/ayo-ogunseinde-237739.jpeg</td>
 </tr>
 <tr>
@@ -509,13 +509,13 @@ Define REWRITE_LOG_LEVEL Debug
 </tbody>
 </table>
 
-### Konfigurera Dispatcher fellogg {#configuring-the-dispatcher-error-log}
+### Konfigurera felloggen för Dispatcher {#configuring-the-dispatcher-error-log}
 
 Loggnivåer för dispatcher definieras av variabeln DISP_LOG_LEVEL i filen `conf.d/variables/global.var`.
 
 Den kan anges till Error, Warn, Info, Debug och Trace1 med standardvärdet Warn.
 
-Även om Dispatcher-loggning har stöd för flera andra nivåer av loggningsgranularitet rekommenderar Cloud Servicen att du använder de nivåer som beskrivs nedan.
+Även om Dispatcher-loggning har stöd för flera andra nivåer av loggningsgranularitet rekommenderar AEM som en Cloud Service att du använder de nivåer som beskrivs nedan.
 
 Om du vill ange loggnivån per miljö använder du lämplig villkorsgren i `global.var` filen enligt beskrivningen nedan:
 
@@ -550,7 +550,7 @@ AEM loggar finns i mappen `crx-quickstart/logs`där följande loggar kan visas:
 * Logg för AEM HTTP-begäran: `request.log`
 * AEM HTTP Access-logg: `access.log`
 
-Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Läs [Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html) om hur du startar Dispatcher.
+Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Mer information om hur du startar Dispatcher finns i [Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html) .
 
 Så här hämtar du loggarna:
 
@@ -561,7 +561,7 @@ Så här hämtar du loggarna:
 1. Inspect loggarna: De kan nås under mappen XYZ, där följande loggar kan visas:
    * Åtkomstlogg för Apache HTTPD-webbserver - `httpd_access.log`
    * Felloggar för Apache HTTPD-webbserver - `httpd_error.log`
-   * Dispatcher loggar - `dispatcher.log`
+   * Utskicksloggar - `dispatcher.log`
 
 Loggar skrivs också ut direkt till terminalutdata. Oftast ska loggarna vara DEBUG, vilket kan uppnås genom att skicka felsökningsnivån som en parameter när Docker körs. Till exempel:
 
@@ -588,7 +588,7 @@ Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas
 
 I supportärendet ska man ange
 
-* Splunk-värden
+* Splunk HEC-slutpunktsadress
 * Splunk-indexvärdet
 * Splunk-porten
 * Splunk HEC-token. Mer information finns [på den här sidan](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples) .
@@ -603,21 +603,21 @@ Här nedan hittar du ett exempel på en kundsupportförfrågan:
 
 Program 123, Production Env
 
-* Splunk-värd: `splunk-hec-ext.acme.com`
+* Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
 * Segmentindex: acme_123prod (kunden kan välja vilken namnkonvention man vill)
 * Splunk-port: 443
 * Splunk HEC-token: ABC123
 
 Program 123, Stage Env
 
-* Splunk-värd: `splunk-hec-ext.acme.com`
+* Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
 * Segmentindex: acme_123stage
 * Splunk-port: 443
 * Splunk HEC-token: ABC123
 
 Program 123, Dev Envs
 
-* Splunk-värd: `splunk-hec-ext.acme.com`
+* Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
 * Segmentindex: acme_123dev
 * Splunk-port: 443
 * Splunk HEC-token: ABC123
