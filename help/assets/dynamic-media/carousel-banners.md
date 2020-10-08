@@ -2,7 +2,7 @@
 title: Karusellbanner
 description: Lär dig hur du arbetar med karusellbanners i Dynamic Media
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
 workflow-type: tm+mt
 source-wordcount: '4522'
 ht-degree: 4%
@@ -26,7 +26,7 @@ På din webbplats kan en karusellbanderoll se ut så här:
 
 Här kan du navigera bland bilderna (genom att klicka på siffrorna). Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder som du lägger till i karusellbanderollen har stöd för både hotspot-områden och bildscheman, där användarna kan trycka eller gå till en hyperlänk eller komma åt ett snabbfönster.
 
-I det här exemplet har en användare tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
+I det här exemplet har användaren tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
@@ -242,7 +242,8 @@ Se [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fra
 >[!NOTE]
 >
 >Observera att verktygen för delning av sociala medier i Carousel Banner inte stöds när du bäddar in visningsprogrammet i en Experience Fragment.
-Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
+>
+>Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
 Kom ihåg att spara ditt arbete när du lägger till hotspot-områden eller bildscheman i en bild. Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöds under den aktuella skaps-/redigeringssessionen.
 
@@ -292,6 +293,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
    * Tryck på **[!UICONTROL Hyperlink]**.
 
       * Om du är kund hos AEM Sites trycker du på ikonen Platsväljare (mapp) för att navigera till en URL.
+
          >[!NOTE]
          Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
@@ -310,7 +312,7 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-frag
 
          >[!NOTE]
          Observera att verktygen för delning av sociala medier i Carousel Banner inte stöds när du bäddar in visningsprogrammet i en Experience Fragment.
-Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
+         Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
    Du kan också förhandsvisa hur karusellbanderollen kommer att se ut. Se [(valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
@@ -447,7 +449,7 @@ Processen med att skapa snabbvyns URL är i princip motsatt den process som anv�
 
 Se [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image-map-variables).
 
-Det sista steget för att utlösa snabbvyns URL och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap att lära sig hur man på bästa sätt aktiverar snabbvyimplementeringen från rätt steg med en klar snabbvywebbadress.
+Det sista steget för att utlösa snabbvyns URL och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap att lära sig hur man på bästa sätt aktiverar snabbvyimplementeringen från rätt steg med en färdig snabbvywebbadress.
 
 ## Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
