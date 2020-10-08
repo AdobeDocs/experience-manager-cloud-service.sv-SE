@@ -2,7 +2,7 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 1f0e6805dc5acd21f323a5ce502363c63bfb0f0a
+source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 79%
@@ -140,8 +140,10 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 1. Gå till sidan *Overview* och välj den migreringsuppsättning som du vill utföra ändringsextraheringen för. Klicka på **Extract** för att starta uppdateringsextraheringen. Dialogrutan **Migration Set extraction** visas.
 
    >[!IMPORTANT]
+   >
    >Du bör inaktivera alternativet **Overwrite staging container during extraction**.
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/11-topup-extraction.png)
+   >
+   >![bild](/help/move-to-cloud-service/content-transfer-tool/assets/11-topup-extraction.png)
 
 ### Inmatningsprocess i innehållsöverföring {#ingestion-process}
 
@@ -151,17 +153,16 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/12-content-ingestion.png)
 
-
 1. När åtkomsten är klar uppdateras statusen i fältet **PUBLISH INGESTION** till **FINISHED**.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/15-ingestion-complete.png)
-
 
 #### Uppdatera inmatning {#top-up-ingestion-process}
 
 Content Transfer Tool har en funktion för differentiell *innehållsuppdatering* som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
 >[!NOTE]
+>
 >Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service.
 
 När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatningsmetoden för uppdateringar. Följ stegen nedan:
@@ -169,8 +170,10 @@ När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatnin
 1. Navigera till sidan *Overview* och välj den migreringsuppsättning som du vill utföra uppdateringsinmatningen för. Klicka på **Ingest** för att starta uppdateringsextraheringen. Dialogrutan **Migration Set Ingestion** visas.
 
    >[!IMPORTANT]
+   >
    >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag** , för att förhindra att befintligt innehåll tas bort från den tidigare inmatningsaktiviteten.
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/16-topup-ingestion.png)
+   >
+   >![bild](/help/move-to-cloud-service/content-transfer-tool/assets/16-topup-ingestion.png)
 
 ### Visa loggar för en migreringsuppsättning {#viewing-logs-migration-set}
 
