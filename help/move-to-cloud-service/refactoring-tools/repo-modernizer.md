@@ -2,7 +2,7 @@
 title: Databasmodernisering
 description: Databasmodernisering
 translation-type: tm+mt
-source-git-commit: 5d2b14c827603297a59cba7180fc1a68de0c841a
+source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 3%
@@ -40,4 +40,5 @@ Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service
    Se **[Git-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)** om du vill lära dig hur du använder det här verktyget.
 
    >[!NOTE]
+   >
    >Databasmoderniseringen utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.
