@@ -1,8 +1,8 @@
 ---
-title: Inloggning för första gången - molntjänst
-description: Inloggning för första gången - molntjänst
+title: Inloggning för första gången - Cloud Service
+description: Inloggning för första gången - Cloud Service
 translation-type: tm+mt
-source-git-commit: 57206e36725e28051b2468d47da726e318bd763b
+source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -24,7 +24,7 @@ När du har loggat in [!UICONTROL Cloud Manager]ser du landningssidan enligt fig
 
 >[!NOTE]
 >
->Program som ingår i molntjänsten anges av underrubriken **Experience Manager Cloud** i motsats till **Experience Manager** för AMS-program (se nedan).
+>Program som finns på Cloud Servicen markeras med underrubriken **Experience Manager Cloud** (till skillnad från **Experience Manager** för AMS-program), vilket visas nedan.
 
 ![](assets/first_timelogin1.png)
 
@@ -35,25 +35,25 @@ Beroende på dina omständigheter kan du se något av följande två alternativ:
 
 * **Program finns redan i Cloud Manager**
 
-## Lägga till ett nytt program i molntjänsten utan befintliga program {#no-program}
+## Lägga till ett nytt program i Cloud Service utan befintliga program {#no-program}
 
 
 På landningssidan får du instruktioner att skapa ditt första program, vilket visas i bilden nedan.
 ![](assets/first_timelogin0.png)
 
 
-## Lägga till ett nytt program i molntjänsten med befintliga program {#existing-program}
+## Lägga till ett nytt program i Cloud Service med befintliga program {#existing-program}
 
 
-1. Logga in på **Adobe[!UICONTROL Experience Cloud]**så ser du listan över** program och produkter **.
+1. Logga in på **Adobe[!UICONTROL Experience Cloud]** så ser du listan över **program och produkter**.
 
    ![](assets/first_timelogin1.png)
 
-   Program som ingår i molntjänsten anges av underrubriken **Experience Manager Cloud** (till skillnad från **Experience Manager** för AMS-program).
+   Program som finns på Cloud Servicen anges av underrubriken **Experience Manager Cloud** (till skillnad från **Experience Manager** för AMS-program).
 
    >[!NOTE]
    >For example, in the figure above, **We.Retail Global** is an AMS program and **We.Retail-Prod Program - Prod** is a program available via Cloud Service.
 
-1. Mer information om hur du lägger till ett program från skärmen **Program och produkter** för att skapa ett nytt program i molntjänsten finns i [Skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/creating-a-program.md).
+1. Mer information om hur du lägger till ett program från skärmen **Program och produkter** för att skapa ett nytt program i Cloud Servicen finns i [Skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/creating-a-program.md).
 
 
