@@ -3,7 +3,7 @@ title: Konfigurera AEM Assets som en Cloud Service med varumärkesportalen
 description: Konfigurera AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: ad1f1e8c0ba5409cd645489263f349b29f080d27
+source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 21%
@@ -30,7 +30,6 @@ AEM Assets som Cloud Service konfigureras med varumärkesportalen via Adobe Deve
 >[!NOTE]
 >
 >En AEM Assets som Cloud Service får endast konfigureras med en Brand Portal-klient.
-
 
 ## Förutsättningar {#prerequisites}
 
@@ -64,16 +63,10 @@ IMS-konfigurationen har två steg:
 Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Developer Console.
 
 1. Logga in på AEM Assets.
-
 1. From the **Tools** panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
-
-
 1. Klicka på Adobe IMS-konfigurationer **[!UICONTROL Create]**. Det dirigeras om till **[!UICONTROL Adobe IMS Technical Account Configuration]** sidan. By default, the **Certificate** tab opens.
-
 1. Välj **[!UICONTROL Adobe Brand Portal]** i **[!UICONTROL Cloud Solution]** listrutan.
-
 1. Markera **[!UICONTROL Create new certificate]** kryssrutan och ange ett **alias** för den offentliga nyckeln. Aliaset används som namn på den offentliga nyckeln.
-
 1. Klicka på **[!UICONTROL Create certificate]**. Klicka sedan på **[!UICONTROL OK]** för att generera den offentliga nyckeln.
 
    ![Skapa ett certifikat](assets/ims-config2.png)
@@ -218,8 +211,6 @@ Utför följande steg för att konfigurera IMS-kontot.
 >
 >Kontrollera att IMS-konfigurationen klarar hälsokontrollen. Om konfigurationen inte godkänns i hälsokontrollen är den ogiltig. Du måste ta bort den och skapa en ny, giltig konfiguration.
 
-
-
 ### Konfigurera molntjänsten{#configure-the-cloud-service}
 
 Så här konfigurerar du molntjänsten Brand Portal:
@@ -281,19 +272,15 @@ Utför följande steg för att validera konfigurationen:
    >
    >Undvik att inaktivera distributionsagenten eftersom det kan göra att distributionen av resurserna (i kön) misslyckas.
 
-
 Du kan nu:
 
 * [Publicera resurser från AEM Assets till varumärkesportalen](publish-to-brand-portal.md)
 * [Publicera mappar från AEM Assets till varumärkesportalen](publish-to-brand-portal.md#publish-folders-to-brand-portal)
 * [Publicera samlingar från AEM Assets till varumärkesportalen](publish-to-brand-portal.md#publish-collections-to-brand-portal)
-
 * [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
 * [Publicera taggar på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
-
 See [Brand Portal documentation](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) for more information.
-
 
 ## Distributionsloggar {#distribution-logs}
 
@@ -302,7 +289,6 @@ Du kan övervaka distributionsagentloggarna för publiceringsarbetsflödet.
 Vi har till exempel publicerat en resurs från AEM Assets till varumärkesportalen för att validera konfigurationen.
 
 1. Följ stegen (från 1 till 4) som visas i avsnittet [Testa konfiguration](#test-configuration) och navigera till distributionsagentsidan.
-
 1. Klicka **[!UICONTROL Logs]** för att visa bearbetnings- och felloggarna.
 
    ![](assets/test-bpconfig5.png)
@@ -315,10 +301,12 @@ Distributionsagenten har genererat följande loggar:
 Följande begärande- och svarsloggar genereras när resursen publiceras:
 
 **Begäranden från distributionsagenten**:
+
 * DSTRQ2 (Begäran 2): Begäran om publicering av resurser utlöses.
 * DSTRQ3 (Request 3): Systemet utlöser en annan begäran om att publicera AEM Assets-mappen (där resursen finns) och replikerar mappen i varumärkesportalen.
 
 **Svar från distributionsagenten**:
+
 * queue-bpdistributionagent0 (DSTRQ2): Resursen publiceras på varumärkesportalen.
 * queue-bpdistributagent0 (DSTRQ3): Systemet replikerar AEM Assets-mappen (som innehåller resursen) i varumärkesportalen.
 
@@ -327,8 +315,6 @@ I exemplet ovan utlöses ytterligare en begäran och ett svar. Det gick inte att
 >[!NOTE]
 >
 >Ytterligare begäran genereras om den överordnade mappen inte finns i varumärkesportalen eller har ändrats i AEM Assets.
-
-
 
 <!--
 
@@ -358,4 +344,4 @@ Go to `/system/console/slingmetrics` for statistics related to the distributed c
    Comment Type: draft
 
    <li>Step text</li>
-   -->
+-->
