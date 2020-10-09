@@ -4,9 +4,9 @@ description: Lär dig mer om metadatatyperna och [!DNL Adobe Experience Manager 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: eb30e4f948c748c0c0e39f32c8870aff116a7a86
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1907'
 ht-degree: 4%
 
 ---
@@ -213,7 +213,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 ### Utskriftsspecifika metadata {#print-specific-metadata}
 
 * PDF och PDF/X - Adobe PDF och tredjepartsprogram.
-* PRISM - [publiceringskrav för branschstandardmetadata](https://www.prismstandard.org).
+* PRISM - [publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` - XMP metadata för sidindelad text.
 
