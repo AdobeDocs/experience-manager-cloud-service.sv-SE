@@ -236,10 +236,11 @@ Förutom standardalternativen innehåller [tidslinjen](/help/assets/manage-digit
    * **Ta bort**
 
 >[!NOTE]
-Kommentarerna är:
-* Standardfunktionalitet för alla resurser
-* Skapat i tidslinjen
-* Relaterat till fragmentresursen
+>
+>Kommentarerna är:
+>* Standardfunktionalitet för alla resurser
+>* Skapat i tidslinjen
+>* Relaterat till fragmentresursen
 
 Anteckningar (för innehållsfragment) är:
 * Anges i fragmentredigeraren
@@ -274,7 +275,8 @@ De visas sida vid sida, där:
 * **Klart** återgår till konsolen
 
 >[!NOTE]
-Du kan inte redigera fragmentinnehållet när du jämför fragment.
+>
+>Du kan inte redigera fragmentinnehållet när du jämför fragment.
 
 ![jämföra](assets/cfm-managing-06.png)
 
@@ -291,8 +293,9 @@ Du kan återgå till en viss version av fragmentet:
 ## Publicera och referera till ett fragment {#publishing-and-referencing-a-fragment}
 
 >[!CAUTION]
-Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
-Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
+>
+>Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
+>Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 Innehållsfragment måste publiceras för användning i publiceringsmiljön. De kan publiceras:
 
@@ -300,7 +303,8 @@ Innehållsfragment måste publiceras för användning i publiceringsmiljön. De 
 * När du [publicerar en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
 
 >[!CAUTION]
-När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i avsnittet även påverkar de refererade sidorna.
+>
+>När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i avsnittet även påverkar de refererade sidorna.
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 
@@ -310,10 +314,12 @@ Så här tar du bort ett fragment:
 2. Markera fragmentet.
 
    >[!NOTE]
-   Åtgärden **Ta bort** är inte tillgänglig som en snabbåtgärd.
+   >
+   >Åtgärden **Ta bort** är inte tillgänglig som en snabbåtgärd.
 
 3. Välj **Ta bort** i verktygsfältet.
 4. Bekräfta åtgärden **Ta bort** .
 
    >[!CAUTION]
-   Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
+   >
+   >Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.

@@ -136,7 +136,8 @@ Så här gör du ett projekt inaktivt (eller aktivt):
 1. Öppna projektet i **projektkonsolen** och hitta sedan rutan **Projektinformation** .
 
    >[!NOTE]
-   Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
+   >
+   >Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
 
 1. Tryck/klicka på **Redigera**.
 1. Ändra väljaren från **Aktiv** till **Inaktiv** (eller tvärtom).

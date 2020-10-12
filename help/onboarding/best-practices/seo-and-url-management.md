@@ -364,8 +364,8 @@ Om du vill skapa en webbplatskarta programmatiskt registrerar du en Sling-servle
 >
 >Du kan registrera en Sling-servlet för att lyssna efter väljaren `sitemap` med tillägget `xml`. Det gör att servleten bearbetar begäran varje gång en URL begärs som slutar med:
 >    `/<path-to>/page.sitemap.xml`
-Du kan sedan hämta den begärda resursen från begäran och generera en webbplatskarta från den punkten i innehållsträdet med API:erna för JCR.
-Den här typen av metod ger en fördel när du har flera webbplatser som hanteras från samma instans. En begäran till `/content/siteA.sitemap.xml` genererar en webbplatskarta för `siteA`, medan en begäran till `/content/siteB.sitemap.xml` genererar en webbplatskarta för `siteB` utan att du behöver skriva ytterligare kod.
+>Du kan sedan hämta den begärda resursen från begäran och generera en webbplatskarta från den punkten i innehållsträdet med API:erna för JCR.
+>Den här typen av metod ger en fördel när du har flera webbplatser som hanteras från samma instans. En begäran till `/content/siteA.sitemap.xml` genererar en webbplatskarta för `siteA`, medan en begäran till `/content/siteB.sitemap.xml` genererar en webbplatskarta för `siteB` utan att du behöver skriva ytterligare kod.
 
 ### Skapa 301-omdirigeringar för äldre URL:er {#creating-redirects-for-legacy-urls}
 

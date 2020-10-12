@@ -48,12 +48,11 @@ Målet med Sling Resource Merger i AEM är att
 >Detta beror på att innehållet i `/libs` kan skrivas över när uppgraderingar tillämpas på din instans.
 >
 >* Övertäckningar är beroende av [sökvägar](/help/implementing/developing/introduction/overlays.md#search-paths).
-   >
-   >
-* Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
+>
+>* Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
 >
 >
-Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
+>Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
 
 ### Egenskaper {#properties}
 

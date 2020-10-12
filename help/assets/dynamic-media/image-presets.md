@@ -31,9 +31,8 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
    >[!NOTE]
    >
    >* Statiska återgivningar visas i den övre halvan av rutan. Dynamiska återgivningar visas i den nedre halvan. Om du bara använder dynamiska återgivningar kan du använda URL-adressen för att visa bilden. Knappen visas bara om du väljer en dynamisk återgivning. **[!UICONTROL URL]** Knappen visas bara om du väljer en förinställning för responsiv bild. **[!UICONTROL RESS]**
-      >
-      >
-   * Systemet visar flera återgivningar när du väljer **[!UICONTROL Renditions]** i detaljvyn för en resurs. Du kan öka antalet förinställningar som visas. See [Increasing the number of image presets that display](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display).
+   >
+   >* Systemet visar flera återgivningar när du väljer **[!UICONTROL Renditions]** i detaljvyn för en resurs. Du kan öka antalet förinställningar som visas. See [Increasing the number of image presets that display](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display).
 
 
    ![chlimage_1-208](assets/chlimage_1-208.png)

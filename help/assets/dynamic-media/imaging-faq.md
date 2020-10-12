@@ -146,7 +146,8 @@ Du måste initiera begäran om att använda smart bildåtergivning; den inte akt
 Förfrågningar behandlas i den ordning som de tas emot av teknisk support, enligt väntelistan.
 
 >[!NOTE]
-Det kan ta lång tid eftersom Adobe måste rensa cachen för att kunna aktivera Smart Imaging. Därför kan bara ett fåtal kundövergångar hanteras vid en viss tidpunkt.
+>
+>Det kan ta lång tid eftersom Adobe måste rensa cachen för att kunna aktivera Smart Imaging. Därför kan bara ett fåtal kundövergångar hanteras vid en viss tidpunkt.
 
 ## Vilka är riskerna med att byta till Smart Imaging? {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
@@ -168,7 +169,8 @@ Under den första övergången träffar de icke-cachelagrade bilderna direkt Ado
 1. Upprepa testet i olika webbläsare och under olika användarförhållanden.
 
 >[!NOTE]
-Alla bilder konverteras inte. Smart Imaging avgör om konverteringen behövs för att förbättra prestandan. I vissa fall, där det inte finns någon förväntad prestandaökning eller där formatet inte är JPEG eller PNG, konverteras inte bilden.
+>
+>Alla bilder konverteras inte. Smart Imaging avgör om konverteringen behövs för att förbättra prestandan. I vissa fall, där det inte finns någon förväntad prestandaökning eller där formatet inte är JPEG eller PNG, konverteras inte bilden.
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
 

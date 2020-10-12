@@ -93,12 +93,13 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
    ![fältegenskaper](assets/cfm-models-05.png)
 
    >[!NOTE]
-   För datatypen **Flerradig text** går det att definiera **standardtypen** som endera:
-   * **RTF-text**
-   * **Markdown**
-   * **Oformaterad text**
-   Om inget anges används standardvärdet **RTF** för det här fältet.
-   Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
+   >
+   >För datatypen **Flerradig text** går det att definiera **standardtypen** som endera:
+   >* **RTF-text**
+   >* **Markdown**
+   >* **Oformaterad text**
+   >Om inget anges används standardvärdet **RTF** för det här fältet.
+   >Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
 
 1. **Ta bort ett fält**
 
@@ -113,7 +114,8 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 ## Ta bort en innehållsfragmentmodell {#deleting-a-content-fragment-model}
 
 >[!CAUTION]
-Om du tar bort en innehållsfragmentmodell kan det påverka beroende fragment.
+>
+>Om du tar bort en innehållsfragmentmodell kan det påverka beroende fragment.
 
 Så här tar du bort en innehållsfragmentmodell:
 
@@ -123,7 +125,8 @@ Så här tar du bort en innehållsfragmentmodell:
 1. Välj en modell, följt av **Ta bort** i verktygsfältet.
 
    >[!NOTE]
-   Om det refereras till modellen visas en varning. Vidta lämpliga åtgärder.
+   >
+   >Om det refereras till modellen visas en varning. Vidta lämpliga åtgärder.
 
 ## Publicera en innehållsfragmentmodell {#publishing-a-content-fragment-model}
 
@@ -137,4 +140,5 @@ Så här publicerar du en innehållsfragmentmodell:
 1. Välj en modell, följt av **Publicera** i verktygsfältet.
 
    >[!NOTE]
-   Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
+   >
+   >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
