@@ -2,7 +2,7 @@
 title: ContextHub Diagnostics
 description: ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket
 translation-type: tm+mt
-source-git-commit: e361f24b943eff68982a37ac0dc2597f92450026
+source-git-commit: 1c518830f0bc9d9c7e6b11bebd6c0abd668ce040
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%
@@ -42,7 +42,7 @@ I avsnittet Moduler visas alla ContextHub-gränssnittsmoduler som har konfigurer
 
 ## Clientlibs {#clientlibs}
 
-I Clientlibs-avsnittet visas alla klientbiblioteksmappar som ContextHub har läst in. Klientbiblioteken kategoriseras enligt följande:
+I Clientlibs-avsnittet visas alla [klientbiblioteksmappar](/help/implementing/developing/introduction/clientlibs.md) som ContextHub har läst in. Klientbiblioteken kategoriseras enligt följande:
 
 * **kernel.js:** Klientbibliotek som implementerar ContextHub-ramverket, segmentmotorn och lagringstyperna.
 * **ui.js:** Klientbibliotek som implementerar gränssnittstyperna ContextHub och UI.
