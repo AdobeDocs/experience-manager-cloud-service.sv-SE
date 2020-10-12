@@ -10,9 +10,9 @@ audience: developer
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 translation-type: tm+mt
-source-git-commit: 7fd7a8a5387c8b204e8e470a2571679b89701074
+source-git-commit: 1c518830f0bc9d9c7e6b11bebd6c0abd668ce040
 workflow-type: tm+mt
-source-wordcount: '2620'
+source-wordcount: '2592'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Vi klonar [Veniaprojektet](https://github.com/adobe/aem-cif-guides-venia) och å
 
 ## Klientbibliotek och modulen ui.front {#introduction-to-client-libraries}
 
-Den CSS och JavaScript som ansvarar för att återge temat/formaten för butiken hanteras i AEM av ett [klientbibliotek](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html) eller klientlibs för kort. Klientbibliotek erbjuder en mekanism för att ordna CSS och Javascript i ett projekts kod och sedan leverera på sidan.
+Den CSS och JavaScript som ansvarar för att återge temat/formaten för butiken hanteras i AEM av ett [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) eller klientlibs för kort. Klientbibliotek erbjuder en mekanism för att ordna CSS och Javascript i ett projekts kod och sedan leverera på sidan.
 
 Märkesspecifika format kan användas på AEM CIF Core-komponenter genom att lägga till och åsidosätta den CSS som hanteras av dessa klientbibliotek. Det är viktigt att förstå hur klientbibliotek är strukturerade och inkluderas på sidan.
 
@@ -77,7 +77,7 @@ Modulen `ui.frontend` är också en Maven-modul och integrerad med det större p
 
 ![ui.front-to-ui.apps-arkitektur](../assets/style-cif-component/ui-frontend-architecture.png)
 
-*Kompilerad CSS och Javascript kopieras från`ui.frontend`modulen till`ui.apps`modulen som ett klientbibliotek under ett Maven-bygge*
+*Kompilerad CSS och Javascript kopieras från `ui.frontend` modulen till `ui.apps` modulen som ett klientbibliotek under ett Maven-bygge*
 
 ## Uppdatera Teaser Style {#ui-frontend-module}
 
@@ -249,7 +249,7 @@ Kontrollera sedan att klientbiblioteken finns med på sidan.
    </html>
    ```
 
-   Klientbibliotek som levereras till sidan är prefix `/etc.clientlibs` och hanteras via en [proxy](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) för att undvika att exponera något känsligt i `/apps` eller `/libs`.
+   Klientbibliotek som levereras till sidan är prefix `/etc.clientlibs` och hanteras via en [proxy](/help/implementing/developing/introduction/clientlibs.md) för att undvika att exponera något känsligt i `/apps` eller `/libs`.
 
    Obs `venia/clientlibs/clientlib-site.min.css` och `venia/clientlibs/clientlib-site.min.js`. Detta är de kompilerade CSS- och JavaScript-filerna som härleds från `ui.frontend` modulen.
 
@@ -482,6 +482,6 @@ Använd [AEM Style System](https://docs.adobe.com/content/help/en/experience-man
 * [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
 * [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
 * [Konfigurera en lokal AEM utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-* [Klientbibliotek](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)
+* [Klientbibliotek](/help/implementing/developing/introduction/clientlibs.md)
 * [Komma igång med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 * [Utveckla med Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
