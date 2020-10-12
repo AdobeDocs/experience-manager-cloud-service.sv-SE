@@ -2,7 +2,7 @@
 title: Utökar ContextHub
 description: Definiera nya typer av ContextHub-butiker och moduler när de angivna lagren inte uppfyller dina lösningskrav
 translation-type: tm+mt
-source-git-commit: ddfdcf74977adf00bc0ab01b0b1a669781f0d730
+source-git-commit: 1c518830f0bc9d9c7e6b11bebd6c0abd668ce040
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%
@@ -18,9 +18,7 @@ Definiera nya typer av ContextHub-butiker och moduler när de angivna lagren int
 
 ContextHub-butiker skapas från registrerade butikskandidater. Om du vill skapa en anpassad butik måste du skapa och registrera en butikskandidater.
 
-<!--The javascript file that includes the code that creates and registers the store candidate must be included in a [client library folder](/help/sites-developing/clientlibs.md#creating-client-library-folders). The category of the folder must match the following pattern:-->
-
-Den javascript-fil som innehåller koden som skapar och registrerar lagringskandidaten måste inkluderas i en klientbiblioteksmapp. Mappens kategori måste matcha följande mönster:
+Den javascript-fil som innehåller koden som skapar och registrerar lagringskandidaten måste inkluderas i en [klientbiblioteksmapp](/help/implementing/developing/introduction/clientlibs.md). Mappens kategori måste matcha följande mönster:
 
 ```xml
 contexthub.store.[storeType]
@@ -101,9 +99,7 @@ Skapa och registrera återgivningsklassen i en anonym funktion som körs automat
 }());
 ```
 
-<!--The javascript file that includes the code that creates and registers the renderer must be included in a [client library folder](/help/sites-developing/clientlibs.md#creating-client-library-folders). The category of the folder must match the following pattern:-->
-
-Den javascript-fil som innehåller koden som skapar och registrerar återgivaren måste inkluderas i en klientbiblioteksmapp. Mappens kategori måste matcha följande mönster:
+Den javascript-fil som innehåller koden som skapar och registrerar återgivaren måste inkluderas i en [klientbiblioteksmapp](/help/implementing/developing/introduction/clientlibs.md). Mappens kategori måste matcha följande mönster:
 
 ```javascript
 contexthub.module.[moduleType]
