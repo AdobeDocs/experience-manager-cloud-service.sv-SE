@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
 translation-type: tm+mt
-source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
+source-git-commit: 056fb27108d8f78acfc4658daa92912a48112f1f
 workflow-type: tm+mt
-source-wordcount: '3221'
+source-wordcount: '3228'
 ht-degree: 0%
 
 ---
@@ -115,8 +115,8 @@ När du skapar en ny redigerbar mall:
 >Redigerarens klientbibliotek förutsätter att `cq.shared` namnutrymmet finns på innehållssidorna, och om det inte finns något kommer JavaScript-felet att `Uncaught TypeError: Cannot read property 'shared' of undefined` uppstå.
 >
 >Alla exempelinnehållssidor innehåller `cq.shared`så allt innehåll som baseras på dem inkluderar automatiskt `cq.shared`. Om du däremot bestämmer dig för att skapa egna innehållssidor från grunden utan att basera dem på exempelinnehåll, måste du se till att inkludera `cq.shared` namnutrymmet.
-
-<!--See [Using Client-Side Libraries](/help/sites-developing/clientlibs.md) for further information.-->
+>
+>Mer information finns i [Använda bibliotek](/help/implementing/developing/introduction/clientlibs.md) på klientsidan.
 
 >[!CAUTION]
 >
