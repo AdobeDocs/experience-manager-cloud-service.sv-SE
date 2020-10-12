@@ -2,7 +2,7 @@
 title: SPA och serversidesrendering
 description: Om du använder SSR (server side rendering) i SPA-filen kan det snabba upp den inledande inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
 translation-type: tm+mt
-source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
+source-git-commit: 056fb27108d8f78acfc4658daa92912a48112f1f
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 0%
@@ -118,7 +118,7 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
     </ul> </td>
    <td>
     <ul>
-     <li>Klientlib-resurser som krävs av programmet, som CSS och JavaScript, måste göras tillgängliga av AEM utvecklare via <code>allowProxy</code> egenskapen<br /> </li>
+     <li>Klientlib-resurser som krävs av programmet, som CSS och JavaScript, måste göras tillgängliga av AEM utvecklare via <code><a href="/help/implementing/developing/introduction/clientlibs.md">allowProxy</a></code> egenskapen<br /> </li>
      <li>Resurserna måste synkroniseras mellan AEM och Adobe I/O Runtime<br /> </li>
      <li>Om du vill aktivera redigering av SPA kan det behövas en proxyserver för Adobe I/O Runtime</li>
     </ul> </td>
