@@ -2,9 +2,9 @@
 title: Bildprofiler för Dynamic Media
 description: Skapa dynamiska mediebildprofiler som innehåller inställningar för oskarp mask och smart beskärning, eller smarta färgrutor eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
 translation-type: tm+mt
-source-git-commit: 35bf35cb68ffc82539fe65750486a6db98480207
+source-git-commit: 867303fd42ed73d7c7dfb5cc1e3612f05ffea10f
 workflow-type: tm+mt
-source-wordcount: '2652'
+source-wordcount: '2653'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 >[!IMPORTANT]
 >
->Bildprofiler kan inte användas för PDF-, GIF- eller INDD-filer (Adobe InDesign).
+>Bildprofiler kan inte användas för PDF-, animerade GIF- eller INDD-filer (Adobe InDesign).
 
 ## Beskärningsalternativ {#crop-options}
 
