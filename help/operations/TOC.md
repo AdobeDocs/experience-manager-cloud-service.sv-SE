@@ -1,13 +1,13 @@
 ---
 sub-product: Använda och underhålla AEM as a Cloud Service
 user-guide-title: Använda och underhålla AEM as a Cloud Service
-breadcrumb-title: Operations Guide
-user-guide-description: Learn about the back-end operations of Experience Manager as a Cloud Service, such as indexing and maintenance tasks.
+breadcrumb-title: Handbok
+user-guide-description: Lär dig mer om backend-funktionerna i Experience Manager as a Cloud Service såsom indexerings- och underhållsåtgärder.
 translation-type: tm+mt
 source-git-commit: 8b6d4f424fcc943c981d5883877cb533c8d63353
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 100%
+source-wordcount: '62'
+ht-degree: 96%
 
 ---
 
