@@ -1,13 +1,13 @@
 ---
 sub-product: Flytta till AEM as a Cloud Service
 user-guide-title: Flytta till AEM as a Cloud Service
-breadcrumb-title: Move Guide
-user-guide-description: Understand the transition journey to Cloud Service.
+breadcrumb-title: Flytta stödlinje
+user-guide-description: Förstå övergången till Cloud Service.
 translation-type: tm+mt
 source-git-commit: 30aa03b97bfe94b63e6c6b1208504d1362e9ad8b
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 94%
+source-wordcount: '81'
+ht-degree: 92%
 
 ---
 
