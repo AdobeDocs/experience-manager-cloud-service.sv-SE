@@ -2,9 +2,9 @@
 title: Information om byggmiljö
 description: Information om byggmiljö - Cloud Services
 translation-type: tm+mt
-source-git-commit: 34087724d41de1fc4303ddbbb92122760d360e77
+source-git-commit: 3e76f7273393f104347611a8f0238e3722714b2b
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Aktuella variabler kan listas:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
-Variabelnamn får endast innehålla alfanumeriska tecken och understreck (_). Namnen ska vara versaler. Det finns en gräns på 200 variabler per pipeline. Varje namn måste innehålla färre än 100 tecken och varje värde måste innehålla färre än 2 048 tecken.
+Variabelnamn får endast innehålla alfanumeriska tecken och understreck (_). Namnen ska vara versaler. Det finns en gräns på 200 variabler per pipeline, där varje namn måste innehålla mindre än 100 tecken och varje värde måste vara mindre än 2 048 tecken för strängtypsvariabler och 500 tecken för värden av typen secretsString.
 
 När de används i en `Maven pom.xml` fil är det praktiskt att mappa dessa variabler till Maven-egenskaper med en syntax som liknar den här:
 
@@ -187,5 +187,4 @@ Vissa byggen kräver att ytterligare systempaket installeras för att fungera he
 Samma teknik kan användas för att installera språkspecifika paket, dvs. med `gem` för RubyGems eller `pip` för Python-paket.
 
 >[!NOTE]
->
 >Om du installerar ett systempaket på det här sättet installeras det **inte** i den körningsmiljö som används för att köra Adobe Experience Manager. Om du behöver ett systempaket som är installerat i AEM ska du kontakta Adobe.
