@@ -3,10 +3,10 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5a21785883d652508b9fc12c14ff1884e358115f
+source-git-commit: 2ef262dc8ac3b1c0ae2ac9e77d18664eb83270f7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2115'
+ht-degree: 40%
 
 ---
 
@@ -33,8 +33,8 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
    |  | [!DNL Sites] som en Cloud Service | [!DNL Experience Manager] 6.5 [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5 [!DNL Sites] på plats |
    |---|---|---|---|
    | **[!DNL Experience Manager Assets]som en Cloud Service** | Stöds | Stöds | Stöds |
-   | **[!DNL Experience Manager]6.5[!DNL Assets]på AMS** | Stöds | Stöds | Stöds |
-   | **[!DNL Experience Manager]6.5[!DNL Assets]på plats** | Stöds ej | Stöds ej | Stöds ej |
+   | **[!DNL Experience Manager]6.5 [!DNL Assets] på AMS** | Stöds | Stöds | Stöds |
+   | **[!DNL Experience Manager]6.5 [!DNL Assets] på plats** | Stöds ej | Stöds ej | Stöds ej |
 
 ### Filformat som stöds {#mimetypes}
 
@@ -195,3 +195,4 @@ Följ de här stegen för att felsöka det vanliga felscenariot:
 
 * If you cannot search for remote assets from the [!UICONTROL Content Finder], then ensure that the required roles and permissions are in place.
 * En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/operations/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
+* Om du inte kan komma åt fjärr-DAM-distribution från den lokala [!DNL Sites] distributionen kontrollerar du att cookies mellan platser tillåts. Om cookies mellan platser blockeras kanske de två distributionerna av [!DNL Experience Manager] inte autentiseras. I Incognito-läget kan till exempel cookies från tredje part blockeras [!DNL Google Chrome] av cookies. I [!DNL Chrome]klickar du på ögonikonen i adressfältet för att tillåta cookies eller för att se hjälp om [hur du aktiverar cookies](https://support.google.com/chrome/answer/95647)från tredje part.
