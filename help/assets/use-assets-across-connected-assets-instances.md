@@ -3,7 +3,7 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d7ce3f2d95b520b306d9a6bf0a2e371d1d647752
+source-git-commit: 26294ad57544aa822dc6341fbbd85f396730ee8b
 workflow-type: tm+mt
 source-wordcount: '2137'
 ht-degree: 39%
@@ -197,4 +197,4 @@ Följ de här stegen för att felsöka det vanliga felscenariot:
 * En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/operations/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
 * Om du inte kan komma åt fjärr-DAM-distributionen från den lokala [!DNL Sites] distributionen kontrollerar du att cookies mellan platser tillåts. Om cookies mellan platser blockeras kanske de två distributionerna av [!DNL Experience Manager] inte autentiseras. I Incognito-läget kan till exempel cookies från tredje part blockeras [!DNL Google Chrome] av cookies. Om du vill tillåta cookies i [!DNL Chrome] webbläsaren klickar du på ögonikonen i adressfältet, navigerar till Plats som inte fungerar > Blockerad, väljer fjärr-DAM-URL och tillåter inloggningstokencookie. Du kan även läsa mer om [hur du aktiverar cookies](https://support.google.com/chrome/answer/95647)från tredje part.
 
-![Cookie-fel i Chrome i Incognito-läge](assets/chrome-cookies-incognito-dialog.png)
+   ![Cookie-fel i Chrome i Incognito-läge](assets/chrome-cookies-incognito-dialog.png)
