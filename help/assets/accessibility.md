@@ -3,9 +3,9 @@ title: Tillgänglighet i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna [!DNL Adobe Experience Manager] i en Cloud Service kan hjälpa användare med funktionshinder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d0be8ff6c8f9e0c37bd4dc9f66d80e19ab7e1508
+source-git-commit: 9b52d37a5af866dfb1bce6ee18b524a0f6ede19e
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1894'
 ht-degree: 1%
 
 ---
@@ -30,22 +30,24 @@ Original scope of this article for Core Assets for all a11y topics is around the
 
 # Accessibility in [!DNL Adobe Experience Manager Assets] as a Cloud Service {#accessibility-in-aem-assets}
 
-Adobe strävar efter att ta fram produkter för alla användare, även för personer med funktionshinder. [!DNL Adobe Experience Manager] har ständigt förbättrats för att tillgodose behoven hos alla typer av användare. [!DNL Experience Manager] publicerar överensstämmelseinformation som beskriver de standarder som den följer, beskriver tillgänglighetsfunktionerna i produkten och beskriver efterlevnadsnivån. Det hjälper användarna att förstå hur stor följsamheten är.
+[!DNL Adobe Experience Manager] gör att skribenter och utgivare kan leverera fantastiska upplevelser på webben. Adobe strävar efter att ta med personer som skapar funktionshinder genom att förbättra tillgängligheten för [!DNL Experience Manager]. Programmen har ständigt förbättrats för att uppfylla behoven hos alla typer av användare och följer världsstandarden som omfattar personer med nedsatt syn, hörsel, mobilitet eller andra funktionshinder.
 
-[!DNL Adobe Experience Manager] ger olika nivåer av stöd för följande standarder:
+[!DNL Experience Manager] publicerar överensstämmelseinformation som beskriver de standarder som den följer, beskriver tillgänglighetsfunktionerna i produkten och beskriver efterlevnadsnivån. Dessa rapporter om överensstämmelse för tillgänglighet hjälper [!DNL Experience Manager] användarna att förstå hur omfattande anslutningen är. Tack vare förbättringarna i [!DNL Assets] kan alla användare enkelt använda gränssnitten via tangentbord, skärmläsare, förstorare och annan hjälpmedelsteknik.
+
+[!DNL Experience Manager] ger olika nivåer av stöd för följande standarder:
 
 * [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/).
-* [Reviderat avsnitt 508](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines).
-* [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/).
+* [Reviderad paragraf 508 i Rehabilitation Act](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines).
+* [Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) av W3C](https://www.w3.org/WAI/standards-guidelines/aria/).
 * [EN 301 549](https://en.wikipedia.org/wiki/EN_301_549).
 
-Om du vill få tillgång till rapporten med information om efterlevnadsnivåerna läser du [](https://www.adobe.com/accessibility/compliance.html) sidan Accessibility conformance reports (ACR) för alla Adobe-lösningar.
+Om du vill få tillgång till rapporten med information om efterlevnadsnivåerna läser du [sidan Accessibility conformance reports](https://www.adobe.com/accessibility/compliance.html) (ACR) för alla Adobe-lösningar.
 
 ## Hjälpmedel {#at-support}
 
-Användare med funktionshinder förlitar sig ofta på maskinvara och programvara för att få tillgång till webbinnehåll. Dessa verktyg kallas hjälpmedelstekniker. [!DNL Adobe Experience Manager Assets] arbeta med följande typer av hjälpmedelstekniker för att ge användarna support när de använder programvarans kärnfunktioner:
+Användare med funktionshinder förlitar sig ofta på maskinvara och programvara för att få tillgång till webbinnehåll. Dessa verktyg kallas hjälpmedelstekniker. [!DNL Experience Manager Assets] kan fungera med följande typer av hjälpmedelstekniker (AT) när du använder programmets huvudfunktioner:
 
-* Skärmläsare.
+* Skärmläsare och skärmförstorare.
 * Programvara för taligenkänning.
 * Tangentbordsanvändning - navigering och genvägar.
 * Hjälpmaskinvara, inklusive switchkontroller, uppdateringsbara blindskriftsskärmar och andra indataenheter.
@@ -75,8 +77,7 @@ Många element i användargränssnittet som är klickbara eller kan användas me
 
 ### Kortkommandon i resurser {#keyboard-shortcuts}
 
-<!-- TBD: Add here only those keyboard shortcuts that work for/with Assets. Do with Oct release.
--->
+Följande åtgärder i Resurser fungerar med de kortkommandon som visas. De flesta kortkommandon som gäller för [!DNL Experience Manager] konsoler gäller även för Resurser. Se [Kortkommandon för konsoler](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/essentials/keyboard-shortcuts.html). Se hur du [aktiverar eller inaktiverar kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
 
 | Användargränssnitt eller scenario | Kortkommando | Åtgärd |
 |---|---|---|
@@ -84,38 +85,37 @@ Många element i användargränssnittet som är klickbara eller kan användas me
 | Kolumnvy i Assets-användargränssnittet | Vänster- och högerpilstangenter | Navigera till filer och mappar ovanför eller nedanför den aktuella mappen. |
 | Bläddra bland mappar i resurser | `/` | Anropa sökning genom att öppna Omnissearch-rutan. |
 | Resurskonsol | ` | Växla sidoskenor |
-| Resurskonsol | Alt+1 | Öppna innehållsträdet. |
-| Resurskonsol | Alt+2 | Öppna [!UICONTROL Navigation] siderail. |
-| Resurskonsol | Alt+3 | Visning [!UICONTROL Timeline] av en vald resurs. |
-| Resurskonsol | Alt+4 | Öppna Live Copy-referenser för den valda resursen. |
-| Resurskonsol | Alt+5 | Anropa sökning och sökning i den markerade mappen. |
+| Resurskonsol | `Alt + 1` | Öppna innehållsträdet. |
+| Resurskonsol | `Alt + 2` | Öppna [!UICONTROL Navigation] vänster ratt. |
+| Resurskonsol | `Alt + 3` | Visning [!UICONTROL Timeline] av en vald resurs. |
+| Resurskonsol | `Alt + 4` | Öppna Live Copy-referenser för den valda resursen. |
+| Resurskonsol | `Alt + 5` | Anropa sökning och sökning i den markerade mappen. |
 | Resursen eller mappen är markerad | Backsteg | Ta bort den markerade resursen eller mappen. |
 | Resursen eller mappen är markerad | `p` | Öppna sidan Egenskaper för den valda resursen. |
 | Resursen eller mappen är markerad | `e` | Redigera den valda resursen. |
 | Resursen eller mappen är markerad | `m` | Flytta den markerade resursen. |
-| Resursen eller mappen är markerad | Ctrl + C | Kopiera den markerade resursen. |
-| Resursen eller mappen är markerad | Esc | Avmarkera markeringen. |
-| Dialogrutan öppnas och är i fokus | Esc | Stäng dialogrutan. |
-| I en mapp i DAM | Ctrl + V | Klistra in den kopierade resursen. |
-| Resurskonsol | Ctrl+A | Markera alla resurser. |
-| Egenskapssidor för resurs | Ctrl + S | Spara ändringar. |
+| Resursen eller mappen är markerad | `Ctrl + c` | Kopiera den markerade resursen. |
+| Resursen eller mappen är markerad | `Esc` | Avmarkera markeringen. |
+| Dialogrutan öppnas och är i fokus | `Esc` | Stäng dialogrutan. |
+| I en mapp i DAM | `Ctrl + v` | Klistra in den kopierade resursen. |
+| Resurskonsol | `Ctrl + A` | Markera alla resurser. |
+| Egenskapssidor för resurs | `Ctrl + S` | Spara ändringar. |
 | Resurskonsol | `?` | Visa en lista med kortkommandon. |
-
-De flesta kortkommandon som gäller för [!DNL Experience Manager] konsoler gäller även för Resurser. Se [Kortkommandon för konsoler](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/essentials/keyboard-shortcuts.html). Se hur du [aktiverar eller inaktiverar kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
 
 ## Logga in och navigera i [!DNL Assets] användargränssnittet {#login}
 
 Användare kan använda tangentbordet för att navigera till och fylla i inloggningsfältet för att logga in. Felmeddelandena på grund av felaktiga kombinationer av användarnamn och lösenord på inloggningssidan meddelas av skärmläsare varje gång felet inträffar.
 
-Efter inloggning kan DAM-användare navigera till [!DNL Assets] användargränssnittet med tangentbordet. Tangentbordsnavigeringsordningen är från vänster till höger och uppifrån och ned. När du navigerar med ett tangentbord markeras alla alternativ som kan användas och som är i fokus med bättre färgkontrast och berättarrösten läggs till i skärmläsaren. Läget - utökat eller komprimerat - för de fokuserade alternativen på menyn presenteras av en skärmläsare.
+Efter inloggning kan DAM-användare navigera i [!DNL Assets] användargränssnittet med tangentbordet. Elementen i användargränssnittet, som vänsterkant, menyer, användarprofil, sökfält, filer och mappar samt inställningar för administration och konfiguration, kan navigeras med tangentbordet. Tangentbordsnavigeringsordningen är från vänster till höger och uppifrån och ned. När du navigerar med ett tangentbord markeras ett alternativ som kan användas när det är i fokus med bättre färgkontrast och berättas av en skärmläsare. Om det är lämpligt kommer läget - t.ex. utvidgat, komprimerat och blandat läge - för de fokuserade alternativen på menyn att meddelas av en skärmläsare. Syftet med det användbara alternativet tillkännages också av en skärmläsare i stället för, till exempel utseendet eller gränssnittsplaceringen.
 
-Om en användare utökar alternativet för hjälp eller användarprofil från menyn visas rätt alternativ eller status av skärmläsaren. Om en användare utökar alternativet för användarprofil kan de tillgängliga alternativen väljas med ett tangentbord. En användare kan till exempel personifiera en annan användare. Alternativet för användargränssnittet och felmeddelandet
+Om en användare utökar alternativet för hjälp eller användarprofil från menyn visas rätt alternativ eller status av skärmläsaren. Om en användare utökar alternativet för användarprofil kan de tillgängliga alternativen väljas med ett tangentbord. En administratör kan till exempel personifiera en annan användare. Om en användare söker efter en sträng från [!UICONTROL Help] alternativet, meddelar en berättare att han/hon söker i hjälpen för att ange att en sökning pågår.
 
-![Tangentbordsnavigering för de översta alternativen i användargränssnittet i Experience Manager](assets/keyboard-navigation-in-aem.gif)
+<!-- TBD: Removing for now. Add a more informative video later. Host it on tv.adobe
 
-*Bild: Navigera genom alternativen längst upp i användargränssnittet i Experience Manager med hjälp av`Tab`tangenten.*
+![Keyboard navigation of top options in Experience Manager user interface](assets/keyboard-navigation-in-aem.gif)
 
-Om en användare söker efter en sträng från [!UICONTROL Help] alternativet, meddelar en berättare att han/hon söker i hjälpen för att ange att en sökning pågår.
+*Figure: Navigating through the options at the top of Experience Manager user interface using `Tab` key.*
+-->
 
 ## Bläddra bland befintliga resurser och visa relaterad information {#browse}
 
@@ -143,9 +143,9 @@ Följande funktioner förbättrar tillgängligheten när du bläddrar i resurska
 * Användarfokus när du navigerar med `Tab` tangenten kan flyttas till stängningsalternativet i förhandsversionen.
 * När du använder tangentbordet för att bläddra har de markerade alternativen för det användbara gränssnittet mer framträdande visuellt fokus med förbättrad kontrast. Det gör det fokuserade området mer identifierbart för användaren.
 * Om du använder `Esc` tangenten för att ta bort snabbåtgärdsikonerna från miniatyrbildsvyn tas inte tangentbordsfokus bort från det senast fokuserade objektet.
-* När en resurs är markerad kan du öppna referenslistan genom att trycka på Alt+4. Med hjälp av `Tab` tangenten kan användarna navigera genom referensposterna som inte är noll.
-* Kommentarer om en resurs är tillgängliga på resursens tidslinje. Det går att komma åt via tangentbordet.
-* Visningsinställningar i Experience Manager kan du nå med tangentbordet. Användaren kan navigera bland de tillgängliga kortstorlekarna med piltangenterna och välja och bläddra igenom för att ange andra element i den befintliga vyn Visa inställningar.
+* När en resurs är markerad och du trycker på `Alt + 4` kortkommandot öppnas [!UICONTROL References] listan i den vänstra listen. Med hjälp av `Tab` tangenten kan användarna navigera genom referensposterna som inte är noll. Att bläddra igenom enbart referensposter som inte är noll sparar både arbete och tangenttryckningar.
+* Kommentarer om en resurs är tillgängliga på resursens tidslinje. Det är tillgängligt om du har åtkomst till den vänstra listen via ett tangentbord eller ett kortkommando.
+* [!UICONTROL View Settings] som [!DNL Experience Manager] är tillgängliga via tangentbordet. Användare kan navigera bland de tillgängliga kortstorlekarna med piltangenterna och välja och bläddra igenom för att ange andra element i den befintliga vyn Visa inställningar.
 
 <!-- TBD: Gradually,  as more enhancements are done in these categories, add more content.
 
@@ -156,7 +156,6 @@ Följande funktioner förbättrar tillgängligheten när du bläddrar i resurska
 * List the a11y fixes in workflows to configure and administer [!DNL Experience Manager Assets]?
 * Some enhancements in Processing profiles creation or application to a folder?
 * Some enhancements to metadata properties UI?
-
 -->
 
 ## Hantera digitala resurser {#manage-assets}
@@ -169,7 +168,7 @@ För metadataåtgärder som vanligtvis utförs av roller som marknadsförare och
 
 * [!UICONTROL Save & Close] på sidan Egenskaper för resurser kan nu öppnas med hjälp av tangentbordet.
 * Skärmläsare meddelar alternativ för att ta bort de markerade taggarna på fliken Grundläggande i egenskapsknapparna för resurser för att ta bort de markerade taggarna.
-* Dialogrutan för datumväljare kan användas med ett tangentbord. Datumväljaren används för att ställa in tider och tider.
+* Dialogrutan för datumväljare kan användas med ett tangentbord. Användargränssnittselementet Datepicker används för att ställa in tider och tider.
 * Dragningsfunktionen med tangentbordet fungerar på rätt sätt i metadatamodigeraren i bläddringsläge i skärmläsaren.
 * En användare kan flytta fokus med tangentbordet till fältet Lägg till användare eller grupp under Stängd användargrupp på fliken Behörigheter i mappegenskaperna.
 
@@ -206,11 +205,14 @@ Följande funktioner förbättrar tillgängligheten när du delar resurser:
    * Kan navigera till alla förslag i listan.
    * Lägg till en berättarröst för de förslag som visas för fälten Lägg till e-postadress och Sök.
 
-## Tillgänglighet i [!DNL Dynamic Media] {#dynamic-media-accessibility}
+<!-- TBD: With more info from the DM team. A few Sev1 issues are fixed and if those are shipped, then mention those here.
 
-När du använder Dynamic Media kan följande funktioner göra den tillgänglig:
+## Accessibility in [!DNL Dynamic Media] {#dynamic-media-accessibility}
 
-* En användare kan fokusera på `Flyout`, `InlineZoom`, `Shoppable_Banner`, `Zoom_dark`, `Zoom_light`och `ZoomVertical_dark`alternativ med hjälp av `ZoomVertical_light` nyckeln i visningsprogram för tillgångsinformation i `Tab` [!DNL Dynamic Media].
+When using Dynamic Media, the following functionality helps make it accessible:
+
+* A user can focus to `Flyout`, `InlineZoom`, `Shoppable_Banner`, `Zoom_dark`, `Zoom_light`, `ZoomVertical_dark`, and `ZoomVertical_light` options using `Tab` key in asset details Viewers in [!DNL Dynamic Media].
+-->
 
 ## Tillgänglig dokumentation {#accessible-docs}
 
@@ -224,15 +226,12 @@ När du använder Dynamic Media kan följande funktioner göra den tillgänglig:
 <!-- 
 ## More resources for accessibility {#a11y-resources}
 
-TBD: If anyone is aware of AEM-specific resources that help users leverage any accessibility features or use any assistive technology with AEM, please share or leave a link here.
+TBD: If anyone is aware of AEM-specific resources that help users leverage any accessibility features or use any assistive technology with AEM, please share a reference with asgupta@adobe.com.
 -->
-
-## Förbättringar i [!DNL Experience Manager Assets] releaser {#rn-fixes}
-
-En lista med specifika förbättringar som gjorts i varje enskild release finns i [versionsinformationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/home.html) för respektive version.
 
 >[!MORELIKETHIS]
 >
->* [AEM för tillgänglighet](/help/onboarding/accessibility/web-accessibility.md)
->* [Överensstämmelserapporter för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html)
+>* [Versionsinformation om specifika förbättringar som gjorts i varje enskild release](/help/release-notes/release-notes-cloud/release-notes-current.md).
+>* [AEM riktlinjer](/help/onboarding/accessibility/web-accessibility.md)för tillgänglighet.
+>* [Överensstämmelserapporter för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).
 
