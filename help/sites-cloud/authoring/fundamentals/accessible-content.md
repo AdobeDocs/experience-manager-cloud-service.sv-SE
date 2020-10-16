@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM som Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: fb6c90078e9da011a71093fcdab1a50faded5daa
+source-git-commit: 9b52d37a5af866dfb1bce6ee18b524a0f6ede19e
 workflow-type: tm+mt
-source-wordcount: '14057'
+source-wordcount: '14060'
 ht-degree: 5%
 
 ---
@@ -26,6 +26,7 @@ Se även:
 
 * Our [Quick Guide to WCAG 2.1](/help/onboarding/accessibility/quick-guide-wcag.md).
 * The [Accessibility Conformance reports for Adobe solutions](https://www.adobe.com/accessibility/compliance.html).
+* [Tillgänglighet i resurser](/help/assets/accessibility.md)
 * [Konfigurera RTF-redigeraren för att skapa tillgängligt innehåll](/help/implementing/developing/extending/rte-accessible-content.md)
 
 Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägst), Nivå AA och Nivå AAA (högst). Nivåerna definieras kortfattat enligt följande:
