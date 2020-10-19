@@ -2,9 +2,9 @@
 title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
 translation-type: tm+mt
-source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
+source-git-commit: 24d929702fd9eb31b95fdd6d97c7b9978d919804
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Vanliga frågor om leverans av innehåll med HTTP2{#http-delivery-of-content-faq}
 
-Adobe är mycket glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 kommer du att märka en generell prestandaökning.
+Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 kommer du att märka en generell prestandaökning.
 
 ## Vad är HTTP/2? {#what-is-http}
 
@@ -26,7 +26,7 @@ På följande webbplats beskrivs HTTP/2 och dess fördelar på ett kort och enke
 
 Prestandaförbättringarna varierar mycket beroende på faktorer som webbplatsens kod, hur du använder Scene7, konsumentens enhet, skärm och plats och så vidare.
 
-Adobes egna tester gav följande resultat:
+Adobe testning gav följande resultat:
 
 * För bilder har svarstiden förbättrats med 7 %-28 % beroende på enhet och webbläsare. De mest betydande prestandavinster gjordes på iOS-enheter.
 * För tittarna har lästiden förbättrats med 15 %.
@@ -49,12 +49,13 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media Classic-konto? {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
-Du måste initiera en begäran från Adobe Technical Support (`s7support@adobe.com`) för att växla till HTTP/2; det görs inte automatiskt åt dig.
+Du måste [använda Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) och begära att gå över till HTTP/2; det görs inte automatiskt åt dig.
 
-1. Ange följande information i din supportförfrågan:
+1. Ange följande information i ditt supportärende:
 
    * Primärt kontaktnamn, e-postadress och telefonnummer.
    * Alla domäner som ska överföras till HTTP2. Det vill säga, `images.company.com` eller `mycompany.scene7.com`.
+
    Om du vill hitta dina domäner [loggar du in på din instans av Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto.
 
    Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet som är märkt **[!UICONTROL Published Server Name]**.
@@ -62,12 +63,13 @@ Du måste initiera en begäran från Adobe Technical Support (`s7support@adobe.c
    * Verifiera att du använder säkra HTTPS för multimedieförfrågningar.
    * Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
    * Kontrollera att du använder en dedikerad domän. Det vill säga `images.company.com` eller `mycompany.scene7.com`inte en allmän Scene7-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
+
    Om du vill hitta dina domäner [loggar du in på din instans av Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto.
 
    Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet som är märkt **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Scene7-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
    1. Teknisk support lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
-   1. När Adobe är redo att hantera din förfrågan kontaktar supporten dig för att koordinera övergången och ange ett måldatum.
+   1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera övergången och ange ett måldatum.
    1. Du får ett meddelande när du är klar och du kan verifiera en lyckad övergång till HTTP2.
 
 
@@ -84,7 +86,7 @@ Förfrågningar behandlas i den ordning som de tas emot av teknisk support.
 
 Övergången till HTTP/2 tar bort ditt cacheminne vid CDN eftersom det handlar om att gå över till en ny CDN-konfiguration.
 
-Det icke-cachelagrade innehållet träffar direkt på Adobes originalservrar tills cachen återskapas. På grund av detta planerar Adobe att hantera ett fåtal kundövergångar i taget så att godtagbara prestanda upprätthålls när vi drar in förfrågningar från vårt ursprung.
+Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen återskapas. På grund av detta planerar Adobe att hantera ett fåtal kundövergångar i taget så att godtagbara prestanda upprätthålls när vi drar in förfrågningar från vårt ursprung.
 
 ## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
