@@ -3,9 +3,9 @@ title: Tillgänglighet i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna [!DNL Adobe Experience Manager] i en Cloud Service kan hjälpa användare med funktionshinder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9b52d37a5af866dfb1bce6ee18b524a0f6ede19e
+source-git-commit: ffdecc8439b96b3bfcfd0571304a7917135684ca
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1885'
 ht-degree: 1%
 
 ---
@@ -77,7 +77,7 @@ Många element i användargränssnittet som är klickbara eller kan användas me
 
 ### Kortkommandon i resurser {#keyboard-shortcuts}
 
-Följande åtgärder i Resurser fungerar med de kortkommandon som visas. De flesta kortkommandon som gäller för [!DNL Experience Manager] konsoler gäller även för Resurser. Se [Kortkommandon för konsoler](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/essentials/keyboard-shortcuts.html). Se hur du [aktiverar eller inaktiverar kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
+Följande åtgärder i Resurser fungerar med de kortkommandon som visas. De flesta kortkommandon som gäller för [!DNL Experience Manager] konsoler gäller även för Resurser. Se [kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md). Se hur du [aktiverar eller inaktiverar kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
 
 | Användargränssnitt eller scenario | Kortkommando | Åtgärd |
 |---|---|---|
@@ -192,7 +192,7 @@ Vid filtrering av sökresultat:
 
 ## Dela resurser {#share-assets}
 
-<!-- TBD: Accessibility in DA, BP, AAL? Asked CCE team for AAL content?
+<!-- TBD: Anything about accessibility in DA, BP? AAL team confirmed there's no content.
 -->
 
 Följande funktioner förbättrar tillgängligheten när du delar resurser:
