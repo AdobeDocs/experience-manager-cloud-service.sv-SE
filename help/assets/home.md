@@ -2,10 +2,10 @@
 title: Resurser som en Cloud Service Guide
 description: Länkar till självhjälp och dokumentation om Adobe Experience Manager Assets as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 181e1f1526726154232f25eac95db05e290756d6
+source-git-commit: ffdecc8439b96b3bfcfd0571304a7917135684ca
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 85%
+source-wordcount: '352'
+ht-degree: 82%
 
 ---
 
@@ -40,7 +40,7 @@ Här följer självhjälpsresurserna för Experience Manager Assets as a Cloud S
 
 ## Andra Experience Manager-resurser {#other-resources}
 
-* [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html#AEMasaCloudService)
+* [Senaste dokumentationsuppdateringarna](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html#aem-as-a-cloud-service)
 * [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
