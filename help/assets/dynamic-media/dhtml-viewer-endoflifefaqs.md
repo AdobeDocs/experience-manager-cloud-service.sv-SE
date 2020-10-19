@@ -1,18 +1,18 @@
 ---
 title: Vanliga frågor om att DHTML Viewer upphör
-description: Från och med den 31 januari 2014 upphör Scene7:s DHTML-visningsprogramplattform officiellt. I det här meddelandet får du svar på vanliga frågor så att du kan förbereda dig för den här övergången till vår nya HTML5-visningsprogramplattform.
+description: Från och med den 31 januari 2014 upphör Scene7 DHTML-visningsprogramplattform officiellt. I det här meddelandet får du svar på vanliga frågor så att du kan förbereda dig för den här övergången till vår nya HTML5-visningsprogramplattform.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: 24d929702fd9eb31b95fdd6d97c7b9978d919804
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 1%
+source-wordcount: '1628'
+ht-degree: 0%
 
 ---
 
 
 # Vanliga frågor om att DHTML Viewer upphör{#dhtml-viewer-end-of-life-faqs}
 
-Från och med den 31 januari 2014 upphör Scene7:s DHTML-visningsprogramplattform officiellt. I det här meddelandet får du svar på vanliga frågor så att du kan förbereda dig för den här övergången till vår nya HTML5-visningsprogramplattform.
+Från och med den 31 januari 2014 upphör Scene7 DHTML-visningsprogramplattform officiellt. I det här meddelandet får du svar på vanliga frågor så att du kan förbereda dig för den här övergången till vår nya HTML5-visningsprogramplattform.
 
 **Vad är förändringen?**
 
@@ -33,19 +33,19 @@ Webbstandarderna utvecklas ständigt och DHTML är en äldre webbutvecklingstekn
 * Fullständigt teckensnittsstöd
 * Plugin-lös videouppspelning
 
-Specifikt för Scene7 DHTML-visningsprogrammets plattform, var varken den JSP-baserade lösningen eller Javascript-API:erna optimerade för mobila enheter för att utnyttja multitouch- och gestfunktionerna. Och även om DHTML-visningsprogram som släpptes 2011/början av 2012 är optimerade för mobilen var de svåra att anpassa och underhålla på grund av bristen på ett flexibelt komponentbaserat utvecklingsramverk för SDK.
+Specifikt för Scene7 DHTML-visningsprogramplattformen är både den JSP-baserade lösningen och Javascript-API:erna inte optimerade för mobila enheter för att utnyttja multitouch- och gestfunktionerna. Och även om DHTML-visningsprogram som släpptes 2011/början av 2012 är optimerade för mobilen var de svåra att anpassa och underhålla på grund av bristen på ett flexibelt komponentbaserat utvecklingsramverk för SDK.
 
-Scene7 bygger på dessa begränsningar för DHTML och snabb branschanpassning med HTML5 som en ny standard för både datorer och mobiler och har beslutat att investera i en HTML5-baserad visningsprogramplattform. Investeringen kommer att ge våra kunder en stabil plattform som de kan använda för att skapa mer engagerande interaktiva visningsprogram som kan nå användare på flera olika skärmar, inklusive datorer, iOS och Android-enheter.
+Scene7 har beslutat sig för att investera i en HTML5-baserad visningsprogramplattform, som bygger på dessa begränsningar för DHTML och snabb branschanpassning med HTML5 som en ny standard för både datorer och mobiler. Investeringen kommer att ge våra kunder en stabil plattform som de kan använda för att skapa mer engagerande interaktiva visningsprogram som kan nå användare på flera olika skärmar, inklusive datorer, iOS och Android-enheter.
 
 **Hur vet jag om mitt visningsprogram använder DHTML-plattformen?**
 
 Kontrollera om:
 
-1. Ditt företag använder ett Scene7-visningsprogram som är klart att användas och som listas i den här tabellen där &quot;Viewer Technology&quot; är &quot;DHTML&quot;:
+1. Ditt företag använder ett användbart Scene7-visningsprogram som anges i den här tabellen, där&quot;Viewer Technology&quot; är&quot;DHTML&quot;:
 
    [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000)
 
-1. Ditt företag använder ett visningsprogram som har skapats som en ny förinställning baserad på ett Scene7-visningsprogram som är klart att användas i den här tabellen, där &quot;Viewer Technology&quot; har angetts som &quot;DHTML&quot;:
+1. Ditt företag använder ett visningsprogram som har skapats som en ny förinställning baserad på ett användningsklart Scene7-visningsprogram i den här tabellen där&quot;Viewer Technology&quot; är&quot;DHTML&quot;:
 
    [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000)
 
@@ -73,10 +73,10 @@ Kontrollera om:
 
 **Vad är den nya visningsprogramplattformen?**
 
-Ersättningen för DHTML är Scene7 HTML5-visningsplattformen som består av båda:
+Ersättningen för DHTML är Scene7 HTML5-visningsprogramplattformen som består av båda:
 
 * HTML5 färdiga visningsprogram med mobiloptimerad interaktion för olika typer av visningsprogram, inklusive grundläggande zoom, utfällbar zoom, bilduppsättningar, färgruteuppsättningar, flerdimensionell rotation och blandade media. Fullständiga aktuella exempel på dessa visningsprogram finns i: [https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
-* HTML5 viewer SDK som möjliggör omfattande anpassning av Adobe Scene7-visningsprogram för webbplatser och enheter som stöder HTML5 (som iOS och Android), vilket ger maximal flexibilitet och kreativitet för att ge tittaren ett varumärke som både ser ut och interaktivt ut. Fördelen med återanvändbara prestandaoptimerade komponenter minskar den totala kostnaden för visningsprogramutveckling och snabbar upp den anpassade utvecklingen.
+* HTML5 viewer SDK som möjliggör omfattande anpassning av Adobe Scene7-visningsprogram för webbplatser och enheter som stöds av HTML5 (som iOS och Android), vilket ger maximal flexibilitet och kreativitet för att ge tittaren ett varumärke som både ser ut och interaktivt ut. Fördelen med återanvändbara prestandaoptimerade komponenter minskar den totala kostnaden för visningsprogramutveckling och snabbar upp den anpassade utvecklingen.
 
 **När har HTML5-visningsprogramplattformen de funktioner jag behöver för att gå över från DHTML-visningsprogramplattformen?**
 
@@ -92,16 +92,16 @@ Om du fortfarande är osäker på om HTML5 Viewer SDK kan uppfylla dina krav ell
 
 **Hur övergår jag mina tittare till HTML5-plattformen?**
 
-Scene7 har följande alternativ för att övergå till HTML5-plattformen:
+Scene7 erbjuder följande alternativ för att övergå till HTML5-plattformen:
 
-1. Använd en av de färdiga HTML5-visningsprogrammen i Scene7 som du hittar exempel på här: [https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
-1. Konfigurera en av Scene7-vyerna i körklart HTML5 under SPS-programmets konfiguration. På så sätt kan du anpassa vissa beteenden, t.ex. visningsprogrammets storlek, övergångar, zoombeteende: [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html)
-1. Anpassa utseendet på Scene7-visningsprogram för HTML5 genom att ändra CSS för att ändra visuell design som knappbilder, placering, genomskinlighet, bakgrundsfärger osv.: [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers)
+1. Använd en av Scene7 färdiga HTML5-visningsprogram som du hittar exempel på här: [https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
+1. Konfigurera en av Scene7 färdiga HTML5-visningsprogram under SPS-programkonfigurationen. På så sätt kan du anpassa vissa beteenden, t.ex. visningsprogrammets storlek, övergångar, zoombeteende: [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html)
+1. Anpassa utseendet på och känslan i Scene7 färdiga HTML5-visningsprogram genom att ändra CSS för att ändra visuell design som knappbilder, placering, genomskinlighet, bakgrundsfärger osv.: [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers)
 1. Skapa ett anpassat HTML5-visningsprogram från grunden med SDK, som du kan hämta här: [https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html](https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html). Du kan använda professionella tjänster för att bygga ett anpassat visningsprogram eller låta ett eget webbutvecklingsteam bygga det.
 
 **Vad gäller för webbläsare som inte stöder HTML5?**
 
-HTML5 stöds på många mobila enheter och webbläsare och fortsätter att dra fördel av det. Trots att HTML5 inte stöds i Internet Explorer 8 eller tidigare har Scene7 utvecklat vår HTML5-visningsprogramplattform så att den även fungerar i IE 7 och IE 8. Med Scene7 HTML5 Viewer Platform kan du nå en överväldigande majoritet av både dator- och mobilanvändare med en enda utvecklingsplattform.
+HTML5 stöds på många mobila enheter och webbläsare och fortsätter att dra fördel av det. Trots att HTML5 inte stöds i Internet Explorer 8 eller tidigare har Scene7 utvecklat vår HTML5-visningsprogramplattform för att utöka stödet till och med IE 7 och IE 8. Med Scene7 HTML5-visningsprogram kan du nå en överväldigande majoritet av både dator- och mobilanvändare med en enda utvecklingsplattform.
 
 Aktuella systemkrav från och med HTML5 SDK version 2.2.1 är:
 
@@ -123,4 +123,4 @@ Om du ser den inzoomade bilden genom att hålla musen över huvudbilden eller dr
 
 **Vem kontaktar jag för mer information?**
 
-Om dessa frågor och svar inte besvarar alla dina frågor kan du kontakta supporten ([s7support@adobe.com](mailto:s7support@adobe.com)) eller er kontoansvarige hos Adobe.
+Om dessa frågor och svar inte besvarar alla dina frågor, [använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) eller kontakta din kontoansvarige på Adobe.
