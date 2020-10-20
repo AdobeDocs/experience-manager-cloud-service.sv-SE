@@ -2,7 +2,7 @@
 title: Driftsätta till AEM as a Cloud Service
 description: 'Driftsätta till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: b0d0ada16662c6edf6068b9de8a296ccfd410216
+source-git-commit: 450d78be9472c854a13ba35965ac10f806aba3d9
 workflow-type: tm+mt
 source-wordcount: '3210'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Precis som för befintliga AEM som inte är molnbaserade stöds en lokal offline
 >[!NOTE]
 >Det finns små skillnader i hur programmet fungerar på en lokal dator jämfört med Adobe Cloud. Dessa arkitektoniska skillnader måste respekteras under lokal utveckling och kan leda till ett annat beteende vid driftsättning i molninfrastrukturen. På grund av dessa skillnader är det viktigt att utföra de fullständiga testerna på dev- och stage-miljöer innan ny anpassad kod distribueras i produktionen.
 
-För att kunna utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) hämtas och installeras. Mer information om hur du använder AEM som Cloud Service Dispatcher Tools finns på [den här sidan](/help/implementing/dispatcher/overview.md).
+För att kunna utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) hämtas och installeras. Mer information om hur du använder AEM som Cloud Service Dispatcher Tools finns på [den här sidan](/help/implementing/dispatcher/disp-overview.md).
 
 I följande video visas en översikt på hög nivå över hur du distribuerar kod till AEM som en Cloud Service:
 
