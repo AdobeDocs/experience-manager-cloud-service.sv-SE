@@ -4,9 +4,9 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Lär dig hur du anpassar driftsättningen av Experience Manager as a Cloud Service med bland annat ämnen om utveckling och driftsättning.
 translation-type: tm+mt
-source-git-commit: 1a282bdaca02f47d7936222da8522e74831a4572
+source-git-commit: 69756d6831678151b0e8eb73db81113d49f17447
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '425'
 ht-degree: 63%
 
 ---
@@ -43,6 +43,7 @@ ht-degree: 63%
    + [Använda Sling Resource Merger i AEM as a Cloud Service](developing/introduction/sling-resource-merger.md)
    + [Övertäckningar i AEM as a Cloud Service](developing/introduction/overlays.md)
    + [Använda bibliotek på klientsidan](developing/introduction/clientlibs.md)
+   + [Konfigurationer och Configuration Browser](developing/introduction/configurations.md)
    + [Loggning](developing/introduction/logging.md)
    + [AEM as a Cloud Service API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
    + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
