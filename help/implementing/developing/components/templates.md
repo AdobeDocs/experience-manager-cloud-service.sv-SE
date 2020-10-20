@@ -2,7 +2,7 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
 translation-type: tm+mt
-source-git-commit: 056fb27108d8f78acfc4658daa92912a48112f1f
+source-git-commit: 69756d6831678151b0e8eb73db81113d49f17447
 workflow-type: tm+mt
 source-wordcount: '3228'
 ht-degree: 0%
@@ -156,7 +156,7 @@ En lista över alla tillåtna poster skapas. Om några konfigurationer överlapp
 Om du vill skapa en ny mapp kan du göra det här:
 
 * Programmerat eller med CRXDE Lite
-* Använda Konfigurationsläsaren
+* Använda [konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
 
 ## Använda CRXDE Lite {#using-crxde-lite}
 
@@ -189,7 +189,7 @@ Om du vill skapa en ny mapp kan du göra det här:
 
 ### Använda Konfigurationsläsaren {#using-the-configuration-browser}
 
-1. Gå till **Global Navigation** -> **Tools** > **Configuration Browser**.
+1. Gå till **Global Navigation** -> **Tools** > [**Configuration Browser**.](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
 
    De befintliga mapparna visas till vänster inklusive `global` mappen.
 
@@ -203,7 +203,7 @@ Om du vill skapa en ny mapp kan du göra det här:
 
 >[!NOTE]
 >
->I konfigurationsläsaren kan du redigera den globala mappen och aktivera alternativet **Redigerbara mallar** om du vill skapa mallar i den här mappen, men detta är inte den bästa metoden.
+>I [konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) kan du redigera den globala mappen och aktivera alternativet **Redigerbara mallar** om du vill skapa mallar i den här mappen, men detta är inte den bästa metoden.
 
 ### Behörighetslistor och grupper {#acls-and-groups}
 
