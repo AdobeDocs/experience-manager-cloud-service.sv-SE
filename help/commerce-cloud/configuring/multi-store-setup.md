@@ -2,7 +2,7 @@
 title: Installation i flera butiker
 description: Installation i flera butiker
 translation-type: tm+mt
-source-git-commit: 94c6abef36b6add300ba3b24855ebf3edf10e1ed
+source-git-commit: 69756d6831678151b0e8eb73db81113d49f17447
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 
 3. Skapa en underordnad konfiguration för CIF-Cloud Servicens konfiguration enligt följande:
 
-   * I AEM går du till Verktyg -> Allmänt -> Konfigurationsläsaren
+   * I AEM går du till Verktyg -> Allmänt -> [Konfigurationsläsare](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
    * Välj den baskonfiguration du skapade
    * Skapa en ny konfiguration med stegen som beskrivs i punkt 2 ovan
 
@@ -40,7 +40,7 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 
 4. Tilldela den underordnade konfigurationen till en AEM plats
 
-   * Gå till AEM Sites-konsolen
+   * Gå till AEM Sites Console
    * Navigera till regionen eller språkroten i platsstrukturen, t.ex. /content/venia/us _eller_ /content/venia/us/en för exempelsidan Venia
    * Markera sidan och öppna sidegenskaper
    * Välj fliken Avancerat
