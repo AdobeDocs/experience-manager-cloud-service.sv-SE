@@ -2,7 +2,7 @@
 title: Modeller för innehållsfragment
 description: Content Fragment Models används för att skapa innehållsfragment med strukturerat innehåll.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: 69756d6831678151b0e8eb73db81113d49f17447
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 21%
@@ -22,12 +22,12 @@ Modeller för innehållsfragment definierar innehållsstrukturen för dina [inne
 
 Om du vill aktivera innehållsfragmentmodeller måste du:
 
-* Aktivera användning av innehållsfragmentmodeller i konfigurationshanteraren
+* Aktivera användning av innehållsfragmentmodeller i konfigurationsläsaren
 * Använda konfigurationen i resursmappen
 
-### Aktivera modeller för innehållsfragment i Configuration Manager {#enable-content-fragment-models-in-configuration-manager}
+### Aktivera modeller för innehållsfragment i Configuration Browser {#enable-content-fragment-models-in-configuration-browser}
 
-Om du vill [skapa en ny modell](#creating-a-content-fragment-model) för innehållsfragment **måste** du först aktivera dem med Configuration Manager:
+Om du vill [skapa en ny modell](#creating-a-content-fragment-model) för innehållsfragment **måste** du först aktivera dem med [konfigurationsläsaren:](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
 
 1. Navigera till **Verktyg**, **Allmänt** och öppna sedan **Konfigurationsläsaren**.
 2. Välj lämplig plats för webbplatsen.
@@ -35,6 +35,7 @@ Om du vill [skapa en ny modell](#creating-a-content-fragment-model) för innehå
 
    1. Ange en **titel**.
    2. Markera **Content Fragment Models** för att aktivera användningen.
+
    ![konfiguration](assets/cfm-models-01.png)
 
 4. Välj **Skapa** för att spara definitionen.
@@ -78,6 +79,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    * vänster: fält har redan definierats
    * höger: **Datatyper** som är tillgängliga för att skapa fält (och **egenskaper** som kan användas när fälten har skapats)
+
    >[!NOTE]
    >
    >När ett fält är **obligatoriskt** markeras den **etikett** som visas i den vänstra rutan med en asterisk (*****).
@@ -87,19 +89,21 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 1. **Lägga till ett fält**
 
    * Dra en obligatorisk datatyp till önskad plats för ett fält:
+
    ![datatyp till fält](assets/cfm-models-04.png)
 
    * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet. Till exempel:
+
    ![fältegenskaper](assets/cfm-models-05.png)
 
    >[!NOTE]
-   >
-   >För datatypen **Flerradig text** går det att definiera **standardtypen** som endera:
-   >* **RTF-text**
-   >* **Markdown**
-   >* **Oformaterad text**
-   >Om inget anges används standardvärdet **RTF** för det här fältet.
-   >Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
+   För datatypen **Flerradig text** går det att definiera **standardtypen** som endera:
+   * **RTF-text**
+   * **Markdown**
+   * **Oformaterad text**
+
+   Om inget anges används standardvärdet **RTF** för det här fältet.
+   Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
 
 1. **Ta bort ett fält**
 
@@ -114,8 +118,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 ## Ta bort en innehållsfragmentmodell {#deleting-a-content-fragment-model}
 
 >[!CAUTION]
->
->Om du tar bort en innehållsfragmentmodell kan det påverka beroende fragment.
+Om du tar bort en innehållsfragmentmodell kan det påverka beroende fragment.
 
 Så här tar du bort en innehållsfragmentmodell:
 
@@ -125,8 +128,7 @@ Så här tar du bort en innehållsfragmentmodell:
 1. Välj en modell, följt av **Ta bort** i verktygsfältet.
 
    >[!NOTE]
-   >
-   >Om det refereras till modellen visas en varning. Vidta lämpliga åtgärder.
+   Om det refereras till modellen visas en varning. Vidta lämpliga åtgärder.
 
 ## Publicera en innehållsfragmentmodell {#publishing-a-content-fragment-model}
 
@@ -140,5 +142,4 @@ Så här publicerar du en innehållsfragmentmodell:
 1. Välj en modell, följt av **Publicera** i verktygsfältet.
 
    >[!NOTE]
-   >
-   >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
+   Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
