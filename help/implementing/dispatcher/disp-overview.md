@@ -2,10 +2,10 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: fe4202cafcab99d22e05728f58974e1a770a99ed
+source-git-commit: 720c1cdb6c26bb023a6cbf12aaa935645b0e8661
 workflow-type: tm+mt
-source-wordcount: '3824'
-ht-degree: 9%
+source-wordcount: '4073'
+ht-degree: 8%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 ## Apache and Dispatcher configuration and testing {#apache-and-dispatcher-configuration-and-testing}
 
-I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apache och Dispatcher-konfigurationer samt hur du validerar och kör den lokalt innan du distribuerar den i molnmiljöer. Det beskriver även felsökning i molnmiljöer. Mer information om Dispatcher finns i [AEM Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html).
+I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apache och Dispatcher-konfiguration samt hur du validerar och kör den lokalt innan du distribuerar den i molnmiljöer. Det beskriver även felsökning i molnmiljöer. Mer information om Dispatcher finns i [AEM Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html).
 
 >[!NOTE]
 >
@@ -26,17 +26,17 @@ I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apach
 
 ## Dispatcher Tools {#dispatcher-sdk}
 
-Dispatcher-verktygen utgör en del av den övergripande AEM som en Cloud Service-SDK och tillhandahåller:
+Dispatcher Tools är en del av den övergripande AEM som en Cloud Service-SDK och tillhandahåller:
 
-* En vaniljfilstruktur som innehåller de konfigurationsfiler som ska ingå i ett maven-projekt för dispatcher.
-* Verktyg för att kunderna ska kunna validera en dispatcherkonfiguration lokalt.
+* En vaniljfilstruktur som innehåller de konfigurationsfiler som ska inkluderas i ett maven-projekt för dispatcher.
+* Verktyg för kunder för att verifiera att dispatcherkonfigurationen bara innehåller AEM som direktiv som stöds av Cloud Servicen.        Dessutom validerar verktyget att syntaxen är korrekt så att apache kan startas korrekt.
 * En Docker-bild som tar upp dispatchern lokalt.
 
 ## Hämta och extrahera verktygen {#extracting-the-sdk}
 
 Dispatcher Tools kan laddas ned från en zip-fil på [Software Distribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) portal. Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som en Cloud Service-miljö. Alla nya konfigurationer som är tillgängliga i den nya versionen av dispatcher Tools kan användas för att distribuera till molnmiljöer där den versionen av AEM körs i molnet eller senare.
 
-**För macOS och Linux** hämtar du gränssnittsskriptet till en mapp på datorn, gör det körbart och kör det. Det extraherar Dispatcher Tools-filerna under den katalog som du lagrade dem i (där `version` är versionen av dispatcher Tools).
+**För macOS och Linux** hämtar du gränssnittsskriptet till en mapp på datorn, gör det körbart och kör det. Det extraherar Dispatcher Tools-filerna under den katalog som du lagrade dem i (där `version` är versionen av Dispatcher Tools).
 
 ```bash
 $ chmod +x DispatcherSDKv<version>.sh
@@ -194,13 +194,13 @@ Standardvärdglobbning som passar för ett standardprojekt. Ändra `virtualhosts
 
 Avsnitten nedan beskriver hur konfigurationen valideras lokalt så att den kan skicka den associerade kvalitetsgaten i Cloud Manager när en intern release distribueras.
 
-## Lokal validering av Dispatcher-konfiguration {#local-validation-of-dispatcher-configuration}
+## Lokal validering av direktiv som stöds i Dispatcher-konfigurationen {#local-validation-of-dispatcher-configuration}
 
 Valideringsverktyget finns i SDK på `bin/validator` en binär Mac OS-, Linux- eller Windows-fil, vilket gör att kunderna kan köra samma validering som Cloud Manager gör när en release skapas och distribueras.
 
 Den anropas som: `validator full [-d folder] [-w whitelist] zip-file | src folder`
 
-Verktyget validerar Apache- och Dispatcher-konfigurationen. Den söker igenom alla filer med mönster `conf.d/enabled_vhosts/*.vhost` och kontrollerar att endast tillåtelselistad direktiv används. De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
+Verktyget kontrollerar att dispatcherkonfigurationen använder rätt direktiv som stöds av AEM som en molntjänst genom att skanna alla filer med mönster `conf.d/enabled_vhosts/*.vhost`. De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
 
 ```
 $ validator whitelist
@@ -239,9 +239,9 @@ Tabellen nedan visar vilka cachemoduler som stöds:
 | `mod_substitute` | [https://httpd.apache.org/docs/2.4/mod/mod_substitute.html](https://httpd.apache.org/docs/2.4/mod/mod_substitute.html) |
 | `mod_userdir` | [https://httpd.apache.org/docs/2.4/mod/mod_userdir.html](https://httpd.apache.org/docs/2.4/mod/mod_userdir.html) |
 
-Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för att ingå i produkten i framtiden. Kunderna hittar listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens tillåtelselista-kommando i SDK enligt beskrivningen ovan.
+Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för att ingå i produkten i framtiden. Kunderna hittar listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens tillåtslista-kommando i SDK enligt beskrivningen ovan.
 
-tillåtelselista innehåller en lista över Apache-direktiv som tillåts i en kundkonfiguration. Om ett direktiv inte är tillåtelselistad loggas ett fel och en avslutningskod som inte är noll returneras. Om ingen tillåtelselista anges på kommandoraden (vilket är det sätt som det ska anropas) använder verktyget en tillåtelselista som Cloud Manager använder som standard för validering innan det distribueras till molnmiljöer.
+Tillåtelselista innehåller en lista över Apache-direktiv som tillåts i en kundkonfiguration. Om ett direktiv inte är tillåtslista loggas ett fel och en avslutningskod som inte är noll returneras. Om ingen tillåtelselista anges på kommandoraden (vilket är det sätt som det ska anropas) använder verktyget en tillåtelselista som Cloud Manager använder som standard för validering innan det distribueras till molnmiljöer.
 
 Dessutom genomsöks alla filer med mönster `conf.dispatcher.d/enabled_farms/*.farm` och följande kontrolleras:
 
@@ -259,13 +259,11 @@ Cloud manager validator 1.0.4
   conf.dispatcher.d/enabled_farms/999_ams_publish_farm.any: filter allows access to CRXDE
 ```
 
-Observera att valideringsverktyget endast rapporterar förbjuden användning av Apache-direktiv som inte har tillåtelselistad. Den rapporterar inte syntaktiska eller semantiska problem med din Apache-konfiguration eftersom den här informationen endast är tillgänglig för Apache-moduler i en körningsmiljö.
-
-När inga valideringsfel rapporteras är konfigurationen klar för distribution.
+Observera att valideringsverktyget endast rapporterar förbjuden användning av Apache-direktiv som inte har tillåtslista. Den rapporterar inte syntaktiska eller semantiska problem med din Apache-konfiguration eftersom den här informationen endast är tillgänglig för Apache-moduler i en körningsmiljö.
 
 Nedan visas felsökningstekniker för felsökning av vanliga valideringsfel som genereras av verktyget:
 
-**det går inte att hitta en undermapp`conf.dispatcher.d`i arkivet**
+**det går inte att hitta en undermapp `conf.dispatcher.d` i arkivet**
 
 Arkivet bör innehålla mapparna `conf.d` och `conf.dispatcher.d`. Observera att du **inte** bör
 använda prefixet `etc/httpd` i arkivet.
@@ -348,13 +346,41 @@ Observera att det inte finns någon standardversion av variabelfilerna.
 
 Det här meddelandet anger att din konfiguration har den föråldrade layouten version 1 som innehåller en completeApache-konfiguration och filer med `ams_` prefix. Detta stöds fortfarande för bakåtkompatibilitet, men du bör växla till den nya layouten.
 
+## Lokal validering av dispatcherkonfigurationssyntaxen så att apache httpd kan starta {#local-validation}
+
+När det har fastställts att konfigurationen för dispatcherns modul endast innehåller direktiv som stöds, bör du kontrollera att syntaxen är korrekt så att apache kan starta. Om du vill testa detta måste du installera dockningsfunktionen lokalt. Observera att det inte är nödvändigt att AEM körs.
+
+Använd `validate.sh` skriptet enligt nedan:
+
+```
+$ validate.sh src/dispatcher
+Phase 1: Dispatcher validator
+2019/06/19 16:02:55 No issues found
+Phase 1 finished
+Phase 2: httpd -t validation in docker image
+Running script /docker_entrypoint.d/10-create-docroots.sh
+Running script /docker_entrypoint.d/20-wait-for-backend.sh
+Waiting until aemhost is available
+aemhost resolves to xx.xx.xx.xx
+Running script /docker_entrypoint.d/30-allowed-clients.sh
+# Dispatcher configuration: (/etc/httpd/conf.dispatcher.d/dispatcher.any)
+/farms {
+...
+}
+Syntax OK
+Phase 2 finished
+```
+
+Skriptet gör följande:
+
+1. Valideraren körs från föregående avsnitt för att säkerställa att endast de direktiv som stöds inkluderas. Om konfigurationen inte är giltig misslyckas skriptet.
+2. Den kör `httpd -t command` att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution
+
 ## Testa Apache- och Dispatcher-konfigurationen lokalt {#testing-apache-and-dispatcher-configuration-locally}
 
-Du kan också testa din Apache- och Dispatcher-konfiguration lokalt. Docker måste vara installerat lokalt och konfigurationen måste godkännas för den validering som beskrivs ovan.
+Du kan också testa konfigurationen av Apache och Dispatcher lokalt. Det kräver att dockningsstationen installeras lokalt och att konfigurationen klarar den validering som beskrivs ovan.
 
-Genom att använda parametern &quot;`-d`&quot; skickar valideraren en mapp med alla konfigurationsfiler som behövs för dispatchern.
-
-Sedan kan skriptet peka på den mappen och påbörja `docker_run.sh` behållaren med din konfiguration.
+Kör valideringsverktyget med parametern &quot;`-d`&quot; som matar ut en mapp med alla konfigurationsfiler som behövs av dispatchern. Sedan kan skriptet peka på den `docker_run.sh` mappen. Genom att ange portnumret (i exemplet nedan, 8080) för att visa dispatcherslutpunkten, startar den behållaren med din konfiguration.
 
 ```
 $ validator full -d out src/dispatcher
@@ -371,9 +397,37 @@ Starting httpd server
 
 Detta startar dispatchern i en behållare med dess serverdel pekande på en AEM som körs på din lokala Mac OS-dator vid port 4503.
 
-## Felsöka Apache- och Dispatcher-konfigurationen {#debugging-apache-and-dispatcher-configuration}
+## Felsöka konfigurationen av Apache och Dispatcher {#debugging-apache-and-dispatcher-configuration}
 
-Loggnivåer definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL` i `conf.d/variables/global.var`s&quot;. Mer information finns i [loggningsdokumentationen](/help/implementing/developing/introduction/logging.md#apache-web-server-and-dispatcher-logging) .
+Följande strategi kan användas för att öka loggutdata för dispatchermodulen och för att se resultatet av `RewriteRule` utvärderingen i både lokala miljöer och molnmiljöer.
+
+Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL`. De kan ställas in i filen `conf.d/variables/global.vars`. Den relevanta delen är följande:
+
+```
+# Log level for the dispatcher
+#
+# Possible values are: Error, Warn, Info, Debug and Trace1
+# Default value: Warn
+#
+# Define DISP_LOG_LEVEL Warn
+ 
+# Log level for mod_rewrite
+#
+# Possible values are: Error, Warn, Info, Debug and Trace1 - Trace8
+# Default value: Warn
+#
+# To debug your RewriteRules, it is recommended to raise your log
+# level to Trace2.
+#
+# More information can be found at:
+# https://httpd.apache.org/docs/current/mod/mod_rewrite.html#logging
+#
+# Define REWRITE_LOG_LEVEL Warn
+```
+
+När du kör dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh out docker.for.mac.localhost:4503 8080`.
+
+Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 
 ## Olika Dispatcher-konfigurationer per miljö {#different-dispatcher-configurations-per-environment}
 
@@ -394,7 +448,7 @@ ServerName ${ENVIRONMENT_TYPE}.company.com
 </IfDefine>
 ```
 
-I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik krävs definierar du variablerna enligt exemplet ovan och använder dem sedan i konfigurationsavsnittet för Dispatcher:
+I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik krävs definierar du variablerna enligt exemplet ovan och använder dem sedan i Dispatcher-konfigurationsavsnittet:
 
 ```
 /virtualhosts {
@@ -411,7 +465,7 @@ $ DISP_RUN_MODE=stage docker_run.sh out docker.for.mac.localhost:4503 8080
 Standardkörningsläget när inget värde för DISP_RUN_MODE skickas är &quot;dev&quot;.
 Om du vill se en fullständig lista över tillgängliga alternativ och variabler kör du skriptet `docker_run.sh` utan argument.
 
-## Visa den Dispatcher-konfiguration som används av Docker-behållaren {#viewing-dispatcher-configuration-in-use-by-docker-container}
+## Visa Dispatcher-konfigurationen som används av Docker-behållaren {#viewing-dispatcher-configuration-in-use-by-docker-container}
 
 Med miljöspecifika konfigurationer kan det vara svårt att avgöra hur den faktiska Dispatcher-konfigurationen ser ut. När du har startat din dockningsbehållare med `docker_run.sh` den kan den dumpas enligt följande:
 
@@ -434,17 +488,17 @@ $ docker exec d75fbd23b29 httpd-test
 ...
 ```
 
-## De viktigaste skillnaderna mellan AMS Dispatcher och AEM som Cloud Service {#main-differences-between-ams-dispatcher-configuration-and-aem-as-a-cloud-service}
+## De viktigaste skillnaderna mellan AMS Dispatcher och AEM som en Cloud Service {#main-differences-between-ams-dispatcher-configuration-and-aem-as-a-cloud-service}
 
-Som beskrivs på referenssidan ovan liknar Apache- och Dispatcher-konfigurationen i AEM som en Cloud Service AMS-konfigurationen. De viktigaste skillnaderna är:
+Som beskrivs på referenssidan ovan liknar konfigurationen av Apache och Dispatcher i AEM som en Cloud Service AMS-konfigurationen. De viktigaste skillnaderna är:
 
 * I AEM som Cloud Service kan vissa Apache-direktiv inte användas (till exempel `Listen` eller `LogLevel`)
 * I AEM som Cloud Service kan endast vissa delar av Dispatcher-konfigurationen placeras i inkluderingsfiler och deras namn är viktigt. Filterregler som du vill återanvända på olika värdar måste till exempel läggas i en fil som kallas `filters/filters.any`. Mer information finns på referenssidan.
-* I AEM som Cloud Service finns det extra validering för att förhindra att filterregler skrivs med `/glob` för att förhindra säkerhetsproblem. Eftersom `deny *` används i stället för `allow *` (vilket inte kan användas) har man nytta av att köra Dispatcher lokalt och göra en testversion och felsökning. Loggarna visar exakt vilka vägar Dispatcher-filtren blockerar för att dessa ska kunna läggas till.
+* I AEM som Cloud Service finns det extra validering för att förhindra att filterregler skrivs med `/glob` för att förhindra säkerhetsproblem. Eftersom `deny *` används i stället för `allow *` (vilket inte kan användas) har kunderna nytta av att köra Dispatcher lokalt och göra testversionen och felsökningen. Loggarna visar exakt vilka sökvägar Dispatcher-filtren blockerar för att de ska kunna läggas till.
 
 ## Riktlinjer för att migrera dispatcher-konfiguration från AMS till AEM som Cloud Service
 
-Dispatcher-konfigurationsstrukturen har olika Managed Services och AEM som en Cloud Service. Nedan visas en steg-för-steg-guide om hur du migrerar från AMS Dispatcher version 2 till AEM som Cloud Service.
+Dispatcher-konfigurationsstrukturen har olika Managed Services och AEM som en Cloud Service. Nedan visas en steg-för-steg-guide om hur du migrerar från AMS Dispatcher-konfiguration version 2 till AEM som Cloud Service.
 
 ## Konvertera en AMS till en AEM som en konfiguration för Cloud-tjänstdispatcher
 
@@ -523,7 +577,7 @@ $ validator httpd .
 
 Om felmeddelanden om saknade inkluderingsfiler visas, ska du kontrollera om du har bytt namn på filerna korrekt.
 
-Om Apache-direktiv som inte är tillåtelselistad visas tar du bort dem.
+Om Apache-direktiv som inte är tillåtslista visas tar du bort dem.
 
 ### Ta bort alla icke-publicerade servergrupper
 
@@ -708,4 +762,4 @@ docker container starts up without any failures or warnings, you&#39;re
 ready to move your configuration to a `dispatcher/src` subdirectory
 of your git repository.
 
-**Kunder som använder AMS Dispatcher version 1 bör kontakta kundsupport för att hjälpa dem att migrera från version 1 till version 2 så att instruktionerna ovan kan följas.**
+**Kunder som använder AMS Dispatcher-konfiguration version 1 bör kontakta kundsupport för att hjälpa dem att migrera från version 1 till version 2 så att instruktionerna ovan kan följas.**
