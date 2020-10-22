@@ -1,10 +1,10 @@
 ---
 title: Versionsinformation för 2020.9.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
-description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.9.0.'
+description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.9.0.'
 translation-type: tm+mt
-source-git-commit: 5fb87f82c092552aa5e1c4b569399ec0bbc0da3b
+source-git-commit: ded2efb4020386b058ec6b1286d6dfa078cddfe1
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '779'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Releasedatum för [!DNL Adobe Experience Manager] Cloud Service 2020.9.0 är 24 
 
 ### What is new in [!DNL Sites] {#what-is-new-sites}
 
-* SPA-redigeraren (Single Page Application) JavaScript SDK [är nu öppen källkod.](/help/implementing/developing/spa/reference-materials.md)
+* JavaScript SDK för Single Page Application (SPA) Editor [är nu öppen källkod.](/help/implementing/developing/spa/reference-materials.md)
 
 ## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
@@ -87,7 +87,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ### Vad är nytt? {#what-is-new-cra}
 
-* Cloud Readiness Analyzer (CRA) har en startstatuskonsol som visar en explicit **Generate Report** -knapp som användaren kan klicka på för att köra CRA.
+* I [Cloud Readiness Analyzer (CRA)](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/overview-cloud-readiness-analyzer.html) finns en startstatuskonsol som visar en explicit **Generate Report** -knapp som användaren kan klicka på för att köra CRA.
 
 * CRA-gränssnittet visar förloppet medan det körs. Här visas objekt som analyseras och upptäckter som hittas under körningen.
 
@@ -103,7 +103,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ### Vad är nytt? {#what-is-new-ctt}
 
-* Innehållsöverföringsverktyget (CTT) stöder Azure Blob Store-datalagret.
+* CTT ( [Content Transfer Tool)](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) har stöd för Azure Blob Store-datalagret.
 
 * CTT-användargränssnittet har en funktion för automatisk inläsning som laddar om översiktssidan var 30:e sekund.
 
