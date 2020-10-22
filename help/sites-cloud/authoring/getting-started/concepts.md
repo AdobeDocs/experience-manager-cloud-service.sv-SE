@@ -2,9 +2,9 @@
 title: Redigeringsbegrepp
 description: Begrepp att skapa i AEM
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 92434d0dc29ac5fe1b395a2d34c8e48e2fdb7c97
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '349'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Redigeringsbegrepp {#authoring-concepts}
 
-En AEM-installation består vanligtvis av minst två miljöer:
+En AEM består vanligtvis av minst två miljöer:
 
 * Författare
 * Publicera
@@ -26,11 +26,7 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 
 ![Diagram över författare, utgivare och avsändare](/help/sites-cloud/authoring/assets/author-publish.png)
 
-I författarmiljön görs funktionerna i AEM tillgängliga via AEM:s redigeringsgränssnitt. För publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
-
->[!NOTE]
->
->AEM används för att publicera AEM-dokumentationen.
+I redigeringsmiljön är AEM funktionalitet tillgänglig via AEM. För publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
 
 ## Författarmiljö {#author-environment}
 
@@ -65,4 +61,4 @@ Mer information om att publicera och avpublicera sidor finns i dokumentet [Publi
 
 ## Dispatcher {#dispatcher}
 
-För att optimera prestanda för besökare på webbplatsen **[implementerar dispatchern](/help/implementing/dispatcher/overview.md)**belastningsfördelning och cachning.
+För att optimera prestanda för besökare på webbplatsen **[implementerar dispatchern](/help/implementing/dispatcher/overview.md)** belastningsfördelning och cachning.
