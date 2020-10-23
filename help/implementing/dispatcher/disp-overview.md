@@ -2,9 +2,9 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: 720c1cdb6c26bb023a6cbf12aaa935645b0e8661
+source-git-commit: 2bf7578ec5431f98ab7cfff55770766228ba63e2
 workflow-type: tm+mt
-source-wordcount: '4073'
+source-wordcount: '4082'
 ht-degree: 8%
 
 ---
@@ -34,18 +34,19 @@ Dispatcher Tools är en del av den övergripande AEM som en Cloud Service-SDK oc
 
 ## Hämta och extrahera verktygen {#extracting-the-sdk}
 
-Dispatcher Tools kan laddas ned från en zip-fil på [Software Distribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) portal. Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som en Cloud Service-miljö. Alla nya konfigurationer som är tillgängliga i den nya versionen av dispatcher Tools kan användas för att distribuera till molnmiljöer där den versionen av AEM körs i molnet eller senare.
+Dispatcher Tools, som ingår i [AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan hämtas från en zip-fil på [Software Distribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) portal. Alla nya konfigurationer som är tillgängliga i den nya versionen av dispatcher Tools kan användas för att distribuera till molnmiljöer där den versionen av AEM körs i molnet eller senare.
+/Users/raiman/Documents/experience-manager-cloud-service.en/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.mdZippa upp SDK, som innehåller Dispatcher Tools för både macOS/Linux och Windows.
 
-**För macOS och Linux** hämtar du gränssnittsskriptet till en mapp på datorn, gör det körbart och kör det. Det extraherar Dispatcher Tools-filerna under den katalog som du lagrade dem i (där `version` är versionen av Dispatcher Tools).
+**För macOS/Linux** gör du artefakten för dispatchern körbar och kör den. Det extraherar Dispatcher Tools-filerna under den katalog som du lagrade dem i (där `version` är versionen av Dispatcher Tools).
 
 ```bash
-$ chmod +x DispatcherSDKv<version>.sh
-$ ./DispatcherSDKv<version>.sh
+$ chmod +x aem-sdk-dispatcher-tools-<version>-unix.sh
+$ ./aem-sdk-dispatcher-tools-<version>-unix.sh
 Verifying archive integrity...  100%   All good.
-Uncompressing DispatcherSDKv<version>  100% 
+Uncompressing aem-sdk-dispatcher-tools-<version>-unix.sh 100%
 ```
 
-**För Windows** hämtar du zip-arkivet och extraherar det.
+**Extrahera zip-arkivet Dispatcher Tooling för Windows**.
 
 ## Filstruktur {#file-structure}
 
@@ -380,7 +381,7 @@ Skriptet gör följande:
 
 Du kan också testa konfigurationen av Apache och Dispatcher lokalt. Det kräver att dockningsstationen installeras lokalt och att konfigurationen klarar den validering som beskrivs ovan.
 
-Kör valideringsverktyget med parametern &quot;`-d`&quot; som matar ut en mapp med alla konfigurationsfiler som behövs av dispatchern. Sedan kan skriptet peka på den `docker_run.sh` mappen. Genom att ange portnumret (i exemplet nedan, 8080) för att visa dispatcherslutpunkten, startar den behållaren med din konfiguration.
+Kör valideringsverktyget (observera att det skiljer sig från det `validator.sh` som anges ovan) genom att använda `-d` -parametern som matar ut en mapp med alla dispatcherkonfigurationsfiler. Kör sedan `docker_run.sh` skriptet och skicka mappen som ett argument. Genom att ange portnumret (här: 8080) Om du vill visa dispatcherslutpunkten startas en Docker-behållare och dispatchern körs med din konfiguration.
 
 ```
 $ validator full -d out src/dispatcher
