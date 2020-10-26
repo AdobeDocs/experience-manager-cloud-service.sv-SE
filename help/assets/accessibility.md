@@ -3,9 +3,9 @@ title: Tillgänglighet i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna [!DNL Adobe Experience Manager] i en Cloud Service kan hjälpa användare med funktionshinder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ffdecc8439b96b3bfcfd0571304a7917135684ca
+source-git-commit: 726c63a9bb3426bea324abec87b5e9f7d5e9e755
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1884'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ De viktigaste funktionerna i [!DNL Assets] är mer tillgängliga än tidigare oc
 
 ## Stöd för användning av tangentbord {#keyboard-use}
 
-Många element i användargränssnittet som är klickbara eller kan användas med en pekare kan också aktiveras med tangentbordet. Med ett tangentbord kan användarna fokusera på gränssnittselement och vidta lämpliga åtgärder. Användare kan använda kortkommandon direkt för att utlösa ett kommando eller en åtgärd utan att behöva fokusera på gränssnittselement och utlösa det med tangentbordet. Användarna kan till exempel öppna tidslinjen för en resurs på vänster sida genom att bläddra till gränssnittskontrollen med ett tangentbord och trycka på Retur och trycka på `alt + 2` kortkommandot.
+Många element i användargränssnittet som är klickbara eller kan användas med en pekare kan också aktiveras med tangentbordet. Med ett tangentbord kan användarna fokusera på gränssnittselement och vidta lämpliga åtgärder. Användare kan använda kortkommandon direkt för att utlösa ett kommando eller en åtgärd utan att behöva fokusera på gränssnittselement och utlösa det med tangentbordet. Användare kan till exempel öppna tidslinjen för en resurs på vänster sida genom att bläddra till gränssnittskontrollen med ett tangentbord och trycka på `Return` och trycka på `Alt + 2` kortkommandot.
 
 <!-- TBD items:
 
