@@ -2,9 +2,9 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 translation-type: tm+mt
-source-git-commit: 174648c78b71ef60d2d2507c3c4fbf18bbdac647
+source-git-commit: 47d2ff211b5c00457793dc7bd321df1139cfc327
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ AEM konfigurationer används för att hantera inställningar i AEM och fungerar 
 En konfiguration kan övervägas från två olika vypunkter.
 
 * [En administratör](#configurations-administrator) använder konfigurationer som arbetsytor i AEM för att definiera och hantera grupper av inställningar.
-* [En utvecklare](#configurations-developer) använder den underliggande konfigurationsmekanismen som implementerar Sling Context-Aware Configurations för att behålla och slå upp inställningarna i AEM.
+* [En utvecklare](#configurations-developer) använder den underliggande konfigurationsmekanismen som implementerar konfigurationer för att behålla och slå upp inställningar i AEM.
 
-Ur administratörens synvinkel är konfigurationer helt enkelt hur du skapar arbetsytor för att hantera inställningar i AEM, medan utvecklaren bör förstå hur AEM består och letar upp dessa konfigurationer i databasen.
+Sammanfattning: ur administratörens synvinkel är konfigurationer hur du skapar arbetsytor för att hantera inställningar i AEM, medan utvecklaren bör förstå hur AEM använder och hanterar dessa konfigurationer i databasen.
 
 Oavsett perspektiv har konfigurationerna två huvudsyften AEM:
 
-* Konfigurationer möjliggör vissa funktioner för användargrupper.
+* Konfigurationer möjliggör vissa funktioner för vissa användargrupper.
 * Konfigurationer definierar åtkomsträttigheter för dessa funktioner.
 
 ## Konfigurationer som administratör {#configurations-administrator}
@@ -38,6 +38,8 @@ Du kan skapa konfigurationer för många olika funktioner i AEM.
 * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
+
+### Exempel {#administrator-example}
 
 En administratör kan till exempel skapa två konfigurationer för redigerbara mallar.
 
@@ -122,7 +124,7 @@ Som utvecklare är det viktigt att du vet hur AEM som Cloud Service fungerar med
 
 Innehållet refererar till den associerade konfigurationen via en `cq:conf` egenskap. AEM utför en sökning baserat på innehållet och dess kontextuella `cq:conf` egenskap för att hitta rätt konfiguration.
 
-### Ett enkelt exempel {#example}
+### Exempel {#developer-example}
 
 I det här exemplet antar vi att du har programkod som är intresserad av DAM-inställningar.
 
@@ -193,7 +195,7 @@ Som stöd för detta har konfigurationssökningen i AEM arv- och reservmekanism 
 
 ### Använda konfigurationer {#using-configurations}
 
-Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd enligt [beskrivningen i föregående exempel.](#example)
+Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd enligt [beskrivningen i föregående exempel.](#developer-example)
 
 Mer information om Context-Aware Configurations, exempel och hur du använder dem [finns i Sling-dokumentationen.](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html)
 
