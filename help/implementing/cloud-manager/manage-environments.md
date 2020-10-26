@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: c015c631f6ad988b1482b45281a2ed9840e6af45
+source-git-commit: 6c719411ffa7bd814a515e302024ac433f173207
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '829'
 ht-degree: 6%
 
 ---
@@ -65,7 +65,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
    >Om du ännu inte har konfigurerat produktionsflödet för icke-produktion visas kortet *Översikt* där du kan skapa produktionsflödet.
 
 
-### Visa miljöer {#viewing-environment}
+### Visningsmiljöer {#viewing-environment}
 
 På **miljökortet** på sidan Översikt visas upp till tre miljöer.
 
