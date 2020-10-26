@@ -2,7 +2,7 @@
 title: Developing and Page Diff
 description: Förstå hur funktionen för sidskillnader fungerar och hur den kan påverka en utvecklare
 translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+source-git-commit: 57a9026dd944547196e53fecb1cf1213ed793af7
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -30,7 +30,7 @@ När innehållet jämförs återskapas hela trädet fram till sidan som ska jäm
 
 En rensningsåtgärd körs automatiskt för att rensa upp det tillfälliga innehållet.
 
-## Behörigheter {#permissions}
+## Begränsningar {#limitations}
 
 Skillnaden uppstår på klientsidan via DOM-jämförelsen, vilket gör diff-processen enkel, men det finns ett antal begränsningar som måste beaktas av utvecklaren.
 
