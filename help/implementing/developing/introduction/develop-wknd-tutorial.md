@@ -1,10 +1,10 @@
 ---
 title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
-description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är nybörjare på AEM hur man implementerar en webbplats i AEM med hjälp av de senaste standarderna och teknologierna.
+description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
 translation-type: tm+mt
-source-git-commit: cedc14b0d71431988238d6cb4256936a5ceb759b
+source-git-commit: 20a19c558be17631889f0253b3ad4e5a71ebcce2
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '254'
 ht-degree: 10%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 10%
 
 ## Översikt {#overview}
 
-Är du nybörjare på att utveckla Adobe Experience Manager som en molntjänst? Vill du ha en uppdatering av de senaste metoderna? Här börjar du!
+Är du nybörjare på att utveckla Adobe Experience Manager som Cloud Service? Vill du ha en uppdatering av de senaste metoderna? Här börjar du!
 
-Målet med den här självstudiekursen är att lära en utvecklare som är nybörjare på AEM hur man implementerar en webbplats i AEM med hjälp av de senaste standarderna och teknologierna. Hoppas att du kommer att förstå grunderna i AEM-plattformen och kunskaper om några av de vanliga designmönstren.
+Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna. Hoppas att du kommer att förstå grunderna i den AEM plattformen och kunskaper om några av de gemensamma designmönstren.
 
 ## WKND Developer Tutorial {#wknd-developer-tutorial}
 
 ![WKND](assets/wknd-tutorial-homepage.png)
 
-[WKND Developer Tutorial finns här](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM-projekt med hjälp av den senaste tekniken och de bästa metoderna.
+[WKND Developer Tutorial finns här](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
 
 ## Viktiga begrepp {#core-concepts}
 
-Implementeringen av självstudiekurserna utnyttjar många kraftfulla funktioner i AEM. Webbplatsen kommer att implementeras med:
+Självstudiekursen utnyttjar många kraftfulla funktioner i AEM. Webbplatsen kommer att implementeras med:
 
 * [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
 * [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)
-* Sling Models
+* [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 * [Redigerbara mallar](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
 * [Formatsystem](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
