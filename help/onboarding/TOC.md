@@ -4,10 +4,10 @@ user-guide-title: Introduktion till AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du får åtkomst och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 61fa965f14e566976db8ac6475553b9a9d3ed43a
+source-git-commit: 6c719411ffa7bd814a515e302024ac433f173207
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 88%
+source-wordcount: '220'
+ht-degree: 83%
 
 ---
 
@@ -43,6 +43,9 @@ ht-degree: 88%
       + [Använda guiden](getting-access-to-aem-in-cloud/using-the-wizard.md)
       + [Konfigurera projektet](getting-access-to-aem-in-cloud/setting-up-project.md)
       + [Förstå byggmiljön](getting-access-to-aem-in-cloud/build-environment-details.md)
+   + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
+      + [Versionsinformation för 2020.10.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-10-0.md)
+      + [Versionsinformation för 2020.2.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-2-0.md)
 + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
    + [AEM-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/aem-readiness.md)
    + [AEM Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/foundation-readiness.md)
