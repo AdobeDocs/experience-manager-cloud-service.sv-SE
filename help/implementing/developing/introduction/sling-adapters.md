@@ -2,9 +2,9 @@
 title: Använda Sling-adaptrar
 description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 translation-type: tm+mt
-source-git-commit: 4201207acb48ab61892f4dd5de05d7f5f9f7ba83
+source-git-commit: 8826fde91a2ab0be0fe7850ae20f46ba023cdf55
 workflow-type: tm+mt
-source-wordcount: '2437'
+source-wordcount: '2442'
 ht-degree: 0%
 
 ---
@@ -358,4 +358,4 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 #### Annan {#other}
 
-Dessutom innehåller Sling/JCR/OCM också ett ` [AdapterFactory](https://sling.apache.org/site/adapters.html#Adapters-AdapterFactory)` alternativ för anpassade OCM-objekt ([Object Content Mapping](https://jackrabbit.apache.org/object-content-mapping.html)).
+Dessutom innehåller Sling/JCR/OCM också ett [`AdapterFactory`](https://sling.apache.org/site/adapters.html#Adapters-AdapterFactory) alternativ för anpassade OCM-objekt ([Object Content Mapping](https://jackrabbit.apache.org/object-content-mapping.html)).
