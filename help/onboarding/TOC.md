@@ -4,10 +4,10 @@ user-guide-title: Introduktion till AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du får åtkomst och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 8b6d4f424fcc943c981d5883877cb533c8d63353
+source-git-commit: 61fa965f14e566976db8ac6475553b9a9d3ed43a
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 92%
+source-wordcount: '209'
+ht-degree: 88%
 
 ---
 
@@ -27,6 +27,18 @@ ht-degree: 92%
       + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
       + [Skapa ett program](getting-access-to-aem-in-cloud/creating-a-program.md)
       + [Sandlådeprogram](getting-access-to-aem-in-cloud/sandbox-programs.md)
+   + Använda Cloud Manager {#using-cloud-manager}
+      + [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md)
+      + [Konfigurera CI/CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md)
+      + [Driftsätta kod](/help/implementing/cloud-manager/deploy-code.md)
+   + Förstå testresultat {#test-results}
+      + [Översikt](/help/implementing/cloud-manager/overview-test-results.md)
+      + [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md)
+      + [Anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md)
+      + [Funktionstestning](/help/implementing/cloud-manager/functional-testing.md)
+      + [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
+   + [Komma åt och hantera loggar](/help/implementing/cloud-manager/manage-logs.md)
+   + [Förstår aviseringar](/help/implementing/cloud-manager/notifications.md)
    + Skapa ett AEM-programprojekt {#create-application-project}
       + [Använda guiden](getting-access-to-aem-in-cloud/using-the-wizard.md)
       + [Konfigurera projektet](getting-access-to-aem-in-cloud/setting-up-project.md)
