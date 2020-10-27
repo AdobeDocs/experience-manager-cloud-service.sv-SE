@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 7fdbdd8bfe80d5f87d9917c905c8d04c4c277534
+source-git-commit: 7b452b260bfaee159fe4d228b704f69b12780805
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '850'
 ht-degree: 6%
 
 ---
@@ -68,9 +68,17 @@ Produktionen och scenen finns som duo och används för testning och produktion.
 
 På **miljökortet** på sidan Översikt visas upp till tre miljöer.
 
-Användaren kan välja knappen **Visa alla** för att navigera till sammanfattningssidan för **miljön** för att visa en tabell med en fullständig lista över miljöer.
+1. Klicka på knappen **Visa alla** för att navigera till sammanfattningssidan för **miljön** för att visa en tabell med en fullständig lista över miljöer.
 
-![](assets/environment-view1.png)
+   ![](assets/environment-view-1.png)
+
+1. På sidan **Miljö** visas en lista över alla befintliga miljöer.
+
+   ![](assets/environment-view-2.png)
+
+1. Välj någon av miljöerna i listan för att visa miljöinformationen.
+
+   ![](assets/environment-view-3.png)
 
 
 ## Uppdaterar miljö {#updating-dev-environment}
