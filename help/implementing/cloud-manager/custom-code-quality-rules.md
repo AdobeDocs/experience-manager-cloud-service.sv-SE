@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet - Cloud Services
 description: Anpassade regler för kodkvalitet - Cloud Services
 translation-type: tm+mt
-source-git-commit: 457ee90f0c0eeb9325cab0c66694862772390611
+source-git-commit: 7fdbdd8bfe80d5f87d9917c905c8d04c4c277534
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2285'
 ht-degree: 6%
 
 ---
@@ -555,7 +555,7 @@ public void doThis(Resource resource) {
 
 **Nyckel**: CQRules:AMSCORE-554
 
-**Typ**: Code Smell
+**Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
 
 **Allvarlighetsgrad**: Mindre
 
@@ -569,7 +569,7 @@ Läs mer om hur [Sling-jobb hanteras i klustermiljöer i](https://sling.apache.o
 
 **Nyckel**: AMSCORE-553
 
-**Typ**: Code Smell
+**Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
 
 **Allvarlighetsgrad**: Mindre
 
@@ -680,7 +680,7 @@ På liknande sätt som *Paket bör inte innehålla duplicerade OSGi-konfiguratio
 
 **Nyckel**: KlassisktUIAuthoringMode
 
-**Typ**: Code Smell
+**Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
 
 **Allvarlighetsgrad**: Mindre
 
@@ -692,7 +692,7 @@ OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` defin
 
 **Nyckel**: ComponentWithOnlyClassicUIDialog
 
-**Typ**: Code Smell
+**Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
 
 **Allvarlighetsgrad**: Mindre
 
@@ -710,7 +710,7 @@ Dokumentationen för AEM Moderniseringsverktyg innehåller dokumentation och ver
 
 **Nyckel**: ImmutableMutableMixedPackage
 
-**Typ**: Code Smell
+**Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
 
 **Allvarlighetsgrad**: Mindre
 
@@ -724,7 +724,7 @@ Refer to [AEM Project Structure](https://docs.adobe.com/content/help/en/experien
 
 **Nyckel**: ReverseReplication
 
-**Typ**: Code Smell
+**Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
 
 **Allvarlighetsgrad**: Mindre
 
