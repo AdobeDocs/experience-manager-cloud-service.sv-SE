@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 6c719411ffa7bd814a515e302024ac433f173207
+source-git-commit: 7fdbdd8bfe80d5f87d9917c905c8d04c4c277534
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '828'
 ht-degree: 6%
 
 ---
@@ -37,8 +37,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
    >[!NOTE]
    >Produktionen och scenen finns som duo och används för testning och produktion.  Användaren kan inte skapa enbart scenen eller enbart produktionsmiljön.
 
-## Lägga till en miljö {#adding-environments}
-
+## Lägger till miljö {#adding-environments}
 
 1. Klicka på **Lägg till miljö** för att lägga till en miljö. Den här knappen kommer att vara tillgänglig från skärmen **för miljöer** .
    ![](assets/environments-tab.png)
@@ -65,7 +64,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
    >Om du ännu inte har konfigurerat produktionsflödet för icke-produktion visas kortet *Översikt* där du kan skapa produktionsflödet.
 
 
-### Visningsmiljöer {#viewing-environment}
+## Visningsmiljö {#viewing-environment}
 
 På **miljökortet** på sidan Översikt visas upp till tre miljöer.
 
