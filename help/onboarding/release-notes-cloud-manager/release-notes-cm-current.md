@@ -2,7 +2,7 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.10.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.10.0
 translation-type: tm+mt
-source-git-commit: ca690144a8254d5ffba354f0f96d9ef1c5202533
+source-git-commit: 7fdbdd8bfe80d5f87d9917c905c8d04c4c277534
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.10.0 är 1 oktober 
 * Antalet miljövariabler per miljö har ökat till 200.
 
 * Miljökortet på sidan Översikt visar nu upp till tre miljöer. Användare kan välja knappen **Visa alla** för att navigera till sammanfattningssidan för miljö och visa en tabell med en fullständig lista över miljöer.
-Mer information finns i [Visningsmiljöer](/help/implementing/cloud-manager/manage-environments.md#viewing-environment) .
+Mer information finns i [Visningsmiljön](/help/implementing/cloud-manager/manage-environments.md#viewing-environment) .
 
 
 ### Bug Fixes {#bug-fixes-cloud-manager}
