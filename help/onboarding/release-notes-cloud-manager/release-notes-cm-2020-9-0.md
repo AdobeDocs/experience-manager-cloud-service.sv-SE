@@ -1,0 +1,29 @@
+---
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.9.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.9.0
+translation-type: tm+mt
+source-git-commit: ca690144a8254d5ffba354f0f96d9ef1c5202533
+workflow-type: tm+mt
+source-wordcount: '125'
+ht-degree: 1%
+
+---
+
+
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.9.0 {#release-notes}
+
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.9.0.
+
+## Releasedatum {#release-date}
+
+Releasedatum för Cloud Manager i AEM som Cloud Service 2020.9.0 är 3 september 2020.
+
+## Nyheter {#whats-new-cloud-manager}
+
+* Innehållsgranskning har omdöpts till Experience Audit.
+* Byggprocessen har delats upp i tre separata Maven-kommandon.
+* Om Git-databasen inte kan klonas görs ett nytt försök upp till tre gånger.
+
+### Bug Fixes {#bug-fixes-cm}
+
+* Fliken Innehållsgranskning visade felaktigt bas-URL:en med författardomänen i stället för publiceringsdomänen.
