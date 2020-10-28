@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.10.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.10.0.'
 translation-type: tm+mt
-source-git-commit: 12883e87d4aee796b23c366e77651134dafb8f4c
+source-git-commit: 4cbee57ff2490802bb473279a37fe6c539a4f44b
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Mer information finns i [Visningsmiljön](/help/implementing/cloud-manager/manag
 
 ### Arbetsflöden {#workflows}
 
-* Stöd har lagts till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum.
+* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Sök efter arbetsflödesinstanser](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/administering/workflows-administering.html).
 
 ## Content Transfer Tool {#content-transfer-tool}
 
