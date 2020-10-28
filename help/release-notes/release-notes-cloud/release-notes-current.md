@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.10.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.10.0.'
 translation-type: tm+mt
-source-git-commit: 45d9b852fad20f518f9840adc17b9d2abeb2bc6a
+source-git-commit: 12883e87d4aee796b23c366e77651134dafb8f4c
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Content to come
 
 * CIF Cloud-konfigurationsgränssnittet visade knapparna Spara och stäng för konfigurationer i /lib och /apps/. Dessa är skrivskyddade och därför har användargränssnittet fast att bara visa stängningsknappen.
 
-### Cloud Manager {#cloud-manager}
+## Cloud Manager {#cloud-manager}
 
 * Miljösidan har fått en ny design.
 
@@ -77,7 +77,7 @@ Content to come
 * Antalet miljövariabler per miljö har ökat till 200.
 
 * Miljökortet på sidan Översikt visar nu upp till tre miljöer. Användare kan välja knappen **Visa alla** för att navigera till sammanfattningssidan för miljö och visa en tabell med en fullständig lista över miljöer.
-
+Mer information finns i [Visningsmiljön](/help/implementing/cloud-manager/manage-environments.md#viewing-environment) .
 
 ### Bug Fixes {#bug-fixes-cloud-manager}
 
