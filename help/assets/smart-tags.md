@@ -1,17 +1,17 @@
 ---
-title: Tagga bilder med smarta tjänster
-description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar med hjälp av Adobe Sensei tjänster.
+title: Märk upp bilder automatiskt med AI-genererade taggar
+description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar [!DNL Adobe Sensei] med hjälp av tjänster.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: 33f5f5e0f4769381dd135216d7c7e49e158e870e
 workflow-type: tm+mt
-source-wordcount: '2354'
+source-wordcount: '2363'
 ht-degree: 6%
 
 ---
 
 
-# Utbilda tjänsten Smart Tag och tagga dina bilder {#train-service-tag-assets}
+# Utbilda Smart Content Service och tagga dina bilder automatiskt {#train-service-tag-assets}
 
 Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter sina digitala resurser. Genom att tagga resurser med taxonomistyrd vokabulär kan du enkelt identifiera och hämta dem genom taggbaserade sökningar.
 
@@ -19,7 +19,7 @@ Jämfört med naturliga språkordsuttryck hjälper taggning som baseras på för
 
 In the background, the Smart Tags uses an artificial intelligence framework of [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) to train its image recognition algorithm on your tag structure and business taxonomy. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
 
-<!-- TBD: Create a similar flowchart for how training works in CS.
+<!-- TBD: Create a flowchart for how training works in CS.
 ![flowchart](assets/flowchart.gif) 
 -->
 
@@ -33,13 +33,13 @@ Utför följande uppgifter om du vill använda smart taggning:
 
 Smarta taggar gäller endast för [!DNL Adobe Experience Manager Assets] kunder. The Smart Tags is available for purchase as an add-on to [!DNL Experience Manager].
 
-<!-- TBD: Is there a link to buy SCS or initiate a sales call. How are AIO services sold? -->
+<!-- TBD: Is there a link to buy SCS or initiate a sales call. How are AIO services sold? Provide a CTA here to buy or contacts Sales team. -->
 
 ## Integrate [!DNL Experience Manager] with Adobe Developer Console {#integrate-aem-with-aio}
 
 >[!IMPORTANT]
 >
->De nya [!DNL Experience Manager Assets] distributionerna är integrerade med [!DNL Adobe Developer Console] som standard. Det hjälper till att konfigurera smarta taggar snabbare. I befintliga distributioner kan administratörer manuellt [konfigurera integrering](/help/assets/smart-tags-configuration.md#aio-integration)med smarta taggar.
+>De nya [!DNL Experience Manager Assets] distributionerna är integrerade med [!DNL Adobe Developer Console] som standard. Det hjälper till att konfigurera smarta taggar snabbare. I äldre distributioner kan administratörer manuellt [konfigurera integrering](/help/assets/smart-tags-configuration.md#aio-integration)med smarta taggar.
 
 Du kan integrera [!DNL Adobe Experience Manager] med smarta taggar med [!DNL Adobe Developer Console]. Använd den här konfigurationen för att komma åt tjänsten Smarta taggar inifrån [!DNL Experience Manager]. Se [Konfigurera Experience Manager för smart taggning av resurser](smart-tags-configuration.md) för uppgifter för att konfigurera smarta taggar. At the back end, the [!DNL Experience Manager] server authenticates your service credentials with the Adobe Developer Console gateway before forwarding your request to the Smart Tags service.
 
@@ -154,28 +154,36 @@ När du har utbildat tjänsten Smarta taggar kan du utlösa taggningsarbetsflöd
 1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder dina taggar på resurser. Navigera till resursmappen och granska taggarna för att kontrollera om dina resurser är taggade på rätt sätt. Mer information finns i [Hantera smarta taggar](#manage-smart-tags-and-searches).
 
 >[!NOTE]
->
+
 >I de efterföljande taggningscyklerna märks bara de ändrade resurserna igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
 
 ### Tagga överförda resurser {#tag-uploaded-assets}
 
 Experience Manager kan automatiskt tagga resurser som användare överför till DAM. För att göra det konfigurerar administratörer ett arbetsflöde för att lägga till ett tillgängligt steg i resurser för smarta taggar. Se [hur du aktiverar smart taggning för överförda resurser](/help/assets/smart-tags-configuration.md#enable-smart-tagging-for-uploaded-assets).
 
-## Hantera smarta taggar och bildsökningar {#manage-smart-tags-and-searches}
+## Hantera smarta taggar och resurssökningar {#manage-smart-tags-and-searches}
 
-Du kan strukturera smarta taggar om du vill ta bort felaktiga taggar som kan ha tilldelats dina varumärkesbilder så att endast de mest relevanta taggarna visas.
+Du kan strukturera smarta taggar om du vill ta bort felaktiga taggar som kan ha tilldelats ert varumärkesobjekt, så att endast de mest relevanta taggarna visas.
 
-Genom att moderera smarta taggar kan du också förbättra taggbaserade sökningar efter bilder genom att se till att bilden visas i sökresultaten för de mest relevanta taggarna. I grund och botten eliminerar det riskerna för att bilder som inte är relaterade visas i sökresultaten.
+Genom att moderera smarta taggar kan du också förbättra taggbaserade sökningar efter resurser genom att se till att dina resurser visas i sökresultaten för de mest relevanta taggarna. I grund och botten kan det hjälpa till att eliminera risken för att orelaterade resurser visas i sökresultaten.
 
-Du kan också tilldela en tagg en högre rankning för att öka dess relevans i förhållande till en bild. Om du befordrar en tagg för en bild ökar risken för att bilden visas i sökresultatet när en sökning utförs baserat på den aktuella taggen.
+Du kan också tilldela en högre rankning till en tagg för att öka dess relevans i förhållande till en resurs. Om du befordrar en tagg för en resurs ökar risken för att resursen visas i sökresultaten när en sökning utförs baserat på den aktuella taggen.
 
-1. Sök efter resurser baserade på en tagg i rutan Omnissearch.
-1. Inspect sökresultaten för att identifiera en bild som du inte tycker är relevant för sökningen.
-1. Select the image, and then click the **[!UICONTROL Manage Tags]** icon from the toolbar.
-1. Granska taggarna från **[!UICONTROL Manage Tags]** sidan. Om du inte vill att bilden ska genomsökas baserat på en viss tagg, markerar du taggen och klickar sedan på ikonen Ta bort i verktygsfältet. Du kan också klicka på `X` symbolen som visas bredvid etiketten.
-1. Om du vill tilldela en högre rankning till en tagg, markerar du taggen och klickar på upphöjningsikonen i verktygsfältet. Taggen som du höjer upp flyttas till **[!UICONTROL Tags]** avsnittet.
-1. Click **[!UICONTROL Save]**, and then click **[!UICONTROL OK]** to close the Success dialog.
-1. Navigera till egenskapssidan för bilden. Observera att taggen som du befordrade har hög relevans och därför visas högre i sökresultaten.
+Så här modererar du smarta taggar för dina resurser:
+
+1. I Omnissearch-fältet söker du efter resurser baserat på en tagg.
+
+1. Inspect sökresultaten för att identifiera de resurser som du inte tycker är relevanta för sökningen.
+
+1. Markera resursen och välj sedan ikonen ![](assets/do-not-localize/manage-tags-icon.png) Hantera taggar i verktygsfältet.
+
+1. Granska taggarna från **[!UICONTROL Manage Tags]** sidan. Om du inte vill att resursen ska genomsökas baserat på en viss tagg markerar du taggen och väljer ![Ta bort ikon](assets/do-not-localize/delete-icon.png) i verktygsfältet. Du kan också välja `X` en symbol bredvid etiketten.
+
+1. Om du vill tilldela en högre rankning till en tagg markerar du taggen och väljer ![ikonen](assets/do-not-localize/promote-icon.png) Höj upp i verktygsfältet. Taggen som du höjer upp flyttas till **[!UICONTROL Tags]** avsnittet.
+
+1. Markera **[!UICONTROL Save]** och välj sedan **[!UICONTROL OK]** för att stänga [!UICONTROL Success] dialogrutan.
+
+1. Navigera till [!UICONTROL Properties] sidan för resursen. Observera att taggen som du befordrade har hög relevans och därför visas högre i sökresultaten.
 
 ### Förstå AEM sökresultat med smarta taggar {#understandsearch}
 
@@ -210,4 +218,5 @@ Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) 
 >
 >* [Konfigurera Experience Manager för smart taggning](smart-tags-configuration.md)
 >* [Förstå hur smarta taggar hjälper till att hantera resurser](https://medium.com/adobetech/efficient-asset-management-with-enhanced-smart-tags-887bd47dbb3f)
+>* [Smart taggning av videomaterial](smart-tags-video-assets.md)
 
