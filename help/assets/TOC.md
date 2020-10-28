@@ -5,10 +5,10 @@ breadcrumb-title: Resurshandbok
 user-guide-description: Lär dig hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: d311c87c1ae1cdfe9f50d41750aecbab960dc7ef
+source-git-commit: a298921410b4cba05ad341f7cee6d2ac9981bce4
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 78%
+source-wordcount: '429'
+ht-degree: 75%
 
 ---
 
@@ -29,7 +29,8 @@ ht-degree: 78%
    + [Lägga till och överföra resurser](add-assets.md)
    + [Söka efter resurser](search-assets.md)
    + [Vanliga åtgärder för hantering av material](manage-digital-assets.md)
-   + [Smarta taggar](smart-tags.md)
+   + [Smarta taggar för bilder](smart-tags.md)
+   + [Smarta taggar för videomaterial](smart-tags-video-assets.md)
    + [Organisera resurser](organize-assets.md)
    + [Använd [!DNL Adobe Stock] resurser i AEM](aem-assets-adobe-stock.md)
    + [Hantera samlingar](manage-collections.md)
@@ -49,7 +50,7 @@ ht-degree: 78%
    + [Dokumentreferenser för utvecklare och API:er](developer-reference-material-apis.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
-   + [Konfigurera smarta taggar](smart-tags-configuration.md)
+   + [Konfigurera smart taggning av bilder](smart-tags-configuration.md)
    + [Flerspråkiga resurser och översättning](translate-assets.md)
    + [Söka efter fasetter](search-facets.md)
    + [HTTP API för Assets](mac-api-assets.md)
