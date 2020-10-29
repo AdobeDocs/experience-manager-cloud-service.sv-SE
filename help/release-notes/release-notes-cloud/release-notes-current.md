@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.10.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.10.0.'
 translation-type: tm+mt
-source-git-commit: 95a5c9ad098a3670221847b9c45cdf6c6e22192f
+source-git-commit: a544acab6f79fa60990bfc3915a5a664befb8b09
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Expe
 Releasedatum för [!DNL Adobe Experience Manager] Cloud Service 2020.10.0 är 28 oktober 2020.
 Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sitess}
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
 ### What is new in [!DNL Sites] {#what-is-new-sites}
 
@@ -72,7 +72,7 @@ Content to come
 
 * Vilolägen miljöer har nu en diskret status i Cloud Manager när de är i viloläge.
 
-* Molnhanterarens byggbehållare har nu stöd för både Java 8 och Java 11.
+* Molnhanterarens byggbehållare har nu stöd för kompilering av projekt med antingen Java 8 eller Java 11. Stöd för Java 11 finns i Maven ToolChain System.
 
 * Antalet miljövariabler per miljö har ökat till 200.
 
