@@ -1,10 +1,18 @@
 ---
 title: Avancerade URL-konfigurationer
-description: Avancerade URL-konfigurationer
+description: Lär dig hur du anpassar URL:er för produkt- och kategorisidor. Detta gör att implementeringar kan optimera URL:er för sökmotorer och främja identifiering.
+sub-product: Handel
+version: cloud-service
+doc-type: technical-video
+activity: setup
+audience: administrator
+feature: Commerce Integration Framework
+kt: 4933
+thumbnail: 34350.jpg
 translation-type: tm+mt
-source-git-commit: 3a235e3d8e2d97e413f445df1f0bfe52e97024b3
+source-git-commit: 72d98c21a3c02b98bd2474843b36f499e8d75a03
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '789'
 ht-degree: 2%
 
 ---
@@ -55,7 +63,7 @@ Förutom `UrlProvider`är det även möjligt att konfigurera [delningskartor](ht
 
 ## Kombinera med AEM Dispatcher {#dispatcher}
 
-URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewrite` modul. Den [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher config som redan innehåller grundläggande [skrivregler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
+URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewrite` modul. Den [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher-konfiguration som redan innehåller grundläggande [omskrivningsregler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
 
 ## Exempel
 
