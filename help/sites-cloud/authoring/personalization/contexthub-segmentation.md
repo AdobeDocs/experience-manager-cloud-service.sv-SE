@@ -2,9 +2,9 @@
 title: Konfigurera segmentering med ContextHub
 description: Lär dig hur du konfigurerar segmentering med ContextHub.
 translation-type: tm+mt
-source-git-commit: 82ad2cda70dd664ac9456a04f34e2d5831687fc1
+source-git-commit: c9c7176f6c3bf70529b761183341a2490d4ecbfc
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1692'
 ht-degree: 0%
 
 ---
@@ -26,14 +26,14 @@ Audiences [-](audiences.md) konsolen används för att hantera segment för Cont
 
 Om du vill komma åt dina segment väljer du **Navigering > Personalisering > Publiker** i den globala navigeringen.
 
-![Hantera målgrupper](/help/sites-cloud/authoring/assets/contexthub-segmentation-audiences.png)
+![Hantera målgrupper](../assets/contexthub-segmentation-audiences.png)
 
 ## Segmentredigerare {#segment-editor}
 
 <!--The **Segment Editor** allows you to easily modify a segment. To edit a segment, select a segment in the [list of segments](/help/sites-administering/segmentation.md#accessing-segments) and click the **Edit** button.-->
 Med **segmentredigeraren** kan du enkelt ändra ett segment. Om du vill redigera ett segment markerar du det i listan och klickar på **Redigera** .
 
-![Segmentredigerare](/help/sites-cloud/authoring/assets/contexthub-segment-editor.png)
+![Segmentredigerare](../assets/contexthub-segment-editor.png)
 
 Med komponentwebbläsaren kan du lägga till **OCH** - och **OR** -behållare för att definiera segmentlogiken, och sedan lägga till ytterligare komponenter för att jämföra egenskaper och värden eller referensskript och andra segment för att definiera urvalskriterierna (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för att markera segmentet.
 
@@ -87,13 +87,15 @@ Följande referenser är tillgängliga när du vill länka direkt till ett skrip
 
 Så här definierar du det nya segmentet:
 
-1. När du har [öppnat segmenten](#accessing-segments)klickar eller trycker du på knappen Skapa och väljer **Skapa ContextHub-segment**.
+1. När du har [öppnat segmenten](#accessing-segments)[navigerar du till den mapp](#organizing-segments) där du vill skapa segmentet, eller låter det vara kvar i roten.
 
-   ![Lägg till segment](/help/sites-cloud/authoring/assets/contexthub-create-segment.png)
+1. Tryck eller klicka på knappen **Skapa** och välj **Skapa ContextHub-segment**.
+
+   ![Lägg till segment](../assets/contexthub-create-segment.png)
 
 1. I **New ContextHub Segment** anger du en rubrik för segmentet samt ett ökningsvärde om det behövs. Tryck eller klicka sedan på **Skapa**.
 
-   ![Nytt segment](/help/sites-cloud/authoring/assets/contexthub-new-segment.png)
+   ![Nytt segment](../assets/contexthub-new-segment.png)
 
    Varje segment har en startparameter som används som viktningsfaktor. Ett högre värde anger att segmentet väljs framför ett segment med ett lägre värde i de fall där flera segment är giltiga.
 
@@ -104,7 +106,7 @@ Så här definierar du det nya segmentet:
 1. Dra en jämförelse eller referens till segmentredigeraren som den visas i standardbehållaren OCH.
 1. Dubbelklicka på eller tryck på konfigurationsalternativet för den nya referensen eller segmentet för att redigera de specifika parametrarna. I det här exemplet testar vi för folk i Basel.
 
-   ![Testning av människor i Basel](/help/sites-cloud/authoring/assets/contexthub-comparing-property-value.png)
+   ![Testning av människor i Basel](../assets/contexthub-comparing-property-value.png)
 
    Ange alltid en **datatyp** om det är möjligt för att säkerställa att dina jämförelser utvärderas korrekt. Mer information finns i [Jämförelser](#comparisons) .
 
@@ -130,7 +132,7 @@ Följande exempel används för att välja besökare som beaktas i vår schweizi
 
 Du börjar med att placera en OR-behållarkomponent i standardbehållaren AND. I ELLER-behållaren kan du lägga till egenskaps- eller referenskomponenterna.
 
-![Segment med operatorn OR](/help/sites-cloud/authoring/assets/contexthub-or-operator.png)
+![Segment med operatorn OR](../assets/contexthub-or-operator.png)
 
 Du kan kapsla in flera AND- och OR-operatorer efter behov.
 
@@ -186,6 +188,75 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. Lägg till **skriptreferenskomponenten** på önskad plats i segmentet.
 1. Öppna redigeringsdialogrutan för **skriptreferenskomponenten** . Om skriptet är [korrekt konfigurerat](#defining-a-script-to-reference)bör det vara tillgängligt i listrutan **Skriptnamn** .
 
+## Organisera segment {#organizing-segments}
+
+Om du har många segment kan det bli svårt att hantera dem som en platt lista. I sådana fall kan det vara användbart att skapa mappar för att hantera dina segment.
+
+### Skapa en ny mapp {#create-folder}
+
+1. När du har [öppnat segmenten](#accessing-segments)klickar eller trycker du på knappen **Skapa** och väljer **Mapp**.
+
+   ![Lägg till mapp](../assets/contexthub-create-segment.png)
+
+1. Ange en **titel** och ett **namn** för mappen.
+   * Titeln **ska vara** beskrivande.
+   * Namnet **** blir nodnamnet i databasen.
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+      * Den kan vid behov justeras.
+
+   ![Skapa mapp](../assets/contexthub-create-folder.png)
+
+1. Tryck eller klicka på **Skapa**.
+
+   ![Bekräfta mapp](../assets/contexthub-confirm-folder.png)
+
+1. Mappen visas i segmentlistan.
+   * Hur du sorterar kolumnerna påverkar var i listan den nya mappen visas.
+   * Du kan justera sorteringen genom att trycka eller klicka på kolumnrubrikerna.
+      ![Den nya mappen](../assets/contexthub-folder.png)
+
+### Ändra befintliga mappar {#modify-folders}
+
+1. När du har [öppnat segmenten](#accessing-segments)klickar eller trycker du på den mapp du vill ändra för att markera den.
+
+   ![Välj mapp](../assets/contexthub-select-folder.png)
+
+1. Tryck eller klicka på **Byt namn** i verktygsfältet för att byta namn på mappen.
+
+1. Ange en ny **mapptitel** och tryck eller klicka på **Spara**.
+
+   ![Byt namn på mapp](../assets/contexthub-rename-folder.png)
+
+>[!NOTE]
+>
+>När du byter namn på mappar kan du bara ändra titeln. Namnet kan inte ändras.
+
+### Ta bort en mapp
+
+1. När du har [öppnat segmenten](#accessing-segments)klickar eller trycker du på den mapp du vill ändra för att markera den.
+
+   ![Välj mapp](../assets/contexthub-select-folder.png)
+
+1. Tryck eller klicka på **Ta bort** i verktygsfältet för att ta bort mappen.
+
+1. En dialogruta innehåller en lista med mappar som har markerats för borttagning.
+
+   ![Bekräfta borttagning](../assets/contexthub-confirm-segment-delete.png)
+
+   * Tryck eller klicka på **Ta bort** för att bekräfta.
+   * Tryck eller klicka på **Avbryt** för att avbryta.
+
+1. Om någon av de markerade mapparna innehåller undermappar eller segment måste borttagningen bekräftas.
+
+   ![Bekräfta borttagning av underordnade](../assets/contexthub-confirm-segment-child-delete.png)
+
+   * Tryck eller klicka på **Tvinga borttagning** för att bekräfta.
+   * Tryck eller klicka på **Avbryt** för att avbryta.
+
+>[!NOTE]
+>
+> Det går inte att flytta ett segment från en mapp till en annan.
+
 ## Testa tillämpningen av ett segment {#testing-the-application-of-a-segment}
 
 När segmentet har definierats kan potentiella resultat testas med hjälp av **[ContextHub](contexthub.md).**
@@ -197,11 +268,11 @@ När segmentet har definierats kan potentiella resultat testas med hjälp av **[
 
 Vår enkla segmentdefinition för att identifiera användare i Basel baseras till exempel på var användaren befinner sig. När du läser in en specifik profil som matchar dessa villkor visas om segmentet har matchats:
 
-![Segment som åtgärdar](/help/sites-cloud/authoring/assets/contexthub-segment-resolve.png)
+![Segment som åtgärdar](../assets/contexthub-segment-resolve.png)
 
 Eller om den inte är löst:
 
-![Segment som inte löses](/help/sites-cloud/authoring/assets/contexthub-segment-doesnt-resolve.png)
+![Segment som inte löses](../assets/contexthub-segment-doesnt-resolve.png)
 
 >[!NOTE]
 >
