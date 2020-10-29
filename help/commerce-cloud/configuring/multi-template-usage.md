@@ -1,10 +1,18 @@
 ---
 title: Skapa flera kategori- och produktsidor
-description: Skapa flera kategori- och produktsidor
+description: Lär dig hur du kan förbättra sidorna Kategorilandning och Produktinformation med riktat marknadsföringsinnehåll.
+sub-product: Handel
+version: cloud-service
+doc-type: feature-video
+activity: use
+audience: marketer
+feature: Commerce Integration Framework
+kt: 3455
+thumbnail: 28969.jpg
 translation-type: tm+mt
-source-git-commit: d79ac17a2282f2c08b69fae24e672bf17ddf8dc4
+source-git-commit: 72d98c21a3c02b98bd2474843b36f499e8d75a03
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
