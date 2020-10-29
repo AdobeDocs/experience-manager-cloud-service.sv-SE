@@ -1,10 +1,11 @@
 ---
 title: Introduktion till AEM Commerce som Cloud Service
-description: Nyheter i AEM Commerce som Cloud Service.
+description: Experience Manager Commerce som Cloud Service består av Commerce Integration Framework (CIF), som Adobe rekommenderar för att integrera och utöka handelstjänster från Magento och andra tredjepartslösningar med Experience Cloud.
+thumbnail: introducing-aem-commerce.jpg
 translation-type: tm+mt
-source-git-commit: c5694cf8651cf8ba5331c730fa1b1180310dd35a
+source-git-commit: 72d98c21a3c02b98bd2474843b36f499e8d75a03
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1357'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ De AEM CIF Core-komponenterna är renderade komponenter på serversidan och klie
 
 Det finns grundläggande komponenter som är gemensamma för alla handelsimplementationer, som produktinformation, produktlista, navigering, sökning osv. De kan användas som de är eller utökas.
 
-De [AEM CIF-kärnkomponenterna](https://github.com/adobe/aem-core-cif-components) fungerar som [AEM Sites kärnkomponenter](https://github.com/adobe/aem-core-wcm-components) men är avsedda för handelsspecifika användningsfall.
+CIF-komponenterna [](https://github.com/adobe/aem-core-cif-components) AEM fungerar som [AEM Sites Core-komponenterna](https://github.com/adobe/aem-core-wcm-components) men är avsedda för handelsspecifika användningsområden.
 
 De viktigaste fördelarna är:
 
@@ -54,7 +55,7 @@ De viktigaste fördelarna är:
 * De kan användas i befintligt skick eller med mycket små ändringar.
 * De ger bästa praxis för att ansluta till Magento via API:er för GraphQL eller REST API:er
 
-Komponenter som Product Teaser och Product Carousel tillhandahålls för att göra det möjligt för AEM Author att skapa Experience-sidor i AEM och kombinera marknadsförings- och e-handelsinnehåll. Dessa komponenter kan enkelt dras och släppas på en innehållssida som skapats i AEM och länkas till specifika produkter eller kategorier med CIF-redigeringsverktyg som produktväljaren eller kategoriväljaren i Cloud Servicen.
+Komponenter som Product Teaser och Product Carousel tillhandahålls för att göra det möjligt för AEM Authors att skapa Experience pages in AEM, vilket kombinerar marknadsförings- och e-handelsinnehåll. Dessa komponenter kan enkelt dras och släppas på en innehållssida som skapats i AEM och länkas till specifika produkter eller kategorier med CIF-redigeringsverktyg som produktväljaren eller kategoriväljaren i Cloud Servicen.
 
 Alla komponenter är öppna från [GitHub](https://github.com/adobe/aem-core-cif-components). Detta visar fullständig genomskinlighet i kommande ändringar och gör att du enkelt kan få den senaste versionen. Du kan också tillhandahålla pull-begäranden om förbättringar och felkorrigeringar som kan införlivas.
 
