@@ -2,7 +2,7 @@
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 translation-type: tm+mt
-source-git-commit: bffc335fdafe6bf12a66bcd2f7aacf029fce567e
+source-git-commit: 10aba35c0795ef946edce02e9396947fc6348514
 workflow-type: tm+mt
 source-wordcount: '5348'
 ht-degree: 5%
@@ -12,22 +12,22 @@ ht-degree: 5%
 
 # Skapa riktat innehåll med målläge {#authoring-targeted-content-using-targeting-mode}
 
-Skapa riktat innehåll med målinriktat läge i AEM. Målinriktningsläget och Target-komponenten har verktyg för att skapa innehåll för upplevelser:
+Skapa riktat innehåll med målläget AEM. Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser:
 
 * Identifiera enkelt målinnehållet på sidan. En prickad linje bildar en kant runt allt innehåll som är avsett för det.
 * Välj ett varumärke och en aktivitet för att se upplevelserna.
 * Lägg till upplevelser i en aktivitet eller ta bort upplevelser.
-* Utför A/B-tester och konvertera vinnarna (endast Adobe Target).
+* Utför A/B-tester och konvertera vinnare (endast Adobe Target).
 * Lägg till erbjudanden till en upplevelse genom att skapa erbjudanden eller använda erbjudanden från ett bibliotek.
 * Konfigurera mål och övervaka prestanda.
 * Simulera användarupplevelsen.
-* Konfigurera Target-komponenten om du vill göra fler anpassningar.
+* Konfigurera Target-komponenten om du vill ha mer anpassning.
 
 Du kan använda antingen AEM eller Adobe Target som målmotor (du måste ha ett giltigt Adobe Target-konto för att kunna använda Adobe Target). Om du använder Adobe Target måste du först konfigurera integreringen. Se instruktionerna för integrering med Adobe Target. <!--See the[instructions for integrating with Adobe Target](/help/sites-administering/target.md).-->
 
-![Riktat innehåll](/help/sites-cloud/authoring/assets/targeted-content.png)
+![Riktat innehåll](../assets/targeted-content.png)
 
-De aktiviteter och upplevelser du ser i Target-läge återspeglar [aktivitetskonsolen](/help/sites-cloud/authoring/personalization/activities.md):
+De aktiviteter och upplevelser du ser i målläge återspeglar [aktivitetskonsolen](/help/sites-cloud/authoring/personalization/activities.md):
 
 * Ändringar som du gör i aktiviteter och upplevelser med målläget visas i aktivitetskonsolen.
 * Ändringar som görs i aktivitetskonsolen återspeglas i målläget.
@@ -46,26 +46,26 @@ De aktiviteter och upplevelser du ser i Target-läge återspeglar [aktivitetskon
 
 ## Växla till målläge {#switching-to-targeting-mode}
 
-Växla till Target-läge för att komma åt verktygen för att skapa riktat innehåll.
+Växla till målläget för att komma åt verktygen för att skapa riktat innehåll.
 
-Så här växlar du till Target-läge:
+Så här växlar du till målläge:
 
 1. Öppna sidan som du vill skapa riktat innehåll för.
 1. Klicka eller tryck på listrutan Läge i verktygsfältet högst upp på sidan för att visa de tillgängliga lägestyperna.
 
-   ![Målläge](/help/sites-cloud/authoring/assets/targeted-mode.png)
+   ![Målläge](../assets/targeted-mode.png)
 
 1. Klicka eller tryck på **Riktning**. Målinställningarna visas högst upp på sidan.
 
-   ![Verktygsfältet Målinriktning](/help/sites-cloud/authoring/assets/targeted-toolbar.png)
+   ![Verktygsfältet Målinriktning](../assets/targeted-toolbar.png)
 
 ## Lägga till en aktivitet med målläge {#adding-an-activity-using-targeting-mode}
 
 Använd målinriktningsläget för att lägga till en aktivitet till ett varumärke. När du lägger till en aktivitet innehåller den standardupplevelsen. När du har lagt till aktiviteten startar du målprocessen för innehållet för aktiviteten.
 
-Du kan också skapa och hantera aktiviteter från AEM i Adobe Target genom att välja målmotorn - antingen AEM eller Adobe Target - och välja aktivitetstyp - Experience Targeting eller A/B Test.
+Du kan också skapa och hantera Adobe Target-aktiviteter från AEM genom att välja målmotor - antingen AEM eller Adobe Target - och välja aktivitetstyp - Experience Targeting eller A/B Test.
 
-Dessutom kan ni hantera mål och mätvärden för alla Adobe Target-aktiviteter och hantera era Adobe Target-målgrupper. Aktivitetsrapportering för Adobe Target, inklusive konvertering av vinnare för A/B-tester, ingår också.
+Dessutom kan ni hantera mål och mätvärden för alla Adobe Target-aktiviteter och hantera era Adobe Target-målgrupper. Adobe Target aktivitetsrapportering, inklusive konvertering av vinnare för A/B-tester, ingår också.
 
 När du lägger till en aktivitet visas den också i [aktivitetskonsolen](/help/sites-cloud/authoring/personalization/activities.md).
 
@@ -85,32 +85,32 @@ Så här lägger du till en aktivitet:
 
    >[!NOTE]
    >
-   >När du skapar en ny aktivitet och har en Adobe Target-molnkonfiguration kopplad till sidan eller någon av dess överordnade objekt, får AEM automatiskt Adobe Target som motor.
+   >När du skapar en ny aktivitet och har en Adobe Target-molnkonfiguration kopplad till sidan eller någon av dess överordnade sidor, antar AEM automatiskt Adobe Target som motor.
 
 1. Välj målmotor i listrutan **Målmotor** .
 
-   * Om du väljer **ContextHub AEM**&#x200B;är de återstående fälten nedtonade och inte tillgängliga. Klicka eller tryck på **Skapa**.
+   * Om du väljer **ContextHub-AEM**&#x200B;är de återstående fälten nedtonade och inte tillgängliga. Klicka eller tryck på **Skapa**.
 
    * Om du väljer **Adobe Target** kan du välja en konfiguration (som standard är det den konfiguration du angav när du konfigurerade kontot) och aktivitetstyp. <!--If you select **Adobe Target**, you can select a configuration (by default, it is the configuration you provided when you [configured the account](/help/sites-administering/opt-in.md)) and Activity Type.-->
 
 1. Välj antingen **Experience Targeting** eller **A/B Test** på menyn Activity (Aktivitet).
 
-   * Upplevelseanpassning - hantera Adobe Target-aktiviteter från AEM.
+   * Målinriktning - hantera Adobe Target-aktiviteter från AEM.
    * A/B-test - skapa/hantera A/B-testaktiviteter i Adobe Target från AEM.
 
-## Målprocessen: Skapa, Target och Mål och inställningar {#the-targeting-process-create-target-and-goals-settings}
+## Målprocessen: Skapa, ange mål och inställningar {#the-targeting-process-create-target-and-goals-settings}
 
 I målinriktningsläget kan du konfigurera flera aspekter av en aktivitet. Använd följande trestegsprocess för att skapa riktat innehåll för en varumärkesaktivitet:
 
 1. [Skapa](#create-authoring-the-experiences): Lägg till eller ta bort upplevelser och lägg till erbjudanden för varje upplevelse.
-1. [Target](#target-configuring-the-audiences): Ange målgruppen för varje upplevelse. Ni kan inrikta er på en viss målgrupp och om ni använder A/B-tester avgör hur stor procentandel av trafiken som går till vilken upplevelse.
+1. [Mål](#target-configuring-the-audiences): Ange målgruppen för varje upplevelse. Ni kan inrikta er på en viss målgrupp och om ni använder A/B-tester avgör hur stor procentandel av trafiken som går till vilken upplevelse.
 1. [Mål och inställningar](#goals-settings-configuring-the-activity-and-setting-goals): Schemalägg aktiviteten och ange prioritet. Ni kan också ställa in mätmål för framgång.
 
 Använd följande procedur för att starta innehållsriktningsprocessen för en aktivitet.
 
 >[!NOTE]
 >
->Om du vill använda målgruppsprocessen måste du vara medlem i användargruppen Target Activity Authors.
+>Om du vill använda målprocessen måste du vara medlem i användargruppen Författare för målaktivitet.
 
 Så här lägger du till en aktivitet:
 
@@ -118,7 +118,7 @@ Så här lägger du till en aktivitet:
 1. I listrutan **Aktivitet** väljer du den aktivitet som du skapar målinnehåll för.
 1. Om du vill visa kontrollerna som vägleder dig genom målningsprocessen klickar eller trycker du på **Start Targeting**.
 
-   ![Börja målinriktning](/help/sites-cloud/authoring/assets/targeted-start-targeting.png)
+   ![Börja målinriktning](../assets/targeted-start-targeting.png)
 
    >[!NOTE]
    >
@@ -142,15 +142,15 @@ När du har [påbörjat målinriktningsprocessen](#the-targeting-process-create-
 
 Upplevelserna visas i rutan Målgrupper. I följande exempel finns upplevelserna **Standard**, **Kvinna**, **Kvinna över 30** och **Kvinna under 30**. I det här exemplet visas standarderbjudandet för en riktad **bildkomponent**.
 
-![Målbildskomponent](/help/sites-cloud/authoring/assets/targeted-image-component.png)
+![Målbildskomponent](../assets/targeted-image-component.png)
 
 När en annan upplevelse väljs visas erbjudandet för den upplevelsen i bildkomponenten.
 
-![Målbildskomponenten har ändrats](/help/sites-cloud/authoring/assets/targeted-image-different.png)
+![Målbildskomponenten har ändrats](../assets/targeted-image-different.png)
 
 När en upplevelse väljs och målkomponenten inte innehåller något erbjudande för den upplevelsen, visas **Lägg till erbjudande** ovanpå det halvgenomskinliga standarderbjudandet. När inget erbjudande har skapats för en upplevelse visas **standarderbjudandet** för det segment som är mappat till upplevelsen.
 
-![Lägg till erbjudande](/help/sites-cloud/authoring/assets/targeted-add-offer.png)
+![Lägg till erbjudande](../assets/targeted-add-offer.png)
 
 Standardupplevelsen visas också när besökaregenskaperna inte matchar några segment som är mappade till upplevelserna. Se [Lägga till upplevelser med målläge](#adding-and-removing-experiences-using-targeting-mode).
 
@@ -158,11 +158,11 @@ Standardupplevelsen visas också när besökaregenskaperna inte matchar några s
 
 Erbjudanden som är [skrivna på sidan](#adding-a-custom-offer) och används för en enda upplevelse kallas anpassade erbjudanden. Följande bild läggs ovanpå innehållet i ett anpassat erbjudande:
 
-![Ikon för anpassat erbjudande](/help/sites-cloud/authoring/assets/targeted-custom-offer-icon.png)
+![Ikon för anpassat erbjudande](../assets/targeted-custom-offer-icon.png)
 
 Erbjudanden som läggs [till från ett](#adding-an-offer-from-an-offer-library) erbjudandebibliotek läggs över med följande bild:
 
-![Symbol för bibliotekserbjudande](/help/sites-cloud/authoring/assets/targeted-library-offer-icon.png)
+![Symbol för bibliotekserbjudande](../assets/targeted-library-offer-icon.png)
 
 Du kan spara anpassade erbjudanden i ett erbjudandebibliotek om du bestämmer dig för att återanvända dem. Du kan också konvertera ett bibliotekserbjudande till ett anpassat erbjudande om du vill ändra innehållet för en upplevelse. Efter redigeringen kan du spara erbjudandet i biblioteket igen.
 
@@ -174,7 +174,7 @@ Med steget Skapa [i målgruppsprocessen](#the-targeting-process-create-target-an
 
 Så här lägger du till en upplevelse:
 
-1. Om du vill lägga till en upplevelse klickar eller trycker du på **+** **Add Experience Targeting **som visas under befintliga upplevelser i rutan **Publiker** .
+1. Om du vill lägga till en upplevelse klickar eller trycker du på **+** Lägg till **upplevelseanpassning** som visas under befintliga upplevelser i rutan **Publiker** .
 1. Välj och få en målgrupp. Som standard är det namnet på upplevelsen. Om du vill kan du skriva ett annat namn. Klicka eller tryck på **OK**.
 
 #### Ta bort upplevelser med målläge {#removing-experiences-using-targeting-mode}
@@ -183,7 +183,7 @@ Så här tar du bort en upplevelse:
 
 1. Klicka eller tryck på pilen bredvid upplevelsens namn.
 
-   ![Radera och upplev](/help/sites-cloud/authoring/assets/targeted-delete-experiene.png)
+   ![Radera och upplev](../assets/targeted-delete-experiene.png)
 
 1. Click **Delete**.
 
@@ -213,9 +213,9 @@ Så här kopierar du upplevelser med målläget:
 
 ### Skapa erbjudanden med målläge {#creating-offers-using-targeting-mode}
 
-Target är en komponent för att skapa upplevelserbjudanden. Målinriktade komponenter tillhandahåller det innehåll som används som erbjudanden för upplevelser.
+Rikta en komponent mot att skapa erbjudanden för upplevelser. Målinriktade komponenter tillhandahåller det innehåll som används som erbjudanden för upplevelser.
 
-* [Target är en befintlig komponent](#creating-a-default-offer-by-targeting-an-existing-component). Innehållet blir erbjudandet om standardupplevelsen.
+* [Aktivera en befintlig komponent](#creating-a-default-offer-by-targeting-an-existing-component). Innehållet blir erbjudandet om standardupplevelsen.
 * [Lägg till en Target-komponent](#creating-an-offer-by-adding-a-target-component)och lägg sedan till innehåll i komponenten.
 
 När en komponent har valts kan du lägga till erbjudanden för varje upplevelse:
@@ -231,7 +231,7 @@ Följande verktyg är tillgängliga för att arbeta med erbjudanden:
 
 #### Skapa ett standarderbjudande genom att ange en befintlig komponent som mål {#creating-a-default-offer-by-targeting-an-existing-component}
 
-Target är en komponent på sidan som du kan använda som erbjudande för aktivitetens standardupplevelse. När du riktar in dig på en komponent omges den i en Target-komponent och dess innehåll blir ett erbjudande för standardupplevelsen.
+Aktivera en komponent på sidan för att använda den som erbjudande för aktivitetens standardupplevelse. När du riktar in dig på en komponent omges den av en Target-komponent och dess innehåll blir ett erbjudande för standardupplevelsen.
 
 När du har en målkomponent som mål kan bara den komponenten användas i erbjudandet. Du kan inte ta bort komponenten från erbjudandet eller lägga till andra komponenter i erbjudandet.
 
@@ -239,19 +239,19 @@ Utför följande procedur när du har [startat målinriktningsprocessen](#the-ta
 
 1. Klicka på eller tryck på den komponent som du vill ha som mål. Verktygsfältet för komponenten visas, ungefär som i följande exempel.
 
-   ![Målkomponent](/help/sites-cloud/authoring/assets/targeted-component.png)
+   ![Målkomponent](../assets/targeted-component.png)
 
-1. Klicka på eller tryck på ikonen Target.
+1. Klicka på eller tryck på målikonen.
 
-   ![Target](/help/sites-cloud/authoring/assets/targeted-target-button.png)
+   ![Målknapp](../assets/targeted-target-button.png)
 
    Komponentinnehållet är erbjudandet för standardupplevelsen. När en komponent har valts replikeras dess standardnod för varje upplevelse. Detta behövs för att redigera rätt innehållsnod vid upplevelsespecifik redigering. För upplevelser som inte är standard [lägger du antingen till ett anpassat erbjudande](#adding-a-custom-offer) eller [lägger till ett bibliotekserbjudande](#adding-an-offer-from-an-offer-library).
 
-#### Skapa ett erbjudande genom att lägga till en Target-komponent {#creating-an-offer-by-adding-a-target-component}
+#### Skapa ett erbjudande genom att lägga till en målkomponent {#creating-an-offer-by-adding-a-target-component}
 
-Lägg till en Target-komponent för att skapa erbjudandet för standardupplevelsen. Target-komponenten är en behållare för andra komponenter, och komponenter som placeras i den blir mål. När du använder Target-komponenten kan du lägga till flera komponenter för att skapa ett erbjudande. Ni kan också använda olika komponenter i varje upplevelse för att skapa olika erbjudanden.
+Lägg till en Target-komponent för att skapa erbjudandet för standardupplevelsen. Målkomponenten är en behållare för andra komponenter, och komponenter som placeras i den blir mål. När du använder Target-komponenten kan du lägga till flera komponenter för att skapa ett erbjudande. Ni kan också använda olika komponenter i varje upplevelse för att skapa olika erbjudanden.
 
-Mer information om hur du anpassar den här komponenten finns i [Konfigurera komponentalternativ](#configuring-target-component-options) för Target.
+Mer information om hur du anpassar den här komponenten finns i [Konfigurera alternativ](#configuring-target-component-options) för målkomponenter.
 
 >[!NOTE]
 >
@@ -259,25 +259,25 @@ Mer information om hur du anpassar den här komponenten finns i [Konfigurera kom
 
 Eftersom Target-komponenten är en behållare visas den som ett släppområde för andra komponenter.
 
-I Target-läget har Target-komponenten en blå kantlinje och målmeddelandet anger måltypen.
+I målläget har Target-komponenten en blå ram och drop-target-meddelandet anger måltypen.
 
-![Target släppzon](/help/sites-cloud/authoring/assets/targeted-drop-target.png)
+![Släppzon för mål](../assets/targeted-drop-target.png)
 
-I redigeringsläget har Target-komponenten en punktningsikon.
+I redigeringsläget har målkomponenten en punktningsikon.
 
-![Ikon för målsläppzon](/help/sites-cloud/authoring/assets/targeted-drop-target-icon.png)
+![Ikon för målsläppzon](../assets/targeted-drop-target-icon.png)
 
-När du drar komponenter till Target-komponenten är de riktade komponenter.
+När du drar komponenter till Target-komponenten är de målkomponenter.
 
-![Släppzon med mål](/help/sites-cloud/authoring/assets/targeted-drop-zone-populated.png)
+![Släppzon med mål](../assets/targeted-drop-zone-populated.png)
 
 När du lägger till en komponent i Target-komponenten får den innehåll för en viss upplevelse. Du anger upplevelsen genom att välja upplevelsen innan du lägger till komponenterna.
 
-Du kan lägga till en Target-komponent på sidan i redigeringsläge eller i Target-läge. Du kan bara lägga till komponenter i Target-komponenten i Target-läge. Komponenten Target tillhör komponentgruppen Personalisering.
+Du kan lägga till en Target-komponent på sidan i redigeringsläge eller i målläge. Du kan bara lägga till komponenter i Target-komponenten i Target-läge. Målkomponenten tillhör komponentgruppen Personalisering.
 
-Om du redigerar målinnehåll måste du klicka eller trycka på **Start Targeting **innan du kan göra det.
+Om du redigerar målinnehåll måste du klicka eller trycka på **Starta mål** innan du kan göra det.
 
-1. Dra Target-komponenten till den sida där du vill att erbjudandet ska visas.
+1. Dra Target-komponenten till sidan där du vill att erbjudandet ska visas.
 1. Som standard har inget plats-ID angetts. Klicka på eller tryck på konfigurationshjulet för att ange platsen.
 
    >[!NOTE]
@@ -303,7 +303,7 @@ Om ni bestämmer er för att erbjudandet kan användas för andra upplevelser ka
 1. Välj den upplevelse som du lägger till erbjudandet till.
 1. Om du vill visa komponentmenyn klickar eller trycker du på den målkomponent som du vill lägga till erbjudandet i.
 
-   ![Lägga till ett erbjudande](/help/sites-cloud/authoring/assets/targeted-component-menu.png)
+   ![Lägga till ett erbjudande](../assets/targeted-component-menu.png)
 
 1. Klicka eller tryck på ikonen +.
 
@@ -311,7 +311,7 @@ Om ni bestämmer er för att erbjudandet kan användas för andra upplevelser ka
 
 1. Klicka på eller tryck på erbjudandet för att visa erbjudandemenyn och klicka eller tryck sedan på redigeringsikonen.
 
-   ![Target-komponentverktygsfält](/help/sites-cloud/authoring/assets/targeted-offer-menu.png)
+   ![Verktygsfältet Målkomponent](../assets/targeted-offer-menu.png)
 
 1. Redigera komponentens innehåll.
 
@@ -324,30 +324,33 @@ Du kan inte lägga till bibliotekserbjudanden i standardupplevelsen.
 1. Välj den upplevelse som du lägger till erbjudandet till.
 1. Om du vill visa komponentmenyn klickar eller trycker du på den målkomponent som du vill lägga till erbjudandet i.
 
-   ![Riktat erbjudande](/help/sites-cloud/authoring/assets/targeted-add-offer-large.png)
+   ![Riktat erbjudande](../assets/targeted-add-offer-large.png)
 
 1. Klicka på eller tryck på mappikonen.
 
-   ![Mappikon](/help/sites-cloud/authoring/assets/targeted-folder-button.png)
+   ![Mappikon](../assets/targeted-folder-button.png)
 
 1. Välj erbjudandet från biblioteket och klicka eller tryck sedan på bockmarkeringsikonen.
 
-   ![Erbjudandebibliotek](/help/sites-cloud/authoring/assets/targeted-select-content.png)
+   ![Erbjudandebibliotek](../assets/targeted-select-content.png)
 
    Med erbjudandeväljaren kan du bläddra eller filtrera efter erbjudanden. När du bläddrar eller filtrerar kanske du också vill sortera erbjudandena och ändra hur du ser dem. Siffran i det övre högra hörnet visar hur många erbjudanden som är tillgängliga i det aktuella biblioteket.
 
    * Klicka eller tryck på **Bläddra** för att navigera till en annan mapp. Navigeringsrutan öppnas och du klickar på pilen för att gå ned i mapparna. Klicka eller tryck på **Bläddra** igen för att stänga navigeringsrutan.
-   ![Bläddra i innehåll](/help/sites-cloud/authoring/assets/targeted-select-content-browse.png)
+
+   ![Bläddra i innehåll](../assets/targeted-select-content-browse.png)
 
    * Klicka eller tryck på **Filter** för att filtrera erbjudandena mot nyckelord eller taggar. Du anger nyckelord och väljer taggar i listrutan. Klicka eller tryck på **Filter** igen för att stänga filtreringsrutan.
-   ![Filtrera innehåll](/help/sites-cloud/authoring/assets/targeted-filter.png)
+
+   ![Filtrera innehåll](../assets/targeted-filter.png)
 
    * Ändra hur du sorterar erbjudandena genom att klicka eller trycka på pilen bredvid **Nyaste till Äldsta**. Erbjudandena kan sorteras från nyaste till äldsta eller äldsta till nyaste.
-   ![Filtersorteringsordning](/help/sites-cloud/authoring/assets/targeted-filter-sort.png)
+
+   ![Filtersorteringsordning](../assets/targeted-filter-sort.png)
 
    Klicka på eller tryck på ikonen bredvid **Visa som** om du vill visa erbjudanden som rutor eller som en lista.
 
-   ![Visa som knapp](/help/sites-cloud/authoring/assets/targeted-view-as-button.png)
+   ![Visa som knapp](../assets/targeted-view-as-button.png)
 
 #### Lägga till ett anpassat erbjudande i ett bibliotek {#adding-a-custom-offer-to-a-library}
 
@@ -358,7 +361,7 @@ Mer information om hur du använder Erbjudandekonsolen för att skapa ett återa
 1. Välj upplevelsen för att visa det anpassade erbjudandet.
 1. Klicka på eller tryck på det anpassade erbjudandet för att visa erbjudandemenyn och klicka sedan på ikonen **Spara erbjudande till** erbjudandebibliotek.
 
-   ![Spara erbjudande om att erbjuda bibliotek](/help/sites-cloud/authoring/assets/targeted-save-offer-library-button.png)
+   ![Spara erbjudande om att erbjuda bibliotek](../assets/targeted-save-offer-library-button.png)
 
 1. Skriv ett namn för erbjudandet, markera det bibliotek som du vill lägga till erbjudandet till och klicka eller tryck sedan på bockmarkeringsikonen.
 
@@ -369,7 +372,7 @@ Konvertera ett bibliotekserbjudande till ett anpassat erbjudande för att ändra
 1. Välj den upplevelse du vill visa bibliotekserbjudandet.
 1. Klicka på eller tryck på bibliotekserbjudandet för att visa erbjudandemenyn och klicka eller tryck sedan på ikonen Konvertera till infogat erbjudande.
 
-   ![Konvertera till offert](/help/sites-cloud/authoring/assets/targeted-convert-inline.png)
+   ![Konvertera till offert](../assets/targeted-convert-inline.png)
 
 #### Redigera ett bibliotekserbjudande {#editing-a-library-offer}
 
@@ -381,39 +384,39 @@ Konvertera ett bibliotekserbjudande till ett anpassat erbjudande för att ändra
 
 1. Spara den i biblioteket igen. Se [Lägga till ett anpassat erbjudande i ett bibliotek](#adding-a-custom-offer-to-a-library).
 
-## Target: Konfigurera publikerna {#target-configuring-the-audiences}
+## Mål: Konfigurera publikerna {#target-configuring-the-audiences}
 
-Target steg i målgruppsprocessen [innebär](#the-targeting-process-create-target-and-goals-settings) att kartlägga målgrupperna med de upplevelser du arbetade med i steget Skapa. På Target-sidan visas de målgrupper som varje upplevelse riktar sig till. Ni kan ange eller ändra målgruppen för varje upplevelse. Om du använder Adobe Target kan du även skapa A/B-tester som gör att du kan ange en procentandel av trafiken för en viss målgrupp för en viss upplevelse.
+Målsteget [i målgruppsprocessen](#the-targeting-process-create-target-and-goals-settings) innebär att kartlägga målgrupperna med de upplevelser du arbetade med i steget Skapa. Målsidan visar vilka målgrupper varje upplevelse riktar sig till. Ni kan ange eller ändra målgruppen för varje upplevelse. Om du använder Adobe Target kan du även skapa A/B-tester som gör att du kan ange en procentandel av trafiken för en viss målgrupp för en viss upplevelse.
 
-### Om du använder AEM-målinriktning eller Adobe Target (upplevelseanpassning) ... {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
+### Om du använder AEM målinriktning eller Adobe Target (upplevelseanpassning) {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
 
 Publiken visas till vänster i mappningsdiagrammet, och upplevelserna visas till höger.
 
-![Mappa målgrupper](/help/sites-cloud/authoring/assets/targeted-diagram.png)
+![Mappa målgrupper](../assets/targeted-diagram.png)
 
-Definiera en målgrupp med ett segment. Molnkonfigurationen för sidan avgör vilka segment som är tillgängliga för dig. När sidan inte är associerad med en molnkonfiguration i Adobe Target är AEM-segment tillgängliga för att definiera målgrupper. När sidan är kopplad till en molnkonfiguration för Adobe Target använder du Target-segment.
+Definiera en målgrupp med ett segment. Molnkonfigurationen för sidan avgör vilka segment som är tillgängliga för dig. När sidan inte är kopplad till en molnkonfiguration från Adobe Target finns AEM segment tillgängliga för att definiera målgrupper. När sidan är kopplad till en Adobe Target-molnkonfiguration använder du målsegment.
 
 Mer information om målmotorer finns i [Målmotor](/help/sites-cloud/authoring/personalization/overview.md#targeting-engine).
 
 En målgrupp får inte användas av mer än en upplevelse. En varningssymbol visas bredvid en upplevelse när den kopplas till en målgrupp som kopplas till en annan upplevelse.
 
-![Varningsikon](/help/sites-cloud/authoring/assets/targeted-warn.png)
+![Varningsikon](../assets/targeted-warn.png)
 
 ### Associera upplevelser med målgrupper (AEM eller Adobe Target) {#associating-experiences-with-audiences-aem-or-adobe-target}
 
-Använd följande procedur för att associera en upplevelse med en målgrupp när du använder AEM-målinriktning (eller Adobe Target-målinriktning):
+Använd följande procedur för att associera en upplevelse med en målgrupp när du använder AEM (eller Adobe Target Experience targeting):
 
 1. Klicka på eller tryck på den nedrullningsbara pilen bredvid den målgruppsruta som är kopplad till upplevelsen.
 1. (Valfritt) Klicka eller tryck på **Redigera** och skriv sedan ett nyckelord för att söka efter det önskade segmentet.
 1. Välj målgrupp i listan över målgrupper och klicka eller tryck på **OK**.
 
-### Om du använder A/B-testning (Adobe Target) ... {#if-you-are-using-a-b-testing-adobe-target}
+### Om du använder A/B-testning (Adobe Target) {#if-you-are-using-a-b-testing-adobe-target}
 
 Om ni har en A/B-testaktivitet finns målgrupperna till vänster, procentandelen som varje upplevelse visas i mitten och upplevelserna till höger.
 
 Du kan ändra procentsatserna så länge de adderar till 100 procent. En målgrupp kan användas av flera olika upplevelser i A/B-tester.
 
-![A/B-målinriktning](/help/sites-cloud/authoring/assets/targeted-ab.png)
+![A/B-målinriktning](../assets/targeted-ab.png)
 
 ### Associera målgrupper och trafikprocent med A/B-tester {#associating-audiences-and-traffic-percentages-with-a-b-testing}
 
@@ -427,21 +430,21 @@ Du kan ändra procentsatserna så länge de adderar till 100 procent. En målgru
 
 I steget Mål och inställningar [i målgruppsprocessen](#the-targeting-process-create-target-and-goals-settings) ingår att konfigurera varumärkesaktivitetens beteende. Ange när aktiviteten startar och avslutas samt aktivitetsprioriteten. Dessutom håller du också koll på målen. Du kan bestämma vad du vill mäta med dina aktiviteter.
 
-Måttvärden är bara tillgängliga om du använder Adobe Target för målmotorn. Du måste definiera minst ett målmått. Om du har konfigurerat Adobe Analytics och har en molnkonfiguration för A4T Analytics kan du välja om du vill att rapportkällan ska vara Adobe Target eller Adobe Analytics.
+Måttvärden är bara tillgängliga om du använder Adobe Target för målmotorn. Du måste definiera minst ett målmått. Om du har konfigurerat Adobe Analytics och har en A4T Analytics-molnkonfiguration kan du välja om du vill att rapportkällan ska vara Adobe Target eller Adobe Analytics.
 
 Måtten mäts bara för den publicerade kampanjen.
 
 Om du använder AEM som målmotor:
 
-![AEM som målmotor](/help/sites-cloud/authoring/assets/targeted-goals.png)
+![AEM som målmotor](../assets/targeted-goals.png)
 
 Om du använder Adobe Target som målmotor:
 
-![Adobe Target som målmotor](/help/sites-cloud/authoring/assets/targeted-engine.png)
+![Adobe Target som målmotor](../assets/targeted-engine.png)
 
 Om du använder Adobe Target som målinriktningsmotor och har A4T Analytics konfigurerat för kontot har du en extra listruta för **Rapportkälla**:
 
-![A4T](/help/sites-cloud/authoring/assets/targeted-source.png)
+![A4T](../assets/targeted-source.png)
 
 Följande framgångsmått är tillgängliga (används endast för publicering):
 
@@ -461,11 +464,11 @@ Använd de avancerade inställningarna för att avgöra vad som händer **när**
 | Ökning, frigör användare och Tillåt återinträde | Välj den upplevelse besökaren ser om de återupptar aktiviteten: Samma upplevelse, Slumpmässig upplevelse, Osynlig upplevelse |
 | Ökningsantal, återinträde av användare och fält | Bestäm vad användaren ser i stället för aktivitetsinnehållet: Samma upplevelse, utan spårning, standardinnehåll eller annat aktivitetsinnehåll |
 
-Mer information om framgångsmått finns i dokumentationen [för](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html) Adobe Target.
+Mer information om framgångsmått finns i [Adobe Target-dokumentationen](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html) .
 
-### Konfigurera inställningar (AEM-mål) {#configuring-settings-aem-targeting}
+### Konfigurera inställningar (AEM) {#configuring-settings-aem-targeting}
 
-Så här konfigurerar du inställningar om du använder AEM-mål:
+Så här konfigurerar du inställningar om du använder AEM mål:
 
 1. Om du vill ange när aktiviteten ska starta använder du **listrutan Start** och väljer något av följande värden:
 
@@ -496,9 +499,9 @@ Så här konfigurerar du mål och inställningar om du använder Adobe Target:
 1. Om du vill ange en prioritet för aktiviteten använder du skjutreglaget för att välja **Låg**, **Normal** eller **Hög**.
 1. Om du har konfigurerat Adobe Analytics med ert Adobe Target-konto visas listrutan **Rapportkälla**. Välj **Adobe Target** eller **Adobe Analytics** som källa.
 
-   Om du väljer **Adobe Analytics** väljer du företaget och rapporterar programsviten. Om du väljer **Adobe Target** behövs ingen åtgärd.
+   Om du väljer **Adobe Analytics** väljer du företaget och rapporterar programsviten. Om du väljer **Adobe Target** krävs ingen åtgärd.
 
-   ![Rapporteringskälla](/help/sites-cloud/authoring/assets/targeted-reporting-source.png)
+   ![Rapporteringskälla](../assets/targeted-reporting-source.png)
 
 1. I området **Målmått**, under **Mitt primära mål** väljer du det framgångsmått som du vill spåra – som konvertering, intäkter eller engagemang – och anger hur mätningen görs (eller vilka åtgärder målgruppen vidtar för att ange att ett mål har nåtts). Definitioner av målmått anges i föregående tabell och [Adobe Target-dokumentationen](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html) innehåller mer information om framgångsmått.
 
@@ -512,7 +515,7 @@ Så här konfigurerar du mål och inställningar om du använder Adobe Target:
    >
    >Du måste ha minst ett definierat mål.
 
-   ![Målmått](/help/sites-cloud/authoring/assets/targeted-goal-metric.png)
+   ![Målmått](../assets/targeted-goal-metric.png)
 
    >[!NOTE]
    >
@@ -520,7 +523,7 @@ Så här konfigurerar du mål och inställningar om du använder Adobe Target:
 
 1. Klicka på **Lägg till ett nytt mått** för att konfigurera ytterligare framgångsmått.
 
-   ![Ytterligare mått](/help/sites-cloud/authoring/assets/targeted-additional-metrics.png)
+   ![Ytterligare mått](../assets/targeted-additional-metrics.png)
 
    >[!NOTE]
    >
@@ -557,58 +560,58 @@ Använd följande verktyg för att simulera besökarens upplevelse:
 1. Om du vill växla till förhandsgranskningsläget går du till verktygsfältet och klickar eller trycker på **Förhandsgranska**.
 1. Klicka på eller tryck på ikonen för snabbpanelen i verktygsfältet.
 
-   ![ContextHub-knapp](/help/sites-cloud/authoring/assets/targeted-contexthub-button.png)
+   ![ContextHub-knapp](../assets/targeted-contexthub-button.png)
 
 1. Använd kontextnavet för att ändra kontextegenskaper. Du kan till exempel klicka på eller trycka på egenskapen Persona för att välja en annan användare.
 
-   ![ContextHub-verktygsfältet](/help/sites-cloud/authoring/assets/targeted-contexthub-toolbar.png)
+   ![ContextHub-verktygsfältet](../assets/targeted-contexthub-toolbar.png)
 
    Sidan ändras för att visa innehållet som är avsett för den aktuella kontexten.
 
 1. Om du vill ändra de erbjudanden som visas växlar du till målläget. När simuleringsaktiviteten är markerad redigerar du erbjudandena för den kontext som du konfigurerade i förhandsgranskningsläget.
 
-## Konfigurera Target-komponentalternativ {#configuring-target-component-options}
+## Konfigurera alternativ för målkomponent {#configuring-target-component-options}
 
-Du kan anpassa Target-komponenten genom att gå till komponentens alternativ på ett av två sätt:
+Du kan anpassa Target-komponenten genom att komma åt komponentens alternativ på ett av två sätt:
 
 1. När du har angett komponenten som mål klickar eller trycker du på komponenten i Target och sedan på inställningsikonen (kugghjulet).
 
-   ![Komponentinställningar](/help/sites-cloud/authoring/assets/targeted-component-settings.png)
+   ![Komponentinställningar](../assets/targeted-component-settings.png)
 
-   AEM visar fönstret för komponentalternativ i Target.
+   AEM visar fönstret Alternativ för målkomponent.
 
-   ![Dialogrutan Target](/help/sites-cloud/authoring/assets/targeted-dialog.png)
+   ![Måldialogruta](../assets/targeted-dialog.png)
 
-1. Du kan även öppna de här inställningarna i helskärmsläge genom att klicka eller trycka på helskärmsikonen i fönstret Komponentalternativ för Target.
+1. Du kan även komma åt dessa inställningar i helskärmsläge genom att klicka på eller trycka på helskärmsikonen i alternativfönstret för målkomponenten.
 
-   ![Helskärmsknapp](/help/sites-cloud/authoring/assets/targeted-fullscreen.png)
+   ![Helskärmsknapp](../assets/targeted-fullscreen.png)
 
-   AEM visar komponentalternativfönstret i helskärmsläge för Target.
+   AEM visar alternativfönstret för målkomponenten i helskärmsläge.
 
-   ![Komponent i helskärmsläge](/help/sites-cloud/authoring/assets/targeted-target-as-enging.png)
+   ![Komponent i helskärmsläge](../assets/targeted-target-as-enging.png)
 
-1. Konfigurera komponentinställningarna för Target enligt beskrivningen i följande tabeller.
+1. Konfigurera inställningarna för målkomponenten enligt beskrivningen i följande tabeller.
 
 | Alternativ | Beskrivning |
 |---|---|
 | Plats | Platsen är en sträng som ger målinnehållsplatsen ett namn och kopplar erbjudanden till platser (eller platser eller komponenter) på sidan där erbjudandena ska placeras. Det här fältet är ett generiskt värde. Om du lägger ett erbjudande i en komponent kommer erbjudandet ihåg plats-ID:t. När sidan körs utvärderar motorn användarens segment och utifrån detta löser den upplevelsen från de aktiva kampanjer som ska visas. Sedan kontrolleras plats-ID:n på sidan och försöker matcha erbjudanden med dessa plats-ID:n till dem. |
-| Motor | Välj mellan Klientsidregler (utan spårning), Adobe Target, ContextHub och Adobe Campaign beroende på vilken motor du vill använda. |
+| Motor | Välj mellan klientsidoregler (utan spårning), Adobe Target, ContextHub och Adobe Campaign beroende på vilken motor du vill använda. |
 
 Om du väljer Adobe Target som motor:
 
-![Target som motor](/help/sites-cloud/authoring/assets/targeted-target-as-enging.png)
+![Mål som motor](../assets/targeted-target-as-enging.png)
 
 | Alternativ | Beskrivning |
 |---|---|
 | Exakt målinriktning | Om du aktiverar korrekt målinriktning anger du att komponenten ska vänta på att klientkontext eller kontextnav ska vara tillgängliga innan begäran skickas till Adobe Target. Det kan öka inläsningstiden. För redigering är korrekt målinriktning alltid aktiverat. Om du markerar kryssrutan Exakt målinriktning utför mboxDefine först och mboxUpdate senare, vilket resulterar i en Ajax-begäran när data är tillgängliga. Om du inte markerar kryssrutan Exakt målinriktning utför mboxCreate-funktionen, vilket resulterar i en synkron begäran direkt (i det här fallet är inte alla kontextdata tillgängliga än). Obs! Om du aktiverar eller inaktiverar korrekt målinriktning för en viss komponent påverkas inte inställningarna som du har angett globalt. Du kan alltid åsidosätta globala inställningar genom att välja Exakt målanpassning i komponenten. |
-| Inkludera lösta segment | Om du markerar den här kryssrutan inkluderas alla lösta segment i mbox-anropet och alla parametrar som har konfigurerats på sidan och i ramverket. Detta fungerar bara i situationer med XML API där du synkroniserar AEM-segment. Om du har segment i AEM som inte hanteras av Adobe Target (som skriptsegment) kan du med det här alternativet matcha segmentet i AEM och skicka information till Adobe Target om att segmentet är aktivt. |
-| Ärvda kontextparametrar | Visar kontextparametrar som ärvts från Adobe Target-ramverket, om sådana finns, som är kopplade till den markerade sidan. |
-| Kontextparametrar | Klicka på eller tryck på fältet Lägg till om du vill konfigurera ytterligare kontextparametrar (samma som i Target Framework). Sammanhangsparametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till kontextparametrar direkt i ramverket. |
-| Statiska parametrar | Klicka på eller tryck på fältet Lägg till om du vill konfigurera ytterligare statiska parametrar (samma som i Target Framework). Statiska parametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till statiska parametrar direkt i ramverket. Statiska parametrar kommer inte från kontext (klientkontext för innehållsnavet). |
+| Inkludera lösta segment | Om du markerar den här kryssrutan inkluderas alla lösta segment i mbox-anropet och alla parametrar som har konfigurerats på sidan och i ramverket. Detta fungerar bara i situationer med XML API där du synkroniserar AEM segment. Om du har segment i AEM som inte hanteras av Adobe Target (som skriptsegment) kan du med det här alternativet lösa segmentet i AEM och skicka information till Adobe Target om att segmentet är aktivt. |
+| Ärvda kontextparametrar | Visar kontextparametrar som ärvts från Adobe Target-ramverket, om sådana finns, och som är kopplade till den valda sidan. |
+| Kontextparametrar | Klicka på eller tryck på fältet Lägg till om du vill konfigurera ytterligare kontextparametrar (samma som finns i Target Framework). Sammanhangsparametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till kontextparametrar direkt i ramverket. |
+| Statiska parametrar | Klicka på eller tryck på fältet Lägg till om du vill konfigurera ytterligare statiska parametrar (samma som finns i Target Framework). Statiska parametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till statiska parametrar direkt i ramverket. Statiska parametrar kommer inte från kontext (klientkontext för innehållsnavet). |
 
 >[!NOTE]
 >
->När du markerar en komponent och gör den målbar, ersätter AEM även komponenten och injicerar en Adobe Target-komponent. (Komponenten Adobe Target används inte bara när du lägger till den manuellt på sidan, utan även när du aktiverar en befintlig komponent.)
+>När du markerar en komponent och gör den målbar, ersätter AEM även komponenten och injicerar en Adobe Target-komponent. (Adobe Target-komponenten används inte bara när du lägger till den manuellt på sidan, utan även när du aktiverar en befintlig komponent.)
 >
 >Du väljer **Adobe Campaign** som motor om du integrerar AEM med Adobe Campaign. Mer information finns i Integrera AEM med Adobe Campaign.
 >
