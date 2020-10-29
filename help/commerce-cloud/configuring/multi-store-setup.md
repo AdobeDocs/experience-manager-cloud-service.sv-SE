@@ -1,10 +1,18 @@
 ---
 title: Installation i flera butiker
-description: Installation i flera butiker
+description: Lär dig hur du mappar olika butiksvyer från Magento till AEM. Detta gör att projekt kan stödja multi-tenant- och multi-lingual use-fall.
+sub-product: Handel
+version: cloud-service
+doc-type: technical-video
+activity: setup
+audience: administrator
+feature: Commerce Integration Framework
+kt: 3046
+thumbnail: 28952.jpg
 translation-type: tm+mt
-source-git-commit: 69756d6831678151b0e8eb73db81113d49f17447
+source-git-commit: 4862a09b3a0ce2f7506f4fff10639c51792db1b7
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
