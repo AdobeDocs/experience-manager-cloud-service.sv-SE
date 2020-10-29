@@ -1,10 +1,16 @@
 ---
 title: Komma igång med AEM Commerce som Cloud Service
-description: Komma igång med AEM Commerce som Cloud Service
+description: Lär dig hur du distribuerar ett e-handelsaktiverat AEM till ett AEM som körs som en molntjänstmiljö. Använd funktionerna i Adobe Cloud Manager och en CI/CD-pipeline för att bygga Venia-referensbutiken till en körbar miljö.
+topics: Commerce
+feature: Commerce Integration Framework, Cloud Manager
+version: cloud-service
+doc-type: tutorial
+kt: 4947
+thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 5a90db8791dd92cceb811b9ed2beda3ecb4a974d
+source-git-commit: b3abefb2953080443e220a248dd4484d23c09a0e
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '600'
 ht-degree: 3%
 
 ---
