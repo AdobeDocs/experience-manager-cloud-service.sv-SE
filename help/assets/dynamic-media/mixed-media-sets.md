@@ -2,9 +2,9 @@
 title: Blandade medieuppsättningar
 description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic Media
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: 6b5bfa2bc7b37753e7c63bb2cf52609f352dc1ef
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1392'
 ht-degree: 28%
 
 ---
@@ -147,7 +147,7 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
       >* To delete an entire Mixed Media Set, from any viewing mode (such as **[!UICONTROL Card View]** or **[!UICONTROL Column View]**) navigate to the Mixed Media Set. Håll pekaren över resursen och tryck på bocken för att markera den. Tryck **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete]**.
          >
          >
-      * You can edit the assets in a Mixed Media Set by navigating to the set, clicking **[Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
+      * You can edit the assets in a Mixed Media Set by navigating to the set, tapping **[!UICONTROL Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
 
 
 1. Tryck **[!UICONTROL Save]** när du är klar med redigeringen.
@@ -157,7 +157,7 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
    >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck på (markera inte) uppsättningen för att öppna den på AEM-sidan för förhandsgranskning. In the left rail, click the down caret to open the drop-down list, then tap **[!UICONTROL Set Members]**. In the Set Members page, hover on an asset, then tap **[!UICONTROL Edit]** (pencil icon) to open the editing page.
       >
       >
-   * Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Hover on the set, then tap **[Select]** (checkmark icon). Tryck **[!UICONTROL Backspace]** på tangentbordet eller tryck **[!UICONTROL More]** (rad om tre punkter) och tryck sedan på **[!UICONTROL Delete]**.
+   * Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Hover on the set, then tap **[!UICONTROL Select]** (checkmark icon). Tryck **[!UICONTROL Backspace]** på tangentbordet eller tryck **[!UICONTROL More]** (rad om tre punkter) och tryck sedan på **[!UICONTROL Delete]**.
 
 
 ## Förhandsgranska blandade medieuppsättningar {#previewing-mixed-media-sets}
