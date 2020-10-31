@@ -2,9 +2,9 @@
 title: Videoprofiler för Dynamic Media
 description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. Du kan också lägga till smart beskärning i videoklipp.
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: 6b5bfa2bc7b37753e7c63bb2cf52609f352dc1ef
 workflow-type: tm+mt
-source-wordcount: '3505'
+source-wordcount: '3502'
 ht-degree: 14%
 
 ---
@@ -103,7 +103,7 @@ Den största videofilstorleken som stöds för smart beskärning är följande k
 
 Observera att Adobe Sensei för närvarande är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s. Om videon har en högre bildrutefrekvens minskar den maximala videouppspelningstiden. Exempelvis måste en 60 bildrutevideo vara två och en halv minut lång för att kunna hanteras av Adobe Sensai och smart beskärning.
 
-![Smart beskärning för video](assets/smart-crop-video.png)
+![Smart Crop for Video](assets/smart-crop-video.png)
 
 >[!IMPORTANT]
 >
@@ -424,6 +424,6 @@ You can remove a Video Profile from a folder from within the **[!UICONTROL Tools
 ### Ta bort en videoprofil från mappar med hjälp av Egenskaper {#removing-video-profiles-from-folders-by-way-of-properties}
 
 1. Tryck eller klicka på AEM logotyp och navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en videoprofil från.
-1. På mappen: tryck eller klicka på bockmarkeringen för att markera den och tryck eller klicka sedan på **[Egenskaper]**.
+1. Markera mappen genom att trycka eller klicka på bockmarkeringen och sedan trycka **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Video Profiles]**, välj **[!UICONTROL None]** i listrutan och klicka på **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
