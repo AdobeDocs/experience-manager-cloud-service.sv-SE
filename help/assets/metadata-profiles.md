@@ -3,10 +3,10 @@ title: Metadataprofiler
 description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du skapar en metadataprofil och använder den på mappresurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: 6b5bfa2bc7b37753e7c63bb2cf52609f352dc1ef
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 24%
+source-wordcount: '1167'
+ht-degree: 23%
 
 ---
 
@@ -89,7 +89,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 1. Gå **[!UICONTROL Assets]** sedan till den mapp som du vill använda en metadataprofil på i den vänstra listen.
 1. På mappen: tryck eller klicka på bockmarkeringen för att markera den och tryck eller klicka sedan på **Egenskaper**.
-1. Markera fliken **[!UICONTROL Metadata Profiles]**, välj profilen i listrutan och tryck på **[Spara]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+1. Select the **[!UICONTROL Metadata Profiles]** tab and select the profile from the drop-down menu and tap **[!UICONTROL Save]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 ### Använd en metadataprofil globalt {#applying-a-metadata-profile-globally}
 
