@@ -2,9 +2,9 @@
 title: Karusellbanner
 description: Lär dig hur du arbetar med karusellbanners i Dynamic Media
 translation-type: tm+mt
-source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
+source-git-commit: 6b5bfa2bc7b37753e7c63bb2cf52609f352dc1ef
 workflow-type: tm+mt
-source-wordcount: '4522'
+source-wordcount: '4521'
 ht-degree: 4%
 
 ---
@@ -258,8 +258,7 @@ Se [(valfritt) Förhandsgranska Carousel Banners.](#optional-previewing-carousel
 >Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Du kanske vill skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
 
 >[!NOTE]
->
->Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
+Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
 <!-- See also [Adding Image Maps](/help/assets/image-maps.md). -->
 
@@ -296,8 +295,7 @@ Se [(valfritt) Förhandsgranska Carousel Banners.](#optional-previewing-carousel
       * Om du är kund hos AEM Sites trycker du på ikonen Platsväljare (mapp) för att navigera till en URL.
 
          >[!NOTE]
-         >
-         >Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+         Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.
 
@@ -313,10 +311,8 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-frag
       * Ange bredd och höjd för Experience Fragment så som det kommer att visas på banderollen.
 
          >[!NOTE]
-         >
-         >Observera att verktygen för delning av sociala medier i Carousel Banner inte stöds när du bäddar in visningsprogrammet i en Experience Fragment.
-         >Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
-
+         Observera att verktygen för delning av sociala medier i Carousel Banner inte stöds när du bäddar in visningsprogrammet i en Experience Fragment.
+         Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
    Du kan också förhandsvisa hur karusellbanderollen kommer att se ut. Se [(valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
@@ -331,8 +327,7 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-frag
 ## Redigera Carousel-uppsättningar {#editing-carousel-sets}
 
 >[!NOTE]
->
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** gruppen för att kunna skapa eller redigera karusellbanderoller. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** gruppen.
+Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** gruppen för att kunna skapa eller redigera karusellbanderoller. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** gruppen.
 
 Du kan utföra en mängd redigeringsuppgifter på Carousel Sets, till exempel:
 
@@ -364,8 +359,7 @@ Du kan utföra en mängd redigeringsuppgifter på Carousel Sets, till exempel:
    * Om du vill ta bort en hel Carousel-uppsättning går du till Carousel-uppsättningen, markerar den och trycker sedan på **[!UICONTROL Delete]**.
 
    >[!NOTE]
-   >
-   >Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
+   Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
 ## (Valfritt) Förhandsgranska Carousel Banners {#optional-previewing-carousel-banners}
 
@@ -386,7 +380,7 @@ Du kan förhandsgranska karusellbanderoller från Carousel Editor (önskad metod
 
    ![experience_fragment-carouselbanner-viewerdropdown](assets/experience_fragment-carouselbanner-viewerdropdown.png)
 
-1. Tryck på **[Förhandsgranska]**.
+1. Tryck på **[!UICONTROL Preview]**.
 1. Tryck på hotspot-områden eller bildscheman på bilden för att testa deras associerade åtgärder.
 
 **Förhandsgranska karusellbanners från visningslistan**
@@ -401,9 +395,8 @@ Du kan förhandsgranska karusellbanderoller från Carousel Editor (önskad metod
 Du måste publicera karusellen för att kunna använda den. När du publicerar en Carousel Set aktiveras URL:en och Bädda in kod. Carousel publiceras också i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och prestandamaterial.
 
 >[!NOTE]
->
->Om du använder en befintlig interaktiv bild med aktiveringspunkter för din Carousel-banderoll måste du publicera den interaktiva bilden separat när du har publicerat karusellbanderollen.
->Om du ändrar en befintlig publicerad interaktiv bild som du använder i en karusellbanderoll måste du publicera den interaktiva bilden innan ändringarna återspeglas i karusellbanderollen.
+Om du använder en befintlig interaktiv bild med aktiveringspunkter för din Carousel-banderoll måste du publicera den interaktiva bilden separat när du har publicerat karusellbanderollen.
+Om du ändrar en befintlig publicerad interaktiv bild som du använder i en karusellbanderoll måste du publicera den interaktiva bilden innan ändringarna återspeglas i karusellbanderollen.
 
 Mer information om hur du publicerar karusellbanderoller finns i [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) .
 
@@ -412,8 +405,7 @@ Mer information om hur du publicerar karusellbanderoller finns i [Publicera dyna
 När du har överfört banderollbilder för att skapa en karusell, lagt till hotspot-områden och/eller bildscheman i banderollen och publicerat karuselluppsättningen är du nu redo att lägga till den på din befintliga webbsida.
 
 >[!NOTE]
->
->Om du är kund hos AEM Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. See [Adding Dynamic Media Assets to Pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Om du är kund hos AEM Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. See [Adding Dynamic Media Assets to Pages.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
 Om du är en fristående AEM kan du dock manuellt lägga till karusellbanderollen på webbplatsens landningssida enligt beskrivningen i detta avsnitt.
 
