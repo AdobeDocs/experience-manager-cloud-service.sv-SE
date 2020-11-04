@@ -2,9 +2,9 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 translation-type: tm+mt
-source-git-commit: a829a70350464e0d96ae302aa305e140affbc63a
+source-git-commit: 639bf1add463c0e62982a44ecdca834e2c7c53fe
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '1818'
 ht-degree: 1%
 
 ---
@@ -170,7 +170,7 @@ Innehållsfragment kan integreras med:
 
 Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
 
-[com.adobe.cq.dam.cfm](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/package-summary.html#package.description)
+[com.adobe.cq.dam.cfm](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/package-summary.html#package.description)
 
 >[!CAUTION]
 >
@@ -180,7 +180,7 @@ Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
 
 Följande tre gränssnitt kan fungera som startpunkter:
 
-* **Innehållsfragment** ([ContentFragment](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
+* **Innehållsfragment** ([ContentFragment](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
    Med det här gränssnittet kan du arbeta med ett innehållsfragment på ett abstrakt sätt.
 
@@ -206,7 +206,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
    Gränssnitt som representerar de primära elementen i ett fragment är:
 
-   * **Innehållselement** ([ContentElement](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+   * **Innehållselement** ([ContentElement](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
@@ -218,7 +218,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
          * Ta bort variationer (se [Caveats](#caveats))
          * Åtkomst till variantdata (se `ContentVariation`)
       * Kortkommando för att matcha variationer (tillämpa ytterligare, implementeringsspecifik reservlogik om den angivna varianten inte är tillgänglig för ett element)
-   * **Innehållsvariation** ([ContentVariation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+   * **Innehållsvariation** ([ContentVariation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
@@ -248,9 +248,9 @@ Följande kan anpassas:
 
 * `ContentElement` kan anpassas till
 
-   * [`ElementTemplate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/ElementTemplate.html) - för åtkomst till elementets strukturinformation.
+   * [`ElementTemplate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ElementTemplate.html) - för åtkomst till elementets strukturinformation.
 
-* [`FragmentTemplate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html)
+* [`FragmentTemplate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html)
 
 * `Resource` kan anpassas till
 
