@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Lär dig hur du anpassar driftsättningen av Experience Manager as a Cloud Service med bland annat ämnen om utveckling och driftsättning.
 translation-type: tm+mt
-source-git-commit: 69756d6831678151b0e8eb73db81113d49f17447
+source-git-commit: 639bf1add463c0e62982a44ecdca834e2c7c53fe
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 63%
+source-wordcount: '408'
+ht-degree: 61%
 
 ---
 
@@ -45,7 +45,6 @@ ht-degree: 63%
    + [Använda bibliotek på klientsidan](developing/introduction/clientlibs.md)
    + [Konfigurationer och Configuration Browser](developing/introduction/configurations.md)
    + [Loggning](developing/introduction/logging.md)
-   + [AEM as a Cloud Service API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
    + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
    + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
    + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
