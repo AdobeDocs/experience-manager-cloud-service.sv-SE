@@ -2,9 +2,9 @@
 title: Söka efter fasetter.
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
 translation-type: tm+mt
-source-git-commit: 9c5dd93be316417014fc665cc813a0d83c3fac6f
+source-git-commit: c80c0063ce0f7c6bc8d99d5078ec8d5f50839732
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2264'
 ht-degree: 18%
 
 ---
@@ -27,7 +27,7 @@ De sökfaktorer som visas på panelen Filter definieras i det underliggande sök
 Lägg till predikatet i formuläret för fulltextsökningar `Fulltext` . Använd predikatet Egenskap för att söka efter resurser som matchar en enskild egenskap som du anger. Använd predikatet Alternativ för att söka efter resurser som matchar ett eller flera värden för en viss egenskap. Lägg till predikatet för datumintervall för att söka efter resurser som skapats inom ett angivet datumintervall.
 
 1. Tryck/klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök efter formulär väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 
    ![Leta reda på och välj Resursadministratörens sökspår](assets/assets_admin_searchrail.png)
 
@@ -59,7 +59,7 @@ Lägg till predikatet i formuläret för fulltextsökningar `Fulltext` . Använd
 1. Om du vill stänga förhandsgranskningen klickar du på **[!UICONTROL Close]** stängningen ![](assets/do-not-localize/close_icon.png) i förhandsvisningens övre högra hörn.
 1. Tryck **[!UICONTROL Done]** för att spara inställningarna.
 1. Navigera till sökpanelen i användargränssnittet Resurser. Egenskapspredikatet läggs till på panelen.
-1. Ange en beskrivning av resursen som ska genomsökas i textrutan. Ange t.ex.&quot;Adobe.&quot; När du gör en sökning visas resurser med en beskrivning som matchar&quot;Adobe&quot; i sökresultaten.
+1. Ange en beskrivning av resursen som ska genomsökas i textrutan. Ange t.ex. &quot;Adobe.&quot; När du gör en sökning visas resurser med en beskrivning som matchar&quot;Adobe&quot; i sökresultaten.
 
 ## Lägg till ett alternativs predikat {#adding-an-options-predicate}
 
@@ -102,7 +102,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 1. Gör något av följande:
 
    * In the **[!UICONTROL Property Name]** field, mention the path of the JSON file where you define the nodes for the options and specify corresponding key-value pairs.
-   * Tryck ![](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ trycker/klickar du på ![](assets/do-not-localize/aem_assets_add_icon.png) och upprepar steget.
+   * Tryck på ikonen ![Lägg till](assets/do-not-localize/aem_assets_add_icon.png) resurser bredvid fältet Alternativ för att ange visningstexten och värdet för de alternativ du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ trycker/klickar du på ikonen ![Lägg till](assets/do-not-localize/aem_assets_add_icon.png) resurser och upprepar steget.
 
 1. Kontrollera att **[!UICONTROL Single Select]** är avmarkerat så att användaren kan välja flera alternativ för filtyper samtidigt (till exempel bilder, dokument, multimedia och arkiv). Om du väljer **[!UICONTROL Single Select]** kan användaren bara välja ett alternativ åt gången för olika filtyper.
 
@@ -118,7 +118,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 Med predikatet kan du söka efter resurser efter flera värden. `Multi Value Property` Tänk dig ett scenario där du har bilder på flera produkter i AEM Assets och där metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
 
 1. Klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök efter formulär väljer du **[!UICONTROL Assets Admin Search Rail]** knappen **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** knappen **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. På sidan Redigera sökformulär drar du **[!UICONTROL Multi Value Property Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
 1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
 1. Kontrollera att **[!UICONTROL Delimiter Support]** är markerat. I fältet **[!UICONTROL Input Delimiters]** anger du avgränsare för att separera enskilda värden. Som standard anges kommatecken som avgränsare. Du kan ange en annan avgränsare.
@@ -128,10 +128,10 @@ Med predikatet kan du söka efter resurser efter flera värden. `Multi Value Pro
 
 ## Lägg till ett taggpredikat {#adding-a-tags-predicate}
 
-Med `Tags` predikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker AEM Assets efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
+Med `Tags` predikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker AEM Assets efter resurser efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
 
 1. Klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök efter formulär väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. In the Edit Search Form page, drag **[!UICONTROL Tags Predicate]** from the Select Predicate tab to the main pane.
 1. Ange en platshållartext för predikatet på fliken Inställningar. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/cq:tags`. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
 1. Konfigurera sökvägsegenskapen för rottaggar för det här predikatet för att fylla i olika taggar i listan Taggar.
@@ -208,7 +208,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
   </tr>
   <tr>
    <td><p>Intervall</p> </td>
-   <td><p>Sök predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet.</p> </td>
+   <td><p>Sök på predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet.</p> </td>
    <td>
     <ul>
      <li>Etikett</li>
@@ -308,7 +308,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 
 Som standard visas en låsikon före **[!UICONTROL Assets Admin Search Rail]** på **[!UICONTROL Search Forms]** sidan. Ikonen Lås försvinner om du lägger till sökfaktorer i formuläret, vilket anger att standardformuläret har ändrats.
 
-Ikonen Lås för ett alternativ på sidan Sökformulär anger att standardinställningarna är intakta och inte anpassade.
+Låsikonen mot ett alternativ på söksidan i Forms anger att standardinställningarna är intakta och inte anpassade.
 
 Så här återställer du standardsökaspekten:
 
