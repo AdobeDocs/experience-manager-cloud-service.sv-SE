@@ -2,9 +2,9 @@
 title: Kontrollerar domännamnsstatus
 description: Kontrollerar domännamnsstatus
 translation-type: tm+mt
-source-git-commit: 91b06bcd96fe8a37c3fb20ef90e1684f6d19183f
+source-git-commit: 5cd22d8af20bb947e4cdab448cf8f20c6596bb2e
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -52,3 +52,37 @@ Logga in på din domänregistrator och skapa en CNAME-post för att peka ditt an
 | CNAME | Anpassad domännamnspunkt till mål |
 |--- |--- |
 | www.customdomain.com | cdn.adobeaemcloud.com |
+
+### APEX-post {#apex-record}
+
+En domän är en anpassad domän som inte innehåller någon underdomän, till exempel example.com. En huvuddomän konfigureras med en `A` -, `ALIAS` - eller `ANAME` -post via din DNS-leverantör. Apex-domänerna måste peka på specifika IP-adresser.
+
+Lägg till alla följande A-poster i domänens DNS-inställningar via din domänleverantör:
+
+* `A RECORD`
+
+* `A record for domain @ pointing to IP 151.101.3.10`
+
+* `A record for domain @ pointing to IP 151.101.67.10`
+
+* `A record for domain @ pointing to IP 151.101.131.10`
+
+* `A record for domain @ pointing to IP 151.101.195.10`
+
+## Kontrollerar DNS-poststatus {#check-status-dns-record}
+
+Du kan ta reda på om ditt domännamn tolkas som en Cloud Service-webbplats på rätt sätt till AEM genom att klicka på statusikonen för DNS-posten i tabellen på sidan Domäninställningar. Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av följande statusmeddelanden:
+
+>[!NOTE]
+>Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn först verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **Lös igen** bredvid statusen. INFOGA BILD
+
+* **DNS-status kan inte identifieras** förrän ditt anpassade domännamn har verifierats och distribuerats. Den här statusen visas även när ditt anpassade domännamn håller på att tas bort.
+
+* **DNS-matchningen är felaktig** Detta indikerar att konfigurationen av antingen DNS-poster inte har matchats/pekats över än eller är felaktig. En Adobe-representant meddelas automatiskt.
+
+   >[!NOTE]
+   >Du måste konfigurera antingen en `CNAME` eller `A-record` genom att följa motsvarande instruktioner. Gå till Konfigurera INSERT LINK för DNS-inställningar om du vill veta mer om ämnet. När du är klar måste du välja ikonen för att lösa igen bredvid statusen.
+
+* **DNS-matchning pågår**. Den här statusen visas vanligtvis när du har valt ikonen&quot;lös igen&quot; bredvid statusen.
+
+* **DNS-matchning korrekt** DNS-inställningarna är korrekt konfigurerade. Din webbplats betjänar besökare.
