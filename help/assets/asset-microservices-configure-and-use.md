@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster
 description: Konfigurera och använd de molnbaserade resursmeritjänsterna för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: a316bc6f0c1f0d09f6531b6e1b244596c6010355
 workflow-type: tm+mt
-source-wordcount: '2473'
+source-wordcount: '2476'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Experience Manager tillåter följande bearbetningsnivåer.
 
 | Alternativ | Beskrivning | Användningsexempel |
 |---|---|---|
-| [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används i [!DNL Assets] användargränssnittet (48, 140 och 319 px) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
+| [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används i [!DNL Assets] användargränssnittet (48, 140 och 319 pixlar) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
 | [Anpassad konfiguration](#standard-config) | Konfigureras av administratörer via användargränssnittet. Ger fler alternativ för generering av återgivning genom att utöka standardalternativet. Utöka det färdiga alternativet om du vill ha olika format och renderingar. | <ul><li>FPO-återgivning. </li> <li>Ändra filformat och upplösning för bilder</li> <li> Tillämpa villkoren på konfigurerade filtyper. </li> </ul> |
 | [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade program för att anropa [tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Asset Compute. Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
 
@@ -78,9 +78,9 @@ Så här skapar du en standardbearbetningsprofil:
 1. Om du vill generera andra återgivningar klickar du på **[!UICONTROL Add New]** och anger följande information:
 
    * Filnamn för varje återgivning.
-   * Filformat (PNG, JPEG eller GIF) för varje återgivning.
+   * Filformat (PNG, JPEG, GIF eller WebP) för varje återgivning.
    * Bredd och höjd i pixlar för varje återgivning. Om värdena inte anges används den ursprungliga bildens fullständiga pixelstorlek.
-   * Kvalitet i procent av varje JPEG-återgivning.
+   * Kvalitet i procent av varje JPEG- och WebP-återgivning.
    * Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
 
    ![processing-profiles-adding](assets/processing-profiles-image.png)
@@ -148,7 +148,7 @@ Integreringen av tjänsten Resursberäkning gör att Experience Manager kan skic
 
 ![custom-processing-profile](assets/custom-processing-profile.png)
 
-*Bild: Använd[!UICONTROL Service Parameters]fältet för att skicka tillagd information till fördefinierade parametrar som byggs in i det anpassade programmet. I det här exemplet uppdateras bilderna med text i`Jumanji``Arial-BoldMT`teckensnitt när kampanjbilder överförs.*
+*Bild: Använd [!UICONTROL Service Parameters] fältet för att skicka tillagd information till fördefinierade parametrar som byggs in i det anpassade programmet. I det här exemplet uppdateras bilderna med text i `Jumanji` `Arial-BoldMT` teckensnitt när kampanjbilder överförs.*
 
 ## Använda bearbetningsprofiler för att bearbeta resurser {#use-profiles}
 
