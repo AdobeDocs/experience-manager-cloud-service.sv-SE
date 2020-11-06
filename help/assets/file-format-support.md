@@ -3,9 +3,9 @@ title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av Experience Manager Assets som Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a1ecf5d0cf84a5f83952c6b32e77fdbb397486c2
+source-git-commit: 2df737ae0601774f4a9d1dce470125f596fab467
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '801'
 ht-degree: 5%
 
 ---
@@ -61,9 +61,6 @@ Följande förklaring beskriver supportnivån.
 | JPEG | ✓ | ✓ | ✓ | ✓ |
 | PNG | ✓ | ✓ | ✓ | ✓ |
 | TIFF | ✓ | ✓ | ✓ | - |
-| WebP | ✓ | ✓ | - | - |
-
-* WebP-stöd används för närvarande för förlustgivande komprimering och stöder 0-100-värden för att ändra bildkvaliteten.
 
 ## Bildformat i [!DNL Dynamic Media] {#image-support-dynamic-media}
 
