@@ -2,9 +2,9 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: 6319b8dcbddda9910b6745d1594dd81f5ba986ba
+source-git-commit: 978fcf17a1bd00b6d3be81587afaafef1807d678
 workflow-type: tm+mt
-source-wordcount: '5216'
+source-wordcount: '5215'
 ht-degree: 8%
 
 ---
@@ -254,14 +254,14 @@ Om du gör det gör du så här:
 * Dynamiska återgivningar som returnerar RGB-utdata returnerar det i *färgrymden sRGB* .
 * Dynamiska återgivningar som returnerar CMYK-utdata returnerar det i *WebCoated* -färgrymden.
 
-#### Konfigurera bearbetning av resurser {#configuring-asset-processing}
+#### Redigera MIME-typer för format som stöds {#configuring-asset-processing}
 
 Du kan definiera vilka resurstyper som ska bearbetas av Dynamic Media och anpassa avancerade parametrar för resurshantering. Du kan till exempel ange parametrar för tillgångsbearbetning för att göra följande:
 
 * Konvertera en Adobe PDF till en eCatalog-resurs.
 * Konvertera ett Adobe Photoshop-dokument (.PSD) till en bannermallsresurs för personalisering.
 * Rastrera en Adobe Illustrator-fil (.AI) eller en Adobe Photoshop Encapsulated Postscript-fil (.EPS).
-* Obs! Videoprofiler och bildprofiler kan användas för att definiera bearbetning av videoklipp och bilder.
+* [Videoprofiler](/help/assets/dynamic-media/video-profiles.md) och [bildprofiler](/help/assets/dynamic-media/image-profiles.md) kan användas för att definiera bearbetning av videoklipp och bilder.
 
 Se [Överföra resurser](/help/assets/add-assets.md).
 
@@ -277,9 +277,9 @@ Så här konfigurerar du bearbetning av resurser:
 1. Välj en mime-typ i mappen mimeTypes.
 1. Till höger på CRXDE Lite-sidan i den nedre delen:
 
-   * dubbelklicka på **[!UICONTROL enabled]** fältet. Som standard är alla resursens MIME-typer aktiverade (inställda på **[!UICONTROL true]**), vilket innebär att resurserna synkroniseras till Dynamic Media för bearbetning. Om du vill utesluta den här resursens MIME-typ från bearbetningen ändrar du den här inställningen till **[!UICONTROL false]**.
+   * Dubbelklicka på **[!UICONTROL enabled]** fältet. Som standard är alla resursens MIME-typer aktiverade (inställda på **[!UICONTROL true]**), vilket innebär att resurserna synkroniseras till Dynamic Media för bearbetning. Om du vill utesluta den här resursens MIME-typ från bearbetningen ändrar du den här inställningen till **[!UICONTROL false]**.
 
-   * dubbelklicka **[!UICONTROL jobParam]** för att öppna det tillhörande textfältet. Se [Mime-typer](/help/assets/file-format-support.md) som stöds för en lista över tillåtna värden för processparametrar som du kan använda för en viss MIME-typ.
+   * Dubbelklicka **[!UICONTROL jobParam]** för att öppna det tillhörande textfältet. Se [Mime-typer](/help/assets/file-format-support.md) som stöds för en lista över tillåtna värden för processparametrar som du kan använda för en viss MIME-typ.
 
 1. Gör något av följande:
    * Upprepa steg 3-4 om du vill redigera ytterligare MIME-typer.
@@ -287,11 +287,11 @@ Så här konfigurerar du bearbetning av resurser:
 
 1. Tryck för **[!UICONTROL CRXDE Lite]** att gå tillbaka till AEM i det övre vänstra hörnet på sidan.
 
-#### Lägga till anpassade MIME-typer för format som inte stöds {#adding-custom-mime-types-for-unsupported-formats}
+#### Lägga till MIME-typer för format som inte stöds {#adding-custom-mime-types-for-unsupported-formats}
 
 Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets. För att säkerställa att nya noder som du lägger till i CRXDE Lite inte tas bort av AEM måste du se till att du placerar MIME-typen före `image_` och att dess aktiverade värde är inställt på **[!UICONTROL false]**.
 
-Så här lägger du till anpassade MIME-typer för format som inte stöds:
+Så här lägger du till MIME-typer för format som inte stöds:
 
 1. Från AEM, tryck **[!UICONTROL Tools > Operations > Web Console.]**
 
@@ -453,7 +453,7 @@ Så här skapar du en gruppuppsättningsförinställning för automatisk generer
 
    Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Klicka på **[!UICONTROL Setup > Application Setup]>[!UICONTROL Batch Set Presets]>[!UICONTROL Batch Set Preset]** i navigeringsfältet uppe på sidan.
+1. Klicka på **[!UICONTROL Setup > Application Setup]> [!UICONTROL Batch Set Presets] >[!UICONTROL Batch Set Preset]** i navigeringsfältet uppe på sidan.
 
    Observera att **[!UICONTROL View Form]** standardvyn är inställd i det övre högra hörnet på detaljsidan.
 
