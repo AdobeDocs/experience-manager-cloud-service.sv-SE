@@ -2,9 +2,9 @@
 title: Smart bildbehandling
 description: Smart bildbehandling utnyttjar varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang.
 translation-type: tm+mt
-source-git-commit: 24d929702fd9eb31b95fdd6d97c7b9978d919804
+source-git-commit: 8040cd38bb01296ed89d44c707ca1e759489eb7b
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '2049'
 ht-degree: 0%
 
 ---
@@ -54,11 +54,23 @@ Nej. Smart Imaging ingår i din befintliga licens av antingen Dynamic Media Clas
 
 ## Hur fungerar smart bildbehandling? {#how-does-smart-imaging-work}
 
-Smart Imaging använder Adobe Sensei för att automatiskt konvertera bilder till det optimala formatet, storleken och kvaliteten, baserat på webbläsarkapacitet:
+När en bild efterfrågas av en konsument kontrollerar vi användaregenskaperna och konverterar till rätt bildformat baserat på vilken webbläsare som används. Dessa formatkonverteringar görs på ett sätt som inte försämrar den visuella återgivningen. Smart bildbehandling konverterar automatiskt bilder till olika format baserat på webbläsarkapacitet på följande sätt.
 
-* Konvertera automatiskt till WebP för webbläsare som Chrome, Firefox, Microsoft Edge, Android och Opera.
-* Konvertera automatiskt till JPEG2000 för webbläsare som Safari.
-* Konvertera automatiskt till JPEG för webbläsare som Internet Explorer 9+.
+* Konvertera automatiskt till WebP för följande webbläsare:
+   * Krom
+   * Firefox
+   * Microsoft Edge
+   * Safari 14.0 +
+      * Safari 14 endast med iOS 14.0 och senare och macOS BigSur och senare
+   * Android
+   * Opera
+* Stöd för äldre webbläsare för följande:
+
+   | Webbläsare | Webbläsare/OS-version | Format |
+   | --- | --- | --- |
+   | Safari | iOS 14.0 eller tidigare | JPEG2000 |
+   | Edge | 18 eller tidigare | JPEGXR |
+   | Internet Explorer | 9+ | JPEGXR |
 * För webbläsare som inte stöder dessa format används det bildformat som ursprungligen begärdes.
 
 Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
@@ -84,7 +96,13 @@ Smart Imaging fungerar med dina befintliga &quot;bildförinställningar&quot; oc
 
 ## Måste jag ändra URL:er, bildförinställningar eller driftsätta ny kod för Smart Imaging på min webbplats? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-Nej. Smart Imaging fungerar sömlöst med befintliga bild-URL:er och bildförinställningar. Dessutom kräver Smart Imaging inte att du lägger till kod på webbplatsen för att identifiera en användares webbläsare. Allt detta hanteras automatiskt.
+Smart Imaging fungerar sömlöst med dina befintliga bild-URL:er och bildförinställningar om du konfigurerar Smart Imaging på din befintliga anpassade domän. Dessutom kräver Smart Imaging inte att du lägger till kod på webbplatsen för att identifiera en användares webbläsare. Allt detta hanteras automatiskt.
+
+Om du behöver konfigurera en ny anpassad domän för att använda Smart Imaging måste URL:erna uppdateras för att återspegla den anpassade domänen.
+
+Se även [Är jag berättigad att använda Smart Imaging?](#am-i-eligible-to-use-smart-imaging) för att förstå vad som krävs för smart bildbehandling.
+
+<!-- No. Smart Imaging works seamlessly with your existing image URLs and image presets. In addition, Smart Imaging does not require you to add any code on your website to detect a user's browser. All of this is handled automatically. -->
 
 <!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
@@ -171,6 +189,34 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 Alla bilder konverteras inte. Smart Imaging avgör om konverteringen behövs för att förbättra prestandan. I vissa fall, där det inte finns någon förväntad prestandaökning eller där formatet inte är JPEG eller PNG, konverteras inte bilden.
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
+
+## Hur vet jag hur väl jag kan prestera? Finns det något sätt att se på fördelarna med Smart bildbehandling? {#performance-gain}
+
+**Om rubriker för smarta bilder**
+
+Värdena för huvudet Smart Imaging fungerar endast när begäranden som inte är cachelagrade hanteras från och med nu. Detta görs för att den aktuella cachen ska vara kompatibel och för att undvika behovet av beräkning när bilder hanteras via cachen.
+
+Om du vill använda rubriker för smarta bilder måste du lägga till modifieraren`cache=off`i dina begäranden. Se[cacheminne](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-cache.html) i API:t för dynamisk mediabildsserver och återgivning.
+
+Exempel på användning `cache=off` (endast i illustrationssyfte):
+
+`https://domain.scene7.com/is/image/companyName/imageName?cache=off` 
+
+När du har använt en sådan begäran kan du se sidhuvudet i avsnittet Svarshuvuden `-x-adobe-smart-imaging` . Se följande skärmbild med `-x-adobe-smart-imaging` markering.
+
+![smart-imaging-header](/help/assets/assets-dm/smart-imaging-header2.png) 
+
+Detta rubrikvärde anger följande:
+
+* Smart Imaging fungerar för företaget.
+* Positivt värde (>=0) anger att konverteringen lyckades. I det här fallet returneras en ny bild (webP här).
+* Negativt värde (&lt;0) anger att konverteringen inte lyckades. I det här fallet returneras den begärda originalbilden (JPEG som standard, om inget anges).
+* Värdet anger skillnaden i byte mellan den begärda bilden och den nya bilden. I det här fallet sparas 75048 byte, vilket är ungefär 75 kB för en bild. 
+   * Det negativa värdet anger att den begärda bilden var mindre än den nya bilden. Den negativa storleksskillnaden visas, men bilden som visas är endast den ursprungliga begärda bilden
+
+**När ska du använda rubriker för smarta bilder?**
+
+Responshuvuden för smart bildbehandling är aktiverade för felsökning eller samtidigt som fördelarna med enbart smart bildbehandling markeras. Om du använder`cache=off`i normala scenarier kan belastningstiden påverkas avsevärt.
 
 ## Kan Smart Imaging stängas av på begäran? {#turning-off-smart-imaging}
 
