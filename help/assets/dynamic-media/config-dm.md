@@ -2,9 +2,9 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: 978fcf17a1bd00b6d3be81587afaafef1807d678
+source-git-commit: 9719a440a85b150599efa3eb9dc2bd443a917217
 workflow-type: tm+mt
-source-wordcount: '5215'
+source-wordcount: '5236'
 ht-degree: 8%
 
 ---
@@ -193,8 +193,8 @@ Installations- och konfigureringsuppgifter omfattar följande:
 * [Publiceringskonfiguration för Image Server](#publishing-setup-for-image-server)
 * [Konfigurera allmänna inställningar för programmet](#configuring-application-general-settings)
 * [Konfigurera färghantering](#configuring-color-management)
-* [Konfigurera bearbetning av resurser](#configuring-asset-processing)
-* [Lägga till anpassade MIME-typer för format som inte stöds](#adding-custom-mime-types-for-unsupported-formats)
+* [Redigera MIME-typer för format som stöds](#editing-mime-types-for-supported-formats)
+* [Lägga till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats)
 * [Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
 #### Publiceringskonfiguration för Image Server {#publishing-setup-for-image-server}
@@ -254,7 +254,7 @@ Om du gör det gör du så här:
 * Dynamiska återgivningar som returnerar RGB-utdata returnerar det i *färgrymden sRGB* .
 * Dynamiska återgivningar som returnerar CMYK-utdata returnerar det i *WebCoated* -färgrymden.
 
-#### Redigera MIME-typer för format som stöds {#configuring-asset-processing}
+#### Redigera MIME-typer för format som stöds {#editing-mime-types-for-supported-formats}
 
 Du kan definiera vilka resurstyper som ska bearbetas av Dynamic Media och anpassa avancerade parametrar för resurshantering. Du kan till exempel ange parametrar för tillgångsbearbetning för att göra följande:
 
@@ -265,7 +265,7 @@ Du kan definiera vilka resurstyper som ska bearbetas av Dynamic Media och anpass
 
 Se [Överföra resurser](/help/assets/add-assets.md).
 
-Så här konfigurerar du bearbetning av resurser:
+**Redigera MIME-typer för de format som stöds**
 
 1. In AEM, click the AEM logo to access the global navigation console, then click **[!UICONTROL General > CRXDE Lite]**.
 1. Navigera till följande i den vänstra listen:
@@ -287,11 +287,11 @@ Så här konfigurerar du bearbetning av resurser:
 
 1. Tryck för **[!UICONTROL CRXDE Lite]** att gå tillbaka till AEM i det övre vänstra hörnet på sidan.
 
-#### Lägga till MIME-typer för format som inte stöds {#adding-custom-mime-types-for-unsupported-formats}
+#### Lägga till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
 
 Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets. För att säkerställa att nya noder som du lägger till i CRXDE Lite inte tas bort av AEM måste du se till att du placerar MIME-typen före `image_` och att dess aktiverade värde är inställt på **[!UICONTROL false]**.
 
-Så här lägger du till MIME-typer för format som inte stöds:
+**Lägga till MIME-typer för format som inte stöds**
 
 1. Från AEM, tryck **[!UICONTROL Tools > Operations > Web Console.]**
 
@@ -357,7 +357,7 @@ Observera också att du kan använda **[!UICONTROL View Code]** utan formulärf�
 
 Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan du definiera alla element i en namnkonvention och identifiera den del av konventionen som används för att namnge den uppsättning i vilken de finns. Ett företags personliga namnkonvention kan använda en eller flera definitionsrader för vart och ett av dessa element. Du kan använda så många rader för din unika definition och gruppera dem i distinkta element, t.ex. för Huvudbild, Färgelement, Alternativa vyer och Färgruteelement.
 
-Så här konfigurerar du standardnamn:
+**Konfigurera standardnamn**
 
 1. Logga in på ditt konto för Dynamic Media Classic (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -391,7 +391,7 @@ Du kan skapa, redigera och hantera dina gruppuppsättningsförinställningar. De
 
 Du kan antingen använda formulärfältsmetoden för att definiera en gruppuppsättningsförinställning eller kodmetoden, som gör att du kan använda reguljära uttryck. Precis som i Standardnamn kan du välja Visa kod samtidigt som du definierar i formulärvyn och använda reguljära uttryck för att skapa definitioner. Du kan också avmarkera en vy om du vill använda den ena eller den andra enbart.
 
-Så här skapar du en förinställning för gruppuppsättning:
+**Skapa en förinställning för gruppuppsättning**
 
 1. Logga in på ditt konto för Dynamic Media Classic (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -447,7 +447,7 @@ Gruppering för den delade resursnamnsdelen av rotationsuppsättningen läggs ti
 
 När rotationsuppsättningen har överförts och publicerats aktiverar du namnet på det 2D-rotationsuppsättningsrecept som visas under **Förinställningar för gruppuppsättning** i dialogrutan **Alternativ för överföringsjobb**.
 
-Så här skapar du en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning:
+**Skapa en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning**
 
 1. Logga in på ditt konto för Dynamic Media Classic (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -542,11 +542,13 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 1. I **[!UICONTROL Maximum Parallel Jobs]** fältet ändrar du talet till önskat värde.
 
-   Som standard beror det maximala antalet parallella jobb på antalet tillgängliga processorkärnor. På en server med fyra kärnor tilldelas till exempel två arbetstrådar. (Ett värde mellan 0,0 och 1,0 är baserat på förhållandet, eller alla tal som är större än 1 tilldelar antalet arbetstrådar.)
+   Du kan öka **[!UICONTROL Maximum Parallel Jobs]** för att få tillräckligt stöd för överföring av stora mängder filer till Dynamic Media. Det exakta värdet beror på maskinvarukapaciteten. I vissa scenarier - det vill säga en inledande migrering eller en engångsöverföring av en grupp - kan du använda ett stort värde. Tänk dock på att användning av ett stort värde (till exempel två gånger antalet kärnor) kan ha negativa effekter på andra samtidiga aktiviteter. Därför bör du testa och justera värdet baserat på ditt specifika användningsfall.
 
-   Adobe rekommenderar att 32 **[!UICONTROL Maximum Parallel Jobs]** är konfigurerat för att ge tillräckligt stöd för överföring av filer till Dynamic Media Classic (Scene7).
+<!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
-   ![chlimage_1](assets/chlimage_1.jpeg)
+   Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic. -->
+
+![chlimage_1](assets/chlimage_1.jpeg)
 
 1. Tryck på **[!UICONTROL Save]**.
 
