@@ -1,11 +1,11 @@
 ---
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: 'Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service. '
-translation-type: ht
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
-workflow-type: ht
-source-wordcount: '1679'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 6b68c52235bae033b429a2d4c84f7c31c75b0fa2
+workflow-type: tm+mt
+source-wordcount: '1671'
+ht-degree: 98%
 
 ---
 
@@ -59,10 +59,11 @@ Skalningen av tjänstens klientinstanser kan vara automatisk eller manuell på t
 ## Miljöer {#environments}
 
 >[!NOTE]
->
 >Mer information finns i [Distribuera – Körningslägen](/help/implementing/deploying/overview.md#runmodes)
 
-AEM as a Cloud Service är tillgängligt som enskilda instanser där varje instans representerar en komplett AEM-miljö. Det finns fyra typer av miljöer som är tillgängliga med AEM as a Cloud Service:
+AEM as a Cloud Service är tillgängligt som enskilda instanser där varje instans representerar en komplett AEM-miljö.
+
+Det finns tre typer av miljöer med AEM som Cloud Service:
 
 * **Produktionsmiljö**: är värd för de program som riktar sig till företagsanvändare.
 
@@ -70,9 +71,7 @@ AEM as a Cloud Service är tillgängligt som enskilda instanser där varje insta
 
 * **Utvecklingsmiljö**: ger utvecklare möjlighet att implementera AEM-program under samma körningsförhållanden som scen- och produktionsmiljöerna.
 
-* **Demonstrationsmiljö**: kan användas för utvärdering, demonstration, prototyper och utbildningsändamål.
-
-Utvecklings- och demonstrationsmiljöerna kallas ofta för *icke-produktionsmiljöer* .
+   Mer information finns i [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#using-cloud-manager) .
 
 ## Program {#programs}
 
