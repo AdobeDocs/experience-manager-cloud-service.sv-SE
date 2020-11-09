@@ -2,9 +2,9 @@
 title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 50c5be6adf265eac9c9c7a7b36d03cb30ba4e5d2
+source-git-commit: 14d08529eeee0f9881e668eed6273cfa57f1360f
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '713'
 ht-degree: 4%
 
 ---
@@ -20,10 +20,10 @@ Det AEM hanterade CDN uppfyller de flesta kunders krav på prestanda och säkerh
 
 Följ de här stegen för att förbereda innehållsleverans genom att använda Adobe i körklart CDN:
 
-1. Tillhandahåll det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller denna information. Samordna med kundsupport för den här uppgiften.
+1. Tillhandahåll det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller denna information. Samordna med kundsupport för den här uppgiften. Adobe stöder upp till 10 SSL-certifikat för ett program.
    **Obs!** Aem as a Cloud Service does not support Domain Validated (DV) certificates. Dessutom måste det vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
 1. Informera kundsupport:
-   * vilken anpassad domän som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id. Observera att anpassade domäner på författarsidan inte stöds.
+   * vilka anpassade domäner som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id. Upp till 100 domäner stöds för en viss miljö och domäner kan inte innehålla jokertecken. Observera att anpassade domäner på författarsidan inte stöds.
    * om någon IP-tillåtelselistning behövs för att begränsa trafiken till en viss miljö.
 1. Koordinera med kundsupport om timing för nödvändiga ändringar av DNS-posterna. Instruktionerna är olika beroende på om en apex-post behövs:
    * Om en apex-post inte behövs ska kunderna ange CNAME DNS-posten till att peka FQDN till `cdn.adobeaemcloud.com`.
