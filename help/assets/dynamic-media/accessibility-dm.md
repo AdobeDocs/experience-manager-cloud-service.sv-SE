@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: d992b68d4a015f8f947167b5b1d5f0a1ac5c09ec
+source-git-commit: 7af8ddda4aee093b22147db9be9f65cd0c131c04
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 
 Dynamic Media har stöd för tangentbordskontroll och hjälpfunktioner som JAWS och NVDA-skärmläsare i hela användargränssnittet.
 
+
+
 ## Stöd för tangentbordstillgänglighet i Dynamic Media
 
 Tangentbordslinjer som stöds av enskilda element i användargränssnittet är i de flesta fall enkla att upptäcka. Tangentbordskontrollen i Dynamic Media handlar om följande:
@@ -25,8 +27,8 @@ Tangentbordslinjer som stöds av enskilda element i användargränssnittet är i
 Användning av `Tab` flyttar indatafokus till nästa element i användargränssnittet i tabbordningen. med `Shift+Tab` får indatafokus tillbaka till föregående element i användargränssnittet.
 Fokusförflyttningen följer det naturliga elementet i användargränssnittet på skärmen och flyttas från vänster till höger och sedan uppifrån och ned.
 * Möjlighet att använda tangenten `Spacebar` och `Enter` för att aktivera standardelement i användargränssnittet, som knappar, listrutor o.s.v.
-* Möjlighet att använda vissa anpassade tangenttryckningar för att interagera med komplexa gränssnittselement, till exempel piltangenter i Aktiv punkt-redigeraren.
 * Möjlighet att se fokus på tangentbordet på det aktiva elementet. Det element i användargränssnittet som har indatafokus kan få en visuell fokusindikation som en kantlinje som återges runt elementet i användargränssnittet.
+* Möjlighet att använda vissa anpassade tangenttryckningar för att interagera med komplexa gränssnittselement, till exempel piltangenter i Aktiv punkt-redigeraren. I redigeraren för bildbeskärning/smart beskärning kan du använda piltangenterna för att beskära bildrutestorleken, placera om bilden eller båda.
 
 Eftersom Dynamic Media är ett plugin-program till AEM Assets är det mesta av tangentbordskontrollbeteendet precis som i AEM Assets. Knappen i Dynamic Media har till exempel samma fokus som i AEM Assets och reagerar på `Cancel` `Spacebar` tangenten som i AEM Assets. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts). Undantag från detta är redigeraren för aktiveringspunkter och redigerarna Bildbeskärning/Smart beskärning.
 
