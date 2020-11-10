@@ -2,9 +2,9 @@
 title: Lägg till era digitala resurser [!DNL Adobe Experience Manager]i.
 description: Lägg till era digitala resurser [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 28dddf8282d2489e97fae6247476dee54b72fe0d
+source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1298'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ Följande (blankstegsavgränsad lista med) tecken stöds emellertid inte:
 Om du vill överföra fler filer, särskilt om de finns i en kapslad mapphierarki på disken, kan du använda följande metoder:
 
 * Använd ett anpassat överföringsskript eller verktyg som utnyttjar API:er för [överföring av resurser](developer-reference-material-apis.md#asset-upload-technical). Ett sådant anpassat verktyg kan lägga till ytterligare hantering av resurser (t.ex. översätta metadata eller byta namn på filer), om det behövs.
-* Använd [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) för att överföra kapslade mapphierarkier.
+* Använd [Experience Manager-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) för att överföra kapslade mapphierarkier.
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ Om du vill överföra fler filer, särskilt om de finns i en kapslad mapphierark
 Förutom webbläsarens användargränssnitt har Experience Manager stöd för andra klienter på datorn. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
 * [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link från dessa skrivbordsprogram.
-* [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) förenklar arbetet med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
+* [Experience Manager-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) förenklar arbetet med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Ytterligare bearbetning {#additional-processing}
 
@@ -171,7 +171,7 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager-datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)
+>* [Adobe Experience Manager-datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
 >* [Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
 >* [Adobe Asset Link-dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [Teknisk referens för överföring av tillgångar](developer-reference-material-apis.md#asset-upload-technical)
