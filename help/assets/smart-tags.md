@@ -3,9 +3,9 @@ title: Märk upp bilder automatiskt med AI-genererade taggar
 description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar [!DNL Adobe Sensei] med hjälp av tjänster.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 33f5f5e0f4769381dd135216d7c7e49e158e870e
+source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
 workflow-type: tm+mt
-source-wordcount: '2363'
+source-wordcount: '2362'
 ht-degree: 6%
 
 ---
@@ -205,7 +205,7 @@ Förbättrade smarta taggar bygger på utbildningsmodeller för varumärkesbilde
 
 * Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
 * Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
-* Taggning stöds i de språkområden som AEM stöds i. En lista med språk finns i Versionsinformation om [smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html).
+* Taggning stöds på de språk som Experience Manager stöder. En lista över språk finns i Versionsinformation för [Smart Content Service](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html#languages).
 
 Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du Resursmomenten (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 
