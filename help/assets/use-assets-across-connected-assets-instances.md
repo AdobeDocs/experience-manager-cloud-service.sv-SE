@@ -3,7 +3,7 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 26294ad57544aa822dc6341fbbd85f396730ee8b
+source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
 workflow-type: tm+mt
 source-wordcount: '2137'
 ht-degree: 39%
@@ -28,7 +28,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
 * Användarna ingår i rätt användargrupper för varje distribution.
-* Ett av villkoren som stöds är uppfyllt för [!DNL Adobe Experience Manager] distributionstyper. Mer information om [!DNL Experience Manager] 6.5 finns i [Funktionen för anslutna resurser i Experience Manager 6.5-resurser](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
+* Ett av villkoren som stöds är uppfyllt för [!DNL Adobe Experience Manager] distributionstyper. Mer information, [!DNL Experience Manager] 6.5, finns i Funktionen [Anslutna resurser i Experience Manager 6.5-resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
 
    |  | [!DNL Sites] som en Cloud Service | [!DNL Experience Manager] 6.5 [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5 [!DNL Sites] på plats |
    |---|---|---|---|
@@ -40,7 +40,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 Författare söker efter bilder och följande typer av dokument i Content Finder och använder de sökbara resurserna i Page Editor. Dokument läggs till i `Download` komponenten och bilder i `Image` komponenten. Authors also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. De format som stöds är:
 
-* **Bildformat**: De format som stöds av [bildkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) . [!DNL Dynamic Media] bilder stöds inte.
+* **Bildformat**: De format som stöds av [bildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) . [!DNL Dynamic Media] bilder stöds inte.
 * **Dokumentformat**: Se vilka [dokumentformat](file-format-support.md#document-formats)som stöds.
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
@@ -193,7 +193,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 
 Följ de här stegen för att felsöka det vanliga felscenariot:
 
-* If you cannot search for remote assets from the [!UICONTROL Content Finder], then ensure that the required roles and permissions are in place.
+* Om du inte kan söka efter fjärrresurser från [!UICONTROL Content Finder]kontrollerar du att de roller och behörigheter som krävs finns på plats.
 * En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/operations/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
 * Om du inte kan komma åt fjärr-DAM-distributionen från den lokala [!DNL Sites] distributionen kontrollerar du att cookies mellan platser tillåts. Om cookies mellan platser blockeras kanske de två distributionerna av [!DNL Experience Manager] inte autentiseras. I Incognito-läget kan till exempel cookies från tredje part blockeras [!DNL Google Chrome] av cookies. Om du vill tillåta cookies i [!DNL Chrome] webbläsaren klickar du på ögonikonen i adressfältet, navigerar till Plats som inte fungerar > Blockerad, väljer fjärr-DAM-URL och tillåter inloggningstokencookie. Du kan även läsa mer om [hur du aktiverar cookies](https://support.google.com/chrome/answer/95647)från tredje part.
 
