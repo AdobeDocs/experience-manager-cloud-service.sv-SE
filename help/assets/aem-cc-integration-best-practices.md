@@ -4,9 +4,9 @@ description: Bästa praxis är att integrera driftsättning i Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
 workflow-type: tm+mt
-source-wordcount: '3297'
+source-wordcount: '3296'
 ht-degree: 18%
 
 ---
@@ -26,7 +26,6 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 
 ## Samarbete mellan kreatörer, marknadsförare och DAM-användare {#collaboration-need-of-creatives-marketers-and-dam-users}
 
-
 | Krav | Använd skiftläge | Involverade ytor |
 |---|---|---|
 | Förenkla för kreatörer på datorn | Effektivisera åtkomsten till mediefiler från en DAM (AEM Assets) för kreatörer, eller mer allmänt för användare på datorer som arbetar med program för att skapa egna mediefiler. De behöver ett enkelt och enkelt sätt att upptäcka, använda (öppna), redigera och spara ändringar i AEM samt överföra nya filer. | Skrivbordet Win eller Mac. Creative Cloud-appar |
@@ -38,7 +37,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 | Värdeförslag för berörda personer | Adobe | Involverade ytor |
 |---|---|---|
 | Creative users upptäcker resurser från AEM, öppnar och använder dem, redigerar och överför ändringar till AEM samt överför nya filer till AEM, utan att lämna Creative Cloud-programmen. | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Photoshop, Illustrator och InDesign |
-| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar i AEM samt överföring av nya filer till AEM från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda skrivbordsprogrammet, inklusive andra typer än Adobe. | [AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | AEM datorprogram på Win och Mac |
+| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar i AEM samt överföring av nya filer till AEM från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda skrivbordsprogrammet, inklusive andra typer än Adobe. | [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en) | AEM datorprogram på Win och Mac |
 | Marknadsförare och affärsanvändare upptäcker, förhandsgranskar, licensierar och sparar samt hanterar Adobe Stock-resurser inifrån AEM. Licensierade och sparade mediefiler innehåller utvalda Adobe Stock-metadata för bättre styrning. | [Integrering med Experience Manager och Adobe Stock](aem-assets-adobe-stock.md) | AEM webbgränssnitt |
 
 Den här artikeln fokuserar främst på de två första aspekterna av samarbetsbehovet. Distribution och anskaffning av resurser i stor skala omnämns kortfattat som ett användningsexempel. Överväg Adobes varumärkesportal eller Assets Share Commons för sådana behov. Alternativa lösningar som [varumärkesportalen i AEM Assets](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html), lösningar som kan byggas med [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/)-komponenter, [Link Share](share-assets.md) eller [AEM Assets-webbgränssnittet](/help/assets/manage-digital-assets.md) bör granskas utifrån specifika krav.
