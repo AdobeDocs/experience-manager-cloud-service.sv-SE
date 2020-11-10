@@ -2,9 +2,9 @@
 title: Bildprofiler för Dynamic Media
 description: Skapa dynamiska mediebildprofiler som innehåller inställningar för oskarp mask och smart beskärning, eller smarta färgrutor eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
 translation-type: tm+mt
-source-git-commit: 867303fd42ed73d7c7dfb5cc1e3612f05ffea10f
+source-git-commit: d992b68d4a015f8f947167b5b1d5f0a1ac5c09ec
 workflow-type: tm+mt
-source-wordcount: '2653'
+source-wordcount: '2669'
 ht-degree: 8%
 
 ---
@@ -195,7 +195,7 @@ Om det behövs kan du köra smart beskärning igen för att generera ytterligare
 
 Se även [Redigera den smarta beskärningen eller den smarta färgrutan för flera bilder](#editing-the-smart-crop-or-smart-swatch-of-multiple-images).
 
-**Så här redigerar du den smarta beskärningen eller smarta färgrutan för en enskild bild**:
+**Redigera smart beskärning eller smarta färgrutor för en enskild bild**
 
 1. Tryck på AEM logotyp och navigera till **[!UICONTROL Assets]** den mapp där en smart beskärning eller smart färgrutebildprofil används.
 
@@ -209,6 +209,7 @@ Se även [Redigera den smarta beskärningen eller den smarta färgrutan för fle
    * Dra i ett hörnhandtag på bilden för att justera storleken på det visningsbara området för beskärningen eller färgrutan.
    * Dra rutan/färgrutan till en ny plats på bilden. Du kan bara redigera färgrutor för bilder; färgrutor är statiska.
    * Ovanför bilden: tryck **[!UICONTROL Revert]** för att ångra alla redigeringar och återställa den ursprungliga beskärningen eller färgrutan.
+   * Använd piltangenterna på tangentbordet för att beskära bildrutestorleken, flytta om bilden eller båda.
 
 1. I det övre högra hörnet av sidan trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]** för att gå tillbaka till resursmappen.
 
@@ -220,7 +221,7 @@ När du har redigerat en smart beskärning och sparat sprids ändringen överall
 
 Om det behövs kan du köra smart beskärning igen för att generera ytterligare beskärningar.
 
-**Så här redigerar du den smarta beskärningen eller smarta färgrutan för flera bilder**:
+**Redigera smart beskärning eller smart färgruta för flera bilder**
 
 1. Tryck på AEM logotyp och navigera till **[!UICONTROL Assets]** en mapp där en smart beskärning eller smart färgrutebildprofil används.
 1. Tryck på ikonen **[!UICONTROL More Actions]** (..) i mappen och tryck sedan på **[!UICONTROL Smart Crop]**.
