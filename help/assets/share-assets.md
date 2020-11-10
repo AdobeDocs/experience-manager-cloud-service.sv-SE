@@ -3,9 +3,9 @@ title: Dela resurser, mappar och samlingar som en länk
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i Experience Manager Assets som en hyperlänk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f13a884d16dd5695a0acd456bea143591fd0d822
+source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Users can download the required assets and share these outside of [!DNL Experien
 
 Marknadsförare och andra användare kan enkelt dela godkänt material med sina kreatörer genom att
 
-* **AEM datorprogram**: Appen fungerar i Windows och Mac. Se Översikt över [datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna läser du [Bläddra, söka och förhandsgranska resurser](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina kollegor som AEM användare, till exempel genom att överföra nya bilder. Se [Överföra resurser med skrivbordsappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
+* **AEM datorprogram**: Appen fungerar i Windows och Mac. Se Översikt över [datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna läser du [Bläddra, söka och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina kollegor som AEM användare, till exempel genom att överföra nya bilder. Se [Överföra resurser med skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
 
 * **Adobe Asset Link**: Kreatörer kan söka efter och använda material direkt från Adobe InDesign, Adobe Illustrator och Adobe Photoshop.
 
@@ -167,7 +167,7 @@ Add content or link about how to configure sharing via BP, DA, AAL, etc.
 
 ### Aktivera skrivbordsåtgärder som ska användas med skrivbordsappen {#desktop-actions}
 
-I Assets-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i datorprogrammet. Dessa alternativ kallas skrivbordsåtgärder och för att aktivera dem, se [aktivera skrivbordsåtgärder i AEM webbgränssnitt](https://docs.adobe.com/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2).
+I Assets-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i datorprogrammet. Dessa alternativ kallas skrivbordsåtgärder och för att aktivera dem, se [aktivera skrivbordsåtgärder i AEM webbgränssnitt](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
 
 ![Aktivera skrivbordsåtgärder som ska användas som genväg när du arbetar med skrivbordsappen](assets/enable_desktop_actions.png)
 
