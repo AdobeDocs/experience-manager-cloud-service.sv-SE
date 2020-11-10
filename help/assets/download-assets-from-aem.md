@@ -3,9 +3,9 @@ title: Hämta resurser
 description: Hämta resurser [!DNL Adobe Experience Manager Assets] från och aktivera eller inaktivera hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -26,16 +26,16 @@ Du kan hämta Experience Manager-resurser på följande sätt:
 * [Experience Manager användargränssnitt](#download-in-aem)
 * Användargränssnittet Resurslänkdelning
 * [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* [Varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
-* [Datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets)
+* [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
+* [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
 
 ## Hämta resurser med AEM gränssnitt {#download-in-aem}
 
-Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Mindre filer hämtas från användargränssnittet i realtid. De stora filerna hämtas asynkront och användarna informeras om att de har slutförts via Experience Manager-meddelanden i Inkorgen. Se [mer om inkorg](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/authoring/getting-started/inbox.html)för Experience Manager.
+Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Mindre filer hämtas från användargränssnittet i realtid. De stora filerna hämtas asynkront och användarna informeras om att de har slutförts via Experience Manager-meddelanden i Inkorgen. Se [mer om inkorg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/inbox.html)för Experience Manager.
 
 ![Hämta meddelande](assets/download-notification.png)
 
-*Bild: Hämta meddelanden via[!DNL Experience Manager]Inkorgen.*
+*Bild: Hämta meddelanden via [!DNL Experience Manager] Inkorgen.*
 
 Asynkrona nedladdningar aktiveras i något av följande fall:
 
@@ -86,7 +86,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 
 Du `Asset Download Servlet` kan inaktivera funktionen på en [!DNL Experience Manager] publiceringsinstans genom att uppdatera dispatcherns konfiguration för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
-1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en ny regel i [filteravsnittet](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter).
+1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en ny regel i [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring).
 
    `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
