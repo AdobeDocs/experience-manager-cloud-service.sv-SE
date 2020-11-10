@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster
 description: Konfigurera och använd de molnbaserade resursmeritjänsterna för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a316bc6f0c1f0d09f6531b6e1b244596c6010355
+source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
 workflow-type: tm+mt
-source-wordcount: '2476'
+source-wordcount: '2460'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Experience Manager tillåter följande bearbetningsnivåer.
 |---|---|---|
 | [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används i [!DNL Assets] användargränssnittet (48, 140 och 319 pixlar) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
 | [Anpassad konfiguration](#standard-config) | Konfigureras av administratörer via användargränssnittet. Ger fler alternativ för generering av återgivning genom att utöka standardalternativet. Utöka det färdiga alternativet om du vill ha olika format och renderingar. | <ul><li>FPO-återgivning. </li> <li>Ändra filformat och upplösning för bilder</li> <li> Tillämpa villkoren på konfigurerade filtyper. </li> </ul> |
-| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade program för att anropa [tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Asset Compute. Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
+| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade program för att anropa tjänsten [](https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html)Asset compute. Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
 
 <!-- To create custom processing profiles specific to your custom requirements, say to integrate with other systems, see [post-processing workflows](#post-processing-workflows).
 -->
@@ -100,7 +100,7 @@ The following video demonstrates the usefulness and usage of standard profile.
 
 ## Anpassade profil- och användningsfall {#custom-config}
 
-Programmet har stöd för en mängd olika användningsområden, till exempel standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer och implementering av anpassad eller organisationsspecifik bearbetning. [!DNL Asset Compute Service] Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller via konfiguration av bearbetningsprofiler. Om de här bearbetningsalternativen inte uppfyller affärsbehoven rekommenderar Adobe att du utvecklar och använder standardfunktionerna [!DNL Asset Compute Service] för att utöka dem. En översikt finns i [Lär dig mer om utbyggbarhet och när du ska använda den](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html).
+Programmet har stöd för en mängd olika användningsområden, till exempel standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer och implementering av anpassad eller organisationsspecifik bearbetning. [!DNL Asset Compute Service] Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller via konfiguration av bearbetningsprofiler. Om de här bearbetningsalternativen inte uppfyller affärsbehoven rekommenderar Adobe att du utvecklar och använder standardfunktionerna [!DNL Asset Compute Service] för att utöka dem. En översikt finns i [Lär dig mer om utbyggbarhet och när du ska använda den](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html).
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ Programmet har stöd för en mängd olika användningsområden, till exempel sta
 
 Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
 
-Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html) som passar de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
+Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html) som passar de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
 
 * Använd [!DNL Adobe Photoshop]API:t [för](https://github.com/AdobeDocs/photoshop-api-docs-pre-release#imagecutout) ImageCutout och spara resultatet som rendering.
 * Anropa tredjepartssystem för att uppdatera data, till exempel ett PIM-system.
@@ -128,8 +128,8 @@ Så här skapar du en anpassad profil:
 1. Ange följande information.
 
    * Filnamn för varje återgivning och ett filtillägg som stöds.
-   * [Slutpunkts-URL för en standardanpassad app](https://docs.adobe.com/content/help/en/asset-compute/using/extend/deploy-custom-application.html). Appen måste komma från samma organisation som Experience Manager-kontot.
-   * Lägg till tjänstparametrar för att [skicka extra information eller parametrar till det anpassade programmet](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#pass-custom-parameters).
+   * [Slutpunkts-URL för en standardanpassad app](https://experienceleague.adobe.com/docs/asset-compute/using/extend/deploy-custom-application.html). Appen måste komma från samma organisation som Experience Manager-kontot.
+   * Lägg till tjänstparametrar för att [skicka extra information eller parametrar till det anpassade programmet](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#extend).
    * Inkluderade och exkluderade MIME-typer för att begränsa bearbetningen till ett fåtal specifika filformat.
 
    Klicka på **[!UICONTROL Save]**.
@@ -144,7 +144,7 @@ De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs
 
 För att illustrera hur den anpassade profilen används ska vi överväga ett användningsexempel för att använda anpassad text på kampanjbilder. Du kan skapa en bearbetningsprofil som använder Photoshop API för att redigera bilderna.
 
-Integreringen av tjänsten Resursberäkning gör att Experience Manager kan skicka dessa parametrar till det anpassade programmet med hjälp av [!UICONTROL Service Parameters] fältet. Det anpassade programmet anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
+Integrering med Asset compute Service gör att Experience Manager kan skicka dessa parametrar till det anpassade programmet med hjälp av [!UICONTROL Service Parameters] fältet. Det anpassade programmet anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
 
 ![custom-processing-profile](assets/custom-processing-profile.png)
 
@@ -224,9 +224,9 @@ Mer information om vilket standardarbetsflödessteg som kan användas i efterbea
 
 >[!MORELIKETHIS]
 >
->* [Introduktion till tjänsten](https://docs.adobe.com/content/help/en/asset-compute/using/introduction.html)Resursberäkning.
->* [Förstå utbyggbarhet och när den ska användas](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html).
->* [Skapa anpassade program](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html).
+>* [Introduktion till tjänsten](https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html)Asset compute.
+>* [Förstå utbyggbarhet och när den ska användas](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html).
+>* [Skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html).
 >* [MIME-typer som stöds för olika användningsområden](/help/assets/file-format-support.md).
 
 
