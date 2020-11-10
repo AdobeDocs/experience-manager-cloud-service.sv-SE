@@ -2,9 +2,9 @@
 title: Karusellbanner
 description: Lär dig hur du arbetar med karusellbanners i Dynamic Media
 translation-type: tm+mt
-source-git-commit: 6b5bfa2bc7b37753e7c63bb2cf52609f352dc1ef
+source-git-commit: d992b68d4a015f8f947167b5b1d5f0a1ac5c09ec
 workflow-type: tm+mt
-source-wordcount: '4521'
+source-wordcount: '4536'
 ht-degree: 4%
 
 ---
@@ -273,7 +273,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
    * För aktiveringspunkter: Tryck på den plats i bilden där du vill att hotspot-området ska visas.
    * För bildscheman: Klicka på bilden och dra sedan från det övre vänstra hörnet till det nedre högra hörnet för att skapa bildschemaområdet. Du kan justera storleken på bildschemat genom att dra i hörnen.
 
-   Om det behövs drar du hotspot- eller bildschemat till en ny plats. Lägg till ytterligare hotspot-områden eller bildscheman efter behov.
+   Om det behövs drar du hotspot- eller bildschemat till en ny plats. Du kan också använda piltangenterna på tangentbordet för att styra positionen för en markerad aktiveringspunkt. Lägg till ytterligare hotspot-områden eller bildscheman efter behov.
 
    Tryck på fliken **[!UICONTROL Actions]** om du vill ta bort ett hotspot-område eller bildschema. Under rubriken **[!UICONTROL Maps & Hotspots]** i listrutan **[!UICONTROL Selected Type]** väljer du namnet på det hotspot-område eller bildschema som du vill ta bort. Tryck på ikonen **[!UICONTROL Trash]** bredvid menyn och tryck sedan på **[!UICONTROL Delete]**.
 
