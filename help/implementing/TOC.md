@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Lär dig hur du anpassar driftsättningen av Experience Manager as a Cloud Service med bland annat ämnen om utveckling och driftsättning.
 translation-type: tm+mt
-source-git-commit: 639bf1add463c0e62982a44ecdca834e2c7c53fe
+source-git-commit: 1cbc54fb7de0ba9c1c92cdcbe64f02a9e767c3b7
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 61%
+source-wordcount: '425'
+ht-degree: 59%
 
 ---
 
@@ -48,6 +48,11 @@ ht-degree: 61%
    + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
    + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
    + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
++ Utvecklarverktyg {#developer-tools}
+   + [AEM Developer Tools for Eclipse](/help/implementing/developing/tools/eclipse.md)
+   + [Innehållspaket Maven Plugin](/help/implementing/developing/tools/maven-plugin.md)
+   + [AEM](/help/implementing/developing/tools/repo-tool.md)
+   + [Använda CRXDE Lite](/help/implementing/developing/tools/crxde.md)
 + Komponenter och mallar {#components-templates}
    + [Komponenter - översikt](developing/components/overview.md)
    + [Mallar](developing/components/templates.md)
