@@ -4,10 +4,10 @@ user-guide-title: Introduktion till AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du får åtkomst och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: ca690144a8254d5ffba354f0f96d9ef1c5202533
+source-git-commit: 65752c7c51538de27aa2b21695e8eb6c6695a5f5
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 76%
+source-wordcount: '244'
+ht-degree: 75%
 
 ---
 
@@ -44,7 +44,8 @@ ht-degree: 76%
       + [Konfigurera projektet](getting-access-to-aem-in-cloud/setting-up-project.md)
       + [Förstå byggmiljön](getting-access-to-aem-in-cloud/build-environment-details.md)
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
-      + [Aktuell versionsinformation (2020.10.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
+      + [Aktuell versionsinformation (2020.11.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
+      + [Versionsinformation för 2020.10.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-10-0.md)
       + [Versionsinformation för 2020.9.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-9-0.md)
       + [Versionsinformation för 2020.8.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-8-0.md)
       + [Versionsinformation för 2020.7.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-7-0.md)
