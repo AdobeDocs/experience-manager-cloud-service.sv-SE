@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 1d71788a84bb3c680ad4045454db00cfb345469d
+source-git-commit: 727dfd1d16a80620fba6db00289021ee5efae0fc
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '880'
 ht-degree: 6%
 
 ---
@@ -142,5 +142,9 @@ Det här alternativet är också tillgängligt om du klickar på **Information**
 
 Välj **Lokal inloggning** i listrutan i **miljökortet** om du vill logga in lokalt på Adobe Experience Manager
 
-![](assets/environ-login.png)
+![](assets/environ-login-locally.png)
+
+Dessutom kan du logga in lokalt från sammanfattningssidan för **miljöer** .
+
+![](assets/environ-login-locally-2.png)
 
