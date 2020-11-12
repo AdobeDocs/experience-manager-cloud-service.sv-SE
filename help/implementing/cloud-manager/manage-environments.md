@@ -2,7 +2,7 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 906965ee6f86682ebd5df8f3e99c5951d78cb071
+source-git-commit: fb979363fcb8c17fbefd11b9b86498447593f745
 workflow-type: tm+mt
 source-wordcount: '880'
 ht-degree: 6%
@@ -87,13 +87,13 @@ Uppdateringar av scen- och produktionsmiljöer hanteras automatiskt av Adobe.
 
 Uppdateringar av utvecklingsmiljöer hanteras av användarna av programmet. När en miljö inte kör den senaste allmänt tillgängliga AEM visar statusen för miljökortet på hemskärmen **UPDATE AVAILABLE (TILLGÄNGLIG**).
 
-![](assets/update-environ-1.png)
+![](assets/environ-update.png)
 
 
 Alternativet **Uppdatera** är tillgängligt från **miljökortet** .
 Det här alternativet är också tillgängligt om du klickar på **Information** från **miljökortet** . Sidan **Miljö** öppnas och när du har valt utvecklingsmiljön klickar du på **...** och väljer **Uppdatera** enligt bilden nedan:
 
-![](assets/environments-screen-update.png)
+![](assets/environ-update2.png)
 
 Om du väljer det här alternativet kan en Distributionshanterare uppdatera den pipeline som är associerad med den här miljön till den senaste versionen och sedan köra pipelinen.
 
@@ -109,7 +109,7 @@ Alternativet **Ta bort** finns i listrutan i **miljökortet** . Klicka på **..*
 
 Alternativet Ta bort är också tillgängligt om du klickar på **Information** på **miljökortet** . Sidan **Miljö** öppnas och när du har valt utvecklingsmiljön klickar du på **...** och väljer **Ta bort** enligt bilden nedan:
 
-![](assets/environ-delete-2.png)
+![](assets/environ-delete2.png)
 
 
 >[!NOTE]
@@ -122,7 +122,7 @@ Välj **Hantera åtkomst** i listrutan i **miljökortet** . Du kan navigera till
 
 Mer information finns i [Hantera åtkomst till författarinstansen](/help/onboarding/getting-access-to-aem-in-cloud/navigation.md#manage-access-aem) .
 
-![](assets/environ-manage-access.png)
+![](assets/environ-access.png)
 
 
 ## Åtkomst till Developer Console {#accessing-developer-console}
@@ -134,7 +134,7 @@ Endast en användare i utvecklarrollen har åtkomst till **utvecklarkonsolen**. 
 Mer information finns i [Viloläge och Viloläge i sandlådemiljöer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/sandbox-programs.html#hibernating-introduction) .
 
 
-![](assets/environ-dev-console.png)
+![](assets/environ-devconsole.png)
 
 Det här alternativet är också tillgängligt om du klickar på **Information** från **miljökortet** . Sidan **Miljö** öppnas och när du har valt en miljö klickar du på **...** och väljer **Developer Console**.
 
