@@ -2,7 +2,7 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 5f57e7ead9dc461188895e6428c386af96d53a53
+source-git-commit: f3a4fdf57dc84bba9811530fccb2fe6a4404376f
 workflow-type: tm+mt
 source-wordcount: '1902'
 ht-degree: 70%
@@ -34,9 +34,9 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * När du har slutfört *extraheringsfasen* av innehållsöverföringsprocessen och innan du startar *Inmatningsfasen* för att importera innehåll till din AEM som en Cloud Service *Stage* eller *Production* -instanser, måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Ingestion* ** så att Adobe kan säkerställa att inga avbrott inträffar underInginträngningsprocessen¥. Du måste logga supportbiljetten en vecka före ditt planerade *intag* . När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg.
    * Logga en supportanmälan med följande information:
-   1. Exakt datum och beräknad tid (med din tidszon) när du planerar att starta *intag* -fasen.
-   2. Miljötyp (Stage eller Production) som du vill importera data till.
-   3. Program-ID
+      * Exakt datum och beräknad tid (med din tidszon) när du planerar att starta *intag* -fasen.
+      * Miljötyp (Stage eller Production) som du vill importera data till.
+      * Program-ID.
 
 * Författarens *inmatningsfas* kommer att skalas ned för hela författardriftsättningen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör *Ingessionsfasen* .
 
