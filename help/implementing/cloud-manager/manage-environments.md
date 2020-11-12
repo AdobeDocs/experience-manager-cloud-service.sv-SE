@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 7b452b260bfaee159fe4d228b704f69b12780805
+source-git-commit: 1d71788a84bb3c680ad4045454db00cfb345469d
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '870'
 ht-degree: 6%
 
 ---
@@ -137,4 +137,10 @@ Mer information finns i [Viloläge och Viloläge i sandlådemiljöer](https://do
 ![](assets/environ-dev-console.png)
 
 Det här alternativet är också tillgängligt om du klickar på **Information** från **miljökortet** . Sidan **Miljö** öppnas och när du har valt en miljö klickar du på **...** och väljer **Developer Console**.
+
+## Logga in lokalt {#login-locally}
+
+Välj **Lokal inloggning** i listrutan i **miljökortet** om du vill logga in lokalt på Adobe Experience Manager
+
+![](assets/environ-login.png)
 
