@@ -2,9 +2,9 @@
 title: Versionsinformation för 2020.10.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.10.0.'
 translation-type: tm+mt
-source-git-commit: f0ac4b511fefa0bcde8d59c416da638941cd52ad
+source-git-commit: eb4a567e7ae2aac7260aae28e2b91b088e42f945
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 0%
 I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Experience Manager] Cloud Servicen 2020.10.0.
 
 ## Cloud Manager {#cloud-manager}
+
+### Releasedatum {#release-date-cm}
+
+Releasedatum för Cloud Manager i AEM som Cloud Service 2020.10.0 är 2 oktober 2020.
+
+### What is new in [!DNL Cloud Manager] {#what-is-new-cm}
 
 * Miljösidan har fått en ny design.
 
@@ -44,4 +50,3 @@ Mer information finns i [Visningsmiljön](/help/implementing/cloud-manager/manag
 * Valideringen av miljönamn innehöll ett fel av typen&quot;off-one&quot;.
 
 * På miljösidan visas ibland segment för publicering och utskickning när det inte finns några.
-
