@@ -2,10 +2,10 @@
 title: Aktuell versionsinformation [!DNL Adobe Experience Manager] för en Cloud Service.
 description: Aktuell versionsinformation [!DNL Adobe Experience Manager] för en Cloud Service.
 translation-type: tm+mt
-source-git-commit: d8cb22a5597e95bf4c74233b48553bb67bca09cb
+source-git-commit: eb4a567e7ae2aac7260aae28e2b91b088e42f945
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 1%
+source-wordcount: '787'
+ht-degree: 0%
 
 ---
 
@@ -67,7 +67,7 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 Releasedatum för Cloud Manager i AEM som Cloud Service 2020.11.0 är 12 november 2020.
 
-### Nyheter {#what-is-new}
+### What is new in [!DNL Cloud Manager] {#what-is-new-cm}
 
 * Ett nytt menyalternativ, **Lokal inloggning** , är nu tillgängligt för användare från miljömenyalternativen på miljökortets och miljösammanfattningens sidor.
 
