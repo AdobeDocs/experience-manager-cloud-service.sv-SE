@@ -2,9 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.11.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.11.0
 translation-type: tm+mt
-source-git-commit: 1d71788a84bb3c680ad4045454db00cfb345469d
+source-git-commit: 727dfd1d16a80620fba6db00289021ee5efae0fc
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '186'
 ht-degree: 2%
 
 ---
@@ -23,6 +23,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.11.0 är 12 novembe
 ### Nyheter {#what-is-new}
 
 * Ett nytt menyalternativ, **Lokal inloggning** , är nu tillgängligt för användare från miljömenyalternativen på miljökortets och miljösammanfattningens sidor.
+Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md##login-locally) .
 
 * Fliken **Lär dig** i Cloud Manager har uppdaterats med nya bilder i användargränssnittet.
 
