@@ -1,53 +1,34 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.10.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.10.0
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.11.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.11.0
 translation-type: tm+mt
-source-git-commit: d992646fd89a4e502d74533f5fa2bbe994a9ab97
+source-git-commit: 65752c7c51538de27aa2b21695e8eb6c6695a5f5
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 1%
+source-wordcount: '179'
+ht-degree: 2%
 
 ---
 
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.10.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.11.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.10.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.11.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2020.10.0 är 1 oktober 2020.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2020.11.0 är 12 november 2020.
 
 ## Cloud Manager {#cloud-manager}
 
 ### Nyheter {#what-is-new}
 
-* Miljösidan har fått en ny design.
+* Ett nytt menyalternativ, **Logga in lokalt** , är nu tillgängligt för användare från miljömenyalternativen på miljökortets och miljösammanfattningens sidor.
 
-* Vilolägen miljöer har nu en diskret status i Cloud Manager när de är i viloläge.
-
-* Molnhanterarens byggbehållare har nu stöd för kompilering av projekt med antingen Java 8 eller Java 11. Stöd för Java 11 finns i Maven ToolChain System.
-
-* Antalet miljövariabler per miljö har ökat till 200.
-
-* Miljökortet på sidan Översikt visar nu upp till tre miljöer. Användare kan välja knappen **Visa alla** för att navigera till sammanfattningssidan för miljö och visa en tabell med en fullständig lista över miljöer.
-Mer information finns i [Visningsmiljön](/help/implementing/cloud-manager/manage-environments.md#viewing-environment) .
-
+* Fliken **Lär dig** i Cloud Manager har uppdaterats med nya bilder i användargränssnittet
 
 ### Bug Fixes {#bug-fixes-cloud-manager}
 
-* Länken från Cloud Manager till Developer Console var felaktigt aktiv innan miljöerna skapades helt.
-
-* Länken till Developer Console direkt från Cloud Manager visar inte alternativet att avplacera/viloläge för sandlådeprogrammets miljö.
-
-* Knapparna Avbryt och Spara på sidan Redigering av icke-produktionsförlopp visas inte alltid.
-
-* Vissa fel i kodkvalitetsprocessen kan leda till att loggfilen inte genereras korrekt.
-
-* När du skapar ett nytt program returnerar det föreslagna namnet ibland en dubblett av ett befintligt programnamn.
-
-* Vissa stora stegloggar för pipeline kunde inte hämtas konsekvent via användargränssnittet.
-
-* Valideringen av miljönamn innehöll ett fel av typen&quot;off-one&quot;.
-
-* På miljösidan visas ibland segment för publicering och utskickning när det inte finns några.
+* Inläsningen av beroenden som gjorts före körningen av bygget krävde hämtning av ett Maven-plugin-program.
+* Länken från molnhanterarens sidfot för att välja ett språk navigerar nu till rätt plats.
+* Ibland startar inte SonarQube-processen under kodskanningen. Detta identifieras nu automatiskt och ett omstartsförsök görs.
+* Alla befintliga produktionspipelinjer aktiveras automatiskt med Experience Audit-steget.
