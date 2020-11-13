@@ -4,10 +4,10 @@ user-guide-title: Flytta till AEM as a Cloud Service
 breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 translation-type: tm+mt
-source-git-commit: 30aa03b97bfe94b63e6c6b1208504d1362e9ad8b
+source-git-commit: 52d7f6ff1c11ee450d418989ae35ff69d2cc39e6
 workflow-type: tm+mt
 source-wordcount: '81'
-ht-degree: 92%
+ht-degree: 83%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 92%
    + [Körning](/help/move-to-cloud-service/execution.md) 
    + [Efter publicering](/help/move-to-cloud-service/post-go-live.md)
 + Verktyg för övergång till molnet{#cloud-migration}
-   + Cloud Readiness Analyzer {#cloud-readiness-analyzer}
-      + [Översikt](/help/move-to-cloud-service/cloud-readiness-analyzer/overview-cloud-readiness-analyzer.md)
-      + [Använda Cloud Readiness Analyzer](/help/move-to-cloud-service/cloud-readiness-analyzer/using-cloud-readiness-analyzer.md)
+   + Best Practices Analyzer {#best-practices-analyzer}
+      + [Översikt](/help/move-to-cloud-service/best-practices-analyzer/overview-best-practices-analyzer.md)
+      + [Använda Best Practices Analyzer](/help/move-to-cloud-service/best-practices-analyzer/using-best-practices-analyzer.md)
    + Content Transfer Tool {#content-transfer-tool}
       + [Översikt](/help/move-to-cloud-service/content-transfer-tool/overview-content-transfer-tool.md)
       + [Använda Content Transfer Tool](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
