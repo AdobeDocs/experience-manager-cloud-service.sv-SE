@@ -2,7 +2,7 @@
 title: Hantera loggar - Cloud Service
 description: Hantera loggar - Cloud Service
 translation-type: tm+mt
-source-git-commit: 5a90db8791dd92cceb811b9ed2beda3ecb4a974d
+source-git-commit: 703248cdcab9797b20d3f7e46f7ac03c15ec6980
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 17%
@@ -14,9 +14,9 @@ ht-degree: 17%
 
 Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet.  Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
-De här filerna kan hämtas via användargränssnittet, antingen från **översiktssidan** .
+De här filerna kan hämtas via användargränssnittet, antingen från **sidan Översikt** :
 
-![](assets/manage-logs1.png)
+![](assets/download-logs1.png)
 
 Eller **miljösidan** :
 
@@ -25,7 +25,7 @@ Eller **miljösidan** :
 >[!NOTE]
 >Oavsett var den öppnas visas samma dialogruta så att du kan hämta en enskild loggfil.
 
-![](assets/manage-logs3.png)
+![](assets/download-logs2.png)
 
 
 ## Loggar via API {#logs-thorugh-api}
