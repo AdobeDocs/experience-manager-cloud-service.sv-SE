@@ -2,10 +2,10 @@
 title: Planeringsfas
 description: Planeringsfas
 translation-type: tm+mt
-source-git-commit: fdcad36713cdcd766d7d698a2e6c017dad1b03a0
+source-git-commit: 52d7f6ff1c11ee450d418989ae35ff69d2cc39e6
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 91%
+source-wordcount: '420'
+ht-degree: 94%
 
 ---
 
@@ -40,7 +40,7 @@ Det första steget i planeringsfasen är att utvärdera om du är redo att gå �
 
 Du måste göra en omfattande utvärdering av din aktuella AEM-källkod mot de märkbara ändringarna och de borttagna funktionerna för att avgöra hur stor insats som förväntas under övergången.
 
-Du kan snabba upp bedömningssteget genom att köra Cloud Readiness Analyzer (CRA) på din nuvarande AEM. Mer information finns i [CRA-översikt](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/overview-cloud-readiness-analyzer.html).
+Du kan snabba upp bedömningssteget genom att köra Best Practices Analyzer på den aktuella AEM. Mer information finns i [Best Practices Analyzer](/help/move-to-cloud-service/best-practices-analyzer/overview-best-practices-analyzer.md).
 
 >[!NOTE]
 >Om du redan har tillgång till Cloud Manager och en Cloud Service-miljö rekommenderar vi att du kör den aktuella koden i en kvalitetspipeline för Cloud Manager-kod för att utvärdera om de kodändringar som krävs är kompatibla med Cloud Service.
