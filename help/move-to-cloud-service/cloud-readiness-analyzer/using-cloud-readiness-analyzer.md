@@ -1,100 +1,100 @@
 ---
-title: Använda Cloud Readiness Analyzer
-description: Använda Cloud Readiness Analyzer
+title: Använda Best Practices Analyzer
+description: Använda Best Practices Analyzer
 translation-type: tm+mt
-source-git-commit: a1690ec94cf739d1b366f5ef99f3124162f35375
+source-git-commit: ca6ee9c820c67b68c7498f2b0bad8c650b00562e
 workflow-type: tm+mt
-source-wordcount: '2209'
-ht-degree: 70%
+source-wordcount: '2207'
+ht-degree: 47%
 
 ---
 
 
-# Använda Cloud Readiness Analyzer {#using-cloud-readiness-analyzer}
+# Använda Best Practices Analyzer {#using-best-practices-analyzer}
 
-## Viktigt att tänka på när du använder Cloud Readiness Analyzer {#imp-considerations}
+## Viktigt att tänka på när du använder Best Practices Analyzer {#imp-considerations}
 
-Läs avsnittet nedan när du vill veta mer om viktiga aspekter när du använder Cloud Readiness Analyzer (CRA):
+Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best Practices Analyzer (BPA):
 
-* CRA-rapporten byggs med utdata från Adobe Experience Manager (AEM) [Pattern Detector](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Pattern Detector som används av CRA ingår i CRA-installationspaketet.
+* The BPA report is built using the output of the Adobe Experience Manager (AEM) [Pattern Detector](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Mönsteravkännare som används av BPA ingår i BPA-installationspaketet.
 
-* CRA kan bara köras av **administratörsanvändaren** eller en användare i gruppen **Administratörer**.
+* BPA may only be run by the **admin** user or a user in the **administrators** group.
 
-* CRA stöds på AEM-instanser med version 6.1 och senare.
-
-   >[!NOTE]
-   > Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav gällande installation av CRA på AEM 6.1.
-
-* CRA kan köras i vilken miljö som helst, men det är bättre att köra det i en *mellanlagringsmiljö*.
+* BPA stöds på AEM med version 6.1 och senare.
 
    >[!NOTE]
-   >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör CRA i en *författarmiljö* som är så nära *produktionsmiljön* som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
+   > Please see [Installing on AEM 6.1](#installing-on-aem61) for special requirements for installing BPA on AEM 6.1.
 
-* Det kan ta lång tid att generera innehållet i en CRA-rapport, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
+* BPA can run on any environment, but it is preferred to have it run on a *Stage* environment.
+
+   >[!NOTE]
+   >In order to avoid an impact on business critical instances, it is recommended that you run BPA on an *Author* environment that is as close as possible to the *Production* environment in the areas of customizations, configurations, content and user applications. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
+
+* Det kan ta lång tid att generera BPA-rapportinnehåll, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
 * På grund av den tid som kan krävas för att generera rapportinnehållet, genereras det av en bakgrundsprocess och lagras i ett cacheminne. Det bör gå relativt snabbt att visa och hämta rapporten eftersom den använder innehållscachen tills den upphör att gälla eller tills rapporten uttryckligen uppdateras. Under genereringen av rapportinnehållet kan du stänga webbläsarfliken och sedan gå tillbaka och visa rapporten när innehållet är tillgängligt i cachen.
 
 ## Tillgänglighet {#availability}
 
-Cloud Readiness Analyzer kan hämtas som en zip-fil från Software Distribution portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
+Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
->Hämta Cloud Readiness Analyzer från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) Portal.
+>Download the Best Practices Analyzer from the [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portal.
 
-## Visa Cloud Readiness Analyzer-rapporten {#viewing-report}
+## Visa rapporten Best Practices Analyzer {#viewing-report}
 
 ### Adobe Experience Manager 6.3.0 och senare {#aem-later-versions}
 
-Läs det här avsnittet för att få veta hur du visar Cloud Readiness Analyzer-rapporten:
+Följ det här avsnittet för att lära dig hur du visar rapporten Best Practices Analyzer:
 
-1. Välj Adobe Experience Manager och navigera till Tools -> **Operations** -> **Cloud Readiness Analyzer**.
+1. Select Adobe Experience Manager and navigate to tools -> **Operations** -> **Best Practices Analyzer**.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-1.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/BPA_pic1.png)
 
-1. Klicka på **Generera rapport** för att köra Cloud Readiness Analyzer.
+1. Klicka på **Generera rapport** för att köra Best Practices Analyzer.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-generate-report.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/BPA_pic2.png)
 
-1. Medan CRA genererar rapporten kan du se hur verktyget utvecklas på skärmen. Här visas antalet analyserade objekt och även antalet upptäckter.
+1. Medan BPA genererar rapporten kan du se hur verktyget utvecklas på skärmen. Här visas antalet analyserade objekt och även antalet upptäckter.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-generate-report-1.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/BPA_pic3.png)
 
 
-1. När CRA-rapporten har genererats visar den en sammanfattning och antalet resultat i ett tabellformat, ordnade efter typ av fynd och prioritetsnivå. Om du vill ha mer information om en viss sökning kan du klicka på talet som motsvarar sökningstypen i tabellen.
+1. När BPA-rapporten har genererats visas en sammanfattning och antalet resultat i tabellformat, ordnade efter typ av fynd och prioritetsnivå. Om du vill ha mer information om en viss sökning kan du klicka på talet som motsvarar sökningstypen i tabellen.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/report-cra-4.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/BPA_pic4.png)
 
    Ovanstående åtgärd rullar automatiskt till platsen för sökningen i rapporten.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/report-cra-5.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/BPA_pic5.png)
 
 1. You have the option of downloading the report in a comma-separated values (CSV) format by clicking on **CSV**, as shown in the figure below.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/report-cra-6.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/BPA_pic6.png)
 
    >[!NOTE]
-   >Du kan tvinga CRA att rensa cachen och återskapa rapporten genom att klicka på **Refresh Report**.
+   >You may force the BPA to clear its cache and regenerate the report by clicking **Refresh Report**.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/report-cra-7.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/BPA_pic7.png)
 
    >[!NOTE]
    >Medan rapporten återskapas visas förloppet i procent som slutförts enligt bilden nedan.
 
-   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/cra-tool-refresh-1.png)
+   ![bild](/help/move-to-cloud-service/cloud-readiness-analyzer/assets/BPA_pic8.png)
 
 
 ### Adobe Experience Manager 6.2 och 6.1 {#aem-specific-versions}
 
-Verktyget Cloud Readiness Analyzer begränsas i Adobe Experience Manager 6.2 till en länk som genererar och hämtar CSV-rapporten.
+Best Practices Analyzer-verktyget är i Adobe Experience Manager 6.2 begränsat till en länk som genererar och hämtar CSV-rapporten.
 
 Verktyget fungerar inte i Adobe Experience Manager 6.1, endast HTTP-gränssnittet kan användas.
 
 >[!NOTE]
 >I alla versioner kan medföljande Pattern Detector köras fristående.
 
-## Tolka Cloud Readiness Analyzer-rapporten {#cra-report}
+## Tolka rapporten Best Practices Analyzer {#cra-report}
 
-När verktyget Cloud Readiness Analyzer körs i AEM-instansen visas rapporten i verktygsfönstret.
+När verktyget Best Practices Analyzer körs i AEM visas rapporten som resultat i verktygsfönstret.
 
 Rapportens format är:
 
@@ -103,13 +103,13 @@ Rapportens format är:
    * **Expiration Time**: När cachen för rapportinnehållet upphör att gälla.
    * **Generation Time Period**: Den tid det tog att generera rapportinnehållet.
    * **Finding Count**: Det totala antalet resultat som ingår i rapporten.
-* **System Overview**: Information om det AEM-system som CRA kördes på.
+* **Systemöversikt**: Information om det AEM systemet som BPA kördes på.
 * **Finding Categories**: Flera avsnitt som vart och ett handlar om ett eller flera resultat i samma kategori. Varje avsnitt innehåller följande: kategorinamn, undertyper, antal resultat och viktighetsgrad, sammanfattning, länk till kategoridokumentation och information om enskilda resultat.
 
 Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder.
 
 >[!NOTE]
->Mer information om varje sökkategori finns i Kategorier för [mönsteravkännare](https://docs.adobe.com/content/help/en/experience-manager-pattern-detection/table-of-contents/aso.html).
+>Mer information om varje sökkategori finns i Kategorier för [mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
 
 Läs tabellen nedan för mer information om viktighetsgrad:
 
@@ -121,9 +121,9 @@ Läs tabellen nedan för mer information om viktighetsgrad:
 | CRITICAL | Detta resultat innebär sannolikt ett uppgraderingsproblem som måste åtgärdas för att förhindra funktions- eller prestandaproblem. |
 
 
-## Tolka CSV-rapporten från Cloud Readiness Analyzer {#cra-csv-report}
+## Tolka CSV-rapporten för Best Practices Analyzer {#cra-csv-report}
 
-När du klickar på alternativet **CSV** från din AEM-instans skapas Cloud Readiness Analyzer-rapporten i CSV-format från innehållscachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas rapporten automatiskt som en fil med standardnamnet `results.csv`.
+When you click the **CSV** option from your AEM instance, the CSV format of the Best Practices Analyzer report is built from the content cache and returned to your browser. Beroende på inställningarna i webbläsaren hämtas rapporten automatiskt som en fil med standardnamnet `results.csv`.
 
 Om cacheminnet har gått ut genereras rapporten på nytt innan CSV-filen skapas och hämtas.
 
@@ -145,12 +145,12 @@ Värdet &quot;\N&quot; i en kolumn för enskilda resultat anger att inga data fi
 
 ## HTTP-gränssnitt {#http-interface}
 
-CRA har ett HTTP-gränssnitt som kan användas som ett alternativ till användargränssnittet i AEM. Gränssnittet har stöd för både HEAD- och GET-kommandon. Det kan användas för att generera CRA-rapporten och returnera den i ett av tre format: JSON, CSV och tabbavgränsade värden (TSV).
+BPA har ett HTTP-gränssnitt som kan användas som ett alternativ till användargränssnittet i AEM. Gränssnittet har stöd för både HEAD- och GET-kommandon. Den kan användas för att generera BPA-rapporten och returnera den i ett av tre format: JSON, CSV och tabbseparerade värden (TSV).
 
-Följande URL:er är tillgängliga för HTTP-åtkomst där `<host>` är värdnamnet och porten på servern där CRA är installerat om det behövs:
-* `http://<host>/apps/readiness-analyzer/analysis/result.json` för JSON-format
-* `http://<host>/apps/readiness-analyzer/analysis/result.csv` för CSV-format
-* `http://<host>/apps/readiness-analyzer/analysis/result.tsv` för TSV-format
+The following URLs are available for HTTP access, where `<host>` is the hostname, and port if necessary, of the server on which the BPA is installed:
+* `http://<host>/apps/best-practices-analyzer/analysis/report.json` för JSON-format
+* `http://<host>/apps/best-practices-analyzer/analysis/report.csv` för CSV-format
+* `http://<host>/apps/best-practices-analyzer/analysis/report.tsv` för TSV-format
 
 ### Köra en HTTP-begäran {#executing-http-request}
 
@@ -161,7 +161,7 @@ Ett enkelt sätt är att öppna en webbläsarflik i den webbläsare där du har 
 Du kan också använda ett kommandoradsverktyg som `curl` eller `wget` samt HTTP-klientprogram. Om du inte använder en webbläsarflik med en autentiserad session måste du ange ett administratörsanvändarnamn och lösenord som en del av kommentaren.
 
 Nedan visas ett exempel på hur du gör det:
-`curl -u admin:admin 'http://localhost:4502/apps/readiness-analyzer/analysis/result.csv' > result.csv`.
+`curl -u admin:admin 'http://localhost:4502/apps/best-practices-analyzer/analysis/report.csv' > report.csv`.
 
 ### Sidhuvuden och parametrar {#http-headers-and-parameters}
 
@@ -182,9 +182,9 @@ Följande HTTP-frågeparametrar är praktiska när det är svårt att använda H
 När det finns både ett HTTP-sidhuvud och motsvarande frågeparameter har frågeparametern företräde.
 
 Ett enkelt sätt att initiera rapportgenereringen via HTTP-gränssnittet är med följande kommando:
-`curl -u admin:admin 'http://localhost:4502/apps/readiness-analyzer/analysis/result.json?max-age=0&respond-async=true'`.
+`curl -u admin:admin 'http://localhost:4502/apps/best-practices-analyzer/analysis/report.json?max-age=0&respond-async=true'`.
 
-När en begäran har skickats behöver klienten inte vara aktiv för att rapporten ska genereras. Rapportgenereringen kan initieras med en klient med en HTTP GET-begäran och när rapporten har genererats visas den från cachen med en annan klient eller med CRA-verktyget i AEM användargränssnitt.
+När en begäran har skickats behöver klienten inte vara aktiv för att rapporten ska genereras. Rapportgenereringen kan initieras med en klient med en HTTP GET-begäran och när rapporten har genererats visas den från cachen med en annan klient eller med BPA-verktyget i AEM användargränssnitt.
 
 ### Svar {#http-responses}
 
@@ -201,19 +201,19 @@ Följande svarsvärden är möjliga:
 
 ### Justera cacheminnets livslängd {#cache-adjustment}
 
-Standardlivslängden för CRA-cacheminnet är 24 timmar. Med alternativet att uppdatera en rapport och återskapa cachen, både i AEM-instansen och i HTTP-gränssnittet, är det här standardvärdet troligtvis lämpligt för de flesta användningsområden för CRA. Om rapportgenereringstiden är särskilt lång för AEM-instansen kanske du bör justera cachelivslängden för att minimera genereringen av rapporter.
+Standardlivstiden för BPA-cache är 24 timmar. Med alternativet att uppdatera en rapport och återskapa cachen, både i AEM och HTTP-gränssnittet, är det här standardvärdet troligtvis lämpligt för de flesta användningsområden för BPA. Om rapportgenereringstiden är särskilt lång för AEM-instansen kanske du bör justera cachelivslängden för att minimera genereringen av rapporter.
 
 Livslängdsvärdet för cacheminnet lagras som egenskapen `maxCacheAge` på följande databasnod:
-`/apps/readiness-analyzer/content/CloudReadinessReport/jcr:content`
+`/apps/best-practices-analyzer/content/BestPracticesReport/jcr:content`
 
 Värdet för den här egenskapen är cachelivslängden i sekunder. Administratören kan justera cachelivslängden med CRX/DE Lite.
 
 ### Installera på AEM 6.1 {#installing-on-aem61}
 
-CRA använder ett användarkonto för systemtjänster vid namn `repository-reader-service` för att köra Mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. På AEM 6.1 måste det här kontot skapas *innan* CRA installeras via följande steg:
+BPA utilizes a system service user account named `repository-reader-service` to execute the Pattern Detector. Det här kontot är tillgängligt på AEM 6.2 och senare. On AEM 6.1, this account must be created *prior to* installation of BPA by taking the following steps:
 
 1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security-service-users.html#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom. Klicka sedan på den gröna bockmarkeringen.
 
 2. Följ instruktionerna i [Hantera användare och grupper](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security.html#managing-users-and-groups). Särskilt instruktionerna för hur man lägger till användare i en grupp för att lägga till `repository-reader-service`-användaren i `administrators`-gruppen.
 
-3. Installera CRA-paketet via Package Manager på AEM-källinstansen. (Detta lägger till den nödvändiga konfigurationsändringen i konfigurationen ServiceUserMapper för `repository-reader-service`-systemtjänstanvändaren.)
+3. Installera BPA-paketet via Package Manager på AEM. (Detta lägger till den nödvändiga konfigurationsändringen i konfigurationen ServiceUserMapper för `repository-reader-service`-systemtjänstanvändaren.)
