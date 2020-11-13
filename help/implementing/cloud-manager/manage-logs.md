@@ -2,7 +2,7 @@
 title: Hantera loggar - Cloud Service
 description: Hantera loggar - Cloud Service
 translation-type: tm+mt
-source-git-commit: 703248cdcab9797b20d3f7e46f7ac03c15ec6980
+source-git-commit: b67bafd9edb06a6d333e1a5bde0687994c30ea81
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 17%
@@ -28,7 +28,7 @@ Eller **miljösidan** :
 ![](assets/download-logs2.png)
 
 
-## Loggar via API {#logs-thorugh-api}
+## Loggar via API {#logs-through-api}
 
 Förutom att hämta loggar via användargränssnittet är loggar tillgängliga via API:t och kommandoradsgränssnittet.
 
