@@ -2,7 +2,7 @@
 title: Aktuell versionsinformation [!DNL Adobe Experience Manager] för en Cloud Service.
 description: Aktuell versionsinformation [!DNL Adobe Experience Manager] för en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 8a7dd4059a200e82b6cb385acc5dcb174aa50938
+source-git-commit: 4bce4fceab08a95fc2c1c8334f84fd54204228ba
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -107,7 +107,7 @@ Releasedatum för Best Practices Analyzer är 13 november 2020.
 
 ### What is new in [!DNL Best Practices Analyzer] {#what-is-new-bpa}
 
-* Molnberedskapsanalys är nu BPA (Best Practices Analyzer). BPA ger en utvärdering av hur ni använder era AEM och hjälper er att bedöma om ni är redo att gå över från en befintlig AEM till AEM som en Cloud Service.
+* Molnberedskapsanalys är nu BPA (Best Practices Analyzer). BPA ger en metodutvärdering av den aktuella AEM och hjälper dig att bedöma om du kan gå över från en befintlig AEM till AEM som en Cloud Service.
 
 * En ny detektor lades till för att identifiera användningen av `java.io.InputStream`som kan orsaka problem om den används i AEM som Cloud Service.
 
