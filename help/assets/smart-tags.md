@@ -3,7 +3,7 @@ title: Märk upp bilder automatiskt med AI-genererade taggar
 description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar [!DNL Adobe Sensei] med hjälp av tjänster.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 80171c63e9f3ba9ace4fd948c7997f14a17ccddc
 workflow-type: tm+mt
 source-wordcount: '2362'
 ht-degree: 6%
@@ -154,7 +154,7 @@ När du har utbildat tjänsten Smarta taggar kan du utlösa taggningsarbetsflöd
 1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder dina taggar på resurser. Navigera till resursmappen och granska taggarna för att kontrollera om dina resurser är taggade på rätt sätt. Mer information finns i [Hantera smarta taggar](#manage-smart-tags-and-searches).
 
 >[!NOTE]
-
+>
 >I de efterföljande taggningscyklerna märks bara de ändrade resurserna igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
 
 ### Tagga överförda resurser {#tag-uploaded-assets}
