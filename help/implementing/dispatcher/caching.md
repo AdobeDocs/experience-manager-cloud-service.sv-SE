@@ -2,9 +2,9 @@
 title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 79e1c15e8a92589cffaff18252e066a892c929b6
+source-git-commit: 0e414de936267cb4648c3078720b198e00c4a3cb
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1479'
 ht-degree: 1%
 
 ---
@@ -32,21 +32,21 @@ Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur
    </LocationMatch>
    ```
 
-Var försiktig när du anger rubriker för global cachekontroll eller rubriker som matchar ett brett område så att de inte tillämpas på innehåll som du kanske tänker behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM som en Cloud Service tar då bort cachehuvudet om det upptäcker att det har tillämpats på det som inte kan nås av dispatchern, vilket beskrivs i dispatcherdokumentationen. Om du vill tvinga AEM att alltid använda cachelagring kan du lägga till alternativet &quot;always&quot; enligt följande:
+   Var försiktig när du anger rubriker för global cachekontroll eller rubriker som matchar ett brett område så att de inte tillämpas på innehåll som du kanske tänker behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM som en Cloud Service tar då bort cachehuvudet om det upptäcker att det har tillämpats på det som inte kan nås av dispatchern, vilket beskrivs i dispatcherdokumentationen. Om du vill tvinga AEM att alltid använda cachelagring kan du lägga till alternativet &quot;always&quot; enligt följande:
 
-```
-<LocationMatch "\.(html)$">
+   ```
+   <LocationMatch "\.(html)$">
         Header always set Cache-Control "max-age=200"
         Header set Age 0
-</LocationMatch>
-```
+   </LocationMatch>
+   ```
 
-Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande regel (som finns i standardkonfigurationen):
+   Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande regel (som finns i standardkonfigurationen):
 
-```
-/0000
-{ /glob "*" /type "allow" }
-```
+   ```
+   /0000
+   { /glob "*" /type "allow" }
+   ```
 
 * Om du vill förhindra att visst innehåll cachelagras anger du rubriken Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll under en katalog med namnet **myfolder** cachelagras:
 
@@ -76,19 +76,19 @@ Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande r
       </LocationMatch>
    ```
 
-Se diskussionen i avsnittet html/text ovan för att vara försiktig så att du inte cachelagrar för mycket och även hur du tvingar AEM att alltid använda cachning med alternativet &quot;always&quot;.
+   Se diskussionen i avsnittet html/text ovan för att vara försiktig så att du inte cachelagrar för mycket och även hur du tvingar AEM att alltid använda cachning med alternativet &quot;always&quot;.
 
-Det är nödvändigt att se till att en fil under src/conf.dispatcher.d/cache har följande regel (som finns i standardkonfigurationen):
+   Det är nödvändigt att se till att en fil under `src/conf.dispatcher.d/`cache har följande regel (som finns i standardkonfigurationen):
 
-```
-/0000
-{ /glob "*" /type "allow" }
-```
+   ```
+   /0000
+   { /glob "*" /type "allow" }
+   ```
 
-Kontrollera att resurser som ska hållas privata i stället för cachelagrade inte ingår i LocationMatch-direktivets filter.
+   Kontrollera att resurser som ska hållas privata i stället för cachelagrade inte ingår i LocationMatch-direktivets filter.
 
->[!NOTE]
->De andra metoderna, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
+   >[!NOTE]
+   >De andra metoderna, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
 
 ### Andra innehållsfiltyper i nodarkivet {#other-content}
 
