@@ -2,9 +2,9 @@
 title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 0d01dc2cfed88a1b610a929d26ff4b144626a0e3
+source-git-commit: 79e1c15e8a92589cffaff18252e066a892c929b6
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1481'
 ht-degree: 1%
 
 ---
@@ -25,12 +25,12 @@ Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur
 * kan åsidosättas för allt HTML-/textinnehåll genom att definiera variabeln i `EXPIRATION_TIME` `global.vars` med AEM som ett SDK Dispatcher-verktyg för Cloud Service.
 * kan åsidosättas på en mer detaljerad nivå med följande direktiv för apache mod_headers:
 
-```
-<LocationMatch "\.(html)$">
+   ```
+   <LocationMatch "\.(html)$">
         Header set Cache-Control "max-age=200"
         Header set Age 0
-</LocationMatch>
-```
+   </LocationMatch>
+   ```
 
 Var försiktig när du anger rubriker för global cachekontroll eller rubriker som matchar ett brett område så att de inte tillämpas på innehåll som du kanske tänker behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM som en Cloud Service tar då bort cachehuvudet om det upptäcker att det har tillämpats på det som inte kan nås av dispatchern, vilket beskrivs i dispatcherdokumentationen. Om du vill tvinga AEM att alltid använda cachelagring kan du lägga till alternativet &quot;always&quot; enligt följande:
 
@@ -48,15 +48,16 @@ Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande r
 { /glob "*" /type "allow" }
 ```
 
-* Om du vill förhindra att visst innehåll cachelagras anger du rubriken Cache-Control till &quot;private&quot;. Följande förhindrar till exempel att HTML-innehåll under en katalog med namnet &quot;myfolder&quot; cachelagras:
+* Om du vill förhindra att visst innehåll cachelagras anger du rubriken Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll under en katalog med namnet **myfolder** cachelagras:
 
-```
-<LocationMatch "/myfolder/.*\.(html)$">.  // replace with the right regex
-    Header set Cache-Control “private”
-</LocationMatch>
-```
+   ```
+      <LocationMatch "/myfolder/.*\.(html)$">.  // replace with the right regex
+      Header set Cache-Control “private”
+     </LocationMatch>
+   ```
 
-* Observera att andra metoder, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), inte kan åsidosätta värden.
+   >[!NOTE]
+   >De andra metoderna, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
 
 ### Klientbibliotek (js, css) {#client-side-libraries}
 
@@ -68,12 +69,12 @@ Du måste se till att en fil under `src/conf.dispatcher.d/cache` har följande r
 * som standard, inte cachelagrad
 * kan ställas in på en finare kornig nivå genom följande `mod_headers` direktiv:
 
-```
-<LocationMatch "^\.*.(jpeg|jpg)$">
-    Header set Cache-Control "max-age=222"
-    Header set Age 0
-</LocationMatch>
-```
+   ```
+      <LocationMatch "^\.*.(jpeg|jpg)$">
+        Header set Cache-Control "max-age=222"
+        Header set Age 0
+      </LocationMatch>
+   ```
 
 Se diskussionen i avsnittet html/text ovan för att vara försiktig så att du inte cachelagrar för mycket och även hur du tvingar AEM att alltid använda cachning med alternativet &quot;always&quot;.
 
@@ -86,7 +87,8 @@ Det är nödvändigt att se till att en fil under src/conf.dispatcher.d/cache ha
 
 Kontrollera att resurser som ska hållas privata i stället för cachelagrade inte ingår i LocationMatch-direktivets filter.
 
-* Observera att andra metoder, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), inte kan åsidosätta värden.
+>[!NOTE]
+>De andra metoderna, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
 
 ### Andra innehållsfiltyper i nodarkivet {#other-content}
 
