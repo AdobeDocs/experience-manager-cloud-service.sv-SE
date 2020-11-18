@@ -2,7 +2,7 @@
 title: Sandlådeprogram - Cloud Service
 description: Sandlådeprogram - Cloud Service
 translation-type: tm+mt
-source-git-commit: b3fbe13df886459c6b18369af1a6e550ccad0454
+source-git-commit: 8383dc023b35cf76f7dc0e41cedef8cfab7753aa
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%
@@ -51,13 +51,13 @@ Sandlådeprogram levereras till en utvecklingsmiljö när programmet skapas auto
 
 Miljöuppsättningen för produktionsscenen kan läggas till manuellt i sandlådeprogrammet när användaren är redo att ställa in en produktionspipeline.
 
-Mer information om hur du skapar en miljö manuellt finns i [Lägga till miljöer](/help/implementing/cloud-manager/manage-environments.md) .
+Mer information om hur du skapar en miljö manuellt finns i [Lägga till miljö](/help/implementing/cloud-manager/manage-environments.md) .
 
 ### Tar bort sandlådemiljöer {#deleting-sandbox-environments}
 
 Användare med nödvändig behörighet kan ta bort en utvecklings- eller produktions-/scenmiljö eller uppsättningar.
 
-Mer information om hur du tar bort en miljö finns i [Ta bort miljöer](/help/implementing/cloud-manager/manage-environments.md#deleting-environment) .
+Mer information om hur du tar bort en miljö finns i [Ta bort miljö](/help/implementing/cloud-manager/manage-environments.md#deleting-environment) .
 
 
 ## Viloläge och avvänjningsmiljöer för sandlådor {#hibernating-introduction}
@@ -176,7 +176,7 @@ Några viktiga saker att tänka på när det gäller miljöer med viloläge och 
 
 ## AEM till sandlådemiljöer {#aem-updates-sandbox}
 
-Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/overview.md#version-updates) .
+Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md) .
 
 Användaren kan manuellt uppdatera miljöerna AEM sandlådeprogrammet.
 
