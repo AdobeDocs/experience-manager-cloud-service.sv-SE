@@ -2,9 +2,9 @@
 title: Sandlådeprogram - Cloud Service
 description: Sandlådeprogram - Cloud Service
 translation-type: tm+mt
-source-git-commit: 81f2d4f4f956edbf88135a703df0162afd92bc43
+source-git-commit: b3fbe13df886459c6b18369af1a6e550ccad0454
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1184'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Miljöerna som skapas i en sandlåda är inte konfigurerade för automatisk skal
 
 Sandlådeprogram innehåller Sites and Assets och är automatiskt ifyllda med en Git-databas, en utvecklingsmiljö och en icke-produktionsprocess.  Git-databasen innehåller ett exempelprojekt baserat på AEM projekttyp.
 
-Mer information om programtyperna finns i [Förstå program och programtyper](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/understand-program-types.html) .
+Mer information om programtyperna finns i [Förstå program och programtyper](/help/onboarding/getting-access-to-aem-in-cloud/understand-program-types.md) .
 
 ### Attribut för sandlådeprogram {#attributes-sandbox}
 
@@ -43,7 +43,7 @@ Sandlådeprogram har följande attribut:
 
 Med en guide kan du skapa ett sandlådeprogram.
 
-Mer information om hur du skapar ett sandlådeprogram finns i [Skapa ett sandlådeprogram](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/creating-a-program.html#create-sandbox-program) .
+Mer information om hur du skapar ett sandlådeprogram finns i [Skapa ett sandlådeprogram](/help/onboarding/getting-access-to-aem-in-cloud/creating-a-program.md#create-sandbox-program) .
 
 ### Skapa sandlådemiljöer {#creating-sandbox-environments}
 
@@ -51,13 +51,13 @@ Sandlådeprogram levereras till en utvecklingsmiljö när programmet skapas auto
 
 Miljöuppsättningen för produktionsscenen kan läggas till manuellt i sandlådeprogrammet när användaren är redo att ställa in en produktionspipeline.
 
-Mer information om hur du skapar en miljö manuellt finns i [Lägga till miljöer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#adding-environments) .
+Mer information om hur du skapar en miljö manuellt finns i [Lägga till miljöer](/help/implementing/cloud-manager/manage-environments.md) .
 
 ### Tar bort sandlådemiljöer {#deleting-sandbox-environments}
 
 Användare med nödvändig behörighet kan ta bort en utvecklings- eller produktions-/scenmiljö eller uppsättningar.
 
-Mer information om hur du tar bort en miljö finns i [Ta bort miljöer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#deleting-environment) .
+Mer information om hur du tar bort en miljö finns i [Ta bort miljöer](/help/implementing/cloud-manager/manage-environments.md#deleting-environment) .
 
 
 ## Viloläge och avvänjningsmiljöer för sandlådor {#hibernating-introduction}
@@ -93,7 +93,7 @@ Du kan manuellt förvara ditt sandlådeprogram från utvecklarkonsolen på två 
 Följ stegen nedan om du vill förvara sandlådeprogrammiljöer manuellt:
 
 1. Gå till **Developer Console**.
-Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
+Mer information om hur du kommer åt [Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
    >[!IMPORTANT]
    >Genom att länka till **utvecklarkonsolen** direkt från Cloud Manager kan du inte förvara en sandlådeprogrammiljö. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
 
@@ -119,7 +119,7 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 ### Avviloläge {#de-hibernation-introduction}
 
 1. Gå till **Developer Console**.
-Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
+Mer information om hur du kommer åt [Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console) från **Miljökortet finns i** Åtkomst till Developer Console **** .
 
    >[!IMPORTANT]
    >Om du länkar till **utvecklarkonsolen** direkt från Cloud Manager kan du inte avplacera en sandlådeprogrammiljö. Du kan lösa problemet en gång på Developer Console, lägga till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som ditt *program-ID* och 5678 är ditt *miljö-ID*.
@@ -157,8 +157,6 @@ Mer information om hur du kommer åt [Developer Console](https://docs.adobe.com/
 
 Alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service bör ha tillgång till **Developer Console**, så att de kan avplacera miljön i viloläge.
 
-Läs [Lägg till användare och roller](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) i Cloud Manager om hur du ställer in användarbehörigheter.
-
 #### Åtkomst till en miljö i viloläge {#accessing-hibernated-environment}
 
 När användaren gör en webbläsarbegäran mot antingen författaren eller publiceringsnivån i en miljö i viloläge, kommer användaren att få en landningssida som beskriver miljöns viloläge, vilket visas i bilden nedan:
@@ -178,11 +176,11 @@ Några viktiga saker att tänka på när det gäller miljöer med viloläge och 
 
 ## AEM till sandlådemiljöer {#aem-updates-sandbox}
 
-Mer information finns i [AEM versionsuppdateringar](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#version-updates) .
+Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/overview.md#version-updates) .
 
 Användaren kan manuellt uppdatera miljöerna AEM sandlådeprogrammet.
 
-Mer information om hur du uppdaterar en miljö finns i [Uppdatera miljö](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#updating-dev-environment) .
+Mer information om hur du uppdaterar en miljö finns i [Uppdatera miljö](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment) .
 
 >[!NOTE]
 >* En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.
