@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service SDK
 description: Översikt över AEM som Cloud Service Software Development Kit
 translation-type: tm+mt
-source-git-commit: 1ebc4f833d4a01f1144c585dc71057f007031e43
+source-git-commit: 0b46cc8ce4229138df84c70193cf9068e1200f0a
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,17 @@ Dessutom kommer vissa kunder som tidigare har distribuerats med AEM 6.5 eller ti
 
 * **6.5 Borttagen Java API JAR** - ytterligare en uppsättning gränssnitt som har tagits bort sedan AEM 6.5
 * **6.5 Borttagen Javadoc Jar** - Javadocs för den extra uppsättningen gränssnitt
+
+## Building for the SDK {#building-for-the-sdk}
+
+AEM som en Cloud Service-SDK används för att skapa och distribuera anpassad kod. Mer information finns i dokumentationen [för](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en)AEM Project Archetype. På en hög nivå utförs följande steg:
+
+* **Kompilera kod**. Som förväntat kompileras källkoden och de resulterande innehållspaketen genereras
+* **Skapa artefakter**. Artefakter skapas under den här processen
+* **Analysera paket**. Paketen analyseras med Maven analyzer-pluginen som söker efter problem i Maven-projektet, till exempel saknade beroenden
+* **Distribuera artefakter**. Artefakter distribueras till den lokala servern.
+
+Samma steg utförs av Cloud Manager när du distribuerar till molnmiljöer. När du utför byggen lokalt kan du utveckla och testa lokalt så att utvecklarna effektivt kan identifiera kod- eller strukturproblem innan de bestämmer sig för källkontroll och utlöser driftsättningar i Cloud Manager, vilket kan ta längre tid.
 
 ## Åtkomst till AEM som en Cloud Service-SDK {#accessing-the-aem-as-a-cloud-service-sdk}
 
