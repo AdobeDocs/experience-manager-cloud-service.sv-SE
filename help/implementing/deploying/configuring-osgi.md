@@ -2,9 +2,9 @@
 title: Konfigurera OSGI för AEM as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: 024518cca45463afb5cbb4c9cd66bf1cd2a7c210
+source-git-commit: 0a2d44a63c3d26460c0836ab6b28989a0aad72da
 workflow-type: tm+mt
-source-wordcount: '2691'
+source-wordcount: '2737'
 ht-degree: 1%
 
 ---
@@ -12,15 +12,15 @@ ht-degree: 1%
 
 # Konfigurera OSGI för AEM as a Cloud Service {#configuring-osgi-for-aem-as-a-cloud-service}
 
-[OSGi](https://www.osgi.org/) är en grundläggande del i Adobe Experience Manager (AEM) teknologi. Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
+[OSGi](https://www.osgi.org/) är en grundläggande del i Adobe Experience Manager (AEM) teknikstack. Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
 
 OSGi innehåller standardmallar som gör att applikationer kan byggas av små, återanvändbara och samverkande komponenter. Dessa komponenter kan sättas samman till ett program och distribueras. Detta gör det enkelt att hantera OSGi-paket eftersom de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent finns i ett av de olika paketen. Mer information finns i [OSGi-specifikationen](https://www.osgi.org/Specifications/HomePage).
 
-Du kan hantera konfigurationsinställningarna för OSGi-komponenter genom konfigurationsfiler som ingår i ett AEM-kodprojekt.
+Du kan hantera konfigurationsinställningarna för OSGi-komponenter genom konfigurationsfiler som ingår i ett AEM kodprojekt.
 
 ## OSGi-konfigurationsfiler {#osgi-configuration-files}
 
-Konfigurationsändringar definieras i AEM-projektets kodpaket (`ui.apps`) som konfigurationsfiler (`.cfg.json`) under körningslägesspecifika konfigurationsmappar:
+Konfigurationsändringar definieras i AEM Project-kodpaket (`ui.apps`) som konfigurationsfiler (`.cfg.json`) under körningslägesspecifika konfigurationsmappar:
 
 `/apps/example/config.<runmode>`
 
@@ -38,17 +38,17 @@ efter konfigurationsformatet cfg.json OSGi.
 
 >[!NOTE]
 >
->Tidigare versioner av AEM-stödda OSGi-konfigurationsfiler med olika filformat som .cfg., .config och som resursdefinitioner för XML-sling:OsgiConfig. Dessa format har ersatts av konfigurationsformatet cfg.json OSGi.
+>Tidigare versioner av AEM OSGi-konfigurationsfiler som stöds med olika filformat som .cfg., .config och som resursdefinitioner för XML-sling:OsgiConfig. Dessa format har ersatts av konfigurationsformatet cfg.json OSGi.
 
 ## Upplösning för körningsläge {#runmode-resolution}
 
-Specifika OSGi-konfigurationer kan riktas mot specifika AEM-instanser med hjälp av runmodes. Om du vill använda körningsläge skapar du konfigurationsmappar under `/apps/example` (där till exempel projektnamnet) i formatet:
+Specifika OSGi-konfigurationer kan riktas mot specifika AEM genom att använda runmodes. Om du vill använda körningsläge skapar du konfigurationsmappar under `/apps/example` (där till exempel projektnamnet) i formatet:
 
 `/apps/example/config.<author|publish>.<dev|stage|prod>/`
 
-Alla OSGi-konfigurationer i sådana mappar används om körningslägena som definieras i konfigurationsmappens namn matchar körningslägena som används av AEM.
+Alla OSGi-konfigurationer i sådana mappar används om körningslägena som definieras i konfigurationsmappens namn matchar de körningslägen som används av AEM.
 
-Om AEM till exempel använder författaren och programvaran för körningslägena kommer konfigurationsnoderna i `/apps/example/config.author/` och `/apps/example/config.author.dev/` att tillämpas, medan konfigurationsnoderna i `/apps/example/config.publish/` och `/apps/example/config.author.stage/` inte kommer att tillämpas.
+Om AEM t.ex. använder författaren och programutvecklaren för runmodes, används konfigurationsnoderna i `/apps/example/config.author/` och `/apps/example/config.author.dev/` , medan konfigurationsnoderna i `/apps/example/config.publish/` och `/apps/example/config.author.stage/` inte tillämpas.
 
 Om flera konfigurationer för samma PID kan användas, används konfigurationen med det högsta antalet matchande körningslägen.
 
@@ -112,7 +112,7 @@ Värden för infogade konfigurationer anses vara standardmetoden och bör använ
 * Värdena är implicit knutna till koddistributioner
 * De kräver inga ytterligare distributionsöverväganden eller samordning
 
-När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden. Om det behövs för användningsfallet väljer du bara hemliga eller miljöspecifika konfigurationer.
+När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden, där du bara väljer hemliga eller miljöspecifika konfigurationer om det behövs för användningsfallet.
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
@@ -123,7 +123,7 @@ Använd bara miljöspecifika konfigurationer (`$[env:ENV_VAR_NAME]`) för icke-h
 
 ### När hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-secret-environment-specific-configuration-values}
 
-AEM som Cloud Service kräver att miljöspecifika konfigurationer (`$[secret:SECRET_VAR_NAME]`) används för alla hemliga OSGi-konfigurationsvärden, till exempel lösenord, privata API-nycklar eller andra värden som inte kan lagras i Git av säkerhetsskäl.
+AEM som en Cloud Service kräver att miljöspecifika konfigurationer (`$[secret:SECRET_VAR_NAME]`) används för alla hemliga OSGi-konfigurationsvärden, till exempel lösenord, privata API-nycklar eller andra värden som inte kan lagras i Git av säkerhetsskäl.
 
 Använd hemliga miljöspecifika konfigurationer för att lagra värdet för hemligheter på alla AEM som en Cloud Service, inklusive scenen och produktionen.
 
@@ -166,11 +166,11 @@ To add a new configuration to the repository you need to know the following:
 
 ## Skapa OSGi-konfigurationer
 
-Det finns två sätt att skapa nya OSGi-konfigurationer enligt beskrivningen nedan. Den tidigare metoden används vanligtvis för att konfigurera anpassade OSGi-komponenter som har välkända OSGi-egenskaper och -värden av utvecklaren, och den senare för AEM-tillhandahållna OSGi-komponenter.
+Det finns två sätt att skapa nya OSGi-konfigurationer enligt beskrivningen nedan. Den tidigare metoden används vanligtvis för att konfigurera anpassade OSGi-komponenter som har välkända OSGi-egenskaper och -värden av utvecklaren, och den senare för AEM OSGi-komponenter.
 
 ### Skriver OSGi-konfigurationer
 
-JSON-formaterade OSGi-konfigurationsfiler kan skrivas för hand direkt i AEM-projektet. Detta är ofta det snabbaste sättet att skapa OSGi-konfigurationer för välkända OSGi-komponenter, och särskilt anpassade OSGi-komponenter som har utformats och utvecklats av samma utvecklare som definierar konfigurationerna. Den här metoden kan även användas för att kopiera/klistra in och uppdatera konfigurationer för samma OSGi-komponent i olika körningslägemappar.
+JSON-formaterade OSGi-konfigurationsfiler kan skrivas för hand direkt i AEM. Detta är ofta det snabbaste sättet att skapa OSGi-konfigurationer för välkända OSGi-komponenter, och särskilt anpassade OSGi-komponenter som har utformats och utvecklats av samma utvecklare som definierar konfigurationerna. Den här metoden kan även användas för att kopiera/klistra in och uppdatera konfigurationer för samma OSGi-komponent i olika körningslägemappar.
 
 1. Öppna `ui.apps` projektet i den utvecklingsmiljö där du arbetar, leta upp eller skapa konfigurationsmappen (`/apps/.../config.<runmode>`) som anger för de körningslägen som den nya OSGi-konfigurationen ska använda
 1. Skapa en ny `<PID>.cfg.json` fil i den här konfigurationsmappen. PID är den beständiga identiteten för OSGi-komponenten är vanligtvis OSGi-komponentimplementeringens fullständiga klassnamn. Till exempel:
@@ -182,9 +182,9 @@ Observera att namnet på OSGi-konfigurationsfabriksfilen använder `<PID>-<facto
 
 ### Generera OSGi-konfigurationer med AEM SDK QuickStart
 
-AEM SDK Quickstart Jars AEM Web Console kan användas för att konfigurera OSGi-komponenter och exportera OSGi-konfigurationer som JSON. Detta är användbart när du konfigurerar OSGi-komponenter som tillhandahålls av AEM och vars OSGi-egenskaper och deras värdeformat kanske inte är väl förstådda av den utvecklare som definierar OSGi-konfigurationerna i AEM-projektet. Observera att AEM Web Console-konfigurationens gränssnitt inte skriver `.cfg.json` filer i databasen, så tänk på detta för att undvika oväntade händelser under lokal utveckling när de AEM Project-definierade OSGi-konfigurationerna kan skilja sig från de genererade konfigurationerna.
+AEM SDK Quickstart Jars AEM Web Console kan användas för att konfigurera OSGi-komponenter och exportera OSGi-konfigurationer som JSON. Detta är användbart för att konfigurera AEM OSGi-komponenter vars OSGi-egenskaper och deras värdeformat kanske inte är väl förstådda av den utvecklare som definierar OSGi-konfigurationerna i det AEM projektet. Observera att AEM webbkonsolens konfigurationsgränssnitt skriver filer i databasen, så tänk på detta för att undvika oväntade beteenden under lokal utveckling när de AEM projektdefinierade OSGi-konfigurationerna kan skilja sig från de genererade konfigurationerna. `.cfg.json`
 
-1. Logga in på AEM SDK Quickstart Jars AEM-webbkonsol som adminanvändare
+1. Logga in på AEM SDK Quickstart Jars AEM Web console som admin-användare
 1. Navigera till OSGi > Konfiguration
 1. Leta reda på OSGi-komponenten som ska konfigureras och tryck på titeln för att redigera
    ![OSGi-konfiguration](./assets/configuring-osgi/configuration.png)
@@ -225,7 +225,7 @@ OSGi-konfigurationen ska tilldela en platshållare för variabeln som ska defini
 use $[env:ENV_VAR_NAME]
 ```
 
-Kunder bör endast använda den här tekniken för OSGI-konfigurationsegenskaper som är relaterade till deras anpassade kod. den ska inte användas för att åsidosätta Adobe-definierad OSGI-konfiguration.
+Kunder bör endast använda den här tekniken för OSGI-konfigurationsegenskaper som är relaterade till deras anpassade kod. Den ska inte användas för att åsidosätta Adobe-definierad OSGI-konfiguration.
 
 ### Värden för hemlig konfiguration {#secret-configuration-values}
 
@@ -263,7 +263,7 @@ När ett standardvärde anges ersätts platshållaren antingen med det angivna p
 
 Följande gäller för både miljöspecifika och hemliga konfigurationsvärden.
 
-Variabler kan definieras i den lokala miljön så att de hämtas av den lokala AEM-tillverkaren vid körning. I Linux:
+Variabler kan definieras i den lokala miljön så att de hämtas av den lokala AEM vid körning. I Linux:
 
 ```bash
 export ENV_VAR_NAME=my_value
@@ -436,9 +436,14 @@ config.dev
 
 ## API-format för Cloud Manager för att ange egenskaper {#cloud-manager-api-format-for-setting-properties}
 
+Se [den här sidan](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/create-api-integration.md) om hur API:t måste konfigureras.
+>[!NOTE]
+>
+>Kontrollera att det använda Cloud Manager-API:t har tilldelats rollen &quot;Deployment Manager - Cloud Service&quot;. Andra roller kan inte köra alla kommandon nedan.
+
 ### Ange värden via API {#setting-values-via-api}
 
-Anrop av API:t distribuerar de nya variablerna och värdena till en molnmiljö, ungefär som en vanlig pipeline för kundkoddistribution. Skapare- och publiceringstjänsterna startas om och de nya värdena anges, vilket normalt tar några minuter.
+Anrop av API:t distribuerar de nya variablerna och värdena till en molnmiljö, ungefär som en vanlig pipeline för kundkoddistribution. Tjänsterna för författare och publicering kommer att startas om och de nya värdena anges, vilket normalt tar några minuter.
 
 ```
 PATCH /program/{programId}/environment/{environmentId}/variables
@@ -505,7 +510,7 @@ $ aio cloudmanager:set-environment-variables ENVIRONMENT_ID --delete MY_VAR1 MY_
 
 >[!NOTE]
 >
->På [den här sidan](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) finns mer information om hur du konfigurerar värden med plugin-programmet Cloud Manager för Adobe I/O CLI.
+>På [den här sidan](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) finns mer information om hur du konfigurerar värden med hjälp av plugin-programmet Cloud Manager för Adobe I/O CLI.
 
 ### Antal variabler {#number-of-variables}
 
@@ -513,13 +518,13 @@ Upp till 200 variabler per miljö kan deklareras.
 
 ## Distributionsöverväganden för Hemliga och miljöspecifika konfigurationsvärden {#deployment-considerations-for-secret-and-environment-specific-configuration-values}
 
-Eftersom de hemliga och miljöspecifika konfigurationsvärdena finns utanför Git, och därför inte är en del av den formella AEM som en distributionsmekanism för Cloud Service, bör kunden hantera, styra och integrera i AEM som en distributionsprocess för Cloud Service.
+Eftersom de hemliga och miljöspecifika konfigurationsvärdena finns utanför Git, och därför inte är en del av det formella AEM som en distributionsmekanism för Cloud Service, bör kunden hantera, styra och integrera i AEM som en distributionsprocess för Cloud Service.
 
-Som nämnts ovan kommer anrop till API att distribuera de nya variablerna och värdena till molnmiljöer, ungefär som en vanlig pipeline för kundkoddistribution. Skapare- och publiceringstjänsterna startas om och de nya värdena anges, vilket normalt tar några minuter. Observera att de kvalitetsportar och tester som körs av Cloud Manager under en vanlig koddistribution inte utförs under den här processen.
+Som nämnts ovan kommer anrop till API att distribuera de nya variablerna och värdena till molnmiljöer, ungefär som en vanlig pipeline för kundkoddistribution. Tjänsterna för författare och publicering kommer att startas om och de nya värdena anges, vilket normalt tar några minuter. Observera att de kvalitetsportar och tester som körs av Cloud Manager under en vanlig koddistribution inte utförs under den här processen.
 
 Normalt anropar kunderna API för att ange miljövariabler innan de distribuerar kod som är beroende av dem i Cloud Manager. I vissa fall kanske du vill ändra en befintlig variabel efter att koden redan har distribuerats.
 
-Observera att API:t kanske inte fungerar när en pipeline används, antingen en AEM-uppdatering eller en kunddistribution, beroende på vilken del av slutpipeline som körs vid den tidpunkten. Felsvaret kommer att ange att begäran inte lyckades, men det kommer inte att ange den specifika orsaken.
+Observera att API:t kanske inte fungerar när en pipeline används, antingen en AEM eller en kunddistribution, beroende på vilken del av slutpipeline som körs vid den tidpunkten. Felsvaret kommer att ange att begäran inte lyckades, men det kommer inte att ange den specifika orsaken.
 
 Det kan finnas scenarier där en schemalagd kundkoddistribution förlitar sig på befintliga variabler för att ha nya värden, vilket inte är lämpligt med den aktuella koden. Om detta ger anledning till oro bör variabla ändringar göras på ett additivt sätt. Det gör du genom att skapa nya variabelnamn i stället för att bara ändra värdet för gamla variabler så att gammal kod aldrig refererar till det nya värdet. När den nya kundreleasen ser stabil ut kan man välja att ta bort de äldre värdena.
 
