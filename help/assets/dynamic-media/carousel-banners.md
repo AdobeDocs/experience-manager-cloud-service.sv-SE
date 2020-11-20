@@ -2,7 +2,7 @@
 title: Karusellbanner
 description: Lär dig hur du arbetar med karusellbanners i Dynamic Media
 translation-type: tm+mt
-source-git-commit: d992b68d4a015f8f947167b5b1d5f0a1ac5c09ec
+source-git-commit: 98a005dacc0bce0c03f0a58c50c6e85f12b1197f
 workflow-type: tm+mt
 source-wordcount: '4536'
 ht-degree: 4%
@@ -254,8 +254,7 @@ Se [(valfritt) Förhandsgranska Carousel Banners.](#optional-previewing-carousel
 >[!NOTE]
 >
 >När du lägger till aktiveringspunkter i en bild i en [interaktiv bild](/help/assets/dynamic-media/interactive-images.md) eller en Carousel-banderoll lagras hotspot-informationen på samma metadataplats, i förhållande till bildens plats&amp;mdashvärde, oavsett om det är en interaktiv bild eller en Carousel-banderoll. Den här funktionen innebär att du enkelt kan återanvända samma bild - tillsammans med dess definierade hotspot-data - i båda visningsprogrammen.
-
->Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Du kanske vill skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
+Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Du kanske vill skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
 
 >[!NOTE]
 Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
