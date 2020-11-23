@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation [!DNL Adobe Experience Manager] för en Cloud Service.
 description: Aktuell versionsinformation [!DNL Adobe Experience Manager] för en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 4bce4fceab08a95fc2c1c8334f84fd54204228ba
+source-git-commit: 05184bbf507fe84ffb69da90502190b1a2793ee3
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 * **[!DNL Adobe Asset Link]version 2.1**: En ny version av [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) -tillägget för [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign] är tillgänglig. Det lägger till kompatibilitet med de senaste [!DNL Adobe Creative Cloud] programmen med version 2021, som släpptes i oktober 2020.
 
-* **[!DNL Assets]Stöd** för WebP-filer: [!DNL Assets] som en Cloud Service har nu stöd för WebP-bildformat. WebP är ett framväxande bildformat som skapats av Google. Bilder i WebP-filformat kan inte skiljas åt visuellt från JPG- eller PNG-filer och filerna är mycket mindre. Lägre filstorlek förbättrar sidinläsningen och hjälper innehållsskaparna att leverera en snabbare webbupplevelse. Se [Skapa en standardbearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-standard-profile).
+* **[!DNL Assets]Stöd** för WebP-filer: [!DNL Assets] som en Cloud Service har nu stöd för att skapa renderingar i WebP-bildformat. WebP är ett framväxande bildformat som skapats av Google. Bilder i WebP-filformat kan inte skiljas åt visuellt från JPG- eller PNG-filer och filerna är mycket mindre. Lägre filstorlek förbättrar sidinläsningen och hjälper innehållsskaparna att leverera en snabbare webbupplevelse. Se [Skapa en standardbearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-standard-profile).
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
