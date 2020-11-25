@@ -3,9 +3,9 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0fb84bb88e42f92e335460edca5041a0878f9dca
+source-git-commit: 79c8b5e038a58821b76da665f9342214312008e8
 workflow-type: tm+mt
-source-wordcount: '2142'
+source-wordcount: '2158'
 ht-degree: 39%
 
 ---
@@ -19,7 +19,7 @@ Användare kan skapa webbsidor i [!DNL Experience Manager Sites]. [!DNL Experien
 
 ## Översikt över Connected Assets {#overview-of-connected-assets}
 
-When editing pages in [!UICONTROL Page Editor], the authors can seamlessly search, browse, and embed assets from a different [!DNL Assets] deployment. Administratörerna skapar en engångs integrering av en distribution av [!DNL Sites] med en annan (fjärransluten) distribution av [!DNL Assets].
+När du redigerar sidor i [!UICONTROL Page Editor] målkatalogen kan författarna enkelt söka efter, bläddra bland och bädda in resurser från en annan [!DNL Assets] distribution som fungerar som en källa för resurser. Administratörerna skapar en engångsintegrering av en driftsättning av [!DNL Experience Manager] med [!DNL Sites] kapacitet med en annan driftsättning av [!DNL Experience Manager] med [!DNL Assets] kapacitet.
 
 For the [!DNL Sites] authors, the remote assets are available as read-only local assets. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. To make many remote assets available on a [!DNL Sites] deployment in one-go, consider migrating the assets in bulk.
 
@@ -154,7 +154,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
 >[!CAUTION]
 >
->Once used in a web page, the fetched remote assets are searchable and usable by anyone who has permissions to access the local folder. The fetched assets are stored (`connectedassets` in the above walk-through). Resurserna är också sökbara och synliga i det lokala datalagret via [!UICONTROL Content Finder].
+>När de hämtade fjärrresurserna har använts på en webbsida är de sökbara och användbara för alla som har behörighet att komma åt den lokala mappen. De hämtade resurserna lagras i den lokala mappen (`connectedassets` i ovanstående genomgång). Resurserna är också sökbara och synliga i det lokala datalagret via [!UICONTROL Content Finder].
 
 De hämtade resurserna kan användas som andra lokala resurser, förutom att associerade metadata inte kan redigeras.
 
