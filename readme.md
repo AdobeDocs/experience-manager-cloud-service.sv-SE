@@ -1,8 +1,8 @@
 ---
-source-git-commit: 2ac87c5356579ea650cd3d34219e75eb1940f24b
+source-git-commit: 8832307a96160a3d45cc85942473a5ada288a74f
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 | Produktion | Scen |
 |---|---|
 | [![Byggstatus](https://docs.ci.corp.adobe.com/job/experience-manager-cloud-service.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-manager-cloud-service.en_production/lastBuild) | [![Byggstatus](https://docs.ci.corp.adobe.com/job/experience-manager-cloud-service.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-manager-cloud-service.en_stage/lastBuild) |
-| [Utdataprodukt](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/landing/home.html) | [Utdatastrg](https://docs-stg.corp.adobe.com/content/help/en/experience-manager-cloud-service/landing/home.html) |
+| [Utdataprodukt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html) | [Utdatastrg](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/landing/home.html) |
 
 Det här är databasen för Adobe Experience Manager Cloud Service-dokumentation. Den här dokumentationen beskriver installation, administration, redigering och hur du anpassar AEM med hjälp av Cloud Service.
 
