@@ -1,25 +1,25 @@
 ---
 title: Filformat och MIME-typer som stöds
-description: Filformat och MIME-typer som stöds av Experience Manager Assets som Cloud Service.
+description: Filformat och MIME-typer stöds [!DNL Experience Manager Assets] av en Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2df737ae0601774f4a9d1dce470125f596fab467
+source-git-commit: bafcf005a2264b96caa3d59c478aa57fb38b2a4c
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 5%
+source-wordcount: '774'
+ht-degree: 6%
 
 ---
 
 
-# Assets supported file formats {#supported-file-formats}
+# [!DNL Assets] filformat som stöds {#supported-file-formats}
 
-Adobe Experience Manager som Cloud Service har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. Adobe Experience Manager Assets har stöd för en mängd olika filformat och alla funktioner har olika stöd för olika format.
+[!DNL Adobe Experience Manager] som en Cloud Service som har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett format. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
 
-Dessutom har Experience Manager Assets utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med hjälp av [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
+Dessutom har [!DNL Experience Manager Assets] utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med hjälp av [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
 
 Några av de viktigaste funktionerna för tillgångskonvertering med hjälp av mikrotjänster:
 
-* Filformaten [för](#adobe-formats) Adobe som skapats av program och tjänster från Adobe, t.ex. Adobe Photoshop, Adobe InDesign, Adobe Illustrator, Adobe XD, Adobe Dimension och Adobe Acrobat eller PDF.
+* Viktiga [filformat](#adobe-formats) för Adobe som skapats av program och tjänster från Adobe, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD]och [!DNL Adobe Dimension][!DNL Adobe Acrobat] eller PDF.
 * Viktiga [bildfilformat](#image-formats).
 * [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw i botten).
 * Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
@@ -39,7 +39,7 @@ Följande förklaring beskriver supportnivån.
 | ----------- | -------------------- | ------------------- | ------------------- | ------------ |
 | AI | ✓ | - | ✓ | ✓ |
 | COLLAGE | - | - | ✓ | - |
-| DN | ✓ |  | ✓ | ✓ |
+| DN | ✓ | - | ✓ | ✓ |
 | IDÉER | - | - | ✓ | - |
 | INDD | ✓ | - | ✓ | ✓ * |
 | INDT | - | - | ✓ | - |
@@ -94,12 +94,12 @@ Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/as
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Dynamisk medieleverans |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
-| gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
-| gLTF | ✓ | ✓ | ✓ |  | ✓ |  | ✓ |  |
-| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
-| STL | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
-| USDz | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| DN | ✓ | ✓ | ✓ | - | ✓ | ✓ | - | - |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
+| gLTF | ✓ | ✓ | ✓ | - | ✓ | - | ✓ | - |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
+| STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
 
 ## [!DNL Camera RAW] format {#camera-raw-formats}
 
@@ -174,7 +174,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | 3G2 | - | ✓ | - |
 | 3GP | - | ✓ | - |
 | AVI | ✓ | ✓ | ✓ |
-| DIVX | ✓ |  | ✓ |
+| DIVX | ✓ | - | ✓ |
 | F4V | ✓ | ✓ | ✓ |
 | FLV | ✓ | ✓ | ✓ |
 | M2T | ✓ | - | ✓ |
@@ -197,27 +197,27 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 ## Videoformat i [!DNL Dynamic Media] för omkodning {#video-dynamic-media-transcoding}
 
 | Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
-|------------------------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| MP4 | MPEG-4 | H264/AVC (alla profiler) |  |
+|------------------------|--------------------|--------|-------|
+| MP4 | MPEG-4 | H264/AVC (alla profiler) | - |
 | MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
 | FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
 | WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft-skärm (MSS2), Microsoft Photo Story (WVP2) |
-| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 |  |
-| M4V | Apple iTunes | H264/AVC |  |
+| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | - |
+| M4V | Apple iTunes | H264/AVC | - |
 | AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft Video 1 (MS-CRAM) |
-| WebM | WebM | Google VP8 |  |
-| OGV, OGG | Ogg | Theora, VP3, Dirac |  |
-| MXF | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro |  |
-| MTS | AVCHD | H264/AVC |  |
-| MKV | Matroska | H264/AVC |  |
-| R3D, RM | Red Raw-video | MJPEG 2000 |  |
+| WebM | WebM | Google VP8 | - |
+| OGV, OGG | Ogg | Theora, VP3, Dirac | - |
+| MXF | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
+| MTS | AVCHD | H264/AVC | - |
+| MKV | Matroska | H264/AVC | - |
+| R3D, RM | Red Raw-video | MJPEG 2000 | - |
 | RAM, RM | RealVideo | Stöds inte | Real G2 (RV20), Real 8 (RV30), Real 10 (RV40) |
-| FLAC | Inbyggd Flash | Kostnadsfri förlustfri ljudkodek |  |
-| MJ2 | Motion JPEG 2000 | Motion JPEG 2000-kodek |  |
+| FLAC | Inbyggd Flash | Kostnadsfri förlustfri ljudkodek | - |
+| MJ2 | Motion JPEG 2000 | Motion JPEG 2000-kodek | - |
 
 ## Ljudformat {#audio-formats}
 
-Assets as a Cloud Service provides XMP metadata extraction support for AIF, ASF, M4A, MP3, WAV, and WMA audio formats.
+[!DNL Assets] som en Cloud Service har stöd XMP metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
 
 >[!MORELIKETHIS]
 >
