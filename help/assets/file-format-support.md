@@ -3,9 +3,9 @@ title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer stöds [!DNL Experience Manager Assets] av en Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bafcf005a2264b96caa3d59c478aa57fb38b2a4c
+source-git-commit: a2d858e1cddc67d07dd26dc40663cb4ed2197b02
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '778'
 ht-degree: 6%
 
 ---
@@ -61,6 +61,10 @@ Följande förklaring beskriver supportnivån.
 | JPEG | ✓ | ✓ | ✓ | ✓ |
 | PNG | ✓ | ✓ | ✓ | ✓ |
 | TIFF | ✓ | ✓ | ✓ | - |
+| SVG | ✓ | - | ✓ | ✓ |
+| SGI | ✓ | ✓ | ✓ | ✓ |
+| RGB | ✓ | ✓ | ✓ | ✓ |
+| RGBA | ✓ | ✓ | ✓ | ✓ |
 
 ## Bildformat i [!DNL Dynamic Media] {#image-support-dynamic-media}
 
@@ -191,7 +195,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | QT | ✓ | - | ✓ |
 | R3D | ✓ | - | ✓ |
 | SWF | ✓ | - | ✓ |
-| WEBM | ✓ | - | ✓ |
+| WebM | ✓ | - | ✓ |
 | WMV | ✓ | ✓ | ✓ |
 
 ## Videoformat i [!DNL Dynamic Media] för omkodning {#video-dynamic-media-transcoding}
