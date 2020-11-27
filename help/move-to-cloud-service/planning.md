@@ -2,21 +2,27 @@
 title: Planeringsfas
 description: Planeringsfas
 translation-type: tm+mt
-source-git-commit: 52d7f6ff1c11ee450d418989ae35ff69d2cc39e6
+source-git-commit: df3eb65817a00fe31eff466565b9de5e0a72ccae
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 94%
+source-wordcount: '474'
+ht-degree: 91%
 
 ---
 
 
 # Planering {#planning-phase}
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_planning"
+>title="Planera övergången"
+>abstract="Innan du börjar din övergång till Cloud Service bör du bekanta dig med AEM as a Cloud Service och granska de ändringar som gjorts i den samt även se vilka funktioner som har ersatts eller tagits bort."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html" text="Best Practices Analyzer"
+
 Innan du börjar din övergång till Cloud Service bör du bekanta dig med AEM as a Cloud Service och granska de ändringar som gjorts i den samt även se vilka funktioner som har ersatts eller tagits bort.
 
 ## Viktiga ändringar {#notable-changes}
 
-AEM as a Cloud Service har många nya funktioner och möjligheter för att hantera dina AEM-projekt.
+AEM as a Cloud Service har många nya funktioner för  att administrera AEM-projekt.
 
 Det finns dock ett antal skillnader mellan AEM On-premise och Adobe Managed Services jämfört med AEM as a Cloud Service.
 
