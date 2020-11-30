@@ -43,6 +43,7 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
       * Om du klickar på ikonens källa kommer du till den komponenten.
    * Visa komponentens **resurstyp** och **resurssupertyp** (om den är definierad).
       * Om du klickar på Resurssupertypen kommer du till den komponenten.
+
    >[!NOTE]
    >
    >Eftersom `/apps` inte kan redigeras under körning är komponentkonsolen skrivskyddad.
