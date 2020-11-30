@@ -1,6 +1,6 @@
 ---
-title: Skapa ett program - molntjänst
-description: Skapa ett program - molntjänst
+title: Skapa ett program - Cloud Service
+description: Skapa ett program - Cloud Service
 translation-type: tm+mt
 source-git-commit: 5658b2cc853ff7e6222a7f35e56527577d2c7324
 workflow-type: tm+mt
@@ -57,7 +57,7 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
 
    ![](assets/create-program-5.png)
 
-1. När icke-produktionsflödet som distribueras till utvecklingsfasen är klart vägleder guiden användaren till antingen åtkomst till AEM (under utveckling) eller distribution av kod till utvecklingsmiljön:
+1. När icke-produktionsflödet som distribueras till utveckling är klart vägleder guiden användaren till antingen åtkomst AEM (under utveckling) eller distribution av kod till utvecklingsmiljön:
 
    ![](assets/create-program-setup-deploy.png)
 
