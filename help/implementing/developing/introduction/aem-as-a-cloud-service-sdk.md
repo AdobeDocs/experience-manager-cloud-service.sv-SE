@@ -1,5 +1,5 @@
 ---
-title: AEM as a Cloud Service SDK
+title: SDK för AEM as a Cloud Service
 description: Översikt över AEM som Cloud Service Software Development Kit
 translation-type: tm+mt
 source-git-commit: 0b46cc8ce4229138df84c70193cf9068e1200f0a
