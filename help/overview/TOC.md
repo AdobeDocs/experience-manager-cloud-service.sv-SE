@@ -2,7 +2,7 @@
 sub-product: Översikt över AEM as a Cloud Service
 user-guide-title: Översikt över AEM as a Cloud Service
 breadcrumb-title: Översiktshandbok
-user-guide-description: Börja här för en översikt över Experience Manager as a Cloud Service, med bland annat en introduktion, terminologi med mera.
+user-guide-description: Börja här för en översikt över Experience Manager as a Cloud Service, med bland annat en introduktion och en terminologilista.
 translation-type: tm+mt
 source-git-commit: 8b6d4f424fcc943c981d5883877cb533c8d63353
 workflow-type: tm+mt
