@@ -18,7 +18,7 @@ De videofilformat (och deras kodekar) som stöds för smart taggning är MP4 (H2
 
 ## Smart taggning av videoklipp vid överföring {#smart-tag-assets-on-ingestion}
 
-När du [överför videomaterial](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som en Cloud Service ![bearbetas](assets/do-not-localize/assetprocessing.png)videoklippen. När bearbetningen är klar går du till [!UICONTROL Basic] fliken på [!UICONTROL Properties] sidan Resurser. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. Resursberäkningstjänsten använder Adobe Sensei för att skapa dessa smarta taggar.
+När du [överför videomaterial](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som en Cloud Service ![bearbetas](assets/do-not-localize/assetprocessing.png)videoklippen. När bearbetningen är klar går du till [!UICONTROL Basic] fliken på [!UICONTROL Properties] sidan Resurser. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. asset compute Service använder Adobe Sensei för att skapa dessa smarta taggar.
 
 ![Smarta taggar läggs till i videoklipp och visas på fliken Grundläggande i resursegenskaper](assets/smart-tags-added-to-videos.png)
 
