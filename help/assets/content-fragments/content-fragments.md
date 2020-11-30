@@ -1,6 +1,6 @@
 ---
 title: Arbeta med innehållsfragment
-description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll.
+description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
 source-git-commit: 85f47a417e73432d776c0ed4f5cdb7673ce41a70
 workflow-type: tm+mt
@@ -12,13 +12,13 @@ ht-degree: 2%
 
 # Arbeta med innehållsfragment{#working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) som Cloud Service kan du med Content Fragments utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
+Med Adobe Experience Manager (AEM) som Cloud Service kan du utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
 
 Innehållsfragment innehåller strukturerat innehåll:
 
 * De baseras på en [innehållsfragmentmodell](/help/assets/content-fragments/content-fragments-models.md), som fördefinierar en struktur för det resulterande fragmentet.
 
-Innehållsfragment kan också levereras i JSON-format med JSON-exportfunktionerna (Sling Model) i AEM Core-komponenterna. Leveranssätt:
+Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i Sling Model (JSON) AEM kärnkomponenterna. Leveranssätt:
 
 * gör att du kan använda komponenten för att hantera vilka element i ett fragment som ska levereras
 * tillåter massleverans genom att lägga till flera kärnkomponenter för innehållsfragment på sidan som används för API-leverans
@@ -55,23 +55,23 @@ Dessa innehållsfragment kan sedan samlas ihop för att ge upplevelser över en 
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
-AEM Content Services är utformat för att generalisera beskrivningen och leveransen av innehåll i/från AEM, bortom fokus på webbsidor.
+AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor.
 
-De levererar innehåll till kanaler som inte är traditionella AEM-webbsidor med hjälp av standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
+De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
 
 * Enkelsidiga program
 * Inbyggda mobilprogram
-* andra kanaler och kontaktytor utanför AEM
+* andra kanaler och kontaktpunkter externt för AEM
 
 Leveransen görs i JSON-format med JSON-exporteraren.
 
-AEM Content Fragments kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper. inklusive text, numeriska data, boolesk information, datum och tid med mera.
+AEM kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper. inklusive text, numeriska data, boolesk information, datum och tid med mera.
 
-Tillsammans med JSON-exportfunktionerna i AEM Core-komponenterna kan detta strukturerade innehåll sedan användas för att leverera AEM-innehåll till andra kanaler än AEM-sidor.
+Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta strukturerade innehåll sedan användas för att leverera AEM till andra kanaler än AEM.
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Experience Fragments](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)**är olika funktioner i AEM:
+>**Content Fragments** and **[Experience Fragments](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** are different features within AEM:
 >* **Innehållsfragment** är redaktionellt innehåll som kan användas för att komma åt strukturerade data, bland annat texter, siffror och datum. De är rent innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout.
 >* **Experience Fragments** är helt utformat för innehåll, ett fragment av en webbsida.
 
@@ -83,7 +83,7 @@ Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men in
 
 >[!NOTE]
 >
->AEM har även stöd för översättning av fragmentinnehåll.
+>AEM har också stöd för översättning av fragmentinnehåll.
 
 <!--
 >[!NOTE]
@@ -265,6 +265,6 @@ Ett fragment, med dess element och variationer, kan användas för att skapa sam
 
 ### WKND-exempel {#wknd-sample}
 
-WKND [Site](/help/implementing/developing/introduction/develop-wknd-tutorial.md) -exemplen är till för att du ska kunna lära dig mer om AEM som Cloud Service. Den innehåller exempelfragment som kan ses vid:
+WKND- [webbplatsexemplen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) är till för att du ska kunna lära dig mer om AEM som Cloud Service. Den innehåller exempelfragment som kan ses vid:
 
 `hhttp://<host>:<port>/assets.html/content/dam/wknd/en/adventures`
