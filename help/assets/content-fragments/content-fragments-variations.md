@@ -12,12 +12,12 @@ ht-degree: 15%
 
 # Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
 
-[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i innehållsfragment, eftersom de gör att du kan skapa och redigera kopior av huvudinnehållet för användning i specifika kanaler och/eller scenarier.
+[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i innehållsfragment, eftersom de gör att du kan skapa och redigera kopior av det överordnad innehållet för användning i specifika kanaler och/eller scenarier.
 
 På fliken **Variationer** kan du:
 
 * [Ange innehållet](#authoring-your-content) för fragmentet
-* [Skapa och hantera variationer](#managing-variations) av **mallinnehållet**
+* [Skapa och hantera varianter](#managing-variations) av det **Överordnad** innehållet
 
 Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till exempel:
 
@@ -31,7 +31,7 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 * [Sammanfatta text](#summarizing-text)
 
-* [Synkronisera varianter med mallinnehåll](#synchronizing-with-master)
+* [Synkronisera varianter med Överordnad innehåll](#synchronizing-with-master)
 
 >[!CAUTION]
 >
@@ -39,7 +39,7 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallen eller eventuella varianter som du har. Du kan:
+När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för Överordnad eller andra varianter som du har. Du kan:
 
 * gör redigeringar direkt på fliken **Variationer**
 * öppna [helskärmsredigeraren](#full-screen-editor) för att:
@@ -82,7 +82,7 @@ Följande åtgärder är också tillgängliga (för alla [format](#formats)) nä
 
 * [Visa textstatistik](#viewing-key-statistics)
 
-* [Synkronisera med mallsida](#synchronizing-with-master) (när du redigerar en variant)
+* [Synkronisera med Överordnad](#synchronizing-with-master) (när du redigerar en variant)
 
 * [Sammanfatta text](#summarizing-text)
 
@@ -182,17 +182,16 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 >  `/content/dam/my-brand/en/path-down/my-content-fragment`
 
 >[!CAUTION]
->
->Engelska finns i körklart skick.
->Andra språk är tillgängliga som språkmodellpaket från paketresurs:
->* [Franska (fr)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [German (de)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [Italienska (it)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [Spanska (es)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
+Engelska finns i körklart skick.
+Andra språk är tillgängliga som språkmodellpaket från paketresurs:
+* [Franska (fr)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
+* [German (de)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
+* [Italienska (it)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
+* [Spanska (es)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
 
 
 
-1. Välj **mallsida** eller önskad variant.
+1. Välj **Överordnad** eller önskad variant.
 2. Öppna fullskärmsredigeraren.
 
 3. Välj **Sammanfatta text** i verktygsfältet.
@@ -205,6 +204,7 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
    * Alla meningar som ska tas bort markeras med rött, med genomstrykning.
    * Klicka på en markerad mening om du vill behålla den i det sammanfattande innehållet.
    * Klicka på en mening som inte är markerad för att ta bort den.
+
    ![summeringsjämförelse](assets/cfm-variations-06.png)
 
 6. Markera **Sammanfattning** för att bekräfta ändringarna.
@@ -213,7 +213,7 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 
 Så här kommenterar du ett fragment:
 
-1. Välj **mallsida** eller önskad variant.
+1. Välj **Överordnad** eller önskad variant.
 1. Öppna fullskärmsredigeraren.
 1. Markera text. Ikonen **Anteckning** blir tillgänglig.
 
@@ -230,8 +230,7 @@ Anteckningar:
 * Indikeras av markeringen på texten, både i helskärmsläge och i normalt läge i redigeraren. Du kan sedan visa, redigera och/eller ta bort all information i en anteckning genom att klicka på den markerade texten, som öppnar dialogrutan igen.
 
    >[!NOTE]
-   >
-   >En nedrullningsbar väljare tillhandahålls om flera anteckningar har tillämpats på ett textstycke.
+   En nedrullningsbar väljare tillhandahålls om flera anteckningar har tillämpats på ett textstycke.
 
 * När du tar bort hela texten som kommentaren användes på tas även anteckningen bort.
 
@@ -239,7 +238,7 @@ Anteckningar:
 
    ![anteckningar](assets/cfm-variations-08.png)
 
-* Kan visas och tas bort i [tidslinjen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) för det markerade fragmentet.
+* Kan visas och tas bort i [tidslinjen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) för det valda fragmentet.
 
 ### Infoga resurser i fragment {#inserting-assets-into-your-fragment}
 
@@ -248,13 +247,11 @@ Om du vill skapa innehållsfragment enklare kan du lägga till [resurser](/help/
 De läggs till i fragmentets styckesekvens utan formatering. formatering kan göras när [fragmentet används/refereras på en sida](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 
 >[!CAUTION]
->
->Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
->Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigeraren](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
+Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
+Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigeraren](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
 
 >[!NOTE]
->
->Det finns olika metoder för att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+Det finns olika metoder för att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 1. Placera markören på den plats där du vill lägga till bilden.
 2. Använd ikonen **Infoga resurs** för att öppna sökdialogrutan.
@@ -265,22 +262,22 @@ De läggs till i fragmentets styckesekvens utan formatering. formatering kan gö
 
    * navigera till den nödvändiga resursen i DAM
    * söka efter resursen i DAM
+
    Välj önskad resurs genom att klicka på miniatyrbilden.
 
 4. Använd **Välj** för att lägga till resursen i innehållsfragmentets styckesystem på den aktuella platsen.
 
    >[!CAUTION]
-   >
-   >Om du efter att ha lagt till en resurs ändrar formatet till:
-   >* **Oformaterad text**: Resursen kommer att förloras helt från fragmentet.
-   >* **Markdown-kod**: Resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
+   Om du efter att ha lagt till en resurs ändrar formatet till:
+   * **Oformaterad text**: Resursen kommer att förloras helt från fragmentet.
+   * **Markdown-kod**: Resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
 
 
 ## Hantera variationer {#managing-variations}
 
 ### Skapa en variant {#creating-a-variation}
 
-Med variationer kan du ta **mallinnehållet** och ändra det efter syfte (om det behövs).
+Med variationer kan du ta det **Överordnad** innehållet och ändra det efter syfte (om det behövs).
 
 Så här skapar du en ny variant:
 
@@ -291,8 +288,7 @@ Så här skapar du en ny variant:
 1. Välj **Lägg till**. **Fragmentmastern** kopieras till den nya varianten, som nu är öppen för [redigering](#editing-a-variation).
 
    >[!NOTE]
-   >
-   >När du skapar en ny variant är det alltid **mallsida** som kopieras, inte varianten som är öppen.
+   När du skapar en ny variant är det alltid **Överordnad** som kopieras, inte varianten som är öppen.
 
 ### Redigera en variant {#editing-a-variation}
 
@@ -316,8 +312,7 @@ Så här byter du namn på en befintlig variant:
 1. Bekräfta åtgärden **Byt namn** .
 
 >[!NOTE]
->
->Detta påverkar bara **varianttiteln**.
+Detta påverkar bara **varianttiteln**.
 
 ### Ta bort en variant {#deleting-a-variation}
 
@@ -330,34 +325,33 @@ Så här tar du bort en befintlig variant:
 1. Bekräfta åtgärden **Ta bort** i dialogrutan.
 
 >[!NOTE]
->
->Du kan inte ta bort **mallsida**.
+Du kan inte ta bort **Överordnad**.
 
-### Synkroniserar med mallsida {#synchronizing-with-master}
+### Synkroniserar med Överordnad {#synchronizing-with-master}
 
-**Mallen** är en integrerad del av ett innehållsfragment och innehåller per definition huvudkopian av innehållet, medan varianterna innehåller de individuella uppdaterade och anpassade versionerna av det innehållet. När mallsidan uppdateras är det möjligt att dessa ändringar också är relevanta för variationerna och därför måste spridas till dem.
+**Överordnad** är en integrerad del av ett innehållsavdrag och innehåller per definition den överordnad kopian av innehållet, medan variationerna innehåller de individuella uppdaterade och anpassade versionerna av det innehållet. När Överordnad uppdateras är det möjligt att dessa ändringar också är relevanta för variationerna och därför måste spridas till dem.
 
-När du redigerar en variant har du tillgång till åtgärden för att synkronisera det aktuella elementet i variationen med mallsidan. På så sätt kan du automatiskt kopiera ändringar som gjorts i mallsidan till den önskade varianten.
+När du redigerar en variant har du tillgång till åtgärden för att synkronisera det aktuella elementet i variationen med Överordnad. På så sätt kan du automatiskt kopiera ändringar som gjorts Överordnad till den önskade variationen.
 
 >[!CAUTION]
->
->Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
->Endast det aktuella elementet i variationen synkroniseras.
->Synkronisering fungerar bara på datatypen **Flerradig text**.
->Du kan inte överföra ändringar *från en variant till **mastern ***.
+Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
+Endast det aktuella elementet i variationen kommer att synkroniseras.
+Synkronisering fungerar bara på datatypen **Flerradig text**.
+Du kan inte överföra ändringar *från en variant till **mastern***.
 
-1. Öppna ditt innehållsfragment i fragmentredigeraren. Kontrollera att **mallsidan** har redigerats.
+1. Öppna ditt innehållsfragment i fragmentredigeraren. Kontrollera att **Överordnad** har redigerats.
 1. Välj en specifik variant och sedan lämplig synkroniseringsåtgärd från antingen:
 
-   * listrutan **Åtgärder** - **Synkronisera aktuellt element med mallsida**
+   * listrutan **Åtgärder** - **Synkronisera aktuellt element med överordnad**
 
-   * verktygsfältet i fullskärmsredigeraren - **Synkronisera med mallsida**
+   * verktygsfältet i fullskärmsredigeraren - **Synkronisera med överordnad**
 
-1. Mallen och variationen visas sida vid sida:
+1. Överordnad och variationen visas sida vid sida:
 
    * grönt anger innehåll som lagts till (i varianten)
    * rött anger att innehållet har tagits bort (från varianten)
    * blå anger ersatt text
-   ![synkronisera med mallsida](assets/cfm-variations-11.png)
+
+   ![synkronisera med överordnad](assets/cfm-variations-11.png)
 
 1. Välj **Synkronisera**. Variationen uppdateras och visas.
