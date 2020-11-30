@@ -18,7 +18,7 @@ Med Cloud Manager kan organisationer själva hantera AEM i molnet. Det innehåll
 
 Mer information finns i följande resurser nedan: 
 
-* [Introduktion till Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/home.html) för att förstå självhjälpsresurser om introduktion för Experience Manager as a Cloud Service.
+* [Onboarding för Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/home.html) för att förstå självhjälpsresurser om onboarding för Experience Manager as a Cloud Service.
 
 * [Integrera Git med Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/managing-code/integrating-with-git.html) för att lära dig mer om hur du använder en enstaka Git-databas för att driftsätta kod.
 
