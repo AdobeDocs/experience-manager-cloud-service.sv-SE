@@ -18,7 +18,7 @@ I många år har AEM varit tillgängligt:
 
 * som hanterad tjänst
 
-Det finns inneboende skillnader mellan dessa tidigare metoder och AEM as a Cloud Service:
+Det finns grundläggande skillnader mellan dessa tidigare metoder och AEM as a Cloud Service:
 
 * [Arkitektur](#architecture)
 * [Uppgraderingar](#upgrades)
@@ -226,7 +226,7 @@ Det innebär att:
 
 * Tunga uppgifter, som köer, jobb och gruppbearbetning, har flyttats från den centrala AEM-instansen för att hanteras av delade och dedikerade mikrotjänster.
 
-Åtgärder för AEM as a Cloud Service stöds också av en ny infrastruktur för övervakning, rapportering och varningar. Detta gör att Adobe SRE:er (Site Reliability Engineers) proaktivt kan underhålla tjänsten. Arkitekturens olika delar är utrustade med en rad olika hälsokontroller. Om en viss nod i arkitekturen av någon anledning inte anses vara felfri tas den bort från tjänsten och ersätts i tysthet med en ny, felfri nod.
+AEM as a Cloud Service stöds också av en ny infrastruktur för övervakning, rapportering och varningar. Detta gör att Adobe SRE:er (Site Reliability Engineers) proaktivt kan underhålla tjänsten. Arkitekturens olika delar är utrustade med en rad olika hälsokontroller. Om en viss nod i arkitekturen av någon anledning inte anses vara felfri tas den bort från tjänsten och ersätts i tysthet med en ny, felfri nod.
 
 ## Identity Management {#identity-management}
 
@@ -256,13 +256,13 @@ Den största skillnaden är att användargränssnittet är helt pekskärmskompat
 
 ## AEM Sites {#aem-sites}
 
-Med Adobe Experience Manager Sites as a Cloud Service kan ni ge kunderna anpassade, innehållsledda upplevelser genom att kombinera kraften i AEM Content Management System med AEM Digital Asset Management.
+Med Adobe Experience Manager Sites as a Cloud Service kan ni ge kunderna anpassade, innehållsledda upplevelser genom att kombinera kraften i AEM:s innehållshanteringssystem med AEM:s digitala resurshantering.
 
 Mer information finns i översikten över [Ändringar i Sites](/help/sites-cloud/sites-cloud-changes.md).
 
 ## AEM Assets {#aem-assets}
 
-Adobe Experience Manager Assets as a Cloud Service är en inbyggd SaaS-lösning i molnet som gör att företag inte bara kan utföra Digital Asset Management- och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, i ett system som alltid är aktuellt, alltid tillgängligt och alltid lär sig.
+Adobe Experience Manager Assets as a Cloud Service är en molnbaserad SaaS-lösning som företag kan använda för att snabbt och effektivt hantera digitala resurser och dynamiska medier. De får även tillgång till nästa generations smarta funktioner, som artificiell intelligens/maskininlärning, i ett system som alltid är aktuellt, alltid tillgängligt och alltid lär sig.
 
 Assets inkluderar nästa generations materialbearbetning i molnet samt högpresterande materialimport och sökning.
 
@@ -277,5 +277,5 @@ Mer information finns i:
 * [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
 * [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
 * [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
-* [Vi introducerar AEM Assets as a Cloud Service](/help/assets/overview.md)
-* [Adobe Experience Manager as a Cloud Service Tutorials](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
+* [Nu kommer AEM Assets as a Cloud Service](/help/assets/overview.md)
+* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
