@@ -2,12 +2,12 @@
 sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
-user-guide-description: Lär dig hur du anpassar driftsättningen av Experience Manager as a Cloud Service med bland annat ämnen om utveckling och driftsättning.
+user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: 1cbc54fb7de0ba9c1c92cdcbe64f02a9e767c3b7
+source-git-commit: ce55065c3ae6a2350ed06811af76477df7c11291
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 59%
+source-wordcount: '436'
+ht-degree: 57%
 
 ---
 
@@ -34,20 +34,23 @@ ht-degree: 59%
 + Utveckla för AEM as a Cloud Service {#developing}
    + [AEM-projektstruktur](developing/introduction/aem-project-content-package-structure.md)
    + [Strukturpaket för AEM-projektdatabas](developing/introduction/repository-structure-package.md)
-   + [AEM as a Cloud Service SDK](developing/introduction/aem-as-a-cloud-service-sdk.md)
+   + [SDK för AEM as a Cloud Service](developing/introduction/aem-as-a-cloud-service-sdk.md)
    + [Utvecklingsriktlinjer för AEM as a Cloud Service](developing/introduction/development-guidelines.md)
    + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
    + [Struktur för AEM](developing/introduction/ui-structure.md)
    + [Fusklapp för Sling](developing/introduction/sling-cheatsheet.md)
    + [Använda Sling-adaptrar](developing/introduction/sling-adapters.md)
    + [Använda Sling Resource Merger i AEM as a Cloud Service](developing/introduction/sling-resource-merger.md)
-   + [Övertäckningar i AEM as a Cloud Service](developing/introduction/overlays.md)
+   + [Överlagring i AEM as a Cloud Service](developing/introduction/overlays.md)
    + [Använda bibliotek på klientsidan](developing/introduction/clientlibs.md)
    + [Konfigurationer och Configuration Browser](developing/introduction/configurations.md)
    + [Loggning](developing/introduction/logging.md)
    + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
    + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
    + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
+   + [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md)
+   + [Bygga in märkord i AEM](/help/implementing/developing/introduction/tagging-applications.md)
+   + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
 + Utvecklarverktyg {#developer-tools}
    + [AEM Developer Tools for Eclipse](/help/implementing/developing/tools/eclipse.md)
    + [Innehållspaket Maven Plugin](/help/implementing/developing/tools/maven-plugin.md)
@@ -100,8 +103,8 @@ ht-degree: 59%
    + [Konfigurera RTE-redigeraren](/help/implementing/developing/extending/rich-text-editor.md)
    + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
    + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
-+ Driftsätta till AEM as a Cloud Service {#deploying}
-   + [Driftsätta till AEM as a Cloud Service](deploying/overview.md)
++ Distribuera till AEM as a Cloud Service {#deploying}
+   + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
    + [AEM versionsuppdateringar](deploying/aem-version-updates.md)
    + [Konfigurera OSGI för AEM as a Cloud Service](deploying/configuring-osgi.md)
 + Författarnivå {#author-tier}
