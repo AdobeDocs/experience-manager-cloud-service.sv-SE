@@ -25,7 +25,7 @@ I/O Runtime-plattformen kan också användas för att utöka eller anpassa e-han
 
 ## 3. Kan produktresurser (bilder) lagras och refereras från AEM via Magento Admin? Hur kan resurser från Dynamic Media förbrukas?
 
-Det finns för närvarande ingen integrering mellan AEM Assets och Magento. Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL:er manuellt i Magento. Dynamic Media är nu en del av AEM Assets och kommer att fungera på samma sätt.
+Det finns för närvarande ingen integrering mellan AEM Assets och Magento. Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL:er manuellt i Magento. Dynamic Media ingår nu i AEM Assets och fungerar på samma sätt.
 
 ## 4. Spelar det någon roll var Magento är i drift? (Lokalt eller i molnet)
 
@@ -37,11 +37,11 @@ Katalogsidor och produktsidor skapas och cachelagras dynamiskt i AEM baserat på
 
 ## 6. Cachelagra även priser och andra data via Dispatcher. Blir det ofta en cachedomål?
 
-Dynamiska data som pris eller lager cachelagras inte på Dispatcher. Dynamiska data hämtas på klientsidan med webbkomponenter direkt via GraphQL API:er. Endast statiska data (som produkt- eller kategoridata) cachelagras på Dispatcher. Om produktdata ändras måste cacheminnet ogiltigförklaras.
+Dynamiska data som pris eller lager cachelagras inte i Dispatcher. Dynamiska data hämtas på klientsidan med webbkomponenter direkt via GraphQL API:er. Endast statiska data (som produkt- eller kategoridata) cachelagras i Dispatcher. Om produktdata ändras måste cacheminnet ogiltigförklaras.
 
 ## 7. Hur fungerar cacheogiltigförklaring för AEM Dispatcher med AEM-Magento?
 
-Vi rekommenderar att du konfigurerar TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar vi att du återger datumet på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [AEM Dispatcher](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
+Vi rekommenderar att du konfigurerar en TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar vi att du återger datumet på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [AEM Dispatcher](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
 
 ## 8. Varför använder du inte We.Retail?
 
@@ -79,7 +79,7 @@ Kunder som vill utöka e-handelstjänsterna kan använda samma integrerings- och
 
 Det finns inga JCR-kataloger eller produktsidor längre. Se fråga 12.
 
-## 17. Fungerar SPA främst med AEM SPA-editor?
+## 17. Lagrar SPA förarbete med AEM SPA?
 
 AEM kan användas som redigeringsverktyg för alla typer av butiker. Hybridåtergivning används för närvarande för den nya butikens framsida. I framtiden kommer AEM att användas för att skapa med SPA och PWA.
 
