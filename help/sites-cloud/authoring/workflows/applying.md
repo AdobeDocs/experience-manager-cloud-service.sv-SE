@@ -41,7 +41,7 @@ Arbetsflöden kan startas från:
 
 >[!NOTE]
 >
->AEM-administratörer kan starta arbetsflöden på flera andra sätt.
+>AEM kan starta arbetsflöden på flera andra sätt.
 
 <!-- 
 >AEM administrators can [start workflows using several other methods](/help/sites-administering/workflows-starting.md).
@@ -123,7 +123,7 @@ Du kan ange information:
 
    * En befintlig resurs som visar ytterligare åtgärder:
 
-      * **Inkludera underordnade objekt** för att ange att underordnade resurser ska inkluderas i arbetsflödet.
+      * **Inkludera underordnade objekt** för att ange att underordnade för den resursen ska inkluderas i arbetsflödet.
 En dialogruta öppnas där du kan förfina markeringen enligt:
 
          * Inkludera endast omedelbara barn.
