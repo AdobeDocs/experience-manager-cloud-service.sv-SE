@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Setting Up Dynamic Media {#setting-up-dynamic-media}
 
-[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att hantera mediefiler genom att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Med Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) kan ni hantera mediefiler genom att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av avancerat innehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 <!-- OBSOLETE UNTIL THE INTEGRATING SCENE7 TOPIC GETS A MAJOR UPDATE
 
@@ -40,4 +40,4 @@ Se även följande avsnitt:
 >
 >**Om du uppgraderar:**
 >
->* När du har AEM aktiverat och igång har alla resurser som du överför Dynamic Media automatiskt aktiverats (om de inte uttryckligen inaktiverats av systemadministratören). Om du är i en uppgraderad instans av AEM och nybörjare i Dynamic Media kan du behöva bearbeta dina resurser på nytt för att göra dem Dynamic Media-aktiverade.
+>* När du har AEM igång och kör alla resurser som du överför har Dynamic Media automatiskt aktiverat (om det inte uttryckligen inaktiverats av systemadministratören). Om du befinner dig på en uppgraderad instans av AEM och inte har använt Dynamic Media tidigare kan du behöva bearbeta om dina resurser för att göra dem dynamiska media-aktiverade.
