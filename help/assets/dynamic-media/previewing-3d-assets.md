@@ -12,15 +12,15 @@ ht-degree: 4%
 
 # Förhandsgranska 3D-resurser i AEM{#previewing-3d-assets}
 
-Adobe Experience Manager har stöd för överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
+Adobe Experience Manager stöder överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
 
-Det interaktiva 3D-visningsprogrammet finns på sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
+Det interaktiva 3D-visningsprogrammet är tillgängligt från sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/dynamic-media/assets-3d.md). -->
 
 ## Format som stöds för 3D-förhandsgranskning i AEM{#supported-3d-previewing-assets}
 
-Interaktiv 3D-förhandsgranskning i AEM stöder följande filformat:
+Interaktiv 3D-förhandsvisning i AEM har stöd för följande filformat:
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
@@ -48,7 +48,7 @@ Dessutom är funktioner i klientdatorn - t.ex. en arbetsstation, bärbar dator e
 
 **Förhandsgranska 3D-resurser i AEM**
 
-1. Kontrollera att du har överfört 3D-resurser till AEM.
+1. Se till att du har överfört 3D-resurser till AEM.
 See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/manage-digital-assets.md#uploading-assets).
 1. Tryck på AEM på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets > Files]**.
 
