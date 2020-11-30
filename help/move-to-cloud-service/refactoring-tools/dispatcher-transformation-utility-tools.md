@@ -25,7 +25,7 @@ Läs [Dispatcher-översikt](https://docs.adobe.com/content/help/en/experience-ma
 
 ### Konfiguration och testning av Apache och Dispatcher {#dispatcher-configurations-cloud}
 
-Du måste lära dig att strukturera AEM as a Cloud Service Apache- och Dispatcher-konfiguration samt att validera och köra den lokalt innan du driftsätter den i molnmiljöer.
+Du måste lära dig att strukturera Apache- och Dispatcher-konfigurationer i AEM as a Cloud Service samt att validera och köra det lokalt innan du driftsätter det i molnmiljöer.
 
 Mer information finns i [Dispatcher i molnet](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html).
 
