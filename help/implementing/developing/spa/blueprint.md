@@ -1,6 +1,6 @@
 ---
 title: SPA Blueprint
-description: I detta dokument beskrivs det allmänna, ramverksoberoende kontrakt som alla SPA-ramverk ska uppfylla för att implementera redigerbara SPA-komponenter inom AEM.
+description: I det här dokumentet beskrivs det allmänna, ramverksoberoende kontrakt som SPA ska uppfylla för att implementera redigerbara SPA komponenter inom AEM.
 translation-type: tm+mt
 source-git-commit: b8bc27b51eefcfcfa1c23407a4ac0e7ff068081e
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # SPA Blueprint {#spa-blueprint}
 
-Om du vill att författaren ska kunna använda AEM SPA-redigerare för att redigera innehållet i en SPA-fil, finns det krav som SPA-programmet måste uppfylla.
+Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera innehållet i en SPA måste SPA uppfylla kraven.
 
 ## Introduktion {#introduction}
 
-I det här dokumentet beskrivs det allmänna kontraktet att alla SPA-ramverk ska uppfylla (dvs. typ av AEM stödlager) för att implementera redigerbara SPA-komponenter i AEM.
+I det här dokumentet beskrivs det allmänna kontraktet att alla SPA ramverk ska uppfylla (dvs. typ av AEM stödlager) för att implementera redigerbara SPA komponenter inom AEM.
 
 Om du vill att författaren ska kunna använda AEM Page Editor för att redigera data som exponeras av ett ramverk för ett enkelsidigt program, måste ett projekt kunna tolka modellstrukturen som representerar semantiken för data som lagras för ett program i AEM. För att uppnå detta mål finns två ramverksbaserade bibliotek: och `PageModelManager` och `ComponentMapping`.
 
@@ -28,13 +28,13 @@ Om du vill att författaren ska kunna använda AEM Page Editor för att redigera
 
 >[!CAUTION]
 >
->Även om SPA-funktionerna i AEM är ramverksoberoende stöds för närvarande bara ramverken React och Angular.
+>Även om SPA i AEM är ramverksoberoende stöds för närvarande bara ramverken React och Angular.
 
 ## PageModelManager {#pagemodelmanager}
 
-Biblioteket `PageModelManager` tillhandahålls som ett NPM-paket som ska användas av ett SPA-projekt. Det medföljer SPA och fungerar som en datamodellshanterare.
+Biblioteket `PageModelManager` tillhandahålls som ett NPM-paket som ska användas av ett SPA projekt. Den medföljer SPA och fungerar som en datamodellshanterare.
 
-För SPA:s räkning tar det bort och hanterar JSON-strukturen som representerar den faktiska innehållsstrukturen. Den ansvarar också för synkroniseringen med SPA för att meddela när komponenterna ska återges på nytt.
+För SPA:s räkning tar den bort och hanterar JSON-strukturen som representerar den faktiska innehållsstrukturen. Den ansvarar också för synkroniseringen med SPA för att meddela när komponenterna ska återges på nytt.
 
 Se NPM-paketet [@adobe/aem-spa-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
 
@@ -62,9 +62,9 @@ Resten av detta dokument beskriver kraven för det mellanliggande ramverksspecif
 
 ### Sidmodell {#page-model}
 
-Innehållsstrukturen för sidan lagras i AEM. Sidans modell används för att mappa och instansiera SPA-komponenter. SPA-utvecklarna skapar SPA-komponenter som de mappar till AEM. För att göra detta använder de resurstypen (eller sökvägen till AEM) som en unik nyckel.
+Innehållsstrukturen för sidan lagras i AEM. Sidans modell används för att mappa och instansiera SPA. SPA utvecklare skapar SPA komponenter som de mappar till AEM komponenter. För att göra detta använder de resurstypen (eller sökvägen till AEM) som en unik nyckel.
 
-SPA-komponenterna måste vara synkroniserade med sidmodellen och uppdateras om innehållet ändras i enlighet med detta. Ett mönster som utnyttjar dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
+De SPA komponenterna måste vara synkroniserade med sidmodellen och uppdateras med eventuella ändringar av innehållet. Ett mönster som utnyttjar dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
 
 ### Metafält {#meta-fields}
 
@@ -160,7 +160,7 @@ Se även npm-resursen [@adobe/aem-rea-editable-components](https://www.npmjs.com
 
 #### Platshållare för det responsiva rutnätet {#placeholder-of-the-responsive-grid}
 
-SPA-komponenten mappas till en grafisk behållare som t.ex. det responsiva stödrastret och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA-filen redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet läggs till i dokumentnoden för det innehållet `data-cq-editor` . När attributet finns med måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan. `data-cq-editor`
+Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet läggs till i dokumentnoden för det innehållet `data-cq-editor` . När attributet finns med måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan. `data-cq-editor`
 
 Till exempel:
 
@@ -269,17 +269,17 @@ Det underliggande [`PageModelManager`](#pagemodelmanager) biblioteket och dess [
 
 De två entiteterna relaterar till begreppet routning, men [`ModelRouter`](routing.md) är bara ansvariga för att läsa in [`PageModelManager`](#pagemodelmanager) med en datamodell som är strukturerad synkroniserad med det aktuella programtillståndet.
 
-Mer information finns i artikeln [SPA-modellroutning](routing.md) .
+Mer information finns i artikeln [SPA Modellroutning](routing.md) .
 
 ## SPA in action {#spa-in-action}
 
 Se hur en enkel SPA fungerar och experimentera med en SPA själv genom att fortsätta med följande dokument:
 
-* [Getting Started with SPAs in AEM Using React](getting-started-react.md).
-* [Komma igång med SPA i AEM med hjälp av Vinkel](getting-started-angular.md).
+* [Komma igång med SPA i AEM med Reagera](getting-started-react.md).
+* [Getting Started with SPA in AEM using Angular](getting-started-angular.md).
 
 ## Ytterligare läsning {#further-reading}
 
 Mer information om SPA i AEM finns i följande dokument:
 
-* [Översikt över](editor-overview.md) SPA-redigeraren för en översikt över SPA-program i AEM och kommunikationsmodellen
+* [Översikt över](editor-overview.md) SPA Editor med en översikt över SPA i AEM och kommunikationsmodellen
