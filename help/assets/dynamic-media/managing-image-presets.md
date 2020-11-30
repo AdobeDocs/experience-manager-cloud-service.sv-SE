@@ -156,7 +156,7 @@ Följande skript används av integreringen med Dynamic Media:
   <tr>
    <td>ThumbnailExport.jsx</td>
    <td>Ja</td>
-   <td>Genererar en 300 ppi- <code>thumbnail.jpg</code> rendering som är optimerad och omvandlad till en PTIFF-rendering efter <code>Dynamic Media Process Image Assets</code> processens komponent.<br /> </td>
+   <td>Genererar en 300 ppi- <code>thumbnail.jpg</code> rendering som är optimerad och omvandlad till en PTIFF-rendering efter <code>Dynamic Media Process Image Assets</code> processreferens.<br /> </td>
   </tr>
   <tr>
    <td>JPEGPagesExport.jsx</td>
@@ -394,7 +394,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Bildmodifierare</strong></td>
-   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet har Dynamic Media stöd för många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong> . Dessa parametrar definieras i kommandoreferensen <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">för</a>Image Server Protocol.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
+   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet har Dynamic Media stöd för många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong> . De här parametrarna definieras i <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
     <ul>
      <li>Grundläggande kommandon för mallar och textåtergivning: <code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> och <code>textPs=</code></li>
      <li>Lokaliseringskommandon: <code>locale=</code> och <code>req=xlate</code></li>
@@ -411,7 +411,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
 
 ### Definiera bildförinställningsalternativ med bildmodifierare {#defining-image-preset-options-with-image-modifiers}
 
-Förutom alternativen på flikarna Grundläggande och Avancerat kan du definiera bildmodifierare som ger dig fler alternativ när du definierar bildförinställningar. Bildåtergivning bygger på Scene7 API för bildåtergivning och definieras i detalj i [HTTP-protokollreferensen](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/c_http_protocol_reference.html).
+Förutom alternativen på flikarna Grundläggande och Avancerat kan du definiera bildmodifierare som ger dig fler alternativ när du definierar bildförinställningar. Bildåtergivning är beroende av Scene7 API för bildåtergivning och definieras i detalj i [HTTP-protokollreferensen](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/c_http_protocol_reference.html).
 
 Nedan följer några grundläggande exempel på vad du kan göra med bildmodifierare.
 
