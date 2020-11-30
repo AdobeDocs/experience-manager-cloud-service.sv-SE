@@ -1,6 +1,6 @@
 ---
 title: Grundläggande hantering
-description: Bekväm navigering i AEM och dess grundläggande användning
+description: Bekanta dig med navigering i AEM och dess grundläggande användning
 translation-type: tm+mt
 source-git-commit: 996a1b49889816d3b887d8d568ec56b72bd99074
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # Grundläggande hantering {#basic-handling}
 
-Det här dokumentet är utformat för att ge en översikt över grundläggande hantering när du använder AEM-redigeringsmiljön. Den använder **platskonsolen** som grund.
+Dokumentet är utformat för att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder **platskonsolen** som grund.
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ Det här dokumentet är utformat för att ge en översikt över grundläggande h
 
 ## Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
-AEM:s användargränssnitt är aktiverat för pekskärmar. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att trycka, hålla ned och dra. Eftersom AEM-gränssnittet är pekaktiverat kan du använda pekgester på dina pekenheter, som mobiltelefonen eller surfplattan. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
+AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att trycka, hålla ned och dra. Eftersom användargränssnittet för AEM är pekaktiverat kan du använda pekgester på enheter med pekskärm som mobiltelefonen eller surfplattan. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
 
 ## Steg 1 {#first-steps}
 
@@ -30,11 +30,11 @@ Direkt efter inloggningen kommer du till [navigeringspanelen](#navigation-panel)
 
 ![Navigeringspanelen](/help/sites-cloud/authoring/assets/navigation.png)
 
-För att få en god förståelse för den grundläggande användningen av AEM är det här dokumentet baserat på **webbplatskonsolen** . Klicka på eller tryck på **Sites** för att komma igång.
+För att få en bättre förståelse för AEM basanvändning är det här dokumentet baserat på **webbplatskonsolen** . Klicka på eller tryck på **Sites** för att komma igång.
 
 ## Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudiekurs. Klicka eller tryck dig fram en stund för att få en bra överblick över den grundläggande hanteringen av AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudiekurs. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
 
 ![Navigering, genomgång](/help/sites-cloud/authoring/assets/tutorial.png)
 
@@ -44,7 +44,7 @@ Klicka eller tryck på **Nästa** för att gå vidare till nästa sida i översi
 
 ## Global navigering {#global-navigation}
 
-Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar på eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
+Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
 
 Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på **Stäng** för att gå tillbaka till föregående plats.
 
@@ -52,8 +52,8 @@ Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på 
 
 Global navigering har två paneler, som representeras av ikoner i skärmens vänstra marginal:
 
-* **[Navigering](#navigation-panel)**- representeras av en kompass och standardpanelen när du loggar in på AEM
-* **[Verktyg](#tools-panel)**- motsvaras av en hammare
+* **[Navigering](#navigation-panel)** - representeras av en kompass och standardpanelen när du loggar in på AEM
+* **[Verktyg](#tools-panel)** - motsvaras av en hammare
 
 De alternativ som är tillgängliga på dessa paneler beskrivs nedan.
 
@@ -70,9 +70,9 @@ Följande konsoler finns i Navigation:
 | Konsol | Syfte |
 |---|---|
 | Projekt | Med projektkonsolen får du direktåtkomst till dina projekt. [Projekt är virtuella kontrollpaneler](/help/sites-cloud/authoring/projects/overview.md) som kan användas för att skapa ett team. Sedan kan ni ge teamet tillgång till resurser, arbetsflöden och uppgifter och på så sätt låta andra arbeta mot ett gemensamt mål. |
-| Sites | Med platskonsolerna kan du [skapa, visa och hantera webbplatser](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) som körs på din AEM-instans. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
+| Sites | Med platskonsolerna kan du [skapa, visa och hantera webbplatser](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) som körs på AEM. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
 | Experience Fragments | En [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en fristående upplevelse som kan återanvändas i alla kanaler och ha variationer, vilket sparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger. |
-| Assets | Med Resurskonsolen kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans.<!--add some kind of assets link--> |
+| Assets | Med Resurskonsolen kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM.<!--add some kind of assets link--> |
 | Personanpassning | Den här konsolen innehåller ett ramverk med verktyg för att [skapa riktat innehåll och presentera personaliserade upplevelser.](/help/sites-cloud/authoring/personalization/overview.md) |
 
 ## Panelen Verktyg {#tools-panel}
@@ -143,7 +143,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
 * [Vyer](#viewing-and-selecting-resources)
 
-   Vyikonen finns längst till höger i AEM-verktygsfältet. Eftersom den aktuella vyn också visas ändras den. I standardvyn visas till exempel **Kolumnvy** :
+   Vyikonen finns längst till höger i verktygsfältet AEM. Eftersom den aktuella vyn också visas ändras den. I standardvyn visas till exempel **Kolumnvy** :
 
    ![Knappen Vyer](/help/sites-cloud/authoring/assets/views-button.png)
 
@@ -175,7 +175,7 @@ Det finns olika hjälpresurser:
 
 * **Navigering**
 
-   Första gången du navigerar i systemet introduceras AEM-navigering i [en serie bilder](#product-navigation).
+   Första gången du navigerar i systemet visas [en serie bilder med AEM navigering](#product-navigation).
 
    ![Självstudiekurs](/help/sites-cloud/authoring/assets/tutorial.png)
 
@@ -187,7 +187,7 @@ Det finns olika hjälpresurser:
 
    Navigera i den här översikten på samma sätt som du gör i [produktnavigeringsöversikten](#product-navigation) när du först öppnar en konsol.
 
-   På menyn [**Sidinformation **kan du när som helst välja** Hjälp **](/help/sites-cloud/authoring/fundamentals/environment-tools.md#accessing-help)för att visa detta igen.
+   På menyn [**Sidinformation** kan du när som helst välja **Hjälp**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#accessing-help) för att visa detta igen.
 
 * **Verktygskonsol**
 
@@ -195,6 +195,7 @@ Det finns olika hjälpresurser:
 
    * **Dokumentation** - se dokumentationen för Web Experience Management
    * **Resurser** för utvecklare - resurser och nedladdningar för utvecklare
+
    >[!NOTE]
    >
    >Du kan när som helst öppna en översikt över kortkommandon med snabbtangenten `?` (frågetecken) i en konsol.
@@ -245,7 +246,7 @@ Du kan visa, navigera i och välja (för ytterligare åtgärder) dina resurser m
 
 >[!NOTE]
 >
->Som standard visar AEM Resurser inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Resurser så att de ursprungliga återgivningarna visas som miniatyrbilder.
+>Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas som miniatyrbilder.
 
 ### Välja resurser {#selecting-resources}
 
@@ -309,6 +310,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * När du väljer det här alternativet kommer en bock att läggas över miniatyrbilden och resursnamnet kommer också att markeras.
    * Information om den valda resursen visas i den sista kolumnen.
    * Verktygsfältet för funktionsmakron blir tillgängligt.
+
    När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
 
    * Sidtitel
