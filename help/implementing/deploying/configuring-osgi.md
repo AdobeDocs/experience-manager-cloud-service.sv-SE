@@ -510,7 +510,7 @@ $ aio cloudmanager:set-environment-variables ENVIRONMENT_ID --delete MY_VAR1 MY_
 
 >[!NOTE]
 >
->På [den här sidan](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) finns mer information om hur du konfigurerar värden med hjälp av plugin-programmet Cloud Manager för Adobe I/O CLI.
+>På [den här sidan](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) finns mer information om hur du konfigurerar värden med plugin-programmet Cloud Manager för Adobe I/O CLI.
 
 ### Antal variabler {#number-of-variables}
 
