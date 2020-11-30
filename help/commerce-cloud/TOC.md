@@ -15,7 +15,7 @@ ht-degree: 7%
 # Handel {#commerce}
 
 + [AEM Commerce som Cloud Service](/help/commerce-cloud/home.md)
-+ [Onboarding](overview.md)
++ [Introduktion](overview.md)
 + [Viktiga ändringar](changes.md)
 + Arkitektur {#architecture}
    + [Integrering med Magento](architecture/magento.md)
