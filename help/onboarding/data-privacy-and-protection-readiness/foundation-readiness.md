@@ -1,6 +1,6 @@
 ---
 title: Dataskydd och dataintegritet - Adobe Experience Manager som Cloud Service Foundation Readiness
-description: 'Läs mer om Adobe Experience Manager som en Cloud Service Foundation-support för de olika dataskydds- och dataintegritetsreglerna. inklusive EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt. '
+description: 'Läs mer om Adobe Experience Manager som en Cloud Service Foundation-support för de olika dataskydds- och dataintegritetsreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt. '
 translation-type: tm+mt
 source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Mer information om Adobes svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobes Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 ## Stöd för AEM Foundation Data Privacy and Protection {#aem-foundation-data-privacy-and-protection-support}
 
@@ -46,7 +46,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
 ### HTTP API {#http-api}
 
-Som vi nämnt tillhandahåller Adobe API:er för åtkomst av användardata för att underlätta automatisering. Det finns flera typer av API:er som du kan använda:
+Som vi nämnt tillhandahåller Adobe API:er för åtkomst av användardata, för att underlätta automatisering. Det finns flera typer av API:er som du kan använda:
 
 **UserProperties API**
 
@@ -96,7 +96,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 >[!NOTE]
 >
->För AEM som Cloud Service finns det ingen manuell procedur i användargränssnittet för att ta bort en användarprofil, eftersom CRXDE inte är tillgängligt.
+>För AEM som Cloud Service finns det ingen manuell procedur tillgänglig från användargränssnittet för borttagning av en användarprofil eftersom CRXDE inte är tillgängligt.
 
 ### HTTP API {#http-api-1}
 
