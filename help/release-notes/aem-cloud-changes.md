@@ -12,7 +12,7 @@ ht-degree: 8%
 
 # Notable Changes to Adobe Experience Manager (AEM) as a Cloud Service {#notable-changes-aem-cloud}
 
-AEM Cloud Service har många nya funktioner och möjligheter för att hantera dina AEM-projekt. Det finns dock ett antal skillnader mellan AEM Sites på plats eller i Adobe Managed Service jämfört med AEM Cloud Service. Det här dokumentet visar de viktiga skillnaderna.
+AEM Cloud Service har många nya funktioner för  att administrera AEM-projekt. Det finns dock ett antal skillnader mellan AEM Sites på plats eller i Adobe Managed Service jämfört med AEM Cloud Service. Det här dokumentet visar de viktiga skillnaderna.
 
 >[!NOTE]
 >Det här dokumentet markerar de anmärkningsvärda ändringarna av AEM som helhet. Mer information och lösningsspecifika ändringar finns i:
