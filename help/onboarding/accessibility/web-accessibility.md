@@ -10,7 +10,7 @@ ht-degree: 100%
 ---
 
 
-# Adobe Experience Manager as a Cloud Service  och riktlinjerna för webbtillgänglighet{#aem-and-the-web-accessibility-guidelines}
+# Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet{#aem-and-the-web-accessibility-guidelines}
 
 Det finns många sociala, ekonomiska och juridiska skäl för att se till att webbinnehåll är utformat för att vara så tillgängligt som möjligt för målgruppen, oavsett eventuella funktionshinder eller begränsningar som de har. Webbtillgänglighet med Adobe Experience Manager (AEM) as a Cloud Service är därför en allt viktigare aspekt av bra webbdesign.
 
