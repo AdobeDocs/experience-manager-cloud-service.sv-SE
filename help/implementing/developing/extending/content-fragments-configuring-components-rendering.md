@@ -25,14 +25,16 @@ Vi rekommenderar att du använder kärnkomponenterna.
 
 >[!CAUTION]
 >
->* **Om du inte behöver de[avancerade tjänster](#definition-of-advanced-services-that-need-configuration)**som beskrivs nedan kan du ignorera den här konfigurationen.
+>* **Om du inte behöver de [avancerade tjänster](#definition-of-advanced-services-that-need-configuration)** som beskrivs nedan kan du ignorera den här konfigurationen.
+   >
+   >
+* **När du utökar eller använder en eller flera färdiga komponenter** bör du inte ändra OSGi-konfigurationen.
+   >
+   >
+* **Du kan skriva en helt ny komponent som endast använder API:t för innehållsfragment, utan några avancerade tjänster**. I så fall måste du dock utveckla komponenten så att den hanterar lämplig bearbetning.
 >
->* **När du utökar eller använder en eller flera färdiga komponenter** bör du inte ändra OSGi-konfigurationen.
 >
->* **Du kan skriva en helt ny komponent som endast använder API:t för innehållsfragment, utan några avancerade tjänster**. I så fall måste du dock utveckla komponenten så att den hanterar lämplig bearbetning.
->
->
->Därför rekommenderar vi att du använder kärnkomponenterna.
+Därför rekommenderar vi att du använder kärnkomponenterna.
 
 ## Definition av avancerade tjänster som behöver konfigureras {#definition-of-advanced-services-that-need-configuration}
 
@@ -136,7 +138,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
 
 ## Exempel {#example}
 
-Se följande (i en körklar AEM-instans) som exempel:
+Se följande (i en AEM som inte finns i kartongen):
 
 ```
 /apps/core/wcm/config/com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl-core-comp-v1.config
