@@ -1,6 +1,6 @@
 ---
 title: Experience Fragments
-description: Använd Adobe Experience Manager som molntjänstefunktioner för att göra era upplevelser återanvändbara och flexibla.
+description: Använd Adobe Experience Manager som Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 translation-type: tm+mt
 source-git-commit: b7a2e86de27dbfcdecaf3a2bc1984678b7b69375
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 7%
 
 # Experience Fragments {#experience-fragments}
 
-I Adobe Experience Manager som en molntjänst, en upplevelsefragment:
+Inom Adobe Experience Manager som Cloud Service, en Experience Fragment:
 * är en grupp med en eller flera komponenter
 * innehåller både innehåll och layout
 * kan refereras inom sidor
@@ -210,7 +210,7 @@ Till exempel: `http://<host>:<port>/editor.html/content/experience-fragments/wkn
 
 ## Skapa en upplevelsefragmentvariant {#creating-an-experience-fragment-variation}
 
-Ni kan skapa olika upplevelsefragment beroende på era behov:
+Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 
 1. Öppna fragmentet för [redigering](#editing-your-experience-fragment).
 1. Öppna fliken **Variationer** .
@@ -229,6 +229,7 @@ Ni kan skapa olika upplevelsefragment beroende på era behov:
    * **Namn** - Om det lämnas tomt hämtas det från titeln
    * **Beskrivning**
    * **Variationstaggar**
+
    Till exempel:
 
    ![Variantegenskaper](/help/sites-cloud/authoring/assets/xf-07.png)
@@ -247,6 +248,7 @@ Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 
    * Dra det önskade fragmentet från Resursläsaren och släpp det på komponenten.
    * Select **Configure** from the component toolbar and specify the fragment to use, confirm with **Done**.
+
    >[!NOTE]
    >
    >Redigera i komponentverktygsfältet fungerar som ett kortkommando för att öppna fragmentet i fragmentredigeraren.
@@ -333,7 +335,7 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn** vi
       * **Antal sidor som använder det här fragmentet** - endast information
    * **Cloud Services**
       * **Molnkonfiguration**
-      * **Konfigurationer av molntjänster**
+      * **Cloud Service Configurations**
       * **ID för Facebook-sida**
       * **Pinterest board**
    * **Referenser**
@@ -351,6 +353,6 @@ Med hjälp av väljaren i URL:en kan du komma åt den vanliga HTML-återgivninge
 
 ## Exportera Experience Fragments {#exporting-experience-fragments}
 
-Som standard levereras Experience Fragments i HTML-format. Detta kan användas av både AEM- och tredjepartskanaler.
+Som standard levereras Experience Fragments i HTML-format. Detta kan användas av både AEM och tredjepartskanaler.
 
-JSON kan också användas för export till Adobe Target. Mer information finns i Målintegrering med Experience Fragments. <!--For export to Adobe Target, JSON can also be used. See [Target Integration with Experience Fragments](/help/sites-administering/experience-fragments-target.md) for full information.-->
+JSON kan även användas för export till Adobe Target. Mer information finns i Målintegrering med Experience Fragments. <!--For export to Adobe Target, JSON can also be used. See [Target Integration with Experience Fragments](/help/sites-administering/experience-fragments-target.md) for full information.-->
