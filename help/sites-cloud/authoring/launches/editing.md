@@ -40,7 +40,7 @@ Mer information finns i Ändra Live Copy-innehåll. <!--See [Changing Live Copy 
 Om du vill spåra de ändringar du har gjort kan du visa startsidan i **Referenser** och jämföra startsidan med dess källsida:
 
 1. Gå **till startsidan i konsolen** Platser [och markera den](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
-1. Öppna panelen **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)**och välj **Starta**.
+1. Öppna panelen **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** och välj **Starta**.
 1. Välj en specifik start och sedan **Jämför med källa**:
 
    ![Jämför start med källa](/help/sites-cloud/authoring/assets/launches-compare.png)
