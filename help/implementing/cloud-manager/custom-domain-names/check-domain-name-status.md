@@ -74,7 +74,7 @@ Lägg till alla följande A-poster i domänens DNS-inställningar via din domän
 Du kan ta reda på om ditt domännamn tolkas som en Cloud Service-webbplats på rätt sätt till AEM genom att klicka på statusikonen för DNS-posten i tabellen på sidan Domäninställningar. Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av följande statusmeddelanden:
 
 >[!NOTE]
->Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn först verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **Lös igen** bredvid statusen. INFOGA BILD
+>Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **Lös igen** bredvid statusen. INFOGA BILD
 
 * **DNS-status kan inte identifieras** förrän ditt anpassade domännamn har verifierats och distribuerats. Den här statusen visas även när ditt anpassade domännamn håller på att tas bort.
 
