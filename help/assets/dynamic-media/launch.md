@@ -198,7 +198,7 @@ På samma sätt uppdateras värdena för dataelement automatiskt när visningspr
 
 Alla Dynamic Media-visningsprogram har en unik identifierare på webbsidan. Dataelementet håller reda på själva värdet och det visningsprogram som har fyllt i värdet. Det innebär att om det finns flera visningsprogram på samma sida, och det finns ett **[!UICONTROL AssetName]** dataelement som pekar på händelsen **[!UICONTROL LOAD]** och dess ”asset”-argument, så behåller dataelementet **[!UICONTROL AssetName]** en samling med resursnamn som är associerade med de visningsprogram som är inlästa på sidan.
 
-Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om dataelementet begärs i en regel som utlöstes av en Dynamic Media Viewer-händelse, returneras Data Element-värdet för det visningsprogram som initierade regeln. Om dataelementet begärs i en regel som utlöstes av en händelse från något annat Adobe-startstillägg, är värdet för dataelementet värdet från det visningsprogram som var det sista som uppdaterade det här dataelementet.
+Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om dataelementet begärs i en regel som utlöstes av en Dynamic Media Viewer-händelse, returneras Data Element-värdet för det visningsprogram som initierade regeln. Och om dataelementet begärs i en regel som utlöstes av en händelse från något annat Adobe Launch-tillägg, är värdet för dataelementet värdet från det visningsprogram som var det sista som uppdaterade det här dataelementet.
 
 **Se följande exempeluppsättning**:
 
@@ -227,7 +227,7 @@ Samplingsuppsättningen ovan påverkar också dataelementvärdets livslängd. V�
 
 Värdena för dataelement som drivs av dynamiska medievyer lagras inte i den lokala lagringen eller på servern. i stället finns de bara i Adobe Launch-biblioteket på klientsidan. Värdena för sådana dataelement försvinner när webbsidan läses in igen.
 
-I allmänhet har dataelementsredigeraren stöd för val av [lagringstid](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html#create-a-data-element). Dataelement som använder tillägget Dynamiska medievisningsprogram har dock bara stöd för alternativet för lagringstid i **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet för dataelementet separat: Data-elementet som behåller värdet för visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
+I allmänhet har dataelementsredigeraren stöd för val av [lagringstid](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html#create-a-data-element). Dataelement som använder tillägget för dynamiska medievisningsprogram har dock bara stöd för alternativet för lagringstid i **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet för dataelementet separat: Data-elementet som behåller värdet för visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
 
 ### Regler i tillägget Dynamiska medievyer {#about-rules-in-the-dynamic-media-viewers-extension}
 
@@ -408,7 +408,7 @@ Du konfigurerar integreringen i följande Adobe-produkter:
 
 Om den här integrationslösningen används med AEM Sites måste dessutom följande konfiguration göras:
 
-* Adobe I/O-konsol - integrering skapas för Adobe Launch.
+* Adobe I/O Console - integrering skapas för Adobe Launch.
 * AEM författarnod - IMS-konfiguration och Adobe Launch-molnkonfiguration.
 
 Som en del av konfigurationen bör du kontrollera att du har tillgång till ett företag i Adobe Experience Cloud som redan har Adobe Analytics och Adobe Launch aktiverat.
@@ -560,7 +560,7 @@ Se [Adobe Media Analytics för ljud- och videotillägg](https://docs.adobe.com/c
 
 Välj **[!UICONTROL enable Adobe Analytics for Video]** om du vill aktivera (starta) spårning av pulsslag för video.
 
-Observera att tillägget *Dynamiska medievyer* bara är tillgängligt när det skrivs om Adobe Launch-egenskapen har skapats för utveckling.
+Observera att tillägget *Dynamiska medievyer* endast är tillgängligt när du skriver det om Adobe Launch-egenskapen har skapats för utveckling.
 
 Se [Skapa en egenskap i Adobe Launch](#creating-a-property-in-adobe-launch).
 
@@ -685,7 +685,7 @@ Den AEM konfigurationen består av följande två huvudsteg:
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
-1. Gå till [Adobe I/O-konsolen](https://console.adobe.io/integrations)på en ny flik i webbläsaren.
+1. Gå till [Adobe I/O Console](https://console.adobe.io/integrations)på en ny flik i webbläsaren.
 
 1. Klicka på på **[!UICONTROL Adobe I/O Console Integrations]** sidan i det övre högra hörnet **[!UICONTROL New integration]**.
 1. I dialogrutan **[!UICONTROL Create a new integration]** kontrollerar du att alternativknappen **[!UICONTROL Access an API]** är markerad och sedan klickar du på **[!UICONTROL Continue]**.
