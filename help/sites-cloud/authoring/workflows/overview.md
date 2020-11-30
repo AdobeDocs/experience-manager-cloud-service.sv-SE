@@ -12,7 +12,7 @@ ht-degree: 7%
 
 # Arbeta med arbetsflöden {#working-with-workflows}
 
-Med AEM-arbetsflöden kan du automatisera en serie steg som utförs på (en eller flera) sidor och/eller resurser.
+AEM arbetsflöden gör att du kan automatisera en serie steg som utförs på (en eller flera) sidor och/eller resurser.
 
 Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver:
 
