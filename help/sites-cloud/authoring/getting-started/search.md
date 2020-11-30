@@ -61,12 +61,13 @@ Så här söker och filtrerar du resurser:
    * Sökkatalog
    * Taggar
    * Sökvillkor, till exempel Ändrade datum, Publiceringsstatus, LiveCopy-status
+
    >[!NOTE]
    >
    >Sökvillkoren kan variera:
    >
    >* Beroende på vilken resurstyp du har valt; Exempelvis är kriterierna Assets och Communities begripligt specialiserade.
-   >* Din instans som sökformulär kan anpassas (lämplig för platsen i AEM).
+   >* Instansen som sökningen i Forms kan anpassas (lämplig för platsen i AEM).
 
 
 <!--
