@@ -13,18 +13,19 @@ ht-degree: 12%
 
 # Metadatascheman {#metadata-schemas}
 
-I Adobe Experience Manager Resurser (AEM) definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat i ett metadataram. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare.
+I Adobe Experience Manager Resurser (AEM) definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat i ett metadataschema. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare.
 
-Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga scheman eller lägga till anpassade metadatascheman.
+Du kan använda Forms-redigeraren för metadatamodeller för att ändra befintliga scheman eller lägga till anpassade metadatamatcheman.
 
 1. Om du vill visa egenskapssidan för en resurs klickar eller trycker du på **[!UICONTROL View Properties]** -ikonen från Snabbåtgärder på resurspanelen i kortvyn. Du kan också markera resursen i användargränssnittet och sedan klicka på eller trycka på **[!UICONTROL Properties]** ikonen i verktygsfältet.
 1. Redigera olika metadataegenskaper under de olika flikarna. Du kan dock inte ändra resurstypen på egenskapssidan.
-Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata Schema-formulär](#edit-metadata-schema-forms) . Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` endast ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
+Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera Forms](#edit-metadata-schema-forms) för metadatamatchning. Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` endast ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
 1. Om du vill visa en lista med formulär/mallar klickar du på AEM-logotypen och navigerar sedan till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 AEM innehåller följande mallar:
 
    * **standard**: Basmetadataschemaformuläret för resurser.
+
    Följande underordnade formulär ärver egenskaperna för standardformuläret:
 i. **bild**: Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel `image/jpeg`, `image/png`osv.
 &quot;Bildsformuläret har följande underordnade formulärmallar:
@@ -194,7 +195,7 @@ Klicka `+` för att lägga till en ny flik i ett schemaformulär. Som standard h
 
 ## Tar bort metadatamatchformulär {#deleting-metadata-schema-forms}
 
-Med AEM kan du bara ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
+AEM låter dig endast ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
 
 Om du vill ta bort ett formulär markerar du det och klickar på ikonen Ta bort.
 
@@ -204,7 +205,7 @@ Om du vill ta bort ett formulär markerar du det och klickar på ikonen Ta bort.
 
 >[!NOTE]
 >
->Du kan inte ta bort metadatamatchschemaformulär i AEM Resurser.
+>Du kan inte ta bort metadatamatchschemaformulär i AEM Assets.
 
 ## Schemaformulär för MIME-typer {#schema-forms-for-mime-types}
 
@@ -247,7 +248,7 @@ Funktionen Metadata Schema är bara tillgänglig för administratörer. Administ
 
 ## Använda mappspecifika metadata {#applying-folder-specific-metadata}
 
-Med AEM Resurser kan du definiera en variant av ett metadatamatchema och tillämpa det på en viss mapp.
+Med AEM Assets kan du definiera en variant av ett metadataram och använda det på en viss mapp.
 
 Du kan t.ex. definiera en variant av standardmetadataschemat och använda det på en mapp. När du använder det ändrade schemat åsidosätter det det ursprungliga standardmetadatarammet som används för resurser i mappen.
 
@@ -284,7 +285,7 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 1. Redigera det anpassade formuläret. Lägg till ett obligatoriskt fält. Lägg till exempel till ett **[!UICONTROL Category]** fält och gör fältet obligatoriskt.
 1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret visas på **[!UICONTROL Metadata Schema Forms]** sidan. Markera formuläret och klicka eller tryck sedan på **[!UICONTROL Apply to Folder(s)]** i verktygsfältet för att använda anpassade metadata i en mapp.
 1. Navigera till mappen och överför vissa resurser med saknade metadata för det obligatoriska fältet som du lade till i det anpassade formuläret. Ett meddelande om saknade metadata för det obligatoriska fältet visas i kortvyn för resursen.
-1. (Valfritt) Åtkomst `https://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` komponenter som är inaktiverade som standard. Ange en frekvens som AEM ska kontrollera om metadata för resurserna är giltiga.
+1. (Valfritt) Åtkomst `https://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` komponenter som är inaktiverade som standard. Ange en frekvens med vilken AEM kontrollerar om metadata för resurserna är giltiga.
 
    Den här konfigurationen lägger till en egenskap `hasValidMetadata` till `jcr:content` resurser. Med den här egenskapen kan AEM filtrera resultatet i en sökning.
 
