@@ -103,7 +103,7 @@ När certifikatet upphör att gälla är det inte längre tillförlitligt. Följ
 
    ![Ta bort befintlig likhetssökningspost i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat](assets/smarttags_delete_similaritysearch_keystore.png)
 
-   *Bild: Ta bort den befintliga`similaritysearch`-posten i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat.*
+   *Bild: Ta bort den befintliga `similaritysearch`-posten i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat.*
 
 1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Öppna den tillgängliga konfigurationen för Smart Tags. Om du vill hämta ett offentligt certifikat klickar du på **[!UICONTROL Download Public Certificate]**.
 
