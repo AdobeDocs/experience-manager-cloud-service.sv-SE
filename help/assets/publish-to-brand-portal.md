@@ -109,6 +109,7 @@ Du kan publicera eller avpublicera resursmappar direkt eller schemalägga åtgä
          Klicka på **Nästa.**
 
       1. Bekräfta ditt val i **[!UICONTROL Scope]** och klicka på **[!UICONTROL Publish to Brand Portal]**.
+
    Ett meddelande visas som anger att mappen har placerats i kö för publicering på varumärkesportalen. Logga in på gränssnittet för varumärkesportalen för att visa den publicerade resursen.
 
 1. **Publicera mappar senare**
