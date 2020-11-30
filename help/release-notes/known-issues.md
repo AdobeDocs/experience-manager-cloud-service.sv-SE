@@ -1,6 +1,6 @@
 ---
 title: Kända fel
-description: Versionsinformation som är specifik för Kända problem med Adobe Experience Manager som en molntjänst
+description: Versionsinformation om kända problem med Adobe Experience Manager som Cloud Service
 translation-type: tm+mt
 source-git-commit: 165dc4af656ce1bc431d2f921775ebda4cf4de9f
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Known issues {#known-issues}
 
-I den här artikeln listas kända problem i Adobe Experience Manager som ett molnerbjudande. Listan revideras och uppdateras med varje kontinuerlig version av Experience Manager.
+I den här artikeln listas de kända problemen med Adobe Experience Manager som en Cloud Service. Förteckningen revideras och uppdateras för varje kontinuerlig version av Experience Manager.
 
 [Kontakta supporten](https://helpx.adobe.com/support/experience-manager.html) om du vill ha mer information om kända fel.
 
@@ -32,12 +32,12 @@ Några kända fel är:
 
 ### Kommande Assets-funktioner {#upcoming-assets-capabilities}
 
-Några av funktionerna i Adobe Experience Manager Assets som är beroende av grundfunktionerna, som ännu inte är tillgängliga i Experience Manager som en distributionsarkitektur för molntjänster, förväntas aktiveras i ett senare skede:
+Några funktioner i Adobe Experience Manager Assets som bygger på grundfunktioner, som ännu inte är tillgängliga i Experience Manager som arkitektur för driftsättning av Cloud Service, förväntas aktiveras i ett senare skede:
 
 * Funktioner som inte är aktiverade i det här skedet på grund av beroendet av API:er i Commerce Integration Framework:
    * Arbetsflödesmodeller för Photoshop.
    * Fliken Produktinformation i användargränssnittet för resursegenskaper har inte fyllts i.
-* Funktioner som inte är aktiverade i det här skedet på grund av beroendet av InDesign Server-integrering:
+* Funktioner som inte är aktiverade i det här skedet på grund av beroendet av integrering med InDesign Server:
    * Resursmallar och tillgångskataloger.
    * Flersidig förhandsgranskning av Adobe InDesign-filer.
 
