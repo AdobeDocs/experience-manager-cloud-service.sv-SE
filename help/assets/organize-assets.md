@@ -23,7 +23,7 @@ När du organiserar en samling resurser, till exempel alla *naturbilder* , kan d
 
 >[!NOTE]
 >
->Det går inte att dela en resursmapp (i Marketing Cloud) av den typen `sling:OrderedFolder`. Om du vill dela en mapp ska du inte välja Ordnad när du skapar en mapp.
+>Det går inte att dela en resursmapp (i Marketing Cloud) av typen `sling:OrderedFolder`. Om du vill dela en mapp ska du inte välja Ordnad när du skapar en mapp.
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp.
 1. In the menu, click **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
