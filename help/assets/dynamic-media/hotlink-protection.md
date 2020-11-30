@@ -16,4 +16,4 @@ Hotlinking är när en tredjepartswebbplats använder HTML-kod för att visa en 
 
 [Adobe Support](https://helpx.adobe.com/support.html) kan konfigurera ett referensfilter på CDN-nivå så att Dynamic Media-innehåll endast kan användas för webbplatser i din lista över tillåtna webbplatser för domänen.
 
-Hotlink-skydd kräver att du använder Adobes paketerade CDN. För att aktivera hotlink-skydd måste en administratör skapa en supportbiljett för att begära konfigurationsändringen av ditt Dynamic Media-konto. Det kostar inget mer att aktivera hotlink-skydd.
+Hotlink-skydd kräver att du använder Adobe’s bundled CDN. För att aktivera hotlink-skydd måste en administratör skapa en supportbiljett för att begära konfigurationsändringen av ditt Dynamic Media-konto. Det kostar inget mer att aktivera hotlink-skydd.
