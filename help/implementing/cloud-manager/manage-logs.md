@@ -72,7 +72,7 @@ Environment Id Service    Name
 
 ### Ytterligare resurser {#resources}
 
-Mer information om API:t för Cloud Manager och Adobe I/O CLI finns i följande extraresurser:
+Mer information om API:t för Cloud Manager och Adobe I/O CLI finns i följande resurser:
 
 * [API-dokumentation för Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
 * [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)
