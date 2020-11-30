@@ -1,6 +1,6 @@
 ---
 title: Navigering
-description: Navigering - molntjänst
+description: Navigering - Cloud Service
 translation-type: tm+mt
 source-git-commit: c5ee964fad3e1430e7c08f0cca76aecfae8bd44f
 workflow-type: tm+mt
@@ -10,9 +10,9 @@ ht-degree: 1%
 ---
 
 
-# Få åtkomst till Experience Manager as a Cloud Service {#navigation}
+# Få tillgång till Experience Manager as a Cloud Service {#navigation}
 
-När din systemadministratör har gett dig tillgång till Cloud Manager får du ett e-postmeddelande som tar dig till inloggningssidan för Cloud Manager som också är tillgänglig via [Adobe Experience Cloud](https://my.cloudmanager.adobe.com/).
+När din systemadministratör har gett dig åtkomst till Cloud Manager får du ett e-postmeddelande som tar dig till inloggningssidan för Cloud Manager som också är tillgänglig via [Adobe Experience Cloud](https://my.cloudmanager.adobe.com/).
 
 När inloggningen är klar dirigeras du till landningssidan för Cloud Manager enligt nedan.
 
@@ -20,33 +20,33 @@ När inloggningen är klar dirigeras du till landningssidan för Cloud Manager e
 
 ## SysAdmin-uppgifter {#sysadmin-tasks}
 
-En användare med rollen SysAdmin kan nu få direkt åtkomst till Admin Console för att hantera roller och behörigheter och få åtkomst till AEM-instanser.
+En användare med rollen SysAdmin kan nu få direkt åtkomst till Admin Console för att hantera roller och behörigheter och få åtkomst till AEM instanser.
 
 ### Hantera roller {#manage-roles}
 
-Som användare med rollen SysAdmin har du tillgång till den plats i **Admin Console** där användarroller och behörigheter för Cloud Manager hanteras med ett enda klick.
+Som användare med rollen SysAdmin har du tillgång till den plats i **Admin Console** där användarroller eller behörigheter till Cloud Manager hanteras med ett enda klick.
 
 Mer information om hur du lägger till användare i en profil finns i [Åtkomst till Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#accessing-cloud-manager) .
 
 >[!NOTE]
->För vissa organisationer som fick tillgång till AEM som molntjänst före januari 2020 kommer dessa att hämtas till Adobe Admin Console och produkt- och miljöproduktprofilen måste väljas.
+>För vissa organisationer som fick åtkomst till AEM som Cloud Service före januari 2020 kommer dessa att hämtas till Adobe Admin Console och produkt- och miljöproduktprofilen måste väljas.
 
 1. Navigera till landningssidan för Cloud Manager och klicka på **Hantera åtkomst**.
 
    ![](assets/sys-admin5.png)
 
-1. När du klickar på **Hantera åtkomst** navigeras du till **Admin Console** där du kan hantera användarroller och behörigheter för Cloud Manager.
+1. När du klickar på **Hantera åtkomst** navigeras du till **Admin Console** där du kan hantera användarroller och behörigheter till Cloud Manager.
 
    ![](assets/sys-admin1.png)
 
 ### Hantera åtkomst till författarinstans {#manage-access-aem}
 
-Som användare med rollen SysAdmin har du tillgång till **Admin Console** där du kan navigera direkt till författarinstansen och hantera åtkomsten med ett enda klick.
+Som användare i rollen SysAdmin har du tillgång till **Admin Console** med ett klick där du kan navigera direkt till författarinstansen och hantera åtkomsten.
 
 >[!NOTE]
->För vissa organisationer som fick tillgång till AEM som molntjänst före januari 2020 kommer dessa att hämtas till Adobe Admin Console och produkt- och miljöproduktprofilen måste väljas.
+>För vissa organisationer som fick åtkomst till AEM som Cloud Service före januari 2020 kommer dessa att hämtas till Adobe Admin Console och produkt- och miljöproduktprofilen måste väljas.
 
-Mer information finns i [Åtkomst till en instans i AEM som en molntjänst](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#accessing-instance-cloud-service) .
+Mer information finns i [Åtkomst till en instans i AEM som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#accessing-instance-cloud-service) .
 
 1. Navigera till **miljökortet** från sidan **Programöversikt** och klicka på **Hantera åtkomst**.
 
@@ -58,21 +58,21 @@ Mer information finns i [Åtkomst till en instans i AEM som en molntjänst](http
 
    ![](assets/sys-admin4.png)
 
-1. När du klickar på **Hantera åtkomst** navigeras du till **Admin Console** där du har åtkomst till författarinstansen av miljön.
+1. När du klickar på **Hantera åtkomst** navigeras du till **Admin Console** från den plats där du har åtkomst till författarinstansen av miljön.
 
    ![](assets/sys-admin-2.png)
 
 ## För befintliga AMS-kunder {#existing-aem}
 
-Om du är en befintlig AMS-kund (Adobe Managed Services) och har tillgång till molntjänsten, visas dina befintliga program och knappen **Lägg till program** längst upp till höger på landningssidan.
+Om du är en befintlig AMS-kund (Adobe Managed Services) och har tillgång till Cloud Service, kommer du att se dina befintliga program och knappen **Lägg till program** längst upp till höger på landningssidan.
 
-Om du inte ser knappen **Lägg till program** och har frågor om åtkomst till molntjänsten kontaktar du din Adobe-representant.
+Om du inte ser knappen **Lägg till program** och har frågor om åtkomst till Cloud Service kontaktar du din Adobe-representant.
 
-Mer information finns i [Lägga till ett nytt program i molntjänsten med befintliga program](/help/onboarding/getting-access-to-aem-in-cloud/first-time-login.md#existing-program) .
+Mer information finns i [Lägga till ett nytt program i Cloud Service med befintliga program](/help/onboarding/getting-access-to-aem-in-cloud/first-time-login.md#existing-program) .
 
-## För nya kunder inom molntjänster {#new-cloud-services}
+## För nya Cloud Service {#new-cloud-services}
 
-Om du är en ny molntjänstkund ser du knappen **Lägg till program** i det övre högra hörnet av en tom landningssida. Du vill lägga till ett nytt program i din molntjänst.
+Om du är ny Cloud Service-kund kommer du att se knappen **Lägg till program** i det övre högra hörnet av en tom landningssida. Du vill lägga till ett nytt program i Cloud Servicen.
 
-Mer information finns i [Lägga till ett nytt program i molntjänsten utan befintliga program](/help/onboarding/getting-access-to-aem-in-cloud/first-time-login.md#no-program) .
+Mer information finns i [Lägga till ett nytt program i Cloud Service utan befintliga program](/help/onboarding/getting-access-to-aem-in-cloud/first-time-login.md#no-program) .
 
