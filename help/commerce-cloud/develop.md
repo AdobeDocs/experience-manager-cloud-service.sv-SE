@@ -21,7 +21,7 @@ ht-degree: 7%
 Utveckla AEM handelsprojekt som bygger på Commerce Integration Framework (CIF) för AEM som Cloud Service följer samma regler och bästa praxis som andra AEM på AEM. Granska dessa först:
 
 - [AEM-projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
-- [AEM as a Cloud Service SDK](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html)
+- [SDK för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html)
 - [Utvecklingsriktlinjer för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/development-guidelines.html)
 
 ## Lokal utveckling med AEM som Cloud Service-SDK {#local}
@@ -38,7 +38,7 @@ CIF-tillägget tillhandahålls som ett arkiv för försäljningsfunktioner. ZIP-
 
 Följande bör installeras lokalt:
 
-- [AEM as a Cloud Service SDK](https://docs.adobe.com/content/help/en/*experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)
+- [SDK för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/*experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)
 - [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 - [Apache Maven](https://maven.apache.org/) (3.3.9 eller senare)
 - [Node.js v10+](https://nodejs.org/en/)
