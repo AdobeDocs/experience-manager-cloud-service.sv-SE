@@ -20,7 +20,7 @@ Du kan komma åt och hantera din Git-databas med hjälp av Git-kontohantering f�
 
 Använd knappen **Hantera Git** som finns i användargränssnittet i molnhanteraren, som finns längst upp på pipeline-kortet.
 
-1. Navigera till sidan Översikt *över ditt* program och till Pipelines-kortet.
+1. Gå till sidan Översikt *över ditt* program och till Pipelines-kortet.
 
 1. Du kan visa alternativet **Hantera Git** för att få åtkomst till och hantera din Git-databas.
 
