@@ -1,9 +1,9 @@
 ---
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: IMS-stöd för Adobe Experience Manager as a Cloud Service
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 100%
 
@@ -225,7 +225,7 @@ Läs [Rolldefinitioner](/help/onboarding/what-is-required/add-users-roles.md#rol
 1. När du har lagts till i rätt profil bör du ha tillgång till respektive klientorganisation i Cloud Manager via [Adobe Experience Cloud](http://my.cloudmanager.adobe.com) i det övre högra hörnet i användargränssnittet.
 
 
-### Åtkomst till en instans i AEM as a Cloud Service {#accessing-instance-cloud-service}
+### Få tillgång till Experience Manager as a Cloud Service {#accessing-instance-cloud-service}
 
 >[!IMPORTANT]
 >Stegen som nämns i föregående avsnitt måste vara slutförda innan du beviljas åtkomst till en instans i AEM as a Cloud Service.
