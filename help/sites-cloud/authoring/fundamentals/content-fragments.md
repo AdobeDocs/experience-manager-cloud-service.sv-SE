@@ -16,11 +16,11 @@ Innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service [skapas
 
 Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
-Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM-innehåll via Content Services till andra kanaler än AEM-sidor.
+Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM innehåll via Content Services till andra kanaler än AEM.
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Experience Fragments](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)**är olika funktioner i AEM:
+>**Content Fragments** and **[Experience Fragments](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** are different features within AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Upplevelsefragment** är helt utformat för innehåll och därmed delar av en webbsida.
@@ -40,7 +40,7 @@ Innehållsfragmenten aktiverar:
 * **Creative Pro**
    * Spåra kreativa resurser via samlingar som är kopplade till innehållsfragment.
 * **Kopiera författare**
-   * Skriv i redigeraren för AEM-innehållsfragment.
+   * Skriv i AEM innehållsfragmentredigerare.
    * Kan skapa innehållsvariationer.
    * Kan associera relevant innehåll med innehållsfragmentet.
    * Kan använda versionshantering/arbetsflöde.
@@ -140,7 +140,7 @@ För mellanliggande innehåll kan du:
 
 >[!CAUTION]
 >
->När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentets redigerare) leda till felaktiga/oväntade resultat.
+>När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentredigeraren) leda till felaktiga/oväntade resultat.
 >
 >När detta inträffar behålls det mellanliggande innehållet som det är:
 >
