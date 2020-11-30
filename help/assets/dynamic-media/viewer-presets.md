@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
 workflow-type: tm+mt
 source-wordcount: '212'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -19,7 +19,7 @@ Om du är administratör och behöver hantera, skapa, sortera och ta bort visnin
 Se även [Publicera förinställningar](managing-viewer-presets.md#publishing-viewer-presets)för visningsprogram.
 
 Du kanske inte behöver publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
-Eventuella problem med visningsförinställningar finns i [Felsökning av dynamiska media - Scene7](troubleshoot-dm.md#viewers).
+Om du har problem med visningsförinställningarna läser du [Felsökning av dynamiska media - Scene7](troubleshoot-dm.md#viewers).
 
 ## Använda en förinställning för Dynamic Media Viewer på en mediefil {#applying-a-viewer-preset-to-an-asset}
 
