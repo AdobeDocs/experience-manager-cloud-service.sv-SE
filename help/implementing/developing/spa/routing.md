@@ -1,5 +1,5 @@
 ---
-title: SPA-modellroutning
+title: SPA
 description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 translation-type: tm+mt
 source-git-commit: c075bcc415b68ba0deaeca61d6d179bd7263ca5f
@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# SPA-modellroutning{#spa-model-routing}
+# SPA{#spa-model-routing}
 
 För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 
@@ -20,7 +20,7 @@ Appen äger routningen och implementeras sedan av projektutvecklarna. Det här d
 
 ## Arkitektur {#architecture}
 
-En detaljerad beskrivning finns i avsnittet [PageModelManager](blueprint.md#pagemodelmanager) i SPA-designdokumentet.
+En detaljerad beskrivning finns i avsnittet [PageModelManager](blueprint.md#pagemodelmanager) i SPA.
 
 ## ModelRouter {#modelrouter}
 
@@ -28,7 +28,7 @@ När `ModelRouter` det här alternativet är aktiverat kapslar det in API-funkti
 
 ## Manuell kontra automatisk modellroutning {#manual-vs-automatic-model-routing}
 
-Funktionen `ModelRouter` automatiserar hämtning av fragment av modellen. Men som alla automatiserade verktyg har de begränsningar. Vid behov `ModelRouter` kan sökvägarna inaktiveras eller konfigureras så att de ignoreras med metaegenskaper (se avsnittet Metaegenskaper i [SPA Page Component](page-component.md) -dokumentet). Utvecklare kan sedan implementera sitt eget modellroutningslager genom att begära `PageModelManager` att ett visst fragment av modellen ska läsas in med `getData()` funktionen.
+Funktionen `ModelRouter` automatiserar hämtning av fragment av modellen. Men som alla automatiserade verktyg har de begränsningar. Vid behov `ModelRouter` kan sökvägarna inaktiveras eller konfigureras så att de ignoreras med metaegenskaper (se avsnittet Metaegenskaper i [SPA dokument för sidkomponenter](page-component.md) ). Utvecklare kan sedan implementera sitt eget modellroutningslager genom att begära `PageModelManager` att ett visst fragment av modellen ska läsas in med `getData()` funktionen.
 
 >[!CAUTION]
 >
@@ -36,19 +36,19 @@ Funktionen `ModelRouter` automatiserar hämtning av fragment av modellen. Men so
 
 ## Routningskontrakt {#routing-contract}
 
-Den aktuella implementeringen baseras på antagandet att SPA-projektet använder API:t för HTML5-historik för routning till de olika programsidorna.
+Den aktuella implementeringen baseras på antagandet att det SPA projektet använder API:t för HTML5-historik för routning till de olika programsidorna.
 
 ### Konfiguration {#configuration}
 
 Den `ModelRouter` stöder begreppet modellroutning när den lyssnar efter `pushState` och `replaceState` anropar för att hämta modellfragment i förväg. Internt aktiveras en funktion för `PageModelManager` att läsa in den modell som motsvarar en viss URL och utlöser en `cq-pagemodel-route-changed` händelse som andra moduler kan lyssna på.
 
-Som standard aktiveras det här beteendet automatiskt. Om du vill inaktivera den bör SPA återge följande metaegenskap:
+Som standard aktiveras det här beteendet automatiskt. SPA bör återge följande metaegenskap för att inaktivera den:
 
 ```
 <meta property="cq:pagemodel_router" content="disable"\>
 ```
 
-Observera att alla vägar i SPA bör motsvara en tillgänglig resurs i AEM (t.ex. &quot; `/content/mysite/mypage"`) eftersom `PageModelManager` automatiskt försöker läsa in motsvarande sidmodell när flödet har valts. Även om det vid behov kan SPA även definiera ett &quot;blockeringslista&quot; på rutter som ska ignoreras av `PageModelManager`följande:
+Observera att varje väg i SPA ska motsvara en tillgänglig resurs i AEM (t.ex. &quot; `/content/mysite/mypage"`) eftersom `PageModelManager` automatiskt försöker läsa in motsvarande sidmodell när flödet har valts. Vid behov kan SPA även definiera ett &quot;blockeringslista&quot; av rutter som ska ignoreras av `PageModelManager`följande:
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>
