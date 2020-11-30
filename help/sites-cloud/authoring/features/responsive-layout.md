@@ -1,6 +1,6 @@
 ---
 title: Responsiv layout
-description: Med AEM kan du förverkliga en responsiv layout för dina sidor
+description: AEM gör att du kan förverkliga en responsiv layout för dina sidor
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
 workflow-type: tm+mt
@@ -12,9 +12,9 @@ ht-degree: 7%
 
 # Responsiv layout {#responsive-layout}
 
-Med AEM kan du ha en responsiv layout för sidorna med komponenten **Layoutbehållare** .
+AEM gör att du kan ha en responsiv layout för sidorna med komponenten **Layoutbehållare** .
 
-Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med [**layoutläget **](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes), som gör att du kan skapa och redigera en responsiv layout beroende på enhet.
+Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med [**layoutläget**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes), som gör att du kan skapa och redigera en responsiv layout beroende på enhet.
 
 Layoutbehållaren:
 
@@ -25,22 +25,22 @@ Layoutbehållaren:
 
 Användaren kan sedan se hur innehållet återges för specifika enheter med emulatorn.
 
-AEM implementerar responsiv layout för dina sidor med en kombination av mekanismer:
+AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
 
-* [**Komponenten Layoutbehållare **](#adding-a-layout-container-and-its-content-edit-mode)
+* [**Komponenten Layoutbehållare**](#adding-a-layout-container-and-its-content-edit-mode)
 
    Den här komponenten är tillgänglig i [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) och har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät. Den kan också anges som standardstyckesystem på sidan.
 
-* [**Layoutläge **](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes)
+* [**Layoutläge**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes)
 
    När layoutbehållaren är placerad på sidan kan du använda **layoutläget** för att placera innehåll i det responsiva rutnätet.
 
-* [**Emulator **](#selecting-a-device-to-emulate)Med den här funktionen kan du skapa och redigera responsiva webbplatser som ordnar om layouten enligt enhetens/fönstrets storlek genom att ändra storlek på komponenterna interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
+* [**Emulator**](#selecting-a-device-to-emulate) Med den här funktionen kan du skapa och redigera responsiva webbplatser som ordnar om layouten enligt enhetens/fönstrets storlek genom att ändra storlek på komponenterna interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
 
 Med dessa responsiva rutnätsmekanismer kan du:
 
 * Använd brytpunkter för att definiera olika innehållslayouter baserat på enhetens bredd (relaterat till enhetstyp och orientering).
-* Använd samma brytpunkter och innehållslayouter för att se till att innehållet är anpassat till storleken på webbläsarfönstret på skrivbordet.
+* Använd samma brytpunkter och innehållslayouter för att säkerställa att innehållet är anpassat till storleken på webbläsarfönstret på skrivbordet.
 * Använd vågrät fäst mot rutnät för att placera komponenter i rutnätet, ändra storlek efter behov och definiera när de ska komprimeras/omformas så att de ligger sida vid sida eller ovanför/nedanför.
 * Dölj komponenter för specifika enhetslayouter.
 * Uppnå kolumnkontroll.
@@ -49,7 +49,7 @@ Beroende på vilket projekt du arbetar med kan Layoutbehållaren användas som s
 
 >[!TIP]
 >
->Adobe tillhandahåller [GitHub-dokumentation](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) om den responsiva layouten som en referens som kan ges till gränssnittsutvecklare så att de kan använda AEM-rutnätet utanför AEM, till exempel när de skapar statiska HTML-modeller för en framtida AEM-webbplats.
+>Adobe tillhandahåller [GitHub-dokumentation](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) för den responsiva layouten som en referens som kan ges till gränssnittsutvecklare så att de kan använda det AEM rutnätet utanför AEM, till exempel när de skapar statiska HTML-modeller för en framtida AEM.
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Beroende på vilket projekt du arbetar med kan Layoutbehållaren användas som s
 
 När du skapar webbplatsinnehåll vill du se till att innehållet visas på rätt sätt för den enhet som används för att visa det.
 
-Med AEM kan du definiera layouter beroende på enhetens bredd:
+AEM gör att du kan definiera layouter beroende på enhetens bredd:
 
 * Med emulatorn kan du emulera dessa layouter på en mängd olika enheter. Förutom enhetstypen kan orienteringen, som väljs med alternativet **Rotera enhet** , påverka brytpunkten som markeras när bredden ändras.
 * Brytpunkter är de punkter som skiljer layoutdefinitionerna åt.
@@ -188,7 +188,7 @@ Om du vill konfigurera layouten för ett responsivt rutnät som implementeras me
 
 I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
-* Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot rutnät. När du ändrar storlek på bakgrundsstödrastret visas det för att underlätta justeringen:
+* Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot stödrastret. När du ändrar storlek på bakgrundsstödrastret visas det för att underlätta justeringen:
 
    ![Ändra storlek på komponenter](/help/sites-cloud/authoring/assets/responsive-layout-resizing.png)
 
