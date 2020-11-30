@@ -1,6 +1,6 @@
 ---
-title: Driftsätta till AEM as a Cloud Service
-description: 'Driftsätta till AEM as a Cloud Service '
+title: Distribuera till AEM as a Cloud Service
+description: 'Distribuera till AEM as a Cloud Service '
 translation-type: tm+mt
 source-git-commit: 450d78be9472c854a13ba35965ac10f806aba3d9
 workflow-type: tm+mt
@@ -10,7 +10,7 @@ ht-degree: 1%
 ---
 
 
-# Driftsätta till AEM as a Cloud Service {#deploying-to-aem-as-a-cloud-service}
+# Distribuera till AEM as a Cloud Service {#deploying-to-aem-as-a-cloud-service}
 
 ## Introduktion {#introduction}
 
@@ -295,7 +295,7 @@ De runmode-konfigurationer som stöds är:
 
 Den OSGI-konfiguration som har de mest matchande körlägena används.
 
-När du utvecklar lokalt kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
+Vid lokal utveckling kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
 
 <!-- ### Performance Monitoring {#performance-monitoring}
 
