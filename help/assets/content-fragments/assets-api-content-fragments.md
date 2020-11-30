@@ -29,9 +29,9 @@ Med [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Ex
 
 Med API kan du använda Adobe Experience Manager som en Cloud Service som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
-Exempelvis kräver Single Page Applications (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
+Enkelsidiga program (SPA), ramverksbaserade eller anpassade, kräver till exempel innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 
-Även om [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) är ett mycket omfattande, flexibelt och anpassningsbart API som kan användas för de nödvändiga läsåtgärderna i detta syfte, och vars JSON-utdata kan anpassas, kräver de AEM WCM-kunskaper (Web Content Management) för implementeringen eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Alla SPA-utvecklingsorganisationer har inte direkt tillgång till sådan kunskap.
+Även om [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) är ett mycket omfattande, flexibelt och anpassningsbart API som kan användas för de nödvändiga läsåtgärderna i detta syfte, och vars JSON-utdata kan anpassas, kräver de AEM WCM-kunskaper (Web Content Management) för implementeringen eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Det är inte varje SPA utvecklingsorganisation som har direkt tillgång till sådan kunskap.
 
 Detta är när REST API:t för resurser kan användas. Med det kan utvecklare komma åt resurser (till exempel bilder och innehållsfragment) direkt, utan att först behöva bädda in dem på en sida, och leverera innehållet i serialiserat JSON-format.
 
@@ -105,7 +105,7 @@ Detta innebär att efterföljande (`write`) begäranden inte kan kombineras till
   <tr>
    <td>Användningsfall som stöds</td>
    <td>Allmänt syfte.</td>
-   <td><p>Optimerad för konsumtion i ett Single Page Application (SPA) eller i något annat (innehållsförbrukande) sammanhang.</p> <p>Kan även innehålla layoutinformation.</p> </td>
+   <td><p>Optimerad för konsumtion i ett Single Page-program (SPA) eller i något annat (innehållsförbrukande) sammanhang.</p> <p>Kan även innehålla layoutinformation.</p> </td>
   </tr>
   <tr>
    <td>Åtgärder som stöds</td>
