@@ -36,7 +36,7 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 
 ![Skapa bearbetningsprofil för videoomkodning i Experience Manager](assets/video-processing-profile-for-mp4.png)
 
-*Bild: En bearbetningsprofil för videoomkodning i[!DNL Experience Manager].*
+*Bild: En bearbetningsprofil för videoomkodning i [!DNL Experience Manager].*
 
 Om du bara anger bredd eller enbart höjd och lämnar det andra fältet tomt behåller återgivningarna proportionerna. För närvarande är bara h264-kodek tillgänglig för omkodning.
 
