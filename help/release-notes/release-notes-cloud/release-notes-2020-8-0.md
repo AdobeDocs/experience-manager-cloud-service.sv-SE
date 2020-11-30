@@ -1,10 +1,10 @@
 ---
 title: Versionsinformation för 2020.8.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
-description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.8.0.'
+description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.8.0.'
 translation-type: tm+mt
 source-git-commit: fe769e8acecbc173f2437edc292eeba2585f0509
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1044'
 ht-degree: 1%
 
 ---
