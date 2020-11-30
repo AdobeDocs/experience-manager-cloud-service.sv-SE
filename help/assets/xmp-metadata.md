@@ -1,6 +1,6 @@
 ---
 title: XMP-metadata
-description: Läs om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
+description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0c915b32d676ff225cbe276be075d3ae1a865f11
@@ -13,21 +13,21 @@ ht-degree: 20%
 
 # XMP-metadata {#xmp-metadata}
 
-XMP (Extensible Metadata Platform) är den metadatastandard som används av AEM Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för ett stort antal program.
+XMP (Extensible Metadata Platform) är den metadatastandard som används av AEM Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, erbjuder XMP en innehållsmodell [som](#xmp-core-concepts) stöds av Adobe [](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
+Förutom universell metadatakodning som kan bäddas in i alla filformat, har XMP en innehållsmodell [som](#xmp-core-concepts) stöds av Adobe [](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
 
-## XMP - översikt och ekosystem {#xmp-ecosystem}
+## XMP översikt och ekosystem {#xmp-ecosystem}
 
-AEM Assets stöder metadatastandarden XMP. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
+AEM Assets stöder XMP metadatastandard. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
-Produktionspersonal kan till exempel använda det inbyggda XMP-stödet i Adobes program för att skicka information till flera filformat. AEM Assets-databasen extraherar XMP-metadata och använder dem för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
+Produktionsproffs kan t.ex. använda det inbyggda XMP-stödet i Adobe-program för att skicka information till flera filformat. AEM Assets-databasen extraherar XMP metadata och använder den för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
 
 XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillhandahålla en datamodell, en lagringsmodell och scheman. Alla dessa begrepp beskrivs i detta avsnitt.
 
 Alla äldre metadata från EXIF, ID3 eller Microsoft Office översätts automatiskt till XMP, som kan utökas för att stödja kundspecifika metadatamatchningar, som produktkataloger.
 
-Metadata i XMP består av en uppsättning egenskaper. Dessa egenskaper är alltid kopplade till en specifik enhet som kallas resurs. Egenskaperna är alltså&quot;om&quot; resursen. För XMP är resursen alltid resursen.
+Metadata i XMP består av en uppsättning egenskaper. Dessa egenskaper är alltid kopplade till en specifik enhet som kallas resurs. Egenskaperna är alltså&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
 
 XMP definierar en [metadatamodell](https://sv.wikipedia.org/wiki/Metadata) som kan användas med alla definierade metadataobjekt. XMP definierar också särskilda [scheman](https://en.wikipedia.org/wiki/XML_schema) för grundläggande egenskaper som är användbara för att logga en resurs historik genom olika bearbetningssteg – från fotografering, [skanning](https://sv.wikipedia.org/wiki/Bildl%C3%A4sare) och textredigering via fotoredigeringssteg (som [beskärning](https://sv.wikipedia.org/wiki/Bildbesk%C3%A4rning) eller färgjustering) till den slutliga bilden. Med XMP kan alla program och enheter längs vägen lägga till egen information i en digital resurs, som sedan sparas i den slutliga digitala filen.
 
@@ -37,59 +37,59 @@ XMP serialiseras och lagras oftast med en underuppsättning av [W3C](https://sv.
 
 XMP har följande fördelar jämfört med andra kodningsstandarder och -scheman:
 
-* XMP-baserade metadata är mycket kraftfulla och detaljerade.
-* Med XMP kan du ha flera värden för en egenskap.
-* XMP har standardiserad kodning, vilket gör att du enkelt kan utbyta metadata.
-* XMP är utökningsbart. Du kan lägga till ytterligare information i dina resurser.
+* XMP metadata är mycket kraftfulla och detaljerade.
+* XMP kan du ha flera värden för en egenskap.
+* XMP har standardiserad kodning, vilket gör det enkelt att utbyta metadata.
+* XMP kan utökas. Du kan lägga till ytterligare information i dina resurser.
 
-XMP-standarden är utformad för att vara utökningsbar så att du kan lägga till anpassade typer av metadata i XMP-data. EXIF har däremot inte det, utan en fast lista över egenskaper som inte kan utökas.
+XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassade typer av metadata i XMP. EXIF har däremot inte det, utan en fast lista över egenskaper som inte kan utökas.
 
 >[!NOTE]
 >
->XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP-filer, till exempel miniatyrbilder, måste de kodas i ett XML-anpassat format, till exempel `Base64`.
+>XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, t.ex. miniatyrbilder, måste de kodas i ett XML-anpassat format, t.ex. `Base64`.
 
-### XMP-kärnkoncept {#xmp-core-concepts}
+### XMP grundläggande begrepp {#xmp-core-concepts}
 
 **Namnutrymmen och scheman**
 
-Ett XMP-schema är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
+Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
 
 Egenskapen **Creator** i två självständigt utformade scheman kan till exempel avse den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
 
-**XMP-egenskaper och -värden**
+**XMP egenskaper och värden**
 
 XMP kan innehålla egenskaper från ett eller flera av scheman. En vanlig delmängd som används av många Adobe-program kan till exempel vara följande:
 
 * Dublin Core-schema: `dc:title`, `dc:creator`, `dc:subject`, `dc:format`, `dc:rights`
 * XMP grundläggande schema: `xmp:CreateDate`, `xmp:CreatorTool`, `xmp:ModifyDate`, `xmp:metadataDate`
-* XMP-schema för rättighetshantering: `xmpRights:WebStatement`, `xmpRights:Marked`
-* XMP-schema för mediehantering: `xmpMM:DocumentID`
+* XMP Rättighetshanteringsschema: `xmpRights:WebStatement`, `xmpRights:Marked`
+* XMP för mediahantering: `xmpMM:DocumentID`
 
 **Språkalternativ**
 
-Med XMP kan du lägga till en egenskap i textegenskaper för att ange textens språk. `xml:lang`
+XMP ger dig möjlighet att lägga till en `xml:lang` egenskap i textegenskaper för att ange textens språk.
 
-## XMP-tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
+## XMP till återgivning {#xmp-writeback-to-renditions}
 
-Den här XMP-återskrivningsfunktionen i Adobe Experience Manager (AEM) Resurser replikerar ändringar i resursens återgivningar av metadata.
+Den här XMP återskrivningsfunktionen i Adobe Experience Manager (AEM) Resurser replikerar ändringar i resursens återgivningar av metadata.
 
 När du ändrar metadata för en resurs i AEM Assets eller när du överför resursen, lagras ändringarna först i resursnoden i CRXDE.
 
-XMP-återskrivningsfunktionen sprider metadataändringarna till alla eller specifika återgivningar av resursen.
+XMP återskrivningsfunktion sprider metadataändringarna till alla eller specifika återgivningar av resursen.
 
 Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen som har namnet `Classic Leather` på `Nylon`.
 
 ![metadata](assets/metadata.png)
 
-I det här fallet sparar AEM Assets ändringarna av **[!UICONTROL Title]** egenskapen i `dc:title` parametern för de metadata för mediefiler som lagras i resurshierarkin.
+I det här fallet sparar AEM Assets ändringarna i **[!UICONTROL Title]** egenskapen i `dc:title` -parametern för resursens metadata som lagras i resurshierarkin.
 
 ![metadata_stored](assets/metadata_stored.png)
 
 AEM Assets sprider dock inte automatiskt några metadataändringar till återgivningar av en resurs.
 
-Med XMP-återskrivningsfunktionen kan du sprida metadataändringarna till alla eller specifika återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
+Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
 
-### Aktivera XMP-återskrivning {#enable-xmp-writeback}
+### Aktivera XMP {#enable-xmp-writeback}
 
 <!-- asgupta, Engg: Need attention here to update the configuration manager changes.
 -->
@@ -100,11 +100,11 @@ Om du vill att metadataändringarna ska kunna spridas till återgivningarna av r
 1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfigurationen.
 1. Markera **[!UICONTROL Propagate XMP]** alternativet och spara sedan ändringarna.
 
-### Aktivera XMP-återskrivning för specifika återgivningar {#enable-xmp-writeback-for-specific-renditions}
+### Aktivera XMP återskrivning för specifika återgivningar {#enable-xmp-writeback-for-specific-renditions}
 
-Om du vill att XMP-återskrivningsfunktionen ska kunna sprida metadataändringar för att välja återgivningar, anger du dessa återgivningar i arbetsflödessteget för DAM-metadata WriteBack-arbetsflödet. [!UICONTROL XMP Writeback Process] Som standard konfigureras det här steget med den ursprungliga återgivningen.
+Om du vill att XMP återskrivningsfunktion ska kunna sprida metadataändringar för att välja återgivningar, anger du dessa återgivningar i arbetsflödessteget för DAM-metadataåterställningsarbetsflödet. [!UICONTROL XMP Writeback Process] Som standard konfigureras det här steget med den ursprungliga återgivningen.
 
-Utför dessa steg för att XMP-återskrivningsfunktionen ska kunna sprida metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
+Utför de här stegen för att XMP återskrivningsfunktionen för att sprida metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
 
 1. Tryck/klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. Öppna arbetsflödesmodellen på sidan **[!UICONTROL DAM Metadata Writeback]** Modeller.
@@ -123,5 +123,5 @@ Metadataändringarna sprids till miniatyrbilden för återgivningarna.140.100.pn
 
 >[!MORELIKETHIS]
 >
->* [XMP-specifikation av Adobe](https://www.adobe.com/devnet/xmp.html)
+>* [XMP specifikationer från Adobe](https://www.adobe.com/devnet/xmp.html)
 
