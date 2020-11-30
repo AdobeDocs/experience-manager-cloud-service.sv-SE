@@ -1,11 +1,11 @@
 ---
-title: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] som en Cloud Service.
-description: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] som en Cloud Service.
+title: Konfigurera RTF-redigeraren för att skapa innehåll [!DNL Adobe Experience Manager] som en Cloud Service.
+description: Konfigurera RTF-redigeraren för att skapa innehåll [!DNL Adobe Experience Manager] som en Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 739dde6f9a6a7f4fe773e27e53f23a395f2881dc
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1981'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,7 @@ RTE-redigeringsläget och gränssnittet [som du anger för författarna avgör](
 >* **Namn**: `configPath`
 >* **Typ**: `String`
 >* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
+
 >
 >
 Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
@@ -160,6 +161,7 @@ Med textkomponenten [](https://docs.adobe.com/content/help/en/experience-manager
 >
 >* `/libs/wcm/foundation/components/text`
 >* `/libs/foundation/components/text`
+
 >
 >
 Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
