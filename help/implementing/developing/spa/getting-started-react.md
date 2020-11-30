@@ -1,6 +1,6 @@
 ---
 title: Komma igång med SPA i AEM med React
-description: I den här artikeln presenteras ett exempel på ett SPA-program, som förklarar hur det sätts ihop och gör att du snabbt kan komma igång med ditt eget SPA-program med hjälp av React Framework.
+description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
 translation-type: tm+mt
 source-git-commit: 8bdb7bbe80a4e22bb2b750c0719c6db745133392
 workflow-type: tm+mt
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # Komma igång med SPA i AEM med React {#getting-started-with-spas-in-aem-using-react}
 
-Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som byggts med SPA-ramverk.
+Single page applications (SPA) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som byggts med SPA ramverk.
 
-SPA-funktionen är en omfattande lösning för SPA-program i AEM. I den här artikeln presenteras en förenklad SPA-applikation i React-ramverket, som förklarar hur det är uppbyggt, så att du snabbt kan komma igång med din egen SPA.
+SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln presenteras en förenklad SPA om React-ramverket, som förklarar hur det sätts ihop så att du snabbt kan komma igång med din egen SPA.
 
 >[!NOTE]
 >
@@ -22,29 +22,29 @@ SPA-funktionen är en omfattande lösning för SPA-program i AEM. I den här art
 
 ## Introduktion {#introduction}
 
-I den här artikeln sammanfattas grundläggande funktioner i ett enkelt SPA-avtal och det minimum du behöver känna till för att få igång det.
+I den här artikeln sammanfattas grundläggande funktioner för en enkel SPA och det minimum du behöver känna till för att få igång ditt arbete.
 
 Mer information om hur SPA fungerar i AEM finns i följande dokument:
 
-* [Introduktion och genomgång av SPA](introduction.md)
-* [SPA Editor - översikt](editor-overview.md)
+* [SPA introduktion och genomgång](introduction.md)
+* [SPA](editor-overview.md)
 * [SPA Blueprint](blueprint.md)
 
 >[!NOTE]
 >
->För att kunna skapa innehåll i ett SPA måste innehållet lagras i AEM och kunna visas av innehållsmodellen.
+>För att kunna skapa innehåll i en SPA måste innehållet lagras i AEM och kunna visas av innehållsmodellen.
 >
->Ett SPA-avtal som utvecklats utanför AEM är inte tilltalande om det inte följer innehållsmodellkontraktet.
+>En SPA som utvecklats utanför AEM är inte författande om den inte följer innehållsmodellkontraktet.
 
 Det här dokumentet kommer att gå igenom strukturen i en förenklad SPA som skapats med React-ramverket och illustrera hur det fungerar så att du kan tillämpa den här förståelsen på din egen SPA.
 
 ## Beroenden, konfiguration och byggteknik {#dependencies-configuration-and-building}
 
-Förutom det förväntade React-beroendet kan SPA-exemplet utnyttja ytterligare bibliotek för att göra skapandet av SPA mer effektivt.
+Förutom det förväntade React-beroendet kan SPA utnyttja ytterligare bibliotek för att göra det enklare att skapa SPA.
 
 ### Beroenden {#dependencies}
 
-Filen definierar kraven för det övergripande SPA-paketet `package.json` . Här listas de minsta AEM beroendena för en fungerande SPA.
+Filen definierar kraven för det övergripande SPA. `package.json` Här listas de minsta AEM beroendena för en fungerande SPA.
 
 ```
   "dependencies": {
@@ -106,11 +106,11 @@ När paketet har skapats kan det överföras till en AEM.
 
 ### AEM Project Archetype {#aem-project-archetype}
 
-Alla AEM ska utnyttja den [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)som stöder SPA-projekt med React eller Angular och som utnyttjar SPA SDK.
+Alla AEM projekt bör utnyttja den [AEM projekttypen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)som stöder SPA projekt med React eller Angular och utnyttjar SPA SDK.
 
 ## Programstruktur {#application-structure}
 
-Om du tar med beroenden och bygger din app enligt beskrivningen ovan får du ett fungerande SPA-paket som du kan överföra till din AEM.
+Om du tar med beroenden och bygger din app enligt beskrivningen ovan får du ett fungerande SPA som du kan överföra till din AEM.
 
 I nästa avsnitt av det här dokumentet får du information om hur en SPA i AEM är strukturerad, vilka filer som är viktiga för programmet och hur de fungerar tillsammans.
 
@@ -118,7 +118,7 @@ En förenklad bildkomponent används som exempel, men alla komponenter i program
 
 ### index.js {#index-js}
 
-Ingångspunkten i produktresumén är förstås den fil som visas här förenklad för att fokusera på det viktiga innehållet. `index.js`
+Ingångspunkten i SPA är förstås den fil som visas här förenklad för att fokusera på det viktiga innehållet. `index.js`
 
 ```
 import ReactDOM from 'react-dom';
@@ -179,7 +179,7 @@ MapTo('my-react-app/components/structure/page')(withComponentMappingContext(AppP
 
 I det här exemplet utökas `AppPage` klassen `Page`som innehåller de interna innehållsmetoderna som sedan kan användas.
 
-I `Page` importeras JSON-representationen av sidmodellen och bearbetas innehållet för att kapsla in/dekorera varje element på sidan. Mer information om `Page` finns i dokumentet [SPA-utkast.](blueprint.md)
+I `Page` importeras JSON-representationen av sidmodellen och bearbetas innehållet för att kapsla in/dekorera varje element på sidan. Mer information om `Page` finns i dokumentet [SPA utkast.](blueprint.md)
 
 ### Image.js {#image-js}
 
@@ -210,11 +210,11 @@ class Image extends Component {
 MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);
 ```
 
-Den centrala idén med SPA i AEM är att mappa SPA-komponenter till AEM och uppdatera komponenten när innehållet ändras (och vice versa). I dokumentet [SPA Editor Overview](editor-overview.md) finns en sammanfattning av kommunikationsmodellen.
+Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och vice versa). En sammanfattning av kommunikationsmodellen finns i dokumentet [SPA Editor Overview](editor-overview.md) .
 
 `MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);`
 
-Metoden mappar `MapTo` SPA-komponenten till AEM. Det stöder användningen av en enda sträng eller en array med strängar.
+Metoden mappar SPA-komponenten till AEM. `MapTo` Det stöder användningen av en enda sträng eller en array med strängar.
 
 `ImageEditConfig` är ett konfigurationsobjekt som bidrar till att aktivera en komponents redigeringsfunktioner genom att tillhandahålla de metadata som behövs för att redigeraren ska kunna generera platshållare
 
@@ -247,13 +247,13 @@ Funktionen `MapTo` returnerar ett `Component` som är resultatet av en dispositi
 
 När komponenten exporteras med `MapTo` eller `withModel` funktioner omsluts `Page` komponenten av en `ModelProvider` komponent som ger standardkomponenter tillgång till den senaste versionen av sidmodellen eller en exakt plats i den sidmodellen.
 
-Mer information finns i [SPA-designdokumentet](blueprint.md).
+Mer information finns i [SPA](blueprint.md).
 
 >[!NOTE]
 >
 >Som standard tar du emot hela komponentmodellen när du använder `withModel` funktionen.
 
-## Dela information mellan SPA-komponenter {#sharing-information-between-spa-components}
+## Dela information mellan SPA {#sharing-information-between-spa-components}
 
 Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar information. Det finns flera rekommenderade sätt att göra detta, som anges nedan i ökande komplexitetsordning.
 
@@ -263,8 +263,8 @@ Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar in
 
 ## Nästa steg {#next-steps}
 
-* [Komma igång med SPA i AEM med hjälp av Angular](getting-started-angular.md) visar hur en grundläggande SPA har byggts för att fungera med SPA Editor i AEM med hjälp av Angular.
-* [Översikt över](editor-overview.md) SPA-redigeraren går in mer i kommunikationsmodellen mellan AEM och SPA.
-* [WKND SPA Project](wknd-tutorial.md) är en stegvis självstudiekurs som implementerar ett enkelt SPA-projekt i AEM.
-* [Dynamisk mappning av modell till komponent för SPA](model-to-component-mapping.md) förklarar den dynamiska mappningen av modell till komponent och hur den fungerar i SPA i AEM.
+* [Getting Started with SPA in AEM using Angular](getting-started-angular.md) (Komma igång med i med hjälp av vinkeln) visar hur en grundläggande SPA är byggd för att fungera med SPA Editor i AEM med hjälp av vinkeln.
+* [SPA redigeringsöversikt](editor-overview.md) går in mer i kommunikationsmodellen mellan AEM och SPA.
+* [WKND SPA Project](wknd-tutorial.md) är en stegvis självstudiekurs som implementerar ett enkelt SPA i AEM.
+* [Dynamisk mappning av modell till komponent för SPA](model-to-component-mapping.md) förklarar den dynamiska mappningen av modell till komponent och hur den fungerar SPA i AEM.
 * [SPA Blueprint](blueprint.md) ger en djupdykning i hur SPA SDK för AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.
