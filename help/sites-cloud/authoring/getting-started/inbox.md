@@ -12,10 +12,10 @@ ht-degree: 15%
 
 # Din inkorg {#your-inbox}
 
-Du kan få meddelanden från olika AEM-områden, inklusive arbetsflöden och projekt. Du kan till exempel få meddelanden om:
+Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. Du kan till exempel få meddelanden om:
 
 * Uppgifter:
-   * Dessa kan också skapas vid olika tillfällen i AEM-gränssnittet, till exempel under **Projekt**.
+   * Dessa kan också skapas vid olika punkter i AEM, t.ex. under **Projekt**.
    * Dessa kan ha sitt ursprung i arbetsflödessteget **Skapa uppgift** eller **Skapa projektuppgift**.
 * Arbetsflöden:
    * Arbetsobjekt som representerar åtgärder som du behöver utföra på sidinnehåll
@@ -45,7 +45,7 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 ## Öppna Inkorgen {#opening-the-inbox}
 
-Så här öppnar du Inkorgen för AEM-meddelanden:
+Så här öppnar du AEM inkorg:
 
 1. Klicka/tryck på indikatorn i verktygsfältet.
 
@@ -92,6 +92,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * **Gruppera efter**
    * **Schema** eller **Ingen**
    * **Kortstorlek**
+
    ![Visningsinställningar för inkorgskalender](/help/sites-cloud/authoring/assets/inbox-calendar-settings.png)
 
 * **Listvy**
@@ -100,6 +101,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    * **Sortera efter**
    * **Sorteringsordning**
+
    ![Visningsinställningar för inkorgslista](/help/sites-cloud/authoring/assets/inbox-list-settings.png)
 
    Du kan även delegera din kalender till andra användare samt begära delegering från andra användare och hantera dina delegeringar.
@@ -128,6 +130,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * **Gå tillbaka** till föregående steg
    * Visa nyttolasten för ett arbetsflöde
    * Skapa ett projekt från artikeln
+
    >[!NOTE]
    >
    >Mer information finns i:
@@ -140,6 +143,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * En dialogruta som är lämplig för åtgärden öppnas
    * En åtgärdsguide startas
    * En dokumentationssida öppnas
+
    En dialogruta öppnas t.ex. av **Delegera** :
 
    ![Delegera inkorgsaktivitet](/help/sites-cloud/authoring/assets/inbox-assign-task.png)
@@ -168,11 +172,13 @@ I inkorgen kan du skapa uppgifter:
       * **Aktivitetsprioritet**
       * **Startdatum**
       * **Förfallodatum**
+
    ![Lägg till uppgift i Inkorgen](/help/sites-cloud/authoring/assets/inbox-create-task.png)
 
    * **Avancerat**
 
       * **Namn**: Detta används för att skapa URL:en och om det är tomt baseras det på **titeln**.
+
    ![Inkorgen lägger till avancerade alternativ för uppgifter](/help/sites-cloud/authoring/assets/inbox-add-task-advanced.png)
 
 1. Välj **Skicka**.
@@ -209,11 +215,11 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-cloud/authoring/proj
 
 1. Bekräfta åtgärden genom att välja **Skapa** .
 
-## Filtrera objekt i AEM Inbox {#filtering-items-in-the-aem-inbox}
+## Filtrera objekt i AEM {#filtering-items-in-the-aem-inbox}
 
 Du kan filtrera objekten i listan:
 
-1. Öppna **AEM Inbox**.
+1. Öppna **AEM**.
 
 1. Öppna filterväljaren:
 
