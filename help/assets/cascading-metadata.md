@@ -26,7 +26,7 @@ Här följer några exempel där du kan definiera överlappande metadata:
 * Ändra alternativen som visas för ett visst fält baserat på värdet som anges i ett annat fält.
 * Ange standardvärdet för metadata i ett visst fält baserat på det värde som anges i ett annat fält.
 
-## Konfigurera överlappande metadata i AEM {#configure-cascading-metadata-in-aem}
+## Konfigurera metadata i AEM {#configure-cascading-metadata-in-aem}
 
 Tänk dig ett scenario där du vill visa överlappande metadata baserat på den typ av resurs som är markerad. Några exempel
 
@@ -55,6 +55,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
    * Om du vill ange värdena manuellt markerar du **[!UICONTROL Add Manually]** och trycker/klickar **[!UICONTROL Add Choice]** och anger alternativtexten och värdet. Ange till exempel resurstyperna Video, PDF, Word och Bild.
 
    * Om du vill hämta värden från en JSON-fil dynamiskt markerar du **[!UICONTROL Add Through JSON Path]** och anger sökvägen till JSON-filen. AEM hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
+
    Båda alternativen utesluter varandra. Du kan inte importera alternativen från en JSON-fil och redigera manuellt.
 
    ![add_choice](assets/add_choice.png)
