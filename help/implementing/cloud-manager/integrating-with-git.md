@@ -1,6 +1,6 @@
 ---
 title: Integrera med Git
-description: Integrera med Git - Cloud Service
+description: Integrera med Git - Cloud Services
 translation-type: tm+mt
 source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
@@ -58,12 +58,12 @@ Förbered kod för en produktionsrelease i en kundhanterad Git-databas och synkr
 
 ## Synkroniserar versionstaggar {#sync-tags}
 
-Synkronisera versionstaggar från en Cloud Manager Git-databas i en kundhanterad Git-databas för att ge dig en bild av vilken kod som har distribuerats till scen- och produktionsmiljöer.
+Synkronisera versionstaggar från en Cloud Manager Git-databas till en kundhanterad Git-databas för att ge dig en bild av vilken kod som har distribuerats till scen- och produktionsmiljöer.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12)
 
 ## Ytterligare resurser {#additional-resources}
 
 * [GitHub-resurser](https://try.github.io)
-* [Atlassiska Git-självstudiekurser](https://www.atlassian.com/git/tutorials/what-is-version-control)
+* [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials/what-is-version-control)
 * [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
