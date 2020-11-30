@@ -271,7 +271,7 @@ Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactiv
 
          * Se [Identifiera hotspot-variabler](#optional-identifying-hotspot-variables). måste du definiera dessa variabler.
          * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU:s snabbvy.
-         * (Valfritt) Om det finns andra variabler i snabbvyn som du behöver för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange ytterligare en variabel i textfältet. Till exempel `category=Mens` är en tillagd variabel.
+         * (Valfritt) Om det finns andra variabler i snabbvyn som du behöver för att identifiera en produkt ytterligare trycker du **[!UICONTROL Add Generic Variable]**. Ange ytterligare en variabel i textfältet. Till exempel `category=Mens` är en tillagd variabel.
    * Tryck på **[!UICONTROL Hyperlink]**.
 
       * Om du är kund hos AEM Sites trycker eller klickar du på ikonen Platsväljare (mapp) för att navigera till en URL. Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
