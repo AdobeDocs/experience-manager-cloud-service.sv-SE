@@ -20,7 +20,7 @@ Modulen `ComponentMapping` tillhandahålls som ett NPM-paket till frontendprojek
 
 Varje objekt i modellen innehåller ett `:type` fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
 
-Mer information om modellparsning och åtkomst för komponenter i gränssnittet finns i [SPA](blueprint.md) -utkast-dokumentet.
+Mer information om modellparsning och åtkomst till modellkomponenten finns i [SPA](blueprint.md) -dokumentet om utkast.
 
 Se även npm-paketet: [@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
