@@ -54,7 +54,7 @@ Produktionen och scenen finns som duo och används för testning och produktion.
    ![](assets/add-environment2.png)
 
    >[!NOTE]
-   >När du skapar en miljö skapas en eller flera *integreringar* i Adobe I/O. De är synliga för kundanvändare som har åtkomst till Adobe I/O-konsolen och får inte tas bort. Detta tas inte med i beskrivningen i Adobe I/O-konsolen.
+   >När du skapar en miljö skapas en eller flera *integreringar* i Adobe I/O. De är synliga för användare som har åtkomst till Adobe I/O Console och får inte tas bort. Detta tas bort i beskrivningen i Adobe I/O Console.
 
    ![](assets/add-environment-image1.png)
 
