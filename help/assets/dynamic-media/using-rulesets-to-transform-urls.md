@@ -30,11 +30,11 @@ Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er.
 
    Se [Ta bort specialtecken från URL-adresser](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
 
-När det gäller Dynamic Media kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för att hantera Dynamic Media-resurser. Den här filen omstrukturerar URL-protokollets standardformat så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
+När det gäller Dynamic Media kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för att hantera Dynamic Media-resurser. Den här filen omstrukturerar standardformatet för URL-protokoll så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
 
 >[!CAUTION]
 >
->Var försiktig när du använder linjaler. kan de förhindra att Dynamic Medias innehåll visas på webbplatsen.
+>Var försiktig när du använder linjaler. kan de förhindra att dynamiskt medieinnehåll visas på webbplatsen.
 
 Det finns exempellinjaler som kan hjälpa dig att skapa en egen linjaluppsättning.
 Se Referens för [regeluppsättning](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
@@ -53,7 +53,7 @@ Se även [Använda&quot;resurs&quot; i stället för&quot;is&quot;-bild i en reg
 
 **Så här distribuerar du XML-regeluppsättningar:**
 
-1. Logga in på ditt Dynamic Media Classic-konto:
+1. Logga in på ditt konto för Dynamic Media Classic:
 
    [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -76,7 +76,7 @@ Se även [Använda&quot;resurs&quot; i stället för&quot;is&quot;-bild i en reg
 1. In the lower-right corner of the Setup page, click **[!UICONTROL Close]**.
 1. Kör ett Image Server-publiceringsjobb.
 
-   Regeluppsättningsvillkoren används på begäranden till Dynamic Media Image Servers.
+   Regeluppsättningsvillkoren tillämpas på begäranden till dynamiska mediabildsservrar.
 
    Om du gör ändringar i regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.
 
