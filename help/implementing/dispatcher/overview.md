@@ -5,18 +5,18 @@ translation-type: tm+mt
 source-git-commit: 0080ace746f4a7212180d2404b356176d5f2d72c
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Leveransflöde för innehåll {#content-delivery}
+# Flöde för innehållsleverans {#content-delivery}
 
-Den aktuella sidan innehåller information om publicering av tjänstinnehåll i AEM som en molntjänst. Leverans av publiceringstjänstinnehåll inkluderar:
+Den aktuella sidan innehåller information om publicering av tjänstinnehåll i AEM som en Cloud Service. Leverans av publiceringstjänstinnehåll inkluderar:
 
 * CDN
-* AEM Dispatcher
-* AEM-publicering
+* AEM
+* AEM publicera
 
 Dataflödet är följande:
 
@@ -25,7 +25,7 @@ Dataflödet är följande:
 1. Om innehållet cachelagras fullständigt i CDN skickas det till webbläsaren av CDN
 1. Om innehållet inte är fullständigt cachelagrat anropar CDN (omvänd proxy) till dispatchern
 1. Om innehållet är fullständigt cachelagrat när avsändaren skickar det till CDN
-1. Om innehållet inte är fullständigt cachelagrat anropar avsändaren (omvänd proxy) till AEM-publiceringen
+1. Om innehållet inte är fullständigt cachelagrat anropar avsändaren (omvänd proxy) till AEM publicering
 1. Innehållet återges av webbläsaren, som också kan cachelagra det beroende på sidhuvudena
 
 Som standard förfaller innehållstypen HTML/text efter 300-talet (5 minuter) i dispatcherlagret, vilket är ett tröskelvärde som både dispatcher cache och CDN respekterar. Under omdistributioner av publiceringstjänsten rensas dispatchercachen och varnas därefter innan den nya publiceringsnoden tar emot trafik.
