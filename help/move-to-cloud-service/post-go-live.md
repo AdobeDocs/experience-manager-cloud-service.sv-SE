@@ -14,7 +14,7 @@ ht-degree: 100%
 
 I fasen efter publicering bör du se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar. 
 
-Följande verktyg är tillgängliga för att felsöka AEM as a Cloud Service-miljö:
+Följande verktyg är tillgängliga för att felsöka AEM as a Cloud Service-miljöer:
 
 * **Developer Console**
 * **CRX/DE Lite**
