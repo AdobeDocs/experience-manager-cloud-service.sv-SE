@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.4.0
+title: Adobe Experience Manager som Cloud Service Release Notes for 2020.4.0
 description: Versionsinformation om Experience Manager för 2020.4.0
 translation-type: tm+mt
 source-git-commit: 3dc0d1d77595f7b3e890fb4b390eef5bcf84ecd8
