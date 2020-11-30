@@ -19,8 +19,9 @@ Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 1. I **Assets** Console navigerar du till platsen för innehållsfragmentet.
 2. Antingen:
 
-   * Välj [**Visa egenskaper **för att öppna dialogrutorna](/help/assets/manage-digital-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
+   * Välj [**Visa egenskaper** för att öppna dialogrutorna](/help/assets/manage-digital-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
    * Öppna [innehållsfragmentet för redigering](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor)och välj sedan **Metadata** på sidopanelen.
+
    ![metadata](assets/cfm-metadata-01.png)
 
 3. Fliken **Grundläggande** innehåller alternativ som du kan visa eller redigera:
