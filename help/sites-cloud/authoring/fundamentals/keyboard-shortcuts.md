@@ -12,11 +12,11 @@ ht-degree: 2%
 
 # Kortkommandon för sidredigering {#keyboard-shortcuts-when-editing-pages}
 
-Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redigerar sidor, andra när du [använder konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. En del gäller när du redigerar sidor, andra när du [använder konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->Vilka [modifieringstangenter](#os-specific-modifier-keys) som krävs för AEM-kortkommandon varierar beroende på operativsystem.
+>Vilka [modifieringstangenter](#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
 
 ## Redigera kortkommandon {#editing-keyboard-shortcuts}
 
