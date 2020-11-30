@@ -36,7 +36,7 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 >[!NOTE]
 >
->Se även How to Audit User Management Operations in AEM. <!-- See also [How to Audit User Management Operations in AEM](/help/sites-administering/audit-user-management-operations.md). -->
+>Se även Granska åtgärder för användarhantering i AEM. <!-- See also [How to Audit User Management Operations in AEM](/help/sites-administering/audit-user-management-operations.md). -->
 
 ## Behörigheter krävs endast för redigeringsfunktionen {#permissions-required-for-editor-functionality-only}
 
