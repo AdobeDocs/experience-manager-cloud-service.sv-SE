@@ -59,7 +59,7 @@ Innan du börjar med snabbstartsguiden finns det en liten samling allmänna tips
 
 Det finns olika aspekter av att hitta en sida. kan du navigera och/eller söka:
 
-1. Öppna konsolen **Platser** (med alternativet **Platser** i [Global navigering](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) - detta utlöses (listruta) när du väljer länken Adobe Experience Manager (överst till vänster).
+1. Öppna konsolen **Platser** (med alternativet **Platser** i [Global navigering](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) - detta aktiveras (listruta) när du väljer länken Adobe Experience Manager (överst till vänster).
 
 1. Navigera nedåt i trädet genom att trycka/klicka på lämplig sida. Hur sidresurserna visas beror på vilken vy du använder - [kort, lista eller kolumn](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources):
 
@@ -105,6 +105,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
       * På en mobil enhet: tryck och håll ned kortet
       * På en stationär enhet: använda den [snabbåtgärd](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) som markeras med markeringsikonen:
    * Kortet kommer att förses med en bock som visar att sidan har valts.
+
    ![Exempelkort](/help/sites-cloud/authoring/assets/card.png)
 
 ### Snabbåtgärder (endast kortvyn/skrivbordet) {#quick-actions-card-view-desktop-only}
@@ -137,6 +138,7 @@ Så här redigerar du sidan:
       * Öppna sidpanelen
       * Välja fliken Komponenter ( [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser))
       * Dra den önskade komponenten till sidan.
+
       Sidpanelen kan öppnas (och stängas) med:
 
       ![Växlingsknapp för sidopanelen](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
@@ -174,6 +176,7 @@ Så här redigerar du sidan:
 
       * Välj **Förhandsgranska** i verktygsfältet.
    * Återgå till redigeringsläget (eller välj ett annat läge) med **listrutan Redigera** .
+
    >[!NOTE]
    >
    >Om du vill navigera med hjälp av länkar i innehållet måste du använda [förhandsgranskningsläget](/help/sites-cloud/authoring/fundamentals/editing-content.md#preview-mode).
@@ -189,6 +192,7 @@ Det finns två (huvudsakliga) metoder för [redigering av sidegenskaper](/help/s
 
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
       * Verktygsfältet när [sidan har markerats](#selecting-your-page-for-further-action).
+
       ![Egenskapsknapp](/help/sites-cloud/authoring/assets/properties.png)
 
    1. Sidegenskaperna visas. Du kan göra nödvändiga uppdateringar och sedan använda Spara för att behålla dessa
@@ -212,6 +216,7 @@ Det finns två huvudmetoder för att [publicera sidan](/help/sites-cloud/authori
 
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
       * Verktygsfältet när [sidan har valts](#selecting-your-page-for-further-action) (ger även åtkomst till [Publicera senare](/help/sites-cloud/authoring/fundamentals/publishing-pages.md)).
+
       ![Knappen Snabbpublicering](/help/sites-cloud/authoring/assets/quick-publish.png)
 
 
@@ -237,6 +242,7 @@ Alla dessa åtgärder kan utlösas av:
 
    * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för den begärda resursen.
    * Verktygsfältet när [sidan har markerats](#selecting-your-page-for-further-action).
+
    Sedan, beroende på vad du gör:
 
    * Kopiera:
@@ -276,13 +282,13 @@ Låsikonen ser till exempel ut så här:
 
    ![Referensvy](/help/sites-cloud/authoring/assets/references-list.png)
 
-1. Tryck/klicka på den typ av referens som krävs för att visa mer information och (när det är lämpligt) vidta ytterligare åtgärder.
+1. Tryck/klicka på den typ av referens som krävs för att visa mer information och (vid behov) vidta ytterligare åtgärder.
 
 ### Skapa en version av din sida {#creating-a-version-of-your-page}
 
 Så här skapar du en [version](/help/sites-cloud/authoring/features/page-versions.md) av sidan:
 
-1. Om du vill öppna tidslinjen väljer du **[Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)**med verktygsfältsikonen (antingen före eller efter[att du har valt sidan](#selecting-your-page-for-further-action)):
+1. Om du vill öppna tidslinjen väljer du **[Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)** med verktygsfältsikonen (antingen före eller efter [att du har valt sidan](#selecting-your-page-for-further-action)):
 
    ![Vyalternativ för tidslinje](/help/sites-cloud/authoring/assets/timeline.png)
 
@@ -296,7 +302,7 @@ Så här skapar du en [version](/help/sites-cloud/authoring/features/page-versio
 
 Samma grundläggande funktion används när du återställer och/eller jämför versioner av sidan:
 
-1. Välj **[Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)**med verktygsfältsikonen (antingen före eller efter[sidmarkering](#selecting-your-page-for-further-action)):
+1. Välj **[Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)** med verktygsfältsikonen (antingen före eller efter [sidmarkering](#selecting-your-page-for-further-action)):
 
    ![Vyalternativ för tidslinje](/help/sites-cloud/authoring/assets/timeline.png)
 
