@@ -1,6 +1,6 @@
 ---
 title: Arbeta med riktat innehåll på flera webbplatser
-description: Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM:s inbyggda stöd för flera webbplatser för riktat innehåll
+description: Om ni behöver hantera riktat innehåll, t.ex. aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 5%
 
 # Arbeta med riktat innehåll på flera webbplatser {#working-with-targeted-content-in-multisites}
 
-Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM:s inbyggda stöd för flera webbplatser för riktat innehåll.
+Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser o
 
 I det här dokumentet beskrivs följande:
 
-* En kort översikt över AEM:s stöd för flera webbplatser för riktat innehåll.
+* En kort översikt över AEM stöd för flera webbplatser för riktat innehåll.
 * Beskriver några möjliga användningsscenarier för hur du kan länka webbplatser (i ett varumärke).
 * Här finns ett exempel på genomgång av hur marknadsförare använder den här funktionen.
 * Detaljerade anvisningar om hur man implementerar stöd för flera webbplatser för riktat innehåll.
@@ -34,24 +34,25 @@ Om du vill ange hur dina webbplatser ska dela personaliserat innehåll måste du
 
 1. [Länka webbplatsen eller sidan](#linking-sites-to-an-area) till ett område.
 
-Du kan när som helst göra uppehåll i eller återställa arv. Om du inte vill göra uppehåll i arv kan du dessutom skapa lokala upplevelser. Som standard används mallområdet för alla sidor, såvida du inte anger något annat.
+Du kan när som helst göra uppehåll i eller återställa arv. Om du inte vill göra uppehåll i arv kan du dessutom skapa lokala upplevelser. Som standard används det Överordnad området på alla sidor, såvida du inte anger något annat.
 
 ## Introduktion till stöd för flera webbplatser för riktat innehåll {#introduction-to-multisite-support-for-targeted-content}
 
-Stöd för flera webbplatser för riktat innehåll finns tillgängligt direkt och du kan överföra riktat innehåll från huvudsidan som du hanterar via MSM till en lokal live-kopia eller hantera globala och lokala ändringar av sådant innehåll.
+Stöd för flera webbplatser för riktat innehåll är tillgängligt direkt och gör att du kan överföra riktat innehåll från den överordnad sidan som du hanterar via MSM till en lokal live-kopia eller hantera globala och lokala ändringar av sådant innehåll.
 
 Du hanterar det här i ett **område**. Områden avgränsar riktat innehåll (aktiviteter, upplevelser och erbjudanden) som används på olika webbplatser och tillhandahåller en MSM-baserad mekanism för att skapa och hantera arvet av riktat innehåll tillsammans med webbplatsarv. Detta förhindrar att du behöver återskapa riktat innehåll på ärvda webbplatser, vilket krävdes i AEM före 6.2.
 
-I ett område överförs endast aktiviteter som är kopplade till det området till aktiva kopior. Som standard är mallområdet markerat. När du har skapat ytterligare områden kan du länka dessa till dina webbplatser eller sidor för att ange vilket målinnehåll som skickas.
+I ett område överförs endast aktiviteter som är kopplade till det området till aktiva kopior. Som standard är det Överordnad området markerat. När du har skapat ytterligare områden kan du länka dessa till dina webbplatser eller sidor för att ange vilket målinnehåll som skickas.
 
-En webbplats eller en live-kopia länkar till ett område som innehåller de aktiviteter som behöver vara tillgängliga på den webbplatsen eller live-kopian. Som standard länkar webbplatsen eller den aktiva kopian till mallområdet, men du kan länka andra områden förutom mallområdena bra.
+En webbplats eller en live-kopia länkar till ett område som innehåller de aktiviteter som behöver vara tillgängliga på den webbplatsen eller live-kopian. Som standard länkar webbplatsen eller den aktiva kopian till det överordnad området, men du kan länka andra områden förutom de överordnad områdena bra.
 
 >[!NOTE]
 >
 >Du bör vara medveten om följande när du använder stöd för flera webbplatser för riktat innehåll:
 >
 >* När du använder utrullningar eller live-kopior krävs en MSM-licens.
->* När du använder synkronisering med Adobe Target krävs en Adobe Target-licens.
+>* När du synkroniserar med Adobe Target krävs en Adobe Target-licens.
+
 >
 
 
@@ -60,7 +61,7 @@ En webbplats eller en live-kopia länkar till ett område som innehåller de akt
 
 Du kan konfigurera stöd för flera webbplatser för riktat innehåll på flera olika sätt, beroende på hur det används. I det här avsnittet beskrivs hur detta teoretiskt skulle fungera med ett varumärke. Dessutom, i [exemplet: Med innehåll baserat på geografisk](#example-targeting-content-based-on-geography)inriktning kan ni se en verklighetstrogen applikation som inriktar sig på innehåll på flera webbplatser.
 
-Målinriktat innehåll kapslas in i så kallade områden, som definierar omfånget för webbplatser eller sidor. Dessa områden definieras på varumärkesnivå. Ett varumärke kan innehålla flera områden. Områden kan vara åtskilda mellan varumärken. Även om ett varumärke bara innehåller huvudområdet och därför delas av alla varumärken, kan ett annat varumärke innehålla flera varumärken (till exempel per region). Varumärken behöver därför inte spegla de olika områdena mellan dem.
+Målinriktat innehåll kapslas in i så kallade områden, som definierar omfånget för webbplatser eller sidor. Dessa områden definieras på varumärkesnivå. Ett varumärke kan innehålla flera områden. Områden kan vara åtskilda mellan varumärken. Ett varumärke kan innehålla det överordnad området och delas därför över alla varumärken, men ett annat varumärke kan innehålla flera varumärken (till exempel per region). Varumärken behöver därför inte spegla de olika områdena mellan dem.
 
 Med stöd för flera webbplatser för riktat innehåll kan du till exempel ha två (eller fler) webbplatser med **ett** varumärke som har något av följande:
 
@@ -70,7 +71,7 @@ Med stöd för flera webbplatser för riktat innehåll kan du till exempel ha tv
 * En *gemensam* uppsättning målinriktat innehåll - redigering i ett har en direkt effekt på båda webbplatserna. Du kan konfigurera detta genom att låta två platser referera till samma område. Webbplatser som länkar till samma område delar målinnehållet i det här området. Till exempel:
    * Plats A-länkar till område X
    * Plats B-länkar till område X
-* En distinkt uppsättning målinriktat innehåll som *ärvs* från en annan webbplats via MSM - innehållet kan introduceras individuellt från masterversion till live-kopia. Till exempel:
+* En distinkt uppsättning målinriktat innehåll som *ärvs* från en annan webbplats via MSM - innehållet kan introduceras individuellt från överordnad till live-text. Till exempel:
    * Plats A-länkar till område X
    * Site B-länkar till Area Y (som är en live-kopia av Area X)
 
@@ -88,15 +89,15 @@ Genom att använda flera webbplatser för riktat innehåll kan ni dela, rulla ut
 
 Det finns fyra versioner av samma webbplats baserat på geografisk placering:
 
-* Webbplatsen **USA** ligger i det övre vänstra hörnet och är huvudwebbplatsen. I det här exemplet är det öppet i målläge.
+* Den **amerikanska** webbplatsen ligger i det övre vänstra hörnet och är den överordnad webbplatsen. I det här exemplet är det öppet i målläge.
 * De tre andra versionerna av denna webbplats är **Kanada**, **Storbritannien** och **Australien**, som alla är live-kopior. Dessa webbplatser är öppna i förhandsgranskningsläge.
 
 ![Flera versioner](/help/sites-cloud/authoring/assets/multisite-versions.png)
 
 Varje webbplats delar personligt innehåll i geografiska regioner:
 
-* Kanada delar huvudområdet med USA.
-* Storbritannien är kopplat till det europeiska området och ärver från huvudområdet.
+* Kanada delar det överordnad området med USA.
+* Storbritannien är kopplat till det europeiska området och ärver från det överordnad området.
 * Australien har sitt eget personaliserade innehåll eftersom det ligger på södra halvklotet och eftersom säsongsprodukter inte skulle gälla.
 
 ![Multisitediagram](/help/sites-cloud/authoring/assets/multisite-diagram.png)
@@ -105,17 +106,17 @@ På det norra halvklotet har vi skapat en vinteraktivitet, men i den manliga pub
 
 ![Amerikas förenta stater](/help/sites-cloud/authoring/assets/multisite-us.png)
 
-När du har uppdaterat fliken ändras den kanadensiska webbplatsen till den nya bilden utan att vi behöver göra något. Det gör det eftersom det delar huvudområdet med USA. I Storbritannien och Australien ändras inte bilden.
+När du har uppdaterat fliken ändras den kanadensiska webbplatsen till den nya bilden utan att vi behöver göra något. Den gör det eftersom den delar det överordnad området med USA. I Storbritannien och Australien ändras inte bilden.
 
 ![Ändra versioner](/help/sites-cloud/authoring/assets/multisite-us-change.png)
 
-Marknadsföraren vill sprida dessa ändringar till den europeiska regionen och lansera den aktiva kopian genom att trycka eller klicka på **utrullningssidan**. När du har uppdaterat fliken får den nya bilden på den brittiska webbplatsen när det europeiska området ärver från huvudområdet (efter utrullning). <!--The marketer would like to roll out these changes to the European region and [rolls out the live copy](/help/sites-administering/msm-livecopy.md) by tapping or clicking **Rollout Page**. After refreshing the tab, the Great Britain site has the new image as the Europe area inherits from the master area (after rollout).-->
+Marknadsföraren vill sprida dessa ändringar till den europeiska regionen och lansera den aktiva kopian genom att trycka eller klicka på **utrullningssidan**. När du har uppdaterat fliken får den nya bilden på den brittiska webbplatsen när det europeiska området ärver från det överordnad området (efter utrullning). <!--The marketer would like to roll out these changes to the European region and [rolls out the live copy](/help/sites-administering/msm-livecopy.md) by tapping or clicking **Rollout Page**. After refreshing the tab, the Great Britain site has the new image as the Europe area inherits from the master area (after rollout).-->
 
 ![Rolling live copy](/help/sites-cloud/authoring/assets/multisite-roll-out.png)
 
 Bilden på Australiens webbplats ändras inte, vilket är det önskade beteendet, eftersom det är sommar i Australien och marknadsföraren inte vill ändra det innehållet. Australiens webbplats ändras inte eftersom den inte delar ett område med någon annan region och inte heller är den en live-kopia av en annan region. Marknadsföraren behöver aldrig oroa sig för att den australiska webbplatsens riktade innehåll skrivs över.
 
-För Storbritannien, vars område är en live-kopia av huvudområdet, kan du dessutom se arvsstatusen med den gröna indikatorn bredvid aktivitetsnamnet. Om en aktivitet ärvs kan du inte ändra den om du inte gör uppehåll i eller frigör den.
+För Storbritannien, vars område är en live-kopia av det överordnad området, ser du dessutom arvsstatus med den gröna indikatorn bredvid aktivitetsnamnet. Om en aktivitet ärvs kan du inte ändra den om du inte gör uppehåll i eller frigör den.
 
 Du kan när som helst göra uppehåll i arvet eller helt koppla loss arvet. Du kan också alltid lägga till lokala upplevelser som bara är tillgängliga för den upplevelsen utan att avbryta arvet.
 
@@ -133,15 +134,15 @@ Om du har skapat arv via MSM mellan de två platserna kanske du vill ärva aktiv
 >
 >Standardutrullningen aktiverar efterföljande rullningar av målinnehållet när en sida är en Live-kopia som länkar till ett område som själv är en Live-kopia av området som är länkat till sidans plan.
 
-I följande diagram finns fyra platser där två delar huvudområdet (och alla aktiviteter som ingår i det området), en plats som har ett område som är en live-kopia av ett område, så att den delar med sig av aktiviteterna vid utrullning, och en sida som är helt separat (och därför kräver ett område för sina aktiviteter).
+I följande diagram finns fyra platser där två delar det överordnad området (och alla aktiviteter som ingår i det området), en plats som har ett område som är en live-kopia av ett område, så att den delar på verksamheten vid utrullning, och en sida som är helt separat (och därför kräver ett område för sina aktiviteter).
 
 ![Diagramdetalj](/help/sites-cloud/authoring/assets/multisite-diagram-detail.png)
 
-Så här gör du i AEM:
+För att uppnå detta i AEM gör du följande:
 
-* Plats A länkar till mallområdet - inget område behöver skapas. Mallområde är markerat som standard i AEM. Delningsaktiviteter för webbplats A och B osv.
-* Plats B länkar till mallområdet - inget område behöver skapas. Mallområde är markerat som standard i AEM. Delningsaktiviteter för webbplats A och B osv.
-* Site C-länkar till Inherited Area, som är en live-kopia av mallområdet - Skapa område som Live-kopia där du skapar en live-kopia baserad på mallområdet. Det ärvda området ärver aktiviteter från huvudområdet vid utrullning.
+* Plats A länkar till det Överordnad området - inget områdesskapande behövs. Överordnad område markeras som standard i AEM. Delningsaktiviteter för webbplats A och B osv.
+* Plats B länkar till det Överordnad området - inget områdesskapande behövs. Överordnad område markeras som standard i AEM. Delningsaktiviteter för webbplats A och B osv.
+* Site C-länkar till Inherited Area, som är en live-kopia av det Överordnad området - Skapa område som Live-kopia där du skapar en live-kopia baserad på det Överordnad området. Det ärvda området ärver aktiviteter från det Överordnad området vid utrullning.
 * Plats D länkar till sitt eget isolerade område - Skapa område där du skapar ett helt nytt område utan aktiviteter ännu. Det isolerade området kommer inte att dela aktiviteter med någon annan plats.
 
 ## Skapa nya områden {#creating-new-areas}
@@ -163,7 +164,7 @@ Så här skapar du ett nytt område:
 1. I fältet **Titel** anger du ett namn för det nya området. Du kan också välja taggar.
 1. Tryck eller klicka på **Skapa**.
 
-   AEM dirigeras om till varumärkesfönstret, där det listas områden som skapats. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt i varumärkeskonsolen.
+   AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom det Överordnad området kan du skapa områden direkt i varumärkeskonsolen.
 
    ![Skapa](/help/sites-cloud/authoring/assets/multisite-create.png)
 
@@ -198,7 +199,7 @@ Så här skapar du ett område som en livecopy:
 
 1. Tryck eller klicka på **Skapa**.
 
-   AEM dirigeras om till varumärkesfönstret, där det listas områden som skapats. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt från varumärkesfönstret.
+   AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom det Överordnad området kan du skapa områden direkt från varumärkesfönstret.
 
    ![Skapa område](/help/sites-cloud/authoring/assets/multisite-create-2.png)
 
@@ -206,7 +207,7 @@ Så här skapar du ett område som en livecopy:
 
 Du kan länka områden till antingen sidor eller till en plats. Områden ärvs av alla undersidor såvida inte dessa sidor överlappas av en mappning på en undersida. I allmänhet länkar du dock på webbplatsnivå.
 
-När du länkar är bara de aktiviteter, upplevelser och erbjudanden från det valda området tillgängliga. Detta förhindrar oavsiktlig blandning av oberoende hanterat innehåll. Om inget annat område är konfigurerat används huvudområdet för varje varumärke.
+När du länkar är bara de aktiviteter, upplevelser och erbjudanden från det valda området tillgängliga. Detta förhindrar oavsiktlig blandning av oberoende hanterat innehåll. Om inget annat område är konfigurerat används det överordnad området för varje varumärke.
 
 >[!NOTE]
 >
@@ -239,6 +240,7 @@ En aktivitet som ärver från en annan plats markeras som grön bredvid aktivite
 >
 >* Du kan bara göra uppehåll i eller koppla loss live-kopior i en aktivitet.
 >* Du behöver inte göra uppehåll i eller koppla loss live-kopior för att utöka en ärvd aktivitet. Ni kan alltid skapa **nya** lokala upplevelser och erbjudanden för den aktiviteten. Om du vill ändra en befintlig aktivitet måste du göra uppehåll i arv.
+
 >
 
 
@@ -253,6 +255,7 @@ Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en
 
    1. Välj ett element i aktiviteten, till exempel målgruppen. AEM visar automatiskt en bekräftelseruta för att pausa Live Copy. (Du kan göra uppehåll i live-kopieringen genom att trycka eller klicka på ett element under målprocessen.)
    1. Select **Suspend Live Copy** from the drop-down menu in the toolbar.
+
    ![Skjut upp live-kopia](/help/sites-cloud/authoring/assets/multisite-suspend-livecopy.png)
 
 1. Tryck eller klicka på **Gör uppehåll** för att pausa aktiviteten. Avbrutna aktiviteter markeras med rött.
@@ -263,7 +266,7 @@ Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en
 
 Så här bryter du arv av riktat innehåll i en aktivitet:
 
-1. Navigera till sidan där du vill koppla loss den aktiva kopian från mallen och tryck eller klicka på **Mål** i listrutan Läge.
+1. Navigera till den sida där du vill koppla loss den aktiva kopian från överordnad och tryck eller klicka på **Riktning** i listrutan Läge.
 1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Tryck eller klicka på **Start Targeting**.
 1. Välj **Koppla loss live-kopia** i listrutan i verktygsfältet. AEM bekräftar att du vill koppla loss live-kopian.
 1. Tryck eller klicka på **Koppla loss** för att koppla loss live-kopian från aktiviteten. När den har kopplats loss visas inte längre listrutan för arv. Aktiviteten är nu en lokal aktivitet.
@@ -286,7 +289,7 @@ Så här återställer du arv av riktat innehåll i en aktivitet:
 
 ## Ta bort områden {#deleting-areas}
 
-När du tar bort ett område tar du bort alla aktiviteter i det området. AEM varnar dig innan du kan ta bort ett område. Om du tar bort ett område som en webbplats är kopplad till, kommer mappningen för det här varumärket automatiskt att ändras till huvudområdet.
+När du tar bort ett område tar du bort alla aktiviteter i det området. AEM varnar dig innan du kan ta bort ett område. Om du tar bort ett område som en webbplats är kopplad till, kommer mappningen för det här varumärket automatiskt att ändras till det överordnad området.
 
 Så här tar du bort ett område:
 
