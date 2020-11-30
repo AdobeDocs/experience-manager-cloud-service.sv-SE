@@ -1,11 +1,11 @@
 ---
 title: Versionsinformation för 2020.7.0-utgåvan [!DNL Adobe Experience Manager] av en Cloud Service.
-description: '[!DNL Adobe Experience Manager] som Cloud Service versionsinformation för 2020.7.0.'
+description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.7.0.'
 translation-type: tm+mt
 source-git-commit: 67d8ef256b410695435446ba0e560edce9115bab
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 1%
+source-wordcount: '1048'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.7.0 är 30 juli 2
 
 ## Adobe Experience Manager Sites som Cloud Service {#cloud-services-sites}
 
-### What&#39;s New {#what-is-new-sites}
+### Nyheter {#what-is-new-sites}
 
 [!DNL Experience Manager] som en Cloud Service-koppling för [!DNL Adobe Target] och [!DNL Adobe Analytics] förbättras på följande sätt:
 
@@ -52,7 +52,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.7.0 är 30 juli 2
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
-### What&#39;s New {#what-is-new-commerce}
+### Nyheter {#what-is-new-commerce}
 
 AEM Commerce är nu tillgänglig i Cloud Service.
 
@@ -60,7 +60,7 @@ Mer information finns i [Komma igång med AEM Commerce som Cloud Service](https:
 
 ## Kärnkomponenter {#core-components}
 
-### What&#39;s New {#what-is-new-core-components}
+### Nyheter {#what-is-new-core-components}
 
 Version 2.11.0 av [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) finns nu som en del av AEM Sites, inklusive:
 
@@ -79,7 +79,7 @@ Mer information finns i [AMP-stödet för kärnkomponenterna](https://docs.adobe
 
 Releasedatum för [!UICONTROL Cloud Manager] version 2020.7.0 är 9 juli 2020.
 
-### What&#39;s New {#what-is-new-cloud-manager}
+### Nyheter {#what-is-new-cloud-manager}
 
 * Miljösidan har gjorts om.
 
@@ -120,7 +120,7 @@ Mer information finns i [Använda Java 11-stöd](/help/onboarding/getting-access
 
 ## Adobe Experience Manager as a Cloud Service Foundation {#cloud-foundation}
 
-### What&#39;s New {#what-is-new-foundations}
+### Nyheter {#what-is-new-foundations}
 
 * [Loggar kan vidarebefordras till Splunk-konton](/help/implementing/developing/introduction/logging.md#splunk-logs), vilket gör att organisationer kan utnyttja sin Splunk-investering.
 
