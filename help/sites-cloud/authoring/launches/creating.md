@@ -36,6 +36,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    * **Sites**:
       1. Välj **Skapa** i verktygsfältet för att öppna markeringsrutan.
       1. Välj **Skapa start** för att öppna guiden.
+
    >[!NOTE]
    >
    >I **Sites**-konsolen kan du även använda [markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) för att välja en sida innan du väljer **Skapa**.
@@ -45,6 +46,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 1. I steget **Välj källa** måste du **lägga till sidor**. Du kan markera flera sidor och ange sökvägen för varje sida:
    * Navigera till önskad plats.
    * Markera källsidorna och bekräfta (bockmarkering).
+
    Upprepa efter behov.
 
    ![Välj startkälla](/help/sites-cloud/authoring/assets/launches-select-source.png)
@@ -60,6 +62,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    * **Inkludera undersidor**:
 
       * Ange om du vill skapa starten med eller utan de underordnade sidorna.  Som standard inkluderas de här undersidorna.
+
    Fortsätt med **Nästa**.
 
    ![Välj startkälla](/help/sites-cloud/authoring/assets/launches-select-source-2.png)
@@ -71,14 +74,15 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    * **Använd en ny mall för att ersätta sidan**: Mer information finns i [Skapa start med ny mall](#create-launch-with-new-template) .
    * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår du genom att göra lanseringen till en live-kopia. Som standard är det här alternativet markerat. <!--Select this option to automatically update the content of launch pages when the source pages change. This option achieves this by making the launch a [live copy](/help/sites-administering/msm.md). By default, this option is selected.-->
    * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på flaggan **Production Ready** ). se [Startar - Händelsens](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events)ordning).
+
    ![Startegenskaper](/help/sites-cloud/authoring/assets/launches-properties.png)
 
 1. Använd **Skapa** för att slutföra processen och skapa en ny start. I bekräftelsedialogrutan får du frågan om du vill öppna starten direkt.
 
    Om du returnerar konsolen (med **Klart**) kan du se (och få tillgång till) hur du startar programmet från:
 
-   * The [**Launches **console](/help/sites-cloud/authoring/launches/overview.md#the-launches-console)
-   * Referenserna [****i** webbplatskonsolen **](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)
+   * The [**Launches** console](/help/sites-cloud/authoring/launches/overview.md#the-launches-console)
+   * Referenserna [**** i **webbplatskonsolen**](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)
 
 ### Skapa start med ny mall {#create-launch-with-new-template}
 
@@ -88,7 +92,7 @@ När du skapar en startsida kan du välja om du vill använda en ny mall:
 >
 >Det här alternativet är endast tillgängligt när du skapar en start från **webbplatskonsolen** . Det är inte tillgängligt när du skapar en start från **startkonsolen** .
 
-![Skapa en startsida med en ny mall](/help/sites-cloud/authoring/assets/launches-create-new-template.png)
+![Skapa en start med en ny mall](/help/sites-cloud/authoring/assets/launches-create-new-template.png)
 
 Om du väljer det här alternativet kommer det att:
 
