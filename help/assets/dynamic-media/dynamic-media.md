@@ -1,30 +1,30 @@
 ---
 title: Arbeta med Dynamic Media
-description: Lär dig hur du använder Dynamic Media för att leverera resurser som ska användas på webbplatser, mobilsajter och sociala medier.
+description: Lär dig hur du använder Dynamic Media för att leverera material för webben, mobiler och sociala medier.
 translation-type: tm+mt
 source-git-commit: a5e94003a3e9023155dc95ceba1a5531e4f20d8f
 workflow-type: tm+mt
 source-wordcount: '415'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
 
 # Arbeta med Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av avancerat innehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
-Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic media införlivar smidigt arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
+Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic Media innehåller arbetsflödena från Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
 >[!NOTE]
 >
->Det finns en gemenskapsartikel om [att arbeta med Adobe Experience Manager och Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html).
+>Det finns en communityartikel om [att arbeta med Adobe Experience Manager och Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html).
 
 ## Vad du kan göra med Dynamic Media {#what-you-can-do-with-dynamic-media}
 
-I Dynamic Media kan du hantera dina resurser innan du publicerar dem. Hur du arbetar med resurser i allmänhet beskrivs i detalj i [Arbeta med digitala resurser](/help/assets/manage-digital-assets.md). Allmänna ämnen är bland annat att ladda upp, ladda ned, redigera och publicera material. visa och redigera egenskaper och söka efter resurser.
+Med Dynamic Media kan du hantera dina resurser innan du publicerar dem. Hur du arbetar med resurser i allmänhet beskrivs i detalj i [Arbeta med digitala resurser](/help/assets/manage-digital-assets.md). Allmänna ämnen är bland annat att ladda upp, ladda ned, redigera och publicera material. visa och redigera egenskaper och söka efter resurser.
 
-Funktioner som endast finns i Dynamic Media omfattar följande:
+Funktioner som bara är dynamiska media inkluderar följande:
 
 * [Karusellbanner](carousel-banners.md)
 * [Bilduppsättningar](image-sets.md)
@@ -35,7 +35,7 @@ Funktioner som endast finns i Dynamic Media omfattar följande:
 
 * [Snurrande uppsättningar](spin-sets.md)
 * [Video](video.md)
-* [Leverera Dynamic Media Assets](delivering-dynamic-media-assets.md)
+* [Leverera dynamiska medieresurser](delivering-dynamic-media-assets.md)
 * [Hantera resurser](managing-assets.md)
 * [Använda snabbvyer för att skapa anpassade popup-fönster](custom-pop-ups.md)
 
@@ -50,25 +50,25 @@ OBSOLETE UNTIL INTEGRATING SCENE7 TOPIC GETS A MAJOR UPDATE
 
 -->
 
-## Dynamic Media aktiverade jämfört med Dynamic Media inaktiverade {#dynamic-media-on-versus-dynamic-media-off}
+## Dynamiska media aktiverat jämfört med Dynamic Media inaktiverat {#dynamic-media-on-versus-dynamic-media-off}
 
-Du kan se om Dynamic Media är aktiverade (aktiverade) på följande sätt:
+Du kan se om Dynamic Media är aktiverat (aktiverat) av följande egenskaper:
 
 * Dynamiska återgivningar är tillgängliga när du hämtar eller förhandsgranskar resurser.
 * Bilduppsättningar, snurruppsättningar, blandade medieuppsättningar är tillgängliga.
 * PTIFF-återgivningar skapas.
 
-När du klickar på en bildresurs ser resursen annorlunda ut än med Dynamic Media aktiverade. Dynamic Media använder on-demand-visningsprogram för HTML5.
+När du klickar på en bildresurs ser resursen annorlunda ut med Dynamic Media aktiverat. Dynamic Media använder on-demand-visningsprogram för HTML5.
 
 ### Dynamiska renderingar {#dynamic-renditions}
 
-Dynamiska återgivningar som bild- och visningsinställningar (under **[!UICONTROL Dynamic]**) är tillgängliga när Dynamic Media är aktiverade.
+Dynamiska återgivningar som bild- och visningsinställningar (under **[!UICONTROL Dynamic]**) är tillgängliga när Dynamic Media är aktiverat.
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
 ### Bilduppsättningar, snurruppsättningar, blandade medieuppsättningar {#image-sets-spins-sets-mixed-media-sets}
 
-Bilduppsättningar, snurra och blandade medieuppsättningar är tillgängliga om Dynamic Media är aktiverade.
+Bilduppsättningar, snurruppsättningar och blandade medieuppsättningar är tillgängliga om Dynamic Media är aktiverat.
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -80,10 +80,10 @@ Dynamiska medieaktiverade resurser omfattar `pyramid.tiffs`.
 
 ### Ändra resursvyer {#asset-views-change}
 
-När Dynamic Media är aktiverade kan du zooma in och ut genom att klicka på `+` - och `-` -knapparna. Du kan också klicka/trycka för att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media som är aktiverade ser ut så här:
+När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på `+` - och `-` -knapparna. Du kan också klicka/trycka för att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media-aktiverade ser ut så här:
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
-Med Dynamic Media inaktiverat kan du zooma in och ut och återgå till den ursprungliga storleken:
+När Dynamic Media är inaktiverat kan du zooma in och ut och återgå till den ursprungliga storleken:
 
 ![chlimage_1-362](assets/chlimage_1-362.png)
