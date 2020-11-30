@@ -48,25 +48,25 @@ De modifieringstangenter som används för kortkommandon varierar beroende på v
 
 ## Webbläsare och kortkommandon {#browsers-and-keyboard-shortcuts}
 
-Med AEM undviker du vanliga genvägar som redan används av vanliga webbläsare, men standardwebbläsarbeteendet åsidosätts inte av AEM-genvägar.
+AEM undviker vanliga kortkommandon som redan används av vanliga webbläsare, men webbläsarens standardbeteende åsidosätts inte av AEM kortkommandon.
 
 Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 
 >[!NOTE]
 >
->AEM-kortkommandon åsidosätter inte webbläsarens standardbeteende.
+>AEM åsidosätter inte webbläsarens standardbeteende.
 >
->Om det uppstår konflikter mellan AEM-kortkommandon och webbläsargenvägar fungerar inte AEM-kortkommandona, vilket ger bättre webbläsarfunktioner.
+>Om det uppstår konflikter mellan AEM och webbläsargenvägar fungerar inte AEM, vilket ger webbläsarfunktionaliteten.
 
 >[!CAUTION]
 >
->Kortkommandon för AEM kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
+>AEM kortkommandon kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
 >
->Adobe rekommenderar att du [inaktiverar AEM-kortkommandon](#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
+>Adobe rekommenderar att du [inaktiverar AEM kortkommandon](#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
-I AEM finns kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer osv.).
+AEM innehåller kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer osv.).
 
 För användare som inte använder kortkommandon eller har vissa tillgänglighetskrav kan alla kortkommandon inaktiveras.
 
@@ -81,4 +81,4 @@ Du kan inaktivera kortkommandon på två platser:
 
 ## Kortkommandon för sidredigeraren {#keyboard-shortcuts-for-the-page-editor}
 
-Olika kortkommandon finns tillgängliga i hela AEM. En del gäller användning av konsoler, andra för [sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. En del gäller användning av konsoler, andra för [sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
