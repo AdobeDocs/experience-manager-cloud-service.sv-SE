@@ -50,7 +50,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se [Lägga till och redigera visningsförinställningar.](/help/assets/dynamic-media/managing-viewer-presets.md)
 
-   Du kan visa och komma åt uppsättningar som skapats med hjälp av gruppuppsättningsförinställningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet.)
+   Du kan visa och komma åt uppsättningar som skapats med förinställningar för gruppuppsättningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet.)
 
 1. [Förhandsgranska snurra uppsättningar.](/help/assets/dynamic-media/previewing-assets.md)
 
@@ -116,7 +116,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
 1. Gör något av följande:
 
-   * I det övre vänstra hörnet på sidan för redigeraren för sned uppsättning trycker du på **[!UICONTROL Add Asset]**.
+   * Tryck på i det övre vänstra hörnet på sidan för redigeraren för uppsättningar **[!UICONTROL Add Asset]**.
 
    * I mitten av sidan för redigeraren för snurra uppsättning trycker du på **[!UICONTROL Tap to open Asset Selector]**.
    Tryck för att välja resurser som du vill inkludera i din snurruppsättning. De markerade resurserna visas med en bock. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select]**.
