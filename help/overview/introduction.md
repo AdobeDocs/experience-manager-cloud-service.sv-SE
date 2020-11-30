@@ -1,9 +1,9 @@
 ---
 title: Introduktion till Adobe Experience Manager as a Cloud Service
 description: 'Introduktion till Adobe Experience Manager (AEM) as a Cloud Service. '
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: e381807d7c199113689304e9481dfe2022ee5f93
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 100%
 
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # En introduktion till Adobe Experience Manager as a Cloud Service {#an-introduction-to-adobe-experience-manager-as-a-cloud-service}
 
-[Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html) (AEM) finns nu as a Cloud Service.
+[Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html) (AEM) finns nu som en molntjänst.
 
 Adobe Experience Manager as a Cloud Service:
 
@@ -52,7 +52,7 @@ Det innebär att:
 >
 >Se [Terminologi](terminology.md) för några av de nya termer som har introducerats med AEM as a Cloud Service.
 
-## Mervärde as a Cloud Service {#value-added-as-a-cloud-service}
+## Mervärde med en molntjänst {#value-added-as-a-cloud-service}
 
 AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna Cloud Services:
 
@@ -79,5 +79,5 @@ AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna
 * [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
 * [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
 * [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
-* [Assets as a Cloud Service introduceras](/help/assets/overview.md)
-* [Adobe Experience Manager as a Cloud Service Tutorials](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
+* [Nu kommer Assets as a Cloud Service](/help/assets/overview.md)
+* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
