@@ -12,7 +12,7 @@ ht-degree: 83%
 ---
 
 
-# Handbok om flyttning till AEM as a Cloud Service {#moving}
+# Användarhandboken Flytta till AEM as a Cloud Service {#moving}
 
 + [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md)
 + Faser i övergångsprocessen {#phases}
