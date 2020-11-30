@@ -42,9 +42,9 @@ En Magento-URL för GraphQL-slutpunkt kan användas som en Cloud Service för va
 
 Så här ansluter du AEM Commerce till Magento:
 
-1. Skaffa Adobe I/O CLI med pluginprogrammet Cloud Manager
+1. Skaffa Adobe I/O CLI med plugin-programmet Cloud Manager
 
-   Läs dokumentationen [för](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Adobe Cloud Manager om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Managers CLI-plugin](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+   Läs dokumentationen [för](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Adobe Cloud Manager om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 2. Autentisera CLI med AEM som ett Cloud Service-program
 
