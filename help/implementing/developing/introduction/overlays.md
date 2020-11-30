@@ -1,16 +1,16 @@
 ---
 title: Övertäckningar för Adobe Experience Manager som Cloud Service
-description: AEM som Cloud Service använder övertäckningsprincipen för att utöka och anpassa konsoler och andra funktioner
+description: AEM som Cloud Service använder principen om övertäckningar för att du ska kunna utöka och anpassa konsoler och andra funktioner
 translation-type: tm+mt
 source-git-commit: 8028682f19ba6ba7db6b60a2e5e5f5843f7ac11f
 workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Overlays in AEM as a Cloud Service {#overlays-in-aem}
+# Överlagring i AEM as a Cloud Service {#overlays-in-aem}
 
 Adobe Experience Manager som Cloud Service använder principen om övertäckningar för att du ska kunna utöka och anpassa konsoler och andra funktioner (till exempel för att skapa sidor).
 
@@ -18,9 +18,9 @@ Adobe Experience Manager som Cloud Service använder principen om övertäckning
 Adobe Experience Manager as a Cloud Service uses the principle of overlays to allow you to extend and customize the [consoles](/help/sites-developing/customizing-consoles-touch.md) and other functionality (for example, [page authoring](/help/sites-developing/customizing-page-authoring-touch.md)).
 -->
 
-Övertäckning är en term som kan användas i många sammanhang. I det här sammanhanget (utökning av AEM som Cloud Service) innebär en övertäckning att du tar de fördefinierade funktionerna och lägger in egna definitioner över dem (för att anpassa standardfunktionerna).
+Övertäckning är en term som kan användas i många sammanhang. I det här sammanhanget (utöka AEM som en Cloud Service) innebär en övertäckning att du tar de fördefinierade funktionerna och lägger in egna definitioner över dem (för att anpassa standardfunktionerna).
 
-I en standardinstans lagras den fördefinierade funktionen under `/libs` och du rekommenderas att definiera övertäckningen (anpassningar) under `/apps` grenen (använda en [sökväg](#search-paths) för att matcha resurserna).
+I en standardinstans lagras den fördefinierade funktionen under `/libs` och du rekommenderas att definiera övertäckningen (anpassningar) under `/apps` grenen (använda en [sökväg](#search-paths) för att lösa resurserna).
 
 * Det beröringskänsliga användargränssnittet använder [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)-relaterade övertäckningar:
 
@@ -49,13 +49,13 @@ I en standardinstans lagras den fördefinierade funktionen under `/libs` och du 
 Overlays are the recommended method for many changes, such as [configuring your consoles](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console) or [creating your selection category to the asset browser in the side panel](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser) (used when authoring pages). They are required as:
 -->
 
-* Du ***får inte *göra ändringar i`/libs`grenen **. Alla ändringar du gör kan gå förlorade, eftersom den här grenen kan ändras när uppgraderingar tillämpas på din instans.
+* Du ***får inte* göra ändringar i `/libs` grenen **. Alla ändringar du gör kan gå förlorade, eftersom den här grenen kan ändras när uppgraderingar tillämpas på din instans.
 
 * De koncentrerar dina ändringar på ett ställe; gör det enklare för dig att spåra, migrera, säkerhetskopiera och/eller felsöka ändringar efter behov.
 
 ## Sökvägar {#search-paths}
 
-I AEM används en söksökväg för att hitta en resurs, som söker (som standard) först i `/apps` grenen och sedan i `/libs` grenen. Den här mekanismen innebär att överlagringen i `/apps` (och de anpassningar som definieras där) har prioritet.
+AEM använder en söksökväg för att hitta en resurs och söker (som standard) först i `/apps` grenen och sedan i `/libs` grenen. Den här mekanismen innebär att överlagringen i `/apps` (och de anpassningar som definieras där) har prioritet.
 
 För övertäckningar är den levererade resursen en sammanställning av resurser och egenskaper som hämtats, beroende på sökvägar som definierats i OSGi-konfigurationen.
 
