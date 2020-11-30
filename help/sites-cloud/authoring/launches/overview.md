@@ -16,7 +16,7 @@ Med lanseringar kan du effektivt utveckla innehåll för en framtida release.
 
 En startsida skapas så att du kan göra ändringar redo för framtida publicering (samtidigt som du behåller dina aktuella sidor). När du har redigerat och uppdaterat startsidorna befordrar du dem tillbaka till källan och aktiverar sedan källsidorna (översta nivån). Befordra duplicerar startinnehållet tillbaka till källsidorna och kan göras antingen manuellt eller automatiskt (beroende på fält som anges när du skapar och redigerar startsidan).
 
-Till exempel kommer säsongsproduktsidorna i din onlinebutik att uppdateras kvartalsvis så att de aktuella produkterna passar den aktuella säsongen. Om du vill förbereda dig för nästa kvartalsvisa uppdatering kan du skapa en startsida med lämpliga webbsidor. Under hela kvartalet ackumuleras följande ändringar i startversionen:
+Till exempel kommer säsongsproduktsidorna i din onlinebutik att uppdateras varje kvartal så att de aktuella produkterna passar den aktuella säsongen. Om du vill förbereda dig för nästa kvartalsvisa uppdatering kan du skapa en startsida med lämpliga webbsidor. Under hela kvartalet ackumuleras följande ändringar i startversionen:
 
 * Ändringar av källsidorna som inträffar som ett resultat av normala underhållsåtgärder. Dessa ändringar dupliceras automatiskt på startsidorna.
 * Redigeringar som utförs direkt på startsidorna inför nästa kvartal.
@@ -44,6 +44,7 @@ Med Launes kan du:
    * Kopian är startsida.
    * Källsidorna på den översta nivån kallas **Produktion**.
       * Källsidorna kan tas från flera (separata) grenar.
+
    ![Operationsordning för starter](/help/sites-cloud/authoring/assets/launches-order.png)
 
 * Redigera startkonfigurationen:
@@ -62,11 +63,13 @@ Med Launes kan du:
 * Uppdatera käll- och startsidor parallellt:
    * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). dvs. som en live-kopia).
    * Du kan göra ändringar i startversionen utan att störa dessa automatiska uppdateringar eller källsidorna.
+
    ![Åtgärder parallellt](/help/sites-cloud/authoring/assets/launches-parallel.png)
 
 * [Skapa en kapslad programstart](/help/sites-cloud/authoring/launches/creating.md#creating-a-nested-launch) - en programstart i en programstart:
    * Källan är en befintlig start.
    * Du kan [befordra en kapslad start](/help/sites-cloud/authoring/launches/promoting.md#promoting-a-nested-launch) till vilket mål som helst; detta kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
+
    ![En kapslad start](/help/sites-cloud/authoring/assets/launches-nested.png)
 
    >[!CAUTION]
