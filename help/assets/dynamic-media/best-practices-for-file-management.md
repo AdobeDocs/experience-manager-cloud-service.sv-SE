@@ -1,5 +1,5 @@
 ---
-title: Bästa tillvägagångssätt för att ordna dina digitala resurser så att du kan använda Dynamic Media-bildprofiler eller videoprofiler
+title: Bästa tillvägagångssätt för att ordna digitala resurser för att använda dynamiska mediebildprofiler eller videoprofiler
 description: Tips och vedertagna metoder för att namnge, ordna och hantera bilder och videofiler i Dynamic Media.
 translation-type: tm+mt
 source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för att ordna digitala resurser för att använda bildprofiler eller videoprofiler{#best-practices-for-organizing-your-digital-assets-for-using-profiles}
 
-Ett viktigt koncept när det gäller användning av Dynamic Media-bildprofiler eller videoprofiler är att de tilldelas mappar. Inom en profil finns inställningar för en bild eller video. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Det innebär att hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar har stor inverkan på hur dessa resurser bearbetas av profilen.
+Ett viktigt koncept när det gäller användning av dynamiska mediebildprofiler eller videoprofiler är att de tilldelas mappar. Inom en profil finns inställningar för en bild eller video. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Det innebär att hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar har stor inverkan på hur dessa resurser bearbetas av profilen.
 
 Genom att använda konsekventa och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan du få ut det mesta av din digitala resurssamling och se till att rätt filer bearbetas med rätt profil.
 
-Se [Om Dynamic Media bildprofil och videoprofiler](about-image-video-profiles.md).
+Se [Om Dynamic Media Image Profile och Videoprofiler](about-image-video-profiles.md).
 
 Här följer några tips om hur du kan ordna dina digitala resursfiler.
 
@@ -39,5 +39,5 @@ Här följer några tips om hur du kan ordna dina digitala resursfiler.
    * **Datumbaserade mappar** - innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att tilldelade profiler inte bryts.
-* Om en resurs redan är publicerad använder du AEM för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen, är den ursprungliga publicerade resursplatsen fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock&quot;förlorad&quot; för AEM och kan inte avpubliceras. Därför bör du avpublicera resurser först innan du flyttar dem till en annan mapp.
+* Om en resurs redan är publicerad använder du AEM för att flytta resursen till en annan mapp och publicera på nytt från den nya platsen, men den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock&quot;förlorad&quot; för AEM och kan inte avpubliceras. Därför bör du avpublicera resurser först innan du flyttar dem till en annan mapp.
 
