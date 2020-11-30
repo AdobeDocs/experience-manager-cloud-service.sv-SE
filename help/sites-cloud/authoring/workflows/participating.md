@@ -39,6 +39,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
    * Antalet arbetsflöden som sidan är underställd. Du kan:
       * Använd vänster-/högerpilarna för att navigera i statusinformationen för de olika arbetsflödena.
       * klicka/tryck på det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
+
    ![Sida med flera arbetsflöden](/help/sites-cloud/authoring/assets/workflows-multiple.png)
 
    >[!NOTE]
@@ -72,7 +73,7 @@ Du kan slutföra ett deltagarsteg från:
 
 Gör så här för att slutföra arbetsuppgiften:
 
-1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Fullständig** i verktygsfältet.
 1. Dialogrutan **Hela arbetsuppgiften** öppnas. Välj **Nästa steg** i listrutan och lägg till en **kommentar** om det behövs.
@@ -131,7 +132,7 @@ Du kan delegera ett deltagarsteg från antingen:
 
 Använd följande procedur för att delegera en arbetsuppgift:
 
-1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
 1. Dialogrutan öppnas. Ange **Användare** i listrutan (kan också vara en grupp) och lägg till en **kommentar** om det behövs.
@@ -167,7 +168,7 @@ Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du steg
 
 På den här åtgärden kan du ange:
 
-* **Föregående steg**: Det steg som ska återsändas till. du kan välja från en lista
+* **Föregående steg**: Det steg som ska återföras till. du kan välja från en lista
 * **Kommentar**: om det behövs
 
 Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
@@ -181,7 +182,7 @@ Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 
 Använd följande procedur för att stega bakåt:
 
-1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Öppna dialogrutan genom att välja **Stega bakåt** .
 1. Ange **Föregående steg** och lägg till en **kommentar** om det behövs.
@@ -242,7 +243,7 @@ Du kan öppna information om arbetsobjekt från:
 
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
-1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 1. Om det behövs väljer du lämplig åtgärd, anger information och bekräftar med **OK** (eller **Avbryt**).
@@ -263,7 +264,7 @@ Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstans
 
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 
-1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Öppna dialogrutan genom att välja **Visa nyttolast** i verktygsfältet.
    * Eftersom ett arbetsflödespaket är en samling pekare till sökvägar i databasen, kan du lägga till/ta bort/ändra posterna här för att justera vad som refereras av arbetsflödespaketet. Använd **resursdefinitionskomponenten** för att lägga till nya poster.
