@@ -1,6 +1,6 @@
 ---
 title: Hantera samlingar med digitala resurser
-description: Förstå begreppet insamling i Adobe Experience Manager Assets. Lär dig hur du samlar, hanterar, redigerar och samlar med andra användare.
+description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär dig hur du samlar, hanterar, redigerar och samlar med andra användare.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
@@ -140,7 +140,7 @@ Sökfunktionen i samlingar har stöd för både [Söka efter samlingar](#search-
 
 ### Sök i samlingar {#search-collections}
 
-Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i sökrutan söker AEM Assets efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
+Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i rutan Sök söker AEM Assets efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
 
 Om du söker efter samlingar från den översta nivån returneras bara enskilda samlingar i sökresultaten. Resurser eller mappar i samlingarna exkluderas. I alla andra fall (till exempel i en enskild samling eller i en mapphierarki) returneras alla relevanta resurser, mappar och samlingar.
 
@@ -148,7 +148,7 @@ Om du söker efter samlingar från den översta nivån returneras bara enskilda 
 
 Tryck/klicka på en samling i Samlingar-konsolen för att öppna den.
 
-I en samling är sökning efter AEM-resurser begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
+I en samling är AEM resurssökning begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
 
 ## Redigera samlingsinställningar {#edit-collection-settings}
 
