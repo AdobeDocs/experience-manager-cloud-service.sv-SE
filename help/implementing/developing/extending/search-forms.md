@@ -1,6 +1,6 @@
 ---
 title: Konfigurera sökformulär
-description: Konfigurera sökformulär för Adobe Experience Manager som en Cloud Service.
+description: Konfigurera Search Forms for Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
 source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
@@ -28,9 +28,9 @@ Tillsammans hjälper vi er att snabbt och enkelt hitta ert innehåll:
 >
 >Du kan konfigurera den underliggande tjänsten [Innehållssökning och indexering](/help/operations/indexing.md) .
 
-Med **sökformulär** kan du anpassa och utöka panelerna efter dina specifika behov.
+Med **Sök i Forms** kan du anpassa och utöka panelerna efter behov.
 
-Med **sökformulären** får du ett urval av [predikat](#predicates-and-their-settings) som du kan kombinera och definiera. Du hittar [dialogrutorna för att konfigurera dessa formulär](#configuring-your-search-forms) via:
+Med **Search Forms** får du ett komplett urval av [predikat](#predicates-and-their-settings) som du kan kombinera och definiera. Du hittar [dialogrutorna för att konfigurera dessa formulär](#configuring-your-search-forms) via:
 
 * **Verktyg**
 
@@ -38,9 +38,9 @@ Med **sökformulären** får du ett urval av [predikat](#predicates-and-their-se
 
       * **Sökformulär**
 
-## Standardformulär {#default-forms}
+## Forms som standard {#default-forms}
 
-När du först öppnar konsolen **Sök efter formulär** ser du att alla konfigurationer har en hänglåssymbol. Detta anger att motsvarande konfiguration är standardkonfigurationen (ej ifylld) - och kan inte tas bort. När du har anpassat och sparat en konfiguration försvinner låset. Den visas igen när du [tar bort den anpassade konfigurationen](#deleting-a-configuration-to-reinstate-the-default). I så fall återställs standardinställningen (och hänglåsindikatorn).
+När du först öppnar Forms **-konsolen för** sökning ser du att alla konfigurationer har en hänglåssymbol. Detta anger att motsvarande konfiguration är standardkonfigurationen (ej ifylld) - och kan inte tas bort. När du har anpassat och sparat en konfiguration försvinner låset. Den visas igen när du [tar bort den anpassade konfigurationen](#deleting-a-configuration-to-reinstate-the-default). I så fall återställs standardinställningen (och hänglåsindikatorn).
 
 ![konfigurera sökformulär, översikt](assets/csf-overview.png)
 
@@ -62,7 +62,7 @@ Standardkonfigurationerna (i alfabetisk ordning) är:
 
 * **Page Editor (produktsökning):**
 
-* **Page Editor (Scene7-sökning)**:
+* **Page Editor (Scene7 Search)**:
 
 * **Sidredigeraren (videosökning)**:
 
@@ -95,8 +95,8 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
    <th>Inställningar</th>
   </tr>
   <tr>
-   <td>Analytics</td>
-   <td>Sök-/filterfunktioner i webbläsaren Sites när analysdata visas. Analytics sökfilter läses in för att matcha mappade anpassade analyskolumner.</td>
+   <td>Analyser</td>
+   <td>Sök-/filterfunktioner i webbläsaren Sites när analysdata visas. Analyssökfilter läses in för att matcha mappade anpassade analyskolumner.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -556,11 +556,11 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * &amp;Klona;ast; på fältetiketterna på fliken **Inställningar** betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
 
-## Konfigurera dina sökformulär {#configuring-your-search-forms}
+## Konfigurera din sökning i Forms {#configuring-your-search-forms}
 
 ### Skapa/öppna en anpassad konfiguration {#creating-opening-a-customized-configuration}
 
-1. Navigera till **Verktyg**, **Allmänt**, **Sökformulär**.
+1. Navigera till **Verktyg**, **Allmänt**, **Sök i Forms**.
 
 1. Välj den konfiguration som du vill anpassa.
 1. Använd ikonen **Redigera** för att öppna konfigurationen för uppdatering.
@@ -668,7 +668,7 @@ I följande exempel (som används för att söka efter mallen som används för 
    >1. Gör ändringar i `/apps.`
 
 
-1. Öppna konsolen **Sök efter formulär** och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer. Välj sedan **Redigera**.
+1. Öppna Forms **-konsolen för** sökning och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer. Välj sedan **Redigera**.
 
 1. Beroende på konfigurationen lägger du till en **Alternativ** - eller **alternativegenskap** i konfigurationen.
 1. Uppdatera fälten, särskilt:
