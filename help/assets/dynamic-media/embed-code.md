@@ -14,7 +14,7 @@ ht-degree: 21%
 
 Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
-Du bäddar bara in URL:er om du _inte_ använder AEM som WCM. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du bäddar bara in URL:er om du _inte_ använder AEM som WCM-fil. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
 See [Linking URLs to your Web Application.](linking-urls-to-yourwebapplication.md)
 
