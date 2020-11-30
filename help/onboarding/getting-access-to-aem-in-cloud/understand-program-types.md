@@ -1,6 +1,6 @@
 ---
 title: Program- och programtyper
-description: Program- och programtyper - molntjänster
+description: Program- och programtyper - Cloud Services
 translation-type: tm+mt
 source-git-commit: 14da491cf09ed46ea425a8d65670d8b851aef388
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ I Cloud Manager har du klientorganisationen högst upp som kan ha flera program 
 
 I följande diagram visas hierarkin för enheter i Cloud Manager.
 
-![image](assets/program-types1.png)
+![bild](assets/program-types1.png)
 
 ## Programtyper {#program-types}
 
