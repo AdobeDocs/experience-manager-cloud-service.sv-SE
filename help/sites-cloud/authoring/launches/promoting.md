@@ -39,6 +39,7 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 >
 >* [Befordra en kapslad start](#promoting-a-nested-launch) när det finns mer än en start i strukturen.
 >* [Launches - The Order of Events](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events) for more details about automatic promoand publication.
+
 >
 
 
@@ -62,6 +63,7 @@ Du kan befordra starter från **Sites** Console eller **Launches** console:
       * **Befordra ändrade sidor**
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
+
       Om du t.ex. väljer att bara befordra ändrade sidor:
 
       ![Starta kampanj](/help/sites-cloud/authoring/assets/launches-promote.png)
@@ -103,6 +105,7 @@ När du har skapat en kapslad start kan du befordra den tillbaka till någon av 
       * **Befordra ändrade sidor**
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
+
    ![Befordra startinställningar](/help/sites-cloud/authoring/assets/launches-promote-settings.png)
 
 1. Välj **Nästa**.
