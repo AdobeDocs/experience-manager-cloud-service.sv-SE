@@ -1,6 +1,6 @@
 ---
 title: Komponenter
-description: Komponenterna är den grundläggande byggstenen för innehållssidor i AEM
+description: Komponenter är den grundläggande byggstenen för innehållssidor i AEM
 translation-type: tm+mt
 source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ AEM innehåller en mängd färdiga komponenter som ger omfattande funktionalitet
 
 >[!NOTE]
 >
->I det här avsnittet behandlas endast komponenter som finns i en färdig AEM-installation.
+>I det här avsnittet behandlas endast komponenter som är tillgängliga i en AEM.
 >
 >Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter explicit för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
@@ -36,13 +36,13 @@ Mer information om hur du lägger till komponenter på en sida finns i artikeln 
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 
-Med [komponentkonsolen](/help/sites-cloud/authoring/features/components-console.md) får du en översikt över komponentgrupperna och komponenterna som tillhandahålls av din AEM-installation. Du kan visa viktig information om de enskilda komponenterna och deras användning.
+Med [komponentkonsolen](/help/sites-cloud/authoring/features/components-console.md) får du en översikt över de komponentgrupper och komponenter som finns i AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
 
 ## Kärnkomponenter {#core-components}
 
 Med [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) får du flexibel och funktionsrik redigeringsfunktionalitet som tillhandahåller viktiga innehållstyper för att skapa sidor.
 
-De bygger med hjälp av AEM:s bästa praxis och utgör grunden för AEM-redigeringsupplevelsen. Kärnkomponenterna kan enkelt byggas ut av utvecklare för att uppfylla specifika projektbehov.
+De bygger med AEM bästa praxis och utgör grunden för den AEM redigeringsupplevelsen. Kärnkomponenterna kan enkelt byggas ut av utvecklare för att uppfylla specifika projektbehov.
 
 ### Konfigurera mallar {#configuring-templates}
 
