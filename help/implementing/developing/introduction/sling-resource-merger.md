@@ -5,18 +5,18 @@ translation-type: tm+mt
 source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
 source-wordcount: '1160'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Använda Sling Resource Merger i AEM som Cloud Service {#using-the-sling-resource-merger-in-aem}
+# Använda Sling Resource Merger i AEM as a Cloud Service {#using-the-sling-resource-merger-in-aem}
 
 ## Syfte {#purpose}
 
 Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser. Den innehåller olika mekanismer (differentiering) för båda:
 
-* **[Övertäckningar](/help/implementing/developing/introduction/overlays.md)**av resurser som använder[sökvägarna](/help/implementing/developing/introduction/overlays.md#search-paths).
+* **[Övertäckningar](/help/implementing/developing/introduction/overlays.md)** av resurser som använder [sökvägarna](/help/implementing/developing/introduction/overlays.md#search-paths).
 
 * **Åsidosätter** komponentdialogrutor för det beröringsaktiverade användargränssnittet (`cq:dialog`) med resurstyphierarkin (med egenskapen `sling:resourceSuperType`).
 
@@ -48,11 +48,12 @@ Målet med Sling Resource Merger i AEM är att
 >Detta beror på att innehållet i `/libs` kan skrivas över när uppgraderingar tillämpas på din instans.
 >
 >* Övertäckningar är beroende av [sökvägar](/help/implementing/developing/introduction/overlays.md#search-paths).
+   >
+   >
+* Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
 >
->* Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
 >
->
->Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
+Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
 
 ### Egenskaper {#properties}
 
@@ -198,6 +199,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
       * type: `String[]`
       * värde: en lista med underordnade noder (enligt definition i `/libs`) som ska döljas/ignoreras
+
       Jokertecknets &amp;stämpel;ast; kan användas för att dölja/ignorera alla underordnade noder.
 
 
