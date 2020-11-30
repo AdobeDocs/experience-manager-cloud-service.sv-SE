@@ -36,7 +36,7 @@ Detta konfigureras vanligtvis med följande cachepost:
 com.adobe.cq.commerce.core.search.services.SearchFilterService:true:10:3600
 ```
 
-Ett annat exempel där cachningsfunktionen GraphQl bör användas är navigeringskomponenten eftersom den skickar samma GraphQL-fråga på alla sidor. I det här fallet är cacheposten vanligtvis inställd på:
+Ett annat exempel där cachningsfunktionen GraphQl rekommenderas att användas är navigeringskomponenten eftersom den skickar samma GraphQL-fråga på alla sidor. I det här fallet är cacheposten vanligtvis inställd på:
 
 ```
 venia/components/structure/navigation:true:10:600
