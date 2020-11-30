@@ -515,7 +515,7 @@ När du skapar visningsförinställningar för Carousel Banner kan du ändra for
 
 |  | **Beskrivning** | **Åtgärder** |
 |---|---|---|
-| **[!UICONTROL Hotspot Icon]** | Ändra ikonen som används för hotspot | Om du vill ändra hotspot-ikonbilden trycker du på i **[!UICONTROL Appearance]** på **[!UICONTROL Selected Component]** fliken **[!UICONTROL ImageMapEffect]**. Under **[!UICONTROL Icon]** markerar du **[!UICONTROL Background]** och i fältet **[!UICONTROL Image]** navigerar du till den bakgrundsbild du vill ha. |
+| **[!UICONTROL Hotspot Icon]** | Ändra ikonen som används för hotspot-områden | Om du vill ändra hotspot-ikonbilden trycker du på i **[!UICONTROL Appearance]** på **[!UICONTROL Selected Component]** fliken **[!UICONTROL ImageMapEffect]**. Under **[!UICONTROL Icon]** markerar du **[!UICONTROL Background]** och i fältet **[!UICONTROL Image]** navigerar du till den bakgrundsbild du vill ha. |
 
 ## Aktivera eller inaktivera visningsförinställningar {#activating-or-deactivating-viewer-presets}
 
