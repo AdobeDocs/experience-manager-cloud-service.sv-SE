@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Manager som Cloud Service Versionsinformation för 2020.5.0
+title: Adobe Experience Manager som Cloud Service Release Notes for 2020.5.0
 description: Versionsinformation om Experience Manager för 2020.5.0
 translation-type: tm+mt
 source-git-commit: 3dc0d1d77595f7b3e890fb4b390eef5bcf84ecd8
@@ -24,7 +24,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Detaljerad jobbinformation är nu tillgänglig efter bearbetning av flyttning av gruppsidor och utlöses som asynkrona jobb.
 * När du kopierar/klistrar in ett sidträd kan du nu välja mellan att bara klistra in rotsidan eller även undersidorna i trädet.
-* AEM Experience Fragments som exporteras till arbetsytorna i Adobe Target visas nu som unika erbjudandetyper och erbjudandekällor i Target.
+* AEM Experience Fragments som exporteras till Adobe Target-arbetsytor visas nu som unika erbjudandetyper och erbjudandekällor i Target.
 * MSM - med *publiceringsutlösaren* kan du nu ta bort borttagningshändelser för komponenter i live-kopieringskällan, det vill säga ta bort komponenter i en live-kopia som har tagits bort i live-kopiekällan.
 * MSM - komponenterna för live-kopiering byter nu namn till *_msm_move* efter att samma komponent har rullats ut från live-kopiekälla.
 
@@ -33,7 +33,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en Cloud Service-version 2020.5.0.
 
-### What&#39;s New {#what-is-new}
+### Nyheter {#what-is-new}
 
 * Sex ytterligare regler för kodkvalitet har lagts till för att hjälpa kunderna att identifiera potentiella problem när de planerar en migrering till Cloud Service.
 * En ny metrisk *Cloud Service-kompatibilitet* har lagts till för att sammanfatta antalet kompatibilitetsrelaterade problem.
