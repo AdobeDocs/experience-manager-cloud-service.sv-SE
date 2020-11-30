@@ -133,7 +133,7 @@ Se även [Förhandsgranska resurser i programgränssnittet.](/help/assets/dynami
 
 ## Visa och interagera med en 3D-resurs inuti en 3D-mediekomponent {#interacting-with-asset-inside-three-d-media-component}
 
-När en webbsida är i **[!UICONTROL Edit]** läge går det inte att interagera med en 3D-resurs. Om du vill göra resursen interaktiv kan du använda funktionen för att visa webbsidan i sidredigeraren med fullständig åtkomst till 3D Media-komponentens funktioner. **[!UICONTROL Preview]**
+När en webbsida är i **[!UICONTROL Edit]** läge går det inte att interagera med en 3D-resurs. Om du vill göra resursen interaktiv kan du använda funktionen för att visa webbsidan i sidredigeraren med fullständig tillgång till funktionaliteten i 3D Media-komponenten. **[!UICONTROL Preview]**
 
 >[!IMPORTANT]
 >
@@ -244,7 +244,7 @@ Se [Lägga till komponenten 3D Media på en webbsida.](#adding-the-three-d-media
 
 >[!NOTE]
 >
->När en webbsida är i AEM Sites- **[!UICONTROL Edit]** läge visar 3D-mediekomponenten 3D-resursen, men det går inte att interagera med resursen. Om du vill göra resursen interaktiv kan du använda funktionen för att visa webbsidan i sidredigeraren med fullständig åtkomst till 3D Media-komponentens funktioner. **[!UICONTROL Preview]**
+>När en webbsida är i AEM Sites- **[!UICONTROL Edit]** läge visar 3D-mediekomponenten 3D-resursen, men det går inte att interagera med resursen. Om du vill göra resursen interaktiv kan du använda funktionen för att visa webbsidan i sidredigeraren med fullständig tillgång till funktionaliteten i 3D Media-komponenten. **[!UICONTROL Preview]**
 
 ## Publicera statiska 3D-resurser för dynamiska media {#publishing-three-d-assets}
 
