@@ -1,6 +1,6 @@
 ---
-title: Källkodslagringsplats - Cloud Service
-description: Källkodslagringsplats - Cloud Service
+title: Källkodslagringsplats - Cloud Services
+description: Källkodslagringsplats - Cloud Services
 translation-type: tm+mt
 source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
 workflow-type: tm+mt
