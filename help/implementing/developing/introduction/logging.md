@@ -538,7 +538,7 @@ Define DISP_LOG_LEVEL Debug
 
 ### Molnmiljöer {#cloud-environments}
 
-Du kan komma åt AEM som en Cloud Service för molntjänster antingen genom att hämta via Cloud Manager-gränssnittet eller genom att svepa loggar på kommandoraden med hjälp av kommandoradsgränssnittet i Adobe. Mer information finns i loggningsdokumentationen [för](/help/implementing/cloud-manager/manage-logs.md)Cloud Manager.
+Du kan komma åt AEM som en Cloud Service för molntjänster antingen genom att hämta via Cloud Manager-gränssnittet eller genom att svepa loggar på kommandoraden med hjälp av Adobe I/O kommandoradsgränssnitt. Mer information finns i loggningsdokumentationen [för](/help/implementing/cloud-manager/manage-logs.md)Cloud Manager.
 
 ### Lokal SDK {#local-sdk}
 
