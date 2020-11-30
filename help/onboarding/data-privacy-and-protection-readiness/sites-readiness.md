@@ -1,6 +1,6 @@
 ---
 title: Dataskydd och dataintegritet - Adobe Experience Manager som Cloud Service Sites Readiness
-description: 'Läs mer om Adobe Experience Manager som stöd för Cloud Service Sites för de olika dataskydds- och dataintegritetsreglerna. inklusive EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt. '
+description: 'Läs mer om Adobe Experience Manager som stöd för Cloud Service Sites i de olika dataskydds- och datasekretesreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt. '
 translation-type: tm+mt
 source-git-commit: 7b5a427853075054d56bc7ea6569d5d839e282a1
 workflow-type: tm+mt
@@ -20,11 +20,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Mer information om Adobes svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobes Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 Adobe Experience Manager som Cloud Service Sites är redo att hjälpa kunderna med deras skyldigheter vad gäller dataintegritet och skydd. På den här sidan får kunderna hjälp med hur de hanterar sådana förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.
 
-Mer information finns i [Adobes sekretesscenter](https://www.adobe.com/privacy.html).
+Mer information finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Användarkonton och UGC-innehåll på författarservern beskrivs i [AEM Foundati
 
 Användarkonton som används för att autentisera besökare på webbplatsen och UGC-innehåll på publiceringsservern beskrivs i [AEM Foundation-dokumentationen](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md).
 
-Som standard lagras inte formulärdata som anges av besökare på publiceringsservern i AEM Sites-komponenter. Vi rekommenderar att du vidarebefordrar uppgifterna till ett tredjepartssystem eller Adobe Campaign för vidare behandling.
+Som standard lagrar inte AEM Sites-komponenter formulärdata som anges av besökare på publiceringsservern. Vi rekommenderar att du vidarebefordrar data till ett tredjepartssystem eller Adobe Campaign för vidare behandling.
 
 ## Opt-In/Opt-Out {#opt-in-opt-out}
 
@@ -46,16 +46,16 @@ Som standard lagras inte formulärdata som anges av besökare på publiceringsse
 AEM has a [cookie opt-out service](/help/sites-developing/cookie-optout.md ) that can be used for managing the opt-in/opt-out for users.
 -->
 
-Adobe Experience Manager har tillgång till en anmälningstjänst för cookies som används för att hantera anmälan/avanmälan för användare.
+Adobe Experience Manager omfattas av en anmälningstjänst för cookies som används för att hantera anmälan/avanmälan för användare.
 
 Så här avanmäler du:
 
 1. Navigera till:
-   [Adobes Sekretesscenter - avanmäl dig](https://www.adobe.com/privacy/opt-out.html)
+   [Sekretesscenter för Adobe - avanmäl dig](https://www.adobe.com/privacy/opt-out.html)
 
 1. Bläddra ned till **Tjänster** - **Experience Cloud-tjänstanvändningsdata**.
 
-1. Markera den refererade länken; som för närvarande är **här**.
+1. Markera den refererade länken; för närvarande **här**.
 
 1. Du kommer att få följande information tillsammans med alternativen för att välja bort eller anmäla dig:
 
@@ -70,19 +70,19 @@ Så här avanmäler du:
 
    >[!NOTE]
    >
-   > Det finns ytterligare en beskrivning i **2. Integritet.** i [Adobes allmänna användarvillkor](https://www.adobe.com/legal/terms.html).
+   > Det finns ytterligare en beskrivning i **2. Integritet.** i [Adobe General Terms of Use](https://www.adobe.com/legal/terms.html).
 
 ## Analytics Foundation {#analytics-foundation}
 
-AEM Sites har en valfri integrering med Analytics Foundation som använder funktioner i Adobe Analytics On-Demand Service.
+AEM Sites innehåller en valfri integrering med Analytics Foundation som använder funktioner i Adobe Analytics On-Demand Service.
 
 Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Analytics finns i [Adobe Analytics och Dataintegritet](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-view-settings.html).
 
-## Personalization Foundation av Target {#personalization-foundation-by-target}
+## Personalization Foundation by Target {#personalization-foundation-by-target}
 
-AEM Sites har en valfri integrering med Personalization Foundation från Target som använder funktioner i Adobe Target On-Demand Service.
+AEM Sites innehåller en valfri integrering med Personalization Foundation by Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur du hanterar de registrerade förfrågningar som rör Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Mer information om hur du hanterar förfrågningar från registrerade som rör Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 
@@ -92,7 +92,7 @@ AEM provides an optional data layer with [ContextHub](/help/sites-developing/con
 
 AEM tillhandahåller ett valfritt datalager med ContextHub. På så sätt behålls besökarspecifika data i webbläsaren som ska användas för regelbaserad personalisering.
 
-Dessa besökardata lagras som standard inte i AEM. AEM skickar regler till datalagret för att fatta personaliseringsbeslut i webbläsaren.
+Som standard lagras dessa besökardata inte i AEM. AEM skickar regler till datalagret för att fatta personaliseringsbeslut i webbläsaren.
 
 ### Implementera anmälan/avanmälan {#implementing-opt-in-opt-out}
 
