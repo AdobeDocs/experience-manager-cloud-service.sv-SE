@@ -1,9 +1,9 @@
 ---
 title: Skydda författarnivån
 description: Skydda författarnivån
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: e772687c4034a364912aa426a133134571246db9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 100%
 
