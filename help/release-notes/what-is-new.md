@@ -5,12 +5,12 @@ translation-type: tm+mt
 source-git-commit: e381807d7c199113689304e9481dfe2022ee5f93
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
 
-# What is New? {#what-is-new}
+# Vad är Nytt? {#what-is-new}
 
 <!-- For the pre-release of Adobe Experience Manager (AEM) as a Cloud Service everything is new. -->
 
@@ -27,6 +27,6 @@ En översikt över resurser finns i [Introduktion till resurser som en Cloud Ser
 
 Om du känner till tidigare versioner av AEM kan du läsa följande för att få en översikt över de betydande ändringarna i AEM som en Cloud Service:
 
-* [Noterbara ändringar i AEM som Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
-* [Betydande ändringar av AEM Sites som en Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
-* [Betydande ändringar av AEM Assets som en Cloud Service](/help/assets/assets-cloud-changes.md)
+* [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
