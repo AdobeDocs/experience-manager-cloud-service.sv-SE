@@ -2,7 +2,7 @@
 sub-product: Anslutningar för AEM as a Cloud Service
 user-guide-title: Anslutningar för AEM as a Cloud Service
 breadcrumb-title: Handbok för kopplingar
-user-guide-description: Lär dig hur du integrerar anslutningar i Experience Manager as a Cloud Service.
+user-guide-description: Läs om hur ni integrerar anslutningar i Experience Manager as a Cloud Service.
 translation-type: tm+mt
 source-git-commit: 8b6d4f424fcc943c981d5883877cb533c8d63353
 workflow-type: tm+mt
