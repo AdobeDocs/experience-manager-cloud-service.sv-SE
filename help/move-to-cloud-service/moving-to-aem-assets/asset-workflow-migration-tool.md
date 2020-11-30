@@ -28,11 +28,11 @@ Arbetsflödena har olika nivå av migreringsstöd. Se den här [listan över spe
 * `OPTIONAL`: Ytterligare funktioner i [!DNL Experience Manager Assets] som Cloud Service.
 * `REQUIRED`: Ett obligatoriskt steg som läggs till i arbetsflödet.
 * `UNNECESSARY`: Funktioner är inte nödvändiga i [!DNL Experience Manager Assets] som Cloud Service.
-* `NUI_OOTB`: Funktioner som tillhandahålls av [tjänsten](/help/assets/asset-microservices-configure-and-use.md)Asset Compute.
+* `NUI_OOTB`: Funktioner från [Asset compute Service](/help/assets/asset-microservices-configure-and-use.md).
 * `DMS7_OOTB`: Funktioner som tillhandahålls av standardanslutningar [!DNL Dynamic Media] .
-* `NUI_MIGRATED`: Flyttad till en [bearbetningsprofil för tjänsten](/help/assets/asset-microservices-configure-and-use.md)Resursberäkning.
+* `NUI_MIGRATED`: Migrerad till en [bearbetningsprofil för tjänsten](/help/assets/asset-microservices-configure-and-use.md)Asset compute.
 * `UNSUPPORTED`: Stöds för närvarande inte i [!DNL Experience Manager Assets] som Cloud Service.
 
 ## Installera verktyget för arbetsflödesmigrering {#installing-tool}
 
-Läs **[Git-resurs: AEM Assets as a Cloud Service – arbetsflödesmigrering](https://github.com/adobe/aem-cloud-migration)**för information om hur du installerar och skapar kod från källan.
+Läs **[Git-resurs: AEM Assets as a Cloud Service – arbetsflödesmigrering](https://github.com/adobe/aem-cloud-migration)** för information om hur du installerar och skapar kod från källan.
