@@ -104,7 +104,7 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
 
 1. Nu måste du konfigurera `quickViewActivate` hanteraren.
 
-   Hanteraren `quickViewActivate` styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn samt ett exempel på ett `loadQuickView` funktionsanrop.
+   Hanteraren `quickViewActivate` styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn samt ett exempel på `loadQuickView` funktionsanrop.
 
    **Variabelmappning** Kartvariabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i snabbvyn:
 
@@ -208,7 +208,7 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
    Läs mer om `init()` metod här:
 
    * Interactive Image viewer - [init](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
-   * Interactive Video viewer - [init](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
+   * Interaktiv Video Viewer - [init](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
 
 1. Om du vill bifoga popup-fönstret, som beskrivs i föregående steg, till visningsprogrammet använder du följande kod:
 
