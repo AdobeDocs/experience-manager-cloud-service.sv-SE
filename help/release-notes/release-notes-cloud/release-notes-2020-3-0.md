@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 3dc0d1d77595f7b3e890fb4b390eef5bcf84ecd8
 workflow-type: tm+mt
 source-wordcount: '245'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ Releasedatum för Experience Manager som Cloud Service 2020.3.0 är 5 mars 2020.
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en Cloud Service-version 2020.3.0.
 
-### What&#39;s New {#what-is-new}
+### Nyheter {#what-is-new}
 
 * Loggen för byggsteget är nu tillgänglig medan byggsteget körs.
 * Vissa av meddelandena på informationssidan för pipeline-körning har redigerats för tydlighet.
