@@ -22,7 +22,7 @@ Releasedatum för [!DNL Experience Manager] Cloud Service 2020.6.0 är 4 juni 20
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för AEM Sites i AEM som en Cloud Service version 2020.6.0.
 
-### What&#39;s New {#whats-new-2020.6.0}
+### Nyheter {#whats-new-2020.6.0}
 
 Version 2.9.0 av [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) finns nu som en del av AEM Sites, inklusive:
 
@@ -57,7 +57,7 @@ AEM som en Cloud Service-SDK API Jar, som tidigare var värd på den platsen, fi
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en Cloud Service-version 2020.6.0.
 
-### What&#39;s New {#what-is-new-cloud-manager}
+### Nyheter {#what-is-new-cloud-manager}
 
 * En användare i rollen *Business Owner* i Cloud Manager kan nu ta bort ett sandlådeprogram från landningssidan (via snabbåtgärdsknappen på programkortet) eller inifrån programmet.
 
