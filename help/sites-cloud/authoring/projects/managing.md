@@ -22,7 +22,7 @@ I Projekt kan du skapa ett projekt, associera resurser med projektet och även t
 
 ## Skapa ett projekt {#creating-a-project}
 
-När du skapar ett projekt innehåller AEM följande mallar som du kan välja mellan:
+AEM innehåller de här mallarna som du kan välja mellan när du skapar ett projekt:
 
 * Enkelt projekt
 * Medieprojekt
@@ -136,8 +136,7 @@ Så här gör du ett projekt inaktivt (eller aktivt):
 1. Öppna projektet i **projektkonsolen** och hitta sedan rutan **Projektinformation** .
 
    >[!NOTE]
-   >
-   >Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
+   Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
 
 1. Tryck/klicka på **Redigera**.
 1. Ändra väljaren från **Aktiv** till **Inaktiv** (eller tvärtom).
