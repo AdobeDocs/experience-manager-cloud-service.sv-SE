@@ -1,12 +1,12 @@
 ---
 title: Konfigurera RTE för att skapa tillgängliga webbsidor och webbplatser.
-description: Lär dig hur du konfigurerar RTF-redigeraren för att skapa tillgängliga webbplatser i [!DNL Adobe Experience Manager].
+description: Lär dig konfigurera RTF-redigeraren för att skapa tillgängliga webbplatser i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 96c59974a868779df6979818bea0d942060cf5bc
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 0%
+source-wordcount: '508'
+ht-degree: 1%
 
 ---
 
@@ -34,9 +34,9 @@ Anvisningar om hur du konfigurerar RTE finns i [Konfigurera RTF-redigeraren](ric
 * [Aktivera ett plugin-program och konfigurera egenskapen features](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 * [Konfigurera andra funktioner i RTE](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 
-Om du vill aktivera några eller alla funktioner för ett plugin-program konfigurerar du plugin-programmet inom rätt `rtePlugins` underavdelning i CRXDE Lite.
+Om du vill aktivera några eller alla funktioner för ett plugin-program konfigurerar du plugin-programmet i rätt `rtePlugins` underavdelning i CRXDE Lite.
 
-![CRXDE Lite med exempelplugin](assets/example-rteplugin-crxde-lite.png)
+![CRXDE Lite med exempelplugin-programmet](assets/example-rteplugin-crxde-lite.png)
 
 ### Exempel på hur du anger styckeformat i markeringsfältet för textredigering {#example-specifying-paragraph-formats-available-in-rte-selection-field}
 
