@@ -30,7 +30,7 @@ Var och en av rollerna har specifika behörigheter, förkonfigurerade uppgifter 
 | Inställningar för pipeline | Konfigurera eller redigera pipeline. |  | x |  |  |
 | Körning av pipeline | Starta rörledningen. | x | x |  |  |
 | Körning av pipeline | Avvisa/godkänn viktiga 3-nivåfel. | x | x | x |  |
-| Körning av pipeline | Godkänn Adobe GoLive. | x | x | x |  |
+| Körning av pipeline | Godkänn GoLive. | x | x | x |  |
 | Körning av pipeline | Schemalägg produktionsdistribution. | x | x | x |  |
 | Körning av pipeline | Återuppta produktionsförlopp. |  |  |  |  |
 | Ta bort pipeline | Tillåter borttagning av en pipeline. |  | x |  |  |
