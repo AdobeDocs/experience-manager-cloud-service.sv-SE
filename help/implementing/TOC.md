@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: ce55065c3ae6a2350ed06811af76477df7c11291
+source-git-commit: 09b23185663164ffa5a6066b67f8f1fb74872cde
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 57%
+source-wordcount: '546'
+ht-degree: 52%
 
 ---
 
@@ -36,54 +36,79 @@ ht-degree: 57%
    + [Strukturpaket för AEM-projektdatabas](developing/introduction/repository-structure-package.md)
    + [SDK för AEM as a Cloud Service](developing/introduction/aem-as-a-cloud-service-sdk.md)
    + [Utvecklingsriktlinjer för AEM as a Cloud Service](developing/introduction/development-guidelines.md)
-   + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
-   + [Struktur för AEM](developing/introduction/ui-structure.md)
-   + [Fusklapp för Sling](developing/introduction/sling-cheatsheet.md)
-   + [Använda Sling-adaptrar](developing/introduction/sling-adapters.md)
-   + [Använda Sling Resource Merger i AEM as a Cloud Service](developing/introduction/sling-resource-merger.md)
-   + [Överlagring i AEM as a Cloud Service](developing/introduction/overlays.md)
-   + [Använda bibliotek på klientsidan](developing/introduction/clientlibs.md)
-   + [Konfigurationer och Configuration Browser](developing/introduction/configurations.md)
    + [Loggning](developing/introduction/logging.md)
-   + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
-   + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
-   + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
-   + [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md)
-   + [Bygga in märkord i AEM](/help/implementing/developing/introduction/tagging-applications.md)
+   + [Konfigurationer och Configuration Browser](developing/introduction/configurations.md)
    + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
+   + [API för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
+   + Utveckling AEM hög {#full-stack}
+      + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
+      + [Struktur för AEM](developing/introduction/ui-structure.md)
+      + [Fusklapp för Sling](developing/introduction/sling-cheatsheet.md)
+      + [Använda Sling-adaptrar](developing/introduction/sling-adapters.md)
+      + [Använda Sling Resource Merger i AEM as a Cloud Service](developing/introduction/sling-resource-merger.md)
+      + [Överlagring i AEM as a Cloud Service](developing/introduction/overlays.md)
+      + [Använda bibliotek på klientsidan](developing/introduction/clientlibs.md)
+      + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
+      + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
+      + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
+      + Komponenter och mallar {#components-templates}
+         + [Komponenter - översikt](developing/components/overview.md)
+         + [Mallar](developing/components/templates.md)
+         + [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+         + [Formatsystem](/help/sites-cloud/authoring/features/style-system.md)
+         + [JSON-exporterare för innehållstjänster](developing/components/json-exporter.md)
+         + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
+         + [Bildredigeraren](developing/components/image-editor.md)
+         + [Dekoration-taggar](developing/components/decoration-tag.md)
+         + [Använda Dölj villkor](developing/components/hide-conditions.md)
+      + [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md)
+      + [Bygga in märkord i AEM](/help/implementing/developing/introduction/tagging-applications.md)
+   + Hybrid AEM Development {#hybrid}
+      + [Hybrid och SPA med AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+      + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
+      + [SPA introduktion och genomgång](developing/hybrid/introduction.md)
+      + [SPA WKND - självstudiekurs](developing/hybrid/wknd-tutorial.md)
+      + [Komma igång med React](developing/hybrid/getting-started-react.md)
+      + [Komma igång med vinkelrät](developing/hybrid/getting-started-angular.md)
+      + [SPA djupdykning](developing/hybrid/deep-dives.md)
+      + [Utveckla SPA för AEM](developing/hybrid/developing.md)
+      + [SPA](developing/hybrid/editor-overview.md)
+      + [SPA Blueprint](developing/hybrid/blueprint.md)
+      + [SPA](developing/hybrid/page-component.md)
+      + [Dynamisk mappning av modell till komponent](developing/hybrid/model-to-component-mapping.md)
+      + [Modellroutning](developing/hybrid/routing.md)
+      + [Starta integrering](developing/hybrid/launch-integration.md)
+      + [Återgivning på serversidan](developing/hybrid/ssr.md)
+      + [SPA referensdokument](developing/hybrid/reference-materials.md)
+   + Headless Experience Management {#headless}
+      + [Headless och AEM](developing/headless/introduction.md)
+      + Komma igång-guider {#getting-started}
+         + [Skapa en konfiguration](developing/headless/getting-started/create-configuration.md)
+         + [Skapa en innehållsfragmentmodell](developing/headless/getting-started/create-content-model.md)
+         + [Skapa en resursmapp](developing/headless/getting-started/create-assets-folder.md)
+         + [Skapa ett innehållsfragment](developing/headless/getting-started/create-content-fragment.md)
+         + [Åtkomst och leverans av innehållsfragment](developing/headless/getting-started/create-api-request.md)
+      + Innehållsfragment {#content-fragments}
+         + [Headless Delivery with Content Fragments and GraphQL](/help/assets/content-fragments/content-fragments-graphql.md)
+         + [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
+         + [Aktivera funktionen för innehållsfragment för instansen](/help/assets/content-fragments/content-fragments-configuration-browser.md)
+         + [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
+         + [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)
+         + [Variationer – redigera innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md)
+         + [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
+         + [Använda associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md)
+         + [Metadata – fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
+         + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
+         + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
+      + Leverans-API {#delivery-api}
+         + [Innehållsfragment REST API](/help/assets/content-fragments/assets-api-content-fragments.md)
+         + [Content Fragments GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)
+         + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
 + Utvecklarverktyg {#developer-tools}
    + [AEM Developer Tools for Eclipse](/help/implementing/developing/tools/eclipse.md)
    + [Innehållspaket Maven Plugin](/help/implementing/developing/tools/maven-plugin.md)
    + [AEM](/help/implementing/developing/tools/repo-tool.md)
    + [Använda CRXDE Lite](/help/implementing/developing/tools/crxde.md)
-+ Komponenter och mallar {#components-templates}
-   + [Komponenter - översikt](developing/components/overview.md)
-   + [Mallar](developing/components/templates.md)
-   + [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-   + [Formatsystem](/help/sites-cloud/authoring/features/style-system.md)
-   + [JSON-exporterare för innehållstjänster](developing/components/json-exporter.md)
-   + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
-   + [Bildredigeraren](developing/components/image-editor.md)
-   + [Dekoration-taggar](developing/components/decoration-tag.md)
-   + [Använda Dölj villkor](developing/components/hide-conditions.md)
-+ Headless Experience Management {#headless}
-   + [Headless och Hybrid with AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-   + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
-   + Enkelsidiga program {#spa}
-      + [SPA introduktion och genomgång](developing/spa/introduction.md)
-      + [SPA WKND - självstudiekurs](developing/spa/wknd-tutorial.md)
-      + [Komma igång med React](developing/spa/getting-started-react.md)
-      + [Komma igång med vinkelrät](developing/spa/getting-started-angular.md)
-      + [SPA djupdykning](developing/spa/deep-dives.md)
-      + [Utveckla SPA för AEM](developing/spa/developing.md)
-      + [SPA](developing/spa/editor-overview.md)
-      + [SPA Blueprint](developing/spa/blueprint.md)
-      + [SPA](developing/spa/page-component.md)
-      + [Dynamisk mappning av modell till komponent](developing/spa/model-to-component-mapping.md)
-      + [Modellroutning](developing/spa/routing.md)
-      + [Starta integrering](developing/spa/launch-integration.md)
-      + [Återgivning på serversidan](developing/spa/ssr.md)
-      + [SPA referensdokument](developing/spa/reference-materials.md)
 + Personanpassning {#personalization}
    + [ContextHub](developing/personalization/contexthub.md)
    + [ContextHub konfigureras](developing/personalization/configuring-contexthub.md)
