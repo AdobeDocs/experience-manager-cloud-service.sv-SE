@@ -5,10 +5,10 @@ breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: 4420fd95388ba2f389192f767b6d612bdc2b18a9
+source-git-commit: 302830f46f5a0cedcb717b4ab2e2d95f1c9904d4
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 75%
+source-wordcount: '436'
+ht-degree: 74%
 
 ---
 
@@ -79,6 +79,7 @@ ht-degree: 75%
    + [Arbeta med Dynamic Media](dynamic-media/dynamic-media.md)
    + [Konfigurera Dynamic Media](dynamic-media/config-dm.md)
    + [Felsöka Dynamic Media](dynamic-media/troubleshoot-dm.md)
+   + [Tillgänglighet i dynamiska media](dynamic-media/accessibility-dm.md)
    + [Hantera Dynamic Media-resurser](dynamic-media/managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Bästa tillvägagångssätt för filhantering](dynamic-media/best-practices-for-file-management.md)
