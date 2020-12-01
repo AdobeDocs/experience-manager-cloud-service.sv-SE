@@ -2,10 +2,10 @@
 title: Redigera Launches
 description: 'När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna. '
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 914eb7f7b040b99c11d9f109549eb13868058320
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 19%
+source-wordcount: '521'
+ht-degree: 18%
 
 ---
 
@@ -16,15 +16,19 @@ ht-degree: 19%
 
 När en startsida har skapats för en sida (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 
-1. Öppna [Starta från referenser (Sites-konsolen)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder.
+1. Gå till [Starta från Referenser (Sites-konsolen)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder.
 1. Välj **Gå till sidan** för att öppna sidan för redigering.
 
-### Redigera startsidor som är beroende av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
+När du redigerar sidan visas en indikation i det övre verktygsfältet tillsammans med alternativen **Lämna** och **Navigera**:
+
+![Lämna och navigera vid start från sidredigeraren](/help/sites-cloud/authoring/assets/launches-edit-01.png)
+
+### Redigering av startsidor som omfattas av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
 
 Om lanseringen baseras på en live-kopia kommer du att: <!--If your launch is based upon a [live copy](/help/sites-administering/msm.md) then you will:-->
 
 * Se låsa symboler (små hänglås) när du redigerar en komponent (innehåll och/eller egenskaper).
-* Se fliken **Live-kopia** i **Sidegenskaper**
+* Se fliken **Live Copy** i **Sidegenskaper**
 
 En live-kopia används för att synkronisera innehåll *från* källgrenen *till* startgrenen (för att hålla startsidan uppdaterad med ändringarna i källan).
 
@@ -39,7 +43,7 @@ Mer information finns i Ändra Live Copy-innehåll. <!--See [Changing Live Copy 
 
 Om du vill spåra de ändringar du har gjort kan du visa startsidan i **Referenser** och jämföra startsidan med dess källsida:
 
-1. Gå **till startsidan i konsolen** Platser [och markera den](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
+1. I konsolen **Platser**, [navigerar du till startsidornas källsidor och väljer en](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
 1. Öppna panelen **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** och välj **Starta**.
 1. Välj en specifik start och sedan **Jämför med källa**:
 
@@ -54,9 +58,9 @@ Om du vill spåra de ändringar du har gjort kan du visa startsidan i **Referens
 Du kan när som helst lägga till eller ta bort sidor till/från intervallet med källsidor för en start:
 
 1. Öppna och välj programstart från:
-   * The [Launches console](/help/sites-cloud/authoring/launches/overview.md#the-launches-console):
+   * [Startar konsolen](/help/sites-cloud/authoring/launches/overview.md#the-launches-console):
       * Välj **Redigera**.
-   * [Referenser (platskonsolen)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
+   * [Referenser (Sites console)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
       * Välj **Redigera start**.
       * Källsidorna visas.
 1. Gör önskade ändringar och bekräfta sedan med **Spara**.
@@ -70,16 +74,16 @@ Du kan när som helst lägga till eller ta bort sidor till/från intervallet med
 Du kan när som helst redigera egenskaperna för en start:
 
 1. Öppna och välj programstart från:
-   * konsolen [](/help/sites-cloud/authoring/launches/overview.md#the-launches-console)Launches:
+   * [Startar konsolen](/help/sites-cloud/authoring/launches/overview.md#the-launches-console):
       * Välj **Egenskaper**.
-   * [Referenser (platskonsolen)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
-      * Select **Edit Properties**.
+   * [Referenser (Sites console)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
+      * Välj **Redigera egenskaper**.
       * Detaljerna visas.
 1. Gör önskade ändringar och bekräfta sedan med **Spara**.
    * Avsnittet [Startsidor och händelseordning](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events) innehåller information om syftet med och interaktionen mellan fälten **Startdatum** och **Produktionsklar**.
 
 ## Identifiera startstatus för en sida {#discovering-the-launch-status-of-a-page}
 
-Statusen visas när du väljer en viss start på fliken Inställningar (se [Starta i Referenser (platskonsolen)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)).
+Statusen visas när du väljer en specifik start på fliken Inställningar (se [Startar i Referenser (platskonsolen)](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)).
 
 ![Identifierar startstatus](/help/sites-cloud/authoring/assets/launches-status.png)
