@@ -5,10 +5,10 @@ user-guide-title: Redigera innehåll i AEM as a Cloud Service
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service.
 translation-type: tm+mt
-source-git-commit: d311c87c1ae1cdfe9f50d41750aecbab960dc7ef
+source-git-commit: 2c00c3723c3c84365044b5cd2fe6779de0360736
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 95%
+source-wordcount: '236'
+ht-degree: 90%
 
 ---
 
@@ -58,7 +58,9 @@ ht-degree: 95%
    + Launches {#launches}
       + [Arbeta med Launches](authoring/launches/overview.md)
       + [Skapa Launches](authoring/launches/creating.md)
+      + [Hantera sidor i starter](authoring/launches/managing-pages.md)
       + [Redigera Launches](authoring/launches/editing.md)
+      + [Förhandsgranska startprogram med Timewarp](authoring/launches/preview.md)
       + [Marknadsföra Launches](authoring/launches/promoting.md)
    + Arbetsflöden {#workflows}
       + [Arbeta med arbetsflöden](authoring/workflows/overview.md)
@@ -75,7 +77,8 @@ ht-degree: 95%
       + [Skapa och hantera erbjudanden](authoring/personalization/offers.md)
       + [Förstå segmentering](authoring/personalization/segmentation.md)
       + [Konfigurera segmentering med ContextHub](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
-+ Administratör {#administering}
+      + [Registrering, inloggning och användarprofil](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md)
++ Administrera {#administering}
    + [Administrera arbetsflöden](administering/workflows-administering.md)
 + Integrera med AEM as a Cloud Service {#integrations}
    + [Integrera med Adobe Analytics](integrating/integrating-adobe-analytics.md)
