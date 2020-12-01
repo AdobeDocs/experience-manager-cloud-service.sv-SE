@@ -5,10 +5,10 @@ breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: 302830f46f5a0cedcb717b4ab2e2d95f1c9904d4
+source-git-commit: 6dea6ac6cdadfe64ad47d492ea502fe3babd155d
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 74%
+source-wordcount: '471'
+ht-degree: 69%
 
 ---
 
@@ -55,6 +55,8 @@ ht-degree: 74%
    + [Söka efter fasetter](search-facets.md)
    + [HTTP API för Assets](mac-api-assets.md)
    + [Content Fragments support in Assets HTTP API](content-fragments/assets-api-content-fragments.md)
+   + [AEM GraphQL API för innehållsfragment](content-fragments/graphql-api-content-fragments.md)
+   + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [Anslutna resurser](use-assets-across-connected-assets-instances.md)
    + [Materialrapporter](asset-reports.md)
    + [Överlappande metadata](cascading-metadata.md)
@@ -66,13 +68,17 @@ ht-degree: 74%
    + [Publicera resurser på [!DNL Brand Portal]](publish-to-brand-portal.md)
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
+   + [Headless Delivery with Content Fragments and GraphQL](content-fragments/content-fragments-graphql.md)
    + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
+   + [Aktivera funktionen för innehållsfragment för instansen](content-fragments/content-fragments-configuration-browser.md)
    + [Modeller för innehållsfragment](content-fragments/content-fragments-models.md)
    + [Variationer – redigera innehållsfragment](content-fragments/content-fragments-variations.md)
    + [Innehållsfragment med associerat innehåll](content-fragments/content-fragments-assoc-content.md)
    + [Metadata – fragmentegenskaper](content-fragments/content-fragments-metadata.md)
    + [Innehållsfragment – ta bort överväganden](content-fragments/content-fragments-delete.md)
    + [Markdown](content-fragments/content-fragments-markdown.md)
+   + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
+   + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
 + Dynamic Media {#dynamicmedia}
    + [Dynamic Media-nyhetsbrev från Experience League](dynamic-media/dynamic-media-newsletter.md)
    + [Installera Dynamic Media](dynamic-media/administering-dynamic-media.md)
