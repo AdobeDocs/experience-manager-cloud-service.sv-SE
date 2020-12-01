@@ -1,24 +1,24 @@
 ---
-title: Lägg till era digitala resurser [!DNL Adobe Experience Manager]i.
-description: Lägg till era digitala resurser [!DNL Adobe Experience Manager] som en Cloud Service.
+title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
+description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 9c42bd216edd0174c9a4c9b706c0e08ca36428f6
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
 
 
-# Lägg till digitalt material i Adobe Experience Manager {#add-assets-to-experience-manager}
+# Lägg till digitala resurser i Adobe Experience Manager {#add-assets-to-experience-manager}
 
-[!DNL Adobe Experience Manager] berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
+[!DNL Adobe Experience Manager] berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildsfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
 
 Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager, överförings- och förtäringsskript som kunderna skulle skapa samt automatiserade importfunktioner som lagts till som Experience Manager-tillägg.
 
 Vi fokuserar på överföringsmetoder för slutanvändare här och tillhandahåller länkar till artiklar som beskriver tekniska aspekter av överföring och förtäring av resurser med hjälp av API:er för Experience Manager och SDK:er.
 
-Du kan överföra och hantera binära filer i Experience Manager, men de vanligaste filformaten har stöd för ytterligare tjänster, som metadataextrahering eller generering av förhandsgranskning/återgivning. Mer information finns i de [filformat](file-format-support.md) som stöds.
+Du kan överföra och hantera binära filer i Experience Manager, men de vanligaste filformaten har stöd för ytterligare tjänster, som metadataextrahering eller generering av förhandsgranskning/återgivning. Mer information finns i [filformat](file-format-support.md) som stöds.
 
 Du kan också välja att utföra ytterligare bearbetning av de överförda resurserna. Ett antal resursbearbetningsprofiler kan konfigureras för mappen, till vilken resurserna överförs, för att lägga till specifika metadata, återgivningar eller bildbehandlingstjänster. Mer information finns i [Ytterligare bearbetning](#additional-processing) nedan.
 
@@ -59,27 +59,25 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 
 Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet.
 
-1. Navigera till den plats där du vill lägga till digitala resurser i [!DNL Assets] användargränssnittet.
+1. Navigera till den plats där du vill lägga till digitala resurser i [!DNL Assets]-användargränssnittet.
 1. Gör något av följande om du vill överföra resurserna:
 
-   * Tryck på **[!UICONTROL Create]** ikonen i verktygsfältet. Tryck sedan på menyn **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
-   * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till [!DNL Assets] användargränssnittet. Dialogrutan för att byta namn på filen visas inte.
+   * Klicka på **[!UICONTROL Create]** > **[!UICONTROL Files]** i verktygsfältet. Du kan byta namn på filen i den dialogruta som visas om det behövs.
+   * I en webbläsare som stöder HTML5 drar du resurserna direkt i [!DNL Assets]-användargränssnittet. Dialogrutan för att byta namn på filen visas inte.
 
    ![create_menu](assets/create_menu.png)
 
-   Om du vill markera flera filer trycker du på Ctrl- eller Kommando-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
+   Om du vill markera flera filer väljer du `Ctrl` eller `Command`-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
 
-1. Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort [!DNL Assets] .
+1. Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringsåtgärden tar [!DNL Assets] bort den delvis överförda delen av resursen.
+Om du avbryter en överföring innan filerna överförs slutar [!DNL Assets] att överföra den aktuella filen och uppdaterar innehållet. Filer som redan har överförts tas dock inte bort.
 
-   Om du avbryter överföringen innan filerna har överförts, avbryter du överföringen av den aktuella filen och uppdaterar innehållet [!DNL Assets] . Filer som redan har överförts tas dock inte bort.
-
-1. I dialogrutan för överföringsförlopp [!DNL Assets] visas antalet överförda filer och de filer som inte kunde överföras.
-
-   Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet för Resurser.
+1. Dialogrutan för överföringsförlopp i [!DNL Assets] visar antalet överförda filer och de filer som inte kunde överföras.
+Dessutom visar [!DNL Assets]-användargränssnittet den senaste resursen som du överför eller den mapp som du skapade först.
 
 >[!NOTE]
 >
->Mer information om hur du överför kapslade mapphierarkier finns i [Massöverföring av resurser](#bulk-upload).
+>Information om hur du överför kapslade mapphierarkier finns i [massöverföring av resurser](#bulk-upload).
 
 <!-- #ENGCHECK I'm assuming this is no longer relevant.... If yes, this should be removed#
 
@@ -100,74 +98,105 @@ If you upload many assets to [!DNL Experience Manager], the I/O requests to serv
 >Streaming upload is disabled for [!DNL Experience Manager] running on JEE server with servlet-api version lower than 3.1.
 -->
 
-### Hantera överföringar när det redan finns en resurs {#handling-upload-existing-file}
+### Hantera överföringar när resursen redan finns {#handling-upload-existing-file}
 
 Om du överför en resurs med samma namn som en resurs som redan finns på den plats där du överför resursen visas en varningsdialogruta.
 
-Du kan välja att ersätta en befintlig resurs, skapa en annan version eller behålla båda genom att byta namn på den nya resursen som överförs. Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar, beskärning och så vidare) som du har gjort för den befintliga resursen bort. Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn med numret `1` tillagt i namnet.
+Du kan välja att ersätta en befintlig resurs, skapa en annan version eller behålla båda genom att byta namn på den nya resursen som överförs. Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar, beskärning och så vidare) som du har gjort för den befintliga resursen bort. Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn med numret `1` som läggs till i namnet.
 
 >[!NOTE]
 >
->När du väljer **[!UICONTROL Replace]** i [!UICONTROL Name Conflict] dialogrutan genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
+>När du väljer **[!UICONTROL Replace]** i dialogrutan [!UICONTROL Name Conflict] genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
 >
 >Om resursinsikter är aktiverat för att spåra visningar/klick med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som har samlats in för resursen i Analytics.
 
-Om du vill behålla den duplicerade resursen i [!DNL Assets]klickar du på **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du **[!UICONTROL Delete]**.
+Om du vill behålla den duplicerade resursen i [!DNL Assets] klickar du på **[!UICONTROL Keep]**. Tryck/klicka på **[!UICONTROL Delete]** om du vill ta bort den duplicerade resursen som du överförde.
 
 ### Hantering av filnamn och förbjudna tecken {#filename-handling}
 
-[!DNL Experience Manager Assets] förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn. [!DNL Assets]
+[!DNL Experience Manager Assets] förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visar [!DNL Assets] ett varningsmeddelande och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
 
-I dialogrutan kan du ange långa namn för de filer som du överför, så att de passar organisationens specifika regler för filnamn. [!UICONTROL Upload Assets]
+Om du vill anpassa namngivningskonventionerna för din organisation kan du i [!UICONTROL Upload Assets]-dialogrutan ange långa namn för de filer som du överför.
 
 Följande (blankstegsavgränsad lista med) tecken stöds emellertid inte:
 
 * resursens filnamn får inte innehålla `* / : [ \\ ] | # % { } ? &`
-* resursmappens namn får inte innehålla `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+* resursmappnamnet får inte innehålla `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
 
 ## Överför resurser gruppvis {#bulk-upload}
 
-Om du vill överföra fler filer, särskilt om de finns i en kapslad mapphierarki på disken, kan du använda följande metoder:
+Om du vill överföra fler filer använder du någon av följande metoder. Se även [användningsexempel och metoder](#upload-methods-comparison)
 
-* Använd ett anpassat överföringsskript eller verktyg som utnyttjar API:er för [överföring av resurser](developer-reference-material-apis.md#asset-upload-technical). Ett sådant anpassat verktyg kan lägga till ytterligare hantering av resurser (t.ex. översätta metadata eller byta namn på filer), om det behövs.
-* Använd [Experience Manager-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) för att överföra kapslade mapphierarkier.
+* [API:er](developer-reference-material-apis.md#asset-upload-technical) för överföring av resurser: Använd ett anpassat överföringsskript eller verktyg som använder API:er för att lägga till ytterligare hantering av resurser (t.ex. översätta metadata eller byta namn på filer), om det behövs.
+* [Experience Manager-datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html): Användbart för kreatörer och marknadsförare som överför resurser från det lokala filsystemet. Använd den för att överföra kapslade mappar som är tillgängliga lokalt.
+* [Verktyget](#bulk-ingestion-tool) Massintag: Används för konsumtion av stora mängder resurser, antingen vid enstaka tillfällen eller vid första driftsättningen  [!DNL Experience Manager].
+
+### Verktyget Intag av massresurser {#bulk-ingestion-tool}
+
+Lägg till följande information:
+
+* Använd case of when to use this method.
+* Tillämpliga personer
+* Konfigurationssteg
+* Så här hanterar du intag och ser status.
+* Tänk på hur du hanterar eller strukturerar de resurser som ska importeras.
+
+Så här konfigurerar du verktyget:
+
+1. Skapa en konfiguration för massimport.  Navigera till Verktyg > Resurs > Massimport > välj knappen Skapa.
+
+![Konfiguration av bulkimporterare](assets/bulk-import-config.png)
+
+1. Ange lämplig information.
 
 >[!NOTE]
 >
->Bulköverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till Experience Manager kräver noggrann planering, övervägande och val av verktyg. I [distributionsguiden](/help/implementing/deploying/overview.md) finns riktlinjer för innehållsmigreringsmetoder.
+>Bulköverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till Experience Manager kräver noggrann planering, övervägande och val av verktyg. Se [distributionsguiden](/help/implementing/deploying/overview.md) för vägledning om strategier för innehållsmigrering.
 
 ## Överför resurser med skrivbordsklienter {#upload-assets-desktop-clients}
 
 Förutom webbläsarens användargränssnitt har Experience Manager stöd för andra klienter på datorn. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
-* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link från dessa skrivbordsprogram.
-* [Experience Manager-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) förenklar arbetet med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
+* [Adobe Asset ](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) Linkger åtkomst till resurser  [!DNL Experience Manager] i Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link från dessa skrivbordsprogram.
+* [Experience Manager ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) är ett program som gör det enklare att arbeta med resurser på datorn, oberoende av filtyp eller vilket ursprungsprogram som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Ytterligare bearbetning {#additional-processing}
 
-Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i **[!UICONTROL Properties]** mappdialogrutan.
+Om du vill få mer bearbetning av de överförda resurserna kan du använda resursbearbetningsprofiler i mappen, som resurserna överförs till. De är tillgängliga i mappen **[!UICONTROL Properties]**.
 
 ![assets-folder-properties](assets/assets-folder-properties.png)
 
 Följande profiler är tillgängliga:
 
-* [Med metadataprofiler](metadata-profiles.md) kan du använda standardmetadataegenskaper för resurser som överförs till den mappen
-* [Med bearbetningsprofiler](asset-microservices-configure-and-use.md) kan du generera fler återgivningar än vad som är möjligt som standard.
+* [Med ](metadata-profiles.md) metadataprofilerkan du använda standardmetadataegenskaper för resurser som överförs till den mappen
+* [Genom att bearbeta ](asset-microservices-configure-and-use.md) profiler kan du generera fler återgivningar än vad som är möjligt som standard.
 
 Om Dynamic Media är aktiverat i din miljö:
 
-* [Med dynamiska mediebildprofiler](dynamic-media/image-profiles.md) kan du använda en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna.
-* [Med dynamiska videoprofiler](dynamic-media/video-profiles.md) kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
+* [Med dynamiska mediabildprofiler ](dynamic-media/image-profiles.md) kan du använda en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna.
+* [Med ](dynamic-media/video-profiles.md) videoprofilerna för dynamiska media kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
 
 >[!NOTE]
 >
 >Dynamisk mediebeskärning och andra åtgärder för resurser är icke-förstörande, d.v.s. de ändrar inte det överförda originalet, utan tillhandahåller i stället parametrar för beskärning eller medieomvandling som ska utföras när resurserna levereras
 
-För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i **[!UICONTROL Processing Profile]** kolumnen.
+För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i kolumnen **[!UICONTROL Processing Profile]**.
 
 ## Överför eller importera resurser med API:er {#upload-using-apis}
 
-Teknisk information om överförings-API:er och protokoll samt länkar till SDK med öppen källkod och exempelklienter finns i avsnittet [för överföring](developer-reference-material-apis.md#asset-upload-technical) av resurser i utvecklarreferensen.
+Teknisk information om överförings-API:erna och -protokollet samt länkar till öppen källkod-SDK och exempelklienter finns i [avsnittet för överföring av resurser](developer-reference-material-apis.md#asset-upload-technical) i utvecklarreferensen.
+
+## Scenariobaserade överföringsmetoder {#upload-methods-comparison}
+
+| Överföringsmetod | När ska du använda? | Primär persona (administratör, utvecklare, kreativ användare, marknadsförare) |
+|---------------------|-------------------------------------------------------------------------------------------|------------|
+| Resurskonsol/användargränssnitt | Tillfällig uppladdning, enkel nedladdning och dragning, uppladdning av sökare. Inte för stora massfrågor. | Alla |
+| Överför API | För dynamiskt beslut av resurser under överföring | Developer |
+| Skrivbordsapp | Intag av resurser med låg volym, men för migrering | Administratör, marknadsförare |
+| Resurslänk | För kreatörer och marknadsförare att samarbeta om resurser inifrån de Creative Cloud-program som stöds. | Kreativ, Marketer |
+| Verktyget Massintag | Massinhämtning från datalager.  Rekommenderas för migreringar och tillfälliga massfrågor. | Administratör, utvecklare |
+
+Beskriv när du ska använda vilken metod.
 
 >[!MORELIKETHIS]
 >
