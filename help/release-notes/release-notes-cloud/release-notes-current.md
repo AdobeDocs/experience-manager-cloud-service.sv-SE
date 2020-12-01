@@ -1,64 +1,88 @@
 ---
-title: Aktuell versionsinformation [!DNL Adobe Experience Manager] för en Cloud Service.
-description: Aktuell versionsinformation [!DNL Adobe Experience Manager] för en Cloud Service.
+title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
+description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 05184bbf507fe84ffb69da90502190b1a2793ee3
+source-git-commit: 89f7e60205efc275bbeb97246ccc3add28810cfa
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '1329'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation för [!DNL Adobe Experience Manager] som Cloud Service {#release-notes}
+# Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Experience Manager] en Cloud Service.
+I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Experience Manager] som en Cloud Service.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] Cloud Service 2020.10.0 är 28 oktober 2020.
-Följande version (2020.11.0) kommer att vara den 1 december 2020.
+Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.11.0 är 1 december 2020.
+Följande version (2020.12.0) kommer att vara den 17 december 2020
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
 
-### What is new in [!DNL Sites] {#what-is-new-sites}
+### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
-<!-- add when release done: * **Core Components 2.12.0**: With Core Components being on auto-update, benefit from the latest improvements contributed by the community. See list of changes since 2.11.1: Release Notes -->
+* **[Startar Hierarkihantering](/help/sites-cloud/authoring/launches/managing-pages.md)  och  [framtida tidsförvrängning](/help/sites-cloud/authoring/launches/preview.md)**: Nytt gränssnitt för att lägga till/ta bort sidor vid en start, och när du bläddrar på en webbplats med Timewarp visas det framtida tillståndet i Launches.
 
-* **Project Archetype 24**: Den rekommenderade grunden för att starta ett nytt AEM-projekt har blivit bättre, nu med nya Adobe Client Data Layer, alternativ för att leverera webbplatsen i AMP och nya tilläggspunkter för att lägga till projekt-CSS/JS.
+* **[Modeller och redigerare för utökat innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)**: Nya alternativ för indatavalidering för olika datatyper, förbättrad datatyp för uppräkning med nya formulärvisualiseringar och modellnamnet för innehållsfragment visas och är sökbart i resursgränssnittet.
 
-* **ContextHub-mappar**: Möjlighet att skapa målgruppsmappar för att enkelt ordna, hitta och välja målgruppssegment som kan användas för målinriktningsfunktioner i ContextHub.
+* **Gör en plats installerbar**: Nya webbplatsegenskaper för att konfigurera Progressive Web Application-funktioner (PWA), som gör att en webbplats kan installeras och vara valfri offline. Funktionerna kräver kärnkomponenter.
 
-## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
+* **[Core Components 2.12.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)**: AEM som en Cloud Service har nytta av automatiska uppdateringar av den senaste utgåvan av Core Components. Version 2.12.0 innehåller de senaste förbättringarna från användargruppen, som [en ny formulärhanterare för POSTER;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-container.html#post-data) möjlighet att inkludera anpassade CSS-, Javascript- och metadata [taggar via kontextmedveten konfiguration;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html#context-aware-loading) och ett [`DataLayerBuilder`](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html#enabling-custom-components)-verktyg för att förenkla integreringen av Adobe datalager i anpassade komponenter. Se [listan över ändringar](https://github.com/adobe/aem-core-wcm-components/releases/tag/core.wcm.components.reactor-2.12.0) i 2.12.0.
 
-### What is new in [!DNL Assets] {#what-is-new-assets}
+## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
 
-* **[!DNL Adobe Sensei]smart taggning**: Genom att utnyttja AI-modeller för att analysera videoinnehåll för objekt- och åtgärdsspecifika taggar kan DAM-användare lägga mindre tid på att lägga till taggar och mer tid på att utnyttja den omfattande information som exponeras för att leverera rätt upplevelse till kunderna. Se [Videor med smarta taggar](/help/assets/smart-tags-video-assets.md).
+### Nyheter i [!DNL Assets] och [!DNL Dynamic Media] {#what-is-new-assets}
 
-* **Förbättringar** i varumärkesportalen: Följande nya funktioner och mer finns i [!DNL Brand Portal]. Mer information finns i [[!DNL Brand Portal] versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal-release-notes.html).
+* **Intag** av massresurser: Förse kunderna med en skalbar, molnbaserad tjänst för förtäring  [!DNL Experience Manager] som utnyttjar en Cloud Service-arkitektur, inklusive mikrotjänster för mediefiler. Exempel på viktiga användningsområden är inhämtning i stor skala med övervakning, rapportering och schemaläggning, samtidigt som resurser kan överföras till molndatalager med hjälp av vanliga verktyg för molnöverföring. Se [bulkimportverktyget](/help/assets/add-assets.md#bulk-ingestion-tool).
+Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=en) eller [överföringen med Assets-användargränssnittet](/help/assets/add-assets.md#upload-assets) för mindre användningsjobb.
 
-   * [Förbättrad nedladdning](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html) för enklare, snabba nedladdningar. Ytterligare hämtningskonfigurationer kan konfigureras av administratörer för att ge en upplevelse som passar användare och företag.
-   * Nu kan du navigera till filer, [samlingar](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/share/brand-portal-share-collection.html)och delade länkar med ett enda klick från vilken sida som helst.
-   * Användarna kan [välja och hämta specifika renderingar](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html#download-assets-from-asset-details-page) nu. Det nya hämtningsalternativet för återgivning finns på panelen Återgivningar på sidan Resursinformation.
-   * En tidsgräns på 15 minuter för gästanvändarsessioner ger en bättre upplevelse för alla samtidiga användare.
+   ![Konfiguration av bulkimporterare](/help/assets/assets/bulk-import-config-low-res.png)
 
-* **[!DNL Adobe Asset Link]version 2.1**: En ny version av [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) -tillägget för [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign] är tillgänglig. Det lägger till kompatibilitet med de senaste [!DNL Adobe Creative Cloud] programmen med version 2021, som släpptes i oktober 2020.
+* Användarna kan sortera de digitala resurserna i kort- och kolumnvyerna.
 
-* **[!DNL Assets]Stöd** för WebP-filer: [!DNL Assets] som en Cloud Service har nu stöd för att skapa renderingar i WebP-bildformat. WebP är ett framväxande bildformat som skapats av Google. Bilder i WebP-filformat kan inte skiljas åt visuellt från JPG- eller PNG-filer och filerna är mycket mindre. Lägre filstorlek förbättrar sidinläsningen och hjälper innehållsskaparna att leverera en snabbare webbupplevelse. Se [Skapa en standardbearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-standard-profile).
+   ![sortera resurser](/help/assets/assets/asset-sort-options.png)
 
-## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
+* Följande förbättringar har gjorts för hjälpmedel i [Experience Manager Assets] i den här versionen. Mer information finns i [tillgänglighetsfunktioner i [!DNL Assets]](/help/assets/accessibility.md).
 
-### Vad är nytt? {#what-is-new-commerce}
+   * När du navigerar på tidslinjen med ett tangentbord kan Esc-tangenten komprimera alternativet Visa alla utan att förlora fokus.
+   * När du navigerar med tangentbordets tabbtangent behåller taggfältet fokus när du har tagit bort den sista taggen från de tillagda taggarna.
+   * [!DNL Experience Manager] -komponenter innehåller nu lämplig information för namn, roll och värde som ska användas av skärmläsare.
+   * När du har tagit bort kombinationsrutan Typ/storlek, kombinationsrutan Länk, Kombinationsrutan Språk eller textredigeringsrutan, återgår tangentbordsfokus till nästa eller föregående element i användargränssnittet eller till ett mer relevant element i användargränssnittet.
+   * När du håller pekaren över alternativ visas tips som Markera och Hämta. Användare som använder en skärmförstorare kanske inte ser filminiatyrbilderna på grund av dessa tips. Nu är det möjligt att behålla fokus när du har tagit bort alternativet med `Escape`-tangenten.
+   * När du väljer en stödrastercell från det stödraster som finns på sidan flyttas fokus till det åtgärdsfält som visas på skärmen.
+   * Visuella användare kan skilja mellan normal text och en länk, eftersom visuella ledtrådar (underline- och chevron-ikoner) visas för länkar till alla lösningar på startsidan för [!DNL Experience Manager].
 
-* Lanserade CIF Venia Reference Site - 2020.10.2 som innehåller den senaste CIF Core Components version v1.4.0. Mer information finns på [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2020.10.2) .
+* **Förinställningar för gruppuppsättning i dynamiska media**: Nu kan du automatisera skapandet och organiseringen av flera resurser i en bilduppsättning eller snurra när du överför resursfiler till en mapp, antingen individuellt eller genom att använda massinläsning.
 
-* Frisläppta CIF-kärnkomponenter v1.4.0. Mer information finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.4.0) .
+   Se [Om förinställningar för gruppuppsättning](/help/assets/dynamic-media/batch-set-presets-dm.md).
 
-### Bug Fixes {#bug-fixes-commerce}
+* Följande tillgänglighetsförbättringar är nu tillgängliga i [!DNL Dynamic Media]:
 
-* GraphQL-begäranden i produktkonsolen och väljare gjordes via HTTP-POST. Detta har åtgärdats för att säkerställa att Apollo GraphQL-klienten respekterar inställningen i GraphQL-klientens OSGi-konfiguration för att stödja GET-begäranden om detta har konfigurerats.
+   * Skärmläsare (JAWS, Skärmläsaren) lägger till en berättarröst för menyalternativens namn, roll och läge på menyn Bädda in storlek.
+   * Användare kan navigera i dialogrutan E-postlänk med `Tab`-tangenten.
+   * Arbetsflödet för att skapa videokodningsprofiler är mer användarvänligt med tanke på skärmläsarförbättringarna.
+   * När du navigerar med `Tab`-tangenten flyttas fokus till lämpliga element i användargränssnittet i arbetsflödet för att skapa en interaktiv video.
+   * Sidan Publicera, Redigera resurs, sidan Redigera smarta beskärningar och sidan Redigera bilduppsättning har förbättrats så att de uppfyller webbstandarderna. AT-användare kan nu enkelt navigera på dessa sidor och vidta åtgärder som beskärningsbilder.
+   * Visningsprogrammen har förbättrats så att användarna kan navigera med tangentbordet.
+   * Användare av tangentbord och skärmläsare kan använda beskärningsfunktionen.
+   * Tangentbordsanvändarna kan hantera de aktiveringspunkter som behövs bättre.
 
-* CIF Cloud-konfigurationsgränssnittet visade knapparna Spara och stäng för konfigurationer i /lib och /apps/. Dessa är skrivskyddade och därför har användargränssnittet fast att bara visa stängningsknappen.
+   Se [Tillgänglighet i [!DNL Dynamic Media]](/help/assets/dynamic-media/accessibility-dm.md).
+
+## Adobe Experience Manager Commerce som Cloud Service {#cloud-services-commerce}
+
+### Nyheter {#what-is-new-commerce}
+
+* Lanserade CIF Venia Reference Site - 2020.11.05 som innehåller den senaste CIF Core Components version v1.5.0. Mer information finns i [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2020.10.27).
+
+* Frisläppta CIF-kärnkomponenter v1.5.0. Mer information finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.5.0).
+
+### Felkorrigeringar {#bug-fixes-commerce}
+
+* GraphQL-klientkonfigurationen lästes inte korrekt när konfigurationen inte anges direkt i Sling CA-konfigurationen, men i en av de överordnade konfigurationerna. Den här har åtgärdats.
+
 
 
 ## Cloud Manager {#cloud-manager}
@@ -67,14 +91,14 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 Releasedatum för Cloud Manager i AEM som Cloud Service 2020.11.0 är 12 november 2020.
 
-### What is new in [!DNL Cloud Manager] {#what-is-new-cm}
+### Nyheter i [!DNL Cloud Manager] {#what-is-new-cm}
 
-* Ett nytt menyalternativ, **Lokal inloggning** , är nu tillgängligt för användare från miljömenyalternativen på **miljökortets** och **miljöns** sammanfattningssidor.
-Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md##login-locally) .
+* Ett nytt menyalternativ **Lokal inloggning** är nu tillgängligt för användare från miljömenyalternativen på **miljökortet** och **miljösammanfattningssidorna**.
+Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md##login-locally).
 
 * Fliken **Lär dig** i Cloud Manager har uppdaterats med nya bilder i användargränssnittet.
 
-### Bug Fixes {#bug-fixes-cloud-manager}
+### Felkorrigeringar {#bug-fixes-cloud-manager}
 
 * Inläsningen av beroenden som gjorts före körningen av bygget krävde hämtning av ett Maven-plugin-program.
 * Länken från molnhanterarens sidfot för att välja ett språk navigerar nu till rätt plats.
@@ -85,17 +109,25 @@ Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/mana
 
 ### Arbetsflöden {#workflows}
 
-* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Sök efter arbetsflödesinstanser](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/administering/workflows-administering.html).
+* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Förekomster av arbetsflöden för sökning](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/administering/workflows-administering.html).
+
+### Användarsynkronisering {#user-sync}
+
+* Användardata, inklusive profilattribut och gruppmedlemskap, kan sparas på publiceringsnivån. Läs mer om den här funktionen i [dokumentationen för registrering, inloggning och användarprofil](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md).
+
+### Analysatorer {#analyzers}
+
+AEM som Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i ett maven-projekt, inklusive saknade beroenden. Det ger utvecklare möjlighet att upptäcka problem under den lokala utvecklingen, långt före distributionen till molnmiljöer med Cloud Manager. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=en#developing) och [här](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#building-for-the-sdk).
 
 ## Content Transfer Tool {#content-transfer-tool}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [Content Transfer Tool](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) Release v1.1.12.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [verktyget Innehållsöverföring](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) Version v1.1.12.
 
-### Vad är nytt? {#what-is-new-ctt}
+### Nyheter {#what-is-new-ctt}
 
 * Användarupplevelsen för loggar har förbättrats. Tidsstämplar har lagts till i loggarna för extrahering och inmatning. Meddelande har lagts till för att ange om loggarna är tomma.
 
-### Bug Fixes {#ctt-bug-fixes}
+### Felkorrigeringar {#ctt-bug-fixes}
 
 * Innehållsöverföringsverktyget hoppade över innehållsfiler om migreringsuppsättningen innehöll sökvägar som delvis hade liknande filnamn. Den här har åtgärdats.
 
@@ -105,12 +137,12 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 Releasedatum för Best Practices Analyzer är 13 november 2020.
 
-### What is new in [!DNL Best Practices Analyzer] {#what-is-new-bpa}
+### Nyheter i [!DNL Best Practices Analyzer] {#what-is-new-bpa}
 
 * Molnberedskapsanalys är nu BPA (Best Practices Analyzer). BPA ger en metodutvärdering av den aktuella AEM och hjälper dig att bedöma om du kan gå över från en befintlig AEM till AEM som en Cloud Service.
 
-* En ny detektor lades till för att identifiera användningen av `java.io.InputStream`som kan orsaka problem om den används i AEM som Cloud Service.
+* En ny detektor lades till för att identifiera användningen av `java.io.InputStream`, vilket kan orsaka problem om den används i AEM som en Cloud Service.
 
-### Bug Fixes {#bpa-bug-fixes}
+### Felkorrigeringar {#bpa-bug-fixes}
 
-* Ett fel som orsakade de positiva elementen för *textfältsbasen* har åtgärdats.
+* Ett fel som orsakade de positiva värden som är relaterade till *textfältsgrunden*-komponenten har åtgärdats.
