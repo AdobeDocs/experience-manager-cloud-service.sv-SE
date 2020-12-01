@@ -5,19 +5,19 @@ breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: a298921410b4cba05ad341f7cee6d2ac9981bce4
+source-git-commit: 4420fd95388ba2f389192f767b6d612bdc2b18a9
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '432'
 ht-degree: 75%
 
 ---
 
 
-# [!DNL Assets] Guide {#assets}
+# [!DNL Assets] Guide  {#assets}
 
 + [[!DNL Assets] som en Cloud Service](/help/assets/home.md)
 + [Översikt och nyheter](overview.md)
-+ [Betydande ändringar [!DNL Assets] som en Cloud Service](assets-cloud-changes.md)
++ [Betydande ändringar  [!DNL Assets] som en Cloud Service](assets-cloud-changes.md)
 + [[!DNL Assets] arkitektur](architecture.md)
 + [Filformat som stöds](file-format-support.md)
 + [Översikt över mikrotjänster för material](asset-microservices-overview.md)
@@ -32,7 +32,7 @@ ht-degree: 75%
    + [Smarta taggar för bilder](smart-tags.md)
    + [Smarta taggar för videomaterial](smart-tags-video-assets.md)
    + [Organisera resurser](organize-assets.md)
-   + [Använd [!DNL Adobe Stock] resurser i AEM](aem-assets-adobe-stock.md)
+   + [Använd  [!DNL Adobe Stock] resurser i AEM](aem-assets-adobe-stock.md)
    + [Hantera samlingar](manage-collections.md)
    + [Översikt över metadata](manage-metadata.md)
    + [Integrera med [!DNL Adobe Creative Cloud]](aem-cc-integration-best-practices.md)
@@ -82,12 +82,15 @@ ht-degree: 75%
    + [Hantera Dynamic Media-resurser](dynamic-media/managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Bästa tillvägagångssätt för filhantering](dynamic-media/best-practices-for-file-management.md)
-   + [Hantera förinställningar för Dynamic Media Viewer](dynamic-media/managing-viewer-presets.md)
-   + [Använda förinställningar för Dynamic Media Viewer](dynamic-media/viewer-presets.md)
-   + [Hantera förinställningar för Dynamic Media-bilder](dynamic-media/managing-image-presets.md)
-   + [Använda förinställningar för Dynamic Media-bilder](dynamic-media/image-presets.md)
    + [Bildprofiler](dynamic-media/image-profiles.md)
    + [Videoprofiler](dynamic-media/video-profiles.md)
+   + [Hantera förinställningar för Dynamic Media-bilder](dynamic-media/managing-image-presets.md)
+   + [Använda förinställningar för Dynamic Media-bilder](dynamic-media/image-presets.md)
+   + [Hantera förinställningar för Dynamic Media Viewer](dynamic-media/managing-viewer-presets.md)
+   + [Använda förinställningar för Dynamic Media Viewer](dynamic-media/viewer-presets.md)
+   + [Förinställningar för gruppuppsättning](dynamic-media/batch-set-presets-dm.md)
+   + [Invalidera CDN-cachen med hjälp av Dynamic Media](dynamic-media/invalidate-cdn-cache-dynamic-media.md)
+   + [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](dynamic-media/invalidate-cdn-cache-dm-classic.md)
    + [Smart bildbehandling](dynamic-media/imaging-faq.md)
    + [Leverera Dynamic Media-resurser](dynamic-media/delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](dynamic-media/hotlink-protection.md)
@@ -111,8 +114,6 @@ ht-degree: 75%
    + [Omforma URL:er med regeluppsättningar](dynamic-media/using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](dynamic-media/publishing-dynamicmedia-assets.md)
    + [Arbeta med selektiv publicering i Dynamic Media](dynamic-media/selective-publishing.md)
-   + [Invalidera CDN-cachen med hjälp av Dynamic Media](dynamic-media/invalidate-cdn-cache-dynamic-media.md)
-   + [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](dynamic-media/invalidate-cdn-cache-dm-classic.md)
    + [Arbeta med väljare](dynamic-media/working-with-selectors.md)
    + [Vanliga frågor om att DHTML Viewer upphör](dynamic-media/dhtml-viewer-endoflifefaqs.md)
    + [Meddelande om att Flash Viewer har upphört](dynamic-media/flash-viewers-eol.md)
