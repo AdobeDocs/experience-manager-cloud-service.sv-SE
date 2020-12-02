@@ -22,7 +22,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Titel**
 
-   * Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyerna **Webbplatser** .
+   * Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyn **Platser** kort/lista.
    * Detta är ett obligatoriskt fält.
 
 * **Taggar**
@@ -46,11 +46,11 @@ Egenskaperna fördelas på flera flikar.
 
 * **Sidrubrik**
 
-   * En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom används **rubriken** .
+   * En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom kommer **Title** att användas.
 
 * **Navigeringsrubrik**
 
-   * Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom används **rubriken** .
+   * Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom används **titeln**.
 
 * **Underrubrik**
 
@@ -66,22 +66,22 @@ Egenskaperna fördelas på flera flikar.
 
       >[!NOTE]
       >
-      > Information om hur du konfigurerar den relaterade automatiska replikeringen finns i [På- och Av-tider - Utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration) .
+      > Mer information om hur du konfigurerar den relaterade automatiska replikeringen finns i [På- och Av-tider - Utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration).
 
-      * Om sidan redan är [publicerad (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) kommer den att vara vilande (dold) tills den återges vid den angivna tidpunkten.
+      * Om redan [har publicerats (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) kommer den här sidan att behållas vilande (dold) tills den återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och konfigureras för automatisk replikering kommer den att publiceras automatiskt och sedan återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och inte är konfigurerad för automatisk replikering, kommer den inte att publiceras automatiskt. Därför visas 404 när du försöker komma åt sidan.
-   * Lämna dessa fält (**I tid** och **fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenario).
+   * Lämna dessa fält (**På tid** och **Fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenariot).
 
 * **Fråntid**
 
    * Parallellt med **På tid** anger detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
-   * Lämna dessa fält (**I tid** och **fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenario).
+   * Lämna dessa fält (**På tid** och **Fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenariot).
 
 * **Vanity URL**
 
    * Gör att du kan ange en fågel-URL för den här sidan, vilket kan ge dig en kortare och/eller mer uttrycksfull URL.
-   * Om Vanity-URL:en till exempel är inställd på `welcome` den sida som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`är `http://example.com/welcome` det vanity-URL:en för `http://example.com/content/v1.0/startpage`
+   * Om Vanity-URL:en till exempel är inställd på `welcome` till den sida som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`, blir `http://example.com/welcome` vanity-URL:en `http://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -119,9 +119,9 @@ Egenskaperna fördelas på flera flikar.
    * Ange ett alias som ska användas med den här sidan.
    >[!NOTE]
    >
-   >Alias anger egenskapen för att definiera ett aliasnamn för resursen (detta påverkar bara resursen, inte sökvägen). `sling:alias`
+   >Alias anger egenskapen `sling:alias` för att definiera ett aliasnamn för resursen (detta påverkar bara resursen, inte sökvägen).
    >
-   >Till exempel: om du definierar ett alias för `latin-lang` noden `/content/we-retail/spanish` kan du komma åt den här sidan via `/content/we-retail/latin-language`
+   >Till exempel: Om du definierar ett alias på `latin-lang` för noden `/content/we-retail/spanish` kan du komma åt den här sidan via `/content/we-retail/latin-language`
    >
    >Mer information finns i Lokaliserade sidnamn under SEO och Bästa metoder för URL-hantering.
 
@@ -129,7 +129,7 @@ Egenskaperna fördelas på flera flikar.
   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
   -->
 
-* **Ärvs från &lt;path>**
+* **Ärvs från  &lt;path>**
 
    * Anger om sidan ärvs. och varifrån kommer.
 
@@ -139,14 +139,14 @@ Egenskaperna fördelas på flera flikar.
 
 * **Tillåtna mallar**
 
-   * [Definiera listan med mallar som ska vara tillgängliga](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) i den här undergrenen.
+   * [Definiera listan med mallar som ska vara ](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) tillgängliga i den här undergrenen.
 
-* **Aktivera** (autentiseringskrav)
+* **Aktivera**  (autentiseringskrav)
 
    * Aktivera (eller inaktivera) autentisering för att få åtkomst till sidan.
    >[!NOTE]
    >
-   >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](#permissions)** .
+   >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](#permissions)**.
 
 * **Inloggningssida**
 
@@ -180,7 +180,7 @@ Visar sidminiatyrbilden. Du kan:
 
 * **Delning i sociala medier**
 
-   Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för kärnkomponenten [](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/sharing.html)Delning.
+   Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Delningskärnkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/sharing.html).
 
    * **Aktivera användardelning för Facebook**
    * **Aktivera användardelning för Pinterest**
@@ -236,40 +236,40 @@ Visar sidminiatyrbilden. Du kan:
    * Styr under vilka omständigheter ändringar ska spridas till Live Copy.
 
 
-### Live Copy {#live-copy}
+### Live-kopia {#live-copy}
 
 * **Livecopy**
 
    * Definiera egenskaper för en Live Copy-sida inom hantering av flera webbplatser. <!--Define properties for a Live Copy page within [multi-site management](/help/sites-administering/msm.md).-->
    * Styr under vilka omständigheter ändringar ska spridas från utkast.
 
-### Webbplatsstruktur {#site-structure}
+### Platsstruktur {#site-structure}
 
-* Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida** och **Offlinesida**.
+* Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offline Page**.
 
 ## Redigera sidegenskaper {#editing-page-properties-1}
 
-* Från **webbplatskonsolen** :
-   * [Skapa en ny sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page) (en deluppsättning av egenskaperna)
+* Från konsolen **Platser**:
+   * [Skapa en ny sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page)  (en deluppsättning av egenskaperna)
    * Klicka eller peka på **Egenskaper**
       * För en enstaka sida
       * För flera sidor (endast en deluppsättning av egenskaperna är tillgängliga för redigering av en masse)
 * Från sidredigeraren:
    * Med **Sidinformation** (och sedan **Öppna egenskaper**)
 
-### Från webbplatskonsolen - en sida {#from-the-sites-console-single-page}
+### På webbplatskonsolen - en sida {#from-the-sites-console-single-page}
 
 Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 
-1. Använd **webbplatskonsolen** för att navigera till platsen för sidan som du vill visa och redigera egenskaper för.
-1. Välj alternativet **Egenskaper** för den önskade sidan med något av följande alternativ:
+1. Använd konsolen **Platser** för att navigera till platsen för sidan som du vill visa och redigera egenskaper för.
+1. Välj alternativet **Egenskaper** för den begärda sidan med hjälp av:
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
    * [Markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources)
    * Sidegenskaperna visas med rätt flikar.
 1. Visa eller redigera egenskaperna efter behov.
-1. Använd sedan **Spara** för att spara uppdateringarna följt av **Stäng** för att återgå till konsolen.
+1. Använd sedan **Spara** för att spara uppdateringar följt av **Stäng** för att återgå till konsolen.
 
-### När en sida redigeras {#when-editing-a-page}
+### När du redigerar en sida {#when-editing-a-page}
 
 När du redigerar en sida kan du använda **Sidinformation** för att definiera sidegenskaperna:
 
@@ -278,7 +278,7 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 1. Välj **Öppna egenskaper** så öppnas en dialogruta där du kan redigera egenskaperna. Följande knappar finns också till höger om verktygsfältet:
    * **Avbryt**
    * **Spara och stäng**
-1. Spara ändringarna med knappen **Spara och stäng** .
+1. Använd knappen **Spara och stäng** för att spara ändringarna.
 
 ### Från webbplatskonsolen - flera sidor {#from-the-sites-console-multiple-pages}
 
@@ -298,7 +298,7 @@ På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egen
 
 Du kan välja flera sidor för massredigering på olika sätt, bland annat:
 
-* När du bläddrar i **webbplatskonsolen**
+* När du bläddrar i konsolen **Platser**
 * När du har använt **Sök** för att hitta en uppsättning sidor
 
 När du har markerat sidorna och tryckt eller klickat på alternativet **Egenskaper**, visas massegenskaperna:
@@ -324,7 +324,7 @@ När du har valt Massredigering kan du:
       * Om du minskar sidmarkeringen till en sida visas alla egenskaper.
    * Vanliga egenskaper med ett gemensamt värde
       * Endast egenskaper med ett gemensamt värde visas i visningsläget.
-      * När fältet har flera värden (till exempel Taggar) visas värden bara när *alla* är gemensamma. Om bara vissa är vanliga visas de bara när du redigerar.
+      * När fältet har flera värden (till exempel taggar) visas värden bara när *alla* är gemensamma. Om bara vissa är vanliga visas de bara när du redigerar.
       * När det inte finns några egenskaper med ett gemensamt värde visas ett meddelande.
 
 * **Redigera**
