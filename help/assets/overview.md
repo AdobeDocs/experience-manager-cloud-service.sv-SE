@@ -21,9 +21,9 @@ Samtidig inmatning av många resurser eller komplexa resurser är en resurskräv
 
 Företag behöver stöd för en mängd olika filformat och innehållsupplösningar för användning på flera enheter, i olika geografiska områden och på flera språk. Resurshanterings- och lagringskrav kräver resurser och funktioner som kan överbelasta en traditionell lösning. Ibland ger inte tekniska begränsningar av behandlingen av tillgångar de resultat man önskar och i andra fall är kostnaden för lagring ett hinder för vinstmarginalerna.
 
-Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits). Se de betydande [förändringarna av AEM som en Cloud Service](/help/release-notes/aem-cloud-changes.md) som också påverkade Experience Manager Assets och följde upp de betydande [förändringarna av Assets](/help/assets/assets-cloud-changes.md).
+Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits). Se de anmärkningsvärda [ändringarna av AEM som en Cloud Service](/help/release-notes/aem-cloud-changes.md) som även påverkar Experience Manager Assets följt upp de anmärkningsvärda [ändringarna av Assets](/help/assets/assets-cloud-changes.md).
 
-Läs vidare för att få [information om de nya Assets-funktionerna](#whats-new-assets) och de [kända problemen](/help/release-notes/known-issues.md). Se en lista över [borttagna eller borttagna funktioner](/help/release-notes/deprecated-removed-features.md) för att ta reda på vad som tas bort i den här versionen och se den här [listan över kommande funktioner](/help/release-notes/known-issues.md#upcoming-assets-capabilities) för att ta reda på vad som kommer inom kort. Slutligen, förstå AEM termer med hjälp av den här [ordlistan](/help/overview/terminology.md).
+Läs vidare för att få information om [detaljerna om de nya Assets-funktionerna](#whats-new-assets) och [kända problem](/help/release-notes/known-issues.md). Se en lista över [borttagna eller borttagna funktioner](/help/release-notes/deprecated-removed-features.md) för att ta reda på vad som har tagits bort i den här versionen och se den här [listan över kommande funktioner](/help/release-notes/known-issues.md#upcoming-assets-capabilities) för att ta reda på vad som kommer inom kort. Lär dig slutligen AEM termer med hjälp av den här [ordlistan](/help/overview/terminology.md).
 
 ## Lösningsfördelar {#solution-benefits}
 
