@@ -10,17 +10,17 @@ ht-degree: 4%
 ---
 
 
-# Configuring Your Account Environment {#configuring-your-account-environment}
+# Konfigurerar din kontomiljö {#configuring-your-account-environment}
 
 AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
 Med alternativet [Användare](#user-settings) i [sidhuvudet](/help/sites-cloud/authoring/getting-started/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
 
-Börja med att gå till alternativet [Användare](#user-settings) i sidhuvudet.
+Börja med att gå till alternativet [Användare](#user-settings) i rubriken.
 
 ## Användarinställningar {#user-settings}
 
-Dialogrutan **Användarinställningar** ger dig tillgång till:
+Dialogrutan **Användare**-inställningar ger dig tillgång till:
 
 * Personifiera som
    * Med funktionen Personifiera som kan en användare arbeta för en annan användares räkning. <!--With the [Impersonate as](/help/sites-administering/security.md#impersonating-another-user) functionality, a user can work on behalf of another user.-->
@@ -33,7 +33,7 @@ Dialogrutan **Användarinställningar** ger dig tillgång till:
 
 ### Mina inställningar {#my-preferences}
 
-Dialogrutan **Mina inställningar** öppnas via alternativet [Användare](#user-settings) i sidhuvudet.
+Dialogrutan **Mina inställningar** är tillgänglig via alternativet [Användare](#user-settings) i sidhuvudet.
 
 Varje användare kan ange vissa egenskaper för sig själv.
 
@@ -47,7 +47,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    Detta definierar beteendet för att öppna fönster. Välj något av följande:
 
-   * **Flera fönster** (standard)
+   * **Flera fönster**  (standard)
 
       * Sidorna öppnas i ett nytt fönster.
    * **Ett fönster**
@@ -94,4 +94,4 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Stock-konfiguration**
 
-   Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md).
+   Med det här alternativet kan du ange den önskade Adobe Stock-konfigurationen och det är bara tillgängligt om systemadministratören har aktiverat [Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md).
