@@ -14,11 +14,11 @@ ht-degree: 17%
 
 Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet.  Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
-De här filerna kan hämtas via användargränssnittet, antingen från **sidan Översikt** :
+Dessa filer kan hämtas via användargränssnittet, antingen från sidan **Översikt**:
 
 ![](assets/download-logs1.png)
 
-Eller **miljösidan** :
+Eller sidan **Environment**:
 
 ![](assets/download-logs.png)
 
