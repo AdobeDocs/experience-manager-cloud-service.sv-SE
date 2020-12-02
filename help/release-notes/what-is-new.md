@@ -17,9 +17,9 @@ ht-degree: 15%
 Adobe Experience Manager (AEM) som Cloud Service är en molnbaserad plattform som optimerar arbetsflöden för marknadsförare och utvecklare för hela innehållets livscykel, inklusive funktioner för webbinnehåll och hantering av digitala resurser. Eftersom programmet är inbyggt i molnet har det skalbara prestanda, en säker infrastruktur, får smidiga uppdateringar för att hålla sig uppdaterade och möjliggör problemfri driftsättning och administration.
 
 En översikt över Adobe Experience Manager som Cloud Service finns i:
-* the [Introduction to AEM as a Cloud Service](/help/overview/introduction.md)
-* the [Architecture](/help/core-concepts/architecture.md) of Adobe Experience Manager as a Cloud Service
-* En [översikt över AEM som en Cloud Service - Vad är nytt och Vad är annorlunda?](/help/overview/what-is-new-and-different.md)
+* [Introduktion till AEM som en Cloud Service](/help/overview/introduction.md)
+* [Arkitekturen](/help/core-concepts/architecture.md) för Adobe Experience Manager som en Cloud Service
+* En [översikt över AEM som en Cloud Service - What is New and What is Different](/help/overview/what-is-new-and-different.md)
 
 <!-- Please link to introduction or what's new of Sites. -->
 
