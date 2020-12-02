@@ -15,32 +15,32 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med hjälp av [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
+Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för digitala resurser, inklusive metadata, återgivningar och kommentarer, tillsammans med strukturerat innehåll med [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 Så här kommer du åt API:
 
 1. Öppna API-tjänstdokumentet på `https://[hostname]:[port]/api.json`.
-1. Följ länkarna Resurstjänster till `https://[hostname]:[server]/api/assets.json`.
+1. Följ länken Resurstjänster som leder till `https://[hostname]:[server]/api/assets.json`.
 
 API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt, till exempel för PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
 
-Efter [!UICONTROL Off Time]detta är en resurs och dess återgivningar inte tillgängliga via [!DNL Assets] webbgränssnittet och via HTTP API. API:t returnerar 404-felmeddelande om det [!UICONTROL On Time] finns i framtiden eller om det finns [!UICONTROL Off Time] i det förflutna.
+Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet [!DNL Assets] och via HTTP-API:t. API:t returnerar 404-felmeddelandet om [!UICONTROL On Time] är i framtiden eller om [!UICONTROL Off Time] är i det förflutna.
 
 >[!NOTE]
 >
->Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är dedikerade för AEM som en Cloud Service-distribution. Om du vill överföra binära filer använder du API:er för [direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
+>Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är dedikerade för AEM som en Cloud Service-distribution. Om du vill överföra binära filer använder du [API:er för direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
 
 ## Innehållsfragment {#content-fragments}
 
-Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en särskild typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard` resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
+Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en speciell typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard`-resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
 
-Mer information finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
+Mer information finns i [Stöd för innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 ## Datamodell {#data-model}
 
 Resursens HTTP-API visar två huvudelement, mappar och resurser (för standardresurser).
 
-Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments) för innehållsfragment.
+Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments).
 
 ### Mappar {#folders}
 
@@ -55,9 +55,9 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 
 >[!NOTE]
 >
->Vissa egenskaper för mapp eller resurs är mappade till ett annat prefix. Prefixet `jcr` , `jcr:title`och `jcr:description`ersätts med `jcr:language` `dc` prefix. I det returnerade JSON-objektet `dc:title` och `dc:description` innehåller därför värdena för `jcr:title` respektive `jcr:description`.
+>Vissa egenskaper för mapp eller resurs är mappade till ett annat prefix. `jcr`-prefixet `jcr:title`, `jcr:description` och `jcr:language` har ersatts med `dc`-prefixet. I den returnerade JSON innehåller därför `dc:title` och `dc:description` värdena `jcr:title` respektive `jcr:description`.
 
-**Länkmappar** visar tre länkar:
+**** LinksFolders visar tre länkar:
 
 * `self`: Länka till sig själv.
 * `parent`: Länka till den överordnade mappen.
@@ -65,15 +65,15 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 
 ### Assets {#assets}
 
-I [!DNL Experience Manager] en resurs innehåller följande element:
+I [!DNL Experience Manager] innehåller en resurs följande element:
 
 * Resursens egenskaper och metadata.
 * Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF- eller Adobe InDesign-filer.
 * Valfria kommentarer.
 
-Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
+Mer information om element i innehållsfragment finns i [Stöd för innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
 
-I [!DNL Experience Manager] en mapp finns följande komponenter:
+I [!DNL Experience Manager] har en mapp följande komponenter:
 
 * Enheter: Resursernas underordnade är dess återgivningar.
 * Egenskaper.
@@ -97,7 +97,7 @@ Resursens HTTP-API innehåller följande funktioner:
 
 >[!NOTE]
 >
->För att underlätta läsbarheten utelämnar följande exempel den fullständiga cURL-notationen. Faktum är att syntaxen korrelerar med [Resty](https://github.com/micha/resty) , som är en skriptwrapper för `cURL`.
+>För att underlätta läsbarheten utelämnar följande exempel den fullständiga cURL-notationen. Faktum är att notationen korrelerar med [Resty](https://github.com/micha/resty) som är en skriptwrapper för `cURL`.
 
 <!-- TBD: The Console Manager is not available now. So how to configure the below? 
 
@@ -112,7 +112,7 @@ Resursens HTTP-API innehåller följande funktioner:
 
 Hämtar en siren-representation av en befintlig mapp och av dess underordnade enheter (undermappar eller resurser).
 
-**Begäran**: `GET /api/assets/myFolder.json`
+**Begäran**:  `GET /api/assets/myFolder.json`
 
 **Svarskoder**: Svarskoderna är:
 
@@ -120,15 +120,15 @@ Hämtar en siren-representation av en befintlig mapp och av dess underordnade en
 * 404 - HITTADES INTE - mappen finns inte eller är inte tillgänglig.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
 
-**Svar**: Klassen för enheten som returneras är en resurs eller en mapp. Egenskaperna för enheter som ingår är en deluppsättning av alla egenskaper för varje enhet. För att få en fullständig representation av enheten bör kunderna hämta innehållet i den URL som länken pekar på med en `rel` av `self`.
+**Svar**: Klassen för enheten som returneras är en resurs eller en mapp. Egenskaperna för enheter som ingår är en deluppsättning av alla egenskaper för varje enhet. För att få en fullständig representation av enheten bör klienterna hämta innehållet i den URL som länken pekar på med `rel` av `self`.
 
 ## Skapa en mapp {#create-a-folder}
 
-Skapar en ny `sling`: `OrderedFolder` vid den angivna sökvägen. Om ett `*` anges i stället för ett nodnamn används parameternamnet som nodnamn. Data accepteras som begäran antingen som en Siren-representation av den nya mappen eller som en uppsättning namn/värde-par, kodade som `application/www-form-urlencoded` eller `multipart`/ `form`- `data`, vilket är användbart när du skapar en mapp direkt från ett HTML-formulär. Dessutom kan mappens egenskaper anges som URL-frågeparametrar.
+Skapar en ny `sling`: `OrderedFolder` vid angiven sökväg. Om ett `*` anges i stället för ett nodnamn använder serverleten parameternamnet som nodnamn. Data accepteras som begärandedata antingen som en Siren-representation av den nya mappen eller en uppsättning namn/värde-par, kodade som `application/www-form-urlencoded` eller `multipart`/ `form`- `data`, vilket är användbart när du skapar en mapp direkt från ett HTML-formulär. Dessutom kan mappens egenskaper anges som URL-frågeparametrar.
 
-Ett API-anrop misslyckas med en `500` svarskod om den överordnade noden för den angivna sökvägen inte finns. Ett anrop returnerar en svarskod `409` om mappen redan finns.
+Ett API-anrop misslyckas med en `500`-svarskod om den överordnade noden för den angivna sökvägen inte finns. Ett anrop returnerar en svarskod `409` om mappen redan finns.
 
-**Parametrar**: `name` är mappnamnet.
+**Parametrar**:  `name` är mappnamnet.
 
 **Begäran**
 
@@ -144,17 +144,17 @@ Ett API-anrop misslyckas med en `500` svarskod om den överordnade noden för de
 
 ## Skapa en resurs {#create-an-asset}
 
-Mer information om hur du skapar en resurs med API:er finns i [Överför](developer-reference-material-apis.md) resurser. Det går inte att skapa en resurs med HTTP API.
+Mer information om hur du skapar en resurs med API:er finns i [överföring av resurser](developer-reference-material-apis.md). Det går inte att skapa en resurs med HTTP API.
 
 ## Uppdatera en resurbinär {#update-asset-binary}
 
-Mer information om hur du uppdaterar resursbinärfiler med API:er finns i [Överför](developer-reference-material-apis.md) resurser. Uppdateringen av en resursinbinär fil med HTTP API är föråldrad.
+Mer information om hur du uppdaterar objektbinärfiler med API:er finns i [överföring av resurser](developer-reference-material-apis.md). Uppdateringen av en resursinbinär fil med HTTP API är föråldrad.
 
 ## Uppdatera metadata för en resurs {#update-asset-metadata}
 
-Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i `dc:` namnutrymmet uppdaterar API:t samma egenskap i `jcr` namnutrymmet. API:t synkroniserar inte egenskaperna under de två namnutrymmena.
+Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i namnutrymmet `dc:` uppdaterar API:t samma egenskap i namnutrymmet `jcr`. API:t synkroniserar inte egenskaperna under de två namnutrymmena.
 
-**Begäran**: `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"dc:title":"My Asset"}}'`
+**Begäran**:  `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"dc:title":"My Asset"}}'`
 
 **Svarskoder**: Svarskoderna är:
 
@@ -167,7 +167,7 @@ Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i 
 
 Skapa en ny resursåtergivning för en resurs. Om parameternamnet för begäran inte anges används filnamnet som återgivningsnamn.
 
-**Parametrar**: Parametrarna är `name` för återgivningens namn och `file` som en filreferens.
+**Parametrar**: Parametrarna är  `name` för återgivningens namn och  `file` som en filreferens.
 
 **Begäran**
 
@@ -185,7 +185,7 @@ Skapa en ny resursåtergivning för en resurs. Om parameternamnet för begäran 
 
 Uppdateringar ersätter en resursåtergivning med nya binära data.
 
-**Begäran**: `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
+**Begäran**:  `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
 
 **Svarskoder**: Svarskoderna är:
 
@@ -194,13 +194,13 @@ Uppdateringar ersätter en resursåtergivning med nya binära data.
 * 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
 
-## Lägga till en kommentar till en resurs {#create-an-asset-comment}
+## Lägg till en kommentar för en resurs {#create-an-asset-comment}
 
 Skapar en ny resurskommentar.
 
-**Parametrar**: Parametrarna är `message` för kommentarens meddelandetext och `annotationData` för anteckningsdata i JSON-format.
+**Parametrar**: Parametrarna är  `message` för kommentarens meddelandetext och  `annotationData` för anteckningsdata i JSON-format.
 
-**Begäran**: `POST /api/assets/myfolder/myasset.png/comments/* -F"message=Hello World." -F"annotationData={}"`
+**Begäran**:  `POST /api/assets/myfolder/myasset.png/comments/* -F"message=Hello World." -F"annotationData={}"`
 
 **Svarskoder**: Svarskoderna är:
 
@@ -216,10 +216,10 @@ Kopierar en mapp eller en resurs som är tillgänglig på den angivna sökvägen
 **Begäranrubriker**: Parametrarna är:
 
 * `X-Destination` - en ny mål-URI inom API-lösningens omfång att kopiera resursen till.
-* `X-Depth` - antingen `infinity` eller `0`. Om du `0` bara använder kopieras resursen och dess egenskaper och inte dess underordnade.
-* `X-Overwrite` - Används `F` för att förhindra att en resurs skrivs över på det befintliga målet.
+* `X-Depth` - antingen  `infinity` eller  `0`. Om du använder `0` kopieras bara resursen och dess egenskaper, inte dess underordnade.
+* `X-Overwrite` - Används  `F` för att förhindra att en resurs skrivs över på det befintliga målet.
 
-**Begäran**: `COPY /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-copy"`
+**Begäran**:  `COPY /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-copy"`
 
 **Svarskoder**: Svarskoderna är:
 
@@ -235,10 +235,10 @@ Flyttar en mapp eller resurs vid den angivna sökvägen till ett nytt mål.
 **Begäranrubriker**: Parametrarna är:
 
 * `X-Destination` - en ny mål-URI inom API-lösningens omfång att kopiera resursen till.
-* `X-Depth` - antingen `infinity` eller `0`. Om du `0` bara använder kopieras resursen och dess egenskaper och inte dess underordnade.
-* `X-Overwrite` - Använd antingen `T` för att framtvinga borttagning av befintliga resurser eller för `F` att förhindra att en befintlig resurs skrivs över.
+* `X-Depth` - antingen  `infinity` eller  `0`. Om du använder `0` kopieras bara resursen och dess egenskaper, inte dess underordnade.
+* `X-Overwrite` - Använd antingen  `T` för att framtvinga borttagning av befintliga resurser eller  `F` för att förhindra att en befintlig resurs skrivs över.
 
-**Begäran**: `MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
+**Begäran**:  `MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
 
 **Svarskoder**: Svarskoderna är:
 
