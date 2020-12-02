@@ -16,7 +16,7 @@ AEM när Cloud Servicen levereras med ett inbyggt CDN. Det huvudsakliga syftet �
 
 Det AEM hanterade CDN uppfyller de flesta kunders krav på prestanda och säkerhet. För publiceringsnivån kan kunderna välja att peka på det från sina egna CDN, som de måste hantera. Detta kommer att tillåtas från fall till fall, baserat på att vissa krav uppfylls, inklusive, men inte begränsat till, den kund som har en äldre integrering med sin CDN-leverantör som är svår att överge.
 
-## AEM hanterat CDN  {#aem-managed-cdn}
+## AEM hanterad CDN {#aem-managed-cdn}
 
 Följ de här stegen för att förbereda innehållsleverans genom att använda Adobe i körklart CDN:
 
@@ -26,15 +26,15 @@ Följ de här stegen för att förbereda innehållsleverans genom att använda A
    * vilka anpassade domäner som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id. Upp till 100 domäner stöds för en viss miljö och domäner kan inte innehålla jokertecken. Observera att anpassade domäner på författarsidan inte stöds.
    * om någon IP-tillåtelselistning behövs för att begränsa trafiken till en viss miljö.
 1. Koordinera med kundsupport om timing för nödvändiga ändringar av DNS-posterna. Instruktionerna är olika beroende på om en apex-post behövs:
-   * Om en apex-post inte behövs ska kunderna ange CNAME DNS-posten till att peka FQDN till `cdn.adobeaemcloud.com`.
-   * Om en apex-post behövs skapar du en A-post som pekar på följande IP-adresser: 151.101.3.10, 151.101.67.10, 151.101.131.10, 151.101.195.10. Kunderna behöver en apex-post om det önskade FQDN matchar DNS-zonen. Detta kan testas med Unix-kommandot för att se om SOA-värdet för utdata matchar domänen. Kommandot `dig anything.dev.adobeaemcloud.com` returnerar till exempel SOA (Start of Authority, d.v.s. zonen) för `dev.adobeaemcloud.com` att inte vara en APEX-post, medan `dig dev.adobeaemcloud.com` returnerar SOA på `dev.adobeaemcloud.com` så sätt att det är en apex-post.
+   * Om en apex-post inte behövs ska kunderna ange CNAME DNS-posten så att den pekar på deras FQDN till `cdn.adobeaemcloud.com`.
+   * Om en apex-post behövs skapar du en A-post som pekar på följande IP-adresser: 151.101.3.10, 151.101.67.10, 151.101.131.10, 151.101.195.10. Kunderna behöver en apex-post om det önskade FQDN matchar DNS-zonen. Detta kan testas med Unix-kommandot för att se om SOA-värdet för utdata matchar domänen. Kommandot `dig anything.dev.adobeaemcloud.com` returnerar till exempel SOA (Start of Authority, dvs. zonen) på `dev.adobeaemcloud.com` så att det inte är en APEX-post, medan `dig dev.adobeaemcloud.com` returnerar SOA på `dev.adobeaemcloud.com` så att det är en apex-post.
 1. Du meddelas när SSL-certifikaten upphör att gälla så att du kan skicka om de nya SSL-certifikaten.
 
 **Begränsa trafik**
 
 Som standard kan all offentlig trafik för en Adobe hanterad CDN-installation gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utvecklingsmiljöer och scenmiljöer). Om du vill begränsa trafiken till publiceringstjänsten för en viss miljö (t.ex. begränsa mellanlagring med ett intervall av IP-adresser) bör du tillsammans med kundsupporten arbeta med att konfigurera dessa begränsningar.
 
-## Customer CDN points to AEM Managed CDN {#point-to-point-CDN}
+## Kund-CDN pekar på AEM hanterat CDN {#point-to-point-CDN}
 
 Om en kund måste använda sitt befintliga CDN kan han eller hon hantera det och peka det mot Adobe CDN, förutsatt att följande uppfylls:
 
@@ -46,10 +46,10 @@ Om en kund måste använda sitt befintliga CDN kan han eller hon hantera det och
 
 Konfigurationsinstruktioner:
 
-1. Ange domännamnet som `X-Forwarded-Host` huvud.
+1. Ange `X-Forwarded-Host`-huvudet med domännamnet.
 1. Ange värdhuvudet med ursprungsdomänen, som är Adobe CDN:s ingress. Värdet ska komma från Adobe.
 1. Skicka SNI-huvudet till origo. Precis som med värdhuvudet måste sni-huvudet vara den ursprungliga domänen.
-1. Ange `X-Edge-Key`vilket krävs för att dirigera trafik korrekt till AEM. Värdet ska komma från Adobe.
+1. Ange `X-Edge-Key` som behövs för att dirigera trafik korrekt till AEM servrar. Värdet ska komma från Adobe.
 
 Innan du godkänner direkttrafik bör du med Adobe kundsupport validera att trafikdirigeringen från början till slut fungerar som den ska.
 
