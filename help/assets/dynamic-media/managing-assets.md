@@ -10,7 +10,7 @@ ht-degree: 13%
 ---
 
 
-# About managing Dynamic Media assets {#managing-assets}
+# Hantera dynamiska medieresurser {#managing-assets}
 
 Hantera Dynamic Media-resurser - bilder, video och interaktiva resurser - efter att de har överförts - innefattar många uppgifter som att förhandsgranska, ladda ned eller publicera dem.
 
