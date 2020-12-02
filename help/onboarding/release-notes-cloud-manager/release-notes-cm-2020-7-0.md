@@ -28,20 +28,20 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.7.0 är 9 juli 2020
 
 * Molnhanterarens pipelines har nu stöd för kundspecifika variabler och hemligheter.
 
-   Mer information finns i [Pipeline-variabler](/help/onboarding/getting-access-to-aem-in-cloud/build-environment-details.md#pipeline-variables) .
+   Mer information finns i [Pipeline Variables](/help/onboarding/getting-access-to-aem-in-cloud/build-environment-details.md#pipeline-variables).
 
 * Stöd finns nu för autentiseringsbundna privata Maven-databaser.
 
 * Molnhanterarens byggbehållare har nu stöd för både Java 8 och Java 11.
-Mer information finns i [Använda Java 11-stöd](/help/onboarding/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support) .
+Mer information finns i [Använda Java 11-stöd](/help/onboarding/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support).
 
-### Bug Fixes {#bug-fixes-cm}
+### Felkorrigeringar {#bug-fixes-cm}
 
 * Länken från Cloud Manager till Developer Console var felaktigt aktiv innan miljöerna skapades helt.
 
 * Länken till Developer Console direkt från Cloud Manager visar inte alternativet att avplacera/viloläge för sandlådeprogrammets miljö.
 
-* Alternativen **Avbryt** och **Spara** på redigeringssidan för icke-produktionsförlopp visas inte alltid.
+* Alternativen **Avbryt** och **Spara** på redigeringssidan för icke-produktionsförlopp är inte alltid synliga.
 
 * Vissa fel i kodkvalitetsprocessen kan leda till att loggfilen inte genereras korrekt.
 
@@ -55,4 +55,4 @@ Mer information finns i [Använda Java 11-stöd](/help/onboarding/getting-access
 
 ### Kända fel {#known-issues}
 
-* På grund av en förändring i hur kodens täckning beräknas är den *lägsta* versionen av Jacoco-pluginprogrammet nu 0.7.5.201505241946 (släppt i maj 2015). Kunder som uttryckligen hänvisar till en äldre version får ett felmeddelande i kodkvalitetsprocessen.
+* På grund av en förändring i hur kodens täckning beräknas är versionen *minimum* av Jacoco-pluginprogrammet nu 0.7.5.201505241946 (släppt i maj 2015). Kunder som uttryckligen hänvisar till en äldre version får ett felmeddelande i kodkvalitetsprocessen.
