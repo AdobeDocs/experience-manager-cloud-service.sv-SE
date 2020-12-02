@@ -14,7 +14,7 @@ ht-degree: 8%
 
 I följande diagram visas hur stöd för flera webbplatser för riktat innehåll är strukturerat.
 
-Områden visas under **/content/campaign/&lt;brand>** och som standard har varje varumärke ett överordnad område som skapas automatiskt. Varje område innehåller egna aktiviteter, upplevelser och erbjudanden.
+Områden visas under **/content/campaign/&lt;brand>** och som standard har varje varumärke ett överordnad område, som skapas automatiskt. Varje område innehåller egna aktiviteter, upplevelser och erbjudanden.
 
 ![Struktur för flera webbplatser](/help/sites-cloud/authoring/assets/multisite-structure.png)
 
