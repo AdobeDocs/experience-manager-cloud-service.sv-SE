@@ -10,7 +10,7 @@ ht-degree: 1%
 ---
 
 
-# Dekoration-tagg {#decoration-tag}
+# Dekortagg {#decoration-tag}
 
 När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. Detta har främst två syften:
 
@@ -37,8 +37,8 @@ Här följer några allmänna rekommendationer för när wrapper-elementet ska t
 Följande egenskaper och noder kan tillämpas på komponenterna för att styra beteendet för deras dekorationstagg:
 
 * **`cq:noDecoration {boolean}`:** Den här egenskapen kan läggas till i en komponent och ett true-värde AEM inte generera några wrapper-element över komponenten.
-* **`cq:htmlTag`node :** Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
-   * **`cq:tagName {String}`:** Detta kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla in komponenterna i stället för DIV-standardelementet.
+* **`cq:htmlTag`nod:** Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
+   * **`cq:tagName {String}`:** Detta kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla komponenterna i stället för DIV-standardelementet.
    * **`class {String}`:** Detta kan användas för att ange CSS-klassnamn som ska läggas till i wrapper.
    * Andra egenskapsnamn läggs till som HTML-attribut med samma String-värde som anges.
 
@@ -56,7 +56,7 @@ Omslagets beteende kan också styras fullständigt.
 
 Det går att helt styra beteendet för wrapper-taggarna från HTML-skript och tillhörande logik.
 
-Mer information om hur du utvecklar i HTML finns i [HTML-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html).
+Mer information om hur du utvecklar i HTML finns i [HTL-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html).
 
 ### Beslutsträd {#decision-tree}
 
@@ -64,7 +64,7 @@ Detta beslutsträd sammanfattar logiken som bestämmer beteendet för wrapper-ta
 
 ![Beslutsträd](assets/decoration-tag-decision-tree.png)
 
-### Användningsexempel {#use-cases}
+### Använd fall {#use-cases}
 
 Följande tre exempel innehåller exempel på hur wrapper-taggarna hanteras, och visar också hur enkelt det är att styra det önskade beteendet för wrapper-taggarna.
 
@@ -90,13 +90,13 @@ Alla exempel som följer förutsätter följande innehållsstruktur och komponen
 
 #### Användningsfall 1: Inkludera en komponent för återanvändning av kod {#use-case-include-a-component-for-code-reuse}
 
-Det vanligaste användningsfallet är när en komponent innehåller en annan komponent av kodskäl. I så fall är den inkluderade komponenten inte nödvändig för att kunna redigeras med ett eget verktygsfält och en egen dialogruta. Därför behövs ingen wrapper och komponentens `cq:htmlTag` kommer att ignoreras. Detta kan betraktas som standardbeteendet.
+Det vanligaste användningsfallet är när en komponent innehåller en annan komponent av kodskäl. I så fall är den inkluderade komponenten inte nödvändig för att kunna redigeras med ett eget verktygsfält och en egen dialogruta. Därför behövs ingen wrapper och komponentens `cq:htmlTag` ignoreras. Detta kan betraktas som standardbeteendet.
 
 `one.html: <sly data-sly-resource="child"></sly>`
 
 `two.html: Hello World!`
 
-Resultat av utdata på `/content/test.html`:
+Resulterande utdata på `/content/test.html`:
 
 **`Hello World!`**
 
@@ -104,15 +104,15 @@ Ett exempel är en komponent som innehåller en huvudbildkomponent för att visa
 
 #### Användningsfall 2: Inkludera en redigerbar komponent {#use-case-include-an-editable-component}
 
-Ett annat vanligt användningsfall är när behållarkomponenter innehåller redigerbara underordnade komponenter, som en layoutbehållare. I det här fallet behöver varje inkluderat underordnat objekt en wrapper för att redigeraren ska fungera (om de inte uttryckligen inaktiveras med `cq:noDecoration` egenskapen).
+Ett annat vanligt användningsfall är när behållarkomponenter innehåller redigerbara underordnade komponenter, som en layoutbehållare. I det här fallet behöver varje underordnat objekt en wrapper för att redigeraren ska fungera (om de inte uttryckligen har inaktiverats med egenskapen `cq:noDecoration`).
 
-Eftersom den inkluderade komponenten i det här fallet är en fristående komponent, behöver den ett wrapper-element för att redigeraren ska kunna arbeta och för att definiera dess layout och format som ska användas. Det finns ett alternativ för att aktivera det här beteendet `decoration=true` .
+Eftersom den inkluderade komponenten i det här fallet är en fristående komponent, behöver den ett wrapper-element för att redigeraren ska kunna arbeta och för att definiera dess layout och format som ska användas. Det finns ett `decoration=true`-alternativ som kan aktivera det här beteendet.
 
 `one.html: <sly data-sly-resource="${'child' @ decoration=true}"></sly>`
 
 `two.html: Hello World!`
 
-Resultat av utdata på `/content/test.html`:
+Resulterande utdata på `/content/test.html`:
 
 **`<article class="component-two">Hello World!</article>`**
 
@@ -127,6 +127,6 @@ Det kan finnas ett obegränsat antal komplexa fall, som enkelt kan uppnås genom
 
 `two.html: Hello World!`
 
-Resultat `/content/test.html`:
+Resulterande utdata `/content/test.html`:
 
 **`<aside class="child">Hello World!</aside>`**
