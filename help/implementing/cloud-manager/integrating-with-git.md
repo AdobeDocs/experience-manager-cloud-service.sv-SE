@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Adobe Cloud Manager levereras med en enda Git-databas som används för att distribuera kod med Cloud Managers CI/CD-pipelines. Kunderna kan använda Cloud Managers Git-databas direkt. Kunderna kan också integrera en lokal eller **kundhanterad** Git-databas med Cloud Manager.
 
-## Git-integrering - översikt {#git-integration-overview}
+## Git-integreringsöversikt {#git-integration-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28710/)
 
@@ -44,7 +44,7 @@ Följ videon nedan för att lära dig de grundläggande förgreningsstrategierna
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
-## Funktionsutveckling {#feature-development}
+## Funktionsavsnittsutveckling {#feature-development}
 
 Använd en funktionsgren för att isolera kodändringar i en kundhanterad Git-databas och synkronisera med Cloud Managers Git-databas för att använda en icke-produktionsprocess för kodkvalitets- och valideringstestning.
 
