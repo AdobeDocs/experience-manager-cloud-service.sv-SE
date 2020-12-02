@@ -3,9 +3,9 @@ title: HTTP API för Assets
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgäng
 
 >[!NOTE]
 >
->Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är dedikerade för AEM som en Cloud Service-distribution. Om du vill överföra binära filer använder du [API:er för direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
+>Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är borttagna för AEM som en [!DNL Cloud Service]-distribution. Om du vill överföra binära filer använder du [API:er för direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
 
 ## Innehållsfragment {#content-fragments}
 
