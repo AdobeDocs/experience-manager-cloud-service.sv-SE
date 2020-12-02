@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Struktur för AEM {#structure-of-the-aem-ui}
+# Struktur för AEM{#structure-of-the-aem-ui}
 
 Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement:
 
@@ -30,7 +30,7 @@ Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) jus
 
 ![Mobilvyn i webbplatskonsolen](assets/ui-sites-mobile.png)
 
-### Sidhuvudsfält {#header-bar}
+### Huvudfält {#header-bar}
 
 ![AEM](assets/ui-header-bar.png)
 
@@ -43,7 +43,7 @@ Rubrikraden visar globala element som:
 * En indikator för (och åtkomst till) alla varningar eller inkorgsobjekt som väntar på dig
 * Användarikonen tillsammans med en länk till din profilhantering
 
-### Toolbar {#toolbar}
+### Verktygsfält {#toolbar}
 
 Verktygsfältet är sammanhangsberoende för din plats och de ytverktyg som är relevanta för att styra vyn eller resurserna på sidan nedan. Verktygsfältet är produktspecifikt, men det finns vissa gemensamma element.
 
@@ -65,7 +65,7 @@ Den vänstra listen kan öppnas/döljas efter behov för att visa:
 * **Referenser**
 * **Filter**
 
-Standardvärdet är Endast **innehåll** (dold räl).
+Standardvärdet är **Endast innehåll** (dolda skenor).
 
 ![Vänster linje](assets/ui-left-rail.png)
 
@@ -81,7 +81,7 @@ Innehållsramen finns till höger i fönstret, under verktygsfältet.
 
 ![Innehållsram](assets/ui-content-frame.png)
 
-### Redigeringsram {#editor-frame}
+### Redigeringsbildruta {#editor-frame}
 
 Redigeringsramen aktiverar redigeringsfunktionerna.
 
@@ -94,9 +94,9 @@ Redigeringsramen är en behållare (abstrakt) för alla sidredigeringselement. D
 
 ![Redigeringsram](assets/ui-editor-frame.png)
 
-### Side Panel {#side-panel}
+### Panelen Sida {#side-panel}
 
-Det här innehåller tre standardflikar. På flikarna **Resurser** och **Komponenter** kan du markera sådana element och dra dem från panelen och släppa dem på sidan. På fliken **Innehållsträd** kan du inspektera innehållshierarkin på sidan.
+Det här innehåller tre standardflikar. På flikarna **Resurser** och **Komponenter** kan du markera sådana element och dra dem från panelen och släppa dem på sidan. På fliken **Innehållsträd** kan du inspektera hierarkin med innehåll på sidan.
 
 Sidpanelen är dold som standard. När det här alternativet är markerat visas det antingen på vänster sida, eller glida över för att täcka hela fönstret när fönsterstorleken är under bredden 1024px. till exempel på en mobil enhet.
 
@@ -108,7 +108,7 @@ På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera e
 
 ![Fliken Resurser](assets/ui-side-panel-assets.png)
 
-### Sida - Resursgrupper {#side-panel-asset-groups}
+### Sidopanelen - resursgrupper {#side-panel-asset-groups}
 
 På fliken Resurser finns det en listruta där du kan välja specifika resursgrupper.
 
@@ -120,7 +120,7 @@ På fliken Komponenter kan du välja bland komponenterna. Du kan också filtrera
 
 ![Fliken Komponenter](assets/ui-side-panel-components.png)
 
-### Panelen Sida - Innehållsträd {#side-panel-content-tree}
+### Sida-panel - innehållsträd {#side-panel-content-tree}
 
 På fliken Innehållsträd kan du visa hierarkin med innehåll på sidan. Om du klickar på en post på fliken flyttas den till och markerar objektet på sidan i redigeraren.
 
@@ -169,4 +169,4 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 <!--For more details about the concepts around the touch-enabled UI, continue to the article [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).-->
 
-Mer teknisk information finns i [JS-dokumentationen som angetts](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.
+Mer teknisk information finns i [JS-dokumentationsuppsättningen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.
