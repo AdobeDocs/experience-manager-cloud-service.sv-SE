@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 89f7e60205efc275bbeb97246ccc3add28810cfa
+source-git-commit: 8ee5f7c0c5690dd21291261e5e2ad01599c0c174
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Expe
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.11.0 är 1 december 2020.
+Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.11.0 är 2 december 2020.
 Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 ## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
@@ -25,11 +25,9 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 * **[Startar Hierarkihantering](/help/sites-cloud/authoring/launches/managing-pages.md)  och  [framtida tidsförvrängning](/help/sites-cloud/authoring/launches/preview.md)**: Nytt gränssnitt för att lägga till/ta bort sidor vid en start, och när du bläddrar på en webbplats med Timewarp visas det framtida tillståndet i Launches.
 
-* **[Modeller och redigerare för utökat innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)**: Nya alternativ för indatavalidering för olika datatyper, förbättrad datatyp för uppräkning med nya formulärvisualiseringar och modellnamnet för innehållsfragment visas och är sökbart i resursgränssnittet.
+* **Sortera de Live Copy-sidor som är tillgängliga för utrullning**: Nytt alternativ för att sortera de Live Copy-sidor som är tillgängliga för utrullning med hjälp av egenskaperna  [!UICONTROL Name],  [!UICONTROL Last modified date]och  [!UICONTROL Last rollout date] . [!UICONTROL Last rollout date] för en sida är en ny egenskap.
 
-* **Gör en plats installerbar**: Nya webbplatsegenskaper för att konfigurera Progressive Web Application-funktioner (PWA), som gör att en webbplats kan installeras och vara valfri offline. Funktionerna kräver kärnkomponenter.
-
-* **[Core Components 2.12.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)**: AEM som en Cloud Service har nytta av automatiska uppdateringar av den senaste utgåvan av Core Components. Version 2.12.0 innehåller de senaste förbättringarna från användargruppen, som [en ny formulärhanterare för POSTER;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-container.html#post-data) möjlighet att inkludera anpassade CSS-, Javascript- och metadata [taggar via kontextmedveten konfiguration;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html#context-aware-loading) och ett [`DataLayerBuilder`](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html#enabling-custom-components)-verktyg för att förenkla integreringen av Adobe datalager i anpassade komponenter. Se [listan över ändringar](https://github.com/adobe/aem-core-wcm-components/releases/tag/core.wcm.components.reactor-2.12.0) i 2.12.0.
+<!--- * **[Extended Content Fragment Models & Editor](/help/assets/content-fragments/content-fragments-models.md)**: New options for input validation on various data types, improved Enumeration data type with new form visualizations, and the Content Fragment model name is displayed and searchable in Assets UI. --->
 
 ## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
 
@@ -40,11 +38,11 @@ Det här verktyget är avsett för systemadministratörer, konsulter eller imple
 
    ![Konfiguration av bulkimporterare](/help/assets/assets/bulk-import-config-low-res.png)
 
-* Användarna kan sortera de digitala resurserna i kort- och kolumnvyerna.
+* Användarna kan nu sortera de digitala resurserna i kort- och kolumnvyerna.
 
    ![sortera resurser](/help/assets/assets/asset-sort-options.png)
 
-* Följande förbättringar har gjorts för hjälpmedel i [Experience Manager Assets] i den här versionen. Mer information finns i [tillgänglighetsfunktioner i [!DNL Assets]](/help/assets/accessibility.md).
+* Följande förbättringar har gjorts för tillgänglighet i [!DNL Experience Manager Assets] i den här versionen. Mer information finns i [tillgänglighetsfunktioner i [!DNL Assets]](/help/assets/accessibility.md).
 
    * När du navigerar på tidslinjen med ett tangentbord kan Esc-tangenten komprimera alternativet Visa alla utan att förlora fokus.
    * När du navigerar med tangentbordets tabbtangent behåller taggfältet fokus när du har tagit bort den sista taggen från de tillagda taggarna.
@@ -83,8 +81,6 @@ Det här verktyget är avsett för systemadministratörer, konsulter eller imple
 
 * GraphQL-klientkonfigurationen lästes inte korrekt när konfigurationen inte anges direkt i Sling CA-konfigurationen, men i en av de överordnade konfigurationerna. Den här har åtgärdats.
 
-
-
 ## Cloud Manager {#cloud-manager}
 
 ### Releasedatum {#release-date-cm}
@@ -111,13 +107,17 @@ Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/mana
 
 * Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Förekomster av arbetsflöden för sökning](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/administering/workflows-administering.html).
 
-### Användarsynkronisering {#user-sync}
+### Synkronisering av användardata på publiceringsnivå {#user-sync}
 
 * Användardata, inklusive profilattribut och gruppmedlemskap, kan sparas på publiceringsnivån. Läs mer om den här funktionen i [dokumentationen för registrering, inloggning och användarprofil](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md).
 
-### Analysatorer {#analyzers}
+### SDK Build Analyzers {#analyzers}
 
 AEM som Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i ett maven-projekt, inklusive saknade beroenden. Det ger utvecklare möjlighet att upptäcka problem under den lokala utvecklingen, långt före distributionen till molnmiljöer med Cloud Manager. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=en#developing) och [här](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#building-for-the-sdk).
+
+### Övriga {#others-foundation}
+
+Ny [&quot;httpd -t&quot;-syntax](/help/implementing/dispatcher/disp-overview.md#local-validation)-kontroll för att se om det finns en cache- och dispatcherkonfiguration som körs under Cloud Manager-bygget, som också kan köras med AEM som en Cloud Services-SDK:s Dispatcher-verktyg.
 
 ## Content Transfer Tool {#content-transfer-tool}
 
