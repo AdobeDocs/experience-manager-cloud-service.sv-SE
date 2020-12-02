@@ -4,9 +4,9 @@ description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Mana
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: eb30e4f948c748c0c0e39f32c8870aff116a7a86
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1905'
 ht-degree: 4%
 
 ---
@@ -144,7 +144,7 @@ Med Enterprise Manager Assets kan du redigera metadata för flera resurser samti
 
 ## Anpassade metadata med bearbetningsprofil {#metadata-compute-service}
 
-Resurser som Cloud Service kan generera anpassade metadata för en resurs med molnbaserade tjänster. Konfigurera en bearbetningsprofil för att generera anpassade metadata. Se [hur du använder bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
+Resurser som [!DNL Cloud Service] kan generera anpassade metadata för en resurs med molnbaserade tjänster. Konfigurera en bearbetningsprofil för att generera anpassade metadata. Se [hur du använder bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
 
 ![Metadataåtergivning i bearbetningsprofil](assets/processing-profile-metadata.png)
 
