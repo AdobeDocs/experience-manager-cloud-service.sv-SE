@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Ta bort ett SSL-certifikat {#deleting-an-ssl-certificate}
+# Tar bort ett SSL-certifikat {#deleting-an-ssl-certificate}
 
 >[!IMPORTANT]
 >Att ta bort certifikat från Cloud Manager är en permanent åtgärd som inte kan ångras. Det bästa sättet är att spara alla nödvändiga SSL-filer lokalt innan de tas bort i användargränssnittet i Cloud Manager.
@@ -22,6 +22,6 @@ Följ stegen nedan för att ta bort ett SSL-certifikat:
 
 1. Navigera till SSL-certifikatskärmen från sidan Miljöer
 1. Identifiera raden där det SSL-certifikatnamn du vill ta bort finns med i listan
-1. Markera **...** menyn längst till höger på raden
-1. Markera **Ta bort**
+1. Välj **..**-menyn längst till höger på raden
+1. Välj **Ta bort**
 1. Bekräfta inlämningen
