@@ -20,7 +20,7 @@ Den finns under **Verktyg ->** **Allmänt ->** **Komponenter**. Eftersom det int
 
 >[!NOTE]
 >
->Komponentkonsolen visar alla komponenter i systemet. I [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) visas komponenter som är tillgängliga för författare och alla komponentgrupper som börjar med en punkt ( `.`) döljs.
+>Komponentkonsolen visar alla komponenter i systemet. [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) visar komponenter som är tillgängliga för författare och döljer komponentgrupper som börjar med en punkt ( `.`).
 
 ## Sökning {#search-field}
 
@@ -41,7 +41,7 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
    * Visa komponentens allmänna egenskaper.
       * Visa hur ikonen eller förkortningen har definierats för komponenten. <!-- View how the [icon or abbreviation has been defined](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) for the component.-->
       * Om du klickar på ikonens källa kommer du till den komponenten.
-   * Visa komponentens **resurstyp** och **resurssupertyp** (om den är definierad).
+   * Visa **Resurstyp** och **Resurssupertyp** (om den är definierad) för komponenten.
       * Om du klickar på Resurssupertypen kommer du till den komponenten.
 
    >[!NOTE]
@@ -62,6 +62,6 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
 
 * **Dokumentation**
 
-   Om utvecklaren har tillhandahållit dokumentation för komponenten visas den på fliken **Dokumentation** . Om det inte finns någon tillgänglig dokumentation visas inte fliken **Dokumentation** . <!-- If the developer has provided [documentation for the component](/help/sites-developing/developing-components.md#documenting-your-component), it will appear on the **Documentation** tab. If there is no documentation available, the **Documentation** tab will not be shown.-->
+   Om utvecklaren har tillhandahållit dokumentation för komponenten visas den på fliken **Dokumentation**. Om det inte finns någon tillgänglig dokumentation visas inte fliken **Dokumentation**. <!-- If the developer has provided [documentation for the component](/help/sites-developing/developing-components.md#documenting-your-component), it will appear on the **Documentation** tab. If there is no documentation available, the **Documentation** tab will not be shown.-->
 
    ![Komponentdokumentation](/help/sites-cloud/authoring/assets/components-console-documentation.png)
