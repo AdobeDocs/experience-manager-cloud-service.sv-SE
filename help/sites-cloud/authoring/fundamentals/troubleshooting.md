@@ -10,11 +10,11 @@ ht-degree: 13%
 ---
 
 
-# Felsöka AEM vid redigering {#troubleshooting-aem-when-authoring}
+# Felsökning AEM vid redigering av {#troubleshooting-aem-when-authoring}
 
 I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
 
-## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
+## Den gamla sidversionen finns fortfarande på den publicerade webbplatsen {#old-page-version-still-on-published-site}
 
 * **Problem**:
    * Du har ändrat en sida och publicerat sidan på den publicerade webbplatsen, men den *gamla* versionen av sidan visas fortfarande på den publicerade webbplatsen.
