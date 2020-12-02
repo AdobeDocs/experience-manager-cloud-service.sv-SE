@@ -18,27 +18,27 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Lägsta systemkrav för Content Transfer Tool är AEM 6.3 + och JAVA 8. Om du har en tidigare AEM-version måste du uppgradera din innehållsdatabas till AEM 6.5 för att kunna använda Content Transfer Tool.
 
-* Java måste konfigureras i AEM så att kommandot kan köras av den användare som startar AEM. `java`
+* Java måste konfigureras i AEM så att kommandot `java` kan köras av den användare som startar AEM.
 
 * Verktyget Innehållsöverföring kan användas med följande typer av datalager: File Data Store, S3 Data Store, Shared S3 Data Store och Azure Blob Store Data Store.
 
-* Om du använder en *sandlådemiljö* måste du se till att din miljö är aktuell och uppgraderad till den senaste versionen. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
+* Om du använder en *sandlådemiljö* kontrollerar du att miljön är aktuell och uppgraderad till den senaste versionen. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
 * Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra den lokala gruppen AEM administratörer i den Cloud Service du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
 
 * För närvarande är standardstorleken för MongoDB för en AEM som författarinstans för Cloud Service 32 GB. Vi rekommenderar att du skickar en supportanmälan för att öka storleken på MongoDB för segmentbutiker som är större än 20 GB.
 
-* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. Extraheringsprocessen ** kopierar hela `/home` filen till migreringsuppsättningen och *Ingtionsprocessen* kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna.
+* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. Processen *Extrahering* kopierar hela `/home` till migreringsuppsättningen och processen *Ing* kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna.
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 
-* När du har slutfört *extraheringsfasen* av innehållsöverföringsprocessen och innan du startar *Inmatningsfasen* för att importera innehåll till din AEM som en Cloud Service *Stage* eller *Production* -instanser, måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Ingestion* ** så att Adobe kan säkerställa att inga avbrott inträffar underInginträngningsprocessen¥. Du måste logga supportbiljetten en vecka före ditt planerade *intag* . När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg.
+* När du har slutfört *extraheringsfasen* av innehållsöverföringsprocessen och innan du startar *överföringsfasen* för att importera innehåll till din AEM som en Cloud Service *Stage* eller *Produktion*-instanser måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Input överbelastning* så att Adobe kan säkerställa att inga avbrott inträffar under *Inmatningsprocessen*. Du måste logga supportbiljetten en vecka före ditt planerade *intag*-datum. När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg.
    * Logga en supportanmälan med följande information:
-      * Exakt datum och beräknad tid (med din tidszon) när du planerar att starta *intag* -fasen.
+      * Exakt datum och beräknad tid (med din tidszon) när du tänker starta fasen *Inmatning*.
       * Miljötyp (Stage eller Production) som du vill importera data till.
       * Program-ID.
 
-* Författarens *inmatningsfas* kommer att skalas ned för hela författardriftsättningen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör *Ingessionsfasen* .
+* Författarens *inmatningsfas* kommer att skalas ned för hela författardriftsättningen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör fasen *Inmatning*.
 
 
 ## Tillgänglighet {#availability}
@@ -84,7 +84,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    1. **Access Token**: Ange åtkomsttoken.
 
       >[!NOTE]
-      >Du kan hämta åtkomsttoken med knappen **Öppna åtkomsttoken** . Du måste kontrollera att du tillhör gruppen AEM administratörer i målinstansen av Cloud Service.
+      >Du kan hämta åtkomsttoken med knappen **Öppna åtkomsttoken**. Du måste kontrollera att du tillhör gruppen AEM administratörer i målinstansen av Cloud Service.
 
    1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
 
@@ -120,7 +120,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 
-1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Extract** för att påbörja extraheringen. The **Migration Set extraction** dialog box displays and click on **Extract** to start the extraction phase.
+1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Extract** för att påbörja extraheringen. Dialogrutan **Extrahering av migreringsuppsättning** visas och klicka på **Extract** för att starta extraheringsfasen.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/06-content-extraction.png)
 
@@ -128,7 +128,7 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
    >Du kan skriva över mellanlagringsbehållaren under extraheringsfasen.
 
 
-1. Fältet **EXTRACTION** visar nu statusen **KÖRNING** för att ange att extraheringen pågår.
+1. Fältet **EXTRACTION** visar nu statusen **RUNNING** för att ange att extraheringen pågår.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/07-extraction-job-running.png)
 
@@ -161,11 +161,11 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 
-1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen. Dialogrutan **Migration Set ingestion** visas. Click on **Ingest** to start the ingestion phase. I demonstrationssyfte är alternativet **Ingest content to Author instance** inaktiverat. Det går att importera innehåll till Author och Publish samtidigt.
+1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen. Dialogrutan **Migration Set ingestion** visas. Klicka på **Ingest** för att starta intagningsfasen. I demonstrationssyfte är alternativet **Ingest content to Author instance** inaktiverat. Det går att importera innehåll till Author och Publish samtidigt.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/12-content-ingestion.png)
 
-1. När åtkomsten är klar uppdateras statusen i fältet **PUBLISH INGESTION** till **FINISHED**.
+1. När importen är klar uppdateras statusen i **PUBLISH INGESTION**-fältet till **FINISHED**.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/15-ingestion-complete.png)
 
@@ -183,7 +183,7 @@ När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatnin
 
    >[!IMPORTANT]
    >
-   >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag** , för att förhindra att befintligt innehåll tas bort från den tidigare inmatningsaktiviteten.
+   >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag**, för att förhindra att befintligt innehåll tas bort från den tidigare intagsaktiviteten.
    >
    >![bild](/help/move-to-cloud-service/content-transfer-tool/assets/16-topup-ingestion.png)
 
