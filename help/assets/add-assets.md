@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 translation-type: tm+mt
-source-git-commit: 7e8c794752073da0b4815c97dc53282989cd3fb5
+source-git-commit: a5c9ec14af4241734fb6f6c88d5fc982e52924ce
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -178,10 +178,6 @@ Så här konfigurerar du verktyget:
    * [!UICONTROL Stop]: Avsluta en aktiv konfiguration.
    * [!UICONTROL Job Status]: Visa konfigurationsstatus när den används i ett pågående importjobb eller används för ett slutfört jobb.
    * [!UICONTROL View Assets]: Visa målmappen om den finns.
-
->[!NOTE]
->
->Massöverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till [!DNL Experience Manager] kräver noggrann planering, övervägande och val av verktyg. Se [distributionsguiden](/help/implementing/deploying/overview.md) för vägledning om strategier för innehållsmigrering.
 
 ## Överför resurser med skrivbordsklienter {#upload-assets-desktop-clients}
 
