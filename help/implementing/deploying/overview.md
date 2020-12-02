@@ -16,16 +16,16 @@ ht-degree: 1%
 
 De grundläggande funktionerna för kodutveckling liknar i AEM Cloud Service jämfört med lösningarna AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till AEM som en Cloud Service-miljö. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för Managed Services, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM som en Cloud Service-miljö.
 
-Uppdateringen av den [AEM versionen](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse jämfört med att skicka [anpassad kod](#customer-releases). Om den visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som kommer att distribueras högst upp. AEM versionsuppdateringar som görs därefter, som kommer att vara vanliga och automatiskt tillämpas. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
+Uppdateringen av [AEM version](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse från att föra över [anpassad kod](#customer-releases). Om den visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som kommer att distribueras högst upp. AEM versionsuppdateringar som görs därefter, som kommer att vara vanliga och automatiskt tillämpas. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
 
 I resten av det här dokumentet beskrivs hur utvecklare ska anpassa sina rutiner så att de kan arbeta med både AEM som en Cloud Services versionsuppdateringar och kunduppdateringar.
 
 >[!NOTE]
->Vi rekommenderar att kunder med befintliga kodbaser genomgår den strukturering av databasen som beskrivs i [AEM](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
+>Vi rekommenderar att kunder med befintliga kodbaser genomgår den databasomstrukturering som beskrivs i [AEM dokumentation](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
 
 ## Kundreleaser {#customer-releases}
 
-### Kodning mot rätt AEM {#coding-against-the-right-aem-version}
+### Kodning mot rätt AEM version {#coding-against-the-right-aem-version}
 
 För tidigare AEM ändrades den senaste AEM versionen sällan (ungefär en gång om året med kvartalsvisa servicepaket) och kunderna uppdaterar produktionsinstanserna till den senaste snabbstarten på egen tid med referens till API Jar. AEM som en Cloud Service uppdateras automatiskt till den senaste versionen av AEM oftare, så att anpassad kod för interna releaser byggs mot den senaste AEM versionen.
 
@@ -41,13 +41,13 @@ I följande video visas en översikt på hög nivå över hur du distribuerar ko
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=9)
 
 >[!NOTE]
->Vi rekommenderar att kunder med befintliga kodbaser genomgår den strukturering av databasen som beskrivs i [AEM](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
+>Vi rekommenderar att kunder med befintliga kodbaser genomgår den databasomstrukturering som beskrivs i [AEM dokumentation](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
 
 ## Distribuera innehållspaket via Cloud Manager och Package Manager {#deploying-content-packages-via-cloud-manager-and-package-manager}
 
 ### Distributioner via Cloud Manager {#deployments-via-cloud-manager}
 
-Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, vilket är hur ett AEM som Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i Package Manager i Cloud-miljöer kommer namnet därför att innehålla &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren finns [här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
+Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, vilket är hur ett AEM som Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i Package Manager i Cloud-miljöer kommer namnet därför att innehålla &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren finns här[](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
 
 Innehållspaket som skrivits för AEM som ett Cloud Service-program måste ha en ren separation mellan oföränderligt och muterbart innehåll, och Cloud Manager kommer att framtvinga det genom att misslyckas med bygget, och ett meddelande som:
 
@@ -70,7 +70,7 @@ Som nämnts ovan bör OSGI-konfigurationen implementeras för källkontroll i st
 * Göra nödvändiga ändringar i utvecklarens lokala AEM med AEM webbkonsols konfigurationshanterare och exportera sedan resultaten till det AEM projektet i det lokala filsystemet
 * Om du skapar OSGI-konfigurationen manuellt i det AEM projektet i det lokala filsystemet refererar AEM konsolens konfigurationshanterare till egenskapsnamnen.
 
-Läs mer om OSGI-konfigurationen på [Configuring OSGi for AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md).
+Läs mer om OSGI-konfiguration på [Konfigurera OSGi för AEM som en Cloud Service](/help/implementing/deploying/configuring-osgi.md).
 
 ## Muterbart innehåll {#mutable-content}
 
@@ -78,7 +78,7 @@ I vissa fall kan det vara användbart att förbereda innehållsändringar i käl
 
 Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
 
-### Innehållspaket som kan ändras {#mutable-content-packages}
+### Ändringsbara innehållspaket {#mutable-content-packages}
 
 Innehåll som mappsökvägshierarkier, tjänstanvändare och åtkomstkontroller (ACL:er) är vanligtvis implementerade i ett maven-arkivtypsbaserat AEM. Teknikerna är bland annat att exportera från AEM eller skriva direkt som XML. Under bygg- och distributionsprocessen paketerar Cloud Manager det resulterande innehållspaketet som kan ändras. Det muterbara innehållet installeras vid tre olika tillfällen under distributionsfasen i pipeline:
 
@@ -100,7 +100,7 @@ Efter övergång till en ny version av programmet:
    * Kontextmedveten konfiguration (vad som helst under `/conf`) (lägg till, ändra, ta bort)
    * Skript (paket kan utlösa Install hooks i olika faser av installationsprocessen för paketinstallationen
 
-Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Information finns i [AEM dokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html) om rekommenderad omstrukturering av projekt.
+Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Information finns i [AEM dokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html) om rekommenderad projektomstrukturering.
 
 >[!NOTE]
 >Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via Package Manager.
@@ -109,11 +109,11 @@ Det finns heller ingen mekanism för att återställa ändringar i det ändrings
 
 Alla inkluderade tredjepartspaket måste valideras som AEM som en Cloud Service Service-kompatibel, annars leder inkludering till ett distributionsfel.
 
-Som nämnts ovan bör kunder med befintliga kodbaser uppfylla kraven i den omstruktureringsplan för databasen som beskrivs i [AEM dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/repository-restructuring.html).
+Som nämnts ovan bör kunder med befintliga kodbaser följa den struktureringsövning för databasen som beskrivs i [AEM dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/repository-restructuring.html).
 
-## Repoinit {#repoinit}
+## Peka {#repoinit}
 
-I följande fall är det att föredra att manuellt koda uttryckliga innehållsskapande `repoinit` -satser i OSGI-fabrikskonfigurationer:
+I följande fall är det att föredra att använda metoden att manuellt koda uttryckliga innehållsskapande `repoinit`-satser i OSGI-fabrikskonfigurationer:
 
 * Skapa/ta bort/inaktivera tjänstanvändare
 * Skapa/ta bort grupper
@@ -139,15 +139,15 @@ När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende 
 
 Följ nedanstående procedur för att skapa repoinit-satser:
 
-1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp i projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
-1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentationen](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Exempel: en explicit generering av `/content` before `/content/myfolder`, before `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
+1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp i projektet. Använd ett beskrivande namn för konfigurationen, t.ex. **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
+1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Till exempel en explicit skapelse av `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För åtkomstkontrollistor som anges på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob`-begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
 1. Validera på den lokala utvecklingsmiljön vid körning.
 
 <!-- last statement in step 2 to be clarified with Brian -->
 
 >[!WARNING]
 >
->För åtkomstkontrollistor som definierats för noder under `/apps` eller `/libs` repoinit startas körningen i en tom databas. Paketen installeras efter ompekning, så programsatser kan inte förlita sig på något som definierats i paketen, utan måste definiera villkoren som de överordnade strukturerna under.
+>För åtkomstkontrollistor som definierats för noder under `/apps` eller `/libs` startas ompekningskörningen på en tom databas. Paketen installeras efter ompekning, så programsatser kan inte förlita sig på något som definierats i paketen, utan måste definiera villkoren som de överordnade strukturerna under.
 
 >[!TIP]
 >
@@ -159,15 +159,15 @@ Mer information om repoinit finns i [Sling-dokumentationen](https://sling.apache
 
 above appears to be internal, to confirm with Brian -->
 
-### Package Manager &quot;one offs&quot; för paket med olika innehåll {#package-manager-oneoffs-for-mutable-content-packages}
+### Pakethanteraren &quot;one offs&quot; för paket med ändringsbart innehåll {#package-manager-oneoffs-for-mutable-content-packages}
 
 I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. I dessa scenarier kan Package Manager användas i AEM som en Cloud Service-miljö.
 
-Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt innehåll) installeras endast det muterbara innehållet.
+Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (främst `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt innehåll) installeras endast det muterbara innehållet.
 
-Alla innehållspaket som installeras via Cloud Manager (både ändringsbart och oföränderligt) visas i ett låst läge i AEM användargränssnitt. Dessa paket kan inte installeras om, byggas om eller laddas ned, och visas med suffixet **&quot;cp2fm&quot;** , vilket anger att installationen hanterades av Cloud Manager.
+Alla innehållspaket som installeras via Cloud Manager (både ändringsbart och oföränderligt) visas i ett låst läge i AEM användargränssnitt. Dessa paket kan inte installeras om, byggas om eller laddas ned, och visas med suffixet **&quot;cp2fm&quot;**, vilket anger att installationen hanterades av Cloud Manager.
 
-### Inklusive paket från tredje part {#including-third-party}
+### Inkluderar tredjepartspaket {#including-third-party}
 
 Det är vanligt att kunder inkluderar färdiga paket från tredjepartskällor som programvaruleverantörer som Adobe översättning partners. Rekommendationen är att lagra dessa paket i en fjärrdatabas och referera till dem i `pom.xml`. Detta är möjligt för offentliga databaser och även för privata databaser med lösenordsskydd, vilket beskrivs i [lösenordsskyddade maven-databaser](/help/onboarding/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repositories).
 
@@ -221,7 +221,7 @@ Följande XML-kodfragment för Maven POM visar hur paket från tredje part kan b
 ...
 ```
 
-## Hur rullande distributioner fungerar {#how-rolling-deployments-work}
+## Så här fungerar rullande distributioner {#how-rolling-deployments-work}
 
 Precis som AEM uppdateringar distribueras kundreleaser med hjälp av en strategi för rullande driftsättning för att eliminera driftavbrott i utvecklarklustret under rätt omständigheter. Den allmänna händelsesekvensen beskrivs nedan, där **Blue** är den gamla versionen av kundkoden och **Green** är den nya versionen. Både blått och grönt körs i samma version AEM koden.
 
@@ -245,7 +245,7 @@ För närvarande fungerar inte AEM som Cloud Service med indexhanteringsverktyg 
 
 ## Replikering {#replication}
 
-Publiceringsmekanismen är bakåtkompatibel med Java-API:erna för [AEM-replikering](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.day.cq.replication.Replicator.html).
+Publikationsmekanismen är bakåtkompatibel med Java-API:erna [AEM Replication.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.day.cq.replication.Replicator.html)
 
 För att kunna utveckla och testa med replikering med molnklart AEM snabbstart måste de klassiska replikeringsfunktionerna användas med en författar-/publiceringskonfiguration. Om användargränssnittets startpunkt på AEM Author har tagits bort för molnet går användarna till `http://localhost:4502/etc/replication` för konfiguration.
 
@@ -267,14 +267,14 @@ Om ändringar görs i index är det viktigt att den blå versionen fortsätter a
 
 Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att en återställning till den blå versionen krävs. Det är klokt att se till att den blå koden är kompatibel med alla nya strukturer som skapas av den gröna versionen eftersom de nya strukturerna (allt innehåll som kan ändras) inte återställs. Om den gamla koden inte är kompatibel måste korrigeringar tillämpas i efterföljande kundreleaser.
 
-## Runmodes {#runmodes}
+## Körningslägen {#runmodes}
 
-I befintliga AEM kan kunderna köra instanser med godtyckliga körningslägen och använda OSGI-konfiguration eller installera OSGI-paket för dessa specifika instanser. Körningslägen som definieras omfattar vanligtvis *tjänsten* (författare och publicering) och miljön (dev, stage, prod).
+I befintliga AEM kan kunderna köra instanser med godtyckliga körningslägen och använda OSGI-konfiguration eller installera OSGI-paket för dessa specifika instanser. Körningslägen som är definierade omfattar vanligtvis *tjänsten* (författare och publicering) och miljön (dev, stage, prod).
 
 AEM som Cloud Service är däremot mer övertygande om vilka körlägen som finns och hur OSGI-paket och OSGI-konfigurationer kan mappas till dem:
 
-* OSGI-konfigurationens körningslägen måste referera till dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa måste användas i just den ordningen (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` -metoden, som inte längre inkluderar `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM som en Cloud Service](/help/implementing/deploying/configuring-osgi.md).
-* Körningslägena för OSGI-paket är begränsade till tjänsten (författare, publicera). OSGI-paket per körning ska installeras i innehållspaketet under antingen `install/author` eller `install/publish`.
+* OSGI-konfigurationens körningslägen måste referera till dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, men dessa måste användas i den här speciella ordningen (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda metoden `getRunModes`, som inte längre inkluderar `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM som en Cloud Service](/help/implementing/deploying/configuring-osgi.md).
+* Körningslägena för OSGI-paket är begränsade till tjänsten (författare, publicera). OSGI-paket för varje körning ska installeras i innehållspaketet under antingen `install/author` eller `install/publish`.
 
 Precis som de befintliga AEM finns det inget sätt att använda körningslägen för att installera enbart innehåll för specifika miljöer eller tjänster. Om man ville skapa en egen utvecklarmiljö med data eller HTML som inte finns på scenen eller i produktionen kunde man använda pakethanteraren.
 
@@ -288,7 +288,7 @@ De runmode-konfigurationer som stöds är:
 * **config.publish** (*Gäller AEM Publish-tjänsten*)
 * **config.publish.dev** (*Gäller AEM Dev Publish-tjänsten*)
 * **config.publish.stage** (*Gäller publiceringstjänsten* AEM mellanlagring)
-* **config.publish.prod** (*Gäller AEM Production Publish-tjänst*)
+* **config.publish.prod** (*Gäller för AEM Production Publish-tjänst*)
 * **config.dev** (*Gäller för AEM Dev-tjänster)
 * **config.stage** (*Gäller för AEM mellanlagringstjänster)
 * **config.prod** (*Gäller AEM produktionstjänster)
@@ -301,6 +301,6 @@ Vid lokal utveckling kan en startparameter för körningsläge skickas in för a
 
 Developers want to ensure that their custom code is performing well. For Cloud environments, performance reports can be viewed on Cloud Manager. -->
 
-## Konfiguration av underhållsaktiviteter i källkontroll {#maintenance-tasks-configuration-in-source-control}
+## Konfiguration av underhållsaktiviteter i källkontrollen {#maintenance-tasks-configuration-in-source-control}
 
-Konfigurationer av underhållsaktiviteter måste sparas i källkontrollen eftersom **Verktyg > Åtgärder** inte längre är tillgängliga i molnmiljöer. Fördelen med detta är att man ser till att ändringarna bevaras avsiktligt i stället för att tillämpas reaktivt och kanske glöms bort. Mer information finns i artikeln [om](/help/operations/maintenance.md) underhållsaktiviteten.
+Konfigurationer av underhållsaktiviteter måste sparas i källkontrollen eftersom skärmen **Verktyg > Åtgärder** inte längre är tillgänglig i molnmiljöer. Fördelen med detta är att man ser till att ändringarna bevaras avsiktligt i stället för att tillämpas reaktivt och kanske glöms bort. Mer information finns i [underhållsaktivitetsartikeln](/help/operations/maintenance.md).
