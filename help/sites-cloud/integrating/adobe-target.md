@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Marketing Cloud kan [Adobe Target](http://www.adobe.com/solutions/testing-targeting/testandtarget.html) öka innehållets relevans genom målinriktning och mätning i alla kanaler. Adobe Target används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser. AEM som Cloud Service har antagit målarbetsflödet som används i Adobe Target Standard. Om du använder Target kommer du att känna till målredigeringsmiljön i AEM som en Cloud Service.
+Som en del av Adobe Marketing Cloud kan du med [Adobe Target](http://www.adobe.com/solutions/testing-targeting/testandtarget.html) öka innehållets relevans genom att målinrikta och mäta i alla kanaler. Adobe Target används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser. AEM som Cloud Service har antagit målarbetsflödet som används i Adobe Target Standard. Om du använder Target kommer du att känna till målredigeringsmiljön i AEM som en Cloud Service.
 
 Integrera era AEM med Adobe Target för att personalisera innehåll på era sidor:
 
@@ -28,7 +28,7 @@ Integrera era AEM med Adobe Target för att personalisera innehåll på era sido
 
 Utför följande uppgifter för att integrera med Target:
 
-* [Utför nödvändiga uppgifter](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html): Registrera dig hos Adobe Target och konfigurera vissa aspekter av AEM författarinstans. Ditt Adobe Target-konto måste ha **minst behörigheter på** godkännarnivå. Dessutom måste du skydda aktivitetsinställningarna på publiceringsnoden så att den inte är tillgänglig för användarna.
+* [Utför nödvändiga uppgifter](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html): Registrera dig hos Adobe Target och konfigurera vissa aspekter av AEM författarinstans. Ditt Adobe Target-konto måste ha minst **godkännarbehörighet**. Dessutom måste du skydda aktivitetsinställningarna på publiceringsnoden så att den inte är tillgänglig för användarna.
 
 * Launch by Adobe är de facto-verktyget för att instrumentera en AEM webbplats med Target-funktioner (JS-bibliotek). Att integrera AEM som Cloud Service med Launch och Adobe Target går därför hand i hand (se länkarna nedan).
 
@@ -45,14 +45,14 @@ Utför följande uppgifter för att integrera med Target:
 
 >[!CAUTION]
 >
->I AEM som Cloud Service är den replikeringsagent som synkroniserar erbjudanden och aktiviteter från AEM till Adobe Target inaktiverad som standard. Kontakta supportteamet på [Adobe](https://helpx.adobe.com/contact/enterprise-support.ec.html#experience-manager) om du behöver aktivera replikeringsagenten igen.
+>I AEM som Cloud Service är den replikeringsagent som synkroniserar erbjudanden och aktiviteter från AEM till Adobe Target inaktiverad som standard. Kontakta [Adobe Support](https://helpx.adobe.com/contact/enterprise-support.ec.html#experience-manager)-teamet om du behöver aktivera replikeringsagenten igen.
 
 >[!NOTE]
 >
 >Om du använder Target med en anpassad proxykonfiguration måste du konfigurera både HTTP-klientproxykonfigurationer eftersom vissa funktioner i AEM använder 3.x-API:erna och andra 4.x-API:er:
 >
->* 3.x är konfigurerat med [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
->* 4.x är konfigurerat med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>* 3.x har konfigurerats med [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>* 4.x har konfigurerats med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 
 >
 
@@ -60,11 +60,11 @@ Utför följande uppgifter för att integrera med Target:
 
 >[!CAUTION]
 >
->Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** i publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
+>Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 >
->Mer information finns i [Förutsättningar för att integrera med Adobe Target](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html#securing-the-activity-settings-node) .
+>Mer information finns i [Förutsättningar för integrering med Adobe Target](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html#securing-the-activity-settings-node).
 
-När integreringen är klar kan du [skapa riktat innehåll](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/content-targeting-touch.html) som skickar besöksdata till Adobe Target. Observera att sidkomponenter kräver specifik kod för att aktivera målinriktning av innehåll. (Se [Utveckla för riktat innehåll](https://docs.adobe.com/content/help/en/experience-manager-65/developing/personlization/target.html).
+När integreringen är klar kan du [redigera riktat innehåll](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/content-targeting-touch.html) som skickar besöksdata till Adobe Target. Observera att sidkomponenter kräver specifik kod för att aktivera målinriktning av innehåll. (Se [Utveckla för riktat innehåll](https://docs.adobe.com/content/help/en/experience-manager-65/developing/personlization/target.html).
 
 >[!NOTE]
 >
