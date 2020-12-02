@@ -2,9 +2,9 @@
 title: Arbeta med Git-databaser med flera källor
 description: Arbeta med Git-databaser med flera källor - Cloud Services
 translation-type: tm+mt
-source-git-commit: 8e470ed1ea30fd2fa59617fdb6755abf9a0d74a2
+source-git-commit: 89429fcba3a1d4f5e5fe9c98ef235057b979ad60
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,9 @@ ht-degree: 0%
 
 I stället för att arbeta direkt med Cloud Managers Git-databas kan kunderna arbeta med sina egna Git-databaser eller med flera egna Git-databaser. I dessa fall bör en automatisk synkroniseringsprocess konfigureras för att säkerställa att Cloud Managers Git-databas alltid är uppdaterad. Beroende på var kundens Git-databas finns kan en GitHub-åtgärd eller en kontinuerlig integreringslösning som Jenkins användas för att konfigurera automatiseringen. Med en automatisering på plats kan varje överföring till en kundägd Git-databas automatiskt vidarebefordras till Cloud Managers Git-databas.
 
-En sådan automatisering för en enskild kundägd Git-databas är enkel, men om du konfigurerar den för flera databaser krävs en inledande konfiguration. Innehållet från flera Git-databaser måste mappas till olika kataloger i den enskilda Cloud Managers Git-databas.  Cloud Managers Git-databas måste etableras med ett rotmappsrum. En lista över de olika delprojekten i modulavsnittet Nedan är ett exempelformulär för två kundägda Git-databaser: det första projektet placeras i katalogen `project-a`, det andra projektet placeras i katalogen `project-b`.
+En sådan automatisering för en enskild kundägd Git-databas är enkel, men om du konfigurerar den för flera databaser krävs en inledande konfiguration. Innehållet från flera Git-databaser måste mappas till olika kataloger i den enskilda Cloud Managers Git-databas.  Cloud Managers Git-databas måste etableras med en rotmappsruta som listar de olika delprojekten i modulavsnittet
+
+Nedan visas ett exempel på ett badrum för två kundägda Git-databaser: det första projektet placeras i katalogen `project-a`, det andra projektet placeras i katalogen `project-b`.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -38,7 +40,9 @@ En sådan automatisering för en enskild kundägd Git-databas är enkel, men om 
 </project>
 ```
 
-Ett sådant rotrum överförs till en gren i Cloud Managers Git-databas. Därefter måste de två projekten konfigureras för att automatiskt vidarebefordra ändringar till Cloud Managers Git-databas. En GitHub-åtgärd kan till exempel utlösas av en push-åtgärd till en gren i projekt A. Åtgärden checkar ut projekt A och Cloud Manager Git-databasen och kopierar allt innehåll från projekt A till katalogen `project-a` i Cloud Managers Git-databas och utför sedan ändringen. En ändring av huvudgrenen i projekt A skickas till exempel automatiskt till huvudgrenen i Cloud Managers Git-databas. Det kan förstås finnas en mappning mellan grenar, som en push-funktion till en gren med namnet&quot;dev&quot; i projekt A skickas till en gren med namnet&quot;development&quot; i Cloud Managers Git-databas.  Liknande inställningar måste göras för projekt B.
+Ett sådant rotrum överförs till en gren i Cloud Managers Git-databas. Därefter måste de två projekten konfigureras för att automatiskt vidarebefordra ändringar till Cloud Managers Git-databas.
+
+En GitHub-åtgärd kan till exempel utlösas av en push-åtgärd till en gren i projekt A. Åtgärden checkar ut projekt A och Cloud Manager Git-databasen och kopierar allt innehåll från projekt A till katalogen `project-a` i Cloud Managers Git-databas och utför sedan ändringen. En ändring av huvudgrenen i projekt A skickas till exempel automatiskt till huvudgrenen i Cloud Managers Git-databas. Det kan förstås finnas en mappning mellan grenar, som en push-funktion till en gren med namnet&quot;dev&quot; i projekt A skickas till en gren med namnet&quot;development&quot; i Cloud Managers Git-databas. Liknande steg krävs för projekt B.
 
 Beroende på förgreningsstrategin och arbetsflödena kan synkroniseringen konfigureras för olika grenar. Om den använda Git-databasen inte innehåller något liknande koncept som GitHub-åtgärder, kan du även integrera via Jenkins (eller liknande). I det här fallet utlöser en webkrok ett Jenkins-jobb som utför arbetet.
 
@@ -51,7 +55,7 @@ Följ stegen nedan för att lägga till en ny (tredje) källa eller databas:
 
 ## Tillägg A: Exempel på GitHub-åtgärd {#sample-github-action}
 
-Detta är ett exempel på GitHub-åtgärd som utlöses av en push-åtgärd till huvudgrenen och sedan övergår till en underkatalog till Cloud Managers Git-databas. GitHub-åtgärderna måste ha två hemligheter, `MAIN_USER` och `MAIN_PASSWORD`, för att kunna ansluta till och överföra till Cloud Managers Git-databas.
+Detta är ett exempel på GitHub-åtgärd som utlöses av en push-åtgärd till huvudgrenen och sedan övergår till en underkatalog till Cloud Managers Git-databas. GitHub-åtgärderna måste innehålla två hemligheter, `MAIN_USER` och `MAIN_PASSWORD`, för att kunna ansluta och överföra till Cloud Managers Git-databas.
 
 ```java
 name: SYNC
@@ -108,7 +112,7 @@ jobs:
           git -C main push
 ```
 
-Som framgår av ovanstående är det mycket flexibelt att använda en GitHub-åtgärd. Alla mappningar mellan grenar i Git-databaserna kan utföras, liksom alla mappningar av separata Git-projekt till kataloglayouten för huvudprojektet.
+Så som visas ovan är det mycket flexibelt att använda en GitHub-åtgärd. Alla mappningar mellan grenar i Git-databaserna kan utföras liksom all mappning av de separata Git-projekten till huvudprojektets kataloglayout.
 
 >[!NOTE]
 >Skriptet ovan använder `git add` för att uppdatera databasen, vilket förutsätter att borttagningar inkluderas - beroende på standardkonfigurationen för Git måste detta ersättas med `git add --all`.
@@ -173,7 +177,7 @@ git commit -F ../commit.txt
 git push
 ```
 
-Som framgår av ovanstående är användningen av ett Jenkins-jobb mycket flexibel. Alla mappningar mellan grenar i Git-databaserna kan utföras, liksom alla mappningar av separata Git-projekt till kataloglayouten för huvudprojektet.
+Så som visas ovan är användningen av ett Jenkins-jobb mycket flexibel. Alla mappningar mellan grenar i Git-databaserna kan utföras liksom all mappning av de separata Git-projekten till huvudprojektets kataloglayout.
 
 >[!NOTE]
 >Skriptet ovan använder `git add` för att uppdatera databasen, vilket förutsätter att borttagningar inkluderas - beroende på standardkonfigurationen för Git måste detta ersättas med `git add --all`.
