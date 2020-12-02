@@ -12,11 +12,11 @@ ht-degree: 4%
 
 # Arbeta med Dynamic Media{#working-with-dynamic-media}
 
-[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av avancerat innehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av avancerat innehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic Media innehåller arbetsflödena från Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
-Det klassiska användargränssnittet gör att det inte går att arbeta med dynamiska media. Se [Arbeta med Dynamic Media,](/help/assets/dynamic-media/dynamic-media.md) som omfattar användargränssnittet med pekskärm.
+Det klassiska användargränssnittet gör att det inte går att arbeta med dynamiska media. Se [Arbeta med Dynamic Media,](/help/assets/dynamic-media/dynamic-media.md) som täcker det beröringsaktiverade användargränssnittet.
 
 <!-- 
 
