@@ -14,11 +14,11 @@ ht-degree: 12%
 
 De projektarbetsflöden som är tillgängliga från paketet innehåller följande:
 
-* **Arbetsflöde** för projektgodkännande - Med det här arbetsflödet kan du tilldela innehåll till en användare, granska och sedan godkänna.
-* **Begär start** - Ett arbetsflöde som begär start.
-* **Begär landningssida** - Den här arbetsflödet begär en landningssida.
-* **Begär e-post** - arbetsflöde för att begära e-post.
-* **DAM Skapa och översätt kopia och DAM Skapa språkkopia** - Skapar översatta binärfiler, metadata och taggar för resurser och mappar.
+* **Arbetsflöde**  för projektgodkännande - Med det här arbetsflödet kan du tilldela innehåll till en användare, granska och sedan godkänna.
+* **Begär start**  - Ett arbetsflöde som begär start.
+* **Begär landningssida**  - Den här arbetsflödet begär en landningssida.
+* **Begär e-post**  - Arbetsflöde för att begära e-post.
+* **DAM Skapa och översätt kopia och DAM Skapa språkkopia**  - Skapar översatta binärfiler, metadata och taggar för resurser och mappar.
 
 Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
@@ -35,14 +35,14 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
 >[!NOTE]
 >
->&amp;ast; Dessa arbetsflöden startas inte från **arbetsflödespanelen** i Projekt. Se Skapa språkkopior för resurser.
+>&amp;ast; Dessa arbetsflöden startas inte från **arbetsflödets**-panel i Projekt. Se Skapa språkkopior för resurser.
 <!--
 >&ast; These workflows are not started from the **Workflow** tile in Projects. See [Creating Language Copies for Assets.](/help/sites-administering/tc-manage.md)
 -->
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 
-Du startar ett arbetsflöde direkt i Projekt (förutom för DAM Create Language Copy eller DAM Create och Translate Language Copy). Information om väntande uppgifter i ett projekt finns i **aktivitetspanelen** . Meddelanden om uppgifter som behöver slutföras visas bredvid användarikonen.
+Du startar ett arbetsflöde direkt i Projekt (förutom för DAM Create Language Copy eller DAM Create och Translate Language Copy). Information om väntande uppgifter i ett projekt visas i rutan **Uppgifter**. Meddelanden om uppgifter som behöver slutföras visas bredvid användarikonen.
 
 Mer information om hur du arbetar med arbetsflöden i AEM finns i:
 
@@ -61,7 +61,7 @@ Med det här arbetsflödet kan du begära ett manuskript från en användare och
 
    ![Arbetsflödet Begär kopia](/help/sites-cloud/authoring/assets/projects-request-copy.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Uppgiften visas på **aktivitetspanelen** .
+1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
 
    ![Begärankopia har lagts till](/help/sites-cloud/authoring/assets/projects-request-copy-add.png)
 
@@ -69,16 +69,16 @@ Med det här arbetsflödet kan du begära ett manuskript från en användare och
 
 I arbetsflödet för projektgodkännande tilldelar du innehåll till en användare, granskar och godkänner sedan innehållet.
 
-1. In your Simple project, select the **`+`** sign in the **Workflows** tile and select **Project Approval Workflow**.
+1. I ditt enkla projekt väljer du **`+`**-tecknet i rutan **Arbetsflöden** och väljer **Arbetsflöde för projektgodkännande**.
 1. Ange en titel och välj vem du vill tilldela den till i grupplistan. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
    ![Begär godkännande](/help/sites-cloud/authoring/assets/projects-approval.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Uppgiften visas på **aktivitetspanelen** .
+1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
 
    ![Godkännande av begäran har lagts till](/help/sites-cloud/authoring/assets/projects-approval-add.png)
 
-## Arbetsflödet Begär start {#request-launch-workflow}
+## Begär startarbetsflöde {#request-launch-workflow}
 
 Med det här arbetsflödet kan du begära att programmet startas.
 
@@ -87,7 +87,7 @@ Med det här arbetsflödet kan du begära att programmet startas.
 
    ![Begär start](/help/sites-cloud/authoring/assets/projects-request-launch.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Arbetsflödet visas i listan **Arbetsflöden** (klicka på ovaler **..).** på panelen **Arbetsflöden** för att komma åt den här listan).
+1. Klicka på **Skapa**. Arbetsflödet startar. Arbetsflödet visas i listan **Arbetsflöden** (klicka på ellipser **..).** på panelen **Arbetsflöden** för att komma åt den här listan).
 
 ## Skapa (och översätt) språkkopieringsarbetsflöde för resurser {#create-and-translate-language-copy-workflow-for-assets}
 
