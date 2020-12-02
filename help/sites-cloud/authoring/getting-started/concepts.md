@@ -30,7 +30,7 @@ I redigeringsmiljön är AEM funktionalitet tillgänglig via AEM. För publiceri
 
 ## Författarmiljö {#author-environment}
 
-Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det kräver att författaren loggar in med ett konto som har tilldelats rätt åtkomstbehörighet.
+Författaren arbetar i **författarmiljön**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det kräver att författaren loggar in med ett konto som har tilldelats rätt åtkomstbehörighet.
 
 >[!NOTE]
 >
@@ -61,4 +61,4 @@ Mer information om att publicera och avpublicera sidor finns i dokumentet [Publi
 
 ## Dispatcher {#dispatcher}
 
-För att optimera prestanda för besökare på webbplatsen **[implementerar dispatchern](/help/implementing/dispatcher/overview.md)** belastningsfördelning och cachning.
+**[dispatcher](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på webbplatsen.
