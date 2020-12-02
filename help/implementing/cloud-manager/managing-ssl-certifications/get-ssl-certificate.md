@@ -10,11 +10,11 @@ ht-degree: 0%
 ---
 
 
-# Hämta ett SSL-certifikat {#getting-an-ssl-certificate}
+# Hämtar ett SSL-certifikat {#getting-an-ssl-certificate}
 
 Företag använder SSL-certifikat för att skydda sina webbplatser och låta sina kunder lita på dem. För att SSL-protokollet ska kunna användas måste ett SSL-certifikat användas på en webbserver. Molnhanteraren tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste hämtas från certifikatutfärdare.
 
 När en entitet begär ett certifikat från en certifikatutfärdare (CA) slutför certifikatutfärdaren en verifieringsprocess. Detta kan omfatta allt från verifiering av domännamnskontroll till insamling av registreringsdokument och prenumerationsavtal.
 
-När informationen för en entitet har verifierats signerar certifikatutfärdaren sin offentliga nyckel med certifikatutfärdarens privata nyckel. Eftersom alla viktiga certifikatutfärdare har rotcertifikat i webbläsare kommer entitetens certifikat att länkas via en *förtroendekedja* och webbläsaren kommer att känna igen det som ett pålitligt certifikat.
+När informationen för en entitet har verifierats signerar certifikatutfärdaren sin offentliga nyckel med certifikatutfärdarens privata nyckel. Eftersom alla viktiga certifikatutfärdare har rotcertifikat i webbläsare länkas entitetens certifikat via en *förtroendekedja* och webbläsaren identifierar det som ett betrott certifikat.
 
