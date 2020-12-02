@@ -33,17 +33,17 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 >
 >Detsamma gäller även när du flyttar resurser mellan två mappar som har samma profil tilldelad.
 
-## Bearbeta dynamiska medieresurser i en mapp {#reprocessing-assets}
+## Bearbetar dynamiska medieresurser i en mapp {#reprocessing-assets}
 
 Du kan bearbeta om resurser i en mapp som redan har en befintlig Dynamic Media Image Profile eller en Dynamic Media Video-profil som du senare ändrade.
 
-Anta till exempel att du har skapat en dynamisk mediebildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att nu ha markerat och laddat upp resurserna till mappen igen kör du bara *Scene7: Arbetsflöde för att bearbeta resurser* igen.
+Anta till exempel att du har skapat en dynamisk mediebildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att nu ha markerat och laddat upp resurserna till mappen igen kör du bara *Scene7: Bearbeta om arbetsflödet Resurser*.
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bildprofil eller videoprofil, eller redan har använt en bildprofil eller en videoprofil, kan du ändå köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
-Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Arbetsflödet för att bearbeta resurser_ på en mapp på nytt, resurser grupperas tillsammans i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen AEM. Om batchstorleken är mycket stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundresor till Dynamic Media-servern.
+Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta resurser_-arbetsflöde i en mapp, resurser grupperas tillsammans i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen AEM. Om batchstorleken är mycket stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundresor till Dynamic Media-servern.
 
-Se [Justera batchstorleken för arbetsflödet](#adjusting-load)för ombearbetning.
+Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-load).
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 -->
 
 **Så här bearbetar du om dynamiska medieresurser i en mapp**:
-1. I AEM, från Assets-sidan, navigerar du till en mapp med dynamiska medieresurser som har en bildprofil eller en videoprofil tilldelad och för vilken du vill tillämpa **Scene7: Arbetsflöde för att bearbeta resurser** igen,
+1. I AEM, från Assets-sidan, navigerar du till en mapp med dynamiska medieresurser som har en bildprofil eller en videoprofil tilldelad och för vilken du vill använda **Scene7: Arbetsflöde för att bearbeta om resurs**,
 
    Mappar som redan har tilldelats en bildprofil eller en videoprofil visas genom att profilens namn visas direkt under mappnamnet i kortvyn.
 
@@ -74,14 +74,14 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
    ![Bearbeta resursarbetsflöde 1](/help/assets/dynamic-media/assets/reprocess-assets1.png)
 
 1. Klicka på **[!UICONTROL Start Workflow]**.
-1. From the **[!UICONTROL Start Workflow]** drop-down list, choose **[!UICONTROL Scene7: Reprocess Assets]**.
-1. (Valfritt) Ange ett namn för arbetsflödet i **textrutan** Ange arbetsflödets rubrik. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
+1. Välj **[!UICONTROL Scene7: Reprocess Assets]** i listrutan **[!UICONTROL Start Workflow]**.
+1. (Valfritt) Ange ett namn för arbetsflödet i **textrutan**. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
    ![Bearbeta resurser 2](/help/assets/dynamic-media/assets/reprocess-assets2.png)
 
-1. Klicka **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]**.
+1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]**.
 
-   Om du vill övervaka arbetsflödet eller kontrollera förloppet går du till AEM huvudkonsolsida och klickar på **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Klicka på på menyraden **[!UICONTROL Open History]**. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
+   Om du vill övervaka arbetsflödet eller kontrollera förloppet går du till AEM huvudkonsolsida och klickar på **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Klicka på **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning {#adjusting-load}
 
@@ -90,29 +90,29 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 **Om du vill justera batchstorleken för arbetsflödet för ombearbetning**
 
 1. I Experience Manager trycker du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Workflow > Models]**.
-1. På sidan Arbetsflödesmodeller i kortvyn eller listvyn väljer du **[!UICONTROL Scene7: Reprocess Assets]**.
+1. Välj **[!UICONTROL Scene7: Reprocess Assets]** i kortvyn eller listvyn på sidan Arbetsflödesmodeller.
 
    ![Workflow Models page with Scene7: Arbetsflödet för att bearbeta resurser som valts i kortvyn](/help/assets/dynamic-media/assets/reprocess-assets7.png)
 
-1. Klicka på i verktygsfältet **[!UICONTROL Edit]**. En ny flik i webbläsaren öppnar Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
-1. På Scene7: Återbearbeta arbetsflödessidan Resurser, i det övre högra hörnet, tryck för **[!UICONTROL Edit]** att låsa upp arbetsflödet.
-1. Öppna verktygsfältet genom att välja Scene7 Batch Upload-komponenten i arbetsflödet och tryck sedan **[!UICONTROL Configure]** på verktygsfältet.
+1. Klicka på **[!UICONTROL Edit]** i verktygsfältet. En ny flik i webbläsaren öppnar Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
+1. På Scene7: Återbearbeta arbetsflödessidan Resurser, i det övre högra hörnet, tryck på **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
+1. Öppna verktygsfältet genom att välja Scene7 Batch Upload-komponenten i arbetsflödet och tryck sedan på **[!UICONTROL Configure]** i verktygsfältet.
 
    ![Komponenten Scene7 Batch Upload](/help/assets/dynamic-media/assets/reprocess-assets8.png)
 
-1. Ange följande i **[!UICONTROL Batch Upload to Scene7—Step Properties]** dialogrutan:
-   * In the **[!UICONTROL Title]** and **[!UICONTROL Description]** text fields, enter a new title and description for the job, if desired.
+1. Ange följande i dialogrutan **[!UICONTROL Batch Upload to Scene7—Step Properties]**:
+   * I textfälten **[!UICONTROL Title]** och **[!UICONTROL Description]** anger du en ny titel och beskrivning för jobbet, om du vill.
    * Välj **[!UICONTROL Handler Advance]** om hanteraren ska gå vidare till nästa steg.
-   * I **[!UICONTROL Timeout]** fältet anger du timeout för extern process (sekunder).
-   * I **[!UICONTROL Period]** fältet anger du ett avsökningsintervall (sekunder) som ska testas för att den externa processen ska slutföras.
-   * In the **[!UICONTROL Batch field]**, enter the maximum number of assets (50-1000) to process in a Dynamic Media server batch processing upload job.
+   * I fältet **[!UICONTROL Timeout]** anger du timeout för extern process (sekunder).
+   * I fältet **[!UICONTROL Period]** anger du ett avsökningsintervall (sekunder) som ska testas för att den externa processen ska slutföras.
+   * I **[!UICONTROL Batch field]** anger du det maximala antalet resurser (50-1000) som ska bearbetas i ett batchbearbetningsjobb för en Dynamic Media-server.
    * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
 
    ![Egenskaper, dialogruta](/help/assets/dynamic-media/assets/reprocess-assets3.png)
 
-1. Tryck på i det övre högra hörnet av **[!UICONTROL Batch Upload to Scene7 – Step Properties]** dialogrutan **[!UICONTROL Done]**.
+1. Tryck på **[!UICONTROL Done]** i det övre högra hörnet av dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
 
-1. I det övre högra hörnet av Scene7: Återbearbeta arbetsflödesmodellsidan Resurser, tryck **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]**&#x200B;är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
+1. I det övre högra hörnet av Scene7: Återbearbeta arbetsflödesmodellsidan Resurser, tryck på **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]** är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
 
    ![Synkronisera arbetsflödesmodellen](/help/assets/dynamic-media/assets/reprocess-assets1.png)
 
