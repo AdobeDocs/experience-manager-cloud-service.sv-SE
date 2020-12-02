@@ -120,7 +120,7 @@ Till skillnad från andra AEM använder synkronisering av användare och gruppme
 
 >[!NOTE]
 >
->Som standard är synkronisering av användarprofiler och gruppmedlemskap inte aktiverat och data kommer därför inte att synkroniseras till eller ens bli permanent beständiga på publiceringsnivån. Om du vill aktivera funktionen skickar du en begäran till kundsupport med information om vilket program och vilken miljö som är lämplig.
+>Som standard är synkronisering av användarprofiler och gruppmedlemskap inte aktiverat och data kommer därför inte att synkroniseras till eller ens bli permanent beständiga på publiceringsnivån. Om du vill aktivera funktionen skickar du en begäran till kundsupport med information om rätt program och miljöer.
 
 ## Cacheöverväganden {#cache-considerations}
 
