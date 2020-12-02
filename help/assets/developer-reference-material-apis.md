@@ -11,28 +11,28 @@ ht-degree: 1%
 ---
 
 
-# [!DNL Assets] API:er och referensmaterial för utvecklare {#assets-cloud-service-apis}
+# [!DNL Assets] API:er och referensmaterial för utvecklare  {#assets-cloud-service-apis}
 
 Artikeln innehåller referensmaterial och resurser för utvecklare av [!DNL Assets] som en Cloud Service. Det innehåller en ny överföringsmetod, API-referens och information om stödet i efterbehandlingsarbetsflödena.
 
-## Överföring av tillgångar {#asset-upload-technical}
+## Resursöverföring {#asset-upload-technical}
 
 [!DNL Experience Manager] som Cloud Service innehåller en ny metod för att överföra resurser till databasen. Användare kan överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil är:
 
-1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]eller distribuerar om din avsikt att överföra en ny binär fil.
-1. [POST innehållet i binärfilen](#upload-binary) till en eller flera URI:er som tillhandahålls av initieringsbegäran.
-1. [Skicka en HTTP-begäran](#complete-upload) för att informera servern om att innehållet i binärfilen har överförts.
+1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]r-distribution av din avsikt att överföra en ny binär fil.
+1. [POST innehållet i ](#upload-binary) binaryen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
+1. [Skicka en HTTP-](#complete-upload) begäran för att informera servern om att innehållet i binärfilen har överförts.
 
 ![Översikt över protokollet för direkt binär överföring](assets/add-assets-technical.png)
 
 Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser. Skillnaderna jämfört med [!DNL Experience Manager] 6.5 är:
 
-* Binärfiler fungerar inte [!DNL Experience Manager]som nu helt enkelt koordinerar överföringsprocessen med det binära molnlagringsutrymmet som är konfigurerat för distributionen.
+* Binärfiler går inte igenom [!DNL Experience Manager], vilket nu innebär att överföringsprocessen samordnas med den binära molnlagringen som är konfigurerad för distributionen.
 * Binär molnlagring fungerar med ett CDN-nätverk (Content Delivery Network) eller Edge-nätverk. Ett CDN väljer en slutpunkt för överföring som är närmare för en klient. När data flyttas kortare tid till en närliggande slutpunkt förbättras överföringsprestanda och användarupplevelsen, särskilt för geografiskt utspridda team.
 
 >[!NOTE]
 >
->Se klientkoden för att implementera den här metoden i open-source- [biblioteket](https://github.com/adobe/aem-upload)aem-upload.
+>Se klientkoden för att implementera den här metoden i det öppna källbiblioteket [aem-upload library](https://github.com/adobe/aem-upload).
 
 ### Initiera överföring {#initiate-upload}
 
@@ -43,7 +43,7 @@ Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencode
 * `(string) fileName`: Krävs. Namnet på resursen så som den visas i [!DNL Experience Manager].
 * `(number) fileSize`: Krävs. Filstorleken, i byte, för resursen som överförs.
 
-En enda begäran kan användas för att initiera överföringar för flera binärfiler, förutsatt att varje binärfil innehåller de obligatoriska fälten. Om det lyckas svarar begäran med en `201` statuskod och en brödtext som innehåller JSON-data i följande format:
+En enda begäran kan användas för att initiera överföringar för flera binärfiler, förutsatt att varje binärfil innehåller de obligatoriska fälten. Om det lyckas svarar begäran med en `201`-statuskod och en brödtext som innehåller JSON-data i följande format:
 
 ```json
 {
@@ -62,17 +62,17 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 }
 ```
 
-* `completeURI` (sträng): Anropa den här URI:n när den binära filen har överförts. URI:n kan vara en absolut eller relativ URI och klienterna bör kunna hantera båda. Värdet kan alltså vara `"https://author.acme.com/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` Se [hela överföringen](#complete-upload).
+* `completeURI` (sträng): Anropa den här URI:n när den binära filen har överförts. URI:n kan vara en absolut eller relativ URI och klienterna bör kunna hantera båda. Värdet kan alltså vara `"https://author.acme.com/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` Se [fullständig överföring](#complete-upload).
 * `folderPath` (sträng): Fullständig sökväg till mappen som binärfilen överförs till.
 * `(files)` (array): En lista med element vars längd och ordning matchar längden och ordningen för listan med binär information som tillhandahålls i initieringsbegäran.
 * `fileName` (sträng): Namnet på motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
 * `mimeType` (sträng): Mime-typen för motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
 * `uploadToken` (sträng): En överföringstoken för motsvarande binär fil. Detta värde bör inkluderas i den fullständiga begäran.
-* `uploadURIs` (array): En lista över strängar vars värden är fullständiga URI:er som binärens innehåll ska överföras till (se [Överför binärt](#upload-binary)).
+* `uploadURIs` (array): En lista över strängar vars värden är fullständiga URI:er som binärens innehåll ska överföras till (se  [Överför binärt](#upload-binary)).
 * `minPartSize` (tal): Den minsta längden, i byte, på data som kan anges till någon av uploadURI:erna, om det finns mer än en URI.
 * `maxPartSize` (tal): Den maximala längden, i byte, på data som kan tillhandahållas till någon av uploadURI:erna, om det finns mer än en URI.
 
-### Ladda upp binärt {#upload-binary}
+### Överför binär {#upload-binary}
 
 Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges delar klienten upp binärfilen i delar och begär POST av varje del till varje URI, i ordning. Använd alla URI:er. Se till att storleken på varje del ligger inom de minimi- och maximistorlekar som anges i initieringssvaret. CDN-kantnoder snabbar upp begärd överföring av binärfiler.
 
@@ -82,9 +82,9 @@ En möjlig metod för att uppnå detta är att beräkna delstorleken baserat på
 * POSTENS byteintervall är 0-9 999 för binärfilen till den första URI:n i listan över överförda URI:er.
 * POSTENS byteintervall 10 000 - 19 999 för binärfilen till den andra URI:n i listan över överförda URI:er.
 
-Om överföringen lyckas svarar servern på varje begäran med en `201` statuskod.
+Om överföringen lyckas svarar servern på varje begäran med en `201`-statuskod.
 
-### fullständig överföring {#complete-upload}
+### Slutför överföring {#complete-upload}
 
 När alla delar av en binär fil har överförts skickar du en begäran om HTTP-POST till den fullständiga URI som anges av initieringsdata. Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält.
 
@@ -93,50 +93,50 @@ När alla delar av en binär fil har överförts skickar du en begäran om HTTP-
 | `fileName` | Sträng | Krävs | Namnet på resursen, enligt initieringsdata. |
 | `mimeType` | Sträng | Krävs | HTTP-innehållstypen för binärfilen, som angavs i initieringsdata. |
 | `uploadToken` | Sträng | Krävs | Överför token för binärfilen enligt initieringsdata. |
-| `createVersion` | Boolesk | Valfritt | Om det finns `True` en resurs med det angivna namnet [!DNL Experience Manager] skapas en ny version av resursen. |
+| `createVersion` | Boolesk | Valfritt | Om det finns `True` och en resurs med det angivna namnet skapar [!DNL Experience Manager] en ny version av resursen. |
 | `versionLabel` | Sträng | Valfritt | Om en ny version skapas är den etikett som är associerad med den nya versionen av en resurs . |
 | `versionComment` | Sträng | Valfritt | Om en ny version skapas, de kommentarer som är kopplade till versionen. |
-| `replace` | Boolesk | Valfritt | Om det finns `True` en resurs med det angivna namnet tar [!DNL Experience Manager] bort resursen och återskapar den. |
+| `replace` | Boolesk | Valfritt | Om det finns `True` och en resurs med det angivna namnet, tar [!DNL Experience Manager] bort resursen och skapar den på nytt. |
 
 >!![NOTE]
-Om resursen finns och varken `createVersion` eller `replace` anges, [!DNL Experience Manager] uppdateras resursens aktuella version med den nya binärfilen.
+Om resursen finns och varken `createVersion` eller `replace` har angetts, uppdaterar [!DNL Experience Manager] resursens aktuella version med den nya binärfilen.
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
 
 Överföringen av en binär fil utförs inte förrän den fullständiga URL:en anropas för filen. En resurs bearbetas när överföringen är klar. Bearbetningen startar inte även om resursens binära fil överförs helt, men överföringen inte slutförs.
 
-Om det lyckas svarar servern med en `200` statuskod.
+Om det lyckas svarar servern med en `200`-statuskod.
 
 ### Överföringsbibliotek med öppen källkod {#open-source-upload-library}
 
 För att lära dig mer om överföringsalgoritmerna eller för att skapa egna överföringsskript och verktyg kan Adobe tillhandahålla bibliotek och verktyg med öppen källkod:
 
-* [Uppladdningsbibliotek](https://github.com/adobe/aem-upload)med öppen källkod.
-* [Kommandoradsverktyget](https://github.com/adobe/aio-cli-plugin-aem)med öppen källkod.
+* [Uppladdningsbibliotek](https://github.com/adobe/aem-upload) med öppen källkod.
+* [Kommandoradsverktyget](https://github.com/adobe/aio-cli-plugin-aem) med öppen källkod.
 
 ### Inaktuella API:er för överföring av resurser {#deprecated-asset-upload-api}
 
 <!-- #ENGCHECK review / update the list of deprecated APIs below. -->
 
-Den nya överföringsmetoden stöds endast för [!DNL Adobe Experience Manager] som Cloud Service. API:erna från [!DNL Adobe Experience Manager] 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
+Den nya överföringsmetoden stöds bara för [!DNL Adobe Experience Manager] som Cloud Service. API:erna från [!DNL Adobe Experience Manager] 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
 
 * [Experience Manager Assets HTTP API](mac-api-assets.md)
-* `AssetManager` Java API, som `AssetManager.createAsset(..)`
+* `AssetManager` Java API, som  `AssetManager.createAsset(..)`
 
 >[!MORELIKETHIS]
-* [Uppladdningsbibliotek](https://github.com/adobe/aem-upload)med öppen källkod.
-* [Kommandoradsverktyget](https://github.com/adobe/aio-cli-plugin-aem)med öppen källkod.
+* [Uppladdningsbibliotek](https://github.com/adobe/aem-upload) med öppen källkod.
+* [Kommandoradsverktyget](https://github.com/adobe/aio-cli-plugin-aem) med öppen källkod.
 
 
-## Resurshantering och efterbearbetning {#post-processing-workflows}
+## Resursbearbetning och efterbearbetning av arbetsflöden {#post-processing-workflows}
 
-I [!DNL Experience Manager]är resursbearbetningen baserad på **[!UICONTROL Processing Profiles]** konfiguration som använder [tillgångsmikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
+I [!DNL Experience Manager] baseras resursbearbetningen på **[!UICONTROL Processing Profiles]**-konfigurationen som använder [mikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
 
 Använd standardarbetsflödena med tillägg med anpassade steg för konfiguration av efterbearbetning av arbetsflöde.
 
 ## Stöd för arbetsflödessteg i efterbearbetningsarbetsflödet {#post-processing-workflows-steps}
 
-Kunder som uppgraderar från tidigare versioner av [!DNL Experience Manager] kan använda tillgångsmikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i arbetsflödet i den tidigare versionen stöds inte [!UICONTROL DAM Update Asset] .
+Kunder som uppgraderar från tidigare versioner av [!DNL Experience Manager] kan använda tillgångsmikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i [!UICONTROL DAM Update Asset]-arbetsflödet i den tidigare versionen stöds inte.
 
 [!DNL Experience Manager] som Cloud Service stöder följande arbetsflödessteg:
 
