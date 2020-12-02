@@ -19,7 +19,7 @@ Så här konfigurerar du [!DNL Experience Manager] till vattenstämpelresurser:
 
 1. En PNG-fil används som en vattenstämpel. Överför den här filen till DAM-databasen.
 
-1. Få åtkomst till [!DNL Cloud Manager] Git-databasen som är kopplad till din miljö. Spara en fil med namnet `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json` i databasen med följande innehåll. Instruktioner finns i [hur du gör OSGi-konfiguration [!DNL Experience Manager] som en Cloud Service](/help/implementing/deploying/configuring-osgi.md).
+1. Använd den [!DNL Cloud Manager] Git-databas som är kopplad till din miljö. Spara en fil med namnet `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json` i databasen med följande innehåll. Instruktioner finns i [Så här gör du OSGi-konfiguration i [!DNL Experience Manager] som en Cloud Service](/help/implementing/deploying/configuring-osgi.md).
 
    ```json
    {
@@ -28,11 +28,11 @@ Så här konfigurerar du [!DNL Experience Manager] till vattenstämpelresurser:
    }
    ```
 
-1. [Skapa en bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-custom-profile) för att använda vattenstämpeln med hjälp av tillgångsmikrotjänster.
+1. [Skapa en ](/help/assets/asset-microservices-configure-and-use.md#create-custom-profile) bearbetningsprofil för att använda resursmikrotjänsterna för vattenstämpeln.
 
    ![Resursbearbetningsprofil för att skapa vattenstämpel](assets/watermark-processing-profile.png)
 
-1. [Använd bearbetningsprofilerna på en mapp](/help/assets/asset-microservices-configure-and-use.md#use-profiles) för att skapa material med vattenstämpel.
+1. [Använd bearbetningsprofilerna på en ](/help/assets/asset-microservices-configure-and-use.md#use-profiles) mapp för att skapa material med vattenstämpel.
 
 ## Tips och begränsningar {#tips-limitations-bestpractices}
 
