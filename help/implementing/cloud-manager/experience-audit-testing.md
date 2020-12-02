@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Testning av Experience Audit {#experience-audit-testing}
+# Experience Audit Testing {#experience-audit-testing}
 
 Experience Audit är en funktion som finns i Cloud Manager Sites Production pipelines, som drivs av Google Lighthuse, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager.
 
@@ -22,7 +22,7 @@ Den validerar distributionsprocessen och säkerställer att ändringar som distr
 
 Experience Audit i Cloud Manager säkerställer att slutanvändarnas digitala upplevelse på webbplatsen kan upprätthållas enligt högsta standard. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
 
-## Upplevelsegranskningsresultat {#understanding-experience-audit-results}
+## Om Experience Audit Results {#understanding-experience-audit-results}
 
 Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via sidan för körning av produktionspipeline.
 
@@ -43,13 +43,13 @@ Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i k
 
 Värdet för Change-måttet kan vara något av följande:
 
-* **Positivt värde** - sidan/sidorna har förbättrats på det valda testet sedan den senaste produktionskanalen kördes
+* **Positivt värde**  - sidan/sidorna har förbättrats på det valda testet sedan den senaste produktionskanalen kördes
 
-* **Negativt värde** - sidan/sidorna har gått om på det valda testet sedan den senaste körningen av produktionsflödet
+* **Negativt värde**  - sidan/sidorna har gått om på det valda testet sedan den senaste körningen av produktionsflödet
 
-* **Ingen ändring** - sidan/sidorna har fått samma resultat sedan den senaste produktionspipeline-körningen
+* **Ingen ändring**  - sidan/sidorna har fått samma resultat sedan den senaste produktionspipeline-körningen
 
-* **Ej tillämpligt** - det fanns ingen tidigare poäng att jämföra med
+* **Ej tillämpligt**  - det fanns ingen tidigare poäng att jämföra med
 
    ![](/help/implementing/cloud-manager/assets/exp-audit-1.png)
 
