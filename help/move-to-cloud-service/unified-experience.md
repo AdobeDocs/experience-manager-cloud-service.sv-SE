@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Enhetlig upplevelse för verktyg för kodkorrigering {#unified-experience}
+# Enhetlig upplevelse för verktygen för kodkorrigering {#unified-experience}
 
 Vi har utvecklat verktyg för att automatisera några av de kodkorrigeringsuppgifter som krävs för att vara kompatibel med AEM som en Cloud Service. För att minska komplexiteten i samband med installation och konfiguration av olika verktyg för kodomfaktorisering har vi utvecklat ett plugin-program för att kombinera verktyg som fungerar med kod och databaser.
 
@@ -18,15 +18,15 @@ Vi har utvecklat verktyg för att automatisera några av de kodkorrigeringsuppgi
 
 Plugin-programmet för enhetlig upplevelse ger följande fördelar:
 
-* Enhetliggör verktyg som fungerar med källkod i ett `node.js` program som visas som `aio-cli ` plugin-program för att ge användaren en konsekvent användarupplevelse.
+* Enhetliggör verktyg som arbetar med källkod i ett `node.js`-program som visas som `aio-cli `-plugin-program för att ge användaren en konsekvent användarupplevelse.
 
 * Ger möjlighet att köra alla verktyg med ett enda kommando, samtidigt som den ger flexibilitet att köra specifika verktyg efter behov.
 
 * Utbyggbart för att förenkla tillägg av nya verktyg, samtidigt som upplevelsen blir enhetlig.
 
-## Om plugin-programmet {#understanding-plugin}
+## Plugin-programmet {#understanding-plugin}
 
-Plugin- `aio-cli-plugin-aem-cloud-service-migration` programmet består av två huvuddelar:
+Plugin-programmet `aio-cli-plugin-aem-cloud-service-migration` består av två huvuddelar:
 
 * **Användargränssnitt**
 
@@ -43,7 +43,7 @@ Plugin- `aio-cli-plugin-aem-cloud-service-migration` programmet består av två 
 
 ## Tillgänglighet {#availability}
 
-Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) för att lära dig mer om användningen och hur du kan bidra till denna plugin-kod som är öppen från GitHub.
+Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) om du vill veta mer om användningen och hur du kan bidra till den plugin-kod som är öppen från GitHub.
 
 >[!NOTE]
 >För närvarande är plugin-programmet integrerat med AEM Dispatcher Converter och Repository Modernizer.
