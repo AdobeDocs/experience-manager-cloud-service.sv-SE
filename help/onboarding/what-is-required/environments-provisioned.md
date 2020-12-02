@@ -10,9 +10,9 @@ ht-degree: 0%
 ---
 
 
-# Miljöer {#environments-provisioning}
+# Etablerade miljöer {#environments-provisioning}
 
-## Provisionering {#provisioning}
+## Etablerar {#provisioning}
 
 Alla AEM molnmiljöer som köpts av en kund etableras automatiskt av Adobe och länkas tillbaka till deras program i Cloud Manager. De här AEM molnmiljöerna ingår i alla Adobe Managed Services-prenumerationer och består vanligtvis av minst en produktionsmiljö, en scenmiljö och eventuellt en eller flera utvecklings- eller testmiljöer.
 
