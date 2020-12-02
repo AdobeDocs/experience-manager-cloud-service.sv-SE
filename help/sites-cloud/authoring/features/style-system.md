@@ -41,7 +41,7 @@ Vanligtvis har du följande format när du använder Style System.
 
 1. HTML-utvecklaren implementerar motsvarande CSS-kod (och eventuellt JS-kod) för var och en av de visuella variationerna så att de ser ut som de definierats.
 
-1. Den AEM utvecklaren placerar angiven CSS (och valfri JS) i ett [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) och distribuerar den.
+1. Den AEM utvecklaren placerar angiven CSS (och valfri JS) i ett [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) och distribuerar det.
 
 1. AEM utvecklare eller mallskapare konfigurerar sidmallarna och redigerar profilen för varje formaterad komponent, lägger till definierade CSS-klasser, ger användarvänliga namn för varje format och anger vilka format som kan kombineras.
 
@@ -55,40 +55,40 @@ Följande diagram visar arkitekturen i Style System.
 
 ![aem-style-system](/help/sites-cloud/authoring/assets/style-system-architecture.png)
 
-## Use {#use}
+## Använd {#use}
 
-För att demonstrera funktionen använder vi [WKND](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)implementering av kärnkomponentens [titelkomponent](https://www.adobe.com/go/aem_cmp_title_v2) som exempel.
+För att demonstrera funktionen använder vi [WKND](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)-implementeringen av kärnkomponentens [titelkomponent](https://www.adobe.com/go/aem_cmp_title_v2) som exempel.
 
-I följande avsnitt [Som innehållsförfattare](#as-a-content-author) och [som mallskapare](#as-a-template-author) beskrivs hur du testar funktionaliteten i Style System med Style System of WKND.
+I följande avsnitt [Som innehållsförfattare](#as-a-content-author) och [Som mallförfattare](#as-a-template-author) beskrivs hur du testar funktionaliteten i Style System med WKND.
 
 Om du vill använda Style System för dina egna komponenter gör du följande:
 
-1. Installera CSS som klientbibliotek så som beskrivs i avsnittet [Översikt](#overview).
+1. Installera CSS som klientbibliotek enligt beskrivningen i avsnittet [Översikt](#overview).
 1. Konfigurera de CSS-klasser som du vill göra tillgängliga för innehållsförfattarna enligt beskrivningen i avsnittet [Som mallförfattare](#as-a-template-author).
-1. Innehållsförfattare kan sedan använda de format som beskrivs i avsnittet [som innehållsförfattare](#as-a-content-author).
+1. Innehållsförfattare kan sedan använda de format som beskrivs i avsnittet [Som innehållsförfattare](#as-a-content-author).
 
 ### Som innehållsförfattare {#as-a-content-author}
 
 1. När du har installerat WKND-projektet går du till WKND:s överordnad engelska språksida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en` och redigerar sidan.
-1. Markera en **titelkomponent** längre ned på sidan
+1. Välj en **Title**-komponent längre ned på sidan
 
    ![Formatsystem för författaren](/help/sites-cloud/authoring/assets/style-system-author1.png)
 
-1. Tryck eller klicka på knappen **Stilar** i verktygsfältet i **List** -komponenten för att öppna stilmenyn och ändra komponentens utseende.
+1. Tryck eller klicka på knappen **Stilar** i verktygsfältet för **List**-komponenten för att öppna stilmenyn och ändra komponentens utseende.
 
    ![Markera format](/help/sites-cloud/authoring/assets/style-system-author2.png)
 
    >[!NOTE]
    >
-   >I det här exemplet utesluter **färgstilarna** (**svart**, **vitt** och **grått**) varandra, medan alternativen för **format**************(¥Underline,¥Align RightUnder ochÂMini Spacing¥) kan kombineras. Detta kan [konfigureras i mallen som mallskapare](#as-a-template-author).
+   >I det här exemplet utesluter formaten **Färger** (**Svart**, **Vit** och **Grå**) varandra, medan alternativen **Format** (**Understruken**, &lt;a1 2/>Justera höger **och** Mini Spacing **) kan kombineras.** Detta kan [konfigureras i mallen som mallskapare](#as-a-template-author).
 
-### Som mallskapare {#as-a-template-author}
+### Som mallförfattare {#as-a-template-author}
 
-1. När du redigerar WKND:s engelska överordnad hemsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en`redigerar du sidmallen via **Sidinformation -> Redigera mall**.
+1. När du redigerar WKND:s engelska överordnad hemsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en` redigerar du sidmallen via **Sidinformation -> Redigera mall**.
 
    ![Redigera mall](/help/sites-cloud/authoring/assets/style-system-edit-template.png)
 
-1. Redigera principen för komponenten **Title** genom att trycka på eller klicka på knappen **Policy** för komponenten.
+1. Redigera principen för komponenten **Title** genom att trycka eller klicka på knappen **Policy** för komponenten.
 
    ![Redigera princip](/help/sites-cloud/authoring/assets/style-system-edit-policy.png)
 
@@ -96,9 +96,9 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
    ![Redigera egenskaper](/help/sites-cloud/authoring/assets/style-system-properties.png)
 
-   * **Gruppnamn:** Format kan grupperas tillsammans på den formatmeny som innehållsförfattaren ska se när komponentens format konfigureras.
-   * **Du kan kombinera format:** Tillåter att flera format i den gruppen markeras samtidigt.
-   * **Formatnamn:** Beskrivningen av det format som ska visas för innehållsförfattaren när komponentens format konfigureras.
+   * **Gruppnamn:** Format kan grupperas tillsammans på den formatmeny som innehållsförfattaren kommer att se när komponentens format konfigureras.
+   * **Du kan kombinera format:** Gör att flera format i gruppen kan markeras samtidigt.
+   * **Formatnamn:** Den beskrivning av formatet som ska visas för innehållsförfattaren när komponentens format konfigureras.
    * **CSS-klasser:** Det faktiska namnet på CSS-klassen som är associerad med formatet.
 
    Använd draghandtagen för att ordna gruppernas och gruppernas inbördes ordning. Använd ikonerna för att lägga till eller ta bort för att lägga till eller ta bort grupper eller format i grupper.
@@ -107,11 +107,11 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 >
 >CSS-klasserna (och eventuella nödvändiga JavaScript) som konfigurerats som formategenskaper för en komponents policy måste distribueras som [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) för att fungera.
 
-## Inställningar {#setup}
+## Konfigurera {#setup}
 
 Core Components version 2 och senare är helt aktiverade för att utnyttja Style System och kräver ingen ytterligare konfiguration.
 
-Följande steg är bara nödvändiga för att aktivera Style System för dina egna anpassade komponenter eller för att [aktivera den valfria fliken Format i dialogrutan Redigera.](#enable-styles-tab-edit)
+Följande steg är bara nödvändiga för att aktivera Style System för dina egna anpassade komponenter eller för att [aktivera fliken Stilar i dialogrutan Redigera.](#enable-styles-tab-edit)
 
 ### Aktivera fliken Format i designdialogrutan {#enable-styles-tab-design}
 
@@ -121,7 +121,7 @@ För att en komponent ska kunna arbeta med AEM Style System och visa stilfliken 
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 >[!NOTE]
->Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md)med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
+>Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md) med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 När komponenten är konfigurerad infogas de format som är konfigurerade av sidförfattarna automatiskt av AEM på dekorationselementet som AEM runt varje redigerbar komponent automatiskt. Själva komponenten behöver inte göra något annat för att detta ska hända.
 
@@ -135,7 +135,7 @@ Fliken för redigeringsdialogrutan kan läggas in på ungefär samma sätt som f
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 >[!NOTE]
->Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md)med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
+>Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md) med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 >[!NOTE]
 >
@@ -143,9 +143,9 @@ Fliken för redigeringsdialogrutan kan läggas in på ungefär samma sätt som f
 
 ### Format med elementnamn {#styles-with-element-names}
 
-En utvecklare kan också konfigurera en lista med tillåtna elementnamn för format i komponenten med egenskapen för `cq:styleElements` strängmatris. På fliken Format i profilen i designdialogrutan kan mallskaparen också välja ett elementnamn som ska anges för varje format. Då anges elementnamnet för elementet wrapper.
+En utvecklare kan också konfigurera en lista med tillåtna elementnamn för format i komponenten med strängmatrisegenskapen `cq:styleElements`. På fliken Format i profilen i designdialogrutan kan mallskaparen också välja ett elementnamn som ska anges för varje format. Då anges elementnamnet för elementet wrapper.
 
-Den här egenskapen ställs in på `cq:Component` noden. Till exempel:
+Den här egenskapen anges för noden `cq:Component`. Till exempel:
 
 * `/apps/<yoursite>/components/content/list@cq:styleElements=[div,section,span]`
 
@@ -155,7 +155,7 @@ Den här egenskapen ställs in på `cq:Component` noden. Till exempel:
 >
 >1. HTML har företräde framför allt: `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
 >1. Sedan används det första formatet i listan med format som är konfigurerade i komponentens profil bland flera aktiva format.
->1. Slutligen betraktas komponentens `cq:htmlTag`/ `cq:tagName` som ett reservvärde.
+>1. Slutligen betraktas komponentens `cq:htmlTag`/`cq:tagName` som ett reservvärde.
 
 >
 
@@ -163,4 +163,4 @@ Den här egenskapen ställs in på `cq:Component` noden. Till exempel:
 
 Den här möjligheten att definiera formatnamn är användbar för mycket generiska komponenter, som Layoutbehållaren eller komponenten Innehållsfragment, för att ge dem ytterligare innebörd.
 
-Den tillåter till exempel att en Layout Container får semantik som `<main>`, `<aside>`, `<nav>`osv.
+Den tillåter till exempel att en Layout Container får semantik som `<main>`, `<aside>`, `<nav>` osv.
