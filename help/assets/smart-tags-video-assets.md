@@ -10,49 +10,49 @@ ht-degree: 0%
 ---
 
 
-# Smarta taggar för videomaterial {#video-smart-tags}
+# Smart tagga dina videoresurser {#video-smart-tags}
 
 Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som Cloud Service stöder automatisk taggning av videomaterial som hanteras av artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Men den smarta tagningsfunktionen i Adobe Sensei använder artificiella intelligensmodeller för att analysera videoinnehåll och lägga till taggar i videomaterialet. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i videon. den andra uppsättningen avser åtgärder som att dricka, köra och jogga.
 
-De videofilformat (och deras kodekar) som stöds för smart taggning är MP4 (H264/AVC), MKV (H264/AVC), MOV (H264/AVC, Motion JPEG), AVI (indeo4), FLV (H264/AVC, vp6f) och WMG V (WMV2). Dessutom gör funktionen att du kan tagga upp videoklipp till 300 MB. Den automatiska taggningen av videomaterial sker som standardbearbetning av resurser (tillsammans med skapande av miniatyrbilder och metadataextrahering) efter att en video har överförts eller när en ombearbetning utlöses. De smarta taggarna visas i fallande ordning efter deras [konfidensgrad](#confidence-score-video-tag) i resursen [!UICONTROL Properties]. Videotaggning är aktiverat som standard i [!DNL Adobe Experience Manager] som en Cloud Service. Du kan dock [välja bort smart taggning](#opt-out-video-smart-tagging) för video i en mapp.
+De videofilformat (och deras kodekar) som stöds för smart taggning är MP4 (H264/AVC), MKV (H264/AVC), MOV (H264/AVC, Motion JPEG), AVI (indeo4), FLV (H264/AVC, vp6f) och WMG V (WMV2). Dessutom gör funktionen att du kan tagga upp videoklipp till 300 MB. Den automatiska taggningen av videomaterial sker som standardbearbetning av resurser (tillsammans med skapande av miniatyrbilder och metadataextrahering) efter att en video har överförts eller när en ombearbetning utlöses. De smarta taggarna visas i fallande ordning efter [konfidensintervallet](#confidence-score-video-tag) i resursen [!UICONTROL Properties]. Videotaggning är som standard aktiverad i [!DNL Adobe Experience Manager] som en Cloud Service. Du kan dock [välja bort smart taggning för video](#opt-out-video-smart-tagging) i en mapp.
 
 ## Smart taggning av videoklipp vid överföring {#smart-tag-assets-on-ingestion}
 
-När du [överför videomaterial](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som en Cloud Service ![bearbetas](assets/do-not-localize/assetprocessing.png)videoklippen. När bearbetningen är klar går du till [!UICONTROL Basic] fliken på [!UICONTROL Properties] sidan Resurser. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. asset compute Service använder Adobe Sensei för att skapa dessa smarta taggar.
+När du [överför videomaterial](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som en Cloud Service bearbetas ![videoklippen](assets/do-not-localize/assetprocessing.png). När bearbetningen är klar går du till fliken [!UICONTROL Basic] på sidan [!UICONTROL Properties] för resursen. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. asset compute Service använder Adobe Sensei för att skapa dessa smarta taggar.
 
 ![Smarta taggar läggs till i videoklipp och visas på fliken Grundläggande i resursegenskaper](assets/smart-tags-added-to-videos.png)
 
-De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score-video-tag), kombinerat för object- och action-taggar, i [!UICONTROL Smart Tags].
+De använda smarta taggarna sorteras i fallande ordning i [konfidensintervallet](#confidence-score-video-tag), kombinerat för object- och action-taggar, inom [!UICONTROL Smart Tags].
 
 >[!IMPORTANT]
 >
 >Du rekommenderas att granska dessa automatiskt genererade taggar för att säkerställa att de överensstämmer med ditt varumärke och dess värden.
 
-## Smart taggning av befintliga videor i DAM {#smart-tag-existing-videos}
+## Smart taggning av befintliga videoklipp i DAM {#smart-tag-existing-videos}
 
-De befintliga videomaterialet i DAM är inte automatiskt smarta taggade. Du måste generera smarta taggar manuellt för dem [!UICONTROL Reprocess Assets] manuellt.
+De befintliga videomaterialet i DAM är inte automatiskt smarta taggade. Du måste [!UICONTROL Reprocess Assets] manuellt om du vill generera smarta taggar för dem.
 
 Följ de här stegen för att smart tagga videoresurser eller mappar (inklusive undermappar) med resurser som redan finns i resurskatalogen:
 
-1. Välj [!DNL Adobe Experience Manager] logotypen och välj sedan resurser på [!UICONTROL Navigation] sidan.
+1. Välj logotypen [!DNL Adobe Experience Manager] och välj sedan resurser på sidan [!UICONTROL Navigation].
 
-1. Välj [!UICONTROL Files] att visa gränssnittet Resurser.
+1. Välj [!UICONTROL Files] för att visa gränssnittet Resurser.
 
 1. Navigera till mappen som du vill använda smarta taggar på.
 
 1. Markera hela mappen eller specifika videoresurser.
 
-1. Välj ikonen ![](assets/do-not-localize/reprocess-assets-icon.png) Bearbeta resurser igen [!UICONTROL Reprocess Assets] och välj [!UICONTROL Full Process] alternativet.
+1. Välj ikonen ![Bearbeta resurser](assets/do-not-localize/reprocess-assets-icon.png) [!UICONTROL Reprocess Assets] och välj alternativet [!UICONTROL Full Process].
 
 ![Bearbeta om resurser för att lägga till taggar i videoklipp i en befintlig DAM-databas](assets/reprocess.gif)
 
-När processen är klar navigerar du till [!UICONTROL Properties] sidan för alla videoresurser i mappen. De automatiskt tillagda taggarna visas i [!UICONTROL Smart Tags] avsnittet på [!UICONTROL Basic] fliken. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score-video-tag).
+När processen är klar navigerar du till [!UICONTROL Properties]-sidan för alla videoresurser i mappen. De automatiskt tillagda taggarna visas i avsnittet [!UICONTROL Smart Tags] på fliken [!UICONTROL Basic]. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score-video-tag).
 
 ## Sök efter taggade videofilmer {#search-smart-tagged-videos}
 
 Om du vill söka efter videoresurser baserat på de automatiskt genererade smarta taggarna använder du [Omnissearch](search-assets.md#search-assets-in-aem):
 
-1. Visa ![sökfältet genom att markera sökikonen](assets/do-not-localize/search_icon.png) .
+1. Välj sökikonen ![sökikonen](assets/do-not-localize/search_icon.png) för att visa Omnissearch-fältet.
 
 1. Ange en tagg, i Omnissearch-fältet, som du inte uttryckligen har lagt till i en video.
 
@@ -60,7 +60,7 @@ Om du vill söka efter videoresurser baserat på de automatiskt genererade smart
 
 Sökresultaten visar videoresurserna baserat på den tagg du har angett.
 
-Sökresultaten är en kombination av videomaterial med sökbara nyckelord i metadata och videomaterialet som är smarta taggade med de sökbara nyckelorden. Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i de smarta taggarna. Mer information finns i [ [!DNL Experience Manager] Förstå sökresultat med smarta taggar](smart-tags.md#understandsearch).
+Sökresultaten är en kombination av videomaterial med sökbara nyckelord i metadata och videomaterialet som är smarta taggade med de sökbara nyckelorden. Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i de smarta taggarna. Mer information finns i [Förstå [!DNL Experience Manager] sökresultat med smarta taggar](smart-tags.md#understandsearch).
 
 ## Moderera smarta taggar för video {#moderate-video-smart-tags}
 
@@ -80,25 +80,25 @@ Mer information om hur du modererar smarta taggar för resurser finns i [Hantera
 >
 >Eventuella taggar som modereras med stegen i [Hantera smarta taggar](smart-tags.md#manage-smart-tags-and-searches) sparas inte när resursen bearbetas om. Den ursprungliga uppsättningen taggar visas igen.
 
-## Avanmäl dig från smart taggning av video {#opt-out-video-smart-tagging}
+## Välj bort smarta taggar för video {#opt-out-video-smart-tagging}
 
 När den automatiska taggningen av videor körs parallellt med andra bearbetningsuppgifter som att skapa miniatyrbilder och extrahera metadata kan det vara tidskrävande. Om du vill påskynda resursbearbetningen kan du välja bort smart taggning för video vid överföring på mappnivå.
 
 Så här avanmäler du dig från automatisk generering av smarta videotaggar för resurser som överförts till en viss mapp:
 
-1. Öppna [!UICONTROL Asset Processing] fliken i mappen [!UICONTROL Properties].
+1. Öppna fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties].
 
-1. På [!UICONTROL Smart Tags for Videos] menyn är [!UICONTROL Inherited] alternativet markerat som standard och den smarta taggen för video är aktiverad.
+1. I [!UICONTROL Smart Tags for Videos]-menyn är alternativet [!UICONTROL Inherited] markerat som standard och smart tagg för video är aktiverat.
 
-   När alternativet är [!UICONTROL Inherited] markerat visas den ärvda mappsökvägen tillsammans med informationen om den är inställd på [!UICONTROL Enable] eller [!UICONTROL Disable].
+   När alternativet [!UICONTROL Inherited] är markerat visas även den ärvda mappsökvägen tillsammans med information om den är inställd på [!UICONTROL Enable] eller [!UICONTROL Disable].
 
    ![Inaktivera smart taggning för video](assets/disable-video-tagging.png)
 
-1. Välj [!UICONTROL Disable] om du vill avanmäla dig från smart taggning av videoklipp som överförts till mappen.
+1. Välj [!UICONTROL Disable] om du vill avanmäla dig från smart taggning för videofilmer som överförts till mappen.
 
 >[!IMPORTANT]
 >
->Om du har valt att inte tagga videofilmer i en mapp vid överföringen och vill tagga videofilmerna smart efter överföringen går du till **[!UICONTROL Enable Smart Tags for Videos]** fliken i mappen [!UICONTROL Asset Processing] och använder [!UICONTROL Properties] alternativet [[!UICONTROL Reprocess Asset]](#smart-tag-existing-videos) för att lägga till smarta taggar i videon.
+>Om du har valt att inte längre tagga videoklipp i en mapp vid överföringen och vill tagga videoklippen med smarta taggar efter överföringen kan du lägga till smarta taggar med **[!UICONTROL Enable Smart Tags for Videos]** från fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties] och [[!UICONTROL Reprocess Asset]-alternativet](#smart-tag-existing-videos) för att lägga till smarta taggar i videon.
 
 ## Konfidenspoäng {#confidence-score-video-tag}
 
@@ -106,9 +106,9 @@ Så här avanmäler du dig från automatisk generering av smarta videotaggar fö
 
 Standardtröskelvärdet för action- och object-taggar i [!DNL Adobe Experience Manager] är 0,7 (bör vara ett värde mellan 0 och 1). Om vissa videoresurser inte är taggade med en viss tagg betyder det att algoritmen är mindre än 70 % säker i de förväntade taggarna. Standardtröskelvärdet kanske inte alltid är optimalt för alla användare. Du kan därför ändra konfidensvärdet i OSGI-konfigurationen.
 
-Så här lägger du till OSGI-konfigurationen med konfidensgrad i det projekt som distribueras till [!DNL Adobe Experience Manager] som en Cloud Service via Cloud Manager:
+Så här lägger du till OSGI-konfigurationen med konfidensgrad i projektet som distribuerats till [!DNL Adobe Experience Manager] som en Cloud Service via Cloud Manager:
 
-* I [!DNL Adobe Experience Manager] projektet (`ui.config` sedan Archetype 24 eller tidigare `ui.apps`) innehåller `config.author` OSGi-konfigurationen en konfigurationsfil med namnet `com.adobe.cq.assetcompute.impl.senseisdk.SenseiSdkImpl.cfg.json` med följande innehåll:
+* I [!DNL Adobe Experience Manager]-projektet (`ui.config` sedan Archetype 24, eller tidigare `ui.apps`) och `config.author` OSGi-konfigurationen, inkluderar du en konfigurationsfil med namnet `com.adobe.cq.assetcompute.impl.senseisdk.SenseiSdkImpl.cfg.json` med följande innehåll:
 
 ```json
 {
