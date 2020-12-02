@@ -3,9 +3,9 @@ title: Utvecklarreferenser för [!DNL Assets]
 description: '[!DNL Assets] APIs and developer reference content lets you manage assets, including binary files, metadata, renditions, comments, and [!DNL Content Fragments].'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1203'
 ht-degree: 1%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 # [!DNL Assets] API:er och referensmaterial för utvecklare  {#assets-cloud-service-apis}
 
-Artikeln innehåller referensmaterial och resurser för utvecklare av [!DNL Assets] som en Cloud Service. Det innehåller en ny överföringsmetod, API-referens och information om stödet i efterbehandlingsarbetsflödena.
+Artikeln innehåller referensmaterial och resurser för utvecklare av [!DNL Assets] som [!DNL Cloud Service]. Det innehåller en ny överföringsmetod, API-referens och information om stödet i efterbehandlingsarbetsflödena.
 
 ## Resursöverföring {#asset-upload-technical}
 
-[!DNL Experience Manager] som Cloud Service innehåller en ny metod för att överföra resurser till databasen. Användare kan överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil är:
+[!DNL Experience Manager] som en  [!DNL Cloud Service] ny metod för att överföra resurser till databasen. Användare kan överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil är:
 
 1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]r-distribution av din avsikt att överföra en ny binär fil.
 1. [POST innehållet i ](#upload-binary) binaryen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
@@ -118,7 +118,7 @@ För att lära dig mer om överföringsalgoritmerna eller för att skapa egna ö
 
 <!-- #ENGCHECK review / update the list of deprecated APIs below. -->
 
-Den nya överföringsmetoden stöds bara för [!DNL Adobe Experience Manager] som Cloud Service. API:erna från [!DNL Adobe Experience Manager] 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
+Den nya överföringsmetoden stöds bara för [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. API:erna från [!DNL Adobe Experience Manager] 6.5 är föråldrade. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
 
 * [Experience Manager Assets HTTP API](mac-api-assets.md)
 * `AssetManager` Java API, som  `AssetManager.createAsset(..)`
@@ -138,7 +138,7 @@ Använd standardarbetsflödena med tillägg med anpassade steg för konfiguratio
 
 Kunder som uppgraderar från tidigare versioner av [!DNL Experience Manager] kan använda tillgångsmikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i [!UICONTROL DAM Update Asset]-arbetsflödet i den tidigare versionen stöds inte.
 
-[!DNL Experience Manager] som Cloud Service stöder följande arbetsflödessteg:
+[!DNL Experience Manager] som  [!DNL Cloud Service] stöd för följande arbetsflödessteg:
 
 * `com.day.cq.dam.similaritysearch.internal.workflow.process.AutoTagAssetProcess`
 * `com.day.cq.dam.core.impl.process.CreateAssetLanguageCopyProcess`
@@ -193,5 +193,5 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 -->
 
 >[!MORELIKETHIS]
-* [Experience Cloud som Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
+* [Experience Cloud som  [!DNL Cloud Service] SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
 
