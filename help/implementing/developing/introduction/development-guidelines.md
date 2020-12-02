@@ -34,7 +34,7 @@ Instansens filsystem ska inte användas i AEM som Cloud Service. Disken är till
 
 Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som behöver vara beständiga skickas iväg till en extern tjänst för längre lagring.
 
-## Observera {#observation}
+## Obs {#observation}
 
 På samma sätt kan man inte garantera att allt som sker asynkront, som att agera på observationshändelser, utförs lokalt och därför måste användas med försiktighet. Detta gäller både JCR-händelser och Sling-resurshändelser. När en ändring inträffar kan instansen tas ned och ersättas av en annan instans. Andra instanser i topologin som är aktiva vid den tidpunkten kan reagera på den händelsen. I det här fallet kommer detta dock inte att vara en lokal händelse och det kanske inte ens finns någon aktiv ledare i händelse av ett pågående ledarval när evenemanget utställs.
 
@@ -42,7 +42,7 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Koden måste därför vara flexibel och de flesta importer kan återupptas. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det mer sannolikt att en instans kommer att tas bort i AEM som en Cloud Service.
 
-För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda schemaläggaren för [delningsjobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) så här igen med minst en gång.
+För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda schemaläggaren [Sling Jobs](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) så här igen med minst en körning.
 
 Schemaläggaren för Sling Commons ska inte användas för schemaläggning eftersom körning inte kan garanteras. Det är bara mer sannolikt att det kommer att planeras.
 
@@ -52,12 +52,12 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästidsgränser. För kod som inte tillämpar dessa tidsgränser AEM instanser som körs på AEM som en Cloud Service en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar som används av följande populära Java-bibliotek:
 
-Adobe rekommenderar att du använder det medföljande biblioteket [](https://hc.apache.org/httpcomponents-client-ga/) Apache HttpComponents Client 4.x för att skapa HTTP-anslutningar.
+Adobe rekommenderar att du använder det angivna [Apache HttpComponents Client 4.x-biblioteket](https://hc.apache.org/httpcomponents-client-ga/) för att skapa HTTP-anslutningar.
 
 Alternativ som är kända för att fungera, men som kan kräva att du själv anger beroendet är:
 
-* [java.net.URL](https://docs.oracle.com/javase/7/docs/api/java/net/URL.html) och/eller [java.net.URLConnection](https://docs.oracle.com/javase/7/docs/api/java/net/URLConnection.html) (tillhandahålls av AEM)
-* [Apache Commons HttpClient 3.x](https://hc.apache.org/httpclient-3.x/) (rekommenderas inte eftersom den är inaktuell och ersatt av version 4.x)
+* [java.net.](https://docs.oracle.com/javase/7/docs/api/java/net/URL.html) URLand/or  [java.net.URLConnection](https://docs.oracle.com/javase/7/docs/api/java/net/URLConnection.html) (tillhandahålls av AEM)
+* [Apache Commons HttpClient 3.x](https://hc.apache.org/httpclient-3.x/)  (rekommenderas inte eftersom den är inaktuell och ersatt av version 4.x)
 * [OK HTTP](https://square.github.io/okhttp/) (tillhandahålls inte av AEM)
 
 ## Inga klassiska gränssnittsanpassningar {#no-classic-ui-customizations}
@@ -66,13 +66,13 @@ AEM som Cloud Service stöder endast Touch-gränssnittet för kundkod från tred
 
 ## Undvik inbyggda binärfiler {#avoid-native-binaries}
 
-Koden kommer inte att kunna hämta binärfiler vid körning och inte heller ändra dem. Den kan till exempel inte packa upp `jar` eller packa upp `tar` filer.
+Koden kommer inte att kunna hämta binärfiler vid körning och inte heller ändra dem. Den kan till exempel inte packa upp `jar`- eller `tar`-filer.
 
-## Ingen direktuppspelande binärfiler via AEM som Cloud Service {#no-streaming-binaries}
+## Det finns inga bindningar för direktuppspelning via AEM som en Cloud Service {#no-streaming-binaries}
 
 Binärfiler bör nås via CDN, som kommer att betjäna binärfiler utanför de centrala AEM.
 
-Använd till exempel inte `asset.getOriginal().getStream()`, vilket medför att en binär fil laddas ned till AEM.
+Använd t.ex. inte `asset.getOriginal().getStream()`, som utlöser hämtning av en binär fil till AEM.
 
 ## Inga omvända replikeringsagenter {#no-reverse-replication-agents}
 
@@ -86,7 +86,7 @@ Innehållet replikeras från författare till publicering via en pub-sub-mekanis
 
 ### Loggar {#logs}
 
-För lokal utveckling skrivs loggposterna till lokala filer i `/crx-quickstart/logs` mappen.
+För lokal utveckling skrivs loggposter till lokala filer i mappen `/crx-quickstart/logs`.
 
 I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att avsluta loggarna. <!-- See the [Cloud Manager documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Note that custom logs are not supported and so all logs should be output to the error log. -->
 
@@ -126,13 +126,13 @@ Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande int
 
 ### Lokal utveckling {#local-development}
 
-För lokal utveckling har utvecklare full tillgång till CRXDE Lite (`/crx/de`) och AEM Web Console (`/system/console`).
+För lokal utveckling har utvecklare fullständig åtkomst till CRXDE Lite (`/crx/de`) och AEM webbkonsol (`/system/console`).
 
-Observera att vid lokal utveckling (med molnklar snabbstart) `/apps` och `/libs` kan skrivas direkt till, vilket skiljer sig från molnmiljöer där dessa mappar på den översta nivån inte kan ändras.
+Observera att vid lokal utveckling (med molnklar snabbstart) kan `/apps` och `/libs` skrivas direkt till , vilket skiljer sig från molnmiljöer där mapparna på den översta nivån inte kan ändras.
 
-### AEM as a Cloud Service Development tools {#aem-as-a-cloud-service-development-tools}
+### AEM som ett utvecklingsverktyg för Cloud Service {#aem-as-a-cloud-service-development-tools}
 
-Kunderna har tillgång till CRXDE-stilen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det kommer det att leda till fel.
+Kunderna har tillgång till CRXDE-stilen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det uppstår fel.
 
 En uppsättning verktyg för felsökning AEM som utvecklingsmiljö finns i Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
@@ -142,7 +142,7 @@ Följande CLI-kommando för Cloud Manager kan användas som en genväg för att 
 
 `aio cloudmanager:open-developer-console <ENVIRONMENTID> --programId <PROGRAMID>`
 
-Mer information finns [på den här sidan](/help/release-notes/home.md) .
+Mer information finns på [den här sidan](/help/release-notes/home.md).
 
 Utvecklare kan generera statusinformation och lösa olika resurser.
 
@@ -160,7 +160,7 @@ Utvecklarkonsolen är också användbar vid felsökning och har en länk till ve
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-För vanliga program definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer på både författare och publiceringstjänster för att kunna visa statusdumpdata från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+För vanliga program definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer på både författare och publiceringstjänster för att kunna visa statusdumpdata från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 
 ### AEM för mellanlagring och produktion {#aem-staging-and-production-service}
@@ -171,7 +171,7 @@ Kunderna har inte tillgång till utvecklarverktyg för staging- och produktionsm
 
 Adobe övervakar programmets prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte programmått beaktas.
 
-## IP-adress för dedikerad utpressning {#dedicated-egress-ip-address}
+## IP-adress för dedikerad gruppress {#dedicated-egress-ip-address}
 
 På begäran kommer AEM som Cloud Service att tillhandahålla en statisk, dedikerad IP-adress för HTTP (port 80) och HTTPS (port 443) utgående trafik som programmerats i Java-kod.
 
@@ -211,7 +211,7 @@ Endast HTTP- och HTTPS-portar stöds. Detta inkluderar HTTP/1.1 och HTTP/2 när 
 
 ### Felsökningsöverväganden {#debugging-considerations}
 
-Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. I annat fall kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/ip](https://ifconfig.me/ip), som returnerar den anropande IP-adressen.
+Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. Annars kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/ip](https://ifconfig.me/ip), som returnerar den anropande IP-adressen.
 
 ## Skickar e-post {#sending-email}
 
@@ -226,9 +226,9 @@ Som standard är utgående e-post inaktiverad. Aktivera den genom att skicka en 
 1. Program-id och miljö-id för miljöer som de vill skicka ut från
 1. Oavsett om SMTP-åtkomst krävs för författare, publicering eller båda.
 
-### Skicka e-post {#sending-emails}
+### Skickar e-postmeddelanden {#sending-emails}
 
-CQ [Mail Service OSGI-tjänsten](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) bör användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
+Tjänsten [Day CQ Mail OSGI](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
 
 AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
 
@@ -238,9 +238,9 @@ AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder 
 
 ### Konfiguration {#email-configuration}
 
-E-post i AEM ska skickas med [Day CQ Mail Service OSGi-tjänsten](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
+E-post i AEM ska skickas med tjänsten [Day CQ Mail Service OSGi](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
 
-Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html) . För AEM CS måste följande justeringar göras för `com.day.cq.mailer.DefaultMailService OSGI` tjänsten:
+Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html). För AEM CS måste följande justeringar göras för tjänsten `com.day.cq.mailer.DefaultMailService OSGI`:
 
 Om port 465 har begärts:
 
