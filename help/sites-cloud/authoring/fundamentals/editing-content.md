@@ -27,11 +27,11 @@ Innehåll läggs till med [komponenter](/help/sites-cloud/authoring/features/com
 
 >[!NOTE]
 >
->Om sidan och/eller mallen har konfigurerats på rätt sätt kan du använda [responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md) när du redigerar.
+>Om sidan och/eller mallen har konfigurerats på rätt sätt kan du använda [responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md) vid redigering.
 
 >[!TIP]
 >
->I **redigeringsläget** visas länkar i innehållet, men de är **inte tillgängliga**. Använd [förhandsgranskningsläget](#previewing-pages) om du vill navigera med länkarna i innehållet.
+>I **redigeringsläget** visas länkar i innehållet, men **går inte att komma åt**. Använd [förhandsgranskningsläget](#previewing-pages) om du vill navigera med hjälp av länkarna i innehållet.
 
 ## Verktygsfältet Sida {#page-toolbar}
 
@@ -43,19 +43,19 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 * **Växla sidopanel**
 
-   Då öppnas/stängs sidopanelen, som innehåller [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser), [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser)och [Innehållsträdet](/help/sites-cloud/authoring/fundamentals/environment-tools.md#content-tree).
+   Då öppnas/stängs sidopanelen, som innehåller [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser), [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) och [Innehållsträdet](/help/sites-cloud/authoring/fundamentals/environment-tools.md#content-tree).
 
    ![Växla sida](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
 
 * **Sidinformation**
 
-   Ger åtkomst till menyn [Sidinformation](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information) , inklusive sidinformation och åtgärder som kan vidtas på sidan, inklusive visning och redigering av sidinformation, visning av sidegenskaper samt publicering/avpublicering av sidan.
+   Ger åtkomst till menyn [Sidinformation](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information), inklusive sidinformation och åtgärder som kan vidtas på sidan, inklusive visning och redigering av sidinformation, visning av sidegenskaper och publicering/avpublicering av sidan.
 
    ![Sidinformation, knapp](/help/sites-cloud/authoring/assets/page-information-icon.png)
 
 * **Emulator**
 
-   Växlar verktygsfältet [för](/help/sites-cloud/authoring/features/responsive-layout.md#selecting-a-device-to-emulate)emulatorn, som används för att emulera sidans utseende och känsla på en annan enhet. Detta aktiveras automatiskt i layoutläge.
+   Växlar verktygsfältet [emulator](/help/sites-cloud/authoring/features/responsive-layout.md#selecting-a-device-to-emulate), som används för att emulera sidans utseende och känsla på en annan enhet. Detta aktiveras automatiskt i layoutläge.
 
    ![Emulatorknapp](/help/sites-cloud/authoring/assets/emulator.png)
 
@@ -73,7 +73,7 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 * **Lägesväljare**
 
-   Visar det aktuella [läget](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) och gör att du kan välja ett annat läge, t.ex. redigering, layout, tidsförvrängning eller mål.
+   Visar det aktuella [läget](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) och gör att du kan välja ett annat läge, till exempel redigering, layout, tidsförvrängning eller mål.
 
    ![Lägesväljare, knapp](/help/sites-cloud/authoring/assets/mode-selector.png)
 
@@ -91,7 +91,7 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 ### Statusmeddelande {#status-notification}
 
-Om en sida är en del av ett [arbetsflöde](/help/sites-cloud/authoring/workflows/overview.md) eller flera arbetsflöden visas den här informationen i ett meddelandefält högst upp på skärmen när sidan redigeras.
+Om en sida är en del av ett [arbetsflöde](/help/sites-cloud/authoring/workflows/overview.md) eller flera arbetsflöden, visas den här informationen i ett meddelandefält högst upp på skärmen när sidan redigeras.
 
 ![Meddelande om arbetsflöde](/help/sites-cloud/authoring/assets/editing-workflow-notification.png)
 
@@ -99,19 +99,19 @@ Om en sida är en del av ett [arbetsflöde](/help/sites-cloud/authoring/workflow
 >
 >Statusfältet är bara synligt för användarkonton med lämplig behörighet.
 
-I meddelandet visas arbetsflödet som körs mot sidan. Om användaren är involverad i det aktuella arbetsflödessteget finns även alternativ som [påverkar arbetsflödets status](/help/sites-cloud/authoring/workflows/participating.md) och får mer information om arbetsflödet, som:
+I meddelandet visas arbetsflödet som körs mot sidan. Om användaren är involverad i det aktuella arbetsflödessteget är alternativ för att [påverka arbetsflödets status](/help/sites-cloud/authoring/workflows/participating.md) och få mer information om arbetsflödet också tillgängliga, till exempel:
 
-* **Fullständigt** - Öppnar dialogrutan **Hela arbetsuppgiften**
-* **Delegera** - Öppnar dialogrutan **Hela arbetsuppgiften**
-* **Visa information** - Öppnar fönstret **Detaljer** i arbetsflödet
+* **Fullständigt**  - Öppnar dialogrutan  **Fullständigt** arbetsobjekt
+* **Delegera**  - Öppnar dialogrutan  **Fullständigt** arbetsobjekt
+* **Visa information**  - Öppnar fönstret  **** Detaljer i arbetsflödet
 
-Att slutföra och delegera arbetsflödessteg via meddelandefältet fungerar på samma sätt som när du [deltar i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md) från meddelandeinkorgen.
+Att slutföra och delegera arbetsflödessteg via meddelandefältet fungerar som det gör när [deltar i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md) från meddelandeinkorgen.
 
 Om sidan har flera arbetsflöden visas antalet arbetsflöden till höger om meddelandet tillsammans med pilknapparna så att du kan bläddra igenom arbetsflödena.
 
 ![Flera arbetsflödesmeddelanden](/help/sites-cloud/authoring/assets/editing-workflow-notification-multiple.png)
 
-## Komponentplatshållare {#component-placeholder}
+## Platshållare för komponent {#component-placeholder}
 
 Komponentplatshållaren är en indikator som visar var en komponent placeras när du släpper den - ovanför den komponent som du håller pekaren över.
 
@@ -127,12 +127,12 @@ Komponentplatshållaren är en indikator som visar var en komponent placeras nä
 
 ### Infoga en komponent från komponentwebbläsaren {#inserting-a-component-from-the-components-browser}
 
-Du kan lägga till en ny komponent med [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). Platshållaren [för](#component-placeholder) komponenten visar var komponenten kommer att placeras:
+Du kan lägga till en ny komponent med hjälp av [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). [komponentplatshållaren](#component-placeholder) visar var komponenten kommer att placeras:
 
-1. Kontrollera att sidan är i [**redigeringsläge**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
+1. Kontrollera att sidan är i [**redigeringsläge**.](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes)
 1. Öppna [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser).
-1. Dra den önskade komponenten till [önskad plats](#component-placeholder).
-1. [Redigera](#edit-content) komponenten.
+1. Dra den önskade komponenten till [önskad position](#component-placeholder).
+1. [Redigera ](#edit-content) komponenten.
 
 >[!NOTE]
 >
@@ -140,22 +140,22 @@ Du kan lägga till en ny komponent med [komponentwebbläsaren](/help/sites-cloud
 
 ### Infoga en komponent från styckesystemet {#inserting-a-component-from-the-paragraph-system}
 
-Du kan lägga till en ny komponent genom att använda rutan **Dra komponenter här** i styckesystemet:
+Du kan lägga till en ny komponent genom att använda rutan **Dra komponenter hit** i styckesystemet:
 
-1. Kontrollera att sidan är i [**redigeringsläge**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
+1. Kontrollera att sidan är i [**redigeringsläge**.](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes)
 1. Det finns två sätt att markera och lägga till en ny komponent från styckesystemet:
 
-   * Select the **Insert Component** option (+) from either the toolbar of an existing component or the **Drag components here** box.
+   * Välj alternativet **Infoga komponent** (+) antingen i verktygsfältet för en befintlig komponent eller i rutan **Dra komponenter hit**.
 
       ![Infoga en komponent](/help/sites-cloud/authoring/assets/editing-insert-component.png)
 
-   * Om du använder en stationär enhet kan du dubbelklicka på **Dra komponenter här** .
+   * Om du använder en stationär enhet kan du dubbelklicka på rutan **Dra komponenter hit**.
 
-   * The **Insert New Component** dialog will open to allow you to select your required component:
+   * Dialogrutan **Infoga ny komponent** öppnas så att du kan välja önskad komponent:
 
       ![Infoga ny komponent, dialogruta](/help/sites-cloud/authoring/assets/editing-insert-component-selection.png)
 
-1. Den markerade komponenten läggs till längst ned på sidan. [Redigera](#edit-content) komponenten efter behov.
+1. Den markerade komponenten läggs till längst ned på sidan. [Redigera ](#edit-content) komponenten efter behov.
 
 ### Infoga en komponent med Resursläsaren {#inserting-a-component-using-the-assets-browser}
 
@@ -165,13 +165,13 @@ Det här beteendet kan konfigureras för din installation. Mer information finns
 
 Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
-1. Kontrollera att sidan är i [**redigeringsläge**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
+1. Kontrollera att sidan är i [**redigeringsläge**.](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes)
 1. Öppna [resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser).
-1. Dra den önskade resursen till önskad position. Platshållaren [för](#component-placeholder) komponenten visar var komponenten kommer att placeras.
+1. Dra den önskade resursen till önskad position. [komponentplatshållaren](#component-placeholder) visar var komponenten kommer att placeras.
 
    En komponent som passar resurstypen skapas på den önskade platsen, den innehåller den valda resursen.
 
-1. [Redigera](#edit-content) komponenten vid behov.
+1. [Redigera ](#edit-content) komponenten om det behövs.
 
 >[!NOTE]
 >
@@ -191,13 +191,13 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Redigera**
 
-   [Beroende på komponenttypen](/help/sites-cloud/authoring/fundamentals/components.md) kan du [redigera komponentens](#edit-content)innehåll. Ofta finns det ett verktygsfält.
+   [Beroende på ](/help/sites-cloud/authoring/fundamentals/components.md) komponenttypen kan du  [redigera komponentens](#edit-content) innehåll. Ofta finns det ett verktygsfält.
 
    ![Knappen Redigera](/help/sites-cloud/authoring/assets/editing-component-toolbar-edit.png)
 
 * **Konfigurera**
 
-   [Beroende på komponenttypen](/help/sites-cloud/authoring/fundamentals/components.md) kan du redigera och konfigurera komponentens egenskaper. Ofta öppnas en dialogruta.
+   [Beroende på ](/help/sites-cloud/authoring/fundamentals/components.md) komponenttypen kan du redigera och konfigurera komponentens egenskaper. Ofta öppnas en dialogruta.
 
    ![Knappen Konfigurera](/help/sites-cloud/authoring/assets/editing-component-toolbar-configure.png)
 
@@ -221,7 +221,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Infoga komponent**
 
-   Då öppnas dialogrutan där du kan [lägga till en ny komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#inserting-a-component-from-the-paragraph-system).
+   Dialogrutan öppnas för att [lägga till en ny komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
    ![Infoga, knapp](/help/sites-cloud/authoring/assets/editing-component-toolbar-insert.png)
 
@@ -241,7 +241,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Grupp**
 
-   På så sätt kan du markera flera komponenter samtidigt. Samma sak kan du göra på en stationär enhet genom att **Ctrl-klicka** eller **Kommando-klicka**.
+   På så sätt kan du markera flera komponenter samtidigt. Samma sak kan uppnås på en stationär enhet med ett **Ctrl-klicka** eller **Kommando-klicka**.
 
    ![Gruppera, knapp](/help/sites-cloud/authoring/assets/editing-component-toolbar-group.png)
 
@@ -253,13 +253,13 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Layout**
 
-   På så sätt kan du ändra den markerade komponentens [layout](/help/sites-cloud/authoring/fundamentals/editing-content.md#edit-component-layout) . Detta gäller bara den markerade komponenten och aktiverar inte [layoutläget](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) för hela sidan.
+   På så sätt kan du ändra [layouten](/help/sites-cloud/authoring/fundamentals/editing-content.md#edit-component-layout) för den markerade komponenten. Detta gäller bara den markerade komponenten och aktiverar inte [layoutläget](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) för hela sidan.
 
    ![Knappen Layout](/help/sites-cloud/authoring/assets/editing-component-toolbar-layout.png)
 
 * **Konvertera till en upplevelsefragmentvariation**
 
-   På så sätt kan du skapa ett nytt [upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) från den valda komponenten eller lägga till det i ett befintligt upplevelsefragment.
+   Detta gör att du kan skapa ett nytt [upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) från den valda komponenten eller lägga till det i ett befintligt upplevelsefragment.
 
    ![Knappen Konvertera till Experience Fragment](/help/sites-cloud/authoring/assets/editing-component-toolbar-xf.png)
 
@@ -268,13 +268,13 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 Det finns två sätt att lägga till och/eller redigera innehåll i komponenter:
 
 * Öppna [komponentdialogrutan för redigering](#component-edit-dialog).
-* [Dra och släpp en resurs](#drag-and-drop-assets-into-component) från resursläsaren för att lägga till innehåll direkt.
+* [Dra och släpp en resurs ](#drag-and-drop-assets-into-component) från resursläsaren för att lägga till innehåll direkt.
 
 ### Dialogrutan Komponentredigering {#component-edit-dialog}
 
 Du kan öppna en komponent och redigera innehållet med ikonen [Redigera (penna) i komponentverktygsfältet](#component-toolbar).
 
-De exakta redigeringsalternativen beror på komponenten. För vissa komponenter är [alla åtgärder bara tillgängliga i helskärmsläge](#edit-content-full-screen-mode). Till exempel:
+De exakta redigeringsalternativen beror på komponenten. För vissa komponenter [är alla åtgärder bara tillgängliga i helskärmsläge](#edit-content-full-screen-mode). Till exempel:
 
 * Textkomponent
 
@@ -298,7 +298,7 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
 * Komponenter som har konstruerats av mer än en grundläggande komponent ber dig först bekräfta vilken uppsättning redigeringsalternativ du vill ha:
 
-### Dra och släpp resurser till komponent {#drag-and-drop-assets-into-component}
+### Dra och släpp resurser till komponenten {#drag-and-drop-assets-into-component}
 
 För specifika komponenttyper (t.ex. bilder) kan du dra och släppa resurser från resursläsaren direkt till komponenten för att uppdatera innehållet.
 
@@ -308,7 +308,7 @@ För alla komponenter går det att komma åt helskärmsläget med (och avsluta f
 
 ![Knappen Helskärm](/help/sites-cloud/authoring/assets/editing-full-screen.png)
 
-Komponenten **Text** :
+Komponenten **Text**:
 
 ![Textkomponent i helskärmsläge](/help/sites-cloud/authoring/assets/editing-text-full-screen.png)
 
@@ -335,11 +335,11 @@ Så här flyttar du en styckekomponent:
 
 I stället för att växla från redigeringsläge till [layoutläge](/help/sites-cloud/authoring/features/responsive-layout.md) gång på gång för att justera en komponent, kan du välja åtgärden **Layout** för en komponent när du vill ändra dess layout och spara tid eftersom du slipper lämna redigeringsläget.
 
-1. När du väljer en komponent i **redigeringsläget** för platskonsolen visas komponentens verktygsfält.
+1. Om du väljer en komponent i läget **Redigera** för platskonsolen visas komponentens verktygsfält när du väljer en komponent.
 
    ![Komponentverktygsfältet för en sidkomponent](/help/sites-cloud/authoring/assets/editing-layout-toolbar.png)
 
-   Justera komponentens layout genom att klicka på eller trycka på **Layout** .
+   Klicka eller tryck på åtgärden **Layout** för att justera komponentens layout.
 
    ![Knappen Layout i komponentverktygsfältet](/help/sites-cloud/authoring/assets/editing-component-toolbar-layout.png)
 
@@ -353,7 +353,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
    Nu kan du ändra komponentens layout på samma sätt som i [layoutläget](/help/sites-cloud/authoring/features/responsive-layout.md#defining-layouts-layout-mode).
 
-1. När du har gjort de nödvändiga layoutändringarna klickar du på **Stäng** på komponentens åtgärdsmeny för att sluta ändra komponentens layout. Komponentens verktygsfält återgår till det normala redigeringsläget.
+1. När du har gjort de nödvändiga layoutändringarna klickar du på knappen **Stäng** på komponentens åtgärdsmeny för att sluta ändra komponentens layout. Komponentens verktygsfält återgår till det normala redigeringsläget.
 
    ![Komponentverktygsfältet för en sidkomponent](/help/sites-cloud/authoring/assets/editing-layout-exit.png)
 
@@ -361,14 +361,14 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 >
 >Layoutåtgärden är begränsad i omfång till den markerade komponenten. Om du till exempel redigerar layouten för en komponent och sedan klickar på en annan komponent, visas standardverktygsfältet för redigering (inte layoutverktygsfältet) för den nyligen markerade komponenten, storleksändringshandtagen samt emulatorns verktygsfält.
 >
->Om du behöver redigera den övergripande layouten för sidan, vilket påverkar flera komponenter, växlar du till [layoutläget](/help/sites-cloud/authoring/features/responsive-layout.md).
+>Om du behöver redigera sidans övergripande layout, som påverkar flera komponenter, växlar du till layoutläget [](/help/sites-cloud/authoring/features/responsive-layout.md).
 
 ## Ärvda komponenter {#inherited-components}
 
 Arv är den mekanism där innehåll automatiskt kan skickas från en komponent till en annan. Ärvda komponenter kan vara produkten av olika scenarier, bland annat:
 
 * Hantering av flera webbplatser <!--[Multi site management](/help/sites-administering/msm.md)-->
-* [Startar](/help/sites-cloud/authoring/launches/overview.md) (baserat på live-kopia).
+* [Startar](/help/sites-cloud/authoring/launches/overview.md)  (baserat på live-kopia).
 
 Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent det är kan den här funktionen vara tillgänglig från komponentens verktygsfält, om komponenten finns på en sida som är en del av en live-kopia eller en livestart (baserad på en live-kopia).
 
@@ -396,7 +396,7 @@ Du kan enkelt se vilken mall sidan baseras på när du markerar sidan i [kolumnv
 
 ## Live Copy-status {#live-copy-status}
 
-I [läget](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) Live Copy Status kan du snabbt se vilken status kopian har och vilka komponenter som inte ärvs:
+I sidläget [Live Copy Status](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) kan du snabbt se vilken status kopian har och vilka komponenter som inte ärvs:
 
 * Grön kantlinje: Ärvd
 * Rosa kantlinje: Arvet har annullerats
@@ -405,22 +405,22 @@ Till exempel:
 
 ![Exempel på live-kopieringsstatus som visas](/help/sites-cloud/authoring/assets/editing-live-copy-status.png)
 
-## Lägga till anteckningar {#adding-annotations}
+## Lägger till anteckningar {#adding-annotations}
 
-[Med anteckningar](/help/sites-cloud/authoring/fundamentals/annotations.md) kan granskare och andra författare ge feedback på ditt innehåll. De används ofta för granskning och validering.
+[Med ](/help/sites-cloud/authoring/fundamentals/annotations.md) kommentarer kan granskare och andra författare ge feedback på ditt innehåll. De används ofta för granskning och validering.
 
 ## Förhandsgranska sidor {#previewing-pages}
 
 Det finns två alternativ för att förhandsgranska en sida:
 
-* [Förhandsgranskningsläge](#preview-mode) - en snabb förhandsgranskning på plats
-* [Visa som publicerad](#view-as-published) - en fullständig förhandsgranskning som öppnar sidan på en ny flik
+* [Förhandsgranskningsläge](#preview-mode)  - en snabb förhandsgranskning på plats
+* [Visa som publicerad](#view-as-published)  - en fullständig förhandsgranskning som öppnar sidan på en ny flik
 
 >[!TIP]
 >
 >* Länkarna i innehållet är synliga, men inte tillgängliga i redigeringsläget.
 >* Använd något av förhandsvisningsalternativen om du vill navigera med hjälp av länkarna.
->* Använd [kortkommandot](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) för att växla mellan förhandsvisning och det senast markerade läget `Ctrl-Shift-M` .
+>* Använd kortkommandot [](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) `Ctrl-Shift-M` för att växla mellan förhandsvisning och det senast valda läget.
 
 
 >[!NOTE]
@@ -429,11 +429,11 @@ Det finns två alternativ för att förhandsgranska en sida:
 
 ### Förhandsgranskningsläge {#preview-mode}
 
-När du redigerar innehåll kan du förhandsgranska sidan i [förhandsgranskningsläget](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes). Det här läget:
+När du redigerar innehåll kan du förhandsgranska sidan med förhandsgranskningsläget [](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes). Det här läget:
 
 * Döljer olika redigeringsmekanismer så att du snabbt kan se hur sidan kommer att se ut vid publiceringen.
 * Gör att du kan använda länkar för att navigera.
-* Uppdaterar **inte** sidinnehållet.
+* Uppdaterar inte **sidinnehållet.**
 
 Vid redigering är förhandsgranskningsläget tillgängligt med hjälp av ikonen längst upp till höger i sidredigeraren:
 
@@ -441,7 +441,7 @@ Vid redigering är förhandsgranskningsläget tillgängligt med hjälp av ikonen
 
 ### Visa som publicerad {#view-as-published}
 
-Alternativet **Visa som publicerad** finns på menyn [Sidinformation](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information) . Sidan öppnas på en ny flik, innehållet uppdateras och sidan visas exakt som den kommer att visas i publiceringsmiljön.
+Alternativet **Visa som publicerad** är tillgängligt på menyn [Sidinformation](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information). Sidan öppnas på en ny flik, innehållet uppdateras och sidan visas exakt som den kommer att visas i publiceringsmiljön.
 
 ## Låsa en sida {#locking-a-page}
 
@@ -449,7 +449,7 @@ AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här ä
 
 En sida kan låsas från:
 
-* **Platskonsol**
+* **** Platskonsol
 
    1. Markera sidan med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
    1. Välj låsikonen.
@@ -458,8 +458,8 @@ En sida kan låsas från:
 
 * **Page Editor**
 
-   1. Öppna menyn genom att klicka på ikonen **Sidinformation** .
-   1. Select the **Lock Page** option.
+   1. Välj ikonen **Sidinformation** för att öppna menyn.
+   1. Välj alternativet **Lås sida**.
 
 När konsolvyn är låst uppdateras informationen och när du redigerar en låssymbol visas den i verktygsfältet.
 
@@ -476,7 +476,7 @@ När konsolvyn är låst uppdateras informationen och när du redigerar en låss
 
 ## Låsa upp en sida {#unlocking-a-page}
 
-Att låsa upp en sida påminner mycket om att [låsa sidan](#locking-a-page). När sidan är låst ersätts låsalternativen av upplåsningsåtgärder.
+Att låsa upp en sida påminner mycket om [att låsa sidan](#locking-a-page). När sidan är låst ersätts låsalternativen av upplåsningsåtgärder.
 
 På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen på Sites-konsolen ersätts av en **Lås upp**-ikon.
 
@@ -499,13 +499,13 @@ Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i ver
 
 >[!TIP]
 >
->* Det [går även att ångra sidredigeringsåtgärder via](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) kortkommandot `Ctrl-Z` .
+>* [kortkommandot](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) `Ctrl-Z` är även tillgängligt för att ångra sidredigeringsåtgärder.
 >* Kortkommandot `Ctrl-Y` är även tillgängligt för att göra om sidredigeringsåtgärder.
 
 
 >[!NOTE]
 >
->Se [Ångra och Gör om sidredigeringar - Teoriet](#undoing-and-redoing-page-edits-the-theory) innehåller alla detaljer om vad som är möjligt när du ångrar och gör om sidredigeringar.
+>Se [Ångra och Gör om sidredigeringar - Teoriet](#undoing-and-redoing-page-edits-the-theory) för mer information om vad som är möjligt när du ångrar och gör om sidredigeringar.
 
 ## Ångra och göra om sidredigeringar - The Theory {#undoing-and-redoing-page-edits-the-theory}
 
