@@ -62,7 +62,7 @@ Du kan ta bort alla AEM Assets-specifika arbetsflöden, komponenter, taxonomier,
 
 I det här fallet behöver du inte köpa AEM Assets, inte ens mediebiblioteket behöver använda bilder på en webbplats eftersom den smarta bildkomponenten tillåter att bilder överförs direkt till sidan.
 
-## En detaljerad lista över funktioner som är tillgängliga i AEM Assets och mediebiblioteket {#listoffeatures}
+## En detaljlista med funktioner som är tillgängliga i AEM Assets eller mediebiblioteket {#listoffeatures}
 
 **AEM Assets**
 
