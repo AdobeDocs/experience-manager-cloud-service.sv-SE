@@ -5,9 +5,9 @@ breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: 6dea6ac6cdadfe64ad47d492ea502fe3babd155d
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '467'
 ht-degree: 69%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 69%
 
 # [!DNL Assets] Guide  {#assets}
 
-+ [[!DNL Assets] som en Cloud Service](/help/assets/home.md)
++ [[!DNL Assets] som [!DNL Cloud Service]](/help/assets/home.md)
 + [Översikt och nyheter](overview.md)
-+ [Betydande ändringar  [!DNL Assets] som en Cloud Service](assets-cloud-changes.md)
++ [Noterbara ändringar  [!DNL Assets] i [!DNL Cloud Service]](assets-cloud-changes.md)
 + [[!DNL Assets] arkitektur](architecture.md)
 + [Filformat som stöds](file-format-support.md)
 + [Översikt över mikrotjänster för material](asset-microservices-overview.md)
