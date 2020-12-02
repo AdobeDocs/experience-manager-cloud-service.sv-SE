@@ -16,18 +16,18 @@ Databasmodernisering är ett verktyg som utvecklats för att strukturera om befi
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager som Cloud Service innehåller många nya funktioner och möjligheter i dina AEM projekt. Det krävs dock vissa förändringar i Adobe Experience Manager Maven-projekten för att de ska vara kompatibla med AEM Cloud Service. På en hög nivå kräver AEM en separation av **innehåll** och **kod** i diskreta delpaket för att respektera uppdelningen mellan muterbart och oföränderligt innehåll. Se [AEM projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) för mer information om den nya AEM projektstrukturen för Cloud Service.
+Adobe Experience Manager som Cloud Service innehåller många nya funktioner och möjligheter i dina AEM projekt. Det krävs dock vissa förändringar i Adobe Experience Manager Maven-projekten för att de ska vara kompatibla med AEM Cloud Service. På en hög nivå kräver AEM en separation av **innehåll** och **kod** i diskreta underpaket för att respektera delningen mellan muterbart och oföränderligt innehåll. Mer information om den nya AEM projektstrukturen för Cloud Service finns i [AEM projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html).
 
 Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service genom att skapa följande distributionsstruktur:
 
-* `ui.apps` paketet distribuerar till `/apps` och innehåller all kod
+* `ui.apps` paket distribuerar till  `/apps` och innehåller all kod
 
-* `ui.content` paket distribuerar till områden som kan skrivas under körning (t.ex. `/content`, `/conf`, `/home`eller något annat som inte `/apps`) och innehåller allt innehåll och all konfiguration.
+* `ui.content` paket distribuerar till områden som kan skrivas under körning (t.ex.  `/content`,  `/conf`,  `/home`eller något annat som inte  `/apps`) och innehåller allt innehåll och all konfiguration.
 
-* `all` paketet är ett behållarpaket som innehåller underpaketen `ui.apps` och `ui.content`.
+* `all` paketet är ett behållarpaket som innehåller underpaketen  `ui.apps` och  `ui.content`.
 
 >[!NOTE]
->Projektstrukturen baseras på *Arketyp 24* för paket och deras `pom.xml/filter.xml files`. Mer information finns i [Archetype 24](https://github.com/adobe/aem-project-archetype) .
+>Projektstrukturen baseras på *Arketyp 24* för paket och deras `pom.xml/filter.xml files`. Mer information finns i [Archetype 24](https://github.com/adobe/aem-project-archetype).
 
 ## Använda Repository Modernizer {#using-repo-modernizer}
 
