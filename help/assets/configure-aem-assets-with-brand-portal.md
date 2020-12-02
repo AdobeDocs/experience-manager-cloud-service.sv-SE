@@ -1,23 +1,23 @@
 ---
-title: Konfigurera AEM Assets som en Cloud Service med varumärkesportalen
+title: Konfigurera AEM Assets som en [!DNL Cloud Service] med varumärkesportalen
 description: Konfigurera AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1510'
 ht-degree: 21%
 
 ---
 
 
-# Konfigurera AEM Assets som en Cloud Service med varumärkesportalen {#configure-aem-assets-with-brand-portal}
+# Konfigurera AEM Assets som en [!DNL Cloud Service] med varumärkesportalen {#configure-aem-assets-with-brand-portal}
 
-När du konfigurerar Adobe Experience Manager Assets Brand Portal kan du publicera godkända varumärkesresurser från Adobe Experience Manager Assets som en instans av Cloud Servicen på Brand Portal och distribuera dem till Brand Portal-användare.
+När du konfigurerar Adobe Experience Manager Assets Brand Portal kan du publicera godkända varumärkesresurser från Adobe Experience Manager Assets som en [!DNL Cloud Service]-instans på varumärkesportalen och distribuera dem till användarna på varumärkesportalen.
 
 **Arbetsflöde för konfiguration**
 
-AEM Assets som Cloud Service konfigureras med varumärkesportalen via Adobe Developer Console, som köper en kontotoken för Adobe Identity Management Services (IMS) för auktorisering av innehavaren av varumärkesportalen. Det kräver konfigurationer i båda programmen, AEM Assets och Adobe Developer Console.
+AEM Assets som [!DNL Cloud Service] har konfigurerats med Brand Portal via Adobe Developer Console, som köper en kontotoken för Adobe Identity Management Services (IMS) för godkännande av Brand Portal-klienten. Det kräver konfigurationer i båda programmen, AEM Assets och Adobe Developer Console.
 
 1. Skapa ett IMS-konto i AEM Assets och generera en offentlig nyckel (certifikat).
 1. Skapa ett projekt för din varumärksportal (organisation) i Adobe Developer Console.
@@ -29,13 +29,13 @@ AEM Assets som Cloud Service konfigureras med varumärkesportalen via Adobe Deve
 
 >[!NOTE]
 >
->En AEM Assets som Cloud Service får endast konfigureras med en Brand Portal-klient.
+>En AEM Assets som en [!DNL Cloud Service]-instans ska bara konfigureras med en Brand Portal-klient.
 
 ## Förutsättningar {#prerequisites}
 
 Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
-* En AEM Assets som körs som en Cloud Service
+* En AEM Assets som körs som en [!DNL Cloud Service]-instans
 * En klientorganisations-URL
 * En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient
 
@@ -51,7 +51,7 @@ Utför följande steg i den angivna sekvensen för att konfigurera AEM Assets me
 
 ### Skapa IMS-konfigurationen {#create-ims-configuration}
 
-IMS-konfigurationen autentiserar din AEM Assets som en Cloud Service med innehavaren av varumärkesportalen.
+IMS-konfigurationen autentiserar din AEM Assets som en [!DNL Cloud Service]-instans med innehavaren av varumärkesportalen.
 
 IMS-konfigurationen har två steg:
 
@@ -231,7 +231,7 @@ Så här konfigurerar du molntjänsten Brand Portal:
 
 1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen har skapats.
 
-   Din AEM Assets som Cloud Service är nu konfigurerad med innehavaren av varumärkesportalen.
+   Din AEM Assets som en [!DNL Cloud Service]-instans har nu konfigurerats med innehavaren av varumärkesportalen.
 
 ### Testa konfigurationen {#test-configuration}
 
@@ -262,7 +262,7 @@ Utför följande steg för att validera konfigurationen:
 
    ![](assets/test-bpconfig3.png)
 
-1. Kontrollera anslutningen mellan AEM Assets som Cloud Service och varumärkesportal genom att klicka på ikonen **[!UICONTROL Test Connection]**.
+1. Om du vill verifiera anslutningen mellan AEM Assets som en [!DNL Cloud Service]- och varumärkesportal klickar du på ikonen **[!UICONTROL Test Connection]**.
 
    ![](assets/test-bpconfig4.png)
 
