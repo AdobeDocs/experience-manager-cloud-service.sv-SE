@@ -1,18 +1,18 @@
 ---
-title: Betydande förändringar i Adobe Experience Manager Assets som Cloud Service
-description: Betydande förändringar av Adobe Experience Manager Assets i AEM Cloud Service jämfört med Adobe Experience Manager 6.5.
+title: Betydande förändringar i Adobe Experience Manager Assets som en [!DNL Cloud Service]
+description: Betydande förändringar av Adobe Experience Manager Assets i AEM [!DNL Cloud Service] jämfört med Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 7%
+source-wordcount: '594'
+ht-degree: 2%
 
 ---
 
 
-# Betydande ändringar av Experience Manager Assets som en Cloud Service {#notable-changes}
+# Nollbara ändringar i Experience Manager Assets som [!DNL Cloud Service] {#notable-changes}
 
-Adobe Experience Manager som Cloud Service har många nya funktioner och möjligheter att hantera dina AEM projekt. Det finns dock många skillnader mellan Experience Manager Assets på plats eller i Adobe Managed Service jämfört med Experience Manager som Cloud Service. Det här dokumentet belyser de viktiga skillnaderna i Assets-funktioner.
+Adobe Experience Manager som [!DNL Cloud Service] har många nya funktioner och möjligheter att hantera dina AEM projekt. Det finns dock många skillnader mellan Experience Manager Assets på plats eller i Adobe Managed Service jämfört med Experience Manager som en [!DNL Cloud Service]. Det här dokumentet belyser de viktiga skillnaderna i Assets-funktioner.
 
 De största skillnaderna jämfört med Experience Manager 6.5 är inom följande områden:
 
@@ -22,14 +22,14 @@ De största skillnaderna jämfört med Experience Manager 6.5 är inom följande
 
 >[!NOTE]
 >
->Det här dokumentet markerar de anmärkningsvärda ändringarna av AEM Assets. Om du vill ändra AEM som en Cloud Service och andra moduler läser du:
+>Det här dokumentet markerar de anmärkningsvärda ändringarna av AEM Assets. Mer information om ändringar som gäller för Experience Manager som [!DNL Cloud Service] och andra moduler finns i:
 >
->* [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
->* En [översikt över AEM som en Cloud Service - What is New and What is Different](/help/overview/what-is-new-and-different.md)
->* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
->* [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
->* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
->* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
+>* [En introduktion till Adobe Experience Manager as a [!DNL Cloud Service]](/help/overview/introduction.md)
+>* En [översikt över AEM som a [!DNL Cloud Service] - What is New and What is Different](/help/overview/what-is-new-and-different.md)
+>* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a [!DNL Cloud Service]
+>* [Noterbara ändringar i AEM som en [!DNL Cloud Service]  (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+>* [Betydande förändringar av AEM Sites som [!DNL Cloud Service]](/help/sites-cloud/sites-cloud-changes.md)
+>* [Adobe Experience Manager som  [!DNL Cloud Service] självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 
 
 ## Tillgångsintag och överföring {#asset-ingestion}
@@ -56,4 +56,4 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 
 ## Ta bort det klassiska användargränssnittet {#classic-ui}
 
-Det klassiska användargränssnittet är inte längre tillgängligt i Experience Manager som Cloud Service. Standardgränssnittet är det pekaktiverade gränssnittet.
+Det klassiska användargränssnittet är inte längre tillgängligt i Experience Manager som [!DNL Cloud Service]. Standardgränssnittet är det pekaktiverade gränssnittet.
