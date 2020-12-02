@@ -14,7 +14,7 @@ ht-degree: 6%
 
 I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
 
-## Grunderna i sökning {#search-basics}
+## Sökgrunder {#search-basics}
 
 Sökfunktionen finns i det övre verktygsfältet:
 
@@ -24,11 +24,11 @@ Med sökfältet kan du:
 
 * Sök efter ett specifikt nyckelord, en viss sökväg eller en viss tagg
 * Filtrera enligt resursspecifika kriterier som ändrade datum, sidstatus, filstorlek osv.
-* Definiera och använd en [sparad sökning](#saved-searches) baserat på ovanstående villkor
+* Definiera och använd en [sparad sökning](#saved-searches) - baserat på ovanstående villkor
 
 >[!NOTE]
 >
->Sökfunktionen kan också anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
+>Sökningen kan också anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
 
 ## Sök och filtrera {#search-and-filter}
 
@@ -49,7 +49,7 @@ Så här söker och filtrerar du resurser:
 
    ![Sökresultat](/help/sites-cloud/authoring/assets/search-results.png)
 
-1. Om du vill gå vidare väljer du Rail-symbolen (längst upp till vänster) för att öppna sidopanelens **filter och alternativ**.
+1. Om du vill gå vidare väljer du Rail-symbolen (längst upp till vänster) för att öppna sidopanelen **Filter och alternativ**.
 
    ![Rail, knapp](/help/sites-cloud/authoring/assets/rail-button.png)
 
@@ -105,7 +105,7 @@ Förutom att söka efter en mängd olika aspekter kan du även spara en viss sö
 1. När du har sparat kan du:
 
    * Använd **x** (mot namnet på den sparade sökningen) för att starta en ny fråga (den sparade sökningen tas inte bort).
-   * **Redigera sparad sökning**, ändra sökvillkoren och **spara** igen.
+   * **Redigera sparad sökning**, ändra sökvillkoren och  **** spara igen.
 
 Du kan ändra sparade sökningar genom att markera den sparade sökningen och klicka på **Redigera sparad sökning** längst ned på sökpanelen.
 
