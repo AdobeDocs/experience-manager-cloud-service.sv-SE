@@ -1,11 +1,11 @@
 ---
 title: Hjälpmedel i [!DNL Experience Manager Assets]
-description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] som Cloud Service kan hjälpa användare med funktionshinder.
+description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] kan hjälpa användare med funktionshinder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1dc278c85a1dabdd3e6ac4c0de95271d9da3260c
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '1893'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Possible topics to cover in this article are below.
   * Link to a11y-specific online methods to report issues, seek support, or request enhancements, if any. Asked the a11y team on Slack.
 -->
 
-# Tillgänglighetsfunktioner i [!DNL Adobe Experience Manager Assets] som en Cloud Service {#accessibility-in-aem-assets}
+# Hjälpmedelsfunktioner i [!DNL Adobe Experience Manager Assets] som [!DNL Cloud Service] {#accessibility-in-aem-assets}
 
 [!DNL Adobe Experience Manager] gör att skribenter och utgivare kan leverera fantastiska upplevelser på webben. Adobe strävar efter att inkludera personer som skapar funktionshinder genom att förbättra tillgängligheten för [!DNL Experience Manager]. Programmen har ständigt förbättrats för att uppfylla behoven hos alla typer av användare och följer världsstandarden som omfattar personer med nedsatt syn, hörsel, mobilitet eller andra funktionshinder.
 
