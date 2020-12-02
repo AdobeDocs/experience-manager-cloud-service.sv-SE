@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # Komma igång med AEM Commerce som Cloud Service {#start}
 
-För att komma igång med AEM Commerce som Cloud Service måste Experience Manager Cloud Servicen etableras med tillägget Commerce Integration Framework (CIF). Tillägget CIF är en extra modul ovanpå [AEM Sites som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html).
+För att komma igång med AEM Commerce som Cloud Service måste Experience Manager Cloud Servicen etableras med tillägget Commerce Integration Framework (CIF). CIF-tillägget är en extra modul ovanpå [AEM Sites som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/37843?quality=12&learn=on)
 
@@ -35,26 +35,26 @@ När du har etablerats med CIF-tillägget kommer det att tillämpas på alla bef
 
 Det andra steget är självbetjäning för varje AEM som en Cloud Service-miljö. Det finns ytterligare konfigurationer du behöver göra efter den första etableringen av CIF-tillägget.
 
-## Koppla AEM handel med Magento {#magento}
+## Ansluta AEM med Magento {#magento}
 
-Om du vill ansluta CIF-tillägget och [AEM CIF Core-komponenter](https://github.com/adobe/aem-core-cif-components) till Magento-miljön måste du ange Magento GraphQL-slutpunkts-URL:en via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
+Om du vill ansluta CIF-tillägget och [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) till Magento-miljön måste du ange Magento GraphQL-slutpunkts-URL:en via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
 En Magento-URL för GraphQL-slutpunkt kan användas som en Cloud Service för varje AEM. På så sätt kan projekt koppla AEM mellanlagringsmiljöer med Magento och AEM produktionsmiljö till ett produktionssystem i Magento. Magento GraphQL-slutpunkten måste vara allmänt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte.
 
 Så här ansluter du AEM Commerce till Magento:
 
 1. Skaffa Adobe I/O CLI med plugin-programmet Cloud Manager
 
-   Läs dokumentationen [för](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Adobe Cloud Manager om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+   Läs [Adobe Cloud Manager-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager CLI plugin](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 2. Autentisera CLI med AEM som ett Cloud Service-program
 
-3. Ange `COMMERCE_ENDPOINT` variabeln i Cloud Manager
+3. Ange variabeln `COMMERCE_ENDPOINT` i Cloud Manager
 
    ```bash
    aio cloudmanager:set-environment-variables ENVIRONMENT_ID --variable COMMERCE_ENDPOINT "<Magento GraphQL endpoint URL>"
    ```
 
-   Mer information finns i [CLI-dokument](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) .
+   Mer information finns i [CLI-dokument](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid).
 
    Magento-URL:en för GraphQL-slutpunkten måste peka på Magento GraphQl-tjänsten och använda en säker HTTPS-anslutning. Till exempel: `https://demo.magentosite.cloud/graphql`.
 
@@ -64,10 +64,10 @@ Så här ansluter du AEM Commerce till Magento:
 
 >[!NOTE]
 >
->Du kan även använda API:t [för](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html) Cloud Manager för att konfigurera Cloud Manager-variabler.
+>Du kan också använda [Cloud Manager API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html) för att konfigurera Cloud Manager-variabler.
 
 Detta gör att du kan använda AEM Commerce som Cloud Service och driftsätta ditt projekt via Cloud Manager.
 
 ## E-handelsintegreringar från tredje part {#integrations}
 
-För e-handelsintegreringar från tredje part krävs ett [API-mappningslager](architecture/third-party.md) för att ansluta AEM Commerce som en Cloud Service och CIF Core Components till ert e-handelssystem. API-mappningslagret distribueras vanligtvis på Adobe I/O Runtime. Kontakta din säljare för att få information om tillgängliga integreringar och tillgång till Adobe I/O Runtime.
+För e-handelsintegreringar från tredje part krävs ett [API-mappningslager](architecture/third-party.md) för att ansluta AEM Commerce som en Cloud Service och CIF Core Components med ditt handelssystem. API-mappningslagret distribueras vanligtvis på Adobe I/O Runtime. Kontakta din säljare för att få information om tillgängliga integreringar och tillgång till Adobe I/O Runtime.
