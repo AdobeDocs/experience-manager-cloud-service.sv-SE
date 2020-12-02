@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Begränsningar för redigerare {#editor-limitations}
+# Redigeringsbegränsningar {#editor-limitations}
 
 Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare. På den här sidan sammanfattas dessa begränsningar och lösningar eller tillfälliga lösningar ges där det är möjligt.
 
@@ -20,13 +20,13 @@ En författare kan stöta på följande funktionella begränsningar när han ell
 
 ### Länkar som inte är aktiva {#links-not-active}
 
-Länkarna är inte aktiva när du [redigerar en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md).
+När [redigerar en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md) är länkar inte aktiva.
 
-* [Växla till **förhandsgranskningsläget**](/help/sites-cloud/authoring/fundamentals/editing-content.md#preview-mode) om du vill navigera med hjälp av länkarna i ditt innehåll.
+* [Växla till  **** ](/help/sites-cloud/authoring/fundamentals/editing-content.md#preview-mode) Förhandsgranskningsläge om du vill navigera med hjälp av länkarna i ditt innehåll.
 
-### Strukturera sidor {#structure-pages}
+### Struktursidor {#structure-pages}
 
-Sidor kan inte namnges `structure`. Sidor med namn `structure` går inte att redigera i sidredigeraren.
+Sidorna kan inte ha namnet `structure`. Sidor med namnet `structure` kan inte redigeras i sidredigeraren.
 
 ## CSS-begränsningar {#css-limitations}
 
@@ -38,7 +38,7 @@ Absolut positionerade element kan orsaka problem i positionen för deras övert�
 
 * Om det inträffar måste du kontrollera att dimensionerna för det absolut placerade elementet är korrekta eftersom redigeraren kommer att skapa en övertäckning med exakt samma dimensioner.
 
-### vh Enheter {#vh-units}
+### vh enheter {#vh-units}
 
 `vh` enheter stöds inte eftersom iframe-höjden måste justeras automatiskt av AEM.
 
@@ -46,7 +46,7 @@ Absolut positionerade element kan orsaka problem i positionen för deras övert�
 
 Fasta bakgrundsbilder kanske inte visas som fasta vid bläddring eftersom de är inbäddade i en iframe.
 
-* Om du väljer **Visa sida som publicerad** i sidhuvudsfältet visas sidan korrekt.
+* Om du väljer **Visa sidan som Publicerad** i sidhuvudsfältets åtgärder visas sidan korrekt.
 
 ### 100 % höjd {#height}
 
@@ -64,7 +64,7 @@ body {
 }
 ```
 
-### Komprimera marginal {#margin-collapsing}
+### Marginalen komprimeras {#margin-collapsing}
 
 Problem med att komprimera marginaler visas om det första underordnade elementet i body-elementet har en marginal.
 
