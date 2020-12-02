@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 7e8c794752073da0b4815c97dc53282989cd3fb5
 workflow-type: tm+mt
-source-wordcount: '1916'
+source-wordcount: '1874'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager] berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildsfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
 
-Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste uppladdningen av webbläsare finns det andra metoder att lägga till resurser i Experience Manager-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller Experience Manager, överförings- och förtäringsskript som kunderna skulle skapa samt automatiserade importfunktioner som lagts till som Experience Manager-tillägg.
+Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste webbläsaröverföringen finns det andra metoder att lägga till resurser i [!DNL Experience Manager]-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller [!DNL Experience Manager]-skrivbordsapp, överförings- och förtäringsskript som kunder skulle skapa samt automatiserade importfunktioner som lagts till som [!DNL Experience Manager]-tillägg.
 
-Vi fokuserar på överföringsmetoder för slutanvändare här och tillhandahåller länkar till artiklar som beskriver tekniska aspekter av överföring och förtäring av resurser med hjälp av API:er för Experience Manager och SDK:er.
+Vi fokuserar på överföringsmetoder för slutanvändare här och tillhandahåller länkar till artiklar som beskriver tekniska aspekter av överföring och förtäring av resurser med hjälp av [!DNL Experience Manager] API:er och SDK:er.
 
-Du kan överföra och hantera binära filer i Experience Manager, men de vanligaste filformaten har stöd för ytterligare tjänster, som metadataextrahering eller generering av förhandsgranskning/återgivning. Mer information finns i [filformat](file-format-support.md) som stöds.
+Du kan överföra och hantera binära filer i [!DNL Experience Manager], men de vanligaste filformaten har stöd för ytterligare tjänster, som metadataextrahering eller generering av förhandsgranskning/återgivning. Mer information finns i [filformat](file-format-support.md) som stöds.
 
 Du kan också välja att utföra ytterligare bearbetning av de överförda resurserna. Ett antal resursbearbetningsprofiler kan konfigureras för mappen, till vilken resurserna överförs, för att lägga till specifika metadata, återgivningar eller bildbehandlingstjänster. Se [bearbeta resurser när de överförs](#process-when-uploaded).
 
 >[!NOTE]
 >
->Experience Manager som [!DNL Cloud Service] använder ett nytt sätt att överföra resurser - direkt binär överföring. Den stöds som standard av produktfunktioner och -klienter, som Experience Manager användargränssnitt, Adobe Asset Link och Experience Manager, och är därmed genomskinlig för slutanvändarna.
+>[!DNL Experience Manager] som ett  [!DNL Cloud Service] sätt att överföra resurser - direkt binär överföring. Den stöds som standard av produktfunktioner och klienter som [!DNL Experience Manager] användargränssnitt, [!DNL Adobe Asset Link], [!DNL Experience Manager]-datorprogrammet och därmed genomskinlig för slutanvändarna.
 >
 >Ladda upp kod som är anpassad eller utökad av kunder som tekniska team behöver för att kunna använda de nya överförings-API:erna och protokollen.
 
@@ -35,7 +35,7 @@ Resurser som [!DNL Cloud Service] innehåller följande överföringsmetoder. Ad
 | [Användargränssnittet i Resurskonsolen](#upload-assets) | Tillfällig uppladdning, enkel nedladdning och dragning, uppladdning av sökare. Använd inte för att överföra ett stort antal resurser. | Alla användare |
 | [Överför API](#upload-using-apis) | För dynamiska beslut under överföring. | Developer |
 | [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | Låg mängd tillgångsintag, men för migrering. | Administratör, marknadsförare |
-| [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Kreativ, Marketer |
+| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Kreativ, Marketer |
 | [Massinhämtning av resurser](#asset-bulk-ingestor) | Rekommenderas för storskalig migrering och ibland även för bulkimport. Endast för datalager som stöds. | Administratör, utvecklare |
 
 ## Överför resurser {#upload-assets}
@@ -144,7 +144,7 @@ Inspelaren av massresurser kan hantera tusentals resurser effektivt. Men ett sto
 Om du vill överföra fler filer använder du någon av följande metoder. Se även [användningsexempel och metoder](#upload-methods-comparison)
 
 * [API:er](developer-reference-material-apis.md#asset-upload-technical) för överföring av resurser: Använd ett anpassat överföringsskript eller verktyg som använder API:er för att lägga till ytterligare hantering av resurser (t.ex. översätta metadata eller byta namn på filer), om det behövs.
-* [Experience Manager-datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html): Användbart för kreatörer och marknadsförare som överför resurser från det lokala filsystemet. Använd den för att överföra kapslade mappar som är tillgängliga lokalt.
+* [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html): Användbart för kreatörer och marknadsförare som överför resurser från det lokala filsystemet. Använd den för att överföra kapslade mappar som är tillgängliga lokalt.
 * [Verktyget](#asset-bulk-ingestor) Massintag: Används för konsumtion av stora mängder resurser, antingen vid enstaka tillfällen eller vid första driftsättningen  [!DNL Experience Manager].
 
 ### Verktyget Massinhämtning {#asset-bulk-ingestor}
@@ -181,14 +181,14 @@ Så här konfigurerar du verktyget:
 
 >[!NOTE]
 >
->Bulköverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till Experience Manager kräver noggrann planering, övervägande och val av verktyg. Se [distributionsguiden](/help/implementing/deploying/overview.md) för vägledning om strategier för innehållsmigrering.
+>Massöverföring som en del av innehållsmigrering från andra system när du konfigurerar och distribuerar till [!DNL Experience Manager] kräver noggrann planering, övervägande och val av verktyg. Se [distributionsguiden](/help/implementing/deploying/overview.md) för vägledning om strategier för innehållsmigrering.
 
 ## Överför resurser med skrivbordsklienter {#upload-assets-desktop-clients}
 
-Förutom webbläsarens användargränssnitt har Experience Manager stöd för andra klienter på datorn. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
+Förutom webbläsarens användargränssnitt har [!DNL Experience Manager] stöd för andra klienter på skrivbordet. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
-* [Adobe Asset ](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) Linkger åtkomst till resurser  [!DNL Experience Manager] i Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link från dessa skrivbordsprogram.
-* [Experience Manager ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) är ett program som gör det enklare att arbeta med resurser på datorn, oberoende av filtyp eller vilket ursprungsprogram som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
+* [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till material från  [!DNL Experience Manager] Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link från dessa skrivbordsprogram.
+* [[!DNL Experience Manager] datorprogram ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) gör det enklare att arbeta med resurser på datorn, oberoende av filtyp eller vilket ursprungsprogram som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Bearbeta resurser när {#process-when-uploaded} överförs
 
@@ -218,8 +218,8 @@ Teknisk information om överförings-API:erna och -protokollet samt länkar till
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager-datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
->* [Om Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
->* [Adobe Asset Link-dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [[!DNL Adobe Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
+>* [Om [!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
+>* [[!DNL Adobe Asset Link] dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [Teknisk referens för överföring av tillgångar](developer-reference-material-apis.md#asset-upload-technical)
 
