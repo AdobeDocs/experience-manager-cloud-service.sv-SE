@@ -20,8 +20,8 @@ I följande diagram visas hierarkin för enheter i Cloud Manager.
 
 ## Programtyper {#program-types}
 
-En användare kan skapa en **sandlåda** eller ett **vanligt** program.
+En användare kan skapa ett **Sandbox** eller ett **Regular**-program.
 
-En *sandlåda* skapas vanligtvis för utbildning, körning av demo, aktivering, POC eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett reguljärt program inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
+En *sandlåda* är vanligtvis skapad för att fungera som träning, köra demo, aktivering, POC eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett reguljärt program inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
 
-Ett *Regelbundet program* skapas för att möjliggöra livstrafik vid rätt tidpunkt i framtiden.
+Ett *Regelbundet program* skapas för att aktivera Live-trafik vid rätt tidpunkt i framtiden.
