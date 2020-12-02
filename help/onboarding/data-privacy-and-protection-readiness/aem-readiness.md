@@ -10,7 +10,7 @@ ht-degree: 1%
 ---
 
 
-# Adobe Experience Manager som Cloud Service Readiness for Data Protection and Data Privacy Regulations {#aem-readiness-for-data-protection-and-data-privacy-regulations}
+# Adobe Experience Manager as a Cloud Service Readiness for Data Protection and Data Privacy Regulations {#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -30,7 +30,7 @@ Adobe tillhandahåller dokumentation och procedurer (med API:er när sådana fin
 >
 >Data från en annan Adobe On-demand-tjänst, tillsammans med eventuella relaterade sekretessförfrågningar, kommer att kräva åtgärder för den tjänsten.
 >
->Mer information finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 ## Introduktion {#introduction}
 
@@ -84,11 +84,11 @@ Se avsnitten nedan för dokumentation av AEM produktområden som en Cloud Servic
 
 ## Adobe Experience Manager as a Cloud Service Foundation {#aem-foundation}
 
-See [AEM Foundation Readiness for Data Protection and Data Privacy Regulations](/help/onboarding/data-privacy-and-protection-readiness/foundation-readiness.md).
+Se [AEM Foundation Readiness for Data Protection and Data Privacy Regulations](/help/onboarding/data-privacy-and-protection-readiness/foundation-readiness.md).
 
 ## Adobe Experience Manager Sites as a Cloud Service {#aem-sites}
 
-See [AEM Sites Readiness for Data Protection and Data Privacy Regulations.](/help/onboarding/data-privacy-and-protection-readiness/sites-readiness.md)
+Se [AEM Sites beredskap för dataskydd och dataintegritet.](/help/onboarding/data-privacy-and-protection-readiness/sites-readiness.md)
 
 ## Adobe Experience Manager som Cloud Service Integration med Adobe Target &amp; Adobe Analytics {#aem-integration-with-adobe-target-adobe-analytics}
 
