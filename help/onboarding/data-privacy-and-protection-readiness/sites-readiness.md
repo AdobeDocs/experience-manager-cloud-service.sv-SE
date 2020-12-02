@@ -28,7 +28,7 @@ Mer information finns i [Adobe Privacy Center](https://www.adobe.com/privacy.htm
 
 >[!NOTE]
 >
->Mer information finns i [Adobe Experience Manager som Cloud Service Readiness for Data Protection and Data Privacy Regulations](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md) .
+>Mer information finns i [Adobe Experience Manager som Cloud Service Readiness for Data Protection and Data Privacy Regulations](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md).
 
 ## AEM-redigeringsnivå {#aem-author-tier}
 
@@ -40,7 +40,7 @@ Användarkonton som används för att autentisera besökare på webbplatsen och 
 
 Som standard lagrar inte AEM Sites-komponenter formulärdata som anges av besökare på publiceringsservern. Vi rekommenderar att du vidarebefordrar data till ett tredjepartssystem eller Adobe Campaign för vidare behandling.
 
-## Opt-In/Opt-Out {#opt-in-opt-out}
+## Opt-in/Opt-Out {#opt-in-opt-out}
 
 <!--
 AEM has a [cookie opt-out service](/help/sites-developing/cookie-optout.md ) that can be used for managing the opt-in/opt-out for users.
@@ -53,7 +53,7 @@ Så här avanmäler du:
 1. Navigera till:
    [Sekretesscenter för Adobe - avanmäl dig](https://www.adobe.com/privacy/opt-out.html)
 
-1. Bläddra ned till **Tjänster** - **Experience Cloud-tjänstanvändningsdata**.
+1. Bläddra nedåt till **Tjänster** - **Experience Cloud användardata för tjänsten**.
 
 1. Markera den refererade länken; för närvarande **här**.
 
@@ -63,14 +63,14 @@ Så här avanmäler du:
 
       Om du tar bort cookien för anmälan eller om du byter dator eller webbläsare måste du avanmäla dig igen.
 
-      Avanmäl dig - Uteslut mig från sessionsaggregering och analys för besökare (installera cookie för avanmälan) - Klicka här. `amcglobal.sc.omtrdc.net`
+      Avanmäl dig - Uteslut mig från sessionsaggregering och analys för besökare (installera cookien `amcglobal.sc.omtrdc.net` opt-out) - klicka här.
 
-      Opt-in - Inkludera mig i sessionsaggregering och analys för besökare (installera inte cookie för `amcglobal.sc.omtrdc.net` avanmälan) - klicka här.
+      Opt-in - Include me in visitor session aggregation and analysis (do not install the `amcglobal.sc.omtrdc.net` opt-out cookie) - Click Here.
    Följ stegen ovan för att komma åt de faktiska länkarna.
 
    >[!NOTE]
    >
-   > Det finns ytterligare en beskrivning i **2. Integritet.** i [Adobe General Terms of Use](https://www.adobe.com/legal/terms.html).
+   > Det finns ytterligare en beskrivning i **2. Integritet.** i  [Adobe General Terms of Use](https://www.adobe.com/legal/terms.html).
 
 ## Analytics Foundation {#analytics-foundation}
 
@@ -82,7 +82,7 @@ Mer information om hur du hanterar förfrågningar från registrerade personer r
 
 AEM Sites innehåller en valfri integrering med Personalization Foundation by Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade som rör Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Target finns i [Adobe Target - Privacy and General Data Protection Regulation](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 
@@ -94,7 +94,7 @@ AEM tillhandahåller ett valfritt datalager med ContextHub. På så sätt behål
 
 Som standard lagras dessa besökardata inte i AEM. AEM skickar regler till datalagret för att fatta personaliseringsbeslut i webbläsaren.
 
-### Implementera anmälan/avanmälan {#implementing-opt-in-opt-out}
+### Implementera Opt-in/Opt-Out {#implementing-opt-in-opt-out}
 
 Webbplatsägaren måste implementera en avanmälningskomponent enligt följande riktlinjer.
 
