@@ -2,9 +2,9 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: aae587109d1f8764ac535b316a2a7d05fd7179fe
+source-git-commit: cf5216f3d4d0a9acc7fabc31896770464303f793
 workflow-type: tm+mt
-source-wordcount: '4059'
+source-wordcount: '4082'
 ht-degree: 8%
 
 ---
@@ -382,6 +382,8 @@ Skriptet gör följande:
 
 1. Valideraren körs från föregående avsnitt för att säkerställa att endast de direktiv som stöds inkluderas. Om konfigurationen inte är giltig misslyckas skriptet.
 2. Den kör `httpd -t command` för att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution
+
+Under en distribution av Cloud Manager körs kontrollen `httpd -t syntax` också och eventuella fel inkluderas i loggen för Cloud Manager `Build Images step failure`.
 
 ## Testa Apache- och Dispatcher-konfigurationen lokalt {#testing-apache-and-dispatcher-configuration-locally}
 
