@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Skapa flera kategori- och produktsidor
 
-[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) ger innehållsförfattare möjlighet att skapa ytterligare kategori- och produktsidor. Dessa sidor kan berikas med ytterligare marknadsföringsmaterial och konfigureras för specifika kategorier och produkter. I följande videofilm visas hur du konfigurerar den här funktionen.
+[AEM CIF Core ](https://github.com/adobe/aem-core-cif-components) Components ger innehållsförfattare möjlighet att skapa ytterligare kategori- och produktsidor. Dessa sidor kan berikas med ytterligare marknadsföringsmaterial och konfigureras för specifika kategorier och produkter. I följande videofilm visas hur du konfigurerar den här funktionen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28969/?quality=12)
 
