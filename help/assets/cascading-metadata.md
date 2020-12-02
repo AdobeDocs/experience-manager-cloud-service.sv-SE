@@ -40,21 +40,21 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    ![select_form](assets/select_form.png)
 
-1. (Valfritt) Skapa ett nytt fält som ska villkoraliseras i metadataramedigeraren. Ange ett namn och en egenskapssökväg på **[!UICONTROL Settings]** fliken.
+1. (Valfritt) Skapa ett nytt fält som ska villkoraliseras i metadataramedigeraren. Ange ett namn och en egenskapssökväg på fliken **[!UICONTROL Settings]**.
 
-   Om du vill skapa en ny flik trycker/klickar du `+` för att lägga till en flik och lägger sedan till ett metadatafält.
+   Om du vill skapa en ny flik trycker/klickar du på `+` för att lägga till en flik och lägger sedan till ett metadatafält.
 
    ![add_tab](assets/add_tab.png)
 
-1. Lägg till ett listrutefält för resurstypen. Ange ett namn och en egenskapssökväg på **[!UICONTROL Settings]** fliken. Lägg till en valfri beskrivning.
+1. Lägg till ett listrutefält för resurstypen. Ange ett namn och en egenskapssökväg på fliken **[!UICONTROL Settings]**. Lägg till en valfri beskrivning.
 
    ![asset_type_field](assets/asset_type_field.png)
 
 1. Nyckelvärdepar är de alternativ som ges till en formuläranvändare. Du kan ange nyckelvärdepar antingen manuellt eller från en JSON-fil.
 
-   * Om du vill ange värdena manuellt markerar du **[!UICONTROL Add Manually]** och trycker/klickar **[!UICONTROL Add Choice]** och anger alternativtexten och värdet. Ange till exempel resurstyperna Video, PDF, Word och Bild.
+   * Om du vill ange värdena manuellt väljer du **[!UICONTROL Add Manually]** och trycker/klickar på **[!UICONTROL Add Choice]** och anger alternativtexten och värdet. Ange till exempel resurstyperna Video, PDF, Word och Bild.
 
-   * Om du vill hämta värden från en JSON-fil dynamiskt markerar du **[!UICONTROL Add Through JSON Path]** och anger sökvägen till JSON-filen. AEM hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
+   * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Add Through JSON Path]** och anger sökvägen till JSON-filen. AEM hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
 
    Båda alternativen utesluter varandra. Du kan inte importera alternativen från en JSON-fil och redigera manuellt.
 
@@ -74,7 +74,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    ![video_independent_fields](assets/video_dependent_fields.png)
 
-1. Om du vill skapa ett beroende mellan fältet för resurstyp och andra fält väljer du det beroende fältet och öppnar **[!UICONTROL Rules]** fliken.
+1. Om du vill skapa ett beroende mellan fältet för resurstyp och andra fält väljer du det beroende fältet och öppnar fliken **[!UICONTROL Rules]**.
 
    ![select_beroentfield](assets/select_dependentfield.png)
 
@@ -102,7 +102,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
    >Du kan använda villkoren **[!UICONTROL Requirement]** och **[!UICONTROL Visibility]** oberoende av varandra.
 
 1. Du kan också skapa ett beroende mellan värdet Video i fältet Resurstyp och andra fält, till exempel Kodek och Varaktighet.
-1. Upprepa stegen för att skapa beroende mellan dokumentresurser (PDF och Word) i [!UICONTROL Asset Type] fältet och fält som [!UICONTROL Page Count] och [!UICONTROL Author].
+1. Upprepa stegen för att skapa beroende mellan dokumentresurser (PDF och Word) i fältet [!UICONTROL Asset Type] och fält som [!UICONTROL Page Count] och [!UICONTROL Author].
 1. Klicka på **[!UICONTROL Save]**. Använd metadatamatchemat på en mapp.
 
 1. Navigera till mappen som du tillämpade metadatamodeller på och öppna egenskapssidan för en resurs. Beroende på vad du väljer i fältet Resurstyp visas relevanta överlappande metadatafält.
