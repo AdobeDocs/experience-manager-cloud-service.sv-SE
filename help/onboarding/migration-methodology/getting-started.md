@@ -1,10 +1,10 @@
 ---
-title: En sökare för migrering till Experience Manager som Cloud Service
-description: En sökare för migrering till Experience Manager som Cloud Service
+title: Migrering till Experience Manager som Cloud Service
+description: Migrering till Experience Manager som Cloud Service
 translation-type: tm+mt
-source-git-commit: 02e6581ec5a922d71c53e99212a1f8aecc405f6f
+source-git-commit: 3c1ff52d58f64d351507d20e4368a6aeb1bf6339
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2070'
 ht-degree: 8%
 
 ---
@@ -167,7 +167,7 @@ Med Cloud Manager kan organisationer självhantera Experience Manager i molnet. 
 1. [Distribuera till Cloud ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html?lang=en#managing-code) Manager
 2. Kör kundkod via [Cloud Manager Quality Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use)
 3. [Distribuera till utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/build-and-deployment.html?lang=en#debugging)
-4. [**Migrering**] endastInnehållsöverföring med paket eller  [Innehållsöverföringsverktyg] (https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#cloud-migration(CTT)
+4. [**Migrering**] endastInnehållsöverföring med paket eller  [innehållsöverföringsverktyg](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md) (CTT)
 5. Utför rekommenderade testcykler (rök, kvalitetskontroll med mera)
 6. Befordra till Cloud Manager Production Pipeline
 7. Validering av röktest
