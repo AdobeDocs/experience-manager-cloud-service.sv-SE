@@ -32,11 +32,11 @@ Lagra för lösta och olösta ContextHub-segment. Hämtar automatiskt segment fr
 
 ### Basimplementering {#base-implementation-segmentation}
 
-Butikskandidaten aem.segmentation utökas [`ContextHub.Store.PersistedJSONPStore`](contexthub-api.md#contexthub-store-persistedjsonpstore).
+Förkandidaten för aem.segmentation-arkivet är [`ContextHub.Store.PersistedJSONPStore`](contexthub-api.md#contexthub-store-persistedjsonpstore).
 
 ### Konfiguration {#configuration-segmentation}
 
-När du skapar en `aem.segmentation` butik behöver du inte ange någon detaljerad konfiguration. Standardkonfigurationen anger platsen för ContextHub-segmentdefinitionerna.
+När du skapar en `aem.segmentation`-butik behöver du inte ange en detaljerad konfiguration. Standardkonfigurationen anger platsen för ContextHub-segmentdefinitionerna.
 
 ```xml
 {
@@ -50,7 +50,7 @@ När du skapar en `aem.segmentation` butik behöver du inte ange någon detaljer
 
 ## contexthub.geolocation Sample Store Candidate {#contexthub-geolocation-sample-store-candidate}
 
-Exempelarkivets `contexthub.geolocation` kandidat använder Google Maps för att hämta och lagra information om klientplatsen.
+Exempelarkivkandidaten `contexthub.geolocation` använder Google Maps för att hämta och lagra information om klientplatsen.
 
 ### Källplats {#source-location-geolocation}
 
@@ -58,7 +58,7 @@ Exempelarkivets `contexthub.geolocation` kandidat använder Google Maps för att
 
 ### Basimplementering {#base-implementation-geolocation}
 
-Butikskandidaten `contexthub.geolocation` utökas [`ContextHub.Store.PersistedJSONPStore`](contexthub-api.md#contexthub-store-persistedjsonpstore).
+Butikskandidaten `contexthub.geolocation` utökar [`ContextHub.Store.PersistedJSONPStore`](contexthub-api.md#contexthub-store-persistedjsonpstore).
 
 ### Konfiguration {#configuration-geolocation}
 
@@ -106,7 +106,7 @@ I butiken används ett dataträd som liknar följande exempel:
 >
 >En säkerhetsprincip som introducerades i Chrome 50.x kräver att alla geopositioneringsrelaterade anrop görs via en skyddad anslutning. AEM tvingar därför även https-användning för API-anrop för geopositionering om AEM körs över https. I annat fall används http för att följa principen om samma ursprung.
 >
->Se [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) för mer information om förändringen i Chrome.
+>Mer information om ändringen i Chrome finns i [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only).
 
 ## contexthub.surferinfo Sample Store Candidate {#contexthub-surferinfo-sample-store-candidate}
 
@@ -118,7 +118,7 @@ Lagrar information om den aktuella klientmiljön, t.ex. enhet, fönster, webblä
 
 ### Basimplementering {#base-implementation-surferinfo}
 
-Butikskandidaten `contexthub.surferinfo` utökas [`ContextHub.Store.PersistedStore`](contexthub-api.md#contexthub-store-persistedstore).
+Butikskandidaten `contexthub.surferinfo` utökar [`ContextHub.Store.PersistedStore`](contexthub-api.md#contexthub-store-persistedstore).
 
 ### Konfiguration {#configuration-surferinfo}
 
@@ -175,9 +175,9 @@ Lager som använder den här butikskandidaten har ett dataträd som liknar följ
 }
 ```
 
-## granite.emulators Sample Store Candidate {#granite-emulators-sample-store-candidate}
+## granite.emulators Exempelarkivkandidaten {#granite-emulators-sample-store-candidate}
 
-I exempelarkivets `granite.emulators` kandidatarkiv lagras information om klientenheter.
+I `granite.emulators`-exempelarkivkandidaten lagras information om klientenheter.
 
 ### Källplats {#source-location-emulators}
 
@@ -185,7 +185,7 @@ I exempelarkivets `granite.emulators` kandidatarkiv lagras information om klient
 
 ### Basimplementering {#base-implementation-emulators}
 
-Butikskandidaten `granite.emulators` utökas [`ContextHub.Store.PersistedStore`](contexthub-api.md#contexthub-store-persistedstore).
+Butikskandidaten `granite.emulators` utökar [`ContextHub.Store.PersistedStore`](contexthub-api.md#contexthub-store-persistedstore).
 
 ### Konfiguration {#configuration-emulators}
 
@@ -318,7 +318,7 @@ Lagrar information om den aktuella användaren.
 
 ### Basimplementering {#base-implementation-profile}
 
-Butikskandidaten `granite.profile` utökas [`ContextHub.Store.PersistedJSONPStore`](contexthub-api.md#contexthub-store-persistedjsonpstore).
+Butikskandidaten `granite.profile` utökar [`ContextHub.Store.PersistedJSONPStore`](contexthub-api.md#contexthub-store-persistedjsonpstore).
 
 ### Konfiguration {#configuration-profile}
 
