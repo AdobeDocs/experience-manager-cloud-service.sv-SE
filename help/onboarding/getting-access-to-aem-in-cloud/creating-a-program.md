@@ -16,7 +16,7 @@ Den molnbaserade lösningen ger användaren de behörigheter som krävs och möj
 
 Guiden för att skapa ett program ber användaren att skicka in information beroende på vad användaren vill göra för att skapa programmet inom gränserna för vad som är tillgängligt för kunden eller organisationen.
 
-Om det är första gången du får tillgång till Cloud Manager eller om det inte finns några program i klienten visas **Skapa ditt första program** -fönster. Om användaren väljer *Esc* eller klickar utanför dialogrutan visas följande skärm:
+Om det är första gången du använder Cloud Manager eller om det inte finns några program i klienten visas **skärmen Skapa ditt första program**. Om användaren väljer *Esc* eller klickar utanför dialogrutan visas följande skärm:
 
 ![](assets/create-program1.png)
 
@@ -28,7 +28,7 @@ Beroende på vad användaren har för avsikt att skapa programmet inom gränsern
 ![](assets/create-sandbox.png)
 
 >[!NOTE]
->If a program already exists, then you will see **Add Program** on the top right of the landing page, as shown in the figure below.
+>Om det redan finns ett program visas **Lägg till program** överst till höger på landningssidan, vilket visas i bilden nedan.
 
 ![](assets/create-program-add.png)
 
@@ -36,7 +36,7 @@ Beroende på vad användaren har för avsikt att skapa programmet inom gränsern
 
 Följ stegen nedan för att skapa ett sandlådeprogram:
 
-1. Välj **Konfigurera en sandlåda** i guiden Skapa program. Användaren skickar programnamnet innan han/hon väljer **Skapa**.
+1. Välj **Konfigurera en sandlåda** i guiden Skapa program. Användaren skickar programnamnet innan **Skapa** väljs.
 
    ![](assets/create-sandbox.png)
 
@@ -44,7 +44,7 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
 
    ![](assets/program-create-setupdemo2.png)
 
-1. När programmet har konfigurerats och projektskapandet är klart kan användaren få åtkomst till **länken Hantera Git** , vilket visas i bilden nedan:
+1. När programmet har konfigurerats och projektskapandet har slutförts kan användaren komma åt länken **Hantera Git**, vilket visas i bilden nedan:
 
    ![](assets/create-program4.png)
 
@@ -53,7 +53,7 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
    >Mer information om hur du får åtkomst till och hanterar Git-databasen med hjälp av Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager finns i [Åtkomst till Git](/help/implementing/cloud-manager/accessing-git.md).
 
 
-1. När utvecklingsmiljön har skapats kan användaren **komma åt AEM** -länken, vilket visas i bilden nedan:
+1. När utvecklingsmiljön har skapats kan användaren **komma åt AEM**-länken, vilket visas i bilden nedan:
 
    ![](assets/create-program-5.png)
 
@@ -66,9 +66,9 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
 
    ![](assets/create-program-a1.png)
 
-## Ta bort ett sandlådeprogram {#delete-sandbox-program}
+## Tar bort ett sandlådeprogram {#delete-sandbox-program}
 
-En sandlådeprogramanvändare i *Business Owner* eller *Deployment Manager* -rollen i Cloud Manager kan ta bort sin produktions- och scenmiljö som angetts via användargränssnittet i Cloud Manager.
+En användare av sandlådeprogrammet i *Business Owner* eller *Deployment Manager*-rollen i Cloud Manager kan ta bort sin produktions- och scenmiljö som angetts via användargränssnittet i molnhanteraren.
 
 >[!NOTE]
 >Om du väljer borttagningsalternativet för antingen produktion eller scen tas även det andra bort i uppsättningen.
@@ -79,18 +79,18 @@ Borttagningsalternativet är tillgängligt från landningssidan enligt nedan:
 
 Eller
 
-Välj **Ta bort program** på sidan **Programöversikt** för att ta bort ditt sandlådeprogram.
+Välj **Ta bort program** från sidan **Programöversikt** om du vill ta bort ditt Sandbox-program.
 
 ![](assets/delete-sandbox2.png)
 
 
 ## Skapa ett vanligt program {#create-regular-program}
 
-Ett *Regelbundet* program är avsett för användare som är bekanta med AEM och Cloud Manager och som är redo att börja skriva, bygga och testa kod i syfte att distribuera den till Production.
+Ett *Regelbundet*-program är avsett för användare som är bekanta med AEM och Cloud Manager och som är redo att börja skriva, bygga och testa kod i syfte att distribuera den till Production.
 
 Följ stegen nedan för att skapa ett vanligt program:
 
-1. Välj **Konfigurera för produktion** i guiden Skapa program för att skapa ett vanligt program. Användaren kan godkänna standardprogramnamnet eller redigera det innan du väljer **Fortsätt**.
+1. Välj **Konfigurera för produktion** i guiden Skapa program för att skapa ett vanligt program. Användaren kan godkänna standardprogramnamnet eller redigera det innan **Fortsätt** väljs.
 
    ![](assets/create-prod1.png)
 
@@ -108,7 +108,7 @@ Följ stegen nedan för att skapa ett vanligt program:
 
    ![](assets/set-up-prod3.png)
 
-1. När du ser ditt programkort på landningssidan för du pekaren över det och väljer ikonen Cloud Manager för att navigera till **översiktssidan** för Cloud Manager.
+1. När du ser ditt programkort på landningssidan för du pekaren över det och väljer ikonen Cloud Manager för att gå till sidan med Cloud Manager **Översikt**.
 
    ![](assets/set-up-prod4.png)
 
@@ -118,7 +118,7 @@ Följ stegen nedan för att skapa ett vanligt program:
 
    >[!NOTE]
    >
-   >A regular program does not have **Auto-setup** feature.
+   >Ett vanligt program har inte funktionen **Auto-setup**.
 
 
 
