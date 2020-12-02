@@ -10,7 +10,7 @@ ht-degree: 70%
 ---
 
 
-# Resurser som en Cloud Service Guide {#aem-assets-guide}
+# Resurser som en Cloud Service-guide {#aem-assets-guide}
 
 Här följer självhjälpsresurserna för Experience Manager Assets as a Cloud Service.
 
