@@ -16,13 +16,13 @@ ht-degree: 1%
 
 Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser. Den innehåller olika mekanismer (differentiering) för båda:
 
-* **[Övertäckningar](/help/implementing/developing/introduction/overlays.md)** av resurser som använder [sökvägarna](/help/implementing/developing/introduction/overlays.md#search-paths).
+* **[Översikt](/help/implementing/developing/introduction/overlays.md)** över resurser med  [sökvägar](/help/implementing/developing/introduction/overlays.md#search-paths).
 
-* **Åsidosätter** komponentdialogrutor för det beröringsaktiverade användargränssnittet (`cq:dialog`) med resurstyphierarkin (med egenskapen `sling:resourceSuperType`).
+* **Åsidosätter** komponentdialogrutor för det beröringsaktiverade användargränssnittet (`cq:dialog`) med hjälp av resurstyphierarkin (med hjälp av egenskapen  `sling:resourceSuperType`).
 
 Med Sling Resource Merger sammanfogas överläggnings-/åsidosättningsresurserna och/eller egenskaperna med de ursprungliga resurserna/egenskaperna:
 
-* Innehållet i den anpassade definitionen har en högre prioritet än det ursprungliga (d.v.s. det *överlagras* eller *åsidosätts* ).
+* Innehållet i den anpassade definitionen har en högre prioritet än originalets (d.v.s. *övertäckningar* eller *åsidosätter*).
 
 * Om det behövs anger [egenskaper](#properties) som definierats i anpassningen hur innehåll som sammanfogats från originalet ska användas.
 
@@ -39,11 +39,11 @@ Målet med Sling Resource Merger i AEM är att
 * se till att anpassningar inte görs i `/libs`.
 * minska strukturen som replikeras från `/libs`.
 
-   När du använder Sling Resource Merger rekommenderar vi inte att du kopierar hela strukturen från `/libs` eftersom det skulle resultera i att för mycket information sparas i anpassningen (vanligtvis `/apps`). Om du duplicerar information i onödan ökar risken för problem när systemet uppgraderas på något sätt.
+   När du använder Sling Resource Merger bör du inte kopiera hela strukturen från `/libs` eftersom det skulle resultera i att för mycket information hålls kvar i anpassningen (vanligtvis `/apps`). Om du duplicerar information i onödan ökar risken för problem när systemet uppgraderas på något sätt.
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs` banan.
+>Du ***får*** inte ändra något i `/libs`-sökvägen.
 >
 >Detta beror på att innehållet i `/libs` kan skrivas över när uppgraderingar tillämpas på din instans.
 >
@@ -53,13 +53,13 @@ Målet med Sling Resource Merger i AEM är att
 * Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
 >
 >
-Åsidosättningar definieras dock ofta under `/apps`, eftersom bästa praxis i AEM är att definiera anpassningar under `/apps`. för att du inte får ändra något under `/libs`.
+Åsidosättningar definieras ofta under `/apps`, eftersom det bästa sättet i AEM är att definiera anpassningar under `/apps`. Detta beror på att du inte får ändra något under `/libs`.
 
 ### Egenskaper {#properties}
 
 Resurskoncentrationen har följande egenskaper:
 
-* `sling:hideProperties` ( `String` eller `String[]`)
+* `sling:hideProperties` (  `String` eller  `String[]`)
 
    Anger den egenskap, eller lista med egenskaper, som ska döljas.
 
@@ -69,19 +69,19 @@ Resurskoncentrationen har följande egenskaper:
 
    Anger om resurserna ska vara helt dolda, inklusive dess underordnade.
 
-* `sling:hideChildren` ( `String` eller `String[]`)
+* `sling:hideChildren` (  `String` eller  `String[]`)
 
    Innehåller den underordnade noden, eller listan med underordnade noder, som ska döljas. Egenskaperna för noden bevaras.
 
    Jokertecknet `*` döljer alla.
 
-* `sling:orderBefore` ( `String`)
+* `sling:orderBefore` (  `String`)
 
    Innehåller namnet på noden på samma nivå som den aktuella noden ska placeras framför.
 
 Dessa egenskaper påverkar hur motsvarande/ursprungliga resurser/egenskaper (från `/libs`) används av övertäckningen/åsidosättningen (ofta i `/apps`).
 
-### Skapa strukturen {#creating-the-structure}
+### Skapar strukturen {#creating-the-structure}
 
 Om du vill skapa en övertäckning eller åsidosättning måste du återskapa den ursprungliga noden, med motsvarande struktur, under målet (vanligtvis `/apps`). Till exempel:
 
@@ -95,7 +95,7 @@ Om du vill skapa en övertäckning eller åsidosättning måste du återskapa de
 
       `/apps/cq/core/content/nav/sites`
 
-      Uppdatera sedan egenskapen efter `jcr:title` behov.
+      Uppdatera sedan egenskapen `jcr:title` efter behov.
 
 * Åsidosätt
 
@@ -107,7 +107,7 @@ Om du vill skapa en övertäckning eller åsidosättning måste du återskapa de
 
       `/apps/the-project/components/text/cq:dialog`
 
-Om du vill skapa någon av dessa behöver du bara återskapa skelettstrukturen. För att förenkla återskapandet av strukturen kan alla mellanliggande noder vara av typen `nt:unstructured` (de behöver inte återspegla den ursprungliga nodtypen). till exempel in `/libs`).
+Om du vill skapa någon av dessa behöver du bara återskapa skelettstrukturen. För att förenkla återskapandet av strukturen kan alla mellanliggande noder vara av typen `nt:unstructured` (de behöver inte återspegla den ursprungliga nodtypen). till exempel i `/libs`).
 
 I ovanstående övertäckningsexempel behövs alltså följande noder:
 
@@ -122,22 +122,22 @@ I ovanstående övertäckningsexempel behövs alltså följande noder:
 
 >[!NOTE]
 >
->När du använder Sling Resource Merger (d.v.s. när du arbetar med standardgränssnittet med pekfunktioner) bör du inte kopiera hela strukturen från `/libs` eftersom det skulle resultera i att för mycket information hålls kvar i `/apps`. Detta kan orsaka problem när systemet uppgraderas på något sätt.
+>När du använder Sling Resource Merger (d.v.s. när du arbetar med standardgränssnittet med pekfunktioner) bör du inte kopiera hela strukturen från `/libs` eftersom det skulle resultera i att för mycket information hålls i `/apps`. Detta kan orsaka problem när systemet uppgraderas på något sätt.
 
-### Användningsexempel {#use-cases}
+### Använd fall {#use-cases}
 
 Dessa tillsammans med standardfunktioner gör att du kan:
 
 * **Lägg till en egenskap**
 
-   Egenskapen finns inte i `/libs` definitionen, men krävs i `/apps` övertäckningen/åsidosättningen.
+   Egenskapen finns inte i definitionen `/libs`, men krävs i övertäckningen/åsidosättningen `/apps`.
 
    1. Skapa motsvarande nod i `/apps`
    1. Skapa den nya egenskapen på den här noden &quot;
 
 * **Omdefiniera en egenskap (inte automatiskt skapade egenskaper)**
 
-   Egenskapen definieras i `/libs`, men ett nytt värde krävs i `/apps` övertäckningen/åsidosättningen.
+   Egenskapen definieras i `/libs`, men ett nytt värde krävs i övertäckningen/åsidosättningen `/apps`.
 
    1. Skapa motsvarande nod i `/apps`
    1. Skapa matchande egenskap på den här noden (under / `apps`)
@@ -145,23 +145,23 @@ Dessa tillsammans med standardfunktioner gör att du kan:
       * Egenskapen får en prioritet baserat på konfigurationen för Sling Resource Resolver.
       * Det går att ändra egenskapstypen.
 
-         Om du använder en annan egenskapstyp än den som används i `/libs`används den egenskapstyp som du definierar.
+         Om du använder en annan egenskapstyp än den som används i `/libs` används den egenskapstyp som du definierar.
    >[!NOTE]
    >
    >Det går att ändra egenskapstypen.
 
 * **Omdefiniera en egenskap som har skapats automatiskt**
 
-   Som standard omfattas inte automatiskt skapade egenskaper (till exempel `jcr:primaryType`) av någon övertäckning/åsidosättning för att säkerställa att den nodtyp som `/libs` används för närvarande respekteras. Om du vill lägga till en övertäckning/åsidosättning måste du återskapa noden i `/apps`och uttryckligen dölja egenskapen och definiera om den:
+   Som standard omfattas inte automatiskt skapade egenskaper (till exempel `jcr:primaryType`) av någon övertäckning/åsidosättning för att säkerställa att den nodtyp som finns under `/libs` respekteras. Om du vill lägga till en övertäckning/åsidosättning måste du återskapa noden i `/apps`, dölja egenskapen explicit och definiera om den:
 
-   1. Skapa motsvarande nod under `/apps` med önskat `jcr:primaryType`
-   1. Skapa egenskapen `sling:hideProperties` på den noden med värdet inställt på värdet för den automatiskt skapade egenskapen, till exempel `jcr:primaryType`
+   1. Skapa motsvarande nod under `/apps` med önskad `jcr:primaryType`
+   1. Skapa egenskapen `sling:hideProperties` på den noden med värdet inställt på den automatiskt skapade egenskapen; till exempel `jcr:primaryType`
 
       Den här egenskapen, som definieras under `/apps`, får nu högre prioritet än den som definieras under `/libs`
 
 * **Definiera om en nod och dess underordnade noder**
 
-   Noden och dess underordnade noder definieras i `/libs`, men en ny konfiguration krävs för `/apps` övertäckningen/åsidosättningen.
+   Noden och dess underordnade noder definieras i `/libs`, men en ny konfiguration krävs i övertäckningen/åsidosättningen `/apps`.
 
    1. Kombinera åtgärder från:
 
@@ -170,7 +170,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
 * **Dölj en egenskap**
 
-   Egenskapen definieras i `/libs`, men krävs inte i `/apps` övertäckningen/åsidosättningen.
+   Egenskapen definieras i `/libs`, men krävs inte i övertäckningen/åsidosättningen `/apps`.
 
    1. Skapa motsvarande nod i `/apps`
    1. Skapa en egenskap `sling:hideProperties` av typen `String` eller `String[]`. Använd den här inställningen för att ange vilka egenskaper som ska döljas/ignoreras. Du kan också använda jokertecken. Till exempel:
@@ -182,40 +182,40 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
 * **Dölja en nod och dess underordnade noder**
 
-   Noden och dess underordnade noder definieras i `/libs`, men krävs inte i `/apps` övertäckningen/åsidosättningen.
+   Noden och dess underordnade noder definieras i `/libs`, men krävs inte i övertäckningen/åsidosättningen `/apps`.
 
    1. Skapa motsvarande nod under /apps
    1. Skapa en egenskap `sling:hideResource`
 
-      * type: `Boolean`
+      * typ: `Boolean`
       * value: `true`
 
 * **Dölj underordnade noder för en nod (samtidigt som nodens egenskaper behålls)**
 
-   Noden, dess egenskaper och underordnade noder definieras i `/libs`. Noden och dess egenskaper är obligatoriska i `/apps` overlay/override, men vissa eller alla underordnade noder krävs inte i `/apps` overlay/override.
+   Noden, dess egenskaper och underordnade noder definieras i `/libs`. Noden och dess egenskaper krävs i övertäckningen/åsidosättningen `/apps`, men vissa eller alla underordnade noder krävs inte i övertäckningen/åsidosättningen `/apps`.
 
    1. Skapa motsvarande nod under `/apps`
    1. Skapa egenskapen `sling:hideChildren`:
 
-      * type: `String[]`
-      * värde: en lista med underordnade noder (enligt definition i `/libs`) som ska döljas/ignoreras
+      * typ: `String[]`
+      * värde: en lista över de underordnade noderna (enligt definition i `/libs`) som ska döljas/ignoreras
 
       Jokertecknets &amp;stämpel;ast; kan användas för att dölja/ignorera alla underordnade noder.
 
 
 * **Ändra ordning på noder**
 
-   Noden och dess jämställda noder definieras i `/libs`. En ny position krävs så att noden återskapas i `/apps` övertäckningen/åsidosättningen, där den nya positionen definieras med referens till lämplig nod på samma nivå i `/libs`.
+   Noden och dess jämställda noder definieras i `/libs`. En ny position krävs så att noden återskapas i övertäckningen/åsidosättningen `/apps`, där den nya positionen definieras i referens till lämplig nod på samma nivå i `/libs`.
 
-   * Använd `sling:orderBefore` egenskapen:
+   * Använd egenskapen `sling:orderBefore`:
 
       1. Skapa motsvarande nod under `/apps`
       1. Skapa egenskapen `sling:orderBefore`:
 
          Detta anger noden (som i `/libs`) som den aktuella noden ska placeras före:
 
-         * type: `String`
-         * value: `<before-SiblingName>`
+         * typ: `String`
+         * värde: `<before-SiblingName>`
 
 ### Anropa Sling Resource Merger från koden {#invoking-the-sling-resource-merger-from-your-code}
 
@@ -225,7 +225,7 @@ Sling Resource Merger innehåller två anpassade resursprovidrar - en för över
 >
 >När du använder resursen bör du använda rätt monteringspunkt.
 >
->Detta garanterar att Sling Resource Merger anropas och att den helt sammanfogade resursen returneras (vilket minskar strukturen som behöver replikeras från `/libs`).
+>Detta garanterar att Sling Resource Merger anropas och att den fullständigt sammanfogade resursen returneras (vilket minskar strukturen som behöver replikeras från `/libs`).
 
 * Övertäckning:
 
@@ -240,7 +240,7 @@ Sling Resource Merger innehåller två anpassade resursprovidrar - en för över
 
    * syfte: sammanfoga resurser baserat på deras supertyp
    * monteringspunkt: `/mnt/overide`
-   * usage: `mount point + absolute path`
+   * användning: `mount point + absolute path`
    * exempel:
 
       * `getResource('/mnt/override' + '<absolute-path-to-resource>');`
