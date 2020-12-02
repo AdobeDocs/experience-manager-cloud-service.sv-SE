@@ -113,11 +113,11 @@ Antal och typer av AEM-program som kan skapas via Cloud Manager beror på:
 
 Cloud Manager har utvecklats till en självbetjäningsportal där huvudkomponenterna i AEM as a Cloud Service kan skapas och konfigureras:
 
-* Skapa och hantera nya program. Mer information finns i [Förstå program och programtyper](/help/onboarding/getting-access-to-aem-in-cloud/understand-program-types.md) .
+* Skapa och hantera nya program. Mer information finns i [Förstå program och programtyper](/help/onboarding/getting-access-to-aem-in-cloud/understand-program-types.md).
 
-* Skapa och hantera AEM-miljöer i dessa program. Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) .
+* Skapa och hantera AEM-miljöer i dessa program. Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
-* Skapa och hantera pipelines för distribution av kundkoden och den relaterade konfigurationen för en viss miljö. Mer information finns i [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md) .
+* Skapa och hantera pipelines för distribution av kundkoden och den relaterade konfigurationen för en viss miljö. Mer information finns i [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md).
 
 * Meddelas om viktiga livscykelhändelser för dessa komponenter (t.ex. produktuppdateringar).
 
@@ -130,7 +130,7 @@ För närvarande kan Cloud Manager skapa miljöer i tre geografiska regioner (fl
 * APAC (Australien)
 
 >[!NOTE]
->Använd [Experience Manager som Cloud Service](/help/onboarding/getting-access-to-aem-in-cloud/navigation.md) för att komma igång med Cloud Manager i AEM som Cloud Service.
+>Se [Använda Experience Manager som Cloud Service](/help/onboarding/getting-access-to-aem-in-cloud/navigation.md) för att komma igång med Cloud Manager i AEM som Cloud Service.
 
 ## Onboarding {#onboarding}
 
