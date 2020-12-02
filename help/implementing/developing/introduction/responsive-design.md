@@ -50,16 +50,16 @@ Innan du utvecklar det AEM programmet som stöder dina webbsidor bör du fatta f
 
 Den typiska AEM programstrukturen har stöd för alla responsiva designimplementeringar:
 
-* Sidkomponenter finns nedanför `/apps/<application_name>/components`
-* Mallar finns nedan `/apps/<application_name>/templates`
+* Sidkomponenter finns under `/apps/<application_name>/components`
+* Mallar finns under `/apps/<application_name>/templates`
 
 ## Använda mediefrågor {#using-media-queries}
 
 Mediefrågor möjliggör selektiv användning av CSS-format för sidåtergivning. Med AEM utvecklingsverktyg och funktioner kan du effektivt och effektivt implementera mediefrågor i dina program.
 
-W3C-gruppen tillhandahåller en rekommendation om [mediefrågor](https://www.w3.org/TR/css3-mediaqueries/) som beskriver denna CSS3-funktion och syntaxen.
+W3C-gruppen innehåller [Media Queries](https://www.w3.org/TR/css3-mediaqueries/)-rekommendationen som beskriver denna CSS3-funktion och syntaxen.
 
-### Skapa CSS-filen {#creating-the-css-file}
+### CSS-filen {#creating-the-css-file} skapas
 
 I CSS-filen definierar du mediefrågor baserat på egenskaperna för de enheter som du har som mål. Följande implementeringsstrategi är effektiv för att hantera format för varje mediefråga:
 
