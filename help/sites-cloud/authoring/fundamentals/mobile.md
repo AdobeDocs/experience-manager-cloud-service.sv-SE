@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Skapa en sida för mobila enheter {#authoring-a-page-for-mobile-devices}
 
-Adobe Experience Manager sidor baseras på en responsiv layout. [Responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md) anpassar innehållet automatiskt så att det passar målenheten och eliminerar behovet av att skapa innehåll för specifika enheter.
+Adobe Experience Manager sidor baseras på en responsiv layout. [Responsiv ](/help/sites-cloud/authoring/features/responsive-layout.md) layout anpassar innehållet automatiskt så att det passar målenheten, vilket eliminerar behovet av att skapa innehåll för specifika enheter.
 
 När du skapar en mobilsida visas sidan på ett sätt som emulerar den mobila enheten. När du redigerar sidan kan du växla mellan flera emulatorer för att se vad slutanvändaren ser när han/hon öppnar sidan.
 
@@ -39,7 +39,7 @@ Använd följande procedur för att skapa en mobilsida:
    ![Emulatorikon](/help/sites-cloud/authoring/assets/emulator.png)
 
 1. Dra och släpp komponenter från komponentwebbläsaren eller resursläsaren till sidan.
-1. [Ändra sidans responsiva layout](/help/sites-cloud/authoring/features/responsive-layout.md) och dess komponenter baserat på den valda enheten.
+1. [Ändra sidans responsiva ](/help/sites-cloud/authoring/features/responsive-layout.md) layout och dess komponenter baserat på den valda enheten.
 
 Sidan ser ut ungefär så här:
 
