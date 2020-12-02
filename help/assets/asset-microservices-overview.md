@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Översikt över intag och hantering av tillgångar med hjälp av mikrotjänster {#asset-microservices-overview}
+# Översikt över tillgångsintag och bearbetning med tillgångsmikrotjänster {#asset-microservices-overview}
 
 Adobe Experience Manager som Cloud Service erbjuder en molnbaserad metod för att utnyttja program och funktioner från Experience Manager. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster. Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna med molnbaserade resurstjänster är:
 
@@ -21,7 +21,7 @@ Adobe Experience Manager som Cloud Service erbjuder en molnbaserad metod för at
 * Förbättrad flexibilitet i bearbetningen av resurser. Potentiella problem vid hantering av atypiska filer, som skadade filer eller extremt stora filer, påverkar inte längre distributionens prestanda.
 * Förenklad konfiguration av tillgångsbearbetning för administratörer.
 * Resurshanteringsinställningarna hanteras och underhålls av Adobe för att ge bästa möjliga konfiguration för hantering av återgivningar, metadata och textredigering för olika filtyper
-* Filbehandlingstjänster i Adobe används där det är tillämpligt, vilket ger exakt återgivning och [effektiv hantering av Adobe egna format](file-format-support.md).
+* Filbehandlingstjänster för Adobe används där det är tillämpligt, vilket ger exakt återgivning och [effektiv hantering av Adobe egna format](file-format-support.md).
 * Möjlighet att konfigurera efterbehandlingsarbetsflöden för att lägga till användarspecifika åtgärder och integreringar.
 
 Resursmikrotjänster hjälper till att undvika behovet av verktyg och metoder för återgivning från tredje part (som ImageMagick och FMPEG-omkodning) och förenklar konfigurationer, samtidigt som de ger körklara funktioner för vanliga filtyper.
@@ -35,7 +35,7 @@ Ett arkitekturdiagram på hög nivå visar de viktigaste elementen när det gäl
 https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestaccess.aspx?guestaccesstoken=jexDC5ZnepXSt6dTPciH66TzckS1BPEfdaZuSgHugL8%3D&docid=2_1ec37f0bd4cc74354b4f481cd420e07fc&rev=1&e=CdgElS
 -->
 
-![Tillgång till och hantering av tillgångar med](assets/asset-microservices-overview.png "mikrotjänsterTillgång och hantering av tillgångar med mikrotjänster")
+![Tillgång till och hantering av tillgångar med ](assets/asset-microservices-overview.png "mikrotjänsterTillgång och hantering av tillgångar med mikrotjänster")
 
 De viktigaste stegen för intag och bearbetning med hjälp av tillgångsmikrotjänster är:
 
@@ -62,9 +62,9 @@ Du kan använda anpassade överföringsverktyg, som fungerar direkt med AEM HTTP
 * [Överföringsbibliotek med öppen källkod](https://github.com/adobe/aem-upload)
 * [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem)
 
-Mer information finns i [Överföra resurser](add-assets.md).
+Mer information finns i [överföra resurser](add-assets.md).
 
-## Lägg till efterbearbetning av anpassade resurser {#add-custom-asset-post-processing}
+## Lägg till efterbearbetning av anpassad resurs {#add-custom-asset-post-processing}
 
 De flesta kunder bör få alla sina behov av tillgångsbearbetning från de konfigurerbara tillgångsmikrotjänsterna, men vissa kan behöva ytterligare bearbetning av resurser. Detta gäller särskilt om resurser behöver bearbetas baserat på information som kommer från andra system via integreringar. I sådana fall kan anpassade efterbearbetningsarbetsflöden användas.
 
