@@ -32,10 +32,10 @@ Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas ö
 Om JAR-test inte skapas av bygget godkänns testet som standard.
 
 >[!NOTE]
->Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) .
+>Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md).
 
 
-### Skriva funktionstester {#writing-functional-tests}
+### Skriver funktionstester {#writing-functional-tests}
 
 Funktionstester som skrivs av kunden måste paketeras som en separat JAR-fil som skapas av samma Maven-bygge som de artefakter som ska distribueras till AEM. I allmänhet är detta en separat Maven-modul. Den resulterande JAR-filen måste innehålla alla nödvändiga beroenden och skapas vanligtvis med maven-assembly-plugin med hjälp av jar-with-berodencies-beskrivningen.
 
@@ -74,9 +74,9 @@ Dessutom måste JAR ha manifesthuvudet Cloud-Manager-TestType inställt på inte
 
 I den här JAR-filen måste klassnamnen för de faktiska tester som ska köras sluta i IT.
 
-En klass med namnet `com.myco.tests.aem.ExampleIT` skulle till exempel köras, men inte en klass med namnet `com.myco.tests.aem.ExampleTest` .
+En klass med namnet `com.myco.tests.aem.ExampleIT` skulle till exempel köras, men en klass med namnet `com.myco.tests.aem.ExampleTest` skulle inte göra det.
 
-Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad för att vara kompatibel med de konventioner som används av testbiblioteket för aem-testing-clients. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder. Mer information finns i [Git-länken](https://github.com/adobe/aem-testing-clients) .
+Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad för att vara kompatibel med de konventioner som används av testbiblioteket för aem-testing-clients. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder. Mer information finns i [Git Link](https://github.com/adobe/aem-testing-clients).
 
 ### Lokal testkörning {#local-test-execution}
 
