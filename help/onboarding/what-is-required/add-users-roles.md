@@ -13,7 +13,7 @@ ht-degree: 9%
 # Lägg till användare och roller {#add-users-roles}
 
 
-Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter för att fungera. Exempelvis kan bara vissa användare ange KPI:er (Key Performance Indicators) för ett program. Dessa behörigheter är logiskt grupperade i roller.
+Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter för att kunna användas. Exempelvis kan bara vissa användare ange KPI:er (Key Performance Indicators) för ett program. Dessa behörigheter är logiskt grupperade i roller.
 
 [!UICONTROL Cloud Manager] definierar för närvarande fyra roller för användare som styr tillgängligheten av specifika funktioner:
 
@@ -24,7 +24,7 @@ Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter f
 
 >[!CAUTION]
 >
->För att kunna använda [!UICONTROL Cloud Manager]måste du ha en Adobe ID och Adobe Managed Services-produktkontext.
+>Om du vill använda [!UICONTROL Cloud Manager] måste du ha en Adobe ID och produktkontexten för Adobes hanterade tjänster.
 
 ## Rolldefinitioner {#role-definitions}
 
@@ -36,8 +36,8 @@ I följande tabell sammanfattas rollerna:
 
 | [!UICONTROL Cloud Manager] Roller | Beskrivning |
 |--- |--- |
-| Business Owner | Ansvarig för att definiera KPI:er, godkänna produktionsdistributioner och åsidosätta viktiga 3-skiktsfel. |
-| Program Manager | Används [!UICONTROL Cloud Manager] för att konfigurera team, granska status och visa KPI:er. Kan godkänna viktiga fel i tre nivåer. |
-| Deployment Manager | Hanterar distributionsåtgärder. Används [!UICONTROL Cloud Manager] för att köra fas-/produktionsdistributioner. Kan redigera CI/CD-rör. Kan godkänna viktiga fel i tre nivåer. Kan få åtkomst till Git-databasen. |
-| Developer | Utvecklar och testar anpassad programkod. Används främst [!UICONTROL Cloud Manager] för att visa status. Kan få åtkomst till Git-databasen för kodimplementering. |
-| Innehållsförfattare | I allmänhet interagerar inte med [!UICONTROL Cloud Manager]. Du kan använda [!UICONTROL Cloud Manager] Programväljaren (när du har navigerat från [!UICONTROL Experience Cloud]) för att få åtkomst till AEM. |
+| Företagsägare | Ansvarig för att definiera KPI:er, godkänna produktionsdistributioner och åsidosätta viktiga 3-skiktsfel. |
+| Programhanteraren | Använder [!UICONTROL Cloud Manager] för att utföra gruppkonfiguration, granska status och visa KPI:er. Kan godkänna viktiga fel i tre nivåer. |
+| Distributionshanteraren | Hanterar distributionsåtgärder. Använder [!UICONTROL Cloud Manager] för att köra scen-/produktionsdistributioner. Kan redigera CI/CD-rör. Kan godkänna viktiga fel i tre nivåer. Kan få åtkomst till Git-databasen. |
+| Utvecklare | Utvecklar och testar anpassad programkod. I används främst [!UICONTROL Cloud Manager] för att visa status. Kan få åtkomst till Git-databasen för kodimplementering. |
+| Innehållsförfattare | I allmänhet interagerar inte med [!UICONTROL Cloud Manager]. Använd [!UICONTROL Cloud Manager] Programväljaren (när du har navigerat från [!UICONTROL Experience Cloud]) för att få åtkomst till AEM. |
