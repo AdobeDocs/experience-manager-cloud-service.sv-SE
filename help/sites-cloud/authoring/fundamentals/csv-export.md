@@ -12,9 +12,9 @@ ht-degree: 29%
 
 # Exportera till CSV {#export-to-csv}
 
-**Med Skapa CSV-rapport** kan du exportera information om dina sidor till en CSV-fil på ditt lokala system.
+**Med Skapa CSV-** rapporter kan du exportera information om dina sidor till en CSV-fil på ditt lokala system.
 
-* Den hämtade filen kallas `export.csv`
+* Den hämtade filen heter `export.csv`
 * Innehållet beror på de egenskaper du väljer.
 * Du kan definiera banan tillsammans med exportens djup.
 
@@ -43,13 +43,13 @@ I guiden **Skapa CSV-export** kan du välja:
    * Ytterligare nivåer av barn
    * Nivåer
 
-Den resulterande `export.csv` filen kan öppnas i Excel eller något annat kompatibelt program.
+Den resulterande `export.csv`-filen kan öppnas i Excel eller något annat kompatibelt program.
 
 Så här skapar du en CSV-export:
 
 1. Öppna konsolen **Sites** och navigera till önskad plats om det behövs.
    * Alternativet Skapa **CSV-rapport** är tillgängligt när du bläddrar i **Sites-konsolen** (i listvyn)
-   * Det här är ett alternativ i listrutan **Skapa** :
+   * Det är ett alternativ i listrutan **Skapa**:
 
       ![Alternativet Skapa CSV](/help/sites-cloud/authoring/assets/csv-create.png)
 
