@@ -29,7 +29,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.4.0 är 9 april 202
 * Misslyckade miljöer kan nu tas bort via gränssnittet och API:t.
 * Processen som används för att generera Git-lösenord har gjorts mer flexibel mot problem i det underliggande tjänstskiktet.
 
-### Bug Fixes {#bug-fixes-cloud-manager}
+### Felkorrigeringar {#bug-fixes-cloud-manager}
 
 * Länkarna till scenmiljön på informationssidan för pipeline-körning navigerade inte konsekvent till rätt plats.
 * Enskilda steg i skapandet av miljön skulle timeout inträffa tidigare än nödvändigt och orsaka att processen misslyckas.
