@@ -1,6 +1,6 @@
 ---
 title: Filformat och MIME-typer som stöds
-description: Filformat och MIME-typer stöds [!DNL Experience Manager Assets] av en Cloud Service.
+description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som en Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 7e5ea5ccf0110d1fb55449c9c1933aff6aba0065
@@ -11,17 +11,17 @@ ht-degree: 6%
 ---
 
 
-# [!DNL Assets] filformat som stöds {#supported-file-formats}
+# [!DNL Assets] filformat som stöds  {#supported-file-formats}
 
 [!DNL Adobe Experience Manager] som en Cloud Service som har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett format. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
 
-Dessutom har [!DNL Experience Manager Assets] utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med hjälp av [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
+[!DNL Experience Manager Assets] har dessutom utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med [asset microservices](asset-microservices-configure-and-use.md).
 
 Några av de viktigaste funktionerna för tillgångskonvertering med hjälp av mikrotjänster:
 
-* Viktiga [filformat](#adobe-formats) för Adobe som skapats av program och tjänster från Adobe, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD]och [!DNL Adobe Dimension][!DNL Adobe Acrobat] eller PDF.
-* Viktiga [bildfilformat](#image-formats).
-* [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw i botten).
+* Nyckelformat [Adobe](#adobe-formats) som skapats av Adobe program och tjänster, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension] och [!DNL Adobe Acrobat] eller PDF.
+* Nyckel [filformat för bildåtergivning](#image-formats).
+* [Camera Raw filformat ](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw i botten).
 * Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
 * Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
 
@@ -49,7 +49,7 @@ Följande förklaring beskriver supportnivån.
 | PSD | ✓ | - | ✓ | ✓ |
 | XD | ✓ | - | ✓ | ✓ |
 
-\* För [!DNL Adobe InDesign] filer (INDD) bestäms återgivningens storlek av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) för att bädda in större återgivning.
+\* För [!DNL Adobe InDesign]-filer (INDD) bestäms återgivningens storlek av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) för att bädda in större återgivning.
 
 ## Bildformat {#image-formats}
 
@@ -75,7 +75,7 @@ Följande förklaring beskriver supportnivån.
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | - | - | - | - |
-| PSD ‡ | ✓ | - | - | - | - |
+| PSD   ‡ | ✓ | - | - | - | - |
 | EPS | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ | - | - | - | - |
 
@@ -105,7 +105,7 @@ Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/as
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
 | USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
 
-## [!DNL Camera RAW] format {#camera-raw-formats}
+## [!DNL Camera RAW] format  {#camera-raw-formats}
 
 | Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
 | ----------- | -------------------- | ------------------- | ------------ |
