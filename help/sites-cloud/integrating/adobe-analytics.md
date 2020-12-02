@@ -26,7 +26,7 @@ Informationen innehåller t.ex. sid- och användardata:
 
 På sidorna nedan kan du konfigurera integreringen. Observera att Launch by Adobe är de facto-verktyget för att instrumentera en AEM webbplats med analysfunktioner (JS-bibliotek). Att integrera AEM som Cloud Service med Launch och Adobe Analytics går därför hand i hand.
 
-* [Ansluta till Adobe Analytics och skapa ramverk](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/adobeanalytics-connect.html) - Observera att&quot;Analysramverk&quot; är äldre i AEM och att det inte går att skapa dem i AEM som en Cloud Service eftersom det kräver det klassiska användargränssnittet. Launch by Adobe bör användas i stället, både för variabelmappning och för distribution av JS-bibliotek till sidor.
+* [Ansluta till Adobe Analytics och skapa ramverk](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/adobeanalytics-connect.html)  - Observera att&quot;Analysramverk&quot; är äldre i AEM och att det inte går att skapa dem i AEM som en Cloud Service eftersom det kräver det klassiska användargränssnittet. Launch by Adobe bör användas i stället, både för variabelmappning och för distribution av JS-bibliotek till sidor.
 * [Integrera Launch by Adobe](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
 * [Integrera AEM med Adobe Launch via Adobe I/O](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)
 * [Förstå AEM integrering med Launch by Adobe, analys och mål](https://helpx.adobe.com/experience-manager/kt/integration/using/aem-launch-integration-tutorial-understand.html)
@@ -47,8 +47,8 @@ På sidorna nedan kan du konfigurera integreringen. Observera att Launch by Adob
 
 Se:
 
-* [Utvidga Adobe Analytics Integration](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-analytics/extending-analytics.html) för information om utveckling av komponenter som samlar in användardata och anpassar Adobe Analytics-ramverket. Observera att&quot;Analysramverk&quot; är äldre i AEM och att det inte fungerar att skapa dem i AEM som en Cloud Service eftersom det kräver det klassiska användargränssnittet. Launch by Adobe bör användas i stället, både för variabelmappning och för distribution av JS-bibliotek till sidor.
-* Kunskapsbasartikeln, [Adobe Analytics-integrering - felsökningsproblem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html), innehåller information om hur du felsöker din Adobe Analytics-integrering.
+* [Utvidga Adobe Analytics ](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-analytics/extending-analytics.html) Integrationför information om utveckling av komponenter som samlar in användardata och anpassar Adobe Analytics ramverk. Observera att&quot;Analysramverk&quot; är äldre i AEM och att det inte fungerar att skapa dem i AEM som en Cloud Service eftersom det kräver det klassiska användargränssnittet. Launch by Adobe bör användas i stället, både för variabelmappning och för distribution av JS-bibliotek till sidor.
+* Kunskapsbasartikeln [Adobe Analytics-integration - felsökning av problem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html) innehåller information om hur du felsöker din Adobe Analytics-integrering.
 
 >[!NOTE]
 >
