@@ -12,19 +12,19 @@ ht-degree: 0%
 
 # Åtkomst till program {#first-time-login}
 
-När du har loggat in på [!UICONTROL Cloud Manager]är du redo att använda användargränssnittet.
+När du har loggat in på [!UICONTROL Cloud Manager] är du redo att använda användargränssnittet.
 
 >[!NOTE]
 >
->Beroende på vilka roller som har tilldelats i [!UICONTROL Cloud Manager] och programmets status visas olika skärmar när du använder [!UICONTROL Cloud Manager] användargränssnittet.
+>Beroende på vilka roller som har tilldelats i [!UICONTROL Cloud Manager] och programmets status visas olika skärmar när du använder användargränssnittet för [!UICONTROL Cloud Manager].
 
 ## Startsida för Cloud Manager {#landing-page}
 
-När du har loggat in [!UICONTROL Cloud Manager]ser du landningssidan enligt figuren nedan.
+När du har loggat in på [!UICONTROL Cloud Manager] ser du landningssidan enligt bilden nedan.
 
 >[!NOTE]
 >
->Program som finns på Cloud Servicen markeras med underrubriken **Experience Manager Cloud** (till skillnad från **Experience Manager** för AMS-program), vilket visas nedan.
+>Program som finns på Cloud Servicen anges av underrubriken **Experience Manager Cloud** (till skillnad från **Experience Manager** för AMS-program), som visas nedan.
 
 ![](assets/first_timelogin1.png)
 
@@ -45,15 +45,15 @@ På landningssidan får du instruktioner att skapa ditt första program, vilket 
 ## Lägga till ett nytt program i Cloud Service med befintliga program {#existing-program}
 
 
-1. Logga in på **Adobe[!UICONTROL Experience Cloud]** så ser du listan över **program och produkter**.
+1. Logga in på **Adobe[!UICONTROL Experience Cloud]** så ser du listan **Program och produkter**.
 
    ![](assets/first_timelogin1.png)
 
    Program som finns på Cloud Servicen anges av underrubriken **Experience Manager Cloud** (till skillnad från **Experience Manager** för AMS-program).
 
    >[!NOTE]
-   >For example, in the figure above, **We.Retail Global** is an AMS program and **We.Retail-Prod Program - Prod** is a program available via Cloud Service.
+   >I figuren ovan är till exempel **We.Retail Global** ett AMS-program och **We.Retail-Prod Program - Prod** ett program som är tillgängligt via Cloud Service.
 
-1. Mer information om hur du lägger till ett program från skärmen **Program och produkter** för att skapa ett nytt program i Cloud Servicen finns i [Skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/creating-a-program.md).
+1. Mer information om hur du lägger till ett program från **skärmen Program &amp; produkter** för att skapa ett nytt program i Cloud Service finns i [Skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/creating-a-program.md).
 
 
