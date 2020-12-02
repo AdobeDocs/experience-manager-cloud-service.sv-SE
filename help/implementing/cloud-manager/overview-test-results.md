@@ -18,7 +18,7 @@ Det finns tre olika testkategorier som stöds av Cloud Manager för Cloud Servic
 
    Kodkvalitetstestningen utvärderar kvaliteten på programkoden. Ledningen Code-Quality utförs omedelbart efter byggsteget i alla icke-produktions- och produktionspipelinjer.
 
-   De regler [för](/help/implementing/cloud-manager/custom-code-quality-rules.md) anpassad kodkvalitet som körs av Cloud Manager skapas baserat på bästa praxis från AEM.
+   De [regler för anpassad kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) som körs av Cloud Manager skapas baserat på bästa praxis från AEM.
 
 1. [Funktionstestning](/help/implementing/cloud-manager/functional-testing.md)
 
