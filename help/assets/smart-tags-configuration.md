@@ -25,7 +25,7 @@ Smart Tags-funktionen kan köpas som tillägg till [!DNL Experience Manager]. N�
 
 >[!IMPORTANT]
 >
->De nya [!DNL Experience Manager Assets] distributionerna är integrerade med [!DNL Adobe Developer Console] som standard. Det hjälper till att konfigurera smarta taggar snabbare. I befintliga distributioner följer administratörer de här stegen för att konfigurera den.
+>De nya [!DNL Experience Manager Assets]-distributionerna är som standard integrerade med [!DNL Adobe Developer Console]. Det hjälper till att konfigurera smarta taggar snabbare. I befintliga distributioner följer administratörer de här stegen för att konfigurera den.
 
 ## Integrera med Adobe Developer Console {#aio-integration}
 
