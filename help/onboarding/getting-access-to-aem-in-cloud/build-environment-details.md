@@ -34,18 +34,18 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent packageco-maven-plugin:prepare-agent package`
-* Maven är konfigurerad på systemnivå med filen settings.xml som automatiskt inkluderar databasen för Adobe **Artifact** . (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/) .)
+* Maven konfigureras på systemnivå med filen settings.xml som automatiskt inkluderar databasen public Adobe **Artifact**. (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/).)
 
 >[!NOTE]
->Även om Cloud Manager inte definierar en specifik version av `jacoco-maven-plugin`filen måste den version som används vara minst `0.7.5.201505241946`.
+>Även om Cloud Manager inte definierar en specifik version av `jacoco-maven-plugin` måste den version som används vara minst `0.7.5.201505241946`.
 
-### Använda Java 11-stöd {#using-java-support}
+### Använda stöd för Java 11 {#using-java-support}
 
 Cloud Manager har nu stöd för att bygga kundprojekt med både Java 8 och Java 11. Som standard byggs projekt med Java 8.
 
 Kunder som vill använda Java 11 i sina projekt kan göra det med [Apache Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/).
 
-Det gör du genom att lägga till en post som ser ut så här i filen pom.xml: `<plugin>`
+Det gör du genom att lägga till en `<plugin>`-post som ser ut så här i filen pom.xml:
 
 ```
 <plugin>
@@ -71,10 +71,10 @@ Det gör du genom att lägga till en post som ser ut så här i filen pom.xml: `
 ```
 
 >[!NOTE]
->Leverantörsvärden som stöds är `oracle` och `sun`och de versionsvärden som stöds är `1.8`, `1.11`och `11`.
+>Leverantörsvärden som stöds är `oracle` och `sun`och de versionsvärden som stöds är `1.8`, `1.11` och `11`.
 
 >[!NOTE]
->I Cloud Managers projektbygge används fortfarande Java 8 för att anropa Maven. Därför fungerar inte kontrollen eller verkställandet av den Java-version som konfigurerats i plugin-programmet för verktygskedjan via plugin-program som [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) , och sådana plugin-program får inte användas.
+>I Cloud Manager-projektbygget används fortfarande Java 8 för att anropa Maven. Därför fungerar inte kontrollen eller verkställandet av den Java-version som konfigurerats i plugin-programmet för verktygskedjan via plugin-program som [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/), och sådana plugin-program får inte användas.
 
 ## Miljövariabler {#environment-variables}
 
@@ -97,11 +97,11 @@ Som stöd för detta lägger Cloud Manager till dessa standardmiljövariabler i 
 | ARTIFACTS_VERSION | Den syntetiska versionen som genererats av Cloud Manager för en fas eller produktionsprocess |
 | CM_AEM_PRODUCT_VERSION | Versionsnamnet |
 
-### Rörledningsvariabler {#pipeline-variables}
+### Förloppsvariabler {#pipeline-variables}
 
 I vissa fall kan en kunds byggprocess vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen eller som behöver variera mellan olika pipeline-körningar som använder samma gren.
 
-Med Cloud Manager kan dessa variabler konfigureras via Cloud Manager API eller Cloud Manager CLI per pipeline. Variabler kan lagras som antingen ren text eller krypteras i vila. I båda fallen görs variabler tillgängliga i byggmiljön som en miljövariabel som sedan kan refereras inifrån `pom.xml` filen eller andra byggskript.
+Med Cloud Manager kan dessa variabler konfigureras via Cloud Manager API eller Cloud Manager CLI per pipeline. Variabler kan lagras som antingen ren text eller krypteras i vila. I båda fallen görs variabler tillgängliga i byggmiljön som en miljövariabel som sedan kan refereras inifrån `pom.xml`-filen eller andra byggskript.
 
 Om du vill ange en variabel med hjälp av CLI kör du ett kommando som:
 
@@ -113,7 +113,7 @@ Aktuella variabler kan listas:
 
 Variabelnamn får endast innehålla alfanumeriska tecken och understreck (_). Namnen ska vara versaler. Det finns en gräns på 200 variabler per pipeline, där varje namn måste innehålla mindre än 100 tecken och varje värde måste vara mindre än 2 048 tecken för strängtypsvariabler och 500 tecken för värden av typen secretsString.
 
-När de används i en `Maven pom.xml` fil är det praktiskt att mappa dessa variabler till Maven-egenskaper med en syntax som liknar den här:
+När de används i en `Maven pom.xml`-fil är det vanligtvis praktiskt att mappa dessa variabler till Maven-egenskaper med en syntax som liknar den här:
 
 ```xml
         <profile>
@@ -129,7 +129,7 @@ När de används i en `Maven pom.xml` fil är det praktiskt att mappa dessa vari
         </profile>
 ```
 
-## Installera ytterligare systempaket {#installing-additional-system-packages}
+## Installerar ytterligare systempaket {#installing-additional-system-packages}
 
 Vissa byggen kräver att ytterligare systempaket installeras för att fungera helt. Ett bygge kan till exempel anropa ett Python- eller ruby-skript och därför måste ha en lämplig språktolk installerad. Detta kan du göra genom att anropa [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) för att anropa APT. Den här exekveringen bör normalt omslutas av en molnhanterarspecifik Maven-profil. Så här installerar du python:
 
@@ -184,7 +184,7 @@ Vissa byggen kräver att ytterligare systempaket installeras för att fungera he
         </profile>
 ```
 
-Samma teknik kan användas för att installera språkspecifika paket, dvs. med `gem` för RubyGems eller `pip` för Python-paket.
+Samma teknik kan användas för att installera språkspecifika paket, t.ex. med `gem` för RubyGems eller `pip` för Python-paket.
 
 >[!NOTE]
->Om du installerar ett systempaket på det här sättet installeras det **inte** i den körningsmiljö som används för att köra Adobe Experience Manager. Om du behöver ett systempaket som är installerat i AEM ska du kontakta Adobe.
+>Om du installerar ett systempaket på det här sättet installeras det **inte** i körningsmiljön som används för att köra Adobe Experience Manager. Om du behöver ett systempaket som är installerat i AEM ska du kontakta Adobe.
