@@ -26,7 +26,7 @@ Med innehållsfragment som använder strukturerat innehåll kan du tillhandahål
 
 Med den AEM JSON-exporteraren kan du leverera innehållet på en (y) AEM-sida i JSON-datamodellsformat. Detta kan sedan användas av dina egna program.
 
-Inom AEM levereras med väljaren `model` och `.json` tillägget.
+Inom AEM leverans uppnås med tillägget väljare `model` och `.json`.
 
 `.model.json`
 
@@ -42,7 +42,7 @@ Inom AEM levereras med väljaren `model` och `.json` tillägget.
 
 Du kan också leverera innehållet i ett strukturerat innehållsfragment genom att specifikt rikta in det på det.
 
-Detta görs med hela sökvägen till fragmentet (via `jcr:content`), till exempel med ett suffix som
+Detta görs med hela sökvägen till fragmentet (via `jcr:content`); till exempel med ett suffix som
 
 `.../jcr:content/root/container/container/contentfragment.model.json`
 
@@ -60,7 +60,7 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
    >[!NOTE]
    >
-   >Ni kan [anpassa era egna komponenter](enabling-json-exporter.md) för att få tillgång till och använda dessa data.
+   >Du kan [anpassa dina egna komponenter](enabling-json-exporter.md) för att komma åt och använda dessa data.
 
    >[!NOTE]
    >
@@ -77,11 +77,11 @@ Se även:
 * AEM med JSON:
    * [Aktivera JSON-export för en komponent](enabling-json-exporter.md)
 
-## Related Documentation {#related-documentation}
+## Relaterad dokumentation {#related-documentation}
 
 Mer information finns i:
 
 * [Content Fragments in the Assets user guide](/help/assets/content-fragments/content-fragments.md)
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
-* [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) och komponenten [Innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
+* [Kärnkomponenter ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) och komponenten  [Innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
