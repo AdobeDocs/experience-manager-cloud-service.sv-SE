@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Visa Uppdatera och ersätta ett anpassat domännamn  {#view-update-replace-cdn}
+# Visa Uppdatera och ersätta ett anpassat domännamn {#view-update-replace-cdn}
 
 Använd menyn Visa och uppdatera för att visa information om en eller flera av dina anpassade domännamn.
 Du kan också ändra SSL-certifikatet som ska användas för det anpassade domännamnet.
@@ -18,14 +18,14 @@ Du kan också ändra SSL-certifikatet som ska användas för det anpassade domä
 >[!NOTE]
 >SSL-certifikatet måste vara giltigt och innehålla det anpassade domännamnet.
 
-## Uppdatera SSL-certifikat för anpassat domännamn {#update-ssl-certificate-cdn}
+## Uppdatera SSL-certifikat för det anpassade domännamnet {#update-ssl-certificate-cdn}
 
 Uppdateringsåtgärden kan utföras från två olika platser i användargränssnittet:
 
 1. Gå till sidan Domäninställningar från skärmen Miljö.
 1. Du kan även navigera till den specifika miljöinformationssidan från skärmen för miljöer och navigera till tabellen Domännamn.
 Identifiera raden där det anpassade domännamn du vill visa/uppdatera listas
-1. Markera **...** menyn längst till höger på raden
+1. Välj **..**-menyn längst till höger på raden
 1. Välj alternativet Visa och uppdatera
 1. Gör nödvändiga ändringar i SSL-certifikatet och bekräfta din inlämning
 
