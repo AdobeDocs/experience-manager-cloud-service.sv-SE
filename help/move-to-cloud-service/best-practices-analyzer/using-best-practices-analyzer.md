@@ -16,19 +16,19 @@ ht-degree: 47%
 
 Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best Practices Analyzer (BPA):
 
-* The BPA report is built using the output of the Adobe Experience Manager (AEM) [Pattern Detector](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Mönsteravkännare som används av BPA ingår i BPA-installationspaketet.
+* BPA-rapporten byggs med utdata från Adobe Experience Manager (AEM) [Mönsteravkännare](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Mönsteravkännare som används av BPA ingår i BPA-installationspaketet.
 
-* BPA may only be run by the **admin** user or a user in the **administrators** group.
+* BPA kan bara köras av **admin**-användaren eller en användare i **administratörsgruppen**.
 
 * BPA stöds på AEM med version 6.1 och senare.
 
    >[!NOTE]
-   > Please see [Installing on AEM 6.1](#installing-on-aem61) for special requirements for installing BPA on AEM 6.1.
+   > Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
 
-* BPA can run on any environment, but it is preferred to have it run on a *Stage* environment.
+* BPA kan köras i alla miljöer, men bör köras på en *Stage*-miljö.
 
    >[!NOTE]
-   >In order to avoid an impact on business critical instances, it is recommended that you run BPA on an *Author* environment that is as close as possible to the *Production* environment in the areas of customizations, configurations, content and user applications. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
+   >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA i en *Author*-miljö som är så nära *Production*-miljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
 
 * Det kan ta lång tid att generera BPA-rapportinnehåll, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
@@ -39,7 +39,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best 
 Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
->Download the Best Practices Analyzer from the [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portal.
+>Hämta Best Practices Analyzer från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen.
 
 ## Visa rapporten Best Practices Analyzer {#viewing-report}
 
@@ -47,7 +47,7 @@ Best Practices Analyzer kan laddas ned som en zip-fil från portalen för progra
 
 Följ det här avsnittet för att lära dig hur du visar rapporten Best Practices Analyzer:
 
-1. Select Adobe Experience Manager and navigate to tools -> **Operations** -> **Best Practices Analyzer**.
+1. Välj Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Best Practices Analyzer**.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic1.png)
 
@@ -68,12 +68,12 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic5.png)
 
-1. You have the option of downloading the report in a comma-separated values (CSV) format by clicking on **CSV**, as shown in the figure below.
+1. Du kan hämta rapporten i ett kommaavgränsat värdeformat (CSV) genom att klicka på **CSV**, vilket visas i bilden nedan.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic6.png)
 
    >[!NOTE]
-   >You may force the BPA to clear its cache and regenerate the report by clicking **Refresh Report**.
+   >Du kan tvinga BPA att rensa sin cache och återskapa rapporten genom att klicka på **Uppdatera rapport**.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic7.png)
 
@@ -109,7 +109,7 @@ Rapportens format är:
 Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder.
 
 >[!NOTE]
->Mer information om varje sökkategori finns i Kategorier för [mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
+>Mer information om varje sökkategori finns i [Mönsterdetekteringskategorier](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
 
 Läs tabellen nedan för mer information om viktighetsgrad:
 
@@ -123,7 +123,7 @@ Läs tabellen nedan för mer information om viktighetsgrad:
 
 ## Tolka CSV-rapporten för Best Practices Analyzer {#cra-csv-report}
 
-When you click the **CSV** option from your AEM instance, the CSV format of the Best Practices Analyzer report is built from the content cache and returned to your browser. Beroende på inställningarna i webbläsaren hämtas rapporten automatiskt som en fil med standardnamnet `results.csv`.
+När du klickar på alternativet **CSV** från din AEM skapas CSV-formatet för rapporten Best Practices Analyzer från innehållscachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas rapporten automatiskt som en fil med standardnamnet `results.csv`.
 
 Om cacheminnet har gått ut genereras rapporten på nytt innan CSV-filen skapas och hämtas.
 
@@ -147,7 +147,7 @@ Värdet &quot;\N&quot; i en kolumn för enskilda resultat anger att inga data fi
 
 BPA har ett HTTP-gränssnitt som kan användas som ett alternativ till användargränssnittet i AEM. Gränssnittet har stöd för både HEAD- och GET-kommandon. Den kan användas för att generera BPA-rapporten och returnera den i ett av tre format: JSON, CSV och tabbseparerade värden (TSV).
 
-The following URLs are available for HTTP access, where `<host>` is the hostname, and port if necessary, of the server on which the BPA is installed:
+Följande URL:er är tillgängliga för HTTP-åtkomst, där `<host>` är värdnamnet och porten, om det behövs, för servern där BPA är installerat:
 * `http://<host>/apps/best-practices-analyzer/analysis/report.json` för JSON-format
 * `http://<host>/apps/best-practices-analyzer/analysis/report.csv` för CSV-format
 * `http://<host>/apps/best-practices-analyzer/analysis/report.tsv` för TSV-format
@@ -173,10 +173,10 @@ Följande HTTP-sidhuvuden används i gränssnittet:
 
 Följande HTTP-frågeparametrar är praktiska när det är svårt att använda HTTP-sidhuvuden:
 
-* `max-age` (tal, valfritt): Anger livstid för cachefrihet i sekunder. Siffran måste vara 0 eller större. Standardlivstiden för färskhet är 86400 sekunder. Utan den här parametern eller motsvarande rubrik används ett nytt cacheminne för att hantera begäranden i 24 timmar, och då måste cacheminnet genereras om. Om du använder `max-age=0` kommer cachen att rensas och en omgenerering av rapporten påbörjas, med den tidigare icke-nollvaraktigheten för det nyligen genererade cacheminnet.
-* `respond-async` (boolesk, valfritt): Anger att svaret ska anges asynkront. Using `respond-async=true` when the cache is stale will cause the server to return a response of `202 Accepted` without waiting for the cache to be refreshed and for the report to be generated. Om cacheminnet är uppdaterat har den här parametern ingen effekt. The default value is `false`. Without this parameter or the corresponding header the server will respond synchronously, which may require a significant amount of time and require an adjustment to the maximum response time for the HTTP client.
-* `may-refresh-cache` (boolesk, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. Om `may-refresh-cache=true`eller om det inte anges kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. Om `may-refresh-cache=false` så inte är fallet kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha utförts om cachen är tom eller inaktuell. I så fall kommer rapporten att vara tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
-* `return-minimal` (boolesk, valfritt): Anger att svaret från servern endast ska innehålla statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. Om `return-minimal=true`så är svarstexten begränsad till statusobjektet. Om `return-minimal=false`eller om det inte anges kommer ett fullständigt svar att ges.
+* `max-age` (tal, valfritt): Anger livstid för cachefrihet i sekunder. Siffran måste vara 0 eller större. Standardlivstiden för färskhet är 86400 sekunder. Utan den här parametern eller motsvarande rubrik används ett nytt cacheminne för att hantera begäranden i 24 timmar, och då måste cacheminnet genereras om. Om du använder `max-age=0` kommer cachen att rensas och en omgenerering av rapporten kommer att påbörjas, med den tidigare icke-nollvaraktigheten för det nyligen genererade cacheminnet.
+* `respond-async` (boolesk, valfritt): Anger att svaret ska anges asynkront. Om du använder `respond-async=true` när cachen är inaktiv returnerar servern svaret `202 Accepted` utan att vänta på att cachen ska uppdateras och att rapporten ska genereras. Om cacheminnet är uppdaterat har den här parametern ingen effekt. Standardvärdet är `false`. Utan den här parametern eller motsvarande rubrik kommer servern att svara synkront, vilket kan kräva mycket tid och en justering av den maximala svarstiden för HTTP-klienten.
+* `may-refresh-cache` (boolesk, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. Om `may-refresh-cache=true`, eller om den inte anges, kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. Om `may-refresh-cache=false` kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha gjorts om cachen är tom eller inaktuell. I så fall kommer rapporten att vara tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
+* `return-minimal` (boolesk, valfritt): Anger att svaret från servern endast ska innehålla statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. Om `return-minimal=true` begränsas svarstexten till statusobjektet. Om `return-minimal=false`, eller om det inte anges, kommer ett fullständigt svar att ges.
 * `log-findings` (boolesk, valfritt): Anger att servern ska logga innehållet i cachen när den skapas eller uppdateras för första gången. Varje sökning från cachen loggas som en JSON-sträng. Denna loggning sker endast om `log-findings=true` och begäran genererar ett nytt cacheminne.
 
 När det finns både ett HTTP-sidhuvud och motsvarande frågeparameter har frågeparametern företräde.
@@ -191,8 +191,8 @@ När en begäran har skickats behöver klienten inte vara aktiv för att rapport
 Följande svarsvärden är möjliga:
 
 * `200 OK`: Anger att svaret innehåller upptäckter från mönsteravkännaren som genererades under cachelagringens aktualitetstid.
-* `202 Accepted`: Används för att ange att cachen är inaktuell. När `respond-async=true` och `may-refresh-cache=true` det här svaret anger att en uppdateringsåtgärd pågår. När `may-refresh-cache=false` det här svaret indikerar att cachen är inaktuell.
-* `400 Bad Request`: Anger att det uppstod ett fel med begäran. A message in Problem Details format (see [RFC 7807](https://tools.ietf.org/html/rfc7807)) provides more details.
+* `202 Accepted`: Används för att ange att cachen är inaktuell. När `respond-async=true` och `may-refresh-cache=true` anger det här svaret att en uppdateringsaktivitet pågår. När `may-refresh-cache=false` anger det här svaret helt enkelt att cachen är inaktuell.
+* `400 Bad Request`: Anger att det uppstod ett fel med begäran. Ett meddelande i formatet Probleminformation (se [RFC 7807](https://tools.ietf.org/html/rfc7807)) innehåller mer information.
 * `401 Unauthorized`: Anger att begäran inte var auktoriserad.
 * `500 Internal Server Error`: Anger att ett internt serverfel uppstod. Ett meddelande i formatet Problem Details innehåller mer information.
 * `503 Service Unavailable`: Anger att servern är upptagen med ett annat svar och inte kan hantera begäran i tid. Detta inträffar troligtvis bara när synkrona förfrågningar görs. Ett meddelande i formatet Problem Details innehåller mer information.
@@ -210,7 +210,7 @@ Värdet för den här egenskapen är cachelivslängden i sekunder. Administratö
 
 ### Installera på AEM 6.1 {#installing-on-aem61}
 
-BPA utilizes a system service user account named `repository-reader-service` to execute the Pattern Detector. Det här kontot är tillgängligt på AEM 6.2 och senare. On AEM 6.1, this account must be created *prior to* installation of BPA by taking the following steps:
+BPA använder ett användarkonto för systemtjänsten med namnet `repository-reader-service` för att köra mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. På AEM 6.1 måste det här kontot skapas *innan* BPA-installationen installeras enligt följande:
 
 1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security-service-users.html#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom. Klicka sedan på den gröna bockmarkeringen.
 
