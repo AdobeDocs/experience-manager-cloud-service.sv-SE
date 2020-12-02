@@ -1,11 +1,11 @@
 ---
 title: Filformat och MIME-typer som stöds
-description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som en Cloud Service.
+description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7e5ea5ccf0110d1fb55449c9c1933aff6aba0065
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '772'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 # [!DNL Assets] filformat som stöds  {#supported-file-formats}
 
-[!DNL Adobe Experience Manager] som en Cloud Service som har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett format. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
+[!DNL Adobe Experience Manager] som en  [!DNL Cloud Service] lösning med stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett filformat. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
 
 [!DNL Experience Manager Assets] har dessutom utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med [asset microservices](asset-microservices-configure-and-use.md).
 
@@ -221,7 +221,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Ljudformat {#audio-formats}
 
-[!DNL Assets] som en Cloud Service har stöd XMP metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
+[!DNL Assets] som en  [!DNL Cloud Service] funktion för XMP metadataextraheringsstöd för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
 
 >[!MORELIKETHIS]
 >
