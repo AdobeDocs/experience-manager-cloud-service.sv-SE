@@ -25,13 +25,13 @@ Interaktiv 3D-förhandsvisning i AEM har stöd för följande filformat:
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
 | GLB | Binär GL-överföring | model/gltf-binary |  |
-| GLTF | GL-överföringsformat | model/gltf+json | Se **anmärkningen** nedan. |
+| GLTF | GL-överföringsformat | model/gltf+json | Se **Kommentar** nedan. |
 | OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
 | STL | Stereolitografi | application/vnd.ms-pki.stl |  |
 | DN | Adobe Dimension | model/x-adobe-dn | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
 | USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
 
-**Obs**: Om materialet inte återges i förhandsgranskningen av en gLTF-modell måste du se till att de har rätt namn och finns i en `textures` mapp i samma rotmapp som modellen, som i följande:
+**Obs**: Om materialet inte återges i förhandsgranskningen av en gLTF-modell måste du se till att de har rätt namn och finns i en  `textures` mapp i samma rotmapp som modellen, som i följande:
 
     Resurs (mapp)
     modell.
@@ -49,8 +49,8 @@ Dessutom är funktioner i klientdatorn - t.ex. en arbetsstation, bärbar dator e
 **Förhandsgranska 3D-resurser i AEM**
 
 1. Se till att du har överfört 3D-resurser till AEM.
-See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/manage-digital-assets.md#uploading-assets).
-1. Tryck på AEM på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets > Files]**.
+Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överföra resurser](/help/assets/manage-digital-assets.md#uploading-assets).
+1. Tryck på **[!UICONTROL Assets > Files]** på sidan **[!UICONTROL Navigation]** från AEM.
 
    ![Navigeringssida](/help/assets/dynamic-media/assets/navigation-assets.png)
 
@@ -64,19 +64,19 @@ See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Upl
    ![Interaktiv förhandsvisning av 3D](/help/assets/dynamic-media/assets/3d-preview.png)
    _Interaktiv förhandsgranskning av en 3D-resurs på sidan med resursinformationsvyn._
 1. Gör något av följande på sidan med resursinformationsvyn för 3D-resursen:
-   * **Vrid kameran**- Du kan rotera vyn runt 3D-scenen och objekten.
+   * **Vrid kameran** - Du kan rotera vyn runt 3D-scenen och objekten.
       * _Mus_: Vänsterklicka och dra.
       * _Pekskärm_: Tryck med ett finger och dra.
-   * **Panorera kameran**- Panorera åt vänster, åt höger, uppåt eller nedåt.
+   * **Panorera kameran** - Panorera åt vänster, åt höger, uppåt eller nedåt.
       * _Mus_: Högerklicka och dra.
       * _Pekskärm_: Tryck med två fingrar och dra.
-   * **Zooma kameran**- Zooma kameran för att flytta in i och ut från områden i 3D-scenen.
+   * **Zooma kameran** - Zooma kameran för att flytta in i och ut från områden i 3D-scenen.
       * _Mus_: Rullningshjul.
       * _Pekskärm_: Nyp med två fingrar.
    * **Centrera kameran** igen - Centrera kameran igen och placera den vid en punkt på ett objekt i 3D-scenen.
       * _Mus_: Dubbelklicka.
       * _Pekskärm_: Dubbeltryck.
-   * **Återställ**- I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.
-   * **Helskärmsläge**- Tryck på ikonen Helskärm i det nedre högra hörnet av sidan för att öppna helskärmsläget.
+   * **Återställ** - I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.
+   * **Helskärmsläge** - Tryck på ikonen Helskärm i det nedre högra hörnet av sidan för att öppna helskärmsläget.
 
-1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close]**.
+1. När du är klar trycker du **[!UICONTROL Close]** i det övre högra hörnet på sidan.
