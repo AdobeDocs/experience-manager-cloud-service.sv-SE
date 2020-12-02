@@ -22,7 +22,7 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 ![WKND](assets/wknd-tutorial-homepage.png)
 
-[WKND Developer Tutorial finns här](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
+[WKND Developer Tutorial är tillgänglig ](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) här och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
 
 ## Viktiga begrepp {#core-concepts}
 
