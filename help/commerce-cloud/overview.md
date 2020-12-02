@@ -17,7 +17,7 @@ Experience Manager Commerce som Cloud Service består av Commerce Integration Fr
 
 Commerce Integration Framework är en tilläggsmodul för Experience Manager som Cloud Service och innehåller en uppsättning redigeringsverktyg, komponenter och en referensbutik som snabbar upp utvecklingen av integreringar mellan Experience Manager som en Cloud Services- och handelslösning.
 
-## Fördelar med CIF {#cif-benefits}
+## CIF-förmåner {#cif-benefits}
 
 De viktigaste fördelarna är:
 
@@ -32,7 +32,7 @@ De viktigaste fördelarna är:
 
 * CIF har färdiga integreringar med Adobe-lösningar som AEM och Magento
 
-## CIF-element {#cif-elements}
+## CIF Elements {#cif-elements}
 
 ![CIF-element](/help/commerce-cloud/assets/cif-overview1.jpg)
 
@@ -47,7 +47,7 @@ De AEM CIF Core-komponenterna är renderade komponenter på serversidan och klie
 
 Det finns grundläggande komponenter som är gemensamma för alla handelsimplementationer, som produktinformation, produktlista, navigering, sökning osv. De kan användas som de är eller utökas.
 
-CIF-komponenterna [](https://github.com/adobe/aem-core-cif-components) AEM fungerar som [AEM Sites Core-komponenterna](https://github.com/adobe/aem-core-wcm-components) men är avsedda för handelsspecifika användningsområden.
+[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) fungerar som [AEM Sites Core Components](https://github.com/adobe/aem-core-wcm-components), men är dedikerade till handelsspecifika användningsfall.
 
 De viktigaste fördelarna är:
 
@@ -61,7 +61,7 @@ Alla komponenter är öppna från [GitHub](https://github.com/adobe/aem-core-cif
 
 ### AEM Venia Storefront {#aem-venia-storefront}
 
-Den [AEM Venia Storefront](https://github.com/adobe/aem-cif-guides-venia) är en modern produktionsklar referensbutik som visar upp en grundläggande B2C-handelsresa. Det kan användas för att starta affärsprojekt och snabba upp projekt med AEM, CIF och Magento. Här visas de bästa sätten att integrera AEM och Magento och hur du använder [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) och [AEM Sites Core Components](https://github.com/adobe/aem-core-wcm-components) och stöder Adobe Commerce GraphQL-slutpunkter. Den innehåller också en referensplats för att demonstrera integreringen mellan AEM och Magento.
+[AEM Venia Storefront](https://github.com/adobe/aem-cif-guides-venia) är en modern produktionsklar referensbutik som visar en grundläggande B2C-handelsresa. Det kan användas för att starta affärsprojekt och snabba upp projekt med AEM, CIF och Magento. Här visas de bästa sätten att integrera AEM och Magento och hur du använder [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) och [AEM Sites Core Components](https://github.com/adobe/aem-core-wcm-components) och stöder Adobe Commerce GraphQL-slutpunkter. Den innehåller också en referensplats för att demonstrera integreringen mellan AEM och Magento.
 
 AEM Venia Storefront är ett blandat program där AEM äger glaset och Magento driver handelsbackend på ett headless sätt. Både serversidesrendering och klientsidesrendering används i butiken. Återgivning på serversidan används för att leverera statiskt innehåll och återgivning på klientsidan används för att leverera dynamiskt innehåll.
 
@@ -69,7 +69,7 @@ Produkt- och katalogsidor är relativt statiska och återges på serversidan med
 Dessa sidor skapas dynamiskt, återges på servern, cachelagras i AEM och skickas sedan till webbläsaren.
 För mer dynamiska attribut som lager och pris används däremot komponenter på klientsidan. Komponenter på klientsidan eller webbkomponenter hämtar data direkt från Magento via API:er för GraphQL och innehållet återges sedan i webbläsaren.
 
-#### Utcheckning {#checkout}
+#### Kassa {#checkout}
 
 I den här referensbutiken används en kundsidesvagnskomponent som renderar kundvagnen och kassaformuläret för att demonstrera ett fullständigt upplevelseintegreringsmönster där du kan leverera upplevelser där Magento kör på ett helt headless sätt och AEM äger glaset. Vi rekommenderar att du använder de angivna abstrakta betalningsmetoderna. Detta placerar webbläsarklienten i direkt kommunikation med betalgatewayleverantören så att varken Adobe- eller Magento-moln rymmer eller skickar PCI-känsliga data.
 
@@ -81,7 +81,7 @@ Projektet AEM Venia Storefront har öppen källkod och mer information finns i [
 
 ### AEM Project Archetype {#aem-project-archtype}
 
-Den [AEM projekttypen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) kan användas för att skapa ett minimalt, metodbaserat Adobe Experience Manager-projekt som utgångspunkt för dina egna AEM. Om du vill kan du [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) inkluderas i ett nyskapat projekt.
+[AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) kan användas för att skapa ett minimalt, metodbaserat Adobe Experience Manager-projekt som utgångspunkt för dina egna AEM. Du kan även [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) inkluderas i ett nyligen genererat projekt.
 
 ### CIF-tilläggslager {#cif-extension}
 
@@ -89,30 +89,30 @@ CIF-tilläggslagret är ett mellanlager som hanterar komplex affärslogik. Det k
 
 ### CIF-integreringslager {#cif-integration-layer}
 
-Integreringslagret CIF används för att standardisera integreringar med andra handelslösningar. Det körs på Adobe I/O Runtime-plattformen, som är Adobe serverless, och möjliggör integrering på mikrotjänstnivå genom att mappa tredjeparts-API:er mot Adobe Commerce-API:er. För att hjälpa dig att komma igång med att bygga tredjepartsintegreringar med AEM har vi skapat en [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference) som visar hur en icke-Magento-handelsserver kan integreras via API:er för Adobe Commerce (Magento GraphQL).
+Integreringslagret CIF används för att standardisera integreringar med andra handelslösningar. Det körs på Adobe I/O Runtime-plattformen, som är Adobe serverless, och möjliggör integrering på mikrotjänstnivå genom att mappa tredjeparts-API:er mot Adobe Commerce-API:er. För att hjälpa dig att komma igång med att skapa tredjepartsintegreringar med AEM har vi skapat en [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference) som visar hur en icke-Magento-handelslösning kan integreras via API:er för Adobe Commerce (Magento GraphQL API:er).
 
-## AEM för handelsintegrering {#aem-commerce-integration}
+## AEM Commerce Integration Patterns {#aem-commerce-integration}
 
 Nedan visas några av de vanligaste integreringsmönstren AEM Commerce.
 
 ![AEM CIF-integreringsmönster](/help/commerce-cloud/assets/aem-cif-integration-patterns-updated.JPG)
 
 
-### Integreringsmönster 1 {#integration-pattern-one}
+### Integrationsmönster 1 {#integration-pattern-one}
 
 Detta är vårt rekommenderade integreringsmönster där AEM äger hela glaset och integrerar handelstjänster via Adobe Commerce GraphQL API:er. Det här mönstret frigör AEM flexibilitet för att skräddarsy multimediewebbplatser för olika enheter. Integrationsmönstret stöds av CIF som en färdig lösning.
 
 
-### Integreringsmönster 2 {#integration-pattern-two}
+### Integrationsmönster 2 {#integration-pattern-two}
 
 Det här mönstret visar ett helt headless sätt att leverera innehåll och handel. Leveransen sker helt på klientsidan. I det här mönstret levereras innehåll via API och HTML, och data från Commerce levereras via GraphQL. Det här mönstret stöds för närvarande inte av ej ifyllda CIF.
 
 
-### Integreringsmönster 3 {#integration-pattern-three}
+### Integrationsmönster 3 {#integration-pattern-three}
 
 I det här mönstret äger Magento glaset och bäddar in AEM innehåll. Det AEM innehållet kan levereras via Experience Fragments eller Content Fragments. Det här integreringsmönstret kräver projektspecifikt arbete och kan inte implementeras direkt med CIF.
 
 
-### Integreringsmönster 4 {#integration-pattern-four}
+### Integrationsmönster 4 {#integration-pattern-four}
 
 Detta är ett vanligt integreringsmönster där glaset eller presentationsskiktet delas mellan AEM och en Commerce-lösning. Vanligtvis levererar Commerce-lösningen icke-marknadsföringssidor som utcheckning och mitt konto och AEM marknadsföringssidor och butikskataloger. I det här mönstret måste du se till att kundvagnar och användarsessioner hanteras på rätt sätt mellan de två systemen för att undvika en osammanhängande användarupplevelse. Magento lagrar till exempel kundvagnen och användarsessionen i en cookie som kan delas mellan AEM &amp; Magento. Det här mönstret kräver projektspecifikt arbete och kan inte implementeras direkt med CIF.
