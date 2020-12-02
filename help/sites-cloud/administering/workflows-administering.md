@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Arbetsflödeskonsolen innehåller flera verktyg för att administrera arbetsflödesinstanser för att säkerställa att de körs som förväntat.
 
-Det finns en rad konsoler som du kan använda för att administrera dina arbetsflöden. Använd den [globala navigeringen](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) för att öppna rutan **Verktyg** och välj sedan **Arbetsflöde**:
+Det finns en rad konsoler som du kan använda för att administrera dina arbetsflöden. Använd [global navigering](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) för att öppna rutan **Verktyg** och välj sedan **Arbetsflöde**:
 
 * **Modeller**: Hantera arbetsflödesdefinitioner
 * **Instanser**: Visa och hantera pågående arbetsflödesinstanser
@@ -25,16 +25,16 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
 ## Övervaka status för arbetsflödesinstanser {#monitoring-the-status-of-workflow-instances}
 
-1. Välj Navigering, välj **Verktyg** och sedan **Arbetsflöde**.
-1. Markera **instanser** om du vill visa en lista över pågående arbetsflödesinstanser.
+1. Välj **Verktyg** och **Arbetsflöde** med Navigering.
+1. Välj **Instanser** om du vill visa listan över pågående arbetsflödesinstanser.
 
    ![wf-97](/help/sites-cloud/administering/assets/wf-97.png)
 
 
 ## Sök efter arbetsflödesinstanser {#search-workflow-instances}
 
-1. Välj Navigering, välj **Verktyg** och sedan **Arbetsflöde**.
-1. Markera **instanser** om du vill visa en lista över pågående arbetsflödesinstanser. Välj **Filter** i det vänstra hörnet på den övre listen. Du kan också använda tangenterna Alt+1. Följande dialogruta visas:
+1. Välj **Verktyg** och **Arbetsflöde** med Navigering.
+1. Välj **Instanser** om du vill visa listan över pågående arbetsflödesinstanser. Välj **Filter** i den övre listen i det vänstra hörnet. Du kan också använda tangenterna Alt+1. Följande dialogruta visas:
 
    ![wf-99-1](/help/sites-cloud/administering/assets/wf-99-1.png)
 
@@ -51,20 +51,20 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    * Förfallodatum: Förfallodatum före eller efter ett angivet datum
    * Uppdateringsdatum: Uppdaterat datum före eller efter ett angivet datum
 
-## Göra uppehåll, återuppta och avsluta en arbetsflödesinstans {#suspending-resuming-and-terminating-a-workflow-instance}
+## Pausa, återuppta och avsluta en arbetsflödesinstans {#suspending-resuming-and-terminating-a-workflow-instance}
 
-1. Välj Navigering, välj **Verktyg** och sedan **Arbetsflöde**.
-1. Markera **instanser** om du vill visa en lista över pågående arbetsflödesinstanser.
+1. Välj **Verktyg** och **Arbetsflöde** med Navigering.
+1. Välj **Instanser** om du vill visa listan över pågående arbetsflödesinstanser.
 
    ![wf-96-1](/help/sites-cloud/administering/assets/wf-96-1.png)
 
-1. Välj ett specifikt objekt och använd sedan **Avsluta**, **Gör uppehåll** eller **Återuppta**, beroende på vad som är tillämpligt. bekräftelse och/eller ytterligare uppgifter krävs:
+1. Markera ett specifikt objekt och använd sedan **Avsluta**, **Gör uppehåll** eller **Fortsätt**, beroende på vad som är lämpligt. bekräftelse och/eller ytterligare uppgifter krävs:
 
    ![wf-97-1](/help/sites-cloud/administering/assets/wf-97-1.png)
 
 ## Visa arkiverade arbetsflöden {#viewing-archived-workflows}
 
-1. Välj Navigering, välj **Verktyg** och sedan **Arbetsflöde**.
+1. Välj **Verktyg** och **Arbetsflöde** med Navigering.
 
 1. Välj **Arkiv** om du vill visa en lista över de arbetsflödesinstanser som har slutförts.
 
@@ -73,32 +73,34 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    >[!NOTE]
    >Avbruten status betraktas som en avslutad åtgärd eftersom den inträffar till följd av en användaråtgärd. till exempel:
    >
-   >* användning av **åtgärden Avsluta** .
+   >* användning av åtgärden **Avsluta**
    >* när en sida, som är underställd ett arbetsflöde, tas bort (framtvingar), avslutas arbetsflödet
 
 
-1. Markera ett specifikt objekt och **öppna historik** för att se mer information:
+1. Markera ett specifikt objekt och **Öppna historik** för mer information:
 
    ![wf-99](/help/sites-cloud/administering/assets/wf-99.png)
 
 ## Åtgärdar fel i arbetsflödesinstansen {#fixing-workflow-instance-failures}
 
-När ett arbetsflöde misslyckas tillhandahåller AEM konsolen **Fel** så att du kan undersöka och vidta lämpliga åtgärder när den ursprungliga orsaken har hanterats:
+När ett arbetsflöde misslyckas tillhandahåller AEM konsolen **Misslyckanden** så att du kan undersöka och vidta lämpliga åtgärder när den ursprungliga orsaken har hanterats:
 
-* **Felinformation**&#x200B;Öppnar ett fönster där 
-**Felmeddelande**, **steg** och **felstack**.
+* **FelinformationÖppnar**
+ett fönster där 
+**Felmeddelande**,  **** Stepand- **felhög**.
 
-* **Öppna historik** Visar information om arbetsflödeshistoriken.
+* **Öppna**
+historik Visar information om arbetsflödeshistoriken.
 
-* **Försök stega** igen Kör komponentinstansen för skriptsteget igen. Använd kommandot Försök igen när du har åtgärdat orsaken till det ursprungliga felet. Du kan till exempel försöka utföra steget igen när du har åtgärdat ett fel i skriptet som utförs av processteget.
+* **Försök** stega igenKör komponentinstansen för skriptsteget igen. Använd kommandot Försök igen när du har åtgärdat orsaken till det ursprungliga felet. Du kan till exempel försöka utföra steget igen när du har åtgärdat ett fel i skriptet som utförs av processteget.
 * **Avsluta** Avsluta arbetsflödet om felet har orsakat en situation som inte kan stämmas av för arbetsflödet. Arbetsflödet kan t.ex. förlita sig på miljöförhållanden som information i databasen som inte längre är giltig för arbetsflödesinstansen.
-* **Avsluta och försök igen** Liknar **Avsluta** förutom att en ny arbetsflödesinstans startas med den ursprungliga nyttolasten, titeln och beskrivningen.
+* **Avsluta och** RetryLiknar  **** Terminate förutom att en ny arbetsflödesinstans startas med den ursprungliga nyttolasten, titeln och beskrivningen.
 
 Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflödet:
 
-1. Välj Navigering, välj **Verktyg** och sedan **Arbetsflöde**.
+1. Välj **Verktyg** och **Arbetsflöde** med Navigering.
 
-1. Markera **Fel** om du vill visa en lista över arbetsflödesinstanser som inte slutfördes korrekt.
+1. Välj **Fel** om du vill visa listan över arbetsflödesinstanser som inte slutfördes korrekt.
 1. Välj ett specifikt objekt och sedan lämplig åtgärd:
 
    ![wf-47](/help/sites-cloud/administering/assets/wf-47.png)
@@ -107,16 +109,16 @@ Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflöde
 
 Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen.
 
-Konfigurera **Adobe Granite Workflow Renge Configuration** för att rensa arbetsflödesinstanser utifrån deras ålder och status. Du kan också rensa arbetsflödesinstanser av alla modeller eller av en viss modell.
+Konfigurera **Rensa arbetsflöde i Adobe** för att rensa arbetsflödesinstanser efter ålder och status. Du kan också rensa arbetsflödesinstanser av alla modeller eller av en viss modell.
 
 Du kan också skapa flera konfigurationer av tjänsten för att rensa arbetsflödesinstanser som uppfyller olika villkor. Skapa till exempel en konfiguration som tömmer instanser av en viss arbetsflödesmodell när de körs mycket längre än förväntat. Skapa en annan konfiguration som tömmer alla slutförda arbetsflöden efter ett visst antal dagar för att minimera databasens storlek.
 
-Om du vill konfigurera tjänsten kan du konfigurera OSGi-konfigurationsfiler (konfigurationsfiler för OSGi) [i-konfigurationsfiler](/help/implementing/deploying/configuring-osgi.md). I följande tabell beskrivs de egenskaper som du behöver för båda metoderna.
+Om du vill konfigurera tjänsten kan du konfigurera OSGi-konfigurationsfiler i [OSGi-konfigurationsfiler](/help/implementing/deploying/configuring-osgi.md). I följande tabell beskrivs de egenskaper som du behöver för båda metoderna.
 
 >[!NOTE]
 >För att lägga till konfigurationen i databasen är tjänst-PID:
 >`com.adobe.granite.workflow.purge.Scheduler`
->Eftersom tjänsten är en fabrikstjänst kräver nodens namn ett identifierarsuffix, till exempel: `sling:OsgiConfig`
+>Eftersom tjänsten är en fabrikstjänst kräver namnet på noden `sling:OsgiConfig` ett identifierarsuffix, till exempel:
 >`com.adobe.granite.workflow.purge.Scheduler-myidentifier`
 
 <table>
@@ -155,7 +157,7 @@ Om du vill konfigurera tjänsten kan du konfigurera OSGi-konfigurationsfiler (ko
 
 ## Ange maximal storlek för inkorgen {#setting-the-maximum-size-of-the-inbox}
 
-Du kan ange den största tillåtna storleken för inkorgen genom att konfigurera arbetsflödestjänsten **för** Adobe Granite, se [Lägga till en OSGi-konfiguration i databasen](/help/implementing/deploying/configuring-osgi.md). I följande tabell beskrivs egenskapen som du konfigurerar.
+Du kan ange den största tillåtna storleken för inkorgen genom att konfigurera **arbetsflödestjänsten Adobe Granite**, se [lägga till en OSGi-konfiguration i databasen](/help/implementing/deploying/configuring-osgi.md). I följande tabell beskrivs egenskapen som du konfigurerar.
 
 >[!NOTE]
 >För att lägga till konfigurationen i databasen är tjänst-PID:
