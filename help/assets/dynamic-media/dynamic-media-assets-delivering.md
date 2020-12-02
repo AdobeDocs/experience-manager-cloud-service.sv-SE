@@ -17,7 +17,7 @@ Hur du kan leverera dina mediefiler i Dynamic Media - både video och bilder - b
 Med Dynamic Media har du flera alternativ:
 
 * Om du har AEM som värd för webbplatsen vill du lägga till de dynamiska medieresurserna direkt på sidan.
-* Om webbplatsen inte finns AEM kan du läsa [Leverera dynamiska medieresurser](/help/assets/dynamic-media/delivering-dynamic-media-assets.md) i det beröringskänsliga användargränssnittet.
+* Om webbplatsen inte är AEM kan du läsa [Leverera dynamiska medieresurser](/help/assets/dynamic-media/delivering-dynamic-media-assets.md) i det beröringskänsliga användargränssnittet.
 
 Mer information finns i följande avsnitt:
 
