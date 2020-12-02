@@ -12,9 +12,9 @@ ht-degree: 5%
 
 # Content Fragments – konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
 
-Det finns flera [avancerade tjänster](#definition-of-advanced-services-that-need-configuration) som rör återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
+Det finns flera [avancerade tjänster](#definition-of-advanced-services-that-need-configuration) relaterade till återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
 
-Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen](#osgi-service-content-fragment-component-configuration)för innehållsfragment.
+Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen för innehållsfragment](#osgi-service-content-fragment-component-configuration).
 
 Denna information krävs när
 
@@ -25,7 +25,7 @@ Vi rekommenderar att du använder kärnkomponenterna.
 
 >[!CAUTION]
 >
->* **Om du inte behöver de [avancerade tjänster](#definition-of-advanced-services-that-need-configuration)** som beskrivs nedan kan du ignorera den här konfigurationen.
+>* **Om du inte behöver de  [avancerade](#definition-of-advanced-services-that-need-configuration)** tjänster som beskrivs nedan kan du ignorera den här konfigurationen.
    >
    >
 * **När du utökar eller använder en eller flera färdiga komponenter** bör du inte ändra OSGi-konfigurationen.
@@ -36,7 +36,7 @@ Vi rekommenderar att du använder kärnkomponenterna.
 >
 Därför rekommenderar vi att du använder kärnkomponenterna.
 
-## Definition av avancerade tjänster som behöver konfigureras {#definition-of-advanced-services-that-need-configuration}
+## Definition av avancerade tjänster som behöver konfiguration {#definition-of-advanced-services-that-need-configuration}
 
 De tjänster som kräver registrering av en komponent är:
 
@@ -51,13 +51,13 @@ Om du behöver en eller flera av de här funktionerna är det (oftast) enklare a
 
 ## OSGi-tjänst - Konfiguration av komponent för innehållsfragment {#osgi-service-content-fragment-component-configuration}
 
-Konfigurationen måste bindas till OSGi-tjänstens **Content Fragment Component Configuration**:
+Konfigurationen måste bindas till OSGi-tjänsten **Konfiguration av komponent för innehållsfragment**:
 
 `com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl`
 
 >[!NOTE]
 >
->Mer information finns i [OSGi Configuration](/help/implementing/deploying/overview.md#osgi-configuration) .
+>Mer information finns i [OSGi Configuration](/help/implementing/deploying/overview.md#osgi-configuration).
 
 Till exempel:
 
@@ -97,7 +97,7 @@ OSGi-konfigurationen är:
  </tbody>
 </table>
 
-För vissa funktioner måste komponenten följa fördefinierade konventioner. Följande tabell visar vilka egenskaper som måste definieras, av komponenten, för varje stycke (dvs. för varje komponentförekomst) så att tjänsterna kan identifiera och bearbeta dem korrekt `jcr:paragraph` .
+För vissa funktioner måste komponenten följa fördefinierade konventioner. Följande tabell visar vilka egenskaper som behöver definieras, av komponenten, för varje stycke (d.v.s. `jcr:paragraph` för varje komponentinstans) så att tjänsterna kan identifiera och bearbeta dem korrekt.
 
 <table>
  <thead>
@@ -109,7 +109,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
  <tbody>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i återgivningsläget <em>för</em>ett element.</p> <p>Värden:</p>
+   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i <em>renderingsläge för ett element</em>.</p> <p>Värden:</p>
     <ul>
      <li><code>all</code> : återge alla stycken</li>
      <li><code>range</code> : för att återge styckeintervallet som tillhandahålls av <code>paragraphRange</code></li>
@@ -117,7 +117,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>En strängegenskap som definierar det intervall med stycken som ska skrivas ut i återgivningsläget <em>för</em>ett element.</p> <p>Format:</p>
+   <td><p>En strängegenskap som definierar det intervall med stycken som ska skrivas ut om det i <em>renderingsläget för ett element är </em>.</p> <p>Format:</p>
     <ul>
      <li><code>1</code> eller <code>1-3</code> eller <code>1-3;6;7-8</code> eller <code>*-3;5-*</code>
      <ul>
@@ -126,7 +126,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
        <li><code>*</code> jokertecken</li>
      </ul>
      </li>
-     <li>utvärderas bara om <code>paragraphScope</code> värdet är inställt på <code>range</code></li>
+     <li>utvärderas bara om <code>paragraphScope</code> är inställt på <code>range</code></li>
     </ul> </td>
   </tr>
   <tr>
