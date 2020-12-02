@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Använda Dölj villkor {#using-hide-conditions}
 
-Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar [listkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html) Core Component i [mallredigeraren](/help/sites-cloud/authoring/features/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
+Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar listkomponenten [](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html) i [mallredigeraren](/help/sites-cloud/authoring/features/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
 
 ## Översikt {#overview}
 
@@ -26,7 +26,7 @@ Genom att använda dolda villkor kan administratörer, utvecklare och superanvä
 
 ## Implementerings- och användningsinformation {#implementation-and-usage-details}
 
-`com.adobe.granite.ui.components.FilteringResourceWrapper` är ansvarig för att filtrera resurserna baserat på förekomsten och värdet av den `granite:hide` egenskap som finns i det fält som ska filtreras. Implementeringen av `/libs/cq/gui/components/authoring/dialog/dialog.jsp` innehåller en instans av `FilteringResourceWrapper.`
+`com.adobe.granite.ui.components.FilteringResourceWrapper` är ansvarig för att filtrera resurserna baserat på  `granite:hide` egenskapens existens och värde, som finns i det fält som ska filtreras. Implementeringen av `/libs/cq/gui/components/authoring/dialog/dialog.jsp` innehåller en instans av `FilteringResourceWrapper.`
 
 Implementeringen använder Granite [ELResolver API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html) och lägger till en `cqDesign` anpassad variabel via ExpressionCustomizer.
 
@@ -50,9 +50,9 @@ När du definierar ditt dolda uttryck ska du tänka på:
 
 ## Exempel {#example}
 
-Exempel på gömda förhållanden finns i AEM och i [huvudkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i synnerhet. Ta till exempel [listkärnkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html) som implementerad i [WKND-självstudiekursen.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+Exempel på dolda villkor finns i AEM och i [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html). Anta till exempel att [listkärnkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html) är implementerad i [WKND-självstudien.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
 
-[Med mallredigeraren](/help/sites-cloud/authoring/features/templates.md)kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Alternativ som om listan ska kunna vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor osv. kan aktiveras eller inaktiveras.
+[Med mallredigeraren](/help/sites-cloud/authoring/features/templates.md) kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Alternativ som om listan ska kunna vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor osv. kan aktiveras eller inaktiveras.
 
 Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, ställs en designegenskap in och ett dolt villkor utvärderas mot den, vilket gör att alternativet inte återges för sidförfattaren.
 
@@ -60,19 +60,19 @@ Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, s
 
    ![Inställningar för listkomponent](assets/hide-conditions-list-settings.png)
 
-1. I designdialogrutan för listkärnkomponenten kan mallskaparen välja alternativet **Inaktivera underordnade** för att förhindra att alternativet genererar en lista baserad på underordnade sidor som visas för sidförfattaren.
+1. I designdialogrutan för listkärnkomponenten kan mallskaparen välja alternativet **Inaktivera underordnade** för att förhindra att alternativet att generera en lista baserad på underordnade sidor visas för sidförfattaren.
 
    ![Designdialogruta för List-komponent](assets/hide-conditions-list-design.png)
 
-1. En principnod skapas under `/conf/wknd/settings/wcm/policies/wknd/components/list` med en egenskap `disableChildren` som är inställd på `true`.
+1. En principnod skapas under `/conf/wknd/settings/wcm/policies/wknd/components/list` med egenskapen `disableChildren` inställd på `true`.
 
    ![Nodstruktur för dolt villkor](assets/hide-conditions-node-structure.png)
 
-1. Villkoret hide definieras som värdet för en `granite:hide` egenskap i egenskapsnoden dialog `/libs/core/wcm/components/list/v2/list/cq:dialog/content/items/tabs/items/listSettings/items/columns/items/column/items/listFrom/items/children`
+1. Villkoret hide definieras som värdet för en `granite:hide`-egenskap i egenskapsnoden `/libs/core/wcm/components/list/v2/list/cq:dialog/content/items/tabs/items/listSettings/items/columns/items/column/items/listFrom/items/children`
 
    ![Utvärdering av dolt villkor](assets/hide-conditions-evaluation.png)
 
-1. Värdet för `disableChildren` hämtas från designkonfigurationen och uttrycket `${cdDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
+1. Värdet `disableChildren` hämtas från designkonfigurationen och uttrycket `${cdDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
 
 1. Alternativet **Underordnade sidor** återges inte längre för sidförfattaren när listkomponenten används.
 
