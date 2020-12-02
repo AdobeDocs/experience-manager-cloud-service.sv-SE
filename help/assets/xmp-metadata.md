@@ -15,7 +15,7 @@ ht-degree: 20%
 
 XMP (Extensible Metadata Platform) är den metadatastandard som används av AEM Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, har XMP en innehållsmodell [som](#xmp-core-concepts) stöds av Adobe [](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
+Förutom universell metadatakodning som kan bäddas in i alla filformat, innehåller XMP en omfattande [innehållsmodell](#xmp-core-concepts) och [stöds av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
 
 ## XMP översikt och ekosystem {#xmp-ecosystem}
 
@@ -46,15 +46,16 @@ XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassa
 
 >[!NOTE]
 >
->XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, t.ex. miniatyrbilder, måste de kodas i ett XML-anpassat format, t.ex. `Base64`.
+>XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, till exempel miniatyrbilder, måste de kodas i ett XML-anpassat format som `Base64`.
 
-### XMP grundläggande begrepp {#xmp-core-concepts}
+### XMP viktiga begrepp {#xmp-core-concepts}
 
 **Namnutrymmen och scheman**
 
-Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
+Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller
+datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
 
-Egenskapen **Creator** i två självständigt utformade scheman kan till exempel avse den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
+Egenskapen **Creator** i två oberoende utformade scheman kan till exempel betyda den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
 
 **XMP egenskaper och värden**
 
@@ -67,9 +68,9 @@ XMP kan innehålla egenskaper från ett eller flera av scheman. En vanlig delmä
 
 **Språkalternativ**
 
-XMP ger dig möjlighet att lägga till en `xml:lang` egenskap i textegenskaper för att ange textens språk.
+XMP ger dig möjlighet att lägga till en `xml:lang`-egenskap i textegenskaper för att ange textens språk.
 
-## XMP till återgivning {#xmp-writeback-to-renditions}
+## XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
 Den här XMP återskrivningsfunktionen i Adobe Experience Manager (AEM) Resurser replikerar ändringar i resursens återgivningar av metadata.
 
@@ -77,11 +78,11 @@ När du ändrar metadata för en resurs i AEM Assets eller när du överför res
 
 XMP återskrivningsfunktion sprider metadataändringarna till alla eller specifika återgivningar av resursen.
 
-Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen som har namnet `Classic Leather` på `Nylon`.
+Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen `Classic Leather` till `Nylon`.
 
 ![metadata](assets/metadata.png)
 
-I det här fallet sparar AEM Assets ändringarna i **[!UICONTROL Title]** egenskapen i `dc:title` -parametern för resursens metadata som lagras i resurshierarkin.
+I det här fallet sparar AEM Assets ändringarna i egenskapen **[!UICONTROL Title]** i parametern `dc:title` för de metadata för resursen som lagras i resurshierarkin.
 
 ![metadata_stored](assets/metadata_stored.png)
 
@@ -94,23 +95,23 @@ Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa åte
 <!-- asgupta, Engg: Need attention here to update the configuration manager changes.
 -->
 
-Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfigurationen i Configuration Manager.
+Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du konfigurationen **[!UICONTROL Adobe CQ DAM Rendition Maker]** i Configuration Manager.
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfigurationen.
-1. Markera **[!UICONTROL Propagate XMP]** alternativet och spara sedan ändringarna.
+1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]**-konfigurationen.
+1. Välj alternativet **[!UICONTROL Propagate XMP]** och spara sedan ändringarna.
 
-### Aktivera XMP återskrivning för specifika återgivningar {#enable-xmp-writeback-for-specific-renditions}
+### Aktivera XMP av återskrivning för specifika återgivningar {#enable-xmp-writeback-for-specific-renditions}
 
-Om du vill att XMP återskrivningsfunktion ska kunna sprida metadataändringar för att välja återgivningar, anger du dessa återgivningar i arbetsflödessteget för DAM-metadataåterställningsarbetsflödet. [!UICONTROL XMP Writeback Process] Som standard konfigureras det här steget med den ursprungliga återgivningen.
+Om du vill att XMP återskrivningsfunktion ska kunna sprida metadataändringar till valda återgivningar anger du dessa återgivningar i arbetsflödessteget [!UICONTROL XMP Writeback Process] i arbetsflödet för DAM-metadata WriteBack. Som standard konfigureras det här steget med den ursprungliga återgivningen.
 
 Utför de här stegen för att XMP återskrivningsfunktionen för att sprida metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
 
 1. Tryck/klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. Öppna arbetsflödesmodellen på sidan **[!UICONTROL DAM Metadata Writeback]** Modeller.
+1. Öppna arbetsflödesmodellen **[!UICONTROL DAM Metadata Writeback]** på sidan Modeller.
 1. På egenskapssidan för **[!UICONTROL DAM Metadata Writeback]** öppnar du steget **[!UICONTROL XMP Writeback Process]**.
 1. I dialogrutan **[!UICONTROL Step Properties]** trycker/klickar du på fliken **[!UICONTROL Process]**.
-1. Lägg till i **[!UICONTROL Arguments]** rutan `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`och tryck/klicka sedan **[!UICONTROL OK]**.
+1. Lägg till `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png` i rutan **[!UICONTROL Arguments]** och tryck/klicka sedan på **[!UICONTROL OK]**.
 
    ![step_properties](assets/step_properties.png)
 
