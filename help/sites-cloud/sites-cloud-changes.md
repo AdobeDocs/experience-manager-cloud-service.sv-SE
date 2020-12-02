@@ -18,7 +18,7 @@ AEM Sites som Cloud Service tillhandahåller upplevelsehanteringsfunktioner som 
 >Det här dokumentet markerar de anmärkningsvärda ändringarna av AEM Sites. Om du vill ändra AEM som en Cloud Service och andra moduler läser du:
 >
 >* [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
->* En [översikt över AEM som en Cloud Service - Vad är nytt och Vad är annorlunda?](/help/overview/what-is-new-and-different.md)
+>* En [översikt över AEM som en Cloud Service - What is New and What is Different](/help/overview/what-is-new-and-different.md)
 >* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
 >* [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
 >* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
@@ -46,17 +46,17 @@ Initieraren av sådana åtgärder kan kontrollera deras status i ett nytt använ
 
 ## Ny referenswebbplats och självstudiekurs {#new-reference-site-and-tutorial}
 
-[WKND](https://wknd.site/), en ny AEM referensplats, har uppdaterats och publicerats för att återspegla bästa praxis för att skapa en webbplats med AEM och den omfattande uppsättning funktioner, komponenter och distributionsmodeller som finns i AEM. Den nya referenswebbplatsen och den [medföljande självstudiekursen](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) innehåller grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
+[WKND](https://wknd.site/), en ny AEM referensplats, har uppdaterats och publicerats för att återspegla bästa praxis för att skapa en webbplats med AEM och den omfattande uppsättning funktioner, komponenter och distributionsmodeller som finns i AEM. Den nya referenswebbplatsen och [den medföljande självstudiekursen](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) innehåller grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 
-Tidigare installerades We.Retail som standard med AEM (förutom när det startades i produktionsläge).  Nu installeras ingen referensplats som standard.  I stället anges [Git-repo](https://github.com/adobe/aem-guides-wknd/) och [tillhörande självstudiekurs](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) med den uppdaterade koden för WKND-referensplatsen.
+Tidigare installerades We.Retail som standard med AEM (förutom när det startades i produktionsläge).  Nu installeras ingen referensplats som standard.  I stället anges den [git repo](https://github.com/adobe/aem-guides-wknd/) och [medföljande självstudiekursen](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) med den uppdaterade koden för WKND-referensplatsen.
 
 ## Funktioner som inte är tillgängliga vid körning {#capabilities-not-available-at-runtime}
 
-AEM som en Cloud Service är alltid aktiverad och alltid uppdaterad. För att uppnå detta måste AEM vara åtskild i oföränderligt och muterbart innehåll, och åtkomst till oföränderligt innehåll måste förbjudas vid körning. Mer information om muterbart och oföränderligt innehåll finns i [Mutable vs. Immutable Area of the Repository](/help/implementing/developing/introduction/aem-project-content-package-structure.md#mutable-vs-immutable).
+AEM som en Cloud Service är alltid aktiverad och alltid uppdaterad. För att uppnå detta måste AEM vara åtskild i oföränderligt och muterbart innehåll, och åtkomst till oföränderligt innehåll måste förbjudas vid körning. Mer information om muterbart eller oföränderligt innehåll finns i [Mutable vs. Immutable Areas of the Repository](/help/implementing/developing/introduction/aem-project-content-package-structure.md#mutable-vs-immutable).
 
 På grund av att det inte går att komma åt innehåll som inte kan ändras under körning är följande AEM Sites-åtgärder inte tillgängliga under körning:
 
 * i18n-ordlisteöversättning
 * Utvecklarläge i AEM Sites Page Editor
 
-Dessa funktioner kan användas via lokala, fristående utvecklarinstanser av AEM som en Cloud Service för att uppdatera innehåll och kod i AEM som en Cloud Services-GIT-databas, men inte i värdbaserade körningsmiljöer.
+Dessa funktioner kan användas via lokala, fristående utvecklarinstanser av AEM som Cloud Service för att uppdatera innehåll och kod i AEM som en Cloud Services-GIT-databas, men inte i värdbaserade körningsmiljöer.
