@@ -21,7 +21,7 @@ Verktygsfältet består av en serie användargränssnittslägen som innehåller 
 
 ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din administratör kan ha [konfigurerat ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md) för att visa olika.
 
-## Visa verktygsfältet ContextHub {#revealing-the-contexthub-toolbar}
+## Visar ContextHub-verktygsfältet {#revealing-the-contexthub-toolbar}
 
 Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verktygsfältet är bara tillgängligt på författarinstanser och endast när administratören har aktiverat det.
 
@@ -35,11 +35,11 @@ Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verkt
 
    ![Knappen ContextHub](/help/sites-cloud/authoring/assets/contexthub-button.png)
 
-## Funktioner i gränssnittsmodul {#ui-module-features}
+## Funktioner för användargränssnittsmodul {#ui-module-features}
 
 Varje gränssnittsmodul innehåller olika uppsättningar funktioner, men följande typer av funktioner är vanliga. Eftersom gränssnittsmodulerna kan utökas kan utvecklaren implementera andra funktioner efter behov.
 
-### Innehåll i verktygsfält {#toolbar-content}
+### Verktygsfältsinnehåll {#toolbar-content}
 
 Gränssnittsmoduler kan visa data från en eller flera ContextHub-butiker i verktygsfältet. I gränssnittsmoduler används en ikon och en titel för att identifiera sig själva.
 
