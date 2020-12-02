@@ -10,24 +10,24 @@ ht-degree: 0%
 ---
 
 
-# ContextHub konfigureras {#configuring-contexthub}
+# ContextHub {#configuring-contexthub} konfigureras
 
-ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Mer information om ContextHub finns i [ContextHub-utvecklaröversikten](contexthub.md).
+ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Mer information om ContextHub finns i [ContextHub developer overview](contexthub.md).
 
 Du kan konfigurera ContextHub-verktygsfältet för att kontrollera om det visas i förhandsgranskningsläget, för att skapa ContextHub-butiker och lägga till gränssnittsmoduler.
 
-## Visa och dölja ContextHub-gränssnittet {#showing-and-hiding-the-contexthub-ui}
+## Visar och döljer ContextHub-gränssnittet {#showing-and-hiding-the-contexthub-ui}
 
-Konfigurera Adobe Granite ContextHub OSGi-tjänsten för att visa eller dölja [ContextHub-gränssnittet](/help/sites-cloud/authoring/personalization/targeted-content.md) på dina sidor. Tjänstens PID är `com.adobe.granite.contexthub.impl.ContextHubImpl.`
+Konfigurera Adobe Granite ContextHub OSGi-tjänsten för att visa eller dölja användargränssnittet [ContextHub](/help/sites-cloud/authoring/personalization/targeted-content.md) på dina sidor. Tjänstens PID är `com.adobe.granite.contexthub.impl.ContextHubImpl.`
 
 Om du vill konfigurera tjänsten kan du antingen använda [webbkonsolen](/help/implementing/deploying/configuring-osgi.md) eller en JCR-nod i databasen:
 
 * **Webbkonsol:** Om du vill visa användargränssnittet väljer du egenskapen Visa användargränssnitt. Om du vill dölja användargränssnittet avmarkerar du egenskapen Dölj användargränssnitt.
-* **JCR-nod:** Om du vill visa användargränssnittet anger du den booleska `com.adobe.granite.contexthub.show_ui` egenskapen till `true`. Om du vill dölja användargränssnittet anger du egenskapen till `false`.
+* **JCR-nod:** Om du vill visa användargränssnittet anger du den booleska  `com.adobe.granite.contexthub.show_ui` egenskapen till  `true`. Om du vill dölja användargränssnittet anger du egenskapen till `false`.
 
 När du visar ContextHub-gränssnittet visas det bara på sidor AEM författarinstanser. Gränssnittet visas inte på sidor med publiceringsinstanser.
 
-## Lägga till gränssnittslägen och moduler för ContextHub {#adding-contexthub-ui-modes-and-modules}
+## Lägger till gränssnittslägen och moduler för ContextHub {#adding-contexthub-ui-modes-and-modules}
 
 Konfigurera de gränssnittslägen och moduler som visas i ContextHub-verktygsfältet i förhandsgranskningsläget:
 
@@ -38,7 +38,7 @@ Gränssnittslägen visas som en serie ikoner till vänster i verktygsfältet. N�
 
 ![ContextHub-verktygsfältet](assets/contexthub-toolbar.png)
 
-Ikoner är referenser från [ikonbiblioteket](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)för Coral-gränssnittet.
+Ikoner är referenser från [ikonbiblioteket för gränssnitt för hörsel](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons).
 
 ### Lägga till ett gränssnittsläge {#adding-a-ui-mode}
 
@@ -54,7 +54,7 @@ Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler
 1. Ange värden för följande egenskaper:
 
    * Titel för användargränssnittsläge: Titeln som identifierar användargränssnittsläget
-   * Lägesikon: Väljaren för [Coral UI-ikonen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som ska användas, till exempel `coral-Icon--user`
+   * Lägesikon: Väljaren för den [korallgränssnittsikon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som ska användas, till exempel `coral-Icon--user`
    * Aktiverad: Välj det här alternativet om du vill visa gränssnittsläget i kontextHub-verktygsfältet
 
 1. Klicka på eller tryck på Spara.
@@ -63,7 +63,7 @@ Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler
 
 Lägg till en ContextHub-gränssnittsmodul i ett gränssnittsläge så att den visas i ContextHub-verktygsfältet för förhandsgranskning av sidinnehåll. När du lägger till en UI-modul skapar du en instans av en modultyp som är registrerad med ContextHub. Om du vill lägga till en gränssnittsmodul måste du känna till namnet på den associerade modultypen.
 
-AEM innehåller en grundläggande gränssnittsmodultyp samt flera exempeltyper av gränssnittsmodul som du kan basera en gränssnittsmodul på. Följande tabell innehåller en kort beskrivning av vart och ett av dem. Mer information om hur du utvecklar en anpassad gränssnittsmodul finns i [Skapa ContextHub-gränssnittsmoduler](extending-contexthub.md#creating-contexthub-ui-module-types).
+AEM innehåller en grundläggande gränssnittsmodultyp samt flera exempeltyper av gränssnittsmodul som du kan basera en gränssnittsmodul på. Följande tabell innehåller en kort beskrivning av vart och ett av dem. Mer information om hur du utvecklar en anpassad gränssnittsmodul finns i [Skapa gränssnittsmoduler för ContextHub](extending-contexthub.md#creating-contexthub-ui-module-types).
 
 Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguration där du kan ange värden för modulspecifika egenskaper. Du anger detaljkonfigurationen i JSON-format. Kolumnen Modultyp i tabellen innehåller länkar till information om den JSON-kod som krävs för varje gränssnittsmodultyp.
 
@@ -94,17 +94,17 @@ Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguratio
 1. (Valfritt) Om du vill åsidosätta standardkonfigurationen för lagring anger du ett JSON-objekt för att konfigurera UI-modulen.
 1. Klicka på eller tryck på Spara.
 
-## Skapa ett ContextHub Store {#creating-a-contexthub-store}
+## Skapar ett ContextHub-arkiv {#creating-a-contexthub-store}
 
 Skapa ett kontextnavlager för att behålla användardata och komma åt data efter behov. ContextHub-butikerna baseras på registrerade butikskandidater. När du skapar butiken behöver du värdet för den storeType som butikskandidaten registrerats med. (Se [Skapa anpassade butikskandidater](extending-contexthub.md#creating-custom-store-candidates).)
 
 ### Detaljerad lagringskonfiguration {#detailed-store-configuration}
 
-När du konfigurerar en butik kan du med egenskapen Detaljkonfiguration ange värden för butiksspecifika egenskaper. Värdet baseras på parametern `config` för butikens `init` funktion. Därför beror det på butiken om du behöver ange det här värdet och värdeformatet.
+När du konfigurerar en butik kan du med egenskapen Detaljkonfiguration ange värden för butiksspecifika egenskaper. Värdet baseras på parametern `config` i butikens `init`-funktion. Därför beror det på butiken om du behöver ange det här värdet och värdeformatet.
 
-Värdet för egenskapen Detaljkonfiguration är ett `config` objekt i JSON-format.
+Värdet för egenskapen Detaljkonfiguration är ett `config`-objekt i JSON-format.
 
-### Exempel på butikskandidater {#sample-store-candidates}
+### Exempel på lagringskandidater {#sample-store-candidates}
 
 AEM innehåller följande exempel på butikskandidater som du kan basera en butik på.
 
@@ -125,19 +125,19 @@ AEM innehåller följande exempel på butikskandidater som du kan basera en buti
 
 1. Ange värden för de grundläggande konfigurationsegenskaperna och klicka eller tryck sedan på Nästa:
 
-   * **Konfigurationstitel:** Titeln som identifierar butiken
-   * **Lagringstyp:** Värdet på egenskapen storeType för butikskandidaten som butiken ska baseras på
+   * **Konfigurationstitel:** Titeln som identifierar arkivet
+   * **Bastyp:** Värdet för egenskapen storeType för butikskandidaten som butiken ska baseras på
    * **Obligatoriskt:** Välj
-   * **Aktiverad:** Markera för att aktivera butiken
+   * **Aktiverad:** Markera för att aktivera arkivet
 
 1. (Valfritt) Om du vill åsidosätta standardarkivkonfigurationen anger du ett JSON-objekt i rutan Detaljkonfiguration (JSON).
 1. Klicka på eller tryck på Spara.
 
-## Exempel: Använda en JSONP-tjänst  {#example-using-a-jsonp-service}
+## Exempel: Använda en JSONP-tjänst {#example-using-a-jsonp-service}
 
 I det här exemplet visas hur du konfigurerar en lagringsplats och visar data i en gränssnittsmodul. I det här exemplet används MD5-tjänsten på jsontest.com-webbplatsen som datakälla för en butik. Tjänsten returnerar MD5-hash-koden för en sträng i JSON-format.
 
-Ett contexthub.generic-jsonp-arkiv har konfigurerats så att det lagrar data för serviceanropet `https://md5.jsontest.com/?text=%22text%20to%20md5%22`. Tjänsten returnerar följande data som visas i en gränssnittsmodul:
+Ett contexthub.generic-jsonp-arkiv har konfigurerats så att det lagrar data för anropet `https://md5.jsontest.com/?text=%22text%20to%20md5%22`. Tjänsten returnerar följande data som visas i en gränssnittsmodul:
 
 ```javascript
 {
@@ -146,18 +146,18 @@ Ett contexthub.generic-jsonp-arkiv har konfigurerats så att det lagrar data fö
 }
 ```
 
-### Skapa ett kontexthub.generic-jsonp-arkiv {#creating-a-contexthub-generic-jsonp-store}
+### Skapar ett kontexthub.generic-jsonp-arkiv {#creating-a-contexthub-generic-jsonp-store}
 
 Med exempelarkivkandidaten contexthub.generic-jsonp kan du hämta data från en JSONP-tjänst eller en webbtjänst som returnerar JSON-data. För den här butikskandidaten använder du butikskonfigurationen för att ange information om den JSONP-tjänst som ska användas.
 
-Funktionen [init](contexthub-api.md#init-name-config) i klassen `ContextHub.Store.JSONPStore` Javascript definierar ett `config` objekt som initierar den här lagringskandidaten. Objektet `config` innehåller ett `service` objekt som innehåller information om JSONP-tjänsten. Om du vill konfigurera arkivet anger du objektet i JSON-format som värde för egenskapen Detaljkonfiguration. `service`
+Funktionen [init](contexthub-api.md#init-name-config) i JavaScript-klassen `ContextHub.Store.JSONPStore` definierar ett `config`-objekt som initierar den här lagringskandidaten. Objektet `config` innehåller ett `service`-objekt som innehåller information om JSONP-tjänsten. Om du vill konfigurera arkivet anger du objektet `service` i JSON-format som värde för egenskapen Detaljkonfiguration.
 
-Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen använder du proceduren i [Skapa ett ContextHub Store](#creating-a-contexthub-store) med följande egenskaper:
+Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen ska du följa proceduren i [Skapa ett ContextHub Store](#creating-a-contexthub-store) med följande egenskaper:
 
 * **Konfigurationstitel:** md5
-* **Lagringstyp:** contexthub.generic-jsonp
+* **Bastyp:** contexthub.generic-jsonp
 * **Obligatoriskt:** Välj
-* **Aktiverad:** Välj
+* **Aktiverad:** Markera
 * **Detaljkonfiguration (JSON):**
 
    ```javascript
@@ -182,9 +182,9 @@ Lägg till en gränssnittsmodul i ContextHub-verktygsfältet för att visa data 
 
 ![ContextHub MD5 store](assets/contexthub-md5-store.png)
 
-Använd proceduren i [Lägga till en gränssnittsmodul](#adding-a-ui-module) för att lägga till gränssnittsmodulen i ett befintligt användargränssnittsläge, som till exempel ett exempel på användargränssnittsläge. Använd följande egenskapsvärden för UI-modulen:
+Använd proceduren i [Lägga till en UI-modul](#adding-a-ui-module) för att lägga till UI-modulen i ett befintligt UI-läge, t.ex. ett exempel på användargränssnittsläge. Använd följande egenskapsvärden för UI-modulen:
 
-* **Modultitel för användargränssnitt:** MD5
+* **UI-modultitel:** MD5
 * **Modultyp:** contexthub.base
 * **Detaljkonfiguration (JSON):**
 
@@ -198,7 +198,7 @@ Använd proceduren i [Lägga till en gränssnittsmodul](#adding-a-ui-module) fö
    }
    ```
 
-## Debugging ContextHub {#debugging-contexthub}
+## Felsöka ContextHub {#debugging-contexthub}
 
 Ett felsökningsläge för ContextHub kan aktiveras för att tillåta felsökning. Felsökningsläget kan aktiveras antingen via ContextHub-konfigurationen eller via CRXDE.
 
@@ -206,10 +206,10 @@ Ett felsökningsläge för ContextHub kan aktiveras för att tillåta felsöknin
 
 Redigera ContextHub-konfigurationen och markera alternativet **Felsök**
 
-1. Klicka på eller tryck på **Verktyg > Webbplatser > ContextHub på räls.**
-1. Klicka eller tryck på standardbehållaren för **konfiguration**
+1. Klicka på eller tryck på **Verktyg > Platser > ContextHub**
+1. Klicka eller tryck på standardbehållaren **Configuration Container**
 1. Markera **ContextHub-konfigurationen** och klicka eller tryck på **Redigera markerat element**
-1. Klicka eller tryck på **Felsök** och klicka eller tryck på **Spara**
+1. Klicka eller tryck på **Debug** och klicka eller tryck på **Save**
 
 ### Via CRXDE {#via-crxde}
 
@@ -225,7 +225,7 @@ Konfigurera Adobe Granite ContextHub OSGi-tjänsten (PID = `com.adobe.granite.co
 Om du vill konfigurera tjänsten kan du antingen använda [webbkonsolen](/help/implementing/deploying/configuring-osgi.md) eller en JCR-nod i databasen:
 
 * Webbkonsol: Om du vill logga felsökningsmeddelanden väljer du egenskapen Felsökning.
-* JCR-nod: Om du vill logga felsökningsmeddelanden anger du den booleska `com.adobe.granite.contexthub.debug` egenskapen till `true`.
+* JCR-nod: Om du vill logga felsökningsmeddelanden ställer du in egenskapen `com.adobe.granite.contexthub.debug` som `true`.
 
 ### Tyst läge {#silent-mode}
 
@@ -233,10 +233,10 @@ I tyst läge inaktiveras all felsökningsinformation. Till skillnad från det no
 
 Detta är användbart för din publiceringsinstans där du inte vill ha någon felsökningsinformation alls. Eftersom det är en global inställning aktiveras den via OSGi.
 
-1. Öppna **Adobe Experience Manager Web Console-konfigurationen** på `http://<host>:<port>/system/console/configMgr`
+1. Öppna **Adobe Experience Manager Web Console Configuration** `http://<host>:<port>/system/console/configMgr`
 1. Sök efter **Adobe Granite ContextHub**
 1. Klicka på konfigurationen **Adobe Granite ContextHub** för att redigera dess egenskaper
-1. Markera alternativet **tyst läge** och klicka på **Spara**
+1. Markera alternativet **Tyst läge** och klicka på **Spara**
 
 ## Inaktiverar ContextHub {#disabling-contexthub}
 
@@ -244,11 +244,11 @@ ContextHub kan inaktiveras för att förhindra att den läser in js/css och init
 
 * Redigera ContextHub-konfigurationen och markera alternativet **Inaktivera ContextHub**
 
-   1. Klicka på eller tryck på **Verktyg > Webbplatser > ContextHub på räls.**
-   1. Klicka eller tryck på standardbehållaren för **konfiguration**
+   1. Klicka på eller tryck på **Verktyg > Platser > ContextHub**
+   1. Klicka eller tryck på standardbehållaren **Configuration Container**
    1. Markera **ContextHub-konfigurationen** och klicka eller tryck på **Redigera markerat element**
-   1. Klicka eller tryck på **Disable ContextHub** och klicka eller tryck på **Save**
+   1. Klicka eller tryck på **Inaktivera ContextHub** och klicka eller tryck på **Spara**
 
 eller
 
-* Använd CRXDE Lite för att ange egenskapen `disabled` till **true** under `/conf/global/settings/cloudsettings/<configName>/contexthub`
+* Använd CRXDE Lite för att ställa in egenskapen `disabled` på **true** under `/conf/global/settings/cloudsettings/<configName>/contexthub`
