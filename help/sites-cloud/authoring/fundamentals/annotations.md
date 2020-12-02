@@ -18,7 +18,7 @@ En anteckning placerar en färgad skiss eller anteckning på sidan. Med anteckni
 
 >[!NOTE]
 >
->Glöm inte att det också finns [kommentarer](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) för att ge feedback på en sida.
+>Glöm inte att [kommentarer](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) också är tillgängliga för att ge feedback på en sida.
 
 ## Anteckningar {#annotations}
 
@@ -32,7 +32,7 @@ Ett särskilt [läge](/help/sites-cloud/authoring/fundamentals/environment-tools
 >
 >Beroende på dina behov kan du även utveckla ett arbetsflöde för att skicka meddelanden när anteckningar läggs till, uppdateras eller tas bort.
 
-### Kommentera en komponent {#annotating-a-component}
+### Kommenterar en komponent {#annotating-a-component}
 
 I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i ditt innehåll:
 
@@ -110,4 +110,4 @@ Anteckningar visas inte i redigeringsläge, men märket längst upp till höger 
 Förutom komponenter kan du lägga till kommentarer i en mängd olika resurser:
 
 * Anteckna resurser [Anteckna resurser](/help/assets/manage-digital-assets.md#annotating)
-* Anteckna videomaterial [Anteckna videomaterial](/help/assets/manage-video-assets.md#annotate-video-assets)
+* Kommentera videoresurser [Anteckna videoresurser](/help/assets/manage-video-assets.md#annotate-video-assets)
