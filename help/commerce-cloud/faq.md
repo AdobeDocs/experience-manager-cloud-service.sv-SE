@@ -19,7 +19,7 @@ Adobe har antagit Magento&#39;s GraphQL API:er som dess officiella e-handels-API
 
 ## 2. Hur kommer Adobe I/O till spel? Pratar AEM med Magento direkt?
 
-AEM kan ansluta direkt till Magento utan ett I/O-körningslager. Om det finns ett behov av att integrera en icke-Magento-e-handelsserver (tredjepartslösning) med AEM kan I/O-körtidsplattformen användas som värd för mappningslagret för att ansluta API:erna för Magento GraphQL till andra tredjepartslösningar-API:er. Mer information finns i denna [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference). För lösningar som inte är Magento konfigureras AEM att peka mot I/O-körningens slutpunkt.
+AEM kan ansluta direkt till Magento utan ett I/O-körningslager. Om det finns ett behov av att integrera en icke-Magento-e-handelsserver (tredjepartslösning) med AEM kan I/O-körtidsplattformen användas som värd för mappningslagret för att ansluta API:erna för Magento GraphQL till andra tredjepartslösningar-API:er. Mer information finns i [referensimplementeringen](https://github.com/adobe/commerce-cif-graphql-integration-reference). För lösningar som inte är Magento konfigureras AEM att peka mot I/O-körningens slutpunkt.
 
 I/O Runtime-plattformen kan också användas för att utöka eller anpassa e-handelstjänster. För den här typen av användningsfall anropar du I/O Runtime-slutpunkten som sedan är värd för en anpassad implementering av respektive tjänst. Användningsfall för integrering och tillägg kan kombineras.
 
@@ -65,7 +65,7 @@ Produktdata är vanligtvis redan översatta i PIM eller Magento. AEM - Magento-i
 
 ## 13. Hur fungerar CIF tillsammans med andra handelsplattformar?
 
-Integrering med tredjepartslösningar som andra e-handelslösningar (ej Magento) görs via I/O Runtime-plattformen.  Vi har byggt en [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference) för att visa hur detta görs. Detta gör det möjligt att återanvända [AEM CIF Cloud Connector](https://github.com/adobe/commerce-cif-connector) och [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) genom att visa Magento GraphQL API:t ovanpå valfri tredjepartsplattform. För att erbjuda maximal flexibilitet och skalbarhet används detta integreringslager på [Adobe I/O Runtime serverlösa](https://www.adobe.io/apis/experienceplatform/runtime.html)plattform.
+Integrering med tredjepartslösningar som andra e-handelslösningar (ej Magento) görs via I/O Runtime-plattformen.  Vi har byggt en [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference) för att visa hur detta görs. Detta gör att du kan återanvända [AEM CIF Cloud Connector](https://github.com/adobe/commerce-cif-connector) och [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) genom att visa Magento GraphQL API:t ovanpå en tredjepartsplattform. För att erbjuda maximal flexibilitet och skalbarhet distribueras det här integreringslagret på den serverlösa [Adobe I/O Runtime-plattformen](https://www.adobe.io/apis/experienceplatform/runtime.html).
 
 ## 14. Finns det något sätt att förbättra produktdata med kommersiell text? Var gör du det här? I AEM eller i Magento?
 
