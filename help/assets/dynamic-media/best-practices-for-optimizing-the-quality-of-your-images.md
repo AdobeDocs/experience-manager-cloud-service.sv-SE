@@ -31,25 +31,25 @@ Ett tips för bildformat är att börja med den vanligaste inställningen `&fmt=
 
 Att minska bildstorleken dynamiskt är en av de vanligaste uppgifterna. Det handlar om att ange storleken och, om så önskas, vilket nedsamplingsläge som används för att nedskala bilden.
 
-* För storleksändring av bilder är det bästa och enklaste sättet att använda `&wid=<value>` och `&hei=<value>,`eller bara `&hei=<value>`. Dessa parametrar ställer automatiskt in bildbredden i enlighet med proportionerna.
-* `&resMode=<value>`styr den algoritm som används för nedsampling. Börja med `&resMode=sharp2`. Det här värdet ger den bästa bildkvaliteten. Nedsamplingen `value =bilin` går snabbare, men resulterar ofta i alias av artefakter.
+* För storleksändring är det bästa och enklaste sättet att använda `&wid=<value>` och `&hei=<value>,`eller bara `&hei=<value>`. Dessa parametrar ställer automatiskt in bildbredden i enlighet med proportionerna.
+* `&resMode=<value>`styr den algoritm som används för nedsampling. Börja med `&resMode=sharp2`. Det här värdet ger den bästa bildkvaliteten. Nedsamplingen `value =bilin` är snabbare, men resulterar ofta i alias av artefakter.
 
-Det bästa sättet att ändra storlek på bilder är att använda `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sharp2`
+Använd `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sharp2` som en god metod för att ändra bildstorlek
 
 ## Bästa tillvägagångssätt för bildskärpa {#best-practices-for-image-sharpening}
 
 Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder på webbplatsen och var många misstag görs. Ta dig tid att lära dig mer om hur skärpa och oskarp maskning fungerar i AEM med hjälp av följande resurser:
 
-De bästa sätten att arbeta med [informationsbilder i Adobe Scene7 Publishing System och i Image Server](/help/assets/dynamic-media/assets/s7_sharpening_images.pdf) gäller även för AEM.
+Rapporten [Skärpa bilder i Adobe Scene7 Publishing System och på Image Server](/help/assets/dynamic-media/assets/s7_sharpening_images.pdf) gäller även för AEM.
 
-Titta på [Skärpa med oskarp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html)på Adobe TV.
+På Adobe TV tittar du på [Skärpa en bild med oskarp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html).
 
 Med AEM kan du öka skärpan i bilder vid intag, vid leverans eller både och. I de flesta fall bör du emellertid skärpa upp bilder med endast en metod eller med en annan, men inte med båda metoderna. Att skärpa bilderna vid leverans, på en URL-adress, ger oftast bäst resultat.
 
 Det finns två metoder för bildskärpa:
 
-* Enkel skärpa ( `&op_sharpen`) - Precis som skärpefiltret som används i Photoshop lägger enkel skärpa till grundläggande skärpa i den slutliga vyn av bilden efter den dynamiska storleksändringen. Den här metoden kan dock inte konfigureras av användaren. Det bästa sättet är att inte använda &amp;op_sharpen om det inte behövs.
-* Oskarp maskering ( `&op_USM`) - Oskarp maskning är ett skärpefilter som är branschstandard. Det bästa sättet är att göra bilder skarpare med oskarp maskering enligt riktlinjerna nedan. Med Oskarp maskning kan du styra följande tre parametrar:
+* Enkel skärpa ( `&op_sharpen`) - Precis som skärpefiltret som används i Photoshop, tillämpar enkel skärpa grundläggande skärpa på den slutliga vyn av bilden efter den dynamiska storleksändringen. Den här metoden kan dock inte konfigureras av användaren. Det bästa sättet är att inte använda &amp;op_sharpen om det inte behövs.
+* Oskarp maskering ( `&op_USM`) - Oskarp maskering är ett skärpefilter som är branschstandard. Det bästa sättet är att göra bilder skarpare med oskarp maskering enligt riktlinjerna nedan. Med Oskarp maskning kan du styra följande tre parametrar:
 
    * `&op_sharpen=`belopp,radie,tröskelvärde
 
@@ -60,7 +60,7 @@ Det finns två metoder för bildskärpa:
 
       * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
 
-         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. The **[!UICONTROL threshold]** parameter helps to avoid over-sharpening areas with similar colors, such as skin tones. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
+         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Med parametern **[!UICONTROL threshold]** undviker du för mycket skärpa i områden med liknande färger, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
       Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
 
       AEM hjälpavsnittet Skärpa en bild.
@@ -84,22 +84,22 @@ Låt den monokroma parameterinställningen vara 0.
 ### Bästa tillvägagångssätt för JPEF-komprimering (`&qlt=`) {#best-practices-for-jpef-compression-qlt}
 
 * Den här parametern styr JPG-kodningskvaliteten. Ett högre värde innebär en bild av högre kvalitet men en stor filstorlek. Ett lägre värde innebär en bild med lägre kvalitet men mindre filstorlek. Intervallet för den här parametern är 0-100.
-* Om du vill optimera kvaliteten ska du inte ställa in parametervärdet på 100. Skillnaden mellan en inställning på 90 eller 95 och 100 är nästan otydlig, men 100 ökar storleken på bildfilen i onödan. Om du vill optimera för kvalitet men undvika att bildfiler blir för stora anger du därför 90 eller 95 som `qlt= value` värde.
-* Om du vill optimera för en liten bildfilsstorlek men behålla bildkvaliteten på en acceptabel nivå anger du värdet `qlt= value` 80. Värden under 70 till 75 ger en signifikant försämring av bildkvaliteten.
-* Ett tips är att du bör behålla mitten genom att ställa in värdet `qlt= value` på 85 för att behålla mitten.
+* Om du vill optimera kvaliteten ska du inte ställa in parametervärdet på 100. Skillnaden mellan en inställning på 90 eller 95 och 100 är nästan otydlig, men 100 ökar storleken på bildfilen i onödan. Om du vill optimera för kvalitet men undvika att bildfiler blir för stora anger du `qlt= value` till 90 eller 95.
+* Om du vill optimera för en liten bildfilsstorlek men behålla bildkvaliteten på en acceptabel nivå anger du `qlt= value` till 80. Värden under 70 till 75 ger en signifikant försämring av bildkvaliteten.
+* Ett tips är att om du vill stanna i mitten ska du ställa in `qlt= value` på 85 så att det ligger kvar i mitten.
 * Använda chroma-flaggan i `qlt=`
 
-   * Parametern `qlt=` har en andra inställning som gör att du kan aktivera nedsampling av RGB-kromaticitet med hjälp av värdet `,1` eller inaktiverat med hjälp av värdet `,0`.
-   * Börja med att stänga av nedsampling av RGB-kromaticitet (`,0`). Den här inställningen ger vanligtvis bättre bildkvalitet, särskilt för syntetiska bilder med många skarpa kanter och kontrast.
+   * Parametern `qlt=` har en andra inställning som gör att du kan aktivera nedsampling av RGB-kromaticitet med värdet `,1` eller av med värdet `,0`.
+   * Börja med att stänga av nedsampling av RGB-kromaticitet (`,0`) för att göra den enkel. Den här inställningen ger vanligtvis bättre bildkvalitet, särskilt för syntetiska bilder med många skarpa kanter och kontrast.
 
-Ett tips för JPG-komprimering är att använda `&qlt=85,0`.
+Det bästa sättet att använda JPG-komprimering är att använda `&qlt=85,0`.
 
 ## Bästa tillvägagångssätt för JPEG-storleksändring (`&jpegSize=`) {#best-practices-for-jpeg-sizing-jpegsize}
 
 jpegSize är en användbar parameter om du vill försäkra dig om att en bild inte överskrider en viss storlek för leverans till enheter som har begränsat minne.
 
 * Den här parametern anges i kilobyte (`jpegSize=&lt;size_in_kilobytes&gt;`). Det definierar den största tillåtna storleken för bildleverans.
-* `&jpegSize=` interagerar med JPG-komprimeringsparametern `&qlt=`. Om JPG-svaret med den angivna JPG-komprimeringsparametern (`&qlt=`) inte överskrider ejpegSize-värdet returneras bilden med `&qlt=` det definierade värdet. Annars `&qlt=` minskas bilden gradvis tills bilden får plats i den högsta tillåtna storleken, eller tills systemet fastställer att den inte får plats och returnerar ett fel.
+* `&jpegSize=` interagerar med JPG-komprimeringsparametern  `&qlt=`. Om JPG-svaret med den angivna JPG-komprimeringsparametern (`&qlt=`) inte överskrider ejpegSize-värdet returneras bilden med `&qlt=` enligt definitionen. Annars minskas `&qlt=` gradvis tills bilden får plats i den högsta tillåtna storleken, eller tills systemet fastställer att den inte får plats och returnerar ett fel.
 
 Det bästa sättet är att ange `&jpegSize=` och lägga till parametern `&qlt=` om du levererar JPG-bilder till enheter med begränsat minne.
 
@@ -119,5 +119,5 @@ När du experimenterar kan du också hitta följande allmänna förslag som kan 
 
 * Testa och testa olika parametrar i realtid, antingen direkt på en webbadress eller med Scene7 Publishing Companys bildjusteringsfunktion som ger förhandsgranskning i realtid för justeringsåtgärder.
 * Det är en god vana att gruppera kommandona Dynamic Media Image Serving i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg gör att dessa förinställningar anropas. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
-* AEM erbjuder också mer avancerade sätt att finjustera bildkvaliteten, t.ex. att använda skärpebilder vid inhämtning. I avancerade fall där detta kan vara ett alternativ för att ytterligare finjustera och optimera återgivningsresultaten kan [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html) hjälpa dig med anpassade insikter och bästa metoder.
+* AEM erbjuder också mer avancerade sätt att finjustera bildkvaliteten, t.ex. att använda skärpebilder vid inhämtning. För avancerade användningsområden där detta kan vara ett alternativ för att ytterligare finjustera och optimera återgivningsresultaten kan [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html) hjälpa dig med anpassade insikter och bästa praxis.
 
