@@ -3,9 +3,9 @@ title: Dela resurser, mappar och samlingar som en länk
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i Experience Manager Assets som en hyperlänk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Dela och distribuera resurser som hanteras i Experience Manager {#share-assets-from-aem}
 
-Med Adobe Experience Manager (AEM) Assets kan du dela resurser, mappar och samlingar med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Använd följande metoder om du vill dela resurser från Experience Manager Assets som en Cloud Service:
+Med Adobe Experience Manager (AEM) Assets kan du dela resurser, mappar och samlingar med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Använd följande metoder för att dela resurser från Experience Manager Assets som en [!DNL Cloud Service]:
 
 * Dela som en länk.
 * Ladda ned resurser och dela dem separat.
@@ -187,6 +187,5 @@ Se [hur du konfigurerar AEM för Adobe Asset Link](https://helpx.adobe.com/enter
 * If you cannot share assets using link sharing functionality, ensure that you have the appropriate permissions. See [share assets](#sharelink).
 -->
 
-<!--
-Add content or link about how to share using Brand Portal when it is available on Cloud Service.
+<!-- TBD: Add content or link about how to share using Brand Portal when it is available on [!DNL Cloud Service].
 -->
