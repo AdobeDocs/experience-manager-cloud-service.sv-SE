@@ -10,7 +10,7 @@ ht-degree: 2%
 ---
 
 
-# Versionsinformation för AEM som Cloud Service 2020.2.0 {#release-notes}
+# Versionsinformation för AEM som en Cloud Service 2020.2.0 {#release-notes}
 
 På den här sidan beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.2.0.
 
@@ -31,7 +31,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 * Kodsökningssteget har nu en hämtningsbar logg.
 * Kalkylbladet som innehåller problem som upptäcks vid kodskanning har nu en kolumn med en länk till dokumentationen för den specifika regeln.
 
-### Bug Fixes  {#bug-fixes}
+### Felkorrigeringar {#bug-fixes}
 
 * Säkerhetsprofiler för webbläsare kan ibland förhindra att vissa knappar i pipeline-körningsskärmen fungerar som de ska.
 * Länkarna Översikt, Miljö och Aktivitet var ibland tillgängliga på landningssidan för Cloud Manager.
