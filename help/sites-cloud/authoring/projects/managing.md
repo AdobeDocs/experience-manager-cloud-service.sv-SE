@@ -14,7 +14,7 @@ ht-degree: 11%
 
 Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet.
 
-I **projektkonsolen** får du tillgång till och kan vidta åtgärder för dina projekt:
+I konsolen **Projects** får du åtkomst till och utför åtgärder på dina projekt:
 
 ![Projects-konsolen](/help/sites-cloud/authoring/assets/projects-console-detail.png)
 
@@ -36,7 +36,7 @@ Du skapar ett projekt på samma sätt med alla projekt. Projekttyperna skiljer s
 
    ![Skapa ett projekt](/help/sites-cloud/authoring/assets/projects-create.png)
 
-1. Definiera **titel** och **beskrivning** och lägg till en **miniatyrbild** om det behövs. Du kan också lägga till eller ta bort användare och vilken grupp de tillhör. Klicka dessutom på **Avancerat** för att lägga till ett namn som används i URL:en.
+1. Definiera **titeln** och **Beskrivning** och lägg till en **miniatyrbild** om det behövs. Du kan också lägga till eller ta bort användare och vilken grupp de tillhör. Klicka dessutom på **Avancerat** för att lägga till ett namn som används i URL:en.
 
    ![Lägga till projektinformation](/help/sites-cloud/authoring/assets/projects-title.png)
 
@@ -44,12 +44,12 @@ Du skapar ett projekt på samma sätt med alla projekt. Projekttyperna skiljer s
 
 ### Associera resurser med ditt projekt {#associating-resources-with-your-project}
 
-När du kan gruppera resurser i en enhet i projekt vill du koppla resurser till projektet. Resurserna kallas **plattor**. De typer av resurser du kan lägga till beskrivs i [Projektfiler](/help/sites-cloud/authoring/projects/overview.md#project-tiles).
+När du kan gruppera resurser i en enhet i projekt vill du koppla resurser till projektet. Resurserna kallas **plattor**. De typer av resurser som du kan lägga till beskrivs i [Projektfiler](/help/sites-cloud/authoring/projects/overview.md#project-tiles).
 
 Så här associerar du resurser med ditt projekt:
 
-1. Öppna projektet från **projektkonsolen** .
-1. Tryck/klicka på **Lägg till platta** och välj den platta som du vill länka till projektet. Du kan markera flera typer av rutor.
+1. Öppna projektet från konsolen **Projekt**.
+1. Tryck/klicka på **Lägg till sida** och välj den ruta som du vill länka till projektet. Du kan markera flera typer av rutor.
 
    ![Lägga till en platta i ett projekt](/help/sites-cloud/authoring/assets/projects-add-tile.png)
 
@@ -59,19 +59,19 @@ Så här associerar du resurser med ditt projekt:
 
 1. Tryck/klicka på **Skapa**. Resursen är länkad till ditt projekt och från och med nu kan du komma åt den från ditt projekt.
 
-### Ta bort ett projekt eller en resurslänk {#deleting-a-project-or-resource-link}
+### Tar bort ett projekt eller en resurslänk {#deleting-a-project-or-resource-link}
 
 Samma metod används för att ta bort ett projekt från konsolen eller en länkad resurs från ditt projekt:
 
 1. Navigera till rätt plats:
 
-   * Om du vill ta bort ett projekt går du till den översta nivån i **projektkonsolen** .
-   * Om du vill ta bort en resurslänk i ett projekt öppnar du projektet i **projektkonsolen** .
+   * Om du vill ta bort ett projekt går du till den översta nivån i konsolen **Projekt**.
+   * Om du vill ta bort en resurslänk i ett projekt öppnar du projektet i konsolen **Projekt**.
 
-1. Ange markeringsläge genom att klicka på **Välj** och välja projekt- eller resurslänken.
+1. Öppna markeringsläget genom att klicka på **Välj** och välja projekt- eller resurslänken.
 1. Tryck/klicka på **Ta bort**.
 
-1. Du måste bekräfta borttagningen i en dialogruta. Om den bekräftas tas projekt- eller resurslänken bort. Tryck/klicka på **Avmarkera** för att avsluta markeringsläget.
+1. Du måste bekräfta borttagningen i en dialogruta. Om den bekräftas tas projekt- eller resurslänken bort. Tryck/klicka på **Avmarkera** om du vill avsluta markeringsläget.
 
 >[!NOTE]
 >
@@ -83,11 +83,11 @@ I vissa rutor kanske du vill lägga till mer än ett objekt. Du kan till exempel
 
 Så här lägger du till objekt i en platta:
 
-1. Gå till projektet i **Projekt** och klicka på ikonen Lägg till + på den ruta där du vill lägga till ett objekt.
+1. I **Projekt** navigerar du till projektet och klickar på ikonen Lägg till + på den ruta där du vill lägga till ett objekt.
 
    ![Lägg till objekt i en ruta](/help/sites-cloud/authoring/assets/projects-workflows-1.png)
 
-1. Lägg till ett objekt i rutan på samma sätt som när du skapar en ny platta. Projektpaneler beskrivs [här](/help/sites-cloud/authoring/projects/overview.md#project-tiles). I det här exemplet har ett annat arbetsflöde lagts till.
+1. Lägg till ett objekt i rutan på samma sätt som när du skapar en ny platta. Projekttitlar beskrivs [här](/help/sites-cloud/authoring/projects/overview.md#project-tiles). I det här exemplet har ett annat arbetsflöde lagts till.
 
    ![Ett annat objekt har lagts till i en ruta](/help/sites-cloud/authoring/assets/projects-workflows-2.png)
 
@@ -105,21 +105,21 @@ Så här öppnar du en platta så att du kan visa eller ändra objekt:
 
    ![Sida vid sida](/help/sites-cloud/authoring/assets/projects-opened-tile.png)
 
-## Visa projektstatistik {#viewing-project-statistics}
+## Visar projektstatistik {#viewing-project-statistics}
 
-Om du vill visa projektstatistik går du till **projektkonsolen** och klickar på **Visa statistikvy**. Slutförandenivån för varje projekt visas. Klicka på **Visa statistikvy** igen för att gå till **projektkonsolen** .
+Om du vill visa projektstatistik går du till konsolen **Projekt** och klickar på **Visa statistikvy**. Slutförandenivån för varje projekt visas. Klicka på **Visa statistikvy** igen för att gå till konsolen **Projekt**.
 
 ![Projektstatistik](/help/sites-cloud/authoring/assets/projects-stats.png)
 
 ### Visa en projekttidslinje {#viewing-a-project-timeline}
 
-Projektets tidslinje innehåller information om när resurser i projektet senast användes. Om du vill visa projekttidslinjen klickar/trycker du på **tidslinjen**, anger ett markeringsläge och väljer projektet. Resurser visas i den vänstra rutan. Klicka/tryck på **Tidslinjen** för att gå tillbaka till **projektkonsolen** .
+Projektets tidslinje innehåller information om när resurser i projektet senast användes. Om du vill visa projekttidslinjen klickar/trycker du på **Tidslinjen**, anger markeringsläget och väljer projektet. Resurser visas i den vänstra rutan. Klicka/tryck på **Tidslinje** för att återgå till konsolen **Projekt**.
 
 ![Projektets tidslinje](/help/sites-cloud/authoring/assets/projects-timeline.png)
 
 ### Visa aktiva/inaktiva projekt {#viewing-active-inactive-projects}
 
-Om du vill växla mellan dina aktiva och inaktiva projekt klickar du på **Växla aktiva projekt** i konsolen **Projekt**. Om ikonen har en bockmarkering visas de aktiva projekten.
+Om du vill växla mellan dina aktiva och inaktiva projekt går du till konsolen **Projekt** och klickar på **Växla aktiva projekt**. Om ikonen har en bockmarkering visas de aktiva projekten.
 
 ![Knappen Växla aktiva projekt](/help/sites-cloud/authoring/assets/projects-active.png)
 
@@ -127,13 +127,13 @@ Om ikonen har ett x bredvid visas de inaktiva projekten.
 
 ![Knappen Växla inaktiva projekt](/help/sites-cloud/authoring/assets/projects-inactive.png)
 
-## Göra projekt inaktiva eller aktiva {#making-projects-inactive-or-active}
+## Gör projekt inaktiva eller aktiva {#making-projects-inactive-or-active}
 
 Du kanske vill göra ett projekt inaktivt om du har slutfört det men ändå vill behålla informationen om projektet.
 
 Så här gör du ett projekt inaktivt (eller aktivt):
 
-1. Öppna projektet i **projektkonsolen** och hitta sedan rutan **Projektinformation** .
+1. Öppna projektet i konsolen **Projekt** och hitta sedan panelen **Projektinformation**.
 
    >[!NOTE]
    Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
