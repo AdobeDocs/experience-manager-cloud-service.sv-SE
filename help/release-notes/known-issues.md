@@ -10,11 +10,11 @@ ht-degree: 1%
 ---
 
 
-# Known issues {#known-issues}
+# Kända fel {#known-issues}
 
 I den här artikeln listas de kända problemen med Adobe Experience Manager som en Cloud Service. Förteckningen revideras och uppdateras för varje kontinuerlig version av Experience Manager.
 
-[Kontakta supporten](https://helpx.adobe.com/support/experience-manager.html) om du vill ha mer information om kända fel.
+[Kontakta ](https://helpx.adobe.com/support/experience-manager.html) supporten om du vill ha mer information om kända fel.
 
 <!-- 
 ## Platform {#platform}
