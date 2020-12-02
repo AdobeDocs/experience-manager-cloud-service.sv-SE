@@ -3,9 +3,9 @@ title: Hantera videoresurser
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '526'
 ht-degree: 7%
 
 ---
@@ -32,7 +32,7 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 
 ## Omkoda med Bearbetningsprofil {#transcode-video}
 
-[!DNL Experience Manager] som Cloud Service kan du utföra grundläggande omkodning av MP4-videofiler med Bearbeta profiler. Med den här funktionen kan du inte bara överföra utan även förhandsgranska och skala en MP4-videofil.
+[!DNL Experience Manager] som  [!DNL Cloud Service] gör att du kan utföra grundläggande omkodning av MP4-videofiler med Bearbeta profiler. Med den här funktionen kan du inte bara överföra utan även förhandsgranska och skala en MP4-videofil.
 
 ![Skapa bearbetningsprofil för videoomkodning i Experience Manager](assets/video-processing-profile-for-mp4.png)
 
