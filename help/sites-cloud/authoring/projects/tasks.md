@@ -16,17 +16,17 @@ Uppgifter representerar arbetsuppgifter som ska utföras på innehåll. När du 
 
 Uppgifter används också i projekt för att avgöra hur fullständiga de aktuella uppgifterna är, inklusive arbetsflödesuppgifter.
 
-## Spåra projektförlopp {#tracking-project-progress}
+## Spårar projektförlopp {#tracking-project-progress}
 
-Du kan spåra projektförloppet genom att titta på aktiva/slutförda uppgifter i ett projekt som representeras av **aktivitetspanelen** . Projektets förlopp kan avgöras av:
+Du kan spåra projektförloppet genom att titta på de aktiva/slutförda aktiviteterna i ett projekt som representeras av **aktivitetspanelen**. Projektets förlopp kan avgöras av:
 
 * **Uppgiftsruta:** Ett övergripande förlopp för projektet visas i uppgiftsrutan på sidan med projektinformation.
 
 * **Uppgiftsruta:** När du klickar på uppgiftsrutan visas en lista med uppgifter. Den här listan innehåller detaljerad information om alla uppgifter som rör projektet.
 
-Båda listar arbetsflödesuppgifter och uppgifter som du skapar direkt i **aktivitetspanelen** .
+Båda listar arbetsflödesuppgifter och uppgifter som du skapar direkt i rutan **Uppgifter**.
 
-### Åtgärdsfönster {#task-tile}
+### Aktivitetsruta {#task-tile}
 
 Om ett projekt innehåller några relaterade uppgifter visas en åtgärdsruta i projektet. Åtgärdsrutan visar projektets aktuella status. Detta baseras på befintliga uppgifter i arbetsflödet och inkluderar inga uppgifter som kommer att genereras i framtiden allt eftersom arbetsflödet fortsätter. Följande information visas i åtgärdsrutan:
 
@@ -58,25 +58,25 @@ I Uppgiftsinformation kan du redigera eller lägga till kommentarer. Alla kommen
 
 ![Kommentarer om uppgifter](/help/sites-cloud/authoring/assets/projects-tasks-comments.png)
 
-### Lägga till uppgifter {#adding-tasks}
+### Lägger till uppgifter {#adding-tasks}
 
 Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan på aktivitetspanelen och är tillgängliga i inkorgen Meddelanden för att utföra åtgärder.
 
 Så här lägger du till en uppgift:
 
 1. Tryck/klicka på ikonen + i rutan **Uppgifter** i projektet. Fönstret **Lägg till uppgift** öppnas.
-1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Du kan dessutom välja fliken **Avancerat** och ange namnet på uppgiften som används för att namnge URL:en.
+1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Du kan dessutom välja fliken **Avancerat** och ange namnet på uppgiften, som används för att namnge URL:en.
 
    ![Lägg till en uppgift](/help/sites-cloud/authoring/assets/projects-add-task.png)
 
 1. Tryck/klicka på **Skapa**.
 
-## Arbeta med uppgifter i Inkorgen {#working-with-tasks-in-the-inbox}
+## Arbeta med uppgifter i inkorgen {#working-with-tasks-in-the-inbox}
 
 Ett annat sätt att komma åt uppgifter är via Inkorgen. I inkorgen kan du öppna innehållet för att implementera ändringarna. När du är klar anger du aktivitetsstatus till Slutförd. Uppgifter visas också i inkorgen när de tilldelas till en användargrupp som du tillhör. I det här fallet kan alla medlemmar i gruppen utföra arbetet och slutföra uppgiften.
 
 ![Uppgifter i inkorgen](/help/sites-cloud/authoring/assets/projects-task-inbox.png)
 
-Slutför en uppgift genom att markera uppgiften och klicka på **Slutför**. Lägg till information för uppgiften och klicka sedan på **Klar**. Mer information finns i [Inkorgen](/help/sites-cloud/authoring/getting-started/inbox.md) .
+Slutför en uppgift genom att markera uppgiften och klicka på **Fullständig**. Lägg till information för aktiviteten och klicka sedan på **Klar**. Mer information finns i [Inkorgen](/help/sites-cloud/authoring/getting-started/inbox.md).
 
 ![Uppgiftsmeddelanden](/help/sites-cloud/authoring/assets/projects-task-notifications.png)
