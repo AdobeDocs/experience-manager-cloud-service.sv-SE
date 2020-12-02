@@ -18,23 +18,23 @@ Om kodpaketet distribueras till en plats som **inte täcks** av kodpaketet måst
 
 ![Databasstrukturpaket](./assets/repository-structure-packages.png)
 
-Databasstrukturpaketet definierar det förväntade, vanliga tillståndet `/apps` som paketvalideraren använder för att fastställa områden som är&quot;säkra från potentiella konflikter&quot; när de är standardrötter.
+Databasstrukturpaketet definierar det förväntade, vanliga tillståndet för `/apps` som paketvalideraren använder för att fastställa områden som är&quot;säkra från potentiella konflikter&quot; när de är standardrötter.
 
 De vanligaste sökvägarna som ska inkluderas i databasstrukturpaketet är:
 
 + `/apps` som är en systemansluten nod
-+ `/apps/cq/...`, `/apps/dam/...`, `/apps/wcm/...`och `/apps/sling/...` som innehåller gemensamma övertäckningar för `/libs`.
++ `/apps/cq/...`,  `/apps/dam/...`,  `/apps/wcm/...`och  `/apps/sling/...` som innehåller gemensamma övertäckningar för  `/libs`.
 + `/apps/settings` som är den delade kontextmedvetna konfigurationsrotsökvägen
 
-Observera att det här underpaketet **inte har** något innehåll och att det endast består av en `pom.xml` definition av filterrötterna.
+Observera att det här underpaketet **inte har** något innehåll och att det endast består av en `pom.xml` som definierar filterrötterna.
 
 ## Skapa databasstrukturpaketet
 
-Om du vill skapa ett databasstrukturpaket för ditt Maven-projekt skapar du ett nytt tomt Maven-underprojekt med följande `pom.xml`och uppdaterar projektets metadata så att de överensstämmer med det överordnade Maven-projektet.
+Om du vill skapa ett databasstrukturpaket för ditt Maven-projekt skapar du ett nytt tomt Maven-underprojekt med följande `pom.xml`, som uppdaterar projektets metadata så att de överensstämmer med det överordnade Maven-projektet.
 
-Uppdatera filen så `<filters>` att den innehåller alla sökvägar till JCR-databasen som dina kodpaket distribueras till.
+Uppdatera `<filters>` så att den omfattar alla sökvägar till JCR-databasen som dina kodpaket distribueras till.
 
-Se till att du lägger till det nya delprojektet Maven i `<modules>` listan över överordnade projekt.
+Se till att du lägger till det nya Maven-underprojektet i listan `<modules>` med överordnade projekt.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -117,9 +117,9 @@ Se till att du lägger till det nya delprojektet Maven i `<modules>` listan öve
 
 ## Referera till databasstrukturpaketet
 
-Om du vill använda strukturpaketet för databasen refererar du till det via alla kodpaket (underpaket som distribueras till `/apps`) Maven-projekt via `<repositoryStructurePackage>` konfigurationen för innehållspaketet Maven.
+Om du vill använda databasstrukturpaketet refererar du till det via alla kodpaket (underpaket som distribueras till `/apps`) Maven-projekt via FileVault-innehållspaketet Maven plugin-program `<repositoryStructurePackage>`-konfigurationen.
 
-I `ui.apps/pom.xml`och andra kodpaket lägger du `pom.xml`till en referens till projektets konfiguration för databasstrukturpaket (#database-structure-package) i plugin-programmet för FileVault-paketet Maven.
+I `ui.apps/pom.xml` och andra kodpaket `pom.xml`s lägger du till en referens till projektets konfiguration för databasstrukturpaket (#database-structure-package) i plugin-programmet för FileVault-paketet Maven.
 
 ```xml
 ...
@@ -163,12 +163,12 @@ Till exempel:
 + Kodpaket A distribuerar till `/apps/a`
 + Kodpaket B distribueras till `/apps/a/b`
 
-Om ett beroende på paketnivå inte har etablerats från kodpaket B i kodpaket A, kan kodpaket B distribueras först till `/apps/a`, följt av kodpaket B, som distribueras till `/apps/a`, vilket resulterar i att det tidigare installerade paketet tas bort `/apps/a/b`.
+Om ett beroende på paketnivå inte har etablerats från kodpaket B i kodpaket A, kan kodpaket B distribueras först till `/apps/a`, följt av kodpaket B, som distribueras till `/apps/a`, vilket resulterar i att det tidigare installerade `/apps/a/b` tas bort.
 
 I detta fall:
 
-+ Kodpaket A ska definiera en `<repositoryStructurePackage>` i projektets databasstrukturpaket (som ska ha ett filter för `/apps`).
-+ Kodpaket B ska definiera ett `<repositoryStructurePackage>` kodpaket för A, eftersom kodpaket B distribueras till ett utrymme som delas av kodpaket A.
++ Kodpaket A ska definiera ett `<repositoryStructurePackage>` för projektets databasstrukturpaket (som ska ha ett filter för `/apps`).
++ Kodpaket B ska definiera ett `<repositoryStructurePackage>` för kodpaket A, eftersom kodpaket B distribueras i ett utrymme som delas av kodpaket A.
 
 ## Fel och felsökning
 
@@ -179,7 +179,7 @@ Om databasstrukturpaketen inte är korrekt konfigurerade, kommer ett fel att rap
 Filter root's ancestor '/apps/some/path' is not covered by any of the specified dependencies.
 ```
 
-Detta anger att det inte finns någon kod `<repositoryStructurePackage>` som listas `/apps/some/path` i dess filterlista.
+Detta anger att det inte finns något `<repositoryStructurePackage>`-paket för det brutna kodpaketet som listar `/apps/some/path` i filterlistan.
 
 ## Ytterligare resurser
 
