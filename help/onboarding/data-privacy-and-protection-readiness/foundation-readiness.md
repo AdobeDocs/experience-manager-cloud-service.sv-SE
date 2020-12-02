@@ -10,7 +10,7 @@ ht-degree: 5%
 ---
 
 
-# Adobe Experience Manager som Cloud Service Foundation Readiness for Data Protection and Data Privacy Regulations {#aem-foundation-readiness-for-data-protection-and-data-privacy-regulations}
+# Adobe Experience Manager as a Cloud Service Foundation Readiness for Data Protection and Data Privacy Regulations {#aem-foundation-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -40,7 +40,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
    ![sök efter konto](assets/dpp-foundation-01.png)
 
-1. Öppna sedan användarprofilen genom att klicka på den och markera den på **[!UICONTROL Details]** fliken.
+1. Öppna sedan användarprofilen genom att klicka på den och kontrollera den under fliken **[!UICONTROL Details]**.
 
    ![användarprofil](assets/dpp-foundation-02.png)
 
@@ -75,7 +75,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profiles.-1.json'
 ```
 
-## Inaktivera en användare och ta bort associerade profiler {#disabling-a-user-and-deleting-the-associated-profiles}
+## Inaktivera en användare och ta bort de associerade profilerna {#disabling-a-user-and-deleting-the-associated-profiles}
 
 ### Inaktivera användare {#disable-user}
 
