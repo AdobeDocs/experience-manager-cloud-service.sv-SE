@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Installation i flera butiker {#multi-store}
+# Inställningar för flera butiker {#multi-store}
 
 AEM CIF Core Components kan användas på flera AEM webbplatsstrukturer och den underliggande GraphQL-klientimplementeringen kan ansluta till olika Magento-butiker/lagringsvyer. Detta gör att projekt kan implementera komplexa flerbutiks-/flerplatsinställningar.
 
@@ -34,13 +34,13 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 
 ## Konfiguration {#configuration}
 
-1. Konfigurera flera butiker och butiksvyer enligt mönstret som beskrivs på [Magento webbplatser, butiker och vyer](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
+1. Konfigurera flera butiker och butiksvyer enligt mönstret som beskrivs i [Magento webbplatser, butiker och vyer](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
 
 2. Kontrollera att anslutningen mellan AEM &amp; Magento fungerar.
 
 3. Skapa en underordnad konfiguration för CIF-Cloud Servicens konfiguration enligt följande:
 
-   * I AEM går du till Verktyg -> Allmänt -> [Konfigurationsläsare](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
+   * I AEM går du till Verktyg -> Allmänt -> [Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
    * Välj den baskonfiguration du skapade
    * Skapa en ny konfiguration med stegen som beskrivs i punkt 2 ovan
 
@@ -49,10 +49,10 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 4. Tilldela den underordnade konfigurationen till en AEM plats
 
    * Gå till AEM Sites Console
-   * Navigera till regionen eller språkroten i platsstrukturen, t.ex. /content/venia/us _eller_ /content/venia/us/en för exempelsidan Venia
+   * Navigera till regionen eller språkroten i platsstrukturen, t.ex. /content/venia/us _eller_ /content/venia/us/en för Venias exempelsida
    * Markera sidan och öppna sidegenskaper
    * Välj fliken Avancerat
-   * Välj den konfiguration du skapade i steg i `Configuration` avsnittet
+   * I avsnittet `Configuration` väljer du konfigurationen som du skapade i steg
 
 ## Ytterligare resurser
 
