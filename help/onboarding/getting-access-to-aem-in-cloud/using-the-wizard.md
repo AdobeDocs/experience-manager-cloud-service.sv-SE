@@ -12,7 +12,7 @@ ht-degree: 41%
 
 # Använda guiden {#using-wizard-to-create-an-aem-application-project}
 
-För att hjälpa nya kunder att komma igång kan Cloud Manager nu skapa ett minimalt AEM som utgångspunkt. Den här processen baseras på [**AEM projekttyp**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+För att hjälpa nya kunder att komma igång kan Cloud Manager nu skapa ett minimalt AEM som utgångspunkt. Den här processen baseras på [**AEM Project Archetype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 
 Följ stegen nedan för att skapa ett AEM programprojekt i Cloud Manager med hjälp av guiden:
@@ -25,11 +25,11 @@ Följ stegen nedan för att skapa ett AEM programprojekt i Cloud Manager med hj�
 
    ![](assets/create-wizard2.png)
 
-1. Panelen **Projekt skapas** under arbete visas på skärmen *Programöversikt* .
+1. Platsen **Projekt skapas under arbete** visas på skärmen *Programöversikt*.
 
    ![](assets/create-wizard3.png)
 
 1. När programmet har skapats visas rutan **Lägg till miljö** på sidan *Programöversikt*.
    ![](assets/create-wizard4.png)
 
-   Mer information om hur du lägger till och hanterar miljöer [finns i](/help/implementing/cloud-manager/manage-environments.md) Hantera miljöer.
+   Mer information om hur du lägger till eller hanterar miljöer finns i [Hantera dina miljöer](/help/implementing/cloud-manager/manage-environments.md).
