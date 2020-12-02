@@ -41,7 +41,7 @@ AEM Dispatcher Converter kan omfaktorisera befintliga, lokala eller Adobe Manage
 
 * Som fristående verktyg: AEM Dispatcher Converter-verktyget kan också köras som ett fristående verktyg.
 
-   Refer to **[Git Resource: AEM Cloud Service Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter)** to learn about the usage and troubleshooting for this tool.
+   Se **[Git-resurs: AEM Cloud Service Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter)** om du vill veta mer om användning och felsökning för det här verktyget.
 
 >[!IMPORTANT]
 >AEM Dispatcher Converter utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.
