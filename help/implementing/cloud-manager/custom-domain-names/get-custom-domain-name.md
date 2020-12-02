@@ -17,4 +17,4 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 >[!NOTE]
 >Cloud Manager är inte en domännamnsregistrator och tillhandahåller inga DNS-tjänster.
 
-DNS är vad som gör det möjligt för oss att ha anpassade, varumärkesanpassade domäner kopplade till webbplatser genom att översätta datoradresser som kan läsas, t.ex. `184.33.123.64` till minnesvärda adresser som `www.wknd.com`.
+DNS är vad som gör att vi kan ha anpassade, varumärkesanpassade domäner kopplade till webbplatser genom att översätta datorläsbara adresser, som `184.33.123.64` till minnesvärda adresser som `www.wknd.com`.
