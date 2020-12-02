@@ -16,7 +16,7 @@ Den här sidan beskriver de konfigurerbara parametrarna som finns i HTTP-fönstr
 
 ## Parametrar {#parameters}
 
-![HTTP-målfönster för](assets/httpwindow.png "WindowTarget")
+![HTTP-målfönster för ](assets/httpwindow.png "WindowTarget")
 
 Fönstret innehåller följande konfigurerbara parametrar:
 
