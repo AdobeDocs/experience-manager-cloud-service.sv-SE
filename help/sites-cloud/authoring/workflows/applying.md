@@ -51,16 +51,16 @@ Arbetsflöden kan startas från:
 
 Du kan starta ett arbetsflöde från:
 
-* [alternativet Skapa i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
+* [alternativet Skapa i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar) Platser.
 * [tidslinjen i webbplatskonsolen](#starting-a-workflow-from-the-timeline).
 
 I båda fallen måste du:
 
-* [Ange arbetsflödesinformation i guiden](#specifying-workflow-details-in-the-create-workflow-wizard)Skapa arbetsflöde.
+* [Ange arbetsflödesinformation i guiden](#specifying-workflow-details-in-the-create-workflow-wizard) Skapa arbetsflöde.
 
 ### Starta ett arbetsflöde från verktygsfältet Platser {#starting-a-workflow-from-the-sites-toolbar}
 
-Du kan starta ett arbetsflöde från verktygsfältet i **webbplatskonsolen** :
+Du kan starta ett arbetsflöde från verktygsfältet i konsolen **Platser**:
 
 1. Navigera till och markera önskad sida.
 
@@ -74,8 +74,8 @@ Du kan starta ett arbetsflöde från verktygsfältet i **webbplatskonsolen** :
 
 Från **tidslinjen** kan du starta ett arbetsflöde som ska användas för den valda resursen.
 
-1. [Markera resursen](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) och öppna [tidslinjen](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) (eller öppna tidslinjen och välj sedan resursen).
-1. Pilen i kommentarfältet kan användas för att visa **startarbetsflödet**:
+1. [Markera ](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) resursen och öppna  [tidslinjen](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)  (eller öppna tidslinjen och välj sedan resursen).
+1. Pilen i kommentarfältet kan användas för att visa **Starta arbetsflöde**:
 
    ![Skapa arbetsflöde från tidslinjen](/help/sites-cloud/authoring/assets/workflows-create-from-timeline.png)
 
@@ -85,9 +85,9 @@ Från **tidslinjen** kan du starta ett arbetsflöde som ska användas för den v
 
 Guiden **Skapa arbetsflöde** hjälper dig att välja arbetsflöde och ange nödvändig information.
 
-När du har öppnat guiden **Skapa arbetsflöde** från:
+När du har öppnat guiden **Skapa arbetsflöde** från antingen:
 
-* [alternativet Skapa i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
+* [alternativet Skapa i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar) Platser.
 * [tidslinjen i webbplatskonsolen](#starting-a-workflow-from-the-timeline).
 
 Du kan ange information:
@@ -117,13 +117,13 @@ Du kan ange information:
 
    ![Ange arbetsflödesegenskaper](/help/sites-cloud/authoring/assets/workflows-properties.png)
 
-1. I steget **Omfång** kan du välja:
+1. I steget **Scope** kan du välja:
 
-   * **Lägg till innehåll** för att öppna [sökvägsläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) och välja ytterligare resurser, när du är i webbläsaren klickar/trycker du på **Välj** för att lägga till innehållet i arbetsflödesinstansen.
+   * **Lägg till** innehåll för att öppna  [sökvägsläsaren ](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) och markera ytterligare resurser, när du är i webbläsaren klickar/trycker du på  **** Markering för att lägga till innehållet i arbetsflödesinstansen.
 
    * En befintlig resurs som visar ytterligare åtgärder:
 
-      * **Inkludera underordnade objekt** för att ange att underordnade för den resursen ska inkluderas i arbetsflödet.
+      * **Inkludera** underordnade anger att underordnade för resursen ska inkluderas i arbetsflödet.
 En dialogruta öppnas där du kan förfina markeringen enligt:
 
          * Inkludera endast omedelbara barn.
@@ -132,7 +132,7 @@ En dialogruta öppnas där du kan förfina markeringen enligt:
 
          Alla underordnade objekt läggs till i listan över resurser som arbetsflödet gäller för.
 
-      * **Ta bort markeringen** för att ta bort resursen från arbetsflödet.
+      * **Ta bort** markering om du vill ta bort resursen från arbetsflödet.
 
    ![Definiera arbetsflödesomfång](/help/sites-cloud/authoring/assets/workflows-scope.png)
 
