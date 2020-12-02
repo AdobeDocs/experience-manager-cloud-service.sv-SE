@@ -11,11 +11,11 @@ ht-degree: 7%
 ---
 
 
-# Architecture of Assets as a Cloud Service solution {#assets-architecture}
+# Arkitektur för Assets som Cloud Service {#assets-architecture}
 
 AEM Assets som Cloud Service bygger på Adobe Experience Manager och jämför väl med det senaste Experience Manager 6.5-erbjudandet. Cloud Servicen erbjuder en anpassad arkitektur och funktionalitet som är en molnbaserad tjänst. Ändringar i den underliggande arkitekturen gör att alla funktioner i Experience Manager 6.5 inte kan ingå i Cloud Servicen.
 
-Arkitektur - översikt över mikrotjänster för resurser finns i den här översikten över [mikrotjänster för](asset-microservices-overview.md#asset-microservices-architecture)resurser.
+Arkitekturöversikt över mikrotjänster för resurser finns i den här [översikten över mikrotjänster för resurser](asset-microservices-overview.md#asset-microservices-architecture).
 
 >[!MORELIKETHIS]
 >
