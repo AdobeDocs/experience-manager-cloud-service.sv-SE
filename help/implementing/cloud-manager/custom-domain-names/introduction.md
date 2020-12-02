@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Introduktion {#introduction}
 
-Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Ditt AEMaaCS-program har ett standarddomännamn som avslutas med `*.adobearmcloud.com`. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen.
+Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Ditt AEMaaCS har ett standarddomännamn som slutar på `*.adobearmcloud.com`. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen.
 
 >[!NOTE]
 >Anpassade domännamn stöds endast i Cloud Manager för Sites Programs (Publiceringstjänst). Varje CM-miljö har plats för upp till 50 anpassade domäner per miljö.
