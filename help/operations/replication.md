@@ -16,29 +16,29 @@ Adobe Experience Manager som Cloud Service använder funktionen [Sling Content D
 
 >[!NOTE]
 >
->Läs [Distribution](/help/core-concepts/architecture.md#content-distribution) för mer information.
+>Läs [Distribution](/help/core-concepts/architecture.md#content-distribution) om du vill ha mer information.
 
 ## Metoder för publicering av innehåll {#methods-of-publishing-content}
 
-### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
+### Snabb borttagning/publicering - planerad urklippning/publicering {#publish-unpublish}
 
 De här AEM standardfunktionerna för författarna ändras inte med AEM Cloud Service.
 
 ### På- och avaktiveringstider - utlösarkonfiguration {#on-and-off-times-trigger-configuration}
 
-Ytterligare möjligheter för **På-tid** och **Fråntid** finns på fliken [Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#basic).
+De ytterligare möjligheterna i **On Time** och **Off Time** är tillgängliga på fliken [Basic (Grundläggande) i Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#basic).
 
-Om du vill genomföra den automatiska replikeringen för detta måste du aktivera **automatisk replikering** i [OSGi-konfigurationen](/help/implementing/deploying/configuring-osgi.md) **vid utlösarkonfiguration**:
+Om du vill genomföra den automatiska replikeringen för detta måste du aktivera **Automatisk replikering** i [OSGi-konfigurationen](/help/implementing/deploying/configuring-osgi.md) **Utlösarkonfiguration vid fel**:
 
 ![Konfiguration av OSGi på av utlösare](/help/operations/assets/replication-on-off-trigger.png)
 
-### Aktivering av träd {#tree-activation}
+### Trädaktivering {#tree-activation}
 
 Så här utför du en trädaktivering:
 
-1. Navigera AEM Start-menyn till **Verktyg > Distribution > Distribution**
+1. Navigera från AEM Start-meny till **Verktyg > Distribution > Distribution**
 2. Välj kortet **forwardPublisher**
-3. I användargränssnittet för webbkonsolen **väljer du Distribuera**
+3. **Välj Distribute** i webbkonsolens användargränssnitt för forwardPublisher
 
    ![](assets/distribute.png "DistribueraDistribuera")
 4. Markera sökvägen i sökvägsläsaren, välj att lägga till en nod, ett träd eller att ta bort efter behov och välj **Skicka**
@@ -47,7 +47,7 @@ Så här utför du en trädaktivering:
 
 Om du vill felsöka replikering går du till replikeringsköerna i webbgränssnittet för AEM Author Service:
 
-1. Navigera AEM Start-menyn till **Verktyg > Distribution > Distribution**
+1. Navigera från AEM Start-meny till **Verktyg > Distribution > Distribution**
 2. Välj kortet **forwardPublisher**
    ![](assets/status.png "StatusStatus")
 3. Kontrollera köstatusen som ska vara grön
