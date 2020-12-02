@@ -10,9 +10,9 @@ ht-degree: 4%
 ---
 
 
-# Komponenter - översikt {#components-overview}
+# Komponentöversikt {#components-overview}
 
-På den här sidan finns en översikt över Adobe Experience Manager-komponenter (AEM), t.ex. de som [används för att skapa](/help/sites-cloud/authoring/fundamentals/components.md)sidor.
+Den här sidan innehåller en översikt över Adobe Experience Manager-komponenter (AEM), t.ex. de [som används för sidredigering](/help/sites-cloud/authoring/fundamentals/components.md).
 
 ## Vad är komponenter? {#what-are-components}
 
@@ -45,23 +45,23 @@ Varje AEM:
 
 ## AEM kärnkomponenter {#aem-core-components}
 
-[De AEM kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[De AEM ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) grundläggande komponenterna är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 
-Core Components har AEM som Cloud Service och [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
+Core Components har AEM som Cloud Service och [WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md) visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
 
 ### Visa tillgängliga komponenter {#viewing-available-components}
 
-Använd [komponentkonsolen](/help/sites-cloud/authoring/features/components-console.md)om du vill se en översikt över alla tillgängliga komponenter i AEM.
+Använd [komponentkonsolen](/help/sites-cloud/authoring/features/components-console.md) om du vill se en översikt över alla tillgängliga komponenter i AEM.
 
 Du kan också använda CRXDE Lite för att få en lista över alla komponenter som är tillgängliga i databasen.
 
-1. I **[!UICONTROL CRXDE Lite]** väljer du **[!UICONTROL Tools]** från verktygsfältet **[!UICONTROL Query]** så öppnas **[!UICONTROL Query]** fliken.
+1. I **[!UICONTROL CRXDE Lite]** väljer du **[!UICONTROL Tools]** i verktygsfältet och sedan **[!UICONTROL Query]**, som öppnar fliken **[!UICONTROL Query]**.
 
-1. Välj **[!UICONTROL Query]** som på `XPath` fliken **[!UICONTROL Type]**.
+1. Välj `XPath` som **[!UICONTROL Type]** på fliken **[!UICONTROL Query]**.
 
-1. Ange följande sträng i **[!UICONTROL Query]** indatafältet:
+1. I indatafältet **[!UICONTROL Query]** anger du följande sträng:
 
    `//element(*, cq:Component)`
 
-1. Klicka **[!UICONTROL Execute]** så visas komponenterna.
+1. Klicka på **[!UICONTROL Execute]** så visas komponenterna.
 
