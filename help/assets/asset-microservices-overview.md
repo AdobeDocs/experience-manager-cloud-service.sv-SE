@@ -3,9 +3,9 @@ title: Bearbeta resurser med hjälp av mikrotjänster för resurser
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Översikt över tillgångsintag och bearbetning med tillgångsmikrotjänster {#asset-microservices-overview}
 
-Adobe Experience Manager som Cloud Service erbjuder en molnbaserad metod för att utnyttja program och funktioner från Experience Manager. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster. Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna med molnbaserade resurstjänster är:
+Adobe Experience Manager som [!DNL Cloud Service] erbjuder en molnbaserad metod för att utnyttja Experience Manager-program och -funktioner. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster. Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna med molnbaserade resurstjänster är:
 
 * Skalbar arkitektur som möjliggör smidig bearbetning för resurskrävande åtgärder.
 * Effektiv indexering och textextrahering som inte påverkar Experience Manager-miljöernas prestanda.
