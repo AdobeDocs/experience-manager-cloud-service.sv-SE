@@ -10,7 +10,7 @@ ht-degree: 82%
 ---
 
 
-# AEM Commerce as a Cloud Service {#commerce-guide}
+# AEM Commerce som en Cloud Service {#commerce-guide}
 
 På den här sidan visas självhjälpsresurser för AEM Commerce som en Cloud Service.
 
