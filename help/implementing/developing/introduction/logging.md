@@ -10,7 +10,7 @@ ht-degree: 2%
 ---
 
 
-# Loggning {#logging}
+# Loggar {#logging}
 
 AEM som Cloud Service är en plattform där kunderna kan inkludera anpassad kod för att skapa unika upplevelser för sina kunder. Med detta i åtanke är loggning en viktig funktion för att felsöka och förstå kodkörning på lokal utveckling och i molnmiljöer, särskilt AEM som Cloud Servicens Dev-miljöer.
 
@@ -151,7 +151,7 @@ Konfigurera java-loggning för anpassade Java-paket via OSGi-konfigurationer fö
 
 Om du ändrar andra konfigurationsegenskaper för LogManager OSGi kan det leda till tillgänglighetsproblem i AEM som Cloud Service.
 
-Följande är exempel på de rekommenderade loggningskonfigurationerna (med platshållarens Java-paket från `com.example`) för de tre AEM som en Cloud Service-miljötyp.
+Nedan följer exempel på de rekommenderade loggningskonfigurationerna (med platshållarens Java-paket `com.example`) för de tre AEM som miljötyper för Cloud Service.
 
 ### Utveckling {#development}
 
@@ -236,11 +236,11 @@ Nyckeln till att förstå den här loggen är att mappa HTTP-par för begäran o
 </tbody>
 </table>
 
-### Konfigurera loggen {#configuring-the-log}
+### Konfigurerar loggen {#configuring-the-log}
 
 Loggen för AEM HTTP-begäran kan inte konfigureras i AEM som en Cloud Service.
 
-## Loggning av AEM HTTP-åtkomst {#aem-http-access-logging}
+## AEM HTTP-åtkomstloggning {#aem-http-access-logging}
 
 AEM när HTTP-åtkomstloggning för Cloud Service visar HTTP-begäranden i tidsordning. Varje loggpost representerar den HTTP-begäran som AEM åtkomst till.
 
@@ -325,7 +325,7 @@ Den här uppsättningen loggar ger information om HTTP-begäranden till AEM som 
 
 Åtkomstloggen för Apache HTTP Web Server innehåller programsatser för varje HTTP-begäran som når publiceringsskiktets webbserver/Dispatcher. Observera att förfrågningar som hanteras från ett CDN i ett tidigare flöde inte återspeglas i dessa loggar.
 
-Mer information om felloggformatet finns i den [officiella dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#accesslog)för cacheminnet.
+Mer information om felloggformatet finns i [den officiella dokumentationen för apache](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
 
 **Exempel på loggutdata**
 
@@ -394,7 +394,7 @@ Loggen kan inte konfigureras i AEM som en Cloud Service.
 
 Felloggen för Apache HTTP Web Server innehåller programsatser för varje fel i Publish-skiktets webbserver/Dispatcher.
 
-Mer information om felloggformatet finns i den [officiella dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#errorlog)för cacheminnet.
+Mer information om felloggformatet finns i [den officiella dokumentationen för apache](https://httpd.apache.org/docs/2.4/logs.html#errorlog).
 
 **Exempel på loggutdata**
 
@@ -431,13 +431,13 @@ Fri Jul 17 02:29:34.517189 2020 [mpm_worker:notice] [pid 1:tid 140293638175624] 
 </tbody>
 </table>
 
-### Konfigurerar felloggen för Apache HTTPD-webbservern {#configuring-the-apache-httpd-web-server-error-log}
+### Konfigurerar felloggen {#configuring-the-apache-httpd-web-server-error-log} för Apache HTTPD-webbservern
 
 Loggnivåerna mod_rewrite definieras av variabeln REWRITE_LOG_LEVEL i filen `conf.d/variables/global.var`.
 
 Den kan anges till Error, Warn, Info, Debug och Trace1 - Trace8, med standardvärdet Warn. Om du vill felsöka RewriteRules rekommenderar vi att du höjer loggnivån till Trace2.
 
-Mer information finns i dokumentationen [för modulen](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#logging) mod_rewrite.
+Mer information finns i [mod_rewrite module documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#logging).
 
 Om du vill ange loggnivån per miljö använder du lämplig villkorsgren i filen global.var enligt beskrivningen nedan:
 
@@ -456,7 +456,7 @@ Define REWRITE_LOG_LEVEL Debug
 </IfDefine>
 ```
 
-## Dispatcher-logg {#dispatcher-log}
+## Utskicksloggen {#dispatcher-log}
 
 **Exempel**
 
@@ -509,7 +509,7 @@ Define REWRITE_LOG_LEVEL Debug
 </tbody>
 </table>
 
-### Konfigurera felloggen för Dispatcher {#configuring-the-dispatcher-error-log}
+### Konfigurerar felloggen för Dispatcher {#configuring-the-dispatcher-error-log}
 
 Loggnivåer för dispatcher definieras av variabeln DISP_LOG_LEVEL i filen `conf.d/variables/global.var`.
 
@@ -517,7 +517,7 @@ Den kan anges till Error, Warn, Info, Debug och Trace1 med standardvärdet Warn.
 
 Även om Dispatcher-loggning har stöd för flera andra nivåer av loggningsgranularitet rekommenderar AEM som en Cloud Service att du använder de nivåer som beskrivs nedan.
 
-Om du vill ange loggnivån per miljö använder du lämplig villkorsgren i `global.var` filen enligt beskrivningen nedan:
+Om du vill ange loggnivån per miljö använder du lämplig villkorsgren i filen `global.var` enligt beskrivningen nedan:
 
 ```
 Define DISP_LOG_LEVEL Debug
@@ -534,28 +534,28 @@ Define DISP_LOG_LEVEL Debug
 </IfDefine>
 ```
 
-## Åtkomst till loggar {#how-to-access-logs}
+## Åtkomstloggar {#how-to-access-logs}
 
 ### Molnmiljöer {#cloud-environments}
 
-Du kan komma åt AEM som en Cloud Service för molntjänster antingen genom att hämta via Cloud Manager-gränssnittet eller genom att svepa loggar på kommandoraden med hjälp av Adobe I/O kommandoradsgränssnitt. Mer information finns i loggningsdokumentationen [för](/help/implementing/cloud-manager/manage-logs.md)Cloud Manager.
+Du kan komma åt AEM som en Cloud Service för molntjänster antingen genom att hämta via Cloud Manager-gränssnittet eller genom att svepa loggar på kommandoraden med hjälp av Adobe I/O kommandoradsgränssnitt. Mer information finns i [Loggningsdokumentationen för Cloud Manager](/help/implementing/cloud-manager/manage-logs.md).
 
 ### Lokal SDK {#local-sdk}
 
 AEM som Cloud Service-SDK tillhandahåller loggfiler som stöder lokal utveckling.
 
-AEM loggar finns i mappen `crx-quickstart/logs`där följande loggar kan visas:
+AEM loggar finns i mappen `crx-quickstart/logs`, där följande loggar kan visas:
 
 * AEM Java-logg: `error.log`
 * Logg för AEM HTTP-begäran: `request.log`
 * AEM HTTP Access-logg: `access.log`
 
-Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Mer information om hur du startar Dispatcher finns i [Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html) .
+Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Mer information om hur du startar Dispatcher finns i [Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html).
 
 Så här hämtar du loggarna:
 
-1. På kommandoraden skriver du `docker ps` en lista över dina behållare
-1. Om du vill logga in i behållaren skriver du&quot;`docker exec -it <container> /bin/sh`&quot;, där `<container>` är avsändarens behållar-ID från föregående steg
+1. På kommandoraden skriver du `docker ps` för att visa behållarna
+1. Om du vill logga in i behållaren skriver du &quot;`docker exec -it <container> /bin/sh`&quot;, där `<container>` är avsändarens behållar-ID från föregående steg
 1. Navigera till cacheroten under `/mnt/var/www/html`
 1. Loggarna är under `/etc/httpd/logs`
 1. Inspect loggarna: De kan nås under mappen XYZ, där följande loggar kan visas:
@@ -578,7 +578,7 @@ Beroende på trafiken och mängden loggsatser som skrivits av Debug kan detta re
 * Klar med omdöme och endast när det är absolut nödvändigt
 * Återställs till rätt nivå och återdriftsätts så snart som möjligt
 
-## Splunk-loggar {#splunk-logs}
+## Segmentloggar {#splunk-logs}
 
 Kunder som har Splunk-konton kan via kundsupportbiljetten begära att deras AEM Cloud Service-loggar vidarebefordras till lämpligt index. Loggningsinformationen motsvarar vad som är tillgängligt via hämtningen av loggen i Cloud Manager, men det kan vara praktiskt för kunderna att utnyttja de frågefunktioner som finns i Splunk-produkten.
 
@@ -591,7 +591,7 @@ I supportärendet ska man ange
 * Splunk HEC-slutpunktsadress
 * Splunk-indexvärdet
 * Splunk-porten
-* Splunk HEC-token. Mer information finns [på den här sidan](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples) .
+* Splunk HEC-token. Mer information finns på [den här sidan](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples).
 
 Egenskaperna ovan bör anges för varje relevant kombination av program- och miljötyp.  Om en kund till exempel vill ha utvecklings-, staging- och produktionsmiljöer bör de tillhandahålla tre uppsättningar information enligt nedan.
 
@@ -622,7 +622,7 @@ Program 123, Dev Envs
 * Splunk-port: 443
 * Splunk HEC-token: ABC123
 
-Det kan räcka för att samma Splunk-index ska användas för varje miljö. I så fall kan antingen `aem_env_type` fältet användas för att differentiera baserat på värdena dev, stage och prod. Om det finns flera utvecklingsmiljöer kan även `aem_env_id` fältet användas. Vissa organisationer kan välja ett separat index för produktionsmiljöns loggar om det associerade indexet begränsar åtkomsten till en reducerad uppsättning Splunk-användare.
+Det kan räcka för att samma Splunk-index ska användas för varje miljö. I så fall kan antingen fältet `aem_env_type` användas för att differentiera baserat på värdena dev, stage och prod. Om det finns flera utvecklingsmiljöer kan fältet `aem_env_id` också användas. Vissa organisationer kan välja ett separat index för produktionsmiljöns loggar om det associerade indexet begränsar åtkomsten till en reducerad uppsättning Splunk-användare.
 
 Här är ett exempel på loggpost:
 
