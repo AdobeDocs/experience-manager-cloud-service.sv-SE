@@ -1,6 +1,6 @@
 ---
-title: Använd RTF-redigeraren [!DNL Adobe Experience Manager] för att skapa innehåll.
-description: Använd [!DNL Experience Manager] RTF-redigeraren för att skapa innehåll.
+title: Använd RTF-redigeraren i [!DNL Adobe Experience Manager] för att skapa innehåll.
+description: Använd  [!DNL Experience Manager] RTF-redigeraren för att skapa innehåll.
 translation-type: tm+mt
 source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
 workflow-type: tm+mt
@@ -10,11 +10,11 @@ ht-degree: 0%
 ---
 
 
-# Använda RTF-redigeraren för att skapa innehåll {#use-rich-text-editor-to-author-content}
+# Använd RTF-redigeraren för att skapa innehåll {#use-rich-text-editor-to-author-content}
 
-RTE (Rich Text Editor) är en grundläggande byggsten för att lägga till textinnehåll [!DNL Adobe Experience Manager]. Många andra komponenter som tillåter redigering är också baserade på RTE. Utvecklare i Experience Manager kan anpassa RTE och administratörer konfigurerar RTE för författare.
+RTE (Rich Text Editor) är ett grundläggande byggblock för att lägga till textinnehåll i [!DNL Adobe Experience Manager]. Många andra komponenter som tillåter redigering är också baserade på RTE. Utvecklare i Experience Manager kan anpassa RTE och administratörer konfigurerar RTE för författare.
 
-## In-place-redigering {#in-place-editing}
+## Redigering på plats {#in-place-editing}
 
 Om du markerar en textbaserad komponent med ett enda klick visas [komponentens verktygsfält](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar).
 
@@ -34,11 +34,11 @@ Verktygsfältet innehåller vanligtvis följande alternativ:
 * **Stäng**: Sluta redigera.
 * **Spara**: Spara ändringar.
 
-## Redigering i helskärmsläge {#full-screen-editing}
+## Helskärmsredigering {#full-screen-editing}
 
-För textbaserade komponenter klickar du på fullskärmsläget ![RTE-helskärmsknappen](/help/sites-cloud/authoring/assets/editing-full-screen.png) i [verktygsfältet](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) för att öppna RTF-redigeraren och döljer resten av sidinnehållet.
+För textbaserade komponenter klickar du på helskärmsläget ![RTE-helskärmsknappen](/help/sites-cloud/authoring/assets/editing-full-screen.png) i [verktygsfältet](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) för att öppna RTF-redigeraren och dölja resten av sidinnehållet.
 
-I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Vilka alternativ som är tillgängliga beror [på konfigurationen](/help/implementing/developing/extending/rich-text-editor.md).
+I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Tillgängligheten för alternativ [beror på konfigurationen](/help/implementing/developing/extending/rich-text-editor.md).
 
 ![RTE i helskärmsläge](/help/sites-cloud/authoring/assets/rte-full-screen.png)
 
