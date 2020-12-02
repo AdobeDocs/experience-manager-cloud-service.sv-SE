@@ -12,11 +12,11 @@ ht-degree: 10%
 
 # Projekt {#projects}
 
-Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
+Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektfiler.](#project-tiles)
 
 >[!CAUTION]
 >
->För användare i projekt som vill se andra användare/grupper när de använder projektfunktioner som att skapa projekt, skapa uppgifter/arbetsflöden, se och hantera teamet, måste dessa användare ha läsåtkomst på `/home/users` och `/home/groups`. Det enklaste sättet att implementera detta är att ge **projekt-användare** -gruppen läsåtkomst till `/home/users` och `/home/groups`.
+>För användare i projekt som vill se andra användare/grupper när de använder projektfunktioner som att skapa projekt, skapa uppgifter/arbetsflöden, se och hantera team, måste dessa användare ha läsåtkomst på `/home/users` och `/home/groups`. Det enklaste sättet att implementera detta är att ge gruppen **projects-users** läsåtkomst till `/home/users` och `/home/groups`.
 
 Som användare kan du göra följande:
 
@@ -38,12 +38,12 @@ Projektkonsolen är den plats där du får åtkomst till och hanterar dina proje
 ![Projects-konsolen](/help/sites-cloud/authoring/assets/projects-console.png)
 
 * Välj **Tidslinje** och sedan ett projekt för att visa tidslinjen.
-* Klicka/tryck på **Välj** för att öppna markeringsläget.
+* Klicka/tryck på **Välj** för att gå till markeringsläget.
 * Klicka på **Skapa** för att lägga till projekt.
-* **Med Växla aktiva projekt** kan du växla mellan alla projekt och endast de som är aktiva.
-* **Med Visa statistikvy** kan du visa projektstatistik för slutförda uppgifter.
+* **Växla mellan aktiva** projekt och endast aktiva projekt.
+* **Visa** statistikvyer - visa projektstatistik för slutförda uppgifter.
 
-## Projektpaneler {#project-tiles}
+## Projektrutor {#project-tiles}
 
 Med Projekt kan du koppla olika typer av information till dina projekt. Dessa kallas **plattor**. Var och en av plattorna och vilken typ av information de innehåller beskrivs i detta avsnitt.
 
@@ -62,7 +62,7 @@ Du kan associera följande rutor med ditt projekt. Var och en av dem beskrivs i 
 
 ### Assets {#assets}
 
-I **resurspanelen** kan du samla alla resurser som du använder för ett visst projekt.
+I rutan **Resurser** kan du samla alla resurser som du använder för ett visst projekt.
 
 ![Resurspanel](/help/sites-cloud/authoring/assets/projects-assets-tile.png)
 
@@ -78,9 +78,9 @@ Precis som resurser kan du lägga till [resurssamlingar](/help/assets/manage-col
 
 Lägg till en samling genom att klicka på **Lägg till samling** och välja önskad samling i listan.
 
-### Erfarenheter {#experiences}
+### Upplevelser {#experiences}
 
-I **panelen Erfarenheter** kan du lägga till en mobilapp, en webbplats eller en publikation i projektet.
+Med **Experience**-panelen kan du lägga till en mobilapp, en webbplats eller en publikation i projektet.
 
 ![Erfarenheter](/help/sites-cloud/authoring/assets/project-experiences.png)
 
@@ -88,7 +88,7 @@ Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapp eller pub
 
 ![Lägg till en upplevelse](/help/sites-cloud/authoring/assets/projects-add-experience.png)
 
-Välj sökväg för miniatyrbilderna och ändra miniatyrbilden för upplevelsen om det är tillämpligt. Erfarenheter grupperas tillsammans i **panelen Erfarenheter** .
+Välj sökväg för miniatyrbilderna och ändra miniatyrbilden för upplevelsen om det är tillämpligt. Erfarenheter grupperas tillsammans i **Experience**-panelen.
 
 ### Länkar {#links}
 
@@ -132,23 +132,23 @@ Du kan lägga till och ta bort teammedlemmar från teamet. Dessutom kan du redig
 
 ### Arbetsflöden {#workflows}
 
-Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Om något arbetsflöde körs visas deras status på panelen **Arbetsflöden** i Projekt.
+Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Om några arbetsflöden körs visas deras status i rutan **Arbetsflöden** i Projekt.
 
 ![Arbetsflöden](/help/sites-cloud/authoring/assets/project-workflows.png)
 
 Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Beroende på vilket projekt du väljer finns olika arbetsflöden tillgängliga.
 
-Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-cloud/authoring/projects/workflows.md)
+Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-cloud/authoring/projects/workflows.md).
 
 ### Launches {#launches}
 
-I rutan Launches (Starta) visas alla starter som har begärts i ett arbetsflöde för att starta en [begäran.](/help/sites-cloud/authoring/projects/workflows.md)
+I rutan Launches (Starta) visas alla starter som har begärts med ett [begärandestartarbetsflöde.](/help/sites-cloud/authoring/projects/workflows.md)
 
 ![Launches](/help/sites-cloud/authoring/assets/project-launches.png)
 
 ### Uppgifter {#tasks}
 
-Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusive arbetsflöden. Uppgifter beskrivs i detalj i [Arbeta med uppgifter](/help/sites-cloud/authoring/projects/tasks.md).
+Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusive arbetsflöden. Uppgifter beskrivs mer ingående i [Arbeta med uppgifter](/help/sites-cloud/authoring/projects/tasks.md).
 
 ![Uppgifter](/help/sites-cloud/authoring/assets/projects-tasks.png)
 
@@ -175,7 +175,7 @@ Alla projekt har stöd för följande standardroller så att du kan administrera
 |---|---|---|---|
 | Observer | En användare i den här rollen kan visa projektinformation, inklusive projektstatus. | Skrivskyddade behörigheter i ett projekt | `workflow-users` grupp |
 | Redigerare | En användare med den här rollen kan överföra och redigera innehållet i ett projekt. | Läs- och skrivåtkomst för ett projekt, tillhörande metadata och tillhörande resurser. behörighet att ladda upp en tagningslista, fotografera samt granska och godkänna mediefiler, skrivtillstånd för /etc/commerce, ändra behörighet för ett specifikt projekt | grupp för arbetsflöden-användare |
-| Ägare | En användare med den här rollen kan initiera ett projekt. En ägare kan skapa ett projekt, initiera arbete i ett projekt och även flytta godkända resurser till produktionsmappen. Även om alla andra uppgifter i projektet kan visas och utföras av ägaren. | Skrivbehörighet för `/etc/commerce` | `dam-users` grupp (för att kunna skapa ett projekt) projekt-administratörsgrupp (för att kunna flytta resurser) |
+| Ägare | En användare med den här rollen kan initiera ett projekt. En ägare kan skapa ett projekt, initiera arbete i ett projekt och även flytta godkända resurser till produktionsmappen. Även om alla andra uppgifter i projektet kan visas och utföras av ägaren. | Skriv behörighet på `/etc/commerce` | `dam-users` grupp (för att kunna skapa ett projekt) projekt-administratörsgrupp (för att kunna flytta resurser) |
 
 >[!NOTE]
 >
