@@ -84,7 +84,7 @@ Scene7 släppte den första SDK:n för HTML5-visningsprogrammet hösten 2011 nä
 
 För att avgöra om dina krav på visningsprogram kan uppfyllas idag med HTML5-visningsprogramplattformen, se följande dokumentation:
 
-[https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#About_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#About_HTML5_Viewers) (för visningsfunktioner och anpassningsfunktioner som är färdiga)
+[https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#About_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#About_HTML5_Viewers) (för visningsfunktioner och anpassningsfunktioner som är färdiga att användas)
 
 [https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html](https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html) (för att komma åt SDK API-dokumentationen)
 
@@ -123,4 +123,4 @@ Om du ser den inzoomade bilden genom att hålla musen över huvudbilden eller dr
 
 **Vem kontaktar jag för mer information?**
 
-Om dessa frågor och svar inte besvarar alla dina frågor, [använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) eller kontakta din kontoansvarige på Adobe.
+Om dessa frågor och svar inte besvarar alla dina frågor kan du [använda Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) eller kontakta din kontoansvarige på Adobe.
