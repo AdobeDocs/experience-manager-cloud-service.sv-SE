@@ -22,7 +22,7 @@ Vanliga integreringsmönster
 
 AEM är en banbrytande lösning för hantering av webbupplevelser och erbjuder många potentiella integrationsområden. Vanliga integreringsmönster:
 
-* Hämta data från ett externt system till AEM. Du kan till exempel exportera kontaktinformation från ett CRM-system så att den blir tillgänglig för en större publik på en AEM webbplats.  Vid implementeringar ska Slings [schemalagda jobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#scheduled-jobs)användas, vilket garanterar att jobbet körs även om behållarna går ner. Koden bör utformas så att den antar att jobbet kan utlösas mer än en gång.
+* Hämta data från ett externt system till AEM. Du kan till exempel exportera kontaktinformation från ett CRM-system så att den blir tillgänglig för en större publik på en AEM webbplats.  Vid implementeringar ska Sling-jobb [schemalagda jobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#scheduled-jobs) användas, vilket garanterar att jobbet körs även om behållarna går ner. Koden bör utformas så att den antar att jobbet kan utlösas mer än en gång.
 * Exportera data från AEM till ett externt system. Exempel: prenumerationsinställningar för nyhetsbrev som skickas till en CRM på en webbplats som drivs AEM.
 * Hämtar resurser från AEM. Ett externt CMS-system (Content Management System) som refererar till en resurs som lagras i AEM Assets. Eller som ett annat exempel, ett PIM-system som länkar till en bild i AEM Assets.
 * Lagra resurser i den AEM infrastrukturen. Ett system för hantering av marknadsföringsresurser (MRM) som lagrar en godkänd resurs i AEM Assets.
@@ -36,9 +36,9 @@ AEM är en banbrytande lösning för hantering av webbupplevelser och erbjuder m
 Användbar dokumentation
 --------------------
 
-Experience Manager som Cloud Service- [dokumentation](../overview/introduction.md) ger värdefulla insikter i AEM. Nedan finns några specifika tekniska ämnen och referenser som du kan använda när du implementerar en AEM-anslutning:
+Experience Manager som Cloud Service [dokumentation](../overview/introduction.md) ger värdefulla insikter i utvecklingen av AEM. Nedan finns några specifika tekniska ämnen och referenser som du kan använda när du implementerar en AEM-anslutning:
 
-* Adobe Consulting Services (ACS) [AEM Samples](http://adobe-consulting-services.github.io/acs-aem-samples/) for well-commented code AEM developers
+* Adobe Consulting Services (ACS) [AEM Samples](http://adobe-consulting-services.github.io/acs-aem-samples/) för kommenterad kod som hjälper AEM att utbilda utvecklare
 * De olika dokumentationslänkarna i avsnittet Vanliga integreringsmönster i den här artikeln
 
 Community-resurser
@@ -46,7 +46,7 @@ Community-resurser
 
 Förutom den statiska dokumentationen ovan erbjuder Adobe och AEM resurser för att få ut en kontakt på marknaden:
 
-* Adobe Community&#39;s [AEM Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) är en aktiv webbplats där era kollegor ställer och svarar på frågor
+* Adobe Community&#39;s [AEM Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) är en aktiv webbplats där dina kollegor ställer och svarar på frågor
 * Ytterligare tekniska resurser för Adobe finns tillgängliga på vissa partnernivåer. Läs mer om [Adobe Exchange Program](https://partners.adobe.com/exchangeprogram/experiencecloud).
 * Om er organisation vill ha hjälp med implementeringen kan ni överväga Adobes [Professional Services](http://www.adobe.com/se/marketing-cloud/service-support/professional-consulting-training.html)-team eller visa en lista över Adobes partners över hela världen i [Solution Partner Finder](https://solutionpartners.adobe.com/home/partnerFinder.html)
 
@@ -58,31 +58,31 @@ För att stödja rullande driftsättningar har AEM som ett Cloud Service-paket, 
 * `/apps`
 * `/content` and `/conf`
 
-Kopplingarna bör följa dessa riktlinjer för förpackningar, som beskrivs i [den här artikeln](/help/implementing/developing/introduction/aem-project-content-package-structure.md). Befintliga kopplingar bör även omfaktoriseras för att anpassas.
+Kopplingar bör följa dessa paketeringsriktlinjer, som beskrivs i [den här artikeln](/help/implementing/developing/introduction/aem-project-content-package-structure.md). Befintliga kopplingar bör även omfaktoriseras för att anpassas.
 
-Dessutom bör bara Adobe skriva kod i `/libs`och skriva till kunder och partners `/apps`.
+Dessutom bör endast Adobe skriva kod i `/libs`, där kunder och partners skriver till `/apps`.
 
-Befintliga anslutningar kan också behöva omarbetas för att kunna flytta en konfiguration som tidigare har placerats `/etc` i andra mappar på den översta nivån, till exempel `/conf`. Detta beskrivs i [AEM](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/repository-restructuring.html).
+Befintliga anslutningar kan också behöva omarbetas för att flytta en konfiguration som en gång har placerats `/etc` till andra mappar på den översta nivån, till exempel `/conf`. Detta beskrivs i [AEM dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/repository-restructuring.html).
 
 Vi rekommenderar att större delen av kopplingskoden placeras under `/apps/connectors/<vendor>` för att främja en ren databasstruktur för kunder som har flera kopplingar.
 
 Konfigurationer av Cloud Services
 -----------------------------
 
-En aspekt av anslutningsimplementeringen är att koden som stöder konfigurationen av kopplingen är. Den här koden gör att ett kort med kopplingens namn visas under Verktyg > Åtgärder > Cloud Services. När användaren klickar på den öppnas en [konfigurationsläsare](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) där kunden väljer den överordnade mappen som ska innehålla kopplingskonfigurationen. Kopplingens kod ska resultera i ett formulär med alla egenskaper som måste konfigureras, vilket i slutänden lagrar värdena i en konfigurationsmapp under `/conf`. Den här mappen kan senare väljas på fliken Webbplatsegenskaper eller på fliken Resursegenskaper.
+En aspekt av anslutningsimplementeringen är att koden som stöder konfigurationen av kopplingen är. Den här koden gör att ett kort med kopplingens namn visas under Verktyg > Åtgärder > Cloud Services. När du klickar på det här alternativet visas en [konfigurationsläsare](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) där kunden väljer den överordnade mappen som ska innehålla kopplingskonfigurationen. Kopplingskoden ska resultera i ett formulär med alla egenskaper som måste konfigureras, och slutligen lagra värdena i en konfigurationsmapp under `/conf`. Den här mappen kan senare väljas på fliken Webbplatsegenskaper eller på fliken Resursegenskaper.
 
 
 Kontextmedvetna konfigurationer
 -----------------------------
 
-[Med Context-Aware Configurations](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) kan du lagerkonfigurera olika mappar, inklusive `/libs`, `/apps``/conf` och undermappar under `/conf`. Det stöder arv så att kunden kan konfigurera den globala konfigurationen samtidigt som specifika ändringar görs för varje mikroplats. Eftersom den här funktionen kan användas för konfigurationer av Cloud Services bör kopplingskoden referera till konfigurationen med hjälp av det kontextmedvetna konfigurations-API:t i stället för att referera till en specifik konfigurationsnod.
+[Kontextmedvetna ](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) konfigurationergör att du kan skikta konfigurationen i olika mappar, inklusive  `/libs`,  `/apps`och undermappar under  `/conf`   `/conf`. Det stöder arv så att kunden kan konfigurera den globala konfigurationen samtidigt som specifika ändringar görs för varje mikroplats. Eftersom den här funktionen kan användas för konfigurationer av Cloud Services bör kopplingskoden referera till konfigurationen med hjälp av det kontextmedvetna konfigurations-API:t i stället för att referera till en specifik konfigurationsnod.
 
 Om ändrade konfigurationer används i Connector ska du skapa Connector för att hantera eventuella framtida uppdateringar av standardkonfigurationer som tillhandahålls av Connector med eventuella kundkonfigurationer. Kom ihåg att om du ändrar anpassat (som det ändrats av kunden) innehåll eller konfiguration utan kundvarning och samtycke kan det hända att det inte fungerar (eller att det inte fungerar som det ska) med Connector-funktionen.
 
 Metodtips för kodning
 ----------------------
 
-Eftersom AEM som Cloud Service är en molnbaserad lösning finns det vissa riktlinjer som kan påverka en anslutares kodstrategier. Mer information finns i [AEM som riktlinjer](/help/implementing/developing/introduction/development-guidelines.md) för Cloud Service-utveckling.
+Eftersom AEM som Cloud Service är en molnbaserad lösning finns det vissa riktlinjer som kan påverka en anslutares kodstrategier. Mer information finns i [AEM som riktlinjer för Cloud Service](/help/implementing/developing/introduction/development-guidelines.md).
 
 Testa AEM Connector
 -------------------------
