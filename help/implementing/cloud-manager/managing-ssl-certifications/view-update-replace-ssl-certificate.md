@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Visa Uppdatera och ersätta ett SSL-certifikat  {#view-update-replace-ssl-certificate}
+# Visar uppdatering och ersättning av ett SSL-certifikat {#view-update-replace-ssl-certificate}
 
 ## Visa och uppdatera ett SSL-certifikat {#view-update}
 
