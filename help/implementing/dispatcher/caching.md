@@ -13,16 +13,16 @@ ht-degree: 1%
 # Introduktion {#intro}
 
 Trafiken passerar genom CDN till ett webbserverlager i Apache, som har stöd för moduler som dispatchern. För att öka prestandan används dispatchern främst som ett cacheminne för att begränsa bearbetningen av publiceringsnoderna.
-Regler kan tillämpas på dispatcherns konfiguration för att ändra standardinställningarna för cacheförfallotid, vilket resulterar i cachelagring vid CDN. Observera att dispatchern också respekterar de resulterande rubrikerna för cacheförfallodatum om `enableTTL` är aktiverat i dispatcherns konfiguration, vilket innebär att det uppdaterar specifikt innehåll även utanför det innehåll som publiceras om.
+Regler kan tillämpas på dispatcherns konfiguration för att ändra standardinställningarna för cacheförfallotid, vilket resulterar i cachelagring vid CDN. Observera att dispatchern också respekterar cacheförfallorubrikerna om `enableTTL` är aktiverat i dispatcherns konfiguration, vilket innebär att det uppdaterar specifikt innehåll även utanför det innehåll som publiceras om.
 
 Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur cachning fungerar på webbläsarnivå med avseende på klientbibliotek.
 
-## Cachelagring {#caching}
+## Cachelagra {#caching}
 
 ### HTML/text {#html-text}
 
 * som standard, cachelagras av webbläsaren i fem minuter, baserat på det cachekontrollhuvud som skickas av apache-lagret. CDN respekterar också detta värde.
-* kan åsidosättas för allt HTML-/textinnehåll genom att definiera variabeln i `EXPIRATION_TIME` `global.vars` med AEM som ett SDK Dispatcher-verktyg för Cloud Service.
+* kan åsidosättas för allt HTML-/textinnehåll genom att definiera variabeln `EXPIRATION_TIME` i `global.vars` med AEM som SDK Dispatcher-verktyg för Cloud Service.
 * kan åsidosättas på en mer detaljerad nivå med följande direktiv för apache mod_headers:
 
    ```
@@ -48,7 +48,7 @@ Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur
    { /glob "*" /type "allow" }
    ```
 
-* Om du vill förhindra att visst innehåll cachelagras anger du rubriken Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll under en katalog med namnet **myfolder** cachelagras:
+* Om du vill förhindra att specifikt innehåll cachelagras anger du rubriken Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll i en katalog med namnet **myfolder** cachelagras:
 
    ```
       <LocationMatch "/myfolder/.*\.(html)$">.  // replace with the right regex
@@ -62,12 +62,12 @@ Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur
 ### Klientbibliotek (js, css) {#client-side-libraries}
 
 * genom att använda AEM biblioteksramverk på klientsidan, genereras JavaScript- och CSS-kod på ett sådant sätt att webbläsare kan cachelagra den i oändlighet, eftersom alla ändringar manifesteras som nya filer med en unik sökväg.  Med andra ord kommer HTML som refererar till klientbiblioteken att produceras efter behov så att kunderna kan uppleva nytt innehåll när det publiceras. Cachekontrollen är inställd på&quot;oföränderlig&quot; eller 30 dagar för äldre webbläsare som inte respekterar det oföränderliga&quot; värdet.
-* Mer information finns i avsnittet Bibliotek på [klientsidan och versionskonsekvens](#content-consistency) .
+* Mer information finns i avsnittet [Bibliotek på klientsidan och versionskonsekvens](#content-consistency).
 
-### Bilder och allt innehåll som är tillräckligt stort för att lagras i blobben {#images}
+### Bilder och allt innehåll som är tillräckligt stort lagras i bloblagring {#images}
 
 * som standard, inte cachelagrad
-* kan ställas in på en finare kornig nivå genom följande `mod_headers` direktiv:
+* kan ställas in på en finare kornig nivå med följande direktiv för apache `mod_headers`:
 
    ```
       <LocationMatch "^\.*.(jpeg|jpg)$">
@@ -93,7 +93,7 @@ Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur
 ### Andra innehållsfiltyper i nodarkivet {#other-content}
 
 * ingen standardcachelagring
-* standard kan inte anges med den `EXPIRATION_TIME` variabel som används för HTML-/textfiltyper
+* standard kan inte anges med variabeln `EXPIRATION_TIME` som används för HTML-/textfiltyper
 * cacheminnets förfallotid kan anges med samma LocationMatch-strategi som beskrivs i avsnittet html/text genom att ange lämplig regex
 
 ## Invalidering av Dispatcher-cache {#disp}
@@ -104,19 +104,19 @@ I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i ställe
 
 Precis som i tidigare versioner av AEM rensas innehållet från dispatcherns cache när du publicerar eller avpublicerar sidor. Om ett cachningsproblem misstänks bör kunderna publicera om sidorna i fråga.
 
-När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatchercachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilnivån](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level)).
+När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatcher-cachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilnivå](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level).
 
-### Cacheogiltigförklaring av explicit dispatcher {#explicit-invalidation}
+### Cacheminnet för explicit dispatcher är ogiltigt {#explicit-invalidation}
 
 I allmänhet behöver du inte göra innehåll i dispatchern ogiltigt manuellt, men det är möjligt om det behövs, vilket beskrivs nedan.
 
 Före AEM som Cloud Service fanns det två sätt att ogiltigförklara dispatchercachen.
 
 1. Anropa replikeringsagenten och ange agenten för rensning av publiceringsutgivaren
-2. Anropa `invalidate.cache` API:t direkt (till exempel `POST /dispatcher/invalidate.cache`)
+2. Anropa API:t `invalidate.cache` direkt (till exempel `POST /dispatcher/invalidate.cache`)
 
-Avsändarens `invalidate.cache` API-metod stöds inte längre eftersom den bara adresserar en viss dispatchernod. AEM som en Cloud Service arbetar på tjänstenivå, inte på den enskilda nodnivån, och därför gäller inte invalideringsinstruktionerna på sidan [Invalidera cachelagrade sidor från AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html) längre för AEM som en Cloud Service.
-Istället bör agenten för tömning av replikering användas. Detta kan du göra med hjälp av replikerings-API:t. Dokumentationen för replikerings-API finns [här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/Replicator.html) . Ett exempel på hur du tömmer cachen finns på exempelsidan [för](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) API. Exemplet `CustomStep` innehållerexempel på hur du skickar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter. Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
+Avsändarens `invalidate.cache` API-metod stöds inte längre eftersom den bara adresserar en viss dispatchernod. AEM som en Cloud Service fungerar på tjänstenivå, inte på den enskilda nodnivån, och därför gäller inte invalideringsinstruktionerna i [Ovalidering av cachelagrade sidor från AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html)-sidan längre för AEM som en Cloud Service.
+Istället bör agenten för tömning av replikering användas. Detta kan du göra med hjälp av replikerings-API:t. Dokumentationen för replikerings-API finns [här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/Replicator.html) och om du vill se ett exempel på tömning av cachen kan du gå till exempelsidan för [API](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) specifikt `CustomStep`-exemplet som utfärdar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter. Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
 
 Bilden nedan visar detta.
 
@@ -124,11 +124,11 @@ Bilden nedan visar detta.
 
 Om det finns oro för att dispatchercachen inte rensas kontaktar du [kundsupport](https://helpx.adobe.com/support.ec.html) som kan tömma dispatchercachen om det behövs.
 
-CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas. Om du misstänker ett problem [kontaktar du kundsupport](https://helpx.adobe.com/support.ec.html) som kan tömma ett CDN-cache som hanteras av Adobe vid behov.
+CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas. Om ett problem misstänks ska du [kontakta kundsupport](https://helpx.adobe.com/support.ec.html) som kan tömma ett CDN-cache som hanteras av Adobe vid behov.
 
-## Bibliotek på klientsidan och versionskonsekvens {#content-consistency}
+## Klientbibliotek och versionskonsekvens {#content-consistency}
 
-Sidorna består av HTML, JavaScript, CSS och bilder. Kunder uppmuntras att använda ramverket [för](/help/implementing/developing/introduction/clientlibs.md) klientbibliotek (clientlibs) för att importera JavaScript- och CSS-resurser till HTML-sidor, med hänsyn tagen till beroenden mellan JS-bibliotek.
+Sidorna består av HTML, JavaScript, CSS och bilder. Kunder uppmuntras att använda [Client-Side Libraries (clientlibs)-ramverket](/help/implementing/developing/introduction/clientlibs.md) för att importera JavaScript- och CSS-resurser till HTML-sidor, med hänsyn tagen till beroenden mellan JS-bibliotek.
 
 Med clientlibs Framework får du automatisk versionshantering, vilket innebär att utvecklare kan checka in ändringar i JS-bibliotek i källkontrollen och att den senaste versionen blir tillgänglig när en kund publicerar sin version. Utan detta skulle utvecklare behöva ändra HTML manuellt med referenser till den nya versionen av biblioteket, vilket är särskilt betungande om många HTML-mallar delar samma bibliotek.
 
@@ -136,7 +136,7 @@ När de nya versionerna av biblioteken släpps i produktion uppdateras de refere
 
 Mekanismen för det här är en serialiserad hash-konvertering som läggs till i klientbibliotekslänken, vilket garanterar en unik versionshanterad URL-adress som webbläsaren kan använda för att cachelagra CSS/JS. Den serialiserade hashen uppdateras bara när innehållet i klientbiblioteket ändras. Detta innebär att om det inte sker några ändringar (dvs. inga ändringar av klientbibliotekets underliggande css/js) även med en ny distribution, förblir referensen densamma, vilket säkerställer färre avbrott i webbläsarens cache.
 
-### Aktivera Longcache-versioner av klientbibliotek - AEM som en Cloud Service SDK QuickStart {#enabling-longcache}
+### Aktivera Longcache-versioner av klientbibliotek - AEM som en Cloud Service-SDK QuickStart {#enabling-longcache}
 
 Klientlib som standard finns på en HTML-sida ser ut som i följande exempel:
 
