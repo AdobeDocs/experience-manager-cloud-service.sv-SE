@@ -25,7 +25,7 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 |  | `Esc` | Flytta upp en lista med sidor på samma nivå |
 | Konsoler | `?` | Hjälp för kortkommandon |
 |  | `/` | Anropa [sökning](/help/sites-cloud/authoring/getting-started/search.md) |
-|  | `Alt+`&lt;`Number`> | Växla vilket [alternativ för](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) järnvägsväljare som ska visas |
+|  | `Alt+`&lt;`Number`> | Växla vilken [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) som ska visas |
 |  | ` | Göm rälsstöd |
 |  | `e` | Redigera |
 |  | `p` | Egenskaper |
@@ -35,7 +35,7 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 |  | `Backspace` | Ta bort |
 | Egenskapssidor | `Ctrl+s` | Spara |
 
-Tangentkombinationerna visas med Windows- [modifieringstangenterna](#os-specific-modifier-keys).
+Tangentkombinationerna visas med Windows [modifieringstangenterna](#os-specific-modifier-keys).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 
@@ -62,7 +62,7 @@ Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 >
 >AEM kortkommandon kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
 >
->Adobe rekommenderar att du [inaktiverar AEM kortkommandon](#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
+>Adobe rekommenderar [att du inaktiverar AEM kortkommandon](#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
@@ -73,7 +73,7 @@ För användare som inte använder kortkommandon eller har vissa tillgänglighet
 Du kan inaktivera kortkommandon på två platser:
 
 * [Mina inställningar](/help/sites-cloud/authoring/getting-started/account-environment.md#my-preferences)
-* Menyn [Hjälp](/help/sites-cloud/authoring/getting-started/basic-handling.md#accessing-help)
+* [hjälpmenyn](/help/sites-cloud/authoring/getting-started/basic-handling.md#accessing-help)
 
 >[!NOTE]
 >
@@ -81,4 +81,4 @@ Du kan inaktivera kortkommandon på två platser:
 
 ## Kortkommandon för sidredigeraren {#keyboard-shortcuts-for-the-page-editor}
 
-Olika kortkommandon finns i hela AEM. En del gäller användning av konsoler, andra för [sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
