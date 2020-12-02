@@ -15,11 +15,11 @@ ht-degree: 15%
 Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. Du kan till exempel få meddelanden om:
 
 * Uppgifter:
-   * Dessa kan också skapas vid olika punkter i AEM, t.ex. under **Projekt**.
+   * Dessa kan också skapas vid olika punkter i AEM, till exempel under **Projekt**.
    * Dessa kan ha sitt ursprung i arbetsflödessteget **Skapa uppgift** eller **Skapa projektuppgift**.
 * Arbetsflöden:
    * Arbetsobjekt som representerar åtgärder som du behöver utföra på sidinnehåll
-      * Detta är produkten av arbetsflödets **deltagarsteg** .
+      * Detta är produkten av arbetsflödet **Deltagare** steg.
    * Misslyckade objekt, så att administratörer kan försöka igen
 
 Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtgärder.
@@ -41,9 +41,9 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 >[!NOTE]
 >
->Vissa åtgärder visas även i [kortvyn för den aktuella resursen](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view).
+>Vissa åtgärder visas också i [kortvyn för den aktuella resursen](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view).
 
-## Öppna Inkorgen {#opening-the-inbox}
+## Öppnar inkorgen {#opening-the-inbox}
 
 Så här öppnar du AEM inkorg:
 
@@ -52,7 +52,7 @@ Så här öppnar du AEM inkorg:
 1. Välj **Visa alla**. **AEM -inkorgen** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
-   För båda vyerna kan du även definiera [visningsinställningar](#inbox-view-settings). Vilka alternativ som är tillgängliga beror på den aktuella vyn.
+   För båda vyerna kan du även definiera [Visa inställningar](#inbox-view-settings). Vilka alternativ som är tillgängliga beror på den aktuella vyn.
 
    ![Inställningar för Inkorgsvy](/help/sites-cloud/authoring/assets/inbox-view-settings.png)
 
@@ -74,7 +74,7 @@ I den här vyn visas objekt efter deras placering i kalendern:
 
 Du kan:
 
-* Välj en specifik vy: **Tidslinje**, **kolumn**, **lista**
+* Välj en specifik vy: **Tidslinje**, **Kolumn**, **Lista**
 * Ange de uppgifter som ska visas enligt **Schema**: **Alla**, **Planerade**, **Pågående**, **Förfaller snart**, **Förfallna**
 * Detaljerad information om ett objekt
 * Välj ett datumintervall som vyn ska fokuseras i:
@@ -87,7 +87,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Kalendervy**
 
-   I **kalendervyn** kan du konfigurera:
+   För **Kalendervy** kan du konfigurera:
 
    * **Gruppera efter**
    * **Schema** eller **Ingen**
@@ -97,7 +97,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Listvy**
 
-   I **listvyn** kan du konfigurera sorteringsmekanismen:
+   För **listvyn** kan du konfigurera sorteringsmekanismen:
 
    * **Sortera efter**
    * **Sorteringsordning**
@@ -120,14 +120,14 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    Åtgärderna är lämpliga för objektet och omfattar:
 
-   * **Fullständig** åtgärd
-   * **Delegera** ett objekt
-   * **Öppna** ett objekt, beroende på objekttyp kan den här åtgärden:
+   * **** Slutförandeåtgärd
+   * **Delegerande** objekt
+   * **** Öppna ett objekt, beroende på objekttypen, kan den här åtgärden:
 
       * Visa objektegenskaper
       * Öppna en lämplig kontrollpanel eller guide för ytterligare åtgärder
       * Öppna relaterad dokumentation
-   * **Gå tillbaka** till föregående steg
+   * **Gå** tillbaka till ett föregående steg
    * Visa nyttolasten för ett arbetsflöde
    * Skapa ett projekt från artikeln
 
@@ -135,7 +135,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    >
    >Mer information finns i:
    >
-   >* Arbetsflödesobjekt - [delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
+   >* Arbetsflödesobjekt - [Delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
 
 
 2. Beroende på vilket objekt som är markerat startas en åtgärd, till exempel:
@@ -144,7 +144,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * En åtgärdsguide startas
    * En dokumentationssida öppnas
 
-   En dialogruta öppnas t.ex. av **Delegera** :
+   **Delegera** öppnar till exempel en dialogruta:
 
    ![Delegera inkorgsaktivitet](/help/sites-cloud/authoring/assets/inbox-assign-task.png)
 
@@ -155,7 +155,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * Välj bakåtpilen för att återgå till inkorgen, t.ex. om en åtgärdsguide eller dokumentationssida har öppnats, kan du gå tillbaka till Inkorgen.
 
 
-## Skapa en uppgift {#creating-a-task}
+## Skapar en aktivitet {#creating-a-task}
 
 I inkorgen kan du skapa uppgifter:
 
@@ -177,7 +177,7 @@ I inkorgen kan du skapa uppgifter:
 
    * **Avancerat**
 
-      * **Namn**: Detta används för att skapa URL:en och om det är tomt baseras det på **titeln**.
+      * **Namn**: Detta används för att skapa URL:en och om det är tomt baseras det på  **titeln**.
 
    ![Inkorgen lägger till avancerade alternativ för uppgifter](/help/sites-cloud/authoring/assets/inbox-add-task-advanced.png)
 
@@ -196,7 +196,7 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-cloud/authoring/proj
    >Arbetsobjekt (från ett arbetsflöde) kan inte användas för att skapa ett projekt.
 
 1. Välj **Skapa projekt** i verktygsfältet för att öppna guiden.
-1. Select the appropriate template, then **Next**.
+1. Välj lämplig mall och **Nästa**.
 1. Ange de nödvändiga egenskaperna:
 
    * **Grundläggande**
@@ -205,21 +205,21 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-cloud/authoring/proj
       * **Beskrivning**
       * **Startdatum**
       * **Förfallodatum**
-      * **Användare** och roll
+      * **** Användarroll
    * **Avancerat**
 
       * **Namn**
    >[!NOTE]
    >
-   >Mer information finns i [Skapa ett projekt](/help/sites-cloud/authoring/projects/managing.md#creating-a-project) .
+   >Mer information finns i [Skapa ett projekt](/help/sites-cloud/authoring/projects/managing.md#creating-a-project).
 
-1. Bekräfta åtgärden genom att välja **Skapa** .
+1. Välj **Skapa** för att bekräfta åtgärden.
 
-## Filtrera objekt i AEM {#filtering-items-in-the-aem-inbox}
+## Filtrera objekt i AEM Inkorg {#filtering-items-in-the-aem-inbox}
 
 Du kan filtrera objekten i listan:
 
-1. Öppna **AEM**.
+1. Öppna **AEM Inkorg**.
 
 1. Öppna filterväljaren:
 
@@ -231,4 +231,4 @@ Du kan filtrera objekten i listan:
 
    >[!NOTE]
    >
-   >Med [visningsinställningar](#inbox-view-settings) kan du även konfigurera sorteringsordningen när du använder [listvyn](#inbox-list-view).
+   >Med [Visa inställningar](#inbox-view-settings) kan du även konfigurera sorteringsordningen när du använder [listvyn](#inbox-list-view).
