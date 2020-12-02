@@ -26,15 +26,15 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.8.0 är 6 augusti 2
    >[!NOTE]
    >Namnet på Content Audit har ändrats till Experience Audit.
 
-   Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-testing.md) .
+   Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-testing.md).
 
 * Nyligen skapade miljöer i Assets-program konfigureras nu automatiskt med Smart Content Services.
 
-* Vilolägda miljöer kan tas bort från vänteläget på sidan **Översikt** i Cloud Manager.
+* Vilolägda miljöer kan tas bort från viloläget på sidan **Översikt** i Cloud Manager.
 
 * Möjlighet att utföra Experience Checks på sidor med Google Lighthuse som bas. Som en del av molnhanterarens pipeline kan upp till 25 sidor kontrolleras och valideras mot upplevelsenyckeltal, och poängen visas i användargränssnittet för molnhanteraren.
 
-### Bug Fixes {#bug-fixes-cm}
+### Felkorrigeringar {#bug-fixes-cm}
 
 * Vissa onödiga och oönskade SonarQube-plugin-program kördes som en del av kodkvalitetskontrollen.
 
@@ -42,7 +42,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.8.0 är 6 augusti 2
 
 * I vissa fall kunde slutförda pipeline-körningar inte registreras som slutförda, vilket hindrade nya körningar av pipeline.
 
-* Körningar av rörledningar *fastnar* ibland på grund av interna kommunikationsproblem.
+* Pipeline-körningar får ibland *fastna* på grund av interna kommunikationsproblem.
 
 * När en ny organisation etablerades fick vissa användare med andra administrativa roller än systemadministratörer felaktigt åtkomst till Cloud Manager.
 
