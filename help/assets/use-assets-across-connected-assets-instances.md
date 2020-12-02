@@ -3,9 +3,9 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 79c8b5e038a58821b76da665f9342214312008e8
+source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2154'
 ht-degree: 39%
 
 ---
@@ -30,9 +30,9 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 * Användarna ingår i rätt användargrupper för varje distribution.
 * För [!DNL Adobe Experience Manager]-distributionstyper uppfylls ett av villkoren. Mer information om hur den här funktionen fungerar i [!DNL Experience Manager] 6.5 finns i [Anslutna resurser i Experience Manager 6.5-resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
 
-   |  | [!DNL Sites] som en Cloud Service | [!DNL Experience Manager] 6.5  [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5  [!DNL Sites] på plats |
+   |  | [!DNL Sites] som  [!DNL Cloud Service] | [!DNL Experience Manager] 6.5  [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5  [!DNL Sites] på plats |
    |---|---|---|---|
-   | **[!DNL Experience Manager Assets]som en Cloud Service** | Stöds | Stöds | Stöds |
+   | **[!DNL Experience Manager Assets]som[!DNL Cloud Service]** | Stöds | Stöds | Stöds |
    | **[!DNL Experience Manager]6.5  [!DNL Assets] på AMS** | Stöds | Stöds | Stöds |
    | **[!DNL Experience Manager]6.5  [!DNL Assets] på plats** | Stöds ej | Stöds ej | Stöds ej |
 
