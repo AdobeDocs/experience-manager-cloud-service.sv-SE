@@ -3,10 +3,10 @@ title: Rapporter om användning och delning
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8b1cc8af67c6d12d7e222e12ac4ff77e32ec7e0e
+source-git-commit: 3ee2e53268ea77949057ac18fcb4a8f8b1e01cb2
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 10%
+source-wordcount: '883'
+ht-degree: 7%
 
 ---
 
@@ -48,17 +48,19 @@ När en rapport skapas meddelas du av <!-- through an email (optional) and --> e
 
    ![Välj rapporttyp](assets/choose_report.png)
 
+<!-- TBD: How do enable this in CS now? Is it done using some OSGi config now?
    >[!NOTE]
    >
-   >Innan du kan generera en **[!UICONTROL Asset Downloaded]**-rapport måste du kontrollera att tjänsten för hämtning av resurser är aktiverad. Från webbkonsolen (`https://[aem_server]:[port]/system/console/configMgr`) öppnar du konfigurationen **[!UICONTROL Day CQ DAM Event Recorder]** och väljer alternativet **[!UICONTROL Asset Downloaded (DOWNLOADED)]** i Händelsetyper, om det inte redan är valt.
+   >Before you can generate an **[!UICONTROL Asset Downloaded]** report, ensure that the Asset Download service is enabled. From the web console (`https://[aem_server]:[port]/system/console/configMgr`), open the **[!UICONTROL Day CQ DAM Event Recorder]** configuration, and select the **[!UICONTROL Asset Downloaded (DOWNLOADED)]** option in Event Types if not already selected.
+-->
 
-   >[!NOTE]
-   >
-   >Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att exkludera innehållsfragment från hämtningsrapporten.
+>[!NOTE]
+>
+>Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att exkludera innehållsfragment från hämtningsrapporten.
 
-   >[!NOTE]
-   >
-   >I [!UICONTROL Download]-rapporten visas endast information om de resurser som har hämtats efter att du har valt var för sig eller som har hämtats med Snabbåtgärd. Den innehåller dock inte information om resurserna som finns i en hämtad mapp.
+>[!NOTE]
+>
+>I [!UICONTROL Download]-rapporten visas endast information om de resurser som har hämtats efter att du har valt var för sig eller som har hämtats med Snabbåtgärd. Den innehåller dock inte information om resurserna som finns i en hämtad mapp.
 
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
 
@@ -139,11 +141,18 @@ Följ de här stegen för att lägga till anpassade kolumner i de här rapporter
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 
-## Konfigurera rensningstjänsten {#configure-purging-service}
+<!-- TBD: How to configure purge now? Is it using OSGi configurations?
 
-Om du vill ta bort rapporter som du inte längre behöver konfigurerar du tjänsten DAM Report Renge från webbkonsolen så att befintliga rapporter rensas baserat på antal och ålder.
+## Configure purging service {#configure-purging-service}
 
-1. Gå till webbkonsolen (konfigurationshanteraren) från `https://[aem_server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL DAM Report Purge Service]**-konfigurationen.
-1. Ange frekvens (tidsintervall) för rensningstjänsten i fältet `scheduler.expression.name`. Du kan också konfigurera åldern och tröskelvärdet för antal rapporter.
-1. Spara ändringarna.
+To remove reports that you no longer require, configure the DAM Report Purge service from the web console to purge existing reports based on their quantity and age.
+
+1. Access the web console (configuration manager) from `https://[aem_server]:[port]/system/console/configMgr`.
+1. Open the **[!UICONTROL DAM Report Purge Service]** configuration.
+1. Specify the frequency (time interval) for the purging service in the `scheduler.expression.name` field. You can also configure the age and the quantity threshold for reports.
+1. Save the changes.
+-->
+
+## Felsökningsinformation, tips och begränsningar {#best-practices-and-limitations}
+
+* Om Diskanvändningsrapporten inte genereras och du använder [!DNL Dynamic Media] kontrollerar du att alla resurser är korrekta. Du löser problemet genom att bearbeta resurserna på nytt och sedan generera rapporten igen.
