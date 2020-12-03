@@ -2,9 +2,9 @@
 title: Bilduppsättningar
 description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media
 translation-type: tm+mt
-source-git-commit: 7a1d12a8cff03af660b936bb7d8b045532357f0d
+source-git-commit: b10ad95e0e8b87eaaf6a0a99ce82d6b317660b12
 workflow-type: tm+mt
-source-wordcount: '2002'
+source-wordcount: '2003'
 ht-degree: 18%
 
 ---
@@ -81,9 +81,9 @@ Mer information om hur du redigerar bilduppsättningar finns i [Redigera bildupp
 
 Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka dynamiska media](/help/assets/dynamic-media/troubleshoot-dm.md#images-and-sets).
 
-## Överför resurser i bilduppsättningar {#uploading-assets-in-image-sets}
+## Överför resurser för bilduppsättningar {#uploading-assets-in-image-sets}
 
-Börja med att ladda upp bilderna för dina bilduppsättningar. Eftersom användare kan zooma in på bilder i bilduppsättningsvisningsprogrammet bör du ta hänsyn till zoomning när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen för optimal zoomdetaljrikedom. Dynamic Media kan återge bilder på upp till 25 megapixlar vardera. Du kan till exempel använda en 5 000 × 5 000 megapixelbild eller någon annan storlekskombination på upp till 25 megapixlar.
+Börja med att ladda upp bildresurserna för dina bilduppsättningar. Eftersom användare kan zooma in på bilder i bilduppsättningsvisningsprogrammet bör du ta hänsyn till zoomning när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen för optimal zoomdetaljrikedom. Dynamic Media kan återge bilder på upp till 25 megapixlar vardera. Du kan till exempel använda en 5 000 × 5 000 megapixelbild eller någon annan storlekskombination på upp till 25 megapixlar.
 
 Bilduppsättningar har stöd för många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
