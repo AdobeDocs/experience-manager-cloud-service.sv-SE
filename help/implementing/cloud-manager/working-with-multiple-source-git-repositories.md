@@ -2,9 +2,9 @@
 title: Arbeta med Git-databaser med flera källor
 description: Arbeta med Git-databaser med flera källor - Cloud Services
 translation-type: tm+mt
-source-git-commit: 89429fcba3a1d4f5e5fe9c98ef235057b979ad60
+source-git-commit: e8cfe8eeec697fe74da02e178a89fc7a0e22d441
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Följ stegen nedan för att lägga till en ny (tredje) källa eller databas:
 1. Lägg till en referens till den nya katalogen i rotmappen Maven i Cloud Manager Git-databasen.
 
 
-## Tillägg A: Exempel på GitHub-åtgärd {#sample-github-action}
+## Exempel på GitHub-åtgärd {#sample-github-action}
 
 Detta är ett exempel på GitHub-åtgärd som utlöses av en push-åtgärd till huvudgrenen och sedan övergår till en underkatalog till Cloud Managers Git-databas. GitHub-åtgärderna måste innehålla två hemligheter, `MAIN_USER` och `MAIN_PASSWORD`, för att kunna ansluta och överföra till Cloud Managers Git-databas.
 
@@ -117,7 +117,7 @@ Så som visas ovan är det mycket flexibelt att använda en GitHub-åtgärd. All
 >[!NOTE]
 >Skriptet ovan använder `git add` för att uppdatera databasen, vilket förutsätter att borttagningar inkluderas - beroende på standardkonfigurationen för Git måste detta ersättas med `git add --all`.
 
-## Tillägg B: Exempel på Jenkins-jobb {#sample-jenkins-job}
+## Exempel på Jenkins-jobb {#sample-jenkins-job}
 
 Det här är ett exempelskript som kan användas i ett Jenkins-jobb eller liknande. Den aktiveras av en ändring i en Git-databas. Jenkins-jobbet checkar ut det senaste läget för projektet eller grenen och utlöser sedan det här skriptet.
 
