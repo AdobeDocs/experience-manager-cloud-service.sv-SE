@@ -2,10 +2,10 @@
 title: Snurrande uppsättningar
 description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media
 translation-type: tm+mt
-source-git-commit: 7a1d12a8cff03af660b936bb7d8b045532357f0d
+source-git-commit: b10ad95e0e8b87eaaf6a0a99ce82d6b317660b12
 workflow-type: tm+mt
-source-wordcount: '1771'
-ht-degree: 11%
+source-wordcount: '1765'
+ht-degree: 12%
 
 ---
 
@@ -76,7 +76,7 @@ Om du behöver kan du [redigera snurruppsättningar](#editing-spin-sets). Dessut
 
 ## Överför resurser för snurpuppsättningar {#uploading-assets-for-spin-sets}
 
-Du behöver minst 8-12 tagningar av ett objekt för en endimensionell snurra och 16-24 för en tvådimensionell snurra uppsättning. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30 grader (360/12) för varje tagning.
+Du behöver minst 8-12 bilder av ett objekt för en endimensionell snurra. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30 grader (360/12) för varje tagning.
 
 Du kan överföra bilder för snurra uppsättningar på samma sätt som du [överför andra resurser i AEM Assets](/help/assets/manage-digital-assets.md).
 
