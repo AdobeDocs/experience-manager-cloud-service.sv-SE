@@ -3,9 +3,9 @@ title: Förinställningar för gruppuppsättning
 description: Lär dig hur du automatiserar skapande av bilduppsättningar och snurruppsättningar med hjälp av gruppuppsättningsförinställningar i Dynamic Media.
 contentOwner: Rick Brough
 translation-type: tm+mt
-source-git-commit: eba7216d6b70c15d7f8767358d1947e5dba1d802
+source-git-commit: b10ad95e0e8b87eaaf6a0a99ce82d6b317660b12
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3269'
 ht-degree: 0%
 
 ---
@@ -21,12 +21,12 @@ Använd **[!UICONTROL Batch Set Presets]** för att underlätta skapande och org
 
 **Bästa praxis**  - När du arbetar med gruppuppsättningsförinställningar rekommenderar Adobe följande arbetsflöde:
 
-1. Skapa en gruppuppsättningsförinställning.
-1. Skapa en ny resursmapp eller använd en befintlig resursmapp och kontrollera att den är synkroniserad till [!DNL Dynamic Media].
-1. Använd gruppuppsättningsförinställningen på resursmappen.
-1. Överför bilder till resursmappen.
-1. Skapa en bilduppsättning eller snurra.
-1. Publicera din bilduppsättning eller snurra.
+1. Skapa en gruppuppsättningsförinställning. Se [Skapa en förinställning för gruppuppsättning för en bilduppsättning eller en snurruppsättning](#creating-bsp).
+1. Skapa en ny resursmapp eller använd en befintlig resursmapp och kontrollera att den är synkroniserad till [!DNL Dynamic Media]. Se [Skapa mappar](/help/assets/manage-digital-assets.md#creating-folders).
+1. Använd gruppuppsättningsförinställningen på resursmappen. Se [Om att använda gruppuppsättningsförinställningar på mappar](#apply-bsp).
+1. Överför bilder till resursmappen. Se [Överför resurser för bilduppsättningar](/help/assets/dynamic-media/image-sets.md#uploading-assets-in-image-sets), [Överför resurser för snurruppsättningar](/help/assets/dynamic-media/spin-sets.md#uploading-assets-for-spin-sets) eller [Lägg till digitala resurser i Adobe Experience Manager](#add-assets-to-experience-manager).
+1. Skapa en bilduppsättning eller snurra. Se [Bilduppsättningar](/help/assets/dynamic-media/image-sets.md) eller [Rotationsuppsättningar](/help/assets/dynamic-media/spin-sets.md).
+1. Publicera din bilduppsättning eller snurra. Se [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 ## Skapa en gruppuppsättningsförinställning för en bilduppsättning eller en snurruppsättning {#creating-bsp}
 
