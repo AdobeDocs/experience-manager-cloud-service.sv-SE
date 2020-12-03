@@ -2,10 +2,10 @@
 title: Migrering till Experience Manager som Cloud Service
 description: Migrering till Experience Manager som Cloud Service
 translation-type: tm+mt
-source-git-commit: 3c1ff52d58f64d351507d20e4368a6aeb1bf6339
+source-git-commit: dc2d529c6bbdb4e0fd963021e40bc333b321c95c
 workflow-type: tm+mt
-source-wordcount: '2070'
-ht-degree: 8%
+source-wordcount: '2117'
+ht-degree: 7%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 8%
 # Migrering till Adobe Experience Manager som Cloud Service {#Overview}
 
 >[!CONTEXTUALHELP]
->id="aemcloud_migration-overview"
+>id="aemcloud_migration_overview"
 >title="Migrering till AEM som molntjänst"
 >abstract="Här beskrivs det rekommenderade stegvisa tillvägagångssättet för att övergå från olika Experience Manager-distributioner till Experience Manager som en Cloud Service och hjälpa befintliga kunder att leverera sammankopplade, kontinuerliga upplevelser"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/what-is-new-and-different.html?lang=en" text="Vad är nytt och annorlunda?"
@@ -101,6 +101,11 @@ Se självhjälpsresurser om hur du konfigurerar och distribuerar till AEM som en
 <br>
 
 ## Flyttar till Adobe Experience Manager som Cloud Service {#move-to-cloud}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_move_to_cloud"
+>title="Gå till Adobe Experience Manager som Cloud Service"
+>abstract="Den här enpersonsmodellen beskriver det rekommenderade stegvisa tillvägagångssättet för att övergå från olika Experience Manager-driftsättningar till Experience Manager som en Cloud Service och hjälper befintliga kunder att leverera sammankopplade, kontinuerliga upplevelser på den här moderna, specialbyggda plattformen för upplevelsehantering."
 
 **Experience Manager som Cloud Service är en skalbar, säker och flexibel teknikgrund för Experience Manager Sites and Assets som gör att marknadsförare och IT kan fokusera på att leverera slagkraftiga upplevelser i stor skala.**
 
