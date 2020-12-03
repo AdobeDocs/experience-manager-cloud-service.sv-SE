@@ -2,9 +2,9 @@
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+source-git-commit: b405e49cd883df1e2e9768bb9e4d6908afc443e2
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Att skapa innehåll är en repetitiv process. Effektiv redigering kräver att ma
 
 Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 
->[!CAUTION]
+>[!NOTE]
 >
 >Användaren måste ha behörigheten **Modify/Create/Delete** på noden `/content/versionhistory` för att kunna använda funktionen.
 >
@@ -54,10 +54,6 @@ Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som
 
 * Ljusgrön - komponent tillagd
 * Rosa - komponent borttagen
-* Blå - komponenten ändrad
-* Blå - komponenten har flyttats
-
-Observera att färgerna Ändrad och Flyttad är desamma.
 
 **HTML-ändringar**
 
@@ -94,8 +90,6 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 * När olika versioner och starter används inte dynamiska komponenter som vägbeskrivningar, menyer, produktlistor eller logotyper (komponenter som är beroende av webbplatsstrukturen för att återge sitt innehåll).
 * För versioner återskapar inte diff åtkomstkontrollprincipen och Live copy-relationen.
-* Om du ändrar något i en bild, t.ex. attributen alt, title eller src, markeras den i blått som ändrad. I vissa fall har bilden emellertid en Base64-representation av src-attributet och även om båda bilderna ser likadana ut markeras de med diff som olika på grund av de olika src-attributen.
-* Skillnaden kan inte identifiera bildrotation.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
    * Om du får problem med en skillnad kontrollerar du [tidslinjen](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
 
