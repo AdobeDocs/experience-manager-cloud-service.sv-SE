@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: 4687054b049263c109591884a0368dfa76346298
+source-git-commit: 737c7473e97279a524cbb5809634c2c2dcfc8826
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 52%
+source-wordcount: '554'
+ht-degree: 51%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 52%
       + [Anpassade regler för kodkvalitet](cloud-manager/custom-code-quality-rules.md)
       + [Funktionstestning](/help/implementing/cloud-manager/functional-testing.md)
       + [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
+      + [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
    + [Komma åt och hantera loggar](cloud-manager/manage-logs.md)
    + [Förstår aviseringar](cloud-manager/notifications.md)
 + Hantera kod {#managing-code}
