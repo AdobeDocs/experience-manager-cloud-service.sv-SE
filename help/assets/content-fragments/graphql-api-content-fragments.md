@@ -2,9 +2,9 @@
 title: Content Delivery using Content Fragments with the Adobe Experience Manager as a Cloud Service GraphQL API
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för rubrikfri innehållsleverans.
 translation-type: tm+mt
-source-git-commit: 1601d0ac5cd72ac53b810dd9891a6744adc1819e
+source-git-commit: 1e9596fb12a38f5c4c6e15d7c33af86e59e76083
 workflow-type: tm+mt
-source-wordcount: '2438'
+source-wordcount: '2491'
 ht-degree: 1%
 
 ---
@@ -628,3 +628,7 @@ Frågor som har uppstått:
 
    * **S**: &quot;*AEM GraphQL API ger total kontroll över JSON-utdata och är en branschstandard för att fråga efter innehåll.
 AEM planerar att investera i AEM GraphQL API.*&quot;
+
+## Självstudie - Komma igång med AEM Headless och GraphQL {#tutorial}
+
+Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) heltäckande självstudiekurs som visar hur du bygger upp och visar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
