@@ -2,15 +2,20 @@
 title: Översikt över Best Practices Analyzer
 description: Översikt över Best Practices Analyzer
 translation-type: tm+mt
-source-git-commit: 07180809ff8b4a42a07eb9c691ab7a99262742ec
+source-git-commit: dc2d529c6bbdb4e0fd963021e40bc333b321c95c
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 35%
+source-wordcount: '351'
+ht-degree: 29%
 
 ---
 
 
 # Översikt {#overview-best-practices-analyzer}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_bpa_overview"
+>title="Översikt över Best Practices Analyzer"
+>abstract="Best Practices Analyzer ger en utvärdering av den aktuella AEM-implementeringen genom att ange områden som inte följer AEM bästa praxis. Det ger också vägledning om nästa steg för att anta AEM bästa praxis. Dessutom går det snabbare att bedöma om man är redo att gå över från en befintlig Adobe Experience Manager (AEM)-distribution till AEM som Cloud Service."
 
 Best Practices Analyzer ger en utvärdering av den aktuella AEM-implementeringen genom att ange områden som inte följer AEM bästa praxis. Det ger också vägledning om nästa steg för att anta AEM bästa praxis. Dessutom går det snabbare att bedöma om man är redo att gå över från en befintlig Adobe Experience Manager (AEM)-distribution till AEM som Cloud Service.
 
