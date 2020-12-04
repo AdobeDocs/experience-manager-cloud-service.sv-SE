@@ -3,17 +3,17 @@ title: Aktivitetsström på tidslinjen
 description: I den här artikeln beskrivs hur du visar aktivitetsloggar för resurser på tidslinjen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 33%
+source-wordcount: '205'
+ht-degree: 21%
 
 ---
 
 
 # Visa resursåtgärdsloggar i aktivitetsström {#activity-stream-in-timeline}
 
-Den här funktionen visar aktivitetsloggar för resurser på tidslinjen. Om du utför någon av följande resursrelaterade åtgärder i Adobe Experience Manager (AEM) Resurser uppdaterar funktionen för aktivitetsström tidslinjen för att återspegla aktiviteten.
+Den här funktionen visar aktivitetsloggar för resurser på tidslinjen. Om du utför någon av följande resursrelaterade åtgärder i [!DNL Experience Manager Assets] uppdaterar funktionen för aktivitetsström tidslinjen för att återspegla aktiviteten.
 
 Följande åtgärder är loggade i aktivitetsströmmen:
 
@@ -26,7 +26,7 @@ Följande åtgärder är loggade i aktivitetsströmmen:
 * Avvisa
 * Flytta
 
-Aktivitetsloggarna som ska visas på tidslinjen hämtas från platsen `/var/audit/com.day.cq.dam/content/dam` i CRX, där loggfiler lagras.  Dessutom loggas tidslinjeaktiviteten när nya resurser överförs eller befintliga resurser ändras och checkas in i via [Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) eller [[!DNL Experience Manager] datorversionen av AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=en).
+Aktivitetsloggarna som ska visas på tidslinjen hämtas från platsen `/var/audit/com.day.cq.dam/content/dam` i CRX, där loggfiler lagras.  Dessutom loggas tidslinjeaktiviteten när nya resurser överförs eller befintliga resurser ändras och checkas in i [!DNL Experience Manager] via [Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) eller [[!DNL Experience Manager] datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=en).
 
 >[!NOTE]
 >
