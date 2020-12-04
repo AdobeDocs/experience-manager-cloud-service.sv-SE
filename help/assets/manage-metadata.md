@@ -4,10 +4,10 @@ description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Mana
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: ce22a7ba95942881b90a4f3f22d89bcd35b5e559
 workflow-type: tm+mt
-source-wordcount: '1905'
-ht-degree: 4%
+source-wordcount: '1837'
+ht-degree: 3%
 
 ---
 
@@ -152,13 +152,16 @@ Resurser som [!DNL Cloud Service] kan generera anpassade metadata för en resurs
 >
 >Endast en bearbetningsprofil kan användas för en mapp. Om du vill använda flera bearbetningar på resurser i en mapp lägger du till fler alternativ i en enda bearbetningsprofil. En enskild profil kan till exempel generera återgivningar, omkoda resurser, generera anpassade metadata och så vidare. Du kan använda MIME-typfilter för varje åtgärd så att rätt åtgärd aktiveras för det filformat som krävs.
 
-## Konfigurera gräns för uppdatering av massmetadata {#configlimit}
+<!-- TBD: Commenting as Web Console is not available. Document the appropriate OSGi config method if available in CS.
 
-För att förhindra DOS-liknande situationer begränsar AEM antalet parametrar som stöds i en Sling-begäran. När du uppdaterar metadata för många resurser på en gång kan du nå gränsen och metadata uppdateras inte för fler resurser. AEM genererar följande varning i loggarna:
+## Configure limit for bulk metadata update {#configlimit}
+
+To prevent DOS-like situation, [!DNL Experience Manager] limits the number of parameters supported in a Sling request. When updating metadata of many assets in one go, you may reach the limit and the metadata does not get updated for more assets. [!DNL Experience Manager] generates the following warning in the logs:
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
-Om du vill ändra gränsen öppnar du webbkonsolen (**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**) och ändrar värdet för **[!UICONTROL Maximum POST Parameters]** i OSGi-konfigurationen för **[!UICONTROL Apache Sling Request Parameter Handling]**.
+To change the limit, access Web Console ( **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**) and change the value of **[!UICONTROL Maximum POST Parameters]** in **[!UICONTROL Apache Sling Request Parameter Handling]** OSGi configuration.
+-->
 
 ## Metadata schemata {#metadata-schemata}
 
