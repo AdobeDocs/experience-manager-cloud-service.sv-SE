@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: 737c7473e97279a524cbb5809634c2c2dcfc8826
+source-git-commit: fd3ab969d9fb433ca2db68a5919fd0a0e9181e14
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 51%
+source-wordcount: '567'
+ht-degree: 50%
 
 ---
 
@@ -65,6 +65,10 @@ ht-degree: 51%
          + [Använda Dölj villkor](developing/components/hide-conditions.md)
       + [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md)
       + [Bygga in märkord i AEM](/help/implementing/developing/introduction/tagging-applications.md)
+      + Sökning {#search}
+         + [Query Builder API](/help/implementing/developing/introduction/query-builder-api.md)
+         + [Predikatreferens för Query Builder](/help/implementing/developing/introduction/query-builder-predicates.md)
+         + [Implementera en anpassad predikatutvärderare](/help/implementing/developing/introduction/query-builder-custom-predicate.md)
    + Hybrid AEM Development {#hybrid}
       + [Hybrid och SPA med AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
       + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
