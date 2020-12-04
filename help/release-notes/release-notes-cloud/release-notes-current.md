@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 7e8c794752073da0b4815c97dc53282989cd3fb5
+source-git-commit: f37bcfda2b4e4c036ce5c7ddd2dd1aa131f2a6a5
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 * **[Startar Hierarkihantering](/help/sites-cloud/authoring/launches/managing-pages.md)  och  [framtida tidsförvrängning](/help/sites-cloud/authoring/launches/preview.md)**: Nytt gränssnitt för att lägga till/ta bort sidor vid en start, och när du bläddrar på en webbplats med Timewarp visas det framtida tillståndet i Launches.
 
-* **Sortera de Live Copy-sidor som är tillgängliga för utrullning**: Nytt alternativ för att sortera de Live Copy-sidor som är tillgängliga för utrullning med hjälp av egenskaperna  [!UICONTROL Name],  [!UICONTROL Last modified date]och  [!UICONTROL Last rollout date] . [!UICONTROL Last rollout date] för en sida är en ny egenskap.
+* **[Modeller och redigerare för utökat innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)**: Nya alternativ för indatavalidering för olika datatyper, förbättrad datatyp för uppräkning med nya formulärvisualiseringar och modellnamnet för innehållsfragment visas och är sökbart i resursgränssnittet.
 
-<!--- * **[Extended Content Fragment Models & Editor](/help/assets/content-fragments/content-fragments-models.md)**: New options for input validation on various data types, improved Enumeration data type with new form visualizations, and the Content Fragment model name is displayed and searchable in Assets UI. --->
+* **Sortera de Live Copy-sidor som är tillgängliga för utrullning**: Nytt alternativ för att sortera de Live Copy-sidor som är tillgängliga för utrullning med hjälp av egenskaperna  [!UICONTROL Name],  [!UICONTROL Last modified date]och  [!UICONTROL Last rollout date] . [!UICONTROL Last rollout date] för en sida är en ny egenskap.
 
 ## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
 
