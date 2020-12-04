@@ -2,10 +2,10 @@
 title: Resurser som en [!DNL Cloud Service] guide
 description: Adobe Experience Manager Assets som en  [!DNL Cloud Service] självhjälp- och dokumentationslänkar
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 43%
+source-wordcount: '305'
+ht-degree: 42%
 
 ---
 
@@ -36,7 +36,7 @@ Här följer självhjälpsresurserna för Experience Manager Assets as a [!DNL C
 | [Användarhandbok för implementering](/help/implementing/home.md) | Anpassa, utveckla och distribuera Experience Manager as a [!DNL Cloud Service]. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a [!DNL Cloud Service]. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-åtgärder i Experience Manager som en [!DNL Cloud Service], till exempel indexerings- och underhållsåtgärder. |
-| [Handbok för Commerce](/help/commerce-cloud/home.md) | Lär dig mer om Commerce Integration Framework på AEM som en [!DNL Cloud Service]. |
+| [Handbok för Commerce](/help/commerce-cloud/home.md) | Lär dig mer om Commerce Integration Framework på [!DNL Experience Manager] som en [!DNL Cloud Service]. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 
@@ -48,4 +48,4 @@ Här följer självhjälpsresurserna för Experience Manager Assets as a [!DNL C
 * [GDPR-efterlevnad](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Adobe Experience Manager som  [!DNL Cloud Service] självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other#recommended/solutions/experience-manager)
-* [AEM-communityforum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
+* [[!DNL Experience Manager] Community-forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
