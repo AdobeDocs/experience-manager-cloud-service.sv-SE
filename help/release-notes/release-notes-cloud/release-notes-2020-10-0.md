@@ -2,13 +2,12 @@
 title: Versionsinformation för version 2020.10.0 av [!DNL Adobe Experience Manager] som Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.10.0.'
 translation-type: tm+mt
-source-git-commit: 841069f35539a49c6ee67699bf3a476cf1c9da41
+source-git-commit: fd271f24e5f8ddbe440dccf5c51c91a46c70dead
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service 2020.10.0 {#release-notes}
@@ -32,8 +31,6 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 ## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
 
-### Nyheter i [!DNL Assets] {#what-is-new-assets}
-
 * **[!DNL Adobe Sensei]smart taggning**: Genom att utnyttja AI-modeller för att analysera videoinnehåll för objekt- och åtgärdsspecifika taggar kan DAM-användare lägga mindre tid på att lägga till taggar och mer tid på att utnyttja den omfattande information som exponeras för att leverera rätt upplevelse till kunderna. Se [Smart-tagg för videomaterial](/help/assets/smart-tags-video-assets.md).
 
 * **Förbättringar** i varumärkesportalen: Följande nya funktioner och mer finns i  [!DNL Brand Portal]. Mer information finns i [[!DNL Brand Portal] versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal-release-notes.html).
@@ -45,13 +42,7 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 * **[!DNL Adobe Asset Link]version 2.1**: En ny version av  [Adobe Asset ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) Linkextension för  [!DNL Adobe Photoshop],  [!DNL Adobe Illustrator]och  [!DNL Adobe InDesign] finns tillgänglig. Den lägger till kompatibilitet med de senaste [!DNL Adobe Creative Cloud]-programmen med version 2021, som släpptes i oktober 2020.
 
-* **[!DNL Assets]Stöd** för WebP-filer:  [!DNL Assets] som en Cloud Service har nu stöd för WebP-bildformat. WebP är ett framväxande bildformat som skapats av Google. Bilder i WebP-filformat kan inte skiljas åt visuellt från JPG- eller PNG-filer och filerna är mycket mindre. Lägre filstorlek förbättrar sidinläsningen och hjälper innehållsskaparna att leverera en snabbare webbupplevelse.
-
-<!--
-### Bugs Fixed {#bugs-fixed-assets}
-
-Content to come
--->
+* **[!DNL Assets]Stöd** för WebP-filer:  [!DNL Assets] som en Cloud Service har nu stöd för WebP-bildformat. WebP är ett framväxande bildformat som skapats av Google. Bilder i WebP-filformat kan inte skiljas åt visuellt från JPG- eller PNG-filer och filerna är mycket mindre. Lägre filstorlek förbättrar sidinläsningen och hjälper innehållsskaparna att leverera en snabbare webbupplevelse. Se hur du använder WebP i [skapa bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-standard-profile).
 
 ## Adobe Experience Manager Commerce som Cloud Service {#cloud-services-commerce}
 
@@ -80,7 +71,6 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.10.0 är 2 oktober 
 * Vilolägen miljöer har nu en diskret status i Cloud Manager när de är i viloläge.
 
 * Molnhanterarens byggbehållare har nu stöd för kompilering av projekt med antingen Java 8 eller Java 11. Stöd för Java 11 finns i Maven ToolChain System.
-
 
 * Antalet miljövariabler per miljö har ökat till 200.
 
@@ -122,4 +112,3 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 ### Felkorrigeringar {#ctt-bug-fixes}
 
 * Innehållsöverföringsverktyget hoppade över innehållsfiler om migreringsuppsättningen innehöll sökvägar som delvis hade liknande filnamn. Den här har åtgärdats.
-
