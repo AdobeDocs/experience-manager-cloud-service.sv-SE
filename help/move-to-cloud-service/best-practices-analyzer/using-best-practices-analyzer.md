@@ -13,6 +13,7 @@ ht-degree: 46%
 # Använda Best Practices Analyzer {#using-best-practices-analyzer}
 
 >[!CONTEXTUALHELP]
+>
 >id="aemcloud_bpa_using"
 >title="Använda Best Practices Analyzer"
 >abstract="Läs dokumentationen om hur du använder Best Practices Analyzer (tidigare Cloud Readiness Analyzer) och den genererade rapporten. Best Practices Analyzer-rapporten används för att få en god förståelse för den allmänna uppgraderingsberedskapen."
@@ -29,12 +30,14 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best 
 * BPA stöds på AEM med version 6.1 och senare.
 
    >[!NOTE]
-Se  [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
+   >
+   >Se  [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
 
 * BPA kan köras i alla miljöer, men bör köras på en *Stage*-miljö.
 
    >[!NOTE]
-För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA i en  ** redigeringsmiljö som är så nära  ** produktionsmiljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
+   >
+   >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA i en  ** redigeringsmiljö som är så nära  ** produktionsmiljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
 
 * Det kan ta lång tid att generera BPA-rapportinnehåll, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
@@ -42,15 +45,17 @@ För att undvika att affärskritiska instanser påverkas rekommenderar vi att du
 
 ## Tillgänglighet {#availability}
 
-[!CONTEXTUALHELP]
-id="aemcloud_bpa_download"
-title="Ladda ned Best Practices Analyzer"
-abstract="Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM)."
+>[!CONTEXTUALHELP]
+>
+>id="aemcloud_bpa_download"
+>title="Ladda ned Best Practices Analyzer"
+>abstract="Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM)."
 
 Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
-Hämta Best Practices Analyzer från  [Software ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) Distribution Portal.
+>
+>Hämta Best Practices Analyzer från  [Software ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) Distribution Portal.
 
 ## Visa rapporten Best Practices Analyzer {#viewing-report}
 
@@ -84,12 +89,14 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic6.png)
 
    >[!NOTE]
-Du kan tvinga BPA att rensa sin cache och återskapa rapporten genom att klicka på  **Uppdatera rapport**.
+   >
+   >Du kan tvinga BPA att rensa sin cache och återskapa rapporten genom att klicka på  **Uppdatera rapport**.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic7.png)
 
    >[!NOTE]
-Medan rapporten återskapas visas förloppet i procent som slutförts enligt bilden nedan.
+   >
+   >Medan rapporten återskapas visas förloppet i procent som slutförts enligt bilden nedan.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic8.png)
 
@@ -101,15 +108,17 @@ Best Practices Analyzer-verktyget är i Adobe Experience Manager 6.2 begränsat 
 Verktyget fungerar inte i Adobe Experience Manager 6.1, endast HTTP-gränssnittet kan användas.
 
 >[!NOTE]
-I alla versioner kan medföljande Pattern Detector köras fristående.
+>
+>I alla versioner kan medföljande Pattern Detector köras fristående.
 
 ## Tolka rapporten Best Practices Analyzer {#cra-report}
 
-[!CONTEXTUALHELP]
-id="aemcloud_bpa_interpreting"
-title="Tolka rapporten Best Practices Analyzer"
-abstract="Det finns två alternativ för att visa BPA-rapportutdata: Gränssnitt och CSV. När verktyget Best Practices Analyzer körs i AEM visas UI-rapporten som resultat i verktygsfönstret. Rapporten i CSV-format innehåller information som genereras med utdata från Pattern Detector och som sorteras och organiseras efter kategorityp, undertyp och viktighetsgrad."
-additional-url="https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html?lang=en" text="Om rapportkategorier i Best Practices Analyzer"
+>[!CONTEXTUALHELP]
+>
+>id="aemcloud_bpa_interpreting"
+>title="Tolka rapporten Best Practices Analyzer"
+>abstract="Det finns två alternativ för att visa BPA-rapportutdata: Gränssnitt och CSV. När verktyget Best Practices Analyzer körs i AEM visas UI-rapporten som resultat i verktygsfönstret. Rapporten i CSV-format innehåller information som genereras med utdata från Pattern Detector och som sorteras och organiseras efter kategorityp, undertyp och viktighetsgrad."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html?lang=en" text="Om rapportkategorier i Best Practices Analyzer"
 
 När verktyget Best Practices Analyzer körs i AEM visas rapporten som resultat i verktygsfönstret.
 
@@ -126,7 +135,8 @@ Rapportens format är:
 Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder.
 
 >[!NOTE]
-Mer information om varje sökkategori finns i Kategorier för  [mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
+>
+>Mer information om varje sökkategori finns i Kategorier för  [mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
 
 Läs tabellen nedan för mer information om viktighetsgrad:
 
