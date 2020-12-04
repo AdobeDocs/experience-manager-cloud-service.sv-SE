@@ -3,9 +3,9 @@ title: Granska resurser i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '745'
 ht-degree: 21%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 21%
 
 # Granska resurser i mappar och samlingar {#review-folder-assets-and-collections}
 
-Med Adobe Experience Manager (AEM) Assets kan du ange ad hoc-granskningsarbetsflöden för resurser som finns i en mapp eller i en samling. Du kan dela det med granskare eller kreativa partners för att få feedback. Du kan antingen associera ett granskningsarbetsflöde med ett projekt eller skapa en oberoende granskningsåtgärd.
+Med Adobe Experience Manager Assets kan du ange ad hoc-granskningsarbetsflöden för resurser som finns i en mapp eller i en samling. Du kan dela det med granskare eller kreativa partners för att få feedback. Du kan antingen associera ett granskningsarbetsflöde med ett projekt eller skapa en oberoende granskningsåtgärd.
 
 När du har delat resurserna kan granskarna godkänna eller avvisa dem. Meddelanden skickas i olika faser av arbetsflödet för att meddela avsedda mottagare om att olika uppgifter har slutförts. När du till exempel delar en mapp eller samling får granskaren ett meddelande om att en mapp/samling har delats för granskning.
 
@@ -47,7 +47,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
    ![review_name](assets/review_name.png)
 
 1. Tryck/klicka på **[!UICONTROL Submit]** och tryck/klicka sedan på **[!UICONTROL Done]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
-1. Logga in på AEM Assets som godkännare och navigera till Assets UI. Om du vill godkänna resurser klickar/trycker du på ikonen **[!UICONTROL Notifications]** och väljer sedan granskningsåtgärden i listan.
+1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till resursgränssnittet. Om du vill godkänna resurser klickar/trycker du på ikonen **[!UICONTROL Notifications]** och väljer sedan granskningsåtgärden i listan.
 
    ![meddelande](assets/notification.png)
 
@@ -91,7 +91,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
    ![task_details-collection](assets/task_details-collection.png)
 
 1. Tryck/klicka på **[!UICONTROL Submit]** och tryck/klicka sedan på **[!UICONTROL Done]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
-1. Logga in på AEM Assets som godkännare och navigera till Assets-konsolen. Om du vill godkänna resurser trycker/klickar du på ikonen **[!UICONTROL Notifications]** och väljer sedan granskningsåtgärden i listan.
+1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till Assets-konsolen. Om du vill godkänna resurser trycker/klickar du på ikonen **[!UICONTROL Notifications]** och väljer sedan granskningsåtgärden i listan.
 1. Granska informationen om granskningsuppgiften på sidan **[!UICONTROL Review Task]** och tryck/klicka sedan på **[!UICONTROL Review]**.
 1. Alla resurser i samlingen visas på granskningssidan. Markera resurserna och tryck/klicka på ikonen **[!UICONTROL Approve/Reject]** för att godkänna eller avvisa resurser.
 
