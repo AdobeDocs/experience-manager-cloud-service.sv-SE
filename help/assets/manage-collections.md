@@ -4,9 +4,9 @@ description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 85f949e405ee3e7527f49d61c368b79ee2d0743b
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '2248'
+source-wordcount: '2243'
 ht-degree: 18%
 
 ---
@@ -140,7 +140,7 @@ Sökfunktionen i samlingar har stöd för både [Söka efter samlingar](#search-
 
 ### Sök i samlingar {#search-collections}
 
-Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i rutan Sök söker AEM Assets efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
+Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i sökrutan söker [!DNL Experience Manager Assets] efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
 
 Om du söker efter samlingar från den översta nivån returneras bara enskilda samlingar i sökresultaten. Resurser eller mappar i samlingarna exkluderas. I alla andra fall (till exempel i en enskild samling eller i en mapphierarki) returneras alla relevanta resurser, mappar och samlingar.
 
@@ -148,7 +148,7 @@ Om du söker efter samlingar från den översta nivån returneras bara enskilda 
 
 Tryck/klicka på en samling i Samlingar-konsolen för att öppna den.
 
-I en samling är AEM resurssökning begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
+I en samling är [!DNL Experience Manager]-sökningen begränsad till resurser (och deras taggar och metadata) i samlingen som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
 
 ## Redigera samlingsinställningar {#edit-collection-settings}
 
@@ -179,7 +179,7 @@ När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive m
 
 ## Redigera metadataegenskaper för flera samlingar {#editing-metadata-properties-of-multiple-collections}
 
-Med Adobe Enterprise Manager (AEM) Assets kan du redigera flera samlingars metadata samtidigt. Använd sidan [!UICONTROL Properties] om du vill utföra metadataändringar i flera samlingar, till exempel ändra metadataegenskaper till ett gemensamt värde eller lägga till eller ändra taggar.
+Med Adobe Enterprise Manager Assets kan du redigera flera samlingars metadata samtidigt. Använd sidan [!UICONTROL Properties] om du vill utföra metadataändringar i flera samlingar, till exempel ändra metadataegenskaper till ett gemensamt värde eller lägga till eller ändra taggar.
 
 Om du vill anpassa sidan med metadata [!UICONTROL Properties], inklusive lägga till, ändra eller ta bort metadataegenskaper, använder du schemaredigeraren.
 
