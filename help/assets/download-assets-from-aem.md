@@ -3,9 +3,9 @@ title: Hämta resurser
 description: Hämta resurser från [!DNL Adobe Experience Manager Assets] och aktivera eller inaktivera hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '864'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Du kan hämta Experience Manager-resurser på följande sätt:
 * [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
 * [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
 
-## Hämta resurser med AEM gränssnitt {#download-in-aem}
+## Hämta resurser med [!DNL Experience Manager]-gränssnittet {#download-in-aem}
 
 Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Mindre filer hämtas från användargränssnittet i realtid. De stora filerna hämtas asynkront och användarna informeras om att de har slutförts via Experience Manager-meddelanden i Inkorgen. Se [förstå Experience Manager inbox](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/inbox.html).
 
