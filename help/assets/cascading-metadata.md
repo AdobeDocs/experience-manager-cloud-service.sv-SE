@@ -3,9 +3,9 @@ title: Överlappande metadata
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '907'
 ht-degree: 11%
 
 ---
@@ -26,7 +26,7 @@ Här följer några exempel där du kan definiera överlappande metadata:
 * Ändra alternativen som visas för ett visst fält baserat på värdet som anges i ett annat fält.
 * Ange standardvärdet för metadata i ett visst fält baserat på det värde som anges i ett annat fält.
 
-## Konfigurera metadata i AEM {#configure-cascading-metadata-in-aem}
+## Konfigurera metadata i [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
 
 Tänk dig ett scenario där du vill visa överlappande metadata baserat på den typ av resurs som är markerad. Några exempel
 
@@ -35,7 +35,7 @@ Tänk dig ett scenario där du vill visa överlappande metadata baserat på den 
 
 Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligatoriskt fält.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
+1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 1. Markera ett schemaformulär på sidan **[!UICONTROL Schema Forms]** och redigera sedan schemat genom att trycka/klicka på **[!UICONTROL Edit]** i verktygsfältet.
 
    ![select_form](assets/select_form.png)
@@ -54,7 +54,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    * Om du vill ange värdena manuellt väljer du **[!UICONTROL Add Manually]** och trycker/klickar på **[!UICONTROL Add Choice]** och anger alternativtexten och värdet. Ange till exempel resurstyperna Video, PDF, Word och Bild.
 
-   * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Add Through JSON Path]** och anger sökvägen till JSON-filen. AEM hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
+   * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Add Through JSON Path]** och anger sökvägen till JSON-filen. [!DNL Experience Manager] hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
 
    Båda alternativen utesluter varandra. Du kan inte importera alternativen från en JSON-fil och redigera manuellt.
 
