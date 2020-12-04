@@ -1,25 +1,25 @@
 ---
 title: Metadataschema för mapp
-description: Lär dig hur du skapar metadatamappar för resursmappar i AEM Assets
+description: Lär dig hur du skapar metadatamatchema för resursmappar i [!DNL Experience Manager Assets]
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: dc5cec192a70413e0ebcc27eb5e58577079ae93b
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '982'
-ht-degree: 7%
+source-wordcount: '971'
+ht-degree: 5%
 
 ---
 
 
 # Mappmetadataschema {#folder-metadata-schema}
 
-Med Adobe Experience Manager (AEM) Assets kan du skapa metadatamappar för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor.
+[!DNL Adobe Experience Manager Assets] Med kan du skapa metadatascheman för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor.
 
 ## Lägg till ett mappmetadatamatchschema {#add-a-folder-metadata-schema-form}
 
 Använd schemaredigeraren för mappmetadata i Forms för att skapa och redigera metadatascheman för mappar.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
+1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
 1. Tryck/klicka på **[!UICONTROL Create]** på Forms-sidan för mappmetadataschema.
 1. Ange ett namn för formuläret och tryck/klicka på **[!UICONTROL Create]**. Det nya schemaformuläret visas på Forms-sidan Schema.
 
@@ -138,7 +138,7 @@ Om du konfigurerar ett metadataschema för en mapp lagras sökvägen till schema
 
 ### Tilldela till ett schema från sidan för mappmetadataschema {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
+1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]**> **[!UICONTROL Folder Metadata Schemas]**.
 1. På Forms-sidan för mappmetadataschema väljer du det schemaformulär som du vill tillämpa på en mapp.
 1. Tryck/klicka på **[!UICONTROL Apply to Folder(s)]** i verktygsfältet.
 
@@ -155,7 +155,7 @@ Om du konfigurerar ett metadataschema för en mapp lagras sökvägen till schema
 
 Du kan tilldela ett mappmetadatchema när du skapar en mapp. Om det finns minst ett mappmetadatchema i systemet visas en extra lista i dialogrutan **[!UICONTROL Create Folder]**. Du kan välja önskat schema. Som standard är inget schema valt.
 
-1. I AEM Assets-användargränssnittet: tryck/klicka på **[!UICONTROL Create]** i verktygsfältet.
+1. Tryck/klicka på **[!UICONTROL Create]** i verktygsfältet i [!DNL Experience Manager Assets]-användargränssnittet.
 1. Ange en rubrik och ett namn för mappen.
 1. Välj önskat schema i listan Mappmetadatamatchema. Tryck/klicka sedan på **[!UICONTROL Create]**.
 
