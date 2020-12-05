@@ -3,9 +3,9 @@ title: Bearbeta resurser med hjälp av mikrotjänster för resurser
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -50,14 +50,14 @@ Detta är det grundläggande flödet av tillgångsintag och bearbetning. Om den 
 
 Intag och bearbetningsflöde är viktiga begrepp i arkitekturen för tillgångsmikrotjänster för Experience Manager.
 
-* **Direkt binär åtkomst**: Resurser transporteras (och överförs) till molnbinärarkivet när de har konfigurerats för Experience Manager-miljöer, och sedan AEM, och slutligen får klienterna direktåtkomst för att utföra sitt arbete. Detta minimerar belastningen på nätverk och duplicering av lagrade binärfiler
-* **Extern bearbetning**: Bearbetning av resurser görs utanför AEM miljö och sparar resurser (CPU, minne) för att tillhandahålla viktiga funktioner för hantering av digitala resurser samt stöd för interaktivt arbete med systemet för slutanvändare
+* **Direkt binär åtkomst**: Resurser transporteras (och överförs) till molnbinärarkivet när de har konfigurerats för Experience Manager-miljöer, och sedan  [!DNL Experience Manager]får de tillgång till mikrotjänster och slutligen direktåtkomst till klienterna för att utföra sitt arbete. Detta minimerar belastningen på nätverk och duplicering av lagrade binärfiler
+* **Extern bearbetning**: Bearbetning av resurser görs utanför  [!DNL Experience Manager] miljön och sparar resurser (CPU, minne) för att tillhandahålla viktiga funktioner för hantering av digitala resurser samt stöd för interaktivt arbete med systemet för slutanvändare
 
 ## Tillgångsuppladdning med direkt binär åtkomst {#asset-upload-with-direct-binary-access}
 
-Experience Manager-klienter, som ingår i produkterbjudandet, stöder som standard överföring med direkt binär åtkomst. Dessa inkluderar överföring via webbgränssnittet, Adobe Asset Link och AEM datorprogrammet.
+Experience Manager-klienter, som ingår i produkterbjudandet, stöder som standard överföring med direkt binär åtkomst. Dessa inkluderar överföring via webbgränssnittet, Adobe Asset Link och [!DNL Experience Manager] skrivbordsappen.
 
-Du kan använda anpassade överföringsverktyg, som fungerar direkt med AEM HTTP API:er. Du kan använda dessa API:er direkt eller använda och utöka följande öppen källkodsprojekt som implementerar överföringsprotokollet:
+Du kan använda anpassade överföringsverktyg, som fungerar direkt med [!DNL Experience Manager] HTTP-API:er. Du kan använda dessa API:er direkt eller använda och utöka följande öppen källkodsprojekt som implementerar överföringsprotokollet:
 
 * [Överföringsbibliotek med öppen källkod](https://github.com/adobe/aem-upload)
 * [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem)
@@ -68,7 +68,7 @@ Mer information finns i [överföra resurser](add-assets.md).
 
 De flesta kunder bör få alla sina behov av tillgångsbearbetning från de konfigurerbara tillgångsmikrotjänsterna, men vissa kan behöva ytterligare bearbetning av resurser. Detta gäller särskilt om resurser behöver bearbetas baserat på information som kommer från andra system via integreringar. I sådana fall kan anpassade efterbearbetningsarbetsflöden användas.
 
-Efterbehandlingsarbetsflöden är vanliga AEM arbetsflödesmodeller som skapas och hanteras i AEM. Kunderna kan konfigurera arbetsflödena så att de kan utföra ytterligare bearbetningssteg för en mediefil, inklusive använda tillgängliga körklara arbetsflödessteg och anpassade arbetsflöden.
+Efterbehandlingsarbetsflöden är vanliga [!DNL Experience Manager] arbetsflödesmodeller som skapas och hanteras i [!DNL Experience Manager] Arbetsflödesredigeraren. Kunderna kan konfigurera arbetsflödena så att de kan utföra ytterligare bearbetningssteg för en mediefil, inklusive använda tillgängliga körklara arbetsflödessteg och anpassade arbetsflöden.
 
 Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsflöden automatiskt startar när bearbetningen av materialet har slutförts.
 
