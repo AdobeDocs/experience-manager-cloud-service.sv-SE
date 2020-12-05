@@ -2,9 +2,9 @@
 title: 360/VR-video
 description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: 59d3f95db8ac4b779207bcf3d260067abea40d93
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
 ## Överför resurser som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
 
-360 videomaterial som överförs till AEM är märkta som **Multimedia** på en tillgångssida, på liknande sätt som vanliga videomaterial.
+360 videomaterial som överförs till Experience Manager namnges som **Multimedia** på en tillgångssida, på liknande sätt som vanliga videomaterial.
 
 ![6_5_360video-](assets/6_5_360video-selecttopreview.png)
 *selectPreviewEn överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
@@ -98,7 +98,7 @@ Se även [Redigera visningsförinställningar](/help/assets/dynamic-media/managi
 När du är nöjd med 360-videon kan du publicera den.
 
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
 Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
 **Så här förhandsgranskar du 360-videoklipp**
@@ -134,5 +134,5 @@ Du måste publicera 360-videon för att kunna använda den. När du publicerar e
 
 Mer information om hur du publicerar 360-video finns i [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se även [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+Se även [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
 Se även [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
