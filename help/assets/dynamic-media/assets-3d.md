@@ -4,13 +4,13 @@ seo-title: Arbeta med 3D-resurser i Dynamic Media
 description: Lär dig hur du arbetar med 3D-resurser i Dynamic Media
 seo-description: Lär dig hur du arbetar med 3D-resurser i Dynamic Media
 contentOwner: Rick Brough
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS and AEM as a Cloud Service
+products: SG_EXPERIENCEMANAGER/6.5/ASSETS and Experience Manager as a Cloud Service
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 1a307b065beff721cad35def4f812c3bee8eb8dd
+source-git-commit: 72bf52ca97b9c3cac84361207e53093fc69c0b43
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2216'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Med Dynamic Media kan du överföra, hantera, visa och leverera 3D-resurser som 
 
 * Publicera 3D-resurser med ett klick (med **[!UICONTROL Quick Publish]** i verktygsfältet) för att generera en URL.
 * Optimerat stöd för 3D-material med den högkvalitativa, interaktiva Dimensional-visningsförinställningen som drivs av Adobe Dimension.
-* Med 3D Media WCM-komponenten kan du enkelt lägga till 3D-resurser på dina AEM Sites-sidor.
+* Med 3D Media WCM-komponenten kan du enkelt lägga till 3D-resurser på Experience Manager Sites-sidor.
 
 Det krävs ingen ytterligare installation för att använda 3D-resurser i Dynamic Media.
 
@@ -47,7 +47,7 @@ Se även [3D-format som stöds](/help/assets/file-format-support.md#support-3d-f
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med 3D-resurser i Dynamic Media.
 
-Innan du arbetar med 3D-resurser i Dynamic Media måste du kontrollera att AEM redan har aktiverat och konfigurerat Dynamic Media-Cloud Services.
+Innan du arbetar med 3D-resurser i Dynamic Media måste du kontrollera att Experience Manager-administratören redan har aktiverat och konfigurerat Dynamic Media-Cloud Services.
 
 Se [Konfigurera Cloud Services för dynamiska media.](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services)
 
@@ -104,11 +104,11 @@ Se även [Förhandsgranska resurser med programgränssnittet.](/help/assets/dyna
 
 **Visa och interagera med en 3D-resurs från sidan med resursinformation**
 
-1. Se till att du har överfört 3D-resurser till AEM.
+1. Se till att du har överfört 3D-resurser till Experience Manager.
 
    Se [Överföra dina 3D-resurser för användning i Dynamic Media.](/help/assets/add-assets.md#upload-assets)
 
-1. Tryck på **[!UICONTROL Assets > Files]** på sidan **[!UICONTROL Navigation]** från AEM.
+1. Tryck på **[!UICONTROL Assets > Files]** från Experience Manager på sidan **[!UICONTROL Navigation]**.
 1. Tryck på **[!UICONTROL Card View]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn.
 1. Navigera till en 3D-resurs som du vill visa.
 1. Tryck på 3D-resursens kort för att öppna den på sidan med resursinformation.
@@ -170,7 +170,7 @@ komponentenEn helt interaktiv 3D-resurs som visas i  **[!UICONTROL Preview]** l�
 
 ## Om att arbeta med 3D-mediekomponenten {#working-with-three-d-media-component}
 
-Dynamic Media innehåller en 3D Media-komponent för Dynamic Media som du kan använda i AEM Sites för att aktivera interaktiv visning av 3D-modeller på dina webbsidor.
+Dynamic Media innehåller en 3D-mediakomponent för dynamiska media som du kan använda i Experience Manager Sites för att aktivera interaktiv visning av 3D-modeller på dina webbsidor.
 
 * [Lägga till komponenten 3D Media i sidmallen](#adding-three-d-media-component-to-page-template)
 * [Lägga till komponenten 3D Media på en webbsida](#adding-the-three-d-media-component-to-a-web-page)
@@ -200,7 +200,7 @@ Om du använder Adobe Experience Manager som webbinnehållshanteringssystem kan 
 
 Se även [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
-1. Öppna AEM Sites och markera den webbsida där du vill lägga till komponenten Dynamic Media 3D Media.
+1. Öppna Experience Manager Sites och markera den webbsida där du vill lägga till komponenten Dynamic Media 3D Media.
 1. Tryck på ikonen **[!UICONTROL Edit]** (penna) för att öppna sidan i sidredigeraren. Kontrollera att **[!UICONTROL Edit]**-läget är markerat i sidans övre högra hörn.
 
    ![3d-media-component-add](/help/assets/dynamic-media/assets/3d-media-component-edita.png)
@@ -219,7 +219,7 @@ Se [Tilldela en 3D-resurs till en 3D-mediekomponent.](#assigning-a-three-d-asset
 
 ### Valfritt - Konfigurera 3D-mediekomponenten {#configuring-the-three-d-component}
 
-1. I sidredigeraren i AEM Sites väljer du den **[!UICONTROL 3D Media Viewer]**-komponent som du tidigare har lagt till på sidan.
+1. Markera **[!UICONTROL 3D Media Viewer]**-komponenten som du tidigare lade till på Experience Manager-sidan i sidredigeraren Platser.
 1. Tryck på ikonen **[!UICONTROL Configuration]** (skiftnyckel) för att öppna dialogrutan för komponentkonfiguration.
 
    ![3d-media-component-config](/help/assets/dynamic-media/assets/3d-media-component-configa.png)
@@ -236,7 +236,7 @@ När du har lagt till en 3D-mediekomponent på en webbsida kan du tilldela den e
 
 Se [Lägga till komponenten 3D Media på en webbsida.](#adding-the-three-d-media-component-to-a-web-page)
 
-1. Klicka på ikonen **[!UICONTROL Assets]** i sidredigeraren i AEM Sites för att öppna **[!UICONTROL Assets]** på sidpanelen.
+1. Klicka på ikonen **[!UICONTROL Assets]** i sidredigeraren i Experience Manager för att öppna **[!UICONTROL Assets]** i sidpanelen.
 1. I listrutan väljer du **[!UICONTROL 3D]** om du bara vill visa filtyper för 3D-resurser.
 1. På sidopanelen söker du efter eller bläddrar till den 3D-resurs som du vill visa på sidan som redigeras.
 1. Dra 3D-resursen från resurspanelen och släpp den på **[!UICONTROL 3D Media]**-komponenten som du tidigare lade till på sidan.
@@ -245,7 +245,7 @@ Se [Lägga till komponenten 3D Media på en webbsida.](#adding-the-three-d-media
 
 >[!NOTE]
 >
->När en webbsida är i läget AEM Sites **[!UICONTROL Edit]** visar 3D-mediekomponenten 3D-resursen, men ingen interaktion med resursen är möjlig. Om du vill göra resursen interaktiv kan du använda funktionen **[!UICONTROL Preview]** för att visa webbsidan i sidredigeraren med fullständig tillgång till funktionaliteten i 3D Media-komponenten.
+>När en webbsida är i läget Experience Manager Sites **[!UICONTROL Edit]** visar 3D-mediekomponenten 3D-resursen, men det går inte att interagera med resursen. Om du vill göra resursen interaktiv kan du använda funktionen **[!UICONTROL Preview]** för att visa webbsidan i sidredigeraren med fullständig tillgång till funktionaliteten i 3D Media-komponenten.
 
 ## Publicera statiska 3D-resurser för dynamiska media {#publishing-three-d-assets}
 
@@ -255,7 +255,7 @@ Se även [Hämta en URL för en statisk resurs.](/help/assets/dynamic-media/link
 
 I **[!UICONTROL Card View]** visas en liten globala ikon direkt under namnet på en resurs och till vänster om dess datum och tid för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
-Om du använder AEM som WCM-fil kan du använda den här publiceringsmetoden för att lägga till 3D-resurser för dynamiska media direkt på webbsidan.
+Om du använder Experience Manager som WCM-fil kan du använda den här publiceringsmetoden för att lägga till 3D-resurser för dynamiska media direkt på webbsidan.
 
 Se även [Publicera dynamiska medieresurser.](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
 
@@ -284,7 +284,7 @@ Se även [Publicera sidor.](/help/sites-cloud/authoring/fundamentals/publishing-
 
 ### Alternativa metoder för publicering av 3D-resurser i Dynamic Media med Dimensional Viewer {#alternate-publish-methods}
 
-Använd följande två metoder för att publicera 3D-resurser i Dynamic Media om du *inte* använder AEM som WCM.
+Använd följande två metoder för att publicera 3D-resurser i Dynamic Media om du *inte* använder Experience Manager som WCM.
 
 * **[!UICONTROL URL]** - Använd  **[!UICONTROL URL]** om du använder ett tredjepartssystem för hantering av webbinnehåll och vill länka 3D-resurser för dynamiska media till dina webbsidor med Dimensional Viewer.
 
