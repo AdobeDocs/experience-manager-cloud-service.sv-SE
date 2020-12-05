@@ -4,10 +4,10 @@ description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '4284'
-ht-degree: 11%
+source-wordcount: '4263'
+ht-degree: 12%
 
 ---
 
@@ -18,7 +18,7 @@ I den här artikeln beskrivs hur du hanterar och redigerar resurser i Adobe Expe
 
 ## Skapa mappar {#creating-folders}
 
-När du organiserar en samling resurser, till exempel alla `Nature`-bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Assets kräver inte att du ordnar resurser i mappar för att fungera bättre.
+När du organiserar en samling resurser, till exempel alla `Nature`-bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. [!DNL Experience Manager Assets] kräver inte att du ordnar resurser i mappar för att fungera bättre.
 
 >[!NOTE]
 >
@@ -95,7 +95,7 @@ Följ de här stegen för att förhandsgranska en resurs.
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. Markera en eller flera taggar i fältet **[!UICONTROL Tags]**. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på Retur. Den nya taggen sparas i AEM.
+1. Markera en eller flera taggar i fältet **[!UICONTROL Tags]**. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på Retur. Den nya taggen sparas i [!DNL Experience Manager].
 
    YouTube kräver att taggar ska publiceras och har en länk till YouTube (om en lämplig länk finns).
 
@@ -139,7 +139,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >Om du kopierar en resurs på samma plats, genererar AEM automatiskt en variant av namnet. Om du till exempel kopierar en resurs med namnet `Square`, genererar AEM automatiskt titeln för resursens kopia som `Square1`.
+   >Om du kopierar en resurs på samma plats, genererar [!DNL Experience Manager] automatiskt en variant av namnet. Om du till exempel kopierar en resurs med namnet `Square`, genererar [!DNL Experience Manager] automatiskt titeln för resursens kopia som `Square1`.
 
 1. Klicka på resursikonen **[!UICONTROL Paste]** i verktygsfältet. Resurser kopieras till den här platsen.
 
@@ -203,7 +203,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >Som standard visas inte den ursprungliga återgivningen av resursen i förhandsgranskningsläget i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas i förhandsgranskningsläget.
+   >Som standard visar [!DNL Experience Manager Assets] inte den ursprungliga återgivningen av resursen i förhandsvisningsläget. Om du är administratör kan du använda övertäckningar för att konfigurera [!DNL Assets] så att de ursprungliga återgivningarna visas i förhandsgranskningsläget.
 
 1. Välj en återgivning om du vill visa eller ta bort återgivningen.
 
@@ -223,7 +223,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Om du väljer en återgivning på panelen **[!UICONTROL Renditions]** ändras sammanhanget för verktygsfältet och endast de åtgärder som är relevanta visas. Alternativ som ikonen Överför återgivning visas inte. Om du vill visa de här alternativen i verktygsfältet går du till informationssidan för resursen.
 
-   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Beroende på de dimensioner du anger visas återgivningen med de exakta eller närmaste måtten i AEM Assets.
+   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Baserat på de dimensioner du anger visar Resurser återgivningen med de exakta eller närmaste dimensionerna.
 
    Om du vill konfigurera återgivningsdimensionerna för en bild på resursdetaljnivån överlagrar du noden `renditionpicker` (`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`) och konfigurera värdet för breddegenskapen (width). Konfigurera egenskapen **[!UICONTROL size (Long) in KB]** i stället för bredden för att anpassa återgivningen på resursdetaljsidan utifrån bildstorleken. För storleksbaserad anpassning prioriterar egenskapen `preferOriginal` originalet om storleken på den matchade återgivningen är större än originalet.
 
@@ -270,7 +270,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 ## Hämta resurser {#download-assets}
 
-Se [Hämta resurser från AEM](/help/assets/download-assets-from-aem.md).
+Se [Hämta resurser från [!DNL Experience Manager]](/help/assets/download-assets-from-aem.md).
 
 ## Publicera resurser {#publish-assets}
 
@@ -323,7 +323,7 @@ Se [Hämta resurser från AEM](/help/assets/download-assets-from-aem.md).
 
 ## Stängd användargrupp {#closed-user-group}
 
-En stängd användargrupp (CUG) används för att begränsa åtkomsten till specifika resursmappar som publiceras från AEM. Om du skapar en CUG-fil för en mapp är åtkomsten till mappen (inklusive mappresurser och undermappar) begränsad till endast tilldelade medlemmar eller grupper. För att få åtkomst till mappen måste de logga in med sina inloggningsuppgifter.
+En stängd användargrupp (CUG) används för att begränsa åtkomsten till specifika resursmappar som publiceras från [!DNL Experience Manager]. Om du skapar en CUG-fil för en mapp är åtkomsten till mappen (inklusive mappresurser och undermappar) begränsad till endast tilldelade medlemmar eller grupper. För att få åtkomst till mappen måste de logga in med sina inloggningsuppgifter.
 
 CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan också konfigurera en inloggningssida för mappen.
 
@@ -332,22 +332,22 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 
    ![add_user](assets/add_user.png)
 
-1. Om du vill visa en inloggningsskärm när användare öppnar mappen väljer du alternativet **[!UICONTROL Enable]**. Markera sedan sökvägen till en inloggningssida i AEM och spara ändringarna.
+1. Om du vill visa en inloggningsskärm när användare öppnar mappen väljer du alternativet **[!UICONTROL Enable]**. Välj sedan sökvägen till en inloggningssida i [!DNL Experience Manager] och spara ändringarna.
 
    ![login_page](assets/login_page.png)
 
    >[!NOTE]
    >
-   >Om du inte anger sökvägen till en inloggningssida visas AEM standardinloggningssidan i publiceringsinstansen.
+   >Om du inte anger sökvägen till en inloggningssida visar [!DNL Experience Manager] standardinloggningssidan i publiceringsinstansen.
 
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
-1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när AEM autentiserar dig.
+1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när [!DNL Experience Manager] autentiserar dig.
 
 ## Söka efter resurser {#search-assets}
 
 Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
-Mer information om enkla, avancerade och anpassade sökningar för att identifiera och använda de lämpligaste resurserna finns i [söka resurser i AEM](/help/assets/search-assets.md).
+Mer information om enkla, avancerade och anpassade sökningar för att identifiera och använda de lämpligaste resurserna finns i [söka resurser i [!DNL Experience Manager]](/help/assets/search-assets.md).
 
 ## Snabbåtgärder {#quick-actions}
 
@@ -358,7 +358,7 @@ Snabbåtgärdsikoner är tillgängliga för en enskild resurs i taget. Beroende 
 
 ## Redigera bilder {#editing-images}
 
-Med redigeringsverktygen i AEM Assets gränssnitt kan du utföra små redigeringsjobb på bildresurser. Du kan beskära, rotera, vända och utföra andra redigeringsjobb på bilder. Du kan också lägga till bildscheman till resurser.
+Med redigeringsverktygen i gränssnittet [!DNL Experience Manager Assets] kan du utföra små redigeringsjobb på bildresurser. Du kan beskära, rotera, vända och utföra andra redigeringsjobb på bilder. Du kan också lägga till bildscheman till resurser.
 
 >[!NOTE]
 >
@@ -430,7 +430,7 @@ På tidslinjen kan du visa olika händelser för ett markerat objekt, t.ex. akti
 
 Anteckningar är kommentarer eller förklarande kommentarer som läggs till i bilder eller videoklipp. Anteckningar ger marknadsförarna möjlighet att samarbeta och lämna feedback om resurser.
 
-Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Videoformat som AEM Assets stöder beror på webbläsaren.
+Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Videoformat som Assets stöder beror på webbläsaren.
 
 >[!NOTE]
 >
@@ -467,7 +467,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >Du kan lägga till flera anteckningar innan du sparar dem.
 
 1. Tryck/klicka på **[!UICONTROL Close]** för att avsluta anteckningsläget.
-1. Om du vill visa meddelandet loggar du in på AEM Assets med Aaron MacDonalds inloggningsuppgifter och klickar på ikonen **[!UICONTROL Notifications]** för att visa meddelandet.
+1. Om du vill visa meddelandet loggar du in på Assets med Aaron MacDonalds inloggningsuppgifter och klickar på ikonen **[!UICONTROL Notifications]** för att visa meddelandet.
 
    >[!NOTE]
    >
@@ -559,9 +559,9 @@ Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tid
 
 Här följer exempel där du skapar versioner:
 
-* Du ändrar en bild i ett annat program och överför den till AEM Assets. En version av bilden skapas så att originalbilden inte skrivs över.
+* Du ändrar en bild i ett annat program och överför den till Assets. En version av bilden skapas så att originalbilden inte skrivs över.
 * Du redigerar metadata för en resurs.
-* Du använder AEM datorprogram för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
+* Du använder [!DNL Experience Manager]-datorprogrammet för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
 
 Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du skapar en version för en resurs sparas metadata och återgivningar tillsammans med versionen. Återgivningar är renderingsalternativ för samma bilder, till exempel en PNG-återgivning av en överförd JPEG-fil.
 
