@@ -2,10 +2,10 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation som är specifik för borttagna och borttagna funktioner i Adobe Experience Manager som Cloud Service.
 translation-type: tm+mt
-source-git-commit: 0a9a462f1b92a0dcb712163574bbf57582f8145c
+source-git-commit: e31ac0c2d28f60d7b98036c16f154a09da51d6bf
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 16%
+source-wordcount: '506'
+ht-degree: 9%
 
 ---
 
@@ -41,7 +41,7 @@ I det här avsnittet visas funktioner som har tagits bort från AEM med Experien
 | Yta | Funktion | Ersättning |
 | ------------ | ------------------ | ----------- |
 | UI | En del klassiska användargränssnittsdialogrutor finns för närvarande kvar för vissa funktioner, som Länkkontroll, Rensa Cloud Service och vissa användarkonfigurationer, men åtkomst till det klassiska användargränssnittet i allmänhet har tagits bort i AEM produktgränssnitt. | Standardgränssnitt |
-| Dynamic Media | Tidigare integreringar med [Dynamic Media Classic (Scene7)](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/scene7.html) och [Dynamic Media-hybridläge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html) är inte tillgängliga i AEM as a Cloud Service. | Använd [Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) som ingår i Experience Manager as a Cloud Service. |
+| Dynamic Media | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/scene7.html#integration) och [Dynamic Media Hybrid-läget](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dynamic.html#dynamic) är inte tillgängliga i AEM som Cloud Service. | Använd [Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) som ingår i Experience Manager as a Cloud Service. |
 | Sites | Portal Director och Portlet Component | Dessa funktioner har tagits bort i AEM 6.4 och har nu tagits bort från AEM. |
 | Webbplatser | Designimporteraren | Den här funktionen har tagits bort eftersom oföränderliga avsnitt i AEM inte är tillgängliga vid körning. |
 | Resurser | [AEM Assets-delning med Marketing Cloud Assets Core Service och Creative Cloud ](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/configure-assets-cc-integration.html) service är inte tillgängligt. | Använd [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för integrering med Creative Cloud. |
