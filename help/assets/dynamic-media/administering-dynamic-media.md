@@ -2,9 +2,9 @@
 title: Konfigurera Dynamic Media
 description: Om du vill konfigurera dynamiska medier måste du konfigurera dynamiska medier och hantera bild- och visningsförinställningar
 translation-type: tm+mt
-source-git-commit: a5e94003a3e9023155dc95ceba1a5531e4f20d8f
+source-git-commit: 79d4e51db99e2c1f8b18edd7249a26f4be7169e1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '175'
 ht-degree: 3%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->This documentation describes Dynamic Media capabilites, which are integrated directly into AEM. If you are using Dynamic Media Classic (previously called Scene7) integrated into AEM, see [Dynamic Media Classic integration documentation](/help/sites-cloud/administering/integrating-scene7.md).
+>This documentation describes Dynamic Media capabilites, which are integrated directly into Experience Manager. If you are using Dynamic Media Classic (previously called Scene7) integrated into Experience Manager, see [Dynamic Media Classic integration documentation](/help/sites-cloud/administering/integrating-scene7.md).
 >
->See [Dual Use Scenario](/help/sites-cloud/administering/integrating-scene7.md#dual-use-scenario) for times when you may want to use AEM integrated with Dynamic Media Classic along with Dynamic Media.
+>See [Dual Use Scenario](/help/sites-cloud/administering/integrating-scene7.md#dual-use-scenario) for times when you may want to use Experience Manager integrated with Dynamic Media Classic along with Dynamic Media.
 
 -->
 
@@ -40,4 +40,4 @@ Se även följande avsnitt:
 >
 >**Om du uppgraderar:**
 >
->* När du har AEM igång och kör alla resurser som du överför har Dynamic Media automatiskt aktiverat (om det inte uttryckligen inaktiverats av systemadministratören). Om du befinner dig på en uppgraderad instans av AEM och inte har använt Dynamic Media tidigare kan du behöva bearbeta om dina resurser för att göra dem dynamiska media-aktiverade.
+>* När du har installerat och kört Experience Manager aktiveras Dynamic Media automatiskt för alla resurser du överför (om det inte uttryckligen inaktiverats av systemadministratören). Om du är på en uppgraderad instans av Experience Manager och nybörjare på Dynamic Media kan du behöva bearbeta om dina resurser för att göra dem dynamiska media-aktiverade.
