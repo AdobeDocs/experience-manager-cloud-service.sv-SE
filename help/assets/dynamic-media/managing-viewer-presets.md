@@ -2,9 +2,9 @@
 title: Hantera visningsförinställningar
 description: Skapa och hantera visningsförinställningar
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: 0f6baa02d612a790fbeed9f8c9d356e0d96c5093
 workflow-type: tm+mt
-source-wordcount: '4146'
+source-wordcount: '4149'
 ht-degree: 18%
 
 ---
@@ -51,7 +51,7 @@ Du kan lägga till, redigera, ta bort, publicera, avpublicera och förhandsgrans
 
 Olika webbsidor har olika behov. Ibland kanske du vill ha en webbsida som innehåller en länk som öppnar HTML5 Viewer i ett separat webbläsarfönster. I andra fall kan det vara nödvändigt att bädda in HTML5 Viewer direkt på värdsidan. I det senare fallet kan webbsidan ha en statisk layout. Det kan också vara&quot;responsivt&quot; och visas på olika enheter eller för olika webbläsarfönsterstorlekar. För att tillgodose dessa behov har alla fördefinierade färdiga HTML5-visningsprogram som medföljer Dynamic Media stöd för både statiska webbsidor och responsiva webbsidor.
 
-Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Responsive Image Library](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) i hjälpen för Scene7 Image Serving API *.*
+Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Responsive Static Image Library](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html#about-responsive-image-library) i hjälpen för *Dynamic Media Image Serving and Rendering API*.
 
 >[!NOTE]
 >
