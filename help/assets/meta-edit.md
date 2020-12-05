@@ -1,12 +1,12 @@
 ---
 title: Redigera eller lägga till metadata
-description: Läs om metadata för resurser i AEM Assets och olika sätt att redigera metadata för resurser.
+description: Lär dig mer om metadata för resurser i [!DNL Experience Manager Assets] ett antal sätt att redigera metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 991d4900862c92684ed92c1afc081f3e2d76c7ff
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 8%
+source-wordcount: '411'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Metadata är ytterligare information om resursen som kan sökas igenom. Den extraheras automatiskt när du överför en bild. Du kan redigera befintliga metadata eller lägga till nya metadataegenskaper i befintliga fält (till exempel när ett metadatafält är tomt).
 
-Eftersom företag behöver kontrollerade och tillförlitliga metadata-ordlistor tillåter inte AEM Assets att nya metadataegenskaper läggs till för hand. Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapa ny metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
+Eftersom företag behöver kontrollerade och tillförlitliga metadata-ordlistor tillåter inte [!DNL Experience Manager Assets] att nya metadataegenskaper läggs till för hand. Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapa ny metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
 
 ## Redigera metadata för en resurs {#editing-metadata-for-an-asset}
 
