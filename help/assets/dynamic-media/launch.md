@@ -2,7 +2,7 @@
 title: Integrera Dynamic Media Viewers med Adobe Analytics och Adobe Launch
 description: Med tillägget Dynamic Media Viewers för Adobe Launch, tillsammans med releasen av Dynamic Media Viewers 5.13, kan kunder som använder Dynamic Media, Adobe Analytics och Adobe Launch använda händelser och data som är specifika för Dynamic Media Viewers i Adobe Launch-konfigurationen.
 translation-type: tm+mt
-source-git-commit: 1713cddf713afc24103a841a7dbae923941f6322
+source-git-commit: e31ac0c2d28f60d7b98036c16f154a09da51d6bf
 workflow-type: tm+mt
 source-wordcount: '6263'
 ht-degree: 16%
@@ -646,7 +646,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
 ## Konfigurera Adobe Experience Manager för integreringen {#configuring-adobe-experience-manager-for-the-integration}
 
-<!-- Prerequisites lost below should be verified by Sasha -->
+<!-- Prerequisites list below should be verified by Sasha -->
 
 Förutsättningar:
 
