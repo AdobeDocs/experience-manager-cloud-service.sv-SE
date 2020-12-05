@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster
 description: Konfigurera och använd de molnbaserade resursmeritjänsterna för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
 workflow-type: tm+mt
-source-wordcount: '2460'
+source-wordcount: '2457'
 ht-degree: 0%
 
 ---
@@ -180,7 +180,7 @@ Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade å
 
 Om det krävs ytterligare bearbetning av resurser som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Detta gör att du kan lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
 
-Efterbehandlingsarbetsflöden, om de är konfigurerade, körs automatiskt av AEM när bearbetningen av mikrotjänsterna har slutförts. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa dem. Exemplen innehåller:
+Efterbehandlingsarbetsflöden, om de är konfigurerade, körs automatiskt av [!DNL Experience Manager] när bearbetningen av mikrotjänsterna har slutförts. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa dem. Exemplen innehåller:
 
 * Anpassade arbetsflödessteg för att bearbeta resurser.
 * Integreringar för att lägga till metadata eller egenskaper i resurser från externa system, till exempel produkt- eller processinformation.
@@ -195,7 +195,7 @@ Att lägga till en arbetsflödeskonfiguration efter bearbetning i Experience Man
 
 ### Skapa arbetsflödesmodeller för efterbearbetning {#create-post-processing-workflow-models}
 
-Arbetsflödesmodeller för efterbearbetning är vanliga AEM arbetsflödesmodeller. Skapa olika modeller om du behöver olika bearbetning för olika databasplatser eller resurstyper.
+Arbetsflödesmodeller för efterbearbetning är vanliga [!DNL Experience Manager] arbetsflödesmodeller. Skapa olika modeller om du behöver olika bearbetning för olika databasplatser eller resurstyper.
 
 Bearbetningssteg ska läggas till baserat på behov. Du kan använda alla steg som stöds, samt alla anpassade arbetsflödessteg.
 
@@ -213,7 +213,7 @@ Tjänsten Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.
 >[!NOTE]
 >
 >Konfigurationen av Custom Workflow Runner är en konfiguration av en OSGi-tjänst. Mer information om hur du distribuerar en OSGi-konfiguration finns i [distribuera till Experience Manager](/help/implementing/deploying/overview.md).
->OSGi-webbkonsolen är inte direkt tillgänglig i distributioner av molntjänster, till skillnad från vid installation på plats och för hanterade AEM.
+>OSGi-webbkonsolen är inte direkt tillgänglig i distributioner av molntjänster, till skillnad från lokala och hanterade tjänster på [!DNL Experience Manager].
 
 Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
 
