@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 40d84fc902f872eae276272b6a975c108b655943
+source-git-commit: d87710badeeb0518a2e51b8abc3974fa77914515
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Dynamic Media har stöd för tangentbordskontroll och hjälpfunktioner som JAWS 
 
 ## Stöd för tangentbordstillgänglighet i Dynamic Media
 
-Eftersom Dynamic Media är ett plugin-program till AEM Assets är det mesta av tangentbordskontrollbeteendet precis som i AEM Assets. Knappen `Cancel` i Dynamic Media har till exempel samma fokus som i AEM Assets och reagerar på `Spacebar`-tangenten som i AEM Assets. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
+Eftersom Dynamic Media är ett plugin-program till Experience Manager Assets är det mesta av tangentbordskontrollbeteendet precis som i Experience Manager Assets. Knappen `Cancel` i Dynamic Media har till exempel samma fokus som i Experience Manager Assets och reagerar på `Spacebar`-tangenten som i Experience Manager Assets. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
 
 Tangentbordslinjer som stöds av enskilda element i användargränssnittet i Dynamic Media är i de flesta fall enkla att upptäcka. Tangentbordskontrollen i Dynamic Media handlar om följande:
 
