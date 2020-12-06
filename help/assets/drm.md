@@ -3,9 +3,9 @@ title: Digital Rights Management in [!DNL Assets]
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager] som en [!DNL Cloud Service].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 836e4e7fa727e350ef757984306b32df25921663
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1272'
 ht-degree: 7%
 
 ---
@@ -37,7 +37,7 @@ Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på
 
 1. I [!DNL Assets]-konsolen klickar du på **[!UICONTROL Search]** i verktygsfältet för att visa Omnissökrutan.
 
-1. Tryck på Retur när markören är i rutan Sök så visas sökresultatsidan.
+1. Markera `Enter`-tangenten med markören i sökrutan för att visa sökresultatsidan.
 
 1. Klicka på ikonen GlobalNav för att visa sökpanelen.
 
@@ -95,7 +95,7 @@ Konsolen [!DNL Assets] kan visa olika lägen för resurser. Beroende på det akt
 
 1. Om du vill söka efter resurser baserat på deras status klickar du på **[!UICONTROL Search]** för att visa omsökningsfältet.
 
-1. Tryck på Retur och klicka på [!DNL Experience Manager] för att visa sökpanelen.
+1. Välj `Return` och klicka på [!DNL Experience Manager] för att visa sökpanelen.
 1. Klicka på **[!UICONTROL Publish Status]** i sökpanelen och välj **[!UICONTROL Published]** för att söka efter publicerade resurser i [!DNL Assets].
 
 1. Klicka på **[!UICONTROL Approval Status]** och klicka på lämpligt alternativ för att söka efter godkända eller avvisade resurser.
