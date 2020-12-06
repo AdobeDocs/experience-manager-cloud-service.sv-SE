@@ -4,9 +4,9 @@ description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
+source-git-commit: 836e4e7fa727e350ef757984306b32df25921663
 workflow-type: tm+mt
-source-wordcount: '2243'
+source-wordcount: '2240'
 ht-degree: 18%
 
 ---
@@ -73,7 +73,7 @@ Du kan dra resurser från resursgränssnittet till en samling. Du kan också ska
 En smart samling använder ett sökvillkor för att dynamiskt fylla i resurser. Du kan skapa en smart samling med enbart filer och inte med mappar eller filer och mappar.
 
 1. Navigera till Assets-gränssnittet och tryck/klicka på ikonen **[!UICONTROL Search]**.
-1. Ange sökordet i rutan Omni Search och tryck på Retur. Tryck/klicka på ikonen GlobalNav för att visa filterpanelen och använda ett sökfilter från sökpanelen.
+1. Ange söknyckelordet i rutan Omni Search och välj `Enter`. Tryck/klicka på ikonen GlobalNav för att visa filterpanelen och använda ett sökfilter från sökpanelen.
 1. Välj **[!UICONTROL Files]** i listan **[!UICONTROL Files & Folders]**.
 1. Tryck/klicka på **[!UICONTROL Save Smart Collection]**.
 1. Ange ett namn för samlingen. Välj **[!UICONTROL Public]** om du vill lägga till DAM-användargruppen med visningsrollen i den smarta samlingen.
@@ -103,7 +103,7 @@ Du kan lägga till resurser i en samling som innehåller en lista med refererade
 Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den sparade sökningen [.](#saved-searches)
 
 1. I resursanvändargränssnittet: tryck/klicka på ikonen **[!UICONTROL Search]** i verktygsfältet.
-1. Tryck på Retur med markören i rutan Omnisch.
+1. Markera `Enter`-tangenten med markören i sökrutan.
 1. Tryck/klicka på ikonen GlobalNav för att visa panelen Filter.
 1. Välj den smarta samling du vill ändra i listan **[!UICONTROL Saved Searches]**. På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
 1. Välj **[!UICONTROL Files]** i listan **[!UICONTROL Files & Folders]**.
@@ -238,7 +238,7 @@ Så här tar du bort sparade sökningar:
 
 1. I resursanvändargränssnittet: tryck/klicka på sökikonen i verktygsfältet.
 
-1. Tryck på Retur när markören är i omsökningsfältet.
+1. Markera `Enter`-tangenten med markören i omsökningsfältet.
 1. Klicka på eller tryck på ikonen GlobalNav för att visa filterpanelen.
 1. I listan **[!UICONTROL Saved Searches]** trycker/klickar du på **[!UICONTROL Delete]** bredvid den smarta samling du vill ta bort.
 1. Tryck/klicka på **[!UICONTROL Delete]** i dialogrutan för att ta bort den sparade sökningen.
@@ -249,7 +249,7 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 
 1. Välj en samling som du vill köra ett arbetsflöde för i samlingskonsolen.
 1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Timeline]** i listan.
-1. Klicka eller tryck på ikonen för cirkumflex längst ned på tidslinjen och tryck/klicka sedan på **[!UICONTROL Start Workflow]**.
+1. Välj eller tryck på ikonen för cirkumflex längst ned på tidslinjen och tryck/klicka sedan på **[!UICONTROL Start Workflow]**.
 1. I avsnittet **[!UICONTROL Start Workflow]** väljer du en arbetsflödesmodell i listan. Välj till exempel modellen **[!UICONTROL DAM Update Asset]**.
 1. Ange en titel för arbetsflödet och tryck/klicka på **[!UICONTROL Start]**.
 1. Tryck/klicka på **[!UICONTROL Proceed]** i dialogrutan. Arbetsflödet körs på alla resurser i samlingen.
