@@ -2,7 +2,7 @@
 title: Söka efter fasetter.
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
 translation-type: tm+mt
-source-git-commit: c80c0063ce0f7c6bc8d99d5078ec8d5f50839732
+source-git-commit: 836e4e7fa727e350ef757984306b32df25921663
 workflow-type: tm+mt
 source-wordcount: '2264'
 ht-degree: 18%
@@ -33,9 +33,9 @@ För textsökningar lägger du till `Fulltext`-predikatet i formuläret. Använd
 
 1. På sidan Redigera sökning i Forms drar du ett predikat från fliken **[!UICONTROL Select Predicate]** till huvudrutan. Dra till exempel **[!UICONTROL Property Predicate]**.
 
-   ![Tryck och flytta ett predikat för att anpassa sökfiltren](assets/drag_predicate.png)
+   ![Markera och flytta ett predikat för att anpassa sökfiltren](assets/drag_predicate.png)
 
-   *Bild: Tryck och flytta ett predikat för att anpassa sökfiltren.*
+   *Bild: Välj och flytta ett predikat för att anpassa sökfiltren.*
 
 1. Ange en fältetikett, platshållartext och beskrivning för predikatet på fliken Inställningar. Ange ett giltigt namn för metadataegenskapen som du vill associera med predikatet. Rubriketiketten på fliken Inställningar identifierar det valda predikatets typ.
 
