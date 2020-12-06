@@ -4,9 +4,9 @@ description: Lär dig hur du söker efter de nödvändiga resurserna i [!DNL Ado
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7f9384b08df70aac2f425b830337e97d711b709e
+source-git-commit: 836e4e7fa727e350ef757984306b32df25921663
 workflow-type: tm+mt
-source-wordcount: '4696'
+source-wordcount: '4694'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 4%
 | [](#tips) Begränsningar och  [tips](#limitations) |  |  |
 | [Illustrerade exempel](#samples) |  |  |
 
-Sök efter resurser med hjälp av Omnissearch-fältet högst upp i [!DNL Experience Manager]-webbgränssnittet. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** i [!DNL Experience Manager], klicka på ![sökikon](assets/do-not-localize/search_icon.png) i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot `/` (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
+Sök efter resurser med hjälp av Omnissearch-fältet högst upp i [!DNL Experience Manager]-webbgränssnittet. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** i [!DNL Experience Manager], klicka på ![sökikon](assets/do-not-localize/search_icon.png) i det övre fältet, ange söknyckelord och välj `Return`. Du kan också använda kortkommandot `/` (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
 
 Använd panelen **[!UICONTROL Filters]** för att söka efter resurser, mappar, taggar och metadata. Du kan filtrera sökresultaten baserat på de olika alternativen (predikaten), t.ex. filtyp, filstorlek, datum då filen senast ändrades, status för resursen, information om insikter och Adobe Stock-licensiering. Du kan anpassa filterpanelen och lägga till eller ta bort sökpredikatorer med [sökfaktorer](/help/assets/search-facets.md). Filtret [!UICONTROL File Type] på panelen [!UICONTROL Filters] har kryssrutor för blandat läge. Om du inte markerar alla kapslade predikat (eller format) markeras därför kryssrutorna på första nivån delvis.
 
@@ -45,7 +45,7 @@ Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
 
 *Bild: Förstå gränssnittet för  [!DNL Experience Manager Assets] sökresultat.*
 
-**A.** Spara sökningen som en smart samling. **B.** Filtrerar eller förutsäger för att begränsa sökresultaten. **C.** Visa filer, mappar eller båda. **D.** Klicka på Filter för att öppna eller stänga den vänstra rutan. **E.** Sökplatsen är DAM. **F.** Omnissearch-fält med söknyckelord som användaren anger. **G.** Välj inlästa sökresultat. **H.** Antal visade sökresultat av totalt antal sökresultat. **I.** Slut på sökning. **J.** Växla mellan kortvyn och listvyn.
+**A.** Spara sökningen som en smart samling. **B.** Filtrerar eller förutsäger för att begränsa sökresultaten. **C.** Visa filer, mappar eller båda. **D.** Klicka på Filter för att öppna eller stänga den vänstra rutan. **E.** Sökplatsen är DAM. **F.** Omnissearch-fält med söknyckelord som användaren anger. **G.** Välj inlästa sökresultat. **H.** Antal visade sökresultat av totalt antal sökresultat. **I.** Slut sökord. **J.** Växla mellan kortvyn och listvyn.
 
 ### Dynamiska sökfacets {#dynamicfacets}
 
@@ -254,7 +254,7 @@ Sökfunktionen i [!DNL Experience Manager Assets] har följande begränsningar:
 * Ange inget radavståndsutrymme i sökfrågan, annars fungerar inte sökningen.
 * [!DNL Experience Manager] kan fortsätta att visa söktermen efter att du har valt egenskaper för en resurs bland sökresultaten och sedan avbryta sökningen.  <!-- (CQ-4273540) -->
 * När du söker efter mappar, filer och mappar kan sökresultaten inte sorteras efter någon parameter.
-* Om du trycker på Retur utan att skriva in Omnissearch bar returnerar [!DNL Experience Manager] bara en lista med filer och inte mappar. Om du söker specifikt efter mappar utan att använda ett nyckelord returnerar [!DNL Experience Manager] inga resultat.
+* Om du väljer `Return` utan att skriva in Omnissearch bar returnerar [!DNL Experience Manager] bara en lista över filer och inte mappar. Om du söker specifikt efter mappar utan att använda ett nyckelord returnerar [!DNL Experience Manager] inga resultat.
 
 Visuell sökning eller likhetssökning har följande begränsningar:
 
