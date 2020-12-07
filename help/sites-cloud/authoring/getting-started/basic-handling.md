@@ -2,7 +2,7 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 translation-type: tm+mt
-source-git-commit: 996a1b49889816d3b887d8d568ec56b72bd99074
+source-git-commit: 305f584d89bc92f89b3ddaa49bb5da2f10e567db
 workflow-type: tm+mt
 source-wordcount: '2864'
 ht-degree: 4%
@@ -95,7 +95,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
 * [Sökning](/help/sites-cloud/authoring/getting-started/search.md)
 
-   ![Sökknapp](/help/sites-cloud/authoring/assets/search-button.png)
+   ![Ikonen Sök](/help/sites-cloud/authoring/assets/search-icon.png)
 
    Du kan också använda kortkommandot [](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökning från en konsol.
 
