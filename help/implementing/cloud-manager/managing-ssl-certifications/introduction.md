@@ -2,9 +2,9 @@
 title: Introduktion - Hantera SSL-certifikat
 description: Introduktion - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: 74cc587874c4d0a0ef9b542549801198d4f2d7a5
+source-git-commit: fecbd0b4d5cfd8aa970c235c79158bea44403c09
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Med Cloud Manager kan kunderna själva installera SSL-certifikat via användargr
 
 Cloud Manager stöder följande SSL-certifikatkrav för kunder:
 
-* Ett SSL-certifikat kan användas i flera miljöer - Lägg till en gång och använd flera gånger.
+* Ett SSL-certifikat kan användas i flera miljöer, det vill säga lägga till en gång och använda flera gånger.
 * Varje Cloud Manager-miljö kan använda flera certifikat.
 * En privat nyckel kan utfärda flera SSL-certifikat.
 * Varje certifikat innehåller vanligtvis flera domäner.
@@ -30,6 +30,8 @@ Cloud Manager stöder följande SSL-certifikatkrav för kunder:
 
 Med hjälp av SSL-certifikat för användargränssnittet i Cloud Manager kan en användare med behörighet utföra flera åtgärder för att hantera SSL-certifikat för ett program:
 
-* Lägger till ett SSL-certifikat.
-* Visa, uppdatera eller ersätta ett SSL-certifikat. Med de här åtgärderna kan du visa information eller ersätta ett certifikat som snart upphör att gälla.
-* Tar bort ett SSL-certifikat.
+* Lägga till ett SSL-certifikat
+* Visa, uppdatera eller ersätta ett SSL-certifikat
+   >[!NOTE]
+   >Med de här åtgärderna kan du visa information eller ersätta ett certifikat som snart upphör att gälla.
+* Ta bort ett SSL-certifikat
