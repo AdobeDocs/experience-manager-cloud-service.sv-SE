@@ -2,7 +2,7 @@
 title: Sökning
 description: Hitta materialet snabbare med omfattande sökfunktioner
 translation-type: tm+mt
-source-git-commit: f04dd39a5a22f44f976f2e473689780099f10f9a
+source-git-commit: 305f584d89bc92f89b3ddaa49bb5da2f10e567db
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 6%
@@ -18,7 +18,7 @@ I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende 
 
 Sökfunktionen finns i det övre verktygsfältet:
 
-![Sökknapp](/help/sites-cloud/authoring/assets/search-button.png)
+![Ikonen Sök](/help/sites-cloud/authoring/assets/search-icon.png)
 
 Med sökfältet kan du:
 
