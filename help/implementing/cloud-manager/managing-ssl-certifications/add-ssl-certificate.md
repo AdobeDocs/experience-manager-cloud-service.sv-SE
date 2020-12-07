@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 description: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: e27e5302802e68dce2a5713626950896bb35420a
+source-git-commit: b6911f0b8674550713bd4ec1e34be5d0a14cc427
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,13 @@ ht-degree: 0%
 # Lägger till ett SSL-certifikat {#adding-an-ssl-certificate}
 
 >[!NOTE]
->Ett certifikat tar några dagar att etablera och vi rekommenderar att certifikatet etableras även månader i förväg. Gå till Så här hämtar du ett SSL-certifikat om du vill veta mer.INSERT LINK
+>AEM som Cloud Service accepterar endast OV- (Organization Validation) eller EV-certifikat (Extended Validation). DV-certifikat (domänvalidering) godkänns inte.
+
+Ett certifikat tar några dagar att etablera och vi rekommenderar att certifikatet etableras även månader i förväg. Mer information finns i Hämta ett SSL-certifikat.
 
 ## Certifikatformat {#certificate-format}
 
-SSL-filer måste vara i PEM-format för att kunna installeras i Cloud Manager. Vanliga filtillägg i PEM-format är .pem, .crt, .cer och .cert.
+SSL-filer måste vara i PEM-format för att kunna installeras i Cloud Manager. Vanliga filtillägg i PEM-format är `.pem,`.`crt`,  `.cer`och  `.cert`.
 
 Följ stegen nedan för att konvertera SSL-filernas format till PEM:
 
@@ -37,21 +39,22 @@ Följ stegen nedan för att konvertera SSL-filernas format till PEM:
 
 >[!NOTE]
 >* En användare måste ha rollen Business Owner eller Deployment Manager för att kunna installera ett SSL-certifikat i Cloud Manager.
->* Molnhanteraren tillåter vid en given tidpunkt maximalt 5 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen.
+>* Molnhanteraren tillåter vid en given tidpunkt högst 10 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen.
 
+
+Följ stegen nedan för att lägga till ett certifikat:
 
 1. Logga in på Cloud Manager.
 1. Navigera till miljöskärmen från sidan Översikt.
-1. Navigera till SSL-certifikatskärmen på den vänstra navigeringsmenyn. En tabell med information om eventuella befintliga SSL-certifikat visas på den här skärmen.INSERT IMAGE
+1. Navigera till SSL-certifikatskärmen på den vänstra navigeringsmenyn. En tabell med information om eventuella befintliga SSL-certifikat visas på den här skärmen.
 1. Välj knappen **Lägg till certifikat** för att starta en guide.
-1. Ange ett namn för certifikatet. Det kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
-1. Klistra in innehållet i Certifikat, Privat nyckel och Kedja i sina respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
-1. Välj **Spara**.
+   1. Ange ett namn för certifikatet. Det kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
+   1. Klistra in innehållet i Certifikat, Privat nyckel och Kedja i sina respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
 
-   >[!NOTE]
-   >Alla fel som upptäcks visas. Du måste åtgärda alla fel innan certifikatet kan sparas. Mer information om hur du åtgärdar vanliga fel finns i INSERT LINK-fel för certifikat.
+      >[!NOTE]
+      >Alla tre fälten är inte valfria och måste inkluderas.
+1. När du har skickat certifikatet visas det som en ny rad i tabellen.
 
-   När du har skickat certifikatet visas det som en ny rad i tabellen.
 
 ## Certifikatfel {#certificate-errors}
 
