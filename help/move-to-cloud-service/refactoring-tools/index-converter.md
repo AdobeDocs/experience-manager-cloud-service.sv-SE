@@ -2,9 +2,9 @@
 title: Indexkonverterare
 description: Indexkonverterare
 translation-type: tm+mt
-source-git-commit: adfc453729b88a9cc457783806eb7b4d69150b21
+source-git-commit: fecbd0b4d5cfd8aa970c235c79158bea44403c09
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -34,5 +34,5 @@ Det finns två sätt att skapa anpassade indexdefinitioner för eko:
 >[!NOTE]
 >Även om du bör använda verktyget Indexkonverterare via [AIO CLI-plugin för källmigrering](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration), kan det också köras fristående.
 
-Se **[Git-resurs: aem-cs-source-migration-index-converter](https://git.corp.adobe.com/vavarshn/aem-cloud-service-source-migration/blob/master/packages/index-converter/README.md)** om du vill veta hur du installerar och använder plugin-programmet.
+Se **[Git-resurs: aem-cs-source-migration-index-converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter)** om du vill veta hur du installerar och använder plugin-programmet.
 
