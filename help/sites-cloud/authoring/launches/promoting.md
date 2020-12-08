@@ -2,9 +2,9 @@
 title: Marknadsföra Launches
 description: 'Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. '
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 14fb0cfc39bbb1322edd4e6ae9d1d15db4e54483
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -47,11 +47,14 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 Du kan befordra starter från antingen konsolen **Platser** eller konsolen **Startar**:
 
 1. Öppna:
-   * Konsolen **Platser**:
+   * Konsolen **Platser** när du navigerar på källsidor:
       1. Öppna [referenslinjen](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references) och välj önskad källsida med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md) (eller markera och öppna referenslinjen, ordningen är inte viktig). Alla referenser visas.
       1. Välj **Startar** (t.ex. Startar (1)) för att visa en lista över specifika starter.
       1. Välj den specifika starten för att visa tillgängliga åtgärder.
       1. Välj **Befordra start** för att öppna guiden.
+   * Konsolen **Platser** vid navigering till startsidor:
+      1. Välj önskad startsida med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md).
+      1. Åtgärden **Befordra** är tillgänglig i verktygsfältet.
    * **Startar**-konsolen:
       1. Välj start (tryck/klicka på miniatyrbilden).
       1. Välj **Befordra**.
