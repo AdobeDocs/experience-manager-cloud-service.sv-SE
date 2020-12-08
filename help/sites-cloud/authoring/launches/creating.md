@@ -2,10 +2,10 @@
 title: Skapa Launches
 description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny version av befintliga webbsidor för framtida aktivering.
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 035c6d862bf28fe2a6fbdbbf32dff45fa09dbd8c
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 14%
+source-wordcount: '998'
+ht-degree: 12%
 
 ---
 
@@ -120,13 +120,15 @@ Genom att skapa en kapslad programstart (starta vid en programstart) kan du skap
 Att skapa en kapslad start från konsolen **Launches** är i princip detsamma som att skapa någon annan typ av start, med det undantaget att du måste navigera till startgrenen `/content/launches`:
 
 1. Välj **Skapa** i konsolen **Starta**.
-1. Välj **Lägg till sidor** och navigera sedan till startgrenen genom att ange `/content/launches` i filtret. Välj önskad start och bekräfta med **Välj**:
+1. Välj **Lägg till sidor** och navigera sedan till startgrenen genom att ange `/content/launches` i **filterfältet**. Välj önskad start och bekräfta med **Välj**:
 
    ![Skapa en kapslad start](/help/sites-cloud/authoring/assets/launches-create-nested.png)
 
-1. Fortsätt med **Nästa** och fyll i **Egenskaper** som vid andra starter.
+1. Fortsätt med **Nästa**.
 
-   ![Välj källa för kapslad start](/help/sites-cloud/authoring/assets/launches-create-nested-select.png)
+1. Fyll i **Egenskaper** som vid andra starter.
+
+1. Slutförd med **Skapa**.
 
 #### Skapa en kapslad start - platskonsol {#creating-a-nested-launch-sites-console}
 
