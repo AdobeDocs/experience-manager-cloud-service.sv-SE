@@ -2,9 +2,9 @@
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 translation-type: tm+mt
-source-git-commit: 395e936c34d7d7fdece8f57c773d07a244f880e4
+source-git-commit: 14fb0cfc39bbb1322edd4e6ae9d1d15db4e54483
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '878'
 ht-degree: 6%
 
 ---
@@ -84,22 +84,31 @@ Med Launes kan du:
 >
 >Kontakta systemadministratören om du får problem.
 
-### Startar konsolen {#the-launches-console}
-
-På startkonsolen får du en översikt över dina starter och kan vidta åtgärder för dem som visas. Konsolen kan nås av:
-
-* **Verktyg**-konsolen: **Verktyg**, **Platser**, **Startar**.
-
-* Eller direkt med `https://<host>:<port>/libs/launches/content/launches.html`
-
 ## Startar i referenser (platskonsolen) {#launches-in-references-sites-console}
 
 1. Gå till startkällan i konsolen **Platser**.
 1. Öppna **Referenser**-listen och välj källsidan.
-1. Välj **Startar**. Befintliga starter visas:
+1. Välj **Startar**. Befintliga starter visas tillsammans med åtkomst till **startkonsolen**:
 
    ![Referenser till starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references.png)
 
 1. Tryck/klicka på lämplig start så visas listan med möjliga åtgärder:
 
    ![Åtgärder som ska vidtas vid starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references-actions.png)
+
+## Startar konsolen {#the-launches-console}
+
+På startkonsolen får du en översikt över dina starter och kan vidta åtgärder för dem som visas. Konsolen kan nås av:
+
+* **Verktyg**-konsolen: **Verktyg**, **Platser**, **Startar**.
+
+* **Startar** Console längst ned i avsnittet  **** Starta i  **** referensfältet när du navigerar i källinnehåll i webbplatskonsolen.
+
+   ![Startar konsolen i referenser till starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references.png)
+
+* Knappen **Startar** längst upp till höger när du navigerar till startinnehåll i webbplatskonsolen:
+
+   ![Startar alternativ i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-console-navigate-launch-content.png)
+
+* Eller direkt, till exempel med:
+   `https://<host>:<port>/libs/launches/content/launches.html`
