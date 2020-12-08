@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 82f50e50bb93baa280a981708277dd63004b101f
+source-git-commit: 2910d5c1d32ca58f6634204bac882fccb3e65bf3
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2239'
 ht-degree: 1%
 
 ---
@@ -122,7 +122,7 @@ Loggnivåerna är följande:
 
 Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande inte hämtas på ett självbetjäningssätt. Under tiden kontaktar du AEM om tråddumpar behövs för att felsöka ett problem och ange exakt tidsfönster.
 
-## CRX/DE Lite och System Console {#crxde-lite-and-system-console}
+## CRX/DE Lite och Developer Console {#crxde-lite-and-developer-console}
 
 ### Lokal utveckling {#local-development}
 
@@ -132,7 +132,7 @@ Observera att vid lokal utveckling (med molnklar snabbstart) kan `/apps` och `/l
 
 ### AEM som ett utvecklingsverktyg för Cloud Service {#aem-as-a-cloud-service-development-tools}
 
-Kunderna har tillgång till CRXDE-stilen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det uppstår fel.
+Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det uppstår fel.
 
 En uppsättning verktyg för felsökning AEM som utvecklingsmiljö finns i Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
