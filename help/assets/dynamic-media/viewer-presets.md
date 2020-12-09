@@ -1,8 +1,8 @@
 ---
-title: Använda förinställningar för Dynamic Media Viewer
-description: Lär dig hur du använder visningsförinställningar i Dynamic Media
+title: Använda förinställningar för Dynamic Media-visningsprogram
+description: Lär dig hur du använder förinställningar för visningsprogram i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 0f6baa02d612a790fbeed9f8c9d356e0d96c5093
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 24%
@@ -19,9 +19,9 @@ Om du är administratör och behöver hantera, skapa, sortera och ta bort visnin
 Se även [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
 Du kanske inte behöver publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
-Eventuella problem med visningsförinställningar finns i [Felsökning av dynamiska media](troubleshoot-dm.md#viewers).
+Information om problem med visningsförinställningar finns i [Felsöka Dynamic Media](troubleshoot-dm.md#viewers).
 
-## Använda en förinställning för Dynamic Media Viewer på en resurs {#applying-a-viewer-preset-to-an-asset}
+## Använda en förinställning för Dynamic Media-visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
 
 1. Öppna resursen och tryck på **[!UICONTROL Viewers]** i den vänstra rutan.
 
