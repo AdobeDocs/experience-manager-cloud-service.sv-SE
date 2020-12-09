@@ -2,9 +2,9 @@
 title: Marknadsföra Launches
 description: 'Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. '
 translation-type: tm+mt
-source-git-commit: 14fb0cfc39bbb1322edd4e6ae9d1d15db4e54483
+source-git-commit: 645d25753e4baa03ba4df0645a266b793ec64a49
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '817'
 ht-degree: 1%
 
 ---
@@ -64,6 +64,7 @@ Du kan befordra starter från antingen konsolen **Platser** eller konsolen **Sta
    * **Omfång**
       * **Befordra en fullständig lansering**
       * **Befordra ändrade sidor**
+      * **Befordra godkända sidor**  - beroende på arbetsflödet för godkännande vid start
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
 
@@ -75,7 +76,7 @@ Du kan befordra starter från antingen konsolen **Platser** eller konsolen **Sta
       >
       >Detta omfattar en enstaka programstart, om du har kapslade programstarter, se [Befordra en kapslad start](#promoting-a-nested-launch).
 1. Välj **Nästa** för att fortsätta.
-1. Du kan granska de sidor som ska befordras, vilket beror på vilket sidintervall du har valt:
+1. Du kan granska de sidor som ska befordras; dessa beror på vilket sidintervall du har valt:
 
    ![Granska kampanj](/help/sites-cloud/authoring/assets/launches-promote-review.png)
 
@@ -106,6 +107,7 @@ När du har skapat en kapslad start kan du befordra den tillbaka till någon av 
    * **Omfång**  - Här kan du välja om du vill befordra hela starten eller bara de sidor som faktiskt har redigerats. Om det är det senare kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
       * **Befordra en fullständig lansering**
       * **Befordra ändrade sidor**
+      * **Befordra godkända sidor**  - beroende på arbetsflödet för godkännande vid start
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
 
