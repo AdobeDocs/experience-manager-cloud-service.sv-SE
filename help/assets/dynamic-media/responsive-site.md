@@ -1,10 +1,10 @@
 ---
 title: Leverera optimerade bilder för en responsiv webbplats
-description: Så här använder du funktionen för responsiv kod för att leverera optimerade bilder
+description: Lär dig hur du använder funktionen för responsiv kod för att leverera optimerade bilder från Dynamic Media.
 translation-type: tm+mt
-source-git-commit: d6e92a433e61c2a959c62080fcd52fe0ebe67c4f
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '312'
 ht-degree: 13%
 
 ---
@@ -45,6 +45,6 @@ Se även [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplicati
 
 ## Använda HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-delivery-your-dynamic-media-assets}
 
-HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan levereras med HTTP/2 som ger bättre respons och laddningstider.
+HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Leverans av Dynamic Media-resurser stöds med HTTP/2 som ger bättre respons och laddningstider.
 
 Se [HTTP2 Delivery of Content](http2faq.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
