@@ -1,16 +1,16 @@
 ---
-title: Lägga till dynamiska medieresurser på sidor
-description: Lägga till komponenter för dynamiska media på en sida i Experience Manager
+title: Lägga till Dynamic Media-resurser på sidor
+description: Så här lägger du till Dynamic Media-komponenter på en sida i Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 79d4e51db99e2c1f8b18edd7249a26f4be7169e1
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
-source-wordcount: '2998'
+source-wordcount: '3003'
 ht-degree: 8%
 
 ---
 
 
-# Lägga till dynamiska medieresurser på sidor{#adding-dynamic-media-assets-to-pages}
+# Lägga till Dynamic Media-resurser på sidor{#adding-dynamic-media-assets-to-pages}
 
 Om du vill lägga till Dynamic Media-funktionen i resurser som används på era webbplatser kan du lägga till komponenten **dynamiska medier**, **interaktiva medier**, **panoramamedier** eller **360-videomedier** direkt på sidan. Det gör du genom att gå in i layoutläget och aktivera Dynamic Media-komponenterna. Sedan kan du lägga till komponenterna på sidan och lägga till resurser i komponenterna. Dynamic Media-komponenterna är smarta – de känner av om du lägger till en bild eller en video och konfigurationsalternativen ändras i enlighet med detta.
 
@@ -18,18 +18,18 @@ Du lägger till Dynamic Media-resurser direkt på sidan om du använder Experien
 
 >[!NOTE]
 >
->Du måste publicera resurser innan du lägger till dem på sidor i Experience Manager. Se [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+>Du måste publicera resurser innan du lägger till dem på sidor i Experience Manager. Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 ## Lägga till en Dynamic Media-komponent på en sida {#adding-a-dynamic-media-component-to-a-page}
 
-Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panoramic Media, Smart Crop Video eller Video 360 Media på en sida är detsamma som att lägga till en komponent på en sida. Komponenterna för dynamiska media beskrivs i följande avsnitt.
+Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panoramic Media, Smart Crop Video eller Video 360 Media på en sida är detsamma som att lägga till en komponent på en sida. Dynamic Media-komponenterna beskrivs i följande avsnitt.
 
 **Lägga till en Dynamic Media-komponent på en sida**
 
-1. Öppna sidan i Experience Manager där du vill lägga till komponenten Dynamic Media.
+1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
 1. Tryck på ikonen **[!UICONTROL Components]** i den vänstra rutan och filtrera sedan efter Dynamic Media.
 
-   Om det inte finns någon lista över dynamiska mediakomponenter behöver du troligen aktivera de dynamiska mediakomponenter som du vill använda. Se [Aktivera komponenter för dynamiska media](#enabling-dynamic-media-components).
+   Om det inte finns någon lista över Dynamic Media-komponenter behöver du troligen aktivera de Dynamic Media-komponenter som du vill använda. Se [Aktivera Dynamic Media-komponenter](#enabling-dynamic-media-components).
 
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
@@ -41,7 +41,7 @@ Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panorami
 
 1. Beroende på vilken Dynamic Media-komponent du släppte på sidan öppnas en konfigurationsdialogruta. [Ställ in komponentens ](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md#dynamic-media-components) alternativ efter behov.
 
-   I exemplet nedan visas dialogrutan för komponenten Dynamic Media **[!UICONTROL Video 360 Media]** och de alternativ som är tillgängliga i listrutan för visningsförinställningar.
+   I exemplet nedan visas dialogrutan för Dynamic Media **[!UICONTROL Video 360 Media]**-komponenten och de alternativ som är tillgängliga i listrutan för visningsförinställningar.
 
    ![Video 360 Media-komponent](assets/6_5_360video_wcmcomponentviewerpreset.png)
 
@@ -49,11 +49,11 @@ Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panorami
 
 1. När du är klar trycker du på bockmarkeringen i dialogrutans övre högra hörn för att spara ändringarna.
 
-### Aktivera komponenter för dynamiska media {#enabling-dynamic-media-components}
+### Aktivera Dynamic Media-komponenter {#enabling-dynamic-media-components}
 
-Om det inte finns några tillgängliga Dynamic Media-komponenter att lägga till på en sida betyder det troligen att du först måste aktivera de komponenter som du vill använda.
+Om det inte finns några Dynamic Media-komponenter att lägga till på en sida betyder det troligtvis att du först måste aktivera de komponenter som du vill använda.
 
-1. Öppna sidan i Experience Manager där du vill lägga till komponenten Dynamic Media.
+1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
 1. Tryck på ikonen Sidinformation till vänster i verktygsfältet längst upp på sidan och tryck sedan på **[!UICONTROL Edit Template]** i listrutan.
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
@@ -68,17 +68,17 @@ Om det inte finns några tillgängliga Dynamic Media-komponenter att lägga till
    ![Tillåtna komponenter](/help/assets/assets-dm/allowed-components.png)
 
 1. Rulla tills du ser **[!UICONTROL Dynamic Media]**.
-1. Tryck på ikonen > till vänster om **[!UICONTROL Dynamic Media]** för att utöka listan och välj de dynamiska mediakomponenter som du vill aktivera.
+1. Tryck på ikonen > till vänster om **[!UICONTROL Dynamic Media]** för att utöka listan och markera de Dynamic Media-komponenter som du vill aktivera.
 
-   ![Lista med komponenter för dynamiska media](/help/assets/assets-dm/dm-components-select.png)
+   ![Lista över komponenter i Dynamic Media](/help/assets/assets-dm/dm-components-select.png)
 
 1. I närheten av det övre högra hörnet på sidan **[!UICONTROL Layout Container]** trycker du på ikonen Klar (bock).
 
 1. Till höger om verktygsfältet uppe på sidan trycker du på **[!UICONTROL Initial Content]** i listrutan och sedan [lägger du till en Dynamic Media-komponent på en sida](#adding-a-dynamic-media-component-to-a-page) som vanligt.
 
-## Lokalisera dynamiska mediakomponenter {#localizing-dynamic-media-components}
+## Lokaliserar Dynamic Media-komponenter {#localizing-dynamic-media-components}
 
-Du kan lokalisera komponenter för dynamiska media på ett av två sätt:
+Du kan lokalisera Dynamic Media-komponenter på ett av två sätt:
 
 * Från en webbsida i Sites öppnar du **[!UICONTROL Properties]** och väljer fliken **[!UICONTROL Advanced]**. Välj språk för lokalisering.
 
@@ -90,11 +90,11 @@ Du kan lokalisera komponenter för dynamiska media på ett av två sätt:
    >
    >Observera att inte alla språk som är tillgängliga på **[!UICONTROL Language]**-menyn har tokens tilldelade.
 
-## Tillgängliga dynamiska mediakomponenter {#dynamic-media-components}
+## Tillgängliga Dynamic Media-komponenter {#dynamic-media-components}
 
-Dynamiska mediekomponenter är tillgängliga när du trycker på ikonen **[!UICONTROL Components]** och sedan filtrerar på **[!UICONTROL Dynamic Media]**.
+Dynamic Media-komponenter är tillgängliga när du trycker på ikonen **[!UICONTROL Components]** och sedan filtrerar på **[!UICONTROL Dynamic Media]**.
 
-De dynamiska mediakomponenterna som är tillgängliga omfattar följande:
+Följande Dynamic Media-komponenter är tillgängliga:
 
 * **[!UICONTROL Dynamic Media]** – Används för t.ex. bilder, video, e-kataloger och rotationsuppsättningar.
 * **[!UICONTROL Interactive Media]** - Använd för interaktiva resurser som interaktiv video, interaktiva bilder eller karuselluppsättningar.
@@ -107,34 +107,34 @@ De dynamiska mediakomponenterna som är tillgängliga omfattar följande:
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
-### Komponent: Dynamiska media {#dynamic-media-component}
+### Komponent: Dynamic Media {#dynamic-media-component}
 
-Komponenten Dynamic Media är smart. Beroende på om du lägger till en bild eller en video har du olika alternativ. Komponenten har stöd för bildförinställningar, bildbaserade visningsprogram som bilduppsättningar, snurra, blandade medieuppsättningar och video. Dessutom är visningsprogrammet responsivt - skärmstorleken ändras automatiskt baserat på skärmstorleken. Alla visningsprogram är HTML5-visningsprogram.
+Dynamic Media-komponenten är smart. Beroende på om du lägger till en bild eller en video har du olika alternativ. Komponenten har stöd för bildförinställningar, bildbaserade visningsprogram som bilduppsättningar, snurra, blandade medieuppsättningar och video. Dessutom är visningsprogrammet responsivt - skärmstorleken ändras automatiskt baserat på skärmstorleken. Alla visningsprogram är HTML5-visningsprogram.
 
 >[!NOTE]
 >
 >Om din webbsida har följande:
 >
->* Flera instanser av komponenten Dynamic Media används på samma sida.
+>* Flera instanser av Dynamic Media-komponenten som används på samma sida.
 >* Varje instans använder samma resurstyp.
 
 >
 >
 Tänk på att det inte går att tilldela olika visningsprogramförinställningar till varje Dynamic Media-komponent på den sidan.
 >
->Du kan dock använda samma visningsförinställning för alla komponenter för dynamiska media som använder resurser av samma typ på sidan.
+>Du kan dock använda samma visningsförinställning för alla Dynamic Media-komponenter som använder resurser av samma typ på sidan.
 
-När du lägger till komponenten Dynamic Media och **[!UICONTROL Dynamic Media Settings]** är tom eller du inte kan lägga till en resurs korrekt bör du kontrollera följande:
+När du lägger till Dynamic Media-komponenten och **[!UICONTROL Dynamic Media Settings]** är tom eller du inte kan lägga till en resurs korrekt bör du kontrollera följande:
 
 * Bilden har en pyramidformad fil. Bilder som importerats innan dynamiska medier har aktiverats har ingen pyramiddiff-fil.
 
 #### När du arbetar med bilder {#when-working-with-images}
 
-Med komponenten Dynamic Media kan du lägga till dynamiska bilder, inklusive bilduppsättningar, snurpuppsättningar och blandade medieuppsättningar. Du kan zooma in, zooma ut och, om tillämpligt, vrida en bild i en snurra eller välja en bild från en annan typ av uppsättning.
+Med Dynamic Media-komponenten kan du lägga till dynamiska bilder, inklusive bilduppsättningar, snurremsor och blandade medieuppsättningar. Du kan zooma in, zooma ut och, om tillämpligt, vrida en bild i en snurra eller välja en bild från en annan typ av uppsättning.
 
 Du kan också konfigurera visningsförinställningen, bildförinställningen eller bildformatet direkt i komponenten. Om du vill göra en bild responsiv kan du antingen ange brytpunkter eller använda en responsiv bildförinställning.
 
-Du kan redigera följande dynamiska mediainställningar genom att trycka på ikonen **[!UICONTROL Edit]** i komponenten och sedan **[!UICONTROL Dynamic Media Settings]**.
+Du kan redigera följande Dynamic Media-inställningar genom att trycka på ikonen **[!UICONTROL Edit]** i komponenten och sedan **[!UICONTROL Dynamic Media Settings]**.
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
@@ -179,15 +179,15 @@ Du kan redigera följande dynamiska mediainställningar genom att trycka på iko
 
 #### När du arbetar med video {#when-working-with-video}
 
-Använd komponenten Dynamic Media för att lägga till dynamisk video på dina webbsidor. När du redigerar komponenten kan du välja att använda en fördefinierad videovisningsförinställning för att spela upp videon på sidan.
+Använd Dynamic Media-komponenten för att lägga till dynamisk video på dina webbsidor. När du redigerar komponenten kan du välja att använda en fördefinierad videovisningsförinställning för att spela upp videon på sidan.
 
 ![chlimage_1-173](assets/chlimage_1-540.png)
 
-Du kan redigera följande dynamiska mediainställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
+Du kan redigera följande Dynamic Media-inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
 >[!NOTE]
 >
->Som standard är videokomponenten för dynamiska media adaptiv. Om du vill göra den till en fast storlek anger du den i komponenten med **[!UICONTROL Width]** och **[!UICONTROL Height]** på fliken **[!UICONTROL Advanced]**.
+>Som standard är videokomponenten i Dynamic Media adaptiv. Om du vill göra den till en fast storlek anger du den i komponenten med **[!UICONTROL Width]** och **[!UICONTROL Height]** på fliken **[!UICONTROL Advanced]**.
 
 * **[!UICONTROL Viewer preset]**- Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram.
 
@@ -208,15 +208,15 @@ Du kan redigera följande dynamiska mediainställningar genom att klicka på **[
 
 #### När du arbetar med smart beskärning {#when-working-with-smart-crop}
 
-Använd komponenten Dynamic Media för att lägga till bildresurser för smart beskärning på dina webbsidor. När du redigerar komponenten kan du välja att använda en fördefinierad videovisningsförinställning för att spela upp videon på sidan.
+Använd Dynamic Media-komponenten för att lägga till bildresurser för Smart beskärning på dina webbsidor. När du redigerar komponenten kan du välja att använda en fördefinierad videovisningsförinställning för att spela upp videon på sidan.
 
-Se [Använda smart beskärning med Experience Manager Assets Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)
+Se [Använda smart beskärning med Experience Manager-resurser Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)
 
 Se även [Bildprofiler](/help/assets/dynamic-media/image-profiles.md).
 
 ![dm-settings-smart-crop](assets/dm-settings-smart-crop.png)
 
-Du kan redigera följande dynamiska mediainställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
+Du kan redigera följande Dynamic Media-inställning genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
 >[!NOTE]
 >
@@ -340,7 +340,7 @@ Se [HTTP2 Delivery of Content](/help/assets/dynamic-media/http2faq.md) för full
 >* [Använda videospelaren i Experience Manager Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-video-player-feature-video-use.html)
 >* [Använda interaktiv video med Experience Manager Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-interactive-video-feature-video-use.html)
 >* [Om resursvisningsprogrammet med Experience Manager Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-feature-video-understand.html)
->* [Använda anpassade videominiatyrer med Experience Manager Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-video-thumbnails-feature-video-use.html)
+>* [Använda anpassade videominiatyrbilder med Experience Manager Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-video-thumbnails-feature-video-use.html)
 >* [Färghantering med Experience Manager Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-color-management-technical-video-setup.html)
 >* [Använda bildskärpa med Experience Manager Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-image-sharpening-feature-video-use.html)
 
