@@ -1,10 +1,10 @@
 ---
 title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
-description: Lär dig bädda in Dynamic Media-video eller -bilder på en webbsida
+description: Lär dig bädda in Dynamic Media video- eller bildresurser på en webbsida.
 translation-type: tm+mt
-source-git-commit: 7dae5c0ed82687415719cd2d72f98028cf0a8e64
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '363'
 ht-degree: 21%
 
 ---
