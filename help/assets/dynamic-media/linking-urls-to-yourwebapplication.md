@@ -1,8 +1,8 @@
 ---
 title: Länka URL till ett webbprogram
-description: Länka URL:er till webbprogrammet i dynamiska medier
+description: Länka URL:er till ditt webbprogram i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 10%
@@ -12,7 +12,7 @@ ht-degree: 10%
 
 # Länka URL till ett webbprogram {#linking-urls-to-your-web-application}
 
-Dina webbplatser och tillämpningar har åtkomst till Dynamic Media-tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
+Dina webbplatser och tillämpningar har åtkomst till Dynamic Media tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
 Du länkar bara till URL:er om du är *inte* och använder AEM som WCM. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
@@ -82,7 +82,7 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
 ## Hämta en URL för en statisk resurs {#obtaining-a-url-for-a-static-asset}
 
-Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare resurser utöver bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
+Dynamic Media stöder leverans av statiskt material, som är ytterligare material utöver bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
 
 * 3D-filer
 * Animerad GIF
