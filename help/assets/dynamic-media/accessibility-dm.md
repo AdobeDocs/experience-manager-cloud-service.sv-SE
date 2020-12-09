@@ -1,11 +1,11 @@
 ---
 title: Hjälpmedel i [!DNL Dynamic Media]
-description: Läs mer om tillgänglighet i Dynamic Media och Dynamic Media Viewer
+description: Läs mer om tillgänglighet i Dynamic Media och Dynamic Media Viewer.
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: d87710badeeb0518a2e51b8abc3974fa77914515
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 ---
 
 
-# Hjälpmedel i dynamiska media {#working-with-three-d-assets-dm}
+# Tillgänglighet i Dynamic Media {#working-with-three-d-assets-dm}
 
-Dynamic Media har stöd för tangentbordskontroll och hjälpfunktioner som JAWS och NVDA-skärmläsare i hela användargränssnittet.
+Dynamic Media har stöd för tangentbordskontroll och hjälpmedelstekniker som JAWS och NVDA-skärmläsare i hela användargränssnittet.
 
 ## Stöd för tangentbordstillgänglighet i Dynamic Media
 
@@ -46,18 +46,18 @@ Se [Redigera den smarta beskärningen eller den smarta färgrutan för en enskil
 
 ## Stöd för hjälpfunktioner i Dynamic Media {#assistive-technology=support-for-dm}
 
-Elementen i användargränssnittet i Dynamic Media fungerar med hjälpmedelstekniker som skärmläsare. Det känner till exempel igen landmärken på en sida när du navigerar mellan landmärken med kortkommandot `D` eller regioner med kortkommandot `R`. Rubriken visas också med en berättarröst när du navigerar med rubrikens kortkommando `H`.
+Dynamic Media gränssnittselement fungerar med hjälpmedelstekniker som skärmläsare. Det känner till exempel igen landmärken på en sida när du navigerar mellan landmärken med kortkommandot `D` eller regioner med kortkommandot `R`. Rubriken visas också med en berättarröst när du navigerar med rubrikens kortkommando `H`.
 
 ## Stöd för tangentbordstillgänglighet i Dynamic Media-visningsprogram {#keyboard-accessibility-for-dm-viewers}
 
-Alla komponenter för dynamiska medievisningsprogram som är färdiga att användas stöder tangentbordstillgänglighet för dina kunder.
+Alla färdiga Dynamic Media-visningsprogram har stöd för tangentbordstillgänglighet för dina kunder.
 
-Se [Tangentbordstillgänglighet och -navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) i referenshandboken för dynamiska medievyer.
+Se [Tangentbordstillgänglighet och -navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) i referenshandboken för Dynamic Media-visningsprogram.
 
-## Stöd för hjälpfunktioner i Dynamic Media-visningsprogram {#assistive-technology=support-for-dm-viewers}
+## Stöd för hjälpfunktioner i visningsprogram för Dynamic Media {#assistive-technology=support-for-dm-viewers}
 
-Alla komponenter i Dynamic Media Viewer stöder rollerna och attributen ARIA (Accessible Rich Internet Applications) för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
-Se hjälpavsnittet **Stöd för hjälpteknik** i alla hjälpavsnitt som rör anpassning av visningsprogram i referenshandboken för Dynamic Media Viewer. Se till exempel [Stöd för hjälpfunktioner](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer eller [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=en#viewers-for-aem-assets-only) för Interactive Image Viewer.
+Alla Dynamic Media-visningsprogramkomponenter har stöd för ARIA-roller (Accessible Rich Internet Applications) och -attribut för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
+Se hjälpavsnittet **Stöd för hjälpteknik** i eventuella hjälpavsnitt för anpassning av visningsprogram i referenshandboken för Dynamic Media Viewer. Se till exempel [Stöd för hjälpfunktioner](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer eller [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=en#viewers-for-aem-assets-only) för Interactive Image Viewer.
 
 >[!MORELIKETHIS]
 >
