@@ -1,8 +1,8 @@
 ---
 title: Använda förinställningar för Dynamic Media-bilder
-description: Lär dig hur du använder bildförinställningar i Dynamic Media
+description: Lär dig hur du använder bildförinställningar i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 6224d193adfb87bd9b080f48937e0af1f03386d6
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 13%
@@ -24,7 +24,7 @@ I det här avsnittet beskrivs hur du använder bildförinställningar. [Administ
 
 Du kan använda en bildförinställning på en bild när du vill förhandsvisa den.
 
-**Använda förinställningar för dynamiska mediabilder**
+**Använda Dynamic Media-bildförinställningar**
 
 1. Öppna resursen och tryck på den nedrullningsbara menyn till vänster och tryck sedan på **[!UICONTROL Renditions]**.
 
