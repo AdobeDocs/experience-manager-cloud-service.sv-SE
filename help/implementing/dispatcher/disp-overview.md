@@ -2,10 +2,10 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: cf5216f3d4d0a9acc7fabc31896770464303f793
+source-git-commit: ee53d400627fe2fd97d5cbdea8ddd38e00af191f
 workflow-type: tm+mt
-source-wordcount: '4082'
-ht-degree: 8%
+source-wordcount: '4050'
+ht-degree: 9%
 
 ---
 
@@ -19,10 +19,10 @@ I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apach
 >[!NOTE]
 >
 >Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta är en förutsättning för att du ska kunna köra och felsöka Dispatcher på en lokal dator. Avsnitten nedan innehåller kommandon som använder Mac- eller Linux-versionerna av SDK, men Windows SDK kan användas på liknande sätt.
-
+<!--
 >[!WARNING]
 >
->Windowsanvändare: den aktuella versionen av AEM som en Cloud Service lokal Dispatcher Tools (v2.0.20) är inte kompatibel med Windows. Kontakta [Adobe Support](https://daycare.day.com/home.html) för att få uppdateringar om Windows-kompatibilitet.
+>Windows users: the current version of AEM as a Cloud Service local Dispatcher Tools (v2.0.20) is incompatible with Windows. Please contact [Adobe Support](https://daycare.day.com/home.html) to receive updates on Windows compatibility. Alexandru note: removed at the request of Brian C -->
 
 ## Dispatcher Tools {#dispatcher-sdk}
 
