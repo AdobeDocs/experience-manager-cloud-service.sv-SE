@@ -1,8 +1,8 @@
 ---
 title: Blandade medieuppsättningar
-description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic Media
+description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 6b5bfa2bc7b37753e7c63bb2cf52609f352dc1ef
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
 source-wordcount: '1392'
 ht-degree: 28%
@@ -64,7 +64,7 @@ Om du behöver kan du redigera [blandade medieuppsättningar](#editing-mixed-med
 
 >[!NOTE]
 >
->Om du har problem med att skapa uppsättningar kan du läsa [Felsöka dynamiska media](/help/assets/dynamic-media/troubleshoot-dm.md).
+>Om du har problem med att skapa uppsättningar kan du läsa [Felsöka Dynamic Media](/help/assets/dynamic-media/troubleshoot-dm.md).
 
 ## Överför resurser {#uploading-assets}
 
