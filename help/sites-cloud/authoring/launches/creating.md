@@ -2,9 +2,9 @@
 title: Skapa Launches
 description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny version av befintliga webbsidor för framtida aktivering.
 translation-type: tm+mt
-source-git-commit: 035c6d862bf28fe2a6fbdbbf32dff45fa09dbd8c
+source-git-commit: 9e9f2bbed463143f821cc7aa0d50f37f892f3e9b
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1036'
 ht-degree: 12%
 
 ---
@@ -19,6 +19,18 @@ Skapa en startsida för att möjliggöra uppdatering av en ny version av befintl
 * Som standard uppdateras startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar. <!--By default, [Live Copy](/help/sites-administering/msm.md) automatically updates the launch pages as the source pages change. You can specify that a static copy is created to prevent automatic changes.-->
 
 Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. **Startdatumet** fungerar dock endast i kombination med flaggan **Produktionsklar** (se [Redigera en startkonfiguration](/help/sites-cloud/authoring/launches/editing.md#editing-a-launch-configuration)). För att åtgärderna ska köras automatiskt måste båda anges.
+
+>[!NOTE]
+>
+>När du skapar en startsida skapas sidor högre upp i hierarkin med mallen:
+>
+>* `/libs/launches/templates/outofscope`
+>
+>
+Dessa sidor kan inte redigeras. Meddelandet visas:
+>
+>* **Den här sidan är inte en del av startsidan. Gå till produktionssidan**
+
 
 ## Skapa en startsida {#creating-a-launch}
 
