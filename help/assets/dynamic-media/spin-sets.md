@@ -1,8 +1,8 @@
 ---
 title: Snurrande uppsättningar
-description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media
+description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: b10ad95e0e8b87eaaf6a0a99ce82d6b317660b12
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 12%
@@ -14,7 +14,7 @@ ht-degree: 12%
 
 Med en snurra uppsättning kan du simulera hur det ser ut när du vrider ett objekt för att undersöka det. Med snurra uppsättningar kan du visa objekt från vilken vinkel som helst och få fram de viktigaste visuella detaljerna från vilken vinkel som helst.
 
-Med en snurra uppsättning simuleras en 360-graders visningsupplevelse. Dynamic Media har en enda axelsnurra där tittarna kan rotera ett objekt. Dessutom kan man zooma och panorera med några enkla musklick. På så sätt kan användare undersöka ett objekt närmare från en viss betraktningsvinkel.
+Med en snurra uppsättning simuleras en 360-graders visningsupplevelse. Dynamic Media erbjuder snurra uppsättningar med en axel där tittarna kan rotera ett objekt. Dessutom kan man zooma och panorera med några enkla musklick. På så sätt kan användare undersöka ett objekt närmare från en viss betraktningsvinkel.
 
 Snurra uppsättningar anges av en banderoll med ordet **[!UICONTROL SPINSET]**. Om rotationsuppsättningen dessutom publiceras visas det publiceringsdatum som anges av ikonen **[!UICONTROL World]** på banderollen tillsammans med det senaste ändringsdatumet, vilket anges av ikonen **[!UICONTROL Pencil]**.
 
@@ -98,7 +98,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 >
 >Du kan också skapa rotationsuppsättningar automatiskt med hjälp av [förinställningar för gruppuppsättningar](/help/assets/dynamic-media/config-dm.md). **Viktigt!** Gruppuppsättningar skapas av IPS (Image Production System) som en del av resurshämtningen.
 >
->Se&quot;Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurruppsättningar&quot; i [Konfigurera dynamiska media](/help/assets/dynamic-media/config-dm.md).
+>Se&quot;Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurruppsättningar&quot; i [Konfigurera Dynamic Media](/help/assets/dynamic-media/config-dm.md).
 
 >[!NOTE]
 >
