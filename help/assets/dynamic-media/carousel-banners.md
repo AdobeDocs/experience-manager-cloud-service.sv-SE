@@ -1,8 +1,8 @@
 ---
 title: Karusellbanner
-description: Lär dig hur du arbetar med karusellbanners i Dynamic Media
+description: Lär dig hur du arbetar med Carousel Banners i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 98a005dacc0bce0c03f0a58c50c6e85f12b1197f
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
 source-wordcount: '4536'
 ht-degree: 4%
@@ -179,7 +179,7 @@ Titta på följande exempel på URL:er för snabbvyn och deras resulterande hots
 
 ## Överför bildbanderoller {#uploading-image-banners}
 
-Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Skapa Carousel-uppsättningar](#creating-carousel-sets). Observera att bilderna som används i karusellen måste överföras när Dynamic Media har aktiverats.
+Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Skapa Carousel-uppsättningar](#creating-carousel-sets). Observera att bilderna som används i karusellen måste laddas upp när Dynamic Media har aktiverats.
 
 Information om hur du överför bildbanderoller finns i [Överföra resurser](/help/assets/manage-digital-assets.md).
 
@@ -367,7 +367,7 @@ Du kan använda Förhandsgranska för att se hur karusellbanderollen kommer att 
 När du är nöjd med karusellbanderollen kan du publicera den.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
-Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
 Du kan förhandsgranska karusellbanners i Carousel Editor (föredragen metod) eller i **[!UICONTROL Viewers]**-listan.
 
@@ -391,20 +391,20 @@ Du kan förhandsgranska karusellbanners i Carousel Editor (föredragen metod) el
 
 ## Publishing Carousel Banners {#publishing-carousel-banners}
 
-Du måste publicera karusellen för att kunna använda den. När du publicerar en Carousel Set aktiveras URL:en och Bädda in kod. Carousel publiceras också i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och prestandamaterial.
+Du måste publicera karusellen för att kunna använda den. När du publicerar en Carousel Set aktiveras URL:en och Bädda in kod. Carousel publiceras också i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och högpresterande leverans.
 
 >[!NOTE]
 Om du använder en befintlig interaktiv bild med aktiveringspunkter för din Carousel-banderoll måste du publicera den interaktiva bilden separat när du har publicerat karusellbanderollen.
 Om du ändrar en befintlig publicerad interaktiv bild som du använder i en karusellbanderoll måste du publicera den interaktiva bilden innan ändringarna återspeglas i karusellbanderollen.
 
-Mer information om hur du publicerar karusellbanderoller finns i [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) för mer information om hur du publicerar Carousel-banners.
 
 ## Lägga till en Carousel-banderoll på din webbplatssida {#adding-a-carousel-banner-to-your-website-page}
 
 När du har överfört banderollbilder för att skapa en karusell, lagt till hotspot-områden och/eller bildscheman i banderollen och publicerat karuselluppsättningen är du nu redo att lägga till den på din befintliga webbsida.
 
 >[!NOTE]
-Om du är kund hos AEM Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Om du är kund hos AEM Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
 Om du är en fristående AEM kan du dock manuellt lägga till karusellbanderollen på webbplatsens landningssida enligt beskrivningen i detta avsnitt.
 
