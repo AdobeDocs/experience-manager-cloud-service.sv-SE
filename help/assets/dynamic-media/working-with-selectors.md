@@ -1,16 +1,16 @@
 ---
 title: Arbeta med väljare
-description: Välja resurser för interaktiva bilder, interaktiv video och karusellbanderoller
+description: Lär dig mer om metoder du kan använda för att välja resurser för interaktiva bilder, interaktiva videor och karusellbanderoller i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: c240f9aa465b019fa77cc471f865db1f4ab45532
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 19%
+source-wordcount: '710'
+ht-degree: 18%
 
 ---
 
 
-# Arbeta med väljare i dynamiska media {#working-with-selectors}
+# Arbeta med väljare i Dynamic Media {#working-with-selectors}
 
 När du arbetar med en interaktiv bild, interaktiv video eller Carousel Banner väljer du resurser och väljer webbplatser och produkter för aktiveringspunkter och bildscheman att länka till. När du arbetar med bilduppsättningar, snurruppsättningar och multimedieuppsättningar väljer du också resurser med resursväljaren.
 
@@ -62,7 +62,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
    ![chlimage_1-528](assets/chlimage_1-528.png)
 
-## Välja platser i dynamiska media {#selecting-sites}
+## Välja platser i Dynamic Media {#selecting-sites}
 
 Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras AEM webbplatser.
 
@@ -82,7 +82,7 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
 1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]**-läget navigerar du till den AEM webbplatssida du angav.
 
-## Välja resurser i dynamiska media {#selecting-assets}
+## Välja resurser i Dynamic Media {#selecting-assets}
 
 Använd den här väljaren för att välja bilder som ska användas i en Carousel Banner, en interaktiv video, bilduppsättningar, blandade medieuppsättningar och snurruppsättningar. I interaktiv video är resursväljaren tillgänglig när du trycker på **[!UICONTROL Select Assets]** på fliken **[!UICONTROL Content]**. I Carousel Sets är resursväljaren tillgänglig när du skapar en ny bildruta. I Bilduppsättningar, Blandade medieuppsättningar och Snurra uppsättningar är resursväljaren tillgänglig när du skapar en ny bilduppsättning, blandad medieuppsättning eller snurra uppsättning.
 
