@@ -1,8 +1,8 @@
 ---
 title: Bilduppsättningar
-description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media
+description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: b10ad95e0e8b87eaaf6a0a99ce82d6b317660b12
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
 source-wordcount: '2003'
 ht-degree: 18%
@@ -67,11 +67,11 @@ Så här kommer du igång snabbt:
 
 1. [Publicera bilduppsättningar.](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
 
-   När du publicerar en bilduppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera alla anpassade visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md) som du har skapat. Visningsförinställningarna som är färdiga för leverans har redan publicerats.
+   När du publicerar en bilduppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera alla anpassade visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md) som du har skapat. Färdiga visningsförinställningar har redan publicerats.
 
 1. [Länka URL:er till webbprogrammet ](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller  [bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
 
-   AEM Assets skapar URL-anrop för bilduppsättningar och aktiverar dem när du har publicerat bilduppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
+   AEM Assets skapar URL-anrop för bilduppsättningar och aktiverar dem när du har publicerat bilduppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan också bädda in dem på din webbplats.
 
    Markera bilduppsättningen och välj sedan **[!UICONTROL Viewers]** i listrutan till vänster.
 
@@ -79,13 +79,13 @@ Så här kommer du igång snabbt:
 
 Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar.](#editing-image-sets) Dessutom kan du visa och redigera  [bilduppsättningsegenskaper](/help/assets/manage-digital-assets.md#editing-properties).
 
-Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka dynamiska media](/help/assets/dynamic-media/troubleshoot-dm.md#images-and-sets).
+Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka Dynamic Media](/help/assets/dynamic-media/troubleshoot-dm.md#images-and-sets).
 
 ## Överför resurser för bilduppsättningar {#uploading-assets-in-image-sets}
 
-Börja med att ladda upp bildresurserna för dina bilduppsättningar. Eftersom användare kan zooma in på bilder i bilduppsättningsvisningsprogrammet bör du ta hänsyn till zoomning när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen för optimal zoomdetaljrikedom. Dynamic Media kan återge bilder på upp till 25 megapixlar vardera. Du kan till exempel använda en 5 000 × 5 000 megapixelbild eller någon annan storlekskombination på upp till 25 megapixlar.
+Börja med att överföra bildresurserna för dina bilduppsättningar. Eftersom användare kan zooma in på bilder i bilduppsättningsvisningsprogrammet bör du ta hänsyn till zoomning när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen för optimal zoomdetaljrikedom. Dynamic Media kan återge bilder på upp till 25 megapixlar vardera. Du kan till exempel använda en 5000 x 5000 megapixelbild eller någon annan storlekskombination på upp till 25 megapixlar.
 
-Bilduppsättningar har stöd för många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
+Bilduppsättningar har stöd för många bildfilformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
 Du kan överföra bilder för bilduppsättningar på samma sätt som du [överför andra resurser i Resurser](/help/assets/manage-digital-assets.md#uploading-assets).
 
@@ -93,7 +93,7 @@ Du kan överföra bilder för bilduppsättningar på samma sätt som du [överf�
 
 Innan du skapar bilduppsättningar bör du kontrollera att bilderna har rätt storlek och format.
 
-Om du vill skapa en bilduppsättning med flera vyer behöver du bilder som visar ett objekt från olika vypunkter eller visar olika aspekter av samma objekt. Målet är att framhäva de viktiga funktionerna i ett objekt så att läsarna får en fullständig bild av hur det ser ut eller gör.
+Om du vill skapa en bilduppsättning med flera vyer måste du ha bilder som visar ett objekt från olika synpunkter eller olika aspekter av samma objekt. Målet är att framhäva de viktiga funktionerna i ett objekt så att tittarna får en fullständig bild av hur det ser ut eller gör.
 
 Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bilderna har minst 2 000 pixlar i den största dimensionen. Resurser har stöd för många bildfilformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
