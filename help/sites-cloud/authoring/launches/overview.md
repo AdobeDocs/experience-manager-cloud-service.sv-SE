@@ -2,10 +2,10 @@
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 translation-type: tm+mt
-source-git-commit: 14fb0cfc39bbb1322edd4e6ae9d1d15db4e54483
+source-git-commit: 21f14d1f4e0ae26e097d4b31fe6811f1d089813d
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 6%
+source-wordcount: '907'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,11 @@ Till exempel kommer säsongsproduktsidorna i din onlinebutik att uppdateras varj
 
 * Ändringar av källsidorna som inträffar som ett resultat av normala underhållsåtgärder. Dessa ändringar dupliceras automatiskt på startsidorna.
 * Redigeringar som utförs direkt på startsidorna inför nästa kvartal.
+
+Du kan också:
+
+* Navigera i startgrenen; lägga till, eller ta bort, sidor efter behov.
+* Förhandsgranska hur publicerat innehåll ser ut på ett specifikt datum/tid i framtiden.
 
 När nästa kvartal anländer befordrar du startsidorna så att du kan publicera källsidorna (med det uppdaterade innehållet). Du kan antingen befordra alla sidor eller bara de som du har ändrat.
 
