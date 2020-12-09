@@ -1,10 +1,10 @@
 ---
 title: Hantera visningsförinställningar
-description: Skapa och hantera visningsförinställningar
+description: Skapa och hantera visningsförinställningar i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 0f6baa02d612a790fbeed9f8c9d356e0d96c5093
+source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
 workflow-type: tm+mt
-source-wordcount: '4149'
+source-wordcount: '4152'
 ht-degree: 18%
 
 ---
@@ -51,7 +51,7 @@ Du kan lägga till, redigera, ta bort, publicera, avpublicera och förhandsgrans
 
 Olika webbsidor har olika behov. Ibland kanske du vill ha en webbsida som innehåller en länk som öppnar HTML5 Viewer i ett separat webbläsarfönster. I andra fall kan det vara nödvändigt att bädda in HTML5 Viewer direkt på värdsidan. I det senare fallet kan webbsidan ha en statisk layout. Det kan också vara&quot;responsivt&quot; och visas på olika enheter eller för olika webbläsarfönsterstorlekar. För att tillgodose dessa behov har alla fördefinierade färdiga HTML5-visningsprogram som medföljer Dynamic Media stöd för både statiska webbsidor och responsiva webbsidor.
 
-Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Responsive Static Image Library](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html#about-responsive-image-library) i hjälpen för *Dynamic Media Image Serving and Rendering API*.
+Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Responsive Static Image library](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html#about-responsive-image-library) i *Dynamic Media Image Serving and Rendering API Help*.
 
 >[!NOTE]
 >
@@ -148,7 +148,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
 
 ### Lista med färdiga visningsförinställningar {#list-of-out-of-the-box-viewer-presets}
 
-I följande tabell visas alla fördefinierade, färdiga visningsförinställningar som medföljer Dynamic Media.
+I följande tabell visas alla fördefinierade färdiga visningsförinställningar som medföljer Dynamic Media.
 
 Se även [Livedemonstrationer](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
 
@@ -389,7 +389,7 @@ AEM visar en mängd olika förinställningar för visningsprogram när du visar 
 
 Genom att skapa visningsförinställningar kan du använda olika inställningar för att visa och interagera med resurser. Du behöver dock inte skapa nya förinställningar för visningsprogrammet. Om du vill kan du använda de förinställda visningsprogrammen som redan finns i AEM Assets.
 
-Om du väljer att skapa en ny visningsförinställning aktiveras visningsprogrammets läge automatiskt (inställt på **[!UICONTROL On]**) på sidan Förinställningar för visningsprogram när du har sparat den. Det här läget innebär att det är synligt i komponenten Dynamic Media och komponenten Interactive Media och när du förhandsgranskar en bild eller video.
+Om du väljer att skapa en ny visningsförinställning aktiveras visningsprogrammets läge automatiskt (inställt på **[!UICONTROL On]**) på sidan Förinställningar för visningsprogram när du har sparat den. Det här läget innebär att det är synligt i Dynamic Media-komponenten och i Interactive Media-komponenten och när du förhandsgranskar en bild eller video.
 
 Vissa visningsprogramförinställningar har exklusiva inställningar som kan påverka visningsprogrammets användning och allmänna beteende. Beroende på vilken visningsförinställning du skapar kan det vara bra att tänka på dessa speciella saker.
 
@@ -503,7 +503,7 @@ Följande logik används för hur många miniatyrbilder som visas på panelen ba
 * Antal undersegment = rund upp till nästa undersegment (antal miniatyrbilder/antal synliga platser på miniatyrbildspanelen, baserat på webbläsarfönstrets storlek).
 I exemplet i tabellen ovan används 9 miniatyrbilder/4 kortplatser = 2,25; visningsprogrammets logik omger den med upp till tre undersegment.
 
-* Antal miniatyrbilder = avrunda till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
+* Antal miniatyrbilder = avrunda upp till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
 Med hjälp av exemplet i tabellen ovan är det 9 miniatyrbilder/3 undersegment för video = 3 miniatyrbilder.
 
 * Undersegmentets längd = den totala videons längd/antal undersegment.
@@ -530,7 +530,7 @@ Vilka visningsprogramförinställningar som är tillgängliga i användargränss
 
 ## Förinställningar för publiceringsvisningsprogrammet {#publishing-viewer-presets}
 
-När du aktiverar (eller aktiverar&quot;På&quot;) ett förinställt visningsläge visas det i komponenten Dynamic Media, i komponenten Interactive Media och när du visar en resurs.
+När du aktiverar (eller aktiverar&quot;På&quot;) ett visningsförinställningsläge visas det i Dynamic Media-komponenten, i Interactive Media-komponenten och när du visar en mediefil.
 
 För att kunna leverera* *en resurs med en visningsförinställning måste visningsförinställningen också publiceras. Alla visningsförinställningar måste aktiveras *och *publiceras för att URL- eller inbäddningskod ska kunna hämtas för en resurs. Du måste aktivera och publicera alla färdiga visningsförinställningar som medföljer Dynamic Media. Anpassade visningsförinställningar som du skapar och lägger till aktiveras automatiskt, men de måste också publiceras.
 
@@ -569,7 +569,7 @@ Tänk på att redigering av *fördefinierade, körklara visningsförinställning
 
 ## Tar bort anpassade förinställningar för visningsprogram {#deleting-custom-viewer-presets}
 
-Du kan ta bort visningsförinställningar som du har skapat och lagt till i dynamiska media.
+Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dynamic Media.
 
 **Ta bort anpassade visningsprogramförinställningar**
 
@@ -597,4 +597,4 @@ Om du redan har publicerat både resursen och det valda visningsprogrammet visas
 
 Mer information om hur du hämtar URL:er för visningsförinställningar finns i [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Se även [Bädda in Video Viewer på en webbsida](/help/assets/dynamic-media/embed-code.md).
 
-Om du använder AEM som WCM-fil kan du lägga till resurser med visningsförinställningarna direkt på sidan. Se [Lägga till dynamiska medieresurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+Om du använder AEM som WCM-fil kan du lägga till resurser med visningsförinställningarna direkt på sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
