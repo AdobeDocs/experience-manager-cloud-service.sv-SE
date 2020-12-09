@@ -4,7 +4,7 @@ description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny
 translation-type: tm+mt
 source-git-commit: 9e9f2bbed463143f821cc7aa0d50f37f892f3e9b
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1045'
 ht-degree: 12%
 
 ---
@@ -22,7 +22,7 @@ Du kan också ange **startdatum** (och starttid) för att definiera när startsi
 
 >[!NOTE]
 >
->När du skapar en startsida skapas sidor högre upp i hierarkin med mallen:
+>När du skapar en start är inte sidor högre upp i hierarkin kopior av källsidorna. De är platshållare och skapas med mallen:
 >
 >* `/libs/launches/templates/outofscope`
 >
