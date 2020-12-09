@@ -2,9 +2,9 @@
 title: Indexkonverterare
 description: Indexkonverterare
 translation-type: tm+mt
-source-git-commit: fecbd0b4d5cfd8aa970c235c79158bea44403c09
+source-git-commit: 1117f03b2eff37f8b25726c3dc60d5a3fe98a5d1
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Indexkonverterare {#index-converter}
 
-Indexkonverteraren är ett verktyg som utvecklats för att migrera en kunds indexdefinition som förberedelse för övergången till AEM som en Cloud Service.
+Indexkonverteraren är ett verktyg som utvecklats för att migrera en kunds indexdefinitioner som förberedelse för övergången till AEM som en Cloud Service.
 
 ## Introduktion {#introduction}
 
@@ -26,13 +26,22 @@ Det finns två sätt att skapa anpassade indexdefinitioner för eko:
 * `under /apps` (via ett anpassat innehållspaket)
 * direkt under `/oak:index`-sökvägen
 
->[!NOTE]
->Se [Se till att ekindexvärdet](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) är korrekt för att lära dig hur du definierar och skapar ekeldefinitioner
+Om [Kontrollera att ekindexvärdet](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) har använts bör du observera att Definitioner inte stöds i AEM som en Cloud Service och att de därför måste konverteras till ekindexdefinitioner först och sedan måste migreras till anpassade ekindexdefinitioner som är kompatibla med AEM som en Cloud Service enligt riktlinjerna nedan:
+
+* Om egenskapen ignore är inställd på `true`, ignorera eller hoppa över Kontrollera definition
+* Uppdatera `jcr:primaryType` till `oak:QueryIndexDefinition`
+* Ta bort alla egenskaper som ska ignoreras enligt OSGi-konfigurationer
+* Ta bort underträdet `/facets/jcr:content` från definitionen
 
 ## Använda indexkonverteraren {#using-index-converter}
 
->[!NOTE]
->Även om du bör använda verktyget Indexkonverterare via [AIO CLI-plugin för källmigrering](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration), kan det också köras fristående.
+* Via Adobe I/O CLI: Du bör använda indexkonverteraren via `aio-cli-plugin-aem-cloud-service-migration` (AEM som ett plugin-program för omfaktorisering av Cloud Service för Adobe I/O CLI).
 
-Se **[Git-resurs: aem-cs-source-migration-index-converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter)** om du vill veta hur du installerar och använder plugin-programmet.
+Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** för att lära dig hur du installerar och använder plugin-programmet.
+
+* Som fristående verktyg: Indexkonverteraren kan också köras som ett fristående verktyg.
+
+Se **[Git-resurs: aem-cs-source-migration-index-converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter)** om du vill veta hur du använder det här verktyget.
+
+
 
