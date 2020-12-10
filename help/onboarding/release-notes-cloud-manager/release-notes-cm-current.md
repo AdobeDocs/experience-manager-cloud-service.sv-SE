@@ -1,35 +1,36 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.11.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.11.0
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.12.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.12.0
 translation-type: tm+mt
-source-git-commit: 727dfd1d16a80620fba6db00289021ee5efae0fc
+source-git-commit: 738cff4231f329826b44f1b0f1a184fa15edd82a
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 2%
+source-wordcount: '128'
+ht-degree: 3%
 
 ---
 
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.11.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.12.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.11.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.12.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2020.11.0 är 12 november 2020.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2020.12.0 är 10 december 2020.
 
 ## Cloud Manager {#cloud-manager}
 
 ### Nyheter {#what-is-new}
 
-* Ett nytt menyalternativ **Lokal inloggning** är nu tillgängligt för användare från miljömenyalternativen på miljökortets och miljösammanfattningens sidor.
-Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md##login-locally).
+* Självbetjäningshantering för [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md).
 
-* Fliken **Lär dig** i Cloud Manager har uppdaterats med nya bilder i användargränssnittet.
+* Självbetjäningshantering för [IP Tillåt-Lists](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
 
-### Felkorrigeringar {#bug-fixes-cloud-manager}
+* Uppdaterad **Informationssida om miljö** tillåter nu användare att hantera anpassade domännamn och Tillåt-listor för IP i sina miljöer.
 
-* Inläsningen av beroenden som gjorts före körningen av bygget krävde hämtning av ett Maven-plugin-program.
-* Länken från molnhanterarens sidfot för att välja ett språk navigerar nu till rätt plats.
-* Ibland startar inte SonarQube-processen under kodskanningen. Detta identifieras nu automatiskt och ett omstartsförsök görs.
-* Alla befintliga produktionspipelinjer aktiveras automatiskt med Experience Audit-steget.
+
+### Felkorrigeringar {#bug-fixes}
+
+* Vissa förekomster av fel vid kodskanning utan att ge några resultat åtgärdade.
+
+* Miljökortet visade inte **Lägg till**-knapp genomgående.
