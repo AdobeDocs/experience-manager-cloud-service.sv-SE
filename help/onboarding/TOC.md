@@ -4,10 +4,10 @@ user-guide-title: Onboarding för AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
+source-git-commit: 4245bbad81327ffdba9c400a36a03d815e2ebdc7
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 50%
+source-wordcount: '377'
+ht-degree: 49%
 
 ---
 
@@ -69,6 +69,7 @@ ht-degree: 50%
       + [Avaktivera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
       + [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
       + [Kontrollera status för IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
+   + [API för Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
       + [Aktuell versionsinformation (2020.12.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
       + [Versionsinformation för 2020.11.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-11-0.md)
