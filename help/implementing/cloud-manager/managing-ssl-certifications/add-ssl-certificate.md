@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 description: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: b6911f0b8674550713bd4ec1e34be5d0a14cc427
+source-git-commit: 88ef9265b40f64f2229e37e5f8ca02959e8d9ce2
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!NOTE]
 >AEM som Cloud Service accepterar endast OV- (Organization Validation) eller EV-certifikat (Extended Validation). DV-certifikat (domänvalidering) godkänns inte.
 
-Ett certifikat tar några dagar att etablera och vi rekommenderar att certifikatet etableras även månader i förväg. Mer information finns i Hämta ett SSL-certifikat.
+Ett certifikat tar några dagar att etablera och vi rekommenderar att certifikatet etableras även månader i förväg. Mer information finns i [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md).
 
 ## Certifikatformat {#certificate-format}
 
@@ -45,16 +45,21 @@ Följ stegen nedan för att konvertera SSL-filernas format till PEM:
 Följ stegen nedan för att lägga till ett certifikat:
 
 1. Logga in på Cloud Manager.
-1. Navigera till miljöskärmen från sidan Översikt.
-1. Navigera till SSL-certifikatskärmen på den vänstra navigeringsmenyn. En tabell med information om eventuella befintliga SSL-certifikat visas på den här skärmen.
-1. Välj knappen **Lägg till certifikat** för att starta en guide.
-   1. Ange ett namn för certifikatet. Det kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
-   1. Klistra in innehållet i Certifikat, Privat nyckel och Kedja i sina respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
+1. Navigera till **Miljöer** från sidan **Översikt**.
+1. Klicka på **SSL-certifikat** i den vänstra navigeringsmenyn. En tabell med information om eventuella befintliga SSL-certifikat visas på den här skärmen.
+
+   ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-1.png)
+1. Välj knappen **Lägg till certifikat** för att öppna dialogrutan **Lägg till SSL-certifikat**.
+
+   ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-2.png)
+   1. Ange ett namn för ditt certifikat i **Certifikatnamn**. Det kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
+   1. Klistra in **certifikatet**, **den privata nyckeln** och **certifikatkedjan** i respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
 
       >[!NOTE]
       >Alla tre fälten är inte valfria och måste inkluderas.
-1. När du har skickat certifikatet visas det som en ny rad i tabellen.
-
+1. Klicka på **Spara** för att skicka certifikatet. Den visas som en ny rad i tabellen.
+   >[!NOTE]
+   >Alla fel som upptäcks visas. Du måste åtgärda alla fel innan certifikatet kan sparas. Mer information om hur du åtgärdar vanliga fel finns i [certifikatfel](#certificate-errors).
 
 ## Certifikatfel {#certificate-errors}
 
