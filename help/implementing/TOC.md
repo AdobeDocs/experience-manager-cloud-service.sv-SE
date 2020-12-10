@@ -4,9 +4,9 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
+source-git-commit: d1301d4414f87b30f5ab732eacbb61c96f102262
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '693'
 ht-degree: 42%
 
 ---
@@ -43,14 +43,14 @@ ht-degree: 42%
       + [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
       + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
       + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
-      + [Visa och uppdatera anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
+      + [Visa, uppdatera och ersätta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
       + [Uppdaterar det anpassade domännamnets SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/update-cdn-ssl-certificate.md)
       + [Tar bort eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
-   + Hantera IP-tillåtna-listor {#ip-allow-lists}
+   + Hantera IP-Tillåtelselista {#ip-allow-lists}
       + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
       + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
       + [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)
-      + [Använder IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
+      + [Använda ett IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
       + [Avaktivera användning av en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
       + [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
       + [Kontrollera status för IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
