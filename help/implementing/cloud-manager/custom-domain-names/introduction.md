@@ -2,7 +2,7 @@
 title: Introduktion - Anpassade domännamn
 description: Introduktion - Anpassade domännamn
 translation-type: tm+mt
-source-git-commit: 8d97bedc8c473c13e3378849741104b2c85492e2
+source-git-commit: 7704c19e440b1fedc651ce0115eb5e5ecf1eba1c
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Ditt AEMaaCS har ett standarddomännamn som slutar på `*.adobearmcloud.com`. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen.
 
 >[!NOTE]
->Anpassade domännamn stöds endast i Cloud Manager för Sites Programs (Publiceringstjänst). Varje Cloud Manager-miljö har plats för upp till 50 anpassade domäner per miljö.
+>Anpassade domännamn stöds endast i Cloud Manager för Sites Programs (Publiceringstjänst). Varje Cloud Manager-miljö har plats för upp till 100 anpassade domäner per miljö.
 
 Med hjälp av sidan Domäninställningar för användargränssnitt i Cloud Manager, eller sidan Miljöinformation, kan en användare med behörighet utföra flera åtgärder för att hantera anpassade domännamn för dina miljöer, bland annat:
 
