@@ -4,10 +4,10 @@ user-guide-title: Onboarding för AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 738cff4231f329826b44f1b0f1a184fa15edd82a
+source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 51%
+source-wordcount: '368'
+ht-degree: 50%
 
 ---
 
@@ -63,12 +63,12 @@ ht-degree: 51%
       + [Tar bort eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
    + Hantera IP-tillåtna-listor {#ip-allow-lists}
       + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
-      + [Lägga till en lista över tillåtna IP-adresser](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
-      + [Visa och uppdatera en Tillåt-lista för IP](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)
-      + [Använder IP-listan över tillåtna](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
-      + [Avaktivera användning av en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
-      + [Ta bort en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
-      + [Kontrollera en IP-status för Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
+      + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
+      + [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)
+      + [Använder IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
+      + [Avaktivera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
+      + [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
+      + [Kontrollera status för IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
       + [Aktuell versionsinformation (2020.12.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
       + [Versionsinformation för 2020.11.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-11-0.md)
