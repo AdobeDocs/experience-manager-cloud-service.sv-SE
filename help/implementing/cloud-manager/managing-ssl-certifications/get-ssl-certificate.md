@@ -2,9 +2,9 @@
 title: Hämta ett SSL-certifikat - Hantera SSL-certifikat
 description: Hämta ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: fecbd0b4d5cfd8aa970c235c79158bea44403c09
+source-git-commit: 40119f7b3bdf36af668b79afbcb2802a0b2a6033
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -18,4 +18,5 @@ När en entitet begär ett certifikat från en certifikatutfärdare slutför cer
 
 >[!NOTE]
 >AEM som Cloud Service accepterar endast OV- (Organization Validation) eller EV-certifikat (Extended Validation). DV (domänvalidering) eller självsignerade certifikat accepteras inte. OV- och EV-certifikat ger användarna extra, CA-verifierad information som de kan använda för att avgöra om ägaren till en webbplats, avsändaren av ett e-postmeddelande eller den digitala undertecknaren av körbar kod eller PDF-dokument är betrodd. DV-certifikat är vanliga och billiga. De tillåter dock inte ägarskapsverifiering.
+>Dessutom måste alla certifikat vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
 
