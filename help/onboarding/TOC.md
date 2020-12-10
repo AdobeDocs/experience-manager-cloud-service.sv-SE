@@ -4,10 +4,10 @@ user-guide-title: Onboarding för AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 5e81e6ed9c44956384ff248bb28cebc861cf0b76
+source-git-commit: f836254f6c4874621d4772758b29c6b22aff0ed6
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 72%
+source-wordcount: '357'
+ht-degree: 52%
 
 ---
 
@@ -43,6 +43,32 @@ ht-degree: 72%
       + [Använda guiden](getting-access-to-aem-in-cloud/using-the-wizard.md)
       + [Konfigurera projektet](getting-access-to-aem-in-cloud/setting-up-project.md)
       + [Förstå byggmiljön](getting-access-to-aem-in-cloud/build-environment-details.md)
+   + Hantera SSL-certifikat {#manage-ssl-certificates}
+      + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
+      + [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md)
+      + [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
+      + [Visa och uppdatera eller ersätta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/view-update-replace-ssl-certificate.md)
+      + [Kontrollerar status för ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md)
+      + [Ta bort ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/delete-ssl-certificate.md)
+   + Anpassade domännamn {#custom-domain-names}
+      + [Introduktion](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
+      + [Hämta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/get-custom-domain-name.md)
+      + [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+      + [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md)
+      + [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
+      + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
+      + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
+      + [Visa och uppdatera anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
+      + [Uppdaterar det anpassade domännamnets SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/update-cdn-ssl-certificate.md)
+      + [Tar bort eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+   + Tillåt-listor för IP {#ip-allow-lists}
+      + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
+      + [Lägga till en lista över tillåtna IP-adresser](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
+      + [Visa och uppdatera en Tillåt-lista för IP](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)
+      + [Använder IP-listan över tillåtna](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
+      + [Avaktivera användning av en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
+      + [Ta bort en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
+      + [Kontrollera en IP-status för Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
       + [Aktuell versionsinformation (2020.11.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
       + [Versionsinformation för 2020.10.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-10-0.md)
