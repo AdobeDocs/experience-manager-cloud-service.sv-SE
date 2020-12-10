@@ -4,10 +4,10 @@ user-guide-title: Onboarding för AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 99eb33c3c42094f787d853871aee3a3607856316
+source-git-commit: 738cff4231f329826b44f1b0f1a184fa15edd82a
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 52%
+source-wordcount: '362'
+ht-degree: 51%
 
 ---
 
@@ -70,7 +70,8 @@ ht-degree: 52%
       + [Ta bort en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
       + [Kontrollera en IP-status för Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
-      + [Aktuell versionsinformation (2020.11.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
+      + [Aktuell versionsinformation (2020.12.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
+      + [Versionsinformation för 2020.11.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-11-0.md)
       + [Versionsinformation för 2020.10.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-10-0.md)
       + [Versionsinformation för 2020.9.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-9-0.md)
       + [Versionsinformation för 2020.8.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-8-0.md)
