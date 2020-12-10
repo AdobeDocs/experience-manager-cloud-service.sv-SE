@@ -2,7 +2,7 @@
 title: Ta bort ett anpassat domännamn
 description: Ta bort ett anpassat domännamn
 translation-type: tm+mt
-source-git-commit: 1c51560886515e092680c23db3e128758dcd7d99
+source-git-commit: 68a62be11f711e30b87dfc60a85627dceaf06caa
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -12,15 +12,16 @@ ht-degree: 0%
 
 # Tar bort ett anpassat domännamn {#deleting-cdn}
 
->[!NOTE]
->En användare måste ha rollen Business Owner eller Deployment Manager för att kunna ta bort ett anpassat domännamn i Cloud Manager.
+En användare måste ha rollen Business Owner eller Deployment Manager för att kunna ta bort ett anpassat domännamn i Cloud Manager.
 
 ## Tar bort ett anpassat domännamn från alla associerade miljöer {#delete-cdn-all}
 
-1. Gå till sidan Domäninställningar från skärmen Miljö.
+1. Gå till sidan **Domäninställningar** från skärmen **Miljö**.
 1. Identifiera raden där det anpassade domännamn du vill ta bort finns med.
 1. Välj **..**-menyn längst till höger på raden.
-1. Välj alternativet Ta bort.
+1. Välj alternativet **Ta bort**.
+
+   ![](/help/implementing/cloud-manager/assets/cdn/cdn-delete.png)
 1. Bekräfta ditt tävlingsbidrag.
 
 
