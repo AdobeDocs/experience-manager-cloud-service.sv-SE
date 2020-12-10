@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lägga till ett anpassat domännamn
 translation-type: tm+mt
-source-git-commit: 68a62be11f711e30b87dfc60a85627dceaf06caa
+source-git-commit: 27e96d66d93f2fa0e67e607c75f37efda17a13b7
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -52,22 +52,39 @@ Följ instruktionerna som följer för att bevisa att du är domänägare i din 
 
 1. Klicka på **Skapa**.
 1. CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta anges med statusen **Verifierad och distribuerad**.
-1. Navigera till Kontrollera status för anpassat domännamn om du vill veta mer om olika statusar och hur du ska adressera.
+Navigera till [Kontrollera status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) om du vill veta mer om olika statusar och hur du adresserar.
 
    >[!NOTE]
    >Det kan ta upp till några timmar att identifiera DNS-bevis på grund av fördröjd DNS-spridning. Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Mer information finns i Kontrollera domännamnsstatus.
 
 ## Lägga till ett anpassat domännamn från miljösidan {#adding-cdn-environments}
 
-1. Navigera till sidan Miljöinformation om den aktuella miljön.
-1. Använd indatafälten högst upp i tabellen Domännamn för att skicka det anpassade domännamnet, SSL-certifikatet. Välj sedan Lägg till.
-1. Detta startar guiden Lägg till anpassat domännamn med miljönamnet förifyllt.
-1. Ange det anpassade domännamnet. Obs! Ta inte med `http://`, `https://` eller blanksteg när du anger i domänen. Välj Fortsätt.
-1. Du kommer nu till Verifiering av domännamn för miljöskärmen. Mer information finns i [Domänverifiering](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md). Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö.
-1. Välj **Fortsätt**.
-1. CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta anges med statusen **Verifierad och distribuerad**.
+1. Navigera till miljöinformationssidan för att se om miljön är av intresse.
 
-Nu är ditt anpassade domännamn klart för testning och en `CNAME` som pekar på det. Mer information om olika statusar och hur du åtgärdar dem finns i Domännamnsstatus.
+   ![](/help/implementing/cloud-manager/assets/cdn/cdn-create4.png)
+
+1. Använd indatafälten högst upp i tabellen Domännamn för att skicka det anpassade domännamnet och välj SSL-certifikatet i listrutan. Klicka på **+ Lägg till**.
+
+   ![](/help/implementing/cloud-manager/assets/cdn/cdn-create3.png)
+
+1. Markera fälten i dialogrutan **Lägg till domännamn** och klicka på **Fortsätt**.
+
+   ![](/help/implementing/cloud-manager/assets/cdn/cdn-create5.png)
+
+   >[!NOTE]
+   >Ta inte med `http://`, `https://` eller blanksteg när du anger i domänen.
+
+1. Domännamnsverifiering för din miljöskärm visas.
+
+   ![](/help/implementing/cloud-manager/assets/cdn/cdn-create6.png)
+
+   Mer information finns i [Domänverifiering](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md). Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö.
+
+1. Klicka på **Skapa**.
+
+1. Distributionen av det anpassade domännamnet kräver ett giltigt SSL-certifikat och en lyckad TXT-verifiering. Detta anges med statusen **Verifierad och distribuerad**.
+
+Nu är ditt anpassade domännamn klart för testning och en `CNAME` som pekar på det. Läs [Domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) om du vill veta mer om olika statusar och hur du åtgärdar dem.
 
 >[!NOTE]
 >Det kan ta upp till några timmar att identifiera DNS-bevis på grund av fördröjd DNS-spridning. Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Mer information finns i Kontrollera domännamnsstatus.
