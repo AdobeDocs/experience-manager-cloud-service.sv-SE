@@ -2,9 +2,9 @@
 title: Kontrollerar status för ett SSL-certifikat - Hantera SSL-certifikat
 description: Kontrollerar status för ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: e27e5302802e68dce2a5713626950896bb35420a
+source-git-commit: f426a9a653a3a3ae06abdbd2262e5d8f4beff277
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Kontrollerar status för ett SSL-certifikat {#checking-status-an-ssl-certificate}
 
-Statusen för dina SSL-certifikat kan snabbt förstås från SSL-certifikatsidan eller från sidan med miljöinformation.
+Statusen för dina SSL-certifikat kan snabbt förstås från SSL-certifikatsidan.
 
 Du kan identifiera statusen för ett SSL-certifikat från följande färgscheman:
 
