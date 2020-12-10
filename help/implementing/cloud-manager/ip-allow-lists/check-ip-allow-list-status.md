@@ -2,9 +2,9 @@
 title: Kontrollerar IP Tillåtelselista-status
 description: Kontrollerar IP Tillåtelselista-status
 translation-type: tm+mt
-source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
+source-git-commit: 4245bbad81327ffdba9c400a36a03d815e2ebdc7
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Nedan följer definitioner av status som visas i ett IP-Tillåtelselista:
 
 * **Misslyckades**: En eller flera tillämpnings- eller avanvändningsprocesser i en uppdatering misslyckades. Alla Tillämpa och Ångra visas tillsammans med Fullständigt eller Misslyckat.
    * Statusen är Misslyckad, även om en tillämpning/avtillämpning i uppdateringen misslyckas.
-   * Statusen kommer att förbli Misslyckad tills alla fel har rensats.Användaren måste markera ikonen Försök igen bredvid statusen för att ta bort felet.
+   * Statusen kommer att förbli Misslyckad tills alla fel har rensats. Användaren måste markera ikonen för nytt försök bredvid statusen för att åtgärda felet.
    * Användaren kan inte uppdatera eller ta bort IP Tillåtelselista när statusen är Misslyckad.
 
 * **Tar bort**: Borttagningsbegäran pågår. Detta innebär att alla tjänster inte används. Alla Unapply visas tillsammans med Not Started/In Progress/Complete eller Failed.
