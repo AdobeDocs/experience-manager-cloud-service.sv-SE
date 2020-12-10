@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lägga till ett anpassat domännamn
 translation-type: tm+mt
-source-git-commit: 6571c11cedbc0d81fbdfd8072a39b1327bdba10b
+source-git-commit: 9d5f7d633ac8dfaadf315e85666479c87a0afa04
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,13 @@ ht-degree: 0%
 
 En användare måste vara en Business Owner eller Deployment Manager för att kunna lägga till ett anpassat domännamn i Cloud Manager.
 
->[!NOTE]
->Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet installeras i ditt program. Mer information finns i Installera ett SSL-certifikat.
+## Viktiga överväganden {#important-considerations}
 
-Det går bara att lägga till ett domännamn åt gången. Användare kan dock lägga till jokertecken, till exempel `*.wknd.com` som ett domännamn, vilket gör att flera underdomäner kan lagras med en enda TXT-post.
-Varje Cloud Manager-miljö har plats för upp till 50 anpassade domäner per miljö.
-Samma domännamn kan inte användas i mer än en miljö.
+* Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet installeras i ditt program. Mer information finns i [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
+
+* Det går bara att lägga till ett domännamn åt gången. Användare kan dock lägga till jokertecken, till exempel `*.wknd.com` som ett domännamn, vilket gör att flera underdomäner kan lagras med en enda TXT-post.
+
+* Varje Cloud Manager-miljö har plats för upp till 100 anpassade domäner per miljö. Samma domännamn kan inte användas i mer än en miljö.
 
 ## Lägga till ett anpassat domännamn från sidan Domäninställningar {#adding-cdn-settings}
 
@@ -38,10 +39,8 @@ Följ stegen nedan för att lägga till ett anpassat domännamn från sidan Dom�
 
 1. Välj SSL-certifikatet i listrutan och välj Fortsätt.
 
-1. Du kommer nu till Verifiering av domännamn för miljöskärmen. Mer information finns i Lägga till en TXT-post.
-
-   >[!NOTE]
-   >Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö.
+1. Du kommer nu till Verifiering av domännamn för miljöskärmen. Mer information finns i [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md).
+Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö.
 
 1. Välj Fortsätt.
 1. CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta anges med statusen **Verifierad och distribuerad**.
@@ -56,10 +55,7 @@ Följ stegen nedan för att lägga till ett anpassat domännamn från sidan Dom�
 1. Använd indatafälten högst upp i tabellen Domännamn för att skicka det anpassade domännamnet, SSL-certifikatet. Välj sedan Lägg till.
 1. Detta startar guiden Lägg till anpassat domännamn med miljönamnet förifyllt.
 1. Ange det anpassade domännamnet. Obs! Ta inte med `http://`, `https://` eller blanksteg när du anger i domänen. Välj Fortsätt.
-1. Du kommer nu till Verifiering av domännamn för miljöskärmen. Mer information finns i Domänverifiering (Lägg till TXT-post).
-
-   >[!NOTE]
-   >Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö.
+1. Du kommer nu till Verifiering av domännamn för miljöskärmen. Mer information finns i [Domänverifiering](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md). Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö.
 
 1. Välj Fortsätt.
 1. CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta anges med statusen **Verifierad och distribuerad**.
