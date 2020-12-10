@@ -3,17 +3,65 @@ title: Utvecklarreferenser för [!DNL Assets]
 description: '[!DNL Assets] APIs and developer reference content lets you manage assets, including binary files, metadata, renditions, comments, and [!DNL Content Fragments].'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 5bc532a930a46127051879e000ab1a7fc235a6a8
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1395'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Assets] API:er och referensmaterial för utvecklare  {#assets-cloud-service-apis}
+# [!DNL Adobe Experience Manager Assets] API:er och referensmaterial för utvecklare  {#assets-cloud-service-apis}
 
-Artikeln innehåller referensmaterial och resurser för utvecklare av [!DNL Assets] som [!DNL Cloud Service]. Det innehåller en ny överföringsmetod, API-referens och information om stödet i efterbehandlingsarbetsflödena.
+Artikeln innehåller rekommendationer, referensmaterial och resurser för utvecklare av [!DNL Assets] som en [!DNL Cloud Service]. Den innehåller en ny modul för överföring av resurser, API-referens och information om stödet som ges i arbetsflöden efter bearbetning.
+
+## [!DNL Experience Manager Assets] API:er och åtgärder  {#use-cases-and-apis}
+
+[!DNL Assets] som en  [!DNL Cloud Service] innehåller flera API:er för programmässig interaktion med digitala resurser. Varje API har stöd för särskilda användningsfall, vilket framgår av tabellen nedan. [!DNL Assets]-användargränssnittet, [!DNL Experience Manager]-datorprogrammet och [!DNL Adobe Asset Link] stöder alla eller vissa åtgärder.
+
+>[!CAUTION]
+>
+>Vissa API:er finns fortfarande men stöds inte aktivt (anges med en ×) och får inte användas.
+
+| Supportnivå | Beskrivning |
+| ------------- | --------------------------- |
+| ✓ | Stöds |
+| x | Stöds inte. Skall ej användas. |
+| - | Inte tillgängligt |
+
+| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [API:er för AEM/Sling/](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) JCRJava | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)-servrar | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) _(förhandstitt)_ |
+| ----------------|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Ursprunglig binär** |  |  |  |  |  |  |
+| Skapa original | ✓ | x | - | x | x | - |
+| Läs original | - | x | ✓ | ✓ | ✓ | - |
+| Uppdatera original | ✓ | x | ✓ | x | x | - |
+| Ta bort original | - | ✓ | - | ✓ | ✓ | - |
+| Kopiera original | - | ✓ | - | ✓ | ✓ | - |
+| Flytta original | - | ✓ | - | ✓ | ✓ | - |
+| **Metadata** |  |  |  |  |  |  |
+| Skapa metadata | - | ✓ | ✓ | ✓ | ✓ | - |
+| Läs metadata | - | ✓ | - | ✓ | ✓ | - |
+| Uppdatera metadata | - | ✓ | ✓ | ✓ | ✓ | - |
+| Ta bort metadata | - | ✓ | ✓ | ✓ | ✓ | - |
+| Kopiera metadata | - | ✓ | - | ✓ | ✓ | - |
+| Flytta metadata | - | ✓ | - | ✓ | ✓ | - |
+| **Innehållsfragment (CF)** |  |  |  |  |  |  |
+| Skapa CF | - | ✓ | - | ✓ | - | - |
+| Läs CF | - | ✓ | - | ✓ | - | ✓ |
+| Uppdatera CF | - | ✓ | - | ✓ | - | - |
+| Ta bort CF | - | ✓ | - | ✓ | - | - |
+| Kopiera CF | - | ✓ | - | ✓ | - | - |
+| Flytta CF | - | ✓ | - | ✓ | - | - |
+| **Versioner** |  |  |  |  |  |  |
+| Skapa version | ✓ | ✓ | - | - | - | - |
+| Läsversion | - | ✓ | - | - | - | - |
+| Ta bort version | - | ✓ | - | - | - | - |
+| **Mappar** |  |  |  |  |  |  |
+| Skapa mapp | ✓ | ✓ | - | ✓ | - | - |
+| Läs mapp | - | ✓ | - | ✓ | - | - |
+| Ta bort mapp | ✓ | ✓ | - | ✓ | - | - |
+| Kopiera mapp | ✓ | ✓ | - | ✓ | - | - |
+| Flytta mapp | ✓ | ✓ | - | ✓ | - | - |
 
 ## Resursöverföring {#asset-upload-technical}
 
@@ -31,8 +79,7 @@ Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser.
 * Binär molnlagring fungerar med ett CDN-nätverk (Content Delivery Network) eller Edge-nätverk. Ett CDN väljer en slutpunkt för överföring som är närmare för en klient. När data flyttas kortare tid till en närliggande slutpunkt förbättras överföringsprestanda och användarupplevelsen, särskilt för geografiskt utspridda team.
 
 >[!NOTE]
->
->Se klientkoden för att implementera den här metoden i det öppna källbiblioteket [aem-upload library](https://github.com/adobe/aem-upload).
+Se klientkoden för att implementera den här metoden i det öppna källbiblioteket [aem-upload library](https://github.com/adobe/aem-upload).
 
 ### Initiera överföring {#initiate-upload}
 
