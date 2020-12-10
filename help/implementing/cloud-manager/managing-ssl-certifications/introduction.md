@@ -2,7 +2,7 @@
 title: Introduktion - Hantera SSL-certifikat
 description: Introduktion - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: 99eb33c3c42094f787d853871aee3a3607856316
+source-git-commit: 4ab944ad15390f9399138672a024aa30cf4aede8
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Introduktion {#introduction}
 
-Med Cloud Manager kan kunderna själva installera SSL-certifikat via användargränssnittet i Cloud Manager. Cloud Manager använder en TLS-tjänst för plattform för att hantera SSL-certifikat och privata nycklar som ägs av kunder och vanligtvis hämtas från tredjepartscertifikatutfärdare, till exempel Låt oss kryptera.
+Med Cloud Manager kan kunderna själva installera SSL-certifikat via användargränssnittet i Cloud Manager. Cloud Manager använder en TLS-tjänst för plattform för att hantera SSL-certifikat och privata nycklar som ägs av kunder och vanligtvis hämtas från tredjepartscertifikatutfärdare, till exempel *Låt oss kryptera*.
 
 ## Viktiga överväganden {#important-considerations}
 
