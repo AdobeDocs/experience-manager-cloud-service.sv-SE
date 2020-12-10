@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: b927992107d7e7e4df5511a366c71449ff73ec93
+source-git-commit: c130ade74e91c4247b4c858621a4d39d45fb2404
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 50%
+source-wordcount: '579'
+ht-degree: 49%
 
 ---
 
@@ -63,6 +63,7 @@ ht-degree: 50%
          + [Bildredigeraren](developing/components/image-editor.md)
          + [Dekoration-taggar](developing/components/decoration-tag.md)
          + [Använda Dölj villkor](developing/components/hide-conditions.md)
+         + [Referenshandbok för komponenter](developing/components/reference.md)
       + [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md)
       + [Bygga in märkord i AEM](/help/implementing/developing/introduction/tagging-applications.md)
       + Sökning {#search}
