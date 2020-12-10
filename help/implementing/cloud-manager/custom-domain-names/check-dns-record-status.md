@@ -2,7 +2,7 @@
 title: Kontrollerar DNS-poststatus
 description: Kontrollerar DNS-poststatus
 translation-type: tm+mt
-source-git-commit: 1c51560886515e092680c23db3e128758dcd7d99
+source-git-commit: b76a22469f248dde316dcaa514a906fe4361afd1
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -14,8 +14,7 @@ ht-degree: 0%
 
 Du kan ta reda på om ditt domännamn tolkas som en Cloud Service-webbplats på rätt sätt till AEM genom att klicka på statusikonen för DNS-posten i tabellen på sidan Domäninställningar.
 
->[!NOTE]
->Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn först verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **resolve igen** bredvid statusen.
+Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn först verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **resolve igen** bredvid statusen.
 
 Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av följande statusmeddelanden:
 
