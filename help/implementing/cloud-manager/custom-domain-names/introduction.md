@@ -2,9 +2,9 @@
 title: Introduktion - Anpassade domännamn
 description: Introduktion - Anpassade domännamn
 translation-type: tm+mt
-source-git-commit: 7704c19e440b1fedc651ce0115eb5e5ecf1eba1c
+source-git-commit: f40f87cb61d5f66ca5773d1fd1cfee6fb623201d
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '153'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,6 @@ Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din
 
 Med hjälp av sidan Domäninställningar för användargränssnitt i Cloud Manager, eller sidan Miljöinformation, kan en användare med behörighet utföra flera åtgärder för att hantera anpassade domännamn för dina miljöer, bland annat:
 
-* Lägga till ett anpassat domännamn.
-* Visa eller uppdatera ett anpassat domännamn som gör att en användare kan visa information eller ersätta ett certifikat som håller på att upphöra att gälla.
-* Tar bort anpassat domännamn.
+* [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+* [Visa eller uppdatera ett anpassat ](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md) domännamn som gör att en användare kan visa information eller ersätta ett certifikat som håller på att upphöra att gälla
+* [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
