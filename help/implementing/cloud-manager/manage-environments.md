@@ -2,10 +2,10 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: fb979363fcb8c17fbefd11b9b86498447593f745
+source-git-commit: 146f5348eb9c0fafd5dd8c4f974e1e534d9bb0df
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 6%
+source-wordcount: '1254'
+ht-degree: 5%
 
 ---
 
@@ -146,4 +146,45 @@ Välj **Lokal inloggning** i listrutan på **miljökortet** om du vill logga in 
 Dessutom kan du logga in lokalt från sammanfattningssidan **Miljöer**.
 
 ![](assets/environ-login-locally-2.png)
+
+## Hantera anpassade domännamn {#manage-cdn}
+
+Gå till sidan Miljöinformation från sidan Miljösammanfattning.
+
+Följande åtgärder kan utföras på publiceringstjänsten för din miljö enligt beskrivningen nedan:
+
+1. **Lägga till ett anpassat domännamn**: Se  [Lägga till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+
+1. **Visa och uppdatera anpassat domännamn**: Se  [Visa och uppdatera anpassade domännamn och SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
+
+1. **Tar bort anpassat domännamn**: Se  [Ta bort anpassade domännamn och SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+
+## Hantera IP-tillåtna-listor {#manage-ip-allow-lists}
+
+Gå till sidan Miljöinformation från sidan Miljösammanfattning. Du kan utföra följande åtgärder på tjänsterna Publicera och/eller Författare för din miljö här.
+
+### Använda en IP-lista över tillåtna {#apply-ip-allow-list}
+
+Att använda en IP-Tillåtelselista är den process genom vilken alla IP-intervall som ingår i definitionen av Tillåt-lista kopplas till en författare eller publiceringstjänst i en miljö. En användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att det ska gå att använda IP Tillåtelselista.
+
+>[!NOTE]
+>IP-Tillåtelselista måste finnas i Cloud Manager för att det ska kunna användas på en miljötjänst. Om du vill veta mer om tillåtna IP-listor i Cloud Manager går du till [Introduktion till tillåtna IP-listor i Could Manager](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
+
+Följ stegen nedan:
+
+1. Navigera till den specifika miljöinformationssidan från skärmen för miljöer och navigera till tabellen IP Tillåtelselista.
+1. Använd inmatningsfälten högst upp i IP Tillåtelselista-tabellen för att välja IP Tillåtelselista och författaren eller publiceringstjänsten som du vill använda den på.
+1. Välj sedan Tillämpa och bekräfta ditt bidrag.
+
+### Tar bort en IP-Tillåt-lista {#unapply-ip-allow-list}
+
+Om du inte använder en IP-Tillåtelselista är det den process genom vilken alla IP-intervall som ingår i definitionen av Tillåt-lista kopplas bort från en författare/eller utgivartjänst i en miljö.  En användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att du ska kunna Ångra en IP-Tillåtelselista.
+
+Följ stegen nedan:
+
+1. Navigera till den specifika miljöinformationssidan från skärmen för miljöer och navigera till tabellen IP Tillåtelselista.
+1. Identifiera raden där den IP Tillåtelselista-regel som du vill ta bort är listad.
+1. Välj **..**-menyn längst till höger på raden.
+1. Markera alternativet Avsluta användning och bekräfta ditt bidrag.
+
 
