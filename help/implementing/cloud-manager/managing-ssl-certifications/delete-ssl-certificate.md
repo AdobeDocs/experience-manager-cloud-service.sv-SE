@@ -2,9 +2,9 @@
 title: Ta bort ett SSL-certifikat - Hantera SSL-certifikat
 description: Ta bort ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: e5305efad061ae0b06ecb16433fccd5e97f978f3
+source-git-commit: 84c8204d257de4ecdee3728176f6d4ef545346f5
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >Att ta bort certifikat från Cloud Manager är en permanent åtgärd som inte kan ångras. Det bästa sättet är att spara alla nödvändiga SSL-filer lokalt innan de tas bort i användargränssnittet i Cloud Manager.
 
 >[!NOTE]
->En användare måste ha rollen Business Owner eller Deployment Manager för att kunna ta bort ett SSL-certifikat i Cloud Manager. I Cloud Manager kan du inte ta bort ett SSL-certifikat som har en eller flera domäner kopplade till sig.  Alla associerade domäner måste tas bort innan SSL-certifikatet tas bort. Mer information om det här ämnet finns i Ta bort INSERT-LÄNK för anpassat domännamn.
+>En användare måste ha rollen Business Owner eller Deployment Manager för att kunna ta bort ett SSL-certifikat i Cloud Manager. I Cloud Manager kan du inte ta bort ett SSL-certifikat som har en eller flera domäner kopplade till sig.  Alla associerade domäner måste tas bort innan SSL-certifikatet tas bort. Mer information finns i [Ta bort ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md).
 
 Följ stegen nedan för att ta bort ett SSL-certifikat:
 
