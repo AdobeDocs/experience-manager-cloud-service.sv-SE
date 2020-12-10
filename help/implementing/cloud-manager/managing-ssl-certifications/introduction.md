@@ -2,9 +2,9 @@
 title: Introduktion - Hantera SSL-certifikat
 description: Introduktion - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: 5ebe94c8562b952521effa3b67267c3eab925d16
+source-git-commit: 99eb33c3c42094f787d853871aee3a3607856316
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,12 @@ ht-degree: 0%
 
 Med Cloud Manager kan kunderna själva installera SSL-certifikat via användargränssnittet i Cloud Manager. Cloud Manager använder en TLS-tjänst för plattform för att hantera SSL-certifikat och privata nycklar som ägs av kunder och vanligtvis hämtas från tredjepartscertifikatutfärdare, till exempel Låt oss kryptera.
 
->[!IMPORTANT]
->Molnhanteraren tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste inhämtas från certifieringsmyndigheter från tredje part. Mer information finns i [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md).
+## Viktiga överväganden {#important-considerations}
 
->[!NOTE]
->AEM som Cloud Service har bara stöd för säkra https-platser. Kunder med flera anpassade domäner vill inte överföra ett certifikat varje gång de lägger till en domän. Detta innebär att sådana kunder kan dra nytta av att få ett certifikat med flera domäner.
+
+* Molnhanteraren tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste inhämtas från certifieringsmyndigheter från tredje part. Mer information finns i [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md).
+
+* AEM som Cloud Service har bara stöd för säkra `https`-platser. Kunder med flera anpassade domäner vill inte överföra ett certifikat varje gång de lägger till en domän. Detta innebär att sådana kunder kan dra nytta av att få ett certifikat med flera domäner.
 
 Cloud Manager stöder följande SSL-certifikatkrav för kunder:
 
@@ -30,8 +31,8 @@ Cloud Manager stöder följande SSL-certifikatkrav för kunder:
 
 Med hjälp av SSL-certifikat för användargränssnittet i Cloud Manager kan en användare med behörighet utföra flera åtgärder för att hantera SSL-certifikat för ett program:
 
-* Lägga till ett SSL-certifikat
-* Visa, uppdatera eller ersätta ett SSL-certifikat
+* [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
+* [Visa, uppdatera eller ersätta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/view-update-replace-ssl-certificate.md)
    >[!NOTE]
    >Med de här åtgärderna kan du visa information eller ersätta ett certifikat som snart upphör att gälla.
-* Ta bort ett SSL-certifikat
+* [Ta bort ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/delete-ssl-certificate.md)
