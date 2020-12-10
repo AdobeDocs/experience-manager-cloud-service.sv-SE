@@ -2,7 +2,7 @@
 title: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 description: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: 4255035b68467e4ad783edd88e8f4e96855cfe50
+source-git-commit: 1e7855661220f69038edf35d4c45b7d45b5c6bce
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 0%
@@ -53,11 +53,12 @@ Följ stegen nedan för att lägga till ett certifikat:
 
 1. Klicka på **Lägg till SSL-certifikat** för att öppna dialogrutan **Lägg till SSL-certifikat**.
 
-   ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
-
-   1. Ange ett namn för ditt certifikat i **Certifikatnamn**. Det kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
-   1. Klistra in **certifikatet**, **den privata nyckeln** och **certifikatkedjan** i respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
+   * Ange ett namn för ditt certifikat i **Certifikatnamn**. Det kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
+   * Klistra in **certifikatet**, **den privata nyckeln** och **certifikatkedjan** i respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
 Alla tre fälten är inte valfria och måste inkluderas.
+
+      ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
+
 
       >[!NOTE]
       >Alla fel som upptäcks visas. Du måste åtgärda alla fel innan certifikatet kan sparas. Mer information om hur du åtgärdar vanliga fel finns i [certifikatfel](#certificate-errors).
