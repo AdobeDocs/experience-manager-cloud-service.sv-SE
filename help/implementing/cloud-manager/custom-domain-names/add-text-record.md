@@ -2,7 +2,7 @@
 title: Lägga till en TXT-post
 description: Lägga till ett anpassat domännamn
 translation-type: tm+mt
-source-git-commit: 8d97bedc8c473c13e3378849741104b2c85492e2
+source-git-commit: b76a22469f248dde316dcaa514a906fe4361afd1
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Du måste följa stegen nedan innan du skapar en TXT-post:
 * Ha möjlighet att ändra DNS-posterna för organisationens domän, eller kontakta rätt person som kan det.
 * Identifiera din domänvärd eller registrator om du inte redan känner till den.
 
-När du initierar domänverifiering får du det namn och TXT-värde som ska användas för verifiering. Lägg till en TXT-post till domänens DNS-server med det angivna namnet och värdet.
+När du initierar domänverifiering får du det namn och TXT-värde du ska använda för verifiering i Cloud Manager. Lägg till en TXT-post till domänens DNS-server med det angivna namnet och värdet.
 
 1. Logga in på din domänvärd och gå till avsnittet DNS-poster.
 1. Lägg till `_aemverification.[yourdomainname]` som namn och lägg till TXT-värdet exakt som det visas.
