@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 description: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: 99eb33c3c42094f787d853871aee3a3607856316
+source-git-commit: 4ab944ad15390f9399138672a024aa30cf4aede8
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ SSL-filer måste vara i PEM-format för att kunna installeras i Cloud Manager. V
 
 Följ stegen nedan för att konvertera SSL-filernas format till PEM:
 
-1. Konvertera PFX till PEM
+* Konvertera PFX till PEM
 
-`openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes`
+   `openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes`
 
-1. Konvertera P7B till PEM
+* Konvertera P7B till PEM
 
-`openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer`
+   `openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer`
 
-1. Konvertera DER till PEM
+* Konvertera DER till PEM
 
-`openssl x509 -inform der -in certificate.cer -out certificate.pem`
+   `openssl x509 -inform der -in certificate.cer -out certificate.pem`
 
 ## Viktiga överväganden {#important-considerations}
 
@@ -50,9 +50,11 @@ Följ stegen nedan för att lägga till ett certifikat:
 1. Klicka på **SSL-certifikat** i den vänstra navigeringsmenyn. En tabell med information om eventuella befintliga SSL-certifikat visas på den här skärmen.
 
    ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-1.png)
-1. Välj knappen **Lägg till certifikat** för att öppna dialogrutan **Lägg till SSL-certifikat**.
+
+1. Klicka på **Lägg till SSL-certifikat** för att öppna dialogrutan **Lägg till SSL-certifikat**.
 
    ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
+
    1. Ange ett namn för ditt certifikat i **Certifikatnamn**. Det kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
    1. Klistra in **certifikatet**, **den privata nyckeln** och **certifikatkedjan** i respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
 Alla tre fälten är inte valfria och måste inkluderas.
@@ -84,6 +86,4 @@ Du kan verifiera att den privata nyckeln och `main/server`-certifikatet matchar 
 
 ### Certifikatets giltighetsdatum {#certificate-validity-dates}
 
-SSL-certifikatet förväntas vara giltigt i minst 90 dagar i framtiden
-
-Kontrollera certifikatkedjans giltighet.
+SSL-certifikatet förväntas vara giltigt i minst 90 dagar framöver. Du bör kontrollera certifikatkedjans giltighet.
