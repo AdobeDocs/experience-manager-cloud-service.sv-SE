@@ -2,9 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.12.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.12.0
 translation-type: tm+mt
-source-git-commit: 738cff4231f329826b44f1b0f1a184fa15edd82a
+source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '129'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.12.0 är 10 decembe
 
 * Självbetjäningshantering för [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md).
 
-* Självbetjäningshantering för [IP Tillåt-Lists](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
+* Självbetjäningshantering för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
 
 * Uppdaterad **Informationssida om miljö** tillåter nu användare att hantera anpassade domännamn och Tillåt-listor för IP i sina miljöer.
 
