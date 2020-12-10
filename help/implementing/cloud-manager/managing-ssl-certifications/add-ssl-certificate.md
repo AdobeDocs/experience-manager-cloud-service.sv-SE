@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 description: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: 4ab944ad15390f9399138672a024aa30cf4aede8
+source-git-commit: 4255035b68467e4ad783edd88e8f4e96855cfe50
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 # Lägger till ett SSL-certifikat {#adding-an-ssl-certificate}
 
 >[!NOTE]
->AEM som Cloud Service accepterar endast OV- (Organization Validation) eller EV-certifikat (Extended Validation). DV-certifikat (domänvalidering) godkänns inte.
+>AEM som Cloud Service accepterar endast OV- (Organization Validation) eller EV-certifikat (Extended Validation). DV-certifikat (domänvalidering) godkänns inte. Dessutom måste alla certifikat vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
 
 Ett certifikat tar några dagar att etablera och vi rekommenderar att certifikatet etableras även månader i förväg. Mer information finns i [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md).
 
@@ -59,11 +59,12 @@ Följ stegen nedan för att lägga till ett certifikat:
    1. Klistra in **certifikatet**, **den privata nyckeln** och **certifikatkedjan** i respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
 Alla tre fälten är inte valfria och måste inkluderas.
 
+      >[!NOTE]
+      >Alla fel som upptäcks visas. Du måste åtgärda alla fel innan certifikatet kan sparas. Mer information om hur du åtgärdar vanliga fel finns i [certifikatfel](#certificate-errors).
+
 1. Klicka på **Spara** för att skicka certifikatet. Den visas som en ny rad i tabellen.
 
    ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-3.png)
-   >[!NOTE]
-   >Alla fel som upptäcks visas. Du måste åtgärda alla fel innan certifikatet kan sparas. Mer information om hur du åtgärdar vanliga fel finns i [certifikatfel](#certificate-errors).
 
 ## Certifikatfel {#certificate-errors}
 
