@@ -2,10 +2,10 @@
 title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 14d08529eeee0f9881e668eed6273cfa57f1360f
+source-git-commit: 40119f7b3bdf36af668b79afbcb2802a0b2a6033
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 4%
+source-wordcount: '462'
+ht-degree: 7%
 
 ---
 
@@ -18,21 +18,16 @@ Det AEM hanterade CDN uppfyller de flesta kunders krav på prestanda och säkerh
 
 ## AEM hanterad CDN {#aem-managed-cdn}
 
-Följ de här stegen för att förbereda innehållsleverans genom att använda Adobe i körklart CDN:
+Följ nedanstående avsnitt för att använda självbetjäningsgränssnittet för Cloud Manager för att förbereda innehållsleverans med hjälp av Adobe:s färdiga CDN:
 
-1. Tillhandahåll det signerade SSL-certifikatet och den hemliga nyckeln till Adobe genom att dela en länk till ett säkert formulär som innehåller denna information. Samordna med kundsupport för den här uppgiften. Adobe stöder upp till 10 SSL-certifikat för ett program.
-   **Obs!** Aem as a Cloud Service does not support Domain Validated (DV) certificates. Dessutom måste det vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
-1. Informera kundsupport:
-   * vilka anpassade domäner som ska kopplas till en viss miljö, enligt definition av program-id och miljö-id. Upp till 100 domäner stöds för en viss miljö och domäner kan inte innehålla jokertecken. Observera att anpassade domäner på författarsidan inte stöds.
-   * om någon IP-tillåtelselistning behövs för att begränsa trafiken till en viss miljö.
-1. Koordinera med kundsupport om timing för nödvändiga ändringar av DNS-posterna. Instruktionerna är olika beroende på om en apex-post behövs:
-   * Om en apex-post inte behövs ska kunderna ange CNAME DNS-posten så att den pekar på deras FQDN till `cdn.adobeaemcloud.com`.
-   * Om en apex-post behövs skapar du en A-post som pekar på följande IP-adresser: 151.101.3.10, 151.101.67.10, 151.101.131.10, 151.101.195.10. Kunderna behöver en apex-post om det önskade FQDN matchar DNS-zonen. Detta kan testas med Unix-kommandot för att se om SOA-värdet för utdata matchar domänen. Kommandot `dig anything.dev.adobeaemcloud.com` returnerar till exempel SOA (Start of Authority, dvs. zonen) på `dev.adobeaemcloud.com` så att det inte är en APEX-post, medan `dig dev.adobeaemcloud.com` returnerar SOA på `dev.adobeaemcloud.com` så att det är en apex-post.
-1. Du meddelas när SSL-certifikaten upphör att gälla så att du kan skicka om de nya SSL-certifikaten.
+1. [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
+1. [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
 
 **Begränsa trafik**
 
-Som standard kan all offentlig trafik för en Adobe hanterad CDN-installation gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utvecklingsmiljöer och scenmiljöer). Om du vill begränsa trafiken till publiceringstjänsten för en viss miljö (t.ex. begränsa mellanlagring med ett intervall av IP-adresser) bör du tillsammans med kundsupporten arbeta med att konfigurera dessa begränsningar.
+Som standard kan all offentlig trafik för en Adobe hanterad CDN-installation gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utvecklingsmiljöer och scenmiljöer). Om du vill begränsa trafiken till publiceringstjänsten för en viss miljö (till exempel begränsa mellanlagring med ett intervall av IP-adresser) kan du göra detta på ett självbetjäningssätt via användargränssnittet i Cloud Manager.
+
+Mer information finns i [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
 
 ## Kund-CDN pekar på AEM hanterat CDN {#point-to-point-CDN}
 
