@@ -2,9 +2,9 @@
 title: Kontrollerar domännamnsstatus
 description: Kontrollerar domännamnsstatus
 translation-type: tm+mt
-source-git-commit: 1c51560886515e092680c23db3e128758dcd7d99
+source-git-commit: f11cb3b56f51046779300626d1deb037dd687309
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -20,20 +20,24 @@ Du kan ta reda på om ditt domännamn har verifierats genom att klicka på statu
 Cloud Manager verifierar domänägarskap via TXT-värdet och visar ett av följande statusmeddelanden:
 
 * **Domänverifieringen**
-FailedTXT-värdet saknas eller har identifierats med fel. Följ instruktionerna och försök igen. När du är klar måste du markera ikonen&quot;verifiera igen&quot; bredvid statusen.
+FailedTXT-värdet saknas eller har identifierats med fel. Följ instruktionerna och försök igen. När du är klar måste du välja 
+*verifiera* againicon bredvid statusen.
 
 * **Domänverifiering**
-pågårVerifiering pågår. Den här statusen visas vanligtvis när du har valt ikonen&quot;verifiera igen&quot; bredvid statusen.
+pågårVerifiering pågår. Den här statusen visas vanligtvis när du har valt 
+*verifiera* againicon bredvid statusen.
 
 * **Verifierad, Distributionen**
 FailedTXT-verifieringen lyckades. CDN-distributionen misslyckades dock. En Adobe-representant meddelas automatiskt.
 
 * **Domän verifierad och**
-distribueradDen här statusen anger att ditt anpassade domännamn är klart att användas. Obs! Nu är ditt anpassade domännamn klart för testning och kan hänvisas till molnhanterarens domännamn. Gå till Konfigurera DNS-inställningar om du vill veta hur du gör det.
+distribueradDen här statusen anger att ditt anpassade domännamn är klart att användas.
+   >[!NOTE]
+   >Nu är ditt anpassade domännamn klart för testning och kan hänvisas till molnhanterarens domännamn. Mer information finns i [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md).
 
 * **Borttagning**
 av anpassat domännamn pågår.
 
 * **Borttagningen**
-misslyckades. Det gick inte att ta bort det anpassade domännamnet. Du måste försöka igen. Gå till Ta bort anpassat domännamn om du vill veta mer om ämnet.
+misslyckades. Det gick inte att ta bort det anpassade domännamnet. Du måste försöka igen. Mer information finns i [Ta bort ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md).
 
