@@ -2,15 +2,15 @@
 title: 'Använd inte IP Tillåtelselista '
 description: Använd inte IP Tillåtelselista
 translation-type: tm+mt
-source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
+source-git-commit: e6a8d69ea87ac56a51cde2f131c4accff1bea527
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# Använd inte IP-Tillåtelselista {#apply-allow-list}
+# Avaktivera IP-Tillåtelselista {#apply-allow-list}
 
 Att inte använda ett IP-Tillåtelselista är den process där alla IP-intervall som ingår i definitionen av Tillåt-lista inte är kopplade till en författare/eller utgivartjänst i en miljö.
 
