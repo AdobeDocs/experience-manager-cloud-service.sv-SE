@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: b3c577f1030ed96e5dde596c5fe01e853c3199df
+source-git-commit: da1ca193b38657f78ff3e5e0cfffef0ab9e8a9a0
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 41%
+source-wordcount: '692'
+ht-degree: 42%
 
 ---
 
@@ -54,7 +54,6 @@ ht-degree: 41%
       + [Avaktivera användning av en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
       + [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
       + [Kontrollera status för IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
-   + [API för Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
 + Hantera kod {#managing-code}
    + [Versionshantering för Maven Project](cloud-manager/project-version-handling.md)
    + [Åtkomst till Git](cloud-manager/accessing-git.md)
