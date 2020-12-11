@@ -2,7 +2,7 @@
 title: 'Lägger till IP Tillåtelselista '
 description: Lägger till IP Tillåtelselista
 translation-type: tm+mt
-source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
+source-git-commit: 701020701fd45af720edea13a70cb459a650fbca
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
@@ -10,11 +10,9 @@ ht-degree: 0%
 ---
 
 
-# Introduktion {#introduction}
+# Lägger till en IP-Tillåtelselista {#add-ip-allow-list}
 
 En användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att det ska gå att lägga till IP-Tillåtelselista.
-
-## Lägger till IP-Tillåtelselista {#add-ip-allow-list}
 
 Följ stegen nedan för att lägga till ett IP-Tillåtelselista:
 
