@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 483c31a7ca53dc5e5dcffe3e9bfc7ce613ca8697
+source-git-commit: b3c577f1030ed96e5dde596c5fe01e853c3199df
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1249'
 ht-degree: 4%
 
 ---
@@ -168,7 +168,7 @@ Gå till sidan Miljöinformation från sidan Miljösammanfattning. Du kan utför
 Att använda en IP-Tillåtelselista är den process genom vilken alla IP-intervall som ingår i definitionen av Tillåt-lista kopplas till en författare eller publiceringstjänst i en miljö. En användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att det ska gå att använda IP Tillåtelselista.
 
 >[!NOTE]
->IP-Tillåtelselista måste finnas i Cloud Manager för att det ska kunna användas på en miljötjänst. Om du vill ha mer information om IP-tillåtna listor i Cloud Manager går du till [Introduktion till IP Tillåtelselista i Could Manager](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
+>IP-Tillåtelselista måste finnas i Cloud Manager för att det ska kunna användas på en miljötjänst. Om du vill veta mer om IP Tillåtelselista i Cloud Manager går du till [Introduktion till IP Tillåtelselista i Could Manager](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
 
 Följ stegen nedan för att använda ett IP-Tillåtelselista:
 
