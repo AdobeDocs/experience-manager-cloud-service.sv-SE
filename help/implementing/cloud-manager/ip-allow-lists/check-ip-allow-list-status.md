@@ -2,9 +2,9 @@
 title: Kontrollerar IP Tillåtelselista-status
 description: Kontrollerar IP Tillåtelselista-status
 translation-type: tm+mt
-source-git-commit: 4245bbad81327ffdba9c400a36a03d815e2ebdc7
+source-git-commit: e6a8d69ea87ac56a51cde2f131c4accff1bea527
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,8 @@ Nedan följer definitioner av status som visas i ett IP-Tillåtelselista:
 
 * **Tar bort**: Borttagningsbegäran pågår. Detta innebär att alla tjänster inte används. Alla Unapply visas tillsammans med Not Started/In Progress/Complete eller Failed.
 När borttagningen är klar kommer IP Tillåtelselista att:
-   * Visas inte längre i IP Tillåtelselista-tabellen * Används inte längre för någon tjänst i programmet i Cloud Manager
+   * Visas inte längre i IP Tillåtelselista-tabellen.
+   * Tillämpas inte längre på någon tjänst i programmet i Cloud Manager.
 
 * **Borttagningen misslyckades**: En eller flera processer som inte används i en borttagningsåtgärd misslyckades. Alla Unapply visas tillsammans med Complete eller Failed.
 
