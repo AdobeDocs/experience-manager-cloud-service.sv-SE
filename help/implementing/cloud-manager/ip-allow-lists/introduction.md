@@ -2,9 +2,9 @@
 title: Introduktion - IP Tillåtelselista i Could Manager
 description: Introduktion - IP Tillåtelselista i Could Manager
 translation-type: tm+mt
-source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
+source-git-commit: e6a8d69ea87ac56a51cde2f131c4accff1bea527
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ IP-Tillåtelselista kan läggas till en gång och tillämpas/tas bort flera gån
 
 Med hjälp av IP-Tillåtelselista-sidan för användargränssnittet i Cloud Manager eller miljöinformationssidan kan en användare med behörighet utföra flera åtgärder för att hantera IP-Tillåtelselista för dina miljöer, bland annat:
 
-* Lägger till IP Tillåtelselista
+* [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
    >[!NOTE]
    > Du kan lägga till en gång och återanvända eller tillämpa regeln hur många gånger som helst mellan olika tjänster i programmet.
-* Visa eller uppdatera en IP-Tillåtelselista
-* Använda eller avtillämpa ett IP-Tillåtelselista
-* Ta bort en IP-Tillåtelselista
+* [Visa eller uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)
+* [Använda eller ta bort tillämpning av ett IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
+* [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
