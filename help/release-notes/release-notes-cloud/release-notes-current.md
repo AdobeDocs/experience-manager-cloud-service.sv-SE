@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 3aff98256eb26176bca52a49286bf2853290b5ef
+source-git-commit: d115f5ce463257af54ae0ff48749df455b863dfd
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1184'
 ht-degree: 0%
 
 ---
@@ -123,9 +123,10 @@ Ny [&quot;httpd -t&quot;-syntax](/help/implementing/dispatcher/disp-overview.md#
 
 ### Nyheter i [!DNL Code Refactoring Tools] {#what-is-new-crt}
 
-* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av det här plugin-programmet innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Läs [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html?lang=en#benefits) om du vill veta mer om det här plugin-programmet.
+* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av det här plugin-programmet innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter.
+Mer information om detta plugin-program finns i [Enhetlig upplevelse](/help/move-to-cloud-service/unified-experience.md).
 
-* Indexkonverteraren är ett verktyg som kan användas för att omvandla en kunds anpassade OAK-indexdefinitioner till AEM som en Cloud Service-kompatibel OAK-indexdefinitioner.
+* [Indexkonverterare är ett verktyg ](/help/move-to-cloud-service/refactoring-tools/index-converter.md) som kan användas för att omvandla en kunds anpassade OAK-indexdefinitioner till AEM som en Cloud Service-kompatibel OAK-indexdefinitioner.
 Mer information finns i [Indexkonverteraren](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter).
 
 * Ny funktion har lagts till i [Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) som skapar ett separat paket `ui.config` som innehåller alla OSGi-konfigurationer.
