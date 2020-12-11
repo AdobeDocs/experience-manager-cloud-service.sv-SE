@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 146f5348eb9c0fafd5dd8c4f974e1e534d9bb0df
+source-git-commit: 5d3100ce33aa294c30509f8b8c0e41ed4c42b880
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1264'
 ht-degree: 5%
 
 ---
@@ -149,21 +149,28 @@ Dessutom kan du logga in lokalt från sammanfattningssidan **Miljöer**.
 
 ## Hantera anpassade domännamn {#manage-cdn}
 
-Gå till sidan Miljöinformation från sidan Miljösammanfattning.
+Gå till informationssidan för **Miljöer** från sidan Miljösammanfattning.
 
 Följande åtgärder kan utföras på publiceringstjänsten för din miljö enligt beskrivningen nedan:
 
-1. **Lägga till ett anpassat domännamn**: Se  [Lägga till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+1. **Lägga till ett anpassat**
+domännamnReferera till  [att lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
 
-1. **Visa och uppdatera anpassat domännamn**: Se  [Visa och uppdatera anpassade domännamn och SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
+1. **Visa och uppdatera eget domännamn och SSL-**
+certifikatReferera till
+   * [Visa och uppdatera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
+   * [Visa och uppdatera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/view-update-replace-ssl-certificate.md)
 
-1. **Tar bort anpassat domännamn**: Se  [Ta bort anpassade domännamn och SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+1. **Ta bort anpassat domännamn och**
+SSL-certifikatReferer till
+   * [Ta bort anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+   * [SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
 
-## Hantera IP-tillåtna-listor {#manage-ip-allow-lists}
+## Hantera IP-Tillåtelselista {#manage-ip-allow-lists}
 
 Gå till sidan Miljöinformation från sidan Miljösammanfattning. Du kan utföra följande åtgärder på tjänsterna Publicera och/eller Författare för din miljö här.
 
-### Använda en IP-lista över tillåtna {#apply-ip-allow-list}
+### Använda ett IP-Tillåtelselista {#apply-ip-allow-list}
 
 Att använda en IP-Tillåtelselista är den process genom vilken alla IP-intervall som ingår i definitionen av Tillåt-lista kopplas till en författare eller publiceringstjänst i en miljö. En användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att det ska gå att använda IP Tillåtelselista.
 
