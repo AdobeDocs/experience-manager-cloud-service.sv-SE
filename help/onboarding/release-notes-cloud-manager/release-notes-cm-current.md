@@ -2,9 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.12.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.12.0
 translation-type: tm+mt
-source-git-commit: 4635cb6360707d12cf512b0ee21f05169a153114
+source-git-commit: 5d3100ce33aa294c30509f8b8c0e41ed4c42b880
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '130'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.12.0 är 10 decembe
 
 * Självbetjäningshantering för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
 
-* Uppdaterad **Informationssida om miljö** tillåter nu användare att hantera anpassade domännamn och Tillåt-listor för IP i sina miljöer.
+* **Informationssidan för miljö** tillåter nu användare att hantera anpassade domännamn och IP-Tillåtelselista i sina miljöer.
 
 
 ### Felkorrigeringar {#bug-fixes}
