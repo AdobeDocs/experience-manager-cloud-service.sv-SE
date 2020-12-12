@@ -4,9 +4,9 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: da1ca193b38657f78ff3e5e0cfffef0ab9e8a9a0
+source-git-commit: c82622ad26fecd547c12fff6994713488b9759df
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '694'
 ht-degree: 42%
 
 ---
@@ -44,8 +44,8 @@ ht-degree: 42%
       + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
       + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
       + [Visa, uppdatera och ersätta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
-      + [Uppdaterar det anpassade domännamnets SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/update-cdn-ssl-certificate.md)
-      + [Tar bort eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+      + [Uppdatera ett anpassat domännamns SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/update-cdn-ssl-certificate.md)
+      + [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
    + Hantera IP-Tillåtelselista {#ip-allow-lists}
       + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
       + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
