@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lägga till ett anpassat domännamn
 translation-type: tm+mt
-source-git-commit: 27e96d66d93f2fa0e67e607c75f37efda17a13b7
+source-git-commit: 3d60af3da62a8a5c8cb62a4e79452bc7675b1878
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ En användare måste vara en Business Owner eller Deployment Manager för att ku
 
 * Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet installeras i ditt program. Mer information finns i [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
 
-* Det går bara att lägga till ett domännamn åt gången. Användare kan dock lägga till jokertecken, till exempel `*.wknd.com` som ett domännamn, vilket gör att flera underdomäner kan lagras med en enda TXT-post.
+* Det går bara att lägga till ett domännamn åt gången. Domäner kan dock inte innehålla jokertecken. Anpassade domäner på författarsidan stöds inte.
 
 * Varje Cloud Manager-miljö har plats för upp till 100 anpassade domäner per miljö.
 
