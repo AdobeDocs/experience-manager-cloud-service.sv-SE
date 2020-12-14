@@ -2,7 +2,7 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
 translation-type: tm+mt
-source-git-commit: 69756d6831678151b0e8eb73db81113d49f17447
+source-git-commit: a3b2a66958fd8d3a68b450938c5c18053f00b998
 workflow-type: tm+mt
 source-wordcount: '3228'
 ht-degree: 0%
@@ -555,7 +555,7 @@ Utvärderingen fungerar enligt följande:
 
 * Om `T` har en `allowedPaths`-egenskap som inte är tom, men inget av värdena matchar sökvägen `P`, avvisas `T`.
 
-* Om båda ovanstående egenskaper är tomma eller inte finns, avvisas `T` om den inte tillhör samma program som `P`. `T` tillhör samma program som  `P` if och endast om namnet på den andra nivån i sökvägen  `T` är detsamma som namnet på den andra nivån i sökvägen  `P`. Mallen `/apps/geometrixx/templates/foo` tillhör till exempel samma program som sidan `/content/geometrixx`.
+* Om båda ovanstående egenskaper är tomma eller inte finns, avvisas `T` om den inte tillhör samma program som `P`. `T` tillhör samma program som  `P` if och endast om namnet på den andra nivån i sökvägen  `T` är detsamma som namnet på den andra nivån i sökvägen  `P`. Mallen `/apps/wknd/templates/foo` tillhör till exempel samma program som sidan `/content/wknd`.
 
 * Om `T` har en `allowedParents`-egenskap som inte är tom, men inget av värdena matchar sökvägen `P`, avvisas `T`.
 
