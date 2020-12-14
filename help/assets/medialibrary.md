@@ -3,9 +3,9 @@ title: AEM Assets vs. AEM MediaLibrary
 description: Frågor och svar om AEM Assets och andra frågor. AEM Media Library, inklusive skillnaderna mellan de båda.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 82dd9bd69fe994f74c7be8a571e386f0e902f6a1
+source-git-commit: a3b2a66958fd8d3a68b450938c5c18053f00b998
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '694'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Om du planerar att redigera andra metadata än titel, beskrivning och taggar må
 
 ## Jag vill använda kategoripredikatet på min webbplats. Behöver jag AEM Assets? {#i-want-to-use-the-category-predicate-on-my-website-do-i-need-aem-assets}
 
-Ja, kategoripredikatet och alla andra komponenter som används i Geometrixx Press Center ingår i AEM Assets och kräver en AEM Assets-licens.
+Ja, kategoripredikatet och alla andra komponenter ingår i AEM Assets och kräver en AEM Assets-licens.
 
 ## Jag vill automatiskt ändra storlek på bilder vid import. Behöver jag AEM Assets? {#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
 
