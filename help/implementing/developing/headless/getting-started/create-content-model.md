@@ -2,7 +2,7 @@
 title: Skapa innehållsfragmentmodeller Headless Quick Start Guide
 description: Content Fragment Models definierar strukturen för det innehåll du skapar och fungerar med AEM headless-funktioner.
 translation-type: tm+mt
-source-git-commit: 712a99095494ab333cf0ebb2ac9fffe3f5945f3b
+source-git-commit: 259d54a225f8dee5929f62b784e28f3fc2bb794a
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -63,5 +63,6 @@ Du kan skapa flera modeller. Modeller kan referera till andra innehållsfragment
 
 Nu när du har definierat strukturerna för dina innehållsfragment genom att skapa modeller kan du gå vidare till den tredje delen av guiden Komma igång och [skapa mappar där du lagrar fragmenten själva.](create-assets-folder.md)
 
->!![TIP]
-Fullständig information om modeller för innehållsfragment finns i [dokumentationen för modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
+>[!TIP]
+>
+>Fullständig information om modeller för innehållsfragment finns i [dokumentationen för modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
