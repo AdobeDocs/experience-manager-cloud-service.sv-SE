@@ -2,7 +2,7 @@
 title: Skapa en guide till Headless-konfiguration
 description: Som ett första steg till att komma igång med headless AEM som Cloud Service måste du skapa en konfiguration.
 translation-type: tm+mt
-source-git-commit: 7ed96dc0da879800d731983a0399b4f4fb3d7d41
+source-git-commit: 259d54a225f8dee5929f62b784e28f3fc2bb794a
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -42,12 +42,14 @@ En administratör behöver bara skapa en konfiguration en gång, eller mycket s�
 
 Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också kapslas.
 
->!![NOTE]
-Konfigurationsalternativ utöver **Content Fragment Models** och **GraphQL Persistent Queries** kan behövas beroende på implementeringskraven.
+>[!NOTE]
+>
+>Konfigurationsalternativ utöver **Content Fragment Models** och **GraphQL Persistent Queries** kan behövas beroende på implementeringskraven.
 
 ## Nästa steg {#next-steps}
 
 Med den här konfigurationen kan du nu gå vidare till den andra delen av guiden Komma igång och [skapa modeller för innehållsfragment.](create-content-model.md)
 
->!![TIP]
-Fullständig information om Configuration Browser finns i [dokumentationen till Configuration Browser.](/help/implementing/developing/introduction/configurations.md)
+>[!TIP]
+>
+>Fullständig information om Configuration Browser finns i [dokumentationen till Configuration Browser.](/help/implementing/developing/introduction/configurations.md)
