@@ -2,7 +2,7 @@
 title: Skapa innehållsfragment Headless Quick Start Guide
 description: Med Content Fragments kan du designa, skapa, strukturera och använda sidoberoende innehåll som kan levereras obehindrat av AEM.
 translation-type: tm+mt
-source-git-commit: 712a99095494ab333cf0ebb2ac9fffe3f5945f3b
+source-git-commit: 259d54a225f8dee5929f62b784e28f3fc2bb794a
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -53,5 +53,6 @@ Innehållsfragment kan också referera till andra resurser i AEM. [Dessa resurse
 
 Nu när du har skapat ett innehållsfragment kan du gå vidare till den sista delen av guiden Komma igång och [skapa API-begäranden för att komma åt och leverera innehållsfragment.](create-api-request.md)
 
->!![TIP]
-Fullständig information om hur du hanterar innehållsfragment finns i [dokumentationen för innehållsfragment](/help/assets/content-fragments/content-fragments.md)
+>[!TIP]
+>
+>Fullständig information om hur du hanterar innehållsfragment finns i [dokumentationen för innehållsfragment](/help/assets/content-fragments/content-fragments.md)
