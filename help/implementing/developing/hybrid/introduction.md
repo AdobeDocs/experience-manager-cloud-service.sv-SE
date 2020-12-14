@@ -2,9 +2,9 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 translation-type: tm+mt
-source-git-commit: cdd92032c627740c66de7b2f3836fa1dcd2ee2ca
+source-git-commit: e4b75913e8d2ec90efc97d79e3a272b146fc06d6
 workflow-type: tm+mt
-source-wordcount: '1930'
+source-wordcount: '1933'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ I nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), läses djupare
 
 ### Läser in ett SPA {#loading-a-spa-application}
 
-1. Om det inte redan är inläst läser du in programmet We.Retail Journal antingen på publiceringsservern eller med alternativet **Visa som publicerad** på menyn **Sidinformation** i sidredigeraren.
+1. Om den inte redan är inläst läser du in WKND SPA Project-programmet antingen på publiceringsservern eller med alternativet **Visa som publicerad** på menyn **Sidinformation** i sidredigeraren.
 
    `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
@@ -228,7 +228,7 @@ I nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), läses djupare
 
    Sidan har inget innehåll i sin brödtext. Den består huvudsakligen av formatmallar och ett anrop till olika skript, till exempel `clientlib-react.min.js`.
 
-   Dessa skript är de primära drivrutinerna för programmet och ansvarar för återgivningen av allt innehåll.
+   Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för att återge allt innehåll.
 
 1. Använd webbläsarens inbyggda verktyg för att inspektera sidan. Se innehållet i DOM som är fullständigt inläst.
 
@@ -254,7 +254,7 @@ I nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), läses djupare
 
 1. Modellen kan också gruppera sidor så att de läses in synkront, vilket minskar antalet sidomladdningar som behövs.
 
-   I exemplet med We.Retail Journal läses sidorna `home`, `page-1`, `page-2` och `page-3` in synkront, eftersom besökare vanligtvis besöker alla dessa sidor.
+   I exemplet med WKND SPA Project-appen läses sidorna `home`, `page-1`, `page-2` och `page-3` in synkront, eftersom besökarna vanligtvis besöker alla dessa sidor.
 
    Detta beteende är inte obligatoriskt och är helt definierbart.
 
