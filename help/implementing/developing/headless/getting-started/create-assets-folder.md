@@ -2,7 +2,7 @@
 title: Skapa en startguide för en resursmapp utan rubrik
 description: Modeller för innehållsfragment definierar strukturen för innehållsfragment. Innehållsfragment lagras sedan i resursmappar.
 translation-type: tm+mt
-source-git-commit: 9c801af38142434a5a0302b73b6fc1469a0eaab2
+source-git-commit: 259d54a225f8dee5929f62b784e28f3fc2bb794a
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
@@ -53,5 +53,6 @@ Om du använder en lokaliserad platsstruktur kan du [skapa en språkrot](/help/a
 
 Nu när du har skapat en mapp för dina innehållsfragment kan du gå vidare till den fjärde delen av guiden Komma igång och [skapa innehållsfragment.](create-content-fragment.md)
 
->!![TIP]
-Fullständig information om hur du hanterar innehållsfragment finns i [dokumentationen för innehållsfragment](/help/assets/content-fragments/content-fragments.md)
+>[!TIP]
+>
+>Fullständig information om hur du hanterar innehållsfragment finns i [dokumentationen för innehållsfragment](/help/assets/content-fragments/content-fragments.md)
