@@ -2,7 +2,7 @@
 title: Komma åt och leverera innehållsfragment Headless Quick Start Guide
 description: Resursens REST-API gör det möjligt att hantera innehållsfragment och GraphQL-API:t gör det enkelt att skicka innehållsfragment utan rubrik.
 translation-type: tm+mt
-source-git-commit: 7ed96dc0da879800d731983a0399b4f4fb3d7d41
+source-git-commit: 259d54a225f8dee5929f62b784e28f3fc2bb794a
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för 
 
 1. Om vi utgår ifrån att modellen vi skapade hette `person` med fälten `firstName`, `lastName` och `position`, kan vi skapa en enkel fråga för att hämta innehållet i innehållsfragmentet.
 
-   ```
+   ```text
    query {
      persons {
        items {
