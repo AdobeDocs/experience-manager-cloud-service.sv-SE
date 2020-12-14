@@ -1,8 +1,8 @@
 ---
-title: Visa och uppdatera - IP Tillåtelselista i Could Manager
-description: Visa och uppdatera - IP Tillåtelselista i Could Manager
+title: Visa och uppdatera - IP-Tillåtelselista i Cloud Manager
+description: Visa och uppdatera - IP-Tillåtelselista i Cloud Manager
 translation-type: tm+mt
-source-git-commit: e6a8d69ea87ac56a51cde2f131c4accff1bea527
+source-git-commit: 7fdfa626147a72f3d7fb98b89a19a871fc7a13ca
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
