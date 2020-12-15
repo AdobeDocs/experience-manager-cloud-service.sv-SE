@@ -3,9 +3,9 @@ title: Märk upp bilder automatiskt med AI-genererade taggar
 description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar med  [!DNL Adobe Sensei] tjänster.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 80171c63e9f3ba9ace4fd948c7997f14a17ccddc
+source-git-commit: 745585ebd50f67987ee4fc48d4f9d5b4afa865a0
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2361'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ I bakgrunden använder smarta taggar ett ramverk för artificiell intelligens p�
 
 Utför följande uppgifter om du vill använda smart taggning:
 
-* [Integrera Experience Manager med Adobe Developer Console](#integrate-aem-with-aio).
+* [ [!DNL Adobe Experience Manager] Integrera med Adobe Developer Console](#integrate-aem-with-aio).
 * [Förstå taggmodeller och riktlinjer](#understand-tag-models-guidelines).
 * [Tåla modellen](#train-model).
 * [Tagga dina digitala resurser](#tag-assets).
@@ -105,6 +105,9 @@ Följ de här stegen för att skapa och utbilda en modell för dina företagsspe
 1. Klicka på **[!UICONTROL Create]**. Ange en **[!UICONTROL Title]**, **[!UICONTROL Description]**.
 1. Bläddra och välj taggarna från de befintliga taggarna i `cq:tags` som du vill utbilda modellen för. Klicka på **[!UICONTROL Next]**.
 1. Klicka på **[!UICONTROL Add Assets]** mot varje tagg i dialogrutan **[!UICONTROL Select Assets]**. Sök i DAM-databasen eller bläddra i databasen för att välja minst 10 och högst 50 bilder. Välj resurser och inte mappen. När du har valt bilderna klickar du på **[!UICONTROL Select]**.
+
+   ![Visa utbildningsstatus](assets/smart-tags-training-status.png)
+
 1. Om du vill förhandsvisa miniatyrbilderna för de markerade bilderna klickar du på dragspelet framför en tagg. Du kan ändra markeringen genom att klicka på **[!UICONTROL Add Assets]**. När du är nöjd med markeringen klickar du på **[!UICONTROL Submit]**. Användargränssnittet visar ett meddelande längst ned på sidan om att kursen har startats.
 1. Kontrollera utbildningsstatusen i kolumnen **[!UICONTROL Status]** för varje taggmodell. Möjliga statusvärden är [!UICONTROL Pending], [!UICONTROL Trained] och [!UICONTROL Failed].
 
@@ -116,13 +119,13 @@ Följ de här stegen för att skapa och utbilda en modell för dina företagsspe
 
 Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i utbildningsuppsättningen med resurser kan du läsa rapporten om utbildningsarbetsflödet i rapportkonsolen.
 
-1. Gå till **[!UICONTROL Tools > Assets > Reports]** i [!DNL Experience Manager]-gränssnittet.
+1. I [!DNL Experience Manager]-gränssnittet går du till **[!UICONTROL Tools] > **[!UICONTROL Assets] > **[!UICONTROL Reports]**.
 1. Klicka på **[!UICONTROL Create]** på sidan **[!UICONTROL Asset Reports]**.
 1. Välj **[!UICONTROL Smart Tags Training]**-rapporten och klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
 1. Ange en titel och beskrivning för rapporten. Under **[!UICONTROL Schedule Report]** låter du alternativet **[!UICONTROL Now]** vara markerat. Om du vill schemalägga rapporten till ett senare tillfälle väljer du **[!UICONTROL Later]** och anger ett datum och en tid. Klicka sedan på **[!UICONTROL Create]** i verktygsfältet.
 1. På sidan **[!UICONTROL Asset Reports]** markerar du rapporten som du skapat. Om du vill visa rapporten klickar du på **[!UICONTROL View]** i verktygsfältet.
 1. Granska informationen i rapporten. Rapporten visar träningsstatusen för de taggar du har tränat. Den gröna färgen i kolumnen **[!UICONTROL Training Status]** anger att tjänsten Smarta taggar har tränats för taggen. Gul färg anger att tjänsten inte är helt tränad för en viss tagg. I det här fallet lägger du till fler bilder med just den taggen och kör träningsarbetsflödet för att träna tjänsten helt för taggen. Om du inte ser dina taggar i den här rapporten kör du utbildningsarbetsflödet igen för de här taggarna.Taggar
-1. Om du vill hämta rapporten markerar du den i listan och klickar på **[!UICONTROL Download]** i verktygsfältet. Rapporten hämtas som ett Microsoft Excel-kalkylblad.
+1. Om du vill hämta rapporten markerar du den i listan och klickar på **[!UICONTROL Download]** i verktygsfältet. Rapporten hämtas som ett [!DNL Microsoft Excel]-kalkylblad.
 
 ## Tagga resurser {#tag-assets}
 
