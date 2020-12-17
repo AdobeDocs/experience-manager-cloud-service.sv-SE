@@ -2,9 +2,9 @@
 title: Använda regeluppsättningar för att omforma URL:er
 description: Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
 translation-type: tm+mt
-source-git-commit: 1713cddf713afc24103a841a7dbae923941f6322
+source-git-commit: fe2cf46a7a84b4b07bf17de8c048fc2db41c2c70
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '755'
 ht-degree: 3%
 
 ---
@@ -17,11 +17,11 @@ Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er.
 * Lägga till ett MIME-typsuffix. Många tjänster och webbplatser kräver bildsuffix, som att lägga till `.jpg` till en URL.
 * Skapa en mappsökväg till URL:en för sökmotoroptimering.
 
-   Se [Hur Adobe Scene7 Publishing System stöder SEO](/help/assets/dynamic-media/assets/s7_seo.pdf).
+   Se [Hur Dynamic Media Classic stöder SEO](/help/assets/dynamic-media/assets/s7_seo.pdf).
 
 * Lägga till metadata i URL:en för sökmotoroptimering.
 
-   Se [Hur Adobe Scene7 Publishing System stöder SEO](/help/assets/dynamic-media/assets/s7_seo.pdf).
+   Se [Hur Dynamic Media Classic stöder SEO](/help/assets/dynamic-media/assets/s7_seo.pdf).
 
 * Ställa in innehållets disposition för att utlösa en hämtning.
 * Förenkla bildhanteringen genom att ange URL:er för personalisering. Omvandla till exempel `rgb{XX,YY,ZZ}` till RTF-klar `\redXX\greenYY\blueZZ`
@@ -30,11 +30,11 @@ Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er.
 
    Se [Ta bort specialtecken från URL:er](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
 
-När det gäller Dynamic Media kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för att hantera Dynamic Media-resurser. Den här filen omstrukturerar standardformatet för URL-protokoll så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
+I Dynamic Media-sammanhang kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för Dynamic Media-resurser. Den här filen omstrukturerar URL-protokollets standardformat så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
 
 >[!CAUTION]
 >
->Var försiktig när du använder linjaler. kan de förhindra att dynamiskt medieinnehåll visas på webbplatsen.
+>Var försiktig när du använder linjaler. kan de förhindra att Dynamic Media-innehåll visas på din webbplats.
 
 Det finns exempellinjaler som kan hjälpa dig att skapa en egen linjaluppsättning.
 Se [Referens för regeluppsättning](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
@@ -53,7 +53,7 @@ Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en 
 
 **Så här distribuerar du XML-regeluppsättningar:**
 
-1. Logga in på ditt konto för Dynamic Media Classic:
+1. Logga in på ditt Dynamic Media Classic-konto:
 
    [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -76,7 +76,7 @@ Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en 
 1. Klicka på **[!UICONTROL Close]** längst ned till höger på sidan Inställningar.
 1. Kör ett Image Server-publiceringsjobb.
 
-   Regeluppsättningsvillkoren tillämpas på begäranden till dynamiska mediabildsservrar.
+   Regeluppsättningsvillkoren tillämpas på begäranden till Dynamic Media Image-servrar.
 
    Om du gör ändringar i regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.
 
