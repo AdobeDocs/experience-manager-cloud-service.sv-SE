@@ -2,9 +2,9 @@
 title: Adobe Experience Manager som Cloud Service Content Fragments Support in Assets HTTP API
 description: Lär dig mer om Adobe Experience Manager som stöd för innehållsfragment för Cloud Service i Assets HTTP API.
 translation-type: tm+mt
-source-git-commit: 8aa2585e85b0ed23d68597857cda09dc301df4f6
+source-git-commit: 68f799349a4a1a9d5a09fb0cb23e0f5620d77d2f
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1862'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,7 @@ Om du till exempel vill komma åt `/content/dam/wknd/en/adventures/cycling-tusca
 
 >[!NOTE]
 >Åtkomst över:
+>
 >* `/api/assets` **använder** inte  `.model` väljaren.
 >* `/content/path/to/page` **kräver** att du använder  `.model` väljaren.
 
@@ -306,32 +307,27 @@ Användning sker via:
 
 Det finns några begränsningar:
 
-* **Variationer kan inte skrivas och uppdateras.** Om dessa variationer läggs till i en nyttolast (t.ex. för uppdateringar) kommer de att ignoreras. Variationen hanteras dock via leverans ( `GET`).
-
 * **Modeller för innehållsfragment stöds** inte för närvarande: kan inte läsas eller skapas. För att kunna skapa ett nytt, eller uppdatera ett befintligt, innehållsfragment, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
 * **Referenser ignoreras**. För närvarande finns det inga kontroller för om ett befintligt innehållsfragment refereras. Om du t.ex. tar bort ett innehållsfragment kan det leda till problem på en sida som innehåller en referens till det borttagna innehållsfragmentet.
+
+<!--
+* **Variations cannot be written and updated.** If those variations are added to a payload (e.g. for updates) they will be ignored. However, the variation will be served via delivery ( `GET`).
+-->
 
 ## Statuskoder och felmeddelanden {#status-codes-and-error-messages}
 
 Följande statuskoder kan ses under de relevanta omständigheterna:
 
-* **200** (OK)
-
-   Returneras när:
+* **200** (OK) returnerades när:
 
    * begära ett innehållsfragment via `GET`
-
    * uppdaterar ett innehållsfragment via `PUT`
 
-* **201**  (skapad)
-
-   Returneras när:
+* **201** (Skapad) returnerades:
 
    * har skapat ett innehållsfragment via `POST`
 
-* **404** (Hittades inte)
-
-   Returneras när:
+* **404** (Hittades inte) returnerades när:
 
    * det begärda innehållsfragmentet inte finns
 
@@ -341,8 +337,8 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
    >
    >Detta fel returneras:
    >
-   >    * när ett fel som inte kan identifieras med en viss kod har inträffat
-   >    * när den angivna nyttolasten inte var giltig
+   >* när ett fel som inte kan identifieras med en viss kod har inträffat
+   >* när den angivna nyttolasten inte var giltig
 
 
    I följande exempel visas vanliga scenarier när den här felstatusen returneras, tillsammans med felmeddelandet (monospace) som genereras:
@@ -384,6 +380,7 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
 ## API-referens {#api-reference}
 
 Här finns detaljerade API-referenser:
+
 <!--
 * [Adobe Experience Manager Assets API - Content Fragments](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 -->
