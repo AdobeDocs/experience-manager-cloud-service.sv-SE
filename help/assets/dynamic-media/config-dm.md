@@ -2,19 +2,19 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 3f29bf65b1c30cee9bf7833a1c5092819ebf9a50
 workflow-type: tm+mt
-source-wordcount: '3554'
+source-wordcount: '3552'
 ht-degree: 8%
 
 ---
 
 
-# Konfigurera Dynamic Media Cloud Service {#configuring-dynamic-media-scene-mode}
+# Konfigurera Dynamic Media Cloud Service {#configuring-dynamic-media}
 
 Om du använder Adobe Experience Manager för olika miljöer, till exempel en för utveckling, en för staging och en för liveproduktion, måste du konfigurera Dynamic Media-Cloud Services för var och en av dessa miljöer.
 
-## Arkitektur för Dynamic Media {#architecture-diagram-of-dynamic-media-scene-mode}
+## Arkitektur för Dynamic Media {#architecture-diagram-of-dynamic-media}
 
 I följande arkitekturdiagram beskrivs hur Dynamic Media fungerar.
 
@@ -184,9 +184,9 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media ytterlig
 
 ### (Valfritt) Konfigurera och konfigurera Dynamic Media-inställningar {#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings}
 
-Använd användargränssnittet i Dynamic Media Classic (Scene7) om du vill ändra Dynamic Media-inställningarna.
+Använd användargränssnittet i Dynamic Media Classic för att göra ändringar i dina Dynamic Media-inställningar.
 
-Vissa av ovanstående uppgifter kräver att du loggar in på Dynamic Media Classic (Scene7) här: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+Vissa av ovanstående uppgifter kräver att du loggar in på Dynamic Media Classic här: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
 Installations- och konfigureringsuppgifter omfattar följande:
 
