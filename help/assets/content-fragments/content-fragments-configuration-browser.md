@@ -2,10 +2,10 @@
 title: Content Fragments - Configuration Browser
 description: Lär dig hur du aktiverar vissa funktioner för innehållsfragment i konfigurationsläsaren.
 translation-type: tm+mt
-source-git-commit: ae918d074d4bacfc207d4dca2c67f41a3118aff4
+source-git-commit: c821baff208e563009e68f51700555ea1d516886
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 20%
+source-wordcount: '263'
+ht-degree: 19%
 
 ---
 
@@ -42,19 +42,25 @@ Om du vill [använda vissa funktioner för innehållsfragment](#creating-a-conte
 >
 >Mer information finns även i [Konfigurationsläsaren:](/help/implementing/developing/introduction/configurations.md#using-configuration-browser).
 
+>[!CAUTION]
+>
+>Delkonfigurationer (en konfiguration som är kapslad i en konfiguration) stöds inte för användning med innehållsfragment.
+
 1. Navigera till **Verktyg**, **Allmänt** och öppna sedan **Konfigurationsläsaren**.
-2. Välj lämplig plats för webbplatsen.
-3. Använd **Skapa** för att öppna dialogrutan där du:
+
+1. Använd **Skapa** för att öppna dialogrutan där du:
 
    1. Ange en **titel**.
-   2. Om du vill aktivera deras användning väljer du
+   1. Om du vill aktivera deras användning väljer du
       * **Modeller för innehållsfragment**
       * **Beständiga GraphQL-frågor**
 
       ![Definiera konfiguration](assets/cfm-conf-01.png)
 
 
-4. Välj **Skapa** om du vill spara definitionen.
+1. Välj **Skapa** om du vill spara definitionen.
+
+<!-- 1. Select the location appropriate to your website. -->
 
 ### Använd konfigurationen i resursmappen {#apply-the-configuration-to-your-assets-folder}
 
