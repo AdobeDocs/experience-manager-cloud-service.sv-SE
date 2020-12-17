@@ -2,9 +2,9 @@
 title: Bästa tillvägagångssätt för att optimera bildkvalitet
 description: Lär dig de bästa sätten du kan använda i Dynamic Media för att optimera kvaliteten på dina bildresurser.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: e18fdf02371b641b6ff65d70084b22ab9b6b6ded
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1461'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Använd `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sh
 
 Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder på webbplatsen och var många misstag görs. Ta dig tid att lära dig mer om hur skärpa och oskarp maskning fungerar i AEM med hjälp av följande resurser:
 
-Rapporten [Skärpa bilder i Adobe Scene7 Publishing System och på Image Server](/help/assets/dynamic-media/assets/s7_sharpening_images.pdf) gäller även för AEM.
+Informationsdokumentet [Skärpa bilder i Adobe Dynamic Media Classic](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även för AEM.
 
 På Adobe TV tittar du på [Skärpa en bild med oskarp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html).
 
@@ -65,7 +65,7 @@ Det finns två metoder för bildskärpa:
 
       AEM hjälpavsnittet Skärpa en bild.
 
-      Best practices white paper [Sharpening images in Adobe Scene7 Publishing System and on Image Server.](/help/assets/dynamic-media/assets/s7_sharpening_images.pdf)
+      Best practices white paper [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/dynamic-media/assets/sharpening_images.pdf).
 
    * AEM kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
@@ -117,7 +117,7 @@ Om skärpeeffekten fortfarande inte är tillräcklig ökar du radien i decimalst
 
 När du experimenterar kan du också hitta följande allmänna förslag som kan hjälpa dig att optimera arbetsflödet:
 
-* Testa och testa olika parametrar i realtid, antingen direkt på en webbadress eller med Scene7 Publishing Companys bildjusteringsfunktion som ger förhandsgranskning i realtid för justeringsåtgärder.
+* Testa olika parametrar i realtid direkt på en URL.
 * Det är en god vana att gruppera Dynamic Media Image Serving-kommandon i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg gör att dessa förinställningar anropas. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
 * AEM erbjuder också mer avancerade sätt att finjustera bildkvaliteten, t.ex. att använda skärpebilder vid inhämtning. För avancerade användningsområden där detta kan vara ett alternativ för att ytterligare finjustera och optimera återgivningsresultaten kan [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html) hjälpa dig med anpassade insikter och bästa praxis.
 
