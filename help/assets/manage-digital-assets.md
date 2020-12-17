@@ -4,9 +4,9 @@ description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 836e4e7fa727e350ef757984306b32df25921663
+source-git-commit: de313ebc7a4fe89784b9083edbb790dc444caac9
 workflow-type: tm+mt
-source-wordcount: '4262'
+source-wordcount: '4214'
 ht-degree: 12%
 
 ---
@@ -103,19 +103,25 @@ Följ de här stegen för att förhandsgranska en resurs.
    >
    >Om du vill skapa taggar måste du ha skrivbehörighet på sökvägen `/content/cq:tags/default` i CRX-databasen.
 
-1. Om du vill visa användningsstatistik för resursen klickar/trycker du på fliken **[!UICONTROL Insights]**.
-
-   Användningsstatistik omfattar följande:
-
-   * Antal gånger som resursen visats eller hämtats
-   * Kanaler/enheter som resursen användes via
-   * Kreativa lösningar där resursen nyligen användes
-
-   Mer information finns i [Resursinsikter](assets-insights.md).
-
 1. Tryck/klicka på **[!UICONTROL Save & Close]**.
 
 1. Navigera till användargränssnittet Resurser. De redigerade metadataegenskaperna, inklusive rubrik, beskrivning och taggar, visas på resurskortet i kortvyn och under relevanta kolumner i listvyn.
+
+<!-- TBD: Uncomment after verification for Dec release.
+
+## View asset usage and references {#usage-and-references}
+
+[!DNL Experience Manager] lets you track statistics about usage of a digital asset. The usage statistics include the following:
+
+    * Number of times the asset was viewed or downloaded
+    * Channels/devices through which the asset was used
+    * Creative solutions where the asset was recently used
+
+To view usage statistics for an asset, in the [!UICONTROL Properties] page, click the **[!UICONTROL Insights]** tab. For more details, see [Asset Insights](assets-insights.md).
+
+[!DNL Experience Manager] also lets you check all the incoming references to an asset, that is, the usage of an asset in remote [!DNL Sites] and in compound assets. Authors of webpages on [!DNL Experience Manager Sites] deployment can use an asset on a remote [!DNL Assets] deployment using the Connected Assets functionality. The [!UICONTROL References] tab in an asset's [!UICONTROL Properties] page lists the local and remote references of the asset. That is, the use of assets in compound assets in [!DNL Assets] and its use in remote [!DNL Sites] pages.
+
+-->
 
 ## Kopiera resurser {#copying-assets}
 
