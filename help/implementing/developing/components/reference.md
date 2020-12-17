@@ -2,9 +2,9 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 translation-type: tm+mt
-source-git-commit: 3f31ced24ab8af942b848a8c9ac6bd53ceb5f3b1
+source-git-commit: a4805cd1c6ee3b32f064f258d4a2a0308bee99b1
 workflow-type: tm+mt
-source-wordcount: '3390'
+source-wordcount: '3464'
 ht-degree: 0%
 
 ---
@@ -67,10 +67,6 @@ Den här (valfria) logiken kan implementeras på olika sätt och anropas från H
 * Med Java - [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api-java.html) kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. På så sätt kan du använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 * Om du använder JavaScript - [HTL JavaScript Use-API](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/use-api-javascript.html) aktiveras en HTML-fil för åtkomst till hjälpkod som skrivits i JavaScript. På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 * Använda bibliotek på klientsidan - Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Mer information finns i dokumentet [Använda klientbibliotek på AEM som en Cloud Service](/help/implementing/developing/introduction/clientlibs.md).
-
-### Utveckla dina egna komponenter {#developing-your-own-components}
-
-Utveckla innehåll här?
 
 ## Komponentstruktur {#structure}
 
@@ -409,6 +405,14 @@ Med följande konfiguration uppdateras sidan när komponenten har tagits bort, r
 ### Fältvalidering {#field-validation}
 
 Fältvalidering i GRENITUI och GREND-widgetar görs med API:t `foundation-validation`. Mer information finns i [`foundation-valdiation` Granite-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html).
+
+### Identifiera tillgänglighet för dialogrutan {#dialog-ready}
+
+Om du har ett anpassat JavaScript som bara behöver köras när dialogrutan är tillgänglig och klar bör du avlyssna händelsen `dialog-ready`.
+
+Den här händelsen utlöses när dialogrutan läses in (eller läses in igen) och är klar att användas, vilket innebär när det finns en ändring (skapa/uppdatera) i DOM för dialogrutan.
+
+`dialog-ready` kan användas för att koppla i anpassad JavaScript-kod som utför anpassningar av fälten i en dialogruta eller liknande åtgärder.
 
 ## Förhandsvisningsbeteende {#preview-behavior}
 
