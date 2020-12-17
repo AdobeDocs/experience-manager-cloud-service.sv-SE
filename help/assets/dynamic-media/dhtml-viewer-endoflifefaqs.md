@@ -2,7 +2,7 @@
 title: Slutet av DHTML-visningsprogrammet
 description: Från och med den 31 januari 2014 är DHTML-visningsplattformen officiellt utgånget.
 translation-type: tm+mt
-source-git-commit: d9e0c105ad7f9e03bc2120a03a5c613b97ffa17b
+source-git-commit: fe2cf46a7a84b4b07bf17de8c048fc2db41c2c70
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
@@ -16,7 +16,7 @@ Från och med den 31 januari 2014 är DHTML-visningsplattformen officiellt utgå
 
 Se [Referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html) för de senaste visningsprogrammen som stöds.
 
-<!-- **What is the change?**
+<!-- OBSOLETE CONTENT **What is the change?**
 
 Effective January 31, 2014, Scene7 will officially end-of-life support for the DHTML viewer platform.
 
