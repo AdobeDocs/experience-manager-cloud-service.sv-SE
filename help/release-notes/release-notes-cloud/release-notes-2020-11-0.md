@@ -2,7 +2,7 @@
 title: Versionsinformation för 2020.11.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes for 2020.11.0.'
 translation-type: tm+mt
-source-git-commit: 70974ad7762bd07f68ee883756708799a79cf85f
+source-git-commit: 66374fe5a9126ba92e12c0128d5f60e0f0d09cb6
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 0%
@@ -34,7 +34,8 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 ### Nyheter i [!DNL Assets] och [!DNL Dynamic Media] {#what-is-new-assets}
 
 * **Intag** av massresurser: Förse kunderna med en skalbar, molnbaserad tjänst för förtäring  [!DNL Experience Manager] som utnyttjar en Cloud Service-arkitektur, inklusive mikrotjänster för mediefiler. Exempel på viktiga användningsområden är inhämtning i stor skala med övervakning, rapportering och schemaläggning, samtidigt som resurser kan överföras till molndatalager med hjälp av vanliga verktyg för molnöverföring. Se [verktyg för massinhämtning av resurser](/help/assets/add-assets.md#asset-bulk-ingestor).
-Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=en) eller [överföringen med Assets-användargränssnittet](/help/assets/add-assets.md#upload-assets) för mindre användningsjobb.
+
+   Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=en) eller [överföringen med Assets-användargränssnittet](/help/assets/add-assets.md#upload-assets) för mindre användningsjobb.
 
    ![Konfiguration av bulkimporterare](/help/assets/assets/bulk-import-config-low-res.png)
 
