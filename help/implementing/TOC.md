@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: c82622ad26fecd547c12fff6994713488b9759df
+source-git-commit: d8c4c49b158077393aac66bcb87a52236115551f
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 42%
+source-wordcount: '701'
+ht-degree: 41%
 
 ---
 
@@ -68,6 +68,7 @@ ht-degree: 42%
    + [Konfigurationer och Configuration Browser](developing/introduction/configurations.md)
    + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
    + [API för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
+   + [Genererar åtkomsttoken för API:er på serversidan](developing/introduction/generating-access-tokens-for-server-side-apis.md)
    + Utveckling AEM hög {#full-stack}
       + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
       + [Struktur för AEM](developing/introduction/ui-structure.md)
