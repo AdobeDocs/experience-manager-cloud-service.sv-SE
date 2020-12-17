@@ -2,9 +2,9 @@
 title: Hantera bildförinställningar
 description: Lär dig förinställningarna och hur du skapar, ändrar och hanterar förinställningar för bilder.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 59c532d8893f6dc6b94d7ec45a4af87ff1e37fff
 workflow-type: tm+mt
-source-wordcount: '3477'
+source-wordcount: '3476'
 ht-degree: 10%
 
 ---
@@ -381,7 +381,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     </ul>
     <div>
       Skärpa beskrivs i
-     <a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/s7_sharpening_images.pdf">Skärpa bilder</a>.
+     <a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/sharpening_images.pdf">Skärpa bilder</a>.
     </div> </td>
   </tr>
   <tr>
