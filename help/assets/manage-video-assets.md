@@ -3,10 +3,10 @@ title: Hantera videoresurser
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 85dc85fbface3d1ee26d01f48bb1f2445306419d
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 7%
+source-wordcount: '605'
+ht-degree: 6%
 
 ---
 
@@ -28,17 +28,17 @@ Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience 
 
 ## Publicera videoresurser {#publish-video-assets}
 
-Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL eller bädda in resurserna direkt. Mer information finns i [publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL eller bädda in resurserna direkt. Mer information finns i [publicera [!DNL Dynamic Media] resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 ## Omkoda med Bearbetningsprofil {#transcode-video}
 
 [!DNL Experience Manager] som  [!DNL Cloud Service] gör att du kan utföra grundläggande omkodning av MP4-videofiler med Bearbeta profiler. Med den här funktionen kan du inte bara överföra utan även förhandsgranska och skala en MP4-videofil.
 
-![Skapa bearbetningsprofil för videoomkodning i Experience Manager](assets/video-processing-profile-for-mp4.png)
+![Skapa bearbetningsprofil för videoomkodning i  [!DNL Experience Manager]](assets/video-processing-profile-for-mp4.png)
 
 *Bild: En bearbetningsprofil för videoomkodning i  [!DNL Experience Manager].*
 
-Om du bara anger bredd eller enbart höjd och lämnar det andra fältet tomt behåller återgivningarna proportionerna. För närvarande är bara h264-kodek tillgänglig för omkodning.
+Om du bara anger bredd eller enbart höjd och lämnar det andra fältet tomt behåller återgivningarna proportionerna. H.264-videokodeken finns tillgänglig för transkodning.
 
 Om du vill bearbeta resurser med en bearbetningsprofil lägger du till en profil i en mapp. Se [använd bearbetningsprofiler för att bearbeta resurser](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
 
@@ -52,11 +52,21 @@ Om du vill bearbeta resurser med en bearbetningsprofil lägger du till en profil
 
 ## God praxis och begränsningar {#tips-limitations}
 
-* Utan Dynamic Media-licens kan du bara bearbeta MP4-filer med bearbetningsprofiler.
-* För grundläggande omkodning med
+* Utan [!DNL Dynamic Media]-licens kan du bara bearbeta MP4-filer med bearbetningsprofiler.
+* När du omkodar MP4-filer med Bearbeta profiler gäller följande riktlinjer och begränsningar:
+
+   * Apple ProRes-filer kan bara koda om till en maximal upplösning på 1080p.
+   * Om källfilen har en bithastighet på >200 Mbit/s kan du bara omkoda till en maximal upplösning på 1080p.
+   * Om källbildrutefrekvensen är >= 60 fps är den maximala källfilsstorleken som du kan använda den:
+
+      * 400 MB för 4K-omkodning.
+      * 800 MB för 1080p-omkodning.
+      * 8 GB för 720p-omkodning.
+   * Maximal filstorlek som du kan omkoda till en upplösning på 4 000 v/min är 2,55 GB MP4-fil med en upplösning på 4 000, en bithastighet på 12 Mbit/s och 23 fps.
+
 
 >[!MORELIKETHIS]
 >
->* [Videodokumentation](/help/assets/dynamic-media/video.md) för Dynamic Media.
+>* [Dynamic Media videodokumentation](/help/assets/dynamic-media/video.md).
 >* [Lär dig mer om användning, typer och konfiguration av bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
 
