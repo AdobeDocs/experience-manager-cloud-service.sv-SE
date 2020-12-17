@@ -3,9 +3,9 @@ title: Bearbeta resurser med hjälp av mikrotjänster för resurser
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
+source-git-commit: 85dc85fbface3d1ee26d01f48bb1f2445306419d
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Manager som [!DNL Cloud Service] erbjuder en molnbaserad metod 
 * Filbehandlingstjänster för Adobe används där det är tillämpligt, vilket ger exakt återgivning och [effektiv hantering av Adobe egna format](file-format-support.md).
 * Möjlighet att konfigurera efterbehandlingsarbetsflöden för att lägga till användarspecifika åtgärder och integreringar.
 
-Resursmikrotjänster hjälper till att undvika behovet av verktyg och metoder för återgivning från tredje part (som ImageMagick och FMPEG-omkodning) och förenklar konfigurationer, samtidigt som de ger körklara funktioner för vanliga filtyper.
+Resursmikrotjänster hjälper till att undvika behovet av återgivningsverktyg och -metoder från tredje part (som ImageMagick och FMPEG-omkodning) och förenklar konfigurationer, samtidigt som de tillhandahåller grundläggande funktioner för vanliga filtyper som standard.
 
 ## Arkitektur på hög nivå {#asset-microservices-architecture}
 
