@@ -2,9 +2,9 @@
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM som en Cloud Service genom att generera en säker JWT-token
 translation-type: tm+mt
-source-git-commit: 9a4cb6d981fdf5eea4d1b9c7ae9e3c99947d9745
+source-git-commit: 251f5de85d63f6afd730fc450fe2b5a06bc90c38
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Flödet server-till-server omfattar följande steg:
 
 ### Genererar JWT Bearer-token {#generating-the-jwt-bearer-token}
 
-Användare som har administratörsrollen för en organisation kan se integreringsfliken i utvecklarkonsolen för en viss miljö, samt två knappar. Om du klickar på knappen **Hämta inloggningsuppgifter** skapas den privata nyckeln, certifikatet och konfigurationen.
+Användare som har administratörsrollen för en organisation kan se integreringsfliken i utvecklarkonsolen för en viss miljö, samt två knappar. Om du klickar på knappen **Hämta tjänstinloggningsuppgifter** genereras den privata nyckeln, certifikatet och konfigurationen för författarnivå och publiceringsnivå för miljön, oavsett vilket pod som valts.
 
 ![JWT-generering](assets/JWTtoken3.png)
 
