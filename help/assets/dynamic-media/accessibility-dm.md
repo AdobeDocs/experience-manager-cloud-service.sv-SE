@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: c3ada59105cad7c2fc3b36b032d045b91f86b495
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
@@ -52,12 +52,12 @@ Dynamic Media gränssnittselement fungerar med hjälpmedelstekniker som skärml�
 
 Alla färdiga Dynamic Media-visningsprogram har stöd för tangentbordstillgänglighet för dina kunder.
 
-Se [Tangentbordstillgänglighet och -navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) i referenshandboken för Dynamic Media-visningsprogram.
+Se [Tangentbordstillgänglighet och -navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) i referenshandboken för Dynamic Media-visningsprogram.
 
 ## Stöd för hjälpfunktioner i visningsprogram för Dynamic Media {#assistive-technology=support-for-dm-viewers}
 
 Alla Dynamic Media-visningsprogramkomponenter har stöd för ARIA-roller (Accessible Rich Internet Applications) och -attribut för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
-Se hjälpavsnittet **Stöd för hjälpteknik** i eventuella hjälpavsnitt för anpassning av visningsprogram i referenshandboken för Dynamic Media Viewer. Se till exempel [Stöd för hjälpfunktioner](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer eller [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=en#viewers-for-aem-assets-only) för Interactive Image Viewer.
+Se hjälpavsnittet **Stöd för hjälpteknik** i eventuella hjälpavsnitt för anpassning av visningsprogram i referenshandboken för Dynamic Media Viewer. Se till exempel [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer eller [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=en#viewers-for-aem-assets-only) för Interactive Image Viewer.
 
 >[!MORELIKETHIS]
 >
