@@ -2,9 +2,9 @@
 title: Lägga till Dynamic Media-resurser på sidor
 description: Så här lägger du till Dynamic Media-komponenter på en sida i Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: c3ada59105cad7c2fc3b36b032d045b91f86b495
 workflow-type: tm+mt
-source-wordcount: '3003'
+source-wordcount: '2999'
 ht-degree: 8%
 
 ---
@@ -195,8 +195,8 @@ Du kan redigera följande Dynamic Media-inställningar genom att klicka på **[!
 
    Med visningsmodifierare kan du till exempel göra följande:
 
-   * Associera en bildtextfil med en video: [bildtext](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
-   * Associera en navigeringsfil med en video: [navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+   * Associera en bildtextfil med en video: [bildtext](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * Associera en navigeringsfil med en video: [navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
    Du kan redigera följande avancerade inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
