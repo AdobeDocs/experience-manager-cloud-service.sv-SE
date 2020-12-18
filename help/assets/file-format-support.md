@@ -3,9 +3,9 @@ title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 744f63306187b991a11acee2071b9266d11e1a21
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '796'
 ht-degree: 6%
 
 ---
@@ -96,7 +96,7 @@ Följande lista över 3D-format stöds.
 
 Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/assets-3d.md)
 
-| Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Dynamisk medieleverans |
+| Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans till Dynamic Media |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ✓ | ✓ | ✓ | - | ✓ | ✓ | - | - |
 | gLB | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
@@ -222,6 +222,10 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 ## Ljudformat {#audio-formats}
 
 [!DNL Assets] som en  [!DNL Cloud Service] funktion för XMP metadataextraheringsstöd för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
+
+## Tips och begränsningar {#limitations-and-tips}
+
+* För närvarande är filstorleksgränsen för metadataextrahering ungefär 10 GB. När mycket stora resurser överförs misslyckas ibland metadataextraheringen.
 
 >[!MORELIKETHIS]
 >
