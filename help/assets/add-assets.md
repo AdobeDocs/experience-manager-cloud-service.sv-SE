@@ -2,7 +2,7 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 translation-type: tm+mt
-source-git-commit: a5c9ec14af4241734fb6f6c88d5fc982e52924ce
+source-git-commit: 42d607c2dc938c2ed91ecac10b29824050dd6810
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
@@ -151,6 +151,8 @@ Om du vill överföra fler filer använder du någon av följande metoder. Se ä
 
 Verktyget tillhandahålls bara till administratörsgruppen som kan användas för storskalig förtäring av resurser från Azure- eller S3-datalager.
 
+>[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
+
 Så här konfigurerar du verktyget:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]**. Välj alternativet **[!UICONTROL Create]**.
@@ -199,12 +201,12 @@ Följande flikar är tillgängliga:
 
 Om [!DNL Dynamic Media] är aktiverat i din distribution är dessutom följande flikar tillgängliga:
 
-* [Med dynamiska mediabildprofiler ](dynamic-media/image-profiles.md) kan du använda en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna.
-* [Med ](dynamic-media/video-profiles.md) videoprofilerna för dynamiska media kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
+* [Med Dynamic Media Image-](dynamic-media/image-profiles.md) profiler kan du tillämpa en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration på de överförda resurserna.
+* [Med Dynamic Media Video-](dynamic-media/video-profiles.md) profiler kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
 
 >[!NOTE]
 >
->Dynamisk mediebeskärning och andra åtgärder för resurser är icke-förstörande, d.v.s. de ändrar inte det överförda originalet, utan tillhandahåller i stället parametrar för beskärning eller medieomvandling som ska utföras när resurserna levereras
+>Dynamic Media beskärning och andra åtgärder för resurser är icke-förstörande, vilket innebär att de inte ändrar det överförda originalet utan i stället anger parametrar för beskärning eller mediaomvandling som ska utföras när materialet levereras
 
 För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i kolumnen **[!UICONTROL Processing Profile]**.
 
