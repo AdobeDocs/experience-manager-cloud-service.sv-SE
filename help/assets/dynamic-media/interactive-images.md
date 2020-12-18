@@ -2,9 +2,9 @@
 title: Interaktiva bilder
 description: Lär dig hur du arbetar med interaktiva bilder i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: c3ada59105cad7c2fc3b36b032d045b91f86b495
 workflow-type: tm+mt
-source-wordcount: '4220'
+source-wordcount: '4216'
 ht-degree: 1%
 
 ---
@@ -358,9 +358,9 @@ Integrationen är lika enkel som att ta bort taggen `IMG` och ersätta den med d
 
 Om du vill tillämpa en beskärning på en interaktiv bild för en responsiv miljö kan du inkludera konfigurationsattributet för interaktiv bild `ZoomView.iscommand` i sökvägen, där `ZoomView` är den komponent som ska anropas och `iscommand` är det beskärningsbildserings-kommando som du använder.
 
-Se [ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) konfigurationsattribut.
+Se [ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) konfigurationsattribut.
 
-Se [kommandot för att beskära](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) bilder.
+Se [kommandot för att beskära](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) bilder.
 
 Nu kan du integrera den interaktiva bilden med en befintlig Quickview på webbplatsen.
 
