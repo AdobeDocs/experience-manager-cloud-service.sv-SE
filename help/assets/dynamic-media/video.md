@@ -2,9 +2,9 @@
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: fe2cf46a7a84b4b07bf17de8c048fc2db41c2c70
+source-git-commit: c3ada59105cad7c2fc3b36b032d045b91f86b495
 workflow-type: tm+mt
-source-wordcount: '9160'
+source-wordcount: '9158'
 ht-degree: 9%
 
 ---
@@ -146,7 +146,7 @@ Följande stöds för hantering av enstaka video och adaptiva videouppsättninga
 * Ordna, bläddra bland och sök videoklipp med fullt stöd för metadata för effektiv hantering av videomaterial.
 * Leverera adaptiva videouppsättningar till webben, datorer och mobila enheter som iPhone, iPad, Android, Blackberry och Windows Phone.
 
-Adaptiv videoströmning stöds på flera olika iOS-plattformar. Se [Referenshandbok för Dynamic Media-visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html).
+Adaptiv videoströmning stöds på flera olika iOS-plattformar. Se [Referenshandbok för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html).
 
 Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta Blackberry-enheter som stöder det här videoformatet på följande sätt: [Videoformat som stöds på Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
