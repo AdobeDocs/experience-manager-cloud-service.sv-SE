@@ -2,9 +2,9 @@
 title: Adobe Experience Manager som Cloud Service Content Fragments Support in Assets HTTP API
 description: Lär dig mer om Adobe Experience Manager som stöd för innehållsfragment för Cloud Service i Assets HTTP API.
 translation-type: tm+mt
-source-git-commit: c86dac828eabe28ee62748bff64fc091491303b0
+source-git-commit: 42d7ac4fc99ef45c26c23d68ddfe2a5ddf7f62fd
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1914'
 ht-degree: 2%
 
 ---
@@ -82,9 +82,7 @@ HTTP-metoden avgör vilken åtgärd som ska utföras:
 >
 >Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Ange till exempel att en mapp eller en resurs ska skapas med en **POST**-begäran.
 
-<!--
-The exact format of supported requests is defined in the [API Reference](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference) documentation.
--->
+Det exakta formatet för begäranden som stöds definieras i [API Reference](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference)-dokumentationen.
 
 ### Transaktionsbeteende {#transactional-behavior}
 
@@ -256,11 +254,9 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 >
 >Dispatcher-konfigurationen på AEM molninstanser kan blockera åtkomsten till `/api`.
 
-<!--
 >[!NOTE]
 >
->For further details, see the [API Reference](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). In particular, [Adobe Experience Manager Assets API - Content Fragments](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html). 
--->
+>Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
 
 ### Läs/Leverera {#read-delivery}
 
@@ -309,10 +305,6 @@ Det finns några begränsningar:
 
 * **Modeller för innehållsfragment stöds** inte för närvarande: kan inte läsas eller skapas. För att kunna skapa ett nytt, eller uppdatera ett befintligt, innehållsfragment, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
 * **Referenser ignoreras**. För närvarande finns det inga kontroller för om ett befintligt innehållsfragment refereras. Om du t.ex. tar bort ett innehållsfragment kan det leda till problem på en sida som innehåller en referens till det borttagna innehållsfragmentet.
-
-<!--
-* **Variations cannot be written and updated.** If those variations are added to a payload (e.g. for updates) they will be ignored. However, the variation will be served via delivery ( `GET`).
--->
 
 ## Statuskoder och felmeddelanden {#status-codes-and-error-messages}
 
