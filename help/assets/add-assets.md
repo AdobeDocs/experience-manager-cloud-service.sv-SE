@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 translation-type: tm+mt
-source-git-commit: 42d607c2dc938c2ed91ecac10b29824050dd6810
+source-git-commit: 6f5b6ba7da4c0d3161b9f34602b0256c319b191f
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1847'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ Om du vill anpassa namngivningskonventionerna för din organisation kan du i [!U
 
 ## Överför resurser gruppvis {#bulk-upload}
 
-Inspelaren av massresurser kan hantera tusentals resurser effektivt. Men ett storskaligt intag är inte bara en stor och stor fildump eller en blind migrering. För att det ska vara ett meningsfullt projekt som tjänar ert affärssyfte, leder planering och strukturering av tillgångarna till ett mycket effektivare intag. Alla inmatningar är inte desamma och generaliseringar kan inte göras utan factoring i den nyansrika databassammansättningen och affärsbehoven. Här följer några exempel på hur du kan planera och utföra ett gruppfel:
+Inspelaren av massresurser kan hantera mycket stora mängder resurser effektivt. Men ett storskaligt intag är inte bara en stor fildump eller en tillfällig migrering. För att ett storskaligt intag ska bli ett meningsfullt projekt som passar ert företag och är effektivt, måste ni planera migreringen och strukturera resursorganisationen. Alla förslag skiljer sig åt, i stället för att generalisera, vilket spelar en avgörande roll för den nya databassammansättningen och affärsbehoven. Nedan följer några övergripande förslag på hur du kan planera och utföra ett massintagande:
 
 * Kuratresurser: Ta bort resurser som inte behövs i DAM. Överväg att ta bort oanvända, föråldrade eller duplicerade resurser. Detta minskar antalet överförda data och insamlade resurser, vilket leder till snabbare frågor.
 * Ordna resurser: Överväg att ordna innehållet i någon logisk ordning, t.ex. efter filstorlek, filformat, skiftläge eller prioritet. I allmänhet kräver stora komplexa filer mer bearbetning. Du kan också överväga att importera stora filer separat med hjälp av filstorleksfiltreringsalternativet (som beskrivs nedan).
@@ -149,7 +149,7 @@ Om du vill överföra fler filer använder du någon av följande metoder. Se ä
 
 ### Verktyget Massinhämtning {#asset-bulk-ingestor}
 
-Verktyget tillhandahålls bara till administratörsgruppen som kan användas för storskalig förtäring av resurser från Azure- eller S3-datalager.
+Verktyget tillhandahålls bara till administratörsgruppen som kan användas för storskalig förtäring av resurser från Azure- eller S3-datalager. Se en video som visar hur konfigurationen och intagandet fungerar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
 
