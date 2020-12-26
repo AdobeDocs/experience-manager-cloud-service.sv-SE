@@ -1,14 +1,14 @@
 ---
-source-git-commit: aa4e8a3d1650411c4b78c534b5797abbcd0a7035
+source-git-commit: 3409c713ea1ca033a2835d0070d0da4fec58fd18
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
-# Adobe Experience Manager Cloud Service Documentation
+# Adobe Experience Manager som Cloud Service Documentation
 
-Det här är databasen för Adobe Experience Manager Cloud Service-dokumentation. Den här dokumentationen beskriver installation, administration, redigering och hur du anpassar AEM med hjälp av Cloud Service.
+Det här är databasen för Adobe Experience Manager som Cloud Service dokumentation. Den här dokumentationen beskriver installation, administration, redigering och hur du anpassar Experience Using som Cloud Service.
 
 Dina bidrag till dokumentationen är välkomna. Se följande resurser:
 
