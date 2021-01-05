@@ -25,7 +25,7 @@ I/O Runtime-plattformen kan också användas för att utöka eller anpassa e-han
 
 ## 3. Kan produktresurser (bilder) lagras och refereras från AEM via Magento Admin? Hur kan resurser från Dynamic Media förbrukas?
 
-Det finns för närvarande ingen integrering mellan AEM Assets och Magento. Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL:er manuellt i Magento. Dynamic Media ingår nu i AEM Assets och fungerar på samma sätt.
+Det finns för närvarande ingen integrering mellan AEM Assets och Magento. Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL:er manuellt i Magento. Dynamic Media är nu en del av AEM Assets och kommer att fungera på samma sätt.
 
 ## 4. Spelar det någon roll var Magento är i drift? (Lokalt eller i molnet)
 
