@@ -82,7 +82,7 @@ Ett AEM-program är den behållare som innehåller:
 |  Programelement |  Siffra |
 |--- |--- |
 | Koddatabas (Git) |  1 |
-| Baslinjebild (Sites eller Assets) |  1 |
+| Baslinjebild (Sites eller Assets) |  3 |
 | 1:1-förhållande mellan scen- och produktionsmiljö  | 0 eller 1 |
 | Icke-produktionsmiljöer (utveckling eller demonstration) | 0 till N |
 | Pipeline för varje miljö | 0 eller 1 |
