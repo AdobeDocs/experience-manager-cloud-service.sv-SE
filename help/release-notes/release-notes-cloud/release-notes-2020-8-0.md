@@ -45,7 +45,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 * Inbyggda förhandsgranskningar av PDF-dokument med hög originalåtergivning finns nu tillgängliga i varumärkesportalen. Se [dokumentvisningsprogramöversikt](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html#doc-viewer).
 
-* Du kan nu göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] i AEM som en Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]). Det säkerställer att de senaste tillgångarna hanteras på några minuter istället för timmar. Se [Invalidera CDN-cachen med hjälp av Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
+* Du kan nu göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] i AEM som en Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]). Det säkerställer att de senaste tillgångarna hanteras på några minuter istället för timmar. Mer information finns i [Invalidera CDN-cachen med Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
 
 * Förbättrat stöd för hjälpmedel finns i användargränssnittskontroller, navigering, bläddring och sökupplevelse i [!DNL Assets].
 
