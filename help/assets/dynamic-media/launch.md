@@ -490,7 +490,7 @@ När du har konfigurerat Adobe Launch kommer följande att konfigureras för int
 
 **Så här konfigurerar du Adobe Launch för integreringen**:
 
-1. Börja med att gå till Adobe Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden klickar du på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Launch]**.
+1. Börja med att gå till Adobe Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). Klicka på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan på menyraden och klicka sedan på **[!UICONTROL Launch]**.
 
    Du kan även [öppna Adobe Launch direkt](https://launch.adobe.com/).
 
