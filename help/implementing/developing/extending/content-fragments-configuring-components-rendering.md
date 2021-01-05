@@ -117,7 +117,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>En strängegenskap som definierar det intervall med stycken som ska skrivas ut om det i <em>renderingsläget för ett element är </em>.</p> <p>Format:</p>
+   <td><p>En strängegenskap som definierar det styckeintervall som ska skrivas ut om det i <em>renderingsläget för ett element är </em>.</p> <p>Format:</p>
     <ul>
      <li><code>1</code> eller <code>1-3</code> eller <code>1-3;6;7-8</code> eller <code>*-3;5-*</code>
      <ul>
