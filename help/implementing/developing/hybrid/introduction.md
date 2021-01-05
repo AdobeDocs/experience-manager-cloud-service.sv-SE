@@ -228,7 +228,7 @@ I nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), läses djupare
 
    Sidan har inget innehåll i sin brödtext. Den består huvudsakligen av formatmallar och ett anrop till olika skript, till exempel `clientlib-react.min.js`.
 
-   Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för att återge allt innehåll.
+   Dessa skript är de primära drivrutinerna för programmet och ansvarar för återgivningen av allt innehåll.
 
 1. Använd webbläsarens inbyggda verktyg för att inspektera sidan. Se innehållet i DOM som är fullständigt inläst.
 
