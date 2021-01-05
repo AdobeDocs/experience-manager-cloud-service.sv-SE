@@ -20,7 +20,7 @@ I det här avsnittet beskrivs hur du arbetar med 360/VR Video Viewer för att å
 
 Spatial audio stöds för närvarande inte. om ljudet blandas i stereo ändras inte balansen (L/R) när kunden ändrar kamerans visningsvinkel.
 
-Se [Använda Dynamic Media 360-videor och miniatyrbild för anpassad video med AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html).
+Se [Använda Dynamic Media 360-videoklipp och miniatyrbild för anpassad video med AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html).
 
 Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
@@ -99,7 +99,7 @@ När du är nöjd med 360-videon kan du publicera den.
 
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
-Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
 **Så här förhandsgranskar du 360-videoklipp**
 
@@ -130,9 +130,9 @@ Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/a
 
 ## Publicerar 360-video {#publishing-video}
 
-Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och prestandaoptimerad leverans.
+Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
 
-Mer information om hur du publicerar 360-video finns i [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+Mer information om hur du publicerar 360-video finns i [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 Se även [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
-Se även [Lägga till dynamiska medieresurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Se även [Lägga till Dynamic Media Assets på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
