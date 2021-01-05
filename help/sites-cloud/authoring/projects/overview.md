@@ -66,7 +66,7 @@ I rutan **Resurser** kan du samla alla resurser som du använder för ett visst 
 
 ![Resurspanel](/help/sites-cloud/authoring/assets/projects-assets-tile.png)
 
-Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, snurpuppsättningar eller blandade medieuppsättningar om du har tilläggsprogrammet Dynamiska media.
+Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar om du har Dynamic Media-tillägget.
 
 ![Bilduppsättning](/help/sites-cloud/authoring/assets/projects-image-sets.png)
 
