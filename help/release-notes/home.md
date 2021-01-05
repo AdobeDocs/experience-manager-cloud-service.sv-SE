@@ -4,8 +4,8 @@ description: 'Versionsinformation för Adobe Experience Manager (AEM) som en Clo
 translation-type: tm+mt
 source-git-commit: c6e9f7073b13211386f30142ea34f1e256905450
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '378'
+ht-degree: 82%
 
 ---
 
