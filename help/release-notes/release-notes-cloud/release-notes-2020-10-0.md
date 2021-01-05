@@ -4,7 +4,7 @@ description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes f√
 translation-type: tm+mt
 source-git-commit: fd271f24e5f8ddbe440dccf5c51c91a46c70dead
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1044'
 ht-degree: 0%
 
 ---
