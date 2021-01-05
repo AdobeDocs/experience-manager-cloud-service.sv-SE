@@ -22,6 +22,6 @@ När miljön är klar får den utsedda kundadministratören ett välkomstmeddela
 
 ## Nästa steg {#next-steps}
 
-När du har tagit emot välkomstmeddelandet kan du logga in i Cloud Manager som administratör med dina IMS-autentiseringsuppgifter för Adobe. När du är inloggad kan du verifiera att din AEM molnproduktion och icke-produktionsmiljöer är tillgängliga och fungerar som de ska.
+När du har fått välkomstmeddelandet kan du logga in som administratör i Cloud Manager med hjälp av dina IMS-autentiseringsuppgifter för Adobe. När du är inloggad kan du verifiera att din AEM molnproduktion och icke-produktionsmiljöer är tillgängliga och fungerar som de ska.
 
 De här AEM molnmiljöerna används av Cloud Manager för att köra CI/CD-flödet när du distribuerar koden, från Cloud Managers Git-databas, via staging Environment och upp till din AEM produktionsmiljö. Du kan även komma åt dina AEM molnmiljöer direkt från Cloud Manager när du är redo att börja skapa digitala upplevelser för dina webbegenskaper.
