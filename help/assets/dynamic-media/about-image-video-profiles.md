@@ -1,6 +1,6 @@
 ---
-title: Om dynamiska mediebildprofiler och videoprofiler
-description: En bildprofil eller en videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för de dynamiska medieresurser som du överför. Eller vilken bildprofil som ska användas för dynamiska mediebildresurser för att de ska beskäras ordentligt.
+title: Om Dynamic Media bildprofiler och videoprofiler
+description: En bildprofil eller en videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för Dynamic Media videoresurser som du överför. Eller vilken bildprofil som ska användas för Dynamic Media bildresurser för att de ska beskäras ordentligt.
 translation-type: tm+mt
 source-git-commit: 4fc5ae2aba6a19f37127f795e563a3d079e06bbb
 workflow-type: tm+mt
@@ -10,20 +10,20 @@ ht-degree: 2%
 ---
 
 
-# Om dynamiska mediebildprofiler och videoprofiler{#about-dm-image-video-profiles}
+# Om Dynamic Media bildprofiler och videoprofiler{#about-dm-image-video-profiles}
 
-En bildprofil eller videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för de dynamiska medieresurser som du överför. Eller vilken bildprofil som ska användas för dynamiska mediebildresurser för att de ska beskäras ordentligt.
+En bildprofil eller videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för Dynamic Media videoresurser som du överför. Eller vilken bildprofil som ska användas för Dynamic Media bildresurser för att de ska beskäras ordentligt.
 
 I Dynamic Media kan du skapa två typer av profiler som beskrivs närmare på följande länkar:
 
-* [Dynamiska mediebildprofiler](/help/assets/dynamic-media/image-profiles.md)
-* [Dynamiska videoprofiler för media](/help/assets/dynamic-media/video-profiles.md)
+* [Dynamic Media Image-profiler](/help/assets/dynamic-media/image-profiles.md)
+* [Dynamic Media videoprofiler](/help/assets/dynamic-media/video-profiles.md)
 
 Se även [Metadataprofiler](/help/assets/metadata-profiles.md).
 
-Du måste ha administratörsbehörighet för att skapa, redigera och ta bort dynamiska mediebildprofiler eller dynamiska medievideoprofiler.
+Du måste ha administratörsbehörighet för att skapa, redigera och ta bort Dynamic Media-bildprofiler eller Dynamic Media-videoprofiler.
 
-När du har skapat din bildprofil eller videoprofil tilldelar du den till en eller flera mappar som du använder som mål för nyligen överförda dynamiska medieresurser.
+När du har skapat din bildprofil eller videoprofil tilldelar du den till en eller flera mappar som du använder som mål för nyligen överförda Dynamic Media-resurser.
 
 Se även [Bästa metoder för att ordna dina digitala resurser så att du kan använda bildprofiler eller videoprofiler](/help/assets/dynamic-media/best-practices-for-file-management.md).
 
@@ -33,15 +33,15 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 >
 >Detsamma gäller även när du flyttar resurser mellan två mappar som har samma profil tilldelad.
 
-## Bearbetar dynamiska medieresurser i en mapp {#reprocessing-assets}
+## Bearbetning av Dynamic Media-resurser i en mapp {#reprocessing-assets}
 
-Du kan bearbeta om resurser i en mapp som redan har en befintlig Dynamic Media Image Profile eller en Dynamic Media Video-profil som du senare ändrade.
+Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat.
 
-Anta till exempel att du har skapat en dynamisk mediebildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att nu ha markerat och laddat upp resurserna till mappen igen kör du bara *Scene7: Bearbeta om arbetsflödet Resurser*.
+Anta att du har skapat en Dynamic Media-bildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att nu ha markerat och laddat upp resurserna till mappen igen kör du bara *Scene7: Bearbeta om arbetsflödet Resurser*.
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bildprofil eller videoprofil, eller redan har använt en bildprofil eller en videoprofil, kan du ändå köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
-Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta resurser_-arbetsflöde i en mapp, resurser grupperas tillsammans i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen AEM. Om batchstorleken är mycket stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundresor till Dynamic Media-servern.
+Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta Assets_-arbetsflödet i en mapp, resurser grupperas tillsammans i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen AEM. Om batchstorleken är mycket stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundresor till Dynamic Media-servern.
 
 Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-load).
 
@@ -57,8 +57,8 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 -->
 
-**Så här bearbetar du om dynamiska medieresurser i en mapp**:
-1. I Adobe Experience Manager navigerar du från Assets-sidan till en mapp med dynamiska medieresurser som har en bildprofil eller en videoprofil tilldelad och för vilken du vill använda **Scene7: Arbetsflöde för att bearbeta om resurs**,
+**Så här bearbetar du om Dynamic Media-resurser i en mapp**:
+1. I Adobe Experience Manager navigerar du från Assets-sidan till en mapp med Dynamic Media-resurser som har en bildprofil eller en videoprofil tilldelad och för vilken du vill använda **Scene7: Arbetsflöde för att bearbeta om resurs**,
 
    Mappar som redan har tilldelats en bildprofil eller en videoprofil visas genom att profilens namn visas direkt under mappnamnet i kortvyn.
 
