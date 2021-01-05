@@ -1,6 +1,6 @@
 ---
-title: Bästa tillvägagångssätt för att ordna digitala resurser för att använda dynamiska mediebildprofiler eller videoprofiler
-description: Tips och vedertagna metoder för att namnge, ordna och hantera bilder och videofiler i Dynamic Media.
+title: Bästa tillvägagångssätt för att ordna digitala resurser för användning av Dynamic Media bildprofiler eller videoprofiler
+description: Tips och tips för att namnge, ordna och hantera Dynamic Media bild- och videofiler.
 translation-type: tm+mt
 source-git-commit: 68cf71054b1cd7dfb2790122ba4c29854ffdf703
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för att ordna dina digitala resurser så att de kan använda bildprofiler eller videoprofiler{#best-practices-for-organizing-your-digital-assets-for-using-profiles}
 
-Ett viktigt koncept när det gäller användning av dynamiska mediebildprofiler eller videoprofiler är att de tilldelas mappar. Inom en profil finns inställningar för en bild eller video. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Det innebär att hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar har stor inverkan på hur dessa resurser bearbetas av profilen.
+Ett viktigt koncept när det gäller användning av Dynamic Media bildprofiler eller videoprofiler är att de tilldelas mappar. Inom en profil finns inställningar för en bild eller video. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Det innebär att hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar har stor inverkan på hur dessa resurser bearbetas av profilen.
 
 Genom att använda konsekventa och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan du få ut det mesta av din digitala resurssamling och se till att rätt filer bearbetas med rätt profil.
 
-Se [Om Dynamic Media Image Profile och Videoprofiler](about-image-video-profiles.md).
+Se [Om Dynamic Media bildprofil och videoprofiler](about-image-video-profiles.md).
 
 Här följer några tips om hur du kan ordna dina digitala resursfiler.
 
