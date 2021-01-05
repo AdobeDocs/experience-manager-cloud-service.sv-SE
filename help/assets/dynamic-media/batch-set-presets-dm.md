@@ -1,6 +1,6 @@
 ---
 title: Förinställningar för gruppuppsättning
-description: Lär dig hur du automatiserar skapande av bilduppsättningar och snurruppsättningar med hjälp av gruppuppsättningsförinställningar i Dynamic Media.
+description: Lär dig automatisera framtagning av bilduppsättningar och snurra uppsättningar med hjälp av gruppuppsättningsförinställningar i Dynamic Media.
 contentOwner: Rick Brough
 translation-type: tm+mt
 source-git-commit: c7a2fbb4fa6e81caabab829b876741ecf393a2c3
@@ -26,7 +26,7 @@ Använd **[!UICONTROL Batch Set Presets]** för att underlätta skapande och org
 1. Använd gruppuppsättningsförinställningen på resursmappen. Se [Om att använda gruppuppsättningsförinställningar på mappar](#apply-bsp).
 1. Överför bilder till resursmappen. Se [Överföra resurser för bilduppsättningar](/help/assets/dynamic-media/image-sets.md#uploading-assets-in-image-sets), [Överföra resurser för snurruppsättningar](/help/assets/dynamic-media/spin-sets.md#uploading-assets-for-spin-sets) eller [Lägg till digitala resurser i Adobe Experience Manager](/help/assets/add-assets.md#add-assets-to-experience-manager).
 1. Skapa en bilduppsättning eller snurra. Se [Bilduppsättningar](/help/assets/dynamic-media/image-sets.md) eller [Rotationsuppsättningar](/help/assets/dynamic-media/spin-sets.md).
-1. Publicera din bilduppsättning eller snurra. Se [Publicera dynamiska medieresurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+1. Publicera din bilduppsättning eller snurra. Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 ## Skapa en gruppuppsättningsförinställning för en bilduppsättning eller en snurruppsättning {#creating-bsp}
 
@@ -264,5 +264,5 @@ Om du bara vill *ta bort* förinställningar från mappar i stället läser du [
 >
 >* [Bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
 >* [Snurrande uppsättningar](/help/assets/dynamic-media/spin-sets.md)
->* [Konfigurera selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md#selective-publish-configure-folder)  - Mer information om hur du synkroniserar en enskild mapp till finns i Synkroniseringsläge i avsnittet  [!DNL Dynamic Media].
->* [Skapa en ny dynamisk mediekonfiguration i Cloud Services](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services)  - Mer information om hur du synkroniserar alla mappar till finns i avsnittet Synkroniseringsläge för dynamiska media  [!DNL Dynamic Media].
+>* [Konfigurera selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md#selective-publish-configure-folder)  - Se Synkroniseringsläge i avsnittet om du vill veta mer om hur du synkroniserar en enskild mapp till  [!DNL Dynamic Media].
+>* [Skapa en ny Dynamic Media-konfiguration i Cloud Services](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services)  - Mer information om hur du synkroniserar alla mappar till finns i Synkroniseringsläge för Dynamic Media  [!DNL Dynamic Media].
