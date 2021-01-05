@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Använd RTF-redigeraren för att skapa innehåll {#use-rich-text-editor-to-author-content}
 
-RTE (Rich Text Editor) är ett grundläggande byggblock för att lägga till textinnehåll i [!DNL Adobe Experience Manager]. Många andra komponenter som tillåter redigering är också baserade på RTE. Utvecklare i Experience Manager kan anpassa RTE och administratörer konfigurerar RTE för författare.
+RTE (Rich Text Editor) är ett grundläggande byggblock för att lägga till textinnehåll i [!DNL Adobe Experience Manager]. Många andra komponenter som tillåter redigering baseras på RTE. Utvecklare i Experience Manager kan anpassa RTE och administratörer konfigurerar RTE för författare.
 
 ## Redigering på plats {#in-place-editing}
 
