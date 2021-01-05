@@ -15,7 +15,7 @@ ht-degree: 0%
 
 <!-- Need review information from gklebus -->
 
-Adobe Experience Manager Assets är en [!DNL Cloud Service]-lösning som är inbyggd i molnet och ger företag möjlighet att inte bara utföra sina Digital Asset Management- och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
+Adobe Experience Manager Assets är en [!DNL Cloud Service]-lösning som är inbyggd i molnet och ger företag möjlighet att inte bara utföra sin hantering av digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
 
 Samtidig inmatning av många resurser eller komplexa resurser är en resurskrävande uppgift för en AEM Author-instans. Den primära instansen förbrukar mycket processorkraft, minne och I/O-resurser när resurser läggs till, bearbetas eller till och med migreras. Sådana prestandaproblem påverkar redigering och surfning hos slutanvändarna.
 
