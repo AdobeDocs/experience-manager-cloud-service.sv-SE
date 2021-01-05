@@ -632,7 +632,7 @@ Den inbäddningskod som returneras av AEM har redan en färdig händelsehanterar
 
 Därför är det bara nödvändigt att avkommentera det markerade kodfragmentet ovan och ersätta dummy-hanterarbrödtexten med kod som är specifik för den aktuella webbsidan.
 
-Det finns två standardhanterare för återanrop i standardkoden för inbäddning: `quickViewActivate` och `initComplete`. Hanteraren `quickViewActivate` aktiveras när någon klickar på en miniatyrbild i visningsprogrammet. Integrera visningsprogrammet med QuickView-aktiveringslogiken. Hanteraren `initComplete` aktiveras endast en gång när visningsprogrammet läses in på sidan. Hanteraren används för att justera platsen för dialogrutan Snabbvy i webbsidans DOM.
+Det finns två standardhanterare för återanrop i standardkoden för inbäddning: `quickViewActivate` och `initComplete`. Hanteraren `quickViewActivate` aktiveras när någon klickar på en miniatyrbild i visningsprogrammet. Integrera visningsprogrammet med QuickView-aktiveringslogiken. Hanteraren `initComplete` aktiveras endast en gång när visningsprogrammet läses in på sidan. Den här hanteraren används för att justera platsen för dialogrutan Snabbvy i webbsidans DOM.
 
 Processen med att skapa en URL för snabbvyn är motsatt till processen att identifiera miniatyrbildsvariabler som beskrivs tidigare i det här avsnittet. Med hjälp av våra tidigare identifierade QuickView URL-exempel kan du se hur QuickView-webbadressen är konstruerad i varje fall:
 
