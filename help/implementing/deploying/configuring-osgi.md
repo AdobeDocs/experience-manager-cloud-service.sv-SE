@@ -96,7 +96,7 @@ Det finns tre sorters OSGi-konfigurationsvärden som kan användas med AEM som C
 
 ## Välj lämplig OSGi-konfigurationsvärdetyp {#how-to-choose-the-appropriate-osgi-configuration-value-type}
 
-I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för särskilda ändamål där värdet skiljer sig mellan olika utvecklingsmiljöer.
+I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för specifika användningsområden där värdet skiljer sig mellan olika utvecklingsmiljöer.
 
 ![](assets/choose-configuration-value-type_res1.png)
 
