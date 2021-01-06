@@ -16,7 +16,7 @@ ht-degree: 46%
 >id="aemcloud_bpa_using"
 >title="Använda Best Practices Analyzer"
 >abstract="Läs dokumentationen om hur du använder Best Practices Analyzer (tidigare Cloud Readiness Analyzer) och den genererade rapporten. Best Practices Analyzer-rapporten används för att få en god förståelse för den allmänna uppgraderingsberedskapen."
->additional-url=""
+>additional-url="https://my.adobeconnect.com/pqgrfezoxghs?proto=true" text="[Webinar] Introducing Tools to Accelerate the Journey to Adobe Experience Manager as a Cloud Service"
 
 ## Viktigt att tänka på när du använder Best Practices Analyzer {#imp-considerations}
 
