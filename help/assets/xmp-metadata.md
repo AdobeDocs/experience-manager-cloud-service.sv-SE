@@ -3,10 +3,10 @@ title: XMP-metadata
 description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0c915b32d676ff225cbe276be075d3ae1a865f11
+source-git-commit: 8110259a910c891a5bcf7507cfa9897603a45c91
 workflow-type: tm+mt
-source-wordcount: '1104'
-ht-degree: 20%
+source-wordcount: '897'
+ht-degree: 17%
 
 ---
 
@@ -90,37 +90,41 @@ AEM Assets sprider dock inte automatiskt några metadataändringar till återgiv
 
 Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
 
-### Aktivera XMP {#enable-xmp-writeback}
+<!-- Commenting for now. Need to document how to enable metadata writeback. See CQDOC-17254.
 
-<!-- asgupta, Engg: Need attention here to update the configuration manager changes.
+### Enable XMP writeback {#enable-xmp-writeback}
 -->
 
-Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du konfigurationen **[!UICONTROL Adobe CQ DAM Rendition Maker]** i Configuration Manager.
+<!-- asgupta, Engg: Need attention here to update the configuration manager changes. -->
 
-1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]**-konfigurationen.
-1. Välj alternativet **[!UICONTROL Propagate XMP]** och spara sedan ändringarna.
+<!-- 
+To enable the metadata changes to be propagated to the renditions of the asset when uploading it, modify the **[!UICONTROL Adobe CQ DAM Rendition Maker]** configuration in Configuration Manager.
 
-### Aktivera XMP av återskrivning för specifika återgivningar {#enable-xmp-writeback-for-specific-renditions}
+1. To open Configuration Manager, access `https://[aem_server]:[port]/system/console/configMgr`.
+1. Open the **[!UICONTROL Adobe CQ DAM Rendition Maker]** configuration.
+1. Select the **[!UICONTROL Propagate XMP]** option, and then save the changes.
 
-Om du vill att XMP återskrivningsfunktion ska kunna sprida metadataändringar till valda återgivningar anger du dessa återgivningar i arbetsflödessteget [!UICONTROL XMP Writeback Process] i arbetsflödet för DAM-metadata WriteBack. Som standard konfigureras det här steget med den ursprungliga återgivningen.
+### Enable XMP write-back for specific renditions {#enable-xmp-writeback-for-specific-renditions}
 
-Utför de här stegen för att XMP återskrivningsfunktionen för att sprida metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
+To let the XMP write-back feature propagate metadata changes to select renditions, specify these renditions to the [!UICONTROL XMP Writeback Process] workflow step of DAM Metadata WriteBack workflow. By default, this step is configured with the original rendition.
 
-1. Tryck/klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. Öppna arbetsflödesmodellen **[!UICONTROL DAM Metadata Writeback]** på sidan Modeller.
-1. På egenskapssidan för **[!UICONTROL DAM Metadata Writeback]** öppnar du steget **[!UICONTROL XMP Writeback Process]**.
-1. I dialogrutan **[!UICONTROL Step Properties]** trycker/klickar du på fliken **[!UICONTROL Process]**.
-1. Lägg till `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png` i rutan **[!UICONTROL Arguments]** och tryck/klicka sedan på **[!UICONTROL OK]**.
+For the XMP write-back feature to propagate metadata to the rendition thumbnails 140.100.png and 319.319.png, perform these steps.
+
+1. Tap/click the AEM logo, and then navigate to **[!UICONTROL Tools]** &gt; **[!UICONTROL Workflow]** &gt; **[!UICONTROL Models]**.
+1. From the Models page, open the **[!UICONTROL DAM Metadata Writeback]** workflow model.
+1. In the **[!UICONTROL DAM Metadata Writeback]** properties page, open the **[!UICONTROL XMP Writeback Process]** step.
+1. In the **[!UICONTROL Step Properties]** dialog box, tap/click the **[!UICONTROL Process]** tab.
+1. In the **[!UICONTROL Arguments]** box, add `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`, and then tap/click **[!UICONTROL OK]**.
 
    ![step_properties](assets/step_properties.png)
 
-1. Spara ändringarna.
-1. Om du vill återskapa Pyramid TIFF-återgivningar (PTIFF) för Dynamic Media-bilder med de nya attributen lägger du till steget **[!UICONTROL Dynamic Media Process Image Assets]** i arbetsflödet för DAM-metadataåterskrivning. PTIFF-återgivningar skapas och lagras bara lokalt i en Dynamic Media-hybridimplementering.
+1. Save the changes.
+1. To regenerate the Pyramid TIFF (PTIFF) renditions for Dynamic Media images with the new attributes, add the **[!UICONTROL Dynamic Media Process Image Assets]** step to the DAM Metadata write-back workflow. PTIFF renditions are only created and stored locally in a Dynamic Media Hybrid implementation.
 
-1. Spara arbetsflödet.
+1. Save the workflow.
 
-Metadataändringarna sprids till miniatyrbilden för återgivningarna.140.100.png och miniatyrbilden.319.319.png för resursen, inte till de andra.
+The metadata changes are propagated to the renditions renditions thumbnail.140.100.png and thumbnail.319.319.png of the asset, and not the others.
+-->
 
 >[!MORELIKETHIS]
 >
