@@ -3,9 +3,9 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: caf50490c573c2f119f2cbfa14ee7cca12854364
+source-git-commit: f548a4eecbd2a7c6bad2a848ce493c2dcff3f248
 workflow-type: tm+mt
-source-wordcount: '2601'
+source-wordcount: '2617'
 ht-degree: 27%
 
 ---
@@ -105,6 +105,10 @@ Så här konfigurerar du anslutna resurser och lokal [!DNL Sites]-anslutning:
    >Alla återgivningar som är tillgängliga på fjärrdistributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. Arbetsflödet [!UICONTROL DAM Update Asset] aktiveras och skapar fler återgivningar. Dessa återgivningar är bara tillgängliga på den lokala distributionen av [!DNL Sites] och inte på den fjärranslutna DAM-distributionen.
 
 1. Lägg till [!DNL Sites]-distributionen som ett tillåtet ursprung i CORS-konfigurationen i [!DNL Assets]-distributionen. Mer information finns i [förstå CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html).
+
+Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites]-distributioner och [!DNL Assets]-distribution.
+
+![Anslutningstest för konfigurerade anslutna resurser  [!DNL Sites]](assets/connected-assets-multiple-config.png)
 
 <!-- TBD: Check if Launchers are to be disabled on CS instances. Is this option even available to the users on CS? -->
 
