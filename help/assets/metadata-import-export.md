@@ -3,9 +3,9 @@ title: Importera och exportera resursers metadata gruppvis
 description: I den här artikeln beskrivs hur du importerar och exporterar flera metadata samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 823925be9d0777f7d501d9a64e84937172b1028d
+source-git-commit: 8110259a910c891a5bcf7507cfa9897603a45c91
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '643'
 ht-degree: 11%
 
 ---
@@ -17,7 +17,7 @@ Med AEM Assets kan du importera resursmetadata i grupp med hjälp av en CSV-fil.
 
 ## Importera metadata {#import-metadata}
 
-Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av XMP återskrivningsaktivitet om arbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning så att prestanda för andra användare inte påverkas.
+Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av XMP återskrivningsaktivitet med hjälp av objektmikrotjänster. Adobe rekommenderar att du planerar att göra en gruppåtgärd under resurssnål serveranvändning så att prestanda för andra användare inte påverkas.
 
 >[!NOTE]
 >
@@ -29,14 +29,14 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 1. Ange följande parametrar:
 
    | Parameter | Beskrivning |
-   | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | ---------------------- | ------- |
    | Batchstorlek | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
    | Fältavgränsare | Standardvärdet är `,` (ett komma). Du kan ange andra tecken. |
    | Flervärdesavgränsare | Avgränsare för metadatavärden. Standardvärdet är `|`. |
    | Starta arbetsflöden | Falskt som standard. När värdet är `true` och standardinställningarna för startprogrammet används för arbetsflödet WriteBack för DAM-metadata (som skriver metadata till binära XMP). Om du aktiverar startarbetsflöden blir systemet långsammare. |
    | Kolumnnamn för resurssökväg | Definierar kolumnnamnet för CSV-filen med resurser. |
 
-1. Tryck/klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
+1. Klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
 
 Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du formatet `YYYY-MM-DDThh:mm:ss.fff-00:00` för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Till exempel är `2020-03-26T11:26:00.000-07:00` den 26 mars 2020 kl. 11:26:00.000 PST-tid.
 
@@ -68,4 +68,5 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 1. Öppna inkorgsmeddelandet för exportjobbet. Markera jobbet och klicka på **[!UICONTROL Open]** i verktygsfältet. Om du vill hämta CSV-filen med metadata trycker/klickar du på **[!UICONTROL CSV Download]** i verktygsfältet. Klicka på **[!UICONTROL Close]**.
 
    ![Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp](assets/csv_download.png)
-   *Bild: Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp*
+
+   *Bild: Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp.*
