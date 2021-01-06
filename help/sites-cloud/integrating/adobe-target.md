@@ -53,7 +53,6 @@ Utför följande uppgifter för att integrera med Target:
 >
 >* 3.x har konfigurerats med [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
 >* 4.x har konfigurerats med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
-
 >
 
 
@@ -86,7 +85,6 @@ Att integrera AEM som en Cloud Service med Adobe Target kräver kunskaper om Ado
 >* 2 000 upplevelser
 >* 50-tal
 >* 50 rapporteringssegment
-
 >
 
 

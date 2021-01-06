@@ -24,10 +24,8 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 >
 >* **Innehållsfragmenterarär** redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Upplevelsefragment** är helt utformat för innehåll och därmed delar av en webbsida.
-
 >
->
-Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
+>Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 
 >[!CAUTION]
 >
@@ -146,8 +144,7 @@ För mellanliggande innehåll kan du:
 >
 >* Mellanliggande komponenter har en absolut position inom komponentsekvensen i fragmentflödet. Den här positionen ändras inte, även när innehållet i styckena i fragmentet ändras.
 >
->  
-Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
+>  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
 >* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
 
 

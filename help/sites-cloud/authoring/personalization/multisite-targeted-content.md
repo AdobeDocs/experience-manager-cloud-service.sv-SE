@@ -52,7 +52,6 @@ En webbplats eller en live-kopia länkar till ett område som innehåller de akt
 >
 >* När du använder utrullningar eller live-kopior krävs en MSM-licens.
 >* När du synkroniserar med Adobe Target krävs en Adobe Target-licens.
-
 >
 
 
@@ -240,7 +239,6 @@ En aktivitet som ärver från en annan plats markeras som grön bredvid aktivite
 >
 >* Du kan bara göra uppehåll i eller koppla loss live-kopior i en aktivitet.
 >* Du behöver inte göra uppehåll i eller koppla loss live-kopior för att utöka en ärvd aktivitet. Du kan alltid skapa **nya** lokala upplevelser och erbjudanden för den aktiviteten. Om du vill ändra en befintlig aktivitet måste du göra uppehåll i arv.
-
 >
 
 

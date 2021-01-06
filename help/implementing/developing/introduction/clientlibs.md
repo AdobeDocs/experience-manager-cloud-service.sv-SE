@@ -27,7 +27,7 @@ Clientlibs är den inbyggda lösningen för att leverera CSS och Javascript frå
 >
 >Utvecklare som skapar CSS och Javascript för AEM bör också bekanta sig med [AEM Project Archetype och dess automatiserade front end-byggprocess.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)
 
-## Vad är klientbibliotek {#what-are-clientlibs}?
+## Vad är klientbibliotek? {#what-are-clientlibs}
 
 Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att kunna bearbetas på klientsidan. En klientlib är AEM som refererar (efter kategori om det behövs) och betjänar sådana resurser.
 

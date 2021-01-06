@@ -121,6 +121,7 @@ För att en komponent ska kunna arbeta med AEM Style System och visa stilfliken 
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 >[!NOTE]
+>
 >Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md) med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 När komponenten är konfigurerad infogas de format som är konfigurerade av sidförfattarna automatiskt av AEM på dekorationselementet som AEM runt varje redigerbar komponent automatiskt. Själva komponenten behöver inte göra något annat för att detta ska hända.
@@ -135,6 +136,7 @@ Fliken för redigeringsdialogrutan kan läggas in på ungefär samma sätt som f
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 >[!NOTE]
+>
 >Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md) med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 >[!NOTE]
@@ -156,7 +158,6 @@ Den här egenskapen anges för noden `cq:Component`. Till exempel:
 >1. HTML har företräde framför allt: `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
 >1. Sedan används det första formatet i listan med format som är konfigurerade i komponentens profil bland flera aktiva format.
 >1. Slutligen betraktas komponentens `cq:htmlTag`/`cq:tagName` som ett reservvärde.
-
 >
 
 

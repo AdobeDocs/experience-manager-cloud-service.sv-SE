@@ -131,10 +131,8 @@ I följande tabell visas de aktuella plugin-programmen:
 >* **Namn**:  `configPath`
 >* **Typ**:  `String`
 >* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
-
 >
->
-Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
+>Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
 
 Konfigurera följande egenskaper som gäller i redigeringsläget för dialogrutor:
 
@@ -161,10 +159,8 @@ Med textkomponenten [Core Components](https://docs.adobe.com/content/help/en/exp
 >
 >* `/libs/wcm/foundation/components/text`
 >* `/libs/foundation/components/text`
-
 >
->
-Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
+>Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
 
 ## Konfigurera RTE-verktygsfältet {#dialogfullscreen}
 
