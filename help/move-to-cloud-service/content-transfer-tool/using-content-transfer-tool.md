@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: f3a4fdf57dc84bba9811530fccb2fe6a4404376f
+source-git-commit: 7af431be9817c5d5fda933e4697a63ab1085276f
 workflow-type: tm+mt
-source-wordcount: '1902'
-ht-degree: 70%
+source-wordcount: '2018'
+ht-degree: 66%
 
 ---
 
@@ -25,6 +25,8 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 * Om du använder en *sandlådemiljö* kontrollerar du att miljön är aktuell och uppgraderad till den senaste versionen. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
 * Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra den lokala gruppen AEM administratörer i den Cloud Service du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
+
+* Åtkomsttoken kan upphöra att gälla regelbundet antingen efter en viss tidsperiod eller efter att Cloud Servicens miljö har uppgraderats. Om åtkomsttoken har upphört att gälla kan du inte ansluta till Cloud Servicen och du måste hämta den nya åtkomsttoken. Statusikonen som är kopplad till en befintlig migreringsuppsättning ändras till ett rött moln och ett meddelande visas när du hovrar över den.
 
 * För närvarande är standardstorleken för MongoDB för en AEM som författarinstans för Cloud Service 32 GB. Vi rekommenderar att du skickar en supportanmälan för att öka storleken på MongoDB för segmentbutiker som är större än 20 GB.
 
@@ -162,6 +164,9 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 
 1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen. Dialogrutan **Migration Set ingestion** visas. Klicka på **Ingest** för att starta intagningsfasen. I demonstrationssyfte är alternativet **Ingest content to Author instance** inaktiverat. Det går att importera innehåll till Author och Publish samtidigt.
+
+   >[!IMPORTANT]
+   >När alternativet **Rensa befintligt innehåll i molninstansen innan inmatning** är aktiverat, tas hela den befintliga databasen bort och en ny databas skapas för inmatning av innehåll i. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/12-content-ingestion.png)
 
