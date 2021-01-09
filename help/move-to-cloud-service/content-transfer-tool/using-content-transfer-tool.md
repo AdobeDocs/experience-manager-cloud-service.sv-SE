@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 7af431be9817c5d5fda933e4697a63ab1085276f
+source-git-commit: 6446faf2ed936b8bcefd6b4192dbd99fb10aa41e
 workflow-type: tm+mt
-source-wordcount: '2018'
-ht-degree: 66%
+source-wordcount: '1915'
+ht-degree: 64%
 
 ---
 
@@ -257,12 +257,6 @@ Filerna som skapas i *OUT_DIR* som anges ovan för överensstämmelse, kan sedan
 ### Gränssnittsbeteende {#ui-behavior}
 
 Som användare kan du se följande beteendeförändringar i användargränssnittet i Content Transfer Tool:
-
-* Användaren skapar en migreringsuppsättning för en författares URL (Development/Stage/Production) och utför extrahering och inmatning.
-
-* Användaren skapar sedan en ny migreringsuppsättning för samma författar-URL och utför extrahering och inmatning på den nya migreringsuppsättningen. Gränssnittet visar att den första migreringsuppsättningens inmatningsstatus ändras till **FAILED** och att inga loggar är tillgängliga.
-
-* Detta innebär inte att inmatningen för den första migreringsuppsättningen misslyckades. Det här beteendet visas eftersom det tidigare inmatningsjobbet tas bort när ett nytt inmatningsjobb startas. Därför bör ändringsstatusen för den första migreringsuppsättningen ignoreras.
 
 * Ikonerna i gränssnittet för verktyget för innehållsöverföring kan se annorlunda ut än skärmbilderna som visas i den här handboken, eller också visas de inte alls beroende på versionen av AEM-källinstansen.
 
