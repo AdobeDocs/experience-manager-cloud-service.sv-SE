@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lägga till ett anpassat domännamn
 translation-type: tm+mt
-source-git-commit: 3d60af3da62a8a5c8cb62a4e79452bc7675b1878
+source-git-commit: b336f361b496b672d26a5316952ee52ce828e201
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ En användare måste vara en Business Owner eller Deployment Manager för att ku
 ## Viktiga överväganden {#important-considerations}
 
 * Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet installeras i ditt program. Mer information finns i [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
+
+* Det går inte att lägga till domännamn i miljöer när det finns en aktuell pågående pipeline som är kopplad till dessa miljöer.
 
 * Det går bara att lägga till ett domännamn åt gången. Domäner kan dock inte innehålla jokertecken. Anpassade domäner på författarsidan stöds inte.
 
