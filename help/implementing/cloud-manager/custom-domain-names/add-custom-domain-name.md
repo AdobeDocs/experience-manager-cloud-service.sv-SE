@@ -2,7 +2,7 @@
 title: Lägga till ett anpassat domännamn
 description: Lägga till ett anpassat domännamn
 translation-type: tm+mt
-source-git-commit: b336f361b496b672d26a5316952ee52ce828e201
+source-git-commit: 148a1f478aeabea970e46e7e565fccca7db6a7e9
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%
@@ -50,7 +50,8 @@ Följ stegen nedan för att lägga till ett anpassat domännamn från sidan Dom�
 1. Välj **Domän-SSL-certifikat** i listrutan och välj **Fortsätt**.
 
 1. **Dialogrutan Lägg till** domännamn visas. Du kommer nu till Verifiering av domännamn för miljöskärmen. Mer information finns i [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md).
-Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö.
+
+   Följ instruktionerna för att bevisa domänägarskap för din miljö:
 
 1. Klicka på **Skapa**.
 1. CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta anges med statusen **Verifierad och distribuerad**.
