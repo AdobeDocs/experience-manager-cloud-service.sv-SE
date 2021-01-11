@@ -3,7 +3,7 @@ title: 'Asset Insights '
 description: Lär dig hur funktionen för tillgångsinsikter gör att du kan spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ce22a7ba95942881b90a4f3f22d89bcd35b5e559
+source-git-commit: db653daa2d3c271329812b35960f50ee22fb9943
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 3%
@@ -76,7 +76,7 @@ Du kan visa bakgrundsmusik för alla resurser i en mapp samtidigt med **[!UICONT
 
 Asset Insights fetches usage data for assets from Adobe Analytics report suites in a periodic manner. By default, Asset Insights runs a background job every 24 hours at 2 AM to the fetch data. However, you can modify both the frequency and the time by configuring the **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** service from the web console.
 
-1. Click the [!DNL Experience Manager] logo, and go to **[!UICONTROL Tools]** &gt; **[!UICONTROL Operations]** &gt; **[!UICONTROL Web Console]**.
+1. Click the [!DNL Experience Manager] logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Open the **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** service configuration.
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
