@@ -1,18 +1,18 @@
 ---
-title: Betydande förändringar i Adobe Experience Manager Assets som en [!DNL Cloud Service]
-description: Betydande förändringar av Adobe Experience Manager Assets i Experience Manager [!DNL Cloud Service] jämfört med Adobe Experience Manager 6.5.
+title: Noterbara ändringar i [!DNL Adobe Experience Manager Assets] som a [!DNL Cloud Service]
+description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [!DNL Experience Manager] as a [!DNL Cloud Service] jämfört med [!DNL Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: 0838f384b31c59fe95087e1a71741656eedcd13b
+source-git-commit: ed449eea146ec18bdc4d25ae4938f9a36180037d
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
 
 
-# Nollbara ändringar i Experience Manager Assets som [!DNL Cloud Service] {#notable-changes}
+# Nollbara ändringar i [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#notable-changes}
 
-Adobe Experience Manager som [!DNL Cloud Service] har många nya funktioner och möjligheter att hantera dina Experience Manager-projekt. Det finns många skillnader mellan Experience Manager Assets på plats eller på värdservern som Adobe Managed Service jämfört med [!DNL Experience Manager] som en [!DNL Cloud Service]. I den här artikeln beskrivs de viktiga skillnaderna för [!DNL Assets]-funktioner.
+[!DNL Adobe Experience Manager] som en  [!DNL Cloud Service] innehåller många nya funktioner och möjligheter för att hantera dina Experience Manager-projekt. Det finns många skillnader mellan [!DNL Experience Manager Assets] lokal eller värdbaserad som hanterad tjänst i Adobe jämfört med [!DNL Experience Manager] som en [!DNL Cloud Service]. I den här artikeln beskrivs de viktiga skillnaderna för [!DNL Assets]-funktioner.
 
 De största skillnaderna jämfört med [Experience Manager] 6.5 är i följande områden:
 
@@ -22,16 +22,17 @@ De största skillnaderna jämfört med [Experience Manager] 6.5 är i följande 
 
 ## Tillgångsintag och -bearbetning {#asset-ingestion}
 
-Tillgångsuppladdningen har optimerats för ökad effektivitet genom bättre skalning av tillgångsintag, snabbare uppladdning, snabbare bearbetning med hjälp av mikrotjänster och bulkintag. Produktfunktionerna (webbanvändargränssnitt, skrivbordsklienter) har uppdaterats. Detta kan dock påverka vissa befintliga anpassningar.
+Tillgångsuppladdningen är optimerad för ökad effektivitet genom bättre skalning av intag, snabbare uppladdning, snabbare bearbetning med hjälp av mikrotjänster och bulkinhämtning. Produktfunktionerna (webbanvändargränssnitt, skrivbordsklienter) uppdateras. Detta kan även påverka vissa befintliga anpassningar.
 
-* Experience Manager använder principen om direkt binär åtkomst för överföring och nedladdning samt mikrotjänster för mediefiler för bearbetning. Se [översikt över tillgångsintag](/help/assets/asset-microservices-overview.md).
+* [!DNL Experience Manager] använder principen om direkt binär åtkomst för att ladda upp och ned resurser och använder tillgångsmikrotjänster för att bearbeta resurser. Se [översikt över mikrotjänster](/help/assets/asset-microservices-overview.md).
    * Resursöverföring [med direkt binär åtkomst](/help/assets/asset-microservices-overview.md#asset-upload-with-direct-binary-access).
-   * Mer teknisk information finns i [protokollet för direkt binär överföring och API:erna](/help/assets/developer-reference-material-apis.md#upload-binary).
+   * Mer teknisk information finns i [protokoll för direkt binär överföring och API:er](/help/assets/developer-reference-material-apis.md#upload-binary).
    * En jämförelse av tillgängliga API-metoder för grundläggande CRUD-åtgärder finns i [API:er och tillgångsåtgärder](/help/assets/developer-reference-material-apis.md#use-cases-and-apis).
 * Standardarbetsflödet **[!UICONTROL DAM Asset Update]** i tidigare versioner av [!DNL Experience Manager] är inte längre tillgängligt. I stället erbjuder mikrotjänsterna en skalbar, lättillgänglig tjänst som täcker det mesta av standardbearbetningen av resurser (återgivningar, metadataextrahering och textextrahering för indexering).
-   * Se [konfigurera och använda objektmikrotjänster](/help/assets/asset-microservices-configure-and-use.md)
+   * Se [konfigurera och använda tillgångsmikrotjänster](/help/assets/asset-microservices-configure-and-use.md)
    * Om du vill ha anpassade arbetsflödessteg i bearbetningen kan du använda [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows).
-* Resurser som kommer in via Package Manager kräver manuell ombearbetning med åtgärden **[!UICONTROL Reprocess Asset]** i Assets-gränssnittet.
+* Resurser som överförs med Package Manager kräver manuell ombearbetning med åtgärden **[!UICONTROL Reprocess Asset]** i gränssnittet [!DNL Assets].
+* En digital resurs utan ett tillägg eller med ett felaktigt tillägg bearbetas inte som du vill. När du till exempel överför sådana resurser händer ingenting eller så kan en felaktig bearbetningsprofil gälla för resursen. Användarna kan fortfarande lagra de binära filerna i DAM.
 
 Standardåtergivningar som genereras med tillgångsmikrotjänster lagras på ett bakåtkompatibelt sätt i resurslagernoderna (samma namnkonventioner).
 
