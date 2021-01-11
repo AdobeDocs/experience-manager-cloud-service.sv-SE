@@ -2,10 +2,10 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 6b001ffb9afe73c09d131ef7901cc2c12c57f164
+source-git-commit: cfe49fe414f387c660259de540af0cc26ef3951f
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 0%
+source-wordcount: '692'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Expe
 ## Releasedatum {#release-date}
 
 Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.12.0 är 17 december 2020.
-Följande version (2021.1.0) kommer att vara den 28 januari 2020.
+Följande version (2021.1.0) kommer att vara den 28 januari 2021.
 
 ## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
 
@@ -74,3 +74,20 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.12.0 är 10 decembe
 ### Felkorrigeringar {#crt-bug-fixes}
 
 * Flera felkorrigeringar har gjorts i verktygen AEM Dispatcher Converter och Repository Modernizer. Se [AEM Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter) och [Repository Modernizer](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer).
+
+## Verktyg för övergång till molnet{#code-transition-tools}
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v1.1.20 är 8 januari 2021.
+
+### Nyheter i [!DNL Content Transfer Tool] {#what-is-new-ctt}
+
+* Användarna kan nu se om deras åtkomsttoken har upphört att gälla genom att hålla markören på statusikonen i användargränssnittet för innehållsöverföringsverktyget (CTT). De får också ett meddelande i användargränssnittet för migreringsuppsättningsinformation om att de inte kan ansluta till sin Cloud Service-instans.
+
+### Felkorrigeringar {#ctt-bug-fixes}
+
+* Status för användargränssnittet i CTT (Content Transfer Tool) för en migreringsuppsättning kvarstod inte och ändrades efter en tids inaktivitet. Den här har åtgärdats.
+* Alternativet att visa loggar inaktiverades om loggarna inte var tillgängliga. Detta har åtgärdats och meddelanden har lagts till för att meddela användaren varför loggar saknas.
+* Status för användargränssnittet i verktyget Innehållsöverföring visade MISSLYCKADES när användaren stoppade ett intag. Detta har korrigerats så att *STOPPED* visas i stället.
+
