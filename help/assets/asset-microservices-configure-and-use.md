@@ -3,7 +3,7 @@ title: Konfigurera och använda resursmikrotjänster
 description: Konfigurera och använd de molnbaserade resursmeritjänsterna för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 744f63306187b991a11acee2071b9266d11e1a21
+source-git-commit: db653daa2d3c271329812b35960f50ee22fb9943
 workflow-type: tm+mt
 source-wordcount: '2478'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Med standardkonfigurationen konfigureras bara den mest grundläggande bearbetnin
 
 Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Se [!DNL Adobe Asset Link] [dokumentation](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) om du behöver aktivera den för din bearbetningsprofil. Mer information finns i [Adobe Asset Link complete documentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
-### Skapa standardprofil {#create-standard-profile}
+### Skapa en standardprofil {#create-standard-profile}
 
 Så här skapar du en standardbearbetningsprofil:
 
@@ -108,7 +108,7 @@ The following video demonstrates the usefulness and usage of standard profile.
 
 Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
 
-Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html) som uppfyller de användningsfall som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
+Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html) för de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
 
 * Använd [ImageCut API](https://github.com/AdobeDocs/photoshop-api-docs-pre-release#imagecutout) för [!DNL Adobe Photoshop] och spara resultatet som rendering.
 * Anropa tredjepartssystem för att uppdatera data, till exempel ett PIM-system.
@@ -123,7 +123,7 @@ Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade p
 
 Så här skapar du en anpassad profil:
 
-1. Administratörer har åtkomst till **[!UICONTROL Tools > Assets > Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
+1. Administratörer har åtkomst till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
 1. Klicka på fliken **[!UICONTROL Custom]**. Klicka på **[!UICONTROL Add New]**. Ange önskat filnamn för återgivningen.
 1. Ange följande information.
 
@@ -145,6 +145,8 @@ De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs
 För att illustrera hur den anpassade profilen används ska vi överväga ett användningsexempel för att använda anpassad text på kampanjbilder. Du kan skapa en bearbetningsprofil som använder Photoshop API för att redigera bilderna.
 
 Integrering med Asset compute Service gör att Experience Manager kan skicka dessa parametrar till det anpassade programmet med hjälp av fältet [!UICONTROL Service Parameters]. Det anpassade programmet anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
+
+<!-- TBD: Check screenshot against the interface. -->
 
 ![custom-processing-profile](assets/custom-processing-profile.png)
 
