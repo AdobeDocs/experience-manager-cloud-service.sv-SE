@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 translation-type: tm+mt
-source-git-commit: 6f5b6ba7da4c0d3161b9f34602b0256c319b191f
+source-git-commit: db653daa2d3c271329812b35960f50ee22fb9943
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1894'
 ht-degree: 0%
 
 ---
@@ -44,17 +44,13 @@ Resurser som [!DNL Cloud Service] innehåller följande överföringsmetoder. Ad
 
    You can pause the uploading of large assets (greater than 500 MB) and resume it later from the same page. Tap the **[!UICONTROL Pause]** icon beside progress bar that appears when an upload starts.
 
-   ![chlimage_1-211](assets/chlimage_1-211.png)
-
    The size above which an asset is considered a large asset is configurable. For example, you can configure the system to consider assets above 1000 MB (instead of 500 MB) as large assets. In this case, **[!UICONTROL Pause]** appears on the progress bar when assets of size greater than 1000 MB are uploaded.
 
    The Pause button does not show if a file greater than 1000 MB is uploaded with a file less than 1000 MB. However, if you cancel the less than 1000 MB file upload, the **[!UICONTROL Pause]** button appears.
 
-   To modify the size limit, configure the `chunkUploadMinFileSize` property of the `fileupload`node in the CRX repository.
+   To modify the size limit, configure the `chunkUploadMinFileSize` property of the `fileupload` node in the CRX repository.
 
-   When you click the **[!UICONTROL Pause]** icon, it toggles to a **[!UICONTROL Play]** icon. To resume uploading, click the **[!UICONTROL Play]** icon.
-
-   ![chlimage_1-212](assets/chlimage_1-212.png)
+   When you click the **[!UICONTROL Pause]** icon, it toggles to a **[!UICONTROL Play]** icon. To resume uploading, click **[!UICONTROL Play]** option.
 -->
 
 <!-- #ENGCHECK do we support pausing? I couldn't get pause to show with 1.5GB upload.... If not, this should be removed#
@@ -97,7 +93,7 @@ Uploading numerous assets in bulk consumes significant I/O resources, which may 
 
 To overcome this situation, [!DNL Assets] ingests one asset at a time (serial upload) during a bulk upload operation, instead of the concurrently ingesting all the assets.
 
-Serial uploading of assets is enabled by default. To disable the feature and allow concurrent uploading, overlay the `fileupload` node in Crx-de and set the value of the `parallelUploads` property to `true`.
+Serial uploading of assets is enabled by default. To disable the feature and allow concurrent uploading, overlay the `fileupload` node in CRX-DE and set the value of the `parallelUploads` property to `true`.
 
 ### Streamed uploads {#streamed-uploads}
 
@@ -190,23 +186,23 @@ Förutom webbläsarens användargränssnitt har [!DNL Experience Manager] stöd 
 
 ## Bearbeta resurser när {#process-when-uploaded} överförs
 
-För att kunna utföra ytterligare bearbetning av de överförda resurserna kan du använda bearbetningsprofiler på överförda mappar. Profilerna är tillgängliga på sidan **[!UICONTROL Properties]** i en mapp i [!DNL Assets].
+För att kunna utföra ytterligare bearbetning av de överförda resurserna kan du använda bearbetningsprofiler på överförda mappar. Profilerna är tillgängliga på sidan **[!UICONTROL Properties]** i en mapp i [!DNL Assets]. En digital resurs utan ett tillägg eller med ett felaktigt tillägg bearbetas inte som du vill. När du till exempel överför sådana resurser händer ingenting eller så kan en felaktig bearbetningsprofil gälla för resursen. Användarna kan fortfarande lagra de binära filerna i DAM.
 
-![assets-folder-properties](assets/assets-folder-properties.png)
+![Egenskaper för en resursmapp med alternativ för att lägga till en bearbetningsprofil](assets/assets-folder-properties.png)
 
 Följande flikar är tillgängliga:
 
-* [Med ](metadata-profiles.md) metadataprofilerkan du använda standardmetadataegenskaper för resurser som överförs till den mappen
+* [Med ](metadata-profiles.md) metadataprofiler kan du använda standardmetadataegenskaper för resurser som överförs till den mappen.
 * [Genom att bearbeta ](asset-microservices-configure-and-use.md) profiler kan du generera fler återgivningar än vad som är möjligt som standard.
 
 Om [!DNL Dynamic Media] är aktiverat i din distribution är dessutom följande flikar tillgängliga:
 
-* [Med Dynamic Media Image-](dynamic-media/image-profiles.md) profiler kan du tillämpa en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration på de överförda resurserna.
-* [Med Dynamic Media Video-](dynamic-media/video-profiles.md) profiler kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
+* [[!DNL Dynamic Media] Med ](dynamic-media/image-profiles.md) bildprofiler kan du tillämpa en särskild beskärningskonfiguration (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration på de överförda resurserna.
+* [[!DNL Dynamic Media] Med ](dynamic-media/video-profiles.md) videoprofiler kan du använda särskilda videokodningsprofiler (upplösning, format, parametrar).
 
 >[!NOTE]
 >
->Dynamic Media beskärning och andra åtgärder för resurser är icke-förstörande, vilket innebär att de inte ändrar det överförda originalet utan i stället anger parametrar för beskärning eller mediaomvandling som ska utföras när materialet levereras
+>[!DNL Dynamic Media] Beskärning och andra åtgärder för resurser är icke-förstörande, vilket innebär att åtgärderna inte ändrar det överförda originalet. I stället innehåller det parametrar som ska beskäras eller omformas när resurserna levereras.
 
 För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på miniatyrbilden i kortvyn. I listvyn visas profilnamnet i kolumnen **[!UICONTROL Processing Profile]**.
 
