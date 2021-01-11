@@ -3,7 +3,7 @@ title: Konfigurera AEM Assets som en [!DNL Cloud Service] med varumärkesportale
 description: Konfigurera AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: db653daa2d3c271329812b35960f50ee22fb9943
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 21%
@@ -71,7 +71,7 @@ Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Develope
 
    ![Skapa ett certifikat](assets/ims-config2.png)
 
-1. Klicka på ikonen **[!UICONTROL Download Public Key]** och spara filen med den offentliga nyckeln (.crt) på datorn.
+1. Klicka på ikonen **[!UICONTROL Download Public Key]** och spara filen med den offentliga nyckeln (CRT) på datorn.
 
    Den offentliga nyckeln kommer att användas senare för att konfigurera API för din varumärksportal och generera autentiseringsuppgifter för tjänstkontot i Adobe Developer Console.
 
