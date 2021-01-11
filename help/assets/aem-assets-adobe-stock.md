@@ -3,7 +3,7 @@ title: Hantera [!DNL Adobe Stock] resurser i [!DNL Assets].
 description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock] resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: db653daa2d3c271329812b35960f50ee22fb9943
 workflow-type: tm+mt
 source-wordcount: '922'
 ht-degree: 2%
@@ -48,7 +48,7 @@ Om du vill tillåta kommunikation mellan [!DNL Experience Manager] och [!DNL Ado
 
 >[!NOTE]
 >
->Om det finns flera [!DNL Adobe Stock]-konfigurationer väljer du den önskade konfigurationen på panelen Användarinställningar. Du öppnar panelen från Experience Manager hemsida genom att klicka på användarikonen och sedan på **[!UICONTROL User Preferences]** > **[!UICONTROL Stock Configuration]**).
+>Om det finns flera [!DNL Adobe Stock]-konfigurationer väljer du den önskade konfigurationen på panelen Användarinställningar. Du öppnar panelen från Experience Manager hemsida genom att klicka på användarikonen och sedan på **[!UICONTROL User Preferences]** > **[!UICONTROL Stock Configuration]**.
 
 ## Använd och hantera [!DNL Adobe Stock]-resurser i [!DNL Experience Manager] {#usemanage}
 
