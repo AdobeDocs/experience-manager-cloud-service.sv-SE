@@ -2,9 +2,9 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 translation-type: tm+mt
-source-git-commit: a4805cd1c6ee3b32f064f258d4a2a0308bee99b1
+source-git-commit: d843182585a269b5ebb24cc31679b77fb6b6d697
 workflow-type: tm+mt
-source-wordcount: '3464'
+source-wordcount: '3720'
 ht-degree: 0%
 
 ---
@@ -315,6 +315,39 @@ Redigeringsbeteendet för en komponent konfigureras genom att en `cq:editConfig`
    * `cq:listeners` (nodtyp  `cq:EditListenersConfig`): definierar vad som händer före eller efter en åtgärd inträffar för komponenten
 
 Det finns många befintliga konfigurationer i AEM. Du kan enkelt söka efter specifika egenskaper eller underordnade noder med frågeverktyget i **CRXDE Lite**.
+
+### Platshållare för komponenter {#component-placeholders}
+
+Komponenter måste alltid återge viss HTML som är synlig för författaren, även när komponenten inte har något innehåll. I annat fall försvinner det visuellt från redigerarens gränssnitt, vilket gör det tekniskt möjligt men osynligt på sidan och i redigeraren. I så fall kan författarna inte markera och interagera med den tomma komponenten.
+
+Därför bör komponenter återge en platshållare så länge de inte återger några synliga utdata när sidan återges i sidredigeraren (när WCM-läget är `edit` eller `preview`).
+Den typiska HTML-koden för en platshållare är följande:
+
+```HTML
+<div class="cq-placeholder" data-emptytext="Component Name"></div>
+```
+
+Det typiska HTML-skriptet som återger platshållarens HTML är följande:
+
+```HTML
+<div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"
+     data-sly-test="${(wcmmode.edit || wcmmode.preview) && isEmpty}"></div>
+```
+
+I det föregående exemplet är `isEmpty` en variabel som bara är true när komponenten inte har något innehåll och är osynlig för författaren.
+
+För att undvika upprepningar rekommenderar Adobe att komponentimplementerare använder en HTML-mall för dessa platshållare, [som den som finns i Core Components.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+
+Mallen i den föregående länken används sedan med följande rad i HTML:
+
+```HTML
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${template.placeholder @ isEmpty=!model.text}"></sly>
+```
+
+I föregående exempel är `model.text` variabeln som är true bara när innehållet har innehåll och är synligt.
+
+Ett exempel på hur den här mallen används visas i kärnkomponenterna [t.ex. i titelkomponenten.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
 
 ### Konfigurera med cq:EditConfig-underordnade noder {#configuring-with-cq-editconfig-child-nodes}
 
