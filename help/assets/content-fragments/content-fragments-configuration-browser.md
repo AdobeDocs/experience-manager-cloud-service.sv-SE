@@ -2,10 +2,10 @@
 title: Content Fragments - Configuration Browser
 description: Lär dig hur du aktiverar vissa funktioner för innehållsfragment i konfigurationsläsaren.
 translation-type: tm+mt
-source-git-commit: c821baff208e563009e68f51700555ea1d516886
+source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 19%
+source-wordcount: '278'
+ht-degree: 18%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 19%
 
 >[!CAUTION]
 >
->AEM GraphQL API, för Content Fragment Delivery, släpps i början av 2021.
+>AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
 >
->Den relaterade dokumentationen är redan tillgänglig för förhandsgranskning.
+>Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
 
 ## Aktivera funktionen för innehållsfragment för din instans {#enable-content-fragment-functionality-instance}
 
