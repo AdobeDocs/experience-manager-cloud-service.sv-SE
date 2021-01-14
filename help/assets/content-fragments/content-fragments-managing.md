@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment
 description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
 translation-type: tm+mt
-source-git-commit: 0a60687eacf054675205d9a9466473e1f4996db1
+source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1488'
 ht-degree: 10%
 
 ---
@@ -12,21 +12,11 @@ ht-degree: 10%
 
 # Hantera innehållsfragment{#managing-content-fragments}
 
-<!--
 >[!CAUTION]
 >
->Certain features for Content Fragments will be released in early 2021.
+>AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
 >
->The related documentation is already available for preview purposes.
->
->Please see the [Release Notes](/help/release-notes/release-notes-cloud/release-notes-current.md) for further details.
--->
-
->[!CAUTION]
->
->AEM GraphQL API, för Content Fragment Delivery, släpps i början av 2021.
->
->Den relaterade dokumentationen är redan tillgänglig för förhandsgranskning.
+>Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
 
 Innehållsfragment lagras som **Resurser**, så hanteras primärt från konsolen **Resurser**.
 
@@ -304,7 +294,7 @@ Du kan återgå till en viss version av fragmentet:
 
    Välj önskad version och sedan åtgärden **Återställ till denna version**.
 
-* När du jämför en version med den aktuella versionen[ kan du ](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions)återställa **till den valda versionen.**
+* När du jämför en version med den aktuella versionen](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) kan du **återställa** till den valda versionen.[
 
 ## Publicera och referera till ett fragment {#publishing-and-referencing-a-fragment}
 
