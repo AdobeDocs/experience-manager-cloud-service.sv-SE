@@ -2,9 +2,9 @@
 title: Modeller för innehållsfragment
 description: Content Fragment Models används för att skapa innehållsfragment med strukturerat innehåll.
 translation-type: tm+mt
-source-git-commit: 287e2cec425c2fd7e80618d247dc658ae1280066
+source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1189'
 ht-degree: 8%
 
 ---
@@ -12,21 +12,11 @@ ht-degree: 8%
 
 # Modeller för innehållsfragment {#content-fragment-models}
 
-<!--
 >[!CAUTION]
 >
->Certain features for Content Fragments will be released in early 2021.
+>AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
 >
->The related documentation is already available for preview purposes.
->
->Please see the [Release Notes](/help/release-notes/release-notes-cloud/release-notes-current.md) for further details.
--->
-
->[!CAUTION]
->
->AEM GraphQL API, för Content Fragment Delivery, släpps i början av 2021.
->
->Den relaterade dokumentationen är redan tillgänglig för förhandsgranskning.
+>Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
 
 Modeller för innehållsfragment definierar innehållsstrukturen för dina [innehållsfragment](/help/assets/content-fragments/content-fragments.md).
 
