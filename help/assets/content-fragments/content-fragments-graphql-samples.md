@@ -2,9 +2,9 @@
 title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM - exempelinnehåll och frågor.
 translation-type: tm+mt
-source-git-commit: 46e179faa7875c4b3e9da30356d2b82d4b25b130
+source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1298'
 ht-degree: 2%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->AEM GraphQL API, för Content Fragment Delivery, släpps i början av 2021.
+>AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
 >
->Den relaterade dokumentationen är redan tillgänglig för förhandsgranskning.
+>Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
 
 Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan du se några praktiska exempel.
 
