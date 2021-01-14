@@ -2,10 +2,10 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: cfe49fe414f387c660259de540af0cc26ef3951f
+source-git-commit: a09377df02225e9ad58ea4a8a0671fc40bd7d703
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -45,21 +45,15 @@ Följande version (2021.1.0) kommer att vara den 28 januari 2021.
 
 ### Releasedatum {#release-date-cm}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2020.12.0 är 10 december 2020.
-
-### Nyheter i [!DNL Cloud Manager] {#what-is-new-cm}
-
-* Självbetjäningshantering för [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md).
-
-* Självbetjäningshantering för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
-
-* **Informationssidan för miljö** tillåter nu användare att hantera anpassade domännamn och IP-Tillåtelselista i sina miljöer.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.1.0 är 14 januari 2021.
 
 ### Felkorrigeringar {#bug-fixes-cloud-manager}
 
-* Vissa förekomster av fel vid kodskanning utan att ge några resultat åtgärdade.
+* Resursinstansen Production kan vid olika tillfällen visa status för varumärkesportalen på **miljöinformationssidan** som *Väntande* utan att tillåta användaren att vidta några åtgärder.
 
-* Miljökortet visade inte **Lägg till**-knapp genomgående.
+* När en avaktivering från molnhanteraren utlöstes visades ibland ett felmeddelande även när avviloläget startades.
+
+* Sällsynta fall av fel som uppstått när miljön skapades eller togs bort har åtgärdats.
 
 ## Verktyg för omstrukturering av kod {#code-refactoring-tools}
 
