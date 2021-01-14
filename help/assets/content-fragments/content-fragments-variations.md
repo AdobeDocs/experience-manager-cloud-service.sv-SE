@@ -2,7 +2,7 @@
 title: Variationer – redigera innehållsfragment
 description: Med variationer kan du skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte (om det behövs).
 translation-type: tm+mt
-source-git-commit: 0a60687eacf054675205d9a9466473e1f4996db1
+source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 14%
@@ -11,16 +11,6 @@ ht-degree: 14%
 
 
 # Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
-
-<!--
->[!CAUTION]
->
->Certain features for Content Fragments will be released in early 2021.
->
->The related documentation is already available for preview purposes.
->
->Please see the [Release Notes](/help/release-notes/release-notes-cloud/release-notes-current.md) for further details.
--->
 
 [](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) Variationer är en viktig funktion i innehållsfragment eftersom de gör att du kan skapa och redigera kopior av det överordnad innehållet för användning i vissa kanaler och/eller scenarier.
 
