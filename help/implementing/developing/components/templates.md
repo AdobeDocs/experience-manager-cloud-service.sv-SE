@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
 translation-type: tm+mt
-source-git-commit: a3b2a66958fd8d3a68b450938c5c18053f00b998
+source-git-commit: 73e7f9a5b0976ebd5228c182d47c1058290f7629
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3296'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Sidmallar {#page-templates}
 
-När du skapar en sida måste du välja en mall. Sidmallen används som bas för den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas (designegenskaper). Detta har serverfördelar:
+När du skapar en sida måste du välja en mall. Sidmallen används som bas för den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas (designegenskaper). Detta har flera fördelar:
 
 * Med sidmallar kan specialiserade författare [skapa och redigera mallar](/help/sites-cloud/authoring/features/templates.md).
    * Sådana specialiserade författare kallas **mallförfattare**
@@ -61,7 +61,7 @@ När du skapar en ny redigerbar mall:
 
    Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#editing-a-template-structure-template-author).
 
-   Information om strukturens tekniska detaljer finns i [Struktur](#structure) i det här dokumentet.
+   Mer teknisk information om strukturen finns i [Struktur](#structure) i det här dokumentet.
 
    **Profiler**
 
@@ -110,6 +110,16 @@ När du skapar en ny redigerbar mall:
 
    Teknisk information om hur du skapar sidor med redigerbara mallar finns i [Resulterande innehållssidor](#resultant-content-pages) i det här dokumentet.
 
+>[!TIP]
+>
+>Ange aldrig någon information som behöver internationaliseras i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
+
+>[!NOTE]
+>
+>Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
+>
+>Adobe rekommenderar inte att ha fler än 1 000 mallar på grund av potentiella prestandaeffekter.
+
 >[!NOTE]
 >
 >Redigeringsklientbiblioteket förutsätter att namnutrymmet `cq.shared` finns på innehållssidorna, och om det saknas kommer JavaScript-felet `Uncaught TypeError: Cannot read property 'shared' of undefined` att uppstå.
@@ -118,9 +128,7 @@ När du skapar en ny redigerbar mall:
 >
 >Mer information finns i [Använda bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md).
 
->[!CAUTION]
->
->Ange aldrig någon information som behöver internationaliseras i en mall.
+
 
 ## Mallmappar {#template-folders}
 
