@@ -2,9 +2,9 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+source-git-commit: 7cceaf3942b60f13004d606de9a7e0408f528671
 workflow-type: tm+mt
-source-wordcount: '4551'
+source-wordcount: '4600'
 ht-degree: 11%
 
 ---
@@ -88,7 +88,7 @@ När du skapar en ny redigerbar mall:
 >
 >**Tillåtna mallar** är ofta fördefinierade när webbplatsen är konfigurerad.
 
->[!CAUTION]
+>[!TIP]
 >
 >Ange aldrig någon information som behöver internationaliseras i en mall. <!-- Never enter any information that needs to be [internationalized](/help/sites-developing/i18n.md) into a template.-->
 >
@@ -126,6 +126,12 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
    >[!NOTE]
    >
    >När en ny mall skapas markeras den som **Utkast** i konsolen, betyder det att den inte är tillgänglig för sidförfattare än.
+
+>[!NOTE]
+>
+>Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
+>
+>Adobe rekommenderar inte att ha fler än 1 000 mallar på grund av potentiella prestandaeffekter.
 
 ### Definiera mallegenskaper - mallförfattare {#defining-template-properties-template-author}
 
