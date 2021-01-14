@@ -2,7 +2,7 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.1.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.1.0
 translation-type: tm+mt
-source-git-commit: 8f36e2f6978ee7723c53496ef83bb2959bbc58bc
+source-git-commit: 05f539c41ea3caa0f754c0cdced4c795f8b6afb9
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.1.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.1.0
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.1.0.
 
 ## Releasedatum {#release-date}
 
