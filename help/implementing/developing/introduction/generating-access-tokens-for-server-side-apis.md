@@ -2,7 +2,7 @@
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM som en Cloud Service genom att generera en säker JWT-token
 translation-type: tm+mt
-source-git-commit: 7ca7cd458ea5152d56754bf1e6a500b2c04d0039
+source-git-commit: a8cb0c1bf2cdc741173e83ad00b6453931a8df18
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -101,7 +101,9 @@ curl -H "Authorization: Bearer <your_ims_access_token>" https://author-p123123-e
 
 ## Utvecklarflöde {#developer-flow}
 
-Utvecklare kommer troligen att vilja testa med hjälp av en utvecklingsinstans av sin icke-AEM-programvara (som antingen körs på deras bärbara dator eller på deras värddator) som gör begäranden till en AEM som en Cloud Service-utvecklingsmiljö. Eftersom utvecklare inte nödvändigtvis har administratörsrollåtkomst till AEM som en Cloud Service dev-miljö, kan vi inte anta att de kan generera JWT-bäraren som beskrivs i det vanliga server-till-server-flödet. Därför erbjuder vi en mekanism för en utvecklare att generera en åtkomsttoken direkt som kan användas i begäranden som AEM som en Cloud Service som de har tillgång till. I [dokumentationen till Utvecklarriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) finns information om vilka behörigheter som krävs för att använda AEM som Cloud Service-utvecklarkonsol.
+Utvecklare kommer troligen att vilja testa med hjälp av en utvecklingsinstans av sin icke-AEM-programvara (som antingen körs på deras bärbara dator eller på deras värddator) som gör begäranden till en AEM som en Cloud Service-utvecklingsmiljö. Eftersom utvecklare inte nödvändigtvis har administratörsrollåtkomst till AEM som en Cloud Service dev-miljö, kan vi inte anta att de kan generera JWT-bäraren som beskrivs i det vanliga server-till-server-flödet. Därför erbjuder vi en mekanism för en utvecklare att generera en åtkomsttoken direkt som kan användas i begäranden som AEM som en Cloud Service som de har tillgång till.
+
+I [dokumentationen till Utvecklarriktlinjer](/help/implementing/developing/introduction/development-guidelines.md#crxde-lite-and-developer-console) finns information om vilka behörigheter som krävs för att använda AEM som Cloud Service-utvecklarkonsol.
 
 >[!NOTE]
 >
