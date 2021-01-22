@@ -2,9 +2,9 @@
 title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 0e414de936267cb4648c3078720b198e00c4a3cb
+source-git-commit: a02e035a842e7c633aaa926d0ab092b2c7aed5cb
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1535'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,15 @@ Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur
 
 ### HTML/text {#html-text}
 
-* som standard, cachelagras av webbläsaren i fem minuter, baserat på det cachekontrollhuvud som skickas av apache-lagret. CDN respekterar också detta värde.
+* som standard, cachelagras av webbläsaren i fem minuter, baserat på det `cache-control`-huvud som skickas från apache-lagret. CDN respekterar också detta värde.
+* standardinställningen för HTML-/textcache kan inaktiveras genom att definiera variabeln `DISABLE_DEFAULT_CACHING` i `global.vars`:
+
+```
+Define DISABLE_DEFAULT_CACHING
+```
+
+Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras (med ett värde som baseras på kalenderdag) eftersom sidhuvudet som standard är 0. **Var dock försiktig när du stänger av standardcachning.**
+
 * kan åsidosättas för allt HTML-/textinnehåll genom att definiera variabeln `EXPIRATION_TIME` i `global.vars` med AEM som SDK Dispatcher-verktyg för Cloud Service.
 * kan åsidosättas på en mer detaljerad nivå med följande direktiv för apache mod_headers:
 
