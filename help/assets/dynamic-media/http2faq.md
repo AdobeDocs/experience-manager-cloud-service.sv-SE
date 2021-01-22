@@ -2,9 +2,9 @@
 title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
 translation-type: tm+mt
-source-git-commit: d9673296208831e68c5f776e0a9b142f348efc95
+source-git-commit: 83ad14d49a5250c3070eed4d4962443da6faf5f5
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '737'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 * Använd det Adobe-paketerade CDN (content delivery network) som en del av din Dynamic Media Classic-licens.
 * Använd en dedikerad domän (d.v.s. `images.company.com` eller `mycompany.scene7.com`), inte en generisk Dynamic Media-domän (d.v.s. `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
 
-   [Logga in på din instans av Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto för att hitta dina domäner.
+   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto.
 
    Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **Publicerat servernamn**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
@@ -56,7 +56,7 @@ Du måste [använda Admin Console för att skapa ett supportärende](https://hel
    * Primärt kontaktnamn, e-postadress och telefonnummer.
    * Alla domäner som ska överföras till HTTP2. Det vill säga `images.company.com` eller `mycompany.scene7.com`.
 
-   [Logga in på din instans av Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto för att hitta dina domäner.
+   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto.
 
    Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**.
 
@@ -64,7 +64,7 @@ Du måste [använda Admin Console för att skapa ett supportärende](https://hel
    * Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
    * Kontrollera att du använder en dedikerad domän. Det vill säga `images.company.com` eller `mycompany.scene7.com` är inte en allmän Dynamic Media-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
 
-   [Logga in på din instans av Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto för att hitta dina domäner.
+   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto.
 
    Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
