@@ -2,10 +2,10 @@
 title: CDN-cachen har inte verifierats med Dynamic Media Classic
 description: Om du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
 translation-type: tm+mt
-source-git-commit: 7dee751f0b0e059bda7cfdf3f524bdc4c75de91b
+source-git-commit: 83ad14d49a5250c3070eed4d4962443da6faf5f5
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 26%
+source-wordcount: '624'
+ht-degree: 25%
 
 ---
 
@@ -22,15 +22,9 @@ Se även [Cacheöversikt i Dynamic Media Classic](https://helpx.adobe.com/experi
 
 **Så här gör du CDN-cachen ogiltig med Dynamic Media Classic:**
 
-1. Gör något av följande:
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   * Logga in på ditt Dynamic Media Classic-konto i webbläsaren:
-
-      [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
-
-      Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
-
-   * Öppna Dynamic Media Classic och logga sedan in på ditt konto.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
 1. Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**.
 1. Gå till textrutan **[!UICONTROL CDN Invalidation Template]** under grupprubriken Servrar på sidan Allmänna inställningar för program.
