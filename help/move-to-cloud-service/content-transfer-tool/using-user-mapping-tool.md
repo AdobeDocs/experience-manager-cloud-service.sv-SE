@@ -2,10 +2,10 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 translation-type: tm+mt
-source-git-commit: 664c278494a5ac88362b994946060ab3baa846d8
+source-git-commit: 410b7900981596590fa80b286b40a965700f108e
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 6%
+source-wordcount: '750'
+ht-degree: 3%
 
 ---
 
@@ -42,3 +42,39 @@ Så här konfigurerar du det:
 1. Skapa ett nyckelpar eller Överför en offentlig nyckel (rsa är inte bra)
 1. Generera en åtkomsttoken (JWT-token eller innehavartoken).
 1. Spara all den här informationen (klient-ID, klienthemlighet, tekniskt konto-ID, e-post för tekniskt konto, organisations-ID, åtkomsttoken) på en säker plats.
+
+## Användargränssnitt {#user-interface}
+
+Verktyget för användarmappning är integrerat i verktyget Innehållsöverföring. Du kan hämta innehållsöverföringsverktyget från portalen för distribution av programvara. Mer information om den senaste versionen finns i Versionsinformation.
+
+1. Markera Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Innehållsöverföring**.
+1. Klicka på **Skapa konfiguration för användarmappning**.
+
+   >[!NOTE]
+   >Om du hoppar över det här steget hoppas användare och grupper över under extraheringsfasen.
+
+   Fyll i fälten i API-konfiguration för användarhantering enligt beskrivningen nedan:
+
+   * **Organisations-ID**: Ange IMS-organisations-ID för den organisation som användarna migreras till.
+
+      >[!NOTE]
+      >Logga in på [Admin Console](https://adminconsole.adobe.com/) och välj din organisation (i det övre högra området) om du tillhör fler än en organisation för att hämta ditt organisations-ID. Org-ID:t kommer att vara i URL:en för den sidan, i formatet `xx@AdobeOrg`, där xx är IMS Org-ID:t.  Du kan också hitta ditt organisations-ID på sidan [Adobe Developer Console](https://console.adobe.io) där du genererar åtkomsttoken.
+
+   * **Klient-ID**: Ange det klient-ID som du sparade i konfigurationssteget
+
+   * **Åtkomsttoken**: Ange den åtkomsttoken som du har sparat från konfigurationssteget
+
+      >[!NOTE]
+      >Åtkomsttoken upphör att gälla var 24:e timme och en ny måste skapas. Om du vill skapa en ny token går du tillbaka till [Adobe Developer Console](https://console.adobe.io), väljer ditt projekt, klickar på API:t för användarhantering och klistrar in samma privata nyckel i rutan.
+
+1. När du har angett ovanstående information klickar du på Spara.
+
+1. Skapa en migreringsuppsättning genom att klicka på Skapa migreringsuppsättning, fylla i fälten och sedan klicka på Spara. Mer information finns i Köra verktyget Innehållsöverföring.
+
+   >[!NOTE]
+   >Växlingsväxeln som tar med Mappningsanvändare från IMS-användare och -grupper är som standard PÅ. Med den här inställningen körs användarmappningsverktyget som en del av extraheringsfasen när extraheringen utförs på den här migreringsuppsättningen. Detta är det rekommenderade sättet att köra extraheringsfasen av verktyget Innehållsöverföring. Om den här växeln är inaktiverad och/eller konfigurationen för användarmappning inte skapas, hoppas användare och grupper över under extraheringsfasen.
+
+1. Mer information om hur du kör extraheringsfasen finns i [Köra verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-tool).
+
+
+
