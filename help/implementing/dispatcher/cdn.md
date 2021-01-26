@@ -2,10 +2,10 @@
 title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 40119f7b3bdf36af668b79afbcb2802a0b2a6033
+source-git-commit: 8ca8944d37c1a10782597ec30c16b0151b5cd717
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 7%
+source-wordcount: '567'
+ht-degree: 5%
 
 ---
 
@@ -51,3 +51,24 @@ Innan du godkänner direkttrafik bör du med Adobe kundsupport validera att traf
 Prestandan kan bli liten på grund av det extra hoppet, även om hoppet från kundens CDN till Adobe hanterade CDN sannolikt är effektivt.
 
 Observera att den här kundens CDN-konfiguration stöds för publiceringsnivån, men inte framför författarnivån.
+
+## Geolocation-rubriker {#geo-headers}
+
+Det CDN som hanteras av Adobe lägger till rubriker i varje begäran med:
+
+* landskod: `x-aem-client-country`
+* Kontinentalkod: `x-aem-client-continent`
+
+Värdena för landskoderna är de Alpha-2-koder som beskrivs [här](https://en.wikipedia.org/wiki/ISO_3166-1).
+
+Värdena för kontinentkoderna är:
+
+* AF Africa
+* AN Antarktis
+* AS Asien
+* EU Europa
+* NA Nordamerika
+* OC Oceanien
+* Sydamerika
+
+Denna information kan vara användbar vid användning, t.ex. omdirigering till en annan URL som baseras på begärans ursprung (land). I detta specifika fall bör omdirigeringen inte cachas eftersom den varierar. Om det behövs kan du använda `Cache-Control: private` för att förhindra cachelagring. Se även [Cachelagring](/help/implementing/dispatcher/caching.md#html-text).
