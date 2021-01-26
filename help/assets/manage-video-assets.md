@@ -3,9 +3,9 @@ title: Hantera videoresurser
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 85dc85fbface3d1ee26d01f48bb1f2445306419d
+source-git-commit: deab2183447e64e8a98f3072ceab2ef2216c4528
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '608'
 ht-degree: 6%
 
 ---
@@ -53,11 +53,11 @@ Om du vill bearbeta resurser med en bearbetningsprofil lägger du till en profil
 ## God praxis och begränsningar {#tips-limitations}
 
 * Utan [!DNL Dynamic Media]-licens kan du bara bearbeta MP4-filer med bearbetningsprofiler.
-* När du omkodar MP4-filer med Bearbeta profiler gäller följande riktlinjer och begränsningar:
+* När MP4-filer kodas om med Bearbeta profiler gäller följande riktlinjer och begränsningar:
 
    * Apple ProRes-filer kan bara koda om till en maximal upplösning på 1080p.
    * Om källfilen har en bithastighet på >200 Mbit/s kan du bara omkoda till en maximal upplösning på 1080p.
-   * Om källbildrutefrekvensen är >= 60 fps är den maximala källfilsstorleken som du kan använda den:
+   * Om källbildrutefrekvensen är >=60 fps blir den maximala storleken på källfilen som du kan använda:
 
       * 400 MB för 4K-omkodning.
       * 800 MB för 1080p-omkodning.
