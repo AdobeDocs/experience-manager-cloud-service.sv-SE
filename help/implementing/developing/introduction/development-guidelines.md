@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: a3d940765796e6a4d8e16d8fe31343074358ebc3
+source-git-commit: 8125d78d4751f22bcc5dd22acbdfd21ce62fc53d
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2242'
 ht-degree: 1%
 
 ---
@@ -246,10 +246,10 @@ Om port 465 har begärts:
 
 * ange `smtp.port` till `465`
 * ange `smtp.ssl` till `true`
+* ange `smtp.starttls` till `false`
 
 Om port 587 har begärts (endast tillåtet om e-postservern inte stöder port 465):
 
 * ange `smtp.port` till `587`
 * ange `smtp.ssl` till `false`
-
-Egenskapen `smtp.starttls` anges automatiskt av AEM som en Cloud Service vid körning till ett lämpligt värde. Detta är `false` för port 465 och `true` för port 587. Detta är oavsett `smtp.starttls`-värdena som angetts i OSGI-konfigurationen.
+* ange `smtp.starttls` till `true`
