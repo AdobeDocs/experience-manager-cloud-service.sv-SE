@@ -2,9 +2,9 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 translation-type: tm+mt
-source-git-commit: a5129eac9f8032de5931b75c83eea62e480c1847
+source-git-commit: dcba197624b6a7ae668b11f43f60b13a9da0080e
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '757'
 ht-degree: 4%
 
 ---
@@ -35,17 +35,17 @@ Användarmappningsverktyget använder ett API som gör att det kan söka efter I
 Så här konfigurerar du det:
 
 1. Navigera till [Adobe Developer Console](https://console.adobe.io) med din Adobe ID.
-1. Skapa ett nytt projekt eller öppna ett befintligt projekt
-1. Lägg till ett API
-1. Välj API för användarhantering
-1. Skapa en JWT-autentiseringsuppgift
-1. Skapa ett nyckelpar eller Överför en offentlig nyckel (rsa är inte bra)
+1. Skapa ett nytt projekt eller öppna ett befintligt projekt.
+1. Lägg till ett API.
+1. Välj API för användarhantering.
+1. Skapa en JWT-autentiseringsuppgift.
+1. Skapa ett nyckelpar eller Överför en offentlig nyckel (rsa är inte bra).
 1. Generera en åtkomsttoken (JWT-token eller innehavartoken).
-1. Spara all den här informationen (klient-ID, klienthemlighet, tekniskt konto-ID, e-post för tekniskt konto, organisations-ID, åtkomsttoken) på en säker plats.
+1. Spara all den här informationen, till exempel **klient-ID**, **Klienthemlighet**, **ID för tekniskt konto**, **E-post för tekniskt konto**, **Organisations-ID** och **Åtkomsttoken** säkert.
 
 ## Användargränssnitt {#user-interface}
 
-Verktyget för användarmappning är integrerat i verktyget Innehållsöverföring. Du kan hämta innehållsöverföringsverktyget från portalen för distribution av programvara. Mer information om den senaste versionen finns i Versionsinformation.
+Verktyget för användarmappning är integrerat i verktyget Innehållsöverföring. Du kan hämta innehållsöverföringsverktyget från portalen för distribution av programvara. Mer information om den senaste versionen finns i [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
 1. Markera Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Innehållsöverföring**.
 1. Klicka på **Skapa konfiguration för användarmappning**.
