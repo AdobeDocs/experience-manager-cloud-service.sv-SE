@@ -2,10 +2,10 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 translation-type: tm+mt
-source-git-commit: 410b7900981596590fa80b286b40a965700f108e
+source-git-commit: a5129eac9f8032de5931b75c83eea62e480c1847
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 3%
+source-wordcount: '754'
+ht-degree: 4%
 
 ---
 
@@ -53,7 +53,11 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
    >[!NOTE]
    >Om du hoppar över det här steget hoppas användare och grupper över under extraheringsfasen.
 
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-1.png)
+
    Fyll i fälten i API-konfiguration för användarhantering enligt beskrivningen nedan:
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-2.png)
 
    * **Organisations-ID**: Ange IMS-organisations-ID för den organisation som användarna migreras till.
 
@@ -67,12 +71,17 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
       >[!NOTE]
       >Åtkomsttoken upphör att gälla var 24:e timme och en ny måste skapas. Om du vill skapa en ny token går du tillbaka till [Adobe Developer Console](https://console.adobe.io), väljer ditt projekt, klickar på API:t för användarhantering och klistrar in samma privata nyckel i rutan.
 
-1. När du har angett ovanstående information klickar du på Spara.
+1. När du har angett ovanstående information klickar du på **Spara**.
 
-1. Skapa en migreringsuppsättning genom att klicka på Skapa migreringsuppsättning, fylla i fälten och sedan klicka på Spara. Mer information finns i Köra verktyget Innehållsöverföring.
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-3.png)
+
+
+1. Skapa en migreringsuppsättning genom att klicka på **Skapa migreringsuppsättning** och fylla i fälten och sedan klicka på **Spara**. Mer information finns i Köra verktyget Innehållsöverföring.
 
    >[!NOTE]
    >Växlingsväxeln som tar med Mappningsanvändare från IMS-användare och -grupper är som standard PÅ. Med den här inställningen körs användarmappningsverktyget som en del av extraheringsfasen när extraheringen utförs på den här migreringsuppsättningen. Detta är det rekommenderade sättet att köra extraheringsfasen av verktyget Innehållsöverföring. Om den här växeln är inaktiverad och/eller konfigurationen för användarmappning inte skapas, hoppas användare och grupper över under extraheringsfasen.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-4.png)
 
 1. Mer information om hur du kör extraheringsfasen finns i [Köra verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-tool).
 
