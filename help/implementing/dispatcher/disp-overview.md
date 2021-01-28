@@ -2,10 +2,10 @@
 title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 translation-type: tm+mt
-source-git-commit: 4d58ccf972f5bf2a48b228755f93166c17bcb4b0
+source-git-commit: 49b2f4abf64e404fcda7ea8d35e3ab9dc5fec90f
 workflow-type: tm+mt
-source-wordcount: '4050'
-ht-degree: 9%
+source-wordcount: '4119'
+ht-degree: 8%
 
 ---
 
@@ -376,7 +376,8 @@ Phase 2 finished
 Skriptet gör följande:
 
 1. Valideraren körs från föregående avsnitt för att säkerställa att endast de direktiv som stöds inkluderas. Om konfigurationen inte är giltig misslyckas skriptet.
-2. Den kör `httpd -t command` för att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution
+2. Den kör `httpd -t command` för att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution.
+3. Kontrollerar att delmängden av SDK-konfigurationsfilerna för dispatcher, som är avsedda att vara oföränderliga enligt beskrivningen i [Filstrukturavsnittet](#file-structure), inte har ändrats. Detta är en ny kontroll som introducerades i AEM SDK version v2021.1.4738 som även innehåller Dispatcher Tools version 2.0.36. Före den här uppdateringen kan kunderna felaktigt ha antagit att lokala SDK-ändringar av dessa oföränderliga filer också skulle tillämpas på molnmiljön.
 
 Under en distribution av Cloud Manager körs kontrollen `httpd -t syntax` också och eventuella fel inkluderas i loggen för Cloud Manager `Build Images step failure`.
 
