@@ -2,9 +2,9 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 translation-type: tm+mt
-source-git-commit: dcba197624b6a7ae668b11f43f60b13a9da0080e
+source-git-commit: d582b752848b2b8b5a5955eec08b04fbbc3a53fa
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '762'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Översikt {#overview}
 
-Som en del av övergången till AEM som Cloud Service måste du flytta användare och grupper från ditt befintliga AEM till AEM som en Cloud Service. Detta görs med verktyget Innehållsöverföring.
+Som en del av övergången till Adobe Experience Manager (AEM) som Cloud Service måste du flytta användare och grupper från ditt befintliga AEM till AEM som en Cloud Service. Detta görs med verktyget Innehållsöverföring.
 
 En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön.  Detta kräver att Adobe Admin Console används för att hantera användare och användargrupper. Användarprofilsinformationen är centraliserad i Adobe Identity Management System (IMS) som möjliggör enkel inloggning i alla Adobe-molnprogram. Mer information finns i Identity Management. På grund av den här ändringen måste befintliga användare och grupper mappas till sina IMS-ID:n för att undvika dubbletter av användare och grupper på Cloud Servicens författarinstans.
 
@@ -22,17 +22,17 @@ En stor förändring i AEM as a Cloud Service är den helt integrerade användni
 
 Det finns ett fåtal exceptionella fall som behöver övervägas. Följande specialfall loggas och användaren eller gruppen i fråga mappas inte:
 
-1. Om en användare inte har någon e-postadress i fältet `profile/email` för sin jcr-nod.
+1. Om en användare inte har någon e-postadress i fältet `profile/email` i noden *jcr*.
 
-1. Om det inte går att hitta någon e-postadress i IMS-systemet för det organisations-ID som används (eller om IMS-ID inte kan hämtas av någon annan anledning).
+1. Om det inte går att hitta ett visst e-postmeddelande i IMS-systemet (Adobe Identity Management System) för det organisations-ID som används (eller om IMS-ID inte kan hämtas av någon annan anledning).
 
-1. Om användaren är inaktiverad behandlas den på samma sätt som om den inte var inaktiverad.  Den mappas och migreras som vanligt och förblir inaktiverad i molninstansen.
+1. Om användaren är inaktiverad behandlas den på samma sätt som om den inte var inaktiverad. Den mappas och migreras som vanligt och förblir inaktiverad i molninstansen.
 
 ## Använda verktyget för användarmappning {#using-user-mapping-tool}
 
-Användarmappningsverktyget använder ett API som gör att det kan söka efter IMS-användare via e-post och returnera deras IMS-ID. Denna API kräver att användaren skapar ett klient-ID för sin organisation, en klienthemlighet och en åtkomsttoken/Bearer-token.
+Användarmappningsverktyget använder ett API som gör att det kan söka efter IMS-användare (Adobe Identity Management System) via e-post och returnera deras IMS-ID. Denna API kräver att användaren skapar ett klient-ID för sin organisation, en klienthemlighet och en Access- eller Bearer-token.
 
-Så här konfigurerar du det:
+Följ stegen nedan för att konfigurera detta:
 
 1. Navigera till [Adobe Developer Console](https://console.adobe.io) med din Adobe ID.
 1. Skapa ett nytt projekt eller öppna ett befintligt projekt.
@@ -41,7 +41,7 @@ Så här konfigurerar du det:
 1. Skapa en JWT-autentiseringsuppgift.
 1. Skapa ett nyckelpar eller Överför en offentlig nyckel (rsa är inte bra).
 1. Generera en åtkomsttoken (JWT-token eller innehavartoken).
-1. Spara all den här informationen, till exempel **klient-ID**, **Klienthemlighet**, **ID för tekniskt konto**, **E-post för tekniskt konto**, **Organisations-ID** och **Åtkomsttoken** säkert.
+1. Spara all den här informationen, till exempel **klient-ID**, **Klienthemlighet**, **ID för tekniskt konto**, **E-post för tekniskt konto**, **Org ID** och **Åtkomsttoken** säkert.
 
 ## Användargränssnitt {#user-interface}
 
@@ -59,31 +59,31 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-2.png)
 
-   * **Organisations-ID**: Ange IMS-organisations-ID för den organisation som användarna migreras till.
+   * **Organisations-ID**: Ange IMS-organisationsnumret (Adobe Identity Management System) för den organisation som användarna migreras till.
 
       >[!NOTE]
       >Logga in på [Admin Console](https://adminconsole.adobe.com/) och välj din organisation (i det övre högra området) om du tillhör fler än en organisation för att hämta ditt organisations-ID. Org-ID:t kommer att vara i URL:en för den sidan, i formatet `xx@AdobeOrg`, där xx är IMS Org-ID:t.  Du kan också hitta ditt organisations-ID på sidan [Adobe Developer Console](https://console.adobe.io) där du genererar åtkomsttoken.
 
-   * **Klient-ID**: Ange det klient-ID som du sparade i konfigurationssteget
+   * **Klient-ID**: Ange det klient-ID som du sparade i konfigurationssteget.
 
-   * **Åtkomsttoken**: Ange den åtkomsttoken som du har sparat från konfigurationssteget
+   * **Åtkomsttoken**: Ange den åtkomsttoken som du sparade i konfigurationssteget.
 
       >[!NOTE]
-      >Åtkomsttoken upphör att gälla var 24:e timme och en ny måste skapas. Om du vill skapa en ny token går du tillbaka till [Adobe Developer Console](https://console.adobe.io), väljer ditt projekt, klickar på API:t för användarhantering och klistrar in samma privata nyckel i rutan.
+      >Åtkomsttoken upphör att gälla var 24:e timme och en ny måste skapas. Om du vill skapa en ny token går du tillbaka till [Adobe Developer Console](https://console.adobe.io), väljer ditt projekt, klickar på **API för användarhantering** och klistrar in samma privata nyckel i rutan.
 
 1. När du har angett ovanstående information klickar du på **Spara**.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-3.png)
 
 
-1. Skapa en migreringsuppsättning genom att klicka på **Skapa migreringsuppsättning** och fylla i fälten och sedan klicka på **Spara**. Mer information finns i Köra verktyget Innehållsöverföring.
+1. Skapa en migreringsuppsättning genom att klicka på **Skapa migreringsuppsättning** och fylla i fälten och sedan klicka på **Spara**. Mer information finns i [Köra verktyget innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#running-tool).
 
    >[!NOTE]
    >Växlingsväxeln som tar med Mappningsanvändare från IMS-användare och -grupper är som standard PÅ. Med den här inställningen körs användarmappningsverktyget som en del av extraheringsfasen när extraheringen utförs på den här migreringsuppsättningen. Detta är det rekommenderade sättet att köra extraheringsfasen av verktyget Innehållsöverföring. Om den här växeln är inaktiverad och/eller konfigurationen för användarmappning inte skapas, hoppas användare och grupper över under extraheringsfasen.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-4.png)
 
-1. Mer information om hur du kör extraheringsfasen finns i [Köra verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-tool).
+1. Mer information om hur du kör extraheringsfasen finns i [Köra verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#running-tool).
 
 
 
