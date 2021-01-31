@@ -3,9 +3,9 @@ title: Konfigurera och använda resursmikrotjänster
 description: Konfigurera och använd de molnbaserade resursmeritjänsterna för att bearbeta resurser i stor skala.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: db653daa2d3c271329812b35960f50ee22fb9943
+source-git-commit: 57ae02b90d1e78e8a940b65d195bc2077feec2d2
 workflow-type: tm+mt
-source-wordcount: '2478'
+source-wordcount: '2522'
 ht-degree: 0%
 
 ---
@@ -180,18 +180,18 @@ Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade å
 
 ## Efterbehandlingsarbetsflöden {#post-processing-workflows}
 
-Om det krävs ytterligare bearbetning av resurser som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Detta gör att du kan lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
+I en situation där ytterligare bearbetning av resurser krävs som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Detta gör att du kan lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
 
-Efterbehandlingsarbetsflöden, om de är konfigurerade, körs automatiskt av [!DNL Experience Manager] när bearbetningen av mikrotjänsterna har slutförts. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa dem. Exemplen innehåller:
+Efterbehandlingsarbetsflöden, om de är konfigurerade, körs automatiskt av [!DNL Experience Manager] när bearbetningen av mikrotjänsterna har slutförts. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa arbetsflödena. Exemplen innehåller:
 
 * Anpassade arbetsflödessteg för att bearbeta resurser.
 * Integreringar för att lägga till metadata eller egenskaper i resurser från externa system, till exempel produkt- eller processinformation.
 * Ytterligare bearbetning utförd av externa tjänster.
 
-Att lägga till en arbetsflödeskonfiguration efter bearbetning i Experience Manager består av följande steg:
+Så här lägger du till en arbetsflödeskonfiguration efter bearbetning i [!DNL Experience Manager]:
 
-* Skapa en eller flera arbetsflödesmodeller. I dokumenten anges det som *arbetsflödesmodeller för efterbearbetning*, men dessa är vanliga arbetsflödesmodeller för Experience Manager.
-* Lägg till specifika arbetsflödessteg i dessa modeller. Stegen körs på resurserna baserat på en arbetsflödesmodellkonfiguration.
+* Skapa en eller flera arbetsflödesmodeller. Dessa anpassade modeller kallas *arbetsflödesmodeller för efterbearbetning* i den här dokumentationen. Det är vanliga arbetsflödesmodeller för [!DNL Experience Manager].
+* Lägg till de arbetsflödessteg som krävs till dessa modeller. Granska stegen från standardarbetsflödet och lägg till alla nödvändiga standardsteg i det anpassade arbetsflödet. Stegen körs på resurserna baserat på en arbetsflödesmodellkonfiguration. Om du till exempel vill att smart taggning ska ske automatiskt när resurser överförs lägger du till steget i den anpassade arbetsflödesmodellen för efterbearbetning.
 * Lägg till [!UICONTROL DAM Update Asset Workflow Completed Process]-steget i slutet. Om du lägger till det här steget vet Experience Manager när bearbetningen avslutas och resursen kan markeras som bearbetad, det vill säga *Ny* visas på resursen.
 * Skapa en konfiguration för tjänsten Custom Workflow Runner som gör att du kan konfigurera körning av en arbetsflödesmodell efter bearbetning antingen med en sökväg (mappsökväg) eller med ett reguljärt uttryck.
 
@@ -207,7 +207,7 @@ Kontrollera att det sista steget i varje efterbearbetningsarbetsflöde är `DAM 
 
 Om du vill konfigurera arbetsflödesmodellerna för efterbearbetning som ska köras för resurser som har överförts eller uppdaterats i systemet efter att bearbetningen av resursmikrotjänsterna har slutförts, måste tjänsten Custom Workflow Runner konfigureras.
 
-Tjänsten Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.CustomDamWorkflowRunnerImpl`) är en OSGi-tjänst och tillhandahåller två konfigurationsalternativ:
+Adobe CQ DAM Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.CustomDamWorkflowRunnerImpl`) är en OSGi-tjänst och har två konfigurationsalternativ:
 
 * Efterbehandlingsarbetsflöden efter sökväg (`postProcWorkflowsByPath`): Flera arbetsflödesmodeller kan listas baserat på olika databassökvägar. Banor och modeller ska separeras med kolon. Enkla databassökvägar stöds och bör mappas till en arbetsflödesmodell i sökvägen `/var`. Till exempel: `/content/dam/my-brand:/var/workflow/models/my-workflow`.
 * Efterbearbetningsarbetsflöden efter uttryck (`postProcWorkflowsByExpression`): Flera arbetsflödesmodeller kan listas baserat på olika reguljära uttryck. Uttryck och modeller ska separeras med ett kolon. Det reguljära uttrycket ska peka direkt på resursnoden och inte på en av återgivningarna eller filerna. Till exempel: `/content/dam(/.*/)(marketing/seasonal)(/.*):/var/workflow/models/my-workflow`.
