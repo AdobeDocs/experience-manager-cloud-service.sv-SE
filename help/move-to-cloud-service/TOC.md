@@ -4,10 +4,10 @@ user-guide-title: Flytta till AEM as a Cloud Service
 breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 translation-type: tm+mt
-source-git-commit: 81e84ae3993321c210de917a9a9bcd17d32b2040
+source-git-commit: b729e3fe4ef572877ae185c37f30b9b1fc78fc2a
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 81%
+source-wordcount: '87'
+ht-degree: 78%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 81%
       + [Använda Best Practices Analyzer](/help/move-to-cloud-service/best-practices-analyzer/using-best-practices-analyzer.md)
    + Content Transfer Tool {#content-transfer-tool}
       + [Översikt](/help/move-to-cloud-service/content-transfer-tool/overview-content-transfer-tool.md)
+      + [Använda verktyget för användarmappning](/help/move-to-cloud-service/content-transfer-tool/using-user-mapping-tool.md)
       + [Använda Content Transfer Tool](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
 + Verktyg för omstrukturering av kod {#refactoring-tools}
    + [Enhetlig upplevelse](/help/move-to-cloud-service/unified-experience.md)
