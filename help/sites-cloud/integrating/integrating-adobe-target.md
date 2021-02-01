@@ -2,9 +2,9 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: 7d3b5199333a60d69957819d874f8ce1bafdd797
+source-git-commit: f07df8230ac3be34c29f54c41dc75ed21b2f5b3d
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,6 @@ Så här redigerar du målkonfigurationen:
 1. Välj en befintlig konfiguration och klicka på **Egenskaper**.
 2. Redigera egenskaperna.
 3. Välj **Återanslut till Adobe Target**.
-   ![Återanslut](assets/edit_config_page1.png "Återanslut")
 4. Välj **Spara och stäng**.
 
 ### Lägga till en konfiguration för en plats {#add-configuration}
