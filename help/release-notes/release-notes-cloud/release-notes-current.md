@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 13774cc8684166c98f85bf4096d2c7de8d257746
+source-git-commit: 1ac061dfc9773a1de0b1d5f8c427f8d770ca73fa
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '647'
 ht-degree: 1%
 
 ---
@@ -73,14 +73,10 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.1.0 är 14 januari 
 
 ### Releasedatum {#release-date-ctt}
 
-Releasedatum för innehållsöverföringsverktyget v1.1.20 är 8 januari 2021.
+Releasedatum för innehållsöverföringsverktyget v1.2.20 är 1 februari 2021.
 
 ### Nyheter i [!DNL Content Transfer Tool] {#what-is-new-ctt}
 
-* Användarna kan nu se om deras åtkomsttoken har upphört att gälla genom att hålla markören på statusikonen i användargränssnittet för innehållsöverföringsverktyget (CTT). De får också ett meddelande i användargränssnittet för migreringsuppsättningsinformation om att de inte kan ansluta till sin Cloud Service-instans.
-
-### Felkorrigeringar {#ctt-bug-fixes}
-
-* Status för användargränssnittet i CTT (Content Transfer Tool) för en migreringsuppsättning kvarstod inte och ändrades efter en tids inaktivitet. Den här har åtgärdats.
-* Alternativet att visa loggar inaktiverades om loggarna inte var tillgängliga. Detta har åtgärdats och meddelanden har lagts till för att meddela användaren varför loggar saknas.
-* Status för användargränssnittet i verktyget Innehållsöverföring visade MISSLYCKADES när användaren stoppade ett intag. Detta har korrigerats så att *STOPPED* visas i stället.
+* Ny funktion och nytt användargränssnitt har lagts till i verktyget Innehållsöverföring - verktyget för användarmappning. Den här funktionen mappar automatiskt befintliga användare och grupper till deras Adobe Identity Management-system-ID som en del av innehållsmigreringsaktiviteten. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
+* Verktyget Innehållsöverföring migrerar nu alla grupper och användare som det hänvisas till i migreringsuppsättningen, inklusive underordnade.
+* Användarna kan välja vissa sökvägar under `/etc` när de skapar migreringsuppsättningar.
