@@ -2,10 +2,10 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 translation-type: tm+mt
-source-git-commit: 2ceaaa4db35ab793392ae3644db9b862cbf9af2b
+source-git-commit: d1a944606a88a0afded94592676f14c0ba84e954
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 5%
+source-wordcount: '782'
+ht-degree: 7%
 
 ---
 
@@ -47,7 +47,7 @@ Följ stegen nedan för att konfigurera detta:
 
 Verktyget för användarmappning är integrerat i verktyget Innehållsöverföring. Du kan hämta innehållsöverföringsverktyget från [portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Mer information om den senaste versionen finns i [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
-1. Markera Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Innehållsöverföring**.
+1. Välj Adobe Experience Manager och navigera till tools -> **Operations** -> **Content Transfer**.
 1. Klicka på **Skapa konfiguration för användarmappning**.
 
    >[!NOTE]
