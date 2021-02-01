@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 6446faf2ed936b8bcefd6b4192dbd99fb10aa41e
+source-git-commit: b4bc29dbea7a765ff41752d4b680cbbc3df51a0b
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1906'
 ht-degree: 64%
 
 ---
@@ -28,9 +28,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Åtkomsttoken kan upphöra att gälla regelbundet antingen efter en viss tidsperiod eller efter att Cloud Servicens miljö har uppgraderats. Om åtkomsttoken har upphört att gälla kan du inte ansluta till Cloud Servicen och du måste hämta den nya åtkomsttoken. Statusikonen som är kopplad till en befintlig migreringsuppsättning ändras till ett rött moln och ett meddelande visas när du hovrar över den.
 
-* För närvarande är standardstorleken för MongoDB för en AEM som författarinstans för Cloud Service 32 GB. Vi rekommenderar att du skickar en supportanmälan för att öka storleken på MongoDB för segmentbutiker som är större än 20 GB.
-
-* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. Processen *Extrahering* kopierar hela `/home` till migreringsuppsättningen och processen *Ing* kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna.
+* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. Processen *Extrahering* kopierar hela `/home` till migreringsuppsättningen och processen *Ing* kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna. Om du vill mappa befintliga användare och grupper automatiskt till deras IMS-ID:n läser du [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration).
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 
