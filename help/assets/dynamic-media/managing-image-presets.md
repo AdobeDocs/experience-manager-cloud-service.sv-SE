@@ -2,7 +2,7 @@
 title: Hantera bildförinställningar
 description: Lär dig förinställningarna och hur du skapar, ändrar och hanterar förinställningar för bilder.
 translation-type: tm+mt
-source-git-commit: 59c532d8893f6dc6b94d7ec45a4af87ff1e37fff
+source-git-commit: c0db892d58f762bd5659596371ece86950e9cdd7
 workflow-type: tm+mt
 source-wordcount: '3476'
 ht-degree: 10%
@@ -401,7 +401,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Bildmodifierare</strong></td>
-   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet stöder Dynamic Media många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong>. Dessa parametrar definieras i <a href="https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/syntax-and-features/image-serving-http/c-command-overview.html">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
+   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet stöder Dynamic Media många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong>. Dessa parametrar definieras i <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/syntax-and-features/image-serving-http/c-command-overview.html">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
     <ul>
      <li>Grundläggande kommandon för mallar och textåtergivning: <code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> och <code>textPs=</code></li>
      <li>Lokaliseringskommandon: <code>locale=</code> och <code>req=xlate</code></li>
@@ -418,7 +418,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
 
 ### Definiera bildförinställningsalternativ med bildmodifierare {#defining-image-preset-options-with-image-modifiers}
 
-Förutom alternativen på flikarna Grundläggande och Avancerat kan du definiera bildmodifierare som ger dig fler alternativ när du definierar bildförinställningar. Bildåtergivning är beroende av Dynamic Media API för bildåtergivning och definieras i detalj i [HTTP Protocol Reference](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-rendering-api/http-protocol-reference/c-ir-introduction.html#image-rendering-api).
+Förutom alternativen på flikarna Grundläggande och Avancerat kan du definiera bildmodifierare som ger dig fler alternativ när du definierar bildförinställningar. Bildåtergivning är beroende av Dynamic Media API för bildåtergivning och definieras i detalj i [HTTP Protocol Reference](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-rendering-api/http-protocol-reference/c-ir-introduction.html#image-rendering-api).
 
 Nedan följer några grundläggande exempel på vad du kan göra med bildmodifierare.
 
@@ -426,7 +426,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 >
 >Vissa bildmodifierare [kan inte användas i AEM](#advanced-tab-options).
 
-* [op_invert](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html) - Inverterar varje färgkomponent för en negativ bildeffekt.
+* [op_invert](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html) - Inverterar varje färgkomponent för en negativ bildeffekt.
 
    ```xml
    &op_invert=1
@@ -434,7 +434,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
    ![6_5_imagepreset-edit-invert](assets/6_5_imagepreset-edit-invert.png)
 
-* [op_blur](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html)  - Använder ett oskärpefilter på bilden.
+* [op_blur](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html)  - Använder ett oskärpefilter på bilden.
 
    ```xml
    &op_blur=7
@@ -450,7 +450,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
    ![chlimage_1-80](assets/chlimage_1-501.png)
 
-* [op_brightness](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html)  - Minskar eller ökar intensiteten.
+* [op_brightness](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html)  - Minskar eller ökar intensiteten.
 
    ```xml
    &op_brightness=58
@@ -458,7 +458,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
    ![6_5_imagepreset-edit-brightness](assets/6_5_imagepreset-edit-brightness.png)
 
-* [opac](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html)  - Justerar bildens opacitet. Du kan minska förgrundens opacitet.
+* [opac](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html)  - Justerar bildens opacitet. Du kan minska förgrundens opacitet.
 
    ```xml
    opac=29
