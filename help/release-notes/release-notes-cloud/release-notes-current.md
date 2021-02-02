@@ -2,7 +2,7 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 1ac061dfc9773a1de0b1d5f8c427f8d770ca73fa
+source-git-commit: 76da904f4fc5a96e6892242c42bae5d05eea2e16
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 1%
@@ -73,7 +73,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.1.0 är 14 januari 
 
 ### Releasedatum {#release-date-ctt}
 
-Releasedatum för innehållsöverföringsverktyget v1.2.20 är 1 februari 2021.
+Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 
 ### Nyheter i [!DNL Content Transfer Tool] {#what-is-new-ctt}
 
