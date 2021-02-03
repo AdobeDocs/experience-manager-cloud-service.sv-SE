@@ -2,10 +2,10 @@
 title: Variationer – redigera innehållsfragment
 description: Med variationer kan du skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte (om det behövs).
 translation-type: tm+mt
-source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
+source-git-commit: 972d242527871660d55b9a788b9a53e88d020749
 workflow-type: tm+mt
-source-wordcount: '1742'
-ht-degree: 14%
+source-wordcount: '2186'
+ht-degree: 11%
 
 ---
 
@@ -18,7 +18,6 @@ På fliken **Variationer** kan du:
 
 * [Ange ](#authoring-your-content) innehållet för fragmentet,
 * [Skapa och hantera ](#managing-variations) variationer av  **** Mastercontent,
-* Se namnet på [innehållsfragmentmodellen](/help/assets/content-fragments/content-fragments-models.md) som användes för att skapa fragmentet. visas i det övre verktygsfältet, under fragmentnamnet.
 
 Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till exempel:
 
@@ -54,11 +53,9 @@ Du kan:
    * se fler redigeringsalternativ (för [RTF](#rich-text)-format)
    * få åtkomst till ett intervall med [åtgärder](#actions)
 
-<!--
-For example:
+Till exempel:
 
-![full screen editor](assets/cfm-variations-02.png)
--->
+![helskärmsredigerare](assets/cfm-variations-02.png)
 
 ### Helskärmsredigeraren {#full-screen-editor}
 
@@ -66,11 +63,9 @@ När du redigerar ett textfält med flera rader kan du öppna redigeraren i hels
 
 ![redigeringsikon för helskärm](assets/cfm-variations-03.png)
 
-<!--
-This will open the full screen text editor:
+Då öppnas textredigeraren i helskärmsläge:
 
-![full screen editor icon](assets/cfm-variations-fullscreentexteditor.png)
--->
+![helskärmsredigerare](assets/cfm-variations-fullscreentexteditor.png)
 
 Textredigeraren i helskärmsläge innehåller:
 
@@ -122,10 +117,7 @@ Med textredigering kan du formatera:
    * Sök/ersätt
    * Stavningskontroll
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
-
-<!--
-* [Insert Content Fragment](#inserting-content-fragment-into-your-fragment)
--->
+* [Infoga innehållsfragment](#inserting-content-fragment-into-your-fragment); som är tillgängliga när  **textfältet för** flera rader har konfigurerats med  **Tillåt fragmentreferens**.
 
 [åtgärderna](#actions) är även tillgängliga från helskärmsredigeraren.
 
@@ -161,35 +153,33 @@ Du kan även öppna fullskärmsredigeraren för ytterligare [åtgärder](#action
 >
 >Om du växlar mellan **RTF** och **Markdown-kod** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa båda format kan hanteras på olika sätt.
 
-<!--
-### Fragment References {#fragment-references}
+### Fragmentreferenser {#fragment-references}
 
-If the Content Fragment Model contains Fragment References, your fragment authors may have additional options:
+Om innehållsfragmentmodellen innehåller fragmentreferenser kan fragmentförfattarna ha ytterligare alternativ:
 
-* [Edit Content Fragment](#fragment-references-edit-content-fragment)
-* [New Content Fragment](#fragment-references-new-content-fragment)
+* [Redigera innehållsfragment](#fragment-references-edit-content-fragment)
+* [Nytt innehållsfragment](#fragment-references-new-content-fragment)
 
-![Fragment References](assets/cfm-variations-12.png)
+![Fragmentreferenser](assets/cfm-variations-12.png)
 
-#### Edit Content Fragment {#fragment-references-edit-content-fragment}
+#### Redigera innehållsfragment {#fragment-references-edit-content-fragment}
 
-The option **Edit Content Fragment** will open
-a new browser tab, with the content fragment open in the content fragment editor.
+Alternativet **Redigera innehållsfragment** öppnas
+en ny flik i webbläsaren med innehållsfragmentet öppet i innehållsfragmentets redigerare.
 
-#### New Content Fragment {#fragment-references-new-content-fragment}
+#### Nytt innehållsfragment {#fragment-references-new-content-fragment}
 
-The option **New Content Fragment** will allow you to create a completely new fragment. To achieve this a variation of the create content fragment wizard will open in the editor. 
+Med alternativet **Nytt innehållsfragment** kan du skapa ett helt nytt fragment. För att uppnå detta öppnas en variant av guiden Skapa innehållsfragment i redigeraren.
 
-You will then be able to create a new fragment by:
+Sedan kan du skapa ett nytt fragment genom att:
 
-1. Navigating to, and selecting the required folder.
-1. Selecting **Next**.
-1. Specifying properties; for example **Title**.
-1. Selecting **Create**.
-1. Finally:
-   1. **Done** will return (to the original fragment) and reference the new fragment.
-   1. **Open** will reference the new fragment as well as opening the new fragment, for editing, in a new browser tab.
--->
+1. Navigera till och markera önskad mapp.
+1. Välj **Nästa**.
+1. Ange egenskaper. till exempel **Titel**.
+1. Välj **Skapa**.
+1. Äntligen:
+   1. **** Donewill return (to the original fragment) and reference the new fragment.
+   1. **Öppna** refererar till det nya fragmentet samt öppnar det nya fragmentet, för redigering, på en ny flik i webbläsaren.
 
 ### Visar nyckelstatistik {#viewing-key-statistics}
 
@@ -245,23 +235,25 @@ Andra språk är tillgängliga som språkmodellpaket från paketresurs:
 
 1. Välj **Sammanfattning** för att bekräfta ändringarna.
 
-<!--
-1. The original text is displayed side-by-side with the proposed summarization:
+1. Den ursprungliga texten visas sida vid sida med den föreslagna sammanfattningen:
 
-    * Any sentences to be eliminated are highlighted in red, with strike-through.
-    * Click on any highlighted sentence to keep it in the summarized content.
-    * Click on any non-highlighted sentence to have it eliminated.
+   * Alla meningar som ska tas bort markeras med rött, med genomstrykning.
+   * Klicka på en markerad mening om du vill behålla den i det sammanfattande innehållet.
+   * Klicka på en mening som inte är markerad för att ta bort den.
 
-   ![summarization comparison](assets/cfm-variations-06.png)
--->
+   ![summeringsjämförelse](assets/cfm-variations-06.png)
 
 ### Kommentera ett innehållsfragment {#annotating-a-content-fragment}
 
 Så här kommenterar du ett fragment:
 
 1. Välj **Överordnad** eller önskad variant.
+
 1. Öppna fullskärmsredigeraren.
+
 1. Ikonen **Anteckning** är tillgänglig i det övre verktygsfältet. Du kan markera text om det behövs.
+
+   ![anteckna](assets/cfm-variations-07.png)
 
 1. En dialogruta öppnas. Här kan du ange din anteckning.
 
@@ -279,18 +271,9 @@ Så här kommenterar du ett fragment:
 
 1. Välj **Spara**.
 
-<!--
-1. The **Annotate** icon is available in the top toolbar. You can seelect some text if required.
+1. Stäng helskärmsredigeraren, anteckningarna är fortfarande markerade. Om du väljer det här alternativet öppnas en dialogruta där du kan redigera kommentaren ytterligare.
 
-   ![annotate](assets/cfm-variations-07.png)
--->
-
-<!--
-1. Close the full-screen editor, annotations are still highlighted. If selected, a dialog will open so that you can edit the annotation further.
-
-   ![annotate](assets/cfm-variations-07c.png)
-
--->
+   ![anteckna](assets/cfm-variations-07c.png)
 
 ### Visa, redigera, ta bort anteckningar {#viewing-editing-deleting-annotations}
 
@@ -305,13 +288,9 @@ Anteckningar:
 
 * Kan listas och tas bort genom att välja fliken **Anteckningar** i fragmentredigeraren.
 
+   ![anteckningar](assets/cfm-variations-08.png)
+
 * Kan visas och tas bort i [tidslinjen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) för det valda fragmentet.
-
-<!--
-* Can be listed, and deleted, by selecting the **Annotations** tab in the fragment editor.
-
-  ![annotations](assets/cfm-variations-08.png)
--->
 
 ### Infoga resurser i fragment {#inserting-assets-into-your-fragment}
 
@@ -346,47 +325,41 @@ Det finns olika metoder för att lägga till [bilder](/help/assets/content-fragm
    * **Markdown-kod**: Resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
 
 
-<!--
-### Inserting a Content Fragment into your Fragment {#inserting-content-fragment-into-your-fragment}
+### Infoga ett innehållsfragment i fragmentet {#inserting-content-fragment-into-your-fragment}
 
-To ease the process of authoring content fragments you can also add another Content Fragment to your fragment.
+Om du vill skapa innehållsfragment enklare kan du även lägga till ytterligare ett innehållsfragment i fragmentet.
 
-They will be added as a reference, in your current location in your fragment.
--->
-
-<!--
->[!CAUTION]
->
->These assets cannot be moved or deleted on a referencing page, this must be done in the fragment editor.
->
->However, formatting of the asset (e.g. size) must be done in the [page editor](/help/sites-cloud/authoring/fundamentals/content-fragments.md). The representation of the asset in the fragment editor is purely for authoring the content flow.
+De kommer att läggas till som en referens på din aktuella plats i fragmentet.
 
 >[!NOTE]
->
->There are various methods of adding [images](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) to the fragment and/or page.
--->
+Det här alternativet är tillgängligt när din **flerradstext** har konfigurerats med **Tillåt fragmentreferens**.
 
-<!--
-1. Position the cursor at the position you want to add the fragment.
-1. Use the **Insert Content Fragment** icon to open the search dialog.
+>[!CAUTION]
+Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
+Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigeraren](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
 
-   ![insert Content Fragment icon](assets/cfm-variations-13.png)
+>[!NOTE]
+Det finns olika metoder för att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
-1. In the dialog you can either:
+1. Placera markören på den plats där du vill lägga till fragmentet.
+1. Använd ikonen **Infoga innehållsfragment** för att öppna sökdialogrutan.
 
-    * navigate to the required fragment in the Assets folder
-    * search for the fragment
+   ![ikonen Infoga innehållsfragment](assets/cfm-variations-13.png)
 
-   Once located, select the required fragment by clicking on the thumbnail.
+1. I dialogrutan kan du antingen:
 
-1. Use **Select** to add a reference to the selected Content Fragment to your current content fragment (at the current location).
+   * navigera till det nödvändiga fragmentet i resursmappen
+   * sök efter fragmentet
+
+   När du har hittat fragmentet väljer du det genom att klicka på miniatyrbilden.
+
+1. Använd **Välj** om du vill lägga till en referens till det valda innehållsfragmentet i det aktuella innehållsfragmentet (på den aktuella platsen).
 
    >[!CAUTION]
-   >
-   >If, after adding an reference to another fragment, you change format to:
-   >* **Plain Text**: the reference will be completely lost from the fragment.
-   >* **Markdown**: the reference will remain.
--->
+   Om du efter att ha lagt till en referens till ett annat fragment ändrar formatet till:
+   * **Oformaterad text**: referensen tas bort helt från fragmentet.
+   * **Markering**: referensen kvarstår.
+
 
 ## Hantera variationer {#managing-variations}
 
@@ -455,9 +428,12 @@ Synkronisering fungerar bara på datatypen **Flerradig text**.
 Du kan inte överföra ändringar *från en variant till **mastern***.
 
 1. Öppna ditt innehållsfragment i fragmentredigeraren. Kontrollera att **Överordnad** har redigerats.
+
 1. Välj en specifik variant och sedan lämplig synkroniseringsåtgärd från antingen:
 
    * den nedrullningsbara listrutan **Åtgärder** - **Synkronisera aktuellt element med överordnad**
+
+      ![synkronisera med överordnad](assets/cfm-variations-11a.png)
 
    * verktygsfältet i fullskärmsredigeraren - **Synkronisera med överordnad**
 
@@ -472,26 +448,3 @@ Du kan inte överföra ändringar *från en variant till **mastern***.
    ![synkronisera med överordnad](assets/cfm-variations-11c.png)
 
 1. Välj **Synkronisera**. Variationen uppdateras och visas.
-
-<!--
-1. Select a specific variation, then the appropriate synchronization action from either:
-
-   * the **Actions** drop down selector - **Sync current element with master**
-
-      ![synchronizing with master](assets/cfm-variations-11a.png)
-
-   * the toolbar of the full-screen editor - **Sync with master**
-
-      ![synchronizing with master](assets/cfm-variations-11b.png)
-
-1. Master and the variation will be shown side-by-side:
-
-   * green indicates content added (to the variation)
-   * red indicates content removed (from the variation)
-   * blue indicates replaced text
-
-   ![synchronizing with master](assets/cfm-variations-11c.png)
-
-1. Select **Synchronize**, the variation will updated and shown.
-
--->
