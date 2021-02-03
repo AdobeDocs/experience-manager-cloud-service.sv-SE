@@ -2,7 +2,7 @@
 title: Metadata – fragmentegenskaper
 description: Du kan visa och redigera metadata (egenskaper) för innehållsfragment.
 translation-type: tm+mt
-source-git-commit: d302df83f3c2f95a5cc46d1d21c5e1376d4d4faf
+source-git-commit: 972d242527871660d55b9a788b9a53e88d020749
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 9%
@@ -20,7 +20,7 @@ Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 2. Antingen:
 
    * Välj [**Visa egenskaper** för att öppna dialogrutorna](/help/assets/manage-digital-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
-   * Öppna [innehållsfragmentet för Edit](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) och välj **Metadata** på sidopanelen.
+   * Öppna innehållsfragmentet för redigering och välj sedan **Metadata** på sidopanelen.
 
    ![metadata](assets/cfm-metadata-01.png)
 
