@@ -1,29 +1,54 @@
 ---
-title: Märk upp bilder automatiskt med AI-genererade taggar
-description: Tagga bilder med artificiellt intelligenta tjänster som lägger in kontextuella och beskrivande taggar med  [!DNL Adobe Sensei] tjänster.
+title: Tagga resurser automatiskt med AI-genererade taggar
+description: Tagga resurser med artificiellt intelligenta tjänster som lägger till kontextuella och beskrivande taggar med hjälp av  [!DNL Adobe Sensei] service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 745585ebd50f67987ee4fc48d4f9d5b4afa865a0
+source-git-commit: 7af525ed1255fb4c4574c65dc855e0df5f1da402
 workflow-type: tm+mt
-source-wordcount: '2361'
-ht-degree: 6%
+source-wordcount: '2487'
+ht-degree: 5%
 
 ---
 
 
-# Utbilda tjänsten Smart Content och tagga dina bilder automatiskt {#train-service-tag-assets}
+# Lägg till smarta taggar i dina resurser för snabbare sökningar {#smart-tag-assets-for-faster-search}
 
-Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter sina digitala resurser. Genom att tagga resurser med taxonomistyrd vokabulär kan du enkelt identifiera och hämta dem genom taggbaserade sökningar.
+Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter sina digitala resurser. Genom att tagga resurser med taxonomistyrd vokabulär ser du till att resurserna är lätta att identifiera och hämta i sökningar.
 
 Jämfört med naturliga språkordsuttryck hjälper taggning som baseras på företagstaxonomi till att anpassa tillgångarna till företagets verksamhet och säkerställer att de mest relevanta resurserna visas i sökningar. En biltillverkare kan t.ex. märka bilderna med modellnamn så att endast relevanta bilder visas när de genomsöks för att utforma en kampanj.
 
-I bakgrunden använder smarta taggar ett ramverk för artificiell intelligens på [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i taggstrukturen och företagsklonomin. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
+I bakgrunden använder smarta taggar det artificiellt intelligenta ramverket [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i taggstrukturen och företagsklonomin. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
 
 <!-- TBD: Create a flowchart for how training works in CS.
 ![flowchart](assets/flowchart.gif) 
 -->
 
-Utför följande uppgifter om du vill använda smart taggning:
+## Resurstyper som stöds {#smart-tags-supported-file-formats}
+
+Smarta taggar används bara för de filtyper som stöds och som genererar återgivningar i JPG- och PNG-format. Funktionen stöds för följande typer av resurser:
+
+| Bilder (MIME-typer) | Textbaserade resurser (filformat) | Videomaterial (filformat och kodekar) |
+|----|-----|------|
+| image/jpeg | TXT | MP4 (H264/AVC) |
+| bild/tiff | RTF | MKV (H264/AVC) |
+| bild/png | DITA | MOV (H264/AVC, Motion JPEG) |
+| image/bmp | XML | AVI (indeo4) |
+| image/gif | JSON | FLV (H264/AVC, vp6f) |
+| image/pjpeg | DOC | WMV (WMV2) |
+| image/x-portable-anymap | DOCX |  |
+| image/x-portable-bitmap | PDF |  |
+| image/x-portable-graymap | CSV |  |
+| image/x-portable-pixmap | PPT |  |
+| image/x-rgb | PPTX |  |
+| image/x-xbitmap | VTT |  |
+| image/x-xpixmap | SRT |  |
+| image/x-icon |  |  |
+| image/photoshop |  |  |
+| image/x-photoshop |  |  |
+| image/psd |  |  |
+| image/vnd.adobe.photoshop |  |  |
+
+[!DNL Experience Manager] lägger automatiskt till smarta taggar i textbaserade resurser och i videoklipp som standard. Om du vill lägga till smarta taggar automatiskt till bilder utför du följande åtgärder.
 
 * [ [!DNL Adobe Experience Manager] Integrera med Adobe Developer Console](#integrate-aem-with-aio).
 * [Förstå taggmodeller och riktlinjer](#understand-tag-models-guidelines).
@@ -31,7 +56,9 @@ Utför följande uppgifter om du vill använda smart taggning:
 * [Tagga dina digitala resurser](#tag-assets).
 * [Hantera taggar och sökningar](#manage-smart-tags-and-searches).
 
-Smarta taggar gäller endast för [!DNL Adobe Experience Manager Assets]-kunder. Smarta taggar kan köpas som tillägg till [!DNL Experience Manager].
+>[!TIP]
+>
+>Smarta taggar gäller endast för [!DNL Adobe Experience Manager Assets]-kunder. Smarta taggar kan köpas som tillägg till [!DNL Experience Manager].
 
 <!-- TBD: Is there a link to buy SCS or initiate a sales call. How are AIO services sold? Provide a CTA here to buy or contacts Sales team. -->
 
@@ -92,7 +119,7 @@ Bilderna i din utbildningssamling ska följa följande riktlinjer:
    * en taggmodell som innehåller bilmodeller som släpptes 2019 och 2020.
    * flera taggmodeller som innehåller samma få bilmodeller.
 
-**Bilder som används för utbildning**: Du kan använda samma bilder för att utbilda olika taggmodeller. Däremot ska du inte associera en bild med mer än en tagg i en taggmodell. Det är därför möjligt att tagga samma bild med olika taggar som tillhör olika taggmodeller.
+**Bilder som används för utbildning**: Du kan använda samma bilder för att utbilda olika taggmodeller. Koppla emellertid inte en bild till mer än en tagg i en taggmodell. Du kan lägga till märkord i samma bild med olika märkord som tillhör olika taggmodeller.
 
 Du kan inte ångra kursen. Riktlinjerna ovan bör hjälpa dig att välja bra bilder att utbilda.
 
@@ -154,15 +181,17 @@ När du har utbildat tjänsten Smarta taggar kan du utlösa taggningsarbetsflöd
    ![start_workflow](assets/start_workflow.png)
 
 1. Välj arbetsflödet **[!UICONTROL DAM Smart Tag Assets]** och ange en rubrik för arbetsflödet.
-1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder dina taggar på resurser. Navigera till resursmappen och granska taggarna för att kontrollera om dina resurser är taggade på rätt sätt. Mer information finns i [hantera smarta taggar](#manage-smart-tags-and-searches).
+1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder dina taggar på resurser. Navigera till resursmappen och granska taggarna för att kontrollera att dina resurser är taggade på rätt sätt. Mer information finns i [hantera smarta taggar](#manage-smart-tags-and-searches).
 
 >[!NOTE]
 >
->I de efterföljande taggningscyklerna märks bara de ändrade resurserna igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
+>I de efterföljande taggningscyklerna är det bara de ändrade resurserna som taggas igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
 
 ### Tagga överförda resurser {#tag-uploaded-assets}
 
 Experience Manager kan automatiskt tagga resurser som användare överför till DAM. För att göra det konfigurerar administratörer ett arbetsflöde för att lägga till ett tillgängligt steg i resurser för smarta taggar. Se [hur du aktiverar smart taggning för överförda resurser](/help/assets/smart-tags-configuration.md#enable-smart-tagging-for-uploaded-assets).
+
+<!-- TBD: Text-based assets are automatically smart tagged. -->
 
 ## Hantera smarta taggar och resurssökningar {#manage-smart-tags-and-searches}
 
@@ -209,6 +238,8 @@ Förbättrade smarta taggar bygger på utbildningsmodeller för varumärkesbilde
 * Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
 * Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
 * Taggning stöds på de språk som Experience Manager stöder. En lista över språk finns i [Versionsinformation för tjänsten Smart Content.](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html#languages).
+
+<!-- TBD: Add limitations related to text-based assets. -->
 
 Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du Resursmomenten (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 
