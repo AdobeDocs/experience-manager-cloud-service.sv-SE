@@ -2,9 +2,9 @@
 title: Komma åt och leverera innehållsfragment Headless Quick Start Guide
 description: Resursens REST-API gör det möjligt att hantera innehållsfragment och GraphQL-API:t gör det enkelt att skicka innehållsfragment utan rubrik.
 translation-type: tm+mt
-source-git-commit: 259d54a225f8dee5929f62b784e28f3fc2bb794a
+source-git-commit: 472f691cf8b2ec502611ee88bc4abdcabb6d8412
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,14 @@ Resten av guiden fokuserar på GraphQL-åtkomst och leverans av innehållsfragme
 
 Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för att kunna leverera innehåll. Dessa frågor behöver i allmänhet bara övervägas en gång per slutpunkt och modell. I den här guiden behöver vi bara skapa en.
 
-1. Logga in AEM som Cloud Service och välj **Verktyg -> Resurser -> GraphQL** på huvudmenyn
-   * Du kan även öppna sidan direkt på `https://<host>:<port>/content/graphiql.html`.
+<!-- Not in the UI yet - will need updating when it is -->
+<!--
+1. Log into AEM as a Cloud Service and from the main menu select **Tools -&gt; Assets -&gt; GraphQL** 
+   * Alternatively open the page directly at `https://<host>:<port>/content/graphiql.html`.
+-->
+
+1. Logga in AEM som Cloud Service och öppna GraphiQL-gränssnittet:
+   * Till exempel: `https://<host>:<port>/content/graphiql.html`.
 
 1. GraphiQL är en frågeredigerare i webbläsaren för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem i headlessskick som JSON.
    * I den vänstra panelen kan du skapa din fråga.
@@ -39,8 +45,9 @@ Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för 
 1. Om vi utgår ifrån att modellen vi skapade hette `person` med fälten `firstName`, `lastName` och `position`, kan vi skapa en enkel fråga för att hämta innehållet i innehållsfragmentet.
 
    ```text
-   query {
-     persons {
+   query 
+   {
+     personList {
        items {
          _path
          firstName
