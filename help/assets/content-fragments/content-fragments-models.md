@@ -2,21 +2,15 @@
 title: Modeller för innehållsfragment
 description: Content Fragment Models används för att skapa innehållsfragment med strukturerat innehåll.
 translation-type: tm+mt
-source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
+source-git-commit: 3538c03a6a455cd22423ca5a4fd69c1fe57b3e5e
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 8%
+source-wordcount: '2156'
+ht-degree: 5%
 
 ---
 
 
 # Modeller för innehållsfragment {#content-fragment-models}
-
->[!CAUTION]
->
->AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
->
->Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
 
 Modeller för innehållsfragment definierar innehållsstrukturen för dina [innehållsfragment](/help/assets/content-fragments/content-fragments.md).
 
@@ -25,6 +19,7 @@ Så här använder du modeller för innehållsfragment:
 1. [Aktivera funktionen Content Fragment Model för instansen](/help/assets/content-fragments/content-fragments-configuration-browser.md)
 1. [Skapa](#creating-a-content-fragment-model) och  [konfigurera](#defining-your-content-fragment-model) modeller för innehållsfragment
 1. [Aktivera ](#enabling-disabling-a-content-fragment-model) modeller för innehållsfragment för användning när du skapar innehållsfragment för användning när du skapar innehållsfragment
+1. [Tillåt dina modeller för innehållsfragment på ](#allowing-content-fragment-models-assets-folder) mapparna Resurser genom att konfigurera  **profiler**.
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 
@@ -36,7 +31,7 @@ Så här använder du modeller för innehållsfragment:
    >
    >Om [användningen av innehållsfragmentmodeller inte har aktiverats](/help/assets/content-fragments/content-fragments-configuration-browser.md) är alternativet **Skapa** inte tillgängligt.
 
-1. Ange **modelltitel**. Du kan också lägga till **taggar** och en **beskrivning** om det behövs.
+1. Ange **modelltitel**. Du kan också lägga till **taggar**, en **beskrivning** och välja **Aktivera modell** till [aktivera modellen](#enabling-disabling-a-content-fragment-model) om det behövs.
 
    ![titel och beskrivning](assets/cfm-models-02.png)
 
@@ -64,70 +59,35 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
    >
    >När ett fält är **obligatoriskt** markeras den **etikett** som visas i den vänstra rutan med en asterisk (*****).
 
+   ![egenskaper](assets/cfm-models-03.png)
+
 1. **Lägga till ett fält**
 
-   * Dra en obligatorisk datatyp till önskad plats för ett fält.
+   * Dra en obligatorisk datatyp till önskad plats för ett fält:
+
+      ![datatyp till fält](assets/cfm-models-04.png)
 
    * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet.
-Många egenskaper är självförklarande. Mer information finns i [Egenskaper](#properties).
+
+      * Många egenskaper är självförklarande. Mer information finns i [Egenskaper](#properties).
+      * Om du skriver en **fältetikett** slutförs **egenskapsnamnet** automatiskt, om det är tomt, och den kan uppdateras manuellt senare.
+
+      Till exempel:
+
+      ![fältegenskaper](assets/cfm-models-05.png)
+
 
 1. **Ta bort ett fält**
 
    Markera det obligatoriska fältet och klicka/tryck sedan på papperskorgsikonen. Du ombeds bekräfta åtgärden.
 
-1. Lägg till alla obligatoriska fält och definiera de relaterade egenskaperna efter behov.
-
-1. Välj **Spara** om du vill behålla definitionen.
-
-<!--
-## Defining your Content Fragment Model {#defining-your-content-fragment-model}
-
-The content fragment model effectively defines the structure of the resulting content fragments using a selection of **[Data Types](#data-types)**. Using the model editor you can add instances of the data types, then configure them to create the required fields:
-
->[!CAUTION]
->
->Editing an existing content fragment model can impact dependent fragments.
-
-1. Navigate to **Tools**, **Assets**, then open **Content Fragment Models**.
-
-1. Navigate to the folder holding your content fragment model.
-1. Open the required model for **Edit**; use either the quick action, or select the model and then the action from the toolbar.
-
-   Once open the model editor shows:
-
-    * left: fields already defined
-    * right: **Data Types** available for creating fields (and **Properties** for use once fields have been created)
-
-   >[!NOTE]
-   >
-   >When a field as **Required**, the **Label** indicated in the left pane will be marked with an asterix (**&#42;**).
-
-   ![properties](assets/cfm-models-03.png)
-
-1. **To Add a Field**
-
-    * Drag a required data type to the required location for a field:
-
-      ![data type to field](assets/cfm-models-04.png)
-
-    * Once a field has been added to the model, the right panel will show the **Properties** that can be defined for that particular data type. Here you can define what is required for that field. 
-      Many properties are self-explanatory, for additional details see [Properties](#properties).
-      For example:
-
-      ![field properties](assets/cfm-models-05.png)
-
-1. **To Remove a Field**
-
-   Select the required field, then click/tap the trash-can icon. You will be asked to confirm the action.
-
    ![remove](assets/cfm-models-06.png)
 
-1. Add all required fields, and define the related properties, as required. For example:
+1. Lägg till alla obligatoriska fält och definiera de relaterade egenskaperna efter behov. Till exempel:
 
    ![save](assets/cfm-models-07.png)
 
-1. Select **Save** to persist the definition.
--->
+1. Välj **Spara** om du vill behålla definitionen.
 
 ## Datatyper {#data-types}
 
@@ -149,19 +109,16 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Tillåter fragmentförfattare att komma åt och markera taggområden
 * **Innehållsreferens**
    * Hänvisningar till annat innehåll, oavsett typ. kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
-
-<!--
-* **Fragment Reference**
-  * References other content fragments; can be used to [create nested content](#using-references-to-form-nested-content)
-  * The data type can be configured to allow fragment authors to:
-    * Edit the referenced fragment directly.
-    * Create a new content fragment, based on the appropriate model  
-* **JSON Object**
-  * Allows the content fragment author to enter JSON syntax into the corresponding elements of a fragment. 
-    * To allow AEM to store direct JSON that you have copy/pasted from another service.
-    * The JSON will be passed through, and output as JSON in GraphQL.
-    * Includes JSON syntax-highlighting, auto-complete and error-highlighting in the content fragment editor.
--->
+* **Fragmentreferens**
+   * Hänvisar till andra innehållsfragment. kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * Datatypen kan konfigureras så att fragmentförfattare kan:
+      * Redigera det refererade fragmentet direkt.
+      * Skapa ett nytt innehållsfragment, baserat på lämplig modell
+* **JSON-objekt**
+   * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
+      * För att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
+      * JSON skickas och skrivs ut som JSON i GraphQL.
+      * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i innehållsfragmentredigeraren.
 
 ## Egenskaper {#properties}
 
@@ -187,15 +144,26 @@ Basic är tillgängligt med hjälp av mekanismer som  **** egenskapen Required. 
 
    Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
 
-<!--
-* **Translatable**
-  Checking the "Translatable" checkbox on a field in CF model editor will
+* **Unikt**
+innehåll (för det specifika fältet) måste vara unikt för alla innehållsfragment som skapas från den aktuella modellen.
 
-  * Ensure the field's property name is added in translation config, context `/content/dam/<tenant>`, if not already present. 
-  * For GraphQL: set a `<translatable>` property on the Content Fragment field to `yes`, to allow GraphQL query filter for JSON output with only translatable content.
+   Detta används för att säkerställa att innehållsförfattare inte kan upprepa innehåll som redan har lagts till i ett annat fragment av samma modell.
 
-* See **[Fragment Reference (Nested Fragments)](#fragment-reference-nested-fragments)** for more details about that specific data type and its properties.
--->
+   Ett **enradigt textfält** med namnet `Country` i modellen för innehållsfragment kan till exempel inte ha värdet `Japan` i två beroende innehållsfragment. En varning kommer att skickas när ett försök görs att utföra den andra instansen.
+
+   >[!NOTE]
+   Unikitet säkerställs per språkrot.
+
+   >[!NOTE]
+   Variationer kan ha samma *unika*-värde som varianter av samma fragment, men inte samma värde som används i andra variationer av fragment.
+
+* ****
+TranslatableMarkera kryssrutan &quot;Translatable&quot; för ett fält i CF-modellredigeraren
+
+   * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfiguration, kontext `/content/dam/<tenant>`, om det inte redan finns.
+   * För GraphQL: Ange en `<translatable>`-egenskap i fältet Innehållsfragment till `yes`, så att GraphQL-frågefilter tillåts för JSON-utdata med endast översättningsbart innehåll.
+
+* Mer information om den specifika datatypen och dess egenskaper finns i **[Fragmentreferens (kapslade fragment)](#fragment-reference-nested-fragments)**.
 
 ## Validering {#validation}
 
@@ -205,72 +173,65 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
    * Jämför med ett fördefinierat regex.
 * **Siffra**
    * Kontrollera om det finns specifika värden.
+* **Innehållsreferens**
+   * Testa för specifika typer av innehåll.
+   * Det går endast att referera till resurser med en angiven filstorlek eller mindre.
+   * Det går endast att referera till bilder inom ett fördefinierat intervall med bredd och/eller höjd (i pixlar).
+* **Fragmentreferens**
+   * Testa om det finns en specifik innehållsfragmentmodell.
 
 <!--
-* **Content Reference**
-  * Test for specific types of content.
-  * Only images within a predefined range of width and height (in pixels) can be referenced. 
-  * Only assets of specified file size or smaller can be referenced. 
   * Only predefined file types can be referenced.
   * No more than the predefined number of assets can be referenced. 
   * No more than the predefined number of fragments can be referenced.
-* **Fragment Reference**
-  * Test for a specific content fragment model.
 -->
 
-<!--
-## Using References to form Nested Content {#using-references-to-form-nested-content}
+## Använda referenser till kapslat innehåll {#using-references-to-form-nested-content}
 
-Content Fragments can form nested content, using either of the following data types:
+Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper:
 
-* **[Content Reference](#content-reference)**
-  * Provides a simple reference to other content; of any type.
-  * Can be configured for a one or multiple references (in the resulting fragment).
+* **[Innehållsreferens](#content-reference)**
+   * ger en enkel referens till annat innehåll, av alla typer.
+   * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
-* **[Fragment Reference](#fragment-reference-nested-fragments)** (Nested Fragments)
-  * References other fragments, dependent on the specific models specified.
-  * Allows you to include/retrieve structured data.
-    >[!NOTE]
-    >
-    >This method is of particular interest in conjunction with [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
-  * Can be configured for one or multiple references (in the resulting fragment)..
+* **[Fragmentreferens](#fragment-reference-nested-fragments)**  (kapslade fragment)
+   * Refererar till andra fragment, beroende på vilka specifika modeller som anges.
+   * Gör att du kan ta med/hämta strukturerade data.
+
+      >[!NOTE]
+      Den här metoden är av särskilt intresse i samband med [leverans av Headless-innehåll med innehållsfragment med GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+   * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
 >[!NOTE]
->
->AEM has a recurrence protection for:
->
->* Content References
->  This prevents the user from adding a reference to the current fragment. This may lead to an empty Fragment Reference picker dialog.
->
->* Fragment References in GraphQL 
->  If you create a deep query that returns multiple Content Fragments referenced by each another, it will return null at first occurence.
+AEM har ett upprepningsskydd för:
+* Innehållsreferenser
+Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
 
-### Content Reference {#content-reference}
+* Fragmentreferenser i GraphQL
+Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
-The Content Reference allows you to render content from another source; for example, image or content fragment.
 
-In addition to standard properties you can specify:
+### Innehållsreferens {#content-reference}
 
-* The **Root Path** for any referenced content.
-* The content types that can be referenced.
-* Limitations for file sizes.
-* Image restraints.
--->
+Med innehållsreferensen kan du återge innehåll från en annan källa; till exempel bild- eller innehållsfragment.
 
-<!-- Check screenshot - might need update
+Förutom standardegenskaper kan du ange:
 
-   ![Content Reference](assets/cfm-content-reference.png)
--->
+* **Rotsökväg** för refererat innehåll.
+* De innehållstyper som kan refereras.
+* Begränsningar för filstorlekar.
+* Bildbegränsningar.
+   <!-- Check screenshot - might need update -->
+   ![Innehållsreferens](assets/cfm-content-reference.png)
 
-<!--
-### Fragment Reference (Nested Fragments) {#fragment-reference-nested-fragments}
+### Fragmentreferens (kapslade fragment) {#fragment-reference-nested-fragments}
 
-The Fragment Reference references one, or more, content fragments. This feature of particular interest when retrieving content for use in your app, as it allows you to retrieve structured data with multiple layers.
+Fragmentreferensen refererar till ett eller flera innehållsfragment. Den här funktionen är särskilt intressant när du hämtar innehåll som ska användas i appen, eftersom den gör det möjligt att hämta strukturerade data med flera lager.
 
-For example:
+Till exempel:
 
-* A model defining details for an employee; these include:
-  * A reference to the model that defines the employer (company)
+* En modell som definierar detaljer för en anställd. bland annat följande:
+   * En referens till modellen som definierar arbetsgivaren (företaget)
 
 ```xml
 type EmployeeModel {
@@ -287,44 +248,34 @@ type CompanyModel {
 ```
 
 >[!NOTE]
->
->This is of particular interest in conjunction with [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+Detta är särskilt intressant i samband med [Headless Content Delivery med hjälp av Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
 
-In addition to standard properties you can define:
+Förutom standardegenskaper kan du definiera:
 
-* **Render As**:
+* **Återge som**:
 
-  * **multifield** - the fragment author can create multiple, individual, references
+   * **multifield**  - fragmentförfattaren kan skapa flera, enskilda, referenser
 
-  * **fragmentreference** - allows the fragment author to select a single reference to a fragment
+   * **fragmentreferens**  - gör att fragmentförfattaren kan välja en enskild referens till ett fragment
 
-* **Model Type**
-  Multiple models can be selected. When authoring the Content Fragment any referenced fragments must have been created using these models.
+* **Du kan välja**
+flera modeller av modelltyp. När du redigerar innehållsfragmentet måste alla refererade fragment ha skapats med dessa modeller.
 
-* **Root Path**
-  This specifies a root path for any fragments referenced.
+* **Rotsökväg**
+Anger en rotsökväg för alla fragment som refereras.
 
-* **Allow Fragment Creation**
+* **Tillåt skapande av fragment**
 
-  This will allow the fragment author to create a new fragment based on the appropriate model.
--->
+   Detta gör att fragmentförfattaren kan skapa ett nytt fragment baserat på lämplig modell.
 
-<!--
-  * **fragmentreferencecomposite** - allows the fragment author to build a composite, by selecting multiple fragments
--->
+   * **fragmentreferenssammansatt**  - gör att fragmentförfattaren kan skapa en sammansatt bild genom att välja flera fragment
 
-<!-- Check screenshot - might need update
+   <!-- Check screenshot - might need update -->
+   ![Fragmentreferens](assets/cfm-fragment-reference.png)
 
-   ![Fragment Reference](assets/cfm-fragment-reference.png)
--->
-
-<!--
 >[!NOTE]
->
->A recurrence protection mechanism is in place. It prohibits the user from selecting the current Content Fragment in the Fragment Reference. This may lead to an empty Fragment Reference picker dialog.
->
->There is also a recurrence protection for Fragment References in GraphQL. If you create a deep query across two Content Fragments that reference each other, it will return null.
--->
+Det finns en mekanism för återkommande skydd. Användaren kan inte välja det aktuella innehållsfragmentet i fragmentreferensen. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+Det finns också ett upprepningsskydd för fragmentreferenser i GraphQL. Om du skapar en djup fråga i två innehållsfragment som refererar till varandra returneras null.
 
 ## Aktivera eller inaktivera en innehållsfragmentmodell {#enabling-disabling-a-content-fragment-model}
 
@@ -366,6 +317,40 @@ Om du vill inaktivera en modell som är flaggad som **Aktiverad** använder du a
 * Motsvarande snabbåtgärd (mouse-over the required Model).
 
 ![Inaktivera en aktiverad modell](assets/cfm-status-disable.png)
+
+## Tillåta modeller för innehållsfragment i resursmappen {#allowing-content-fragment-models-assets-folder}
+
+Om du vill implementera innehållsstyrning kan du konfigurera **principer** i resursmappen för att styra vilka innehållsfragmentmodeller som tillåts för att skapa fragment i den mappen.
+
+>[!NOTE]
+Mekanismen liknar [att tillåta sidmallar](/help/sites-cloud/authoring/features/templates.md#allowing-a-template-author) för en sida och dess underordnade sidor i en sidas avancerade egenskaper.
+
+Så här konfigurerar du **principer** för **Tillåtna modeller för innehållsfragment**:
+
+1. Navigera och öppna **Egenskaper** för mappen Resurser.
+
+1. Öppna fliken **Profiler** där du kan konfigurera:
+
+   * **Ärvs från`<folder>`**
+
+      Profiler ärvs automatiskt när nya underordnade mappar skapas; principen kan konfigureras om (och arvet brytas) om undermapparna måste tillåta modeller som skiljer sig från den överordnade mappen.
+
+   * **Tillåtna modeller för innehållsfragment efter sökväg**
+
+      Flera modeller kan tillåtas.
+
+   * **Tillåtna modeller för innehållsfragment efter tagg**
+
+      Flera modeller kan tillåtas.
+   ![Princip för innehållsfragmentmodell](assets/cfm-model-policy-assets-folder.png)
+
+1. **** Spara ändringar.
+
+De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
+* **Profiler** för **Tillåtna modeller för innehållsfragment**.
+* Om den är tom kan du försöka identifiera principen med arvsreglerna.
+* Om arvskedjan inte ger något resultat ska du titta på **Cloud Servicens**-konfigurationen för den mappen (även först direkt och sedan via arv).
+* Om inget av ovanstående ger några resultat finns det inga tillåtna modeller för den mappen.
 
 ## Ta bort en innehållsfragmentmodell {#deleting-a-content-fragment-model}
 
