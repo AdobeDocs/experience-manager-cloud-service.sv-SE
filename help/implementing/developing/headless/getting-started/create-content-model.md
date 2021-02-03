@@ -2,9 +2,9 @@
 title: Skapa innehållsfragmentmodeller Headless Quick Start Guide
 description: Content Fragment Models definierar strukturen för det innehåll du skapar och fungerar med AEM headless-funktioner.
 translation-type: tm+mt
-source-git-commit: 259d54a225f8dee5929f62b784e28f3fc2bb794a
+source-git-commit: d37342feb794b9f1385bb5edd38b2d9bb6e7dff9
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
 
    ![Mappen Modeller](../assets/models-folder.png)
 1. Tryck eller klicka på **Skapa**.
-1. Ange en **modelltitel** och **Beskrivning**.
+1. Ange en **modelltitel**, **taggar** och **Beskrivning**. Du kan också markera/avmarkera **Aktivera modell** för att kontrollera om modellen aktiveras direkt när den skapas.
 
    ![Skapa en modell](../assets/models-create.png)
 1. Tryck eller klicka på **Öppna** i bekräftelsefönstret för att konfigurera modellen.
@@ -45,7 +45,7 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
 1. När du är klar med att skapa modellen trycker eller klickar du på **Spara**. Den nyskapade modellen sparas i läget **Utkast**.
 
    ![Modell i utkastläge](../assets/models-draft.png)
-1. Modellen måste aktiveras för att den ska kunna användas. Markera den modell du just skapade och tryck eller klicka på **Aktivera**.
+1. Modellen måste vara aktiverad för att den ska kunna användas (om den inte redan är aktiverad). Markera den modell du just skapade och tryck eller klicka på **Aktivera**.
 
    ![Aktivera modellen](../assets/models-enable.png)
 1. Bekräfta aktiveringen av modellen genom att trycka eller klicka på **Aktivera** i bekräftelsedialogrutan.
