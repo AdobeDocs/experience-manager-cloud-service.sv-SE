@@ -2,21 +2,15 @@
 title: Förhandsgranska - JSON-representation
 description: Förhandsgranska JSON-representationen av ditt fragment.
 translation-type: tm+mt
-source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
+source-git-commit: 260578950833b96616a2a3928d206e6f9e0a206a
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 1%
+source-wordcount: '95'
+ht-degree: 2%
 
 ---
 
 
 # Förhandsgranska - JSON-representation {#preview-json-representation}
-
->[!CAUTION]
->
->AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
->
->Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
 
 När du utvecklar modeller för innehållsfragment kanske du vill visa exempel-JSON-utdata för ett innehållsfragment, baserat på en modell. Om du till exempel vill få en uppfattning om hur det slutliga resultatet kommer att se ut. Detta kan vara praktiskt vid validering av modell-JSON-strukturen, kanske med standardexempelinnehåll per datatyp.
 
