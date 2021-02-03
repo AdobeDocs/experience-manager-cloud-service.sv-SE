@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 6ea94126d29a470820ee1dc39b239bb10951afac
+source-git-commit: 31e07090e4e3a265269eebce13857f88245788ee
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -74,3 +74,17 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.12.0 är 10 decembe
 ### Felkorrigeringar {#crt-bug-fixes}
 
 * Flera felkorrigeringar har gjorts i verktygen AEM Dispatcher Converter och Repository Modernizer. Se [AEM Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter) och [Repository Modernizer](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer).
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v1.1.20 är 8 januari 2021.
+
+### Nyheter i [!DNL Content Transfer Tool] {#what-is-new-ctt}
+
+* Användarna kan nu se om deras åtkomsttoken har upphört att gälla genom att hålla markören på statusikonen i användargränssnittet för innehållsöverföringsverktyget (CTT). De får också ett meddelande i användargränssnittet för migreringsuppsättningsinformation om att de inte kan ansluta till sin Cloud Service-instans.
+
+### Felkorrigeringar {#ctt-bug-fixes}
+
+* Status för användargränssnittet i CTT (Content Transfer Tool) för en migreringsuppsättning kvarstod inte och ändrades efter en tids inaktivitet. Den här har åtgärdats.
+* Alternativet att visa loggar inaktiverades om loggarna inte var tillgängliga. Detta har åtgärdats och meddelanden har lagts till för att meddela användaren varför loggar saknas.
+* Statusen för användargränssnittet i verktyget Innehållsöverföring visade *MISSLYCKADES* när användaren stoppade ett intag. Detta har korrigerats så att *STOPPED* visas i stället.
