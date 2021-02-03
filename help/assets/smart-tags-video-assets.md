@@ -1,10 +1,10 @@
 ---
 title: Smarta taggar för videomaterial
-description: Smart taggning av videomaterial automatiserar taggningen av resurser genom att använda kontextuella och beskrivande taggar med hjälp av Adobe Sensei tjänster.
+description: Experience Manager lägger automatiskt till kontextuella och beskrivande smarta taggar i videoklipp med  [!DNL Adobe Sensei].
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 7af525ed1255fb4c4574c65dc855e0df5f1da402
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Smart tagga dina videoresurser {#video-smart-tags}
 
-Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som ett  [!DNL Cloud Service] stöd för automatisk taggning av videomaterial som hanteras av artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Men den smarta tagningsfunktionen i Adobe Sensei använder artificiella intelligensmodeller för att analysera videoinnehåll och lägga till taggar i videomaterialet. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i videon. den andra uppsättningen avser åtgärder som att dricka, köra och jogga.
+Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som ett  [!DNL Cloud Service] stöd för automatisk taggning av videomaterial med hjälp av artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Med funktionen [!DNL Adobe Sensei] för smart taggning av video används artificiell intelligens för att analysera videoinnehåll och lägga till taggar i videoresurserna. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i videon. den andra uppsättningen avser åtgärder som att dricka, köra och jogga.
 
-De videofilformat (och deras kodekar) som stöds för smart taggning är MP4 (H264/AVC), MKV (H264/AVC), MOV (H264/AVC, Motion JPEG), AVI (indeo4), FLV (H264/AVC, vp6f) och WMG V (WMV2). Dessutom gör funktionen att du kan tagga upp videoklipp till 300 MB. Den automatiska taggningen av videomaterial sker som standardbearbetning av resurser (tillsammans med skapande av miniatyrbilder och metadataextrahering) efter att en video har överförts eller när en ombearbetning utlöses. De smarta taggarna visas i fallande ordning efter [konfidensintervallet](#confidence-score-video-tag) i resursen [!UICONTROL Properties]. Videotaggning är som standard aktiverad i [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. Du kan dock [välja bort smart taggning för video](#opt-out-video-smart-tagging) i en mapp.
+Automatisk taggning av videomaterial sker som standardbearbetning av resurser (tillsammans med skapande av miniatyrer och metadataextrahering) efter att en video har överförts eller när en ombearbetning utlöses. De smarta taggarna visas i fallande ordning efter [konfidensintervallet](#confidence-score-video-tag) i resursen [!UICONTROL Properties]. Videotaggning är som standard aktiverad i [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. Du kan dock [välja bort smart taggning för video](#opt-out-video-smart-tagging) i en mapp.
 
 ## Smart taggning av videoklipp vid överföring {#smart-tag-assets-on-ingestion}
 
-När du [överför videoresurser](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] bearbetas ![videofilmerna](assets/do-not-localize/assetprocessing.png). När bearbetningen är klar går du till fliken [!UICONTROL Basic] på sidan [!UICONTROL Properties] för resursen. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. asset compute Service använder Adobe Sensei för att skapa dessa smarta taggar.
+När du [överför videoresurser](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] bearbetas videoklippen. När bearbetningen är klar går du till fliken [!UICONTROL Basic] på sidan [!UICONTROL Properties] för resursen. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. Resursmikrotjänsterna använder [!DNL Adobe Sensei] för att skapa dessa smarta taggar.
 
 ![Smarta taggar läggs till i videoklipp och visas på fliken Grundläggande i resursegenskaper](assets/smart-tags-added-to-videos.png)
 
@@ -43,6 +43,8 @@ Följ de här stegen för att smart tagga videoresurser eller mappar (inklusive 
 1. Markera hela mappen eller specifika videoresurser.
 
 1. Välj ikonen ![Bearbeta resurser](assets/do-not-localize/reprocess-assets-icon.png) [!UICONTROL Reprocess Assets] och välj alternativet [!UICONTROL Full Process].
+
+<!-- TBD: Limit size -->
 
 ![Bearbeta om resurser för att lägga till taggar i videoklipp i en befintlig DAM-databas](assets/reprocess.gif)
 
@@ -102,7 +104,7 @@ Så här avanmäler du dig från automatisk generering av smarta videotaggar fö
 
 ## Konfidenspoäng {#confidence-score-video-tag}
 
-[!DNL Adobe Experience Manager] använder ett lägsta konfidensintervall för smarta taggar för objekt och åtgärder för att undvika att ha för många taggar för varje videoresurs, vilket gör indexeringen långsammare. Sökresultaten för dina resurser rangordnas baserat på konfidensintervallet, vilket i allmänhet förbättrar sökresultaten utöver vad en inspektion av de tilldelade taggarna för en videoresurs antyder. Felaktiga taggar har ofta låga konfidensvärden, så de visas sällan överst i listan Smarta taggar för resurser.
+[!DNL Adobe Experience Manager] använder ett lägsta konfidensintervall för smarta taggar för objekt och åtgärder för att undvika att ha för många taggar för varje videoresurs, vilket gör indexeringen långsammare. Sökresultaten för dina resurser rangordnas baserat på konfidensintervallet, vilket i allmänhet förbättrar sökresultaten utöver vad en inspektion av de tilldelade taggarna för en videoresurs antyder. Felaktiga taggar har ofta låga konfidensgrader, så de visas sällan överst i listan Smarta taggar för resurser.
 
 Standardtröskelvärdet för action- och object-taggar i [!DNL Adobe Experience Manager] är 0,7 (bör vara ett värde mellan 0 och 1). Om vissa videoresurser inte är taggade med en viss tagg betyder det att algoritmen är mindre än 70 % säker i de förväntade taggarna. Standardtröskelvärdet kanske inte alltid är optimalt för alla användare. Du kan därför ändra konfidensvärdet i OSGI-konfigurationen.
 
@@ -123,13 +125,13 @@ Så här lägger du till OSGI-konfigurationen med konfidensintervallet i projekt
 
 ## Begränsningar {#video-smart-tagging-limitations}
 
-* Det finns ännu inget stöd för att träna smarta taggar (eller Förbättrade smarta taggar) för att tagga dina videoresurser.
+* Du kan inte utbilda tjänsten som tillämpar smarta taggar på videoklipp med hjälp av specifika videoklipp. Det fungerar med standardinställningarna för [!DNL Adobe Sensei].
 
 * Taggningsförloppet visas inte.
 
-* Endast videoklipp som inte är större än 300 MB lämpar sig för taggning. Smarta taggar för Adobe Sensei-tjänsten för videoklipp som uppfyller det här villkoret och hoppar över taggning av andra videoklipp i en mapp.
+* Endast videoklipp som är mindre än 300 MB i filstorlek taggas automatiskt. Tjänsten [!DNL Adobe Sensei] hoppar över videofiler som är större.
 
-* Endast videofilmer i dessa filformat (och kodekar som stöds) - MP4 (H264/AVC), MKV (H264/AVC), MOV (H264/AVC, Motion JPEG), AVI (indeo4), FLV (H264/AVC, vp6f) och WMV (WMV2) - kan taggas.
+* Endast videoklipp i de filformat och kodekar som stöds och som omnämns i [Smarta taggar](/help/assets/smart-tags.md#smart-tags-supported-file-formats) är taggade.
 
 >[!MORELIKETHIS]
 >
