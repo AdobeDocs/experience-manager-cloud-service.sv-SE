@@ -2,21 +2,15 @@
 title: Hantera innehållsfragment
 description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
 translation-type: tm+mt
-source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
+source-git-commit: 33f0980b138959ab4bc13eb5fe80733a0b4ef3a2
 workflow-type: tm+mt
-source-wordcount: '1488'
-ht-degree: 10%
+source-wordcount: '1593'
+ht-degree: 9%
 
 ---
 
 
 # Hantera innehållsfragment{#managing-content-fragments}
-
->[!CAUTION]
->
->AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
->
->Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
 
 Innehållsfragment lagras som **Resurser**, så hanteras primärt från konsolen **Resurser**.
 
@@ -39,8 +33,8 @@ Innehållsfragment lagras som **Resurser**, så hanteras primärt från konsolen
 Metoden för att skapa ett innehållsfragment är:
 
 1. Navigera till mappen **Resurser** där du vill skapa fragmentet.
-2. Välj **Skapa** och sedan **Innehållsfragment** för att öppna guiden.
-3. I det första steget i guiden måste du ange grunden för det nya fragmentet.
+1. Välj **Skapa** och sedan **Innehållsfragment** för att öppna guiden.
+1. I det första steget i guiden måste du ange grunden för det nya fragmentet.
 
    * [Modell](/help/assets/content-fragments/content-fragments-models.md)  - använd för att skapa ett fragment som kräver strukturerat innehåll. till exempel  **** Adventuremodel
 
@@ -50,7 +44,7 @@ Metoden för att skapa ett innehållsfragment är:
 
    ![fragmentbas](assets/cfm-managing-01.png)
 
-4. Ange följande i steget **Egenskaper**:
+1. Ange följande i steget **Egenskaper**:
 
    * **Grundläggande**
 
@@ -72,9 +66,12 @@ Metoden för att skapa ett innehållsfragment är:
          Obligatoriskt. hämtas automatiskt från titeln, men kan uppdateras.
 
 
-5. Välj **Skapa** för att slutföra åtgärden och **Öppna** sedan fragmentet för redigering eller gå tillbaka till konsolen med **Klar**.
+1. Välj **Skapa** för att slutföra åtgärden och **Öppna** sedan fragmentet för redigering eller gå tillbaka till konsolen med **Klar**.
 
-## Åtgärder för ett innehållsfragment {#actions-for-a-content-fragment}
+   >[!NOTE]
+   >I **listläge** för konsolen kan du uppdatera **Visa inställningar** för att aktivera kolumnen **Content Fragment Model**.
+
+## Åtgärder för ett innehållsfragment i resurskonsolen {#actions-for-a-content-fragment-assets-console}
 
 I konsolen **Resurser** finns en rad åtgärder tillgängliga för dina innehållsfragment, antingen:
 
@@ -125,7 +122,7 @@ Så här öppnar du fragmentet för redigering:
 >Om du vill redigera ett innehållsfragment måste du ha rätt behörighet. Kontakta systemadministratören om du har problem.
 
 1. Använd konsolen **Resurser** för att navigera till platsen för ditt innehållsfragment.
-2. Öppna fragmentet för redigering, antingen genom att:
+1. Öppna fragmentet för redigering, antingen genom att:
 
    * Klicka/tryck på fragment- eller fragment-länken (detta beror på konsolvyn).
    * Markera fragmentet och **Redigera** i verktygsfältet.
@@ -140,23 +137,49 @@ Så här öppnar du fragmentet för redigering:
    >2. Sidpanelen kan döljas/visas med ikonen **Växla sidpanel**.
 
 
-3. Navigera genom de tre lägena med ikonerna på sidopanelen:
-
-   * Variationer: [Redigera innehållet](#editing-the-content-of-your-fragment) och [Hantera dina variationer](#creating-and-managing-variations-within-your-fragment)
-
-   * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
-   * [Associerat innehåll](#associating-content-with-your-fragment)
-   * [Metadata](#viewing-and-editing-the-metadata-properties-of-your-fragment)
-   * [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
-   * [Förhandsgranska](/help/assets/content-fragments/content-fragments-json-preview.md)
-
-   ![lägen](assets/cfm-managing-04.png)
-
-4. När du har gjort ändringarna använder du **Spara** eller **Avbryt** efter behov.
+1. När du har gjort ändringarna använder du **Spara** eller **Avbryt** efter behov.
 
    >[!NOTE]
    >
    >Både **Spara** och **Avbryt** avslutar redigeraren. Mer information om hur båda alternativen fungerar för innehållsfragment finns i [Spara, Avbryt och Versioner](#save-cancel-and-versions).
+
+## Lägen och åtgärder i Content Fragment Editor {#modes-actions-content-fragment-editor}
+
+Det finns olika lägen och åtgärder tillgängliga från Content Fragment Editor.
+
+### Lägen i Content Fragment Editor {#modes-in-the-content-fragment-editor}
+
+Navigera genom de olika lägena med ikonerna på sidopanelen:
+
+* Variationer: [Redigera innehållet](#editing-the-content-of-your-fragment) och [Hantera dina variationer](#creating-and-managing-variations-within-your-fragment)
+
+* [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+* [Associerat innehåll](#associating-content-with-your-fragment)
+* [Metadata](#viewing-and-editing-the-metadata-properties-of-your-fragment)
+* [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
+* [Förhandsgranska](/help/assets/content-fragments/content-fragments-json-preview.md)
+
+![lägen](assets/cfm-managing-04.png)
+
+### Verktygsfältsåtgärder i Content Fragment Editor {#toolbar-actions-in-the-content-fragment-editor}
+
+Vissa funktioner i det övre verktygsfältet finns i flera lägen:
+
+![lägen](assets/cfm-managing-top-toolbar.png)
+
+* Under fragmentnamnet kan du se namnet på den [modell för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) som används för att skapa det aktuella fragmentet:
+
+   * Namnet är också en länk som öppnar modellredigeraren.
+
+* Se fragmentets status. information om när den skapades, ändrades eller publicerades. Statusen är även färgkodad:
+
+   * Nytt: grå
+   * Utkast: blå
+   * Publicerat: grön
+   * Ändrad: orange
+   * Inaktiverad: röd
+
+* **[Publicera](#publishing-and-referencing-a-fragment)** fragmentet.
 
 ## Spara, Avbryt och Versioner {#save-cancel-and-versions}
 
@@ -304,7 +327,8 @@ Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publ
 
 Innehållsfragment måste publiceras för användning i publiceringsmiljön. De kan publiceras:
 
-* Efter skapande; från konsolen **Resurser**.
+* Efter skapande; med [åtgärder som är tillgängliga i resurskonsolen](#actions-for-a-content-fragment-assets-console).
+* Från [redigeraren för innehållsfragment](#toolbar-actions-in-the-content-fragment-editor).
 * När du [publicerar en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
 
 >[!CAUTION]
