@@ -2,9 +2,9 @@
 title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM - exempelinnehåll och frågor.
 translation-type: tm+mt
-source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
+source-git-commit: 972d242527871660d55b9a788b9a53e88d020749
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1708'
 ht-degree: 2%
 
 ---
@@ -12,11 +12,14 @@ ht-degree: 2%
 
 # Lära sig att använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
->[!CAUTION]
+>[!NOTE]
 >
->AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
+>Den här sidan ska läsas tillsammans med:
 >
->Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
+>* [Innehållsfragment](/help/assets/content-fragments/content-fragments.md)
+>* [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
+>* [AEM GraphQL API för användning med innehållsfragment](/help/assets/content-fragments/graphql-api-content-fragments.md)
+
 
 Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan du se några praktiska exempel.
 
@@ -26,7 +29,7 @@ Mer information finns i:
 
 * Och några [exempel på GraphQL-frågor](#graphql-sample-queries), baserade på fragmentstrukturen för exempelinnehåll (modeller för innehållsfragment och relaterade innehållsfragment).
 
-## GraphQL för AEM - Vissa tillägg {#graphql-some-extensions}
+## GraphQL för AEM - Sammanfattning av tillägg {#graphql-extensions}
 
 Den grundläggande åtgärden för frågor med GraphQL för AEM följer standarden GraphQL-specifikation. För GraphQL-frågor med AEM finns det några tillägg:
 
@@ -34,148 +37,59 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
    * använda modellnamnet, eg stad
 
 * Om du förväntar dig en resultatlista:
-   * lägga till&quot;Lista&quot; i modellnamnet, till exempel `cityList`
+   * lägg till `List` i modellnamnet; till exempel `cityList`
+   * Se [Exempelfråga - All information om alla städer](#sample-all-information-all-cities)
 
 * Om du vill använda ett logiskt OR:
-   * använd _logOp: ELLER&quot;
+   * use ` _logOp: OR`
+   * Se [Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot;](#sample-all-persons-jobs-smith)
 
 * Logiskt AND finns också, men är (ofta) implicit
 
 * Du kan fråga efter fältnamn som motsvarar fälten i innehållsfragmentmodellen
+   * Se [Exempelfråga - Fullständig information om ett företags VD och anställda](#sample-full-details-company-ceos-employees)
 
 * Förutom fälten från modellen finns det vissa systemgenererade fält (föregås av understreck):
 
    * För innehåll:
 
       * `_locale` : för att avslöja språket, baserat på Language Manager
-
+         * Se [Exempelfråga för flera innehållsfragment för en viss språkinställning](#sample-wknd-multiple-fragments-given-locale)
       * `_metadata` : för att visa metadata för ditt fragment
-
+         * Se [Exempelfråga för metadata - Lista metadata för utmärkelser med namnet GB](#sample-metadata-awards-gb)
+      * `_model` : tillåt frågor för en innehållsfragmentmodell (sökväg och rubrik)
+         * Se [Exempelfråga för en innehållsfragmentmodell från en modell](#sample-wknd-content-fragment-model-from-model)
       * `_path` : sökvägen till ditt innehållsfragment i databasen
-
-      * `_references` : avslöja referenser, inkludera textbundna referenser i RTF-redigeraren
-
-      * `_variations` : för att visa specifika variationer i ditt innehållsfragment
+         * Se [Exempelfråga - Ett enskilt specifikt stadsfragment](#sample-single-specific-city-fragment)
+      * `_reference` : avslöja referenser, inkludera textbundna referenser i RTF-redigeraren
+         * Se [Exempelfråga för flera innehållsfragment med förhämtade referenser](#sample-wknd-multiple-fragments-prefetched-references)
+      * `_variation` : för att visa specifika variationer i ditt innehållsfragment
+         * Se [Exempelfråga - Alla städer med en namngiven variant](#sample-cities-named-variation)
    * Och åtgärder:
 
-      * `_operator` : tillämpa särskilda operatörer,  `EQUALS`,  `EQUALS_NOT`,  `GREATER_EQUAL`,  `LOWER`,  `CONTAINS`,
-
+      * `_operator` : tillämpa särskilda operatörer,  `EQUALS`,  `EQUALS_NOT`,  `GREATER_EQUAL`,  `LOWER`,  `CONTAINS`
+         * Se [Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot;](#sample-all-persons-not-jobs)
       * `_apply` : tillämpa särskilda villkor, till exempel   `AT_LEAST_ONCE`
-
+         * Se [Exempelfråga - Filtrera en array med ett objekt som måste finnas minst en gång](#sample-array-item-occur-at-least-once)
       * `_ignoreCase` : för att ignorera skiftläget vid fråga
+         * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](#sample-all-cities-san-ignore-case)
+
+
+
+
+
+
+
 
 
 * Det finns stöd för unionstyper för GraphQL:
 
-   * use `...on`
-
-
-## Ett exempel på struktur för innehållsfragment som används med GraphQL {#content-fragment-structure-graphql}
-
-Vi behöver ett enkelt exempel:
-
-* En eller flera [modeller för exempelinnehållsfragment](#sample-content-fragment-models-schemas) - utgör grunden för GraphQL-scheman
-
-* [Exempelinnehåll ](#sample-content-fragments) fragmenterbaserat på ovanstående modeller
-
-### Exempel på modeller för innehållsfragment (scheman) {#sample-content-fragment-models-schemas}
-
-För exempelfrågorna använder vi följande innehållsmodeller och deras inbördes relationer (referenser ->):
-
-* [Company](#model-company)
-->  [Person](#model-person)
-    ->  [Award](#model-award)
-
-* [Ort](#model-city)
-
-#### Företag {#model-company}
-
-De grundläggande fälten som definierar företaget är:
-
-| Fältnamn | Datatyp | Referens |
-|--- |--- |--- |
-| Företag | Enkelradig text |  |
-| VD | Fragmentreferens (enkel) | [Person](#model-person) |
-| Anställda | Fragmentreferens (multifält) | [Person](#model-person) |
-
-#### Person {#model-person}
-
-Fälten som definierar en person, som också kan vara en medarbetare:
-
-| Fältnamn | Datatyp | Referens |
-|--- |--- |--- |
-| Namn | Enkelradig text |  |
-| Förnamn | Enkelradig text |  |
-| Utmärkelser | Fragmentreferens (multifält) | [Utmärkelse](#model-award) |
-
-#### Utmärkelse {#model-award}
-
-Fälten som definierar en utmärkelse är:
-
-| Fältnamn | Datatyp | Referens |
-|--- |--- |--- |
-| Genväg/ID | Enkelradig text |  |
-| Titel | Enkelradig text |  |
-
-#### Ort {#model-city}
-
-Fälten för att definiera en stad är:
-
-| Fältnamn | Datatyp | Referens |
-|--- |--- |--- |
-| Namn | Enkelradig text |  |
-| Land | Enkelradig text |  |
-| Population | Siffra |  |
-| Kategorier | Taggar |  |
-
-### Exempelinnehållsfragment {#sample-content-fragments}
-
-Följande fragment används för rätt modell.
-
-#### Företag {#fragment-company}
-
-| Företag | VD | Anställda |
-|--- |--- |--- |
-| Apple | Steve Jobs | Duke Marsh<br>Max Caulfield |
-|  Little Pony Inc. | Adam Smith | Lara Crop<br>Städerplatta |
-| NextStep Inc. | Steve Jobs | Joe Smith<br>Abe Lincoln |
-
-#### Person {#fragment-person}
-
-| Namn | Förnamn | Utmärkelser |
-|--- |--- |--- |
-| Lincoln |  Adobe |  |
-| Smith | Adam |   |
-| Slade |  Rensare |  Gameblitz<br>Gamestar |
-| Marmor |  Duke |   |   |
-|  Smith |  Joe |   |
-| Beskär |  Lara | Gamestar |
-| Caulfield |  Max |  Gameblitz |
-|  Jobb |  Steve |   |
-
-#### Utmärkelse {#fragment-award}
-
-| Genväg/ID | Titel |
-|--- |--- |
-| GB | Gameblitz |
-|  GS | Gamestar |
-|  OSC | Oscar |
-
-#### Ort {#fragment-city}
-
-| Namn | Land | Population | Kategorier |
-|--- |--- |--- |--- |
-| Basel | Schweiz | 172258 | stad:emea |
-| Berlin | Tyskland | 3669491 | stad:huvudstad<br>stad:emea |
-| Bucharest | Rumänien | 1821000 |  stad:huvudstad<br>stad:emea |
-| San Francisco |  USA |  883306 |  city:beach<br>city:na |
-| San Jose |  USA |  102635 |  stad:na |
-| Stuttgart |  Tyskland |  634830 |  stad:emea |
-|  Zürich |  Schweiz |  415367 |  stad:huvudstad<br>stad:emea |
+   * använd `... on`
+      * Se [Exempelfråga för ett innehållsfragment av en viss modell med en innehållsreferens](#sample-wknd-fragment-specific-model-content-reference)
 
 ## GraphQL - Exempelfrågor med strukturen för exempelinnehållsfragment {#graphql-sample-queries-sample-content-fragment-structure}
 
-Se exempelfrågorna för illustrationer av hur du skapar frågor tillsammans med exempelresultat.
+I de här exempelfrågorna finns illustrationer av hur du skapar frågor, tillsammans med exempelresultat.
 
 >[!NOTE]
 >
@@ -183,9 +97,13 @@ Se exempelfrågorna för illustrationer av hur du skapar frågor tillsammans med
 >
 >Till exempel: `http://localhost:4502/content/graphiql.html`
 
+>[!NOTE]
+>
+>Exempelfrågorna är baserade på [strukturen för exempelinnehållsfragment för användning med GraphQL](#content-fragment-structure-graphql)
+
 ### Exempelfråga - Alla tillgängliga scheman och datatyper {#sample-all-schemes-datatypes}
 
-Detta returnerar alla typer för alla tillgängliga scheman.
+Detta returnerar alla `types` för alla tillgängliga scheman.
 
 **Exempelfråga**
 
@@ -269,134 +187,6 @@ Detta returnerar alla typer för alla tillgängliga scheman.
         {
           "name": "__TypeKind",
           "description": "An enum describing what kind of type a given __Type is"
-        }
-      ]
-    }
-  }
-}
-```
-
-### Exempelfråga - Fullständig information om företagets VD och anställda {#sample-full-details-company-ceos-employees}
-
-Med hjälp av strukturen för kapslade fragment returnerar den här frågan alla detaljer för ett företags VD och alla dess anställda.
-
-**Exempelfråga**
-
-```xml
-query {
-  companyList {
-    items {
-      name
-      ceo {
-        _path
-        name
-        firstName
-        awards {
-        id
-          title
-        }
-      }
-      employees {
-       name
-        firstName
-       awards {
-         id
-          title
-        }
-      }
-    }
-  }
-}
-```
-
-**Exempelresultat**
-
-```xml
-{
-  "data": {
-    "companyList": {
-      "items": [
-        {
-          "name": "Apple Inc.",
-          "ceo": {
-            "_path": "/content/dam/sample-content-fragments/persons/steve-jobs",
-            "name": "Jobs",
-            "firstName": "Steve",
-            "awards": []
-          },
-          "employees": [
-            {
-              "name": "Marsh",
-              "firstName": "Duke",
-              "awards": []
-            },
-            {
-              "name": "Caulfield",
-              "firstName": "Max",
-              "awards": [
-                {
-                  "id": "GB",
-                  "title": "Gameblitz"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Little Pony, Inc.",
-          "ceo": {
-            "_path": "/content/dam/sample-content-fragments/persons/adam-smith",
-            "name": "Smith",
-            "firstName": "Adam",
-            "awards": []
-          },
-          "employees": [
-            {
-              "name": "Croft",
-              "firstName": "Lara",
-              "awards": [
-                {
-                  "id": "GS",
-                  "title": "Gamestar"
-                }
-              ]
-            },
-            {
-              "name": "Slade",
-              "firstName": "Cutter",
-              "awards": [
-                {
-                  "id": "GB",
-                  "title": "Gameblitz"
-                },
-                {
-                  "id": "GS",
-                  "title": "Gamestar"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "NextStep Inc.",
-          "ceo": {
-            "_path": "/content/dam/sample-content-fragments/persons/steve-jobs",
-            "name": "Jobs",
-            "firstName": "Steve",
-            "awards": []
-          },
-          "employees": [
-            {
-              "name": "Smith",
-              "firstName": "Joe",
-              "awards": []
-            },
-            {
-              "name": "Lincoln",
-              "firstName": "Abraham",
-              "awards": []
-            }
-          ]
         }
       ]
     }
@@ -537,7 +327,7 @@ query {
 }
 ```
 
-### Exempelfråga - Ett enkelt stadsfragment {#sample-single-city-fragment}
+### Exempelfråga - Ett enskilt specifikt stadsfragment {#sample-single-specific-city-fragment}
 
 Det här är en fråga som returnerar information om ett enskilt fragment på en viss plats i databasen.
 
@@ -613,6 +403,134 @@ Om du skapar en ny variant med namnet&quot;Berlin Center&quot; (`berlin_centre`)
           "categories": [
             "city:capital",
             "city:emea"
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Exempelfråga - Fullständig information om företagets VD och anställda {#sample-full-details-company-ceos-employees}
+
+Med hjälp av strukturen för kapslade fragment returnerar den här frågan alla detaljer för ett företags VD och alla dess anställda.
+
+**Exempelfråga**
+
+```xml
+query {
+  companyList {
+    items {
+      name
+      ceo {
+        _path
+        name
+        firstName
+        awards {
+        id
+          title
+        }
+      }
+      employees {
+       name
+        firstName
+       awards {
+         id
+          title
+        }
+      }
+    }
+  }
+}
+```
+
+**Exempelresultat**
+
+```xml
+{
+  "data": {
+    "companyList": {
+      "items": [
+        {
+          "name": "Apple Inc.",
+          "ceo": {
+            "_path": "/content/dam/sample-content-fragments/persons/steve-jobs",
+            "name": "Jobs",
+            "firstName": "Steve",
+            "awards": []
+          },
+          "employees": [
+            {
+              "name": "Marsh",
+              "firstName": "Duke",
+              "awards": []
+            },
+            {
+              "name": "Caulfield",
+              "firstName": "Max",
+              "awards": [
+                {
+                  "id": "GB",
+                  "title": "Gameblitz"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Little Pony, Inc.",
+          "ceo": {
+            "_path": "/content/dam/sample-content-fragments/persons/adam-smith",
+            "name": "Smith",
+            "firstName": "Adam",
+            "awards": []
+          },
+          "employees": [
+            {
+              "name": "Croft",
+              "firstName": "Lara",
+              "awards": [
+                {
+                  "id": "GS",
+                  "title": "Gamestar"
+                }
+              ]
+            },
+            {
+              "name": "Slade",
+              "firstName": "Cutter",
+              "awards": [
+                {
+                  "id": "GB",
+                  "title": "Gameblitz"
+                },
+                {
+                  "id": "GS",
+                  "title": "Gamestar"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "NextStep Inc.",
+          "ceo": {
+            "_path": "/content/dam/sample-content-fragments/persons/steve-jobs",
+            "name": "Jobs",
+            "firstName": "Steve",
+            "awards": []
+          },
+          "employees": [
+            {
+              "name": "Smith",
+              "firstName": "Joe",
+              "awards": []
+            },
+            {
+              "name": "Lincoln",
+              "firstName": "Abraham",
+              "awards": []
+            }
           ]
         }
       ]
@@ -1186,7 +1104,13 @@ query {
 
 ## Exempelfrågor med WKND-projektet {#sample-queries-using-wknd-project}
 
-Dessa exempelfrågor är baserade på WKND-projektet.
+Dessa exempelfrågor är baserade på WKND-projektet. Detta har:
+
+* Content Fragment Models available under:
+   `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
+
+* Innehållsfragment (och annat innehåll) tillgängliga under:
+   `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
 
 >[!NOTE]
 >
@@ -1277,12 +1201,12 @@ Den här frågan förhör:
 
 Detta exempel på frågor intervjuar:
 
-* för ett enstaka innehållsfragment av en viss modell
-* för alla innehållsformat:
-   * HTML
-   * Markdown
-   * Oformaterad text
-   * JSON
+* för ett enda innehållsfragment av typen `article` vid en specifik sökväg
+   * där alla format:
+      * HTML
+      * Markdown
+      * Oformaterad text
+      * JSON
 
 **Exempelfråga**
 
@@ -1303,7 +1227,40 @@ Detta exempel på frågor intervjuar:
 }
 ```
 
+### Exempelfråga för en innehållsfragmentmodell från en modell {#sample-wknd-content-fragment-model-from-model}
+
+Detta exempel på frågor intervjuar:
+
+* för ett enda innehållsfragment
+   * information om den underliggande modellen för innehållsfragment
+
+**Exempelfråga**
+
+```xml
+{
+  adventureByPath(_path: "/content/dam/wknd/en/adventures/riverside-camping-australia/riverside-camping-australia") {
+    item {
+      _path
+      adventureTitle
+      _model {
+        _path
+        title
+      }
+    }
+  }
+}
+```
+
 ### Exempelfråga för ett kapslat innehållsfragment - typ av en modell{#sample-wknd-nested-fragment-single-model}
+
+Den här frågan förhör:
+
+* för ett enda innehållsfragment av typen `article` vid en specifik sökväg
+   * i det, sökvägen och författaren till det refererade (kapslade) fragmentet
+
+>[!NOTE]
+>
+>Fältet `referencearticle` har datatypen `fragment-reference`.
 
 **Exempelfråga**
 
@@ -1324,6 +1281,15 @@ Detta exempel på frågor intervjuar:
 
 ### Exempelfråga för ett kapslat innehållsfragment - Flera modelltyper{#sample-wknd-nested-fragment-multiple-model}
 
+Den här frågan förhör:
+
+* för flera innehållsfragment av typen `bookmark`
+   * med fragmentreferenser till andra fragment av de specifika modelltyperna `article` och `adventure`
+
+>[!NOTE]
+>
+>Fältet `fragments` har datatypen `fragment-reference`, med modellerna `Article`, `Adventure` markerad.
+
 ```xml
 {
   bookmarkList {
@@ -1343,7 +1309,61 @@ Detta exempel på frågor intervjuar:
 }
 ```
 
-### Exempelfråga för ett innehållsfragment för en viss modell med en innehållsreferens{#sample-wknd-fragment-specific-model-content-reference}
+### Exempelfråga för ett innehållsfragment för en viss modell med innehållsreferenser{#sample-wknd-fragment-specific-model-content-reference}
+
+Det finns två varianter av den här frågan:
+
+1. Returnera alla innehållsreferenser.
+1. Returnerar de specifika innehållsreferenserna av typen `attachments`.
+
+De här frågorna förhör:
+
+* för flera innehållsfragment av typen `bookmark`
+   * med Innehållsreferenser till andra fragment
+
+#### Exempelfråga för flera innehållsfragment med förhämtade referenser {#sample-wknd-multiple-fragments-prefetched-references}
+
+Följande fråga returnerar alla innehållsreferenser med `_references`:
+
+```xml
+{
+  bookmarkList {
+     _references {
+         ... on ImageRef {
+          _path
+          type
+          height
+        }
+        ... on MultimediaRef {
+          _path
+          type
+          size
+        }
+        ... on DocumentRef {
+          _path
+          type
+          author
+        }
+        ... on ArchiveRef {
+          _path
+          type
+          format
+        }
+    }
+    items {
+        _path
+    }
+  }
+}
+```
+
+#### Exempelfråga för flera innehållsfragment med bifogade filer {#sample-wknd-multiple-fragments-attachments}
+
+Följande fråga returnerar alla `attachments` - ett specifikt fält (undergrupp) av typen `content-reference`:
+
+>[!NOTE]
+>
+>Fältet `attachments` har datatypen `content-reference`, där olika formulär är markerade.
 
 ```xml
 {
@@ -1376,80 +1396,16 @@ Detta exempel på frågor intervjuar:
 }
 ```
 
-### Exempelfråga för flera innehållsfragment med förhämtade referenser {#sample-wknd-multiple-fragments-prefetched-references}
-
-```xml
-{
-  bookmarkList {
-    _references {
-       ... on ImageRef {
-        _path
-        type
-        height
-      }
-      ... on MultimediaRef {
-        _path
-        type
-        size
-      }
-      ... on DocumentRef {
-        _path
-        type
-        author
-      }
-      ... on ArchiveRef {
-        _path
-        type
-        format
-      }
-    }
-  }
-}
-```
-
-### Exempelfråga för en enstaka variant av innehållsfragment av en given modell {#sample-wknd-single-fragment-given-model}
-
-**Exempelfråga**
-
-```xml
-{
-  articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures", variation: "variation1") {
-    item {
-      _path
-      author
-      main {
-        html
-        markdown
-        plaintext
-        json
-      }
-    }
-  }
-}
-```
-
-### Exempelfråga för flera innehållsfragment för en given språkinställning {#sample-wknd-multiple-fragments-given-locale}
-
-**Exempelfråga**
-
-```xml
-{ 
-  articleList (_locale: "fr") {
-    items {
-      _path
-      author
-      main {
-        html
-        markdown
-        plaintext
-        json
-      }
-    }
-  }
-}
-```
-
 ### Exempelfråga för ett enskilt innehållsfragment med intern RTE-referens {#sample-wknd-single-fragment-rte-inline-reference}
+
+Den här frågan förhör:
+
+* för ett enda innehållsfragment av typen `bookmark` vid en specifik sökväg
+   * i det, textbundna RTE-referenser
+
+>[!NOTE]
+>
+>De textbundna RTE-referenserna är hydrerade i `_references`.
 
 **Exempelfråga**
 
@@ -1486,7 +1442,37 @@ Detta exempel på frågor intervjuar:
 }
 ```
 
+### Exempelfråga för en enstaka variant av innehållsfragment av en given modell {#sample-wknd-single-fragment-given-model}
+
+Den här frågan förhör:
+
+* för ett enda innehållsfragment av typen `article` vid en specifik sökväg
+   * inom detta, de uppgifter som avser variationen: `variation1`
+
+**Exempelfråga**
+
+```xml
+{
+  articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures", variation: "variation1") {
+    item {
+      _path
+      author
+      main {
+        html
+        markdown
+        plaintext
+        json
+      }
+    }
+  }
+}
+```
+
 ### Exempelfråga för en namngiven variant av flera innehållsfragment i en given modell {#sample-wknd-variation-multiple-fragment-given-model}
+
+Den här frågan förhör:
+
+* för innehållsfragment av typen `article` med en specifik variation: `variation1`
 
 **Exempelfråga**
 
@@ -1506,3 +1492,131 @@ Detta exempel på frågor intervjuar:
   }
 }
 ```
+
+### Exempelfråga för flera innehållsfragment för en given språkinställning {#sample-wknd-multiple-fragments-given-locale}
+
+Den här frågan förhör:
+
+* för innehållsfragment av typen `article` inom språket `fr`
+
+**Exempelfråga**
+
+```xml
+{ 
+  articleList (_locale: "fr") {
+    items {
+      _path
+      author
+      main {
+        html
+        markdown
+        plaintext
+        json
+      }
+    }
+  }
+}
+```
+
+## Exempel på struktur för innehållsfragment (används med GraphQL) {#content-fragment-structure-graphql}
+
+Exempelfrågorna baseras på följande struktur som använder:
+
+* En eller flera [modeller för exempelinnehållsfragment](#sample-content-fragment-models-schemas) - utgör grunden för GraphQL-scheman
+
+* [Exempelinnehåll ](#sample-content-fragments) fragmenterbaserat på ovanstående modeller
+
+### Exempel på modeller för innehållsfragment (scheman) {#sample-content-fragment-models-schemas}
+
+För exempelfrågorna använder vi följande innehållsmodeller och deras inbördes relationer (referenser ->):
+
+* [Company](#model-company)
+->  [Person](#model-person)
+    ->  [Award](#model-award)
+
+* [Ort](#model-city)
+
+#### Företag {#model-company}
+
+De grundläggande fälten som definierar företaget är:
+
+| Fältnamn | Datatyp | Referens |
+|--- |--- |--- |
+| Företag | Enkelradig text |  |
+| VD | Fragmentreferens (enkel) | [Person](#model-person) |
+| Anställda | Fragmentreferens (multifält) | [Person](#model-person) |
+
+#### Person {#model-person}
+
+Fälten som definierar en person, som också kan vara en medarbetare:
+
+| Fältnamn | Datatyp | Referens |
+|--- |--- |--- |
+| Namn | Enkelradig text |  |
+| Förnamn | Enkelradig text |  |
+| Utmärkelser | Fragmentreferens (multifält) | [Utmärkelse](#model-award) |
+
+#### Utmärkelse {#model-award}
+
+Fälten som definierar en utmärkelse är:
+
+| Fältnamn | Datatyp | Referens |
+|--- |--- |--- |
+| Genväg/ID | Enkelradig text |  |
+| Titel | Enkelradig text |  |
+
+#### Ort {#model-city}
+
+Fälten för att definiera en stad är:
+
+| Fältnamn | Datatyp | Referens |
+|--- |--- |--- |
+| Namn | Enkelradig text |  |
+| Land | Enkelradig text |  |
+| Population | Siffra |  |
+| Kategorier | Taggar |  |
+
+### Exempelinnehållsfragment {#sample-content-fragments}
+
+Följande fragment används för rätt modell.
+
+#### Företag {#fragment-company}
+
+| Företag | VD | Anställda |
+|--- |--- |--- |
+| Apple | Steve Jobs | Duke Marsh<br>Max Caulfield |
+|  Little Pony Inc. | Adam Smith | Lara Crop<br>Städerplatta |
+| NextStep Inc. | Steve Jobs | Joe Smith<br>Abe Lincoln |
+
+#### Person {#fragment-person}
+
+| Namn | Förnamn | Utmärkelser |
+|--- |--- |--- |
+| Lincoln |  Adobe |  |
+| Smith | Adam |   |
+| Slade |  Rensare |  Gameblitz<br>Gamestar |
+| Marmor |  Duke |   |   |
+|  Smith |  Joe |   |
+| Beskär |  Lara | Gamestar |
+| Caulfield |  Max |  Gameblitz |
+|  Jobb |  Steve |   |
+
+#### Utmärkelse {#fragment-award}
+
+| Genväg/ID | Titel |
+|--- |--- |
+| GB | Gameblitz |
+|  GS | Gamestar |
+|  OSC | Oscar |
+
+#### Ort {#fragment-city}
+
+| Namn | Land | Population | Kategorier |
+|--- |--- |--- |--- |
+| Basel | Schweiz | 172258 | stad:emea |
+| Berlin | Tyskland | 3669491 | stad:huvudstad<br>stad:emea |
+| Bucharest | Rumänien | 1821000 |  stad:huvudstad<br>stad:emea |
+| San Francisco |  USA |  883306 |  city:beach<br>city:na |
+| San Jose |  USA |  102635 |  stad:na |
+| Stuttgart |  Tyskland |  634830 |  stad:emea |
+|  Zürich |  Schweiz |  415367 |  stad:huvudstad<br>stad:emea |
