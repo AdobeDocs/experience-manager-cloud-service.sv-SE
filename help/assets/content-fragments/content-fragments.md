@@ -2,21 +2,15 @@
 title: Arbeta med innehållsfragment
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
 translation-type: tm+mt
-source-git-commit: da8fcf1288482d406657876b5d4c00b413461b21
+source-git-commit: 6f8264ae53b30afac0cc523c312aea8918e5eafa
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2027'
 ht-degree: 3%
 
 ---
 
 
 # Arbeta med innehållsfragment{#working-with-content-fragments}
-
->[!CAUTION]
->
->AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
->
->Kontakta [Adobe Support](https://experienceleague.adobe.com/?lang=en&amp;support-solution=General#support) om du vill aktivera API:t för din AEM som ett Cloud Service-program.
 
 Med Adobe Experience Manager (AEM) som Cloud Service kan du med Content Fragments utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
 
@@ -30,12 +24,9 @@ Innehållsfragment innehåller strukturerat innehåll:
    * Komplex
       * En kombination av många fält med olika datatyper, bland annat text, tal, boolesk information och tid.
       * Kan användas antingen för att förbereda mer strukturerat innehåll för redigering av sidor eller för leverans till programmet.
-
-<!--
-  * Nested
-    * The reference data types available allow you to nest your content.
-    * Tends to be used for delivery to your application.
--->
+   * Kapslad
+      * De tillgängliga referensdatatyperna gör att du kan kapsla ditt innehåll.
+      * Tender som ska användas för leverans till ditt program.
 
 Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i Sling Model (JSON) AEM kärnkomponenterna. Leveranssätt:
 
@@ -78,10 +69,7 @@ Med innehållsfragment kan du:
 * Bygg innehållspooler för en rad olika kanaler.
 * Utforma innehållsvarianter för specifika kanaler.
 * Lägg till bilder i texten genom att infoga resurser (blandade mediefragment).
-
-<!--
-* Create nested content to reflect the complexity of your data.
--->
+* Skapa kapslat innehåll som återspeglar komplexiteten i era data.
 
 Dessa innehållsfragment kan sedan samlas ihop för att ge upplevelser över en mängd olika kanaler.
 
@@ -121,11 +109,9 @@ Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta struktu
 >
 >AEM har också stöd för översättning av fragmentinnehåll.
 
-<!--
 >[!NOTE]
 >
->AEM also supports the translation of fragment content. See [Creating Translation Projects for Content Fragments](/help/assets/creating-translation-projects-for-content-fragments.md) for further information.
--->
+>AEM har också stöd för översättning av fragmentinnehåll. Mer information finns i [Översätta resurser](/help/assets/translate-assets.md).
 
 ## Innehållstyp {#content-type}
 
@@ -306,6 +292,12 @@ Ett fragment, med dess element och variationer, kan användas för att skapa sam
 
 ### WKND-exempel {#wknd-sample}
 
-[WKND Site](/help/implementing/developing/introduction/develop-wknd-tutorial.md)-exemplen är till för att du ska kunna lära dig mer om AEM som en Cloud Service. Den innehåller exempelfragment som kan ses vid:
+[WKND Site](/help/implementing/developing/introduction/develop-wknd-tutorial.md)-exemplen är till för att du ska kunna lära dig mer om AEM som en Cloud Service.
 
-`hhttp://<host>:<port>/assets.html/content/dam/wknd/en/adventures`
+WKND-projektet innehåller:
+
+* Content Fragment Models available under:
+   `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
+
+* Innehållsfragment (och annat innehåll) tillgängliga under:
+   `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
