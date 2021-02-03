@@ -3,9 +3,9 @@ title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 744f63306187b991a11acee2071b9266d11e1a21
+source-git-commit: 72a87e2eb8c4e40bbe0e5f831afc374fe3521bd7
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 6%
 
 ---
@@ -60,24 +60,24 @@ Följande förklaring beskriver supportnivån.
 | GIF | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ |
 | PNG | ✓ | ✓ | ✓ | ✓ |
-| TIFF | ✓ | ✓ | ✓ | - |
-| SVG | ✓ | - | ✓ | ✓ |
-| SGI | ✓ | ✓ | ✓ | ✓ |
 | RGB | ✓ | ✓ | ✓ | ✓ |
 | RGBA | ✓ | ✓ | ✓ | ✓ |
+| SGI | ✓ | ✓ | ✓ | ✓ |
+| SVG | ✓ | - | ✓ | ✓ |
+| TIFF | ✓ | ✓ | ✓ | - |
 
 ## Bildformat i [!DNL Dynamic Media] {#image-support-dynamic-media}
 
 | Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning |
 | ------- | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
-| PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | - | - | - | - |
-| PSD   ‡ | ✓ | - | - | - | - |
 | EPS | ✓ | ✓ | ✓ | ✓ | ✓ |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ | - | - | - | - |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PSD   ‡ | ✓ | - | - | - | - |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ‡ Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av [!DNL Adobe Photoshop] och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
@@ -92,7 +92,7 @@ Följande undertyper av rasterbildfilformat som inte stöds i [!DNL Dynamic Medi
 
 ## 3D-format {#support-3d-formats}
 
-Följande lista över 3D-format stöds.
+Följande 3D-format stöds.
 
 Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/assets-3d.md)
 
@@ -143,24 +143,24 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 | Filformat | Generering av miniatyrbilder | Extrahering av fulltext | Bredd/höjd | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
 | ----------- | -------------------- | ------------------- | ------------ | ------------------- | ---------------- |
-| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
-| DOCX | ✓ | ✓ | ✓ | ✓ | ✓ |
 | DOC | - | - | - | ✓ | ✓ |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PPT | - | - | - | ✓ | ✓ |
-| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ |
-| XLS | - | - | - | ✓ | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ | ✓ |
+| EPUB | - | ✓ | - | - | - |
+| HTML | - | ✓ | - | ✓ | ✓ |
 | ODF | ✓ | ✓ | ✓ | - | - |
-| OFG | ✓ | ✓ | ✓ | - | - |
 | ODM | ✓ | ✓ | ✓ | - | - |
 | ODP | ✓ | ✓ | ✓ | - | - |
 | ODS | ✓ | ✓ | ✓ | - | - |
 | ODT | ✓ | ✓ | ✓ | ✓ | ✓ |
-| EPUB | - | ✓ | - | - | - |
-| HTML | - | ✓ | - | ✓ | ✓ |
+| OFG | ✓ | ✓ | ✓ | - | - |
+| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PPT | - | - | - | ✓ | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PS | - | - | ✓ | - | - |
 | RTF | - | ✓ | - | ✓ | ✓ |
 | TXT | - | ✓ | - | ✓ | ✓ |
+| XLS | - | - | - | ✓ | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | - | ✓ | - | - | - |
 
 ## Dokumentformat i [!DNL Dynamic Media] {#document-support-dynamic-media}
@@ -168,8 +168,8 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning |
 | ------ | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
 | AI | ✓ | - | - | - | - |
-| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | INDD | ✓ | - | - | - | - |
+| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ## Videoformat {#video-formats}
 
@@ -191,6 +191,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | MPEG | ✓ | ✓ | ✓ |
 | MPG | ✓ | ✓ | ✓ |
 | MTS | ✓ | - | ✓ |
+| MXF | ✓ | - | ✓ |
 | OGV | ✓ | - | ✓ |
 | QT | ✓ | - | ✓ |
 | R3D | - | ✓ | ✓ |
