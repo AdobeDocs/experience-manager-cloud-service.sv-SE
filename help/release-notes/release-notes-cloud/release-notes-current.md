@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 429d1710af30f85174f69ed111140b2e4fb5ab0f
+source-git-commit: 5901bdd97c8c94f6baf04eab8da1d7fc3f3f89da
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,13 @@ Följande version (2021.2.0) kommer att vara den 25 februari 2021.
 
 ## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
 
+### Headless Content Management {#headless}
+
 * **[GraphQL API for Content Fragment Delivery](/help/assets/content-fragments/graphql-api-content-fragments.md)**: Möjlighet att söka efter innehållsfragment med GraphQL-syntax och scheman baserade på Content Fragment-modeller, för utdata i JSON-format.
 
 * **[Autentiseringsstöd för GraphQL API-begäranden](/help/assets/content-fragments/graphql-authentication-content-fragments.md)**: Möjlighet att autentisera GraphQL API-begäranden med åtkomsttoken för API:er på serversidan.
+
+* [RemotePage-](/help/implementing/developing/hybrid/remote-page.md) komponenten har stöd för visning och redigering av externa SPA i AEM.
 
 * Förbättrade JSON-utdata från GraphQL API, inklusive möjligheten att skriva ut RTF i JSON-format och -språk.
 
@@ -37,6 +41,9 @@ Följande version (2021.2.0) kommer att vara den 25 februari 2021.
 
 * Möjlighet att förhandsgranska JSON-utdata direkt i Content Fragment-redigeraren.
 
+### Progressiva webbappar (PWA) {#pwa}
+
+* [En progressiv webbprogramversion (PWA) av en ](/help/sites-cloud/authoring/features/enable-pwa.md)  sitecan kan nu aktiveras på projektnivå via enkel konfiguration.
 
 ## [!DNL Adobe Experience Manager Assets] som  [!DNL Cloud Service] {#assets}
 
