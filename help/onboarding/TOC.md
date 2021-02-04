@@ -4,10 +4,10 @@ user-guide-title: Onboarding för AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: af15539007e264fc473d35529f0f8c41276ec01d
+source-git-commit: 42147d7465ec10a41702e74699a3d54624b7d4bd
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 51%
+source-wordcount: '662'
+ht-degree: 29%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 51%
    + [Rollbaserade behörigheter](what-is-required/role-based-permissions.md)
    + [Databas för källkod](what-is-required/source-code-repository.md)
 + Faser i övergångsprocessen {#phases}
-   + [Planering](/help/move-to-cloud-service/planning.md)
-   + [Körning](/help/move-to-cloud-service/execution.md) 
-   + [Efter publicering](/help/move-to-cloud-service/post-go-live.md)
+   + [Planering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/phases/planning.html)
+   + [Körning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/phases/execution.html) 
+   + [Efter publicering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/phases/post-go-live.html)
 + Få åtkomst till AEM i molnet {#getting-access}
    + [Få tillgång till Experience Manager as a Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
    + Cloud Service-program {#cloud-service-programs}
@@ -32,47 +32,47 @@ ht-degree: 51%
       + [Skapa ett program](getting-access-to-aem-in-cloud/creating-a-program.md)
       + [Sandlådeprogram](getting-access-to-aem-in-cloud/sandbox-programs.md)
    + Använda Cloud Manager {#using-cloud-manager}
-      + [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md)
-      + [Konfigurera CI/CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md)
-      + [Driftsätta kod](/help/implementing/cloud-manager/deploy-code.md)
+      + [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
+      + [Konfigurera CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html)
+      + [Driftsätta kod](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html)
    + Förstå testresultat {#test-results}
-      + [Översikt](/help/implementing/cloud-manager/overview-test-results.md)
-      + [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md)
-      + [Anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md)
-      + [Funktionstestning](/help/implementing/cloud-manager/functional-testing.md)
-      + [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
-   + [Komma åt och hantera loggar](/help/implementing/cloud-manager/manage-logs.md)
-   + [Förstår aviseringar](/help/implementing/cloud-manager/notifications.md)
+      + [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html)
+      + [Testning av kodkvalitet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/code-quality-testing.html)
+      + [Anpassade regler för kodkvalitet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html)
+      + [Funktionstestning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/functional-testing.html)
+      + [Testning av Experience Audit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/experience-audit-testing.html)
+   + [Komma åt och hantera loggar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-logs.html)
+   + [Förstår aviseringar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/notifications.html)
    + Skapa ett AEM-programprojekt {#create-application-project}
       + [Använda guiden](getting-access-to-aem-in-cloud/using-the-wizard.md)
       + [Konfigurera projektet](getting-access-to-aem-in-cloud/setting-up-project.md)
       + [Förstå byggmiljön](getting-access-to-aem-in-cloud/build-environment-details.md)
    + Hantera SSL-certifikat {#manage-ssl-certificates}
-      + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
-      + [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md)
-      + [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
-      + [Visa och uppdatera eller ersätta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/view-update-replace-ssl-certificate.md)
-      + [Kontrollerar status för ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md)
-      + [Ta bort ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/delete-ssl-certificate.md)
+      + [Introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/introduction.html)
+      + [Hämta ett SSL-certifikat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/get-ssl-certificate.html)
+      + [Lägga till ett SSL-certifikat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate.html)
+      + [Visa och uppdatera eller ersätta ett SSL-certifikat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/view-update-replace-ssl-certificate.html)
+      + [Kontrollerar status för ett SSL-certifikat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/check-status-ssl-certificate.html)
+      + [Ta bort ett SSL-certifikat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/delete-ssl-certificate.html)
    + Hantera anpassade domännamn {#custom-domain-names}
-      + [Introduktion](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
-      + [Hämta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/get-custom-domain-name.md)
-      + [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
-      + [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md)
-      + [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
-      + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
-      + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
-      + [Visa och uppdatera anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
-      + [Uppdaterar det anpassade domännamnets SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/update-cdn-ssl-certificate.md)
-      + [Tar bort eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+      + [Introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/introduction.html)
+      + [Hämta ett anpassat domännamn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/get-custom-domain-name.html)
+      + [Lägga till ett anpassat domännamn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name.html)
+      + [Lägga till en TXT-post](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/add-text-record.html)
+      + [Kontrollerar status för anpassat domännamn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/check-domain-name-status.html)
+      + [Konfigurera DNS-inställningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/configure-dns-settings.html)
+      + [Kontrollerar DNS-poststatus](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/check-dns-record-status.html)
+      + [Visa och uppdatera anpassat domännamn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.html)
+      + [Uppdaterar det anpassade domännamnets SSL-certifikat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/update-cdn-ssl-certificate.html)
+      + [Tar bort eget domännamn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/delete-custom-domain-name.html)
    + Hantera IP-Tillåtelselista {#ip-allow-lists}
-      + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
-      + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
-      + [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)
-      + [Använda ett IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
-      + [Avaktivera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
-      + [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
-      + [Kontrollera status för IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
+      + [Introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/introduction.html)
+      + [Lägga till en IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/add-ip-allow-lists.html)
+      + [Visa och uppdatera en IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/view-update-ip-allow-list.html)
+      + [Använda ett IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html)
+      + [Avaktivera IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/unapply-ip-allow-list.html)
+      + [Ta bort en IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/delete-ip-allow-list.html)
+      + [Kontrollera status för IP Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/check-ip-allow-list-status.html)
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
       + [Aktuell versionsinformation (2021.1.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
       + [Versionsinformation för 2020.12.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-12-0.md)
