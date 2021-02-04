@@ -5,10 +5,10 @@ user-guide-title: Redigera innehåll i AEM as a Cloud Service
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service.
 translation-type: tm+mt
-source-git-commit: 2c00c3723c3c84365044b5cd2fe6779de0360736
+source-git-commit: 0999f7a2a915df0d58876e17ceb5e93e13b7f817
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 90%
+source-wordcount: '241'
+ht-degree: 88%
 
 ---
 
@@ -50,6 +50,7 @@ ht-degree: 90%
       + [Komponentkonsol](authoring/features/components-console.md)
       + [Responsiv layout](authoring/features/responsive-layout.md)
       + [Använda taggar](authoring/features/tags.md)
+      + [Aktivera progressiva webbprogramfunktioner](authoring/features/enable-pwa.md)
    + Projekt {#projects}
       + [Arbeta med projekt](authoring/projects/overview.md)
       + [Hantera projekt](authoring/projects/managing.md)
