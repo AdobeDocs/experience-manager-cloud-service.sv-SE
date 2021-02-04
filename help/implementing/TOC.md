@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: b0abba78292035140688b1802e8d8f12a121a1f0
+source-git-commit: e59f3d09a6e7a6007e25e088feb86c25be994bed
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 41%
+source-wordcount: '724'
+ht-degree: 40%
 
 ---
 
@@ -69,6 +69,7 @@ ht-degree: 41%
    + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
    + [API för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
    + [Genererar åtkomsttoken för API:er på serversidan](developing/introduction/generating-access-tokens-for-server-side-apis.md)
+   + [Headless and Headless in AEM](developing/headful-headless.md)
    + Utveckling AEM hög {#full-stack}
       + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
       + [Struktur för AEM](developing/introduction/ui-structure.md)
@@ -102,7 +103,6 @@ ht-degree: 41%
       + [Riktlinjer för Java API](/help/implementing/developing/introduction/java-api-guidelines.md)
    + Hybrid AEM Development {#hybrid}
       + [Hybrid och SPA med AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-      + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
       + [SPA introduktion och genomgång](developing/hybrid/introduction.md)
       + [SPA WKND - självstudiekurs](developing/hybrid/wknd-tutorial.md)
       + [Komma igång med React](developing/hybrid/getting-started-react.md)
@@ -114,8 +114,11 @@ ht-degree: 41%
       + [SPA](developing/hybrid/page-component.md)
       + [Dynamisk mappning av modell till komponent](developing/hybrid/model-to-component-mapping.md)
       + [Modellroutning](developing/hybrid/routing.md)
-      + [Starta integrering](developing/hybrid/launch-integration.md)
+      + [RemotePage-komponenten](developing/hybrid/remote-page.md)
+      + [Redigera en extern SPA i AEM](developing/hybrid/editing-external-spa.md)
       + [Återgivning på serversidan](developing/hybrid/ssr.md)
+      + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
+      + [Starta integrering](developing/hybrid/launch-integration.md)
       + [SPA referensdokument](developing/hybrid/reference-materials.md)
    + Headless Experience Management {#headless}
       + [Headless och AEM](developing/headless/introduction.md)
