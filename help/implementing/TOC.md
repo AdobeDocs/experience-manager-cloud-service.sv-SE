@@ -4,10 +4,10 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: e59f3d09a6e7a6007e25e088feb86c25be994bed
+source-git-commit: 769b45e2546b06edba24c5cd33ad3e4547b3b54c
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 40%
+source-wordcount: '869'
+ht-degree: 33%
 
 ---
 
@@ -85,7 +85,7 @@ ht-degree: 40%
          + [Komponenter - översikt](developing/components/overview.md)
          + [Mallar](developing/components/templates.md)
          + [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-         + [Formatsystem](/help/sites-cloud/authoring/features/style-system.md)
+         + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)
          + [JSON-exporterare för innehållstjänster](developing/components/json-exporter.md)
          + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
          + [Bildredigeraren](developing/components/image-editor.md)
@@ -103,6 +103,7 @@ ht-degree: 40%
       + [Riktlinjer för Java API](/help/implementing/developing/introduction/java-api-guidelines.md)
    + Hybrid AEM Development {#hybrid}
       + [Hybrid och SPA med AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+      + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
       + [SPA introduktion och genomgång](developing/hybrid/introduction.md)
       + [SPA WKND - självstudiekurs](developing/hybrid/wknd-tutorial.md)
       + [Komma igång med React](developing/hybrid/getting-started-react.md)
@@ -117,7 +118,7 @@ ht-degree: 40%
       + [RemotePage-komponenten](developing/hybrid/remote-page.md)
       + [Redigera en extern SPA i AEM](developing/hybrid/editing-external-spa.md)
       + [Återgivning på serversidan](developing/hybrid/ssr.md)
-      + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
+      + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
       + [Starta integrering](developing/hybrid/launch-integration.md)
       + [SPA referensdokument](developing/hybrid/reference-materials.md)
    + Headless Experience Management {#headless}
@@ -129,22 +130,22 @@ ht-degree: 40%
          + [Skapa ett innehållsfragment](developing/headless/getting-started/create-content-fragment.md)
          + [Åtkomst och leverans av innehållsfragment](developing/headless/getting-started/create-api-request.md)
       + Innehållsfragment {#content-fragments}
-         + [Headless Delivery with Content Fragments and GraphQL](/help/assets/content-fragments/content-fragments-graphql.md)
-         + [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
-         + [Aktivera funktionen för innehållsfragment för instansen](/help/assets/content-fragments/content-fragments-configuration-browser.md)
-         + [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
-         + [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)
-         + [Variationer – redigera innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md)
-         + [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
-         + [Använda associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md)
-         + [Metadata – fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
-         + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
-         + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
+         + [Headless Delivery with Content Fragments and GraphQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
+         + [Arbeta med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments.html)
+         + [Aktivera funktionen för innehållsfragment för instansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-configuration-browser.html)
+         + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-models.html)
+         + [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-managing.html)
+         + [Variationer – redigera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-variations.html)
+         + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-markdown.html)
+         + [Använda associerat innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-assoc-content.html)
+         + [Metadata – fragmentegenskaper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-metadata.html)
+         + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-structure-tree.html)
+         + [Förhandsgranska - JSON-representation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-json-preview.html)
       + Leverans-API {#delivery-api}
-         + [Innehållsfragment REST API](/help/assets/content-fragments/assets-api-content-fragments.md)
-         + [Content Fragments GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)
-         + [Autentisering för AEM GraphQL-frågor om innehållsfragment](/help/assets/content-fragments/graphql-authentication-content-fragments.md)
-         + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
+         + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
+         + [Content Fragments GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
+         + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)
+         + [Autentisering för AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/graphql-authentication-content-fragments.md)
 + Utvecklarverktyg {#developer-tools}
    + [AEM Developer Tools for Eclipse](/help/implementing/developing/tools/eclipse.md)
    + [Innehållspaket Maven Plugin](/help/implementing/developing/tools/maven-plugin.md)
@@ -160,7 +161,7 @@ ht-degree: 40%
    + [Utökar ContextHub](developing/personalization/extending-contexthub.md)
    + [ContextHub API](developing/personalization/contexthub-api.md)
    + [Integrera med Adobe Target](/help/sites-cloud/integrating/adobe-target.md)
-   + [Konfigurera segmentering med ContextHub](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
+   + [Konfigurera segmentering med ContextHub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/personalization/contexthub-segmentation.html)
 + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
    + [Utöka Experience Fragments](developing/extending/experience-fragments.md)
    + [Anpassa och utöka Content Fragments](developing/extending/content-fragments-customizing.md)
