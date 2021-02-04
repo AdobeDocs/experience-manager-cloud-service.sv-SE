@@ -2,9 +2,9 @@
 title: Headless Development for AEM Sites as a Cloud Service
 description: Med kraftfulla funktioner som innehållsmodeller, innehållsfragment och GraphQL API kan du AEM som en Cloud Service hantera upplevelser centralt och leverera dem i olika kanaler.
 translation-type: tm+mt
-source-git-commit: 712a99095494ab333cf0ebb2ac9fffe3f5945f3b
+source-git-commit: e1db93e8f4cf8ef881b274879e800c9993753a66
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,14 @@ Headless-implementering blir allt viktigare för att ni ska kunna leverera upple
 Den Headless-implementeringen förskjuter hantering av sidor och komponenter på samma sätt som traditionella lösningar med kompletta stackar och hybridlösningar och fokuserar på att skapa kanalneutrala, återanvändbara fragment av innehåll och deras flerkanalsleverans. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av webbupplevelser.
 
 ![AEM implementeringsmodeller](assets/aem-implementation-models.png)
+
+## Jämför Headful och Headless {#headful-headless}
+
+Det här dokumentet fokuserar på den fullständiga headless-implementeringsmodellen för AEM. Men headful kontra headless behöver inte vara ett binärt val i AEM. Headless-funktioner kan användas för att hantera och leverera innehåll till olika slutpunkter och samtidigt göra det möjligt för innehållsförfattare att redigera single page-applikationer. Allt i AEM.
+
+>[!TIP]
+>
+>Mer information finns i dokumentet [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md).
 
 ## AEM som en Cloud Service och Headless {#aem-headless}
 
