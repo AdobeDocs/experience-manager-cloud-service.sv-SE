@@ -3,9 +3,9 @@ title: Tagga resurser automatiskt med AI-genererade taggar
 description: Tagga resurser med artificiellt intelligenta tjänster som lägger till kontextuella och beskrivande taggar med hjälp av  [!DNL Adobe Sensei] service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ceaa9546be160e01b124154cc827e6b967388476
+source-git-commit: c7befef579ca6f722ca630102c875bfb7651c131
 workflow-type: tm+mt
-source-wordcount: '2729'
+source-wordcount: '2737'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ Du kan tagga följande typer av resurser:
 
 * **Bilder**: Bilder i många format taggas med Adobe Sensei smarta innehållstjänster. Du [skapar en utbildningsmodell](#train-model) och [använder smarta taggar](#tag-assets) på bilder.
 * **Videomaterial**: Videotaggning är aktiverat som standard i  [!DNL Adobe Experience Manager] som  [!DNL Cloud Service]en. [Videor ](/help/assets/smart-tags-video-assets.md) taggas automatiskt när du överför nya videoklipp eller bearbetar om befintliga.
-* **Textbaserade resurser**:  [!DNL Experience Manager Assets] taggar automatiskt de textbaserade resurserna som stöds när de överförs.
+* **Textbaserade resurser**:  [!DNL Experience Manager Assets] taggar automatiskt de textbaserade resurserna som stöds när de överförs. Läs mer om [smart taggning av textbaserade resurser](#smart-tag-text-based-assets).
 
 ## Resurstyper som stöds {#smart-tags-supported-file-formats}
 
