@@ -3,9 +3,9 @@ title: Dela resurser, mappar och samlingar som en länk
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i [!DNL Experience Manager Assets] som en hyperlänk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: db653daa2d3c271329812b35960f50ee22fb9943
+source-git-commit: c023451f2b5c5e1ce2cbc9eddb858f96bd28cbd6
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 >[!NOTE]
 >
 >* Du behöver behörigheten Redigera åtkomstkontrollista för mappen eller resursen som du vill dela som en länk.
->* Innan du delar en länk med användarna måste du kontrollera att Dag CQ Mail Service har konfigurerats. Annars inträffar ett fel.
+>* Innan du delar en länk med användarna måste du se till att [utgående e-post är aktiverad](/help/implementing/developing/introduction/development-guidelines.md#sending-email). Annars inträffar ett fel.
 
 
 1. I [!DNL Assets]-användargränssnittet väljer du resursen som ska delas som en länk.
