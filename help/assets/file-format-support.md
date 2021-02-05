@@ -3,10 +3,10 @@ title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 72a87e2eb8c4e40bbe0e5f831afc374fe3521bd7
+source-git-commit: ceaa9546be160e01b124154cc827e6b967388476
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 6%
+source-wordcount: '807'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 [!DNL Experience Manager Assets] har dessutom utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med [asset microservices](asset-microservices-configure-and-use.md).
 
-Några av de viktigaste funktionerna för tillgångskonvertering med hjälp av mikrotjänster:
+Några av de viktigaste funktionerna för resurskonvertering är följande:
 
 * Nyckelformat [Adobe](#adobe-formats) som skapats av Adobe program och tjänster, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension] och [!DNL Adobe Acrobat] eller PDF.
 * Nyckel [filformat för bildåtergivning](#image-formats).
@@ -25,7 +25,7 @@ Några av de viktigaste funktionerna för tillgångskonvertering med hjälp av m
 * Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
 * Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
 
-Följande förklaring beskriver supportnivån.
+I följande förklaring beskrivs stödnivån för varje format.
 
 | Supportnivå | Beskrivning |
 | ------------- | --------------------------- |
@@ -231,4 +231,5 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 >[!MORELIKETHIS]
 >
 >* [Behandling av tillgångar med hjälp av mikrotjänster](asset-microservices-overview.md)
+>* [Filformat som stöds för smart taggning av textbaserade resurser](/help/assets/smart-tags.md#smart-tags-supported-file-formats)
 
