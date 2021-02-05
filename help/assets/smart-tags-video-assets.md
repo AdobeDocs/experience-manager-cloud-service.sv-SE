@@ -2,9 +2,9 @@
 title: Smarta taggar för videomaterial
 description: Experience Manager lägger automatiskt till kontextuella och beskrivande smarta taggar i videoklipp med  [!DNL Adobe Sensei].
 translation-type: tm+mt
-source-git-commit: 7af525ed1255fb4c4574c65dc855e0df5f1da402
+source-git-commit: ceaa9546be160e01b124154cc827e6b967388476
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som ett  [!DNL Cloud Service] stöd för automatisk taggning av videomaterial med hjälp av artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Med funktionen [!DNL Adobe Sensei] för smart taggning av video används artificiell intelligens för att analysera videoinnehåll och lägga till taggar i videoresurserna. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i videon. den andra uppsättningen avser åtgärder som att dricka, köra och jogga.
 
-Automatisk taggning av videomaterial sker som standardbearbetning av resurser (tillsammans med skapande av miniatyrer och metadataextrahering) efter att en video har överförts eller när en ombearbetning utlöses. De smarta taggarna visas i fallande ordning efter [konfidensintervallet](#confidence-score-video-tag) i resursen [!UICONTROL Properties]. Videotaggning är som standard aktiverad i [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. Du kan dock [välja bort smart taggning för video](#opt-out-video-smart-tagging) i en mapp.
+Videotaggning är som standard aktiverad i [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. Du kan dock [välja bort smart taggning för video](#opt-out-video-smart-tagging) i en mapp. Videor taggas automatiskt när du överför nya videoklipp eller bearbetar om befintliga. [!DNL Experience Manager] skapar också miniatyrbilder och extraherar metadata för videofilerna. De smarta taggarna visas i fallande ordning efter [konfidensintervallet](#confidence-score-video-tag) i resursen [!UICONTROL Properties].
 
 ## Smart taggning av videoklipp vid överföring {#smart-tag-assets-on-ingestion}
 
