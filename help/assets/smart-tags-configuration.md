@@ -3,10 +3,10 @@ title: Förbättrade smarta taggar
 description: Använd kontextuella och beskrivande taggar med Adobe Senseis AI- och ML-tjänst för att förbättra resursidentifieringen och innehållets hastighet.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7af525ed1255fb4c4574c65dc855e0df5f1da402
+source-git-commit: ceaa9546be160e01b124154cc827e6b967388476
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 96%
+source-wordcount: '894'
+ht-degree: 95%
 
 ---
 
@@ -25,7 +25,7 @@ Smart Tags-funktionen kan köpas som tillägg till [!DNL Experience Manager]. N�
 
 >[!IMPORTANT]
 >
->De nya [!DNL Experience Manager Assets]-distributionerna är som standard integrerade med [!DNL Adobe Developer Console]. Det hjälper till att konfigurera smarta taggar snabbare. I befintliga distributioner följer administratörer de här stegen för att konfigurera integreringen.
+>[!DNL Experience Manager Assets] distributioner som skapats efter  [augusti 2020-](/help/release-notes/release-notes-cloud/2020/release-notes-2020-8-0.md#assets) utgåvan är integrerade  [!DNL Adobe Developer Console] med som standard. Det hjälper till att konfigurera smarta taggar snabbare. I äldre distributioner kan administratörer följa de här stegen för att konfigurera integreringen.
 
 ## Integrera med Adobe Developer Console {#aio-integration}
 
@@ -109,7 +109,7 @@ När certifikatet upphör att gälla är det inte längre tillförlitligt. Följ
 
 1. Gå till [https://console.adobe.io](https://console.adobe.io) och navigera till den befintliga tjänsten i projektet. Överför det nya certifikatet och konfigurera det. Mer information om konfiguration finns i anvisningarna i [Integrering med Adobe Developer Console](#create-aio-integration).
 
-## Aktivera smart taggning för nyligen överförda resurser (valfritt) {#enable-smart-tagging-for-uploaded-assets}
+## Aktivera automatisk taggning när resurser överförs (valfritt) {#enable-smart-tagging-for-uploaded-assets}
 
 1. I [!DNL Experience Manager] går du till **[!UICONTROL Tools > Workflow > Models]**.
 1. Välj arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** på sidan **[!UICONTROL Workflow Models]**.
