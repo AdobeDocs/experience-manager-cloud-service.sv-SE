@@ -3,10 +3,10 @@ title: Skapa och hantera digitala resurser på flera språk
 description: Lär dig automatisera arbetsflöden för översättning av resurser, inklusive binära filer, metadata och taggar till flera språk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f85dea62ba334fd5b3a7cc45fbf09556cbfdd2ec
+source-git-commit: 100171693837dcdcef0efeab8d61b567114c5ef0
 workflow-type: tm+mt
-source-wordcount: '2461'
-ht-degree: 19%
+source-wordcount: '2440'
+ht-degree: 20%
 
 ---
 
@@ -186,7 +186,10 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
 1. Navigera till resurskonsolen och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
 
-Tips om hur du översätter metadata för resurser effektivt finns i [5 Steg för att översätta metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).
+<!-- TBD: Possibly this blog wasn't migrated. Still try to find from the author. Old one is archived at https://web.archive.org/web/20180423042713/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/
+
+For tips on translating metadata for assets efficiently, see [5 Steps to efficiently translate metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/). 
+-->
 
 ## Skapa översättningsprojekt {#creating-translation-projects}
 
