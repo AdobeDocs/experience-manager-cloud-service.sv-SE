@@ -2,7 +2,7 @@
 title: Markdown
 description: När du redigerar innehållsfragmentet använder redigeraren markeringssyntax så att du enkelt kan skriva innehåll.
 translation-type: tm+mt
-source-git-commit: 2ab82c18fedd5e49a9aa1bcb0a774f55327d9b56
+source-git-commit: 05e2ccd53749fe7b0ac516688a1d205d46fc3492
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 4%
@@ -186,24 +186,24 @@ Du kan använda omvänt snedstreck för att generera litterala tecken som har en
 
 Omvända snedstreck är tillgängliga för följande tecken:
 
-    `\ backslash`
+    ` \ backslash`
 
     `` ` backtick``
 
-    `* asterisk`
+    ` * asterisk`
 
-    `_ underscore`
+    ` _ underscore`
 
-    `{} curly braces`
+    ` {} curly braces`
 
-    `[] square brackets`
+    ` [] square brackets`
 
-    `() parentheses`
+    ` () parentheses`
 
-    `# hash mark`
+    ` # hash mark`
 
-    `+ plus sign`
+    ` + plus sign`
 
-    `- minus sign (hyphen)`
+    ` - minus sign (hyphen)`
 
-    `. dot`
+    ` . dot`
