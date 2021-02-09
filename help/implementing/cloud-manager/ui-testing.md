@@ -2,9 +2,9 @@
 title: UI-testning - Cloud Services
 description: UI-testning - Cloud Services
 translation-type: tm+mt
-source-git-commit: bf3fb5178bc2ae72e19ecc1de82b08fac5089ecf
+source-git-commit: ea0c9675ca03b1d247c7e5fd13e03072fb4a13ae
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -12,12 +12,11 @@ ht-degree: 0%
 
 # Gränssnittstestning {#ui-testing}
 
->[!CAUTION]
->
->Den här funktionen är inte allmänt tillgänglig än.
-
-
 Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Docker-bilden kan skapas med standardverktyg, men måste följa vissa regler när den körs. När du kör Docker-bilden etableras en Selenium-server automatiskt. Med de runtime-konventioner som beskrivs nedan kan din testkod få åtkomst till både Selenium-servern och AEM instanser som testas.
+
+>[!NOTE]
+> Scen- och produktionsrörledningar som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs på den här sidan ska kunna användas.
+> Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md) för information om pipeline-konfigurationen.
 
 ## Skapar gränssnittstester {#building-ui-tests}
 
