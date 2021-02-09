@@ -2,10 +2,10 @@
 title: Arbeta med riktat innehåll på flera webbplatser
 description: Om ni behöver hantera riktat innehåll, t.ex. aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 01ca37d8bdf1c7e5c1801db6f4ad537772407064
 workflow-type: tm+mt
-source-wordcount: '2900'
-ht-degree: 5%
+source-wordcount: '2915'
+ht-degree: 4%
 
 ---
 
@@ -52,6 +52,7 @@ En webbplats eller en live-kopia länkar till ett område som innehåller de akt
 >
 >* När du använder utrullningar eller live-kopior krävs en MSM-licens.
 >* När du synkroniserar med Adobe Target krävs en Adobe Target-licens.
+
 >
 
 
@@ -188,9 +189,9 @@ Så här skapar du ett område som en livecopy:
 
 1. Välj lämplig konfiguration i listrutan **Utrullningskonfigurationer**.
 
-   Se Installerade utrullningskonfigurationer för beskrivningar av varje alternativ. <!--See [Installed Rollout Configurations](/help/sites-administering/msm-sync.md#installed-rollout-configurations) for descriptions of each option.-->
+   Se [Installerade utrullningskonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-sync.html#installed-and-custom-rollout-configurations) för beskrivningar av varje alternativ.
 
-   Mer information om live-kopior finns i Skapa och synkronisera live-kopior. <!--See [Creating and Synchronizing Live Copies](/help/sites-administering/msm-livecopy.md) for more information on live copies.-->
+   Mer information om live-kopior finns i [Skapa och synkronisera live-kopior](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-livecopy.html).
 
    >[!NOTE]
    >
@@ -239,6 +240,7 @@ En aktivitet som ärver från en annan plats markeras som grön bredvid aktivite
 >
 >* Du kan bara göra uppehåll i eller koppla loss live-kopior i en aktivitet.
 >* Du behöver inte göra uppehåll i eller koppla loss live-kopior för att utöka en ärvd aktivitet. Du kan alltid skapa **nya** lokala upplevelser och erbjudanden för den aktiviteten. Om du vill ändra en befintlig aktivitet måste du göra uppehåll i arv.
+
 >
 
 
