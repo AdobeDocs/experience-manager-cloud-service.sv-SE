@@ -2,9 +2,9 @@
 title: Interaktiva videoklipp
 description: Lär dig hur du arbetar med interaktiv video och videor som kan köpas i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 3431f7f82b086c5c9aa0c2900332eae70728b147
 workflow-type: tm+mt
-source-wordcount: '5969'
+source-wordcount: '5970'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ Om du vill se en interaktiv, köpbar video klickar du på [Live Demos](https://l
 
 * Klicka på miniatyrbilden för att pausa videon och öppna snabbvyn för produkten. Du kan till exempel klicka på miniatyrbilden Kitchenaid i videon om du vill se en 360-graders snurvvy av blandaren, eller zooma in om du vill se blandningsinformationen.
 
-Se även [Använda interaktiv video med Dynamic Media](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-interactive-video-feature-video-use.html)
+Se även [Använda interaktiv video med Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-interactive-video-feature-video-use.html?lang=en#dynamic-media)
 
 <!-- 
 
@@ -93,10 +93,9 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part måste du int
 ## (Valfritt) Identifiera QuickView-variabler {#optional-identifying-quickview-variables}
 
 >[!NOTE]
->
->Den här aktiviteten krävs bara om följande är sant:
->* Du vill lägga till interaktivitet i videon genom att aktivera snabbvyer.
->* Er implementering av AEM *inte* använder ett ramverk för e-handelsintegrering för att hämta produktdata till AEM från en e-handelslösning som IBM Websphere Commerce, Elastic Path, hybris eller Intershop. <!-- See [eCommerce concepts in AEM Assets](/help/sites-administering/concepts.md).-->
+Den här aktiviteten krävs bara om följande är sant:
+* Du vill lägga till interaktivitet i videon genom att aktivera snabbvyer.
+* Er implementering av AEM *inte* använder ett ramverk för e-handelsintegrering för att hämta produktdata till AEM från en e-handelslösning som IBM Websphere Commerce, Elastic Path, hybris eller Intershop. <!-- See [eCommerce concepts in AEM Assets](/help/sites-administering/concepts.md).-->
 
 Om din implementering av AEM använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
 
@@ -257,12 +256,10 @@ När du har lagt till tidslinjesegment lägger du till miniatyrbilder i varje se
 Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
 
 >[!NOTE]
->
->Tänk på att verktygen för delning av sociala medier i interaktiv video inte stöds när du bäddar in visningsprogrammet i ett Experience Fragment. Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
+Tänk på att verktygen för delning av sociala medier i interaktiv video inte stöds när du bäddar in visningsprogrammet i ett Experience Fragment. Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
 >[!NOTE]
->
->Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
 Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöds under den aktuella skaps-/redigeringssessionen.
 
@@ -483,8 +480,7 @@ Så här lägger du till interaktivitet i videon:
    När du är klar trycker du på **[!UICONTROL Save]**.
 
    >[!NOTE]
-   >
-   >När du sparar den interaktiva videon sparas en associerad `.vtt`-fil automatiskt med den. `.vtt`-filen sparas i den `_VTT`-mapp som finns i roten för **[!UICONTROL Assets]**. Filen och mappen är nödvändiga för att den interaktiva videon ska kunna spelas upp korrekt på webbplatsen. Därför ska du inte flytta, redigera eller ta bort mappen `_VTT` eller dess innehåll.
+   När du sparar den interaktiva videon sparas en associerad `.vtt`-fil automatiskt med den. `.vtt`-filen sparas i den `_VTT`-mapp som finns i roten för **[!UICONTROL Assets]**. Filen och mappen är nödvändiga för att den interaktiva videon ska kunna spelas upp korrekt på webbplatsen. Därför ska du inte flytta, redigera eller ta bort mappen `_VTT` eller dess innehåll.
 
 1. Publicera den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kommer att kopiera och klistra in på webbplatsupplevelserna.
 
@@ -493,8 +489,7 @@ Så här lägger du till interaktivitet i videon:
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
    >[!NOTE]
-   >
-   >Om du vill publicera en videoklipp som kan köpas med snabbvyer måste du även publicera videons relaterade bildresurser separat från din e-handelsplats.
+   Om du vill publicera en videoklipp som kan köpas med snabbvyer måste du även publicera videons relaterade bildresurser separat från din e-handelsplats.
 
    När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med din webbplats.](#integrating-an-interactive-video-with-your-website)
 
@@ -519,9 +514,8 @@ Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddnin
 Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den automatiskt ska passa in på det område som den statiska videon tidigare tog upp.
 
 >[!NOTE]
->
->Nu är du klar om du har lagt till interaktivitet med endast hyperlänkade webbsidor.
->Om du har lagt till någon interaktivitet för att aktivera en snabbvy är miniatyrbilderna som ligger intill den interaktiva videon endast avsedda för visning. de är ännu inte integrerade med dina befintliga snabbvyer. I så fall måste du nu integrera den interaktiva videon med befintliga snabbvyer på webbplatsen.
+Nu är du klar om du har lagt till interaktivitet med endast hyperlänkade webbsidor.
+Om du har lagt till någon interaktivitet för att aktivera en snabbvy är miniatyrbilderna som ligger intill den interaktiva videon endast avsedda för visning. de är ännu inte integrerade med dina befintliga snabbvyer. I så fall måste du nu integrera den interaktiva videon med befintliga snabbvyer på webbplatsen.
 
 **Exempel**
 
@@ -563,8 +557,7 @@ Integrationen är lika enkel som att ta bort inbäddningskoden för video och er
 ## Integrera en interaktiv video med en befintlig snabbvy {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
->
->Detta gäller endast om du är en fristående AEM Assets-kund.
+Detta gäller endast om du är en fristående AEM Assets-kund.
 
 Det sista steget i den här processen är att integrera din interaktiva video med en befintlig QuickView-implementering som används på din webbplats. Det finns ingen lösning på integreringen som fungerar i alla fall. Alla QuickView-implementeringar är unika. Därför behövs ett specifikt tillvägagångssätt som sannolikt inbegriper hjälp av en IT-handläggare på frontend.
 
@@ -639,7 +632,7 @@ Den inbäddningskod som returneras av AEM har redan en färdig händelsehanterar
 
 Därför är det bara nödvändigt att avkommentera det markerade kodfragmentet ovan och ersätta dummy-hanterarbrödtexten med kod som är specifik för den aktuella webbsidan.
 
-Det finns två standardhanterare för återanrop i standardkoden för inbäddning: `quickViewActivate` och `initComplete`. Hanteraren `quickViewActivate` aktiveras när någon klickar på en miniatyrbild i visningsprogrammet. Integrera visningsprogrammet med QuickView-aktiveringslogiken. Hanteraren `initComplete` aktiveras endast en gång när visningsprogrammet läses in på sidan. Den här hanteraren används för att justera platsen för dialogrutan Snabbvy i webbsidans DOM.
+Det finns två standardhanterare för återanrop i standardkoden för inbäddning: `quickViewActivate` och `initComplete`. Hanteraren `quickViewActivate` aktiveras när någon klickar på en miniatyrbild i visningsprogrammet. Integrera visningsprogrammet med QuickView-aktiveringslogiken. Hanteraren `initComplete` aktiveras endast en gång när visningsprogrammet läses in på sidan. Hanteraren används för att justera platsen för dialogrutan Snabbvy i webbsidans DOM.
 
 Processen med att skapa en URL för snabbvyn är motsatt till processen att identifiera miniatyrbildsvariabler som beskrivs tidigare i det här avsnittet. Med hjälp av våra tidigare identifierade QuickView URL-exempel kan du se hur QuickView-webbadressen är konstruerad i varje fall:
 
