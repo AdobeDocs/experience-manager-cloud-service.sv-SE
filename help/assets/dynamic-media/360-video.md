@@ -2,9 +2,9 @@
 title: 360/VR-video
 description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 3431f7f82b086c5c9aa0c2900332eae70728b147
+source-git-commit: 5ff144ffd43501d04d8295d3726fe2368e9b4389
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 360/VR-video {#vr-video}
 
-360-gradersvyer spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.
+360-gradersvyer spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. de inbyggda gyroskopiska kontrollerna används vanligtvis vid uppspelning på mobila enheter.
 
 Dynamic Media har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.
 
-I det här avsnittet beskrivs hur du arbetar med 360/VR Video Viewer för att återge ekvirektangulär video för en engagerande tittarupplevelse av ett rum, en egenskap, plats, landskap, medicinska procedurer och så vidare.
+Du kan använda 360/VR-visningsprogrammet för att återge ekvirektangulär video. Resultatet blir en engagerande tittarupplevelse av ett rum, en fastighet, en plats, ett landskap, ett medicinskt förfarande och så vidare.
 
 Spatial audio stöds för närvarande inte. om ljudet blandas i stereo ändras inte balansen (L/R) när kunden ändrar kamerans visningsvinkel.
 
@@ -26,7 +26,7 @@ Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managin
 
 ## 360 Video in action {#video-in-action}
 
-Tryck på [Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du muspekaren till en ny plats för att ändra visningsvinkeln.
+Tryck på [Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
 
 ![360-](assets/6_5_360videoiss_simplified.png)
 *videoexempelVideobildruta från Space Station 360*
@@ -51,20 +51,20 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
    Om du återger 360-videoinnehåll ställs högre krav på källvideoupplösning och för kodad återgivningsupplösning än standardvideoinnehåll som inte är 360.
 
-   Du kan använda den färdiga adaptiva videoprofilen som redan finns i Dynamic Media. Tänk dock på att det ger betydligt lägre 360-videokvalitet än vad du skulle få för icke-360-video som är kodad med samma inställningar som återges med ett icke-360-videovisningsprogram. Om 360-video med hög kvalitet krävs gör du därför följande:
+   Du kan använda den färdiga adaptiva videoprofilen som redan finns i Dynamic Media. Det ger dock betydligt lägre 360-videokvalitet än vad du skulle få för icke-360-video som är kodad med samma inställningar som återges med ett icke-360-videovisningsprogram. Om 360-video med hög kvalitet krävs gör du därför följande:
 
-   * Helst bör ditt ursprungliga 360-videoinnehåll ha någon av följande upplösningar:
+   * Helst har ditt ursprungliga 360-videoinnehåll någon av följande upplösningar:
 
       * 1080p - 1920 x 1080, känd som Full HD eller FHD upplösning eller
-      * 2160p - 3840 x 2160, känd som 4K-, UHD- eller Ultra HD-upplösning. Den här mycket stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4K&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
+      * 2160p - 3840 x 2160, känd som 4K-, UHD- eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4K&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
    * [Skapa en anpassad adaptiv ](/help/assets/dynamic-media/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) videoprofil med renderingar av högre kvalitet. Du kan till exempel skapa en adaptiv videoprofil som innehåller följande tre inställningar:
 
-      * width=auto; height=720; bithastighet=2 500 kbit/s
-      * width=auto; height=1080; bithastighet=5000 kbit/s
-      * width=auto; height=1440; bithastighet=6600 kbit/s
+      * Width=auto; Höjd=720; Bithastighet=2 500 kbit/s
+      * Width=auto; Höjd=1080; Bithastighet=5000 kbit/s
+      * Width=auto; Höjd=1440; Bithastighet=6600 kbit/s
    * Bearbeta 360-videoinnehåll i en mapp som är exklusivt dedikerad till 360-videoresurser.
 
-   Tänk på att detta tillvägagångssätt också kommer att ställa större krav på slutanvändarens nätverk och CPU.
+   Detta tillvägagångssätt ställer större krav på slutanvändarens nätverk och processor.
 
 1. [Överför videon till mappen](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
 
@@ -98,16 +98,16 @@ Se även [Redigera visningsförinställningar](/help/assets/dynamic-media/managi
 När du är nöjd med 360-videon kan du publicera den.
 
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
+Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
 Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
 
 **Så här förhandsgranskar du 360-videoklipp**
 
-1. I **[!UICONTROL Assets]** navigerar du till en befintlig 360-video som du har skapat. Tryck på 360-videoresursen för att öppna den i förhandsgranskningsläge.
+1. I **[!UICONTROL Assets]** navigerar du till en befintlig 360-video som du har skapat. Tryck på resursen 360 Video för att öppna den i förhandsgranskningsläge.
 
    ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
 
-   Tryck på 360-videoresursen för att förhandsgranska videon.
+   Om du vill förhandsgranska videon trycker du på 360-videoresursen.
 
 1. Tryck på listrutan på förhandsgranskningssidan i det övre vänstra hörnet av sidan och välj **[!UICONTROL Viewers]**.
 
@@ -115,8 +115,8 @@ Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/dynamic-media/addi
 
    Tryck på **[!UICONTROL Video360_social]** i visningslistan och gör sedan något av följande:
 
-   * Dra muspekaren över videon om du vill ändra visningsvinkeln för den statiska scenen.
-   * Tryck på videons **[!UICONTROL Play]**-knapp för att påbörja uppspelningen; När videon spelas upp drar du muspekaren över videon för att ändra visningsvinkeln.
+   * Om du vill ändra visningsvinkeln för den statiska scenen drar du pekaren över videon.
+   * Tryck på videoknappen **[!UICONTROL Play]** för att påbörja uppspelningen. När videon spelas upp drar du pekaren över videon för att ändra visningsvinkeln.
 
    ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360 video, skärmdump.*
 
@@ -130,9 +130,9 @@ Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/dynamic-media/addi
 
 ## Publicerar 360-video {#publishing-video}
 
-Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
+Om du vill använda 360-video måste du publicera den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
 
 Mer information om hur du publicerar 360-video finns i [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se även [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
+Se även [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
 Se även [Lägga till Dynamic Media Assets på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
