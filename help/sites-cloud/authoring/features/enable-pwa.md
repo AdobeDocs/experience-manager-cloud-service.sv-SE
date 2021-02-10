@@ -1,8 +1,10 @@
 ---
 title: Aktivera progressiva webbprogramfunktioner
 description: AEM Sites gör det möjligt för innehållsförfattaren att aktivera progressiva webbprogramfunktioner för alla webbplatser genom enkel konfiguration istället för kodning.
+hide: true
+hidefromtoc: true
 translation-type: tm+mt
-source-git-commit: ba014bb90b1cb08630455b3ac72895272ae8ed5b
+source-git-commit: 071eefa3b6f5e9636ace612e968b6a9627c98550
 workflow-type: tm+mt
 source-wordcount: '1725'
 ht-degree: 0%
