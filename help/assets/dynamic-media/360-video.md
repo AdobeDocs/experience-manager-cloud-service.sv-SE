@@ -2,9 +2,9 @@
 title: 360/VR-video
 description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 59d3f95db8ac4b779207bcf3d260067abea40d93
+source-git-commit: 3431f7f82b086c5c9aa0c2900332eae70728b147
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I det här avsnittet beskrivs hur du arbetar med 360/VR Video Viewer för att å
 
 Spatial audio stöds för närvarande inte. om ljudet blandas i stereo ändras inte balansen (L/R) när kunden ändrar kamerans visningsvinkel.
 
-Se [Använda Dynamic Media 360-videoklipp och miniatyrbild för anpassad video med AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html).
+Se [Använda Dynamic Media 360-videoklipp och miniatyrbild för anpassad video med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html#dynamic-media).
 
 Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
