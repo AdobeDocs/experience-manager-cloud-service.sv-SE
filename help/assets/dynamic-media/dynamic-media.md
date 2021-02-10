@@ -2,9 +2,9 @@
 title: Arbeta med Dynamic Media
 description: Lär dig hur du använder Dynamic Media för att leverera mediefiler för webben, mobiler och sociala medier.
 translation-type: tm+mt
-source-git-commit: a5e94003a3e9023155dc95ceba1a5531e4f20d8f
+source-git-commit: 3431f7f82b086c5c9aa0c2900332eae70728b147
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '394'
 ht-degree: 8%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 8%
 
 Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic Media innehåller arbetsflödena från Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Det finns en community-artikel på [Arbeta med Adobe Experience Manager och Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html).
+>A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
 ## Vad du kan göra med Dynamic Media {#what-you-can-do-with-dynamic-media}
 
