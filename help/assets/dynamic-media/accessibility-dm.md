@@ -1,38 +1,38 @@
 ---
-title: Hjälpmedel i [!DNL Dynamic Media]
+title: Tillgänglighet i Dynamic Media
 description: Läs mer om tillgänglighet i Dynamic Media och Dynamic Media Viewer.
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: c3ada59105cad7c2fc3b36b032d045b91f86b495
+source-git-commit: 75caf21c399271b23e71c7c0045e3a41cda8a851
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
 
 
-# Tillgänglighet i Dynamic Media {#working-with-three-d-assets-dm}
+# Tillgänglighet i Dynamic Media {#accessibility-in-dm}
 
 Dynamic Media har stöd för tangentbordskontroll och hjälpmedelstekniker som JAWS och NVDA-skärmläsare i hela användargränssnittet.
 
-## Stöd för tangentbordstillgänglighet i Dynamic Media
+## Stöd för tangentbordstillgänglighet i Dynamic Media {#keyboard-support-in-dm}
 
-Eftersom Dynamic Media är ett plugin-program till Experience Manager Assets är det mesta av tangentbordskontrollbeteendet precis som i Experience Manager Assets. Knappen `Cancel` i Dynamic Media har till exempel samma fokus som i Experience Manager Assets och reagerar på `Spacebar`-tangenten som i Experience Manager Assets. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
+Eftersom Dynamic Media är ett plugin-program till Experience Manager Assets är det mesta av tangentbordskontrollbeteendet detsamma som i Experience Manager Assets. Knappen `Cancel` i Dynamic Media har till exempel samma fokus som i Experience Manager Assets. Det reagerar även på `Spacebar`-tangenten som i Experience Manager Assets. Se [kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
 
-Tangentbordslinjer som stöds av enskilda element i användargränssnittet i Dynamic Media är i de flesta fall enkla att upptäcka. Tangentbordskontrollen i Dynamic Media handlar om följande:
+Tangenttryckningar som stöds av enskilda element i användargränssnittet i Dynamic Media är i de flesta fall enkla att hitta. Tangentbordskontrollen i Dynamic Media handlar om följande:
 
 * Möjlighet att använda `Tab` och `Shift+Tab`-tangenttryckningar för att navigera mellan interaktiva element på sidan.
 Om du använder `Tab` flyttas indatafokus till nästa element i användargränssnittet i tabbordningen; om du använder `Shift+Tab` får indatafokus tillbaka till det föregående elementet i användargränssnittet.
 Fokusförflyttningen följer det naturliga elementet i användargränssnittet på skärmen och flyttas från vänster till höger och sedan uppifrån och ned. Om ett fält innehåller ett fel kan du dessutom trycka på `Tab` för att flytta fokus till det.
 * Möjlighet att använda tangenterna `Spacebar` och `Enter` för att aktivera standardelement i användargränssnittet, som knappar, listrutor och så vidare.
-* Möjlighet att se fokus på tangentbordet på det aktiva elementet. Det element i användargränssnittet som har indatafokus kan få en visuell fokusindikation som en kantlinje som återges runt elementet i användargränssnittet.
+* Möjlighet att se fokus på tangentbordet på det aktiva elementet. Det element i användargränssnittet som har indatafokus fick en visuell fokusindikation som en kantlinje som renderades runt elementet i användargränssnittet.
 * I Hotspot-redigeraren kan du använda vissa anpassade tangenttryckningar, till exempel piltangenter, för att interagera med komplexa element i användargränssnittet för att flytta hotspot-områden.
-* I den interaktiva videoredigeraren kan du använda `Spacebar` för att markera en bild och lägga till den i ett segment. Dessutom kan du använda `Backspace`-tangenten för att ta bort det markerade objektet från fliken **[!UICONTROL Content]**. Om du trycker på `Tab`-funktioner efter behov för att navigera mellan interaktiva element på sidan.
+* I den interaktiva videoredigeraren kan du använda `Spacebar` för att markera en bild och lägga till den i ett segment. Du kan dessutom använda `Backspace`-tangenten för att ta bort det markerade objektet från fliken **[!UICONTROL Content]**. Om du trycker på `Tab`-funktioner efter behov för att navigera mellan interaktiva element på sidan.
 * I redigeraren för bildbeskärning/smart beskärning kan du göra följande:
-   * Använd piltangenterna för att beskära bildrutestorleken, flytta om bilden eller båda.
-   * Det första `Tab`-steget markerar hela bildramen. Du kan sedan använda piltangenterna på tangentbordet för att placera bildrutan igen.
+   * Använd piltangenterna för att beskära bildrutestorleken, flytta bilden eller båda.
+   * Det första `Tab`-steget markerar hela bildramen. Du kan sedan använda piltangenterna på tangentbordet för att flytta ramen.
    * De följande fyra `Tab` stoppen är ramens fyra hörn. När fokus placeras i ett ramhörn markeras hörnet. Återigen kan du använda piltangenterna på tangentbordet för att flytta det fokuserade hörnet.
 Se [Redigera den smarta beskärningen eller den smarta färgrutan för en enskild bild](/help/assets/dynamic-media/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
@@ -52,7 +52,7 @@ Dynamic Media gränssnittselement fungerar med hjälpmedelstekniker som skärml�
 
 Alla färdiga Dynamic Media-visningsprogram har stöd för tangentbordstillgänglighet för dina kunder.
 
-Se [Tangentbordstillgänglighet och -navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) i referenshandboken för Dynamic Media-visningsprogram.
+Se [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) i referenshandboken för Dynamic Media-visningsprogram.
 
 ## Stöd för hjälpfunktioner i visningsprogram för Dynamic Media {#assistive-technology=support-for-dm-viewers}
 
