@@ -2,7 +2,7 @@
 title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: a02e035a842e7c633aaa926d0ab092b2c7aed5cb
+source-git-commit: d4b7aed89e587750b96b13d07a9252ecabee6c03
 workflow-type: tm+mt
 source-wordcount: '1535'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 * kan åsidosättas på en mer detaljerad nivå med följande direktiv för apache mod_headers:
 
    ```
-   <LocationMatch "\.(html)$">
+   <LocationMatch "^/content/.*\.(html)$">
         Header set Cache-Control "max-age=200"
         Header set Age 0
    </LocationMatch>
@@ -43,7 +43,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
    Var försiktig när du anger rubriker för global cachekontroll eller rubriker som matchar ett brett område så att de inte tillämpas på innehåll som du kanske tänker behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM som en Cloud Service tar då bort cachehuvudet om det upptäcker att det har tillämpats på det som inte kan nås av dispatchern, vilket beskrivs i dispatcherdokumentationen. Om du vill tvinga AEM att alltid använda cachelagring kan du lägga till alternativet &quot;always&quot; enligt följande:
 
    ```
-   <LocationMatch "\.(html)$">
+   <LocationMatch "^/content/.*\.(html)$">
         Header always set Cache-Control "max-age=200"
         Header set Age 0
    </LocationMatch>
@@ -59,7 +59,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 * Om du vill förhindra att specifikt innehåll cachelagras anger du rubriken Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll i en katalog med namnet **myfolder** cachelagras:
 
    ```
-      <LocationMatch "/myfolder/.*\.(html)$">.  // replace with the right regex
+      <LocationMatch "/content/myfolder/.*\.(html)$">.  // replace with the right regex
       Header set Cache-Control “private”
      </LocationMatch>
    ```
@@ -78,7 +78,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 * kan ställas in på en finare kornig nivå med följande direktiv för apache `mod_headers`:
 
    ```
-      <LocationMatch "^\.*.(jpeg|jpg)$">
+      <LocationMatch "^/content/.*\.(jpeg|jpg)$">
         Header set Cache-Control "max-age=222"
         Header set Age 0
       </LocationMatch>
