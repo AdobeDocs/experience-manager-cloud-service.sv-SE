@@ -2,9 +2,9 @@
 title: Bästa tillvägagångssätt för att optimera bildkvalitet
 description: Lär dig de bästa sätten du kan använda i Dynamic Media för att optimera kvaliteten på dina bildresurser.
 translation-type: tm+mt
-source-git-commit: e18fdf02371b641b6ff65d70084b22ab9b6b6ded
+source-git-commit: 3431f7f82b086c5c9aa0c2900332eae70728b147
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1460'
 ht-degree: 5%
 
 ---
@@ -40,9 +40,9 @@ Använd `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sh
 
 Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder på webbplatsen och var många misstag görs. Ta dig tid att lära dig mer om hur skärpa och oskarp maskning fungerar i AEM med hjälp av följande resurser:
 
-Informationsdokumentet [Skärpa bilder i Adobe Dynamic Media Classic](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även för AEM.
+* Informationsdokumentet [Skärpa bilder i Adobe Dynamic Media Classic](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även för AEM.
 
-På Adobe TV tittar du på [Skärpa en bild med oskarp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html).
+* Titta på [Använda bildskärpa med AEM Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-image-sharpening-feature-video-use.html#dynamic-media).
 
 Med AEM kan du öka skärpan i bilder vid intag, vid leverans eller både och. I de flesta fall bör du emellertid skärpa upp bilder med endast en metod eller med en annan, men inte med båda metoderna. Att skärpa bilderna vid leverans, på en URL-adress, ger oftast bäst resultat.
 
