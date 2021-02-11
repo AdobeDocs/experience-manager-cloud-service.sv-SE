@@ -1,11 +1,12 @@
 ---
 title: Lägga till Dynamic Media-resurser på sidor
 description: Så här lägger du till Dynamic Media-komponenter på en sida i Adobe Experience Manager som en Cloud Service.
+contentOwner: Rick Brough
 translation-type: tm+mt
-source-git-commit: d1f2315de6b96a912b38d4b81f5ea0a672f6c168
+source-git-commit: cf607bd27463f23de29d0d6770940a01f3e36c87
 workflow-type: tm+mt
-source-wordcount: '2987'
-ht-degree: 6%
+source-wordcount: '2946'
+ht-degree: 5%
 
 ---
 
@@ -14,28 +15,28 @@ ht-degree: 6%
 
 Om du vill lägga till Dynamic Media-funktionen i resurser som används på era webbplatser kan du lägga till komponenten **dynamiska medier**, **interaktiva medier**, **panoramamedier** eller **360-videomedier** direkt på sidan. Du aktiverar layoutläget och Dynamic Media-komponenterna. Sedan lägger du till de här komponenterna på sidan och lägger till resurser i komponenten. Dynamic Media-komponenterna är smarta – de känner av om du lägger till en bild eller en video och konfigurationsalternativen ändras i enlighet med detta.
 
-Du lägger till Dynamic Media-resurser direkt på sidan om du använder Experience Manager som WCM-fil. Om du använder en tredje part för ditt WCM-system kan du antingen [link](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller [bädda in](/help/assets/dynamic-media/embed-code.md) dina resurser. Om du har en responsiv webbplats hos en extern leverantör läser du [Leverera optimerade bilder till en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md).
+Du lägger till Dynamic Media-resurser direkt på sidan om du använder Experience Manager som WCM-fil. Om du använder en tredje part för ditt WCM-system kan du antingen [link](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller [bädda in](/help/assets/dynamic-media/embed-code.md) dina resurser. En responsiv webbplats från tredje part finns i [Leverera optimerade bilder till en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md).
 
 >[!NOTE]
 >
->Du måste publicera resurser innan du lägger till dem på sidor i Experience Manager. Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+>Se till att du publicerar resurser innan du lägger till dem på sidor i Experience Manager. Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 ## Lägga till en Dynamic Media-komponent på en sida {#adding-a-dynamic-media-component-to-a-page}
 
-Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panoramic Media, Smart Crop Video eller Video 360 Media på en sida är detsamma som att lägga till en komponent på en sida. Dynamic Media-komponenterna beskrivs i följande avsnitt.
+Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panoramic Media, Smart Crop Video eller Video 360 Media på en sida är detsamma som att lägga till en komponent på en sida.
 
 **Lägga till en Dynamic Media-komponent på en sida**
 
 1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
 1. Tryck på ikonen **[!UICONTROL Components]** i den vänstra rutan och filtrera sedan efter Dynamic Media.
 
-   Om det inte finns någon lista över Dynamic Media-komponenter behöver du troligen aktivera de Dynamic Media-komponenter som du vill använda. Se [Aktivera Dynamic Media-komponenter](#enabling-dynamic-media-components).
+   Om det inte finns någon lista över Dynamic Media-komponenter måste du troligen aktivera de Dynamic Media-komponenter som du vill använda. Se [Aktivera Dynamic Media-komponenter](#enabling-dynamic-media-components).
 
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
 1. Dra en **[!UICONTROL Dynamic Media]**-komponent och släpp den på önskad plats på sidan.
 
-1. Håll muspekaren direkt på komponenten. När komponenten är omgiven av en blå ruta trycker du en gång för att visa komponentens verktygsfält. Tryck på ikonen **[!UICONTROL Configuration (wrench)]**.
+1. Håll pekaren direkt på komponenten. När komponenten är omgiven av en blå ruta trycker du en gång för att visa komponentens verktygsfält. Tryck på ikonen **[!UICONTROL Configuration (wrench)]**.
 
    ![6_5_360video_wcmComponentconfigure](assets/6_5_360video_wcmcomponentconfigure.png)
 
@@ -51,10 +52,10 @@ Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panorami
 
 ### Aktivera Dynamic Media-komponenter {#enabling-dynamic-media-components}
 
-Om det inte finns några Dynamic Media-komponenter att lägga till på en sida betyder det troligtvis att du först måste aktivera de komponenter som du vill använda.
+Om det inte finns några Dynamic Media-komponenter att lägga till på en sida betyder det troligtvis att du måste aktivera de komponenter som du vill använda.
 
 1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
-1. Tryck på ikonen Sidinformation till vänster i verktygsfältet längst upp på sidan och tryck sedan på **[!UICONTROL Edit Template]** i listrutan.
+1. Till vänster om verktygsfältet uppe på sidan trycker du på ikonen Sidinformation och sedan på **[!UICONTROL Edit Template]** i listrutan.
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
 
@@ -68,13 +69,14 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
    ![Tillåtna komponenter](/help/assets/assets-dm/allowed-components.png)
 
 1. Rulla tills du ser **[!UICONTROL Dynamic Media]**.
-1. Tryck på ikonen > till vänster om **[!UICONTROL Dynamic Media]** för att utöka listan och markera de Dynamic Media-komponenter som du vill aktivera.
+1. Tryck på ikonen > till vänster om **[!UICONTROL Dynamic Media]** och välj sedan de Dynamic Media-komponenter som du vill aktivera.
 
    ![Lista över komponenter i Dynamic Media](/help/assets/assets-dm/dm-components-select.png)
 
-1. I närheten av det övre högra hörnet på sidan **[!UICONTROL Layout Container]** trycker du på ikonen Klar (bock).
+1. I närheten av det övre högra hörnet på sidan **[!UICONTROL Layout Container]** trycker du på ikonen Klar (bockmarkering).
 
-1. Till höger om verktygsfältet uppe på sidan trycker du på **[!UICONTROL Initial Content]** i listrutan och sedan [lägger du till en Dynamic Media-komponent på en sida](#adding-a-dynamic-media-component-to-a-page) som vanligt.
+1. Tryck på **[!UICONTROL Initial Content]** i listrutan till höger om verktygsfältet uppe på sidan.
+1. [Lägg till en Dynamic Media-komponent på en ](#adding-a-dynamic-media-component-to-a-page) sida som vanligt.
 
 ## Lokaliserar Dynamic Media-komponenter {#localizing-dynamic-media-components}
 
@@ -88,7 +90,7 @@ Du kan lokalisera Dynamic Media-komponenter på ett av två sätt:
 
    >[!NOTE]
    >
-   >Observera att inte alla språk som är tillgängliga på **[!UICONTROL Language]**-menyn har tokens tilldelade.
+   >Alla språk som är tillgängliga på **[!UICONTROL Language]**-menyn har inte tilldelats några tokens.
 
 ## Tillgängliga Dynamic Media-komponenter {#dynamic-media-components}
 
@@ -120,7 +122,7 @@ Dynamic Media-komponenten är smart. Beroende på om du lägger till en bild ell
 
 >
 >
-Tänk på att det inte går att tilldela olika visningsprogramförinställningar till varje Dynamic Media-komponent på den sidan.
+Det går inte att tilldela olika visningsprogramförinställningar till varje Dynamic Media-komponent på den sidan.
 >
 >Du kan dock använda samma visningsförinställning för alla Dynamic Media-komponenter som använder resurser av samma typ på sidan.
 
@@ -142,21 +144,21 @@ Du kan redigera följande Dynamic Media-inställningar genom att trycka på ikon
 >
 >Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height]**.
 
-* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
-   Det här är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är också smarta - endast relevanta visningsprogramförinställningar visas.
+   Det här alternativet är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är även förinställningar som bara är smarta och relevanta för visningsprogrammet visas.
 
 * **[!UICONTROL Viewer modifiers]**—Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogrammen. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1` som anger en annan bild för videominiatyrbilden och associerar en undertextningsfil med videon.
 
-* **[!UICONTROL Image preset]**- Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns kan du behöva göra den synlig. Se Hantera bildförinställningar. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+* **[!UICONTROL Image preset]**—Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns måste du göra den synlig. Se Hantera bildförinställningar. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-* **[!UICONTROL Image Modifiers]**- Du kan använda bildeffekter genom att ange ytterligare bildkommandon. Dessa beskrivs i Bildförinställningar och i Referens för bildserverkommando.
+* **[!UICONTROL Image Modifiers]**- Du kan använda bildeffekter genom att ange fler bildkommandon. Dessa kommandon beskrivs i Bildförinställningar och i Referens för bildserverkommando.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-* **[!UICONTROL Breakpoints]**- Om du använder den här resursen på en responsiv webbplats måste du lägga till bildbrytpunkter. Bildbrytpunkter måste avgränsas med kommatecken (,). Det här alternativet fungerar när ingen höjd eller bredd har definierats i en bildförinställning.
+* **[!UICONTROL Breakpoints]**- Om du använder resursen på en responsiv webbplats måste du lägga till bildbrytpunkterna. Bildbrytpunkter måste avgränsas med kommatecken (,). Det här alternativet fungerar när ingen höjd eller bredd har definierats i en bildförinställning.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
@@ -189,16 +191,16 @@ Du kan redigera följande Dynamic Media-inställningar genom att klicka på **[!
 >
 >Som standard är videokomponenten i Dynamic Media adaptiv. Om du vill göra den till en fast storlek anger du den i komponenten med **[!UICONTROL Width]** och **[!UICONTROL Height]** på fliken **[!UICONTROL Advanced]**.
 
-* **[!UICONTROL Viewer preset]**- Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram.
+* **[!UICONTROL Viewer preset]**- Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se Hantera förinställningar för visningsprogram.
 
-* **[!UICONTROL Viewer modifiers]**—Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för Adobe. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1`
+* **[!UICONTROL Viewer modifiers]**—Visningsmodifierare har formen av  `name=value` par med  `&` avgränsare. De gör att du kan ändra visningsprogram enligt anvisningarna i referenshandboken för Adobe-visningsprogram. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1`
 
    Med visningsmodifierare kan du till exempel göra följande:
 
    * Associera en bildtextfil med en video: [bildtext](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
    * Associera en navigeringsfil med en video: [navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
-   Du kan redigera följande avancerade inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
+      Du kan redigera följande avancerade inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
 * **[!UICONTROL Title]**—Ändra videons titel.
 
@@ -222,13 +224,13 @@ Du kan redigera följande Dynamic Media-inställning genom att klicka på **[!UI
 >
 >Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height]**.
 
-* **[!UICONTROL Image Modifiers]**- Du kan använda bildeffekter genom att ange ytterligare bildkommandon. Dessa beskrivs i Bildförinställningar och i Referens för bildserverkommando.
+* **[!UICONTROL Image Modifiers]**- Du kan använda bildeffekter genom att ange fler bildkommandon. Dessa kommandon beskrivs i Bildförinställningar och i Referens för bildserverkommando.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
    Du kan redigera följande avancerade inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Enable Aspect Ration match]**—Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
+* **[!UICONTROL Enable Aspect Ration match]**- Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
 
 * **[!UICONTROL Title]**- Ändra titeln på bilden för smart beskärning.
 
@@ -259,7 +261,7 @@ Komponenten Interactive Media är smart. Beroende på om du lägger till en bild
 
 >
 >
-Tänk på att det inte går att tilldela olika visningsprogramförinställningar till varje interaktiv mediekomponent på den sidan.
+Det går inte att tilldela olika visningsprogramförinställningar till varje interaktiv mediekomponent på den sidan.
 >
 >Du kan dock använda samma visningsförinställning för alla interaktiva mediekomponenter som använder resurser av samma typ på sidan.
 
@@ -267,7 +269,7 @@ Tänk på att det inte går att tilldela olika visningsprogramförinställningar
 
 Du kan redigera följande **[!UICONTROL General]**-inställningar genom att trycka på **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
+* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
 
 * **[!UICONTROL Title]**—Ändra videons titel.
 
@@ -301,7 +303,7 @@ Kriterierna för proportioner och nyckelord gäller även för panoramaresurser 
 
 >
 >
-Tänk på att det inte går att tilldela olika visningsförinställningar till alla **[!UICONTROL Panoramic Media]**-komponenter på sidan.
+Det går inte att tilldela en annan visningsförinställning till varje **[!UICONTROL Panoramic Media]**-komponent på den sidan.
 >
 >Du kan dock använda samma visningsförinställning för alla panoramakomponenter som använder resurser av samma typ på sidan.
 
@@ -309,15 +311,15 @@ Tänk på att det inte går att tilldela olika visningsförinställningar till a
 
 Du kan redigera följande inställning genom att trycka på **[!UICONTROL Configure]** i komponenten.
 
-* **[!UICONTROL Viewer Preset]**- Välj ett befintligt visningsprogram på den nedrullningsbara menyn Visningsförinställning.
+* **[!UICONTROL Viewer Preset]**- Välj ett befintligt visningsprogram i listrutan med visningsförinställningar.
 
-Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Du måste publicera förinställningarna för visningsprogrammet innan du kan använda dem. Se [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
+Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Publicera förinställningar för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
 ### Komponent: Video 360 Media {#video-media-component}
 
-Använd **[!UICONTROL Video 360 Media]**-komponenten för att återge ekvirektangulär video på webbsidan för en engagerande upplevelse av ett rum, en egenskap, plats, landskap eller läkarprocedur.
+Använd komponenten **[!UICONTROL Video 360 Media]** för att återge ekvirektangulär video på webbsidan. På så sätt får du en engagerande tittarupplevelse av ett rum, en egendom, en plats, ett landskap eller en medicinsk procedur.
 
-Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.
+Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. för uppspelning på mobila enheter används vanligtvis de inbyggda gyroskopiska kontrollerna.
 
 Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.
 
@@ -325,9 +327,9 @@ Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som sta
 
 Du kan redigera följande inställning genom att trycka på **[!UICONTROL Configure]** i komponenten.
 
-* **[!UICONTROL Viewer Preset]**- Välj ett befintligt visningsprogram på den nedrullningsbara menyn Visningsförinställning. Använd Video360VR för slutanvändare som använder virtuella verklighetsglasögon. Innehåller grundläggande videouppspelningskontroller och funktioner för sociala medier. Använd Video360_social som innehåller grundläggande videouppspelningskontroller. Videoåtergivning sker i stereoläge. Manuell vypunktskontroll är inaktiverad men gyroskopisk kontroll är aktiverad. Det finns inga funktioner för sociala medier.
+* **[!UICONTROL Viewer Preset]**- Välj ett befintligt visningsprogram i listrutan med visningsförinställningar. Använd Video360VR för slutanvändare som använder virtuella verklighetsglasögon. Innehåller grundläggande videouppspelningskontroller och funktioner för sociala medier. Använd Video360_social som innehåller grundläggande videouppspelningskontroller. Videoåtergivning sker i stereoläge. Manuell vypunktskontroll är inaktiverad men gyroskopisk kontroll är aktiverad. Det finns inga funktioner för sociala medier.
 
-Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Du måste publicera förinställningarna för visningsprogrammet innan du kan använda dem. Se [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
+Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Publicera förinställningar för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
 ### Använda HTTP/2 för att leverera Dynamic Media-resurser {#using-http-to-delivery-dynamic-media-assets}
 
