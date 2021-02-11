@@ -2,10 +2,10 @@
 title: Anpassade regler för kodkvalitet - Cloud Services
 description: Anpassade regler för kodkvalitet - Cloud Services
 translation-type: tm+mt
-source-git-commit: 7fdbdd8bfe80d5f87d9917c905c8d04c4c277534
+source-git-commit: 901a660424f5e1fded654ddb09f3d872b7cd01b7
 workflow-type: tm+mt
-source-wordcount: '2285'
-ht-degree: 6%
+source-wordcount: '3221'
+ht-degree: 4%
 
 ---
 
@@ -733,4 +733,187 @@ Mer information finns i [AEM projektstruktur](https://docs.adobe.com/content/hel
 Stöd för omvänd replikering är inte tillgängligt i distributioner av Cloud Service, vilket beskrivs i [Versionsinformation: Borttagning av replikeringsagenter](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
 
 Kunder som använder omvänd replikering bör kontakta Adobe för att få alternativa lösningar.
+
+### OakPAL - Resurser i proxyaktiverade klientbibliotek ska finnas i en mapp med namnet resources {#oakpal-resources-proxy}
+
+**Nyckel**: ClientlibProxyResource
+
+**Typ**: Fel
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+AEM klientbibliotek kan innehålla statiska resurser som bilder och teckensnitt. Så som beskrivs i [Använda preprocessorer](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors), måste dessa statiska resurser finnas i en underordnad mapp med namnet resources för att effektivt kunna refereras till på publiceringsinstanserna när proxierade klientbibliotek används.
+
+#### Icke-kompatibel kod {#non-compliant-proxy-enabled}
+
+```
++ apps
+  + projectA
+    + clientlib
+      - allowProxy=true
+      + images
+        + myimage.jpg
+```
+
+#### Kompatibel kod {#compliant-proxy-enabled}
+
+```
++ apps
+  + projectA
+    + clientlib
+      - allowProxy=true
+      + resources
+        + myimage.jpg
+```
+
+### OakPAL - Användning av Cloud Service-inkompatibla arbetsflödesprocesser {#oakpal-usage-cloud-service}
+
+**Nyckel**: CloudServiceIncompatibleWorkflowProcess
+
+**Typ**: Fel
+
+**Allvarlighetsgrad**: Viktigt
+
+**Sedan**: Version 2021.2.0
+
+I och med övergången till tillgångsmikrotjänster för tillgångsbearbetning på AEM Cloud Service har flera arbetsflödesprocesser som användes på plats och i AMS-versioner av AEM blivit antingen ostödda eller onödiga. Migreringsverktyget på [aem-cloud-migration](https://github.com/adobe/aem-cloud-migration) kan användas för att uppdatera arbetsflödesmodeller vid migrering AEM Cloud Servicen.
+
+### OakPAL - Användning av statiska mallar rekommenderas inte för redigerbara mallar {#oakpal-static-template}
+
+**Nyckel**: StaticTemplateUsage
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+Det har tidigare varit mycket vanligt att använda statiska mallar i AEM projekt, men redigerbara mallar rekommenderas eftersom de ger den flexibilitet och stöder ytterligare funktioner som inte finns i statiska mallar. Mer information finns i [Sidmallar - Redigerbar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=en). Migrering från statiska till redigerbara mallar kan till stor del automatiseras med [AEM Moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/).
+
+### OakPAL - Användning av äldre Foundation-komponenter rekommenderas inte {#oakpal-usage-legacy}
+
+**Nyckel**: LegacyFoundationComponentUsage
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+De äldre grundkomponenterna (d.v.s. komponenter under `/libs/foundation`) har ersatts för flera AEM-versioner till förmån för WCM Core Components. Användning av de äldre grundkomponenterna som grund för anpassade komponenter, oavsett om det är genom övertäckning eller arv, rekommenderas inte och bör konverteras till motsvarande kärnkomponent. Konverteringen kan underlättas med [AEM Moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/).
+
+### OakPAL - Endast körlägesnamn och -ordning som stöds ska användas {#oakpal-supported-runmodes}
+
+**Nyckel**: SupportedRunmode
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+AEM Cloud Service använder en strikt namngivningsprincip för körningslägesnamn och en strikt ordning för dessa körningslägen. En lista över körningslägen som stöds finns på [Runmodes](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#runmodes) och eventuella avvikelser från detta identifieras som ett problem.
+
+### OakPAL - Definitionsnoder för anpassade sökindex måste vara direkt underordnade /oak:index {#oakpal-custom-search}
+
+**Nyckel**: OakIndexLocation
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen oak:QueryIndexDefinition) är direkta underordnade noder till `/oak:index`. Index på andra platser måste flyttas för att vara kompatibla med AEM Cloud Service. Mer information om sökindex finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en).
+
+### OakPAL - Definitionsnoder för anpassade sökindex måste ha en compatVersion på 2 {#oakpal-custom-search-compatVersion}
+
+**Nyckel**: IndexCompatVersion
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen oak:QueryIndexDefinition) måste ha egenskapen compatVersion inställd på 2. Andra värden stöds inte av AEM Cloud Service. Mer information om sökindex finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en).
+
+### OakPAL - Beroende noder för anpassade sökindexdefinitionsnoder måste vara av typen nt:undefined {#oakpal-descendent-nodes}
+
+**Nyckel**: IndexDescendantNodeType
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+Det är svårt att felsöka problem när en anpassad sökindexdefinitionsnod har oordnade underordnade noder. För att undvika dessa bör alla underordnade noder för en `oak:QueryIndexDefinition`-nod vara av typen nt:undefined.
+
+### OakPAL - Definitionsnoder för anpassade sökindex måste innehålla en underordnad nod med namnet indexRules som har underordnade {#oakpal-custom-search-index}
+
+**Nyckel**: IndexRulesNode
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+En korrekt definierad definitionsnod för ett anpassat sökindex måste innehålla en underordnad nod med namnet indexRules som i sin tur måste ha minst en underordnad nod. Mer information finns i [Oak Documentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+
+### OakPAL - Definitionsnoder för anpassade sökindex måste följa namngivningskonventioner {#oakpal-custom-search-definitions}
+
+**Nyckel**: IndexName
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) måste namnges efter ett specifikt mönster som beskrivs i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
+
+### OakPAL - Definitionsnoder för anpassade sökindex måste använda indextyplucen {#oakpal-index-type-lucene}
+
+**Nyckel**: IndexType
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen oak:QueryIndexDefinition) har en type-egenskap med värdet **lucene**. Indexering med äldre indextyper måste uppdateras innan migrering till AEM Cloud Service. Mer information finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
+
+### OakPAL - Definitionsnoder för anpassade sökindex får inte innehålla en egenskap med namnet seed {#oakpal-property-name-seed}
+
+**Nyckel**: IndexSeedProperty
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+AEM Cloud Service tillåter inte att anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) innehåller en egenskap med namnet seed. Indexering med den här egenskapen måste uppdateras innan migrering till AEM Cloud Service. Mer information finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
+
+### OakPAL - Definitionsnoder för anpassade sökindex får inte innehålla en egenskap med namnet reindex {#oakpal-reindex-property}
+
+**Nyckel**: IndexReindexProperty
+
+**Typ**: Code Smell
+
+**Allvarlighetsgrad**: Mindre
+
+**Sedan**: Version 2021.2.0
+
+AEM Cloud Service tillåter inte att anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) innehåller egenskapen reindex. Indexering med den här egenskapen måste uppdateras innan migrering till AEM Cloud Service. Mer information finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
+
+
+
+
+
 
