@@ -4,9 +4,9 @@ description: Bästa praxis är att integrera driftsättning i Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b1586cd9d6b3e9da115bff802d840a72d1207e4a
+source-git-commit: eaf08018fbbf1cf1e71db2edce9ea673d546073a
 workflow-type: tm+mt
-source-wordcount: '3296'
+source-wordcount: '3294'
 ht-degree: 18%
 
 ---
@@ -70,7 +70,7 @@ Bestäm vilka funktioner som ska användas
 
 För att stödja användningsexemplen på resursfördelning bör andra lösningar beaktas:
 
-* [AEM Assets Brand ](https://helpx.adobe.com/experience-manager/brand-portal/user-guide.html) Portable för ett konfigurerbart SaaS-tillägg i AEM Assets för publicering av resurser.
+* [AEM Assets Brand ](https://helpx.adobe.com/experience-manager/brand-portal/user-guide.html) Portable för ett konfigurerbart tillägg till Assets för publicering av resurser.
 
 * Anpassade lösningar skapas baserat på kodbasen [Resursdelningskommandon](https://adobe-marketing-cloud.github.io/asset-share-commons/).
 * AEM [länkresurs](/help/assets/share-assets.md) för att dela resurser ad hoc med hjälp av länkar.
