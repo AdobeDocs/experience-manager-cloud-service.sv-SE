@@ -2,7 +2,7 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: f1a54ac3f995a6e8cc51f9ef16e14df6210a02cd
+source-git-commit: 6c40641333f2297d7004d792e87f16a7cf081970
 workflow-type: tm+mt
 source-wordcount: '1108'
 ht-degree: 0%
@@ -146,7 +146,7 @@ Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 
 Releasedatum för Best Practices Analyzer v2.1.0 är 11 februari 2021.
 
-### Nyheter i [!DNL Best-Practices-Analyzer] {#what-is-new-bpa}
+### Nyheter i [!DNL Best Practices Analyzer] {#what-is-new-bpa}
 
 * Möjlighet att upptäcka användning av AEM Forms och AEM Forms och ange områden som är relevanta för migrering till AEM Forms som Cloud Service.
 * Möjlighet att upptäcka och rapportera användning och antal anpassade komponenter och mallar.
