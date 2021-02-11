@@ -2,7 +2,7 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
 translation-type: tm+mt
-source-git-commit: d20a729712c1dbd48150f813419b57c49074b492
+source-git-commit: bca0519b3f27ee21df41b2292d19e330c4aa5f7d
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan lägga till/uppdatera domännamn för tillfället eftersom den associerade miljön antingen har en pågående pipeline kopplad till sig eller väntar på godkännandesteget.
 
-* Egenskaper som angetts i kundens `pom.xml`-filer som har prefixats med Sonar kommer nu att tas bort dynamiskt för att undvika fel vid skapande och kvalitetskontroll.
+* Egenskaper som angetts i kundens `pom.xml`-filer som har prefixats med sonar kommer nu att tas bort dynamiskt för att undvika problem med bygg- och kvalitetsskanning.
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan välja ett SSL-certifikat tillfälligt om det används av ett domännamn som för närvarande distribueras.
 
