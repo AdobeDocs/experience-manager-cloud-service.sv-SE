@@ -2,7 +2,7 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
 translation-type: tm+mt
-source-git-commit: 3bf7defc9aa36c831e061e7209a765f2d60cfb33
+source-git-commit: d20a729712c1dbd48150f813419b57c49074b492
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 1%
@@ -30,11 +30,11 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari
 
 * Listan med föråldrade API:er som identifieras vid kodskanning har förfinats så att den innehåller ytterligare klasser och metoder som har tagits bort i den senaste SDK-versionen av Cloud Servicen.
 
-* SonarQube-profilen för Cloud Manager har uppdaterats för att ta bort Sonar-regelbläckfisk:S2142. Detta kommer inte längre att orsaka en konflikt med avbrottskontroller för trådar.
+* SonarQube-profilen för Cloud Manager har uppdaterats för att ta bort Sonar-regelbläckfisk:S2142. Detta kommer inte längre att orsaka en konflikt med kontrollerna för trådavbrott.
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan lägga till/uppdatera domännamn för tillfället eftersom den associerade miljön antingen har en pågående pipeline kopplad till sig eller väntar på godkännandesteget.
 
-* Egenskaper som angetts i kundens `pom.xml`-filer som har prefixats med sonar och kommer nu att tas bort dynamiskt för att undvika fel vid skapande och kvalitetskontroll.
+* Egenskaper som angetts i kundens `pom.xml`-filer som har prefixats med Sonar kommer nu att tas bort dynamiskt för att undvika fel vid skapande och kvalitetskontroll.
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan välja ett SSL-certifikat tillfälligt om det används av ett domännamn som för närvarande distribueras.
 
