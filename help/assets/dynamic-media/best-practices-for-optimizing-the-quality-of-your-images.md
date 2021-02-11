@@ -1,10 +1,11 @@
 ---
 title: Bästa tillvägagångssätt för att optimera bildkvalitet
 description: Lär dig de bästa sätten du kan använda i Dynamic Media för att optimera kvaliteten på dina bildresurser.
+contentOwner: Rick Brough
 translation-type: tm+mt
-source-git-commit: 3431f7f82b086c5c9aa0c2900332eae70728b147
+source-git-commit: 58aa2f416aac6fa6b260e846fc5265bdf62a1949
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1438'
 ht-degree: 5%
 
 ---
@@ -20,7 +21,7 @@ AEM innehåller över 100 kommandon för Dynamic Media bildleverans för justeri
 
 * JPG eller PNG är de bästa alternativen för att leverera bilder med god kvalitet och hanterbar storlek och vikt.
 * Om inget formatkommando anges i URL:en används som standard JPG för leverans i Dynamic Media Image Delivery.
-* JPG komprimeras med förhållandet 10:1 och ger vanligtvis mindre bildfilsstorlekar. PNG komprimeras med ett förhållande på cirka 2:1, utom i vissa fall, till exempel när bilder innehåller en vit bakgrund. Vanligtvis är PNG-filernas storlek större än JPG-filer.
+* JPG komprimeras med förhållandet 10:1 och ger vanligtvis mindre bildfilsstorlekar. PNG komprimeras med ett förhållande på cirka 2:1, utom när bilder innehåller en vit bakgrund. Vanligtvis är PNG-filernas storlek större än JPG-filer.
 * JPG använder förstörande komprimering, vilket innebär att bildelement (pixlar) tas bort under komprimeringen. PNG använder däremot förlustfri komprimering.
 * JPG komprimerar ofta fotografiska bilder med bättre återgivning än syntetiska bilder med skarpa kanter och kontrast.
 * Om dina bilder innehåller genomskinlighet kan du använda PNG eftersom JPG inte har stöd för genomskinlighet.
@@ -44,7 +45,7 @@ Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder
 
 * Titta på [Använda bildskärpa med AEM Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-image-sharpening-feature-video-use.html#dynamic-media).
 
-Med AEM kan du öka skärpan i bilder vid intag, vid leverans eller både och. I de flesta fall bör du emellertid skärpa upp bilder med endast en metod eller med en annan, men inte med båda metoderna. Att skärpa bilderna vid leverans, på en URL-adress, ger oftast bäst resultat.
+Med AEM kan du öka skärpan i bilder vid intag, vid leverans eller både och. Normalt är det dock bäst att öka skärpan i bilder med bara en metod eller en annan, men inte med båda. Att skärpa bilderna vid leverans, på en URL-adress, ger oftast bäst resultat.
 
 Det finns två metoder för bildskärpa:
 
@@ -56,18 +57,19 @@ Det finns två metoder för bildskärpa:
       * **[!UICONTROL amount]** (0-5, effektens styrka.)
       * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
 
-         Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
+      Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
 
       * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
+      Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Med parametern **[!UICONTROL threshold]** undviker du för mycket skärpa i områden med liknande färger, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
 
-         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Med parametern **[!UICONTROL threshold]** undviker du för mycket skärpa i områden med liknande färger, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
       Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
 
       AEM hjälpavsnittet Skärpa en bild.
 
       Best practices white paper [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/dynamic-media/assets/sharpening_images.pdf).
 
-   * AEM kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
+      * AEM kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
+
 
 
 Det bästa sättet är att börja med parametern oskarp maskradie. Radie-inställningar som du kan börja med är följande:
@@ -96,7 +98,7 @@ Det bästa sättet att använda JPG-komprimering är att använda `&qlt=85,0`.
 
 ## Bästa tillvägagångssätt för JPEG-storleksändring (`&jpegSize=`) {#best-practices-for-jpeg-sizing-jpegsize}
 
-jpegSize är en användbar parameter om du vill försäkra dig om att en bild inte överskrider en viss storlek för leverans till enheter som har begränsat minne.
+`jpegSize` är en användbar parameter om du vill garantera att en bild inte överskrider en viss storlek för leverans till enheter som har begränsat minne.
 
 * Den här parametern anges i kilobyte (`jpegSize=&lt;size_in_kilobytes&gt;`). Det definierar den största tillåtna storleken för bildleverans.
 * `&jpegSize=` interagerar med JPG-komprimeringsparametern  `&qlt=`. Om JPG-svaret med den angivna JPG-komprimeringsparametern (`&qlt=`) inte överskrider ejpegSize-värdet returneras bilden med `&qlt=` enligt definitionen. Annars minskas `&qlt=` gradvis tills bilden får plats i den högsta tillåtna storleken, eller tills systemet fastställer att den inte får plats och returnerar ett fel.
@@ -115,9 +117,9 @@ Om bilden behöver optimeras ytterligare finjusterar du stegvis skärpeparametra
 
 Om skärpeeffekten fortfarande inte är tillräcklig ökar du radien i decimalsteg. För varje decimalsteg startar du om beloppet vid 1,75 och ökar det gradvis till 4. Upprepa den här processen tills du uppnår önskat resultat. Värdena ovan är en metod som de kreativa studierna har validerat, men kom ihåg att du kan börja med andra värden och följa andra strategier. Oavsett om resultaten är tillfredsställande för dig eller inte är en subjektiv fråga, så är strukturerade experiment avgörande.
 
-När du experimenterar kan du också hitta följande allmänna förslag som kan hjälpa dig att optimera arbetsflödet:
+Följande allmänna förslag är användbara när du experimenterar för att optimera arbetsflödet:
 
 * Testa olika parametrar i realtid direkt på en URL.
-* Det är en god vana att gruppera Dynamic Media Image Serving-kommandon i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg gör att dessa förinställningar anropas. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
-* AEM erbjuder också mer avancerade sätt att finjustera bildkvaliteten, t.ex. att använda skärpebilder vid inhämtning. För avancerade användningsområden där detta kan vara ett alternativ för att ytterligare finjustera och optimera återgivningsresultaten kan [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html) hjälpa dig med anpassade insikter och bästa praxis.
+* Det är en god vana att gruppera Dynamic Media Image Serving-kommandon i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg anropar de här förinställningarna. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
+* Experience Manager har också mer avancerade sätt att finjustera bildkvaliteten, t.ex. genom att använda skärpebilder vid intag. [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html) kan hjälpa dig med anpassade insikter och metodtips för att optimera återgivningsresultaten.
 
