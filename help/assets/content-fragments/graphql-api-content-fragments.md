@@ -2,9 +2,9 @@
 title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för rubrikfri innehållsleverans.
 translation-type: tm+mt
-source-git-commit: 36e0fd66c9119571cde5c8791862abed8b552d5a
+source-git-commit: 48b889e2357f9564c7a0e529c2bde5a05f7fcea1
 workflow-type: tm+mt
-source-wordcount: '3220'
+source-wordcount: '3228'
 ht-degree: 0%
 
 ---
@@ -140,9 +140,9 @@ Om du vill aktivera GraphQL-frågor i AEM skapar du en slutpunkt på `/content/c
 
 >[!CAUTION]
 >
->Det finns för närvarande ett känt fel med slutpunkten:
+>I vissa versioner finns det för närvarande ett känt problem med slutpunkten:
 >
->* Posten `cq:graphql` visas i konsolen **Platser**. på den översta nivån.
+>* Beroende på vilken version som används visas posten `cq:graphql` i konsolen **Platser**. på den översta nivån.
    >  Detta får inte användas.
 
 
