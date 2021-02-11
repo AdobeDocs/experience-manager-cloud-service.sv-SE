@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 968775b24441457143f497c2cfb1f9ece392d475
+source-git-commit: 801f1df5ceaa24289e2d88ecfe187a7a1497a6fe
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '1108'
 ht-degree: 0%
 
 ---
@@ -120,9 +120,17 @@ Två nya analytiker har lagts till för den här versionen:
 
 Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=en#developing).
 
-## Verktyg för övergång till molnet{#code-transition-tools}
+## Content Transfer Tool {#content-transfer-tool}
 
 ### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v1.2.4 är 10 februari 2021.
+
+### Felkorrigeringar {#bug-fixes-ctt}
+
+* Vid mappning av flera användare mappades vissa användares IMS-ID felaktigt. Den här har åtgärdats.
+
+### Releasedatum {#release-date-ctt-feb}
 
 Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 
@@ -131,3 +139,24 @@ Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 * Ny funktion och nytt användargränssnitt har lagts till i verktyget Innehållsöverföring - verktyget för användarmappning. Den här funktionen mappar automatiskt befintliga användare och grupper till deras Adobe Identity Management-system-ID som en del av innehållsmigreringsaktiviteten. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
 * Verktyget Innehållsöverföring migrerar nu alla grupper och användare som det hänvisas till i migreringsuppsättningen, inklusive underordnade.
 * Användarna kan välja vissa sökvägar under `/etc` när de skapar migreringsuppsättningar.
+
+## Best Practices Analyzer {#best-practices-analyzer}
+
+### Releasedatum {#release-date-bpa}
+
+Releasedatum för Best Practices Analyzer v2.1.0 är 11 februari 2021.
+
+### Nyheter i [!DNL Best-Practices-Analyzer] {#what-is-new-bpa}
+
+* Möjlighet att upptäcka användning av AEM Forms och AEM Forms och ange områden som är relevanta för migrering till AEM Forms som Cloud Service.
+* Möjlighet att upptäcka och rapportera användning och antal anpassade komponenter och mallar.
+* Möjlighet att identifiera vilken typ av nodarkiv och datalager som används.
+* Möjlighet att upptäcka användningen av Dynamic Media.
+* Möjlighet att identifiera den Java-version som används.
+
+
+
+
+
+
+
