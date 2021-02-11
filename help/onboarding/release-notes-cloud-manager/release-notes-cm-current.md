@@ -2,9 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
 translation-type: tm+mt
-source-git-commit: bca0519b3f27ee21df41b2292d19e330c4aa5f7d
+source-git-commit: 968775b24441457143f497c2cfb1f9ece392d475
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -38,6 +38,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan välja ett SSL-certifikat tillfälligt om det används av ett domännamn som för närvarande distribueras.
 
+* Ytterligare regler för kodkvalitet har lagts till för att täcka problem med Cloud Servicens kompatibilitet.
 
 ### Felkorrigeringar {#bug-fixes}
 
