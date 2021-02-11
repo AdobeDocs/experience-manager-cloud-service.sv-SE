@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: 'Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service. '
 translation-type: tm+mt
-source-git-commit: 52e8cf1e3fb503c1d222a9543cfc1ddfe87132b6
+source-git-commit: 1563da55c3dfed52088d5309eeac071918ff0d51
 workflow-type: tm+mt
 source-wordcount: '1876'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
@@ -262,7 +262,7 @@ Mer information finns i översikten över [Ändringar i Sites](/help/sites-cloud
 
 ## AEM Assets {#aem-assets}
 
-Adobe Experience Manager Assets as a Cloud Service är en molnbaserad SaaS-lösning som företag kan använda för att snabbt och effektivt hantera digitala resurser och dynamiska medier. De får även tillgång till nästa generations smarta funktioner, som artificiell intelligens/maskininlärning, i ett system som alltid är aktuellt, alltid tillgängligt och alltid lär sig.
+Adobe Experience Manager Assets som Cloud Service är en molnbaserad, PaS-lösning som gör att företag inte bara kan hantera sina digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är tillgängligt och alltid är inlärningsbart.
 
 Assets inkluderar nästa generations materialbearbetning i molnet samt högpresterande materialimport och sökning.
 
