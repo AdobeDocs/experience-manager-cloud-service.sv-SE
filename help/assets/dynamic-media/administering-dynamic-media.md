@@ -1,10 +1,11 @@
 ---
 title: Konfigurera Dynamic Media
 description: Om du vill konfigurera Dynamic Media måste du konfigurera Dynamic Media och hantera bild- och visningsförinställningar.
+contentOwner: Rick Brough
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 58aa2f416aac6fa6b260e846fc5265bdf62a1949
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '179'
 ht-degree: 3%
 
 ---
@@ -40,4 +41,4 @@ Se även följande avsnitt:
 >
 >**Om du uppgraderar:**
 >
->* När du har installerat och kört Experience Manager aktiveras Dynamic Media automatiskt för alla resurser som du överför (såvida det inte uttryckligen inaktiverats av systemadministratören). Om du befinner dig på en uppgraderad instans av Experience Manager och inte har använt Dynamic Media tidigare kan du behöva bearbeta dina resurser på nytt för att göra dem Dynamic Media-aktiverade.
+>* När du har installerat och kört Experience Manager aktiveras Dynamic Media automatiskt för alla resurser som du överför (såvida det inte uttryckligen inaktiverats av systemadministratören). Om du är på en uppgraderad instans av Experience Manager och inte har använt Dynamic Media tidigare måste du troligen bearbeta om dina resurser för att aktivera dem för Dynamic Media. Se [Återbearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
