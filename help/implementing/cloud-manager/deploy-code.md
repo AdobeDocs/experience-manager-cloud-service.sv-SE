@@ -2,9 +2,9 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: d0dd1bb2f3f040ef61401f5dbd5d5d9799c1a8ff
+source-git-commit: aef8afd3efca4d6d5db9f457e952958ee9ca38de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '1032'
 ht-degree: 1%
 
 ---
@@ -55,6 +55,9 @@ Mer information finns i [Funktionstestning av produkten](/help/implementing/clou
 
    * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard.\
       Mer information finns i [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing).
+
+   * Testning av anpassat användargränssnitt: Det här steget i pipeline finns alltid och kan inte hoppas över. Anpassade gränssnittstester kan skrivas och gör det möjligt för kunder att snabbt skapa testautomatiseringssviter för validering av webb- och mobilappar som bygger på AEM.
+Mer information finns i [Anpassad gränssnittstestning](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing).
 
    * Experience Audit: Det här steget i pipeline finns alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna. De konfigurerade sidorna skickas till tjänsten och utvärderas. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
 Mer information finns i [Understanding Experience Audit results](/help/implementing/cloud-manager/experience-audit-testing.md).
