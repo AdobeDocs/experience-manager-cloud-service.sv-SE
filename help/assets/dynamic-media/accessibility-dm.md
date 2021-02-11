@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 75caf21c399271b23e71c7c0045e3a41cda8a851
+source-git-commit: cf607bd27463f23de29d0d6770940a01f3e36c87
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Tangenttryckningar som stöds av enskilda element i användargränssnittet i Dyn
 * Möjlighet att använda `Tab` och `Shift+Tab`-tangenttryckningar för att navigera mellan interaktiva element på sidan.
 Om du använder `Tab` flyttas indatafokus till nästa element i användargränssnittet i tabbordningen; om du använder `Shift+Tab` får indatafokus tillbaka till det föregående elementet i användargränssnittet.
 Fokusförflyttningen följer det naturliga elementet i användargränssnittet på skärmen och flyttas från vänster till höger och sedan uppifrån och ned. Om ett fält innehåller ett fel kan du dessutom trycka på `Tab` för att flytta fokus till det.
-* Möjlighet att använda tangenterna `Spacebar` och `Enter` för att aktivera standardelement i användargränssnittet, som knappar, listrutor och så vidare.
+* Möjlighet att använda tangenterna `Spacebar` och `Enter` för att aktivera standardelement i användargränssnittet, som knappar och nedrullningsbara listor.
 * Möjlighet att se fokus på tangentbordet på det aktiva elementet. Det element i användargränssnittet som har indatafokus fick en visuell fokusindikation som en kantlinje som renderades runt elementet i användargränssnittet.
 * I Hotspot-redigeraren kan du använda vissa anpassade tangenttryckningar, till exempel piltangenter, för att interagera med komplexa element i användargränssnittet för att flytta hotspot-områden.
 * I den interaktiva videoredigeraren kan du använda `Spacebar` för att markera en bild och lägga till den i ett segment. Du kan dessutom använda `Backspace`-tangenten för att ta bort det markerade objektet från fliken **[!UICONTROL Content]**. Om du trycker på `Tab`-funktioner efter behov för att navigera mellan interaktiva element på sidan.
