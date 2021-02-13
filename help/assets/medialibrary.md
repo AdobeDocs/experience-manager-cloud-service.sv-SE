@@ -3,9 +3,9 @@ title: AEM Assets vs. AEM MediaLibrary
 description: Frågor och svar om AEM Assets och andra frågor. AEM Media Library, inklusive skillnaderna mellan de båda.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a3b2a66958fd8d3a68b450938c5c18053f00b998
+source-git-commit: e98179379a97e7270b755042928133ddbd8de3fa
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '693'
 ht-degree: 1%
 
 ---
@@ -27,10 +27,10 @@ AEM Media Library är en del av AEM WCM-innehållslagringsplatsen där bilder oc
 
 Unika funktioner som endast är tillgängliga för AEM Assets kunder är:
 
-1. möjlighet att extrahera och redigera andra metadata än titel, taggar och beskrivning.
-1. aem assets Admin, som du kommer åt från välkomstskärmen genom att klicka på den andra knappen bredvid webbplatsadministratören.
+1. Möjlighet att extrahera och redigera andra metadata än titel, taggar och beskrivning.
+1. AEM Assets Admin, som är tillgänglig från välkomstskärmen genom att klicka på det andra alternativet intill `siteadmin`.
 1. Alla arbetsflödessteg som rör Digital Asset Management, som AEM Assets Ingestion, AEM Assets Deletion, AEM Assets Sub-Asset-Handling, AEM Assets-metadataextrahering.
-1. bibliotek som innehåller &quot;dam&quot; im-paketutrymme.
+1. Bibliotek med &quot;dam&quot; i paketutrymmet.
 
 För att använda dessa funktioner krävs en giltig licens för AEM Assets.
 
