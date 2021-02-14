@@ -1,26 +1,26 @@
 ---
 title: HTTP API för Assets
-description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
+description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: f1fa095c7c89be89ed02ebdf14dcc0a4b9f542b1
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1459'
 ht-degree: 0%
 
 ---
 
 
-# HTTP API för Assets {#assets-http-api}
+# [!DNL Adobe Experience Manager Assets] HTTP-API  {#assets-http-api}
 
 ## Översikt {#overview}
 
-Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för digitala resurser, inklusive metadata, återgivningar och kommentarer, tillsammans med strukturerat innehåll med [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
+HTTP-API:t [!DNL Assets] tillåter åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på digitala resurser, inklusive metadata, återgivningar och kommentarer, tillsammans med strukturerat innehåll med [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 Så här kommer du åt API:
 
 1. Öppna API-tjänstdokumentet på `https://[hostname]:[port]/api.json`.
-1. Följ länken Resurstjänster som leder till `https://[hostname]:[server]/api/assets.json`.
+1. Följ länken [!DNL Assets] till `https://[hostname]:[server]/api/assets.json`.
 
 API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt, till exempel för PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
 
@@ -34,13 +34,11 @@ Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgäng
 
 Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en speciell typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard`-resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
 
-Mer information finns i [Stöd för innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
+Mer information finns i [Stöd för innehållsfragment i [!DNL Experience Manager Assets] HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 ## Datamodell {#data-model}
 
-Resursens HTTP-API visar två huvudelement, mappar och resurser (för standardresurser).
-
-Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments).
+HTTP-API:t [!DNL Assets] visar två huvudelement, mappar och resurser (för standardresurser). Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments).
 
 ### Mappar {#folders}
 
@@ -81,19 +79,19 @@ I [!DNL Experience Manager] har en mapp följande komponenter:
 
 ## Tillgängliga funktioner {#available-features}
 
-Resursens HTTP-API innehåller följande funktioner:
+HTTP-API:t [!DNL Assets] innehåller följande funktioner:
 
-* Hämta en mapplista.
-* Skapa en mapp.
-* Skapa en resurs (inaktuell).
-* Uppdatera resursens binärfil (borttagen).
-* Uppdatera metadata för resurser.
-* Skapa en resursåtergivning.
-* Uppdatera en resursåtergivning.
-* Skapa en resurskommentar.
-* Kopiera en mapp eller resurs.
-* Flytta en mapp eller resurs.
-* Ta bort en mapp, resurs eller återgivning.
+* [Hämta en mapplista](#retrieve-a-folder-listing).
+* [Skapa en mapp](#create-a-folder).
+* [Skapa en resurs (inaktuell)](#create-an-asset)
+* [Uppdatera resursens binära (borttagen)](#update-asset-binary).
+* [Uppdatera metadata](#update-asset-metadata) för resurser.
+* [Skapa en resursåtergivning](#create-an-asset-rendition).
+* [Uppdatera en resursåtergivning](#update-an-asset-rendition).
+* [Skapa en resurskommentar](#create-an-asset-comment).
+* [Kopiera en mapp eller resurs](#copy-a-folder-or-asset).
+* [Flytta en mapp eller resurs](#move-a-folder-or-asset).
+* [Ta bort en mapp, resurs eller återgivning](#delete-a-folder-asset-or-rendition).
 
 >[!NOTE]
 >
@@ -144,11 +142,11 @@ Ett API-anrop misslyckas med en `500`-svarskod om den överordnade noden för de
 
 ## Skapa en resurs {#create-an-asset}
 
-Mer information om hur du skapar en resurs med API:er finns i [överföring av resurser](developer-reference-material-apis.md). Det går inte att skapa en resurs med HTTP API.
+Mer information om hur du skapar en resurs finns i [Överför resurser](developer-reference-material-apis.md). Du kan inte skapa en resurs med HTTP API.
 
 ## Uppdatera en resurbinär {#update-asset-binary}
 
-Mer information om hur du uppdaterar objektbinärfiler med API:er finns i [överföring av resurser](developer-reference-material-apis.md). Uppdateringen av en resursinbinär fil med HTTP API är föråldrad.
+Mer information om hur du uppdaterar objektbinärfiler finns i [Överför resurser](developer-reference-material-apis.md). Du kan inte uppdatera en resursinbinär fil med HTTP API.
 
 ## Uppdatera metadata för en resurs {#update-asset-metadata}
 
@@ -262,3 +260,8 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 * 200 - OK - Om mappen har tagits bort.
 * 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
+
+>[!MORELIKETHIS]
+>
+>* [Referensdokument för utvecklare för [!DNL Assets]](/help/assets/developer-reference-material-apis.md)
+
