@@ -2,9 +2,9 @@
 title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för rubrikfri innehållsleverans.
 translation-type: tm+mt
-source-git-commit: 48b889e2357f9564c7a0e529c2bde5a05f7fcea1
+source-git-commit: 05dd9c9111409a67bf949b0fd8a13041eae6ef1d
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3296'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ GraphQL är:
 
    Se [Utforska GraphQL](https://www.graphql.com).
 
-* *&quot;...ett datameddelande och en specifikation som utvecklats internt av Facebook under 2012 innan Facebook öppnats offentligt under 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktion av hundratals organisationer av alla storlekar...&quot;*
+* *&quot;...ett datameddelande och en specifikation som utvecklats internt av Facebook under 2012 och som sedan publiceras offentligt under 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktion av hundratals organisationer av alla storlekar...&quot;*
 
    Se [GraphQL Foundation](https://foundation.graphql.org/).
 
@@ -295,7 +295,7 @@ Om du till exempel:
 
 >[!NOTE]
 >
->Detta är viktigt att notera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
+>Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
 Schemat hanteras via samma slutpunkt som GraphQL-frågorna, med klienten som hanterar det faktum att schemat anropas med tillägget `GQLschema`. Om du till exempel utför en enkel `GET`-begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar det i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
 
@@ -725,23 +725,90 @@ Här följer de steg som krävs för att behålla en given fråga:
 
 ## Frågar GraphQL-slutpunkten från en extern webbplats {#query-graphql-endpoint-from-external-website}
 
+Om du vill komma åt GraphQL-slutpunkten från en extern webbplats måste du konfigurera:
+
+* [CORS-filter](#cors-filter)
+* [Referensfilter](#referrer-filter)
+
+### CORS-filter {#cors-filter}
+
 >[!NOTE]
 >
 >En detaljerad översikt över CORS resursdelningsprincip i AEM finns i [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=en#understand-cross-origin-resource-sharing-(cors)).
 
-För att en tredje parts webbplats ska kunna använda JSON-utdata måste en CORS-princip konfigureras i kundens Git-databas. Detta görs genom att en lämplig OSGi CORS-konfigurationsfil läggs till för den önskade slutpunkten. Den här konfigurationen bör ange ett betrott webbplatsnamn (eller regex) som åtkomst ska beviljas för.
+För att komma åt GraphQL-slutpunkten måste en CORS-princip konfigureras i kundens Git-databas. Detta görs genom att en lämplig OSGi CORS-konfigurationsfil läggs till för de önskade slutpunkterna.
 
-* Åtkomst till GraphQL-slutpunkten:
+Den här konfigurationen måste ange en betrodd webbplatsursprung `alloworigin` eller `alloworiginregexp` som åtkomst måste beviljas för.
 
-   * legering: [din domän] eller alloworiginregexp: [din domänregex]
-   * metoder som stöds: [POST]
-   * tillåtna banor: [&quot;/content/graphql/global/endpoint.json&quot;]
+Om du till exempel vill ge åtkomst till GraphQL-slutpunkten och den beständiga frågeslutpunkten för `https://my.domain` kan du använda:
 
-* Åtkomst till den beständiga slutpunkten för GraphQL-frågor:
+```xml
+{
+  "supportscredentials":true,
+  "supportedmethods":[
+    "GET",
+    "HEAD",
+    "POST"
+  ],
+  "exposedheaders":[
+    ""
+  ],
+  "alloworigin":[
+    "https://my.domain"
+  ],
+  "maxage:Integer":1800,
+  "alloworiginregexp":[
+    ""
+  ],
+  "supportedheaders":[
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers"
+  ],
+  "allowedpaths":[
+    "/content/_cq_graphql/global/endpoint.json",
+    "/graphql/execute.json/.*"
+  ]
+}
+```
 
-   * legering: [din domän] eller alloworiginregexp: [din domänregex]
-   * metoder som stöds: [GET]
-   * tillåtna banor: [&quot;/graphql/execute.json/.*&quot;]
+Om du har konfigurerat en huvudsökväg för slutpunkten kan du även använda den i `allowedpaths`.
+
+### Referensfilter {#referrer-filter}
+
+Förutom CORS-konfigurationen måste ett referensfilter konfigureras så att åtkomst från tredjepartsvärdar tillåts.
+
+Detta gör du genom att lägga till en lämplig konfigurationsfil för OSGi-referensfiltret som:
+
+* anger ett betrott värdnamn för en webbplats, antingen `allow.hosts` eller `allow.hosts.regexp`,
+* ger åtkomst till det här värdnamnet.
+
+Om du till exempel vill bevilja åtkomst för begäranden med referenten `my.domain` kan du:
+
+```xml
+{
+    "allow.empty":false,
+    "allow.hosts":[
+      "my.domain"
+    ],
+    "allow.hosts.regexp":[
+      ""
+    ],
+    "filter.methods":[
+      "POST",
+      "PUT",
+      "DELETE",
+      "COPY",
+      "MOVE"
+    ],
+    "exclude.agents.regexp":[
+      ""
+    ]
+}
+```
 
 >[!CAUTION]
 >
