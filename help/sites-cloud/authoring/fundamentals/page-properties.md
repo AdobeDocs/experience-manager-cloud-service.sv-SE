@@ -2,10 +2,10 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+source-git-commit: c3fd7b5a6311eded51b13ab9fea1ca6af4a050eb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 6%
+source-wordcount: '1894'
+ht-degree: 5%
 
 ---
 
@@ -20,49 +20,43 @@ Egenskaperna fördelas på flera flikar.
 
 ### Grundläggande {#basic}
 
-* **Titel**
+* **Titel och taggar**
 
-   * Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyn **Platser** kort/lista.
-   * Detta är ett obligatoriskt fält.
+   * **Titel**  - Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyn **Platser** kort/lista.
+      * Detta är ett obligatoriskt fält.
+   * **Taggar**  - Här kan du lägga till eller ta bort taggar från sidan genom att uppdatera listan i markeringsrutan.
+      * När du har valt en tagg visas den under markeringsrutan. Du kan ta bort en tagg från den här listan med hjälp av x.
+      * Du kan ange en helt ny tagg genom att skriva namnet i en tom markeringsruta.
+         * Den nya taggen skapas när du trycker på Retur.
+         * Den nya taggen visas sedan med en liten stjärna till höger som anger att det är en ny tagg.
+      * Med den nedrullningsbara menyn kan du välja bland befintliga taggar.
+      * Ett x-tecken visas när du för musen över en taggpost i markeringsrutan, som kan användas för att ta bort taggen för den här sidan.
+      * Mer information om taggar finns i [Använda taggar](/help/sites-cloud/authoring/features/tags.md).
+   * **Dölj i navigering**  - Anger om sidan visas eller döljs i sidnavigeringen för den slutliga platsen.
 
-* **Taggar**
+* **Varumärke**
 
-   * Här kan du lägga till eller ta bort taggar från sidan genom att uppdatera listan i markeringsrutan.
-   * När du har valt en tagg visas den under markeringsrutan. Du kan ta bort en tagg från den här listan med hjälp av x.
-   * Du kan ange en helt ny tagg genom att skriva namnet i en tom markeringsruta.
-      * Den nya taggen skapas när du trycker på Retur.
-      * Den nya taggen visas sedan med en liten stjärna till höger som anger att det är en ny tagg.
-   * Med den nedrullningsbara menyn kan du välja bland befintliga taggar.
-   * Ett x-tecken visas när du för musen över en taggpost i markeringsrutan, som kan användas för att ta bort taggen för den här sidan.
-   * Mer information om taggar finns i [Använda taggar](/help/sites-cloud/authoring/features/tags.md).
+   Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
-* **Dölj i navigering**
-
-   * Anger om sidan visas eller döljs i sidnavigeringen på den slutliga platsen.
+   * **Åsidosätt**  - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
+      * Värdet ärvs av alla underordnade sidor såvida inte deras **Åsidosätt**-värden har angetts.
+   * **Åsidosätt värde**  - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
+      * Värdet läggs till i sidrubriken efter ett lodstreck som &quot;Cycling Tuscany&quot; | Alltid redo för WKND&quot;
 
 * **HTML-ID**
 
-   * HTML-id som ska användas för komponenten.
+   * **ID** - HTML-ID som ska användas för komponenten.
 
-* **Sidrubrik**
+* **Fler rubriker och beskrivning**
 
-   * En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom kommer **Title** att användas.
+   * **Sidrubrik**  - En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom kommer **Title** att användas.
+   * **Navigeringsrubrik**  - Du kan ange en separat rubrik som ska användas i navigeringen (t.ex. om du vill ha något mer koncist). Om den är tom används **titeln**.
+   * **Underrubrik**  - En underrubrik som kan användas på sidan.
+   * **Beskrivning**  - Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
 
-* **Navigeringsrubrik**
+* **På/av-tid**
 
-   * Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom används **titeln**.
-
-* **Underrubrik**
-
-   * En underrubrik som ska användas på sidan.
-
-* **Beskrivning**
-
-   * Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
-
-* **I tid**
-
-   * Det datum och den tidpunkt då den publicerade sidan blir synlig (återgiven) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
+   * **Tid**  - Det datum och den tidpunkt då den publicerade sidan visas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
 
       >[!NOTE]
       >
@@ -71,12 +65,10 @@ Egenskaperna fördelas på flera flikar.
       * Om redan [har publicerats (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) kommer den här sidan att behållas vilande (dold) tills den återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och konfigureras för automatisk replikering kommer den att publiceras automatiskt och sedan återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och inte är konfigurerad för automatisk replikering, kommer den inte att publiceras automatiskt. Därför visas 404 när du försöker komma åt sidan.
+   * **Fråntid**  - I likhet med och används ofta i kombination med  **På tid**, definierar detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
+
    * Lämna dessa fält (**På tid** och **Fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenariot).
 
-* **Fråntid**
-
-   * Parallellt med **På tid** anger detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
-   * Lämna dessa fält (**På tid** och **Fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenariot).
 
 * **Vanity URL**
 
@@ -92,31 +84,24 @@ Egenskaperna fördelas på flera flikar.
    >* Ska inte anges till en befintlig sida.
 
 
-* **URL för omdirigering**
+   * **Lägg till**  - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
+      * Tryck eller klicka igen för att lägga till flera.
+      * Tryck eller klicka på ikonen **Ta bort** för att ta bort fågel-URL:en.
+   * **Omdirigerings-URL**  för vanity - Anger om du vill att sidan ska använda innehålls-URL:en.
 
-   * Anger om du vill att sidan ska använda fågel-URL:en.
+
+
 
 ### Avancerat {#advanced}
 
-* **Språk:**
+* **Inställningar**
 
-   * Sidspråket.
+   * **Språk**  - sidspråket
+   * **Språkrot**  - Måste kontrolleras om sidan är roten för en språkkopia
+   * **Omdirigering**  - Anger den sida som den här sidan automatiskt ska omdirigeras till
+   * **Design**  - Anger om sidan visas eller döljs i sidnavigeringen på den slutliga webbplatsen
+   * **Alias**  - Anger ett alias som ska användas för den här sidan
 
-* **Språkrot**
-
-   * Måste kontrolleras om sidan är roten i en språkkopia.
-
-* **Omdirigering**
-
-   * Ange den sida som den här sidan automatiskt ska omdirigeras till.
-
-* **Design**
-
-   * Anger om sidan visas eller döljs i sidnavigeringen på den slutliga platsen.
-
-* **Alias**
-
-   * Ange ett alias som ska användas med den här sidan.
    >[!NOTE]
    >
    >Alias anger egenskapen `sling:alias` för att definiera ett aliasnamn för resursen (detta påverkar bara resursen, inte sökvägen).
@@ -129,52 +114,36 @@ Egenskaperna fördelas på flera flikar.
   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
   -->
 
-* **Ärvs från  &lt;path>**
+* **Konfiguration**
 
-   * Anger om sidan ärvs. och varifrån kommer.
+   * **Molnkonfiguration**  - Sökvägen till konfigurationen
 
-* **Molnkonfiguration**
+* **Mallinställningar**
 
-   * Sökvägen till konfigurationen.
+   * **Tillåtna mallar**  -  [Definierar listan med mallar som ska vara ](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) tillgängliga i den här undergrenen
 
-* **Tillåtna mallar**
+* **Autentiseringskrav**
 
-   * [Definiera listan med mallar som ska vara ](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) tillgängliga i den här undergrenen.
+   * **Aktivera**  - Aktivera användning av autentisering för att komma åt sidan
 
-* **Aktivera**  (autentiseringskrav)
+      >[!NOTE]
+      >
+      >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](#permissions)**.
 
-   * Aktivera (eller inaktivera) autentisering för att få åtkomst till sidan.
-   >[!NOTE]
-   >
-   >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](#permissions)**.
+   * **Inloggningssida**  - Den sida som ska användas för inloggning
 
-* **Inloggningssida**
+* **Exportera**
 
-   * Den sida som ska användas för inloggning.
-
-* **Exportera konfiguration**
-
-   * Ange en exportkonfiguration.
+   * **Exportkonfiguration**  - Anger en exportkonfiguration
 
 ### Miniatyrbild {#thumbnail}
 
-Visar sidminiatyrbilden. Du kan:
+Konfigurera sidminiatyrbilden
 
-* **Generera förhandsgranskning**
-
-   * Generera en förhandsgranskning av sidan som ska användas som miniatyrbild.
-
-* **Överför bild**
-
-   * Överför en bild som ska användas som miniatyrbild.
-
-* **Välj bild**
-
-   * Välj en befintlig resurs som du vill använda som miniatyrbild.
-
-* **Återställ**
-
-   * Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
+* **Generera förhandsvisning**  - Generera en förhandsvisning av sidan som ska användas som miniatyrbild
+* **Överför bild**  - Överför en bild som ska användas som miniatyrbild
+* **Välj bild** - Välj en befintlig resurs som du vill använda som miniatyrbild
+* **Återställ**  - Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
 
 ### Sociala medier {#social-media}
 
@@ -189,9 +158,7 @@ Visar sidminiatyrbilden. Du kan:
 
 ### Cloud Services {#cloud-services}
 
-* **Cloud Service Configurations**
-
-   * Definiera egenskaper för molntjänster.
+* **Cloud Service Configurations**  - Definiera egenskaper för molntjänster
 
    <!--Define properties for [cloud services](/help/sites-developing/extending-cloud-config.md).
   -->
@@ -200,16 +167,14 @@ Visar sidminiatyrbilden. Du kan:
 
 * **ContextHub-konfigurationer**
 
-   * Välj ContextHub Configuration och Segments Path.
-
-   <!--Select the [ContextHub Configuration](/help/sites-administering/contexthub-config.md) and [Segments Path](/help/sites-administering/segmentation.md).
-  -->
+   * **ContextHub-sökväg**  - Definiera  [ContextHub-konfigurationen](/help/sites-cloud/authoring/personalization/contexthub.md)
+   * **Segmentbana**  - Definiera  [segmentbanan](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
 
 * **Målkonfiguration**
 
-   * Välj ett [varumärke för att ange ett omfång för målgruppsanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
+   * **Varumärke**  - Definierar ett  [varumärke för att ange ett omfång för målgruppsanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
    >[!NOTE]
-   >Det här alternativet kräver att användarkontot finns i `Target Adminstrators`gruppen.
+   >Det här alternativet kräver att användarkontot finns i `Target Administrators`gruppen.
 
 ### Behörigheter {#permissions}
 
@@ -227,25 +192,33 @@ Visar sidminiatyrbilden. Du kan:
 
 ### Blueprint {#blueprint}
 
-* **Blueprint**
+Den här fliken visas bara för sidor som fungerar som utkast.
 
-   * Definiera egenskaper för en designsida inom hantering av flera webbplatser.
+* **Aktuella Live-kopior**  - Visar en lista över sidor som är baserade på (dvs. är Live-kopior av) den här designsidan
 
    <!--Define properties for a Blueprint page within [multi-site management](/help/sites-administering/msm.md).-->
-
-   * Styr under vilka omständigheter ändringar ska spridas till Live Copy.
-
+* **Utrullningskonfigurationer**  - Styr under vilka omständigheter ändringar ska spridas till Live Copy
 
 ### Live-kopia {#live-copy}
 
-* **Livecopy**
+* **Synkronisera**  - Synkronisera Live Copy med utkast, med lokala ändringar
+* **Återställ**  - Återställ live-kopia till läget för utkast, ta bort lokala ändringar
+* **Gör uppehåll**  - Skjut upp Live Copy från ytterligare idriftsättningsändringar
+* **Frigör**  - Frigör Live-kopia från utkast
 
-   * Definiera egenskaper för en Live Copy-sida inom hantering av flera webbplatser. <!--Define properties for a Live Copy page within [multi-site management](/help/sites-administering/msm.md).-->
-   * Styr under vilka omständigheter ändringar ska spridas från utkast.
+* **Källa**
 
-### Platsstruktur {#site-structure}
+   * Visar sökvägen till ritningen för den här Live-kopian
 
-* Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offline Page**.
+* **Status**
+
+   * Visar sidans aktuella Live Copy-status
+
+* **Konfiguration**
+
+   * **Live Copy-arv**  - Om det här alternativet är markerat gäller Live Copy-konfigurationen för alla underordnade
+   * **Ärv utrullningskonfigurationer från överordnad**  - Om det här alternativet är markerat ärvs rollout-konfigurationen från sidans överordnade objekt
+   * **Välj utrullningskonfiguration**  - Definierar under vilka omständigheter ändringar ska spridas från utkast och bara vara tillgängliga när  **Inherit Rollout Configs från** Parentis inte har valts
 
 ## Redigera sidegenskaper {#editing-page-properties-1}
 
