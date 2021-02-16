@@ -2,9 +2,9 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: f07df8230ac3be34c29f54c41dc75ed21b2f5b3d
+source-git-commit: 344afa2d78c2453dce4d49e108ea7617d307ea09
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '1048'
 ht-degree: 1%
 
 ---
@@ -33,9 +33,33 @@ Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analy
 4. Fyll i informationen (se nedan) och välj **Anslut**.
    ![](assets/open_screen1.png "ConnectConnect")
 
-### IMS-konfiguration
+### IMS-konfiguration {#ims-configuration}
 
 En IMS-konfiguration för både Launch och Target krävs för att Target ska kunna integreras korrekt med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM som en Cloud Service, men IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). I [den här videon](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html) och [den här sidan](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/integration-ims-adobe-io.html) får du lära dig hur du skapar mål-IMS-konfigurationen.
+
+### Adobe Target klientorganisations-ID och Adobe Target klientkod {#tenant-client}
+
+När du konfigurerar fälten för Adobe Target klient-ID och Adobe Target klientkod bör du tänka på följande:
+
+1. För de flesta kunder är innehavar-ID och klientkod samma. Det innebär att båda fälten innehåller samma information och är identiska. Se till att du anger klient-ID i båda fälten.
+2. För äldre syften kan du även ange olika värden i fälten Klient-ID och Klientkod.
+
+I båda fallen ska du tänka på följande:
+
+* Som standard kopieras även klientkoden (om den läggs till först) automatiskt till fältet Klient-ID.
+* Du kan ändra standardinställningen för klient-ID.
+* Därför kommer serverdelsanropen till Target att baseras på klientens ID och klientsidans anrop till Target kommer att baseras på klientkoden.
+
+Som tidigare nämnts är det första fallet det vanligaste för AEM som en Cloud Service. Oavsett vad du väljer bör du kontrollera att både **och**-fälten innehåller rätt information beroende på dina behov.
+
+>[!NOTE]
+>
+> Om du vill redigera en befintlig målkonfiguration:
+>
+> 1. Ange klientorganisations-ID:t igen.
+> 2. Återanslut till mål.
+> 3. Spara konfigurationen.
+
 
 ### Redigera målkonfigurationen {#edit-target-configuration}
 
