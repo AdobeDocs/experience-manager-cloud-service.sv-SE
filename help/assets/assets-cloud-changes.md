@@ -2,9 +2,9 @@
 title: Noterbara ändringar i [!DNL Adobe Experience Manager Assets] som a [!DNL Cloud Service]
 description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [!DNL Experience Manager] as a [!DNL Cloud Service] jämfört med [!DNL Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: ed449eea146ec18bdc4d25ae4938f9a36180037d
+source-git-commit: 035d77ee4a6f9ef3593a34b2691ab6545d9e4f11
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -31,10 +31,14 @@ Tillgångsuppladdningen är optimerad för ökad effektivitet genom bättre skal
 * Standardarbetsflödet **[!UICONTROL DAM Asset Update]** i tidigare versioner av [!DNL Experience Manager] är inte längre tillgängligt. I stället erbjuder mikrotjänsterna en skalbar, lättillgänglig tjänst som täcker det mesta av standardbearbetningen av resurser (återgivningar, metadataextrahering och textextrahering för indexering).
    * Se [konfigurera och använda tillgångsmikrotjänster](/help/assets/asset-microservices-configure-and-use.md)
    * Om du vill ha anpassade arbetsflödessteg i bearbetningen kan du använda [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows).
+* Återskrivning av metadata stöds inte.
 * Resurser som överförs med Package Manager kräver manuell ombearbetning med åtgärden **[!UICONTROL Reprocess Asset]** i gränssnittet [!DNL Assets].
-* En digital resurs utan ett tillägg eller med ett felaktigt tillägg bearbetas inte som du vill. När du till exempel överför sådana resurser händer ingenting eller så kan en felaktig bearbetningsprofil gälla för resursen. Användarna kan fortfarande lagra de binära filerna i DAM.
+* En digital resurs utan ett tillägg eller med ett felaktigt tillägg bearbetas inte som du vill. [Automatisk MIME-typidentifiering ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/detect-asset-mime-type-with-tika.html) är inte tillgänglig. När du till exempel överför sådana resurser händer ingenting eller så kan en felaktig bearbetningsprofil gälla för resursen. Användarna kan fortfarande lagra de binära filerna utan filtillägg i DAM.
+* [[!DNL Assets] Det går inte att ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-home-page.html) använda startsidan.
+* Dubblerad tillgångsidentifiering fungerar annorlunda jämfört med [hur den fungerade i Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html).
+* För FPO-återgivningar (placement only) genereras olika jämfört med hur de fungerar i tidigare [!DNL Experience Manager]-versioner. Se [FPO-återgivning för Experience Manager som en Cloud Service](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/configure-aem-assets-for-asset-link.ug.html).
 
-Standardåtergivningar som genereras med tillgångsmikrotjänster lagras på ett bakåtkompatibelt sätt i resurslagernoderna (samma namnkonventioner).
+Standardåtergivningar som genereras med tillgångsmikrotjänster lagras på ett kompatibelt sätt i resursdatabasnoderna med samma namnkonventioner.
 
 ## Utveckla och testa tillgångsmikrotjänster {#asset-microservices}
 
