@@ -2,9 +2,9 @@
 title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för rubrikfri innehållsleverans.
 translation-type: tm+mt
-source-git-commit: 05dd9c9111409a67bf949b0fd8a13041eae6ef1d
+source-git-commit: 89a51faa08adc1a87d86c8e280919b3a890aae8b
 workflow-type: tm+mt
-source-wordcount: '3296'
+source-wordcount: '2935'
 ht-degree: 0%
 
 ---
@@ -98,9 +98,11 @@ Med GraphQL kan du utföra frågor för att returnera:
 
 * En **[lista över poster](https://graphql.org/learn/schema/#lists-and-non-null)**
 
-Du kan också utföra:
+<!--
+You can also perform:
 
-* [Beständiga frågor, som är cachelagrade](#persisted-queries-caching)
+* [Persisted Queries, that are cached](#persisted-queries-caching)
+-->
 
 ## The GraphQL for AEM Endpoint {#graphql-aem-endpoint}
 
@@ -531,20 +533,21 @@ Ytterligare exempel finns i:
 
 * [Exempelfrågor baserade på WKND-projektet](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-queries-using-wknd-project)
 
-## Beständiga frågor (cachelagring) {#persisted-queries-caching}
+<!--
+## Persisted Queries (Caching) {#persisted-queries-caching}
 
-När en fråga har förberetts med en begäran om POST kan den köras med en GET-begäran som kan cachas av HTTP-cacher eller ett CDN.
+After preparing a query with a POST request, it can be executed with a GET request that can be cached by HTTP caches or a CDN.
 
-Detta är nödvändigt eftersom POST-frågor vanligtvis inte cachelagras, och om GET med frågan används som parameter finns det en stor risk för att parametern blir för stor för HTTP-tjänster och mellanhänder.
+This is required as POST queries are usually not cached, and if using GET with the query as a parameter there is a significant risk of the parameter becoming too large for HTTP services and intermediates.
 
-Här följer de steg som krävs för att behålla en given fråga:
+Here are the steps required to persist a given query:
 
 >[!NOTE]
->Innan detta kan ske måste **GraphQL Persistence Queries** vara aktiverat för att konfigurationen ska bli korrekt. Mer information finns i [Aktivera funktionen för innehållsfragment i konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser).
+>Prior to this the **GraphQL Persistence Queries** need to be enabled, for the appropriate configuration. See [Enable Content Fragment Functionality in Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) for more details.
 
-1. Förbered frågan genom att PUTing den till den nya slutpunkts-URL:en `/graphql/persist.json/<config>/<persisted-label>`.
+1. Prepare the query by PUTing it to the new endpoint URL `/graphql/persist.json/<config>/<persisted-label>`.
 
-   Skapa till exempel en beständig fråga:
+   For example, create a persisted query:
 
    ```xml
    $ curl -X PUT \
@@ -565,32 +568,32 @@ Här följer de steg som krävs för att behålla en given fråga:
    }'
    ```
 
-1. Kontrollera svaret nu.
+1. At this point, check the response.
 
-   Kontrollera till exempel om åtgärden lyckades:
+   For example, check for success:
 
-   ```xml
-   {
-     "action": "create",
-     "configurationName": "wknd",
-     "name": "plain-article-query",
-     "shortPath": "/wknd/plain-article-query",
-     "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
-   }
-   ```
+     ```xml
+     {
+       "action": "create",
+       "configurationName": "wknd",
+       "name": "plain-article-query",
+       "shortPath": "/wknd/plain-article-query",
+       "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
+     }
+     ```
 
-1. Du kan sedan spela upp den beständiga frågan igen genom att GETa URL:en `/graphql/execute.json/<shortPath>`.
+1. You can then replay the persisted query by GETing the URL `/graphql/execute.json/<shortPath>`.
 
-   Använd till exempel den beständiga frågan:
+   For example, use the persisted query:
 
    ```xml
    $ curl -X GET \
        http://localhost:4502/graphql/execute.json/wknd/plain-article-query
    ```
 
-1. Uppdatera en beständig fråga genom POSTing till en redan befintlig frågesökväg.
+1. Update a persisted query by POSTing to an already existing query path.
 
-   Använd till exempel den beständiga frågan:
+   For example, use the persisted query:
 
    ```xml
    $ curl -X POST \
@@ -614,9 +617,9 @@ Här följer de steg som krävs för att behålla en given fråga:
    }'
    ```
 
-1. Skapa en omsluten vanlig fråga.
+1. Create a wrapped plain query.
 
-   Till exempel:
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -627,9 +630,9 @@ Här följer de steg som krävs för att behålla en given fråga:
    '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }"}'
    ```
 
-1. Skapa en omsluten oformaterad fråga med cachekontroll.
+1. Create a wrapped plain query with cache control.
 
-   Till exempel:
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -640,9 +643,9 @@ Här följer de steg som krävs för att behålla en given fråga:
    '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
    ```
 
-1. Skapa en beständig fråga med parametrar:
+1. Create a persisted query with parameters:
 
-   Till exempel:
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -666,62 +669,62 @@ Här följer de steg som krävs för att behålla en given fråga:
      }'
    ```
 
-1. Kör en fråga med parametrar.
+1. Executing a query with parameters.
 
-   Till exempel:
+   For example:
 
    ```xml
    $ curl -X POST \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-   
+
    $ curl -X GET \
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    ```
 
-1. Om du vill köra frågan vid publicering måste det relaterade beständiga trädet replikeras
+1. To execute the query on publish, the related persist tree need to replicated
 
-   * Använda en POST för replikering:
+   * Using a POST for replication:
 
-      ```xml
-      $curl -X POST   http://localhost:4502/bin/replicate.json \
-        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-        -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
-        -F cmd=activate
-      ```
+     ```xml
+     $curl -X POST   http://localhost:4502/bin/replicate.json \
+       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
+       -F cmd=activate
+     ```
 
-   * Använda ett paket:
-      1. Skapa en ny paketdefinition.
-      1. Inkludera konfigurationen (till exempel `/conf/wknd/settings/graphql/persistentQueries`).
-      1. Bygg paketet.
-      1. Replikera paketet.
-   * Använda replikerings-/distributionsverktyget.
-      1. Gå till distributionsverktyget.
-      1. Välj trädaktivering för konfigurationen (till exempel `/conf/wknd/settings/graphql/persistentQueries`).
-   * Använda ett arbetsflöde (via konfiguration för att starta arbetsflöde):
-      1. Definiera en startregel för arbetsflöde för att köra en arbetsflödesmodell som skulle återge konfigurationen för olika händelser (till exempel skapa, ändra).
+   * Using a package:
+     1. Create a new package definition.
+     1. Include the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
+     1. Build the package.
+     1. Replicate the package.
 
+   * Using replication/distribution tool.
+     1. Go to the Distribution tool.
+     1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
 
+   * Using a workflow (via workflow launcher configuration):
+     1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
 
-1. När frågekonfigurationen är publicerad gäller samma principer, bara med publiceringsslutpunkten.
-
-   >[!NOTE]
-   >
-   >För anonym åtkomst förutsätter systemet att åtkomstkontrollistan tillåter &quot;alla&quot; att ha åtkomst till frågekonfigurationen.
-   >
-   >Om så inte är fallet kommer det inte att kunna köras.
+1. Once the query configuration is on publish, the same principles apply, just using the publish endpoint.
 
    >[!NOTE]
    >
-   >Alla semikolon (&quot;;&quot;) i URL:erna måste kodas.
+   >For anonymous access the system assumes that the ACL allows "everyone" to have access to the query configuration.
    >
-   >Som i begäran att köra en beständig fråga:
+   >If that is not the case it will not be able to execute.
+
+   >[!NOTE]
    >
+   >Any semicolons (";") in the URLs need to be encoded.
    >
-   ```xml
+   >For example, as in the request to Execute a persisted query:
+   >
+   >```xml
    >curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    >```
+-->
 
 ## Frågar GraphQL-slutpunkten från en extern webbplats {#query-graphql-endpoint-from-external-website}
 
@@ -740,8 +743,13 @@ För att komma åt GraphQL-slutpunkten måste en CORS-princip konfigureras i kun
 
 Den här konfigurationen måste ange en betrodd webbplatsursprung `alloworigin` eller `alloworiginregexp` som åtkomst måste beviljas för.
 
-Om du till exempel vill ge åtkomst till GraphQL-slutpunkten och den beständiga frågeslutpunkten för `https://my.domain` kan du använda:
+<!--
+For example, to grant access to the GraphQL endpoint and persisted queries endpoint for `https://my.domain` you can use:
+-->
 
+Om du till exempel vill ge åtkomst till GraphQL-slutpunkten för `https://my.domain` kan du använda:
+
+<!--
 ```xml
 {
   "supportscredentials":true,
@@ -771,6 +779,39 @@ Om du till exempel vill ge åtkomst till GraphQL-slutpunkten och den beständiga
   "allowedpaths":[
     "/content/_cq_graphql/global/endpoint.json",
     "/graphql/execute.json/.*"
+  ]
+}
+```
+-->
+
+```xml
+{
+  "supportscredentials":true,
+  "supportedmethods":[
+    "GET",
+    "HEAD",
+    "POST"
+  ],
+  "exposedheaders":[
+    ""
+  ],
+  "alloworigin":[
+    "https://my.domain"
+  ],
+  "maxage:Integer":1800,
+  "alloworiginregexp":[
+    ""
+  ],
+  "supportedheaders":[
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers"
+  ],
+  "allowedpaths":[
+    "/content/_cq_graphql/global/endpoint.json"
   ]
 }
 ```
