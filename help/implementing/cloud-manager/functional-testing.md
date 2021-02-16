@@ -2,9 +2,9 @@
 title: Funktionstestning - Cloud Services
 description: Funktionstestning - Cloud Services
 translation-type: tm+mt
-source-git-commit: 3bf7defc9aa36c831e061e7209a765f2d60cfb33
+source-git-commit: dc006d50d703a17a84e3dc6631bc423f5de37f88
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '415'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,6 @@ Funktionstestning indelas i två typer:
 
 * Funktionstestning av produkten
 * Anpassad funktionstestning
-* Testning av anpassat användargränssnitt
 
 ## Funktionstestning av produkten {#product-functional-testing}
 
@@ -34,12 +33,6 @@ Om JAR-test inte skapas av bygget godkänns testet som standard.
 
 >[!NOTE]
 >Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md).
-
-## Anpassad gränssnittstestning {#custom-ui-testing}
-
-Anpassade gränssnittstester kan skrivas och gör det möjligt för kunder att snabbt skapa testautomatiseringssviter för validering av webb- och mobilappar som bygger på AEM.
-
-Mer information om hur du skriver anpassade gränssnittstester finns i [Skapa gränssnittstester](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/ui-testing.html#building-ui-tests).
 
 
 ### Skriver funktionstester {#writing-functional-tests}
