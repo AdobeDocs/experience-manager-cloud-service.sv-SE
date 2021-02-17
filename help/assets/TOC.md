@@ -5,10 +5,10 @@ breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: b0abba78292035140688b1802e8d8f12a121a1f0
+source-git-commit: 2749703c569b5ce060041b1c479a465fb3d0ca01
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 68%
+source-wordcount: '474'
+ht-degree: 67%
 
 ---
 
@@ -123,6 +123,6 @@ ht-degree: 68%
    + [Publicera Dynamic Media-resurser](dynamic-media/publishing-dynamicmedia-assets.md)
    + [Arbeta med selektiv publicering i Dynamic Media](dynamic-media/selective-publishing.md)
    + [Arbeta med väljare](dynamic-media/working-with-selectors.md)
-   + [Vanliga frågor om att DHTML Viewer upphör](dynamic-media/dhtml-viewer-endoflifefaqs.md)
-   + [Meddelande om att Flash Viewer har upphört](dynamic-media/flash-viewers-eol.md)
    + [Vanliga frågor om leverans av innehåll med HTTP2](dynamic-media/http2faq.md)
+   + [Flash-tittare som slutar svara](dynamic-media/flash-viewers-eol.md)
+   + [DHTML-visningsprogram - slutdatum](dynamic-media/dhtml-viewer-endoflifefaqs.md)
