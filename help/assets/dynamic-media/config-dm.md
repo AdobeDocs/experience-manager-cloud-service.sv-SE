@@ -2,9 +2,9 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: c0db892d58f762bd5659596371ece86950e9cdd7
+source-git-commit: 5a50226bfae12440d07f9a21233ea06e118addac
 workflow-type: tm+mt
-source-wordcount: '3568'
+source-wordcount: '3567'
 ht-degree: 8%
 
 ---
@@ -46,7 +46,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 -->
 
-## Skapa en ny Dynamic Media-konfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
+## Skapa en Dynamic Media-konfiguration i Cloud Servicens {#configuring-dynamic-media-cloud-services}
 
 <!-- **Before you creating a Dynamic Media Configuration in Cloud Services**: After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials. -->
 
