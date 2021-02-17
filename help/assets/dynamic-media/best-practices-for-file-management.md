@@ -3,9 +3,9 @@ title: Bästa tillvägagångssätt för att ordna digitala resurser för använd
 description: Tips och tips för att namnge, ordna och hantera Dynamic Media bild- och videofiler.
 contentOwner: Rick Brough
 translation-type: tm+mt
-source-git-commit: 58aa2f416aac6fa6b260e846fc5265bdf62a1949
+source-git-commit: a64a7274f0037789be1a5e2f7427aba551f14ed7
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för att ordna dina digitala resurser så att de kan använda bildprofiler eller videoprofiler{#best-practices-for-organizing-your-digital-assets-for-using-profiles}
 
-Ett viktigt koncept när det gäller användning av Dynamic Media bildprofiler eller videoprofiler är att de tilldelas mappar. Inom en profil finns inställningar för en bild eller video. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Det innebär att hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar har stor inverkan på hur dessa resurser bearbetas av profilen.
+Ett viktigt koncept när det gäller användning av Dynamic Media bildprofiler eller videoprofiler är att de tilldelas mappar. Inom en profil finns inställningar för en bild eller video. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Därför påverkar hur du namnger filer och mappar, ordnar undermappar och hanterar filerna i dessa mappar hur dessa resurser bearbetas av profilen.
 
 Genom att använda konsekventa och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan du få ut det mesta av din digitala resurssamling och se till att rätt filer bearbetas med rätt profil.
 
@@ -21,12 +21,12 @@ Se [Om Dynamic Media bildprofil och videoprofiler](about-image-video-profiles.md
 
 Här följer några tips om hur du kan ordna dina digitala resursfiler.
 
-* Ordna dina filer baserat på de metadata du lägger till dem i stället för på de mappar där de finns. Du kan uppnå detta genom att lägga till metadataprofiler.
+* Ordna dina filer baserat på de metadata du lägger till dem i stället för på de mappar där de finns. Du kan åstadkomma detta genom att lägga till metadataprofiler.
 
    * Se [Metadataprofiler.](/help/assets/metadata-profiles.md)
    * Se [Metadata för hantering av digitala resurser](/help/assets/manage-metadata.md).
 
-* I de flesta fall växer din samling av digitala resurser alltid. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning bland alla dina överförda resurser. Genom att standardisera på dessa saker kan du säkerställa att när din pool med digitala resurser växer kan du använda bearbetningsprofiler på mappar med större precision och enhetlighet.
+* Vanligtvis växer din samling av digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning bland alla dina överförda resurser. Genom att standardisera på dessa saker kan du säkerställa att när din pool med digitala resurser växer kan du använda bearbetningsprofiler på mappar med större precision och enhetlighet.
 * Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Mappstrukturer som kan hjälpa dig att förfina vilka profiler som ska tilldelas kan till exempel innehålla följande:
 
    * **Utvecklingsmappar**  - innehåller digitala resurser som du arbetar med just nu.
@@ -40,5 +40,5 @@ Här följer några tips om hur du kan ordna dina digitala resursfiler.
    * **Datumbaserade mappar**  - innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att tilldelade profiler inte bryts.
-* Om en resurs redan är publicerad använder du AEM för att flytta resursen till en annan mapp och publicera på nytt från den nya platsen, men den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock&quot;förlorad&quot; för AEM och kan inte avpubliceras. Därför bör du avpublicera resurser först innan du flyttar dem till en annan mapp.
+* Anta att en resurs redan är publicerad, sedan använder du Adobe Experience Manager för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen. Den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock&quot;förlorad&quot; för Experience Manager och kan inte avpubliceras. Därför bör du avpublicera resurser först innan du flyttar dem till en annan mapp.
 
