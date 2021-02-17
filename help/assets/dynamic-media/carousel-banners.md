@@ -2,9 +2,9 @@
 title: Karusellbanner
 description: Lär dig hur du arbetar med Carousel Banners i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: f5627a6e885a556700fbf56c4c63f0f4d6a89da0
+source-git-commit: a3482d4e22ceb11d18a693fe2975d5b78d843de3
 workflow-type: tm+mt
-source-wordcount: '4491'
+source-wordcount: '4490'
 ht-degree: 3%
 
 ---
@@ -224,7 +224,7 @@ Information om hur du överför bildbanderoller finns i [Överföra resurser](/h
    >    * Animering. Som standard tonas varje bildruteövergång ut. Du kan ändra det till en bildövergång.
    >    * Knapparnas format. Användarna kan rotera genom banners genom att trycka på varje punkt eller nummer. Du kan ändra var de angivna indikatorknapparna visas (och om de är numeriska eller prickade) och hur stora de är.
    >    * Ändra markeringsformatet för ett bildschema eller ikonen som används för aktiveringspunkter.
-   >    * Innan du redigerar en visningsförinställning väljer du det format som du vill basera förinställningen på. Om du inte väljer ett format förlorar du alla ändringar när du börjar redigera visningsförinställningen om du väljer att ändra till en annan förinställning.
+   >    * Innan du redigerar en visningsförinställning väljer du det format som du vill basera förinställningen på. Om du inte väljer ett format förlorar du alla ändringar när du börjar redigera visningsförinställningen om du ändrar till en annan förinställning.
 
 
    Du kan också förhandsvisa hur karusellbanderollen ser ut. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
