@@ -2,9 +2,9 @@
 title: Noterbara ändringar i [!DNL Adobe Experience Manager Assets] som a [!DNL Cloud Service]
 description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [!DNL Experience Manager] as a [!DNL Cloud Service] jämfört med [!DNL Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: 3e7613aa50e69e2c9789df4f2fb429ab74654110
+source-git-commit: db08a4365d264383cc143727e423ac9886bed66c
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Tillgångsuppladdningen är optimerad för ökad effektivitet genom bättre skal
 * Återskrivning av metadata stöds inte. Se [metadatatillbakaskrivning i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/xmp-writeback.html).
 * Resurser som överförs med Package Manager kräver manuell ombearbetning med **[!UICONTROL Reprocess Asset]**-åtgärden i [!DNL Assets]-användargränssnittet.
 * [!DNL Assets] identifierar inte automatiskt MIME-typen för överförda resurser. En digital resurs utan ett tillägg eller med ett felaktigt tillägg bearbetas inte som du vill. När du till exempel överför sådana resurser händer ingenting eller så kan en felaktig bearbetningsprofil gälla för resursen. Användarna kan fortfarande lagra de binära filerna utan filtillägg i DAM. Se [MIME-typdetektering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/detect-asset-mime-type-with-tika.html).
+* [!DNL Experience Manager] som a  [!DNL Cloud Service] inte genererar delresurser för sammansatta resurser. Se [Skapa delresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets).
 * [!DNL Assets] Startsidan är inte tillgänglig. Se [[!DNL Assets] Home Page experience in [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-home-page.html).
 * Dubblerad tillgångsidentifiering fungerar annorlunda jämfört med [hur den fungerade i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html).
 * För FPO-återgivningar (placement only) genereras olika jämfört med tidigare [!DNL Experience Manager]-versioner. Se [FPO-återgivning för [!DNL Experience Manager] som en [!DNL Cloud Service]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/configure-aem-assets-for-asset-link.ug.html).
