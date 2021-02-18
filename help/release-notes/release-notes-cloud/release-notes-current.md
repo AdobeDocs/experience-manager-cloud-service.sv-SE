@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: dc006d50d703a17a84e3dc6631bc423f5de37f88
+source-git-commit: 77d0ae925ed3837c70e58c110b6c8360790b6aee
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -133,9 +133,10 @@ Releasedatum för innehållsöverföringsverktyget v1.2.4 är 10 februari 2021.
 
 Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 
-### Nyheter i [!DNL Content Transfer Tool] {#what-is-new-ctt}
+### Nyheter i verktyget Innehållsöverföring {#what-is-new-ctt}
 
-* Ny funktion och nytt användargränssnitt har lagts till i verktyget Innehållsöverföring - verktyget för användarmappning. Den här funktionen mappar automatiskt befintliga användare och grupper till deras Adobe Identity Management-system-ID som en del av innehållsmigreringsaktiviteten. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
+* Ny funktion och nytt användargränssnitt har lagts till i verktyget Innehållsöverföring - verktyget för användarmappning. Den här funktionen mappar automatiskt befintliga användare och grupper till deras Adobe Identity Management-system-ID som en del av innehållsmigreringsaktiviteten.
+Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
 * Verktyget Innehållsöverföring migrerar nu alla grupper och användare som det hänvisas till i migreringsuppsättningen, inklusive underordnade.
 * Användarna kan välja vissa sökvägar under `/etc` när de skapar migreringsuppsättningar.
 
@@ -145,7 +146,7 @@ Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 
 Releasedatum för Best Practices Analyzer v2.1.0 är 11 februari 2021.
 
-### Nyheter i [!DNL Best Practices Analyzer] {#what-is-new-bpa}
+### Nyheter i Best Practices Analyzer {#what-is-new-bpa}
 
 * Möjlighet att upptäcka användning av AEM Forms och AEM Forms och ange områden som är relevanta för migrering till AEM Forms som Cloud Service.
 * Möjlighet att upptäcka och rapportera användning och antal anpassade komponenter och mallar.
