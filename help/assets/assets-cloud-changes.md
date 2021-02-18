@@ -2,9 +2,9 @@
 title: Noterbara ändringar i [!DNL Adobe Experience Manager Assets] som a [!DNL Cloud Service]
 description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [!DNL Experience Manager] as a [!DNL Cloud Service] jämfört med [!DNL Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: db08a4365d264383cc143727e423ac9886bed66c
+source-git-commit: 6dc6445e4019664525629fe2204d255cfee37a81
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,7 @@ Tillgångsuppladdningen är optimerad för ökad effektivitet genom bättre skal
 * [!DNL Assets] Startsidan är inte tillgänglig. Se [[!DNL Assets] Home Page experience in [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-home-page.html).
 * Dubblerad tillgångsidentifiering fungerar annorlunda jämfört med [hur den fungerade i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html).
 * För FPO-återgivningar (placement only) genereras olika jämfört med tidigare [!DNL Experience Manager]-versioner. Se [FPO-återgivning för [!DNL Experience Manager] som en [!DNL Cloud Service]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/configure-aem-assets-for-asset-link.ug.html).
+* När ett ZIP-arkiv överförs extraherar [!DNL Experience Manager] som [!DNL Cloud Service] inte de resurser som paketerats i arkivet. Se [ZIP-extrahering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.htmln#extractzip).
 
 Standardåtergivningar som genereras med tillgångsmikrotjänster lagras på ett bakåtkompatibelt sätt i resursdatabasnoderna med samma namnkonventioner.
 
