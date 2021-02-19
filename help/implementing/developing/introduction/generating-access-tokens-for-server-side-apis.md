@@ -2,9 +2,9 @@
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM som en Cloud Service genom att generera en säker JWT-token
 translation-type: tm+mt
-source-git-commit: e4c7fcc1576a401629461117be4dba404a3c37c8
+source-git-commit: 47296bc734dffb943be37b61ddce6b505d57d6b5
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1108'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ exchange(config).then(accessToken => {
 
 Samma utbyte kan utföras på alla språk som kan generera en signerad JWT-token med rätt format och anropa API:erna för IMS Token Exchange.
 
-Åtkomsttoken definierar när den upphör att gälla, vilket vanligtvis är 12 timmar. Det finns exempelkod i Git-databasen för att hantera en åtkomsttoken och uppdatera den innan den upphör att gälla.
+Åtkomsttoken definierar när den förfaller, vilket vanligtvis är 24 timmar. Det finns exempelkod i Git-databasen för att hantera en åtkomsttoken och uppdatera den innan den upphör att gälla.
 
 ### Anropa AEM-API {#calling-the-aem-api}
 
@@ -116,11 +116,11 @@ Den här tekniska kontoanvändaren i AEM kan ges ytterligare behörighet med de 
 
 Utvecklare kommer troligen att vilja testa med hjälp av en utvecklingsinstans av sin icke-AEM-programvara (som antingen körs på deras bärbara dator eller på deras värddator) som gör begäranden till en AEM som en Cloud Service-utvecklingsmiljö. Eftersom utvecklare inte nödvändigtvis har behörighet för IMS-administratörsroller kan vi inte anta att de kan generera JWT-bäraren som beskrivs i det vanliga server-till-server-flödet. Därför erbjuder vi en mekanism för en utvecklare att generera en åtkomsttoken direkt som kan användas i begäranden som AEM som en Cloud Service som de har tillgång till.
 
-I [dokumentationen till Utvecklarriktlinjer](/help/implementing/developing/introduction/development-guidelines.md#crxde-lite-and-developer-console) finns information om vilka behörigheter som krävs för att använda AEM som Cloud Service-utvecklarkonsol.
+Mer information om vilka behörigheter som krävs för att använda AEM som Cloud Service-utvecklarkonsol finns i [dokumentationen till Utvecklarriktlinjer](/help/implementing/developing/introduction/development-guidelines.md#crxde-lite-and-developer-console).
 
 >[!NOTE]
 >
->Åtkomsttoken för lokal utveckling är giltig i 24 timmar. Därefter måste den genereras om med samma metod.
+>Åtkomsttoken för lokal utveckling är giltig i högst 24 timmar. Därefter måste den genereras om med samma metod.
 
 Utvecklare kan använda denna token för att ringa anrop från andra program än AEM till en AEM som en Cloud Service. I vanliga fall använder utvecklaren denna token tillsammans med programmet som inte är AEM på sin egen bärbara dator. AEM som moln är vanligtvis en icke-produktionsmiljö.
 
