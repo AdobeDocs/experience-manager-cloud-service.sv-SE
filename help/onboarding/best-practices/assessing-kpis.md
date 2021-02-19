@@ -2,15 +2,22 @@
 title: Åtkomst till KPI:er
 description: Åtkomst till KPI:er
 translation-type: tm+mt
-source-git-commit: 35143c9189620180665fe8f8735bc7800c03dc96
+source-git-commit: 7add7edf0a3fe40be33483e293a345d7c68eb312
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
 
 
 # Mäter du det som betyder mest?
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_assesskpis"
+>title="Utvärderar nyckeltal"
+>abstract="Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=en" text="Justera KPI:er"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html?lang=en" text="Välja rätt team"
 
 Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll.
 
