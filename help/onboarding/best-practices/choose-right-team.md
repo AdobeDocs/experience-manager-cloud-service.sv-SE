@@ -2,15 +2,22 @@
 title: Rätt personer, rätt roller
 description: Rätt personer, rätt roller
 translation-type: tm+mt
-source-git-commit: 35143c9189620180665fe8f8735bc7800c03dc96
+source-git-commit: 7add7edf0a3fe40be33483e293a345d7c68eb312
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
 
 
 # **Börja med att skaffa rätt personer i rätt roller**
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_chooseteam"
+>title="Välj rätt team"
+>abstract="Rätt personer i rätt jobb för att hjälpa er driftsättning av Adobe Experience Manager att lyckas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=en" text="Justera KPI:er"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/assessing-kpis.html?lang=en" text="Utvärderar nyckeltal"
 
 Det finns en chans att olika avdelningar inom organisationen har olika aspekter av den digitala upplevelsen. Utan styre är steget klart för en oändlig debatt, konflikter och förvirring.
 
