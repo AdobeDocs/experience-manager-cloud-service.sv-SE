@@ -2,9 +2,9 @@
 title: Justera KPI:er
 description: Justera KPI:er
 translation-type: tm+mt
-source-git-commit: 35143c9189620180665fe8f8735bc7800c03dc96
+source-git-commit: 7add7edf0a3fe40be33483e293a345d7c68eb312
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,13 @@ ht-degree: 0%
 
 
 # Börja med era affärsmål för att välja rätt nyckeltal
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_alignkpis"
+>title="Justera KPI:er"
+>abstract="I en digital värld kan du mäta nästan allt. Om ni väljer rätt nyckeltal för er Adobe Experience Manager-implementering kan teamet fokusera på det som är viktigast."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/assessing-kpis.html?lang=en" text="Utvärderar nyckeltal"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html?lang=en" text="Välja rätt team"
 
 I en digital värld kan du mäta nästan allt. Om du väljer tre nyckeltal för implementeringen av Adobe Experience Manager kan ditt team fokusera på det som är viktigast.
 
