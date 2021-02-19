@@ -2,7 +2,7 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: 'Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service. '
 translation-type: tm+mt
-source-git-commit: 938f2b45a99e8884c166656694424d2123121369
+source-git-commit: 4f43736ae80eeb57efe7d480993efd9a7ad193bf
 workflow-type: tm+mt
 source-wordcount: '1885'
 ht-degree: 86%
@@ -121,7 +121,7 @@ Cloud Manager har utvecklats till en självbetjäningsportal där huvudkomponent
 
 * Meddelas om viktiga livscykelhändelser för dessa komponenter (t.ex. produktuppdateringar).
 
-Cloud Manager skapar miljöer i datacentraler i många geografiska regioner, vilket ger global täckning. CDN:s närvaropunkter (PoP) garanterar leverans av innehåll med låg latens för kunder som finns i hela världen.
+Cloud Manager skapar miljöer i datacentraler i många geografiska regioner, vilket ger global täckning. CDN:s (Points of Presence) garanterar leverans av innehåll med låg latens för kunder som finns i hela världen.
 
 >[!NOTE]
 >Se [Använda Experience Manager som Cloud Service](/help/onboarding/getting-access-to-aem-in-cloud/navigation.md) för att komma igång med Cloud Manager i AEM som Cloud Service.
