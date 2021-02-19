@@ -2,9 +2,9 @@
 title: Loggning
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 translation-type: tm+mt
-source-git-commit: 0b648e1a0da141f8393c62cb269e5498e2ecd23f
+source-git-commit: 17ba5068b0df0724bcebeecb2323b7dcdc8d8cfa
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2314'
 ht-degree: 2%
 
 ---
@@ -598,6 +598,12 @@ Egenskaperna ovan bör anges för varje relevant kombination av program- och mil
 >[!NOTE]
 >
 >Skräppostvidarebefordran för sandlådeprogrammiljöer stöds inte.
+
+Du bör se till att den ursprungliga begäran innehåller all utvecklingsmiljö som ska aktiveras, utöver stage/prod-miljöerna.
+
+Om nya utvecklingsmiljöer som skapas efter den ursprungliga begäran ska ha Splunk-vidarebefordran, men inte har det aktiverat, bör ytterligare en begäran göras.
+
+Observera också att om utvecklingsmiljöer har begärts är det möjligt att Splunk-vidarebefordran är aktiverat i andra dev-miljöer som inte finns i begäran eller till och med i sandlådemiljöer, och att Splunk-vidarebefordran delas med ett Splunk-index. Kunder kan använda fältet `aem_env_id` för att skilja mellan dessa miljöer.
 
 Här nedan hittar du ett exempel på en kundsupportförfrågan:
 
