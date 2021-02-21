@@ -2,9 +2,9 @@
 title: Leverera Dynamic Media-resurser
 description: Med Dynamic Media har du flera sätt att leverera Dynamic Media-material - både video och bilder - till din webbplats.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 193201670e5e78235025885f52215cca730ce556
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '105'
 ht-degree: 13%
 
 ---
