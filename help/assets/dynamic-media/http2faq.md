@@ -2,9 +2,9 @@
 title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
 translation-type: tm+mt
-source-git-commit: 83ad14d49a5250c3070eed4d4962443da6faf5f5
+source-git-commit: 193201670e5e78235025885f52215cca730ce556
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '733'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Vanliga frågor om leverans av innehåll med HTTP2{#http-delivery-of-content-faq}
 
-Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 kommer du att märka en generell prestandaökning.
+Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 ökar prestanda totalt.
 
 ## Vad är HTTP/2? {#what-is-http}
 
@@ -24,7 +24,7 @@ På följande webbplats beskrivs HTTP/2 och dess fördelar på ett kort och enke
 
 ## Vilka är de viktigaste fördelarna med att gå över till HTTP/2 för innehållsleverans? {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
-Prestandaförbättringarna varierar mycket beroende på faktorer som webbplatsens kod, hur du använder Dynamic Media, konsumentens enhet, skärm och plats och så vidare.
+Prestandaförbättringen varierar mycket eftersom den baseras på olika faktorer. Till exempel webbplatsens kod, hur du använder Dynamic Media, konsumentens enhet, skärm och plats.
 
 Adobe testning gav följande resultat:
 
@@ -49,7 +49,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media-konto? {#what-is-the-process-for-enabling-http-for-my-dm-account}
 
-Du måste [använda Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) och en begäran om att växla över till HTTP/2; det görs inte automatiskt åt dig.
+[Använd Admin Console för att skapa ett supportärende ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) och begära att gå över till HTTP/2. det görs inte automatiskt åt dig.
 
 1. Ange följande information i ditt supportärende:
 
@@ -69,7 +69,7 @@ Du måste [använda Admin Console för att skapa ett supportärende](https://hel
    Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
    1. Teknisk support lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
-   1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera övergången och ange ett måldatum.
+   1. När Adobe är redo att hantera din begäran kontaktar kundtjänst dig för att koordinera övergången och ange ett måldatum.
    1. Du får ett meddelande när du är klar och du kan verifiera en lyckad övergång till HTTP2.
 
 
@@ -80,14 +80,14 @@ Förfrågningar behandlas i den ordning som de tas emot av teknisk support.
 
 >[!NOTE]
 >
->Det kan finnas lång ledtid eftersom övergången till HTTP/2 innebär att cachen rensas. Därför kan bara ett fåtal kundövergångar hanteras åt gången.
+>Det finns en lång ledtid eftersom övergången till HTTP/2 innebär att cacheminnet rensas. Därför kan bara ett fåtal kundövergångar hanteras åt gången.
 
 ## Vilka är riskerna med att gå över till HTTP/2? {#what-are-the-risks-with-moving-to-http}
 
 Övergången till HTTP/2 tar bort ditt cacheminne vid CDN eftersom det handlar om att gå över till en ny CDN-konfiguration.
 
-Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen återskapas. På grund av detta planerar Adobe att hantera ett fåtal kundövergångar i taget så att godtagbara prestanda upprätthålls när vi drar in förfrågningar från vårt ursprung.
+Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen återskapas. På grund av detta planerar Adobe att hantera några kundövergångar i taget. Med den här metoden säkerställs att godtagbara prestanda upprätthålls när begäranden dras från ursprungsläget.
 
 ## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-Du måste ladda ned en extern version för att kunna använda den i webbläsaren. För Firefox och Chrome finns tillägget **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges detta av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
+Ladda ned ett tillägg som du kan använda med webbläsaren. För Firefox och Chrome finns det ett tillägg som heter **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges det av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
