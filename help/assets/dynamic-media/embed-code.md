@@ -2,7 +2,7 @@
 title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
 description: Lär dig bädda in Dynamic Media video- eller bildresurser på en webbsida.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 193201670e5e78235025885f52215cca730ce556
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 21%
@@ -42,7 +42,7 @@ Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
    Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-1. I den vänstra listen väljer du listrutan och trycker på **[!UICONTROL Viewers]**.
+1. Markera listrutan till vänster och tryck på **[!UICONTROL Viewers]**.
 1. Tryck på ett namn på en visningsförinställning i den vänstra listen. Visningsförinställningen används på resursen.
 1. Tryck på **[!UICONTROL Embed]**.
 1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och tryck sedan på **[!UICONTROL Close]**.
