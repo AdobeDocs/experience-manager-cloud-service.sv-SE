@@ -2,17 +2,17 @@
 title: Använda snabbvyer för att skapa anpassade popup-fönster
 description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
 translation-type: tm+mt
-source-git-commit: c3ada59105cad7c2fc3b36b032d045b91f86b495
+source-git-commit: ad626d9722f1942249197d96aa5fac3d8f7ed947
 workflow-type: tm+mt
-source-wordcount: '1009'
-ht-degree: 1%
+source-wordcount: '1023'
+ht-degree: 0%
 
 ---
 
 
 # Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
-Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram du använder kan användarna med den här funktionen klicka på en hotspot, en miniatyrbild eller på ett bildschema för att se information eller relaterat innehåll.
+Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram du använder kan kunderna trycka på en hotspot, en miniatyrbild eller ett bildschema för att se information eller relaterat innehåll.
 
 Snabbvyer stöds av följande visningsprogram i Dynamic Media:
 
@@ -20,19 +20,19 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
 * Interaktiv video (klickbara miniatyrbilder vid videouppspelning)
 * Carousel Banners (klickbara hotspot-områden eller bildscheman)
 
-Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma för alla tre visningsprogram som stöds.
+Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma i alla tre visningsprogram som stöds.
 
 **Använda snabbvyer för att skapa anpassade popup-fönster**
 
 1. Skapa en snabbvy för en överförd resurs.
 
-   Vanligtvis skapar du en snabbvy samtidigt som du redigerar en resurs för användning med det visningsprogram du använder.
+   Du skapar vanligtvis en snabbvy samtidigt som du redigerar en resurs som ska användas med det visningsprogram du använder.
 
    <table>
     <tbody>
     <tr>
     <td><strong>Visningsprogram som du använder</strong></td>
-    <td><strong>Följ de här stegen för att skapa snabbvyn</strong></td>
+    <td><strong>Så här skapar du snabbvyn</strong></td>
     </tr>
     <tr>
     <td>Interaktiva bilder</td>
@@ -72,9 +72,9 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
     </tbody>
    </table>
 
-1. Visningsprogrammet som du använder behöver nu veta hur du använder snabbvyn.
+1. Visningsprogrammet du använder måste kunna använda snabbvyn.
 
-   För att göra detta använder visningsprogrammet en hanterare som heter `QuickViewActive`.
+   Visningsprogrammet använder en hanterare med namnet `QuickViewActive`.
 
    **Exempel**
 Anta att du använde följande exempelkod för inbäddning på webbsidan för en interaktiv bild:
@@ -85,7 +85,7 @@ Anta att du använde följande exempelkod för inbäddning på webbsidan för en
 
    `*viewerInstance*.setHandlers({ *handler 1*, *handler 2*}, ...`
 
-   **Med exempelkoden för inbäddning ovan har vi följande kod:**
+   **Om du använder exemplet med den inbäddade koden ovan har du följande kod:**
 
    ```xml
    s7interactiveimageviewer.setHandlers({
@@ -103,12 +103,12 @@ Anta att du använde följande exempelkod för inbäddning på webbsidan för en
    * Interaktivt bildvisningsprogram: [söthandlare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
    * Interaktivt visningsprogram för video: [söthandlare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. Nu måste du konfigurera `quickViewActivate`-hanteraren.
+1. Konfigurera nu hanteraren `quickViewActivate`.
 
-   Hanteraren `quickViewActivate` styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn samt ett exempel på `loadQuickView`-funktionsanrop.
+   Hanteraren `quickViewActivate` styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som används med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn. Det gör också ett exempel på ett `loadQuickView`-funktionsanrop.
 
    **Variable**
-mappingMap-variabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i QuickView:
+mappingMap-variabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i snabbvyn:
 
    `var *variable1*= inData.*quickviewVariable*`
 
@@ -116,7 +116,7 @@ mappingMap-variabler som ska användas på webbsidan till SKU-värdet och generi
 
    `var sku=inData.sku`
 
-   Mappa ytterligare variabler från snabbvyn, som i följande exempel:
+   Mappa även andra variabler från snabbvyn, som i följande:
 
    ```
    var <i>variable2</i>= inData.<i>quickviewVariable2</i>
@@ -141,10 +141,10 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    * Avkommentera avsnittet setHandlers i den inbäddade koden.
    * Mappa eventuella ytterligare variabler som finns i snabbvyn.
 
-      * Uppdatera `loadQuickView(sku,*var1*,*var2*)`-anropet om du lägger till ytterligare variabler.
+      * Uppdatera `loadQuickView(sku,*var1*,*var2*)`-anropet om du lägger till fler variabler.
    * Skapa en enkel `loadQuickView` ()-funktion på sidan, utanför visningsprogrammet.
 
-      Följande skriver till exempel värdet för sku till webbläsarkonsolen:
+      Följande skriver till exempel värdet på SKU till webbläsarkonsolen:
 
    ```xml
    function loadQuickView(sku){
@@ -154,12 +154,12 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
    * Överför en testsida i HTML-format till en webbserver och öppna den.
 
-      När variablerna från snabbvyn är mappade och funktionsanropet är på plats, skriver webbläsarkonsolen variabelvärdet till webbläsarkonsolen med den angivna exempelfunktionen.
+      Variablerna från snabbvyn mappas. Funktionsanropet är på plats. Och webbläsarkonsolen skriver variabelvärdet till webbläsarkonsolen. Detta görs med den exempelfunktion som finns.
 
 
 
 1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används en `DIV` för ett popup-fönster.
-1. Formatera popup-fönstret `DIV` på följande sätt. Lägg till egen formatering efter behov.
+1. Formatera popup-fönstret `DIV` på följande sätt. Lägg till extra formatering efter behov.
 
    ```xml
    <style type="text/css">
@@ -184,7 +184,7 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    </div>
    ```
 
-1. Lägg till en funktion för att uppdatera skalvärdet i popup-fönstret; göra popup-fönstret synligt genom att ersätta den enkla funktionen som skapades i steg 5. med följande:
+1. Om du vill uppdatera SKU-värdet i popup-fönstret lägger du till en funktion. Gör popup-fönstret synligt genom att ersätta den enkla funktionen som skapades i steg 5 med följande:
 
    ```xml
    <script type="text/javascript">
@@ -196,11 +196,11 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    ```
 
 1. Ladda upp en testsida för HTML till webbservern och öppna den. Visningsprogrammet visar popup-fönstret `DIV` när en användare anropar en snabbvy.
-1. **Visa det anpassade popup-fönstret i helskärmsläge**
+1. **Så här visar du det anpassade popup-fönstret i helskärmsläge**
 
    Vissa visningsprogram, till exempel Interactive Video Viewer, stöder visning i helskärmsläge. Om du däremot använder popup-fönstret enligt beskrivningen i föregående steg visas det bakom visningsprogrammet i helskärmsläge.
 
-   Om du vill att popup-fönstret ska visas i både standardläge och helskärmsläge, kopplar du popup-fönstret till visningsbehållaren. För att uppnå detta kan du använda en andra hanterarmetod, `initComplete`.
+   Om du vill att popup-fönstret ska visas i standardläge och helskärmsläge kopplar du popup-fönstret till visningsbehållaren. I det här fallet använder du en andra hanterarmetod, `initComplete`.
 
    Hanteraren `initComplete` anropas efter att visningsprogrammet har initierats.
 
@@ -225,14 +225,14 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    }
    ```
 
-   I koden ovan har vi gjort följande:
+   I koden ovan har du gjort följande:
 
-   * Identifierade vårt anpassade popup-fönster.
+   * Identifierade ditt anpassade popup-fönster.
    * Den togs bort från DOM.
    * Identifierade visningsprogrambehållaren.
    * Popup-fönstret bifogades till visningsbehållaren.
 
-1. Hela din setHandlers-kod ska nu se ut ungefär så här (Interactive Video Viewer användes):
+1. Hela din setHandlers-kod liknar följande (Interactive Video Viewer användes):
 
    ```xml
    s7interactivevideoviewer.setHandlers({
@@ -260,5 +260,5 @@ ExempelI det här exemplet används visningsprogrammet för interaktiv bild.
 
    `s7interactiveimageviewer.init()`
 
-   När du har bäddat in visningsprogrammet på värdsidan måste du se till att visningsprograminstansen skapas och att hanterarna läses in innan visningsprogrammet anropas med `init()`.
+   När du har bäddat in visningsprogrammet på värdsidan måste du se till att visningsprograminstansen skapas. Se även till att hanterarna läses in innan visningsprogrammet anropas med `init()`.
 
