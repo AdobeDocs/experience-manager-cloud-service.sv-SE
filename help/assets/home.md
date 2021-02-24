@@ -1,41 +1,41 @@
 ---
-title: Resurser som en [!DNL Cloud Service] guide
-description: Adobe Experience Manager Assets som en  [!DNL Cloud Service] självhjälp- och dokumentationslänkar
+title: '[!DNL Assets] as a [!DNL Cloud Service] Guide'
+description: '[!DNL Adobe Experience Manager Assets] as a [!DNL Cloud Service] självhjälpsresurser och dokumentationslänkar'
 translation-type: tm+mt
-source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
+source-git-commit: 58d99c33105b132570d0ca133ffa164373f53ad7
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 42%
+source-wordcount: '259'
+ht-degree: 24%
 
 ---
 
 
-# Resurser som en [!DNL Cloud Service]-guide {#aem-assets-guide}
+# [!DNL Assets] som en  [!DNL Cloud Service] guide  {#aem-assets-guide}
 
-Här följer självhjälpsresurserna för Experience Manager Assets as a [!DNL Cloud Service].
+Här följer självhjälpsresurserna för [!DNL Experience Manager Assets] som [!DNL Cloud Service].
 
-## Viktiga Assets-artiklar {#key-articles}
+## Nyckelartiklar [!DNL Assets] {#key-articles}
 
 * [Översikt och nyheter](overview.md)
 * [Betydande ändringar](/help/assets/assets-cloud-changes.md)
-* [Arkitektur av tillgångar som [!DNL Cloud Service]](architecture.md)
+* [Arkitektur  [!DNL Assets] av [!DNL Cloud Service]](architecture.md)
 * [Översikt över mikrotjänster för material](/help/assets/asset-microservices-overview.md)
 
-## Experience Manager-handböcker{#aem-guides}
+## [!DNL Experience Manager] stödlinjer  {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
-| [Experience Manager som  [!DNL Cloud Service] startsida](/help/landing/home.md) | Fullständig dokumentation av Experience Manager som en [!DNL Cloud Service]. |
-| [Översikt](/help/overview/home.md) | Översikt över och ordlista för Experience Manager as a Cloud Service. |
+| [[!DNL Experience Manager] as a [!DNL Cloud Service] Home](/help/landing/home.md) | Fullständig dokumentation av [!DNL Experience Manager] som en [!DNL Cloud Service]. |
+| [Översikt](/help/overview/home.md) | Introduktionöversikt och ordlista för [!DNL Experience Manager] som [!DNL Cloud Service]. |
 | [Versionsinformation](/help/release-notes/home.md) | Versionsinformation, nyheter, inaktuella och borttagna funktioner samt kända fel. |
-| [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden ger en introduktion till de centrala begreppen för Experience Manager som [!DNL Cloud Service], inklusive arkitekturen för den nya tjänsten. |
-| [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a [!DNL Cloud Service]. |
-| [Onboarding](/help/onboarding/home.md) | Kom igång med Experience Manager som [!DNL Cloud Service] - få åtkomst till och skydda viktiga data. |
-| [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a [!DNL Cloud Service]. |
-| [Flyttar till Experience Manager som [!DNL Cloud Service]](/help/move-to-cloud-service/home.md) | Förstå övergångsresan till Experience Manager som en [!DNL Cloud Service]. |
-| [Användarhandbok för implementering](/help/implementing/home.md) | Anpassa, utveckla och distribuera Experience Manager as a [!DNL Cloud Service]. |
-| [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a [!DNL Cloud Service]. |
-| [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-åtgärder i Experience Manager som en [!DNL Cloud Service], till exempel indexerings- och underhållsåtgärder. |
+| [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden ger en introduktion till de centrala begreppen i [!DNL Experience Manager] som [!DNL Cloud Service], inklusive arkitekturen för den nya tjänsten. |
+| [Användarhandbok om säkerhet](/help/security/home.md) | Lär dig mer om viktiga säkerhetsfrågor som rör [!DNL Experience Manager] som [!DNL Cloud Service]. |
+| [Onboarding](/help/onboarding/home.md) | Kom igång med [!DNL Experience Manager] som [!DNL Cloud Service] - få åtkomst till och skydda viktiga data. |
+| [Användarhandbok för Sites](/help/sites-cloud/home.md) | Förstå hur du kan redigera med och administrera [!DNL Experience Manager Sites] som en [!DNL Cloud Service]. |
+| [Flytta  [!DNL Experience Manager] till [!DNL Cloud Service]](/help/move-to-cloud-service/home.md) | Förstå övergångsresan till [!DNL Experience Manager] som en [!DNL Cloud Service]. |
+| [Användarhandbok för implementering](/help/implementing/home.md) | Anpassa, utveckla och distribuera [!DNL Experience Manager] som en [!DNL Cloud Service]. |
+| [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar anslutningar i [!DNL Experience Manager] som en [!DNL Cloud Service]. |
+| [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-åtgärder i [!DNL Experience Manager] som en [!DNL Cloud Service], till exempel indexerings- och underhållsåtgärder. |
 | [Handbok för Commerce](/help/commerce-cloud/home.md) | Lär dig mer om Commerce Integration Framework på [!DNL Experience Manager] som en [!DNL Cloud Service]. |
 
 ## Andra Experience Manager-resurser {#other-resources}
