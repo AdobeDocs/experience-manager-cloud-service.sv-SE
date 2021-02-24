@@ -2,9 +2,9 @@
 title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM - exempelinnehåll och frågor.
 translation-type: tm+mt
-source-git-commit: 972d242527871660d55b9a788b9a53e88d020749
+source-git-commit: 6a60238b13d66ea2705063670295a62e3cbf6255
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1707'
 ht-degree: 2%
 
 ---
@@ -329,7 +329,7 @@ query {
 
 ### Exempelfråga - Ett enskilt specifikt stadsfragment {#sample-single-specific-city-fragment}
 
-Det här är en fråga som returnerar information om ett enskilt fragment på en viss plats i databasen.
+Det här är en fråga som returnerar information om en enskild fragmentpost på en viss plats i databasen.
 
 **Exempelfråga**
 
