@@ -2,7 +2,7 @@
 title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för rubrikfri innehållsleverans.
 translation-type: tm+mt
-source-git-commit: 89a51faa08adc1a87d86c8e280919b3a890aae8b
+source-git-commit: e6553e5f46d87c7214fdfd888a984ca725c773d9
 workflow-type: tm+mt
 source-wordcount: '2935'
 ht-degree: 0%
@@ -275,7 +275,7 @@ Om en användare till exempel har skapat en innehållsfragmentmodell med namnet 
 
    * Tre av dem har kontrollerats av användaren: `author`, `main` och `referencearticle`.
 
-   * De andra fälten lades till automatiskt av AEM och representerar användbara metoder för att tillhandahålla information om ett visst innehållsfragment. i det här exemplet är `_path`, `_metadata`, `_variations`. Dessa [hjälpfält](#helper-fields) har markerats med en föregående `_` för att skilja mellan vad som har definierats av användaren och vad som har genererats automatiskt.
+   * De andra fälten lades till automatiskt av AEM och representerar användbara metoder för att tillhandahålla information om ett visst innehållsfragment. i det här exemplet är `_path`, `_metadata`, `_variations`. Dessa [hjälpfält](#helper-fields) är markerade med en föregående `_` för att skilja mellan vad som har definierats av användaren och vad som har genererats automatiskt.
 
 1. När en användare har skapat ett innehållsfragment baserat på artikelmodellen kan det sedan förfrågas via GraphQL. Se till exempel [Exempelfrågor](/help/assets/content-fragments/content-fragments-graphql-samples.md#graphql-sample-queries) (baserat på en [innehållsfragmentstruktur för GraphQL](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)).
 
