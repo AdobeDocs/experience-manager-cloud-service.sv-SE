@@ -2,9 +2,9 @@
 title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
 translation-type: tm+mt
-source-git-commit: 193201670e5e78235025885f52215cca730ce556
+source-git-commit: 20e37c385c2d3df91e37095bcf8a630fbfccbd16
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '761'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 1%
 # Vanliga frågor om leverans av innehåll med HTTP2{#http-delivery-of-content-faq}
 
 Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 ökar prestanda totalt.
+
+>[!NOTE]
+>
+>Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
 
 ## Vad är HTTP/2? {#what-is-http}
 
@@ -40,7 +44,7 @@ I följande exempel visas skillnaden mellan HTTP/1 och HTTP/2-inläsning:
 Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 * Använd säker HTTPS för multimedieförfrågningar.
-* Använd det Adobe-paketerade CDN (content delivery network) som en del av din Dynamic Media Classic-licens.
+* Använd det Adobe-paketerade CDN (Content Delivery Network) som en del av din Dynamic Media Classic-licens.
 * Använd en dedikerad domän (d.v.s. `images.company.com` eller `mycompany.scene7.com`), inte en generisk Dynamic Media-domän (d.v.s. `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
 
    Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto.
