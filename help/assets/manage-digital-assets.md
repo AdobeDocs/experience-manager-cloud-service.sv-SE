@@ -4,9 +4,9 @@ description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: de313ebc7a4fe89784b9083edbb790dc444caac9
+source-git-commit: 61e3f77b7d503b252a00178cebe654038ac6df83
 workflow-type: tm+mt
-source-wordcount: '4214'
+source-wordcount: '4192'
 ht-degree: 12%
 
 ---
@@ -176,7 +176,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    * Navigera till resursernas nya plats och tryck/klicka sedan på **[!UICONTROL Next]** för att fortsätta.
 
-   * Tryck/klicka på **[!UICONTROL Back]** för att återgå till skärmen **[!UICONTROL Rename]**.
+   * Tryck/klicka på **[!UICONTROL Back]** för att gå tillbaka till skärmen **[!UICONTROL Rename]**.
 
 1. Om de resurser som flyttas har några referenssidor, resurser eller samlingar visas fliken **[!UICONTROL Adjust References]** bredvid fliken **[!UICONTROL Select Destination]**.
 
@@ -185,7 +185,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    * Ange vilka referenser som ska justeras baserat på de nya detaljerna och tryck/klicka sedan på **[!UICONTROL Move]** för att fortsätta.
 
    * Välj/avmarkera referenser till resurserna i kolumnen **[!UICONTROL Adjust]**.
-   * Tryck/klicka på **[!UICONTROL Back]** för att återgå till skärmen **[!UICONTROL Select Destination]**.
+   * Tryck/klicka på **[!UICONTROL Back]** för att gå tillbaka till skärmen **[!UICONTROL Select Destination]**.
 
    * Tryck/klicka på **[!UICONTROL Cancel]** för att stoppa flyttåtgärden.
 
@@ -329,7 +329,7 @@ Se [Hämta resurser från [!DNL Experience Manager]](/help/assets/download-asset
 
 ## Stängd användargrupp {#closed-user-group}
 
-En stängd användargrupp (CUG) används för att begränsa åtkomsten till specifika resursmappar som publiceras från [!DNL Experience Manager]. Om du skapar en CUG-fil för en mapp är åtkomsten till mappen (inklusive mappresurser och undermappar) begränsad till endast tilldelade medlemmar eller grupper. För att få åtkomst till mappen måste de logga in med sina inloggningsuppgifter.
+En stängd användargrupp (CUG) används för att begränsa åtkomst till specifika resursmappar som publiceras från [!DNL Experience Manager]. Om du skapar en CUG-fil för en mapp är åtkomsten till mappen (inklusive mappresurser och undermappar) begränsad till endast tilldelade medlemmar eller grupper. För att få åtkomst till mappen måste de logga in med sina inloggningsuppgifter.
 
 CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan också konfigurera en inloggningssida för mappen.
 
@@ -515,7 +515,7 @@ Om en resurs har anteckningar eller har genomgått ett granskningsarbetsflöde k
 
 Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen.
 
-Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
+Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har minst en antecknings- eller granskningsstatus tilldelad.
 
 1. Öppna förhandsgranskningssidan för en resurs i resursgränssnittet.
 1. Gör något av följande:
@@ -541,11 +541,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du p
 
    Du kan välja andra inställningar beroende på var du vill att anteckningarna/statusen ska visas i den utskrivna PDF-filen. Om du vill att anteckningarna/statusen ska visas på en sida som är skild från den utskrivna resursen väljer du **[!UICONTROL Next Page]**.
 
-   >[!NOTE]
-   >
-   >Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
-
-1. Tryck/klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
+1. Klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
 
    ![chlimage_1-246](assets/chlimage_1-246.png)
 
