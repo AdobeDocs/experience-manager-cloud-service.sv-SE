@@ -2,10 +2,10 @@
 title: Aktivera hotlink-skydd i Dynamic Media
 description: Information om hur du aktiverar hotlink-skydd i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: 193201670e5e78235025885f52215cca730ce556
+source-git-commit: 20e37c385c2d3df91e37095bcf8a630fbfccbd16
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 7%
+source-wordcount: '191'
+ht-degree: 6%
 
 ---
 
@@ -16,4 +16,8 @@ Aktiv länkning är när en tredjepartswebbplats använder HTML-kod för att vis
 
 [Adobe Customer ](https://helpx.adobe.com/support.html) Carecan konfigurerar ett referensfilter på CDN-nivå. På så sätt säkerställs att Dynamic Media-innehåll endast kan användas på webbplatser i din lista över tillåtna webbplatser för domänen.
 
-Hotlink-skydd kräver att du använder Adobe’s bundled CDN. Om du vill aktivera hotlink-skydd måste en administratör skapa en supportbiljett för att begära konfigurationsändringen av ditt Dynamic Media-konto. Det kostar inget mer att aktivera hotlink-skydd.
+>[!NOTE]
+>
+>Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
+
+För att aktivera aktivering av hot link-skydd måste en administratör skapa en supportanmälan för att begära konfigurationsändringen av ditt Dynamic Media-konto. Det kostar inget mer att aktivera skydd av aktiva länkar.
