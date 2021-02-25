@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 6f48b5daa5b47ad19db8b3431350111364f962fc
+source-git-commit: ad80ea25abf06fd18dd781641f215e134a18a037
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -16,8 +16,8 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Expe
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.1.0 är 3 februari 2021.
-Följande version (2021.2.0) kommer att vara den 25 februari 2021.
+Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.2.0 är 25 februari 2021.
+Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 ## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
 
@@ -51,19 +51,24 @@ Följande version (2021.2.0) kommer att vara den 25 februari 2021.
 
 ## [!DNL Adobe Experience Manager Assets] som  [!DNL Cloud Service] {#assets}
 
-* [!DNL Experience Manager] som  [!DNL Cloud Service] utökar funktionerna för smarta taggar så att de kan identifiera nyckelord och enheter i textbaserade resurser. Texten identifieras, indexeras och görs tillgänglig som metadata för att förbättra sökupplevelsen utan att någon konfiguration behövs. Se [Smarta taggar](/help/assets/smart-tags.md).
+## Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-* MXF-filformat stöds nu. Se [Filformat som stöds](/help/assets/file-format-support.md#video-formats).
+* Resurser kan hämtas med [!DNL Experience Manager Assets Brand Portal]. Det hjälper er att skaffa resurser från byråanvändarna för nya marknadsföringskampanjer, fotografier och projekt.
 
-## Adobe Experience Manager Commerce som Cloud Service {#cloud-services-commerce}
+<!-- TBD: refine this list of features and enh. for Feb release.
 
-### Nyheter {#what-is-new-commerce}
+Customers using the Connected Assets feature can now easily view and track assets used on remote Sites instances. This affords customers a complete view of being used across all Sites powered pages, allowing for better tracking, management, and brand consistency.  
 
-* Product Experience Management: Ny egenskapsflik för Commerce för Assets och Experience Fragments. På den här fliken kan du länka produkter/kategorier till Assets och Experience Fragments. På fliken visas även realtidsdata för länkade produkter/kategorier och en länk som visar information i produktkonsolen.
+Indicators for expired, approved, and rejected statuses now available for assets in Column view.
 
-* Lanserade CIF Venia Reference Site - 2021.02.02 som innehåller den senaste CIF Core Components version v1.7.0. Mer information finns i [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.02.02).
+Ability to select a root path. select if a minimum number of tags is required. 
 
-* Frisläppta CIF-kärnkomponenter v1.7.0. Mer information finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.7.0).
+Add a Boolean or radio widget type to metadata schema setup. -->
+
+## Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}
+
+* När en ny version av en befintlig resurs skapas efter att namnkonflikten har lösts, skrivs metadata för den ursprungliga resursen över. (CQ-4313594)
+* När en resurs med lång anteckningstext skrivs ut beskärs anteckningstexten, även om det finns utrymme. (CQ-4314101)
 
 ## Cloud Manager {#cloud-manager}
 
@@ -101,23 +106,6 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari
 * I vissa fall kan ett internt problem leda till att miljön tas bort.
 
 * En del pipeline-fel rapporterades felaktigt som pipeline-fel.
-
-## AEM som en Cloud Service Foundation {#aem-as-a-cloud-service-foundation}
-
-### Nyheter {#what-is-new-foundation}
-
-* Autentiserade API-anrop från server till server - Generera lämpliga åtkomsttoken för att göra autentiserade server-till-server-API-anrop mellan externa program och AEM som en Cloud Service-miljö. Läs mer genom att läsa [dokumentationen](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md) eller genom att läsa igenom självstudiekursen[a3/>.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication)
-
-### SDK Build Analyzers {#sdk-build-analyzers}
-
-AEM som Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i ett maven-projekt, inklusive saknade beroenden. Det ger utvecklare möjlighet att upptäcka problem under den lokala utvecklingen, långt före distributionen till molnmiljöer med Cloud Manager.
-
-Två nya analytiker har lagts till för den här versionen:
-
-* repoinit analyzer
-* bundle-nativecode
-
-Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=en#developing).
 
 ## Content Transfer Tool {#content-transfer-tool}
 
