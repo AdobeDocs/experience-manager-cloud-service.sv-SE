@@ -2,9 +2,9 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: a11ce4c60ddfa345a3be20e3cc4f99ce86d1e84b
+source-git-commit: 20e37c385c2d3df91e37095bcf8a630fbfccbd16
 workflow-type: tm+mt
-source-wordcount: '3527'
+source-wordcount: '3593'
 ht-degree: 4%
 
 ---
@@ -18,13 +18,26 @@ Om du använder Adobe Experience Manager för olika miljöer, som utveckling, st
 
 I följande arkitekturdiagram beskrivs hur Dynamic Media fungerar.
 
-Med den nya arkitekturen ansvarar AEM för primära källresurser och synkroniserar med Dynamic Media för bearbetning och publicering av resurser:
+Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källresurserna och synkroniserar med Dynamic Media när det gäller bearbetning och publicering av mediefiler:
 
 1. När den primära källresursen överförs till AEM replikeras den till Dynamic Media. Då hanterar Dynamic Media all bearbetning och generering av resurser, till exempel videokodning och dynamiska varianter av en bild.
 1. När återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till AEM).
 1. När innehållet är klart att publiceras och godkännas utlöses Dynamic Media-tjänsten av att skicka innehåll till leveransservrar och cachelagra innehåll på CDN.
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
+
+>[!NOTE]
+>
+>Följande funktionslista kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager - Dynamic Media. Andra anpassade CDN stöds inte med dessa funktioner.
+>
+>* [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md)
+>* [Cacheogiltigförklaring](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md)
+>* [Hotlänksskydd](/help/assets/dynamic-media/hotlink-protection.md)
+>* [HTTP/2-leverans av innehåll](/help/assets/dynamic-media/http2faq.md)
+>* [Integrera Dynamic Media Viewers med Adobe Analytics och Experience Platform Launch](/help/assets/dynamic-media/launch.md)
+>* URL-omdirigering på CDN-nivå
+>* Akamai ChinaCDN (för optimal leverans i Kina)
+
 
 <!-- OBSOLETE CONTENT
 
