@@ -2,17 +2,21 @@
 title: CDN-cachen har inte verifierats med Dynamic Media Classic
 description: Om du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
 translation-type: tm+mt
-source-git-commit: 83ad14d49a5250c3070eed4d4962443da6faf5f5
+source-git-commit: 20e37c385c2d3df91e37095bcf8a630fbfccbd16
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 25%
+source-wordcount: '652'
+ht-degree: 24%
 
 ---
 
 
 # CDN-cachen har inte verifierats med Dynamic Media Classic {#invalidating-your-cdn-cached-content}
 
-Dynamic Media-resurser cachas av CDN för snabb leverans. När du uppdaterar en resurs kanske du vill att ändringarna ska börja gälla omedelbart. Om du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
+Dynamic Media resurser cachas av CDN (Content Delivery Network) för snabb leverans. När du uppdaterar en resurs kanske du vill att ändringarna ska börja gälla omedelbart. Om du validerar ditt CDN-cachelagrade innehåll kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
+
+>[!NOTE]
+>
+>Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
 
 >[!IMPORTANT]
 >
