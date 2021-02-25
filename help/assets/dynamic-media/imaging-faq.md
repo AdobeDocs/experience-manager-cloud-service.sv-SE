@@ -2,10 +2,10 @@
 title: Smart bildbehandling
 description: Smart bildbehandling tillämpar varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang.
 translation-type: tm+mt
-source-git-commit: a11ce4c60ddfa345a3be20e3cc4f99ce86d1e84b
+source-git-commit: 20e37c385c2d3df91e37095bcf8a630fbfccbd16
 workflow-type: tm+mt
-source-wordcount: '1777'
-ht-degree: 1%
+source-wordcount: '1805'
+ht-degree: 0%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 1%
 ## Vad är&quot;Smart Imaging&quot;? {#what-is-smart-imaging}
 
 Smart Imaging-tekniken tillämpar Adobe Sensei AI-funktioner och fungerar med befintliga&quot;bildförinställningar&quot;. Det förbättrar bildleveransen genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens funktioner.
+
+>[!NOTE]
+>
+>Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
 
 Smart Imaging drar också nytta av den ökade prestandaförbättringen genom att vara helt integrerad med Adobe förstklassiga CDN-tjänst (Content Delivery Network). Den här tjänsten hittar den optimala Internet-vägen mellan servrar, nätverk och peering-punkter. Den visar den lägsta latensen, den lägsta paketförlustfrekvensen eller båda, i stället för att bara använda standardvägen på Internet.
 
