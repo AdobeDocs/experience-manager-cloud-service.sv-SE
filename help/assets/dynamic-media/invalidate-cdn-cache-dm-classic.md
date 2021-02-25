@@ -2,17 +2,17 @@
 title: CDN-cachen har inte verifierats med Dynamic Media Classic
 description: Om du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
 translation-type: tm+mt
-source-git-commit: 20e37c385c2d3df91e37095bcf8a630fbfccbd16
+source-git-commit: 6dcf891fbe4a58f357fb429fc13cdd16bce7e3d0
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 24%
+source-wordcount: '640'
+ht-degree: 13%
 
 ---
 
 
 # CDN-cachen har inte verifierats med Dynamic Media Classic {#invalidating-your-cdn-cached-content}
 
-Dynamic Media resurser cachas av CDN (Content Delivery Network) för snabb leverans. När du uppdaterar en resurs kanske du vill att ändringarna ska börja gälla omedelbart. Om du validerar ditt CDN-cachelagrade innehåll kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
+Dynamic Media resurser cachas av CDN (Content Delivery Network) för snabb leverans. När du uppdaterar en resurs vill du dock att ändringarna ska börja gälla omedelbart. Om du validerar ditt CDN-cachelagrade innehåll kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
 
 >[!NOTE]
 >
@@ -39,24 +39,24 @@ Se även [Cacheöversikt i Dynamic Media Classic](https://helpx.adobe.com/experi
 
    `https://server.com/is/image/Company/<ID>?$product$`
 
-   Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<server>/is/image` där `<server>` är det publiceringsservernamn som definieras i Allmänna inställningar och &lt;ID> är det eller de objekt som ska ogiltigförklaras.
+   Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<server>/is/image` där `<server>` är det publiceringsservernamn som definieras i Allmänna inställningar och &lt;ID> är de resurser som markerats som ogiltiga.
 
-1. I sidans nedre högra hörn klickar du på **[!UICONTROL Close]**.
-1. I användargränssnittet för Dynamic Media Classic (Scene7) väljer du en eller flera resurser och klickar sedan på **[!UICONTROL File > Invalidate CDN]**. Du ser en lista över en eller flera URL-adresser som genererats från mallen som du skapade och de resurser som du markerade. Den använder den server-URL som anges under &quot;Publicerat servernamn&quot; under Allmänna inställningar för programmet.
+1. Tryck på **[!UICONTROL Close]** längst ned till höger på sidan.
+1. I användargränssnittet för Dynamic Media Classic (Scene7) väljer du en eller flera resurser och trycker sedan på **[!UICONTROL File > Invalidate CDN]**. Du ser en lista över en eller flera URL-adresser som genererats från mallen som du skapade och de resurser som du markerade. Den använder den server-URL som anges under &quot;Publicerat servernamn&quot; under Allmänna inställningar för programmet.
 
-   Anta till exempel att du har valt en enda bild med namnet `Backpack_B` när du har angett en mall för CDN-validering i föregående steg. När du klickar på **[!UICONTROL File > Invalidate CDN]** resulterar det i följande genererade URL i användargränssnittet för CDN-validering:
+   Anta till exempel att du har valt en enda bild med namnet `Backpack_B` när du har angett en mall för CDN-validering i föregående steg. När du trycker på **[!UICONTROL File > Invalidate CDN]** resulterar det i följande genererade URL i användargränssnittet för CDN-validering:
 
    `https://server.com/is/image/Company/Backpack_B?$product$`
 
-1. Klicka på **[!UICONTROL Continue]** i listrutan URL för att rensa cachen för varje URL. Observera att du kan redigera en URL-adress eller lägga till en URL-adress genom att skriva eller klistra in den i URL-listrutan. Du behöver inte ställa in CDN Invalidate Template i förväg.
+1. I listrutan URL trycker du på **[!UICONTROL Continue]** för att rensa cachen för varje specifik URL. Du kan redigera en URL-adress eller lägga till en URL-adress genom att skriva eller klistra in den i URL-listrutan; Du behöver inte ställa in CDN Invalidate Template i förväg.
 
-   När du har klickat på **[!UICONTROL Continue]** visas en indikator som ger dig en uppskattning av hur lång tid det tar att rensa cachen.
+   När du trycker på **[!UICONTROL Continue]** visas en indikator som ger dig en uppskattning av hur lång tid det tar att rensa cachen.
 
-   Om du har markerat flera resurser och sedan klickar på **[!UICONTROL File > Invalidate CDN]** refererar den sparade **[!UICONTROL Template URL]** till alla dessa resurser. Därför kan du definiera en **[!UICONTROL CDN Invalidate Template]** som refererar till alla URL-bildförinställningar som webbplatsen refererar till (exempelvis produktinformation och sökresultat). När du sedan väljer en eller flera bilder som ska ogiltigförklaras från cachen fylls gränssnittet automatiskt i med URL:erna.
+   Om du har markerat flera resurser och sedan trycker på **[!UICONTROL File > Invalidate CDN]** refereras varje resurs i den sparade **[!UICONTROL Template URL]**. Därför kan du definiera en **[!UICONTROL CDN Invalidate Template]** som refererar till varje URL-bildförinställning som refereras på webbplatsen, till exempel produktinformation och sökresultat. När du sedan väljer en eller flera bilder som ska ogiltigförklaras från cachen fylls gränssnittet automatiskt i med URL:erna.
 
    >[!NOTE]
    >
-   >När du markerar resurser och sedan klickar på **[!UICONTROL File > Invalidate CDN]** använder Dynamic Media en mall för att automatiskt skapa URL:er som ska ogiltigförklaras i leveransnätverket (CDN, Content Delivery Network). Om det inte finns något i textrutan **[!UICONTROL CDN Invalidate Template]** visas en tom URL-lista. Cachelagring i leveransnätverket (CDN) är inte resursbaserad utan URL-baserad. Därför är det nödvändigt att känna till de fullständiga URL:erna på webbplatsen. När du har definierat dessa URL:er kan du lägga till dem i textrutan **[!UICONTROL Invalidate CDN Template]** tidigare i stegen. Sedan kan du markera dessa resurser och göra URL:erna ogiltiga i ett enda steg.
+   >När du markerar resurser och sedan trycker på **[!UICONTROL File > Invalidate CDN]**, använder Dynamic Media en ogiltig CDN-mall för att automatiskt skapa URL:er som blir ogiltiga från CDN. Om det inte finns något i textrutan **[!UICONTROL CDN Invalidate Template]** visas en tom URL-lista. Cachelagring i leveransnätverket (CDN) är inte resursbaserad utan URL-baserad. Därför är det nödvändigt att känna till de fullständiga URL:erna på webbplatsen. När du har definierat dessa URL:er kan du lägga till dem i textrutan **[!UICONTROL Invalidate CDN Template]** tidigare i stegen. Sedan kan du markera dessa resurser och göra URL:erna ogiltiga i ett enda steg.
    >
    >Ett annat alternativ är att lägga till fullständiga URL:er i **[!UICONTROL Invalidate CDN]**-listan. Om du väljer det här sättet behöver du inte markera resurser i Dynamic Media Classic innan du går till alternativet **[!UICONTROL File > Invalidate CDN]**.
 
