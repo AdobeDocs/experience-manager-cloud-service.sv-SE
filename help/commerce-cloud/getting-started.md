@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 7a26596b00f276404934e467490ff79d08b0e1d0
+source-git-commit: 05242f0ca4168e220a4b83436da4daa0013edfaf
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '657'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ Introduktionen av AEM Commerce som Cloud Service är en tvåstegsprocess:
 1. Få AEM Commerce som en Cloud Service aktiverad och CIF-tillägget etablerat
 2. Anslut AEM Commerce som en Cloud Service till Magento
 
-Det första steget görs av Adobe. Du måste ange information som IMS-organisationen, GraphQL-slutpunktens URL i Magento-miljön osv. som en del av provisioneringsprocessen. Mer information om priser och provisionering får du av din säljare.
+Det första startsteget görs av Adobe. Mer information om priser och provisionering får du av din säljare.
 
 När du har etablerats med CIF-tillägget kommer det att tillämpas på alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett nytt. Mer information finns i [Konfigurera ditt program](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/setting-up-program.html).
 
