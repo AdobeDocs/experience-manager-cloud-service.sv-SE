@@ -2,9 +2,9 @@
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM som en Cloud Service genom att generera en säker JWT-token
 translation-type: tm+mt
-source-git-commit: 47296bc734dffb943be37b61ddce6b505d57d6b5
+source-git-commit: 41b4bb3a63089c05750a40e910ee7578727d8b15
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1214'
 ht-degree: 0%
 
 ---
@@ -141,4 +141,11 @@ Gör lämpliga server-till-server-API-anrop från det icke-AEM programmet till e
 
 ## Återkallning av tjänstens autentiseringsuppgifter {#service-credentials-revocation}
 
-Skicka en förfrågan till kundsupport om JWT Bearer-token måste återkallas.
+Om inloggningsuppgifterna behöver återkallas måste du skicka en förfrågan till kundsupport på följande sätt:
+
+1. Inaktivera den tekniska kontoanvändaren för Adobe Admin Console i användargränssnittet:
+   * Tryck på **i Cloud Manager..**-knapp bredvid din miljö. Detta öppnar sidan med produktprofiler
+   * Klicka nu på profilen **AEM Användare** för att visa en lista över användarna
+   * Klicka på fliken **API-autentiseringsuppgifter**, leta reda på rätt användare för det tekniska kontot och ta bort den
+2. Kontakta kundsupport och begär att tjänstens autentiseringsuppgifter för den specifika miljön tas bort
+3. Slutligen kan du generera inloggningsuppgifterna igen enligt beskrivningen i den här dokumentationen. Se även till att den nya tekniska kontoanvändaren som skapas har rätt behörigheter.
