@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: ad80ea25abf06fd18dd781641f215e134a18a037
+source-git-commit: a93db92689928a900662a39b11bb5a7ea9724e62
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -53,22 +53,18 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 ## Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-* Resurser kan hämtas med [!DNL Experience Manager Assets Brand Portal]. Det hjälper er att skaffa resurser från byråanvändarna för nya marknadsföringskampanjer, fotografier och projekt.
+* I [!DNL Brand Portal] har en ny hämtningsinställning införts som gör att du kan skapa separata mappar för varje resurs när du hämtar mappar, samlingar och så vidare. se [hämtningsinställningar](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html).
 
 <!-- TBD: refine this list of features and enh. for Feb release.
 
-Customers using the Connected Assets feature can now easily view and track assets used on remote Sites instances. This affords customers a complete view of being used across all Sites powered pages, allowing for better tracking, management, and brand consistency.  
-
-Indicators for expired, approved, and rejected statuses now available for assets in Column view.
-
-Ability to select a root path. select if a minimum number of tags is required. 
-
-Add a Boolean or radio widget type to metadata schema setup. -->
+Customers using the Connected Assets feature can now easily view and track assets used on remote Sites instances. This affords customers a complete view of being used across all Sites powered pages, allowing for better tracking, management, and brand consistency.  -->
 
 ## Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}
 
 * När en ny version av en befintlig resurs skapas efter att namnkonflikten har lösts, skrivs metadata för den ursprungliga resursen över. (CQ-4313594)
 * När en resurs med lång anteckningstext skrivs ut beskärs anteckningstexten, även om det finns utrymme. (CQ-4314101)
+* När flera resurser har valts för att uppdatera egenskaperna inträffar ibland ett fel eller så uppdateras egenskaperna för en avmarkerad resurs. (CQ-4316532)
+* När du försöker öppna [!UICONTROL Assets Admin Search Rail] är sidan tom och om du klickar på [!UICONTROL Edit] > [!UICONTROL Settings] genereras ett fel. (CQ-4315079)
 
 ## Cloud Manager {#cloud-manager}
 
