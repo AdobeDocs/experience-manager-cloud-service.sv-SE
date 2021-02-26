@@ -2,9 +2,9 @@
 title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: e9dd057f3389264a7743d16133f66a9e944d13b1
+source-git-commit: 852a4742a17065b9d38bd78d1e68a92854001842
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '644'
 ht-degree: 5%
 
 ---
@@ -75,4 +75,4 @@ Värdena för kontinentkoderna är:
 * OC Oceanien
 * Sydamerika
 
-Denna information kan vara användbar vid användning, t.ex. omdirigering till en annan URL som baseras på begärans ursprung (land). I detta specifika fall bör omdirigeringen inte cachas eftersom den varierar. Om det behövs kan du använda `Cache-Control: private` för att förhindra cachelagring. Se även [Cachelagring](/help/implementing/dispatcher/caching.md#html-text).
+Denna information kan vara användbar vid användning, t.ex. omdirigering till en annan URL som baseras på begärans ursprung (land). Använd rubriken Variera för att cachelagra svar som är beroende av geoinformation. Omdirigeringar till en viss landningssida ska till exempel alltid innehålla `Vary: x-aem-client-country`. Om det behövs kan du använda `Cache-Control: private` för att förhindra cachelagring. Se även [Cachelagring](/help/implementing/dispatcher/caching.md#html-text).
