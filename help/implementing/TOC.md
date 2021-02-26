@@ -4,9 +4,9 @@ user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 translation-type: tm+mt
-source-git-commit: 85c802029f8499ef1d97bc40e2cce5015f19c49b
+source-git-commit: 7b17605ceb794969b079c21a639dd145f8e028af
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '872'
 ht-degree: 33%
 
 ---
@@ -54,6 +54,7 @@ ht-degree: 33%
       + [Avaktivera användning av en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
       + [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
       + [Kontrollera status för IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
+   + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/cloud-manager-cs-faqs.md)
 + Hantera kod {#managing-code}
    + [Versionshantering för Maven Project](cloud-manager/project-version-handling.md)
    + [Åtkomst till Git](cloud-manager/accessing-git.md)
@@ -107,7 +108,7 @@ ht-degree: 33%
       + [SPA introduktion och genomgång](developing/hybrid/introduction.md)
       + [SPA WKND - självstudiekurs](developing/hybrid/wknd-tutorial.md)
       + [Komma igång med React](developing/hybrid/getting-started-react.md)
-      + [Komma igång med vinkelrät](developing/hybrid/getting-started-angular.md)
+      + [Komma igång med Angular](developing/hybrid/getting-started-angular.md)
       + [SPA djupdykning](developing/hybrid/deep-dives.md)
       + [Utveckla SPA för AEM](developing/hybrid/developing.md)
       + [SPA](developing/hybrid/editor-overview.md)
