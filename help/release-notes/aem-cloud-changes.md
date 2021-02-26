@@ -2,10 +2,10 @@
 title: Betydande ändringar av Adobe Experience Manager (AEM) som en Cloud Service
 description: Betydande ändringar av Adobe Experience Manager (AEM) som en Cloud Service
 translation-type: tm+mt
-source-git-commit: c1014098cecf3c3f86a7af844801fb1202864b51
+source-git-commit: 515e462e942d58758a11e0a9bd3b1c3990a4dcf9
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 8%
+source-wordcount: '832'
+ht-degree: 9%
 
 ---
 
@@ -65,11 +65,10 @@ Webbkonsolen, som användes i tidigare versioner av AEM för att ändra OSGi-ins
 
 ## Ändringar i publiceringsdatabasen tillåts inte {#changes-to-publish-repo}
 
-Direktändringar i publiceringsdatabasen tillåts inte på AEM Cloud Service. I tidigare versioner av lokala AEM eller AEM på AMS kan kodändringar göras direkt i publiceringsdatabasen, till exempel för att skapa användare, uppdatera användarprofilen och skapa noder. Detta är inte längre möjligt och kan minskas på följande sätt:
+Förutom ändringar i mappen `/home` på publiceringsnivån tillåts inte direkta ändringar i publiceringsdatabasen på AEM Cloud Service. I tidigare versioner av lokala AEM eller AEM på AMS kan kodändringar göras direkt till publiceringsdatabasen. Vissa begränsningar kan minskas på följande sätt:
 
 * För innehåll- och innehållsbaserad konfiguration: gör ändringarna i författarinstansen och publicerar dem.
 * För kod och konfiguration: gör ändringarna i GIT-databasen och kör CI/CD-flödet för att implementera dem.
-* För användarrelaterade data, t.ex. formuläröverföringar eller profildata: använda tjänsten för enhetlig profil från Experience Cloud Platform eller någon annan sessionsmedveten lagringsplats från tredje part.
 
 ## Anpassade runmodes tillåts inte {#custom-runmodes}
 
