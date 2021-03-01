@@ -1,11 +1,11 @@
 ---
 title: Integrera Dynamic Media Viewers med Adobe Analytics och Experience Platform Launch
-description: Med Dynamic Media Viewer-tillägget för Adobe Experience Platform Launch, tillsammans med Dynamic Media Viewer 5.13, kan kunder som har Dynamic Media, Adobe Analytics och Experience Platform Launch använda händelser och data som är specifika för Dynamic Media Viewer i Experience Platform Launch-konfigurationen.
+description: Med Dynamic Media Viewer-tillägget för Platform launch och Dynamic Media Viewer 5.13 kan kunder med Adobe Analytics och Platform launch använda händelser och data som är specifika för visningsprogrammen i sin Platform launch.
 translation-type: tm+mt
-source-git-commit: 20e37c385c2d3df91e37095bcf8a630fbfccbd16
+source-git-commit: dfd225bbef6d3244130aca2f18dbef4006f2ae65
 workflow-type: tm+mt
-source-wordcount: '6336'
-ht-degree: 14%
+source-wordcount: '6293'
+ht-degree: 9%
 
 ---
 
@@ -14,29 +14,29 @@ ht-degree: 14%
 
 ## Vad är Dynamic Media Viewer integrerat med Adobe Analytics och Experience Platform Launch? {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
-Med det nya tillägget *Dynamic Media Viewer* för Experience Platform Launch, tillsammans med den senaste versionen av Dynamic Media Viewer 5.13, kan kunder som använder Dynamic Media, Adobe Analytics och Experience Platform Launch använda händelser och data som är specifika för Dynamic Media Viewer i Experience Platform Launch-konfigurationen.
+Med det nya tillägget *Dynamic Media Viewer* för Platform launch och Dynamic Media Viewer 5.13 kan kunder med Adobe Analytics och Platform launch använda händelser och data som är specifika för visningsprogrammen i sin Platform launch.
 
-Integrationen innebär att du kan spåra användningen av Dynamic Media Viewer på din webbplats med Adobe Analytics. Samtidigt kan du använda de händelser och data som visas av tittarna med andra Launch-tillägg som kommer från Adobe eller en tredje part.
+Integrationen innebär att du kan spåra användningen av Dynamic Media Viewer på din webbplats med Adobe Analytics. Samtidigt kan du använda händelser och data som visas av visningsprogrammen tillsammans med andra Platforma launcher som kommer från Adobe eller en tredje part.
 
 Mer information om tillägg finns i [Adobe-tillägg](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/overview.html#adobe-extension) i användarhandboken för Experience Platform Launch.
 
-**Vem bör läsa denna dokumentation:** Webbplatsadministratörer, utvecklare på AEM-plattformen och driftadministratörer.
+**Det här avsnittet är avsett för följande:** Webbplatsadministratörer, utvecklare på Adobe Experience Manager-plattformen samt personer i Operations.
 
 ### Begränsningar för integreringen {#limitations-of-the-integration}
 
-* Integrering med Experience Platform Launch för Dynamic Media-visningsprogram fungerar inte i AEM författarnod. Du kan inte se någon spårning från en WCM-sida förrän den har publicerats.
+* Integrering med Experience Platform Launch för Dynamic Media-visningsprogram fungerar inte i noden Experience Manager författare. Du kan inte se någon spårning från en WCM-sida förrän den har publicerats.
 * Experience Platform Launch-integrering för Dynamic Media-visningsprogram stöds inte för åtgärdsläget&quot;popup&quot;, där visningsprogrammets URL hämtas med knappen&quot;URL&quot; på sidan Resursinformation.
-* Integrering med Experience Platform Launch kan inte användas samtidigt med integrering med äldre visningsprogram Analytics (via parametern `config2=`).
+* Integrering med Experience Platform Launch kan inte användas samtidigt med integrering med äldre visningsprogram med Analytics (via parametern `config2=`).
 * Stödet för videospårning är begränsat till enbart huvudspårning av uppspelning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events). Speciellt stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
 * Konfiguration av lagringstid för dataelement stöds inte för dataelement med tillägget *Dynamic Media Viewer*. Lagringsvaraktighet måste anges till **[!UICONTROL None]**.
 
 ### Användningsexempel för integreringen {#use-cases-for-the-integration}
 
-Det viktigaste användningsområdet för integrationen med Experience Platform Launch är kunder som använder både AEM Assets och AEM Sites. I sådana fall kan du konfigurera en standardintegrering mellan AEM författarnod och Experience Platform Launch och sedan associera din Sites-instans med egenskapen Experience Platform Launch. Efter det kommer alla Dynamic Media WCM-komponenter som läggs till på en Sites-sida att spåra data och händelser från tittarna.
+Det främsta användningsområdet för integreringen med Experience Platform Launch är kunder som använder både Experience Manager Assets och Experience Manager Sites. I sådana fall kan du konfigurera en standardintegrering mellan författarnoden i Experience Manager och Experience Platform Launch och sedan associera din Sites-instans med egenskapen Experience Platform Launch. Efter det kommer alla Dynamic Media WCM-komponenter som läggs till på en Sites-sida att spåra data och händelser från tittarna.
 
-Se [Spåra Dynamic Media-visningsprogram i AEM Sites](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites).
+Se [Spåra Dynamic Media-visningsprogram i Experience Manager Sites](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites).
 
-Ett sekundärt användningsfall som integreringen stöder är de kunder som bara använder AEM Assets eller Dynamic Media Classic. I så fall får du inbäddningskoden för ditt visningsprogram och lägger till den på webbplatssidan. Hämta sedan Experience Platform Launch URL:en för biblioteksproduktion från Experience Platform Launch och lägg till den manuellt i webbsideskoden.
+Ett sekundärt användningsfall som integreringen stöder är de kunder som bara använder Experience Manager Assets eller Dynamic Media Classic. I så fall får du inbäddningskoden för ditt visningsprogram och lägger till den på webbplatssidan. Hämta sedan Experience Platform Launch URL:en för biblioteksproduktion från Experience Platform Launch och lägg till den manuellt i webbsideskoden.
 
 Se [Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersusingEmbedcode).
 
@@ -46,7 +46,7 @@ Integreringen utnyttjar två separata och oberoende typer av spårning av Dynami
 
 ### Om spårning med Adobe Analytics {#about-tracking-using-adobe-analytics}
 
-Med Adobe Analytics kan du spåra åtgärder som slutanvändaren utför när de interagerar med Dynamic Media-visningsprogram på webbplatsen. Med Adobe Analytics kan du också spåra visningsprogramspecifika data. Du kan till exempel spåra och spela in inläsningshändelser tillsammans med resursnamnet, eventuella zoomåtgärder som har utförts, videouppspelningsåtgärder och så vidare.
+Med Adobe Analytics kan du spåra åtgärder som slutanvändaren utför när de interagerar med Dynamic Media-visningsprogram på webbplatsen. Med Adobe Analytics kan du också spåra visningsprogramspecifika data. Du kan till exempel spåra och spela in inläsningshändelser tillsammans med resursnamnet, eventuella zoomåtgärder som har utförts och videouppspelningsåtgärder.
 
 I Experience Platform Launch fungerar begreppen i *Dataelement* och *Regler* tillsammans för att aktivera Adobe Analytics-spårning.
 
@@ -56,25 +56,25 @@ Ett dataelement i Experience Platform Launch är en namngiven egenskap vars vär
 
 Vilka alternativ som är tillgängliga för en dataelementsdefinition beror på listan med tillägg som är installerade i Experience Platform Launch-egenskapen. Tillägget &quot;Core&quot; är förinstallerat och finns tillgängligt direkt i alla konfigurationer. Med det här tillägget Core kan du definiera ett dataelement som kommer från cookie, JavaScript-kod, frågesträng och många andra källor.
 
-För Adobe Analytics tracking måste ytterligare tillägg installeras, vilket beskrivs i [Installation och konfiguration av tillägg](#installing-and-setup-of-extensions). Tillägget Dynamic Media Viewer ger möjlighet att definiera ett dataelement som är ett argument i Dynamic Viewer-händelsen. Det är till exempel möjligt att referera till visningsprogramtypen, eller resursnamnet som rapporteras av visningsprogrammet vid inläsning, den zoomnivå som rapporteras när användaren zoomar och mycket annat.
+För Adobe Analytics tracking måste flera andra tillägg vara installerade, vilket beskrivs i [Installation och installation av tillägg](#installing-and-setup-of-extensions). Tillägget Dynamic Media Viewer ger möjlighet att definiera ett dataelement som är ett argument i Dynamic Viewer-händelsen. Det är till exempel möjligt att referera till visningsprogramtypen, eller resursnamnet som rapporteras av visningsprogrammet vid inläsning, den zoomnivå som rapporteras när slutanvändaren zoomar och mycket annat.
 
-Tillägget Dynamic Media Viewer håller automatiskt värdena för dataelementen uppdaterade.
+Dynamic Media Viewer-tillägget håller automatiskt värdena för dataelementen uppdaterade.
 
-När du har definierat det kan ett dataelement användas på andra platser i användargränssnittet för Experience Platform Launch med hjälp av widgeten för dataelementväljare. Dataelement som definieras för spårning av Dynamic Media-visningsprogram kommer att refereras av tillägget Ange variabelåtgärd för Adobe Analytics i Regel (se nedan).
+När du har definierat det kan ett dataelement användas på andra platser i användargränssnittet för Experience Platform Launch med hjälp av widgeten för dataelementväljare. Dataelement som definieras för spårning av Dynamic Media-visningsprogram refereras särskilt av tillägget Ange variabelåtgärd för Adobe Analytics (se nedan).
 
-Mer information finns i [Dataelement](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html#reference) i användarhandboken för Experience Platform Launch.
+Se [Dataelement](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html#reference) i användarhandboken för Experience Platform Launch.
 
 #### Om regler i Experience Platform Launch {#about-rules-in-adobe-launch}
 
 En regel i Experience Platform Launch är en agnostisk konfiguration som definierar tre områden som utgör en regel: *Händelser*, *Villkor* och *Åtgärder*:
 
 * *Händelser* (if) anger för Experience Platform Launch när en regel ska utlösas.
-* *Condition* (if) anger för Experience Platform Launch vilka ytterligare begränsningar som ska tillåtas eller inte när en regel aktiveras.
+* *Condition* (if) anger för Experience Platform Launch vilka andra begränsningar som ska tillåtas eller inte när en regel aktiveras.
 * *Åtgärder* (sedan) anger för Experience Platform Launch vad som ska göras när en regel aktiveras.
 
-Vilka alternativ som är tillgängliga i avsnittet Händelser, Villkor och Åtgärder beror på vilka tillägg som är installerade i Experience Platform Launch-egenskapen. Tillägget *Core* är förinstallerat och finns tillgängligt direkt i alla konfigurationer. Tillägget innehåller flera alternativ för Händelser, t.ex. grundläggande åtgärder på webbläsarnivå som inkluderar fokusändring, tangenttryckningar, formulärskickning osv. Den innehåller även alternativ för Villkor, som cookie-värde, webbläsartyp och mycket annat. För Åtgärder är endast alternativet Anpassad kod tillgängligt.
+Vilka alternativ som är tillgängliga i avsnittet Händelser, Villkor och Åtgärder beror på vilka tillägg som är installerade i Experience Platform Launch-egenskapen. Tillägget *Core* är förinstallerat och finns tillgängligt direkt i alla konfigurationer. Tillägget innehåller flera alternativ för Händelser, t.ex. grundläggande åtgärder på webbläsarnivå som inkluderar fokusändringar, tangenttryckningar och formulärskickningar. Den innehåller även alternativ för Villkor, som cookie-värde, webbläsartyp och mycket annat. För Åtgärder är endast alternativet Anpassad kod tillgängligt.
 
-För Adobe Analytics-spårning måste ytterligare tillägg installeras, vilket beskrivs i [Installation och konfiguration av tillägg](#installing-and-setup-of-extensions). Särskilt:
+För Adobe Analytics tracking måste flera andra tillägg installeras, vilket beskrivs i [Installation och konfiguration av tillägg](#installing-and-setup-of-extensions). Särskilt:
 
 * Tillägget Dynamic Media Viewer utökar listan med händelser som stöds till händelser som är specifika för Dynamic Media-visningsprogram, t.ex. visning, byte av resurser, inzoomning och videouppspelning.
 * Adobe Analytics-tillägget utökar listan över åtgärder som stöds med två åtgärder som krävs för att skicka data till spårningsservrar: *Ange variabler* och *Skicka fyr*.
@@ -88,7 +88,7 @@ I avsnittet Åtgärder måste du ha en *Set Variables*-åtgärd. Den här åtgä
 
 Åtgärden *Ange variabler* måste följas av en *Skicka Beacon*-åtgärd. Åtgärden *Skicka Beacon* skickar data till analysspårningsservern. Båda åtgärderna, *Ange variabler* och *Skicka Beacon*, kommer från Adobe Analytics-tillägget.
 
-Mer information finns i [Regler](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html#reference) i användarhandboken för Experience Platform Launch.
+Se [Regler](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html#reference) i användarhandboken för Experience Platform Launch.
 
 #### Exempelkonfiguration {#sample-configuration}
 
@@ -126,11 +126,11 @@ Stödet för videospårning är för närvarande begränsat till enbart huvudupp
 
 ## Använda tillägget Dynamic Media Viewer {#using-the-dynamic-media-viewers-extension}
 
-Som nämndes i [Användningsexempel för integrering](#use-cases-for-the-integration) är det möjligt att spåra Dynamic Media-visningsprogram med den nya Experience Platform Launch-integreringen i AEM Sites och genom att använda inbäddningskod.
+Som nämndes i [Användningsexempel för integrering](#use-cases-for-the-integration) är det möjligt att spåra Dynamic Media-visningsprogram med den nya Experience Platform Launch-integreringen i Experience Manager Sites och genom att använda inbäddningskod.
 
-### Spåra Dynamic Media-visningsprogram i AEM Sites {#tracking-dynamic-media-viewers-in-aem-sites}
+### Spåra Dynamic Media-visningsprogram i Experience Manager Sites {#tracking-dynamic-media-viewers-in-aem-sites}
 
-Om du vill spåra Dynamic Media-visningsprogram i AEM Sites måste du utföra alla steg som listas under [Konfigurera alla integrationsdelar](#configuring-all-the-integration-pieces)-avsnittet. Du måste skapa IMS-konfigurationen och konfigurationen för Experience Platform Launch Cloud.
+Om du vill spåra Dynamic Media-visningsprogram i Experience Manager Sites måste du utföra alla steg som listas under [Konfigurera alla integrationsdelar](#configuring-all-the-integration-pieces)-avsnittet. Du måste skapa IMS-konfigurationen och konfigurationen för Experience Platform Launch Cloud.
 
 När konfigurationen är korrekt spåras data automatiskt i Adobe Analytics, Adobe Analytics for Video eller båda när du lägger till ett visningsprogram från Dynamic Media på en webbplats med en WCM-komponent som stöds av Dynamic Media.
 
@@ -138,17 +138,17 @@ Se [Lägga till Dynamic Media-resurser på sidor med hjälp av Adobe Sites](/hel
 
 ### Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskoden {#tracking-dynamic-media-viewers-using-embed-code}
 
-Kunder som inte använder AEM Sites, eller bäddar in Dynamic Media-visningsprogram på webbsidor utanför AEM Sites, eller båda, kan fortfarande använda integreringen med Experience Platform Launch.
+Kunder som inte använder Experience Manager Sites eller bäddar in Dynamic Media-visningsprogram på webbsidor utanför Experience Manager Sites, eller båda, kan fortfarande använda Experience Platform Launch-integreringen.
 
-Du måste slutföra konfigurationsstegen från avsnitten [Konfigurera Adobe Analytics](#configuring-adobe-analytics-for-the-integration) och [Konfigurera Experience Platform Launch](#configuring-adobe-launch-for-the-integration). AEM-relaterade konfigurationssteg behövs dock inte.
+Slutför konfigurationsstegen i [Konfigurera Adobe Analytics](#configuring-adobe-analytics-for-the-integration) och [Konfigurera Experience Platform Launch](#configuring-adobe-launch-for-the-integration)-avsnitten. Konfigurationssteg som rör Experience Manager behövs dock inte.
 
 Om konfigurationen är korrekt kan du lägga till stöd för Experience Platform Launch på en webbsida med ett Dynamic Media-visningsprogram.
 
-Se [Lägg till koden för att starta inbäddning](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch) om du vill veta mer om hur du använder inbäddningskod för bibliotek i Experience Platform Launch.
+Mer information om hur du använder inbäddningskod för Experience Platform Launch-bibliotek finns i [Lägg till koden för Experience Platform Launch-inbäddning](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch).
 
-Mer information om hur du använder inbäddningsfunktionen i AEM Dynamic Media finns i [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
+Mer information om hur du använder funktionen för att bädda in kod i Experience Manager Dynamic Media finns i [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 
-**Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod**
+**Så här spårar du Dynamic Media-visningsprogram med hjälp av inbäddningskod**:
 
 1. Ha en webbsida redo för inbäddning av ett Dynamic Media-visningsprogram.
 1. Hämta inbäddningskoden för Experience Platform Launch-biblioteket genom att först logga in på Experience Platform Launch (se [Konfigurera Experience Platform Launch](#configuring-adobe-launch-for-the-integration)).
@@ -160,22 +160,22 @@ Mer information om hur du använder inbäddningsfunktionen i AEM Dynamic Media f
 
 ### Om konfigurationen för Dynamic Media Viewer {#about-the-dynamic-media-viewers-configuration}
 
-Dynamic Media Viewer-tillägget integreras automatiskt med Experience Platform Launch-biblioteket om alla följande villkor nedan är uppfyllda:
+Dynamic Media Viewer-tillägget integreras automatiskt med Experience Platform Launch-biblioteket om följande villkor är uppfyllda:
 
 * Det finns ett globalt objekt ( `_satellite`) för Experience Platform Launch-biblioteket på sidan.
 * Tilläggsfunktionen `_dmviewers_v001()` för Dynamic Media Viewer har definierats i `_satellite`.
 
 * `config2=` Ingen visningsprogramparameter har angetts, vilket innebär att visningsprogrammet inte använder äldre Analytics-integrering.
 
-Det finns dessutom ett alternativ för att uttryckligen inaktivera Experience Platform Launch-integrering i visningsprogrammet genom att ange parametern `launch=0` i visningsprogrammets konfiguration. Standardvärdet för den här parametern är `1`.
+Det finns också ett alternativ för att uttryckligen inaktivera Experience Platform Launch-integrering i visningsprogrammet genom att ange parametern `launch=0` i visningsprogrammets konfiguration. Standardvärdet för den här parametern är `1`.
 
 ### Konfigurera tillägget Dynamic Media Viewer {#configuring-the-dynamic-media-viewers-extension}
 
 Det enda konfigurationsalternativet för tillägget Dynamic Media Viewer är **[!UICONTROL Enable Adobe Media Analytics for Audio and Video]**.
 
-När du markerar (aktiverar eller aktiverar) det här alternativet och om Adobe Media Analytics för ljud- och videotillägg är installerat och korrekt konfigurerat skickas videouppspelningsstatistik till Adobe Analytics för ljud- och videolösning. Om du inaktiverar det här alternativet inaktiveras videospårning.
+När du markerar (aktiverar) det här alternativet och Adobe Media Analytics för ljud och video har installerats och konfigurerats skickas videouppspelningsstatistik till Adobe Analytics för ljud och video. Om du inaktiverar det här alternativet inaktiveras videospårning.
 
-Observera att om du aktiverar det här alternativet *utan att ha Adobe Media Analytics för ljud- och videotillägg installerat, har alternativet ingen effekt.*
+Om du aktiverar det här alternativet *utan att ha Adobe Media Analytics for Audio och Video installerat, har alternativet ingen effekt.*
 
 ![image2019-7-22_12-4-23](assets/image2019-7-22_12-4-23.png)
 
@@ -192,17 +192,17 @@ När du väljer det här alternativet återges ett formulär med två fält i da
 
 Se [referenshandboken för Dynamic Media Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) för en lista över händelser som stöds av varje visningsprogramtyp. Gå till ett specifikt visningsprogramavsnitt och klicka sedan på Support för underavsnittet Adobe Analytics tracking. Referenshandboken för Dynamic Media Viewer dokumenterar för närvarande inte händelseargument.
 
-Nu ska vi titta på livscykeln för Dynamic Media Viewer *Data Element*. Värdet för det dataelementet fylls i efter att motsvarande Dynamic Media-visningsprogramhändelse inträffar på sidan. Om dataelementet till exempel pekar på händelsen **[!UICONTROL LOAD]** och dess &quot;asset&quot;-argument, kommer värdet för det dataelementet att få giltiga data när visningsprogrammet kör LOAD-händelsen för första gången. Om dataelementet pekar på händelsen **[!UICONTROL ZOOM]** och dess &quot;scale&quot;-argument, kommer värdet för det dataelementet att vara tomt tills användaren skickar en **[!UICONTROL ZOOM]**-händelse för första gången.
+Nu ska vi titta på livscykeln för Dynamic Media Viewer *Data Element*. Värdet för det dataelementet fylls i efter att motsvarande Dynamic Media-visningsprogramhändelse inträffar på sidan. Anta att dataelementet pekar på händelsen **[!UICONTROL LOAD]** och dess &quot;asset&quot;-argument. Värdet för det dataelementet tar emot giltiga data när visningsprogrammet kör LOAD-händelsen för första gången. Om dataelementet pekar på händelsen **[!UICONTROL ZOOM]** och dess &quot;scale&quot;-argument, är värdet för dataelementet tomt tills användaren skickar en **[!UICONTROL ZOOM]**-händelse för första gången.
 
-På samma sätt uppdateras värdena för dataelement automatiskt när visningsprogrammet skickar en motsvarande händelse på sidan. Värdeuppdateringen sker även om den särskilda händelsen inte har angetts i regelkonfigurationen. Om till exempel dataelementet **[!UICONTROL ZoomScale]** har definierats för parametern ”scale” i ZOOM-händelsen, men den enda regeln som finns i Regelkonfigurationen aktiveras av händelsen **[!UICONTROL LOAD]**, kommer värdet **[!UICONTROL ZoomScale]** ändå att uppdateras varje gång en användare kör zoomning inuti visningsprogrammet.
+På samma sätt uppdateras värdena för dataelement automatiskt när visningsprogrammet skickar en motsvarande händelse på sidan. Värdeuppdateringen sker även om den särskilda händelsen inte har angetts i regelkonfigurationen. Anta till exempel att dataelementet **[!UICONTROL ZoomScale]** är definierat för parametern &quot;scale&quot; i ZOOM-händelsen. Den enda regel som finns i regelkonfigurationen aktiveras emellertid av händelsen **[!UICONTROL LOAD]**. Värdet **[!UICONTROL ZoomScale]** uppdateras fortfarande varje gång en användare zoomar in i visningsprogrammet.
 
-Alla Dynamic Media-visningsprogram har en unik identifierare på webbsidan. Dataelementet håller reda på själva värdet och det visningsprogram som har fyllt i värdet. Det innebär att om det finns flera visningsprogram på samma sida, och det finns ett **[!UICONTROL AssetName]** dataelement som pekar på händelsen **[!UICONTROL LOAD]** och dess ”asset”-argument, så behåller dataelementet **[!UICONTROL AssetName]** en samling med resursnamn som är associerade med de visningsprogram som är inlästa på sidan.
+Alla Dynamic Media-visningsprogram har en unik identifierare på webbsidan. Dataelementet spårar själva värdet och det visningsprogram som har fyllt i värdet. Anta till exempel att det finns flera visningsprogram på samma sida och ett **[!UICONTROL AssetName]**-dataelement som pekar på händelsen **[!UICONTROL LOAD]** och dess &quot;asset&quot;-argument. Dataelementet **[!UICONTROL AssetName]** underhåller en samling resursnamn som är associerade med varje visningsprogram som har lästs in på sidan.
 
-Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om dataelementet begärs i en regel som utlöstes av en Dynamic Media-visningshändelse, returneras dataelementvärdet för det visningsprogram som initierade regeln. Och om dataelementet begärs i en regel som utlöstes av en händelse från något annat Experience Platform Launch-tillägg, är värdet för dataelementet värdet från det visningsprogram som var det sista som uppdaterade det här dataelementet.
+Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om dataelementet begärs i en regel som utlöstes av en Dynamic Media-visningshändelse, returneras dataelementvärdet för det visningsprogram som initierade regeln. Och dataelementet begärs i en regel som utlöstes av en händelse från någon annan Platform launch. I det skedet kommer dataelementets värde från det visningsprogram som senast uppdaterade det här dataelementet.
 
-**Se följande exempeluppsättning**:
+**Tänk på följande exempelinställningar**:
 
-* En webbsida med två zoomningsvisningsprogram från Dynamic Media. som *visningsprogram1* och *visningsprogram2*.
+* En webbsida med två zoomningsvisningsprogram från Dynamic Media: *visningsprogram1* och *visningsprogram2*.
 
 * **[!UICONTROL ZoomScale]** Dataelementet pekar på  **[!UICONTROL ZOOM]** händelsen och dess &quot;scale&quot;-argument.
 * **[!UICONTROL TrackPan]** Regel med följande:
@@ -219,22 +219,22 @@ Anta nu att slutanvändaren läser in webbsidan med de två visningsprogrammen. 
 
 Slutanvändarens aktivitet resulterar i följande två spårningsanrop till Adobe Analytics:
 
-* Det första anropet sker eftersom regeln **[!UICONTROL TrackPan]** aktiveras när användaren panorerar i *visningsprogram1*. Det anropet skickar 50 % som ett värde på **[!UICONTROL ZoomScale]** dataelement eftersom dataelementet vet att regeln aktiveras av *visningsprogram1* och hämtar motsvarande skalvärde.
+* Det första anropet sker eftersom regeln **[!UICONTROL TrackPan]** aktiveras när användaren panorerar i *visningsprogram1*. Anropet skickar 50 % som ett värde på **[!UICONTROL ZoomScale]** dataelement eftersom dataelementet vet att regeln aktiveras av *visningsprogram1* och hämtar motsvarande skalvärde.
 * Det andra anropet sker eftersom regeln **[!UICONTROL TrackKey]** aktiveras när användaren trycker på en tangent på tangentbordet. Det anropet skickar 25 % som ett värde på **[!UICONTROL ZoomScale]** dataelement eftersom regeln inte utlöstes av användaren. Därför returnerar dataelementet det senaste värdet.
 
-Samplingsuppsättningen ovan påverkar också dataelementvärdets livslängd. Värdet på dataelementet som hanteras av Dynamic Media Viewer lagras i Experience Platform Launch-bibliotekskoden även efter att själva visningsprogrammet har tagits bort från webbsidan. Det innebär att om det finns en regel som aktiveras av ett icke-Dynamic Media-visningsprogramtillägg och refererar till ett sådant dataelement, returnerar dataelementet det senast kända värdet, även om visningsprogrammet inte längre finns på webbsidan.
+Samplingsuppsättningen ovan påverkar också dataelementvärdets livslängd. Värdet på dataelementet som hanteras av Dynamic Media Viewer lagras i Experience Platform Launch-bibliotekskoden även efter att själva visningsprogrammet har tagits bort från webbsidan. Den här funktionen innebär att om det finns en regel som aktiveras av ett icke-Dynamic Media Viewer-tillägg och refererar till ett sådant dataelement, returnerar dataelementet det senast kända värdet. Även om visningsprogrammet inte längre finns på webbsidan.
 
 Värdena för dataelement som drivs av Dynamic Media-visningsprogram lagras inte i den lokala lagringen eller på servern. i stället finns de bara i klientbiblioteket Experience Platform Launch. Värdena för sådana dataelement försvinner när webbsidan läses in igen.
 
-I allmänhet har dataelementsredigeraren stöd för [val av lagringstid](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html?lang=en#create-a-data-element). Dataelement som använder Dynamic Media Viewer-tillägget har dock bara stöd för alternativet för lagringstid på **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet för dataelementet separat: Data-elementet som behåller värdet för visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
+I allmänhet har dataelementsredigeraren stöd för [val av lagringstid](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html?lang=en#create-a-data-element). Dataelement som använder tillägget Dynamic Media Viewer stöder dock endast alternativet för lagringstid på **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet för dataelementet separat: Data-elementet som behåller värdet för visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
 
 ### Om regler i tillägget Dynamic Media Viewer {#about-rules-in-the-dynamic-media-viewers-extension}
 
-I regelredigeraren lägger tillägget till nya konfigurationsalternativ för händelseredigeraren. I finns också ett alternativ för att manuellt referera till händelseparametrar i Action Editor som ett kortvarigt alternativ i stället för att använda förkonfigurerade dataelement.
+I regelredigeraren lägger tillägget till nya konfigurationsalternativ för händelseredigeraren. Redigeraren har också ett alternativ för att manuellt referera till händelseparametrar i redigeraren som ett kortvarigt alternativ i stället för att använda förkonfigurerade dataelement.
 
 #### Om händelseredigeraren {#about-the-events-editor}
 
-I händelseredigeraren lägger tillägget för Dynamic Media-visningsprogrammet till en ny **[!UICONTROL Event Type]** med namnet **[!UICONTROL Viewer Event]**.
+I händelseredigeraren lägger tillägget Dynamic Media Viewer till **[!UICONTROL Event Type]** till **[!UICONTROL Viewer Event]**.
 
 När du väljer det här alternativet återges listrutan **[!UICONTROL Dynamic Media Viewer events]** med alla tillgängliga händelser som stöds av visningsprogram i Dynamic Media.
 
@@ -251,13 +251,13 @@ Det enklaste sättet att göra detta är att slutföra följande tvåstegsproces
 
 ![image2019-7-10_20-41-52](assets/image2019-7-10_20-41-52.png)
 
-Det är dock möjligt att använda en alternativ metod och åsidosätta skapande av dataelement. Du kan direkt referera till ett argument från en händelse i Dynamic Media-visningsprogrammet genom att ange det fullständiga, kvalificerade namnet på händelseargumentet i indatafältet **[!UICONTROL value]** för variabeltilldelningen i Analytics, omgivet av procenttecken (%). Till exempel,
+Det är dock möjligt att använda en alternativ metod och åsidosätta skapande av dataelement. Du kan referera direkt till ett argument från en Dynamic Media Viewer-händelse. Ange det fullständiga, kvalificerade namnet på händelseargumentet i **[!UICONTROL value]**-indatafältet i variabeltilldelningen för Analytics. Försäkra dig om att du omger med procenttecken (%). Till exempel,
 
 `%event.detail.dm.LOAD.asset%`
 
 ![image2019-7-12_19-2-35](assets/image2019-7-12_19-2-35.png)
 
-Observera att det finns en viktig skillnad mellan att använda dataelement och argumentreferens för direkt händelse. För dataelement spelar det ingen roll vilken händelse som utlöser åtgärden Ange variabler. Den händelse som utlöser regeln kan vara orelaterad till Dynamic Viewer (som ett musklick på webbsidan från tillägget Core). Men när du använder en referens för ett direkt argument är det viktigt att se till att händelsen som utlöser regeln motsvarar händelseargumentet som den refererar till.
+Det finns en viktig skillnad mellan att använda dataelement och argumentreferens för direkt händelse. För dataelement spelar det ingen roll vilken händelse som utlöser åtgärden Ange variabler. Händelsen som utlöser regeln kan vara orelaterad till Dynamic Viewer (som att klicka på webbsidan från Core-tillägget). Men när du använder en referens för ett direkt argument är det viktigt att se till att händelsen som utlöser regeln motsvarar händelseargumentet som den refererar till.
 
 Om du till exempel refererar till `%event.detail.dm.LOAD.asset%` returneras rätt resursnamn om regeln aktiveras av händelsen **[!UICONTROL LOAD]** för tillägget Dynamic Media-visningsprogrammet. Det returnerar dock ett tomt värde för alla andra händelser.
 
@@ -396,19 +396,19 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
 
 **INNAN DU BÖRJAR**
 
-Om du inte redan har gjort det rekommenderar Adobe att du noggrant granskar all dokumentation innan det här avsnittet så att du förstår den fullständiga integreringen.
+Adobe rekommenderar att du granskar all dokumentation innan det här avsnittet så att du förstår den fullständiga integreringen.
 
 I det här avsnittet beskrivs de konfigurationssteg som krävs för att integrera Dynamic Media-visningsprogram med Adobe Analytics och Adobe Analytics för ljud och video. Även om det går att använda Dynamic Media Viewer-tillägget för andra syften i Experience Platform Launch, omfattas sådana scenarier inte av den här dokumentationen.
 
-Du konfigurerar integreringen i följande Adobe-produkter:
+Du kommer att använda följande Adobe-produkter för att konfigurera din integrering:
 
-* Adobe Analytics - du konfigurerar spårningsvariabler och rapporter.
-* Experience Platform Launch - du definierar en egenskap, en eller flera regler och ett eller flera dataelement för att aktivera spårning av visningsprogram.
+* Adobe Analytics - används för att konfigurera spårningsvariabler och rapporter.
+* Experience Platform Launch - används för att definiera en egenskap, en eller flera regler och ett eller flera dataelement för att aktivera spårning av visningsprogram.
 
-Om den här integrationslösningen används med AEM Sites måste dessutom följande konfiguration göras:
+Om den här integrationslösningen används med Experience Manager Sites måste dessutom följande konfiguration göras:
 
 * Adobe I/O Console - integrering skapas för Experience Platform Launch.
-* AEM författarnod - IMS-konfiguration och Experience Platform Launch molnkonfiguration.
+* nod för författare i Experience Manager - IMS-konfiguration och Experience Platform Launch molnkonfiguration.
 
 Som en del av konfigurationen måste du se till att du har tillgång till ett företag i Adobe Experience Cloud som redan har Adobe Analytics och Experience Platform Launch aktiverat.
 
@@ -428,13 +428,13 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
    ![2019-07-22_18-08-47](assets/2019-07-22_18-08-47.png)
 
-   Nu ska du välja en rapportserie.
+   Välj en rapportsvit.
 
 ### Välja en rapportsvit {#selecting-a-report-suite}
 
 1. I det övre högra hörnet av Adobe Analytics-sidan, till höger om fältet **[!UICONTROL Search Reports]**, väljer du rätt rapportsvit i listrutan. Om det finns flera rapportsviter och du är osäker på vilken du ska använda kontaktar du Adobe Analytics-administratören, som kan hjälpa dig att välja rätt rapportsvit.
 
-   I bilden nedan skapade en användare en rapportsvit med namnet *DynamicMediaViewersExtensionDoc* och markerade den i listrutan. Rapportsvitens namn är avsett endast som illustration. namnet på den rapportsvit som du väljer skiljer sig åt.
+   I bilden nedan skapade en användare en rapportsvit med namnet *DynamicMediaViewersExtensionDoc* och markerade den i listrutan. Rapportsvitens namn är endast för illustrationsändamål. Namnet på den rapportsvit du väljer är upp till dig.
 
    Om ingen rapportsvit är tillgänglig måste du eller Adobe Analytics-administratören skapa en innan du kan fortsätta med konfigurationen.
 
@@ -444,13 +444,13 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
    ![2019-07-22_18-09-49](assets/2019-07-22_18-09-49.png)
 
-   Nu kommer du att ställa in Adobe Analytics-variabler.
+   Konfigurera Adobe Analytics-variabler.
 
 ### Konfigurera Adobe Analytics-variabler {#setting-up-adobe-analytics-variables}
 
-1. Du kommer nu att ange en eller flera Adobe Analytics-variabler som du vill använda för att spåra Dynamic Media Viewer-beteendet på webbsidan.
+1. Ange en eller flera Adobe Analytics-variabler som du vill använda för att spåra Dynamic Media Viewer-beteendet på webbsidan.
 
-   Det går att använda alla typer av variabler som stöds av Adobe Analytics. Beslutet om variabeltypen (som Custom Traffic [props], Conversion [eVar]) ska styras av specifika behov i din Analytics-implementering.
+   Det går att använda alla typer av variabler som stöds av Adobe Analytics. Beslutet om variabeltypen (som Custom Traffic [props], Conversion [eVar]) styrs av specifika behov i Analytics-implementeringen.
 
    Se [Översikt över utkast och eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html#vars).
 
@@ -459,7 +459,7 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
    Om du vill aktivera en ny anpassad trafikvariabel klickar du på **[!UICONTROL Admin > Report Suites]** i verktygsfältet i Adobe Analytics.
 
 1. Markera rätt rapport på sidan **[!UICONTROL Report Suite Manager]** och klicka sedan på **[!UICONTROL Edit Settings > Traffic > Traffic Variables]** i verktygsfältet.
-1. Där hämtar du en variabel som inte används, ger den ett beskrivande namn ( **[!UICONTROL Viewer asset (prop 30)]**) och ändrar kombinationsrutan till &quot;Aktiverad&quot; i kolumnen Aktiverad.
+1. Där väljer du en oanvänd variabel, ger den ett beskrivande namn ( **[!UICONTROL Viewer asset (prop 30)]**) och ändrar kombinationsrutan till &quot;Aktiverad&quot; i kolumnen Aktiverad.
 
    Följande skärmbild är ett exempel på en anpassad trafikvariabel ( **[!UICONTROL prop30]**) för att spåra ett resursnamn som används av visningsprogrammet:
 
@@ -529,9 +529,9 @@ Se [Experience Cloud ID-tjänsttillägg](https://experienceleague.adobe.com/docs
 
 * (Obligatoriskt) *Adobe Analytics*-tillägg
 
-Om du vill konfigurera det här tillägget behöver du först det rapportsvit-ID som finns i Adobe Analytics, under **[!UICONTROL Admin > Report Suite]** under kolumnrubriken **[!UICONTROL Report Suite ID]**.
+Om du vill konfigurera det här tillägget måste du ha det Report Suite-ID som finns i Adobe Analytics, under **[!UICONTROL Admin > Report Suite]**, under kolumnrubriken **[!UICONTROL Report Suite ID]**.
 
-(Rapportsvit-ID:t för rapportsviten **[!UICONTROL DynamicMediaViewersExtensionDoc]** används endast i demonstrationssyfte i följande skärmbilder. Detta ID skapades och användes tidigare när du [valde en rapportsvit](#selecting-a-report-suite).)
+(Endast i demonstrationssyfte används Report Suite-ID:t för **[!UICONTROL DynamicMediaViewersExtensionDoc]** Report Suite i följande skärmbilder. Detta ID skapades och användes tidigare när du [valde en rapportsvit](#selecting-a-report-suite).)
 
 ![image2019-7-8_16-45-34](assets/image2019-7-8_16-45-34.png)
 
@@ -559,7 +559,7 @@ Se [Adobe Media Analytics for Audio and Video Extension](https://experienceleagu
 
 Välj **[!UICONTROL enable Adobe Analytics for Video]** om du vill aktivera (starta) spårning av pulsslag för video.
 
-Observera att tillägget *Dynamic Media Viewer* endast är tillgängligt när du skriver det om Experience Platform Launch-egenskapen har skapats för utveckling.
+Från och med den här skrivningen är tillägget *Dynamic Media Viewer* bara tillgängligt om Experience Platform Launch-egenskapen har skapats för utveckling.
 
 Se [Skapa en egenskap i Experience Platform Launch](#creating-a-property-in-adobe-launch).
 
@@ -579,16 +579,16 @@ Se [Konfigurera tillägget Dynamic Media Viewer](#configuring-the-dynamic-media-
 
 ### Publicera ett bibliotek {#publishing-a-library}
 
-Om du vill göra ändringar i konfigurationen för Experience Platform Launch (inklusive Egenskap, Tillägg, Regler och Dataelement) måste du *publicera* sådana ändringar. Publicering i Experience Platform Launch utförs från fliken Publicering under egenskapskonfigurationen.
+Om du vill ändra konfigurationen för Experience Platform Launch (inklusive Egenskap, Tillägg, Regler och Dataelement) måste du *publicera* sådana ändringar. Publicering i Experience Platform Launch utförs från fliken Publicering under egenskapskonfigurationen.
 
-Experience Platform Launch kan ha flera utvecklingsmiljöer, en mellanlagringsmiljö och en produktionsmiljö. Som standard pekar Experience Platform Launch Cloud Configuration i AEM på AEM författarnod till scenmiljön i Experience Platform Launch och AEM publiceringsnod till produktionsmiljön i Experience Platform Launch. Den här ordningen innebär att med standardinställningarna för AEM måste du publicera Experience Platform Launch-biblioteket till mellanlagringsmiljön så att du kan använda det i AEM författare och sedan publicera det i produktionsmiljön så att det kan användas i AEM publicering.
+platforma launchen kan ha flera utvecklingsmiljöer, en mellanlagringsmiljö och en produktionsmiljö. Som standard pekar Platform launch Cloud Configuration i Experience Manager på Experience Manager författarnoden mot scenmiljön i Platform launch. Publiceringsnoden Experience Manager pekar på Platforma launchens produktionsmiljö. Detta innebär att med standardinställningarna för Experience Manager måste du publicera Platform launch-biblioteket till mellanlagringsmiljön. Om du gör det kan du använda det i författaren till Experience Manager. Du kan sedan publicera den i produktionsmiljön så att den kan användas i Experience Manager.
 
 Mer information om Experience Platform Launch-miljöer finns i [Miljöer](https://experienceleague.adobe.com/docs/launch/using/reference/publish/environments/environments.html#environment-types).
 
 Publicering av ett bibliotek omfattar följande två steg:
 
 * Lägga till och skapa ett nytt bibliotek genom att inkludera alla nödvändiga ändringar (nya och uppdateringar) i biblioteket.
-* Flytta biblioteket uppåt mellan olika miljönivåer (från utveckling till mellanlagring och produktion)
+* Flytta upp biblioteket genom de olika miljönivåerna (från utveckling till mellanlagring och produktion).
 
 #### Lägga till och skapa ett nytt bibliotek {#adding-and-building-a-new-library}
 
@@ -608,20 +608,20 @@ Publicering av ett bibliotek omfattar följande två steg:
 
 1. Klicka på **[!UICONTROL Save & Build for Development]** i det övre högra hörnet på sidan.
 
-   På några minuter är biblioteket klart att användas.
+   Om några minuter är biblioteket klart att användas.
 
    ![image2019-7-15_15-3-34](assets/image2019-7-15_15-3-34.png)
 
    >[!NOTE]
    >
-   >Nästa gång du gör ändringar i konfigurationen för Experience Platform Launch går du till fliken **[!UICONTROL Publishing]** under konfigurationen **[!UICONTROL Property]** och klickar sedan på det bibliotek du skapat tidigare.
+   >Nästa gång du ändrar konfigurationen för Experience Platform Launch går du till fliken **[!UICONTROL Publishing]** under konfigurationen **[!UICONTROL Property]** och klickar sedan på det bibliotek du skapat tidigare.
    >
    >
    >Klicka på **[!UICONTROL Add All Changed Resources]** på bibliotekets publiceringsskärm och klicka sedan på **[!UICONTROL Save & Build for Development]**.
 
-#### Flytta ett bibliotek uppåt genom miljönivåerna {#moving-a-library-up-through-environment-levels}
+#### Flytta upp ett bibliotek genom miljönivåer {#moving-a-library-up-through-environment-levels}
 
-1. När ett nytt bibliotek har lagts till är det från början placerat i utvecklingsmiljön. Om du vill flytta den till nivån Mellanlagringsmiljö (som motsvarar kolumnen Skickat) går du till listrutan i biblioteket och klickar på **[!UICONTROL Submit for Approval]**.
+1. När ett nytt bibliotek har lagts till finns det i utvecklingsmiljön. Om du vill flytta den till nivån Mellanlagringsmiljö (som motsvarar kolumnen Skickat) går du till listrutan i biblioteket och klickar på **[!UICONTROL Submit for Approval]**.
 
    ![image2019-7-15_15-52-37](assets/image2019-7-15_15-52-37.png)
 
@@ -631,7 +631,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    ![image2019-7-15_15-54-37](assets/image2019-7-15_15-54-37.png)
 
-1. Följ en liknande process för att flytta biblioteket från mellanlagringsmiljön till produktionsmiljön (kolumnen Publicerad).
+1. Om du vill flytta biblioteket från mellanlagringsmiljön till produktionsmiljön (kolumnen Publicerad) följer du en liknande process.
 
    Klicka först på **[!UICONTROL Approve for Publishing]** i listrutan.
 
@@ -649,18 +649,18 @@ Publicering av ett bibliotek omfattar följande två steg:
 
 Förutsättningar:
 
-* AEM kör både Author- och Publish-instanser.
-* AEM författarnod är konfigurerad i Dynamic Media. <!-- Scene7 run mode (dynamicmedia_s7) -->
-* Dynamic Media WCM-komponenter är aktiverade i AEM Sites.
+* Experience Manager kör både författarinstansen och publiceringsinstansen.
+* Skribentnoden för Experience Manager har konfigurerats i Dynamic Media. <!-- Scene7 run mode (dynamicmedia_s7) -->
+* Dynamic Media WCM-komponenter är aktiverade i Experience Manager Sites.
 
-Den AEM konfigurationen består av följande två huvudsteg:
+Konfigurationen av Experience Manager består av följande två stora steg:
 
-* Konfiguration av AEM IMS.
+* Konfiguration av Experience Manager IMS.
 * Konfiguration av Experience Platform Launch Cloud.
 
-### Konfigurerar AEM IMS {#configuring-aem-ims}
+### Konfigurerar Experience Manager IMS {#configuring-aem-ims}
 
-1. Klicka på ikonen Verktyg (hammer) i AEM författare och klicka sedan på **[!UICONTROL Security > Adobe IMS Configurations]**.
+1. Klicka på verktygsikonen (hammer) i författaren till Experience Manager och klicka sedan på **[!UICONTROL Security > Adobe IMS Configurations]**.
 
    ![2019-07-25_11-52-58](assets/2019-07-25_11-52-58.png)
 
@@ -670,9 +670,9 @@ Den AEM konfigurationen består av följande två huvudsteg:
 
    Följande informationsmeddelande visas:
 
-   *Om du vill hämta en giltig åtkomsttoken måste det nya certifikatets offentliga nyckel läggas till i det tekniska kontot på Adobe I/O!*.
+   *Om du vill hämta en giltig åtkomsttoken måste det nya certifikatets offentliga nyckel läggas till i det tekniska kontot på Adobe I/O!*
 
-   Klicka på **[!UICONTROL OK]** för att stänga dialogrutan Info.
+   Om du vill stänga dialogrutan Info klickar du på **[!UICONTROL OK]**.
 
    ![2019-07-25_12-09-24](assets/2019-07-25_12-09-24.png)
 
@@ -680,7 +680,7 @@ Den AEM konfigurationen består av följande två huvudsteg:
 
    >[!NOTE]
    >
-   >Nu: ***låt*** sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** vara öppen; stäng ***inte*** sidan och klicka ***inte*** på Nästa. Du kommer tillbaka till den här sidan längre fram.
+   >Nu: ***låt*** sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** vara öppen; stäng ***inte*** sidan och klicka ***inte*** på Nästa. Du kommer att gå tillbaka till den här sidan senare i stegen.
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
@@ -718,14 +718,14 @@ Den AEM konfigurationen består av följande två huvudsteg:
 
    >[!NOTE]
    >
-   >***Låt den här sidan med integreringsinformation vara öppen.*** Du behöver snart olika uppgifter från flikarna **[!UICONTROL Overview]** och **[!UICONTROL JWT]**.
+   >***Låt den här sidan med integreringsinformation vara öppen.*** Du behöver olika informationsdelar från flikarna **[!UICONTROL Overview]** och **[!UICONTROL JWT]** på bara ett ögonblick.
 
    ![2019-07-25_14-35-30](assets/2019-07-25_14-35-30.png)
    _Sidan med integreringsinformation_
 
 1. Gå tillbaka till sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** som du öppnade tidigare. Klicka på **[!UICONTROL Next]** i det övre högra hörnet av sidan för att öppna sidan **[!UICONTROL Account]** i fönstret **[!UICONTROL Adobe IMS Technical Account Configuration]**.
 
-   (Om du stängde sidan av misstag tidigare går du tillbaka till AEM-redigeraren och klickar sedan på **[!UICONTROL Tools > Security > Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Experience Platform Launch]**. I listrutan **[!UICONTROL Certificate]** markerar du namnet på det tidigare skapade certifikatet.
+   (Om du stängde sidan tidigare går du tillbaka till författaren av Experience Manager och klickar sedan på **[!UICONTROL Tools > Security > Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Experience Platform Launch]**. I listrutan **[!UICONTROL Certificate]** markerar du namnet på det tidigare skapade certifikatet.
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
    _Adobe IMS Technical Account Configuration - certifikatsida_
@@ -771,17 +771,17 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
 1. Klicka på **[!UICONTROL Create]** i det övre högra hörnet på sidan **[!UICONTROL Account]**.
 
-   Med AEM IMS konfigurerat har du nu ett nytt IMSAccount som visas under **[!UICONTROL Adobe IMS Configurations]**.
+   När Experience Manager IMS är konfigurerat har du nu ett nytt IMSA-konto som listas under **[!UICONTROL Adobe IMS Configurations]**.
 
    ![image2019-7-15_14-17-54](assets/image2019-7-15_14-17-54.png)
 
 ## Konfigurera Experience Platform Launch Cloud för integrering {#configuring-adobe-launch-cloud-for-the-integration}
 
-1. I AEM författare klickar du på verktygsikonen (hammer) i det övre vänstra hörnet och sedan på **[!UICONTROL Cloud Services > Experience Platform Launch Configurations]**.
+1. Klicka på verktygsikonen (hammer) i Experience Manager-författaren, nära det övre vänstra hörnet, och klicka sedan på **[!UICONTROL Cloud Services > Experience Platform Launch Configurations]**.
 
    ![2019-07-26_12-10-38](assets/2019-07-26_12-10-38.png)
 
-1. På sidan **[!UICONTROL Experience Platform Launch Configurations]** i den vänstra panelen väljer du en AEM plats som du vill använda Experience Platform Launch-konfigurationen för.
+1. På sidan **[!UICONTROL Experience Platform Launch Configurations]** i den vänstra panelen väljer du en Experience Manager-plats som du vill använda Experience Platform Launch-konfigurationen för.
 
    Endast i illustrationssyfte är **[!UICONTROL We.Retail]**-platsen vald i skärmbilden nedan.
 
@@ -792,7 +792,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
    * **[!UICONTROL Title]** - Ange en beskrivande konfigurationstitel. Till exempel, `We.Retail Launch cloud configuration`.
 
-   * **[!UICONTROL Associated Adobe IMS Configuration]** - Välj den IMS-konfiguration som du skapade tidigare i  [Konfigurera AEM IMS](#configuring-aem-ims).
+   * **[!UICONTROL Associated Adobe IMS Configuration]** - Välj den IMS-konfiguration som du skapade tidigare i  [Konfigurera Experience Manager IMS](#configuring-aem-ims).
 
    * **[!UICONTROL Company]** - I  **[!UICONTROL Company]** listrutan väljer du Experience Cloud. Listan fylls i automatiskt.
 
@@ -804,7 +804,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
 1. Klicka på **[!UICONTROL Next]** i det övre vänstra hörnet.
 1. På sidan **[!UICONTROL Staging]** (sida 2/3) i fönstret **[!UICONTROL Create Experience Platform Launch Configuration]** fyller du i följande fält:
 
-   I fältet **[!UICONTROL Library URI]** kontrollerar du platsen för mellanlagringsversionen av ditt Experience Platform Launch-bibliotek. Det här fältet fylls i automatiskt i AEM.
+   I fältet **[!UICONTROL Library URI]** kontrollerar du platsen för mellanlagringsversionen av ditt Experience Platform Launch-bibliotek. Experience Manager fyller i det här fältet automatiskt.
 
    I det här steget används Experience Platform Launch-bibliotek som distribueras till Adobe CDN endast i illustrationssyfte.
 
@@ -815,7 +815,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
    >
    >Till exempel: `//assets.adobetm.com/launch-xxxx`.
 
-   Sidan **[!UICONTROL Staging]** ska se ut ungefär så här: Observera att alternativen **[!UICONTROL Archive]** och **[!UICONTROL Load Library Asynchronously]** ***inte*** har angetts:
+   Sidan **[!UICONTROL Staging]** ser förmodligen ut ungefär så här. Alternativen **[!UICONTROL Archive]** och **[!UICONTROL Load Library Asynchronously]** är ***inte*** angivna:
 
    ![image2019-7-15_15-21-8](assets/image2019-7-15_15-21-8.png)
 
@@ -829,10 +829,10 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
    ![image2019-7-15_15-47-6](assets/image2019-7-15_15-47-6.png)
 
-För närvarande stöder AEM inte integrering av Dynamic Media Viewer med Experience Platform Launch.
+Experience Manager saknar för närvarande stöd för integrering av Dynamic Media Viewer med Experience Platform Launch.
 
-Det stöds dock i AEM publiceringsnod. Med standardinställningarna i Experience Platform Launch Cloud Configuration används produktionsmiljön i Experience Platform Launch i AEM publicering. Därför är det nödvändigt att varje gång under testet föra över Experience Platform Launch biblioteksuppdateringar från Development till produktionsmiljön.
+Det stöds dock i Experience Manager-publiceringsnoden. Med standardinställningarna i Experience Platform Launch Cloud Configuration används produktionsmiljön i Experience Platform Launch i Experience Manager. Därför är det nödvändigt att varje gång under testet föra över Experience Platform Launch biblioteksuppdateringar från Development till produktionsmiljön.
 
-Det går att kringgå den här begränsningen genom att ange Experience Platform Launch bibliotekets URL för utveckling eller mellanlagring i Experience Platform Launch Cloud-konfigurationen för AEM publicera ovan. Detta gör att AEM publiceringsnod använder utvecklingsversionen eller mellanlagringsversionen av Experience Platform Launch-biblioteket.
+Det är möjligt att kringgå denna begränsning. Ange utvecklings- eller mellanlagrings-URL för Experience Platform Launch-biblioteket i Experience Platform Launch Cloud-konfigurationen för Experience Manager-publicering ovan. På så sätt använder publiceringsnoden i Experience Manager utvecklings- eller mellanlagringsversionen av Experience Platform Launch-biblioteket.
 
 Mer information om hur du konfigurerar Experience Platform Launch Cloud finns i [Integrera Experience Platform Launch och Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html#integrations).
