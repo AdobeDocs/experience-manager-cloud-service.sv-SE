@@ -2,10 +2,10 @@
 title: Lägg till användare och roller - vad som krävs
 description: Lägg till användare och roller - vad som krävs
 translation-type: tm+mt
-source-git-commit: 936e42f273b75f0ea7776c51f57af44ec9e6d96f
+source-git-commit: 2c21414edd6c3178d05c818d2bf57aa152b5956b
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 9%
 # Lägg till användare och roller {#add-users-roles}
 
 
-Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter för att kunna användas. Exempelvis kan bara vissa användare ange KPI:er (Key Performance Indicators) för ett program. Dessa behörigheter är logiskt grupperade i roller.
+Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter för att kunna användas.
 
 [!UICONTROL Cloud Manager] definierar för närvarande fyra roller för användare som styr tillgängligheten av specifika funktioner:
 
@@ -24,7 +24,7 @@ Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter f
 
 >[!CAUTION]
 >
->Om du vill använda [!UICONTROL Cloud Manager] måste du ha en Adobe ID och produktkontexten för Adobes hanterade tjänster.
+>Om du vill använda [!UICONTROL Cloud Manager] måste du ha en Adobe ID och Adobe Experience Manager som produktkontext för Cloud Service.
 
 ## Rolldefinitioner {#role-definitions}
 
@@ -41,3 +41,7 @@ I följande tabell sammanfattas rollerna:
 | Distributionshanteraren | Hanterar distributionsåtgärder. Använder [!UICONTROL Cloud Manager] för att köra scen-/produktionsdistributioner. Kan redigera CI/CD-rör. Kan godkänna viktiga fel i tre nivåer. Kan få åtkomst till Git-databasen. |
 | Utvecklare | Utvecklar och testar anpassad programkod. I används främst [!UICONTROL Cloud Manager] för att visa status. Kan få åtkomst till Git-databasen för kodimplementering. |
 | Innehållsförfattare | I allmänhet interagerar inte med [!UICONTROL Cloud Manager]. Använd [!UICONTROL Cloud Manager] Programväljaren (när du har navigerat från [!UICONTROL Experience Cloud]) för att få åtkomst till AEM. |
+
+## Integreringsproduktprofilen {#integration-product-profile}
+
+Utöver ovanstående skapar Cloud Manager automatiskt en produktprofil med namnet&quot;Integrationer - Cloud Service&quot;. Den här produktprofilen används för integreringar mellan Adobe Experience Manager och andra Adobe-produkter. Den här produktprofilen **måste** inte tas bort. Om du tar bort den här profilen av misstag måste den återskapas manuellt. Visningsnamnet för den här profilen **måste** vara `CM_CS_DEFAULT`.
