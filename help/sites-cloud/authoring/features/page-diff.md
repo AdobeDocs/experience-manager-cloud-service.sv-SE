@@ -2,7 +2,7 @@
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 translation-type: tm+mt
-source-git-commit: b405e49cd883df1e2e9768bb9e4d6908afc443e2
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 0%
@@ -29,9 +29,9 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 Diff:en sida vid sida kan jämföra:
 
 * [Versioner](/help/sites-cloud/authoring/features/page-versions.md#comparing-a-version-with-current-page)  - Tidigare version av en sida med det aktuella läget
-* Live-kopior - Live-kopia med utkast <!-- [Live Copies](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live Copy with its Blueprint-->
+* [Live-kopior](/help/sites-cloud/administering/msm/creating-live-copies.md#comparing-a-live-copy-page-with-a-blueprint-page)  - Live Copy med utkast
 * [Startar](/help/sites-cloud/authoring/launches/editing.md#comparing-a-launch-page-to-its-source-page)  - Starta med dess källa
-* Språkkopior - En sida före och efter (re-)translation <!-- [Language Copies](/help/sites-administering/tc-manage.md#comparing-language-copies) - A page before and after (re-)translation-->
+* [Språkkopior](/help/sites-cloud/administering/translation/managing-projects.md#comparing-language-copies)  - En sida före och efter (re-)översättning
 
 Läs respektive avsnitt om hur du påbörjar skillnaderna i dessa sammanhang.
 
