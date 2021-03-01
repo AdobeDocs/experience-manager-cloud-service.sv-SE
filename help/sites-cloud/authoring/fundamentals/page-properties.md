@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 translation-type: tm+mt
-source-git-commit: c3fd7b5a6311eded51b13ab9fea1ca6af4a050eb
+source-git-commit: 66b2fb19cbc4c8aa480f1ace31a7f973dc7fb0f7
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1909'
 ht-degree: 5%
 
 ---
@@ -87,7 +87,7 @@ Egenskaperna fördelas på flera flikar.
    * **Lägg till**  - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
       * Tryck eller klicka igen för att lägga till flera.
       * Tryck eller klicka på ikonen **Ta bort** för att ta bort fågel-URL:en.
-   * **Omdirigerings-URL**  för vanity - Anger om du vill att sidan ska använda innehålls-URL:en.
+   * **Omdirigerings-URL**  för vanity - Anger om du vill att sidan ska använda standard-URL:en.
 
 
 
@@ -192,11 +192,10 @@ Konfigurera sidminiatyrbilden
 
 ### Blueprint {#blueprint}
 
-Den här fliken visas bara för sidor som fungerar som utkast.
+Den här fliken visas bara för sidor som fungerar som utkast. Utformningar fungerar som bas för Live-kopior och ingår i [Multi Site Management.](/help/sites-cloud/administering/msm/overview.md)
 
 * **Aktuella Live-kopior**  - Visar en lista över sidor som är baserade på (dvs. är Live-kopior av) den här designsidan
 
-   <!--Define properties for a Blueprint page within [multi-site management](/help/sites-administering/msm.md).-->
 * **Utrullningskonfigurationer**  - Styr under vilka omständigheter ändringar ska spridas till Live Copy
 
 ### Live-kopia {#live-copy}
