@@ -5,10 +5,10 @@ user-guide-title: Redigera innehåll i AEM as a Cloud Service
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service.
 translation-type: tm+mt
-source-git-commit: 0999f7a2a915df0d58876e17ceb5e93e13b7f817
+source-git-commit: e381c83eb37e3b2ede1de20eb2f7e3a6eb51ce5e
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 88%
+source-wordcount: '307'
+ht-degree: 69%
 
 ---
 
@@ -81,6 +81,25 @@ ht-degree: 88%
       + [Registrering, inloggning och användarprofil](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md)
 + Administrera {#administering}
    + [Administrera arbetsflöden](administering/workflows-administering.md)
+   + Återanvänder innehåll {#reusing-content}
+      + [MSM och översättning](administering/msm-and-translation.md)
+      + Multi Site Manager {#msm}
+         + [MSM och Live Copy - översikt](administering/msm/overview.md)
+         + [Konfigurera Live Copy-synkronisering](administering/msm/live-copy-sync-config.md)
+         + [Skapa och synkronisera Live-kopior](administering/msm/creating-live-copies.md)
+         + [Översiktskonsol för Live Copy](administering/msm/live-copy-overview.md)
+         + [utrullningskonflikter](administering/msm/rollout-conflicts.md)
+         + [MSM Best Practices](administering/msm/best-practices.md)
+         + [Felsökning och vanliga frågor](administering/msm/troubleshooting.md)
+      + Översättning {#translation}
+         + [Översätta innehåll för flerspråkiga webbplatser](administering/translation/overview.md)
+         + [Förbereder innehåll för översättning](administering/translation/preparation.md)
+         + [Hantera översättningsprojekt](administering/translation/managing-projects.md)
+         + [Guiden Kopiera språk](administering/translation/wizard.md)
+         + [Identifiera innehåll som ska översättas](administering/translation/rules.md)
+         + [Konfigurera översättningsintegreringsramverket](administering/translation/integration-framework.md)
+         + [Ansluter till Microsoft Translator](administering/translation/connect-ms-translator.md)
+         + [Bästa praxis för översättning](administering/translation/best-practices.md)
 + Integrera med AEM as a Cloud Service {#integrations}
    + [Integrera med Adobe Analytics](integrating/integrating-adobe-analytics.md)
    + [Integrera med Adobe Target](integrating/integrating-adobe-target.md)
