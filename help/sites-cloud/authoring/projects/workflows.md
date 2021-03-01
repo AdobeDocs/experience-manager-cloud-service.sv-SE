@@ -2,7 +2,7 @@
 title: Arbeta med projektarbetsflöden
 description: Det finns en mängd olika projektarbetsflöden att välja mellan.
 translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 12%
@@ -35,10 +35,7 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
 >[!NOTE]
 >
->&amp;ast; Dessa arbetsflöden startas inte från **arbetsflödets**-panel i Projekt. Se Skapa språkkopior för resurser.
-<!--
->&ast; These workflows are not started from the **Workflow** tile in Projects. See [Creating Language Copies for Assets.](/help/sites-administering/tc-manage.md)
--->
+>&amp;ast; Dessa arbetsflöden startas inte från **arbetsflödets**-panel i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-cloud/administering/translation/managing-projects.md)
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 
@@ -48,7 +45,7 @@ Mer information om hur du arbetar med arbetsflöden i AEM finns i:
 
 * [Delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
 * [Tillämpa arbetsflöden på sidor](/help/sites-cloud/authoring/workflows/applying.md)
-* Konfigurera arbetsflöden <!--* [Configuring workflows](/help/sites-administering/workflows.md)-->
+* [Konfigurera arbetsflöden](/help/sites-cloud/administering/workflows-administering.md)
 
 I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projekt.
 
