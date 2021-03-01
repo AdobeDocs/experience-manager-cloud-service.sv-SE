@@ -2,7 +2,7 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 translation-type: tm+mt
-source-git-commit: 305f584d89bc92f89b3ddaa49bb5da2f10e567db
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
 source-wordcount: '2864'
 ht-degree: 4%
@@ -387,7 +387,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
 ## Järnvägsväljare {#rail-selector}
 
-**Rälsväljaren** är tillgänglig längst upp till vänster i fönstret och visar alternativ beroende på de aktuella konsolerna.
+**Rail Selector** är tillgänglig längst upp till vänster i fönstret och visar alternativ beroende på de aktuella konsolerna.
 
 ![Rälsväljaren expanderad](/help/sites-cloud/authoring/assets/rail-selector-expanded.png)
 
@@ -450,8 +450,8 @@ Dessa alternativ är tillgängliga via markeringen bredvid **Kommentar**-fältet
 **** Referenser visar alla anslutningar till den valda resursen. I konsolen **Platser** [referenser](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references) för sidor visas till exempel:
 
 * [Startar](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)
-* Live-kopior<!--[Live copies](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)-->
-* Språkkopior<!--[Language copies](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)-->
+* [Live-kopior](/help/sites-cloud/administering/msm/overview.md#openingthelivecopyoverviewfromreferences)
+* [Språkversioner](/help/sites-cloud/administering/translation/preparation.md#seeing-the-status-of-language-roots)
 * Innehållsreferenser:
 
    * Länkar från andra sidor till den markerade sidan
