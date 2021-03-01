@@ -2,7 +2,7 @@
 title: Redigera Launches
 description: 'När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna. '
 translation-type: tm+mt
-source-git-commit: 914eb7f7b040b99c11d9f109549eb13868058320
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 18%
@@ -25,7 +25,7 @@ När du redigerar sidan visas en indikation i det övre verktygsfältet tillsamm
 
 ### Redigering av startsidor som omfattas av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
 
-Om lanseringen baseras på en live-kopia kommer du att: <!--If your launch is based upon a [live copy](/help/sites-administering/msm.md) then you will:-->
+Om din start baseras på en [Live Copy](/help/sites-cloud/administering/msm/overview.md) kommer du att:
 
 * Se låsa symboler (små hänglås) när du redigerar en komponent (innehåll och/eller egenskaper).
 * Se fliken **Live Copy** i **Sidegenskaper**
@@ -37,7 +37,7 @@ Du kan göra ändringar på samma sätt som du kan redigera en vanlig Live-kopia
 * Om du klickar på ett stängt hänglås bryts synkroniseringen och du kan göra nya uppdateringar av innehållet när du startar programmet. När du har låst upp (öppet hänglås) skrivs inte ändringarna över av ändringar som gjorts på samma plats i källgrenen.
 * **Gör uppehåll i** (och **återuppta**) arv för en viss sida.
 
-Mer information finns i Ändra Live Copy-innehåll. <!--See [Changing Live Copy Content](/help/sites-administering/msm-livecopy.md#changing-live-copy-content) for further information.-->
+Mer information finns i [Ändra Live Copy-innehåll](/help/sites-cloud/administering/msm/creating-live-copies.md).
 
 ## Jämföra en startsida med dess källsida {#comparing-a-launch-page-to-its-source-page}
 
