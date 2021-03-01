@@ -2,7 +2,7 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
 source-wordcount: '2974'
 ht-degree: 6%
@@ -31,7 +31,7 @@ Innehåll läggs till med [komponenter](/help/sites-cloud/authoring/features/com
 
 >[!TIP]
 >
->I **redigeringsläget** visas länkar i innehållet, men **går inte att komma åt**. Använd [förhandsgranskningsläget](#previewing-pages) om du vill navigera med hjälp av länkarna i innehållet.
+>I **redigeringsläget** visas länkar i ditt innehåll, men **går inte att komma åt**. Använd [förhandsgranskningsläget](#previewing-pages) om du vill navigera med hjälp av länkarna i innehållet.
 
 ## Verktygsfältet Sida {#page-toolbar}
 
@@ -367,7 +367,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
 Arv är den mekanism där innehåll automatiskt kan skickas från en komponent till en annan. Ärvda komponenter kan vara produkten av olika scenarier, bland annat:
 
-* Hantering av flera webbplatser <!--[Multi site management](/help/sites-administering/msm.md)-->
+* [Hantering av flera webbplatser](/help/sites-cloud/administering/msm/overview.md)
 * [Startar](/help/sites-cloud/authoring/launches/overview.md)  (baserat på live-kopia).
 
 Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent det är kan den här funktionen vara tillgänglig från komponentens verktygsfält, om komponenten finns på en sida som är en del av en live-kopia eller en livestart (baserad på en live-kopia).
