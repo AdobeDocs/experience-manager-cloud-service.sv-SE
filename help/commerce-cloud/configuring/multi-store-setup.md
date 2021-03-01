@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 translation-type: tm+mt
-source-git-commit: 4862a09b3a0ce2f7506f4fff10639c51792db1b7
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -59,4 +59,4 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 * [Magento webbplatser, butiker och vyer](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
 * [AEM CIF Core Components - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-store--site-configuration)
 * [Använda Multi-Site Manager](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
-* [Återanvända innehåll: Multi Site Manager och Live Copy](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm.html)
+* [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-cloud/administering/msm/overview.md)
