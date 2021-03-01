@@ -2,7 +2,7 @@
 title: Skapa Launches
 description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny version av befintliga webbsidor för framtida aktivering.
 translation-type: tm+mt
-source-git-commit: 9e9f2bbed463143f821cc7aa0d50f37f892f3e9b
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 12%
@@ -16,7 +16,7 @@ Skapa en startsida för att möjliggöra uppdatering av en ny version av befintl
 
 * Titeln visas i [Reference](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references)-listen, där författare kan komma åt dem för att arbeta med dem.
 * Källsidans underordnade sidor inkluderas som standard i starten. Du kan bara använda källsidan om du vill.
-* Som standard uppdateras startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar. <!--By default, [Live Copy](/help/sites-administering/msm.md) automatically updates the launch pages as the source pages change. You can specify that a static copy is created to prevent automatic changes.-->
+* Som standard uppdaterar [Live Copy](/help/sites-cloud/administering/msm/overview.md) startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
 
 Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. **Startdatumet** fungerar dock endast i kombination med flaggan **Produktionsklar** (se [Redigera en startkonfiguration](/help/sites-cloud/authoring/launches/editing.md#editing-a-launch-configuration)). För att åtgärderna ska köras automatiskt måste båda anges.
 
@@ -84,7 +84,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    * **Starttitel**: Namnet på Launch. Namnet ska vara meningsfullt för författare.
    * **med befintligt innehåll**: det ursprungliga innehållet kommer att användas för att skapa starten.
    * **Använd en ny mall för att ersätta sidan**: Mer information finns i  [Create Launch with New ](#create-launch-with-new-template) Template.
-   * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår du genom att göra lanseringen till en live-kopia. Som standard är det här alternativet markerat. <!--Select this option to automatically update the content of launch pages when the source pages change. This option achieves this by making the launch a [live copy](/help/sites-administering/msm.md). By default, this option is selected.-->
+   * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår detta genom att göra att du startar en [Live Copy](/help/sites-cloud/administering/msm/overview.md). Som standard är det här alternativet markerat.—>
    * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på flaggan  **Production** Readyflag). se  [Startar - Händelsens](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events) ordning).
 
    ![Startegenskaper](/help/sites-cloud/authoring/assets/launches-properties.png)
