@@ -2,9 +2,9 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
-source-wordcount: '2163'
+source-wordcount: '2152'
 ht-degree: 12%
 
 ---
@@ -191,7 +191,7 @@ Om du klickar på komponenten markeras komponenten i sidredigeraren. Vilka åtg�
 
    ![Redigeringsknapp för innehållsträd](/help/sites-cloud/authoring/assets/content-tree-edit.png)
 
-* En sida som är en del av en LiveCycle där komponenter ärvs från en annan sida har ett reducerat urval av alternativ, inklusive arvsalternativen. <!--A page that is part of a [livecopy](/help/sites-administering/msm.md), where components are inherited from another page:-->
+* En sida som är en del av en [livecopy](/help/sites-cloud/administering/msm/overview.md), där komponenter ärvs från en annan sida.
 
 >[!NOTE]
 >
@@ -225,9 +225,9 @@ Välj lämplig referenstyp för mer information. I vissa situationer är ytterli
 * **Inkommande länkar** innehåller en lista med sidor som refererar till sidan, tillsammans med direktåtkomst till  **** Redigeraren för de sidorna när du väljer en specifik länk
 * Instanser av lånat och lånat innehåll med **Reference**-komponenten, härifrån kan du navigera till den refererande/refererade sidan
 * [Startar](/help/sites-cloud/authoring/launches/overview.md), ger åtkomst till relaterade starter
-* Live-kopior visar sökvägarna för alla live-kopior som baseras på den valda resursen. <!--[Live Copies](/help/sites-administering/msm.md) displays the paths of all live copies that are based on the selected resource.-->
-* I utkast finns information och olika åtgärder <!--[Blueprint](/help/sites-administering/msm-best-practices.md), provides details and various actions-->
-* Språk Kopior innehåller information och olika åtgärder <!--[Languages Copies](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel), provides details and various actions-->
+* [Live-](/help/sites-cloud/administering/msm/overview.md) kopior visar sökvägarna för alla live-kopior som baseras på den valda resursen.
+* [utkast](/help/sites-cloud/administering/msm/best-practices.md), innehåller information och olika åtgärder
+* [Språk Kopior](/help/sites-cloud/administering/translation/managing-projects.md#creating-translation-projects-using-the-references-panel), innehåller information och olika åtgärder
 
 ## Händelser - Tidslinje {#events-timeline}
 
@@ -248,7 +248,7 @@ Sidinformation (equalizer-ikonen) öppnar en meny som även innehåller informat
 ![Sidinformation, alternativ](/help/sites-cloud/authoring/assets/page-information.png)
 
 * [Öppna egenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md)
-* Startsida <!--[Rollout Page](/help/sites-administering/msm.md#msm-from-the-ui)-->
+* [Utrullningssida](/help/sites-cloud/administering/msm/overview.md#msm-from-the-ui)
 * [Starta arbetsflöde](/help/sites-cloud/authoring/workflows/applying.md#starting-a-workflow-from-the-page-editor)
 * [Lås sida](/help/sites-cloud/authoring/fundamentals/editing-content.md#locking-a-page)
 * [Publicera sida](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#publishing-pages-1)
@@ -283,6 +283,7 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Åtkomst till vissa lägen kräver lämplig behörighet/behörighet.
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
 >* Det finns ett [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) (`Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera** eller **Layout**).
+
 >
 
 
