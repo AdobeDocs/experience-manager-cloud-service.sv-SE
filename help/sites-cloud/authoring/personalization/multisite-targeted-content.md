@@ -2,10 +2,10 @@
 title: Arbeta med riktat innehåll på flera webbplatser
 description: Om ni behöver hantera riktat innehåll, t.ex. aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll
 translation-type: tm+mt
-source-git-commit: 01ca37d8bdf1c7e5c1801db6f4ad537772407064
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
-source-wordcount: '2915'
-ht-degree: 4%
+source-wordcount: '2900'
+ht-degree: 5%
 
 ---
 
@@ -16,10 +16,7 @@ Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser o
 
 >[!NOTE]
 >
->Att arbeta med stöd för flera webbplatser för riktat innehåll är en avancerad funktion. Om du vill använda den här funktionen bör du känna till Multi Site Manager och Adobe Target-integreringen med AEM.
-<!--
->Working with Multisite support for targeted content is an advanced feature. To use this feature, you should be familiar with [Multi Site Manager](/help/sites-administering/msm.md) and the [Adobe Target integration](/help/sites-administering/target.md) with AEM.
--->
+>Att arbeta med stöd för flera webbplatser för riktat innehåll är en avancerad funktion. Om du vill använda den här funktionen bör du känna till [Multi Site Manager](/help/sites-cloud/administering/msm/overview.md) och [Adobe Target-integrationen](/help/sites-cloud/integrating/integrating-adobe-target.md) med AEM.
 
 I det här dokumentet beskrivs följande:
 
@@ -110,7 +107,7 @@ När du har uppdaterat fliken ändras den kanadensiska webbplatsen till den nya 
 
 ![Ändra versioner](/help/sites-cloud/authoring/assets/multisite-us-change.png)
 
-Marknadsföraren vill sprida dessa ändringar till den europeiska regionen och lansera den aktiva kopian genom att trycka eller klicka på **utrullningssida**. När du har uppdaterat fliken får den nya bilden på den brittiska webbplatsen när det europeiska området ärver från det överordnad området (efter utrullning). <!--The marketer would like to roll out these changes to the European region and [rolls out the live copy](/help/sites-administering/msm-livecopy.md) by tapping or clicking **Rollout Page**. After refreshing the tab, the Great Britain site has the new image as the Europe area inherits from the master area (after rollout).-->
+Marknadsföraren vill sprida dessa ändringar till den europeiska regionen och [rullar ut live-kopian](/help/sites-cloud/administering/msm/creating-live-copies.md) genom att trycka eller klicka på **Rollout Page**. När du har uppdaterat fliken får den nya bilden på den brittiska webbplatsen när det europeiska området ärver från det överordnad området (efter utrullning).
 
 ![Rolling live copy](/help/sites-cloud/authoring/assets/multisite-roll-out.png)
 
@@ -189,9 +186,9 @@ Så här skapar du ett område som en livecopy:
 
 1. Välj lämplig konfiguration i listrutan **Utrullningskonfigurationer**.
 
-   Se [Installerade utrullningskonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-sync.html#installed-and-custom-rollout-configurations) för beskrivningar av varje alternativ.
+   Se [Installerade utrullningskonfigurationer](/help/sites-cloud/administering/msm/live-copy-sync-config.md#installed-and-custom-rollout-configurations) för beskrivningar av varje alternativ.
 
-   Mer information om live-kopior finns i [Skapa och synkronisera live-kopior](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-livecopy.html).
+   Mer information om live-kopior finns i [Skapa och synkronisera live-kopior](/help/sites-cloud/administering/msm/creating-live-copies.md).
 
    >[!NOTE]
    >
