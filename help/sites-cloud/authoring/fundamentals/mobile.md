@@ -2,9 +2,9 @@
 title: Skapa en sida för mobila enheter
 description: När du skapar för mobilen kan du växla mellan flera emulatorer för att se vad slutanvändaren ser
 translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,17 @@ ht-degree: 0%
 
 Adobe Experience Manager sidor baseras på en responsiv layout. [Responsiv ](/help/sites-cloud/authoring/features/responsive-layout.md) layout anpassar innehållet automatiskt så att det passar målenheten, vilket eliminerar behovet av att skapa innehåll för specifika enheter.
 
-När du skapar en mobilsida visas sidan på ett sätt som emulerar den mobila enheten. När du redigerar sidan kan du växla mellan flera emulatorer för att se vad slutanvändaren ser när han/hon öppnar sidan.
+När du skapar en mobilsida visas sidan på ett sätt som emulerar den mobila enheten. När du skapar sidan kan du växla mellan flera emulatorer för att se vad slutanvändaren ser när han/hon öppnar sidan.
 
 Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enhetens funktioner för att återge en sida. När slutanvändaren öppnar en mobilsida upptäcker AEM enheten och skickar den representation som motsvarar enhetsgruppen.
 
 >[!NOTE]
 >
->Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. Se Skapa en Live-kopia för olika kanaler.
+>Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. Se [Skapa live-kopior.](/help/sites-cloud/administering/msm/creating-live-copies.md)
 >
 >AEM utvecklare kan skapa nya enhetsgrupper. Se Skapa enhetsgruppsfilter.
 
 <!--
->To create a mobile site based on an existing standard site, create a live copy of the standard site. (See [Creating a Live Copy for Different Channels](/help/sites-administering/msm-livecopy.md).)
->
 >AEM developers can create new device groups. (See [Creating Device Group Filters](/help/sites-developing/groupfilters.md).)
 -->
 
