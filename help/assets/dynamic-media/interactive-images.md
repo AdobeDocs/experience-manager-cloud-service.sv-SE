@@ -2,9 +2,9 @@
 title: Interaktiva bilder
 description: Lär dig hur du arbetar med interaktiva bilder i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: ad626d9722f1942249197d96aa5fac3d8f7ed947
+source-git-commit: dfd225bbef6d3244130aca2f18dbef4006f2ae65
 workflow-type: tm+mt
-source-wordcount: '4211'
+source-wordcount: '4210'
 ht-degree: 1%
 
 ---
@@ -256,7 +256,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
    1. Tryck på **[!UICONTROL Hotspot]** i det övre vänstra hörnet på sidan Hantering av hotspot.
    1. Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering. Du kan också använda piltangenterna på tangentbordet för att styra positionen för en markerad aktiveringspunkt.
    1. Lägg till fler hotspot-områden efter behov genom att upprepa stegen a och b.
-   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och trycker sedan på **[!UICONTROL Delete]** (skräpburkikon) under rubriken **[!UICONTROL Hotspots]**.
+   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den på bilden och trycker sedan på **[!UICONTROL Delete]** (papperskorgsikonen) under rubriken **[!UICONTROL Hotspots]**.
 
 1. Skriv namnet på aktiveringspunkten i textfältet Namn. Det här namnet visas också i listrutan Markerad aktiveringspunkt.
 1. Gör något av följande:
@@ -338,7 +338,7 @@ Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den 
 
 **Exempel**
 
-Lägg märke till att bilden på de tre männen är en statisk `IMG`-tagg med [demowebbplatsen som exempel](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html):
+Lägg märke till att bilden på de tre personerna är en statisk `IMG`-tagg när du använder [demowebbplatsen som exempel](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html):
 
 ```xml
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
