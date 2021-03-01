@@ -2,7 +2,7 @@
 title: Skapa och ordna sidor
 description: Skapa och ordna sidor med AEM
 translation-type: tm+mt
-source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
+source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
 workflow-type: tm+mt
 source-wordcount: '2554'
 ht-degree: 5%
@@ -84,7 +84,7 @@ När du skapar en ny sida finns det två nyckelfält:
 
 Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida krävs bara fältet **Titel**. Om inget **namn** anges när sidan skapas, kommer AEM att generera ett namn från de första 64 tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
+* När du skapar en sida krävs bara fältet **Titel**. Om inget **namn** anges när sidan skapas, kommer AEM att generera ett namn från de första 64 tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten att använda korta sidnamn.
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 
 >[!TIP]
@@ -130,10 +130,7 @@ När du anger en sida **Namn** när du skapar en ny sida, kommer AEM att [valide
 >
 >Du bör undvika att använda en kod med två bokstäver enligt ISO-639-1 som sidnamn, såvida det inte är en språkrot.
 >
->Mer information finns i Förbereda innehåll för översättning.
-<!--
->See [Preparing Content for Translation](/help/sites-administering/tc-prep.md) for more information.
--->
+>Mer information finns i [Förbereda innehåll för översättning](/help/sites-cloud/administering/translation/preparation.md).
 
 ### Mallar {#templates}
 
@@ -369,7 +366,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
 #### Asynkrona åtgärder {#asynchronous-actions}
 
-Vanligtvis utförs en åtgärd för att flytta eller byta namn på en sida direkt. Detta betraktas som synkron bearbetning och ytterligare åtgärder i gränssnittet blockeras tills åtgärden är klar.
+Vanligtvis utförs en åtgärd för att flytta eller byta namn på en sida direkt. Detta betraktas som synkron bearbetning och ytterligare åtgärder i användargränssnittet blockeras tills åtgärden har slutförts.
 
 Om antalet sidor som påverkas ligger över en angiven gräns, kommer åtgärden att bearbetas asynkront, vilket gör att användaren kan fortsätta att redigera i gränssnittet utan att detta hindras av åtgärden för att flytta sidan eller byta namn.
 
