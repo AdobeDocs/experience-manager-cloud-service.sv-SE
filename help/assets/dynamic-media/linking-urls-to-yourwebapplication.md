@@ -2,10 +2,10 @@
 title: Länka URL till ett webbprogram
 description: Länka URL:er till ditt webbprogram i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: dce527d5798ef003dc499baec97b169debab445a
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 10%
+source-wordcount: '1201'
+ht-degree: 9%
 
 ---
 
@@ -62,7 +62,7 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
    * Om du valde en bild trycker du på **[!UICONTROL Renditions]** i listrutan.
 
-      Under rubriken **[!UICONTROL Dynamic]** trycker du på ett förinställningsnamn för att visa återgivningen i den högra bildrutan. Du kan behöva bläddra i listan Återgivningar för att se den dynamiska rubriken.
+      Under rubriken **[!UICONTROL Dynamic]** trycker du på ett förinställningsnamn för att visa återgivningen i den högra bildrutan. Om det behövs bläddrar du i listan Återgivningar för att se den dynamiska rubriken.
 
       Tryck **[!UICONTROL URL]** längst ned i den vänstra listen.
 
@@ -76,13 +76,13 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
       ![chlimage_1-271](assets/chlimage_1-271.png)
 
-1. Markera och kopiera texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
+1. Om du vill förhandsgranska resursen eller lägga till den på webbinnehållssidan markerar och kopierar du texten till webbläsaren.
 
    Om du vill avsluta URL-fönstret trycker du på **[!UICONTROL X]** eller **[!UICONTROL Close]**.
 
 ## Hämta en URL för en statisk resurs {#obtaining-a-url-for-a-static-asset}
 
-Dynamic Media stöder leverans av statiskt material, som är ytterligare material utöver bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
+Dynamic Media stöder leverans av statiskt material, vilket är annat än bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
 
 * 3D-filer
 * Animerad GIF
@@ -141,7 +141,7 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
 
    (Banan ovan är endast avsedd som illustration. det är inte den faktiska sökvägen som du kopierar.)
 
-1. Ordna den kopierade informationen i följande ordning för att skapa en fullständig URL-sökväg:
+1. Om du vill skapa en fullständig URL-sökväg ordnar du den kopierade informationen i följande ordning:
 
    `<Video_Service_URL>/public/<Customer_name_from_Registration_ID>/<Video_rendition_path>`
 
@@ -149,7 +149,7 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
 
    `https://s7athens.macromedia.com:9090/DMGateway/public/MyCompany/_renditions_/0bd/0bd28743-a616-4fe6-92aa-6eae7c2112ff/avs/Momentum_1080-0x720-2600k.mp4`
 
-   Det här är den fullständiga video-URL:en för en publicerad videoåtergivning.
+   Den här sökvägen är den fullständiga video-URL:en för en publicerad videoåtergivning.
 
 ## Hämta en video-URL för adaptiv direktuppspelning (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
@@ -164,7 +164,7 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
 
    (Banan ovan är endast avsedd som illustration. det är inte den faktiska sökvägen som du kopierar.)
 
-   * Under **[!UICONTROL Registration ID]** kopierar du det kundnamn som finns i den sista delen av ID:t. Du behöver det kopierade kundnamnet längre fram i de här stegen.
+   * Under **[!UICONTROL Registration ID]** kopierar du det kundnamn som finns i den sista delen av ID:t. Du behöver det kopierade kundnamnet senare i dessa steg.
 
       Om registrerings-ID till exempel är `87654321|demoCo` blir kundnamnet som du kopierar `demoCo`.
 
@@ -188,7 +188,7 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
     </tbody>
    </table>
 
-1. Kopiera den fullständiga sökvägen till videomaterialet i AEM, som bearbetats av Dynamic Media. Du behöver den här kopierade sökvägen för videoresurser senare i dessa steg.
+1. Kopiera den fullständiga sökvägen till videomaterialet i AEM, som bearbetats av Dynamic Media. Du behöver den här kopierade videoresurssökvägen senare i dessa steg.
 
    Till exempel:
 
