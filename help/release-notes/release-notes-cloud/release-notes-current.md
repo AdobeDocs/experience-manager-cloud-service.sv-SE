@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 7c9eea58b8e42902842f5e9658f0fa677f1dc51d
+source-git-commit: c631e23f714b58c3b906e9ab521f9e88b638d044
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,11 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 ## Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-* I [!DNL Brand Portal] har en ny hämtningsinställning införts som gör att du kan skapa separata mappar för varje resurs när du hämtar mappar, samlingar och så vidare. se [hämtningsinställningar](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html).
+* Företag kan nu hämta resurser med [!DNL Brand Portal]. Funktionen för resurskälla utnyttjar [!DNL Brand Portal] för att hjälpa kunderna att interagera med byråanvändare för att hämta resurser för nya marknadsföringskampanjer, fotografier och projekt. Se [resurskälla i [!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html).
+
+* I användningsrapporten för [!DNL Brand Portal] visas nu endast de aktiva användarna. De inaktiva användarna visas inte nu. Aktiva användare är de vars konto har tilldelats en produktprofil i [!DNL Admin Console]. Se [[!DNL Brand Portal] rapporter](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/admin-tools/brand-portal-reports.html).
+
+* I [!DNL Brand Portal] har en ny hämtningsinställning införts som gör att du kan skapa separata mappar för varje resurs när du hämtar mappar, samlingar och så vidare. Se [hämtningsinställningar](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html).
 
 <!-- TBD: refine this list of features and enh. for Feb release.
 
