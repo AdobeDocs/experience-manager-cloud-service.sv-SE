@@ -2,10 +2,10 @@
 title: Redigera Launches
 description: 'När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna. '
 translation-type: tm+mt
-source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
+source-git-commit: ba7a8f5027b71ebdee7c84ed35d374fe22645a5a
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 18%
+source-wordcount: '555'
+ht-degree: 17%
 
 ---
 
@@ -22,6 +22,13 @@ När en startsida har skapats för en sida (eller en uppsättning sidor) kan du 
 När du redigerar sidan visas en indikation i det övre verktygsfältet tillsammans med alternativen **Lämna** och **Navigera**:
 
 ![Lämna och navigera vid start från sidredigeraren](/help/sites-cloud/authoring/assets/launches-edit-01.png)
+
+>[!NOTE]
+>
+>Du får inte flytta en sida inom en start. Om du försöker utföra den här åtgärden utlöses ett varningsmeddelande:
+>
+>* Varning: Den här sidan är startkällan. Det är inte tillåtet att flytta sidan.
+
 
 ### Redigering av startsidor som omfattas av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
 
