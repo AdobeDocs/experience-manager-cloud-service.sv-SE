@@ -2,9 +2,9 @@
 title: SPA- och serveråtergivning
 description: Om du använder SSR-återgivning (server side rendering) i SPA kan det snabba upp den initiala inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
 translation-type: tm+mt
-source-git-commit: cdd92032c627740c66de7b2f3836fa1dcd2ee2ca
+source-git-commit: 10012f6dc75da0c199dd5452ceef16ec7f29389b
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1435'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ Om du vill använda SSR måste du distribuera koden i AEM och på Adobe I/O Runt
 
 SSR för SPA i AEM kräver Adobe I/O Runtime, vilket krävs för återgivning av programinnehållsserversidan. I programmets HTML anropas en resurs på Adobe I/O Runtime för att återge innehållet.
 
-Precis som AEM stöder ramverken Vinkel och React SPA direkt, stöds även serversidans återgivning för Angular- och React-appar. Mer information finns i NPM-dokumentationen för båda ramverken.
+Precis som AEM stöder ramverken Angular och React SPA direkt, stöds även serversidorendering för Angular- och React-appar. Mer information finns i NPM-dokumentationen för båda ramverken.
 
 ## Renderare för fjärrinnehåll {#remote-content-renderer}
 
