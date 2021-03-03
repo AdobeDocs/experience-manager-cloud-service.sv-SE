@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 translation-type: tm+mt
-source-git-commit: e98179379a97e7270b755042928133ddbd8de3fa
+source-git-commit: d66377444815123d7a4db3c5e9e04b2970841b13
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1895'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Resurser som [!DNL Cloud Service] innehåller följande överföringsmetoder. Ad
 |---------------------|----------------|-----------------|
 | [Användargränssnittet i Resurskonsolen](#upload-assets) | Tillfällig uppladdning, enkel nedladdning och dragning, uppladdning av sökare. Använd inte för att överföra ett stort antal resurser. | Alla användare |
 | [Överför API](#upload-using-apis) | För dynamiska beslut under överföring. | Developer |
-| [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | Låg mängd tillgångsintag, men för migrering. | Administratör, marknadsförare |
+| [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | Intag av resurser med låg volym, men inte för migrering. | Administratör, marknadsförare |
 | [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Kreativ, Marketer |
 | [Massinhämtning av resurser](#asset-bulk-ingestor) | Rekommenderas för storskalig migrering och ibland även för bulkimport. Endast för datalager som stöds. | Administratör, utvecklare |
 
