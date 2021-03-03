@@ -3,10 +3,10 @@ title: Rapporter om användning och delning
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3ee2e53268ea77949057ac18fcb4a8f8b1e01cb2
+source-git-commit: 6586dfeeef1732ae115eea433a665191773ed283
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 7%
+source-wordcount: '888'
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ I [!DNL Assets]-rapporteringsramverket används [!DNL Sling]-jobb för att asynk
 
 Rapporthanteringsgränssnittet är intuitivt och innehåller detaljerade alternativ och kontroller för att komma åt arkiverade rapporter och visa rapportkörningsstatus (lyckad, misslyckad och köad).
 
-När en rapport skapas meddelas du av <!-- through an email (optional) and --> ett inkorgsmeddelande. Du kan visa, hämta eller ta bort en rapport från rapportlistsidan, där alla tidigare genererade rapporter visas.
+När en rapport skapas meddelas du via <!-- through an email (optional) and --> ett inkorgsmeddelande. Du kan visa, hämta eller ta bort en rapport från rapportlistsidan, där alla tidigare genererade rapporter visas.
 
 ## Generera rapporter {#generate-reports}
 
@@ -56,7 +56,7 @@ När en rapport skapas meddelas du av <!-- through an email (optional) and --> e
 
 >[!NOTE]
 >
->Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att exkludera innehållsfragment från hämtningsrapporten.
+>Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
 
 >[!NOTE]
 >
@@ -66,9 +66,7 @@ När en rapport skapas meddelas du av <!-- through an email (optional) and --> e
 
    ![Sida för att lägga till rapportinformation](assets/report_configuration.png)
 
-   Välj datumintervall för rapporten.
-
-   Du kan välja att generera rapporten nu eller vid ett framtida datum och tid.
+   Välj datumintervall för rapporten. Du kan välja att generera rapporten nu eller vid ett framtida datum och tid.
 
    >[!NOTE]
    >
@@ -109,7 +107,7 @@ När en rapport skapas meddelas du av <!-- through an email (optional) and --> e
 
    Klicka på **[!UICONTROL Download]** i verktygsfältet för att hämta rapporten i CSV-format.
 
-## Lägg till anpassade kolumner {#add-custom-columns}
+## Lägg till anpassade kolumner i rapporter {#add-custom-columns}
 
 Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer data för dina anpassade krav:
 
@@ -126,10 +124,11 @@ Följ de här stegen för att lägga till anpassade kolumner i de här rapporter
 1. I [!DNL Manager interface] klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 1. På sidan [!UICONTROL Asset Reports] klickar du på **[!UICONTROL Create]** i verktygsfältet.
 
-1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]** och klicka på **[!UICONTROL Next]**.
-1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild, mappsökväg och datumintervall.
+1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]**. Klicka på **[!UICONTROL Next]**.
 
-1. Om du vill visa en anpassad kolumn anger du namnet på kolumnen under **[!UICONTROL Custom Columns]**.
+1. Konfigurera rapportinformationen, t.ex. titel, beskrivning, miniatyrbild, mappsökväg och datumintervall. Klicka på **[!UICONTROL Next]**.
+
+1. Välj tillämplig information i listan **[!UICONTROL Default Columns]**. Om du vill visa en anpassad kolumn anger du namnet på kolumnen under **[!UICONTROL Custom Columns]**.
 
    ![Ange namn för anpassad rapportkolumn](assets/custom_columns-1.png)
 
@@ -137,7 +136,7 @@ Följ de här stegen för att lägga till anpassade kolumner i de här rapporter
 
    ![Mappa egenskapssökvägen från banor i jcr:content](assets/property_picker.png)
 
-   Om du vill lägga till fler anpassade kolumner klickar du på **[!UICONTROL Add]** och upprepar steg 5 och 6.
+   Om du vill lägga till fler anpassade kolumner klickar du på **[!UICONTROL Add]** och upprepar stegen ovan.
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 
@@ -153,6 +152,6 @@ To remove reports that you no longer require, configure the DAM Report Purge ser
 1. Save the changes.
 -->
 
-## Felsökningsinformation, tips och begränsningar {#best-practices-and-limitations}
+## Felsökningsinformation och tips {#tips-troubleshoot}
 
-* Om Diskanvändningsrapporten inte genereras och du använder [!DNL Dynamic Media] kontrollerar du att alla resurser är korrekta. Du löser problemet genom att bearbeta resurserna på nytt och sedan generera rapporten igen.
+* Om [!UICONTROL Disk Usage Report] inte genererar och om du använder [!DNL Dynamic Media] måste du se till att alla resurser fortsätter korrekt. Du löser problemet genom att bearbeta resurserna på nytt och generera rapporten igen.
