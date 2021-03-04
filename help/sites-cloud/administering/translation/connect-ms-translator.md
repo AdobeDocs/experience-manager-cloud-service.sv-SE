@@ -2,9 +2,9 @@
 title: Ansluter till Microsoft Translator
 description: Lär dig hur du ansluter AEM till Microsoft Translator körklart för att automatisera ditt arbetsflöde för översättning.
 translation-type: tm+mt
-source-git-commit: b33e13814403af1383b46b1f34737e8aa75d8213
+source-git-commit: 5902e026c47aac0c1ea62a2b74be6109b216fb74
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,11 @@ ht-degree: 0%
 
 # Ansluter till Microsoft Translator {#connecting-to-microsoft-translator}
 
-Skapa en konfiguration för molntjänsten [Microsoft Translator](https://hub.microsofttranslator.com) om du vill använda ditt Microsoft Translation-konto för översättning AEM sidinnehåll, communityinnehåll eller resurser.
+Skapa en konfiguration för molntjänsten [Microsoft Translator](https://hub.microsofttranslator.com) om du vill använda ditt Microsoft Translation-konto för översättning AEM sidinnehåll eller resurser.
+
+>[!NOTE]
+>
+>AEM har ett Microsoft Translation-konto som du kan använda för högst 2 000 000 kostnadsfria översatta tecken per månad. Mer information om hur du får en kontoprenumeration som är lämplig för produktionssystem finns i [Uppgradera Microsoft Translator Trial License Configuration](#upgrading-the-microsoft-translator-trial-license-configuration).
 
 | Egenskap | Beskrivning |
 |---|---|
