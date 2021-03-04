@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 176662819767d11e0407baee1224b61dbbb1b33e
+source-git-commit: 8887aff8924da538c94f2ca6ebde64518b4aa019
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 62%
+source-wordcount: '2055'
+ht-degree: 58%
 
 ---
 
@@ -65,16 +65,23 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ctt-entry-card02.png)
 
+
 1. Konsolen nedan visas när du skapar den första migreringsuppsättningen. Klicka på **Create Migration Set** om du vill skapa en ny migreringsuppsättning.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/01-migration-set-overview.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/01-create-migrationset.png)
+
 
    >[!NOTE]
    >Om du har befintliga migreringsuppsättningar visas en lista med befintliga migreringsuppsättningar med aktuell status.
 
-1. Fyll i fälten på skärmen för **innehållsmigreringsuppsättningen** enligt beskrivningen nedan.
+   Klicka på **Skapa konfiguration för användarmappning** för att komma åt [verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#using-user-mapping-tool).
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/02-migration-set-creation.png)
+1. Fyll i fälten på **skärmen för innehållsmigreringsuppsättning** enligt beskrivningen nedan.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/migration-set-creation-04.png)
+
+   >[!NOTE]
+   >Välj **Inkludera mappning från IMS-användare och grupper**, vilket visas i figuren ovan. Mer information finns i [Användarmappningsverktyget](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
 
 
    1. **Name**: Ange namnet på migreringsuppsättningen.
@@ -119,7 +126,6 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    * En *gul ikon* anger att du inte har skapat den befintliga migreringsuppsättningen och att den specifika skapas av en annan användare i samma instans.
 
 1. Välj en migreringsuppsättning från översiktssidan och klicka på **Properties** för att visa eller redigera migreringsuppsättningens egenskaper. När du redigerar egenskaper går det inte att ändra behållarnamnet eller tjänst-URL:en.
-
 
 
 ### Extraheringsprocess i innehållsöverföring {#extraction-process}
@@ -174,6 +180,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/12-content-ingestion.png)
 
+
 1. När importen är klar uppdateras statusen i **PUBLISH INGESTION**-fältet till **FINISHED**.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/15-ingestion-complete.png)
@@ -188,13 +195,15 @@ Content Transfer Tool har en funktion för differentiell *innehållsuppdatering*
 
 När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatningsmetoden för uppdateringar. Följ stegen nedan:
 
-1. Navigera till sidan *Overview* och välj den migreringsuppsättning som du vill utföra uppdateringsinmatningen för. Klicka på **Ingest** för att starta uppdateringsextraheringen. Dialogrutan **Migration Set Ingestion** visas.
+1. Navigera till sidan *Overview* och välj den migreringsuppsättning som du vill utföra uppdateringsinmatningen för. Klicka på **Ingest** för att starta uppdateringsextraheringen. Dialogrutan **Migration Set ingestion** visas.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/content-ingestion-01.png)
 
    >[!IMPORTANT]
    >
    >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag**, för att förhindra att befintligt innehåll tas bort från den tidigare intagsaktiviteten.
-   >
-   >![bild](/help/move-to-cloud-service/content-transfer-tool/assets/16-topup-ingestion.png)
+
+   Se även [Viktiga överväganden för att använda verktyget för innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs) för att lära dig hur du lägger till i kundtjänstbiljetten.
 
 ### Visa loggar för en migreringsuppsättning {#viewing-logs-migration-set}
 
