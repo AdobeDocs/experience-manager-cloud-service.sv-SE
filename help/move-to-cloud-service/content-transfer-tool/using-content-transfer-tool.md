@@ -2,7 +2,7 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 495a292eceb7abf6439df15a092d71b58cf2f2f3
+source-git-commit: e3fe8daf8f40d3fe98bdbb7bf19ad1df5aa670ae
 workflow-type: tm+mt
 source-wordcount: '2053'
 ht-degree: 58%
@@ -178,7 +178,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
    >[!IMPORTANT]
    >När alternativet **Rensa befintligt innehåll i molninstansen innan inmatning** är aktiverat, tas hela den befintliga databasen bort och en ny databas skapas för inmatning av innehåll i. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/12-content-ingestion.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/migration-set-creation-04b.png)
 
 
 1. När importen är klar uppdateras statusen i **PUBLISH INGESTION**-fältet till **FINISHED**.
