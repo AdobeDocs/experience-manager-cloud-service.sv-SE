@@ -2,9 +2,9 @@
 title: Integrera Dynamic Media Viewers med Adobe Analytics och Experience Platform Launch
 description: Med Dynamic Media Viewer-tillägget för Platform launch och Dynamic Media Viewer 5.13 kan kunder med Adobe Analytics och Platform launch använda händelser och data som är specifika för visningsprogrammen i sin Platform launch.
 translation-type: tm+mt
-source-git-commit: dfd225bbef6d3244130aca2f18dbef4006f2ae65
+source-git-commit: ef20224c59a6282ca6a78b2dfc9d777c67de5cb1
 workflow-type: tm+mt
-source-wordcount: '6293'
+source-wordcount: '6267'
 ht-degree: 9%
 
 ---
@@ -26,7 +26,7 @@ Mer information om tillägg finns i [Adobe-tillägg](https://experienceleague.ad
 
 * Integrering med Experience Platform Launch för Dynamic Media-visningsprogram fungerar inte i noden Experience Manager författare. Du kan inte se någon spårning från en WCM-sida förrän den har publicerats.
 * Experience Platform Launch-integrering för Dynamic Media-visningsprogram stöds inte för åtgärdsläget&quot;popup&quot;, där visningsprogrammets URL hämtas med knappen&quot;URL&quot; på sidan Resursinformation.
-* Integrering med Experience Platform Launch kan inte användas samtidigt med integrering med äldre visningsprogram med Analytics (via parametern `config2=`).
+* Integrering med Experience Platform Launch kan inte användas samtidigt med integrering med äldre visningsprogram Analytics (via parametern `config2=`).
 * Stödet för videospårning är begränsat till enbart huvudspårning av uppspelning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events). Speciellt stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
 * Konfiguration av lagringstid för dataelement stöds inte för dataelement med tillägget *Dynamic Media Viewer*. Lagringsvaraktighet måste anges till **[!UICONTROL None]**.
 
@@ -34,11 +34,11 @@ Mer information om tillägg finns i [Adobe-tillägg](https://experienceleague.ad
 
 Det främsta användningsområdet för integreringen med Experience Platform Launch är kunder som använder både Experience Manager Assets och Experience Manager Sites. I sådana fall kan du konfigurera en standardintegrering mellan författarnoden i Experience Manager och Experience Platform Launch och sedan associera din Sites-instans med egenskapen Experience Platform Launch. Efter det kommer alla Dynamic Media WCM-komponenter som läggs till på en Sites-sida att spåra data och händelser från tittarna.
 
-Se [Spåra Dynamic Media-visningsprogram i Experience Manager Sites](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites).
+Se [Spåra Dynamic Media-visningsprogram i Experience Manager Sites](#tracking-dynamic-media-viewers-in-aem-sites).
 
 Ett sekundärt användningsfall som integreringen stöder är de kunder som bara använder Experience Manager Assets eller Dynamic Media Classic. I så fall får du inbäddningskoden för ditt visningsprogram och lägger till den på webbplatssidan. Hämta sedan Experience Platform Launch URL:en för biblioteksproduktion från Experience Platform Launch och lägg till den manuellt i webbsideskoden.
 
-Se [Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersusingEmbedcode).
+Se [Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod](#tracking-dynamic-media-viewers-using-embed-code).
 
 ## Hur data- och händelsespårning fungerar i integreringen {#how-data-and-event-tracking-works-in-the-integration}
 
