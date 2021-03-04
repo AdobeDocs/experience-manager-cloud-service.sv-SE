@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 8887aff8924da538c94f2ca6ebde64518b4aa019
+source-git-commit: 495a292eceb7abf6439df15a092d71b58cf2f2f3
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2053'
 ht-degree: 58%
 
 ---
