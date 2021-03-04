@@ -2,7 +2,7 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 translation-type: tm+mt
-source-git-commit: 610615534cb5a798e37d34fadb9a3bf341565526
+source-git-commit: c915580247e1b99db8a9f5228eec8cffece8a003
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 2%
@@ -38,14 +38,6 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 1. Begränsningar: För närvarande stöds bara indexhantering på AEM som en Cloud Service för index av typen lucene.
 
-<!-- ## Sizing Considerations {#sizing-considerations}
-
-AEM as a Cloud Service comes with a default capacity model to provide sufficient performance for average web applications. This "average" measure relates to the repository size and even more relevant to the indexing size. If we have reasons to believe that we need extended capacity for a specific customer project, an evaluation with SREs and Engineering will take place to determine the required capacity settings.
-
-AS NOTE: the above is internal for now.
-
--->
-
 ## Användning {#how-to-use}
 
 Definitionen av index kan omfatta tre användningsfall:
@@ -63,8 +55,6 @@ Du måste förbereda ett nytt indexdefinitionspaket som innehåller den faktiska
 `<indexName>[-<productVersion>]-custom-<customVersion>`
 
 som sedan måste gå under `ui.apps/src/main/content/jcr_root`. Underrotmappar stöds inte för närvarande.
-
-<!-- need to review and link info on naming convention from https://wiki.corp.adobe.com/display/WEM/Merging+Customer+and+OOTB+Index+Changes?focusedCommentId=1784917629#comment-1784917629 -->
 
 Paketet från ovanstående exempel byggs som `com.adobe.granite:new-index-content:zip:1.0.0-SNAPSHOT`.
 
