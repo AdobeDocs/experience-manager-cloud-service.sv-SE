@@ -2,7 +2,7 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 2e059ab3fea8bc80c697fe8190a8166483803821
+source-git-commit: f780bcf645fb4c1f0bce377f95028888161ee7ae
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 57%
@@ -112,7 +112,7 @@ Mer information finns i [Användarmappningsverktyget](https://experienceleague.a
          >* `/etc` (vissa  `/etc` banor kan markeras i CTT)
 
 
-1. Klicka på **Save** när du har fyllt i alla fält på skärmen **Content Migrations Set details**.
+1. Klicka på **Spara** när du har fyllt i alla fält i **informationsskärmen för Skapa migreringsuppsättning**.
 
 1. Migreringsuppsättningen visas på sidan *Overview*.
 
