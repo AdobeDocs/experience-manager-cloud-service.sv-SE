@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: cef8c78e5fec840ea1cc4d391240e3bf9a4d7c02
+source-git-commit: c1c352712d88667faa2364160bdb60cc7ef94f63
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 58%
+source-wordcount: '2068'
+ht-degree: 57%
 
 ---
 
@@ -177,7 +177,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
    >[!IMPORTANT]
    >När alternativet **Rensa befintligt innehåll i molninstansen innan inmatning** är aktiverat, tas hela den befintliga databasen bort och en ny databas skapas för inmatning av innehåll i. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/top-ingestion-image01.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/content-ingestion-01.png)
 
    Klicka på **Kundtjänst** för att logga en biljett, vilket visas i bilden ovan. Se även [Viktiga överväganden för att använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs) om du vill veta mer.
 
@@ -200,7 +200,7 @@ När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatnin
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/content-ingestion-01.png)
 
    >[!IMPORTANT]
-   >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag**, för att förhindra att befintligt innehåll tas bort från den tidigare intagsaktiviteten.
+   >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag**, för att förhindra att befintligt innehåll tas bort från den tidigare intagsaktiviteten. Klicka på **Kundtjänst** för att logga en biljett, vilket visas i föregående bild.
 
 
 ### Visa loggar för en migreringsuppsättning {#viewing-logs-migration-set}
