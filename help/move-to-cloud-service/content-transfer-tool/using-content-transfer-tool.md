@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: e3fe8daf8f40d3fe98bdbb7bf19ad1df5aa670ae
+source-git-commit: 87b6ae52ae25130f9abca6bfe0e8fb0caa90a348
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 58%
+source-wordcount: '2049'
+ht-degree: 59%
 
 ---
 
@@ -76,13 +76,9 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
    Klicka på **Skapa konfiguration för användarmappning** för att komma åt [verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#using-user-mapping-tool).
 
-1. Fyll i fälten på **skärmen för innehållsmigreringsuppsättning** enligt beskrivningen nedan.
+1. Fyll i fälten på **skärmen Skapa migreringsuppsättning** enligt beskrivningen nedan.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/migration-set-creation-04.png)
-
-   >[!NOTE]
-   >Välj **Inkludera mappning från IMS-användare och grupper**, vilket visas i figuren ovan. Mer information finns i [Användarmappningsverktyget](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
-
 
    1. **Name**: Ange namnet på migreringsuppsättningen.
       >[!NOTE]
@@ -102,6 +98,8 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
 
       1. **Include Version**: Välj det som behövs.
+
+      1. **Inkludera mappning från IMS-användare och -grupper**: Välj alternativet. Mer information finns i [Användarmappningsverktyget](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
 
       1. **Paths to be included**: Använd sökvägsläsaren för att välja sökvägar som behöver migreras. Banväljaren accepterar indata genom att skriva eller genom att välja.
 
@@ -178,7 +176,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
    >[!IMPORTANT]
    >När alternativet **Rensa befintligt innehåll i molninstansen innan inmatning** är aktiverat, tas hela den befintliga databasen bort och en ny databas skapas för inmatning av innehåll i. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/migration-set-creation-04b.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/top-ingestion-image01.png)
 
 
 1. När importen är klar uppdateras statusen i **PUBLISH INGESTION**-fältet till **FINISHED**.
