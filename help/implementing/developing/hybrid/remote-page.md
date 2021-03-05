@@ -2,10 +2,10 @@
 title: RemotePage-komponenten
 description: RemotePage-komponenten är en anpassad sidkomponent för redigering av SPA för fjärreaktion i AEM.
 translation-type: tm+mt
-source-git-commit: 6a88b93a4005b858eec222fd7ae15df9db269d31
+source-git-commit: 9a1048f6d185d2d3229bab05b8e827845444d11c
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 1%
+source-wordcount: '261'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +16,12 @@ När du bestämmer [vilken nivå av integration](/help/implementing/developing/h
 ## Översikt {#overview}
 
 RemotePage-komponenten hämtar alla nödvändiga resurser från programmets genererade `asset-manifest.json` och använder den för att återge SPA i AEM.
+
+* Med RemotePage kan du mata in skript och formatmallar för en SPA i brödtexten för en AEM Page-komponent.
+* Med Virtual Front Components kan du markera avsnitt som redigerbara AEM redigeraren.
+* Tillsammans kan en SPA på en annan domän göras redigerbar i AEM.
+
+Läs artikeln [Redigera en extern SPA i AEM](editing-external-spa.md) om du vill ha mer information om redigerbara, externa SPA i AEM.
 
 ## Krav {#requirements}
 
