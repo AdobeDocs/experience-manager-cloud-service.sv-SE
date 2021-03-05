@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 4a328148fc169b6ee134ea3924e0315e44cda052
+source-git-commit: cef8c78e5fec840ea1cc4d391240e3bf9a4d7c02
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2053'
 ht-degree: 58%
 
 ---
@@ -172,13 +172,14 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 
-1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen. Dialogrutan **Migration Set ingestion** visas. Klicka på **Ingest** för att starta intagningsfasen. I demonstrationssyfte är alternativet **Ingest content to Author instance** inaktiverat. Det går att importera innehåll till Author och Publish samtidigt.
+1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen. Dialogrutan **Migration Set ingestion** visas. Klicka på **Ingest** för att starta intagningsfasen. Det går att importera innehåll till Author och Publish samtidigt.
 
    >[!IMPORTANT]
    >När alternativet **Rensa befintligt innehåll i molninstansen innan inmatning** är aktiverat, tas hela den befintliga databasen bort och en ny databas skapas för inmatning av innehåll i. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/top-ingestion-image01.png)
 
+   Klicka på **Kundtjänst** för att logga en biljett, vilket visas i bilden ovan. Se även [Viktiga överväganden för att använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs) om du vill veta mer.
 
 1. När importen är klar uppdateras statusen i **PUBLISH INGESTION**-fältet till **FINISHED**.
 
@@ -199,10 +200,8 @@ När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatnin
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/content-ingestion-01.png)
 
    >[!IMPORTANT]
-   >
    >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag**, för att förhindra att befintligt innehåll tas bort från den tidigare intagsaktiviteten.
 
-   Klicka på **Kundtjänst** för att logga en biljett, vilket visas i bilden ovan. Se även [Viktiga överväganden för att använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs) om du vill veta mer.
 
 ### Visa loggar för en migreringsuppsättning {#viewing-logs-migration-set}
 
