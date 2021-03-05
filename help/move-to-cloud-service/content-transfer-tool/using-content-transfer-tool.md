@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: e6a35e20dbbcbaa8385abe7ea36973418978ef04
+source-git-commit: 4a328148fc169b6ee134ea3924e0315e44cda052
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2065'
 ht-degree: 58%
 
 ---
@@ -202,7 +202,7 @@ När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatnin
    >
    >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag**, för att förhindra att befintligt innehåll tas bort från den tidigare intagsaktiviteten.
 
-   Se även [Viktiga överväganden för att använda verktyget för innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs) för att lära dig hur du lägger till i kundtjänstbiljetten.
+   Klicka på **Kundtjänst** för att logga en biljett, vilket visas i bilden ovan. Se även [Viktiga överväganden för att använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs) om du vill veta mer.
 
 ### Visa loggar för en migreringsuppsättning {#viewing-logs-migration-set}
 
