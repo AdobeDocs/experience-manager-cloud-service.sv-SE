@@ -3,10 +3,10 @@ title: XMP-metadata
 description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8110259a910c891a5bcf7507cfa9897603a45c91
+source-git-commit: 0aac16705342f9652f38beef956a55d3f8f5df7d
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 17%
+source-wordcount: '978'
+ht-degree: 16%
 
 ---
 
@@ -72,23 +72,34 @@ XMP ger dig möjlighet att lägga till en `xml:lang`-egenskap i textegenskaper f
 
 ## XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
-Den här XMP återskrivningsfunktionen i Adobe Experience Manager (AEM) Resurser replikerar ändringar i resursens återgivningar av metadata.
-
-När du ändrar metadata för en resurs i AEM Assets eller när du överför resursen, lagras ändringarna först i resursnoden i CRXDE.
-
-XMP återskrivningsfunktion sprider metadataändringarna till alla eller specifika återgivningar av resursen.
+Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs från [!DNL Assets] eller när du överför resursen, lagras ändringarna från början i resursnoden i databasen. XMP återskrivningsfunktion sprider metadataändringarna till alla eller specifika återgivningar av resursen.
 
 Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen `Classic Leather` till `Nylon`.
 
 ![metadata](assets/metadata.png)
 
-I det här fallet sparar AEM Assets ändringarna i egenskapen **[!UICONTROL Title]** i parametern `dc:title` för de metadata för resursen som lagras i resurshierarkin.
+I det här fallet sparar [!DNL Assets] ändringarna av egenskapen **[!UICONTROL Title]** i parametern `dc:title` för de metadata för resursen som lagras i resurshierarkin.
 
 ![metadata_stored](assets/metadata_stored.png)
 
-AEM Assets sprider dock inte automatiskt några metadataändringar till återgivningar av en resurs.
+[!DNL Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs.
 
 Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
+
+Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur du [aktiverar tillbakaskrivning av metadata](#enable-xmp-writeback).
+
+### Aktivera XMP-tillbakaskrivning {#enable-xmp-writeback}
+
+[!UICONTROL DAM Metadata Writeback] arbetsflödet används för att skriva tillbaka metadata för en resurs. Så här aktiverar du tillbakaskrivning:
+
+1. Som administratör ska du gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
+1. Markera [!UICONTROL Launcher] som **[!UICONTROL Workflow]**-kolumnen visar **[!UICONTROL DAM MetaData Writeback]**. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
+
+   ![Välj starten för DAM-metadatatillbakaskrivning för att ändra dess egenskaper och aktivera den](assets/launcher-properties-metadata-writeback1.png)
+
+1. Välj **[!UICONTROL Activate]** på sidan [!UICONTROL Launcher Properties]. Klicka på **[!UICONTROL Save & Close]**.
+
+Om du bara vill tillämpa det här arbetsflödet på en resurs en gång, använder du arbetsflödet [!UICONTROL DAM Metadata Writeback] från den vänstra listen. Om du vill använda arbetsflödet på de överförda resurserna lägger du till arbetsflödet i en efterbearbetningsprofil.
 
 <!-- Commenting for now. Need to document how to enable metadata writeback. See CQDOC-17254.
 
@@ -125,8 +136,3 @@ For the XMP write-back feature to propagate metadata to the rendition thumbnails
 
 The metadata changes are propagated to the renditions renditions thumbnail.140.100.png and thumbnail.319.319.png of the asset, and not the others.
 -->
-
->[!MORELIKETHIS]
->
->* [XMP specifikationer från Adobe](https://www.adobe.com/devnet/xmp.html)
-
