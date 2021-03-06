@@ -3,9 +3,9 @@ title: Dela resurser, mappar och samlingar som en länk
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i [!DNL Experience Manager Assets] som en hyperlänk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c023451f2b5c5e1ce2cbc9eddb858f96bd28cbd6
+source-git-commit: 77170e7ea2e75215a4615e7cd560179756005b6f
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '735'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Add content or link about how to configure sharing via BP, DA, AAL, etc.
 
 ### Aktivera skrivbordsåtgärder att använda med skrivbordsappen {#desktop-actions}
 
-I [!DNL Assets]-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i skrivbordsprogrammet. Dessa alternativ kallas skrivbordsåtgärder och för att aktivera dem läser du [aktivera skrivbordsåtgärder i AEM webbgränssnitt](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
+I [!DNL Assets]-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i skrivbordsprogrammet. Dessa alternativ kallas skrivbordsåtgärder och om du vill aktivera dem läser du [aktivera skrivbordsåtgärder i [!DNL Assets] webbgränssnittet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
 
 ![Aktivera skrivbordsåtgärder som ska användas som genväg när du arbetar med skrivbordsappen](assets/enable_desktop_actions.png)
 
@@ -183,6 +183,8 @@ Se [hur du konfigurerar [!DNL Assets] att använda det med [!DNL Adobe Asset Lin
 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
 * Om användarna inte kan hämta de delade resurserna, bör du fråga din AEM om vilka [hämtningsgränser](#maxdatasize) är.
+* För att en användare ska kunna förhandsgranska en video som delas via länkdelning måste videon ha en statisk videoåtergivning tillgänglig på `/jcr:content/renditions`-platsen i videons nod i databasen. Förhandsgranskningen är inte beroende av om det finns en [!DNL Dynamic Media]-rendering tillgänglig.
+* När du hämtar en videoresurs via länkresurs inkluderas inte återgivningarna [!DNL Dynamic Media] i det hämtade arkivet.
 
 <!--
 * If you cannot send email with links to shared assets or if the other users cannot receive your email, check with your AEM administrator if the [email service](/help/assets/configure-asset-sharing.md#configmailservice) is configured or not. 
