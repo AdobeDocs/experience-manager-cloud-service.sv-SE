@@ -2,9 +2,9 @@
 title: Hantera översättningsprojekt
 description: Lär dig hur du skapar och hanterar både maskinöversättning och mänsklig översättning i AEM.
 translation-type: tm+mt
-source-git-commit: b22d972adeaec6af4f15e11fa3359758a1ed77c3
+source-git-commit: 9518a3ddb253ede2e9b713b4a7d0077e8ba3f7e0
 workflow-type: tm+mt
-source-wordcount: '3799'
+source-wordcount: '3825'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,10 @@ Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för
 Du kan ange att de underordnade sidorna för den markerade sidan också ska vara markerade. I det här fallet läggs kopior av de underordnade sidorna också till i varje projekt så att de översätts. När underordnade sidor är kopplade till olika konfigurationer för översättningsintegreringsramverk skapar AEM ytterligare projekt.
 
 Du kan även [skapa översättningsprojekt](#creating-a-translation-project-using-the-projects-console) manuellt.
+
+>[!NOTE]
+>
+>Om du vill skapa ett projekt måste ditt konto vara medlem i gruppen `project-administrators`.
 
 ### Initiala översättningar och uppdatering av översättningar {#initial-and-updating}
 
@@ -208,6 +212,10 @@ Använd kommandona och ellipsknapparna längst upp och längst ned på plattorna
 ### Skapa ett översättningsprojekt med projektkonsolen {#creating-a-translation-project-using-the-projects-console}
 
 Du kan skapa ett översättningsprojekt manuellt om du föredrar att använda projektkonsolen i stället för platskonsolen.
+
+>[!NOTE]
+>
+>Om du vill skapa ett projekt måste ditt konto vara medlem i gruppen `project-administrators`.
 
 När du skapar ett översättningsprojekt manuellt måste du ange värden för följande översättningsrelaterade egenskaper utöver de [grundläggande egenskaperna](/help/sites-cloud/authoring/projects/managing.md#creating-a-project):
 
