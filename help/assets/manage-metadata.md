@@ -4,9 +4,9 @@ description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Mana
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ce22a7ba95942881b90a4f3f22d89bcd35b5e559
+source-git-commit: d2ab7f8de4d18b48c312c9beabc58c77da7b2dfc
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1841'
 ht-degree: 3%
 
 ---
@@ -127,11 +127,11 @@ Med Enterprise Manager Assets kan du redigera metadata för flera resurser samti
    >När du väljer flera resurser markeras det lägsta gemensamma överordnade formuläret för resurserna. Med andra ord visar sidan [!UICONTROL Properties] bara metadatafält som är gemensamma på [!UICONTROL Properties]-sidorna för alla enskilda resurser.
 
 1. Ändra metadataegenskaperna för markerade resurser på de olika flikarna.
-1. Om du vill visa metadataredigeraren för en viss resurs avmarkerar du återstående resurser i listan. Metadataredigeringsfälten fylls i med metadata för den aktuella resursen.
+1. Om du vill visa metadataredigeraren för en viss resurs avbryter du valet av återstående resurser i listan. Metadataredigeringsfälten fylls i med metadata för den aktuella resursen.
 
    >[!NOTE]
    >
-   >* På sidan [!UICONTROL Properties] kan du ta bort resurser från resurslistan genom att avmarkera dem. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
+   >* På sidan [!UICONTROL Properties] kan du ta bort resurser från resurslistan genom att avbryta markeringen. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
    >* Överst i resurslistan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera resurserna och rensa listan.
 
 
