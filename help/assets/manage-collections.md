@@ -4,9 +4,9 @@ description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 836e4e7fa727e350ef757984306b32df25921663
+source-git-commit: d2ab7f8de4d18b48c312c9beabc58c77da7b2dfc
 workflow-type: tm+mt
-source-wordcount: '2240'
+source-wordcount: '2244'
 ht-degree: 18%
 
 ---
@@ -80,7 +80,7 @@ En smart samling använder ett sökvillkor för att dynamiskt fylla i resurser. 
 
    >[!NOTE]
    >
-   >Om du väljer **[!UICONTROL Public]** blir den smarta samlingen tillgänglig för alla med rollen Ägare när du har skapat den. Om du avmarkerar alternativet **[!UICONTROL Public]** är DAM-användargruppen inte längre kopplad till den smarta samlingen.
+   >Om du väljer **[!UICONTROL Public]** blir den smarta samlingen tillgänglig för alla med rollen Ägare när du har skapat den. Om du avbryter alternativet **[!UICONTROL Public]** är DAM-användargruppen inte längre kopplad till den smarta samlingen.
 
 1. Tryck/klicka på **[!UICONTROL Save]** för att skapa den smarta samlingen och stäng sedan meddelanderutan för att slutföra processen. Den nya smarta samlingen läggs också till i listan **[!UICONTROL Saved Searches]**.
 Etiketten på knappen **[!UICONTROL Create Smart Selection]** ändras till **[!UICONTROL Edit Smart Selection]**. Om du vill redigera inställningarna för den smarta samlingen väljer du **[!UICONTROL Files]** i listan **[!UICONTROL Files & Folders]**. Tryck/klicka sedan på knappen **[!UICONTROL Edit Smart Selection]**.
@@ -100,7 +100,7 @@ Du kan lägga till resurser i en samling som innehåller en lista med refererade
 
 ## Redigera en smart samling {#edit-a-smart-collection}
 
-Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den sparade sökningen [.](#saved-searches)
+Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den sparade sökningen ](#saved-searches).[
 
 1. I resursanvändargränssnittet: tryck/klicka på ikonen **[!UICONTROL Search]** i verktygsfältet.
 1. Markera `Enter`-tangenten med markören i sökrutan.
@@ -195,11 +195,11 @@ Om du vill anpassa sidan med metadata [!UICONTROL Properties], inklusive lägga 
    >
    >De metadata som du lägger till för de valda samlingarna skriver över tidigare metadata för dessa samlingar, med undantag för taggar. Alla taggar som du lägger till i fältet **[!UICONTROL Tags]** läggs till i den befintliga listan med taggar i metadata.
 
-1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
+1. Om du vill visa metadataegenskaperna för en viss samling avbryter du valet av de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
 
    >[!NOTE]
    >
-   >* På sidan med samlingsegenskaper kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Metadata för samlingar som du tar bort uppdateras inte.
+   >* På sidan med samlingsegenskaper kan du ta bort samlingar från listan med samlingar genom att avbryta markeringen. I samlingslistan är alla samlingar markerade som standard. Metadata för samlingar som du tar bort uppdateras inte.
    >* Överst i listan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera samlingarna och rensa listan.
 
 
