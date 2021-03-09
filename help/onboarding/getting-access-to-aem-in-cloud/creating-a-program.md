@@ -2,9 +2,9 @@
 title: Skapa ett program - Cloud Service
 description: Skapa ett program - Cloud Service
 translation-type: tm+mt
-source-git-commit: 5658b2cc853ff7e6222a7f35e56527577d2c7324
+source-git-commit: d85c0e9035ee09cf86aeea1cae20d545823eaca0
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -27,10 +27,6 @@ Beroende på vad användaren har för avsikt att skapa programmet inom gränsern
 
 ![](assets/create-sandbox.png)
 
->[!NOTE]
->Om det redan finns ett program visas **Lägg till program** överst till höger på landningssidan, vilket visas i bilden nedan.
-
-![](assets/create-program-add.png)
 
 ## Skapa ett sandlådeprogram {#create-sandbox-program}
 
