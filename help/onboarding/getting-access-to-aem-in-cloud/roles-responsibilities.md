@@ -1,13 +1,16 @@
 ---
-source-git-commit: 8d15605dd696f0163229a677b57aa0837dc11704
-workflow-type: tm+mt
+title: Roller och ansvarsområden
+description: Roller och ansvarsområden
 translation-type: tm+mt
-source-wordcount: '417'
+source-git-commit: 843e425e446a4e9ce140fe7d7111b69bd9f4545e
+workflow-type: tm+mt
+source-wordcount: '423'
 ht-degree: 5%
 
 ---
 
-# Adobe Experience Manager som Cloud Service: Roller och ansvarsområden
+
+# Adobe Experience Manager som Cloud Service: Roller och ansvar {#roles-responsibilities}
 
 <br></br>
 Adobe tillhandahåller en uppsättning tjänster runt tillhandahållande, utveckling, staging och produktion av Experience Manager som en Cloud Service. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och anpassaren förstår och uppfyller sina roller enligt beskrivningen nedan.
@@ -49,5 +52,8 @@ Adobe tillhandahåller en uppsättning tjänster runt tillhandahållande, utveck
 | Produktion | Uppdateringar som ska AEM som Cloud Service |  |  | Ägare |  |
 | Produktion | Säkerhetskopiering och återställning av produktion |  |  | Ägare |  |
 
-<br></br>
-Ovanstående förutsätter att Premier Support ingår. Tabellen kan ändras enligt överenskommelse mellan kunden och Anpassaren. Vi rekommenderar att du samarbetar med dina säljteam och anpassningsteam på Adobe om du behöver få veta mer om något av det ovanstående. Kunder som inte själva vill hantera anpassningen bör få tillgång till tjänsterna från Adobe Professional Services-team eller en Experience Manager-partner. För att bibehålla en hög kvalitetsnivå kräver Adobe att partners som är engagerade i Experience Manager som utvecklingsprojekt för Cloud Service har minst en medarbetare som har fått en avancerad utvecklarcertifiering för Experience Manager.
+>[!NOTE]
+>
+> Ovanstående förutsätter att Premier Support ingår. Tabellen kan ändras enligt överenskommelse mellan kunden och Anpassaren. Vi rekommenderar att du samarbetar med dina säljteam och anpassningsteam på Adobe om du behöver få veta mer om något av det ovanstående.
+> Kunder som inte själva vill hantera anpassningen bör få tillgång till tjänsterna från Adobe Professional Services-team eller en Experience Manager-partner.
+>För att bibehålla en hög kvalitetsnivå kräver Adobe att partners som är engagerade i Experience Manager som utvecklingsprojekt för Cloud Service har minst en medarbetare som har fått en avancerad utvecklarcertifiering för Experience Manager.
