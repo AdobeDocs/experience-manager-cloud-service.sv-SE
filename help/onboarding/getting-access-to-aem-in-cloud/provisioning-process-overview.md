@@ -1,11 +1,15 @@
 ---
-source-git-commit: d2a24f55d5b89f1abe64702d5f1ad39f793429d5
-workflow-type: tm+mt
+title: Provisioneringsprocess - översikt
+description: Provisioneringsprocess - översikt
 translation-type: tm+mt
-source-wordcount: '334'
+source-git-commit: bb5a84c915e9b94bed021dacefd75b4e18fa9eb3
+workflow-type: tm+mt
+source-wordcount: '340'
 ht-degree: 7%
 
 ---
+
+
 # AEM som en Cloud Service: Onboarding och Access
 
 På den här sidan visas självhjälpsresurser om provisioneringsprocessen för Experience Manager som Cloud Service.
@@ -46,7 +50,7 @@ Mer information finns på [Onboarding to Experience Manager as a Cloud Service o
 
 ### 2. Anlita organisationer på Adobe Admin Console:
 
- >   ![processurview2.jpg](./assets/processOverview2.jpg)
+>   ![processurview2.jpg](./assets/processOverview2.jpg)
 * Systemadministratör:
    * Tillhandahålla AEM program och miljöer.
    * Navigera till Admin Console för administrativa uppgifter.
@@ -70,5 +74,5 @@ Katalog
 
 ## Hjälp och resurser
 
-[Inloggning för första gången - Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/first-time-login.html#getting-access)\
-[Konfigurera åtkomst till AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=en#accessing)
+* [Inloggning för första gången - Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/first-time-login.html#getting-access)
+* [Konfigurera åtkomst till AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=en#accessing)
