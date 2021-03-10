@@ -4,9 +4,9 @@ user-guide-title: Onboarding för AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 4482fe36339db0c544b0b550e0bd414b2a47809e
+source-git-commit: 0c5eac38ca9da8c0a3bd00fe1dd0472710dd3866
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 28%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 28%
    + [Körning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/phases/execution.html) 
    + [Efter publicering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/phases/post-go-live.html)
 + Få åtkomst till AEM i molnet {#getting-access}
-   + [AEM som en Cloud Service: Etableringsprocessöversikt](getting-access-to-aem-in-cloud/provisioning-process-overview.md)
+   + [Etableringsprocessöversikt](getting-access-to-aem-in-cloud/provisioning-process-overview.md)
    + [Få tillgång till Experience Manager as a Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
    + Cloud Service-program {#cloud-service-programs}
       + [Åtkomst till program](getting-access-to-aem-in-cloud/first-time-login.md)
@@ -88,7 +88,8 @@ ht-degree: 28%
       + [Versionsinformation för 2020.4.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-4-0.md)
       + [Versionsinformation för 2020.3.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-3-0.md)
       + [Versionsinformation för 2020.2.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-2-0.md)
-   + [Förstå roller och ansvar](getting-access-to-aem-in-cloud/roles-responsibilities.md)
+   + Roller och ansvar {#getting-access-to-aem-in-cloud}
+      + [Förstå roller och ansvar](getting-access-to-aem-in-cloud/roles-responsibilities.md)
 + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
    + [AEM-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/aem-readiness.md)
    + [AEM Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/foundation-readiness.md)
