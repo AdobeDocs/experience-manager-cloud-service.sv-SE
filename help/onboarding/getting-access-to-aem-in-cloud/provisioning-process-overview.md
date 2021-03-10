@@ -46,7 +46,7 @@ Mer information finns på [Onboarding to Experience Manager as a Cloud Service o
 
 ### 2. Anlita organisationer på Adobe Admin Console:
 
->   ![processurview2.jpg](./assets/processOverview2.jpg)
+ >   ![processurview2.jpg](./assets/processOverview2.jpg)
 * Systemadministratör:
    * Tillhandahålla AEM program och miljöer.
    * Navigera till Admin Console för administrativa uppgifter.
