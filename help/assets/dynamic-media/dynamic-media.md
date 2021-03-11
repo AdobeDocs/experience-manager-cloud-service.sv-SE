@@ -2,7 +2,7 @@
 title: Arbeta med Dynamic Media
 description: Lär dig hur du använder Dynamic Media för att leverera mediefiler för webben, mobiler och sociala medier.
 translation-type: tm+mt
-source-git-commit: 193201670e5e78235025885f52215cca730ce556
+source-git-commit: a8eb6a88b889facca8518c05a80051fc17dd0617
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 7%
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 [Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
-Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic Media innehåller arbetsflödena från Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
+Dynamic Media visar interaktivt material, som zoomning, 360-graders rotation och video. Dynamic Media införlivar smidigt arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
 <!-- >[!NOTE]
 >
@@ -74,7 +74,7 @@ Uppsättningar med bilder, snurra och blandade medieuppsättningar är tillgäng
 
 ### PTIFF-återgivningar {#ptiff-renditions}
 
-Dynamiska medieaktiverade resurser innehåller `pyramid.tiffs`.
+Dynamic Media-aktiverade resurser innehåller `pyramid.tiffs`.
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
