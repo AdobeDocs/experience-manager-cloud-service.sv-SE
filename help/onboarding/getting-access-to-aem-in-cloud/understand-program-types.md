@@ -2,7 +2,7 @@
 title: Program- och programtyper
 description: Program- och programtyper - Cloud Services
 translation-type: tm+mt
-source-git-commit: e1d805e1e5b5850ecf3154cd69a3955c4dbe1e65
+source-git-commit: 5a4353cb31337882a1c13b0ed830ea64f617181a
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 3%
@@ -26,6 +26,6 @@ En användare kan skapa en **sandlåda** eller ett **Production**-program.
 Mer information finns i [Introduktion till produktionsprogram](/help/onboarding/getting-access-to-aem-in-cloud/introduction-production-programs.md).
 
 
-* Ett *sandlådeprogram* skapas vanligtvis för att användas i utbildningssyfte, köra demo, aktivering, POC eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett reguljärt program inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
+* Ett *sandlådeprogram* skapas vanligtvis för att användas i utbildningssyfte, köra demo, aktivering, POC eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett produktionsprogram inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
 Mer information finns i [Introduktion till sandlådeprogram](/help/onboarding/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md).
 
