@@ -1,26 +1,34 @@
 ---
-title: Inloggning för första gången - Cloud Service
-description: Inloggning för första gången - Cloud Service
+title: Startsida för Cloud Manager
+description: Startsida för Cloud Manager
 translation-type: tm+mt
-source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
+source-git-commit: 78bc94f7e3dab37b7f83f480ef5438165e1897bc
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
 
-# Åtkomst till program {#first-time-login}
+# Startsida för Cloud Manager {#first-time-login}
 
+Så här öppnar du Cloud Manager:
+
+1. Navigera till [Experience Cloud](https://experience.adobe.com/) med din Adobe ID.
+1. Välj **Experience Manager**.
+   ![](assets/landing-page1.png)
+
+1. Klicka på **Starta** från Cloud Manager-kortet.
 När du har loggat in på [!UICONTROL Cloud Manager] är du redo att använda användargränssnittet.
+   ![](assets/landing-page2.png)
 
->[!NOTE]
->
->Beroende på vilka roller som har tilldelats i [!UICONTROL Cloud Manager] och programmets status visas olika skärmar när du använder användargränssnittet för [!UICONTROL Cloud Manager].
+   >[!NOTE]
+   >
+   >Beroende på vilka roller som har tilldelats i [!UICONTROL Cloud Manager] och programmets status visas olika skärmar när du använder användargränssnittet för [!UICONTROL Cloud Manager].
 
 ## Startsida för Cloud Manager {#landing-page}
 
-När du har loggat in på [!UICONTROL Cloud Manager] ser du landningssidan enligt bilden nedan.
+När du har loggat in på [!UICONTROL Cloud Manager] visar landningssidan kortet för alla befintliga program i organisationen.
 
 >[!NOTE]
 >
@@ -34,6 +42,7 @@ Beroende på dina omständigheter kan du se något av följande två alternativ:
 * **Det finns inga program i Cloud Manager**
 
 * **Program finns redan i Cloud Manager**
+
 
 ## Lägga till ett nytt program i Cloud Service utan befintliga program {#no-program}
 
@@ -54,6 +63,9 @@ På landningssidan får du instruktioner att skapa ditt första program, vilket 
    >[!NOTE]
    >I figuren ovan är till exempel **We.Retail Global** ett AMS-program och **We.Retail-Prod Program - Prod** ett program som är tillgängligt via Cloud Service.
 
-1. Mer information om hur du lägger till ett program från **skärmen Program &amp; produkter** för att skapa ett nytt program i Cloud Service finns i [Skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/creating-a-program.md).
+1. Om du vill lära dig hur du lägger till ett program från **Program &amp; Products**-skärmen för att skapa ett nytt program i Cloud Servicen kan du läsa:
+
+   * [Skapa ett produktionsprogram](/help/onboarding/getting-access-to-aem-in-cloud/creating-production-program.md)
+   * [Skapa ett sandlådeprogram](/help/onboarding/getting-access-to-aem-in-cloud/creating-sandbox-program.md)
 
 
