@@ -2,7 +2,7 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 1304a0cfa67c38943b1a36c105fbd5eafb3f8c4f
+source-git-commit: 5a4353cb31337882a1c13b0ed830ea64f617181a
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 4%
@@ -53,7 +53,7 @@ En användare med nödvändig behörighet kan skapa följande miljötyper (inom 
    ![](assets/add-environment2.png)
 
    >[!NOTE]
-   >När du skapar en miljö skapas en eller flera *integreringar* i Adobe I/O. De är synliga för användare som har åtkomst till Adobe I/O Console och får inte tas bort. Detta tas bort i beskrivningen i Adobe I/O Console.
+   >När du skapar en miljö skapas en eller flera *integreringar* i Adobe I/O. De är synliga för kundanvändare som har åtkomst till Adobe I/O Console och får inte tas bort. Detta tas inte med i beskrivningen i Adobe I/O Console.
 
    ![](assets/add-environment-image1.png)
 
@@ -113,7 +113,7 @@ Alternativet Ta bort är också tillgängligt om du klickar på **Information** 
 
 >[!NOTE]
 >
->Den här funktionen är inte tillgänglig för produktions-/scenmiljö som angetts i ett reguljärt program som konfigurerats för produktion. Funktionen är dock tillgänglig för produktions-/scenmiljöer i ett sandlådeprogram.
+>Den här funktionen är inte tillgänglig för produktions-/scenmiljö som angetts i ett produktionsprogram som konfigurerats för produktionsändamål. Funktionen är dock tillgänglig för produktions-/scenmiljöer i ett sandlådeprogram.
 
 ## Hantera åtkomst {#managing-access}
 
