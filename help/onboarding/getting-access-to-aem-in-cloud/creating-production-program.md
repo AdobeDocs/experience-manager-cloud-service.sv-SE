@@ -2,7 +2,7 @@
 title: 'Skapa ett produktionsprogram '
 description: 'Skapa ett produktionsprogram '
 translation-type: tm+mt
-source-git-commit: e1d805e1e5b5850ecf3154cd69a3955c4dbe1e65
+source-git-commit: 5a4353cb31337882a1c13b0ed830ea64f617181a
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Ett *Production*-program är avsett för en användare som känner till AEM och Cloud Manager och som är redo att börja skriva, bygga och testa kod i syfte att distribuera den till Production.
 
-Följ stegen nedan för att skapa ett vanligt program:
+Följ stegen nedan för att skapa ett produktionsprogram:
 
-1. Välj **Konfigurera för produktion** i guiden Skapa program för att skapa ett vanligt program. Användaren kan godkänna standardprogramnamnet eller redigera det innan **Fortsätt** väljs.
+1. Välj **Konfigurera för produktion** i guiden Skapa program för att skapa ett produktionsprogram. Användaren kan godkänna standardprogramnamnet eller redigera det innan **Fortsätt** väljs.
 
    ![](assets/create-prod1.png)
 
