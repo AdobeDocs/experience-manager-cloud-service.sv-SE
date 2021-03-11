@@ -1,51 +1,59 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
 translation-type: tm+mt
-source-git-commit: dc006d50d703a17a84e3dc6631bc423f5de37f88
+source-git-commit: 238ce5ea4327947694851bd0fae5be84614501c9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '400'
 ht-degree: 1%
 
 ---
 
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.2.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.3.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.2.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.3.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari 2021.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.3.0 är 11 mars 2021.
 
 ## Cloud Manager {#cloud-manager}
 
 ### Nyheter {#what-is-new}
 
-* Resurskunder kan nu välja när och var de ska distribuera sin Brand Portal-instans på ett självbetjäningssätt via användargränssnittet i Cloud Manager. För ett vanligt (icke-sandlådeprogram) program med Assets-lösning kan Brand Portal nu etableras i produktionsmiljön. Etableringen kan bara göras en gång i produktionsmiljön.
+* Kunder som har miljöer med befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat och anpassade domännamn ser följande meddelande och kan använda självbetjäning via användargränssnittet.
 
-* Den AEM Project Archetype som används i Project och Sandbox Creation har uppdaterats till version 25.
+* Användare med nödvändig behörighet kan nu redigera program och göra följande på ett självbetjäningssätt.
 
-* Listan med föråldrade API:er som identifieras vid kodskanning har förfinats så att den innehåller ytterligare klasser och metoder som har tagits bort i den senaste SDK-versionen av Cloud Servicen.
+* Etiketten AEM push-uppdatering visas nu för både Pipeline Execution och Activity screens.
 
-* SonarQube-profilen för Cloud Manager har uppdaterats för att ta bort Sonar-regelbläckfisk:S2142. Detta kommer inte längre att orsaka en konflikt med kontrollerna för trådavbrott.
+* Om en miljö är i viloläge men det även finns en AEM tillgänglig, prioriteras statusen&quot;Viloläge&quot; framför&quot;Tillgänglig uppdatering&quot;.
 
-* Molnhanterarens användargränssnitt informerar användaren som kanske inte kan lägga till/uppdatera domännamn för tillfället eftersom den associerade miljön antingen har en pågående pipeline kopplad till sig eller som väntar på godkännande.
+* Användarna kan nu se sin molnhanterarroll(er) genom att välja alternativet Visa molnhanterarroll(er) efter att ha navigerat till ikonen Användarprofil (överst till höger) i Unified Shell.
 
-* Egenskaper som angetts i kundens `pom.xml`-filer som har prefixats med sonar kommer nu att tas bort dynamiskt för att undvika problem med bygg- och kvalitetsskanning.
+* Etiketten&quot;Ansökan om godkännande&quot; har ändrats till&quot;Produktionsgodkännande&quot; för större tydlighet.
 
-* Molnhanterarens användargränssnitt informerar användaren som kanske inte kan välja ett SSL-certifikat tillfälligt om det används av ett domännamn som för närvarande distribueras.
+* Versionsetiketten har ändrats till&quot;Git-tagg&quot; i körningsfönstret för produktionspipeline.
 
-* Ytterligare regler för kodkvalitet har lagts till för att täcka problem med Cloud Servicens kompatibilitet.
+* Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende - Avbryt omedelbart och godkänn omedelbart.
+
+* Listorna över klass- och metodborttagning har uppdaterats baserat på version `2021.3.4997.20210303T022849Z-210225` av AEM Cloud Service-SDK.
+
+* Produktionspipelinen för Cloud Manager kommer nu att innehålla testning av anpassade användargränssnitt.
 
 ### Felkorrigeringar {#bug-fixes}
 
-* Det är inte längre skiftlägeskänsligt att matcha SSL-certifikat mot ett domännamn.
+* Paketversionshantering hoppades över i vissa fall under AEM push-uppgradering.
 
-* Molnhanterarens användargränssnitt informerar nu en användare om att certifikatets privata nycklar inte uppfyller 2 048-bitarsgränsen med ett felmeddelande.
+* Vissa kvalitetsproblem upptäcktes inte korrekt när paket bäddats in i andra paket.
 
-* Molnhanterarens användargränssnitt informerar användaren som kanske inte kan välja ett SSL-certifikat tillfälligt om det används av ett domännamn som för närvarande distribueras.
+* I svåra fall kan standardprogramnamnet som genereras när dialogrutan Lägg till program öppnas vara en dubblett av ett befintligt programnamn.
 
-* I vissa fall kan ett internt problem leda till att miljön tas bort.
+* Om användaren navigerar bort från sidan för pipeline-körning omedelbart efter att ha startat en pipeline visas ett felmeddelande om att åtgärden misslyckades, även om körningen faktiskt startar.
 
-* En del pipeline-fel rapporterades felaktigt som pipeline-fel.
+* Byggsteget startades om i onödan när kundbyggen resulterade i ogiltiga paket.
+
+* Ibland kan användaren se en grön &quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när den konfigurationen inte har distribuerats.
+
+* Alla befintliga produktionspipelinjer aktiveras automatiskt med Experience Audit-steget.
