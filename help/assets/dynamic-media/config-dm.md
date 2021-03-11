@@ -2,7 +2,7 @@
 title: Konfigurera Dynamic Media Cloud Service
 description: Information om hur du konfigurerar Dynamic Media i Adobe Experience Manager som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 6dcf891fbe4a58f357fb429fc13cdd16bce7e3d0
+source-git-commit: a8eb6a88b889facca8518c05a80051fc17dd0617
 workflow-type: tm+mt
 source-wordcount: '3583'
 ht-degree: 4%
@@ -239,7 +239,7 @@ Om du vill öppna sidan Allmänna inställningar för programmet klickar du på 
 
 #### Konfigurerar färghantering {#configuring-color-management}
 
-Med dynamisk mediefärghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](/help/assets/dynamic-media/managing-image-presets.md).
+Med Dynamic Media färghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](/help/assets/dynamic-media/managing-image-presets.md).
 
 Så här konfigurerar du standardfärgegenskaperna för aktivering av färgkorrigering när du begär bilder:
 
