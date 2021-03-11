@@ -4,10 +4,10 @@ user-guide-title: Onboarding för AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 4e1f06e38fd968f8bcf240a5a30cf3362e562294
+source-git-commit: 6bbcbb75076a537a78b92415549f631842f028ce
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 28%
+source-wordcount: '691'
+ht-degree: 25%
 
 ---
 
@@ -15,19 +15,26 @@ ht-degree: 28%
 # Introduktion till {#onboarding}
 
 + [Onboarding för AEM as a Cloud Service](/help/onboarding/home.md)
-+ Detta behövs {#what-is-required}
++ Komma igång med AEM som Cloud Service {#what-is-required}
    + [Åtkomstbehörigheter har beviljats](what-is-required/access-rights-granted.md)
    + [Lägg till användare och roller](what-is-required/add-users-roles.md)
    + [Rollbaserade behörigheter](what-is-required/role-based-permissions.md)
    + [Databas för källkod](what-is-required/source-code-repository.md)
 + Få åtkomst till AEM i molnet {#getting-access}
-   + [Etableringsprocessöversikt](getting-access-to-aem-in-cloud/provisioning-process-overview.md)
-   + [Få tillgång till Experience Manager as a Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
+   + [Få åtkomst till Cloud Manager för AEM som Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
    + Åtkomst till Cloud Manager {#cloud-service-programs}
       + [Startsida för Cloud Manager](getting-access-to-aem-in-cloud/first-time-login.md)
       + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
-      + [Skapa ett program](getting-access-to-aem-in-cloud/creating-a-program.md)
-      + [Sandlådeprogram](getting-access-to-aem-in-cloud/sandbox-programs.md)
+      + Produktionsprogram {#production-programs}
+         + [Introduktion](/help/onboarding/getting-access-to-aem-in-cloud/introduction-production-programs.md)
+         + [Skapa ett produktionsprogram](getting-access-to-aem-in-cloud/creating-production-program.md)
+         + [Redigera ett produktionsprogram](/help/onboarding/getting-access-to-aem-in-cloud/editing-production-program.md)
+      + Sandlådeprogram {#sandbox-programs}
+         + [Introduktion](getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
+         + [Skapa ett sandlådeprogram](getting-access-to-aem-in-cloud/creating-sandbox-program.md)
+         + [Redigera ett sandlådeprogram](/help/onboarding/getting-access-to-aem-in-cloud/editing-sandbox-program.md)
+         + [Ta bort ett sandlådeprogram](getting-access-to-aem-in-cloud/deleting-sandbox-program.md)
+         + [Viloläge och avvänjningsmiljöer för sandlådor](/help/onboarding/getting-access-to-aem-in-cloud/hibernating-de-hibernating-sandbox-environments.md)
    + Använda Cloud Manager {#using-cloud-manager}
       + [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
       + [Konfigurera CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html)
@@ -71,7 +78,8 @@ ht-degree: 28%
       + [Ta bort en IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/delete-ip-allow-list.html)
       + [Kontrollera status för IP Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/check-ip-allow-list-status.html)
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
-      + [Aktuell versionsinformation (2021.2.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
+      + [Aktuell versionsinformation (2021.3.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
+      + [Versionsinformation för 2021.2.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2021-2-0.md)
       + [Versionsinformation för 2021.1.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2021-1-0.md)
       + [Versionsinformation för 2020.12.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-12-0.md)
       + [Versionsinformation för 2020.11.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-11-0.md)
