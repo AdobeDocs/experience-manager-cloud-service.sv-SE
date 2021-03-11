@@ -4,9 +4,9 @@ user-guide-title: Onboarding för AEM as a Cloud Service
 breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 translation-type: tm+mt
-source-git-commit: 6bbcbb75076a537a78b92415549f631842f028ce
+source-git-commit: 5cc16391573b6f65990c771667d4c393aa5eb38b
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '692'
 ht-degree: 25%
 
 ---
