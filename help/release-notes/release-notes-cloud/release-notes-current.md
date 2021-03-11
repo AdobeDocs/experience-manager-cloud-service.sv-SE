@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: aadfc38f62a1e3543810447e91910cf71fa93583
+source-git-commit: 137be7fd0fe89429c0d1f028d81e54ce69cc4ef1
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1522'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,52 @@ Customers using the Connected Assets feature can now easily view and track asset
 * Frisläppta CIF-kärnkomponenter v1.8.0. Mer information finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.8.0).
 
 ## Cloud Manager {#cloud-manager}
+
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.3.0.
+
+## Releasedatum {#release-date-cm-march}
+
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.3.0 är 11 mars 2021.
+
+
+### Nyheter {#what-is-new-march}
+
+* Kunder som har miljöer med befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat och anpassade domännamn ser följande meddelande och kan använda självbetjäning via användargränssnittet.
+
+* Användare med nödvändig behörighet kan nu redigera program och göra följande på ett självbetjäningssätt.
+
+* Etiketten AEM push-uppdatering visas nu för både Pipeline Execution och Activity screens.
+
+* Om en miljö är i viloläge men det även finns en AEM tillgänglig, prioriteras statusen&quot;Viloläge&quot; framför&quot;Tillgänglig uppdatering&quot;.
+
+* Användarna kan nu se sin molnhanterarroll(er) genom att välja alternativet Visa molnhanterarroll(er) efter att ha navigerat till ikonen Användarprofil (överst till höger) i Unified Shell.
+
+* Etiketten&quot;Ansökan om godkännande&quot; har ändrats till&quot;Produktionsgodkännande&quot; för större tydlighet.
+
+* Versionsetiketten har ändrats till&quot;Git-tagg&quot; i körningsfönstret för produktionspipeline.
+
+* Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende - Avbryt omedelbart och godkänn omedelbart.
+
+* Listorna över klass- och metodborttagning har uppdaterats baserat på version `2021.3.4997.20210303T022849Z-210225` av AEM Cloud Service-SDK.
+
+* Produktionspipelinen för Cloud Manager kommer nu att innehålla testning av anpassade användargränssnitt.
+
+### Felkorrigeringar {#bug-fixes-cm-march}
+
+* Paketversionshantering hoppades över i vissa fall under AEM push-uppgradering.
+
+* Vissa kvalitetsproblem upptäcktes inte korrekt när paket bäddats in i andra paket.
+
+* I svåra fall kan standardprogramnamnet som genereras när dialogrutan Lägg till program öppnas vara en dubblett av ett befintligt programnamn.
+
+* Om användaren navigerar bort från sidan för pipeline-körning omedelbart efter att ha startat en pipeline visas ett felmeddelande om att åtgärden misslyckades, även om körningen faktiskt startar.
+
+* Byggsteget startades om i onödan när kundbyggen resulterade i ogiltiga paket.
+
+* Ibland kan användaren se en grön &quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när den konfigurationen inte har distribuerats.
+
+* Alla befintliga produktionspipelinjer aktiveras automatiskt med Experience Audit-steget.
+
 
 ### Releasedatum {#release-date-cm}
 
