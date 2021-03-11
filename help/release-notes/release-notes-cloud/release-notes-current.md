@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 707c5daf5c48b2054fd684b4557143fbd8d873c7
+source-git-commit: fb0700f2b25917dd97381e0270995d7cef646edb
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,10 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.3.0 är 11 mars 202
 
 ### Nyheter {#what-is-new-march}
 
-* Kunder som har miljöer med befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat och anpassade domännamn ser ett meddelande om sina tidigare konfigurationer och kommer att kunna använda självbetjäning via användargränssnittet.
+* Kunder som har miljöer med befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat och anpassade domännamn ser ett meddelande om sina tidigare konfigurationer och kommer att kunna använda självbetjäning via användargränssnittet. Användarna kan nu:
+   * Lägg till Sites-lösning i ett befintligt program med Assets (eller vice versa).
+   * Ta bort platser (eller resurser) från ett befintligt program med både platser och resurser.
+   * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
 
 * Användare med nödvändig behörighet kan nu redigera program och göra följande på ett självbetjäningssätt.
 
