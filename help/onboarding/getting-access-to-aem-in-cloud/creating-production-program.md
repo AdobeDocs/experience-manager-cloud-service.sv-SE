@@ -1,0 +1,47 @@
+---
+title: 'Skapa ett produktionsprogram '
+description: 'Skapa ett produktionsprogram '
+translation-type: tm+mt
+source-git-commit: e1d805e1e5b5850ecf3154cd69a3955c4dbe1e65
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
+
+---
+
+
+# Skapa ett produktionsprogram {#create-production-program}
+
+Ett *Production*-program är avsett för en användare som känner till AEM och Cloud Manager och som är redo att börja skriva, bygga och testa kod i syfte att distribuera den till Production.
+
+Följ stegen nedan för att skapa ett vanligt program:
+
+1. Välj **Konfigurera för produktion** i guiden Skapa program för att skapa ett vanligt program. Användaren kan godkänna standardprogramnamnet eller redigera det innan **Fortsätt** väljs.
+
+   ![](assets/create-prod1.png)
+
+1. Användaren väljer lösningar som ska inkluderas i programmet på skärmen som visas efter skärmen ovan.
+
+
+
+   >[!NOTE]
+   >
+   >Skärmen nedan visas endast för de kunder som har köpt mer än en lösning. För kunder som bara köpt en lösning visas inte skärmen för val av lösning nedan.
+
+   ![](assets/set-up-prod2.png)
+
+1. När du har valt lösningarna klickar du på **Skapa**.
+
+   ![](assets/set-up-prod3.png)
+
+1. När du ser ditt programkort på landningssidan för du pekaren över det och väljer ikonen Cloud Manager för att gå till sidan med Cloud Manager **Översikt**.
+
+   ![](assets/set-up-prod4.png)
+
+1. Det huvudsakliga anropskortet leder användaren till att skapa en miljö, skapa ett icke-produktionsflöde och slutligen till en produktionsprocess.
+   ![](assets/set-up-prod5.png)
+
+
+   >[!NOTE]
+   >
+   >Ett produktionsprogram saknar funktionen **Auto-setup**.
