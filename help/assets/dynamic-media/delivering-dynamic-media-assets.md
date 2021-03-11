@@ -2,7 +2,7 @@
 title: Leverera Dynamic Media Assets
 description: Lär dig leverera Dynamic Media-material.
 translation-type: tm+mt
-source-git-commit: 193201670e5e78235025885f52215cca730ce556
+source-git-commit: a8eb6a88b889facca8518c05a80051fc17dd0617
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 1%
@@ -16,7 +16,7 @@ Hur du kan leverera dina Dynamic Media-resurser - både video och bilder - beror
 
 Med Dynamic Media har du flera alternativ:
 
-* Om du har AEM som värd för webbplatsen vill du lägga till de dynamiska medieresurserna direkt på sidan.
+* Om du har AEM som värd för webbplatsen vill du lägga till Dynamic Media-resurserna direkt på sidan.
 * Om webbplatsen inte finns AEM kan du välja mellan följande:
 
    * Bädda in videon eller bilden på webbplatsen.
