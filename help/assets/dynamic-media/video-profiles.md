@@ -2,10 +2,10 @@
 title: Videoprofiler för Dynamic Media
 description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. Du kan också lägga till smart beskärning i videoklipp.
 translation-type: tm+mt
-source-git-commit: 6b5bfa2bc7b37753e7c63bb2cf52609f352dc1ef
+source-git-commit: a8eb6a88b889facca8518c05a80051fc17dd0617
 workflow-type: tm+mt
 source-wordcount: '3502'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 >[!NOTE]
 >
->Om du vill generera videons metadata och tillhörande videobildsminiatyrer måste själva videon gå igenom kodningsprocessen i Dynamic Media. I AEM kodar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** video om du har aktiverat dynamiska medier och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](/help/assets/dynamic-media/video.md#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat dynamiska medier och konfigurerat videolmolntjänster aktiveras arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt när du överför en video. (Om du inte använder dynamiska medier aktiveras arbetsflödet **[!UICONTROL DAM Update Asset]**.)
+>Om du vill generera videons metadata och tillhörande videobildsminiatyrer måste själva videon gå igenom kodningsprocessen i Dynamic Media. I AEM kodar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** videon om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](/help/assets/dynamic-media/video.md#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
 >
 >Metadata är användbara när du söker efter resurser. Miniatyrbilderna är statiska videobilder som genereras under kodningen. De krävs av AEM och används i användargränssnittet för att du visuellt ska kunna identifiera videoklipp i vyn Kort, i sökresultatvyn och i resurslista. Du kan se de genererade miniatyrbilderna när du trycker på ikonen Återgivning (en målares palett) för en kodad video.
 
