@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: f780bcf645fb4c1f0bce377f95028888161ee7ae
+source-git-commit: 7d51252abcc5fe2def9a55c6324bf75479ef449a
 workflow-type: tm+mt
-source-wordcount: '2068'
-ht-degree: 57%
+source-wordcount: '2274'
+ht-degree: 51%
 
 ---
 
@@ -26,9 +26,13 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Om du använder en *sandlådemiljö* kontrollerar du att miljön är aktuell och uppgraderad till den senaste versionen. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
-* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra den lokala gruppen AEM administratörer i den Cloud Service du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
+* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra den lokala gruppen **administratörer** i den Cloud Service du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
+
+* Om inställningen **Rensa befintligt innehåll i molninstansen innan du använder**, tas hela den befintliga databasen bort och en ny databas skapas för att importera innehåll till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i gruppen **administratörer**. Användaren måste läggas till på nytt i gruppen **administratörer** för att hämta åtkomsttoken för CTT.
 
 * Åtkomsttoken kan upphöra att gälla regelbundet antingen efter en viss tidsperiod eller efter att Cloud Servicens miljö har uppgraderats. Om åtkomsttoken har upphört att gälla kan du inte ansluta till Cloud Servicen och du måste hämta den nya åtkomsttoken. Statusikonen som är kopplad till en befintlig migreringsuppsättning ändras till ett rött moln och ett meddelande visas när du hovrar över den.
+
+* Innehållsöverföringsverktyget utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer t.ex. inte mellan publicerat och opublicerat innehåll när innehållet hämtas till en publiceringsmiljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. Användaren kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Vi rekommenderar att CTT installeras som källförfattarinstans när innehåll flyttas till målförfattarinstansen och att CTT installeras på källpubliceringsinstansen för att flytta innehållet till målpubliceringsinstansen. På liknande sätt installeras CTT på källpubliceringsinstansen för att flytta innehållet till målpubliceringsinstansen.
 
 * De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. Processen *Extrahering* kopierar hela `/home` till migreringsuppsättningen och processen *Ing* kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna. Om du vill mappa befintliga användare och grupper automatiskt till deras IMS-ID:n läser du [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration).
 
@@ -175,7 +179,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen. Dialogrutan **Migration Set ingestion** visas. Klicka på **Ingest** för att starta intagningsfasen. Det går att importera innehåll till Author och Publish samtidigt.
 
    >[!IMPORTANT]
-   >När alternativet **Rensa befintligt innehåll i molninstansen innan inmatning** är aktiverat, tas hela den befintliga databasen bort och en ny databas skapas för inmatning av innehåll i. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen.
+   >När alternativet **Rensa befintligt innehåll i molninstansen innan inmatning** är aktiverat, tas hela den befintliga databasen bort och en ny databas skapas för inmatning av innehåll i. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i gruppen **administratörer**.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/content-ingestion-01.png)
 
