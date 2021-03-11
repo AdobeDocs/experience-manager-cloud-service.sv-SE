@@ -1,0 +1,40 @@
+---
+title: 'Redigera ett sandlådeprogram '
+description: 'Redigera ett sandlådeprogram '
+translation-type: tm+mt
+source-git-commit: 78bc94f7e3dab37b7f83f480ef5438165e1897bc
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
+
+---
+
+
+# Redigera ett sandlådeprogram {#create-sandbox-program}
+
+Användare med nödvändig behörighet kan nu redigera ett produktionsprogram och göra följande på ett självbetjäningssätt:
+
+* Lägg till Sites-lösning i ett befintligt program med Assets (eller vice versa).
+* Ta bort platser (eller resurser) från ett befintligt program med både platser och resurser.
+* Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
+
+   >[!NOTE]
+   >En användare i rollen Business Owner måste vara inloggad för att programmet ska kunna redigeras.
+
+Följ stegen nedan för att redigera ett sandlådeprogram:
+
+1. Gå till sidan **Redigera program**.
+
+1. På sidan **Redigera program** visas två flikar (Allmänt och Lösningar) för både Production- och Sandbox-program.
+   ![](assets/edit-program.png)
+
+   >[!NOTE]
+   >Även om både Sites och Assets visas kan en av dem inaktiveras baserat på vad som har köpts och inte använts. I synnerhet om organisationen inte har oanvända tillstånd för en viss lösning, kommer den lösningen att visas men inaktiveras.
+
+## Att tänka på när du redigerar ett program {#considerations-editing}
+
+Tänk på följande när du redigerar ett program:
+
+* Minst en lösning måste väljas för ett program, vilket innebär att det inte går att avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
+
+* Om du klickar på knappen **Spara** och de valda lösningarna har ändrats kommer lösningsuppdateringar i miljöer att börja gälla efter nästa distribution.
