@@ -2,7 +2,7 @@
 title: Länka URL till ett webbprogram
 description: Länka URL:er till ditt webbprogram i Dynamic Media.
 translation-type: tm+mt
-source-git-commit: dce527d5798ef003dc499baec97b169debab445a
+source-git-commit: a8eb6a88b889facca8518c05a80051fc17dd0617
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 9%
@@ -20,7 +20,7 @@ Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kop
 
 >[!NOTE]
 >
->URL-strängar är bara tillgängliga för dynamiska återgivningar av resurser. De är för närvarande inte tillgängliga för statiska resurser som finns i DAM och inte för den dynamiska medieservern. URL-knappen visas inte för återgivningar som är statiska.
+>URL-strängar är bara tillgängliga för dynamiska återgivningar av resurser. De är för närvarande inte tillgängliga för statiska resurser som finns i DAM och inte på Dynamic Media-servern. URL-knappen visas inte för återgivningar som är statiska.
 
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](embed-code.md).
 
