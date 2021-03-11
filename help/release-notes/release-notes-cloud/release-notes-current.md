@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 137be7fd0fe89429c0d1f028d81e54ce69cc4ef1
+source-git-commit: 707c5daf5c48b2054fd684b4557143fbd8d873c7
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.3.0 är 11 mars 202
 
 ### Nyheter {#what-is-new-march}
 
-* Kunder som har miljöer med befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat och anpassade domännamn ser följande meddelande och kan använda självbetjäning via användargränssnittet.
+* Kunder som har miljöer med befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat och anpassade domännamn ser ett meddelande om sina tidigare konfigurationer och kommer att kunna använda självbetjäning via användargränssnittet.
 
 * Användare med nödvändig behörighet kan nu redigera program och göra följande på ett självbetjäningssätt.
 
