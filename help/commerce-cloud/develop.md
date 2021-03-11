@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 translation-type: tm+mt
-source-git-commit: 9d8d7c3c8c1ac3cb843ce74b3ccdb6904bbfaa05
+source-git-commit: a9c9a866c03bc15ebddddc7f2086f1f3ffd38a07
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '969'
 ht-degree: 7%
 
 ---
@@ -28,7 +28,7 @@ Utveckla AEM handelsprojekt som bygger på Commerce Integration Framework (CIF) 
 
 >[!VIDEO](https://video.tv.adobe.com/v/39476/?quality=12&learn=on)
 
-En lokal utvecklingsmiljö rekommenderas för arbete med CIF-projekt. CIF-tillägget för AEM som en Cloud Service-miljö är även tillgängligt för lokal utveckling. Den kan laddas ned från [portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
+En lokal utvecklingsmiljö rekommenderas för arbete med CIF-projekt. Det CIF-tillägg som anges för AEM som en Cloud Service är även tillgängligt för lokal utveckling. Den kan laddas ned från [portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
 
 CIF-tillägget tillhandahålls som ett arkiv för försäljningsfunktioner. ZIP-filen som finns på Software Distribution Portal innehåller två Sling Feature-arkivfiler, en för AEM och en för AEM publiceringsinstanser.
 
@@ -137,6 +137,12 @@ CIF Core Components kan användas i alla projekt, antingen genom att inkludera d
 <dependency>
     <groupId>com.adobe.commerce.cif</groupId>
     <artifactId>core-cif-components-apps</artifactId>
+    <type>zip</type>
+    <version>x.y.z</version>
+</dependency>
+<dependency>
+    <groupId>com.adobe.commerce.cif</groupId>
+    <artifactId>core-cif-components-config</artifactId>
     <type>zip</type>
     <version>x.y.z</version>
 </dependency>
