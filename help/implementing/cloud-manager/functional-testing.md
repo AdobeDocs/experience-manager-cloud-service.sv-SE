@@ -2,10 +2,10 @@
 title: Funktionstestning - Cloud Services
 description: Funktionstestning - Cloud Services
 translation-type: tm+mt
-source-git-commit: dc006d50d703a17a84e3dc6631bc423f5de37f88
+source-git-commit: 1e0765e6bf2818754c5603c08f055a7c7453bc33
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 4%
+source-wordcount: '845'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +16,7 @@ Funktionstestning indelas i två typer:
 
 * Funktionstestning av produkten
 * Anpassad funktionstestning
+* Testning av anpassat användargränssnitt
 
 ## Funktionstestning av produkten {#product-functional-testing}
 
@@ -34,6 +35,34 @@ Om JAR-test inte skapas av bygget godkänns testet som standard.
 >[!NOTE]
 >Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md).
 
+## Anpassad gränssnittstestning {#custom-ui-testing}
+
+AEM förser sina kunder med en integrerad uppsättning kvalitetsportar för Cloud Manager för att säkerställa smidiga uppdateringar av deras program. I synnerhet tillåter IT-testportar redan kunderna att skapa och automatisera sina egna tester som använder AEM API:er.
+
+Funktionen för anpassad gränssnittstestning är en valfri funktion som gör att våra kunder kan skapa och automatiskt köra gränssnittstester för sina program. Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Du kan läsa mer om hur du skapar gränssnittstester och skriver gränssnittstester härifrån. Dessutom kan ett UI-testprojekt enkelt genereras med den AEM projekttypen.
+
+Kunderna kan skapa (via GIT) anpassade tester och testsvit för användargränssnittet. Gränssnittstestet kommer att utföras som en del av en särskild kvalitetsport för varje Cloud Manager-pipeline med deras specifika steg och feedbackinformation. Alla gränssnittstester, inklusive regression och nya funktioner, gör att fel kan upptäckas och rapporteras i kundsammanhang.
+
+Kundens gränssnittstester körs automatiskt på produktionsflödet under steget&quot;Anpassad gränssnittstestning&quot;.
+
+Till skillnad från Custom Functional Testing, som är HTTP-tester skrivna i java, kan gränssnittstesterna vara en dockningsbild med tester skrivna på vilket språk som helst, förutsatt att de följer konventionerna som definieras i [Building UI Tests](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/ui-testing.html?lang=en#building-ui-tests).
+
+>[!NOTE]
+>Vi rekommenderar att du som utgångspunkt följer strukturen och språket *(js och wdio)* som finns i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests).
+
+### Kundens deltagande {#customer-opt-in}
+
+För att få sina gränssnittstester skapade och körda måste kunderna&quot;anmäla sig&quot; genom att lägga till en fil i sin koddatabas, under huvudundermodulen för UI-tester (bredvid filen pom.xml i undermodulen för användargränssnittstester) och se till att den här filen finns i roten för den skapade `tar.gz`-filen.
+
+*Filnamn*: `testing.properties`
+
+*Innehåll*:  `one line: ui-tests.version=1`
+
+Om detta inte finns i den skapade `tar.gz`-filen, byggs gränssnittstesterna och körningarna hoppas över
+
+>[!NOTE]
+>Produktionspipelinor som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs i detta avsnitt ska kunna användas. Detta innebär i princip att användaren måste redigera produktionsflödet och klicka på **Spara** i användargränssnittet även om inga ändringar gjorts.
+>Mer information om konfigurationen av pipeline finns i [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager).
 
 ### Skriver funktionstester {#writing-functional-tests}
 
