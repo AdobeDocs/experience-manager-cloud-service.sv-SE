@@ -2,9 +2,9 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 translation-type: tm+mt
-source-git-commit: dc006d50d703a17a84e3dc6631bc423f5de37f88
+source-git-commit: 533707b9073231ed16757884afeb968ace0785b3
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '1054'
 ht-degree: 1%
 
 ---
@@ -50,15 +50,20 @@ När du har konfigurerat produktionspipelinen (databas, miljö och testmiljö) �
       ![](assets/stage-deployment.png)
    Följande steg ingår i **mellanlagringstestningen**:
 
-   * Funktionstestning: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön.
+   * **Funktionstestning**: Körningar av pipeline för Cloud Manager stöder körning av tester som körs mot scenmiljön.
 Mer information finns i [Funktionstestning av produkten](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing).
 
-   * Anpassad funktionstestning: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard.\
+   * **Anpassad funktionstestning**: Det här steget i pipeline finns alltid och kan inte hoppas över. Om JAR-test inte skapas av bygget godkänns testet som standard.\
       Mer information finns i [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing).
 
+   * **Testning** av anpassat användargränssnitt: Det här steget är en valfri funktion som gör att våra kunder kan skapa och automatiskt köra gränssnittstester för sina program. Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium).
+Mer information finns i Anpassad gränssnittstestning.
 
-   * Experience Audit: Det här steget i pipeline finns alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna. De konfigurerade sidorna skickas till tjänsten och utvärderas. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
+
+   * **Experience Audit**: Det här steget i pipeline finns alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna. De konfigurerade sidorna skickas till tjänsten och utvärderas. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
 Mer information finns i [Understanding Experience Audit results](/help/implementing/cloud-manager/experience-audit-testing.md).
+
+      ![](assets/stage-testing.png)
 
 
 
