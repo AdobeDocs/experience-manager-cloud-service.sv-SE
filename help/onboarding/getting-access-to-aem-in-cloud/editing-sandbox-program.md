@@ -2,9 +2,9 @@
 title: 'Redigera ett sandlådeprogram '
 description: 'Redigera ett sandlådeprogram '
 translation-type: tm+mt
-source-git-commit: 78bc94f7e3dab37b7f83f480ef5438165e1897bc
+source-git-commit: 751f611ecccc39ef4650a1c7a9941655a6b2aedd
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,11 @@ Användare med nödvändig behörighet kan nu redigera ett produktionsprogram oc
 
 Följ stegen nedan för att redigera ett sandlådeprogram:
 
-1. Gå till sidan **Redigera program**.
+1. Navigera till sidan **Redigera program** på sidan *Översikt* i Cloud Manager.
 
 1. På sidan **Redigera program** visas två flikar (Allmänt och Lösningar) för både Production- och Sandbox-program.
    ![](assets/edit-program.png)
 
-   >[!NOTE]
-   >Även om både Sites och Assets visas kan en av dem inaktiveras baserat på vad som har köpts och inte använts. I synnerhet om organisationen inte har oanvända tillstånd för en viss lösning, kommer den lösningen att visas men inaktiveras.
 
 ## Att tänka på när du redigerar ett program {#considerations-editing}
 
