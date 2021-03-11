@@ -1,16 +1,16 @@
 ---
-title: Navigering
-description: Navigering - Cloud Service
+title: Få åtkomst till Cloud Manager för AEM som Cloud Service
+description: Få åtkomst till Cloud Manager för AEM som Cloud Service
 translation-type: tm+mt
-source-git-commit: c5ee964fad3e1430e7c08f0cca76aecfae8bd44f
+source-git-commit: 55f3b8bd1c21197fd004073cfabd9092678cfdcd
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 1%
+source-wordcount: '530'
+ht-degree: 0%
 
 ---
 
 
-# Få tillgång till Experience Manager as a Cloud Service {#navigation}
+# Hämtar åtkomst till Cloud Manager för AEM som Cloud Service {#navigation}
 
 När din systemadministratör har gett dig åtkomst till Cloud Manager får du ett e-postmeddelande som tar dig till inloggningssidan för Cloud Manager som också är tillgänglig via [Adobe Experience Cloud](https://my.cloudmanager.adobe.com/).
 
@@ -20,7 +20,7 @@ När inloggningen är klar dirigeras du till landningssidan för Cloud Manager e
 
 ## SysAdmin-uppgifter {#sysadmin-tasks}
 
-En användare med rollen SysAdmin kan nu få direkt åtkomst till Admin Console för att hantera roller och behörigheter och få åtkomst till AEM instanser.
+En användare i rollen SysAdmin kan välja **Hantera åtkomst** för att få direktåtkomst till Admin Console för att hantera roller och behörigheter och åtkomst till AEM.
 
 ### Hantera roller {#manage-roles}
 
