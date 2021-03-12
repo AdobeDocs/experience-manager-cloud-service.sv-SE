@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet - Cloud Services
 description: Anpassade regler för kodkvalitet - Cloud Services
 translation-type: tm+mt
-source-git-commit: 901a660424f5e1fded654ddb09f3d872b7cd01b7
+source-git-commit: 78d9c1345ed0642f7cb493a50ff117c5fad7632a
 workflow-type: tm+mt
-source-wordcount: '3221'
+source-wordcount: '3299'
 ht-degree: 4%
 
 ---
@@ -579,7 +579,7 @@ AEM API-yta är under ständig revision för att identifiera API:er som inte anv
 
 I många fall är dessa API:er föråldrade med Java-standardanteckningen *@Undertryckt* och, som sådana, enligt `squid:CallToDeprecatedMethod`.
 
-Det finns dock fall där ett API är inaktuellt i AEM men inte i andra sammanhang. Den här regeln identifierar den andra klassen.
+Det finns emellertid fall där ett API är inaktuellt i AEM men inte i andra sammanhang. Den här regeln identifierar den andra klassen.
 
 ## OakPAL-innehållsregler {#oakpal-rules}
 
@@ -611,6 +611,9 @@ Det har varit en god praxis sedan länge att innehållsträdet /libs i AEM ska b
 **Sedan**: Version 2019.6.0
 
 Ett vanligt problem som inträffar i komplexa projekt är när samma OSGi-komponent konfigureras flera gånger. Detta skapar en tvetydighet om vilken konfiguration som kan användas. Den här regeln är&quot;körningsmedveten&quot; eftersom den bara identifierar problem där samma komponent har konfigurerats flera gånger i samma körningsläge (eller en kombination av körningslägen).
+
+>[!NOTE]
+>Den här regeln ger problem där samma konfiguration, med samma sökväg, definieras i flera paket, inklusive fall där samma paket dupliceras i den övergripande listan över inbyggda paket. Om bygget till exempel skapar paket med namnet `com.myco:com.myco.ui.apps` och `com.myco:com.myco.all` där `com.myco:com.myco.all` bäddar in `com.myco:com.myco.ui.apps`, kommer alla konfigurationer i `com.myco:com.myco.ui.apps` att rapporteras som dubbletter. Detta är vanligtvis ett fall där [riktlinjerna för innehållspaketets struktur](/help/implementing/developing/aem-project-content-package-structure.md) inte följs; I det här specifika exemplet saknar paketet `com.myco:com.myco.ui.apps` egenskapen `<cloudManagerTarget>none</cloudManagerTarget>`.
 
 #### Icke-kompatibel kod {#non-compliant-code-osgi}
 
