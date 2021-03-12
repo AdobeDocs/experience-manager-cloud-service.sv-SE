@@ -1,8 +1,8 @@
 ---
 title: Stöd för samma webbplats-cookie för Adobe Experience Manager som en Cloud Service
-description: ISame Site Cookie-stöd för Adobe Experience Manager som Cloud Service
+description: Stöd för samma webbplats-cookie för Adobe Experience Manager som en Cloud Service
 translation-type: tm+mt
-source-git-commit: 24f26a5cc77158ea20a09b1f40cf3d849a70591f
+source-git-commit: e51d9c3e4691fb58f3c4b6a2565cc8cad2a1acb0
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
