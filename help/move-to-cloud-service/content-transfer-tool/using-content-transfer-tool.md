@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 translation-type: tm+mt
-source-git-commit: 7d51252abcc5fe2def9a55c6324bf75479ef449a
+source-git-commit: 23943db6fbdf82a1d1be47e5a8777064b3750a95
 workflow-type: tm+mt
-source-wordcount: '2274'
+source-wordcount: '2307'
 ht-degree: 51%
 
 ---
@@ -209,6 +209,8 @@ När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatnin
 
 ### Visa loggar för en migreringsuppsättning {#viewing-logs-migration-set}
 
+När varje steg har slutförts (extrahering och förtäring) kontrollerar du loggarna och söker efter fel.  Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att man kontaktar Adobe support.
+
 Du kan visa loggar för en befintlig migreringsuppsättning på sidan *Overview*.
 Följ stegen nedan:
 
@@ -268,6 +270,7 @@ java -jar oak-run.jar datastore --check-consistency [<SEGMENT_STORE_PATH>|<MONGO
 Mer information finns i [Oak Runable Jar](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run).
 
 Filerna som skapas i *OUT_DIR* som anges ovan för överensstämmelse, kan sedan kontrolleras för sökvägar som saknar binärfiler och lämpliga åtgärder kan vidtas, till exempel återställning från en säkerhetskopia, borttagning av sökvägar och omindexering.
+
 
 ### Gränssnittsbeteende {#ui-behavior}
 
