@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: fb0700f2b25917dd97381e0270995d7cef646edb
+source-git-commit: 608c512831ea7b0a516a4100a2d76e91f47ec73c
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1661'
 ht-degree: 0%
 
 ---
@@ -210,13 +210,20 @@ Releasedatum för Best Practices Analyzer v2.1.2 är 18 februari 2021.
 
 ### Nyheter i Code Refactoring Tools {#what-is-new-crt}
 
-* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av det här plugin-programmet innehåller flera felkorrigeringar för Repository Modernizer.
-Mer information om detta plugin-program finns i [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html?lang=en#benefits).
+* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av det här plugin-programmet innehåller flera nya funktioner och felkorrigeringar för Repository Modernizer och Dispatcher Converter.    Mer information om detta plugin-program finns i [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html?lang=en#benefits).
 
-### Felkorrigeringar {#bug-fixes-crt}
+* Nya funktioner och förbättringar för Databasmodernisering. Se [GitHub-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) för den senaste versionen.
+   * Normalisera OSGi-konfigurationer (utom RepoInit-konfigurationer) till det önskade .cfg.json-formatet.
+   * Byt namn på OSGi-konfigurationsmappar till det angivna formatet.
+   * Generera ui.apps.structure-projektet.
+   * Skapa analysmodulen.
 
-* Flera felkorrigeringar har gjorts i Repository Modernizer.
-Se [GitHub-resurs: aem-cloud-service-source-migration](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) om du vill ha mer information.
+* Nya funktioner och förbättringar för Dispatcher Converter. Se [GitHub-resurs: Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter)
+   * Skapa separata filer för olika inkluderingar i stället för att länka innehållet.
+   * Möjlighet att hantera både mappsökväg för värdar och sökväg till värdfiler.
+   * Generering av servergruppsfiler med stora kundkonfigurationer från 600 eller fler.
+
+
 
 
 
