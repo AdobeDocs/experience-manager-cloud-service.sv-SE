@@ -2,7 +2,7 @@
 title: Konfigurera OSGI för AEM as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: a04935b3b71cff9f5f0fbc85b4d3db4dd96a28fc
+source-git-commit: 24f26a5cc77158ea20a09b1f40cf3d849a70591f
 workflow-type: tm+mt
 source-wordcount: '2737'
 ht-degree: 1%
@@ -180,7 +180,7 @@ Observera att namnet på OSGi-konfigurationsfabriksfilen använder  `<PID>-<fact
 1. Spara ändringarna i den nya `.cfg.json`-filen
 1. Lägg till och implementera din nya OSGi-konfigurationsfil i Git
 
-### Generera OSGi-konfigurationer med AEM SDK QuickStart {#generating-osgi-configuratuions-using-the-aem-sdk-quickstart}
+### Generera OSGi-konfigurationer med AEM SDK QuickStart {#generating-osgi-configurations-using-the-aem-sdk-quickstart}
 
 AEM SDK Quickstart Jars AEM Web Console kan användas för att konfigurera OSGi-komponenter och exportera OSGi-konfigurationer som JSON. Detta är användbart för att konfigurera AEM OSGi-komponenter vars OSGi-egenskaper och deras värdeformat kanske inte är väl förstådda av den utvecklare som definierar OSGi-konfigurationerna i det AEM projektet. Observera att när du använder konfigurationsgränssnittet för AEM Web Console skriver du `.cfg.json`-filer i databasen, så tänk på detta för att undvika oväntade beteenden under lokal utveckling när de AEM projektdefinierade OSGi-konfigurationerna kan skilja sig från de genererade konfigurationerna.
 
