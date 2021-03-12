@@ -2,17 +2,17 @@
 title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 6c9a0779cfb9c3c2088a17e67437c76b589276f0
+source-git-commit: c71117de502b1ee756e06e756a643c987113ea45
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 4%
+source-wordcount: '695'
+ht-degree: 7%
 
 ---
 
 
 # CDN i AEM as a Cloud Service {#cdn}
 
-AEM när Cloud Servicen levereras med ett inbyggt CDN. Det huvudsakliga syftet är att minska fördröjningen genom att leverera tillgängligt innehåll från CDN-noderna i kanten, nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program.
+AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program.
 
 Det AEM hanterade CDN uppfyller de flesta kunders krav på prestanda och säkerhet. För publiceringsnivån kan kunderna välja att peka på det från sina egna CDN, som de måste hantera. Detta kommer att tillåtas från fall till fall, baserat på att vissa krav uppfylls, inklusive, men inte begränsat till, den kund som har en äldre integrering med sin CDN-leverantör som är svår att överge.
 
@@ -47,10 +47,10 @@ Konfigurationsinstruktioner:
 
 1. Ange `X-Forwarded-Host`-huvudet med domännamnet.
 1. Ange värdhuvudet med ursprungsdomänen, som är AEM CDN:s ingress. Värdet ska komma från Adobe.
-1. Skicka SNI-huvudet till origo. Precis som med värdhuvudet måste sni-huvudet vara den ursprungliga domänen.
+1. Skicka SNI-huvudet till origo. Precis som Värdhuvudet måste SNI-huvudet vara ursprungsdomänen.
 1. Ange antingen `X-Edge-Key` eller `X-AEM-Edge-Key` (om ditt CDN strippar X-Edge-*), som behövs för att dirigera trafik korrekt till AEM. Värdet ska komma från Adobe. Informera Adobe om du vill ha direktåtkomst till Adobe CDN:s ingress (som ska blockeras när `X-Edge-Key` inte finns).
 
-Innan du godkänner direkttrafik bör du med Adobe kundsupport validera att trafikdirigeringen från början till slut fungerar som den ska.
+Innan du godkänner direkttrafik bör du validera med Adobe kundsupport att hela trafikflödet fungerar korrekt.
 
 >[!NOTE]
 >
