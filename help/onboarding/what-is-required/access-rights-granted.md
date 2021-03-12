@@ -2,7 +2,7 @@
 title: Beviljade åtkomsträttigheter - vad som krävs
 description: Beviljade åtkomsträttigheter - vad som krävs
 translation-type: tm+mt
-source-git-commit: 4904d7728befd3562940b35c7d44dbf9cae87fee
+source-git-commit: 4b62401fd1d0654cf758092176bd815a7fa56159
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 10%
@@ -36,8 +36,8 @@ När Adobe har skapat en organisation för företaget läggs administratören ti
    * [Hantera roller](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html?lang=en#manage-roles)
    * [Hantera åtkomst till författarinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html?lang=en#manage-access-aem)
 
->[!NOTE]
->Gå till avsnittet [Användare och roller](#users-roles) om du vill veta mer om användare och rolldefinitioner i Cloud Manager.
+      >[!NOTE]
+      >Gå till avsnittet [Användare och roller](#users-roles) om du vill veta mer om användare och rolldefinitioner i Cloud Manager.
 
 Med de här behörigheterna tilldelade är administratören nu konfigurerad med en enda inloggning (med Adobe ID) för att få åtkomst till [!UICONTROL Experience Cloud]-tjänsterna, logga in i dina AEM molnmiljöer och använda [!UICONTROL Cloud Manager].
 
