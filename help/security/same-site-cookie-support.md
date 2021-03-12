@@ -2,9 +2,9 @@
 title: Stöd för samma webbplats-cookie för Adobe Experience Manager som en Cloud Service
 description: Stöd för samma webbplats-cookie för Adobe Experience Manager som en Cloud Service
 translation-type: tm+mt
-source-git-commit: e51d9c3e4691fb58f3c4b6a2565cc8cad2a1acb0
+source-git-commit: 4f25aa54bd40644912e0e430a81f1a17d545e3f8
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
@@ -28,3 +28,5 @@ Du kan göra detta genom att följa stegen nedan:
 1. Klicka på Spara
 1. Generera JSON-formatkonfigurationer för den här inställningen genom att följa stegen som beskrivs i [Generera OSGi-konfigurationer med AEM SDK QuickStart](/help/implementing/deploying/configuring-osgi.md#generating-osgi-configurations-using-the-aem-sdk-quickstart)
 1. Använd inställningarna genom att följa stegen i [API-formatet för Cloud Manager för att ställa in egenskaper](/help/implementing/deploying/configuring-osgi.md#cloud-manager-api-format-for-setting-properties) OSGi-dokumentationen.
+
+När den här inställningen har uppdaterats och användarna har loggats ut och loggat in igen har `login-token`-cookies attributuppsättningen `None` och kommer att inkluderas i begäranden mellan webbplatser.
