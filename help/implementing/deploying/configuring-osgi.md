@@ -2,7 +2,7 @@
 title: Konfigurera OSGI för AEM as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 translation-type: tm+mt
-source-git-commit: 0a2d44a63c3d26460c0836ab6b28989a0aad72da
+source-git-commit: a04935b3b71cff9f5f0fbc85b4d3db4dd96a28fc
 workflow-type: tm+mt
 source-wordcount: '2737'
 ht-degree: 1%
@@ -54,7 +54,7 @@ Om flera konfigurationer för samma PID kan användas, används konfigurationen 
 
 Regelns granularitet är på PID-nivå. Det innebär att du inte kan definiera vissa egenskaper för samma PID i `/apps/example/config.author/` och mer specifika i `/apps/example/config.author.dev/` för samma PID.  Konfigurationen med det högsta antalet matchande körningslägen gäller för hela PID.
 
-Vid lokal utveckling kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
+När du utvecklar lokalt kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
 
 ## Typer av OSGi-konfigurationsvärden {#types-of-osgi-configuration-values}
 
@@ -164,11 +164,11 @@ To add a new configuration to the repository you need to know the following:
 
    If so, this configuration can be copied to ` /apps/<yourProject>/`, then customized in the new location. -->
 
-## Skapa OSGi-konfigurationer
+## Skapar OSGi-konfigurationer {#creating-sogi-configurations}
 
 Det finns två sätt att skapa nya OSGi-konfigurationer enligt beskrivningen nedan. Den tidigare metoden används vanligtvis för att konfigurera anpassade OSGi-komponenter som har välkända OSGi-egenskaper och -värden av utvecklaren, och den senare för AEM OSGi-komponenter.
 
-### Skriver OSGi-konfigurationer
+### Skriver OSGi-konfigurationer {#writing-osgi-configurations}
 
 JSON-formaterade OSGi-konfigurationsfiler kan skrivas för hand direkt i AEM. Detta är ofta det snabbaste sättet att skapa OSGi-konfigurationer för välkända OSGi-komponenter, och särskilt anpassade OSGi-komponenter som har utformats och utvecklats av samma utvecklare som definierar konfigurationerna. Den här metoden kan även användas för att kopiera/klistra in och uppdatera konfigurationer för samma OSGi-komponent i olika körningslägemappar.
 
@@ -180,7 +180,7 @@ Observera att namnet på OSGi-konfigurationsfabriksfilen använder  `<PID>-<fact
 1. Spara ändringarna i den nya `.cfg.json`-filen
 1. Lägg till och implementera din nya OSGi-konfigurationsfil i Git
 
-### Generera OSGi-konfigurationer med AEM SDK QuickStart
+### Generera OSGi-konfigurationer med AEM SDK QuickStart {#generating-osgi-configuratuions-using-the-aem-sdk-quickstart}
 
 AEM SDK Quickstart Jars AEM Web Console kan användas för att konfigurera OSGi-komponenter och exportera OSGi-konfigurationer som JSON. Detta är användbart för att konfigurera AEM OSGi-komponenter vars OSGi-egenskaper och deras värdeformat kanske inte är väl förstådda av den utvecklare som definierar OSGi-konfigurationerna i det AEM projektet. Observera att när du använder konfigurationsgränssnittet för AEM Web Console skriver du `.cfg.json`-filer i databasen, så tänk på detta för att undvika oväntade beteenden under lokal utveckling när de AEM projektdefinierade OSGi-konfigurationerna kan skilja sig från de genererade konfigurationerna.
 
@@ -203,7 +203,7 @@ AEM SDK Quickstart Jars AEM Web Console kan användas för att konfigurera OSGi-
 1. Lägg till och implementera den nya OSGi-konfigurationsfilen i Git.
 
 
-## Egenskapsformat för OSGi-konfiguration
+## Egenskapsformat för OSGi-konfiguration {#osgi-configuration-property-formats}
 
 ### Textbundna värden {#inline-values}
 
@@ -560,7 +560,7 @@ Som nämnts ovan kommer anrop till API att distribuera de nya variablerna och v�
 
 Normalt anropar kunderna API för att ange miljövariabler innan de distribuerar kod som är beroende av dem i Cloud Manager. I vissa fall kanske du vill ändra en befintlig variabel efter att koden redan har distribuerats.
 
-Observera att API:t kanske inte fungerar när en pipeline används, antingen en AEM eller en kunddistribution, beroende på vilken del av slutpipeline som körs vid den tidpunkten. Felsvaret kommer att ange att begäran inte lyckades, men det kommer inte att ange den specifika orsaken.
+Observera att API:t kanske inte fungerar när en pipeline används, antingen en AEM eller en kunddistribution, beroende på vilken del av end to end-pipeline som körs vid den tidpunkten. Felsvaret kommer att ange att begäran inte lyckades, men det kommer inte att ange den specifika orsaken.
 
 Det kan finnas scenarier där en schemalagd kundkoddistribution förlitar sig på befintliga variabler för att ha nya värden, vilket inte är lämpligt med den aktuella koden. Om detta ger anledning till oro bör variabla ändringar göras på ett additivt sätt. Det gör du genom att skapa nya variabelnamn i stället för att bara ändra värdet för gamla variabler så att gammal kod aldrig refererar till det nya värdet. När den nya kundreleasen ser stabil ut kan man välja att ta bort de äldre värdena.
 
