@@ -2,9 +2,9 @@
 title: 'Skapa ett sandlådeprogram '
 description: 'Skapa ett sandlådeprogram '
 translation-type: tm+mt
-source-git-commit: 5773683a75254855687266929a3e1876c8f06e61
+source-git-commit: 3884529aaa717b13f2771095a4f7e8102abfd1ec
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,13 @@ ht-degree: 0%
 # Skapa ett sandlådeprogram {#create-sandbox-program}
 
 Följ stegen nedan för att skapa ett sandlådeprogram:
+
+1. Starta Cloud Managers startsida och klicka på **Lägg till program** i skärmens övre högra hörn.
+
+   ![](assets/first_timelogin1.png)
+
+   >[!NOTE]
+   >Mer information om hur du får åtkomst till Cloud Manager finns på [startsidan för Cloud Manager](/help/onboarding/getting-access-to-aem-in-cloud/first-time-login.md).
 
 1. Välj **Konfigurera en sandlåda** i guiden Skapa program. Användaren skickar programnamnet innan **Skapa** väljs.
 
