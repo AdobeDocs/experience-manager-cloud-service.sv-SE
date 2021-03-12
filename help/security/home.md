@@ -2,10 +2,10 @@
 title: Säkerhet för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om säkerhet för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: c0a66239e949ee4b460142e392d61e22938896bc
+source-git-commit: 24f26a5cc77158ea20a09b1f40cf3d849a70591f
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 91%
+source-wordcount: '406'
+ht-degree: 89%
 
 ---
 
@@ -18,6 +18,7 @@ På den här sidan visas självhjälp om säkerhet för Experience Manager as a 
 
 * [Säkerhetsöversikt för AEM som Cloud Service](/help/security/cloud-service-security-overview.md)
 * [IMS-stöd för AEM as a Cloud Service](ims-support.md)
+* [Stöd för samma webbplats-cookie för AEM som en Cloud Service](same-site-cookie-support.md)
 
 ## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
 
