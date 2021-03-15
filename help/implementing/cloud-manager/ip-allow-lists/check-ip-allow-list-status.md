@@ -2,9 +2,9 @@
 title: Kontrollerar IP Tillåtelselista-status
 description: Kontrollerar IP Tillåtelselista-status
 translation-type: tm+mt
-source-git-commit: e6a8d69ea87ac56a51cde2f131c4accff1bea527
+source-git-commit: ddee11fdfa8cadfcd63472fd3c94cd8af555c856
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
@@ -41,4 +41,15 @@ När borttagningen är klar kommer IP Tillåtelselista att:
    * Statusen är Ta bort misslyckades, även om ett av dem misslyckas.
    * Statusen för Ta bort misslyckades tills alla fel har rensats. Användaren måste välja Ta bort från **..**-menyn längst till höger om raden i tabellen för att ta bort eventuella fel.
    * Användaren kan inte uppdatera IP Tillåtelselista medan statusen misslyckades.
+
+## Tidigare CDN-konfigurationer för IP-Tillåtelselista {#pre-existing-cdn}
+
+Kunder med miljöer som innehåller befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat eller anpassade domännamn ser följande meddelande på informationssidan för **IP Tillåtelselista** och **Miljö**.
+
+![](/help/implementing/cloud-manager/assets/ip-allow-list-1.png)
+
+>[!NOTE]
+>För att kunna se och hantera befintliga konfigurationer måste de läggas till via användargränssnittet, vilket visas i bilden nedan.
+
+![](/help/implementing/cloud-manager/assets/ip-allow-list-2.png)
 
