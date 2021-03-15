@@ -3,17 +3,17 @@ title: Rapporter om användning och delning
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d2ab7f8de4d18b48c312c9beabc58c77da7b2dfc
+source-git-commit: dc6823d9a0dabcc4fe1537073d90ca53da205556
 workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 5%
+source-wordcount: '820'
+ht-degree: 6%
 
 ---
 
 
-# Resursrapporter {#asset-reports}
+# Materialrapporter {#asset-reports}
 
-Med tillgångsrapportering kan du utvärdera verktyget för din [!DNL Adobe Experience Manager Assets]-distribution. Med [!DNL Assets] kan du generera olika rapporter för dina digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som hämtas och delas.
+Med tillgångsrapportering kan du utvärdera verktyget för din [!DNL Adobe Experience Manager Assets]-distribution. Med [!DNL Assets] kan du generera olika rapporter för dina digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som delas med <!-- downloaded and -->.
 
 Använd informationen i rapporterna för att ta fram nyckeltal för att mäta hur [!DNL Assets] används i ert företag och av era kunder.
 
@@ -28,7 +28,6 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 [!DNL Experience Manager Assets] genererar följande standardrapporter:
 
 * Överför
-* Hämta
 * Förfaller
 * Ändring
 * Publicera
@@ -36,6 +35,18 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 * Diskanvändning
 * Filer
 * Länkdelning
+
+<!-- Removed download report.
+* Upload
+* Download
+* Expiration
+* Modification
+* Publish
+* [!DNL Brand Portal] publish
+* Disk Usage
+* Files
+* Link Share
+-->
 
 [!DNL Adobe Experience Manager] administratörer kan enkelt generera och anpassa dessa rapporter för din implementering. Administratören kan följa de här stegen för att skapa en rapport:
 
@@ -47,20 +58,6 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]** och klicka på **[!UICONTROL Next]**.
 
    ![Välj rapporttyp](assets/choose_report.png)
-
-<!-- TBD: How do enable this in CS now? Is it done using some OSGi config now?
-   >[!NOTE]
-   >
-   >Before you can generate an **[!UICONTROL Asset Downloaded]** report, ensure that the Asset Download service is enabled. From the web console (`https://[aem_server]:[port]/system/console/configMgr`), open the **[!UICONTROL Day CQ DAM Event Recorder]** configuration, and select the **[!UICONTROL Asset Downloaded (DOWNLOADED)]** option in Event Types if not already selected.
--->
-
->[!NOTE]
->
->Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
-
->[!NOTE]
->
->I [!UICONTROL Download]-rapporten visas endast information om de resurser som har hämtats efter att du har valt var för sig eller som har hämtats med Snabbåtgärd. Den innehåller dock inte information om resurserna som finns i en hämtad mapp.
 
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
 
@@ -111,6 +108,16 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 
 Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer data för dina anpassade krav:
 
+<!-- Remove download report.
+* Upload
+* Download
+* Expiration
+* Modification
+* Publish
+* [!DNL Brand Portal] publish
+* Files
+-->
+
 * Överför
 * Hämta
 * Förfaller
@@ -152,6 +159,24 @@ To remove reports that you no longer require, configure the DAM Report Purge ser
 1. Save the changes.
 -->
 
-## Felsökningsinformation och tips {#tips-troubleshoot}
+## Felsökningsinformation {#tips-troubleshoot}
 
 * Om [!UICONTROL Disk Usage Report] inte genererar och om du använder [!DNL Dynamic Media] måste du se till att alla resurser fortsätter korrekt. Du löser problemet genom att bearbeta resurserna på nytt och generera rapporten igen.
+
+<!-- These notes were present in generate report section above. Removing commented text from in between the instructions to preserve the numbering of the ordered list.
+
+TBD: How do enable this in CS now? Is it done using some OSGi config now?
+   >[!NOTE]
+   >
+   >Before you can generate an **[!UICONTROL Asset Downloaded]** report, ensure that the Asset Download service is enabled. From the web console (`https://[aem_server]:[port]/system/console/configMgr`), open the **[!UICONTROL Day CQ DAM Event Recorder]** configuration, and select the **[!UICONTROL Asset Downloaded (DOWNLOADED)]** option in Event Types if not already selected.
+-->
+
+<!-- Removed download report.
+   >[!NOTE]
+   >
+   >By default, the Content Fragments and link shares are included in the asset [!UICONTROL Download] report. Select the appropriate option to create a report of link shares or to exclude Content Fragments from the download report.
+
+   >[!NOTE]
+   >
+   >The [!UICONTROL Download] report displays details of only those assets which are downloaded after selecting individually or are downloaded using Quick Action. However, it does not include the details of the assets that are inside a downloaded folder.
+-->
