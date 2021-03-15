@@ -2,9 +2,9 @@
 title: Kontrollerar status för ett SSL-certifikat - Hantera SSL-certifikat
 description: Kontrollerar status för ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: f426a9a653a3a3ae06abdbd2262e5d8f4beff277
+source-git-commit: ddee11fdfa8cadfcd63472fd3c94cd8af555c856
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
@@ -24,3 +24,14 @@ Anger att ditt certifikat upphör att gälla om mindre än 60 dagar. Det är dag
 
 * ****
 RedAnger att ditt SSL-certifikat har upphört att gälla trots flera meddelanden.
+
+## Tidigare CDN-konfigurationer för IP-Tillåtelselista {#pre-existing-cdn}
+
+Kunder med miljöer som innehåller befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat eller anpassade domännamn ser följande meddelande på informationssidan för **IP Tillåtelselista** och **Miljö**.
+
+![](/help/implementing/cloud-manager/assets/ip-allow-list-1.png)
+
+>[!NOTE]
+>För att kunna se och hantera befintliga konfigurationer måste de läggas till via användargränssnittet, vilket visas i bilden nedan.
+
+![](/help/implementing/cloud-manager/assets/ip-allow-list-2.png)
