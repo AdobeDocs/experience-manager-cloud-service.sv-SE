@@ -2,7 +2,7 @@
 title: Kontrollerar status för ett SSL-certifikat - Hantera SSL-certifikat
 description: Kontrollerar status för ett SSL-certifikat - Hantera SSL-certifikat
 translation-type: tm+mt
-source-git-commit: 0b04d43c8b5bb28286e616f0bd902c05ec56ec05
+source-git-commit: c6fe5e9dab0e119271c6cea272dddabe7babb1e4
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
