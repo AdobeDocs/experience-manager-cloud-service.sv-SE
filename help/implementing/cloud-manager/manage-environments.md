@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 translation-type: tm+mt
-source-git-commit: 5a4353cb31337882a1c13b0ed830ea64f617181a
+source-git-commit: ddee11fdfa8cadfcd63472fd3c94cd8af555c856
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1266'
 ht-degree: 4%
 
 ---
@@ -158,6 +158,10 @@ Följande åtgärder kan utföras på publiceringstjänsten för din miljö enli
 1. [Visa och uppdatera ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
 
 1. [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+
+1. [Kontrollerar status för anpassat ](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) domännamn eller ett  [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn).
+
+1. [Kontrollerar status för ett IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn)
 
 ## Hantera IP-Tillåtelselista {#manage-ip-allow-lists}
 
