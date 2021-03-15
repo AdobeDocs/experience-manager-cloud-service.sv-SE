@@ -2,7 +2,7 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: c6fe5e9dab0e119271c6cea272dddabe7babb1e4
+source-git-commit: 7059f0868fec3bbc665725c9ad2cc252805d8916
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%
@@ -87,8 +87,8 @@ Nästa version är planerad till den 8 april 2021.
 
 * Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
 
-   * Lägg till Sites-lösning i ett befintligt program med Assets (eller vice versa).
-   * Ta bort platser (eller resurser) från ett befintligt program med både platser och resurser.
+   * Lägg till Sites-lösning i ett befintligt program med Assets eller vice versa.
+   * Ta bort platser eller resurser från ett befintligt program med både platser och resurser.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
 
 * **AEM Push** Updatelabel visas nu för både  *Pipeline* Execution och  ** ActivityScreens.
