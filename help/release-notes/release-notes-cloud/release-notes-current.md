@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 612885895dda73afb3406f73e59ef3eec6202f5d
+source-git-commit: 5dabb0f9f119d8c56c4b1b64e1528f03e1a92fac
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
@@ -78,28 +78,29 @@ I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som
 ## Releasedatum {#release-date-cm-march}
 
 Releasedatum för Cloud Manager i AEM som Cloud Service 2021.3.0 är 11 mars 2021.
+Nästa version är planerad till den 8 april 2021.
 
 
 ### Nyheter {#what-is-new-march}
 
-* Kunder som har miljöer med befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat och anpassade domännamn ser ett meddelande om sina tidigare konfigurationer och kommer att kunna använda självbetjäning via användargränssnittet. Användarna kan nu:
+* Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att se ett meddelande om sina tidigare konfigurationer och kommer att kunna självbetjäna via användargränssnittet. Användarna kan nu:
    * Lägg till Sites-lösning i ett befintligt program med Assets (eller vice versa).
    * Ta bort platser (eller resurser) från ett befintligt program med både platser och resurser.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
 
-* Användare med nödvändig behörighet kan nu redigera program och göra följande på ett självbetjäningssätt.
+* Användare med nödvändig behörighet kan nu redigera programmet och göra följande på ett självbetjäningssätt.
 
-* Etiketten AEM push-uppdatering visas nu för både Pipeline Execution och Activity screens.
+* **AEM Push** Updatelabel visas nu för både  *Pipeline* Execution och  ** ActivityScreens.
 
-* Om en miljö är i viloläge men det även finns en AEM tillgänglig, prioriteras statusen&quot;Viloläge&quot; framför&quot;Tillgänglig uppdatering&quot;.
+* Om en miljö är i viloläge men det även finns en tillgänglig AEM uppdatering, kommer **statusen** att ha företräde framför **Tillgänglig uppdatering**.
 
 * Användarna kan nu se sin molnhanterarroll(er) genom att välja alternativet Visa molnhanterarroll(er) efter att ha navigerat till ikonen Användarprofil (överst till höger) i Unified Shell.
 
-* Etiketten&quot;Ansökan om godkännande&quot; har ändrats till&quot;Produktionsgodkännande&quot; för större tydlighet.
+* Etiketten **Ansökan om godkännande** har ändrats till **Produktionsgodkännande** för större tydlighet.
 
-* Versionsetiketten har ändrats till&quot;Git-tagg&quot; i körningsfönstret för produktionspipeline.
+* **Versionsetiketten** har ändrats till **Git-tagg** på körningsskärmen för produktionspipeline.
 
-* Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende - Avbryt omedelbart och godkänn omedelbart.
+* Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende - **Avbryt omedelbart** och **Godkänn omedelbart**.
 
 * Listorna över klass- och metodborttagning har uppdaterats baserat på version `2021.3.4997.20210303T022849Z-210225` av AEM Cloud Service-SDK.
 
