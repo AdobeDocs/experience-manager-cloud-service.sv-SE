@@ -3,10 +3,10 @@ title: Konfigurera AEM Assets som en [!DNL Cloud Service] med varumärkesportale
 description: Konfigurera AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 translation-type: tm+mt
-source-git-commit: b6283cfff0a0476cc45eb9da75a3a9b2bfdef7bd
+source-git-commit: 4a22ef2913e88b037a65746f782e4c6a20afdddb
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 15%
+source-wordcount: '2269'
+ht-degree: 14%
 
 ---
 
@@ -17,7 +17,7 @@ När du konfigurerar Adobe Experience Manager Assets Brand Portal kan du publice
 
 ## Aktivera varumärkesportalen med hjälp av Cloud Manager {#activate-brand-portal}
 
-Cloud Manager-användaren aktiverar varumärkesportalen för en AEM Assets som en [!DNL Cloud Service]-instans. Aktiveringsarbetsflödet skapar de nödvändiga konfigurationerna (auktoriseringstoken, IMS-konfiguration och molntjänsten Brand Portal) i bakgrunden och speglar statusen för innehavaren av varumärkesportalen i Cloud Manager.
+Cloud Manager-användaren aktiverar varumärkesportalen för en AEM Assets som en [!DNL Cloud Service]-instans. Aktiveringsarbetsflödet skapar de nödvändiga konfigurationerna (auktoriseringstoken, IMS-konfiguration och molntjänsten Brand Portal) i bakgrunden och speglar statusen för innehavaren av varumärkesportalen i Cloud Manager. Genom att aktivera Brand Portal kan AEM Assets-användare publicera material på Brand Portal och distribuera dem till Brand Portal-användarna.
 
 **Förutsättningar**
 
@@ -28,7 +28,7 @@ Du behöver följande för att aktivera varumärkesportalen på din AEM Assets s
 
 >[!NOTE]
 >
->En AEM Assets som [!DNL Cloud Service]-instans har bara rätt att ansluta en Brand Portal-klient. Du kan skapa flera miljöer (utveckling, produktion och scen) för din AEM Assets som en [!DNL Cloud Service]-instans, där Brand Portal bara aktiveras i en miljö.
+>En AEM Assets som [!DNL Cloud Service]-instans har bara rätt att ansluta till en Brand Portal-klient. Du kan ha flera miljöer (utveckling, produktion och scen) för din AEM Assets som en [!DNL Cloud Service]-instans, där Brand Portal aktiveras i en miljö.
 
 **Steg för att aktivera varumärkesportalen**
 
@@ -46,9 +46,18 @@ Du kan aktivera Brand Portal när du skapar miljöer för din AEM Assets som en 
 
    ![Aktivera varumärkesportal](assets/create-environment4.png)
 
-1. Det kan ta några minuter att aktivera innehavaren av varumärkesportalen när aktiveringsarbetsflödet skapar de nödvändiga konfigurationerna i serverdelen. När klienten för varumärkesportalen har aktiverats ändras statusen till Aktiverad.
+1. Det tar några minuter att aktivera innehavaren av varumärkesportalen när aktiveringsarbetsflödet skapar de nödvändiga konfigurationerna i serverdelen. När klienten för varumärkesportalen har aktiverats ändras statusen till Aktiverad.
 
    ![Visa status](assets/create-environment5.png)
+
+
+>[!NOTE]
+>
+>Varumärkesportalen måste aktiveras i samma IMS-organisation som i AEM Assets som en [!DNL Cloud Service]-instans.
+>
+>Om du har en befintlig Brand Portal-molnkonfiguration ([manuellt konfigurerad med hjälp av Adobe Developer Console](#manual-configuration)) för en IMS-organisation (org1-befintlig) och din AEM Assets som en [!DNL Cloud Service]-instans är konfigurerad för en annan IMS-organisation (org2-new), återställs Brand Portal från Cloud Manager till `org2-new` . Även om den manuellt konfigurerade molnkonfigurationen på `org1-existing` kommer att visas i AEM Assets författarinstans, men kommer inte längre att användas efter att du har aktiverat Varumärksportal från molnhanteraren.
+>
+>Om den befintliga Brand Portal-molnkonfigurationen och AEM Assets som en [!DNL Cloud Service]-instans använder samma IMS-organisation (org1) behöver du bara aktivera Brand Portal från Cloud Manager.
 
 **Se även**:
 * [Lägga till användare och roller i AEM Assets som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/what-is-required/add-users-roles.html?lang=en#role-definitions)
@@ -58,9 +67,11 @@ Du kan aktivera Brand Portal när du skapar miljöer för din AEM Assets som en 
 
 **Logga in på din klient** för varumärkesportalen:
 
-När du har aktiverat din klient för varumärkesportalen i Cloud Manager kan du logga in på varumärkesportalen från Admin Console eller direkt via innehavarens URL.
+När du har aktiverat din klient för varumärkesportalen i Cloud Manager kan du logga in på Brand Portal från Admin Console eller direkt via innehavarens URL.
 
 Din varumärksportals standardwebbadress är: `https://<tenant-id>.brand-portal.adobe.com/`.
+
+Där är innehavar-ID:t IMS-organisationen.
 
 Utför följande steg om du inte är säker på varumärkesportalens URL:
 
@@ -68,7 +79,7 @@ Utför följande steg om du inte är säker på varumärkesportalens URL:
 1. Välj **[!UICONTROL Adobe Experience Manager Brand Portal – Brand Portal]** i den vänstra listen.
 1. Klicka på **[!UICONTROL Go to Brand Portal]** för att öppna varumärkesportalen direkt i webbläsaren.
 
-   Eller kopiera innehavar-URL:en för varumärkesportalen och klistra in den i webbläsaren för att öppna gränssnittet för varumärkesportalen.
+   Du kan också kopiera innehavar-URL:en för varumärkesportalen från länken **[!UICONTROL Go to Brand Portal]** och klistra in den i webbläsaren för att öppna gränssnittet för varumärkesportalen.
 
    ![Åtkomst till varumärkesportal](assets/access-bp-on-cloud.png)
 
@@ -130,16 +141,16 @@ Mer information finns i [varumärkesportaldokumentationen](https://docs.adobe.co
 
 Du kan övervaka distributionsagentloggarna för publiceringsarbetsflödet.
 
-Vi har till exempel publicerat en resurs från AEM Assets till varumärkesportalen för att validera konfigurationen.
+Låt oss nu publicera en mediefil från AEM Assets till Brand Portal och se loggarna.
 
-1. Följ stegen (från 1 till 4) som visas i avsnittet [Testa konfiguration](#test-configuration) och navigera till sidan för distributionsagenten.
+1. Följ stegen (från 1 till 4) som visas i avsnittet **Testa anslutningen** och navigera till sidan för distributionsagenten.
 1. Klicka på **[!UICONTROL Logs]** för att visa bearbetnings- och felloggarna.
 
    ![](assets/test-bpconfig5.png)
 
 Distributionsagenten har genererat följande loggar:
 
-* INFORMATION: Detta är en systemgenererad logg som utlöser en lyckad konfiguration av distributionsagenten.
+* INFORMATION: Det är en systemgenererad logg som utlöser en lyckad konfiguration av distributionsagenten.
 * DSTRQ1 (Begäran 1): Utlöses vid testanslutning.
 
 Följande begärande- och svarsloggar genereras när resursen publiceras:
@@ -164,7 +175,7 @@ Förutom automatiseringsarbetsflödet för att aktivera Brand Portal på AEM Ass
 
 >[!NOTE]
 >
->Du måste kontakta Adobe Support om du stöter på problem när du aktiverar din varumärkesportal-klient.
+>Kontakta Adobe Support om du har problem med att aktivera din varumärkesportal-klient.
 
 ## Manuell konfiguration med Adobe Developer Console {#manual-configuration}
 
@@ -225,7 +236,7 @@ Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Develope
 
 1. Klicka på ikonen **[!UICONTROL Download Public Key]** och spara filen med den offentliga nyckeln (CRT) på datorn.
 
-   Den offentliga nyckeln kommer att användas senare för att konfigurera API för din varumärksportal och generera autentiseringsuppgifter för tjänstkontot i Adobe Developer Console.
+   Den offentliga nyckeln används senare för att konfigurera API för din varumärksportal och generera autentiseringsuppgifter för tjänstkontot i Adobe Developer Console.
 
    ![Hämta certifikatet](assets/ims-config3.png)
 
