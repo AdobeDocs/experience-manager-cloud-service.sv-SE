@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 5dabb0f9f119d8c56c4b1b64e1528f03e1a92fac
+source-git-commit: 36e5e90785a1bc9a4f4f8d4febd462e00252a0ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
@@ -83,12 +83,13 @@ Nästa version är planerad till den 8 april 2021.
 
 ### Nyheter {#what-is-new-march}
 
-* Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att se ett meddelande om sina tidigare konfigurationer och kommer att kunna självbetjäna via användargränssnittet. Användarna kan nu:
+* Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att se ett meddelande om sina tidigare konfigurationer och kommer att kunna självbetjäna via användargränssnittet.
+
+* Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
+
    * Lägg till Sites-lösning i ett befintligt program med Assets (eller vice versa).
    * Ta bort platser (eller resurser) från ett befintligt program med både platser och resurser.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
-
-* Användare med nödvändig behörighet kan nu redigera programmet och göra följande på ett självbetjäningssätt.
 
 * **AEM Push** Updatelabel visas nu för både  *Pipeline* Execution och  ** ActivityScreens.
 
