@@ -2,7 +2,7 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
 translation-type: tm+mt
-source-git-commit: 36e5e90785a1bc9a4f4f8d4febd462e00252a0ea
+source-git-commit: c6fe5e9dab0e119271c6cea272dddabe7babb1e4
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
@@ -30,21 +30,21 @@ Nästa version är planerad till den 8 april 2021.
    * Ta bort platser (eller resurser) från ett befintligt program med både platser och resurser.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
 
-* Etiketten AEM push-uppdatering visas nu för både Pipeline Execution och Activity screens.
+* **AEM Push** Updatelabel visas nu för både Pipeline Execution och Activity screens.
 
-* Om en miljö är i viloläge men det även finns en AEM tillgänglig, prioriteras statusen&quot;Viloläge&quot; framför&quot;Tillgänglig uppdatering&quot;.
+* Om en miljö är i viloläge men det även finns en tillgänglig AEM uppdatering, kommer **statusen** att ha företräde framför **Tillgänglig uppdatering**.
 
 * Användarna kan nu se sin molnhanterarroll(er) genom att välja alternativet Visa molnhanterarroll(er) efter att ha navigerat till ikonen Användarprofil (överst till höger) i Unified Shell.
 
-* Etiketten&quot;Ansökan om godkännande&quot; har ändrats till&quot;Produktionsgodkännande&quot; för större tydlighet.
+* Etiketten **Ansökan om godkännande** har ändrats till **Produktionsgodkännande** för större tydlighet.
 
-* Versionsetiketten har ändrats till&quot;Git-tagg&quot; i körningsfönstret för produktionspipeline.
+* **Versionsetiketten** har ändrats till **Git-tagg** på körningsskärmen för produktionspipeline.
 
-* Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende - Avbryt omedelbart och godkänn omedelbart.
+* Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende: **Avbryt omedelbart** och **Godkänn omedelbart**.
 
 * Listorna över klass- och metodborttagning har uppdaterats baserat på version `2021.3.4997.20210303T022849Z-210225` av AEM Cloud Service-SDK.
 
-* Produktionspipelinen för Cloud Manager kommer nu att innehålla testning av anpassade användargränssnitt.
+* Produktionspipelinen för Cloud Manager kommer nu att innehålla funktionen [testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing).
 
 ### Felkorrigeringar {#bug-fixes}
 
