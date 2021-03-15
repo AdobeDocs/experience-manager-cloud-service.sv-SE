@@ -3,9 +3,9 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f548a4eecbd2a7c6bad2a848ce493c2dcff3f248
+source-git-commit: f3c02cc79d5d56b67224761efd6a70ae597fe7fe
 workflow-type: tm+mt
-source-wordcount: '2617'
+source-wordcount: '2620'
 ht-degree: 27%
 
 ---
@@ -28,7 +28,7 @@ För [!DNL Sites]-författare är fjärrresurserna tillgängliga som skrivskydda
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
 * Användarna ingår i rätt användargrupper för varje distribution.
-* För [!DNL Adobe Experience Manager]-distributionstyper uppfylls ett av villkoren. Mer information om hur den här funktionen fungerar i [!DNL Experience Manager] 6.5 finns i [Anslutna resurser i Experience Manager 6.5-resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
+* För [!DNL Adobe Experience Manager]-distributionstyper uppfylls ett av villkoren. Mer information om hur den här funktionen fungerar i [!DNL Experience Manager] 6.5 finns i [Anslutna resurser i [!DNL Experience Manager] 6.5 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
 
    |  | [!DNL Sites] som  [!DNL Cloud Service] | [!DNL Experience Manager] 6.5  [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5  [!DNL Sites] på plats |
    |---|---|---|---|
@@ -45,7 +45,7 @@ Författare söker efter bilder och följande typer av dokument i Content Finder
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
 
-De olika roller som krävs för att konfigurera och använda funktionen och motsvarande användargrupper beskrivs nedan. Lokalt omfång används för de fall där en författare skapar en webbsida. Fjärrscope används för DAM-distributionen. [!DNL Sites]-författaren hämtar dessa fjärrresurser.
+De olika roller som krävs för att konfigurera och använda funktionen och motsvarande användargrupper beskrivs nedan. Lokalt omfång används för de fall där en författare skapar en webbsida. Fjärromfång används för DAM-distributionen som är värd för de nödvändiga resurserna. [!DNL Sites]-författaren hämtar dessa fjärrresurser.
 
 | Roll | Omfång | Användargrupp | Användarnamn i genomgång | Krav |
 |------|--------|-----------|-----|----------|
@@ -69,7 +69,7 @@ Så här konfigurerar du anslutna resurser och lokal [!DNL Sites]-anslutning:
 
 1. Kontrollera att användare och roller med rätt omfång finns i [!DNL Sites]-distributionen och i [!DNL Assets]-distributionen på AMS. Skapa en teknisk användare av [!DNL Assets]-distributionen och lägg till i användargruppen som nämns i [användare och grupper som är inblandade](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved).
 
-1. Åtkomst till den lokala [!DNL Sites]-distributionen på `https://[sites_servername]:port`. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Connected Assets Configuration]**. Ange följande värden:
+1. Åtkomst till den lokala [!DNL Sites]-distributionen på `https://[sites_servername]:port`. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Connected Assets Configuration]** och ange följande värden:
 
    1. En **[!UICONTROL Title]** av konfigurationen.
    1. **[!UICONTROL Remote DAM URL]** är URL:en för  [!DNL Assets] platsen i formatet  `https://[assets_servername]:[port]`.
@@ -84,7 +84,7 @@ Så här konfigurerar du anslutna resurser och lokal [!DNL Sites]-anslutning:
 
    *Bild: En typisk konfiguration för funktionen Anslutna resurser.*
 
-1. De befintliga digitala resurserna för [!DNL Assets]-distributionen har redan bearbetats och återgivningarna genereras. Dessa hämtas med den här funktionen så du behöver inte generera om återgivningarna. Inaktivera arbetsflödets startprogram för att förhindra återgivning av återgivningar. Justera startkonfigurationerna för ([!DNL Sites])-distributionen för att exkludera mappen `connectedassets` (resurserna hämtas i den här mappen).
+1. De befintliga digitala resurserna för [!DNL Assets]-distributionen har redan bearbetats och återgivningarna genereras. Dessa återgivningar hämtas med den här funktionen så du behöver inte generera om återgivningarna. Inaktivera arbetsflödets startprogram för att förhindra återgivning av återgivningar. Justera startkonfigurationerna för ([!DNL Sites])-distributionen för att exkludera mappen `connectedassets` (resurserna hämtas i den här mappen).
 
    1. Vid [!DNL Sites]-distribution klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
 
@@ -95,7 +95,7 @@ Så här konfigurerar du anslutna resurser och lokal [!DNL Sites]-anslutning:
    1. I guiden [!UICONTROL Properties] ändrar du fälten **[!UICONTROL Path]** som följande mappningar för att uppdatera deras reguljära uttryck så att den inte omfattar monteringspunkten **[!UICONTROL connectedassets]**.
 
    | Före | Efter |
-   | ------------------------------------------------------- | -------------------------------------------------------------------------- |
+   | ------ | ------------ |
    | `/content/dam(/((?!/subassets).)*/)renditions/original` | `/content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original` |
    | `/content/dam(/.*/)renditions/original` | `/content/dam(/((?!connectedassets).)*/)renditions/original` |
    | `/content/dam(/.*)/jcr:content/metadata` | `/content/dam(/((?!connectedassets).)*/)jcr:content/metadata` |
