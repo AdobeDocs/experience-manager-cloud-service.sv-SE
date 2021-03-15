@@ -3,9 +3,9 @@ title: XMP-metadata
 description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0aac16705342f9652f38beef956a55d3f8f5df7d
+source-git-commit: 46f5ffbdce0bf555e9576126acec61cdae0a1de0
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '981'
 ht-degree: 16%
 
 ---
@@ -72,7 +72,7 @@ XMP ger dig möjlighet att lägga till en `xml:lang`-egenskap i textegenskaper f
 
 ## XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
-Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs från [!DNL Assets] eller när du överför resursen, lagras ändringarna från början i resursnoden i databasen. XMP återskrivningsfunktion sprider metadataändringarna till alla eller specifika återgivningar av resursen.
+Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs från [!DNL Assets] eller när du överför resursen, lagras ändringarna från början i resursnoden i databasen. [!DNL Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs. Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Uppdateringarna lagras i metadatanoden i resurshierarkin. Den här funktionen bäddar också in uppdateringarna i de binära filerna för återgivningarna. Funktionen skriver bara tillbaka de metadataegenskaper som använder ett `jcr`-namnutrymme.
 
 Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen `Classic Leather` till `Nylon`.
 
@@ -80,13 +80,11 @@ Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resurs
 
 I det här fallet sparar [!DNL Assets] ändringarna av egenskapen **[!UICONTROL Title]** i parametern `dc:title` för de metadata för resursen som lagras i resurshierarkin.
 
-![metadata_stored](assets/metadata_stored.png)
+![metadata som lagras i resursnoden i databasen](assets/metadata_stored.png)
 
-[!DNL Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs.
-
-Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
-
-Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur du [aktiverar tillbakaskrivning av metadata](#enable-xmp-writeback).
+>[!NOTE]
+>
+>Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur du [aktiverar tillbakaskrivning av metadata](#enable-xmp-writeback).
 
 ### Aktivera XMP-tillbakaskrivning {#enable-xmp-writeback}
 
@@ -95,11 +93,11 @@ Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa åte
 1. Som administratör ska du gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
 1. Markera [!UICONTROL Launcher] som **[!UICONTROL Workflow]**-kolumnen visar **[!UICONTROL DAM MetaData Writeback]**. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
 
-   ![Välj starten för DAM-metadatatillbakaskrivning för att ändra dess egenskaper och aktivera den](assets/launcher-properties-metadata-writeback1.png)
+   ![Välj DAM-metadataåterskrivningsstartaren för att ändra dess egenskaper och aktivera den](assets/launcher-properties-metadata-writeback1.png)
 
-1. Välj **[!UICONTROL Activate]** på sidan [!UICONTROL Launcher Properties]. Klicka på **[!UICONTROL Save & Close]**.
+1. Välj **[!UICONTROL Activate]** på sidan **[!UICONTROL Launcher Properties]**. Klicka på **[!UICONTROL Save & Close]**.
 
-Om du bara vill tillämpa det här arbetsflödet på en resurs en gång, använder du arbetsflödet [!UICONTROL DAM Metadata Writeback] från den vänstra listen. Om du vill använda arbetsflödet på de överförda resurserna lägger du till arbetsflödet i en efterbearbetningsprofil.
+Om du bara vill använda det här arbetsflödet på en resurs en gång, använder du arbetsflödet [!UICONTROL DAM Metadata Writeback] från den vänstra listen. Om du vill använda arbetsflödet på alla överförda resurser lägger du till arbetsflödet i en efterbearbetningsprofil.
 
 <!-- Commenting for now. Need to document how to enable metadata writeback. See CQDOC-17254.
 
