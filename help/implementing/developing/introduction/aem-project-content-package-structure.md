@@ -2,9 +2,9 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: 1a282bdaca02f47d7936222da8522e74831a4572
+source-git-commit: e99e802873b805b06e401880bd98c90dc88846c6
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '2850'
 ht-degree: 13%
 
 ---
@@ -87,6 +87,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
          + Grupper
          + ACL-listor (behörigheter)
 
+
 ### Innehållspaket
 
 + Paketet `ui.content` innehåller allt innehåll och all konfiguration. Innehållspaketet innehåller alla noddefinitioner som inte finns i `ui.apps`- eller `ui.config`-paketen, eller med andra ord något som inte finns i `/apps` eller `/oak:index`. Vanliga element i `ui.content`-paketet omfattar, men är inte begränsade till:
@@ -138,9 +139,10 @@ Ett AEM projekt som innehåller 2 AEM program kan se ut så här:
 
 Paket ska märkas med sin deklarerade pakettyp.
 
-+ Behållarpaket måste ange `packageType` som `container`.
++ Behållarpaket måste ange `packageType` som `container`. Behållarpaket får inte innehålla OSGi-paket, OSGi-konfigurationer och får inte använda [installationsnätverk](http://jackrabbit.apache.org/filevault/installhooks.html).
 + Kodpaket (ej ändringsbart) måste ange `packageType` som `application`.
 + Innehållspaket (mutable) måste ange `packageType` som `content`.
+
 
 Mer information finns i [dokumentationen till Apache Jackrabbit FileVault - Package Maven Plugin](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType) och [konfigurationsfragmentet för FileVault Maven](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
 
@@ -404,7 +406,7 @@ I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`)
 
 ### Repo Init{#snippet-repo-init}
 
-Repo Init-skript som innehåller Repo Init-skript definieras i OSGi-fabrikskonfigurationen via egenskapen `RepositoryInitializer`. `scripts` Observera att eftersom dessa skript definieras i OSGi-konfigurationer kan de enkelt omfångas i körningsläge med det vanliga `../config.<runmode>`-mappsemantiken.
+Repo Init-skript som innehåller Repo Init-skript definieras i OSGi-fabrikskonfigurationen via egenskapen `scripts`. `RepositoryInitializer` Observera att eftersom dessa skript definieras i OSGi-konfigurationer kan de enkelt omfångas i körningsläge med det vanliga `../config.<runmode>`-mappsemantiken.
 
 Observera, att eftersom skript vanligtvis är flerradsdeklarationer är det enklare att definiera dem i `.config`-filen än det JSON-baserade `.cfg.json`-formatet.
 
