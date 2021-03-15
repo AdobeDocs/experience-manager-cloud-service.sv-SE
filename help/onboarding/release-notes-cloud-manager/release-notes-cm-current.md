@@ -2,7 +2,7 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
 translation-type: tm+mt
-source-git-commit: c6fe5e9dab0e119271c6cea272dddabe7babb1e4
+source-git-commit: 7059f0868fec3bbc665725c9ad2cc252805d8916
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
@@ -26,8 +26,8 @@ Nästa version är planerad till den 8 april 2021.
 * Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att se ett meddelande om sina tidigare konfigurationer och kommer att kunna självbetjäna via användargränssnittet.
 
 * Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
-   * Lägg till Sites-lösning i ett befintligt program med Assets (eller vice versa).
-   * Ta bort platser (eller resurser) från ett befintligt program med både platser och resurser.
+   * Lägg till Sites-lösning i ett befintligt program med Assets eller vice versa.
+   * Ta bort platser eller resurser från ett befintligt program med både platser och resurser.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
 
 * **AEM Push** Updatelabel visas nu för både Pipeline Execution och Activity screens.
