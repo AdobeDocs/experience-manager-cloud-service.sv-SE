@@ -2,9 +2,9 @@
 title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 450d78be9472c854a13ba35965ac10f806aba3d9
+source-git-commit: 9c1fc1f1d5b744497673db5e96104d5cf1f570ce
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3229'
 ht-degree: 1%
 
 ---
@@ -62,6 +62,8 @@ Allt innehåll och all kod som lagras i den oföränderliga databasen måste che
 När programändringar på grund av det blå-gröna distributionsmönstret aktiveras av en växel kan de inte vara beroende av ändringar i den ändringsbara databasen, med undantag för tjänstanvändare, deras åtkomstkontrollistor, nodtyper och indexdefinitionsändringar.
 
 För kunder med befintliga kodbaser är det viktigt att gå igenom den databasomstrukturering som beskrivs i AEM dokumentation för att se till att innehåll som tidigare fanns under /etc flyttas till rätt plats.
+
+Vissa ytterligare begränsningar gäller för dessa kodpaket, till exempel stöds inte [installationshögar](http://jackrabbit.apache.org/filevault/installhooks.html).
 
 ## OSGI-konfiguration {#osgi-configuration}
 
@@ -295,7 +297,7 @@ De runmode-konfigurationer som stöds är:
 
 Den OSGI-konfiguration som har de mest matchande körlägena används.
 
-Vid lokal utveckling kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
+När du utvecklar lokalt kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
 
 <!-- ### Performance Monitoring {#performance-monitoring}
 
