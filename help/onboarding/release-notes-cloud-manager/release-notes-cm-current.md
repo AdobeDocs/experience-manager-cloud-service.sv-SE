@@ -2,9 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
 translation-type: tm+mt
-source-git-commit: 5dabb0f9f119d8c56c4b1b64e1528f03e1a92fac
+source-git-commit: 36e5e90785a1bc9a4f4f8d4febd462e00252a0ea
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,12 @@ Nästa version är planerad till den 8 april 2021.
 
 ### Nyheter {#what-is-new}
 
-* Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att se ett meddelande om sina tidigare konfigurationer och kommer att kunna självbetjäna via användargränssnittet. Användarna kan nu:
+* Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att se ett meddelande om sina tidigare konfigurationer och kommer att kunna självbetjäna via användargränssnittet.
+
+* Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
    * Lägg till Sites-lösning i ett befintligt program med Assets (eller vice versa).
    * Ta bort platser (eller resurser) från ett befintligt program med både platser och resurser.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
-
-* Användare med nödvändig behörighet kan nu redigera program och göra följande på ett självbetjäningssätt.
 
 * Etiketten AEM push-uppdatering visas nu för både Pipeline Execution och Activity screens.
 
