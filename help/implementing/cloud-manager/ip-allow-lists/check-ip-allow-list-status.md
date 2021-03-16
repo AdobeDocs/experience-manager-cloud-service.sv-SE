@@ -2,9 +2,9 @@
 title: Kontrollerar IP Tillåtelselista-status
 description: Kontrollerar IP Tillåtelselista-status
 translation-type: tm+mt
-source-git-commit: c6fe5e9dab0e119271c6cea272dddabe7babb1e4
+source-git-commit: 46004eb1925533545605a09f62bbd0e7945227e0
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
@@ -46,10 +46,11 @@ När borttagningen är klar kommer IP Tillåtelselista att:
 
 Kunder med miljöer som innehåller befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat eller anpassade domännamn ser följande meddelande på informationssidan för **IP Tillåtelselista** och **Miljö**. Meddelandet som visas i användargränssnittet försvinner när kunden har migrerat alla befintliga miljökonfigurationer via användargränssnittet och det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
+>[!NOTE]
+>För att kunna se och hantera befintliga konfigurationer måste de läggas till via användargränssnittet. Mer information finns i [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md).
+
 ![](/help/implementing/cloud-manager/assets/ip-allow-list-1.png)
 
->[!NOTE]
->För att kunna se och hantera befintliga konfigurationer måste de läggas till via användargränssnittet, vilket visas i bilden nedan.
 
 ![](/help/implementing/cloud-manager/assets/ip-allow-list-2.png)
 
