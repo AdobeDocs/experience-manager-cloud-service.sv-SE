@@ -2,10 +2,10 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 translation-type: tm+mt
-source-git-commit: d1a944606a88a0afded94592676f14c0ba84e954
+source-git-commit: 7c7ae680932849cf2ed0be3dc10618d55acc8366
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 7%
+source-wordcount: '1104'
+ht-degree: 5%
 
 ---
 
@@ -20,17 +20,35 @@ En stor förändring i AEM as a Cloud Service är den helt integrerade användni
 
 ## Viktiga överväganden {#important-considerations}
 
-Det finns ett fåtal exceptionella fall som behöver övervägas. Följande specialfall loggas och användaren eller gruppen i fråga mappas inte:
+### Undantag {#exceptional-cases}
 
-1. Om en användare inte har någon e-postadress i fältet `profile/email` i noden *jcr*.
+Följande specialfall loggas:
 
-1. Om det inte går att hitta ett visst e-postmeddelande i IMS-systemet (Adobe Identity Management System) för det organisations-ID som används (eller om IMS-ID inte kan hämtas av någon annan anledning).
+1. Om en användare inte har någon e-postadress i fältet `profile/email` i noden *jcr* migreras användaren eller gruppen i fråga men mappas inte.
+
+1. Om ett visst e-postmeddelande inte hittas i IMS-systemet (Adobe Identity Management System) för det organisations-ID som används (eller om IMS-ID inte kan hämtas av någon annan anledning) migreras användaren eller gruppen i fråga men inte mappas.
 
 1. Om användaren är inaktiverad behandlas den på samma sätt som om den inte var inaktiverad. Den mappas och migreras som vanligt och förblir inaktiverad i molninstansen.
 
+1. Om en användare finns på AEM Cloud Service-instansen för målet med samma användarnamn (rep:PrincipalName) som en av användarna på AEM för källan migreras inte användaren eller gruppen i fråga.
+
+### Ytterligare överväganden {#additional-considerations}
+
+* Om inställningen **Rensa befintligt innehåll i molninstansen innan importen** har angetts tas redan överförda användare i Cloud Servicen bort tillsammans med hela den befintliga databasen och en ny databas skapas för att importera innehåll till. Detta återställer även alla inställningar inklusive behörigheter för målanvändarinstansen och gäller för en administratörsanvändare som har lagts till i gruppen **administratörer**. Administratörsanvändaren måste läggas till på nytt i gruppen **administratörer** för att hämta åtkomsttoken för CTT.
+
+* Vi rekommenderar att du tar bort alla befintliga användare från målinstansen AEM Cloud Servicen innan du kör CTT med användarmappning. Detta för att förhindra konflikter mellan att migrera användare från AEM till AEM. Konflikter uppstår under importen om samma användare finns på AEM och AEM.
+
+* När innehållsöverläggningar utförs och innehållet inte överförs eftersom det inte har ändrats sedan den tidigare överföringen, kommer användare och grupper som är kopplade till det innehållet inte heller att överföras, även om användare och grupper har ändrats under tiden. Detta beror på att användare och grupper migreras tillsammans med det innehåll de är kopplade till.
+
+* Inmatning misslyckas i följande scenarier:
+
+1. Om målinstansen AEM Cloud Servicen har en användare med ett annat användarnamn men samma e-postadress som en av användarna i AEM.
+
+1. Om det finns två användare i AEM med olika användarnamn men samma e-postadress. AEM som en Cloud Service tillåter inte att två användare har samma e-postadress.
+
 ## Använda verktyget för användarmappning {#using-user-mapping-tool}
 
-Användarmappningsverktyget använder ett API som gör att det kan söka efter IMS-användare (Adobe Identity Management System) via e-post och returnera deras IMS-ID. Denna API kräver att användaren skapar ett klient-ID för sin organisation, en klienthemlighet och en Access- eller Bearer-token.
+Användarmappningsverktyget använder ett API som gör att det kan slå upp IMS-användare (Adobe Identity Management System) via e-post och returnera sina IMS-ID:n. Denna API kräver att användaren skapar ett klient-ID för sin organisation, en klienthemlighet och en Access- eller Bearer-token.
 
 Följ stegen nedan för att konfigurera detta:
 
@@ -84,6 +102,4 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-4.png)
 
 1. Mer information om hur du kör extraheringsfasen finns i [Köra verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#running-tool).
-
-
 
