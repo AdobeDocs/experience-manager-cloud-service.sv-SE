@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: 7059f0868fec3bbc665725c9ad2cc252805d8916
+source-git-commit: ebd2e870255dc0a62a4369e0eead9f6981856746
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1698'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,8 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 ## [!DNL Adobe Experience Manager Assets] som  [!DNL Cloud Service] {#assets}
 
 ## Nyheter i [!DNL Assets] {#what-is-new-assets}
+
+* [!DNL Experience Manager Assets] som  [!DNL Cloud Service] har rätt att ha en förkonfigurerad  [!DNL Brand Portal] instans. [!DNL Cloud Manager]-användaren kan aktivera [!DNL Brand Portal] på [!DNL Experience Manager Assets] som en [!DNL Cloud Service]. Se [aktivera varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=en).
 
 * Företag kan nu hämta resurser med [!DNL Brand Portal]. Funktionen för resurskälla utnyttjar [!DNL Brand Portal] för att hjälpa kunderna att interagera med byråanvändare för att hämta resurser för nya marknadsföringskampanjer, fotografier och projekt. Se [resurskälla i [!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html).
 
