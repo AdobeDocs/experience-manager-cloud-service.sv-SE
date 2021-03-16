@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: b3e6cc15e283ca7996b4a55ccb88ef9880b09903
+source-git-commit: 64106e167270271c84b9f68a2babdf09f79aae86
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1754'
 ht-degree: 0%
 
 ---
@@ -233,7 +233,7 @@ Releasedatum för Best Practices Analyzer v2.1.2 är 18 februari 2021.
 
 **Vissa lokala byggen kan misslyckas på grund av ett problem med plugin-programmet Local Build Analyzer**
 
-I vissa fall kan ett lokalt projektbygge misslyckas under körningen av `aemanalyser-maven-plugin` med följande felmeddelande:
+I vissa fall kan ett projektbygge misslyckas under körningen av `aemanalyser-maven-plugin` med följande felmeddelande:
 
 ```
 [ERROR] repoinit: Parsing error in repoinit from extension : Encountered "" at line 15, column 37.
