@@ -2,7 +2,7 @@
 title: Kontrollerar domännamnsstatus
 description: Kontrollerar domännamnsstatus
 translation-type: tm+mt
-source-git-commit: f3df4b23dc4542e7a194c979a7894bda1b728572
+source-git-commit: e99c8552e2afff677c08c859dd1044287053a40e
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 0%
@@ -49,6 +49,6 @@ Kunder med miljöer som innehåller befintliga CDN-konfigurationer för IP-Till�
 >[!NOTE]
 >För att kunna se och hantera befintliga konfigurationer måste de läggas till via användargränssnittet. Mer information finns i [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
 
-![](/help/implementing/cloud-manager/assets/ip-allow-list-1.png)
+![](/help/implementing/cloud-manager/assets/ip-allow-list-message1.png)
 
-![](/help/implementing/cloud-manager/assets/ip-allow-list-2.png)
+![](/help/implementing/cloud-manager/assets/ip-allow-list-message2.png)
