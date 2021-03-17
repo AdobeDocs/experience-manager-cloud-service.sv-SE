@@ -2,7 +2,7 @@
 title: Introduktion - Anpassade domännamn
 description: Introduktion - Anpassade domännamn
 translation-type: tm+mt
-source-git-commit: 677a5d65bb15c9579f19b0b4e8ef03d1201e4a94
+source-git-commit: e99c8552e2afff677c08c859dd1044287053a40e
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Din Adobe Experience Manager som Cloud Service etableras med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen.
 
 >[!NOTE]
->Anpassade domännamn stöds endast i Cloud Manager för Sites Programs (Publiceringstjänst). Varje Cloud Manager-miljö har plats för upp till 100 anpassade domäner per miljö.
+>Anpassade domännamn stöds endast i Cloud Manager för Sites Programs (Publiceringstjänst). Varje Cloud Manager-miljö har plats för upp till 250 anpassade domäner per miljö.
 
 Med hjälp av sidan Domäninställningar för användargränssnitt i Cloud Manager, eller sidan Miljöinformation, kan en användare med behörighet utföra flera åtgärder för att hantera anpassade domännamn för dina miljöer, bland annat:
 
