@@ -3,10 +3,10 @@ title: XMP-metadata
 description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 46f5ffbdce0bf555e9576126acec61cdae0a1de0
+source-git-commit: c3da535db4bf2b0f71e338f542d388437d6c1623
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 16%
+source-wordcount: '957'
+ht-degree: 17%
 
 ---
 
@@ -72,7 +72,10 @@ XMP ger dig möjlighet att lägga till en `xml:lang`-egenskap i textegenskaper f
 
 ## XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
-Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs från [!DNL Assets] eller när du överför resursen, lagras ändringarna från början i resursnoden i databasen. [!DNL Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs. Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Uppdateringarna lagras i metadatanoden i resurshierarkin. Den här funktionen bäddar också in uppdateringarna i de binära filerna för återgivningarna. Funktionen skriver bara tillbaka de metadataegenskaper som använder ett `jcr`-namnutrymme.
+Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen.
+När du ändrar metadata för en resurs i Resurser eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin.
+
+Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder namnutrymmet `jcr`, d.v.s. egenskapen `dc:title` skrivs tillbaka, men egenskapen `mytitle` skrivs inte tillbaka.
 
 Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen `Classic Leather` till `Nylon`.
 
