@@ -2,10 +2,10 @@
 title: Implementera en AEM-anslutning
 description: Implementera en AEM-anslutning
 translation-type: tm+mt
-source-git-commit: 69756d6831678151b0e8eb73db81113d49f17447
+source-git-commit: b77113ccc55f2063c684d49e2babdd7563b9d6fc
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -62,7 +62,7 @@ Kopplingar bör följa dessa paketeringsriktlinjer, som beskrivs i [den här art
 
 Dessutom bör endast Adobe skriva kod i `/libs`, där kunder och partners skriver till `/apps`.
 
-Befintliga anslutningar kan också behöva omarbetas för att flytta en konfiguration som en gång har placerats `/etc` till andra mappar på den översta nivån, till exempel `/conf`. Detta beskrivs i [AEM dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/repository-restructuring.html).
+Befintliga anslutningar kan också behöva omarbetas för att flytta en konfiguration som en gång har placerats `/etc` till andra mappar på den översta nivån, till exempel `/conf`. Denna omstrukturering gjordes som en del av AEM 6.5 och beskrivs i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html).
 
 Vi rekommenderar att större delen av kopplingskoden placeras under `/apps/connectors/<vendor>` för att främja en ren databasstruktur för kunder som har flera kopplingar.
 
