@@ -2,9 +2,9 @@
 title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 translation-type: tm+mt
-source-git-commit: 9c1fc1f1d5b744497673db5e96104d5cf1f570ce
+source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
 workflow-type: tm+mt
-source-wordcount: '3229'
+source-wordcount: '3246'
 ht-degree: 1%
 
 ---
@@ -102,7 +102,7 @@ Efter övergång till en ny version av programmet:
    * Kontextmedveten konfiguration (vad som helst under `/conf`) (lägg till, ändra, ta bort)
    * Skript (paket kan utlösa Install hooks i olika faser av installationsprocessen för paketinstallationen
 
-Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Information finns i [AEM dokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html) om rekommenderad projektomstrukturering.
+Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen.](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
 >[!NOTE]
 >Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via Package Manager.
@@ -111,7 +111,7 @@ Det finns heller ingen mekanism för att återställa ändringar i det ändrings
 
 Alla inkluderade tredjepartspaket måste valideras som AEM som en Cloud Service Service-kompatibel, annars leder inkludering till ett distributionsfel.
 
-Som nämnts ovan bör kunder med befintliga kodbaser följa den struktureringsövning för databasen som beskrivs i [AEM dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/repository-restructuring.html).
+Som nämnts ovan bör kunder med befintliga kodbaser följa den strukturering av databasen som är nödvändig på grund av de ändringar i 6.5-databasen som beskrivs i [AEM 6.5-dokumentationen.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
 ## Peka {#repoinit}
 
