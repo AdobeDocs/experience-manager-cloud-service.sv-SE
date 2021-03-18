@@ -3,9 +3,9 @@ title: Konfigurera RTF-redigeraren så att innehåll i [!DNL Adobe Experience Ma
 description: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] som en Cloud Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 739dde6f9a6a7f4fe773e27e53f23a395f2881dc
+source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '1969'
 ht-degree: 0%
 
 ---
@@ -131,8 +131,10 @@ I följande tabell visas de aktuella plugin-programmen:
 >* **Namn**:  `configPath`
 >* **Typ**:  `String`
 >* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
+
 >
->Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
+>
+Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
 
 Konfigurera följande egenskaper som gäller i redigeringsläget för dialogrutor:
 
@@ -159,8 +161,10 @@ Med textkomponenten [Core Components](https://docs.adobe.com/content/help/en/exp
 >
 >* `/libs/wcm/foundation/components/text`
 >* `/libs/foundation/components/text`
+
 >
->Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
+>
+Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
 
 ## Konfigurera RTE-verktygsfältet {#dialogfullscreen}
 
@@ -283,5 +287,4 @@ Nedan visas ett exempelfragment som mappar kommandot `Bold` till koralikonen `te
 >* [Konfigurera RTE-plugin-program](configure-rich-text-editor-plug-ins.md)
 >* [Använd RTF-redigerare för att skapa](/help/sites-cloud/authoring/fundamentals/rich-text-editor.md)
 >* [Konfigurera RTE för hjälpmedelsanpassade webbplatser](rte-accessible-content.md)
->* [Självstudiekurs för att skapa en sammansatt flerfältskomponent](https://experience-aem.blogspot.com/2019/05/aem-65-touchui-composite-multifield-with-coral3-rte-rich-text.html)
 
