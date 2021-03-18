@@ -2,9 +2,9 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 translation-type: tm+mt
-source-git-commit: d843182585a269b5ebb24cc31679b77fb6b6d697
+source-git-commit: f9a6dbec25b8154fda8069ff213aaaaa1d443ca1
 workflow-type: tm+mt
-source-wordcount: '3720'
+source-wordcount: '3675'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ Definitionen av en komponent kan delas upp enligt följande:
 
 Ikonen eller förkortningen för komponenten definieras via JCR-egenskaperna för komponenten när komponenten skapas av utvecklaren. Dessa egenskaper utvärderas i följande ordning och den första giltiga egenskapen som hittas används.
 
-1. `cq:icon` - Strängegenskap som pekar på en standardikon i  [Coral UI-](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) biblioteket som ska visas i komponentwebbläsaren
+1. `cq:icon` - Strängegenskap som pekar på en standardikon i  [Coral UI-](https://opensource.adobe.com/coral-spectrum/examples/#icon) biblioteket som ska visas i komponentwebbläsaren
    * Använd värdet för HTML-attributet för ikonen Koral.
 1. `abbreviation` - String-egenskap för att anpassa förkortningen av komponentnamnet i komponentwebbläsaren
    * Förkortningen ska vara begränsad till två tecken.
@@ -230,15 +230,13 @@ Designdialogrutor liknar dialogrutorna som används för att redigera och konfig
 
 Gränssnittet Coral och Granite definierar AEM utseende och känsla.
 
-* [Coral ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) UI ger ett konsekvent användargränssnitt i alla molnlösningar.
+* [Coral ](https://opensource.adobe.com/coral-spectrum/documentation/) UI ger ett konsekvent användargränssnitt i alla molnlösningar.
 * [Granite ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) UIger Coral UI-kod inkapslad i Sling-komponenter för att skapa UI-konsoler och dialogrutor.
 
 Granite-gränssnittet innehåller ett stort urval av de grundläggande widgetar som behövs för att skapa en dialogruta i redigeringsmiljön. Vid behov kan du utöka den här markeringen och skapa en egen widget.
 
 Mer information finns i följande resurser:
 
-* [Användargränssnittshandbok för Coral](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
-* [Bevilja gränssnittsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 * [Struktur för AEM](/help/implementing/developing/introduction/ui-structure.md)
 
 ### Anpassa dialogrutefält {#customizing-dialog-fields}
@@ -255,7 +253,7 @@ Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du �
 
 Mer specifikt ger GRE UI ett antal fältkomponenter som är lämpliga att använda i dialogrutor, eller mer allmänt i [formulär.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)
 
-När du har skapat resurstypen kan du skapa en instans av fältet genom att lägga till en ny nod i dialogrutan där egenskapen `sling:resourceType` refererar till resurstypen som du just introducerat.
+När du har skapat resurstypen kan du skapa en instans av fältet genom att lägga till en ny nod i dialogrutan där egenskapen `sling:resourceType` refererar till den resurstyp som du just har introducerat.
 
 #### Åtkomst till dialogrutefält {#access-to-dialog-fields}
 
@@ -389,7 +387,7 @@ För att lägga in logik i fältet bör du:
 * Låt fältet vara markerat med en viss CSS-klass (kroken).
 * I klientbiblioteket definierar du en JS-avlyssnare som är kopplad till det CSS-klassnamnet (detta garanterar att din anpassade logik endast omfattar fältet och inte påverkar andra fält av samma typ).
 
-För att uppnå detta måste du känna till det underliggande widgetbiblioteket som du vill interagera med. [Se ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) dokumentationen för användargränssnittet för Coral för att se vilka händelser du vill reagera på.
+För att uppnå detta måste du känna till det underliggande widgetbiblioteket som du vill interagera med. [Se ](https://opensource.adobe.com/coral-spectrum/documentation/) dokumentationen för användargränssnittet för Coral för att se vilka händelser du vill reagera på.
 
 Noden `cq:listeners` (nodtyp `cq:EditListenersConfig`) definierar vad som händer före eller efter en åtgärd på komponenten. I följande tabell definieras dess möjliga egenskaper.
 
@@ -449,7 +447,7 @@ Den här händelsen utlöses när dialogrutan läses in (eller läses in igen) o
 
 ## Förhandsvisningsbeteende {#preview-behavior}
 
-Cookien [WCM-läge](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) anges när du växlar till förhandsgranskningsläget även när sidan inte uppdateras.
+Cookien [WCM-läge](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/WCMMode.html) anges när du växlar till förhandsgranskningsläget även när sidan inte uppdateras.
 
 Komponenter med en återgivning som är känslig för WCM-läget måste definieras så att de uppdateras specifikt och sedan baseras på värdet för cookien.
 
