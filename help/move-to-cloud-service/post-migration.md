@@ -2,9 +2,9 @@
 title: Efter migreringsfas
 description: Efter migreringsfas
 translation-type: tm+mt
-source-git-commit: 5a90db8791dd92cceb811b9ed2beda3ecb4a974d
+source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '226'
 ht-degree: 100%
 
 ---
@@ -34,7 +34,7 @@ Som användare har du åtkomst till **CRXDE Lite** i utvecklingsmiljön, men int
 >[!IMPORTANT]
 >Skrivning till oföränderliga databaser som `/libs` och `/apps` under körning ger upphov till fel. Som kund har du dessutom inte tillgång till utvecklarverktyg för mellanlagrings- och produktionsmiljöer.
 
-Läs mer i [Utveckla med CRXDE Lite](https://docs.adobe.com/help/en/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) om du vill veta hur du utvecklar ditt AEM-program med CRXDE Lite.
+Läs mer i [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.md) om du vill veta hur du utvecklar ditt AEM-program med CRXDE Lite.
 
 ## Hantera loggar {#managing-logs}
 
