@@ -2,10 +2,10 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 translation-type: tm+mt
-source-git-commit: e99e802873b805b06e401880bd98c90dc88846c6
+source-git-commit: f9a6dbec25b8154fda8069ff213aaaaa1d443ca1
 workflow-type: tm+mt
-source-wordcount: '2850'
-ht-degree: 13%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 >[!TIP]
 >
->Bekanta dig med grundläggande [AEM Project Archetype-användning](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) och [FileVault Content Maven-plugin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/vlt-mavenplugin.html) när den här artikeln bygger på dessa inlärningar och koncept.
+>Bekanta dig med grundläggande [AEM Project Archetype-användning](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) och [FileVault Content Maven-plugin](/help/implementing/developing/tools/maven-plugin.md) när den här artikeln bygger på dessa inlärningar och koncept.
 
 I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Manager Maven-projekt som ska AEM som en Cloud Service-kompatibel genom att säkerställa att de respekterar uppdelningen av muterbart och oföränderligt innehåll, att beroenden etableras för att skapa icke-konfliktskapande, deterministiska distributioner och att de paketeras i en installerbar struktur.
 
@@ -619,5 +619,5 @@ I `all/pom.xml` lägger du till plugin-programmet `maven-clean-plugin` som rensa
 
 ## Ytterligare resurser {#additional-resources}
 
-+ [Hantera paket med Maven](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/vlt-mavenplugin.html)
++ [Hantera paket med Maven](/help/implementing/developing/tools/maven-plugin.md)
 + [Plugin-programmet FileVault Content Package Maven](http://jackrabbit.apache.org/filevault-package-maven-plugin/)
