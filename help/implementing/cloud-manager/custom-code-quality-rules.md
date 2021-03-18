@@ -2,10 +2,10 @@
 title: Anpassade regler för kodkvalitet - Cloud Services
 description: Anpassade regler för kodkvalitet - Cloud Services
 translation-type: tm+mt
-source-git-commit: 78d9c1345ed0642f7cb493a50ff117c5fad7632a
+source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
 workflow-type: tm+mt
-source-wordcount: '3299'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -747,7 +747,7 @@ Kunder som använder omvänd replikering bör kontakta Adobe för att få altern
 
 **Sedan**: Version 2021.2.0
 
-AEM klientbibliotek kan innehålla statiska resurser som bilder och teckensnitt. Så som beskrivs i [Använda preprocessorer](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors), måste dessa statiska resurser finnas i en underordnad mapp med namnet resources för att effektivt kunna refereras till på publiceringsinstanserna när proxierade klientbibliotek används.
+AEM klientbibliotek kan innehålla statiska resurser som bilder och teckensnitt. Så som beskrivs i [Använda preprocessorer](/help/implementing/developing/introduction/clientlibs.md#using-preprocessors), måste dessa statiska resurser finnas i en underordnad mapp med namnet resources för att effektivt kunna refereras till på publiceringsinstanserna när proxierade klientbibliotek används.
 
 #### Icke-kompatibel kod {#non-compliant-proxy-enabled}
 
@@ -793,7 +793,7 @@ I och med övergången till tillgångsmikrotjänster för tillgångsbearbetning 
 
 **Sedan**: Version 2021.2.0
 
-Det har tidigare varit mycket vanligt att använda statiska mallar i AEM projekt, men redigerbara mallar rekommenderas eftersom de ger den flexibilitet och stöder ytterligare funktioner som inte finns i statiska mallar. Mer information finns i [Sidmallar - Redigerbar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=en). Migrering från statiska till redigerbara mallar kan till stor del automatiseras med [AEM Moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/).
+Det har tidigare varit mycket vanligt att använda statiska mallar i AEM projekt, men redigerbara mallar rekommenderas eftersom de ger den flexibilitet och stöder ytterligare funktioner som inte finns i statiska mallar. Mer information finns i [Sidmallar.](/help/implementing/developing/components/templates.md) Migrering från statiska till redigerbara mallar kan till stor del automatiseras med  [AEM modereringsverktyg](https://opensource.adobe.com/aem-modernize-tools/).
 
 ### OakPAL - Användning av äldre Foundation-komponenter rekommenderas inte {#oakpal-usage-legacy}
 
