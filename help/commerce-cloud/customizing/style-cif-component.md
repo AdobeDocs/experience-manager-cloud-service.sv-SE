@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 translation-type: tm+mt
-source-git-commit: 72d98c21a3c02b98bd2474843b36f499e8d75a03
+source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
 workflow-type: tm+mt
-source-wordcount: '2592'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Stil AEM CIF-kärnkomponenter {#style-aem-cif-core-components}
 
-CIF Venia Project[ är en referenskodbas för att använda ](https://github.com/adobe/aem-cif-guides-venia)CIF Core Components[. ](https://github.com/adobe/aem-core-cif-components) I den här självstudiekursen kommer du att granska Venias referensprojekt och förstå hur CSS och JavaScript som används AEM CIF Core-komponenter är organiserade. Du skapar också ett nytt format med CSS för att uppdatera standardformatet för komponenten **Product Teaser**.
+CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF Core Components](https://github.com/adobe/aem-core-cif-components). [ I den här självstudiekursen kommer du att granska Venias referensprojekt och förstå hur CSS och JavaScript som används AEM CIF Core-komponenter är organiserade. Du skapar också ett nytt format med CSS för att uppdatera standardformatet för komponenten **Product Teaser**.
 
 >[!TIP]
 >
@@ -183,7 +183,7 @@ Gör sedan en liten ändring i Teaser-formatet för att se hur modulen `ui.front
 
    **clientlib-CIF**  - Det här är också ett tomt klientbibliotek som helt enkelt bäddar in nödvändiga beroenden från  [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components). Kategorin är `venia.cif`.
 
-   **clientlib-grid**  - Detta inkluderar den CSS som behövs för att aktivera funktionen AEM responsivt stödraster. Om du använder det AEM stödrastret aktiveras [layoutläget](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/configuring-responsive-layout.html#include-the-responsive-css) i AEM och det ger innehållsförfattare möjlighet att ändra storlek på komponenter. Kategorin är `venia.grid` och är inbäddad i `venia.base`-biblioteket.
+   **clientlib-grid**  - Detta inkluderar den CSS som behövs för att aktivera funktionen AEM responsivt stödraster. Om du använder det AEM stödrastret aktiveras [layoutläget](/help/sites-cloud/authoring/features/responsive-layout.md) i AEM och det ger innehållsförfattare möjlighet att ändra storlek på komponenter. Kategorin är `venia.grid` och är inbäddad i `venia.base`-biblioteket.
 
 1. Inspect filerna `customheaderlibs.html` och `customfooterlibs.html` under `ui.apps/src/main/content/jcr_root/apps/venia/components/page`:
 
@@ -256,7 +256,7 @@ Kontrollera sedan att klientbiblioteken finns med på sidan.
 
 ## Inkludering av klientbibliotek med sidmallar {#client-library-inclusion-pagetemplates}
 
-Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrollera sedan hur det genererade projektet innehåller `clientlib-site`-biblioteken via [Sidmallar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html).
+Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrollera sedan hur det genererade projektet innehåller `clientlib-site`-biblioteken via [Sidmallar](/help/implementing/developing/components/templates.md).
 
 1. Navigera till webbplatsens **hemsida** i AEM Editor: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
 
@@ -474,7 +474,7 @@ Du formaterade just din första AEM CIF Core Component och du använde en webbpa
 
 ## Bonus Challenge {#bonus-challenge}
 
-Använd [AEM Style System](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/style-system.html) för att skapa två format som kan aktiveras/inaktiveras av en innehållsförfattare. [Utveckla med Style ](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html) System innehåller detaljerade steg och information om hur du uppnår detta.
+Använd [AEM Style System](/help/sites-cloud/authoring/features/style-system.md) för att skapa två format som kan aktiveras/inaktiveras av en innehållsförfattare. [Utveckla med Style ](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html) System innehåller detaljerade steg och information om hur du uppnår detta.
 
 ![Bonus Challenge - system av olika slag](../assets/style-cif-component/bonus-challenge.png)
 
