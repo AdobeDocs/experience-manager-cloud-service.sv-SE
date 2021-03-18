@@ -2,9 +2,9 @@
 title: SDK för AEM as a Cloud Service
 description: Översikt över AEM som Cloud Service Software Development Kit
 translation-type: tm+mt
-source-git-commit: 0b46cc8ce4229138df84c70193cf9068e1200f0a
+source-git-commit: 6b754a866be7979984d613b95a6137104be05399
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1175'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Samma steg utförs av Cloud Manager när du distribuerar till molnmiljöer. När
 
 ## Åtkomst till AEM som en Cloud Service-SDK {#accessing-the-aem-as-a-cloud-service-sdk}
 
-* Du kan kontrollera ikonen AEM Admin Console **Om Adobe Experience Manager** för att ta reda på vilken version av AEM du använder i produktionen.
+* Du kan kontrollera den AEM Admin Console **Om Adobe Experience Manager**-ikonen för att ta reda på vilken version av AEM du använder i produktionen.
 * Snabbstartsverktyget och Dispatcher Tools kan laddas ned som en zip-fil från [Software Distribution portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Observera att åtkomsten till SDK-listorna är begränsad till dem som har AEM Managed Services eller AEM som en Cloud Service-miljö.
 * Java API Jar och Javadoc Jar kan laddas ned via maven-verktygen, antingen kommandoraden eller med den IDE du föredrar.
 * Maven project poms ska referera till följande API Jar-paket. Det här beroendet ska också refereras i alla delpaketets omgångar.
@@ -84,7 +84,7 @@ Om det finns innehåll som ska installeras med varje ny AEM snabbstartversion, i
 
 Rekommendationen är att uppdatera SDK ofta (t.ex. varannan vecka) och ta bort hela lokala tillstånd varje dag för att inte vara beroende av tillståndskänsliga data i programmet.
 
-Om du är beroende av CryptoSupport ([antingen genom att konfigurera inloggningsuppgifterna för Cloudservices eller SMTP Mail-tjänsten i AEM eller genom att använda CryptoSupport API i ditt program](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/crypto/CryptoSupport.html)), krypteras de krypterade egenskaperna av en nyckel som genereras automatiskt första gången en AEM startas. Molnkonfigurationen tar hand om automatisk återanvändning av den miljöspecifika CryptoKey, men du måste injicera kryptonyckeln i den lokala utvecklingsmiljön.
+Om du är beroende av CryptoSupport ([antingen genom att konfigurera inloggningsuppgifterna för Cloudservices eller SMTP Mail-tjänsten i AEM eller genom att använda CryptoSupport API i ditt program](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/granite/crypto/CryptoSupport.html)), krypteras de krypterade egenskaperna av en nyckel som genereras automatiskt första gången en AEM startas. Molnkonfigurationen tar hand om automatisk återanvändning av den miljöspecifika CryptoKey, men du måste injicera kryptonyckeln i den lokala utvecklingsmiljön.
 
 Som standard är AEM konfigurerat för att lagra nyckeldata i en mapps datamapp, men för att underlätta återanvändning under utvecklingen kan AEM initieras vid första starten med &quot;`-Dcom.adobe.granite.crypto.file.disable=true`&quot;. Detta genererar krypteringsdata på `/etc/key`.
 
