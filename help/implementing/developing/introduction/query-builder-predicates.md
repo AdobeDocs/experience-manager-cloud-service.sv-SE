@@ -2,9 +2,9 @@
 title: Predikatreferens för Query Builder
 description: Predikatreferens för Query Builder API.
 translation-type: tm+mt
-source-git-commit: 90b635cb31af910e08bdee7925cec0c7beb05318
+source-git-commit: 6b754a866be7979984d613b95a6137104be05399
 workflow-type: tm+mt
-source-wordcount: '2221'
+source-wordcount: '2219'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Detta är rotpredikatgruppen. Den har stöd för alla funktioner i en grupp och tillåter inställning av globala frågeparametrar.
 
-Namnet &quot;root&quot; används aldrig i en fråga, det är implicit.
+Namnet &quot;root&quot; används aldrig i en fråga, det är underförstått.
 
 #### Egenskaper {#properties-18}
 
@@ -202,7 +202,7 @@ Det stöder facet-extrahering och erbjuder två buffertar för huvud- och delres
 
 ### medlemOf {#memberof}
 
-Det här predikatet hittar objekt som är medlemmar i en specifik [sling-resurssamling](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
+Det här predikatet hittar objekt som är medlemmar i en specifik [sling-resurssamling](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
 
 Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
 
@@ -299,7 +299,7 @@ Till exempel:
 * `upperBound=1h` (och nej  `lowerBound`) markerar något under nästa timme
 * `lowerBound=-1d` (och nej  `upperBound`) markerar något under de senaste 24 timmarna
 * `lowerBound=-6M` och  `upperBound=-3M` väljer något under de senaste 3-6 månaderna
-* `lowerBound=-1500` och  `upperBound=5500` väljer något mellan 1 500 millisekunder och 5 500 millisekunder i framtiden
+* `lowerBound=-1500` och  `upperBound=5500` väljer allt som är mellan 1 500 millisekunder och 5 500 millisekunder i framtiden
 * `lowerBound=1d` och  `upperBound=2d` väljer allt i övermorgon
 
 Observera att programmet inte tar hänsyn till skottår och att alla månader är 30 dagar.
