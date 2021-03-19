@@ -2,11 +2,13 @@
 title: Konfigurera AEM Assets som en [!DNL Cloud Service] med varumärkesportalen
 description: Konfigurera AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
+feature: Varumärkesportal
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 4a22ef2913e88b037a65746f782e4c6a20afdddb
+source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
 workflow-type: tm+mt
-source-wordcount: '2269'
-ht-degree: 14%
+source-wordcount: '2272'
+ht-degree: 13%
 
 ---
 
