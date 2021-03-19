@@ -1,14 +1,15 @@
 ---
 title: Arbeta med selektiv publicering i Dynamic Media
-description: Information om hur du arbetar med selektiv publicering i Dynamic Media.
+description: Lär dig hur du arbetar med selektiv publicering i Dynamic Media.
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 04f40452ca89bc5298341b4338bc1d7762b908c2
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '2526'
+source-wordcount: '2527'
 ht-degree: 1%
 
 ---
@@ -254,7 +255,7 @@ Du kan använda **[!UICONTROL Timeline]** med **[!UICONTROL Card view]**, **[!UI
 1. I AEM, i det övre vänstra hörnet av sidan, trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (precis ovanför verktygsikonen) till vänster på sidan och tryck sedan på **[!UICONTROL Assets > Files.]**
 1. I **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]** (skärmbilden nedan visar **[!UICONTROL List View]**) öppnar du en mapp som innehåller resurser som du har publicerat eller opublicerat.
 1. Markera en resurs så att den visas med en bock. Se skärmbilden nedan.
-1. I den nedrullningsbara menyn i det övre vänstra hörnet av sidan väljer du **[!UICONTROL Timeline.]** Området **[!UICONTROL Status]** i den vänstra panelen visar publiceringsstatusen för den valda resursen.
+1. I den nedrullningsbara menyn i det övre vänstra hörnet av sidan väljer du **[!UICONTROL Timeline.]** Regionen **[!UICONTROL Status]** i den vänstra panelen visar publiceringsläget för den valda resursen.
 När du använder **[!UICONTROL List View]** visas ytterligare en kolumn för **[!UICONTROL Dynamic Media]**-publiceringstillstånd.
    * En mapp som är konfigurerad att synkronisera till Dynamic Media visar kolumnen **[!UICONTROL Dynamic Media]** som standard.
    * En mapp som är *inte* konfigurerad att synkronisera till Dynamic Media visar inte Dynamic Media-kolumnen.
