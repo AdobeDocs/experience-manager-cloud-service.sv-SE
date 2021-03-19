@@ -1,10 +1,12 @@
 ---
 title: Hantera bildförinställningar
-description: Lär dig förinställningarna och hur du skapar, ändrar och hanterar förinställningar för bilder.
+description: '"Lär dig mer om bildförinställningar och hur du skapar, ändrar och hanterar bildförinställningar."'
+feature: Bildförinställningar,visningsprogram,återgivningar
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: dce527d5798ef003dc499baec97b169debab445a
+source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt
-source-wordcount: '3509'
+source-wordcount: '3515'
 ht-degree: 8%
 
 ---
@@ -26,7 +28,7 @@ I det här avsnittet beskrivs hur du skapar, ändrar och i allmänhet hanterar b
 
 ## Bildförinställningar {#understanding-image-presets}
 
-Precis som ett makro är en bildförinställning en fördefinierad samling kommandon för storleksändring och formatering som sparats under ett namn. Anta att webbplatsen kräver att varje produktbild visas i olika storlekar, olika format och komprimeringsgrader för datorer och mobila enheter för att du ska förstå hur bildförinställningar fungerar.
+Precis som ett makro är en bildförinställning en fördefinierad samling kommandon för storleksändring och formatering som sparats under ett namn. Anta att webbplatsen kräver att varje produktbild visas i olika storlekar, olika format och komprimeringsgrader för datorer och mobila enheter för att du ska kunna förstå hur bildförinställningar fungerar.
 
 Du kan skapa två bildförinställningar: en med 500 x 500 pixlar för skrivbordsversionen och 150 x 150 pixlar för den mobila versionen. Du skapar två bildförinställningar, en med namnet `Enlarge` om du vill visa bilder med 500 x 500 pixlar och en med namnet `Thumbnail` om du vill visa bilder med 150 x 150 pixlar. Om du vill leverera bilder i storleken `Enlarge` och `Thumbnail` söker Experience Manager upp definitionen för Förstora bildförinställning och Förinställning för miniatyrbild. Sedan genererar Experience Manager dynamiskt en bild med samma storlek och formateringsspecifikationer som varje bildförinställning.
 
