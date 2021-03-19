@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 translation-type: tm+mt
-source-git-commit: c915580247e1b99db8a9f5228eec8cffece8a003
+source-git-commit: fd2009eab27ac14e722f2e9da28fc734834ab892
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1738'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Ändringar i AEM som en Cloud Service {#changes-in-aem-as-a-cloud-service}
 
-Med AEM som Cloud Service går Adobe från en AEM instanscentrerad modell till en tjänstbaserad vy med n-x-AEM-behållare, som drivs av CI/CD-pipelines i Cloud Manager. I stället för att konfigurera och underhålla index för enskilda AEM måste indexkonfigurationen anges före en distribution. Konfigurationsförändringar i produktionen bryter helt klart CI/CD-reglerna. Detsamma gäller för indexändringar eftersom det kan påverka systemets stabilitet och prestanda om det inte anges testat och omindexerat innan de tas i produktion.
+Med AEM som Cloud Service går Adobe från en AEM instanscentrerad modell till en tjänstebaserad vy med n-x-AEM-behållare, som drivs av CI/CD-ledningar i Cloud Manager. I stället för att konfigurera och underhålla index för enskilda AEM måste indexkonfigurationen anges före en distribution. Konfigurationsförändringar i produktionen bryter helt klart CI/CD-reglerna. Detsamma gäller för indexändringar eftersom det kan påverka systemets stabilitet och prestanda om det inte anges testat och omindexerat innan de tas i produktion.
 
 Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och tidigare versioner:
 
@@ -40,7 +40,7 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 ## Användning {#how-to-use}
 
-Definitionen av index kan omfatta tre användningsfall:
+Att definiera index kan omfatta följande tre användningsområden:
 
 1. Lägga till en ny kundindexdefinition
 1. Uppdaterar en befintlig indexdefinition. Detta innebär att en ny version av en befintlig indexdefinition läggs till
@@ -137,17 +137,13 @@ När Adobe ändrar ett körklart index som &quot;damAssetLucene&quot; eller &quo
 | /oak:index/cqPageLucene | Ja | Ja | Nej |
 | /oak:index/cqPageLucene-2 | Ja | Nej | Ja |
 
-### Begränsningar {#limitations}
+### Aktuella begränsningar {#current-limitations}
 
 Indexhantering stöds för närvarande bara för index av typen `lucene`.
 
-### Tar bort ett index {#removing-an-index}
-
-Om ett index ska tas bort i en senare version av programmet kan du definiera ett tomt index (ett index utan data att indexera) med ett nytt namn. Du kan till exempel ge den namnet `/oak:index/acme.product-custom-3`. Detta ersätter indexvärdet `/oak:index/acme.product-custom-2`. När `/oak:index/acme.product-custom-2` har tagits bort av systemet kan det tomma indexet `/oak:index/acme.product-custom-3` också tas bort.
-
 ### Lägga till ett index {#adding-an-index}
 
-Om du vill lägga till ett index med namnet &quot;/oak:index/acme.product-custom-1&quot; som ska användas i en ny version av programmet och senare, måste indexet konfigureras enligt följande:
+Om du vill lägga till ett index med namnet `/oak:index/acme.product-custom-1` som ska användas i en ny version av programmet och senare, måste indexet konfigureras på följande sätt:
 
 `acme.product-1-custom-1`
 
@@ -157,7 +153,7 @@ Som ovan säkerställer detta att indexet bara används av den nya versionen av 
 
 ### Ändra ett index {#changing-an-index}
 
-När ett befintligt index ändras måste ett nytt index läggas till med den ändrade indexdefinitionen. Anta till exempel att det befintliga indexet &quot;/eke:index/acme.product-custom-1&quot; ändras. Det gamla indexet lagras under `/oak:index/acme.product-custom-1` och det nya indexet lagras under `/oak:index/acme.product-custom-2`.
+När ett befintligt index ändras måste ett nytt index läggas till med den ändrade indexdefinitionen. Anta till exempel att det befintliga indexet `/oak:index/acme.product-custom-1` ändras. Det gamla indexet lagras under `/oak:index/acme.product-custom-1` och det nya indexet lagras under `/oak:index/acme.product-custom-2`.
 
 I den gamla versionen av programmet används följande konfiguration:
 
@@ -167,6 +163,43 @@ I den nya versionen av programmet används följande (ändrade) konfiguration:
 
 `/oak:index/acme.product-custom-2`
 
-### Index-Availability/Fault-Tolerance {#index-availability}
+>[!NOTE]
+>
+>Indexdefinitioner på AEM som en Cloud Service kanske inte helt matchar indexdefinitionerna i en lokal utvecklingsinstans. Utvecklingsinstansen har ingen Tika-konfiguration, medan AEM som en Cloud Service-instans har en. Om du anpassar ett index med en Tika-konfiguration bör du behålla Tika-konfigurationen.
 
-Vi rekommenderar att du skapar dubblettindex för funktioner som är mycket viktiga (med tanke på namnkonventionen för index som nämns ovan), så om indexet är skadat eller en sådan oförutsedd händelse finns det ett reservindex som kan svara på frågor.
+### Ångra en ändring {#undoing-a-change}
+
+Ibland behöver en ändring i en indexdefinition återställas. Orsaken kan vara att en ändring har gjorts av misstag eller att en ändring inte längre behövs. Indexdefinitionen `damAssetAssetLucene-8-custom-3` skapades till exempel av misstag och har redan distribuerats. Därför kanske du vill återgå till den tidigare indexdefinitionen `damAssetAssetLucene-8-custom-2`. För att göra det måste du lägga till ett nytt index med namnet `damAssetAssetLucene-8-custom-4` som innehåller definitionen för det föregående indexet, `damAssetAssetLucene-8-custom-2`.
+
+### Tar bort ett index {#removing-an-index}
+
+Följande gäller bara för anpassade index. Produktindex kan inte tas bort eftersom de används av AEM.
+
+Om ett index ska tas bort i en senare version av programmet kan du definiera ett tomt index (ett tomt index som aldrig används och som inte innehåller några data) med ett nytt namn. I det här exemplet kan du ge det namnet `/oak:index/acme.product-custom-3`. Detta ersätter indexvärdet `/oak:index/acme.product-custom-2`. När `/oak:index/acme.product-custom-2` har tagits bort av systemet kan det tomma indexet `/oak:index/acme.product-custom-3` också tas bort. Ett exempel på ett sådant tomt index är:
+
+```xml
+<acme.product-custom-3
+        jcr:primaryType="oak:QueryIndexDefinition"
+        async="async"
+        compatVersion="2"
+        includedPaths="/dummy"
+        queryPaths="/dummy"
+        type="lucene">
+        <indexRules jcr:primaryType="nt:unstructured">
+            <rep:root jcr:primaryType="nt:unstructured">
+                <properties jcr:primaryType="nt:unstructured">
+                    <dummy
+                        jcr:primaryType="nt:unstructured"
+                        name="dummy"
+                        propertyIndex="{Boolean}true"/>
+                </properties>
+            </rep:root>
+        </indexRules>
+    </acme.product-custom-3>
+```
+
+Om det inte längre behövs någon anpassning av ett index som inte finns i kartongen måste du kopiera indexdefinitionen som finns i kartongen. Om du till exempel redan har distribuerat `damAssetAssetLucene-8-custom-3`, men inte längre behöver anpassningarna och vill växla tillbaka till standardindexvärdet `damAssetAssetLucene-8`, måste du lägga till ett index `damAssetAssetLucene-8-custom-4` som innehåller indexdefinitionen `damAssetAssetLucene-8`.
+
+### Indextillgänglighet och feltolerans {#index-availability-and-fault-tolerance}
+
+Vi rekommenderar att du skapar dubblettindex för funktioner som är viktiga (med tanke på namnkonventionen för index som nämns ovan), så om indexet är skadat eller en sådan oförutsedd händelse finns det ett reservindex som kan svara på frågor.
