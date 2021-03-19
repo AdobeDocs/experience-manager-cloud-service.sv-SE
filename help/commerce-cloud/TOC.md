@@ -3,8 +3,9 @@ sub-product: AEM Commerce som Cloud Service
 user-guide-title: AEM Commerce som Cloud Service
 breadcrumb-title: Commerce Guide
 user-guide-description: Förstå hur man använder och administrerar Experience Manager Commerce som Cloud Service.
+feature-set: Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: 8b6d4f424fcc943c981d5883877cb533c8d63353
+source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 7%
