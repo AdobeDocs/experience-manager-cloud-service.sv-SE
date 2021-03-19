@@ -1,10 +1,12 @@
 ---
 title: MSM Best Practices
 description: Lär dig de bästa arbetssätten som skapats av tekniker och konsultteam på Adobe för att komma igång med AEM Multi Site Manager.
+feature: Multi Site Manager
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 66b2fb19cbc4c8aa480f1ace31a7f973dc7fb0f7
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
