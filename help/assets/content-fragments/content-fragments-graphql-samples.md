@@ -2,9 +2,9 @@
 title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM - exempelinnehåll och frågor.
 translation-type: tm+mt
-source-git-commit: 3377c69710cec2687347a23bb0e8f54e87dad831
+source-git-commit: 482e98e36d9e26aed31fc95fbb66a5168af49cf1
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1741'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
 
       * `_operator` : tillämpa särskilda operatörer,  `EQUALS`,  `EQUALS_NOT`,  `GREATER_EQUAL`,  `LOWER`,  `CONTAINS`,  `STARTS_WITH`
          * Se [Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot;](#sample-all-persons-not-jobs)
-         * Se [Exempelfråga - Alla annonser vars `_path` börjar med ett visst prefix](#sample-wknd-all-adventures-cycling-path-filter)
+         * Se [Exempelfråga - Alla annonser där `_path` börjar med ett visst prefix](#sample-wknd-all-adventures-cycling-path-filter)
       * `_apply` : tillämpa särskilda villkor, till exempel   `AT_LEAST_ONCE`
          * Se [Exempelfråga - Filtrera en array med ett objekt som måste finnas minst en gång](#sample-array-item-occur-at-least-once)
       * `_ignoreCase` : för att ignorera skiftläget vid fråga
@@ -664,7 +664,7 @@ query {
 
 ### Exempelfråga - Alla tillägg vars `_path` börjar med ett visst prefix {#sample-wknd-all-adventures-cycling-path-filter}
 
-Alla `adventures` vars `_path` börjar med ett visst prefix (`/content/dam/wknd/en/adventures/cycling`).
+Alla `adventures` där `_path` börjar med ett specifikt prefix (`/content/dam/wknd/en/adventures/cycling`).
 
 **Exempelfråga**
 
