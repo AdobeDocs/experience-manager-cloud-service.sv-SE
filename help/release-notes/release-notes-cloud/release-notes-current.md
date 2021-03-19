@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 translation-type: tm+mt
-source-git-commit: eeb9dfba87a6fa980c2f44b52813e4d3ca8e3e57
+source-git-commit: 93ae24247ae36f44e659211f1e7ab2f0888e4ad6
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1787'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,15 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari
 
 ## Content Transfer Tool {#content-transfer-tool}
 
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v1.3.4 är 19 mars 2021.
+
+### Felkorrigeringar {#bug-fixes-ctt}
+
+* CTT hoppade över innehåll från mappar med samma namn men med ett bindestreck i namnet. Den här har åtgärdats.
+
+
 ### Releasedatum {#release-date-ctt-march}
 
 Releasedatum för innehållsöverföringsverktyget v1.3.0 är 4 mars 2021.
@@ -177,15 +186,15 @@ Releasedatum för innehållsöverföringsverktyget v1.3.0 är 4 mars 2021.
 * När CTT migrerade innehåll från en viss sökväg drog det in resurser som inte hade med varandra att göra. Detta har åtgärdats
 
 
-### Releasedatum {#release-date-ctt}
+### Releasedatum {#release-date-ctt-feb}
 
 Releasedatum för innehållsöverföringsverktyget v1.2.4 är 10 februari 2021.
 
-### Felkorrigeringar {#bug-fixes-ctt}
+### Felkorrigeringar {#bug-fixes-ctt-feb}
 
 * Vid mappning av flera användare mappades vissa användares IMS-ID felaktigt. Den här har åtgärdats.
 
-### Releasedatum {#release-date-ctt-feb}
+### Releasedatum {#release-date-ctt-feb01}
 
 Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 
