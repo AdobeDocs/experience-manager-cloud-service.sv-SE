@@ -1,11 +1,13 @@
 ---
 title: Blandade medieuppsättningar
 description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic Media.
+feature: Blandade medieuppsättningar
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: dce527d5798ef003dc499baec97b169debab445a
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 24%
+source-wordcount: '1394'
+ht-degree: 25%
 
 ---
 
