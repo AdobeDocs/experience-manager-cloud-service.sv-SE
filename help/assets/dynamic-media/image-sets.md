@@ -1,10 +1,12 @@
 ---
 title: Bilduppsättningar
 description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media.
+feature: Bilduppsättningar
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: a11ce4c60ddfa345a3be20e3cc4f99ce86d1e84b
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1984'
 ht-degree: 9%
 
 ---
