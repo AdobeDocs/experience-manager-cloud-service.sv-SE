@@ -1,10 +1,12 @@
 ---
 title: Hantera visningsförinställningar
-description: Skapa och hantera visningsförinställningar i Dynamic Media.
+description: Lär dig hur du skapar och hanterar visningsförinställningar i Dynamic Media.
+feature: Förinställningar för visningsprogram,visningsprogram
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: dce527d5798ef003dc499baec97b169debab445a
+source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt
-source-wordcount: '4130'
+source-wordcount: '4136'
 ht-degree: 12%
 
 ---
