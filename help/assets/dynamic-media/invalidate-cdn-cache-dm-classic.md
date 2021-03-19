@@ -1,10 +1,12 @@
 ---
 title: CDN-cachen har inte verifierats med Dynamic Media Classic
-description: Om du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
+description: '"Lär dig hur du ogiltigförklarar det cachelagrade innehållet i CDN (Content Delivery Network) så att du snabbt kan uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla."'
+feature: Resurshantering,Dynamic Media Classic
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 6dcf891fbe4a58f357fb429fc13cdd16bce7e3d0
+source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '651'
 ht-degree: 13%
 
 ---
