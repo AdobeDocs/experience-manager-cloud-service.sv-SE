@@ -1,10 +1,11 @@
 ---
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.11.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2020.11.0
+feature: Versionsinformation
 translation-type: tm+mt
-source-git-commit: 79af82d1589108e7a8953e29a5d0f0169920585c
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '188'
 ht-degree: 2%
 
 ---
