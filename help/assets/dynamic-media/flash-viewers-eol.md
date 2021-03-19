@@ -1,10 +1,11 @@
 ---
 title: Meddelande om att Flash Viewer har upphört
 description: Från och med den 31 januari 2017 upphör stödet för Flash viewer Platform officiellt.
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 193201670e5e78235025885f52215cca730ce556
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '47'
+source-wordcount: '49'
 ht-degree: 8%
 
 ---
