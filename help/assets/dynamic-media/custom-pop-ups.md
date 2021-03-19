@@ -1,10 +1,11 @@
 ---
 title: Använda snabbvyer för att skapa anpassade popup-fönster
-description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
+description: '"Lär dig mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren."'
+topic: '"Utvecklare,Administratör,Affärsledare"'
 translation-type: tm+mt
-source-git-commit: ad626d9722f1942249197d96aa5fac3d8f7ed947
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
