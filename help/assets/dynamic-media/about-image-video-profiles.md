@@ -1,10 +1,12 @@
 ---
 title: Om Dynamic Media bildprofiler och videoprofiler
 description: En bildprofil eller en videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för Dynamic Media videoresurser som du överför. Eller vilken bildprofil som ska användas för Dynamic Media bildresurser för att de ska beskäras ordentligt.
+feature: Resurshantering, bildprofiler, videoprofiler
+topic: '"Administratör,Affärsansvarig"'
 translation-type: tm+mt
-source-git-commit: dfaaafce8e9a7f0d90e4c3d6967c8236d48e6e40
+source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1234'
 ht-degree: 2%
 
 ---
