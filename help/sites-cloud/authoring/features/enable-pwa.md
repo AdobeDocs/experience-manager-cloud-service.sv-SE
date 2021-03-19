@@ -4,9 +4,9 @@ description: AEM Sites gör det möjligt för innehållsförfattaren att aktiver
 hide: true
 hidefromtoc: true
 translation-type: tm+mt
-source-git-commit: 54c4755207d84f6f11effea72e94e20027446ba9
+source-git-commit: 8fa74c2c575409659f482c669c4939a623ef6707
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2032'
 ht-degree: 0%
 
 ---
@@ -208,7 +208,6 @@ Dessa inställningar gör delar av den här webbplatsen tillgängliga offline oc
 
 Alla PWA-funktioner är inte tillgängliga för AEM Sites. Det här är några tydliga begränsningar.
 
-* Användaren måste bläddra på sidan minst en gång innan den kan cachas offline.
 * Sidorna synkroniseras inte automatiskt eller uppdateras inte om användaren inte använder appen.
 
 Adobe ger också följande rekommendationer när du implementerar PWA.
