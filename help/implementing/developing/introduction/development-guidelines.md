@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 5a4353cb31337882a1c13b0ed830ea64f617181a
+source-git-commit: ce797518714a4919bcdb6187aeaaf35dd1cb76b4
 workflow-type: tm+mt
-source-wordcount: '2284'
+source-wordcount: '2283'
 ht-degree: 1%
 
 ---
@@ -128,7 +128,7 @@ Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande int
 
 För lokal utveckling har utvecklare fullständig åtkomst till CRXDE Lite (`/crx/de`) och AEM webbkonsol (`/system/console`).
 
-Observera att vid lokal utveckling (med molnklar snabbstart) kan `/apps` och `/libs` skrivas direkt till , vilket skiljer sig från molnmiljöer där mapparna på den översta nivån inte kan ändras.
+Observera att vid lokal utveckling (med SDK) kan `/apps` och `/libs` skrivas direkt till , vilket skiljer sig från molnmiljöer där mapparna på den översta nivån inte kan ändras.
 
 ### AEM som ett utvecklingsverktyg för Cloud Service {#aem-as-a-cloud-service-development-tools}
 
