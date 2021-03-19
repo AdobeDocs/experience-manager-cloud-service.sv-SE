@@ -1,10 +1,12 @@
 ---
 title: Använda förinställningar för Dynamic Media-bilder
 description: Lär dig hur du använder bildförinställningar i Dynamic Media.
+feature: Bildförinställningar,visningsprogram,återgivningar
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: a11ce4c60ddfa345a3be20e3cc4f99ce86d1e84b
+source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '302'
 ht-degree: 6%
 
 ---
