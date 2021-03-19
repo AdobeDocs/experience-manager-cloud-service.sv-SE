@@ -1,10 +1,12 @@
 ---
 title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior för att återanvända innehållet på hela webbplatsen.
+feature: Multi Site Manager
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 66b2fb19cbc4c8aa480f1ace31a7f973dc7fb0f7
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '4188'
+source-wordcount: '4192'
 ht-degree: 0%
 
 ---
