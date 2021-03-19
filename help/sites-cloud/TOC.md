@@ -4,10 +4,13 @@ sub-product: Redigera innehåll i AEM as a Cloud Service
 user-guide-title: Redigera innehåll i AEM as a Cloud Service
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service.
+feature-set: Experience Manager Sites
+feature: Redigering
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: e381c83eb37e3b2ede1de20eb2f7e3a6eb51ce5e
+source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '310'
 ht-degree: 69%
 
 ---
