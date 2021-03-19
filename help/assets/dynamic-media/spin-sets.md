@@ -1,10 +1,12 @@
 ---
 title: Snurrande uppsättningar
 description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
+feature: Snurrande uppsättningar
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1769'
 ht-degree: 12%
 
 ---
@@ -84,7 +86,7 @@ Du kan överföra bilder för snurra uppsättningar på samma sätt som du [öve
 
 Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fler bilder du har i en snurrfunktion, desto bättre blir effekten av att snurra. Om du inkluderar många bilder i uppsättningen ökar dock tiden det tar för bilderna att läsas in. AEM rekommenderar följande riktlinjer för att ta bilder för användning i snurra uppsättningar:
 
-* Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360 grader. Endimensionella snurruppsättningar är vanligare eftersom tvådimensionella snurvuppsättningar är arbetsintensiva.
+* Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360 grader. Endimensionella snurruppsättningar är vanligare eftersom tvådimensionella snurruppsättningar är arbetsintensiva.
 * Använd ett förlustfritt format, TIFF och PNG rekommenderas.
 * Maskera alla bilder så att objektet visas på en helt vit eller annan bakgrund med hög kontrast. Du kan också lägga till skuggor.
 * Se till att produktinformationen är väl belyst och i fokus.
