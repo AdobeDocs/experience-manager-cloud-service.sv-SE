@@ -2,10 +2,12 @@
 title: Bästa tillvägagångssätt för att optimera bildkvalitet
 description: Lär dig de bästa sätten du kan använda i Dynamic Media för att optimera kvaliteten på dina bildresurser.
 contentOwner: Rick Brough
+feature: Resurshantering
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 58aa2f416aac6fa6b260e846fc5265bdf62a1949
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1442'
 ht-degree: 5%
 
 ---
