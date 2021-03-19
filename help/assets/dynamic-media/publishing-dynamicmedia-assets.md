@@ -2,10 +2,12 @@
 title: Publicera Dynamic Media Assets
 description: Lär dig hur du publicerar Dynamic Media-resurser.
 contentOwner: Rick Brough
+feature: Resurshantering
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '463'
 ht-degree: 2%
 
 ---
