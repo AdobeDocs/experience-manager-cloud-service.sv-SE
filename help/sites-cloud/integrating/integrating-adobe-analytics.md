@@ -1,10 +1,12 @@
 ---
 title: Integrera med Adobe Analytics
 description: 'Integrera med Adobe Analytics '
+feature: Administratör
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 76db5314369ca0f854482586d5c96474014a47af
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '541'
 ht-degree: 2%
 
 ---
