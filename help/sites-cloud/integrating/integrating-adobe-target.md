@@ -2,9 +2,9 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 translation-type: tm+mt
-source-git-commit: 79cdc4f453efe5b251891c09934e2dcb823f645c
+source-git-commit: 2e40a5a1cfe3919d678abeef2726fbc303c2e6b2
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1042'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ I båda fallen ska du tänka på följande:
 * Du kan ändra standardinställningen för klient-ID.
 * Därför kommer serverdelsanropen till Target att baseras på klientens ID och klientsidans anrop till Target kommer att baseras på klientkoden.
 
-Som tidigare nämnts är det första fallet det vanligaste för AEM som en Cloud Service. Oavsett vad du väljer bör du kontrollera att både **och**-fälten innehåller rätt information beroende på dina behov.
+Som tidigare nämnts är det första fallet det vanligaste för AEM som en Cloud Service. Oavsett vad du väljer bör du kontrollera att **båda**-fälten innehåller rätt information beroende på dina behov.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **P
 
 ## Integrera Adobe Target på AEM sajter med Adobe Launch {#integrate-target-launch}
 
-AEM erbjuder en färdig integrering med Experience Platform Launch. Genom att lägga till Adobe Target-tillägget i Experience Platform Launch kan du använda funktionerna i Adobe Target på AEM webbsidor. Målbibliotek återges bara med Launch.
+AEM erbjuder en färdig integrering med Experience Platform Launch. Genom att lägga till Adobe Target-tillägget i Experience Platform Launch kan du använda Adobe Target funktioner på AEM webbsidor. Målbibliotek återges endast med Launch.
 
 >[!NOTE]
 >
@@ -92,7 +92,7 @@ Som en allmän översikt är integrationsstegen:
 
 ### Skapar en startegenskap {#create-property}
 
-En egenskap är en behållare som fylls med tillägg, regler och dataelement.
+En egenskap är en behållare som är fylld med tillägg, regler och dataelement.
 
 1. Välj knappen **Ny egenskap**.
 2. Ange ett namn för egenskapen.
@@ -119,12 +119,12 @@ En egenskap är en behållare som fylls med tillägg, regler och dataelement.
 1. Välj **Dataelement**.
 2. Välj **Lägg till dataelement**.
 3. Ange namnet på dataelementet och mappa det till en kontextnavparameter.
-4. välj **Spara**.
+4. Välj **Spara**.
    ![Data ](assets/data_elem1.png "ElementData-element")
 
 ### Skapa en sidregel {#page-rule}
 
-I **Regel** definierar och ordnar vi en sekvens med åtgärder som ska utföras på webbplatsen för att uppnå målgruppsanpassning.
+I **Regel** definierar och ordnar vi en sekvens med åtgärder, som utförs på webbplatsen, för att uppnå målgruppsanpassning.
 
 1. Lägg till en uppsättning åtgärder som visas i skärmbilden.
    ![](assets/rules1.png "ÅtgärderÅtgärder")
@@ -139,8 +139,8 @@ Mer information om hur du skapar och publicerar finns på den här [sidan](https
 
 | **Ändra** | **Konfiguration av klassiskt användargränssnitt** | **Konfiguration av pekskärmsgränssnitt** | **Konsekvenser** |
 |---|---|---|---|
-| Sökväg till målkonfigurationen. | /etc/cloudservices/testandtarget/ | /conf/tenant/settings/cloudservices/target | Tidigare fanns det flera konfigurationer under /etc/cloudservices/the standtarget, men nu finns en enda konfiguration under en klientorganisation. |
+| Sökväg till målkonfigurationen. | /etc/cloudservices/testandtarget/ | /conf/tenant/settings/cloudservices/target | Tidigare fanns flera konfigurationer under /etc/cloudservices/testandtarget, men nu finns det en enda konfiguration under en klientorganisation. |
 
 >[!NOTE]
 >
->Äldre konfigurationer stöds fortfarande för befintliga kunder (utan möjlighet att redigera eller skapa nya). Äldre konfigurationer kommer att ingå i innehållspaket som överförs av kunden med hjälp av VSTS.
+>Äldre konfigurationer stöds fortfarande för befintliga kunder (utan möjlighet att redigera eller skapa nya). Äldre konfigurationer kommer att ingå i innehållspaket som överförs av kunder som använder VSTS.
