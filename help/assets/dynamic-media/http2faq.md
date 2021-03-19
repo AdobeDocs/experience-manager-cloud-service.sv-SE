@@ -1,10 +1,11 @@
 ---
 title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
+topic: '"Administratör,Affärsansvarig"'
 translation-type: tm+mt
-source-git-commit: 20e37c385c2d3df91e37095bcf8a630fbfccbd16
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
