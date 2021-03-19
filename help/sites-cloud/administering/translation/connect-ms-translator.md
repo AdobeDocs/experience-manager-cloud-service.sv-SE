@@ -1,10 +1,12 @@
 ---
 title: Ansluter till Microsoft Translator
 description: Lär dig hur du ansluter AEM till Microsoft Translator körklart för att automatisera ditt arbetsflöde för översättning.
+feature: Språkkopia
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 5902e026c47aac0c1ea62a2b74be6109b216fb74
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
