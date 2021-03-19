@@ -1,10 +1,12 @@
 ---
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
+feature: Administratör
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 2e40a5a1cfe3919d678abeef2726fbc303c2e6b2
+source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1044'
 ht-degree: 1%
 
 ---
