@@ -5,10 +5,12 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS and Experience Manager as a Cloud Service
 topic-tags: introduction
 content-type: reference
+feature: 3D-resurser
+topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: fd75af0bf0c16e20c3b98703af14f329ea6c6371
+source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2203'
 ht-degree: 2%
 
 ---
