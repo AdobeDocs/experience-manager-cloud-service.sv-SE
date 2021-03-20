@@ -3,7 +3,7 @@ title: Utvecklarreferenser för [!DNL Assets]
 description: '[!DNL Assets] APIs and developer reference content lets you manage assets, including binary files, metadata, renditions, comments, and [!DNL Content Fragments].'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5bc532a930a46127051879e000ab1a7fc235a6a8
+source-git-commit: 77b4d9f07626419ddab3a7363b06c382447ec982
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 1%
@@ -145,7 +145,7 @@ När alla delar av en binär fil har överförts skickar du en begäran om HTTP-
 | `versionComment` | Sträng | Valfritt | Om en ny version skapas, de kommentarer som är kopplade till versionen. |
 | `replace` | Boolesk | Valfritt | Om det finns `True` och en resurs med det angivna namnet, tar [!DNL Experience Manager] bort resursen och skapar den på nytt. |
 
->!![NOTE]
+>[!NOTE]
 Om resursen finns och varken `createVersion` eller `replace` har angetts, uppdaterar [!DNL Experience Manager] resursens aktuella version med den nya binärfilen.
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
@@ -156,7 +156,7 @@ Om det lyckas svarar servern med en `200`-statuskod.
 
 ### Överföringsbibliotek med öppen källkod {#open-source-upload-library}
 
-För att lära dig mer om överföringsalgoritmerna eller för att skapa egna överföringsskript och verktyg kan Adobe tillhandahålla bibliotek och verktyg med öppen källkod:
+Om du vill veta mer om överföringsalgoritmerna eller skapa egna överföringsskript och verktyg kan du använda Adobe för att skapa bibliotek och verktyg med öppen källkod:
 
 * [Uppladdningsbibliotek](https://github.com/adobe/aem-upload) med öppen källkod.
 * [Kommandoradsverktyget](https://github.com/adobe/aio-cli-plugin-aem) med öppen källkod.
