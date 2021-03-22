@@ -2,9 +2,9 @@
 title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 translation-type: tm+mt
-source-git-commit: 903a78d98082b937128073d5edce23dc70b01a1d
+source-git-commit: ad831b2cc3657666678662eeff0eaf371ce4da49
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1284'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Det CIF-tillägg som används med AEM Cloud Service gör att data kan flöda fr�
 
 ## 7. Vilken katalogstorlek AEM med CIF-stöd?
 
-När produktdata och katalogsidor skapas och cachelagras dynamiskt finns det ingen fast storleksgräns. Katalogstorleken är dock bara en aspekt som du måste ta hänsyn till. Cachenivåer, samtidiga dataförfrågningar och skapande av sidor kan påverka skalbarheten och prestandan.
+Detta beror på några ytterligare aspekter du måste tänka på. Hur stor är cachekvoten för katalogdata och sidor? Hur många samtidiga förfrågningar förväntar du dig under högtider? Hur skalbar är API:erna för era e-handelslösningar?
 
 ## 8. Hur spelar PIM in i detta ramverk?
 
