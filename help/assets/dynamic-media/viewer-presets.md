@@ -2,9 +2,9 @@
 title: Använda förinställningar för Dynamic Media-visningsprogram
 description: Lär dig hur du använder förinställningar för visningsprogram i Dynamic Media.
 feature: Förinställningar för visningsprogram,visningsprogram
-topic: Yrkesverksamma inom affärsverksamhet
+topic: Administratör,Affärsledare
 translation-type: tm+mt
-source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
+source-git-commit: 15cf59ccc5cef515bfbda2da790fa5eaf0247721
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 23%
@@ -16,7 +16,7 @@ ht-degree: 23%
 
 En visningsförinställning är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Du kan använda alla förinställningar för visningsprogram som du har skapat av administratören på en resurs.
 
-Om du är administratör och behöver hantera, skapa, sortera och ta bort visningsförinställningar läser du [Hantera visningsförinställningar](managing-viewer-presets.md).
+Om du är administratör och måste hantera, skapa, sortera och ta bort visningsförinställningar läser du [Hantera visningsförinställningar](managing-viewer-presets.md).
 
 Se även [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
