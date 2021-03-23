@@ -3,9 +3,9 @@ title: HTTP API för Assets
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 332ca27c060a46d41e4f6e891f6fd98170d10d9f
+source-git-commit: c9a7dc74e3fc7c637825606a1a92cbe46d86283f
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1483'
 ht-degree: 0%
 
 ---
@@ -267,7 +267,7 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 
 * Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet [!DNL Assets] och via HTTP-API:t. API:t returnerar 404-felmeddelandet om [!UICONTROL On Time] är i framtiden eller om [!UICONTROL Off Time] är i det förflutna.
 
-* Använd inte `/adobe` som URL- eller JCR-sökväg. Registrera inga serveringar under det här trädet och skapa inte innehåll i JCR.
+* Vissa egenskaper för mapp eller resurs mappas till ett annat prefix när de uppdateras med API:er. `jcr`-prefixet `jcr:title`, `jcr:description` och `jcr:language` har ersatts med `dc`-prefixet. I den returnerade JSON innehåller därför `dc:title` och `dc:description` värdena `jcr:title` respektive `jcr:description`.
 
 >[!MORELIKETHIS]
 >
