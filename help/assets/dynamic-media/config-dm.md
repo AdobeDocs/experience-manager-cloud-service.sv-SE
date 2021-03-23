@@ -3,9 +3,9 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager som en Cloud Service.
 topic: Administratör
 translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+source-git-commit: eb00eb6edaebc4dd0a16a99e1223bb806fa7abd9
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3715'
 ht-degree: 4%
 
 ---
@@ -21,8 +21,8 @@ I följande arkitekturdiagram beskrivs hur Dynamic Media fungerar.
 
 Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källresurserna och synkroniserar med Dynamic Media när det gäller bearbetning och publicering av mediefiler:
 
-1. När den primära källresursen överförs till AEM replikeras den till Dynamic Media. Då hanterar Dynamic Media all bearbetning och generering av resurser, till exempel videokodning och dynamiska varianter av en bild.
-1. När återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till AEM).
+1. När den primära källresursen överförs till Adobe Experience Manager som en Cloud Service, replikeras den till Dynamic Media. Då hanterar Dynamic Media all bearbetning och generering av resurser, till exempel videokodning och dynamiska varianter av en bild.
+1. När återgivningarna har genererats kan Experience Manager som Cloud Service på ett säkert sätt komma åt och förhandsgranska Dynamic Media fjärråtergivningar (inga binärfiler skickas tillbaka till Experience Manager som en Cloud Service-instans).
 1. När innehållet är klart att publiceras och godkännas utlöses Dynamic Media-tjänsten av att skicka innehåll till leveransservrar och cachelagra innehåll på CDN.
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
@@ -43,11 +43,11 @@ Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källres
 
 ## (Optional) Migrating Dynamic Media presets and configurations from 6.3 to 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-If you are upgrading AEM Dynamic Media from 6.3 to 6.4 or 6.5 (which now includes the ability for zero downtime deployments), you are required to run the following curl command to migrate all your presets and configurations from `/etc` to `/conf` in CRXDE Lite.
+If you are upgrading Experience Manager as a Cloud Service Dynamic Media from 6.3 to 6.4 or 6.5 (which now includes the ability for zero downtime deployments), you are required to run the following curl command to migrate all your presets and configurations from `/etc` to `/conf` in CRXDE Lite.
 
 >[!NOTE]
 >
->If you run your AEM instance in compatibility mode--that is, you have the compatibility packaged installed--you do not need to run these commands.
+>If you run your Experience Manager as a Cloud Service instance in compatibility mode--that is, you have the compatibility packaged installed--you do not need to run these commands.
 
 For all upgrades, either with or without the compatibility package, you can copy the default, out-of-the-box viewer presets that originally came with Dynamic Media by running the following Linux curl command:
 
@@ -63,7 +63,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 <!-- **Before you creating a Dynamic Media Configuration in Cloud Services**: After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials. -->
 
-1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen.
+1. I Experience Manager som Cloud Service trycker du på Experience Manager som Cloud Service-logotypen för att komma åt den globala navigeringskonsolen.
 1. Tryck på verktygsikonen till vänster om konsolen och tryck sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. Tryck på **[!UICONTROL global]** (tryck inte på eller välj mappikonen till vänster om **[!UICONTROL global]**) på sidan Dynamic Media Configuration Browser (Konfigurationsläsaren) i den vänstra rutan. Tryck sedan på **[!UICONTROL Create]**.
 1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-konto, lösenord och väljer sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundtjänst om du inte har fått det här e-postmeddelandet.
@@ -93,8 +93,8 @@ To migrate any custom viewer presets and configurations that you have created fr
    |---|---|
    | Företag | Namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media-konton för olika undervarumärken, divisioner eller mellanlagrings-/produktionsmiljöer. |
    | Företagets rotmappsökväg | Företagets rotmappsökväg. |
-   | Publicera resurser | Du kan välja mellan följande tre alternativ:<br>**[!UICONTROL Immediately]**: När resurser överförs importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.<br>**[!UICONTROL Upon Activation]**: Du måste publicera resursen explicit innan en URL/Embed-länk anges.<br>**[!UICONTROL Selective Publish]**: Resurser publiceras automatiskt för säker förhandsvisning. De kan också uttryckligen publiceras till AEM utan att publicera till DMS7 för att levereras offentligt. I framtiden har detta alternativ till syfte att publicera resurser för att AEM och publicera resurser till Dynamic Media, som utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i AEM för förhandsgranskning. samma resurser inte publiceras i DMS7 för att distribueras offentligt. |
-   | Secure Preview Server | Här kan du ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till den AEM instansen).<br>Om du inte har en särskild lösning för att använda ditt företags server eller en speciell server rekommenderar Adobe att du låter den här inställningen vara angiven. |
+   | Publicera resurser | Du kan välja mellan följande tre alternativ:<br>**[!UICONTROL Immediately]**: När resurser överförs importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.<br>**[!UICONTROL Upon Activation]**: Du måste publicera resursen explicit innan en URL/Embed-länk anges.<br>**[!UICONTROL Selective Publish]**: Resurser publiceras automatiskt för säker förhandsvisning. De kan också uttryckligen publiceras till Experience Manager som en Cloud Service utan att publicera till DMS7 för att levereras offentligt. I framtiden avser detta alternativ att publicera resurser till Experience Manager som en Cloud Service och publicera resurser till Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i Experience Manager som en Cloud Service för förhandsgranskning. samma resurser inte publiceras i DMS7 för att distribueras offentligt. |
+   | Secure Preview Server | Här kan du ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det vill säga, när återgivningarna har genererats kan Experience Manager som Cloud Service på ett säkert sätt komma åt och förhandsgranska Dynamic Media fjärråtergivningar (inga binärfiler skickas tillbaka till Experience Manager som en Cloud Service-instans).<br>Om du inte har en särskild lösning för att använda ditt företags server eller en speciell server rekommenderar Adobe att du låter den här inställningen vara angiven. |
    | Synkronisera allt innehåll | Markerad som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till Dynamic Media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för Dynamic Media:<br>**[!UICONTROL Dynamic Media sync mode]**<br>**[!UICONTROL Enable by default]**: Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad.<!-- you can then deselect the folders that you do not want the configuration applied to.--><br>**[!UICONTROL Disabled by default]**: Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till Dynamic Media.<br>Markera en markerad mapp för synkronisering till Dynamic Media genom att markera en resursmapp och sedan trycka på  **[!UICONTROL Properties]** i verktygsfältet. Välj bland följande tre alternativ i listrutan **[!UICONTROL Dynamic Media sync mode]** på fliken **[!UICONTROL Details]**. När du är klar trycker du på **[!UICONTROL Save]**. *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt**innehåll tidigare.* Se även  [Arbeta med selektiv publicering på mappnivå i Dynamic Media.](/help/assets/dynamic-media/selective-publishing.md)<br>**[!UICONTROL Inherited]**: Det finns inget explicit synkroniseringsvärde i mappen. I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.<br>**[!UICONTROL Enable for subfolders]**: Inkludera allt i det här underträdet för synkronisering med Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.<br>**[!UICONTROL Disabled for subfolders]**: Uteslut allt i det här underträdet från synkronisering till Dynamic Media. |
 
    >[!NOTE]
@@ -111,19 +111,18 @@ To migrate any custom viewer presets and configurations that you have created fr
 
    >[!IMPORTANT]
    >
-   >När den nya Dynamic Media-konfigurationen är klar får du ett statusmeddelande AEM Inkorgen.
+   >När den nya Dynamic Media-konfigurationen är klar får du ett statusmeddelande i Experience Manager som Cloud Servicens inkorg.
    >
    >Det här inkorgsmeddelandet informerar dig om konfigurationen lyckades eller inte.
    > Mer information finns i [Felsöka en ny Dynamic Media-konfiguration](#troubleshoot-dm-config) och [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md).
 
-1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista den AEM författarinstansen för att ansluta till Dynamic Media. Så här konfigurerar du den här åtgärden:
+1. För att på ett säkert sätt förhandsgranska Dynamic Media-innehåll innan det publiceras använder Experience Manager som Cloud Service tokenbaserad autentisering som standard. Du kan även tillåtslista fler IP-adresser för att ge användarna tillgång till säkert förhandsgranskningsmaterial. Så här konfigurerar du den här åtgärden: <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
 
-   * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
-   * Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i navigeringsfältet uppe till höger på sidan.
-
-   * Välj **[!UICONTROL Test Image Serving]** i listrutan Publiceringskontext på sidan Image Server Publish.
+   * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Kontakta Adobe kundtjänst om du inte har dessa uppgifter.
+   * I navigeringsfältet i det övre högra hörnet på sidan trycker du på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
+   * Välj **[!UICONTROL Test Image Serving]** i listrutan **[!UICONTROL Publish Context]** på sidan Image Server Publish.
    * Tryck på **[!UICONTROL Add]** för klientadressfiltret.
-   * Om du vill aktivera (aktivera) adressen markerar du kryssrutan och anger IP-adressen för AEM Author-instansen (inte Dispatcher IP).
+   * Om du vill aktivera (aktivera) adressen markerar du kryssrutan och anger IP-adressen för Experience Manager-författarinstansen (inte Dispatcher IP).
    * Klicka på **[!UICONTROL Save]**.
 
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media.
@@ -132,7 +131,7 @@ Om du vill anpassa konfigurationen ytterligare kan du utföra alla uppgifter und
 
 ### Felsöka en ny Dynamic Media-konfiguration {#troubleshoot-dm-config}
 
-När konfigurationen av en ny Dynamic Media-konfiguration är klar får du ett statusmeddelande AEM Inkorgen. Det här meddelandet informerar dig om konfigurationen lyckades eller inte, vilket visas i följande bilder från Inkorgen.
+När en ny Dynamic Media-konfiguration är klar får du ett statusmeddelande i Experience Manager som Cloud Servicens inkorg. Det här meddelandet informerar dig om konfigurationen lyckades eller inte, vilket visas i följande bilder från Inkorgen.
 
 ![Experience Manager Inkorgen har slutförts](/help/assets/dynamic-media/assets/dmconfig-inbox-success.png)
 
@@ -142,7 +141,7 @@ Se även [Inkorgen](/help/sites-cloud/authoring/getting-started/inbox.md).
 
 **Felsöka en ny Dynamic Media-konfiguration**
 
-1. I närheten av det övre högra hörnet på AEM trycker du på klockikonen och sedan på **[!UICONTROL View All]**.
+1. I närheten av det övre högra hörnet av Experience Manager som Cloud Service trycker du på klockikonen och sedan på **[!UICONTROL View All]**.
 1. På sidan Inkorg trycker du på meddelandet om att åtgärden lyckades för att läsa en översikt över konfigurationens status och loggar.
 
    Om konfigurationen misslyckas trycker du på felmeddelandet som liknar följande skärmbild.
@@ -168,7 +167,7 @@ Om det behövs kan du kontrollera stavningen av ett lösenord som du har skrivit
 
 Det ändrade lösenordet sparas när du trycker på **[!UICONTROL Save]** i det övre högra hörnet på **[!UICONTROL Edit Dynamic Media Configuration]**-sidan.
 
-1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen.
+1. I Experience Manager som Cloud Service trycker du på Experience Manager som Cloud Service-logotypen för att komma åt den globala navigeringskonsolen.
 1. Tryck på verktygsikonen till vänster om konsolen och tryck sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration.]**
 1. Tryck på **[!UICONTROL global]** i den vänstra rutan på sidan Dynamic Media Configuration Browser. Tryck inte på eller välj mappikonen till vänster om **[!UICONTROL global]**. Tryck sedan på **[!UICONTROL Edit.]**
 1. På sidan **[!UICONTROL Edit Dynamic Media Configuration]**, direkt under fältet **[!UICONTROL Password]** trycker du på **[!UICONTROL Change Password.]**
@@ -231,9 +230,9 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 
 Om du vill öppna sidan Allmänna inställningar för programmet klickar du på **[!UICONTROL Setup > Application Setup > General Settings.]** i det globala navigeringsfältet i Dynamic Media Classic
 
-**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner om att göra det av AEM.
-**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Dubblettresurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filtillägg än den ursprungliga mappen.
-**[!UICONTROL Overwrite in current folder, same base image name/extension]** - Det här alternativet är den striktaste regeln för ersättning. Du måste överföra ersättningsbilden till samma mapp som originalet och ha samma filtillägg som originalet. Om dessa krav inte uppfylls skapas en dubblett. Välj alltid **[!UICONTROL Overwrite in current folder, same base image name/extension]** om du vill att AEM ska vara konsekvent.
+**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har instruerats att göra det av Experience Manager som Cloud Service.
+**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filtillägg än den ursprungliga mappen.
+**[!UICONTROL Overwrite in current folder, same base image name/extension]** - Det här alternativet är den striktaste regeln för ersättning. Du måste överföra ersättningsbilden till samma mapp som originalet och ha samma filtillägg som originalet. Om dessa krav inte uppfylls skapas en dubblett. Välj alltid **[!UICONTROL Overwrite in current folder, same base image name/extension]** om du vill att Cloud Servicen ska vara konsekvent med Experience Manager.
 **[!UICONTROL Overwrite in any folder, same base asset name/extension]** - Kräver att ersättningsbilden har samma filtillägg som originalbilden. Till exempel måste stol.jpg ersätta stol.jpg, inte stol.tif. Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats.
 **[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** - Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filtillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
 **[!UICONTROL Default Color Profiles]** - Mer information finns i  [Konfigurera ](#configuring-color-management) färghantering. Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka eller minska antalet bildförinställningar som visas](/help/assets/dynamic-media/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka eller minska antalet visningsförinställningar som visas](/help/assets/dynamic-media/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
@@ -282,7 +281,7 @@ Se [Överför resurser](/help/assets/add-assets.md).
 
 **Redigera MIME-typer för de format som stöds**
 
-1. I AEM klickar du på den AEM logotypen för att komma åt den globala navigeringskonsolen och klickar sedan på **[!UICONTROL General > CRXDE Lite]**.
+1. I Experience Manager som Cloud Service klickar du på Experience Manager som en Cloud Service-logotyp för att komma åt den globala navigeringskonsolen och klickar sedan på **[!UICONTROL General > CRXDE Lite]**.
 1. Navigera till följande i den vänstra listen:
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -300,7 +299,7 @@ Se [Överför resurser](/help/assets/add-assets.md).
    * Upprepa steg 3-4 för att redigera fler MIME-typer.
    * Klicka på **[!UICONTROL Save All.]** på menyraden på CRXDE Lite-sidan
 
-1. Tryck på **[!UICONTROL CRXDE Lite]** längst upp till vänster på sidan för att återgå till AEM.
+1. Tryck på **[!UICONTROL CRXDE Lite]** längst upp till vänster på sidan för att återgå till Experience Manager som Cloud Service.
 
 #### Lägger till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
 
@@ -308,7 +307,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 **Lägga till MIME-typer för format som inte stöds**
 
-1. Tryck på **[!UICONTROL Tools > Operations > Web Console.]** från AEM
+1. Tryck på **[!UICONTROL Tools > Operations > Web Console.]** från Experience Manager som Cloud Service
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
@@ -334,8 +333,8 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
    Nu kan du stänga webbläsarfliken som har den öppna konfigurationssidan för Adobe Experience Manager Web Console.
 
-1. Gå tillbaka till webbläsarfliken som har din öppna AEM.
-1. Tryck på **[!UICONTROL Tools > General > CRXDE Lite]** från AEM.
+1. Gå tillbaka till webbläsarfliken som har Experience Manager som Cloud Service.
+1. Tryck på **[!UICONTROL Tools > General > CRXDE Lite]** från Experience Manager som Cloud Service.
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
@@ -448,11 +447,11 @@ Så här uppdaterar du Scene7 överföringsanslutning:
 
 ### (Optional) Filtering assets for replication {#optional-filtering-assets-for-replication}
 
-In non-Dynamic Media deployments, you replicate *all* assets (both images and video) from your AEM author environment to the AEM publish node. This workflow is necessary because the AEM publish servers also deliver the assets.
+In non-Dynamic Media deployments, you replicate *all* assets (both images and video) from your Experience Manager as a Cloud Service author environment to the Experience Manager as a Cloud Service publish node. This workflow is necessary because the Experience Manager as a Cloud Service publish servers also deliver the assets.
 
-However, in Dynamic Media deployments, because assets are delivered by way of the cloud service, there is no need to replicate those same assets to AEM publish nodes. Such a "hybrid publishing" workflow avoids extra storage costs and longer processing times to replicate assets. Other content, such as Site pages, continue to be served from the AEM publish nodes.
+However, in Dynamic Media deployments, because assets are delivered by way of the cloud service, there is no need to replicate those same assets to Experience Manager as a Cloud Service publish nodes. Such a "hybrid publishing" workflow avoids extra storage costs and longer processing times to replicate assets. Other content, such as Site pages, continue to be served from the Experience Manager as a Cloud Service publish nodes.
 
-The filters provide a way for you to *exclude* assets from being replicated to the AEM publish node.
+The filters provide a way for you to *exclude* assets from being replicated to the Experience Manager as a Cloud Service publish node.
 
 #### Using default asset filters for replication {#using-default-asset-filters-for-replication}
 
@@ -493,7 +492,7 @@ If you are using Dynamic Media for imaging and/or video, then you can use the de
 
 #### Customizing asset filters for replication {#customizing-asset-filters-for-replication}
 
-1. In AEM, tap the AEM logo to access the global navigation console and tap the **[!UICONTROL Tools > General > CRXDE Lite]**.
+1. In Experience Manager as a Cloud Service, tap the Experience Manager as a Cloud Service logo to access the global navigation console and tap the **[!UICONTROL Tools > General > CRXDE Lite]**.
 1. In the left folder tree, navigate to `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` to review the filters.
 
    ![chlimage_1-17](assets/chlimage_1-2.png)
