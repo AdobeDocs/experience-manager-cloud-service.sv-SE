@@ -7,9 +7,9 @@ feature-set: Experience Manager
 feature: Utvecklarverktyg
 role: Utvecklare, arkitekt
 translation-type: tm+mt
-source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
+source-git-commit: d4aacc8d5f0b355cae9f79c10de496f26b3e395a
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '880'
 ht-degree: 33%
 
 ---
@@ -121,6 +121,7 @@ ht-degree: 33%
       + [Modellroutning](developing/hybrid/routing.md)
       + [RemotePage-komponenten](developing/hybrid/remote-page.md)
       + [Redigera en extern SPA i AEM](developing/hybrid/editing-external-spa.md)
+      + [Sammansatta komponenter i SPA](developing/hybrid/composite-components.md)
       + [Återgivning på serversidan](developing/hybrid/ssr.md)
       + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
       + [Starta integrering](developing/hybrid/launch-integration.md)
