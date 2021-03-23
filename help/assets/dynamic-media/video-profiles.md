@@ -4,17 +4,17 @@ description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprof
 feature: Resurshantering, videoprofiler, återgivningar
 topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+source-git-commit: 15cf59ccc5cef515bfbda2da790fa5eaf0247721
 workflow-type: tm+mt
-source-wordcount: '3509'
-ht-degree: 13%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Videoprofiler för Dynamic Media{#video-profiles}
 
-Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. När du kodar dina primära källvideofilmer med den adaptiva videokodningsprofilen justeras videospelaren automatiskt i videoströmmens kvalitet under uppspelningen baserat på internetanslutningshastigheten hos dina kunder. Detta kallas adaptiv strömning.
+Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. När du kodar dina primära källvideofilmer med den adaptiva videokodningsprofilen justeras videospelaren automatiskt i videoströmmens kvalitet under uppspelningen baserat på internetanslutningshastigheten hos dina kunder. Den här åtgärden kallas adaptiv direktuppspelning.
 
 Följande är andra faktorer som avgör kvaliteten på videoklipp:
 
@@ -32,11 +32,11 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 >[!NOTE]
 >
->Om du vill generera videons metadata och tillhörande videobildsminiatyrer måste själva videon gå igenom kodningsprocessen i Dynamic Media. I AEM kodar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** videon om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](/help/assets/dynamic-media/video.md#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
+>Om du vill generera videons metadata och tillhörande videobildminiatyrer måste själva videon gå igenom kodningsprocessen i Dynamic Media. I Adobe Experience Manager kodar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** videon om du har aktiverat Dynamic Media och konfigurerat Cloud Services. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](/help/assets/dynamic-media/video.md#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
 >
->Metadata är användbara när du söker efter resurser. Miniatyrbilderna är statiska videobilder som genereras under kodningen. De krävs av AEM och används i användargränssnittet för att du visuellt ska kunna identifiera videoklipp i vyn Kort, i sökresultatvyn och i resurslista. Du kan se de genererade miniatyrbilderna när du trycker på ikonen Återgivning (en målares palett) för en kodad video.
+>Metadata är användbara när du söker efter resurser. Miniatyrbilderna är statiska videobilder som genereras under kodningen. De krävs av Experience Manager-systemet och används i användargränssnittet för att hjälpa dig att visuellt identifiera videofilmer i kortvyn, sökresultatvyn och resurslista. Du kan se de genererade miniatyrbilderna när du trycker på ikonen Återgivningar (en målarpalett) för en kodad video.
 
-När du är klar med att skapa videoprofilen använder du den på en mapp eller flera mappar. Se [Använda en videoprofil för mappar.](#applying-a-video-profile-to-folders)
+När du är klar med att skapa videoprofilen använder du den på en eller flera mappar. Se [Använda en videoprofil för mappar.](#applying-a-video-profile-to-folders)
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](/help/assets/dynamic-media/config-dm.md#configuring-asset-processing).
 
@@ -93,7 +93,7 @@ I följande tabell visas kodningsprofiler med bästa praxis för adaptiv videost
 
 ## Använda smart beskärning i videoprofiler {#about-smart-crop-video}
 
-Smart beskärning för video - en valfri funktion i videoprofiler - är ett verktyg som använder kraften i artificiell intelligens i Adobe Sensei för att automatiskt upptäcka och beskära fokalpunkten i adaptiv video eller progressiv video som du har överfört, oavsett storlek.
+Smart beskärning för video är en valfri funktion i videoprofiler. Det är ett verktyg som använder Adobe Sensei för att automatiskt identifiera och beskära fokalpunkten i adaptiv video eller progressiv video som du har överfört, oavsett storlek.
 
 De videoformat som stöds för smart beskärning är MP4, MKV, MOV, AVI, FLV och WMV.
 
@@ -103,7 +103,7 @@ Den största videofilstorleken som stöds för smart beskärning är följande k
 * 30 bildrutor per sekund (FPS).
 * 300 MB filstorlek.
 
-Observera att Adobe Sensei för närvarande är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s. Om videon har en högre bildrutefrekvens minskar den maximala videouppspelningstiden. Exempelvis måste en 60 bildrutevideo vara två och en halv minut lång för att kunna hanteras av Adobe Sensai och smart beskärning.
+Adobe Sensei är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s. Om videon har en högre bildrutefrekvens minskar den maximala videouppspelningstiden. Exempelvis måste en 60 bildrutevideo vara två och en halv minut lång för att kunna hanteras av Adobe Sensei och smart beskärning.
 
 ![Smart Crop for Video](assets/smart-crop-video.png)
 
@@ -115,7 +115,7 @@ Om du vill använda smart beskärning för video skapar du en adaptiv eller prog
 
 ![Redigera en videokodningsprofil med smart beskärning](assets/edit-smart-crop-video2.png)
 
-Observera att du kan växla mellan att aktivera och inaktivera videomarkering i videoprofilen med hjälp av skjutreglaget längst till höger om **[!UICONTROL Smart Crop Ratio]** i användargränssnittet.
+Du kan aktivera eller inaktivera videomaterialet genom att använda skjutreglaget längst till höger om **[!UICONTROL Smart Crop Ratio]** i användargränssnittet.
 
 När du har skapat och sparat din videoprofil kan du använda den på de mappar du vill använda.
 
@@ -127,9 +127,9 @@ Se även [Smart beskärning för bilder](image-profiles.md).
 
 Dynamic Media har redan en fördefinierad Adaptive Video Encoding-profil - en grupp inställningar för videoöverföring för MP4 H.264 - som är optimerade för bästa möjliga visningsupplevelse. Du kan använda den här profilen när du överför videoklipp.
 
-Om den här fördefinierade profilen inte uppfyller dina behov kan du välja att skapa en egen adaptiv videokodningsprofil. När du använder inställningen **[!UICONTROL Encode for adaptive streaming]**-som den bästa metoden valideras alla kodningsförinställningar som du lägger till i profilen så att alla videoklipp har samma proportioner. Dessutom hanteras de kodade videoklippen som en uppsättning med flera bithastigheter för direktuppspelning.
+Om den här fördefinierade profilen inte uppfyller dina behov kan du välja att skapa en egen adaptiv videokodningsprofil. Det bästa sättet är att när du använder inställningen **[!UICONTROL Encode for adaptive streaming]** valideras alla kodningsförinställningar som du lägger till i profilen. Den här funktionen ser till att alla videoklipp har samma proportioner. Dessutom hanteras de kodade videoklippen som en uppsättning med flera bithastigheter för direktuppspelning.
 
-När du skapar videokodningsprofilen ser du att de flesta kodningsalternativen är förifyllda med rekommenderade standardinställningar. Om du väljer ett annat värde än det rekommenderade standardvärdet bör du vara medveten om att det kan leda till sämre videokvalitet under uppspelning och andra prestandaproblem.
+När du skapar videokodningsprofilen ser du att de flesta kodningsalternativen är förifyllda med rekommenderade standardinställningar. Om du väljer ett annat värde än det rekommenderade kan det emellertid ge sämre videokvalitet vid uppspelning och andra prestandaproblem.
 
 För alla kodningsförinställningar för MP4 H.264-video i profilen valideras följande värden för att säkerställa att de är desamma i alla enskilda kodningsförinställningar i profilen, vilket gör adaptiv strömning möjlig:
 
@@ -142,7 +142,7 @@ För alla kodningsförinställningar för MP4 H.264-video i profilen valideras f
 * H264-profil
 * Samplingsfrekvens för ljud
 
-Om värdena inte är desamma kan du fortsätta skapa profilen som den är. Tänk dock på att adaptiv strömning inte kommer att vara möjlig. I stället får användarna direktuppspelning med en bithastighet. Vi rekommenderar att du redigerar kodningsinställningarna så att samma värden används för de enskilda kodningsförinställningarna i profilen. (Observera att redigeraren för videoprofil/förinställning bör tillämpa paritet för de adaptiva videokodningsinställningarna om &quot;Koda för adaptiv strömning&quot; är aktiverat.)
+Om värdena inte är desamma kan du fortsätta skapa profilen som den är. Anpassad direktuppspelning är dock inte möjlig. I stället får användarna direktuppspelning med en bithastighet. Vi rekommenderar att du redigerar kodningsinställningarna så att samma värden används för de enskilda kodningsförinställningarna i profilen. (Videoprofils-/förinställningsredigeraren tillämpar paritet för de adaptiva videokodningsinställningarna om &quot;Koda för adaptiv strömning&quot; är aktiverat.)
 
 Se även [Skapa en videokodningsprofil för progressiv direktuppspelning](#creating-a-video-encoding-profile-for-progressive-streaming).
 
@@ -152,13 +152,12 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 
 **Om du vill skapa en videoprofil för adaptiv direktuppspelning**,
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
-1. Klicka eller tryck på **[!UICONTROL Create]** för att lägga till en ny videoprofil.
-
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Tryck på **[!UICONTROL Create]**.
 1. Ange ett namn och en beskrivning för profilen.
 1. Tryck på **[!UICONTROL Add Video Encoding Preset]** på sidan Skapa/redigera förinställningar för videokodning.
 1. Ange alternativen för video och ljud på fliken **[!UICONTROL Basic]**.
-Tryck på informationsikonen bredvid varje alternativ för ytterligare beskrivningar eller rekommenderade inställningar baserat på den valda videoformatkodeken.
+Tryck på informationsikonen bredvid varje alternativ om du vill ha fler beskrivningar eller rekommenderade inställningar baserat på den valda videoformatkodeken.
 1. Kontrollera att **[!UICONTROL Keep aspect ratio]** är markerat under rubriken Videostorlek.
 1. Ställ in videobildrutans upplösning i pixlar. Använd värdet **[!UICONTROL Auto]** för att automatiskt skala så att det matchar källproportionerna (bredd/höjd). Exempel: Auto x 480 eller 640 x Auto.
 
@@ -171,10 +170,10 @@ Tryck på informationsikonen bredvid varje alternativ för ytterligare beskrivni
 1. (Valfritt) Tryck på fliken **[!UICONTROL Advanced]** och kontrollera att kryssrutan **[!UICONTROL Use Default Values]** är markerad (rekommenderas). Du kan också ändra avancerade video- och ljudinställningar.
 1. Tryck på **[!UICONTROL Save]** längst upp till höger på sidan för att spara förinställningen.
 1. Gör något av följande:
-   * Upprepa steg 4-10 för att skapa ytterligare kodningsförinställningar. (Adaptiv videoströmning kräver mer än en videoförinställning.)
+   * Upprepa steg 4-10 för att skapa fler kodningsförinställningar. (Adaptiv videoströmning kräver mer än en videoförinställning.)
    * Fortsätt till nästa steg.
 
-1. (Valfritt) Gör så här om du vill lägga till videomaterial i videoklipp som den här profilen ska användas på:
+1. (Valfritt) Gör så här om du vill lägga till videomaterial i videoklipp som den här profilen tillämpas på:
    * Tryck på **[!UICONTROL Add New]** till höger om rubriken Smarta beskärningsproportioner på sidan Redigera videoprofil.
    * I fältet Namn anger du ett namn på beskärningsförhållandet som gör det lättare att identifiera det.
    * Välj den proportion du vill använda i listrutan **[!UICONTROL Crop Ratio]**.
@@ -190,7 +189,7 @@ Nu kan du använda profilen för mappar som innehåller videoklipp. Se [Tillämp
 
 ## Skapa en videoprofil för progressiv direktuppspelning {#creating-a-video-encoding-profile-for-progressive-streaming}
 
-Om du väljer att inte använda alternativet **[!UICONTROL Encode for adaptive streaming]** måste du tänka på att alla kodningsförinställningar som du lägger till i profilen behandlas som individuella videoåtergivningar för strömning med en bithastighet eller progressiv videoleverans. Dessutom går det inte att kontrollera att alla videoåtergivningar har samma proportioner.
+Om du väljer att inte använda alternativet **[!UICONTROL Encode for adaptive streaming]** behandlas alla kodningsförinställningar som du lägger till i profilen som enskilda videoåtergivningar för direktuppspelad video med en bithastighet eller progressiv videoleverans. Dessutom går det inte att kontrollera att alla videoåtergivningar har samma proportioner.
 
 Videoformatets kodekar som stöds är H.264 (.mp4) och WebM.
 
@@ -202,12 +201,12 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 
 **Så här skapar du en videoprofil för progressiv direktuppspelning:**
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
-1. Tryck på **[!UICONTROL Create]** för att lägga till en ny videoprofil.
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Tryck på **[!UICONTROL Create]**.
 1. Ange ett namn och en beskrivning för profilen.
 1. Tryck på **[!UICONTROL Add Video Encoding Preset]** på sidan Skapa/redigera förinställningar för videokodning.
 1. Ange alternativen för video och ljud på fliken **[!UICONTROL Basic]**.
-Tryck på informationsikonen bredvid varje alternativ för ytterligare beskrivningar eller rekommenderade inställningar baserat på den valda videoformatkodeken.
+Tryck på informationsikonen bredvid varje alternativ om du vill ha fler beskrivningar eller rekommenderade inställningar baserat på den valda videoformatkodeken.
 1. (Valfritt) Avmarkera **[!UICONTROL Keep aspect ratio]** under rubriken Videostorlek.
 1. Gör följande:
    * I fältet **[!UICONTROL Width]** anger du **[!UICONTROL auto]**.
@@ -218,18 +217,18 @@ Om du vill få hjälp med att visualisera storleken på videon trycker du på in
    * Tryck på fliken **[!UICONTROL Advanced]** och kontrollera att kryssrutan **[!UICONTROL Use Default Values]** är markerad (rekommenderas).
 
    * Avmarkera kryssrutan **[!UICONTROL Use Default Values]** och ange önskade videoinställningar och ljudinställningar.
-Tryck på informationsikonen bredvid varje alternativ för ytterligare beskrivningar eller rekommenderade inställningar baserat på den valda videoformatkodeken.
+Tryck på informationsikonen bredvid varje alternativ om du vill ha fler beskrivningar eller rekommenderade inställningar baserat på den valda videoformatkodeken.
 
 1. Tryck på **[!UICONTROL Save]** längst upp till höger på sidan för att spara förinställningen.
 1. Gör något av följande:
 
-   * Upprepa steg 4-9 för att skapa ytterligare kodningsförinställningar.
+   * Upprepa steg 4-9 för att skapa fler kodningsförinställningar.
    * Fortsätt till nästa steg.
 
-1. (Valfritt) Gör så här om du vill lägga till videomaterial i videoklipp som den här profilen ska användas på:
+1. (Valfritt) Gör så här om du vill lägga till videomaterial i videoklipp som den här profilen tillämpas på:
 
    * Tryck på **[!UICONTROL Add New]** till höger om rubriken Smarta beskärningsproportioner på sidan Redigera videoprofil.
-   * I fältet Namn anger du ett namn på beskärningsförhållandet som gör det lättare att identifiera det.
+   * I fältet Namn skriver du ett namn på beskärningsförhållandet som gör det lättare att identifiera det.
    * Välj den proportion du vill använda i listrutan **[!UICONTROL Crop Ratio]**.
 
 1. Gör något av följande:
@@ -243,11 +242,11 @@ Nu kan du använda profilen för mappar som innehåller videoklipp. Se [Tillämp
 
 ## Använda egna parametrar för videokodning {#using-custom-added-video-encoding-parameters}
 
-Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerade videokodningsparametrar som inte finns i användargränssnittet när du skapar eller redigerar en videoprofil i AEM. Du kan lägga till en eller flera avancerade parametrar, till exempel minBitrate och maxBitrate, i den befintliga profilen.
+Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerade videokodningsparametrar som inte finns i användargränssnittet när du skapar eller redigerar en videoprofil i Experience Manager. Du kan lägga till en eller flera avancerade parametrar, till exempel minBitrate och maxBitrate, i den befintliga profilen.
 
 **Så här använder du anpassade kodningsparametrar** för video:
 
-1. Tryck på AEM-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. Tryck på Experience Manager-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Gå till följande på CRXDE Lite-sidan i Utforskaren till vänster:
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
@@ -266,13 +265,13 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
   </tr>
   <tr>
    <td><code>h264Level</code></td>
-   <td>H.264-nivå som ska användas för kodning. Normalt bestäms detta automatiskt utifrån de kodningsinställningar som du använder.</td>
+   <td>H.264-nivå som ska användas för kodning. Normalt bestäms den här nivån automatiskt utifrån de kodningsinställningar som du använder.</td>
    <td><code>String</code></td>
    <td><p>10 * h264 nivå</p> <p>3.0 = 30, 1.3 = 13)</p> <p>Inget standardvärde.</p> </td>
   </tr>
   <tr>
    <td><code>keyframe</code></td>
-   <td>Målantalet bildrutor mellan nyckelbildrutor. Beräkna det här värdet för att generera en nyckelbildruta var 2:10:e sekund. Exempel: vid 30 bildrutor per sekund ska nyckelbildruteintervallet vara 60-300.<br /> <br /> Lägre intervall för nyckelrutor förbättrar strömsöknings- och strömbrytningsbeteendet för adaptiv videokodning och kan även förbättra kvaliteten för videoklipp som har mycket rörelse. Men eftersom nyckelrutor ökar filstorleken resulterar ett lägre nyckelruteintervall vanligtvis i en lägre total videokvalitet med en viss bithastighet.</td>
+   <td>Målantalet bildrutor mellan nyckelbildrutor. Beräkna det här värdet för att generera en nyckelbildruta var 2:10:e sekund. Exempel: vid 30 bildrutor per sekund är nyckelbildruteintervallet 60-300.<br /> <br /> Lägre intervall för nyckelrutor förbättrar strömsöknings- och strömbrytningsbeteendet för adaptiv videokodning och kan även förbättra kvaliteten för videoklipp som har mycket rörelse. Men eftersom nyckelrutor ökar filstorleken resulterar ett lägre nyckelruteintervall vanligtvis i en lägre total videokvalitet med en viss bithastighet.</td>
    <td><code>String</code></td>
    <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS (HTTP Live Streaming) är 60-90.</p> </td>
   </tr>
@@ -305,7 +304,7 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
    * Upprepa steg 3 och 4 för att lägga till ytterligare en parameter i videokodningsprofilen.
    * I närheten av det övre vänstra hörnet på sidan trycker du på **[!UICONTROL Save All]**.
 
-1. Tryck på ikonen **[!UICONTROL Back Home]** längst upp till vänster på CRXDE Lite-sidan för att gå tillbaka till AEM.
+1. Tryck på ikonen **[!UICONTROL Back Home]** längst upp till vänster på CRXDE Lite för att gå tillbaka till Experience Manager.
 
 ### Redigera en videoprofil {#editing-a-video-encoding-profile}
 
@@ -319,7 +318,7 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 
 **Så här redigerar du en videoprofil**:
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera ett namn på videoprofilen på sidan Videoprofiler.
 1. Tryck på **[!UICONTROL Edit]** i verktygsfältet.
 1. Redigera namn och beskrivning på sidan Video Encoding Profile.
@@ -327,13 +326,13 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 Tryck på informationsikonen om du vill se en beskrivning av adaptiv strömning. (Om du redigerar en progressiv videoprofil ska du inte markera den här kryssrutan.)
 1. Under rubriken Förinställningar för videokodning lägger du till, redigerar eller tar bort förinställningar för videokodning som utgör profilen.
 
-   Tryck på informationsikonen bredvid respektive alternativ på flikarna **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** för ytterligare beskrivningar eller rekommenderade inställningar baserat på den valda videokodeken.
+   Tryck på informationsikonen bredvid varje alternativ på flikarna **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** om du vill ha fler beskrivningar eller rekommenderade inställningar baserade på den valda videoformatkodeken.
 
 1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
 
 ### Kopiera en videoprofil {#copying-a-video-encoding-profile}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera ett namn på videoprofilen på sidan Videoprofiler.
 1. Tryck på **[!UICONTROL Copy]** i verktygsfältet.
 1. Ange ett nytt namn för profilen på sidan Video Encoding Profile.
@@ -348,14 +347,14 @@ Tryck på informationsikonen om du vill se en beskrivning av adaptiv strömning.
 
 ### Tar bort en videoprofil {#deleting-a-video-encoding-profile}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera ett eller flera videoprofilnamn på sidan Videoprofiler.
 1. Tryck på **[!UICONTROL Delete]** i verktygsfältet.
 1. Tryck på **[!UICONTROL OK]**.
 
 ## Använda en videoprofil på mappar {#applying-a-video-profile-to-folders}
 
-När du tilldelar en videoprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Det innebär att du bara kan tilldela en videoprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
+När du tilldelar en videoprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Därför kan du bara tilldela en videoprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
 
 Om du har tilldelat en annan videoprofil till en mapp åsidosätter den nya profilen den tidigare profilen. De tidigare befintliga mappresurserna ändras inte. Den nya profilen används för resurser som läggs till i mappen senare.
 
@@ -377,14 +376,14 @@ Se även [Bearbeta resurser i en mapp efter att du har redigerat dess bearbetnin
 
 #### Använda en videoprofil på mappar med hjälp av profilanvändargränssnittet {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera den videoprofil som du vill använda för en eller flera mappar.
-1. Tryck på **[!UICONTROL Apply Profile to Folder(s)]** och markera den eller de mappar som du vill ska ta emot de nyligen överförda resurserna och tryck sedan på **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet i **[!UICONTROL Card View]**.
+1. Tryck på **[!UICONTROL Apply Profile to Folders]** och markera den eller de mappar som du vill ska ta emot de nyligen överförda resurserna och tryck sedan på **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet i **[!UICONTROL Card View]**.
 Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
 
 #### Använda en videoprofil på mappar från egenskaperna {#applying-video-profiles-to-folders-from-properties}
 
-1. Tryck eller klicka på AEM logotyp och navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill använda en videoprofil på.
+1. Tryck eller klicka på Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill använda en videoprofil på.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Video Profiles]**, välj profilen i listrutan och klicka sedan på **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
@@ -393,7 +392,7 @@ Du kan  [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-
 
 ### Använda en videoprofil globalt {#applying-a-video-profile-globally}
 
-Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till AEM resurser i en mapp har den valda profilen.
+Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till Experience Manager-resurser i en mapp har den valda profilen.
 
 Se även [Återbearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
@@ -408,7 +407,7 @@ Se även [Återbearbeta resurser i en mapp](/help/assets/dynamic-media/about-ima
 
 En bearbetningsindikator (eller förloppsindikator) visas så att du visuellt kan övervaka förloppet för ett videoprofilbearbetningsjobb.
 
-Du kan också visa filen `error.log` för att övervaka förloppet för ett kodningsjobb, för att se om kodningen är klar eller för att se eventuella jobbfel. `error.log` finns i mappen `logs` där din AEM är installerad.
+Du kan också visa filen `error.log` för att övervaka förloppet för ett kodningsjobb, för att se om kodningen är klar eller för att se eventuella jobbfel. `error.log` finns i mappen `logs` där din instans av Experience Manager är installerad.
 
 ## Ta bort en videoprofil från mappar {#removing-a-video-profile-from-folders}
 
@@ -418,7 +417,7 @@ Du kan ta bort en videoprofil från en mapp från menyn **[!UICONTROL Tools]** e
 
 ### Ta bort en videoprofil från mappar via profilens användargränssnitt {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera den videoprofil som du vill ta bort från en eller flera mappar.
 1. Tryck på **[!UICONTROL Remove Profile from Folders]** och markera den eller de mappar som du vill ta bort profilen från och tryck sedan på **[!UICONTROL Remove]**.
 
@@ -426,7 +425,7 @@ Du kan ta bort en videoprofil från en mapp från menyn **[!UICONTROL Tools]** e
 
 ### Ta bort en videoprofil från mappar med hjälp av egenskaperna {#removing-video-profiles-from-folders-by-way-of-properties}
 
-1. Tryck eller klicka på AEM logotyp och navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en videoprofil från.
+1. Tryck eller klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill ta bort en videoprofil från.
 1. Markera mappen genom att trycka eller klicka på bockmarkeringen och sedan trycka på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Video Profiles]**, välj **[!UICONTROL None]** i listrutan och klicka på **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
