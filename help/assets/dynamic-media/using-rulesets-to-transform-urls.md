@@ -1,11 +1,11 @@
 ---
 title: Använda regeluppsättningar för att omforma URL:er
-description: Lär dig hur du distribuerar regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
+description: Lär dig hur du distribuerar regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript™) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
 topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 15cf59ccc5cef515bfbda2da790fa5eaf0247721
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '731'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # Använda regeluppsättningar för att omforma URL:er {#using-rulesets-to-transform-urls}
 
-Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor. Varje regel består av minst ett villkor och minst en åtgärd. En regel utvärderar XML-data mot villkoren, och om ett villkor är uppfyllt utförs rätt åtgärd. Exempel på regeluppsättningar är följande:
+Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript™) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor. Varje regel består av minst ett villkor och minst en åtgärd. En regel utvärderar XML-data mot villkoren, och om ett villkor är uppfyllt utförs rätt åtgärd. Exempel på regeluppsättningar är följande:
 
 * Lägga till ett MIME-typsuffix. Många tjänster och webbplatser kräver bildsuffix, som att lägga till `.jpg` till en URL.
 * Skapa en mappsökväg till URL:en för sökmotoroptimering.
@@ -67,7 +67,7 @@ Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en 
    * Bläddra till regeluppsättningsfilen (XML) i dialogrutan **[!UICONTROL Open]**.
    * Markera filen och klicka sedan på **[!UICONTROL Open]**.
    * Till höger på sidan **[!UICONTROL Upload]** väljer du en målmapp för regeluppsättningsfilen.
-   * Kontrollera att **[!UICONTROL Publish After Uploading]** är markerat nära sidans nederkant.
+   * Kontrollera att Publicera efter överföring är markerat längst ned på sidan.
    * Klicka på **[!UICONTROL Submit Upload]** längst ned till höger på sidan.
    * Klicka på **[!UICONTROL Jobs]** i fältet Global navigering för att kontrollera överföringsjobbets status. När kolumnen **[!UICONTROL Status]** på sidan **[!UICONTROL Job]** säger Överför klar fortsätter du till nästa steg.
 
@@ -79,5 +79,5 @@ Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en 
 
    Regeluppsättningsvillkoren tillämpas på begäranden till Dynamic Media Image-servrar.
 
-   Om du gör ändringar i regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.
+   Om du ändrar regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.
 
