@@ -4,10 +4,10 @@ description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 feature: Snurrande uppsättningar
 topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 15cf59ccc5cef515bfbda2da790fa5eaf0247721
 workflow-type: tm+mt
-source-wordcount: '1769'
-ht-degree: 12%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ Snurra uppsättningar anges av en banderoll med ordet **[!UICONTROL SPINSET]**. 
 
 >[!NOTE]
 >
->Mer information om användargränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/manage-digital-assets.md) och använda det i en ny mapp där dina bilduppsättningsresurser ska överföras.
+>Mer information om användargränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/manage-digital-assets.md) och använda det i en ny mapp där dina bilduppsättningsresurser överförs.
 
 ## Snabbstart: Snurra uppsättningar {#quick-start-spin-sets}
 
@@ -40,7 +40,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Ladda upp bilderna för flera vyer.](#uploading-assets-for-spin-sets)
 
-   Du behöver minst 8-12 tagningar av ett objekt för en endimensionell snurra och 16-24 för en tvådimensionell snurra uppsättning. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30 grader (360/12) för varje tagning.
+   Du behöver minst 8-12 tagningar av ett objekt för en endimensionell snurra och 16-24 för en tvådimensionell snurra uppsättning. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30° (360/12) för varje tagning.
 
 1. [Skapa snurruppsättningar.](#creating-spin-sets)
 
@@ -52,7 +52,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Administratörer kan skapa eller ändra visningsförinställningar för rotationsuppsättningar. Om du vill visa rotationsuppsättningen med en visningsförinställning markerar du rotationsuppsättningen och väljer **Visningsprogram** i listrutan till vänster.
 
-   Se **[!UICONTROL Tools > Assets > Viewer Presets]** om du vill skapa eller redigera visningsprogramförinställningar.
+   Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools > Assets > Viewer Presets]**.
 
    Se [Lägga till och redigera visningsprogramförinställningar.](/help/assets/dynamic-media/managing-viewer-presets.md)
 
@@ -68,29 +68,29 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Länka URL:er till webbprogrammet ](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller  [bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
 
-   AEM Assets skapar URL-anrop för Spin-uppsättningar och aktiverar dem när du har publicerat rotationsuppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
+   Adobe Experience Manager Assets skapar URL-anrop för Spin Sets och aktiverar dem när du har publicerat snurruppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
 
    Markera rotationsuppsättningen och välj sedan **[!UICONTROL Viewers]** i listrutan till vänster.
 
    Läs [Länka en rotationsuppsättning till en webbsida](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
 
-Om du behöver kan du [redigera snurruppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra [egenskaper för snurruppsättning](/help/assets/manage-digital-assets.md#editing-properties).
+Om det behövs kan du [redigera snurruppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra [egenskaper för snurruppsättning](/help/assets/manage-digital-assets.md#editing-properties).
 
 ## Överför resurser för snurpuppsättningar {#uploading-assets-for-spin-sets}
 
-Du behöver minst 8-12 bilder av ett objekt för en endimensionell snurra. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30 grader (360/12) för varje tagning.
+Du behöver minst 8-12 bilder av ett objekt för en endimensionell snurra. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30° (360/12) för varje tagning.
 
-Du kan överföra bilder för snurra uppsättningar på samma sätt som du [överför andra resurser i AEM Assets](/help/assets/manage-digital-assets.md).
+Du kan överföra bilder för Snurra uppsättningar på samma sätt som du [överför andra resurser i Experience Manager Assets](/help/assets/manage-digital-assets.md).
 
 ### Riktlinjer för hämtning av bilder för din snurruppsättning {#guidelines-for-shooting-spin-set-images}
 
-Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fler bilder du har i en snurrfunktion, desto bättre blir effekten av att snurra. Om du inkluderar många bilder i uppsättningen ökar dock tiden det tar för bilderna att läsas in. AEM rekommenderar följande riktlinjer för att ta bilder för användning i snurra uppsättningar:
+Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fler bilder du har i en snurrfunktion, desto bättre blir effekten av att snurra. Om du inkluderar många bilder i uppsättningen ökar dock tiden det tar för bilderna att läsas in. Experience Manager rekommenderar följande riktlinjer för att ta bilder för användning i snurra uppsättningar:
 
-* Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360 grader. Endimensionella snurruppsättningar är vanligare eftersom tvådimensionella snurruppsättningar är arbetsintensiva.
+* Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360°. Endimensionella snurruppsättningar är vanligare eftersom det är arbetsintensivt att skapa tvådimensionella snurruppsättningar.
 * Använd ett förlustfritt format, TIFF och PNG rekommenderas.
 * Maskera alla bilder så att objektet visas på en helt vit eller annan bakgrund med hög kontrast. Du kan också lägga till skuggor.
 * Se till att produktinformationen är väl belyst och i fokus.
-* Ta snurra bilder till modekläder med mannequin eller modell. Ofta är mannequin antingen helt maskerat (med hjälp av en glasmannequin) eller en stiliserad mannequin/form visas i bilden. Du kan skapa en omformningsrotation genom att definiera antalet vinklar. Markera varje vinkel med band på golvet för att vägleda modellen till steg och titta i riktningen för varje tagning.
+* Ta snurra bilder till modekläder med mannequin eller modell. Ofta är mannequin antingen maskerat (med hjälp av en glasmannequin) eller en stiliserad mannequin/form visas i bilden. Du kan skapa en omformningsrotation genom att definiera antalet vinklar. Markera varje vinkel med band på golvet för att vägleda modellen till steg och titta i riktningen för varje tagning.
 
 ## Skapar snurruppsättningar {#creating-spin-sets}
 
@@ -118,7 +118,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
    >[!NOTE]
    >
-   >När du skapar rotationsuppsättningen kan du ändra miniatyrbilden för rotationsuppsättningen eller låta AEM välja miniatyrbilden automatiskt baserat på resurserna i rotationsuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har markerat en miniatyrbild och sedan vill AEM generera en från rotationsuppsättningen väljer du **[!UICONTROL Switch to Automatic thumbnail]**.
+   >När du skapar rotationsuppsättningen kan du ändra miniatyrbilden för rotationsuppsättningen eller låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i rotationsuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har markerat en miniatyrbild och sedan vill att Experience Manager ska generera en från rotationsuppsättningen väljer du **[!UICONTROL Switch to Automatic thumbnail]**.
 
 1. Gör något av följande:
 
@@ -133,7 +133,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
    ![chlimage_1-383](assets/chlimage_1-383.png)
 
-1. När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan sortera om eller sortera resurser manuellt när du har lagt till dem.
+1. När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när du har lagt till dem.
 
    Om det behövs kan du dra en resurs sorteringsikon till höger om resursens filnamn för att ordna om bilderna uppåt eller nedåt i uppsättningslistan.
 
@@ -159,7 +159,7 @@ Du kan skapa snurruppsättningar antingen i användargränssnittet eller automat
 
 **Så här visar du snurruppsättningar**
 
-1. När egenskaperna för en enskild resurs öppnas. Egenskaperna anger vad som ställer in den valda resursen som medlem av (under **[!UICONTROL Member of Sets]**). Klicka på uppsättningens namn för att se hela uppsättningen.
+1. När egenskaperna för en enskild resurs öppnas. Egenskaperna anger vad som ställer in den valda resursen som medlem av (under **[!UICONTROL Member of Sets]**). Om du vill visa hela uppsättningen trycker du på uppsättningens namn.
 
    ![chlimage_1-156](assets/chlimage_1-384.png)
 
@@ -169,13 +169,13 @@ Du kan skapa snurruppsättningar antingen i användargränssnittet eller automat
 
 1. I sökningen kan du välja **[!UICONTROL Filters]** och sedan expandera **[!UICONTROL Dynamic Media]** och markera **[!UICONTROL Sets]**.
 
-   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiska uppsättningar utförs sökfrågan med `Starts with` sökvillkor som skiljer sig från AEM sökning som baseras på `Contains`-sökvillkor. Det enda sättet att söka efter automatiska uppsättningar är att ställa in filtret på **[!UICONTROL Sets]**.
+   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiska uppsättningar utförs sökfrågan med `Starts with`-sökvillkor som skiljer sig från sökvillkoret i Experience Manager, som baseras på `Contains`-sökvillkor. Det enda sättet att söka efter automatiska uppsättningar är att ställa in filtret på **[!UICONTROL Sets]**.
 
    ![chlimage_1-158](assets/chlimage_1-386.png)
 
 ## Redigera snurruppsättningar {#editing-spin-sets}
 
-Du kan utföra en mängd redigeringsåtgärder på snurra uppsättningar, till exempel:
+Du kan utföra olika redigeringsåtgärder på snurra uppsättningar, till exempel:
 
 * Lägg till bilder i rotationsrutan.
 * Ändra ordning på bilderna i rotationsrutan.
@@ -197,7 +197,7 @@ Du kan utföra en mängd redigeringsåtgärder på snurra uppsättningar, till e
    * Om du vill ändra ordning på bilderna drar du en bild till en ny plats (markera ikonen för att ändra ordning för att flytta objekt).
    * Om du vill sortera objekt i stigande eller fallande ordning klickar du på kolumnrubriken.
    * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Add Asset]**. Navigera till en resurs, markera den och tryck sedan på **[!UICONTROL Select]** nära det övre högra hörnet.
-Om du tar bort den bild som AEM använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
+Om du tar bort den bild som Experience Manager använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
    * Om du vill ta bort en resurs markerar du den och klickar eller trycker på **[!UICONTROL Delete Asset]**.
    * Om du vill använda en förinställning trycker eller klickar du på förinställningsikonen och väljer en förinställning.
    * Om du vill ta bort en hel snurruppsättning går du till snurra-uppsättningen, markerar den och väljer **[!UICONTROL Delete]**
