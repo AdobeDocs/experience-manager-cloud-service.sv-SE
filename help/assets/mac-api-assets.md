@@ -3,9 +3,9 @@ title: HTTP API för Assets
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f1fa095c7c89be89ed02ebdf14dcc0a4b9f542b1
+source-git-commit: 332ca27c060a46d41e4f6e891f6fd98170d10d9f
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,9 @@ Så här kommer du åt API:
 
 API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt, till exempel för PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
 
-Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet [!DNL Assets] och via HTTP-API:t. API:t returnerar 404-felmeddelandet om [!UICONTROL On Time] är i framtiden eller om [!UICONTROL Off Time] är i det förflutna.
-
 >[!NOTE]
 >
->Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är borttagna för AEM som en [!DNL Cloud Service]-distribution. Om du vill överföra binära filer använder du [API:er för direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
+>Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är föråldrade för [!DNL Experience Manager] som en [!DNL Cloud Service]-distribution. Om du vill överföra binära filer använder du [API:er för direkt binär överföring](developer-reference-material-apis.md#asset-upload-technical) i stället.
 
 ## Innehållsfragment {#content-fragments}
 
@@ -42,7 +40,7 @@ HTTP-API:t [!DNL Assets] visar två huvudelement, mappar och resurser (för stan
 
 ### Mappar {#folders}
 
-Mappar är som kataloger i traditionella filsystem. De är behållare för andra mappar eller kontroller. Mappar har följande komponenter:
+Mappar är som kataloger som i de traditionella filsystemen. Mappen kan bara innehålla resurser, bara mappar eller mappar och resurser. Mappar har följande komponenter:
 
 **Enheter**: Enheterna i en mapp är dess underordnade element, som kan vara mappar och resurser.
 
@@ -66,7 +64,8 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 I [!DNL Experience Manager] innehåller en resurs följande element:
 
 * Resursens egenskaper och metadata.
-* Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF- eller Adobe InDesign-filer.
+* Ursprungligen överförd binär fil för resursen.
+* Flera renderingar enligt konfigurationen. Det kan vara bilder med olika storlekar, videofilmer med olika kodningar eller extraherade sidor från PDF- eller [!DNL Adobe InDesign]-filer.
 * Valfria kommentarer.
 
 Mer information om element i innehållsfragment finns i [Stöd för innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
@@ -95,7 +94,7 @@ HTTP-API:t [!DNL Assets] innehåller följande funktioner:
 
 >[!NOTE]
 >
->För att underlätta läsbarheten utelämnar följande exempel den fullständiga cURL-notationen. Faktum är att notationen korrelerar med [Resty](https://github.com/micha/resty) som är en skriptwrapper för `cURL`.
+>För att underlätta läsbarheten utelämnar följande exempel de fullständiga cURL-noteringarna. Anteckningen korrelerar med [Resty](https://github.com/micha/resty) som är en skriptwrapper för cURL.
 
 <!-- TBD: The Console Manager is not available now. So how to configure the below? 
 
@@ -122,9 +121,14 @@ Hämtar en siren-representation av en befintlig mapp och av dess underordnade en
 
 ## Skapa en mapp {#create-a-folder}
 
-Skapar en ny `sling`: `OrderedFolder` vid angiven sökväg. Om ett `*` anges i stället för ett nodnamn använder serverleten parameternamnet som nodnamn. Data accepteras som begärandedata antingen som en Siren-representation av den nya mappen eller en uppsättning namn/värde-par, kodade som `application/www-form-urlencoded` eller `multipart`/ `form`- `data`, vilket är användbart när du skapar en mapp direkt från ett HTML-formulär. Dessutom kan mappens egenskaper anges som URL-frågeparametrar.
+Skapar en `sling`: `OrderedFolder` vid angiven sökväg. Om `*` anges i stället för ett nodnamn använder serverleten parameternamnet som nodnamn. I begäran godkänns något av följande:
 
-Ett API-anrop misslyckas med en `500`-svarskod om den överordnade noden för den angivna sökvägen inte finns. Ett anrop returnerar en svarskod `409` om mappen redan finns.
+* En siren-representation av den nya mappen
+* En uppsättning namn/värde-par, kodade som `application/www-form-urlencoded` eller `multipart`/ `form`- `data`. Dessa är användbara när du vill skapa en mapp direkt från ett HTML-formulär.
+
+Mappens egenskaper kan också anges som URL-frågeparametrar.
+
+Ett API-anrop misslyckas med en `500`-svarskod om den överordnade noden för den angivna sökvägen inte finns. Ett anrop returnerar en svarskod `409` om mappen finns.
 
 **Parametrar**:  `name` är mappnamnet.
 
@@ -136,7 +140,7 @@ Ett API-anrop misslyckas med en `500`-svarskod om den överordnade noden för de
 **Svarskoder**: Svarskoderna är:
 
 * 201 - SKAPAD - när den skapades.
-* 409 - CONFLICT - om mappen redan finns.
+* 409 - CONFLICT - om det finns en mapp.
 * 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
 
@@ -163,7 +167,7 @@ Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i 
 
 ## Skapa en resursåtergivning {#create-an-asset-rendition}
 
-Skapa en ny resursåtergivning för en resurs. Om parameternamnet för begäran inte anges används filnamnet som återgivningsnamn.
+Skapa en återgivning för en resurs. Om parameternamnet för begäran inte anges används filnamnet som återgivningsnamn.
 
 **Parametrar**: Parametrarna är  `name` för återgivningens namn och  `file` som en filreferens.
 
@@ -181,7 +185,7 @@ Skapa en ny resursåtergivning för en resurs. Om parameternamnet för begäran 
 
 ## Uppdatera en resursåtergivning {#update-an-asset-rendition}
 
-Uppdateringar ersätter en resursåtergivning med nya binära data.
+Uppdateringarna ersätter en resursåtergivning med nya binära data.
 
 **Begäran**:  `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
 
@@ -193,8 +197,6 @@ Uppdateringar ersätter en resursåtergivning med nya binära data.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
 
 ## Lägg till en kommentar för en resurs {#create-an-asset-comment}
-
-Skapar en ny resurskommentar.
 
 **Parametrar**: Parametrarna är  `message` för kommentarens meddelandetext och  `annotationData` för anteckningsdata i JSON-format.
 
@@ -260,6 +262,12 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 * 200 - OK - Om mappen har tagits bort.
 * 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
+
+## Tips, metodtips och begränsningar {#tips-limitations}
+
+* Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet [!DNL Assets] och via HTTP-API:t. API:t returnerar 404-felmeddelandet om [!UICONTROL On Time] är i framtiden eller om [!UICONTROL Off Time] är i det förflutna.
+
+* Använd inte `/adobe` som URL- eller JCR-sökväg. Registrera inga serveringar under det här trädet och skapa inte innehåll i JCR.
 
 >[!MORELIKETHIS]
 >
