@@ -4,9 +4,9 @@ description: Lär dig hur du söker efter de nödvändiga resurserna i [!DNL Ado
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 836e4e7fa727e350ef757984306b32df25921663
+source-git-commit: 0e5d49b8781ebe0c5785a14800bcaec223da809c
 workflow-type: tm+mt
-source-wordcount: '4694'
+source-wordcount: '4708'
 ht-degree: 4%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 4%
 
 [!DNL Experience Manager Assets] har stöd för följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsfall.
 
-| Söka efter resurser | Konfiguration och administration | Arbeta med sökresultat |
+| Sök efter resurser | Konfigurera och administrera sökfunktioner | Arbeta med sökresultat |
 |---|---|---|
 | [Grundläggande sökningar](#searchbasics) | [Sökindex](#searchindex) | [Sortera resultat](#sort) |
-| [Förstå sökgränssnittet](#searchui) |  | [Kontrollera egenskaper och metadata för en resurs](#checkinfo) |
+| [Förstå sökgränssnittet](#searchui) | [Textextrahering](#extracttextupload) | [Kontrollera egenskaper och metadata för en resurs](#checkinfo) |
 | [Sökförslag](#searchsuggestions) | [Obligatoriska metadata](#mandatorymetadata) | [Hämta](#download) |
 | [Förstå sökresultat och beteenden](#searchbehavior) | [Ändra sökfaktorer](#searchfacets) | [Massmetadatauppdateringar](#metadataupdates) |
-| [Sökrankning och förstärkning](#searchrank) | [Textextrahering](#extracttextupload) | [Smarta samlingar](#collections) |
-| [Avancerad sökning: filtrering och sökningens omfattning](#scope) | [Anpassade predikat](#custompredicates) | [Förstå och felsöka oväntade resultat](#unexpectedresults) |
-| [Sök bland andra lösningar och appar](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Varumärkesportal](#brandportal)</li><li>[Experience Manager](#desktopapp)</li><li>[Adobe Stock-bilder](#adobestock)</li><li>[Dynamic Media-resurser](#dynamicmedia)</li></ul> |  |  |
+| [Sökrankning och förstärkning](#searchrank) | [Anpassade predikat](#custompredicates) | [Smarta samlingar](#collections) |
+| [Avancerad sökning: filtrering och sökningens omfattning](#scope) |  | [Förstå och felsöka oväntade resultat](#unexpectedresults) |
+| [Sök bland andra lösningar och appar](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Varumärkesportal](#brand-portal)</li><li>[Experience Manager](#desktop-app)</li><li>[Adobe Stock-bilder](#adobe-stock)</li><li>[Dynamic Media-resurser](#search-dynamic-media-assets)</li></ul> |  |  |
 | [Resursväljare](#assetselector) |  |  |
 | [](#tips) Begränsningar och  [tips](#limitations) |  |  |
 | [Illustrerade exempel](#samples) |  |  |
@@ -45,7 +45,7 @@ Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
 
 *Bild: Förstå gränssnittet för  [!DNL Experience Manager Assets] sökresultat.*
 
-**A.** Spara sökningen som en smart samling. **B.** Filtrerar eller förutsäger för att begränsa sökresultaten. **C.** Visa filer, mappar eller båda. **D.** Klicka på Filter för att öppna eller stänga den vänstra rutan. **E.** Sökplatsen är DAM. **F.** Omnissearch-fält med söknyckelord som användaren anger. **G.** Välj inlästa sökresultat. **H.** Antal visade sökresultat av totalt antal sökresultat. **I.** Slut på sökning. **J.** Växla mellan kortvyn och listvyn.
+**A.** Spara sökningen som en smart samling. **B.** Filtrerar eller förutsäger för att begränsa sökresultaten. **C.** Visa filer, mappar eller båda. **D.** Klicka på Filter för att öppna eller stänga den vänstra rutan. **E.** Sökplatsen är DAM. **F.** Omnissearch-fält med söknyckelord som användaren anger. **G.** Välj inlästa sökresultat. **H.** Antal visade sökresultat av totalt antal sökresultat. **I.** Slut sökord. **J.** Växla mellan kortvyn och listvyn.
 
 ### Dynamiska sökfacets {#dynamicfacets}
 
@@ -139,7 +139,7 @@ To find images that are visually similar to a user-selected image, click **[!UIC
 *Figure: Find similar images using the option in the card view*
 -->
 
-### Adobe Stock-bilder {#adobestock}
+### Adobe Stock-bilder {#adobe-stock}
 
 I det AEM användargränssnittet kan användare söka efter [Adobe Stock-resurser](/help/assets/aem-assets-adobe-stock.md) och licensiera de nödvändiga resurserna. Lägg till `Location: Adobe Stock` i sökfältet. Du kan också använda panelen Filter för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock filnummer.
 
@@ -147,9 +147,9 @@ I det AEM användargränssnittet kan användare söka efter [Adobe Stock-resurse
 
 Du kan filtrera efter Dynamic Media-bilder genom att välja **[!UICONTROL Dynamic Media > Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar.
 
-### Söka med specifika värden i metadatafält {#gqlsearch}
+### GQL-sökning med specifika värden i metadatafält {#gql-search}
 
-Du kan söka efter resurser baserat på exakta värden för specifika metadatafält, som titel, beskrivning och författare. Funktionen för fulltextsökning i GQL hämtar endast resurser vars metadatavärde exakt matchar din sökfråga. Namnen på egenskaperna (till exempel författare, titel och så vidare) och värdena är skiftlägeskänsliga.
+Du kan söka efter resurser baserat på exakta värden för metadatafält, som titel, beskrivning och skapare. Funktionen för fulltextsökning i GQL hämtar endast resurser vars metadatavärde exakt matchar din sökfråga. Namnen på egenskaperna (Skapare, Titel och så vidare) och värdena är skiftlägeskänsliga.
 
 | Metadatafält | Fasettvärde och -användning |
 |---|---|
@@ -175,7 +175,10 @@ Du kan söka efter resurser baserat på exakta värden för specifika metadataf�
 | Bildens höjd | height:lowerbound..upperbound |
 | Person | person:John |
 
-Egenskapernas sökväg, gräns, storlek och sorteringsordning kan inte vara ORed med någon annan egenskap.
+Egenskaperna `path`, `limit`, `size` och `orderby` kan inte vara ELLERed med någon annan egenskap.
+
+<!-- TBD: Where are the limit, size, orderby properties defined?
+-->
 
 Nyckelordet för en användargenererad egenskap är dess fältetikett i egenskapsredigeraren i gemener, med borttagna blanksteg.
 
@@ -197,19 +200,19 @@ Adobe Experience Manager (AEM) kopplar DAM-databasen till olika andra AEM lösni
 
 Med Adobe Asset Link kan formgivare nu komma åt innehåll som lagras i AEM Assets utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen i Creative Cloud-apparna kan du smidigt bläddra bland, söka efter, checka ut och checka in resurser: Photoshop, Illustrator och InDesign. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Sensei maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
 
-### Sök efter resurser AEM datorprogrammet {#desktopapp}
+### Sök efter resurser i Experience Manager-datorprogrammet {#desktop-app}
 
 Kreatörer använder datorprogrammet för att göra AEM Assets enkelt sökbart och tillgängligt på sin lokala dator (Win eller Mac). Det är enkelt att visa de önskade resurserna i Finder eller Utforskaren i Windows, som har öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan i AEM med en ny version som har skapats i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, * och ? jokertecken och operatorn AND. Se [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
 
-### Sök efter resurser i varumärkesportalen {#brandportal}
+### Sök efter resurser i varumärkesportalen {#brand-portal}
 
 Affärsanvändare och marknadsförare använder Brand Portal för att effektivt och säkert dela godkänt digitalt material med interna team, partners och återförsäljare. Se [söka efter resurser på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html).
 
-### Sök i Adobe Stock-bilder {#adobestock-1}
+### Sök i Adobe Stock-bilder {#adobe-stock2}
 
 I det AEM användargränssnittet kan användare söka efter Adobe Stock-resurser och licensiera de nödvändiga resurserna. Lägg till `Location: Adobe Stock` i sökfältet. Du kan också använda panelen **[!UICONTROL Filters]** för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock filnummer. Se [hantera Adobe Stock-bilder i AEM](/help/assets/aem-assets-adobe-stock.md#usemanage).
 
-### Sök efter Dynamic Media-resurser {#dynamicmedia}
+### Sök efter Dynamic Media-resurser {#search-dynamic-media-assets}
 
 Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar. När författarna redigerar webbsidor kan de söka efter uppsättningar inifrån Content Finder. Det finns ett filter för uppsättningar på en snabbmeny.
 
@@ -255,6 +258,7 @@ Sökfunktionen i [!DNL Experience Manager Assets] har följande begränsningar:
 * [!DNL Experience Manager] kan fortsätta att visa söktermen efter att du har valt egenskaper för en resurs bland sökresultaten och sedan avbryta sökningen.  <!-- (CQ-4273540) -->
 * När du söker efter mappar, filer och mappar kan sökresultaten inte sorteras efter någon parameter.
 * Om du väljer `Return` utan att skriva in Omnissearch bar returnerar [!DNL Experience Manager] bara en lista över filer och inte mappar. Om du söker specifikt efter mappar utan att använda ett nyckelord returnerar [!DNL Experience Manager] inga resultat.
+* Du kan utföra fulltextsökning på mappar. Ange ett sökord som sökningen ska fungera med.
 
 Visuell sökning eller likhetssökning har följande begränsningar:
 
