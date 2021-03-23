@@ -4,9 +4,9 @@ description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy oc
 feature: Multi Site Manager
 role: Administratör
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: fff94f476124d8a2a84c60c478fef624090192d1
 workflow-type: tm+mt
-source-wordcount: '2358'
+source-wordcount: '2340'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,11 @@ Varje utrullningskonfiguration använder en utlösare som gör att utrullningen 
 
 ### Konfigurationer för utrullning {#rollout-configurations}
 
-I följande tabell visas de utrullningskonfigurationer som medföljer AEM. Tabellen innehåller utlösar- och synkroniseringsåtgärderna för varje utrullningskonfiguration. Om de installerade rollout-konfigurationsåtgärderna inte uppfyller dina krav kan du [skapa en ny rollout-konfiguration](#creating-a-rollout-configuration).
+I följande tabell visas de utrullningskonfigurationer som medföljer AEM. Tabellen innehåller utlösar- och synkroniseringsåtgärderna för varje utrullningskonfiguration.
+
+<!--
+If the installed rollout configuration actions do not meet your requirements, you can [create a new rollout configuration](#creating-a-rollout-configuration).
+-->
 
 | Namn | Beskrivning | Utlösare | [Synkroniseringsåtgärder](#synchronization-actions) |
 |---|---|---|---|
