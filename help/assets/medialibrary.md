@@ -4,9 +4,9 @@ description: '[!DNL Experience Manager Assets] och mediebibliotek för resurshan
 contentOwner: AG
 role: Arkitekt, ledare
 translation-type: tm+mt
-source-git-commit: 82650c72f9abbdf6c83c585af7b4f7d17b8dcd08
+source-git-commit: db74b206439e5e9d6c1526c7baa05e5a17997702
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Define what is not included
 
 # Använd mediebiblioteket för grundläggande resurshantering {#manage-assets-using-media-library}
 
-[!DNL Adobe Experience Manager] -plattformen har olika funktioner för att hantera digitala resurser. Med mediebiblioteket kan användarna överföra ett litet antal resurser till databasen, söka efter och använda dem på webbsidorna och utföra enkla resurshanteringsåtgärder på resurserna.
+[!DNL Adobe Experience Manager] -plattformen har olika funktioner för att hantera resurser. Med mediebiblioteket kan användarna överföra ett litet antal resurser till databasen, söka efter och använda dem på webbsidorna och utföra enkla resurshanteringsåtgärder på resurserna.
 
 Mediebiblioteket är en enkel DAM-lösning (Digital Asset Management) som medföljer [!DNL Adobe Experience Manager Sites]-licensen. [!DNL Sites] är ett web content management-erbjudande. Mediebiblioteket fungerar med alla funktioner i Experience Manager.
 
@@ -37,11 +37,11 @@ Mediebiblioteket installeras som en del av Sites. Ingen ytterligare licens eller
 
 ## [!DNL Assets] kontra mediebibliotek  {#assets-and-media-library}
 
-Experience Manager Assets har funktioner för företagsövergripande resurshantering (DAM). Resursfunktionaliteten levereras med [!DNL Experience Manager] i ett enda paket. Användare som inte har köpt en Assets-licens har dock inte rätt att använda de avancerade DAM-funktionerna. Utan Assets-licens är endast DAM-funktioner i mediebibliotek tillgängliga.
+Experience Manager Assets har funktioner för företagsövergripande resurshantering (DAM). Resursfunktionaliteten levereras med [!DNL Experience Manager] i ett enda paket. Användare som inte har köpt en Assets-licens har dock inte rätt att använda de avancerade DAM-funktionerna. Utan resurslicens är endast [funktioner i mediebiblioteket](#use-media-library) tillgängliga.
 
 Om du vill förhindra oavsiktlig användning av [!DNL Assets]-funktioner som du inte har licensierat tar du bort alla [!DNL Assets]-specifika arbetsflöden, komponenter, taxonomier, alternativ och [!DNL Assets]-administratören från [!DNL Experience Manager]. På så sätt förhindras användarna från att oavsiktligt använda [!DNL Assets]-funktioner som du inte har licensierat.
 
-## Funktioner som är tillgängliga för användare av mediebibliotek {#media-library-features}
+## Använd mediebibliotek {#use-media-library}
 
 Mediebiblioteket omfattar i stort sett följande användningsområden:
 
@@ -71,7 +71,7 @@ Om du vill använda funktionerna i mediebiblioteket kan du använda standardanv�
 * Publicera resurser.
 * Redigera, flytta och kopiera resurser.
 * Bläddra bland, filtrera och söka (inklusive likhetssökning) resurser.
-* Lägg till och redigera metadatafält som är tillgängliga på fliken [!UICONTROL Basic] på en resurs [!UICONTROL Properties]-sida som standard. <!-- excluding Smart Tags -->
+* Lägg till värden i och redigera värdena i metadatafälten, förutom fältet Smarta taggar, som är tillgängliga på fliken [!UICONTROL Basic] på en resurs [!UICONTROL Properties]-sida som standard.
 * Lägg till och ta bort statiska återgivningar.
 * Hämta mappar, resurser och resursrenderingar.
 * Skapa resursversioner.
@@ -83,9 +83,14 @@ Om du vill använda funktionerna i mediebiblioteket kan du använda standardanv�
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
 -->
 
-[!DNL Experience Manager Assets] uppfyller många andra användningsfall för DAM som du kan utforska på  [[!DNL Assets] dokumentationsstartsidan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html). Användningsexempel som inte anges ovan är inte tillgängliga i mediebiblioteket.
+>[!IMPORTANT]
+>
+>Många avancerade DAM-användningsfall uppfylls av [!DNL Experience Manager Assets]. Licensen för mediebibliotek berättigar dig att endast fylla i de angivna användningsområdena med hjälp av mediebiblioteket. Om ett användningsexempel inte finns med i listan ska du inte använda det med mediebibliotekslicensen. Kontakta Adobe kundtjänst om du har frågor.
+
+<!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
 >[!MORELIKETHIS]
 >
+>* [DAM-funktioner i [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html)
 >* [[!DNL Experience Manager] as a [!DNL Cloud Service] produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-cloud-service.html)
 
