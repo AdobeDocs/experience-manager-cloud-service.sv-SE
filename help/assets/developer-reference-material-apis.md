@@ -3,9 +3,9 @@ title: Utvecklarreferenser för [!DNL Assets]
 description: '[!DNL Assets] APIs and developer reference content lets you manage assets, including binary files, metadata, renditions, comments, and [!DNL Content Fragments].'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 77b4d9f07626419ddab3a7363b06c382447ec982
+source-git-commit: 044740339ea7f164dd4c28650fe71a5eb11615d6
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1383'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 
 >[!CAUTION]
 >
->Vissa API:er finns fortfarande men stöds inte aktivt (anges med en ×) och får inte användas.
+>Vissa API:er finns fortfarande men stöds inte aktivt (anges med en ×). Använd inte dessa API:er i största möjliga utsträckning.
 
 | Supportnivå | Beskrivning |
 | ------------- | --------------------------- |
@@ -65,7 +65,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 
 ## Resursöverföring {#asset-upload-technical}
 
-[!DNL Experience Manager] som en  [!DNL Cloud Service] ny metod för att överföra resurser till databasen. Användare kan överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil är:
+I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil är:
 
 1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]r-distribution av din avsikt att överföra en ny binär fil.
 1. [POST innehållet i ](#upload-binary) binaryen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
@@ -116,8 +116,8 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 * `mimeType` (sträng): Mime-typen för motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
 * `uploadToken` (sträng): En överföringstoken för motsvarande binär fil. Detta värde bör inkluderas i den fullständiga begäran.
 * `uploadURIs` (array): En lista över strängar vars värden är fullständiga URI:er som binärens innehåll ska överföras till (se  [Överför binärt](#upload-binary)).
-* `minPartSize` (tal): Den minsta längden, i byte, på data som kan anges till någon av uploadURI:erna, om det finns mer än en URI.
-* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan tillhandahållas till någon av uploadURI:erna, om det finns mer än en URI.
+* `minPartSize` (tal): Den minsta längden, i byte, på data som kan tillhandahållas till någon av dem  `uploadURIs`om det finns mer än en URI.
+* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan anges för någon av dem  `uploadURIs`om det finns mer än en URI.
 
 ### Överför binär {#upload-binary}
 
@@ -240,5 +240,5 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 -->
 
 >[!MORELIKETHIS]
-* [Experience Cloud som  [!DNL Cloud Service] SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
+* [[!DNL Experience Cloud] as a [!DNL Cloud Service] SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
 
