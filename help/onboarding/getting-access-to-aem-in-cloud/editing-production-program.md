@@ -2,7 +2,7 @@
 title: 'Redigera ett produktionsprogram '
 description: 'Redigera ett produktionsprogram '
 translation-type: tm+mt
-source-git-commit: 751f611ecccc39ef4650a1c7a9941655a6b2aedd
+source-git-commit: c34b9cbd019ee74059e13be4f19c1bb9a54fa2ba
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
@@ -23,8 +23,7 @@ Användare med nödvändig behörighet kan nu redigera ett produktionsprogram oc
 
 Följ stegen nedan för att redigera ett produktionsprogram:
 
-1. 
-   1. Gå till sidan **Redigera program** i Cloud Managers *Översikt*
+1. Gå till sidan **Redigera program** i Cloud Managers *Översikt*
 
 1. Sidan **Redigera program** visar två flikar (Allmänt och Lösningar) för både Production- och Sandbox-program.
 
