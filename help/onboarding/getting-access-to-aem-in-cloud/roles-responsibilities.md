@@ -2,15 +2,22 @@
 title: Roller och ansvarsområden
 description: Roller och ansvarsområden
 translation-type: tm+mt
-source-git-commit: 843e425e446a4e9ce140fe7d7111b69bd9f4545e
+source-git-commit: 34eecf5d210376c534ad3c1918db466226c2f9c5
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 5%
+source-wordcount: '500'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Experience Manager som Cloud Service: Roller och ansvar {#roles-responsibilities}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_raci"
+>title="Roller och ansvar"
+>abstract="Adobe tillhandahåller en uppsättning tjänster runt tillhandahållande, utveckling, staging och produktion av Experience Manager som en Cloud Service. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och anpassaren förstår och uppfyller sina roller, vilket beskrivs här."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html?lang=en" text="Välj rätt personer, rätt roller"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=en" text="Justera KPI:er"
 
 <br></br>
 Adobe tillhandahåller en uppsättning tjänster runt tillhandahållande, utveckling, staging och produktion av Experience Manager som en Cloud Service. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och anpassaren förstår och uppfyller sina roller enligt beskrivningen nedan.
