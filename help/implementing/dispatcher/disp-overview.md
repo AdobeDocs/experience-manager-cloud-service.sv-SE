@@ -3,10 +3,10 @@ title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 feature: Dispatcher
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 35df3f9c1b8a919de0c8c614bd0169d3418da1d0
 workflow-type: tm+mt
-source-wordcount: '4120'
-ht-degree: 8%
+source-wordcount: '4113'
+ht-degree: 6%
 
 ---
 
@@ -24,17 +24,17 @@ I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apach
 
 Dispatcher Tools är en del av den övergripande AEM som en Cloud Service-SDK och tillhandahåller:
 
-* En vaniljfilstruktur som innehåller de konfigurationsfiler som ska inkluderas i ett maven-projekt för dispatcher.
-* Verktyg för kunder för att verifiera att dispatcherkonfigurationen bara innehåller AEM som direktiv som stöds av Cloud Servicen.        Dessutom validerar verktyget att syntaxen är korrekt så att apache kan startas korrekt.
-* En Docker-bild som tar upp dispatchern lokalt.
+* En vaniljfilstruktur som innehåller de konfigurationsfiler som ska inkluderas i ett maven-projekt för Dispatcher.
+* Verktyg för kunder som validerar att Dispatcher-konfigurationen bara innehåller AEM som direktiv som stöds av Cloud Servicen.        Dessutom validerar verktyget att syntaxen är korrekt så att apache kan startas korrekt.
+* En Docker-bild som öppnar Dispatcher lokalt.
 
 ## Hämta och extrahera verktygen {#extracting-the-sdk}
 
-Dispatcher Tools, som ingår i [AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan hämtas från en zip-fil på [Software Distribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html)-portalen. Alla nya konfigurationer som är tillgängliga i den nya versionen av dispatcher Tools kan användas för att distribuera till molnmiljöer där den versionen av AEM körs i molnet eller senare.
+Dispatcher Tools, som ingår i [AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan hämtas från en zip-fil på [Software Distribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html)-portalen. Alla nya konfigurationer som är tillgängliga i den nya versionen av Dispatcher Tools kan användas för att distribuera till molnmiljöer som kör den versionen av AEM i molnet eller senare.
 
 Zippa upp SDK, som innehåller Dispatcher Tools för både macOS/Linux och Windows.
 
-**För macOS/Linux** gör du artefakten för dispatchern körbar och kör den. Dispatcher Tools-filerna extraheras automatiskt under den katalog som du lagrade dem i (där `version` är versionen av dispatcher Tools).
+**För macOS/Linux** gör du artefakten för Dispatcher-verktyget körbar och kör den. Dispatcher Tools-filerna extraheras automatiskt under den katalog som du lagrade dem i (där `version` är versionen av Dispatcher Tools).
 
 ```bash
 $ chmod +x aem-sdk-dispatcher-tools-<version>-unix.sh
@@ -47,7 +47,7 @@ Uncompressing aem-sdk-dispatcher-tools-<version>-unix.sh 100%
 
 ## Filstruktur {#file-structure}
 
-Strukturen för projektets dispatcher-undermapp beskrivs nedan och bör kopieras till maven project dispatcher-mappen:
+Strukturen för projektets Dispatcher-undermapp beskrivs nedan och ska kopieras till huvudprojektmappen Dispatcher:
 
 ```bash
 ./
@@ -104,7 +104,7 @@ Den här filen inkluderas från dina `.vhost`-filer. Den har en uppsättning oms
 
 >[!NOTE]
 >
->För närvarande måste en enda omskrivningsfil användas i stället för platsspecifika filer. Filstorleken måste vara mindre än 1 MB.
+>För närvarande måste en enda omskrivningsfil användas i stället för filer som är platsspecifika. Som regel måste summan av innehållet i de anpassningsbara filerna vara mindre än 1 MB.
 
 * `conf.d/variables/custom.vars`
 
@@ -112,11 +112,11 @@ Den här filen inkluderas från dina `.vhost`-filer. Du kan ange definitioner f�
 
 * `conf.d/variables/global.vars`
 
-Den här filen inkluderas från `dispatcher_vhost.conf`-filen. Du kan ändra din dispatcher och skriva om loggnivån i den här filen.
+Den här filen inkluderas från `dispatcher_vhost.conf`-filen. Du kan ändra Dispatcher och skriva om loggnivån i den här filen.
 
 * `conf.dispatcher.d/available_farms/<CUSTOMER_CHOICE>.farm`
 
-Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamn och som gör att dispatchermodulen kan hantera varje grupp med olika regler. Filerna skapas i katalogen `available_farms` och aktiveras med en symbolisk länk i katalogen `enabled_farms`. Från `.farm`-filerna inkluderas andra filer som filter, cacheregler och andra.
+Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamn och som gör att Dispatcher-modulen kan hantera varje grupp med olika regler. Filerna skapas i katalogen `available_farms` och aktiveras med en symbolisk länk i katalogen `enabled_farms`. Från `.farm`-filerna inkluderas andra filer som filter, cacheregler och andra.
 
 * `conf.dispatcher.d/cache/rules.any`
 
@@ -134,13 +134,13 @@ Den här filen inkluderas från dina `.farm`-filer. Den har en uppsättning regl
 
 Den här filen inkluderas från dina `.farm`-filer. Den har en lista med värdnamn eller URI-sökvägar som ska matchas med matchning av glob. Detta avgör vilken serverdel som ska användas för att hantera en begäran.
 
-Ovanstående filer refererar till de oföränderliga konfigurationsfiler som listas nedan. Ändringar av oföränderliga filer bearbetas inte av utskickare i molnmiljöer.
+Ovanstående filer refererar till de oföränderliga konfigurationsfiler som listas nedan. Ändringar av oföränderliga filer bearbetas inte av Dispatchers i molnmiljöer.
 
 **Oändringsbara konfigurationsfiler**
 
 Dessa filer ingår i grundramverket och följer standarder och bästa praxis. Filerna anses oföränderliga eftersom ändringar eller borttagningar av dem lokalt inte påverkar distributionen eftersom de inte överförs till din molninstans.
 
-Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer som listas nedan, följt av eventuella ytterligare programsatser eller åsidosättningar. När dispatcherkonfigurationen distribueras till en molnmiljö används den senaste versionen av de oföränderliga filerna, oavsett vilken version som användes i den lokala utvecklingen.
+Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer som listas nedan, följt av eventuella ytterligare programsatser eller åsidosättningar. När Dispatcher-konfigurationen distribueras till en molnmiljö kommer den senaste versionen av de oföränderliga filerna att användas, oavsett vilken version som användes i den lokala utvecklingen.
 
 * `conf.d/available_vhosts/default.vhost`
 
@@ -156,7 +156,7 @@ Standardregler för omskrivning som är lämpliga för ett standardprojekt. Om d
 
 * `conf.dispatcher.d/available_farms/default.farm`
 
-Innehåller en exempelgrupp för dispatcher. Skapa en kopia av den här filen för din egen servergrupp, anpassa den, gå till `conf.d/enabled_farms` och skapa en symbolisk länk till din anpassade kopia.
+Innehåller ett exempel på en Dispatcher-servergrupp. Skapa en kopia av den här filen för din egen servergrupp, anpassa den, gå till `conf.d/enabled_farms` och skapa en symbolisk länk till din anpassade kopia.
 
 * `conf.dispatcher.d/cache/default_invalidate.any`
 
@@ -172,7 +172,7 @@ Standardbegäranrubriker som ska vidarebefordras till serverdelen, lämpliga fö
 
 * `conf.dispatcher.d/dispatcher.any`
 
-En del av grundramverket, som används för att illustrera hur dina dispatchergrupper inkluderas.
+En del av grundramverket som används för att illustrera hur Dispatcher-grupper inkluderas.
 
 * `conf.dispatcher.d/filters/default_filters.any`
 
@@ -188,7 +188,7 @@ Standardvärdglobbning som passar för ett standardprojekt. Om du behöver anpas
 
 >[!NOTE]
 >
->AEM som en Cloud Service maven-arkityp genererar samma konfigurationsfilstruktur för dispatcher.
+>AEM som en Cloud Service maven-arkityp genererar samma Dispatcher-konfigurationsfilstruktur.
 
 Avsnitten nedan beskriver hur konfigurationen valideras lokalt så att den kan skicka den associerade kvalitetsgaten i Cloud Manager när en intern release distribueras.
 
@@ -198,7 +198,7 @@ Valideringsverktyget finns i SDK på `bin/validator` som binär Mac OS, Linux el
 
 Den anropas som: `validator full [-d folder] [-w allowlist] zip-file | src folder`
 
-Verktyget kontrollerar att dispatcherkonfigurationen använder rätt direktiv som stöds av AEM som en molntjänst genom att skanna alla filer med mönstret `conf.d/enabled_vhosts/*.vhost`. De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
+Verktyget kontrollerar att Dispatcher-konfigurationen använder rätt direktiv som stöds av AEM som en molntjänst genom att skanna alla filer med mönstret `conf.d/enabled_vhosts/*.vhost`. De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
 
 ```
 $ validator allowlist
@@ -349,9 +349,9 @@ Det här meddelandet anger att din konfiguration har den föråldrade layouten v
 Apache-konfiguration och filer med `ams_`-prefix. Detta stöds fortfarande bakåt
 bör du växla till den nya layouten.
 
-## Lokal validering av dispatcherkonfigurationssyntaxen så att apache httpd kan starta {#local-validation}
+## Lokal validering av Dispatcher-konfigurationssyntaxen så att APACH httpd kan starta {#local-validation}
 
-När det har fastställts att konfigurationen för dispatcherns modul endast innehåller direktiv som stöds, bör du kontrollera att syntaxen är korrekt så att apache kan starta. Om du vill testa detta måste du installera dockningsfunktionen lokalt. Observera att det inte är nödvändigt att AEM körs.
+När det har fastställts att Dispatcher-modulens konfiguration endast innehåller direktiv som stöds, bör du kontrollera att syntaxen är korrekt så att apache kan starta. Om du vill testa detta måste du installera dockningsfunktionen lokalt. Observera att det inte är nödvändigt att AEM körs.
 
 Använd `validate.sh`-skriptet enligt nedan:
 
@@ -378,7 +378,7 @@ Skriptet gör följande:
 
 1. Valideraren körs från föregående avsnitt för att säkerställa att endast de direktiv som stöds inkluderas. Om konfigurationen inte är giltig misslyckas skriptet.
 2. Den kör `httpd -t command` för att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution.
-3. Kontrollerar att delmängden av SDK-konfigurationsfilerna för dispatcher, som är avsedda att vara oföränderliga enligt beskrivningen i [Filstrukturavsnittet](#file-structure), inte har ändrats. Detta är en ny kontroll som introducerades i AEM SDK version v2021.1.4738 som även innehåller Dispatcher Tools version 2.0.36. Före den här uppdateringen kan kunderna felaktigt ha antagit att lokala SDK-ändringar av dessa oföränderliga filer också skulle tillämpas på molnmiljön.
+3. Kontrollerar att delmängden av Dispatcher SDK-konfigurationsfilerna, som är avsedda att vara oföränderliga enligt beskrivningen i [Filstrukturavsnittet](#file-structure), inte har ändrats. Detta är en ny kontroll som introducerades i AEM SDK version v2021.1.4738 som även innehåller Dispatcher Tools version 2.0.36. Före den här uppdateringen kan kunderna felaktigt ha antagit att lokala SDK-ändringar av dessa oföränderliga filer också skulle tillämpas på molnmiljön.
 
 Under en distribution av Cloud Manager körs kontrollen `httpd -t syntax` också och eventuella fel inkluderas i loggen för Cloud Manager `Build Images step failure`.
 
@@ -386,7 +386,7 @@ Under en distribution av Cloud Manager körs kontrollen `httpd -t syntax` också
 
 Du kan också testa konfigurationen av Apache och Dispatcher lokalt. Det kräver att dockningsstationen installeras lokalt och att konfigurationen klarar den validering som beskrivs ovan.
 
-Kör valideringsverktyget (observera att det skiljer sig från `validator.sh` ovan) genom att använda parametern `-d` som matar ut en mapp med alla dispatcherkonfigurationsfiler. Kör sedan `docker_run.sh`-skriptet och skicka mappen som ett argument. Genom att ange portnumret (här: 8080) Om du vill visa dispatcherslutpunkten startas en Docker-behållare och dispatchern körs med din konfiguration.
+Kör valideringsverktyget (observera att det skiljer sig från `validator.sh` ovan) genom att använda parametern `-d` som matar ut en mapp med alla Dispatcher-konfigurationsfiler. Kör sedan `docker_run.sh`-skriptet och skicka mappen som ett argument. Genom att ange portnumret (här: 8080) För att visa Dispatcher-slutpunkten startas en Docker-behållare som kör Dispatcher med din konfiguration.
 
 ```
 $ validator full -d out src/dispatcher
@@ -401,11 +401,11 @@ Starting httpd server
 ...
 ```
 
-Detta startar dispatchern i en behållare med dess serverdel pekande på en AEM som körs på din lokala Mac OS-dator vid port 4503.
+Detta startar Dispatcher i en behållare med dess serverdel pekande på en AEM som körs på din lokala Mac OS-dator vid port 4503.
 
 ## Felsöka konfigurationen för Apache och Dispatcher {#debugging-apache-and-dispatcher-configuration}
 
-Följande strategi kan användas för att öka loggutdata för dispatchermodulen och för att se resultaten av `RewriteRule`-utvärderingen i både lokala miljöer och molnmiljöer.
+Följande strategi kan användas för att öka loggutdata för modulen Dispatcher och för att se resultaten av utvärderingen `RewriteRule` i både lokala miljöer och molnmiljöer.
 
 Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL`. De kan anges i filen `conf.d/variables/global.vars`. Den relevanta delen är följande:
 
@@ -431,13 +431,13 @@ Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `R
 # Define REWRITE_LOG_LEVEL Warn
 ```
 
-När du kör dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh out docker.for.mac.localhost:4503 8080`.
+När du kör Dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh out docker.for.mac.localhost:4503 8080`.
 
 Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 
 ## Olika Dispatcher-konfigurationer per miljö {#different-dispatcher-configurations-per-environment}
 
-Nu används samma dispatcherkonfiguration för alla AEM som en Cloud Service-miljö. Körningsmiljön kommer att ha en miljövariabel `ENVIRONMENT_TYPE` som innehåller det aktuella körningsläget (dev, stage eller prod) samt en definition. Definitionen kan vara `ENVIRONMENT_DEV`, `ENVIRONMENT_STAGE` eller `ENVIRONMENT_PROD`. I Apache-konfigurationen kan variabeln användas direkt i ett uttryck. Definitionen kan också användas för att skapa logik:
+För närvarande används samma Dispatcher-konfiguration för alla AEM som en Cloud Service-miljö. Körningsmiljön kommer att ha en miljövariabel `ENVIRONMENT_TYPE` som innehåller det aktuella körningsläget (dev, stage eller prod) samt en definition. Definitionen kan vara `ENVIRONMENT_DEV`, `ENVIRONMENT_STAGE` eller `ENVIRONMENT_PROD`. I Apache-konfigurationen kan variabeln användas direkt i ett uttryck. Definitionen kan också användas för att skapa logik:
 
 ```
 # Simple usage of the environment variable
@@ -504,12 +504,12 @@ Som beskrivs på referenssidan ovan liknar konfigurationen av Apache och Dispatc
 
 ## Riktlinjer för att migrera dispatcher-konfiguration från AMS till AEM som Cloud Service
 
-Dispatcher-konfigurationsstrukturen har olika Managed Services och AEM som en Cloud Service. Nedan visas en steg-för-steg-guide om hur du migrerar från AMS Dispatcher-konfiguration version 2 till AEM som Cloud Service.
+Dispatcher-konfigurationsstrukturen har skillnader mellan Managed Services och AEM som en Cloud Service. Nedan visas en steg-för-steg-guide om hur du migrerar från AMS Dispatcher-konfiguration version 2 till AEM som Cloud Service.
 
-## Konvertera en AMS till en AEM som en konfiguration för Cloud-tjänstdispatcher
+## Konvertera en AMS till en AEM som en Dispatcher-konfiguration för molntjänster
 
 I följande avsnitt ges stegvisa instruktioner för hur du konverterar en AMS-konfiguration. Det förutsätter
-att du har ett arkiv med en struktur som liknar den som beskrivs i [Cloud Manager dispatcher configuration](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
+att du har ett arkiv med en struktur som liknar den som beskrivs i [Cloud Manager Dispatcher configuration](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
 
 ### Extrahera arkivet och ta bort ett eventuellt prefix
 
@@ -528,7 +528,7 @@ som är länkade till kan också tas bort.
 
 ### Ta bort eller kommentera virtuell värd-sektioner som inte refererar till port 80
 
-Om du fortfarande har avsnitt i dina virtuell värd-filer som endast refererar till andra portar än port 80, t.ex.
+Om du fortfarande har avsnitt i dina virtuella värdfiler som endast refererar till andra portar än port 80, till exempel:
 
 ```
 <VirtualHost *:443>
@@ -548,7 +548,7 @@ ta bort `Include`-satser i de virtuella värdfilerna som refererar till dem.
 Om `conf.d/rewrites` nu innehåller en enda fil bör namnet på den ändras till `rewrite.rules` och inte
 Glöm inte att anpassa `Include`-programsatserna som refererar till den filen i de virtuella värdfilerna också.
 
-Om mappen däremot innehåller flera, virtuella värdspecifika filer, bör innehållet i dem
+Om mappen emellertid innehåller flera, virtuella värdspecifika filer bör innehållet i dem vara
 kopieras till `Include`-satsen som refererar till dem i de virtuella värdfilerna.
 
 ### Kontrollera variabler
@@ -561,7 +561,7 @@ värdfiler som refererar till dem.
 Om `conf.d/variables` nu innehåller en enda fil bör namnet på den ändras till `custom.vars` och inte
 Glöm inte att anpassa `Include`-programsatserna som refererar till den filen i de virtuella värdfilerna också.
 
-Om mappen däremot innehåller flera, virtuella värdspecifika filer, bör innehållet i dem
+Om mappen emellertid innehåller flera, virtuella värdspecifika filer bör innehållet i dem vara
 kopieras till `Include`-satsen som refererar till dem i de virtuella värdfilerna.
 
 ### Ta bort tillåtelselista
@@ -578,7 +578,7 @@ Ta bort avsnitt som refererar till variabler med namnen `DISP_ID`, `PUBLISH_FORC
 
 ### Kontrollera status genom att köra valideraren
 
-Kör dispatchervalideraren i din katalog med underkommandot `httpd`:
+Kör Dispatcher-valideraren i din katalog med underkommandot `httpd`:
 
 ```
 $ validator httpd .
@@ -606,7 +606,7 @@ Ange katalogen `conf.dispatcher.d/cache`.
 Ta bort alla filer som har prefixet `ams_`.
 
 Om `conf.dispatcher.d/cache` nu är tomt kopierar du filen `conf.dispatcher.d/cache/rules.any`
-från standardkonfigurationen för dispatcher till den här mappen. Standarddispatchern
+från standardkonfigurationen för Dispatcher till den här mappen. Standardutskickaren
 finns i mappen `src` för denna SDK. Glöm inte att anpassa
 `$include`-satser som refererar till regelfilerna `ams_*_cache.any` i servergruppsfilerna
 också.
@@ -615,7 +615,7 @@ Om i stället `conf.dispatcher.d/cache` nu innehåller en enda fil med suffixet 
 det ska byta namn till `rules.any` och glöm inte att anpassa `$include`-programsatserna
 även referera till den filen i servergruppsfilerna.
 
-Om mappen däremot innehåller flera gruppspecifika filer med det mönstret, deras innehåll
+Om mappen däremot innehåller flera, gruppspecifika filer med det mönstret, kommer deras innehåll att
 ska kopieras till `$include`-satsen som refererar till dem i servergruppsfilerna.
 
 Ta bort alla filer som har suffixet `_invalidate_allowed.any`.
@@ -640,13 +640,13 @@ Om `conf.dispatcher.d/clientheaders` nu innehåller en enda fil med suffixet `_c
 det ska byta namn till `clientheaders.any` och glöm inte att anpassa `$include`-programsatserna
 även referera till den filen i servergruppsfilerna.
 
-Om mappen däremot innehåller flera gruppspecifika filer med det mönstret, deras innehåll
+Om mappen däremot innehåller flera, gruppspecifika filer med det mönstret, kommer deras innehåll att
 ska kopieras till `$include`-satsen som refererar till dem i servergruppsfilerna.
 
 Kopiera filen `conf.dispatcher/clientheaders/default_clientheaders.any` från standardvärdet
-AEM som en Cloud Service dispatcher-konfiguration till den platsen.
+AEM som en Cloud Service Dispatcher-konfiguration till den platsen.
 
-Ersätt alla klientrubriker med programsatser som ser ut så här i varje servergruppsfil:
+Ersätt alla inkluderingssatser för klienthuvuden i varje servergruppsfil som ser ut så här:
 
 ```
 $include "/etc/httpd/conf.dispatcher.d/clientheaders/ams_publish_clientheaders.any"
@@ -669,13 +669,13 @@ Om `conf.dispatcher.d/filters` nu innehåller en enda fil bör namnet ändras ti
 `filters.any` och glöm inte att anpassa `$include`-programsatserna som refererar till det
 i servergruppsfilerna också.
 
-Om mappen däremot innehåller flera gruppspecifika filer med det mönstret, deras innehåll
+Om mappen däremot innehåller flera, gruppspecifika filer med det mönstret, kommer deras innehåll att
 ska kopieras till `$include`-satsen som refererar till dem i servergruppsfilerna.
 
 Kopiera filen `conf.dispatcher/filters/default_filters.any` från standardvärdet
-AEM som en Cloud Service dispatcher-konfiguration till den platsen.
+AEM som en Cloud Service Dispatcher-konfiguration till den platsen.
 
-Ersätt alla filter med programsatser som ser ut så här i varje servergruppsfil: 
+Ersätt eventuella filter med programsatser som ser ut så här i varje servergruppsfil:
 
 ```
 $include "/etc/httpd/conf.dispatcher.d/filters/ams_publish_filters.any"
@@ -694,7 +694,7 @@ Ange katalogen `conf.dispatcher.d/renders`.
 Ta bort alla filer i den mappen.
 
 Kopiera filen `conf.dispatcher.d/renders/default_renders.any` från standardvärdet
-AEM som en Cloud Service dispatcher-konfiguration till den platsen.
+AEM som en Cloud Service Dispatcher-konfiguration till den platsen.
 
 I varje servergruppsfil tar du bort allt innehåll i `renders`-avsnittet och ersätter det
 med:
@@ -713,13 +713,13 @@ Om `conf.dispatcher.d/virtualhosts` nu innehåller en enda fil bör namnet ändr
 `virtualhosts.any` och glöm inte att anpassa `$include`-programsatserna som refererar till det
 i servergruppsfilerna också.
 
-Om mappen däremot innehåller flera gruppspecifika filer med det mönstret, deras innehåll
+Om mappen däremot innehåller flera, gruppspecifika filer med det mönstret, kommer deras innehåll att
 ska kopieras till `$include`-satsen som refererar till dem i servergruppsfilerna.
 
 Kopiera filen `conf.dispatcher/virtualhosts/default_virtualhosts.any` från standardvärdet
-AEM som en Cloud Service dispatcher-konfiguration till den platsen.
+AEM som en Cloud Service Dispatcher-konfiguration till den platsen.
 
-Ersätt alla filter med programsatser som ser ut så här i varje servergruppsfil: 
+Ersätt eventuella filter med programsatser som ser ut så här i varje servergruppsfil:
 
 ```
 $include "/etc/httpd/conf.dispatcher.d/vhosts/ams_publish_vhosts.any"
@@ -733,7 +733,7 @@ $include "../virtualhosts/default_virtualhosts.any"
 
 ### Kontrollera status genom att köra valideraren
 
-Kör AEM som en Cloud Service dispatcher-validerare i din katalog med underkommandot `dispatcher`:
+Kör AEM som en Cloud Service Dispatcher-validerare i din katalog med underkommandot `dispatcher`:
 
 ```
 $ validator dispatcher .
@@ -759,9 +759,10 @@ validator full -d out .
 
 Detta validerar den fullständiga konfigurationen och genererar distributionsinformation i `out`
 
-### Steg 2: Starta dispatchern i en buffertavbildning med den distributionsinformationen
+### Steg 2: Starta Dispatcher i en dockningsbild med den distributionsinformationen
 
-När AEM-publiceringsservern körs på din macOS-dator och lyssnar på port 4503 kan du köra dispatchern framför den servern enligt följande:
+När AEM publiceringsserver körs på din macOS-dator, lyssnar på port 4503,
+Du kan köra Dispatcher framför den servern enligt följande:
 
 ```
 $ docker_run.sh out docker.for.mac.localhost:4503 8080
@@ -769,7 +770,7 @@ $ docker_run.sh out docker.for.mac.localhost:4503 8080
 
 Detta startar behållaren och visar Apache på den lokala porten 8080.
 
-### Använd din nya dispatcherkonfiguration
+### Använd din nya Dispatcher-konfiguration
 
 Grattis! Om valideraren inte längre rapporterar något problem och
 dockningsbehållaren startas utan fel eller varningar. Du är
