@@ -3,9 +3,9 @@ title: Konfigurera OSGi för Adobe Experience Manager som Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 feature: Distribuerar
 translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+source-git-commit: a91743ba97f9b18c7f67208e7f1dcd873a3bbd65
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '2737'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Värden för infogade konfigurationer anses vara standardmetoden och bör använ
 * Värdena är implicit knutna till koddistributioner
 * De kräver inga ytterligare distributionsöverväganden eller samordning
 
-När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden. Om det behövs för användningsfallet väljer du bara hemliga eller miljöspecifika konfigurationer.
+När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden och väljer bara hemliga eller miljöspecifika konfigurationer om det behövs för användningsfallet.
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
@@ -194,6 +194,10 @@ use $[env:ENV_VAR_NAME]
 ```
 
 Kunder bör endast använda den här tekniken för OSGI-konfigurationsegenskaper som är relaterade till deras anpassade kod. den får inte användas för att åsidosätta Adobe-definierad OSGI-konfiguration.
+
+>[!NOTE]
+>
+>Platshållare kan inte användas i [repoinit-satser](/help/implementing/deploying/overview.md#repoinit).
 
 ### Värden för hemlig konfiguration {#secret-configuration-values}
 
