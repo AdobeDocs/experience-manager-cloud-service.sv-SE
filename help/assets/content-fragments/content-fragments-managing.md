@@ -2,10 +2,10 @@
 title: Hantera innehållsfragment
 description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
 translation-type: tm+mt
-source-git-commit: 33f0980b138959ab4bc13eb5fe80733a0b4ef3a2
+source-git-commit: 243b7509661cbb9da670bdc15b68378db43b423a
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 9%
+source-wordcount: '1616'
+ht-degree: 7%
 
 ---
 
@@ -127,21 +127,15 @@ Så här öppnar du fragmentet för redigering:
    * Klicka/tryck på fragment- eller fragment-länken (detta beror på konsolvyn).
    * Markera fragmentet och **Redigera** i verktygsfältet.
 
-   Fragmentredigeraren öppnas:
+1. Fragmentredigeraren öppnas. Gör önskade ändringar:
 
    ![fragmentredigerare](assets/cfm-managing-03.png)
 
-   >[!NOTE]
-   >
-   >1. Ett meddelande visas när fragmentet redan refereras på en innehållssida.
-   >2. Sidpanelen kan döljas/visas med ikonen **Växla sidpanel**.
-
-
-1. När du har gjort ändringarna använder du **Spara** eller **Avbryt** efter behov.
+1. När du har gjort ändringarna använder du **Spara och stäng** eller **Avbryt** efter behov.
 
    >[!NOTE]
    >
-   >Både **Spara** och **Avbryt** avslutar redigeraren. Mer information om hur båda alternativen fungerar för innehållsfragment finns i [Spara, Avbryt och Versioner](#save-cancel-and-versions).
+   >Både **Spara och stäng** och **Avbryt** kommer att avsluta redigeraren. Mer information om hur båda alternativen fungerar för innehållsfragment finns i [Spara, Avbryt och Versioner](#save-cancel-and-versions).
 
 ## Lägen och åtgärder i Content Fragment Editor {#modes-actions-content-fragment-editor}
 
@@ -161,11 +155,15 @@ Navigera genom de olika lägena med ikonerna på sidopanelen:
 
 ![lägen](assets/cfm-managing-04.png)
 
-### Verktygsfältsåtgärder i Content Fragment Editor {#toolbar-actions-in-the-content-fragment-editor}
+### Verktygsfältsåtgärder i redigeraren för innehållsfragment {#toolbar-actions-in-the-content-fragment-editor}
 
 Vissa funktioner i det övre verktygsfältet finns i flera lägen:
 
 ![lägen](assets/cfm-managing-top-toolbar.png)
+
+* Ett meddelande visas när fragmentet redan refereras på en innehållssida. Du kan **stänga** meddelandet.
+
+* Sidpanelen kan döljas/visas med ikonen **Växla sidpanel**.
 
 * Under fragmentnamnet kan du se namnet på den [modell för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) som används för att skapa det aktuella fragmentet:
 
@@ -173,13 +171,15 @@ Vissa funktioner i det övre verktygsfältet finns i flera lägen:
 
 * Se fragmentets status. information om när den skapades, ändrades eller publicerades. Statusen är även färgkodad:
 
-   * Nytt: grå
-   * Utkast: blå
-   * Publicerat: grön
-   * Ändrad: orange
-   * Inaktiverad: röd
+   * **Nytt**: grå
+   * **Utkast**: blå
+   * **Publicerat**: grön
+   * **Ändrad**: orange
+   * **Inaktiverad**: röd
 
-* **[Publicera](#publishing-and-referencing-a-fragment)** fragmentet.
+* De tre punkterna (**)..**) ger åtkomst till ytterligare åtgärder:
+   * **[Snabbpublicering](#publishing-and-referencing-a-fragment)**
+   * **[Hantera publikation](#publishing-and-referencing-a-fragment)**
 
 ## Spara, Avbryt och Versioner {#save-cancel-and-versions}
 
@@ -203,7 +203,7 @@ Redigeraren har två alternativ:
 
    >[!CAUTION]
    >
-   >Förutom att bara spara ändringarna uppdaterar **Spara** alla referenser och ser till att dispatchern rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
+   >Förutom att bara spara ändringarna uppdaterar **Spara** alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
    >
    >
    >Tänk på detta när du använder **Spara** och ange sedan snabbt fragmentredigeraren igen för att göra och spara ytterligare ändringar.
@@ -249,7 +249,7 @@ Du kan visa och redigera egenskaperna för ett fragment på fliken [Metadata](/h
 
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
-Förutom standardalternativen ger [Tidslinjen](/help/assets/manage-digital-assets.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
+Förutom standardalternativen innehåller [Tidslinjen](/help/assets/manage-digital-assets.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
 
 * Visa information om versioner, kommentarer och anteckningar
 * Åtgärder för versioner
