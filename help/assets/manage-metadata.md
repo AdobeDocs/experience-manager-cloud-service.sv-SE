@@ -4,7 +4,7 @@ description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Mana
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d2ab7f8de4d18b48c312c9beabc58c77da7b2dfc
+source-git-commit: bd02261e62de28860c6c95794cd69e6529240b6d
 workflow-type: tm+mt
 source-wordcount: '1841'
 ht-degree: 3%
@@ -116,7 +116,7 @@ Med Enterprise Manager Assets kan du redigera metadata för flera resurser samti
 
 >[!NOTE]
 >
->Massredigeringsmetoderna fungerar för resurser som är tillgängliga i en mapp eller en samling. För resurser som är tillgängliga mellan mappar eller matchar ett gemensamt villkor är det möjligt att [uppdatera metadata satsvis efter sökning](/help/assets/search-assets.md#metadataupdates).
+>Massredigeringsmetoderna fungerar för resurser som är tillgängliga i en mapp eller en samling. För resurser som är tillgängliga mellan mappar eller matchar ett gemensamt villkor är det möjligt att [uppdatera metadata satsvis efter sökning](/help/assets/search-assets.md#metadata-updates).
 
 1. Navigera till platsen för de resurser som du vill redigera.
 1. Markera de resurser som du vill redigera gemensamma egenskaper för.
