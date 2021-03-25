@@ -2,9 +2,9 @@
 title: Söka efter fasetter.
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
 translation-type: tm+mt
-source-git-commit: 836e4e7fa727e350ef757984306b32df25921663
+source-git-commit: bd02261e62de28860c6c95794cd69e6529240b6d
 workflow-type: tm+mt
-source-wordcount: '2264'
+source-wordcount: '2263'
 ht-degree: 18%
 
 ---
@@ -26,7 +26,7 @@ De sökfaktorer som visas på panelen Filter definieras i det underliggande sök
 
 För textsökningar lägger du till `Fulltext`-predikatet i formuläret. Använd predikatet Egenskap för att söka efter resurser som matchar en enskild egenskap som du anger. Använd predikatet Alternativ för att söka efter resurser som matchar ett eller flera värden för en viss egenskap. Lägg till predikatet för datumintervall för att söka efter resurser som skapats inom ett angivet datumintervall.
 
-1. Tryck/klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 
    ![Leta reda på och välj Resursadministratörens sökspår](assets/assets_admin_searchrail.png)
