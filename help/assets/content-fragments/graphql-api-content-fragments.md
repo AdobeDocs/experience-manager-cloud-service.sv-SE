@@ -2,9 +2,9 @@
 title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för rubrikfri innehållsleverans.
 translation-type: tm+mt
-source-git-commit: 8d1e5891b72a9d3587957df5b2553265d66896d5
+source-git-commit: b0bfcacb35f520045ee6ed6d427467490e012912
 workflow-type: tm+mt
-source-wordcount: '2901'
+source-wordcount: '3233'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Genom att använda GraphQL API i AEM kan du effektivt leverera innehållsfragmen
 >
 >GraphQL används för närvarande i två (separata) scenarier i Adobe Experience Manager (AEM) som en Cloud Service:
 >
->* [AEM Commerce använder data från en e-handelsplattform via GraphQL](/help/commerce-cloud/architecture/magento.md).
+>* [AEM använder data från en handelsplattform via GraphQL](/help/commerce-cloud/architecture/magento.md).
 >* AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard GraphQL) för att leverera strukturerat innehåll som kan användas i dina program.
 
 
@@ -167,30 +167,10 @@ Ytterligare konfigurationer krävs:
 * Vanity URL:
    * Så här tilldelar du en förenklad URL för slutpunkten
    * Valfritt
-* OSGi-konfiguration:
-   * GraphQL-serverkonfiguration:
-      * Hanterar begäranden till slutpunkten
-      * Konfigurationsnamnet är `org.apache.sling.graphql.core.GraphQLServlet`. Den måste tillhandahållas som en OSGi-fabrikskonfiguration
-      * `sling.servlet.extensions` måste anges till  `[json]`
-      * `sling.servlet.methods` måste anges till  `[GET,POST]`
-      * `sling.servlet.resourceTypes` måste anges till  `[graphql/sites/components/endpoint]`
-      * Obligatorisk
-   * Schemaservletkonfiguration:
-      * Skapar GraphQL-schemat
-      * Konfigurationsnamnet är `com.adobe.aem.graphql.sites.adapters.SlingSchemaServlet`. Den måste tillhandahållas som en OSGi-fabrikskonfiguration
-      * `sling.servlet.extensions` måste anges till  `[GQLschema]`
-      * `sling.servlet.methods` måste anges till  `[GET]`
-      * `sling.servlet.resourceTypes` måste anges till  `[graphql/sites/components/endpoint]`
-      * Obligatorisk
-   * CSRF-konfiguration:
-      * Säkerhetsskydd för slutpunkten
-      * Konfigurationsnamnet är `com.adobe.granite.csrf.impl.CSRFFilter`
-      * Lägg till `/content/cq:graphql/global/endpoint` i den befintliga listan över uteslutna sökvägar (`filter.excluded.paths`)
-      * Obligatorisk
 
 ### Stödpaket {#supporting-packages}
 
-För att förenkla konfigurationen av en GraphQL-slutpunkt tillhandahåller Adobe [GraphQL Sample Project](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faemcloud%2Fpublic%2Faem-graphql%2Fgraphql-sample.zip)-paketet.
+För att förenkla konfigurationen av en GraphQL-slutpunkt tillhandahåller Adobe paketet [GraphQL Sample Project (2021.3)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-graphql/graphql-sample1.zip).
 
 Det här arkivet innehåller både [den nödvändiga ytterligare konfigurationen](#additional-configurations-graphql-endpoint) och [GraphQL-slutpunkten](#enabling-graphql-endpoint). Om den installeras på en vanlig AEM visas en fullt fungerande GraphQL-slutpunkt vid `/content/cq:graphql/global/endpoint`.
 
@@ -218,7 +198,7 @@ Detta innehåller funktioner som syntaxmarkering, automatisk komplettering, auto
 
 ### Installera AEM GraphiQL-gränssnitt {#installing-graphiql-interface}
 
-Användargränssnittet GraphiQL kan installeras på AEM med ett dedikerat paket: [Innehållspaketet GraphiQL v0.0.4](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faemcloud%2Fpublic%2Faem-graphql%2Fgraphiql-0.0.4.zip).
+Användargränssnittet GraphiQL kan installeras på AEM med ett dedikerat paket: [Innehållspaketet GraphiQL v0.0.6 (2021.3)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-graphql/graphiql-0.0.6.zip).
 
 <!--
 See the package **README** for full details; including full details of how it can be installed on an AEM instance - in a variety of scenarios.
@@ -273,6 +253,14 @@ Om en användare till exempel har skapat en innehållsfragmentmodell med namnet 
 
 Schemat är flexibelt i GraphQL för AEM. Det innebär att den genereras automatiskt varje gång en innehållsfragmentmodell skapas, uppdateras eller tas bort. Cacheminnen för dataschemat uppdateras också när du uppdaterar en innehållsfragmentmodell.
 
+<!--
+>[!NOTE]
+>
+>AEM does not use the concept of namespacing for Content Fragment Models. 
+>
+>If required, you can edit the **[GraphQL](/help/assets/content-fragments/content-fragments-models.md#content-fragment-model-properties)** properties of a Model to assign specific names.
+-->
+
 Tjänsten Sites GraphQL lyssnar (i bakgrunden) efter ändringar som gjorts i en innehållsfragmentmodell. När uppdateringar upptäcks återskapas endast den delen av schemat. Denna optimering sparar tid och ger stabilitet.
 
 Om du till exempel:
@@ -292,6 +280,16 @@ Om du till exempel:
 >Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
 Schemat hanteras via samma slutpunkt som GraphQL-frågorna, med klienten som hanterar det faktum att schemat anropas med tillägget `GQLschema`. Om du till exempel utför en enkel `GET`-begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar det i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
+
+### Schemagenerering - opublicerade modeller {#schema-generation-unpublished-models}
+
+När innehållsfragment är kapslade kan det hända att en överordnad Content Fragment Model publiceras, men ingen refererad modell gör det.
+
+>[!NOTE]
+>
+>Gränssnittet AEM förhindrar detta, men om publiceringen görs programmatiskt eller med innehållspaket kan det ske.
+
+När detta inträffar genererar AEM ett *ofullständigt*-schema för den överordnade modellen för innehållsfragment. Det innebär att fragmentreferensen, som är beroende av den opublicerade modellen, tas bort från schemat.
 
 ## fält {#fields}
 
@@ -313,7 +311,7 @@ GraphQL för AEM stöder en lista med typer. Alla Content Fragment Model-datatyp
 
 | Content Fragment Model - datatyp | GraphQL-typ | Beskrivning |
 |--- |--- |--- |
-| Enkelradstext | Sträng, [Sträng] |  Används för enkla strängar som författarnamn, platsnamn osv. |
+| Enkelradig text | Sträng, [Sträng] |  Används för enkla strängar som författarnamn, platsnamn osv. |
 | Flerradstext | Sträng |  Används för att skriva ut text, t.ex. brödtexten i en artikel |
 | Siffra |  Float, [Float] | Används för att visa flyttal och reguljära tal |
 | Boolesk |  Boolesk |  Används för att visa kryssrutor → enkla sant/falskt-satser |
@@ -517,13 +515,73 @@ query {
 
 Ytterligare exempel finns i:
 
-* information om [GraphQL för AEM tillägg](/help/assets/content-fragments/content-fragments-graphql-samples.md#graphql-extensions)
+* information om [GraphQL för AEM tillägg](#graphql-extensions)
 
 * [Exempelfrågor med detta exempelinnehåll och -struktur](/help/assets/content-fragments/content-fragments-graphql-samples.md#graphql-sample-queries-sample-content-fragment-structure)
 
    * Och [exempelinnehållet och strukturen](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql) har förberetts för användning i exempelfrågor
 
 * [Exempelfrågor baserade på WKND-projektet](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-queries-using-wknd-project)
+
+## GraphQL för AEM - Sammanfattning av tillägg {#graphql-extensions}
+
+Den grundläggande åtgärden för frågor med GraphQL för AEM följer standarden GraphQL-specifikation. För GraphQL-frågor med AEM finns det några tillägg:
+
+* Om du behöver ett enda resultat:
+   * använda modellnamnet, eg stad
+
+* Om du förväntar dig en resultatlista:
+   * lägg till `List` i modellnamnet; till exempel `cityList`
+   * Se [Exempelfråga - All information om alla städer](#sample-all-information-all-cities)
+
+* Om du vill använda ett logiskt OR:
+   * use ` _logOp: OR`
+   * Se [Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot;](#sample-all-persons-jobs-smith)
+
+* Logiskt AND finns också, men är (ofta) implicit
+
+* Du kan fråga efter fältnamn som motsvarar fälten i innehållsfragmentmodellen
+   * Se [Exempelfråga - Fullständig information om ett företags VD och anställda](#sample-full-details-company-ceos-employees)
+
+* Förutom fälten från modellen finns det vissa systemgenererade fält (föregås av understreck):
+
+   * För innehåll:
+
+      * `_locale` : för att avslöja språket, baserat på Language Manager
+         * Se [Exempelfråga för flera innehållsfragment för en viss språkinställning](#sample-wknd-multiple-fragments-given-locale)
+      * `_metadata` : för att visa metadata för ditt fragment
+         * Se [Exempelfråga för metadata - Lista metadata för utmärkelser med namnet GB](#sample-metadata-awards-gb)
+      * `_model` : tillåt frågor för en innehållsfragmentmodell (sökväg och rubrik)
+         * Se [Exempelfråga för en innehållsfragmentmodell från en modell](#sample-wknd-content-fragment-model-from-model)
+      * `_path` : sökvägen till ditt innehållsfragment i databasen
+         * Se [Exempelfråga - Ett enskilt specifikt stadsfragment](#sample-single-specific-city-fragment)
+      * `_reference` : avslöja referenser, inkludera textbundna referenser i RTF-redigeraren
+         * Se [Exempelfråga för flera innehållsfragment med förhämtade referenser](#sample-wknd-multiple-fragments-prefetched-references)
+      * `_variation` : för att visa specifika variationer i ditt innehållsfragment
+         * Se [Exempelfråga - Alla städer med en namngiven variant](#sample-cities-named-variation)
+   * Och åtgärder:
+
+      * `_operator` : tillämpa särskilda operatörer,  `EQUALS`,  `EQUALS_NOT`,  `GREATER_EQUAL`,  `LOWER`,  `CONTAINS`,  `STARTS_WITH`
+         * Se [Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot;](#sample-all-persons-not-jobs)
+         * Se [Exempelfråga - Alla annonser där `_path` börjar med ett visst prefix](#sample-wknd-all-adventures-cycling-path-filter)
+      * `_apply` : tillämpa särskilda villkor, till exempel   `AT_LEAST_ONCE`
+         * Se [Exempelfråga - Filtrera en array med ett objekt som måste finnas minst en gång](#sample-array-item-occur-at-least-once)
+      * `_ignoreCase` : för att ignorera skiftläget vid fråga
+         * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](#sample-all-cities-san-ignore-case)
+
+
+
+
+
+
+
+
+
+
+* Det finns stöd för unionstyper för GraphQL:
+
+   * använd `... on`
+      * Se [Exempelfråga för ett innehållsfragment av en viss modell med en innehållsreferens](#sample-wknd-fragment-specific-model-content-reference)
 
 <!--
 ## Persisted Queries (Caching) {#persisted-queries-caching}
