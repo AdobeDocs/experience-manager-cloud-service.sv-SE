@@ -2,9 +2,9 @@
 title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM - exempelinnehåll och frågor.
 translation-type: tm+mt
-source-git-commit: 482e98e36d9e26aed31fc95fbb66a5168af49cf1
+source-git-commit: b50bef1fd94396e9b9089933744a95f3f7d389f8
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1396'
 ht-degree: 2%
 
 ---
@@ -29,65 +29,6 @@ Mer information finns i:
 
 * Och några [exempel på GraphQL-frågor](#graphql-sample-queries), baserade på fragmentstrukturen för exempelinnehåll (modeller för innehållsfragment och relaterade innehållsfragment).
 
-## GraphQL för AEM - Sammanfattning av tillägg {#graphql-extensions}
-
-Den grundläggande åtgärden för frågor med GraphQL för AEM följer standarden GraphQL-specifikation. För GraphQL-frågor med AEM finns det några tillägg:
-
-* Om du behöver ett enda resultat:
-   * använda modellnamnet, eg stad
-
-* Om du förväntar dig en resultatlista:
-   * lägg till `List` i modellnamnet; till exempel `cityList`
-   * Se [Exempelfråga - All information om alla städer](#sample-all-information-all-cities)
-
-* Om du vill använda ett logiskt OR:
-   * use ` _logOp: OR`
-   * Se [Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot;](#sample-all-persons-jobs-smith)
-
-* Logiskt AND finns också, men är (ofta) implicit
-
-* Du kan fråga efter fältnamn som motsvarar fälten i innehållsfragmentmodellen
-   * Se [Exempelfråga - Fullständig information om ett företags VD och anställda](#sample-full-details-company-ceos-employees)
-
-* Förutom fälten från modellen finns det vissa systemgenererade fält (föregås av understreck):
-
-   * För innehåll:
-
-      * `_locale` : för att avslöja språket, baserat på Language Manager
-         * Se [Exempelfråga för flera innehållsfragment för en viss språkinställning](#sample-wknd-multiple-fragments-given-locale)
-      * `_metadata` : för att visa metadata för ditt fragment
-         * Se [Exempelfråga för metadata - Lista metadata för utmärkelser med namnet GB](#sample-metadata-awards-gb)
-      * `_model` : tillåt frågor för en innehållsfragmentmodell (sökväg och rubrik)
-         * Se [Exempelfråga för en innehållsfragmentmodell från en modell](#sample-wknd-content-fragment-model-from-model)
-      * `_path` : sökvägen till ditt innehållsfragment i databasen
-         * Se [Exempelfråga - Ett enskilt specifikt stadsfragment](#sample-single-specific-city-fragment)
-      * `_reference` : avslöja referenser, inkludera textbundna referenser i RTF-redigeraren
-         * Se [Exempelfråga för flera innehållsfragment med förhämtade referenser](#sample-wknd-multiple-fragments-prefetched-references)
-      * `_variation` : för att visa specifika variationer i ditt innehållsfragment
-         * Se [Exempelfråga - Alla städer med en namngiven variant](#sample-cities-named-variation)
-   * Och åtgärder:
-
-      * `_operator` : tillämpa särskilda operatörer,  `EQUALS`,  `EQUALS_NOT`,  `GREATER_EQUAL`,  `LOWER`,  `CONTAINS`,  `STARTS_WITH`
-         * Se [Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot;](#sample-all-persons-not-jobs)
-         * Se [Exempelfråga - Alla annonser där `_path` börjar med ett visst prefix](#sample-wknd-all-adventures-cycling-path-filter)
-      * `_apply` : tillämpa särskilda villkor, till exempel   `AT_LEAST_ONCE`
-         * Se [Exempelfråga - Filtrera en array med ett objekt som måste finnas minst en gång](#sample-array-item-occur-at-least-once)
-      * `_ignoreCase` : för att ignorera skiftläget vid fråga
-         * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](#sample-all-cities-san-ignore-case)
-
-
-
-
-
-
-
-
-
-
-* Det finns stöd för unionstyper för GraphQL:
-
-   * använd `... on`
-      * Se [Exempelfråga för ett innehållsfragment av en viss modell med en innehållsreferens](#sample-wknd-fragment-specific-model-content-reference)
 
 ## GraphQL - Exempelfrågor med strukturen för exempelinnehållsfragment {#graphql-sample-queries-sample-content-fragment-structure}
 
