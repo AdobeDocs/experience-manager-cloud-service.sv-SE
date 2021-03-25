@@ -2,9 +2,9 @@
 title: Variationer – redigera innehållsfragment
 description: Med variationer kan du skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte (om det behövs).
 translation-type: tm+mt
-source-git-commit: 972d242527871660d55b9a788b9a53e88d020749
+source-git-commit: 243b7509661cbb9da670bdc15b68378db43b423a
 workflow-type: tm+mt
-source-wordcount: '2186'
+source-wordcount: '2236'
 ht-degree: 11%
 
 ---
@@ -41,6 +41,9 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 När du öppnar ditt innehållsfragment för redigering är fliken **Variationer** öppen som standard. Här kan du skapa innehållet, för Överordnad eller andra varianter som du har. Det strukturerade fragmentet innehåller olika fält, av olika datatyper, som har definierats i innehållsmodellen.
 
+Till exempel:
+
+![helskärmsredigerare](assets/cfm-variations-02.png)
 Du kan:
 
 * gör redigeringar direkt på fliken **Variationer**
@@ -53,9 +56,7 @@ Du kan:
    * se fler redigeringsalternativ (för [RTF](#rich-text)-format)
    * få åtkomst till ett intervall med [åtgärder](#actions)
 
-Till exempel:
-
-![helskärmsredigerare](assets/cfm-variations-02.png)
+* För **fragmentreferensfält** kan alternativet **[Redigera innehållsfragment](#fragment-references-edit-content-fragment)** vara tillgängligt, beroende på modelldefinitionen.
 
 ### Helskärmsredigeraren {#full-screen-editor}
 
@@ -164,8 +165,11 @@ Om innehållsfragmentmodellen innehåller fragmentreferenser kan fragmentförfat
 
 #### Redigera innehållsfragment {#fragment-references-edit-content-fragment}
 
-Alternativet **Redigera innehållsfragment** öppnas
-en ny flik i webbläsaren med innehållsfragmentet öppet i innehållsfragmentets redigerare.
+Alternativet **Redigera innehållsfragment** öppnar det fragmentet på en ny redigeringsflik (inom samma webbläsarflik).
+
+Om du väljer den ursprungliga fliken igen (till exempel **Little Pony Inc.**) stängs den sekundära fliken (i det här fallet **Adam Smith**).
+
+![Fragmentreferenser](assets/cfm-variations-editreference.png)
 
 #### Nytt innehållsfragment {#fragment-references-new-content-fragment}
 
@@ -240,6 +244,8 @@ Andra språk är tillgängliga som språkmodellpaket från paketresurs:
    * Alla meningar som ska tas bort markeras med rött, med genomstrykning.
    * Klicka på en markerad mening om du vill behålla den i det sammanfattande innehållet.
    * Klicka på en mening som inte är markerad för att ta bort den.
+   * Sammanfattningsstatistiken visas: **Faktiskt** och **Mål**-
+   * Du kan **förhandsgranska** ändringarna.
 
    ![summeringsjämförelse](assets/cfm-variations-06.png)
 
