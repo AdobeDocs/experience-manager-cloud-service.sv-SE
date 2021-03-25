@@ -3,10 +3,10 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f3c02cc79d5d56b67224761efd6a70ae597fe7fe
+source-git-commit: 0f42ba52f8e9f593e95fc4187c6461a660ff696d
 workflow-type: tm+mt
-source-wordcount: '2620'
-ht-degree: 27%
+source-wordcount: '2784'
+ht-degree: 26%
 
 ---
 
@@ -40,7 +40,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 Författare söker efter bilder och följande typer av dokument i Content Finder och använder de sökbara resurserna i Page Editor. Dokument läggs till i `Download`-komponenten och bilder till `Image`-komponenten. Författare lägger också till fjärrresurserna i valfri anpassad [!DNL Experience Manager]-komponent som utökar standardkomponenterna för `Download` eller `Image`. De format som stöds är:
 
-* **Bildformat**: De format som  [Image-](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) komponenten stöder. [!DNL Dynamic Media] bilder stöds inte.
+* **Bildformat**: De format som  [Image-](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) komponenten stöder.
 * **Dokumentformat**: Se vilka  [dokumentformat](file-format-support.md#document-formats) som stöds.
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
@@ -111,6 +111,23 @@ Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites]-distributioner
 ![Anslutningstest för konfigurerade anslutna resurser  [!DNL Sites]](assets/connected-assets-multiple-config.png)
 
 <!-- TBD: Check if Launchers are to be disabled on CS instances. Is this option even available to the users on CS? -->
+
+## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Dynamic Media] distributioner {#sites-dynamic-media-connected-assets}
+
+Du kan konfigurera en anslutning mellan [!DNL Sites]-distribution och [!DNL Dynamic Media]-distribution som tillåter webbsideförfattare att använda [!DNL Dynamic Media]-bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och fjärdistributioner av [!DNL Dynamic Media] densamma. Detta gör att du kan använda funktionen [!DNL Dynamic Media] via funktionen Anslutna resurser, till exempel smarta beskärnings- och bildförinställningar.
+
+Följ de här stegen för att konfigurera anslutningen.
+
+1. Skapa konfiguration för anslutna resurser enligt beskrivningen ovan. Markera kryssrutan **[!UICONTROL Fetch original rendition for [!DNL Dynamic Media] Connected Assets]** i dialogrutan.
+
+1. Konfigurera [!DNL Dynamic Media] på lokala [!DNL Sites]- och fjärdistributioner av [!DNL Assets]. Följ instruktionerna för att [konfigurera [!DNL Dynamic Media]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html#configuring-dynamic-media-cloud-services).
+
+   * Använd samma företagsnamn i alla konfigurationer.
+   * På lokal [!DNL Sites] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Disabled by default]**. Platsdistributionen behöver bara skrivskyddad åtkomst till [!DNL Dynamic Media]-kontot.
+   * Välj **[!UICONTROL Selective Publish]** i alternativet **[!UICONTROL Publish Assets]** på lokal [!DNL Sites]. Välj inte **[!UICONTROL Sync All Content]**.
+   * På fjärrdistributionen [!DNL Assets] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Enabled by default]**.
+
+1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Den här funktionen aktiverar standardkomponenten för bilder så att [!DNL Dynamic Media] visas när [!DNL Dynamic Media]-bilder används av författare på webbsidor i lokal [!DNL Sites]-distribution.
 
 ## Använda fjärresurser {#use-remote-assets}
 
@@ -184,7 +201,7 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 * Lokala resurser synkroniseras inte med de ursprungliga resurserna i fjärrdistributionen. Ändringar, borttagningar eller återkallande av behörigheter i DAM-distributionen sprids inte längre ned i kedjan.
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
 * Lokalt hämtade resurser är endast tillgängliga för redigeringsändamål. Det går inte att använda arbetsflöden för resursuppdatering och metadata kan inte redigeras.
-* Endast bilder och dokumentformaten i listan stöds. [!DNL Dynamic Media] resurser, innehållsfragment och Experience Fragments stöds inte.
+* Endast bilder och dokumentformaten i listan stöds. Innehållsfragment och Experience Fragments stöds inte.
 * [!DNL Experience Manager] hämtar inte metadatamatcheman. Det innebär att alla hämtade metadata inte visas. Om schemat uppdateras separat visas alla egenskaper.
 * Alla [!DNL Sites]-författare har läsbehörighet för de hämtade kopiorna, även om författare inte har åtkomst till fjärr-DAM-distributionen.
 * Det finns inte API-stöd för att anpassa integreringen.
