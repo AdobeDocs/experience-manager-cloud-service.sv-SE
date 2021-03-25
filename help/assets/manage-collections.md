@@ -4,7 +4,7 @@ description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d2ab7f8de4d18b48c312c9beabc58c77da7b2dfc
+source-git-commit: bd02261e62de28860c6c95794cd69e6529240b6d
 workflow-type: tm+mt
 source-wordcount: '2244'
 ht-degree: 18%
@@ -185,7 +185,7 @@ Om du vill anpassa sidan med metadata [!UICONTROL Properties], inklusive lägga 
 
 >[!NOTE]
 >
->Massredigeringsmetoderna fungerar för resurser som är tillgängliga i en samling. För resurser som är tillgängliga mellan mappar eller matchar ett gemensamt villkor är det möjligt att [uppdatera metadata satsvis efter sökning](/help/assets/search-assets.md#metadataupdates).
+>Massredigeringsmetoderna fungerar för resurser som är tillgängliga i en samling. För resurser som är tillgängliga mellan mappar eller matchar ett gemensamt villkor är det möjligt att [uppdatera metadata satsvis efter sökning](/help/assets/search-assets.md#metadata-updates).
 
 1. I samlingskonsolen väljer du de samlingar du vill redigera.
 1. Tryck/klicka på **[!UICONTROL Properties]** i verktygsfältet för att öppna sidan [!UICONTROL Properties] för de valda samlingarna.
