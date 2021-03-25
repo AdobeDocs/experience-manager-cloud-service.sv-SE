@@ -6,7 +6,7 @@ user-guide-description: Läs om hur du använder och administrerar Experience Ma
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
+source-git-commit: 9f47f53524ab89c368ab260bc0d16e47ee81a230
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 65%
@@ -72,9 +72,9 @@ ht-degree: 65%
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
    + [Headless Delivery with Content Fragments and GraphQL](content-fragments/content-fragments-graphql.md)
-   + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
    + [Aktivera funktionen för innehållsfragment för instansen](content-fragments/content-fragments-configuration-browser.md)
    + [Modeller för innehållsfragment](content-fragments/content-fragments-models.md)
+   + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
    + [Variationer – redigera innehållsfragment](content-fragments/content-fragments-variations.md)
    + [Innehållsfragment med associerat innehåll](content-fragments/content-fragments-assoc-content.md)
    + [Metadata – fragmentegenskaper](content-fragments/content-fragments-metadata.md)
