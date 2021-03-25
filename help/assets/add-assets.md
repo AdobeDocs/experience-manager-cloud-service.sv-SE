@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 translation-type: tm+mt
-source-git-commit: bd02261e62de28860c6c95794cd69e6529240b6d
+source-git-commit: a81fe4a2c7d3c4e0471a961fb51249ac03f27e9c
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1956'
 ht-degree: 0%
 
 ---
@@ -174,8 +174,20 @@ Så här konfigurerar du verktyget:
    * [!UICONTROL Dry Run]: Anropa en testkörning av massintagning.
    * [!UICONTROL Run]: Kör den valda konfigurationen.
    * [!UICONTROL Stop]: Avsluta en aktiv konfiguration.
+   * [!UICONTROL Schedule]: Ställ in engångs- eller återkommande schema för att importera resurser.
    * [!UICONTROL Job Status]: Visa konfigurationsstatus när den används i ett pågående importjobb eller används för ett slutfört jobb.
+   * [!UICONTROL Job History]: Tidigare instanser av jobbet.
    * [!UICONTROL View Assets]: Visa målmappen om den finns.
+
+   ![Alternativ i verktygsfältet för inmatningskonfigurationer](assets/bulk-ingest-toolbar-options.png)
+
+Så här schemalägger du en engångsimport eller en återkommande bulkimport:
+
+1. Skapa en bulkimportkonfiguration.
+1. Markera konfigurationen och välj **[!UICONTROL Schedule]** i verktygsfältet.
+1. Ställ in ett engångsintag eller schemalägg ett timschema, ett dagligt eller ett veckoschema. Klicka på **[!UICONTROL Submit]**.
+
+   ![Schemalägg massinmatningsjobb](assets/bulk-ingest-schedule1.png)
 
 ## Överför resurser med skrivbordsklienter {#upload-assets-desktop-clients}
 
