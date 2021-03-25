@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 translation-type: tm+mt
-source-git-commit: d66377444815123d7a4db3c5e9e04b2970841b13
+source-git-commit: bd02261e62de28860c6c95794cd69e6529240b6d
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1894'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ Du kan överföra en resurs med samma sökväg (samma namn och plats) som en bef
 >
 >Om Resursinsikter är aktiverat för att spåra visningar eller klickningar med [!DNL Adobe Analytics] blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på [!DNL Analytics].
 
-Om du vill behålla den duplicerade resursen i [!DNL Assets] klickar du på **[!UICONTROL Keep]**. Tryck/klicka på **[!UICONTROL Delete]** om du vill ta bort den duplicerade resursen som du överförde.
+Om du vill behålla den duplicerade resursen i [!DNL Assets] klickar du på **[!UICONTROL Keep]**. Klicka på **[!UICONTROL Delete]** om du vill ta bort den duplicerade resursen som du överförde.
 
 ### Hantering av filnamn och förbjudna tecken {#filename-handling}
 
