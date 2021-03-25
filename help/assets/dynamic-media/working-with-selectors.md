@@ -3,7 +3,7 @@ title: Arbeta med väljare
 description: Lär dig mer om metoder du kan använda för att välja resurser för interaktiva bilder, interaktiva videor och karusellbanderoller i Dynamic Media.
 topic: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: bd7734c0f132b660c15a7eba0a6f92042e377a63
+source-git-commit: bd02261e62de28860c6c95794cd69e6529240b6d
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 14%
@@ -87,7 +87,7 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
 Använd den här väljaren för att välja bilder som ska användas i en Carousel Banner, en interaktiv video, bilduppsättningar, blandade medieuppsättningar och snurruppsättningar. I interaktiv video är resursväljaren tillgänglig när du trycker på **[!UICONTROL Select Assets]** på fliken **[!UICONTROL Content]**. I Carousel Sets är resursväljaren tillgänglig när du skapar en bildruta. I Bilduppsättningar, Blandade medieuppsättningar och Snurra uppsättningar är resursväljaren tillgänglig när du skapar en bilduppsättning, blandad medieuppsättning eller snurra uppsättning.
 
-Mer information finns även i [Resursväljaren](/help/assets/search-assets.md#assetselector).
+Mer information finns även i [Resursväljaren](/help/assets/search-assets.md#asset-selector).
 
 1. Navigera till Carousel Set och skapa en bild. Du kan också navigera till den interaktiva videon, gå till fliken **[!UICONTROL Content]** och sedan välja resurser. Du kan också skapa en uppsättning med blandade media, bilduppsättning eller snurra.
 1. Tryck på ikonen **[!UICONTROL Asset Selector]** (mapp med förstoringsglas) och navigera till en resurs.
