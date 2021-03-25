@@ -2,9 +2,9 @@
 title: Modeller för innehållsfragment
 description: Content Fragment Models används för att skapa innehållsfragment med strukturerat innehåll.
 translation-type: tm+mt
-source-git-commit: 3538c03a6a455cd22423ca5a4fd69c1fe57b3e5e
+source-git-commit: 243b7509661cbb9da670bdc15b68378db43b423a
 workflow-type: tm+mt
-source-wordcount: '2156'
+source-wordcount: '2177'
 ht-degree: 5%
 
 ---
@@ -393,3 +393,27 @@ Så här avpublicerar du en innehållsfragmentmodell:
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
 1. Markera modellen, följt av **Avpublicera** från verktygsfältet.
 Publiceringsstatusen anges i konsolen.
+
+## Content Fragment Model - egenskaper {#content-fragment-model-properties}
+
+Du kan redigera **egenskaperna** för en modell för innehållsfragment:
+
+* **Grundläggande**
+   * **Modelltitel**
+   * **Taggar**
+   * **Beskrivning**
+   * **Överför bild**
+
+<!--
+* **GraphQL**
+  
+  >[!CAUTION]
+  >
+  >These properties are only required for [development purposes](/help/assets/content-fragments/graphql-api-content-fragments.md#schema-generation).
+  >
+  >Updating these properties can impact dependent applications.
+
+  * **API Name**
+  * **Single Query Field Name**
+  * **Multiple Query Field Name**
+-->
