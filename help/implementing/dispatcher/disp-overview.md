@@ -3,9 +3,9 @@ title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 feature: Dispatcher
 translation-type: tm+mt
-source-git-commit: 35df3f9c1b8a919de0c8c614bd0169d3418da1d0
+source-git-commit: c11d8e36fe8ba120847c675f40e09a0388943d51
 workflow-type: tm+mt
-source-wordcount: '4113'
+source-wordcount: '4169'
 ht-degree: 6%
 
 ---
@@ -198,7 +198,21 @@ Valideringsverktyget finns i SDK på `bin/validator` som binär Mac OS, Linux el
 
 Den anropas som: `validator full [-d folder] [-w allowlist] zip-file | src folder`
 
-Verktyget kontrollerar att Dispatcher-konfigurationen använder rätt direktiv som stöds av AEM som en molntjänst genom att skanna alla filer med mönstret `conf.d/enabled_vhosts/*.vhost`. De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
+Verktyget kontrollerar att Dispatcher-konfigurationen använder rätt direktiv som stöds av AEM som en molntjänst genom att skanna alla filer med mönstret `conf.d/enabled_vhosts/*.vhost`.
+
+I Windows är dispatchervalideraren skiftlägeskänslig. Därför kan det misslyckas med att validera konfigurationen om du inte respekterar skiftläget för sökvägen där konfigurationen finns, till exempel:
+
+```
+bin\validator.exe full src
+Cloud manager validator 2.0.xx
+2021/03/15 18:15:40 Dispatcher configuration validation failed:
+  conf.dispatcher.d\available_farms\default.farm:15: parent directory outside server root: c:\k\a\aem-dispatcher-sdk-windows-symlinks-testing3\dispatcher\src
+  
+```
+
+Undvik det här felet genom att kopiera och klistra in sökvägen från Utforskaren i Windows och sedan i kommandotolken med kommandot `cd` i sökvägen.
+
+De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
 
 ```
 $ validator allowlist
