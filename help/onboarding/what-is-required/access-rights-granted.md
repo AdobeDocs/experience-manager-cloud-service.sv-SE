@@ -2,10 +2,10 @@
 title: Beviljade åtkomsträttigheter - vad som krävs
 description: Beviljade åtkomsträttigheter - vad som krävs
 translation-type: tm+mt
-source-git-commit: 4b62401fd1d0654cf758092176bd815a7fa56159
+source-git-commit: 8259bf4e7f2004d76fd985ec7ad7c416b6f8d491
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 10%
+source-wordcount: '543'
+ht-degree: 11%
 
 ---
 
@@ -41,8 +41,6 @@ När Adobe har skapat en organisation för företaget läggs administratören ti
 
 Med de här behörigheterna tilldelade är administratören nu konfigurerad med en enda inloggning (med Adobe ID) för att få åtkomst till [!UICONTROL Experience Cloud]-tjänsterna, logga in i dina AEM molnmiljöer och använda [!UICONTROL Cloud Manager].
 
-## Användare och roller {#users-roles}
-
 Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter för att kunna användas.
 
 [!UICONTROL Cloud Manager] definierar för närvarande fyra roller för användare som styr tillgängligheten av specifika funktioner:
@@ -53,7 +51,6 @@ Många funktioner i [!UICONTROL Cloud Manager] kräver specifika behörigheter f
 * Developer
 
 >[!CAUTION]
->
 >Om du vill använda [!UICONTROL Cloud Manager] måste du ha en Adobe ID och Adobe Experience Manager som produktkontext för Cloud Service.
 
 ### Rolldefinitioner {#role-definitions}
