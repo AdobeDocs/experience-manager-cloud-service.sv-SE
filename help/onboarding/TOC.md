@@ -7,9 +7,9 @@ feature-set: Experience Manager Sites
 feature: Distribuerar
 role: Arkitekt, utvecklare
 translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+source-git-commit: 974c7d20d7896b749e07b05d0149ed16dc7e0cd5
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '683'
 ht-degree: 24%
 
 ---
@@ -94,8 +94,6 @@ ht-degree: 24%
       + [Versionsinformation för 2020.4.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-4-0.md)
       + [Versionsinformation för 2020.3.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-3-0.md)
       + [Versionsinformation för 2020.2.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2020-2-0.md)
-   + Roller och ansvar {#getting-access-to-aem-in-cloud}
-      + [Förstå roller och ansvar](getting-access-to-aem-in-cloud/roles-responsibilities.md)
 + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
    + [AEM-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/aem-readiness.md)
    + [AEM Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/foundation-readiness.md)
