@@ -1,10 +1,10 @@
 ---
 title: Komma åt och leverera innehållsfragment Headless Quick Start Guide
-description: Resursens REST-API gör det möjligt att hantera innehållsfragment och GraphQL-API:t gör det enkelt att skicka innehållsfragment utan rubrik.
+description: Lär dig hur du använder AEM Assets REST API för att hantera innehållsfragment och GraphQL API för headless-leverans av Content Fragment-innehåll.
 translation-type: tm+mt
-source-git-commit: 472f691cf8b2ec502611ee88bc4abdcabb6d8412
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Komma åt och leverera innehållsfragment Headless Quick Start Guide {#accessing-delivering-content-fragments}
 
-Resursens REST-API gör det möjligt att hantera innehållsfragment och GraphQL-API:t gör det enkelt att skicka innehållsfragment utan rubrik.
+Lär dig hur du använder AEM Assets REST API för att hantera innehållsfragment och GraphQL API för headless-leverans av Content Fragment-innehåll.
 
 ## Vad är GraphQL och Assets REST API:er? {#what-are-the-apis}
 
