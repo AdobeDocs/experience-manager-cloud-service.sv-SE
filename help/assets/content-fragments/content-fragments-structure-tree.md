@@ -1,16 +1,18 @@
 ---
 title: Strukturträd för innehållsfragment
-description: I redigeraren för innehållsfragment kan du visa strukturträdet.
+description: Använd funktionen Strukturträd i Content Fragment Editor i AEM för att bättre förstå rubriklöst innehåll.
 translation-type: tm+mt
-source-git-commit: 46e179faa7875c4b3e9da30356d2b82d4b25b130
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
 
 # Strukturträd för innehållsfragment {#content-fragment-structure-tree}
+
+Använd funktionen Strukturträd i Content Fragment Editor i AEM för att bättre förstå rubriklöst innehåll.
 
 I redigeraren för innehållsfragment kan du välja ikonen för strukturträdet:
 
