@@ -1,10 +1,10 @@
 ---
 title: Skapa innehållsfragment Headless Quick Start Guide
-description: Med Content Fragments kan du designa, skapa, strukturera och använda sidoberoende innehåll som kan levereras obehindrat av AEM.
+description: Lär dig använda AEM innehållsfragment för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
 translation-type: tm+mt
-source-git-commit: fa2fee3139acd60ea96222752785cf397978a2bc
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Skapa innehållsfragment Headless Quick Start Guide {#creating-content-fragments}
 
-Med Content Fragments kan du designa, skapa, strukturera och använda sidoberoende innehåll som kan levereras obehindrat av AEM.
+Lär dig använda AEM innehållsfragment för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
 
 ## Vad är innehållsfragment? {#what-are-content-fragments}
 
