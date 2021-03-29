@@ -1,18 +1,18 @@
 ---
 title: Arbeta med innehållsfragment
-description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
+description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för headless-leverans.
 translation-type: tm+mt
-source-git-commit: 6f8264ae53b30afac0cc523c312aea8918e5eafa
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2035'
 ht-degree: 3%
 
 ---
 
 
-# Arbeta med innehållsfragment{#working-with-content-fragments}
+# Arbeta med innehållsfragment {#working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) som Cloud Service kan du med Content Fragments utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
+Med Adobe Experience Manager (AEM) som Cloud Service kan du med Content Fragments utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll för användning på flera platser/i flera kanaler, vilket är idealiskt för headless-leverans.
 
 Innehållsfragment innehåller strukturerat innehåll:
 
@@ -245,7 +245,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
    * Variationer kan vara [synkroniserade](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med Överordnad om det Överordnad innehållet har uppdaterats.
    * Kan vara [Summerad](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
-   * Finns under fliken [Variationer](/help/assets/content-fragments/content-fragments-variations.md) i fragmentredigeraren.
+   * Tillgängligt under fliken [Variationer](/help/assets/content-fragments/content-fragments-variations.md) i fragmentredigeraren.
 
 ### Mellan innehåll vid sidredigering med innehållsfragment {#in-between-content-when-page-authoring-with-content-fragments}
 
