@@ -1,10 +1,10 @@
 ---
 title: Variationer – redigera innehållsfragment
-description: Med variationer kan du skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte (om det behövs).
+description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 translation-type: tm+mt
-source-git-commit: 243b7509661cbb9da670bdc15b68378db43b423a
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2255'
 ht-degree: 11%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 11%
 
 # Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
 
-[](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) Variationer är en viktig funktion i innehållsfragment eftersom de gör att du kan skapa och redigera kopior av det överordnad innehållet för användning i vissa kanaler och/eller scenarier.
+[](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) Variationer är en viktig egenskap i AEM innehållsfragment, eftersom de gör det möjligt att skapa och redigera kopior av det överordnad innehållet för användning i specifika kanaler och/eller scenarier, vilket gör headless-innehållsleverans ännu mer flexibel.
 
 På fliken **Variationer** kan du:
 
