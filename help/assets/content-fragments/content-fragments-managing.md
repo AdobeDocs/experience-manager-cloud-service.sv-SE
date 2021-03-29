@@ -1,16 +1,18 @@
 ---
 title: Hantera innehållsfragment
-description: Innehållsfragment lagras som resurser, så hanteras främst från resurskonsolen.
+description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 translation-type: tm+mt
-source-git-commit: 243b7509661cbb9da670bdc15b68378db43b423a
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1640'
 ht-degree: 7%
 
 ---
 
 
-# Hantera innehållsfragment{#managing-content-fragments}
+# Hantera innehållsfragment {#managing-content-fragments}
+
+Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 
 Innehållsfragment lagras som **Resurser**, så hanteras primärt från konsolen **Resurser**.
 
