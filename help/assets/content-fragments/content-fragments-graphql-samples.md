@@ -1,16 +1,18 @@
 ---
 title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
-description: Lär dig använda GraphQL med AEM - exempelinnehåll och frågor.
+description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 translation-type: tm+mt
-source-git-commit: b50bef1fd94396e9b9089933744a95f3f7d389f8
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1418'
 ht-degree: 2%
 
 ---
 
 
 # Lära sig att använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
+
+Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 
 >[!NOTE]
 >
