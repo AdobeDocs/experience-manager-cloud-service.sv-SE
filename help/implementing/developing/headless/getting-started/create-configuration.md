@@ -1,10 +1,10 @@
 ---
 title: Skapa en guide till Headless-konfiguration
-description: Som ett första steg till att komma igång med headless AEM som Cloud Service måste du skapa en konfiguration.
+description: Skapa en konfiguration som ett första steg för att komma igång med headless i AEM som Cloud Service.
 translation-type: tm+mt
-source-git-commit: 259d54a225f8dee5929f62b784e28f3fc2bb794a
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
