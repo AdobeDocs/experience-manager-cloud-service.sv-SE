@@ -1,16 +1,18 @@
 ---
 title: Content Fragments - Configuration Browser
-description: Lär dig hur du aktiverar vissa funktioner för innehållsfragment i konfigurationsläsaren.
+description: Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Browser för att utnyttja AEM kraftfulla headless-leveransfunktioner.
 translation-type: tm+mt
-source-git-commit: 260578950833b96616a2a3928d206e6f9e0a206a
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 21%
+source-wordcount: '271'
+ht-degree: 19%
 
 ---
 
 
 # Content Fragments - Configuration Browser{#content-fragments-configuration-browser}
+
+Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Browser för att utnyttja AEM kraftfulla headless-leveransfunktioner.
 
 ## Aktivera funktionen för innehållsfragment för din instans {#enable-content-fragment-functionality-instance}
 
