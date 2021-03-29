@@ -2,17 +2,17 @@
 title: AEM Modernization Tools
 description: 'AEM '
 translation-type: tm+mt
-source-git-commit: 3478827949356c4a4f5133b54c6cf809f416efef
+source-git-commit: 20aba41de904cf765037ef70fc137773fc602bc0
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 100%
+source-wordcount: '131'
+ht-degree: 77%
 
 ---
 
 
 # AEM Modernization Tools {#aem-moderization-tools}
 
-AEM Modernization Tool Suite ger AEM Development-team verktyg för att konvertera befintliga AEM-funktioner till de funktioner som stöds.
+De AEM moderniseringsverktygen innehåller en uppsättning verktyg som kan användas för att konvertera äldre AEM till de moderna och stödda AEM som en Cloud Service.
 
 
 ## Introduktion {#introduction}
