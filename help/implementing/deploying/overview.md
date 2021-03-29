@@ -3,7 +3,7 @@ title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Distribuerar
 translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+source-git-commit: a5717e36c347e89f6b9e2f4f7dffc72dcab0b7d7
 workflow-type: tm+mt
 source-wordcount: '3247'
 ht-degree: 1%
@@ -50,7 +50,7 @@ I följande video visas en översikt på hög nivå över hur du distribuerar ko
 
 Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, vilket är hur ett AEM som Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i Package Manager i Cloud-miljöer kommer namnet därför att innehålla &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren finns här[](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
 
-Innehållspaket som skrivits för AEM som ett Cloud Service-program måste ha en ren separation mellan oföränderligt och muterbart innehåll, och Cloud Manager kommer att framtvinga det genom att misslyckas med bygget, och ett meddelande som:
+Innehållspaket som skrivits för AEM som ett Cloud Service-program måste ha en ren separation mellan oföränderligt och muterbart innehåll och Cloud Manager installerar bara det muterbara innehållet, och ett meddelande som:
 
 `Generated content-package <PACKAGE_ID> located in file <PATH> is of MIXED type`
 
