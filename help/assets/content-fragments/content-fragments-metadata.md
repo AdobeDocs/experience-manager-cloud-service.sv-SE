@@ -1,16 +1,18 @@
 ---
 title: Metadata – fragmentegenskaper
-description: Du kan visa och redigera metadata (egenskaper) för innehållsfragment.
+description: Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment i AEM för att justera rubrikfritt innehåll.
 translation-type: tm+mt
-source-git-commit: 972d242527871660d55b9a788b9a53e88d020749
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 9%
+source-wordcount: '140'
+ht-degree: 7%
 
 ---
 
 
-# Metadata – fragmentegenskaper{#metadata-fragment-properties}
+# Metadata – fragmentegenskaper {#metadata-fragment-properties}
+
+Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment i AEM för att justera rubrikfritt innehåll.
 
 ## Redigera egenskaper/Metadata {#editing-properties-meta-data}
 
