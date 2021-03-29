@@ -1,18 +1,20 @@
 ---
 title: Adobe Experience Manager som Cloud Service Content Fragments Support in Assets HTTP API
-description: Lär dig mer om Adobe Experience Manager som stöd för innehållsfragment för Cloud Service i Assets HTTP API.
+description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 translation-type: tm+mt
-source-git-commit: 8563a87bdfc251166590210993b7d9e4cbdee385
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '1953'
 ht-degree: 2%
 
 ---
 
 
-# Stöd för Content Fragments i AEM Assets HTTP API{#content-fragments-support-in-aem-assets-http-api}
+# Stöd för Content Fragments i AEM Assets HTTP API {#content-fragments-support-in-aem-assets-http-api}
 
 ## Översikt {#overview}
+
+Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 
 >[!NOTE]
 >
