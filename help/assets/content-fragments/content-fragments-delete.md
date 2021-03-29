@@ -1,16 +1,18 @@
 ---
 title: Innehållsfragment – ta bort överväganden
-description: Innehållsfragment – ta bort överväganden
+description: Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
 translation-type: tm+mt
-source-git-commit: bb3d90def8855e8dffdc584c0805da120faf7b12
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 12%
+source-wordcount: '470'
+ht-degree: 9%
 
 ---
 
 
-# Innehållsfragment – ta bort överväganden{#content-fragments-delete-considerations}
+# Innehållsfragment – ta bort överväganden {#content-fragments-delete-considerations}
+
+Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
 
 ## Behörigheter - Ta bort eller ta inte bort {#permissions-delete-or-not-delete}
 
