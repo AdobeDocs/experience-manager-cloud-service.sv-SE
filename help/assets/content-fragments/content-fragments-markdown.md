@@ -1,8 +1,8 @@
 ---
 title: Markdown
-description: När du redigerar innehållsfragmentet använder redigeraren markeringssyntax så att du enkelt kan skriva innehåll.
+description: Förstå hur Content Fragment Editor använder markeringssyntax för att enkelt skapa rubrikfritt innehåll.
 translation-type: tm+mt
-source-git-commit: 05e2ccd53749fe7b0ac516688a1d205d46fc3492
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 4%
@@ -10,9 +10,9 @@ ht-degree: 4%
 ---
 
 
-# Markdown{#markdown}
+# Markdown {#markdown}
 
-När du [redigerar](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) använder innehållsfragmentredigeraren syntaxen *markdown* så att du enkelt kan skriva innehåll:
+När du [redigerar](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) använder innehållsfragmentredigeraren syntaxen *markdown* så att du enkelt kan skriva headless-innehåll:
 
 ![markeringsredigerare](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
