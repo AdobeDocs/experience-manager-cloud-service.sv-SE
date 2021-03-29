@@ -1,10 +1,10 @@
 ---
 title: Associerat innehåll
-description: Associerat innehåll ger anslutningen så att resurser (valfritt) kan användas med fragmentet när det läggs till på en innehållssida.
+description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida, vilket ger ytterligare flexibilitet för leverans av headless-innehåll.
 translation-type: tm+mt
-source-git-commit: 29ce1175e3fcc606d12dd4f1ef7b6d8f26c1d47a
+source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '244'
 ht-degree: 4%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # Associerat innehåll{#associated-content}
 
-Associerat innehåll ger anslutningen så att resurser (t.ex.) kan (valfritt) användas med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet genom att [tillhandahålla ett antal resurser att komma åt när du använder innehållsfragmentet på en sida](/help/sites-cloud/authoring/fundamentals/content-fragments.md#using-associated-content), samtidigt som det minskar tiden som krävs för att söka efter rätt resurs.
+Funktionen AEM associerat innehåll tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet för leverans av headless-innehåll genom att [tillhandahålla en mängd resurser att komma åt när du använder innehållsfragmentet på en sida,](/help/sites-cloud/authoring/fundamentals/content-fragments.md#using-associated-content), samtidigt som det minskar tiden som krävs för att söka efter rätt resurs.
 
 ## Lägger till associerat innehåll {#adding-associated-content}
 
