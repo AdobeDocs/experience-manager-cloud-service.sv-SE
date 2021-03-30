@@ -7,9 +7,9 @@ feature-set: Experience Manager Sites
 feature: Distribuerar
 role: Arkitekt, utvecklare
 translation-type: tm+mt
-source-git-commit: fdf8416b281b14e3dd49d1e28c3c241ddfd2d342
+source-git-commit: 56bbc31bd20f0cf8034a8486efb965a64a040c51
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '674'
 ht-degree: 22%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 22%
    + [Användarroller och behörigheter](what-is-required/user-roles-permissions.md)
    + [Systemadministratörsuppgifter](what-is-required/add-users-assign-cm-roles.md)
    + [Navigera till Cloud Manager](what-is-required/navigate-to-cloud-manager.md)
-   + [Öppna en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md)
+   + [Bevilja användaråtkomst till en AEM instans](/help/onboarding/what-is-required/accessing-aem-instance.md)
 + Cloud Manager-program {#getting-access}
    + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
    + Produktionsprogram {#production-programs}
