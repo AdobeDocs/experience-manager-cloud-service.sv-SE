@@ -2,9 +2,9 @@
 title: Navigera till Cloud Manager
 description: Följ den här sidan för att lära dig hur du navigerar till startsidan för Cloud Manager
 translation-type: tm+mt
-source-git-commit: 55239d6f973f9fbe5a728321ddbe702d74a8a8a7
+source-git-commit: 1faadf46f38c5c6ac2e2fbc56f0c82214e0bfb6c
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,8 @@ När din systemadministratör har gett dig åtkomst till Cloud Manager får du e
 >[!NOTE]
 >Du måste läggas till som användare och tilldelas en molnhanterarroll (produktprofil i Admin Console) av din systemadministratör.
 
-1. I välkomstmeddelandet väljer du **Kom igång** eller navigerar till [Cloud Manager](https://experience.adobe.com) och loggar in med din Adobe ID.
+1. I välkomstmeddelandet klickar du på **Kom igång**, enligt bilden nedan, eller går till [Cloud Manager](https://experience.adobe.com) och loggar in med din Adobe ID.\
+   ![](/help/onboarding/what-is-required/assets/get-started-email.png)
 
 1. Välj **Experience Manager**.
    ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page1.png)
