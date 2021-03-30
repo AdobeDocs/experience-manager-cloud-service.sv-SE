@@ -1,18 +1,18 @@
 ---
-title: 'Åtkomst till AEM '
-description: Följ den här sidan för att lära dig hur du kommer åt en AEM instans
+title: 'Bevilja användaråtkomst till en AEM instans '
+description: Följ den här sidan för att lära dig hur en systemadministratör beviljar användaråtkomst till en AEM instans
 translation-type: tm+mt
-source-git-commit: 55239d6f973f9fbe5a728321ddbe702d74a8a8a7
+source-git-commit: 56bbc31bd20f0cf8034a8486efb965a64a040c51
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
 
-# Åtkomst till en AEM instans {#accessing-aem-instance}
+# Bevilja användaråtkomst till en AEM instans {#accessing-aem-instance}
 
-Följ stegen nedan för att komma åt en AEM från Cloud Manager:
+Som systemadministratör följer du stegen nedan för att ge användare åtkomst till en AEM instans:
 
 1. Navigera till Cloud Manager och klicka på knappen **Hantera åtkomst** på **miljökortet** enligt nedan.
 
