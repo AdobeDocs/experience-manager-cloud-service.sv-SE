@@ -1,14 +1,14 @@
 ---
 product: adobe experience manager
-description: detta är de metadata som krävs för AEMaaCS-dokumentationssidor
+description: Adobe Experience Manager som Cloud Service dokumentation.
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.sv-SE
 index: y
 type: Dokumentation
 solution: Experience Manager
 translation-type: tm+mt
-source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
+source-git-commit: 1140a05a137ecebb443f69c9c93d9d82f5d4815c
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '91'
 ht-degree: 1%
 
 ---
