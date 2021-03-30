@@ -7,9 +7,9 @@ feature-set: Experience Manager Sites
 feature: Distribuerar
 role: Arkitekt, utvecklare
 translation-type: tm+mt
-source-git-commit: 307a471be8b1fb2a19cb7315a91a8e55cbe40f4b
+source-git-commit: fdf8416b281b14e3dd49d1e28c3c241ddfd2d342
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '671'
 ht-degree: 22%
 
 ---
@@ -20,9 +20,10 @@ ht-degree: 22%
 + [Onboarding för AEM as a Cloud Service](/help/onboarding/home.md)
 + Komma igång med AEM som Cloud Service {#what-is-required}
    + [Skaffa Adobe ID](what-is-required/get-your-adobe-id.md)
-   + [Lägga till användare och tilldela till molnhanterarroller](what-is-required/add-users-assign-cm-roles.md)
+   + [Användarroller och behörigheter](what-is-required/user-roles-permissions.md)
+   + [Systemadministratörsuppgifter](what-is-required/add-users-assign-cm-roles.md)
    + [Navigera till Cloud Manager](what-is-required/navigate-to-cloud-manager.md)
-   + [Åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md)
+   + [Öppna en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md)
 + Cloud Manager-program {#getting-access}
    + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
    + Produktionsprogram {#production-programs}
