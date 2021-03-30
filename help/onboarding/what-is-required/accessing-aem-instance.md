@@ -2,9 +2,9 @@
 title: 'Åtkomst till AEM '
 description: Följ den här sidan för att lära dig hur du kommer åt en AEM instans
 translation-type: tm+mt
-source-git-commit: 7ab5c624ccb2b321462c9759946becd79d03689c
+source-git-commit: fdf8416b281b14e3dd49d1e28c3c241ddfd2d342
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Åtkomst till en AEM instans {#accessing-aem-instance}
 
-Följ stegen nedan för att hantera åtkomst från Cloud Manager:
+Följ stegen nedan för att komma åt en AEM från Cloud Manager:
 
 1. Navigera till Cloud Manager och klicka på knappen **Hantera åtkomst** på **miljökortet** enligt nedan.
 
