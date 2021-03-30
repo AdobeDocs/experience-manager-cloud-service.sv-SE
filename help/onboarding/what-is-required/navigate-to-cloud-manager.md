@@ -2,7 +2,7 @@
 title: Navigera till Cloud Manager
 description: Följ den här sidan för att lära dig hur du navigerar till startsidan för Cloud Manager
 translation-type: tm+mt
-source-git-commit: 1faadf46f38c5c6ac2e2fbc56f0c82214e0bfb6c
+source-git-commit: 159a1619e2cb1243e056dcc6182abceeeff01730
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Ett av de tre alternativen som beskrivs nedan visas:
 
    ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/admin-console-4.png)
 
-Härifrån kan en användare med rätt behörigheter, t.ex. en Business Owner-roll i Cloud Manager välja **Lägg till program** för att starta guiden.
+Härifrån kan en användare med rätt behörigheter, t.ex. en Business Owner-roll i Cloud Manager välja **Lägg till program** för att starta [guiden](/help/onboarding/getting-access-to-aem-in-cloud/using-the-wizard.md).
 
 Mer information om hur du lägger till ett program i Cloud Manager finns i:
 
