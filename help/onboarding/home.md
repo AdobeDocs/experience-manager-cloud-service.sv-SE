@@ -2,7 +2,7 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 56bbc31bd20f0cf8034a8486efb965a64a040c51
+source-git-commit: 99417790e5770d7b340baf78539f5985056dc0f7
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 47%
@@ -34,7 +34,7 @@ Systemadministratören kan lägga till användare och tilldela dem till roller i
 
 **[Systemadministratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md)**
 
-Systemadministratörer hanterar alla aspekter av sina användare, från åtkomst till behörigheter. Följande dokumentationssidor innehåller information som beskriver grundläggande organisatoriska uppgifter, det vill säga [Lägga till användare och tilldela användare till roller och behörigheter i Cloud Manager](/help/onboarding/what-is-required/add-users-assign-cm-roles.md)
+Systemadministratörer hanterar alla aspekter av sina användare, från åtkomst till behörigheter. Följande dokumentationssidor innehåller information som beskriver grundläggande organisatoriska uppgifter, det vill säga [lägga till användare och tilldela användare till roller och behörigheter i Cloud Manager](/help/onboarding/what-is-required/add-users-assign-cm-roles.md).
 
 **[Navigera till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md)**
 
