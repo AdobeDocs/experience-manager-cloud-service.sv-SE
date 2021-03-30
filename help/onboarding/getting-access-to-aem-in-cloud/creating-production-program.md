@@ -2,7 +2,7 @@
 title: 'Skapa ett produktionsprogram '
 description: 'Skapa ett produktionsprogram '
 translation-type: tm+mt
-source-git-commit: 3884529aaa717b13f2771095a4f7e8102abfd1ec
+source-git-commit: 1aca6f0b23aa328ca364f7ab1d4c722bb5cbca9a
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Följ stegen nedan för att skapa ett produktionsprogram:
    ![](assets/first_timelogin1.png)
 
    >[!NOTE]
-   >Mer information om hur du får åtkomst till Cloud Manager finns på [startsidan för Cloud Manager](/help/onboarding/getting-access-to-aem-in-cloud/first-time-login.md).
+   >Mer information om hur du får åtkomst till Cloud Manager finns på [startsidan för Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md).
 
 1. Välj **Konfigurera för produktion** i guiden Skapa program för att skapa ett produktionsprogram. Användaren kan godkänna standardprogramnamnet eller redigera det innan **Fortsätt** väljs.
 
