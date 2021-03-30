@@ -2,7 +2,7 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: fdf8416b281b14e3dd49d1e28c3c241ddfd2d342
+source-git-commit: 98c7105aed1b9092a72005cf2cfab4bcf227601f
 workflow-type: tm+mt
 source-wordcount: '642'
 ht-degree: 51%
@@ -30,7 +30,7 @@ När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
 **Team, roller och behörigheter**
 
-Systemadministratören kan lägga till användare och tilldela dem till roller i Cloud Manager. I det här avsnittet får du hjälp med att förstå vad *roller i molnhanteraren* är och vilka behörigheter som är kopplade till rollerna innan du börjar.
+Systemadministratören kan lägga till användare och tilldela dem till roller i Cloud Manager. I det här avsnittet får du hjälp med att förstå vad [roller i molnhanteraren](/help/onboarding/what-is-required/user-roles-permissions.md#user-roles) är och de [behörigheter](/help/onboarding/what-is-required/user-roles-permissions.md#permissions) som är kopplade till rollerna innan du börjar.
 
 **Systemadministratörsuppgifter**
 
@@ -39,7 +39,7 @@ Systemadministratörer hanterar alla aspekter av sina användare, från åtkomst
 
 **Navigera till Cloud Manager**
 
-Använd Cloud Manager för att komma igång med din molnresa med AEM. Nu när du har lagts till som användare och tilldelats en molnhanterarroll kan du göra olika åtgärder, som att skapa ett program, lägga till en miljö, hantera Git, konfigurera en pipeline och distribuera kod.
+Använd Cloud Manager för att komma igång med din molnresa med AEM. Nu när du har lagts till som användare och tilldelats en molnhanterarroll kan du utföra olika åtgärder, till exempel [skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/understand-program-types.md), [lägga till en miljö](/help/implementing/cloud-manager/manage-environments.md), [komma åt Git](/help/implementing/cloud-manager/accessing-git.md), [konfigurera en pipeline](/help/implementing/cloud-manager/configure-pipeline.md) och [distribuera kod](/help/implementing/cloud-manager/deploy-code.md) .
 
 **Öppna en AEM**
 
