@@ -7,10 +7,10 @@ feature-set: Experience Manager Sites
 feature: Distribuerar
 role: Arkitekt, utvecklare
 translation-type: tm+mt
-source-git-commit: 974c7d20d7896b749e07b05d0149ed16dc7e0cd5
+source-git-commit: 307a471be8b1fb2a19cb7315a91a8e55cbe40f4b
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 24%
+source-wordcount: '672'
+ht-degree: 22%
 
 ---
 
@@ -19,24 +19,22 @@ ht-degree: 24%
 
 + [Onboarding för AEM as a Cloud Service](/help/onboarding/home.md)
 + Komma igång med AEM som Cloud Service {#what-is-required}
-   + [Åtkomstbehörigheter har beviljats](what-is-required/access-rights-granted.md)
-   + [Rollbaserade behörigheter](what-is-required/role-based-permissions.md)
-   + [Databas för källkod](what-is-required/source-code-repository.md)
-+ Få åtkomst till AEM i molnet {#getting-access}
-   + [Få åtkomst till Cloud Manager för AEM som Cloud Service](getting-access-to-aem-in-cloud/navigation.md)
-   + Åtkomst till Cloud Manager {#cloud-service-programs}
-      + [Startsida för Cloud Manager](getting-access-to-aem-in-cloud/first-time-login.md)
-      + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
-      + Produktionsprogram {#production-programs}
-         + [Introduktion](/help/onboarding/getting-access-to-aem-in-cloud/introduction-production-programs.md)
-         + [Skapa ett produktionsprogram](getting-access-to-aem-in-cloud/creating-production-program.md)
-         + [Redigera ett produktionsprogram](/help/onboarding/getting-access-to-aem-in-cloud/editing-production-program.md)
-      + Sandlådeprogram {#sandbox-programs}
-         + [Introduktion](getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
-         + [Skapa ett sandlådeprogram](getting-access-to-aem-in-cloud/creating-sandbox-program.md)
-         + [Redigera ett sandlådeprogram](/help/onboarding/getting-access-to-aem-in-cloud/editing-sandbox-program.md)
-         + [Ta bort ett sandlådeprogram](getting-access-to-aem-in-cloud/deleting-sandbox-program.md)
-         + [Viloläge och avvänjningsmiljöer för sandlådor](/help/onboarding/getting-access-to-aem-in-cloud/hibernating-de-hibernating-sandbox-environments.md)
+   + [Skaffa Adobe ID](what-is-required/get-your-adobe-id.md)
+   + [Lägga till användare och tilldela till molnhanterarroller](what-is-required/add-users-assign-cm-roles.md)
+   + [Navigera till Cloud Manager](what-is-required/navigate-to-cloud-manager.md)
+   + [Åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md)
++ Cloud Manager-program {#getting-access}
+   + [Förstå program och programtyper](getting-access-to-aem-in-cloud/understand-program-types.md)
+   + Produktionsprogram {#production-programs}
+      + [Introduktion](/help/onboarding/getting-access-to-aem-in-cloud/introduction-production-programs.md)
+      + [Skapa ett produktionsprogram](getting-access-to-aem-in-cloud/creating-production-program.md)
+      + [Redigera ett produktionsprogram](/help/onboarding/getting-access-to-aem-in-cloud/editing-production-program.md)
+   + Sandlådeprogram {#sandbox-programs}
+      + [Introduktion](getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
+      + [Skapa ett sandlådeprogram](getting-access-to-aem-in-cloud/creating-sandbox-program.md)
+      + [Redigera ett sandlådeprogram](/help/onboarding/getting-access-to-aem-in-cloud/editing-sandbox-program.md)
+      + [Ta bort ett sandlådeprogram](getting-access-to-aem-in-cloud/deleting-sandbox-program.md)
+      + [Viloläge och avvänjningsmiljöer för sandlådor](/help/onboarding/getting-access-to-aem-in-cloud/hibernating-de-hibernating-sandbox-environments.md)
    + Använda Cloud Manager {#using-cloud-manager}
       + [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
       + [Konfigurera CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html)
