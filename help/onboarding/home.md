@@ -2,9 +2,9 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 99417790e5770d7b340baf78539f5985056dc0f7
+source-git-commit: 834d41cfb9b2988b5e7ffa03ad0f45d78c53f915
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '691'
 ht-degree: 47%
 
 ---
@@ -22,23 +22,27 @@ I det här avsnittet beskrivs de viktigaste artiklarna som fokuserar på din res
 
 När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
-1. Din organisations systemadministratör får ett välkomstmeddelande som gör att de kan utföra [administratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), inklusive lägga till användare, tilldela dem till roller och därmed ge dem lämplig åtkomst till Cloud Manager.
+1. Adobe slutför etableringen för din organisation, varefter din organisations systemadministratör får ett välkomstmeddelande som gör att de kan utföra [administratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), inklusive lägga till användare, tilldela dem till roller och därmed ge dem lämplig [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md).
 
-1. När en systemadministratör lägger till en användare får användaren i sin tur ett välkomstmeddelande via e-post som meddelar dem om att de har åtkomst till Cloud Manager. Nu kan användare använda sin [Adobe ID](/help/onboarding/what-is-required/get-your-adobe-id.md) för att logga in och påbörja sin resa med Cloud Manager härifrån.
+1. Användare som läggs till av din systemadministratör får i sin tur ett välkomstmeddelande som meddelar dem att de har [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md). Nu kan användare använda sin [Adobe ID](/help/onboarding/what-is-required/get-your-adobe-id.md) för att logga in och påbörja sin resa med Cloud Manager härifrån.
+
 
 1. Användarna kan dessutom få [åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md) i utvecklingssyfte.
 
-**[Team, roller och behörigheter](/help/onboarding/what-is-required/user-roles-permissions.md)**
+**[Användarroller och behörigheter](/help/onboarding/what-is-required/user-roles-permissions.md)**
 
-Systemadministratören kan lägga till användare och tilldela dem till roller i Cloud Manager. I det här avsnittet får du hjälp med att förstå vad [roller i molnhanteraren](/help/onboarding/what-is-required/user-roles-permissions.md#user-roles) är och [behörigheter](/help/onboarding/what-is-required/user-roles-permissions.md#permissions) som är kopplade till rollerna innan du börjar.
+Systemadministratören kan lägga till användare och tilldela dem till roller i Cloud Manager. I det här avsnittet får du hjälp med att förstå vad *roller i molnhanteraren* är och behörigheter som är kopplade till rollerna innan du börjar.
 
 **[Systemadministratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md)**
 
-Systemadministratörer hanterar alla aspekter av sina användare, från åtkomst till behörigheter. Följande dokumentationssidor innehåller information som beskriver grundläggande organisatoriska uppgifter, det vill säga [lägga till användare och tilldela användare till roller och behörigheter i Cloud Manager](/help/onboarding/what-is-required/add-users-assign-cm-roles.md).
+Systemadministratörer hanterar alla aspekter av sina användare, från åtkomst till behörigheter. Följande dokumentationssidor innehåller information om grundläggande organisatoriska uppgifter:
+
+* Lägga till användare
+* Tilldela användare roller och behörigheter i Cloud Manager
 
 **[Navigera till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md)**
 
-Följ det här avsnittet för att lära dig hur du kommer åt Cloud Manager för att komma igång med din molnresa med AEM. Nu när du har lagts till som användare och tilldelats till en molnhanterarroll kan du utföra olika åtgärder, till exempel [skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/understand-program-types.md), [lägga till en miljö](/help/implementing/cloud-manager/manage-environments.md), [komma åt Git](/help/implementing/cloud-manager/accessing-git.md), [konfigurera en pipeline](/help/implementing/cloud-manager/configure-pipeline.md) och [distribuera kod](/help/implementing/cloud-manager/deploy-code.md) .
+Använd Cloud Manager för att komma igång med din molnresa med AEM. Nu när du har lagts till som användare och tilldelats en molnhanterarroll kan du utföra olika åtgärder, till exempel [skapa ett program](/help/onboarding/getting-access-to-aem-in-cloud/understand-program-types.md), [lägga till en miljö](/help/implementing/cloud-manager/manage-environments.md), [komma åt Git](/help/implementing/cloud-manager/accessing-git.md), [konfigurera en pipeline](/help/implementing/cloud-manager/configure-pipeline.md) och [distribuera kod](/help/implementing/cloud-manager/deploy-code.md) .
 
 **[Bevilja användaråtkomst till en AEM instans](/help/onboarding/what-is-required/accessing-aem-instance.md)**
 
