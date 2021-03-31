@@ -2,10 +2,12 @@
 title: Metadataschema för mapp
 description: Lär dig hur du skapar metadatamatchema för resursmappar i [!DNL Experience Manager Assets]
 contentOwner: AG
+feature: Metadata
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '975'
 ht-degree: 5%
 
 ---
