@@ -2,7 +2,7 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 4b9476b094438acd08c945f0102b029b6792cb88
+source-git-commit: 175cddb9e36422b3896efc76ac58183829b364b3
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 38%
@@ -28,11 +28,11 @@ I det här avsnittet beskrivs de viktigaste artiklarna som fokuserar på din res
 
 När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
-1. Adobe slutför etableringen för din organisation, varefter din organisations systemadministratör får ett välkomstmeddelande där de kan utföra [systemadministratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), inklusive lägga till användare, tilldela dem till roller och därmed ge dem lämplig [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md).
+1. Adobe slutför etableringen för din organisation och därefter får din organisations systemadministratör ett välkomstmeddelande som gör att de kan utföra [systemadministratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), inklusive lägga till användare, tilldela dem till roller och därmed ge dem lämplig åtkomst till Cloud Manager.
 
 1. Användare som läggs till av din systemadministratör får i sin tur ett välkomstmeddelande via e-post som gör att de kan [navigera till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md). Nu kan användare använda sin Adobe ID för att logga in och påbörja sin resa med Cloud Manager härifrån.
 
-1. En systemadministratör kan [ge användare åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md) i utvecklingssyfte.
+1. En systemadministratör kan [bevilja användare åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md) i utvecklingssyfte.
 
 **[Skaffa Adobe ID](/help/onboarding/what-is-required/get-your-adobe-id.md)**
 
