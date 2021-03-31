@@ -2,9 +2,9 @@
 title: 'Bevilja användaråtkomst till en AEM instans '
 description: Följ den här sidan för att lära dig hur en systemadministratör beviljar användaråtkomst till en AEM instans
 translation-type: tm+mt
-source-git-commit: 56bbc31bd20f0cf8034a8486efb965a64a040c51
+source-git-commit: f1f5766a41763634e0aaba44e55471ac2ea5dc8f
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Som systemadministratör följer du stegen nedan för att ge användare åtkomst
 1. Navigera till Cloud Manager och klicka på knappen **Hantera åtkomst** på **miljökortet** enligt nedan.
 
    >[!NOTE]
-   >Du måste vara systemadministratör eller användare som skapade miljön för att kunna lägga till användare i Admin Console. Endast Business Owner- eller Deployment Manager-roller har behörighet att skapa en miljö. Mer information om roller och associerade behörigheter finns i [Lägga till användare och Tilldela roller för molnhanteraren](/help/onboarding/what-is-required/add-users-assign-cm-roles.md).
+   >Du måste vara systemadministratör eller användare som skapade miljön för att kunna lägga till användare i Admin Console. Endast Business Owner- eller Deployment Manager-roller har behörighet att skapa en miljö. Mer information om roller och associerade behörigheter finns i [Användarroller och behörigheter](/help/onboarding/what-is-required/user-roles-permissions.md). Mer information om miljöer finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
    ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/sys-admin6.png)
 
