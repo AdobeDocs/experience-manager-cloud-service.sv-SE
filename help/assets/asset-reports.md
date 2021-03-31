@@ -2,10 +2,12 @@
 title: Rapporter om användning och delning
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
+feature: Resursrapporter,Resurshantering
+role: Administratör,Affärsledare
 translation-type: tm+mt
-source-git-commit: dc6823d9a0dabcc4fe1537073d90ca53da205556
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '827'
 ht-degree: 6%
 
 ---
