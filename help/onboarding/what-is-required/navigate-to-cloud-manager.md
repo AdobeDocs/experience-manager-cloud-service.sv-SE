@@ -2,10 +2,10 @@
 title: Navigera till Cloud Manager
 description: Följ den här sidan för att lära dig hur du navigerar till startsidan för Cloud Manager
 translation-type: tm+mt
-source-git-commit: 3df1e327b2e0ce4239ad522848bdf2877cd86451
+source-git-commit: 4b9476b094438acd08c945f0102b029b6792cb88
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 7%
+source-wordcount: '435'
+ht-degree: 6%
 
 ---
 
@@ -14,24 +14,22 @@ ht-degree: 7%
 
 Cloud Manager är en viktig del av AEM som Cloud Service. Det gör det möjligt för organisationer att självhantera Experience Manager i molnet. Det innehåller ett ramverk för kontinuerlig integrering och kontinuerligt leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Med användargränssnittet kan du konfigurera och starta CI/CD-flödet.
 
-När din systemadministratör har gett dig åtkomst till Cloud Manager får du ett e-postmeddelande som tar dig till inloggningssidan för Cloud Manager som också är tillgänglig via [Adobe Experience Cloud](https://my.cloudmanager.adobe.com/).
+När din systemadministratör har gett dig åtkomst till Cloud Manager får du ett e-postmeddelande som tar dig till startsidan för [Adobe Experience Cloud](https://experience.adobe.com).
 
 >[!NOTE]
->Du måste läggas till som användare och tilldelas en molnhanterarroll (produktprofil i Admin Console) av din systemadministratör.
+>Du måste läggas till som användare och måste tilldelas minst en molnhanterarroll (produktprofil i Admin Console) av din systemadministratör.
 
 1. I välkomstmeddelandet klickar du på **Kom igång**, vilket visas i bilden nedan.
    ![](/help/onboarding/what-is-required/assets/get-started-email.png)
 
-   Eller
+   >[!NOTE]
+   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Beroende på vilka roller som har tilldelats i [!UICONTROL Cloud Manager] och programmets status visas olika skärmar när du använder användargränssnittet för [!UICONTROL Cloud Manager]. Mer information finns i avsnittet [Cloud Manager Landing page](#cloud-manager-landing) nedan.
 
-   1. Gå till inloggningssidan för Cloud Manager från [Adobe Experience Cloud](https://my.cloudmanager.adobe.com/).
+1. Välj **Experience Manager**.
+   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page1.png)
 
-   1. Välj **Experience Manager**.
-      ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page1.png)
-
-   1. Klicka på **Starta** från Cloud Manager-kortet.
-När du har loggat in på [!UICONTROL Cloud Manager] är du redo att använda användargränssnittet.
-      ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page2.png)
+1. Klicka på **Starta** från Cloud Manager-kortet. När du har loggat in på [!UICONTROL Cloud Manager] är du redo att använda användargränssnittet.
+   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page2.png)
 
 
 ## Startsida för Cloud Manager {#cloud-manager-landing}
