@@ -2,10 +2,12 @@
 title: Dela resurser, mappar och samlingar som en länk
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i [!DNL Experience Manager Assets] som en hyperlänk.
 contentOwner: AG
+feature: Resurshantering,Samarbete,Resursdistribution
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 77170e7ea2e75215a4615e7cd560179756005b6f
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
