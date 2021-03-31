@@ -2,10 +2,11 @@
 title: Felsöka Dynamic Media
 description: Felsökningstips när du använder Dynamic Media.
 topic: '"Administratör,Affärsansvarig"'
+role: Administratör,Affärsledare
 translation-type: tm+mt
-source-git-commit: 15cf59ccc5cef515bfbda2da790fa5eaf0247721
+source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '996'
 ht-degree: 1%
 
 ---
