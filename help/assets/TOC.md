@@ -4,9 +4,9 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
-feature-set: Experience Manager Assets
+feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 translation-type: tm+mt
-source-git-commit: 9f47f53524ab89c368ab260bc0d16e47ee81a230
+source-git-commit: daee370e4da22432fe15a7500702a2bb669381f3
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 65%
