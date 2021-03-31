@@ -2,10 +2,10 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 3df1e327b2e0ce4239ad522848bdf2877cd86451
+source-git-commit: 4b9476b094438acd08c945f0102b029b6792cb88
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 39%
+source-wordcount: '924'
+ht-degree: 38%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 39%
 
 Grattis till att du har påbörjat din resa med AEM som Cloud Service! Oavsett om du distribuerar ett nytt program eller migrerar ett befintligt, fungerar den här guiden som en startpunkt för att säkerställa att programmet är optimerat och klart för Cloud Service.
 
-Den här guiden ger dig en checklista så att du och ditt team snabbt kan komma igång med Cloud Manager. Du behöver din Adobe ID och din systemadministratörs hjälp för att lägga till användare i Cloud Manager till deras tilldelade roller (kallas produktprofiler i Admin Console) och tillhörande behörigheter. Instruktionerna för hur systemadministratören kan göra detta via Admin Console beskrivs [här](/help/onboarding/what-is-required/add-users-assign-cm-roles.md). Listan över roller i Cloud Manager, som kallas produktprofiler i Admin Console och tillhörande behörigheter, är detaljerad så att du kan avgöra vilka roller som krävs för olika användare i din organisation.
+Den här guiden hjälper dig och ditt team att snabbt komma igång med Cloud Manager. Du behöver din Adobe ID och din systemadministratörs hjälp för att lägga till användare i Cloud Manager till deras tilldelade roller (kallas produktprofiler i Admin Console) och tillhörande behörigheter. Instruktionerna för hur systemadministratören kan göra detta via Admin Console beskrivs. Listan över roller i Cloud Manager, som kallas produktprofiler i Admin Console och tillhörande behörigheter, är detaljerad så att du kan avgöra vilka roller som krävs för olika användare i din organisation.
 
 Bilden nedan visar din introduktionsresa och börjar med det välkomstmeddelande som din systemadministratör har fått och som Cloud Service avslutas med att användare använder Cloud Manager för AEM.
 
@@ -28,12 +28,15 @@ I det här avsnittet beskrivs de viktigaste artiklarna som fokuserar på din res
 
 När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
-1. Adobe slutför etableringen för din organisation. Efter detta får din organisations systemadministratör ett välkomstmeddelande som gör att de kan utföra [systemadministratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), lägga till användare, tilldela dem till roller och därmed ge dem lämplig [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md).
+1. Adobe slutför etableringen för din organisation, varefter din organisations systemadministratör får ett välkomstmeddelande där de kan utföra [systemadministratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), inklusive lägga till användare, tilldela dem till roller och därmed ge dem lämplig [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md).
 
-1. Användare som läggs till av din systemadministratör får i sin tur ett välkomstmeddelande som meddelar dem att de har [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md). Nu kan användare använda sin [Adobe ID](/help/onboarding/what-is-required/get-your-adobe-id.md) för att logga in och påbörja sin resa med Cloud Manager härifrån.
+1. Användare som läggs till av din systemadministratör får i sin tur ett välkomstmeddelande via e-post som gör att de kan [navigera till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md). Nu kan användare använda sin Adobe ID för att logga in och påbörja sin resa med Cloud Manager härifrån.
 
+1. En systemadministratör kan [ge användare åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md) i utvecklingssyfte.
 
-1. Användarna kan dessutom få [åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md) i utvecklingssyfte.
+**[Skaffa Adobe ID](/help/onboarding/what-is-required/get-your-adobe-id.md)**
+
+Du behöver din Adobe ID och din systemadministratörs hjälp för att lägga till användare i Cloud Manager till deras tilldelade roller.
 
 **[Användarroller och behörigheter](/help/onboarding/what-is-required/user-roles-permissions.md)**
 
