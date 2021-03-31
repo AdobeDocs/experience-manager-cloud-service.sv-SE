@@ -2,15 +2,21 @@
 title: 'Systemadministratörsuppgifter '
 description: Följ den här sidan för att lära dig hur du lägger till användare och tilldelar dem till roller i Cloud Manager som systemadministratör
 translation-type: tm+mt
-source-git-commit: fdf8416b281b14e3dd49d1e28c3c241ddfd2d342
+source-git-commit: f1f5766a41763634e0aaba44e55471ac2ea5dc8f
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
 
 # Systemadministratörsaktiviteter {#add-users-assign}
+
+Systemadministratörer hanterar alla aspekter av sina användare, från åtkomst till behörigheter. Den här användaren är den första personen som har tillgång till att börja utföra uppgifter i Admin Console och Cloud Manager.
+En systemadministratör utför följande organisatoriska åtgärder:
+
+* Lägga till användare
+* Tilldela användare roller och behörigheter i Cloud Manager
 
 ## Lägga till användare {#add-users}
 
