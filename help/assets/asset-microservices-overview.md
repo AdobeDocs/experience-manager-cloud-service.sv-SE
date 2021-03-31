@@ -2,10 +2,12 @@
 title: Bearbeta resurser med hjälp av mikrotjänster för resurser
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
+feature: asset compute Microservices,arbetsflöde,versionsinformation,tillgångsbearbetning
+role: Arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: 85dc85fbface3d1ee26d01f48bb1f2445306419d
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
