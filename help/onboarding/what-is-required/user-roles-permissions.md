@@ -2,7 +2,7 @@
 title: Användarroller och behörigheter
 description: Den här sidan beskriver användarroller och behörigheter. Följ den här sidan om du vill lära dig hur du lägger till användare och tilldelar dem till roller i molnhanteraren.
 translation-type: tm+mt
-source-git-commit: 98c7105aed1b9092a72005cf2cfab4bcf227601f
+source-git-commit: f1f5766a41763634e0aaba44e55471ac2ea5dc8f
 workflow-type: tm+mt
 source-wordcount: '604'
 ht-degree: 7%
@@ -12,7 +12,7 @@ ht-degree: 7%
 
 # Användarroller och behörigheter {#user-roles-permissions}
 
-Adobe skapar en **Organization**-identifierare för ditt företag i Adobe Identity Management System (IMS), där alla användare och deras behörigheter kan hanteras. Varje användare, som måste vara medlem i den här organisationen och ska få åtkomst till någon av [!UICONTROL Experience Cloud]-tjänsterna, måste ha sin egen **Adobe ID**.
+Adobe skapar en **Organization**-identifierare för ditt företag i Adobe Identity Management System (IMS), där alla användare och deras behörigheter kan hanteras. Varje användare, som måste vara medlem i den här organisationen och ska få åtkomst till någon av [!UICONTROL Experience Cloud]-tjänsterna, måste ha sin egen **[Adobe ID](/help/onboarding/what-is-required/get-your-adobe-id.md)**.
 
 ## Användarroller {#user-roles}
 
