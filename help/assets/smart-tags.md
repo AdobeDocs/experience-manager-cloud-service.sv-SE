@@ -2,10 +2,12 @@
 title: Tagga resurser automatiskt med AI-genererade taggar
 description: Tagga resurser med artificiellt intelligenta tjänster som lägger till kontextuella och beskrivande taggar med hjälp av  [!DNL Adobe Sensei] service.
 contentOwner: AG
+feature: Smarta taggar,Taggar
+role: Administratör,Affärsledare
 translation-type: tm+mt
-source-git-commit: a1213a1694a50d174b4ad1e7e4ba7c71944b861a
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '2736'
 ht-degree: 5%
 
 ---
