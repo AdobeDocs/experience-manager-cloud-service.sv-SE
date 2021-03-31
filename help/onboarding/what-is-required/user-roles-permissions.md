@@ -2,17 +2,15 @@
 title: Användarroller och behörigheter
 description: Den här sidan beskriver användarroller och behörigheter. Följ den här sidan om du vill lära dig hur du lägger till användare och tilldelar dem till roller i molnhanteraren.
 translation-type: tm+mt
-source-git-commit: 2779b20f3b4c13ef604fa2ad61f17c836e228422
+source-git-commit: 683e660bace4bf2d21ab6b373c75f78e306f5206
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 7%
+source-wordcount: '441'
+ht-degree: 8%
 
 ---
 
 
 # Användarroller och behörigheter {#user-roles-permissions}
-
-Adobe skapar en **Organization**-identifierare för ditt företag i Adobe Identity Management System (IMS), där alla användare och deras behörigheter kan hanteras. Varje användare, som måste vara medlem i den här organisationen och ska få åtkomst till någon av [!UICONTROL Experience Cloud]-tjänsterna, måste ha sin egen **[Adobe ID](/help/onboarding/what-is-required/get-your-adobe-id.md)**.
 
 ## Användarroller {#user-roles}
 
@@ -32,18 +30,6 @@ I Cloud Manager definieras för närvarande fyra roller för användare som styr
 >[!NOTE]
 >Utvecklarrollen i Admin Console är inte relaterad till utvecklarrollen i [!UICONTROL Cloud Manager].
 
-## Rolldefinitioner {#role-definitions}
-
-I följande tabell sammanfattas rollerna:
-
-| [!UICONTROL Cloud Manager] Roller | Beskrivning |
-|--- |--- |
-| Företagsägare | Ansvarig för att definiera KPI:er, godkänna produktionsdistributioner och åsidosätta viktiga 3-skiktsfel. |
-| Programhanteraren | Använder [!UICONTROL Cloud Manager] för att utföra gruppkonfiguration, granska status och visa KPI:er. Kan godkänna viktiga fel i tre nivåer. |
-| Distributionshanteraren | Hanterar distributionsåtgärder. Använder [!UICONTROL Cloud Manager] för att köra scen-/produktionsdistributioner. Kan redigera CI/CD-rör. Kan godkänna viktiga fel i tre nivåer. Kan få åtkomst till Git-databasen. |
-| Utvecklare | Utvecklar och testar anpassad programkod. I används främst [!UICONTROL Cloud Manager] för att visa status. Kan få åtkomst till Git-databasen för kodimplementering. |
-| Innehållsförfattare | I allmänhet interagerar inte med [!UICONTROL Cloud Manager]. Använd [!UICONTROL Cloud Manager] Programväljaren (när du har navigerat från [!UICONTROL Experience Cloud]) för att få åtkomst till AEM. |
-
 ## Visa dina roller {#view-roles}
 
 Om du vill visa din roll i Cloud Manager loggar du in på användargränssnittet i Cloud Manager, markerar din profilikon i det övre högra hörnet och väljer **Användarroller**, vilket visas i bilden nedan.
@@ -57,8 +43,7 @@ Utöver ovanstående skapar Cloud Manager automatiskt en produktprofil med namne
 
 ## Behörigheter associerade med rolldefinitioner {#permissions}
 
-[!UICONTROL Cloud Manager] har förkonfigurerade roller med lämplig behörighet. En utvecklare utvecklar till exempel kod och har behörighet att skicka koden till **Git-databasen**. En företagsägare har också olika behörigheter för att definiera KPI:er (Key Performance Indicators) och godkänna distributioner.
-
+[!UICONTROL Cloud Manager] har förkonfigurerade roller med lämplig behörighet. En utvecklare utvecklar till exempel kod och har behörighet att skicka koden till **Git-databasen**. En företagsägare har också olika behörigheter för att lägga till och redigera program, lägga till miljöer och godkänna distributioner.
 
 Var och en av rollerna har specifika behörigheter som är kopplade till varje roll. I följande tabell sammanfattas rollerna, de funktioner som är tillgängliga och de roller som kan utföra funktionen.
 
