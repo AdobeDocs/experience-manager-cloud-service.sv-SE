@@ -2,7 +2,7 @@
 title: Navigera till Cloud Manager
 description: Följ den här sidan för att lära dig hur du navigerar till startsidan för Cloud Manager
 translation-type: tm+mt
-source-git-commit: f1f5766a41763634e0aaba44e55471ac2ea5dc8f
+source-git-commit: 9fa8c6632188874036ccfe7570e53a6971ff74b4
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 7%
@@ -27,7 +27,7 @@ När din systemadministratör har gett dig åtkomst till Cloud Manager får du e
 
 1. Klicka på **Starta** från Cloud Manager-kortet.
 När du har loggat in på [!UICONTROL Cloud Manager] är du redo att använda användargränssnittet.
-   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page1.png)
+   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page2.png)
 
 
 ## Startsida för Cloud Manager {#cloud-manager-landing}
