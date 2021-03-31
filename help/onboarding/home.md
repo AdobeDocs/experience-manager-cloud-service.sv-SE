@@ -2,10 +2,10 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 175cddb9e36422b3896efc76ac58183829b364b3
+source-git-commit: 826c15ecca494f98fbe7a4c3ef129a45bd4cea7c
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 38%
+source-wordcount: '923'
+ht-degree: 39%
 
 ---
 
@@ -16,7 +16,7 @@ Grattis till att du har påbörjat din resa med AEM som Cloud Service! Oavsett o
 
 Den här guiden hjälper dig och ditt team att snabbt komma igång med Cloud Manager. Du behöver din Adobe ID och din systemadministratörs hjälp för att lägga till användare i Cloud Manager till deras tilldelade roller (kallas produktprofiler i Admin Console) och tillhörande behörigheter. Instruktionerna för hur systemadministratören kan göra detta via Admin Console beskrivs. Listan över roller i Cloud Manager, som kallas produktprofiler i Admin Console och tillhörande behörigheter, är detaljerad så att du kan avgöra vilka roller som krävs för olika användare i din organisation.
 
-Bilden nedan visar din introduktionsresa och börjar med det välkomstmeddelande som din systemadministratör har fått och som Cloud Service avslutas med att användare använder Cloud Manager för AEM.
+Bilden nedan visar din introduktionsresa, med början i det välkomstmeddelande som din systemadministratör har fått, och med att du som Cloud Service har använt Cloud Manager för AEM.
 
 ![](/help/onboarding/what-is-required/assets/cust-journey.png)
 
