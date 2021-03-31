@@ -2,10 +2,12 @@
 title: Konfigurera och använda resursmikrotjänster
 description: Konfigurera och använd de molnbaserade resursmeritjänsterna för att bearbeta resurser i stor skala.
 contentOwner: AG
+feature: asset compute Microservices,Workflow,Asset Processing
+role: Arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: 57ae02b90d1e78e8a940b65d195bc2077feec2d2
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '2522'
+source-wordcount: '2530'
 ht-degree: 0%
 
 ---
