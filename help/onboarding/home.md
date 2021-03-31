@@ -2,9 +2,9 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 2779b20f3b4c13ef604fa2ad61f17c836e228422
+source-git-commit: 3df1e327b2e0ce4239ad522848bdf2877cd86451
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '905'
 ht-degree: 39%
 
 ---
@@ -28,7 +28,7 @@ I det här avsnittet beskrivs de viktigaste artiklarna som fokuserar på din res
 
 När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
-1. Adobe slutför etableringen för din organisation, varefter din organisations systemadministratör får ett välkomstmeddelande som gör att de kan utföra [administratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), inklusive lägga till användare, tilldela dem till roller och därmed ge dem lämplig [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md).
+1. Adobe slutför etableringen för din organisation. Efter detta får din organisations systemadministratör ett välkomstmeddelande som gör att de kan utföra [systemadministratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), lägga till användare, tilldela dem till roller och därmed ge dem lämplig [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md).
 
 1. Användare som läggs till av din systemadministratör får i sin tur ett välkomstmeddelande som meddelar dem att de har [åtkomst till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md). Nu kan användare använda sin [Adobe ID](/help/onboarding/what-is-required/get-your-adobe-id.md) för att logga in och påbörja sin resa med Cloud Manager härifrån.
 
