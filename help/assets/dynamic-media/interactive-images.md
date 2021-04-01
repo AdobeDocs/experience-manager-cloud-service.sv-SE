@@ -3,10 +3,11 @@ title: Interaktiva bilder
 description: Lär dig hur du arbetar med interaktiva bilder i Dynamic Media.
 feature: Interaktiva bilder
 topic: Yrkesverksamma inom affärsverksamhet
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
 workflow-type: tm+mt
-source-wordcount: '4214'
+source-wordcount: '4216'
 ht-degree: 1%
 
 ---
