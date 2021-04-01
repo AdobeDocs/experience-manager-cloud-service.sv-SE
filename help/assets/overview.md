@@ -2,10 +2,12 @@
 title: Introduktion till Assets som a [!DNL Cloud Service]
 description: Nyheter i Assets som a [!DNL Cloud Service].
 contentOwner: AG
+feature: Resurshantering
+role: Affärsledare,ledare,arkitekt
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -15,7 +17,7 @@ ht-degree: 0%
 
 <!-- Need review information from gklebus -->
 
-Adobe Experience Manager Assets är en [!DNL Cloud Service]-lösning som är inbyggd i molnet och ger företag möjlighet att inte bara utföra sin hantering av digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
+Adobe Experience Manager Assets är en [!DNL Cloud Service]-lösning som är inbyggd i molnet och ger företag möjlighet att inte bara utföra sin hantering av digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är tillgängligt och alltid är inlärningsbart.
 
 Samtidig inmatning av många resurser eller komplexa resurser är en resurskrävande uppgift för en AEM Author-instans. Den primära instansen förbrukar mycket processorkraft, minne och I/O-resurser när resurser läggs till, bearbetas eller till och med migreras. Sådana prestandaproblem påverkar redigering och surfning hos slutanvändarna.
 
