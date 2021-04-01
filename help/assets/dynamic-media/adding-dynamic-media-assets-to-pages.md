@@ -4,10 +4,11 @@ description: Lär dig hur du lägger till Dynamic Media-komponenter på en sida 
 contentOwner: Rick Brough
 feature: Resurshantering
 topic: Yrkesverksamma inom affärsverksamhet
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
 workflow-type: tm+mt
-source-wordcount: '2951'
+source-wordcount: '2953'
 ht-degree: 5%
 
 ---
@@ -65,7 +66,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
 
    ![Policy](/help/assets/assets-dm/structure-mode.png)
 
-1. Långt ned på sidan trycker du på **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan på ikonen Policy.
+1. I närheten av sidans nederkant trycker du på **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan på ikonen Policy.
 1. Kontrollera att fliken **[!UICONTROL Allowed Components]** är markerad under rubriken **[!UICONTROL Properties]** på sidan **[!UICONTROL Layout Container]**.
 
    ![Tillåtna komponenter](/help/assets/assets-dm/allowed-components.png)
