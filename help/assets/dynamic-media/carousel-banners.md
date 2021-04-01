@@ -3,10 +3,11 @@ title: Karusellbanner
 description: Lär dig hur du arbetar med Carousel Banners i Dynamic Media.
 feature: Karusellbanner
 topic: Yrkesverksamma inom affärsverksamhet
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
 workflow-type: tm+mt
-source-wordcount: '4480'
+source-wordcount: '4482'
 ht-degree: 3%
 
 ---
