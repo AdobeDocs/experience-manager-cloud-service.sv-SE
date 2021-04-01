@@ -2,11 +2,13 @@
 title: Arkitektur för [!DNL Assets]
 description: Arkitektur för Adobe Experience Manager Assets som en [!DNL Cloud Service]
 contentOwner: AG
+feature: Resurshantering, Asset compute Microservices
+role: Arkitekt
 translation-type: tm+mt
-source-git-commit: 3207151a76c51637551907d15a34f1a6b7450d02
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 9%
+source-wordcount: '92'
+ht-degree: 8%
 
 ---
 
