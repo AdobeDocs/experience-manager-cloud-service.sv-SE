@@ -3,10 +3,12 @@ title: Hantera digitala resurser
 description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
+feature: Resurshantering, publicering, samarbete, tillgångsbearbetning
+role: Affärsman, arkitekt, administratör
 translation-type: tm+mt
-source-git-commit: 61e3f77b7d503b252a00178cebe654038ac6df83
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '4192'
+source-wordcount: '4202'
 ht-degree: 12%
 
 ---
@@ -515,7 +517,7 @@ Om en resurs har anteckningar eller har genomgått ett granskningsarbetsflöde k
 
 Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen.
 
-Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har minst en antecknings- eller granskningsstatus tilldelad.
+Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
 
 1. Öppna förhandsgranskningssidan för en resurs i resursgränssnittet.
 1. Gör något av följande:
