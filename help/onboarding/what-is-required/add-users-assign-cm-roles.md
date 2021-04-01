@@ -2,9 +2,9 @@
 title: 'Systemadministratörsuppgifter '
 description: Följ den här sidan för att lära dig hur du lägger till användare och tilldelar dem till roller i Cloud Manager som systemadministratör
 translation-type: tm+mt
-source-git-commit: b48be794da0b91722fb45ccefbe83e2b0b22d2a9
+source-git-commit: 3afed5a76c7dd82952ed15f582b7f2c7a36b9db9
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ En systemadministratör utför följande organisatoriska åtgärder:
    ![](/help/onboarding/what-is-required/assets/admin-console-3.png)
 
    >[!NOTE]
-   >Se [Användarroller och behörigheter](#user-roles) och [Behörigheter som är kopplade till rolldefinitioner](#permissions) för att se till att rätt användare tilldelas rätt roll(er) i **Admin Console**.
+   >Läs [Roller för Cloud Manager](/help/onboarding/what-is-required/user-roles-permissions.md) om du vill veta mer om roller och behörigheter i Cloud Manager.
 
    Nu har du lagt till användare i Adobe Experience Manager som produktkontext för Cloud Service och konfigureras med rätt roller eller produktprofiler.
 
