@@ -2,10 +2,11 @@
 title: Länka URL till ett webbprogram
 description: Lär dig hur du länkar URL-adresser till webbprogram i Dynamic Media.
 topic: Yrkesverksamma inom affärsverksamhet
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1206'
 ht-degree: 9%
 
 ---
