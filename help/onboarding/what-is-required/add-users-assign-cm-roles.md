@@ -2,9 +2,9 @@
 title: 'Systemadministratörsuppgifter '
 description: Följ den här sidan för att lära dig hur du lägger till användare och tilldelar dem till roller i Cloud Manager som systemadministratör
 translation-type: tm+mt
-source-git-commit: f1f5766a41763634e0aaba44e55471ac2ea5dc8f
+source-git-commit: b48be794da0b91722fb45ccefbe83e2b0b22d2a9
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -44,17 +44,7 @@ En systemadministratör utför följande organisatoriska åtgärder:
    ![](/help/onboarding/what-is-required/assets/admin-console-3.png)
 
    >[!NOTE]
-   >Se föregående avsnitt, [Användarroller och behörigheter](#user-roles) och [Behörigheter som är associerade med rolldefinitioner](#permissions), för att säkerställa att rätt användare tilldelas rätt roll(er) i **Admin Console**.
+   >Se [Användarroller och behörigheter](#user-roles) och [Behörigheter som är kopplade till rolldefinitioner](#permissions) för att se till att rätt användare tilldelas rätt roll(er) i **Admin Console**.
 
    Nu har du lagt till användare i Adobe Experience Manager som produktkontext för Cloud Service och konfigureras med rätt roller eller produktprofiler.
 
-   Om du till exempel har rollen som
-
-   * ***Business Owner***, du har behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö, lägga till/redigera/ta bort pipelinen och köra valfri pipeline samt distribuera kod AEM miljö eller kodkvalitet.
-
-   * ***Distributionshanteraren*** har behörighet att lägga till eller uppdatera en miljö, köra valfri pipeline och distribuera kod AEM miljön eller kodkvaliteten.
-
-   * ***Utvecklare***: du har behörighet att skapa en personlig åtkomsttoken för åtkomst till Git.
-
-      >[!NOTE]
-      > En användare kan tilldelas flera roller. Om du till exempel tilldelar både Business Owner- och Deployment Manager-roller till en användare får användaren en kombination av eller summan av dessa behörigheter.
