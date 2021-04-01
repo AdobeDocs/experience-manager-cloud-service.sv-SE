@@ -2,10 +2,12 @@
 title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
 contentOwner: AG
+feature: Resurshantering,Återgivningar
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: ceaa9546be160e01b124154cc827e6b967388476
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '813'
 ht-degree: 5%
 
 ---
