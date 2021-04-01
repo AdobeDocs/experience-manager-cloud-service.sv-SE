@@ -2,9 +2,9 @@
 title: Navigera till Cloud Manager
 description: Följ den här sidan för att lära dig hur du navigerar till startsidan för Cloud Manager
 translation-type: tm+mt
-source-git-commit: 4b9476b094438acd08c945f0102b029b6792cb88
+source-git-commit: b48be794da0b91722fb45ccefbe83e2b0b22d2a9
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '448'
 ht-degree: 6%
 
 ---
@@ -58,7 +58,7 @@ Ett av de tre alternativen som beskrivs nedan visas:
 
    ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/admin-console-4.png)
 
-Härifrån kan en användare med rätt behörigheter, t.ex. en Business Owner-roll i Cloud Manager välja **Lägg till program** för att starta [guiden](/help/onboarding/getting-access-to-aem-in-cloud/using-the-wizard.md).
+Härifrån kan en användare med rätt behörigheter, t.ex. en Business Owner-roll i Cloud Manager välja **Lägg till program** för att starta [guiden Lägg till program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/production-programs/creating-production-program.html?lang=en#getting-access).
 
 Mer information om hur du lägger till ett program i Cloud Manager finns i:
 
