@@ -3,10 +3,11 @@ title: Panoramabilder
 description: Lär dig hur du arbetar med panoramabilder i Dynamic Media.
 feature: Panoramabilder
 topic: Yrkesverksamma inom affärsverksamhet
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '153'
 ht-degree: 16%
 
 ---
