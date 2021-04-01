@@ -1,10 +1,12 @@
 ---
 title: Content Fragments - Configuration Browser
 description: Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Browser för att utnyttja AEM kraftfulla headless-leveransfunktioner.
+feature: Innehållsfragment
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
+source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '275'
 ht-degree: 19%
 
 ---
