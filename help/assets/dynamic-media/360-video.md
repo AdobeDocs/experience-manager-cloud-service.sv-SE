@@ -3,10 +3,11 @@ title: 360/VR-video
 description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i Dynamic Media.
 feature: 360 VR-video
 topic: Yrkesverksamma inom affärsverksamhet
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
