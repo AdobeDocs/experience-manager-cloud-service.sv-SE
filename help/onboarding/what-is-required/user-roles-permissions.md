@@ -2,7 +2,7 @@
 title: Roller för Cloud Manager
 description: Den här sidan beskriver användarroller och behörigheter. Följ den här sidan om du vill lära dig hur du lägger till användare och tilldelar dem till roller i molnhanteraren.
 translation-type: tm+mt
-source-git-commit: f518cab23b1dadceee5800b3454f74d341e941c4
+source-git-commit: e5754366cd0efa08af4c3717481743ab94dc2099
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 6%
@@ -65,7 +65,7 @@ I följande tabell sammanfattas rollerna tillsammans med deras tillhörande beh�
 | Lägg till program<br>Redigera program | Lägg till ett nytt program.<br>Redigera ett program - Lägg till eller ta bort lösningar eller tillägg | x |  |  |  |
 | Skapa miljö | Skapa prod+stage, dev, environment. | x | x |  |  |
 | Uppdateringsmiljö | Uppdatera Prod+Stage, Dev, Environmental. | x | x |  |  |
-| Ta bort miljö | Ta bort miljöer som inte är produktiva, dev. | x | x |  |  |
+| Ta bort Dev-miljö | Ta bort Dev-miljöer. | x | x |  |  |
 | Inställningar för pipeline | Konfigurera eller redigera pipeline. |  | x |  |  |
 | Körning av pipeline | Starta rörledningen. | x | x |  |  |
 | Körning av pipeline | Avvisa/godkänn viktiga 3-nivåfel. | x | x | x |  |
