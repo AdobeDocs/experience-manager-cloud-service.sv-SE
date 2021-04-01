@@ -2,10 +2,12 @@
 title: Vattenstämpel för resurserna
 description: Lägg till vattenstämpel i era digitala resurser.
 contentOwner: AG
+feature: Resurshantering,publicering
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 5be8ab734306ad1442804b3f030a56be1d3b5dfa
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
