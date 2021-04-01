@@ -1,11 +1,13 @@
 ---
 title: '[!DNL Assets] as a [!DNL Cloud Service] Guide'
 description: '[!DNL Adobe Experience Manager Assets] as a [!DNL Cloud Service] självhjälpsresurser och dokumentationslänkar'
+feature: Resurshantering
+role: Affärsledare,ledare
 translation-type: tm+mt
-source-git-commit: 332ca27c060a46d41e4f6e891f6fd98170d10d9f
+source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 24%
+source-wordcount: '265'
+ht-degree: 23%
 
 ---
 
