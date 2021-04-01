@@ -2,10 +2,12 @@
 title: Skapa och hantera digitala resurser på flera språk
 description: Lär dig automatisera arbetsflöden för översättning av resurser, inklusive binära filer, metadata och taggar till flera språk.
 contentOwner: AG
+feature: Resurshantering,Översättning
+role: Administratör,Affärsledare
 translation-type: tm+mt
-source-git-commit: 100171693837dcdcef0efeab8d61b567114c5ef0
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2446'
 ht-degree: 20%
 
 ---
