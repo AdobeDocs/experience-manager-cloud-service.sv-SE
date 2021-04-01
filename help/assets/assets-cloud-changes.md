@@ -1,10 +1,12 @@
 ---
 title: Noterbara ändringar i [!DNL Adobe Experience Manager Assets] som a [!DNL Cloud Service]
 description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [!DNL Experience Manager] as a [!DNL Cloud Service] jämfört med [!DNL Adobe Experience Manager 6.5.
+feature: Versionsinformation
+role: Affärsledare,ledare,arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: ab8cc0e3d685b5aba29e3320453ed7789f53083a
+source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '757'
 ht-degree: 0%
 
 ---
