@@ -3,10 +3,11 @@ title: Aktivera hotlink-skydd i Dynamic Media
 description: Lär dig hur du aktiverar hotlink-skydd i Dynamic Media.
 feature: Resurshantering
 topic: Yrkesverksamma inom affärsverksamhet
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '196'
 ht-degree: 6%
 
 ---
