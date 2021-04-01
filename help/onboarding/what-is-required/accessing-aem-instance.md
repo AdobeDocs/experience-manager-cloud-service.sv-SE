@@ -2,9 +2,9 @@
 title: 'Bevilja användaråtkomst till en AEM instans '
 description: Följ den här sidan för att lära dig hur en systemadministratör beviljar användaråtkomst till en AEM instans
 translation-type: tm+mt
-source-git-commit: 580ac3f734042b3116f505c34629cee0331c0bac
+source-git-commit: b48be794da0b91722fb45ccefbe83e2b0b22d2a9
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ Som systemadministratör följer du stegen nedan för att ge användare åtkomst
 1. Navigera till Cloud Manager och klicka på knappen **Hantera åtkomst** på **miljökortet** enligt nedan.
 
    >[!NOTE]
-   >Du måste vara systemadministratör eller användare som skapade miljön för att kunna lägga till användare i Admin Console. Endast Business Owner- eller Deployment Manager-roller har behörighet att skapa en miljö. Mer information om roller och associerade behörigheter finns i [Användarroller och behörigheter](/help/onboarding/what-is-required/user-roles-permissions.md). Mer information om miljöer finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
+   >Du måste vara systemadministratör eller användare som skapade miljön för att kunna lägga till användare i Admin Console. Endast Business Owner- eller Deployment Manager-roller har behörighet att skapa en miljö. Mer information om roller och associerade behörigheter finns i [Cloud Manager-roller](/help/onboarding/what-is-required/user-roles-permissions.md). Mer information om miljöer finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
    ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/sys-admin6.png)
 
    Eller
 
-   **Hantera** åtkomst är även tillgängligt från knappen  **** Hantera om du klickar på  **** Detaljer i  **** miljökortet.
+   På sidan **Miljö** väljer du **Hantera** —> **Hantera åtkomst**.
 
    ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/sys-admin4.png)
 
