@@ -2,11 +2,13 @@
 title: Förbättrade smarta taggar
 description: Använd kontextuella och beskrivande taggar med Adobe Senseis AI- och ML-tjänst för att förbättra resursidentifieringen och innehållets hastighet.
 contentOwner: AG
+feature: Smarta taggar, taggar
+role: Administratör
 translation-type: tm+mt
-source-git-commit: a1213a1694a50d174b4ad1e7e4ba7c71944b861a
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 83%
+source-wordcount: '889'
+ht-degree: 82%
 
 ---
 
