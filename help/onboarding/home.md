@@ -2,9 +2,9 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 translation-type: tm+mt
-source-git-commit: 826c15ecca494f98fbe7a4c3ef129a45bd4cea7c
+source-git-commit: b48be794da0b91722fb45ccefbe83e2b0b22d2a9
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '922'
 ht-degree: 39%
 
 ---
@@ -38,7 +38,7 @@ När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
 Du behöver din Adobe ID och din systemadministratörs hjälp för att lägga till användare i Cloud Manager till deras tilldelade roller.
 
-**[Användarroller och behörigheter](/help/onboarding/what-is-required/user-roles-permissions.md)**
+**[Roller för Cloud Manager](/help/onboarding/what-is-required/user-roles-permissions.md)**
 
 Systemadministratören kan lägga till användare och tilldela dem till roller i Cloud Manager. I det här avsnittet får du hjälp med att förstå vad *roller i molnhanteraren* är och behörigheter som är kopplade till rollerna innan du börjar.
 
