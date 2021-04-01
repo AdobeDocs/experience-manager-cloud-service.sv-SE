@@ -2,10 +2,12 @@
 title: Använda snabbvyer för att skapa anpassade popup-fönster
 description: '"Lär dig mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren."'
 topic: '"Utvecklare,Administratör,Affärsledare"'
+feature: interaktiva bilder, interaktiva videor, Carousel Banners
+role: Administratör,Affärsledare
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1041'
 ht-degree: 0%
 
 ---
