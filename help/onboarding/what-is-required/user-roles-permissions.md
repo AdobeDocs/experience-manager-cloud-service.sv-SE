@@ -2,15 +2,15 @@
 title: Användarroller och behörigheter
 description: Den här sidan beskriver användarroller och behörigheter. Följ den här sidan om du vill lära dig hur du lägger till användare och tilldelar dem till roller i molnhanteraren.
 translation-type: tm+mt
-source-git-commit: 4b9476b094438acd08c945f0102b029b6792cb88
+source-git-commit: b48be794da0b91722fb45ccefbe83e2b0b22d2a9
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 8%
+source-wordcount: '564'
+ht-degree: 6%
 
 ---
 
 
-# Användarroller och behörigheter {#user-roles-permissions}
+# Roller för Cloud Manager {#user-roles-permissions}
 
 ## Användarroller {#user-roles}
 
@@ -44,13 +44,25 @@ Utöver ovanstående skapar Cloud Manager automatiskt en produktprofil med namne
 
 ## Användarroller och behörigheter {#permissions}
 
-[!UICONTROL Cloud Manager] har förkonfigurerade roller med lämplig behörighet. En utvecklare utvecklar till exempel kod och har behörighet att skicka koden till **Git-databasen**. En företagsägare har också olika behörigheter för att lägga till och redigera program, lägga till miljöer och godkänna distributioner.
+[!UICONTROL Cloud Manager] har förkonfigurerade roller med lämplig behörighet. En utvecklare utvecklar till exempel kod och har behörighet att skicka koden till Git-databasen. En företagsägare har också olika behörigheter för att lägga till och redigera program, lägga till miljöer och godkänna distributioner.
 
-Var och en av rollerna har specifika behörigheter som är kopplade till varje roll. I följande tabell sammanfattas rollerna, de funktioner som är tillgängliga och de roller som kan utföra funktionen.
+Var och en av rollerna har särskilda behörigheter som är kopplade till sig. Om du till exempel har rollen som
+
+* ***Business Owner***, du har behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö, lägga till/redigera/ta bort pipelinen och köra valfri pipeline samt distribuera kod AEM miljö eller kodkvalitet.
+
+* ***Distributionshanteraren*** har behörighet att lägga till eller uppdatera en miljö, köra valfri pipeline och distribuera kod AEM miljön eller kodkvaliteten.
+
+* ***Utvecklare***: du har behörighet att skapa en personlig åtkomsttoken för åtkomst till Git.
+
+   >[!NOTE]
+   > En användare kan tilldelas flera roller. Om du till exempel tilldelar både Business Owner- och Deployment Manager-roller till en användare får användaren en kombination av eller summan av dessa behörigheter.
+
+
+I följande tabell sammanfattas rollerna tillsammans med deras tillhörande behörigheter i Cloud Manager.
 
 | Behörighet | Beskrivning | Företagsägare | Distributionshanteraren | Programhanteraren | Utvecklare |
 |--- |--- |--- |--- |--- |--- |
-| Lägg till program | Lägg till ett nytt program. | x |  |  |  |
+| Lägg till program<br>Redigera program | Lägg till ett nytt program.<br>Redigera ett program - Lägg till eller ta bort lösningar eller tillägg | x |  |  |  |
 | Skapa miljö | Skapa prod+stage, dev, environment. | x | x |  |  |
 | Uppdateringsmiljö | Uppdatera Prod+Stage, Dev, Environmental. | x | x |  |  |
 | Ta bort miljö | Ta bort miljöer som inte är produktiva, dev. | x | x |  |  |
@@ -62,3 +74,4 @@ Var och en av rollerna har specifika behörigheter som är kopplade till varje r
 | Ta bort pipeline | Tillåter borttagning av en pipeline. |  | x |  |  |
 | Avbryt körning | Avbryt aktuell körning. |  | x |  |  |
 | Generera token för personlig åtkomst | Access Git. |  | x |  | x |
+
