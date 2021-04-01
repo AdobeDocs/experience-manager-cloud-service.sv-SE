@@ -3,10 +3,11 @@ title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
 description: Lär dig bädda in Dynamic Media video- eller bildresurser på en webbsida.
 feature: Resurshantering
 topic: Yrkesverksamma inom affärsverksamhet
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '369'
 ht-degree: 21%
 
 ---
