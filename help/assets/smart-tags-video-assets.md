@@ -1,10 +1,12 @@
 ---
 title: Smarta taggar för videomaterial
 description: Experience Manager lägger automatiskt till kontextuella och beskrivande smarta taggar i videoklipp med  [!DNL Adobe Sensei].
+feature: Smarta taggar,Taggar
+role: Administratör,Affärsledare
 translation-type: tm+mt
-source-git-commit: ceaa9546be160e01b124154cc827e6b967388476
+source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
@@ -104,7 +106,7 @@ Så här avanmäler du dig från automatisk generering av smarta videotaggar fö
 
 ## Konfidenspoäng {#confidence-score-video-tag}
 
-[!DNL Adobe Experience Manager] använder ett lägsta konfidensintervall för smarta taggar för objekt och åtgärder för att undvika att ha för många taggar för varje videoresurs, vilket gör indexeringen långsammare. Sökresultaten för dina resurser rangordnas baserat på konfidensintervallet, vilket i allmänhet förbättrar sökresultaten utöver vad en inspektion av de tilldelade taggarna för en videoresurs antyder. Felaktiga taggar har ofta låga konfidensgrader, så de visas sällan överst i listan Smarta taggar för resurser.
+[!DNL Adobe Experience Manager] använder ett lägsta konfidensintervall för smarta taggar för objekt och åtgärder för att undvika att ha för många taggar för varje videoresurs, vilket gör indexeringen långsammare. Sökresultaten för dina resurser rangordnas baserat på konfidensintervallet, vilket i allmänhet förbättrar sökresultaten utöver vad en inspektion av de tilldelade taggarna för en videoresurs antyder. Felaktiga taggar har ofta låga konfidensvärden, så de visas sällan överst i listan Smarta taggar för resurser.
 
 Standardtröskelvärdet för action- och object-taggar i [!DNL Adobe Experience Manager] är 0,7 (bör vara ett värde mellan 0 och 1). Om vissa videoresurser inte är taggade med en viss tagg betyder det att algoritmen är mindre än 70 % säker i de förväntade taggarna. Standardtröskelvärdet kanske inte alltid är optimalt för alla användare. Du kan därför ändra konfidensvärdet i OSGI-konfigurationen.
 
