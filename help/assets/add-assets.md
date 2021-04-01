@@ -1,10 +1,12 @@
 ---
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
+feature: Resurshantering,Överför
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: a81fe4a2c7d3c4e0471a961fb51249ac03f27e9c
+source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
