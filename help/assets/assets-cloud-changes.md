@@ -4,9 +4,9 @@ description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [
 feature: Versionsinformation
 role: Affärsledare,ledare,arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 70068609e51f96c010204b8915593a52f610aded
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -65,6 +65,7 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 >
 >Följande resurser är tillgängliga för [!DNL Experience Manager] som [!DNL Cloud Service]:
 >
+>* [Lista över borttagna och borttagna funktioner](/help/release-notes/deprecated-removed-features.md)
 >* [En introduktion](/help/overview/introduction.md)
 >* [Vad är nytt och annorlunda?](/help/overview/what-is-new-and-different.md)
 >* [Arkitekturen](/help/core-concepts/architecture.md)
