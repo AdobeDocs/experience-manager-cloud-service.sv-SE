@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Resurshantering,Samarbete,Resursdistribution
 role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: 70068609e51f96c010204b8915593a52f610aded
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 0%
 [!DNL Adobe Experience Manager Assets] Med kan du dela resurser, mappar och samlingar med medlemmar i din organisation och externa enheter, inklusive partners och leverantörer. Använd följande metoder för att dela resurser från [!DNL Experience Manager Assets] som [!DNL Cloud Service]:
 
 * Dela som en länk.
-* Ladda ned resurser och dela dem separat.
-* Dela via AEM program.
-* Dela via Adobe Asset Link.
-* (Kommande funktioner) Dela via varumärkesportalen.
+* [Ladda ned ](/help/assets/download-assets-from-aem.md) resurser och dela dem separat.
+* Dela med [[!DNL Experience Manager] datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
+* Dela med [[!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
+* Dela med [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html).
 
 ## Dela resurser som en länk {#sharelink}
 
