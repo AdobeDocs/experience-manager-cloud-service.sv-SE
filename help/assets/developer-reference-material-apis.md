@@ -5,15 +5,15 @@ contentOwner: AG
 feature: API:er,Resurser HTTP API
 role: Utvecklare,Arkitekt,Administratör
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 70068609e51f96c010204b8915593a52f610aded
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1392'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Adobe Experience Manager Assets] API:er och referensmaterial för utvecklare  {#assets-cloud-service-apis}
+# [!DNL Adobe Experience Manager Assets] användningsfall för utvecklare, API:er och referensmaterial  {#assets-cloud-service-apis}
 
 Artikeln innehåller rekommendationer, referensmaterial och resurser för utvecklare av [!DNL Assets] som en [!DNL Cloud Service]. Den innehåller en ny modul för överföring av resurser, API-referens och information om stödet som ges i arbetsflöden efter bearbetning.
 
@@ -119,7 +119,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 * `uploadToken` (sträng): En överföringstoken för motsvarande binär fil. Detta värde bör inkluderas i den fullständiga begäran.
 * `uploadURIs` (array): En lista över strängar vars värden är fullständiga URI:er som binärens innehåll ska överföras till (se  [Överför binärt](#upload-binary)).
 * `minPartSize` (tal): Den minsta längden, i byte, på data som kan tillhandahållas till någon av dem  `uploadURIs`om det finns mer än en URI.
-* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan anges för någon av dem  `uploadURIs`om det finns mer än en URI.
+* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan tillhandahållas till någon av dem  `uploadURIs`om det finns mer än en URI.
 
 ### Överför binär {#upload-binary}
 
