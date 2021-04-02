@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Resurshantering,Anslutna resurser,Resursdistribution
 role: Administratör,Affärsledare,Arkitekt
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 70068609e51f96c010204b8915593a52f610aded
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2786'
 ht-degree: 26%
 
 ---
@@ -120,9 +120,9 @@ Du kan konfigurera en anslutning mellan [!DNL Sites]-distribution och [!DNL Dyna
 
 Följ de här stegen för att konfigurera anslutningen.
 
-1. Skapa konfiguration för anslutna resurser enligt beskrivningen ovan. Markera kryssrutan **[!UICONTROL Fetch original rendition for [!DNL Dynamic Media] Connected Assets]** i dialogrutan.
+1. Skapa konfiguration för anslutna resurser enligt beskrivningen ovan. Välj alternativet **[!UICONTROL Fetch original rendition for Dynamic Media Connected Assets]** när du konfigurerar funktionen.
 
-1. Konfigurera [!DNL Dynamic Media] på lokala [!DNL Sites]- och fjärdistributioner av [!DNL Assets]. Följ instruktionerna för att [konfigurera [!DNL Dynamic Media]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html#configuring-dynamic-media-cloud-services).
+1. Konfigurera [!DNL Dynamic Media] på lokala [!DNL Sites]- och fjärdistributioner av [!DNL Assets]. Följ instruktionerna för att [konfigurera [!DNL Dynamic Media]](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
 
    * Använd samma företagsnamn i alla konfigurationer.
    * På lokal [!DNL Sites] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Disabled by default]**. Platsdistributionen behöver bara skrivskyddad åtkomst till [!DNL Dynamic Media]-kontot.
