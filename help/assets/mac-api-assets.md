@@ -4,14 +4,14 @@ description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTT
 contentOwner: AG
 feature: Resurser för HTTP API, API:er
 role: Utvecklare,Arkitekt,Administratör
+exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: b989833b7f1fa0c3de91f96e28a21859d97294cb
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1516'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Adobe Experience Manager Assets] HTTP-API  {#assets-http-api}
 
@@ -268,6 +268,8 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 ## Tips, metodtips och begränsningar {#tips-limitations}
 
 * Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet [!DNL Assets] och via HTTP-API:t. API:t returnerar 404-felmeddelandet om [!UICONTROL On Time] är i framtiden eller om [!UICONTROL Off Time] är i det förflutna.
+
+* Resursens HTTP API returnerar inte alla metadata. Namnutrymmena är hårdkodade och endast dessa namnutrymmen returneras. Fullständiga metadata finns i resurssökvägen `/jcr_content/metadata.json`.
 
 * Vissa egenskaper för mapp eller resurs mappas till ett annat prefix när de uppdateras med API:er. `jcr`-prefixet `jcr:title`, `jcr:description` och `jcr:language` har ersatts med `dc`-prefixet. I den returnerade JSON innehåller därför `dc:title` och `dc:description` värdena `jcr:title` respektive `jcr:description`.
 
