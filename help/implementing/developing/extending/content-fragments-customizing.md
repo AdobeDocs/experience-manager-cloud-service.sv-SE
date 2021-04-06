@@ -1,14 +1,14 @@
 ---
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
+exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
 translation-type: tm+mt
-source-git-commit: 639bf1add463c0e62982a44ecdca834e2c7c53fe
+source-git-commit: 24da05afce75a16ed2223130ac1825b10ee964e1
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 1%
 
 ---
-
 
 # Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
 
@@ -296,7 +296,7 @@ En redigeringssession startas när användaren öppnar ett innehållsfragment i 
 Tekniskt sett utförs alla redigeringar på *live*-innehåll, precis som med all annan AEM redigering. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** görs ingenting specifikt, eftersom all redigering utfördes på *live*-innehåll, och därför bevaras alla ändringar redan. Om du klickar på **Spara** utlöses även bakgrundsbearbetning (som att skapa fullständig textsökningsinformation och/eller hantera blandade medieresurser).
 
 Det finns vissa säkerhetsåtgärder för kantfall. Om användaren till exempel försöker lämna redigeraren utan att spara eller avbryta redigeringssessionen. Det går även att spara data med jämna mellanrum för att förhindra dataförlust.
-Observera att två användare kan redigera samma innehållsfragment samtidigt och därför skriva över varandras ändringar. För att förhindra detta måste innehållsfragmentet låsas genom att DAM-administratörens *utcheckningsåtgärd* används på fragmentet.
+Observera att två användare kan redigera samma innehållsfragment samtidigt och därför skriva över varandras ändringar. För att förhindra detta måste innehållsfragmentet låsas genom att DAM-administrationens *utcheckningsåtgärd* används på fragmentet.
 
 ## Exempel {#examples}
 
@@ -333,7 +333,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 ### Exempel: Ange intervall för autosparande {#example-specifying-the-auto-save-interval}
 
-Du kan definiera intervallet [för automatiskt sparande](/help/assets/content-fragments/content-fragments-managing.md#save-cancel-and-versions) (i sekunder) med konfigurationshanteraren (ConfMgr):
+Du kan definiera intervallet [för automatiskt sparande](/help/assets/content-fragments/content-fragments-managing.md#save-close-and-versions) (i sekunder) med konfigurationshanteraren (ConfMgr):
 
 * Nod: `<conf-root>/settings/dam/cfm/jcr:content`
 * Egenskapsnamn: `autoSaveInterval`
