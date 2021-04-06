@@ -3,9 +3,9 @@ title: Underhållsaktiviteter i AEM som en Cloud Service
 description: Underhållsaktiviteter i AEM som en Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 translation-type: tm+mt
-source-git-commit: d53d34e86b5e5bac6a66be8d288cf4ab8fb00ac4
+source-git-commit: 8fbed9ddc872b8caf0a9b15a7578e34a817e4e42
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,8 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Dagligen</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td>/apps/settings/granite/operations/intenance/granite_day</td>
-    <td>Se exempelkod 1</td>
+    <td>Se plats 1 nedan</td>
+    <td>Se kodexempel 1 nedan</td>
    <td>
     <ul>
     <li><strong>windowSchedule</strong> = day (det här värdet ska inte ändras)</li>
@@ -67,7 +67,7 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Vecka</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td><code>/apps/settings/granite/operations/maintenance/granite_weekly</code></td>
+    <td>Se plats 2 nedan</td>
     <td>Se kodexempel 2 nedan</td>
      <td>
     <ul>
@@ -81,7 +81,7 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Månadsvis</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td><code>/apps/settings/granite/operations/maintenance/granite_monthly</code></td>
+    <td>Se plats 3 nedan</td>
     <td>Se kodexempel 3 nedan</td>
      <td>
     <ul>
@@ -93,6 +93,14 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     </ul> </td> 
   </tr>
 </table>
+
+Platser:
+
+1. /apps/settings/granite/operations/intenance/granite_day
+2. /apps/settings/granite/operations/intenance/granite_week
+3. /apps/settings/granite/operations/intenance/granite_monthly
+
+Kodexempel:
 
 Kodexempel 1
 
