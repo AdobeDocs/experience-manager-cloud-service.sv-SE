@@ -3,20 +3,30 @@ title: Hantera innehållsfragment
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 feature: Innehållsfragment
 role: Yrkesverksamma inom affärsverksamhet
+exl-id: 333ad877-db2f-454a-a3e5-59a936455932
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 114b38142f01b56652a7b840501f7420fdc25562
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1748'
 ht-degree: 7%
 
 ---
-
 
 # Hantera innehållsfragment {#managing-content-fragments}
 
 Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 
-Innehållsfragment lagras som **Resurser**, så hanteras primärt från konsolen **Resurser**.
+När du har definierat dina [modeller för innehållsfragment](#creating-a-content-model) kan du använda dessa för att [skapa dina innehållsfragment](#creating-a-content-fragment).
+
+[Innehållsfragmentredigeraren](#opening-the-fragment-editor) innehåller olika [lägen](#modes-in-the-content-fragment-editor) som gör att du kan:
+
+* [Redigera ](#editing-the-content-of-your-fragment) innehållet och  [hantera variationer](#creating-and-managing-variations-within-your-fragment)
+* [Anteckna ditt fragment](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+* [Associera innehåll med fragment](#associating-content-with-your-fragment)
+* [Konfigurera metadata](#viewing-and-editing-the-metadata-properties-of-your-fragment)
+* [Visa strukturträdet](/help/assets/content-fragments/content-fragments-structure-tree.md)
+* [Förhandsgranska JSON-representationen](/help/assets/content-fragments/content-fragments-json-preview.md)
+
 
 >[!NOTE]
 >
@@ -25,6 +35,10 @@ Innehållsfragment lagras som **Resurser**, så hanteras primärt från konsolen
 >* vid framtagning av sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 >* for [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
 
+
+>[!NOTE]
+>
+>Innehållsfragment lagras som **Resurser**, så hanteras primärt från konsolen **Resurser**.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -135,11 +149,15 @@ Så här öppnar du fragmentet för redigering:
 
    ![fragmentredigerare](assets/cfm-managing-03.png)
 
-1. När du har gjort ändringarna använder du **Spara och stäng** eller **Avbryt** efter behov.
+1. När du har gjort ändringarna använder du **Spara**, **Spara och stäng** eller **Stäng** efter behov.
 
    >[!NOTE]
    >
-   >Både **Spara och stäng** och **Avbryt** kommer att avsluta redigeraren. Mer information om hur båda alternativen fungerar för innehållsfragment finns i [Spara, Avbryt och Versioner](#save-cancel-and-versions).
+   >**Spara och** stäng är tillgängligt via listrutan  **** Sparad.
+
+   >[!NOTE]
+   >
+   >Både **Spara och stäng** och **Stäng** kommer att avsluta redigeraren. Mer information om hur de olika alternativen fungerar för innehållsfragment finns i [Spara, Stäng och Versioner](#save-close-and-versions).
 
 ## Lägen och åtgärder i Content Fragment Editor {#modes-actions-content-fragment-editor}
 
@@ -181,21 +199,29 @@ Vissa funktioner i det övre verktygsfältet finns i flera lägen:
    * **Ändrad**: orange
    * **Inaktiverad**: röd
 
+* **Med** Spara får du tillgång till alternativet  **Spara och** stäng.
+
 * De tre punkterna (**)..**) ger åtkomst till ytterligare åtgärder:
+   * **Uppdatera sidreferenser**
+      * Detta uppdaterar eventuella sidreferenser.
    * **[Snabbpublicering](#publishing-and-referencing-a-fragment)**
    * **[Hantera publikation](#publishing-and-referencing-a-fragment)**
 
-## Spara, Avbryt och Versioner {#save-cancel-and-versions}
+<!--
+This updates any page references and ensures that the Dispatcher is flushed as required. -->
+
+## Spara, stäng och versioner {#save-close-and-versions}
 
 >[!NOTE]
 >
 >Versioner kan också [skapas, jämföras och återställas från tidslinjen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments).
 
-Redigeraren har två alternativ:
+Redigeraren har olika alternativ:
 
-* **Spara**
+* **** Spara och  **spara och stäng**
 
-   Sparar de senaste ändringarna och avslutar redigeraren.
+   * **De senaste ändringarna sparas och** sparas kvar i redigeraren.
+   * **Spara och** stäng sparar de senaste ändringarna och avslutar redigeraren.
 
    >[!CAUTION]
    >
@@ -203,20 +229,19 @@ Redigeraren har två alternativ:
 
    >[!NOTE]
    >
-   >Det går att vara kvar i redigeraren och göra en serie ändringar innan du väljer **Spara**.
+   >Du kan vara kvar i redigeraren och göra en serie ändringar innan du sparar.
 
    >[!CAUTION]
    >
-   >Förutom att bara spara ändringarna uppdaterar **Spara** alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
+   >Förutom att bara spara ändringarna uppdaterar åtgärderna alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
    >
-   >
-   >Tänk på detta när du använder **Spara** och ange sedan snabbt fragmentredigeraren igen för att göra och spara ytterligare ändringar.
+   >Tänk på detta när du använder **Spara och stäng** och ange sedan snabbt fragmentredigeraren igen för att göra och spara ytterligare ändringar.
 
-* **Avbryt**
+* **Stäng**
 
-   Redigeraren avslutas utan att de senaste ändringarna sparas.
+   Redigeraren avslutas utan att de senaste ändringarna sparas (d.v.s. sedan den senaste **Spara**).
 
-När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **avbryter** dina ändringar:
+När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du avbryter ändringarna (med **Close** utan att spara):
 
 1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession*:
 
@@ -232,7 +257,7 @@ När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för 
    >Standardvärde, se:
    >  `/libs/settings/dam/cfm/jcr:content/autoSaveInterval`
 
-3. Om användaren väljer att **avbryta** redigeringen återställs den version som skapades i början av redigeringssessionen och token tas bort för att avsluta redigeringssessionen.
+3. Om användaren avbryter redigeringen återställs den version som skapades i början av redigeringssessionen och token tas bort för att avsluta redigeringssessionen.
 4. Om användaren väljer att **spara** redigeringarna sparas de uppdaterade elementen/varianterna och token tas bort för att avsluta redigeringssessionen.
 
 ## Redigera innehållet i fragmentet {#editing-the-content-of-your-fragment}
