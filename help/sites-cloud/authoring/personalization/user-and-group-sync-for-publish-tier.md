@@ -1,20 +1,20 @@
 ---
 title: 'Registrering, inloggning och användarprofil '
-description: Läs mer om registrering, inloggning och användarprofil på publiceringsnivån
+description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM som en Cloud Service
+exl-id: a991e710-a974-419f-8709-ad86c333dbf8
 translation-type: tm+mt
-source-git-commit: 2c00c3723c3c84365044b5cd2fe6779de0360736
+source-git-commit: 4d76d8bac41e19168abb1819841dfc62be07ea0c
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
-
 
 # Registrering, inloggning och användarprofil {#registration-login-and-userprofile}
 
 ## Introduktion {#introduction}
 
-Webbprogram har ofta funktioner för kontohantering så att slutanvändarna kan registrera sig på en webbplats. På så sätt kan de fortsätta med sina användarprofiler och logga in i framtiden och få en konsekvent upplevelse. I den här artikeln beskrivs:
+Webbprogram har ofta funktioner för kontohantering så att slutanvändarna kan registrera sig på en webbplats som bevarar användarinformationen, vilket gör att de kan logga in i framtiden och få en konsekvent upplevelse. I den här artikeln beskrivs följande begrepp för AEM som en Cloud Service:
 
 * Registrering
 * Inloggning
@@ -120,7 +120,7 @@ Till skillnad från andra AEM använder synkronisering av användare och gruppme
 
 >[!NOTE]
 >
->Som standard är synkronisering av användarprofiler och gruppmedlemskap inte aktiverat och data kommer därför inte att synkroniseras till eller ens bli permanent beständiga på publiceringsnivån. Om du vill aktivera funktionen skickar du en begäran till kundsupport med information om vilket program och vilken miljö som är lämplig.
+>Som standard är synkronisering av användarprofiler och gruppmedlemskap inte aktiverat och data kommer därför inte att synkroniseras till eller ens bli permanent beständiga på publiceringsnivån. Om du vill aktivera funktionen skickar du en begäran till kundsupport med information om rätt program och miljöer.
 
 ## Cacheöverväganden {#cache-considerations}
 
