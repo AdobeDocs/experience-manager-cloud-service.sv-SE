@@ -1,64 +1,53 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.3.0
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.4.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.4.0
 feature: Versionsinformation
+exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
 translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+source-git-commit: 69694f2067c53667803d38bbf7bc752f3b3afac6
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.4.0 {#release-notes}
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.3.0 {#release-notes}
-
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.3.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.4.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.3.0 är 11 mars 2021.
-Nästa version är planerad till den 8 april 2021.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.4.0 är 8 april 2021.
+Nästa version är planerad till 6 maj 2021.
 
-## Cloud Manager {#cloud-manager}
+### Nyheter {#what-is-new-april}
 
-### Nyheter {#what-is-new}
+* Gränssnittsuppdateringar i arbetsflödena för Lägg till och redigera program gör dem mer intuitiva.
 
-* Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att se ett meddelande om sina tidigare konfigurationer och kommer att kunna självbetjäna via användargränssnittet.
+* En användare med nödvändig behörighet kan nu skicka slutpunkten för e-handeln via användargränssnittet.
 
-* Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
-   * Lägg till Sites-lösning i ett befintligt program med Assets eller vice versa.
-   * Ta bort platser eller resurser från ett befintligt program med både platser och resurser.
-   * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
+* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM version `2021.03.5104.20210328T185548Z` eller senare.
 
-* **AEM Push** Updatelabel visas nu för både Pipeline Execution och Activity screens.
+* Knappen **Hantera Git** visas på pipelines-kortet även när inga rörledningar har konfigurerats.
 
-* Om en miljö är i viloläge men det även finns en tillgänglig AEM uppdatering, kommer **statusen** att ha företräde framför **Tillgänglig uppdatering**.
+* Den version av AEM projekttyp som används av Cloud Manager har uppdaterats till version 27.
 
-* Användarna kan nu se sin molnhanterarroll(er) genom att välja alternativet Visa molnhanterarroll(er) efter att ha navigerat till ikonen Användarprofil (överst till höger) i Unified Shell.
+* Projekt i Adobe I/O Developer Console som har skapats i Cloud Manager kan inte längre redigeras eller tas bort oavsiktligt.
 
-* Etiketten **Ansökan om godkännande** har ändrats till **Produktionsgodkännande** för större tydlighet.
+* När en användare lägger till en ny miljö informeras de om att när en miljö väl har skapats kan den inte flyttas till en annan region.
 
-* **Versionsetiketten** har ändrats till **Git-tagg** på körningsskärmen för produktionspipeline.
+* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM version 2021.03.5104.20210328T185548Z eller senare.
 
-* Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende: **Avbryt omedelbart** och **Godkänn omedelbart**.
+* Felmeddelandet när en pipeline startades när en miljö togs bort har klargjorts.
 
-* Listorna över klass- och metodborttagning har uppdaterats baserat på version `2021.3.4997.20210303T022849Z-210225` av AEM Cloud Service-SDK.
+* OSGi-paket som tillhandahålls av Eclipse-projekt undantas nu från regeln `CQBP-84--dependencies`.
 
-* Produktionspipelinen för Cloud Manager kommer nu att innehålla funktionen [testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing).
+### Felkorrigeringar {#bug-fixes-cm-april}
 
-### Felkorrigeringar {#bug-fixes}
+* När du redigerar Experience Audit-sidan för en pipeline kommer en indatasökväg som börjar med ett snedstreck `( / )` inte längre att resultera i att steget fastnar i väntande status.
 
-* Paketversionshantering hoppades över i vissa fall under AEM push-uppgradering.
+* När en ny produktionspipeline skapas granskades inte standardstartsidan om användaren inte lägger till någon åsidosättning av innehållsgranskning.
 
-* Vissa kvalitetsproblem upptäcktes inte korrekt när paket bäddats in i andra paket.
+* Problem för `CloudServiceIncompatibleWorkflowProcess` hade fel allvarlighetsgrad i den hämtningsbara CSV-filen för utgåvan.
 
-* I svåra fall kan standardprogramnamnet som genereras när dialogrutan Lägg till program öppnas vara en dubblett av ett befintligt programnamn.
-
-* Om användaren navigerar bort från sidan för pipeline-körning omedelbart efter att ha startat en pipeline visas ett felmeddelande om att åtgärden misslyckades, även om körningen faktiskt startar.
-
-* Byggsteget startades om i onödan när kundbyggen resulterade i ogiltiga paket.
-
-* Ibland kan användaren se en grön &quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när den konfigurationen inte har distribuerats.
-
-* Alla befintliga produktionspipelinjer aktiveras automatiskt med Experience Audit-steget.
+* `Runmode`-kontrollen genererade falskt positiva värden på noder som inte finns i mappen.
