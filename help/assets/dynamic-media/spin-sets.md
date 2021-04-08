@@ -3,15 +3,15 @@ title: Snurrande uppsättningar
 description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 feature: Snurrande uppsättningar
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: ed470472-62d9-4684-971b-30df3919c180
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1767'
 ht-degree: 12%
 
 ---
-
 
 # Snurrande uppsättningar{#spin-sets}
 
@@ -39,11 +39,11 @@ Så här kommer du igång snabbt med Spin Sets:
    >
    >Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen.
 
-1. [Ladda upp bilderna för flera vyer.](#uploading-assets-for-spin-sets)
+1. [Ladda upp bilderna för olika vyer](#uploading-assets-for-spin-sets).
 
    Du behöver minst 8-12 tagningar av ett objekt för en endimensionell snurra och 16-24 för en tvådimensionell snurra uppsättning. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30° (360/12) för varje tagning.
 
-1. [Skapa snurruppsättningar.](#creating-spin-sets)
+1. [Skapa snurruppsättningar](#creating-spin-sets).
 
    Om du vill skapa en snurruppsättning väljer du **[!UICONTROL Create > Spin Set]** och ger uppsättningen ett namn, väljer resurser och väljer i vilken ordning bilderna ska visas.
 
@@ -55,15 +55,15 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools > Assets > Viewer Presets]**.
 
-   Se [Lägga till och redigera visningsprogramförinställningar.](/help/assets/dynamic-media/managing-viewer-presets.md)
+   Se [Lägga till och redigera visningsprogramförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
    Du kan visa och komma åt uppsättningar som skapats med förinställningar för gruppuppsättningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar, *visas inte* i användargränssnittet.)
 
-1. [Förhandsgranska snurra uppsättningar.](/help/assets/dynamic-media/previewing-assets.md)
+1. [Förhandsgranska snurruppsättningar](/help/assets/dynamic-media/previewing-assets.md).
 
    Markera rotationsuppsättningen så kan du förhandsgranska den. Rotera snurrsuppsättningen. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan.
 
-1. [Publicera snurruppsättningar.](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
+1. [Publicera snurruppsättningar](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
    När du publicerar en snurruppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera visningsförinställningen](/help/assets/dynamic-media/managing-viewer-presets.md).
 
@@ -138,7 +138,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
    Om det behövs kan du dra en resurs sorteringsikon till höger om resursens filnamn för att ordna om bilderna uppåt eller nedåt i uppsättningslistan.
 
-   ![Ändra ordning på bildruta 11 i rotationsrutan genom att dra den till en ny plats.](assets/6_5_spinset-reorderassets.png)
+   ![Ändra ordning på bildruta 11 i rotationsrutan genom att dra den till en ny plats](assets/6_5_spinset-reorderassets.png)
 
    Ändra ordning på bildruta 11 i rotationsrutan genom att dra den till en ny plats.
 
