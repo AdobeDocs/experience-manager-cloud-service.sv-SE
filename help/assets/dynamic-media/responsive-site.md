@@ -3,15 +3,15 @@ title: Leverera optimerade bilder för en responsiv webbplats
 description: Lär dig hur du använder funktionen för responsiv kod för att leverera optimerade bilder från Dynamic Media.
 feature: Resurshantering
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 62af6f3f-9c86-44ad-870d-140f572f99c5
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '316'
 ht-degree: 13%
 
 ---
-
 
 # Leverera optimerade bilder för en responsiv webbplats {#delivering-optimized-images-for-a-responsive-site}
 
@@ -19,9 +19,9 @@ Använd funktionen Responsiv kod när du vill dela koden för responsiv visning 
 
 Den här funktionen är användbar om webbplatsen finns på en WCM-fil från tredje part. Om webbplatsen däremot finns på AEM återger en extern bildserver bilden och skickar den till webbsidan.
 
-Se även [Bädda in Video Viewer på en webbsida.](embed-code.md)
+Se även [Bädda in Video Viewer på en webbsida](embed-code.md).
 
-Se även [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
 **Så här levererar du optimerade bilder för en responsiv webbplats**:
 
