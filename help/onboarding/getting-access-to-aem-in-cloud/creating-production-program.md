@@ -1,14 +1,14 @@
 ---
 title: 'Skapa ett produktionsprogram '
-description: 'Skapa ett produktionsprogram '
+description: Skapa ett produktionsprogram
+exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
 translation-type: tm+mt
-source-git-commit: 1aca6f0b23aa328ca364f7ab1d4c722bb5cbca9a
+source-git-commit: 6a5882a942511a07b9dcdd2e2bf47eb311235f92
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett produktionsprogram {#create-production-program}
 
@@ -29,11 +29,6 @@ Följ stegen nedan för att skapa ett produktionsprogram:
 
 1. Användaren väljer lösningar som ska inkluderas i programmet på skärmen som visas efter skärmen ovan.
 
-
-
-   >[!NOTE]
-   >
-   >Skärmen nedan visas endast för de kunder som har köpt mer än en lösning. För kunder som bara köpt en lösning visas inte skärmen för val av lösning nedan.
 
    ![](assets/set-up-prod2.png)
 
