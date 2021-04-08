@@ -3,7 +3,7 @@ title: 'Redigera ett produktionsprogram '
 description: Redigera ett produktionsprogram
 exl-id: 745c10af-f0a0-49e9-bb79-3fd058fad16c
 translation-type: tm+mt
-source-git-commit: 26cbd2369762050eb2e85d714b8f6b0ff129f171
+source-git-commit: 6ad0e83f865572ff6eb1c20ee6851c3eb48f2311
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
@@ -33,12 +33,12 @@ Följ stegen nedan för att redigera ett produktionsprogram:
 
    ![](assets/edit-program-general.png)
 
-   På fliken **Lösningar och tillägg** visas två alternativ, till exempel **Platser** och **Resurser** för både produktions- och sandlådeprogram. Dessutom kan du välja alternativet **Commerce**, som är tillgängligt under **Platser**, vilket visas i bilden nedan.
+   På fliken **Lösningar och tillägg** visas två alternativ, till exempel **Platser** och **Resurser** för både produktions- och sandlådeprogram. Du kan också välja alternativet **Commerce**, som är tillgängligt under **Platser**, vilket visas i bilden nedan.
 
    ![](assets/edit-prg.png)
 
    >[!NOTE]
-   >Minst en lösning måste väljas för ett program, vilket innebär att användaren inte får avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
+   >Minst en lösning måste väljas för ett program, det vill säga användaren får inte avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
 
 1. Klicka på **Spara** för att slutföra redigeringsprogramprocessen.
 
