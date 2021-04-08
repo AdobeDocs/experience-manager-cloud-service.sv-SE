@@ -3,15 +3,15 @@ title: Blandade medieuppsättningar
 description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic Media.
 feature: Blandade medieuppsättningar
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 7ccde741-38d2-44c9-9378-f2721384aab7
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1394'
 ht-degree: 25%
 
 ---
-
 
 # Blandade medieuppsättningar{#mixed-media-sets}
 
@@ -33,11 +33,11 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Om det behövs kan du skapa [bilduppsättningar](/help/assets/dynamic-media/image-sets.md) och [rotationsuppsättningar](/help/assets/dynamic-media/spin-sets.md). Eftersom användare kan zooma in bilder i visningsprogrammet för den blandade medieuppsättningen måste du ta hänsyn till zoomningen när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen.
 
-1. [Skapa blandade medieuppsättningar.](#creating-mixed-media-sets)
+1. [Skapa blandade medieuppsättningar](#creating-mixed-media-sets).
 
    Om du vill skapa en uppsättning med blandade medier trycker du på **[!UICONTROL Create > Mixed Media Set]** på resurssidan och ger sedan uppsättningen ett namn, väljer resurser och väljer i vilken ordning bilderna ska visas.
 
-   Se [Arbeta med väljare.](/help/assets/dynamic-media/working-with-selectors.md)
+   Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
 1. Ställ in [förinställningar för blandad Media Viewer](/help/assets/dynamic-media/managing-viewer-presets.md) efter behov.
 
@@ -45,13 +45,13 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools > Assets > Viewer Presets]**.
 
-   Se [Lägga till och redigera visningsprogramförinställningar.](/help/assets/dynamic-media/managing-viewer-presets.md)
+   Se [Lägga till och redigera visningsprogramförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
-1. [Förhandsgranska blandade medieuppsättningar.](#previewing-mixed-media-sets)
+1. [Förhandsgranska blandade medieuppsättningar](#previewing-mixed-media-sets).
 
    Markera den blandade medieuppsättningen och du kan förhandsgranska den. Klicka på miniatyrbildikonerna för att undersöka den blandade medieuppsättningen i det valda visningsprogrammet. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan.
 
-1. [Publicera blandade medieuppsättningar.](#publishing-mixed-media-sets)
+1. [Publicera blandade medieuppsättningar](#publishing-mixed-media-sets).
 
    När du publicerar en blandad medieuppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera visningsförinställningen](/help/assets/dynamic-media/managing-viewer-presets.md#publishing-viewer-presets).
 
@@ -174,4 +174,3 @@ Mer information om hur du publicerar blandade medieuppsättningar finns i [Publi
 >[!NOTE]
 >
 >Om den blandade medieuppsättningen inte hamnar helt i leveranstjänsten första gången du publicerar den publicerar du den blandade medieuppsättningen en andra gång.
-
