@@ -6,9 +6,9 @@ topic: Yrkesverksamma inom affärsverksamhet
 role: Business Practitioner
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
 translation-type: tm+mt
-source-git-commit: e1ca8c3a26fae6e421a087ade03cfeddc7a94a0e
+source-git-commit: 4f2aa7d444d46aef959abc953e7a943f00cbb0c1
 workflow-type: tm+mt
-source-wordcount: '1875'
+source-wordcount: '1873'
 ht-degree: 0%
 
 ---
@@ -45,11 +45,11 @@ Förbättringar i den senaste versionen av Smart Imaging:
 
 * Förbättrad Google SEO-rankning för webbsidor med hjälp av den senaste Smart Imaging-funktionen.
 * Serverar optimerat innehåll direkt (vid körning).
-* Använder Adobe Sensei-teknik för att konvertera enligt den kvalitet (qlt) som anges i bildbegäran.
-* Smart Imaging kan inaktiveras med URL-parametern &quot;bfc&quot;.
+* Använder Adobe Sensei-teknik för att konvertera enligt den kvalitet (`qlt`) som anges i bildbegäran.
+* Smart Imaging kan inaktiveras med URL-parametern `bfc`.
 * TTL-oberoende (Time To Live). Tidigare var en minsta TTL på 12 timmar obligatorisk för att Smart Imaging skulle fungera.
 * Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
-* Kunder som använder anpassade rubriker i sin regeluppsättning. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägga till ett anpassat rubrikvärde i bildsvar|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)) har nytta av den senaste smarta bildhanteringen. Dessa rubriker är inte blockerade, till skillnad från den tidigare versionen av Smart Imaging.
+* Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägga till ett anpassat rubrikvärde i bildsvar|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
 
 ## Kostar licensieringen för smart bildbehandling några? {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
