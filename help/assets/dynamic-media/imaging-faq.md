@@ -6,7 +6,7 @@ topic: Yrkesverksamma inom affärsverksamhet
 role: Business Practitioner
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
 translation-type: tm+mt
-source-git-commit: 4f2aa7d444d46aef959abc953e7a943f00cbb0c1
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
 source-wordcount: '1873'
 ht-degree: 0%
@@ -137,7 +137,7 @@ Din första anpassade domän kostar inget extra med en Dynamic Media-licens.
 
 Du initierar begäran om att använda smart bildbehandling; den inte aktiveras automatiskt.
 
-1. [Använd Admin Console för att skapa ett supportärende.](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
+1. [Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html).
 1. Ange följande information i ditt supportärende:
 
    1. Primärt kontaktnamn, e-postadress, telefon.
