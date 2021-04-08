@@ -1,14 +1,14 @@
 ---
 title: Anpassade regler för kodkvalitet - Cloud Services
 description: Anpassade regler för kodkvalitet - Cloud Services
+exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 translation-type: tm+mt
-source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
+source-git-commit: d4fb51aa1b5f0bc469c961b0e7287758ec17e9e9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3278'
+ht-degree: 4%
 
 ---
-
 
 # Anpassade regler för kodkvalitet {#custom-code-quality-rules}
 
@@ -613,7 +613,7 @@ Det har varit en god praxis sedan länge att innehållsträdet /libs i AEM ska b
 Ett vanligt problem som inträffar i komplexa projekt är när samma OSGi-komponent konfigureras flera gånger. Detta skapar en tvetydighet om vilken konfiguration som kan användas. Den här regeln är&quot;körningsmedveten&quot; eftersom den bara identifierar problem där samma komponent har konfigurerats flera gånger i samma körningsläge (eller en kombination av körningslägen).
 
 >[!NOTE]
->Den här regeln ger problem där samma konfiguration, med samma sökväg, definieras i flera paket, inklusive fall där samma paket dupliceras i den övergripande listan över inbyggda paket. Om bygget till exempel skapar paket med namnet `com.myco:com.myco.ui.apps` och `com.myco:com.myco.all` där `com.myco:com.myco.all` bäddar in `com.myco:com.myco.ui.apps`, kommer alla konfigurationer i `com.myco:com.myco.ui.apps` att rapporteras som dubbletter. Detta är vanligtvis ett fall där [riktlinjerna för innehållspaketets struktur](/help/implementing/developing/aem-project-content-package-structure.md) inte följs; I det här specifika exemplet saknar paketet `com.myco:com.myco.ui.apps` egenskapen `<cloudManagerTarget>none</cloudManagerTarget>`.
+>Den här regeln ger problem där samma konfiguration, med samma sökväg, definieras i flera paket, inklusive fall där samma paket dupliceras i den övergripande listan över inbyggda paket. Om bygget till exempel skapar paket med namnet `com.myco:com.myco.ui.apps` och `com.myco:com.myco.all` där `com.myco:com.myco.all` bäddar in `com.myco:com.myco.ui.apps`, kommer alla konfigurationer i `com.myco:com.myco.ui.apps` att rapporteras som dubbletter. Detta är vanligtvis ett fall där [riktlinjerna för innehållspaketets struktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md) inte följs; I det här specifika exemplet saknar paketet `com.myco:com.myco.ui.apps` egenskapen `<cloudManagerTarget>none</cloudManagerTarget>`.
 
 #### Icke-kompatibel kod {#non-compliant-code-osgi}
 
@@ -914,9 +914,3 @@ AEM Cloud Service tillåter inte att anpassade sökindexdefinitioner (d.v.s. nod
 **Sedan**: Version 2021.2.0
 
 AEM Cloud Service tillåter inte att anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) innehåller egenskapen reindex. Indexering med den här egenskapen måste uppdateras innan migrering till AEM Cloud Service. Mer information finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
-
-
-
-
-
-
