@@ -2,15 +2,15 @@
 title: Felsöka Dynamic Media
 description: Felsökningstips när du använder Dynamic Media.
 topic: '"Administratör,Affärsansvarig"'
-role: Administratör,Affärsledare
+role: Administrator,Business Practitioner
+exl-id: 3e8a085f-57eb-4009-a5e8-1080b4835ae2
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '993'
 ht-degree: 1%
 
 ---
-
 
 # Felsöka Dynamic Media {#troubleshooting-dynamic-media-scene-mode}
 
@@ -18,7 +18,7 @@ I följande avsnitt beskrivs felsökning för Dynamic Media.
 
 ## Ny Dynamic Media-konfiguration {#new-dm-config}
 
-Se [Felsöka en ny Dynamic Media-konfiguration.](/help/assets/dynamic-media/config-dm.md#troubleshoot-dm-config)
+Se [Felsöka en ny Dynamic Media-konfiguration](/help/assets/dynamic-media/config-dm.md#troubleshoot-dm-config).
 
 ## Allmänt (alla resurser) {#general-all-assets}
 
@@ -221,4 +221,3 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
   </tr>
  </tbody>
 </table>
-
