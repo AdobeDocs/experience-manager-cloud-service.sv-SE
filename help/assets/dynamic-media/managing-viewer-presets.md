@@ -3,15 +3,15 @@ title: Hantera visningsförinställningar
 description: Lär dig hur du skapar och hanterar visningsförinställningar i Dynamic Media.
 feature: Förinställningar för visningsprogram,visningsprogram
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: da2e1a10-f54b-440e-b70c-f04ad4caeac1
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '4138'
+source-wordcount: '4136'
 ht-degree: 12%
 
 ---
-
 
 # Hantera visningsförinställningar{#managing-viewer-presets}
 
@@ -59,7 +59,7 @@ Mer information om hur du bäddar in responsiva visningsprogram på dina webbsid
 >[!NOTE]
 >
 >Publicera alla färdiga visningsprogram innan du använder dem för första gången.
->Se [Förinställningar för publiceringsvisningsprogram.](#publishing-viewer-presets)
+>Se [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
 
 ### Systemkompatibilitet för visningsförinställningar {#viewer-preset-system-compatibility}
 
