@@ -4,15 +4,15 @@ description: '"Tips och vedertagna metoder för att namnge, ordna och hantera Dy
 contentOwner: Rick Brough
 feature: Resurshantering, bildprofiler, videoprofiler
 topic: Yrkesverksamma inom affärsverksamhet
-role: Administratör,Affärsledare
+role: Administrator,Business Practitioner
+exl-id: 82ab5432-088c-4442-a9db-9f4e0184febf
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för att ordna dina digitala resurser så att de kan använda bildprofiler eller videoprofiler{#best-practices-for-organizing-your-digital-assets-for-using-profiles}
 
@@ -26,7 +26,7 @@ Här följer några tips om hur du kan ordna dina digitala resursfiler.
 
 * Ordna dina filer baserat på de metadata du lägger till dem i stället för på de mappar där de finns. Du kan åstadkomma detta genom att lägga till metadataprofiler.
 
-   * Se [Metadataprofiler.](/help/assets/metadata-profiles.md)
+   * Se [Metadataprofiler](/help/assets/metadata-profiles.md).
    * Se [Metadata för hantering av digitala resurser](/help/assets/manage-metadata.md).
 
 * Vanligtvis växer din samling av digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning bland alla dina överförda resurser. Genom att standardisera på dessa saker kan du säkerställa att när din pool med digitala resurser växer kan du använda bearbetningsprofiler på mappar med större precision och enhetlighet.
@@ -44,4 +44,3 @@ Här följer några tips om hur du kan ordna dina digitala resursfiler.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att tilldelade profiler inte bryts.
 * Anta att en resurs redan är publicerad, sedan använder du Adobe Experience Manager för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen. Den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock&quot;förlorad&quot; för Experience Manager och kan inte avpubliceras. Därför bör du avpublicera resurser först innan du flyttar dem till en annan mapp.
-
