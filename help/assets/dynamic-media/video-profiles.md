@@ -3,15 +3,15 @@ title: Videoprofiler för Dynamic Media
 description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. Du kan också lägga till smart beskärning i videoklipp.
 feature: Resurshantering, videoprofiler, återgivningar
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '3491'
+source-wordcount: '3489'
 ht-degree: 9%
 
 ---
-
 
 # Videoprofiler för Dynamic Media{#video-profiles}
 
@@ -37,7 +37,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 >
 >Metadata är användbara när du söker efter resurser. Miniatyrbilderna är statiska videobilder som genereras under kodningen. De krävs av Experience Manager-systemet och används i användargränssnittet för att hjälpa dig att visuellt identifiera videofilmer i kortvyn, sökresultatvyn och resurslista. Du kan se de genererade miniatyrbilderna när du trycker på ikonen Återgivningar (en målarpalett) för en kodad video.
 
-När du är klar med att skapa videoprofilen använder du den på en eller flera mappar. Se [Använda en videoprofil för mappar.](#applying-a-video-profile-to-folders)
+När du är klar med att skapa videoprofilen använder du den på en eller flera mappar. Se [Använda en videoprofil för mappar](#applying-a-video-profile-to-folders).
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](/help/assets/dynamic-media/config-dm.md#configuring-asset-processing).
 
@@ -429,4 +429,3 @@ Du kan ta bort en videoprofil från en mapp från menyn **[!UICONTROL Tools]** e
 1. Tryck eller klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill ta bort en videoprofil från.
 1. Markera mappen genom att trycka eller klicka på bockmarkeringen och sedan trycka på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Video Profiles]**, välj **[!UICONTROL None]** i listrutan och klicka på **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
-
