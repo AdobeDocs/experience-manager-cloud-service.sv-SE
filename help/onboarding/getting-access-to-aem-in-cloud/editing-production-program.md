@@ -1,14 +1,14 @@
 ---
 title: 'Redigera ett produktionsprogram '
-description: 'Redigera ett produktionsprogram '
+description: Redigera ett produktionsprogram
+exl-id: 745c10af-f0a0-49e9-bb79-3fd058fad16c
 translation-type: tm+mt
-source-git-commit: c34b9cbd019ee74059e13be4f19c1bb9a54fa2ba
+source-git-commit: 6a5882a942511a07b9dcdd2e2bf47eb311235f92
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
-
 
 # Redigera ett produktionsprogram {#create-production-program}
 
@@ -25,12 +25,10 @@ Följ stegen nedan för att redigera ett produktionsprogram:
 
 1. Gå till sidan **Redigera program** i Cloud Managers *Översikt*
 
-1. Sidan **Redigera program** visar två flikar (Allmänt och Lösningar) för både Production- och Sandbox-program.
+1. På sidan **Redigera program** visas tre alternativ (**Platser**, **Commerce** och **Resurser**) för både Production- och Sandbox-program.
 
-   ![](assets/edit-program.png)
+   ![](assets/edit-prg.png)
 
-   >[!NOTE]
-   >Även om både Sites och Assets visas kan en av dem inaktiveras baserat på vad som har köpts och inte använts. I synnerhet om organisationen inte har oanvända tillstånd för en viss lösning, kommer den lösningen att visas men inaktiveras.
 
 ## Att tänka på när du redigerar ett program {#considerations-editing}
 
