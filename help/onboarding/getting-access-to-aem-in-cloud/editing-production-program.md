@@ -3,7 +3,7 @@ title: 'Redigera ett produktionsprogram '
 description: Redigera ett produktionsprogram
 exl-id: 745c10af-f0a0-49e9-bb79-3fd058fad16c
 translation-type: tm+mt
-source-git-commit: 87d4e7d17b6a035a1127b8f8599214bfd763644a
+source-git-commit: 9de1b85f8909709c08cb7358414c18c813aac684
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -40,13 +40,13 @@ Följ stegen nedan för att redigera ett produktionsprogram:
    >[!NOTE]
    >Minst en lösning måste väljas för ett program, det vill säga användaren får inte avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
 
-1. Klicka på **Spara** för att slutföra redigeringsprogramprocessen.
+1. Klicka på **Spara** för att slutföra redigeringsprogrammet.
 
 
 ## Att tänka på när du redigerar ett program {#considerations-editing}
 
 Tänk på följande när du redigerar ett program:
 
-* Minst en lösning måste väljas för ett program, vilket innebär att användaren inte får avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
+* Minst en lösning måste väljas för ett program, det vill säga användaren får inte avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
 
 * Om du klickar på knappen **Spara** och de valda lösningarna har ändrats kommer lösningsuppdateringar i miljöer att börja gälla efter nästa distribution.
