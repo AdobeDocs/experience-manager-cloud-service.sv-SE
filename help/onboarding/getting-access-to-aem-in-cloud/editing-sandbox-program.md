@@ -3,9 +3,9 @@ title: 'Redigera ett sandlådeprogram '
 description: Redigera ett sandlådeprogram
 exl-id: e4545f7e-5329-40ad-81bb-a383c68f5d66
 translation-type: tm+mt
-source-git-commit: 6ad0e83f865572ff6eb1c20ee6851c3eb48f2311
+source-git-commit: 87d4e7d17b6a035a1127b8f8599214bfd763644a
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,6 @@ Följ stegen nedan för att redigera ett sandlådeprogram:
 
 Tänk på följande när du redigerar ett program:
 
-* Minst en lösning måste väljas för ett program, vilket innebär att det inte går att avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
+* Minst en lösning måste väljas för ett program, vilket innebär att användaren inte får avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
 
 * Om du klickar på knappen **Spara** och de valda lösningarna har ändrats kommer lösningsuppdateringar i miljöer att börja gälla efter nästa distribution.
