@@ -3,9 +3,9 @@ title: 'Redigera ett produktionsprogram '
 description: Redigera ett produktionsprogram
 exl-id: 745c10af-f0a0-49e9-bb79-3fd058fad16c
 translation-type: tm+mt
-source-git-commit: 6a5882a942511a07b9dcdd2e2bf47eb311235f92
+source-git-commit: 8766b6fc6044a292b6dc7c2d9203a70d082edb01
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,20 @@ Följ stegen nedan för att redigera ett produktionsprogram:
 
 1. Gå till sidan **Redigera program** i Cloud Managers *Översikt*
 
-1. På sidan **Redigera program** visas tre alternativ (**Platser**, **Commerce** och **Resurser**) för både Production- och Sandbox-program.
+1. Sidan **Redigera program** visar tre alternativ (**Platser** och **Resurser**) för både Production- och Sandbox-program. Dessutom kan du välja alternativet **Commerce**, som är tillgängligt under **Platser**, vilket visas i bilden nedan.
 
    ![](assets/edit-prg.png)
+
+   >[!NOTE]
+   >Minst en lösning måste väljas för ett program, vilket innebär att användaren inte får avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
+
+1. Klicka på **Spara** för att slutföra redigeringsprogramprocessen.
 
 
 ## Att tänka på när du redigerar ett program {#considerations-editing}
 
 Tänk på följande när du redigerar ett program:
 
-* Minst en lösning måste väljas för ett program, vilket innebär att det inte går att avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
+* Minst en lösning måste väljas för ett program, vilket innebär att användaren inte får avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
 
 * Om du klickar på knappen **Spara** och de valda lösningarna har ändrats kommer lösningsuppdateringar i miljöer att börja gälla efter nästa distribution.
