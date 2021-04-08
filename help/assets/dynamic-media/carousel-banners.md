@@ -3,15 +3,15 @@ title: Karusellbanner
 description: Lär dig hur du arbetar med Carousel Banners i Dynamic Media.
 feature: Karusellbanner
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 34541302-6610-4f5e-af93-c95328dda910
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '4482'
+source-wordcount: '4480'
 ht-degree: 3%
 
 ---
-
 
 # Karusellbanner{#carousel-banners}
 
@@ -74,11 +74,11 @@ Så här kommer du igång snabbt:
 
    Om du vill skapa en karuselluppsättning i Assets trycker du på **[!UICONTROL Create]** och väljer sedan **[!UICONTROL Carousel Sets]**. Lägg till resurser i bilderna och tryck på **[!UICONTROL Save]**. Du kan också redigera karusellens utseende och beteende direkt i redigeraren.
 
-1. [Lägg till aktiveringspunkter eller bildscheman i en bildbanderoll.](#adding-hotspots-or-image-maps-to-an-image-banner)
+1. [Lägg till aktiveringspunkter eller bildscheman i en bildbanderoll](#adding-hotspots-or-image-maps-to-an-image-banner).
 
    Lägg till en eller flera hotspot-områden eller bildscheman i en bildbanderoll. Koppla sedan vart och ett till en åtgärd som en länk, en snabbvy eller ett Experience Fragment. När du har lagt till aktiveringspunkter eller bildscheman avslutar du den här uppgiften genom att publicera karuselluppsättningen. Med Publicering skapas den inbäddningskod som du kan använda för att kopiera och tillämpa på webbplatsens landningssida.
 
-   Se [(Valfritt) Förhandsgranska Carousel-banderoller.](#optional-previewing-carousel-banners) - Valfritt. Om du vill kan du visa en representation av karuselluppsättningen och testa dess interaktivitet.
+   Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners) - Valfritt. Om du vill kan du visa en representation av karuselluppsättningen och testa dess interaktivitet.
 
 1. [Publicera Carousel Banners](#publishing-carousel-banners).
 
@@ -92,7 +92,7 @@ Så här kommer du igång snabbt:
    * [Lägg till en karusellbanderoll på Experience Manager](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md). Om du använder Experience Manager Sites kan du lägga till karuselluppsättningen direkt på sidan med hjälp av komponenten Interactive Media.
 
 
-Om du måste redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar.](#editing-carousel-sets) Dessutom kan du visa och redigera  [Carousel Set-egenskaper](/help/assets/manage-digital-assets.md#editing-properties).
+Om du måste redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar](#editing-carousel-sets). Dessutom kan du visa och redigera [Carousel Set-egenskaper](/help/assets/manage-digital-assets.md#editing-properties).
 
 ## Identifiera aktiveringspunkt- och bildschemavariabler {#identifying-hotspot-and-image-map-variables}
 
@@ -252,7 +252,7 @@ Kom ihåg att spara ditt arbete när du lägger till hotspot-områden eller bild
 
 När du är klar med att skapa en karusellbanderoll kan du använda Förhandsgranska för att se hur karusellbanderollen ser ut för kunderna.
 
-Se [(Valfritt) Förhandsgranska Carousel Banners.](#optional-previewing-carousel-banners)
+Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
 
 >[!NOTE]
 >
@@ -370,7 +370,7 @@ Du kan använda Förhandsgranska för att se hur karusellbanderollen ser ut för
 När du är nöjd med karusellbanderollen kan du publicera den.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
-Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
 Du kan förhandsgranska karusellbanners i Carousel Editor (föredragen metod) eller i **[!UICONTROL Viewers]**-listan.
 
@@ -407,7 +407,7 @@ Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynami
 När du har överfört banderollbilder för att skapa en karusell, tillagda hotspot-områden eller bildscheman, eller båda, till banderollen. Carousel-uppsättningen publicerades. Nu kan du lägga till den på din befintliga webbsida.
 
 >[!NOTE]
-Om du är kund hos AEM Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Om du är kund hos AEM Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
 Om du däremot är en fristående kund som använder Experience Manager Assets kan du lägga till karusellbanderollen manuellt på webbplatsens landningssida.
 
