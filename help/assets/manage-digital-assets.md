@@ -4,15 +4,15 @@ description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
 feature: Resurshantering, publicering, samarbete, tillgångsbearbetning
-role: Affärsman, arkitekt, administratör
+role: Business Practitioner,Architect,Administrator
+exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '4202'
+source-wordcount: '4198'
 ht-degree: 12%
 
 ---
-
 
 # Hantera resurser {#manage-assets}
 
@@ -285,7 +285,7 @@ Se [Hämta resurser från [!DNL Experience Manager]](/help/assets/download-asset
 <!--
 >[!NOTE]
 >
->For more information specific to Dynamic Media, see [Publishing Dynamic Media Assets.](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
+>For more information specific to Dynamic Media, see [Publishing Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 -->
 
 1. Navigera till platsen för resurserna/mappen som du vill publicera.
