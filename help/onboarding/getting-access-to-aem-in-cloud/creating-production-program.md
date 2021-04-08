@@ -3,9 +3,9 @@ title: 'Skapa ett produktionsprogram '
 description: Skapa ett produktionsprogram
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
 translation-type: tm+mt
-source-git-commit: 69694f2067c53667803d38bbf7bc752f3b3afac6
+source-git-commit: 8766b6fc6044a292b6dc7c2d9203a70d082edb01
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,14 @@ Följ stegen nedan för att skapa ett produktionsprogram:
 
    ![](assets/create-prod1.png)
 
-1. Användaren väljer lösningar som ska inkluderas i programmet på skärmen som visas efter skärmen ovan.
+1. Användaren väljer lösningar som ska inkluderas i programmet på skärmen som visas efter skärmen ovan. När du har valt en eller flera lösningar klickar du på **Skapa**.
 
 
-   ![](assets/set-up-prod-2.png)
+   ![](assets/setup-prod-select.png)
 
-1. När du har valt lösningarna klickar du på **Skapa**.
+   Dessutom kan du välja alternativet **Commerce** under **Platser**, enligt bilden nedan, och klicka på **Skapa**.
 
+   ![](assets/setup-prod-commerce.png)
 
 1. När du ser ditt programkort på landningssidan för du pekaren över det och väljer ikonen Cloud Manager för att gå till sidan med Cloud Manager **Översikt**.
 
