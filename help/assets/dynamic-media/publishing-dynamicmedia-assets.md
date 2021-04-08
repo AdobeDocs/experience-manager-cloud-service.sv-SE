@@ -4,21 +4,21 @@ description: Lär dig hur du publicerar Dynamic Media-resurser.
 contentOwner: Rick Brough
 feature: Resurshantering
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 8ee759dc-cb8f-4e80-8175-2c3ba06da862
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '455'
 ht-degree: 2%
 
 ---
-
 
 # Publicera Dynamic Media Assets {#publishing-dynamic-media-assets}
 
 Du publicerar dina Dynamic Media-resurser genom att välja de resurser du redan har överfört och trycka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in kod på sidan.
 
-Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. Se [Konfigurera Dynamic Media.](config-dm.md) Eller så kan du selektivt publicera mediefiler till antingen Dynamic Media eller Adobe Experience Manager, som utesluter varandra,  **[!UICONTROL Selective Publish]** på mappnivå. Se [Arbeta med selektiv publicering i Dynamic Media.](/help/assets/dynamic-media/selective-publishing.md)
+Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. Se [Konfigurera Dynamic Media](config-dm.md). Eller så kan du selektivt publicera resurser på antingen Dynamic Media eller Adobe Experience Manager, som utesluter varandra, med **[!UICONTROL Selective Publish]** på mappnivå. Se [Arbeta med selektiv publicering i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).
 
 I **[!UICONTROL Card View]** visas en liten globala ikon direkt under namnet på en resurs och till vänster om datumet och tiden för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
@@ -28,9 +28,9 @@ I **[!UICONTROL Card View]** visas en liten globala ikon direkt under namnet på
 
 Om du tänker publicera videomaterial direkt efter kodningen kontrollerar du att kodningen är klar. När videofilmer kodas talar systemet om för dig att ett arbetsflöde för videobearbetning pågår. När videokodningen är klar kan du förhandsgranska videoåtergivningarna. Då är det säkert att publicera videoklippen utan att det uppstår några publiceringsfel.
 
-Se även [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
-Se även [Bädda in Dynamic Media Video Viewer eller Image Viewer på en webbsida.](embed-code.md)
+Se även [Bädda in Dynamic Media Video Viewer eller Image Viewer på en webbsida](embed-code.md).
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Se även [Bädda in Dynamic Media Video Viewer eller Image Viewer på en webbsid
 
 
 
-Mer information om hur du publicerar en uppsättning eller resurs finns i [Publicera resurser.](/help/assets/manage-digital-assets.md).
+Mer information om publicering av en uppsättning eller resurs finns i [Publicera resurser](/help/assets/manage-digital-assets.md).
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
