@@ -3,15 +3,15 @@ title: Bildprofiler för Dynamic Media
 description: '"Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller båda. Använd sedan profilen på en mapp med bildresurser."'
 feature: Resurshantering, bildprofiler, återgivningar
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2622'
 ht-degree: 7%
 
 ---
-
 
 # Bildprofiler för Dynamic Media {#image-profiles}
 
@@ -96,7 +96,7 @@ I **[!UICONTROL Unsharp Mask]** har du följande filtreringsalternativ:
  </tbody>
 </table>
 
-Skärpa beskrivs i [Skärpa bilder.](/help/assets/dynamic-media/assets/sharpening_images.pdf)
+Skärpa beskrivs i [Skärpa bilder](/help/assets/dynamic-media/assets/sharpening_images.pdf).
 
 ## Skapar Dynamic Media-bildprofiler {#creating-image-profiles}
 
@@ -248,7 +248,7 @@ Du kan vid behov köra smart beskärning igen för att generera ytterligare besk
       * Om bilden har en smart beskärning eller endast en smart färgruta drar du i beskärningsrutans hörnhandtag på bilden. Justera storleken på den visningsbara ytan för beskärningen.
       * Om bilden har både en smart beskärning och en smart färgruta drar du i beskärningsrutans hörnhandtag på bilden. Justera storleken på den visningsbara ytan för beskärningen. Du kan också trycka på den smarta färgrutan under bilden (färgrutorna är statiska) och sedan dra i hörnhandtaget för beskärningsrutan. Justera storleken på den visningsbara ytan för färgrutan.
 
-      ![Ändra storlek på den smarta beskärningen i en bild.](assets/edit_smart_crops-resize.png)
+      ![Ändra storlek på den smarta beskärningen i en bild](assets/edit_smart_crops-resize.png).
 
    * Flytta den smarta beskärningsrutan. Gör något av följande:
 
