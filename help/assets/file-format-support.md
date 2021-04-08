@@ -3,15 +3,15 @@ title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
 contentOwner: AG
 feature: Resurshantering,Återgivningar
-role: Affärsledare,Administratör
+role: Business Practitioner,Administrator
+exl-id: e848aa77-7829-4adc-8b88-0279791a4525
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '810'
 ht-degree: 5%
 
 ---
-
 
 # [!DNL Assets] filformat som stöds  {#supported-file-formats}
 
@@ -96,7 +96,7 @@ Följande undertyper av rasterbildfilformat som inte stöds i [!DNL Dynamic Medi
 
 Följande 3D-format stöds.
 
-Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/dynamic-media/assets-3d.md)
+Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans till Dynamic Media |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
