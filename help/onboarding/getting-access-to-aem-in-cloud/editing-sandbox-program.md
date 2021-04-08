@@ -3,9 +3,9 @@ title: 'Redigera ett sandlådeprogram '
 description: Redigera ett sandlådeprogram
 exl-id: e4545f7e-5329-40ad-81bb-a383c68f5d66
 translation-type: tm+mt
-source-git-commit: 6a5882a942511a07b9dcdd2e2bf47eb311235f92
+source-git-commit: 8766b6fc6044a292b6dc7c2d9203a70d082edb01
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,14 @@ Följ stegen nedan för att redigera ett sandlådeprogram:
 
 1. Navigera till sidan **Redigera program** på sidan *Översikt* i Cloud Manager.
 
-1. På sidan **Redigera program** visas tre alternativ (**Platser**, **Commerce** och **Resurser**) för både Production- och Sandbox-program.
+1. Sidan **Redigera program** visar tre alternativ (**Platser** och **Resurser**) för både Production- och Sandbox-program. Dessutom kan du välja alternativet **Commerce**, som är tillgängligt under **Platser**, vilket visas i bilden nedan.
+
    ![](assets/edit-prg.png)
+
+   >[!NOTE]
+   >Minst en lösning måste väljas för ett program, vilket innebär att användaren inte får avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
+
+1. Klicka på **Spara** för att slutföra redigeringsprogramprocessen.
 
 
 ## Att tänka på när du redigerar ett program {#considerations-editing}
