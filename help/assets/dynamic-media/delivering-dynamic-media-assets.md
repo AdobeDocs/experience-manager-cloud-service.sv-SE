@@ -3,15 +3,15 @@ title: Leverera Dynamic Media Assets
 description: Lär dig leverera Dynamic Media-material.
 feature: Resurshantering
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 4557b561-b3c4-4d6f-8044-2069bda41613
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
-
 
 # Leverera Dynamic Media Assets{#delivering-dynamic-media-assets}
 
@@ -24,7 +24,7 @@ Med Dynamic Media har du flera alternativ:
 
    * Bädda in videon eller bilden på webbplatsen.
    * Länka URL:er till webbprogrammet. Använd länkning när du vill leverera en videospelare som ett popup-fönster eller modalt fönster.
-   * Om webbplatsen är responsiv kan du [leverera optimerade bilder.](/help/assets/dynamic-media/responsive-site.md)
+   * Om webbplatsen är responsiv kan du [leverera optimerade bilder](/help/assets/dynamic-media/responsive-site.md).
 
 >[!NOTE]
 >
