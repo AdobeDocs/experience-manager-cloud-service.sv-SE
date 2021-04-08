@@ -3,15 +3,15 @@ title: Interaktiva videoklipp
 description: Lär dig hur du arbetar med interaktiv video och videor som kan köpas i Dynamic Media.
 feature: Interaktiva videoklipp
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '6021'
+source-wordcount: '6019'
 ht-degree: 4%
 
 ---
-
 
 # Interaktiva videoklipp{#interactive-videos}
 
@@ -87,7 +87,7 @@ Se [Överföra en video och dess associerade miniatyrbildsresurser](#uploading-a
 Slutför genom att publicera det interaktiva videomaterialet. Publicering skapar den inbäddningskod eller URL som du så småningom kopierar och använder på webbplatsens landningssida. Se [Lägga till interaktivitet i videon](#adding-interactivity-to-your-video).
 Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
-1. **Lägga till en interaktiv video till din webbplats eller till din webbplats i Experience Manager** - Om du använder Experience Manager Sites, Experience Manager eCommerce eller båda kan du lägga till den interaktiva videon direkt till en webbsida i Experience Manager. Dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+1. **Lägga till en interaktiv video till din webbplats eller till din webbplats i Experience Manager** - Om du använder Experience Manager Sites, Experience Manager eCommerce eller båda kan du lägga till den interaktiva videon direkt till en webbsida i Experience Manager. Dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 Använd inbäddningskoden eller URL-adressen för att integrera interaktiv video med webbplatsupplevelserna. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
 Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga snabbvyimplementeringen som används på webbplatsen. Se [Integrera en interaktiv video med en befintlig snabbvy](#integrating-an-interactive-video-with-an-existing-quickview).
    [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
@@ -288,7 +288,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
       Fortsätt spela upp och pausa videon vid punkter längs tidslinjen där du vill lägga till ett segment tills du når slutet av videon.
 
-1. (Valfritt) Dra fältet till vänster om du vill zooma in eller till höger om du vill zooma ut. **[!UICONTROL Timeline Scale Slider]** Med den här åtgärden kan du styra hur mycket detaljrikedom du ser för de segment som du har lagt till.
+1. (Valfritt) Dra fältet till vänster om du vill zooma in eller till höger om du vill zooma ut. **[!UICONTROL Timeline Scale Slider]** Med den här åtgärden kan du styra hur mycket detaljrikedom du ser på de segment som du har lagt till.
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
@@ -486,14 +486,14 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
 1. Publicera den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kopierar och klistrar in på webbplatsupplevelserna.
 
-   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
+   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
 
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
    >[!NOTE]
    Om du vill publicera en videoklipp som kan köpas med snabbvyer måste du även publicera videons relaterade bildresurser separat från din e-handelsplats.
 
-   När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med din webbplats.](#integrating-an-interactive-video-with-your-website)
+   När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
 
 ## Publicera interaktiva videoresurser {#publishing-interactive-video-assets}
 
@@ -503,13 +503,13 @@ Mer information om hur du publicerar interaktiva videoresurser finns i [Publicer
 
 När du har överfört en video, lagt till tidslinjesegment i den och publicerat den interaktiva videon är du nu redo att lägga till den på din befintliga webbplats.
 
-Om du använder Experience Manager Sites kan du lägga till den interaktiva videon genom att dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+Om du använder Experience Manager Sites kan du lägga till den interaktiva videon genom att dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
 Om du är fristående kund av Experience Manager Assets kan du lägga till den interaktiva videon manuellt på din webbplats enligt beskrivningen i det här avsnittet.
 
 1. Kopiera den publicerade interaktiva videons inbäddningskod eller URL.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
+Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
 
 1. Identifiera var den statiska videon finns i målets webbsideskod.
 1. Ta bort den statiska videon och ersätt koden med den inbäddade koden eller URL-adressen som du kopierade från Experience Manager Assets, som den är.
