@@ -3,25 +3,25 @@ title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
 description: Lär dig bädda in Dynamic Media video- eller bildresurser på en webbsida.
 feature: Resurshantering
 topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 76335781-e39f-4aae-967f-5af8634d8f61
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '367'
 ht-degree: 21%
 
 ---
-
 
 # Bädda in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
 
 Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
-Du bäddar bara in URL:er om du är _inte_ och använder AEM som WCM. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du bäddar bara in URL:er om du är _inte_ och använder AEM som WCM. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan](adding-dynamic-media-assets-to-pages.md).
 
-Se [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+Se [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
-Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
+Se [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
    Kom ihåg att inbäddningskoden endast går att kopiera *efter* att du har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
 
-   Se [Publicera resurser.](publishing-dynamicmedia-assets.md)
+   Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
    Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
