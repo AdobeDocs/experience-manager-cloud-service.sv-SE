@@ -3,15 +3,15 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 feature: Resurshantering,Anslutna resurser,Resursdistribution
-role: Administratör,Affärsledare,Arkitekt
+role: Administrator,Business Practitioner,Architect
+exl-id: 2346f72d-a383-4202-849e-c5a91634617a
 translation-type: tm+mt
-source-git-commit: 70068609e51f96c010204b8915593a52f610aded
+source-git-commit: 88f2a5d71513feb9a8198402dda491bcc978bff6
 workflow-type: tm+mt
-source-wordcount: '2786'
+source-wordcount: '2806'
 ht-degree: 26%
 
 ---
-
 
 # Använd Connected Assets när du vill dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
@@ -108,9 +108,12 @@ Så här konfigurerar du anslutna resurser och lokal [!DNL Sites]-anslutning:
 
 1. Lägg till [!DNL Sites]-distributionen som ett tillåtet ursprung i CORS-konfigurationen i [!DNL Assets]-distributionen. Mer information finns i [förstå CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html).
 
-Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites]-distributioner och [!DNL Assets]-distribution.
+1. Konfigurera [stöd för samma webbplats-cookie](/help/security/same-site-cookie-support.md).
 
-![Anslutningstest för konfigurerade anslutna resurser  [!DNL Sites]](assets/connected-assets-multiple-config.png)
+Du kan kontrollera anslutningen mellan de konfigurerade [!DNL Sites]-distributionerna och [!DNL Assets]-distributionen.
+
+![Anslutningstest för konfigurerade  [!DNL Sites]](assets/connected-assets-multiple-config.png)
+*resurser: Anslutningstest för konfigurerade anslutna resurser  [!DNL Sites].*
 
 <!-- TBD: Check if Launchers are to be disabled on CS instances. Is this option even available to the users on CS? -->
 
@@ -129,7 +132,7 @@ Följ de här stegen för att konfigurera anslutningen.
    * Välj **[!UICONTROL Selective Publish]** i alternativet **[!UICONTROL Publish Assets]** på lokal [!DNL Sites]. Välj inte **[!UICONTROL Sync All Content]**.
    * På fjärrdistributionen [!DNL Assets] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Enabled by default]**.
 
-1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Den här funktionen aktiverar standardkomponenten för bilder så att [!DNL Dynamic Media] visas när [!DNL Dynamic Media]-bilder används av författare på webbsidor i lokal [!DNL Sites]-distribution.
+1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Med den här funktionen aktiveras [Image component](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) som standard att visa [!DNL Dynamic Media]-bilder när [!DNL Dynamic Media]-bilder används av författare på webbsidor i lokal [!DNL Sites]-distribution.
 
 ## Använda fjärresurser {#use-remote-assets}
 
@@ -231,11 +234,13 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 Följ de här stegen för att felsöka vanliga fel:
 
 * Om du inte kan söka efter fjärrresurser från [!UICONTROL Content Finder] kontrollerar du att de roller och behörigheter som krävs finns på plats.
-* En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/operations/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
-* Om du inte kan komma åt fjärr-DAM-distributionen från den lokala [!DNL Sites]-distributionen kontrollerar du att cookies mellan platser tillåts. Om cookies mellan platser blockeras kanske de två distributionerna av [!DNL Experience Manager] inte autentiseras. [!DNL Google Chrome] i Incognito-läge kan till exempel blockera cookies från tredje part. Om du vill tillåta cookies i [!DNL Chrome]-webbläsaren klickar du på ögonikonen i adressfältet, navigerar till Plats som inte fungerar > Blockerad, markerar fjärr-DAM-URL:en och tillåter inloggningstokencookie. Du kan även läsa mer i hjälpen om [hur du aktiverar cookies](https://support.google.com/chrome/answer/95647) från tredje part.
 
-   ![Cookie-fel i Chrome i Incognito-läge](assets/chrome-cookies-incognito-dialog.png)
+* En resurs som hämtats från fjärr-DAM kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/operations/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
 
-* Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om det finns en tillgänglig webbplatsdistribution och söker efter nätverksanslutningsproblem. Försök igen senare för att kontrollera. [!DNL Assets] Två försök görs att upprätta en anslutning till  [!DNL Sites] distributionen och ett fel rapporteras sedan.
+* Om du inte kan komma åt fjärr-DAM-distributionen från den lokala [!DNL Sites]-distributionen kontrollerar du att cookies mellan platser tillåts och att [stöd för samma webbplats-cookies](/help/security/same-site-cookie-support.md) är konfigurerat. Om cookies mellan platser blockeras kanske inte distributionerna av [!DNL Experience Manager] autentiseras. [!DNL Google Chrome] i Incognito-läge kan till exempel blockera cookies från tredje part. Om du vill tillåta cookies i [!DNL Chrome]-webbläsaren klickar du på ögonikonen i adressfältet, navigerar till **Webbplatsen fungerar inte** > **Blockerad**, väljer fjärr-DAM-URL:en och tillåter inloggningstokcookie. Du kan även läsa [om hur du aktiverar cookies](https://support.google.com/chrome/answer/95647) från tredje part.
+
+   ![Cookie-fel i Chrome-webbläsare i Incognito-läge](assets/chrome-cookies-incognito-dialog.png)
+
+* Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om [!DNL Sites]-distributionen är tillgänglig och söker efter nätverksanslutningsproblem. Försök igen senare för att kontrollera. [!DNL Assets] Två försök görs att upprätta en anslutning till  [!DNL Sites] distributionen och ett fel rapporteras sedan.
 
 ![det gick inte att göra om fjärrreferenser till resurser](assets/reference-report-failure.png)
