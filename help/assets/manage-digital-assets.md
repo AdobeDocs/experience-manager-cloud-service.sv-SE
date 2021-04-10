@@ -7,10 +7,10 @@ feature: Resurshantering, publicering, samarbete, tillgångsbearbetning
 role: Business Practitioner,Architect,Administrator
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
 translation-type: tm+mt
-source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
+source-git-commit: e12638fdda7da178e8dc22163d5ffb822bd980bf
 workflow-type: tm+mt
-source-wordcount: '4198'
-ht-degree: 12%
+source-wordcount: '4215'
+ht-degree: 11%
 
 ---
 
@@ -280,54 +280,29 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 Se [Hämta resurser från [!DNL Experience Manager]](/help/assets/download-assets-from-aem.md).
 
-## Publicera resurser {#publish-assets}
+## Publicera eller avpublicera resurser {#publish-assets}
 
-<!--
->[!NOTE]
->
->For more information specific to Dynamic Media, see [Publishing Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
--->
+1. Navigera till platsen för resursen eller resursmappen som du vill publicera eller som du vill ta bort från publiceringsmiljön (avpublicera).
 
-1. Navigera till platsen för resurserna/mappen som du vill publicera.
+1. Markera resursen eller mappen som ska publiceras eller avpubliceras och välj **[!UICONTROL Manage Publication]** ![alternativet Hantera publikation](assets/do-not-localize/globe-publication.png) i verktygsfältet. Du kan även publicera snabbt genom att välja alternativet **[!UICONTROL Quick Publish]** i verktygsfältet. Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
 
-1. Välj snabbåtgärden **[!UICONTROL Publish]** från resurskortet eller välj resursen och tryck/klicka på ikonen **[!UICONTROL Quick Publish]** i verktygsfältet.
-1. Om resursen refererar till andra resurser visas dess referenser i guiden. Endast referenser som antingen är opublicerade eller ändrade sedan de senast publicerades/avpublicerades visas. Välj de referenser som du vill publicera.
+1. Välj **[!UICONTROL Publish]** eller **[!UICONTROL Unpublish]** efter behov.
 
-   ![chlimage_1-225](assets/chlimage_1-225.png)
+   ![Avpubliceringsåtgärd](assets/unpublish_action.png)
+   *Bild: Alternativ för publicering och avpublicering samt schemaläggning.*
 
-   >[!NOTE]
-   >
-   >Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
+1. Välj **[!UICONTROL Now]** om du vill agera på resursen direkt eller välj **[!UICONTROL Later]** om du vill schemalägga åtgärden. Välj ett datum och en tid om du väljer alternativet **[!UICONTROL Later]**. Klicka på **[!UICONTROL Next]**.
 
-1. Tryck/klicka på **[!UICONTROL Publish]** för att bekräfta aktiveringen för resurserna.
+1. Om en resurs refererar till andra resurser vid publicering visas dess referenser i guiden. Endast de referenser som inte har publicerats eller ändrats sedan den senaste publiceringen visas. Välj de referenser som du vill publicera.
 
->[!CAUTION]
->
->Om du publicerar ett material som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Antingen väntar du på att bearbetningen ska slutföras och publicerar eller publicerar om resursen när bearbetningen är klar.
+1. Om en resurs refererar till andra resurser vid avpublicering väljer du de referenser som du vill avpublicera. Klicka på **[!UICONTROL Unpublish]**. Klicka på **[!UICONTROL Cancel]** i bekräftelsedialogrutan för att stoppa åtgärden eller klicka på **[!UICONTROL Unpublish]** för att bekräfta att resurserna ska avpubliceras vid det angivna datumet.
 
-## Avpublicera resurser {#unpublishing-assets}
+Förstå följande begränsningar och tips för publicering eller avpublicering av resurser och mappar:
 
-1. Navigera till platsen för resursmappen/resursmappen som du vill ta bort från publiceringsmiljön (avpublicera).
-
-1. Markera resursen/mappen som ska avpubliceras och tryck/klicka på ikonen **[!UICONTROL Manage Publication]** i verktygsfältet.
-
-   ![manage_publication](assets/manage_publication.png)
-
-1. Välj åtgärden **[!UICONTROL Unpublish]** i listan.
-
-   ![unpublish_action](assets/unpublish_action.png)
-
-1. Om du vill avpublicera resursen senare väljer du **[!UICONTROL Unpublish Later]** och väljer sedan ett datum för att avpublicera resursen.
-1. Schemalägg ett datum då resursen inte ska vara tillgänglig från publiceringsmiljön.
-1. Om resursen refererar till andra resurser väljer du de referenser du vill avpublicera. Tryck/klicka på **[!UICONTROL Unpublish]**.
-1. I bekräftelsedialogrutan: tryck/klicka:
-
-   * **[!UICONTROL Cancel]** för att stoppa åtgärden
-   * **[!UICONTROL Unpublish]** för att bekräfta att resurserna är opublicerade (inte längre tillgängliga i publiceringsmiljön) vid det angivna datumet.
-
-   >[!NOTE]
-   >
-   >När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
+* Alternativet [!UICONTROL Manage Publication] är bara tillgängligt för användarkonton som har replikeringsbehörigheter.
+* När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
+* Tomma mappar publiceras inte.
+* Om du publicerar ett material som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Antingen väntar du på att bearbetningen ska slutföras och publicerar eller publicerar om resursen när bearbetningen är klar.
 
 ## Stängd användargrupp {#closed-user-group}
 
