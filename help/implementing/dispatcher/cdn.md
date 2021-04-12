@@ -2,14 +2,14 @@
 title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
+exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+source-git-commit: 753d023e1b2c5b76ed5c402c002046cc2c5c1de4
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '758'
 ht-degree: 7%
 
 ---
-
 
 # CDN i AEM as a Cloud Service {#cdn}
 
@@ -46,10 +46,12 @@ Om en kund måste använda sitt befintliga CDN kan de hantera det och peka det m
 
 Konfigurationsinstruktioner:
 
-1. Ange `X-Forwarded-Host`-huvudet med domännamnet.
-1. Ange värdhuvudet med ursprungsdomänen, som är AEM CDN:s ingress. Värdet ska komma från Adobe.
+1. Ange `X-Forwarded-Host`-huvudet med domännamnet. Till exempel: `X-Forwarded-Host: example.com`.
+1. Ange värdhuvudet med ursprungsdomänen, som är AEM CDN:s ingress. Till exempel: `Host: publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Skicka SNI-huvudet till origo. Precis som Värdhuvudet måste SNI-huvudet vara ursprungsdomänen.
-1. Ange antingen `X-Edge-Key` eller `X-AEM-Edge-Key` (om ditt CDN strippar X-Edge-*), som behövs för att dirigera trafik korrekt till AEM. Värdet ska komma från Adobe. Informera Adobe om du vill ha direktåtkomst till Adobe CDN:s ingress (som ska blockeras när `X-Edge-Key` inte finns).
+1. Ange antingen `X-Edge-Key` eller `X-AEM-Edge-Key` (om ditt CDN strips `X-Edge-*`). Värdet ska komma från Adobe.
+   * Detta behövs för att Adobe CDN ska kunna validera källan för förfrågningarna och skicka `X-Forwarded-*`-rubrikerna till AEM. Till exempel används `X-Forwarded-Host` av AEM för att fastställa värdhuvudet och `X-Forwarded-For` används för att fastställa klientens IP-adress. Det blir alltså den betrodda anroparen (dvs. kundhanterade CDN) som ansvarar för att `X-Forwarded-*`-huvudena är korrekta (se anteckningen nedan).
+   * Åtkomst till Adobe CDN-ingången kan även blockeras om det inte finns någon `X-Edge-Key`. Informera Adobe om du behöver direktåtkomst till Adobe CDN:s ingress (som ska blockeras).
 
 Innan du godkänner direkttrafik bör du validera med Adobe kundsupport att hela trafikflödet fungerar korrekt.
 
