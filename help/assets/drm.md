@@ -3,15 +3,15 @@ title: Digital Rights Management in [!DNL Assets]
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager] som en [!DNL Cloud Service].
 contentOwner: AG
 feature: Resurshantering, DRM
-role: Affärsledare,Administratör
+role: Business Practitioner,Administrator
+exl-id: fa5f94df-1c15-4593-afcb-1d24508da2bf
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: d3c19e460f72a980e058ef6117f6352bda4d1e8a
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1274'
 ht-degree: 7%
 
 ---
-
 
 # Digital Rights Management för resurser {#digital-rights-management-in-assets}
 
@@ -37,7 +37,7 @@ Du kan visa förfallostatusen för en resurs på följande platser:
 
 Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på sökpanelen.
 
-1. I [!DNL Assets]-konsolen klickar du på **[!UICONTROL Search]** i verktygsfältet för att visa Omnissökrutan.
+1. I [!DNL Assets]-konsolen klickar du på **[!UICONTROL Search]** i verktygsfältet för att visa sökrutan [!DNL Experience Manager].
 
 1. Markera `Enter`-tangenten med markören i sökrutan för att visa sökresultatsidan.
 
