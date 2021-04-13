@@ -2,13 +2,13 @@
 title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
-feature: Resurshantering,Anslutna resurser,Resursdistribution
+feature: Resurshantering,Anslutna resurser,Resursdistribution,Användare och grupper
 role: Administrator,Business Practitioner,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
 translation-type: tm+mt
-source-git-commit: 88f2a5d71513feb9a8198402dda491bcc978bff6
+source-git-commit: d3c19e460f72a980e058ef6117f6352bda4d1e8a
 workflow-type: tm+mt
-source-wordcount: '2806'
+source-wordcount: '2816'
 ht-degree: 26%
 
 ---
@@ -30,7 +30,7 @@ För [!DNL Sites]-författare är fjärrresurserna tillgängliga som skrivskydda
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
 * Användarna ingår i rätt användargrupper för varje distribution.
-* För [!DNL Adobe Experience Manager]-distributionstyper uppfylls ett av villkoren. Mer information om hur den här funktionen fungerar i [!DNL Experience Manager] 6.5 finns i [Anslutna resurser i [!DNL Experience Manager] 6.5 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
+* För [!DNL Adobe Experience Manager]-distributionstyper uppfylls ett av villkoren. [!DNL Experience Manager] som en Cloud Service  [!DNL Assets] fungerar med  [!DNL Experience Manager] 6.5. Mer information om hur den här funktionen fungerar i  [!DNL Experience Manager] 6.5 finns i  [Anslutna resurser i [!DNL Experience Manager] 6.5 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
 
    |  | [!DNL Sites] som  [!DNL Cloud Service] | [!DNL Experience Manager] 6.5  [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5  [!DNL Sites] på plats |
    |---|---|---|---|
@@ -42,7 +42,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 Författare söker efter bilder och följande typer av dokument i Content Finder och använder de sökbara resurserna i Page Editor. Dokument läggs till i `Download`-komponenten och bilder till `Image`-komponenten. Författare lägger också till fjärrresurserna i valfri anpassad [!DNL Experience Manager]-komponent som utökar standardkomponenterna för `Download` eller `Image`. De format som stöds är:
 
-* **Bildformat**: De format som  [Image-](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) komponenten stöder.
+* **Bildformat**: De format som  [Image-](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) komponenten stöder.
 * **Dokumentformat**: Se vilka  [dokumentformat](file-format-support.md#document-formats) som stöds.
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
@@ -189,7 +189,7 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 1. Välj en resurs i [!DNL Assets]-konsolen och klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. Klicka på fliken **[!UICONTROL References]**. Se **[!UICONTROL Local References]** om du vill använda resursen i [!DNL Assets]-distributionen. Se **[!UICONTROL Remote References] om du vill använda resursen i [!DNL Sites]-distributionen där resursen hämtades med hjälp av funktionen Anslutna resurser.
 
-   ![fjärrreferenser i resursegenskaper](assets/connected-assets-remote-reference.png)
+   ![Fjärrreferenser på sidan Resursegenskaper](assets/connected-assets-remote-reference.png)
 
 1. Referenserna för [!DNL Sites]-sidor visar totalt antal referenser för varje lokal [!DNL Sites]. Det kan ta en stund att hitta alla referenser och visa det totala antalet referenser.
 1. Listan med referenser är interaktiv och DAM-användare kan klicka på en referens för att öppna referenssidan. Om fjärrreferenser av någon anledning inte kan hämtas visas ett meddelande som informerar användaren om felet.
@@ -243,4 +243,4 @@ Följ de här stegen för att felsöka vanliga fel:
 
 * Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om [!DNL Sites]-distributionen är tillgänglig och söker efter nätverksanslutningsproblem. Försök igen senare för att kontrollera. [!DNL Assets] Två försök görs att upprätta en anslutning till  [!DNL Sites] distributionen och ett fel rapporteras sedan.
 
-![det gick inte att göra om fjärrreferenser till resurser](assets/reference-report-failure.png)
+   ![det gick inte att hämta resursfjärrreferenser](assets/reference-report-failure.png)
