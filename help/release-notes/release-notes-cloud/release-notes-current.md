@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 translation-type: tm+mt
-source-git-commit: bea158d45f8f66febe47d0580074358ec2b69c16
+source-git-commit: b412ec6b554684b9b41fe6c8991124bc76e200af
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1588'
 ht-degree: 0%
 
 ---
@@ -195,11 +195,13 @@ Releasedatum för innehållsöverföringsverktyget v1.3.0 är 4 mars 2021.
 
 ### Releasedatum {#release-date-bpa}
 
-Releasedatum för Best Practices Analyzer v2.1.8 är 22 mars 2021.
+Releasedatum för Best Practices Analyzer v2.1.12 är 12 april 2021.
 
-### Nyheter i Best Practices Analyzer {#what-is-new-bpa}
+### Felkorrigeringar {#bug-fixes-bpa-april}
 
-* Möjlighet att filtrera bort ACS Commons-resultat från BPA-rapporten i användargränssnittet samt från den rapport som exporterats som en CSV-fil.
+* Dubblettrader sågs i den rapporterade BPA-filen. Den här har åtgärdats.
+* BPA-gränssnittet i AEM version 6.4.2 genererade ett JS-fel som inaktiverade knappen Generera rapport. Detta har åtgärdats
+
 
 ## Verktyg för omstrukturering av kod {#code-refactoring-tools}
 
