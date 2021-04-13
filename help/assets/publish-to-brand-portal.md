@@ -2,16 +2,16 @@
 title: Publicera resurser, mappar och samlingar på varumärkesportalen
 description: Publicera resurser, mappar och samlingar på varumärkesportalen.
 contentOwner: Vishabh Gupta
-feature: Varumärkesportal
-role: Yrkesverksamma inom affärsverksamhet
+feature: Varumärkesportal,Resursdistribution,Konfiguration
+role: Business Practitioner
+exl-id: 1cc438bc-8cad-4421-af03-c1f6d750e0a8
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: d3c19e460f72a980e058ef6117f6352bda4d1e8a
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 99%
 
 ---
-
 
 # Publicera resurser på varumärkesportalen {#publish-assets-to-brand-portal}
 
