@@ -2,7 +2,7 @@
 title: Konfiguration av företagsgruppsutveckling - Cloud Services
 description: Följ den här sidan om du vill veta mer om hur du konfigurerar Enterprise Team Development
 translation-type: tm+mt
-source-git-commit: 8197defd4a73173106e1f013627547a085e51dab
+source-git-commit: ad72ea45681169551f5ce6801cec59d6c106b346
 workflow-type: tm+mt
 source-wordcount: '1496'
 ht-degree: 0%
