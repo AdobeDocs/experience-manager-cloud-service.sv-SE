@@ -2,9 +2,9 @@
 title: Konfiguration av företagsgruppsutveckling - Cloud Services
 description: Följ den här sidan om du vill veta mer om hur du konfigurerar Enterprise Team Development
 translation-type: tm+mt
-source-git-commit: ad72ea45681169551f5ce6801cec59d6c106b346
+source-git-commit: 833f8d5bcfb88a6a4c9c945c433bbb731bb5d8a2
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1525'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Cloud Manager har stöd för flexibla konfigurationer för flera team som kan an
 
 Varje företag har olika behov, inklusive olika arbetsflöden för teamkonfiguration, processer och utveckling. Konfigurationen som beskrivs nedan används av Adobe för flera projekt som levererar upplevelser utöver AEM som en Cloud Service.
 
-Adobe Creative Cloud-programmen, till exempel Adobe Photoshop och Adobe Illustrator, innehåller t.ex. självstudiekurser, exempel och guider som är tillgängliga för slutanvändarna. Det här innehållet används av klientprogrammen med AEM som Cloud Service på *headless*-sätt, genom att göra API-anrop till AEM Cloud-publiceringsnivån för att hämta det strukturerade innehållet som JSON-strömmar, och genom att utnyttja den AEM Cloud Servicens CDN för att leverera både strukturerat och ostrukturerat innehåll med optimala prestanda.
+Adobe Creative Cloud-programmen, till exempel Adobe Photoshop och Adobe Illustrator, innehåller t.ex. självstudiekurser, exempel och guider som är tillgängliga för slutanvändarna. Det här innehållet används av klientprogrammen med AEM som Cloud Service på *headless*-sätt, genom att göra API-anrop till AEM Cloud-publiceringsnivån för att hämta det strukturerade innehållet som JSON-strömmar, och genom att utnyttja [CDN (Content Delivery Network) i AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/cdn.html?lang=en#content-delivery) för att leverera både strukturerat och ostrukturerat innehåll med optimala prestanda.
 
 De team som deltar i projektet följer den process som beskrivs nedan.
 
@@ -68,13 +68,13 @@ Konfigurationen i Cloud Managers Git-databas har två grenar:
 * En *stabil releasegren* som innehåller produktionskoden från alla team
 * En *utvecklingsgren* som innehåller utvecklingskoden från alla team
 
-Varje push till ett teams Git-databas i antingen utvecklingen eller den stabila grenen utlöser en [github-åtgärd](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html?lang=en#managing-code). Alla projekt följer samma inställningar för den stabila grenen. Ett tryck på den stabila grenen av ett projekt överförs automatiskt till den stabila grenen i Cloud Managers Git-databas. Produktionspipeline i Cloud Manager är konfigurerad för att aktiveras av en push till den stabila grenen. Produktionspipeline körs därför av varje team som går över till en stabil gren och produktionsdistributionen uppdateras om alla kvalitetsportar godkänns.
+Varje push till ett teams Git-databas i antingen utvecklingen eller den stabila grenen utlöser en [github-åtgärd](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html?lang=en#managing-code). Alla projekt följer samma inställningar för den stabila grenen. En push-överföring till den stabila grenen av ett projekt överförs automatiskt till den stabila grenen i Cloud Managers Git-databas. Produktionspipeline i Cloud Manager är konfigurerad för att aktiveras av en push till den stabila grenen. Produktionspipeline körs därför av varje team som går över till en stabil gren och produktionsdistributionen uppdateras om alla kvalitetsportar godkänns.
 
 ![](assets/team-setup2.png)
 
 Överföringar till utvecklingsgrenen hanteras annorlunda. Även om en push-överföring till en utvecklargren i ett teams Git-databas utlöser en github-åtgärd och koden automatiskt överförs till utvecklingsgrenen i Cloud Managers Git-databas, aktiveras inte den icke-produktionsflödet automatiskt av kodöverföringen. Den aktiveras av ett anrop till API:t för Cloud Manager.
 I produktionsflödet kontrolleras koden för alla team via de angivna kvalitetspunkterna. När koden har distribuerats till scenen utförs testerna och granskningarna för att säkerställa att allt fungerar som det ska. När alla portar har passerats förs ändringarna vidare till produktionen utan avbrott eller driftavbrott.
-För lokal utveckling används SDK för Cloud Service. Med SDK kan en lokal författare, publicerare och dispatcher konfigureras. Detta möjliggör offlineutveckling och snabb handläggningstid. Ibland används bara författare för utveckling, men om du snabbt ställer in dispatcher och publicerar kan du testa allt lokalt innan du går in i Git-databasen. Medlemmar i varje team checkar vanligtvis ut koden från den delade Git-instansen samt sin egen projektkod. Du behöver inte checka ut andra projekt eftersom de är fristående.
+För lokal utveckling används [SDK för AEM som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#developing). Med SDK kan en lokal författare, publicerare och dispatcher konfigureras. Detta möjliggör offlineutveckling och snabb handläggningstid. Ibland används bara författare för utveckling, men om du snabbt ställer in dispatcher och publicerar kan du testa allt lokalt innan du går in i Git-databasen. Medlemmar i varje team checkar vanligtvis ut koden från den delade Git-instansen samt sin egen projektkod. Du behöver inte checka ut andra projekt eftersom de är fristående.
 
 ![](assets/team-setup3.png)
 
