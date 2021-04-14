@@ -5,12 +5,12 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature-set: Experience Manager
 feature: Utvecklarverktyg
-role: Utvecklare, arkitekt
+role: Developer, Architect
 translation-type: tm+mt
-source-git-commit: d4aacc8d5f0b355cae9f79c10de496f26b3e395a
+source-git-commit: cef4c40a0a4af7b3cc7cbe696ceb1a197bbef56a
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 33%
+source-wordcount: '888'
+ht-degree: 32%
 
 ---
 
@@ -63,6 +63,7 @@ ht-degree: 33%
    + [Åtkomst till Git](cloud-manager/accessing-git.md)
    + [Integrera Git med Adobe Cloud Manager](cloud-manager/integrating-with-git.md)
    + [Arbeta med Git-databaser med flera källor](/help/implementing/cloud-manager/working-with-multiple-source-git-repositories.md)
+   + [Konfiguration av företagsgruppsutveckling för AEM som Cloud Service](/help/implementing/cloud-manager/enterprise-team-dev-setup.md)
 + Utveckla för AEM as a Cloud Service {#developing}
    + [AEM-projektstruktur](developing/introduction/aem-project-content-package-structure.md)
    + [Strukturpaket för AEM-projektdatabas](developing/introduction/repository-structure-package.md)
