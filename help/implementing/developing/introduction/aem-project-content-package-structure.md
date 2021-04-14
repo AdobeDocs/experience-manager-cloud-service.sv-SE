@@ -1,14 +1,14 @@
 ---
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
+exl-id: 38f05723-5dad-417f-81ed-78a09880512a
 translation-type: tm+mt
-source-git-commit: f9a6dbec25b8154fda8069ff213aaaaa1d443ca1
+source-git-commit: 800c6db7fed43d706dcf1c26235b2f88ed0a5b62
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2873'
+ht-degree: 12%
 
 ---
-
 
 # AEM-projektstruktur
 
@@ -86,6 +86,10 @@ Den rekommenderade programdistributionsstrukturen är följande:
          + Tjänstanvändare
          + Grupper
          + ACL-listor (behörigheter)
+
+>[!NOTE]
+>
+>Samma kod måste distribueras till alla miljöer. Detta är nödvändigt för att säkerställa en nivå av konfidensvalidering i scenmiljön som också är i produktion. Mer information finns i [Konservativ kodning för återställningar](/help/implementing/deploying/overview.md#conservative-coding-for-rollbacks).
 
 
 ### Innehållspaket
