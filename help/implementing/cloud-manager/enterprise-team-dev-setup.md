@@ -2,9 +2,9 @@
 title: Konfiguration av företagsgruppsutveckling - Cloud Services
 description: Följ den här sidan om du vill veta mer om hur du konfigurerar Enterprise Team Development
 translation-type: tm+mt
-source-git-commit: 1695f98cdf10c3bf35d651bd165fb9f2ee113abe
+source-git-commit: 45425a824f33f9454a4a0481befbbcaf5fc36c8d
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
@@ -63,12 +63,12 @@ Varje team använder ett förenklat Git-arbetsflöde med två + N-grenar, enligt
 
 Utvecklingen görs i en funktionsgren när funktionen matas in i utvecklingsgrenen. Slutförda och validerade funktioner väljs från utvecklingsgrenen och sammanfogas i den stabila grenen. Alla ändringar görs via Pull Requests (PR). Varje PR valideras automatiskt av kvalitetsportar. Sonar används för kvalitetskontroll av koden och en uppsättning testsviter körs för att säkerställa att den nya koden inte inför någon regression.
 
-Konfigurationen i Cloud Manager Git-databasen har två grenar:
+Konfigurationen i Cloud Managers Git-databas har två grenar:
 
 * En *stabil releasegren* som innehåller produktionskoden från alla team
 * En *utvecklingsgren* som innehåller utvecklingskoden från alla team
 
-Varje push till ett teams Git-databas i antingen utvecklingen eller den stabila grenen utlöser en [github-åtgärd](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html?lang=en#managing-code). Alla projekt följer samma inställningar för den stabila grenen: En push-överföring av den stabila grenen i ett projekt överförs automatiskt till den stabila grenen i Cloud Managers Git-databas. Produktionspipeline i Cloud Manager är konfigurerad för att aktiveras av en push till den stabila grenen. Produktionspipeline körs därför av varje team som går över till en stabil gren och produktionsdistributionen uppdateras om alla kvalitetsportar godkänns.
+Varje push till ett teams Git-databas i antingen utvecklingen eller den stabila grenen utlöser en [github-åtgärd](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html?lang=en#managing-code). Alla projekt följer samma inställningar för den stabila grenen. Ett tryck på den stabila grenen av ett projekt överförs automatiskt till den stabila grenen i Cloud Managers Git-databas. Produktionspipeline i Cloud Manager är konfigurerad för att aktiveras av en push till den stabila grenen. Produktionspipeline körs därför av varje team som går över till en stabil gren och produktionsdistributionen uppdateras om alla kvalitetsportar godkänns.
 
 ![](assets/team-setup2.png)
 
