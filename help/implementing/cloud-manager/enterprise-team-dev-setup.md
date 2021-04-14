@@ -2,9 +2,9 @@
 title: Konfiguration av företagsgruppsutveckling - Cloud Services
 description: Följ den här sidan om du vill veta mer om hur du konfigurerar Enterprise Team Development
 translation-type: tm+mt
-source-git-commit: 45425a824f33f9454a4a0481befbbcaf5fc36c8d
+source-git-commit: 8197defd4a73173106e1f013627547a085e51dab
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
@@ -82,8 +82,10 @@ Denna verkliga konfiguration kan användas som en plan och sedan anpassas efter 
 
 ### Överväganden för en konfiguration för flera team {#considerations}
 
-Ovannämnda plan för en konfiguration för flera team gör det möjligt att skala över ett större antal team. Med Cloud Managers Git-databas och produktionsflödet körs alltid den fullständiga produktionskoden genom alla kvalitetsportar, vilket behandlar den som en enda distributionsenhet. På så sätt kan produktionssystemet alltid vara igång *utan avbrott eller driftavbrott.*
-Utan ett sådant system finns det däremot en risk att en uppdatering från ett team kan leda till produktionsstabilitetsproblem. Dessutom krävs samordning och planerad driftstopp för att lansera uppdateringar. Med ett ökande antal team kommer samordningen att bli mycket mer komplex och snabbt bli ohanterlig.
-Om ett problem upptäcks i kvalitetsportarna påverkas inte produktionen, och problemet kan upptäckas och åtgärdas utan att Adobe personal behöver gå in i programmet. Utan Cloud Service och utan att alltid testa hela distributionen kan partiella distributioner orsaka avbrott som kräver en begäran om återställning eller till och med en fullständig återställning från en säkerhetskopia. Den partiella testningen kan också leda till andra problem som sedan måste åtgärdas efter det att behovet av samordning och stöd från Adobe personal åter har kommit att kräva.
+>[!NOTE]
+>För varje konfiguration av flera team är det avgörande att definiera en styrningsmodell och en uppsättning standarder som alla team måste följa. Ovanstående plan för en konfiguration för flera team gör att du kan skala över ett större antal team och du kan använda den här planen som utgångspunkt.
 
-För varje konfiguration av flera team är det avgörande att definiera en styrningsmodell och en uppsättning standarder som alla team måste följa. Du kan använda utkast som utgångspunkt.
+Med Cloud Managers Git-databas och produktionsflödet körs alltid den fullständiga produktionskoden genom alla kvalitetsportar, vilket behandlar den som en enda distributionsenhet. På så sätt kan produktionssystemet alltid vara igång *utan avbrott eller driftavbrott.*
+Utan ett sådant system finns det däremot en risk att en uppdatering från ett team kan leda till produktionsstabilitetsproblem. Dessutom krävs samordning och planerad driftstopp för att lansera uppdateringar. Med ett ökande antal team kommer samordningen att bli mycket mer komplex och snabbt bli ohanterlig.
+
+Om ett problem upptäcks i kvalitetsportarna påverkas inte produktionen, och problemet kan upptäckas och åtgärdas utan att Adobe personal behöver gå in i programmet. Utan Cloud Service och utan att alltid testa hela distributionen kan partiella distributioner orsaka avbrott som kräver en begäran om återställning eller till och med en fullständig återställning från en säkerhetskopia. Den partiella testningen kan också leda till andra problem som sedan måste åtgärdas efter det att behovet av samordning och stöd från Adobe personal åter har kommit att kräva.
