@@ -1,14 +1,14 @@
 ---
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
+exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
 translation-type: tm+mt
-source-git-commit: fd2009eab27ac14e722f2e9da28fc734834ab892
+source-git-commit: 28c3fb4c5c0da175ee84463d7c100bdb1b93bb30
 workflow-type: tm+mt
 source-wordcount: '1738'
 ht-degree: 2%
 
 ---
-
 
 # Innehållssökning och indexering {#indexing}
 
@@ -169,7 +169,7 @@ I den nya versionen av programmet används följande (ändrade) konfiguration:
 
 ### Ångra en ändring {#undoing-a-change}
 
-Ibland behöver en ändring i en indexdefinition återställas. Orsaken kan vara att en ändring har gjorts av misstag eller att en ändring inte längre behövs. Indexdefinitionen `damAssetAssetLucene-8-custom-3` skapades till exempel av misstag och har redan distribuerats. Därför kanske du vill återgå till den tidigare indexdefinitionen `damAssetAssetLucene-8-custom-2`. För att göra det måste du lägga till ett nytt index med namnet `damAssetAssetLucene-8-custom-4` som innehåller definitionen för det föregående indexet, `damAssetAssetLucene-8-custom-2`.
+Ibland behöver en ändring i en indexdefinition återställas. Orsaken kan vara att en ändring har gjorts av misstag eller att en ändring inte längre behövs. Indexdefinitionen `damAssetLucene-8-custom-3` skapades till exempel av misstag och har redan distribuerats. Därför kanske du vill återgå till den tidigare indexdefinitionen `damAssetLucene-8-custom-2`. För att göra det måste du lägga till ett nytt index med namnet `damAssetLucene-8-custom-4` som innehåller definitionen för det föregående indexet, `damAssetLucene-8-custom-2`.
 
 ### Tar bort ett index {#removing-an-index}
 
@@ -198,7 +198,7 @@ Om ett index ska tas bort i en senare version av programmet kan du definiera ett
     </acme.product-custom-3>
 ```
 
-Om det inte längre behövs någon anpassning av ett index som inte finns i kartongen måste du kopiera indexdefinitionen som finns i kartongen. Om du till exempel redan har distribuerat `damAssetAssetLucene-8-custom-3`, men inte längre behöver anpassningarna och vill växla tillbaka till standardindexvärdet `damAssetAssetLucene-8`, måste du lägga till ett index `damAssetAssetLucene-8-custom-4` som innehåller indexdefinitionen `damAssetAssetLucene-8`.
+Om det inte längre behövs någon anpassning av ett index som inte finns i kartongen måste du kopiera indexdefinitionen som finns i kartongen. Om du till exempel redan har distribuerat `damAssetLucene-8-custom-3`, men inte längre behöver anpassningarna och vill växla tillbaka till standardindexvärdet `damAssetLucene-8`, måste du lägga till ett index `damAssetLucene-8-custom-4` som innehåller indexdefinitionen `damAssetLucene-8`.
 
 ### Indextillgänglighet och feltolerans {#index-availability-and-fault-tolerance}
 
