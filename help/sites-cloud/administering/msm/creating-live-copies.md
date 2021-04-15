@@ -2,15 +2,15 @@
 title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior för att återanvända innehållet på hela webbplatsen.
 feature: Multi Site Manager
-role: Administratör
+role: Administrator
+exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 1ba90d9ccbae70c612e223835fbeb4dfdaf60975
 workflow-type: tm+mt
 source-wordcount: '4192'
 ht-degree: 0%
 
 ---
-
 
 # Skapa och synkronisera live-kopior {#creating-and-synchronizing-live-copies}
 
@@ -238,7 +238,7 @@ Utsläppen bearbetas som asynkrona jobb och kan kontrolleras på sidan [***Statu
 
 #### Rulla ut en skiss från referenslinjen {#roll-out-a-blueprint-from-the-reference-rail}
 
-1. I konsolen **Platser** markerar du sidan i utkastet och öppnar panelen **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** (i verktygsfältet).
+1. I konsolen **Platser** markerar du sidan i den aktiva kopian och öppnar panelen **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** (i verktygsfältet).
 1. Välj alternativet **Utskrift** i listan för att visa de utkast som är associerade med den här sidan.
 1. Välj önskad rityta i listan.
 1. Klicka eller tryck på **Överrullning**.
