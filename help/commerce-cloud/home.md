@@ -1,24 +1,24 @@
 ---
-title: AEM Commerce som Cloud Service
-description: AEM Commerce som Cloud Service självhjälp och dokumentationslänkar
+title: AEM innehåll och handel
+description: AEM självhjälp och dokumentationslänkar för innehåll och handel
+exl-id: 7f7ece35-f78b-4c66-8a0b-38d248430d85
 translation-type: tm+mt
-source-git-commit: b458d6d8c7a87495267a1132155ac58a30fb3458
+source-git-commit: d1eb326bd704b15616e9e7f09158e77127ac8d28
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '356'
 ht-degree: 82%
 
 ---
 
+# AEM innehåll och handel {#commerce-guide}
 
-# AEM Commerce som en Cloud Service {#commerce-guide}
+På den här sidan visas självhjälpsresurser AEM innehåll och handel.
 
-På den här sidan visas självhjälpsresurser för AEM Commerce som en Cloud Service.
+## Nyckelinnehåll och handelsartiklar {#key-articles}
 
-## Nyckelhandelsartiklar {#key-articles}
-
-* [Införande av AEM Commerce som Cloud Service](overview.md)
-* [Arkitektur för AEM som Cloud Service](architecture/magento.md)
-* [Komma igång](getting-started.md)
+* [Introduktion AEM innehåll och handel](introduction.md)
+* [Komma igång med AEM innehåll och handel](/help/commerce-cloud/getting-started.md)
+* [Utveckla AEM innehåll och handel](/help/commerce-cloud/develop.md)
 
 ## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
 
