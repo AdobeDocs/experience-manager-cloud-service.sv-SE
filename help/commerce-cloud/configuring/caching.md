@@ -1,14 +1,14 @@
 ---
 title: Cachelagring och prestanda
 description: Lär dig mer om de olika konfigurationer som är tillgängliga för att aktivera GraphQL och innehållscachning för att optimera prestanda för implementeringen av din e-handel.
+exl-id: 8b969821-5073-4540-a997-95c74a11e4f0
 translation-type: tm+mt
-source-git-commit: 72d98c21a3c02b98bd2474843b36f499e8d75a03
+source-git-commit: 97574c964e757ffa4d108340f6a4d1819050d79a
 workflow-type: tm+mt
 source-wordcount: '848'
 ht-degree: 2%
 
 ---
-
 
 # Cachelagring och prestanda {#caching}
 
@@ -36,7 +36,7 @@ Detta konfigureras vanligtvis med följande cachepost:
 com.adobe.cq.commerce.core.search.services.SearchFilterService:true:10:3600
 ```
 
-Ett annat exempel där cachningsfunktionen GraphQl bör användas är navigeringskomponenten eftersom den skickar samma GraphQL-fråga på alla sidor. I det här fallet är cacheposten vanligtvis inställd på:
+Ett annat exempel där cachningsfunktionen GraphQl rekommenderas att användas är navigeringskomponenten eftersom den skickar samma GraphQL-fråga på alla sidor. I det här fallet är cacheposten vanligtvis inställd på:
 
 ```
 venia/components/structure/navigation:true:10:600
@@ -46,7 +46,7 @@ när du överväger att använda [Venedig Reference store](https://github.com/ad
 
 Cachelagring för andra komponenter bör definieras på projektbasis, vanligtvis i samordning med cachning som konfigurerats på Dispatcher-nivå. Kom ihåg att det inte finns någon aktiv ogiltigförklaring av dessa cacher, så cachelagringstiden bör vara noggrann. Det finns inga värden för&quot;en storlek passar alla&quot; som matchar alla möjliga projekt och användningsexempel. Se till att du definierar en cachelagringsstrategi på projektnivå som bäst motsvarar projektets krav.
 
-## Skickar cachelagring {#dispatcher}
+## Dispatcher Caching {#dispatcher}
 
 Cachelagring AEM sidor eller fragment i [AEM Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html) är en god vana för alla AEM projekt. Oftast bygger det på invalideringstekniker som säkerställer att allt innehåll som ändras i AEM uppdateras korrekt i Dispatcher. Detta är en viktig egenskap i AEM Dispatcher-cachningsstrategi.
 
