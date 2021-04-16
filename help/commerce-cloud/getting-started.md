@@ -9,10 +9,10 @@ kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
 translation-type: tm+mt
-source-git-commit: e34592d24c8f6c17e6959db1d5c513feaf6381c8
+source-git-commit: 08e258d4e9cd67de3da2aa57c058036bd104472d
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 2%
+source-wordcount: '1071'
+ht-degree: 1%
 
 ---
 
@@ -33,28 +33,36 @@ När du har etablerats med CIF-tillägget kommer det att tillämpas på alla bef
 
 Det andra steget är självbetjäning för varje AEM som en Cloud Service-miljö. Det finns ytterligare konfigurationer du behöver göra efter den första etableringen av CIF-tillägget.
 
-## Ansluta AEM till en e-handelslösning {#magento}
+## Ansluta AEM med en Commerce Solution {#magento}
 
 Om du vill ansluta CIF-tillägget och [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange URL:en för GraphQL-slutpunkten via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
+
+Miljövariabeln används på två ställen:
+
+- GraphQL-anrop från AEM till e-handelsbackend via en gemensam delbar GraphQl-klient som används av AEM CIF Core Components och kundprojektskomponenter.
+- Konfigurera en GraphQL-proxy-URL för varje AEM som variabeln är inställd på `/api/graphql`. Detta används av AEM utvecklingsverktyg (CIF-tillägg) och CIF-komponenter på klientsidan.
+
 En annan GraphQL-slutpunkts-URL kan användas som Cloud Service för varje AEM. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara offentligt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Ett autentiseringshuvud kan anges om du vill använda ytterligare CIF-funktioner som kräver autentisering.
+
+Tillägget CIF är valfritt och endast för Adobe Commerce Enterprise/Cloud. Det har stöd för användning av mellanlagrade katalogdata för AEM. Detta kräver att du konfigurerar en auktoriseringstoken. Den konfigurerade auktoriseringstoken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
 
 Det finns två alternativ för att konfigurera slutpunkten:
 
-### 1) via användargränssnittet i molnhanteraren (standard)
+### Via användargränssnittet i Cloud Manager (standard) {#cm-ui}
 
 Detta kan du göra med en dialogruta på sidan Miljöinformation. När den här sidan visas för ett program som har stöd för Commerce visas en knapp om slutpunkten inte är konfigurerad:
 
-![Slutlig implementering av miljöanpassade märken](/help/commerce-cloud/assets/commerce-cmui.png)
+![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui.png)
 
 Om du klickar på den här knappen öppnas en dialogruta:
 
-![Slutlig implementering av miljöanpassade märken](/help/commerce-cloud/assets/commerce-cm-endpoint.png)
+![CM Commerce Endpoint](/help/commerce-cloud/assets/commerce-cm-endpoint.png)
 
-När slutpunkten (och eventuellt token) har angetts visas slutpunkten på detaljsidan. Om du klickar på ikonen Redigera öppnas samma dialogruta där slutpunkten kan ändras om det behövs.
+När slutpunkten (eventuellt en autentiseringstoken för stöd för mellanlagrad katalog) har angetts visas slutpunkten på detaljsidan. Om du klickar på ikonen Redigera öppnas samma dialogruta där slutpunkten kan ändras om det behövs.
 
-![Slutlig implementering av miljöanpassade märken](/help/commerce-cloud/assets/commerce-cmui-done.png)
+![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui-done.png)
 
-### 2) Via Adobe I/O CLI
+### Via Adobe I/O CLI {#adobe-cli}
 
 >[!VIDEO](https://video.tv.adobe.com/v/37843?quality=12&learn=on)
 
@@ -62,7 +70,7 @@ Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/
 
 1. Skaffa Adobe I/O CLI med plugin-programmet Cloud Manager
 
-   Läs [Adobe Cloud Manager-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager CLI plugin](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+   Läs [dokumentationen för Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [CLI-plugin-programmet för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 2. Autentisera Adobe I/O CLI med AEM som ett Cloud Service-program
 
@@ -76,28 +84,58 @@ Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/
 
    Slutpunktens URL för Commerce GraphQL måste peka på e-handelns GraphQl-tjänst och använda en säker HTTPS-anslutning. Till exempel: `https://demo.magentosite.cloud/graphql`.
 
+4. Aktivera mellanlagrade katalogfunktioner som kräver autentisering (valfritt)
+
+   >[!NOTE]
+   >
+   >Den här funktionen är endast tillgänglig i Adobe Commerce Enterprise eller Cloud Edition. Mer information finns i [Tokenbaserad autentisering](https://devdocs.magento.com/guides/v2.4/get-started/authentication/gs-authentication-token.html#integration-tokens).
+
+   Ange den hemliga variabeln `COMMERCE_AUTH_HEADER` i Cloud Manager:
+
+   ```bash
+   aio cloudmanager:set-environment-variables ENVIRONMENT_ID --secret COMMERCE_AUTH_HEADER "Authorization: Bearer <Access Token>"
+   ```
+
 >[!TIP]
 >
 >Du kan visa alla Cloud Manager-variabler med följande kommando för att dubbelkontrollera: `aio cloudmanager:list-environment-variables ENVIRONMENT_ID`
 
 Detta gör att du kan använda AEM Commerce som Cloud Service och driftsätta ditt projekt via Cloud Manager.
 
-## Aktivera funktioner som kräver autentisering (valfritt) {#staging}
+## Konfigurera butiker och kataloger {#catalog}
 
->[!NOTE]
->
->Den här funktionen är endast tillgänglig med Magento Enterprise Edition eller Magento Cloud.
+CIF-tillägget och [CIF Core-komponenterna](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer osv.). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog (Magento).
 
-1. Logga in på Magento och skapa en integreringstoken. Mer information finns i [Tokenbaserad autentisering](https://devdocs.magento.com/guides/v2.4/get-started/authentication/gs-authentication-token.html#integration-tokens). Kontrollera att integreringstoken bara har *åtkomst till*-resurser. `Content -> Staging` Kopiera `Access Token`-värdet.
+Den här konfigurationen kan justeras för projektet via CIF-Cloud Servicens konfiguration enligt följande steg:
 
-1. Ange den hemliga variabeln `COMMERCE_AUTH_HEADER` i Cloud Manager:
+1. I AEM går du till Verktyg -> Cloud Services -> CIF-konfiguration
 
-   ```bash
-   aio cloudmanager:set-environment-variables ENVIRONMENT_ID --secret COMMERCE_AUTH_HEADER "Authorization: Bearer <Access Token>"
-   ```
+2. Välj den e-postkonfiguration som du vill ändra
 
-   Se [Ansluta AEM med Magento](#magento) om hur du konfigurerar Adobe I/O CLI för Cloud Manager.
+3. Öppna konfigurationsegenskaperna via åtgärdsfältet
 
-## E-handelsintegreringar från tredje part {#integrations}
+![Konfiguration av CIF-Cloud Services](/help/commerce-cloud/assets/cif-cloud-service-config.png)
 
-För e-handelsintegreringar från tredje part krävs ett [API-mappningslager](architecture/third-party.md) för att ansluta AEM Commerce som en Cloud Service och CIF Core Components med ditt handelssystem. API-mappningslagret distribueras vanligtvis på Adobe I/O Runtime. Kontakta din säljare för att få information om tillgängliga integreringar och tillgång till Adobe I/O Runtime.
+Följande egenskaper kan konfigureras:
+
+- GraphQL-klient - Välj den konfigurerade GraphQL-klienten för e-handel med serverdelskommunikation. Detta bör normalt vara kvar som standard.
+- Butiksvy - (Magento) butiksvyns identifierare. Om den är tom används standardbutiksvyn.
+- Proxysökväg för GraphQL - URL-sökvägen för GraphQL-proxy som används AEM proxybegäranden till GraphQL-slutpunkten för handel.
+   >[!NOTE]
+   >
+   > I de flesta inställningar får standardvärdet `/api/graphql` inte ändras. Endast avancerade inställningar som inte använder den angivna GraphQL-proxyn bör ändra den här inställningen.
+- Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsbackend-GraphQL-anropen.
+   >[!NOTE]
+   >
+   > Stöd för UID introducerades i Adobe Commerce (Magento) 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
+- Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogroten
+
+Konfigurationen som visas ovan är för referens. Projekten ska innehålla egna konfigurationer.
+
+Mer komplexa inställningar som använder flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger finns i [Commerce Multi-Store Setup](configuring/multi-store-setup.md) självstudiekursen.
+
+## Ytterligare resurser {#additional-resources}
+
+- [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
+- [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)
+- [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md)
