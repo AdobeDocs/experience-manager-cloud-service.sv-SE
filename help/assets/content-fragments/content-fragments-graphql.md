@@ -2,15 +2,15 @@
 title: Headless Content Delivery using Content Fragments with GraphQL
 description: Lär dig hur du använder AEM innehållsfragment med GraphQL för leverans av headless-innehåll.
 feature: Innehållsfragment
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: 4a3b030d-ed59-4920-bf94-e00a45f85b51
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 1d0343dc7940566b88ad490bb8fb08a5ad4ff5c2
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '718'
 ht-degree: 1%
 
 ---
-
 
 # Headless Content Delivery using Content Fragments with GraphQL {#headless-content-delivery-using-content-fragments-with-graphQL}
 
@@ -24,7 +24,7 @@ Med Adobe Experience Manager (AEM) som Cloud Service kan du använda innehållsf
 >
 >GraphQL används för närvarande i två (separata) scenarier i Adobe Experience Manager (AEM) som en Cloud Service:
 >
->* [AEM Commerce använder data från en e-handelsplattform via GraphQL](/help/commerce-cloud/architecture/magento.md).
+>* [AEM Commerce använder data från en e-handelsplattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
 >* [AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard GraphQL) för att leverera strukturerat innehåll som kan användas i dina program](/help/assets/content-fragments/graphql-api-content-fragments.md).
 
 
