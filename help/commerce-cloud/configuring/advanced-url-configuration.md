@@ -9,14 +9,14 @@ audience: administrator
 feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
+exl-id: 363cb465-c50a-422f-b149-b3f41c2ebc0f
 translation-type: tm+mt
-source-git-commit: 72d98c21a3c02b98bd2474843b36f499e8d75a03
+source-git-commit: 97574c964e757ffa4d108340f6a4d1819050d79a
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '792'
 ht-degree: 2%
 
 ---
-
 
 # Avancerade URL-konfigurationer {#url}
 
