@@ -10,10 +10,11 @@ audience: developer
 feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
+exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
 translation-type: tm+mt
-source-git-commit: 72d98c21a3c02b98bd2474843b36f499e8d75a03
+source-git-commit: 97574c964e757ffa4d108340f6a4d1819050d79a
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2554'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 # Anpassa AEM CIF-kärnkomponenter {#customize-cif-components}
 
-CIF Venia Project[ är en referenskodbas för att använda ](https://github.com/adobe/aem-cif-guides-venia)CIF Core Components[. ](https://github.com/adobe/aem-core-cif-components) I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser)-komponenten ytterligare för att visa ett anpassat attribut från Magento. Du får också lära dig mer om GraphQL-integreringen mellan AEM och Magento och de tilläggskopplingar som finns i CIF Core Components.
+CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF Core Components](https://github.com/adobe/aem-core-cif-components). [ I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser)-komponenten ytterligare för att visa ett anpassat attribut från Magento. Du får också lära dig mer om GraphQL-integreringen mellan AEM och Magento och de tilläggskopplingar som finns i CIF Core Components.
 
 >[!TIP]
 >
@@ -39,7 +40,7 @@ Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudieku
 
 Du behöver också GraphQL IDE, t.ex. [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det går att ange begäranrubriker. På Google Chrome är [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) ett tillägg som kan utföra jobbet.
 
-## Klona Venia-projektet {#clone-venia-project}
+## Klona Venieprojektet {#clone-venia-project}
 
 Vi klonar [Veniaprojektet](https://github.com/adobe/aem-cif-guides-venia) och åsidosätter sedan standardformaten.
 
@@ -84,7 +85,7 @@ Product Teaser Component kommer att byggas ut genom hela kursen. Som ett första
 
    >[!NOTE]
    >
-   > Observera att du även kan konfigurera den visade produkten genom att konfigurera komponenten med hjälp av dialogrutan (klicka på ikonen *skiftnyckel*).
+   > Observera att du även kan konfigurera den visade produkten genom att konfigurera komponenten med hjälp av dialogrutan (klicka på ikonen _skiftnyckel_).
 
 4. Du bör nu se en produkt som visas av Product Teaser. Produktens namn och produktens pris är standardattribut som visas.
 
@@ -108,7 +109,7 @@ De produkter och produktdata som visas i AEM lagras i Magento. Lägg sedan till 
 1. Fyll i formuläret **Nytt attribut** med följande värden (lämna standardinställningarna för andra värden)
 
    | Fältuppsättning | Fältetikett | Värde |
-   |-----------|-------------|---------|
+   | ----------------------------- | ------------------ | ---------------- |
    | Attributegenskaper | Attributetikett | **Miljövänlig** |
    | Attributegenskaper | Indatatyp för katalog | **Ja/Nej** |
    | Avancerade attributegenskaper | Attributkod | **miljövänlig** |
@@ -163,17 +164,17 @@ Använd sedan en GraphQL IDE för att verifiera att attributet `eco_friendly` ha
 
    ```json
    {
-   "data": {
+     "data": {
        "products": {
-           "items": [
-               {
-               "name": "Valeria Two-Layer Tank",
-               "sku": "VT11",
-               "eco_friendly": 1
-               }
-           ]
+         "items": [
+           {
+             "name": "Valeria Two-Layer Tank",
+             "sku": "VT11",
+             "eco_friendly": 1
            }
+         ]
        }
+     }
    }
    ```
 
@@ -357,11 +358,13 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
 
    ```html
    <!--/* productteaser.html */-->
-   <sly data-sly-use.product="com.venia.core.models.commerce.MyProductTeaser"
-       data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-       data-sly-use.actionsTpl="actions.html"
-       data-sly-test.isConfigured="${properties.selection}"
-       data-sly-test.hasProduct="${product.url}">
+   <sly
+     data-sly-use.product="com.venia.core.models.commerce.MyProductTeaser"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.actionsTpl="actions.html"
+     data-sly-test.isConfigured="${properties.selection}"
+     data-sly-test.hasProduct="${product.url}"
+   ></sly>
    ```
 
    Observera att Sling Model för `MyProductTeaser` används och tilldelas variabeln `product`.
@@ -370,15 +373,21 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
 
    ```html
    ...
-   <div data-sly-test="${isConfigured && hasProduct}" class="item__root" data-cmp-is="productteaser" data-virtual="${product.virtualProduct}">
-       <div data-sly-test="${product.showBadge}" class="item__badge">
-           <span>${properties.text || 'New'}</span>
-       </div>
-       <!--/* Insert call to Eco Friendly here */-->
-       <div data-sly-test="${product.ecoFriendly}" class="item__eco">
-           <span>Eco Friendly</span>
-       </div>
-   ...
+   <div
+     data-sly-test="${isConfigured && hasProduct}"
+     class="item__root"
+     data-cmp-is="productteaser"
+     data-virtual="${product.virtualProduct}"
+   >
+     <div data-sly-test="${product.showBadge}" class="item__badge">
+       <span>${properties.text || 'New'}</span>
+     </div>
+     <!--/* Insert call to Eco Friendly here */-->
+     <div data-sly-test="${product.ecoFriendly}" class="item__eco">
+       <span>Eco Friendly</span>
+     </div>
+     ...
+   </div>
    ```
 
    När du anropar en Sling Model-metod i HTML tas delen `get` och `is` bort och den första bokstaven sänks. `isShowBadge()` blir `.showBadge` och `isEcoFriendly` blir `.ecoFriendly`. Baserat på det booleska värdet som returneras från `.isEcoFriendly()` avgör om `<span>Eco Friendly</span>` visas.
@@ -423,7 +432,7 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
    >
    > Du kan också se vissa stackspår om den produkt som används i teaser inte har attributet `eco_friendly` som en del av dess attributuppsättning.
 
-## Lägg till format för etiketten Eko-vänlig {#add-styles}
+## Lägg till stilar för etiketten Eco Friendly Badge {#add-styles}
 
 I det här läget fungerar logiken för när märket **Eco Friendly** ska visas, men den oformaterade texten kan använda vissa format. Lägg sedan till en ikon och format i modulen `ui.frontend` för att slutföra implementeringen.
 
@@ -453,7 +462,7 @@ I det här läget fungerar logiken för när märket **Eco Friendly** ska visas,
            width: 45px;
            height: 45px;
            text-indent: -9999px;
-           background: no-repeat center center url('../resources/images/eco_friendly.svg'); 
+           background: no-repeat center center url('../resources/images/eco_friendly.svg');
            }
        }
    ...
@@ -487,8 +496,8 @@ Granska funktionaliteten i **märket New** som redan har implementerats i Produc
 
 ## Ytterligare resurser {#additional-resources}
 
-* [AEM](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
-* [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
-* [Anpassa AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
-* [Anpassa kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/customizing.html)
-* [Komma igång med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+- [AEM](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+- [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
+- [Anpassa AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
+- [Anpassa kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/customizing.html)
+- [Komma igång med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
