@@ -10,14 +10,14 @@ audience: developer
 feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
+exl-id: 75df606f-b22f-4f7e-bd8a-576d215f72bc
 translation-type: tm+mt
-source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
+source-git-commit: 1bbe48c772f6e664a6afaff450da7d7987061562
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2567'
 ht-degree: 0%
 
 ---
-
 
 # Stil AEM CIF-kärnkomponenter {#style-aem-cif-core-components}
 
@@ -37,7 +37,7 @@ I den här självstudiekursen kommer en ny stil att implementeras för Product T
 
 Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudiekursen. Detta inkluderar en instans av AEM som körs och som är konfigurerad och ansluten till en Magento-instans. Granska kraven och stegen för [hur du konfigurerar en lokal utveckling med AEM som Cloud Service-SDK](../develop.md).
 
-## Klona Venia-projektet {#clone-venia-project}
+## Klona Venieprojektet {#clone-venia-project}
 
 Vi klonar [Veniaprojektet](https://github.com/adobe/aem-cif-guides-venia) och åsidosätter sedan standardformaten.
 
@@ -66,7 +66,7 @@ Vi klonar [Veniaprojektet](https://github.com/adobe/aem-cif-guides-venia) och å
 
    ![Storefront konfigurerat med Venia-tema](../assets/style-cif-component/venia-store-configured.png)
 
-## Klientbibliotek och modulen ui.front {#introduction-to-client-libraries}
+## Klientbibliotek och modulen ui.klienttend {#introduction-to-client-libraries}
 
 CSS och JavaScript som ansvarar för att återge temat/formaten för butiken hanteras i AEM av ett [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) eller klientbibliotek för kort tid. Klientbibliotek erbjuder en mekanism för att ordna CSS och Javascript i ett projekts kod och sedan leverera på sidan.
 
@@ -228,7 +228,7 @@ Kontrollera sedan att klientbiblioteken finns med på sidan.
 
    ![Visa som publicerad](../assets/style-cif-component/view-as-published.png)
 
-   Sidan öppnas utan att någon av författarens javascript-skript AEM, som det skulle se ut på den publicerade webbplatsen. Observera att frågeparametern `?wcmmode=disabled` har lagts till på URL-adressen. När du utvecklar CSS och Javascript är det en god vana att använda den här parametern för att förenkla sidan utan att skriva ut något från AEM författare.
+   Sidan öppnas utan att någon av författarens javascript-skript AEM, som det skulle se ut på den publicerade webbplatsen. Observera att frågeparametern `?wcmmode=disabled` har lagts till på URL:en. När du utvecklar CSS och Javascript är det en god vana att använda den här parametern för att förenkla sidan utan att skriva ut något från AEM författare.
 
 1. Visa sidkällan så bör du kunna identifiera flera klientbibliotek:
 
