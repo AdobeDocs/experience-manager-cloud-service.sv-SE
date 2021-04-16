@@ -1,5 +1,5 @@
 ---
-title: Installation i flera butiker
+title: Inställningar för Commerce Multi-Store
 description: Lär dig hur du mappar olika butiksvyer från Magento till AEM. Detta gör att projekt kan stödja multi-tenant- och multi-lingual use-fall.
 sub-product: Handel
 version: cloud-service
@@ -9,16 +9,16 @@ audience: administrator
 feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
+exl-id: 7f6e04a2-89e9-4613-8ea8-9dac1acea30b
 translation-type: tm+mt
-source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
+source-git-commit: 577e5cb9d465c794f29e1b7ed11d26a954e1c072
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
-
-# Inställningar för flera butiker {#multi-store}
+# Inställningar för Commerce Multi-Store {#multi-store}
 
 AEM CIF Core Components kan användas på flera AEM webbplatsstrukturer och den underliggande GraphQL-klientimplementeringen kan ansluta till olika Magento-butiker/lagringsvyer. Detta gör att projekt kan implementera komplexa flerbutiks-/flerplatsinställningar.
 
@@ -45,6 +45,10 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
    * Skapa en ny konfiguration med stegen som beskrivs i punkt 2 ovan
 
    Den nya konfigurationen skapas som en underordnad konfiguration till den ursprungliga konfigurationen. Du kan nu gå till Verktyg -> Allmänt -> Konfigurationsläsaren och skapa konfigurationsinställningarna.
+
+   >[!TIP]
+   >
+   > Commerce-kataloger kan hanteras med ID:n eller UID:n. UID introducerades i Magento 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
 
 4. Tilldela den underordnade konfigurationen till en AEM plats
 
