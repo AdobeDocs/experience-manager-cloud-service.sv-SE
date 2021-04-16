@@ -7,14 +7,14 @@ version: cloud-service
 doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
+exl-id: 6f28a52b-52f8-4b30-95cd-0f9cb521de62
 translation-type: tm+mt
-source-git-commit: a9c9a866c03bc15ebddddc7f2086f1f3ffd38a07
+source-git-commit: 97574c964e757ffa4d108340f6a4d1819050d79a
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '1011'
 ht-degree: 7%
 
 ---
-
 
 # Utveckla AEM Commerce för AEM som en Cloud Service {#develop}
 
@@ -83,11 +83,11 @@ För lokal utveckling av CIF-tillägg med AEM som Cloud Service-SDK följer du s
    set COMMERCE_ENDPOINT=https://demo.magentosite.cloud/graphql
    ```
 
-   Den här variabeln används av AEM för att ansluta till ditt handelssystem. Dessutom innehåller CIF-tillägget en lokal omvänd proxy som gör Magento GraphQL-slutpunkten tillgänglig lokalt. Detta används av CIF-redigeringsverktygen (produktkonsol och väljare) och för CIF-komponenter på klientsidan som gör direkta GraphQL-anrop.
+   Den här variabeln används av AEM för att ansluta till ditt handelssystem. Dessutom innehåller CIF-tillägget en lokal omvänd proxy som gör Commerce GraphQL-slutpunkten tillgänglig lokalt. Detta används av CIF-redigeringsverktygen (produktkonsol och väljare) och för CIF-komponenter på klientsidan som gör direkta GraphQL-anrop.
 
    Den här variabeln måste även ställas in för AEM som en Cloud Service-miljö. Mer information om variabler finns i [Konfigurera OSGi för AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development).
 
-1. (Valfritt) Om du vill aktivera funktioner för mellanlagrad katalog måste du skapa en integreringstoken för din Magento-instans. Följ stegen på [Komma igång](./getting-started.md#staging) för att skapa token.
+1. (Valfritt) Om du vill aktivera mellanlagrade katalogfunktioner måste du skapa en integreringstoken för din Magento-instans. Följ stegen på [Komma igång](./getting-started.md#staging) för att skapa token.
 
    Ange en OSGi-hemlighet med namnet `COMMERCE_AUTH_HEADER` till följande värde:
 
@@ -98,6 +98,10 @@ För lokal utveckling av CIF-tillägg med AEM som Cloud Service-SDK följer du s
    Mer information om hemligheter finns i [Konfigurera OSGi för AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development).
 
 1. Starta AEM som en Cloud Service-SDK
+
+>[!NOTE]
+>
+>Se till att du AEM som Cloud Service-SDK i samma terminalfönster som systemvariabeln var inställd i steg 5. Om du startar programmet i ett separat terminalfönster eller dubbelklickar på .jar-filen kontrollerar du att systemvariabeln är synlig.
 
 Verifiera konfigurationen via OSGI-konsolen: `http://localhost:4502/system/console/osgi-installer`. Listan ska innehålla CIF-tilläggsrelaterade paket, innehållspaket och OSGI-konfigurationer enligt definitionen i funktionsmodellfilen.
 
@@ -131,7 +135,7 @@ mvn -B archetype:generate \
  -D includeCommerce=y
 ```
 
-CIF Core Components kan användas i alla projekt, antingen genom att inkludera det medföljande `all`-paketet eller individuellt med CIF-innehållspaketet och relaterade OSGI-buntar. Om du vill lägga till CIF-kärnkomponenter manuellt i ett projekt använder du följande beroenden:
+CIF Core Components kan användas i alla projekt, antingen genom att inkludera det medföljande `all`-paketet eller individuellt med CIF-innehållspaketet och relaterade OSGI-paket. Om du vill lägga till CIF-kärnkomponenter manuellt i ett projekt använder du följande beroenden:
 
 ```java
 <dependency>
@@ -165,7 +169,7 @@ CIF Core Components kan användas i alla projekt, antingen genom att inkludera d
 
 ### Använd AEM Venia Reference Store
 
-Ett andra alternativ för att starta ett CIF-projekt är att klona och använda [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia). AEM Venia Reference Store är ett exempel på en butiksapplikation som demonstrerar användningen av CIF Core Components för AEM. Det är avsett som en uppsättning med bästa praxis och som en potentiell startpunkt för att utveckla din egen funktionalitet.
+Ett andra alternativ för att starta ett CIF-projekt är att klona och använda [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia). AEM Venia Reference Store är ett exempel på en butiksapplikation som demonstrerar användningen av CIF Core Components för AEM. Det är avsett som en uppsättning med metodtips och en potentiell utgångspunkt för att utveckla din egen funktionalitet.
 
 För att komma igång med Venia Reference Store behöver du bara klona Git-databasen och börja anpassa projektet efter dina behov.
 
