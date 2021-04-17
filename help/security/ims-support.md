@@ -1,14 +1,14 @@
 ---
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: IMS-stöd för Adobe Experience Manager as a Cloud Service
+exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
 translation-type: tm+mt
-source-git-commit: 70726c373d88f36cdcc9a4a1a944bc8d4c99238c
+source-git-commit: 460cefde9a203b4237aedf01b01e026d37eadfe6
 workflow-type: tm+mt
-source-wordcount: '1926'
-ht-degree: 100%
+source-wordcount: '1952'
+ht-degree: 95%
 
 ---
-
 
 # IMS-stöd för Adobe Experience Manager as a Cloud Service {#ims-support-for-aem-as-a-cloud-service}
 
@@ -125,15 +125,15 @@ Nedan anges de viktigaste OSGI-konfigurationerna som måste ändras för att ege
 
 ### Hantera produkter och användaråtkomst i Admin Console {#managing-products-and-user-access-in-admin-console}
 
-När produktadministratören loggar in på Admin Console visas flera instanser av produktkontexten för AEM Managed Services enligt nedan:
+När produktadministratören loggar in på Admin Console visas flera instanser av AEM som en produktkontext för Cloud Service, vilket visas nedan. Välj till exempel någon av produkterna på sidan **Översikt**:
 
 ![Inloggning på instanser](/help/security/assets/ims6.png)
 
-I det här exemplet har organisationen **AEM-MS-Onboard** 32 instanser som spänner över olika topologier och miljöer som scen och produktion.
+En lista med befintliga instanser visas:
 
 ![Inloggning på instanser2](/help/security/assets/ims7.png)
 
-Under varje produktkontextinstans finns det associerade produktprofiler. Produktprofilerna används för att tilldela användare och grupper de behörigheter som krävs.
+Under varje instans av produktkontext kommer det att finnas instanser som sträcker sig över redigerings- eller publiceringstjänsterna i produktions-, scen- eller utvecklingsmiljöer. Varje instans kommer att kopplas till produktprofiler eller Cloud Manager-roller. De här produktprofilerna används för att tilldela användare och grupper behörighet.
 
 Profilen **Administrator_xxx** används för att ge administratörsbehörighet i den associerade AEM-instansen medan profilen **User_xxx** används för att lägga till vanliga användare.
 
@@ -241,4 +241,3 @@ För att få tillgång till AEM-instanser måste användaren läggas till i en g
 Alla författarinstanser har en AEM-administratörsprofil och AEM-användarprofil, och alla publiceringsinstanser har en AEM-användarprofil. Du kan lägga till andra profiler efter behov.
 
 Om du vill ge åtkomst på administratörsnivå till AEM-instansen lägger du till användaren i AEM-administratörsprofilen för den aktuella produkten.
-
