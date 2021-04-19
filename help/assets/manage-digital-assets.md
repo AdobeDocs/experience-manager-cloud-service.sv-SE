@@ -7,9 +7,9 @@ feature: Resurshantering, publicering, samarbete, tillgångsbearbetning
 role: Business Practitioner,Architect,Administrator
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
 translation-type: tm+mt
-source-git-commit: 78bddc170d2deacc39fd0bd32a65803987dc6a49
+source-git-commit: 05c090a198cc241c6e466254416880dd6406900f
 workflow-type: tm+mt
-source-wordcount: '4361'
+source-wordcount: '4358'
 ht-degree: 11%
 
 ---
@@ -47,8 +47,6 @@ Se [lägga till digitala resurser i Experience Manager](add-assets.md).
 
 Om en DAM-användare överför en eller flera resurser som redan finns i databasen upptäcker [!DNL Experience Manager] dupliceringen och meddelar användaren. Dubblettidentifiering är inaktiverat som standard eftersom det kan påverka prestanda beroende på databasens storlek och antalet överförda resurser. Om du vill aktivera funktionen konfigurerar du [!UICONTROL Adobe AEM Cloud Asset Duplication Detector]. Se [hur du gör OSGi-konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html). Dubblettidentifieringen baseras på det unika `dam:sha1`-värdet som lagras på `jcr:content/metadata/dam:sha1`. Det innebär att duplicerade resurser identifieras även om filnamnen är olika.
 
-![Identifiera duplicerad OSGi-konfiguration för resurs](assets/duplicate-detection.png)
-
 Du kan lägga till konfigurationsfilen `/apps/example/config.author/com.adobe.cq.assetcompute.impl.assetprocessor.AssetDuplicationDetector.cfg.json` i anpassad kod och filen kan innehålla följande:
 
 ```json
@@ -58,7 +56,7 @@ Du kan lägga till konfigurationsfilen `/apps/example/config.author/com.adobe.cq
 }
 ```
 
-När den är aktiverad skickar Experience Manager meddelanden om duplicerade resurser till inkorgen. Det är ett aggregerat resultat för flera dubbletter. Användarna kan välja att ta bort resurserna baserat på resultatet.
+När den är aktiverad skickar Experience Manager meddelanden om duplicerade resurser till Inkorgen Experience Manager. Det är ett aggregerat resultat för flera dubbletter. Användarna kan välja att ta bort resurserna baserat på resultatet.
 
 ![Inkorgsmeddelande för duplicerade resurser](assets/duplicate-detect-inbox-notification.png)
 
