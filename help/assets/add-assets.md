@@ -2,15 +2,15 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 feature: Resurshantering,Överför
-role: Affärsledare,Administratör
+role: Business Practitioner,Administrator
+exl-id: 0e624245-f52e-4082-be21-13cc29869b64
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 05c090a198cc241c6e466254416880dd6406900f
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1998'
 ht-degree: 0%
 
 ---
-
 
 # Lägg till digitala resurser i Adobe Experience Manager {#add-assets-to-experience-manager}
 
@@ -223,6 +223,10 @@ För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på minia
 ## Överför eller importera resurser med API:er {#upload-using-apis}
 
 Teknisk information om överförings-API:erna och -protokollet samt länkar till öppen källkod-SDK och exempelklienter finns i [avsnittet för överföring av resurser](developer-reference-material-apis.md#asset-upload-technical) i utvecklarreferensen.
+
+## Tips, metodtips och begränsningar {#tips-limitations}
+
+* Adobe rekommenderar att du lägger till upp till 1 000 resurser i varje mapp i [!DNL Experience Manager Assets]. Du kan lägga till fler resurser i en mapp, men det kan hända att du får prestandaproblem, till exempel långsammare navigering i sådana mappar.
 
 >[!MORELIKETHIS]
 >
