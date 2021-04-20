@@ -1,8 +1,8 @@
 ---
 title: Identifiera innehåll som ska översättas
 description: Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
-feature: Språkkopia
-role: Administratör
+feature: Language Copy
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt

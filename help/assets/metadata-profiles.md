@@ -3,7 +3,7 @@ title: Metadataprofiler
 description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du skapar en metadataprofil och använder den på mappresurser.
 contentOwner: AG
 feature: Metadata
-role: Affärsledare,Administratör
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

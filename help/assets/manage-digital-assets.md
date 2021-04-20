@@ -3,7 +3,7 @@ title: Hantera digitala resurser
 description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Resurshantering, publicering, samarbete, tillgångsbearbetning
+feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: Business Practitioner,Architect,Administrator
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
 translation-type: tm+mt

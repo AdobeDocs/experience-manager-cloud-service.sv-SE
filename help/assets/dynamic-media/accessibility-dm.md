@@ -4,9 +4,9 @@ description: Läs mer om tillgänglighet i Dynamic Media och Dynamic Media Viewe
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
-topic: Yrkesverksamma inom affärsverksamhet
-feature: Tillgänglighet
-role: Administratör,Affärsledare
+topic: Business Practitioner
+feature: Accessibility
+role: Administrator,Business Practitioner
 translation-type: tm+mt
 source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt

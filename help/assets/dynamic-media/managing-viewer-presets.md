@@ -1,8 +1,8 @@
 ---
 title: Hantera visningsförinställningar
 description: Lär dig hur du skapar och hanterar visningsförinställningar i Dynamic Media.
-feature: Förinställningar för visningsprogram,visningsprogram
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Viewer Presets,Viewers
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: da2e1a10-f54b-440e-b70c-f04ad4caeac1
 translation-type: tm+mt

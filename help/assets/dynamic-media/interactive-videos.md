@@ -1,8 +1,8 @@
 ---
 title: Interaktiva videoklipp
 description: Lär dig hur du arbetar med interaktiv video och videor som kan köpas i Dynamic Media.
-feature: Interaktiva videoklipp
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Interactive Videos
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
 translation-type: tm+mt

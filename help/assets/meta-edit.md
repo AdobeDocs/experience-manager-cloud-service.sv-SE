@@ -3,7 +3,7 @@ title: Redigera eller lägga till metadata
 description: Lär dig mer om metadata för resurser i [!DNL Experience Manager Assets] ett antal sätt att redigera metadata för resurser.
 contentOwner: AG
 feature: Metadata
-role: Affärsledare,Administratör
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt

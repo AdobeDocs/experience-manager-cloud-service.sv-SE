@@ -2,8 +2,8 @@
 title: Hjälpmedel i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] kan hjälpa användare med funktionshinder.
 contentOwner: AG
-feature: Tillgänglighet,Resurshantering
-role: Affärsledare,Arkitekt,ledare
+feature: Accessibility,Asset Management
+role: Business Practitioner,Architect,Leader
 translation-type: tm+mt
 source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt

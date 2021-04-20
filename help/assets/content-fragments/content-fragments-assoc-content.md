@@ -1,8 +1,8 @@
 ---
 title: Associerat innehåll
 description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida, vilket ger ytterligare flexibilitet för leverans av headless-innehåll.
-feature: Innehållsfragment
-role: Yrkesverksamma inom affärsverksamhet
+feature: Content Fragments
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

@@ -1,8 +1,8 @@
 ---
 title: Hantera översättningsprojekt
 description: Lär dig hur du skapar och hanterar både maskinöversättning och mänsklig översättning i AEM.
-feature: Språkkopia
-role: Administratör
+feature: Language Copy
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
 workflow-type: tm+mt

@@ -1,8 +1,8 @@
 ---
 title: Meddelande om att Flash Viewer har upphört
 description: Från och med den 31 januari 2017 upphör stödet för Flash viewer Platform officiellt.
-topic: Yrkesverksamma inom affärsverksamhet
-role: Administratör,Affärsledare
+topic: Business Practitioner
+role: Administrator,Business Practitioner
 translation-type: tm+mt
 source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt

@@ -3,7 +3,7 @@ title: Bästa tillvägagångssätt att integrera med [!DNL Adobe Creative Cloud]
 description: Bästa praxis är att integrera driftsättning i Experience Manager med Adobe Creative Cloud för att effektivisera arbetsflöden för överföring av resurser och uppnå maximal effektivitet.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Samarbete,Adobe Asset Link,Skrivbordsapp
+feature: Collaboration,Adobe Asset Link,Desktop App
 role: Architect,Business Practitioner,Administrator
 exl-id: cbed0d62-5148-45eb-b6a0-9fd164060fdc
 translation-type: tm+mt

@@ -1,8 +1,8 @@
 ---
 title: Snurrande uppsättningar
 description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
-feature: Snurrande uppsättningar
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Spin Sets
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: ed470472-62d9-4684-971b-30df3919c180
 translation-type: tm+mt

@@ -1,8 +1,8 @@
 ---
 title: CDN-cachen har inte verifierats via Dynamic Media
 description: '"Lär dig hur du ogiltigförklarar det cachelagrade innehållet i CDN (Content Delivery Network) så att du snabbt kan uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla."'
-feature: Resurshantering
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management
+topic: Business Practitioner
 role: Administrator,Business Practitioner
 exl-id: c631079b-8082-4ff7-a122-dac1b20d8acd
 translation-type: tm+mt

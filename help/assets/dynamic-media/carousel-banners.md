@@ -1,8 +1,8 @@
 ---
 title: Karusellbanner
 description: Lär dig hur du arbetar med Carousel Banners i Dynamic Media.
-feature: Karusellbanner
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Carousel Banners
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: 34541302-6610-4f5e-af93-c95328dda910
 translation-type: tm+mt

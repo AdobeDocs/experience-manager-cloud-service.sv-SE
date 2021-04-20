@@ -1,8 +1,8 @@
 ---
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media.
-feature: Videoprofiler
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Video Profiles
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
 translation-type: tm+mt

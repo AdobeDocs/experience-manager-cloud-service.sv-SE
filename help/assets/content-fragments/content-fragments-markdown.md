@@ -1,8 +1,8 @@
 ---
 title: Markdown
 description: Förstå hur Content Fragment Editor använder markeringssyntax för att enkelt skapa rubrikfritt innehåll.
-feature: Innehållsfragment
-role: Yrkesverksamma inom affärsverksamhet
+feature: Content Fragments
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: Ordna digitala resurser
 description: Organisera dina digitala resurser med hjälp av olika metoder i Adobe Experience Manager Assets.
 contentOwner: AG
-feature: Resurshantering,Taggar,Resursdistribution
-role: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management,Tagging,Asset Distribution
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt

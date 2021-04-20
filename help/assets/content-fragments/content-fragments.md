@@ -1,8 +1,8 @@
 ---
 title: Arbeta med innehållsfragment
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för headless-leverans.
-feature: Innehållsfragment
-role: Yrkesverksamma inom affärsverksamhet
+feature: Content Fragments
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

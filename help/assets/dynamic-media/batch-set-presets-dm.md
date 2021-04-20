@@ -2,8 +2,8 @@
 title: Förinställningar för gruppuppsättning
 description: Lär dig automatisera framtagning av bilduppsättningar och snurra uppsättningar med hjälp av gruppuppsättningsförinställningar i Dynamic Media.
 contentOwner: Rick Brough
-feature: Bildförinställningar,Visningsförinställningar
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Image Presets,Viewer Presets
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: 022ee347-54ec-4cec-b808-9eb3a9e51424
 translation-type: tm+mt

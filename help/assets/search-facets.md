@@ -1,8 +1,8 @@
 ---
 title: Söka efter fasetter.
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
-feature: Sök,Metadata
-role: Affärsledare,Administratör
+feature: Search,Metadata
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

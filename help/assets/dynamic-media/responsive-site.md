@@ -1,8 +1,8 @@
 ---
 title: Leverera optimerade bilder för en responsiv webbplats
 description: Lär dig hur du använder funktionen för responsiv kod för att leverera optimerade bilder från Dynamic Media.
-feature: Resurshantering
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: 62af6f3f-9c86-44ad-870d-140f572f99c5
 translation-type: tm+mt

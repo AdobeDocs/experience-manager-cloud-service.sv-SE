@@ -1,9 +1,9 @@
 ---
 title: Integrera Dynamic Media Viewers med Adobe Analytics och Experience Platform Launch
 description: Läs mer om Dynamic Media Viewer-tillägget för Platform launch och Dynamic Media Viewer 5.13. Det gör att kunder som använder Adobe Analytics och Platform launch kan använda händelser och data som är specifika för visningsprogrammen i sin Platform launch.
-feature: Resursrapporter
-topic: '"Datatekniker, administratör, affärsansvarig"'
-role: Administratör,Affärsledare
+feature: Asset Reports
+topic: "Data Engineer,Administrator,Business Practitioner"
+role: Administrator,Business Practitioner
 translation-type: tm+mt
 source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt

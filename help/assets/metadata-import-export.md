@@ -3,7 +3,7 @@ title: Importera och exportera resursers metadata gruppvis
 description: I den här artikeln beskrivs hur du importerar och exporterar flera metadata samtidigt.
 contentOwner: AG
 feature: Metadata
-role: Affärsledare,Administratör
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt

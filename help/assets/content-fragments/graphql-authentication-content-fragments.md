@@ -1,7 +1,7 @@
 ---
 title: Autentisering för AEM GraphQL-frågor om innehållsfragment
 description: Förstå den autentisering som krävs för GraphQL-frågor AEM fjärranslutet för att skydda din headless-innehållsleverans.
-feature: Innehållsfragment,GraphQL API
+feature: Content Fragments,GraphQL API
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: Digital Rights Management in [!DNL Assets]
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager] som en [!DNL Cloud Service].
 contentOwner: AG
-feature: Resurshantering, DRM
+feature: Asset Management,DRM
 role: Business Practitioner,Administrator
 exl-id: fa5f94df-1c15-4593-afcb-1d24508da2bf
 translation-type: tm+mt

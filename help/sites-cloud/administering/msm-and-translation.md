@@ -1,8 +1,8 @@
 ---
 title: Hanterare och översättning av flera webbplatser
 description: Lär dig hur du återanvänder innehåll i hela projektet och hanterar flerspråkiga webbplatser i AEM.
-feature: Administratör
-role: Administratör
+feature: Administering
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt

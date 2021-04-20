@@ -4,8 +4,8 @@ user-guide-title: Viktiga begrepp i AEM as a Cloud Service
 breadcrumb-title: Guide för kärnbegrepp
 user-guide-description: Den här guiden är en introduktion till de viktigaste begreppen i Experience Manager as a Cloud Service, inklusive den nya tjänstens arkitektur.
 feature-set: Experience Manager
-feature: Versionsinformation
-role: Arkitekt
+feature: Release Information
+role: Architect
 translation-type: tm+mt
 source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt

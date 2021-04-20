@@ -1,8 +1,8 @@
 ---
 title: Variationer – redigera innehållsfragment
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
-feature: Innehållsfragment
-role: Yrkesverksamma inom affärsverksamhet
+feature: Content Fragments
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

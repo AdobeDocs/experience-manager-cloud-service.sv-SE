@@ -1,8 +1,8 @@
 ---
 title: Bildprofiler för Dynamic Media
 description: '"Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller båda. Använd sedan profilen på en mapp med bildresurser."'
-feature: Resurshantering, bildprofiler, återgivningar
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management,Image Profiles,Renditions
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
 translation-type: tm+mt

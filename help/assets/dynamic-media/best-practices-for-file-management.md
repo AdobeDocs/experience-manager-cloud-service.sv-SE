@@ -2,8 +2,8 @@
 title: Bästa tillvägagångssätt för att ordna digitala resurser för användning av Dynamic Media bildprofiler eller videoprofiler
 description: '"Tips och vedertagna metoder för att namnge, ordna och hantera Dynamic Media bildfiler och videofiler."'
 contentOwner: Rick Brough
-feature: Resurshantering, bildprofiler, videoprofiler
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management,Image Profiles,Video Profiles
+topic: Business Practitioner
 role: Administrator,Business Practitioner
 exl-id: 82ab5432-088c-4442-a9db-9f4e0184febf
 translation-type: tm+mt

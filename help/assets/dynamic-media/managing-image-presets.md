@@ -1,8 +1,8 @@
 ---
 title: Hantera bildförinställningar
 description: '"Lär dig mer om bildförinställningar och hur du skapar, ändrar och hanterar bildförinställningar."'
-feature: Bildförinställningar,visningsprogram,återgivningar
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Image Presets,Viewers,Renditions
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: a53f40ab-0e27-45f8-9142-781c077a04cc
 translation-type: tm+mt

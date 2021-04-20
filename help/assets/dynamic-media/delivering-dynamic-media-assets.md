@@ -1,8 +1,8 @@
 ---
 title: Leverera Dynamic Media Assets
 description: Lär dig leverera Dynamic Media-material.
-feature: Resurshantering
-topic: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management
+topic: Business Practitioner
 role: Business Practitioner
 exl-id: 4557b561-b3c4-4d6f-8044-2069bda41613
 translation-type: tm+mt

@@ -4,8 +4,8 @@ user-guide-title: Flytta till AEM as a Cloud Service
 breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 feature-set: Experience Manager Sites
-feature: Distribuerar
-role: Arkitekt, utvecklare
+feature: Deploying
+role: Architect, Developer
 translation-type: tm+mt
 source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
 workflow-type: tm+mt

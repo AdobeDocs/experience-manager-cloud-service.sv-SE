@@ -2,7 +2,7 @@
 title: Felsökning av MSM-problem och vanliga frågor
 description: Ta reda på hur du felsöker de vanligaste MSM-relaterade problemen och får svar på de vanligaste MSM-relaterade frågorna.
 feature: Multi Site Manager
-role: Administratör
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt

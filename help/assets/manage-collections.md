@@ -3,8 +3,8 @@ title: Hantera samlingar med digitala resurser
 description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär dig hur du samlar, hanterar, redigerar och samlar med andra användare.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Samlingar,Resurshantering
-role: Yrkesverksamma inom affärsverksamhet
+feature: Collections,Asset Management
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

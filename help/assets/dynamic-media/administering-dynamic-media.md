@@ -2,8 +2,8 @@
 title: Konfigurera Dynamic Media
 description: Om du vill konfigurera Dynamic Media måste du konfigurera Dynamic Media och hantera bild- och visningsförinställningar.
 contentOwner: Rick Brough
-topic: Administratör
-role: Administratör,Affärsledare
+topic: Administrator
+role: Administrator,Business Practitioner
 translation-type: tm+mt
 source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
 workflow-type: tm+mt

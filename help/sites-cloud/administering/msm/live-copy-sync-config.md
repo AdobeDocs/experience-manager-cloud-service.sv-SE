@@ -2,7 +2,7 @@
 title: Konfigurera Live Copy-synkronisering
 description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy och hur du kan konfigurera och anpassa dem efter dina projektbehov.
 feature: Multi Site Manager
-role: Administratör
+role: Administrator
 translation-type: tm+mt
 source-git-commit: fff94f476124d8a2a84c60c478fef624090192d1
 workflow-type: tm+mt

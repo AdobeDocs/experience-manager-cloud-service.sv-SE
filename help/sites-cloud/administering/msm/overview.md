@@ -2,7 +2,7 @@
 title: Återanvända innehåll - Multi Site Manager och Live Copy
 description: Få en introduktion till att återanvända innehåll med AEM kraftfulla Live-kopior och Multi Site Manager-funktionerna.
 feature: Multi Site Manager
-role: Administratör
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
 workflow-type: tm+mt

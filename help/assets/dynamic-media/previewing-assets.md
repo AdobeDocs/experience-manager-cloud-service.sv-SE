@@ -1,9 +1,9 @@
 ---
 title: Förhandsgranska resurser
 description: Lär dig hur du förhandsgranskar resurser i Dynamic Media.
-feature: Resurshantering
-topic: Yrkesverksamma inom affärsverksamhet
-role: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management
+topic: Business Practitioner
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
 workflow-type: tm+mt

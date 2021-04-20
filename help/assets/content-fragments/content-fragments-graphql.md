@@ -1,7 +1,7 @@
 ---
 title: Headless Content Delivery using Content Fragments with GraphQL
 description: Lär dig hur du använder AEM innehållsfragment med GraphQL för leverans av headless-innehåll.
-feature: Innehållsfragment
+feature: Content Fragments
 role: Business Practitioner
 exl-id: 4a3b030d-ed59-4920-bf94-e00a45f85b51
 translation-type: tm+mt
