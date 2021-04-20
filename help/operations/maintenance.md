@@ -3,9 +3,9 @@ title: Underhållsaktiviteter i AEM som en Cloud Service
 description: Underhållsaktiviteter i AEM som en Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 translation-type: tm+mt
-source-git-commit: 256363d166591137b53d4a6b5a31436064dfb3d2
+source-git-commit: 7700ad89b1c2a3009c4b64c1af899a0130708a32
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -147,4 +147,6 @@ Kodexempel 3
 
 | Konfiguration av underhållsfönster | Vem äger konfigurationen | Konfigurationstyp | Plats | Exempel | Parametrar |
 |---|---|---|---|---|---|
-| Dagligen | Kund | JCR-noddefinition | Se plats 2 nedan | Se kodexempel 2 nedan | `windowSchedule= daily` (det här värdet ska inte ändras).  <br> `windowStartTime=HH:MM` med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras. <br> **windowEndTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts. |
+| Dagligen | Kund | JCR-noddefinition | Se plats 1 nedan | Se kodexempel 1 nedan | **windowSchedule= day** (det här värdet ska inte ändras).  <br> **windowStartTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras. <br> **windowEndTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts. |
+| Vecka | Kund | JCR-noddefinition | Se plats 2 nedan | Se kodexempel 2 nedan | **windowSchedule= week** (det här värdet ska inte ändras).  <br> **windowStartTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska börja köras. <br> **windowEndTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska sluta köras om de inte redan har slutförts. <br> **windowScheduleWeekdays= Array med 2 värden från 1-7**  (t.ex.  [5,5]). Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen då jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime. |
+
