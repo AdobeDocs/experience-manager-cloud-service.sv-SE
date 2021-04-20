@@ -3,7 +3,7 @@ title: Underhållsaktiviteter i AEM som en Cloud Service
 description: Underhållsaktiviteter i AEM som en Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 translation-type: tm+mt
-source-git-commit: 8fbed9ddc872b8caf0a9b15a7578e34a817e4e42
+source-git-commit: c74da6ebf54f9455f427d5fdcfe55415543f4c73
 workflow-type: tm+mt
 source-wordcount: '925'
 ht-degree: 0%
@@ -57,11 +57,10 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Se plats 1 nedan</td>
     <td>Se kodexempel 1 nedan</td>
    <td>
-    <ul>
-    <li><strong>windowSchedule</strong> = day (det här värdet ska inte ändras)</li>
-    <li><strong>windowStartTime</strong> = HH:MM med 24 timmars klocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.</li>
-    <li><strong>windowEndTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.</li>
-    </ul> </td> 
+    <strong>windowSchedule</strong> = day (det här värdet ska inte ändras) 
+    <strong>windowStartTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.
+    <strong>windowEndTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.
+    </td> 
   </tr>
   <tr>
     <td>Vecka</td>
