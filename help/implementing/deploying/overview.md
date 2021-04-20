@@ -2,14 +2,14 @@
 title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Distribuerar
+exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
 translation-type: tm+mt
-source-git-commit: a5717e36c347e89f6b9e2f4f7dffc72dcab0b7d7
+source-git-commit: 9ff68805d4deabaf637cee9ab81ba9b366a8e762
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3266'
 ht-degree: 1%
 
 ---
-
 
 # Distribuera till AEM as a Cloud Service {#deploying-to-aem-as-a-cloud-service}
 
@@ -101,7 +101,7 @@ Efter övergång till en ny version av programmet:
    * Mappar (lägg till, ändra, ta bort)
    * Redigerbara mallar (lägg till, ändra, ta bort)
    * Kontextmedveten konfiguration (vad som helst under `/conf`) (lägg till, ändra, ta bort)
-   * Skript (paket kan utlösa Install hooks i olika faser av installationsprocessen för paketinstallationen
+   * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbit-dokumentationen för fillevault](http://jackrabbit.incubator.apache.org/filevault/installhooks.html) om hur du installerar kopplingar, som innehåller tillåtna användare att köra dem).
 
 Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen.](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
