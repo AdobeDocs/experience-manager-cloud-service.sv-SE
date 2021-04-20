@@ -3,9 +3,9 @@ title: Underhållsaktiviteter i AEM som en Cloud Service
 description: Underhållsaktiviteter i AEM som en Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 translation-type: tm+mt
-source-git-commit: 7700ad89b1c2a3009c4b64c1af899a0130708a32
+source-git-commit: 4c1c14fae5819e7f7e1bf5d04350c54b6cbe80bb
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -57,9 +57,9 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Se plats 1 nedan</td>
     <td>Se kodexempel 1 nedan</td>
   <td>
-  <strong>windowSchedule</strong> = day (det här värdet ska inte ändras) 
-  <strong>windowStartTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.
-  <strong>windowEndTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.
+  <strong>windowSchedule= day</strong> (this value should not be changed) 
+  <strong>windowStartTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.
+  <strong>windowEndTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.
   </td> 
   </tr>
   <tr>
@@ -69,10 +69,10 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Se plats 2 nedan</td>
     <td>Se kodexempel 2 nedan</td>
     <td>
-    <strong>windowSchedule</strong> = week (det här värdet ska inte ändras) 
-    <strong>windowStartTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska börja köras.
-    <strong>windowEndTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska sluta köras om de inte redan har slutförts.
-    <strong>windowScheduleWeekdays = Array med 2 värden mellan 1 och 7. t.ex. [5,5].</strong> Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen då jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime.
+    <strong>windowSchedule= week</strong> (this value should not be changed) 
+    <strong>windowStartTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska börja köras.
+    <strong>windowEndTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska sluta köras om de inte redan har slutförts.
+    <strong>windowScheduleWeekdays= Array med 2 värden mellan 1 och 7 (t.ex. [5,5])</strong> Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen när jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime.
     </td> 
   </tr>
   <tr>
@@ -82,11 +82,11 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Se plats 3 nedan</td>
     <td>Se kodexempel 3 nedan</td>
     <td>
-    <strong>windowSchedule</strong> = day (det här värdet ska inte ändras) 
-    <strong>windowStartTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska börja köras.
-    <strong>windowEndTime</strong> = HH:MM med 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska sluta köras om de inte redan har slutförts.
-    <strong>windowScheduleWeekdays = Array med 2 värden mellan 1 och 7. t.ex. [5,5].</strong> Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen då jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime.
-    <strong>windowFirstLastStartDay - 0/1</strong> 0 för att schemalägga den första veckan i månaden eller 1 för att schemalägga den sista veckan i månaden. Om ett värde saknas schemaläggs jobben effektivt varje dag enligt windowScheduleWeekdays varje månad.
+    <strong>windowSchedule= day</strong> (this value should not be changed) 
+    <strong>windowStartTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska börja köras.
+    <strong>windowEndTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska sluta köras om de inte redan har slutförts.
+    <strong>windowScheduleWeekdays = Array med 2 värden mellan 1 och 7 (t.ex. [5,5])</strong> Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen när jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime.
+    <strong>windowFirstLastStartDay= 0/1</strong> 0 för att schemalägga den första veckan i månaden eller 1 för att schemalägga den sista veckan i månaden. Om ett värde saknas schemaläggs jobben effektivt varje dag enligt windowScheduleWeekdays varje månad.
     </td> 
     </tr>
 </table>
@@ -144,9 +144,3 @@ Kodexempel 3
    windowScheduleWeekdays="[5,5]"
    windowStartTime="14:30"/>
 ```
-
-| Konfiguration av underhållsfönster | Vem äger konfigurationen | Konfigurationstyp | Plats | Exempel | Parametrar |
-|---|---|---|---|---|---|
-| Dagligen | Kund | JCR-noddefinition | Se plats 1 nedan | Se kodexempel 1 nedan | **windowSchedule= day** (det här värdet ska inte ändras).  <br> **windowStartTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras. <br> **windowEndTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts. |
-| Vecka | Kund | JCR-noddefinition | Se plats 2 nedan | Se kodexempel 2 nedan | **windowSchedule= week** (det här värdet ska inte ändras).  <br> **windowStartTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska börja köras. <br> **windowEndTime= HH:** MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska sluta köras om de inte redan har slutförts. <br> **windowScheduleWeekdays= Array med 2 värden från 1-7**  (t.ex.  [5,5]). Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen då jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime. |
-
