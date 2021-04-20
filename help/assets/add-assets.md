@@ -5,32 +5,26 @@ feature: Resurshantering,Överför
 role: Business Practitioner,Administrator
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
 translation-type: tm+mt
-source-git-commit: 05c090a198cc241c6e466254416880dd6406900f
+source-git-commit: a42138cd009a85a92e74d98dd808578014361e1d
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
 
-# Lägg till digitala resurser i Adobe Experience Manager {#add-assets-to-experience-manager}
+# Lägg till digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] [!DNL Assets] {#add-assets-to-experience-manager}
+
+[!DNL Adobe Experience Manager Assets] kan hantera många typer av digitala resurser från många olika källor. Det lagrar binärfiler och skapade renderingar, kan hantera resurser med ett antal olika arbetsflöden och [!DNL Adobe Sensei]-tjänster, möjliggör distribution via många kanaler över många ytor.
 
 [!DNL Adobe Experience Manager] berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildsfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
 
-Ett antal överföringsmetoder tillhandahålls. Förutom den vanligaste webbläsaröverföringen finns det andra metoder att lägga till resurser i [!DNL Experience Manager]-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller [!DNL Experience Manager]-skrivbordsapp, överförings- och förtäringsskript som kunder skulle skapa samt automatiserade importfunktioner som lagts till som [!DNL Experience Manager]-tillägg.
-
-Vi fokuserar på överföringsmetoder för slutanvändare här och tillhandahåller länkar till artiklar som beskriver tekniska aspekter av överföring och förtäring av resurser med hjälp av [!DNL Experience Manager] API:er och SDK:er.
+Förutom den vanligaste webbläsaröverföringen finns det andra metoder att lägga till resurser i [!DNL Experience Manager]-databasen, bland annat skrivbordsklienter, som Adobe Asset Link eller [!DNL Experience Manager]-skrivbordsapp, överförings- och förtäringsskript som kunder skulle skapa samt automatiserade importfunktioner som lagts till som [!DNL Experience Manager]-tillägg.
 
 Du kan överföra och hantera binära filer i [!DNL Experience Manager], men de vanligaste filformaten har stöd för ytterligare tjänster, som metadataextrahering eller generering av förhandsgranskning/återgivning. Mer information finns i [filformat](file-format-support.md) som stöds.
 
 Du kan också välja att utföra ytterligare bearbetning av de överförda resurserna. Ett antal resursbearbetningsprofiler kan konfigureras för mappen, till vilken resurserna överförs, för att lägga till specifika metadata, återgivningar eller bildbehandlingstjänster. Se [bearbeta resurser när de överförs](#process-when-uploaded).
 
->[!NOTE]
->
->[!DNL Experience Manager] som ett  [!DNL Cloud Service] sätt att överföra resurser - direkt binär överföring. Den stöds som standard av produktfunktioner och klienter som [!DNL Experience Manager] användargränssnitt, [!DNL Adobe Asset Link], [!DNL Experience Manager]-datorprogrammet och därmed genomskinlig för slutanvändarna.
->
->Ladda upp kod som är anpassad eller utökad av kunder som tekniska team behöver för att kunna använda de nya överförings-API:erna och protokollen.
-
-Resurser som [!DNL Cloud Service] innehåller följande överföringsmetoder. Adobe rekommenderar att du förstår hur du använder ett överföringsalternativ innan du använder det.
+[!DNL Assets] innehåller följande överföringsmetoder. Adobe rekommenderar att du förstår hur du använder ett överföringsalternativ innan du använder det.
 
 | Överföringsmetod | När ska du använda? | Primär persona |
 |---------------------|----------------|-----------------|
@@ -112,19 +106,13 @@ Du kan överföra en resurs med samma sökväg (samma namn och plats) som en bef
 
 * Ersätt befintlig resurs: Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar, beskärning och så vidare) som du har gjort för den befintliga resursen bort.
 * Skapa en ny version: En ny version av den befintliga resursen skapas i databasen. Du kan visa de två versionerna i [!UICONTROL Timeline] och återgå till den tidigare versionen om det behövs.
-* Behåll båda: Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn med numret `1` som läggs till i namnet.
-
->[!NOTE]
->
->När du väljer **[!UICONTROL Replace]** i dialogrutan [!UICONTROL Name Conflict] genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
->
->Om Resursinsikter är aktiverat för att spåra visningar eller klickningar med [!DNL Adobe Analytics] blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på [!DNL Analytics].
+* Behåll båda: Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn.
 
 Om du vill behålla den duplicerade resursen i [!DNL Assets] klickar du på **[!UICONTROL Keep]**. Klicka på **[!UICONTROL Delete]** om du vill ta bort den duplicerade resursen som du överförde.
 
 ### Hantering av filnamn och förbjudna tecken {#filename-handling}
 
-[!DNL Experience Manager Assets] försöker förhindra att du överför resurser med de förbjudna tecknen i filnamnen. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visar [!DNL Assets] ett varningsmeddelande och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn. Vissa överföringsmetoder hindrar dig inte från att överföra resurser med förbjudna tecken i filnamnen, men ersätter tecknen med `-`.
+[!DNL Experience Manager Assets] försöker förhindra att du överför resurser med de förbjudna tecknen i filnamnen. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visar [!DNL Assets] ett varningsmeddelande och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
 
 Om du vill anpassa namngivningskonventionerna för din organisation kan du i [!UICONTROL Upload Assets]-dialogrutan ange långa namn för de filer som du överför. Följande (blankstegsavgränsad lista med) tecken stöds inte:
 
@@ -226,7 +214,18 @@ Teknisk information om överförings-API:erna och -protokollet samt länkar till
 
 ## Tips, metodtips och begränsningar {#tips-limitations}
 
+* Direkt binär överföring är en ny metod för att överföra resurser. Det stöds som standard av produktfunktioner och klienter, som [!DNL Experience Manager] användargränssnitt, [!DNL Adobe Asset Link] och [!DNL Experience Manager]-skrivbordsprogram. All anpassad kod som anpassas eller utökas av kundens tekniska team måste använda de nya API:erna och protokollen för överföring.
+
 * Adobe rekommenderar att du lägger till upp till 1 000 resurser i varje mapp i [!DNL Experience Manager Assets]. Du kan lägga till fler resurser i en mapp, men det kan hända att du får prestandaproblem, till exempel långsammare navigering i sådana mappar.
+
+* När du väljer **[!UICONTROL Replace]** i dialogrutan [!UICONTROL Name Conflict] genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs. Om [Resursinsikter](/help/assets/assets-insights.md) är aktiverat för att spåra visningar eller klickningar med [!DNL Adobe Analytics] blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på [!DNL Analytics].
+
+* Vissa överföringsmetoder hindrar dig inte från att överföra resurser med [förbjudna tecken](#filename-handling) i filnamnen. Tecknen ersätts med symbolen `-`.
+
+* När du överför resurser med webbläsaren stöds endast platta fillistor och inte kapslade mapphierarkier. Om du vill överföra alla resurser i en kapslad mapp bör du använda [skrivbordsapp](#upload-assets-desktop-clients).
+
+<!-- TBD: Link to file name handling in DA docs when it is documented. 
+-->
 
 >[!MORELIKETHIS]
 >
