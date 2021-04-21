@@ -9,9 +9,9 @@ feature: 3D-resurser
 role: Business Practitioner
 exl-id: 82084ba7-1302-4cbd-8626-d77b3aaa4ed1
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 58d09d12ce2e8415eb50c288eeab3167a92fae57
 workflow-type: tm+mt
-source-wordcount: '2198'
+source-wordcount: '2180'
 ht-degree: 2%
 
 ---
@@ -102,7 +102,7 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
 
 Se även [Förhandsgranska resurser med programgränssnittet](/help/assets/dynamic-media/previewing-assets.md).
 
-**Visa och interagera med en 3D-resurs från sidan med resursinformation**
+**Så här visar och interagerar du med en 3D-resurs från sidan med resursinformation:**
 
 1. Se till att du har överfört 3D-resurser till Experience Manager.
 
@@ -114,20 +114,14 @@ Se även [Förhandsgranska resurser med programgränssnittet](/help/assets/dynam
 1. Om du vill öppna resursen på detaljsidan trycker du på kortet för 3D-resursen.
 1. Gör något av följande på sidan Detaljer för 3D-resursen:
 
-   * **Vrid kameran**  - Skruva vyn runt 3D-motivet och objekten.
-      * _Mus_: Vänsterklicka och dra.
-      * _Pekskärm_: Tryck med ett finger och dra.
-   * **Panorera kameran**  - Panorera vyn åt vänster, åt höger, uppåt eller nedåt.
-      * _Mus_: Högerklicka och dra.
-      * _Pekskärm_: Tryck med två fingrar och dra.
-   * **Zooma kameran**  - Zooma kameran för att flytta in och ut i 3D-scenens områden.
-      * _Mus_: Rullningshjul.
-      * _Pekskärm_: Nyp med två fingrar.
-   * **Centrera kameran**  igen - Centrera kameran igen till en punkt på ett objekt i 3D-scenen.
-      * _Mus_: Dubbelklicka.
-      * _Pekskärm_: Dubbeltryck.
-   * **Återställ**  - I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.
-   * **Helskärmsläge**  - Tryck på ikonen Helskärm i det nedre högra hörnet av sidan för att öppna helskärmsläget.
+   | Visa | Beskrivning | Musåtgärd | Åtgärd på pekskärmen |
+   | --- | --- | --- | --- |
+   | **Vrid kameran** | Ordna vyn runt 3D-scenen och objekt. | Vänsterklicka och dra. | Tryck med ett finger och dra. |
+   | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
+   | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
+   | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget trycker du på ikonen Helskärm längst ned till höger på sidan. |  |  |
 
 1. Tryck på **[!UICONTROL Close]** längst upp till höger på sidan för att gå tillbaka till sidan Resurser.
 
@@ -141,7 +135,7 @@ När en webbsida är i **[!UICONTROL Edit]**-läge går det inte att interagera 
 
 Se även [Förhandsgranska resurser med programgränssnittet](/help/assets/dynamic-media/previewing-assets.md).
 
-**Visa och interagera med en 3D-resurs inuti en 3D-mediekomponent**
+**Så här visar och interagerar du med en 3D-resurs i en 3D-mediekomponent:**
 
 1. Gör något av följande när en webbsida är i **[!UICONTROL Edit]**-läge:
 
@@ -153,20 +147,14 @@ komponentenEn helt interaktiv 3D-resurs som visas i  **[!UICONTROL Preview]** l�
 
 1. Gör något av följande i **[!UICONTROL Preview]**-läget:
 
-   * **Vrid kameran**  - Skruva vyn runt 3D-motivet och objekten.
-      * _Mus_: Vänsterklicka och dra.
-      * _Pekskärm_: Tryck med ett finger och dra.
-   * **Panorera kameran**  - Panorera vyn åt vänster, åt höger, uppåt eller nedåt.
-      * _Mus_: Högerklicka och dra.
-      * _Pekskärm_: Tryck med två fingrar och dra.
-   * **Zooma kameran**  - Zooma kameran för att flytta in och ut i 3D-scenens områden.
-      * _Mus_: Rullningshjul.
-      * _Pekskärm_: Nyp med två fingrar.
-   * **Centrera kameran**  igen - Centrera kameran igen till en punkt på ett objekt i 3D-scenen.
-      * _Mus_: Dubbelklicka.
-      * _Pekskärm_: Dubbeltryck.
-   * **Återställ**  - I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.
-   * **Helskärmsläge**  - Tryck på ikonen Helskärm i det nedre högra hörnet av sidan för att öppna helskärmsläget.
+   | Visa | Beskrivning | Musåtgärd | Åtgärd på pekskärmen |
+   | --- | --- | --- | --- |
+   | **Vrid kameran** | Ordna vyn runt 3D-scenen och objekt. | Vänsterklicka och dra. | Tryck med ett finger och dra. |
+   | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
+   | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
+   | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget trycker du på ikonen Helskärm längst ned till höger på sidan. |  |  |
 
 ## Om att arbeta med 3D-mediekomponenten {#working-with-three-d-media-component}
 
@@ -176,7 +164,6 @@ Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använd
 * [Lägga till komponenten 3D Media på en webbsida](#adding-the-three-d-media-component-to-a-web-page)
    * [Valfritt - Konfigurera komponenten 3D Media](#configuring-the-three-d-component)
 * [Tilldela en 3D-resurs till 3D-mediekomponenten](#assigning-a-three-d-asset-to-the-component)
-
 
 ## Lägga till komponenten 3D Media i sidmallen {#adding-three-d-media-component-to-page-template}
 
@@ -261,7 +248,7 @@ Se även [Publicera Dynamic Media-resurser](/help/assets/dynamic-media/publishin
 
 Se även [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md).
 
-**Publicera statiska Dynamic Media 3D-resurser**
+**Så här publicerar du statiska Dynamic Media 3D-resurser:**
 
 1. Öppna en 3D-resurs (GLB-, OBJ- eller STL-filformat) för att visa den på detaljsidan.
 1. Tryck på **[!UICONTROL Quick Publish]** i verktygsfältet.
