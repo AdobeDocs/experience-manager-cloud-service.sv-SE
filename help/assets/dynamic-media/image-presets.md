@@ -1,17 +1,16 @@
 ---
 title: Använda förinställningar för Dynamic Media-bilder
 description: Lär dig hur du använder bildförinställningar i Dynamic Media.
-feature: Image Presets,Viewers,Renditions
-topic: Business Practitioner
+feature: Bildförinställningar,visningsprogram,återgivningar
 role: Business Practitioner
+exl-id: ad21b52e-594f-4421-9b5a-2382d032ec5a
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '300'
 ht-degree: 6%
 
 ---
-
 
 # Använda förinställningar för Dynamic Media-bilder {#applying-image-presets}
 
@@ -51,4 +50,3 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
    >Om resursen *och* bildförinställningen ännu inte har publicerats är knappen **[!UICONTROL URL]** (eller URL- och RESS-knapparna, om tillämpligt) inte tillgänglig.
    >
    >Observera också att bildförinställningar automatiskt publiceras på en Dynamic Media S7-server.
-
