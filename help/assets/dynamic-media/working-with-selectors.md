@@ -1,16 +1,15 @@
 ---
 title: Arbeta med väljare
 description: Lär dig mer om metoder du kan använda för att välja resurser för interaktiva bilder, interaktiva videor och karusellbanderoller i Dynamic Media.
-topic: Business Practitioner
 role: Business Practitioner
+exl-id: a6f366ab-41b8-4909-b815-e6c4b938bf77
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 14%
+source-wordcount: '712'
+ht-degree: 15%
 
 ---
-
 
 # Arbeta med väljare i Dynamic Media {#working-with-selectors}
 
