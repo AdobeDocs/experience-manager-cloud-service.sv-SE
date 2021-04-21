@@ -1,16 +1,15 @@
 ---
 title: Länka URL till ett webbprogram
 description: Lär dig hur du länkar URL-adresser till webbprogram i Dynamic Media.
-topic: Business Practitioner
 role: Business Practitioner
+exl-id: 3cd3f4d5-ebf0-4318-9a0d-1ea69453d57b
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1202'
 ht-degree: 9%
 
 ---
-
 
 # Länka URL till ett webbprogram {#linking-urls-to-your-web-application}
 
@@ -26,7 +25,7 @@ Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kop
 
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](embed-code.md).
 
-Se även [Länka YouTube-URL:er till ditt webbprogram](video.md).
+Se även [Länka YouTube URL:er till ditt webbprogram](video.md).
 
 Se även [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 
