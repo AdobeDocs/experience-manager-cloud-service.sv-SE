@@ -2,17 +2,16 @@
 title: Lägga till Dynamic Media-resurser på sidor
 description: Lär dig hur du lägger till Dynamic Media-komponenter på en sida i Adobe Experience Manager som en Cloud Service.
 contentOwner: Rick Brough
-feature: Asset Management
-topic: Business Practitioner
+feature: Resurshantering
 role: Business Practitioner
+exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '2953'
+source-wordcount: '2949'
 ht-degree: 5%
 
 ---
-
 
 # Lägga till Dynamic Media-resurser på sidor{#adding-dynamic-media-assets-to-pages}
 
@@ -66,7 +65,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
 
    ![Policy](/help/assets/assets-dm/structure-mode.png)
 
-1. I närheten av sidans nederkant trycker du på **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan på ikonen Policy.
+1. Långt ned på sidan trycker du på **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan på ikonen Policy.
 1. Kontrollera att fliken **[!UICONTROL Allowed Components]** är markerad under rubriken **[!UICONTROL Properties]** på sidan **[!UICONTROL Layout Container]**.
 
    ![Tillåtna komponenter](/help/assets/assets-dm/allowed-components.png)
