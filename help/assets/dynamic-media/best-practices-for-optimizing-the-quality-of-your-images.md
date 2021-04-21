@@ -2,17 +2,16 @@
 title: Bästa tillvägagångssätt för att optimera bildkvalitet
 description: Lär dig de bästa sätten du kan använda i Dynamic Media för att optimera kvaliteten på dina bildresurser.
 contentOwner: Rick Brough
-feature: Asset Management
-topic: Business Practitioner
+feature: Resurshantering
 role: Business Practitioner
+exl-id: 2efc4a27-01d7-427f-9701-393497314402
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1440'
 ht-degree: 5%
 
 ---
-
 
 # Bästa tillvägagångssätt för att optimera bildkvalitet {#best-practices-for-optimizing-the-quality-of-your-images}
 
@@ -125,4 +124,3 @@ Följande allmänna förslag är användbara när du experimenterar för att opt
 * Testa olika parametrar i realtid direkt på en URL.
 * Det är en god vana att gruppera Dynamic Media Image Serving-kommandon i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg anropar de här förinställningarna. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
 * Experience Manager har också mer avancerade sätt att finjustera bildkvaliteten, t.ex. genom att använda skärpebilder vid intag. [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html) kan hjälpa dig med anpassade insikter och metodtips för att optimera återgivningsresultaten.
-
