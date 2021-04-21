@@ -1,17 +1,16 @@
 ---
 title: Hantera Dynamic Media-resurser
 description: Lär dig hur du arbetar med Dynamic Media resurser.
-feature: Asset Management
-topic: Business Practitioner
+feature: Resurshantering
 role: Administrator,Business Practitioner
+exl-id: 0dc6d577-a8ee-4dd5-8643-28862bb1394c
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 12%
+source-wordcount: '121'
+ht-degree: 13%
 
 ---
-
 
 # Hantera Dynamic Media-resurser {#managing-assets}
 
@@ -27,4 +26,3 @@ I följande avsnitt beskrivs vad du kan göra för att hantera Dynamic Media-res
 * [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
 * [Publicera Dynamic Media Assets](publishing-dynamicmedia-assets.md)
 * [Arbeta med väljare](working-with-selectors.md)
-
