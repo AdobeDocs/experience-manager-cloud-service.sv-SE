@@ -1,17 +1,16 @@
 ---
 title: Använda förinställningar för Dynamic Media-visningsprogram
 description: Lär dig hur du använder förinställningar för visningsprogram i Dynamic Media.
-feature: Viewer Presets,Viewers
-topic: Administrator,Business Practitioner
+feature: Förinställningar för visningsprogram,visningsprogram
 role: Business Practitioner
+exl-id: bec6fff8-fd79-4537-b915-e68da98e117a
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '213'
 ht-degree: 23%
 
 ---
-
 
 # Använda förinställningar för Dynamic Media Viewer {#applying-viewer-presets}
 
