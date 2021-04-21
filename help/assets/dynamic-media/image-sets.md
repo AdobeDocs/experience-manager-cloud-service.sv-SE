@@ -1,14 +1,13 @@
 ---
 title: Bilduppsättningar
 description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media.
-feature: Image Sets
-topic: Business Practitioner
+feature: Bilduppsättningar
 role: Business Practitioner
 exl-id: 2eb71f24-73d9-4b5c-8605-923a0e3d1505
 translation-type: tm+mt
-source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1982'
 ht-degree: 9%
 
 ---
