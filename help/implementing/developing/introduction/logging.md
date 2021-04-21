@@ -1,16 +1,16 @@
 ---
-title: Loggning
-description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
+title: Loggar för AEM som en Cloud Service
+description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär AEM som Cloud Service.
+exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 translation-type: tm+mt
-source-git-commit: 17ba5068b0df0724bcebeecb2323b7dcdc8d8cfa
+source-git-commit: e87b71dd5081b95ca3fd55e66455476c85a50f6c
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2332'
 ht-degree: 2%
 
 ---
 
-
-# Loggar {#logging}
+# Loggar för AEM som en Cloud Service {#logging-for-aem-as-a-cloud-service}
 
 AEM som Cloud Service är en plattform där kunderna kan inkludera anpassad kod för att skapa unika upplevelser för sina kunder. Med detta i åtanke är loggning en viktig funktion för att felsöka och förstå kodkörning på lokal utveckling och i molnmiljöer, särskilt AEM som Cloud Servicens Dev-miljöer.
 
@@ -538,7 +538,7 @@ Define DISP_LOG_LEVEL Debug
 
 ### Molnmiljöer {#cloud-environments}
 
-Du kan komma åt AEM som en Cloud Service för molntjänster antingen genom att hämta via Cloud Manager-gränssnittet eller genom att svepa loggar på kommandoraden med hjälp av Adobe I/O kommandoradsgränssnitt. Mer information finns i [Loggningsdokumentationen för Cloud Manager](/help/implementing/cloud-manager/manage-logs.md).
+Du kan komma åt AEM som en Cloud Service för molntjänster genom att antingen hämta via Cloud Manager-gränssnittet eller genom att svepa loggar på kommandoraden med hjälp av kommandoradsgränssnittet i Adobe I/O. Mer information finns i [Loggningsdokumentationen för Cloud Manager](/help/implementing/cloud-manager/manage-logs.md).
 
 ### Lokal SDK {#local-sdk}
 
