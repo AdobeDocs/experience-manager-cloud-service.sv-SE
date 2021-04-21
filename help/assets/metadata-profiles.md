@@ -4,14 +4,14 @@ description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du ska
 contentOwner: AG
 feature: Metadata
 role: Business Practitioner,Administrator
+exl-id: eef90c6a-b354-4342-8b97-21d067ae2979
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 7ad68c071d9a4089ec8612a3c55067dc0b072fc8
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1156'
 ht-degree: 20%
 
 ---
-
 
 # Metadataprofiler {#metadata-profiles}
 
@@ -63,13 +63,11 @@ Redigera följande egenskaper för komponenten **[!UICONTROL Description]**:
 
 ## Använd en metadataprofil för mappar {#applying-a-metadata-profile-to-folders}
 
-När du tilldelar en metadataprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Det innebär att du bara kan tilldela en metadataprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
+När du tilldelar en metadataprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Arvet upphör när en annan profil tillämpas på en undermapp. Du kan bara tilldela en metadataprofil till en mapp. Därför bör du noga tänka på mappstrukturen där du överför, lagrar, använder och arkiverar resurser.
 
-Om du har tilldelat en annan metadataprofil till en mapp åsidosätter den nya profilen den tidigare profilen. De tidigare befintliga mappresurserna ändras inte. Den nya profilen används för resurser som läggs till i mappen senare.
+Om du har tilldelat en annan metadataprofil till en mapp åsidosätter den nya profilen den tidigare profilen. De tidigare befintliga mappresurserna ändras inte. Den nya profilen tillämpas på de resurser som läggs till i mappen efter ändringen. Du kan tillämpa metadataprofiler på specifika mappar eller globalt på alla resurser.
 
 Mappar som har tilldelats en profil visas i användargränssnittet med namnet på profilen som visas i kortnamnet.
-
-Du kan tillämpa metadataprofiler på specifika mappar eller globalt på alla resurser.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig metadataprofil som du senare ändrade. <!-- See [Reprocessing assets in a folder after you have edited its processing profile](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile). -->
 
