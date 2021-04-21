@@ -1,17 +1,16 @@
 ---
 title: Använda snabbvyer för att skapa anpassade popup-fönster
 description: '"Lär dig mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren."'
-topic: "Developer,Administrator,Business Practitioner"
-feature: Interactive Images,Interactive Videos,Carousel Banners
+feature: interaktiva bilder, interaktiva videor, Carousel Banners
 role: Administrator,Business Practitioner
+exl-id: c2bc6ec8-d46e-4681-ac3e-3337b9e6ae5c
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
-
 
 # Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
@@ -264,4 +263,3 @@ ExempelI det här exemplet används visningsprogrammet för interaktiv bild.
    `s7interactiveimageviewer.init()`
 
    När du har bäddat in visningsprogrammet på värdsidan måste du se till att visningsprograminstansen skapas. Se även till att hanterarna läses in innan visningsprogrammet anropas med `init()`.
-
