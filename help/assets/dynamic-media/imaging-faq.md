@@ -1,14 +1,13 @@
 ---
 title: Smart bildbehandling
 description: '"Läs om hur smart bildbehandling använder varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang."'
-feature: Asset Management,Renditions
-topic: Business Practitioner
+feature: Resurshantering,Återgivningar
 role: Business Practitioner
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
 translation-type: tm+mt
-source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1871'
 ht-degree: 0%
 
 ---
