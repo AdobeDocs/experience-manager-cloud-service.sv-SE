@@ -1,17 +1,16 @@
 ---
 title: Dynamic Media Newsletter
 description: 'Dynamic Media Newsletter från Experience League är ett månatligt nyhetsbrev. Den är utformad för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du kan börja få värde direkt. Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din kunskap. Det finns till exempel instruktionsvideor och lösningsöversikter. Läs om några av de viktigaste funktionerna och funktionerna, som förinställningar för bilder, visningsinställningar, videoprofiler med mera. '
-feature: Asset Management
-topic: "Administrator,Business Practitioner"
+feature: Resurshantering
 role: Business Practitioner
+exl-id: 4c93b448-ff8b-4c63-9c9b-dca53cd1af20
 translation-type: tm+mt
-source-git-commit: 497952b1b6679eca301839d1435924e16a2e2438
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1152'
 ht-degree: 0%
 
 ---
-
 
 # ![Dynamic Media Newsletter logo](/help/assets/dynamic-media/assets/dynamic-media-newsletter-logo.png)
 
