@@ -1,15 +1,14 @@
 ---
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media.
-feature: Video Profiles
-topic: Business Practitioner
+feature: Videoprofiler
 role: Business Practitioner
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
 translation-type: tm+mt
-source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '9135'
-ht-degree: 5%
+source-wordcount: '9133'
+ht-degree: 6%
 
 ---
 
@@ -407,22 +406,22 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 |--- |--- |--- |--- |
 | Källa | 1920 x 1080 | 1 | 1 |
 | Kodad | 960 x 540 | 2 | 2 |
-| Kodad | 640 x 360 | 3 | 3 |
+| Kodad | 640 x 360 | 3 | 1 |
 | Kodad | 480 x 270 | 4 | 4 |
 
 ### Kodat videofilformat {#encoded-video-file-format}
 
 Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställningar. Eftersom MP4-filer använder H.264-videokodeken ger den video med hög kvalitet men i en komprimerad filstorlek.
 
-## Publicera videor på YouTube {#publishing-videos-to-youtube}
+## Publicera videofilmer till YouTube {#publishing-videos-to-youtube}
 
-Du kan publicera videoresurser som hanteras i Experience Manager Assets direkt till en YouTube-kanal som du tidigare har skapat.
+Du kan publicera videoresurser som hanteras i Experience Manager Assets direkt i en YouTube-kanal som du tidigare har skapat.
 
-Om du vill publicera videomaterial på YouTube taggar du videomaterial i Experience Manager Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om taggen för en videoresurs matchar taggen för en YouTube-kanal publiceras videon på YouTube. Publicera på YouTube sker tillsammans med en normal publicering av videon så länge som en associerad tagg används.
+Om du vill publicera videomaterial till YouTube taggar du videomaterial i Experience Manager Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om videoresursens tagg matchar taggen för en YouTube-kanal publiceras videon till YouTube. Publicera till YouTube sker tillsammans med en normal publicering av videon så länge en associerad tagg används.
 
-YouTube gör sin egen kodning. Den ursprungliga videofilen som överfördes till Experience Manager publiceras på YouTube i stället för den videoåtergivning som Dynamic Media har skapat. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media förväntas de göra det om en visningsförinställning behövs för uppspelning.
+YouTube gör sin egen kodning. Det innebär att den ursprungliga videofilen som överfördes till Experience Manager publiceras till YouTube i stället för någon videoåtergivning som Dynamic Media kodning har skapat. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media förväntas de göra det om en visningsförinställning behövs för uppspelning.
 
-När du åsidosätter videobearbetningsprofilen och publicerar direkt på YouTube innebär det helt enkelt att videomaterialet i Experience Manager Asset inte får någon miniatyrbild som kan visas. Det innebär också att videoklipp som inte är kodade inte fungerar med någon av Dynamic Media resurstyper.
+När du åsidosätter videobearbetningsprofilen och publicerar direkt till YouTube innebär det helt enkelt att videomaterialet i Experience Manager Asset inte får någon miniatyrbild som kan visas. Det innebär också att videoklipp som inte är kodade inte fungerar med någon av Dynamic Media resurstyper.
 
 När du publicerar videomaterial till YouTube-servrar utför du följande uppgifter för att säkerställa säker server-till-server-autentisering med YouTube:
 
@@ -430,20 +429,20 @@ När du publicerar videomaterial till YouTube-servrar utför du följande uppgif
 1. [Skapa en YouTube-kanal](#creating-a-youtube-channel)
 1. [Lägga till taggar för publicering](#adding-tags-for-publishing)
 1. [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem)
-1. [(Valfritt) Automatisera inställningen av YouTube-standardegenskaper för dina överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
+1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [Publicera videor i din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
-1. [(Valfritt) Verifiera den publicerade videon på YouTube](/help/assets/dynamic-media/video.md#optional-verifying-the-published-video-on-youtube)
+1. [(Valfritt) Verifiera publicerad video på YouTube](/help/assets/dynamic-media/video.md#optional-verifying-the-published-video-on-youtube)
 1. [Länka YouTube-URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
 
 Du kan även [avpublicera videoklipp för att ta bort dem från YouTube](#unpublishing-videos-to-remove-them-from-youtube).
 
 ### Konfigurera inställningar för Google Cloud {#configuring-google-cloud-settings}
 
-För att kunna publicera på YouTube behöver du ett Google-konto. Om du har ett GMAIL-konto har du redan ett Google-konto; Om du inte har något Google-konto kan du enkelt skapa ett. Du behöver kontot eftersom du behöver inloggningsuppgifter för att publicera videoresurser på YouTube. Om du redan har skapat ett konto hoppar du över den här uppgiften och fortsätter direkt till [Skapa en YouTube-kanal](#creating-a-youtube-channel).
+Du behöver ett Google-konto för att publicera till YouTube. Om du har ett GMAIL-konto har du redan ett Google-konto; Om du inte har något Google-konto kan du enkelt skapa ett. Du behöver kontot eftersom du behöver inloggningsuppgifter för att publicera videoresurser på YouTube. Om du redan har skapat ett konto hoppar du över den här uppgiften och fortsätter direkt till [Skapa en YouTube-kanal](#creating-a-youtube-channel).
 
 Kontot som används med Google Cloud och Google-kontot som används för YouTube behöver inte vara samma.
 
-Google ändrar regelbundet användargränssnittet. Stegen för att publicera videor på YouTube kan därför variera något från vad som beskrivs nedan. Denna caveat gäller även YouTube när du försöker kontrollera om videoklipp har överförts till den.
+Google ändrar regelbundet användargränssnittet. Stegen för att publicera videofilmer till YouTube kan därför variera något från vad som beskrivs nedan. Denna caveat gäller även YouTube när du försöker kontrollera om videoklipp har överförts till det.
 
 >[!NOTE]
 >
@@ -526,7 +525,7 @@ Så här konfigurerar du Google Cloud-inställningar:
 
 1. Under rubriken **[!UICONTROL Product name shown to users]**, i textfältet, anger du det du vill visa på godkännandeskärmen.
 
-   Medgivandeskärmen visas för Experience Manager-administratören när de autentiserar på YouTube. Experience Manager kontaktar YouTube för tillstånd.
+   Medgivandeskärmen visas för Experience Manager-administratören när de autentiserar sig för YouTube. Experience Manager kontaktar YouTube för tillstånd.
 
 1. Klicka på **[!UICONTROL Continue]**.
 1. Gå till sidan Lägg till inloggningsuppgifter för projektet och i steg 4, under rubriken **[!UICONTROL Download credentials]**, trycker du på **[!UICONTROL Download]**.
@@ -543,11 +542,11 @@ Så här konfigurerar du Google Cloud-inställningar:
 
 ### Skapa en YouTube-kanal {#creating-a-youtube-channel}
 
-Du måste ha en eller flera kanaler för att kunna publicera videofilmer på YouTube. Om du redan har skapat en YouTube-kanal kan du hoppa över den här uppgiften och gå till [Lägga till taggar för publicering](/help/assets/dynamic-media/video.md#adding-tags-for-publishing).
+Du måste ha en eller flera kanaler för att kunna publicera videofilmer på YouTube. Om du redan har skapat en YouTube-kanal kan du hoppa över den här uppgiften och gå till [Adding tags for publishing](/help/assets/dynamic-media/video.md#adding-tags-for-publishing).
 
 >[!CAUTION]
 >
->Kontrollera att du redan har konfigurerat en eller flera kanaler i YouTube *innan* du lägger till kanaler under YouTube-inställningar i Experience Manager (se [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem) nedan). Om du misslyckas med kanalkonfigurationen får du ingen varning om att det inte finns några befintliga kanaler. Google-autentisering sker dock fortfarande när du lägger till en kanal, men det finns inget alternativ för att välja vilken kanal videon skickas till.
+>Kontrollera att du redan har konfigurerat en eller flera kanaler i YouTube *innan* du lägger till kanaler under YouTube Settings i Experience Manager (se [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem) nedan). Om du misslyckas med kanalkonfigurationen får du ingen varning om att det inte finns några befintliga kanaler. Google-autentisering sker dock fortfarande när du lägger till en kanal, men det finns inget alternativ för att välja vilken kanal videon skickas till.
 
 Så här skapar du en YouTube-kanal:
 
@@ -609,7 +608,7 @@ Lämna sidan Skapa YouTube-konfiguration öppen; du återgår till det om en stu
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
 1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
 
-   Du kommer nu att konfigurera YouTube-kanaler i Experience Manager.
+   Nu ska du konfigurera YouTube-kanaler i Experience Manager.
 
 1. Tryck på **[!UICONTROL Add Channel]**.
 1. I fältet Kanalnamn anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
@@ -627,7 +626,7 @@ Lämna sidan Skapa YouTube-konfiguration öppen; du återgår till det om en stu
 
    Du kommer nu att konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - På Cloud Services > YouTube-sidan trycker du på pennikonen för att redigera listan med taggar som du vill använda.
+1. **[!UICONTROL Setting up tags for publishing]** - Tryck på pennikonen på Cloud Services > YouTube för att redigera listan med taggar som du vill använda.
 1. Om du vill visa en lista med tillgängliga taggar i Experience Manager trycker du på ikonen för nedrullningsbar lista (cirkumflex upp och ned).
 1. Om du vill lägga till dem trycker du på en eller flera taggar.
 
@@ -642,20 +641,20 @@ Lämna sidan Skapa YouTube-konfiguration öppen; du återgår till det om en stu
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
 
 1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]** till vänster.
-1. Under rubriken Tredjepartstjänster, under YouTube, trycker du på **[!UICONTROL Configure now]**.
+1. Tryck på **[!UICONTROL Configure now]** under rubriken Tredjepartstjänster, under YouTube.
 1. I dialogrutan Skapa konfiguration anger du en rubrik (obligatoriskt) och ett namn (valfritt) i respektive fält.
 1. Tryck på **[!UICONTROL Create]**.
 1. I dialogrutan YouTube-kontoinställningar anger du Googles projekt-ID i fältet **[!UICONTROL Application Name]**.
 
    Du angav projekt-ID när du först [konfigurerade Google Cloud-inställningar](/help/assets/dynamic-media/video.md#configuring-google-cloud-settings) tidigare.
-Lämna dialogrutan YouTube-kontoinställning öppen; du återgår till det om en stund.
+Lämna dialogrutan YouTube Kontoinställning öppen; du återgår till det om en stund.
 
 1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften Konfigurera inställningarna för Google Cloud med en vanlig textredigerare.
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
 1. Tryck på **[!UICONTROL OK]**.
 
-   Du kommer nu att konfigurera YouTube-kanaler i Experience Manager.
+   Nu ska du konfigurera YouTube-kanaler i Experience Manager.
 
 1. Till höger om **[!UICONTROL Available Channels]** trycker du på **+** (plustecknet).
 1. I dialogrutan YouTube-kanalinställningar, i fältet Titel, anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
@@ -673,7 +672,7 @@ Lämna dialogrutan YouTube-kontoinställning öppen; du återgår till det om en
 
    Du kommer nu att konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - På Cloud Services > YouTube-sidan trycker du på pennikonen för att redigera listan med taggar som du vill använda.
+1. **[!UICONTROL Setting up tags for publishing]** - Tryck på pennikonen på Cloud Services > YouTube för att redigera listan med taggar som du vill använda.
 1. Om du vill visa en lista med tillgängliga taggar i Experience Manager trycker du på ikonen för nedrullningsbar lista (cirkumflex upp och ned).
 1. Om du vill lägga till dem trycker du på en eller flera taggar.
 
@@ -683,13 +682,13 @@ Lämna dialogrutan YouTube-kontoinställning öppen; du återgår till det om en
 
    Nu kan du publicera videor i din YouTube-kanal.
 
-### (Valfritt) Automatisera inställningen av YouTube-standardegenskaper för dina överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 Du kan även automatisera inställningen av YouTube-egenskaper när du överför videoklipp. Skapa en metadatabearbetningsprofil i Experience Manager.
 
-Om du vill skapa en profil för metadatabearbetning kopierar du först värden från fälten **[!UICONTROL Field Label]**, **[!UICONTROL Map to property]** och **[!UICONTROL Choices]**, som alla finns i metadatascheman för video. Sedan skapar du din YouTube-metadatabearbetningsprofil för video genom att lägga till dessa värden.
+Om du vill skapa en profil för metadatabearbetning kopierar du först värden från fälten **[!UICONTROL Field Label]**, **[!UICONTROL Map to property]** och **[!UICONTROL Choices]**, som alla finns i metadatascheman för video. Sedan skapar du en YouTube-metadatabearbetningsprofil för video genom att lägga till dessa värden.
 
-Så här automatiserar du inställningen av YouTube-standardegenskaper för dina överförda videofilmer:
+Så här automatiserar du inställningen av YouTube standardegenskaper för överförda videofilmer:
 
 1. Klicka på Experience Manager-logotypen i det övre vänstra hörnet av Experience Manager och klicka sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i det vänstra hörnet.
 1. Klicka på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
@@ -719,7 +718,7 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
 1. Klicka på **[!UICONTROL Create]** längst upp till höger på sidan Metadataprofiler.
 1. I dialogrutan Lägg till metadataprofil i textfältet **[!UICONTROL Profile title]** anger du namnet `YouTube Video` och sedan klickar du på **[!UICONTROL Create]**.
 1. Klicka på fliken **[!UICONTROL Advance]** på sidan Redigerare för metadataprofil.
-1. Lägg till de kopierade YouTube-publiceringsvärdena i profilen genom att göra följande:
+1. Lägg till de kopierade YouTube Publishing-värdena i profilen genom att göra följande:
 
    * Klicka på fliken **[!UICONTROL Build Form]** till höger på sidan.
    * (Valfritt) Dra komponenten **[!UICONTROL Section Header]** till vänster och släpp den i formulärområdet.
@@ -728,7 +727,7 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * Klicka på fliken **[!UICONTROL Build Form]** och dra sedan komponenten **[!UICONTROL Multi Value Text]** och släpp den under rubriken **[!UICONTROL YouTube Publishing]** som du skapade.
 
    * Om du vill markera komponenten klickar du på **[!UICONTROL Field Label]**.
-   * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube-publiceringsvärden (värdet Fältetikett och värdet för Mappa till egenskap) som du kopierade tidigare, i respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
+   * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube Publishing-värden (Field Label-värde och Map to property-värde) som du kopierade tidigare i deras respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
 
 1. Lägg till de kopierade sekretessvärdena för YouTube till profilen genom att göra följande:
 
@@ -739,29 +738,29 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * Klicka på fliken **[!UICONTROL Build Form]** och dra sedan komponenten **[!UICONTROL Multi Value Text]** och släpp den under rubriken **[!UICONTROL YouTube Privacy]** som du skapade.
 
    * Om du vill markera komponenten klickar du på **[!UICONTROL Field Label]**.
-   * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube-publiceringsvärden (värdet Fältetikett och värdet för Mappa till egenskap) som du kopierade tidigare, i respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
+   * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube Publishing-värden (Field Label-värde och Map to property-värde) som du kopierade tidigare i deras respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
 
 1. Klicka på **[!UICONTROL Save]** i det övre högra hörnet på sidan.
-1. Använd metadataprofilen YouTube Publishing på de mappar där du ska överföra videoklipp. Du måste ha angett både Metadataprofil och Videoprofil.
+1. Använd metadataprofilen för YouTube Publishing på de mappar där du ska överföra videoklipp. Du måste ha angett både Metadataprofil och Videoprofil.
 
    Se [Metadataprofiler](/help/assets/metadata-profiles.md) och [Videoprofiler](/help/assets/dynamic-media/video-profiles.md).
 
-### Publicera videor på din YouTube-kanal {#publishing-videos-to-your-youtube-channel}
+### Publicera videor i din YouTube-kanal {#publishing-videos-to-your-youtube-channel}
 
-Nu kopplar du taggarna som du lade till tidigare till videoresurser. Med den här processen kan Experience Manager veta vilka resurser som ska publiceras i din YouTube-kanal.
+Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sätt kan Experience Manager veta vilka mediefiler som ska publiceras i din YouTube-kanal.
 
 >[!NOTE]
 >
->Publicera direkt publicerar inte automatiskt på YouTube. När Dynamic Media har konfigurerats finns det två publiceringsalternativ att välja mellan, **[!UICONTROL Immediately]** och **[!UICONTROL Upon Activation]**.
+>Publicera direkt publicerar inte automatiskt till YouTube. När Dynamic Media har konfigurerats finns det två publiceringsalternativ att välja mellan, **[!UICONTROL Immediately]** och **[!UICONTROL Upon Activation]**.
 >
->**[!UICONTROL Publish Immediately]** betyder att den överförda resursen - efter att den har synkroniserats med IPS - automatiskt publiceras till leveranssystemet. Detta gäller Dynamic Media, men inte YouTube. Om du vill publicera på YouTube måste du publicera via Experience Manager Author.
+>**[!UICONTROL Publish Immediately]** betyder att den överförda resursen - efter att den har synkroniserats med IPS - automatiskt publiceras till leveranssystemet. Det gäller Dynamic Media, men inte YouTube. Om du vill publicera till YouTube måste du publicera via Experience Manager Author.
 
 >[!NOTE]
 För att publicera innehåll från YouTube använder Experience Manager arbetsflödet **[!UICONTROL Publish to YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
 Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
-Mer detaljerad förloppsinformation finns i YouTube-loggen under replikering. Tänk dock på att sådan övervakning kräver administratörsåtkomst.
+Mer detaljerad förloppsinformation finns i YouTube-loggen som replikeras. Tänk dock på att sådan övervakning kräver administratörsåtkomst.
 
-**Så här publicerar du videor till din YouTube-kanal**:
+**Så här publicerar du videor i din YouTube-kanal**:
 
 1. I Experience Manager navigerar du till en videoresurs som du vill publicera i din YouTube-kanal.
 1. Välj videoresurs (den adaptiva videouppsättningen).
@@ -789,32 +788,32 @@ Publiceringstiderna kan variera avsevärt beroende på olika faktorer, bland ann
 
 Efter åtta timmar, om du fortfarande ser ett statusmeddelande som säger **[!UICONTROL Uploaded (processing, please wait)]**, kan du försöka ta bort videon från webbplatsen och överföra den igen.
 
-### Länka YouTube-URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
+### Länka YouTube URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
 
-Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidorna på webbplatsen eller i programmet.
+Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidor på webbplatsen eller i programmet.
 
 >[!NOTE]
-YouTube-URL:en är inte tillgänglig för kopiering förrän du har publicerat videoresursen på YouTube.
+YouTube-URL:en kan inte kopieras förrän du har publicerat videoresursen till YouTube.
 
-Så här länkar du YouTube-URL:er till ditt webbprogram:
+Så här länkar du YouTube URL:er till ditt webbprogram:
 
 1. Navigera till den *YouTube-publicerade* videoresurs vars URL du vill kopiera och markera den.
 
-   Kom ihåg att YouTube-URL:er endast är tillgängliga för kopiering *efter* att du först *har publicerat* videomaterialet till YouTube.
+   Kom ihåg att YouTube URL:er endast är tillgängliga för kopiering *efter* att du först *har publicerat* videomaterialet till YouTube.
 
 1. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. Klicka på fliken **[!UICONTROL Advanced]**.
-1. Under rubriken YouTube Publishing (YouTube Publishing), i YouTubes URL-lista, markerar och kopierar du URL-texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
+1. Under rubriken YouTube Publishing (Publicering), i YouTube URL List, markerar och kopierar du URL-texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
 
 ### Avpublicerar videoklipp för att ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
 
 När du avpublicerar en videoresurs i Experience Manager tas videon bort från YouTube.
 
 >[!CAUTION]
-Om du tar bort en video direkt från YouTube, är Experience Manager inte medveten om det och fortsätter att bete sig som om videon fortfarande publiceras på YouTube. Avpublicera alltid en videoresurs från YouTube via Experience Manager.
+Om du tar bort en video direkt från YouTube är Experience Manager inte medveten om det och fortsätter att bete sig som om videon fortfarande publiceras till YouTube. Avpublicera alltid en videoresurs från YouTube via Experience Manager.
 
 >[!NOTE]
-För att ta bort innehåll från YouTube använder Experience Manager arbetsflödet **[!UICONTROL Unpublish from YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
+Experience Manager använder arbetsflödet **[!UICONTROL Unpublish from YouTube]** för att ta bort innehåll från YouTube, vilket gör att du kan övervaka förloppet och visa felinformation.
 Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 Så här avpublicerar du videoklipp för att ta bort dem från YouTube:
@@ -826,9 +825,9 @@ Så här avpublicerar du videoklipp för att ta bort dem från YouTube:
 1. Tryck på **[!UICONTROL Next]** i det övre högra hörnet på sidan.
 1. Tryck på **[!UICONTROL Unpublish]** i det övre högra hörnet på sidan.
 
-## Övervaka videokodning och YouTubes publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
+## Övervaka videokodning och YouTube publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
 
-När du överför en ny video till en mapp där videokodning används eller publicerar videon på YouTube ska du övervaka hur videokodningen/YouTube-publiceringen fortskrider (eller misslyckas). Det faktiska publiceringsförloppet för YouTube är endast tillgängligt via loggarna. Oavsett om det misslyckas eller lyckas visas det på andra sätt som beskrivs i följande procedur. Dessutom får du e-postmeddelanden när ett publiceringsarbetsflöde eller videokodning från YouTube har slutförts eller avbrutits.
+När du överför en ny video till en mapp där videokodning används eller publicerar videon till YouTube, ska du övervaka hur videokodningen/YouTube-publiceringen fortskrider (eller misslyckas). Publiceringsförloppet för YouTube är endast tillgängligt via loggarna. Oavsett om det misslyckas eller lyckas visas det på andra sätt som beskrivs i följande procedur. Dessutom får du e-postmeddelanden när en YouTube-publiceringsarbetsgång eller videokodning har slutförts eller avbrutits.
 
 ### Övervaka förlopp {#monitoring-progress}
 
@@ -852,7 +851,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
-   All arbetsflödesinformation, till exempel kodning, visas på tidslinjen. För YouTube-publicering innehåller tidslinjen i arbetsflödet även namnet på YouTube-kanalen och YouTubes video-URL. Dessutom visas felmeddelanden på tidslinjen i arbetsflödet när publiceringen är klar.
+   All arbetsflödesinformation, till exempel kodning, visas på tidslinjen. För YouTube-publicering innehåller tidslinjen för arbetsflödet även namnet på YouTube-kanalen och YouTube video-URL:en. Dessutom visas felmeddelanden på tidslinjen i arbetsflödet när publiceringen är klar.
 
    >[!NOTE]
    Det kan ta lång tid innan fel-/felmeddelanden slutligen registreras på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
