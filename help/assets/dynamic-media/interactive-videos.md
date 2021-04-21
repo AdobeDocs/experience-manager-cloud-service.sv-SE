@@ -1,14 +1,13 @@
 ---
 title: Interaktiva videoklipp
 description: Lär dig hur du arbetar med interaktiv video och videor som kan köpas i Dynamic Media.
-feature: Interactive Videos
-topic: Business Practitioner
+feature: Interaktiva videoklipp
 role: Business Practitioner
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
 translation-type: tm+mt
-source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '6019'
+source-wordcount: '6017'
 ht-degree: 4%
 
 ---
@@ -55,7 +54,7 @@ Titta på en sju och en halv minuts genomgång om [hur interaktiva videofilmer s
 
 ### Adobe Customer Success Webinar {#adobe-customer-success-webinar}
 
-Med webbseminariet [Using Interactive Video, Link Sharing, and YouTube sharing in Experience Manager Assets](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/) lär du dig hur du använder interaktiv video och andra funktioner för att knyta konverteringsdrivna händelser till ditt videomarknadsföringsinnehåll.
+Med webbseminariet [Using Interactive Video, Link Sharing, and YouTube sharing in Experience Manager Assets](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/) lär du dig hur du använder interaktiv video och andra funktioner för att knyta konverteringsdrivna händelser till ditt videomarknadsföringsmaterial.
 
 ## Snabbstart: Interaktiva videoklipp {#quick-start-interactive-videos}
 
@@ -288,7 +287,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
       Fortsätt spela upp och pausa videon vid punkter längs tidslinjen där du vill lägga till ett segment tills du når slutet av videon.
 
-1. (Valfritt) Dra fältet till vänster om du vill zooma in eller till höger om du vill zooma ut. **[!UICONTROL Timeline Scale Slider]** Med den här åtgärden kan du styra hur mycket detaljrikedom du ser på de segment som du har lagt till.
+1. (Valfritt) Dra fältet till vänster om du vill zooma in eller till höger om du vill zooma ut. **[!UICONTROL Timeline Scale Slider]** Med den här åtgärden kan du styra hur mycket detaljrikedom du ser för de segment som du har lagt till.
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
@@ -509,7 +508,7 @@ Om du är fristående kund av Experience Manager Assets kan du lägga till den i
 
 1. Kopiera den publicerade interaktiva videons inbäddningskod eller URL.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
+Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
 
 1. Identifiera var den statiska videon finns i målets webbsideskod.
 1. Ta bort den statiska videon och ersätt koden med den inbäddade koden eller URL-adressen som du kopierade från Experience Manager Assets, som den är.
