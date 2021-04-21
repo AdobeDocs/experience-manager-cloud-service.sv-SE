@@ -3,11 +3,10 @@ sub-product: Implementera för AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
-feature-set: Experience Manager
-feature: Developer Tools
+feature: Utvecklarverktyg
 role: Developer, Architect
 translation-type: tm+mt
-source-git-commit: cef4c40a0a4af7b3cc7cbe696ceb1a197bbef56a
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 32%
