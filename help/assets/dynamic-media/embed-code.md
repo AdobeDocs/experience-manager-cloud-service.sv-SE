@@ -1,14 +1,13 @@
 ---
 title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
 description: Lär dig bädda in Dynamic Media video- eller bildresurser på en webbsida.
-feature: Asset Management
-topic: Business Practitioner
+feature: Resurshantering
 role: Business Practitioner
 exl-id: 76335781-e39f-4aae-967f-5af8634d8f61
 translation-type: tm+mt
-source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 21%
 
 ---
