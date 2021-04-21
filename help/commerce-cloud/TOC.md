@@ -3,9 +3,8 @@ sub-product: AEM innehåll och handel som en Cloud Service
 user-guide-title: AEM innehåll och handel som en Cloud Service
 breadcrumb-title: AEM Content and Commerce Guide
 user-guide-description: Lär dig hur du använder och administrerar innehåll och handel i Experience Manager som en Cloud Service.
-feature-set: Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: 4b4741926381818e44b2293f9bed86782e689c49
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 2%
