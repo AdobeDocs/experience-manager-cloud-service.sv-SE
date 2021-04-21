@@ -1,14 +1,13 @@
 ---
 sub-product: Hjälp för Adobe Experience Manager as a Cloud Service
 user-guide-title: 'Hjälp för Adobe Experience Manager as a Cloud Service '
-feature-set: Experience Manager
-feature: Release Information
+feature: Versionsinformation
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
 translation-type: tm+mt
-source-git-commit: 80a59a02067d478713aa7dcdb436ad1345d89c1a
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 87%
+source-wordcount: '202'
+ht-degree: 92%
 
 ---
 
