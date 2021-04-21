@@ -1,14 +1,13 @@
 ---
 title: Snurrande uppsättningar
 description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
-feature: Spin Sets
-topic: Business Practitioner
+feature: Snurrande uppsättningar
 role: Business Practitioner
 exl-id: ed470472-62d9-4684-971b-30df3919c180
 translation-type: tm+mt
-source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
+source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1765'
 ht-degree: 12%
 
 ---
