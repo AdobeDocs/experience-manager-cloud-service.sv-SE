@@ -3,9 +3,9 @@ title: Underhållsaktiviteter i AEM som en Cloud Service
 description: Underhållsaktiviteter i AEM som en Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 translation-type: tm+mt
-source-git-commit: 503983b81cfe84b0bafe328d4fb7faeff000c7dd
+source-git-commit: 5351b4b9ceed04c572bafc02f47d6fa666e5580d
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -55,11 +55,11 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Dagligen</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td> <code>/apps/settings/granite/operations/maintenance/granite_daily</code></td>
+    <td>Se plats 1 nedan</td>
     <td>Se kodexempel 1 nedan</td>
-  <td><p><code>windowSchedule= daily</code></p> (det här värdet ska inte ändras)
-  <p><code>windowStartTime= HH:MM</code> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.</p>
-  <p><code>windowEndTime= HH:MM</code> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.</p>
+  <td><p><strong>windowSchedule= day</strong></p> (det här värdet ska inte ändras)
+  <p><strong>windowStartTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.</p>
+  <p><strong>windowEndTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.</p>
   </td> 
   </tr>
   <tr>
