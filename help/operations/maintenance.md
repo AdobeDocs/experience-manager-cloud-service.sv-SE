@@ -3,9 +3,9 @@ title: Underhållsaktiviteter i AEM som en Cloud Service
 description: Underhållsaktiviteter i AEM som en Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 translation-type: tm+mt
-source-git-commit: a1cf75a9ef6ebf6b61916296ec766255f0b549e0
+source-git-commit: c7e954e3ed49d6189d050b2c33c04a9266853758
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM sl
 | Rensa arbetsflöde | Kund | Måste göras i github. <br> Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under  `/libs` genom att skapa egenskaper under `/apps/settings/granite/operations/maintenance/granite_weekly` mappen  `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den  `granite_WorkflowPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaperna i  [AEM 6.5 Maintenance Task-dokumentation](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
 | Rensa projekt | Kund | Måste göras i github. <br> Åsidosätt den färdiga konfigurationsnoden i underhållfönstret under  `/libs` genom att skapa egenskaper under mappen  `/apps/settings/granite/operations/maintenance/granite_weekly` eller  `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en nod under noden ovan (namnge den  `granite_ProjectPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaper, se  [AEM 6.5 Maintenance Task-dokumentation](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
 
-Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-hoc-aktivitetsrensning och projekttömning som ska utföras under underhållsperioden varje dag, vecka eller månad. Dessa konfigurationer bör redigeras direkt i källkontrollen. Tabellen nedan beskriver de konfigurationsparametrar som är tillgängliga för varje fönster.
+Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-hoc-aktivitetsrensning och projekttömning som ska utföras under underhållsperioden varje dag, vecka eller månad. Dessa konfigurationer bör redigeras direkt i källkontrollen. Tabellen nedan beskriver de konfigurationsparametrar som är tillgängliga för varje fönster. Se även platserna och kodexemplen som finns efter tabellen.
 
 <table>
  <tbody>
@@ -85,15 +85,15 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     </tbody>
 </table>
 
-Platser:
+**Platser**:
 
-1. /apps/settings/granite/operations/intenance/granite_day
-2. /apps/settings/granite/operations/intenance/granite_week
-3. /apps/settings/granite/operations/intenance/granite_monthly
+* Dagligen - /apps/settings/granite/operations/intenance/granite_day
+* Varje vecka - /apps/settings/granite/operations/intenance/granite_week
+* Varje månad - /apps/settings/granite/operations/intenance/granite_monthly
 
-Kodexempel:
+**Kodexempel**:
 
-Kodexempel 1
+Kodexempel 1 (dagligen)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -108,7 +108,7 @@ Kodexempel 1
  />
 ```
 
-Kodexempel 2
+Kodexempel 2 (varje vecka)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -123,7 +123,7 @@ Kodexempel 2
    windowStartTime="14:30"/>
 ```
 
-Kodexempel 3
+Kodexempel 3 (månadsvis)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
