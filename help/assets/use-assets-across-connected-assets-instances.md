@@ -2,20 +2,20 @@
 title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
-feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
+feature: Resurshantering,Anslutna resurser,Resursdistribution,Användare och grupper
 role: Administrator,Business Practitioner,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
 translation-type: tm+mt
-source-git-commit: d3c19e460f72a980e058ef6117f6352bda4d1e8a
+source-git-commit: bbc396fbe7b3c11f8011a32fa78577957422fcf2
 workflow-type: tm+mt
 source-wordcount: '2816'
-ht-degree: 26%
+ht-degree: 25%
 
 ---
 
 # Använd Connected Assets när du vill dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som behövs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur som moderbolaget vill använda tillsammans.
+I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som krävs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur som moderbolaget vill använda tillsammans.
 
 Användare kan skapa webbsidor i [!DNL Experience Manager Sites]. [!DNL Experience Manager Assets] är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatser. [!DNL Experience Manager] har nu stöd för ovanstående användningsexempel genom integrering  [!DNL Sites] och  [!DNL Assets].
 
@@ -53,7 +53,7 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 |------|--------|-----------|-----|----------|
 | [!DNL Sites] administratör | Lokalt | [!DNL Experience Manager] `administrators` | `admin` | Konfigurera [!DNL Experience Manager] och konfigurera integrering med fjärrdistributionen [!DNL Assets]. |
 | DAM-användare | Lokalt | `Authors` | `ksaner` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
-| [!DNL Sites] author | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst lokalt  [!DNL Sites]) </li> <li>`dam-users` på lokal  [!DNL Sites]</li></ul> | `ksaner` | Slutanvändaren är [!DNL Sites]-författare som använder den här integreringen för att förbättra innehållets hastighet. Författarna söker efter och bläddrar bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använder de bilder som krävs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
+| [!DNL Sites] author | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst lokalt  [!DNL Sites]) </li> <li>`dam-users` på lokal  [!DNL Sites]</li></ul> | `ksaner` | Slutanvändare är [!DNL Sites]-författare som använder den här integreringen för att förbättra innehållets hastighet. Författare kan söka efter och bläddra bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som krävs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
 | [!DNL Assets] administratör | Fjärr | [!DNL Experience Manager] `administrators` | `admin` på fjärrkontrollen  [!DNL Experience Manager] | Konfigurerar CORS (Cross-Origin Resource Sharing). |
 | DAM-användare | Fjärr | `Authors` | `ksaner` på fjärrkontrollen  [!DNL Experience Manager] | Författarrollen på fjärrdistributionen [!DNL Experience Manager]. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av [!UICONTROL Content Finder]. |
 | DAM-distributör (teknisk användare) | Fjärr | <ul> <li> [!DNL Sites] `Authors`</li> <li> `connectedassets-assets-techaccts` </li> </ul> | `ksaner` på fjärrkontrollen  [!DNL Experience Manager] | Den här användaren som finns på fjärrdistributionen används av den lokala servern [!DNL Experience Manager] (inte författarrollen [!DNL Sites]) för att hämta fjärrresurserna, för författaren [!DNL Sites]. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
@@ -148,7 +148,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
 1. Navigera till gränssnittet [!DNL Assets] i fjärrdistributionen genom att gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** från arbetsytan [!DNL Experience Manager]. Du kan även få åtkomst till `https://[assets_servername_ams]:[port]/assets.html/content/dam` i en webbläsare. Ladda upp de resurser du vill ha.
 1. I [!DNL Sites]-distributionen klickar du på **[!UICONTROL Impersonate as]** i profilaktiveraren i det övre högra hörnet. Ange `ksaner` som användarnamn, markera det angivna alternativet och klicka på **[!UICONTROL OK]**.
-1. Öppna en We.Retail-webbsida på **[!UICONTROL Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL us]** > **[!UICONTROL en]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` i en webbläsare när du vill redigera en sida.
+1. Öppna en `We.Retail`-webbsida på **[!UICONTROL Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL us]** > **[!UICONTROL en]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` i en webbläsare när du vill redigera en sida.
 
    Klicka på **[!UICONTROL Toggle Side Panel]** överst till vänster på sidan.
 
@@ -182,7 +182,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 
 ### Kontrollera användning av en resurs på webbsidor {#asset-usage-references}
 
-[!DNL Experience Manager] gör att DAM-användare kan kontrollera alla referenser till en resurs. Det hjälper till att förstå och hantera användningen av en resurs i fjärr-[!DNL Sites] och i sammansatta resurser. Många som skapar webbsidor på [!DNL Experience Manager Sites]-distributioner kan använda en resurs på en [!DNL Assets]-fjärrplats på olika webbsidor. För att förenkla resurshanteringen och inte leda till brutna referenser är det viktigt för DAM-användarna att kontrollera användningen av en resurs på lokala webbplatser och fjärrwebbsidor. På fliken [!UICONTROL References] på sidan [!UICONTROL Properties] för en resurs visas lokala referenser och fjärrreferenser för resursen.
+[!DNL Experience Manager] gör att DAM-användare kan kontrollera alla referenser till en resurs. Det hjälper till att förstå och hantera användningen av en resurs i fjärr-[!DNL Sites] och i sammansatta resurser. Många som skapar webbsidor på [!DNL Experience Manager Sites]-distributioner kan använda en resurs på en fjärr-DAM på olika webbsidor. För att förenkla resurshanteringen och inte leda till brutna referenser är det viktigt för DAM-användarna att kontrollera användningen av en resurs på lokala webbplatser och fjärrwebbsidor. På fliken [!UICONTROL References] på sidan [!UICONTROL Properties] för en resurs visas lokala referenser och fjärrreferenser för resursen.
 
 Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distributionen:
 
@@ -227,7 +227,7 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 * Enkla redigeringar som är icke-destruktiva och redigering som stöds via `Image`-komponenten kan tillämpas på hämtade resurser. Resurserna är skrivskyddade.
 * Det enda sättet att hämta resursen på nytt är att dra den till en sida. Det finns inget API-stöd eller andra metoder för att hämta om en resurs för att uppdatera den.
 * Om resurser tas bort från DAM används de fortfarande på [!DNL Sites]-sidor.
-* Fjärrreferensposterna för en resurs hämtas asynkront. Referenserna och det totala antalet är inte i realtid och det kan vara en skillnad om en webbplatsförfattare använder resursen medan en DAM-användare visar referensen. DAM-användare kan uppdatera sidan och försöka igen om några minuter för att få fram det totala antalet.
+* Fjärrreferensposterna för en resurs hämtas asynkront. Referenserna och det totala antalet är inte i realtid och det kan vara en skillnad om en [!DNL Sites]-författare använder resursen medan en DAM-användare visar referensen. DAM-användare kan uppdatera sidan och försöka igen om några minuter för att få fram det totala antalet.
 
 ## Felsöka problem {#troubleshoot}
 
