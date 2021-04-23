@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 translation-type: tm+mt
-source-git-commit: 3fd695cbe77873fa57373d91249b71d8c4be8a08
+source-git-commit: 1b6dbf401ff921964537f6c79d12544789e93c92
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1647'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Komplexiteten för beroendena i högen blir snabbt tydlig eftersom du ser att an
 
 ## Gränser för leverans i fullhög {#limits}
 
-Det helstatiska arbetssättet skapar en silo där alla upplevelser finns i ett system. Ändringar eller tillägg på en nivå i silon kräver ändringar på andra lager, vilket gör ändringar som är tidskrävande och kostsamma.
+Det helstatiska arbetssättet skapar en silo där alla upplevelser finns i ett system. Ändringar eller tillägg i silon kräver ändringar i andra komponenter, vilket gör att det blir tidskrävande och kostsamt.
 
 Detta gäller särskilt presentationsskiktet, som i traditionella system ofta är nära knutet till CMS-systemet. Alla nya kanaler innebär vanligtvis en uppdatering av presentationslagret, vilket påverkar alla andra kanaler.
 
@@ -80,7 +80,7 @@ Headless-leverans är möjlig genom att en uppsättning robusta och flexibla API
 
 Headless är ett exempel på hur du frigör innehåll från presentationen. Eller i mer generiska avseenden: koppla loss den främre änden från den bakre änden av servicestacken. I en headless-konfiguration är presentationsskiktet (huvudet) fristående från innehållshanteringen (svansen). De två interagerar bara via API-anrop.
 
-Den här frikopplingen innebär att varje konsumtionstjänst (frontend) kan bygga sin upplevelse baserat på samma innehåll som levereras via API:erna, vilket säkerställer återanvändning och enhetlighet. Genom att använda tjänster kan de sedan implementera sina egna presentationslager så att innehållshanteringslagret (baksidan) enkelt kan skalas vågrätt.
+Den här frikopplingen innebär att varje konsumtionstjänst (frontend) kan bygga sin upplevelse baserat på samma innehåll som levereras via API:erna, vilket säkerställer återanvändning och enhetlighet. Genom att använda tjänster kan de sedan implementera sina egna presentationslager, vilket gör att innehållshanteringsstacken (baksidan) enkelt kan skalas vågrätt.
 
 ## Teknisk underbyggnad {#technology}
 
