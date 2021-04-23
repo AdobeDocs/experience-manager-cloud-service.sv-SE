@@ -3,9 +3,9 @@ title: Underhållsaktiviteter i AEM som en Cloud Service
 description: Underhållsaktiviteter i AEM som en Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 translation-type: tm+mt
-source-git-commit: 4c1c14fae5819e7f7e1bf5d04350c54b6cbe80bb
+source-git-commit: 503983b81cfe84b0bafe328d4fb7faeff000c7dd
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '914'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM sl
 Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-hoc-aktivitetsrensning och projekttömning som ska utföras under underhållsperioden varje dag, vecka eller månad. Dessa konfigurationer bör redigeras direkt i källkontrollen. Tabellen nedan beskriver de konfigurationsparametrar som är tillgängliga för varje fönster.
 
 <table>
+ <tbody>
   <tr>
     <th>Konfiguration av underhållsfönster</th>
     <th>Vem äger konfigurationen</th>
@@ -54,12 +55,11 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Dagligen</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td>Se plats 1 nedan</td>
+    <td> <code>/apps/settings/granite/operations/maintenance/granite_daily</code></td>
     <td>Se kodexempel 1 nedan</td>
-  <td>
-  <strong>windowSchedule= day</strong> (this value should not be changed) 
-  <strong>windowStartTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.
-  <strong>windowEndTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.
+  <td><p><code>windowSchedule= daily</code></p> (det här värdet ska inte ändras)
+  <p><code>windowStartTime= HH:MM</code> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.</p>
+  <p><code>windowEndTime= HH:MM</code> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.</p>
   </td> 
   </tr>
   <tr>
@@ -89,6 +89,7 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <strong>windowFirstLastStartDay= 0/1</strong> 0 för att schemalägga den första veckan i månaden eller 1 för att schemalägga den sista veckan i månaden. Om ett värde saknas schemaläggs jobben effektivt varje dag enligt windowScheduleWeekdays varje månad.
     </td> 
     </tr>
+    </tbody>
 </table>
 
 Platser:
