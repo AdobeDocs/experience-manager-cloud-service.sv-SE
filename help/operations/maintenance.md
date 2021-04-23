@@ -3,9 +3,9 @@ title: Underhållsaktiviteter i AEM som en Cloud Service
 description: Underhållsaktiviteter i AEM som en Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 translation-type: tm+mt
-source-git-commit: 5892ef2998b8bb0e955998662a3cbe8aaa624e97
+source-git-commit: a1cf75a9ef6ebf6b61916296ec766255f0b549e0
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -47,16 +47,12 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <th>Konfiguration av underhållsfönster</th>
     <th>Vem äger konfigurationen</th>
     <th>Konfigurationstyp</th>
-    <th>Plats</th>
-    <th>Exempel</th>
     <th>Parametrar</th>
   </tr>
   <tr>
     <td>Dagligen</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td>1</td>
-    <td>1</td>
   <td>
   <p><strong>windowSchedule= day</strong> (det här värdet ska inte ändras)</p>
   <p><strong>windowStartTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.</p>
@@ -67,8 +63,6 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Vecka</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td>Se plats 2 nedan</td>
-    <td>Se kodexempel 2 nedan</td>
     <td>
     <p><strong>windowSchedule= week</strong> (det här värdet ska inte ändras)</p>
     <p><strong>windowStartTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska börja köras.</p>
@@ -80,8 +74,6 @@ Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-
     <td>Månadsvis</td>
     <td>Kund</td>
     <td>JCR-noddefinition</td>
-    <td>Se plats 3 nedan</td>
-    <td>Se kodexempel 3 nedan</td>
     <td>
     <p><strong>windowSchedule= day</strong> (det här värdet ska inte ändras)</p>
     <p><strong>windowStartTime= HH:</strong> MMusing as 24 hour clock. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska börja köras.</p>
