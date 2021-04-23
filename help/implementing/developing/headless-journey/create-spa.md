@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 index: false
 translation-type: tm+mt
-source-git-commit: 3fd695cbe77873fa57373d91249b71d8c4be8a08
+source-git-commit: 1b6dbf401ff921964537f6c79d12544789e93c92
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
 
-I den här valfria fortsättningen av [AEM Headless Developer Journey,](#overview.md), får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full-stack och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA Editor, samt integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
+I den här valfria fortsättningen av [AEM Headless Developer Journey,](overview.md), får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full-stack och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA Editor, samt integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
 
 ## Berättelsen hittills {#story-so-far}
 
