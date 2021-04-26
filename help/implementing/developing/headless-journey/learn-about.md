@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 index: false
 translation-type: tm+mt
-source-git-commit: 1b6dbf401ff921964537f6c79d12544789e93c92
+source-git-commit: 9fb18dbe60121f46dba1e11d4133e5264a6d538d
 workflow-type: tm+mt
 source-wordcount: '1647'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
 
-I den här delen av [AEM Headless Developer Journey](#overview.md) lär du dig mer om headless technology och varför du skulle använda den.
+I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig mer om headless technology och varför du skulle använda den.
 
 ## Mål {#objective}
 
