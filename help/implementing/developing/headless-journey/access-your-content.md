@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 translation-type: tm+mt
-source-git-commit: 6097cb8961f604ec2d3f5f6d602c927efc7344d5
+source-git-commit: d17583399b6792583e3e210005b62d360b91d05a
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '764'
 ht-degree: 2%
 
 ---
@@ -130,6 +130,7 @@ Om du vill ha hjälp med att designa och utveckla dina modeller för innehållsf
 
 ## Ytterligare resurser {#additional-resources}
 
+* [Getting Started with AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)  - En kort videoserie med en översikt över hur du använder AEM headless-funktioner som datamodellering och GraphQL
 * [GraphQL.org](https://graphql.org)
    * [Scheman](https://graphql.org/learn/schema/)
    * [GraphQL Java-bibliotek](https://graphql.org/code/#java)
