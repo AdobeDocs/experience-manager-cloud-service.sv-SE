@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 translation-type: tm+mt
-source-git-commit: 5fd190b50f52a3182365a31e1539c5864f42afb4
+source-git-commit: d17583399b6792583e3e210005b62d360b91d05a
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
@@ -244,6 +244,7 @@ Nu när du har lärt dig att modellera strukturen och skapa innehåll som är be
 
 ## Ytterligare resurser {#additional-resources}
 
+* [Getting Started with AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)  - En kort videoserie med en översikt över hur du använder AEM headless-funktioner som datamodellering och GraphQL
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)  - den inledande sidan för innehållsfragment
    * [Content Fragment in the Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md)  - enable Content Fragment functionality in the Configuration Browser
    * [Modeller](/help/assets/content-fragments/content-fragments-models.md)  för innehållsfragment - skapa och redigera modeller för innehållsfragment
