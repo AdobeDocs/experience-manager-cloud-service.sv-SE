@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 index: false
 translation-type: tm+mt
-source-git-commit: 6097cb8961f604ec2d3f5f6d602c927efc7344d5
+source-git-commit: 9fb18dbe60121f46dba1e11d4133e5264a6d538d
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 >
 >ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
 
-I den här delen av [AEM Headless Developer Journey](#overview.md) lär du dig hur du tar ditt AEM, inklusive innehållsfragment, dina GraphQL-anrop, dina REST API-anrop och ditt program, och förbereder det för live-körning.
+I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig hur du tar ditt AEM, inklusive innehållsfragment, dina GraphQL-anrop, dina REST API-anrop och ditt program, och förbereder det för live-körning.
 
 ## Berättelsen hittills {#story-so-far}
 
