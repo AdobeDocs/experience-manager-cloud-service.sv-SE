@@ -6,9 +6,9 @@ user-guide-description: Läs om hur ni anpassar er distribution av Experience Ma
 feature: Utvecklarverktyg
 role: Developer, Architect
 translation-type: tm+mt
-source-git-commit: eb404db0cf45bf2ef5003c6e4c07c29758c8166b
+source-git-commit: f0357bb2b19d7d44066bf868c3ea3ce0dcf42461
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '972'
 ht-degree: 30%
 
 ---
@@ -168,6 +168,7 @@ ht-degree: 30%
    + [Innehållspaket Maven Plugin](/help/implementing/developing/tools/maven-plugin.md)
    + [AEM](/help/implementing/developing/tools/repo-tool.md)
    + [Använda CRXDE Lite](/help/implementing/developing/tools/crxde.md)
+   + [Länkens externalisering](/help/implementing/developing/tools/externalizer.md)
 + Personanpassning {#personalization}
    + [ContextHub](developing/personalization/contexthub.md)
    + [ContextHub konfigureras](developing/personalization/configuring-contexthub.md)
