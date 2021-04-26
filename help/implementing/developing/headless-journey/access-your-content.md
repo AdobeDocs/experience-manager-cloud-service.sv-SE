@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 index: false
 translation-type: tm+mt
-source-git-commit: d17583399b6792583e3e210005b62d360b91d05a
+source-git-commit: 9fb18dbe60121f46dba1e11d4133e5264a6d538d
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 >
 >ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
 
-I den här delen av [AEM Headless Developer Journey](#overview.md) lär du dig hur du använder GraphQL-frågor för att komma åt innehållet i dina innehållsfragment.
+I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig hur du använder GraphQL-frågor för att komma åt innehållet i dina innehållsfragment.
 
 ## Berättelsen hittills {#story-so-far}
 
