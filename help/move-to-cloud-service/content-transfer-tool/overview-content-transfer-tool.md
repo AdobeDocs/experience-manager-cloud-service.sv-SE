@@ -1,16 +1,23 @@
 ---
 title: Översikt över Content Transfer Tool
 description: Översikt över Content Transfer Tool
+exl-id: 4715937e-4c4c-4680-af15-016db4fe7db9
 translation-type: tm+mt
-source-git-commit: 60e236eadea8983fcf087b94ce908e55421214ae
+source-git-commit: 7bdf8f1e6d8ef1f37663434e7b14798aeb8883f4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '813'
+ht-degree: 79%
 
 ---
 
-
 # Översikt {#overview-content-transfer-tool}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_overview"
+>title="Översikt"
+>abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service. Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#extraction-process" text="Extraheringsprocess"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#ingestion-process" text="Inmatningsprocess"
 
 Content Transfer Tool är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM-källinstans (On-premise eller AMS) till målinstansen av AEM Cloud Service.
 
@@ -49,6 +56,12 @@ För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet
 
 
 ## Riktlinjer och bästa praxis {#best-practices}
+
+>id=&quot;aemcloud_ctt_guidelines&quot;
+>title=&quot;Guidelines and Best Practices&quot;
+>abstract=&quot;Riktlinjer och bästa praxis för användning av verktyget Innehållsöverföring, inklusive rensning av revisioner, diskutrymme med mera.&quot;
+>additional-url=&quot;https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs&quot; text=&quot;Viktigt att tänka på vid användning av verktyget Innehållsöverföring&quot;
+>additional-url=&quot;https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#important-considerations&quot; text=&quot;Viktigt att tänka på vid användning av verktyget för användarmappning&quot;
 
 Följ nedanstående avsnitt för att få information om riktlinjer och bästa praxis för att använda Content Transfer Tool:
 
