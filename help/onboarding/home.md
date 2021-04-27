@@ -3,10 +3,10 @@ title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
 translation-type: tm+mt
-source-git-commit: 486e60c0287d6693de028b8b5457814e36b32185
+source-git-commit: 7bdf8f1e6d8ef1f37663434e7b14798aeb8883f4
 workflow-type: tm+mt
-source-wordcount: '982'
-ht-degree: 36%
+source-wordcount: '1003'
+ht-degree: 35%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 36%
 >id="aemcloud_onboarding_overview"
 >title="Översikt över introduktion"
 >abstract="Oavsett om du distribuerar ett nytt program eller migrerar ett befintligt, fungerar den här guiden som en startpunkt för att säkerställa att programmet är optimerat och klart för Cloud Service. Du behöver din Adobe ID och din systemadministratörs hjälp för att lägga till användare i Cloud Manager till deras tilldelade roller och associerade behörigheter."
+>additional-url="https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/SLAExhibit-AEMCloudService-2019DEC12.pdf" text="Tjänstnivåutställning - AEM som en Cloud Service"
 
 Grattis till att du har påbörjat din resa med AEM som Cloud Service! Oavsett om du distribuerar ett nytt program eller migrerar ett befintligt, fungerar den här guiden som en startpunkt för att säkerställa att programmet är optimerat och klart för Cloud Service.
 
