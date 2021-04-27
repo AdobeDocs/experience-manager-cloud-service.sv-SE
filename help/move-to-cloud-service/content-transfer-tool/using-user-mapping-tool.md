@@ -1,18 +1,26 @@
 ---
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
+exl-id: 88ce7ed3-46fe-4b3f-8e18-c7c8423faf24
 translation-type: tm+mt
-source-git-commit: 7c7ae680932849cf2ed0be3dc10618d55acc8366
+source-git-commit: 7bdf8f1e6d8ef1f37663434e7b14798aeb8883f4
 workflow-type: tm+mt
-source-wordcount: '1104'
-ht-degree: 5%
+source-wordcount: '1185'
+ht-degree: 4%
 
 ---
-
 
 # Använda verktyget för användarmappning {#user-mapping-tool}
 
 ## Översikt {#overview}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_usermapping"
+>title="Verktyg för användarmappning"
+>abstract="Med verktyget Innehållsöverföring kan du flytta användare och grupper från ditt befintliga AEM till AEM som en Cloud Service. Befintliga användare och grupper måste mappas till sina IMS-ID:n för att undvika dubbletter av användare och grupper i Cloud Servicens författarinstans."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#important-considerations" text="Viktigt att tänka på när du använder verktyget för användarmappning"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#using-user-mapping-tool" text="Använda verktyget för användarmappning"
+
 
 Som en del av övergången till Adobe Experience Manager (AEM) som Cloud Service måste du flytta användare och grupper från ditt befintliga AEM till AEM som en Cloud Service. Detta görs med verktyget Innehållsöverföring.
 
@@ -102,4 +110,3 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-4.png)
 
 1. Mer information om hur du kör extraheringsfasen finns i [Köra verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#running-tool).
-
