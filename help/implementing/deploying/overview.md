@@ -1,12 +1,12 @@
 ---
 title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
-feature: Deploying
+feature: Distribuerar
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
 translation-type: tm+mt
-source-git-commit: 9ff68805d4deabaf637cee9ab81ba9b366a8e762
+source-git-commit: 7bdf8f1e6d8ef1f37663434e7b14798aeb8883f4
 workflow-type: tm+mt
-source-wordcount: '3266'
+source-wordcount: '3334'
 ht-degree: 1%
 
 ---
@@ -163,6 +163,12 @@ Mer information om repoinit finns i [Sling-dokumentationen](https://sling.apache
 above appears to be internal, to confirm with Brian -->
 
 ### Pakethanteraren &quot;one offs&quot; för paket med ändringsbart innehåll {#package-manager-oneoffs-for-mutable-content-packages}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_packagemanager"
+>title="Pakethanteraren - migrerar paket med ändringsbart innehåll"
+>abstract="Utforska användningen av pakethanteraren i användningsfall där ett innehållspaket ska installeras som en engångslösning, vilket inkluderar import av specifikt innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer och mycket mer."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en#cloud-migration" text="Content Transfer Tool"
 
 I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. I dessa scenarier kan Package Manager användas i AEM som en Cloud Service-miljö.
 
