@@ -1,18 +1,24 @@
 ---
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
+exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
 translation-type: tm+mt
-source-git-commit: 23943db6fbdf82a1d1be47e5a8777064b3750a95
+source-git-commit: 7bdf8f1e6d8ef1f37663434e7b14798aeb8883f4
 workflow-type: tm+mt
-source-wordcount: '2307'
-ht-degree: 51%
+source-wordcount: '2685'
+ht-degree: 47%
 
 ---
-
 
 # Använda Content Transfer Tool {#using-content-transfer-tool}
 
 ## Viktigt att tänka på när du använder Content Transfer Tool {#pre-reqs}
+
+>id=&quot;aemcloud_ctt_prereqs&quot;
+>title=&quot;Viktigt att tänka på vid användning av verktyget Innehållsöverföring&quot;
+>abstract=&quot;Granska viktiga aspekter av att använda verktyget för innehållsöverföring, inklusive Java- och AEM-versioner, datastortyper som stöds, användargruppöverväganden med mera.&quot;
+>additional-url=&quot;https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en#best-practices&quot; text=&quot;Best Practices and Guidelines&quot;
+>additional-url=&quot;https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#availability&quot; text=&quot;Download Content Transfer Tool&quot;
 
 Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder Content Transfer Tool:
 
@@ -49,12 +55,26 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 ## Tillgänglighet {#availability}
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_download"
+>title="Hämta"
+>abstract="Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen."
+>additional-url="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
+
 Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns i [Versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 >[!NOTE]
 >Hämta Content Transfer Tool från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen.
 
 ## Köra Content Transfer Tool {#running-tool}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_demo"
+>title="Verktyget Innehållsöverföring körs"
+>abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehållet till AEM som en Cloud Service (Författare/Publicera)."
+>additional-url="https://video.tv.adobe.com/v/35460/?quality=12&amp;learn=on" text=" Se demo"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=en#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
 >[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
 
@@ -133,6 +153,13 @@ Mer information finns i [Användarmappningsverktyget](https://experienceleague.a
 
 ### Extraheringsprocess i innehållsöverföring {#extraction-process}
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_extraction"
+>title="Innehållsextrahering"
+>abstract="Extrahering avser att extrahera innehåll från AEM till ett temporärt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#ingestion-process" text="Inmatningsprocess"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#top-up-extraction-process" text="Extrahering uppifrån"
+
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 
 1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Extract** för att påbörja extraheringen. Dialogrutan **Extrahering av migreringsuppsättning** visas och klicka på **Extract** för att starta extraheringsfasen.
@@ -174,6 +201,13 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 
 ### Inmatningsprocess i innehållsöverföring {#ingestion-process}
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_ingestion"
+>title="Innehållsintag"
+>abstract="Inmatningen hänvisar till inmatning av innehåll från *migreringsuppsättningen* till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#extraction-process" text="Extraheringsprocess"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#top-up-ingestion-process" text="Uppdatera inmatning"
+
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 
 1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Ingest** för att påbörja extraheringen. Dialogrutan **Migration Set ingestion** visas. Klicka på **Ingest** för att starta intagningsfasen. Det går att importera innehåll till Author och Publish samtidigt.
@@ -208,6 +242,13 @@ När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatnin
 
 
 ### Visa loggar för en migreringsuppsättning {#viewing-logs-migration-set}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_logs"
+>title="Visa loggar"
+>abstract="När extraheringen av intag har slutförts bör du kontrollera om det finns några fel eller varningar i loggarna. Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att man kontaktar Adobe support."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#troubleshooting" text="Felsökning"
+>additional-url="https://helpx.adobe.com/ca/enterprise/admin-guide.html/ca/enterprise/using/support-for-experience-cloud.ug.html" text="Kontakta supporten för Adobe"
 
 När varje steg har slutförts (extrahering och förtäring) kontrollerar du loggarna och söker efter fel.  Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att man kontaktar Adobe support.
 
@@ -277,5 +318,3 @@ Filerna som skapas i *OUT_DIR* som anges ovan för överensstämmelse, kan sedan
 Som användare kan du se följande beteendeförändringar i användargränssnittet i Content Transfer Tool:
 
 * Ikonerna i gränssnittet för verktyget för innehållsöverföring kan se annorlunda ut än skärmbilderna som visas i den här handboken, eller också visas de inte alls beroende på versionen av AEM-källinstansen.
-
-
