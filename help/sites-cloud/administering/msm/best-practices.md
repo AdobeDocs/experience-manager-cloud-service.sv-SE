@@ -3,14 +3,14 @@ title: MSM Best Practices
 description: Lär dig de bästa arbetssätten som skapats av tekniker och konsultteam på Adobe för att komma igång med AEM Multi Site Manager.
 feature: Multi Site Manager
 role: Administrator
+exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
 translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+source-git-commit: 184de9c1391ade3abbf2c6d73f09a324e6fa7e3e
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1436'
 ht-degree: 0%
 
 ---
-
 
 # MSM Best Practices {#msm-best-practices}
 
@@ -37,6 +37,10 @@ Ytterligare fördelar med att använda en ritkonfiguration är att de
 Om det inte finns någon referens till en ritningskonfiguration kan rollouts bara initieras från själva Live-kopiorna, vilket i huvudsak leder till att innehållet hämtas från källan.
 
 När du skapar en ny webbplats med Live Copy är det fördelaktigt att skapa designkonfigurationer för att säkerställa att hela MSM-funktionsuppsättningen är tillgänglig.
+
+>[!NOTE]
+>
+> Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
 
 ## Synkronisering av komponenter och behållare {#components-and-container-synchronization}
 
