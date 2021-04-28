@@ -5,9 +5,9 @@ feature: Multi Site Manager
 role: Administrator
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
 translation-type: tm+mt
-source-git-commit: 1ba90d9ccbae70c612e223835fbeb4dfdaf60975
+source-git-commit: 243e72f477f5c4b0507b80b6ef16d6f5246c739e
 workflow-type: tm+mt
-source-wordcount: '4192'
+source-wordcount: '4277'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,15 @@ När du har skapat en ritningskonfiguration konfigurerar du följande egenskaper
 
 När du använder en ritningskonfiguration kan du associera den med en utrullningskonfiguration som bestämmer hur Live-kopior av källan/ritytan synkroniseras. Se [Ange vilka utrullningskonfigurationer som ska användas](live-copy-sync-config.md#specifying-the-rollout-configurations-to-use).
 
-### Skapa en designkonfiguration {#creating-a-blueprint-configuration}
+### Skapa och redigera layoutkonfigurationer {#creating-editing-blueprint-configurations}
+
+Blåtryckskonfigurationer betraktas som oföränderliga data och kan därför inte redigeras under körning. Därför måste alla konfigurationsändringar distribueras via Git med CI/CD-pipeline.
+
+Mer information finns i artikeln [Notable Changes to Adobe Experience Manager (AEM) as a Cloud Service.](/help/release-notes/aem-cloud-changes.md)
+
+Följande steg är bara tillgängliga för en administratör på en lokal utvecklingsinstans för testnings- och utvecklingssyften. Dessa alternativ är inte tillgängliga i någon AEMaaCS-molninstans.
+
+#### Skapa en skräddarsydd konfiguration lokalt {#creating-a-blueprint-configuration}
 
 Så här skapar du en ritningskonfiguration:
 
@@ -61,7 +69,7 @@ Så här skapar du en ritningskonfiguration:
 
 1. **Create** skapar en ritningskonfiguration utifrån din specifikation.
 
-### Redigera eller ta bort en designkonfiguration {#editing-or-deleting-a-blueprint-configuration}
+### Redigera eller ta bort en designkonfiguration lokalt{#editing-or-deleting-a-blueprint-configuration}
 
 Du kan redigera eller ta bort en befintlig ritningskonfiguration:
 
