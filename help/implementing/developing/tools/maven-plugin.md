@@ -1,14 +1,14 @@
 ---
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
+exl-id: d631d6df-7507-4752-862b-9094af9759a0
 translation-type: tm+mt
-source-git-commit: 2cdbbe9b8f6608cbdd299889be515d421e3d9ad3
+source-git-commit: 03b2237dfde6ec605d8dcd8789ec4f2aa67716ca
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1855'
 ht-degree: 5%
 
 ---
-
 
 # Adobe Content Package Maven Plugin {#adobe-content-package-maven-plugin}
 
@@ -30,7 +30,7 @@ I det här dokumentet beskrivs hur du använder Maven för att hantera dessa upp
 
 ## Paket och den AEM projektstrukturen {#aem-project-structure}
 
-AEM 6.5 följer de senaste bästa metoderna för pakethantering och projektstruktur som implementeras av den senaste AEM Project Archetype för både lokala implementeringar och AMS-implementeringar.
+AEM som Cloud Service följer de senaste metoderna för pakethantering och projektstruktur som implementerats av den senaste AEM Project Archetype.
 
 >[!TIP]
 >
@@ -223,7 +223,7 @@ När filtret inte innehåller något `mode`-element används standardvärdet `re
 |---|---|---|---|---|
 | `detail` | `boolean` | Nej | `false` | Avgör om alla inställningsbara egenskaper ska visas för varje mål |
 | `goal` | `String` | Nej | Inget | Parametrarna definierar namnet på målet som hjälpen ska visas för. Om inget värde anges visas hjälpen för alla mål. |
-| `indentSize` | `int` | Nej | `2` | Antalet blanksteg som ska användas för indrag av varje nivå (måste vara positivt om det är definierat) |
+| `indentSize` | `int` | Nej | `2` | Antalet blanksteg som ska användas för indrag för varje nivå (måste vara positivt om det är definierat) |
 | `lineLength` | `int` | Nej | `80` | Den maximala längden för en visningsrad (måste vara positiv om den har definierats) |
 
 ## Inkludera en miniatyrbild eller egenskapsfil i paketet {#including-a-thumbnail-image-or-properties-file-in-the-package}
