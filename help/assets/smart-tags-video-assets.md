@@ -1,16 +1,16 @@
 ---
 title: Smarta taggar för videomaterial
 description: Experience Manager lägger automatiskt till kontextuella och beskrivande smarta taggar i videoklipp med  [!DNL Adobe Sensei].
-feature: Smart Tags,Tagging
+feature: Smarta taggar,Taggar
 role: Administrator,Business Practitioner
+exl-id: b59043c5-5df3-49a7-b4fc-da34c03649d7
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: 87d7cbb4463235a835d18fce49d06315a7c87526
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
-
 
 # Smart tagga dina videoresurser {#video-smart-tags}
 
@@ -64,7 +64,7 @@ Om du vill söka efter videoresurser baserat på de automatiskt genererade smart
 
 Sökresultaten visar videoresurserna baserat på den tagg du har angett.
 
-Sökresultaten är en kombination av videomaterial med sökbara nyckelord i metadata och videomaterialet som är smarta taggade med de sökbara nyckelorden. Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i de smarta taggarna. Mer information finns i [Förstå [!DNL Experience Manager] sökresultat med smarta taggar](smart-tags.md#understandsearch).
+Sökresultaten är en kombination av videomaterial med sökbara nyckelord i metadata och videomaterialet som är smarta taggade med de sökbara nyckelorden. Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i de smarta taggarna. Mer information finns i [Förstå [!DNL Experience Manager] sökresultat med smarta taggar](smart-tags.md#understand-search).
 
 ## Moderera smarta taggar för video {#moderate-video-smart-tags}
 
