@@ -1,13 +1,14 @@
 ---
-title: Tagga resurser automatiskt med AI-genererade taggar
-description: Tagga resurser med artificiellt intelligenta tjänster som lägger till kontextuella och beskrivande taggar med hjälp av  [!DNL Adobe Sensei] service.
+title: Tagga resurser automatiskt med  [!DNL Adobe Sensei] smart tjänst
+description: Tagga tillgångar med en artificiellt intelligent tjänst som använder kontextuella och beskrivande affärstaggar.
 contentOwner: AG
-feature: Smart Tags,Tagging
+feature: Smarta taggar,Taggar
 role: Administrator,Business Practitioner
+exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: 87d7cbb4463235a835d18fce49d06315a7c87526
 workflow-type: tm+mt
-source-wordcount: '2736'
+source-wordcount: '2639'
 ht-degree: 5%
 
 ---
@@ -19,21 +20,19 @@ Organisationer som hanterar digitalt material använder i allt högre grad taxon
 
 Jämfört med naturliga språkordsuttryck hjälper taggning som baseras på företagstaxonomi till att anpassa tillgångarna till företagets verksamhet och säkerställer att de mest relevanta resurserna visas i sökningar. En biltillverkare kan t.ex. märka bilderna med modellnamn så att endast relevanta bilder visas när de genomsöks för att utforma en kampanj.
 
-I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
+I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. De nya [!DNL Experience Manager Assets]-distributionerna är som standard integrerade med [!DNL Adobe Developer Console]. Det hjälper till att konfigurera smarta taggar snabbare. I de äldre distributionerna kan administratörer manuellt [konfigurera integrering av smarta taggar](/help/assets/smart-tags-configuration.md#aio-integration).
 
 <!-- TBD: Create a flowchart for how training works in CS.
 ![flowchart](assets/flowchart.gif) 
 -->
 
-Du kan tagga följande typer av resurser:
-
-* **Bilder**: Bilder i många format taggas med Adobe Sensei smarta innehållstjänster. Du [skapar en utbildningsmodell](#train-model) och [använder smarta taggar](#tag-assets) på bilder.
-* **Videomaterial**: Videotaggning är aktiverat som standard i  [!DNL Adobe Experience Manager] som  [!DNL Cloud Service]en. [Videor ](/help/assets/smart-tags-video-assets.md) taggas automatiskt när du överför nya videoklipp eller bearbetar om befintliga.
-* **Textbaserade resurser**:  [!DNL Experience Manager Assets] taggar automatiskt de textbaserade resurserna som stöds när de överförs. Läs mer om [taggning av textbaserade resurser](#smart-tag-text-based-assets).
-
 ## Resurstyper som stöds {#smart-tags-supported-file-formats}
 
-Smarta taggar används på de filtyper som stöds och som genererar återgivningar i JPG- och PNG-format. Funktionen stöds för följande typer av resurser:
+Du kan tagga följande typer av resurser:
+
+* **Bilder**: Bilder i många format taggas med Adobe Sensei smarta innehållstjänster. Du [skapar en utbildningsmodell](#train-model) och [använder smarta taggar](#tag-assets) på bilder. Smarta taggar används på de filtyper som stöds och som genererar återgivningar i JPG- och PNG-format.
+* **Textbaserade resurser**:  [!DNL Experience Manager Assets] taggar automatiskt de textbaserade resurserna som stöds när de överförs. Läs mer om [taggning av textbaserade resurser](#smart-tag-text-based-assets).
+* **Videomaterial**: Videotaggning är aktiverat som standard i  [!DNL Adobe Experience Manager] som  [!DNL Cloud Service]en. [Videor ](/help/assets/smart-tags-video-assets.md) taggas automatiskt när du överför nya videoklipp eller bearbetar om befintliga.
 
 | Bilder (MIME-typer) | Textbaserade resurser (filformat) | Videomaterial (filformat och kodekar) |
 |----|-----|------|
@@ -58,15 +57,10 @@ Smarta taggar används på de filtyper som stöds och som genererar återgivning
 
 [!DNL Experience Manager] lägger automatiskt till smarta taggar i textbaserade resurser och i videoklipp som standard. Om du vill lägga till smarta taggar automatiskt till bilder utför du följande åtgärder.
 
-* [ [!DNL Adobe Experience Manager] Integrera med Adobe Developer Console](#integrate-aem-with-aio).
 * [Förstå taggmodeller och riktlinjer](#understand-tag-models-guidelines).
 * [Tåla modellen](#train-model).
 * [Tagga dina digitala resurser](#tag-assets).
 * [Hantera taggar och sökningar](#manage-smart-tags-and-searches).
-
->[!TIP]
->
->Smarta taggar gäller endast för [!DNL Adobe Experience Manager Assets]-kunder. Smarta taggar kan köpas som tillägg till [!DNL Experience Manager].
 
 <!-- TBD: Is there a link to buy SCS or initiate a sales call. How are AIO services sold? Provide a CTA here to buy or contacts Sales team. -->
 
@@ -75,14 +69,6 @@ Smarta taggar används på de filtyper som stöds och som genererar återgivning
 De textbaserade resurserna som stöds taggas automatiskt av [!DNL Experience Manager Assets] när de överförs. Den är aktiverad som standard. Hur effektiva smarta taggar är beror inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text. För textbaserade resurser är smarta taggar nyckelorden som visas i texten men de som bäst beskriver resursen. För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger emellertid en dedikerad, strukturerad och prioriterad sökfaktor som används för att förbättra resursidentifieringen jämfört med ett fullständigt sökindex.
 
 För bilder och videoklipp baseras de smarta taggarna på vissa visuella proportioner.
-
-## Integrera [!DNL Experience Manager] med Adobe Developer Console {#integrate-aem-with-aio}
-
->[!IMPORTANT]
->
->De nya [!DNL Experience Manager Assets]-distributionerna är som standard integrerade med [!DNL Adobe Developer Console]. Det hjälper till att konfigurera smarta taggar snabbare. I de äldre distributionerna kan administratörer manuellt [konfigurera integrering av smarta taggar](/help/assets/smart-tags-configuration.md#aio-integration).
-
-Du kan integrera [!DNL Adobe Experience Manager] med smarta taggar med [!DNL Adobe Developer Console]. Använd den här konfigurationen för att komma åt tjänsten Smarta taggar från [!DNL Experience Manager]. Mer information om hur du konfigurerar smarta taggar finns i [konfigurera [!DNL Experience Manager] att tagga resurser](smart-tags-configuration.md). I bakänden autentiserar [!DNL Experience Manager]-servern dina inloggningsuppgifter med Adobe Developer Console-gatewayen innan din begäran vidarebefordras till smarta taggar.
 
 ## Förstå taggmodeller och riktlinjer {#understand-tag-models-guidelines}
 
@@ -155,7 +141,7 @@ Följ de här stegen för att skapa och utbilda en modell för dina företagsspe
 
 Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i utbildningsuppsättningen med resurser kan du läsa rapporten om utbildningsarbetsflödet i rapportkonsolen.
 
-1. I [!DNL Experience Manager]-gränssnittet går du till **[!UICONTROL Tools] > **[!UICONTROL Assets] > **[!UICONTROL Reports]**.
+1. I gränssnittet [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 1. Klicka på **[!UICONTROL Create]** på sidan **[!UICONTROL Asset Reports]**.
 1. Välj **[!UICONTROL Smart Tags Training]**-rapporten och klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
 1. Ange en titel och beskrivning för rapporten. Under **[!UICONTROL Schedule Report]** låter du alternativet **[!UICONTROL Now]** vara markerat. Om du vill schemalägga rapporten till ett senare tillfälle väljer du **[!UICONTROL Later]** och anger ett datum och en tid. Klicka sedan på **[!UICONTROL Create]** i verktygsfältet.
@@ -165,7 +151,7 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 
 ## Tagga resurser {#tag-assets}
 
-När du har utbildat tjänsten Smarta taggar kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa lämpliga taggar på en annan uppsättning med liknande resurser. Du kan använda taggningsarbetsflödet periodiskt eller när det behövs. Arbetsflödet för taggning gäller både resurser och mappar.
+När du har utbildat tjänsten Smarta taggar kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa taggar på en annan uppsättning resurser. Du kan tillämpa taggningsarbetsflödet på begäran eller schemalägga det att köras periodiskt. Arbetsflödet för taggning gäller både resurser och mappar.
 
 ### Tagga resurser från arbetsflödeskonsolen {#tagging-assets-from-the-workflow-console}
 
@@ -224,7 +210,7 @@ Så här modererar du smarta taggar för dina resurser:
 
 1. Navigera till sidan [!UICONTROL Properties] för resursen. Observera att taggen som du befordrade har hög relevans och därför visas högre i sökresultaten.
 
-### Förstå AEM sökresultat med smarta taggar {#understandsearch}
+### Förstå AEM sökresultat med smarta taggar {#understand-search}
 
 Som standard kombineras söktermerna AEM en `AND`-sats. Om du använder smarta taggar ändras inte standardbeteendet. Om du använder smarta taggar läggs en `OR`-sats till för att hitta någon av söktermerna i de använda smarta taggarna. Du kan till exempel söka efter `woman running`. Resurser med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som är taggad med antingen `woman` eller `running` med smarta taggar visas i en sådan sökfråga. Sökresultaten är en kombination av
 
