@@ -3,10 +3,10 @@ title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: IMS-stöd för Adobe Experience Manager as a Cloud Service
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
 translation-type: tm+mt
-source-git-commit: 460cefde9a203b4237aedf01b01e026d37eadfe6
+source-git-commit: 75071cb1793b9b670ebbc029bf9fb41f4de119f9
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 95%
+source-wordcount: '2009'
+ht-degree: 92%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 95%
 * AEM as a Cloud Service har stöd för Admin Console för AEM-instanser och Adobe Identity Management System (förkortas till IMS) för autentisering.
 * Med Admin Console kan administratörer hantera alla Experience Cloud-användare centralt.
 * Användare och grupper kan tilldelas produktprofiler som är kopplade till instanser i AEM as a Cloud Service, vilket gör att de kan logga in på instansen.
+
+>[!TIP]
+>
+>Se vår Experience League-kurs [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS för att AEM som en Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomst till AEM samt funktioner och funktioner. Adobe ID krävs.
 
 ## Viktiga funktioner {#key-highlights}
 
