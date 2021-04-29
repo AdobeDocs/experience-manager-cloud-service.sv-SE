@@ -1,14 +1,14 @@
 ---
 title: SPA- och serveråtergivning
 description: Om du använder SSR-återgivning (server side rendering) i SPA kan det snabba upp den initiala inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
+exl-id: be409559-c7ce-4bc2-87cf-77132d7c2da1
 translation-type: tm+mt
-source-git-commit: fc61f13fbf976c43fcdd6921178a9bd4e82fc68d
+source-git-commit: 4965bd30c02536efb81a26fff8da6e5f75dbfae4
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1502'
 ht-degree: 0%
 
 ---
-
 
 # Återgivning på SPA- och serversidan{#spa-and-server-side-rendering}
 
@@ -45,7 +45,9 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 
 >[!NOTE]
 >
->Adobe rekommenderar en separat Adobe I/O Runtime-instans för varje AEM (författare, publicering, scen osv.).
+>Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (scen, prod, testning osv.). Detta möjliggör typiska mönster för systemutvecklingens livscykel (SDLC) med olika versioner av ett enda program som distribueras till olika miljöer. Mer information finns i dokumentet [CI/CD for Project Fire Applications](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md).
+>
+>En separat arbetsyta behövs inte per instans (författare, publicering) såvida det inte finns skillnader i körtidsimplementeringen per instanstyp.
 
 ## Fjärrrenderingskonfiguration {#remote-content-renderer-configuration}
 
