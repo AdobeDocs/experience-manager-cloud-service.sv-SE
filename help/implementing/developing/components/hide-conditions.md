@@ -1,14 +1,14 @@
 ---
 title: Använda Dölj villkor
 description: Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte.
+exl-id: 2a96f246-fb0f-4298-899e-ebbf9fc1c96f
 translation-type: tm+mt
-source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
+source-git-commit: fa3280defb2a97954c5ab1b70e7600382e370606
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 1%
 
 ---
-
 
 # Använda Dölj villkor {#using-hide-conditions}
 
@@ -72,7 +72,7 @@ Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, s
 
    ![Utvärdering av dolt villkor](assets/hide-conditions-evaluation.png)
 
-1. Värdet `disableChildren` hämtas från designkonfigurationen och uttrycket `${cdDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
+1. Värdet `disableChildren` hämtas från designkonfigurationen och uttrycket `${cqDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
 
 1. Alternativet **Underordnade sidor** återges inte längre för sidförfattaren när listkomponenten används.
 
