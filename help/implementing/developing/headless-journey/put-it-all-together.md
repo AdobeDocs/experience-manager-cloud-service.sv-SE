@@ -6,9 +6,9 @@ hidefromtoc: true
 index: false
 exl-id: 254fb9dd-36c8-43ce-aaea-ceb4d079503d
 translation-type: tm+mt
-source-git-commit: dc4f1e916620127ebf068fdcc6359041b49891cf
+source-git-commit: e8eb9d2c96d24601e50c48f6846a8c8bac8b0252
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 ## Mål {#objective}
 
+* Förstå det lokala utvecklingsarbetsflödet för AEM
 * Installera AEM SDK för att få en lokal utvecklingsmiljö som du kan använda för att testa ditt innehåll i
-* Läs mer om de utvecklingsverktyg du behöver
-* Testa kod och innehåll lokalt innan du publicerar
+* Läs om de utvecklingsverktyg du behöver för att arbeta utanför den lokala utvecklingsmiljön
 
 ## Arbetsflödet för lokal utveckling {#the-local-development-workflow}
 
