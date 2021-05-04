@@ -3,10 +3,10 @@ title: Översikt över Content Transfer Tool
 description: Översikt över Content Transfer Tool
 exl-id: 4715937e-4c4c-4680-af15-016db4fe7db9
 translation-type: tm+mt
-source-git-commit: 7bdf8f1e6d8ef1f37663434e7b14798aeb8883f4
+source-git-commit: ca03de9095a5b85bd93edba93097356fbcd2e9c8
 workflow-type: tm+mt
-source-wordcount: '813'
-ht-degree: 79%
+source-wordcount: '803'
+ht-degree: 81%
 
 ---
 
@@ -57,11 +57,12 @@ För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet
 
 ## Riktlinjer och bästa praxis {#best-practices}
 
->id=&quot;aemcloud_ctt_guidelines&quot;
->title=&quot;Guidelines and Best Practices&quot;
->abstract=&quot;Riktlinjer och bästa praxis för användning av verktyget Innehållsöverföring, inklusive rensning av revisioner, diskutrymme med mera.&quot;
->additional-url=&quot;https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs&quot; text=&quot;Viktigt att tänka på vid användning av verktyget Innehållsöverföring&quot;
->additional-url=&quot;https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#important-considerations&quot; text=&quot;Viktigt att tänka på vid användning av verktyget för användarmappning&quot;
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_guidelines"
+>title="Riktlinjer och bästa praxis"
+>abstract="Granska riktlinjer och metodtips om hur du använder verktyget Innehållsöverföring, t.ex. när det gäller att rensa bort ändringar, diskutrymme med mera."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs" text="Viktigt att tänka på när du använder verktyget Innehållsöverföring"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#important-considerations" text="Viktigt att tänka på när du använder verktyget för användarmappning"
 
 Följ nedanstående avsnitt för att få information om riktlinjer och bästa praxis för att använda Content Transfer Tool:
 
