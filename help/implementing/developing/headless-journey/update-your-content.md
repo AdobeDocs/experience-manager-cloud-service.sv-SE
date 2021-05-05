@@ -4,14 +4,14 @@ description: I den här delen av den AEM Headless Developer Journey kan du lära
 hide: true
 hidefromtoc: true
 index: false
+exl-id: 8d133b78-ca36-4c3b-815d-392d41841b5c
 translation-type: tm+mt
-source-git-commit: 9fb18dbe60121f46dba1e11d4133e5264a6d538d
+source-git-commit: 3d5ea8df4cefdb8c2bebe26333002a4680fa9fd4
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '327'
 ht-degree: 1%
 
 ---
-
 
 # Så här uppdaterar du ditt innehåll via AEM Assets API:er {#update-your-content}
 
@@ -23,12 +23,13 @@ I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig hu
 
 ## Berättelsen hittills {#story-so-far}
 
-I det föregående dokumentet på den AEM resan [Hur du får åtkomst till ditt innehåll via AEM Delivery APIs](access-your-content.md) lärde du dig att få åtkomst till ditt headless-innehåll i AEM via API, och du bör nu:
+I det föregående dokumentet på den AEM resan [Hur du får åtkomst till ditt innehåll via AEM Delivery APIs](access-your-content.md) lärde du dig att få åtkomst till ditt headless-innehåll i AEM via AEM GraphQL API och du bör nu:
 
-* Förstå vad GraphQL är och hur AEM GraphQL API fungerar.
+* Lär dig mer om GraphQL.
+* Förstå hur AEM GraphQL API fungerar.
 * Förstå några praktiska exempelfrågor.
 
-Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du uppdaterar det befintliga headless-innehållet i AEM via API.
+Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du uppdaterar det befintliga headless-innehållet i AEM via REST API.
 
 ## Mål {#objective}
 
@@ -44,7 +45,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 
 * Förstå AEM Assets HTTP API.
-* Förstå hur innehållsfragment stöds i API:t.
+* Förstå hur innehållsfragment stöds i detta API.
 * Upplev exempelkod och veta hur API:t fungerar i praktiken.
 
 Du bör fortsätta din AEM resa utan att behöva besöka dokumentet nästa gång [Placera allt tillsammans - Din app och ditt innehåll i AEM Headless](put-it-all-together.md) där du får lära dig hur du tar ditt AEM Headless-projekt och förbereder det för publicering.
