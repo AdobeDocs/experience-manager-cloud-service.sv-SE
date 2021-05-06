@@ -6,9 +6,9 @@ hidefromtoc: true
 index: false
 exl-id: 5ef557ff-e299-4910-bf8c-81c5154ea03f
 translation-type: tm+mt
-source-git-commit: 0c47dec1e96fc3137d17fc3033f05bf1ae278141
+source-git-commit: dd30bbb57d2746a7b16cb0546b90df0758fc3740
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2120'
 ht-degree: 0%
 
 ---
@@ -146,24 +146,6 @@ Dessa modeller för innehållsfragment:
 ### JSON Preview {#json-preview}
 
 Om du vill ha hjälp med att utforma och utveckla dina modeller för innehållsfragment kan du förhandsgranska JSON-utdata i redigeraren för innehållsfragment.
-
-### Skapa modeller för innehållsfragment och innehållsfragment {#creating-content-fragment-models-and-content-fragments}
-
-Först aktiveras Content Fragment Models för din plats. Detta görs i Configuration Browser:
-
-![Definiera konfiguration](assets/cfm-configuration.png)
-
-Därefter kan modellerna för innehållsfragment modelleras:
-
-![Content Fragment Model](assets/cfm-model.png)
-
-När du har valt lämplig modell öppnas ett innehållsfragment för redigering i redigeraren för innehållsfragment:
-
-![Innehållsfragmentsredigerare](assets/cfm-editor.png)
-
->[!NOTE]
->
->Se Arbeta med innehållsfragment.
 
 ## Generering av GraphQL-schema från innehållsfragment {#graphql-schema-generation-content-fragments}
 
