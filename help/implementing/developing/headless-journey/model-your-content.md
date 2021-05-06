@@ -1,14 +1,14 @@
 ---
 title: Så här modellerar du innehåll
-description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med datamodellering med Content Fragment Models och Content Fragments.
+description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 hide: true
 hidefromtoc: true
 index: false
 exl-id: f872839b-2401-4ea4-9e09-e5dda18afd09
 translation-type: tm+mt
-source-git-commit: 3d5ea8df4cefdb8c2bebe26333002a4680fa9fd4
+source-git-commit: 49e2141cd55a2d277d0e1d2d622097fa5f08a464
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1686'
 ht-degree: 0%
 
 ---
@@ -38,10 +38,10 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 * **Målgrupp**: Nybörjare
 * **Mål**: Lär dig hur du modellerar innehållsstrukturen och inser sedan den strukturen med AEM Content Fragment Models och Content Fragments:
-   * Introducera koncept och terminologi relaterade till [datamodellering](#data-modeling).
-   * Lär dig [varför datamodellering behövs för leverans av Headless-innehåll](#data-modeling-for-aem-headless).
-   * Lär dig [hur du realiserar den här strukturen med AEM Content Fragment Models](#create-structure-content-fragment-models) (och skapar innehåll med [Content Fragments](#use-content-to-author-content)).
-   * Lär dig [modellera ditt innehåll](#getting-started-examples); principer med grundläggande urval.
+   * Lägg in koncept och terminologi för data-/innehållsmodellering.
+   * Lär dig varför innehållsmodellering behövs för leverans av Headless-innehåll.
+   * Lär dig hur du realiserar den här strukturen med AEM Content Fragment Models (och skapar innehåll med Content Fragments).
+   * Lär dig modellera ditt innehåll. principer med grundläggande urval.
 
 >[!NOTE]
 >
@@ -49,11 +49,15 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 >
 >Vi kommer endast att ta hänsyn till de aspekter som är intressanta när vi modellerar data för användning med AEM Headless.
 
-## Datamodellering {#data-modeling}
+## Innehållsmodellering {#content-modeling}
 
 *Det är en stor, dålig värld där* ute.
 
 Kanske inte, men det är säkert en stor ***komplicerad*** värld där ute och datamodellering används för att definiera en förenklad representation av ett mycket (mycket) litet underavsnitt, med den specifika information som behövs för ett visst ändamål.
+
+>[!NOTE]
+>
+>När AEM behandlar innehåll, talar vi om datamodellering som innehållsmodellering.
 
 Till exempel:
 
@@ -91,7 +95,7 @@ Informationen som vi vill lagra om dem är **attributen** (egenskaper), till exe
 
 Sedan finns det olika **relationer** mellan enheterna. Till exempel har en skola bara en huvudlärare, och många lärare (och vanligtvis är huvudläraren också lärare).
 
-Processen att analysera och definiera informationen, tillsammans med relationerna mellan dem, kallas **Datamodellering**.
+Processen att analysera och definiera informationen, tillsammans med relationerna mellan dem, kallas **Innehållsmodellering**.
 
 ### Grundläggande {#basics}
 
@@ -128,9 +132,9 @@ Allt är en balansakt, men att skapa en struktur som är för komplex, eller som
 
 * Påverka prestandan allvarligt om frågan måste få åtkomst till flera kapslade (refererade) innehållsfragment för att hämta nödvändigt innehåll.
 
-## Datamodellering för AEM Headless {#data-modeling-for-aem-headless}
+## Innehållsmodellering för AEM Headless {#content-modeling-for-aem-headless}
 
-Datamodellering är en uppsättning etablerade tekniker som ofta används vid utvecklade relationsdatabaser, så vad betyder det för AEM Headless?
+Datamodellering är en uppsättning etablerade tekniker som ofta används vid utvecklade relationsdatabaser, så vad innebär innehållsmodellering för AEM Headless?
 
 ### Varför? {#why}
 
@@ -142,7 +146,7 @@ Detta innebär att din ansökan i förväg vet vilken form av svar det är och d
 
 AEM använder Content Fragments för att tillhandahålla de strukturer som behövs för Headless-leverans av ditt innehåll till dina program.
 
-Strukturen för din datamodell är:
+Innehållsmodellens struktur är:
 
 * som realiseras av definitionen av din innehållsfragmentmodell,
 * används som bas för de innehållsfragment som används för att generera innehåll.
@@ -173,7 +177,7 @@ Inom en modell:
 1. **Med** datatyper kan du definiera de enskilda attributen.
 Definiera till exempel fältet som innehåller en lärares namn som **Text** och deras tjänsteår som **Number**.
 1. Med datatyperna **Content Reference** och **Fragment Reference** kan du skapa relationer till annat innehåll i AEM.
-1. Med datatypen **Fragmentreferens** kan du realisera flera strukturnivåer genom att kapsla dina innehållsfragment (enligt modelltypen). Detta är viktigt för er datamodellering.
+1. Med datatypen **Fragmentreferens** kan du realisera flera strukturnivåer genom att kapsla dina innehållsfragment (enligt modelltypen). Detta är viktigt för er innehållsmodellering.
 
 Till exempel:
 ![Innehållsmodellering med innehållsfragment](assets/headless-modeling-01.png "Innehållsmodellering med innehållsfragment")
@@ -250,4 +254,4 @@ Nu när du har lärt dig att modellera strukturen och skapa innehåll som är be
    * [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)  - skapa och skapa innehållsfragment; den här sidan leder dig till andra detaljerade avsnitt
 * [AEM GraphQL-scheman](/help/implementing/developing/headless-journey/access-your-content.md)  - hur GraphQL realiserar modeller
 * [Strukturen för exempelinnehållsfragment](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [Getting Started with AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)  - En kort videoserie med en översikt över hur du använder AEM headless-funktioner, inklusive datamodellering och GraphQL
+* [Getting Started with AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)  - En kort videoserie med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL
