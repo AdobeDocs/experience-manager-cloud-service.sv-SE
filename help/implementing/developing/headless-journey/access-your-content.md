@@ -6,9 +6,9 @@ hidefromtoc: true
 index: false
 exl-id: 5ef557ff-e299-4910-bf8c-81c5154ea03f
 translation-type: tm+mt
-source-git-commit: 861ef15a0060d51fd32e2d056871d1679f77a21e
+source-git-commit: 0c47dec1e96fc3137d17fc3033f05bf1ae278141
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '2181'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
 
-I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig hur du använder GraphQL-frågor för att komma åt innehållet i dina innehållsfragment.
+I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig hur du använder GraphQL-frågor för att komma åt innehållet i dina innehållsfragment och skicka det till din app (headless delivery).
 
 ## Berättelsen hittills {#story-so-far}
 
@@ -135,9 +135,7 @@ Dessa modeller för innehållsfragment:
 
 **Fragmentreferens**:
 
-* Är av särskilt intresse tillsammans med GraphQL.
-
-* Är en specifik datatyp som kan användas när en innehållsfragmentmodell definieras.
+* Är en specifik datatyp tillgänglig när du definierar en innehållsfragmentmodell.
 
 * Refererar till ett annat fragment, beroende på en viss innehållsfragmentmodell.
 
@@ -148,6 +146,24 @@ Dessa modeller för innehållsfragment:
 ### JSON Preview {#json-preview}
 
 Om du vill ha hjälp med att utforma och utveckla dina modeller för innehållsfragment kan du förhandsgranska JSON-utdata i redigeraren för innehållsfragment.
+
+### Skapa modeller för innehållsfragment och innehållsfragment {#creating-content-fragment-models-and-content-fragments}
+
+Först aktiveras Content Fragment Models för din plats. Detta görs i Configuration Browser:
+
+![Definiera konfiguration](assets/cfm-configuration.png)
+
+Därefter kan modellerna för innehållsfragment modelleras:
+
+![Content Fragment Model](assets/cfm-model.png)
+
+När du har valt lämplig modell öppnas ett innehållsfragment för redigering i redigeraren för innehållsfragment:
+
+![Innehållsfragmentsredigerare](assets/cfm-editor.png)
+
+>[!NOTE]
+>
+>Se Arbeta med innehållsfragment.
 
 ## Generering av GraphQL-schema från innehållsfragment {#graphql-schema-generation-content-fragments}
 
@@ -239,9 +255,98 @@ Den innehåller funktioner som syntaxmarkering, automatisk komplettering, automa
 
 ![Gränssnittet GraphiQL ](assets/graphiql-interface.png "InterfaceGraphiQL")
 
-## Använda AEM GraphQL API {#using-aem-graphiql}
+## Använda faktiskt AEM GraphQL API {#actually-using-aem-graphiql}
 
-Mer information om hur du använder API:t för AEM GraphQL, tillsammans med hur du konfigurerar de nödvändiga elementen, finns i följande exempel:
+Om du vill använda det AEM GraphQL-API:t i en fråga kan vi använda de två mycket grundläggande modellstrukturerna för innehållsfragment:
+
+* Företag
+   * Namn
+   * VD (person)
+   * Anställda (personer)
+* Person
+   * Namn
+   * Förnamn
+
+Som du ser refererar fälten CEO och Employees till Personfragmenten.
+
+Fragmentmodellerna används:
+
+* när du skapar innehåll i Content Fragment Editor
+* för att generera de GraphQL-scheman som du ska fråga efter
+
+Frågorna kan anges i GraphiQL-gränssnittet, till exempel på:
+
+* `http://localhost:4502/content/graphiql.html `
+
+En enkel fråga är att returnera namnet på alla poster i företagsschemat. Här begär du en lista med alla företagsnamn:
+
+```xml
+query {
+  companyList {
+    items {
+      name
+    }
+  }
+}
+```
+
+En något mer komplex fråga är att markera alla personer som inte har namnet&quot;Jobs&quot;. Detta filtrerar alla personer för alla som inte har namnet Jobs. Detta uppnås med operatorn EQUALS_NOT (det finns många fler):
+
+```xml
+query {
+  personList(filter: {
+    name: {
+      _expressions: [
+        {
+          value: "Jobs"
+          _operator: EQUALS_NOT
+        }
+      ]
+    }
+  }) {
+    items {
+      name
+      firstName
+    }
+  }
+}
+```
+
+Du kan också skapa mer komplexa frågor. Du kan till exempel söka efter alla företag som har minst en anställd med namnet &quot;Smith&quot;. Den här frågan visar filtrering för alla personer med namnet &quot;Smith&quot;, vilket returnerar information från de kapslade fragmenten:
+
+```xml
+query {
+  companyList(filter: {
+    employees: {
+      _match: {
+        name: {
+          _expressions: [
+            {
+              value: "Smith"
+            }
+          ]
+        }
+      }
+    }
+  }) {
+    items {
+      name
+      ceo {
+        name
+        firstName
+      }
+      employees {
+        name
+        firstName
+      }
+    }
+  }
+}
+```
+
+<!-- need code / curl / cli examples-->
+
+Mer information om hur du använder API:t för AEM GraphQL tillsammans med de nödvändiga elementen finns i följande exempel:
 
 * Lär dig använda GraphQL med AEM
 * Strukturen för exempelinnehållsfragment
