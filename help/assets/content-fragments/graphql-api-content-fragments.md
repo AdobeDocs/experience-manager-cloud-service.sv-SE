@@ -1,15 +1,16 @@
 ---
 title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för leverans av headless-innehåll.
-feature: Content Fragments,GraphQL API
+feature: Innehållsfragment,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 translation-type: tm+mt
-source-git-commit: 1e005f7eace2fa2c40acddc215833606342a9357
+source-git-commit: dab4c9393c26f5c3473e96fa96bf7ec51e81c6c5
 workflow-type: tm+mt
-source-wordcount: '3257'
+source-wordcount: '3901'
 ht-degree: 0%
 
 ---
+
 
 # AEM GraphQL API för användning med innehållsfragment {#graphql-api-for-use-with-content-fragments}
 
@@ -43,7 +44,7 @@ GraphQL är:
 
    Se [Utforska GraphQL](https://www.graphql.com).
 
-* *&quot;...ett datameddelande och en specifikation som utvecklats internt av Facebook under 2012 och som sedan publiceras offentligt under 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktion av hundratals organisationer av alla storlekar...&quot;*
+* *&quot;...ett datameddelande och en specifikation som utvecklats internt av Facebook 2012 innan de blev offentligt tillgängliga 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktion av hundratals organisationer av alla storlekar...&quot;*
 
    Se [GraphQL Foundation](https://foundation.graphql.org/).
 
@@ -101,11 +102,12 @@ Med GraphQL kan du utföra frågor för att returnera:
 
 * En **[lista över poster](https://graphql.org/learn/schema/#lists-and-non-null)**
 
-<!--
-You can also perform:
+Du kan också utföra:
 
-* [Persisted Queries, that are cached](#persisted-queries-caching)
--->
+* [Beständiga frågor, som är cachelagrade](#persisted-queries-caching)
+
+>[!NOTE]
+>Du kan testa och felsöka GraphQL-frågor med [GraphiQL IDE](#graphiql-interface).
 
 ## The GraphQL for AEM Endpoint {#graphql-aem-endpoint}
 
@@ -115,77 +117,83 @@ Slutpunkten är den bana som används för att komma åt GraphQL för AEM. Med d
 * skicka GraphQL-frågor,
 * ta emot svar (på GraphQL-frågor).
 
-Databassökvägen för GraphQL för AEM är:
+Det finns två typer av slutpunkter i AEM:
+
+* Global
+   * Tillgängligt för alla webbplatser.
+   * Den här slutpunkten kan använda alla modeller för innehållsfragment från alla innehavare.
+   * Om det finns några Content Fragment-modeller som ska delas av klientorganisationer bör dessa skapas under den globala klientorganisationen.
+* Klientorganisation:
+   * Motsvarar en klientkonfiguration, enligt definitionen i [Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser).
+   * Specifikt för en angiven plats/ett angivet projekt.
+   * En klientspecifik slutpunkt använder Content Fragment-modellerna från den specifika innehavaren tillsammans med modellerna från den globala klienten.
+
+>[!CAUTION]
+>
+>Med Content Fragment Editor kan ett innehållsfragment för en klientorganisation referera till ett innehållsfragment för en annan klientorganisation (via policyer).
+>
+>I så fall går det inte att hämta allt innehåll med en klientspecifik slutpunkt.
+>
+>Innehållsförfattaren bör kontrollera detta scenario; Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under den globala klienten.
+
+Databassökvägen för GraphQL för AEM globala slutpunkten är:
 
 `/content/cq:graphql/global/endpoint`
 
-Ditt program kan använda följande sökväg i URL:en för begäran:
+För vilken ditt program kan använda följande sökväg i URL:en för begäran:
 
 `/content/_cq_graphql/global/endpoint.json`
 
-Om du vill aktivera slutpunkten för GraphQL för AEM måste du:
-
->[!CAUTION]
->
->Dessa steg kommer sannolikt att förändras inom en nära framtid.
+Om du vill aktivera en slutpunkt för GraphQL för AEM måste du:
 
 * [Aktivera GraphQL-slutpunkten](#enabling-graphql-endpoint)
-* [Utför ytterligare konfigurationer](#additional-configurations-graphql-endpoint)
+* [Publicera din GraphQL-slutpunkt](#publishing-graphql-endpoint)
 
 ### Aktivera GraphQL-slutpunkten {#enabling-graphql-endpoint}
 
->[!NOTE]
->
->Se [Supporting Packages](#supporting-packages) för mer information om de paket som Adobe tillhandahåller för att förenkla dessa steg.
-
-Om du vill aktivera GraphQL-frågor i AEM skapar du en slutpunkt på `/content/cq:graphql/global/endpoint`:
-
-* Noderna `cq:graphql` och `global` måste vara av typen `sling:Folder`.
-* Noden `endpoint` måste vara av typen `nt:unstructured` och innehålla `sling:resourceType` av `graphql/sites/components/endpoint`.
+Om du vill aktivera en GraphQL-slutpunkt måste du först ha en lämplig konfiguration. Se [Innehållsfragment - Konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md).
 
 >[!CAUTION]
 >
->Slutpunkten är tillgänglig för alla. Detta kan - särskilt när det gäller publiceringsinstanser - utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan medföra en stor belastning på servern.
+>Om [användningen av innehållsfragmentmodeller inte har aktiverats](/help/assets/content-fragments/content-fragments-configuration-browser.md) är alternativet **Skapa** inte tillgängligt.
+
+Så här aktiverar du motsvarande slutpunkt:
+
+1. Navigera till **Verktyg**, **Platser** och välj sedan **GraphQL**.
+1. Välj **Skapa**.
+1. Dialogrutan **Skapa ny GraphQL-slutpunkt** öppnas. Här kan du ange:
+   * **Namn**: Slutpunktens namn. du kan skriva vilken text som helst.
+   * **Använd GraphQL-schema från**: Använd listrutan för att välja önskad plats/önskat projekt.
+
+   >[!NOTE]
+   >
+   >Följande varning visas i dialogrutan:
+   >
+   >* *GraphQL-slutpunkter kan medföra problem med datasäkerhet och prestanda om de inte hanteras varsamt. Kontrollera att du har angett rätt behörigheter när du har skapat en slutpunkt.*
+
+
+1. Bekräfta med **Skapa**.
+1. Dialogrutan **Nästa steg** innehåller en direktlänk till säkerhetskonsolen så att du kan kontrollera att den nyskapade slutpunkten har rätt behörigheter.
+
+   >[!CAUTION]
+   >
+   >Slutpunkten är tillgänglig för alla. Detta kan - särskilt när det gäller publiceringsinstanser - utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan medföra en stor belastning på servern.
+   >
+   >Du kan ställa in åtkomstkontrollistor, som passar ditt användningsfall, på slutpunkten.
+
+### Publicerar GraphQL-slutpunkten {#publishing-graphql-endpoint}
+
+Markera den nya slutpunkten och **Publicera** för att göra den helt tillgänglig i alla miljöer.
+
+>[!CAUTION]
 >
->Du kan ställa in åtkomstkontrollistor, som passar ditt användningsfall, på slutpunkten.
-
->[!NOTE]
+>Slutpunkten är tillgänglig för alla.
 >
->Slutpunkten fungerar inte som den ska. Du måste ange [Ytterligare konfigurationer för GraphQL Endpoint](#additional-configurations-graphql-endpoint) separat.
-
->[!NOTE]
->Dessutom kan du testa och felsöka GraphQL-frågor med [GraphiQL IDE](#graphiql-interface).
-
-### Ytterligare konfigurationer för GraphQL-slutpunkten {#additional-configurations-graphql-endpoint}
-
->[!NOTE]
+>På publiceringsinstanser kan detta utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan medföra en stor belastning på servern.
 >
->Se [Supporting Packages](#supporting-packages) för mer information om de paket som Adobe tillhandahåller för att förenkla dessa steg.
-
-Ytterligare konfigurationer krävs:
-
-* Dispatcher:
-   * Tillåt obligatoriska URL:er
-   * Obligatorisk
-* Vanity URL:
-   * Så här tilldelar du en förenklad URL för slutpunkten
-   * Valfritt
-
-### Stödpaket {#supporting-packages}
-
-För att förenkla konfigurationen av en GraphQL-slutpunkt tillhandahåller Adobe paketet [GraphQL Sample Project (2021.3)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-graphql/graphql-sample1.zip).
-
-Det här arkivet innehåller både [den nödvändiga ytterligare konfigurationen](#additional-configurations-graphql-endpoint) och [GraphQL-slutpunkten](#enabling-graphql-endpoint). Om den installeras på en vanlig AEM visas en fullt fungerande GraphQL-slutpunkt vid `/content/cq:graphql/global/endpoint`.
-
-Det här paketet är avsett som en plan för dina egna GraphQL-projekt. I paketet **README** finns mer information om hur du använder paketet.
-
-Vill du skapa den konfiguration som krävs manuellt kan Adobe även tillhandahålla ett [GraphQL Endpoint Content Package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faemcloud%2Fpublic%2Faem-graphql%2Fgraphql-global-endpoint.zip). Det här innehållspaketet innehåller endast GraphQL-slutpunkten, utan någon konfiguration.
+>Du måste konfigurera åtkomstkontrollistor som passar ditt användningsfall på slutpunkten.
 
 ## GraphiQL-gränssnitt {#graphiql-interface}
-
-<!--
-AEM Graph API includes an implementation of the standard [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) interface. This allows you to directly input, and test, queries.
--->
 
 En implementering av standardgränssnittet [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) finns tillgänglig för användning med AEM GraphQL. Detta kan vara [installerat med AEM](#installing-graphiql-interface).
 
@@ -202,10 +210,6 @@ Detta innehåller funktioner som syntaxmarkering, automatisk komplettering, auto
 ### Installera AEM GraphiQL-gränssnitt {#installing-graphiql-interface}
 
 Användargränssnittet GraphiQL kan installeras på AEM med ett dedikerat paket: [Innehållspaketet GraphiQL v0.0.6 (2021.3)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-graphql/graphiql-0.0.6.zip).
-
-<!--
-See the package **README** for full details; including full details of how it can be installed on an AEM instance - in a variety of scenarios.
--->
 
 ## Användningsexempel för redigerings- och publiceringsmiljöer {#use-cases-author-publish-environments}
 
@@ -255,14 +259,6 @@ Om en användare till exempel har skapat en innehållsfragmentmodell med namnet 
 1. När en användare har skapat ett innehållsfragment baserat på artikelmodellen kan det sedan förfrågas via GraphQL. Se till exempel [Exempelfrågor](/help/assets/content-fragments/content-fragments-graphql-samples.md#graphql-sample-queries) (baserat på en [innehållsfragmentstruktur för GraphQL](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)).
 
 Schemat är flexibelt i GraphQL för AEM. Det innebär att den genereras automatiskt varje gång en innehållsfragmentmodell skapas, uppdateras eller tas bort. Cacheminnen för dataschemat uppdateras också när du uppdaterar en innehållsfragmentmodell.
-
-<!--
->[!NOTE]
->
->AEM does not use the concept of namespacing for Content Fragment Models. 
->
->If required, you can edit the **[GraphQL](/help/assets/content-fragments/content-fragments-models.md#content-fragment-model-properties)** properties of a Model to assign specific names.
--->
 
 Tjänsten Sites GraphQL lyssnar (i bakgrunden) efter ändringar som gjorts i en innehållsfragmentmodell. När uppdateringar upptäcks återskapas endast den delen av schemat. Denna optimering sparar tid och ger stabilitet.
 
@@ -318,7 +314,7 @@ GraphQL för AEM stöder en lista med typer. Alla Content Fragment Model-datatyp
 | Flerradstext | Sträng |  Används för att skriva ut text, t.ex. brödtexten i en artikel |
 | Siffra |  Float, [Float] | Används för att visa flyttal och reguljära tal |
 | Boolesk |  Boolesk |  Används för att visa kryssrutor → enkla sant/falskt-satser |
-| Datum och tid | Kalender |  Används för att visa datum och tid i ett ISO 8086-format |
+| Datum och tid | Kalender |  Används för att visa datum och tid i ett ISO 8086-format. Beroende på vilken typ som valts finns det tre olika varianter att använda i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
 | Uppräkning |  Sträng |  Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
 |  Taggar |  [Sträng] |  Används för att visa en lista över strängar som representerar taggar som används i AEM |
 | Innehållsreferens |  Sträng |  Används för att visa sökvägen till en annan resurs i AEM |
@@ -437,7 +433,7 @@ Se [Exempelfråga - Alla städer med en namngiven variant](/help/assets/content-
 
 ## GraphQL-variabler {#graphql-variables}
 
-GraphQL tillåter att variabler placeras i frågan. Mer information finns i [GraphQL-dokumentationen för GraphiQL](https://graphql.org/learn/queries/#variables).
+GraphQL tillåter att variabler placeras i frågan. Mer information finns i [GraphQL-dokumentationen för variabler](https://graphql.org/learn/queries/#variables).
 
 Om du till exempel vill hämta alla innehållsfragment av typen `Article` som har en viss variation, kan du ange variabeln `variation` i GraphiQL.
 
@@ -580,27 +576,50 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
 
 
 
-
 * Det finns stöd för unionstyper för GraphQL:
 
    * använd `... on`
       * Se [Exempelfråga för ett innehållsfragment av en viss modell med en innehållsreferens](#sample-wknd-fragment-specific-model-content-reference)
 
-<!--
-## Persisted Queries (Caching) {#persisted-queries-caching}
+## Beständiga frågor (cachelagring) {#persisted-queries-caching}
 
-After preparing a query with a POST request, it can be executed with a GET request that can be cached by HTTP caches or a CDN.
+När en fråga har förberetts med en begäran om POST kan den köras med en GET-begäran som kan cachas av HTTP-cacher eller ett CDN.
 
-This is required as POST queries are usually not cached, and if using GET with the query as a parameter there is a significant risk of the parameter becoming too large for HTTP services and intermediates.
+Detta är nödvändigt eftersom POST-frågor vanligtvis inte cachelagras, och om GET med frågan används som parameter finns det en stor risk för att parametern blir för stor för HTTP-tjänster och mellanhänder.
 
-Here are the steps required to persist a given query:
+Beständiga frågor måste alltid använda den slutpunkt som är relaterad till [lämplig (tenant) konfiguration](#graphql-aem-endpoint); så att de kan använda antingen eller båda:
+
+* Den globala konfigurationen och slutpunkten
+Frågan har åtkomst till alla modeller för innehållsfragment.
+* Specifika klientkonfigurationer och slutpunkter
+Om du vill skapa en beständig fråga för en viss klientkonfiguration måste du ha en motsvarande klientspecifik slutpunkt (för att ge åtkomst till relaterade modeller för innehållsfragment).
+Om du till exempel vill skapa en beständig fråga specifikt för WKND-klienten, måste en motsvarande WKND-specifik klientkonfiguration och en WKND-specifik slutpunkt skapas i förväg.
 
 >[!NOTE]
->Prior to this the **GraphQL Persistence Queries** need to be enabled, for the appropriate configuration. See [Enable Content Fragment Functionality in Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) for more details.
+>
+>Mer information finns i [Aktivera funktionen för innehållsfragment i konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser).
+>
+>**GraphQL Persistence Queries** måste aktiveras för rätt klientkonfiguration.
 
-1. Prepare the query by PUTing it to the new endpoint URL `/graphql/persist.json/<config>/<persisted-label>`.
+Om det till exempel finns en viss fråga med namnet `my-query` som använder modellen `my-model` från klientkonfigurationen `my-conf`:
 
-   For example, create a persisted query:
+* Du kan skapa en fråga med den `my-conf` specifika slutpunkten och sedan sparas frågan så här:
+   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
+* Du kan skapa samma fråga med hjälp av `global`-slutpunkten, men sedan sparas frågan så här:
+   `/conf/global/settings/graphql/persistentQueries/my-query`
+
+>[!NOTE]
+>
+>Det här är två olika frågor - sparade under olika sökvägar.
+>
+>De råkar bara använda samma modell, men via olika slutpunkter.
+
+
+Här följer de steg som krävs för att behålla en given fråga:
+
+1. Förbered frågan genom att PUTing den till den nya slutpunkts-URL:en `/graphql/persist.json/<config>/<persisted-label>`.
+
+   Skapa till exempel en beständig fråga:
 
    ```xml
    $ curl -X PUT \
@@ -621,32 +640,32 @@ Here are the steps required to persist a given query:
    }'
    ```
 
-1. At this point, check the response.
+1. Kontrollera svaret nu.
 
-   For example, check for success:
+   Kontrollera till exempel om åtgärden lyckades:
 
-     ```xml
-     {
-       "action": "create",
-       "configurationName": "wknd",
-       "name": "plain-article-query",
-       "shortPath": "/wknd/plain-article-query",
-       "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
-     }
-     ```
+   ```xml
+   {
+     "action": "create",
+     "configurationName": "wknd",
+     "name": "plain-article-query",
+     "shortPath": "/wknd/plain-article-query",
+     "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
+   }
+   ```
 
-1. You can then replay the persisted query by GETing the URL `/graphql/execute.json/<shortPath>`.
+1. Du kan sedan spela upp den beständiga frågan igen genom att GETa URL:en `/graphql/execute.json/<shortPath>`.
 
-   For example, use the persisted query:
+   Använd till exempel den beständiga frågan:
 
    ```xml
    $ curl -X GET \
        http://localhost:4502/graphql/execute.json/wknd/plain-article-query
    ```
 
-1. Update a persisted query by POSTing to an already existing query path.
+1. Uppdatera en beständig fråga genom POSTing till en redan befintlig frågesökväg.
 
-   For example, use the persisted query:
+   Använd till exempel den beständiga frågan:
 
    ```xml
    $ curl -X POST \
@@ -670,9 +689,9 @@ Here are the steps required to persist a given query:
    }'
    ```
 
-1. Create a wrapped plain query.
+1. Skapa en omsluten vanlig fråga.
 
-   For example:
+   Till exempel:
 
    ```xml
    $ curl -X PUT \
@@ -683,9 +702,9 @@ Here are the steps required to persist a given query:
    '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }"}'
    ```
 
-1. Create a wrapped plain query with cache control.
+1. Skapa en omsluten oformaterad fråga med cachekontroll.
 
-   For example:
+   Till exempel:
 
    ```xml
    $ curl -X PUT \
@@ -696,9 +715,9 @@ Here are the steps required to persist a given query:
    '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
    ```
 
-1. Create a persisted query with parameters:
+1. Skapa en beständig fråga med parametrar:
 
-   For example:
+   Till exempel:
 
    ```xml
    $ curl -X PUT \
@@ -722,62 +741,62 @@ Here are the steps required to persist a given query:
      }'
    ```
 
-1. Executing a query with parameters.
+1. Kör en fråga med parametrar.
 
-   For example:
+   Till exempel:
 
    ```xml
    $ curl -X POST \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-
+   
    $ curl -X GET \
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    ```
 
-1. To execute the query on publish, the related persist tree need to replicated
+1. Om du vill köra frågan vid publicering måste det relaterade beständiga trädet replikeras
 
-   * Using a POST for replication:
+   * Använda en POST för replikering:
 
-     ```xml
-     $curl -X POST   http://localhost:4502/bin/replicate.json \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
-       -F cmd=activate
-     ```
+      ```xml
+      $curl -X POST   http://localhost:4502/bin/replicate.json \
+        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+        -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
+        -F cmd=activate
+      ```
 
-   * Using a package:
-     1. Create a new package definition.
-     1. Include the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
-     1. Build the package.
-     1. Replicate the package.
+   * Använda ett paket:
+      1. Skapa en ny paketdefinition.
+      1. Inkludera konfigurationen (till exempel `/conf/wknd/settings/graphql/persistentQueries`).
+      1. Bygg paketet.
+      1. Replikera paketet.
+   * Använda replikerings-/distributionsverktyget.
+      1. Gå till distributionsverktyget.
+      1. Välj trädaktivering för konfigurationen (till exempel `/conf/wknd/settings/graphql/persistentQueries`).
+   * Använda ett arbetsflöde (via konfiguration för att starta arbetsflöde):
+      1. Definiera en startregel för arbetsflöde för att köra en arbetsflödesmodell som skulle återge konfigurationen för olika händelser (till exempel skapa, ändra).
 
-   * Using replication/distribution tool.
-     1. Go to the Distribution tool.
-     1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
 
-   * Using a workflow (via workflow launcher configuration):
-     1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
 
-1. Once the query configuration is on publish, the same principles apply, just using the publish endpoint.
-
-   >[!NOTE]
-   >
-   >For anonymous access the system assumes that the ACL allows "everyone" to have access to the query configuration.
-   >
-   >If that is not the case it will not be able to execute.
+1. När frågekonfigurationen är publicerad gäller samma principer, bara med publiceringsslutpunkten.
 
    >[!NOTE]
    >
-   >Any semicolons (";") in the URLs need to be encoded.
+   >För anonym åtkomst förutsätter systemet att åtkomstkontrollistan tillåter &quot;alla&quot; att ha åtkomst till frågekonfigurationen.
    >
-   >For example, as in the request to Execute a persisted query:
+   >Om så inte är fallet kommer det inte att kunna köras.
+
+   >[!NOTE]
    >
-   >```xml
+   >Alla semikolon (&quot;;&quot;) i URL:erna måste kodas.
+   >
+   >Som i begäran att köra en beständig fråga:
+   >
+   >
+   ```xml
    >curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    >```
--->
 
 ## Frågar GraphQL-slutpunkten från en extern webbplats {#query-graphql-endpoint-from-external-website}
 
@@ -796,13 +815,8 @@ För att komma åt GraphQL-slutpunkten måste en CORS-princip konfigureras i kun
 
 Den här konfigurationen måste ange en betrodd webbplatsursprung `alloworigin` eller `alloworiginregexp` som åtkomst måste beviljas för.
 
-<!--
-For example, to grant access to the GraphQL endpoint and persisted queries endpoint for `https://my.domain` you can use:
--->
+Om du till exempel vill ge åtkomst till GraphQL-slutpunkten och den beständiga frågeslutpunkten för `https://my.domain` kan du använda:
 
-Om du till exempel vill ge åtkomst till GraphQL-slutpunkten för `https://my.domain` kan du använda:
-
-<!--
 ```xml
 {
   "supportscredentials":true,
@@ -832,39 +846,6 @@ Om du till exempel vill ge åtkomst till GraphQL-slutpunkten för `https://my.do
   "allowedpaths":[
     "/content/_cq_graphql/global/endpoint.json",
     "/graphql/execute.json/.*"
-  ]
-}
-```
--->
-
-```xml
-{
-  "supportscredentials":true,
-  "supportedmethods":[
-    "GET",
-    "HEAD",
-    "POST"
-  ],
-  "exposedheaders":[
-    ""
-  ],
-  "alloworigin":[
-    "https://my.domain"
-  ],
-  "maxage:Integer":1800,
-  "alloworiginregexp":[
-    ""
-  ],
-  "supportedheaders":[
-    "Origin",
-    "Accept",
-    "X-Requested-With",
-    "Content-Type",
-    "Access-Control-Request-Method",
-    "Access-Control-Request-Headers"
-  ],
-  "allowedpaths":[
-    "/content/_cq_graphql/global/endpoint.json"
   ]
 }
 ```
