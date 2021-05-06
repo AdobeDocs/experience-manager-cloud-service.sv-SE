@@ -1,14 +1,14 @@
 ---
 title: Versionsinformation för 2021.2.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes for 2021.2.0.'
+exl-id: 88dac54b-cc12-44a0-b429-6e691221f806
 translation-type: tm+mt
-source-git-commit: 2920ab75fca1eaa3b8e3b1f75e9126632a026b6b
+source-git-commit: b842f70bd53676d23229e24edb4a957ff7613824
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
 
 ---
-
 
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service {#release-notes}
@@ -166,4 +166,3 @@ Mer information om detta plugin-program finns i [Enhetlig upplevelse](https://ex
 
 * Flera felkorrigeringar har gjorts i Repository Modernizer.
 Se [GitHub-resurs: aem-cloud-service-source-migration](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) om du vill ha mer information.
-
