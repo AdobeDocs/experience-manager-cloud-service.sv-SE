@@ -3,12 +3,13 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 translation-type: tm+mt
-source-git-commit: 9a2b52a873e4e0662da252bba2af6ac2a46cd08e
+source-git-commit: 6e21c6ffe50d6c030873650e7dd26246dea76b59
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
+
 
 # Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service {#release-notes}
 
@@ -23,66 +24,125 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.3.0 är 25 mars 2021.
-Följande version (2021.4.0) kommer att vara den 29 april 2021.
+Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.4.0 är 6 maj 2021.
+Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
+## AEM som en Cloud Service Foundation{#aem-as-a-cloud-service-foundation}
 
-* [En progressiv webbprogramversion (PWA) av en ](/help/sites-cloud/authoring/features/enable-pwa.md) sitecan kan nu aktiveras på projektnivå via enkel konfiguration.
-* Modelltillägg för innehållsfragment - nu möjligt att definiera datatyper med flera rader som flerfältslista.
-* Förbättringar i gränssnittet för innehållsfragmentredigeraren - kapslade underordnade fragment visas nu i vägbeskrivningar och förbättrad vy för åtgärder för publicering, spara och spara och avsluta
+### Nyheter {#what-is-new-foundation}
+
+* [Arbetsflöde](/help/operations/replication.md#publish-content-tree-workflow)  för publicering av innehållsträd - En ny arbetsflödesmodell och ett nytt steg ger bättre prestanda vid publicering av djupa hierarkier med innehåll.
+
+## [!DNL Adobe Experience Manager Sites] som  [!DNL Cloud Service] {#sites}
+
+### Nyheter i [!DNL Sites] {#what-is-new-sites}
+
+* GraphQL-slutpunkter - det är nu möjligt att aktivera det AEM GraphQL-API:t för enskilda AEM Sites-konfigurationer och att skapa anpassade GraphQL-slutpunkter för dessa konfigurationer med ett nytt GraphQL-konsolgränssnitt. Gränssnittet tillåter även hantering av GraphQL-slutpunkter.
+
+* Innehållsmodeller, förbättrad datatyp för datum och tid - det är nu möjligt att konfigurera datumtypen Datum och tid så att endast datum-, tid- eller datum- och tidsinformation kan redigeras.
+
+* Innehållsmodeller, förbättrad datatyp för taggar - det går nu att konfigurera datatypen Tags så att du kan skapa en eller flera taggar.
+
+* Innehållsmodeller, ny flik-platshållardatatyp - den nya tabbplatshållardatatypen gör det möjligt att gruppera datatyper i avsnitt som återges under flikar i innehållsfragmentredigeraren.
+
+### Felkorrigeringar i [!DNL Sites] {#bug-fixes-sites}
+
+* Content Fragments - moving content fragments or folders now updates nested references inside the fragment (CQ-4320815)
+
+* GraphQL - beständiga frågor har nu stöd för användardefinierade slutpunkter som är specifika för AEM Sites-konfigurationer (CQ-4315928)
 
 ## [!DNL Adobe Experience Manager Assets] som  [!DNL Cloud Service] {#assets}
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-<!-- TBD: refine this list of features and enh. for Feb release.
+* [!DNL Experience Manager] arkiverar inte enskilda hämtningar av resurser där originalfilen hämtas. Den här förbättringen ger snabbare nedladdning.
 
-Customers using the Connected Assets feature can now easily view and track assets used on remote Sites instances. This affords customers a complete view of being used across all Sites powered pages, allowing for better tracking, management, and brand consistency.  
+* När en resurs hämtas via alternativet för länkdelning kan du nu välja att hämta eller inte hämta återgivningarna. Tidigare hämtades alla resursåtergivningar.
 
-Indicators for expired, approved, and rejected statuses now available for assets in Column view.
+* Administratörer kan konfigurera [!DNL Experience Manager] för att ta bort resurskällan efter att ha gjort gruppresursförslag. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-Ability to select a root path. select if a minimum number of tags is required. 
+* När du utför en hälsokontroll för att importera resurser i grupp ger Experience Manager nu fler orsaker till misslyckanden. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-Add a Boolean or radio widget type to metadata schema setup. -->
+* När du importerar resurser med bulkimportverktyget har administratörer nu möjlighet att ta bort källfilerna när importen har slutförts. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-* [!DNL Experience Manager] utökar funktionerna för anslutna resurser så att de stöder användning av  [!DNL Dynamic Media] bilder i de kärnkomponenter som stöds. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
-* Experience Manager-administratörer kan schemalägga inmatningar av gruppresurser vid ett visst datum eller en viss tidpunkt. Administratörer kan även schemalägga återkommande frågor baserat på datum och tid. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
+* När du redigerar ett metadataram kan administratörer snabbt och enkelt göra urvalet med ett nytt rotsökvägsväljarfält, vilket minskar konfigurationstiden.
+
+* Metadata för många resurser kan importeras gruppvis med hjälp av en CSV-fil och kan exporteras till en CSV-fil. Standarddatumformatet är nu `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`. Användare kan utnyttja ett annat format genom att uppdatera kolumnrubriken. Lägg till exempel till `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX` som kolumnrubrik i CSV-filen i stället för ordet `Date`.
+
+* När du bläddrar bland resurser i kolumnvyn visas en visuell indikator med statusen Godkänd eller Avvisad för varje resurs.
+
+* När du bläddrar bland resurser i kolumnvyn visas en visuell indikator för förfallna resurser.
 
 ### Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}
 
-* Copyright-sidan visas inte när du försöker hämta flera rättighetshanterade resurser. (CQ-4314403)
-* När du väljer att redigera en INDD-fil ändras upplösningen oväntat. (CQ-4317376)
-* Det är bara den sista sidan i mallen InDesign som finns i PDF-återgivningen. (CQ-4317305)
-* Det tar lång tid att öppna taggväljaren när väljaren är en del av ett komplext metadataschema. (CQ-4316426)
-* När du överför en resurs med samma filnamn som en befintlig, visas inte dialogrutan för namnkonflikt för att uppmana användaren att skapa en version. (CQ-4315424)
-* Egenskaper för mappmetadata kan anges och sparas på popup-menyn på mappens egenskapssida. När markeringen sparas i databasen visas den inte när mappmetadataegenskaperna öppnas igen. (CQ-4314429)
-* Resurser med filnamn som innehåller mellanslag eller specialtecken överförs med webbläsaren. (CQ-4318381)
+* När du försöker flytta flera resurser eller mappar loggas ett fel i konsolen och flyttåtgärden slutförs inte. Flyttåtgärden misslyckas om titeln inte kan uppdateras. (CQ-4322080)
+
+* Ett metadatafält kan döljas baserat på en regel som gör att metadata inte är obligatoriska när ett fördefinierat villkor är uppfyllt. Sådana dolda metadatafält visas dock som obligatoriska fält. (CQ-4321285)
+
+* Import av massmetadata misslyckas på grund av felaktigt datumformat. (CQ-4319014)
+
+* När du har valt att uppdatera metadata på egenskapssidan tar det lång tid för gränssnittet att svara när schemat innehåller många alternativ. (CQ-4318538)
+
+* När du uppdaterar och sparar metadatavärde i ett enkelradigt textfält tas värdena i listrutan bort, även om redigeringar är inaktiverade i listrutan. (CQ-4317077)
+
+* Du kan använda ellips som en anteckning för att granska resurser. När en liten ellips används överlappar ellipsen numret på anteckningen i utskriftsversionen. (CQ-4316792)
 
 ## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
-AEM Forms har hjälpt många organisationer att skapa fantastiska startupplevelser och registreringsupplevelser under årens lopp. Dessa upplevelser har hjälpt organisationer att konvertera leads till försäljning, bearbeta inhämtade kunddata, leverera responsiva upplevelser baserat på målgruppsprofilen och mycket mer. Nu finns AEM Forms som molntjänst.
+### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-Du kan använda [AEM Forms som Cloud Service](https://experienceleague.corp.adobe.com/docs/experience-manager-forms-cloud-service/forms/home.html) för att skapa digitala formulär, koppla formulär till befintliga datakällor, integrera formulär med Adobe Sign för att lägga till e-signaturer i formulär, generera arkivering av inskickade formulär som PDF-filer. Tjänsten kan också konvertera PDF forms till digitala blanketter. Förutom AEM Forms standardfunktioner erbjuder tjänsten flera inbyggda funktioner i molnet, som automatisk skalning, noll driftstopp för uppgraderingar och molnbaserad utvecklingsmiljö. Läs [det här blogginlägget](https://blog.adobe.com/en/publish/2021/03/11/experience-manager-forms-as-a-cloud-service.html) om du vill veta mer om AEM Forms funktioner som Cloud Service.
+* **Använd autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverad Adaptive Forms**
 
-Du kan kontakta din Adobe-representant för att få en demo eller anmäla dig till tjänsten.
+   Adobe Sign Government ID-process bygger på avancerade maskininlärningsalgoritmer och ger företag över hela världen möjlighet att säkra en högkvalitativ autentisering av mottagarens identitet. Nu kan du använda autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade Adaptive Forms.
+
+   Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [ladda upp bilden av ett foto av ett foto av ett foto som utfärdats av en myndighet (körkort, nationellt ID, pass)](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html) och sedan utvärdera dokumentet för att säkerställa att det är autentiskt.
+
+* **Stöd för att använda signeringsfunktionen i formulär för asynkrona inskickade formulär med adaptiv formatering**
+
+   Nu kan du använda signeringsfunktionen i formulär för asynkrona, anpassningsbara formulärinskickade formulär. Du kan även bädda in ett anpassat formulär på en [!DNL Experience Manager Sites]-sida och använda signeringsfunktionen i formulär för att skicka formulär med adaptiva format.
+
+* **Stöd för att använda en variabel för att ange en bifogad fil när ett adaptivt formulär fylls i i förväg för steget Tilldela uppgift**
+
+   När du fyller i ett adaptivt formulär i förväg för steget Tilldela uppgift kan du nu använda en dokumenttypsvariabel för att välja en bifogad inmatning för det adaptiva formuläret.
+
+* **Stöd för att använda det literala alternativet för att ange ett värde för en JSON-typvariabel**
+
+   Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med det literala alternativet kan du ange en JSON i form av en sträng.
+
+* **Använd lokal utvecklingsmiljö för att skapa en dokumentfil (DoR)**
+
+   Du kan använda en XDP-fil som en dokumentmall på Cloud Service och AEM Forms som en Cloud Service-SDK (lokal utvecklingsmiljö). Tidigare var stödet begränsat till endast Cloud Service.
+
+### Felkorrigeringar i [!DNL Forms] {#bug-fixes-forms}
+
+* När ett anpassat formulär som inte har konfigurerats för att generera ett postdokument skickas till ett AEM arbetsflöde som har konfigurerats för att generera ett postdokument, visas inget felmeddelande och uppgiften kan inte skickas.
+
+### Andra uppdateringar {#misc-2021-04-0-forms}
+
+* För att göra det enklare att identifiera innehåll genererar tjänsten nu dynamiska miniatyrbilder för XDP-, Dynamic PDF- och Schema-filer.
+* Lägg till möjligheten att flytta en PDF-fil till en mapp som ligger i AEM Forms-gränssnittet.
 
 ## Adobe Experience Manager Commerce som Cloud Service {#cloud-services-commerce}
 
 ### Nyheter {#what-is-new-commerce}
 
-* Stöd för Magento 2.4.2
+* Stöd för kategori-UID - Detta frigör e-handelsintegreringar från tredje part för system som använder strängar för kategori-ID
 
-* Produktdetaljkomponenten kan nu användas och konfigureras på alla innehållssidor
+* AEM för PWA Studio inkl. exempelintegrering
 
-* Lanserade CIF Venia Reference Site - 2021.03.25 som innehåller den senaste CIF Core Components version v1.9.0. Mer information finns i [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.03.25).
+* Ny kärnkomponent för CIF-navigering som utökar kärnkomponenten för WCM-navigering
 
-* Frisläppta CIF-kärnkomponenter v1.9.0. Mer information finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.9.0).
+* Visuell indikator för mellanlagrade katalogdata i AEM
 
+* Commerce-slutpunkten kan nu konfigureras via användargränssnittet i Cloud Manager
+
+### Felkorrigeringar {#bug-fixes-commerce}
+
+* Rotkategorifältet visades inte under fliken E-handel i sidegenskaperna för kategorisidor
 
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.4.0 och 2021.3.0.
+I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.4.0.
 
 ### Releasedatum {#release-date-cm-april}
 
@@ -121,76 +181,6 @@ Nästa version är planerad till 6 maj 2021.
 
 * `Runmode`-kontrollen genererade falskt positiva värden på noder som inte finns i mappen.
 
-
-### Releasedatum {#release-date-cm-march}
-
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.3.0 är 11 mars 2021.
-
-### Nyheter {#what-is-new-march}
-
-* Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att se ett meddelande om sina tidigare konfigurationer och kommer att kunna självbetjäna via användargränssnittet.
-
-* Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
-
-   * Lägg till Sites-lösning i ett befintligt program med Assets eller vice versa.
-   * Ta bort platser eller resurser från ett befintligt program med både platser och resurser.
-   * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
-
-* **AEM Push** Updatelabel visas nu för både  *Pipeline* Execution och  ** ActivityScreens.
-
-* Om en miljö är i viloläge men det även finns en tillgänglig AEM uppdatering, kommer **statusen** att ha företräde framför **Tillgänglig uppdatering**.
-
-* Användarna kan nu se sin molnhanterarroll(er) genom att välja alternativet Visa molnhanterarroll(er) efter att ha navigerat till ikonen Användarprofil (överst till höger) i Unified Shell.
-
-* Etiketten **Ansökan om godkännande** har ändrats till **Produktionsgodkännande** för större tydlighet.
-
-* **Versionsetiketten** har ändrats till **Git-tagg** på körningsskärmen för produktionspipeline.
-
-* Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende: **Avbryt omedelbart** och **Godkänn omedelbart**.
-
-* Listorna över klass- och metodborttagning har uppdaterats baserat på version `2021.3.4997.20210303T022849Z-210225` av AEM Cloud Service-SDK.
-
-* Produktionspipelinen för Cloud Manager kommer nu att innehålla funktionen [testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing).
-
-### Felkorrigeringar {#bug-fixes-cm-march}
-
-* Paketversionshantering hoppades över i vissa fall under AEM push-uppgradering.
-
-* Vissa kvalitetsproblem upptäcktes inte korrekt när paket bäddats in i andra paket.
-
-* I svåra fall kan standardprogramnamnet som genereras när dialogrutan Lägg till program öppnas vara en dubblett av ett befintligt programnamn.
-
-* Om användaren navigerar bort från sidan för pipeline-körning omedelbart efter att ha startat en pipeline visas ett felmeddelande om att åtgärden misslyckades, även om körningen faktiskt startar.
-
-* Byggsteget startades om i onödan när kundbyggen resulterade i ogiltiga paket.
-
-* Ibland kan användaren se en grön &quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när den konfigurationen inte har distribuerats.
-
-* Alla befintliga produktionspipelinjer aktiveras automatiskt med Experience Audit-steget.
-
-## Content Transfer Tool {#content-transfer-tool}
-
-### Releasedatum {#release-date-ctt}
-
-Releasedatum för innehållsöverföringsverktyget v1.3.4 är 19 mars 2021.
-
-### Felkorrigeringar {#bug-fixes-ctt}
-
-* CTT hoppade över innehåll från mappar med samma namn men med ett bindestreck i namnet. Den här har åtgärdats.
-
-### Releasedatum {#release-date-ctt-march}
-
-Releasedatum för innehållsöverföringsverktyget v1.3.0 är 4 mars 2021.
-
-### Nyheter i verktyget Innehållsöverföring {#what-is-new-ctt-march}
-
-* CTT installeras nu på `/apps` i stället för `/libs` webbläsarbokmärken på vissa sidor kanske inte längre är giltiga.
-* När CTT är installerat måste användaren navigera ytterligare en nivå för att komma till sidan Innehållsöverföring. Mer information finns i [Använda verktyget för innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html).
-
-### Felkorrigeringar {#bug-fixes-ctt-march}
-
-* När CTT migrerade innehåll från en viss sökväg drog det in resurser som inte hade med varandra att göra. Detta har åtgärdats
-
 ## Best Practices Analyzer {#best-practices-analyzer}
 
 ### Releasedatum {#release-date-bpa}
@@ -202,18 +192,3 @@ Releasedatum för Best Practices Analyzer v2.1.12 är 12 april 2021.
 * Dubblettrader sågs i den rapporterade BPA-filen. Den här har åtgärdats.
 * BPA-gränssnittet i AEM version 6.4.2 genererade ett JS-fel som inaktiverade knappen Generera rapport. Detta har åtgärdats
 
-
-## Verktyg för omstrukturering av kod {#code-refactoring-tools}
-
-### Nyheter i Code Refactoring Tools {#what-is-new-crt}
-
-* Nya funktioner och förbättringar för Databasmodernisering. Se [GitHub-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) för den senaste versionen.
-   * Normalisera OSGi-konfigurationer (utom RepoInit-konfigurationer) till det önskade .cfg.json-formatet.
-   * Byt namn på OSGi-konfigurationsmappar till det angivna formatet.
-   * Generera ui.apps.structure-projektet.
-   * Skapa analysmodulen.
-
-* Nya funktioner och förbättringar för Dispatcher Converter. Se [GitHub-resurs: Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter)
-   * Skapa separata filer för olika inkluderingar i stället för att länka innehållet.
-   * Möjlighet att hantera både mappsökväg för värdar och sökväg till värdfiler.
-   * Generering av servergruppsfiler med stora kundkonfigurationer från 600 eller fler.
