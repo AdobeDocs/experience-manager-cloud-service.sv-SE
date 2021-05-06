@@ -1,16 +1,16 @@
 ---
 title: Content Fragments - Configuration Browser
 description: Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Browser för att utnyttja AEM kraftfulla headless-leveransfunktioner.
-feature: Content Fragments
+feature: Innehållsfragment
 role: Business Practitioner
+exl-id: 9fc911de-1d33-4811-8f58-ea21ce94bedb
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: f0e484dbe8549dadc48cc82713861c591a1c5661
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 19%
+source-wordcount: '287'
+ht-degree: 18%
 
 ---
-
 
 # Content Fragments - Configuration Browser{#content-fragments-configuration-browser}
 
@@ -25,7 +25,11 @@ Innan du använder innehållsfragment måste du använda **Configuration Browser
 
 >[!CAUTION]
 >
->Om du inte aktiverar **Content Fragment Models** kommer alternativet **Create** inte att vara tillgängligt för att skapa nya modeller.
+>Om du inte aktiverar **Content Fragment Models**:
+>
+>* **Alternativet Skapa** är inte tillgängligt för att skapa nya modeller.
+>* du inte kan [välja klientorganisationen för att skapa den relaterade slutpunkten](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint).
+
 
 Om du vill aktivera funktioner för innehållsfragment måste du:
 
