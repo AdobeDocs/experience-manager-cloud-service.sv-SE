@@ -1,15 +1,15 @@
 ---
 title: Autentisering för AEM GraphQL-frågor om innehållsfragment
 description: Förstå den autentisering som krävs för GraphQL-frågor AEM fjärranslutet för att skydda din headless-innehållsleverans.
-feature: Content Fragments,GraphQL API
+feature: Innehållsfragment,GraphQL API
+exl-id: dfeae661-06a1-4001-af24-b52ae12d625f
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: dab4c9393c26f5c3473e96fa96bf7ec51e81c6c5
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
-
 
 # Autentisering för AEM GraphQL-frågor för innehållsfragment {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
@@ -19,7 +19,7 @@ Ett primärt användningsexempel för [Adobe Experience Manager som en Cloud Ser
 >
 >För testning och utveckling kan du även komma åt AEM GraphQL API direkt via gränssnittet [GraphiQL](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface).
 
-För autentisering måste tredjepartstjänsten använda en [åtkomsttoken](#access-token), som sedan kan användas [i GraphQL-begäran](#use-access-token-in-graphql-request).
+För autentisering måste tredjepartstjänsten [hämta en åtkomsttoken](#retrieving-access-token) som sedan kan användas i GraphQL-begäran](#use-access-token-in-graphql-request).[
 
 ## Hämtar en åtkomsttoken {#retrieving-access-token}
 
