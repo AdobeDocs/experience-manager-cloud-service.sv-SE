@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 20
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
 feature: Versionsinformation
 translation-type: tm+mt
-source-git-commit: 8428c46295020c40d62311a86e1691b08fd8a00d
+source-git-commit: 29bc3d02295fb04f3aacda41c43d1733092e1f27
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,11 @@ Nästa version är planerad till 3 juni 2021.
 
 * Tillägget Commerce kan nu användas för sandlådeprogram under arbetsflödet för redigeringsprogram.
 
-* Redigeringsprogrammet har uppdaterats.
+* *Redigeringsprogrammet* har uppdaterats.
 
 * Tabellen Domännamn på sidan Miljöinformation visar upp till 250 domännamn via sidnumrering.
 
-* Lösningen visas på fliken Lösningar i arbetsflödena Lägg till program och Redigera program, även om det bara finns en lösning för programmet.
+* Fliken **Lösningar och tillägg** i **arbetsflödena Lägg till program** och **Redigera program** visar lösningen, även om bara en lösning är tillgänglig för programmet.
 
 * Felmeddelandet i byggstegsloggen när bygget inte skapade några distribuerade innehållspaket var oklart.
 
