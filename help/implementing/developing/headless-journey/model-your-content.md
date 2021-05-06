@@ -6,9 +6,9 @@ hidefromtoc: true
 index: false
 exl-id: f872839b-2401-4ea4-9e09-e5dda18afd09
 translation-type: tm+mt
-source-git-commit: 49e2141cd55a2d277d0e1d2d622097fa5f08a464
+source-git-commit: dd30bbb57d2746a7b16cb0546b90df0758fc3740
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1752'
 ht-degree: 0%
 
 ---
@@ -212,6 +212,20 @@ Datatypen kan konfigureras så att fragmentförfattare kan:
    * Redigera det refererade fragmentet direkt.
    * Skapa ett nytt innehållsfragment, baserat på lämplig modell
 
+### Skapar modeller för innehållsfragment {#creating-content-fragment-models}
+
+Först aktiveras Content Fragment Models för din plats. Detta görs i Configuration Browser:
+
+![Definiera konfiguration](assets/cfm-configuration.png)
+
+Därefter kan modellerna för innehållsfragment modelleras:
+
+![Content Fragment Model](assets/cfm-model.png)
+
+>[!NOTE]
+>
+>Se Arbeta med innehållsfragment.
+
 ## Använda modellen för att skapa innehåll med innehållsfragment {#use-content-to-author-content}
 
 Innehållsfragment baseras alltid på en innehållsfragmentmodell. Modellen innehåller strukturen, fragmentet innehåller innehållet.
@@ -231,6 +245,16 @@ När fragmentet har skapats kan du öppna det i Content Fragment Editor. Här ka
 * Redigera metadata.
 * Visa trädstrukturen.
 * Förhandsgranska JSON-representationen.
+
+### Skapa innehållsfragment {#creating-content-fragments}
+
+När du har valt lämplig modell öppnas ett innehållsfragment för redigering i redigeraren för innehållsfragment:
+
+![Innehållsfragmentsredigerare](assets/cfm-editor.png)
+
+>[!NOTE]
+>
+>Se Arbeta med innehållsfragment.
 
 ## Komma igång med några exempel {#getting-started-examples}
 
