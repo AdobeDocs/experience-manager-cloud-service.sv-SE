@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 translation-type: tm+mt
-source-git-commit: 6e21c6ffe50d6c030873650e7dd26246dea76b59
+source-git-commit: 26bd32d88b04d107a24e5e601af6e01d309b8e0e
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -140,14 +140,53 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * Rotkategorifältet visades inte under fliken E-handel i sidegenskaperna för kategorisidor
 
+
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.4.0.
+I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.5.0 och 2021.4.0.
+
+### Releasedatum {#release-date-cm-may}
+
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.5.0 är 6 maj 2021.
+Nästa version är planerad till 3 juni 2021.
+
+### Nyheter {#what-is-new-may}
+
+* Kvalitetsregeln PackageOverlaps identifierar nu fall där samma paket har distribuerats flera gånger, dvs. på flera inbäddade platser, i samma distribuerade paketuppsättning.
+
+* Databasslutpunkten i det offentliga API:t innehåller nu Git-URL:en.
+
+* Distributionsloggen som hämtas av en Cloud Manager-användare blir mer insiktsfull och innehåller nu information om fel och lyckade scenarier.
+
+* Intermittenta fel som uppstod när koden skulle skickas till Adobe Git har nu åtgärdats.
+
+* Tillägget Commerce kan nu användas för sandlådeprogram under arbetsflödet för redigeringsprogram.
+
+* Redigeringsprogrammet har uppdaterats.
+
+* Tabellen Domännamn på sidan Miljöinformation visar upp till 250 domännamn via sidnumrering.
+
+* Lösningen visas på fliken Lösningar i arbetsflödena Lägg till program och Redigera program, även om det bara finns en lösning för programmet.
+
+* Felmeddelandet i byggstegsloggen när bygget inte skapade några distribuerade innehållspaket var oklart.
+
+### Felkorrigeringar {#bug-fixes-cm-may}
+
+* Ibland kan användaren se en grön&quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
+
+* I stället för att ta bort &quot;borttagna&quot;-variabler skulle API:t för pipelines-variablerna bara markera dem med statusen **DELETED**.
+
+* Vissa problem med saklig kodkvalitet påverkade felaktigt tillförlitlighetsgraderingen.
+
+* Eftersom jokerteckendomäner inte stöds tillåter inte gränssnittet användaren att skicka in en jokerteckendomän.
+
+* När en pipeline-körning startades mellan midnatt och kl. 1 UTC garanterades inte artefaktversionen som genererades av Cloud Manager att vara större än en version som skapades föregående dag.
+
+* När projektet med exempelkoden har skapats visas Hantera Git som en länk från hjältekortet på sidan Översikt när sandlådeprogrammet har konfigurerats.
 
 ### Releasedatum {#release-date-cm-april}
 
 Releasedatum för Cloud Manager i AEM som Cloud Service 2021.4.0 är 8 april 2021.
-Nästa version är planerad till 6 maj 2021.
 
 ### Nyheter {#what-is-new-april}
 
