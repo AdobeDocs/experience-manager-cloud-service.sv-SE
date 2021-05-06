@@ -1,16 +1,16 @@
 ---
 title: Modeller för innehållsfragment
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
-feature: Content Fragments
+feature: Innehållsfragment
 role: Business Practitioner
+exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+source-git-commit: 9e299db2d111087bbca05624276e212d457d76d1
 workflow-type: tm+mt
-source-wordcount: '2203'
-ht-degree: 5%
+source-wordcount: '2309'
+ht-degree: 4%
 
 ---
-
 
 # Modeller för innehållsfragment {#content-fragment-models}
 
@@ -61,7 +61,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
    >
    >När ett fält är **obligatoriskt** markeras den **etikett** som visas i den vänstra rutan med en asterisk (*****).
 
-   ![egenskaper](assets/cfm-models-03.png)
+![egenskaper](assets/cfm-models-03.png)
 
 1. **Lägga till ett fält**
 
@@ -111,6 +111,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Tillåter fragmentförfattare att komma åt och markera taggområden
 * **Innehållsreferens**
    * Hänvisningar till annat innehåll, oavsett typ. kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * Om det finns referenser till en bild kan du välja att visa en miniatyrbild
 * **Fragmentreferens**
    * Hänvisar till andra innehållsfragment. kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
    * Datatypen kan konfigureras så att fragmentförfattare kan:
@@ -121,6 +122,13 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
       * För att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
       * JSON skickas och skrivs ut som JSON i GraphQL.
       * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i innehållsfragmentredigeraren.
+* **Platshållare för flik**
+   * Tillåter introduktion av flikar som kan användas när innehållet i innehållsfragmentet redigeras.
+Detta visas som en avgränsare i modellredigeraren, som avgränsar avsnitt i listan med innehållsdatatyper. Varje instans representerar början på en ny flik.
+I fragmentredigeraren visas varje instans som en flik.
+
+      >[!NOTE]
+      Den här datatypen används endast för formatering, den ignoreras av det AEM GraphQL-schemat.
 
 ## Egenskaper {#properties}
 
@@ -165,6 +173,8 @@ TranslatableMarkera kryssrutan &quot;Translatable&quot; för ett fält i CF-mode
    * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfiguration, kontext `/content/dam/<tenant>`, om det inte redan finns.
    * För GraphQL: Ange en `<translatable>`-egenskap i fältet Innehållsfragment till `yes`, så att GraphQL-frågefilter tillåts för JSON-utdata med endast översättningsbart innehåll.
 
+* Mer information om den specifika datatypen och dess egenskaper finns i **[Innehållsreferens](#content-reference)**.
+
 * Mer information om den specifika datatypen och dess egenskaper finns i **[Fragmentreferens (kapslade fragment)](#fragment-reference-nested-fragments)**.
 
 ## Validering {#validation}
@@ -181,12 +191,6 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
    * Det går endast att referera till bilder inom ett fördefinierat intervall med bredd och/eller höjd (i pixlar).
 * **Fragmentreferens**
    * Testa om det finns en specifik innehållsfragmentmodell.
-
-<!--
-  * Only predefined file types can be referenced.
-  * No more than the predefined number of assets can be referenced. 
-  * No more than the predefined number of fragments can be referenced.
--->
 
 ## Använda referenser till kapslat innehåll {#using-references-to-form-nested-content}
 
@@ -219,12 +223,14 @@ Med innehållsreferensen kan du återge innehåll från en annan källa; till ex
 
 Förutom standardegenskaper kan du ange:
 
-* **Rotsökväg** för refererat innehåll.
-* De innehållstyper som kan refereras.
-* Begränsningar för filstorlekar.
-* Bildbegränsningar.
-   <!-- Check screenshot - might need update -->
-   ![Innehållsreferens](assets/cfm-content-reference.png)
+* **Rotsökväg** för refererat innehåll
+* De innehållstyper som kan refereras
+* Begränsningar för filstorlekar
+* Om det refereras till en bild:
+   * Visa miniatyrbild
+   * Bildbegränsningar för höjd och bredd
+
+![Innehållsreferens](assets/cfm-content-reference.png)
 
 ### Fragmentreferens (kapslade fragment) {#fragment-reference-nested-fragments}
 
@@ -272,7 +278,6 @@ Anger en rotsökväg för alla fragment som refereras.
 
    * **fragmentreferenssammansatt**  - gör att fragmentförfattaren kan skapa en sammansatt bild genom att välja flera fragment
 
-   <!-- Check screenshot - might need update -->
    ![Fragmentreferens](assets/cfm-fragment-reference.png)
 
 >[!NOTE]
@@ -405,17 +410,3 @@ Du kan redigera **egenskaperna** för en modell för innehållsfragment:
    * **Taggar**
    * **Beskrivning**
    * **Överför bild**
-
-<!--
-* **GraphQL**
-  
-  >[!CAUTION]
-  >
-  >These properties are only required for [development purposes](/help/assets/content-fragments/graphql-api-content-fragments.md#schema-generation).
-  >
-  >Updating these properties can impact dependent applications.
-
-  * **API Name**
-  * **Single Query Field Name**
-  * **Multiple Query Field Name**
--->
