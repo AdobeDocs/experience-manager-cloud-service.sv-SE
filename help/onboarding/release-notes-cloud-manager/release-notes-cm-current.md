@@ -1,53 +1,55 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.4.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.4.0
-feature: Release Information
-exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
+feature: Versionsinformation
 translation-type: tm+mt
-source-git-commit: 69694f2067c53667803d38bbf7bc752f3b3afac6
+source-git-commit: e2d4bb7649fad3ee172c6f049ecfdedc71417ee2
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.4.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.4.0.
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.5.0 {#release-notes}
+
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.5.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.4.0 är 8 april 2021.
-Nästa version är planerad till 6 maj 2021.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.5.0 är 6 maj 2021.
+Nästa version är planerad till 3 juni 2021.
 
-### Nyheter {#what-is-new-april}
+### Nyheter {#what-is-new}
 
-* Gränssnittsuppdateringar i arbetsflödena för Lägg till och redigera program gör dem mer intuitiva.
+* Kvalitetsregeln PackageOverlaps identifierar nu fall där samma paket har distribuerats flera gånger, dvs. på flera inbäddade platser, i samma distribuerade paketuppsättning.
 
-* En användare med nödvändig behörighet kan nu skicka slutpunkten för e-handeln via användargränssnittet.
+* Databasslutpunkten i det offentliga API:t innehåller nu Git-URL:en.
 
-* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM version `2021.03.5104.20210328T185548Z` eller senare.
+* Distributionsloggen som hämtas av en Cloud Manager-användare blir mer insiktsfull och innehåller nu information om fel och lyckade scenarier.
 
-* Knappen **Hantera Git** visas på pipelines-kortet även när inga rörledningar har konfigurerats.
+* Intermittenta fel som uppstod när koden skulle skickas till Adobe Git har nu åtgärdats.
 
-* Den version av AEM projekttyp som används av Cloud Manager har uppdaterats till version 27.
+* Tillägget Commerce kan nu användas för sandlådeprogram under arbetsflödet för redigeringsprogram.
 
-* Projekt i Adobe I/O Developer Console som har skapats i Cloud Manager kan inte längre redigeras eller tas bort oavsiktligt.
+* Redigeringsprogrammet har uppdaterats.
 
-* När en användare lägger till en ny miljö informeras de om att när en miljö väl har skapats kan den inte flyttas till en annan region.
+* Tabellen Domännamn på sidan Miljöinformation visar upp till 250 domännamn via sidnumrering.
 
-* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM version 2021.03.5104.20210328T185548Z eller senare.
+* Lösningen visas på fliken Lösningar i arbetsflödena Lägg till program och Redigera program, även om det bara finns en lösning för programmet.
 
-* Felmeddelandet när en pipeline startades när en miljö togs bort har klargjorts.
+* Felmeddelandet i byggstegsloggen när bygget inte skapade några distribuerade innehållspaket var oklart.
 
-* OSGi-paket som tillhandahålls av Eclipse-projekt undantas nu från regeln `CQBP-84--dependencies`.
+### Felkorrigeringar {#bug-fixes}
 
-### Felkorrigeringar {#bug-fixes-cm-april}
+* Ibland kan användaren se en grön&quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
 
-* När du redigerar Experience Audit-sidan för en pipeline kommer en indatasökväg som börjar med ett snedstreck `( / )` inte längre att resultera i att steget fastnar i väntande status.
+* I stället för att ta bort &quot;borttagna&quot;-variabler skulle API:t för pipelines-variablerna bara markera dem med statusen **DELETED**.
 
-* När en ny produktionspipeline skapas granskades inte standardstartsidan om användaren inte lägger till någon åsidosättning av innehållsgranskning.
+* Vissa problem med saklig kodkvalitet påverkade felaktigt tillförlitlighetsgraderingen.
 
-* Problem för `CloudServiceIncompatibleWorkflowProcess` hade fel allvarlighetsgrad i den hämtningsbara CSV-filen för utgåvan.
+* Eftersom jokerteckendomäner inte stöds tillåter inte gränssnittet användaren att skicka in en jokerteckendomän.
 
-* `Runmode`-kontrollen genererade falskt positiva värden på noder som inte finns i mappen.
+* När en pipeline-körning startades mellan midnatt och kl. 1 UTC garanterades inte artefaktversionen som genererades av Cloud Manager att vara större än en version som skapades föregående dag.
+
+* När projektet med exempelkoden har skapats visas Hantera Git som en länk från hjältekortet på sidan Översikt när sandlådeprogrammet har konfigurerats.
