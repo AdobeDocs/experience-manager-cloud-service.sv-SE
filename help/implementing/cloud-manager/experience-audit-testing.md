@@ -1,16 +1,21 @@
 ---
 title: Experience Audit Testing - Cloud Services
 description: Experience Audit Testing - Cloud Services
+exl-id: 8d31bc9c-d38d-4d5b-b2ae-b758e02b7073
 translation-type: tm+mt
-source-git-commit: c1ce44fb8a7b12818b58ff5ef661b9b447b9cd5c
+source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
-
 # Experience Audit Testing {#experience-audit-testing}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_nonbpa_expaudittesting"
+>title="Testning av Experience Audit"
+>abstract="Experience Audit är en funktion som finns i Cloud Manager Sites Production pipelines, som drivs av Google Lighthuse, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager."
 
 Experience Audit är en funktion som finns i Cloud Manager Sites Production pipelines, som drivs av Google Lighthuse, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager.
 
@@ -26,7 +31,7 @@ Experience Audit i Cloud Manager säkerställer att slutanvändarnas digitala up
 
 Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via sidan för körning av produktionspipeline.
 
-* Mätvärden för aggregerad nivå mäter medelpoängen på de sidor som granskats med avseende på prestanda, tillgänglighet, bästa praxis, SEO (sökmotoroptimering).
+* Mätvärden för aggregerad nivå mäter medelpoängen på de sidor som granskats för prestanda, tillgänglighet, bästa praxis, SEO (sökmotoroptimering).
    >[!NOTE]
    >Progressive Web App-poäng (PWA) ingår inte i sammanfattningspoängen och visas endast på informationsskärmen på sidnivå.
 * Enskilda sidnivåpoäng kan också göras via fördjupning.
@@ -61,4 +66,3 @@ Genom att gå in i något av testerna kan man se en mer detaljerad sidnivåbedö
 Om du klickar på detaljerna för en enskild sida visas information om de element på sidan som har utvärderats och vägledning för att åtgärda problem om möjligheter till förbättring upptäcks. Detaljer om testerna och tillhörande vägledning tillhandahålls av Google Lighthuse.
 
 ![](/help/implementing/cloud-manager/assets/exp-audit-2.png)
-
