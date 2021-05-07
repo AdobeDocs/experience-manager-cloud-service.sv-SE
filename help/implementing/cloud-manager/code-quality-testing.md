@@ -1,16 +1,21 @@
 ---
 title: Kodkvalitetstestning - Cloud Services
 description: Kodkvalitetstestning - Cloud Services
+exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
 translation-type: tm+mt
-source-git-commit: 5a945cbb138aea64ecc6da3728827531569d6d63
+source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '867'
 ht-degree: 1%
 
 ---
 
-
 # Testning av kodkvalitet {#code-quality-testing}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_nonbpa_codequalitytests"
+>title="Testning av kodkvalitet"
+>abstract="Kodkvalitetstestningen utvärderar kvaliteten på programkoden. Det är huvudmålet för en rörledning med enbart kodkvalitet och genomförs omedelbart efter byggsteget i alla rörledningar för icke-produktion och produktion."
 
 Kodkvalitetstestningen utvärderar kvaliteten på programkoden. Det är huvudmålet för en rörledning med enbart kodkvalitet och genomförs omedelbart efter byggsteget i alla rörledningar för icke-produktion och produktion.
 
