@@ -1,14 +1,14 @@
 ---
 title: Databasmodernisering
 description: Databasmodernisering
+exl-id: b89156a8-3d7d-4d36-89a2-beeda35bbc01
 translation-type: tm+mt
-source-git-commit: 5da0d4cc8c6d8781dd7cce8bbbde207568a6d10b
+source-git-commit: 0ed18aad48f33fb0504d59a5f583b5a3dbea59f6
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 3%
 
 ---
-
 
 # Databasmodernisering {#repo-modernizer}
 
@@ -30,6 +30,8 @@ Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service
 >Projektstrukturen baseras på *Arketyp 24* för paket och deras `pom.xml/filter.xml files`. Mer information finns i [Archetype 24](https://github.com/adobe/aem-project-archetype).
 
 ## Använda Repository Modernizer {#using-repo-modernizer}
+
+>[!VIDEO](https://video.tv.adobe.com/v/333057/?quality=12&learn=on)
 
 * Via Adobe I/O CLI: Vi rekommenderar att du använder Repository Modernizer via `aio-cli-plugin-aem-cloud-service-migration` (AEM som ett plugin-program för omfaktorisering av Cloud Service för Adobe I/O CLI).
 
