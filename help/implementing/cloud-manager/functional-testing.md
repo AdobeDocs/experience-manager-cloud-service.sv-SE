@@ -1,18 +1,25 @@
 ---
 title: Funktionstestning - Cloud Services
 description: Funktionstestning - Cloud Services
+exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
 translation-type: tm+mt
-source-git-commit: 765334cff443d56e37f578647af4bcd133509481
+source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '865'
 ht-degree: 2%
 
 ---
 
-
 # Funktionstestning {#functional-testing}
 
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_nonbpa_functionaltesting"
+>title="Funktionstestning"
+>abstract="Funktionstestning är indelad i tre typer: produktfunktionstestning, anpassad funktionstestning, anpassad gränssnittstestning"
+
 Funktionstestning indelas i tre typer:
+
 
 * Funktionstestning av produkten
 * Anpassad funktionstestning
@@ -124,4 +131,3 @@ Systemegenskaperna är följande:
 * `sling.it.instance.runmode.2 - should be set to publish`
 * `sling.it.instance.adminUser.2 - should be set to the publish admin user, for example, admin`
 * `sling.it.instance.adminPassword.2 - should be set to the publish admin password`
-
