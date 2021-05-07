@@ -1,16 +1,21 @@
 ---
 title: UI-testning - Cloud Services
 description: UI-testning - Cloud Services
+exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
 translation-type: tm+mt
-source-git-commit: ea0c9675ca03b1d247c7e5fd13e03072fb4a13ae
+source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1087'
 ht-degree: 0%
 
 ---
 
-
 # Gränssnittstestning {#ui-testing}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_nonbpa_uitesting"
+>title="UI-testning"
+>abstract="Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Docker-bilden kan skapas med standardverktyg, men måste följa vissa regler när den körs. När du kör Docker-bilden etableras en Selenium-server automatiskt. Med de runtime-konventioner som beskrivs nedan kan din testkod få åtkomst till både Selenium-servern och AEM instanser som testas."
 
 Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Docker-bilden kan skapas med standardverktyg, men måste följa vissa regler när den körs. När du kör Docker-bilden etableras en Selenium-server automatiskt. Med de runtime-konventioner som beskrivs nedan kan din testkod få åtkomst till både Selenium-servern och AEM instanser som testas.
 
@@ -22,7 +27,7 @@ Användargränssnittstester är självstudiebaserade tester som paketeras i en D
 
 UI-tester är byggda utifrån Docker-byggkontext som genereras av ett Maven-projekt. Cloud Manager använder Docker-byggkontexten för att generera en Docker-bild som innehåller de faktiska gränssnittstesterna. Sammanfattningsvis genererar ett Maven-projekt en Docker-byggkontext och Docker-byggkontexten beskriver hur du skapar en Docker-bild som innehåller UI-testerna.
 
-I det här avsnittet beskrivs stegen som krävs för att lägga till ett UI-testprojekt i din databas. Om du har bråttom eller inte har några särskilda krav för programmeringsspråket, kan [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) generera ett UI-testprojekt åt dig.
+I det här avsnittet beskrivs stegen som krävs för att lägga till ett UI-testprojekt i din databas. Om du har bråttom eller inte har några särskilda krav för programmeringsspråket, kan [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) generera ett UI Tests-projekt åt dig.
 
 ### Skapa en Docker-byggkontext {#generate-docker-build-context}
 
