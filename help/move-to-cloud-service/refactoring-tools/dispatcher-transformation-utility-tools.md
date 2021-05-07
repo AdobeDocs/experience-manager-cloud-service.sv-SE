@@ -1,16 +1,21 @@
 ---
 title: Verktyg för AEM Dispatcher Converter
 description: Verktyg för AEM Dispatcher Converter
+exl-id: 97eb4f3f-dc03-461a-8d7e-164065bd1e4c
 translation-type: tm+mt
-source-git-commit: 50d26dbec8281afec07ca56595b4b2a7b915eca9
+source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 53%
+source-wordcount: '341'
+ht-degree: 51%
 
 ---
 
-
 # AEM Dispatcher Converter {#introduction}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_nonbpa_dispconverter"
+>title="AEM Dispatcher Converter"
+>abstract="Adobe Experience Manager Dispatcher Converter konverterar befintliga AEM Dispatcher-konfigurationer till AEM som Cloud Service Dispatcher-konfigurationer."
 
 Adobe Experience Manager Dispatcher Converter konverterar befintliga AEM Dispatcher-konfigurationer till AEM som Cloud Service Dispatcher-konfigurationer.
 
@@ -45,4 +50,3 @@ AEM Dispatcher Converter kan omfaktorisera befintliga, lokala eller Adobe Manage
 
 >[!IMPORTANT]
 >AEM Dispatcher Converter utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.
-
