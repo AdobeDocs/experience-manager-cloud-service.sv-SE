@@ -6,9 +6,9 @@ hidefromtoc: true
 index: false
 exl-id: 8d133b78-ca36-4c3b-815d-392d41841b5c
 translation-type: tm+mt
-source-git-commit: 787af0d4994bf1871c48aadab74d85bd7c3c94fb
+source-git-commit: 7732a291d070a5d93a6f490877b909e1331be1e2
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1270'
 ht-degree: 1%
 
 ---
@@ -55,102 +55,99 @@ Resursens REST API är tillgängligt för varje körklar installation av en nyli
 
 ## HTTP API för Assets {#assets-http-api}
 
-[Resursens HTTP API](/help/assets/mac-api-assets.md) omfattar:
+Resursens HTTP-API omfattar:
 
 * Resurser REST API
 * inklusive stöd för innehållsfragment
 
-Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen **REST**.
-
-Med Assets REST API kan utvecklare av Adobe Experience Manager som Cloud Service komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via **CRUD**-åtgärder (Create, Read, Update, Delete).
+Den aktuella implementeringen av Assets HTTP API baseras på arkitekturformatet **REST** och gör att du kan komma åt innehåll (som lagras i AEM) via **CRUD**-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
 
 Med den här åtgärden kan du med API:t köra Adobe Experience Manager som en Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
 
+<!--
 >[!NOTE]
 >
->Det går inte att anpassa JSON-utdata från Assets REST API.
+>It is not possible to customize JSON output from the Assets REST API. 
 
-Resursens REST API:
+The Assets REST API:
 
-* följer HATEOAS-principen
-* implementerar SIREN-formatet
+* follows the HATEOAS principle
+* implements the SIREN format
 
-## Nyckelbegrepp {#key-concepts}
+## Key Concepts {#key-concepts}
 
-REST API:t ger REST-åtkomst till resurser som lagras i en AEM.
+The Assets REST API offers REST-style access to assets stored within an AEM instance. 
 
-Slutpunkten `/api/assets` används och resursens sökväg krävs för att komma åt den (utan inledande `/content/dam`).
+It uses the `/api/assets` endpoint and requires the path of the asset to access it (without the leading `/content/dam`). 
 
-* Det innebär att du kan få tillgång till resursen på:
-   * `/content/dam/path/to/asset`
-* Du måste begära:
-   * `/api/assets/path/to/asset`
+* This means that to access the asset at:
+  * `/content/dam/path/to/asset`
+* You need to request:
+  * `/api/assets/path/to/asset` 
 
-Om du till exempel vill komma åt `/content/dam/wknd/en/adventures/cycling-tuscany` begär du `/api/assets/wknd/en/adventures/cycling-tuscany.json`
-
->[!NOTE]
->Åtkomst över:
->
->* `/api/assets` **använder** inte  `.model` väljaren.
->* `/content/path/to/page` **kräver** att du använder  `.model` väljaren.
-
-
-HTTP-metoden avgör vilken åtgärd som ska utföras:
-
-* **GET**  - för att hämta en JSON-representation av en resurs eller en mapp
-* **POST**  - för att skapa nya resurser eller mappar
-* **PUT** - för att uppdatera egenskaperna för en resurs eller mapp
-* **DELETE** - för att ta bort en resurs eller mapp
+For example, to access `/content/dam/wknd/en/adventures/cycling-tuscany`, request `/api/assets/wknd/en/adventures/cycling-tuscany.json` 
 
 >[!NOTE]
+>Access over:
 >
->Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Ange till exempel att en mapp eller en resurs ska skapas med en **POST**-begäran.
+>* `/api/assets` **does not** need the use of the `.model` selector.
+>* `/content/path/to/page` **does** require the use of the `.model` selector.
 
-Det exakta formatet för begäranden som stöds definieras i API-referensdokumentationen.
+The HTTP method determines the operation to be executed:
 
-### Transaktionsbeteende {#transactional-behavior}
-
-Alla förfrågningar är atomiska.
-
-Det innebär att efterföljande (`write`)-begäranden inte kan kombineras till en enda transaktion som kan lyckas eller misslyckas som en enskild enhet.
-
-### Dokumentskydd {#security}
-
-Om REST API:t för Resurser används i en miljö utan särskilda autentiseringskrav måste AEM CORS-filtret konfigureras korrekt.
+* **GET** - to retrieve a JSON representation of an asset or a folder
+* **POST** - to create new assets or folders
+* **PUT** - to update the properties of an asset or folder
+* **DELETE** - to delete an asset or folder
 
 >[!NOTE]
 >
->Mer information finns i:
->
->* CORS/AEM
->* Video - Utveckla för CORS med AEM
+>The request body and/or URL parameters can be used to configure some of these operations; for example, define that a folder or an asset should be created by a **POST** request.
 
+The exact format of supported requests is defined in the API Reference documentation. 
 
-I miljöer med specifika autentiseringskrav rekommenderas OAuth.
+### Transactional Behavior {#transactional-behavior}
 
-## Tillgängliga funktioner {#available-features}
+All requests are atomic.
 
-Innehållsfragment är en specifik typ av resurs, se Arbeta med innehållsfragment.
+This means that subsequent (`write`) requests cannot be combined into a single transaction that could succeed or fail as a single entity.
 
-Mer information om funktioner som är tillgängliga via API finns i:
+### Security {#security}
 
-* Resursens REST API (ytterligare resurser)
-* Enhetstyper, där funktioner som är specifika för varje typ som stöds (som är relevant för innehållsfragment) förklaras
-
-### Sidindelning {#paging}
-
-Resursens REST API stöder sidindelning (för GET-begäranden) via URL-parametrarna:
-
-* `offset` - numret på den första (underordnade) entiteten som ska hämtas
-* `limit` - det maximala antalet returnerade enheter
-
-Svaret kommer att innehålla växlingsinformation som en del av `properties`-avsnittet i SIREN-utdata. Den här `srn:paging`-egenskapen innehåller det totala antalet (underordnade) entiteter ( `total`), förskjutningen och gränsen ( `offset`, `limit`) som anges i begäran.
+If the Assets REST API is used within an environment without specific authentication requirements, AEM's CORS filter needs to be configured correctly.
 
 >[!NOTE]
 >
->Sidindelning används vanligtvis för behållarentiteter (d.v.s. mappar eller resurser med återgivningar), eftersom det relaterar till den begärda entitetens underordnade.
+>For further information see:
+>
+>* CORS/AEM explained
+>* Video - Developing for CORS with AEM
 
-#### Exempel: Sidindelning {#example-paging}
+In environments with specific authentication requirements, OAuth is recommended.
+
+## Available Features {#available-features}
+
+Content Fragments are a specific type of Asset, see Working with Content Fragments.
+
+For further information about features available through the API see:
+
+* The Assets REST API (Additional Resources) 
+* Entity Types, where the features specific to each supported type (as relevant to Content Fragments) are explained 
+
+### Paging {#paging}
+
+The Assets REST API supports paging (for GET requests) via the URL parameters:
+
+* `offset` - the number of the first (child) entity to retrieve
+* `limit` - the maximum number of entities returned
+
+The response will contain paging information as part of the `properties` section of the SIREN output. This `srn:paging` property contains the total number of (child) entities ( `total`), the offset and the limit ( `offset`, `limit`) as specified in the request.
+
+>[!NOTE]
+>
+>Paging is typically applied on container entities (i.e. folders or assets with renditions), as it relates to the children of the requested entity.
+
+#### Example: Paging {#example-paging}
 
 `GET /api/assets.json?offset=2&limit=3`
 
@@ -168,33 +165,34 @@ Svaret kommer att innehålla växlingsinformation som en del av `properties`-avs
 ...
 ```
 
-## Enhetstyper {#entity-types}
+## Entity Types {#entity-types}
 
-### Mappar {#folders}
+### Folders {#folders}
 
-Mappar fungerar som behållare för resurser och andra mappar. De återspeglar strukturen i AEM innehållsdatabas.
+Folders act as containers for assets and other folders. They reflect the structure of the AEM content repository.
 
-Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, titel osv. Resurser visas som underordnade enheter till mappar och undermappar.
+The Assets REST API exposes access to the properties of a folder; for example its name, title, etc. Assets are exposed as child entities of folders, and sub-folders.
 
 >[!NOTE]
 >
->Beroende på resurstypen för de underordnade resurserna och mapparna kan listan med underordnade enheter redan innehålla den fullständiga uppsättningen egenskaper som definierar respektive underordnade enhet. Alternativt kan bara en reducerad uppsättning egenskaper visas för en enhet i den här listan över underordnade enheter.
+>Depending on the asset type of the child assets and folders the list of child entities may already contain the full set of properties that defines the respective child entity. Alternatively, only a reduced set of properties may be exposed for an entity in this list of child entities.
 
 ### Assets {#assets}
 
-Om en resurs begärs returneras dess metadata. som titel, namn och annan information som definieras av respektive resursschema.
+If an asset is requested, the response will return its metadata; such as title, name and other information as defined by the respective asset schema.
 
-Binära data för en resurs visas som en SIREN-länk av typen `content`.
+The binary data of an asset is exposed as a SIREN link of type `content`.
 
-Resurser kan ha flera renderingar. Dessa visas vanligtvis som underordnade enheter, ett undantag är en miniatyrrendering som visas som en länk av typen `thumbnail` ( `rel="thumbnail"`).
+Assets can have multiple renditions. These are typically exposed as child entities, one exception being a thumbnail rendition, which is exposed as a link of type `thumbnail` ( `rel="thumbnail"`).
+-->
 
-### Innehållsfragment {#content-fragments}
+## Resurser för HTTP API och innehållsfragment {#assets-http-api-content-fragments}
 
-Ett innehållsfragment är en särskild typ av resurs. De kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum.
+Innehållsfragment används för rubrikfri leverans och ett innehållsfragment är en särskild typ av resurs. De används för att komma åt strukturerade data, t.ex. texter, siffror och datum.
 
 Eftersom det finns flera skillnader mellan *standardobjekt*-resurser (t.ex. bilder eller ljud) gäller vissa ytterligare regler för att hantera dem.
 
-#### Representation {#representation}
+### Representation {#representation}
 
 Innehållsfragment:
 
@@ -203,21 +201,54 @@ Innehållsfragment:
 
 * betraktas också som atomiska, dvs. elementen och variationerna exponeras som en del av fragmentets egenskaper jämfört med som länkar eller underordnade enheter. Detta ger effektiv åtkomst till nyttolasten för ett fragment.
 
-#### Innehållsmodeller och innehållsfragment {#content-models-and-content-fragments}
+### Innehållsmodeller och innehållsfragment {#content-models-and-content-fragments}
 
 För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför måste *konsumenten* känna till modellen för ett fragment (åtminstone ett minimum), även om den mesta informationen kan härledas från nyttolasten. som datatyper, osv. är en del av definitionen.
 
 Om du vill skapa ett nytt innehållsfragment måste modellens (interna databas) sökväg anges.
 
-#### Associerat innehåll {#associated-content}
+### Associerat innehåll {#associated-content}
 
 Associerat innehåll visas för närvarande inte.
 
 ## Använda Resurser REST API {#using-aem-assets-rest-api}
 
+### Öppna {#access}
+
+Resursens REST API använder slutpunkten `/api/assets` och kräver att resursens sökväg har åtkomst till den (utan inledande `/content/dam`).
+
+* Det innebär att du kan få tillgång till resursen på:
+   * `/content/dam/path/to/asset`
+* Du måste begära:
+   * `/api/assets/path/to/asset`
+
+Om du till exempel vill komma åt `/content/dam/wknd/en/adventures/cycling-tuscany` begär du `/api/assets/wknd/en/adventures/cycling-tuscany.json`
+
+>[!NOTE]
+>Åtkomst över:
+>
+>* `/api/assets` **använder** inte  `.model` väljaren.
+>* `/content/path/to/page` **kräver** att du använder  `.model` väljaren.
+
+
+### Åtgärd {#operation}
+
+HTTP-metoden avgör vilken åtgärd som ska utföras:
+
+* **GET**  - för att hämta en JSON-representation av en resurs eller en mapp
+* **POST**  - för att skapa nya resurser eller mappar
+* **PUT** - för att uppdatera egenskaperna för en resurs eller mapp
+* **DELETE** - för att ta bort en resurs eller mapp
+
+>[!NOTE]
+>
+>Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Ange till exempel att en mapp eller en resurs ska skapas med en **POST**-begäran.
+
+Det exakta formatet för begäranden som stöds definieras i API-referensdokumentationen.
+
 Användningen kan variera beroende på om du använder en AEM författare eller publiceringsmiljö, tillsammans med ditt specifika användningsexempel.
 
-* Vi rekommenderar att skapandet binds till en författarinstans ([och att det för närvarande inte finns något sätt att replikera ett fragment för publicering med denna API](/help/assets/content-fragments/assets-api-content-fragments.md#limitations)).
+* Vi rekommenderar att skapandet binds till en författarinstans (och det finns för närvarande inget sätt att replikera ett fragment för publicering med denna API).
 * Leverans är möjlig från båda, eftersom AEM endast skickar begärt innehåll i JSON-format.
 
    * Lagring och leverans från en AEM författarinstans bör räcka för program som ligger bakom brandväggen och mediabibliotek.
@@ -230,7 +261,7 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
 >[!NOTE]
 >
->Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
+>Mer information finns i API-referensen. Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
 
 ### Läs/Leverera {#read-delivery}
 
@@ -299,6 +330,7 @@ Du bör fortsätta din AEM resa utan att behöva besöka dokumentet nästa gång
 * [HTTP API för Assets](/help/assets/mac-api-assets.md)
 * [Innehållsfragment REST API](/help/assets/content-fragments/assets-api-content-fragments.md)
    * [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference)
+* [Adobe Experience Manager Assets API - innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html)
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
 * [AEM kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
