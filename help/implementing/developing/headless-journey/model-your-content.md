@@ -6,9 +6,9 @@ hidefromtoc: true
 index: false
 exl-id: f872839b-2401-4ea4-9e09-e5dda18afd09
 translation-type: tm+mt
-source-git-commit: dd30bbb57d2746a7b16cb0546b90df0758fc3740
+source-git-commit: 787af0d4994bf1871c48aadab74d85bd7c3c94fb
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1830'
 ht-degree: 0%
 
 ---
@@ -214,17 +214,21 @@ Datatypen kan konfigureras så att fragmentförfattare kan:
 
 ### Skapar modeller för innehållsfragment {#creating-content-fragment-models}
 
-Först aktiveras Content Fragment Models för din plats. Detta görs i Configuration Browser:
+Först måste du aktivera Content Fragment Models för platsen. Detta görs i Configuration Browser. under Verktyg -> Allmänt -> Konfigurationsläsaren. Du kan antingen välja att konfigurera den globala posten eller skapa en ny konfiguration. Till exempel:
 
 ![Definiera konfiguration](assets/cfm-configuration.png)
 
-Därefter kan modellerna för innehållsfragment modelleras:
+>[!NOTE]
+>
+>Se Ytterligare resurser - Innehållsfragment i Configuration Browser
+
+Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under Verktyg -> Resurser -> Modeller för innehållsfragment. Till exempel:
 
 ![Content Fragment Model](assets/cfm-model.png)
 
 >[!NOTE]
 >
->Se Arbeta med innehållsfragment.
+>Se Ytterligare resurser - modeller för innehållsfragment.
 
 ## Använda modellen för att skapa innehåll med innehållsfragment {#use-content-to-author-content}
 
@@ -232,7 +236,9 @@ Innehållsfragment baseras alltid på en innehållsfragmentmodell. Modellen inne
 
 ### Välja lämplig modell {#select-model}
 
-Det första steget till att skapa innehåll är att skapa ett innehållsfragment. Detta baseras på en viss innehållsfragmentmodell som du väljer som det första steget i skapandet.
+Det första steget till att skapa innehåll är att skapa ett innehållsfragment. Detta görs med Skapa -> Innehållsfragment i den obligatoriska mappen under Resurser -> Filer. Guiden vägleder dig genom stegen.
+
+Ett innehållsfragment baseras på en viss innehållsfragmentmodell som du väljer som första steg i skapandet.
 
 ### Skapa och redigera strukturerat innehåll {#create-edit-structured-content}
 
@@ -254,7 +260,7 @@ När du har valt lämplig modell öppnas ett innehållsfragment för redigering 
 
 >[!NOTE]
 >
->Se Arbeta med innehållsfragment.
+>Se Ytterligare resurser - Arbeta med innehållsfragment.
 
 ## Komma igång med några exempel {#getting-started-examples}
 
