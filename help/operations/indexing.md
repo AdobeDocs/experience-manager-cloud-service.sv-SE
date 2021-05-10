@@ -3,9 +3,9 @@ title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
 translation-type: tm+mt
-source-git-commit: 28c3fb4c5c0da175ee84463d7c100bdb1b93bb30
+source-git-commit: 1139b9f7014e68ab3d6ea7d720242e95786cc9e6
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1761'
 ht-degree: 2%
 
 ---
@@ -57,6 +57,12 @@ Du måste förbereda ett nytt indexdefinitionspaket som innehåller den faktiska
 som sedan måste gå under `ui.apps/src/main/content/jcr_root`. Underrotmappar stöds inte för närvarande.
 
 Paketet från ovanstående exempel byggs som `com.adobe.granite:new-index-content:zip:1.0.0-SNAPSHOT`.
+
+>[!NOTE]
+>
+>Alla innehållspaket som innehåller indexdefinitioner bör ha följande egenskap angiven i innehållspaketets egenskapsfil, som finns på `/META-INF/vault/properties.xml`:
+>
+>`noIntermediateSaves=true`
 
 ### Distribuerar indexdefinitioner {#deploying-index-definitions}
 
