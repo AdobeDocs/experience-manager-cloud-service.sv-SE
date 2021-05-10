@@ -3,10 +3,10 @@ title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
 translation-type: tm+mt
-source-git-commit: d55eb86afd9973e428c8738db181f79dcd55accb
+source-git-commit: 42c6d904fb484435572544147936b50b9a277dcf
 workflow-type: tm+mt
-source-wordcount: '2675'
-ht-degree: 47%
+source-wordcount: '2731'
+ht-degree: 46%
 
 ---
 
@@ -53,6 +53,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Författarens *inmatningsfas* kommer att skalas ned för hela författardriftsättningen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör fasen *Inmatning*.
 
+* När du använder `Amazon S3` eller `Azure` som datalager i AEM, bör datalagret konfigureras så att de lagrade blobbarna inte kan tas bort (skräpsamling). Detta för att säkerställa indexdataintegriteten. Om den inte konfigureras på det här sättet kan det leda till misslyckade extraheringar på grund av att indexdata saknar integritet.
 
 ## Tillgänglighet {#availability}
 
