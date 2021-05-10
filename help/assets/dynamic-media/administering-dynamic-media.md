@@ -5,16 +5,16 @@ contentOwner: Rick Brough
 role: Administrator,Business Practitioner
 exl-id: 83b70b17-7ee3-41cb-be90-c92ca161660e
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '181'
 ht-degree: 3%
 
 ---
 
 # Konfigurera Dynamic Media {#setting-up-dynamic-media}
 
-[Med Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Media kan ni hantera mediefiler genom att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Med Dynamic ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) Media kan ni hantera mediefiler genom att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 <!-- OBSOLETE UNTIL THE INTEGRATING SCENE7 TOPIC GETS A MAJOR UPDATE
 
@@ -42,5 +42,5 @@ Se även följande avsnitt:
 >
 >**Om du uppgraderar:**
 >
->* När du har installerat och kört Experience Manager aktiveras Dynamic Media automatiskt för alla resurser som du överför (såvida det inte uttryckligen inaktiverats av systemadministratören). Om du är på en uppgraderad instans av Experience Manager och inte har använt Dynamic Media tidigare måste du troligen bearbeta om dina resurser för att aktivera dem för Dynamic Media. Se [Återbearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+>* När Adobe Experience Manager är igång aktiveras Dynamic Media automatiskt för alla resurser som du överför (såvida det inte uttryckligen inaktiverats av systemadministratören). Om du är på en uppgraderad instans av Experience Manager och inte har använt Dynamic Media tidigare måste du troligen bearbeta om dina resurser för att aktivera dem för Dynamic Media. Se [Återbearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
