@@ -6,9 +6,9 @@ feature: Resurshantering
 role: Business Practitioner
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
 workflow-type: tm+mt
-source-wordcount: '2949'
+source-wordcount: '2962'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ Du lägger till Dynamic Media-resurser direkt på sidan om du använder Experien
 
 Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panoramic Media, Smart Crop Video eller Video 360 Media på en sida är detsamma som att lägga till en komponent på en sida.
 
-**Lägga till en Dynamic Media-komponent på en sida**
+**Så här lägger du till en Dynamic Media-komponent på en sida:**
 
 1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
 1. Tryck på ikonen **[!UICONTROL Components]** i den vänstra rutan och filtrera sedan efter Dynamic Media.
@@ -130,7 +130,7 @@ Det går inte att tilldela olika visningsprogramförinställningar till varje Dy
 
 När du lägger till Dynamic Media-komponenten och **[!UICONTROL Dynamic Media Settings]** är tom eller du inte kan lägga till en resurs korrekt bör du kontrollera följande:
 
-* Bilden har en pyramidformad fil. Bilder som importeras innan Dynamic Media är aktiverat har ingen pyramiddiff-fil.
+* Bilden har en pyramidformad fil. Bilder som importeras innan du aktiverar Dynamic Media saknar en pyramidformad fil.
 
 #### När du arbetar med bilder {#when-working-with-images}
 
@@ -140,45 +140,45 @@ Du kan också konfigurera visningsförinställningen, bildförinställningen ell
 
 Du kan redigera följande Dynamic Media-inställningar genom att trycka på ikonen **[!UICONTROL Edit]** i komponenten och sedan **[!UICONTROL Dynamic Media Settings]**.
 
-![dm-settings-image-preset](assets/dm-settings-image-preset.png)
+![Inställningar för Dynamic Media-bildförinställningar](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
 >Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height]**.
 
-* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
+* **[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
    Det här alternativet är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är även förinställningar som bara är smarta och relevanta för visningsprogrammet visas.
 
-* **[!UICONTROL Viewer modifiers]**—Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogrammen. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1` som anger en annan bild för videominiatyrbilden och associerar en undertextningsfil med videon.
+* **[!UICONTROL Viewer modifiers]** - Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogrammen. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1` som anger en annan bild för videominiatyrbilden och associerar en undertextningsfil med videon.
 
-* **[!UICONTROL Image preset]**—Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns måste du göra den synlig. Se Hantera bildförinställningar. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
-
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
-
-* **[!UICONTROL Image Modifiers]**- Du kan använda bildeffekter genom att ange fler bildkommandon. Dessa kommandon beskrivs i Bildförinställningar och i Referens för bildserverkommando.
+* **[!UICONTROL Image preset]** - Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns måste du göra den synlig. Se Hantera bildförinställningar. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-* **[!UICONTROL Breakpoints]**- Om du använder resursen på en responsiv webbplats måste du lägga till bildbrytpunkterna. Bildbrytpunkter måste avgränsas med kommatecken (,). Det här alternativet fungerar när ingen höjd eller bredd har definierats i en bildförinställning.
+* **[!UICONTROL Image Modifiers]** - Du kan använda bildeffekter genom att ange fler bildkommandon. Dessa kommandon beskrivs i Bildförinställningar och i Referens för bildserverkommando.
+
+   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+
+* **[!UICONTROL Breakpoints]** - Om du använder den här resursen på en responsiv webbplats måste du lägga till bildbrytpunkter. Bildbrytpunkter måste avgränsas med kommatecken (,). Det här alternativet fungerar när ingen höjd eller bredd har definierats i en bildförinställning.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
    Du kan redigera följande avancerade inställningar genom att trycka på **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Title]**—Ändra bildens titel.
+* **[!UICONTROL Title]** - Ändra bildens titel.
 
-* **[!UICONTROL Alt Text]**—Lägg till en titel i bilden för användare som har bilder inaktiverade.
-
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
-
-* **[!UICONTROL URL, Open in]**—Du kan ange att en resurs ska öppna en länk. Ange URL:en och Öppna i anger om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
+* **[!UICONTROL Alt Text]** - Lägg till en titel i bilden för de användare som har inaktiverat grafik.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-* **[!UICONTROL Width]**—Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL URL, Open in]** - Du kan ange att en resurs ska öppna en länk. Ange URL:en och Öppna i anger om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
 
-* **[!UICONTROL Height]**—Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+
+* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+
+* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
 
 #### När du arbetar med video {#when-working-with-video}
@@ -193,9 +193,9 @@ Du kan redigera följande Dynamic Media-inställningar genom att klicka på **[!
 >
 >Som standard är videokomponenten i Dynamic Media adaptiv. Om du vill göra den till en fast storlek anger du den i komponenten med **[!UICONTROL Width]** och **[!UICONTROL Height]** på fliken **[!UICONTROL Advanced]**.
 
-* **[!UICONTROL Viewer preset]**- Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se Hantera förinställningar för visningsprogram.
+* **[!UICONTROL Viewer preset]** - Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se Hantera förinställningar för visningsprogram.
 
-* **[!UICONTROL Viewer modifiers]**—Visningsmodifierare har formen av  `name=value` par med  `&` avgränsare. De gör att du kan ändra visningsprogram enligt anvisningarna i referenshandboken för Adobe-visningsprogram. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1`
+* **[!UICONTROL Viewer modifiers]** - Visningsmodifierare har formen av  `name=value` par med  `&` avgränsare. De gör att du kan ändra visningsprogram enligt anvisningarna i referenshandboken för Adobe-visningsprogram. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1`
 
    Med visningsmodifierare kan du till exempel göra följande:
 
@@ -204,11 +204,11 @@ Du kan redigera följande Dynamic Media-inställningar genom att klicka på **[!
 
       Du kan redigera följande avancerade inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Title]**—Ändra videons titel.
+* **[!UICONTROL Title]** - Ändra videons titel.
 
-* **[!UICONTROL Width]**—Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
-* **[!UICONTROL Height]**—Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
 #### När du arbetar med smart beskärning {#when-working-with-smart-crop}
 
@@ -218,7 +218,7 @@ Se [Använda smart beskärning med Experience Manager-resurser Dynamic Media](ht
 
 Se även [Bildprofiler](/help/assets/dynamic-media/image-profiles.md).
 
-![dm-settings-smart-crop](assets/dm-settings-smart-crop.png)
+![Dynamic Media inställningar för smart beskärning](assets/dm-settings-smart-crop.png)
 
 Du kan redigera följande Dynamic Media-inställning genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
@@ -226,27 +226,27 @@ Du kan redigera följande Dynamic Media-inställning genom att klicka på **[!UI
 >
 >Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height]**.
 
-* **[!UICONTROL Image Modifiers]**- Du kan använda bildeffekter genom att ange fler bildkommandon. Dessa kommandon beskrivs i Bildförinställningar och i Referens för bildserverkommando.
+* **[!UICONTROL Image Modifiers]** - Du kan använda bildeffekter genom att ange fler bildkommandon. Dessa kommandon beskrivs i Bildförinställningar och i Referens för bildserverkommando.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
    Du kan redigera följande avancerade inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Enable Aspect Ration match]**- Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
+* **[!UICONTROL Enable Aspect Ration match]** - Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
 
-* **[!UICONTROL Title]**- Ändra titeln på bilden för smart beskärning.
+* **[!UICONTROL Title]** - Ändra titeln på bilden för smart beskärning.
 
-* **[!UICONTROL Alt Text]**—Lägg till en titel i den smarta beskärningsbilden för de användare som har inaktiverat grafik.
-
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
-
-* **[!UICONTROL URL, Open in]**—Du kan ange att en resurs ska öppna en länk. Ange URL:en och Öppna i anger om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
+* **[!UICONTROL Alt Text]** - Lägg till en titel i den smarta beskärningsbilden för de användare som har inaktiverat grafik.
 
    Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-* **[!UICONTROL Width]**—Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL URL, Open in]** - Du kan ange att en resurs ska öppna en länk. Ange URL:en och Öppna i anger om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
 
-* **[!UICONTROL Height]**—Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+
+* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+
+* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
 ### Komponent: Interaktiva media {#interactive-media-component}
 
@@ -271,21 +271,21 @@ Det går inte att tilldela olika visningsprogramförinställningar till varje in
 
 Du kan redigera följande **[!UICONTROL General]**-inställningar genom att trycka på **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
+* **[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
 
-* **[!UICONTROL Title]**—Ändra videons titel.
+* **[!UICONTROL Title]** - Ändra videons titel.
 
-* **[!UICONTROL Width]**—Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
-* **[!UICONTROL Height]**—Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
    Du kan redigera följande **[!UICONTROL Add To Cart]**-inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Show Product Asset]**—Som standard är det här värdet valt. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
+* **[!UICONTROL Show Product Asset]** - Som standard är det här värdet valt. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
 
-* **[!UICONTROL Show Product Price]**—Som standard är det här värdet valt. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
+* **[!UICONTROL Show Product Price]** - Som standard är det här värdet valt. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
 
-* **[!UICONTROL Show Product Form]**—Som standard är det här värdet inte markerat. Produktformuläret innehåller alla produktvarianter som storlek och färg. Avmarkera kryssrutan om du inte vill visa produktvarianterna.
+* **[!UICONTROL Show Product Form]** - Som standard är det här värdet inte markerat. Produktformuläret innehåller alla produktvarianter som storlek och färg. Avmarkera kryssrutan om du inte vill visa produktvarianterna.
 
 ### Komponent: Panoramabilder {#panoramic-media-component}
 
@@ -309,11 +309,11 @@ Det går inte att tilldela en annan visningsförinställning till varje **[!UICO
 >
 >Du kan dock använda samma visningsförinställning för alla panoramakomponenter som använder resurser av samma typ på sidan.
 
-![panoramabild-media-viewer-preset](assets/panoramic-media-viewer-preset.png)
+![Förinställning för visningsprogram för panoramabilder](assets/panoramic-media-viewer-preset.png)
 
 Du kan redigera följande inställning genom att trycka på **[!UICONTROL Configure]** i komponenten.
 
-* **[!UICONTROL Viewer Preset]**- Välj ett befintligt visningsprogram i listrutan med visningsförinställningar.
+* **[!UICONTROL Viewer Preset]** - Välj ett befintligt visningsprogram i listrutan med visningsförinställningar.
 
 Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Publicera förinställningar för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
@@ -329,7 +329,7 @@ Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som sta
 
 Du kan redigera följande inställning genom att trycka på **[!UICONTROL Configure]** i komponenten.
 
-* **[!UICONTROL Viewer Preset]**- Välj ett befintligt visningsprogram i listrutan med visningsförinställningar. Använd Video360VR för slutanvändare som använder virtuella verklighetsglasögon. Innehåller grundläggande videouppspelningskontroller och funktioner för sociala medier. Använd Video360_social som innehåller grundläggande videouppspelningskontroller. Videoåtergivning sker i stereoläge. Manuell vypunktskontroll är inaktiverad men gyroskopisk kontroll är aktiverad. Det finns inga funktioner för sociala medier.
+* **[!UICONTROL Viewer Preset]** - Välj ett befintligt visningsprogram i listrutan med visningsförinställningar. Använd Video360VR för slutanvändare som använder virtuella verklighetsglasögon. Innehåller grundläggande videouppspelningskontroller och funktioner för sociala medier. Använd Video360_social som innehåller grundläggande videouppspelningskontroller. Videoåtergivning sker i stereoläge. Manuell vypunktskontroll är inaktiverad men gyroskopisk kontroll är aktiverad. Det finns inga funktioner för sociala medier.
 
 Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Publicera förinställningar för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
