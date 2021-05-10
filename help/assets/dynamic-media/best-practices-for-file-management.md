@@ -6,9 +6,9 @@ feature: Resurshantering, bildprofiler, videoprofiler
 role: Administrator,Business Practitioner
 exl-id: 82ab5432-088c-4442-a9db-9f4e0184febf
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Ett viktigt koncept när det gäller användning av Dynamic Media bildprofiler eller videoprofiler är att de tilldelas mappar. Inom en profil finns inställningar för en bild eller video. De här inställningarna bearbetar innehållet i en mapp tillsammans med någon av dess undermappar. Därför påverkar hur du namnger filer och mappar, ordnar undermappar och hanterar filerna i dessa mappar hur dessa resurser bearbetas av profilen.
 
-Genom att använda konsekventa och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan du få ut det mesta av din digitala resurssamling och se till att rätt filer bearbetas med rätt profil.
+Genom att använda konsekventa och lämpliga namngivningsstrategier för filer och mappar, tillsammans med god metadatapraxis, får du ut det mesta av din digitala resurssamling och ser till att rätt filer bearbetas med rätt profil.
 
 Se [Om Dynamic Media bildprofil och videoprofiler](about-image-video-profiles.md).
 
