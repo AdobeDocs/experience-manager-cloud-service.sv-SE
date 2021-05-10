@@ -6,10 +6,10 @@ hidefromtoc: true
 index: false
 exl-id: 8d133b78-ca36-4c3b-815d-392d41841b5c
 translation-type: tm+mt
-source-git-commit: 0c47dec1e96fc3137d17fc3033f05bf1ae278141
+source-git-commit: 787af0d4994bf1871c48aadab74d85bd7c3c94fb
 workflow-type: tm+mt
-source-wordcount: '1657'
-ht-degree: 2%
+source-wordcount: '1668'
+ht-degree: 1%
 
 ---
 
@@ -51,6 +51,8 @@ Varför behövs en annan API?
 
 Med Assets HTTP API kan du **läsa** ditt innehåll, men du kan även **skapa**, **uppdatera** och **ta bort** innehåll - åtgärder som inte är möjliga med GraphQL API.
 
+Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager som Cloud Service-version.
+
 ## HTTP API för Assets {#assets-http-api}
 
 [Resursens HTTP API](/help/assets/mac-api-assets.md) omfattar:
@@ -62,28 +64,16 @@ Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen **
 
 Med Assets REST API kan utvecklare av Adobe Experience Manager som Cloud Service komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via **CRUD**-åtgärder (Create, Read, Update, Delete).
 
-Med API kan du använda Adobe Experience Manager som en Cloud Service som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
-
-Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
-
-AEM Core Components har ett mycket omfattande, flexibelt och anpassningsbart API som kan hantera nödvändiga läsåtgärder i detta syfte, och vars JSON-utdata kan anpassas, men de kräver AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Det är inte varje SPA utvecklingsorganisation som har direkt tillgång till sådan kunskap.
-
-Detta är när REST API:t för resurser kan användas. Med det kan utvecklare komma åt resurser (till exempel bilder och innehållsfragment) direkt, utan att först behöva bädda in dem på en sida, och leverera innehållet i serialiserat JSON-format.
+Med den här åtgärden kan du med API:t köra Adobe Experience Manager som en Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
 
 >[!NOTE]
 >
 >Det går inte att anpassa JSON-utdata från Assets REST API.
 
-Med Assets REST API kan utvecklare ändra innehåll genom att skapa nya, uppdatera eller ta bort befintliga resurser, innehållsfragment och mappar.
-
 Resursens REST API:
 
 * följer HATEOAS-principen
 * implementerar SIREN-formatet
-
-## Förutsättningar {#prerequisites}
-
-Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager som Cloud Service-version.
 
 ## Nyckelbegrepp {#key-concepts}
 
@@ -124,53 +114,6 @@ Alla förfrågningar är atomiska.
 
 Det innebär att efterföljande (`write`)-begäranden inte kan kombineras till en enda transaktion som kan lyckas eller misslyckas som en enskild enhet.
 
-### AEM (Resurser) REST API jämfört med AEM komponenter {#aem-assets-rest-api-versus-aem-components}
-
-<table>
- <thead>
-  <tr>
-   <td>Proportioner</td>
-   <td>Resurser REST API<br/> </td>
-   <td>AEM<br/> (komponenter med Sling Models)</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Användningsfall som stöds</td>
-   <td>Allmänt syfte.</td>
-   <td><p>Optimerad för konsumtion i ett Single Page-program (SPA) eller i något annat (innehållsförbrukande) sammanhang.</p> <p>Kan även innehålla layoutinformation.</p> </td>
-  </tr>
-  <tr>
-   <td>Åtgärder som stöds</td>
-   <td><p>Skapa, läsa, uppdatera, ta bort.</p> <p>Med ytterligare åtgärder beroende på enhetstyp.</p> </td>
-   <td>Skrivskyddad.</td>
-  </tr>
-  <tr>
-   <td>Åtkomst</td>
-   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkten, mappad till <code>/content/dam</code> (i databasen).</p> 
-   <p>En exempelsökväg skulle se ut så här: <code>/api/assets/wknd/en/adventures/cycling-tuscany.json</code></p>
-   </td>
-    <td><p>Måste refereras via en AEM på en AEM.</p> <p>Använder <code>.model</code>-väljaren för att skapa JSON-representationen.</p> <p>En exempelsökväg skulle se ut så här:<br/> <code>/content/wknd/language-masters/en/adventures/cycling-tuscany.model.json</code></p> 
-   </td>
-  </tr>
-  <tr>
-   <td>Dokumentskydd</td>
-   <td><p>Flera alternativ är möjliga.</p> <p>OAuth föreslås. kan konfigureras separat från standardinställningarna.</p> </td>
-   <td>Använder AEM standardinställningar.</td>
-  </tr>
-  <tr>
-   <td>Arkitektur</td>
-   <td><p>Skrivåtkomst avser vanligtvis en författarinstans.</p> <p>Läsningen kan även dirigeras till en publiceringsinstans.</p> </td>
-   <td>Eftersom det här arbetssättet är skrivskyddat används det vanligtvis för publiceringsinstanser.</td>
-  </tr>
-  <tr>
-   <td>Utdata</td>
-   <td>JSON-baserade SIREN-utdata: mycket, men kraftfullt. Tillåter navigering i innehållet.</td>
-   <td>JSON-baserade egna produkter. som kan konfigureras med Sling Models. Att navigera i innehållsstrukturen är svårt att implementera (men inte nödvändigtvis omöjligt).</td>
-  </tr>
- </tbody>
-</table>
-
 ### Dokumentskydd {#security}
 
 Om REST API:t för Resurser används i en miljö utan särskilda autentiseringskrav måste AEM CORS-filtret konfigureras korrekt.
@@ -182,9 +125,6 @@ Om REST API:t för Resurser används i en miljö utan särskilda autentiseringsk
 >* CORS/AEM
 >* Video - Utveckla för CORS med AEM
 
->
-
-
 
 I miljöer med specifika autentiseringskrav rekommenderas OAuth.
 
@@ -194,7 +134,7 @@ Innehållsfragment är en specifik typ av resurs, se Arbeta med innehållsfragme
 
 Mer information om funktioner som är tillgängliga via API finns i:
 
-* Resursens REST API
+* Resursens REST API (ytterligare resurser)
 * Enhetstyper, där funktioner som är specifika för varje typ som stöds (som är relevant för innehållsfragment) förklaras
 
 ### Sidindelning {#paging}
@@ -275,16 +215,74 @@ Associerat innehåll visas för närvarande inte.
 
 ## Använda Resurser REST API {#using-aem-assets-rest-api}
 
+Användningen kan variera beroende på om du använder en AEM författare eller publiceringsmiljö, tillsammans med ditt specifika användningsexempel.
+
+* Vi rekommenderar att skapandet binds till en författarinstans ([och att det för närvarande inte finns något sätt att replikera ett fragment för publicering med denna API](/help/assets/content-fragments/assets-api-content-fragments.md#limitations)).
+* Leverans är möjlig från båda, eftersom AEM endast skickar begärt innehåll i JSON-format.
+
+   * Lagring och leverans från en AEM författarinstans bör räcka för program som ligger bakom brandväggen och mediabibliotek.
+
+   * För direktwebbleverans rekommenderas en publiceringsinstans AEM.
+
+>[!CAUTION]
+>
+>Dispatcher-konfigurationen på AEM molninstanser kan blockera åtkomsten till `/api`.
+
+>[!NOTE]
+>
+>Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
+
+### Läs/Leverera {#read-delivery}
+
+Användning sker via:
+
+`GET /{cfParentPath}/{cfName}.json`
+
+Till exempel:
+
+`http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
+
+Svaret är serialiserat JSON med innehållet strukturerat som i innehållsfragmentet. Referenser levereras som referens-URL:er.
+
+Det finns två typer av läsåtgärder:
+
+* När du läser ett visst innehållsfragment efter sökväg, returneras JSON-representationen av innehållsfragmentet.
+* Läsa en mapp med innehållsfragment efter sökväg: returnerar JSON-representationerna för alla innehållsfragment i mappen.
+
+### Skapa {#create}
+
+Användning sker via:
+
+`POST /{cfParentPath}/{cfName}`
+
+Brödtexten måste innehålla en JSON-representation av det innehållsfragment som ska skapas, inklusive allt ursprungligt innehåll som ska anges för elementen i innehållsfragmentet. Det är obligatoriskt att ange egenskapen `cq:model` och den måste peka på en giltig innehållsfragmentmodell. Om du inte gör det uppstår ett fel. Du måste också lägga till en rubrik `Content-Type` som är inställd på `application/json`.
+
+### Uppdatera {#update}
+
+Användning sker via
+
+`PUT /{cfParentPath}/{cfName}`
+
+Brödtexten måste innehålla en JSON-representation av vad som ska uppdateras för det angivna innehållsfragmentet.
+
+Detta kan helt enkelt vara titeln eller beskrivningen av ett innehållsfragment, ett enskilt element eller alla elementvärden och/eller metadata.
+
+### Ta bort {#delete}
+
+Användning sker via:
+
+`DELETE /{cfParentPath}/{cfName}`
+
 Mer information om hur du använder AEM Assets REST API finns i:
 
-* Adobe Experience Manager Assets HTTP API
-* Stöd för Content Fragments i AEM Assets HTTP API
+* Adobe Experience Manager Assets HTTP API (ytterligare resurser)
+* Stöd för innehållsfragment i AEM Assets HTTP API (ytterligare resurser)
 
 ## What&#39;s Next {#whats-next}
 
 Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 
-* Förstå AEM Assets HTTP API.
+* Förstå grunderna i AEM Assets HTTP API.
 * Förstå hur innehållsfragment stöds i detta API.
 
 <!--
