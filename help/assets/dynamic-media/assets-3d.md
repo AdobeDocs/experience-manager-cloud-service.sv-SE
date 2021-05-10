@@ -9,9 +9,9 @@ feature: 3D-resurser
 role: Business Practitioner
 exl-id: 82084ba7-1302-4cbd-8626-d77b3aaa4ed1
 translation-type: tm+mt
-source-git-commit: 58d09d12ce2e8415eb50c288eeab3167a92fae57
+source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2177'
 ht-degree: 2%
 
 ---
@@ -250,8 +250,8 @@ Se även [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-p
 
 **Så här publicerar du statiska Dynamic Media 3D-resurser:**
 
-1. Öppna en 3D-resurs (GLB-, OBJ- eller STL-filformat) för att visa den på detaljsidan.
-1. Tryck på **[!UICONTROL Quick Publish]** i verktygsfältet.
+1. Öppna en 3D-resurs (filformatet GLB, OBJ eller STL).
+1. Tryck på **[!UICONTROL Quick Publish]** i verktygsfältet på sidan Detaljer.
 
    ![3d-asset-quick-publish](/help/assets/dynamic-media/assets/3d-asset-quick-publisha.png)
 
