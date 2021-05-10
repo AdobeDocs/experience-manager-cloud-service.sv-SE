@@ -5,9 +5,9 @@ feature: 360 VR-video
 role: Business Practitioner
 exl-id: ffd092d3-2188-47b0-a475-8bfa660c03c1
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managin
 
 ## 360 Video in action {#video-in-action}
 
-Tryck på [Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
+Tryck på [Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
 
 ![360-](assets/6_5_360videoiss_simplified.png)
 *videoexempelVideobildruta från Space Station 360*
