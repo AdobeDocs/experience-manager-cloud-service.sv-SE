@@ -4,14 +4,14 @@ description: I den här delen av AEM Headless Developer Journey kan du lära dig
 hide: true
 hidefromtoc: true
 index: false
+exl-id: d96f02b3-d650-4b9e-addf-409d31c80372
 translation-type: tm+mt
-source-git-commit: 9fb18dbe60121f46dba1e11d4133e5264a6d538d
+source-git-commit: 7df3620e6f58336de2ac29dd496a888b17606d7f
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1651'
 ht-degree: 0%
 
 ---
-
 
 # Lär dig mer om CMS Headless Development {#learn-about}
 
@@ -50,15 +50,15 @@ Komplexiteten för beroendena i högen blir snabbt tydlig eftersom du ser att an
 
 ## Gränser för leverans i fullhög {#limits}
 
-Det helstatiska arbetssättet skapar en silo där alla upplevelser finns i ett system. Ändringar eller tillägg i silon kräver ändringar i andra komponenter, vilket gör att det blir tidskrävande och kostsamt.
+Det helstatiska arbetssättet skapar en silo där alla upplevelser finns i ett system. Ändringar eller tillägg i en komponent i silon kräver ändringar i andra komponenter, vilket kan göra ändringar som är tidskrävande och kostsamma.
 
-Detta gäller särskilt presentationsskiktet, som i traditionella system ofta är nära knutet till CMS-systemet. Alla nya kanaler innebär vanligtvis en uppdatering av presentationslagret, vilket påverkar alla andra kanaler.
+Detta gäller särskilt presentationssystemet, som i traditionella uppsättningar ofta är nära knutet till CMS-systemet. Alla nya kanaler innebär vanligtvis en uppdatering av presentationssystemet, vilket kan påverka alla andra kanaler.
 
 ![Komplexiteten ökar när kanaler läggs till i en hög](assets/presentation-complexity.png)
 
-Begränsningarna i den här naturliga silon är tydliga eftersom du inser hur mycket arbete och tid som krävs för att koordinera ändringar i alla komponenter i högen.
+Begränsningarna i den här naturliga silon kan bli tydligare när du lägger mer kraft på att koordinera ändringar i alla komponenter i högen.
 
-Användarna förväntar sig engagemang oavsett plattform eller kontaktyta och behöver flexibilitet i hur ni levererar era upplevelser.  Den flerkanaliga metoden är standarden för digitala upplevelser och en helhetsstrategi kan ibland visa sig vara stelbent.
+Användarna förväntar sig engagemang oavsett plattform eller kontaktyta och behöver flexibilitet i hur ni levererar era upplevelser.  Detta flerkanalsarbetssätt är standarden för digitala upplevelser och en helhetsstrategi kan under vissa omständigheter visa sig vara stelbent.
 
 ## Huvudet i Headless {#the-head}
 
@@ -72,15 +72,15 @@ När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsät
 
 De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) osv., tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
 
-Om du utelämnar huvudet förenklas CMS avsevärt genom att avsevärt eliminera komplexiteten. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
+Om du utelämnar huvudet förenklas CMS-systemet genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 
 ## Kopplar från {#decoupling}
 
 Headless-leverans är möjlig genom att en uppsättning robusta och flexibla API:er (Application Programming Interface) visas som alla era upplevelser kan utnyttja. API fungerar som ett gemensamt språk mellan tjänsterna och binder ihop dem på innehållsnivå genom standardiserad innehållsleverans, men ger dem flexibilitet att implementera sina egna lösningar.
 
-Headless är ett exempel på hur du frigör innehåll från presentationen. Eller i mer generiska avseenden: koppla loss den främre änden från den bakre änden av servicestacken. I en headless-konfiguration är presentationsskiktet (huvudet) fristående från innehållshanteringen (svansen). De två interagerar bara via API-anrop.
+Headless är ett exempel på hur du frigör innehåll från presentationen. Eller i mer generiska avseenden: koppla loss den främre änden från den bakre änden av servicestacken. I en headlessmiljö är presentationssystemet (huvudet) fristående från innehållshanteringen (svansen). De två interagerar bara via API-anrop.
 
-Den här frikopplingen innebär att varje konsumtionstjänst (frontend) kan bygga sin upplevelse baserat på samma innehåll som levereras via API:erna, vilket säkerställer återanvändning och enhetlighet. Genom att använda tjänster kan de sedan implementera sina egna presentationslager, vilket gör att innehållshanteringsstacken (baksidan) enkelt kan skalas vågrätt.
+Den här frikopplingen innebär att varje konsumtionstjänst (frontend) kan bygga sin upplevelse baserat på samma innehåll som levereras via API:erna, vilket säkerställer återanvändning och enhetlighet. Genom att använda tjänster kan de sedan implementera sina egna presentationssystem, vilket gör att innehållshanteringsstacken (back end-komponenten) enkelt kan skalas vågrätt.
 
 ## Teknisk underbyggnad {#technology}
 
@@ -88,7 +88,7 @@ Med en headless-strategi kan ni bygga en tekniklösning som enkelt och snabbt ka
 
 Tidigare var API:er för CMS:er vanligtvis REST-baserade. REST (Representational State transfer) tillhandahåller resurser som text på ett statslöst sätt. Detta gör att resurserna kan läsas och ändras med en fördefinierad uppsättning åtgärder. REST möjliggör stor interoperabilitet mellan tjänster på webben genom att säkerställa en tillståndslös representation av innehållet.
 
-Och det finns fortfarande ett behov av stabila REST API:er. REST-begäranden kan dock vara stora och detaljerade. Om ni har flera konsumenter som gör REST-anrop för alla era kanaler kan detta påverka deras mångsidighet och prestanda.
+Det finns fortfarande ett behov av stabila REST API:er. REST-begäranden kan dock vara stora och detaljerade. Om ni har flera konsumenter som gör REST-anrop för alla era kanaler kan detta påverka deras mångsidighet och prestanda.
 
 Headless-leverans använder ofta API:er för GraphQL. GraphQL tillåter en liknande tillståndslös överföring, men tillåter mer riktade frågor, minskar det totala antalet frågor som krävs och förbättrar prestanda. Det är vanligt att man ser lösningar som innehåller en blandning av REST och GraphQL, där man i huvudsak väljer det bästa verktyget för det aktuella jobbet.
 
@@ -116,9 +116,9 @@ Det är omöjligt att förutsäga framtiden, men utan headless ger er möjlighet
 
 När du fortsätter med den här utvecklarresan får du lära dig hur AEM stöder headless-leverans tillsammans med alla sina leveransfunktioner.
 
-Som branschledare inom digital upplevelsehantering inser Adobe att den idealiska lösningen på de utmaningar som upplevelseskapare står inför sällan är ett binärt val. Det är därför AEM inte bara stöder båda modellerna, utan också ger en unik hybridkombination av dessa två som hjälper er att hjälpa era kunder att få ut så mycket som möjligt av ert innehåll. Var de än är.
+Som branschledare inom digital upplevelsehantering inser Adobe att den idealiska lösningen på verkliga utmaningar som upplevelseskapare står inför sällan är ett binärt val. Det är därför AEM inte bara stöder båda modellerna, utan också ger en unik kombination av de båda, vilket kombinerar fördelarna med headless och full stack, så att ni kan hjälpa era kunder med ert innehåll, oavsett var de befinner sig.
 
-Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har lagt grunden till denna kunskap kan ni ytterligare utforska hur ni kan utnyttja båda modellernas möjligheter.
+Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har den här grundläggande kunskapen kan ni ytterligare utforska hur ni kan utnyttja båda modellernas möjligheter.
 
 ## What&#39;s Next {#what-is-next}
 
