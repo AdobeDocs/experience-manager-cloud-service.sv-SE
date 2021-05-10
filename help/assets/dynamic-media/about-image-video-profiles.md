@@ -1,16 +1,16 @@
 ---
 title: Om Dynamic Media bildprofiler och videoprofiler
 description: En bildprofil eller en videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för Dynamic Media videoresurser som du överför. Eller vilken bildprofil som ska användas för Dynamic Media bildresurser för att de ska beskäras ordentligt.
-feature: Asset Management,Image Profiles,Video Profiles
+feature: Resurshantering, bildprofiler, videoprofiler
 role: Administrator,Business Practitioner
+exl-id: 8c8f0a57-13f5-4903-8d76-bfb6ee83323c
 translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1229'
 ht-degree: 2%
 
 ---
-
 
 # Om Dynamic Media bildprofiler och videoprofiler{#about-dm-image-video-profiles}
 
@@ -43,7 +43,7 @@ Anta att du har skapat en Dynamic Media-bildprofil och tilldelat den till en map
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bildprofil eller videoprofil, eller redan har använt en bildprofil eller videoprofil, kan du köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
-Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta Assets_-arbetsflöde i en mapp, resurser grupperas i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen AEM. Om gruppstorleken är stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundningar till Dynamic Media-servern.
+Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta Assets_-arbetsflöde i en mapp, resurser grupperas i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen på Adobe Experience Manager. Om gruppstorleken är stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundningar till Dynamic Media-servern.
 
 Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-load).
 
@@ -59,8 +59,8 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 -->
 
-**Så här bearbetar du om Dynamic Media-resurser i en mapp**:
-1. I Adobe Experience Manager navigerar du från Assets-sidan till en mapp med Dynamic Media-resurser som har en bildprofil eller en videoprofil tilldelad och för vilken du vill använda **Scene7: Arbetsflöde för att bearbeta om resurs**,
+**Så här bearbetar du om Dynamic Media-resurser i en mapp:**
+1. I Experience Manager, från sidan Resurser, navigerar du till en resursmapp som har en bildprofil eller en videoprofil tilldelad och för vilken du vill använda **Scene7: Återbearbeta arbetsflödet för resurs**.
 
    Mappar som har tilldelats en bildprofil eller videoprofil visas med profilens namn direkt under mappnamnet i kortvyn.
 
@@ -87,7 +87,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning {#adjusting-load}
 
-(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen ligger alltså kvar på Experience Manager resurser en längre tid. Om den genomsnittliga filstorleken är liten-1 MB eller mindre-Adobe rekommenderar du att du ökar värdet till flera hundra, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är stor-hundratals megabyte-Adobe rekommenderar du att du minskar gruppstorleken upp till 10.
+(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen ligger alltså kvar på Experience Manager resurser en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, bör du öka värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
 
 **Om du vill justera batchstorleken för arbetsflödet** för ombearbetning:
 
