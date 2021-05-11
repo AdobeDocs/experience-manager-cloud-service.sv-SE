@@ -1,13 +1,13 @@
 ---
 title: Dynamic Media Newsletter
-description: 'Dynamic Media Newsletter från Experience League är ett månatligt nyhetsbrev. Den är utformad för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du kan börja få värde direkt. Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din kunskap. Det finns till exempel instruktionsvideor och lösningsöversikter. Läs om några av de viktigaste funktionerna och funktionerna, som förinställningar för bilder, visningsinställningar, videoprofiler med mera. '
+description: 'Dynamic Media Newsletter från Experience League är ett månatligt nyhetsbrev. Det är utformat för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du direkt kan få mer för pengarna. Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din kunskap. Det finns till exempel instruktionsvideor och lösningsöversikter. Läs om några av de viktigaste funktionerna och funktionerna, som förinställningar för bilder, visningsinställningar, videoprofiler med mera. '
 feature: Resurshantering
 role: Business Practitioner
 exl-id: 4c93b448-ff8b-4c63-9c9b-dca53cd1af20
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 1ad89be4ebddec0705c6f557fed3d697b9f1f3a7
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Se hur Dynamic Media team kan hjälpa er att förbereda er för en dag med större trafik än normalt.
    * En andra chans att fånga två av de senaste webbinarierna i SKill Builder.
    * Titta på on-demand-webbinariet om hur du skyddar dina digitala resurser från piratkopiering.
-   * Möt Bridget Roman, Senior Product Marketing Manager for Adobe Experience Manager Assets.
+   * Möt Bridget Roman, Senior Product Marketing Manager för Experience Manager Assets.
    * Kom igång med Dynamic Media och Dynamic Media Classic i Experience League.
 
 * **[Augusti 2019, utgåva 08](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_08_2019_Aug.html)**
@@ -112,7 +112,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    I detta nummer:
 
    * Upptäck de användbara funktionerna när du uppgraderar till Dynamic Media.
-   * Läs mer om en webbinarier som utformats för att hjälpa dig komma igång med Adobe Experience Manager Assets och Dynamic Media.
+   * Läs mer om en webbinarieserie som hjälper dig att komma igång med Experience Manager Assets och Dynamic Media.
    * Börja din resa och få värde från Dynamic Media på Experience League.
    * Få en smygtitt på den kraftfulla integrering som kommer i september och som låter er analysera hur besökarna interagerar med ert multimediematerial.
    * Träffa PieterJan Pieper, Dynamic Media tekniska support wiz.
@@ -124,7 +124,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Resurser och information som gör att ni kan hantera era värdefulla resurser på ett korrekt sätt och leverera upplevelser som får besökarna att komma tillbaka.
    * Läs om ett kommande webbinarium om hur du skyddar dina digitala resurser.
    * Nästa steg på informationsfyllda Adobe Insider Tour.
-   * Spännande funktioner är tillgängliga när du har Dynamic Media i Adobe Experience Manager Assets (AEM Assets).
+   * Spännande funktioner är tillgängliga när du har Dynamic Media i Experience Manager Assets (AEM Assets).
    * Lägga till 360-gradersvideor och anpassade videominiatyrer på webbplatsen.
    * Möt Andrew Hathaway, Principal Solutions Consultant för Dynamic Media i AEM Assets.
 
@@ -151,7 +151,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
 
 * **[April 2019, utgåva 04](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2019_April.html)**
 
-   Välkommen till utgåvan av Dynamic Media Newsletter. Adobe nya månatliga nyhetsbrev innehåller nyheter, evenemang och resurser. Innehållet är avsett för användare av Dynamic Media i Adobe Experience Manager Assets och Adobe Dynamic Media Classic.
+   Välkommen till utgåvan av Dynamic Media Newsletter. Adobe nya månatliga nyhetsbrev innehåller nyheter, evenemang och resurser. Innehållet är avsett för användare av Dynamic Media i Experience Manager Assets och Adobe Dynamic Media Classic.
 
    I detta nummer:
 
