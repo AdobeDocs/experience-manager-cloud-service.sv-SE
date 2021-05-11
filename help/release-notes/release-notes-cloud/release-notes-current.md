@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 translation-type: tm+mt
-source-git-commit: 8ca3fe045aba4ec9e546fee0700d1bec08e337fb
+source-git-commit: 92de2936fd6eb66198f0a096dd2e0020f14fccb8
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1906'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,8 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 * När du bläddrar bland resurser i kolumnvyn visas en visuell indikator med statusen Godkänd eller Avvisad för varje resurs.
 
 * När du bläddrar bland resurser i kolumnvyn visas en visuell indikator för förfallna resurser.
+
+* En datatyp för textområde är tillgänglig i metadataredigeraren för [!DNL Assets]. Du kan använda det här alternativet om du vill att användarna ska kunna ange metadata i ett frihandstextfält.
 
 ### Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}
 
