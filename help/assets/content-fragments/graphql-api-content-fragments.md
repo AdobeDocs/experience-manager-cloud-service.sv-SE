@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Innehållsfragment,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 translation-type: tm+mt
-source-git-commit: dab4c9393c26f5c3473e96fa96bf7ec51e81c6c5
+source-git-commit: 0c7b66e636e36a8036a590e949aea42e33a4e289
 workflow-type: tm+mt
-source-wordcount: '3901'
+source-wordcount: '3935'
 ht-degree: 0%
 
 ---
@@ -121,20 +121,20 @@ Det finns två typer av slutpunkter i AEM:
 
 * Global
    * Tillgängligt för alla webbplatser.
-   * Den här slutpunkten kan använda alla modeller för innehållsfragment från alla innehavare.
-   * Om det finns några Content Fragment-modeller som ska delas av klientorganisationer bör dessa skapas under den globala klientorganisationen.
-* Klientorganisation:
-   * Motsvarar en klientkonfiguration, enligt definitionen i [Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser).
+   * Den här slutpunkten kan använda alla modeller för innehållsfragment från alla platskonfigurationer (definieras i [Konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)).
+   * Om det finns några modeller för innehållsfragment som ska delas mellan platskonfigurationer, ska dessa skapas under de globala platskonfigurationerna.
+* Platskonfigurationer:
+   * Motsvarar en platskonfiguration, enligt definitionen i [Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser).
    * Specifikt för en angiven plats/ett angivet projekt.
-   * En klientspecifik slutpunkt använder Content Fragment-modellerna från den specifika innehavaren tillsammans med modellerna från den globala klienten.
+   * En platskonfigurationsspecifik slutpunkt använder innehållsfragmentmodellerna från den specifika platskonfigurationen tillsammans med de från den globala platskonfigurationen.
 
 >[!CAUTION]
 >
->Med Content Fragment Editor kan ett innehållsfragment för en klientorganisation referera till ett innehållsfragment för en annan klientorganisation (via policyer).
+>Innehållsfragmentsredigeraren kan tillåta att ett innehållsfragment av en platskonfiguration refererar till ett innehållsfragment av en annan platskonfiguration (via principer).
 >
->I så fall går det inte att hämta allt innehåll med en klientspecifik slutpunkt.
+>I så fall går det inte att hämta allt innehåll med en platskonfigurationsspecifik slutpunkt.
 >
->Innehållsförfattaren bör kontrollera detta scenario; Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under den globala klienten.
+>Innehållsförfattaren bör kontrollera detta scenario; Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under konfigurationen för globala platser.
 
 Databassökvägen för GraphQL för AEM globala slutpunkten är:
 
@@ -196,6 +196,10 @@ Markera den nya slutpunkten och **Publicera** för att göra den helt tillgängl
 ## GraphiQL-gränssnitt {#graphiql-interface}
 
 En implementering av standardgränssnittet [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) finns tillgänglig för användning med AEM GraphQL. Detta kan vara [installerat med AEM](#installing-graphiql-interface).
+
+>[!NOTE]
+>
+>GraphiQL är bundet till den globala slutpunkten (och fungerar inte med andra slutpunkter för specifika platskonfigurationer).
 
 Med det här gränssnittet kan du direkt mata in och testa frågor.
 
@@ -587,21 +591,21 @@ När en fråga har förberetts med en begäran om POST kan den köras med en GET
 
 Detta är nödvändigt eftersom POST-frågor vanligtvis inte cachelagras, och om GET med frågan används som parameter finns det en stor risk för att parametern blir för stor för HTTP-tjänster och mellanhänder.
 
-Beständiga frågor måste alltid använda den slutpunkt som är relaterad till [lämplig (tenant) konfiguration](#graphql-aem-endpoint); så att de kan använda antingen eller båda:
+Beständiga frågor måste alltid använda den slutpunkt som är relaterad till [rätt platskonfiguration](#graphql-aem-endpoint); så att de kan använda antingen eller båda:
 
 * Den globala konfigurationen och slutpunkten
 Frågan har åtkomst till alla modeller för innehållsfragment.
-* Specifika klientkonfigurationer och slutpunkter
-Om du vill skapa en beständig fråga för en viss klientkonfiguration måste du ha en motsvarande klientspecifik slutpunkt (för att ge åtkomst till relaterade modeller för innehållsfragment).
-Om du till exempel vill skapa en beständig fråga specifikt för WKND-klienten, måste en motsvarande WKND-specifik klientkonfiguration och en WKND-specifik slutpunkt skapas i förväg.
+* Specifika platskonfigurationer och slutpunkter
+För att skapa en beständig fråga för en specifik platskonfiguration krävs en motsvarande platskonfigurationsspecifik slutpunkt (för att ge åtkomst till relaterade modeller för innehållsfragment).
+Om du till exempel vill skapa en beständig fråga specifikt för WKND-platskonfigurationen, måste en motsvarande WKND-specifik platskonfiguration och en WKND-specifik slutpunkt skapas i förväg.
 
 >[!NOTE]
 >
 >Mer information finns i [Aktivera funktionen för innehållsfragment i konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser).
 >
->**GraphQL Persistence Queries** måste aktiveras för rätt klientkonfiguration.
+>**GraphQL Persistence Queries** måste aktiveras för rätt platskonfiguration.
 
-Om det till exempel finns en viss fråga med namnet `my-query` som använder modellen `my-model` från klientkonfigurationen `my-conf`:
+Om det till exempel finns en viss fråga med namnet `my-query`, som använder modellen `my-model` från platskonfigurationen `my-conf`:
 
 * Du kan skapa en fråga med den `my-conf` specifika slutpunkten och sedan sparas frågan så här:
    `/conf/my-conf/settings/graphql/persistentQueries/my-query`
