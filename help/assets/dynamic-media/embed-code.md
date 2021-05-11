@@ -5,9 +5,9 @@ feature: Resurshantering
 role: Business Practitioner
 exl-id: 76335781-e39f-4aae-967f-5af8634d8f61
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 1ad89be4ebddec0705c6f557fed3d697b9f1f3a7
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '368'
 ht-degree: 21%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
-Du bäddar bara in URL:er om du är _inte_ och använder AEM som WCM. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan](adding-dynamic-media-assets-to-pages.md).
+Du bäddar bara in URL:er om du är _inte_ och använder Adobe Experience Manager som WCM. Om du använder Experience Manager som WCM-fil [lägger du till resurserna direkt på sidan](adding-dynamic-media-assets-to-pages.md).
 
 Se [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
@@ -32,7 +32,7 @@ Se [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 >
 >Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-**Bädda in Dynamic Media Video eller Image Viewer på en webbsida**
+**Så här bäddar du in Dynamic Media Video eller Image Viewer på en webbsida:**
 
 1. Navigera till den *publicerade* video- eller bildresurs vars inbäddningskod du vill kopiera.
 
