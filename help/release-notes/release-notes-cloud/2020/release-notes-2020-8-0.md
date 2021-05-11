@@ -1,14 +1,14 @@
 ---
 title: Versionsinformation för 2020.8.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.8.0.'
+exl-id: 83413130-ae90-4419-bcf7-42fdc740452b
 translation-type: tm+mt
-source-git-commit: 13774cc8684166c98f85bf4096d2c7de8d257746
+source-git-commit: 33e92b9cd19dd49dcdb6a8c8f30feccb755f615f
 workflow-type: tm+mt
 source-wordcount: '1044'
 ht-degree: 1%
 
 ---
-
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service 2020.8.0 {#release-notes}
 
@@ -28,9 +28,9 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-* Videoomkodning stöds nu med tillgångsmikrotjänster. Med ett nytt avsnitt i [!UICONTROL Processing Profiles]-konfigurationen kan du ange videobithastighet och -mått. Utdataformatet är MP4 med H.264-kodeken. Mer information finns i [hantera videomaterial](/help/assets/manage-video-assets.md#transcode-video). Använd tillägget [!DNL Dynamic Media] om du vill ha fler omkodningsalternativ och för videoleverans.
+* Videoomkodning stöds nu med tillgångsmikrotjänster. Med ett nytt avsnitt i [!UICONTROL Processing Profiles]-konfigurationen kan du ange videobithastighet och -mått. Utdataformatet är MP4 med H.264-kodeken. Mer information finns i [hantera videomaterial](/help/assets/manage-video-assets.md#transcode-video). Använd tillägget [!DNL Dynamic Media] för fler omkodningsalternativ och för videoleverans.
 
-* I nya [!DNL Experience Manager Assets]-distributioner är funktionen för smart taggning nu konfigurerad som standard. Du behöver inte integrera manuellt med [!DNL Adobe Developer Console]. I befintliga distributioner konfigurerar administratörer [smart taggintegrering](/help/assets/smart-tags-configuration.md#aio-integration) som tidigare.
+* I nya [!DNL Experience Manager Assets]-distributioner är funktionen för smart taggning nu konfigurerad som standard. Du behöver inte integrera manuellt med [!DNL Adobe Developer Console]. I befintliga distributioner konfigurerar administratörer smart taggintegrering som tidigare.
 
 * En ny [upplevelse vid hämtning av resurser](/help/assets/download-assets-from-aem.md) tillåter,
 
