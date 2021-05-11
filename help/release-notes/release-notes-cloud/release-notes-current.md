@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 translation-type: tm+mt
-source-git-commit: 92de2936fd6eb66198f0a096dd2e0020f14fccb8
+source-git-commit: 7f4b26fc7aca570fb1b1922a51ed77879c3b89b9
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '2002'
 ht-degree: 0%
 
 ---
@@ -223,6 +223,22 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.4.0 är 8 april 202
 * Problem för `CloudServiceIncompatibleWorkflowProcess` hade fel allvarlighetsgrad i den hämtningsbara CSV-filen för utgåvan.
 
 * `Runmode`-kontrollen genererade falskt positiva värden på noder som inte finns i mappen.
+
+## Content Transfer Tool {#content-transfer-tool}
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v1.4.0 är 11 maj 2021.
+
+### Nyheter {#what-is-new-ctt-may}
+
+* Den här versionen av verktyget Innehållsöverföring skapar textåtergivningar för resurser som migreras till Cloud Service. Textåtergivningar krävs för att ge stöd för fullständig textsökning i kapslade resurser.
+* Det maximala antalet migreringsverktyg för innehållsöverföring som en användare kan skapa har ökats från 4 till 10.
+
+### Felkorrigeringar {#bug-fixes-ctt-may}
+
+* Flera felkorrigeringar som rör funktionen för automatisk uppdatering i gränssnittet för verktyget Innehållsöverföring.
+* Innehållsöverföringsverktyget med `wipe=true` resulterade i ett felaktigt räknarindex på målet. Den här har åtgärdats.
 
 ## Best Practices Analyzer {#best-practices-analyzer}
 
