@@ -1,18 +1,18 @@
 ---
 title: Använda snabbvyer för att skapa anpassade popup-fönster
-description: '"Lär dig mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren."'
+description: '"Lär dig mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstret för Windows®."'
 feature: interaktiva bilder, interaktiva videor, Carousel Banners
 role: Administrator,Business Practitioner
 exl-id: c2bc6ec8-d46e-4681-ac3e-3337b9e6ae5c
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 78d85d31e03d8190c086a870f2fc2ff1cb00a320
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
 
 ---
 
-# Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
+# Använda snabbvyer för att skapa anpassade popup-fönster® {#using-quickviews-to-create-custom-pop-ups}
 
 Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram du använder kan kunderna trycka på en hotspot, en miniatyrbild eller ett bildschema för att se information eller relaterat innehåll.
 
@@ -24,7 +24,7 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
 
 Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma i alla tre visningsprogram som stöds.
 
-**Använda snabbvyer för att skapa anpassade popup-fönster**
+**Så här använder du snabbvyer för att skapa anpassade popup-fönster®:**
 
 1. Skapa en snabbvy för en överförd resurs.
 
@@ -102,8 +102,8 @@ Anta att du använde följande exempelkod för inbäddning på webbsidan för en
 
    Läs mer om metoden `setHandlers()` på följande sätt:
 
-   * Interaktivt bildvisningsprogram: [söthandlare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
-   * Interaktivt visningsprogram för video: [söthandlare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
+   * Interaktivt bildvisningsprogram - [standardhanterare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
+   * Interaktiv videovisningsprogram - [söderare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
 1. Konfigurera nu hanteraren `quickViewActivate`.
 
