@@ -4,16 +4,16 @@ description: Lär dig hur du använder Dynamic Media för att leverera mediefile
 role: Administrator,Business Practitioner
 exl-id: 3ec3cb85-88ce-4277-a45c-30e52c75ed42
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 1ad89be4ebddec0705c6f557fed3d697b9f1f3a7
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '398'
 ht-degree: 7%
 
 ---
 
 # Arbeta med Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 Dynamic Media visar interaktivt material, som zoomning, 360-graders rotation och video. Dynamic Media införlivar smidigt arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
@@ -38,7 +38,7 @@ Dynamic Media har följande funktioner:
 * [Video](video.md)
 * [Leverera Dynamic Media Assets](delivering-dynamic-media-assets.md)
 * [Hantera resurser](managing-assets.md)
-* [Använda snabbvyer för att skapa anpassade popup-fönster](custom-pop-ups.md)
+* [Använda snabbvyer för att skapa anpassade popup-fönster®](custom-pop-ups.md)
 
 Se även [Konfigurera Dynamic Media](administering-dynamic-media.md).
 
@@ -81,7 +81,7 @@ Dynamic Media-aktiverade resurser innehåller `pyramid.tiffs`.
 
 ### Resursvyer ändras {#asset-views-change}
 
-När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på knapparna `+` och `-`. Du kan också klicka/trycka för att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media-aktiverad ser ut så här:
+När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på knapparna `+` och `-`. Du kan också klicka/trycka för att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media-aktiverade ser ut så här:
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
