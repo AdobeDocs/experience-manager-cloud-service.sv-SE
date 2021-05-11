@@ -5,9 +5,9 @@ feature: Karusellbanner
 role: Business Practitioner
 exl-id: 34541302-6610-4f5e-af93-c95328dda910
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 78d85d31e03d8190c086a870f2fc2ff1cb00a320
 workflow-type: tm+mt
-source-wordcount: '4478'
+source-wordcount: '4469'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ På din webbplats kan en karusellbanderoll se ut så här:
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-Här kan du navigera bland bilderna genom att klicka på siffrorna. Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder som du lägger till i karusellbanderollen har stöd för både hotspot-områden och bildscheman. Användarna kan antingen trycka eller gå till en hyperlänk eller öppna ett snabbvyfönster.
+Här kan du navigera bland bilderna genom att klicka på siffrorna. Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder i en karusellbanderoll har stöd för både aktiveringspunkter och bildscheman. Användarna kan antingen trycka eller gå till en hyperlänk eller öppna ett snabbvyfönster.
 
 I det här exemplet har användaren tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
 
@@ -34,7 +34,7 @@ I det här exemplet har användaren tryckt på eller klickat på ett bildschema 
 
 ## Se hur karusellbanderoller skapas {#watch-how-carousel-banners-are-created}
 
-Titta på en genomgång på 10 minuter och 33 sekunder om [hur karusellbanderoller skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner). Du får också lära dig hur du förhandsgranskar, redigerar och levererar karusellbanderoller.
+Titta på en genomgång om [hur karusellbanners skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner) (längd: 10 minuter och 33 sekunder). Du får också lära dig hur du förhandsgranskar, redigerar och levererar karusellbanderoller.
 
 >[!NOTE]
 >
@@ -126,8 +126,8 @@ Då besöker man olika delar av den befintliga webbplatsen där snabbvyfunktione
 
 Normalt behöver du inte använda några specialverktyg för felsökning. Moderna webbläsare har webbinspektörer som klarar ett bra jobb. Nedan följer några exempel på webbläsare som innehåller webbinspektörer:
 
-* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 (Windows) eller Command-Option-I (Mac) för att öppna panelen för utvecklingsverktyget. Tryck på fliken Nätverk.
-* I Firefox kan du antingen aktivera plugin-programmet för Firebug genom att trycka på F12 (Windows) eller Kommando-Alternativ-I (Mac). Använd fliken Nätverk eller det inbyggda verktyget Granska och fliken Nätverk.
+* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 (Windows®) eller Command-Option-I (Mac) för att öppna panelen för utvecklingsverktyget. Tryck på fliken Nätverk.
+* I Firefox kan du antingen aktivera plugin-programmet för Firebug genom att trycka på F12 (Windows®) eller Kommando-Alternativ-I (Mac). Använd fliken Nätverk eller det inbyggda verktyget Granska och fliken Nätverk.
 
 När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på sidan.
 
@@ -191,7 +191,7 @@ Information om hur du överför bildbanderoller finns i [Överföra resurser](/h
 >
 >Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]**-gruppen för att kunna skapa eller redigera karusellbanderoller. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]**-gruppen.
 
-**Skapa en Carousel-uppsättning**
+**Så här skapar du en Carousel-uppsättning:**
 
 1. I Resurser navigerar du till den mapp där du vill skapa Carousel-uppsättningen och trycker på **[!UICONTROL Create > Carousel Set]**.
 1. På Carousel Banner Editor-sidan trycker du på **[!UICONTROL Tap to open Asset Selector]** för att välja bilden för din första bild.
@@ -217,19 +217,20 @@ Information om hur du överför bildbanderoller finns i [Överföra resurser](/h
    Om du vill ta bort en bildruta trycker eller klickar du på bildrutan och trycker eller klickar på **[!UICONTROL Delete Slide]** i verktygsfältet. Om du vill flytta en bildruta trycker du på ikonen för att ändra ordning och håller ned och flyttar till önskad plats.
 
 1. När du har lagt till bilderna i bildrutor kan du lägga till en aktiveringspunkt, ett bildschema eller båda delarna. Se [lägga till aktiveringspunkter eller bildscheman](#adding-hotspots-or-image-maps-to-an-image-banner).
-1. Du kan ändra den visuella designen och beteendet för karuselluppsättningar. Tryck eller klicka på flikarna Beteende och Utseende och justera hur karusellbanderollen ser ut eller hur specifika komponenter fungerar. Mer information om hur du använder visningsprogramredigeraren finns i [hantera visningsförinställningar](/help/assets/dynamic-media/viewer-presets.md).
+1. Du kan ändra den visuella designen och beteendet för karuselluppsättningar. Tryck eller klicka på flikarna **[!UICONTROL Behavior]** och **[!UICONTROL Appearance]** och justera hur karusellbanderollen visas eller hur specifika komponenter fungerar. Mer information om hur du använder visningsprogramredigeraren finns i [hantera visningsförinställningar](/help/assets/dynamic-media/viewer-presets.md).
 
    >[!NOTE]
    >
    >För Carousel-banners kan du justera följande:
-   >    * Längd som en bild visas. Som standard visas varje bild i 9 sekunder.
-   >    * Animering. Som standard tonas varje bildruteövergång ut. Du kan ändra det till en bildövergång.
-   >    * Knapparnas format. Användarna kan rotera genom banners genom att trycka på varje punkt eller nummer. Du kan ändra var de angivna indikatorknapparna visas (och om de är numeriska eller prickade) och hur stora de är.
-   >    * Ändra markeringsformatet för ett bildschema eller ikonen som används för aktiveringspunkter.
-   >    * Innan du redigerar en visningsförinställning väljer du det format som du vill basera förinställningen på. Om du inte väljer ett format förlorar du alla ändringar när du börjar redigera visningsförinställningen om du ändrar till en annan förinställning.
+   >
+   >* Längd som en bild visas. Som standard visas varje bild i 9 sekunder.
+   >* Animering. Som standard tonas varje bildruteövergång ut. Du kan ändra det till en bildövergång.
+   >* Knapparnas format. Användarna kan rotera genom banners genom att trycka på varje punkt eller nummer. Du kan ändra var de angivna indikatorknapparna visas (och om de är numeriska eller prickade) och hur stora de är.
+   >* Ändra markeringsformatet för ett bildschema eller ikonen som används för aktiveringspunkter.
+   >* Innan du redigerar en visningsförinställning väljer du det format som du vill basera förinställningen på. Om du inte väljer ett format förlorar du alla ändringar när du börjar redigera visningsförinställningen om du ändrar till en annan förinställning.
 
 
-   Du kan också förhandsvisa hur karusellbanderollen ser ut. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
+   Du kan också förhandsgranska karusellbanderollens utseende. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
 
 1. Tryck på **[!UICONTROL Save]** när du är klar.
 
@@ -263,7 +264,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 
 <!-- See also [Adding Image Maps](/help/assets/image-maps.md). -->
 
-**Lägga till aktiveringspunkter eller bildscheman i en bildbanderoll**
+**Så här lägger du till aktiveringspunkter eller bildscheman i en bildbanderoll:**
 
 1. Navigera från Assets till karuselluppsättningen som du vill göra interaktiv.
 1. Markera karuselluppsättningen och tryck på **[!UICONTROL Edit]**. Carousel Viewer Editor öppnas.
@@ -316,7 +317,7 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-frag
          Om du vill kringgå den här punkten kan du använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
-   Du kan också förhandsvisa hur karusellbanderollen ser ut. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
+   Du kan också förhandsgranska karusellbanderollens utseende. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
 
 1. Tryck på **[!UICONTROL Save]**.
 1. Publicera karuselluppsättningen. Publicering skapar den inbäddningskod eller URL som du kan använda på din webbsida. Om du är kund på Experience Manager Sites lägger du till karuselluppsättningen direkt på din webbsida.
@@ -339,7 +340,7 @@ Du kan utföra olika redigeringsåtgärder på Carousel Sets, till exempel:
 * Ta bort Carousel-uppsättningen.
 * Lägg till eller redigera hotspot-områden och bildscheman. Se även [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
-**Redigera en Carousel-uppsättning**
+**Så här redigerar du en Carousel-uppsättning:**
 
 1. Gör något av följande:
 
@@ -373,7 +374,7 @@ Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/addin
 
 Du kan förhandsgranska karusellbanners i Carousel Editor (föredragen metod) eller i **[!UICONTROL Viewers]**-listan.
 
-**Förhandsgranska Carousel banners**
+**Så här förhandsgranskar du Carousel banners:**
 
 1. I **[!UICONTROL Assets]** navigerar du till en befintlig Carousel-banderoll som du har skapat och trycker för att öppna den.
 1. Tryck på **[!UICONTROL Edit]**.
@@ -384,7 +385,7 @@ Du kan förhandsgranska karusellbanners i Carousel Editor (föredragen metod) el
 1. Tryck på **[!UICONTROL Preview]**.
 1. Tryck på hotspot-områden eller bildscheman på bilden för att testa deras associerade åtgärder.
 
-**Förhandsgranska karusellbanners från visningslistan**
+**Så här förhandsgranskar du Carousel banners från visningslistan:**
 
 1. I **[!UICONTROL Assets]** navigerar du till en befintlig Carousel-banderoll som du har skapat och trycker för att öppna den.
 1. Klicka på ikonen Innehåll i det övre vänstra hörnet på sidan Förhandsvisa.
@@ -452,6 +453,6 @@ Se [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image
 
 Det sista steget för att utlösa snabbvyns URL-adress och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap att lära sig hur man på bästa sätt aktiverar snabbvyimplementeringen från rätt steg med en färdig snabbvywebbadress.
 
-## Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
+## Använda snabbvyer för att skapa anpassade popup-fönster® {#using-quickviews-to-create-custom-pop-ups}
 
-Se [Använda snabbvyer för att skapa anpassade popup-fönster](/help/assets/dynamic-media/custom-pop-ups.md).
+Se [Använda snabbvyer för att skapa anpassade popup-fönster®](/help/assets/dynamic-media/custom-pop-ups.md).
