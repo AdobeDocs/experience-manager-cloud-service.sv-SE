@@ -3,10 +3,10 @@ title: Översikt över Content Transfer Tool
 description: Översikt över Content Transfer Tool
 exl-id: 4715937e-4c4c-4680-af15-016db4fe7db9
 translation-type: tm+mt
-source-git-commit: ca03de9095a5b85bd93edba93097356fbcd2e9c8
+source-git-commit: 1fb9814f10ef8eae87a7eef9f390700f2f2127d8
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 81%
+source-wordcount: '865'
+ht-degree: 73%
 
 ---
 
@@ -39,10 +39,11 @@ Det finns två faser som är associerade med innehållsöverföring:
 
 En *migreringsuppsättning* har följande attribut:
 
-* Högst fyra migreringsuppsättningar kan skapas och underhållas samtidigt under innehållsöverföringen.
+* Högst tio migreringsuppsättningar kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten.
 * Varje migreringsuppsättning ska ha ett unikt namn.
 * Om en migreringsuppsättning har varit inaktiv i mer än 30 dagar tas den bort automatiskt.
 * När du skapar en migreringsuppsättning kopplas den till en viss miljö. Du kan bara importera till en författar- eller en publiceringsinstans av samma miljö.
+
 
 Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
@@ -81,3 +82,5 @@ Den allmänna formeln för att beräkna hur mycket ledigt diskutrymme som krävs
    * *databasens storlek*: Content Transfer Tool använder 64 GB, även om den faktiska databasen är större.
    * *noddatabasens storlek*: storlek på segmentdatabaskatalogen eller storlek på MongoDB-databasen.
 För en segmentdatabasstorlek på 20 GB krävs därför 94 GB ledigt diskutrymme.
+
+* En migreringsuppsättning måste bibehållas under hela innehållsöverföringsaktiviteten för att kunna stödja innehållsöverläggningar. Eftersom maximalt tio migreringsuppsättningar kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten bör du dela upp innehållsdatabasen i enlighet med detta för att vara säker på att du inte får slut på migreringsuppsättningar.  under/strukturera migreringen i enlighet med detta.
