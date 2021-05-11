@@ -5,9 +5,9 @@ breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 33e92b9cd19dd49dcdb6a8c8f30feccb755f615f
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '482'
 ht-degree: 65%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 65%
    + [Dokumentreferenser för utvecklare och API:er](developer-reference-material-apis.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
-   + [Konfigurera smart taggning av bilder](smart-tags-configuration.md)
    + [Flerspråkiga resurser och översättning](translate-assets.md)
    + [Söka efter fasetter](search-facets.md)
    + [HTTP API för Assets](mac-api-assets.md)
