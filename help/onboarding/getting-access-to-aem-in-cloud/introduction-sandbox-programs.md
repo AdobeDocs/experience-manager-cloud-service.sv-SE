@@ -1,14 +1,14 @@
 ---
 title: 'Introduktion till sandlådeprogram '
-description: 'Introduktion till sandlådeprogram '
+description: Introduktion till sandlådeprogram
+exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
 translation-type: tm+mt
-source-git-commit: d98e3ba930690627bfbe9b90ce5cb93328c30503
+source-git-commit: 3b57acc47dd60d050ceebebb12bd9080b7fc5cf5
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
-
 
 # Introduktion till sandlådeprogram {#sandbox-programs}
 
@@ -38,5 +38,7 @@ Sandlådeprogram har följande attribut:
 1. **AEM:** AEM uppdateringar kan användas manuellt i miljöer i sandlådeprogram och skickas inte automatiskt.
 Mer information finns i [AEM uppdateringar av sandlådemiljöer](/help/onboarding/getting-access-to-aem-in-cloud/hibernating-de-hibernating-sandbox-environments.md#aem-updates-sandbox).
 
-1. **Viloläge:** miljöer i ett sandlådeprogram försätts automatiskt i viloläge om ingen aktivitet identifieras under en viss tid. Vilolägen miljöer kan avaktiveras manuellt.
+1. **Viloläge:** miljöer i ett sandlådeprogram försätts automatiskt i viloläge om ingen aktivitet identifieras under en viss tid. Sandlådor placeras i viloläge efter 8 timmars inaktivitet, varefter de kan tas ur viloläge. Vilolägen miljöer kan avaktiveras manuellt.
 Mer information finns i [Viloläge och Viloläge i sandlådemiljöer](/help/onboarding/getting-access-to-aem-in-cloud/hibernating-de-hibernating-sandbox-environments.md).
+
+1. **Borttagning**: Sandlådor tas bort efter sex månader när de är i viloläge, och därefter kan de återskapas.
