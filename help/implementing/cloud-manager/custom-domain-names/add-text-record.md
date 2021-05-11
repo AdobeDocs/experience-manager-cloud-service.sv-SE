@@ -1,14 +1,14 @@
 ---
 title: Lägga till en TXT-post
 description: Lägga till ett anpassat domännamn
+exl-id: d441de29-af41-4d3e-9155-531af9702841
 translation-type: tm+mt
-source-git-commit: b76a22469f248dde316dcaa514a906fe4361afd1
+source-git-commit: 4903f97c1bf0e7c8e96d604feb005d9611a7d9bb
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till en TXT-post {#adding-txt}
 
@@ -27,8 +27,8 @@ Se exemplen i tabellen nedan.
 
 | Domän | Namn | TXT-värde |
 |--- |--- |---|
-| `example.com` | `_aemverification.example.com` | Visas i användargränssnittet för Cloud Manager och är specifikt för domänen och Cloud Manager-miljön |
-| `test.example.com` | `_aemverification.test.example.com` | Visas i användargränssnittet för Cloud Manager och är specifikt för domänen och Cloud Manager-miljön |
+| `example.com` | `_aemverification` | Visas i användargränssnittet för Cloud Manager och är specifikt för domänen och Cloud Manager-miljön |
+| `test.example.com` | `_aemverification` | Visas i användargränssnittet för Cloud Manager och är specifikt för domänen och Cloud Manager-miljön |
 
 När du är klar kan du verifiera resultatet genom att köra: `dig _aemverification.[yourdomainname] -t txt`.
 Det förväntade resultatet ska visa det TXT-värde som anges i användargränssnittet i molnhanteraren.
@@ -37,4 +37,3 @@ Om din domän till exempel är `example.com` kör du: `dig TXT _aemverification.
 
 >[!NOTE]
 >Det finns också olika [verktyg för DNS-sökning](https://www.ultratools.com/tools/dnsLookup), Google DoH kan användas för att söka efter TXT-postposter och identifiera om TXT-posten saknas eller är felaktig.
-
