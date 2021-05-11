@@ -6,9 +6,9 @@ feature: Smarta taggar,Taggar
 role: Administrator,Business Practitioner
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
 translation-type: tm+mt
-source-git-commit: d86581f61c9dd7339f7deb8ee1f5e469ce2b5f7c
+source-git-commit: 2633a8fdd8301a38cd044ba822494ed54c564863
 workflow-type: tm+mt
-source-wordcount: '2637'
+source-wordcount: '2353'
 ht-degree: 5%
 
 ---
@@ -20,7 +20,7 @@ Organisationer som hanterar digitalt material använder i allt högre grad taxon
 
 Jämfört med naturliga språkordsuttryck hjälper taggning som baseras på företagstaxonomi till att anpassa tillgångarna till företagets verksamhet och säkerställer att de mest relevanta resurserna visas i sökningar. En biltillverkare kan t.ex. märka bilderna med modellnamn så att endast relevanta bilder visas när de genomsöks för att utforma en kampanj.
 
-I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. De nya [!DNL Experience Manager Assets]-distributionerna är som standard integrerade med [!DNL Adobe Developer Console]. Det hjälper till att konfigurera smarta taggar snabbare. I de äldre distributionerna kan administratörer manuellt [konfigurera integrering av smarta taggar](/help/assets/smart-tags-configuration.md#aio-integration).
+I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] -distributioner är integrerade med  [!DNL Adobe Developer Console] som standard.
 
 <!-- TBD: Create a flowchart for how training works in CS.
 ![flowchart](assets/flowchart.gif) 
@@ -151,40 +151,42 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 
 ## Tagga resurser {#tag-assets}
 
-När du har utbildat tjänsten Smarta taggar kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa taggar på en annan uppsättning resurser. Du kan tillämpa taggningsarbetsflödet på begäran eller schemalägga det att köras periodiskt. Arbetsflödet för taggning gäller både resurser och mappar.
+När du har utbildat tjänsten Smarta taggar taggas de överförda resurserna automatiskt. [!DNL Experience Manager] använder lämpliga taggar i nära realtid. Du kan tillämpa taggningsarbetsflödet på begäran eller schemalägga det att köras periodiskt. Arbetsflödet för taggning gäller både resurser och mappar.
 
-### Tagga resurser från arbetsflödeskonsolen {#tagging-assets-from-the-workflow-console}
+<!--
+### Tag assets from the workflow console {#tagging-assets-from-the-workflow-console}
 
-1. I gränssnittet [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. På sidan **[!UICONTROL Workflow Models]** väljer du arbetsflödet för **[!UICONTROL DAM Smart Tags Assets]** och klickar sedan på **[!UICONTROL Start Workflow]** i verktygsfältet.
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Smart Tags Assets]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
 
-1. I dialogrutan **[!UICONTROL Run Workflow]** bläddrar du till nyttolastmappen som innehåller resurser som du vill använda dina taggar på automatiskt.
-1. Ange en rubrik för arbetsflödet och en valfri kommentar. Klicka på **[!UICONTROL Run]**.
+1. In the **[!UICONTROL Run Workflow]** dialog, browse to the payload folder containing assets on which you want to apply your tags automatically.
+1. Specify a title for the workflow and an optional comment. Click **[!UICONTROL Run]**.
 
    ![tagging_dialog](assets/tagging_dialog.png)
 
-   *Bild: Navigera till resursmappen och granska taggarna för att kontrollera om dina resurser är taggade på rätt sätt. Mer information finns i [hantera smarta taggar](#manage-smart-tags-and-searches).*
+   *Figure: Navigate to the asset folder and review the tags to verify whether your assets are tagged properly. For details, see [manage smart tags](#manage-smart-tags-and-searches).*
 
-### Tagga resurser från tidslinjen {#tagging-assets-from-the-timeline}
+### Tag assets from the timeline {#tagging-assets-from-the-timeline}
 
-1. I [!DNL Assets]-användargränssnittet väljer du den mapp som innehåller resurser eller specifika resurser som du vill använda smarta taggar på.
-1. Öppna **[!UICONTROL Timeline]** i det övre vänstra hörnet.
-1. Öppna funktionsmakron längst ned i den vänstra sidopanelen och klicka på **[!UICONTROL Start Workflow]**.
+1. From the [!DNL Assets] user interface, select the folder containing assets or specific assets to which you want to apply smart tags.
+1. From upper-left corner, open the **[!UICONTROL Timeline]**.
+1. Open actions from the bottom of the left sidebar and click **[!UICONTROL Start Workflow]**.
 
    ![start_workflow](assets/start_workflow.png)
 
-1. Välj arbetsflödet **[!UICONTROL DAM Smart Tag Assets]** och ange en rubrik för arbetsflödet.
-1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder dina taggar på resurser. Navigera till resursmappen och granska taggarna för att kontrollera att dina resurser är taggade på rätt sätt. Mer information finns i [hantera smarta taggar](#manage-smart-tags-and-searches).
+1. Select the **[!UICONTROL DAM Smart Tag Assets]** workflow, and specify a title for the workflow.
+1. Click **[!UICONTROL Start]**. The workflow applies your tags on assets. Navigate to the asset folder and review the tags to verify that your assets are tagged properly. For details, see [manage smart tags](#manage-smart-tags-and-searches).
 
 >[!NOTE]
 >
->I de efterföljande taggningscyklerna är det bara de ändrade resurserna som taggas igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
+>In the subsequent tagging cycles, only the modified assets are tagged again with newly trained tags. However, even unaltered assets are tagged if the gap between the last and current tagging cycles for the tagging workflow exceeds 24 hours. For periodic tagging workflows, unaltered assets are tagged when the time gap exceeds six months.
 
-### Tagga överförda resurser {#tag-uploaded-assets}
+### Tag uploaded assets {#tag-uploaded-assets}
 
-[!DNL Experience Manager] kan automatiskt tagga resurser som användare överför till DAM. För att göra det konfigurerar administratörer ett arbetsflöde för att lägga till ett tillgängligt steg som taggar resurser. Se [hur du aktiverar smarta taggar för överförda resurser](/help/assets/smart-tags-configuration.md#enable-smart-tagging-for-uploaded-assets).
+[!DNL Experience Manager] can automatically tag the assets that users upload to DAM. To do so, administrators configure a workflow to add an available step that tags assets. See [how to enable Smart Tags for uploaded assets](/help/assets/smart-tags-configuration.md#enable-smart-tagging-for-uploaded-assets).
+-->
 
 ## Hantera smarta taggar och resurssökningar {#manage-smart-tags-and-searches}
 
@@ -247,7 +249,6 @@ Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) 
 
 >[!MORELIKETHIS]
 >
->* [Konfigurera  [!DNL Experience Manager] för smart taggning](smart-tags-configuration.md)
 >* [Förstå hur smarta taggar hjälper till att hantera resurser](https://medium.com/adobetech/efficient-asset-management-with-enhanced-smart-tags-887bd47dbb3f)
->* [Smart taggning av videomaterial](smart-tags-video-assets.md)
+>* [Smart tagga videomaterialet](smart-tags-video-assets.md)
 
