@@ -6,9 +6,9 @@ hidefromtoc: true
 index: false
 exl-id: 8d133b78-ca36-4c3b-815d-392d41841b5c
 translation-type: tm+mt
-source-git-commit: c9b8e14a3beca11b6f81f2d5e5983d6fd801bf3f
+source-git-commit: 4a36cd3206784c0e4e3ed3d7007c83f44f1d5ee0
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1130'
 ht-degree: 2%
 
 ---
@@ -324,11 +324,10 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 
 Du bör fortsätta din AEM resa utan att behöva besöka dokumentet nästa gång [Placera allt tillsammans - Din app och ditt innehåll i AEM Headless](put-it-all-together.md) där du får lära dig hur du tar ditt AEM Headless-projekt och förbereder det för publicering.
 
+[Hur du skapar enkelsidiga program (SPA) med ](create-spa.md) AEM visar också hur du kan skapa redigerbara SPA med AEM SPA Editor-ramverk, samt hur du integrerar externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
+
 ## Ytterligare resurser {#additional-resources}
 
-* [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)
-* [HATEOAS-principen](https://en.wikipedia.org/wiki/HATEOAS)
-* [SIREN-format](https://github.com/kevinswiber/siren)
 * [HTTP API för Assets](/help/assets/mac-api-assets.md)
 * [Innehållsfragment REST API](/help/assets/content-fragments/assets-api-content-fragments.md)
    * [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference)
