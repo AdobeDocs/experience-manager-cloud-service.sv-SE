@@ -5,7 +5,7 @@ feature: Innehållsfragment
 role: Business Practitioner
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 translation-type: tm+mt
-source-git-commit: 9e299db2d111087bbca05624276e212d457d76d1
+source-git-commit: 0c7b66e636e36a8036a590e949aea42e33a4e289
 workflow-type: tm+mt
 source-wordcount: '2309'
 ht-degree: 4%
@@ -170,7 +170,7 @@ innehåll (för det specifika fältet) måste vara unikt för alla innehållsfra
 * ****
 TranslatableMarkera kryssrutan &quot;Translatable&quot; för ett fält i CF-modellredigeraren
 
-   * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfiguration, kontext `/content/dam/<tenant>`, om det inte redan finns.
+   * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfiguration, kontext `/content/dam/<sites-configuration>`, om det inte redan finns.
    * För GraphQL: Ange en `<translatable>`-egenskap i fältet Innehållsfragment till `yes`, så att GraphQL-frågefilter tillåts för JSON-utdata med endast översättningsbart innehåll.
 
 * Mer information om den specifika datatypen och dess egenskaper finns i **[Innehållsreferens](#content-reference)**.
