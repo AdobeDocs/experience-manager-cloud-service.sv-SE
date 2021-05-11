@@ -6,10 +6,10 @@ hidefromtoc: true
 index: false
 exl-id: 8d133b78-ca36-4c3b-815d-392d41841b5c
 translation-type: tm+mt
-source-git-commit: 7732a291d070a5d93a6f490877b909e1331be1e2
+source-git-commit: c9b8e14a3beca11b6f81f2d5e5983d6fd801bf3f
 workflow-type: tm+mt
-source-wordcount: '1270'
-ht-degree: 1%
+source-wordcount: '1115'
+ht-degree: 2%
 
 ---
 
@@ -190,26 +190,28 @@ Assets can have multiple renditions. These are typically exposed as child entiti
 
 Innehållsfragment används för rubrikfri leverans och ett innehållsfragment är en särskild typ av resurs. De används för att komma åt strukturerade data, t.ex. texter, siffror och datum.
 
-Eftersom det finns flera skillnader mellan *standardobjekt*-resurser (t.ex. bilder eller ljud) gäller vissa ytterligare regler för att hantera dem.
+<!--
+As there are several differences to *standard* assets (such as images or audio), some additional rules apply to handling them.
 
 ### Representation {#representation}
 
-Innehållsfragment:
+Content fragments:
 
-* Visa inga binära data.
-* Finns helt i JSON-utdata (inom egenskapen `properties`).
+* Do not expose any binary data.
+* Are completely contained in the JSON output (within the `properties` property).
 
-* betraktas också som atomiska, dvs. elementen och variationerna exponeras som en del av fragmentets egenskaper jämfört med som länkar eller underordnade enheter. Detta ger effektiv åtkomst till nyttolasten för ett fragment.
+* Are also considered atomic, i.e. the elements and variations are exposed as part of the fragment's properties vs. as links or child entities. This allows for efficient access to the payload of a fragment.
 
-### Innehållsmodeller och innehållsfragment {#content-models-and-content-fragments}
+### Content Models and Content Fragments {#content-models-and-content-fragments}
 
-För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför måste *konsumenten* känna till modellen för ett fragment (åtminstone ett minimum), även om den mesta informationen kan härledas från nyttolasten. som datatyper, osv. är en del av definitionen.
+Currently the models that define the structure of a content fragment are not exposed through an HTTP API. Therefore the *consumer* needs to know about the model of a fragment (at least a minimum) - although most information can be inferred from the payload; as data types, etc. are part of the definition.
 
-Om du vill skapa ett nytt innehållsfragment måste modellens (interna databas) sökväg anges.
+To create a new content fragment, the (internal repository) path of the model has to be provided.
 
-### Associerat innehåll {#associated-content}
+### Associated Content {#associated-content}
 
-Associerat innehåll visas för närvarande inte.
+Associated content is currently not exposed.
+-->
 
 ## Använda Resurser REST API {#using-aem-assets-rest-api}
 
