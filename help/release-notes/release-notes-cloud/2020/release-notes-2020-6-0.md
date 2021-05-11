@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Manager som Cloud Service Release Notes for 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
+exl-id: fd6ebe2b-6d98-498c-a45d-b9a9c34e6be7
 translation-type: tm+mt
-source-git-commit: 13774cc8684166c98f85bf4096d2c7de8d257746
+source-git-commit: 33e92b9cd19dd49dcdb6a8c8f30feccb755f615f
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '1927'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation för AEM som en Cloud Service 2020.6.0 {#release-notes}
 
@@ -37,7 +37,7 @@ Version 2.9.0 av [Core Components](https://docs.adobe.com/content/help/en/experi
 
 * Korrigerat problem med storleksändring av layoutkomponent.
 
-* Lagt till möjlighet att hantera endast sidor med routningsvinkel och AEM/vinkelsidor.
+* Lagt till möjlighet att hantera endast Angular- och AEM/Angular-sidor.
 
 ### Tillgänglighet {#accessibility}
 
@@ -110,7 +110,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 Förbättrade smarta taggar gör det möjligt för organisationer att utbilda smarta taggningsmodeller för att identifiera bilder som baseras på kundspecifika företagstaggar utöver generiska smarta taggar.
 
 I den här versionen finns det en ny, guidad användarupplevelse som hjälper dig att skapa smarta taggar för uppsättningar av kundspecifika taggar och utbilda dem med resurser, som bör kännas igen och taggas med dem i framtiden. Upplevelsen är nu mer intuitiv.
-Utbilda förbättrade smarta taggar för mer intuitiv utbildning i Smarta taggar. Se [hur du lägger till smarta taggar i resurser](/help/assets/smart-tags.md) och [konfigurera smart taggning](/help/assets/smart-tags-configuration.md).
+Utbilda förbättrade smarta taggar för mer intuitiv utbildning i Smarta taggar. Se [hur du lägger till smarta taggar i resurser](/help/assets/smart-tags.md).
 
 **Stöd för konsumtion, förgranskning och leverans av 3D-material**
 
