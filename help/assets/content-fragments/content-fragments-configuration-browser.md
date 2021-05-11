@@ -5,9 +5,9 @@ feature: Innehållsfragment
 role: Business Practitioner
 exl-id: 9fc911de-1d33-4811-8f58-ea21ce94bedb
 translation-type: tm+mt
-source-git-commit: f0e484dbe8549dadc48cc82713861c591a1c5661
+source-git-commit: 0c7b66e636e36a8036a590e949aea42e33a4e289
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '288'
 ht-degree: 18%
 
 ---
@@ -28,7 +28,7 @@ Innan du använder innehållsfragment måste du använda **Configuration Browser
 >Om du inte aktiverar **Content Fragment Models**:
 >
 >* **Alternativet Skapa** är inte tillgängligt för att skapa nya modeller.
->* du inte kan [välja klientorganisationen för att skapa den relaterade slutpunkten](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint).
+>* du inte kan [välja platskonfigurationen för att skapa den relaterade slutpunkten](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint).
 
 
 Om du vill aktivera funktioner för innehållsfragment måste du:
