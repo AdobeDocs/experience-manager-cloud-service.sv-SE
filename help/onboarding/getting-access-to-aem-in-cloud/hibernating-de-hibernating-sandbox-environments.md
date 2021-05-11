@@ -1,14 +1,14 @@
 ---
 title: 'Viloläge och avvänjningsmiljöer för sandlådor '
-description: 'Viloläge och avvänjningsmiljöer för sandlådor '
+description: Viloläge och avvänjningsmiljöer för sandlådor
+exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
 translation-type: tm+mt
-source-git-commit: 5a4353cb31337882a1c13b0ed830ea64f617181a
+source-git-commit: 3b57acc47dd60d050ceebebb12bd9080b7fc5cf5
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
-
 
 # Viloläge och avvänjning av sandlådemiljöer {#hibernating-introduction}
 
@@ -121,8 +121,12 @@ Några viktiga saker att tänka på när det gäller miljöer med viloläge och 
 
 * AEM uppgraderingar kan användas i miljöer i viloläge, som kunderna manuellt kan aktivera via Cloud Manager. Miljön förblir i viloläge och den nya versionen visas i miljön när den har tagits bort från viloläget.
 
->[!NOTE]
->För närvarande anges det inte om en miljö är i viloläge i molnhanteraren.
+* Sandlådor placeras i viloläge efter 8 timmars inaktivitet, varefter de kan tas ur viloläge.
+
+* Sandlådor tas bort efter sex månader när de är i viloläge, och därefter kan de återskapas.
+
+   >[!NOTE]
+   >För närvarande anges det inte om en miljö är i viloläge i molnhanteraren.
 
 ## AEM till sandlådemiljöer {#aem-updates-sandbox}
 
@@ -135,9 +139,4 @@ Mer information om hur du uppdaterar en miljö finns i [Uppdateringsmiljö](/hel
 >[!NOTE]
 >* En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.
 >* En manuell uppdatering av antingen *Production* eller *Stage*-miljön uppdateras automatiskt. Miljöuppsättningen Production+Stage måste finnas i samma AEM.
-
-
-
-
-
 
