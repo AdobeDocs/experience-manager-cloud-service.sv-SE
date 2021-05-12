@@ -4,14 +4,14 @@ description: I den här delen av den AEM Headless Developer Journey kommer du at
 hide: true
 hidefromtoc: true
 index: false
+exl-id: 257fc173-6bfb-4b60-b66c-6d6bdd5cf13f
 translation-type: tm+mt
-source-git-commit: 9fb18dbe60121f46dba1e11d4133e5264a6d538d
+source-git-commit: 635768f63c604d1c1892de57c55693da6a0fe954
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
-
 
 # Sökväg till din första upplevelse med AEM Headless {#path-to-first-experience}
 
@@ -137,7 +137,14 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 * Ha koll på vilka verktyg och AEM som krävs.
 * Lär dig de bästa sätten att göra den enkla resan smidig, hålla innehållsgenereringen effektiv och se till att innehållet levereras snabbt.
 
-Du bör fortsätta den AEM resan utan extra kostnad genom att nästa gång granska dokumentet [Så här modellerar du ditt innehåll som AEM innehållsmodeller](model-your-content.md) där du får lära dig att modellera din innehållsstruktur i AEM.
+Vi vill att du bygger vidare på denna grundläggande kunskap för att till fullo förstå styrkan och flexibiliteten hos AEM Headless så att du kan utnyttja den för dina egna projekt. För att göra detta har du alternativ.
+
+### Välj din egen äventyr {#choose-your-path}
+
+Oberoende av inlärningsstil vill Adobe att du ska lyckas komma igång med AEM Headless-projekt.
+
+* Om du vill **fortsätta att lära dig headless-koncept och AEM headless-tekniker** bör du fortsätta din AEM resa genom att nästa gång du granskar dokumentet [Så här modellerar du ditt innehåll som AEM innehållsmodeller](model-your-content.md) där du får lära dig hur du modellerar innehållsstrukturen i AEM.
+* Om du föredrar att **lära dig genom att göra** kan du hoppa till självstudiekursen [Komma igång med AEM Headless-on](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) där du kommer att gå direkt till AEM Headless-utveckling genom att implementera ett enkelt projekt för att visa AEM headless-innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 
