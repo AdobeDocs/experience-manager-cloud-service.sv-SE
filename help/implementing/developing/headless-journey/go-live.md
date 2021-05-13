@@ -5,10 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: f79b5ada-8f59-4706-9f90-bc63301b2b7d
-translation-type: tm+mt
-source-git-commit: dc4f1e916620127ebf068fdcc6359041b49891cf
+source-git-commit: 0960c354eb9a5156d9200b2c6f54761f1a8383a2
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1811'
 ht-degree: 0%
 
 ---
@@ -29,42 +28,101 @@ I det föregående dokumentet om den AEM resan utan rubriker, [How to Put All To
 
 Den här artikeln bygger vidare på dessa grundläggande funktioner så att du förstår hur du faktiskt gör ditt AEM Headless-projekt tillgängligt.
 
-## Mål {#objective}
+## Syfte {#objective}
 
 Det här dokumentet hjälper dig att förstå den AEM headless-publiceringskanalen och de prestandaöverväganden du behöver känna till innan du publicerar programmet.
 
+* Läs mer om AEM SDK och de utvecklingsverktyg som krävs
+* Konfigurera en lokal utvecklingsmiljö för att simulera ditt innehåll innan du publicerar det
 * Förstå AEM innehållsreplikering och cachning
-* Konfigurera de verktyg som krävs för att simulera live-användning för ditt headless-program
 * Säkra och skala programmet före start
 * Övervaka prestanda och felsökning
 
-## Grundläggande om innehållsreplikering och cachelagring {#content-replication-and-caching}
+## AEM SDK {#the-aem-sdk}
 
-En komplett AEM består av en författare, en publiceringsversion och en utskicksare.
+Den innehåller följande artefakter:
+
+* Quickstart jar - en körbar jar-fil som kan användas för att ställa in både en författare och en publiceringsinstans
+* Dispatcher-verktyg - Dispatcher-modulen och dess beroenden för Windows- och UNIX-baserade system
+* Java API Jar - Java Jar/Maven Dependency som visar alla Java API:er som kan användas för att utveckla mot AEM
+* Javadoc jar - javadocs for the Java API jar
+
+## Utvecklingsverktyg {#development-tools}
+
+Förutom AEM SDK behöver du ytterligare verktyg som gör det lättare att utveckla och testa kod och innehåll lokalt:
+
+* Java
+* AEM SDK
+* Git
+* Apache Maven
+* Biblioteket Node.js
+* Den utvecklingsmiljö du vill använda
+
+Eftersom AEM är ett Java-program måste du installera Java och Java SDK som stöd för utveckling av AEM som en Cloud Service.
+
+AEM SDK används för att skapa och distribuera anpassad kod. Det är huvudverktyget du behöver för att testa ditt headless-program innan du publicerar.
+
+Git är det ni kommer att använda för att hantera källkontrollen samt för att checka in ändringarna i Cloud Manager och sedan distribuera dem till en produktionsinstans.
+
+AEM använder Apache Maven för att bygga projekt som skapats från AEM Maven Project-arkitypen. Alla större utvecklingsmiljöer har stöd för integrering av Maven.
+
+Node.js är en JavaScript-körningsmiljö som används för att arbeta med de viktigaste resurserna i ett AEM ui.front-projekt. Node.js distribueras med npm, är de facto-pakethanteraren Node.js, som används för att hantera JavaScript-beroenden.
+
+## Lathund för komponenter i ett AEM system {#components-of-an-aem-system-at-a-glance}
+
+En komplett AEM består av en författare, en publiceringsversion och en utskicksare. Samma komponenter kommer att göras tillgängliga i den lokala utvecklingsmiljön för att göra det enklare för dig att förhandsgranska koden och innehållet innan du publicerar.
 
 * **I författartjänsten** kan interna användare skapa, hantera och förhandsgranska innehåll.
 
-* **Publiceringstjänsten** betraktas som Live-miljön och är vanligtvis den slutanvändare interagerar med. Innehåll som har redigerats och godkänts av författartjänsten distribueras till publiceringstjänsten.
+* **Publiceringstjänsten** betraktas som Live-miljön och är vanligtvis den slutanvändare interagerar med. Innehåll som har redigerats och godkänts av författartjänsten distribueras till publiceringstjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att ha produktionsversionen av programmet ansluten till en AEM Publish-tjänst.
 
 * **Dispatcher** är en statisk webbserver som utökas med AEM. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
 
-Det vanligaste distributionsmönstret med AEM headless-program är att ha produktionsversionen av programmet ansluten till en AEM Publish-tjänst.
+## Arbetsflödet för lokal utveckling {#the-local-development-workflow}
 
-## Krav och konfiguration {#requirements-and-configuration}
+Det lokala utvecklingsprojektet bygger på Apache Maven och använder Git för källkontroll. För att kunna uppdatera projektet kan utvecklarna använda den integrerade utvecklingsmiljö de föredrar, till exempel Eclipse, Visual Studio Code eller IntelliJ.
 
-1. Konfigurera en [lokal körningsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#install-java) med [AEM som en molntjänst-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
-2. Installera [WKND-exempelinnehåll](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och efterföljande GraphQL-slutpunkter
-3. Distribuera och konfigurera en [statisk nodserver](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/production-deployment.html?lang=en#static-server).
+Om du vill testa kod- eller innehållsuppdateringar som ska importeras av ditt headless-program måste du distribuera uppdateringarna till den lokala AEM, som innehåller lokala instanser av AEM författare och publiceringstjänster.
 
-## Säkra och skala ditt Headless-program innan du startar {#secure-and-scale-before-launch}
+Observera skillnaden mellan de olika komponenterna i den lokala AEM, eftersom det är viktigt att testa uppdateringarna där de är som viktigast. Testa till exempel innehållsuppdateringar på författaren eller testa ny kod på publiceringsinstansen.
 
-1. Konfigurera [tokenbaserad autentisering](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)
-2. Säkra webbhooks
-3. Konfigurera cachelagring och skalbarhet
+I ett produktionssystem placeras en dispatcher och en http Apache-server alltid framför en AEM publiceringsinstans. De tillhandahåller cachelagring och säkerhetstjänster för AEM system, så det är viktigt att testa kod- och innehållsuppdateringar mot avsändaren också.
+
+När du har testat allt och fungerar som det ska kan du nu överföra koduppdateringarna till en centraliserad Git-databas i Cloud Manager.
+
+När uppdateringarna har överförts till Cloud Manager kan de distribueras till AEM som en Cloud Service med Cloud Managers CI/CD-pipeline.
+
+## Förhandsgranska koden och innehållet lokalt med den lokala utvecklingsmiljön {#previewing-your-code-and-content-locally-with-the-local-development-environment}
+
+För att kunna förbereda AEM headless-projekt för lansering måste du se till att alla delar av projektet fungerar bra.
+
+För att göra det måste ni sätta ihop allt: kod, innehåll och konfiguration och testa det i en lokal utvecklingsmiljö för live-beredskap.
+
+Den lokala utvecklingsmiljön består av tre huvudområden:
+
+1. Det AEM projektet - det innehåller all kod, konfiguration och innehåll som AEM utvecklare kommer att arbeta med
+1. Local AEM Runtime - lokala versioner av AEM författare och publiceringstjänster som ska användas för att distribuera kod från det AEM projektet
+1. Local Dispatcher Runtime - en lokal version av Apache htttpd-webbservern som innehåller Dispatcher-modulen
+
+När den lokala utvecklingsmiljön har konfigurerats kan du simulera innehåll som skickas till React-appen genom att distribuera en statisk nodserver lokalt.
+
+Mer information om hur du konfigurerar en lokal utvecklingsmiljö och alla beroenden som behövs för förhandsgranskning av innehåll finns i [Produktionsdistribution med en AEM-publiceringstjänst](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/production-deployment.html?lang=en#prerequisites).
 
 ## Distribuera till produktion {#deploy-to-production}
 
-När du har testat all kod och allt innehåll lokalt är du nu redo att påbörja en produktionsdistribution med AEM.
+När du har testat all kod och allt innehåll lokalt är du redo att påbörja en produktionsdistribution med AEM.
+
+Du kan börja distribuera koden genom att utnyttja Cloud Managers CI/CD-pipeline, som beskrivs utförligt [här](/help/implementing/deploying/overview.md).
+
+## Förbered ditt AEM Headless-program för GoLive {#prepare-your-aem-headless-application-for-golive}
+
+Nu är det dags att göra ditt AEM headless-program redo för lansering genom att följa de rutiner som beskrivs nedan.
+
+### Säkra och skala ditt Headless-program innan du startar {#secure-and-scale-before-launch}
+
+1. Konfigurera [tokenbaserad autentisering](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)
+1. Säkra webbhooks
+1. Konfigurera cachelagring och skalbarhet
 
 ### Modellstruktur jämfört med GraphQL-utdata {#structure-vs-output}
 
@@ -89,9 +147,9 @@ När du har testat all kod och allt innehåll lokalt är du nu redo att påbörj
 * Använd `Last-modified-since` för att uppdatera resurser.
 * Använd `_reference`-utdata i JSON-fil för att börja hämta resurser utan att behöva tolka fullständiga JSON-filer.
 
-## Övervakning {#monitoring}
+## Prestandaövervakning {#performance-monitoring}
 
-### Kontrollera övergripande prestanda {#check-overall-performance}
+För att användarna ska få bästa möjliga upplevelse när de använder det AEM headless-programmet är det viktigt att du övervakar nyckeltal enligt beskrivningen nedan:
 
 * Validera förhandsgransknings- och produktionsversioner av appen
 * Verifiera AEM statussidor för den aktuella tjänsttillgänglighetsstatusen
@@ -111,7 +169,7 @@ När du har testat all kod och allt innehåll lokalt är du nu redo att påbörj
 
 ### Felsökning {#debugging}
 
-För att programmet ska fungera korrekt före start rekommenderar vi att du följer dessa steg som en allmän metod för felsökning:
+Följ dessa metodtips som ett allmänt tillvägagångssätt vid felsökning:
 
 * Validera funktionalitet och prestanda med förhandsgranskningsversionen av programmet
 * Validera funktionalitet och prestanda med programmets produktionsversion
@@ -140,3 +198,8 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 Du bör fortsätta din AEM resa utan att ta hjälp av dokumentet [Post Launch](post-launch.md) där du får lära dig hur du kan behålla din headless-upplevelse.
 
 ## Ytterligare resurser {#additional-resources}
+
+* [Komma igång med AEM headless Production Deployment](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)
+* [En översikt över distribuering till AEM som en Cloud Service](/help/implementing/deploying/overview.md)
+* [Konfigurera en lokal AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)
+* [Använd Cloud Manager för att distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)
