@@ -2,10 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-translation-type: tm+mt
-source-git-commit: 1139b9f7014e68ab3d6ea7d720242e95786cc9e6
+source-git-commit: 16afabcd80f9014684a5d3428a65d8b2c41c69c8
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1829'
 ht-degree: 2%
 
 ---
@@ -49,6 +48,10 @@ Att definiera index kan omfatta följande tre användningsområden:
 För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM som en Cloud Service-dokumentation](/help/implementing/deploying/overview.md).
 
 ### Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
+
+>[!NOTE]
+>
+>Om du anpassar ett utanför ruteindexet, t.ex. `damAssetLucene-6`, kopierar du den senaste från rutindexdefinitionen från en *Cloud Service-miljö* och lägger till dina anpassningar överst, vilket säkerställer att nödvändiga konfigurationer inte tas bort oavsiktligt. Till exempel är noden `tika` under `/oak:index/damAssetLucene-6/tika` en obligatorisk nod och bör även ingå i ditt anpassade index och inte finnas i molnet-SDK.
 
 Du måste förbereda ett nytt indexdefinitionspaket som innehåller den faktiska indexdefinitionen, enligt namnmönstret:
 
