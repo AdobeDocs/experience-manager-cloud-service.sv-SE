@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 16afabcd80f9014684a5d3428a65d8b2c41c69c8
+source-git-commit: eae25dc48a7cd5d257e23b515f497588a13917ea
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1780'
 ht-degree: 2%
 
 ---
@@ -208,7 +208,3 @@ Om ett index ska tas bort i en senare version av programmet kan du definiera ett
 ```
 
 Om det inte längre behövs någon anpassning av ett index som inte finns i kartongen måste du kopiera indexdefinitionen som finns i kartongen. Om du till exempel redan har distribuerat `damAssetLucene-8-custom-3`, men inte längre behöver anpassningarna och vill växla tillbaka till standardindexvärdet `damAssetLucene-8`, måste du lägga till ett index `damAssetLucene-8-custom-4` som innehåller indexdefinitionen `damAssetLucene-8`.
-
-### Indextillgänglighet och feltolerans {#index-availability-and-fault-tolerance}
-
-Vi rekommenderar att du skapar dubblettindex för funktioner som är viktiga (med tanke på namnkonventionen för index som nämns ovan), så om indexet är skadat eller en sådan oförutsedd händelse finns det ett reservindex som kan svara på frågor.
