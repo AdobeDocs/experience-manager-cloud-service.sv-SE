@@ -2,10 +2,9 @@
 title: Översikt över Content Transfer Tool
 description: Översikt över Content Transfer Tool
 exl-id: 4715937e-4c4c-4680-af15-016db4fe7db9
-translation-type: tm+mt
-source-git-commit: 1fb9814f10ef8eae87a7eef9f390700f2f2127d8
+source-git-commit: ccac613f7ceb27c6d4dea11f5dd4fdc1aaba9781
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '860'
 ht-degree: 73%
 
 ---
@@ -83,4 +82,4 @@ Den allmänna formeln för att beräkna hur mycket ledigt diskutrymme som krävs
    * *noddatabasens storlek*: storlek på segmentdatabaskatalogen eller storlek på MongoDB-databasen.
 För en segmentdatabasstorlek på 20 GB krävs därför 94 GB ledigt diskutrymme.
 
-* En migreringsuppsättning måste bibehållas under hela innehållsöverföringsaktiviteten för att kunna stödja innehållsöverläggningar. Eftersom maximalt tio migreringsuppsättningar kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten bör du dela upp innehållsdatabasen i enlighet med detta för att vara säker på att du inte får slut på migreringsuppsättningar.  under/strukturera migreringen i enlighet med detta.
+* En migreringsuppsättning måste bibehållas under hela innehållsöverföringsaktiviteten för att kunna stödja innehållsöverläggningar. Eftersom maximalt tio migreringsuppsättningar kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten bör du dela upp innehållsdatabasen i enlighet med detta för att se till att du inte får slut på migreringsuppsättningar.
