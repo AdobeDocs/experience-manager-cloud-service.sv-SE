@@ -4,10 +4,9 @@ description: Lär dig hur du skapar och hanterar visningsförinställningar i Dy
 feature: Förinställningar för visningsprogram,visningsprogram
 role: Business Practitioner
 exl-id: da2e1a10-f54b-440e-b70c-f04ad4caeac1
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '4134'
+source-wordcount: '4127'
 ht-degree: 12%
 
 ---
@@ -25,7 +24,7 @@ For example, 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](
 
 -->
 
-Se även [Referenshandbok för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
+Se även [Referenshandbok för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
 
 I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprogramförinställningar. Du kan använda en visningsförinställning för en resurs när du vill förhandsgranska den. Se [Använda visningsförinställningar](#applying-a-viewer-preset-to-an-asset).
 
@@ -67,9 +66,9 @@ Alla färdiga visningsförinställningar som medföljer Dynamic Media är helt k
 * Stationära datorer
 * Apple iPhone
 * Apple iPad
-* Android Smartphone
-* Android-surfplatta
-* För video finns extra stöd för MP4-uppspelning för [BlackBerry](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) och [Windows Phone](https://msdn.microsoft.com/library/windows/apps/ff462087%28v=vs.105%29.aspx).
+* Android™ Smartphone
+* Android™ Tablet PC
+* För video finns extra stöd för MP4-uppspelning för [BlackBerry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) och [Windows® Phone](https://msdn.microsoft.com/library/windows/apps/ff462087%28v=vs.105%29.aspx).
 
 ### Multimedietyper för visningsförinställningar {#rich-media-types-for-viewer-presets}
 
@@ -79,7 +78,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
  <tbody>
   <tr>
    <td><strong>Carousel Set</strong><br /> </td>
-   <td><p>Aktiveringspunkter, bildscheman eller båda läggs till i en serie med två eller flera bilder. Kunden kan panorera bilderna åt vänster eller höger och sedan klicka på en hotspot på en bild för mer information eller för att köpa direkt från en webbplats kategori, hemsida eller landningssidor.</p> </td>
+   <td><p>Aktiveringspunkter, bildscheman eller båda läggs till i en serie med två eller flera bilder. Kunden kan panorera bilderna åt vänster eller höger och sedan klicka på en hotspot på en bild för mer information eller för att köpa direkt från en webbplats landning, kategori eller hemsidor.</p> </td>
   </tr>
     <tr>
    <td><strong>Dimensionell</strong><br /> </td>
@@ -99,11 +98,11 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
   </tr>
   <tr>
    <td><strong>Interaktiv bild</strong></td>
-   <td>Aktiveringspunkter läggs till i delar av en bild som en kund sedan kan klicka på för mer information eller för att köpa direkt från en webbplats kategori, hemsida eller landningssidor.</td>
+   <td>Aktiveringspunkter läggs till i delar av en bild som en kund sedan kan klicka på för mer information eller för att köpa direkt från en webbplats landning, kategori eller hemsidor.</td>
   </tr>
   <tr>
    <td><strong>Interaktiv video</strong></td>
-   <td>Miniatyrbilder läggs till i tidslinjesegment i en video som en kund sedan kan klicka på för mer information eller för att köpa direkt från en webbplats kategori, hemsida eller landningssidor.</td>
+   <td>Miniatyrbilder läggs till i tidslinjesegment i en video som en kund sedan kan klicka på för mer information eller för att köpa direkt från en webbplats landning, kategori eller hemsidor.</td>
   </tr>
   <tr>
    <td><strong>Blandade media</strong></td>
@@ -156,7 +155,7 @@ Se även [Livedemonstrationer](https://landing.adobe.com/en/na/dynamic-media/cti
 
 Information om vilka webbläsare och operativsystemversioner som stöds för visningsprogram finns i Viewer Release Notes.
 
-Se&quot;Versionsinformation för visningsprogram&quot; i innehållsförteckningen i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
+Se&quot;Versionsinformation för visningsprogram&quot; i innehållsförteckningen i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
 
 >[!NOTE]
 >
@@ -313,7 +312,7 @@ Se&quot;Versionsinformation för visningsprogram&quot; i innehållsförteckninge
 
 ### Mobil visning - gestmatris {#supported-mobile-viewers-gestures-matrix} som stöds
 
-Följande tabell visar vilka mobilvisningsgester som stöds på iOS-, Android 2.x- och Android 3.x-enheter.
+Följande tabell visar vilka mobilvisningsgester som stöds på enheter med iOS, Android™ 2.x och Android™ 3.x.
 
 <table>
  <tbody>
@@ -344,14 +343,14 @@ Följande tabell visar vilka mobilvisningsgester som stöds på iOS-, Android 2.
   <tr>
    <td><p><strong>Knipning öppen</strong></p> </td>
    <td><p>Gäller inte</p> </td>
-   <td><p>Zoomar in (endast iOS och Android 3x)</p> </td>
-   <td><p>Zoomar in (endast iOS och Android 3x)</p> </td>
+   <td><p>Zoomar in (endast iOS och Android™ 3x)</p> </td>
+   <td><p>Zoomar in (endast iOS och Android™ 3x)</p> </td>
   </tr>
   <tr>
    <td><p><strong>Knipning - stäng</strong></p> </td>
    <td><p>Gäller inte</p> </td>
-   <td><p>Zoomar ut (endast iOS och Android 3x)</p> </td>
-   <td><p>Zoomar ut (endast iOS och Android 3x)</p> </td>
+   <td><p>Zoomar ut (endast iOS och Android™ 3x)</p> </td>
+   <td><p>Zoomar ut (endast iOS och Android™ 3x)</p> </td>
   </tr>
   <tr>
    <td><p><strong>Svep</strong></p> </td>
@@ -372,7 +371,7 @@ Följande tabell visar vilka mobilvisningsgester som stöds på iOS-, Android 2.
 
 Experience Manager visar en mängd olika förinställningar för visningsprogram när resurser från **[!UICONTROL Detail View > Viewers]** visas. Du kan öka eller minska antalet visningsprogram som visas.
 
-**Så här ökar du antalet visningsförinställningar som visas**:
+**Så här ökar du antalet visningsförinställningar som visas:**
 
 1. Gå till CRXDE Lite ([https://localhost:4502/crx/de](https://localhost:4502/crx/de)).
 1. Navigera till noden med visningsförinställningar på `/libs/dam/gui/coral/content/commons/sidepanels/viewerpresets/viewerpresetslist`
@@ -399,7 +398,7 @@ Se [Specialöverväganden när du skapar en förinställning för Interactive Vi
 
 Se [Specialöverväganden när du skapar en visningsförinställning för Carousel Banner](#special-considerations-for-creating-a-carousel-banner-viewer-preset).
 
-**Så här skapar du en visningsförinställning**:
+**Så här skapar du en visningsförinställning:**
 
 1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets]** till vänster.
 
@@ -419,15 +418,15 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
 
    * I listrutan **[!UICONTROL Selected Type]** väljer du en komponent vars visuella design du vill anpassa. Du kan också trycka eller klicka på ett visuellt element i visningsprogrammet för att välja det för konfiguration.
 
-      Med den visuella redigeraren kan du se vilken effekt en viss egenskap har på ett format. Ange eller justera valfri egenskap för att omedelbart se vilken effekt den har på visningsprogrammet med exemplet till vänster om redigeraren.
+      Med den visuella redigeraren kan du se vilken effekt en viss egenskap har på ett format. Ange eller justera en egenskap för att omedelbart se vilken effekt den har på visningsprogrammet med exemplet till vänster om redigeraren.
 
-      CSS-formategenskaperna för varje typ av visningsförinställning beskrivs i hjälpavsnittet Anpassa *`<viewer name>`*-visningsprogram i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html). Om du till exempel skapar en visningsförinställning av typen `Mixed_Media` kan du läsa [Anpassa blandad mediavisare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) för en lista och en beskrivning av varje egenskap.
+      CSS-formategenskaperna för varje typ av visningsförinställning beskrivs i hjälpavsnittet Anpassa *`<viewer name>`*-visningsprogram i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html). Om du till exempel skapar en visningsförinställning av typen `Mixed_Media` kan du läsa [Anpassa blandad mediavisare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) för en lista och en beskrivning av varje egenskap.
 
    * Om du har definierat formatinställningar i en separat CSS-fil kan du överföra CSS-filen till Experience Manager Assets. Om du vill hitta den överförda CSS-filen och associera den med visningsförinställningen trycker du på **[!UICONTROL Import CSS]** under listrutan **[!UICONTROL Selected Type]** (om det behövs rullar du den visuella redigeraren uppåt för att se den).
 
       När du importerar en CSS-fil kontrollerar den visuella redigeraren om rätt visningsmarkörer används i CSS. Om du till exempel skapar ett Zoom-visningsprogram måste alla CSS-regler som du importerar definieras med hjälp av visningsprogrammets klassnamn `.s7mixedmediaviewer` som definieras för ett överordnat visningsprogramelement.
 
-      Du kan importera godtycklig, handgjord CSS så länge den definierar CSS-markörerna för ett visst visningsprogram. (CSS-markörer beskrivs i hjälpavsnittet Anpassa *&lt;visningsprogramnamn>* visningsprogram&quot; i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html). Om du till exempel vill läsa om CSS-markörer för Zoomvisningsprogrammet läser du [Anpassa zoomvisningsprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) Det är dock möjligt att den visuella redigeraren inte förstår vissa CSS-värden. I sådana fall försöker den visuella redigeraren åsidosätta felen så att CSS fortfarande fungerar.
+      Du kan importera godtycklig, handgjord CSS så länge den definierar CSS-markörerna för ett visst visningsprogram. (CSS-markörer beskrivs i hjälpavsnittet Anpassa *&lt;visningsprogramnamn>* visningsprogram&quot; i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html). Om du till exempel vill läsa om CSS-markörer för Zoomvisningsprogrammet läser du [Anpassa zoomvisningsprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) Det är dock möjligt att den visuella redigeraren inte förstår vissa CSS-värden. I sådana fall försöker den visuella redigeraren åsidosätta felen så att CSS fortfarande fungerar.
    >[!NOTE]
    >
    >Om du föredrar att redigera CSS direkt i dess Raw-format trycker du på **[!UICONTROL Show/Hide CSS]** under listrutan Vald typ (om det behövs rullar du den visuella redigeraren uppåt för att se den).
@@ -459,7 +458,7 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
 
 ### Specialöverväganden när du skapar en förinställning för Interactive Viewer {#special-considerations-for-creating-an-interactive-viewer-preset}
 
-**Om Visningslägen för miniatyrbilder på panelen**:
+**Om Visningslägen för miniatyrbilder på panelen:**
 
 När du skapar eller redigerar en förinställning för Interactive Video Viewer kan du välja vilken visningsinställning som ska användas. Det här alternativet inträffar när du väljer `InteractiveSwatches` i listrutan **[!UICONTROL Selected Component]** under fliken **[!UICONTROL Behavior]**. Det visningsläge du väljer påverkar hur och när miniatyrbilder visas när videon spelas upp. Du kan välja antingen ett `segment`-visningsläge (standard) eller ett `continuous`-visningsläge.
 
@@ -480,7 +479,7 @@ När du skapar eller redigerar en förinställning för Interactive Video Viewer
  </tbody>
 </table>
 
-**Om beteendet för automatisk rullning i det interaktiva visningsprogrammet**:
+**Om beteendet för automatisk rullning i det interaktiva visningsprogrammet:**
 
 Funktionen för automatisk rullning för miniatyrbilder i det interaktiva visningsprogrammet fungerar oberoende av det visningsläge du väljer.
 
@@ -523,7 +522,7 @@ När du skapar visningsförinställningar för Carousel Banner kan du ändra for
 
 Vilka visningsprogramförinställningar som är tillgängliga i användargränssnittet beror på vilka som är aktiva i redigeringsläget. Som standard är en visningsförinställning&quot;På&quot; när du har skapat den. Om du stänger av förinställningen visas den inte i redigeringsläge. Om förinställningen publiceras publiceras den alltid oavsett om den är aktiverad eller inte. Inaktivera visningsförinställningar om listan blir för oskarp eller om du inte vill att en visningsförinställning ska vara tillgänglig för användning.
 
-**Så här aktiverar eller inaktiverar du visningsförinställningar**:
+**Så här aktiverar eller inaktiverar du visningsförinställningar:**
 
 1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets]** till vänster.
 1. På sidan Visningsförinställning, under kolumnrubriken **[!UICONTROL State]**, trycker du på växlingsknappen för att aktivera eller inaktivera en visningsförinställning.
@@ -540,7 +539,7 @@ Se [Aktivera eller inaktivera visningsförinställningar](#activating-or-deactiv
 
 Se även [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md).
 
-**Så här publicerar du förinställningar** för visningsprogram:
+**Så här publicerar du förinställningar för visningsprogram:**
 
 1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets]** till vänster.
 1. Välj en eller flera visningsförinställningar som du vill publicera.
@@ -555,7 +554,7 @@ Se även [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-asset
 
 Att redigera alla fördefinierade *visningsförinställningar* som är klara att användas stöds inte. Om du redigerar en förinställning för ett visningsprogram som inte är installerat uppmanas du att spara den med ett nytt namn.
 
-**Så här redigerar du förinställningar** för visningsprogram:
+**Så här redigerar du förinställningar för visningsprogram:**
 
 1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Asset]>[!UICONTROL Viewer Presets]** till vänster.
 1. Markera en förinställning genom att markera rutan till vänster om visningsförinställningens titel.
@@ -573,7 +572,7 @@ Att redigera alla fördefinierade *visningsförinställningar* som är klara att
 
 Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dynamic Media.
 
-**Så här tar du bort anpassade visningsprogramförinställningar**:
+**Så här tar du bort anpassade visningsprogramförinställningar:**
 
 1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets]** till vänster.
 1. Markera en förinställningsrubrik på sidan Visningsförinställningar och tryck sedan på ikonen **[!UICONTROL Trash]**.
@@ -583,7 +582,7 @@ Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dyna
 
 Om du redan har publicerat både resursen och det valda visningsprogrammet visas knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** när du har valt en visningsförinställning.
 
-**Så här använder du en visningsförinställning för en resurs**:
+**Så här använder du en visningsförinställning för en resurs:**
 
 1. Öppna resursen och nära sidans övre vänstra hörn, tryck på den nedrullningsbara menyn och välj **[!UICONTROL Viewers]**.
 
