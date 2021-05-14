@@ -4,8 +4,7 @@ description: En bildprofil eller en videoprofil är ett recept på vilka alterna
 feature: Resurshantering, bildprofiler, videoprofiler
 role: Administrator,Business Practitioner
 exl-id: 8c8f0a57-13f5-4903-8d76-bfb6ee83323c
-translation-type: tm+mt
-source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
 source-wordcount: '1229'
 ht-degree: 2%
@@ -89,7 +88,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 (Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen ligger alltså kvar på Experience Manager resurser en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, bör du öka värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
 
-**Om du vill justera batchstorleken för arbetsflödet** för ombearbetning:
+**Om du vill justera batchstorleken för arbetsflödet för ombearbetning:**
 
 1. I Experience Manager trycker du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Workflow > Models]**.
 1. Välj **[!UICONTROL Scene7: Reprocess Assets]** i kortvyn eller listvyn på sidan Arbetsflödesmodeller.
