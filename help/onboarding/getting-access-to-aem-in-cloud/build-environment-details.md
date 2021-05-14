@@ -1,14 +1,13 @@
 ---
 title: Information om byggmiljö
 description: Information om byggmiljö - Cloud Services
-translation-type: tm+mt
-source-git-commit: 3e76f7273393f104347611a8f0238e3722714b2b
+exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
+source-git-commit: c3b70f513455dfeaac6bc20c05fc9c35dcddf73e
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
-
 
 # Förstå byggmiljön {#understanding-build-environment}
 
@@ -18,7 +17,7 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
 * Apache Maven 3.6.0 är installerad.
-* Java-versionerna är Oracle JDK 8u202 och 11.0.2.
+* De Java-versioner som är installerade är Oracle JDK 8u202 och 11.0.2.
 * Det finns ytterligare systempaket installerade som är nödvändiga:
 
    * bzip2
@@ -34,7 +33,7 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här 
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent packageco-maven-plugin:prepare-agent package`
-* Maven konfigureras på systemnivå med filen settings.xml som automatiskt inkluderar databasen public Adobe **Artifact**. (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/).)
+* Maven konfigureras på systemnivå med filen settings.xml som automatiskt inkluderar databasen Adobe **Artifact** med en profil med namnet `adobe-public`. (Mer information finns i [Adobe Public Maven Repository](https://repo.adobe.com/).)
 
 >[!NOTE]
 >Även om Cloud Manager inte definierar en specifik version av `jacoco-maven-plugin` måste den version som används vara minst `0.7.5.201505241946`.
