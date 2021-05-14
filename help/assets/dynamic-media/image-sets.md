@@ -4,11 +4,10 @@ description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media.
 feature: Bilduppsättningar
 role: Business Practitioner
 exl-id: 2eb71f24-73d9-4b5c-8605-923a0e3d1505
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '1982'
-ht-degree: 9%
+source-wordcount: '1983'
+ht-degree: 8%
 
 ---
 
@@ -44,7 +43,7 @@ Så här kommer du igång snabbt:
 
 1. [Överför dina primära källbilder för flera vyer](#uploading-assets-in-image-sets).
 
-   Ladda upp bilderna för dina bilduppsättningar. Kom ihåg att användare kan zooma in bilder i bilduppsättningsvisningsprogrammet. Välj bilderna noggrant. Se till att bilderna har minst 2 000 pixlar i den största dimensionen. Experience Manager Assets stöder många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
+   Ladda upp bilderna för dina bilduppsättningar. Kom ihåg att användare kan zooma in bilder i bilduppsättningsvisningsprogrammet. Välj bilderna noggrant. Se till att bilderna har en största storlek på minst 2 000 pixlar. Experience Manager Assets stöder många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
 1. [Skapa bilduppsättningar](#creating-image-sets).
 
@@ -85,7 +84,7 @@ Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättn
 
 ## Överför resurser för bilduppsättningar {#uploading-assets-in-image-sets}
 
-Börja med att ladda upp bildresurserna för dina bilduppsättningar. Kom ihåg att användare kan zooma in bilder i bilduppsättningsvisningsprogrammet. Välj bilderna noggrant. Se till att bilderna har minst 2 000 pixlar i den största dimensionen för optimal zoomdetaljrikedom. Dynamic Media kan återge bilder på upp till 25 megapixlar vardera. Du kan till exempel använda en 5 000 × 5 000 megapixelbild eller någon annan storlekskombination på upp till 25 megapixlar.
+Börja med att ladda upp bildresurserna för dina bilduppsättningar. Kom ihåg att användare kan zooma in bilder i bilduppsättningsvisningsprogrammet. Välj bilderna noggrant. Se till att bilderna är minst 2 000 pixlar i den största storleken för optimal zoomdetaljrikedom. Dynamic Media kan återge bilder på upp till 25 megapixlar vardera. Du kan till exempel använda en 5 000 × 5 000 megapixelbild eller någon annan storlekskombination på upp till 25 megapixlar.
 
 Bilduppsättningar har stöd för många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
@@ -95,9 +94,9 @@ Du kan överföra bilder för bilduppsättningar på samma sätt som du [överf�
 
 Innan du skapar bilduppsättningar bör du kontrollera att bilderna har rätt storlek och format.
 
-Om du vill skapa en bilduppsättning med flera vyer behöver du bilder som visar ett objekt från olika vypunkter eller visar olika aspekter av samma objekt. Målet är att framhäva de viktiga funktionerna i ett objekt så att läsarna får en fullständig bild av hur det ser ut eller gör.
+Om du vill skapa en bilduppsättning med flera vyer behöver du bilder som visar ett objekt från olika vypunkter eller visar olika aspekter av samma objekt. Målet är att framhäva de viktiga funktionerna i ett objekt så att läsarna får en fullständig bild av hur det ser ut eller vad det gör.
 
-Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bilderna har minst 2 000 pixlar i den största dimensionen. Experience Manager Assets stöder många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
+Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bilderna har minst 2 000 pixlar stor storlek. Experience Manager Assets stöder många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
 >[!NOTE]
 >
@@ -124,7 +123,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 >
 >Bilduppsättningar stöds inte för resurser med &quot;,&quot; (komma) i filnamnet.
 
-**Skapa en bilduppsättning**
+**Så här skapar du en bilduppsättning:**
 
 1. I Adobe Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen.
 1. Tryck på **[!UICONTROL Navigation > Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och tryck sedan på **[!UICONTROL Create > Image Set]** för att öppna sidan Redigerare för bilduppsättningar.
@@ -207,7 +206,7 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
 * Använd förinställningar för visningsprogram.
 * Ta bort bilduppsättningen.
 
-**Redigera bilduppsättningar**
+**Så här redigerar du bilduppsättningar:**
 
 1. Gör något av följande:
 
