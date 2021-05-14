@@ -4,10 +4,9 @@ description: Lär dig hur du använder funktionen för responsiv kod för att le
 feature: Resurshantering
 role: Business Practitioner
 exl-id: 62af6f3f-9c86-44ad-870d-140f572f99c5
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '318'
 ht-degree: 13%
 
 ---
@@ -16,13 +15,13 @@ ht-degree: 13%
 
 Använd funktionen Responsiv kod när du vill dela koden för responsiv visning med webbutvecklaren. Du kopierar den responsiva (**[!UICONTROL RESS]**) koden till Urklipp så att du kan dela den med webbutvecklaren.
 
-Den här funktionen är användbar om webbplatsen finns på en WCM-fil från tredje part. Om webbplatsen däremot finns på AEM återger en extern bildserver bilden och skickar den till webbsidan.
+Den här funktionen är användbar om webbplatsen finns på en WCM-fil från tredje part. Om webbplatsen däremot finns på Adobe Experience Manager återger en extern bildserver bilden och skickar den till webbsidan.
 
 Se även [Bädda in Video Viewer på en webbsida](embed-code.md).
 
 Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
-**Så här levererar du optimerade bilder för en responsiv webbplats**:
+**Så här levererar du optimerade bilder för en responsiv webbplats:**
 
 1. Navigera till bilden som du vill ange responsiv kod för och tryck på **[!UICONTROL Renditions]** i listrutan.
 
@@ -43,7 +42,7 @@ Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplicatio
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
 1. I dialogrutan **[!UICONTROL Embed Responsive Image]** markerar och kopierar du den responsiva kodtexten och klistrar in den på din webbplats för att komma åt den responsiva resursen.
-1. Redigera standardbrytpunkterna i inbäddningskoden så att de matchar dem för den responsiva webbplatsen direkt i koden. Testa dessutom de olika bildupplösningarna som används vid olika sidbrytpunkter.
+1. Redigera standardbrytpunkterna i den inbäddade koden så att de matchar det som finns på den responsiva webbplatsen, direkt i koden. Testa dessutom de olika bildupplösningarna som används vid olika sidbrytpunkter.
 
 ## Använda HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-delivery-your-dynamic-media-assets}
 
