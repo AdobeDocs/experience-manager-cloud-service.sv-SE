@@ -4,10 +4,9 @@ description: Lär dig hur du förhandsgranskar resurser i Dynamic Media.
 feature: Resurshantering
 role: Business Practitioner
 exl-id: 3928798d-352a-42a8-a544-7104fc9b3cf1
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1202'
 ht-degree: 1%
 
 ---
@@ -25,11 +24,11 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
 
 >[!NOTE]
 >
->När du är på en webbsida (Webbplatser) i Adobe Experience Manager kan du inte förhandsgranska resurser i läget **Redigera**. Gå i stället till läget **Förhandsgranska** genom att klicka på **Förhandsgranska** i det övre högra hörnet på sidan.
+>När du är på en webbsida (Webbplatser) i Adobe Experience Manager kan du inte förhandsgranska resurser i **[!UICONTROL Edit]**-läge. Gå i stället till förhandsgranskningsläget genom att klicka på **[!UICONTROL Preview]** i det övre högra hörnet på sidan.
 
 Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
-**Förhandsgranska resurser**
+**Så här förhandsgranskar du resurser:**
 
 1. Från **[!UICONTROL Experience Manager]**, på sidan **[!UICONTROL Navigation]**, tryck på **[!UICONTROL Assets]** och sedan **[!UICONTROL Files]** för att komma åt resurser.
 1. Tryck på **[!UICONTROL List View]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn.
@@ -58,7 +57,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <ul>
       <li><p><strong>Vrid din 3D-kamera</strong>  - rotera din vy runt 3D-motivet och objekten.</p> Mus: Vänsterklicka och dra.</p> Pekskärm: Tryck på + dra.</p></li>
       <li><p><strong>Panorera kameran</strong>  - Panorera åt vänster, åt höger, uppåt och nedåt.</p> Mus: Högerklicka och dra.</p> Pekskärm: Tryck med två fingrar och dra.</p></li>
-      <li><p><strong>Zooma kameran</strong>  - Zooma kameran för att flytta in och ut i områden i 3D-scenen.</p> Mus: Rullningshjul.</p> Pekskärm: Fingernyp.</p></li>
+      <li><p><strong>Zooma kameran</strong> - Zooma kameran om du vill flytta in och ut från områden i 3D-scenen.</p> Mus: Rullningshjul.</p> Pekskärm: Fingernyp.</p></li>
       <li><p><strong>Centrera kameran</strong>  igen - Ändra visningsläget runt 3D-scenen och -objekten.</p> Mus: Dubbelklicka.</p> Pekskärm: Dubbeltryck.</li></ul></td>
       </tr>
       <tr>
