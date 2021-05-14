@@ -4,17 +4,16 @@ description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic 
 feature: Blandade medieuppsättningar
 role: Business Practitioner
 exl-id: 7ccde741-38d2-44c9-9378-f2721384aab7
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 25%
+source-wordcount: '1396'
+ht-degree: 23%
 
 ---
 
 # Blandade medieuppsättningar{#mixed-media-sets}
 
-Med blandade medieuppsättningar kan du kombinera bilder, bilduppsättningar, snurruppsättningar och videoklipp i en presentation.
+Med blandade medieuppsättningar kan du skapa en blandning av bilder, bilduppsättningar, snurruppsättningar och videoklipp i en presentation.
 
 Blandade medieuppsättningar definieras av en banderoll med ordet **[!UICONTROL MixedMediaSet]**. Om uppsättningen med blandade medier publiceras visas dessutom det publiceringsdatum som anges av ikonen **[!UICONTROL World]** på banderollen tillsammans med det senaste ändringsdatumet, som anges av ikonen **[!UICONTROL Pencil]**.
 
@@ -30,7 +29,7 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
 1. [Överför dina resurser](#uploading-assets).
 
-   Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Om det behövs kan du skapa [bilduppsättningar](/help/assets/dynamic-media/image-sets.md) och [rotationsuppsättningar](/help/assets/dynamic-media/spin-sets.md). Eftersom användare kan zooma in bilder i visningsprogrammet för den blandade medieuppsättningen måste du ta hänsyn till zoomningen när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen.
+   Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Om det behövs kan du skapa [bilduppsättningar](/help/assets/dynamic-media/image-sets.md) och [rotationsuppsättningar](/help/assets/dynamic-media/spin-sets.md). Eftersom användare kan zooma in bilder i visningsprogrammet för den blandade medieuppsättningen måste du ta hänsyn till zoomningen när du väljer bilder. Se till att bilderna har en största storlek på minst 2 000 pixlar.
 
 1. [Skapa blandade medieuppsättningar](#creating-mixed-media-sets).
 
@@ -70,7 +69,7 @@ Om det behövs kan du redigera [blandade medieuppsättningar](#editing-mixed-med
 
 ## Överför resurser {#uploading-assets}
 
-Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Kom ihåg att användare kan zooma in bilder i visningsprogrammet för den blandade medieuppsättningen. Välj därför bilder med den här zoomfunktionen i åtanke. Se till att bilderna har minst 2 000 pixlar i den största dimensionen.
+Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Kom ihåg att användare kan zooma in bilder i visningsprogrammet för den blandade medieuppsättningen. Välj därför bilder med den här zoomfunktionen i åtanke. Se till att bilderna har en största storlek på minst 2 000 pixlar.
 
 Om du dessutom vill lägga till snurrsuppsättningar eller bilduppsättningar i den blandade medieuppsättningen skapar du även dem.
 
@@ -80,7 +79,7 @@ Du kan lägga till bilder, bilduppsättningar, snurruppsättningar och videoklip
 
 När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när de har lagts till.
 
-**Skapa en blandad medieuppsättning**
+**Så här skapar du en blandad medieuppsättning:**
 
 1. Navigera till den plats där du vill skapa en blandad medieuppsättning i Assets, klicka på **[!UICONTROL Create]** och välj **[!UICONTROL Mixed Media Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna. Redigeraren för uppsättningar med blandade medier visas.
 
@@ -126,7 +125,7 @@ Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsät
 * Använd förinställningar för visningsprogram.
 * Ändra standardminiatyrbilden.
 
-**Redigera en blandad medieuppsättning**
+**Så här redigerar du en blandad medieuppsättning:**
 
 1. Gör något av följande:
 
@@ -146,7 +145,7 @@ Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsät
 
       >[!NOTE]
       >
-      >* Om du vill ta bort en hel uppsättning med blandade media går du till valfritt visningsläge (till exempel **[!UICONTROL Card View]** eller **[!UICONTROL Column View]**) och navigerar till den blandade medieuppsättningen. Håll pekaren över resursen och tryck sedan på bockmarkeringsikonen för att markera den. Tryck på **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete]**.
+      >* Om du vill ta bort en hel uppsättning med blandade media går du till valfritt visningsläge (till exempel **[!UICONTROL Card View]** eller **[!UICONTROL Column View]**) och navigerar till den blandade medieuppsättningen. Håll pekaren över resursen och tryck sedan på bockmarkeringsikonen så att du kan markera den. Tryck på **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete]**.
          >
          >
       * Du kan redigera resurserna i en uppsättning med blandade media genom att navigera till uppsättningen. Tryck på **[!UICONTROL Set Members]** i den vänstra listen och tryck sedan på ikonen **[!UICONTROL Pencil]** på en enskild resurs för att öppna redigeringsfönstret.
@@ -156,7 +155,7 @@ Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsät
 
    >[!NOTE]
    >
-   >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck på (markera inte) uppsättningen för att öppna den på Experience Manager-sidan för förhandsvisning. Klicka på nedåtpilen i den vänstra listen för att öppna listrutan och tryck sedan på **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och tryck sedan på **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
+   >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck (markera inte) på uppsättningen så att du kan öppna den på Experience Manager-sidan för förhandsvisning. Klicka på nedåtpilen i den vänstra listen för att öppna listrutan och tryck sedan på **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och tryck sedan på **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
       >
       >
    * Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Håll pekaren över uppsättningen och tryck sedan på **[!UICONTROL Select]** (bockmarkeringsikon). Tryck på **[!UICONTROL Backspace]** på tangentbordet eller tryck på **[!UICONTROL More]** (rad om tre punkter) och sedan på **[!UICONTROL Delete]**.
