@@ -4,17 +4,16 @@ description: Lär dig hur du använder bildförinställningar i Dynamic Media.
 feature: Bildförinställningar,visningsprogram,återgivningar
 role: Business Practitioner
 exl-id: ad21b52e-594f-4421-9b5a-2382d032ec5a
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '297'
 ht-degree: 6%
 
 ---
 
 # Använda förinställningar för Dynamic Media-bilder {#applying-image-presets}
 
-Med bildförinställningar kan resurser dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Du kan välja en förinställning när du exporterar bilder. Då formateras bilderna också om till de specifikationer som administratören har angett.
+Med bildförinställningar kan resurser dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Du kan välja en förinställning när du exporterar för att formatera om bilder till specifikationer som administratören har angett.
 
 Du kan dessutom välja en bildförinställning som är responsiv (anges av knappen **[!UICONTROL RESS]** när du har valt den).
 
@@ -26,7 +25,7 @@ Du kan dessutom välja en bildförinställning som är responsiv (anges av knapp
 
 Du kan använda en bildförinställning på en bild när du vill förhandsvisa den.
 
-**Använda Dynamic Media-bildförinställningar**
+**Så här använder du Dynamic Media-bildförinställningar:**
 
 1. Öppna resursen och tryck på listrutan i den vänstra listen och tryck sedan på **[!UICONTROL Renditions]**.
 
