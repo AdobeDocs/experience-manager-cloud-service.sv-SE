@@ -3,10 +3,9 @@ title: Arbeta med väljare
 description: Lär dig mer om metoder du kan använda för att välja resurser för interaktiva bilder, interaktiva videor och karusellbanderoller i Dynamic Media.
 role: Business Practitioner
 exl-id: a6f366ab-41b8-4909-b815-e6c4b938bf77
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '711'
 ht-degree: 15%
 
 ---
@@ -59,7 +58,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
    ![chlimage_1-527](assets/chlimage_1-527.png)
 
-1. I **[!UICONTROL Preview]**-läget kan du trycka på aktiveringspunkten eller bildschemat och se hur snabbvyn ser ut.
+1. I **[!UICONTROL Preview]**-läget kan du trycka på aktiveringspunkten eller bildschemat och se hur snabbvyn visas.
 
    ![chlimage_1-528](assets/chlimage_1-528.png)
 
