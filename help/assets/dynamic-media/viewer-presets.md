@@ -4,10 +4,9 @@ description: Lär dig hur du använder förinställningar för visningsprogram i
 feature: Förinställningar för visningsprogram,visningsprogram
 role: Business Practitioner
 exl-id: bec6fff8-fd79-4537-b915-e68da98e117a
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '215'
 ht-degree: 23%
 
 ---
@@ -20,7 +19,8 @@ Om du är administratör och måste hantera, skapa, sortera och ta bort visnings
 
 Se även [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
-Du kanske inte behöver publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
+Du behöver inte publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
+
 Information om problem med visningsförinställningar finns i [Felsöka Dynamic Media](troubleshoot-dm.md#viewers).
 
 ## Använda en förinställning för Dynamic Media-visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
@@ -32,7 +32,7 @@ Information om problem med visningsförinställningar finns i [Felsöka Dynamic 
    * Knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** visas när du har valt en visningsförinställning.
    * Systemet visar flera visningsförinställningar när du väljer visningsprogram för en resurs **[!UICONTROL Detail View]**. Du kan öka antalet förinställningar som visas. Se [Öka antalet visningsförinställningar som visas](managing-viewer-presets.md).
 
-1. Välj ett visningsprogram i den vänstra rutan för att använda det på resursen så som den visas i den högra rutan. Du kan även [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
+1. Välj ett visningsprogram i den vänstra rutan så att du kan använda det på resursen så som den visas i den högra rutan. Du kan även [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
 
 ## Hämtar förinställda URL:er för visningsprogram {#obtaining-viewer-preset-urls}
 
