@@ -3,10 +3,9 @@ title: Länka URL till ett webbprogram
 description: Lär dig hur du länkar URL-adresser till webbprogram i Dynamic Media.
 role: Business Practitioner
 exl-id: 3cd3f4d5-ebf0-4318-9a0d-1ea69453d57b
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1211'
 ht-degree: 9%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 9%
 
 Dina webbplatser och tillämpningar har åtkomst till Dynamic Media tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
-Du länkar bara till URL:er om du är *inte* och använder AEM som WCM. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du länkar bara till URL:er om du är *inte* och använder Adobe Experience Manager som WCM. Länkning - och inte inbäddning - används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder Experience Manager som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
 Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kopierar du dem från Dynamic Media.
 
@@ -47,7 +46,7 @@ Du kan hämta en URL-sträng som genereras av en bildförinställning eller en v
 
 Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara en metod som du kan använda.
 
-**Så här hämtar du en URL för en resurs**
+**Så här hämtar du en URL för en resurs:**
 
 1. Navigera till den *publicerade*-resurs vars URL för bildförinställning eller visningsförinställning du vill kopiera och tryck på resursen för att öppna den.
 
@@ -89,15 +88,15 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 * Animerad GIF
 * Ljudfiler
 * CSS
-* JavaScript (när ditt företag är konfigurerat med sin egen domän)
+* JavaScript™ (när ditt företag är konfigurerat med sin egen domän)
 * PDF
 * SVG
 * XML
 * ZIP
 
-**Hämta en URL för en statisk resurs**
+**Så här hämtar du en URL för en statisk resurs:**
 
-1. Navigera till den *publicerade *statiska resurs vars URL du vill kopiera och öppna den genom att trycka på resursen.
+1. Navigera till den *publicerade* statiska resursen vars URL du vill kopiera och tryck på resursen för att öppna den.
 
    Kom ihåg att URL:er endast är tillgängliga för kopiering *efter* att du först har *publicerat* den statiska resursen.
 
@@ -117,7 +116,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
 ## Hämta en video-URL för en publicerad videoåtergivning {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. I AEM navigerar du till **[!UICONTROL Tools > Deployment > Cloud > Cloud Services]**.
+1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
 1. På sidan **[!UICONTROL Cloud Services]** bläddrar du nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** och trycker sedan på **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** trycker du på namnet på den konfiguration du vill använda.
 
@@ -127,20 +126,20 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    `https://s7athens.macromedia.com:9090/DMGateway/`
 
-   (Banan ovan är endast avsedd som illustration. det är inte den faktiska sökvägen som du kopierar.)
+   (Den ovan angivna banan är endast avsedd som förklaring. det är inte den faktiska sökvägen som du kopierar.)
 
 1. Under **[!UICONTROL Registration ID]** kopierar du det kundnamn som finns i den sista delen av ID:t.
 
    Om registrerings-ID till exempel är `87654321|MyCompany` blir kundnamnet `MyCompany`.
 
-1. I närheten av det övre vänstra hörnet på sidan trycker du på **[!UICONTROL Cloud Services]**, sedan på AEM och går till **[!UICONTROL General > CRXDE Lite]**.
-1. Kopiera ned hela videouppdateringssökvägen från JCR-filen (Java Content Repository).
+1. I närheten av det övre vänstra hörnet på sidan trycker du på **[!UICONTROL Cloud Services]**, sedan på ikonen Experience Manager och går till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. Kopiera ned hela videouppdateringssökvägen från JCR (Java™ Content Repository).
 
    Videons återgivningssökväg kan till exempel se ut ungefär så här:
 
    `/_renditions_/0bd/0bd28743-a616-4fe6-92aa-6eae7c2112f/avs/Momentum_1080-0x720-2600k.mp4`
 
-   (Banan ovan är endast avsedd som illustration. det är inte den faktiska sökvägen som du kopierar.)
+   (Den ovan angivna banan är endast avsedd som förklaring. det är inte den faktiska sökvägen som du kopierar.)
 
 1. Om du vill skapa en fullständig URL-sökväg ordnar du den kopierade informationen i följande ordning:
 
@@ -154,7 +153,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
 ## Hämta en video-URL för adaptiv direktuppspelning (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. I AEM navigerar du till **[!UICONTROL Tools > Deployment > Cloud > Cloud Services]**.
+1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
 1. På sidan **[!UICONTROL Cloud Services]** bläddrar du nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** och trycker sedan på **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** trycker du på namnet på den konfiguration du vill använda.
 1. Gör följande på sidan **[!UICONTROL Dynamic Media Cloud Services Settings]**:
@@ -163,7 +162,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    `https://gateway-na.assetsadobe.com/DMGateway/`
 
-   (Banan ovan är endast avsedd som illustration. det är inte den faktiska sökvägen som du kopierar.)
+   (Den ovan angivna banan är endast avsedd som förklaring. det är inte den faktiska sökvägen som du kopierar.)
 
    * Under **[!UICONTROL Registration ID]** kopierar du det kundnamn som finns i den sista delen av ID:t. Du behöver det kopierade kundnamnet senare i dessa steg.
 
@@ -189,7 +188,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
     </tbody>
    </table>
 
-1. Kopiera den fullständiga sökvägen till videomaterialet i AEM, som bearbetats av Dynamic Media. Du behöver den här kopierade videoresurssökvägen senare i dessa steg.
+1. Kopiera den fullständiga sökvägen för videoresurser i Experience Manager, enligt Dynamic Media bearbetning. Du behöver den här kopierade videoresurssökvägen senare i dessa steg.
 
    Till exempel:
 
