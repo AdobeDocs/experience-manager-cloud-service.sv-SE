@@ -4,10 +4,9 @@ description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 feature: Snurrande uppsättningar
 role: Business Practitioner
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1766'
 ht-degree: 12%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 12%
 
 Med en snurra uppsättning kan du simulera hur det ser ut när du vrider ett objekt för att undersöka det. Med snurra uppsättningar kan du visa objekt från vilken vinkel som helst och få fram de viktigaste visuella detaljerna från vilken vinkel som helst.
 
-Med en snurra uppsättning simuleras en 360-graders visningsupplevelse. Dynamic Media erbjuder snurra uppsättningar med en axel där tittarna kan rotera ett objekt. Dessutom kan man zooma och panorera med några enkla musklick. På så sätt kan användare undersöka ett objekt närmare från en viss betraktningsvinkel.
+En snurra uppsättning simulerar en 360-gradig visningsupplevelse. Dynamic Media erbjuder snurra uppsättningar med en axel där tittarna kan rotera ett objekt. Dessutom kan man zooma och panorera med några enkla musklick. På så sätt kan användare undersöka ett objekt närmare från en viss betraktningsvinkel.
 
 Snurra uppsättningar anges av en banderoll med ordet **[!UICONTROL SPINSET]**. Om rotationsuppsättningen dessutom publiceras visas det publiceringsdatum som anges av ikonen **[!UICONTROL World]** på banderollen tillsammans med det senaste ändringsdatumet, vilket anges av ikonen **[!UICONTROL Pencil]**.
 
@@ -44,7 +43,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Skapa snurruppsättningar](#creating-spin-sets).
 
-   Om du vill skapa en snurruppsättning väljer du **[!UICONTROL Create > Spin Set]** och ger uppsättningen ett namn, väljer resurser och väljer i vilken ordning bilderna ska visas.
+   Om du vill skapa en snurruppsättning väljer du **[!UICONTROL Create]** > **[!UICONTROL Spin Set]** och ger uppsättningen ett namn, väljer resurserna och väljer den ordning som bilderna ska visas.
 
    Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
@@ -52,7 +51,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Administratörer kan skapa eller ändra visningsförinställningar för rotationsuppsättningar. Om du vill visa rotationsuppsättningen med en visningsförinställning markerar du rotationsuppsättningen och väljer **Visningsprogram** i listrutan till vänster.
 
-   Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools > Assets > Viewer Presets]**.
+   Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]**.
 
    Se [Lägga till och redigera visningsprogramförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
@@ -90,7 +89,7 @@ Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fle
 * Använd ett förlustfritt format, TIFF och PNG rekommenderas.
 * Maskera alla bilder så att objektet visas på en helt vit eller annan bakgrund med hög kontrast. Du kan också lägga till skuggor.
 * Se till att produktinformationen är väl belyst och i fokus.
-* Ta snurra bilder till modekläder med mannequin eller modell. Ofta är mannequin antingen maskerat (med hjälp av en glasmannequin) eller en stiliserad mannequin/form visas i bilden. Du kan skapa en omformningsrotation genom att definiera antalet vinklar. Markera varje vinkel med band på golvet för att vägleda modellen till steg och titta i riktningen för varje tagning.
+* Ta snurra bilder till modekläder med mannequin eller modell. Ofta är mannequin antingen maskerat (med hjälp av en glasmannequin) eller en stiliserad mannequin/form visas i bilden. Du kan skapa en omformningsrotation genom att definiera antalet vinklar. Markera varje vinkel med band på golvet så att du kan vägleda modellen till steg och titta i riktningen för varje tagning.
 
 ## Skapar snurruppsättningar {#creating-spin-sets}
 
@@ -106,7 +105,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 >
 >Den ordning i vilken bilderna visas i en snurrfunktion. Se till att ordna dem så att snurret blir en jämn 360-gradersvy.
 
-**Skapa snurruppsättningar**
+**Så här skapar du snurruppsättningar:**
 
 1. I Assets navigerar du till den plats där du vill skapa en rotationsuppsättning, klickar sedan på **[!UICONTROL Create]** och väljer **[!UICONTROL Spin Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna. Redigeraren för rotationsuppsättningar visas.
 
@@ -157,7 +156,7 @@ Du kan skapa snurruppsättningar antingen i användargränssnittet eller automat
 >
 >Du kan också visa uppsättningar via användargränssnittet enligt beskrivningen i [Redigera snurruppsättningar](#editing-spin-sets).
 
-**Så här visar du snurruppsättningar**
+**Så här visar du snurruppsättningar:**
 
 1. När egenskaperna för en enskild resurs öppnas. Egenskaperna anger vad som ställer in den valda resursen som medlem av (under **[!UICONTROL Member of Sets]**). Om du vill visa hela uppsättningen trycker du på uppsättningens namn.
 
@@ -183,7 +182,7 @@ Du kan utföra olika redigeringsåtgärder på snurra uppsättningar, till exemp
 * Använd förinställningar för visningsprogram.
 * Ta bort rotationsrutan.
 
-**Redigera en snurruppsättning**
+**Så här redigerar du en snurra:**
 
 1. Gör något av följande:
 
