@@ -1,10 +1,9 @@
 ---
 title: Förhandsgranska 3D-resurser
 description: Lär dig hur du förhandsgranskar 3D-resurser i Dynamic Media.
-translation-type: tm+mt
-source-git-commit: 2fd39221eca36f520d0095339423ac2c6a0c322e
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '556'
 ht-degree: 4%
 
 ---
@@ -46,19 +45,19 @@ Interaktiv 3D-förhandsvisning i Experience Manager har stöd för följande fil
 
 Hur lång tid det tar att öppna en 3D-resurs på visningssidan för resursinformation beror på flera faktorer, till exempel bandbredd, bildkomplexitet och fördröjningar för servern.
 
-Dessutom är funktioner i klientdatorn - t.ex. en arbetsstation, bärbar dator eller en mobil touchenhet - också viktiga att tänka på när du manipulerar kameran interaktivt. Ett relativt kraftfullt system med bra grafikfunktioner kan göra den interaktiva 3D-visningen smidigare och mer gynnsam.
+Dessutom är funktioner i klientdatorn - som en arbetsstation, bärbar dator eller mobil touchenhet - också viktiga att tänka på när du manipulerar kameran interaktivt. Ett relativt kraftfullt system med bra grafikfunktioner kan göra den interaktiva 3D-visningen smidigare och mer gynnsam.
 
 **Så här förhandsgranskar du 3D-resurser i Experience Manager:**
 
 1. Se till att du har överfört 3D-resurser till Experience Manager.
 Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överföra resurser](/help/assets/manage-digital-assets.md#uploading-assets).
-1. Tryck på **[!UICONTROL Assets > Files]** från Experience Manager på sidan **[!UICONTROL Navigation]**.
+1. Tryck på **[!UICONTROL Assets]** > **[!UICONTROL Files]** från Experience Manager på sidan **[!UICONTROL Navigation]**.
 
    ![Navigeringssida](/help/assets/dynamic-media/assets/navigation-assets.png)
 
 1. I närheten av det övre högra hörnet på sidan trycker du på **[!UICONTROL Card View]** i listrutan Visa och navigerar sedan till en 3D-resurs som du vill förhandsgranska.
 
-   ![Välj 3D-kort](/help/assets/dynamic-media/assets/3d-card-select.png)
+   ![Val av 3D-kort](/help/assets/dynamic-media/assets/3d-card-select.png)
    _I kortvyn: tryck på kortet för den 3D-resurs som du vill förhandsgranska._
 
 1. Tryck på kortet för 3D-resursen.
