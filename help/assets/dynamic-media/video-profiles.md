@@ -4,10 +4,9 @@ description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprof
 feature: Resurshantering, videoprofiler, återgivningar
 role: Business Practitioner
 exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '3487'
+source-wordcount: '3488'
 ht-degree: 9%
 
 ---
@@ -101,7 +100,7 @@ Den största videofilstorleken som stöds för smart beskärning är följande k
 
 * Varaktighet på fem minuter.
 * 30 bildrutor per sekund (FPS).
-* 300 MB filstorlek.
+* Filstorleken är 300 MB.
 
 Adobe Sensei är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s. Om videon har en högre bildrutefrekvens minskar den maximala videouppspelningstiden. Exempelvis måste en 60 bildrutevideo vara två och en halv minut lång för att kunna hanteras av Adobe Sensei och smart beskärning.
 
@@ -211,7 +210,7 @@ Tryck på informationsikonen bredvid varje alternativ om du vill ha fler beskriv
 1. Gör följande:
    * I fältet **[!UICONTROL Width]** anger du **[!UICONTROL auto]**.
    * Ange ett värde i pixlar i fältet **[!UICONTROL Height]**.
-Om du vill få hjälp med att visualisera storleken på videon trycker du på informationsikonen för höjden för att öppna sidan **[!UICONTROL Size Calculator]**. Använd sidan **[!UICONTROL Size Calculator]** för att ytterligare ange videodimensionen (blå ruta) som du vill ha den. När du är klar trycker du på **[!UICONTROL X]** i dialogrutans övre högra hörn.
+Om du vill få hjälp med att visualisera storleken på videon trycker du på informationsikonen för höjden för att öppna sidan **[!UICONTROL Size Calculator]**. Använd sidan **[!UICONTROL Size Calculator]** för att ytterligare ange videostorleken (blå ruta) som du vill ha den. När du är klar trycker du på **[!UICONTROL X]** i dialogrutans övre högra hörn.
 1. (Valfritt) Gör något av följande:
 
    * Tryck på fliken **[!UICONTROL Advanced]** och kontrollera att kryssrutan **[!UICONTROL Use Default Values]** är markerad (rekommenderas).
@@ -244,7 +243,7 @@ Nu kan du använda profilen för mappar som innehåller videoklipp. Se [Tillämp
 
 Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerade videokodningsparametrar som inte finns i användargränssnittet när du skapar eller redigerar en videoprofil i Experience Manager. Du kan lägga till en eller flera avancerade parametrar, till exempel minBitrate och maxBitrate, i den befintliga profilen.
 
-**Så här använder du anpassade kodningsparametrar** för video:
+**Så här använder du anpassade kodningsparametrar för video:**
 
 1. Tryck på Experience Manager-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Gå till följande på CRXDE Lite-sidan i Utforskaren till vänster:
@@ -271,7 +270,7 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
   </tr>
   <tr>
    <td><code>keyframe</code></td>
-   <td>Målantalet bildrutor mellan nyckelbildrutor. Beräkna det här värdet för att generera en nyckelbildruta var 2:10:e sekund. Exempel: vid 30 bildrutor per sekund är nyckelbildruteintervallet 60-300.<br /> <br /> Lägre intervall för nyckelrutor förbättrar strömsöknings- och strömbrytningsbeteendet för adaptiv videokodning och kan även förbättra kvaliteten för videoklipp som har mycket rörelse. Men eftersom nyckelrutor ökar filstorleken resulterar ett lägre nyckelruteintervall vanligtvis i en lägre total videokvalitet med en viss bithastighet.</td>
+   <td>Målantalet bildrutor mellan nyckelbildrutor. Beräkna det här värdet så att du kan generera en nyckelbildruta var 2:10:e sekund. Exempel: vid 30 bildrutor per sekund är nyckelbildruteintervallet 60-300.<br /> <br /> Lägre intervall för nyckelrutor förbättrar strömsöknings- och strömbrytningsbeteendet för adaptiv videokodning och kan även förbättra kvaliteten för videoklipp som har mycket rörelse. Men eftersom nyckelrutor ökar filstorleken resulterar ett lägre nyckelruteintervall vanligtvis i en lägre total videokvalitet med en viss bithastighet.</td>
    <td><code>String</code></td>
    <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS (HTTP Live Streaming) är 60-90.</p> </td>
   </tr>
@@ -316,7 +315,7 @@ Se även [Bästa metoder för videokodning](/help/assets/dynamic-media/video.md#
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](/help/assets/dynamic-media/config-dm.md#configuring-asset-processing).
 
-**Så här redigerar du en videoprofil**:
+**Så här redigerar du en videoprofil:**
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera ett namn på videoprofilen på sidan Videoprofiler.
@@ -383,7 +382,7 @@ Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-t
 
 #### Använda en videoprofil på mappar från egenskaperna {#applying-video-profiles-to-folders-from-properties}
 
-1. Tryck eller klicka på Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill använda en videoprofil på.
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill använda en videoprofil på.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Video Profiles]**, välj profilen i listrutan och klicka sedan på **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
@@ -396,7 +395,7 @@ Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil gl
 
 Se även [Återbearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
-**Om du vill använda en videoprofil globalt**,
+**Så här använder du en videoprofil globalt:**
 
 * Navigera till CRXDE Lite till följande nod: `/content/dam/jcr:content`. Lägg till egenskapen `videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>` och tryck på **[!UICONTROL Save All]**.
 
