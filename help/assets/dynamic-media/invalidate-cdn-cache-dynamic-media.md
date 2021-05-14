@@ -1,13 +1,12 @@
 ---
-title: CDN-cachen har inte verifierats via Dynamic Media
+title: Cacheminnet för CDN (Content Delivery Network) har inte verifierats via Dynamic Media
 description: '"Lär dig hur du ogiltigförklarar det cachelagrade innehållet i CDN (Content Delivery Network) så att du snabbt kan uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla."'
 feature: Resurshantering
 role: Administrator,Business Practitioner
 exl-id: c631079b-8082-4ff7-a122-dac1b20d8acd
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -22,11 +21,11 @@ Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb lever
 
 Se även [Översikt över cachelagring i Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html).
 
-**Inaktivera CDN-cachen med Dynamic Media**
+**Så här gör du CDN-cachen ogiltig via Dynamic Media:**
 
 *Del 1 av 2: Skapa en mall för CDN-invalidering*
 
-1. Tryck på **[!UICONTROL Tools > Assets > CDN Invalidation Template]** i AEM som Cloud Service.
+1. I Adobe Experience Manager som Cloud Service trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL CDN Invalidation Template]**.
 
    ![CDN-valideringsfunktion](/help/assets/assets-dm/cdn-invalidation-template.png)
 
@@ -35,7 +34,7 @@ Se även [Översikt över cachelagring i Dynamic Media](https://helpx.adobe.com/
    | Scenario | Alternativ |
    | --- | --- |
    | Jag har redan skapat en CDN-invalideringsmall med Dynamic Media Classic. | Textfältet **[!UICONTROL Create Template]** är förifyllt med malldata. I så fall kan du antingen redigera mallen eller fortsätta till nästa steg. |
-   | Jag måste skapa en mall. Vad ska jag ange? | I textfältet **[!UICONTROL Create Template]** anger du en bild-URL (inklusive bildförinställningar eller modifierare) som refererar till `<ID>` i stället för ett specifikt bild-ID som i följande exempel:<br>`https://my.publishserver.com/is/image/company_name/<ID>?$product$`<br>Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<publishserver_name>/is/image/<company_name>/<ID>` där `<publishserver_name>` är namnet på din publiceringsserver som definieras i Allmänna inställningar i Dynamic Media Classic. `<company_name>` är namnet på företagsroten som är associerad med den här AEM instansen, och `<ID>` är de valda resurserna via resursväljaren som ska ogiltigförklaras.<br>Alla inlägg av förinställningar/modifierare  `<ID>` kopieras som de är i URL-definitionen.<br>Endast bilder - d.v.s.  `/is/image`-kan formateras automatiskt baserat på mallen.<br>Om du till  `/is/content/`exempel lägger till videoklipp eller PDF-filer med resursväljaren genereras inte URL-adresser automatiskt. I stället måste du ange sådana resurser antingen i CDN-valideringsmallen, eller så kan du manuellt lägga till URL:en till sådana resurser i *del 2 av 2: Ange alternativ för CDN-validering*.<br>**Exempel:**<br> I det här första exemplet innehåller ogiltighetsmallen  `<ID>` tillsammans med resursens URL som har  `/is/content`. Till exempel, `http://my.publishserver.com:8080/is/content/dms7snapshot/<ID>`. Dynamic Media skapar URL:en baserat på den här sökvägen, där `<ID>` är de resurser som väljs via resursväljaren som du vill ogiltigförklara.<br>I det andra exemplet innehåller invalideringsmallen den fullständiga URL:en för resursen som används i dina webbegenskaper med  `/is/content` (inte beroende av resursväljaren). Exempel: `http://my.publishserver.com:8080/is/content/dms7snapshot/backpack` där ryggsäck är resurs-ID.<br>Resursformat som stöds i Dynamic Media kan ogiltigförklaras. Resursfiltyper som *inte* stöds för CDN-ogiltigförklaring är bland annat PostScript®, Encapsulated PostScript®, Adobe Illustrator, Adobe InDesign, Microsoft PowerPoint, Microsoft Excel, Microsoft Word och Rich Text Format.<br>När du skapar mallen, men ser till att du är noggrann med syntax och typos; Dynamic Media utför ingen mallvalidering.<br>Ange URL:er för smart beskärning av bilder antingen i den här CDN-valideringsmallen eller i  **[!UICONTROL Add URL]** textfältet i  *del 2: Ange alternativ för CDN-validering.*<br>**Viktigt:**Varje post i en CDN-valideringsmall måste finnas på en egen rad.<br>*Följande mallexempel är endast för illustrationsändamål.* |
+   | Jag måste skapa en mall. Vad ska jag ange? | I textfältet **[!UICONTROL Create Template]** anger du en bild-URL (inklusive bildförinställningar eller modifierare) som refererar till `<ID>` i stället för ett specifikt bild-ID som i följande exempel:<br>`https://my.publishserver.com/is/image/company_name/<ID>?$product$`<br>Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<publishserver_name>/is/image/<company_name>/<ID>` där `<publishserver_name>` är namnet på din publiceringsserver som definieras i Allmänna inställningar i Dynamic Media Classic. `<company_name>` är namnet på företagsroten som är associerad med den här Experience Manager-instansen, och `<ID>` är de markerade resurserna via resursväljaren som ska ogiltigförklaras.<br>Alla förinställningar/modifierare som följer  `<ID>` kopieras som de är i URL-definitionen.<br>Endast bilder - d.v.s.  `/is/image`-kan formateras automatiskt baserat på mallen.<br>Om du till  `/is/content/`exempel lägger till videoklipp eller PDF-filer med resursväljaren genereras inte URL-adresser automatiskt. I stället måste du ange sådana resurser antingen i CDN-valideringsmallen, eller så kan du manuellt lägga till URL:en till sådana resurser i *del 2 av 2: Ange alternativ för CDN-validering*.<br>**Exempel:**<br> I det här första exemplet innehåller ogiltighetsmallen  `<ID>` tillsammans med resursens URL som har  `/is/content`. Till exempel, `http://my.publishserver.com:8080/is/content/dms7snapshot/<ID>`. Dynamic Media skapar URL:en baserat på den här sökvägen, där `<ID>` är de resurser som väljs via resursväljaren som du vill ogiltigförklara.<br>I det andra exemplet innehåller invalideringsmallen den fullständiga URL:en för resursen som används i dina webbegenskaper med  `/is/content` (inte beroende av resursväljaren). Exempel: `http://my.publishserver.com:8080/is/content/dms7snapshot/backpack` där ryggsäck är resurs-ID.<br>Resursformat som stöds i Dynamic Media kan ogiltigförklaras. Resursfiltyper som *inte* stöds för CDN-ogiltigförklaring är bland annat PostScript®, Encapsulated PostScript®, Adobe Illustrator, Adobe InDesign, Microsoft® PowerPoint, Microsoft® Excel, Microsoft® Word och Rich Text Format.<br>När du skapar mallen, men ser till att du är noggrann med syntax och typos; Dynamic Media utför ingen mallvalidering.<br>Ange URL:er för smart beskärning av bilder antingen i den här CDN-valideringsmallen eller i  **[!UICONTROL Add URL]** textfältet i  *del 2: Ange alternativ för CDN-validering.*<br>**Viktigt:**Varje post i en CDN-valideringsmall måste finnas på en egen rad.<br>*I följande mallexempel används endast förklaringar.* |
 
    ![CDN-valideringsmall - Skapa](/help/assets/assets-dm/cdn-invalidation-template-create-2.png)
 
@@ -44,7 +43,7 @@ Se även [Översikt över cachelagring i Dynamic Media](https://helpx.adobe.com/
    *Del 2 av 2: Ange alternativ för CDN-validering*
    <br>
 
-1. Tryck på **[!UICONTROL Tools > Assets > CDN Invalidation]** i AEM som Cloud Service.
+1. I Experience Manager som Cloud Service trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL CDN Invalidation]**.
 
    ![CDN-valideringsfunktion](/help/assets/assets-dm/cdn-invalidation-path.png)
 
