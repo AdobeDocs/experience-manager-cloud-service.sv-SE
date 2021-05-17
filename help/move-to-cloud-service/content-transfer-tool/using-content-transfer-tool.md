@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: 9fdc139f5a945de931a2bebb95e5ea006e5b91be
+source-git-commit: 74816a99a74b86330efb5ff8ca37b4fe64fdbe8c
 workflow-type: tm+mt
 source-wordcount: '2762'
-ht-degree: 43%
+ht-degree: 42%
 
 ---
 
@@ -114,7 +114,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    1. **Cloud Service Configuration**: Ange målförfattar-URL för AEM as a Cloud Service.
 
       >[!NOTE]
-      >Du kan skapa och underhålla högst fyra migreringsuppsättningar åt gången under innehållsöverföringen.
+      >Du kan skapa och underhålla högst tio migreringsuppsättningar åt gången under innehållsöverföringsaktiviteten.
       >Dessutom måste du skapa en migrering separat för varje specifik miljö – *Stage*, *Development* eller *Production*.
 
    1. **Access Token**: Ange åtkomsttoken.
