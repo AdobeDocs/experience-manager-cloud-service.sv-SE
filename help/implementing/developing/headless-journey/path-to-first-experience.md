@@ -5,10 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: 257fc173-6bfb-4b60-b66c-6d6bdd5cf13f
-translation-type: tm+mt
-source-git-commit: 635768f63c604d1c1892de57c55693da6a0fe954
+source-git-commit: 3554c4a4ea1858ea5b4ffbe0fd223a540261cb5c
 workflow-type: tm+mt
-source-wordcount: '2017'
+source-wordcount: '2019'
 ht-degree: 0%
 
 ---
@@ -32,7 +31,7 @@ I det föregående dokumentet om den AEM resan utan huvud, [Getting Started with
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du förbereder ett eget AEM headless-projekt.
 
-## Mål {#objective}
+## Syfte {#objective}
 
 Det här dokumentet hjälper dig att förstå de steg som krävs för att implementera ditt första projekt. Efter att ha läst den bör du:
 
@@ -80,7 +79,7 @@ Utvecklarna behöver en AEM utvecklingsmiljö som är anpassad efter de populär
 
 Innehållsförfattare skapar innehåll baserat på de innehållsmodeller som har definierats i mellanlagringsmiljön. Med hjälp av utvecklingsverktyget för innehållsfragment kan författaren skapa ett nytt innehållsfragment eller redigera ett befintligt innehållsfragment. Innan den publiceras kan författaren förhandsgranska hur den kommer att se ut i klienten genom att arbeta med utvecklaren för att överföra innehållsmodellen till utveckling eller konfigurera en utvecklingsmiljö enbart för att författarna ska kunna se hur den skulle se ut i klienten.
 
-## Konfigurera {#setup}
+## Inställningar {#setup}
 
 Innan du börjar använda headless i AEM måste du se till att alla nödvändiga funktioner är aktiverade. I det här avsnittet beskrivs vad som krävs. De faktiska stegen för att utföra dessa steg beskrivs senare i [AEM Headless Developer Journey.](#overview.md)
 
@@ -116,13 +115,13 @@ Ett headless-projekt är inte bara framgångsrikt på grund av den teknik som an
    * AEM tillåter att tillåtna modeller anges per mapp så knappen **Skapa ny** bara visar de modeller som stöds på den platsen.
 * Det går att förenkla skapandet av nya innehållsfragment i den infogade redigeraren för innehållsfragment om rotmappen är inställd i modellen. Sedan behöver inte administratören välja en plats, utan bara ange ett namn och kan börja redigera den nya referensen.
 
-### Redigerar innehåll {#authoring}
+### Skapa innehåll {#authoring}
 
 * För kanalspecifika versioner av ditt innehåll bör du överväga att använda variationer för innehållsfragment. Variationer synkroniseras mot det överordnad innehållet för att effektivisera hanteringen av innehållsändringar.
 * Bjud in andra innehållsproducenter att granska innehållet och ge feedback med anteckningar och kommentarer, som är tillgängliga i innehållsfragmentredigeraren och globalt över fragment i administratörskonsolen för innehållsfragment.
 * Håll saker i rörelse med så få obligatoriska element som möjligt. Obligatoriska element kan blockera arbetsflödet.
 
-### Skapar globalt innehåll {#localization}
+### Skapa globalt innehåll {#localization}
 
 * Upprätta regler och styrning för översättning av innehåll. Om du vill minska systembelastningen upprättar du en översättning som en asynkron process som kan köras i längre intervall. Ge tid åt kvalitetskontroll och felkorrigering av lokalisering.
 * Utnyttja alla funktioner i översättningstekniksystemet som ni kan integrera med AEM som översättningsminnen.
@@ -141,9 +140,9 @@ Vi vill att du bygger vidare på denna grundläggande kunskap för att till full
 
 ### Välj din egen äventyr {#choose-your-path}
 
-Oberoende av inlärningsstil vill Adobe att du ska lyckas komma igång med AEM Headless-projekt.
+Oavsett vilken inlärningsstil du har vill Adobe att du ska lyckas när du börjar med AEM Headless-projekt.
 
-* Om du vill **fortsätta att lära dig headless-koncept och AEM headless-tekniker** bör du fortsätta din AEM resa genom att nästa gång du granskar dokumentet [Så här modellerar du ditt innehåll som AEM innehållsmodeller](model-your-content.md) där du får lära dig hur du modellerar innehållsstrukturen i AEM.
+* Om du vill fortsätta att **lära dig mer om headless-koncept och AEM headless-tekniker** bör du fortsätta din AEM resa genom att nästa gång du granskar dokumentet [Så här modellerar du ditt innehåll som AEM innehållsmodeller](model-your-content.md) där du får lära dig hur du modellerar innehållsstrukturen i AEM.
 * Om du föredrar att **lära dig genom att göra** kan du hoppa till självstudiekursen [Komma igång med AEM Headless-on](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) där du kommer att gå direkt till AEM Headless-utveckling genom att implementera ett enkelt projekt för att visa AEM headless-innehåll.
 
 ## Ytterligare resurser {#additional-resources}
