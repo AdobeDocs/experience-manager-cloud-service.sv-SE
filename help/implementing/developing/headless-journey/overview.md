@@ -4,14 +4,13 @@ description: Börja här för en guidad resa med de kraftfulla och flexibla head
 hide: true
 hidefromtoc: true
 index: false
-translation-type: tm+mt
-source-git-commit: 3fd695cbe77873fa57373d91249b71d8c4be8a08
+exl-id: 4524c92a-8f19-497a-b4f2-c3e23f555d37
+source-git-commit: 3554c4a4ea1858ea5b4ffbe0fd223a540261cb5c
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 2%
+source-wordcount: '700'
+ht-degree: 1%
 
 ---
-
 
 # AEM Headless Developer Journey {#aem-headless-developer-journey}
 
@@ -19,7 +18,7 @@ ht-degree: 2%
 >
 >ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
 
-Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
+Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första headless-utvecklingsprojekt.
 
 ## Introduktion {#introduction}
 
@@ -52,3 +51,14 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 | 8 | [Så här lever du med ditt headless-program](go-live.md) | Lär dig hur du distribuerar program live och tar din lokala kod i Git och flyttar den till Cloud Manager Git för CI/CD-pipeline. |
 | 9 | [Efter start](post-launch.md) | Lär dig hur du behåller din headless-upplevelse. |
 | 10 | [Valfritt - Så här skapar du enkelsidiga program (SPA) med AEM](create-spa.md) | När du väl förstår AEM headless-funktioner kan du testa hur du kombinerar headful och headless-leverans och lära dig hur du kan skapa redigerbara SPA med hjälp av AEM SPA Editor-ramverk. |
+
+## What&#39;s Next {#what-is-next}
+
+Du är nu redo att sätta igång med din resa utan Adobe Headless. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Lär dig mer om CMS Headless Development.](learn-about.md)
+
+### Välj din egen äventyr {#choose-your-path}
+
+Adobe vill dock att du ska lyckas när du börjar med AEM Headless-projekt, oavsett vilken typ av utbildning du använder. Överväg därför dessa två alternativ.
+
+* Om du föredrar att fortsätta **lära dig mer om headless-koncept och AEM headless-tekniker** bör du fortsätta din AEM resa utan arbetspass enligt rekommendationerna i nästa steg i dokumentet [Så här modellerar du ditt innehåll som AEM innehållsmodeller](model-your-content.md) där du lär dig att modellera din innehållsstruktur i AEM.
+* Om du föredrar att **lära dig genom att göra** kan du hoppa till självstudiekursen [Komma igång med AEM Headless-on](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) där du kommer att gå direkt till AEM Headless-utveckling genom att implementera ett enkelt projekt för att visa AEM headless-innehåll.
