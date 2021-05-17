@@ -2,11 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-translation-type: tm+mt
-source-git-commit: d2b0fa9448ec3c1150d3c35860ffddb9e4d60d3e
+source-git-commit: 3b89e701e080f27f490a6c8a7bb38792c07d6abc
 workflow-type: tm+mt
-source-wordcount: '2729'
-ht-degree: 46%
+source-wordcount: '2769'
+ht-degree: 45%
 
 ---
 
@@ -54,6 +53,8 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 * Författarens *inmatningsfas* kommer att skalas ned för hela författardriftsättningen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör fasen *Inmatning*.
 
 * När du använder `Amazon S3` eller `Azure` som datalager i AEM, bör datalagret konfigureras så att de lagrade blobbarna inte kan tas bort (skräpsamling). Detta garanterar indexdataintegritet och om detta inte konfigureras på det här sättet kan det leda till misslyckade extraheringar på grund av att dessa indexdata saknar integritet.
+
+* Om du använder anpassade index måste du se till att konfigurera anpassade index med noden `tika` innan du kör verktyget Innehållsöverföring. Mer information finns i [Förbereda den nya indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#preparing-the-new-index-definition).
 
 ## Tillgänglighet {#availability}
 
