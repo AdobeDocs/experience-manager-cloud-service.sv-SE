@@ -1,16 +1,15 @@
 ---
 title: Noterbara ändringar i [!DNL Adobe Experience Manager Assets] som a [!DNL Cloud Service]
 description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [!DNL Experience Manager] as a [!DNL Cloud Service] jämfört med [!DNL Adobe Experience Manager 6.5.
-feature: Release Information
+feature: Versionsinformation
 role: Business Practitioner,Leader,Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 70068609e51f96c010204b8915593a52f610aded
+exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
+source-git-commit: bcb747517595943e1ed65d19424f002136877903
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
 
 ---
-
 
 # Nollbara ändringar i [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#notable-changes}
 
@@ -53,7 +52,7 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 |-----|-----|-----|
 | [Identifiering av duplicerade resurser](/help/assets/manage-digital-assets.md#detect-duplicate-assets) | Fungerar annorlunda. | Se [hur det fungerade i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html). |
 | [För FPO-återgivningar (Placement Only)](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/configure-aem-assets-for-asset-link.ug.html#configfporendition) | Fungerar annorlunda |  |
-| Återskrivning av metadata | Stöds inte. | Se [metadatatillbakaskrivning i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/xmp-writeback.html) |
+| Återskrivning av metadata | Fungerar annorlunda | Inaktiverad som standard. Aktivera motsvarande startprogram för arbetsflödet om det behövs. Återskrivning hanteras av resursmikrotjänster. |
 | Bearbetning av resurser som överförts med hjälp av Package Manager | Kräver manuellt ingripande. | Bearbeta manuellt med åtgärden **[!UICONTROL Reprocess Asset]**. |
 | MIME-typidentifiering | Stöds inte. | Om du överför en digital resurs utan ett tillägg eller med ett felaktigt tillägg kanske den inte bearbetas som du vill. Användarna kan fortfarande lagra de binära filerna utan filtillägg i DAM. Se [MIME-typdetektering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/detect-asset-mime-type-with-tika.html). |
 | Generering av deltillgångar för sammansatta tillgångar | Stöds inte. | Beroende användningsfall uppfylls inte. Anteckningar av flersidiga PDF-filer påverkas till exempel. Se [Skapa delresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets). |
@@ -66,10 +65,10 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 >Följande resurser är tillgängliga för [!DNL Experience Manager] som [!DNL Cloud Service]:
 >
 >* [Lista över borttagna och borttagna funktioner](/help/release-notes/deprecated-removed-features.md)
->* [En introduktion](/help/overview/introduction.md)
->* [Vad är nytt och annorlunda?](/help/overview/what-is-new-and-different.md)
->* [Arkitekturen](/help/core-concepts/architecture.md)
->* [Betydande ändringar](/help/release-notes/aem-cloud-changes.md)
->* [Betydande ändringar [!DNL Sites]](/help/sites-cloud/sites-cloud-changes.md)
->* [Videosjälvstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
+* [En introduktion](/help/overview/introduction.md)
+* [Vad är nytt och annorlunda?](/help/overview/what-is-new-and-different.md)
+* [Arkitekturen](/help/core-concepts/architecture.md)
+* [Betydande ändringar](/help/release-notes/aem-cloud-changes.md)
+* [Noterbara ändringar [!DNL Sites]](/help/sites-cloud/sites-cloud-changes.md)
+* [Videosjälvstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 
