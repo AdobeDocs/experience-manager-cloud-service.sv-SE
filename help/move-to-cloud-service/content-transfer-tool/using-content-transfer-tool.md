@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: 3b89e701e080f27f490a6c8a7bb38792c07d6abc
+source-git-commit: 9fdc139f5a945de931a2bebb95e5ea006e5b91be
 workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 45%
+source-wordcount: '2762'
+ht-degree: 43%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 45%
 
 Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder Content Transfer Tool:
 
-* Lägsta systemkrav för Content Transfer Tool är AEM 6.3 + och JAVA 8. Om du har en tidigare AEM-version måste du uppgradera din innehållsdatabas till AEM 6.5 för att kunna använda Content Transfer Tool.
+* Lägsta systemkrav för Content Transfer Tool är AEM 6.3 + och JAVA 8. Om du har en lägre AEM måste du uppgradera ditt innehållsarkiv till AEM 6.5 för att kunna använda verktyget för innehållsöverföring.
 
-* Java måste konfigureras i AEM så att kommandot `java` kan köras av den användare som startar AEM.
+* Java måste vara konfigurerat i AEM så att kommandot `java` kan köras av den användare som startar AEM.
 
 * Vi rekommenderar att du avinstallerar äldre versioner av verktyget Innehållsöverföring när du installerar version 1.3.0 eftersom det har skett en stor förändring i arkitekturen i verktyget. Med 1.3.0 bör du också skapa nya migreringsuppsättningar och köra extrahering och förtäring på nytt för de nya migreringsuppsättningarna.
 
@@ -38,7 +38,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Åtkomsttoken kan upphöra att gälla regelbundet antingen efter en viss tidsperiod eller efter att Cloud Servicens miljö har uppgraderats. Om åtkomsttoken har upphört att gälla kan du inte ansluta till Cloud Servicen och du måste hämta den nya åtkomsttoken. Statusikonen som är kopplad till en befintlig migreringsuppsättning ändras till ett rött moln och ett meddelande visas när du hovrar över den.
 
-* Innehållsöverföringsverktyget utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer t.ex. inte mellan publicerat och opublicerat innehåll när innehållet hämtas till en publiceringsmiljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. Användaren kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Vi rekommenderar att CTT installeras som källförfattarinstans när innehåll flyttas till målförfattarinstansen och att CTT installeras på källpubliceringsinstansen för att flytta innehållet till målpubliceringsinstansen. På liknande sätt installeras CTT på källpubliceringsinstansen för att flytta innehållet till målpubliceringsinstansen.
+* Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer till exempel inte mellan publicerat och opublicerat innehåll när innehåll hämtas till en publiceringsmiljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. Användaren kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Vi rekommenderar att CTT installeras på källinstansen Author för att flytta innehåll till målinstansen Author när du flyttar innehåll till en Production-instans och att CTT på källinstansen av Publish installeras för att flytta innehåll till målpubliceringsinstansen.
 
 * De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. Processen *Extrahering* kopierar hela `/home` till migreringsuppsättningen och processen *Ing* kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna. Om du vill mappa befintliga användare och grupper automatiskt till deras IMS-ID:n läser du [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration).
 
@@ -50,7 +50,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
       * Miljötyp (Stage eller Production) som du vill importera data till.
       * Program-ID.
 
-* Författarens *inmatningsfas* kommer att skalas ned för hela författardriftsättningen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör fasen *Inmatning*.
+* *Inmatningsfasen* för författaren skalas ned för hela författardistributionen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör fasen *Inmatning*.
 
 * När du använder `Amazon S3` eller `Azure` som datalager i AEM, bör datalagret konfigureras så att de lagrade blobbarna inte kan tas bort (skräpsamling). Detta garanterar indexdataintegritet och om detta inte konfigureras på det här sättet kan det leda till misslyckade extraheringar på grund av att dessa indexdata saknar integritet.
 
@@ -145,7 +145,7 @@ Mer information finns i [Användarmappningsverktyget](https://experienceleague.a
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/04-item-selection-and-quick-actions.png)
 
-   Alla befintliga migreringsuppsättningar på den här skärmen visas på sidan *Overview* med aktuell status och statusinformation. Du kan se några av dessa ikoner som beskrivs nedan.
+   Alla befintliga migreringsuppsättningar på den här skärmen visas på sidan *Översikt* med aktuell status- och statusinformation. Du kan se några av dessa ikoner som beskrivs nedan.
 
    * Ett *rött moln* anger att du inte kan slutföra extraheringsprocessen.
    * Ett *grönt moln* anger att du kan slutföra extraheringsprocessen.
