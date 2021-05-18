@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: 4524c92a-8f19-497a-b4f2-c3e23f555d37
-source-git-commit: 3554c4a4ea1858ea5b4ffbe0fd223a540261cb5c
+source-git-commit: 83ed6295d2b29581025f5410236f2618ceb59012
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,13 @@ Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är 
 * Förstå AEM headless-funktioner och hur de fungerar tillsammans för att leverera en headless-upplevelse.
 * Har möjlighet att ta de första stegen för att implementera ditt första AEM headless-projekt.
 
-## Den Headless Journey {#the-journey}
+## Målgrupp {#audience}
+
+Den här resan är utformad för utvecklarprofiler och innehåller krav, steg och tillvägagångssätt för ett AEM Headless-projekt ur utvecklarens perspektiv. Resan kommer att definiera ytterligare personligheter som utvecklaren måste interagera med för ett framgångsrikt projekt, men utgångspunkten för resan är utvecklarens.
+
+Information i den här resan kan förstås vara användbar för andra personer, men viss information kommer att vara överflödig för vissa roller. Stanna kvar och vänta på kommande resor som omfattar fler roller.
+
+## Headless Developer Journey {#the-journey}
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om AEM och länkar till detaljerad teknisk dokumentation.
 
