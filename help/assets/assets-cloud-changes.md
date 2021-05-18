@@ -4,9 +4,9 @@ description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [
 feature: Versionsinformation
 role: Business Practitioner,Leader,Architect,Administrator
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: bcb747517595943e1ed65d19424f002136877903
+source-git-commit: 1fa5b6e183cf9c292cd5485e20a2406576a40319
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 
 ## Paritet med [!DNL Experience Manager] 6.5 {#cloud-service-feature-status}
 
-[!DNL Experience Manager] som en  [!DNL Cloud Service] introduktion till många nya funktioner och fler prestandaförbättringar för befintliga funktioner. När du flyttar från [!DNL Experience Manager] 6.5 till [!DNL Experience Manager] som [!DNL Cloud Service] kan du dock märka att vissa funktioner antingen fungerar annorlunda, inte är tillgängliga eller är delvis tillgängliga. Nedan följer en lista över sådana funktioner:
+[!DNL Experience Manager] som en  [!DNL Cloud Service] introduktion till många nya funktioner och fler prestandaförbättringar för befintliga funktioner. När du flyttar från [!DNL Experience Manager] 6.5 till [!DNL Experience Manager] som [!DNL Cloud Service] kan du dock märka att vissa funktioner antingen fungerar annorlunda, inte är tillgängliga eller är delvis tillgängliga. Nedan följer en lista över sådana funktioner. Se även [borttagna och borttagna funktioner](/help/release-notes/deprecated-removed-features.md).
 
 | Funktion eller användningsfall | Status i [!DNL Experience Manager] som [!DNL Cloud Service] | Kommentarer |
 |-----|-----|-----|
