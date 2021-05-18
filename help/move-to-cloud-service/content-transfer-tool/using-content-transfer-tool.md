@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: 74816a99a74b86330efb5ff8ca37b4fe64fdbe8c
+source-git-commit: e0c6a79e6a088423cbc47046f285fb1ac241c476
 workflow-type: tm+mt
-source-wordcount: '2762'
-ht-degree: 42%
+source-wordcount: '2721'
+ht-degree: 43%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 42%
 >title="Viktigt att tänka på när du använder verktyget Innehållsöverföring"
 >abstract="Granska viktiga aspekter av att använda verktyget för innehållsöverföring, inklusive Java- och AEM-versioner, datastortyper som stöds, användargrupper med mera."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en#best-practices" text="God praxis och riktlinjer"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#availability" text="Ladda ned innehållsöverföringsverktyg"
 
 Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder Content Transfer Tool:
 
@@ -160,7 +159,6 @@ Mer information finns i [Användarmappningsverktyget](https://experienceleague.a
 >id="aemcloud_ctt_extraction"
 >title="Innehållsextrahering"
 >abstract="Extrahering avser att extrahera innehåll från AEM till ett temporärt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#ingestion-process" text="Inmatningsprocess"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#top-up-extraction-process" text="Extrahering uppifrån"
 
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
@@ -207,8 +205,7 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_ingestion"
 >title="Innehållsintag"
->abstract="Inmatningen hänvisar till inmatning av innehåll från *migreringsuppsättningen* till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#extraction-process" text="Extraheringsprocess"
+>abstract="Inmatning avser att hämta innehåll från migreringsuppsättningen till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#top-up-ingestion-process" text="Uppdatera inmatning"
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
