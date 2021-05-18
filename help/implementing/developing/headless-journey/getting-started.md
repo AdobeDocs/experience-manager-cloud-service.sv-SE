@@ -4,14 +4,13 @@ description: I den här delen av AEM Headless Developer Journey kan du läsa om 
 hide: true
 hidefromtoc: true
 index: false
-translation-type: tm+mt
-source-git-commit: 9fb18dbe60121f46dba1e11d4133e5264a6d538d
+exl-id: a39877d9-f5a1-48f0-a021-cc9849bd8ecb
+source-git-commit: 83ed6295d2b29581025f5410236f2618ceb59012
 workflow-type: tm+mt
 source-wordcount: '3087'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med AEM Headless som Cloud Service {#getting-started}
 
@@ -31,7 +30,7 @@ I det föregående dokumentet om den AEM headless-resan [Lär dig mer om CMS Hea
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du kan använda AEM för att implementera en headless-lösning.
 
-## Mål {#objective}
+## Syfte {#objective}
 
 Det här dokumentet hjälper dig att förstå AEM Headless i ditt projekt. När du har läst bör du:
 
@@ -63,7 +62,8 @@ Replikering innebär att överföra innehåll från författarinstansen till pub
 På den enklaste nivån krävs följande steg för att skapa digitala upplevelser i AEM:
 
 1. Dina innehållsförfattare skapar ditt headless-innehåll i författarinstansen.
-1. När innehållet är klart replikeras det till publiceringsinstansen. API:er kan sedan anropas för att hämta det här innehållet.
+1. När innehållet är klart replikeras det till publiceringsinstansen.
+1. API:er kan sedan anropas för att hämta det här innehållet.
 
 AEM Headless bygger vidare på denna tekniska grund med kraftfulla verktyg för att hantera headless-innehåll, som [beskrivs i nästa avsnitt.](#aem-headless-basics)
 
@@ -173,7 +173,7 @@ Innehållsförfattare skapar och hanterar innehåll som levereras utan problem a
 
 Innehållsförfattare bör ha följande i åtanke:
 
-#### Planera för lokalisering {#localization}
+#### Plan för lokalisering {#localization}
 
 Planera för översättning och lokalisering i början av projektet. Överväg&quot;Internationalization Project Manager&quot; som en separat person vars ansvar är att definiera vilket innehåll som ska översättas och vad som inte ska översättas och vilket översatt innehåll som ska kunna ändras av regionala eller lokala innehållsproducenter.
 
@@ -227,7 +227,7 @@ Ett användbart sätt att definiera modeller för innehållsfragment är att ska
 
 Eftersom innehållsförfattarna interagerar med modellerna kontinuerligt när de skapar nytt innehåll kan man genom att anpassa modellerna till användargränssnittet visualisera den digitala upplevelsen. Om du går ett steg längre kan du tilldela ikoner till de modeller för innehållsfragment som representerar UX-elementet så att författarna intuitivt kan välja rätt modell baserat på visuella tecken.
 
-#### Developer {#developer}
+#### Utvecklare {#developer}
 
 Utvecklarna ansvarar för att sammanfoga det material som skapas direkt AEM till konsumenten, som ofta kan vara ett ensidigt program (SPA), ett progressivt webbprogram (PWA), en webbshop eller en annan tjänst som inte är AEM.
 
