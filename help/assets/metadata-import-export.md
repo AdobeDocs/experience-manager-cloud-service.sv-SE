@@ -4,14 +4,13 @@ description: I den här artikeln beskrivs hur du importerar och exporterar flera
 contentOwner: AG
 feature: Metadata
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+exl-id: fb70a068-3ba3-4459-952d-79155d286c42
+source-git-commit: 1dc639265570b54c42d04f61178d8d2faec1b433
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '644'
 ht-degree: 11%
 
 ---
-
 
 # Importera och exportera resursers metadata gruppvis {#import-and-export-asset-metadata-in-bulk}
 
@@ -19,7 +18,7 @@ Med AEM Assets kan du importera resursmetadata i grupp med hjälp av en CSV-fil.
 
 ## Importera metadata {#import-metadata}
 
-Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av XMP återskrivningsaktivitet med hjälp av objektmikrotjänster. Adobe rekommenderar att du planerar att göra en gruppåtgärd under resurssnål serveranvändning så att prestanda för andra användare inte påverkas.
+Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av återskrivningsaktiviteten för metadata med hjälp av objektmikrotjänster. Adobe rekommenderar att du planerar att göra en gruppåtgärd under resurssnål serveranvändning så att prestanda för andra användare inte påverkas.
 
 >[!NOTE]
 >
@@ -35,7 +34,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
    | Batchstorlek | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
    | Fältavgränsare | Standardvärdet är `,` (ett komma). Du kan ange andra tecken. |
    | Flervärdesavgränsare | Avgränsare för metadatavärden. Standardvärdet är `|`. |
-   | Starta arbetsflöden | Falskt som standard. När värdet är `true` och standardinställningarna för startprogrammet används för arbetsflödet WriteBack för DAM-metadata (som skriver metadata till binära XMP). Om du aktiverar startarbetsflöden blir systemet långsammare. |
+   | Starta arbetsflöden | Falskt som standard. När inställningen är `true` och standardinställningarna för startprogrammet används för arbetsflödet WriteBack för DAM-metadata (som skriver metadata till binära XMP). Om du aktiverar startarbetsflöden blir systemet långsammare. |
    | Kolumnnamn för resurssökväg | Definierar kolumnnamnet för CSV-filen med resurser. |
 
 1. Klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
