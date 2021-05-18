@@ -4,14 +4,13 @@ description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) f
 contentOwner: AG
 feature: Metadata
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+exl-id: fd9af408-d2a3-4c7a-9423-c4b69166f873
+source-git-commit: 1dc639265570b54c42d04f61178d8d2faec1b433
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '978'
 ht-degree: 16%
 
 ---
-
 
 # XMP-metadata {#xmp-metadata}
 
@@ -75,9 +74,7 @@ XMP ger dig möjlighet att lägga till en `xml:lang`-egenskap i textegenskaper f
 ## XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
 Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen.
-När du ändrar metadata för en resurs i Resurser eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin.
-
-Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder namnutrymmet `jcr`, d.v.s. egenskapen `dc:title` skrivs tillbaka, men egenskapen `mytitle` skrivs inte tillbaka.
+När du ändrar metadata för en resurs från [!DNL Assets] eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin. Med återskrivningsfunktionen kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder namnutrymmet `jcr`, d.v.s. egenskapen `dc:title` skrivs tillbaka, men egenskapen `mytitle` skrivs inte tillbaka.
 
 Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen `Classic Leather` till `Nylon`.
 
@@ -93,7 +90,13 @@ I det här fallet sparar [!DNL Assets] ändringarna av egenskapen **[!UICONTROL 
 
 ### Aktivera XMP-tillbakaskrivning {#enable-xmp-writeback}
 
-[!UICONTROL DAM Metadata Writeback] arbetsflödet används för att skriva tillbaka metadata för en resurs. Så här aktiverar du tillbakaskrivning:
+[!UICONTROL DAM Metadata Writeback] arbetsflödet används för att skriva tillbaka metadata för en resurs. Om du vill aktivera tillbakaskrivning följer du någon av följande tre metoder:
+
+* Använd startprogram.
+* Starta `DAM MetaData Writeback`-arbetsflödet manuellt.
+* Konfigurera arbetsflödet som en del av efterbearbetningen.
+
+Så här använder du Launcher:
 
 1. Som administratör ska du gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
 1. Markera [!UICONTROL Launcher] som **[!UICONTROL Workflow]**-kolumnen visar **[!UICONTROL DAM MetaData Writeback]**. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
@@ -102,16 +105,14 @@ I det här fallet sparar [!DNL Assets] ändringarna av egenskapen **[!UICONTROL 
 
 1. Välj **[!UICONTROL Activate]** på sidan **[!UICONTROL Launcher Properties]**. Klicka på **[!UICONTROL Save & Close]**.
 
-Om du bara vill använda det här arbetsflödet på en resurs en gång, använder du arbetsflödet [!UICONTROL DAM Metadata Writeback] från den vänstra listen. Om du vill använda arbetsflödet på alla överförda resurser lägger du till arbetsflödet i en efterbearbetningsprofil.
+Om du vill använda arbetsflödet för en resurs manuellt bara en gång, använder du arbetsflödet [!UICONTROL DAM Metadata Writeback] från den vänstra listen.
+
+Om du vill använda arbetsflödet på alla överförda resurser lägger du till arbetsflödet i en efterbearbetningsprofil.
 
 <!-- Commenting for now. Need to document how to enable metadata writeback. See CQDOC-17254.
 
 ### Enable XMP writeback {#enable-xmp-writeback}
--->
 
-<!-- asgupta, Engg: Need attention here to update the configuration manager changes. -->
-
-<!-- 
 To enable the metadata changes to be propagated to the renditions of the asset when uploading it, modify the **[!UICONTROL Adobe CQ DAM Rendition Maker]** configuration in Configuration Manager.
 
 1. To open Configuration Manager, access `https://[aem_server]:[port]/system/console/configMgr`.
