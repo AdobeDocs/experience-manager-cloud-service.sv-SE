@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: f79b5ada-8f59-4706-9f90-bc63301b2b7d
-source-git-commit: 309fae113f98111e8dc548226a7fba1b72f16248
+source-git-commit: a2588f420258522cc3a4b7b10f4ab52f2dd669d8
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1986'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,23 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 * Lär dig hur du skyddar och skalar programmet innan du startar programmet.
 * Lär dig övervaka prestanda- och felsökningsproblem.
 
-Du bör fortsätta din AEM resa utan att ta hjälp av dokumentet [Post Launch](post-launch.md) där du får lära dig hur du kan behålla din headless-upplevelse.
+## Resan slutar - eller gör det? {#journey-ends}
+
+Grattis! Du har slutfört AEM Headless Developer Journey! Nu bör du förstå:
+
+* Skillnaden mellan headless och headful content delivery.
+* AEM headless-funktioner.
+* Organisera och AEM Headless-projekt.
+* Skapa innehåll utan rubriker i AEM.
+* Så här hämtar och uppdaterar du headless-innehåll i AEM.
+* Så här lever du med ett AEM Headless-projekt.
+* Vad gör man efter det att de publicerats?
+
+Antingen har du redan startat ditt första AEM Headless-projekt eller så har du nu all den kunskap du behöver för att göra det. Bra jobbat!
+
+De headless butikerna i AEM behöver inte stanna här. I [Getting Started-delen av kundresan](getting-started.md#integration-levels) diskuterade vi kort hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan också stöder hybridmodeller som kombinerar fördelarna med båda.
+
+Om den här typen av flexibilitet är något du behöver för ditt projekt kan du fortsätta med den valfria, extra delen av resan, [Så här skapar du enkelsidiga program (SPA) med AEM.](create-spa.md)
 
 ## Ytterligare resurser {#additional-resources}
 
