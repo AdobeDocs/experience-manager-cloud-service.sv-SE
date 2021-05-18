@@ -5,10 +5,9 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Utvecklarverktyg
 role: Developer, Architect
-translation-type: tm+mt
-source-git-commit: 77668ff0937c2af24d73da7f8d6b3c8956acb350
+source-git-commit: a2588f420258522cc3a4b7b10f4ab52f2dd669d8
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '970'
 ht-degree: 30%
 
 ---
@@ -83,7 +82,6 @@ ht-degree: 30%
       + [Så här uppdaterar du innehåll via AEM resurser-API:er](developing/headless-journey/update-your-content.md)
       + [Hur man sammanför allt](developing/headless-journey/put-it-all-together.md)
       + [Så här lever du med ditt headless-program](developing/headless-journey/go-live.md)
-      + [Efter start](developing/headless-journey/post-launch.md)
       + [Valfritt - Så här skapar du enkelsidiga program med AEM](developing/headless-journey/create-spa.md)
    + [Headless and Headless in AEM](developing/headful-headless.md)
    + Utveckling AEM hög {#full-stack}
