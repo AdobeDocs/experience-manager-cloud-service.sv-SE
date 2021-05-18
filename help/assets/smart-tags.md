@@ -5,10 +5,9 @@ contentOwner: AG
 feature: Smarta taggar,Taggar
 role: Administrator,Business Practitioner
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-translation-type: tm+mt
-source-git-commit: 2633a8fdd8301a38cd044ba822494ed54c564863
+source-git-commit: a1451147d50eb6166841ae809b49bdb95cc197f8
 workflow-type: tm+mt
-source-wordcount: '2353'
+source-wordcount: '2309'
 ht-degree: 5%
 
 ---
@@ -30,8 +29,8 @@ I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Ado
 
 Du kan tagga följande typer av resurser:
 
-* **Bilder**: Bilder i många format taggas med Adobe Sensei smarta innehållstjänster. Du [skapar en utbildningsmodell](#train-model) och [använder smarta taggar](#tag-assets) på bilder. Smarta taggar används på de filtyper som stöds och som genererar återgivningar i JPG- och PNG-format.
-* **Textbaserade resurser**:  [!DNL Experience Manager Assets] taggar automatiskt de textbaserade resurserna som stöds när de överförs. Läs mer om [taggning av textbaserade resurser](#smart-tag-text-based-assets).
+* **Bilder**: Bilder i många format taggas med Adobe Sensei smarta innehållstjänster. Du [skapar en utbildningsmodell](#train-model) och sedan taggas de överförda bilderna automatiskt. Smarta taggar används på de filtyper som stöds och som genererar återgivningar i JPG- och PNG-format.
+* **Textbaserade resurser**:  [!DNL Experience Manager Assets] taggar automatiskt de textbaserade resurserna som stöds när de överförs.
 * **Videomaterial**: Videotaggning är aktiverat som standard i  [!DNL Adobe Experience Manager] som  [!DNL Cloud Service]en. [Videor ](/help/assets/smart-tags-video-assets.md) taggas automatiskt när du överför nya videoklipp eller bearbetar om befintliga.
 
 | Bilder (MIME-typer) | Textbaserade resurser (filformat) | Videomaterial (filformat och kodekar) |
@@ -62,14 +61,6 @@ Du kan tagga följande typer av resurser:
 * [Tagga dina digitala resurser](#tag-assets).
 * [Hantera taggar och sökningar](#manage-smart-tags-and-searches).
 
-<!-- TBD: Is there a link to buy SCS or initiate a sales call. How are AIO services sold? Provide a CTA here to buy or contacts Sales team. -->
-
-## Tagga textbaserade resurser med smarta taggar {#smart-tag-text-based-assets}
-
-De textbaserade resurserna som stöds taggas automatiskt av [!DNL Experience Manager Assets] när de överförs. Den är aktiverad som standard. Hur effektiva smarta taggar är beror inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text. För textbaserade resurser är smarta taggar nyckelorden som visas i texten men de som bäst beskriver resursen. För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger emellertid en dedikerad, strukturerad och prioriterad sökfaktor som används för att förbättra resursidentifieringen jämfört med ett fullständigt sökindex.
-
-För bilder och videoklipp baseras de smarta taggarna på vissa visuella proportioner.
-
 ## Förstå taggmodeller och riktlinjer {#understand-tag-models-guidelines}
 
 En taggmodell är en grupp relaterade taggar som är kopplade till olika visuella aspekter av bilder som taggas. Taggar är kopplade till de olika visuella aspekterna av bilder så att taggarna när de används hjälper dig att söka efter särskilda typer av bilder. En skosamling kan till exempel ha olika taggar, men alla taggar är relaterade till skor och kan tillhöra samma taggmodell. När märkorden används kan de hjälpa dig att hitta olika typer av skor, till exempel efter färg, design eller användning. Om du vill förstå hur en utbildningsmodell i [!DNL Experience Manager] ser ut visar du en utbildningsmodell som en enhet på den översta nivån som består av en grupp med manuellt tillagda taggar och exempelbilder för varje tagg. Varje tagg kan användas exklusivt på en bild.
@@ -86,7 +77,7 @@ Kontrollera att bilderna i kursuppsättningen överensstämmer med följande rik
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/coherence.png)
 
-**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några men relativt olika exempel så att AEM lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ. För taggen *model-down-pose* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan för att tjänsten ska kunna identifiera liknande bilder mer exakt under taggningen.
+**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några exempel som är ganska olika, men som ändå är ganska olika, så att [!DNL Experience Manager] lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ. För taggen *model-down-pose* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan för att tjänsten ska kunna identifiera liknande bilder mer exakt under taggningen.
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/coverage_1.png)
 
@@ -149,10 +140,6 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 1. Granska informationen i rapporten. Rapporten visar träningsstatusen för de taggar du har tränat. Den gröna färgen i kolumnen **[!UICONTROL Training Status]** anger att tjänsten Smarta taggar har tränats för taggen. Gul färg anger att tjänsten inte är helt tränad för en viss tagg. I det här fallet lägger du till fler bilder med just den taggen och kör träningsarbetsflödet för att träna tjänsten helt för taggen. Om du inte ser dina taggar i den här rapporten kör du utbildningsarbetsflödet igen för de här taggarna.Taggar
 1. Om du vill hämta rapporten markerar du den i listan och klickar på **[!UICONTROL Download]** i verktygsfältet. Rapporten hämtas som ett [!DNL Microsoft Excel]-kalkylblad.
 
-## Tagga resurser {#tag-assets}
-
-När du har utbildat tjänsten Smarta taggar taggas de överförda resurserna automatiskt. [!DNL Experience Manager] använder lämpliga taggar i nära realtid. Du kan tillämpa taggningsarbetsflödet på begäran eller schemalägga det att köras periodiskt. Arbetsflödet för taggning gäller både resurser och mappar.
-
 <!--
 ### Tag assets from the workflow console {#tagging-assets-from-the-workflow-console}
 
@@ -188,6 +175,14 @@ När du har utbildat tjänsten Smarta taggar taggas de överförda resurserna au
 [!DNL Experience Manager] can automatically tag the assets that users upload to DAM. To do so, administrators configure a workflow to add an available step that tags assets. See [how to enable Smart Tags for uploaded assets](/help/assets/smart-tags-configuration.md#enable-smart-tagging-for-uploaded-assets).
 -->
 
+## Tagga resurser med smarta taggar {#tag-assets}
+
+Alla typer av resurser som stöds taggas automatiskt av [!DNL Experience Manager Assets] när de överförs. Taggning är aktiverat som standard. [!DNL Experience Manager] använder lämpliga taggar i nära realtid.  <!-- TBD: You can also apply the tagging workflow on-demand. The workflow applies to both, assets and folders. -->
+
+För bilder och videoklipp baseras smarta taggar på vissa visuella proportioner.
+
+För textbaserade resurser beror effekten av smarta taggar inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text. För textbaserade resurser är smarta taggar nyckelorden som visas i texten men de som bäst beskriver resursen. För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger emellertid en dedikerad, strukturerad och prioriterad sökfaktor som används för att förbättra resursidentifieringen jämfört med ett fullständigt sökindex.
+
 ## Hantera smarta taggar och resurssökningar {#manage-smart-tags-and-searches}
 
 Du kan strukturera smarta taggar om du vill ta bort felaktiga taggar som kan ha tilldelats ert varumärkesobjekt, så att endast de mest relevanta taggarna visas.
@@ -212,9 +207,9 @@ Så här modererar du smarta taggar för dina resurser:
 
 1. Navigera till sidan [!UICONTROL Properties] för resursen. Observera att taggen som du befordrade har hög relevans och därför visas högre i sökresultaten.
 
-### Förstå AEM sökresultat med smarta taggar {#understand-search}
+### Förstå [!DNL Experience Manager]-sökresultat med smarta taggar {#understand-search}
 
-Som standard kombineras söktermerna AEM en `AND`-sats. Om du använder smarta taggar ändras inte standardbeteendet. Om du använder smarta taggar läggs en `OR`-sats till för att hitta någon av söktermerna i de använda smarta taggarna. Du kan till exempel söka efter `woman running`. Resurser med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som är taggad med antingen `woman` eller `running` med smarta taggar visas i en sådan sökfråga. Sökresultaten är en kombination av
+Som standard kombineras söktermerna i [!DNL Experience Manager]-sökningen med en `AND`-sats. Om du använder smarta taggar ändras inte standardbeteendet. Om du använder smarta taggar läggs en `OR`-sats till för att hitta någon av söktermerna i de använda smarta taggarna. Du kan till exempel söka efter `woman running`. Resurser med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som är taggad med antingen `woman` eller `running` med smarta taggar visas i en sådan sökfråga. Sökresultaten är en kombination av
 
 * resurser med `woman` och `running` nyckelord i metadata.
 
@@ -226,12 +221,12 @@ Sökresultaten som matchar alla söktermer i metadatafält visas först, följt 
 1. matchar `woman running` i smarta taggar.
 1. matchar `woman` eller `running` i smarta taggar.
 
-## Taggningsbegränsningar och metodtips {#limitations}
+## Begränsningar för taggning och bästa praxis {#limitations}
 
 Förbättrad smart taggning bygger på inlärningsmodeller för bilder och taggar för dessa. Dessa modeller är inte alltid perfekta när det gäller att identifiera taggar. Den aktuella versionen av smarta taggar har följande begränsningar:
 
-* Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
-* Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
+* Oförmåga att identifiera små skillnader i bilder. Exempel: skjortor som inte passar lika bra som vanliga.
+* Oförmåga att identifiera taggar baserat på små mönster eller delar av en bild. Till exempel logotyper på skjortor.
 * Taggning stöds på de språk som stöds av [!DNL Experience Manager]. En lista över språk finns i [Versionsinformation för tjänsten Smart Content.](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html#languages).
 * Taggar som inte hanteras realistiskt är relaterade till:
 
