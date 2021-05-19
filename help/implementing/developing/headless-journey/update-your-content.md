@@ -5,10 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: 8d133b78-ca36-4c3b-815d-392d41841b5c
-translation-type: tm+mt
-source-git-commit: 4a36cd3206784c0e4e3ed3d7007c83f44f1d5ee0
+source-git-commit: 7c30a7415cc424e7f417d92bad9eeb01877994d2
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1117'
 ht-degree: 2%
 
 ---
@@ -31,7 +30,7 @@ I det föregående dokumentet på den AEM resan [Hur du får åtkomst till ditt 
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du uppdaterar det befintliga headless-innehållet i AEM via REST API.
 
-## Mål {#objective}
+## Syfte {#objective}
 
 * **Målgrupp**: Avancerat
 * **Mål**: Lär dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment:
@@ -215,7 +214,7 @@ Associated content is currently not exposed.
 
 ## Använda Resurser REST API {#using-aem-assets-rest-api}
 
-### Öppna {#access}
+### Åtkomst {#access}
 
 Resursens REST API använder slutpunkten `/api/assets` och kräver att resursens sökväg har åtkomst till den (utan inledande `/content/dam`).
 
@@ -322,7 +321,11 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 * Have experience with sample code and know how the API works in practice.
 -->
 
-Du bör fortsätta din AEM resa utan att behöva besöka dokumentet nästa gång [Placera allt tillsammans - Din app och ditt innehåll i AEM Headless](put-it-all-together.md) där du får lära dig hur du tar ditt AEM Headless-projekt och förbereder det för publicering.
+<!-- The "How to put it all together" page isn't going to be published until the first public release of the Headless SDK. Temporarily commenting out the reference below. -->
+
+<!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
+
+Du bör fortsätta din AEM resa utan trassel genom att nästa gång granska dokumentet [How to Go Live with Your Headless Application](go-live.md) där du faktiskt tar ditt AEM Headless-projekt live!
 
 [Hur du skapar enkelsidiga program (SPA) med ](create-spa.md) AEM visar också hur du kan skapa redigerbara SPA med AEM SPA Editor-ramverk, samt hur du integrerar externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
 
