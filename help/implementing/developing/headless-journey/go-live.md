@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: f79b5ada-8f59-4706-9f90-bc63301b2b7d
-source-git-commit: 4c743eede23f09f285d9da84b149226f7288fcc3
+source-git-commit: 7c30a7415cc424e7f417d92bad9eeb01877994d2
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig hu
 
 ## Berättelsen hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM resan utan rubriker, [How to Put All Together - Your App and Your Content in AEM Headless](put-it-all-together.md), lärde du dig att förbereda ett eget AEM headless-projekt för publicering, och du bör nu:
+I det föregående dokumentet om den AEM resan [Uppdatera ditt innehåll via AEM Assets API:er](update-your-content.md) lärde du dig att uppdatera ditt befintliga headless-innehåll i AEM via API, och du bör nu:
 
-* Förstå kraven för att publicera.
+* Förstå AEM Assets HTTP API.
 
-Den här artikeln bygger vidare på dessa grundläggande funktioner så att du förstår hur du faktiskt gör ditt AEM Headless-projekt tillgängligt.
+Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du förbereder ett eget AEM headless-projekt för publicering.
 
 ## Syfte {#objective}
 
@@ -151,13 +151,13 @@ För att användarna ska få bästa möjliga upplevelse när de använder det AE
 * Verifiera AEM statussidor för den aktuella tjänsttillgänglighetsstatusen
 * Få resultatrapporter
    * Leveransprestanda
-      * Snabbt (CDN) - kontrollera antal anrop, cachehastighet, felfrekvens, nyttolasttrafik
+      * CDN-prestanda (snabbt) - kontrollera antal anrop, cachehastighet, felfrekvens och nyttolasttrafik
       * Ursprungsservrar - antal anrop, felfrekvens, CPU-belastning, nyttolaststrafik
    * Författarprestanda
       * Kontrollera antal användare, förfrågningar och inläsning
 * Åtkomst till program- och utrymmesspecifika prestandarapporter
    * Kontrollera om de allmänna måtten är gröna/orange/röda när servern är på plats och identifiera sedan specifika appproblem
-   * Öppna samma rapporter ovan filtrerade till program/space (t.ex. Photoshop desktop, paywall osv.)
+   * Öppna samma rapporter ovan filtrerade till program eller utrymme (t.ex. Photoshop desktop, paywall)
    * Använd API:er för Splunk-logg för att få åtkomst till service- och programprestanda
    * Kontakta kundsupport om det finns andra problem.
 
@@ -181,15 +181,6 @@ Följ stegen nedan för att effektivt logga ett fel med support om du behöver m
 * Dokumentera ett sätt att återskapa problemet
 * Dokumentera innehållet som problemet återger med
 * Logga ett problem via AEM supportportal med rätt prioritet
-
-## What&#39;s Next {#what-is-next}
-
-Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
-
-* Förstå AEM innehållsreplikering och cachning.
-* Lär dig hur du konfigurerar de verktyg som krävs för att simulera publicering för ditt headless-program.
-* Lär dig hur du skyddar och skalar programmet innan du startar programmet.
-* Lär dig övervaka prestanda- och felsökningsproblem.
 
 ## Resan slutar - eller gör det? {#journey-ends}
 
