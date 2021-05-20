@@ -1,13 +1,13 @@
 ---
-title: Så här Live med ditt headless-program
+title: Så här Live med ditt Headless-program
 description: I den här delen av AEM Headless Developer Journey lär du dig hur du distribuerar ett headless-program live genom att ta din lokala kod i Git och flytta den till Cloud Manager Git för CI/CD-pipeline.
 hide: true
 hidefromtoc: true
 index: false
 exl-id: f79b5ada-8f59-4706-9f90-bc63301b2b7d
-source-git-commit: 9e06419f25800199dea92b161bc393e6e9670697
+source-git-commit: bc717c544bd4f0449d358b831a5132f85fa85e86
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ En komplett AEM består av en författare, en publiceringsversion och en utskick
 
 * **I författartjänsten** kan interna användare skapa, hantera och förhandsgranska innehåll.
 
-* **Publiceringstjänsten** betraktas som Live-miljön och är vanligtvis den slutanvändare interagerar med. Innehåll som har redigerats och godkänts av författartjänsten distribueras till publiceringstjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att ha produktionsversionen av programmet ansluten till en AEM Publish-tjänst.
+* **Publiceringstjänsten** betraktas som Live-miljön och är vanligtvis den slutanvändare interagerar med. Innehåll som har redigerats och tillämpats på Författartjänsten distribueras till Publiceringstjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att ha produktionsversionen av programmet ansluten till en AEM Publish-tjänst.
 
 * **Dispatcher** är en statisk webbserver som utökas med AEM. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
 
@@ -99,7 +99,7 @@ Den lokala utvecklingsmiljön består av tre huvudområden:
 1. Local AEM Runtime - lokala versioner av AEM författare och publiceringstjänster som ska användas för att distribuera kod från det AEM projektet
 1. Local Dispatcher Runtime - en lokal version av Apache htttpd-webbservern som innehåller Dispatcher-modulen
 
-När den lokala utvecklingsmiljön har konfigurerats kan du simulera innehåll som skickas till React-appen genom att distribuera en statisk nodserver lokalt.
+När den lokala utvecklingsmiljön har konfigurerats kan du simulera innehåll som skickas till React-programmet genom att distribuera en statisk nodserver lokalt.
 
 Mer information om hur du konfigurerar en lokal utvecklingsmiljö och alla beroenden som behövs för innehållsförhandsgranskning finns i [Produktionsdistributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/production-deployment.html?lang=en#prerequisites).
 
@@ -147,7 +147,7 @@ Du kan börja distribuera koden genom att utnyttja Cloud Managers CI/CD-pipeline
 
 För att användarna ska få bästa möjliga upplevelse när de använder det AEM headless-programmet är det viktigt att du övervakar nyckeltal enligt beskrivningen nedan:
 
-* Validera förhandsgransknings- och produktionsversioner av appen
+* Validera förhandsgransknings- och produktionsversioner av programmet
 * Verifiera AEM statussidor för den aktuella tjänsttillgänglighetsstatusen
 * Få resultatrapporter
    * Leveransprestanda
@@ -156,9 +156,9 @@ För att användarna ska få bästa möjliga upplevelse när de använder det AE
    * Författarprestanda
       * Kontrollera antal användare, förfrågningar och inläsning
 * Åtkomst till program- och utrymmesspecifika prestandarapporter
-   * Kontrollera om de allmänna måtten är gröna/orange/röda när servern är på plats och identifiera sedan specifika appproblem
-   * Öppna samma rapporter ovan filtrerade till program eller utrymme (t.ex. Photoshop desktop, paywall)
-   * Använd API:er för Splunk-logg för att få åtkomst till service- och programprestanda
+   * När servern är igång kontrollerar du om de allmänna måtten är gröna/orange/röda och identifierar sedan specifika programproblem
+   * Öppna rapporter som nämns ovan, men filtrera dem till programmet eller utrymmet (t.ex. Photoshop desktop, paywall)
+   * [Använd Splunk log-API:er ](/help/implementing/developing/introduction/logging.md#splunk-logs) för att få åtkomst till tjänsten och programmets prestanda
    * Kontakta kundsupport om det finns andra problem.
 
 ## Felsökning {#troubleshooting}
@@ -169,7 +169,7 @@ Följ dessa metodtips som ett allmänt tillvägagångssätt vid felsökning:
 
 * Validera funktionalitet och prestanda med förhandsgranskningsversionen av programmet
 * Validera funktionalitet och prestanda med programmets produktionsversion
-* Validera med JSON-förhandsvisningen i Content Fragment Editor
+* Validera med [JSON-förhandsvisningen](/help/assets/content-fragments/content-fragments-json-preview.md) i redigeraren för innehållsfragment
 * Inspect JSON i klientprogrammet för att kontrollera om det finns problem med klientprogram eller leverans
 * Inspect JSON använder GraphQL för att kontrollera om det finns problem med cachelagrat innehåll eller AEM
 
@@ -180,7 +180,7 @@ Följ stegen nedan för att effektivt logga ett fel med support om du behöver m
 * Ta skärmbilder av problemet, om det behövs
 * Dokumentera ett sätt att återskapa problemet
 * Dokumentera innehållet som problemet återger med
-* Logga ett problem via AEM supportportal med rätt prioritet
+* Logga ett problem via AEM supportportal med prioritet för programbehörigheter
 
 ## Resan slutar - eller gör det? {#journey-ends}
 
