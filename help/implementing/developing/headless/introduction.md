@@ -1,11 +1,11 @@
 ---
 title: Headless Development for AEM Sites as a Cloud Service
 description: Lär dig hur AEM som en Cloud Services kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API fungerar tillsammans så att du kan hantera upplevelserna centralt och leverera dem i olika kanaler.
-translation-type: tm+mt
-source-git-commit: e7ca6dc841ba777384be74021a27d523d530a956
+exl-id: 24300499-ae9c-49d0-aa25-f51e14d9cf79
+source-git-commit: 469579cfe10227ab22bbe055d4c503d8ea978150
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 0%
+source-wordcount: '489'
+ht-degree: 1%
 
 ---
 
@@ -47,28 +47,12 @@ AEM som Cloud Service är ett flexibelt verktyg för den headless-implementering
    * AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.
    * Direktleverans av innehåll är också möjligt med JSON-exporten för komponenten [Content Fragment Core Component.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
 
-## Headless Getting Started Guides {#getting-started}
+## Dina första steg med AEM Headless {#first-steps}
 
-Med de Headless Getting Started Guides kan du enkelt skapa, hantera och leverera upplevelser med AEM som Cloud Service i fem steg. Varje guide bygger vidare på det föregående, så vi rekommenderar att du tittar noga igenom dem i ordning.
+Det finns ett antal resurser som du kan använda för att komma igång med AEM headless-funktioner. De är avsedda för olika användningsområden, men ger alla en bra översikt över AEM rubrikfria funktioner.
 
-1. [Skapa en konfiguration](getting-started/create-configuration.md)
-1. [Skapa en innehållsfragmentmodell](getting-started/create-content-model.md)
-1. [Skapa en resursmapp](getting-started/create-assets-folder.md)
-1. [Skapa ett innehållsfragment](getting-started/create-content-fragment.md)
-1. [Åtkomst och leverans av innehållsfragment](getting-started/create-api-request.md)
-
-## Målgrupp {#audience}
-
-De åtgärder som beskrivs i [Headless Getting Started Guides](#getting-started) är nödvändiga för en grundläggande demonstration av AEM headless-funktioner. Alla som har administratörsåtkomst till en testinstans AEM kan följa dessa guider för att förstå headlessleverans i AEM, även om någon med utvecklarupplevelse är idealisk.
-
-I en produktionssituation kommer uppgifterna dock att utföras av olika personer, olika många gånger. Till exempel:
-
-* **Administratörer** måste konfigurera den inledande konfigurationen och mappstrukturen för innehållet, vanligtvis endast en gång eller sporadiskt.
-* **Informationsarkitekturen** lägger i allmänhet till nya modeller i takt med att organisationens behov utvecklas.
-* **Innehållsförfattare** skapar kontinuerligt nytt innehåll som innehållsfragment baserat på de modeller som definieras av arkitekterna.
-
-Guiderna Komma igång utan rubriker visar vem som i allmänhet utför de beskrivna åtgärderna och hur ofta.
-
-## Nästa steg {#next-step}
-
-Vill du lära dig mer? Kom sedan igång genom att läsa den första delen av Headless Getting Started Guide: [Skapar en konfiguration.](getting-started/create-configuration.md)
+| Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Time |
+|---|---|---|---|---|
+| [Headless Developer Journey](/help/implementing/developing/headless-journey/overview.md) | Börja här om du vill få en heltäckande översikt över AEM headless-funktioner från teorin om headless genom att gå live med ditt första headless-projekt. | Guide | Utvecklare | 1 timme |
+| [Starthandbok för Headless](/help/implementing/developing/headless/getting-started/introduction.md) | En kort sammanfattning av de viktigaste AEM rubrikfria funktionerna finns i den här snabbstartsöversikten. | Snabbstart | Utvecklare, administratörer | 20 minuter |
+| [Komma igång med AEM självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | Om du föredrar en praktisk strategi går den här självstudiekursen direkt in i ett enkelt headless-projekt. | Självstudiekurs | Utvecklare | 2 timmar |
