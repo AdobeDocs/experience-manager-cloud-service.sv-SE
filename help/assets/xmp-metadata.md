@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: Business Practitioner,Administrator
 exl-id: fd9af408-d2a3-4c7a-9423-c4b69166f873
-source-git-commit: 1dc639265570b54c42d04f61178d8d2faec1b433
+source-git-commit: 212e4e7cfb93d5765f80003c42ba6afb9af45c13
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '994'
 ht-degree: 16%
 
 ---
@@ -84,9 +84,9 @@ I det här fallet sparar [!DNL Assets] ändringarna av egenskapen **[!UICONTROL 
 
 ![metadata som lagras i resursnoden i databasen](assets/metadata_stored.png)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur du [aktiverar tillbakaskrivning av metadata](#enable-xmp-writeback).
+>Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur du [aktiverar tillbakaskrivning av metadata](#enable-xmp-writeback). MSM för digitala resurser fungerar inte när återkoppling av metadata är aktiverat. Vid tillbakaskrivning avbryts arvet.
 
 ### Aktivera XMP-tillbakaskrivning {#enable-xmp-writeback}
 
