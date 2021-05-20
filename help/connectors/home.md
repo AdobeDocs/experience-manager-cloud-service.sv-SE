@@ -1,14 +1,13 @@
 ---
 title: Anslutningar för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om anslutningar till Adobe Experience Manager as a Cloud Service
-translation-type: tm+mt
-source-git-commit: bb81fbf0952719c6ea364d008506faad73a60b8f
+exl-id: 9dc88f13-a3d9-4177-9f1a-99ed3b2dd00a
+source-git-commit: 053e857b2fb8a940618b15c394becc9594317f5a
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 96%
+source-wordcount: '417'
+ht-degree: 86%
 
 ---
-
 
 # Implementera anslutningar för Experience Manager as a Cloud Service {#aem-connectors-guide}
 
@@ -33,7 +32,8 @@ På den här sidan visas självhjälp om anslutningar för Experience Manager as
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service. |
 | [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md) | Förstå övergången till Cloud Service. |
-| [Användarhandbok för implementering](/help/implementing/home.md) | Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution. |
+| [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med AEM kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
+| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Läs om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
 | [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM som en Cloud Service. |
 
