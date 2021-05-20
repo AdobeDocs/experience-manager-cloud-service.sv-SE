@@ -1,14 +1,13 @@
 ---
 title: Lägga till ett anpassat domännamn
 description: Lägga till ett anpassat domännamn
-translation-type: tm+mt
-source-git-commit: 148a1f478aeabea970e46e7e565fccca7db6a7e9
+exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
+source-git-commit: e8848a006a28e87a622779ae62bc43c159b2b20c
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till ett anpassat domännamn {#adding-cdn}
 
@@ -21,6 +20,8 @@ En användare måste vara en Business Owner eller Deployment Manager för att ku
 * Det går inte att lägga till domännamn i miljöer när det finns en aktuell pågående pipeline som är kopplad till dessa miljöer.
 
 * Det går bara att lägga till ett domännamn åt gången. Domäner kan dock inte innehålla jokertecken. Anpassade domäner på författarsidan stöds inte.
+
+* AEM som en Cloud Service saknar stöd för jokerteckendomäner.
 
 * Varje Cloud Manager-miljö har plats för upp till 100 anpassade domäner per miljö.
 
