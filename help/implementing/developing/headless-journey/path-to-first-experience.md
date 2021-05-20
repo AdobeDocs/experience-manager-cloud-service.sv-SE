@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: 257fc173-6bfb-4b60-b66c-6d6bdd5cf13f
-source-git-commit: 3554c4a4ea1858ea5b4ffbe0fd223a540261cb5c
+source-git-commit: 9e06419f25800199dea92b161bc393e6e9670697
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '2005'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
+>UTDATERAD - Det här utkastinnehållet har ersatts av den nya [Headless Developer Journey-dokumentationen.](/help/journey-headless/developer/overview.md)
 
 I den här delen av [AEM Headless Developer Journey,](overview.md), kommer du att förstå hur du implementerar din första headless-upplevelse av AEM, inklusive planeringsöverväganden, och även lära dig bästa praxis för att göra din väg så smidig som möjligt.
 
