@@ -5,10 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: f872839b-2401-4ea4-9e09-e5dda18afd09
-translation-type: tm+mt
-source-git-commit: 787af0d4994bf1871c48aadab74d85bd7c3c94fb
+source-git-commit: 9e06419f25800199dea92b161bc393e6e9670697
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1816'
 ht-degree: 0%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
+>UTDATERAD - Det här utkastinnehållet har ersatts av den nya [Headless Developer Journey-dokumentationen.](/help/journey-headless/developer/overview.md)
 
 I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig att modellera innehållsstrukturen. Förverkliga sedan strukturen för Adobe Experience Manager (AEM) med Content Fragments Models och Content Fragments, för återanvändning i alla kanaler.
 
@@ -34,7 +33,7 @@ I det föregående dokumentet på den AEM resan utan rubrik, [Vägen till din f�
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du förbereder ett eget AEM headless-projekt.
 
-## Mål {#objective}
+## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
 * **Mål**: Lär dig hur du modellerar innehållsstrukturen och inser sedan den strukturen med AEM Content Fragment Models och Content Fragments:
@@ -87,7 +86,7 @@ Exempel: annonsera specialevent för alla skolor i området:
 * Händelsedatum
 * Lärare som organiserar evenemanget
 
-### Koncept {#concepts}
+### Concepts {#concepts}
 
 Det du vill beskriva kallas **entiteter** - det&quot;saker&quot; som vi vill lagra information om.
 
@@ -97,7 +96,7 @@ Sedan finns det olika **relationer** mellan enheterna. Till exempel har en skola
 
 Processen att analysera och definiera informationen, tillsammans med relationerna mellan dem, kallas **Innehållsmodellering**.
 
-### Grundläggande {#basics}
+### Grunderna {#basics}
 
 Du behöver ofta börja med att skapa ett **konceptuellt schema** som beskriver entiteterna och deras relationer. Vanligtvis är detta en hög nivå (konceptuell).
 
