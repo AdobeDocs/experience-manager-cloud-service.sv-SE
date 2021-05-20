@@ -1,7 +1,7 @@
 ---
 title: AEM Headless Developer Journey
 description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
-source-git-commit: 1ac93a066f808e7dd2ed7e34aa7635e9914a4ea9
+source-git-commit: bec1e901e19abc9ae99dbf95878e51c9b000a5ee
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Börja här för en guidad resa med de kraftfulla och flexibla headless-funktion
 
 Headless-implementering blir allt viktigare för att ni ska kunna leverera upplevelser till er målgrupp, oavsett var de finns och kanal.
 
-Den Headless-implementeringen förskjuter hantering av sidor och komponenter på samma sätt som traditionella lösningar med fullständiga stackar och fokuserar på att skapa kanalneutrala, återanvändbara fragment av innehåll och deras flerkanalsleverans. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av webbupplevelser.
+Den Headless-implementeringen förskjuter hantering av sidor och komponenter på samma sätt som traditionella lösningar med fullständiga stackar och fokuserar på att skapa kanalneutrala, återanvändbara fragment av innehåll och deras flerkanalsleverans. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av digitala upplevelser.
 
 Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är klar:
 
