@@ -4,20 +4,19 @@ description: I den här valfria fortsättningen av den AEM Headless Developer Jo
 hide: true
 hidefromtoc: true
 index: false
-translation-type: tm+mt
-source-git-commit: 1b6dbf401ff921964537f6c79d12544789e93c92
+exl-id: 80b43aae-0027-45c8-b079-e3931d58597f
+source-git-commit: 9e06419f25800199dea92b161bc393e6e9670697
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1287'
 ht-degree: 0%
 
 ---
-
 
 # Skapa enkelsidiga program (SPA) med AEM {#create-spa}
 
 >[!CAUTION]
 >
->ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
+>UTDATERAD - Det här utkastinnehållet har ersatts av den nya [Headless Developer Journey-dokumentationen.](/help/journey-headless/developer/overview.md)
 
 I den här valfria fortsättningen av [AEM Headless Developer Journey,](overview.md), får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full-stack och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA Editor, samt integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
 
@@ -38,7 +37,7 @@ Varför läser du den här extra, valfria fortsatta resan? I [Getting Started](g
 
 Den här artikeln bygger på dina kunskaper om AEM Headless genom att ingående utforska hur du kan skapa egna ensidiga program (SPA) som faktiskt kan redigeras i AEM. På så sätt kan du skapa innehåll och skicka det direkt till en SPA, men det SPA fortfarande redigerbart i AEM.
 
-## Mål {#objective}
+## Syfte {#objective}
 
 Det här dokumentet hjälper dig att förstå hur Single Page-program utvecklas med AEM ramverk för SPA. När du har läst det här dokumentet bör du:
 
