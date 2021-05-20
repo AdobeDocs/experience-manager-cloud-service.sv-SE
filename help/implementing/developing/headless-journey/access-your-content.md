@@ -5,10 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: 5ef557ff-e299-4910-bf8c-81c5154ea03f
-translation-type: tm+mt
-source-git-commit: 4a36cd3206784c0e4e3ed3d7007c83f44f1d5ee0
+source-git-commit: 9e06419f25800199dea92b161bc393e6e9670697
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1367'
 ht-degree: 1%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
+>UTDATERAD - Det här utkastinnehållet har ersatts av den nya [Headless Developer Journey-dokumentationen.](/help/journey-headless/developer/overview.md)
 
 I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig hur du använder GraphQL-frågor för att komma åt innehållet i dina innehållsfragment och skicka det till din app (headless delivery).
 
