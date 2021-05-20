@@ -5,10 +5,9 @@ hide: true
 hidefromtoc: true
 index: false
 exl-id: d96f02b3-d650-4b9e-addf-409d31c80372
-translation-type: tm+mt
-source-git-commit: 7df3620e6f58336de2ac29dd496a888b17606d7f
+source-git-commit: 9e06419f25800199dea92b161bc393e6e9670697
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
@@ -17,11 +16,11 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->ARBETE PÅGÅR - Dokumentet skapas för närvarande och ska inte tolkas som fullständigt eller slutgiltigt och inte heller användas i tillverkningssyfte.
+>UTDATERAD - Det här utkastinnehållet har ersatts av den nya [Headless Developer Journey-dokumentationen.](/help/journey-headless/developer/overview.md)
 
 I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig mer om headless technology och varför du skulle använda den.
 
-## Mål {#objective}
+## Syfte {#objective}
 
 Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras och varför det ska användas. När du har läst bör du:
 
@@ -74,7 +73,7 @@ De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobil
 
 Om du utelämnar huvudet förenklas CMS-systemet genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 
-## Kopplar från {#decoupling}
+## Frikoppling {#decoupling}
 
 Headless-leverans är möjlig genom att en uppsättning robusta och flexibla API:er (Application Programming Interface) visas som alla era upplevelser kan utnyttja. API fungerar som ett gemensamt språk mellan tjänsterna och binder ihop dem på innehållsnivå genom standardiserad innehållsleverans, men ger dem flexibilitet att implementera sina egna lösningar.
 
@@ -82,7 +81,7 @@ Headless är ett exempel på hur du frigör innehåll från presentationen. Elle
 
 Den här frikopplingen innebär att varje konsumtionstjänst (frontend) kan bygga sin upplevelse baserat på samma innehåll som levereras via API:erna, vilket säkerställer återanvändning och enhetlighet. Genom att använda tjänster kan de sedan implementera sina egna presentationssystem, vilket gör att innehållshanteringsstacken (back end-komponenten) enkelt kan skalas vågrätt.
 
-## Teknisk underbyggnad {#technology}
+## Teknisk bakgrund {#technology}
 
 Med en headless-strategi kan ni bygga en tekniklösning som enkelt och snabbt kan anpassas efter framtida behov av digitala upplevelser.
 
