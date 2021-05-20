@@ -1,14 +1,13 @@
 ---
 title: Användarhandböcker om Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om Adobe Experience Manager as a Cloud Service
-translation-type: tm+mt
-source-git-commit: 3f8c56cfbb7d1eb17b6b7356108652e82c3b54d3
+exl-id: 1dbeb42c-3c84-407a-bc7b-d9f0403ee73a
+source-git-commit: 053e857b2fb8a940618b15c394becc9594317f5a
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 89%
+source-wordcount: '410'
+ht-degree: 80%
 
 ---
-
 
 # Användarhandböcker om Experience Manager as a Cloud Service {#aem-user-guide}
 
@@ -27,7 +26,8 @@ På den här sidan visas användarhandböckerna för självhjälp för Experienc
 | [Användarhandbok för Assets](/help/assets/home.md) | Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service. |
 | [Handbok för Commerce](/help/commerce-cloud/home.md) | Förstå hur man använder och administrerar Experience Manager Commerce som Cloud Service. |
 | [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md) | Förstå övergången till Cloud Service. |
-| [Användarhandbok för implementering](/help/implementing/home.md) | Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution. |
+| [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med AEM kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
+| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Läs om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
 | [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM som en Cloud Service. |
