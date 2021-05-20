@@ -5,10 +5,10 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: a2588f420258522cc3a4b7b10f4ab52f2dd669d8
+source-git-commit: a902fda5b5ecaa438c690082f65ed9f9cba9a1ee
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 30%
+source-wordcount: '981'
+ht-degree: 29%
 
 ---
 
@@ -138,7 +138,9 @@ ht-degree: 30%
       + [SPA referensdokument](developing/hybrid/reference-materials.md)
    + Headless Experience Management {#headless}
       + [Headless och AEM](developing/headless/introduction.md)
+      + [Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html)
       + Komma igång-guider {#getting-started}
+         + [Introduktion](developing/headless/getting-started/introduction.md)
          + [Skapa en konfiguration](developing/headless/getting-started/create-configuration.md)
          + [Skapa en innehållsfragmentmodell](developing/headless/getting-started/create-content-model.md)
          + [Skapa en resursmapp](developing/headless/getting-started/create-assets-folder.md)
