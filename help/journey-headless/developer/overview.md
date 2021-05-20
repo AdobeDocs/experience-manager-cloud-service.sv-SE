@@ -1,9 +1,9 @@
 ---
 title: AEM Headless Developer Journey
 description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
-source-git-commit: ddd320ae703225584d4a2055d0f882d238d60987
+source-git-commit: 1ac93a066f808e7dd2ed7e34aa7635e9914a4ea9
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '736'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 | 4 | [Så här modellerar du innehåll](model-your-content.md) | Lär dig modellera innehållsstrukturen. Förverkliga sedan strukturen för Adobe Experience Manager (AEM) med Content Fragments Models och Content Fragments, för återanvändning i alla kanaler. |
 | 5 | [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) | Lär dig hur du använder GraphQL-frågor för att komma åt innehållet i innehållsfragment. |
 | 6 | [Så här uppdaterar du innehåll via AEM resurser-API:er](update-your-content.md) | Lär dig hur du använder REST API för att komma åt och uppdatera innehåll i innehållsfragment. |
-| 7 | [Sammanställ allt - appen och ditt innehåll i AEM Headless](put-it-all-together.md) | Lär dig hur du tar ditt AEM, inklusive innehållsfragment, dina GraphQL-anrop, dina REST API-anrop och programmet, och förbereder det för live-publicering. |
+| 7 | [Sammanställ allt - appen och ditt innehåll i AEM Headless](put-it-all-together.md) | Lär dig hur du tar ditt AEM och förbereder det för publicering med AEM Headless SDK. |
 | 8 | [Så här lever du med ditt headless-program](go-live.md) | Lär dig hur du distribuerar program live och tar din lokala kod i Git och flyttar den till Cloud Manager Git för CI/CD-pipeline. |
 | 9 | [Valfritt - Så här skapar du enkelsidiga program (SPA) med AEM](create-spa.md) | När du väl förstår AEM headless-funktioner kan du testa hur du kombinerar headful och headless-leverans och lära dig hur du kan skapa redigerbara SPA med hjälp av AEM SPA Editor-ramverk. |
 
