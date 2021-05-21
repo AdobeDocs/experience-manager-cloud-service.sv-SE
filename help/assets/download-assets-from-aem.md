@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Resurshantering
 role: Business Practitioner
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 715e6e56294172989aa8e512b5cbc6679312e379
+source-git-commit: 1069bbe8483a6504305f48cad43aec9e1c0d5169
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 1%
+source-wordcount: '901'
+ht-degree: 0%
 
 ---
 
@@ -24,14 +24,14 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 
 Du kan hämta Experience Manager-resurser på följande sätt:
 
-* [Experience Manager användargränssnitt](#download-in-aem)
+* [Experience Manager användargränssnitt](#download-assets)
 * [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)
 * [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
 * [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
 
-## Hämta resurser med [!DNL Experience Manager]-gränssnittet {#download-in-aem}
+## Hämta resurser med [!DNL Experience Manager]-gränssnittet {#download-assets}
 
-Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Mindre filer hämtas från användargränssnittet i realtid. De stora filerna hämtas asynkront och användarna informeras om att de har slutförts via Experience Manager-meddelanden i Inkorgen. Se [förstå Experience Manager inbox](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/inbox.html).
+Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Mindre filer hämtas från användargränssnittet i realtid. [!DNL Experience Manager] arkiverar inte enskilda hämtningar av resurser där originalfilen hämtas. Med den här funktionen går det snabbare att ladda ned. De stora filerna hämtas asynkront och [!DNL Experience Manager] meddelar om att de har slutförts via meddelanden i Inkorgen. Se [förstå [!DNL Experience Manager] Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md).
 
 ![Hämta meddelande](assets/download-notification.png)
 
@@ -51,7 +51,7 @@ Så här hämtar du resurser:
 
    *Bild: Alternativ i dialogrutan Hämta.*
 
-1. I dialogrutan Hämta väljer du de hämtningsalternativ som du vill använda.
+1. I hämtningsdialogrutan väljer du de hämtningsalternativ som du vill ha.
 
    | Hämtningsalternativ | Beskrivning |
    |---|---|
