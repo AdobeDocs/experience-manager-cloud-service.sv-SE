@@ -3,13 +3,12 @@ title: Hantera digitala resurser
 description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Asset Management,Publishing,Collaboration,Asset Processing
+feature: Resurshantering, publicering, samarbete, tillgångsbearbetning
 role: Business Practitioner,Architect,Administrator
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-translation-type: tm+mt
-source-git-commit: 05c090a198cc241c6e466254416880dd6406900f
+source-git-commit: 6c1320d43b551247e63962dd52ada58d463fb92e
 workflow-type: tm+mt
-source-wordcount: '4358'
+source-wordcount: '4349'
 ht-degree: 11%
 
 ---
@@ -97,7 +96,7 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 1. Markera en eller flera taggar i fältet **[!UICONTROL Tags]**. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och väljer `Enter`-tangenten. Den nya taggen sparas i [!DNL Experience Manager].
 
-   YouTube kräver att taggar ska publiceras och har en länk till YouTube (om en lämplig länk finns).
+   YouTube kräver att taggar ska publiceras och ha en länk till YouTube (om en lämplig länk finns).
 
    >[!NOTE]
    >
@@ -251,9 +250,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 1. Navigera till platsen för de resurser som du vill ta bort.
 
-1. Markera resursen och tryck/klicka på ikonen **[!UICONTROL Delete]** i verktygsfältet.
-
-   ![delete_icon](assets/delete_icon.png)
+1. Markera resursen och klicka på **[!UICONTROL Delete]** ![delete_icon](assets/do-not-localize/delete-icon.png) i verktygsfältet.
 
 1. I bekräftelsedialogrutan klickar du på:
 
@@ -261,7 +258,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
    * **[!UICONTROL Delete]** för att bekräfta åtgärden:
 
       * Om resursen inte har några referenser tas resursen bort.
-      * Om resursen har referenser visas ett felmeddelande om att **en eller flera resurser refereras.** Du kan välja  **[!UICONTROL Force Delete]** eller  **[!UICONTROL Cancel]**.
+      * Om resursen har referenser visas ett felmeddelande om att **[!UICONTROL One or more assets are referenced]**. Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
 
    >[!NOTE]
    >
@@ -269,14 +266,11 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
    >[!NOTE]
    >
-   >Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs.
-   >
-   >
-   >Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckning, så att användare inte kan ta bort refererade resurser och lämna brutna länkar.
+   >Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Du kan inte tillåta borttagning av refererade resurser eftersom det orsakar brutna länkar. Inaktivera Tvinga borttagningsknappen med hjälp av en övertäckning.
 
 ## Hämta resurser {#download-assets}
 
-Se [Hämta resurser från [!DNL Experience Manager]](/help/assets/download-assets-from-aem.md).
+Se [hämta resurser från [!DNL Experience Manager]](/help/assets/download-assets-from-aem.md).
 
 ## Publicera eller avpublicera resurser {#publish-assets}
 
@@ -407,7 +401,7 @@ På tidslinjen kan du visa olika händelser för ett markerat objekt, t.ex. akti
 >
 >Tidslinjen innehåller flera [alternativ som är specifika för innehållsfragment](content-fragments/content-fragments.md).
 
-## Kommenterar {#annotating}
+## Anteckningar {#annotating}
 
 Anteckningar är kommentarer eller förklarande kommentarer som läggs till i bilder eller videoklipp. Anteckningar ger marknadsförarna möjlighet att samarbeta och lämna feedback om resurser.
 
