@@ -5,11 +5,10 @@ contentOwner: AG
 feature: Resurshantering
 role: Business Practitioner
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-translation-type: tm+mt
-source-git-commit: a14d5ec69889ef3d89e595cd837f182c499d0ebc
+source-git-commit: 715e6e56294172989aa8e512b5cbc6679312e379
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 0%
+source-wordcount: '896'
+ht-degree: 1%
 
 ---
 
@@ -26,9 +25,8 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 Du kan hämta Experience Manager-resurser på följande sätt:
 
 * [Experience Manager användargränssnitt](#download-in-aem)
-* Användargränssnittet Resurslänkdelning
 * [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
+* [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
 * [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
 
 ## Hämta resurser med [!DNL Experience Manager]-gränssnittet {#download-in-aem}
@@ -95,6 +93,6 @@ Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att 
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md)
->* [Hämta resurser med skrivbordsappen Experience Manager på Win eller Mac](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
->* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-appar som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
+* [Hämta resurser med skrivbordsappen Experience Manager på Win eller Mac](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
+* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-appar som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
 
