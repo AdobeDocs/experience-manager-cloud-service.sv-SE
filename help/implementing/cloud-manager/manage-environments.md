@@ -1,14 +1,13 @@
 ---
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
-translation-type: tm+mt
-source-git-commit: 1aca6f0b23aa328ca364f7ab1d4c722bb5cbca9a
+exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
+source-git-commit: 0dc99c6e5e34e6115a61e18de77cfd040057d832
 workflow-type: tm+mt
 source-wordcount: '1266'
 ht-degree: 4%
 
 ---
-
 
 # Hantera miljöer {#manage-environments}
 
@@ -63,7 +62,7 @@ En användare med nödvändig behörighet kan skapa följande miljötyper (inom 
    >Om du ännu inte har konfigurerat produktionsflödet för icke-produktion visas kortet där du kan skapa produktionsflödet på skärmen *Översikt*.
 
 
-## Visningsmiljö {#viewing-environment}
+## Miljöinformation {#viewing-environment}
 
 Kortet **Environment** på sidan Översikt visar upp till tre miljöer.
 
@@ -112,7 +111,6 @@ Alternativet Ta bort är också tillgängligt om du klickar på **Information** 
 
 
 >[!NOTE]
->
 >Den här funktionen är inte tillgänglig för produktions-/scenmiljö som angetts i ett produktionsprogram som konfigurerats för produktionsändamål. Funktionen är dock tillgänglig för produktions-/scenmiljöer i ett sandlådeprogram.
 
 ## Hantera åtkomst {#managing-access}
@@ -190,5 +188,3 @@ Följ stegen nedan för att ta bort en IP-Tillåtelselista:
 1. Identifiera raden där den IP Tillåtelselista-regel som du vill ta bort är listad.
 1. Välj **..**-menyn längst till höger på raden.
 1. Välj alternativet **Ta bort tillämpning** och bekräfta överföringen.
-
-
