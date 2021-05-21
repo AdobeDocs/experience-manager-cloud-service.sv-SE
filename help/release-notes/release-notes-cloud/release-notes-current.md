@@ -2,10 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-translation-type: tm+mt
-source-git-commit: 7f4b26fc7aca570fb1b1922a51ed77879c3b89b9
+source-git-commit: 6c1320d43b551247e63962dd52ada58d463fb92e
 workflow-type: tm+mt
-source-wordcount: '2002'
+source-wordcount: '1996'
 ht-degree: 0%
 
 ---
@@ -55,19 +54,17 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-* [!DNL Experience Manager] arkiverar inte enskilda hämtningar av resurser där originalfilen hämtas. Den här förbättringen ger snabbare nedladdning.
+* [!DNL Experience Manager] arkiverar inte enskilda hämtningar av resurser där originalfilen hämtas. Den här förbättringen ger snabbare nedladdning. Se [hämta resurser](/help/assets/download-assets-from-aem.md).
 
-* När en resurs hämtas via alternativet för länkdelning kan du nu välja att hämta eller inte hämta återgivningarna. Tidigare hämtades alla resursåtergivningar.
-
-* Administratörer kan konfigurera [!DNL Experience Manager] för att ta bort resurskällan efter att ha gjort gruppresursförslag. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
+* När du hämtar en resurs via ett länkdelningsalternativ kan du nu välja att hämta eller inte hämta återgivningarna. Tidigare hämtades alla resursåtergivningar. Se [hämtningsalternativ](/help/assets/download-assets-from-aem.md).
 
 * När du utför en hälsokontroll för att importera resurser i grupp ger Experience Manager nu fler orsaker till misslyckanden. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
 * När du importerar resurser med bulkimportverktyget har administratörer nu möjlighet att ta bort källfilerna när importen har slutförts. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-* När du redigerar ett metadataram kan administratörer snabbt och enkelt göra urvalet med ett nytt rotsökvägsväljarfält, vilket minskar konfigurationstiden.
+* När du redigerar ett metadataram kan administratörer snabbt och enkelt göra urvalet med ett nytt rotsökvägsväljarfält. Den här förbättringen minskar tiden för konfiguration av metadata.
 
-* Metadata för många resurser kan importeras gruppvis med hjälp av en CSV-fil och kan exporteras till en CSV-fil. Standarddatumformatet är nu `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`. Användare kan utnyttja ett annat format genom att uppdatera kolumnrubriken. Lägg till exempel till `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX` som kolumnrubrik i CSV-filen i stället för ordet `Date`.
+* Metadata för många resurser kan importeras gruppvis med hjälp av en CSV-fil och kan exporteras till en CSV-fil. Standarddatumformatet är nu `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`. Användare kan utnyttja ett annat format genom att uppdatera kolumnrubriken. Lägg till exempel till `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX` som kolumnrubrik i CSV-filen i stället för ordet `Date`. Se [importera metadata](/help/assets/metadata-import-export.md).
 
 * När du bläddrar bland resurser i kolumnvyn visas en visuell indikator med statusen Godkänd eller Avvisad för varje resurs.
 
