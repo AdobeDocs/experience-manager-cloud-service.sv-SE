@@ -1,14 +1,13 @@
 ---
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation som är specifik för borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
-translation-type: tm+mt
-source-git-commit: e6ad571b7428f6fb7a11907e752ba670a722057c
+exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
+source-git-commit: 8c26dbcc77113b86ab28ab52e0b6564fa5ed538a
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '448'
 ht-degree: 6%
 
 ---
-
 
 # Inaktuella och borttagna funktioner {#deprecated-and-removed-features}
 
@@ -44,4 +43,4 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 | [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/scene7.html#integration) och [Dynamic Media hybridläge](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dynamic.html#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) som medföljer [!DNL Experience Manager] som [!DNL Cloud Service]. |
 | [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. |
 | [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort eftersom oföränderliga avsnitt i [!DNL Experience Manager]-databasen inte är tillgängliga vid körning. |
-| [!DNL Assets] | [[!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud ](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/configure-assets-cc-integration.html) Service. | Använd [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. |
+| [!DNL Assets] | [!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud. | Använd [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. |
