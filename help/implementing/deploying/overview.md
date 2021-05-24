@@ -3,10 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Distribuerar
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-translation-type: tm+mt
-source-git-commit: 7bdf8f1e6d8ef1f37663434e7b14798aeb8883f4
+source-git-commit: abc41d6d9388a8ca63643bd2afd09982811ac490
 workflow-type: tm+mt
-source-wordcount: '3334'
+source-wordcount: '3350'
 ht-degree: 1%
 
 ---
@@ -101,7 +100,7 @@ Efter övergång till en ny version av programmet:
    * Mappar (lägg till, ändra, ta bort)
    * Redigerbara mallar (lägg till, ändra, ta bort)
    * Kontextmedveten konfiguration (vad som helst under `/conf`) (lägg till, ändra, ta bort)
-   * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbit-dokumentationen för fillevault](http://jackrabbit.incubator.apache.org/filevault/installhooks.html) om hur du installerar kopplingar, som innehåller tillåtna användare att köra dem).
+   * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbit-dokumentationen för fillevault](http://jackrabbit.incubator.apache.org/filevault/installhooks.html) om hur du installerar kopplingar. Observera att AEM CS för närvarande använder Flash version 3.4.0, som begränsar möjligheten att installera kopplingar till administratörer, systemanvändare och medlemmar i administratörsgruppen).
 
 Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen.](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
@@ -114,7 +113,7 @@ Alla inkluderade tredjepartspaket måste valideras som AEM som en Cloud Service 
 
 Som nämnts ovan bör kunder med befintliga kodbaser följa den strukturering av databasen som är nödvändig på grund av de ändringar i 6.5-databasen som beskrivs i [AEM 6.5-dokumentationen.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
-## Peka {#repoinit}
+## Repoinit {#repoinit}
 
 I följande fall är det att föredra att använda metoden att manuellt koda uttryckliga innehållsskapande `repoinit`-satser i OSGI-fabrikskonfigurationer:
 
@@ -276,7 +275,7 @@ Om ändringar görs i index är det viktigt att den blå versionen fortsätter a
 
 Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att en återställning till den blå versionen krävs. Det är klokt att se till att den blå koden är kompatibel med alla nya strukturer som skapas av den gröna versionen eftersom de nya strukturerna (allt innehåll som kan ändras) inte återställs. Om den gamla koden inte är kompatibel måste korrigeringar tillämpas i efterföljande kundreleaser.
 
-## Körningslägen {#runmodes}
+## Runmodes {#runmodes}
 
 I befintliga AEM kan kunderna köra instanser med godtyckliga körningslägen och använda OSGI-konfiguration eller installera OSGI-paket för dessa specifika instanser. Körningslägen som är definierade omfattar vanligtvis *tjänsten* (författare och publicering) och miljön (dev, stage, prod).
 
