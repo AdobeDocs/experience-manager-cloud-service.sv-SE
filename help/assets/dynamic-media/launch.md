@@ -4,7 +4,7 @@ description: Läs mer om Dynamic Media Viewer-tillägget för Platform launch oc
 feature: Resursrapporter
 role: Administrator,Business Practitioner
 exl-id: a71fef45-c9a4-4091-8af1-c3c173324b7a
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 2fa40e8ee71f881df68337c99ccdb3437d50a0f3
 workflow-type: tm+mt
 source-wordcount: '6270'
 ht-degree: 9%
@@ -15,7 +15,9 @@ ht-degree: 9%
 
 ## Vad är Dynamic Media Viewer integrerat med Adobe Analytics och Experience Platform Launch? {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
-<!-- Leave this hidden path here; it points to the topic source from Sasha https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=~oufimtse&title=Dynamic+Media+Viewers+integration+with+Adobe+Launch -->
+<!-- Leave this hidden path here; it points to the topic source from Sasha https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=~oufimtse&title=Dynamic+Media+Viewers+integration+with+Adobe+Launch 
+
+name used to be Experience Platform Launch. Changed to Experience Platform Data Collection-->
 
 Med det nya tillägget *Dynamic Media Viewer* för Platform launch och Dynamic Media Viewer 5.13 kan kunder med Adobe Analytics och Platform launch använda händelser och data som är specifika för visningsprogrammen i sin Platform launch.
 
@@ -29,7 +31,7 @@ Mer information om tillägg finns i [Adobe-tillägg](https://experienceleague.ad
 
 * Integrering med Experience Platform Launch för Dynamic Media-visningsprogram fungerar inte i noden Experience Manager författare. Du kan inte se någon spårning från en WCM-sida förrän den har publicerats.
 * Experience Platform Launch-integrering för Dynamic Media-visningsprogram stöds inte för åtgärdsläget&quot;popup&quot;, där visningsprogrammets URL hämtas med knappen&quot;URL&quot; på sidan Resursinformation.
-* Integrering med Experience Platform Launch kan inte användas samtidigt med integrering med äldre visningsprogram Analytics (via parametern `config2=`).
+* Integrering med Experience Platform Launch kan inte användas samtidigt med integrering med äldre visningsprogram med Analytics (via parametern `config2=`).
 * Stödet för videospårning är begränsat till enbart huvudspårning av uppspelning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events). Speciellt stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
 * Konfiguration av lagringstid för dataelement stöds inte för dataelement med tillägget *Dynamic Media Viewer*. Lagringsvaraktighet måste anges till **[!UICONTROL None]**.
 
@@ -668,7 +670,7 @@ Konfigurationen av Experience Manager består av följande två stora steg:
    ![2019-07-25_11-52-58](assets/2019-07-25_11-52-58.png)
 
 1. Klicka på **[!UICONTROL Create]** i det övre vänstra hörnet på konfigurationssidan för Adobe IMC.
-1. På sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** går du till listrutan **[!UICONTROL Cloud Solution]** och klickar på **[!UICONTROL Experience Platform Launch]**.
+1. På sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** går du till listrutan **[!UICONTROL Cloud Solution]** och klickar på **[!UICONTROL Experience Platform Data Collection]**.
 1. Aktivera **[!UICONTROL Create new certificate]** och ange sedan ett meningsfullt värde för certifikatet i textfältet. Exempel: *AdobeLaunchIMSCert*. Klicka på **[!UICONTROL Create certificate]**.
 
    Följande informationsmeddelande visas:
