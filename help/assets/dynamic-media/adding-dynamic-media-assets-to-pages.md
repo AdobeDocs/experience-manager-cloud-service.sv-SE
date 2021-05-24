@@ -5,10 +5,9 @@ contentOwner: Rick Brough
 feature: Resurshantering
 role: Business Practitioner
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
-translation-type: tm+mt
-source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
+source-git-commit: 0824f77c35fc97a5bf703036d299c37b75935301
 workflow-type: tm+mt
-source-wordcount: '2962'
+source-wordcount: '3078'
 ht-degree: 5%
 
 ---
@@ -166,6 +165,17 @@ Du kan redigera följande Dynamic Media-inställningar genom att trycka på ikon
 
    Du kan redigera följande avancerade inställningar genom att trycka på **[!UICONTROL Edit]** i komponenten.
 
+* **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
+
+   Se även [Om optimering av enhetspixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
+
+   Observera att alla DPR-värden för Adobe Experience Manager Dynamic Media Smart Imaging ignoreras.
+
+   Alternativet **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
+   * Under Förinställningstyp är **[!UICONTROL Image Preset]** markerat och **[!UICONTROL RESS_IP]** markerat i listrutan **[!UICONTROL Image Preset]**.
+
+   ![inställning för enhetens pixelproportioner för bildförinställning](/help/assets/dynamic-media/assets/dpr-ress-ip.png)
+
 * **[!UICONTROL Title]** - Ändra bildens titel.
 
 * **[!UICONTROL Alt Text]** - Lägg till en titel i bilden för de användare som har inaktiverat grafik.
@@ -179,7 +189,6 @@ Du kan redigera följande Dynamic Media-inställningar genom att trycka på ikon
 * **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
 * **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
-
 
 #### När du arbetar med video {#when-working-with-video}
 
@@ -233,6 +242,18 @@ Du kan redigera följande Dynamic Media-inställning genom att klicka på **[!UI
    Du kan redigera följande avancerade inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
 * **[!UICONTROL Enable Aspect Ration match]** - Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
+
+* **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
+
+   Se även [Om optimering av enhetspixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
+
+   Observera att alla DPR-värden för Adobe Experience Manager Dynamic Media Smart Imaging ignoreras.
+
+   Alternativet **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
+
+   * Under Förinställningstyp är **[!UICONTROL Smart Crop]**-alternativet markerat.
+
+   ![inställning för enhetspixelproportioner för smart beskärning](/help/assets/dynamic-media/assets/dpr-smartcrop.png)
 
 * **[!UICONTROL Title]** - Ändra titeln på bilden för smart beskärning.
 
