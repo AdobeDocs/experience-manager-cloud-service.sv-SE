@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: e0c6a79e6a088423cbc47046f285fb1ac241c476
+source-git-commit: d8ea69fc36a6565d245fe3c01484200b2e744c6c
 workflow-type: tm+mt
-source-wordcount: '2721'
-ht-degree: 43%
+source-wordcount: '2833'
+ht-degree: 41%
 
 ---
 
@@ -54,6 +54,8 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 * När du använder `Amazon S3` eller `Azure` som datalager i AEM, bör datalagret konfigureras så att de lagrade blobbarna inte kan tas bort (skräpsamling). Detta garanterar indexdataintegritet och om detta inte konfigureras på det här sättet kan det leda till misslyckade extraheringar på grund av att dessa indexdata saknar integritet.
 
 * Om du använder anpassade index måste du se till att konfigurera anpassade index med noden `tika` innan du kör verktyget Innehållsöverföring. Mer information finns i [Förbereda den nya indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#preparing-the-new-index-definition).
+
+* Om du tänker göra toppuppsättningar är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då den övre extraheringen körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
 
 ## Tillgänglighet {#availability}
 
@@ -189,6 +191,7 @@ Content Transfer Tool har en funktion för differentiell innehållsuppdatering s
 
 >[!NOTE]
 >Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service.
+>Dessutom är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen av den övre delen körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
 
 När extraheringen är klar kan du överföra delta-innehåll med extraheringsmetoden för uppdateringar. Följ stegen nedan:
 
