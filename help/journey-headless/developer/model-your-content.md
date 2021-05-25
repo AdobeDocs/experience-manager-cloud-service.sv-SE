@@ -1,7 +1,7 @@
 ---
 title: Så här modellerar du innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
-source-git-commit: ddd320ae703225584d4a2055d0f882d238d60987
+source-git-commit: 816c08b9351b3ce2fd4f31974d707e9d4a4eea27
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 0%
@@ -17,7 +17,7 @@ I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära d
 
 I början av [Läs mer om CMS Headless Development](learn-about.md) täckte headless content delivery och varför den skulle användas. [Komma igång med AEM Headless som Cloud Service](getting-started.md) AEM Headless i ditt projekt
 
-I det föregående dokumentet på den AEM resan utan rubrik, [Vägen till din första upplevelse med AEM Headless](/help/implementing/developing/headless-journey/path-to-first-experience.md), lärde du dig sedan de steg som krävs för att implementera ditt första projekt. Efter att ha läst den bör du:
+I det föregående dokumentet på den AEM resan utan rubrik, [Vägen till din första upplevelse med AEM Headless](path-to-first-experience.md), lärde du dig sedan de steg som krävs för att implementera ditt första projekt. Efter att ha läst den bör du:
 
 * Förstå viktiga planeringsöverväganden vid utformningen av ditt innehåll
 * Förstå stegen för att implementera headless beroende på vilka krav ni har på integreringsnivån.
@@ -274,6 +274,6 @@ Nu när du har lärt dig att modellera strukturen och skapa innehåll som är be
    * [Content Fragment in the Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md)  - enable Content Fragment functionality in the Configuration Browser
    * [Modeller](/help/assets/content-fragments/content-fragments-models.md)  för innehållsfragment - skapa och redigera modeller för innehållsfragment
    * [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)  - skapa och skapa innehållsfragment; den här sidan leder dig till andra detaljerade avsnitt
-* [AEM GraphQL-scheman](/help/implementing/developing/headless-journey/access-your-content.md)  - hur GraphQL realiserar modeller
+* [AEM GraphQL-scheman](access-your-content.md)  - hur GraphQL realiserar modeller
 * [Strukturen för exempelinnehållsfragment](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
 * [Getting Started with AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)  - En kort videoserie med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL
