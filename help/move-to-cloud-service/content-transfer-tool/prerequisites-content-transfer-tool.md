@@ -1,9 +1,9 @@
 ---
 title: Krav för verktyget Innehållsöverföring
 description: Krav för verktyget Innehållsöverföring
-source-git-commit: ea179642442b7b246df3096fa52d94f9b5e865ac
+source-git-commit: becb8368af8a8228bf3248bde66ad7164187a9c4
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
