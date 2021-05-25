@@ -1,14 +1,13 @@
 ---
 title: Extern URL
 description: Externalizer är en OSGi-tjänst som gör att du kan omvandla en resurssökväg programmatiskt till en extern och absolut URL.
-translation-type: tm+mt
-source-git-commit: 4c584ceadaa358120d1d4b4cabd7e21ced814b31
+exl-id: 06efb40f-6344-4831-8ed9-9fc49f2c7a3f
+source-git-commit: ce43bdc94f14faa69add16139e22ea3f34dfc52f
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
-
 
 # Externaliserar URL:er {#externalizing-urls}
 
@@ -20,7 +19,7 @@ I den här artikeln beskrivs hur du konfigurerar tjänsten Externalizer och hur 
 
 ## Externalizerns standardbeteende och hur du åsidosätter {#default-behavior}
 
-Externalizer-tjänsten har redan värden som `author-p12345-e6789.adobeaemcloud.com` och `publish-p12345-e6789.adobeaemcloud.com` inställda så att AEM som Cloud Service använder din anpassade domän utan ingripande.
+Externalizer-tjänsten är inte klar att användas och har värden som `author-p12345-e6789.adobeaemcloud.com` och `publish-p12345-e6789.adobeaemcloud.com`.
 
 Om du vill åsidosätta sådana värden använder du Cloud Managers miljövariabler enligt beskrivningen i artikeln [Konfigurera OSGi för AEM som en Cloud Service](/help/implementing/deploying/configuring-osgi.md#cloud-manager-api-format-for-setting-properties) och anger de fördefinierade variablerna `AEM_CDN_DOMAIN_AUTHOR` och `AEM_CDN_DOMAIN_PUBLISH`.
 
