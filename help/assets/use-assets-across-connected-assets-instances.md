@@ -5,19 +5,18 @@ contentOwner: AG
 feature: Resurshantering,Anslutna resurser,Resursdistribution,Användare och grupper
 role: Administrator,Business Practitioner,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-translation-type: tm+mt
-source-git-commit: bbc396fbe7b3c11f8011a32fa78577957422fcf2
+source-git-commit: 6163b150e014ad8449e6b64a191213f72daf4410
 workflow-type: tm+mt
-source-wordcount: '2816'
+source-wordcount: '2850'
 ht-degree: 25%
 
 ---
 
 # Använd Connected Assets när du vill dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som krävs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur som moderbolaget vill använda tillsammans.
+I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som krävs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur, inklusive olika [!DNL Experience Manager]-versioner, som moderbolaget vill använda tillsammans.
 
-Användare kan skapa webbsidor i [!DNL Experience Manager Sites]. [!DNL Experience Manager Assets] är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatser. [!DNL Experience Manager] har nu stöd för ovanstående användningsexempel genom integrering  [!DNL Sites] och  [!DNL Assets].
+Funktionen för anslutna resurser stöder ovanstående användningsfall genom att integrera [!DNL Experience Manager Sites] och [!DNL Experience Manager Assets]. Användare kan skapa webbsidor i [!DNL Sites] som använder digitala resurser från separata [!DNL Assets]-distributioner.
 
 ## Översikt över Connected Assets {#overview-of-connected-assets}
 
@@ -128,7 +127,7 @@ Följ de här stegen för att konfigurera anslutningen.
 1. Konfigurera [!DNL Dynamic Media] på lokala [!DNL Sites]- och fjärdistributioner av [!DNL Assets]. Följ instruktionerna för att [konfigurera [!DNL Dynamic Media]](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
 
    * Använd samma företagsnamn i alla konfigurationer.
-   * På lokal [!DNL Sites] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Disabled by default]**. Platsdistributionen behöver bara skrivskyddad åtkomst till [!DNL Dynamic Media]-kontot.
+   * På lokal [!DNL Sites] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Disabled by default]**. Distributionen [!DNL Sites] behöver bara skrivskyddad åtkomst till kontot [!DNL Dynamic Media].
    * Välj **[!UICONTROL Selective Publish]** i alternativet **[!UICONTROL Publish Assets]** på lokal [!DNL Sites]. Välj inte **[!UICONTROL Sync All Content]**.
    * På fjärrdistributionen [!DNL Assets] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Enabled by default]**.
 
@@ -206,8 +205,9 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 * Lokala resurser synkroniseras inte med de ursprungliga resurserna i fjärrdistributionen. Ändringar, borttagningar eller återkallande av behörigheter i DAM-distributionen sprids inte längre ned i kedjan.
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
 * Lokalt hämtade resurser är endast tillgängliga för redigeringsändamål. Det går inte att använda arbetsflöden för resursuppdatering och metadata kan inte redigeras.
-* Endast bilder och dokumentformaten i listan stöds. Innehållsfragment och Experience Fragments stöds inte.
-* [!DNL Experience Manager] hämtar inte metadatamatcheman. Det innebär att alla hämtade metadata inte visas. Om schemat uppdateras separat visas alla egenskaper.
+* När du använder [!DNL Dynamic Media] på [!DNL Sites]-sidor hämtas inte den ursprungliga resursen och lagras på den lokala distributionen. Noden `dam:Asset`, metadata och återgivningar som genereras av [!DNL Assets]-distributionen hämtas alla i [!DNL Sites]-distributionen.
+* Endast bilder och dokumentformaten i listan stöds. [!DNL Content Fragments] och  [!DNL Experience Fragments] stöds inte.
+* [!DNL Experience Manager] hämtar inte metadatamatcheman. Det innebär att alla hämtade metadata inte visas. Om schemat uppdateras separat för [!DNL Sites]-distributionen visas alla metadataegenskaper.
 * Alla [!DNL Sites]-författare har läsbehörighet för de hämtade kopiorna, även om författare inte har åtkomst till fjärr-DAM-distributionen.
 * Det finns inte API-stöd för att anpassa integreringen.
 * Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna.
@@ -217,8 +217,8 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 
 * [!DNL Assets] det  [!DNL Adobe Managed Services] finns stöd för distribution på.
 * [!DNL Sites] kan ansluta till en enda  [!DNL Assets] databas åt gången.
-* En licens för [!DNL Assets] som fungerar som fjärrdatabas.
-* En eller flera licenser av [!DNL Sites] fungerar som lokal redigeringsdistribution.
+* En licens för [!DNL Assets] som fungerar som fjärrdatabas krävs.
+* En eller flera licenser av [!DNL Sites] som fungerar som lokal redigeringsdistribution krävs.
 
 ### Användning {#usage}
 
