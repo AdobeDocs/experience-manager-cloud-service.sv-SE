@@ -6,10 +6,9 @@ topic-tags: introduction
 content-type: reference
 feature: Tillgänglighet
 role: Administrator,Business Practitioner
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: fdfcaf7ba99ec54e1bdf1c97764da8c766701498
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ Dynamic Media har stöd för tangentbordskontroll och hjälpmedelstekniker som J
 
 ## Stöd för tangentbordstillgänglighet i Dynamic Media {#keyboard-support-in-dm}
 
-Eftersom Dynamic Media är ett plugin-program till Experience Manager Assets är det mesta av tangentbordskontrollbeteendet detsamma som i Experience Manager Assets. Knappen `Cancel` i Dynamic Media har till exempel samma fokus som i Experience Manager Assets. Det reagerar även på `Spacebar`-tangenten som i Experience Manager Assets. Se [kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
+Eftersom Dynamic Media är ett plugin-program till [!DNL Experience Manager Assets] är det mesta av tangentbordskontrollbeteendet detsamma som i [!DNL Experience Manager Assets]. Knappen `Cancel` i Dynamic Media har till exempel samma fokus som i [!DNL Experience Manager Assets]. Det reagerar även på `Spacebar`-nyckeln som i [!DNL Experience Manager Assets]. Se [kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
 
 Tangenttryckningar som stöds av enskilda element i användargränssnittet i Dynamic Media är i de flesta fall enkla att hitta. Tangentbordskontrollen i Dynamic Media handlar om följande:
 
