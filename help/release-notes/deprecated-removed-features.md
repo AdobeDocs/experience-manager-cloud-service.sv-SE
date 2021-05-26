@@ -2,14 +2,20 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation som är specifik för borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: 8c26dbcc77113b86ab28ab52e0b6564fa5ed538a
+source-git-commit: 725cc82aa5794b53e5a43d95359fe1fd148b59ac
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 6%
+source-wordcount: '484'
+ht-degree: 5%
 
 ---
 
 # Inaktuella och borttagna funktioner {#deprecated-and-removed-features}
+
+>[!CONTEXTUALHELP]
+>id="aem_cloud_deprecated_features"
+>title="Borttagna och borttagna funktioner i AEM som en Cloud Service"
+>abstract="AEM som Cloud Service har en molnbaserad distributionsmodell. Vissa funktioner har ersatts av molnbaserade motsvarigheter och på den här fliken visas dessa funktioner."
+
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet. Eftersom [!DNL Adobe Experience Manager] som [!DNL Cloud Service] tillhandahåller en molnbaserad distributionsmodell ersattes vissa funktioner av molnbaserade motsvarigheter.
 
