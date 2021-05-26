@@ -4,10 +4,9 @@ description: Om du vill konfigurera Dynamic Media måste du konfigurera Dynamic 
 contentOwner: Rick Brough
 role: Administrator,Business Practitioner
 exl-id: 83b70b17-7ee3-41cb-be90-c92ca161660e
-translation-type: tm+mt
-source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
+source-git-commit: fdfcaf7ba99ec54e1bdf1c97764da8c766701498
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '177'
 ht-degree: 3%
 
 ---
@@ -20,9 +19,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->This documentation describes Dynamic Media capabilites, which are integrated directly into Experience Manager. If you are using Dynamic Media Classic (previously called Scene7) integrated into Experience Manager, see [Dynamic Media Classic integration documentation](/help/sites-cloud/administering/integrating-scene7.md).
+>This documentation describes Dynamic Media capabilites, which are integrated directly into [!DNL Experience Manager]. If you are using Dynamic Media Classic (previously called Scene7) integrated into [!DNL Experience Manager], see [Dynamic Media Classic integration documentation](/help/sites-cloud/administering/integrating-scene7.md).
 >
->See [Dual Use Scenario](/help/sites-cloud/administering/integrating-scene7.md#dual-use-scenario) for times when you may want to use Experience Manager integrated with Dynamic Media Classic along with Dynamic Media.
+>See [Dual Use Scenario](/help/sites-cloud/administering/integrating-scene7.md#dual-use-scenario) for times when you may want to use [!DNL Experience Manager] integrated with Dynamic Media Classic along with Dynamic Media.
 
 -->
 
@@ -42,5 +41,5 @@ Se även följande avsnitt:
 >
 >**Om du uppgraderar:**
 >
->* När Adobe Experience Manager är igång aktiveras Dynamic Media automatiskt för alla resurser som du överför (såvida det inte uttryckligen inaktiverats av systemadministratören). Om du är på en uppgraderad instans av Experience Manager och inte har använt Dynamic Media tidigare måste du troligen bearbeta om dina resurser för att aktivera dem för Dynamic Media. Se [Återbearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+>* När du har Adobe [!DNL Experience Manager] aktiverat och igång har alla resurser som du överför Dynamic Media automatiskt aktiverats (om det inte uttryckligen inaktiverats av systemadministratören). Om du är i en uppgraderad instans av [!DNL Experience Manager] och inte har använt Dynamic Media tidigare, måste du troligen bearbeta om dina resurser för att aktivera dem för Dynamic Media. Se [Återbearbeta resurser i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
