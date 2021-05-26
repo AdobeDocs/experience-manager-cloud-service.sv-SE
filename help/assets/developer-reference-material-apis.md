@@ -2,16 +2,15 @@
 title: Utvecklarreferenser för [!DNL Assets]
 description: '[!DNL Assets] APIs and developer reference content lets you manage assets, including binary files, metadata, renditions, comments, and [!DNL Content Fragments].'
 contentOwner: AG
-feature: APIs,Assets HTTP API
+feature: API:er,Resurser HTTP API
 role: Developer,Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 70068609e51f96c010204b8915593a52f610aded
+exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
+source-git-commit: 2e00b62efa07488fbdba723d283b9b76b53f6d34
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1401'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Adobe Experience Manager Assets] användningsfall för utvecklare, API:er och referensmaterial  {#assets-cloud-service-apis}
 
@@ -65,7 +64,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 | Kopiera mapp | ✓ | ✓ | - | ✓ | - | - |
 | Flytta mapp | ✓ | ✓ | - | ✓ | - | - |
 
-## Resursöverföring {#asset-upload-technical}
+## Resursöverföring {#asset-upload}
 
 I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil är:
 
@@ -74,6 +73,9 @@ I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resursern
 1. [Skicka en HTTP-](#complete-upload) begäran för att informera servern om att innehållet i binärfilen har överförts.
 
 ![Översikt över protokollet för direkt binär överföring](assets/add-assets-technical.png)
+
+>[!IMPORTANT]
+Utför dessa steg i ett externt program och inte i JVM-filen [!DNL Experience Manager].
 
 Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser. Skillnaderna jämfört med [!DNL Experience Manager] 6.5 är:
 
@@ -119,7 +121,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 * `uploadToken` (sträng): En överföringstoken för motsvarande binär fil. Detta värde bör inkluderas i den fullständiga begäran.
 * `uploadURIs` (array): En lista över strängar vars värden är fullständiga URI:er som binärens innehåll ska överföras till (se  [Överför binärt](#upload-binary)).
 * `minPartSize` (tal): Den minsta längden, i byte, på data som kan tillhandahållas till någon av dem  `uploadURIs`om det finns mer än en URI.
-* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan tillhandahållas till någon av dem  `uploadURIs`om det finns mer än en URI.
+* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan anges för någon av dem  `uploadURIs`om det finns mer än en URI.
 
 ### Överför binär {#upload-binary}
 
