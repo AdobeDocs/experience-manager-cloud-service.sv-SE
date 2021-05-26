@@ -3,9 +3,9 @@ title: Arbeta med väljare
 description: Lär dig mer om metoder du kan använda för att välja resurser för interaktiva bilder, interaktiva videor och karusellbanderoller i Dynamic Media.
 role: Business Practitioner
 exl-id: a6f366ab-41b8-4909-b815-e6c4b938bf77
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: fdfcaf7ba99ec54e1bdf1c97764da8c766701498
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '692'
 ht-degree: 15%
 
 ---
@@ -22,7 +22,7 @@ I den här Carousel-banderollen använder du produktväljaren om du länkar en h
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
-När du väljer (i stället för att ange manuellt) vart hotspot-områden eller bildscheman ska gå, använder du väljaren. Webbplatsväljaren fungerar bara om du är Adobe Experience Manager Sites-kund. Produktväljaren kräver också Experience Manager Commerce.
+När du väljer (i stället för att ange manuellt) vart hotspot-områden eller bildscheman ska gå, använder du väljaren. Platsväljaren fungerar bara om du är en [!DNL Adobe Experience Manager Sites]-kund. Produktväljaren kräver också [!DNL Experience Manager Commerce].
 
 ## Välja produkter i Dynamic Media {#selecting-products}
 
@@ -42,11 +42,11 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
    ![chlimage_1-523](assets/chlimage_1-523.png)
 
-   Du kan ändra var Experience Manager bläddrar efter produktdata genom att trycka på **[!UICONTROL Browse]** och navigera till en annan mapp.
+   Du kan ändra var [!DNL Experience Manager] ska bläddra efter produktdata genom att trycka på **[!UICONTROL Browse]** och navigera till en annan mapp.
 
    ![chlimage_1-524](assets/chlimage_1-524.png)
 
-   Tryck på **[!UICONTROL Sort by]** för att ändra om Experience Manager ska sortera efter senaste till äldsta eller äldsta till nyaste.
+   Tryck på **[!UICONTROL Sort by]** för att ändra om [!DNL Experience Manager] sorterar efter senaste till äldsta eller äldsta till nyaste.
 
    ![chlimage_1-525](assets/chlimage_1-525.png)
 
@@ -64,7 +64,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
 ## Välja platser i Dynamic Media {#selecting-sites}
 
-Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras i Experience Manager.
+Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras på [!DNL Experience Manager]-platser.
 
 1. Navigera till karuselluppsättningen, den interaktiva bilden eller den interaktiva videon och tryck på fliken **[!UICONTROL Actions]** (endast tillgänglig om du har definierat ett hotspot-område eller bildschema).
 
@@ -72,7 +72,7 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
    ![chlimage_1-529](assets/chlimage_1-529.png)
 
-1. Tryck på ikonen **[!UICONTROL Site Selector]** (mapp med förstoringsglas) och navigera till en sida på dina Experience Manager-platser som du vill länka hotspot eller bildschema till.
+1. Tryck på ikonen **[!UICONTROL Site Selector]** (mapp med förstoringsglas) och navigera till en sida på dina [!DNL Experience Manager]-platser som du vill länka aktiveringspunkten eller bildschemat till.
 
    ![chlimage_1-530](assets/chlimage_1-530.png)
 
@@ -80,7 +80,7 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
    ![chlimage_1-531](assets/chlimage_1-531.png)
 
-1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]**-läget navigerar du till den angivna Experience Manager-webbplatssidan.
+1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]**-läget navigerar du till den [!DNL Experience Manager]-webbplatssida du angav.
 
 ## Välja resurser i Dynamic Media {#selecting-assets}
 
@@ -97,7 +97,7 @@ Mer information finns även i [Resursväljaren](/help/assets/search-assets.md#as
 
    ![chlimage_1-533](assets/chlimage_1-533.png)
 
-   Du kan ändra var Experience Manager ska bläddra efter resurser genom att navigera till en annan mapp i fältet **[!UICONTROL Path]**.
+   Du kan ändra var [!DNL Experience Manager] söker efter resurser genom att navigera till en annan mapp i fältet **[!UICONTROL Path]**.
 
    Tryck på **[!UICONTROL Collection]** om du bara vill söka efter resurser i samlingar.
 
