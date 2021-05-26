@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Resurshantering
 role: Business Practitioner
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
-source-git-commit: 0824f77c35fc97a5bf703036d299c37b75935301
+source-git-commit: fdfcaf7ba99ec54e1bdf1c97764da8c766701498
 workflow-type: tm+mt
-source-wordcount: '3078'
+source-wordcount: '3062'
 ht-degree: 5%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 5%
 
 Om du vill lägga till Dynamic Media-funktionen i resurser som används på era webbplatser kan du lägga till komponenten **dynamiska medier**, **interaktiva medier**, **panoramamedier** eller **360-videomedier** direkt på sidan. Du aktiverar layoutläget och Dynamic Media-komponenterna. Sedan lägger du till de här komponenterna på sidan och lägger till resurser i komponenten. Dynamic Media-komponenterna är smarta – de känner av om du lägger till en bild eller en video och konfigurationsalternativen ändras i enlighet med detta.
 
-Du lägger till Dynamic Media-resurser direkt på sidan om du använder Experience Manager som WCM-fil. Om du använder en tredje part för ditt WCM-system kan du antingen [link](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller [bädda in](/help/assets/dynamic-media/embed-code.md) dina resurser. En responsiv webbplats från tredje part finns i [Leverera optimerade bilder till en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md).
+Du lägger till Dynamic Media-resurser direkt på sidan om du använder [!DNL Adobe Experience Manager] som WCM. Om du använder en tredje part för ditt WCM-system kan du antingen [link](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller [bädda in](/help/assets/dynamic-media/embed-code.md) dina resurser. En responsiv webbplats från tredje part finns i [Leverera optimerade bilder till en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md).
 
 >[!NOTE]
 >
->Se till att du publicerar resurser innan du lägger till dem på sidor i Experience Manager. Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+>Kontrollera att du publicerar resurser innan du lägger till dem på sidor i [!DNL Experience Manager]. Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 ## Lägga till en Dynamic Media-komponent på en sida {#adding-a-dynamic-media-component-to-a-page}
 
@@ -28,7 +28,7 @@ Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panorami
 
 **Så här lägger du till en Dynamic Media-komponent på en sida:**
 
-1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
+1. Öppna den sida där du vill lägga till Dynamic Media-komponenten i [!DNL Experience Manager].
 1. Tryck på ikonen **[!UICONTROL Components]** i den vänstra rutan och filtrera sedan efter Dynamic Media.
 
    Om det inte finns någon lista över Dynamic Media-komponenter måste du troligen aktivera de Dynamic Media-komponenter som du vill använda. Se [Aktivera Dynamic Media-komponenter](#enabling-dynamic-media-components).
@@ -55,7 +55,7 @@ Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panorami
 
 Om det inte finns några Dynamic Media-komponenter att lägga till på en sida betyder det troligtvis att du måste aktivera de komponenter som du vill använda.
 
-1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
+1. Öppna den sida där du vill lägga till Dynamic Media-komponenten i [!DNL Experience Manager].
 1. Till vänster om verktygsfältet uppe på sidan trycker du på ikonen Sidinformation och sedan på **[!UICONTROL Edit Template]** i listrutan.
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
@@ -106,7 +106,7 @@ Följande Dynamic Media-komponenter är tillgängliga:
 
 >[!NOTE]
 >
->De här komponenterna är inte tillgängliga som standard och måste göras tillgängliga via mallredigeraren innan du använder dem. När de har gjorts tillgängliga i mallredigeraren kan du lägga till komponenterna på sidan på samma sätt som andra Experience Manager-komponenter.
+>De här komponenterna är inte tillgängliga som standard och måste göras tillgängliga via mallredigeraren innan du använder dem. När de är tillgängliga i mallredigeraren kan du lägga till komponenterna på sidan på samma sätt som andra [!DNL Experience Manager]-komponenter.
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
@@ -169,7 +169,7 @@ Du kan redigera följande Dynamic Media-inställningar genom att trycka på ikon
 
    Se även [Om optimering av enhetspixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
 
-   Observera att alla DPR-värden för Adobe Experience Manager Dynamic Media Smart Imaging ignoreras.
+   Observera att alla DPR-värden för Dynamic Media Smart Imaging ignoreras.[!DNL Experience Manager]
 
    Alternativet **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
    * Under Förinställningstyp är **[!UICONTROL Image Preset]** markerat och **[!UICONTROL RESS_IP]** markerat i listrutan **[!UICONTROL Image Preset]**.
@@ -247,7 +247,7 @@ Du kan redigera följande Dynamic Media-inställning genom att klicka på **[!UI
 
    Se även [Om optimering av enhetspixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
 
-   Observera att alla DPR-värden för Adobe Experience Manager Dynamic Media Smart Imaging ignoreras.
+   Observera att alla DPR-värden för Dynamic Media Smart Imaging ignoreras.[!DNL Experience Manager]
 
    Alternativet **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
 
