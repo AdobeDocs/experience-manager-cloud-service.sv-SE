@@ -5,9 +5,9 @@ contentOwner: AG
 feature: API:er,Resurser HTTP API
 role: Developer,Architect,Administrator
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 597098cd94d1e40dc45870fd2c0b986f80eb2038
+source-git-commit: 5243b02a8168da82674989b9f5abb65af6613096
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1415'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 
 ## Resursöverföring {#asset-upload}
 
-I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil är:
+I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil visas nedan. Utför dessa steg i ett externt program och inte i JVM-filen [!DNL Experience Manager].
 
 1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]r-distribution av din avsikt att överföra en ny binär fil.
 1. [POST innehållet i ](#upload-binary) binaryen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
