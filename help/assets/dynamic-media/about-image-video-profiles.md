@@ -4,10 +4,10 @@ description: En bildprofil eller en videoprofil är ett recept på vilka alterna
 feature: Resurshantering, bildprofiler, videoprofiler
 role: Administrator,Business Practitioner
 exl-id: 8c8f0a57-13f5-4903-8d76-bfb6ee83323c
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: fdfcaf7ba99ec54e1bdf1c97764da8c766701498
 workflow-type: tm+mt
-source-wordcount: '1229'
-ht-degree: 2%
+source-wordcount: '1216'
+ht-degree: 1%
 
 ---
 
@@ -42,13 +42,13 @@ Anta att du har skapat en Dynamic Media-bildprofil och tilldelat den till en map
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bildprofil eller videoprofil, eller redan har använt en bildprofil eller videoprofil, kan du köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
-Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta Assets_-arbetsflöde i en mapp, resurser grupperas i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen på Adobe Experience Manager. Om gruppstorleken är stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundningar till Dynamic Media-servern.
+Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta Assets_-arbetsflöde i en mapp, resurser grupperas i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen [!DNL Adobe Experience Manager]. Om gruppstorleken är stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundningar till Dynamic Media-servern.
 
 Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-load).
 
 >[!NOTE]
 >
->Om du utför en massmigrering av resurser från Dynamic Media Classic till Experience Manager aktiverar du migreringsreplikeringsagenten på Dynamic Media-servern. När migreringen är klar kontrollerar du att agenten är inaktiverad.
+>Om du utför en massmigrering av resurser från Dynamic Media Classic till [!DNL Experience Manager] aktiverar du migreringsreplikeringsagenten på Dynamic Media-servern. När migreringen är klar kontrollerar du att agenten är inaktiverad.
 >
 >Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så att arbetsflödet för ombearbetning fungerar som förväntat.
 
@@ -59,7 +59,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 -->
 
 **Så här bearbetar du om Dynamic Media-resurser i en mapp:**
-1. I Experience Manager, från sidan Resurser, navigerar du till en resursmapp som har en bildprofil eller en videoprofil tilldelad och för vilken du vill använda **Scene7: Återbearbeta arbetsflödet för resurs**.
+1. I [!DNL Experience Manager] går du från sidan Resurser till en resursmapp som har en bildprofil eller en videoprofil tilldelad och för vilken du vill använda **Scene7: Återbearbeta arbetsflödet för resurs**.
 
    Mappar som har tilldelats en bildprofil eller videoprofil visas med profilens namn direkt under mappnamnet i kortvyn.
 
@@ -82,15 +82,15 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]**.
 
-   Om du vill övervaka arbetsflödet eller kontrollera förloppet går du till huvudkonsolsidan för Experience Manager och klickar på **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Klicka på **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
+   Om du vill övervaka arbetsflödet eller kontrollera dess förlopp går du till huvudkonsolsidan [!DNL Experience Manager] och klickar på **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Klicka på **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning {#adjusting-load}
 
-(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen ligger alltså kvar på Experience Manager resurser en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, bör du öka värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
+(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen behåller alltså [!DNL Experience Manager]-resurserna en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, bör du öka värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
 
 **Om du vill justera batchstorleken för arbetsflödet för ombearbetning:**
 
-1. I Experience Manager trycker du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Workflow > Models]**.
+1. I [!DNL Experience Manager] trycker du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på ikonen **[!UICONTROL Tools]** (hammer) > **[!UICONTROL Workflow > Models]**.
 1. Välj **[!UICONTROL Scene7: Reprocess Assets]** i kortvyn eller listvyn på sidan Arbetsflödesmodeller.
 
    ![Workflow Models page with Scene7: Arbetsflödet för att bearbeta resurser som valts i kortvyn](/help/assets/dynamic-media/assets/reprocess-assets7.png)
