@@ -2,10 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-translation-type: tm+mt
-source-git-commit: eb92c66f2b9e8e6ec859114da2de049747ec251e
+source-git-commit: 1ba960a930e180f4114f78607a3eb4bd5ec3edaf
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '802'
 ht-degree: 1%
 
 ---
@@ -83,7 +82,7 @@ Du kan också uppnå detta genom att skapa en arbetsflödesmodell som använder 
 
 * `replicateAsParticipant` (booleskt värde, standard:  `false`). Om den är konfigurerad som `true` använder replikeringen `userid` för det huvud som utförde deltagarsteget.
 * `enableVersion` (booleskt värde, standard:  `true`). Den här parametern avgör om en ny version skapas vid replikering.
-* `agentId` (strängvärde, standard innebär att alla aktiverade agenter används).
+* `agentId` (strängvärde, standard innebär att alla aktiverade agenter används). Vi rekommenderar att du uttryckligen anger agentId; Om du till exempel anger värdet: publicera
 * `filters` (strängvärde, standard innebär att alla sökvägar aktiveras). Tillgängliga värden är:
    * `onlyActivated` - bara sökvägar som inte är markerade som aktiverade aktiveras.
    * `onlyModified` - aktivera endast sökvägar som redan är aktiverade och som har ett ändringsdatum efter aktiveringsdatumet.
