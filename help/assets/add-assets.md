@@ -4,8 +4,7 @@ description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager]
 feature: Resurshantering,Överför
 role: Business Practitioner,Administrator
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-translation-type: tm+mt
-source-git-commit: 5657d53b37ec3db5338cc44177d3e7100188c5d0
+source-git-commit: 2e00b62efa07488fbdba723d283b9b76b53f6d34
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 0%
@@ -129,7 +128,7 @@ Inspelaren av massresurser kan hantera mycket stora mängder resurser effektivt.
 
 Om du vill överföra fler filer använder du någon av följande metoder. Se även [användningsexempel och metoder](#upload-methods-comparison)
 
-* [API:er](developer-reference-material-apis.md#asset-upload-technical) för överföring av resurser: Använd ett anpassat överföringsskript eller verktyg som använder API:er för att lägga till ytterligare hantering av resurser (t.ex. översätta metadata eller byta namn på filer), om det behövs.
+* [API:er](developer-reference-material-apis.md#asset-upload) för överföring av resurser: Använd ett anpassat överföringsskript eller verktyg som använder API:er för att lägga till ytterligare hantering av resurser (t.ex. översätta metadata eller byta namn på filer), om det behövs.
 * [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html): Användbart för kreatörer och marknadsförare som överför resurser från det lokala filsystemet. Använd den för att överföra kapslade mappar som är tillgängliga lokalt.
 * [Verktyget](#asset-bulk-ingestor) Massintag: Används för konsumtion av stora mängder resurser, antingen vid enstaka tillfällen eller vid första driftsättningen  [!DNL Experience Manager].
 
@@ -210,7 +209,7 @@ För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på minia
 
 ## Överför eller importera resurser med API:er {#upload-using-apis}
 
-Teknisk information om överförings-API:erna och -protokollet samt länkar till öppen källkod-SDK och exempelklienter finns i [avsnittet för överföring av resurser](developer-reference-material-apis.md#asset-upload-technical) i utvecklarreferensen.
+Teknisk information om överförings-API:erna och -protokollet samt länkar till öppen källkod-SDK och exempelklienter finns i [avsnittet för överföring av resurser](developer-reference-material-apis.md#asset-upload) i utvecklarreferensen.
 
 ## Tips, metodtips och begränsningar {#tips-limitations}
 
@@ -232,5 +231,5 @@ Teknisk information om överförings-API:erna och -protokollet samt länkar till
 >* [[!DNL Adobe Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
 >* [Om [!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
 >* [[!DNL Adobe Asset Link] dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
->* [Teknisk referens för överföring av tillgångar](developer-reference-material-apis.md#asset-upload-technical)
+>* [Teknisk referens för överföring av tillgångar](developer-reference-material-apis.md#asset-upload)
 
