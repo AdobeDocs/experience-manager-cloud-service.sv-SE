@@ -1,20 +1,26 @@
 ---
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
-description: 'Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service. '
-translation-type: tm+mt
-source-git-commit: 6b68c52235bae033b429a2d4c84f7c31c75b0fa2
+description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
+exl-id: fb169e85-ac19-4962-93d9-abaed812f948
+source-git-commit: 74b2720eae1fbc986cd1a252180a4b7f4187ed16
 workflow-type: tm+mt
-source-wordcount: '1671'
-ht-degree: 98%
+source-wordcount: '1728'
+ht-degree: 94%
 
 ---
 
-
 # En introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service {#an-introduction-to-the-architecture-adobe-experience-manager-as-a-cloud-service}
+
+>[!CONTEXTUALHELP]
+>id="intro_aem_cloudservice_architecture"
+>title="Introduktion till AEM som Cloud Service Architecture"
+>abstract="På den här fliken kan du visa den nya arkitekturen för AEM som en Cloud Service och förstå ändringarna. AEM har resulterat i en dynamisk arkitektur med ett varierande antal bilder, så det är viktigt att du tar dig tid att förstå.molnarkitekturen"
+>additional-url="https://video.tv.adobe.com/v/330542/" text="Arkitektur - översikt"
+
 
 Adobe Experience Manager (AEM) as a Cloud Service har lett till ändringar i arkitekturen.
 
-## Skalning {#scaling} 
+## Skalning   {#scaling}
 
 AEM as a Cloud Service har nu:
 
@@ -82,7 +88,7 @@ Ett AEM-program är den behållare som innehåller:
 |  Programelement |  Siffra |
 |--- |--- |
 | Koddatabas (Git) |  1 |
-| Baslinjebild (Sites eller Assets) |  3 |
+| Baslinjebild (Sites eller Assets) |  1 |
 | 1:1-förhållande mellan scen- och produktionsmiljö  | 0 eller 1 |
 | Icke-produktionsmiljöer (utveckling eller demonstration) | 0 till N |
 | Pipeline för varje miljö | 0 eller 1 |
