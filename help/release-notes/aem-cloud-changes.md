@@ -1,27 +1,33 @@
 ---
 title: Betydande ändringar av Adobe Experience Manager (AEM) som en Cloud Service
 description: Betydande ändringar av Adobe Experience Manager (AEM) som en Cloud Service
-translation-type: tm+mt
-source-git-commit: 515e462e942d58758a11e0a9bd3b1c3990a4dcf9
+exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
+source-git-commit: 71f05dda4ccd52c66bbf1d9025900976f07227f3
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 9%
+source-wordcount: '882'
+ht-degree: 8%
 
 ---
-
 
 # Observerbara ändringar av Adobe Experience Manager (AEM) som en Cloud Service {#notable-changes-aem-cloud}
 
 AEM Cloud Service har många nya funktioner för  att administrera AEM-projekt. Det finns dock ett antal skillnader mellan AEM Sites på plats eller i Adobe Managed Service jämfört med AEM Cloud Service. Det här dokumentet visar de viktiga skillnaderna.
 
+>[!CONTEXTUALHELP]
+>id="aem_cloud_notable_changes"
+>title="Betydande ändringar i AEM som en Cloud Service"
+>abstract="På den här fliken kan du visa innehåll som hjälper dig att förstå skillnaderna mellan AEM lokalt eller i Adobes hanterade tjänster, jämfört med AEM som en Cloud Service."
+>additional-url="https://video.tv.adobe.com/v/330543" text="Utveckling av AEM som en Cloud Service"
+
+
 >[!NOTE]
 >Det här dokumentet markerar de anmärkningsvärda ändringarna av AEM som helhet. Mer information och lösningsspecifika ändringar finns i:
 >
 >* [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
->* [Nyheter och skillnader](/help/overview/what-is-new-and-different.md) i Adobe Experience Manager as a Cloud Service och tidigare versioner
->* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
->* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
->* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
+* [Nyheter och skillnader](/help/overview/what-is-new-and-different.md) i Adobe Experience Manager as a Cloud Service och tidigare versioner
+* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
+* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 
 
 De största skillnaderna finns i följande områden:
