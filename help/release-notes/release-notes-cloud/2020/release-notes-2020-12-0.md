@@ -1,14 +1,13 @@
 ---
-title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
-description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
-translation-type: tm+mt
-source-git-commit: 31e07090e4e3a265269eebce13857f88245788ee
+title: Versionsinformation för 2020.12.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
+description: Versionsinformation för 2020.12.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
+exl-id: 16875180-1f23-477d-9d4d-e220998c4983
+source-git-commit: aeee895e4a4b959125d08091619988d0ffa09ace
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '691'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service {#release-notes}
 
@@ -19,7 +18,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Expe
 Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.12.0 är 17 december 2020.
 Följande version (2021.1.0) kommer att vara den 28 januari 2021.
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
 * **[HTTP-API](/help/assets/content-fragments/assets-api-content-fragments.md)** för innehållsfragment: Lägg till/uppdatera och ta bort Content Fragment-varianter med HTTP API.
 
