@@ -5,16 +5,16 @@ contentOwner: AG
 feature: Resurshantering
 role: Business Practitioner
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 1069bbe8483a6504305f48cad43aec9e1c0d5169
+source-git-commit: 6480ae8abe194dc5561658ccbd87a30447959721
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
 
 # Hämta resurser från [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
-Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från [!DNL Adobe Experience Manager Assets]. Hämtade resurser paketeras i en ZIP-fil. Den komprimerade ZIP-filen har en maximal filstorlek på 1 GB för exportjobbet. Högst 500 resurser per exportjobb tillåts.
+Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från [!DNL Adobe Experience Manager Assets]. Hämtade resurser paketeras i en ZIP-fil. <!-- The compressed ZIP file has a maximum file size of 1 GB for the export job. A maximum of 500 total assets per export job are allowed. -->
 
 >[!NOTE]
 >
@@ -25,6 +25,7 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 Du kan hämta Experience Manager-resurser på följande sätt:
 
 * [Experience Manager användargränssnitt](#download-assets)
+* [Länkdelning](#link-share-download)
 * [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)
 * [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
 * [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
@@ -63,6 +64,16 @@ Så här hämtar du resurser:
    | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](/help/assets/dynamic-media/image-presets.md). <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
 
 1. Klicka på **[!UICONTROL Download]** i dialogrutan.
+
+## Hämta resurser som delas med länkdelning {#link-share-download}
+
+Att dela resurser med hjälp av en länk är ett bekvämt sätt att göra det tillgängligt för intresserade utan att de först behöver logga in på [!DNL Assets]. Om du vill generera en URL för att dela resurser använder du funktionen [Länkdelning](/help/assets/share-assets.md#sharelink).
+
+När användare hämtar resurser från delade länkar använder [!DNL Assets] en asynkron tjänst som erbjuder snabbare och oavbrutna hämtningar. De resurser som ska laddas ned köas i bakgrunden i en inkorg i ZIP-arkiv med hanterbar filstorlek. Vid mycket stora nedladdningar delas nedladdningen in i filer som är 100 GB stora.
+
+I inkorgen visas bearbetningsstatus för varje arkiv. När bearbetningen är klar kan du hämta arkiven från inkorgen.
+
+![Hämta inkorg](assets/download-inbox.png)
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
