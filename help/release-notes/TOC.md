@@ -5,11 +5,10 @@ breadcrumb-title: Versionsinformation
 user-guide-description: Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service inklusive nyheter, inaktuella och borttagna funktioner samt kända fel.
 feature: Versionsinformation
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
-translation-type: tm+mt
-source-git-commit: 1916ff5f9cd6227e548d809c0cb1a584d76afb75
+source-git-commit: d27f9d394edef827a119212c9024ecfaf46d2ce8
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 30%
+source-wordcount: '122'
+ht-degree: 28%
 
 ---
 
@@ -20,6 +19,7 @@ ht-degree: 30%
 + Versionsinformation {#release-notes}
    + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
    + 2021 {#2021}
+      + [Versionsinformation för 2021.4.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-4-0.md)
       + [Versionsinformation för 2021.3.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-3-0.md)
       + [Versionsinformation för 2021.2.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-2-0.md)
       + [Versionsinformation för 2021.1.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-1-0.md)
@@ -39,3 +39,5 @@ ht-degree: 30%
 + [Betydande ändringar i AEM Cloud Service](aem-cloud-changes.md)
 + [Kända fel](known-issues.md)
 + [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
++ [Föråldrade API:er](deprecated-apis.md)
++ [Förhandsversion - kanal](prerelease.md)
