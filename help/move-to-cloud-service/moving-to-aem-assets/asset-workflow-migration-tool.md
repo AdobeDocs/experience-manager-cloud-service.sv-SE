@@ -1,14 +1,13 @@
 ---
 title: Verktyg för resursarbetsflödesmigrering
-description: 'Verktyg för resursarbetsflödesmigrering '
-translation-type: tm+mt
-source-git-commit: 3a438de3c460d4dc5a8b8617f0ec0eefc56f1665
+description: Verktyg för resursarbetsflödesmigrering
+exl-id: 18490295-ead6-4691-8983-a6d4054e4264
+source-git-commit: a0fb2714bc74c620d90153746930757301e62fd7
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 46%
+source-wordcount: '276'
+ht-degree: 29%
 
 ---
-
 
 # Verktyg för resursarbetsflödesmigrering {#asset-workflow-migration}
 
@@ -33,6 +32,8 @@ Arbetsflödena har olika nivå av migreringsstöd. Se den här [listan över spe
 * `NUI_MIGRATED`: Migrerad till en  [bearbetningsprofil för tjänsten](/help/assets/asset-microservices-configure-and-use.md) Asset compute.
 * `UNSUPPORTED`: Stöds för närvarande inte i  [!DNL Experience Manager Assets] som Cloud Service.
 
-## Installera verktyget för arbetsflödesmigrering {#installing-tool}
+## Använd verktyget Resursarbetsflödesmigrering {#use-workflow-migrator}
 
-Läs **[Git-resurs: AEM Assets as a Cloud Service – arbetsflödesmigrering](https://github.com/adobe/aem-cloud-migration)** för information om hur du installerar och skapar kod från källan.
+* **[!DNL Adobe I/O]CLI**: Adobe rekommenderar att du använder verktyget Resursarbetsflödesmigrering via  `aio-cli-plugin-aem-cloud-service-migration` ([!DNL Experience Manager] som ett plugin-program för  [!DNL Cloud Service] kodomfaktorisering för  [!DNL Adobe I/O] CLI). Mer information om hur du installerar och använder plugin-programmet finns i [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction).
+
+* **Fristående verktyg**: Verktyget för migrering av arbetsflöden för resurser kan också köras som ett fristående verktyg. Mer information om hur du installerar och skapar kod från källan finns i **[Git-resurs: [!DNL Experience Manager Assets] as a [!DNL Cloud Service] - arbetsflödesmigrering](https://github.com/adobe/aem-cloud-migration)**.
