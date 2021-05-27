@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Resurshantering
 role: Business Practitioner
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 6480ae8abe194dc5561658ccbd87a30447959721
+source-git-commit: 4c3007b9e38f8a18d61b781ddbcd00bd45b67729
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 0%
+source-wordcount: '876'
+ht-degree: 1%
 
 ---
 
@@ -24,8 +24,9 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 
 Du kan hämta Experience Manager-resurser på följande sätt:
 
+<!-- * [Link Share](#link-share-download) -->
+
 * [Experience Manager användargränssnitt](#download-assets)
-* [Länkdelning](#link-share-download)
 * [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)
 * [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
 * [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
@@ -65,15 +66,17 @@ Så här hämtar du resurser:
 
 1. Klicka på **[!UICONTROL Download]** i dialogrutan.
 
-## Hämta resurser som delas med länkdelning {#link-share-download}
+<!-- TBD: Commenting from May release because the feature is moved to June release 2021.6.0.
+## Download assets shared using link sharing {#link-share-download}
 
-Att dela resurser med hjälp av en länk är ett bekvämt sätt att göra det tillgängligt för intresserade utan att de först behöver logga in på [!DNL Assets]. Om du vill generera en URL för att dela resurser använder du funktionen [Länkdelning](/help/assets/share-assets.md#sharelink).
+Sharing assets using a link is a convenient way to make it available to interested people without them having to first log in to [!DNL Assets]. To generate a URL to share assets, use the [Link Share functionality](/help/assets/share-assets.md#sharelink). 
 
-När användare hämtar resurser från delade länkar använder [!DNL Assets] en asynkron tjänst som erbjuder snabbare och oavbrutna hämtningar. De resurser som ska laddas ned köas i bakgrunden i en inkorg i ZIP-arkiv med hanterbar filstorlek. Vid mycket stora nedladdningar delas nedladdningen in i filer som är 100 GB stora.
+When users download assets from shared links, [!DNL Assets] uses an asynchronous service that offers faster and and uninterrupted downloads. The assets to be downloaded are queued in the background in an inbox into ZIP archives of manageable file size. For very large downloads, the download is chunked into files of 100 GB in size.
 
-I inkorgen visas bearbetningsstatus för varje arkiv. När bearbetningen är klar kan du hämta arkiven från inkorgen.
+The inbox displays the processing status of each archive. Once the processing is complete, you can download the archives from the inbox.
 
-![Hämta inkorg](assets/download-inbox.png)
+![Download inbox](assets/download-inbox.png)
+-->
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
