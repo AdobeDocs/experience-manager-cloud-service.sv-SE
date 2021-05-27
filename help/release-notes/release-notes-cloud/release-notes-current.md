@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 740b710cf21ef967f140ef1984268d9e82ea4059
+source-git-commit: 4c3007b9e38f8a18d61b781ddbcd00bd45b67729
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -61,9 +61,9 @@ Följande version (2021.6.0) kommer att vara den 24 juni 2021.
 * När du överför mycket stora filer kraschar [!DNL Experience Manager desktop app]. (CQ-4320942)
 * Alternativen i verktygsfältet är olika när samma samling väljs inifrån en mapp och när den väljs från ett sökresultat. (CQ-4321406)
 
-#### Nyheter i Dynamic Media {#what-is-new-dm}
+#### Nyheter i [!DNL Dynamic Media] {#what-is-new-dm}
 
-* Med DPR (Smart Imaging DPR) (Device Pixel Ratio) och optimering av nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information finns i [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md).
+* Med optimering av pixelproportioner för smarta bildbehandlingsenheter (DPR) och nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Se [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md).
 
    >[!NOTE]
    >
@@ -78,7 +78,7 @@ Följande version (2021.6.0) kommer att vara den 24 juni 2021.
    * Asien-Stillahavsområdet 19 juli 2021.
 
 
-* Introducerat stöd för nästa generationens AVIF-bildformat i Dynamic Media-leverans (fmt URL-modifierare).
+* Introducerat stöd för nästa generationens AVIF-bildformat i [!DNL Dynamic Media]-leverans (fmt URL-modifierare).
 
    >[!NOTE]
    >
