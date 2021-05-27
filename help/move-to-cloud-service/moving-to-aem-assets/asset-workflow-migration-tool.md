@@ -2,7 +2,7 @@
 title: Verktyg för resursarbetsflödesmigrering
 description: Verktyg för resursarbetsflödesmigrering
 exl-id: 18490295-ead6-4691-8983-a6d4054e4264
-source-git-commit: a0fb2714bc74c620d90153746930757301e62fd7
+source-git-commit: d443ab32e5d2dddded58693483a2bda825ea3048
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 29%
@@ -36,4 +36,4 @@ Arbetsflödena har olika nivå av migreringsstöd. Se den här [listan över spe
 
 * **[!DNL Adobe I/O]CLI**: Adobe rekommenderar att du använder verktyget Resursarbetsflödesmigrering via  `aio-cli-plugin-aem-cloud-service-migration` ([!DNL Experience Manager] som ett plugin-program för  [!DNL Cloud Service] kodomfaktorisering för  [!DNL Adobe I/O] CLI). Mer information om hur du installerar och använder plugin-programmet finns i [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction).
 
-* **Fristående verktyg**: Verktyget för migrering av arbetsflöden för resurser kan också köras som ett fristående verktyg. Mer information om hur du installerar och skapar kod från källan finns i **[Git-resurs: [!DNL Experience Manager Assets] as a [!DNL Cloud Service] - arbetsflödesmigrering](https://github.com/adobe/aem-cloud-migration)**.
+* **Fristående verktyg**: Verktyget för migrering av arbetsflöden för resurser kan också köras som ett fristående verktyg. Mer information om hur du installerar och skapar kod från källan finns i [Git-resurs: [!DNL Experience Manager Assets] as a [!DNL Cloud Service] - arbetsflödesmigrering](https://github.com/adobe/aem-cloud-migration).
