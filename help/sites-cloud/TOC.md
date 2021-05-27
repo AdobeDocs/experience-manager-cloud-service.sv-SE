@@ -6,10 +6,9 @@ breadcrumb-title: Redigeringshandbok
 user-guide-description: Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service.
 feature: Redigering
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: e736b80e0bee80b5f3df6451b63b306c546d0912
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '310'
 ht-degree: 69%
 
 ---
@@ -35,6 +34,7 @@ ht-degree: 69%
       + [Redigera sidinnehåll](authoring/fundamentals/editing-content.md)
       + [RTF-redigeraren](authoring/fundamentals/rich-text-editor.md)
       + [Sidegenskaper](authoring/fundamentals/page-properties.md)
+      + [Förhandsgranska innehåll](authoring/fundamentals/previewing-content.md)
       + [Publicera sidor](authoring/fundamentals/publishing-pages.md)
       + [Innehållsfragment](authoring/fundamentals/content-fragments.md)
       + [Experience Fragments](authoring/fundamentals/experience-fragments.md)
