@@ -1,23 +1,22 @@
 ---
-title: Dela resurser, mappar och samlingar som en länk
-description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i [!DNL Experience Manager Assets] som en hyperlänk.
+title: Distribuera och dela resurser, mappar och samlingar
+description: Distribuera dina digitala resurser med metoder som att dela som en länk, hämta och via [!DNL Brand Portal], [!DNL desktop app], and [!DNL Asset Link].
 contentOwner: AG
-feature: Asset Management,Collaboration,Asset Distribution
+feature: Resurshantering,Samarbete,Resursdistribution
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 70068609e51f96c010204b8915593a52f610aded
+exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
+source-git-commit: 9d9e8d63d0f8cca97eb5a6f2ad026b24e3c6506d
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
-
 
 # Dela och distribuera resurser som hanteras i [!DNL Experience Manager] {#share-assets-from-aem}
 
 [!DNL Adobe Experience Manager Assets] Med kan du dela resurser, mappar och samlingar med medlemmar i din organisation och externa enheter, inklusive partners och leverantörer. Använd följande metoder för att dela resurser från [!DNL Experience Manager Assets] som [!DNL Cloud Service]:
 
-* Dela som en länk.
+* [Dela som en länk](#sharelink).
 * [Ladda ned ](/help/assets/download-assets-from-aem.md) resurser och dela dem separat.
 * Dela med [[!DNL Experience Manager] datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
 * Dela med [[!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
@@ -27,10 +26,12 @@ ht-degree: 0%
 
 Använd dialogrutan Länkdelning för att generera URL:en för resurser som du vill dela med användare. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` plats kan visa de länkar som delas med dem. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på [!DNL Assets].
 
+![Dialogrutan Länkdelning](assets/link-share-dialog.png)
+
 >[!NOTE]
 >
 >* Du behöver behörigheten Redigera åtkomstkontrollista för mappen eller resursen som du vill dela som en länk.
->* Innan du delar en länk med användarna måste du se till att [utgående e-post är aktiverad](/help/implementing/developing/introduction/development-guidelines.md#sending-email). Annars inträffar ett fel.
+>* Innan du delar en länk med användarna måste du [aktivera utgående e-post](/help/implementing/developing/introduction/development-guidelines.md#sending-email). Annars inträffar ett fel.
 
 
 1. I [!DNL Assets]-användargränssnittet väljer du resursen som ska delas som en länk.
@@ -181,7 +182,7 @@ Adobe Asset Link effektiviserar samarbetet mellan kreatörer och marknadsförare
 
 Se [hur du konfigurerar [!DNL Assets] att använda det med [!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
 
-## Bästa tillvägagångssätt och felsökning {#bestpractices}
+## Bästa praxis och felsökning {#bestpractices}
 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
 * Om användarna inte kan hämta de delade resurserna, bör du fråga din AEM om vilka [hämtningsgränser](#maxdatasize) är.
