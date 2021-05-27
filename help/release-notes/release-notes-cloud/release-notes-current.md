@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 37e431d70bc7e11097b9d59faed4b654b9087656
+source-git-commit: 740b710cf21ef967f140ef1984268d9e82ea4059
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -43,12 +43,6 @@ Följande version (2021.6.0) kommer att vara den 24 juni 2021.
 * Du kommer snart att kunna verifiera innehåll på en ny [förhandsgranskningsnivå](/help/sites-cloud/authoring/fundamentals/previewing-content.md) för att simulera det slutliga utseendet och känslan som på publiceringsnivån. Detta aktiveras av guiden AEM Sites Managed Publication, som nu låter dig välja ett publiceringsmål mellan Publicera eller Förhandsgranska. Du kommer sedan åt upplevelser på förhandsgranskning via en dedikerad URL. Efter validering i förhandsgranskning kan innehåll publiceras från författare till publicering som vanligt. Om du aktiverar förhandsgranskningstjänsten i AEM som en Cloud Service-miljö kommer den att lanseras gradvis under de kommande veckorna.
 
 ## [!DNL Adobe Experience Manager Assets] som  [!DNL Cloud Service] {#assets}
-
-### Nyheter i [!DNL Assets] {#what-is-new-assets}
-
-* Du kan hämta resurser som delas med funktionen Länkdelning. Nedladdningen använder nu en asynkron tjänst som ger snabbare och oavbruten nedladdning, även för mycket stora nedladdningar. Se [hämta resurser](/help/assets/download-assets-from-aem.md#link-share-download).
-
-   ![Hämta inkorg](/help/assets/assets/download-inbox.png)
 
 ### Nya funktioner i prerelease-kanalen {#what-is-new-assets-prerelease}
 
