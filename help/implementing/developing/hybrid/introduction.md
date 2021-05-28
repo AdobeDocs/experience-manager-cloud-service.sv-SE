@@ -1,14 +1,13 @@
 ---
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
-translation-type: tm+mt
-source-git-commit: e1db93e8f4cf8ef881b274879e800c9993753a66
+exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '1984'
 ht-degree: 0%
 
 ---
-
 
 # SPA introduktion och genomgång {#spa-introduction}
 
@@ -28,11 +27,11 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. [Ladda ned och i
 
 >[!CAUTION]
 >
->I det här dokumentet används [WKND-SPA](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
+>Det här dokumentet använder [WKND-SPA](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
 
 >[!TIP]
 >
->Alla AEM ska utnyttja den AEM projekttypen [som stöder SPA projekt med React eller Angular och använder SPA SDK.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+>Alla AEM ska utnyttja den AEM projekttypen [som stöder SPA projekt med React eller Angular och använder SPA SDK.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 
 ### Vad är en SPA? {#what-is-a-spa}
 
@@ -67,7 +66,7 @@ Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir 
 
 Den främsta idén bakom en SPA är att anrop till och beroende av en server minskas för att minimera fördröjningar som orsakas av serverfördröjning så att SPA närmar sig svarstiden för ett internt program.
 
-På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas eftersom besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna ifatt besökarens önskemål.
+På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas när besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna ifatt besökarens önskemål.
 
 ![Sekventiellt jämfört med flytande upplevelser](assets/spa-sequential-vs-fluid.png)
 
@@ -79,12 +78,10 @@ Genom att återge på klientsidan reagerar sidelementen snabbare, och besökaren
 >
 >Teknisk information om hur SPA arbetar i AEM finns i artiklarna:
 >* [Komma igång med SPA i AEM med React](getting-started-react.md)
->* [Getting Started with SPA in AEM Using Angular](getting-started-angular.md)
+* [Komma igång med SPA i AEM med Angular](getting-started-angular.md)
 
->
->
 Mer information om design, arkitektur och tekniska arbetsflöden i SPA Editor finns i artikeln:
->* [Översikt över](editor-overview.md) SPA.
+* [Översikt över](editor-overview.md) SPA.
 
 
 ## Innehållsredigering med SPA {#content-editing-experience-with-spa}
@@ -116,10 +113,8 @@ När en SPA har byggts för att dra nytta av den AEM SPA redigeraren märker inn
 Ytterligare redigeringsverktyg som att dra och släppa ytterligare komponenter på sidan, ordna om komponenter och ändra layouten stöds som i andra program än SPA AEM.
 
 >[!NOTE]
->
->SPA redigerare ändrar inte programmets DOM. SPA ansvarar själv för DOM.
->
->Om du vill se hur det fungerar fortsätter du till nästa avsnitt i den här artikeln [SPA Appar och AEM SPA Editor](#spa-apps-and-the-aem-spa-editor).
+SPA redigerare ändrar inte programmets DOM. SPA ansvarar själv för DOM.
+Om du vill se hur det fungerar fortsätter du till nästa avsnitt i den här artikeln [SPA Appar och AEM SPA Editor](#spa-apps-and-the-aem-spa-editor).
 
 ## SPA och AEM SPA{#spa-apps-and-the-aem-spa-editor}
 
@@ -227,18 +222,15 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
    Vissa specifika klassnamn läggs också till för att markera platshållare och för att dra och släppa resurser.
 
    >[!NOTE]
-   >
-   >Detta skiljer sig från serversidans återgivna sidor i AEM, där ett `cq`-element infogas för varje redigerbar komponent.
-   >
-   >Med den här metoden i SPA Editor elimineras behovet av att mata in anpassade element, endast ytterligare ett dataattribut används, vilket gör markeringen enklare för klientutvecklaren.
+   Detta skiljer sig från serversidans återgivna sidor i AEM, där ett `cq`-element infogas för varje redigerbar komponent.
+   Med den här metoden i SPA Editor elimineras behovet av att mata in anpassade element, endast ytterligare ett dataattribut används, vilket gör markeringen enklare för klientutvecklaren.
 
 ## Headless and Headless in AEM {#headful-headless}
 
 SPA kan aktiveras med flexibla integreringsnivåer i AEM, inklusive SPA som utvecklats och underhålls utanför AEM. Dessutom kan SPA utnyttjas inom AEM och AEM för att leverera innehåll till ytterligare slutpunkter utan problem.
 
 >[!TIP]
->
->Mer information finns i dokumentet [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md).
+Mer information finns i dokumentet [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md).
 
 ## Nästa steg {#next-steps}
 
