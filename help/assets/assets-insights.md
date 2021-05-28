@@ -1,26 +1,26 @@
 ---
-title: 'Asset Insights '
+title: Resursinsikter
 description: Spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar.
 contentOwner: AG
 feature: Resursinsikter,Resursrapporter
 role: Business Practitioner,Leader
 exl-id: e268453b-e7c0-4aa4-bd29-2686edb5f99a
-source-git-commit: 212e4e7cfb93d5765f80003c42ba6afb9af45c13
+source-git-commit: 1c841eaa49eeb021fc7583c58aeaefc1236650f9
 workflow-type: tm+mt
 source-wordcount: '758'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
-# Asset Insights {#asset-insights}
+# Resursinsikter {#asset-insights}
 
-Med funktionen för tillgångsinsikter kan ni spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar. Det ger insikter om bildens prestanda och popularitet.
+Funktionen Assets Insights gör att ni kan spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar. Det ger insikter om bildens prestanda och popularitet.
 
 Assets Insights samlar in information om användaraktivitet, t.ex. hur många gånger en bild klassificeras, klickas och hur många gånger bilden läses in på webbplatsen. Det tilldelar poäng till bilder baserat på denna statistik. Du kan använda resultat och prestandastatistik för att välja populära bilder som ska ingå i kataloger, marknadsföringskampanjer och så vidare. Man kan till och med utforma arkiverings- och licensförnyelseregler baserat på denna statistik.
 
 För att Assets Insights ska kunna samla in användningsstatistik för bilder från en webbplats måste du inkludera inbäddningskoden för bilden i webbplatskoden.
 
-Om du vill att tillgångsinsikter ska visa användningsstatistik för resurser måste du först konfigurera funktionen så att den hämtar rapporteringsdata från [!DNL Adobe Analytics]. Mer information finns i [Konfigurera tillgångsinsikter](#configure-asset-insights). Om du vill använda den här funktionen måste du köpa [!DNL Adobe Analytics] separat.
+Om du vill att Assets Insights ska visa användningsstatistik för resurser måste du först konfigurera funktionen så att rapporteringsdata hämtas från [!DNL Adobe Analytics]. Mer information finns i [Konfigurera resursinsikter](#configure-asset-insights). Om du vill använda den här funktionen måste du köpa [!DNL Adobe Analytics] separat.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Om du vill att tillgångsinsikter ska visa användningsstatistik för resurser m
 
 ## Visa statistik för en bild {#viewing-statistics-for-an-image}
 
-Du kan visa poängen för resursinsikter från metadatasidan.
+Du kan visa bakgrundsmusik för resursinsikter från metadatasidan.
 
 1. I resursanvändargränssnittet markerar du bilden och klickar sedan på **[!UICONTROL Properties]** i verktygsfältet.
 1. Klicka på **[!UICONTROL Insights]** på sidan Egenskaper.
@@ -49,7 +49,7 @@ Du kan visa poängen för resursinsikter från metadatasidan.
 
    >[!NOTE]
    >
-   >Eftersom funktionen för tillgångsinsikter vanligtvis hämtar data från lösningar från [!DNL Adobe Analytics] regelbundet, kanske inte avsnittet Lösningar visar de senaste data. Den tidsperiod som data visas för beror på schemat för hämtningsåtgärden som resursinsikter körs för att hämta analysdata.
+   >Eftersom funktionen Resursinsikter vanligtvis hämtar data från [!DNL Adobe Analytics] från lösningar regelbundet, kanske inte avsnittet Lösningar visar de senaste data. Den tidsperiod som data visas för beror på schemat för hämtningsåtgärden som Assets Insights kör för att hämta Analytics-data.
 
 1. Om du vill visa prestandastatistik för resursen grafiskt över en tidsperiod väljer du period i **[!UICONTROL Performance Statistics]**-avsnittet. Detaljer, inklusive klick och visningar, visas som trendlinjer i ett diagram.
 
@@ -75,7 +75,7 @@ Du kan visa bakgrundsmusik för alla resurser i en mapp samtidigt med **[!UICONT
 
 ## Schedule background job {#scheduling-background-job}
 
-Asset Insights fetches usage data for assets from Adobe Analytics report suites in a periodic manner. By default, Asset Insights runs a background job every 24 hours at 2 AM to the fetch data. However, you can modify both the frequency and the time by configuring the **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** service from the web console.
+Assets Insights fetches usage data for assets from Adobe Analytics report suites in a periodic manner. By default, Assets Insights runs a background job every 24 hours at 2 AM to the fetch data. However, you can modify both the frequency and the time by configuring the **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** service from the web console.
 
 1. Click the [!DNL Experience Manager] logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Open the **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** service configuration.
@@ -85,9 +85,9 @@ Asset Insights fetches usage data for assets from Adobe Analytics report suites 
 1. Specify the desired scheduler frequency and the start time for the job in the property scheduler expression. Save the changes.
 -->
 
-## Konfigurera tillgångsinsikter {#configure-asset-insights}
+## Konfigurera resursinsikter {#configure-asset-insights}
 
-[!DNL Experience Manager Assets] hämtar användningsdata om digitala resurser som används av tredjepartswebbplatser från  [!DNL Adobe Analytics]. Om du vill att tillgångsinsikter ska kunna hämta dessa data och generera insikter måste du först konfigurera funktionen så att den integreras med [!DNL Adobe Analytics].
+[!DNL Experience Manager Assets] hämtar användningsdata om digitala resurser som används av tredjepartswebbplatser från  [!DNL Adobe Analytics]. Om du vill att Assets Insights ska kunna hämta data och generera insikter måste du först konfigurera funktionen så att den integreras med [!DNL Adobe Analytics].
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Asset Insights fetches usage data for assets from Adobe Analytics report suites 
 
    *Bild: Konfigurera Adobe Analytics for Assets Insights i[!DNL Experience Manager]*
 
-1. Klicka på **[!UICONTROL Authenticate]**. När [!DNL Experience Manager] har autentiserat dina inloggningsuppgifter väljer du en Adobe Analytics-rapportsserie från **[!UICONTROL Report Suite]**-listan där du vill att resursinsikter ska hämta data. Klicka på **[!UICONTROL Add]**.
+1. Klicka på **[!UICONTROL Authenticate]**. När [!DNL Experience Manager] har autentiserat dina inloggningsuppgifter väljer du en Adobe Analytics-rapportsserie från **[!UICONTROL Report Suite]**-listan där du vill att Assets Insights ska hämta data. Klicka på **[!UICONTROL Add]**.
 1. När [!DNL Experience Manager] har konfigurerat rapportsviten klickar du på **[!UICONTROL Done]**.
 
 ### Sidspåraren {#page-tracker}
@@ -120,11 +120,11 @@ När du har konfigurerat ditt Adobe Analytics-konto genereras sidspårningskoden
 
 <!--
 
-## Using demo package for Asset Insights {#using-demo-package-for-asset-insights}
+## Using demo package for Assets Insights {#using-demo-package-for-asset-insights}
 
-Using the demo package, you can enable Adobe Asset Insights to capture data from and generate insights for a sample web page.
+Using the demo package, you can enable Adobe Assets Insights to capture data from and generate insights for a sample web page.
 
-1. Configure Asset Insights using the instructions in [Configure Asset Insights](#configure-asset-insights).
+1. Configure Assets Insights using the instructions in [Configure Assets Insights](#configure-asset-insights).
 1. Download the sample [!DNL Experience Manager Assets] package from below and install the package from CRXDE package manager.
 
    [Get File](assets/insightsdemo.zip)
