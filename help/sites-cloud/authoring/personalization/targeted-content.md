@@ -1,14 +1,13 @@
 ---
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
-translation-type: tm+mt
-source-git-commit: 10aba35c0795ef946edce02e9396947fc6348514
+exl-id: 8d80d867-2d0f-4ddb-8a06-f9441e6d85ce
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '5348'
+source-wordcount: '5342'
 ht-degree: 5%
 
 ---
-
 
 # Skapa riktat innehåll med målläge {#authoring-targeted-content-using-targeting-mode}
 
@@ -170,7 +169,7 @@ Du kan spara anpassade erbjudanden i ett erbjudandebibliotek om du bestämmer di
 
 Med steget Skapa i [målprocessen](#the-targeting-process-create-target-and-goals-settings) kan du lägga till och ta bort upplevelser. Dessutom kan du duplicera en upplevelse och ändra namn på den.
 
-#### Lägga till upplevelser med målläget {#adding-experiences-using-targeting-mode}
+#### Lägga till upplevelser med målläge {#adding-experiences-using-targeting-mode}
 
 Så här lägger du till en upplevelse:
 
@@ -464,7 +463,7 @@ Använd de avancerade inställningarna för att avgöra vad som händer **efter*
 | Ökning, frigör användare och Tillåt återinträde | Välj den upplevelse besökaren ser om de återupptar aktiviteten: Samma upplevelse, Slumpmässig upplevelse, Osynlig upplevelse |
 | Ökningsantal, återinträde av användare och fält | Bestäm vad användaren ser i stället för aktivitetsinnehållet: Samma upplevelse, utan spårning, standardinnehåll eller annat aktivitetsinnehåll |
 
-Mer information om framgångsmått finns i [Adobe Target-dokumentation](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html).
+Mer information om framgångsmått finns i [Adobe Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html).
 
 ### Konfigurerar inställningar (AEM mål) {#configuring-settings-aem-targeting}
 
@@ -503,13 +502,13 @@ Så här konfigurerar du mål och inställningar om du använder Adobe Target:
 
    ![Rapporteringskälla](../assets/targeted-reporting-source.png)
 
-1. I området **Målmått**, under **Mitt primära mål** väljer du det framgångsmått som du vill spåra – som konvertering, intäkter eller engagemang – och anger hur mätningen görs (eller vilka åtgärder målgruppen vidtar för att ange att ett mål har nåtts). Definitioner av målmått anges i föregående tabell och [Adobe Target-dokumentationen](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html) innehåller mer information om framgångsmått.
+1. I området **Målmått**, under **Mitt primära mål** väljer du det framgångsmått som du vill spåra – som konvertering, intäkter eller engagemang – och anger hur mätningen görs (eller vilka åtgärder målgruppen vidtar för att ange att ett mål har nåtts). Definitioner av målmått anges i föregående tabell och [Adobe Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) innehåller mer information om framgångsmått.
 
    Du kan byta namn på målet genom att klicka på de tre punkterna i det övre högra hörnet och välja **Byt namn**.
 
    Om du vill rensa alla fält klickar du på de tre punkterna i det övre högra hörnet och väljer **Rensa alla fält**.
 
-   Alla mätvärden har också avancerade inställningar som du kan definiera. Välj **Avancerade inställningar** för att komma åt dem. Se en definition av hur framgångsmått räknas i föregående tabell och se [Adobe Target-dokumentation](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html).
+   Alla mätvärden har också avancerade inställningar som du kan definiera. Välj **Avancerade inställningar** för att komma åt dem. Se en definition av hur framgångsmått räknas i föregående tabell och se [Adobe Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html).
 
    >[!NOTE]
    >
