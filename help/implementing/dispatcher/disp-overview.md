@@ -3,10 +3,9 @@ title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
-translation-type: tm+mt
-source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '4211'
+source-wordcount: '4207'
 ht-degree: 6%
 
 ---
@@ -20,7 +19,7 @@ ht-degree: 6%
 
 ## Konfiguration och testning av Apache och Dispatcher {#apache-and-dispatcher-configuration-and-testing}
 
-I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apache och Dispatcher-konfiguration samt hur du validerar och kör den lokalt innan du distribuerar den i molnmiljöer. Det beskriver även felsökning i molnmiljöer. Mer information om Dispatcher finns i [AEM Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html).
+I det här avsnittet beskrivs hur du strukturerar AEM som en Cloud Service-Apache och Dispatcher-konfiguration samt hur du validerar och kör den lokalt innan du distribuerar den i molnmiljöer. Det beskriver även felsökning i molnmiljöer. Mer information om Dispatcher finns i [AEM Dispatcher-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
 
 >[!NOTE]
 >Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta är en förutsättning för att du ska kunna köra och felsöka Dispatcher på en lokal dator. Avsnitten nedan innehåller kommandon som använder Mac- eller Linux-versionerna av SDK, men Windows SDK kan användas på liknande sätt.
@@ -528,7 +527,7 @@ Dispatcher-konfigurationsstrukturen har skillnader mellan Managed Services och A
 ## Konvertera en AMS till en AEM som en Dispatcher-konfiguration för molntjänster
 
 I följande avsnitt ges stegvisa instruktioner för hur du konverterar en AMS-konfiguration. Det förutsätter
-att du har ett arkiv med en struktur som liknar den som beskrivs i [Cloud Manager Dispatcher configuration](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
+att du har ett arkiv med en struktur som liknar den som beskrivs i [Cloud Manager Dispatcher configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
 
 ### Extrahera arkivet och ta bort ett eventuellt prefix
 
