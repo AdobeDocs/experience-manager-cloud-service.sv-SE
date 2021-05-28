@@ -1,14 +1,13 @@
 ---
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM som Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
-translation-type: tm+mt
-source-git-commit: 9b52d37a5af866dfb1bce6ee18b524a0f6ede19e
+exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
+source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
 workflow-type: tm+mt
-source-wordcount: '14060'
+source-wordcount: '14050'
 ht-degree: 5%
 
 ---
-
 
 # Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse) {#creating-accessible-content-wcag-conformance}
 
@@ -69,15 +68,15 @@ En annan fördel är att textalternativ gör det möjligt att indexera icke-text
 
 #### Så här möts du - innehåll som inte är text (1.1.1) {#how-to-meet-non-text-content}
 
-För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Detta kan du göra i fältet **Alternativ text**; Se till exempel Core Component **[Image](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)**.
+För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Detta kan du göra i fältet **Alternativ text**; Se till exempel Core Component **[Image](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)**.
 
 >[!NOTE]
 >
->Vissa körklara kärnkomponenter, till exempel **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)** saknar fältet **Alternativ text** för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns fältet **Etikett** (**[Tillgänglighet](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** för fliken hela komponenten.
+>Vissa körklara kärnkomponenter, till exempel **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)** saknar fältet **Alternativ text** för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns fältet **Etikett** (**[Tillgänglighet](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** för fliken hela komponenten.
 >
 >När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut).
 >
->Vissa körklara kärnkomponenter, till exempel **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)** saknar fältet **Alternativ text** för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns fältet **Etikett** (**[Tillgänglighet](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** för fliken hela komponenten.
+>Vissa körklara kärnkomponenter, till exempel **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)** saknar fältet **Alternativ text** för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns fältet **Etikett** (**[Tillgänglighet](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** för fliken hela komponenten.
 >
 >När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
@@ -102,7 +101,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
-* Illustrativa foton: Det här är bilder på människor, objekt eller platser. Det är viktigt att tänka på fotots roll på sidan och i allmänhet rekommenderas att beskriva bildinnehållet, eftersom hjälpmedelstekniken meddelar elementtypen (till exempel `graphic` eller `image`). kan göra det klarare att använda `screenshot` eller `illustration` i de alternativa textbeskrivningarna, men detta beror på sammanhanget. Enhetlighet är en stor faktor, ett beslut bör fattas för ett helt redigeringsteam och det ska tillämpas i hela användarupplevelsen.
+* Illustrativa foton: Det här är bilder på människor, objekt eller platser. Det är viktigt att tänka på vilken roll fotot har på sidan, och i allmänhet rekommenderas att beskriva bildinnehållet, eftersom hjälpmedelstekniken meddelar elementtypen (till exempel `graphic` eller `image`). kan göra det klarare att använda `screenshot` eller `illustration` i de alternativa textbeskrivningarna, men detta beror på sammanhanget. Enhetlighet är en stor faktor, ett beslut bör fattas för ett helt redigeringsteam och det ska tillämpas i hela användarupplevelsen.
 * Ikoner: Det är små bildspel (grafik) som förmedlar specifik information. De måste användas konsekvent på en sida och en webbplats. Alla förekomster av ikonen på en sida eller på en webbplats bör ha samma korta och koncisa textalternativ, såvida inte detta leder till onödig duplicering av intilliggande text.
 * Diagram och diagram: Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av fältet **Beskrivning** på fliken **Avancerade**-bildegenskaper. Dessutom kan du tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
 * Kartor, diagram, flödesscheman: För grafik som tillhandahåller spatiala data (till exempel för att ge stöd för att beskriva relationer mellan objekt eller en process) måste du se till att nyckelmeddelandet tillhandahålls i textformat och att textinformationen placeras nära varje associerad datapunkt. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta rätt väg till en viss plats, kan kartbildens alternativa text kortfattat ange *karta över X* och sedan ge anvisningar till den platsen i text någon annanstans på sidan eller i fältet **Beskrivning** på fliken **Avancerat** i **bildkomponenten**.
@@ -157,7 +156,7 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
 * Om innehållet spelas in i förväg utan video (till exempel en poddsändning):
    * Ange en länk omedelbart före eller efter innehållet till en textavskrift av ljudinnehållet. transkriberingen ska vara en HTML-sida med en textmotsvarighet till allt tal och viktigt icke-talat innehåll, plus en indikation på vem som talar, en beskrivning av inställningen, röstuttryck och en beskrivning av allt annat viktigt ljud.
 * Om innehållet är en animering eller förinspelad video utan ljud:
-   * Ange en länk omedelbart före eller efter innehållet till en motsvarande textbeskrivning av informationen som videon innehåller
+   * Tillhandahåll en länk omedelbart före eller efter innehållet till en motsvarande textbeskrivning av den information som videon ger
    * Eller en motsvarande ljudbeskrivning i ett vanligt ljudformat som MP3.
 
 >[!NOTE]
@@ -225,7 +224,7 @@ Personer med nedsatt syn eller nedsatt syn kommer att uppleva tillgänglighetshi
 Det finns två strategier som kan användas för att uppfylla detta kriterium. Båda är godtagbara:
 
 1. Inkludera ytterligare ljudbeskrivning för videoinnehållet. Detta kan uppnås på ett av tre sätt:
-   * Under pauser i den befintliga dialogen, lämna information om förändringar i scenen som inte presenteras som en del av det befintliga ljudspåret.
+   * Under pauser i den befintliga dialogen ska du lämna information om ändringar i scenen som inte presenteras som en del av det befintliga ljudspåret.
    * Skapa ett nytt, extra och valfritt ljudspår som innehåller det ursprungliga ljudspåret, men även extra ljudinformation om ändringar i scenen.
       * Detta gör att användare kan växla mellan det befintliga ljudspåret (som *inte* innehåller en ljudbeskrivning) och det nya ljudspåret (som *innehåller en ljudbeskrivning).*
       * Detta förhindrar avbrott för användare som inte behöver den ytterligare beskrivningen.
@@ -417,7 +416,7 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
 
 #### Syfte - meningsfull sekvens (1.3.2) {#purpose-meaningful-sequence}
 
-Syftet med detta villkor är att en användaragent ska kunna tillhandahålla en alternativ presentation av innehållet samtidigt som läsordningen som behövs för att förstå innebörden bevaras. Det är viktigt att det går att programmässigt avgöra minst en sekvens av innehållet som är lämplig. Innehåll som inte uppfyller detta villkor kan förvirra eller skada användare när hjälpmedelstekniken läser innehållet i fel ordning eller när alternativa formatmallar eller andra formateringsändringar tillämpas.
+Syftet med detta villkor är att en användaragent ska kunna tillhandahålla en alternativ presentation av innehållet samtidigt som läsordningen som behövs för att förstå innebörden bevaras. Det är viktigt att det är möjligt att programmässigt avgöra minst en sekvens av innehållet som är lämplig. Innehåll som inte uppfyller detta villkor kan förvirra eller skada användare när hjälpmedelstekniken läser innehållet i fel ordning eller när alternativa formatmallar eller andra formateringsändringar tillämpas.
 
 #### Så här möts - meningsfull sekvens (1.3.2) {#how-to-meet-meaningful-sequence}
 
@@ -478,7 +477,7 @@ Se till att all information som bygger på visuella egenskaper för sidinnehåll
 
 Färg är ett uppenbart effektivt sätt att förbättra webbsidornas estetiska utseende och är också användbart för att förmedla information. Det finns dock en rad synstörningar, från blindhet till färgssynsbrist, som innebär att vissa personer inte kan skilja mellan olika färger. Detta gör färgkodning till ett otillförlitligt sätt att tillhandahålla information.
 
-En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja på nyanser i grönt och röda nyanser. De kan se båda färgerna som en tredje färg (till exempel brunt), och då kan de inte skilja mellan rött, grönt och brunt.
+En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja på nyanser i grönt och röda toner. De kan se båda färgerna som en tredje färg (till exempel brunt), och då kan de inte skilja mellan rött, grönt och brunt.
 
 Dessutom kan inte färger uppfattas av personer som använder webbläsare som bara innehåller text, enheter för monokrom visning eller som visar en svartvit utskrift av sidan.
 
@@ -515,7 +514,7 @@ Därför är det viktigt att användaren kan stänga av bakgrundsljudet.
 
 #### Så här möts du - ljudkontroll (1.4.2) {#how-to-meet-audio-control}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna 1.4.2](https://www.w3.org/WAI/WCAG21/quickref/#audio-control).
+Följ riktlinjerna i [Så här uppfyller du kriterierna 1.4.2](https://www.w3.org/WAI/WCAG21/quickref/#audio-control).
 
 #### Mer information - Ljudkontroll (1.4.2) {#more-information-audio-control}
 
@@ -634,7 +633,7 @@ Om bilder av text måste användas, använder du CSS för att ersätta bilder av
 
 Det handlar om att se till att användarna har tillgång till alla funktioner via ett tangentbord.
 
-### Tangentbord (2.1.1) {#keyboard}
+### Tangentbord (2.1.1)  {#keyboard}
 
 * Villkor för lyckat resultat 2.1.1
 * Nivå A
@@ -763,7 +762,7 @@ Du bör vidta åtgärder för att se till att följande tekniker används:
 * [Förstå villkor för framgång 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)
 * [Hur man uppfyller kriterierna för framgång 2.3.1](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)
 
-### Navigerbar (2.4) {#navigable}
+### Navigeringsbar (2.4) {#navigable}
 
 [Riktlinje 2.4 Navigeringsbart: Tillhandahåller sätt att hjälpa användare navigera, hitta innehåll och avgöra var de är.](https://www.w3.org/TR/WCAG/#navigable)
 
@@ -777,7 +776,7 @@ Det handlar om att säkerställa att innehållet är enkelt och enkelt att navig
 
 #### Syfte - Kringgå block (2.4.1) {#purpose-bypass-blocks}
 
-Syftet med detta villkor är att personer som navigerar sekventiellt genom innehållet ska få mer direkt åtkomst till det primära innehållet på webbsidan. Webbsidor och program har ofta innehåll som visas på andra sidor eller skärmar. Exempel på upprepade innehållsblock är bland annat navigeringslänkar, rubrikgrafik, menyer och reklamramar, men är inte begränsade till dem. Små upprepade avsnitt, t.ex. enskilda ord, fraser eller enstaka länkar, anses inte utgöra block i denna bestämmelse.
+Syftet med detta villkor är att personer som navigerar sekventiellt genom innehållet ska kunna få mer direkt åtkomst till det primära innehållet på webbsidan. Webbsidor och program har ofta innehåll som visas på andra sidor eller skärmar. Exempel på upprepade innehållsblock är bland annat navigeringslänkar, rubrikgrafik, menyer och reklamramar, men är inte begränsade till dem. Små upprepade avsnitt, t.ex. enskilda ord, fraser eller enstaka länkar, anses inte utgöra block i denna bestämmelse.
 
 #### Så här möts du - kringgå block (2.4.1) {#how-to-meet-bypass-blocks}
 
@@ -905,7 +904,7 @@ Du kan också använda skript så att en liten mängd text anges i själva länk
 
 Syftet med detta kriterium är att göra det möjligt för användare att hitta innehåll på det sätt som passar deras behov bäst. En teknik kan vara lättare att använda eller lättare att förstå än en annan.
 
-Även små webbplatser bör ge användarna en viss orienteringsmetod. För en webbplats på tre eller fyra sidor, med alla sidor länkade från hemsidan, räcker det kanske bara att tillhandahålla länkar från och till hemsidan, där länkarna på hemsidan också kan fungera som en webbplatskarta.
+Även små webbplatser bör ge användarna en viss orienteringsmetod. För en webbplats på tre eller fyra sidor, med alla sidor länkade från hemsidan, räcker det kanske bara att tillhandahålla länkar från och till hemsidan där länkarna på hemsidan också kan fungera som en webbplatskarta.
 
 #### Så här möts du - flera sätt (2.4.5) {#how-to-meet-multiple-ways}
 
@@ -1287,7 +1286,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för att lyckas 3.3.4](h
 
 Maximera kompatibiliteten med nuvarande och framtida användaragenter, inklusive hjälpmedelstekniker.
 
-### Analys (4.1.1) {#parsing}
+### Analys (4.1.1)  {#parsing}
 
 * Villkor för lyckat resultat 4.1.1
 * Nivå A
