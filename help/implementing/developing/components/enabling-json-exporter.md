@@ -1,14 +1,13 @@
 ---
 title: Aktivera JSON-export för en komponent
 description: Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
-translation-type: tm+mt
-source-git-commit: 83c27daae4e8ae2ae6a8f115c9da9527971c6ecb
+exl-id: e9be5c0c-618e-4b56-a365-fcdd185ae808
+source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 4%
+source-wordcount: '478'
+ht-degree: 1%
 
 ---
-
 
 # Aktivera JSON-export för en komponent {#enabling-json-export-for-a-component}
 
@@ -29,7 +28,7 @@ Först måste en segmentmodell definieras för komponenten.
 
 >[!NOTE]
 >
->Ett exempel på hur du använder delningsmodeller finns i artikeln [Developing Sling Model Exporters in AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
+>Ett exempel på hur du använder delningsmodeller finns i artikeln [Developing Sling Model Exporters in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
 
 Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 
@@ -45,7 +44,7 @@ Dessutom anger detta att klassen Sling Model kan anpassas till gränssnittet `Co
 
 >[!NOTE]
 >
->Jackson-anteckningar anges vanligtvis inte på klassnivå för Sling Model, utan på gränssnittsnivå för Model. Detta för att säkerställa att JSON-exporten betraktas som en del av komponent-API:t.
+>Jackson-anteckningar anges vanligtvis inte på klassnivån Sling Model, utan i stället på gränssnittsnivån Model. Detta för att säkerställa att JSON-exporten betraktas som en del av komponent-API:t.
 
 >[!NOTE]
 >
@@ -71,7 +70,7 @@ Modellgränssnittet måste kommenteras ordentligt för att definiera vilka metod
 
 ## Exempel {#example}
 
-[Core-](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) komponenterna stöder JSON-export och kan användas som referens.
+[Core-](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) komponenterna stöder JSON-export och kan användas som referens.
 
 Ett exempel finns i Sling Model-implementeringen av Image Core-komponenten och dess kommenterade gränssnitt.
 
@@ -82,4 +81,4 @@ Mer information finns i:
 * [Content Fragments in the Assets user guide](/help/assets/content-fragments/content-fragments.md)
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
-* [Kärnkomponenter ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) och komponenten  [Innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
+* [Kärnkomponenter ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och komponenten  [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
