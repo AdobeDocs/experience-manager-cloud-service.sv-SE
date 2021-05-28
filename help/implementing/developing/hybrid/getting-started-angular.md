@@ -1,24 +1,23 @@
 ---
-title: Getting Started with SPA in AEM Using Angular
-description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med hjälp av vinkelramverket.
-translation-type: tm+mt
-source-git-commit: cdd92032c627740c66de7b2f3836fa1dcd2ee2ca
+title: Komma igång med SPA i AEM med Angular
+description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med hjälp av ramverket för Angular.
+exl-id: 8013ac2c-d1a7-4940-bb65-15e3ed7652d6
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
 
-
-# Komma igång med SPA i AEM med vinkeln {#getting-started-with-spas-in-aem-using-angular}
+# Komma igång med SPA i AEM med Angularna {#getting-started-with-spas-in-aem-using-angular}
 
 Single page applications (SPA) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som byggts med SPA ramverk.
 
-SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln presenteras ett förenklat SPA om vinkelramverket, som förklarar hur det sätts ihop, så att du snabbt kan komma igång med din egen SPA.
+SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln presenteras ett förenklat SPA i ramverket för Angular, som förklarar hur det är sammansatt, så att du snabbt kan komma igång med dina egna SPA.
 
 >[!NOTE]
 >
->Den här artikeln baseras på vinkelramverket. Motsvarande dokument för React framework finns i [Komma igång med SPA i AEM - React](getting-started-react.md).
+>Den här artikeln baseras på ramverket för Angular. Motsvarande dokument för React framework finns i [Komma igång med SPA i AEM - React](getting-started-react.md).
 
 ## Introduktion {#introduction}
 
@@ -40,7 +39,7 @@ Det här dokumentet går igenom strukturen i en förenklad SPA och visar hur det
 
 ## Beroenden, konfiguration och byggnad {#dependencies-configuration-and-building}
 
-Förutom det förväntade vinkelberoendet kan SPA utnyttja ytterligare bibliotek för att göra skapandet av SPA mer effektivt.
+Förutom det förväntade beroendet av Angular kan SPA utnyttja ytterligare bibliotek för att göra det enklare att skapa SPA.
 
 ### Beroenden {#dependencies}
 
@@ -89,7 +88,7 @@ module.exports = {
 };
 ```
 
-### Skapar {#building}
+### Byggnad {#building}
 
 Att bygga appen utnyttjar [Webpack](https://webpack.js.org/) för implementering utöver aem-clientlib-generator för att automatiskt skapa klientbibliotek. Därför påminner kommandot build om:
 
@@ -99,7 +98,7 @@ När paketet har skapats kan det överföras till en AEM.
 
 ### AEM Project Archetype {#aem-project-archetype}
 
-Alla AEM ska utnyttja den AEM projekttypen [som stöder SPA projekt med React eller Angular och använder SPA SDK.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+Alla AEM ska utnyttja den AEM projekttypen [som stöder SPA projekt med React eller Angular och använder SPA SDK.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 
 ## Programstruktur {#application-structure}
 
@@ -277,4 +276,4 @@ Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar in
 * [SPA ](editor-overview.md) översiktsredigeraren går in mer på kommunikationsmodellen mellan AEM och SPA.
 * [WKND SPA ](wknd-tutorial.md) Projects är en stegvis självstudiekurs som implementerar ett enkelt SPA i AEM.
 * [Dynamisk mappning av modell till komponent för ](model-to-component-mapping.md) SPAsexkluderar den dynamiska mappningen av modell till komponent och hur den fungerar i SPA i AEM.
-* [SPA ](blueprint.md) Blueprintger en djupdykning i hur SPA SDK för AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.
+* [SPA ](blueprint.md) Blueprintger en djupdykning i hur SPA SDK for AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.
