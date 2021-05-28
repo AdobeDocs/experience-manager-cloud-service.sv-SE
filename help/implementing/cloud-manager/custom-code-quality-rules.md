@@ -2,10 +2,9 @@
 title: Anpassade regler för kodkvalitet - Cloud Services
 description: Anpassade regler för kodkvalitet - Cloud Services
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-translation-type: tm+mt
-source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '3302'
+source-wordcount: '3298'
 ht-degree: 4%
 
 ---
@@ -583,7 +582,7 @@ AEM API-yta är under ständig revision för att identifiera API:er som inte anv
 
 I många fall är dessa API:er föråldrade med Java-standardanteckningen *@Undertryckt* och, som sådana, enligt `squid:CallToDeprecatedMethod`.
 
-Det finns emellertid fall där ett API är inaktuellt i AEM men inte i andra sammanhang. Den här regeln identifierar den andra klassen.
+Det finns dock fall där ett API är inaktuellt i AEM men inte i andra sammanhang. Den här regeln identifierar den andra klassen.
 
 ## OakPAL-innehållsregler {#oakpal-rules}
 
@@ -725,7 +724,7 @@ Dokumentationen för AEM Moderniseringsverktyg innehåller dokumentation och ver
 
 För att vara kompatibel med databasens distributionsmodell måste enskilda innehållspaket innehålla antingen innehåll för de oföränderliga områdena i databasen (d.v.s. `/apps and /libs, although /libs` ska inte ändras av kundkoden och orsaka en separat överträdelse) eller det ändringsbara området (d.v.s. allt annat), men inte båda. Ett paket som innehåller både `/apps/myco/components/text and /etc/clientlibs/myco` är till exempel inte kompatibelt med Cloud Service och orsakar att ett problem rapporteras.
 
-Mer information finns i [AEM projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html).
+Mer information finns i [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html).
 
 ### Omvända replikeringsagenter ska inte användas {#oakpal-reverse-replication}
 
@@ -737,7 +736,7 @@ Mer information finns i [AEM projektstruktur](https://docs.adobe.com/content/hel
 
 **Sedan**: Version 2020.5.0
 
-Stöd för omvänd replikering är inte tillgängligt i distributioner av Cloud Service, vilket beskrivs i [Versionsinformation: Borttagning av replikeringsagenter](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
+Stöd för omvänd replikering är inte tillgängligt i distributioner av Cloud Service, vilket beskrivs i [Versionsinformation: Borttagning av replikeringsagenter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
 
 Kunder som använder omvänd replikering bör kontakta Adobe för att få alternativa lösningar.
 
