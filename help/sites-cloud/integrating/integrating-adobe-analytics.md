@@ -1,23 +1,22 @@
 ---
 title: Integrera med Adobe Analytics
 description: 'Integrera med Adobe Analytics '
-feature: Administering
+feature: Administratör
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+exl-id: e353a1fa-3e99-4d79-a0d1-40851bc55506
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '532'
 ht-degree: 2%
 
 ---
-
 
 # Integrera med Adobe Analytics{#integrating-with-adobe-analytics}
 
 Genom att integrera Adobe Analytics och AEM som en Cloud Service kan du spåra webbsidans aktivitet. Integreringen kräver:
 
 * med Touch-gränssnittet för att skapa en Analytics-konfiguration i AEM som en Cloud Service.
-* lägga till och konfigurera Adobe Analytics som ett tillägg i [Adobe Launch](#analytics-launch). Mer information om Adobe Launch finns på [den här sidan](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html).
+* lägga till och konfigurera Adobe Analytics som ett tillägg i [Adobe Launch](#analytics-launch). Mer information om Adobe Launch finns på [den här sidan](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html).
 
 Jämfört med tidigare versioner av AEM tillhandahålls inte ramverksstöd i Analytics Configuration i AEM som en Cloud Service. I stället görs det nu via Adobe Launch, som är det defacto-verktyg för att skapa en AEM webbplats med analysfunktioner (JS-bibliotek). I Adobe Launch skapas en egenskap där Adobe Analytics-tillägget kan konfigureras och regler skapas för att skicka data till Adobe Analytics. Adobe Launch har ersatt uppgiften med analys från sitecatalyst.
 
@@ -45,7 +44,7 @@ Konfigurationsfälten som finns i konfigurationsfönstret i Adobe Analytics är:
 | Användarnamn | Adobe Analytics API-användare |
 | Lösenord | Adobe Analytics-lösenord för autentisering |
 | Datacenter | Adobe Analytics datacenter som ditt konto är kopplat till (server, till exempel San Jose, London) |
-| Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Mer information finns på [den här sidan](https://docs.adobe.com/content/help/en/analytics/components/segmentation/seg-overview.html). |
+| Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Mer information finns på [den här sidan](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html). |
 | Rapportsviter | En databas där du skickar data och hämtar rapporter. En rapportsvit definierar den fullständiga, oberoende rapporteringen på en vald webbplats, en uppsättning webbplatser eller en delmängd av webbplatssidor. Du kan visa rapporter som hämtats från en enda rapportserie och kan redigera det här fältet i en konfiguration när som helst enligt dina önskemål. |
 
 ### Lägga till en konfiguration för en plats {#add-configuration}
@@ -56,9 +55,9 @@ Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **P
 
 Adobe Analytics kan läggas till som ett tillägg i startegenskapen. Regler kan definieras för mappning och postanrop till Adobe Analytics:
 
-* Titta på [den här videon](https://docs.adobe.com/content/help/en/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html) om du vill lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
+* Titta på [den här videon](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html) om du vill lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
 
-* På [den här sidan](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) finns mer information om hur du skapar regler och skickar data till Adobe Analytics.
+* På [den här sidan](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) finns mer information om hur du skapar regler och skickar data till Adobe Analytics.
 
 >[!NOTE]
 >
