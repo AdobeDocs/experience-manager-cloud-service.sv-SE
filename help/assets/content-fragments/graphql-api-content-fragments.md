@@ -3,8 +3,7 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för leverans av headless-innehåll.
 feature: Innehållsfragment,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-translation-type: tm+mt
-source-git-commit: 0c7b66e636e36a8036a590e949aea42e33a4e289
+source-git-commit: 8be8308c15ede115c21ccca8f91a13a23356d0b1
 workflow-type: tm+mt
 source-wordcount: '3935'
 ht-degree: 0%
@@ -159,7 +158,7 @@ Om du vill aktivera en GraphQL-slutpunkt måste du först ha en lämplig konfigu
 
 Så här aktiverar du motsvarande slutpunkt:
 
-1. Navigera till **Verktyg**, **Platser** och välj sedan **GraphQL**.
+1. Navigera till **Verktyg**, **Resurser** och välj sedan **GraphQL**.
 1. Välj **Skapa**.
 1. Dialogrutan **Skapa ny GraphQL-slutpunkt** öppnas. Här kan du ange:
    * **Namn**: Slutpunktens namn. du kan skriva vilken text som helst.
@@ -328,7 +327,7 @@ GraphQL för AEM stöder en lista med typer. Alla Content Fragment Model-datatyp
 
 Förutom datatyperna för användargenererade fält genererar GraphQL för AEM även ett antal *hjälpfält*-fält för att hjälpa till att identifiera ett innehållsfragment eller för att ge ytterligare information om ett innehållsfragment.
 
-#### Sökväg {#path}
+#### Bana {#path}
 
 Sökvägsfältet används som en identifierare i GraphQL. Den representerar sökvägen till Content Fragment-resursen i AEM. Vi har valt detta som identifierare för ett innehållsfragment eftersom det:
 
@@ -485,7 +484,7 @@ query GetAdventureByType($includePrice: Boolean!) {
 }
 ```
 
-## Filtrerar {#filtering}
+## Filtrering {#filtering}
 
 Du kan också använda filtrering i GraphQL-frågor för att returnera specifika data.
 
@@ -929,6 +928,6 @@ Frågor som har uppstått:
    * **S**: &quot;*AEM GraphQL API ger total kontroll över JSON-utdata och är en branschstandard för att fråga efter innehåll.
 AEM planerar att investera i AEM GraphQL API.*&quot;
 
-## Självstudie - Komma igång med AEM Headless och GraphQL {#tutorial}
+## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
 Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) heltäckande självstudiekurs som visar hur du bygger upp och visar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
