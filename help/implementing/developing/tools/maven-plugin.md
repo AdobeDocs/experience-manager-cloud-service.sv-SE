@@ -2,11 +2,10 @@
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
-translation-type: tm+mt
-source-git-commit: 03b2237dfde6ec605d8dcd8789ec4f2aa67716ca
+source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
 workflow-type: tm+mt
-source-wordcount: '1855'
-ht-degree: 5%
+source-wordcount: '1847'
+ht-degree: 4%
 
 ---
 
@@ -34,7 +33,7 @@ AEM som Cloud Service följer de senaste metoderna för pakethantering och proje
 
 >[!TIP]
 >
->Mer information finns i [AEM Project Structure](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)-artikeln i AEM som en Cloud Service-dokumentation och i [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)-dokumentationen. Båda stöds fullt ut för AEM 6.5.
+>Mer information finns i [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)-artikeln i AEM som en Cloud Service-dokumentation och i [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)-dokumentationen. Båda stöds fullt ut för AEM 6.5.
 
 ## Hämta innehållspaketet Maven-plugin {#obtaining-the-content-package-maven-plugin}
 
@@ -97,7 +96,7 @@ Parametrarna i följande tabell är gemensamma för alla mål utom när de anges
 | `userId` | `String` | Ja | `admin` | Användarnamnet som ska autentiseras med AEM | Alla mål utom `package` |
 | `verbose` | `boolean` | Nej | `false` | Aktiverar eller inaktiverar utförlig loggning | Alla mål utom `package` |
 
-### bygg {#build}
+### bygga {#build}
 
 Skapar ett innehållspaket som redan har definierats på en AEM.
 
@@ -156,7 +155,7 @@ Avinstallerar ett paket. Paketet finns kvar på servern i avinstallerat läge.
 
 Alla parametrar för avinstallationsmålet beskrivs i avsnittet [Vanliga parametrar](#common-parameters).
 
-### paket {#package}
+### package {#package}
 
 Skapar ett innehållspaket. Standardkonfigurationen för paketmålet omfattar innehållet i katalogen där kompilerade filer sparas. Körningen av paketmålet kräver att kompileringsfasen har slutförts. Paketmålet är bundet till paketfasen av bygglivscykeln för Maven.
 
@@ -215,7 +214,7 @@ I följande filterexempel visas XML-strukturen som ska användas:
 
 När filtret inte innehåller något `mode`-element används standardvärdet `replace`.
 
-### hjälp {#help}
+### help {#help}
 
 #### Parametrar {#parameters-6}
 
@@ -266,4 +265,4 @@ Den senaste AEM Project Archetype implementerar paketstrukturen med bästa praxi
 
 >[!TIP]
 >
->Mer information finns i [AEM Project Structure](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)-artikeln i AEM som en Cloud Service-dokumentation och i [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)-dokumentationen. Båda stöds fullt ut för AEM 6.5.
+>Mer information finns i [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)-artikeln i AEM som en Cloud Service-dokumentation och i [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)-dokumentationen. Båda stöds fullt ut för AEM 6.5.
