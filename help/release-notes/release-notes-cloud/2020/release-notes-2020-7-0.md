@@ -1,14 +1,13 @@
 ---
 title: Versionsinformation för 2020.7.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.7.0.'
-translation-type: tm+mt
-source-git-commit: 13774cc8684166c98f85bf4096d2c7de8d257746
+exl-id: 75d354a3-6987-4de0-aec8-24043461c516
+source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 2%
+source-wordcount: '1034'
+ht-degree: 1%
 
 ---
-
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service 2020.7.0 {#release-notes}
 
@@ -26,11 +25,11 @@ Releasedatum för [!DNL Experience Manager] som Cloud Service 2020.7.0 är 30 ju
 
 * En ny implementering av användargränssnittet ersätter implementeringen som baseras på det klassiska användargränssnittet.
 
-* Förenklade dialogrutor i användargränssnittet, vilket gör att ramverket för variabelmappning och andra konfigurationer kan skapas till [!DNL Adobe Launch]. Se [Integrera Adobe Analytics](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/integrations/integrating-adobe-analytics.html) och [Integrera Adobe Target](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/integrations/integrating-adobe-target.html).
+* Förenklade dialogrutor i användargränssnittet, vilket gör att ramverket för variabelmappning och andra konfigurationer kan skapas till [!DNL Adobe Launch]. Se [Integrera Adobe Analytics](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-analytics.html) och [Integrera Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-target.html).
 
 * Konfigurationer lagras nu i `/conf` i stället för `/etc/cloudsettings` i Experience Manager-databasen.
 
-## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
+## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
@@ -56,20 +55,20 @@ Releasedatum för [!DNL Experience Manager] som Cloud Service 2020.7.0 är 30 ju
 
 AEM Commerce är nu tillgänglig i Cloud Service.
 
-Mer information finns i [Komma igång med AEM Commerce som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/commerce/getting-started.html).
+Mer information finns i [Komma igång med AEM Commerce som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/getting-started.html).
 
 ## Kärnkomponenter {#core-components}
 
 ### Nyheter {#what-is-new-core-components}
 
-Version 2.11.0 av [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) är nu tillgänglig som en del av AEM Sites inklusive:
+Version 2.11.0 av [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är nu tillgänglig som en del av AEM Sites inklusive:
 
 * Introduktion till en ny [PDF Viewer-komponent](https://aemcomponents.dev/content/core-components-examples/library/page-authoring/pdf-viewer.html).
 
 * Stöd för AMP (Accelerated Mobile Pages) för kärnkomponenter finns nu. Det hjälper till att skapa snabbare kundupplevelser genom att göra sidövergången omedelbart när du kommer in på webbplatsen från ett Google-sökresultat för mobiler, vilket förbättrar användarengagemanget och SEO.
-Mer information finns i [AMP-stöd för kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/amp.html).
+Mer information finns i [AMP-stöd för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/amp.html).
 
-* Kompatibilitet med version 1.0.2 av [Adobe-klientdatalagret](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html).
+* Kompatibilitet med version 1.0.2 av [Adobe-klientdatalagret](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html).
 
 * Felkorrigeringar och förbättringar av kodkvaliteten.
 
@@ -138,7 +137,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Tidigare version av CRA kunde inte köras på Adobe Experience Manager (AEM) 6.1. Explicit stöd för att tillåta användare i administratörsgruppen har lagts till.
 
-   Mer information finns i [Installera CRA på AEM 6.1](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/using-cloud-readiness-analyzer.html#installing-on-aem61).
+   Mer information finns i [Installera CRA på AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/using-cloud-readiness-analyzer.html#installing-on-aem61).
 
 * Den förfallotidsstämpel som visades i sammanfattningsrapporten var felaktig.
 
