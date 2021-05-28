@@ -2,10 +2,10 @@
 title: Körningsfas
 description: Körningsfas
 exl-id: 176dd79d-0d72-443c-87db-dab24fb48b96
-source-git-commit: dfbd0f38017d02810da05ccadbc5f2fbd5826aa3
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 96%
+source-wordcount: '1028'
+ht-degree: 87%
 
 ---
 
@@ -17,11 +17,11 @@ Med Cloud Manager kan organisationer själva hantera AEM i molnet. Det innehåll
 
 Mer information finns i följande resurser nedan: 
 
-* [Onboarding för Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/home.html) för att förstå självhjälpsresurser om onboarding för Experience Manager as a Cloud Service.
+* [Onboarding för Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html) för att förstå självhjälpsresurser om onboarding för Experience Manager as a Cloud Service.
 
-* [Integrera Git med Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/managing-code/integrating-with-git.html) för att lära dig mer om hur du använder en enstaka Git-databas för att driftsätta kod.
+* [Integrera Git med Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/integrating-with-git.html) för att lära dig mer om hur du använder en enstaka Git-databas för att driftsätta kod.
 
-* [Adobe Experience as a Cloud Service-konfiguration](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#aem-configuration) för att lära dig mer om hur du hanterar produkter och användaråtkomst i Admin Console.
+* [Adobe Experience as a Cloud Service-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#aem-configuration) för att lära dig mer om hur du hanterar produkter och användaråtkomst i Admin Console.
 
 
 ## Introduktion {#introduction}
@@ -56,11 +56,11 @@ Vissa ändringar krävs i AEM Maven-projekt för att de ska vara kompatibla med 
 
 * Allt annat i databasen, `/content` , `/conf` , `/var` , `/home` , `/etc` , `/oak:index` , `/system` , `/tmp` osv. är ändringsbara områden, vilket innebär att de kan ändras under körning.
 
-Mer information finns i [Rekommenderad paketstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#recommended-package-structure).
+Mer information finns i [Rekommenderad paketstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#recommended-package-structure).
 
-Det finns ytterligare riktlinjer för utveckling som du behöver vara medveten om när du utvecklar på AEM as a Cloud Service. Läs mer i [Utvecklingsriktlinjer för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/development-guidelines.html).
+Det finns ytterligare riktlinjer för utveckling som du behöver vara medveten om när du utvecklar på AEM as a Cloud Service. Läs mer i [Utvecklingsriktlinjer för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html).
 
-I din planeringsfas bör du ha en lista över områden som behöver omarbetas för att vara kompatibla med Cloud Service. Du bör även läsa [Utvecklingsriktlinjer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/development-guidelines.html) för mer information om hur du strukturerar om och optimerar koden för att gå över till Cloud Service.
+I din planeringsfas bör du ha en lista över områden som behöver omarbetas för att vara kompatibla med Cloud Service. Du bör även läsa [Utvecklingsriktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html) för mer information om hur du strukturerar om och optimerar koden för att gå över till Cloud Service.
 
 Du kan använda följande verktyg för att snabba upp vissa av dina åtgärder inom omstrukturering av kod:
 
@@ -70,7 +70,7 @@ Du kan använda följande verktyg för att snabba upp vissa av dina åtgärder i
 
 Vi rekommenderar att du strukturerar om och testar koden lokalt innan du skickar den till en Cloud Service-miljö via Cloud Manager Git.
 
-Läs dokumentationen för [AEM SDK](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#aem-as-a-cloud-service-sdk) om du vill veta mer.
+Läs dokumentationen för [AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#aem-as-a-cloud-service-sdk) om du vill veta mer.
 
 Nedan anges ytterligare resurser:
 
@@ -82,7 +82,7 @@ Nedan anges ytterligare resurser:
 
    >[!VIDEO](https://video.tv.adobe.com/v/30602)
 
-* Granska dokumentationen för [lokal utvecklingskonfiguration](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) om du vill konfigurera en lokal utvecklingsmiljö
+* Granska dokumentationen för [lokal utvecklingskonfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) om du vill konfigurera en lokal utvecklingsmiljö
 
 
 Om du vill hantera den pågående kodutvecklingen på din aktiva AEM-fil tillsammans med omstruktureringen av kod som en del av din övergång bör du schemalägga en frysperiod tills du har slutfört omstruktureringen av ditt Maven-projekt så att det blir kompatibelt med AEM as a Cloud Service.
@@ -96,19 +96,19 @@ När projektomstruktureringen är klar kan du återuppta utvecklingen av ny kod 
 
 Körningar av pipeline för Cloud Manager för Cloud Services stöder körning av tester som körs mot mellanlagringsmiljön.
 
-Läs [Kodkvalitetstestning](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#code-quality-testing) om du vill veta hur du skriver testskript och om rekommenderad täckning på minst 50 %.
+Läs [Kodkvalitetstestning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/understand-test-results.html#code-quality-testing) om du vill veta hur du skriver testskript och om rekommenderad täckning på minst 50 %.
 
-Läs även [Förstå regler för anpassad kodkvalitet](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/custom-code-quality-rules.html) om du vill veta mer om regler för anpassad kodkvalitet som körs av Cloud Manager och som skapats utifrån bästa praxis från AEM Engineering.
+Läs även [Förstå regler för anpassad kodkvalitet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-code-quality-rules.html) om du vill veta mer om regler för anpassad kodkvalitet som körs av Cloud Manager och som skapats utifrån bästa praxis från AEM Engineering.
 
 Användning av Cloud Manager är den enda mekanismen för att driftsätta kod till Cloud Service-miljöer.
 
 Följ resurserna nedan för att lära dig hur du använder Cloud Manager för att hantera och driftsätta kod.
 
-* [Hantera miljöer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
+* [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
 
-* [Konfigurera CI-CD-pipeline](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html)
+* [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html)
 
-* [Driftsätta kod](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html)
+* [Driftsätta kod](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html)
 
 ## Bästa praxis för publiceringsförberedelse {#go-live}
 
