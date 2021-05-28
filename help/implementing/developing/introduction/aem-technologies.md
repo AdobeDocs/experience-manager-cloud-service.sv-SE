@@ -1,14 +1,13 @@
 ---
 title: AEM Technical Foundations
 description: En översikt över den tekniska grunden för AEM, inklusive hur AEM är strukturerad och grundläggande tekniker som JCR, Sling och OSGi.
-translation-type: tm+mt
-source-git-commit: 750fded1564de2b11f6c104cc70befc4453405b4
+exl-id: ab6e7fe9-a25d-4351-a005-f4466cc0f40e
+source-git-commit: 8ba7968ee7f4d3c808740054bf841dbaf9dd4254
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2188'
 ht-degree: 0%
 
 ---
-
 
 # AEM Technical Foundations {#aem-technical-foundations}
 
@@ -37,7 +36,7 @@ Den underliggande innehållsdatabasen och affärslogiken bygger på Java-teknike
 
 Java Content Repository (JCR)-standarden, [JSR 283](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att komma åt innehåll dubbelriktat på en detaljnivå i en innehållsdatabas. Specifikationsledaren innehas av Adobe Research (Schweiz) AG.
 
-[JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)-paketet `javax.jcr.*` används för direkt åtkomst och redigering av databasinnehåll.
+[JCR API 2.0](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)-paketet `javax.jcr.*` används för direkt åtkomst och redigering av databasinnehåll.
 
 AEM bygger på en JCR.
 
@@ -156,7 +155,7 @@ Om du använder föregående exempel om `sling:resourceType` är `hr/jobs` är d
 
 * GET/HEAD och URL:er som slutar på `.html` (standardbegärandetyper, standardformat)
    * Skriptet kommer att vara `/apps/hr/jobs/jobs.esp`; det sista avsnittet i `sling:resourceType` utgör filnamnet.
-* Begäranden om POST (alla begärandetyper utom GET/HEAD, metodnamnet måste vara versaler)
+* Begäranden om POST (alla förfrågningstyper utom GET/HEAD, metodnamnet måste vara versaler)
    * POSTEN används i skriptnamnet.
    * Skriptet är `/apps/hr/jobs/jobs.POST.esp`.
 * URL:er i andra format, slutar inte med `.html`
