@@ -1,14 +1,13 @@
 ---
 title: Dataskydd och dataintegritet - Adobe Experience Manager som Cloud Service Sites Readiness
-description: 'Läs mer om Adobe Experience Manager som stöd för Cloud Service Sites i de olika dataskydds- och datasekretesreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt. '
-translation-type: tm+mt
-source-git-commit: 7b5a427853075054d56bc7ea6569d5d839e282a1
+description: Läs mer om Adobe Experience Manager som stöd för Cloud Service Sites i de olika dataskydds- och datasekretesreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt.
+exl-id: fdcad111-0cdd-46cc-964c-3f8669ca2030
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1032'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Experience Manager som Cloud Service Sites Readiness for Data Protection and Data Privacy Regulations {#aem-sites-readiness-for-data-protection-and-data-privacy-regulations}
 
@@ -76,13 +75,13 @@ Så här avanmäler du:
 
 AEM Sites innehåller en valfri integrering med Analytics Foundation som använder funktioner i Adobe Analytics On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Analytics finns i [Adobe Analytics och Dataintegritet](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-view-settings.html).
+Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Analytics finns i [Adobe Analytics och Dataintegritet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-view-settings.html).
 
 ## Personalization Foundation by Target {#personalization-foundation-by-target}
 
 AEM Sites innehåller en valfri integrering med Personalization Foundation by Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Target finns i [Adobe Target - Privacy and General Data Protection Regulation](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Target finns i [Adobe Target - Privacy and General Data Protection Regulation](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 
