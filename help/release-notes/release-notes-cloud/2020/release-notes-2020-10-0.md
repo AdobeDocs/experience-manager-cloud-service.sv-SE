@@ -1,14 +1,13 @@
 ---
 title: Versionsinformation för version 2020.10.0 av [!DNL Adobe Experience Manager] som Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.10.0.'
-translation-type: tm+mt
-source-git-commit: 13774cc8684166c98f85bf4096d2c7de8d257746
+exl-id: ac741744-5b47-47a4-b5af-e1089e92c3f0
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service 2020.10.0 {#release-notes}
 
@@ -19,7 +18,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Expe
 Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.10.0 är 28 oktober 2020.
 Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
@@ -29,15 +28,15 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 * **[ContextHub-mappar](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md#organizing-segments)**: Möjlighet att skapa målgruppsmappar för att enkelt ordna, hitta och välja målgruppssegment som kan användas för målinriktningsfunktioner i ContextHub.
 
-## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
+## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
 * **[!DNL Adobe Sensei]smart taggning**: Genom att utnyttja AI-modeller för att analysera videoinnehåll för objekt- och åtgärdsspecifika taggar kan DAM-användare lägga mindre tid på att lägga till taggar och mer tid på att utnyttja den omfattande information som exponeras för att leverera rätt upplevelse till kunderna. Se [Smart-tagg för videomaterial](/help/assets/smart-tags-video-assets.md).
 
-* **Förbättringar** i varumärkesportalen: Följande nya funktioner och mer finns i  [!DNL Brand Portal]. Mer information finns i [[!DNL Brand Portal] versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal-release-notes.html).
+* **Brand Portal-förbättringar**: Följande nya funktioner och mer finns i  [!DNL Brand Portal]. Mer information finns i [[!DNL Brand Portal] versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal-release-notes.html).
 
-   * [Förbättrade ](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html) nedladdningsupplevelser för enklare och snabbare nedladdning. Ytterligare hämtningskonfigurationer kan konfigureras av administratörer för att ge en upplevelse som passar användare och företag.
-   * Enklicksnavigering till filer, [Samlingar](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/share/brand-portal-share-collection.html) och Delade länkar är nu möjligt från vilken sida som helst.
-   * Användarna kan [välja och hämta specifika renderingar](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html#download-assets-from-asset-details-page) nu. Det nya hämtningsalternativet för återgivning finns på panelen Återgivningar på sidan Resursinformation.
+   * [Förbättrade ](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html) nedladdningsupplevelser för enklare och snabbare nedladdning. Ytterligare hämtningskonfigurationer kan konfigureras av administratörer för att ge en upplevelse som passar användare och företag.
+   * Enklicksnavigering till filer, [Samlingar](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/share/brand-portal-share-collection.html) och Delade länkar är nu möjligt från vilken sida som helst.
+   * Användarna kan [välja och hämta specifika renderingar](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html#download-assets-from-asset-details-page) nu. Det nya hämtningsalternativet för återgivning finns på panelen Återgivningar på sidan Resursinformation.
    * En tidsgräns på 15 minuter för gästanvändarsessioner ger en bättre upplevelse för alla samtidiga användare.
 
 * **[!DNL Adobe Asset Link]version 2.1**: En ny version av  [Adobe Asset ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) Linkextension för  [!DNL Adobe Photoshop],  [!DNL Adobe Illustrator]och  [!DNL Adobe InDesign] finns tillgänglig. Den lägger till kompatibilitet med de senaste [!DNL Adobe Creative Cloud]-programmen med version 2021, som släpptes i oktober 2020.
@@ -99,11 +98,11 @@ Mer information finns i [Visningsmiljö](/help/implementing/cloud-manager/manage
 
 ### Arbetsflöden {#workflows}
 
-* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Förekomster av arbetsflöden för sökning](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/administering/workflows-administering.html).
+* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Förekomster av arbetsflöden för sökning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/administering/workflows-administering.html).
 
 ## Content Transfer Tool {#content-transfer-tool}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [verktyget Innehållsöverföring](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) Version v1.1.12.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) Version v1.1.12.
 
 ### Nyheter {#what-is-new-ctt}
 
