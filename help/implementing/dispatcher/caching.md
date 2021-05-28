@@ -2,14 +2,13 @@
 title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
-translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
-
 
 # Introduktion {#intro}
 
@@ -18,7 +17,7 @@ Regler kan tillämpas på dispatcherns konfiguration för att ändra standardins
 
 Den här sidan beskriver också hur dispatchercachen ogiltigförklaras, samt hur cachning fungerar på webbläsarnivå med avseende på klientbibliotek.
 
-## Cachelagra {#caching}
+## Cachelagring {#caching}
 
 ### HTML/text {#html-text}
 
@@ -73,7 +72,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 * genom att använda AEM biblioteksramverk på klientsidan, genereras JavaScript- och CSS-kod på ett sådant sätt att webbläsare kan cachelagra den i oändlighet, eftersom alla ändringar manifesteras som nya filer med en unik sökväg.  Med andra ord kommer HTML som refererar till klientbiblioteken att produceras efter behov så att kunderna kan uppleva nytt innehåll när det publiceras. Cachekontrollen är inställd på&quot;oföränderlig&quot; eller 30 dagar för äldre webbläsare som inte respekterar det oföränderliga&quot; värdet.
 * Mer information finns i avsnittet [Bibliotek på klientsidan och versionskonsekvens](#content-consistency).
 
-### Bilder och allt innehåll som är tillräckligt stort lagras i bloblagring {#images}
+### Bilder och allt innehåll som är tillräckligt stort för att lagras i blobben {#images}
 
 * som standard, inte cachelagrad
 * kan ställas in på en finare kornig nivå med följande direktiv för apache `mod_headers`:
@@ -113,7 +112,7 @@ I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i ställe
 
 Precis som i tidigare versioner av AEM rensas innehållet från dispatcherns cache när du publicerar eller avpublicerar sidor. Om ett cachningsproblem misstänks bör kunderna publicera om sidorna i fråga.
 
-När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatcher-cachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilnivå](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level).
+När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatcher-cachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilnivå](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level).
 
 ### Cacheminnet för explicit dispatcher är ogiltigt {#explicit-invalidation}
 
@@ -124,8 +123,8 @@ Före AEM som Cloud Service fanns det två sätt att ogiltigförklara dispatcher
 1. Anropa replikeringsagenten och ange agenten för rensning av publiceringsutgivaren
 2. Anropa API:t `invalidate.cache` direkt (till exempel `POST /dispatcher/invalidate.cache`)
 
-Avsändarens `invalidate.cache` API-metod stöds inte längre eftersom den bara adresserar en viss dispatchernod. AEM som en Cloud Service fungerar på tjänstenivå, inte på den enskilda nodnivån, och därför gäller inte invalideringsinstruktionerna i [Ovalidering av cachelagrade sidor från AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html)-sidan längre för AEM som en Cloud Service.
-Istället bör agenten för tömning av replikering användas. Detta kan du göra med hjälp av replikerings-API:t. Dokumentationen för replikerings-API finns [här](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/replication/Replicator.html) och om du vill se ett exempel på tömning av cachen kan du gå till exempelsidan för [API](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) specifikt `CustomStep`-exemplet som utfärdar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter. Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
+Avsändarens `invalidate.cache` API-metod stöds inte längre eftersom den bara adresserar en viss dispatchernod. AEM som en Cloud Service fungerar på tjänstenivå, inte på den enskilda nodnivån, och därför gäller inte invalideringsinstruktionerna i [Ovalidering av cachelagrade sidor från AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html)-sidan längre för AEM som en Cloud Service.
+Istället bör agenten för tömning av replikering användas. Detta kan du göra med hjälp av replikerings-API:t. Dokumentationen för replikerings-API finns [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/replication/Replicator.html) och om du vill se ett exempel på tömning av cachen kan du gå till exempelsidan för [API](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) specifikt `CustomStep`-exemplet som utfärdar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter. Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
 
 Bilden nedan visar detta.
 
