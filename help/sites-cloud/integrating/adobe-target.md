@@ -1,14 +1,13 @@
 ---
 title: Integrera med Adobe Target
-description: 'Integrera med Adobe Target '
-translation-type: tm+mt
-source-git-commit: bffc335fdafe6bf12a66bcd2f7aacf029fce567e
+description: Integrera med Adobe Target
+exl-id: 2b4cf35e-2b75-4303-8d09-f6644ad99274
+source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '723'
 ht-degree: 1%
 
 ---
-
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
@@ -28,12 +27,12 @@ Integrera era AEM med Adobe Target för att personalisera innehåll på era sido
 
 Utför följande uppgifter för att integrera med Target:
 
-* [Utför nödvändiga uppgifter](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html): Registrera dig hos Adobe Target och konfigurera vissa aspekter av AEM författarinstans. Ditt Adobe Target-konto måste ha minst **godkännarbehörighet**. Dessutom måste du skydda aktivitetsinställningarna på publiceringsnoden så att den inte är tillgänglig för användarna.
+* [Utför nödvändiga uppgifter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/target-requirements.html): Registrera dig hos Adobe Target och konfigurera vissa aspekter av AEM författarinstans. Ditt Adobe Target-konto måste ha minst **godkännarbehörighet**. Dessutom måste du skydda aktivitetsinställningarna på publiceringsnoden så att den inte är tillgänglig för användarna.
 
 * Launch by Adobe är de facto-verktyget för att instrumentera en AEM webbplats med Target-funktioner (JS-bibliotek). Att integrera AEM som Cloud Service med Launch och Adobe Target går därför hand i hand (se länkarna nedan).
 
-   * [Integrering med Adobe Target med Adobe I/O](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/integration-ims-adobe-io.html)
-   * [Integrera Launch by Adobe](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
+   * [Integrering med Adobe Target med Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/integration-ims-adobe-io.html)
+   * [Integrera Launch by Adobe](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
    * [Integrera AEM med Adobe Launch via Adobe I/O](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)
    * [Förstå AEM integrering med Launch by Adobe, analys och mål](https://helpx.adobe.com/experience-manager/kt/integration/using/aem-launch-integration-tutorial-understand.html)
 
@@ -41,7 +40,7 @@ Utför följande uppgifter för att integrera med Target:
 >
 >IMS-konfigurationen (tekniska konton) för Launch by Adobe är förkonfigurerad i AEM som en Cloud Service. Användare behöver inte skapa den här konfigurationen.
 
-1. [Konfigurera aktiviteter](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/activitylib.html): Associera dina aktiviteter med målmolnkonfigurationen.
+1. [Konfigurera aktiviteter](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/activitylib.html): Associera dina aktiviteter med målmolnkonfigurationen.
 
 >[!CAUTION]
 >
@@ -53,6 +52,7 @@ Utför följande uppgifter för att integrera med Target:
 >
 >* 3.x har konfigurerats med [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
 >* 4.x har konfigurerats med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+
 >
 
 
@@ -61,9 +61,9 @@ Utför följande uppgifter för att integrera med Target:
 >
 >Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 >
->Mer information finns i [Förutsättningar för integrering med Adobe Target](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/target-requirements.html#securing-the-activity-settings-node).
+>Mer information finns i [Förutsättningar för integrering med Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/target-requirements.html#securing-the-activity-settings-node).
 
-När integreringen är klar kan du [redigera riktat innehåll](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/content-targeting-touch.html) som skickar besöksdata till Adobe Target. Observera att sidkomponenter kräver specifik kod för att aktivera målinriktning av innehåll. (Se [Utveckla för riktat innehåll](https://docs.adobe.com/content/help/en/experience-manager-65/developing/personlization/target.html).
+När integreringen är klar kan du [redigera riktat innehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/content-targeting-touch.html) som skickar besöksdata till Adobe Target. Observera att sidkomponenter kräver specifik kod för att aktivera målinriktning av innehåll. (Se [Utveckla för riktat innehåll](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/target.html).
 
 >[!NOTE]
 >
@@ -73,9 +73,9 @@ När integreringen är klar kan du [redigera riktat innehåll](https://docs.adob
 
 Att integrera AEM som en Cloud Service med Adobe Target kräver kunskaper om Adobe Target, AEM och AEM. Du bör känna till följande information:
 
-* Adobe Target (se [Adobe Target dokumentation](https://docs.adobe.com/content/help/en/target/using/target-home.html)).
-* Konsolen AEM aktiviteter (se [Hantera aktiviteter](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/activitylib.html).
-* AEM målgrupper (se [Hantera målgrupper](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/personalization/managing-audiences.html).
+* Adobe Target (se [Adobe Target dokumentation](https://experienceleague.adobe.com/docs/target/using/target-home.html)).
+* Konsolen AEM aktiviteter (se [Hantera aktiviteter](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/activitylib.html).
+* AEM målgrupper (se [Hantera målgrupper](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/managing-audiences.html).
 
 >[!NOTE]
 >
@@ -85,6 +85,7 @@ Att integrera AEM som en Cloud Service med Adobe Target kräver kunskaper om Ado
 >* 2 000 upplevelser
 >* 50-tal
 >* 50 rapporteringssegment
+
 >
 
 
