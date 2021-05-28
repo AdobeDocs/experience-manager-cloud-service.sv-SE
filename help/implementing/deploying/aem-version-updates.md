@@ -1,15 +1,14 @@
 ---
 title: AEM versionsuppdateringar
 description: 'AEM versionsuppdateringar '
-feature: Deploying
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Distribuerar
+exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '395'
 ht-degree: 5%
 
 ---
-
 
 # AEM versionsuppdateringar {#aem-version-updates}
 
@@ -36,7 +35,7 @@ AEM versionsuppdateringar är av två typer:
 
 AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalideringsplan som omfattar flera steg, vilket säkerställer att ingen tjänst avbryts för system i produktionen. Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM som en Cloud Service-uppdatering fortsätter inte releasen och Adobe undersöker varför uppdateringen orsakade detta oväntade beteende.
 
-[Produkttester och ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#functional-testing) kundfunktionstester som förhindrar att produktuppgraderingar och kundkodspush bryter produktionen valideras också under en AEM versionsuppdatering.
+[Produkttester och ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/understand-test-results.html#functional-testing) kundfunktionstester som förhindrar att produktuppgraderingar och kundkodspush bryter produktionen valideras också under en AEM versionsuppdatering.
 
 >[!NOTE]
 >
@@ -47,4 +46,3 @@ AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalidering
 Som vi nämnt ovan kommer uppdateringarna i de flesta fall att innebära noll driftavbrott, även för författaren, som är ett kluster med noder. Rullande uppdateringar är möjliga på grund av funktionen *composite node store* i Oak.
 
 Med den här funktionen kan AEM referera till flera databaser samtidigt. I en rullande driftsättning innehåller den nya versionen av Green AEM sin egen `/libs` (den TjärMK-baserade oföränderliga databasen), som skiljer sig från den äldre versionen av Blue AEM, även om båda refererar till en delad DocumentMK-baserad ändringsbar databas som innehåller områden som `/content`, `/conf`, `/etc` och andra. Eftersom både den blå och den gröna har sina egna versioner av `/libs` kan de båda vara aktiva under den rullande uppdateringen, som båda tar trafik tills den blå ersätts helt av den gröna.
-
