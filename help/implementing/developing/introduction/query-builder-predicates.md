@@ -1,20 +1,19 @@
 ---
 title: Predikatreferens för Query Builder
 description: Predikatreferens för Query Builder API.
-translation-type: tm+mt
-source-git-commit: 6b754a866be7979984d613b95a6137104be05399
+exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2217'
 ht-degree: 1%
 
 ---
-
 
 # Predikatreferens för frågebyggaren {#query-builder-predicate-reference}
 
 ## Allmänt {#general}
 
-### rot {#root}
+### root {#root}
 
 Detta är rotpredikatgruppen. Den har stöd för alla funktioner i en grupp och tillåter inställning av globala frågeparametrar.
 
@@ -79,7 +78,7 @@ Med det här predikatet kan du sortera resultaten. Om det krävs en ordning med 
 * **`sort`** - sorteringsriktning, antingen  `desc` för fallande eller  `asc` för stigande (standard)
 * **`case`** - om den är inställd på  `ignore` att göra sorteringsfallet okänsligt, så  `a` kommer det tidigare  `B`att betyda. om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder  `B` kommer före  `a`
 
-## Förutser {#predicates}
+## Predikat {#predicates}
 
 ### boolproperty {#boolproperty}
 
@@ -188,7 +187,7 @@ Programmet har stöd för facetextrahering och innehåller hinkar för varje uni
 
 * **`language`** - ISO-språkkod, till exempel  `de`
 
-### huvudresurs {#mainasset}
+### huvudtillgång {#mainasset}
 
 Detta predikat kontrollerar om en nod är en DAM-huvudresurs och inte en underresurs. Detta är i stort sett alla noder som inte finns i en underresursnod. Observera att detta inte söker efter nodtypen `dam:Asset`. Om du vill använda det här predikatet anger du `mainasset=true` eller `mainasset=false`. Det finns inga fler egenskaper.
 
@@ -202,7 +201,7 @@ Det stöder facet-extrahering och erbjuder två buffertar för huvud- och delres
 
 ### medlemOf {#memberof}
 
-Det här predikatet hittar objekt som är medlemmar i en specifik [sling-resurssamling](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
+Det här predikatet hittar objekt som är medlemmar i en specifik [sling-resurssamling](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
 
 Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
 
@@ -222,7 +221,7 @@ Det har stöd för facet-extrahering och innehåller bucket för varje unikt nod
 
 * **`nodename`** - nodnamnsmönster som tillåter jokertecken:  `*` = valfri eller ingen tecken,  `?` = valfri tecken,  `[abc]` = endast tecken inom hakparentes
 
-### inte utgången {#notexpired}
+### inte utgånget {#notexpired}
 
 Detta predikat matchar objekt genom att kontrollera om en JCR-datumegenskap är större eller lika med den aktuella servertiden. Detta kan användas för att kontrollera ett `expiresAt`-värde och begränsa resultatet till endast de som ännu inte har gått ut (`notexpired=true`) eller som redan har gått ut (`notexpired=false`).
 
@@ -251,7 +250,7 @@ Det stöder inte facetextrahering.
 * **`flat`** - söker endast i de direkta underordnade (som att lägga till  `/*` i XPath) (används bara om  `exact` inte är true, valfritt)
 * **`self`** - söker i underträdet men inkluderar basnoden som angetts som sökväg (inga jokertecken)
 
-### egenskap {#property}
+### property {#property}
 
 Detta predikat matchar JCR-egenskaperna och deras värden.
 
@@ -273,7 +272,7 @@ Det har stöd för facetextrahering och innehåller bucket för varje unikt egen
       * `false` är detsamma som  `not` och är standard
 * **`depth`** - antalet jokernivåer under vilka egenskapen/den relativa sökvägen kan finnas (t.ex.  `property=size depth=2` kommer att kontrollera  `node/size`och  `node/*/size`   `node/*/*/size`)
 
-### intervalleproperty {#rangeproperty}
+### rangegenskap {#rangeproperty}
 
 Detta predikat matchar en JCR-egenskap mot ett intervall. Detta gäller för egenskaper med linjära typer som `LONG`, `DOUBLE` och `DECIMAL`. För `DATE`, se [`daterange`](#daterange)-predikatet som har optimerade indata för datumformat.
 
@@ -290,7 +289,7 @@ Det stöder inte facetextrahering.
 * **`upperOperation`** -  `<` (standard) eller  `<=`, gäller  `lowerValue`
 * **`decimal`** -  `true` om egenskapen checked är av typen Decimal
 
-### relativ{#relativedaterange}
+### relativ {#relativedaterange}
 
 Det här predikatet matchar `JCR DATE`-egenskaper mot ett datum/tidsintervall med hjälp av tidsförskjutningar i förhållande till den aktuella servertiden. Du kan ange `lowerBound` och `upperBound` antingen med ett millisekundvärde eller Bugzilla-syntaxen `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år). Prefix med `-` om du vill ange en negativ förskjutning före den aktuella tiden. Om du bara anger `lowerBound` eller `upperBound` kommer den andra att ha standardvärdet `0`, vilket representerar den aktuella tiden.
 
@@ -313,7 +312,7 @@ Det stöder facetextrahering på samma sätt som [`daterange`](#daterange)-predi
 * **`upperBound`** - övre datumgräns i millisekunder eller  `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd  `-` för negativ offset
 * **`lowerBound`** - undre datumgräns i millisekunder eller  `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd  `-` för negativ offset
 
-### sparedquery {#savedquery}
+### sparad fråga {#savedquery}
 
 Detta predikat inkluderar alla predikat för en beständig Query Builder-fråga i den aktuella frågan som ett undergruppsprediat.
 
@@ -338,7 +337,7 @@ Det stöder inte filtrering och inte facetextrahering.
 * **`similar`** - absolut sökväg till noden där liknande noder ska hittas
 * **`local`** - en relativ sökväg till en underordnad nod eller  `.` för den aktuella noden (valfritt, standardvärdet är  `.`)
 
-### tagg {#tag}
+### tag {#tag}
 
 Det här predikatet söker efter innehåll som taggats med en eller flera taggar genom att ange sökvägar för taggtiteln.
 
@@ -375,7 +374,7 @@ Det stöder inte facetextrahering.
 * **`lang`** - om du bara vill söka i en viss lokaliserad taggtitel (t.ex.  `de`)
 * **`all`** - booleskt värde om du vill söka efter hela taggens fulltext, dvs. alla titlar, beskrivning osv. (har högre prioritet än `lang`)
 
-### typ {#type}
+### type {#type}
 
 Detta predikat begränsar resultatet till en viss JCR-nodtyp, både primära nodtyper och mixin-typer. Detta söker även efter undertyper av den nodtypen. Observera att databasens sökindex måste omfatta nodtyperna för effektiv körning.
 
