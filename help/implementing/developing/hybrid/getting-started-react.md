@@ -1,14 +1,13 @@
 ---
 title: Komma igång med SPA i AEM med React
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
-translation-type: tm+mt
-source-git-commit: cdd92032c627740c66de7b2f3836fa1dcd2ee2ca
+exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1143'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med SPA i AEM med React {#getting-started-with-spas-in-aem-using-react}
 
@@ -18,7 +17,7 @@ SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln pr
 
 >[!NOTE]
 >
->Artikeln bygger på React Framework. Motsvarande dokument för vinkelramverket finns i [Komma igång med SPA i AEM - Vinkel](getting-started-angular.md).
+>Artikeln bygger på React Framework. Motsvarande dokument för ramverket Angular finns i [Komma igång med SPA i AEM - Angular](getting-started-angular.md).
 
 ## Introduktion {#introduction}
 
@@ -96,7 +95,7 @@ module.exports = {
 };
 ```
 
-### Skapar {#building}
+### Byggnad {#building}
 
 Att bygga appen utnyttjar [Webpack](https://webpack.js.org/) för implementering utöver aem-clientlib-generator för att automatiskt skapa klientbibliotek. Därför påminner kommandot build om:
 
@@ -106,7 +105,7 @@ När paketet har skapats kan det överföras till en AEM.
 
 ### AEM Project Archetype {#aem-project-archetype}
 
-Alla AEM ska utnyttja den AEM projekttypen [som stöder SPA projekt med React eller Angular och använder SPA SDK.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+Alla AEM ska utnyttja den AEM projekttypen [som stöder SPA projekt med React eller Angular och använder SPA SDK.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 
 ## Programstruktur {#application-structure}
 
@@ -267,4 +266,4 @@ Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar in
 * [SPA ](editor-overview.md) översiktsredigeraren går in mer på kommunikationsmodellen mellan AEM och SPA.
 * [WKND SPA ](wknd-tutorial.md) Projects är en stegvis självstudiekurs som implementerar ett enkelt SPA i AEM.
 * [Dynamisk mappning av modell till komponent för ](model-to-component-mapping.md) SPAsexkluderar den dynamiska mappningen av modell till komponent och hur den fungerar i SPA i AEM.
-* [SPA ](blueprint.md) Blueprintger en djupdykning i hur SPA SDK för AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.
+* [SPA ](blueprint.md) Blueprintger en djupdykning i hur SPA SDK for AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.
