@@ -2,11 +2,10 @@
 title: Introduktion och översikt
 description: Introduktion och översikt av innehåll och handel. Experience Manager Commerce Integration Framework (CIF) rekommenderas av Adobe för att integrera och utöka handelstjänster från Magento och andra tredjepartslösningar med Experience Cloud.
 thumbnail: introducing-aem-commerce.jpg
-exl-id: 74e832f9-f8ff-4901-b4c2-6a2862c51411
-translation-type: tm+mt
-source-git-commit: bc2f54d79a0e6138d551778f00fb19714d3adf74
+exl-id: 29410f76-a63f-4b0a-b817-2ed724ad1a3c,74e832f9-f8ff-4901-b4c2-6a2862c51411
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -53,13 +52,13 @@ Tillägget CIF ger produktkontext i Experience Manager och innehåller redigerin
 
 ### Erfarenheter
 
-Kraftfulla CIF-verktyg i AEM gör det möjligt för innehållsskapare att snabbt skapa avancerade och personaliserade handelsupplevelser på ett skalbart och oberoende sätt för att utnyttja affärsmöjligheter.
+Kraftfulla CIF-verktyg i AEM gör det möjligt för innehållsskapare att snabbt skapa avancerade och personaliserade e-handelsupplevelser på ett skalbart och oberoende sätt för att utnyttja affärsmöjligheter.
 
 ![CIF-element](./assets/CIF/CIF_Product_Experience_Management.png)
 
 ### Tid till värde (TTV)
 
-Snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archettype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) och integreringsmönster för PWA (Headless content &amp; commerce).
+Snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och integreringsmönster för PWA (Headless content &amp; commerce).
 
 CIF är skapat för kontinuerlig innovation med ett kontinuerligt uppdaterat tillägg som gör att kunden kan komma åt nya och förbättrade funktioner.
 
