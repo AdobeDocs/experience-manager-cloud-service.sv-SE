@@ -1,14 +1,13 @@
 ---
 title: Adobe Experience Manager som Cloud Service Release Notes for 2020.4.0
 description: Versionsinformation om Experience Manager för 2020.4.0
-translation-type: tm+mt
-source-git-commit: 13774cc8684166c98f85bf4096d2c7de8d257746
+exl-id: d98a3862-76fa-4b5b-b81a-333f5f532b67
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 1%
+source-wordcount: '642'
+ht-degree: 0%
 
 ---
-
 
 # Versionsinformation för Adobe Experience Manager som Cloud Service 2020.4.0 {#release-notes}
 
@@ -18,12 +17,12 @@ På den här sidan beskrivs den allmänna versionsinformationen för [!DNL Exper
 
 Releasedatum för [!DNL Experience Manager] som Cloud Service 2020.4.0 är 9 april 2020.
 
-## Nyheter i resurser {#assets}
+## Nyheter i Assets {#assets}
 
 Läs om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experience Manager Assets] och [!DNL Dynamic Media] i den aktuella versionen.
 
-* [Varumärkesportaler ](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) stöder användningsexemplen för resursdistribution för Experience Manager Assets. [!DNL Brand Portal] hjälper organisationer att tillgodose sina marknadsföringsbehov genom att på ett säkert sätt distribuera godkänt varumärke och produktmaterial till externa byråer, partners, interna team och återförsäljare för nedladdning.
-   * [!DNL Brand Portal] konfigurationen slutförs via  [!DNL Adobe I/O] konsolen. Se [konfigurera varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
+* [Varumärkesportaler ](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) stöder användningsexemplen för resursdistribution för Experience Manager Assets. [!DNL Brand Portal] hjälper organisationer att tillgodose sina marknadsföringsbehov genom att på ett säkert sätt distribuera godkänt varumärke och produktmaterial till externa byråer, partners, interna team och återförsäljare för nedladdning.
+   * [!DNL Brand Portal] konfigurationen slutförs via  [!DNL Adobe I/O] konsolen. Se [konfigurera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
    * Resurskälla i [!DNL Brand Portal] stöds ännu inte med [!DNL Experience Manager] som Cloud Service.
 
 * [Adobe Asset ](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) Linkv2.0 fungerar med  [!DNL Experience Manager] som Cloud Service. [!DNL Adobe Asset Link] effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll genom att ansluta  [!DNL Experience Manager Assets] till  [!DNL Creative Cloud] datorprogram  [!DNL Adobe Photoshop] [!DNL Adobe Illustrator]och  [!DNL Adobe InDesign] via  [!DNL Asset Link] apppanelen.
@@ -49,9 +48,9 @@ Läs om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experien
 >[!MORELIKETHIS]
 >
 >* [Om Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
->* [Konfigurera varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)
+>* [Konfigurera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)
 >* [Konfigurera Experience Manager för att arbeta med resurslänk](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html)
->* [Skapa arbetsflöde i Experience Manager med hjälp av resurser och mikrotjänster](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows)
+>* [Skapa arbetsflöde i Experience Manager med hjälp av resurser och mikrotjänster](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows)
 
 
 ## Nyheter i Cloud Manager {#whats-new-cloud-manager}
