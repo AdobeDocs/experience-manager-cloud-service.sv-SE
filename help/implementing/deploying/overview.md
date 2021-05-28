@@ -3,9 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Distribuerar
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: abc41d6d9388a8ca63643bd2afd09982811ac490
+source-git-commit: f5f2c7c4dfacc113994c380e8caa37508030ee92
 workflow-type: tm+mt
-source-wordcount: '3350'
+source-wordcount: '3290'
 ht-degree: 1%
 
 ---
@@ -20,8 +20,10 @@ Uppdateringen av [AEM version](/help/implementing/deploying/aem-version-updates.
 
 I resten av det här dokumentet beskrivs hur utvecklare ska anpassa sina rutiner så att de kan arbeta med både AEM som en Cloud Services versionsuppdateringar och kunduppdateringar.
 
+<!--
 >[!NOTE]
->Vi rekommenderar att kunder med befintliga kodbaser genomgår den databasomstrukturering som beskrivs i [AEM dokumentation](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
+>It is recommended for customers with existing code bases, to go through the repository restructuring exercise described in the [AEM documentation](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
+-->
 
 ## Kundreleaser {#customer-releases}
 
@@ -40,8 +42,10 @@ I följande video visas en översikt på hög nivå över hur du distribuerar ko
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=9)
 
+<!--
 >[!NOTE]
->Vi rekommenderar att kunder med befintliga kodbaser genomgår den databasomstrukturering som beskrivs i [AEM dokumentation](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html).
+>It is recommended for customers with existing code bases, to go through the repository restructuring exercise described in the [AEM documentation](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/authoring/restructure.html). 
+-->
 
 ## Distribuera innehållspaket via Cloud Manager och Package Manager {#deploying-content-packages-via-cloud-manager-and-package-manager}
 
@@ -102,7 +106,7 @@ Efter övergång till en ny version av programmet:
    * Kontextmedveten konfiguration (vad som helst under `/conf`) (lägg till, ändra, ta bort)
    * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbit-dokumentationen för fillevault](http://jackrabbit.incubator.apache.org/filevault/installhooks.html) om hur du installerar kopplingar. Observera att AEM CS för närvarande använder Flash version 3.4.0, som begränsar möjligheten att installera kopplingar till administratörer, systemanvändare och medlemmar i administratörsgruppen).
 
-Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen.](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/restructuring/repository-restructuring.html)
+Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
 >[!NOTE]
 >Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via Package Manager.
