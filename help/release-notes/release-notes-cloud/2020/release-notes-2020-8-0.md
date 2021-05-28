@@ -2,10 +2,9 @@
 title: Versionsinformation för 2020.8.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.8.0.'
 exl-id: 83413130-ae90-4419-bcf7-42fdc740452b
-translation-type: tm+mt
-source-git-commit: 33e92b9cd19dd49dcdb6a8c8f30feccb755f615f
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 1%
 I följande avsnitt beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.8.0.
 
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
@@ -24,11 +23,11 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 * Möjlighet att [skapa starter](/help/sites-cloud/authoring/launches/overview.md) i AEM [SPA Editor.](/help/implementing/developing/hybrid/introduction.md)
 
 
-## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
+## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-* Videoomkodning stöds nu med tillgångsmikrotjänster. Med ett nytt avsnitt i [!UICONTROL Processing Profiles]-konfigurationen kan du ange videobithastighet och -mått. Utdataformatet är MP4 med H.264-kodeken. Mer information finns i [hantera videomaterial](/help/assets/manage-video-assets.md#transcode-video). Använd tillägget [!DNL Dynamic Media] för fler omkodningsalternativ och för videoleverans.
+* Videoomkodning stöds nu med tillgångsmikrotjänster. Med ett nytt avsnitt i [!UICONTROL Processing Profiles]-konfigurationen kan du ange videobithastighet och -mått. Utdataformatet är MP4 med H.264-kodeken. Mer information finns i [hantera videomaterial](/help/assets/manage-video-assets.md#transcode-video). Använd tillägget [!DNL Dynamic Media] om du vill ha fler omkodningsalternativ och för videoleverans.
 
 * I nya [!DNL Experience Manager Assets]-distributioner är funktionen för smart taggning nu konfigurerad som standard. Du behöver inte integrera manuellt med [!DNL Adobe Developer Console]. I befintliga distributioner konfigurerar administratörer smart taggintegrering som tidigare.
 
@@ -41,9 +40,9 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 * Använd en bearbetningsprofil för att generera anpassade metadata med hjälp av beräkningstjänsten. Se [Anpassade metadata med bearbetningsprofil](/help/assets/manage-metadata.md#metadata-compute-service).
 
-* En enklare nedladdningsupplevelse för användare av varumärkesportalen som administratörer kan konfigurera. Se [översikt över nedladdningsupplevelsen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html#download-configurations).
+* En enklare nedladdningsupplevelse för Brand Portal-användare som administratörer kan konfigurera. Se [översikt över nedladdningsupplevelsen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html#download-configurations).
 
-* Inbyggda förhandsgranskningar av PDF-dokument med hög originalåtergivning finns nu tillgängliga i varumärkesportalen. Se [dokumentvisningsprogramöversikt](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html#doc-viewer).
+* Inbyggda förhandsgranskningar av PDF-dokument med hög originalåtergivning är nu tillgängliga i Brand Portal. Se [dokumentvisningsprogramöversikt](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html#doc-viewer).
 
 * Du kan nu göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] i AEM som en Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]). Det säkerställer att de senaste tillgångarna hanteras på några minuter istället för timmar. Mer information finns i [Invalidera CDN-cachen med Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
 
