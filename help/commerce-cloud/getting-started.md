@@ -8,19 +8,18 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-translation-type: tm+mt
-source-git-commit: 08e258d4e9cd67de3da2aa57c058036bd104472d
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 1%
+source-wordcount: '1065'
+ht-degree: 0%
 
 ---
 
 # Komma igång med AEM Commerce som Cloud Service {#start}
 
-För att komma igång med AEM Commerce som Cloud Service måste Experience Manager Cloud Servicen etableras med tillägget Commerce Integration Framework (CIF). CIF-tillägget är en extra modul ovanpå [AEM Sites som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html).
+För att komma igång med AEM Commerce som Cloud Service måste Experience Manager Cloud Servicen etableras med tillägget Commerce Integration Framework (CIF). CIF-tillägget är en extra modul ovanpå [AEM Sites som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/home.html).
 
-## Introduktion till {#onboarding}
+## Onboarding {#onboarding}
 
 Introduktionen av AEM Commerce som Cloud Service är en tvåstegsprocess:
 
@@ -29,11 +28,11 @@ Introduktionen av AEM Commerce som Cloud Service är en tvåstegsprocess:
 
 Det första startsteget görs av Adobe. Mer information om priser och provisionering får du av din säljare.
 
-När du har etablerats med CIF-tillägget kommer det att tillämpas på alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett nytt. Mer information finns i [Konfigurera ditt program](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/setting-up-program.html).
+När du har etablerats med CIF-tillägget kommer det att tillämpas på alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett nytt. Mer information finns i [Konfigurera ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/setting-up-program.html).
 
 Det andra steget är självbetjäning för varje AEM som en Cloud Service-miljö. Det finns ytterligare konfigurationer du behöver göra efter den första etableringen av CIF-tillägget.
 
-## Ansluta AEM med en Commerce Solution {#magento}
+## Ansluta AEM till en Commerce Solution {#magento}
 
 Om du vill ansluta CIF-tillägget och [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange URL:en för GraphQL-slutpunkten via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
 
@@ -70,7 +69,7 @@ Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/
 
 1. Skaffa Adobe I/O CLI med plugin-programmet Cloud Manager
 
-   Läs [dokumentationen för Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [CLI-plugin-programmet för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+   Läs [dokumentationen för Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [CLI-plugin-programmet för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 2. Autentisera Adobe I/O CLI med AEM som ett Cloud Service-program
 
