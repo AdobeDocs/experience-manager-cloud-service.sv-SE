@@ -1,23 +1,22 @@
 ---
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
-feature: Administering
+feature: Administratör
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1037'
 ht-degree: 1%
 
 ---
-
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
 Som en del av Adobe Marketing Cloud kan Adobe Target öka innehållets relevans genom målinriktning och mätning i alla kanaler. För att integrera Adobe Target och AEM som en Cloud Service krävs följande:
 
 * med Touch-gränssnittet för att skapa en målkonfiguration i AEM som en Cloud Service (IMS-konfiguration krävs).
-* lägga till och konfigurera Adobe Target som ett tillägg i [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html).
+* lägga till och konfigurera Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html).
 
 Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;upplevelseanpassning&quot;. För Experience Fragments export till Target behöver du bara Adobe Target Configuration och IMS.
 
@@ -37,7 +36,7 @@ Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analy
 
 ### IMS-konfiguration {#ims-configuration}
 
-En IMS-konfiguration för både Launch och Target krävs för att Target ska kunna integreras korrekt med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM som en Cloud Service, men IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). I [den här videon](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html) och [den här sidan](https://docs.adobe.com/content/help/en/experience-manager-65/administering/integration/integration-ims-adobe-io.html) får du lära dig hur du skapar mål-IMS-konfigurationen.
+En IMS-konfiguration för både Launch och Target krävs för att Target ska kunna integreras korrekt med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM som en Cloud Service, men IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). I [den här videon](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html) och [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/integration-ims-adobe-io.html) får du lära dig hur du skapar mål-IMS-konfigurationen.
 
 ### Adobe Target klientorganisations-ID och Adobe Target klientkod {#tenant-client}
 
@@ -135,7 +134,7 @@ I **Regel** definierar och ordnar vi en sekvens med åtgärder, som utförs på 
 
 ### Skapa och publicera {#build-publish}
 
-Mer information om hur du skapar och publicerar finns på den här [sidan](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html).
+Mer information om hur du skapar och publicerar finns på den här [sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html).
 
 ## Förändringar i innehållsstrukturen mellan klassiska användargränssnittskonfigurationer och användargränssnittskonfigurationer {#changes-content-structure}
 
