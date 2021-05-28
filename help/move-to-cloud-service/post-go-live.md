@@ -2,10 +2,10 @@
 title: Efter publicering-fas
 description: Efter publicering-fas
 exl-id: f9b0b2fa-e29c-4faa-a5e7-e5edd04b25ca
-source-git-commit: dfbd0f38017d02810da05ccadbc5f2fbd5826aa3
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 73%
+source-wordcount: '314'
+ht-degree: 63%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 73%
 >id="aemcloud_golive_troubleshooting"
 >title="AEM"
 >abstract="Granska metodtips för kontinuerlig utveckling och hantera loggar tillsammans med verktyg som Developer Console och CRXDE Lite för att få hjälp med felsökning av AEM"
->additional-url="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-logs.html" text="Komma åt och hantera loggar"
->additional-url="https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools" text="AEM som verktyg för Cloud Service Development"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-logs.html" text="Komma åt och hantera loggar"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools" text="AEM som verktyg för Cloud Service Development"
 
 
 I fasen efter publicering bör du se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar. 
@@ -32,7 +32,7 @@ Följande verktyg är tillgängliga för att felsöka AEM as a Cloud Service-mil
 
 Felsökning av utvecklingsmiljön hos AEM as a Cloud Service finns i Developer Console för utvecklings-, mellanlagrings- och produktionsmiljöer.
 
-Mer information om utvecklingsverktyg finns i [Implementera för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools).
+Mer information om utvecklingsverktyg finns i [Implementera för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools).
 
 ## CRX/DE Lite {#crxde-lite}
 
@@ -47,7 +47,7 @@ Läs mer i [Utveckla med CRX/DE Lite](/help/implementing/developing/tools/crxde.
 
 Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
-Läs [Komma åt och hantera loggar](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-logs.html) för att lära dig hur du får åtkomst till och hanterar loggar via användargränssnittet eller från API via Cloud Manager.
+Läs [Komma åt och hantera loggar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-logs.html) för att lära dig hur du får åtkomst till och hanterar loggar via användargränssnittet eller från API via Cloud Manager.
 
 ### Ytterligare support {#additional-support}
 
