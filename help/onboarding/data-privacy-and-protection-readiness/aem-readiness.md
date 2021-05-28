@@ -1,14 +1,13 @@
 ---
 title: Dataskydd och dataintegritet - Adobe Experience Manager som Cloud Service-beredskap
-description: 'Läs mer om Adobe Experience Manager som stöd för Cloud Service av de olika dataskydds- och dataintegritetsreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt. '
-translation-type: tm+mt
-source-git-commit: 2b7ee2b7b0ce351ed48aeb2f3135c947eafe7247
+description: Läs mer om Adobe Experience Manager som stöd för Cloud Service av de olika dataskydds- och dataintegritetsreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt.
+exl-id: 5dfa353b-84c5-4b07-bfcd-b03c2d361553
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '729'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Experience Manager as a Cloud Service Readiness for Data Protection and Data Privacy Regulations {#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
@@ -95,6 +94,6 @@ Se [AEM Sites beredskap för dataskydd och dataintegritet.](/help/onboarding/dat
 Dessa Adobe Experience Manager som Cloud Service-integreringar är med tjänster som är klara för dataskydd och sekretess (t.ex. GDPR). Inga personuppgifter från Adobe Target eller Adobe Analytics lagras i AEM för integreringarna.
 Mer information finns i:
 
-* [Adobe Target - sekretessöversikt](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/privacy.html)
+* [Adobe Target - sekretessöversikt](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/privacy.html)
 
-* [Adobe Analytics arbetsflöde för datasekretess](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html)
+* [Adobe Analytics arbetsflöde för datasekretess](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html)
