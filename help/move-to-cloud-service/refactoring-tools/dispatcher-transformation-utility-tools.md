@@ -2,11 +2,10 @@
 title: Verktyg för AEM Dispatcher Converter
 description: Verktyg för AEM Dispatcher Converter
 exl-id: 97eb4f3f-dc03-461a-8d7e-164065bd1e4c
-translation-type: tm+mt
-source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 51%
+source-wordcount: '337'
+ht-degree: 46%
 
 ---
 
@@ -26,13 +25,13 @@ Dispatcher är Adobe Experience Managers verktyg för cachelagring och/eller bel
 >[!NOTE]
 >Det vanligaste användningsområdet för Dispatcher är att cachelagra svar från en **AEM-publiceringsinstans** för att minska svarstiden och öka säkerheten för den externt adresserade publicerade webbplatsen.
 
-Läs [Dispatcher-översikt](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html) om du vill veta hur Dispatcher utför cachelagring, returnerar dokument och utför belastningsutjämning.
+Läs [Dispatcher-översikt](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) om du vill veta hur Dispatcher utför cachelagring, returnerar dokument och utför belastningsutjämning.
 
 ### Konfiguration och testning av Apache och Dispatcher {#dispatcher-configurations-cloud}
 
 Du måste lära dig att strukturera Apache- och Dispatcher-konfigurationer i AEM as a Cloud Service samt att validera och köra det lokalt innan du driftsätter det i molnmiljöer.
 
-Mer information finns i [Dispatcher i molnet](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html).
+Mer information finns i [Dispatcher i molnet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html).
 
 ## AEM Dispatcher Converter {#aem-dispatcher-converter}
 
