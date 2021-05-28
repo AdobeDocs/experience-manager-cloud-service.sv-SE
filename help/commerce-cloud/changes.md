@@ -2,11 +2,10 @@
 title: Betydande ändringar av tillägget Commerce Integration Framework (CIF)
 description: Betydande ändringar av Commerce Integration Framework (CIF) jämfört med tidigare CIF-versioner.
 exl-id: 5a526960-96a1-421e-9fb0-0825e7df8f32,c136763f-56aa-450e-8796-bc84bf6c205d
-translation-type: tm+mt
-source-git-commit: 7a52e4b62f5a18f9c68e5afb0d464bd11be732d2
+source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 5%
+source-wordcount: '447'
+ht-degree: 0%
 
 ---
 
@@ -39,12 +38,12 @@ Slutpunkten konfigureras och uppdateras antingen via användargränssnittet i Cl
 
 ## Distribution av CIF Venia-projektet
 
-Projektet finns i [Cloud Manager Git-databas](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/managing-code/integrating-with-git.html) och distributionen görs via [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html)
+Projektet finns i [Cloud Manager Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/integrating-with-git.html) och distributionen görs via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html)
 
 **Tidigare CIF-versioner**
 
 * CIF Classic: Via AEM
-* CIF öppen källkod: Via [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* CIF öppen källkod: Via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 
 ## Produktkatalogdata
 
