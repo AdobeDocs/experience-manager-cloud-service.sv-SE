@@ -1,14 +1,13 @@
 ---
 title: SPA Blueprint
 description: I det här dokumentet beskrivs det allmänna, ramverksoberoende kontrakt som SPA ska uppfylla för att implementera redigerbara SPA komponenter inom AEM.
-translation-type: tm+mt
-source-git-commit: d70f531087cccd45793f091b9fab7e8a25143c1e
+exl-id: 9d47c0e9-600c-4f45-9169-b3c9bbee9152
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '2058'
+source-wordcount: '2056'
 ht-degree: 0%
 
 ---
-
 
 # SPA blå {#spa-blueprint}
 
@@ -78,7 +77,7 @@ Sidmodellen utnyttjar JSON-modellens exporterare, som i sin tur är baserad på 
 * `:itemsOrder`: Ordnad lista över de underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
 * `:path`: Innehållssökväg för ett objekt (finns i objekt som representerar en sida)
 
-Se även [Komma igång med AEM Content Services.](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+Se även [Komma igång med AEM Content Services.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
 
 ### Ramverksspecifik modul {#framework-specific-module}
 
@@ -95,7 +94,7 @@ För att underlätta bibliotekens driftskompatibilitet rekommenderar Adobe den r
 
 npm-modul: [@adobe/aem-response-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
-#### Vinkel {#angular}
+#### Angular {#angular}
 
 npm-modul: [@adobe/aem-angular-editable-components](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
@@ -160,7 +159,7 @@ Se även npm-resursen [@adobe/aem-rea-editable-components](https://www.npmjs.com
 
 #### Platshållare för det responsiva stödrastret {#placeholder-of-the-responsive-grid}
 
-Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet `data-cq-editor` läggs till i dokumentnoden för det innehållet. När attributet `data-cq-editor` finns måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
+Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet `data-cq-editor` läggs till dokumentnoden för det innehållet. När attributet `data-cq-editor` finns måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
 
 Till exempel:
 
@@ -276,7 +275,7 @@ Mer information finns i artikeln [SPA Model Routing](routing.md).
 Se hur en enkel SPA fungerar och experimentera med en SPA själv genom att fortsätta med följande dokument:
 
 * [Komma igång med SPA i AEM med Reagera](getting-started-react.md).
-* [Getting Started with SPA in AEM using Angular](getting-started-angular.md).
+* [Komma igång med SPA i AEM med Angular](getting-started-angular.md).
 
 ## Ytterligare läsning {#further-reading}
 
