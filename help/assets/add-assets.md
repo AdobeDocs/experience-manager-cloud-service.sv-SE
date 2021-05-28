@@ -4,7 +4,7 @@ description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager]
 feature: Resurshantering,Överför
 role: Business Practitioner,Administrator
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 2e00b62efa07488fbdba723d283b9b76b53f6d34
+source-git-commit: 1c841eaa49eeb021fc7583c58aeaefc1236650f9
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 0%
@@ -217,7 +217,7 @@ Teknisk information om överförings-API:erna och -protokollet samt länkar till
 
 * Adobe rekommenderar att du lägger till högst 1 000 resurser i varje mapp i [!DNL Experience Manager Assets]. Du kan lägga till fler resurser i en mapp, men det kan hända att du får prestandaproblem, till exempel långsammare navigering i sådana mappar.
 
-* När du väljer **[!UICONTROL Replace]** i dialogrutan [!UICONTROL Name Conflict] genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs. Om [Resursinsikter](/help/assets/assets-insights.md) är aktiverat för att spåra visningar eller klickningar med [!DNL Adobe Analytics] blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på [!DNL Analytics].
+* När du väljer **[!UICONTROL Replace]** i dialogrutan [!UICONTROL Name Conflict] genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs. Om [Assets Insights](/help/assets/assets-insights.md) är aktiverat för att spåra visningar eller klickningar med [!DNL Adobe Analytics] blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på [!DNL Analytics].
 
 * Vissa överföringsmetoder hindrar dig inte från att överföra resurser med [förbjudna tecken](#filename-handling) i filnamnen. Tecknen ersätts med symbolen `-`.
 
