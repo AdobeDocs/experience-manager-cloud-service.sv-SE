@@ -2,14 +2,13 @@
 title: Konfigurera RTF-redigeraren så att innehåll i [!DNL Adobe Experience Manager] skapas som en Cloud Service.
 description: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] som en Cloud Service.
 contentOwner: AG
-translation-type: tm+mt
-source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
+exl-id: 1f0ff800-5e95-429a-97f2-221db0668170
+source-git-commit: f5f2c7c4dfacc113994c380e8caa37508030ee92
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '1964'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
 
@@ -33,7 +32,7 @@ RTE-gränssnittet erbjuder en [responsiv design](/help/sites-cloud/authoring/fea
 
 Verktygsfältet innehåller alternativ för WYSIWYG-redigering. [!DNL Experience Manager] administratörer kan konfigurera de alternativ som är tillgängliga i verktygsfältet i gränssnittet. En omfattande uppsättning redigeringsalternativ finns som standard i [!DNL Experience Manager]. Utvecklare kan anpassa [!DNL Experience Manager] och lägga till fler redigeringsalternativ.
 
-## Olika redigeringslägen för {#editingmodes}
+## Olika redigeringslägen {#editingmodes}
 
 Författare kan skapa och redigera textinnehåll i [!DNL Experience Manager] med hjälp av de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
 
@@ -155,7 +154,7 @@ Detaljerade konfigurationer av RTE-plugin-program finns i [hur du aktiverar och 
 <!-- TBD ENGREVIEW: To confirm if the sample works in CS or not?
 **Sample**: Download [this sample configuration](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) that illustrates how to configure RTE. In this package all the features are enabled. -->
 
-Med textkomponenten [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program som använder användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [skapa sidmallar](/help/sites-cloud/authoring/features/templates.md) och i [dokumentationen till utvecklaren av kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html).
+Med textkomponenten [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program som använder användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [skapa sidmallar](/help/sites-cloud/authoring/features/templates.md) och i [dokumentationen till utvecklaren av kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
 >I referenssyfte finns textstandardkomponenterna (levereras som en del av en standardinstallation) på:
 >
@@ -166,7 +165,7 @@ Med textkomponenten [Core Components](https://docs.adobe.com/content/help/en/exp
 >
 Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
 
-## Konfigurera RTE-verktygsfältet {#dialogfullscreen}
+## Verktygsfältet Konfigurera RTE {#dialogfullscreen}
 
 [!DNL Experience Manager] I kan du konfigurera gränssnittet för textredigeraren på ett annat sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov. Du anpassar bara de verktygsfältsfunktioner som du vill ge författarna. Du behöver inte ange alla verktygsfältskonfigurationer.
 
@@ -221,7 +220,7 @@ Avgränsare (`|`) mellan en grupp med alternativ kan anges med `-`.
 
 Popup-noden under infogat läge eller helskärmsläge innehåller en lista över de popup-fönster som används. Varje underordnad nod under noden `popovers` namnges efter plugin-programmet (till exempel format). Den har egenskapen &quot;items&quot; som innehåller en lista med funktioner för plugin-programmet (till exempel format#bold).
 
-## RTE-inställningar för användargränssnitt och innehållsprinciper {#rtecontentpolicies}
+## RTE-inställningar (User Interface Settings) och innehållsprinciper {#rtecontentpolicies}
 
 Administratörer kan styra textredigeringsalternativen med hjälp av innehållsprinciper, till exempel i stället för att göra konfigurationen enligt beskrivningen ovan. Innehållsprofiler definierar designegenskaperna för en komponent när de används som en del av en [redigerbar mall](/help/sites-cloud/authoring/features/templates.md). Om en textkomponent som använder textredigeraren till exempel används med en redigerbar mall kan innehållsprincipen definiera att det feta alternativet är tillgängligt och att några styckeformateringsalternativ är tillgängliga. Innehållsprofilerna kan återanvändas och kan tillämpas på flera mallar.
 
@@ -231,9 +230,9 @@ De tillgängliga alternativen i textredigeraren flödar nedåt från användargr
 * Om användargränssnittskonfigurationen för textredigeraren har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
 * En författare har bara tillgång till funktioner som är tillgängliga i användargränssnittskonfigurationerna och i innehållsprinciperna.
 
-Du kan till exempel se [dokumentationen för textkärnkomponenten](https://docs.adobe.com/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
+Du kan till exempel se [dokumentationen för textkärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
 
-## Anpassa mappning mellan verktygsfältsikoner och kommandon {#iconstoolbar}
+## Anpassa mappningen mellan verktygsfältsikoner och kommandon {#iconstoolbar}
 
 Du kan anpassa mappningen mellan koralikonerna som visas i verktygsfältet för textredigering och de tillgängliga kommandona. Du kan inte använda några andra ikoner förutom kornikoner.
 
@@ -285,6 +284,6 @@ Nedan visas ett exempelfragment som mappar kommandot `Bold` till koralikonen `te
 >[!MORELIKETHIS]
 >
 >* [Konfigurera RTE-plugin-program](configure-rich-text-editor-plug-ins.md)
->* [Använd RTF-redigerare för att skapa](/help/sites-cloud/authoring/fundamentals/rich-text-editor.md)
->* [Konfigurera RTE för hjälpmedelsanpassade webbplatser](rte-accessible-content.md)
+* [Använd RTF-redigerare för att skapa](/help/sites-cloud/authoring/fundamentals/rich-text-editor.md)
+* [Konfigurera RTE för hjälpmedelsanpassade webbplatser](rte-accessible-content.md)
 
