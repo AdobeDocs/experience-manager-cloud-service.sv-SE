@@ -1,14 +1,13 @@
 ---
 title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
 description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
-translation-type: tm+mt
-source-git-commit: 20a19c558be17631889f0253b3ad4e5a71ebcce2
+exl-id: 3110e492-95bd-4571-a347-198aa8d9bbb3
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 10%
+source-wordcount: '242'
+ht-degree: 7%
 
 ---
-
 
 # Komma igång med utveckling i AEM Sites – WKND-självstudiekurs{#getting-started-developing-aem-sites-wknd-tutorial}
 
@@ -22,15 +21,15 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 ![WKND](assets/wknd-tutorial-homepage.png)
 
-[WKND Developer Tutorial är tillgänglig ](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) här och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
+[WKND Developer Tutorial är tillgänglig ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) här och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
 
 ## Viktiga begrepp {#core-concepts}
 
 Självstudiekursen utnyttjar många kraftfulla funktioner i AEM. Webbplatsen kommer att implementeras med:
 
-* [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
-* [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)
+* [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)
 * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
-* [Redigerbara mallar](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
-* [Formatsystem](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
+* [Redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
+* [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
