@@ -1,14 +1,13 @@
 ---
 title: Implementera en anpassad predikatutvärderare för Query Builder
 description: AEM i Query Builder är ett enkelt och anpassningsbart sätt att fråga innehållsdatabasen
-translation-type: tm+mt
-source-git-commit: 6b754a866be7979984d613b95a6137104be05399
+exl-id: 8c2f8c22-1851-4313-a1c9-10d6d9b65824
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # Implementera en anpassad predikatutvärderare för frågebyggaren {#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
@@ -53,7 +52,7 @@ Den mappar en sökbegränsning på högre nivå (till exempel `width>200`) till 
 
 >[!TIP]
 >
->Mer information om `PredicateEvaluator` och `com.day.cq.search`-paketet finns i [Java-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html?com/day/cq/search/package-summary.html).
+>Mer information om `PredicateEvaluator` och `com.day.cq.search`-paketet finns i [Java-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/index.html?com/day/cq/search/package-summary.html).
 
 ### Implementera en anpassad predikatutvärderare för replikeringsmetadata {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
@@ -132,7 +131,7 @@ Följande kodutdrag visar skillnaderna i filen `pom.xml` i [enhetligt diff-forma
 
 >[!NOTE]
 >
->I proceduren nedan beskrivs hur du skapar ett `Xpath`-uttryck för att filtrera data. Ett annat alternativ är att implementera metoden `includes` som markerar data på radbasis. Mer information finns i [Java-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/eval/PredicateEvaluator.html).
+>I proceduren nedan beskrivs hur du skapar ett `Xpath`-uttryck för att filtrera data. Ett annat alternativ är att implementera metoden `includes` som markerar data på radbasis. Mer information finns i [Java-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/search/eval/PredicateEvaluator.html).
 
 1. Skapa en ny Java-klass som utökar `com.day.cq.search.eval.AbstractPredicateEvaluator`
 1. Anteckna din klass med ett `@Component`-liknande utdrag som visas i [enhetligt diff-format](https://en.wikipedia.org/wiki/Diff#Unified_format)
