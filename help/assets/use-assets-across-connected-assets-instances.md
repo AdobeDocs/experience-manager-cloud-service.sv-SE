@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Resurshantering,Anslutna resurser,Resursdistribution,Användare och grupper
 role: Administrator,Business Practitioner,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 6163b150e014ad8449e6b64a191213f72daf4410
+source-git-commit: 1c841eaa49eeb021fc7583c58aeaefc1236650f9
 workflow-type: tm+mt
 source-wordcount: '2850'
 ht-degree: 25%
@@ -198,7 +198,7 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 
 ## Begränsningar och bästa praxis {#tip-and-limitations}
 
-* Konfigurera funktionen [Asset Insight](/help/assets/assets-insights.md) i [!DNL Sites]-instansen för att få information om resursanvändning.
+* Konfigurera funktionen [Assets Insight](/help/assets/assets-insights.md) i [!DNL Sites]-instansen för att få information om resursanvändning.
 
 ### Behörigheter och resurshantering {#permissions-and-managing-assets}
 
