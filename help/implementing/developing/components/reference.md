@@ -1,14 +1,13 @@
 ---
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
-translation-type: tm+mt
-source-git-commit: f9a6dbec25b8154fda8069ff213aaaaa1d443ca1
+exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
+source-git-commit: f5f2c7c4dfacc113994c380e8caa37508030ee92
 workflow-type: tm+mt
-source-wordcount: '3675'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
-
 
 # Referenshandbok för komponenter {#components-reference-guide}
 
@@ -241,9 +240,13 @@ Mer information finns i följande resurser:
 
 ### Anpassa dialogrutefält {#customizing-dialog-fields}
 
+<!--
+Content not found
+
 >[!TIP]
 >
->Se [AEM Gems-sessionen](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html) om att anpassa dialogfält.
+>See the [AEM Gems session](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html) on customizing dialog fields.
+-->
 
 Om du vill skapa en ny widget som ska användas i en komponentdialogruta måste du skapa en ny GRI-fältkomponent.
 
@@ -447,7 +450,7 @@ Den här händelsen utlöses när dialogrutan läses in (eller läses in igen) o
 
 ## Förhandsvisningsbeteende {#preview-behavior}
 
-Cookien [WCM-läge](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/WCMMode.html) anges när du växlar till förhandsgranskningsläget även när sidan inte uppdateras.
+Cookien [WCM-läge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/WCMMode.html) anges när du växlar till förhandsgranskningsläget även när sidan inte uppdateras.
 
 Komponenter med en återgivning som är känslig för WCM-läget måste definieras så att de uppdateras specifikt och sedan baseras på värdet för cookien.
 
