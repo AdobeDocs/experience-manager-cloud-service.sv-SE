@@ -1,14 +1,13 @@
 ---
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
-translation-type: tm+mt
-source-git-commit: 66b2fb19cbc4c8aa480f1ace31a7f973dc7fb0f7
+exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1907'
 ht-degree: 5%
 
 ---
-
 
 # Redigera sidegenskaper {#editing-page-properties}
 
@@ -87,7 +86,7 @@ Egenskaperna fördelas på flera flikar.
    * **Lägg till**  - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
       * Tryck eller klicka igen för att lägga till flera.
       * Tryck eller klicka på ikonen **Ta bort** för att ta bort fågel-URL:en.
-   * **Omdirigerings-URL**  för vanity - Anger om du vill att sidan ska använda standard-URL:en.
+   * **Omdirigerings-URL**  för vanity - Anger om du vill att sidan ska använda innehålls-URL:en.
 
 
 
@@ -149,7 +148,7 @@ Konfigurera sidminiatyrbilden
 
 * **Delning i sociala medier**
 
-   Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Delningskärnkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/sharing.html).
+   Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Delningskärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/sharing.html).
 
    * **Aktivera användardelning för Facebook**
    * **Aktivera användardelning för Pinterest**
