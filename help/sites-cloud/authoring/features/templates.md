@@ -1,14 +1,13 @@
 ---
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
-translation-type: tm+mt
-source-git-commit: 7cceaf3942b60f13004d606de9a7e0408f528671
+exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '4600'
+source-wordcount: '4596'
 ht-degree: 11%
 
 ---
-
 
 # Skapar sidmallar {#creating-page-templates}
 
@@ -92,7 +91,7 @@ När du skapar en ny redigerbar mall:
 >
 >Ange aldrig någon information som behöver internationaliseras i en mall. <!-- Never enter any information that needs to be [internationalized](/help/sites-developing/i18n.md) into a template.-->
 >
->För mallelement som sidhuvuden och sidfötter som måste lokaliseras använder du lokaliseringsfunktionerna i [kärnkomponenterna.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/localization.html)
+>För mallelement som sidhuvuden och sidfötter som måste lokaliseras använder du lokaliseringsfunktionerna i [kärnkomponenterna.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)
 
 ### Skapar en mallmapp - administratör {#creating-a-template-folder-admin}
 
@@ -357,7 +356,7 @@ Konfigurationsfönstret är uppdelat i två delar.
 
 Vilka egenskaper som är tillgängliga beror på den valda komponenten. För en textkomponent definierar till exempel egenskaperna alternativ för kopiera och klistra in, formatering och styckeformat bland annat.
 
-##### Princip {#policy}
+##### Policy {#policy}
 
 Innehållets (eller designens) profiler definierar en komponents designegenskaper. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen).
 
@@ -533,7 +532,7 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 >
 >Ursprungligt innehåll är avsett för att förbereda komponenter och den sidlayout som fungerar som en startpunkt för att skapa innehållet. Det är inte avsett att vara det faktiska innehåll som skulle förbli som det är. Därför går det inte att översätta det ursprungliga innehållet.
 >
->Om du behöver inkludera översättningsbar text i mallen, t.ex. i sidhuvuden eller sidfötter, kan du använda [lokaliseringsfunktionerna i kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/localization.html).
+>Om du behöver inkludera översättningsbar text i mallen, t.ex. i sidhuvuden eller sidfötter, kan du använda [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
 
 ### Redigera en mall - Layout - mallskapare {#editing-a-template-layout-template-author}
 
@@ -608,7 +607,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 >[!NOTE]
 >
->Även om mallskaparen kan ange sidprincipen för mallen måste han eller hon hämta information om lämpliga klientbibliotek från utvecklaren.
+>Mallförfattaren kan ange sidprincipen för mallen, men han eller hon måste få information om lämpliga klientbibliotek från utvecklaren.
 
 ### Redigera en mall - Inledande sidegenskaper - Författare {#editing-a-template-initial-page-properties-author}
 
