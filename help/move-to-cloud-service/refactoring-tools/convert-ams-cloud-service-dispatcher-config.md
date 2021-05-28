@@ -1,11 +1,10 @@
 ---
 title: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
 description: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
-translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 100%
+source-wordcount: '1340'
+ht-degree: 99%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 100%
 I det här avsnittet finns stegvisa instruktioner för hur du konverterar en AMS-konfiguration.
 
 >[!NOTE]
->Det förutsätter att du har ett arkiv med en struktur som liknar den som beskrivs i [Hantera dina Dispatcher-konfigurationer](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html).
+>Det förutsätter att du har ett arkiv med en struktur som liknar den som beskrivs i [Hantera dina Dispatcher-konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html).
 
 ## Steg för att konvertera en hanterad tjänst till en AEM as a Cloud Service Dispatcher-konfiguration
 
