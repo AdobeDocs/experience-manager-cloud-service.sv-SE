@@ -1,14 +1,13 @@
 ---
 title: Versionsinformation för 2020.11.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes for 2020.11.0.'
-translation-type: tm+mt
-source-git-commit: ef8df0176c0541acc3cb6cb52d564d9bfee0bfea
+exl-id: 8066c0fb-c2f5-4625-9448-b0c74ff4e192
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1255'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service {#release-notes}
 
@@ -19,7 +18,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Expe
 Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.11.0 är 2 december 2020.
 Följande version (2020.12.0) kommer att vara den 17 december 2020
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
@@ -29,7 +28,7 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 * **Sortera de Live Copy-sidor som är tillgängliga för utrullning**: Nytt alternativ för att sortera de Live Copy-sidor som är tillgängliga för utrullning med hjälp av egenskaperna  [!UICONTROL Name],  [!UICONTROL Last modified date]och  [!UICONTROL Last rollout date] . [!UICONTROL Last rollout date] för en sida är en ny egenskap.
 
-## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
+## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
 ### Nyheter i [!DNL Assets] och [!DNL Dynamic Media] {#what-is-new-assets}
 
@@ -106,7 +105,7 @@ Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/mana
 
 ### Arbetsflöden {#workflows}
 
-* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Förekomster av arbetsflöden för sökning](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/administering/workflows-administering.html).
+* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Förekomster av arbetsflöden för sökning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/administering/workflows-administering.html).
 
 ### Synkronisering av användardata på publiceringsnivå {#user-sync}
 
@@ -122,7 +121,7 @@ Ny [&quot;httpd -t&quot;-syntax](/help/implementing/dispatcher/disp-overview.md#
 
 ## Content Transfer Tool {#content-transfer-tool}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [verktyget Innehållsöverföring](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) Version v1.1.12.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) Version v1.1.12.
 
 ### Nyheter {#what-is-new-ctt}
 
