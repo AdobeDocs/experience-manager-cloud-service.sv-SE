@@ -1,14 +1,13 @@
 ---
 title: Versionsinformation för 2020.9.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.9.0.'
-translation-type: tm+mt
-source-git-commit: 13774cc8684166c98f85bf4096d2c7de8d257746
+exl-id: 2332512f-8c52-4569-a006-faa36a7670a1
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '722'
 ht-degree: 1%
 
 ---
-
 
 # Versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service 2020.9.0 {#release-notes}
 
@@ -18,13 +17,13 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Expe
 
 Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.9.0 är 24 september 2020.
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
 * JavaScript SDK [är nu öppen källkod för redigeraren för enkelsidigt program (SPA).](/help/implementing/developing/hybrid/reference-materials.md)
 
-## [!DNL Adobe Experience Manager Assets] som en Cloud Service  {#assets}
+## [!DNL Adobe Experience Manager Assets] som en Cloud Service {#assets}
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
@@ -35,7 +34,7 @@ Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2020.9.0 är
    * Selektiv publicering - Nu kan ett marknadsföringsteam få åtkomst till [!DNL Dynamic Media] smarta beskärningsbilder och dynamiska återgivningar som är synkroniserade med [!DNL Dynamic Media] så att de kan skapa marknadsföringsmaterial, utan att behöva publicera dessa resurser på [!DNL Dynamic Media] för global leverans. [!DNL Experience Manager] och  [!DNL Dynamic Media] publiceringen är fristående och kan ske separat för att uppnå detta. Se [selektiv publicering](/help/assets/dynamic-media/selective-publishing.md).
    * Administratörer kan nu återställa [!DNL Dynamic Media] Cloud Service password som tas emot vid etablering. Återställningen kan göras i [!DNL Experience Manager]-användargränssnittet utan att du behöver använda [!DNL Dynamic Media Classic]-datorprogrammet.
 
-* Mer information om följande förbättringar finns i [Nyheter i Varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html).
+* Mer information om följande förbättringar finns i [nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
 
    * Förbättrad PDF-förhandsgranskning med integrering med Adobe Document Cloud View SDK.
    * Ladda ned med ett klick.
@@ -55,7 +54,7 @@ TBD: list of Assets aaCS bugs that are fixed.
 
 * Nu finns funktioner för förhandsgranskning med produkt-/kategorimallar för produkt- och kategorimallar. På så sätt kan företagsanvändare/marknadsförare i AEM visa produkt-/kategorimallarna med riktiga data.
 
-* Sidan Egenskaper har lagts till i produkter och kategorier så att företagsanvändare kan visa information som är kopplad till produktens SKU/kategori-ID.
+* Sidan Egenskaper har lagts till i produkter och kategorier så att företagsanvändare kan visa information som är kopplad till produkt-SKU/kategori-ID.
 
 * Sorteringsfunktionen har lagts till i produktkonsolen för att tillåta sortering av produkter/kategorier efter namn eller prisattribut.
 
@@ -124,4 +123,3 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 * Verktyget Databasmoderering kan användas för att strukturera om befintliga projektpaket till paket som är kompatibla med den projektstruktur som har definierats för AEM som en Cloud Service.
 
    Se [Git-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) om du vill ha mer information.
-
