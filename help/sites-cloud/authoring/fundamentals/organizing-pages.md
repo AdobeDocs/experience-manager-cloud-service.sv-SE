@@ -1,14 +1,13 @@
 ---
 title: Skapa och ordna sidor
 description: Skapa och ordna sidor med AEM
-translation-type: tm+mt
-source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
+exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2552'
 ht-degree: 5%
 
 ---
-
 
 # Skapa och ordna sidor {#creating-and-organizing-pages}
 
@@ -39,7 +38,7 @@ Du kan också använda [mappar](#creating-a-new-folder) för att ordna innehåll
 
 Strukturen på en webbplats kan ses som ett träd som innehåller dina innehållssidor. Namnen på dessa innehållssidor används för att skapa URL-adresserna, medan rubrikerna visas när sidinnehållet visas.
 
-I följande exempel visas ett exempel från [WKND-självstudiekursen](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)-webbplatsen, där du kan komma åt en artikel om skateparker ( `la-skateparks`):
+I följande exempel visas ett exempel från [WKND-självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)-webbplatsen, där du kan komma åt en artikel om skateparker ( `la-skateparks`):
 
 `http://<host>:<port>/editor.html/content/wknd/en/sports/la-skateparks.html`
 
