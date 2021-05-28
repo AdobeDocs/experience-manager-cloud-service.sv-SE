@@ -1,14 +1,13 @@
 ---
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
-translation-type: tm+mt
-source-git-commit: e70135d7f59fc46c24f73f109d027f3536ffbbd7
+exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2275'
 ht-degree: 1%
 
 ---
-
 
 # Utvecklingsriktlinjer för AEM as a Cloud Service {#aem-as-a-cloud-service-development-guidelines}
 
@@ -34,7 +33,7 @@ Instansens filsystem ska inte användas i AEM som Cloud Service. Disken är till
 
 Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som behöver vara beständiga skickas iväg till en extern tjänst för längre lagring.
 
-## Obs {#observation}
+## Observera {#observation}
 
 På samma sätt kan man inte garantera att allt som sker asynkront, som att agera på observationshändelser, utförs lokalt och därför måste användas med försiktighet. Detta gäller både JCR-händelser och Sling-resurshändelser. När en ändring inträffar kan instansen tas ned och ersättas av en annan instans. Andra instanser i topologin som är aktiva vid den tidpunkten kan reagera på den händelsen. I det här fallet kommer detta dock inte att vara en lokal händelse och det kanske inte ens finns någon aktiv ledare i händelse av ett pågående ledarval när evenemanget utställs.
 
@@ -88,7 +87,7 @@ Innehållet replikeras från författare till publicering via en pub-sub-mekanis
 
 För lokal utveckling skrivs loggposter till lokala filer i mappen `/crx-quickstart/logs`.
 
-I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att avsluta loggarna. <!-- See the [Cloud Manager documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Note that custom logs are not supported and so all logs should be output to the error log. -->
+I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att avsluta loggarna. <!-- See the [Cloud Manager documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Note that custom logs are not supported and so all logs should be output to the error log. -->
 
 **Ange loggnivå**
 
@@ -160,7 +159,7 @@ Utvecklarkonsolen är också användbar vid felsökning och har en länk till ve
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-I produktionsprogram definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer på både författare och publiceringstjänster för att kunna visa statusdumpdata från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+I produktionsprogram definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer på både författare och publiceringstjänster för att kunna visa statusdumpdata från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 ### AEM för mellanlagring och produktion {#aem-staging-and-production-service}
 
@@ -227,7 +226,7 @@ Som standard är utgående e-post inaktiverad. Aktivera den genom att skicka en 
 
 ### Skickar e-postmeddelanden {#sending-emails}
 
-Tjänsten [Day CQ Mail OSGI](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
+Tjänsten [Day CQ Mail OSGI](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
 
 AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
 
@@ -237,9 +236,9 @@ AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder 
 
 ### Konfiguration {#email-configuration}
 
-E-post i AEM ska skickas med tjänsten [Day CQ Mail Service OSGi](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
+E-post i AEM ska skickas med tjänsten [Day CQ Mail Service OSGi](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
 
-Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html). För AEM som Cloud Service måste följande justeringar göras för tjänsten `com.day.cq.mailer.DefaultMailService OSGI`:
+Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html). För AEM som Cloud Service måste följande justeringar göras för tjänsten `com.day.cq.mailer.DefaultMailService OSGI`:
 
 Om port 465 har begärts:
 
