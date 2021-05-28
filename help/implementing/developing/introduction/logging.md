@@ -2,10 +2,9 @@
 title: Loggar för AEM som en Cloud Service
 description: Lär dig hur du konfigurerar globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär AEM som Cloud Service.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-translation-type: tm+mt
-source-git-commit: e87b71dd5081b95ca3fd55e66455476c85a50f6c
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '2332'
+source-wordcount: '2330'
 ht-degree: 2%
 
 ---
@@ -550,7 +549,7 @@ AEM loggar finns i mappen `crx-quickstart/logs`, där följande loggar kan visas
 * Logg för AEM HTTP-begäran: `request.log`
 * AEM HTTP Access-logg: `access.log`
 
-Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Mer information om hur du startar Dispatcher finns i [Dispatcher-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html).
+Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Mer information om hur du startar Dispatcher finns i [Dispatcher-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html).
 
 Så här hämtar du loggarna:
 
