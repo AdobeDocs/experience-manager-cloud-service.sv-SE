@@ -1,14 +1,13 @@
 ---
 title: Komponenter - översikt
 description: Komponenter är modulära enheter som har vissa funktioner för att presentera ditt innehåll på din webbplats
-translation-type: tm+mt
-source-git-commit: 83c27daae4e8ae2ae6a8f115c9da9527971c6ecb
+exl-id: 0fdc99e7-2103-448d-8217-d5d52c94acea
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 4%
+source-wordcount: '378'
+ht-degree: 0%
 
 ---
-
 
 # Komponentöversikt {#components-overview}
 
@@ -27,7 +26,7 @@ Komponenterna i AEM är:
 * ha ett standardiserat användargränssnitt.
 * Har redigeringsbeteende som kan konfigureras.
 * Använd dialogrutor som är byggda med delelement som är baserade på GRE-komponenter.
-* Utvecklas med [HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html).
+* Utvecklas med [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html).
 * Kan utvecklas för att skapa anpassade komponenter som utökar standardfunktionerna.
 
 Eftersom komponenterna är modulära kan du:
@@ -45,7 +44,7 @@ Varje AEM:
 
 ## AEM kärnkomponenter {#aem-core-components}
 
-[De AEM ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) grundläggande komponenterna är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[De AEM ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) grundläggande komponenterna är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 
 Core Components har AEM som Cloud Service och [WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md) visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
 
@@ -64,4 +63,3 @@ Du kan också använda CRXDE Lite för att få en lista över alla komponenter s
    `//element(*, cq:Component)`
 
 1. Klicka på **[!UICONTROL Execute]** så visas komponenterna.
-
