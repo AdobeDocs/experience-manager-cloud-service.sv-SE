@@ -1,12 +1,11 @@
 ---
 title: Cachelagring och prestanda
 description: Lär dig mer om de olika konfigurationer som är tillgängliga för att aktivera GraphQL och innehållscachning för att optimera prestanda för implementeringen av din e-handel.
-exl-id: 8b969821-5073-4540-a997-95c74a11e4f0
-translation-type: tm+mt
-source-git-commit: 97574c964e757ffa4d108340f6a4d1819050d79a
+exl-id: 21ccdab8-4a2d-49ce-8700-2cbe129debc6,8b969821-5073-4540-a997-95c74a11e4f0
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 2%
+source-wordcount: '842'
+ht-degree: 0%
 
 ---
 
@@ -48,11 +47,11 @@ Cachelagring för andra komponenter bör definieras på projektbasis, vanligtvis
 
 ## Dispatcher Caching {#dispatcher}
 
-Cachelagring AEM sidor eller fragment i [AEM Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html) är en god vana för alla AEM projekt. Oftast bygger det på invalideringstekniker som säkerställer att allt innehåll som ändras i AEM uppdateras korrekt i Dispatcher. Detta är en viktig egenskap i AEM Dispatcher-cachningsstrategi.
+Cachelagring AEM sidor eller fragment i [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är en god vana för alla AEM projekt. Oftast bygger det på invalideringstekniker som säkerställer att allt innehåll som ändras i AEM uppdateras korrekt i Dispatcher. Detta är en viktig egenskap i AEM Dispatcher-cachningsstrategi.
 
 Förutom rent AEM hanterat innehåll-CIF kan en sida vanligtvis visa handelsdata som hämtas dynamiskt från Magento via GraphQL. Även om sidstrukturen i sig kanske aldrig ändras kan e-handelsinnehållet ändras, till exempel om vissa produktdata (namn, pris, osv.) ändras i Magento.
 
-För att CIF-sidor ska kunna cachelagras under en begränsad tid i AEM Dispatcher rekommenderar vi därför att du använder [tidsbaserad cacheinvalidering](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl) (kallas även TTL-baserad cachelagring) när du cachelagrar CIF-sidor i AEM Dispatcher. Den här funktionen kan konfigureras i AEM med det extra [ACS-AEM](https://adobe-consulting-services.github.io/acs-aem-commons/)-paketet.
+För att CIF-sidor ska kunna cachelagras under en begränsad tid i AEM Dispatcher rekommenderar vi därför att du använder [tidsbaserad cacheinvalidering](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl) (kallas även TTL-baserad cachelagring) när du cachelagrar CIF-sidor i AEM Dispatcher. Den här funktionen kan konfigureras i AEM med det extra [ACS-AEM](https://adobe-consulting-services.github.io/acs-aem-commons/)-paketet.
 
 Med TTL-baserad cachning definierar en utvecklare vanligtvis en eller flera cachningstider för valda AEM. Detta garanterar att CIF-sidor bara cachas i AEM Dispatcher upp till den konfigurerade längden och att innehållet uppdateras ofta.
 
@@ -64,4 +63,4 @@ Med TTL-baserad cachning definierar en utvecklare vanligtvis en eller flera cach
 
 - [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
 - [Konfiguration för GraphQL-cachelagring](https://github.com/adobe/commerce-cif-graphql-client#caching)
-- [AEM Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
