@@ -2,10 +2,9 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-translation-type: tm+mt
-source-git-commit: 24da05afce75a16ed2223130ac1825b10ee964e1
+source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1796'
 ht-degree: 1%
 
 ---
@@ -102,9 +101,9 @@ Integrera med Assets Core:
 
 >[!CAUTION]
 >
->Komponenten [Innehållsfragment är en del av kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html). Mer information finns i [Developing Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html).
+>Komponenten [Innehållsfragment är en del av kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html). Mer information finns i [Developing Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
-Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM innehåller **[kärnkomponenten för innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)** - en [komponent som gör att du kan ta med innehållsfragment på dina sidor](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här **[innehållskomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html)**.
+Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM innehåller **[kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)** - en [komponent som gör att du kan ta med innehållsfragment på dina sidor](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här **[innehållskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html)**.
 
 * Komponenten använder egenskapen `fragmentPath` för att referera till det faktiska innehållsfragmentet. Egenskapen `fragmentPath` hanteras på samma sätt som liknande egenskaper för andra tillgångstyper. till exempel när innehållsfragmentet flyttas till en annan plats.
 
@@ -171,7 +170,7 @@ Innehållsfragment kan integreras med:
 
 Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
 
-[com.adobe.cq.dam.cfm](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/package-summary.html#package.description)
+[com.adobe.cq.dam.cfm](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/package-summary.html#package.description)
 
 >[!CAUTION]
 >
@@ -181,7 +180,7 @@ Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
 
 Följande tre gränssnitt kan fungera som startpunkter:
 
-* **Innehållsfragment**  ([ContentFragment](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
+* **Innehållsfragment**  ([ContentFragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
    Med det här gränssnittet kan du arbeta med ett innehållsfragment på ett abstrakt sätt.
 
@@ -207,7 +206,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
    Gränssnitt som representerar de primära elementen i ett fragment är:
 
-   * **Innehållselement**  ([ContentElement](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+   * **Innehållselement**  ([ContentElement](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
@@ -219,7 +218,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
          * Ta bort variationer (se [Caveats](#caveats))
          * Åtkomst till variantdata (se `ContentVariation`)
       * Kortkommando för att matcha variationer (tillämpa ytterligare, implementeringsspecifik reservlogik om den angivna varianten inte är tillgänglig för ett element)
-   * **Innehållsvariation**  ([ContentVariation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+   * **Innehållsvariation**  ([ContentVariation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
@@ -249,9 +248,9 @@ Följande kan anpassas:
 
 * `ContentElement` kan anpassas till
 
-   * [`ElementTemplate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ElementTemplate.html) - för åtkomst till elementets strukturinformation.
+   * [`ElementTemplate`](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/ElementTemplate.html) - för åtkomst till elementets strukturinformation.
 
-* [`FragmentTemplate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html)
+* [`FragmentTemplate`](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html)
 
 * `Resource` kan anpassas till
 
@@ -354,4 +353,4 @@ Om du vill ange ett intervall för automatiskt sparande på 5 minuter måste du 
 
 Mer information finns i
 
-* [Kärnkomponenter - Innehållsfragmentkomponent](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)  (rekommenderas)
+* [Kärnkomponenter - Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)  (rekommenderas)
