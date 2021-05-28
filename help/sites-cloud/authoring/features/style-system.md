@@ -1,14 +1,13 @@
 ---
 title: Formatsystem
 description: Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
-translation-type: tm+mt
-source-git-commit: 1c518830f0bc9d9c7e6b11bebd6c0abd668ce040
+exl-id: 224928dd-e365-4f3e-91af-4d8d9f47efdd
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1327'
 ht-degree: 1%
 
 ---
-
 
 # Formatsystem{#style-system}
 
@@ -55,9 +54,9 @@ Följande diagram visar arkitekturen i Style System.
 
 ![aem-style-system](/help/sites-cloud/authoring/assets/style-system-architecture.png)
 
-## Använd {#use}
+## Användning {#use}
 
-För att demonstrera funktionen använder vi [WKND](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)-implementeringen av kärnkomponentens [titelkomponent](https://www.adobe.com/go/aem_cmp_title_v2) som exempel.
+För att demonstrera funktionen använder vi [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)-implementeringen av kärnkomponentens [titelkomponent](https://www.adobe.com/go/aem_cmp_title_v2) som exempel.
 
 I följande avsnitt [Som innehållsförfattare](#as-a-content-author) och [Som mallförfattare](#as-a-template-author) beskrivs hur du testar funktionaliteten i Style System med WKND.
 
@@ -107,7 +106,7 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 >
 >CSS-klasserna (och eventuella nödvändiga JavaScript) som konfigurerats som formategenskaper för en komponents policy måste distribueras som [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) för att fungera.
 
-## Konfigurera {#setup}
+## Inställningar {#setup}
 
 Core Components version 2 och senare är helt aktiverade för att utnyttja Style System och kräver ingen ytterligare konfiguration.
 
@@ -121,7 +120,6 @@ För att en komponent ska kunna arbeta med AEM Style System och visa stilfliken 
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 >[!NOTE]
->
 >Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md) med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 När komponenten är konfigurerad infogas de format som är konfigurerade av sidförfattarna automatiskt av AEM på dekorationselementet som AEM runt varje redigerbar komponent automatiskt. Själva komponenten behöver inte göra något annat för att detta ska hända.
@@ -136,7 +134,6 @@ Fliken för redigeringsdialogrutan kan läggas in på ungefär samma sätt som f
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 >[!NOTE]
->
 >Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md) med [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 >[!NOTE]
@@ -158,6 +155,7 @@ Den här egenskapen anges för noden `cq:Component`. Till exempel:
 >1. HTML har företräde framför allt: `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
 >1. Sedan används det första formatet i listan med format som är konfigurerade i komponentens profil bland flera aktiva format.
 >1. Slutligen betraktas komponentens `cq:htmlTag`/`cq:tagName` som ett reservvärde.
+
 >
 
 
