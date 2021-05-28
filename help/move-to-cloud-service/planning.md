@@ -1,14 +1,13 @@
 ---
 title: Planeringsfas
 description: Planeringsfas
-translation-type: tm+mt
-source-git-commit: df3eb65817a00fe31eff466565b9de5e0a72ccae
+exl-id: 987cb929-7871-4fec-8ef5-4d2f5f2f2186
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 91%
+source-wordcount: '470'
+ht-degree: 88%
 
 ---
-
 
 # Planering {#planning-phase}
 
@@ -26,13 +25,13 @@ AEM as a Cloud Service har många nya funktioner för  att administrera AEM-proj
 
 Det finns dock ett antal skillnader mellan AEM On-premise och Adobe Managed Services jämfört med AEM as a Cloud Service.
 
-Se [Viktiga ändringar i AEM Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html) för att få en förståelse för de viktiga skillnaderna.
+Se [Viktiga ändringar i AEM Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/aem-cloud-changes.html) för att få en förståelse för de viktiga skillnaderna.
 
 ## Borttagna funktioner {#deprecated-features}
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet.
 
-Läs [Borttagna funktioner](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/deprecated-removed-features.html#deprecated-features) om du vill veta mer om funktioner som har markerats som borttagna i Experience Manager as a Cloud Service.
+Läs [Borttagna funktioner](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/deprecated-removed-features.html#deprecated-features) om du vill veta mer om funktioner som har markerats som borttagna i Experience Manager as a Cloud Service.
 
 ## Förstå planeringsfasen {#introduction}
 
@@ -60,4 +59,3 @@ När du har uppskattat den nivå av arbete som krävs för att gå över till Cl
 Om du inte har fastställt nyckeltal (KPI) tidigare rekommenderar vi att du skapar nyckeltal för implementeringen av Adobe Experience Manager (AEM) så att ditt team kan fokusera på det som är viktigast.
 
 Läs [Utveckla nyckeltal](https://guided.adobe.com/welcome/aem/part6.html) för att lära dig hur du väljer rätt nyckeltal för dina affärsmål.
-
