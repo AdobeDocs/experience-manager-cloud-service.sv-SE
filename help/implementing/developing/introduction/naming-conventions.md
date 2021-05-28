@@ -1,14 +1,13 @@
 ---
 title: Namnkonventioner
 description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository
-translation-type: tm+mt
-source-git-commit: 6b754a866be7979984d613b95a6137104be05399
+exl-id: 3c5c39dd-b209-488b-a93e-e840786fe224
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
-
 
 # Namnkonventioner{#naming-conventions}
 
@@ -24,7 +23,7 @@ Dessa namnkonventioner implementeras på olika nivåer:
 
 ### JCR-verktyg {#jcr-utilities}
 
-[JCR](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/commons/jcr/JcrUtil.html) använder den AEM implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
+[JCR](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/commons/jcr/JcrUtil.html) använder den AEM implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
 
 * `isValidName`
    * Kontrollerar om namnet inte är tomt och bara innehåller giltiga tecken.
@@ -35,7 +34,7 @@ Dessa namnkonventioner implementeras på olika nivåer:
 
 ### Sidhanteraren {#page-manager}
 
-[I ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html) PageManager finns metoder för sidnivååtgärder som baseras på  [JCRUtil](#jcr-utilities).
+[I ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html) PageManager finns metoder för sidnivååtgärder som baseras på  [JCRUtil](#jcr-utilities).
 
 ### AEM gränssnittsbeteende {#ui-behavior}
 
