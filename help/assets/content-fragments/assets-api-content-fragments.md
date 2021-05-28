@@ -2,14 +2,13 @@
 title: Adobe Experience Manager som Cloud Service Content Fragments Support in Assets HTTP API
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
-translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1958'
-ht-degree: 2%
+source-wordcount: '1952'
+ht-degree: 1%
 
 ---
-
 
 # Stöd för Content Fragments i AEM Assets HTTP API {#content-fragments-support-in-aem-assets-http-api}
 
@@ -34,7 +33,7 @@ Med API kan du använda Adobe Experience Manager som en Cloud Service som headle
 
 Enkelsidiga program (SPA), ramverksbaserade eller anpassade, kräver till exempel innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 
-Även om [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) är en mycket omfattande, flexibel och anpassningsbar API som kan hantera nödvändiga läsåtgärder i detta syfte, och vars JSON-utdata kan anpassas, kräver de AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Det är inte varje SPA utvecklingsorganisation som har direkt tillgång till sådan kunskap.
+Även om [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en mycket omfattande, flexibel och anpassningsbar API som kan hantera nödvändiga läsåtgärder i detta syfte, och vars JSON-utdata kan anpassas, kräver de AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Det är inte varje SPA utvecklingsorganisation som har direkt tillgång till sådan kunskap.
 
 Detta är när REST API:t för resurser kan användas. Med det kan utvecklare komma åt resurser (till exempel bilder och innehållsfragment) direkt, utan att först behöva bädda in dem på en sida, och leverera innehållet i serialiserat JSON-format.
 
@@ -259,7 +258,7 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
 >[!NOTE]
 >
->Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
+>Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
 
 ### Läs/Leverera {#read-delivery}
 
@@ -377,7 +376,7 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
 
 Här finns detaljerade API-referenser:
 
-* [Adobe Experience Manager Assets API - innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API - innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html)
 
 * [HTTP API för Assets](/help/assets/mac-api-assets.md)
 
@@ -389,4 +388,3 @@ Mer information finns i:
 
 * [Resurser för HTTP API-dokumentation](/help/assets/mac-api-assets.md)
 * [AEM Gem-session: OAuth](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html)
-
