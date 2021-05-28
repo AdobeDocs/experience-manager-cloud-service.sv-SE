@@ -1,9 +1,9 @@
 ---
 title: '[!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service'
 description: '[!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service'
-source-git-commit: 7519c937fdc36711a5f558d787257cee713baf7e
+source-git-commit: 4ee9a5744cdcec00dd497a00b0d8dbf288a5adcb
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 [!DNL Adobe Experience Manager] som en Cloud Service levererar nya funktioner på månadsbasis, enligt schemat för lanseringar av  [Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-as-cloud-service). För att bekanta sig med de funktioner som kommer att bli tillgängliga nästa månad kan kunderna prenumerera på betaversionskanalen, som nås genom att konfigurera i standardprogramutvecklingsmiljöer eller i sandlådeprogrammiljöer på lämpligt sätt. Kunderna kan förhandsgranska ändringar i Sites-konsolen samt bygga kod mot nya prerelease-API:er.
 
 Listan över förhandsversionsfunktioner för en viss månad visas i [månadsversionsinformationen](/help/release-notes/release-notes-cloud/release-notes-current.md).
+
+>[!VIDEO](/help/release-notes/assets/prerelease-overview.mp4)
 
 ## Aktivera förhandsversionen {#enable-prerelease}
 
@@ -110,8 +112,7 @@ Så här bygger du mot betaversionen av SDK:
 1. Om du är säker på att det fungerar som väntat lokalt, bekräftar du koden till en utvecklingsgren och använder ett icke-produktionsflöde i Cloud Manager för att distribuera till en miljö som prenumererar på betaversionskanalen
 
 >[!CAUTION]
-> 
-> `aem-prerelease-sdk-api`-artefactId får aldrig användas vid distribution till Stage eller Production. Använd alltid aem-sdk-api när du distribuerar via produktionskanalen. Kod som refererar till prerelease-API:er ska inte heller distribueras via produktionskanalen.
+`aem-prerelease-sdk-api`-artefactId får aldrig användas vid distribution till Stage eller Production. Använd alltid aem-sdk-api när du distribuerar via produktionskanalen. Kod som refererar till prerelease-API:er ska inte heller distribueras via produktionskanalen.
 
 [AEM CS SDK build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=en#developing) identifierar om prerelease API används i ett projekt genom att undersöka beroendena. Om analyseraren hittar den använder den prerelease sdk api för att analysera projektet.
 
