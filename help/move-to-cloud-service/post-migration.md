@@ -1,11 +1,10 @@
 ---
 title: Efter migreringsfas
 description: Efter migreringsfas
-translation-type: tm+mt
-source-git-commit: 96aa0ef43613e6ae72bf4c454be46329abb19a0c
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 100%
+source-wordcount: '222'
+ht-degree: 93%
 
 ---
 
@@ -25,7 +24,7 @@ Följande verktyg är tillgängliga för att felsöka AEM as a Cloud Service-mil
 
 Felsökning av utvecklingsmiljön hos AEM as a Cloud Service finns i Developer Console för utvecklings-, mellanlagrings- och produktionsmiljöer.
 
-Mer information om utvecklingsverktyg finns i [Implementera för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools).
+Mer information om utvecklingsverktyg finns i [Implementera för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools).
 
 ## CRXDE Lite {#crxde-lite}
 
@@ -40,7 +39,7 @@ Läs mer i [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.m
 
 Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
-Läs [Komma åt och hantera loggar](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/manage-logs.html) för att lära dig hur du får åtkomst till och hanterar loggar via användargränssnittet eller från API via Cloud Manager.
+Läs [Komma åt och hantera loggar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-logs.html) för att lära dig hur du får åtkomst till och hanterar loggar via användargränssnittet eller från API via Cloud Manager.
 
 ### Ytterligare support {#additional-support}
 
