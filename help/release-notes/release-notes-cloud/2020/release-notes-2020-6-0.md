@@ -2,10 +2,9 @@
 title: Adobe Experience Manager som Cloud Service Release Notes for 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
 exl-id: fd6ebe2b-6d98-498c-a45d-b9a9c34e6be7
-translation-type: tm+mt
-source-git-commit: 33e92b9cd19dd49dcdb6a8c8f30feccb755f615f
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '1927'
+source-wordcount: '1917'
 ht-degree: 0%
 
 ---
@@ -24,7 +23,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ### Nyheter {#whats-new-2020.6.0}
 
-Version 2.9.0 av [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) är nu tillgänglig som en del av AEM Sites inklusive:
+Version 2.9.0 av [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är nu tillgänglig som en del av AEM Sites inklusive:
 
 * Integrering mellan [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer) och Core Components
 * Konfigurerbara HTML ID-attribut för alla komponenter
@@ -61,11 +60,11 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * En användare i rollen *Affärsägare* i Cloud Manager kan nu ta bort ett sandlådeprogram från landningssidan (via snabbåtgärdsknappen på programkortet) eller inifrån programmet.
 
-   Mer information finns i [Ta bort ett sandlådeprogram](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
+   Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
 
 * En användare av sandlådeprogrammet i *Business Owner* eller *Deployment Manager*-rollen i Cloud Manager kan nu ta bort sin produktions- och scenmiljö som angetts via användargränssnittet i molnhanteraren. Alternativet Ta bort finns nu både på miljökortet på sidan **Programöversikt** och på sidan **Miljö**. Om du väljer borttagningsalternativet för antingen produktion eller scen tas även det andra bort i uppsättningen.
 
-   Mer information finns i [Ta bort ett sandlådeprogram](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
+   Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
 
 * Tips på landningssidan som informerar och instruerar användaren om grundläggande navigering.
 
@@ -77,11 +76,11 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * En användare i rollen SysAdmin har nu tillgång till den plats i Admin Console där användarroller eller behörigheter till Cloud Manager kan hanteras med ett enda klick. Knappen **Hantera åtkomst** är nu tillgänglig på landningssidan bredvid knappen **Lägg till program**.
 
-   Mer information finns i [SysAdmin Tasks](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/navigation.html#sysadmin-tasks).
+   Mer information finns i [SysAdmin Tasks](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#sysadmin-tasks).
 
 * En användare i rollen SysAdmin har nu tillgång till författarinstansen med ett klick direkt från Cloud Manager.
 
-   Mer information finns i [Hantera åtkomst till författarinstansen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem).
+   Mer information finns i [Hantera åtkomst till författarinstansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem).
 
 * Build-loggen innehåller nu en lista över identifierade artefakter, inklusive överhoppade innehållspaket.
 
