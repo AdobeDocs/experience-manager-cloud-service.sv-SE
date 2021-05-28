@@ -1,20 +1,19 @@
 ---
 title: Bygga in märkord i AEM
 description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM
-translation-type: tm+mt
-source-git-commit: 6b754a866be7979984d613b95a6137104be05399
+exl-id: a106dce1-5d51-406a-a563-4dea83987343
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
-
 
 # Skapar taggar i AEM program {#building-tagging-into-aem-applications}
 
 I det här dokumentet beskrivs användningen av
 
-* [API för taggning](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/tagging/package-summary.html)
+* [API för taggning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/tagging/package-summary.html)
 
 som interagerar med
 
@@ -27,7 +26,7 @@ Mer information om taggning:
 
 ## Översikt över taggnings-API {#overview-of-the-tagging-api}
 
-Implementeringen av [taggningsramverket](tagging-framework.md) i AEM gör det möjligt att hantera taggar och tagginnehåll med JCR-API:t. `TagManager` säkerställer att taggar som anges som värden i  `cq:tags` strängarrayegenskapen inte dupliceras, tar bort  `TagID`dem som pekar på taggar som inte finns och uppdaterar  `TagID`dem för flyttade eller sammanfogade taggar. `TagManager` använder en JCR-observationslyssnare som återställer felaktiga ändringar. Huvudklasserna finns i [com.day.cq.tagging](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/tagging/package-summary.html)-paketet:
+Implementeringen av [taggningsramverket](tagging-framework.md) i AEM gör det möjligt att hantera taggar och tagginnehåll med JCR-API:t. `TagManager` säkerställer att taggar som anges som värden i  `cq:tags` strängarrayegenskapen inte dupliceras, tar bort  `TagID`dem som pekar på taggar som inte finns och uppdaterar  `TagID`dem för flyttade eller sammanfogade taggar. `TagManager` använder en JCR-observationslyssnare som återställer felaktiga ändringar. Huvudklasserna finns i [com.day.cq.tagging](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/tagging/package-summary.html)-paketet:
 
 * `JcrTagManagerFactory` - returnerar en JCR-baserad implementering av en  `TagManager`. Det är referensimplementeringen av taggnings-API:t.
 * `TagManager` - gör att du kan lösa och skapa taggar efter sökvägar och namn.
@@ -143,13 +142,13 @@ När taggen **Djur** läggs till på sidan **Produkter** läggs värdet `stockph
 
 Serversidans API har lokaliserade `title`-relaterade metoder:
 
-* [`com.day.cq.tagging.Tag`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/tagging/Tag.html)
+* [`com.day.cq.tagging.Tag`](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/tagging/Tag.html)
    * `getLocalizedTitle(Locale locale)`
    * `getLocalizedTitlePaths()`
    * `getLocalizedTitles()`
    * `getTitle(Locale locale)`
    * `getTitlePath(Locale locale)`
-* [`com.day.cq.tagging.TagManager`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/tagging/TagManager.html)
+* [`com.day.cq.tagging.TagManager`](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/tagging/TagManager.html)
    * `canCreateTagByTitle(String tagTitlePath, Locale locale)`
    * `createTagByTitle(String tagTitlePath, Locale locale)`
    * `resolveByTitle(String tagTitlePath, Locale locale)`
