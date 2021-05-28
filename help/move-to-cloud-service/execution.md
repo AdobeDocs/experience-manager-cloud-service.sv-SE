@@ -1,14 +1,13 @@
 ---
 title: Körningsfas
 description: Körningsfas
-translation-type: tm+mt
-source-git-commit: 0dd05c1f6dc197daf154d4df6e6661e00455b233
+exl-id: 176dd79d-0d72-443c-87db-dab24fb48b96
+source-git-commit: dfbd0f38017d02810da05ccadbc5f2fbd5826aa3
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 100%
+source-wordcount: '1054'
+ht-degree: 96%
 
 ---
-
 
 # Körning {#execution-phase}
 
@@ -67,7 +66,7 @@ Du kan använda följande verktyg för att snabba upp vissa av dina åtgärder i
 
 * [Resursarbetsflödesmigrering](/help/move-to-cloud-service/moving-to-aem-assets/asset-workflow-migration-tool.md)
 * [Dispatcher Converter](/help/move-to-cloud-service/refactoring-tools/dispatcher-transformation-utility-tools.md)
-* [Moderniseringsverktyg](/help/move-to-cloud-service/refactoring-tools/aem-modernization-tools.md) 
+* [Moderniseringsverktyg ](/help/move-to-cloud-service/refactoring-tools/aem-modernization-tools.md)
 
 Vi rekommenderar att du strukturerar om och testar koden lokalt innan du skickar den till en Cloud Service-miljö via Cloud Manager Git.
 
@@ -112,6 +111,11 @@ Följ resurserna nedan för att lära dig hur du använder Cloud Manager för at
 * [Driftsätta kod](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html)
 
 ## Bästa praxis för publiceringsförberedelse {#go-live}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_golive_prep"
+>title="Go-Live-förberedelser"
+>abstract="För att säkerställa en smidig och framgångsrik publicering AEM en Cloud Service bör du planera för frysning av kod och innehåll, testning av iterationer, innehållsuppdateringar, prestandatester, säkerhetstester med mera."
 
 För att säkerställa en smidig och framgångsrik publicering av AEM as a Cloud Service bör du överväga att utföra följande steg:
 
