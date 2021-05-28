@@ -1,14 +1,13 @@
 ---
 title: Dekoration-tagg
 description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
-translation-type: tm+mt
-source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
+exl-id: a90fd619-eff6-466f-9178-90374f988b5d
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 1%
+source-wordcount: '789'
+ht-degree: 0%
 
 ---
-
 
 # Dekortagg {#decoration-tag}
 
@@ -28,7 +27,7 @@ För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar 
 
 Här följer några allmänna rekommendationer för när wrapper-elementet ska tas med, som hjälper dig att undvika att stöta på oväntade problem:
 
-* Närvaron av wrapper-elementet får inte skilja sig mellan WCMModes (redigerings- eller förhandsgranskningsläge), instanser (författare eller publicering) eller miljö (staging eller produktion), så att sidans CSS och JavaScript fungerar likadant i alla fall.
+* Närvaron av wrapper-elementet får inte skilja sig mellan WCMModes (redigerings- eller förhandsgranskningsläge), instanser (författare eller publicering) eller miljö (staging eller produktion), så att CSS och JavaScript för sidan fungerar likadant i alla fall.
 * Radbrytningselementet bör läggas till i alla komponenter som är redigerbara, så att sidredigeraren kan initiera och uppdatera dem på rätt sätt.
 * För icke-redigerbara komponenter kan wrapper-elementet undvikas om det inte har någon speciell funktion, så att den resulterande koden inte blir onödigt utdragen.
 
@@ -56,7 +55,7 @@ Omslagets beteende kan också styras fullständigt.
 
 Det går att helt styra beteendet för wrapper-taggarna från HTML-skript och tillhörande logik.
 
-Mer information om hur du utvecklar i HTML finns i [HTL-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html).
+Mer information om hur du utvecklar i HTML finns i [HTL-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html).
 
 ### Beslutsträd {#decision-tree}
 
