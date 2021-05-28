@@ -2,10 +2,9 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-translation-type: tm+mt
-source-git-commit: ba5817714d46511c75ec2dd796b2ebd90adecb57
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2869'
 ht-degree: 12%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 12%
 
 >[!TIP]
 >
->Bekanta dig med grundläggande [AEM Project Archetype-användning](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) och [FileVault Content Maven-plugin](/help/implementing/developing/tools/maven-plugin.md) när den här artikeln bygger på dessa inlärningar och koncept.
+>Bekanta dig med grundläggande [AEM Project Archetype-användning](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och [FileVault Content Maven-plugin](/help/implementing/developing/tools/maven-plugin.md) när den här artikeln bygger på dessa inlärningar och koncept.
 
 I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Manager Maven-projekt som ska AEM som en Cloud Service-kompatibel genom att säkerställa att de respekterar uppdelningen av muterbart och oföränderligt innehåll, att beroenden etableras för att skapa icke-konfliktskapande, deterministiska distributioner och att de paketeras i en installerbar struktur.
 
@@ -61,7 +60,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
 + OSGi-paketfilen genereras och bäddas in direkt i hela projektet.
 
 + Paketet `ui.apps` innehåller all kod som ska distribueras och endast distribueras till `/apps`. Vanliga element i `ui.apps`-paketet omfattar, men är inte begränsade till:
-   + [Komponentdefinitioner och ](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) HTLscripts
+   + [Komponentdefinitioner och ](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html) HTLscripts
       + `/apps/my-app/components`
    + JavaScript och CSS (via [Klientbibliotek](/help/implementing/developing/introduction/clientlibs.md))
       + `/apps/my-app/clientlibs`
