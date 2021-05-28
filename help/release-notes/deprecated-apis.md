@@ -1,9 +1,9 @@
 ---
 title: Föråldrade API:er
 description: Versionsinformation som är specifik för borttagna och borttagna API:er i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
-source-git-commit: 3c4b8f8d9b252cfc90823c475a4e21eefd1dfcf7
+source-git-commit: 788727ce2e6b26f5da647c9ffd8267d958e3b226
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '394'
 ht-degree: 7%
 
 ---
@@ -46,7 +46,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>org.apache.sling.settings</td>
     <td>AEM som Cloud Service stöder inte körningslägen eller filsystemåtkomst vid körning. </td>
     <td>10/5/20</td>
-    <td>6/1/21</td>
+    <td>I slutet av 2021</td>
   </tr>
   <tr>
     <td>org.apache.fop.apps</td>
