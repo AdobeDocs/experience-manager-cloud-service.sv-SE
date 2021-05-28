@@ -1,14 +1,13 @@
 ---
 title: Hantera målgrupper
 description: Med Audiences-konsolen kan du skapa, ordna och hantera målgrupper för ditt Adobe Target-konto eller hantera segment för ContextHub
-translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+exl-id: dff72c15-afcd-4b16-a711-e9ca3010e3ec
+source-git-commit: f5f2c7c4dfacc113994c380e8caa37508030ee92
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '964'
 ht-degree: 11%
 
 ---
-
 
 # Hantera målgrupper{#managing-audiences}
 
@@ -82,13 +81,13 @@ Du kan skapa målregler för följande attribut:
 
 | **Attribut** | **Beskrivning** | **Mer information** |
 |---|---|---|
-| **Mobil** | Rikta mobila enheter baserat på parametrar som mobil enhet, typ av enhet, enhetsleverantör, skärmdimensioner (i pixlar) med mera. | Se [Mobile documentation](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/mobile.html) på Adobe Target. |
-| **Anpassat** | Egna parametrar är mbox-parametrar. Om du skickar några mbox-parametrar till mboxes, eller använder funktionen targetPageParams, visas de parametrarna här för användning i målgrupper. | Se [Dokumentation om anpassade parametrar](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) på Adobe Target. |
+| **Mobil** | Rikta mobila enheter baserat på parametrar som mobil enhet, typ av enhet, enhetsleverantör, skärmdimensioner (i pixlar) med mera. | Se [Mobile documentation](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) på Adobe Target. |
+| **Anpassat** | Egna parametrar är mbox-parametrar. Om du skickar några mbox-parametrar till mboxes, eller använder funktionen targetPageParams, visas de parametrarna här för användning i målgrupper. | Se [Dokumentation om anpassade parametrar](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) på Adobe Target. |
 | **OS** | Du kan rikta in dig på besökare som använder ett visst operativsystem. | Användare som använder Linux, Macintosh eller Windows. |
-| **Webbplatssidor** | Rikta in dig på besökare som befinner sig på en viss sida eller har en viss mbox-parameter. | Se [Dokumentation för webbplatssidor](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/site-pages.html) på Adobe Target. |
-| **Webbläsare** | Du kan rikta in dig på användare som använder en viss webbläsare eller särskilda webbläsaralternativ när de besöker sidan. | Se [Dokumentation om webbläsaralternativ](https://docs.adobe.com/help/en/target/using/audiences/create-audiences/categories-audiences/browser.html) på Adobe Target. |
-| **Besökarprofil** | Rikta besökarna mot specifika profilparametrar. | Se [Dokumentation om besöksprofiler](https://docs.adobe.com/content/help/en/target/using/audiences/visitor-profiles/visitor-profile.html) på Adobe Target. |
-| **Trafikkällor** | Rikta besökarna baserat på den sökmotor eller landningssida som hänvisar dem till er webbplats. | Se [Traffic Sources documentation](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) på Adobe Target. |
+| **Webbplatssidor** | Rikta in dig på besökare som befinner sig på en viss sida eller har en viss mbox-parameter. | Se [Dokumentation för webbplatssidor](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) på Adobe Target. |
+| **Webbläsare** | Du kan rikta in dig på användare som använder en viss webbläsare eller särskilda webbläsaralternativ när de besöker sidan. | Se [Dokumentation om webbläsaralternativ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) på Adobe Target. |
+| **Besökarprofil** | Rikta besökarna mot specifika profilparametrar. | Se [Dokumentation om besöksprofiler](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile.html) på Adobe Target. |
+| **Trafikkällor** | Rikta besökarna baserat på den sökmotor eller landningssida som hänvisar dem till er webbplats. | Se [Traffic Sources documentation](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) på Adobe Target. |
 
 ## Ändra en publik i publikkonsolen {#modifying-an-audience-in-the-audiences-console}
 
