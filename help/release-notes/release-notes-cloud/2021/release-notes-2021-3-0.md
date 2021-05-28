@@ -1,8 +1,7 @@
 ---
 title: Versionsinformation för 2021.3.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes for 2021.3.0.'
-translation-type: tm+mt
-source-git-commit: 63b7c11683425cc20851ee5a16ee099511429b17
+source-git-commit: 3ff105507f4d42f5858a7e3a4c703d9135b36e5b
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 0%
@@ -26,7 +25,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.3.0 är 25 mars 2021.
 Följande version (2021.4.0) kommer att vara den 29 april 2021.
 
-## [!DNL Adobe Experience Manager Sites] som en Cloud Service  {#sites}
+## [!DNL Adobe Experience Manager Sites] som en Cloud Service {#sites}
 
 * [En progressiv webbprogramversion (PWA) av en ](/help/sites-cloud/authoring/features/enable-pwa.md) sitecan kan nu aktiveras på projektnivå via enkel konfiguration.
 * Modelltillägg för innehållsfragment - nu möjligt att definiera datatyper med flera rader som flerfältslista.
@@ -63,7 +62,7 @@ Add a Boolean or radio widget type to metadata schema setup. -->
 
 AEM Forms har hjälpt många organisationer att skapa fantastiska startupplevelser och registreringsupplevelser under årens lopp. Dessa upplevelser har hjälpt organisationer att konvertera leads till försäljning, bearbeta inhämtade kunddata, leverera responsiva upplevelser baserat på målgruppsprofilen och mycket mer. Nu finns AEM Forms som molntjänst.
 
-Du kan använda [AEM Forms som Cloud Service](https://experienceleague.corp.adobe.com/docs/experience-manager-forms-cloud-service/forms/home.html) för att skapa digitala formulär, koppla formulär till befintliga datakällor, integrera formulär med Adobe Sign för att lägga till e-signaturer i formulär, generera arkivering av inskickade formulär som PDF-filer. Tjänsten kan också konvertera PDF forms till digitala blanketter. Förutom AEM Forms standardfunktioner erbjuder tjänsten flera inbyggda funktioner i molnet, som automatisk skalning, noll driftstopp för uppgraderingar och molnbaserad utvecklingsmiljö. Läs [det här blogginlägget](https://blog.adobe.com/en/publish/2021/03/11/experience-manager-forms-as-a-cloud-service.html) om du vill veta mer om AEM Forms funktioner som Cloud Service.
+Du kan använda [AEM Forms som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/home.html) för att skapa digitala formulär, koppla formulär till befintliga datakällor, integrera formulär med Adobe Sign för att lägga till e-signaturer i formulär, generera arkivering av inskickade formulär som PDF-filer. Tjänsten kan också konvertera PDF forms till digitala blanketter. Förutom AEM Forms standardfunktioner erbjuder tjänsten flera inbyggda funktioner i molnet, som automatisk skalning, noll driftstopp för uppgraderingar och molnbaserad utvecklingsmiljö. Läs [det här blogginlägget](https://blog.adobe.com/en/publish/2021/03/11/experience-manager-forms-as-a-cloud-service.html) om du vill veta mer om AEM Forms funktioner som Cloud Service.
 
 Du kan kontakta din Adobe-representant för att få en demo eller anmäla dig till tjänsten.
 
