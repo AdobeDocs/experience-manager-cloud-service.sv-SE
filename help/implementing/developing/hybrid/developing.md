@@ -1,14 +1,13 @@
 ---
 title: Utveckla SPA för AEM
 description: I den här artikeln finns viktiga frågor att tänka på när en frontendutvecklare ska utveckla en SPA för AEM samt en översikt över AEM arkitektur med avseende på SPA för att komma ihåg när en utvecklad SPA distribueras på AEM.
-translation-type: tm+mt
-source-git-commit: dc6dc07fe62d3387e2c4bd9459734247dfe9c9b0
+exl-id: f6c6f31a-69ad-48f6-b995-e6d0930074df
+source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2076'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla SPA för AEM {#developing-spas-for-aem}
 
@@ -55,7 +54,7 @@ Statisk routning fungerar mot [principen för portabilitet](#portability) och be
 
 ## AEM Project Archetype {#aem-project-archetype}
 
-Alla AEM ska utnyttja den AEM projekttypen [som stöder SPA projekt med React eller Angular och använder SPA SDK.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+Alla AEM ska utnyttja den AEM projekttypen [som stöder SPA projekt med React eller Angular och använder SPA SDK.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 
 ## SPA designmodeller {#spa-design-models}
 
@@ -148,7 +147,7 @@ Nedan följer en översikt över de steg som en frontendutvecklare måste följa
 
 ## AEM-agnostic {#aem-agnostic}
 
-Dessa kodblock visar hur dina React- och Angular-komponenter inte behöver något som är specifikt för Adobe eller AEM.
+Dessa kodblock illustrerar hur komponenterna React och Angular inte behöver något som är specifikt för Adobe eller AEM.
 
 * Allt som finns inuti JavaScript-komponenten är AEM-agnostiskt.
 * Vad som är specifikt för AEM är att JS-komponenten måste mappas till en AEM med MapTo-hjälpen.
@@ -163,7 +162,7 @@ Dessa kodblock visar hur dina React- och Angular-komponenter inte behöver någo
 Mer information om hur du använder `MapTo` och skapar SPA för AEM i allmänhet finns i Komma igång-guiden för det valda ramverket.
 
 * [Komma igång med SPA i AEM med React](getting-started-react.md)
-* [Getting Started with SPA in AEM Using Angular](getting-started-angular.md)
+* [Komma igång med SPA i AEM med Angular](getting-started-angular.md)
 
 ## AEM och SPA {#aem-architecture-and-spas}
 
@@ -211,4 +210,4 @@ Den allmänna arkitekturen för AEM, inklusive utvecklings-, skribent- och publi
 * [SPA ](editor-overview.md) översiktsredigeraren går in mer på kommunikationsmodellen mellan AEM och SPA.
 * [WKND SPA ](wknd-tutorial.md) Projects är en stegvis självstudiekurs som implementerar ett enkelt SPA i AEM.
 * [Dynamisk mappning av modell till komponent för ](model-to-component-mapping.md) SPAsexkluderar den dynamiska mappningen av modell till komponent och hur den fungerar i SPA i AEM.
-* [SPA ](blueprint.md) Blueprintger en djupdykning i hur SPA SDK för AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.
+* [SPA ](blueprint.md) Blueprintger en djupdykning i hur SPA SDK for AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.
