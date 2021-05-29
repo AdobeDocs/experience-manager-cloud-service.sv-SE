@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Resurshantering
 role: Business Practitioner
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
-source-git-commit: 8442353b016ccd143b7265b5f20901a11bd48102
+source-git-commit: 33d5e756379af671f345e6f4e02d4a955f73a3c9
 workflow-type: tm+mt
-source-wordcount: '2948'
+source-wordcount: '3022'
 ht-degree: 5%
 
 ---
@@ -165,16 +165,16 @@ Du kan redigera följande Dynamic Media-inställningar genom att trycka på ikon
 
    Du kan redigera följande avancerade inställningar genom att trycka på **[!UICONTROL Edit]** i komponenten.
 
-<!-- CQDOC-17915 HIDDEN AS OF MAY 28 2021 AS PER EMAIL FROM APOORVA MAY 28 2021* **[!UICONTROL Optimize for higher resolution devices]** - Select (default) the checkbox to allow DPR (Device Pixel Ratio) optimization.
+* **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
 
-  See also [About device pixel ratio optimization](/help/assets/dynamic-media/imaging-faq.md#dpr).
+   Alternativet **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
+   * Under Förinställningstyp är **[!UICONTROL Image Preset]** markerat och **[!UICONTROL RESS_IP]** markerat i listrutan **[!UICONTROL Image Preset]**.
 
-  Note that any [!DNL Experience Manager] Dynamic Media Smart Imaging DPR values are ignored.
+   ![inställning för enhetens pixelproportioner för bildförinställning](/help/assets/dynamic-media/assets/dpr-ress-ip.png)
 
-  The **[!UICONTROL Optimize for higher resolution devices]** option is only shown when the following is true:
-  * Under Preset Type, **[!UICONTROL Image Preset]** is selected, and **[!UICONTROL RESS_IP]** is selected from the **[!UICONTROL Image Preset]** drop-down list.
+<!--   See also [About device pixel ratio optimization](/help/assets/dynamic-media/imaging-faq.md#dpr).
 
-  ![device pixel ratio setting for image preset](/help/assets/dynamic-media/assets/dpr-ress-ip.png) -->
+  Note that any [!DNL Experience Manager] Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL Title]** - Ändra bildens titel.
 
@@ -243,17 +243,17 @@ Du kan redigera följande Dynamic Media-inställning genom att klicka på **[!UI
 
 * **[!UICONTROL Enable Aspect Ration match]** - Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
 
-<!-- CQDOC-17915 HIDDEN AS OF MAY 28 2021 AS PER EMAIL FROM APOORVA MAY 28 2021* **[!UICONTROL Optimize for higher resolution devices]** - Select (default) the checkbox to allow DPR (Device Pixel Ratio) optimization. 
+* **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
 
-  See also [About device pixel ratio optimization](/help/assets/dynamic-media/imaging-faq.md#dpr).
+   Alternativet **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
 
-  Note that any [!DNL Experience Manager] Dynamic Media Smart Imaging DPR values are ignored.
+   * Under Förinställningstyp är **[!UICONTROL Smart Crop]**-alternativet markerat.
 
-  The **[!UICONTROL Optimize for higher resolution devices]** option is only shown when the following is true:
+   ![inställning för enhetspixelproportioner för smart beskärning](/help/assets/dynamic-media/assets/dpr-smartcrop.png)
 
-  * Under Preset Type, **[!UICONTROL Smart Crop]** option is selected.
+<!--   See also [About device pixel ratio optimization](/help/assets/dynamic-media/imaging-faq.md#dpr). -->
 
-  ![device pixel ratio setting for smart crop](/help/assets/dynamic-media/assets/dpr-smartcrop.png) -->
+<!--   Note that any [!DNL Experience Manager] Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL Title]** - Ändra titeln på bilden för smart beskärning.
 
