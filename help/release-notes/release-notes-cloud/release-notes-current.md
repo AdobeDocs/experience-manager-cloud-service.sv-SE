@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: dc66eca7b789cf3be1aeae3d63935362ab6f918a
+source-git-commit: 3452f877960a0067aa4eb1041e58a0b0e64340dd
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,10 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.5.0 är 27 maj 2021.
 Följande version (2021.6.0) kommer att vara den 24 juni 2021.
+
+## Släpp video {#release-video}
+
+Titta på videon [Versionsöversikt från maj 2021](https://video.tv.adobe.com/v/333602) om du vill se en sammanfattning av de nya funktionerna.
 
 ## AEM som Cloud Service Foundation {#foundation}
 
