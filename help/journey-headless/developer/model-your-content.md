@@ -1,9 +1,9 @@
 ---
 title: Så här modellerar du innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
-source-git-commit: 816c08b9351b3ce2fd4f31974d707e9d4a4eea27
+source-git-commit: dc1ed5c55cc17bcba97972bc79d04aa3530664e7
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1830'
 ht-degree: 0%
 
 ---
@@ -277,3 +277,4 @@ Nu när du har lärt dig att modellera strukturen och skapa innehåll som är be
 * [AEM GraphQL-scheman](access-your-content.md)  - hur GraphQL realiserar modeller
 * [Strukturen för exempelinnehållsfragment](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
 * [Getting Started with AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)  - En kort videoserie med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL
+   * [GraphQL-modelleringsgrunder](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html)  - Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för GraphQL.
