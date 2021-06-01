@@ -5,18 +5,25 @@ breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 feature: Distribuerar
 role: Architect, Developer
-translation-type: tm+mt
-source-git-commit: 54c68264dfc900604bbddace09bb8986b4fa4010
+source-git-commit: 9d9cdcb1b7f08fbfbaa4b0ec19f1b039334329ee
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 22%
+source-wordcount: '703'
+ht-degree: 21%
 
 ---
 
 
-# Introduktion till {#onboarding}
+# Onboarding {#onboarding}
 
 + [Onboarding för AEM as a Cloud Service](/help/onboarding/home.md)
++ Lär dig om introduktionskoncept {#onboarding-concepts}
+   + [Systemadministratör](/help/onboarding/learn-concepts/system-administrator.md)
+   + [Admin Console](/help/onboarding/learn-concepts/admin-console.md)
+   + [Identity Management System](/help/onboarding/learn-concepts/ims.md)
+   + [Adobe ID](/help/onboarding/learn-concepts/adobe-id.md)
+   + [Introduktion till Cloud Manager](/help/onboarding/learn-concepts/cloud-manager-introduction.md)
+   + [AEM som Cloud Service team och produktprofiler](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md)
+   + [Stöd för Adobe](/help/onboarding/learn-concepts/onboarding-help-resources.md)
 + Komma igång med AEM som Cloud Service {#what-is-required}
    + [Skaffa Adobe ID](what-is-required/get-your-adobe-id.md)
    + [Roller för Cloud Manager](what-is-required/user-roles-permissions.md)
@@ -78,7 +85,7 @@ ht-degree: 22%
       + [Ta bort en IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/delete-ip-allow-list.html)
       + [Kontrollera status för IP Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/check-ip-allow-list-status.html)
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
-      + [Aktuell versionsinformation (2021.4.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
+      + [Aktuell versionsinformation (2021.5.0)](/help/onboarding/release-notes-cloud-manager/release-notes-cm-current.md)
       + [Versionsinformation för 2021.4.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2021-4-0.md)
       + [Versionsinformation för 2021.3.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2021-3-0.md)
       + [Versionsinformation för 2021.2.0](/help/onboarding/release-notes-cloud-manager/release-notes-cm-2021-2-0.md)
