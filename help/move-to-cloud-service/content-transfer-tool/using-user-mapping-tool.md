@@ -2,10 +2,9 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 exl-id: 88ce7ed3-46fe-4b3f-8e18-c7c8423faf24
-translation-type: tm+mt
-source-git-commit: 7bdf8f1e6d8ef1f37663434e7b14798aeb8883f4
+source-git-commit: 44b46358528f768476a8ec73119957bba3880d76
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1266'
 ht-degree: 4%
 
 ---
@@ -25,6 +24,10 @@ ht-degree: 4%
 Som en del av övergången till Adobe Experience Manager (AEM) som Cloud Service måste du flytta användare och grupper från ditt befintliga AEM till AEM som en Cloud Service. Detta görs med verktyget Innehållsöverföring.
 
 En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön.  Detta kräver att du använder [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) för att hantera användare och användargrupper. Användarprofilsinformationen är centraliserad i Adobe Identity Management System (IMS) som möjliggör enkel inloggning i alla Adobe-molnprogram. Mer information finns i [Identity Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/what-is-new-and-different.html?lang=en#identity-management). På grund av den här ändringen måste befintliga användare och grupper mappas till sina IMS-ID:n för att undvika dubbletter av användare och grupper på Cloud Servicens författarinstans.
+
+### Användarmappningsverktyg {#user-mapping-tool}
+
+Verktyget Innehållsöverföring (utan användarmappning) migrerar alla användare och grupper som är kopplade till innehållet som migreras.  Verktyget för användarmappning är en del av verktyget för innehållsöverföring, och dess enda syfte är att ändra användare och grupper så att de kan identifieras korrekt av IMS, den enkelinloggningsfunktion som används av AEM som en Cloud Service.  När ändringarna är klara migrerar verktyget Innehållsöverföring det angivna innehållets användare och grupper som vanligt.
 
 ## Viktiga överväganden {#important-considerations}
 
