@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 3452f877960a0067aa4eb1041e58a0b0e64340dd
+source-git-commit: 40897b9194de56251da73cbea8718845882f98af
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,23 @@ Nästa version är planerad till 10 juni 2021.
 
 ## Content Transfer Tool {#content-transfer-tool}
 
-### Releasedatum {#release-date-ctt}
+### Releasedatum {#release-date-ctt-latest}
+
+Releasedatum för Content Transfer Tool v1.4.6 är 27 maj 2021.
+
+### Nyheter {#what-is-new-ctt-latest}
+
+* En ny loggningssats har lagts till i snabbstartsloggen om användaren inte har behörighet att köra Java-filen.
+
+* När en användare tar bort en migreringsuppsättning från CTT-gränssnittet, där en extrahering utfördes, tas mappen `tmp` som är kopplad till den migreringsuppsättningen bort för att spara utrymme.
+
+### Felkorrigeringar {#bug-fixes-ctt-latest}
+
+* När du tar bort en migreringsuppsättning visas ibland ett felmeddelande som inte är användbart i CTT-gränssnittet. Den här har åtgärdats.
+
+* Om användarna hade samma e-postadress på målet och värden men olika användarnamn när användarmappningen kördes, skulle hela inmatningen misslyckas. Den här har åtgärdats. I ett sådant scenario med konflikt hoppas användaren/gruppen över och loggas som en konflikt i loggfilen.
+
+### Releasedatum {#release-date-ctt-may}
 
 Releasedatum för innehållsöverföringsverktyget v1.4.0 är 11 maj 2021.
 
