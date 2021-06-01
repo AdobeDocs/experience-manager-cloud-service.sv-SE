@@ -1,7 +1,7 @@
 ---
 title: Läs vad är Cloud Manager
 description: Följ den här sidan om du vill veta mer om Cloud Manager, Cloud Manager-program och miljöer.
-source-git-commit: 58d4626da9fccd405cbc32d4a562641359352157
+source-git-commit: 7985512f664dce33aa8d3ccd7e7fdc49e63e81f8
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Mer information finns i [Introduktion till sandlådeprogram](/help/onboarding/ge
 Dina molnmiljöer skapas, öppnas och visas via Cloud Manager. Det kan vara en produktionsmiljö, scenmiljö eller utvecklingsmiljö. Olika miljöer har stöd för olika syften och kan användas med olika CI/CD-ledningar. Miljöer består av tjänster som:
 
 * [AEM Author Services](#author-services)
-* [AEM Publish Services](publish-services)
+* [AEM Publish Services](#publish-services)
 * [Dispatcher Services](#dispatcher-services)
 
    >[!NOTE]
