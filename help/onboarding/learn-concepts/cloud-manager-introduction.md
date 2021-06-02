@@ -1,9 +1,9 @@
 ---
 title: Läs vad är Cloud Manager
 description: Följ den här sidan om du vill veta mer om Cloud Manager, Cloud Manager-program och miljöer.
-source-git-commit: 7985512f664dce33aa8d3ccd7e7fdc49e63e81f8
+source-git-commit: 185a933e12ad81689168ad88574019ed219db06d
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Din systemadministratör ansvarar för att konfigurera ditt Cloud Manager-team, 
 
 ## Cloud Manager-program {#cloud-manager-programs}
 
-Cloud Manager-program representerar uppsättningar av Cloud Manager-miljöer som stöder logiska uppsättningar av affärsinitiativ, som vanligtvis motsvarar ett köpt serviceavtal (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja de globala offentliga webbplatserna, medan ett annat program representerar en intern central DAM. I den här videon får du veta mer.
+Cloud Manager-program representerar uppsättningar av Cloud Manager-miljöer som stöder logiska uppsättningar av affärsinitiativ, som vanligtvis motsvarar ett köpt serviceavtal (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja de globala offentliga webbplatserna, medan ett annat program representerar en intern central DAM. Titta på den här [videon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en) om du vill veta mer om hur du använder Cloud Manager-program.
 
 En användare kan skapa en **sandlåda** eller ett **Production**-program.
 
