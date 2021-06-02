@@ -2,7 +2,7 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 exl-id: 88ce7ed3-46fe-4b3f-8e18-c7c8423faf24
-source-git-commit: d7f74356db14c40ce2e1e76f96211a277fed8b93
+source-git-commit: a9119ac04762c91230d52d6418b7808bca7e9f9f
 workflow-type: tm+mt
 source-wordcount: '1266'
 ht-degree: 4%
@@ -26,7 +26,7 @@ En stor förändring i AEM as a Cloud Service är den helt integrerade användni
 
 ### Användarmappningsverktyg {#mapping-tool}
 
-Verktyget Innehållsöverföring (utan användarmappning) migrerar alla användare och grupper som är kopplade till innehållet som migreras.  Verktyget för användarmappning är en del av verktyget för innehållsöverföring, och dess enda syfte är att ändra användare och grupper så att de kan identifieras korrekt av IMS, den enkelinloggningsfunktion som används av AEM som en Cloud Service.  När ändringarna är klara migrerar verktyget Innehållsöverföring det angivna innehållets användare och grupper som vanligt.
+Verktyget Innehållsöverföring (utan användarmappning) migrerar alla användare och grupper som är kopplade till innehållet som migreras. Verktyget för användarmappning är en del av verktyget för innehållsöverföring, och dess enda syfte är att ändra användare och grupper så att de kan identifieras korrekt av IMS, den enkelinloggningsfunktion som används av AEM som en Cloud Service. När ändringarna är klara migrerar verktyget Innehållsöverföring det angivna innehållets användare och grupper som vanligt.
 
 ## Viktiga överväganden {#important-considerations}
 
