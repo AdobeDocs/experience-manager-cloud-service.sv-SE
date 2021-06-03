@@ -1,9 +1,9 @@
 ---
 title: AEM som Cloud Service team och produktprofiler
 description: Följ den här sidan om du vill veta mer om AEM som Cloud Service Team och produktprofiler.
-source-git-commit: 529b70daf58a98fd5fcbe758a2c86ac8322f945b
+source-git-commit: 02e954d294100a17fff327742fa442fc4759860c
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Produktprofiler {#profiles}
 
-När du ger en användare åtkomst till en viss Adobe-lösning behöver du inte nödvändigtvis ge dem fullständig åtkomst. Produktprofiler gör att varje lösning kan ha en egen uppsättning användarbehörigheter. Dessa är tillgängliga och tillgängliga via Adobe Admin Console.
+När du ger en användare åtkomst till en viss Adobe-lösning behöver du inte nödvändigtvis ge dem fullständig åtkomst. Produktprofiler gör att varje lösning kan ha en egen uppsättning användarbehörigheter. Dessa är tillgängliga och tillgängliga via [Adobe Admin Console](/help/onboarding/learn-concepts/admin-console.md).
 
 Läs mer om [AEM som en Cloud Service produktprofiler](#aem-product-profiles) och [Cloud Manager-produktprofiler](#cloud-manager-product-profiles) för att förstå hur dessa fungerar tillsammans medan teamet är konfigurerat.
 
@@ -46,7 +46,7 @@ Var och en av produktprofilerna har tillhörande behörigheter. Om du till exemp
 
 * **Utvecklare**: du har behörighet att skapa en personlig åtkomsttoken för åtkomst till Git.
 
-* **Programhanteraren** har du behörighet att komma åt Git.
+* **Programhanteraren** har du behörighet att schemalägga pipelines, åsidosätta kvalitetsportar i tre nivåer och tillhandahålla produktionsgodkännande.
 
 En användare kan tilldelas till flera produktprofiler. Om du till exempel tilldelar en användare både Business Owner och Deployment Manager-roller får användaren kombinationen eller summan av dessa behörigheter.
 
@@ -57,4 +57,4 @@ Ditt Cloud Manager-team kommer att innehålla minst:
 * En utvecklare
 
    >[!NOTE]
-   >För att få åtkomst till AEM som Cloud Service måste användarna höra till en av två produktprofiler `AEM Users-xxx` eller `AEM Administrators-xxx`, du måste ha behörighet för instansen. Behörigheter att administrera den associerade Cloud Manager räcker inte.
+   >För att få åtkomst till AEM som en Cloud Service måste användarna tillhöra en av två produktprofiler som `AEM Users` eller `AEM Administrators`. Du måste ha behörighet för instansen. Behörigheterna för att administrera den associerade Cloud Manager räcker inte.
