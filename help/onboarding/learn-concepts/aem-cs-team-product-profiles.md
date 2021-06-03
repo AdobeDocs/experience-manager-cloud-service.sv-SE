@@ -1,9 +1,9 @@
 ---
 title: AEM som Cloud Service team och produktprofiler
 description: Följ den här sidan om du vill veta mer om AEM som Cloud Service Team och produktprofiler.
-source-git-commit: 312b1ce7dc660d1bb4fe199be0e7403069d30161
+source-git-commit: fbf2ddff7d3b54f76afbd2431a6b5d5772620fd3
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -11,14 +11,17 @@ ht-degree: 0%
 
 # AEM som Cloud Service Team och produktprofiler {#product-profiles}
 
-AEM som Cloud Service är det helt molnbaserade erbjudandet som tillhandahåller AEM som en tjänst. AEM levereras på ett inbyggt sätt i molnet, med nya attribut som alltid på, alltid aktuella, alltid säkra och alltid i stor skala. Samtidigt behåller AEM det huvudsakliga mervärdet som utgör en anpassningsbar plattform för kunder och gör det möjligt för företagsgrupper att integrera i sina utvecklings- och leveransrutiner. Mer information om AEM som Cloud Service finns i [Introduktion till Adobe Experience Manager som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/introduction.html?lang=en).
+## Produktprofiler {#profiles}
 
-AEM som teammedlemmar i Cloud Servicen läggs till och tilldelas en eller flera av följande produktprofiler via Admin Console under introduktionen.
+När du ger en användare åtkomst till en viss Adobe-lösning behöver du inte nödvändigtvis ge dem fullständig åtkomst. Produktprofiler gör att varje lösning kan ha en egen uppsättning användarbehörigheter. Dessa är tillgängliga och tillgängliga via Adobe Admin Console.
 
+Läs mer om [AEM som en Cloud Service produktprofiler](#aem-product-profiles) och [Cloud Manager-produktprofiler](#cloud-manager-product-profiles) för att förstå hur dessa fungerar tillsammans medan teamet är konfigurerat.
 
 ## AEM som en Cloud Service produktprofiler {#aem-product-profiles}
 
-Följande produktprofiler är tillgängliga i AEM som Cloud Service:
+AEM som Cloud Service är det helt molnbaserade erbjudandet som tillhandahåller AEM som en tjänst. AEM levereras på ett inbyggt sätt i molnet, med nya attribut som alltid på, alltid aktuella, alltid säkra och alltid i stor skala. Samtidigt behåller AEM det huvudsakliga mervärdet som utgör en anpassningsbar plattform för kunder och gör det möjligt för företagsgrupper att integrera i sina utvecklings- och leveransrutiner. Se [Introduktion till Adobe Experience Manager som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/introduction.html?lang=en) om du vill veta mer om AEM som Cloud Service.
+
+AEM som teammedlemmar i Cloud Servicen läggs till och tilldelas en eller flera av följande produktprofiler via Admin Console under introduktionen.
 
 * **AEM**: En AEM administratör tilldelas vanligtvis till utvecklare, särskilt utvecklare som måste ha tillgång till exempelvis utvecklingsmiljöerna. AEM administratörsproduktprofil används för att ge administratörsbehörighet i den associerade AEM.
 
@@ -52,4 +55,4 @@ Ditt Cloud Manager-team kommer att innehålla minst:
 * En utvecklare
 
    >[!NOTE]
-   >För att få åtkomst till AEM som Cloud Service måste användarna tillhöra en av två produktprofiler `AEM Users-xxx` eller `AEM Administrators-xxx`. Du måste ha behörighet för instansen. Behörigheter att administrera den associerade Cloud Manager räcker inte.
+   >För att få åtkomst till AEM som Cloud Service måste användarna höra till en av två produktprofiler `AEM Users-xxx` eller `AEM Administrators-xxx`, du måste ha behörighet för instansen. Behörigheter att administrera den associerade Cloud Manager räcker inte.
