@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 40897b9194de56251da73cbea8718845882f98af
+source-git-commit: 181cda0c3f4ec48262ccbe2743ba75bb0d213934
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -96,6 +96,29 @@ Titta på videon [Versionsöversikt från maj 2021](https://video.tv.adobe.com/v
       >
    * Asien-Stillahavsområdet 24 juni 2021.
 
+
+## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
+
+### Nyheter i [!DNL Forms] {#what-is-new-forms}
+
+* **Sammanhangsberoende hjälp**: Kontextuell hjälp har lagts till för redigering av adaptiva formulär, mallredigerare och temaredigerare som hjälper författare att förstå olika funktioner i redigerare.
+* **Felmeddelanden i egenskapsläsaren**: Felmeddelanden för varje egenskap i webbläsaren Adaptive Forms Properties har lagts till. Dessa meddelanden hjälper till att förstå tillåtna värden för ett fält.
+
+### Kommande betafunktion för [!DNL Forms] {#what-is-new-forms-prerelease}
+
+Utdata som en molntjänst: Med Output Service kan du kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront och asynkront gruppläge. Med Output Service kan du skapa program som gör att du kan:
+
+* Generera slutliga formulärdokument genom att fylla i mallfiler med XML-data.
+* Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
+* Generera utskrifts-PDF:er från XFA-formulär-PDF:er.
+
+Du kan skriva till formscsbeta@adobe.com och registrera dig för betaprogrammet.
+
+### Fel som har korrigerats i [!DNL Forms] {#forms-bugs-fixed}
+
+* När du ersätter standardikonen för åtgärdsknapparna med en korallikon i ett steg Tilldela uppgift i AEM Forms Workflows slutar arbetsflödet att fungera och ett undantag loggas. Arbetsflödet fungerar som väntat när standardikoner används.
+* När du ändrar antalet kolumner i layoutlagret öppnar du redigeringslagret och drar några komponenter i en panel visas fyrkantiga blåa rutor i innehållsområdet i den adaptiva formulärredigeraren och redigeraren slutar svara.
+* Felmeddelande om ett alternativ för regelredigering som är relaterat till att ange en URL för en adaptiv resurs eller en extern resurs är för lång och inte användarvänlig.
 
 ## Cloud Manager {#cloud-manager}
 
