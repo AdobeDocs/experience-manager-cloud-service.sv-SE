@@ -1,7 +1,7 @@
 ---
 title: AEM som Cloud Service team och produktprofiler
 description: Följ den här sidan om du vill veta mer om AEM som Cloud Service Team och produktprofiler.
-source-git-commit: 5c74c3f011ed8d77fc20b7a802603d37b67d2e7c
+source-git-commit: 529b70daf58a98fd5fcbe758a2c86ac8322f945b
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 0%
@@ -23,9 +23,9 @@ AEM som Cloud Service är det helt molnbaserade erbjudandet som tillhandahåller
 
 AEM som teammedlemmar i Cloud Servicen läggs till och tilldelas en eller flera av följande produktprofiler via Admin Console under introduktionen.
 
-* **AEM**: En AEM administratör tilldelas vanligtvis till utvecklare, särskilt utvecklare som måste ha tillgång till exempelvis utvecklingsmiljöerna. AEM administratörsproduktprofil används för att ge administratörsbehörighet i den associerade AEM.
+* **AEM administratörer**: En AEM administratör tilldelas vanligtvis till utvecklare, särskilt utvecklare som måste ha tillgång till exempelvis utvecklingsmiljöerna. AEM administratörsproduktprofil används för att ge administratörsbehörighet i den associerade AEM.
 
-* **AEM användare**: AEM användare är de användare i organisationen som använder AEM som Cloud Service i avtalet med Adobe. Dessa medlemmar måste ha åtkomst till AEM för att kunna utföra sina uppgifter. Produktprofilen AEM användare tilldelas vanligen till en AEM innehållsförfattare som skapar och granskar innehållet (detta kan vara av flera typer). till exempel sidor, resurser, publikationer o.s.v.) innan den publiceras på webbplatsen. AEM användarprofil som visas nedan är tilldelad dessa medlemmar.
+* **AEM**: AEM användare är de användare i organisationen som använder AEM som Cloud Service i avtalet med Adobe. Dessa medlemmar måste ha åtkomst till AEM för att kunna utföra sina uppgifter. Produktprofilen AEM användare tilldelas vanligen till en AEM innehållsförfattare som skapar och granskar innehållet (detta kan vara av flera typer). till exempel sidor, resurser, publikationer o.s.v.) innan den publiceras på webbplatsen. AEM användarprofil som visas nedan är tilldelad dessa medlemmar.
 
    ![](/help/onboarding/learn-concepts/assets/admin-console-profiles.png)
 
