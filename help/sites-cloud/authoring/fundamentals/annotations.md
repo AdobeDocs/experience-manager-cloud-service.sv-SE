@@ -2,7 +2,7 @@
 title: Lägga till sidanteckningar
 description: Använd anteckningsläget för att lämna anteckningar och skisser på sidor på samma sätt som du använder anteckningar för att underlätta granskning av innehåll
 exl-id: a9cb9745-8140-4795-a5f9-fb3a1a299bd8
-source-git-commit: 5d533354a29237aeafc00e5570ede3ab00b721fd
+source-git-commit: feee00bf5adae0821fe770c8882641994cee2dbf
 workflow-type: tm+mt
 source-wordcount: '700'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Anteckningar visas bara i anteckningsläget.
 
 1. Klicka eller tryck på anteckningen för att öppna anteckningsdialogrutan och visa information om den.
 
-   ![Anteckningsinformation](/help/sites-cloud/authoring/assets/annotation-sketches.png)
+   ![Anteckningsinformation](/help/sites-cloud/authoring/assets/annotation-adding.png)
 
 1. Om du vill avsluta anteckningsläget och återgå till det tidigare använda läget trycker/klickar du på x-knappen till höger om det övre verktygsfältet.
 
