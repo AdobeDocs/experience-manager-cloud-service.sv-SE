@@ -2,7 +2,7 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 10e08b100c637db968b405b65d72a896ad411308
 workflow-type: tm+mt
 source-wordcount: '954'
 ht-degree: 17%
@@ -29,7 +29,7 @@ Bilden nedan visar din introduktionsresa, med början i det välkomstmeddelande 
 
 I det här avsnittet beskrivs de viktigaste artiklarna som fokuserar på din resa när du börjar med AEM som Cloud Service:
 
-**Vad du kan förvänta dig vid introduktion**
+**Vad som väntar vid introduktion**
 
 När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
