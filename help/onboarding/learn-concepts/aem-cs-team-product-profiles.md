@@ -1,9 +1,9 @@
 ---
 title: AEM som Cloud Service team och produktprofiler
 description: Följ den här sidan om du vill veta mer om AEM som Cloud Service Team och produktprofiler.
-source-git-commit: 02e954d294100a17fff327742fa442fc4759860c
+source-git-commit: 976fc51be0ba8c407ff7d6f7c1a6efecbbdad5c9
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -57,4 +57,4 @@ Ditt Cloud Manager-team kommer att innehålla minst:
 * En utvecklare
 
    >[!NOTE]
-   >För att få åtkomst till AEM som en Cloud Service måste användarna tillhöra en av två produktprofiler som `AEM Users` eller `AEM Administrators`. Du måste ha behörighet för instansen. Behörigheterna för att administrera den associerade Cloud Manager räcker inte.
+   >För att få tillgång till AEM som Cloud Service måste användarna tillhöra en av två produktprofiler: `AEM Users` eller `AEM Administrators`. Du måste ha behörighet för instansen. Behörigheterna för att administrera den associerade Cloud Manager räcker inte.
