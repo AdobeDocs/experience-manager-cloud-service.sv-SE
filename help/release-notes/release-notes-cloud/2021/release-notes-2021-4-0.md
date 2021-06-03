@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: aeee895e4a4b959125d08091619988d0ffa09ace
+source-git-commit: 20bb4eaf8cdf0208b145087d27123c25c6293f9f
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,8 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 * När du uppdaterar och sparar metadatavärde i ett enkelradigt textfält tas värdena i listrutan bort, även om redigeringar är inaktiverade i listrutan. (CQ-4317077)
 
 * Du kan använda ellips som en anteckning för att granska resurser. När en liten ellips används överlappar ellipsen numret på anteckningen i utskriftsversionen. (CQ-4316792)
+
+* Alternativet Snabb publicering visas inte när en resurs har valts från sökresultatet efter att ha sökt efter den. (CQ-4317748)
 
 ## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
