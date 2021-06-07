@@ -2,9 +2,9 @@
 title: SDK för AEM as a Cloud Service
 description: Översikt över AEM som Cloud Service Software Development Kit
 exl-id: 06f3d5ee-440e-4cc5-877a-5038f9bd44c6
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1175'
 ht-degree: 1%
 
 ---
@@ -83,7 +83,7 @@ Om det finns innehåll som ska installeras med varje ny AEM snabbstartversion, i
 
 Rekommendationen är att uppdatera SDK ofta (t.ex. varannan vecka) och ta bort hela lokala tillstånd varje dag för att inte vara beroende av tillståndskänsliga data i programmet.
 
-Om du är beroende av CryptoSupport ([antingen genom att konfigurera inloggningsuppgifterna för Cloudservices eller SMTP Mail-tjänsten i AEM eller genom att använda CryptoSupport API i ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/adobe/granite/crypto/CryptoSupport.html)), krypteras de krypterade egenskaperna av en nyckel som genereras automatiskt första gången en AEM startas. Molnkonfigurationen tar hand om automatisk återanvändning av den miljöspecifika CryptoKey, men du måste injicera kryptonyckeln i den lokala utvecklingsmiljön.
+Om du är beroende av CryptoSupport ([antingen genom att konfigurera inloggningsuppgifterna för Cloudservices eller SMTP Mail-tjänsten i AEM eller genom att använda CryptoSupport API i ditt program](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/adobe/granite/crypto/CryptoSupport.html)), krypteras de krypterade egenskaperna av en nyckel som genereras automatiskt första gången en AEM startas. Molnkonfigurationen tar hand om automatisk återanvändning av den miljöspecifika CryptoKey, men du måste injicera kryptonyckeln i den lokala utvecklingsmiljön.
 
 Som standard är AEM konfigurerat för att lagra nyckeldata i en mapps datamapp, men för att underlätta återanvändning under utvecklingen kan AEM initieras vid första starten med &quot;`-Dcom.adobe.granite.crypto.file.disable=true`&quot;. Detta genererar krypteringsdata på `/etc/key`.
 
