@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med video i Dynamic Media.
 feature: Videoprofiler
 role: Business Practitioner
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 94ee4dde39a59dff0b351a36dacf66d9f4b22872
 workflow-type: tm+mt
-source-wordcount: '9098'
+source-wordcount: '9094'
 ht-degree: 6%
 
 ---
@@ -499,7 +499,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
 1. Tryck på **[!UICONTROL What credentials do I need?]**
 1. I steg 2 på sidan **[!UICONTROL Add credentials to your project]** anger du ett unikt namn i fältet Namn under rubriken **[!UICONTROL Create an OAuth 2.0 client ID]**. Du kan också använda standardnamnet som anges av Google.
-1. Under rubriken **[!UICONTROL Authorized JavaScript™ origins]** anger du följande sökväg i textfältet, ersätter din egen domän och portnummer i sökvägen och trycker sedan på **[!UICONTROL Enter]** för att lägga till sökvägen i listan:
+1. Under rubriken **[!UICONTROL Authorized JavaScript origins]** anger du följande sökväg i textfältet, ersätter din egen domän och portnummer i sökvägen och trycker sedan på **[!UICONTROL Enter]** för att lägga till sökvägen i listan:
 
    `https://<servername.domain>:<port_number>`
 
@@ -545,7 +545,7 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 
 >[!CAUTION]
 >
->Kontrollera att du redan har konfigurerat en eller flera kanaler i YouTube *innan* du lägger till kanaler under YouTube Settings i Experience Manager (se [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem) nedan). Om du misslyckas med kanalkonfigurationen får du ingen varning om att det inte finns några befintliga kanaler. Google-verifiering sker dock fortfarande när du lägger till en kanal, men det finns inget alternativ för att välja vilken kanal videon skickas till.
+>Kontrollera att du redan har konfigurerat en eller flera kanaler i YouTube *innan* du lägger till kanaler under YouTube Settings i Experience Manager (se [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem) nedan). Om du inte gör kanalinställningarna får du ingen varning om att det inte finns några befintliga kanaler. Google-verifiering sker dock fortfarande när du lägger till en kanal, men det finns inget alternativ för att välja vilken kanal videon skickas till.
 
 **Så här skapar du en YouTube-kanal:**
 
@@ -555,7 +555,7 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 1. Tryck på **[!UICONTROL Create a new channel]** på sidan Kanaler.
 1. På sidan Varumärkeskonto anger du ett företagsnamn eller ett annat kanalnamn som du väljer där du vill publicera videoresurserna i fältet Märkeskontonamn. Klicka sedan på **[!UICONTROL Create]**.
 
-   Kom ihåg namnet som du anger här; Du måste ange den igen när du måste konfigurera YouTube i Experience Manager.
+   Kom ihåg namnet som du anger här; Du måste ange det igen när du måste konfigurera YouTube i Experience Manager.
 
 1. (Valfritt) Lägg till fler kanaler om det behövs.
 
@@ -607,7 +607,7 @@ Lämna sidan Skapa YouTube-konfiguration öppen; du återgår till det om en stu
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
 1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
 
-   Nu ska du konfigurera YouTube-kanaler i Experience Manager.
+   Konfigurera nu YouTube-kanaler i Experience Manager.
 
 1. Tryck på **[!UICONTROL Add Channel]**.
 1. I fältet Kanalnamn anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
@@ -623,7 +623,7 @@ Lämna sidan Skapa YouTube-konfiguration öppen; du återgår till det om en stu
 
 1. Tryck på **[!UICONTROL Allow]**.
 
-   Du kommer nu att konfigurera taggar för publicering.
+   Konfigurera taggar för publicering.
 
 1. **[!UICONTROL Setting up tags for publishing]** - Tryck på pennikonen på Cloud Services > YouTube för att redigera listan med taggar som du vill använda.
 1. Om du vill visa en lista med tillgängliga taggar i Experience Manager trycker du på ikonen för nedrullningsbar lista (cirkumflex upp och ned).
@@ -653,7 +653,7 @@ Lämna dialogrutan YouTube Kontoinställning öppen; du återgår till det om en
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
 1. Tryck på **[!UICONTROL OK]**.
 
-   Nu ska du konfigurera YouTube-kanaler i Experience Manager.
+   Konfigurera nu YouTube-kanaler i Experience Manager.
 
 1. Till höger om **[!UICONTROL Available Channels]** trycker du på **+** (plustecknet).
 1. I dialogrutan YouTube-kanalinställningar, i fältet Titel, anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
@@ -669,7 +669,7 @@ Lämna dialogrutan YouTube Kontoinställning öppen; du återgår till det om en
 
 1. Tryck på **[!UICONTROL Allow]**.
 
-   Du kommer nu att konfigurera taggar för publicering.
+   Konfigurera taggar för publicering.
 
 1. **[!UICONTROL Setting up tags for publishing]** - Tryck på pennikonen på Cloud Services > YouTube för att redigera listan med taggar som du vill använda.
 1. Om du vill visa en lista med tillgängliga taggar i Experience Manager trycker du på ikonen för nedrullningsbar lista (cirkumflex upp och ned).
@@ -1057,7 +1057,7 @@ Bildtext ger också bättre tillgänglighet genom att använda undertexter för 
 >[!NOTE]
 Den videospelare som du använder måste ha stöd för visning av bildtexter.
 
-Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript™ Object Notation). Den här konverteringen innebär att du kan bädda in JSON-texten på en webbsida som en dold men fullständig utskrift av videon. Sökmotorer kan sedan crawla/indexera innehållet för att göra videoklippen lättare att hitta och ge kunderna mer information om videoinnehållet.
+Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript Object Notation). Den här konverteringen innebär att du kan bädda in JSON-texten på en webbsida som en dold men fullständig utskrift av videon. Sökmotorer kan sedan crawla/indexera innehållet för att göra videoklippen lättare att hitta och ge kunderna mer information om videoinnehållet.
 
 Mer information om hur du använder JSON-funktionen i en URL finns i [Servera statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api).
 
