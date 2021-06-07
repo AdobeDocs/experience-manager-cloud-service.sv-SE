@@ -5,7 +5,7 @@ contentOwner: AG
 feature: API:er,Resurser HTTP API
 role: Developer,Architect,Administrator
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: 9d0fbffa0f66deb230a85fa8d09f9f3be45db3f8
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 1%
@@ -203,13 +203,11 @@ Kunder som uppgraderar från tidigare versioner av [!DNL Experience Manager] kan
 
 Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller så är support inte tillgänglig:
 
-* `com.day.cq.dam.core.impl.process.DamMetadataWritebackWorkflowCompletedProcess`
 * `com.day.cq.dam.core.process.DeleteImagePreviewProcess`
 * `com.day.cq.dam.s7dam.common.process.DMEncodeVideoWorkflowCompletedProcess`
 * `com.day.cq.dam.core.process.GateKeeperProcess`
 * `com.day.cq.dam.core.process.AssetOffloadingProcess`
 * `com.day.cq.dam.core.process.MetadataProcessorProcess`
-* `com.day.cq.dam.core.process.XMPWritebackProcess`
 * `com.adobe.cq.dam.dm.process.workflow.DMImageProcess`
 * `com.day.cq.dam.s7dam.common.process.S7VideoThumbnailProcess`
 * `com.day.cq.dam.scene7.impl.process.Scene7UploadProcess`
