@@ -2,9 +2,9 @@
 title: Predikatreferens för Query Builder
 description: Predikatreferens för Query Builder API.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '2219'
 ht-degree: 1%
 
 ---
@@ -201,7 +201,7 @@ Det stöder facet-extrahering och erbjuder två buffertar för huvud- och delres
 
 ### medlemOf {#memberof}
 
-Det här predikatet hittar objekt som är medlemmar i en specifik [sling-resurssamling](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
+Det här predikatet hittar objekt som är medlemmar i en specifik [sling-resurssamling](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
 
 Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
 
