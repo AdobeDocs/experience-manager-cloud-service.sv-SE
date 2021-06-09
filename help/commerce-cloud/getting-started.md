@@ -8,7 +8,7 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: de756a469f2be7b4f93d647b500cd4e8dc046342
 workflow-type: tm+mt
 source-wordcount: '1065'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/
 
    Mer information finns i [CLI-dokument](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid).
 
-   Slutpunktens URL för Commerce GraphQL måste peka på e-handelns GraphQl-tjänst och använda en säker HTTPS-anslutning. Till exempel: `https://demo.magentosite.cloud/graphql`.
+   Slutpunktens URL för Commerce GraphQL måste peka på e-handelns GraphQl-tjänst och använda en säker HTTPS-anslutning. Till exempel: `https://<yourmagentosystem>/graphql`.
 
 4. Aktivera mellanlagrade katalogfunktioner som kräver autentisering (valfritt)
 
