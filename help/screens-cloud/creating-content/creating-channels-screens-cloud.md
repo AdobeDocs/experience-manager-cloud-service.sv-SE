@@ -4,7 +4,7 @@ description: På den här sidan beskrivs hur du skapar och hanterar kanaler på 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 46d1fcd548ca304563f8a0ba0410be053bcccee8
+source-git-commit: 49b7af411e26f0f56a159e288c5aa12c51b81a19
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -33,7 +33,11 @@ Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler
 Följ stegen nedan för att skapa en ny sekvenskanal i Skärmar som en Cloud Service:
 
 1. Navigera till Screens Content Provider.
-1. Navigera till ditt AEM Screens-projekt, till exempel SanJoseCafe.
+
+1. Navigera till ditt AEM Screens-projekt, till exempel *FirstDigitalExperience*.
+
+   ![](/help/screens-cloud/assets/create-content/create-channel1.png)
+
 1. Välj mappen **Kanaler** i ditt projekt, till exempel SanJoseCafe —> Kanaler.
 1. Klicka på **Skapa** i åtgärdsfältet.
 1. Välj mallen, till exempel **Sekvenskanal** i guiden **Skapa** och klicka på **Nästa**.
