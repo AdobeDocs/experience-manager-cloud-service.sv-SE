@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: b6b1e5a1f3e16d7c9ddffb27ca8f3da039832787
+source-git-commit: 226911867b7bbed81e548ebd353dd2afce41b057
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1642'
 ht-degree: 3%
 
 ---
@@ -89,9 +89,7 @@ Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmil
 
 1. **AEM version**: Miljön måste vara i AEM version  `2021.5.5343.20210542T070738Z` eller senare. Kontrollera att en uppdateringsprocess har körts i miljön för att slutföra detta.
 
-1. **Standardlås** för IP-Tillåtelselista: När förhandsvisningstjänsten skapas används en IP-Tillåtelselista som standard, märkt  `Preview Default [Env ID]`, enligt bilden nedan.
-
-   ![](/help/implementing/cloud-manager/assets/ip-allow-list/ip-allow-list-preview.png)
+1. **Standardlås** för IP-Tillåtelselista: När förhandsvisningstjänsten skapas används en standard-IP-Tillåtelselista, märkt  `Preview Default [Env ID]`.
 
    >[!NOTE]
    >När du skapar programmet för första gången måste du aktivt ta bort det förinställda IP-Tillåtelselista från förhandsgranskningstjänsten i miljön för att kunna aktivera åtkomst.
