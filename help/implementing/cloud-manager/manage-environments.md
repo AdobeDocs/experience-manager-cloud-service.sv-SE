@@ -2,7 +2,7 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 0a0bb01dfc2786edc4ebd331ddad44b12ca64fa2
+source-git-commit: fd142b6814e73d85a4239488bda11a662f33d9cf
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 3%
@@ -91,22 +91,22 @@ Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmil
 
 1. **Standardlås** för IP-Tillåtelselista: När du skapar programmet för första gången måste du aktivt ta bort det förinställda IP-Tillåtelselista från förhandsgranskningstjänsten i miljön för att kunna aktivera åtkomst.
 
+   En användare med nödvändig behörighet måste göra något av följande för att *låsa upp* åtkomst till förhandsgranskningstjänsten och ge önskad åtkomst:
+
+   1. Skapa ett lämpligt IP-Tillåtelselista och använd det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten.
+
+      ELLER,
+
+   1. Använd arbetsflödet för uppdatering av IP Tillåtelselista för att ta bort standard-IP och lägga till IP:n efter behov. Mer information finns i [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)om du vill veta mer.
+
+      >[!NOTE]
+      >Ovanstående steg måste utföras innan du kan dela URL:en för förhandsgranskningstjänsten med någon av dina team för att säkerställa att rätt medlemmar i ditt team kan komma åt URL:en för förhandsgranskningen.
+
+      När åtkomsten till förhandsgranskningstjänsten har låsts upp visas inte längre låsikonen, vilket visas nedan.
+
+      ![](/help/implementing/cloud-manager/assets/preview-service1.png)
+
 1. **Publicera innehåll för förhandsgranskning**: Du kan publicera innehåll i förhandsgranskningstjänsten med hjälp av gränssnittet Hantera publikation i AEM. Mer information finns i [Förhandsgranska innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/previewing-content.html?lang=en).
-
-En användare med nödvändig behörighet måste göra något av följande för att *låsa upp* åtkomst till förhandsgranskningstjänsten och ge önskad åtkomst:
-
-1. Skapa ett lämpligt IP-Tillåtelselista och använd det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten.
-
-   ELLER,
-
-1. Använd arbetsflödet för uppdatering av IP Tillåtelselista för att ta bort standard-IP och lägga till IP:n efter behov. Mer information finns i [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)om du vill veta mer.
-
-   >[!NOTE]
-   >Ovanstående steg måste utföras innan du kan dela URL:en för förhandsgranskningstjänsten med någon av dina team för att säkerställa att rätt medlemmar i ditt team kan komma åt URL:en för förhandsgranskningen.
-
-   När åtkomsten till förhandsgranskningstjänsten har låsts upp visas inte längre låsikonen, vilket visas nedan.
-
-   ![](/help/implementing/cloud-manager/assets/preview-service1.png)
 
 ## Uppdaterar miljön {#updating-dev-environment}
 
