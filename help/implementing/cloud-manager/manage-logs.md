@@ -2,22 +2,24 @@
 title: Hantera loggar - Cloud Service
 description: Hantera loggar - Cloud Service
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: 2411c2d1472abaa2af7b2a71938d753bb98db95c
+source-git-commit: 8a70a343be8a6843436f1df26adae5b1935ad4c3
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '275'
 ht-degree: 13%
 
 ---
 
 # Komma åt och hantera loggar {#manage-logs}
 
-Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet.  Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
+Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet. Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
-Dessa filer kan hämtas via användargränssnittet, antingen från sidan **Översikt**:
+## Laddar ned loggar {#download-logs}
+
+Dessa filer kan hämtas via användargränssnittet, antingen från **Environmental**-kortet från sidan **Översikt**:
 
 ![](assets/download-logs1.png)
 
-Eller sidan **Environment**:
+Eller från sidan Miljöinformation:
 
 ![](assets/download-logs.png)
 
@@ -28,13 +30,13 @@ Eller sidan **Environment**:
 
 ## Hämtar loggar för förhandsgranskningstjänsten {#download-preview-service}
 
-Användaren kan hämta loggar för förhandsgranskningstjänsten
+Följ stegen nedan för att hämta loggar för förhandsgranskningstjänsten
 
 1. Navigera till **Miljökort** från sidan **Översikt** i Cloud Manager.
 
-1. Välj hämtningsloggar i ... -menyn.
+1. Välj **Hämta loggar** från **..**-menyn.
 
-1. Välj **Förhandsgranska** eller **Förhandsgranska dispatcher** i listrutan med alternativen. Klicka sedan på hämtningsikonen.
+1. I listrutan **Service** väljer du **Förhandsgranska** eller **Förhandsgranska dispatcher**, följt av att klicka på nedladdningsikonen.
 
    >[!NOTE]
    >Den här åtgärden kan även utföras från sidan med miljöinformation.
