@@ -1,14 +1,13 @@
 ---
 title: Hantera loggar - Cloud Service
 description: Hantera loggar - Cloud Service
-translation-type: tm+mt
-source-git-commit: b67bafd9edb06a6d333e1a5bde0687994c30ea81
+exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
+source-git-commit: 2411c2d1472abaa2af7b2a71938d753bb98db95c
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 17%
+source-wordcount: '264'
+ht-degree: 13%
 
 ---
-
 
 # Komma åt och hantera loggar {#manage-logs}
 
@@ -26,6 +25,21 @@ Eller sidan **Environment**:
 >Oavsett var den öppnas visas samma dialogruta så att du kan hämta en enskild loggfil.
 
 ![](assets/download-logs2.png)
+
+## Hämtar loggar för förhandsgranskningstjänsten {#download-preview-service}
+
+Användaren kan hämta loggar för förhandsgranskningstjänsten
+
+1. Navigera till **Miljökort** från sidan **Översikt** i Cloud Manager.
+
+1. Välj hämtningsloggar i ... -menyn.
+
+1. Välj **Förhandsgranska** eller **Förhandsgranska dispatcher** i listrutan med alternativen. Klicka sedan på hämtningsikonen.
+
+   >[!NOTE]
+   >Den här åtgärden kan även utföras från sidan med miljöinformation.
+
+   ![](assets/download-preview.png)
 
 
 ## Loggar via API {#logs-through-api}
@@ -72,7 +86,7 @@ Environment Id Service    Name
 
 ### Ytterligare resurser {#resources}
 
-Mer information om API:t för Cloud Manager och Adobe I/O CLI finns i följande resurser:
+Mer information om API:t för Cloud Manager och CLI för Adobe I/O finns i följande resurser:
 
 * [API-dokumentation för Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
 * [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)
