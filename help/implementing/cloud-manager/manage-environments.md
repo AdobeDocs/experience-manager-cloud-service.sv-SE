@@ -2,7 +2,7 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: fd142b6814e73d85a4239488bda11a662f33d9cf
+source-git-commit: c4e788527ab0be8b54f9a0baed2e4e2677129898
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 3%
@@ -93,11 +93,11 @@ Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmil
 
    En användare med nödvändig behörighet måste göra något av följande för att *låsa upp* åtkomst till förhandsgranskningstjänsten och ge önskad åtkomst:
 
-   1. Skapa ett lämpligt IP-Tillåtelselista och använd det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten.
+   * Skapa ett lämpligt IP-Tillåtelselista och använd det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten.
 
-      ELLER,
+      *ELLER*,
 
-   1. Använd arbetsflödet för uppdatering av IP Tillåtelselista för att ta bort standard-IP och lägga till IP:n efter behov. Mer information finns i [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)om du vill veta mer.
+   * Använd arbetsflödet för uppdatering av IP Tillåtelselista för att ta bort standard-IP och lägga till IP:n efter behov. Mer information finns i [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md).
 
       >[!NOTE]
       >Ovanstående steg måste utföras innan du kan dela URL:en för förhandsgranskningstjänsten med någon av dina team för att säkerställa att rätt medlemmar i ditt team kan komma åt URL:en för förhandsgranskningen.
