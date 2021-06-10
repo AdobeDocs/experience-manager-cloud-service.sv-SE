@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 7fc99376522238f74eb24efd93f079c03f854aa1
+source-git-commit: f5ed5561ed19938b4c647666ff7a6a470d307cf7
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2322'
 ht-degree: 1%
 
 ---
@@ -214,6 +214,10 @@ Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att va
 ## Skickar e-post {#sending-email}
 
 AEM som en Cloud Service kräver att utgående e-post krypteras. Avsnitten nedan beskriver hur du begär, konfigurerar och skickar e-post.
+
+>[!NOTE]
+>
+>E-posttjänsten kan konfigureras med OAuth2-stöd. Mer information finns i [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md).
 
 ### Begär åtkomst {#requesting-access}
 
