@@ -2,56 +2,58 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
 feature: Versionsinformation
-source-git-commit: 13d45a02169fc99be60d73dde91dbc8c2ce03ef8
+source-git-commit: d30f81b8d12a4136d96cdfd1fb8c3e9927c015d1
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.5.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.6.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.5.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.6.0.
 
 >[!NOTE]
 >Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager som en Cloud Service klickar du [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.5.0 är 6 maj 2021.
-Nästa version är planerad till 10 juni 2021.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.6.0 är 10 juni 2021.
+Nästa version är planerad till 15 juli 2021.
 
 ### Nyheter {#what-is-new}
 
-* Kvalitetsregeln PackageOverlaps identifierar nu fall där samma paket har distribuerats flera gånger, dvs. på flera inbäddade platser, i samma distribuerade paketuppsättning.
+* Förhandsgranskningstjänsten kommer att distribueras rullande till alla program. Kunder meddelas i produkten när deras program är aktiverat för förhandsgranskningstjänsten. Mer information finns i [Åtkomst till förhandsgranskningstjänsten](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
 
-* Databasslutpunkten i det offentliga API:t innehåller nu Git-URL:en.
+* Maven Dependencies som laddas ned under byggfasen cachelagras nu mellan pipeline-körningar. Den här funktionen kommer att aktiveras för kunderna under de kommande veckorna.
 
-* Distributionsloggen som hämtas av en Cloud Manager-användare blir mer insiktsfull och innehåller nu information om fel och lyckade scenarier.
+* Namnet på programmet kan nu redigeras via dialogrutan Redigera program.
 
-* Intermittenta fel som uppstod när koden skulle skickas till Adobe Git har nu åtgärdats.
+* Det standardförgreningsnamn som används både när projektet skapas och i det förvalda push-kommandot via Hantera Git-arbetsflöden har ändrats till `main`.
 
-* Tillägget Commerce kan nu användas för sandlådeprogram under arbetsflödet för redigeringsprogram.
+* Redigera programupplevelser i användargränssnittet har uppdaterats.
 
-* *Redigeringsprogrammet* har uppdaterats.
+* Kvalitetsregeln `ImmutableMutableMixCheck` har uppdaterats för att klassificera `/oak:index`-noder som oföränderliga.
 
-* Tabellen Domännamn på sidan Miljöinformation visar upp till 250 domännamn via sidnumrering.
+* Kvalitetsreglerna `CQBP-84` och `CQBP-84--dependencies` har konsoliderats till en enda regel.
 
-* Fliken **Lösningar och tillägg** i **arbetsflödena Lägg till program** och **Redigera program** visar lösningen, även om bara en lösning är tillgänglig för programmet.
+* För att undvika problem har segmentraderna Publicera AEM och Publicera dispatcher på sidan Miljöinformation konsoliderats.
 
-* Felmeddelandet i byggstegsloggen när bygget inte skapade några distribuerade innehållspaket var oklart.
+* En ny regel för kodkvalitet har lagts till för att validera strukturen för `damAssetLucene`-index. Mer information finns i [Anpassade DAM-resursindex Luceneak-index](/help/implementing/cloud-manager/custom-code-quality-rules.md#oakpal-damAssetLucene-sanity-check).
+
+* Sidan med miljöinformation visar nu flera domännamn för tjänsterna Publicera och Förhandsgranska (beroende på vad som är tillämpligt). Mer information finns i [Miljöinformation](/help/implementing/cloud-manager/manage-environments.md#viewing-environment).
 
 ### Felkorrigeringar {#bug-fixes}
 
-* Ibland kan användaren se en grön&quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
+* JCR-noddefinitioner som innehåller en ny rad efter att rotelementnamnet inte tolkades korrekt.
 
-* I stället för att ta bort &quot;borttagna&quot;-variabler skulle API:t för pipelines-variablerna bara markera dem med statusen **DELETED**.
+* API för listdatabaser filtrerar inte borttagna databaser.
 
-* Vissa problem med saklig kodkvalitet påverkade felaktigt tillförlitlighetsgraderingen.
+* Ett felaktigt felmeddelande visades när ett ogiltigt värde angavs för schemasteget.
 
-* Eftersom jokerteckendomäner inte stöds tillåter inte gränssnittet användaren att skicka in en jokerteckendomän.
+* Ibland kan användaren se en grön *aktiv*-status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
 
-* När en pipeline-körning startades mellan midnatt och kl. 1 UTC garanterades inte artefaktversionen som genererades av Cloud Manager att vara större än en version som skapades föregående dag.
+* Vissa programredigeringssekvenser kan leda till att produktionsflödet inte kan skapas eller redigeras.
 
-* När projektet med exempelkoden har skapats visas Hantera Git som en länk från hjältekortet på sidan Översikt när sandlådeprogrammet har konfigurerats.
+* Vissa programredigeringssekvenser kan resultera i att sidan **Översikt** visar ett missvisande meddelande om att köra programkonfigurationen igen.
