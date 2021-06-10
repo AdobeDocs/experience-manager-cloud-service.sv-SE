@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lägga till ett anpassat domännamn
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: e8848a006a28e87a622779ae62bc43c159b2b20c
+source-git-commit: 1eb9423b0128c952bc16cf0b8dff95b0e86964a0
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ En användare måste vara en Business Owner eller Deployment Manager för att ku
 
 * AEM som en Cloud Service saknar stöd för jokerteckendomäner.
 
-* Varje Cloud Manager-miljö har plats för upp till 100 anpassade domäner per miljö.
+* Varje Cloud Manager-miljö har plats för upp till 250 anpassade domäner per miljö.
 
 * Samma domännamn kan inte användas i mer än en miljö.
 
@@ -39,7 +39,7 @@ Följ stegen nedan för att lägga till ett anpassat domännamn från sidan Dom�
 
 1. Klicka på knappen **Lägg till domän** för att öppna dialogrutan **Lägg till domännamn**.
 
-   ![](/help/implementing/cloud-manager/assets/cdn/cdn-create2.png)
+   ![](/help/implementing/cloud-manager/assets/cdn/add-cdn1.png)
 
 1. Ange det anpassade domännamnet i **Domännamn**.
 
@@ -47,6 +47,11 @@ Följ stegen nedan för att lägga till ett anpassat domännamn från sidan Dom�
    >Du bör inte inkludera `http://`, `https://` eller mellanslag när du anger i domänen.
 
 1. Välj den **miljö** vars publiceringstjänst ska kopplas till domännamnet.
+
+1. Välj tjänsten antingen som **Publicera** eller **Förhandsgranska**.
+
+   >[!NOTE]
+   >Anpassade domännamn stöds nu i Cloud Manager för webbplatser-program för både publicerings- och förhandsgranskningstjänster. Varje Cloud Manager-miljö har plats för upp till 250 anpassade domäner per miljö. Mer information om förhandsgranskningstjänsten finns i [Förhandsgranskningstjänst](/help/implementing/cloud-manager/manage-environments.md#preview-service).
 
 1. Välj **Domän-SSL-certifikat** i listrutan och välj **Fortsätt**.
 
