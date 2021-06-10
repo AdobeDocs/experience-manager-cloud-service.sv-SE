@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 226911867b7bbed81e548ebd353dd2afce41b057
+source-git-commit: 7e4d75d90b3f6fad024304781225dfcef6df0e2b
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1652'
 ht-degree: 3%
 
 ---
@@ -96,7 +96,7 @@ Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmil
 
    En användare med nödvändig behörighet måste göra något av följande för att *låsa upp* åtkomst till förhandsgranskningstjänsten och ge önskad åtkomst:
 
-   * Skapa ett lämpligt IP-Tillåtelselista och tillämpa det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten.
+   * Skapa ett lämpligt IP-Tillåtelselista och tillämpa det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten. Mer information finns i [Avinstallera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md).
 
       *ELLER*,
 
