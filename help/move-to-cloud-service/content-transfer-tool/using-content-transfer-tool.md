@@ -2,22 +2,16 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 0d664997a66d790d5662e10ac0afd0dca7cc7fac
 workflow-type: tm+mt
-source-wordcount: '2829'
-ht-degree: 41%
+source-wordcount: '2785'
+ht-degree: 42%
 
 ---
 
 # Använda Content Transfer Tool {#using-content-transfer-tool}
 
 ## Viktigt att tänka på när du använder Content Transfer Tool {#pre-reqs}
-
->[!CONTEXTUALHELP]
->id="aemcloud_ctt_prereqs"
->title="Viktigt att tänka på när du använder verktyget Innehållsöverföring"
->abstract="Granska viktiga aspekter av att använda verktyget för innehållsöverföring, inklusive Java- och AEM-versioner, datastortyper som stöds, användargrupper med mera."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en#best-practices" text="God praxis och riktlinjer"
 
 Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder Content Transfer Tool:
 
