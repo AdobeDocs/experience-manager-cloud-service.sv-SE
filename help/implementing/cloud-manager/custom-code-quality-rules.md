@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet - Cloud Services
 description: Anpassade regler för kodkvalitet - Cloud Services
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: bd9cb35016b91e247f14a851ad195a48ac30fda0
 workflow-type: tm+mt
-source-wordcount: '3298'
+source-wordcount: '3403'
 ht-degree: 4%
 
 ---
@@ -181,32 +181,6 @@ public void orDoThis() {
   }
  
   in.close();
-}
-```
-
-### Produkt-API:er som annoterats med @ProviderType ska inte implementeras eller utökas av kunder {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
-
-**Nyckel**: CQBP-84, CQBP-84-beroenden
-
-**Typ**: Fel
-
-**Allvarlighetsgrad**: Kritisk
-
-**Sedan**: Version 2018.7.0
-
-API:t för AEM innehåller Java-gränssnitt och -klasser som bara är avsedda att användas, inte implementeras, av anpassad kod. Gränssnittet *com.day.cq.wcm.api.Page* är till exempel utformat att implementeras av ***enbart AEM***.
-
-När nya metoder läggs till i dessa gränssnitt påverkar inte dessa ytterligare metoder befintlig kod som använder dessa gränssnitt, och därför anses tillägg av nya metoder i dessa gränssnitt vara bakåtkompatibelt. Men om anpassad kod ***implementerar*** ett av dessa gränssnitt har den anpassade koden skapat en risk vad gäller bakåtkompatibilitet för kunden.
-
-Gränssnitt (och klasser) som endast är avsedda att implementeras av AEM kommenteras med *org.osgi.annotation.versioning.ProviderType* (eller, i vissa fall, en liknande äldre anteckning *Qute.bnd.annotation.ProviderType*). Den här regeln identifierar de fall där ett sådant gränssnitt implementeras (eller där en klass utökas) med anpassad kod.
-
-#### Icke-kompatibel kod {#non-compliant-code-3}
-
-```java
-import com.day.cq.wcm.api.Page;
-
-public class DontDoThis implements Page {
-// implementation here
 }
 ```
 
@@ -584,12 +558,85 @@ I många fall är dessa API:er föråldrade med Java-standardanteckningen *@Unde
 
 Det finns dock fall där ett API är inaktuellt i AEM men inte i andra sammanhang. Den här regeln identifierar den andra klassen.
 
+
 ## OakPAL-innehållsregler {#oakpal-rules}
 
 Nedan finns de OakPAL-kontroller som körs av Cloud Manager.
 
 >[!NOTE]
 >OakPAL är ett ramverk som utvecklats av en AEM partner (och vinnare av 2019 AEM Rockstar North America) som validerar innehållspaket med en fristående Oak-databas.
+
+### Produkt-API:er som annoterats med @ProviderType ska inte implementeras eller utökas av kunder {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+
+**Nyckel**: CQBP-84
+
+**Typ**: Fel
+
+**Allvarlighetsgrad**: Kritisk
+
+**Sedan**: Version 2018.7.0
+
+API:t för AEM innehåller Java-gränssnitt och -klasser som bara är avsedda att användas, inte implementeras, av anpassad kod. Gränssnittet *com.day.cq.wcm.api.Page* är till exempel utformat att implementeras av ***enbart AEM***.
+
+När nya metoder läggs till i dessa gränssnitt påverkar inte dessa ytterligare metoder befintlig kod som använder dessa gränssnitt, och därför anses tillägg av nya metoder i dessa gränssnitt vara bakåtkompatibelt. Men om anpassad kod ***implementerar*** ett av dessa gränssnitt har den anpassade koden skapat en risk vad gäller bakåtkompatibilitet för kunden.
+
+Gränssnitt (och klasser) som endast är avsedda att implementeras av AEM kommenteras med *org.osgi.annotation.versioning.ProviderType* (eller, i vissa fall, en liknande äldre anteckning *Qute.bnd.annotation.ProviderType*). Den här regeln identifierar de fall där ett sådant gränssnitt implementeras (eller där en klass utökas) med anpassad kod.
+
+#### Icke-kompatibel kod {#non-compliant-code-3}
+
+```java
+import com.day.cq.wcm.api.Page;
+
+public class DontDoThis implements Page {
+// implementation here
+}
+```
+
+### Luceneak-index för anpassade DAM-resurser är korrekt strukturerade {#oakpal-damAssetLucene-sanity-check}
+
+**Nyckel**: IndexDamAssetLucene
+
+**Typ**: Fel
+
+**Allvarlighetsgrad**: Blockera
+
+**Sedan**: 2021.6.0
+
+För att resurssökningen ska fungera korrekt i AEM Assets måste `damAssetLucene`-ekindexet följa en uppsättning riktlinjer. Den här regeln söker efter följande mönster specifikt efter index vars namn innehåller `damAssetLucene`:
+
+Namnet måste följa riktlinjerna för anpassning av indexdefinitioner som beskrivs här.
+
+* Namnet måste följa mönstret `damAssetLucene-<indexNumber>-custom-<customerVersionNumber>`.
+
+* Indexdefinitionen måste ha en flervärdesegenskap med namnet tags som innehåller värdet `visualSimilaritySearch`.
+
+* Indexdefinitionen måste ha en underordnad nod med namnet `tika` och den underordnade noden måste ha en underordnad nod med namnet config.xml.
+
+#### Icke-kompatibel kod {#non-compliant-code-damAssetLucene}
+
+```+ oak:index
+    + damAssetLucene-1-custom
+      - async: [async, nrt]
+      - evaluatePathRestrictions: true
+      - includedPaths: /content/dam
+      - reindex: false
+      - type: lucene
+```
+
+#### Kompatibel kod {#compliant-code-damAssetLucene}
+
+```+ oak:index
+    + damAssetLucene-1-custom-2
+      - async: [async, nrt]
+      - evaluatePathRestrictions: true
+      - includedPaths: /content/dam
+      - reindex: false
+      - reindexCount: -6952249853801250000
+      - tags: [visualSimilaritySearch]
+      - type: lucene
+      + tika
+        + config.xml
+```
 
 ### Kundpaket ska inte skapa eller ändra noder under /libs {#oakpal-customer-package}
 
