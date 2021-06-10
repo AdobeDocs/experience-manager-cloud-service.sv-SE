@@ -2,8 +2,7 @@
 title: Kodkvalitetstestning - Cloud Services
 description: Kodkvalitetstestning - Cloud Services
 exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
-translation-type: tm+mt
-source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
+source-git-commit: 64023bbdccd8d173b15e3984d0af5bb59a2c1447
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 1%
@@ -26,7 +25,7 @@ Mer information om olika typer av pipelines finns i [Konfigurera CI-CD-pipeline]
 I Kodkvalitetstestning skannas källkoden så att den uppfyller vissa kvalitetskriterier. För närvarande implementeras detta genom en kombination av SonarQube och granskning på innehållspaketnivå med hjälp av OakPAL. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa av de AEM specifika reglerna skapas baserat på bästa praxis från AEM och kallas [Anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
 
 >[!NOTE]
->Du kan hämta den fullständiga listan med regler [här](/help/implementing/cloud-manager/assets/CodeQuality-rules-CS.xlsx).
+>Du kan hämta den fullständiga listan med regler [här](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx).
 
 **Treskiktsgrind**
 
