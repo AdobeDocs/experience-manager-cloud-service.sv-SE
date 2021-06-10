@@ -2,7 +2,7 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 11d12e43de7a71a59f565379e95ba57b13180fed
+source-git-commit: ed7436ed0dec228898cfe6795c698e98499f94c9
 workflow-type: tm+mt
 source-wordcount: '1652'
 ht-degree: 3%
@@ -87,7 +87,7 @@ Förhandsgranskningstjänsten ger varje AEM en extra tjänst för förhandsgrans
 
 Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmiljön och är tillgänglig för allmänheten. Några punkter innan du kan se och använda förhandsgranskningstjänsten:
 
-1. **AEM version**: Miljön måste vara i AEM version  `2021.5.5343.20210542T070738Z` eller senare. Kontrollera att en uppdateringsprocess har körts i miljön för att slutföra detta.
+1. **AEM version**: Miljön måste vara i AEM version  `2021.05.5368.20210529T101701Z` eller senare. Kontrollera att en uppdateringsprocess har körts i miljön för att slutföra detta.
 
 1. **Standardlås** för IP-Tillåtelselista: När förhandsvisningstjänsten skapas används en standard-IP-Tillåtelselista, märkt  `Preview Default [Env ID]`.
 
