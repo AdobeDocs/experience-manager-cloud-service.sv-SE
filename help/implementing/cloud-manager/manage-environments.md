@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: f9dbf2983bb67d60b0f89199bd8da938423b2e2c
+source-git-commit: 0a0bb01dfc2786edc4ebd331ddad44b12ca64fa2
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1623'
 ht-degree: 3%
 
 ---
@@ -104,7 +104,9 @@ En användare med nödvändig behörighet måste göra något av följande för 
    >[!NOTE]
    >Ovanstående steg måste utföras innan du kan dela URL:en för förhandsgranskningstjänsten med någon av dina team för att säkerställa att rätt medlemmar i ditt team kan komma åt URL:en för förhandsgranskningen.
 
-   När åtkomsten till förhandsgranskningstjänsten har låsts upp visas inte längre låsikonen.
+   När åtkomsten till förhandsgranskningstjänsten har låsts upp visas inte längre låsikonen, vilket visas nedan.
+
+   ![](/help/implementing/cloud-manager/assets/preview-service1.png)
 
 ## Uppdaterar miljön {#updating-dev-environment}
 
