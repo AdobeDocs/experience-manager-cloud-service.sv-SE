@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 8e8764dd39e2bc664a577c863a04a7e4c5e99fd0
+source-git-commit: b6b1e5a1f3e16d7c9ddffb27ca8f3da039832787
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
@@ -89,11 +89,16 @@ Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmil
 
 1. **AEM version**: Miljön måste vara i AEM version  `2021.5.5343.20210542T070738Z` eller senare. Kontrollera att en uppdateringsprocess har körts i miljön för att slutföra detta.
 
-1. **Standardlås** för IP-Tillåtelselista: När du skapar programmet för första gången måste du aktivt ta bort det förinställda IP-Tillåtelselista från förhandsgranskningstjänsten i miljön för att kunna aktivera åtkomst.
+1. **Standardlås** för IP-Tillåtelselista: När förhandsvisningstjänsten skapas används en IP-Tillåtelselista som standard, märkt  `Preview Default [Env ID]`, enligt bilden nedan.
+
+   ![](/help/implementing/cloud-manager/assets/ip-allow-list/ip-allow-list-preview.png)
+
+   >[!NOTE]
+   >När du skapar programmet för första gången måste du aktivt ta bort det förinställda IP-Tillåtelselista från förhandsgranskningstjänsten i miljön för att kunna aktivera åtkomst.
 
    En användare med nödvändig behörighet måste göra något av följande för att *låsa upp* åtkomst till förhandsgranskningstjänsten och ge önskad åtkomst:
 
-   * Skapa ett lämpligt IP-Tillåtelselista och använd det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten.
+   * Skapa ett lämpligt IP-Tillåtelselista och tillämpa det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten.
 
       *ELLER*,
 
