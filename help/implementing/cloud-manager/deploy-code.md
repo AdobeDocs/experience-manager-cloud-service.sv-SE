@@ -2,10 +2,10 @@
 title: Distribuera koden - Cloud Services
 description: Distribuera koden - Cloud Services
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: 782035708467693ec7648b1fd701c329a0b5f7c8
+source-git-commit: 64023bbdccd8d173b15e3984d0af5bb59a2c1447
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 1%
+source-wordcount: '616'
+ht-degree: 2%
 
 ---
 
@@ -70,46 +70,7 @@ Mer information finns i [Understanding Experience Audit results](/help/implement
 
 ## Distributionsprocess {#deployment-process}
 
-I följande avsnitt beskrivs hur AEM- och dispatcherpaket distribueras i scenfasen och i produktionsfasen.
-
-Cloud Manager överför alla mål-/*.zip-filer som skapas i byggprocessen till en lagringsplats.  Artefakterna hämtas från den här platsen under pipelinens distributionsfaser.
-
-När Cloud Manager distribuerar till icke-produktionstopologier är målet att slutföra distributionen så snabbt som möjligt och artefakterna distribueras därför till alla noder samtidigt enligt följande:
-
-1. Cloud Manager avgör om varje artefakt är ett AEM- eller dispatcherpaket.
-1. Cloud Manager tar bort alla utskickare från belastningsutjämnaren för att isolera miljön under distributionen.
-
-   Om du inte konfigurerar något annat kan du hoppa över ändringar av belastningsutjämnare i Dev- och Stage-distributioner, d.v.s. koppla från och bifoga steg i både icke-produktionspipelines, dev-miljöer och produktionsflödet för scenmiljöer.
-
-   >[!NOTE]
-   >
-   >Den här funktionen förväntas främst användas av 1-1-1-kunder.
-
-1. Varje AEM-artefakt distribueras till varje AEM-instans via API:er för Package Manager, där paketberoenden avgör distributionsordningen.
-
-   Mer information om hur du kan använda paket för att installera nya funktioner, överföra innehåll mellan instanser och säkerhetskopiera databasinnehåll finns i Så här arbetar du med paket.
-
-   >[!NOTE]
-   >
-   >Alla AEM artefakter distribueras till både författaren och utgivaren. Körningslägena bör utnyttjas när nodspecifika konfigurationer krävs. Om du vill veta mer om hur du kan använda körningslägena för att justera AEM för ett visst ändamål, se Körningslägen.
-
-1. Dispatchartefakten distribueras till varje dispatcher enligt följande:
-
-   1. Aktuella konfigurationer säkerhetskopieras och kopieras till en temporär plats
-   1. Alla konfigurationer tas bort utom de oföränderliga filerna. Mer information finns i Hantera dina Dispatcher-konfigurationer. Detta rensar katalogerna för att säkerställa att inga överblivna filer lämnas kvar.
-   1. Artefakten extraheras till katalogen `httpd`.  Oändringsbara filer skrivs inte över. Alla ändringar du gör i oföränderliga filer i Git-databasen ignoreras vid distributionen.  Dessa filer är viktiga för AMS-dispatcherramverket och kan inte ändras.
-   1. Apache utför ett config-test. Om inga fel hittas läses tjänsten in igen. Om ett fel inträffar återställs konfigurationerna från en säkerhetskopia, tjänsten läses in igen och felet rapporteras tillbaka till Cloud Manager.
-   1. Varje sökväg som anges i pipeline-konfigurationen görs ogiltig eller töms från dispatchercachen.
-
-   >[!NOTE]
-   >
-   >Dispatcher-artefakten förväntas innehålla hela filuppsättningen.  Alla konfigurationsfiler för dispatcher måste finnas i Git-databasen. Om filer eller mappar saknas kommer distributionen att misslyckas.
-
-1. Efter den lyckade distributionen av alla AEM- och dispatcherpaket till alla noder läggs avsändarna tillbaka till belastningsutjämnaren och distributionen är klar.
-
-   >[!NOTE]
-   >
-   >Du kan hoppa över ändringar av belastningsutjämnaren i utveckling och scendistributioner, d.v.s. ta bort och bifoga steg i både icke-produktionspipelines, för utvecklarmiljöer och i produktionsflödet för scenmiljöer.
+Alla driftsättningar av Cloud Service följer en rullande process för att säkerställa noll driftavbrott. Mer information finns i [How Rolling Deployments Work](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#how-rolling-deployments-work).
 
 ### Distribution till produktionsfas {#deployment-production-phase}
 
