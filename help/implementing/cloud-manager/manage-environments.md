@@ -2,10 +2,10 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: f9dbf2983bb67d60b0f89199bd8da938423b2e2c
 workflow-type: tm+mt
-source-wordcount: '1264'
-ht-degree: 4%
+source-wordcount: '1620'
+ht-degree: 3%
 
 ---
 
@@ -61,7 +61,6 @@ En användare med nödvändig behörighet kan skapa följande miljötyper (inom 
    >[!NOTE]
    >Om du ännu inte har konfigurerat produktionsflödet för icke-produktion visas kortet där du kan skapa produktionsflödet på skärmen *Översikt*.
 
-
 ## Miljöinformation {#viewing-environment}
 
 Kortet **Environment** på sidan Översikt visar upp till tre miljöer.
@@ -76,8 +75,36 @@ Kortet **Environment** på sidan Översikt visar upp till tre miljöer.
 
 1. Välj någon av miljöerna i listan för att visa miljöinformationen.
 
-   ![](assets/environment-view-3.png)
+   >[!NOTE]
+   >Förhandsgranskningstjänsten kommer att distribueras rullande till alla program. Kunder meddelas i produkten när deras program är aktiverat för förhandsgranskningstjänsten. Mer information finns i avsnittet [Accessing Preview Service](#access-preview-service).
 
+   ![](assets/environ-preview1.png)
+
+
+### Åtkomst till förhandsgranskningstjänsten {#access-preview-service}
+
+Förhandsgranskningstjänsten ger varje AEM en extra tjänst för förhandsgranskning (publicering) som en Cloud Service via Cloud Manager.
+
+Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmiljön och är tillgänglig för allmänheten. Några punkter innan du kan se och använda förhandsgranskningstjänsten:
+
+1. **AEM version**: Miljön måste vara i AEM version  `2021.5.5343.20210542T070738Z` eller senare. Kontrollera att en uppdateringsprocess har körts i miljön för att slutföra detta.
+
+1. **Standardlås** för IP-Tillåtelselista: När du skapar programmet för första gången måste du aktivt ta bort det förinställda IP-Tillåtelselista från förhandsgranskningstjänsten i miljön för att kunna aktivera åtkomst.
+
+1. **Publicera innehåll för förhandsgranskning**: Du kan publicera innehåll i förhandsgranskningstjänsten med hjälp av gränssnittet Hantera publikation i AEM. Mer information finns i [Förhandsgranska innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/previewing-content.html?lang=en).
+
+En användare med nödvändig behörighet måste göra något av följande för att *låsa upp* åtkomst till förhandsgranskningstjänsten och ge önskad åtkomst:
+
+1. Skapa ett lämpligt IP-Tillåtelselista och använd det på förhandsgranskningstjänsten. Följ detta omedelbart genom att ta bort `Preview Default [Env ID] IP Allow List` från förhandsgranskningstjänsten.
+
+   ELLER,
+
+1. Använd arbetsflödet för uppdatering av IP Tillåtelselista för att ta bort standard-IP och lägga till IP:n efter behov. Mer information finns i [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)om du vill veta mer.
+
+   >[!NOTE]
+   >Ovanstående steg måste utföras innan du kan dela URL:en för förhandsgranskningstjänsten med någon av dina team för att säkerställa att rätt medlemmar i ditt team kan komma åt URL:en för förhandsgranskningen.
+
+   När åtkomsten till förhandsgranskningstjänsten har låsts upp visas inte längre låsikonen.
 
 ## Uppdaterar miljön {#updating-dev-environment}
 
@@ -145,9 +172,13 @@ Dessutom kan du logga in lokalt från sammanfattningssidan **Miljöer**.
 
 ![](assets/environ-login-locally-2.png)
 
+
 ## Hantera anpassade domännamn {#manage-cdn}
 
 Gå till informationssidan för **Miljöer** från sidan Miljösammanfattning.
+
+>[!NOTE]
+>Anpassade domännamn stöds nu i Cloud Manager för webbplatser-program för både publicerings- och förhandsgranskningstjänster. Varje Cloud Manager-miljö har plats för upp till 250 anpassade domäner per miljö.
 
 Följande åtgärder kan utföras på publiceringstjänsten för din miljö enligt beskrivningen nedan:
 
@@ -161,9 +192,13 @@ Följande åtgärder kan utföras på publiceringstjänsten för din miljö enli
 
 1. [Kontrollerar status för ett IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn)
 
+
 ## Hantera IP-Tillåtelselista {#manage-ip-allow-lists}
 
 Gå till sidan Miljöinformation från sidan Miljösammanfattning. Du kan utföra följande åtgärder på tjänsterna Publicera och/eller Författare för din miljö här.
+
+>[!NOTE]
+>Funktionen IP Tillåtelselista stöds nu i Cloud Manager för författar-, publicerings- och förhandsgranskningstjänster (finns i webbplatsprogram).
 
 ### Använda en IP-Tillåtelselista {#apply-ip-allow-list}
 
