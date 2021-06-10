@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 181cda0c3f4ec48262ccbe2743ba75bb0d213934
+source-git-commit: 3f579f6871da8e8b2fcea921e5abf57dfc14f5f8
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1660'
 ht-degree: 0%
 
 ---
@@ -122,12 +122,55 @@ Du kan skriva till formscsbeta@adobe.com och registrera dig för betaprogrammet.
 
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.5.0.
+I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.6.0 och 2021.5.0.
+
+## Releasedatum {#release-date-june-cm}
+
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.6.0 är 10 juni 2021.
+Nästa version är planerad till 15 juli 2021.
+
+### Nyheter {#what-is-new-junecm}
+
+* Förhandsgranskningstjänsten kommer att distribueras rullande till alla program. Kunder meddelas i produkten när deras program är aktiverat för förhandsgranskningstjänsten. Mer information finns i [Åtkomst till förhandsgranskningstjänsten](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
+
+* Maven Dependencies som laddas ned under byggfasen cachelagras nu mellan pipeline-körningar. Den här funktionen kommer att aktiveras för kunderna under de kommande veckorna.
+
+* Namnet på programmet kan nu redigeras via dialogrutan Redigera program.
+
+* Det standardförgreningsnamn som används både när projektet skapas och i det förvalda push-kommandot via Hantera Git-arbetsflöden har ändrats till `main`.
+
+* Redigera programupplevelser i användargränssnittet har uppdaterats.
+
+* Kvalitetsregeln `ImmutableMutableMixCheck` har uppdaterats för att klassificera `/oak:index`-noder som oföränderliga.
+
+* Kvalitetsreglerna `CQBP-84` och `CQBP-84--dependencies` har konsoliderats till en enda regel.
+
+* För att undvika problem har segmentraderna Publicera AEM och Publicera dispatcher på sidan Miljöinformation konsoliderats.
+
+   ![](/help/onboarding/release-notes-cloud-manager/assets/aem-dispatcher.png)
+
+* En ny regel för kodkvalitet har lagts till för att validera strukturen för `damAssetLucene`-index. Mer information finns i [Anpassade DAM-resursindex Luceneak-index](/help/implementing/cloud-manager/custom-code-quality-rules.md#oakpal-damAssetLucene-sanity-check).
+
+* Sidan med miljöinformation visar nu flera domännamn för tjänsterna Publicera och Förhandsgranska (beroende på vad som är tillämpligt). Mer information finns i [Miljöinformation](/help/implementing/cloud-manager/manage-environments.md#viewing-environment).
+
+### Felkorrigeringar {#bug-fixes-junecm}
+
+* JCR-noddefinitioner som innehåller en ny rad efter att rotelementnamnet inte tolkades korrekt.
+
+* API för listdatabaser filtrerar inte borttagna databaser.
+
+* Ett felaktigt felmeddelande visades när ett ogiltigt värde angavs för schemasteget.
+
+* Ibland kan användaren se en grön *aktiv*-status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
+
+* Vissa programredigeringssekvenser kan leda till att produktionsflödet inte kan skapas eller redigeras.
+
+* Vissa programredigeringssekvenser kan resultera i att sidan **Översikt** visar ett missvisande meddelande om att köra programkonfigurationen igen.
+
 
 ### Releasedatum {#release-date-cm-may}
 
 Releasedatum för Cloud Manager i AEM som Cloud Service 2021.5.0 är 6 maj 2021.
-Nästa version är planerad till 10 juni 2021.
 
 ### Nyheter {#what-is-new-may}
 
