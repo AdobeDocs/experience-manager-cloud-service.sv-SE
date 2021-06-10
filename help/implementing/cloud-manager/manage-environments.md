@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: c4e788527ab0be8b54f9a0baed2e4e2677129898
+source-git-commit: 8e8764dd39e2bc664a577c863a04a7e4c5e99fd0
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1626'
 ht-degree: 3%
 
 ---
@@ -102,7 +102,7 @@ Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmil
       >[!NOTE]
       >Ovanstående steg måste utföras innan du kan dela URL:en för förhandsgranskningstjänsten med någon av dina team för att säkerställa att rätt medlemmar i ditt team kan komma åt URL:en för förhandsgranskningen.
 
-      När åtkomsten till förhandsgranskningstjänsten har låsts upp visas inte längre låsikonen, vilket visas nedan.
+      När åtkomsten till förhandsvisningstjänsten har låsts upp visas inte längre låsikonen (som bilden nedan visar).
 
       ![](/help/implementing/cloud-manager/assets/preview-service1.png)
 
