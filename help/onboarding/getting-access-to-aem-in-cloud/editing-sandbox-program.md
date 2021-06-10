@@ -2,8 +2,7 @@
 title: 'Redigera ett sandlådeprogram '
 description: Redigera ett sandlådeprogram
 exl-id: e4545f7e-5329-40ad-81bb-a383c68f5d66
-translation-type: tm+mt
-source-git-commit: ee12a6a81a6852d9ffff674cea69e36c37c0ea65
+source-git-commit: 8974217f8a3db6cfe96082fe2ed0277c243fa7e1
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -31,7 +30,7 @@ Följ stegen nedan för att redigera ett sandlådeprogram:
 
    Navigera till fliken **Allmänt** för att redigera programbeskrivningen.
 
-   ![](assets/edit-program-general.png)
+   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/edit-program-sandboxa.png)
 
    På fliken **Lösningar och tillägg** visas två alternativ, till exempel **Platser** och **Resurser** för både produktions- och sandlådeprogram. Du kan också välja alternativet **Commerce**, som är tillgängligt under **Platser**, vilket visas i bilden nedan.
 
@@ -40,7 +39,7 @@ Följ stegen nedan för att redigera ett sandlådeprogram:
    >[!NOTE]
    >Minst en lösning måste väljas för ett program, det vill säga användaren får inte avmarkera alla lösningar under redigeringsprogrammets arbetsflöde.
 
-1. Klicka på **Spara** för att slutföra redigeringsprogrammet.
+1. Klicka på **Uppdatera** för att slutföra redigeringsprogrammet.
 
 
 ## Att tänka på när du redigerar ett program {#considerations-editing}
