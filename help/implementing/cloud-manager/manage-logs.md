@@ -2,37 +2,39 @@
 title: Hantera loggar - Cloud Service
 description: Hantera loggar - Cloud Service
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: fa1dd46798d2b8f9b0476e5ad8eb74679fb4beb7
+source-git-commit: d44a4239205b88f05ab5ae9ef3263e6549f998fc
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '235'
 ht-degree: 9%
 
 ---
 
 # Komma åt och hantera loggar {#manage-logs}
 
-Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet.
+Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med **miljökort**-kortet från sidan **Översikt** eller sidan Miljöinformation.
 
 ## Laddar ned loggar {#download-logs}
 
-Följ stegen nedan för att hämta loggar:
+Följ stegen nedan för att hämta loggar.
 
-1. Du kan hämta loggar via användargränssnittet, antingen från **Environmental**-kortet från sidan **Översikt**:
+1. Gå till **Miljökortet** från sidan **Översikt**.
 
-![](assets/download-logs1.png)
+1. Välj **Hämta loggar** från **..**-menyn.
 
-Eller från sidan Miljöinformation:
+   ![](assets/download-logs1.png)
 
-![](assets/download-logs.png)
+   *Eller*,
 
->[!NOTE]
->Oavsett var den öppnas visas samma dialogruta så att du kan hämta en enskild loggfil.
+   Från sidan Miljöinformation:
 
-1.Välj **Hämta loggar** från **...**-menyn.
+   ![](assets/download-logs.png)
 
-1. I listrutan **Service** väljer du alternativ som **Förhandsgranska** eller **Förhandsgranska dispatcher**, följt av att klicka på nedladdningsikonen. Den här åtgärden kan även utföras från sidan med miljöinformation.
+   >[!NOTE]
+   >Oavsett var den öppnas visas samma dialogruta så att du kan hämta en enskild loggfil.
 
-![](assets/download-preview.png)
+1. I listrutan **Service** väljer du alternativ som **Förhandsgranska** eller **Förhandsgranska dispatcher**, följt av att klicka på nedladdningsikonen.
+
+   ![](assets/download-preview.png)
 
 
 ## Loggar via API {#logs-through-api}
