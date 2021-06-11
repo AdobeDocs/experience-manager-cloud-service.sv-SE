@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du skapar ett projekt i skärmar so
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 2e572e0b25e1add25016191b55a78eea050b4ad0
+source-git-commit: 7e1e1a96b4657c536b999b6deaccfe8d537263bd
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -29,35 +29,25 @@ Följ stegen nedan för att skapa ett nytt projekt i Skärmar som en Cloud Servi
    >[!NOTE]
    >Läs [Använda rasterinnehållsleverantör](/help/screens-cloud/setting-up-project/using-screens-content-provider.md) om du vill veta hur du får åtkomst till rasterinnehållsleverantör för att skapa ditt projekt.
 
-1. Klicka på **Create** —> **Skapa entitet** i åtgärdsfältets övre högra hörn.
+1. Klicka på **Skapa skärmprojekt** i åtgärdsfältets övre högra hörn.
 
-   ![](/help/screens-cloud/assets/create-content/create-project1.png)
-
-1. Välj **Skärmprojekt** i guiden **Skapa**. Klicka på **Nästa**.
-
-   ![](/help/screens-cloud/assets/create-content/create-project2.png)
+   ![](/help/screens-cloud/assets/create-content/create-screens-project1.png)
 
 1. Ange **titeln** för projektet i **dialogrutan Skapa skärmsprojekt**, till exempel *FirstDigitalExperience*.
 
-   ![](/help/screens-cloud/assets/create-content/create-project3.png)
+   ![](/help/screens-cloud/assets/create-content/create-screens-project2.png)
 
    >[!NOTE]
    >Fältet **Namn** fylls i automatiskt i dialogrutan **Skapa skärmsprojekt** baserat på den titel du väljer.
 
-1. Klicka på **Skapa**. Du kommer att se ditt skärmsprojekt med namnet *FirstDigitalExperience* i Screens Content Provider.
+1. Klicka på **Spara**. Du kommer att se ditt skärmsprojekt med namnet *FirstDigitalExperience* i Screens Content Provider.
 
-   ![](/help/screens-cloud/assets/create-content/create-project4.png)
+   ![](/help/screens-cloud/assets/create-content/create-screens-project3.png)
 
+1. Projektet visas i Skärminnehållsleverantören med två mappar, **Platser** och **Kanaler**.
 
-   Eller
+   ![](/help/screens-cloud/assets/create-content/create-screens-project4.png)
 
-   1. Klicka på **Skapa skärmprojekt** i åtgärdsfältet.
-
-      ![](/help/screens-cloud/assets/create-content/create-project7.png)
-
-   1. Ange **titeln** för ditt projekt. Klicka på **Spara**.
-
-      ![](/help/screens-cloud/assets/create-content/create-project6.png)
    Nu när du har skapat ett AEM Screens-projekt kan du börja lägga till kanaler och platser i projektet.
 
 ### Tar bort ett befintligt projekt {#deleting-project}
