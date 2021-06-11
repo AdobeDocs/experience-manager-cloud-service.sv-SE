@@ -2,10 +2,9 @@
 title: 'Introduktion till sandlådeprogram '
 description: Introduktion till sandlådeprogram
 exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
-translation-type: tm+mt
-source-git-commit: 3b57acc47dd60d050ceebebb12bd9080b7fc5cf5
+source-git-commit: 1ecadc0d2b45ee8c94af8d91b35dbd40b08e89b5
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -20,7 +19,7 @@ En sandlåda skapas vanligtvis för utbildning, löpande demonstrationer, aktive
 
 Miljöerna som skapas i en sandlåda är inte konfigurerade för automatisk skalning. Därför är dessa miljöer inte lämpliga för prestanda- eller belastningstestning.
 
-Sandlådeprogram innehåller Sites and Assets och är automatiskt ifyllda med en Git-databas, en utvecklingsmiljö och en icke-produktionsprocess.  Git-databasen innehåller ett exempelprojekt baserat på AEM projekttyp.
+Sandlådeprogram innehåller [!DNL Sites] och [!DNL Assets] och fylls i automatiskt med en Git-databas, en utvecklingsmiljö och en icke-produktionsprocess.  Git-databasen innehåller ett exempelprojekt baserat på AEM projekttyp.
 
 Mer information om programtyperna finns i [Förstå program och programtyper](/help/onboarding/getting-access-to-aem-in-cloud/understand-program-types.md).
 
@@ -33,7 +32,7 @@ Sandlådeprogram har följande attribut:
    * utvecklingsmiljö
    * Skapande av icke-produktionsförlopp för distribution till utvecklingsmiljö (överordnad filial distribuering till utvecklingsmiljö)
 
-1. **Lösningar:** Sandlådeprogram innehåller AEM Sites och Assets.
+1. **Lösningar:** Sandlådeprogram innehåller AEM  [!DNL Sites] och  [!DNL Assets].
 
 1. **AEM:** AEM uppdateringar kan användas manuellt i miljöer i sandlådeprogram och skickas inte automatiskt.
 Mer information finns i [AEM uppdateringar av sandlådemiljöer](/help/onboarding/getting-access-to-aem-in-cloud/hibernating-de-hibernating-sandbox-environments.md#aem-updates-sandbox).
