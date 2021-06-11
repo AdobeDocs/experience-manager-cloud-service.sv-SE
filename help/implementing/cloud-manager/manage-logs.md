@@ -2,20 +2,22 @@
 title: Hantera loggar - Cloud Service
 description: Hantera loggar - Cloud Service
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: 8a70a343be8a6843436f1df26adae5b1935ad4c3
+source-git-commit: fa1dd46798d2b8f9b0476e5ad8eb74679fb4beb7
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 13%
+source-wordcount: '245'
+ht-degree: 9%
 
 ---
 
 # Komma åt och hantera loggar {#manage-logs}
 
-Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet. Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
+Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med hjälp av miljökortet.
 
 ## Laddar ned loggar {#download-logs}
 
-Dessa filer kan hämtas via användargränssnittet, antingen från **Environmental**-kortet från sidan **Översikt**:
+Följ stegen nedan för att hämta loggar:
+
+1. Du kan hämta loggar via användargränssnittet, antingen från **Environmental**-kortet från sidan **Översikt**:
 
 ![](assets/download-logs1.png)
 
@@ -26,22 +28,11 @@ Eller från sidan Miljöinformation:
 >[!NOTE]
 >Oavsett var den öppnas visas samma dialogruta så att du kan hämta en enskild loggfil.
 
-![](assets/download-logs2.png)
+1.Välj **Hämta loggar** från **...**-menyn.
 
-## Hämtar loggar för förhandsgranskningstjänsten {#download-preview-service}
+1. I listrutan **Service** väljer du alternativ som **Förhandsgranska** eller **Förhandsgranska dispatcher**, följt av att klicka på nedladdningsikonen. Den här åtgärden kan även utföras från sidan med miljöinformation.
 
-Följ stegen nedan för att hämta loggar för förhandsgranskningstjänsten
-
-1. Navigera till **Miljökort** från sidan **Översikt** i Cloud Manager.
-
-1. Välj **Hämta loggar** från **..**-menyn.
-
-1. I listrutan **Service** väljer du **Förhandsgranska** eller **Förhandsgranska dispatcher**, följt av att klicka på nedladdningsikonen.
-
-   >[!NOTE]
-   >Den här åtgärden kan även utföras från sidan med miljöinformation.
-
-   ![](assets/download-preview.png)
+![](assets/download-preview.png)
 
 
 ## Loggar via API {#logs-through-api}
