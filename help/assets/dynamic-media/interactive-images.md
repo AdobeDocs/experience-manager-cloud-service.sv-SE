@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med interaktiva bilder i Dynamic Media.
 feature: Interaktiva bilder
 role: Business Practitioner
 exl-id: 89eef5e6-d508-4f33-b54e-24d4df49f8c3
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 8cf01af44621bec7edb7e710f0797a070d5bf6db
 workflow-type: tm+mt
-source-wordcount: '4228'
+source-wordcount: '4210'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Här följer en köpbar banderoll med ett popup-fönster i snabbvyn. En använda
 
 ![chlimage_1-152](assets/chlimage_1-368.png)
 
-Se [interaktiva bilder in action](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html) på webbsidan som visas ovan.
+Se [interaktiva bilder in action](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html) på webbsidan som visas ovan.
 
 ## Se hur interaktiva bildbanderoller skapas {#watch-how-interactive-image-banners-are-created}
 
@@ -29,7 +29,7 @@ Titta på en genomgång om [hur interaktiva bildbanderoller skapas](https://s7d5
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med interaktiva bilder i Adobe Experience Manager Assets.
 
-Leta efter rubriken **Exempel** i några av snabbstartsåtgärderna. Den innehåller en kort självstudiekurs som är baserad på ett [exempel på en webbsida som ännu inte har Interactive Images tillagd](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html).
+Leta efter rubriken **Exempel** i några av snabbstartsåtgärderna. Den innehåller en kort självstudiekurs som är baserad på ett [exempel på en webbsida som ännu inte har Interactive Images tillagd](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html).
 
 
 
@@ -147,7 +147,7 @@ Titta på följande exempel på snabbvyns URL:er och deras resulterande hotspot-
 
 **Exempel**
 
-Du kan använda samma metod som i de tre exemplen ovan på [demowebbsidan](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html).
+Du kan använda samma metod som i de tre exemplen ovan på [demowebbsidan](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html).
 
 Demonstrationswebbsidan innehåller flera produktminiatyrbilder, där var och en har en snabbvyknapp med namnet&quot;Se mer&quot;. Med webbläsarens felsökningsverktyg fortfarande aktiverat klickar du på varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra snabbvyerna för produkten som finns på sidan, finns följande lista över snabbvybegäranden som har gjorts i serverdelen:
 
@@ -339,13 +339,13 @@ Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den 
 
 **Exempel**
 
-Lägg märke till att bilden på de tre personerna är en statisk `IMG`-tagg när du använder [demowebbplatsen som exempel](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html):
+Lägg märke till att bilden på de tre personerna är en statisk `IMG`-tagg när du använder [demowebbplatsen som exempel](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html):
 
 ```xml
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
 ```
 
-Integrationen är så enkel som att ta bort taggen `IMG` och ersätta den med den kopierade inbäddningskoden från Experience Manager Assets. Du ser att resultatet [visar den interaktiva bilden på sidan med tre cirkelaktiveringspunkter](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-1.html).
+Integrationen är så enkel som att ta bort taggen `IMG` och ersätta den med den kopierade inbäddningskoden från Experience Manager Assets. Du ser att resultatet [visar den interaktiva bilden på sidan med tre cirkelaktiveringspunkter](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html).
 
 >[!NOTE]
 Nu är de hotspots som finns på den interaktiva bilden av demowebbplatsen endast avsedda för webben. De är ännu inte integrerade med de befintliga snabbvyerna.
@@ -490,7 +490,7 @@ Här följer den fullständiga källkoden:
  s7interactiveimageviewer.init();
 ```
 
-Den [färdiga demowebbplatsen med den helt integrerade interaktiva bilden](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-3.html).
+Den [färdiga demowebbplatsen med den helt integrerade interaktiva bilden](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html).
 
 ## Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
