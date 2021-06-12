@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med interaktiv video och videor som kan kö
 feature: Interaktiva videoklipp
 role: Business Practitioner
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 8cf01af44621bec7edb7e710f0797a070d5bf6db
 workflow-type: tm+mt
-source-wordcount: '6004'
+source-wordcount: '5974'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Se även [Använda interaktiv video med Dynamic Media](https://experienceleague.
 
 <!-- 
 
-There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/AXIS/index.html. This now needs to call a new interactive video
+There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video
 
 -->
 
@@ -59,11 +59,11 @@ Med webbseminariet [Using Interactive Video, Link Sharing, and YouTube sharing i
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med interaktiva videor i Dynamic Media.
 
-Leta efter rubriken **Exempel** i några av snabbstartsåtgärderna. Den innehåller en kort självstudiekurs som baseras på denna [startsida för demo som *inte* har lagt till interaktivitet i den ännu](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html).
+Leta efter rubriken **Exempel** i några av snabbstartsåtgärderna. Den innehåller en kort självstudiekurs som baseras på denna [startsida för demo som *inte* har lagt till interaktivitet i den ännu](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html).
 
 **Exemplen** visar hur du integrerar interaktiva videofilmer på en webbplats.
 
-När du är klar med självstudiekursen i det sista exempelavsnittet [visas din sista demowebbsida med den helintegrerade interaktiva videon på det här sättet](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html).
+När du är klar med självstudiekursen i det sista exempelavsnittet [visas din sista demowebbsida med den helintegrerade interaktiva videon på det här sättet](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html).
 
 
 
@@ -180,7 +180,7 @@ Titta på följande exempel på URL:er för snabbvyn och deras miniatyrbildsvari
 
 När ovanstående metod används på exempelwebbplatsen har du en webbsida med flera produktminiatyrbilder där var och en har knappen &quot;SE MER&quot;:
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 När du har aktiverat alla produktsnabbvyer som är tillgängliga på sidan visas följande lista över snabbvybegäranden som gjorts i bakgrunden:
 
@@ -288,7 +288,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
       Fortsätt spela upp och pausa videon vid punkter längs tidslinjen där du vill lägga till ett segment tills du når slutet av videon.
 
-1. (Valfritt) Dra fältet till vänster om du vill zooma in eller till höger om du vill zooma ut. **[!UICONTROL Timeline Scale Slider]** Med den här åtgärden kan du styra hur mycket detaljrikedom du ser för de segment som du har lagt till.
+1. (Valfritt) Dra fältet till vänster om du vill zooma in eller till höger om du vill zooma ut. **[!UICONTROL Timeline Scale Slider]** Med den här åtgärden kan du styra hur mycket detaljrikedom du ser på de segment som du har lagt till.
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
@@ -523,7 +523,7 @@ Om du har lagt till någon interaktivitet som utlöser en snabbvy är miniatyrbi
 
 Använda demowebbplatsen som exempel:
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 Observera att koden för videoinbäddning är standard:
 
@@ -554,7 +554,7 @@ Observera att koden för videoinbäddning är standard:
 
 Integrationen är lika enkel som att ta bort inbäddningskoden för video och ersätta den med den interaktiva inbäddningskoden för video från Experience Manager. Resultatet visas på följande URL. Även om det visar en interaktiv video på sidan är den ännu inte integrerad med de befintliga snabbvyerna:
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
 
 ## Integrera en interaktiv video med en befintlig snabbvy {#integrating-an-interactive-video-with-an-existing-quickview}
 
@@ -753,7 +753,7 @@ Den fullständiga källkoden är följande:
 
 Den färdiga demowebbplatsen med den helt integrerade interaktiva videon ser ut så här:
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
 ## Använda snabbvyer för att skapa anpassade popup-fönster® {#using-quickviews-to-create-custom-pop-ups}
 
