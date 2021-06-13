@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du publicerar en kanal på skärmar
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 2f49c34a0d45e4fe2793f0a5bfe04f85dbb892ad
+source-git-commit: bb0cbbeed98d38a3f22eea0a306c6c76b552aacd
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,22 @@ Det här dokumentet hjälper dig att skapa ett nytt projekt för ditt AEM Screen
 
 Följ stegen nedan för att publicera kanalen:
 
-1. Navigera och välj kanalen från projektet, till exempel **FirstDigitalExperience** —> Kanaler —> ChannelFood.
+1. Navigera och markera kanalen i projektet, till exempel **FirstDigitalExperience** —> **Kanaler** —> **LoopingChannelOne**.
+
+   ![](/help/screens-cloud/assets/create-content/managepub-1.png)
 
 1. Klicka på **Hantera publikation** i åtgärdsfältet.
 
-1. Välj åtgärden Publicera och schemalägga som nu i guiden Hantera publikation och klicka på **Nästa**.
+1. Välj **Åtgärd** som **Publicera** och **Schemaläggning** som **Nu** i **Guiden Hantera publikation** och klicka på **Nästa**.
+
+   ![](/help/screens-cloud/assets/create-content/managepub-2.png)
+
+   >[!NOTE]
+   >Klicka på **+ Inkludera underordnade** i åtgärdsfältet och avmarkera alla alternativ för att publicera alla moduler i projektet och klicka på Lägg till för att publicera. Som standard markeras alla rutor och du måste avmarkera kryssrutorna manuellt för att publicera alla moduler i projektet.
 
 1. När du har valt kanalen i guiden **Hantera publikation** klickar du på **Publicera** för att publicera kanalen.
+
+   ![](/help/screens-cloud/assets/create-content/managepub-3.png)
 
 
 ## What&#39;s Next {#whats-next}
@@ -48,4 +57,4 @@ Nu när ni har publicerat era kanaler i projektet kan ni:
 * Skapa och hantera platser från leverantören av skärminnehåll
 * Skapa och hantera spelare från Screens Services Provider
 
-   Du bör fortsätta att arbeta med dina skärmar som Cloud Service som nätverksadministratörens resa genom att gå igenom dokumentet nästa gång.
+   Du bör fortsätta med dina skärmar som en Cloud Service genom att granska dokumentet nästa gång.
