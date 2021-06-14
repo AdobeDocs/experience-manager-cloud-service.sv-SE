@@ -4,7 +4,7 @@ description: På den här sidan beskrivs hur du tilldelar en kanal till en skär
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: c65eeaf74ddfd81d37eb7090b84c8bf6f876dc72
+source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
@@ -71,4 +71,4 @@ Följ stegen nedan för att tilldela en kanal till en skärm:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har tilldelat kanalen till en skärm bör du fortsätta att använda Cloud Servicen som en skärmresa genom att nästa gång du granskar dokumentet **Installera och konfigurera skärmspelaren för AEM som en Cloud Service**.
+Nu när du har tilldelat kanalen till en skärm bör du fortsätta att använda Cloud Servicen som en skärmresa genom att nästa gång du granskar dokumentet [Installera och konfigurera skärmspelaren för AEM som en Cloud Service](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md).
