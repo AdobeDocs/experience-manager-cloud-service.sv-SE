@@ -4,9 +4,9 @@ description: Den här sidan beskriver hur du använder Screens Content Provider 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
+source-git-commit: 864c9cf72b0c552867422ee59bf85b11b9673ac7
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,11 @@ I följande avsnitt beskrivs hur du använder Screens Content Provider när du h
 >**Förutsättning**
 >Innan du börjar läsa det här avsnittet bör du läsa [Konfigurera leverantören av skärmtjänster](/help/screens-cloud/setting-up-project/setting-up-screens-services-provider.md) för att lära dig hur du navigerar till det här användargränssnittet från leverantören av skärmtjänster.
 
-När du har loggat in på Screens Content Provider kan du nu skapa innehåll i uppspelning av innehåll.
+När du har loggat in på Screens Content Provider kan du nu skapa innehåll i uppspelning av innehåll. Använd leverantören av skärminnehåll för att skapa och hantera:
+
+* Projekt
+* Kanaler
+* Platser
 
 ## What&#39;s Next {#whats-next}
 
