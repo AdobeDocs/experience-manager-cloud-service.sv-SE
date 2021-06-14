@@ -1,12 +1,12 @@
 ---
-title: Installera spelare i skärmar som en Cloud Service
-description: På den här sidan beskrivs hur du installerar spelare i skärmar som en Cloud Service.
+title: Installera och konfigurera spelare i skärmar som en Cloud Service
+description: På den här sidan beskrivs hur du installerar och konfigurerar spelare på skärmar som en Cloud Service.
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
+source-git-commit: 5c6f79fce71ce0fcb1f77f90faf3621000daac0f
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Det här dokumentet hjälper dig att förstå hur du konfigurerar spelaren innan
 * var spelarna ska installeras från
 * hur du uppdaterar spelaren till molnläge
 
-## Steg för att ställa in spelaren på molnläge {#cloud-mode-setup}
+## Steg för att ställa in spelaren till molnläge {#cloud-mode-setup}
 
 När du har hämtat den senaste spelaren från [AEM Screens Player Downloads](https://download.macromedia.com/screens/) är du nu redo att uppdatera spelaren till molnläge.
 
@@ -48,4 +48,4 @@ Uppdatera spelaren genom att följa stegen nedan:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har installerat spelare och konfigurerat de nödvändiga inställningarna bör du fortsätta att använda skärmarna som en Cloud Service genom att nästa gång du granskar dokumentet **Skapa spelaren från leverantören av skärmtjänster**.
+Nu när du har installerat och konfigurerat spelaren till molnläge bör du fortsätta att använda dina skärmar som en Cloud Service genom att nästa gång du granskar dokumentet [Registrera spelare i skärmar som en Cloud Service](/help/screens-cloud/managing-players-registration/registering-players-screens-cloud.md) från leverantören av skärmtjänster.
