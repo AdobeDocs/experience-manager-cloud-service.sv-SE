@@ -1,14 +1,13 @@
 ---
 title: Kontrollerar domännamnsstatus
 description: Kontrollerar domännamnsstatus
-translation-type: tm+mt
-source-git-commit: e99c8552e2afff677c08c859dd1044287053a40e
+exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
+source-git-commit: 417939cb7a206d2b98b5e631a09307edc6724c17
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollerar domännamnsstatus {#check-status}
 
@@ -42,7 +41,7 @@ av anpassat domännamn pågår.
 misslyckades. Det gick inte att ta bort det anpassade domännamnet. Du måste försöka igen. Mer information finns i [Ta bort ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md).
 
 
-## Redan befintliga CDN-konfigurationer för IP-Tillåtelselista {#pre-existing-cdn}
+## Tidigare CDN-konfigurationer för anpassade domännamn {#pre-existing-cdn}
 
 Kunder med miljöer som innehåller befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat eller anpassade domännamn ser följande meddelande på informationssidan för **IP Tillåtelselista** och **Miljö**. Meddelandet som visas i användargränssnittet försvinner när kunden har migrerat alla befintliga miljökonfigurationer via användargränssnittet och det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
