@@ -5,9 +5,9 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 9e64772ac26888e5c1f4c77ffce6048286357e93
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 30%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 30%
    + [Loggning](developing/introduction/logging.md)
    + [Konfigurationer och Configuration Browser](developing/introduction/configurations.md)
    + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
-   + [API för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/ref/javadoc/index.html)
+   + [API för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html)
    + [Genererar åtkomsttoken för API:er på serversidan](developing/introduction/generating-access-tokens-for-server-side-apis.md)
    + [Headless and Headless in AEM](developing/headful-headless.md)
    + Utveckling AEM hög {#full-stack}
