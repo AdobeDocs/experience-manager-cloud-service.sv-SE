@@ -6,7 +6,7 @@ hidefromtoc: true
 index: false
 source-git-commit: beb1e635f573c6acc16c2350727c36a98fd6b6e7
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,10 @@ Cloud Acceleration Manager (CAM) ger kunder och partners en helhetsupplevelse f�
 
 ### Navigera till Cloud Acceleration Manager {#navigating}
 
+
+Följ stegen nedan för att navigera till Cloud Acceleration Manager (CAM):
+
+1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com)
 
 
 
