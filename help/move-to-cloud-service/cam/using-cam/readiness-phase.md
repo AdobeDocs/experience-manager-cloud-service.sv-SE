@@ -4,12 +4,17 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: e2a75efe9e2e1ac8e2745608309f12b49eac9843
+source-git-commit: 7d0afd7337cb1011e43d9a7beb4214262fba8200
 workflow-type: tm+mt
-source-wordcount: '25'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
 
 # Beredningsfas i Cloud Acceleration Manager {#readiness-phase-cam}
+
+När du har skapat ett projekt i Cloud Acceleration Manager kan du nu starta beredskapsfasen.
+
+## Använda verktyg i beredskapsfasen {#readiness-phase}
+
