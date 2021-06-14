@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du tilldelar en spelare till en sk�
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: c65eeaf74ddfd81d37eb7090b84c8bf6f876dc72
+source-git-commit: b9def61cb3f433d156706e8fb72c484110be3067
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '218'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ När projektkonfigurationen är klar måste du tilldela spelaren till en skärm 
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du skapar och hanterar visningar i Screens Services Provider. När du har läst bör du kunna lära dig hur du tilldelar en spelare till en bildskärm.
+Det här dokumentet hjälper dig att förstå hur du tilldelar en spelare till en skärm i Screens Services Provider. Detta är de sista obligatoriska stegen innan innehållet börjar spelas upp som Cloud Service på skärmar.
 
 ## Steg för att tilldela en spelare till en bildskärm {#create-display}
 
@@ -36,7 +36,7 @@ Följ stegen nedan för att tilldela en spelare till en skärm:
 
 1. När du har klickat på Välj visas den tilldelade visningen under panelen **TILLDELAD VISNING**.
 
-   Nu tilldelas visningen till spelaren och kanalen börjar spela upp innehållet. Spelaren bör nu hämta och börja spela upp innehåll. Grattis!
+   Nu tilldelas visningen till spelaren och kanalen börjar spela upp innehållet. Spelaren bör nu hämta och börja spela upp innehåll. **Grattis!**
 
    ![bild](/help/screens-cloud/assets/player/output.gif)
 
