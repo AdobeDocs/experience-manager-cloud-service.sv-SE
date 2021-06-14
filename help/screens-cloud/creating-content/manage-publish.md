@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du publicerar en kanal på skärmar
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: bb0cbbeed98d38a3f22eea0a306c6c76b552aacd
+source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,4 @@ Följ stegen nedan för att publicera kanalen:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när ni har publicerat era kanaler i projektet kan ni:
-
-* Skapa och hantera platser från leverantören av skärminnehåll
-* Skapa och hantera spelare från Screens Services Provider
-
-   Du bör fortsätta med dina skärmar som en Cloud Service genom att granska dokumentet nästa gång.
+Nu när du har publicerat dina kanaler i projektet bör du fortsätta att använda dina skärmar som en Cloud Service genom att nästa gång du granskar dokumentet [Installera och konfigurera spelare i skärmar som en Cloud Service](/help/screens-cloud/creating-content/manage-publish.md).
