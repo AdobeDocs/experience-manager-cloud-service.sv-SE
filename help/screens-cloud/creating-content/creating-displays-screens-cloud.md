@@ -4,10 +4,10 @@ description: På den här sidan beskrivs hur du skapar och hanterar skärmar som
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: c65eeaf74ddfd81d37eb7090b84c8bf6f876dc72
+source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 2%
+source-wordcount: '283'
+ht-degree: 1%
 
 ---
 
@@ -53,3 +53,6 @@ Markera visningen och klicka på **Ta bort** längst ned på panelen, enligt bil
 
 ![bild](/help/screens-cloud/assets/display/disp-5.png)
 
+## What&#39;s Next {#whats-next}
+
+Nu när du har lärt dig att skapa och hantera skärmar för ditt projekt bör du fortsätta att använda skärmar som en Cloud Service genom att nästa gång du granskar dokumentet [Installera och konfigurera Skärmspelaren för AEM som en Cloud Service](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md).
