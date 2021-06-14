@@ -4,15 +4,15 @@ description: På den här sidan beskrivs hur du installerar spelare i skärmar s
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: c65eeaf74ddfd81d37eb7090b84c8bf6f876dc72
+source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
 
-# Installera spelare i skärmar som en Cloud Service {#installing-players-screens-cloud}
+# Installera och konfigurera spelare på skärmar som en Cloud Service {#installing-players-screens-cloud}
 
 I avsnittet nedan beskrivs hur du installerar AEM Screens-spelare som är registrerade för lokala AEM. Dessutom måste du göra en fabriksåterställning av den befintliga spelaren och sedan registrera spelaren som ny mot AEM Screens som Cloud Service.
 
@@ -23,7 +23,7 @@ Det här dokumentet hjälper dig att förstå hur du konfigurerar spelaren innan
 * var spelarna ska installeras från
 * hur du uppdaterar spelaren till molnläge
 
-## Steg för att ställa in spelaren till molnläge {#cloud-mode-setup}
+## Steg för att ställa in spelaren på molnläge {#cloud-mode-setup}
 
 När du har hämtat den senaste spelaren från [AEM Screens Player Downloads](https://download.macromedia.com/screens/) är du nu redo att uppdatera spelaren till molnläge.
 
