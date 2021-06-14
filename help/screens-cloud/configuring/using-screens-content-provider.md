@@ -1,12 +1,12 @@
 ---
 title: Använda providern för skärminnehåll
-description: Den här sidan beskriver hur du använder Screens Content Provider.
+description: Den här sidan beskriver hur du använder Screens Content Provider för att skapa innehåll.
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: b9def61cb3f433d156706e8fb72c484110be3067
+source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
@@ -32,5 +32,6 @@ När du har loggat in på Screens Content Provider kan du nu skapa innehåll i u
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig navigera till en leverantör av skärminnehåll kan du navigera till nästa steg, det vill säga att skapa och hantera projekt på skärmar som en Cloud Service.
+Nu har du lärt dig navigera till Skärminnehållsleverantören och du bör nu fortsätta att använda dina skärmar som en Cloud Service nästa gång du granskar dokumentet [Skapa och hantera projekt på skärmar som en Cloud Service](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md).
+
 
