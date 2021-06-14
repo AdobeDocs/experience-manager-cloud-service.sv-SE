@@ -1,18 +1,18 @@
 ---
-title: Konfigurerar providern för skärmtjänster
-description: På den här sidan beskrivs hur du konfigurerar Screens Services Provider.
+title: Navigera till Screens Services Provider
+description: Den här sidan beskriver hur du navigerar till Screens Services Provider.
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: b9def61cb3f433d156706e8fb72c484110be3067
+source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '211'
 ht-degree: 1%
 
 ---
 
 
-# Konfigurerar providern för skärmtjänster {#setup-screens-services-provider}
+# Navigera till leverantören av skärmtjänster {#setup-screens-services-provider}
 
 ## Introduktion {#introduction}
 
@@ -44,5 +44,5 @@ Följ stegen nedan för att konfigurera leverantören av skärmtjänster:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du konfigurerar en leverantör av skärmtjänster kan du navigera till Skärminnehållsleverantören för mer information.
+När du har lärt dig hur du konfigurerar leverantören av skärmtjänster kan du navigera till [Använda leverantören av skärminnehåll](/help/screens-cloud/configuring/using-screens-content-provider.md) för mer information.
 
