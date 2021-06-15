@@ -4,9 +4,9 @@ description: På den här sidan beskrivs de första stegen för att komma igång
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 0cc505b7ed96ddf81cae1f92d50d6aa0c9eb7db8
+source-git-commit: 83d2ac2d22827ebe13578b900907dd089d8d7e45
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Klicka här för att ladda ned det senaste funktionspaketet.
 
 ## Lägga till användare i Adobe Admin Console {#admin-console}
 
-När du har fått ett organisations-ID för Adobe Identity Management System (IMS) kan du nu prenumerera på [Adobe Admin Console](https://adminconsole.adobe.com/). Mer information om hur du lägger till användare i Admin Console finns i [Adobe Admin Console-användare](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/users.ug.html).
+När du har fått ett organisations-ID för Adobe Identity Management (IMS) kan du nu komma åt [Adobe Admin Console](https://adminconsole.adobe.com/). Mer information om hur du lägger till användare i Admin Console finns i [Adobe Admin Console-användare](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/users.ug.html).
 
 >[!NOTE]
 >Användarna har tillgång till produktprofilen AEM Cloud Service så att de kan logga in på AEM med Adobe ID eller Federated ID.
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har fått ett IMS-organisations-ID och lagts till som användare i Adobe Admin Console kan du lägga till tillägget Skärmar i ett nytt eller befintligt program för Skärmar som en Cloud Service i Cloud Manager.
+Nu när du har fått ett IMS-organisations-ID och lagts till som användare i Adobe Admin Console kan du lägga till [skärmtillägg i ett nytt program](/help/screens-cloud/onboarding-screens-cloud/add-on-new-program-screens-cloud.md) eller i [ett befintligt program](/help/screens-cloud/onboarding-screens-cloud/add-on-existing-program-screens-cloud.md) för skärmar som en Cloud Service i Cloud Manager.
