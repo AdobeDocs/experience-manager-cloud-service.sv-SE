@@ -4,7 +4,7 @@ description: På den här sidan beskrivs hur du kör en pipeline för skärmar s
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 371cfaeb0e526197fdf98dea65ed5bc2ca0481a2
+source-git-commit: 83d2ac2d22827ebe13578b900907dd089d8d7e45
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 1%
@@ -59,4 +59,4 @@ I följande avsnitt beskrivs hur du konfigurerar CI/CD-flödet och distribuerar 
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du kör pipeline för ditt program i Cloud Manager är du nu redo att gå vidare till nästa steg. Nästa steg är att konfigurera och konfigurera skärmsprojekt.
+När du har lärt dig hur du konfigurerar en miljö för ditt program i Cloud Manager är du nu redo att gå vidare till nästa steg i introduktionsprocessen, d.v.s. [Navigera till leverantören av skärmtjänster](/help/screens-cloud/configuring/navigating-to-screens-services-provider.md).
