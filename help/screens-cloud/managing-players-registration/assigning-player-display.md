@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du tilldelar en spelare till en sk�
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: b9def61cb3f433d156706e8fb72c484110be3067
+source-git-commit: 43192d92dd63e6db5572dad7b5f47646e5162130
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '229'
 ht-degree: 1%
 
 ---
@@ -34,9 +34,11 @@ Följ stegen nedan för att tilldela en spelare till en skärm:
 
    ![bild](/help/screens-cloud/assets/player/register-player8.png)
 
-1. När du har klickat på Välj visas den tilldelade visningen under panelen **TILLDELAD VISNING**.
+## Innehållsuppspelning {#content-playback}
 
-   Nu tilldelas visningen till spelaren och kanalen börjar spela upp innehållet. Spelaren bör nu hämta och börja spela upp innehåll. **Grattis!**
+När du har tilldelat en visning till en spelare, vilket visas i föregående avsnitt, visas den tilldelade visningen under panelen **TILLDELAD VISNING**.
 
-   ![bild](/help/screens-cloud/assets/player/output.gif)
+Nu tilldelas visningen till spelaren och kanalen börjar spela upp innehållet. Spelaren bör nu hämta och börja spela upp innehåll. **Grattis!**
+
+![bild](/help/screens-cloud/assets/player/output.gif)
 
