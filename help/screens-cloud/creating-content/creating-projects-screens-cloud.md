@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du skapar ett projekt i skärmar so
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 7e1e1a96b4657c536b999b6deaccfe8d537263bd
+source-git-commit: f0e005ddc59c575188d15986cabdbe04cb48ad03
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Det första steget för att implementera ett nytt projekt i skärmar som Cloud S
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du skapar ett nytt projekt för ditt AEM Screens-projekt i Screens Content Provider. När du har läst bör du kunna skapa ditt AEM Screens-projekt utifrån dess omfattning.
+Det här dokumentet hjälper dig att förstå hur du skapar ett nytt AEM Screens-projekt i Screens Content Provider. När du har läst bör du kunna skapa ditt AEM Screens-projekt utifrån dess omfattning.
 
 ## Skapa ett nytt projekt {#create-new-project}
 
@@ -40,13 +40,9 @@ Följ stegen nedan för att skapa ett nytt projekt i Skärmar som en Cloud Servi
    >[!NOTE]
    >Fältet **Namn** fylls i automatiskt i dialogrutan **Skapa skärmsprojekt** baserat på den titel du väljer.
 
-1. Klicka på **Spara**. Du kommer att se ditt skärmsprojekt med namnet *FirstDigitalExperience* i Screens Content Provider.
+1. Klicka på **Spara**. Du kommer att se ditt skärmsprojekt med namnet *FirstDigitalExperience* i Screens Content Provider. Projektet visas i Skärminnehållsleverantören med två mappar, **Platser** och **Kanaler**.
 
    ![](/help/screens-cloud/assets/create-content/create-screens-project3.png)
-
-1. Projektet visas i Skärminnehållsleverantören med två mappar, **Platser** och **Kanaler**.
-
-   ![](/help/screens-cloud/assets/create-content/create-screens-project4.png)
 
    Nu när du har skapat ett AEM Screens-projekt kan du börja lägga till kanaler och platser i projektet.
 
