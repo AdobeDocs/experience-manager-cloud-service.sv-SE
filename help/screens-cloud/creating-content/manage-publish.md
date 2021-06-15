@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du publicerar en kanal på skärmar
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
+source-git-commit: f0e005ddc59c575188d15986cabdbe04cb48ad03
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Du kan publicera innehåll från AEM Screens. Med funktionen Hantera publikation
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att skapa ett nytt projekt för ditt AEM Screens-projekt i Screens Content Provider. När du har läst bör du:
+Det här dokumentet hjälper dig att skapa ett nytt projekt för ditt AEM Screens-projekt i Screens Content Provider. Efter läsningen ska du kunna:
 
-* Lär dig hur du publicerar en kanal.
-* kunna hantera kanalpublicering, vad gäller omfattning.
+* förstå hur man publicerar en kanal.
+* hantera publicering, vad gäller omfattning
 
 ## Steg för att publicera en kanal {#publish-channel}
 
