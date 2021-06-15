@@ -4,9 +4,9 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 8641c14114c5f1f2f69a3a1b51eac38ab6f4f541
+source-git-commit: e0088f616987dbba73674f4d430406322a7ec029
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '350'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
    * Använd informationsikonen för att visa information om varje rapportsökning
    * Om du överför en ny rapport återställs alla bedömningar
 
-## Använda planering och inställningar {#planning-setup}
+## Använda Planerings- och inställningskort {#planning-setup}
 
 Följ det här avsnittet för att utforska aktivitetskortet Planning and Setup.
 
