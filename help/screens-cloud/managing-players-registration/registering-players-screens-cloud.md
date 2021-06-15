@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du registrerar spelare i skärmar s
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: c65eeaf74ddfd81d37eb7090b84c8bf6f876dc72
+source-git-commit: f0e005ddc59c575188d15986cabdbe04cb48ad03
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '395'
 ht-degree: 1%
 
 ---
@@ -18,10 +18,10 @@ När du har installerat och konfigurerat spelare för skärmar som Cloud Service
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du registrerar spelare i Screens Services Provider. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur du registrerar spelare i Screens Services Provider. Efter läsningen ska du kunna:
 
-* Lär dig hur du registrerar spelare.
-* Hantera era kanaler i ett AEM Screens-projekt utifrån deras omfattning.
+* förstå hur man registrerar spelare
+* hur man slutför registreringsprocessen från Screens Services Provider
 
 ## Steg för att registrera en skärmspelare {#register-players}
 
@@ -66,3 +66,6 @@ Följ stegen nedan för att registrera spelaren:
 
    ![bild](/help/screens-cloud/assets/player/register-player6.png)
 
+## What&#39;s Next {#whats-next}
+
+Nu när du har installerat och konfigurerat spelaren i molnläge bör du fortsätta att använda skärmar som en Cloud Service genom att nästa gång du granskar dokumentet [Tilldela spelaren till en skärm i skärmar som en Cloud Service](/help/screens-cloud/managing-players-registration/assigning-player-display.md) från leverantören av skärmar.
