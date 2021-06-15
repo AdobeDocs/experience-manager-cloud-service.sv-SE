@@ -4,9 +4,9 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 5af319d30198329fd2312c11d88bf326bc4cdae7
+source-git-commit: 8641c14114c5f1f2f69a3a1b51eac38ab6f4f541
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '349'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,12 @@ Beredskapsfasen omfattar:
 * [Best Practices Analysis](#best-practices-analysis)
 * [Planering och installation](#planning-setup)
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-1.png)
+Klicka på projektkortet för att öppna projektstartsidan och navigera till avsnittet **Beredskap**, som visas i bilden nedan.
+
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-1.png)
+
+>[!NOTE]
+>Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/getting-started-cam.md).
 
 ## Använda analyskort för metodtips {#best-practices-analysis}
 
