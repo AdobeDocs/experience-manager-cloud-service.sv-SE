@@ -4,9 +4,9 @@ description: Den här sidan innehåller en översikt över hur du använder och 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: a8e6b9e2c001c135bf2739ef873e75c22b8c025e
+source-git-commit: e0088f616987dbba73674f4d430406322a7ec029
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '480'
 ht-degree: 1%
 
 ---
@@ -54,14 +54,41 @@ Skapa ett nytt projekt genom att följa stegen nedan:
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-3.png)
 
-   Markera projektet och för markören över projektet för att redigera eller ta bort projektet, vilket visas i bilden nedan.
+1. Projektet skapas nu och visas på startsidan för **Cloud Acceleration Manager**.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-4.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-landing.png)
 
 1. Klicka på projektkortet för att ange projektet. Då kommer du till projektets landningssida.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-5.png)
 
+## Hantera projektet {#manage-project}
+
+Du kan redigera projektnamnet, beskrivningen, miniatyrbilden eller ta bort projektet.
+
+### Redigera projektet {#edit-project}
+
+Följ stegen nedan för att redigera ditt projekt:
+
+1. Markera projektet och för markören över projektet och klicka på pennikonen för att redigera projektet, så som visas i bilden nedan.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-4.png)
+
+1. Du kan redigera projektnamnet, beskrivningen och till och med överföra en ny bild eller redigera en befintlig bild i dialogrutan **Redigera projekt**.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-edit.png)
+
+1. Klicka på **Uppdatera** för att genomföra ändringarna.
+
+### Tar bort projektet {#delete-project}
+
+Följ stegen nedan för att ta bort ditt projekt:
+
+1. Markera projektet och för markören över projektet och klicka på ikonen för att ta bort projektet, så som visas i bilden nedan.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-4.png)
+
+1. Klicka på **Ta bort** för att bekräfta steget.
 
 ## What&#39;s Next {#whats-next}
 
