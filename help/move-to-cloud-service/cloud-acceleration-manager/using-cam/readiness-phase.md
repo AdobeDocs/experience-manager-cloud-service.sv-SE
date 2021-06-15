@@ -4,10 +4,10 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: b1be8759dd246a8819e8546e3c72f391e26a8dc5
+source-git-commit: 5af319d30198329fd2312c11d88bf326bc4cdae7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '312'
+ht-degree: 3%
 
 ---
 
@@ -18,20 +18,20 @@ När du har skapat ett projekt i Cloud Acceleration Manager kan du nu börja kö
 
 Beredskapsfasen omfattar:
 
-* Best Practices Analysis
-* Planering och installation
+* [Best Practices Analysis](#best-practices-analysis)
+* [Planering och installation](#planning-setup)
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-1.png)
 
-## Använda analys av bästa praxis {#best-practices-analysis}
+## Använda analyskort för metodtips {#best-practices-analysis}
 
-Följ stegen nedan för att använda Best Practices Analysis:
+Följ stegen nedan för att använda Best Practices Analysis-kortet:
 
 1. Klicka på knappen **Granska** på **Best Practices Analysis**-kortet.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-2.png)
 
-1. Följ de här stegen för att hämta Best Practices Analyzer och köra den på en klon av ditt AEM.
+1. Följ de här stegen för att hämta BPA (Best Practices Analyzer) och köra det på en klon av ditt AEM.
 
    1. Navigera till [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen och hämta Best Practices Analyzer som en zip-fil.
 
@@ -46,9 +46,9 @@ Följ stegen nedan för att använda Best Practices Analysis:
 
 1. Granska och utforska kontrollpanelen Best Practices Analysis i CAM.
 
-   * Om du klickar på varje kort öppnas tillhörande flik
-   * Alla rapportflikar (inklusive filtrering) kan bokmärkas för delning eller framtida hämtning
-   * Visa information om varje rapportsökning via detaljikonen
+   * Klicka på varje kort för att öppna den tillhörande fliken
+   * Du kan skapa ett bokmärke för alla rapportflikar (inklusive filtrering) för delning eller framtida hämtning
+   * Använd informationsikonen för att visa information om varje rapportsökning
    * Om du överför en ny rapport återställs alla bedömningar
 
 ## Använda planering och inställningar {#planning-setup}
@@ -66,8 +66,5 @@ Följ det här avsnittet för att utforska aktivitetskortet Planning and Setup.
 ## What&#39;s Next {#whats-next}
 
 När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg, Använda implementeringsfasen.
-
-
-
 
 
