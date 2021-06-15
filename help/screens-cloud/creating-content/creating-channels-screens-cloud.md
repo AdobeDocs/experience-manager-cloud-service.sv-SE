@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du skapar och hanterar kanaler på 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: ece3fae8b65b4dbdc38e63a211a3f55f4eb91333
+source-git-commit: f0e005ddc59c575188d15986cabdbe04cb48ad03
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ När du har skapat ett AEM Screens-projekt måste du skapa kanaler.
 
 Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler för ditt AEM Screens-projekt i Screens Content Provider. När du har läst bör du:
 
-* Lär dig hur du skapar kanaler för leverantörer av skärminnehåll.
-* Hantera era kanaler i ett AEM Screens-projekt utifrån deras omfattning.
+* förstå hur du skapar kanaler för leverantörer av skärminnehåll
+* hantera och redigera innehåll i era kanaler
 
 ## Steg för att skapa en ny sekvenskanal i skärmar som en Cloud Service {#create-new-channel}
 
@@ -44,7 +44,7 @@ Följ stegen nedan för att skapa en ny sekvenskanal i Skärmar som en Cloud Ser
 
    ![](/help/screens-cloud/assets/create-content/channel-create2.png)
    >[!NOTE]
-   > Guiden **Skapa** innehåller olika typer av mallar när du skapar en kanal. Mer information finns i avsnittet Tillgängliga mallar i guiden Skapa.
+   > Guiden **Skapa** innehåller olika typer av mallar när du skapar en kanal. Mer information finns i avsnittet [Tillgängliga mallar](#available-templates) i guiden Skapa.
 
 1. Ange namnet på sekvenskanalen, till exempel **LoopingChannelOne** och klicka på **Create**.
 
@@ -52,7 +52,7 @@ Följ stegen nedan för att skapa en ny sekvenskanal i Skärmar som en Cloud Ser
 
    Nu visas en **LoopingChannelOne** i din kanalmapp i ditt AEM Screens-projekt.
 
-1. När du har skapat kanalen kan du nu lägga till innehåll i kanalen. Mer information om hur du lägger till resurser (bilder/videor) i kanalen finns i [Lägga till innehåll i en kanal](#add-content).
+   När du har skapat kanalen kan du nu lägga till innehåll i kanalen. Mer information om hur du lägger till resurser (bilder/videor) i kanalen finns i [Lägga till innehåll i en kanal](#add-content).
 
 ## Hantera en kanal {#managing-channels}
 
@@ -82,7 +82,7 @@ Följ stegen nedan om du vill lägga till eller redigera innehåll i en kanal:
 
 ## Tillgängliga mallar i guiden Skapa {#available-templates}
 
-Följande mallar är tillgängliga när du använder kanalguiden för **Create**, till exempel:
+Följande mallar är tillgängliga när du använder kanalguiden **Skapa**:
 
 | Tillgängliga mallar | Beskrivning |
 |--- |--- |
