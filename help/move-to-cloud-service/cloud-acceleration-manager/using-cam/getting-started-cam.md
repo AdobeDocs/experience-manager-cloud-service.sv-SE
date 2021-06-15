@@ -4,10 +4,10 @@ description: Den här sidan innehåller en översikt över hur du använder och 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: b1be8759dd246a8819e8546e3c72f391e26a8dc5
+source-git-commit: a8e6b9e2c001c135bf2739ef873e75c22b8c025e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '360'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ Följ stegen nedan för att navigera till Cloud Acceleration Manager (CAM):
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-1.png)
 
-### Skapa ett projekt i Cloud Acceleration Manager {#create-project}
+### Skapa och hantera ett projekt i Cloud Acceleration Manager {#create-project}
 
 På landningssidan i CAM-hanteraren (Cloud Acceleration Manager) kan du skapa och redigera flera projekt.
 
