@@ -4,10 +4,10 @@ description: Den här sidan innehåller en översikt över implementeringsfasen 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 5af319d30198329fd2312c11d88bf326bc4cdae7
+source-git-commit: 8641c14114c5f1f2f69a3a1b51eac38ab6f4f541
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 3%
+source-wordcount: '563'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,14 @@ Implementeringsfasen omfattar:
 * [AEM som Cloud Service](#aem-as-a-cloud-service-deployment)
 * [Innehållsöverföring](#content-transfer)
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-1.png)
+
+Klicka på projektkortet för att öppna projektstartsidan och navigera till avsnittet **Implementering**, som visas i bilden nedan.
+
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-1.png)
+
+>[!NOTE]
+>Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/getting-started-cam.md).
+
 
 ## Använda det lokala utvecklingskortet {#local-development}
 
@@ -62,13 +69,13 @@ AEM som driftsättningskort för Cloud Service innehåller allt relevant innehå
 
 Följ det här avsnittet för att utforska AEM som aktivitetskort för driftsättningskort för Cloud Service:
 
-1. Klicka på knappen **Visa** på **AEM som ett Cloud Service Deployment**-kort.
+1. Klicka på knappen **Visa** på **AEM som aktivitetskort för Cloud Service Deployment**.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-4.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-6.png)
 
 1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-5.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-7.png)
 
 
 ## Använda innehållsöverföringskort {#content-transfer}
@@ -77,17 +84,25 @@ Aktivitetskortet för innehållsöverföring innehåller riktlinjer och övervä
 
 Följ det här avsnittet för att utforska aktivitetskortet för innehållsöverföring:
 
-1. Klicka på knappen **Visa** på kortet **Lokal utveckling**.
+1. Klicka på knappen **Visa** på aktivitetskortet **Innehållsöverföring**.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-4.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-8.png)
 
 1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-5.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-9.png)
 
->[!NOTE]
->Granska [förutsättningarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en) och [god praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en) innan du använder verktyget Innehållsöverföring.
+   >[!NOTE]
+   >Granska [förutsättningarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en) och [god praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en) innan du använder verktyget Innehållsöverföring.
 
-En ny verktygskalkylator för innehållsöverföring har tillhandahållits för att beräkna hur lång tid det kan ta att slutföra innehållsöverföringsaktiviteten. Du kan använda storleksreglaget för innehållsdatabas för att välja den storlek som gäller för ditt projekt. Överföringstiden varierar för extraherings- och intagsfaserna. Du kan beräkna storleken på AEM databas genom att köra rapporten Diskanvändning under `http://HOST:PORT/etc/reports/diskusage.html`.
+### Aktivitet för verktyget Innehållsöverföring beräknas {#calculating}
+
+En ny verktygskalkylator för innehållsöverföring har tillhandahållits för att beräkna hur lång tid det kan ta att slutföra innehållsöverföringsaktiviteten. Du kan använda storleksreglaget för innehållsdatabas för att välja den storlek som gäller för ditt projekt. Överföringstiden varierar för extraherings- och intagsfaserna.
+
+Du kan beräkna storleken på AEM databas genom att köra rapporten Diskanvändning under `http://HOST:PORT/etc/reports/diskusage.html`.
 
 Du kan också beräkna storleken på specifika databassökvägar med parametern `path`, till exempel `http://HOST:PORT/etc/reports/diskusage.html?path=/content/dam`.
+
+## What&#39;s Next {#whats-next}
+
+När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du använder implementeringsfasen är du nu redo att gå vidare till nästa steg, Using the GoLive Phase.
