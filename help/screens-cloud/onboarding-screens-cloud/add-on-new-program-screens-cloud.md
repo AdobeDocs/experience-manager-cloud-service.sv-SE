@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du lägger till ett skärmstillägg
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 9d3c43f863cff3117186cd6bcf358a7069a6b255
+source-git-commit: 83d2ac2d22827ebe13578b900907dd089d8d7e45
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '311'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ I följande avsnitt beskrivs hur du lägger till skärmar som ett tillägg till 
 
 Följ stegen nedan för att lägga till skärmar som tillägg till ett nytt program i Cloud Manager:
 
-1. Navigera till Cloud Manager.
+1. Navigera till [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
    >[!NOTE]
    >Mer information om Cloud Manager finns i [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html?lang=en).
