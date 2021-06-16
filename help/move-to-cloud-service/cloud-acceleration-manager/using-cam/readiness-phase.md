@@ -4,9 +4,9 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 8f219a2b59f3526824cf4c93cb7a0f6fe99eabc7
+source-git-commit: 92c1119682ab381a7e107b15470abdc8444bd18c
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '452'
 ht-degree: 3%
 
 ---
@@ -61,28 +61,35 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
 
 1. Granska och utforska kontrollpanelen Best Practices Analysis i CAM. Mer information finns i avsnittet [Analysrapport om metodtips](#analysis-report) nedan.
 
+   >[!NOTE]
+   >När du överför en ny rapport återställs alla bedömningar.
+
 ### Analysrapport för metodtips för granskning {#analysis-report}
 
-Utforska följande kort som finns på rapportsidan:
+Utforska följande kort som finns på sidan Best Practices Analysis Report:
 
 >[!NOTE]
->När du överför en ny rapport återställs alla bedömningar.
+> Med varje kort kan du
+>* klicka på varje kort för att öppna den tillhörande fliken
+>* bokmärk alla rapportflikar (inklusive filtrering) för delning eller framtida hämtning
+>* använda informationsikonen för att visa information om varje rapportsökning
 
-1. **Rapportegenskaper**: Det här kortet innehåller information i rapportegenskaper som rapportdatum, varaktighet, filter, överföringsdatum och så vidare.
 
-1. **Rapportöversikt**:
+#### Rapportegenskaper {#report-properties}
 
-   Kortet innehåller rapportresultaten
+Det här kortet innehåller information i rapportegenskaper som rapportdatum, varaktighet, filter, överföringsdatum och så vidare.
 
-1. **Utvärdering av bästa praxis**
+#### Rapportöversikt {#report-overview}
 
-1. **Utvärdering av migreringskomplexitet**
+Kortet innehåller rapportresultaten
 
-   >[!NOTE]
-   > Dessutom kan du:
-   >* klicka på varje kort för att öppna den tillhörande fliken
-   >* bokmärk alla rapportflikar (inklusive filtrering) för delning eller framtida hämtning
-   >* använda informationsikonen för att visa information om varje rapportsökning
+#### Utvärdering av bästa praxis {#best-practices-assessment}
+
+Det här kortet ger en
+
+#### Utvärdering av migreringskomplexitet {#migration-complexity-assessment}
+
+Det här kortet innehåller
 
 
 ## Använda Planerings- och inställningskort {#planning-setup}
