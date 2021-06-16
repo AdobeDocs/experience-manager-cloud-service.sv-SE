@@ -4,9 +4,9 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 92c1119682ab381a7e107b15470abdc8444bd18c
+source-git-commit: 991ead30264d40bc222b852aa1578787bc27bee3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '511'
 ht-degree: 3%
 
 ---
@@ -68,6 +68,8 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
 
 Utforska följande kort som finns på sidan Best Practices Analysis Report:
 
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-bpareport.png)
+
 >[!NOTE]
 > Med varje kort kan du
 >* klicka på varje kort för att öppna den tillhörande fliken
@@ -77,11 +79,26 @@ Utforska följande kort som finns på sidan Best Practices Analysis Report:
 
 #### Rapportegenskaper {#report-properties}
 
-Det här kortet innehåller information i rapportegenskaper som rapportdatum, varaktighet, filter, överföringsdatum och så vidare.
+Det här kortet innehåller information om rapportegenskaper som rapportdatum, varaktighet, filter, överföringsdatum och information om Adobe Experience Manager (AEM).
+
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-properties.png)
 
 #### Rapportöversikt {#report-overview}
 
 Kortet innehåller rapportresultaten
+
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-overview.png)
+
+Om du klickar på den här rapporten öppnas fliken **Rapport**, som i bilden nedan.
+
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-overview2.png)
+
+Du kan filtrera rapporten baserat på prioritet, undertyp eller antal.
+
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-overview3.png)
+
+>[!NOTE]
+>Läs [Tolka rapporten Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html?lang=en) om du vill veta mer om felkategorier och prioritetsnivåer.
 
 #### Utvärdering av bästa praxis {#best-practices-assessment}
 
