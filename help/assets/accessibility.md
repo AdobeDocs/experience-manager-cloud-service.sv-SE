@@ -2,16 +2,15 @@
 title: Hjälpmedel i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] kan hjälpa användare med funktionshinder.
 contentOwner: AG
-feature: Accessibility,Asset Management
+feature: Tillgänglighet,Resurshantering
 role: Business Practitioner,Architect,Leader
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+exl-id: a6d24ba6-3cb1-42cb-9942-f78572c93358
+source-git-commit: 67c4aabea838c1430e43f5ebaa8a52ec55362936
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1896'
 ht-degree: 1%
 
 ---
-
 
 <!--
 Possible topics to cover in this article are below.
@@ -87,7 +86,7 @@ Följande åtgärder i [!DNL Assets] fungerar med de angivna kortkommandona. De 
 | Kolumnvy i [!DNL Assets]-användargränssnitt | Upp- och nedpilar | Navigera till filer och mappar i samma hierarki. |
 | Kolumnvy i [!DNL Assets]-användargränssnitt | Vänster- och högerpilstangenter | Navigera till filer och mappar ovanför eller nedanför den aktuella mappen. |
 | Bläddra bland mappar i [!DNL Assets] | `/` | Anropa sökning genom att öppna Omnissearch-rutan. |
-| [!DNL Assets] Konsol | ` | Växla sidoskenor |
+| [!DNL Assets] Konsol |  | Växla sidoskenor |
 | [!DNL Assets] Konsol | `Alt + 1` | Öppna innehållsträdet. |
 | [!DNL Assets] Konsol | `Alt + 2` | Öppna [!UICONTROL Navigation] vänster skena. |
 | [!DNL Assets] Konsol | `Alt + 3` | Visa [!UICONTROL Timeline] för en markerad resurs. |
@@ -105,7 +104,7 @@ Följande åtgärder i [!DNL Assets] fungerar med de angivna kortkommandona. De 
 | Egenskapssidor för resurs | `Ctrl + S` | Spara ändringar. |
 | [!DNL Assets] Konsol | `?` | Visa en lista med kortkommandon. |
 
-## Logga in och navigera i [!DNL Assets]-användargränssnittet {#login}
+## Logga in och navigera i användargränssnittet för [!DNL Assets] {#login}
 
 Användare kan använda tangentbordet för att navigera till och fylla i inloggningsfältet för att logga in. Felmeddelandena på grund av felaktiga kombinationer av användarnamn och lösenord på inloggningssidan meddelas av skärmläsare varje gång felet inträffar.
 
