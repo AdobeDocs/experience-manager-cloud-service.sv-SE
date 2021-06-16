@@ -4,9 +4,9 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: e0088f616987dbba73674f4d430406322a7ec029
+source-git-commit: 8f219a2b59f3526824cf4c93cb7a0f6fe99eabc7
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '441'
 ht-degree: 3%
 
 ---
@@ -21,12 +21,18 @@ Beredskapsfasen omfattar:
 * [Best Practices Analysis](#best-practices-analysis)
 * [Planering och installation](#planning-setup)
 
-Klicka på projektkortet för att öppna projektstartsidan och navigera till avsnittet **Beredskap**, som visas i bilden nedan.
+Följ stegen nedan för att gå till beredskapsfasen:
 
-![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-1.png)
+1. Klicka på projektkortet för att öppna projektstartsidan.
 
->[!NOTE]
->Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/getting-started-cam.md).
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-landing1.png)
+
+1. Navigera till avsnittet **Beredskap**, som visas i figuren nedan.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-1.png)
+
+   >[!NOTE]
+   >Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/getting-started-cam.md).
 
 ## Använda analyskort för metodtips {#best-practices-analysis}
 
@@ -49,12 +55,35 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-3.png)
 
-1. Granska och utforska kontrollpanelen Best Practices Analysis i CAM.
+1. När du har överfört en ny rapport visas rapporten Best Practices Analysis.
 
-   * Klicka på varje kort för att öppna den tillhörande fliken
-   * Du kan skapa ett bokmärke för alla rapportflikar (inklusive filtrering) för delning eller framtida hämtning
-   * Använd informationsikonen för att visa information om varje rapportsökning
-   * Om du överför en ny rapport återställs alla bedömningar
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/cam-bpareport.png)
+
+1. Granska och utforska kontrollpanelen Best Practices Analysis i CAM. Mer information finns i avsnittet [Analysrapport om metodtips](#analysis-report) nedan.
+
+### Analysrapport för metodtips för granskning {#analysis-report}
+
+Utforska följande kort som finns på rapportsidan:
+
+>[!NOTE]
+>När du överför en ny rapport återställs alla bedömningar.
+
+1. **Rapportegenskaper**: Det här kortet innehåller information i rapportegenskaper som rapportdatum, varaktighet, filter, överföringsdatum och så vidare.
+
+1. **Rapportöversikt**:
+
+   Kortet innehåller rapportresultaten
+
+1. **Utvärdering av bästa praxis**
+
+1. **Utvärdering av migreringskomplexitet**
+
+   >[!NOTE]
+   > Dessutom kan du:
+   >* klicka på varje kort för att öppna den tillhörande fliken
+   >* bokmärk alla rapportflikar (inklusive filtrering) för delning eller framtida hämtning
+   >* använda informationsikonen för att visa information om varje rapportsökning
+
 
 ## Använda Planerings- och inställningskort {#planning-setup}
 
