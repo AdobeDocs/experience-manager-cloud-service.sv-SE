@@ -1,14 +1,13 @@
 ---
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
-translation-type: tm+mt
-source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
+exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
+source-git-commit: b1266893cde4001366df153d0302282f7612c6ed
 workflow-type: tm+mt
-source-wordcount: '2864'
+source-wordcount: '2876'
 ht-degree: 4%
 
 ---
-
 
 # Grundläggande hantering {#basic-handling}
 
@@ -72,7 +71,7 @@ Följande konsoler finns i Navigation:
 | Projekt | Med projektkonsolen får du direktåtkomst till dina projekt. [Projekt är virtuella ](/help/sites-cloud/authoring/projects/overview.md) kontrollpaneler som kan användas för att skapa ett team. Sedan kan ni ge teamet tillgång till resurser, arbetsflöden och uppgifter och på så sätt låta andra arbeta mot ett gemensamt mål. |
 | Sites | Med platskonsolerna kan du [skapa, visa och hantera platser](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) som körs på din AEM. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
 | Experience Fragments | En [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en fristående upplevelse som kan återanvändas i alla kanaler och som har variationer, vilket sparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger. |
-| Assets | Med Resurskonsolen kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM.<!--add some kind of assets link--> |
+| Assets | Med Resurskonsolen kan du importera och hantera [digitala resurser som bilder, videor, dokument och ljudfiler](/help/assets/overview.md). Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. Du kan också skapa och hantera [innehållsfragment](/help/assets/content-fragments/content-fragments.md) från resurskonsolen. |
 | Personanpassning | Den här konsolen innehåller ett ramverk med verktyg för att [skapa riktat innehåll och presentera personaliserade upplevelser.](/help/sites-cloud/authoring/personalization/overview.md) |
 
 ## Panelen Verktyg {#tools-panel}
@@ -203,7 +202,7 @@ Det finns olika hjälpresurser:
    >En översikt över alla kortkommandon finns i följande dokumentation:
    >
    >* [Kortkommandon för att redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
-   >* [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
+   * [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
 
 
 ## Verktygsfältet Åtgärder {#actions-toolbar}
@@ -223,8 +222,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 ![Ytterligare alternativ](/help/sites-cloud/authoring/assets/additional-options.png)
 
 >[!NOTE]
->
->De enskilda ikonerna som är tillgängliga dokumenteras i relation till rätt konsol/funktion/scenario.
+De enskilda ikonerna som är tillgängliga dokumenteras i relation till rätt konsol/funktion/scenario.
 
 ## Snabbåtgärder {#quick-actions}
 
@@ -245,8 +243,7 @@ Du kan visa, navigera i och välja (för ytterligare åtgärder) dina resurser m
 * [Listvy](#list-view)
 
 >[!NOTE]
->
->Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas som miniatyrbilder.
+Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas som miniatyrbilder.
 
 ### Välja resurser {#selecting-resources}
 
@@ -376,8 +373,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 * Ändra objektens ordning med hjälp av den prickade lodräta listen längst till höger om varje objekt i listan.
 
    >[!NOTE]
-   >
-   >Det går bara att ändra ordningen i en ordnad mapp som har `jcr:primaryType`-värdet `sling:OrderedFolder`.
+   Det går bara att ändra ordningen i en ordnad mapp som har `jcr:primaryType`-värdet `sling:OrderedFolder`.
 
    ![Kolumnordning](/help/sites-cloud/authoring/assets/column-order.png)
 
@@ -396,8 +392,7 @@ I **Platser** kan du t.ex. markera endast innehåll (standard), innehållsträde
 Om du bara väljer innehåll visas bara ikonen för skenor. När något annat alternativ är markerat visas alternativnamnet bredvid ikonen för skenor.
 
 >[!NOTE]
->
->[Det finns ](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) kortkommandon som du kan använda för att snabbt växla mellan olika visningsalternativ.
+[Det finns ](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) kortkommandon som du kan använda för att snabbt växla mellan olika visningsalternativ.
 
 ### Innehållsträd {#content-tree}
 
@@ -408,10 +403,8 @@ Med innehållsträdets sidopanel i kombination med en listvy eller kortvy kan an
 ![Innehållsträd](/help/sites-cloud/authoring/assets/content-tree.png)
 
 >[!NOTE]
->
->När du har markerat en post i hierarkin kan du använda piltangenterna för att snabbt navigera i hierarkin.
->
->Mer information finns i [kortkommandona](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
+När du har markerat en post i hierarkin kan du använda piltangenterna för att snabbt navigera i hierarkin.
+Mer information finns i [kortkommandona](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
 
 ### Tidslinje {#timeline}
 
