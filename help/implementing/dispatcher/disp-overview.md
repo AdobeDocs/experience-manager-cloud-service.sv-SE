@@ -3,7 +3,7 @@ title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
-source-git-commit: 7b8b9ca2881d07482888ac2a53b8c3bdff02b6dd
+source-git-commit: cf42e530136d5eb8afe7204ae0af1353b1f31cbd
 workflow-type: tm+mt
 source-wordcount: '4247'
 ht-degree: 6%
@@ -36,7 +36,7 @@ Dispatcher Tools är en del av den övergripande AEM som en Cloud Service-SDK oc
 
 Dispatcher Tools, som ingår i [AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan hämtas från en zip-fil på [Software Distribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html)-portalen. Alla nya konfigurationer som är tillgängliga i den nya versionen av Dispatcher Tools kan användas för att distribuera till molnmiljöer som kör den versionen av AEM i molnet eller senare.
 
-Zippa upp SDK, som innehåller Dispatcher Tools för både macOS/Linux och Windows.
+Zippa upp SDK, som innehåller Dispatcher Tools för både macOS, Linux och Windows.
 
 **För macOS/Linux** gör du artefakten för Dispatcher-verktyget körbar och kör den. Dispatcher Tools-filerna extraheras automatiskt under den katalog som du lagrade dem i (där `version` är versionen av Dispatcher Tools).
 
@@ -112,7 +112,7 @@ Den här filen inkluderas från dina `.vhost`-filer. Den har en uppsättning oms
 
 * `conf.d/variables/custom.vars`
 
-Den här filen inkluderas från dina `.vhost`-filer. Du kan ange definitioner för Apache-variabler på den här platsen.
+Den här filen inkluderas från dina `.vhost`-filer. Du kan lägga till definitioner för Apache-variabler på den här platsen.
 
 * `conf.d/variables/global.vars`
 
