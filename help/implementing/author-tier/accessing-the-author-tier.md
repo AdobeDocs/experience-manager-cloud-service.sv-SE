@@ -1,14 +1,13 @@
 ---
 title: Åtkomst till författarnivån
 description: Åtkomst till författarnivån
-translation-type: tm+mt
-source-git-commit: e772687c4034a364912aa426a133134571246db9
+exl-id: 4143a125-3d46-4c44-b52c-f55c5194fb9c
+source-git-commit: ebc80a68d250ce5e95657f42419e6b40b843f25b
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 100%
+source-wordcount: '51'
+ht-degree: 78%
 
 ---
-
 
 # Åtkomst till författarnivån {#accessing-the-author-tier}
 
@@ -18,8 +17,4 @@ Adressformatet är för närvarande följande:
 
 * `https://author-p[Program ID]-e[EnvironmentID].adobeaemcloud.com/`
 
-Så småningom kommer det formatet att ersättas med ett standardformat för Adobe Experience Cloud:
-
-* `https://experience.adobe.com/#/@[TenantId]/`
-
-Det går därför inte att konfigurera anpassade domännamn för AEM-författarnivån.
+Anpassade domännamn för AEM författarnivå stöds inte.
