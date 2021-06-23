@@ -3,9 +3,9 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: dfbd0f38017d02810da05ccadbc5f2fbd5826aa3
+source-git-commit: 6c48b25d78ecbf3e30f42b2c2e69687b1f3094b8
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '891'
 ht-degree: 8%
 
 ---
@@ -23,7 +23,7 @@ AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte �
 
 Det AEM hanterade CDN uppfyller de flesta kunders krav på prestanda och säkerhet. För publiceringsnivån kan kunderna välja att peka på det från sina egna CDN, som de måste hantera. Detta kommer att tillåtas från fall till fall, baserat på att vissa krav uppfylls, inklusive, men inte begränsat till, den kund som har en äldre integrering med sin CDN-leverantör som är svår att överge.
 
-## AEM hanterad CDN {#aem-managed-cdn}
+## AEM hanterat CDN  {#aem-managed-cdn}
 
 Följ avsnitten nedan för att använda självbetjäningsgränssnittet för Cloud Manager för att förbereda innehållsleverans med hjälp av AEM färdiga CDN:
 
@@ -40,7 +40,7 @@ Mer information finns i [Hantera IP-Tillåtelselista](/help/implementing/cloud-m
 >
 >Endast förfrågningar från tillåtna IP-adresser hanteras av AEM hanterade CDN. Om du pekar ditt eget CDN mot det AEM hanterade CDN måste du se till att IP-adresserna för ditt CDN ingår i tillåtelselista.
 
-## Kund-CDN pekar på AEM hanterat CDN {#point-to-point-CDN}
+## Customer CDN points to AEM Managed CDN {#point-to-point-CDN}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_byocdn"
@@ -69,6 +69,10 @@ Innan du godkänner direkttrafik bör du validera med Adobe kundsupport att hela
 >[!NOTE]
 >
 >Kunder som hanterar sitt eget CDN bör säkerställa integriteten för de huvuden som skickas vidare till AEM CDN. Vi rekommenderar till exempel att kunderna tar bort alla `X-Forwarded-*`-huvuden och anger dem som kända och kontrollerade värden. `X-Forwarded-For` ska till exempel innehålla klientens IP-adress, medan `X-Forwarded-Host` ska innehålla platsens värd.
+
+>[!NOTE]
+>
+>Sandlådeprogrammiljöer har inte stöd för ett CDN som kunden tillhandahåller.
 
 Prestandan kan bli liten på grund av det extra hoppet, även om hoppet från kundens CDN till det AEM hanterade CDN sannolikt är effektivt.
 
