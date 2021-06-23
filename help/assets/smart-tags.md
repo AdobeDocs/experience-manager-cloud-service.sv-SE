@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Smarta taggar,Taggar
 role: Administrator,Business Practitioner
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: a1451147d50eb6166841ae809b49bdb95cc197f8
+source-git-commit: cff7454e2b6a1d55accef31d20d85378f08dfe0c
 workflow-type: tm+mt
 source-wordcount: '2309'
 ht-degree: 5%
@@ -25,7 +25,7 @@ I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Ado
 ![flowchart](assets/flowchart.gif) 
 -->
 
-## Resurstyper som stöds {#smart-tags-supported-file-formats}
+## Tillgångstyper som stöds {#smart-tags-supported-file-formats}
 
 Du kan tagga följande typer av resurser:
 
@@ -109,7 +109,7 @@ Kontrollera att bilderna i kursuppsättningen överensstämmer med följande rik
 
 Du kan inte ångra kursen. Riktlinjerna ovan bör hjälpa dig att välja bra bilder att utbilda.
 
-## Visa modellen för dina anpassade taggar {#train-model}
+## Ange modell för anpassade taggar {#train-model}
 
 Följ de här stegen för att skapa och utbilda en modell för dina företagsspecifika taggar:
 
