@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: de756a469f2be7b4f93d647b500cd4e8dc046342
+source-git-commit: 35137687e51d54454d3a4b7aed247a28d98dc291
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1104'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ När slutpunkten (eventuellt en autentiseringstoken för stöd för mellanlagrad
 
 ![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui-done.png)
 
-### Via Adobe I/O CLI {#adobe-cli}
+### Via Adobe I/O CLI  {#adobe-cli}
 
 >[!VIDEO](https://video.tv.adobe.com/v/37843?quality=12&learn=on)
 
@@ -128,6 +128,9 @@ Följande egenskaper kan konfigureras:
    >
    > Stöd för UID introducerades i Adobe Commerce (Magento) 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
 - Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogroten
+   >[!CAUTION]
+   >
+   > Från och med CIF Core Components version 2.0.0 togs stödet för `id` bort och ersattes med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som &quot;Katalogens rotkategoriidentifierare&quot;.
 
 Konfigurationen som visas ovan är för referens. Projekten ska innehålla egna konfigurationer.
 
