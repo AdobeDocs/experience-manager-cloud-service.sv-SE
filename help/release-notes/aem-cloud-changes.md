@@ -2,14 +2,14 @@
 title: Betydande ändringar av Adobe Experience Manager (AEM) som en Cloud Service
 description: Betydande ändringar av Adobe Experience Manager (AEM) som en Cloud Service
 exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
-source-git-commit: 71f05dda4ccd52c66bbf1d9025900976f07227f3
+source-git-commit: cff7454e2b6a1d55accef31d20d85378f08dfe0c
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 8%
+source-wordcount: '810'
+ht-degree: 9%
 
 ---
 
-# Observerbara ändringar av Adobe Experience Manager (AEM) som en Cloud Service {#notable-changes-aem-cloud}
+# Betydande ändringar av Adobe Experience Manager (AEM) som en Cloud Service {#notable-changes-aem-cloud}
 
 AEM Cloud Service har många nya funktioner för  att administrera AEM-projekt. Det finns dock ett antal skillnader mellan AEM Sites på plats eller i Adobe Managed Service jämfört med AEM Cloud Service. Det här dokumentet visar de viktiga skillnaderna.
 
@@ -48,7 +48,7 @@ De största skillnaderna finns i följande områden:
 
 * [Hantering och leverans av tillgångar](#asset-handling)
 
-## /apps and /libs are immutable at runtime {#apps-libs-immutable}
+## /apps och /libs kan inte ändras under körning {#apps-libs-immutable}
 
 Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddade. Funktioner eller anpassad kod som förväntas göra ändringar där kommer inte att kunna göra det. Ett fel returneras om att det här innehållet är skrivskyddat och att skrivåtgärden inte kunde slutföras. Detta påverkar ett antal AEM:
 
@@ -102,22 +102,16 @@ I AEM Cloud Service publiceras innehåll med [Sling Content Distribution](https:
 * Anpassning till replikeringsagenter för att omvandla innehåll
 * Använda omvänd replikering för att återföra innehåll från publicering till författaren
 
-## Ta bort det klassiska användargränssnittet {#classic-ui}
+## Borttagning av Classic UI {#classic-ui}
 
 Det klassiska användargränssnittet är inte längre tillgängligt i AEM Cloud Service.
 
-## Publiceringssidleverans {#publish-side-delivery}
+## Publish-side Delivery {#publish-side-delivery}
 
 HTTP-acceleration inklusive CDN och trafikhantering för författar- och publiceringstjänster tillhandahålls som standard i AEM Cloud Service.
 
 För projektövergångar från AMS eller en lokal installation rekommenderar Adobe starkt att man utnyttjar det inbyggda CDN, eftersom funktioner i AEM Cloud Service är optimerade för det CDN som tillhandahålls.
 
-## Resurshantering och leverans {#asset-handling}
+## Hantering och leverans av tillgångar {#asset-handling}
 
-Överföring, hantering och nedladdning av resurser har optimerats i Assets som en Cloud Service för att bli effektivare och möjliggöra bättre skalning och snabbare uppladdningar och nedladdningar. Detta kan dock påverka en del befintlig anpassad kod.
-
-* Standardarbetsflödet **DAM-resursuppdatering** i tidigare versioner av AEM är inte längre tillgängligt.
-* Webbplatskomponenter som levererar binära **utan omformning** bör använda direkt nedladdning.
-   * Sling GET-servertjänsten har ändrats till att göra detta som standard.
-* Webbplatskomponenter som levererar en binär **med transformering** (till exempel storleksändring via serverlet) kan fortsätta att fungera som de har.
-* Resurser som kommer in via Package Manager kräver manuell ombearbetning med åtgärden **Återbearbeta resurs** i Assets-gränssnittet.
+Överföring, bearbetning och nedladdning av resurser optimeras i Experience Manager Assets som en Cloud Service. Den är nu mer effektiv, ger större skalbarhet och snabbare överföringar och nedladdningar. Dessutom påverkas den befintliga anpassade koden och vissa åtgärder. Se [ändringarna av [!DNL Assets]](/help/assets/assets-cloud-changes.md).
