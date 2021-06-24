@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Resurshantering
 role: Business Practitioner
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
-source-git-commit: 33d5e756379af671f345e6f4e02d4a955f73a3c9
+source-git-commit: 230c5a20696684ec69ab154f97609139dbddfea4
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3058'
 ht-degree: 5%
 
 ---
@@ -79,7 +79,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
 1. Tryck på **[!UICONTROL Initial Content]** i listrutan till höger om verktygsfältet uppe på sidan.
 1. [Lägg till en Dynamic Media-komponent på en ](#adding-a-dynamic-media-component-to-a-page) sida som vanligt.
 
-## Lokaliserar Dynamic Media-komponenter {#localizing-dynamic-media-components}
+## Lokalisera Dynamic Media-komponenter {#localizing-dynamic-media-components}
 
 Du kan lokalisera Dynamic Media-komponenter på ett av två sätt:
 
@@ -172,9 +172,9 @@ Du kan redigera följande Dynamic Media-inställningar genom att trycka på ikon
 
    ![inställning för enhetens pixelproportioner för bildförinställning](/help/assets/dynamic-media/assets/dpr-ress-ip.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/dynamic-media/imaging-faq.md#dpr).
+   Se även [Om optimering av enhetspixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
 
-  Note that any [!DNL Experience Manager] Dynamic Media Smart Imaging DPR values are ignored. -->
+   Observera att alla DPR-värden för Dynamic Media Smart Imaging ignoreras.[!DNL Experience Manager]
 
 * **[!UICONTROL Title]** - Ändra bildens titel.
 
@@ -251,9 +251,9 @@ Du kan redigera följande Dynamic Media-inställning genom att klicka på **[!UI
 
    ![inställning för enhetspixelproportioner för smart beskärning](/help/assets/dynamic-media/assets/dpr-smartcrop.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/dynamic-media/imaging-faq.md#dpr). -->
+   Se även [Om optimering av enhetspixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
 
-<!--   Note that any [!DNL Experience Manager] Dynamic Media Smart Imaging DPR values are ignored. -->
+   Observera att alla DPR-värden för Dynamic Media Smart Imaging ignoreras.[!DNL Experience Manager]
 
 * **[!UICONTROL Title]** - Ändra titeln på bilden för smart beskärning.
 
@@ -354,7 +354,7 @@ Du kan redigera följande inställning genom att trycka på **[!UICONTROL Config
 
 Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Publicera förinställningar för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
-### Använda HTTP/2 för att leverera Dynamic Media-resurser {#using-http-to-delivery-dynamic-media-assets}
+### Använda HTTP/2 för att leverera Dynamic Media-material {#using-http-to-delivery-dynamic-media-assets}
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
