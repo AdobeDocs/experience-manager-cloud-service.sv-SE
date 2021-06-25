@@ -2,10 +2,10 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: fb169e85-ac19-4962-93d9-abaed812f948
-source-git-commit: 74b2720eae1fbc986cd1a252180a4b7f4187ed16
+source-git-commit: 4067db2234b29e4ffbe3e76f25afd9d8642a1973
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 94%
+source-wordcount: '1782'
+ht-degree: 82%
 
 ---
 
@@ -88,7 +88,7 @@ Ett AEM-program är den behållare som innehåller:
 |  Programelement |  Siffra |
 |--- |--- |
 | Koddatabas (Git) |  1 |
-| Baslinjebild (Sites eller Assets) |  1 |
+| Baslinjebild (Sites eller Assets) |  3 |
 | 1:1-förhållande mellan scen- och produktionsmiljö  | 0 eller 1 |
 | Icke-produktionsmiljöer (utveckling eller demonstration) | 0 till N |
 | Pipeline för varje miljö | 0 eller 1 |
@@ -99,7 +99,7 @@ Två typer av program är inledningsvis tillgängliga för AEM as a Cloud Servic
 
 * AEM Cloud Assets Service
 
-Båda dessa ger tillgång till ett antal funktioner. Redigeringsnivån innehåller alla Sites- och Assets-funktioner för alla program, men Assets-programmen har som standard ingen publiceringsnivå.
+Båda dessa ger tillgång till ett antal funktioner. Författarnivån kommer att innehålla alla Sites and Assets-funktioner för alla program, men Assets-programmen kommer som standard inte att ha någon publiceringsnivå eller förhandsvisningsnivå.
 
 ## Körningsarkitektur {#runtime-architecture}
 
@@ -120,6 +120,8 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
       * Inloggning på redigeringsnivå hanteras av Adobe Identity Management Services (IMS).
 
       * En dedikerad resurshanteringstjänst används för integrering och bearbetning av resurser.
+   * Förhandsgranskningsnivån består av en enda förhandsvisningsnod. Detta används för kvalitetssäkring av innehåll innan det publiceras på publiceringsnivån.
+
    * Publiceringsnivån består av två eller flera noder i en enda publiceringsgrupp: de kan fungera oberoende av varandra. Varje nod består av en AEM-utgivare och en webbserver utrustad med modulen AEM Dispatcher. Den skalas automatiskt efter webbplatsens trafik.
 
       * Slutanvändare, eller besökare, besöker webbplatsen via AEM Publish Service.
@@ -129,15 +131,15 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
 
    * Arkitekturen innehåller bara en redigeringsmiljö.
 
-* Både redigeringsnivån och publiceringsnivån läser och lagrar innehåll från/till en innehållslagringstjänst.
+* Både författarnivån, förhandsgranskningsnivån och publiceringsnivån läser och behåller innehåll från/till en innehållslagringstjänst.
 
-   * Publiceringsnivån läser bara innehåll från det beständiga lagret.
+   * Publiceringsnivån och förhandsgranskningsnivån läser bara innehåll från det beständiga lagret.
 
    * Redigeringsnivån läser och skriver innehåll från och till det beständiga lagret.
 
-   * BLOB-lagringen delas mellan publicerings- och redigeringsnivå, filerna *flyttas* inte.
+   * BLOB-lagringen delas av alla publicerings-, förhandsgransknings- och författarnivåer. filer är inte *flyttade*.
 
-   * När innehåll godkänns på redigeringsnivån är detta en indikation på att det kan aktiveras och därför skickas till det beständiga publiceringslagret. Detta sker via replikeringstjänsten, en pipeline för mellanprogram. Denna pipeline tar emot nytt innehåll där de enskilda noderna för publiceringstjänsten prenumererar på det innehåll som skickas till pipelinen.
+   * När innehåll godkänns från författarnivån är detta en indikation på att det kan aktiveras och därför skickas till publiceringsskiktet för beständighet. eller eventuellt till förhandsvisningsnivån. Detta sker via replikeringstjänsten, en pipeline för mellanprogram. Den här pipeline tar emot det nya innehållet, där de enskilda publiceringstjänstens (eller förhandsgranskningstjänstens) noder prenumererar på det innehåll som skickas till pipeline.
 
       >[!NOTE]
       >
@@ -147,15 +149,15 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
 
    * Åtkomst till redigerings- och publiceringsnivåerna sker alltid via en lastbalanserare. Det är alltid uppdaterat med de aktiva noderna på varje nivå.
 
-   * För publiceringsnivån är en CDN-tjänst (Continuous Delivery Network) också tillgänglig som första startpunkt.
+   * För publiceringsskiktet och förhandsvisningsskiktet finns även en CDN-tjänst (Continuous Delivery Network) som första startpunkt.
 
 * För demonstrationsinstanser av AEM as a Cloud Service förenklas arkitekturen till en enda redigeringsnod. Därför innehåller den inte alla egenskaper hos standardutvecklingsmiljön, scen- eller produktionsmiljön. Det innebär också att det kan finnas vissa driftavbrott och att det inte finns stöd för säkerhetskopierings-/återställningsåtgärder.
 
 ## Distributionsarkitektur {#deployment-architecture}
 
-Cloud Manager hanterar alla instansuppdateringar av AEM as a Cloud Service. Det är obligatoriskt på både redigerings- och publiceringsnivå eftersom det är det enda sättet att bygga, testa och distribuera kundprogram. Uppdateringarna kan aktiveras av Adobe när en ny version av AEM Cloud Service är klar eller av kunden när en ny version av kundens program är klar.
+Cloud Manager hanterar alla instansuppdateringar av AEM as a Cloud Service. Det är obligatoriskt, eftersom det är det enda sättet att bygga, testa och distribuera kundapplikationen, till både författaren, förhandsgranskningen och publiceringsnivån. Uppdateringarna kan aktiveras av Adobe när en ny version av AEM Cloud Service är klar eller av kunden när en ny version av kundens program är klar.
 
-Tekniskt sett genomförs detta med en distributionspipeline som är kopplad till varje miljö i ett program. När en pipeline för Cloud Manager körs skapas en ny version av kundprogrammet, både på redigerings- och publiceringsnivå. Det uppnås genom att de senaste kundpaketen kombineras med den senaste Adobe-baslinjebilden. När de nya bilderna har byggts och testats automatiserar Cloud Manager helt övergången till den senaste versionen av bilden genom att uppdatera alla tjänstnoder med ett rullande uppdateringsmönster. Detta medför inga driftavbrott i redigerings- och publiceringstjänsten.
+Tekniskt sett genomförs detta med en distributionspipeline som är kopplad till varje miljö i ett program. När en pipeline för Cloud Manager körs skapas en ny version av kundprogrammet, både för författaren, förhandsgranskningen och publiceringsskikten. Det uppnås genom att de senaste kundpaketen kombineras med den senaste Adobe-baslinjebilden. När de nya bilderna har byggts och testats automatiserar Cloud Manager helt övergången till den senaste versionen av bilden genom att uppdatera alla tjänstnoder med ett rullande uppdateringsmönster. Detta medför inga driftavbrott i redigerings- och publiceringstjänsten.
 
 <!--- needs reworking -->
 
