@@ -2,15 +2,14 @@
 title: 'Viloläge och avvänjningsmiljöer för sandlådor '
 description: Viloläge och avvänjningsmiljöer för sandlådor
 exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
-translation-type: tm+mt
-source-git-commit: 3b57acc47dd60d050ceebebb12bd9080b7fc5cf5
+source-git-commit: f06fe7f30d9f5e2eb5dcc6c8d542ace5f5e2f419
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '859'
 ht-degree: 0%
 
 ---
 
-# Viloläge och avvänjning av sandlådemiljöer {#hibernating-introduction}
+# Viloläge och avvänjningsmiljöer för sandlådor {#hibernating-introduction}
 
 Sandbox Program-miljöer anger ett *viloläge* om ingen aktivitet identifieras under en viss tid.
 
@@ -23,7 +22,7 @@ Viloläge kan antingen inträffa automatiskt eller manuellt. Det kan ta upp till
 
 Viloläge kategoriseras som:
 
-* **Miljöerna i**  programmet AutomaticSandbox försätts i viloläge automatiskt efter åtta timmars inaktivitet, vilket innebär att varken författaren eller publiceringstjänsten får begäranden.
+* **Miljöerna i**  programmet AutomaticSandbox försätts i viloläge automatiskt efter åtta timmars inaktivitet, vilket innebär att varken författaren, förhandsgranskaren eller publiceringstjänsten får begäranden.
 
 * **Manuell**: Som användare kan du förvara en sandlådeprogrammiljö manuellt, men du behöver inte göra det eftersom viloläget inträffar automatiskt efter en viss inaktivitetsperiod (åtta timmar).
 
@@ -75,7 +74,7 @@ Läs [Använda Developer Console](/help/implementing/cloud-manager/manage-enviro
    >Om du länkar till **utvecklarkonsolen** direkt från Cloud Manager kan du inte avplacera en sandlådeprogrammiljö. Du kan lösa problemet en gång på Developer Console. Lägg till följande mönster i slutet av URL:en `#release-cm-p1234-e5678 where 1234` 1234 som *program-ID* och 5678 är ditt *miljö-ID*.
 
    >[!NOTE]
-   >Du kan också navigera till **Developer Console** för att avaktivera viloläget genom att försöka komma åt författaren eller publiceringstjänsten för en miljö som redan är i viloläge. I så fall visas en landningssida med en länk till Developer Console. Se avsnittet Accessing a Hibernated Environment nedan.
+   >Du kan också navigera till **Developer Console** för att avplacera genom att försöka komma åt författaren, förhandsgransknings- eller publiceringstjänsten för en miljö som redan är i viloläge. I så fall visas en landningssida med en länk till Developer Console. Se avsnittet Accessing a Hibernated Environment nedan.
 
    >[!IMPORTANT]
    >Åtkomst till Developer Console definieras av **molnhanteraren - utvecklarrollen** i **Admin Console**. En användare med en utvecklarrollbehörighet kan avplacera en sandlådeprogrammiljö.
@@ -103,13 +102,13 @@ Läs [Använda Developer Console](/help/implementing/cloud-manager/manage-enviro
 
    ![](assets/de-hibernation-img4.png)
 
-### Behörigheter att ta bort från viloläget {#permissions-de-hibernate}
+### Behörigheter att ta bort viloläge {#permissions-de-hibernate}
 
 Alla användare med en produktprofil som ger dem åtkomst till AEM som Cloud Service bör ha tillgång till **Developer Console**, vilket gör att de kan avplacera miljön i viloläge.
 
-## Åtkomst till en viloläge {#accessing-hibernated-environment}
+## Åtkomst till en miljö i viloläge {#accessing-hibernated-environment}
 
-När användaren gör en webbläsarbegäran mot antingen författaren eller publiceringsnivån i en miljö i viloläge, kommer användaren att få en landningssida som beskriver miljöns viloläge, vilket visas i bilden nedan:
+När användaren gör en webbläsarbegäran mot antingen författaren, förhandsgranskningen eller publiceringsskiktet i en miljö i viloläge, kommer användaren att stöta på en landningssida som beskriver miljöns viloläge, vilket visas i figuren nedan:
 
 ![](assets/de-hibernation-img5.png)
 
