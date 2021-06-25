@@ -2,9 +2,9 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: f447303d3618eb2e9ea38873c88ed04280670218
+source-git-commit: 344a42f31444d30e9304b3a2198b1a4df17aa9c0
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1663'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Titta på videon [Versionsöversikt från maj 2021](https://video.tv.adobe.com/v
 
 ## AEM som Cloud Service Foundation {#foundation}
 
-### Nyheter i AEM som en Cloud Service Foundation {#what-is-new-foundation}
+### What is New in AEM as a Cloud Service Foundation {#what-is-new-foundation}
 
 * [Prerelease Channel](/help/release-notes/prerelease.md): Förgranska kommande funktioner under en hel månad innan de går live i produktion!
 
@@ -69,33 +69,7 @@ Titta på videon [Versionsöversikt från maj 2021](https://video.tv.adobe.com/v
 
 * Med optimering av pixelproportioner för smarta bildbehandlingsenheter (DPR) och nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Se [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md).
 
-   >[!NOTE]
-   >
-   >Tidslinjen i releasen för de ovanstående förbättringarna av Smart Imaging är:
-   >
-   >* Nordamerika 24 maj 2021 i NA,
-      >
-      >
-   * Europa, Mellanöstern och Afrika 25 juni 2021,
-      >
-      >
-   * Asien-Stillahavsområdet 19 juli 2021.
-
-
-* Introducerat stöd för nästa generationens AVIF-bildformat i [!DNL Dynamic Media]-leverans (fmt URL-modifierare).
-
-   >[!NOTE]
-   >
-   >Tidslinjen för releasen för AVIF-stöd är:
-   >
-   >* Nordamerika 10 maj 2021,
-      >
-      >
-   * Europa, Mellanöstern och Afrika 24 maj 2021,
-      >
-      >
-   * Asien-Stillahavsområdet 24 juni 2021.
-
+* Introducerat stöd för nästa generationens AVIF-bildformat i [!DNL Dynamic Media]-leverans (`fmt` URL-modifierare). Mer information och tidslinje finns i [API-fmt för bildvisning och återgivning](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
 
 ## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
@@ -240,7 +214,7 @@ Releasedatum för innehållsöverföringsverktyget v1.4.0 är 11 maj 2021.
 
 ## Commerce Add-on {#cloud-services-commerce}
 
-### Nyheter {#what-is-new-commerce}
+### Vad är nytt? {#what-is-new-commerce}
 
 * Sidnumreringsstöd för associerat innehåll i produktkonsolens egenskaper
 
