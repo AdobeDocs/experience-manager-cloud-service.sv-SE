@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 1ba960a930e180f4114f78607a3eb4bd5ec3edaf
+source-git-commit: 3cafd809cba2d844ee4507c41eb1b5302ad5b6ba
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '1071'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Manager som Cloud Service använder funktionen [Sling Content D
 
 ## Metoder för publicering av innehåll {#methods-of-publishing-content}
 
-### Snabb borttagning/publicering - planerad urklippning/publicering {#publish-unpublish}
+### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
 
 De här AEM standardfunktionerna för författarna ändras inte med AEM Cloud Service.
 
@@ -31,7 +31,7 @@ Om du vill genomföra den automatiska replikeringen för detta måste du aktiver
 
 ![Konfiguration av OSGi på av utlösare](/help/operations/assets/replication-on-off-trigger.png)
 
-### Trädaktivering {#tree-activation}
+### Aktivering av träd {#tree-activation}
 
 Så här utför du en trädaktivering:
 
@@ -82,7 +82,7 @@ Du kan också uppnå detta genom att skapa en arbetsflödesmodell som använder 
 
 * `replicateAsParticipant` (booleskt värde, standard:  `false`). Om den är konfigurerad som `true` använder replikeringen `userid` för det huvud som utförde deltagarsteget.
 * `enableVersion` (booleskt värde, standard:  `true`). Den här parametern avgör om en ny version skapas vid replikering.
-* `agentId` (strängvärde, standard innebär att alla aktiverade agenter används). Vi rekommenderar att du uttryckligen anger agentId; Om du till exempel anger värdet: publicera
+* `agentId` (strängvärde, standard betyder att endast agenter för publicering används). Vi rekommenderar att du uttryckligen anger agentId; Om du till exempel anger värdet: publicera. Om agenten anges till `preview` publiceras den till förhandsgranskningstjänsten
 * `filters` (strängvärde, standard innebär att alla sökvägar aktiveras). Tillgängliga värden är:
    * `onlyActivated` - bara sökvägar som inte är markerade som aktiverade aktiveras.
    * `onlyModified` - aktivera endast sökvägar som redan är aktiverade och som har ett ändringsdatum efter aktiveringsdatumet.
@@ -111,6 +111,66 @@ Här nedan hittar du exempel på loggar som genereras under ett arbetsflöde fö
 **Återuppta support**
 
 Arbetsflödet bearbetar innehåll i segment, som representerar en delmängd av det fullständiga innehåll som ska publiceras. Om arbetsflödet stoppas av systemet kommer det att starta om och bearbeta segmentet som ännu inte bearbetats. En loggsats anger att innehållet har återupptagits från en viss sökväg.
+
+### Replikerings-API {#replication-api}
+
+Du kan publicera innehåll med replikerings-API:t som finns i AEM som en Cloud Service.
+
+Mer information finns i [API-dokumentationen](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/day/cq/replication/package-summary.html).
+
+**Grundläggande användning av API**
+
+```
+@Reference
+Replicator replicator;
+@Reference
+ReplicationStatusProvider replicationStatusProvider;
+
+....
+Session session = ...
+// Activate a single page to all agents, which are active by default
+replicator.replicate(session,ReplicationActionType.ACTIVATE,"/content/we-retail/en");
+// Activate multiple pages (but try to limit it to approx 100 at max)
+replicator.replicate(session,ReplicationActionType.ACTIVATE, new String[]{"/content/we-retail/en","/content/we-retail/de"});
+
+// ways to get the replication status
+Resource enResource = resourceResolver.getResource("/content/we-retail/en");
+Resource deResource = resourceResolver.getResource("/content/we-retail/de");
+ReplicationStatus enStatus = enResource.adaptTo(ReplicationStatus.class);
+// if you need to get the status for more more than 1 resource at once, this approach is more performant
+Map<String,ReplicationStatus> allStatus = replicationStatusProvider.getBatchReplicationStatus(enResource,deResource);
+```
+
+**Replikering med specifika agenter**
+
+När resurser replikeras som i exemplet ovan kommer endast de agenter som är aktiva som standard att användas. I AEM som Cloud Service är detta bara agenten som kallas&quot;publicera&quot;, som kopplar författaren till publiceringsnivån.
+
+En ny agent med namnet&quot;preview&quot; har lagts till som stöd för förhandsvisningsfunktionen, som inte är aktiv som standard. Den här agenten används för att ansluta författaren till förhandsgranskningsnivån. Om du bara vill replikera via förhandsgranskningsagenten måste du uttryckligen välja den här förhandsgranskningsagenten via en `AgentFilter`.
+
+Se exemplet nedan om hur du gör detta:
+
+```
+private static final String PREVIEW_AGENT = "preview";
+
+ReplicationStatus beforeStatus = enResource.adaptTo(ReplicationStatus.class); // beforeStatus.isActivated == false
+
+ReplicationOptions options = new ReplicationOptions();
+options.setFilter(new AgentFilter() {
+  @Override
+  public boolean isIncluded (Agent agent) {
+    return agent.getId().equals(PREVIEW_AGENT);
+  }
+});
+// will replicate only to preview
+replicator.replicate(session,ReplicationActionType.ACTIVATE,"/content/we-retail/en", options);
+
+ReplicationStatus afterStatus = enResource.adaptTo(ReplicationStatus.class); // afterStatus.isActivated == false
+ReplicationStatus previewStatus = afterStatus.getStatusForAgent(PREVIEW_AGENT); // previewStatus.isActivated == true
+```
+
+Om du inte anger ett sådant filter och bara använder agenten för publicering, används inte agenten för förhandsgranskning och replikeringsåtgärden påverkar inte förhandsgranskningsnivån.
+
+Den övergripande `ReplicationStatus` för en resurs ändras bara om replikeringsåtgärden innehåller minst en agent som är aktiv som standard. I exemplet ovan är detta inte fallet eftersom replikeringen bara använder agenten för förhandsgranskning. Du måste därför använda den nya metoden `getStatusForAgent()` som gör att du kan fråga efter status för en viss agent. Den här metoden fungerar även för agenten&quot;publish&quot;. Det returnerar ett värde som inte är null om någon replikeringsåtgärd har utförts med den angivna agenten.
 
 ## Felsökning {#troubleshooting}
 
