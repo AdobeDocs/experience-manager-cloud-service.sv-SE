@@ -1,14 +1,13 @@
 ---
 title: Introduktion till Adobe Experience Manager as a Cloud Service – terminologi
-description: 'Introduktion till Adobe Experience Manager as a Cloud Service – terminologi. '
-translation-type: tm+mt
-source-git-commit: 465172db5bbc3b1dc3b42164d759a45e0ff13a8e
+description: Introduktion till Adobe Experience Manager as a Cloud Service – terminologi.
+exl-id: a76f68f1-4f84-4844-a099-0952707cd96d
+source-git-commit: 4067db2234b29e4ffbe3e76f25afd9d8642a1973
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 100%
+source-wordcount: '345'
+ht-degree: 97%
 
 ---
-
 
 # Adobe Experience Manager as a Cloud Service – terminologi {#adobe-experience-manager-as-a-cloud-service-terminology}
 
@@ -28,6 +27,7 @@ Följande termer används i samband med Adobe Experience Manager (AEM) as a Clou
 |---|---|
 | Adobe Pipeline | En mekanism för publicering av innehåll, från redigering till publicering. |
 | AEM-redigeringsnivå | Redigeringsmiljön i Sites och Assets. |
+| AEM | Beskriver förhandsvisningsmiljön för platser. |
 | AEM-publiceringsnivå | Publiceringsmiljön i Sites. |
 
 
