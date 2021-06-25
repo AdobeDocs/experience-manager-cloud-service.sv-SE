@@ -26,7 +26,7 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 | Konsoler | `?` | Hjälp för kortkommandon |
 |  | `/` | Anropa [sökning](/help/sites-cloud/authoring/getting-started/search.md) |
 |  | `Alt+`&lt;`Number`> | Växla vilken [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) som ska visas |
-|  | ` | Göm rälsstöd |
+|  | &grave; | Göm rälsstöd |
 |  | `e` | Redigera |
 |  | `p` | Egenskaper |
 |  | `m` | Flytta |
