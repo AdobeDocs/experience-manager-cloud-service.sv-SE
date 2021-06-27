@@ -1,16 +1,15 @@
 ---
 title: Söka efter fasetter.
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
-feature: Search,Metadata
+feature: Sök,Metadata
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
+source-git-commit: fbc8039057075248d5de4f030ee36a952592e609
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2248'
 ht-degree: 18%
 
 ---
-
 
 # Söka efter fasetter {#search-facets}
 
@@ -63,7 +62,7 @@ För textsökningar lägger du till `Fulltext`-predikatet i formuläret. Använd
 1. Navigera till sökpanelen i användargränssnittet Resurser. Egenskapspredikatet läggs till på panelen.
 1. Ange en beskrivning av resursen som ska genomsökas i textrutan. Ange t.ex. &quot;Adobe.&quot; När du gör en sökning visas resurser med en beskrivning som matchar&quot;Adobe&quot; i sökresultaten.
 
-## Lägg till ett Alternativpredikat {#adding-an-options-predicate}
+## Lägg till ett alternativs predikat {#adding-an-options-predicate}
 
 Med predikatet Alternativ kan du lägga till flera sökalternativ på panelen Filter. Du kan välja ett eller flera av dessa alternativ på panelen Filter om du vill söka efter resurser. Om du till exempel vill söka efter resurser baserat på filtyp konfigurerar du alternativ som Bilder, Multimedia, Dokument och Arkiv i sökformuläret. När du har konfigurerat de här alternativen utförs sökningen på resurser av typen GIF, JPEG, PNG och så vidare när du väljer alternativet Bilder på panelen Filter.
 
@@ -146,7 +145,7 @@ Med `Tags`-predikatet kan du utföra taggbaserade sökningar efter resurser. Som
 1. Ange taggar baserat på vilka du vill söka efter resurser eller välj från listan med förslag.
 1. Välj **[!UICONTROL Match all]** om du vill söka efter matchningar som innehåller alla taggar som du anger.
 
-## Lägger till andra predikat {#adding-other-predicates}
+## Lägga till andra predikat {#adding-other-predicates}
 
 På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpredikat kan du lägga till följande ytterligare predikat på sökpanelen:
 
@@ -269,17 +268,6 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
     <ul>
      <li>Etikett</li>
      <li>Egenskapsnamn</li>
-     <li>Beskrivning</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>Klassificering</td>
-   <td>Sökprediktion för att söka efter resurser baserat på deras genomsnittliga klassificering </td>
-   <td>
-    <ul>
-     <li>Etikett</li>
-     <li>Egenskapsnamn</li>
-     <li>Alternativ bana</li>
      <li>Beskrivning</li>
     </ul> </td>
   </tr>
