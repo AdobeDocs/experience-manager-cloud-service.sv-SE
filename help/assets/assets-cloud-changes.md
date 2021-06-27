@@ -4,9 +4,9 @@ description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [
 feature: Versionsinformation
 role: Business Practitioner,Leader,Architect,Administrator
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: fbc8039057075248d5de4f030ee36a952592e609
+source-git-commit: 19e64cc8239afefd1f17b6cffee5e681f220a68c
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,8 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 | Generering av deltillgångar för sammansatta tillgångar | Stöds inte. | Beroende användningsfall uppfylls inte. Anteckningar av flersidiga PDF-filer påverkas till exempel. Se [Skapa delresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets). |
 | Startsida | Stöds inte. | Se [[!DNL Assets] Home Page experience in [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-home-page.html) |
 | Extrahera resurser från ZIP-arkiv | Stöds inte. | Se [ZIP-extrahering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html#extractzip). |
-| Värdering av tillgångar | Stöds inte. | Widgeten i metadataramedigeraren som har tillhandahållit alternativet för resursklassificering stöds inte. |
-| Klassiskt användargränssnitt | Stöds inte. | Endast pekaktiverat användargränssnitt är tillgängligt. |
+| Värderingar av tillgångar | Stöds inte. | Värderingswidgeten i metadataramedigeraren stöds inte. |
+| Klassiskt användargränssnitt | Stöds inte. | Endast det Touch-aktiverade användargränssnittet är tillgängligt. |
 
 >[!MORELIKETHIS]
 >
