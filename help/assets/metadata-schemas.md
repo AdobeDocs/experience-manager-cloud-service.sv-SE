@@ -5,15 +5,14 @@ contentOwner: AG
 feature: Metadata
 role: Business Practitioner,Administrator
 exl-id: 9e94afeb-1c54-4653-bf52-b0910c0cb6c1
-translation-type: tm+mt
-source-git-commit: 855b8b1de11e5f986948d3144104d6b5226c2dd5
+source-git-commit: fbc8039057075248d5de4f030ee36a952592e609
 workflow-type: tm+mt
-source-wordcount: '2424'
+source-wordcount: '2416'
 ht-degree: 5%
 
 ---
 
-# Metadata schemas {#metadata-schemas}
+# Metadata-scheman {#metadata-schemas}
 
 Organisationer har en metadatamodell som förbättrar tillgångsidentifiering, användning, interoperabilitet och så vidare. Korrigera metadataprogram är akrossbart för att underhålla metadatadrivna arbetsflöden och processer. Om du vill följa en metadatastrategi och standarder för hela organisationen kan du använda metadatamodeller som hjälper DAM-användare att anpassa sig. [!DNL Adobe Experience Manager] Med kan du enkelt och flexibelt skapa, underhålla och använda metadatamatchningar.
 
@@ -98,8 +97,11 @@ Fliken **[!UICONTROL Build Form]** visar de formulärobjekt som du använder i s
 | [!UICONTROL Asset Referenced By] | Lägg till den här komponenten för att visa en lista över resurser som resursen refererar till. |
 | [!UICONTROL Asset Referencing] | Lägg till om du vill visa en lista med resurser som refererar till resursen. |
 | [!UICONTROL Products References] | Lägg till om du vill visa listan över produkter som är länkade till resursen. |
-| [!UICONTROL Asset Rating] | Lägg till för att visa alternativ för att klassificera resursen. |
 | [!UICONTROL Contextual Metadata] | Lägg till för att styra visningen av andra metadataflikar på egenskapssidan för resurser. |
+
+<!-- TBD: Ratings are not available in AEM as a Cloud Service. Removed via cqdoc-18089 ticket. 
+| [!UICONTROL Asset Rating]        | Add to display options for rating the asset.                                       |
+-->
 
 #### Redigera metadatakomponenten {#edit-the-metadata-component}
 
@@ -141,7 +143,7 @@ Om du vill visa en flik på egenskapssidan förutom fliken där komponenten Samm
 
 I stället för att ange egenskaper för alternativen på fliken **[!UICONTROL Settings]** kan du definiera alternativen i en JSON-fil genom att ange motsvarande nyckelvärdespar. Ange sökvägen till JSON-filen i fältet **[!UICONTROL JSON Path]**.
 
-#### Lägg till eller ta bort en flik i schemaformuläret {#add-delete-a-tab-in-the-schema-form}
+#### Lägga till eller ta bort en flik i schemaformuläret {#add-delete-a-tab-in-the-schema-form}
 
 Med schemaredigeraren kan du lägga till eller ta bort en flik. Standardschemaformuläret innehåller flikarna **[!UICONTROL Basic]**, **[!UICONTROL Advanced]**, **[!UICONTROL IPTC]** och **[!UICONTROL IPTC Extension]**.
 
@@ -202,7 +204,7 @@ I det här fallet skapar du en nod på `/etc/dam/metadataeditor/mimetypemappings
 | video/wmv | video/x-ms-wmv |
 | video/flv | video/x-flv |
 
-## Bevilja åtkomst till metadatamatcheman {#grant-access-to-metadata-schemas}
+## Bevilja åtkomst till metadatamappningar {#grant-access-to-metadata-schemas}
 
 Funktionen Metadata Schema är bara tillgänglig för administratörer. Administratörer kan dock ge åtkomst till icke-administratörer genom att ändra vissa behörigheter. Ange att användare som inte är administratörer ska skapa, ändra och ta bort behörigheter i mappen `/conf`.
 
