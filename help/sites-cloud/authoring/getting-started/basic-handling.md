@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: b1266893cde4001366df153d0302282f7612c6ed
+source-git-commit: af06d288af688dbc3baf73526460bc17d6ff7a35
 workflow-type: tm+mt
-source-wordcount: '2876'
+source-wordcount: '2881'
 ht-degree: 4%
 
 ---
@@ -19,11 +19,11 @@ Dokumentet är utformat för att ge en översikt över grundläggande hantering 
 >* Kortkommandon är tillgängliga i hela AEM. Speciellt när [du använder konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) och [redigerar sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
 
 
-## Ett touchaktiverat gränssnitt {#a-touch-enabled-ui}
+## Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
 AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att trycka, hålla ned och dra. Eftersom användargränssnittet för AEM är pekaktiverat kan du använda pekgester på enheter med pekskärm som mobiltelefonen eller surfplattan. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
 
-## Steg {#first-steps}
+## Steg 1 {#first-steps}
 
 Omedelbart efter inloggningen kommer du till navigeringspanelen [](#navigation-panel). Om du väljer något av alternativen öppnas respektive konsol.
 
@@ -265,7 +265,7 @@ Du kan markera alla objekt i valfri vy genom att klicka på alternativet **Marke
 
 ![Markera alla](/help/sites-cloud/authoring/assets/select-all.png)
 
-#### Avmarkera alla {#deselecting-all}
+#### Avmarkera allt {#deselecting-all}
 
 När du markerar objekt visas antalet markerade objekt längst upp till höger i verktygsfältet.
 
@@ -278,7 +278,7 @@ Du kan avmarkera alla objekt och avsluta markeringsläget genom att:
 
 I alla vyer kan du avmarkera alla objekt genom att trycka på Esc på tangentbordet om du använder en stationär enhet.
 
-#### Välja exempel {#selecting-example}
+#### Markera exempel {#selecting-example}
 
 1. I kortvyn:
 
@@ -315,7 +315,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * Mall som sidan baseras på
    * Ändringsinformation
    * Sidspråk
-   * Publikationsinformation
+   * Information om publikation och förhandsgranskning
 
 
 ### Kortvy {#card-view}
@@ -361,6 +361,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * **Namn**  - Sidnamn, som kan vara användbart i en flerspråkig redigeringsmiljö eftersom det är en del av sidans URL och inte ändras oavsett språk
    * **Ändrad**  - Senast ändrat den och senast ändrat av användaren
    * **Publicerad**  - Publiceringsstatus
+   * **Förhandsgranska**  - Förhandsgranska status
    * **Mall**  - Mall som sidan baseras på
    * **Arbetsflöde**  - Arbetsflöde som används på sidan. Mer information finns när du för musen över eller öppnar tidslinjen.
    * **Sidanalys**
