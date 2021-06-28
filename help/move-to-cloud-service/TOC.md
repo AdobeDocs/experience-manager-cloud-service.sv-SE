@@ -5,10 +5,10 @@ breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 feature: Distribuerar
 role: Architect, Developer
-source-git-commit: 64794b387efe6995cda6b58fb19ba36a04cbe577
+source-git-commit: a3a90868b64a0639f8a065c8c4d6ef6410094f3d
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 73%
+source-wordcount: '97'
+ht-degree: 70%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 73%
    + Content Transfer Tool {#content-transfer-tool}
       + [Översikt](/help/move-to-cloud-service/content-transfer-tool/overview-content-transfer-tool.md)
       + [Krav för verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/prerequisites-content-transfer-tool.md)
+      + [Hantera stora innehållsdatabaser](/help/move-to-cloud-service/content-transfer-tool/handling-large-content-repositories.md)
       + [Använda verktyget för användarmappning](/help/move-to-cloud-service/content-transfer-tool/using-user-mapping-tool.md)
       + [Använda Content Transfer Tool](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
 + Verktyg för omstrukturering av kod {#refactoring-tools}
