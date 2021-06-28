@@ -1,10 +1,7 @@
 ---
 title: Rolldefinitioner i AEM Screens som Cloud Service
 description: Den här sidan beskriver rolldefinitioner i AEM Screens som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 65b7bc7d911a80fa1ae03dc83eb49956b283a050
+source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
