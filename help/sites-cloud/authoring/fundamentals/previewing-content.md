@@ -2,9 +2,9 @@
 title: Förhandsgranska innehåll
 description: Lär dig hur du använder AEM Preview Service för att förhandsgranska innehåll innan du publicerar.
 exl-id: 6b4b57f6-2e66-4c83-94d9-bc1e0daab0f3
-source-git-commit: e31fd00b05832e84f87221287f79038acbdb8ec3
+source-git-commit: c30470b321a4fba8c8de9becb62c518faff05498
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,15 @@ Du kan publicera innehåll till förhandsgranskningstjänsten med hjälp av grä
 
 1. Klicka på **Nästa** och **Publicera** för att bekräfta.
 
-Förhandsgranskningsinnehållet visas. Lägg till **förhandsgranskning** i publicerings-URL:en för produktionsinstansen. URL:en ska utformas så här:
+1. I en dialogruta visas URL:er för att komma åt innehållet i förhandsvisningsmiljön.
 
-```
-https://preview-p[programID]-e[environmentID].adobeaemcloud.com/pathtopage.html
-```
+   Du kan också lägga till **förhandsgranskning** till publicerings-URL:en för produktionsinstansen om du vill visa förhandsvisningsinnehållet.
+
+   URL:en ska utformas så här:
+
+   ```
+   https://preview-p[programID]-e[environmentID].adobeaemcloud.com/pathtopage.html
+   ```
 
 Mer information om hur du hämtar URL:er för dina miljöer finns i [Hantera dina miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=en).
 
