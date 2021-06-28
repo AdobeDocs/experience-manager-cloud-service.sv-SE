@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: c7cba6217ec960219c607b76ab7f2f096af7459a
+source-git-commit: 10439fbe448152209211a8a1755ffe862f9cf48c
 workflow-type: tm+mt
 source-wordcount: '1663'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Titta på videon [Versionsöversikt från maj 2021](https://video.tv.adobe.com/v
 
 * Med optimering av pixelproportioner för smarta bildbehandlingsenheter (DPR) och nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Se [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md).
 
-* Introducerat stöd för nästa generationens AVIF-bildformat i [!DNL Dynamic Media]-leverans (`fmt` URL-modifierare). Mer information och tidslinje finns i [API-fmt för bildvisning och återgivning](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
+* Introducerat stöd för nästa generationens AVIF-bildformat i [!DNL Dynamic Media]-leverans (`fmt` URL-modifierare). Mer information och tidslinje finns i [API-fmt för bildvisning och återgivning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
 
 ## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
