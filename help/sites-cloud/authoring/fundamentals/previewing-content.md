@@ -2,9 +2,9 @@
 title: Förhandsgranska innehåll
 description: Lär dig hur du använder AEM Preview Service för att förhandsgranska innehåll innan du publicerar.
 exl-id: 6b4b57f6-2e66-4c83-94d9-bc1e0daab0f3
-source-git-commit: 53a3fb91dcf093d55e80c7dfcdef3a7855731841
+source-git-commit: f5e37a4ac8b179ac869609edc87f52858607ad36
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,8 @@ https://preview-p[programID]-e[environmentID].adobeaemcloud.com/pathtopage.html
 ```
 
 Mer information om hur du hämtar URL:er för dina miljöer finns i [Hantera dina miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=en).
+
+Innehåll kan också publiceras för förhandsgranskning med hjälp av ett [Publicera innehållsträdsarbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/replication.html?lang=en#publish-content-tree-workflow) med parametern agentId inställd på förhandsgranskning eller med hjälp av [replikerings-API](/help/operations/replication.md#replication-api) med ett AgentFilter konfigurerat för förhandsgranskning.
 
 ## Konfigurera OSGi-inställningar för förhandsgranskningsnivån {#configuring-osgi-settings-for-the-preview-tier}
 
