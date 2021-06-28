@@ -1,10 +1,7 @@
 ---
 title: AEM Screens som Cloud Service
 description: Den här sidan är en introduktion till AEM Screens som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 65b7bc7d911a80fa1ae03dc83eb49956b283a050
+source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -27,7 +24,7 @@ Skärmar som Cloud Service har två huvudkomponenter:
 * **Tjänsteleverantör**, som är den digitala signeringshanteringstjänsten som körs i Adobe I/O runtime. Med Screens Services Provider kan skribenten, utvecklarna och administratörerna hantera skärmar och spelare för uppspelning av innehåll när innehållet har lagts till i kanalerna. Dessutom informerar leverantören av skärmtjänster koordinatorn om var och när innehållet ska spelas upp på en hög nivå.
 
 
-## Arkitekturöversikt {#architectural-overview}
+## Arkitektöversikt {#architectural-overview}
 
 Som Cloud Service-användare kan du lägga till och hantera innehåll i kanaler, registrera och hantera bildskärmar och spelare från gränssnitt som utformats speciellt för skärmar som en Cloud Service, nämligen **Screens Services Provider** och **Screens Content Provider**.
 
