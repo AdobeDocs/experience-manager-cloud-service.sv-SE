@@ -1,10 +1,7 @@
 ---
 title: Köra en pipeline
 description: På den här sidan beskrivs hur du kör en pipeline för skärmar som ett Cloud Service-projekt i Cloud Manager.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 83d2ac2d22827ebe13578b900907dd089d8d7e45
+source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 1%
