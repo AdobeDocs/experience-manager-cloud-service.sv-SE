@@ -1,7 +1,7 @@
 ---
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
-source-git-commit: 00f189c2c446836cb3f92677516152168734c43d
+source-git-commit: 1299a4bd4e4139c971680e439a3b366162af0de2
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 1%
@@ -38,13 +38,13 @@ Följ det här avsnittet för att lära dig hur du konfigurerar att använda AzC
 
 ### 0. Bestämma den totala storleken för allt innehåll i datalagret {#determine-total-size}
 
-#### Azure Blob Storage Data Store
+#### Azure Blob Storage Data Store {#azure-blob-storage}
 
 Använd knappen **Beräkna storlek** på sidan för behållaregenskaper i Azure-portalen för att avgöra storleken på allt innehåll i behållaren. Till exempel:
 
 ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/Azure-blob-storage-data-store.png)
 
-#### Amazon S3 - datalager
+#### Amazon S3 - datalager {#amazon-data}
 
 Du kan använda behållarens Metrisk-flik för att bestämma storleken på allt innehåll i behållaren. Till exempel:
 
@@ -67,7 +67,7 @@ Skapa en ny fil med namnet azcopy.config i AEM crx-quickstart/cloud-migration .
 
 Innehållet i den här konfigurationsfilen kommer att vara annorlunda beroende på om AEM använder ett Azure- eller Amazon S3-datalager.
 
-#### Azure Blob Storage Data Store
+#### Azure Blob Storage Data Store {#azure-blob-storage-data}
 
 Filen azcopy.config bör innehålla följande egenskaper (se till att du använder rätt azCopyPath och azureSas för din instans).
 
@@ -80,7 +80,7 @@ azCopyPath=/usr/bin/azcopy
 azureSas=https://example-resource.blob.core.windows.net/example-container?sig=--REDACTED--
 ```
 
-#### Amazon S3 - datalager
+#### Amazon S3 - datalager {#amazon-data-store}
 
 Filen azcopy.config bör innehålla följande egenskaper (se till att använda rätt värden för din instans).
 
