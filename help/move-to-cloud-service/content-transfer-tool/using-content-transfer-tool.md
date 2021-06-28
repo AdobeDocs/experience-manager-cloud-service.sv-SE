@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: d08fc076306c54f8551c9df499efa0ded7bcc131
+source-git-commit: 5c5ddac1a3b948d1efbd06aa188ac6d8d897d37f
 workflow-type: tm+mt
-source-wordcount: '2918'
+source-wordcount: '2929'
 ht-degree: 39%
 
 ---
@@ -209,7 +209,7 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 >[!NOTE]
->Om Amazon S3 eller Azure Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp inmatningsfasen. Mer information finns i [Ingesting with AzCopy].
+>Om Amazon S3 eller Azure Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp inmatningsfasen. Mer information finns i [Ingesting with AzCopy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en#ingesting-azcopy).
 
 1. Välj en migreringsuppsättning på sidan *Översikt* och klicka på **Infoga** för att starta importen. Dialogrutan **Migration Set ingestion** visas. Klicka på **Ingest** för att starta intagningsfasen. Det går att importera innehåll till Author och Publish samtidigt.
 
