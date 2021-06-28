@@ -1,11 +1,11 @@
 ---
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
-mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 10439fbe448152209211a8a1755ffe862f9cf48c
+mini-toc-levels: 1
+source-git-commit: c30470b321a4fba8c8de9becb62c518faff05498
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 0%
 I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] som en Cloud Service.
 
 >[!NOTE]
+>
 >Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
 
 >[!NOTE]
@@ -24,82 +25,25 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.5.0 är 27 maj 2021.
-Följande version (2021.6.0) kommer att vara den 24 juni 2021.
+Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.6.0 är 28 juni 2021.
+Följande version (2021.7.0) kommer att vara den 29 juli 2021.
 
 ## Släpp video {#release-video}
 
-Titta på videon [Versionsöversikt från maj 2021](https://video.tv.adobe.com/v/333602) om du vill se en sammanfattning av de nya funktionerna.
+Titta på videon [Versionsöversikt från juni 2021](https://video.tv.adobe.com/v/334296) om du vill se en sammanfattning av de funktioner som lagts till.
 
-## AEM som Cloud Service Foundation {#foundation}
+## XML-dokumentation för AEM som molntjänst {#xml-documentation}
 
-### What is New in AEM as a Cloud Service Foundation {#what-is-new-foundation}
+### Nyheter {#what-is-new-xml-documentation}
 
-* [Prerelease Channel](/help/release-notes/prerelease.md): Förgranska kommande funktioner under en hel månad innan de går live i produktion!
-
-* [API-borttagning](/help/release-notes/deprecated-apis.md): en lista över de senaste inaktuella API:erna för AEM när en Cloud Service är tillgänglig.
-
-* [AEM som Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html): Uppdatera dina maven-projekt till den senaste versionen, som innehåller en inaktuell Java API-kontroll och andra förbättringar.
-
-## [!DNL Adobe Experience Manager Sites] som  [!DNL Cloud Service] {#sites}
-
-### Nyheter i [!DNL Sites] {#what-is-new-sites}
-
-* Du kommer snart att kunna verifiera innehåll på en ny [förhandsgranskningsnivå](/help/sites-cloud/authoring/fundamentals/previewing-content.md) för att simulera det slutliga utseendet och känslan som på publiceringsnivån. Detta aktiveras av guiden AEM Sites Managed Publication, som nu låter dig välja ett publiceringsmål mellan Publicera eller Förhandsgranska. Du kommer sedan åt upplevelser på förhandsgranskning via en dedikerad URL. Efter validering i förhandsgranskning kan innehåll publiceras från författare till publicering som vanligt. Om du aktiverar förhandsgranskningstjänsten i AEM som en Cloud Service-miljö kommer den att lanseras gradvis under de kommande veckorna.
-
-## [!DNL Adobe Experience Manager Assets] som  [!DNL Cloud Service] {#assets}
-
-### Nya funktioner i prerelease-kanalen {#what-is-new-assets-prerelease}
-
-* Metadata-scheman kan tillämpas direkt på mappegenskaperna.
-
-   ![Lägg till metadatamatchemat från mappegenskaper](/help/assets/assets/metadata-schema-folder-properties.png)
-
-* Med verktyget Massingestor kan du lägga till metadata vid ett massintag.
-
-* En förbättring av användarupplevelsen visar antalet resurser i en mapp. För mer än 1 000 resurser i en mapp visar [!DNL Assets] 1 000+.
-
-   ![Antalet resurser i en mapp visas i gränssnittet](/help/assets/assets/browse-folder-number-of-assets.png)
-
-### Fel som har korrigerats i [!DNL Assets] {#assets-bugs-fixed}
-
-* När du överför mycket stora filer kraschar [!DNL Experience Manager desktop app]. (CQ-4320942)
-* Alternativen i verktygsfältet är olika när samma samling väljs inifrån en mapp och när den väljs från ett sökresultat. (CQ-4321406)
-
-#### Nyheter i [!DNL Dynamic Media] {#what-is-new-dm}
-
-* Med optimering av pixelproportioner för smarta bildbehandlingsenheter (DPR) och nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Se [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md).
-
-* Introducerat stöd för nästa generationens AVIF-bildformat i [!DNL Dynamic Media]-leverans (`fmt` URL-modifierare). Mer information och tidslinje finns i [API-fmt för bildvisning och återgivning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
-
-## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
-
-### Nyheter i [!DNL Forms] {#what-is-new-forms}
-
-* **Sammanhangsberoende hjälp**: Kontextuell hjälp har lagts till för redigering av adaptiva formulär, mallredigerare och temaredigerare som hjälper författare att förstå olika funktioner i redigerare.
-* **Felmeddelanden i egenskapsläsaren**: Felmeddelanden för varje egenskap i webbläsaren Adaptive Forms Properties har lagts till. Dessa meddelanden hjälper till att förstå tillåtna värden för ett fält.
-
-### Kommande betafunktion för [!DNL Forms] {#what-is-new-forms-prerelease}
-
-Utdata som en molntjänst: Med Output Service kan du kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront och asynkront gruppläge. Med Output Service kan du skapa program som gör att du kan:
-
-* Generera slutliga formulärdokument genom att fylla i mallfiler med XML-data.
-* Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
-* Generera utskrifts-PDF:er från XFA-formulär-PDF:er.
-
-Du kan skriva till formscsbeta@adobe.com och registrera dig för betaprogrammet.
-
-### Fel som har korrigerats i [!DNL Forms] {#forms-bugs-fixed}
-
-* När du ersätter standardikonen för åtgärdsknapparna med en korallikon i ett steg Tilldela uppgift i AEM Forms Workflows slutar arbetsflödet att fungera och ett undantag loggas. Arbetsflödet fungerar som väntat när standardikoner används.
-* När du ändrar antalet kolumner i layoutlagret öppnar du redigeringslagret och drar några komponenter i en panel visas fyrkantiga blåa rutor i innehållsområdet i den adaptiva formulärredigeraren och redigeraren slutar svara.
-* Felmeddelande om ett alternativ för regelredigering som är relaterat till att ange en URL för en adaptiv resurs eller en extern resurs är för lång och inte användarvänlig.
+* XML Documentation for AEM as a Cloud Service is now GA.
+* Detta gör det möjligt för befintliga AEM Cloud Service-kunder att skaffa XML-dokumentationstillägg för import, skapande, hantering och leverans av tekniskt innehåll över flera kanaler, inklusive AEM webbplatser
 
 ## Cloud Manager {#cloud-manager}
 
 I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.6.0 och 2021.5.0.
 
-## Releasedatum {#release-date-june-cm}
+### Releasedatum {#release-date-june-cm}
 
 Releasedatum för Cloud Manager i AEM som Cloud Service 2021.6.0 är 10 juni 2021.
 Nästa version är planerad till 15 juli 2021.
@@ -142,85 +86,73 @@ Nästa version är planerad till 15 juli 2021.
 
 * Vissa programredigeringssekvenser kan resultera i att sidan **Översikt** visar ett missvisande meddelande om att köra programkonfigurationen igen.
 
+## [!DNL Experience Manager Assets] som  [!DNL Cloud Service] {#assets}
 
-### Releasedatum {#release-date-cm-may}
+### Nya funktioner i [!DNL Assets] {#ga-features-assets}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.5.0 är 6 maj 2021.
+* Med funktionen för innehållsautomatisering kan [!DNL Experience Manager Assets] utnyttja API:erna för [!DNL Adobe Creative Cloud] för att automatisera materialproduktionen i stor skala. Det förbättrar innehållets hastighet genom att dramatiskt minska den tid det tar och de iterationer som krävs för att skapa varianter av samma material. Funktionen kräver ingen kod och fungerar inifrån DAM.
+* [!DNL Adobe Asset Link] v3.0 for  [!DNL Adobe Photoshop],  [!DNL Adobe Illustrator]and  [!DNL Adobe InDesign] and  [!DNL Adobe Asset Link] v2.0 for  [!DNL Adobe XD] släpps. Den innehåller följande:
 
-### Nyheter {#what-is-new-may}
+   * Stöd för [!DNL Assets Essentials].
+   * Möjlighet att automatiskt ansluta till [!DNL Experience Manager] som [!DNL Cloud Service] eller [!DNL Assets Essentials].
 
-* Kvalitetsregeln PackageOverlaps identifierar nu fall där samma paket har distribuerats flera gånger, dvs. på flera inbäddade platser, i samma distribuerade paketuppsättning.
+<!-- TBD: Checking with PMs if AAE release should be mentioned here.
+-->
 
-* Databasslutpunkten i det offentliga API:t innehåller nu Git-URL:en.
+### Nya funktioner som är tillgängliga i betaversionskanalen [!DNL Assets] {#beta-features-assets}
 
-* Distributionsloggen som hämtas av en Cloud Manager-användare blir mer insiktsfull och innehåller nu information om fel och lyckade scenarier.
+* Vyinställningarna har förbättrats så att användarna kan välja en standardvy och en standardsorteringsparameter.
+* Länkdelningsfunktionen använder asynkrona nedladdningar som ökar nedladdningshastigheten.
+* Användare kan söka efter och filtrera mapparna baserat på egenskapspredikat.
+* [!DNL Experience Manager Assets] bäddar in PDF Viewer-filen som används av  [!DNL Adobe Document Cloud] för att förhandsgranska de dokument som stöds. Med den här funktionen kan användarna förhandsgranska PDF-filer och andra flersidiga filer utan komplex bearbetning. Detta förbättrar funktionspariteten med [!DNL Experience Manager] 6.5.
 
-* Intermittenta fel som uppstod när koden skulle skickas till Adobe Git har nu åtgärdats.
+### Fel som har korrigerats i [!DNL Assets] {#bugs-fixed-assets}
 
-* Tillägget Commerce kan nu användas för sandlådeprogram under arbetsflödet för redigeringsprogram.
+* När du lägger till en ägare till en undermapp lägger [!DNL Assets] även till samma användare som en ägare till den överordnade mappen. (CQ-4323737)
+* När användaren lägger till resurser i samlingar och använder ett filter vid sökning i samlingar kan användaren inte visa samlingar i listvyn. (CQ-4323181)
+* När användaren söker efter filer och mappar och väljer [!UICONTROL Files & Folders] visas bara filerna men inte mappen. (CQ-4319543)
 
-* Redigeringsprogrammet har uppdaterats.
+## [!DNL Experience Manager Sites] som  [!DNL Cloud Service] {#sites}
 
-* Tabellen Domännamn på sidan Miljöinformation visar upp till 250 domännamn via sidnumrering.
+### Nya funktioner i [!DNL Sites] {#ga-features-sites}
 
-* Lösningen visas på fliken Lösningar i arbetsflödena Lägg till program och Redigera program, även om det bara finns en lösning för programmet.
+* Publicera till förhandsgranskningsnivå visas nu som sidstatus i användargränssnittet för webbplatsadministratörer
+* Publicera på förhandsgranskningsnivå nu med förhandsgransknings-URL:en i slutet av åtgärden och behåll URL:en i sidegenskaperna för senare referens
 
-* Felmeddelandet i byggstegsloggen när bygget inte skapade några distribuerade innehållspaket var oklart.
+## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
-### Felkorrigeringar {#bug-fixes-cm-may}
+### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* Ibland kan användaren se en grön&quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
+* Lagt till möjlighet att filtrera anpassade kolumner AEM Inkorgen.
+* Lagt till möjlighet att använda temaredigeraren och stillagret i en adaptiv formulärredigerare för att formatera captcha-komponenten.
+* Snabbare och exaktare för automatisk detektering av logiska avsnitt i PDF forms och konvertering av dessa till motsvarande adaptiva formulärpaneler.
+* Flyttningsåtgärd har lagts till för att flytta en PDF- eller XDP-fil från en mapp till en annan.
 
-* I stället för att ta bort &quot;borttagna&quot;-variabler skulle API:t för pipelines-variablerna bara markera dem med statusen **DELETED**.
+### Betafunktion i [!DNL Forms] {#what-is-new-forms-prerelease}
 
-* Vissa problem med saklig kodkvalitet påverkade felaktigt tillförlitlighetsgraderingen.
+* **[!DNL AEM Forms as a Cloud Service - Communications]**: Med kommunikations-API:er kan du kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
+   * Generera slutliga formulärdokument genom att fylla i mallfiler med XML-data.
+   * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
+   * Generera utskrifts-PDF:er från ett XFA-formulär i PDF- och Adobe Acrobat-format (AcroForm).
 
-* Eftersom jokerteckendomäner inte stöds tillåter inte gränssnittet användaren att skicka in en jokerteckendomän.
+* **Variable Data Externalizer**: Du kan spara data AEM arbetsflödesvariabler i ett externt lagringssystem som hanteras av din organisation.
 
-* När en pipeline-körning startades mellan midnatt och kl. 1 UTC garanterades inte artefaktversionen som genererades av Cloud Manager att vara större än en version som skapades föregående dag.
+Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för betaprogrammet.
 
-* När projektet med exempelkoden har skapats visas Hantera Git som en länk från hjältekortet på sidan Översikt när sandlådeprogrammet har konfigurerats.
+### Fel som har korrigerats i [!DNL Forms] {#forms-bugs-fixed}
 
-## Content Transfer Tool {#content-transfer-tool}
+* När ett fält valideras innan data skickas till backend-tjänsten via FDM (Form Data Model), lyckas valideringen men tjänsten Form Data Model kan inte anropa eftervalideringen.
+* När du skickar ett formulär som innehåller ett vanligt HTML-överföringsfält från en Apple iOS-enhet skickas ibland inte filens innehåll och en 0-byte-fil tas emot i den andra änden. Detta är ett känt problem i Apple iOS. [FB9117687](https://feedbackassistant.apple.com/feedback/9117687)
 
-### Releasedatum {#release-date-ctt-latest}
+## CIF-tillägg {#cloud-services-cif}
 
-Releasedatum för Content Transfer Tool v1.4.6 är 27 maj 2021.
+### Vad är nytt? {#what-is-new-cif}
 
-### Nyheter {#what-is-new-ctt-latest}
+* Nya referensdatatyper för CIF-produkt och kategori för innehållsfragment (Inkl. användargränssnittsstöd för produkt-/kategoriväljare)
+* Ny kärnkomponent för Commerce Content Fragment
+* Heltextbaserad e-handelssökning stöds i AEM
+* Commerce Core Components stöder datainsamling i Adobe Commerce Sensei Recs
+* Förbättrade SEO-vänliga URL:er för kategorisidor
+* Stöd för anpassade HTTP-huvuden per plats/konfiguration
 
-* En ny loggningssats har lagts till i snabbstartsloggen om användaren inte har behörighet att köra Java-filen.
 
-* När en användare tar bort en migreringsuppsättning från CTT-gränssnittet, där en extrahering utfördes, tas mappen `tmp` som är kopplad till den migreringsuppsättningen bort för att spara utrymme.
-
-### Felkorrigeringar {#bug-fixes-ctt-latest}
-
-* När du tar bort en migreringsuppsättning visas ibland ett felmeddelande som inte är användbart i CTT-gränssnittet. Den här har åtgärdats.
-
-* Om användarna hade samma e-postadress på målet och värden men olika användarnamn när användarmappningen kördes, skulle hela inmatningen misslyckas. Den här har åtgärdats. I ett sådant scenario med konflikt hoppas användaren/gruppen över och loggas som en konflikt i loggfilen.
-
-### Releasedatum {#release-date-ctt-may}
-
-Releasedatum för innehållsöverföringsverktyget v1.4.0 är 11 maj 2021.
-
-### Nyheter {#what-is-new-ctt-may}
-
-* Den här versionen av verktyget Innehållsöverföring skapar textåtergivningar för resurser som migreras till Cloud Service. Textåtergivningar krävs för att ge stöd för fullständig textsökning i kapslade resurser.
-* Det maximala antalet migreringsverktyg för innehållsöverföring som en användare kan skapa har ökats från 4 till 10.
-
-### Felkorrigeringar {#bug-fixes-ctt-may}
-
-* Flera felkorrigeringar som rör funktionen för automatisk uppdatering i gränssnittet för verktyget Innehållsöverföring.
-* Innehållsöverföringsverktyget med `wipe=true` resulterade i ett felaktigt räknarindex på målet. Den här har åtgärdats.
-
-## Commerce Add-on {#cloud-services-commerce}
-
-### Vad är nytt? {#what-is-new-commerce}
-
-* Sidnumreringsstöd för associerat innehåll i produktkonsolens egenskaper
-
-### Felkorrigeringar {#bug-fixes-commerce}
-
-* Miniatyrbilder av resurser visas inte på fliken Resurser i produktegenskaper
-
-* Breadcrumb återställer förhandsvisningsdata i produktkonsolen
