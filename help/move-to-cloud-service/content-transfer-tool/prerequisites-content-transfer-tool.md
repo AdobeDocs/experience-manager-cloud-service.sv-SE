@@ -2,10 +2,10 @@
 title: Krav för verktyget Innehållsöverföring
 description: Krav för verktyget Innehållsöverföring
 exl-id: ef6d0e1a-0ed2-4485-adab-df6e0cf3ac4d
-source-git-commit: 269ef355e10acd99e9cfcb9cac9e676b079a7ecb
+source-git-commit: 87fa7079388e7a125ed62577123959524390486c
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ Läs alla överväganden som anges nedan:
 |--- |--- |
 | AEM | Verktyget Innehållsöverföring kan endast köras i AEM 6.3 eller senare. För att kunna använda verktyget för innehållsöverföring med AEM 6.2 eller tidigare krävs en uppgradering av innehållsarkivet på plats till AEM 6.5. Du behöver inte uppgradera koden till AEM 6.5 för detta. |
 | Storlek på segmentlager | Upp till 83 GB på *Författare* och 31 GB på *Publicera* stöds för närvarande. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för segmentbutikens storlek över dessa gränser. |
-| Total storlek för innehållsdatabas <br>*(segmentarkiv + datalager)* | Verktyget Innehållsöverföring är utformat för att överföra innehåll upp till 10 TB för datalagringstypen. Allt som är större än 10 TB stöds för närvarande inte. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för innehåll som är större än 10 TB. För datalagringstyper i Amazon S3 och Azure Data Store kan ett valfritt förkopieringssteg användas för att avsevärt snabba upp innehållsöverföringsprocessen och stödja en datalagringsstorlek på > 10 TB. |
+| Total storlek för innehållsdatabas <br>*(segmentarkiv + datalager)* | Verktyget Innehållsöverföring är utformat för att överföra innehåll upp till 10 TB för datalagringstypen. Allt som är större än 10 TB stöds för närvarande inte. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för innehåll som är större än 10 TB. <br>För datalager av typen Amazon S3 och Azure Data Store kan ett valfritt förkopieringssteg användas för att avsevärt snabba upp innehållsöverföringsprocessen och stöder större datalager än 10 TB. |
 | Innehåll i oföränderliga banor | Verktyget Innehållsöverföring kan inte användas för att migrera innehåll i oföränderliga sökvägar. Om du vill överföra innehåll från `/etc` får endast vissa `"/etc"`-sökvägar väljas, men bara för att ha stöd för [AEM Forms till AEM Forms som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/migrate-to-forms-as-a-cloud-service.html?lang=en#paths-of-various-aem-forms-specific-assets). För alla andra användningsfall, se [Omstrukturering av gemensamma databaser](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/all-repository-restructuring-in-aem-6-4.html?lang=en#restructuring) om du vill veta mer om omstrukturering av databaser. |
 
 ## What&#39;s Next {#whats-next}
