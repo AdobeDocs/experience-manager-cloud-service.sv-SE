@@ -1,10 +1,7 @@
 ---
 title: Publicera en kanal på skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du publicerar en kanal på skärmar som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 3da578d544ab82c61bdfecc0b470b1cd3315f996
+source-git-commit: 148fb0adf5c8ed60053225e84ddc42532fd7483c
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
