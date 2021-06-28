@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: af06d288af688dbc3baf73526460bc17d6ff7a35
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1930'
 ht-degree: 5%
 
 ---
@@ -197,7 +197,7 @@ Den här fliken visas bara för sidor som fungerar som utkast. Utformningar fung
 
 * **Utrullningskonfigurationer**  - Styr under vilka omständigheter ändringar ska spridas till Live Copy
 
-### Live-kopia {#live-copy}
+### Live Copy {#live-copy}
 
 * **Synkronisera**  - Synkronisera Live Copy med utkast, med lokala ändringar
 * **Återställ**  - Återställ live-kopia till läget för utkast, ta bort lokala ändringar
@@ -218,6 +218,12 @@ Den här fliken visas bara för sidor som fungerar som utkast. Utformningar fung
    * **Ärv utrullningskonfigurationer från överordnad**  - Om det här alternativet är markerat ärvs rollout-konfigurationen från sidans överordnade objekt
    * **Välj utrullningskonfiguration**  - Definierar under vilka omständigheter ändringar ska spridas från utkast och bara vara tillgängliga när  **Inherit Rollout Configs från** Parentis inte har valts
 
+### Förhandsgranska {#preview}
+
+När en förhandsvisningsmiljö är aktiverad ser du:
+
+* URL för förhandsgranskning - den URL som används för att komma åt innehållet i förhandsvisningsmiljön
+
 ## Redigera sidegenskaper {#editing-page-properties-1}
 
 * Från konsolen **Platser**:
@@ -228,7 +234,7 @@ Den här fliken visas bara för sidor som fungerar som utkast. Utformningar fung
 * Från sidredigeraren:
    * Med **Sidinformation** (och sedan **Öppna egenskaper**)
 
-### På webbplatskonsolen - en sida {#from-the-sites-console-single-page}
+### Från webbplatskonsolen - en sida {#from-the-sites-console-single-page}
 
 Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 
@@ -240,7 +246,7 @@ Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 1. Visa eller redigera egenskaperna efter behov.
 1. Använd sedan **Spara** för att spara uppdateringar följt av **Stäng** för att återgå till konsolen.
 
-### När du redigerar en sida {#when-editing-a-page}
+### När en sida redigeras {#when-editing-a-page}
 
 När du redigerar en sida kan du använda **Sidinformation** för att definiera sidegenskaperna:
 
