@@ -2,7 +2,7 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) som en Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) som en Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: f4d646e3898f568d17cfb09bd2974fc55a1260c4
+source-git-commit: 7085772d60f589418f7aeb50083906fab495c376
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 35%
@@ -13,11 +13,11 @@ ht-degree: 35%
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2021.05.0 |
+| Version | 2021.06.0 |
 | Typ | Kontinuerliga uppdateringar |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 
-## Förbered för en release {#how-to-prepare}
+## Förbereda för en release {#how-to-prepare}
 
 Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager] som Cloud Service uppdateras programmet automatiskt fortlöpande. Det finns två typer av uppdateringar, funktionsreleaser och viktiga uppdateringar:
 
@@ -35,7 +35,7 @@ Så här förbereder du en release:
 1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager-releasemartan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
 1. Läs versionsinformationen: Läs [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för att bekanta dig med releasefunktionerna och förhandsversionsfunktionerna.
 1. Få tillgång till och testa nya funktioner: Aktivera prerelease-kanalen](/help/release-notes/prerelease.md) i icke-produktionsmiljöer och börja testa funktionerna i dina anpassade miljöer.[
-1. Utbilda dina användare: Använd dokumentation och Experience League-resurser för att få användarna att komma igång och bli bättre på de nya funktionerna.
+1. Utbilda dina användare: Använd dokumentation och Experience League-resurser för att få användarna att komma igång och få en bättre överblick över de nya funktionerna.
 
 ## Viktig versionsinformation {#key-articles}
 
