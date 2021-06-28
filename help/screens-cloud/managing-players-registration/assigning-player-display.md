@@ -1,18 +1,15 @@
 ---
 title: Tilldela spelare till en skärm på skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du tilldelar en spelare till en skärm på skärmar som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 43192d92dd63e6db5572dad7b5f47646e5162130
+source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Tilldela spelaren till en skärm på skärmar som en Cloud Service {#assign-player-displays-screens-cloud}
+# Tilldela spelare till en skärm på skärmar som en Cloud Service {#assign-player-displays-screens-cloud}
 
 När projektkonfigurationen är klar måste du tilldela spelaren till en skärm för att kunna visa innehållet.
 
@@ -34,7 +31,7 @@ Följ stegen nedan för att tilldela en spelare till en skärm:
 
    ![bild](/help/screens-cloud/assets/player/register-player8.png)
 
-## Innehållsuppspelning {#content-playback}
+## Uppspelning av innehåll {#content-playback}
 
 När du har tilldelat en visning till en spelare, vilket visas i föregående avsnitt, visas den tilldelade visningen under panelen **TILLDELAD VISNING**.
 
