@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: c30470b321a4fba8c8de9becb62c518faff05498
+source-git-commit: 1c967d4114cae67da9e0c2cda14458329ecd7156
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -154,5 +154,25 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för bet
 * Commerce Core Components stöder datainsamling i Adobe Commerce Sensei Recs
 * Förbättrade SEO-vänliga URL:er för kategorisidor
 * Stöd för anpassade HTTP-huvuden per plats/konfiguration
+
+## Content Transfer Tool {#content-transfer-tool}
+
+### Releasedatum {#release-date-ctt-latest}
+
+Releasedatum för Content Transfer Tool v1.5.4 är 28 juni 2021.
+
+### Nyheter {#what-is-new-ctt-latest}
+
+* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en)-steg som lagts till för att användas med CTT. Steg före kopiering kan användas för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten när AEM är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage-datalager.
+
+* Guardrail har lagts till i CTT för att förhindra användare från att stoppa ett intag och eventuellt skada data när det har nått den kritiska punkten under intagningsfasen.
+
+* Extraheringsloggarna har blivit mer beskrivande och hjälper till vid felsökning.
+
+* Lagt till mer beskrivande statusmeddelanden för förtäring i användargränssnittet.
+
+### Felkorrigeringar {#bug-fixes-ctt-latest}
+
+* När ett förtäring på Author-instansen stoppades skrev användargränssnittet över ett tidigare slutfört intag på Publish-instansen till `STOPPED` från `FINISHED`. Den här har åtgärdats.
 
 
