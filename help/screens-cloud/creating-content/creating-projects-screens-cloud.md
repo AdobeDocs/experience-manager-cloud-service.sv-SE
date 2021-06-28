@@ -1,10 +1,7 @@
 ---
 title: Skapa ett projekt på skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du skapar ett projekt i skärmar som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: f0e005ddc59c575188d15986cabdbe04cb48ad03
+source-git-commit: c8c8eec6aab6e66e3e4eb96525e6f4f55633a5a0
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 0%
@@ -27,7 +24,7 @@ Följ stegen nedan för att skapa ett nytt projekt i Skärmar som en Cloud Servi
 1. Navigera till Screens Content Provider.
 
    >[!NOTE]
-   >Läs [Använda rasterinnehållsleverantör](/help/screens-cloud/setting-up-project/using-screens-content-provider.md) om du vill veta hur du får åtkomst till rasterinnehållsleverantör för att skapa ditt projekt.
+   >Läs [Använda rasterinnehållsleverantör] om du vill veta hur du får åtkomst till rasterinnehållsleverantör för att skapa ditt projekt.
 
 1. Klicka på **Skapa skärmprojekt** i åtgärdsfältets övre högra hörn.
 
@@ -46,7 +43,7 @@ Följ stegen nedan för att skapa ett nytt projekt i Skärmar som en Cloud Servi
 
    Nu när du har skapat ett AEM Screens-projekt kan du börja lägga till kanaler och platser i projektet.
 
-### Tar bort ett befintligt projekt {#deleting-project}
+### Ta bort ett befintligt projekt {#deleting-project}
 
 Du kan ta bort befintliga skärmar som ett Cloud Service-projekt.
 Följ stegen nedan för att ta bort ett befintligt projekt från leverantören av skärminnehåll:
@@ -64,4 +61,4 @@ Följ stegen nedan för att ta bort ett befintligt projekt från leverantören a
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har skapat ett AEM Screens-projekt kan du skapa en ny kanal och lägga till innehåll i kanalerna. Mer information om hur du skapar och hanterar innehåll i kanaler finns i [Skapa och hantera kanaler](/help/screens-cloud/creating-content/creating-channels-screens-cloud.md).
+Nu när du har skapat ett AEM Screens-projekt kan du skapa en ny kanal och lägga till innehåll i kanalerna. Mer information om hur du skapar och hanterar innehåll i kanaler finns i [Skapa och hantera kanaler].
