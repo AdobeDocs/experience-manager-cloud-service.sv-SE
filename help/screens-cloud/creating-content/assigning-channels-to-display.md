@@ -1,10 +1,7 @@
 ---
 title: Tilldela kanal till en skärm på skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du tilldelar en kanal till en skärm på skärmar som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 2ce9c1c30569edb59a0dcc8c241391e5e177b14c
+source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
