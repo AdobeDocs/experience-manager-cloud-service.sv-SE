@@ -1,10 +1,7 @@
 ---
 title: Första gången du loggar in på skärmar som en Cloud Service
 description: På den här sidan beskrivs de första stegen för att komma igång med skärmar som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 83d2ac2d22827ebe13578b900907dd089d8d7e45
+source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
