@@ -1,10 +1,7 @@
 ---
 title: Skapa och hantera kanaler på skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: f0e005ddc59c575188d15986cabdbe04cb48ad03
+source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 0%
