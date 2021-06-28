@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: 641fd1716555806311e62a020e70b799ab3c621d
+source-git-commit: d08fc076306c54f8551c9df499efa0ded7bcc131
 workflow-type: tm+mt
-source-wordcount: '2907'
+source-wordcount: '2918'
 ht-degree: 39%
 
 ---
@@ -37,11 +37,11 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 
-* När du har slutfört *extraheringsfasen* av innehållsöverföringsprocessen och innan du startar *överföringsfasen* för att importera innehåll till din AEM som en Cloud Service *Stage* eller *Produktion*-instanser måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Input överbelastning* så att Adobe kan säkerställa att inga avbrott inträffar under *Inmatningsprocessen*. Du måste logga supportbiljetten en vecka före ditt planerade *intag*-datum. När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg.
-   * Logga en supportanmälan med följande information:
-      * Exakt datum och beräknad tid (med din tidszon) när du tänker starta fasen *Inmatning*.
-      * Miljötyp (Stage eller Production) som du vill importera data till.
-      * Program-ID.
+* När du har slutfört *extraheringsfasen* av innehållsöverföringsprocessen och innan du startar *överföringsfasen* för att importera innehåll till din AEM som en Cloud Service *Stage* eller *Produktion*-instanser måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Input överbelastning* så att Adobe kan säkerställa att inga avbrott inträffar under *Inmatningsprocessen*. Du måste logga supportbiljetten en vecka före ditt planerade *intag*-datum. När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg. Du kan logga en supportanmälan med följande information:
+
+   * Exakt datum och beräknad tid (med din tidszon) när du tänker starta fasen *Inmatning*.
+   * Miljötyp (Stage eller Production) som du vill importera data till.
+   * Program-ID.
 
 * *Inmatningsfasen* för författaren skalas ned för hela författardistributionen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör fasen *Inmatning*.
 
@@ -159,7 +159,7 @@ Mer information finns i [Användarmappningsverktyget](https://experienceleague.a
 
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 >[!NOTE]
->Om Amazon S3 eller Azure Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp extraheringsfasen. Om du vill göra det måste du konfigurera en azcopy.config-fil innan du kör extraheringen. Mer information finns i [Hantera stora innehållsdatabaser].
+>Om Amazon S3 eller Azure Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp extraheringsfasen. Om du vill göra det måste du konfigurera en `azcopy.config`-fil innan du kör extraheringen. Mer information finns i [Hantera stora innehållsdatabaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en).
 
 1. Välj en migreringsuppsättning på sidan *Overview* och klicka på **Extract** för att påbörja extraheringen. Dialogrutan **Extrahering av migreringsuppsättning** visas och klicka på **Extract** för att starta extraheringsfasen.
 
