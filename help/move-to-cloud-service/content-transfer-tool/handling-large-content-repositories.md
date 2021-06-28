@@ -1,7 +1,7 @@
 ---
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
-source-git-commit: a3a90868b64a0639f8a065c8c4d6ef6410094f3d
+source-git-commit: 00f189c2c446836cb3f92677516152168734c43d
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 1%
@@ -134,7 +134,6 @@ Alla blobbar som kopierats före felet hoppas över automatiskt av AzCopy vid ef
 I och med Content Transfer Tool 1.5.4 har vi lagt till AzCopy-stöd för redigering.
 
 >[!NOTE]
->
 > Rekommendationen är att enbart köra Author-intag. Detta snabbar upp inläsningen av publiceringen när den körs senare.
 
 För att kunna dra nytta av AzCopy vid förtäring måste du ha en AEM som en Cloud Service version som är minst version 2021.6.5561.
