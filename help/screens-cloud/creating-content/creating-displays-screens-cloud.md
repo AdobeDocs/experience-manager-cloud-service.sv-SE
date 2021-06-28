@@ -1,10 +1,7 @@
 ---
 title: Skapa och hantera skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar skärmar som en Cloud Service.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 5c6f79fce71ce0fcb1f77f90faf3621000daac0f
+source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 1%
@@ -12,7 +9,7 @@ ht-degree: 1%
 ---
 
 
-# Skapa och hantera skärmar på skärmar som en Cloud Service {#create-displays-screens-cloud}
+# Skapa och hantera skärmar som en Cloud Service {#create-displays-screens-cloud}
 
 När du har publicerat kanalen är det nu dags att skapa en skärm i Screens Services Provider.
 
@@ -45,7 +42,7 @@ Följ stegen nedan för att skapa visningen från leverantören av skärmtjänst
 
    ![bild](/help/screens-cloud/assets/display/disp-4.png)
 
-### Tar bort en visning {#deleting-display}
+### Ta bort en visning {#deleting-display}
 
 Du kan ta bort en visning från leverantören av skärmtjänster.
 
