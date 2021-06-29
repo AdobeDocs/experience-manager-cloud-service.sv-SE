@@ -1,9 +1,9 @@
 ---
 title: Navigera till Screens Services Provider
 description: Den här sidan beskriver hur du navigerar till Screens Services Provider.
-source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
+source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '220'
 ht-degree: 1%
 
 ---
@@ -41,5 +41,5 @@ Följ stegen nedan för att konfigurera leverantören av skärmtjänster:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du konfigurerar leverantören av skärmtjänster kan du navigera till [Använda leverantören av skärminnehåll](/help/screens-cloud/configuring/using-screens-content-provider.md) för mer information.
+När du har lärt dig hur du konfigurerar leverantören av skärmtjänster kan du navigera till [Använda leverantören av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=end) för mer information.
 
