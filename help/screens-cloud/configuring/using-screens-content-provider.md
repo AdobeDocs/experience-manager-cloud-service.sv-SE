@@ -1,10 +1,10 @@
 ---
 title: Använda providern för skärminnehåll
 description: Den här sidan beskriver hur du använder Screens Content Provider för att skapa innehåll.
-source-git-commit: 00a4601b9c01309425e1a8df952387024167465b
+source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs hur du använder Screens Content Provider när du h
 
 >[!NOTE]
 >**Förutsättning**
->Innan du börjar läsa det här avsnittet bör du läsa Konfigurera leverantören av skärmtjänster för att lära dig hur du navigerar till det här användargränssnittet från leverantören av skärmtjänster.
+>Innan du börjar läsa det här avsnittet bör du läsa [Konfigurera leverantören av skärmtjänster](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en) för att lära dig hur du navigerar till det här användargränssnittet från leverantören av skärmtjänster.
 
 När du har loggat in på Screens Content Provider kan du nu skapa innehåll i uppspelning av innehåll. Använd leverantören av skärminnehåll för att skapa och hantera:
 
@@ -33,6 +33,6 @@ När du har loggat in på Screens Content Provider kan du nu skapa innehåll i u
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig navigera till leverantör av skärminnehåll bör du nu fortsätta att använda dina skärmar som en Cloud Service genom att nästa gång du granskar dokumentet Skapa och hantera projekt på skärmar som en Cloud Service.
+Nu har du lärt dig navigera till leverantör av skärminnehåll. Nu bör du fortsätta att använda skärmar som en Cloud Service nästa gång du granskar dokumentet, [Skapa och hantera ett projekt på skärmar som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html?lang=en).
 
 
