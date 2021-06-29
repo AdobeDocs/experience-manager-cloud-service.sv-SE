@@ -1,10 +1,10 @@
 ---
 title: Första gången du loggar in på skärmar som en Cloud Service
 description: På den här sidan beskrivs de första stegen för att komma igång med skärmar som en Cloud Service.
-source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
+source-git-commit: 3962d736778e4d17bb57296e9401503ce712a6cd
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 0%
+source-wordcount: '237'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ När avtalet har undertecknats startar Adobe Managed Services (AMS) kundintroduk
 
 ## Funktionspaketets tillgänglighet {#availability}
 
-Funktionspaketet AMS-screens-Cloud är tillgängligt via portalen för distribution av programvara.
+Funktionspaketet AMS-screens-Cloud är tillgängligt via [portalen för programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
 Klicka här för att ladda ned det senaste funktionspaketet.
 
 ## Lägga till användare i Adobe Admin Console {#admin-console}
