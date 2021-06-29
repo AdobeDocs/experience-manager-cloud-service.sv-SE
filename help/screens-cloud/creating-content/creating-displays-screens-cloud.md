@@ -1,9 +1,9 @@
 ---
 title: Skapa och hantera skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar skärmar som en Cloud Service.
-source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
+source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '292'
 ht-degree: 1%
 
 ---
@@ -52,4 +52,4 @@ Markera visningen och klicka på **Ta bort** längst ned på panelen, enligt bil
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig att skapa och hantera displayer för ditt projekt bör du fortsätta att använda dina skärmar som en Cloud Service genom att nästa gång du granskar dokumentet [Tilldela kanal till en bildskärm på skärmar som en Cloud Service](/help/screens-cloud/creating-content/assigning-channels-to-display.md).
+Nu när du har lärt dig att skapa och hantera displayer för ditt projekt bör du fortsätta att använda dina skärmar som en Cloud Service genom att nästa gång du granskar dokumentet [Tilldela kanal till en bildskärm på skärmar som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/assigning-channels-to-display.html?lang=en).
