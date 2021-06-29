@@ -1,7 +1,7 @@
 ---
 title: Navigera till Screens Services Provider
 description: Den här sidan beskriver hur du navigerar till Screens Services Provider.
-source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
+source-git-commit: e856724c678195d632461c9dc99dcf1bfd1c79a1
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Följ stegen nedan för att konfigurera leverantören av skärmtjänster:
 
 1. Navigera till leverantören av skärmtjänster från [här](https://experience.adobe.com/screens).
 
-   >[!NOTE]
+   >[!CAUTION]
    >Om du har tillgång till flera organisationer måste du se till att du har loggat in på rätt organisation. Om du vill ändra din organisation klickar du på organisationsnamnet i det övre högra hörnet av skärmen och väljer den organisation som du behöver åtkomst till.
 
 1. Välj **Kanaler** i det vänstra navigeringsfältet och klicka på **öppna i innehållsleverantören**.
