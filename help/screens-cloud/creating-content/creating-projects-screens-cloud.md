@@ -1,9 +1,9 @@
 ---
 title: Skapa ett projekt på skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du skapar ett projekt i skärmar som en Cloud Service.
-source-git-commit: c8c8eec6aab6e66e3e4eb96525e6f4f55633a5a0
+source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -61,4 +61,4 @@ Följ stegen nedan för att ta bort ett befintligt projekt från leverantören a
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har skapat ett AEM Screens-projekt kan du skapa en ny kanal och lägga till innehåll i kanalerna. Mer information om hur du skapar och hanterar innehåll i kanaler finns i [Skapa och hantera kanaler].
+Nu när du har skapat ett AEM Screens-projekt kan du skapa en ny kanal och lägga till innehåll i kanalerna. Mer information om hur du skapar och hanterar innehåll i kanaler finns i [Skapa och hantera en kanal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html?lang=en).
