@@ -1,10 +1,10 @@
 ---
 title: AEM Screens som Cloud Service
 description: Adobe Experience Manager Screens som Cloud Service - självhjälp och dokumentationslänkar
-source-git-commit: 0a58b18070c265befae5aa9faf60a3be53dbe6ec
+source-git-commit: 1d788b37d549d86270156cb43548a7c62fc1165f
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 63%
+source-wordcount: '438'
+ht-degree: 58%
 
 ---
 
@@ -18,8 +18,9 @@ På den här sidan visas självhjälpsresurser för AEM Screens som Cloud Servic
 
 ## Viktigt innehåll och AEM Screens som Cloud Service {#key-articles}
 
-* Introduktion till AEM Screens som Cloud Service
-* Introduktion till AEM Screens som Cloud Service
+* [Introduktion till AEM Screens som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/overview/introduction.html?lang=en)
+* [Introduktion till AEM Screens som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html?lang=en)
+* [Skapa ett projekt och börja skapa innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html?lang=en)
 
 ## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
 
