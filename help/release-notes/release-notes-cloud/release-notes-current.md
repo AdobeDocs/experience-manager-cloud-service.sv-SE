@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 2d0fc0351c62f920376c9d36f4919f827c711afc
+source-git-commit: c61b24781cce58644c5f7100e5b4f47e8ac90047
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1383'
 ht-degree: 1%
 
 ---
@@ -144,9 +144,9 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för bet
 * När ett fält valideras innan data skickas till backend-tjänsten via FDM (Form Data Model), lyckas valideringen men tjänsten Form Data Model kan inte anropa eftervalideringen.
 * När du skickar ett formulär som innehåller ett vanligt HTML-överföringsfält från en Apple iOS-enhet skickas ibland inte filens innehåll och en 0-byte-fil tas emot i den andra änden. Detta är ett känt problem i Apple iOS. [FB9117687](https://feedbackassistant.apple.com/feedback/9117687)
 
-## AEM Screens {#aem-screens}
+## [!DNL Adobe Experience Manager Screens] som  [!DNL Cloud Service] {#screens}
 
-I det här avsnittet beskrivs versionsinformationen för skärmar som en Cloud Service.
+I det här avsnittet beskrivs versionsinformationen för AEM Screens som en Cloud Service.
 
 ### Releasedatum {#release-date-june-screens}
 
