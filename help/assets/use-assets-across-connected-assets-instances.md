@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Resurshantering,Anslutna resurser,Resursdistribution,Användare och grupper
 role: Administrator,Business Practitioner,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 1c841eaa49eeb021fc7583c58aeaefc1236650f9
+source-git-commit: 192762e3efb23d84eb4378755975dc9b9d3158e8
 workflow-type: tm+mt
-source-wordcount: '2850'
+source-wordcount: '2851'
 ht-degree: 25%
 
 ---
@@ -58,7 +58,7 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 | DAM-distributör (teknisk användare) | Fjärr | <ul> <li> [!DNL Sites] `Authors`</li> <li> `connectedassets-assets-techaccts` </li> </ul> | `ksaner` på fjärrkontrollen  [!DNL Experience Manager] | Den här användaren som finns på fjärrdistributionen används av den lokala servern [!DNL Experience Manager] (inte författarrollen [!DNL Sites]) för att hämta fjärrresurserna, för författaren [!DNL Sites]. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
 | [!DNL Sites] teknisk användare | Lokalt | `connectedassets-sites-techaccts` | - | Tillåter [!DNL Assets]-distribution att söka efter referenser till resurser på [!DNL Sites]-webbsidorna. |
 
-## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Assets] distributioner {#configure-a-connection-between-sites-and-assets-deployments}
+## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Assets]-distributioner {#configure-a-connection-between-sites-and-assets-deployments}
 
 En [!DNL Experience Manager]-administratör kan skapa den här integreringen. Behörigheterna som krävs för att använda det skapas via användargrupper när de har skapats. Användargrupperna definieras i [!DNL Sites]-distributionen och i DAM-distributionen.
 
@@ -116,13 +116,13 @@ Du kan kontrollera anslutningen mellan de konfigurerade [!DNL Sites]-distributio
 
 <!-- TBD: Check if Launchers are to be disabled on CS instances. Is this option even available to the users on CS? -->
 
-## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Dynamic Media] distributioner {#sites-dynamic-media-connected-assets}
+## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Dynamic Media]-distributioner {#sites-dynamic-media-connected-assets}
 
 Du kan konfigurera en anslutning mellan [!DNL Sites]-distribution och [!DNL Dynamic Media]-distribution som tillåter webbsideförfattare att använda [!DNL Dynamic Media]-bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och fjärdistributioner av [!DNL Dynamic Media] densamma. Detta gör att du kan använda funktionen [!DNL Dynamic Media] via funktionen Anslutna resurser, till exempel smarta beskärnings- och bildförinställningar.
 
-Följ de här stegen för att konfigurera anslutningen.
+Så här konfigurerar du anslutningen:
 
-1. Skapa konfiguration för anslutna resurser enligt beskrivningen ovan. Välj alternativet **[!UICONTROL Fetch original rendition for Dynamic Media Connected Assets]** när du konfigurerar funktionen.
+1. Skapa konfiguration för anslutna resurser enligt beskrivningen ovan, förutom när du konfigurerar funktionen, väljer du alternativet **[!UICONTROL Fetch original rendition for Dynamic Media Connected Assets]**.
 
 1. Konfigurera [!DNL Dynamic Media] på lokala [!DNL Sites]- och fjärdistributioner av [!DNL Assets]. Följ instruktionerna för att [konfigurera [!DNL Dynamic Media]](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
 
@@ -179,7 +179,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
 De hämtade resurserna kan användas som andra lokala resurser, förutom att associerade metadata inte kan redigeras.
 
-### Kontrollera användning av en resurs på webbsidor {#asset-usage-references}
+### Kontrollera hur en resurs används på olika webbsidor {#asset-usage-references}
 
 [!DNL Experience Manager] gör att DAM-användare kan kontrollera alla referenser till en resurs. Det hjälper till att förstå och hantera användningen av en resurs i fjärr-[!DNL Sites] och i sammansatta resurser. Många som skapar webbsidor på [!DNL Experience Manager Sites]-distributioner kan använda en resurs på en fjärr-DAM på olika webbsidor. För att förenkla resurshanteringen och inte leda till brutna referenser är det viktigt för DAM-användarna att kontrollera användningen av en resurs på lokala webbplatser och fjärrwebbsidor. På fliken [!UICONTROL References] på sidan [!UICONTROL Properties] för en resurs visas lokala referenser och fjärrreferenser för resursen.
 
@@ -196,11 +196,11 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 
    ![varning om force delete](assets/delete-referenced-asset.png)
 
-## Begränsningar och bästa praxis {#tip-and-limitations}
+## Begränsningar och bästa metoder {#tip-and-limitations}
 
 * Konfigurera funktionen [Assets Insight](/help/assets/assets-insights.md) i [!DNL Sites]-instansen för att få information om resursanvändning.
 
-### Behörigheter och resurshantering {#permissions-and-managing-assets}
+### Tillstånd och resurshantering {#permissions-and-managing-assets}
 
 * Lokala resurser synkroniseras inte med de ursprungliga resurserna i fjärrdistributionen. Ändringar, borttagningar eller återkallande av behörigheter i DAM-distributionen sprids inte längre ned i kedjan.
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
