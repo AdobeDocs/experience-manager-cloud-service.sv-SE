@@ -3,7 +3,7 @@ sub-product: AEM Screens som Cloud Service
 user-guide-title: AEM Screens som Cloud Service
 breadcrumb-title: AEM Screens som Cloud Service
 user-guide-description: Förstå AEM Screens som Cloud Service.
-source-git-commit: 1d788b37d549d86270156cb43548a7c62fc1165f
+source-git-commit: 38c749e76ae8bc6efa72beb6963b53311ec3817e
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -25,16 +25,16 @@ ht-degree: 0%
    + [Skapa en gren](/help/screens-cloud/onboarding-screens-cloud/creating-a-branch.md)
    + [Skapa en miljö](/help/screens-cloud/onboarding-screens-cloud/creating-an-environment.md)
    + [Köra pipeline](/help/screens-cloud/onboarding-screens-cloud/running-a-pipeline.md)
-   + Konfigurera skärmar som ett Cloud Service-projekt {#configure-screens-cloud}
-      + [Navigera till Screens Services Provider](/help/screens-cloud/configuring/navigating-to-screens-services-provider.md)
-      + [Navigera till leverantör av skärminnehåll](/help/screens-cloud/configuring/using-screens-content-provider.md)
++ Konfigurera skärmar som ett Cloud Service-projekt {#configure-screens-cloud}
+   + [Navigera till Screens Services Provider](/help/screens-cloud/configuring/navigating-to-screens-services-provider.md)
+   + [Navigera till leverantör av skärminnehåll](/help/screens-cloud/configuring/using-screens-content-provider.md)
 + Skapar innehåll {#create-content}
    + [Skapa och hantera ett projekt i en leverantör av skärminnehåll](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md)
    + [Skapa och hantera en kanal i en leverantör av skärminnehåll](/help/screens-cloud/creating-content/creating-channels-screens-cloud.md)
    + [Hantera publikation](/help/screens-cloud/creating-content/manage-publish.md)
    + [Skapa och hantera en skärm i en leverantör av skärmtjänster](/help/screens-cloud/creating-content/creating-displays-screens-cloud.md)
    + [Tilldela kanal till en skärm](/help/screens-cloud/creating-content/assigning-channels-to-display.md)
-   + Hantera spelare och registrering {#manage-player-registration}
-      + [Installera skärmuppspelaren](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md)
-      + [Registrerar spelaren](/help/screens-cloud/managing-players-registration/registering-players-screens-cloud.md)
-      + [Tilldela spelare till en bildskärm](/help/screens-cloud/managing-players-registration/assigning-player-display.md)
++ Hantera spelare och registrering {#manage-player-registration}
+   + [Installera skärmuppspelaren](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md)
+   + [Registrerar spelaren](/help/screens-cloud/managing-players-registration/registering-players-screens-cloud.md)
+   + [Tilldela spelare till en bildskärm](/help/screens-cloud/managing-players-registration/assigning-player-display.md)
