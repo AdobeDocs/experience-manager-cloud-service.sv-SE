@@ -4,10 +4,10 @@ description: En bildprofil eller en videoprofil är ett recept på vilka alterna
 feature: Resurshantering, bildprofiler, videoprofiler
 role: Administrator,Business Practitioner
 exl-id: 8c8f0a57-13f5-4903-8d76-bfb6ee83323c
-source-git-commit: fdfcaf7ba99ec54e1bdf1c97764da8c766701498
+source-git-commit: 5e9cf9494ce9d54dd1d3b7818b3b975b2acb4e3c
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 1%
+source-wordcount: '1217'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +34,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 >
 >Detsamma gäller även när du flyttar resurser mellan två mappar som har samma profil tilldelad.
 
-## Bearbetning av Dynamic Media-resurser i en mapp {#reprocessing-assets}
+## Bearbeta Dynamic Media-resurser igen i en mapp {#reprocessing-assets}
 
 Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat.
 
@@ -59,6 +59,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 -->
 
 **Så här bearbetar du om Dynamic Media-resurser i en mapp:**
+
 1. I [!DNL Experience Manager] går du från sidan Resurser till en resursmapp som har en bildprofil eller en videoprofil tilldelad och för vilken du vill använda **Scene7: Återbearbeta arbetsflödet för resurs**.
 
    Mappar som har tilldelats en bildprofil eller videoprofil visas med profilens namn direkt under mappnamnet i kortvyn.
@@ -69,35 +70,35 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
    * Om det finns en eller flera undermappar med resurser i den markerade huvudmappen, bearbetas alla resurser i mapphierarkin om i arbetsflödet.
    * Det är en god vana att undvika att köra det här arbetsflödet på en mapphierarki som har fler än 1 000 resurser.
 
-1. Klicka på **[!UICONTROL Timeline]** i listrutan nära sidans övre vänstra hörn.
-1. I närheten av det nedre vänstra hörnet av sidan trycker du på karikonen ( **^** ) till höger om fältet [!UICONTROL Comment].
+1. I den nedrullningsbara listan i det övre vänstra hörnet på sidan väljer du **[!UICONTROL Timeline]**.
+1. I närheten av sidans nedre vänstra hörn, till höger om fältet [!UICONTROL Comment], väljer du karikonen ( **^** ).
 
    ![Bearbeta resursarbetsflöde 1](/help/assets/dynamic-media/assets/reprocess-assets1.png)
 
-1. Klicka på **[!UICONTROL Start Workflow]**.
+1. Välj **[!UICONTROL Start Workflow]**.
 1. Välj **[!UICONTROL Scene7: Reprocess Assets]** i listrutan **[!UICONTROL Start Workflow]**.
 1. (Valfritt) Ange ett namn för arbetsflödet i **textrutan**. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
    ![Bearbeta resurser 2](/help/assets/dynamic-media/assets/reprocess-assets2.png)
 
-1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]**.
+1. Välj **[!UICONTROL Start]** och sedan **[!UICONTROL Confirm]**.
 
-   Om du vill övervaka arbetsflödet eller kontrollera dess förlopp går du till huvudkonsolsidan [!DNL Experience Manager] och klickar på **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Klicka på **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
+   Om du vill övervaka arbetsflödet eller kontrollera dess förlopp går du till huvudkonsolsidan [!DNL Experience Manager] och väljer **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Välj **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
 
-### Justera batchstorleken för arbetsflödet för ombearbetning {#adjusting-load}
+### Justera batchstorleken för arbetsflödet för ombearbetning (valfritt) {#adjusting-load}
 
 (Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen behåller alltså [!DNL Experience Manager]-resurserna en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, bör du öka värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
 
 **Om du vill justera batchstorleken för arbetsflödet för ombearbetning:**
 
-1. I [!DNL Experience Manager] trycker du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på ikonen **[!UICONTROL Tools]** (hammer) > **[!UICONTROL Workflow > Models]**.
+1. I [!DNL Experience Manager] väljer du **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och väljer sedan ikonen **[!UICONTROL Tools]** (hammer) > **[!UICONTROL Workflow > Models]**.
 1. Välj **[!UICONTROL Scene7: Reprocess Assets]** i kortvyn eller listvyn på sidan Arbetsflödesmodeller.
 
    ![Workflow Models page with Scene7: Arbetsflödet för att bearbeta resurser som valts i kortvyn](/help/assets/dynamic-media/assets/reprocess-assets7.png)
 
-1. Klicka på **[!UICONTROL Edit]** i verktygsfältet. En ny flik i webbläsaren öppnar Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
-1. På Scene7: Återbearbeta arbetsflödessidan Resurser, i det övre högra hörnet, tryck på **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
-1. Öppna verktygsfältet genom att välja Scene7 Batch Upload-komponenten i arbetsflödet och tryck sedan på **[!UICONTROL Configure]** i verktygsfältet.
+1. Välj **[!UICONTROL Edit]** i verktygsfältet. En ny flik i webbläsaren öppnar Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
+1. På Scene7: Arbetsflödessidan för att bearbeta resurser igen, i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
+1. Öppna verktygsfältet genom att markera Scene7 Batch Upload-komponenten i arbetsflödet och välj sedan **[!UICONTROL Configure]** i verktygsfältet.
 
    ![Komponenten Scene7 Batch Upload](/help/assets/dynamic-media/assets/reprocess-assets8.png)
 
@@ -111,9 +112,9 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
    ![Egenskaper, dialogruta](/help/assets/dynamic-media/assets/reprocess-assets3.png)
 
-1. Tryck på **[!UICONTROL Done]** i det övre högra hörnet av dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
+1. Välj **[!UICONTROL Done]** i det övre högra hörnet i dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
 
-1. I det övre högra hörnet av Scene7: Återbearbeta arbetsflödesmodellsidan Resurser, tryck på **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]** är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
+1. I det övre högra hörnet av Scene7: Sidan för arbetsflödesmodellen Återbearbeta resurser väljer du **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]** är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
 
    ![Synkronisera arbetsflödesmodellen](/help/assets/dynamic-media/assets/reprocess-assets1.png)
 
@@ -122,7 +123,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 <!-- MAY BE NEEDED IN THE FUTURE
 
 1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
-1. In the upper-left corner of the page, tap **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then tap the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
+1. In the upper-left corner of the page, select **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then select the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
 1. In the folder tree on the left side of the CRXDE Lite page, navigate to the following location:
 
    `/conf/global/settings/workflow/models/scene7_reprocess_assets/jcr:content/flow/reprocess/metaData`
@@ -133,12 +134,12 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
     * **[!UICONTROL Name]**: `reprocess-batch-size`
     * **[!UICONTROL Type]**: `Long`
     * **[!UICONTROL Value]**: enter a default value (50-1000) for the batch size
-1. In the lower-right corner, tap **[!UICONTROL Add]**. The new property appears as the following:
+1. In the lower-right corner, select **[!UICONTROL Add]**. The new property appears as the following:
 
     ![Saving the new property](/help/security/assets/workflow-models10.png)
 
-1. On the menu bar of the CRXDE Lite page, tap **[!UICONTROL Save All]**.
-1. In the upper-left corner of the page, tap **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
+1. On the menu bar of the CRXDE Lite page, select **[!UICONTROL Save All]**.
+1. In the upper-left corner of the page, select **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
 1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.
 
 -->
