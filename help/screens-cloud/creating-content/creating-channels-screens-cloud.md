@@ -1,15 +1,15 @@
 ---
 title: Skapa och hantera kanaler på skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar som en Cloud Service.
-source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
+source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 
-# Skapa och hantera kanaler på skärmar som en Cloud Service {#creating-channels-screens-cloud}
+# Skapa och hantera en kanal på skärmar som en Cloud Service {#creating-channels-screens-cloud}
 
 När du har skapat ett AEM Screens-projekt måste du skapa kanaler.
 ***Kanaler***, visa en innehållssekvens (bilder och videoklipp), en webbplats eller ett ensidigt program.
@@ -90,4 +90,4 @@ Följande mallar är tillgängliga när du använder kanalguiden **Skapa**:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har konfigurerat en AEM Screens-kanal i ditt projekt måste du publicera din kanal. Se [Publiceringskanaler på skärmar som en Cloud Service](/help/screens-cloud/creating-content/manage-publish.md) innan du hanterar dina spelare från Screens Services Provider.
+Nu när du har konfigurerat en AEM Screens-kanal i ditt projekt måste du publicera din kanal. Se [Publiceringskanaler på skärmar som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/manage-publish.html?lang=en) innan du hanterar dina spelare från Screens Services Provider.
