@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 405922266ed15c2db135921132c89fa459b38d1b
+source-git-commit: 1c18c0f669222d3864b1f203b423f860c200024a
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1185'
 ht-degree: 1%
 
 ---
@@ -34,6 +34,10 @@ Om du vill genomföra den automatiska replikeringen för detta måste du aktiver
 ![Konfiguration av OSGi på av utlösare](/help/operations/assets/replication-on-off-trigger.png)
 
 ### Aktivering av träd {#tree-activation}
+
+>[!NOTE]
+>
+>Denna metod bör anses vara föråldrad eftersom den inte består av statyer och är mindre skalbar än andra metoder. Adobe rekommenderar att publicerings- eller arbetsflödesmetoder används i stället
 
 Så här utför du en trädaktivering:
 
