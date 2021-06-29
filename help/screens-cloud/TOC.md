@@ -3,7 +3,7 @@ sub-product: AEM Screens som Cloud Service
 user-guide-title: AEM Screens som Cloud Service
 breadcrumb-title: AEM Screens som Cloud Service
 user-guide-description: Förstå AEM Screens som Cloud Service.
-source-git-commit: c5e6a3a309bbb4750c8a553eba0c444ce030637b
+source-git-commit: 1d788b37d549d86270156cb43548a7c62fc1165f
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -35,6 +35,6 @@ ht-degree: 0%
    + [Skapa och hantera en skärm i en leverantör av skärmtjänster](/help/screens-cloud/creating-content/creating-displays-screens-cloud.md)
    + [Tilldela kanal till en skärm](/help/screens-cloud/creating-content/assigning-channels-to-display.md)
    + Hantera spelare och registrering {#manage-player-registration}
-   + [Installera skärmuppspelaren](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md)
-   + [Registrerar spelaren](/help/screens-cloud/managing-players-registration/registering-players-screens-cloud.md)
-   + [Tilldela spelare till en bildskärm](/help/screens-cloud/managing-players-registration/assigning-player-display.md)
+      + [Installera skärmuppspelaren](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md)
+      + [Registrerar spelaren](/help/screens-cloud/managing-players-registration/registering-players-screens-cloud.md)
+      + [Tilldela spelare till en bildskärm](/help/screens-cloud/managing-players-registration/assigning-player-display.md)
