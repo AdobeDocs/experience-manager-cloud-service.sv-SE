@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 3cafd809cba2d844ee4507c41eb1b5302ad5b6ba
+source-git-commit: 405922266ed15c2db135921132c89fa459b38d1b
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1155'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,9 @@ Adobe Experience Manager som Cloud Service använder funktionen [Sling Content D
 
 ### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
 
-De här AEM standardfunktionerna för författarna ändras inte med AEM Cloud Service.
+På så sätt kan du publicera de markerade sidorna direkt, utan de ytterligare alternativ som är möjliga via Hantera publikation.
+
+Mer information finns i [Hantera publikation](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
 
 ### På- och avaktiveringstider - utlösarkonfiguration {#on-and-off-times-trigger-configuration}
 
@@ -171,6 +173,14 @@ ReplicationStatus previewStatus = afterStatus.getStatusForAgent(PREVIEW_AGENT); 
 Om du inte anger ett sådant filter och bara använder agenten för publicering, används inte agenten för förhandsgranskning och replikeringsåtgärden påverkar inte förhandsgranskningsnivån.
 
 Den övergripande `ReplicationStatus` för en resurs ändras bara om replikeringsåtgärden innehåller minst en agent som är aktiv som standard. I exemplet ovan är detta inte fallet eftersom replikeringen bara använder agenten för förhandsgranskning. Du måste därför använda den nya metoden `getStatusForAgent()` som gör att du kan fråga efter status för en viss agent. Den här metoden fungerar även för agenten&quot;publish&quot;. Det returnerar ett värde som inte är null om någon replikeringsåtgärd har utförts med den angivna agenten.
+
+### Hantera publikation {#manage-publication}
+
+Med Hantera publikation får du fler alternativ än Snabbpublicering, så att du kan inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden samt erbjuda möjlighet att publicera vid ett senare tillfälle.
+
+Om du tar med en mapps underordnade objekt för alternativet Publicera senare, aktiveras arbetsflödet Publicera innehållsträd, som beskrivs i den här artikeln.
+
+Mer detaljerad information om Hantera publikation finns i [Publishing Fundamentals documentation](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
 
 ## Felsökning {#troubleshooting}
 
