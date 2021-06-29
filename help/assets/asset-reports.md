@@ -2,16 +2,15 @@
 title: Rapporter om användning och delning
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
-feature: Asset Reports,Asset Management
+feature: Resursrapporter,Resurshantering
 role: Administrator,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
+source-git-commit: 088531133faa4c7f071a8c27fe11d1ccd5f50c0b
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '823'
 ht-degree: 6%
 
 ---
-
 
 # Materialrapporter {#asset-reports}
 
@@ -106,7 +105,7 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 
    Klicka på **[!UICONTROL Download]** i verktygsfältet för att hämta rapporten i CSV-format.
 
-## Lägg till anpassade kolumner i rapporter {#add-custom-columns}
+## Lägga till anpassade kolumner i rapporter {#add-custom-columns}
 
 Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer data för dina anpassade krav:
 
@@ -121,7 +120,6 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 -->
 
 * Överför
-* Hämta
 * Förfaller
 * Ändring
 * Publicera
