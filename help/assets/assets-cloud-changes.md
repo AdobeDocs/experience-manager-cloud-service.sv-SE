@@ -4,9 +4,9 @@ description: Betydande ändringar av [!DNL Adobe Experience Manager Assets] in [
 feature: Versionsinformation
 role: Business Practitioner,Leader,Architect,Administrator
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: ab40ce5b9b57f83562cf279b75979795f5433eda
+source-git-commit: 088531133faa4c7f071a8c27fe11d1ccd5f50c0b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,8 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 | Extrahera resurser från ZIP-arkiv | Stöds inte. | Se [ZIP-extrahering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html#extractzip). |
 | Värderingar av tillgångar | Stöds inte. | Värderingswidgeten i metadataramedigeraren stöds inte. |
 | Innehållsdistributionsfilter | Stöds inte. | Ett vanligt användningsexempel för `ContentDispositionFilter` är att låta administratörer konfigurera [!DNL Experience Manager] så att HTML-filer kan hanteras och PDF-filer öppnas infogat i stället för att dessa ska hämtas. På Publish-instanserna kan du hantera dispositionen med Dispatcher-konfigurationen. På författarinstanserna rekommenderar Adobe inte att du ändrar Content Disposition-huvudet. Se [Innehållsdispositionsfilter i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/content-disposition-filter.html). |
+| [Hämta rapport](/help/assets/asset-reports.md) | Stöds inte. | För tillfället är den hämtningsrapport som innehåller information om resursanvändning inte tillgänglig. Se [ladda ned rapport i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html). |
+| Produktfotografimall | Stöds inte. | Se [produktfotofotografimall i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/managing-product-information.html). |
 | Klassiskt användargränssnitt | Stöds inte. | Endast det Touch-aktiverade användargränssnittet är tillgängligt. |
 
 >[!MORELIKETHIS]
