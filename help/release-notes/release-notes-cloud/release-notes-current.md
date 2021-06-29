@@ -3,10 +3,10 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 1c967d4114cae67da9e0c2cda14458329ecd7156
+source-git-commit: 2d0fc0351c62f920376c9d36f4919f827c711afc
 workflow-type: tm+mt
-source-wordcount: '1252'
-ht-degree: 0%
+source-wordcount: '1382'
+ht-degree: 1%
 
 ---
 
@@ -143,6 +143,27 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för bet
 
 * När ett fält valideras innan data skickas till backend-tjänsten via FDM (Form Data Model), lyckas valideringen men tjänsten Form Data Model kan inte anropa eftervalideringen.
 * När du skickar ett formulär som innehåller ett vanligt HTML-överföringsfält från en Apple iOS-enhet skickas ibland inte filens innehåll och en 0-byte-fil tas emot i den andra änden. Detta är ett känt problem i Apple iOS. [FB9117687](https://feedbackassistant.apple.com/feedback/9117687)
+
+## AEM Screens {#aem-screens}
+
+I det här avsnittet beskrivs versionsinformationen för skärmar som en Cloud Service.
+
+### Releasedatum {#release-date-june-screens}
+
+Releasedatum för AEM Screens som Cloud Service är 24 juni 2021.
+
+### Nyheter {#what-is-new-screens-june}
+
+>[!NOTE]
+>Se [AEM Screens som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/home.html?lang=en) Guide för grundläggande kunskaper som krävs för att installera, konfigurera och köra skärmar som en Cloud Service och länka till detaljerad teknisk dokumentation om koncept.
+
+* Registreringshantering för flera enheter innebär att det går snabbare och effektivare att etablera stora mängder spelarenheter.
+
+* Förbättrade sök- och filteralternativ för var och en av lagervyerna Enhet, Visning och Kanal.
+
+* Ögonblicksbilden av enhetens hälsostatus sparar tid genom att ge en snabb översikt av kritisk status.
+
+* På sidan med objektinformation finns en sammanfattning av den mest relevanta informationen för varje objekt i ditt projekt.
 
 ## CIF-tillägg {#cloud-services-cif}
 
