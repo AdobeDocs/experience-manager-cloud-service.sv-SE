@@ -1,7 +1,7 @@
 ---
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
-source-git-commit: 1299a4bd4e4139c971680e439a3b366162af0de2
+source-git-commit: 3611b9ede7c7f516c4773ac4b22e8ba9b14b5220
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 1%
@@ -80,7 +80,7 @@ azCopyPath=/usr/bin/azcopy
 azureSas=https://example-resource.blob.core.windows.net/example-container?sig=--REDACTED--
 ```
 
-#### Amazon S3 - datalager {#amazon-data-store}
+#### Amazon S3 - datalager {#amazon-sdata-store}
 
 Filen azcopy.config bör innehålla följande egenskaper (se till att använda rätt värden för din instans).
 
@@ -134,7 +134,7 @@ Alla blobbar som kopierats före felet hoppas över automatiskt av AzCopy vid ef
 I och med Content Transfer Tool 1.5.4 har vi lagt till AzCopy-stöd för redigering.
 
 >[!NOTE]
-> Rekommendationen är att enbart köra Author-intag. Detta snabbar upp inläsningen av publiceringen när den körs senare.
+>Rekommendationen är att enbart köra Author-intag. Detta snabbar upp inläsningen av publiceringen när den körs senare.
 
 För att kunna dra nytta av AzCopy vid förtäring måste du ha en AEM som en Cloud Service version som är minst version 2021.6.5561.
 
