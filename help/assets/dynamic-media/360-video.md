@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i D
 feature: 360 VR-video
 role: Business Practitioner
 exl-id: ffd092d3-2188-47b0-a475-8bfa660c03c1
-source-git-commit: fdfcaf7ba99ec54e1bdf1c97764da8c766701498
+source-git-commit: 5e9cf9494ce9d54dd1d3b7818b3b975b2acb4e3c
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managin
 
 ## 360 Video in action {#video-in-action}
 
-Tryck på [Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
+Välj [Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) om du vill öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
 
 ![360-](assets/6_5_360videoiss_simplified.png)
 *videoexempelVideobildruta från Space Station 360*
@@ -38,14 +38,14 @@ Du kan använda Adobe Premier Pro för att visa och redigera 360/VR-filmer. Du k
 
 Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html).
 
-## Överför resurser som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
+## Ladda upp material som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
 
 360 videomaterial som överförs till [!DNL Experience Manager] har etiketten **Multimedia** på en tillgångssida, ungefär som vanliga videomaterial.
 
 ![6_5_360video-](assets/6_5_360video-selecttopreview.png)
 *selectPreviewEn överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
 
-**Så här överför du resurser som ska användas med 360-videovisningsprogrammet:**
+**Ladda upp material som ska användas med 360-videovisningsprogrammet:**
 
 1. Skapade en mapp som är dedikerad till ditt 360-videomaterial.
 1. [Använd en adaptiv videoprofil på mappen](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
@@ -57,7 +57,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
    * Helst har ditt ursprungliga 360-videoinnehåll någon av följande upplösningar:
 
       * 1080p - 1920 x 1080, känd som Full HD eller FHD upplösning eller
-      * 2160p - 3840 x 2160, känd som 4K-, UHD- eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4K&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
+      * 2160p - 3840 x 2160, känd som 4k, UHD eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4k&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
    * [Skapa en anpassad adaptiv ](/help/assets/dynamic-media/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) videoprofil med renderingar av högre kvalitet. Du kan till exempel skapa en adaptiv videoprofil som innehåller följande tre inställningar:
 
       * Width=auto; Höjd=720; Bithastighet=2 500 kbit/s
@@ -102,34 +102,34 @@ Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/
 Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till [!DNL Experience Manager Sites]-sidor.
 Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
-**Så här förhandsgranskar du 360-videoklipp**
+**Så här förhandsgranskar du 360-videoklipp:**
 
-1. I **[!UICONTROL Assets]** navigerar du till en befintlig 360-video som du har skapat. Tryck på resursen 360 Video för att öppna den i förhandsgranskningsläge.
+1. I **[!UICONTROL Assets]** navigerar du till en befintlig 360-video som du har skapat. Om du vill öppna den i förhandsgranskningsläge väljer du videouppsättningen 360.
 
    ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
 
-   Om du vill förhandsgranska videon trycker du på 360-videoresursen.
+   Om du vill förhandsgranska videon väljer du 360-videoresursen.
 
-1. Tryck på listrutan på förhandsgranskningssidan i det övre vänstra hörnet av sidan och välj **[!UICONTROL Viewers]**.
+1. Markera listrutan på förhandsgranskningssidan, nära det övre vänstra hörnet på sidan, och välj sedan **[!UICONTROL Viewers]**.
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
-   Tryck på **[!UICONTROL Video360_social]** i visningslistan och gör sedan något av följande:
+   Välj **[!UICONTROL Video360_social]** i visningslistan och gör sedan något av följande:
 
    * Om du vill ändra visningsvinkeln för den statiska scenen drar du pekaren över videon.
-   * Tryck på videoknappen **[!UICONTROL Play]** för att påbörja uppspelningen. När videon spelas upp drar du pekaren över videon för att ändra visningsvinkeln.
+   * För att påbörja uppspelningen väljer du videoklippets **[!UICONTROL Play]**-knapp. När videon spelas upp drar du pekaren över videon för att ändra visningsvinkeln.
 
    ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360 video, skärmdump.*
 
-   * Tryck på **[!UICONTROL Video360VR]** i visningslistan.
+   * Välj **[!UICONTROL Video360VR]** i visningslistan.
 
       VR-video (Virtual Reality) är engagerande videomaterial som nås via virtuella verklighetshuvuden. Precis som med vanliga videor skapar du VR-videor i början när en video spelas in eller spelas in med 360-graderskameror.
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *En 360 VR-videobildskärm.*
 
-1. Tryck på **[!UICONTROL Close]** uppe till höger på förhandsgranskningssidan.
+1. Välj **[!UICONTROL Close]** längst upp till höger på förhandsgranskningssidan.
 
-## Publicerar 360-video {#publishing-video}
+## Publicera 360-video {#publishing-video}
 
 Om du vill använda 360-video måste du publicera den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
 
