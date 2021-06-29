@@ -2,7 +2,7 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 1c18c0f669222d3864b1f203b423f860c200024a
+source-git-commit: eba9ce7c80fc785e44f13ded5227828b6f04f7bb
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 1%
@@ -42,17 +42,17 @@ Om du vill genomföra den automatiska replikeringen för detta måste du aktiver
 Så här utför du en trädaktivering:
 
 1. Navigera från AEM Start-meny till **Verktyg > Distribution > Distribution**
-2. Välj kortet **forwardPublisher**
-3. **Välj Distribute** i webbkonsolens användargränssnitt för forwardPublisher
+2. Välj kortet **publicera**
+3. **Välj Distribuera** i webbkonsolens användargränssnitt
 
-   ![](assets/distribute.png "DistribueraDistribuera")
+   ![](assets/publish-distribute.png "DistribueraDistribuera")
 4. Markera sökvägen i sökvägsläsaren, välj att lägga till en nod, ett träd eller att ta bort efter behov och välj **Skicka**
 
 ### Publicera arbetsflöde för innehållsträd {#publish-content-tree-workflow}
 
 Du kan utlösa en trädreplikering genom att välja **Verktyg - Arbetsflöde - Modeller** och kopiera **publiceringsinnehållsträdet** som är körklar, vilket visas nedan:
 
-![](/help/operations/assets/publishcontenttreeworkflow.png)
+![](/help/operations/assets/publish-distribute.png)
 
 Ändra inte och anropa inte den ursprungliga modellen. I stället måste du först kopiera modellen och sedan ändra eller anropa kopian.
 
@@ -191,13 +191,13 @@ Mer detaljerad information om Hantera publikation finns i [Publishing Fundamenta
 Om du vill felsöka replikering går du till replikeringsköerna i webbgränssnittet för AEM Author Service:
 
 1. Navigera från AEM Start-meny till **Verktyg > Distribution > Distribution**
-2. Välj kortet **forwardPublisher**
-   ![](assets/status.png "StatusStatus")
+2. Välj kortet **publicera**
+   ![](assets/publish-status.png "StatusStatus")
 3. Kontrollera köstatusen som ska vara grön
 4. Du kan testa anslutningen till replikeringstjänsten
 5. Välj fliken **Loggar** som visar historiken för innehållspublikationer
 
-![](assets/logs.png "LogsLogs")
+![](assets/publish-logs.png "LogsLogs")
 
 Om innehållet inte kunde publiceras återställs hela publikationen från AEM Publish Service.
 I så fall bör köerna ses över för att identifiera vilka objekt som orsakade att offentliggörandet avbröts. Om du klickar på en kö med röd status visas kön med väntande objekt, från vilken enskilda eller alla objekt kan rensas vid behov.
