@@ -4,12 +4,11 @@ description: Adobe Experience Manager som Cloud Service dokumentation.
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.sv-SE
 index: y
 type: Documentation
-solution: Experience Manager
+solution: Experience Manager, Experience Manager as a Cloud Service
 version: Cloud Service
 feature-set: Experience Manager Assets,Experience Manager Sites,Experience Manager, Experience Manager Forms, Experience Manager Cloud Manager
 cloud: Experience Cloud
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: c19c15c4e71c8ead1c3cb05add052a8ffae79d0a
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
