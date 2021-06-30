@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Resurshantering, publicering, samarbete, tillgångsbearbetning
 role: Business Practitioner,Architect,Administrator
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: 1c841eaa49eeb021fc7583c58aeaefc1236650f9
+source-git-commit: 76dd50e044038859bb06a02a2b1c2131932db29c
 workflow-type: tm+mt
-source-wordcount: '4349'
+source-wordcount: '4397'
 ht-degree: 11%
 
 ---
@@ -190,7 +190,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    Om du inte uppdaterar referenser fortsätter de att peka på resursens tidigare sökväg. Om du justerar referenserna uppdateras de till den nya resurssökvägen.
 
-### Hantera renderingar {#managing-renditions}
+### Hantera återgivningar {#managing-renditions}
 
 1. Du kan lägga till eller ta bort återgivningar för en resurs, förutom originalet. Navigera till platsen för resursen som du vill lägga till eller ta bort återgivningar för.
 
@@ -462,6 +462,14 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 ### Visa sparade anteckningar {#viewing-saved-annotations}
 
+Du kan bara visa en anteckning åt gången.
+
+>[!NOTE]
+>
+>Om du markerar flera anteckningar visas den senaste anteckningen i användargränssnittet.
+>
+>Flerval stöds endast för utskrift av kommenterade resurser som PDF.
+
 1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
 
 1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Timeline]** i listan.
@@ -483,6 +491,10 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 Om en resurs har anteckningar eller har genomgått ett granskningsarbetsflöde kan du skriva ut resursen tillsammans med anteckningar och granskningsstatus som en PDF-fil för offlinegranskning.
 
 Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen.
+
+>[!NOTE]
+>
+>Du kan välja flera anteckningar när du skriver ut den kommenterade resursen som PDF.
 
 Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har minst en antecknings- eller granskningsstatus tilldelad.
 
