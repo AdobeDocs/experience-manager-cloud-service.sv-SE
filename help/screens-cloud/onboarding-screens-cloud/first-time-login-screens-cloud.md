@@ -1,10 +1,10 @@
 ---
 title: Första gången du loggar in på skärmar som en Cloud Service
 description: På den här sidan beskrivs de första stegen för att komma igång med skärmar som en Cloud Service.
-source-git-commit: 3962d736778e4d17bb57296e9401503ce712a6cd
+source-git-commit: 70730784bf58c57f51d7e9a6e17788861a95d726
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 2%
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +16,6 @@ ht-degree: 2%
 
 När avtalet har undertecknats startar Adobe Managed Services (AMS) kundintroduktionen. När AMS etablerar AMS-instansen efter avtalet installeras AMS-skärmar-Cloud-funktionspaketet under provisioneringsfasen. Med funktionspaketet kan leverantören av skärmtjänster ansluta till AMS-instansen eller leverantören av skärminnehåll.
 
-## Funktionspaketets tillgänglighet {#availability}
-
-Funktionspaketet AMS-screens-Cloud är tillgängligt via [portalen för programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
-Klicka här för att ladda ned det senaste funktionspaketet.
-
 ## Lägga till användare i Adobe Admin Console {#admin-console}
 
 När du har fått ett organisations-ID för Adobe Identity Management (IMS) kan du nu komma åt [Adobe Admin Console](https://adminconsole.adobe.com/). Mer information om hur du lägger till användare i Admin Console finns i [Adobe Admin Console-användare](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/users.ug.html).
@@ -30,4 +25,4 @@ När du har fått ett organisations-ID för Adobe Identity Management (IMS) kan 
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har fått ett IMS-organisations-ID och lagts till som användare i Adobe Admin Console kan du lägga till [skärmtillägg i ett nytt program](/help/screens-cloud/onboarding-screens-cloud/add-on-new-program-screens-cloud.md) eller i [ett befintligt program](/help/screens-cloud/onboarding-screens-cloud/add-on-existing-program-screens-cloud.md) för skärmar som en Cloud Service i Cloud Manager.
+Nu när du har fått ett IMS-organisations-ID och lagts till som användare i Adobe Admin Console kan du lägga till skärmar som ett [tillägg till ett nytt program](/help/screens-cloud/onboarding-screens-cloud/add-on-new-program-screens-cloud.md) eller till [ett befintligt program](/help/screens-cloud/onboarding-screens-cloud/add-on-existing-program-screens-cloud.md) i Cloud Manager.
