@@ -1,12 +1,12 @@
 ---
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager as a Cloud Service
 sub-product: Redigera innehåll i AEM as a Cloud Service
 user-guide-title: Redigera innehåll i AEM as a Cloud Service
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service.
 feature: Redigering
 role: Business Practitioner
-source-git-commit: e736b80e0bee80b5f3df6451b63b306c546d0912
+source-git-commit: c19c15c4e71c8ead1c3cb05add052a8ffae79d0a
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 69%
