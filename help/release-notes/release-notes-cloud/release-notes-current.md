@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: c61b24781cce58644c5f7100e5b4f47e8ac90047
+source-git-commit: c256699a64bd68285b4110d003f3391713c7a19a
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1393'
 ht-degree: 1%
 
 ---
@@ -90,14 +90,12 @@ Nästa version är planerad till 15 juli 2021.
 
 ### Nya funktioner i [!DNL Assets] {#ga-features-assets}
 
-* Med funktionen för innehållsautomatisering kan [!DNL Experience Manager Assets] utnyttja API:erna för [!DNL Adobe Creative Cloud] för att automatisera materialproduktionen i stor skala. Det förbättrar innehållets hastighet genom att dramatiskt minska den tid det tar och de iterationer som krävs för att skapa varianter av samma material. Funktionen kräver ingen kod och fungerar inifrån DAM.
+* Med funktionen för innehållsautomatisering kan [!DNL Experience Manager Assets] utnyttja API:erna för [!DNL Adobe Creative Cloud] för att automatisera materialproduktionen i stor skala. Det förbättrar innehållets hastighet genom att dramatiskt minska den tid det tar och de iterationer som krävs för att skapa varianter av samma material. Funktionen kräver ingen programmering och fungerar inifrån DAM. Se [Generera variationer av resurser med hjälp av Creative Cloud-integrering](/help/assets/cc-api-integration.md).
+
 * [!DNL Adobe Asset Link] v3.0 for  [!DNL Adobe Photoshop],  [!DNL Adobe Illustrator]and  [!DNL Adobe InDesign] and  [!DNL Adobe Asset Link] v2.0 for  [!DNL Adobe XD] släpps. Den innehåller följande:
 
    * Stöd för [!DNL Assets Essentials].
    * Möjlighet att automatiskt ansluta till [!DNL Experience Manager] som [!DNL Cloud Service] eller [!DNL Assets Essentials].
-
-<!-- TBD: Checking with PMs if AAE release should be mentioned here.
--->
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen [!DNL Assets] {#beta-features-assets}
 
