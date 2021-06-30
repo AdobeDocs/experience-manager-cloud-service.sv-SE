@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Smarta taggar,Taggar
 role: Administrator,Business Practitioner
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: cff7454e2b6a1d55accef31d20d85378f08dfe0c
+source-git-commit: ffca94ef8d93cf95011d7e3128c49929f69cdc28
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2307'
 ht-degree: 5%
 
 ---
@@ -97,13 +97,16 @@ Kontrollera att bilderna i kursuppsättningen överensstämmer med följande rik
 
 **Exempel**: Några fler exempel på vägledning är:
 
-* Skapa en taggmodell som innehåller
-   * endast de taggar som avser bilmodeller.
-   * endast de taggar som hör till skjortfärger.
-   * endast taggarna för schaket för kvinnor och män.
+* Skapa en taggmodell som endast innehåller
+
+   * Taggar för bilmodeller.
+   * Taggarna för färger i skjortor.
+   * Taggar för schaket för kvinnor och män.
+
 * Skapa inte
-   * en taggmodell som innehåller bilmodeller som släpptes 2019 och 2020.
-   * flera taggmodeller som innehåller samma få bilmodeller.
+
+   * En taggmodell som innehåller bilmodeller som släpptes 2019 och 2020.
+   * Flera taggmodeller som innehåller samma få bilmodeller.
 
 **Bilder som används för utbildning**: Du kan använda samma bilder för att utbilda olika taggmodeller. Koppla emellertid inte en bild till mer än en tagg i en taggmodell. Du kan lägga till märkord i samma bild med olika märkord som tillhör olika taggmodeller.
 
