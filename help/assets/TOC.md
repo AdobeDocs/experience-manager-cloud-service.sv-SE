@@ -4,24 +4,23 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager Assets
-translation-type: tm+mt
-source-git-commit: 33e92b9cd19dd49dcdb6a8c8f30feccb755f615f
+source-git-commit: ec5510d68c2c38be7755070e84b98d519c10e02a
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 65%
 
 ---
 
 
-# [!DNL Assets] Guide  {#assets}
+# [!DNL Assets] Guide {#assets}
 
-+ [[!DNL Assets] som [!DNL Cloud Service]](/help/assets/home.md)
++ [[!DNL Assets] as a [!DNL Cloud Service]](/help/assets/home.md)
 + [Översikt och nyheter](overview.md)
-+ [Noterbara ändringar  [!DNL Assets] i [!DNL Cloud Service]](assets-cloud-changes.md)
++ [Noterbara ändringar i [!DNL Assets] som a [!DNL Cloud Service]](assets-cloud-changes.md)
 + [[!DNL Assets] arkitektur](architecture.md)
 + [Filformat som stöds](file-format-support.md)
 + [Översikt över mikrotjänster för material](asset-microservices-overview.md)
-+ [Tillgänglighet i [!DNL Assets]](accessibility.md)
++ [Hjälpmedel i [!DNL Assets]](accessibility.md)
 + Hantera digitala resurser {#manage}
    + [Dela resurser](share-assets.md)
    + [Övervaka aktiviteter och DAM-uppgifter](assets-activity-history.md)
@@ -46,6 +45,7 @@ ht-degree: 65%
    + [Checka in och checka ut resurser för redigering](check-out-and-submit-assets.md)
    + [Hantera rättigheter för digitala resurser](drm.md)
    + [Vattenstämpelresurser](watermark-assets.md)
+   + [Bearbeta resurser med [!DNL Creative Cloud] API:er](cc-api-integration.md)
 + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
    + [Dokumentreferenser för utvecklare och API:er](developer-reference-material-apis.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
@@ -64,8 +64,8 @@ ht-degree: 65%
    + [MediaLibrary-funktioner](medialibrary.md)
    + [Importera och exportera metadata för material](metadata-import-export.md)
 + Dela och driftsätta resurser {#brand-portal}
-   + [ [!DNL Assets] Konfigurera med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
-   + [Publicera resurser på [!DNL Brand Portal]](publish-to-brand-portal.md)
+   + [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
+   + [Publicera resurser till [!DNL Brand Portal]](publish-to-brand-portal.md)
    + [Publicera resurser  [!DNL Brand Portal] från [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=en)
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
