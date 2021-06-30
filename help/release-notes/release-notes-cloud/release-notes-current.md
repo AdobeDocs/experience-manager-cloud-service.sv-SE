@@ -3,10 +3,10 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: c256699a64bd68285b4110d003f3391713c7a19a
+source-git-commit: ffca94ef8d93cf95011d7e3128c49929f69cdc28
 workflow-type: tm+mt
-source-wordcount: '1393'
-ht-degree: 1%
+source-wordcount: '1428'
+ht-degree: 0%
 
 ---
 
@@ -97,12 +97,23 @@ Nästa version är planerad till 15 juli 2021.
    * Stöd för [!DNL Assets Essentials].
    * Möjlighet att automatiskt ansluta till [!DNL Experience Manager] som [!DNL Cloud Service] eller [!DNL Assets Essentials].
 
+* Med verktyget [Massingestor](/help/assets/add-assets.md#asset-bulk-ingestor) kan du lägga till metadata vid ett massintag.
+
 ### Nya funktioner som är tillgängliga i betaversionskanalen [!DNL Assets] {#beta-features-assets}
 
 * Vyinställningarna har förbättrats så att användarna kan välja en standardvy och en standardsorteringsparameter.
+
+   ![Ange standardvy i visningsinställningar](/help/assets/assets/view-settings-for-defaults.png)
+
 * Länkdelningsfunktionen använder asynkrona nedladdningar som ökar nedladdningshastigheten.
+
 * Användare kan söka efter och filtrera mapparna baserat på egenskapspredikat.
-* [!DNL Experience Manager Assets] bäddar in PDF Viewer-filen som används av  [!DNL Adobe Document Cloud] för att förhandsgranska de dokument som stöds. Med den här funktionen kan användarna förhandsgranska PDF-filer och andra flersidiga filer utan komplex bearbetning. Detta förbättrar funktionspariteten med [!DNL Experience Manager] 6.5.
+
+   ![Filtrera sökmappar med hjälp av sökpredikat](/help/assets/assets/search-folders-via-predicates.png)
+
+* [!DNL Experience Manager Assets] bäddar in PDF-visningsprogrammet för att förhandsgranska de dokumentformat som stöds. Den drivs av [!DNL Adobe Document Cloud]. Med den här funktionen kan användarna förhandsgranska PDF-filer och andra flersidiga filer utan komplex bearbetning. Detta förbättrar funktionspariteten med [!DNL Experience Manager] 6.5.
+
+   ![Förhandsgranska PDF-filer i  [!DNL Experience Manager] PDF Viewer](/help/assets/assets/preview-pdf-file-viewer.png)
 
 ### Fel som har korrigerats i [!DNL Assets] {#bugs-fixed-assets}
 
