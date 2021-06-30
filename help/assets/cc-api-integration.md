@@ -4,9 +4,9 @@ description: Generera variationer av resurser med hjälp av Creative Cloud-integ
 contentOwner: AG
 feature: Överför,Resursbearbetning,Publicera,Asset compute Microservices,Arbetsflöde
 role: Business Practitioner,Administrator
-source-git-commit: 05f2bfac12d37b8ef9940e3381c709891cabe236
+source-git-commit: ffca94ef8d93cf95011d7e3128c49929f69cdc28
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -20,31 +20,37 @@ Om du vill redigera resurser i [!DNL Adobe Photoshop] och [!DNL Adobe Lightroom]
 
 Användare kan skapa bearbetningsprofiler för att automatisera följande kreativa åtgärder för sina resurser:
 
-**Automatisk ton**: Använder artificiell intelligens för att analysera bildens innehåll och gör intelligent ljus- och färgkorrigeringar baserat på bildens unika attribut.
-**Automatisk upprätt**: Använder artificiell intelligens för att analysera innehållet i bilden och korrigera skevade perspektiv i bilder. Om du till exempel vill skapa nivåhorisonter.
-**Lightroom-förinställningar**: Använder ett användardefinierat utseende på bilder för att få ett konsekvent utseende med anpassade förinställningar.
-**Bildurklipp**: Använder artificiell intelligens för att skapa markering runt salivobjekt och ta bort bakgrund med ett enda kommando.
-**Bildmask**: Använder artificiell intelligens för att skapa en mask runt salivobjekt med ett enda kommando.
-**Photoshop Actions**: Tillämpar en serie åtgärder (i Photoshop) på en fil eller en grupp med filer.
-**Ersättning** av smarta objekt: Utför personalisering i stor skala genom att låta dig växla bilder samtidigt som du behåller alla effekter och justeringar som tillämpas i en PSD-fil.
+* **Automatisk ton**: Använder artificiell intelligens för att analysera bildens innehåll och gör intelligent ljus- och färgkorrigeringar baserat på bildens unika attribut.
+* **Automatisk upprätt**: Använder artificiell intelligens för att analysera innehållet i bilden och korrigera skevade perspektiv i bilder. Om du till exempel vill skapa nivåhorisonter.
+* **Lightroom-förinställningar**: Använder ett användardefinierat utseende på bilder för att få ett konsekvent utseende med anpassade förinställningar.
+* **Bildurklipp**: Använder artificiell intelligens för att skapa markering runt salivobjekt och ta bort bakgrund med ett enda kommando.
+* **Bildmask**: Använder artificiell intelligens för att skapa en mask runt salivobjekt med ett enda kommando.
+* **Photoshop Actions**: Tillämpar en serie åtgärder (i Photoshop) på en fil eller en grupp med filer.
+* **Ersättning** av smarta objekt: Utför personalisering i stor skala genom att låta dig växla bilder samtidigt som du behåller alla effekter och justeringar som tillämpas i en PSD-fil.
 
 ## Använda en bearbetningsprofil för att bearbeta resurser {#process-assets}
 
 Så här använder du bearbetningsprofiler för att automatiskt skapa variationer:
 
-1. Kontakta Adobe kundsupport för att få licensen.
-1. Navigera till Verktyg > Resurser > Bearbeta profiler.
-1. Välj Skapa och ange ett namn.
-1. Välj fliken Creative. Ange utdatamappen och välj [!UICONTROL Add New] för att lägga till kreativa konfigurationer. Ange återgivningsnamn (eller utdatanamn), tillägg (eller filtyp), välj Kvalitet (eller utdataparametrar), markera Inkluderar och exkluderar MIME-typlistor (eller indataresursfilter) och välj önskad kreativ åtgärd.
-1. För vissa åtgärder krävs ytterligare en parameter (resurs). Ange värden för dessa ytterligare parametrar om det behövs.
+1. Kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/#support) för att få licensen.
+
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**.
+
+1. Välj **[!UICONTROL Create]** och ange en **[!UICONTROL Name]**.
+
+1. Välj fliken **[!UICONTROL Creative]**, ange utdatamapp och välj **[!UICONTROL Add New]** för att lägga till en kreativ konfiguration.
+
+1. Ange **[!UICONTROL Rendition Name]** (eller utdatanamn), **[!UICONTROL Extension]** (eller filtyp), välj **[!UICONTROL Quality]** (eller utdataparametrar), markera Inkluderar och utelämnar MIME-typlistor (eller indataresursfilter) och välj önskad kreativ åtgärd.
+
+1. För vissa åtgärder krävs ytterligare en parameter (resurs). Ange värden för sådana ytterligare parametrar om det behövs.
 
 1. Lägg till fler kreativa åtgärder som en del av samma bearbetningsprofil eller Spara profilen.
 
-1. Använd bearbetningsprofilen på en mapp. Välj mappegenskaper, Resursbearbetning och välj den bearbetningsprofil som skapas.
+1. Använd bearbetningsprofilen på en mapp. På en mapps **[!UICONTROL Properties]**-sida väljer du **[!UICONTROL Asset Processing]** och väljer den bearbetningsprofil som ska användas.
 
-När bearbetningsprofilen har tillämpats på en DAM-mapp kör alla resurser som har överförts eller uppdaterats i den här mappen (eller i undermappar, om de inte har åsidosatts) de definierade åtgärderna förutom standardbearbetningen.
+När bearbetningsprofilen har tillämpats på en DAM-mapp kör alla resurser som har överförts eller uppdaterats i den här mappen de definierade åtgärderna förutom standardbearbetningen. Undermapparna ärver samma profiler som de överordnade mapparna. Användare kan åsidosätta detta arv.
 
-Om du vill bearbeta befintliga resurser manuellt markerar du resurserna och väljer alternativet **[!UICONTROL Reprocess]** och väljer sedan önskad bearbetningsprofil.
+Om du vill bearbeta befintliga resurser markerar du resurserna, väljer alternativet **[!UICONTROL Reprocess]** och väljer sedan önskad bearbetningsprofil.
 
 ## Tips och begränsningar {#limitations-best-practices}
 
