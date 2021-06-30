@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: ffca94ef8d93cf95011d7e3128c49929f69cdc28
+source-git-commit: ed24f9ad81e7686f0a33260c44011628bc7c4cf9
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1488'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Nästa version är planerad till 15 juli 2021.
 
 * Med funktionen för innehållsautomatisering kan [!DNL Experience Manager Assets] utnyttja API:erna för [!DNL Adobe Creative Cloud] för att automatisera materialproduktionen i stor skala. Det förbättrar innehållets hastighet genom att dramatiskt minska den tid det tar och de iterationer som krävs för att skapa varianter av samma material. Funktionen kräver ingen programmering och fungerar inifrån DAM. Se [Generera variationer av resurser med hjälp av Creative Cloud-integrering](/help/assets/cc-api-integration.md).
 
-* [!DNL Adobe Asset Link] v3.0 for  [!DNL Adobe Photoshop],  [!DNL Adobe Illustrator]and  [!DNL Adobe InDesign] and  [!DNL Adobe Asset Link] v2.0 for  [!DNL Adobe XD] släpps. Den innehåller följande:
+* [[!DNL Adobe Asset Link] v3.0](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för  [!DNL Adobe Photoshop],  [!DNL Adobe Illustrator]och  [!DNL Adobe InDesign] v2.0 [[!DNL Adobe Asset Link] för ](https://helpx.adobe.com/enterprise/using/adobe-asset-link-for-xd.html)   [!DNL Adobe XD] finns. Den innehåller följande:
 
    * Stöd för [!DNL Assets Essentials].
    * Möjlighet att automatiskt ansluta till [!DNL Experience Manager] som [!DNL Cloud Service] eller [!DNL Assets Essentials].
@@ -114,6 +114,14 @@ Nästa version är planerad till 15 juli 2021.
 * [!DNL Experience Manager Assets] bäddar in PDF-visningsprogrammet för att förhandsgranska de dokumentformat som stöds. Den drivs av [!DNL Adobe Document Cloud]. Med den här funktionen kan användarna förhandsgranska PDF-filer och andra flersidiga filer utan komplex bearbetning. Detta förbättrar funktionspariteten med [!DNL Experience Manager] 6.5.
 
    ![Förhandsgranska PDF-filer i  [!DNL Experience Manager] PDF Viewer](/help/assets/assets/preview-pdf-file-viewer.png)
+
+* En förbättring av användarupplevelsen visar antalet resurser i en mapp. För mer än 1 000 resurser i en mapp visar [!DNL Assets] 1 000+.
+
+   ![Antalet resurser i en mapp visas i gränssnittet](/help/assets/assets/browse-folder-number-of-assets.png)
+
+* Du kan direkt använda ett metadatamatchema för en mapp i dess [!UICONTROL Properties].
+
+   ![Lägg till metadatamatchemat från mappegenskaper](/help/assets/assets/metadata-schema-folder-properties.png)
 
 ### Fel som har korrigerats i [!DNL Assets] {#bugs-fixed-assets}
 
