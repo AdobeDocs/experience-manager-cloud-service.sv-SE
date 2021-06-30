@@ -2,10 +2,10 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: eba9ce7c80fc785e44f13ded5227828b6f04f7bb
+source-git-commit: 225c47db1af35b29d79ebd16fa437681987b1372
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -32,6 +32,14 @@ De ytterligare möjligheterna i **On Time** och **Off Time** är tillgängliga p
 Om du vill genomföra den automatiska replikeringen för detta måste du aktivera **Automatisk replikering** i [OSGi-konfigurationen](/help/implementing/deploying/configuring-osgi.md) **Utlösarkonfiguration vid fel**:
 
 ![Konfiguration av OSGi på av utlösare](/help/operations/assets/replication-on-off-trigger.png)
+
+### Hantera publikation {#manage-publication}
+
+Med Hantera publikation får du fler alternativ än Snabbpublicering, så att du kan inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden samt erbjuda möjlighet att publicera vid ett senare tillfälle.
+
+Om du tar med en mapps underordnade objekt för alternativet Publicera senare, aktiveras arbetsflödet Publicera innehållsträd, som beskrivs i den här artikeln.
+
+Mer detaljerad information om Hantera publikation finns i [Publishing Fundamentals documentation](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
 
 ### Aktivering av träd {#tree-activation}
 
@@ -177,14 +185,6 @@ ReplicationStatus previewStatus = afterStatus.getStatusForAgent(PREVIEW_AGENT); 
 Om du inte anger ett sådant filter och bara använder agenten för publicering, används inte agenten för förhandsgranskning och replikeringsåtgärden påverkar inte förhandsgranskningsnivån.
 
 Den övergripande `ReplicationStatus` för en resurs ändras bara om replikeringsåtgärden innehåller minst en agent som är aktiv som standard. I exemplet ovan är detta inte fallet eftersom replikeringen bara använder agenten för förhandsgranskning. Du måste därför använda den nya metoden `getStatusForAgent()` som gör att du kan fråga efter status för en viss agent. Den här metoden fungerar även för agenten&quot;publish&quot;. Det returnerar ett värde som inte är null om någon replikeringsåtgärd har utförts med den angivna agenten.
-
-### Hantera publikation {#manage-publication}
-
-Med Hantera publikation får du fler alternativ än Snabbpublicering, så att du kan inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden samt erbjuda möjlighet att publicera vid ett senare tillfälle.
-
-Om du tar med en mapps underordnade objekt för alternativet Publicera senare, aktiveras arbetsflödet Publicera innehållsträd, som beskrivs i den här artikeln.
-
-Mer detaljerad information om Hantera publikation finns i [Publishing Fundamentals documentation](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
 
 ## Felsökning {#troubleshooting}
 
