@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: bed5a88a545efa4dbfe5c20f4713c0c6adb9847b
+source-git-commit: e4f49fd71451805d48d5f22dcf2f6d097a4d8d10
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -140,15 +140,16 @@ Nästa version är planerad till 15 juli 2021.
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* Lagt till möjlighet att filtrera anpassade kolumner AEM Inkorgen.
-* Lagt till möjlighet att använda temaredigeraren och stillagret i en adaptiv formulärredigerare för att formatera captcha-komponenten.
-* Snabbare och exaktare för automatisk detektering av logiska avsnitt i PDF forms och konvertering av dessa till motsvarande adaptiva formulärpaneler.
-* Flyttningsåtgärd har lagts till för att flytta en PDF- eller XDP-fil från en mapp till en annan.
+* Forms-administratörer kan filtrera anpassade kolumner AEM Inkorgen.
+* Forms-utvecklare kan använda temaredigeraren och stillagret i en adaptiv formulärredigerare för att formatera captcha-komponenten.
+* Förbättrad precision för att automatiskt identifiera logiska avsnitt i källformulären och konvertera dem till motsvarande adaptiva formulärpaneler.
+* Flyttningsåtgärd har lagts till för att hjälpa till att flytta en PDF- eller XDP-fil från en mapp till en annan.
+* Minskad inläsningstid och förbättrade prestanda för redigering av adaptiva formulär och teman.
 
 ### Betafunktion i [!DNL Forms] {#what-is-new-forms-prerelease}
 
 * **[!DNL AEM Forms as a Cloud Service - Communications]**: Med kommunikations-API:er kan du kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
-   * Generera slutliga formulärdokument genom att fylla i mallfiler med XML-data.
+   * Generera dokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
    * Generera utskrifts-PDF:er från ett XFA-formulär i PDF- och Adobe Acrobat-format (AcroForm).
 
@@ -159,7 +160,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för bet
 ### Fel som har korrigerats i [!DNL Forms] {#forms-bugs-fixed}
 
 * När ett fält valideras innan data skickas till backend-tjänsten via FDM (Form Data Model), lyckas valideringen men tjänsten Form Data Model kan inte anropa eftervalideringen.
-* När du skickar ett formulär som innehåller ett vanligt HTML-överföringsfält från en Apple iOS-enhet skickas ibland inte filens innehåll och en 0-byte-fil tas emot i den andra änden. Detta är ett känt problem i Apple iOS. [FB9117687](https://feedbackassistant.apple.com/feedback/9117687)
+* När du skickar ett formulär som innehåller ett vanligt HTML-överföringsfält från en Apple iOS-enhet skickas ibland inte filens innehåll och en 0-byte-fil tas emot i den andra änden. [FB9117687](https://feedbackassistant.apple.com/feedback/9117687)
 
 ## [!DNL Adobe Experience Manager Screens] som  [!DNL Cloud Service] {#screens}
 
