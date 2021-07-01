@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: e4f49fd71451805d48d5f22dcf2f6d097a4d8d10
+source-git-commit: f8864341be5026f7e5aaf1112f69e76bdc6cbe8f
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1521'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ Nästa version är planerad till 15 juli 2021.
 
 ## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
-### Nyheter i [!DNL Forms] {#what-is-new-forms}
+### Nya funktioner i [!DNL Forms] {#what-is-new-forms}
 
 * Forms-administratörer kan filtrera anpassade kolumner AEM Inkorgen.
 * Forms-utvecklare kan använda temaredigeraren och stillagret i en adaptiv formulärredigerare för att formatera captcha-komponenten.
@@ -152,8 +152,6 @@ Nästa version är planerad till 15 juli 2021.
    * Generera dokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
    * Generera utskrifts-PDF:er från ett XFA-formulär i PDF- och Adobe Acrobat-format (AcroForm).
-
-* **Variable Data Externalizer**: Du kan spara data AEM arbetsflödesvariabler i ett externt lagringssystem som hanteras av din organisation.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för betaprogrammet.
 
