@@ -5,10 +5,9 @@ contentOwner: Rick Brough
 feature: Bildförinställningar,Visningsförinställningar
 role: Business Practitioner
 exl-id: 022ee347-54ec-4cec-b808-9eb3a9e51424
-translation-type: tm+mt
-source-git-commit: 1fe6ce1259972c1805d934327aa2f24cdcdc0bc8
+source-git-commit: c3e8be9809fd07dcc2186a898d9689ae5565620e
 workflow-type: tm+mt
-source-wordcount: '3193'
+source-wordcount: '3204'
 ht-degree: 0%
 
 ---
@@ -19,18 +18,18 @@ Använd **[!UICONTROL Batch Set Presets]** om du vill skapa och ordna flera resu
 
 >[!IMPORTANT]
 >
->Om du använde gruppuppsättningsförinställningar i [!DNL Dynamic Media Classic], och du migrerar från [!DNL Dynamic Media Classic] till Adobe Experience Manager som Cloud Service, återskapar du dina gruppuppsättningsförinställningsdefinitioner manuellt i [!DNL Adobe Experience Manager as a Cloud Service].
+>Använder du gruppuppsättningsförinställningar i [!DNL Dynamic Media Classic] och migrerar från [!DNL Dynamic Media Classic] till Adobe Experience Manager som en Cloud Service? I så fall måste du manuellt återskapa definitioner för gruppuppsättningsförinställningar i [!DNL Adobe Experience Manager as a Cloud Service].
 
 **Bästa praxis**  - När du arbetar med gruppuppsättningsförinställningar rekommenderar Adobe följande arbetsflöde:
 
 1. Skapa en gruppuppsättningsförinställning. Se [Skapa en förinställning för gruppuppsättning för en bilduppsättning eller en snurruppsättning](#creating-bsp).
 1. Skapa en resursmapp eller använd en befintlig resursmapp och kontrollera att den är synkroniserad till [!DNL Dynamic Media]. Se [Skapa mappar](/help/assets/manage-digital-assets.md#creating-folders).
 1. Använd gruppuppsättningsförinställningen på resursmappen. Se [Om att använda gruppuppsättningsförinställningar på mappar](#apply-bsp).
-1. Överför bilder till resursmappen. Se [Överföra resurser för bilduppsättningar](/help/assets/dynamic-media/image-sets.md#uploading-assets-in-image-sets), [Överföra resurser för snurruppsättningar](/help/assets/dynamic-media/spin-sets.md#uploading-assets-for-spin-sets) eller [Lägg till digitala resurser i Adobe Experience Manager](/help/assets/add-assets.md#add-assets-to-experience-manager).
+1. Överför bilder till resursmappen. Se [Överför resurser för bilduppsättningar](/help/assets/dynamic-media/image-sets.md#uploading-assets-in-image-sets), [Överför resurser för snurruppsättningar](/help/assets/dynamic-media/spin-sets.md#uploading-assets-for-spin-sets) eller [Lägg till digitala resurser i Adobe Experience Manager](/help/assets/add-assets.md#add-assets-to-experience-manager).
 1. Bilduppsättningen eller rotationsuppsättningen genereras automatiskt i den önskade mappen.
-1. Publicera din bilduppsättning eller snurra. Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+1. Publicera din bilduppsättning eller snurra. Se [Publicera Dynamic Media-resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
-## Skapa en gruppuppsättningsförinställning för en bilduppsättning eller en snurruppsättning {#creating-bsp}
+## Skapa en förinställning för gruppuppsättning för en bilduppsättning eller en snurruppsättning {#creating-bsp}
 
 Om du vill skapa förinställningar för gruppuppsättningar bör du känna till och förstå reguljära uttryck.
 
@@ -67,15 +66,15 @@ När du är klar med att skapa en gruppuppsättningsförinställning använder d
 
 **Så här skapar du en gruppuppsättningsförinställning för en bilduppsättning eller en snurruppsättning:**
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 
    ![bsp-create1.png](/help/assets/assets-dm/bsp-create1.png)
 
-1. Tryck på **[!UICONTROL Create]** på sidan **[!UICONTROL Batch Set Presets]** i det övre högra hörnet.
+1. På sidan **[!UICONTROL Batch Set Presets]**, nära det övre högra hörnet, väljer du **[!UICONTROL Create]**.
 1. I dialogrutan **[!UICONTROL Create Batch Set Preset]** anger du ett beskrivande namn i textfältet **[!UICONTROL Preset Name]**. Förinställningsnamnet kan inte redigeras om du senare bestämmer dig för att ändra det.
 
 1. Välj **[!UICONTROL ImageSet]** eller **[!UICONTROL SpinSet]** i listrutan **[!UICONTROL Preset Type]**. Se till att du väljer rätt förinställningstyp. går inte att redigera senare.
-1. Tryck på **[!UICONTROL Create]**.
+1. Välj **[!UICONTROL Create]**.
 1. Till höger om **[!UICONTROL Edit Batch Set Preset]**-sidan anger du de redigeringsbara alternativ du vill ha under rubrikerna **[!UICONTROL Preset Details]** och **[!UICONTROL Set Naming Convention]**.
 Mer information om de redigerbara alternativ som är tillgängliga finns i [Förinställningsdetaljer, Ange namngivningskonvention och Regelresultat - RegX-alternativ](#features-options-bsp).
 
@@ -83,20 +82,20 @@ Mer information om de redigerbara alternativ som är tillgängliga finns i [För
 
 1. Skapa en eller flera grupper med reguljära uttryck.
 
-   * Tryck på **[!UICONTROL Add Group]** till vänster om **[!UICONTROL Edit Batch Set Preset]**-sidan, under **[!UICONTROL Match]**, **[!UICONTROL Base Name]** eller **[!UICONTROL Sequence Ordering]**.
+   * Till vänster om **[!UICONTROL Edit Batch Set Preset]**-sidan, under **[!UICONTROL Match]**, **[!UICONTROL Base Name]** eller **[!UICONTROL Sequence Ordering]** väljer du **[!UICONTROL Add Group]**.
    * Fältet **[!UICONTROL Match]** är obligatoriskt. **[!UICONTROL Base Name]** är bara obligatoriskt om  **[!UICONTROL Match]** fältet inte redan anger ett basnamn med hjälp av en hakparentesgruppering. **[!UICONTROL Sequence Ordering]** är valfritt.
    * Använd listrutorna och textrutorna i gruppens formulär och ange en uttrycksgrupp som du vill använda för att definiera namnvillkoren för bilduppsättnings- eller rotationsuppsättningens resursmedlemmar.
-      * När du väljer och anger uttryck för en grupp bör du lägga märke till att den faktiska syntaxen för reguljära uttryck visas i sidans nedre högra hörn, under rubriken **[!UICONTROL Rule Results - RegX]**. Om du vill se strängen för det reguljära uttrycket uppdateras i det nedre högra hörnet trycker du var som helst utanför formulärområdet. Dessa strängar för reguljära uttryck representerar det mönster som du vill matcha i en sökning med [!DNL Dynamic Media]-resurser för att skapa din bilduppsättning eller snurra.
-      * Om du vill ta bort en grupp som du har lagt till trycker du på **[!UICONTROL X]**.
+      * När du väljer och anger uttryck för en grupp bör du lägga märke till att den faktiska syntaxen för reguljära uttryck visas i sidans nedre högra hörn, under rubriken **[!UICONTROL Rule Results - RegX]**. Om du vill se strängen för det reguljära uttrycket uppdateras i det nedre högra hörnet, markerar du var som helst utanför formulärområdet. Dessa strängar för reguljära uttryck representerar det mönster som du vill matcha i en sökning med [!DNL Dynamic Media]-resurser för att skapa din bilduppsättning eller snurra.
+      * Om du har lagt till en grupp och vill ta bort den väljer du **[!UICONTROL X]**.
    * När du lägger till två eller flera grupper väljer du **[!UICONTROL And]** i listrutan **[!UICONTROL And]** för att koppla en nyligen tillagd grupp till en tidigare uttrycksgrupp som du har lagt till. Du kan också välja **[!UICONTROL Or]** om du vill lägga till ett alternativ mellan den föregående uttrycksgruppen och den nya gruppen som du skapar. Operanden **[!UICONTROL Or]** definieras av användningen av ett lodrätt radtecken `|` i syntaxen för det reguljära uttrycket.
 
 1. Gör något av följande:
 
-   * Om du vill lägga till en ny grupp trycker du på **[!UICONTROL Match]**, **[!UICONTROL Base Name]** eller **[!UICONTROL Sequencing Order]**. **[!UICONTROL Add Group]** Skapa en annan grupp med reguljära uttryck på samma sätt som i föregående steg.
+   * Om du vill lägga till en ny grupp väljer du **[!UICONTROL Match]**, **[!UICONTROL Base Name]** eller **[!UICONTROL Sequencing Order]** under **[!UICONTROL Add Group]**. Skapa en annan grupp med reguljära uttryck på samma sätt som i föregående steg.
    * Granska syntaxen för reguljära uttryck i **[!UICONTROL Rule Results - RegX]**-området. Om du måste ändra syntaxen gör du ändringarna i respektive grupp till vänster på sidan.
    * Om du har skapat uttrycksgrupper fortsätter du till nästa steg.
 
-1. Tryck på **[!UICONTROL Save]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Save]** i det övre högra hörnet på sidan.
 
 Du kan nu använda gruppuppsättningsförinställningen på en resursmapp. Sedan överför du resurser till den mappen. Det här arbetsflödet leder till automatisk generering av bilduppsättningen eller rotationsuppsättningen. Se [Om att använda gruppuppsättningsförinställningar på resursmappar](#apply-bsp).
 
@@ -141,21 +140,21 @@ Bearbeta resurser i en mapp på nytt om du upplever något av följande två sce
 
 <!-- See [Reprocessing assets in a folder](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). -->
 
-### Använda gruppuppsättningsförinställningar på resursmappar från sidan Gruppuppsättningsförinställning {#apply-bsp-to-folders-via-bsp-page}
+### Använda gruppuppsättningsförinställningar på resursmappar från sidan Gruppera förinställningar {#apply-bsp-to-folders-via-bsp-page}
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, markerar du kryssrutan för varje gruppuppsättningsförinställning som du vill tillämpa på mappar.
-1. Tryck på **[!UICONTROL Apply Batch Preset to Folders]** i verktygsfältet.
+1. Välj **[!UICONTROL Apply Batch Preset to Folders]** i verktygsfältet.
 1. På sidan **[!UICONTROL Select Folders]** markerar du kryssrutan för varje mapp som du vill att gruppuppsättningsförinställningarna ska tillämpas på.
-1. Tryck på **[!UICONTROL Apply]** i det övre högra hörnet på sidan **[!UICONTROL Select Folders]**.
+1. Välj **[!UICONTROL Apply]** i det övre högra hörnet på sidan **[!UICONTROL Select Folders]**.
 
 ### Använda gruppuppsättningsförinställningar från egenskapssidan för en resursmapp {#apply-bsp-to-folders-via-properties}
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
+1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Navigera till en mapp där du vill använda en eller flera gruppuppsättningsförinställningar.
 1. Markera kryssrutan för en mapp på sidan till vänster om kolumnen **[!UICONTROL Name]**.
-1. Tryck på **[!UICONTROL Properties]** i verktygsfältet.
-1. Tryck på fliken **[!UICONTROL Dynamic Media Processing]** på mappens egenskapssida.
+1. Välj **[!UICONTROL Properties]** i verktygsfältet.
+1. Välj fliken **[!UICONTROL Dynamic Media Processing]** på mappens egenskapssida.
 
    ![bsp-apply-via-properties2.png](/help/assets/assets-dm/bsp-apply-via-properties2a.png)
 
@@ -163,9 +162,9 @@ Bearbeta resurser i en mapp på nytt om du upplever något av följande två sce
 
    Om det inte finns några förinställningsnamn för gruppuppsättningar i listrutan **[!UICONTROL Preset Name]** betyder det att du ännu inte har skapat några förinställningar för gruppuppsättningar. Se [Skapa en förinställning för gruppuppsättning för en bilduppsättning eller en snurruppsättning](#creating-bsp).
 
-   Om du vill ta bort en tillämpad gruppuppsättningsförinställning trycker du på **[!UICONTROL X]** till höger om förinställningstypen.
+   Om du vill ta bort en tillämpad gruppuppsättningsförinställning väljer du **[!UICONTROL X]** till höger om förinställningstypen.
 
-1. Tryck på **[!UICONTROL Save & Close]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Save & Close]** i det övre högra hörnet på sidan.
 
 ## Redigera en gruppuppsättningsförinställning {#edit-bsp}
 
@@ -179,11 +178,11 @@ Om du vill att den nyligen redigerade förinställningen ska tillämpas på de b
 
 **Så här redigerar du en gruppuppsättningsförinställning:**
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]** till vänster om kolumnen **[!UICONTROL Preset Name]** kontrollerar du den förinställning för gruppuppsättning som du vill ändra.
-1. Tryck på **[!UICONTROL Edit Batch Set Preset]** i verktygsfältet.
+1. Välj **[!UICONTROL Edit Batch Set Preset]** i verktygsfältet.
 1. Redigera förinställningen efter behov.
-1. Tryck på **[!UICONTROL Save]** i det övre högra hörnet på sidan **[!UICONTROL Batch Set Preset]**.
+1. Välj **[!UICONTROL Save]** i det övre högra hörnet på sidan **[!UICONTROL Batch Set Preset]**.
 
 ## Kopiera en befintlig gruppuppsättningsförinställning {#copy-bsp}
 
@@ -191,18 +190,18 @@ Du kan kopiera en befintlig gruppuppsättningsförinställning för att undvika 
 
 Om du kopierar en befintlig förinställning som är en referens från resursmappar påverkas inte dessa mappar.
 
-**Så här kopierar du en befintlig gruppuppsättningsförinställning:**
+**Kopiera en befintlig gruppuppsättningsförinställning:**
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, markerar du kryssrutan för den gruppuppsättningsförinställning som du vill kopiera.
-1. Tryck på **[!UICONTROL Copy]** i verktygsfältet.
+1. Välj **[!UICONTROL Copy]** i verktygsfältet.
 1. I dialogrutan **[!UICONTROL Copy Batch Set Preset]** skriver du ett nytt namn för förinställningen i textrutan **[!UICONTROL Title]**.
 
    ![bsp-copy2.png](/help/assets/assets-dm/bsp-copy2.png)
 
-1. Tryck på **[!UICONTROL Copy]**.
+1. Välj **[!UICONTROL Copy]**.
 
-## Om att ta bort gruppuppsättningsförinställningar från mappar {#remove-bsp-from-folder}
+## Om att ta bort förinställningar för gruppuppsättningar från mappar {#remove-bsp-from-folder}
 
 När du tar bort förinställningar för gruppuppsättningar från mappar tillämpas inte förinställningen för gruppuppsättningar på nya resurser som du överför till dessa mappar. Befintliga resurser i mappen som redan har lagts till i bilduppsättningen eller som har angetts i gruppuppsättningen baserat på den förinställning som användes i mappen fortsätter att visas som de är.
 
@@ -210,62 +209,62 @@ Om du vill *ta bort* förinställningar från mappar i stället läser du [Ta bo
 
 Det finns två metoder som du kan använda för att ta bort gruppuppsättningsförinställningar från mappar.
 
-* [Ta bort gruppuppsättningsförinställningar från mappar via sidan](#remove-bsp-from-folders-via-bsp-page)  Gruppuppsättningsförinställning - Den här metoden ger dig stor flexibilitet. Du kan ta bort en eller flera förinställningar från en eller flera mappar.
+* [Ta bort gruppuppsättningsförinställningar från mappar via sidan](#remove-bsp-from-folders-via-bsp-page)  Gruppera förinställningar - Den här metoden ger dig stor flexibilitet. Du kan ta bort en eller flera förinställningar från en eller flera mappar.
 * [Ta bort gruppuppsättningsförinställningar från mappens egenskapssida](#remove-bsp-from-folders-via-properties)  - Med den här metoden kan du ta bort en eller flera gruppuppsättningsförinställningar från en enda mapp.
 
 ### Ta bort gruppuppsättningsförinställningar från mappar via sidan Gruppuppsättningsförinställning {#remove-bsp-from-folders-via-bsp-page}
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. Markera kryssrutan för en eller flera gruppuppsättningsförinställningar som du vill ta bort från en eller flera mappar på sidan **[!UICONTROL Batch Set Presets]** till vänster om kolumnen **[!UICONTROL Preset Name]**.
-1. Tryck på **[!UICONTROL Remove Batch Preset from Folders]** i verktygsfältet.
+1. Välj **[!UICONTROL Remove Batch Preset from Folders]** i verktygsfältet.
 
 1. På sidan **[!UICONTROL Select Folders]** väljer du en eller flera mappar där du vill ta bort förinställningarna för gruppuppsättningen.
-1. Tryck på **[!UICONTROL Remove]** i det övre högra hörnet på sidan **[!UICONTROL Select Folders]**.
+1. Välj **[!UICONTROL Remove]** i det övre högra hörnet på sidan **[!UICONTROL Select Folders]**.
 
    ![bsp-remove-from-folders3.png](/help/assets/assets-dm/bsp-remove-from-folders3.png)
 
-1. Tryck på **[!UICONTROL Remove]** i dialogrutan **[!UICONTROL Remove profile]**.
+1. Välj **[!UICONTROL Remove]** i dialogrutan **[!UICONTROL Remove profile]**.
 
-### Tar bort gruppuppsättningsförinställningar från en mapps egenskapssida {#remove-bsp-from-folders-via-properties}
+### Ta bort gruppuppsättningsförinställningar från en mapps egenskapssida {#remove-bsp-from-folders-via-properties}
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
+1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Navigera till en mapp där du vill ta bort en eller flera gruppuppsättningsförinställningar.
 1. Markera kryssrutan för en mapp på sidan till vänster om kolumnen **[!UICONTROL Name]**.
-1. Tryck på **[!UICONTROL Properties]** i verktygsfältet.
-1. Tryck på **[!UICONTROL Dynamic Media Processing]** på mappens egenskapssida.
+1. Välj **[!UICONTROL Properties]** i verktygsfältet.
+1. Välj **[!UICONTROL Dynamic Media Processing]** på mappens egenskapssida.
 
    ![bsp-apply-via-properties2.png](/help/assets/assets-dm/bsp-remove-via-properties2.png)
 
-1. Under **[!UICONTROL Batch Set Presets]** trycker du på **[!UICONTROL X]** till höger om förinställningstypen.
+1. Under **[!UICONTROL Batch Set Presets]** väljer du **[!UICONTROL X]** till höger om förinställningstypen.
 
-1. Tryck på **[!UICONTROL Save & Close]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Save & Close]** i det övre högra hörnet på sidan.
 
-## Tar bort förinställningar för gruppuppsättning {#delete-bsp}
+## Ta bort förinställningar för gruppuppsättning {#delete-bsp}
 
 Du kan ta bort gruppuppsättningsförinställningar för att ta bort dem permanent från [!DNL Dynamic Media]. Det innebär att de inte längre visas på sidan [!UICONTROL Batch Set Preset] och inte heller visas de i listrutan **[!UICONTROL Batch Set Presets]** på fliken **[!UICONTROL Dynamic Media Processing]** på mappens **[!UICONTROL Properties]**-sida. Därför används inte förinställningen på befintliga resurser vid mappombearbetningar eller när nya resurser överförs till mappen.
 
 Om du tar bort en förinställning som tidigare har tillämpats på en eller flera mappar kommer alla bilduppsättningar och snurruppsättningar som har skapats från resurser i de mapparna att visas som de är.
 
-Om du vill *ta bort* förinställningar från mappar i stället läser du [Ta bort förinställningar för gruppuppsättningar från mappar](#remove-bsp-from-folder).
+Om du vill *ta bort* förinställningar från mappar i stället läser du [Ta bort förinställningar för gruppuppsättning från mappar](#remove-bsp-from-folder).
 
 **Så här tar du bort gruppuppsättningsförinställningar:**
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. Markera kryssrutan för en eller flera förinställningar för gruppuppsättning som du vill ta bort på sidan **[!UICONTROL Batch Set Presets]** till vänster om kolumnen **[!UICONTROL Preset Name]**.
-1. Tryck på **[!UICONTROL Delete Batch Set Presets]** i verktygsfältet.
+1. Välj **[!UICONTROL Delete Batch Set Presets]** i verktygsfältet.
 
    ![bsp-delete2.png](/help/assets/assets-dm/bsp-delete2.png)
 
-1. Tryck på **[!UICONTROL Delete]** i dialogrutan **[!UICONTROL Delete Batch Set Presets]**.
+1. Välj **[!UICONTROL Delete]** i dialogrutan **[!UICONTROL Delete Batch Set Presets]**.
 
-   Om en resursmapp refererar till den förinställning du vill ta bort trycker du i stället på **[!UICONTROL Force Delete]**.
+   Om en resursmapp refererar till den förinställning du vill ta bort väljer du **[!UICONTROL Force Delete]** i stället.
 
    ![bsp-delete3.png](/help/assets/assets-dm/bsp-delete3.png)
 
 >[!MORELIKETHIS]
 >
 >* [Bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
->* [Snurrande uppsättningar](/help/assets/dynamic-media/spin-sets.md)
->* [Konfigurera selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md#selective-publish-configure-folder)  - Mer information om hur du synkroniserar en enskild mapp till finns i Synkroniseringsläge i avsnittet  [!DNL Dynamic Media].
->* [Skapa en Dynamic Media-konfiguration i Cloud Services](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services)  - Mer information om hur du synkroniserar alla mappar till finns i Synkroniseringsläge för Dynamic Media  [!DNL Dynamic Media].
+* [Snurrande uppsättningar](/help/assets/dynamic-media/spin-sets.md)
+* [Konfigurera selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md#selective-publish-configure-folder)  - Se Synkroniseringsläge i avsnittet om du vill veta mer om hur du synkroniserar en enskild mapp till  [!DNL Dynamic Media].
+* [Skapa en Dynamic Media-konfiguration i Cloud Services](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services)  - Se Dynamic Media synkroniseringsläge i avsnittet om du vill veta mer om hur du synkroniserar alla mappar till  [!DNL Dynamic Media].
 
