@@ -1,40 +1,39 @@
 ---
-title: Använda snabbvyer för att skapa anpassade popup-fönster
-description: '"Lär dig mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstret för Windows®."'
+title: Skapa anpassade popup-fönster med snabbvyn
+description: '"Läs mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstret för Windows®."'
 feature: interaktiva bilder, interaktiva videor, Carousel Banners
 role: Administrator,Business Practitioner
 exl-id: c2bc6ec8-d46e-4681-ac3e-3337b9e6ae5c
-translation-type: tm+mt
-source-git-commit: 78d85d31e03d8190c086a870f2fc2ff1cb00a320
+source-git-commit: c3e8be9809fd07dcc2186a898d9689ae5565620e
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
 
-# Använda snabbvyer för att skapa anpassade popup-fönster® {#using-quickviews-to-create-custom-pop-ups}
+# Skapa anpassade popup-fönster® med QuickView {#using-quickviews-to-create-custom-pop-ups}
 
-Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram du använder kan kunderna trycka på en hotspot, en miniatyrbild eller ett bildschema för att se information eller relaterat innehåll.
+Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram du använder kan kunderna välja en aktiveringspunkt, en miniatyrbild eller ett bildschema för att se information eller relaterat innehåll.
 
-Snabbvyer stöds av följande visningsprogram i Dynamic Media:
+Quickview stöds av följande visningsprogram i Dynamic Media:
 
-* Interaktiva bilder (klickbara hotspot-områden)
-* Interaktiv video (klickbara miniatyrbilder vid videouppspelning)
-* Carousel Banners (klickbara hotspot-områden eller bildscheman)
+* Interaktiva bilder (valbara aktiveringspunkter)
+* Interaktiv video (valbara miniatyrbilder vid videouppspelning)
+* Carousel Banners (markeringsbara hotspot-områden eller bildscheman)
 
-Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma i alla tre visningsprogram som stöds.
+Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma för alla tre visningsprogram som stöds.
 
-**Så här använder du snabbvyer för att skapa anpassade popup-fönster®:**
+**Så här skapar du anpassade popup-fönster® med snabbvyn:**
 
 1. Skapa en snabbvy för en överförd resurs.
 
-   Du skapar vanligtvis en snabbvy samtidigt som du redigerar en resurs som ska användas med det visningsprogram du använder.
+   Vanligtvis skapar du en snabbvy samtidigt som du redigerar en resurs för användning med det visningsprogram du använder.
 
    <table>
     <tbody>
     <tr>
     <td><strong>Visningsprogram som du använder</strong></td>
-    <td><strong>Så här skapar du snabbvyn</strong></td>
+    <td><strong>Följ de här stegen för att skapa snabbvyn</strong></td>
     </tr>
     <tr>
     <td>Interaktiva bilder</td>
@@ -107,10 +106,10 @@ Anta att du använde följande exempelkod för inbäddning på webbsidan för en
 
 1. Konfigurera nu hanteraren `quickViewActivate`.
 
-   Hanteraren `quickViewActivate` styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som används med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn. Det gör också ett exempel på ett `loadQuickView`-funktionsanrop.
+   Hanteraren `quickViewActivate` styr snabbvyn i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn. Det gör också ett exempel på ett `loadQuickView`-funktionsanrop.
 
    **Variable**
-mappingMap-variabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i snabbvyn:
+mappingMap-variabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i QuickView:
 
    `var *variable1*= inData.*quickviewVariable*`
 
@@ -118,7 +117,7 @@ mappingMap-variabler som ska användas på webbsidan till SKU-värdet och generi
 
    `var sku=inData.sku`
 
-   Mappa även andra variabler från snabbvyn, som i följande:
+   Mappa andra variabler från snabbvyn också, som i följande exempel:
 
    ```
    var <i>variable2</i>= inData.<i>quickviewVariable2</i>
