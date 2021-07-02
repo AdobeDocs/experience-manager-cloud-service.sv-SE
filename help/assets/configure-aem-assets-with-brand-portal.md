@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Resursdistribution,Konfiguration
 role: Administrator
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 9d219b8de11fd977dab4f75468836892cb13364a
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2267'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Du kan aktivera Brand Portal när du skapar miljöer för din AEM Assets som en 
 >Om den befintliga Brand Portal-molnkonfigurationen och AEM Assets som en [!DNL Cloud Service]-instans använder samma IMS-organisation (org1) behöver du bara aktivera Brand Portal från Cloud Manager.
 
 **Se även**:
-* [Lägga till användare och roller i AEM Assets som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/what-is-required/add-users-roles.html?lang=en#role-definitions)
+* [Lägga till användare och roller i AEM Assets som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=en)
 
 * [Hantera miljöer i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#adding-environments)
 
@@ -375,7 +375,7 @@ Utför följande steg för att konfigurera IMS-kontot.
 >
 >Kontrollera att IMS-konfigurationen klarar hälsokontrollen. Om konfigurationen inte godkänns i hälsokontrollen är den ogiltig. Du måste ta bort den och skapa en ny, giltig konfiguration.
 
-### Konfigurera molntjänsten{#configure-the-cloud-service}
+### Konfigurera molntjänsten {#configure-the-cloud-service}
 
 Så här konfigurerar du molntjänsten i Brand Portal:
 
