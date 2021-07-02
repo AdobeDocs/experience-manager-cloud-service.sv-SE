@@ -2,18 +2,17 @@
 title: Bearbeta resurser med hjälp av mikrotjänster för resurser
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
-feature: Asset Compute Microservices,Workflow,Release Information,Asset Processing
+feature: asset compute Microservices,arbetsflöde,versionsinformation,tillgångsbearbetning
 role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+exl-id: 1e069b95-a018-40ec-be01-9a74ed883b77
+source-git-commit: 4b9a48a053a383c2bf3cb5a812fe4bda8e7e2a5a
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
 
-
-# Översikt över tillgångsintag och bearbetning med tillgångsmikrotjänster {#asset-microservices-overview}
+# Översikt över intag och hantering av tillgångar med hjälp av mikrotjänster {#asset-microservices-overview}
 
 Adobe Experience Manager som [!DNL Cloud Service] erbjuder en molnbaserad metod för att utnyttja Experience Manager-program och -funktioner. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster. Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna med molnbaserade resurstjänster är:
 
@@ -26,7 +25,7 @@ Adobe Experience Manager som [!DNL Cloud Service] erbjuder en molnbaserad metod 
 * Filbehandlingstjänster för Adobe används där det är tillämpligt, vilket ger exakt återgivning och [effektiv hantering av Adobe egna format](file-format-support.md).
 * Möjlighet att konfigurera efterbehandlingsarbetsflöden för att lägga till användarspecifika åtgärder och integreringar.
 
-Resursmikrotjänster hjälper till att undvika behovet av återgivningsverktyg och -metoder från tredje part (som ImageMagick och FMPEG-omkodning) och förenklar konfigurationer, samtidigt som de tillhandahåller grundläggande funktioner för vanliga filtyper som standard.
+Resursmikrotjänster hjälper till att undvika behovet av återgivningsverktyg och -metoder från tredje part (som [!DNL ImageMagick] och FFmpeg-omkodning) och förenklar konfigurationer, samtidigt som de tillhandahåller grundläggande funktioner för vanliga filformat som standard.
 
 ## Arkitektur på hög nivå {#asset-microservices-architecture}
 
@@ -41,19 +40,19 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 
 De viktigaste stegen för intag och bearbetning med hjälp av tillgångsmikrotjänster är:
 
-* Klienter, som webbläsare eller Adobe Asset Link, skickar en överföringsbegäran till Experience Manager och börjar överföra binärfilen direkt till den binära molnlagringen.
-* När den direkta binära överföringen har slutförts meddelar klienten Experience Manager.
-* Experience Manager skickar en bearbetningsbegäran till tillgångsmikrotjänsterna. Innehållet i begäran beror på vilken bearbetningsprofilskonfiguration i Experience Manager som anges, vilka återgivningar som ska genereras.
+* Klienter, som webbläsare eller Adobe Asset Link, skickar en överföringsbegäran till [!DNL Experience Manager] och börjar överföra binärfilen direkt till det binära molnlagringsutrymmet.
+* När den direkta binära överföringen har slutförts meddelar klienten [!DNL Experience Manager].
+* [!DNL Experience Manager] skickar en bearbetningsbegäran till resursens mikrotjänster. Innehållet i begäran beror på vilken bearbetningsprofilskonfiguration i [!DNL Experience Manager] som anger vilka återgivningar som ska genereras.
 * Resurserna för mikrotjänster tar emot begäran och skickar den till en eller flera mikrotjänster baserat på begäran. Varje mikrotjänst får åtkomst till den ursprungliga binärfilen direkt från den binära molnbutiken.
 * Resultaten av bearbetningen, t.ex. renderingar, lagras i det binära molnlagringsutrymmet.
-* Experience Manager meddelas om att bearbetningen är klar tillsammans med direktpekare till de genererade binärfilerna (återgivningar). De genererade återgivningarna är tillgängliga i Experience Manager för den överförda resursen.
+* Experience Manager meddelas om att bearbetningen är klar tillsammans med direktpekare till de genererade binärfilerna (återgivningar). De genererade återgivningarna är tillgängliga i [!DNL Experience Manager] för den överförda resursen.
 
 Detta är det grundläggande flödet av tillgångsintag och bearbetning. Om den är konfigurerad kan Experience Manager också starta en anpassad arbetsflödesmodell för att utföra efterbearbetning av resursen. Du kan till exempel utföra anpassade steg som är specifika för din miljö, som att hämta information från ett företagssystem och lägga till i resursegenskaper.
 
 Intag och bearbetningsflöde är viktiga begrepp i arkitekturen för tillgångsmikrotjänster för Experience Manager.
 
 * **Direkt binär åtkomst**: Resurser transporteras (och överförs) till molnbinärarkivet när de har konfigurerats för Experience Manager-miljöer, och sedan  [!DNL Experience Manager]får de tillgång till mikrotjänster och slutligen direktåtkomst till klienterna för att utföra sitt arbete. Detta minimerar belastningen på nätverk och duplicering av lagrade binärfiler
-* **Extern bearbetning**: Bearbetning av resurser görs utanför  [!DNL Experience Manager] miljön och sparar resurser (CPU, minne) för att tillhandahålla viktiga funktioner för hantering av digitala resurser samt stöd för interaktivt arbete med systemet för slutanvändare
+* **Extern bearbetning**: Bearbetning av resurser görs utanför  [!DNL Experience Manager] miljön och sparar resurser (processor, minne) för att tillhandahålla viktiga DAM-funktioner (Digital Asset Management) samt stöd för interaktivt arbete med systemet för slutanvändare
 
 ## Tillgångsuppladdning med direkt binär åtkomst {#asset-upload-with-direct-binary-access}
 
@@ -66,7 +65,7 @@ Du kan använda anpassade överföringsverktyg, som fungerar direkt med [!DNL Ex
 
 Mer information finns i [överföra resurser](add-assets.md).
 
-## Lägg till efterbearbetning av anpassad resurs {#add-custom-asset-post-processing}
+## Lägg till efterbearbetning av anpassade resurser {#add-custom-asset-post-processing}
 
 De flesta kunder bör få alla sina behov av tillgångsbearbetning från de konfigurerbara tillgångsmikrotjänsterna, men vissa kan behöva ytterligare bearbetning av resurser. Detta gäller särskilt om resurser behöver bearbetas baserat på information som kommer från andra system via integreringar. I sådana fall kan anpassade efterbearbetningsarbetsflöden användas.
 
@@ -80,8 +79,8 @@ Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsfl
 >[!MORELIKETHIS]
 >
 >* [Komma igång med mikrotjänster för material](asset-microservices-configure-and-use.md)
->* [Filformat som stöds](file-format-support.md)
->* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
->* [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
->* [Apache Oak-dokumentation om direkt binär åtkomst](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)
+* [Filformat som stöds](file-format-support.md)
+* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+* [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
+* [Apache Oak-dokumentation om direkt binär åtkomst](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)
 
