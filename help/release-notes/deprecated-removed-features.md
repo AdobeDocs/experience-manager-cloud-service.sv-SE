@@ -2,14 +2,14 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation som är specifik för borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: 725cc82aa5794b53e5a43d95359fe1fd148b59ac
+source-git-commit: 4b9a48a053a383c2bf3cb5a812fe4bda8e7e2a5a
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 5%
+source-wordcount: '483'
+ht-degree: 6%
 
 ---
 
-# Inaktuella och borttagna funktioner {#deprecated-and-removed-features}
+# Föråldrade och borttagna funktioner {#deprecated-and-removed-features}
 
 >[!CONTEXTUALHELP]
 >id="aem_cloud_deprecated_features"
@@ -26,7 +26,7 @@ Följande regler gäller för att kommunicera den förestående borttagningen/er
 
 Den här processen ger kunderna minst en releasecykel för att anpassa implementeringen till en ny version eller en efterföljare till en borttagningsfunktion, innan den faktiska borttagningen.
 
-## Inaktuella funktioner {#deprecated-features}
+## Föråldrade funktioner {#deprecated-features}
 
 I det här avsnittet visas funktioner som har markerats som borttagna i [!DNL Experience Manager] som [!DNL Cloud Service]. Vanligtvis är funktioner som ska tas bort i en framtida version först inaktuella, med ett alternativ.
 
@@ -36,7 +36,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | ------------ | ------------------ | ----------- |
 | [!DNL Assets] | `DAM Asset Update` arbetsflöde för att bearbeta inkapslade bilder. | Tillgångsintaget använder [tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md) nu. |
 | [!DNL Assets] | Överför resurser direkt till [!DNL Experience Manager]. Se [API:er för inaktuell överföring av resurser](/help/assets/developer-reference-material-apis.md#deprecated-asset-upload-api). | Använd [direkt binär överföring](/help/assets/add-assets.md). Mer teknisk information finns i [API:er för direkt överföring](/help/assets/developer-reference-material-apis.md#upload-binary). |
-| [!DNL Assets] | [Vissa arbetsflödessteg ](/help/assets/developer-reference-material-apis.md#post-processing-workflows-steps) i  `DAM Asset Update` arbetsflödet stöds inte, inklusive anrop av kommandoradsverktyg som ImageMagick. | [Resursmikrotjänster ](/help/assets/asset-microservices-overview.md) ersätter många arbetsflöden. Använd [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) för anpassad bearbetning. |
+| [!DNL Assets] | [Vissa arbetsflödessteg ](/help/assets/developer-reference-material-apis.md#post-processing-workflows-steps) i  `DAM Asset Update` arbetsflödet stöds inte, inklusive anrop av kommandoradsverktyg som  [!DNL ImageMagick]. | [Resursmikrotjänster ](/help/assets/asset-microservices-overview.md) ersätter många arbetsflöden. Använd [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) för anpassad bearbetning. |
 | [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) för att generera miniatyrbilder för MPEG. Använd [Dynamic Media](/help/assets/manage-video-assets.md) för MPEG-omkodning. |
 
 ## Borttagna funktioner {#removed-features}
