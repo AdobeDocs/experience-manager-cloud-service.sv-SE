@@ -2,22 +2,21 @@
 title: Konfigurera och använda resursmikrotjänster
 description: Konfigurera och använd de molnbaserade resursmeritjänsterna för att bearbeta resurser i stor skala.
 contentOwner: AG
-feature: Asset Compute Microservices,Workflow,Asset Processing
+feature: asset compute Microservices,Workflow,Asset Processing
 role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
+source-git-commit: 4b9a48a053a383c2bf3cb5a812fe4bda8e7e2a5a
 workflow-type: tm+mt
-source-wordcount: '2530'
+source-wordcount: '2574'
 ht-degree: 0%
 
 ---
 
-
-# Använd resursmikrotjänster och bearbetningsprofiler {#get-started-using-asset-microservices}
+# Använda mikrotjänster och bearbetningsprofiler {#get-started-using-asset-microservices}
 
 Resursmikrotjänster ger skalbar och flexibel bearbetning av resurser med molnbaserade program (kallas även arbetare). Adobe hanterar tjänsterna för optimal hantering av olika tillgångstyper och bearbetningsalternativ.
 
-Med resursmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara än vad som är möjligt med tidigare versioner av [!DNL Experience Manager]. Exempelvis är det nu möjligt att extrahera PSD- och PSB-format med miniatyrbilder som tidigare krävde tredjepartslösningar som ImageMagick.
+Med resursmikrotjänster kan du bearbeta ett [stort antal filtyper](/help/assets/file-format-support.md) som omfattar fler format som är klara än vad som är möjligt med tidigare versioner av [!DNL Experience Manager]. Exempelvis går det nu att extrahera PSD- och PSB-format med miniatyrbilder, men tidigare krävda tredjepartslösningar som [!DNL ImageMagick].
 
 Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**. Experience Manager har en grundläggande standardkonfiguration och låter administratörer lägga till mer specifik konfiguration för bearbetning av resurser. Administratörer kan skapa, underhålla och ändra konfigurationerna för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflödena kan utvecklarna utöka standarderbjudandet.
 
@@ -34,7 +33,7 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 
 ## Förstå alternativ för tillgångsbearbetning {#get-started}
 
-Experience Manager tillåter följande bearbetningsnivåer.
+[!DNL Experience Manager] tillåter följande nivåer av bearbetning.
 
 | Alternativ | Beskrivning | Användningsexempel |
 |---|---|---|
@@ -100,7 +99,7 @@ The following video demonstrates the usefulness and usage of standard profile.
  ![processing-profiles-list](assets/processing-profiles-list.png) 
  -->
 
-## Anpassade profiler och användningsfall {#custom-config}
+## Anpassade profil- och användningsfall {#custom-config}
 
 [!DNL Asset Compute Service] har stöd för en mängd olika användningsområden, t.ex. standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer och implementering av anpassad eller organisationsspecifik bearbetning. Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller via konfiguration av bearbetningsprofiler. Om de här bearbetningsalternativen inte uppfyller affärsbehoven rekommenderar Adobe att du utvecklar och använder [!DNL Asset Compute Service] för att utöka standardfunktionerna. En översikt finns i [Mer information om utbyggbarhet och när du ska använda den](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html).
 
@@ -154,7 +153,7 @@ Integrering med Asset compute Service gör att Experience Manager kan skicka des
 
 *Bild: Använd  [!UICONTROL Service Parameters] fältet för att skicka tillagd information till fördefinierade parametrar som byggs in i det anpassade programmet. I det här exemplet uppdateras bilderna med `Jumanji`-text i `Arial-BoldMT`-teckensnittet när kampanjbilder överförs.*
 
-## Använd bearbetningsprofiler för att bearbeta resurser {#use-profiles}
+## Använda bearbetningsprofiler för att bearbeta resurser {#use-profiles}
 
 Skapa och använd de extra anpassade bearbetningsprofilerna på specifika mappar som Experience Manager kan bearbeta för resurser som har överförts till eller uppdaterats i dessa mappar. Den inbyggda standardbearbetningsprofilen körs alltid som standard, men visas inte i användargränssnittet. Om du lägger till en anpassad profil används båda profilerna för att bearbeta de överförda resurserna.
 
@@ -207,17 +206,26 @@ Kontrollera att det sista steget i varje efterbearbetningsarbetsflöde är `DAM 
 
 ### Konfigurera arbetsflödeskörning efter bearbetning {#configure-post-processing-workflow-execution}
 
-Om du vill konfigurera arbetsflödesmodellerna för efterbearbetning som ska köras för resurser som har överförts eller uppdaterats i systemet efter att bearbetningen av resursmikrotjänsterna har slutförts, måste tjänsten Custom Workflow Runner konfigureras.
+När objektets mikrotjänster har slutfört bearbetningen av de överförda resurserna kan du definiera efterbearbetning för att ytterligare bearbeta vissa resurser. Om du vill konfigurera efterbearbetning med arbetsflödesmodeller kan du göra något av följande:
+
+* Konfigurera tjänsten Custom Workflow Runner.
+* Använd en arbetsflödesmodell i mappen [!UICONTROL Properties].
 
 Adobe CQ DAM Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.CustomDamWorkflowRunnerImpl`) är en OSGi-tjänst och har två konfigurationsalternativ:
 
-* Efterbehandlingsarbetsflöden efter sökväg (`postProcWorkflowsByPath`): Flera arbetsflödesmodeller kan listas baserat på olika databassökvägar. Banor och modeller ska separeras med kolon. Enkla databassökvägar stöds och bör mappas till en arbetsflödesmodell i sökvägen `/var`. Till exempel: `/content/dam/my-brand:/var/workflow/models/my-workflow`.
+* Efterbehandlingsarbetsflöden efter sökväg (`postProcWorkflowsByPath`): Flera arbetsflödesmodeller kan listas baserat på olika databassökvägar. Separera banor och modeller med ett kolon. Enkla databassökvägar stöds. Mappa dessa till en arbetsflödesmodell i sökvägen `/var`. Till exempel: `/content/dam/my-brand:/var/workflow/models/my-workflow`.
 * Efterbearbetningsarbetsflöden efter uttryck (`postProcWorkflowsByExpression`): Flera arbetsflödesmodeller kan listas baserat på olika reguljära uttryck. Uttryck och modeller ska separeras med ett kolon. Det reguljära uttrycket ska peka direkt på resursnoden och inte på en av återgivningarna eller filerna. Till exempel: `/content/dam(/.*/)(marketing/seasonal)(/.*):/var/workflow/models/my-workflow`.
 
 >[!NOTE]
 >
 >Konfigurationen av Custom Workflow Runner är en konfiguration av en OSGi-tjänst. Mer information om hur du distribuerar en OSGi-konfiguration finns i [distribuera till Experience Manager](/help/implementing/deploying/overview.md).
 >OSGi-webbkonsolen är inte direkt tillgänglig i distributioner av molntjänster, till skillnad från lokala och hanterade tjänster på [!DNL Experience Manager].
+
+Så här använder du en arbetsflödesmodell i mappen [!UICONTROL Properties]:
+
+1. Skapa en arbetsflödesmodell.
+1. Välj en mapp, klicka på **[!UICONTROL Properties]** i verktygsfältet och klicka sedan på fliken **[!UICONTROL Assets Processing]**.
+1. Välj önskat arbetsflöde under **[!UICONTROL Auto-start Workflow]**, ange en titel på arbetsflödet och spara sedan ändringarna.
 
 Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
 
