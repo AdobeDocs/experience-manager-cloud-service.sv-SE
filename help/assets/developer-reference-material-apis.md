@@ -3,20 +3,20 @@ title: Utvecklarreferenser för [!DNL Assets]
 description: '[!DNL Assets] APIs and developer reference content lets you manage assets, including binary files, metadata, renditions, comments, and [!DNL Content Fragments].'
 contentOwner: AG
 feature: API:er,Resurser HTTP API
-role: Developer,Architect,Administrator
+role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 9d0fbffa0f66deb230a85fa8d09f9f3be45db3f8
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] användningsfall för utvecklare, API:er och referensmaterial  {#assets-cloud-service-apis}
+# [!DNL Adobe Experience Manager Assets] användningsfall för utvecklare, API:er och referensmaterial {#assets-cloud-service-apis}
 
 Artikeln innehåller rekommendationer, referensmaterial och resurser för utvecklare av [!DNL Assets] som en [!DNL Cloud Service]. Den innehåller en ny modul för överföring av resurser, API-referens och information om stödet som ges i arbetsflöden efter bearbetning.
 
-## [!DNL Experience Manager Assets] API:er och åtgärder  {#use-cases-and-apis}
+## [!DNL Experience Manager Assets] API:er och åtgärder {#use-cases-and-apis}
 
 [!DNL Assets] som en  [!DNL Cloud Service] innehåller flera API:er för programmässig interaktion med digitala resurser. Varje API har stöd för särskilda användningsfall, vilket framgår av tabellen nedan. [!DNL Assets]-användargränssnittet, [!DNL Experience Manager]-datorprogrammet och [!DNL Adobe Asset Link] stöder alla eller vissa åtgärder.
 
@@ -64,7 +64,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 | Kopiera mapp | ✓ | ✓ | - | ✓ | - | - |
 | Flytta mapp | ✓ | ✓ | - | ✓ | - | - |
 
-## Resursöverföring {#asset-upload}
+## Överföring av tillgångar {#asset-upload}
 
 I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil visas nedan. Utför dessa steg i ett externt program och inte i JVM-filen [!DNL Experience Manager].
 
@@ -123,7 +123,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 * `minPartSize` (tal): Den minsta längden, i byte, på data som kan tillhandahållas till någon av dem  `uploadURIs`om det finns mer än en URI.
 * `maxPartSize` (tal): Den maximala längden, i byte, på data som kan anges för någon av dem  `uploadURIs`om det finns mer än en URI.
 
-### Överför binär {#upload-binary}
+### Ladda upp binärt {#upload-binary}
 
 Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges delar klienten upp binärfilen i delar och begär POST av varje del till varje URI, i ordning. Använd alla URI:er. Se till att storleken på varje del ligger inom de minimi- och maximistorlekar som anges i initieringssvaret. CDN-kantnoder snabbar upp begärd överföring av binärfiler.
 
@@ -135,7 +135,7 @@ En möjlig metod för att uppnå detta är att beräkna delstorleken baserat på
 
 Om överföringen lyckas svarar servern på varje begäran med en `201`-statuskod.
 
-### Slutför överföring {#complete-upload}
+### fullständig överföring {#complete-upload}
 
 När alla delar av en binär fil har överförts skickar du en begäran om HTTP-POST till den fullständiga URI som anges av initieringsdata. Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält.
 
@@ -179,7 +179,7 @@ Den nya överföringsmetoden stöds bara för [!DNL Adobe Experience Manager] so
 * [Kommandoradsverktyget](https://github.com/adobe/aio-cli-plugin-aem) med öppen källkod.
 
 
-## Resursbearbetning och efterbearbetning av arbetsflöden {#post-processing-workflows}
+## Resurshantering och efterbearbetning {#post-processing-workflows}
 
 I [!DNL Experience Manager] baseras resursbearbetningen på **[!UICONTROL Processing Profiles]**-konfigurationen som använder [mikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
 
