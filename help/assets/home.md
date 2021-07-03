@@ -2,27 +2,27 @@
 title: '[!DNL Assets] as a [!DNL Cloud Service] Guide'
 description: '[!DNL Adobe Experience Manager Assets] as a [!DNL Cloud Service] självhjälpsresurser och dokumentationslänkar'
 feature: Resurshantering
-role: Business Practitioner,Leader
+role: User,Leader
 exl-id: 315a1091-780f-4eca-ac77-a07d8fb634bf
-source-git-commit: 053e857b2fb8a940618b15c394becc9594317f5a
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 21%
 
 ---
 
-# [!DNL Assets] som en  [!DNL Cloud Service] guide  {#aem-assets-guide}
+# [!DNL Assets] som en  [!DNL Cloud Service] guide {#aem-assets-guide}
 
 Följande självhjälpsresurser är tillgängliga för [!DNL Experience Manager Assets] som en [!DNL Cloud Service].
 
-## Nyckelartiklar [!DNL Assets] {#key-articles}
+## Viktiga [!DNL Assets]-artiklar {#key-articles}
 
 * [Översikt och nyheter](overview.md)
 * [Betydande ändringar](/help/assets/assets-cloud-changes.md)
 * [Arkitektur för [!DNL Assets] som a [!DNL Cloud Service]](architecture.md)
 * [Översikt över mikrotjänster för material](/help/assets/asset-microservices-overview.md)
 
-## [!DNL Experience Manager] stödlinjer  {#aem-guides}
+## [!DNL Experience Manager] stödlinjer {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
