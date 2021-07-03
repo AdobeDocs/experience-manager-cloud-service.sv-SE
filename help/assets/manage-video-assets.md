@@ -2,16 +2,15 @@
 title: Hantera videoresurser
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
-feature: Asset Management,Publishing,Collaboration,Video
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+feature: Resurshantering, publicering, samarbete, video
+role: User
+exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '613'
 ht-degree: 6%
 
 ---
-
 
 # Hantera videoresurser {#manage-video-assets}
 
@@ -19,7 +18,7 @@ Videoformatet är en viktig del av ett företags digitala resurser. [!DNL Adobe 
 
 Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience Manager Assets]. Videokodning och omkodning, till exempel FFmpeg-omkodning, är möjlig med Bearbeta profiler och [!DNL Dynamic Media]-integrering. Utan [!DNL Dynamic Media]-licens ger [!DNL Experience Manager] grundläggande stöd för videoklipp, till exempel omkodning med FFmpeg, extrahering av förhandsvisningsminiatyrer för de filformat som stöds samt förhandsgranskning i användargränssnittet för format som stöds för direktuppspelning i webbläsaren.
 
-## Överför och förhandsgranska videomaterial {#upload-and-preview-video-assets}
+## Överföra och förhandsgranska videomaterial {#upload-and-preview-video-assets}
 
 [!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Du kan förhandsgranska återgivningarna i [!DNL Assets]-användargränssnittet.
 
@@ -28,7 +27,7 @@ Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience 
 1. Om du vill förhandsgranska en video i kortvyn klickar du på **[!UICONTROL Play]** ![uppspelningsalternativet](assets/do-not-localize/play.png) för videoresursen. Du kan bara pausa eller spela upp video i kortvyn. Alternativen [!UICONTROL Play] och [!UICONTROL Pause] är inte tillgängliga i listvyn.
 1. Om du vill förhandsgranska videon på sidan med resursinformation väljer du **[!UICONTROL Edit]** på kortet. Videon spelas upp i webbläsarens inbyggda videospelare. Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
 
-## Publicera videoresurser {#publish-video-assets}
+## Publicera videomaterial {#publish-video-assets}
 
 Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL eller bädda in resurserna direkt. Mer information finns i [publicera [!DNL Dynamic Media] resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
@@ -44,7 +43,7 @@ Om du bara anger bredd eller enbart höjd och lämnar det andra fältet tomt beh
 
 Om du vill bearbeta resurser med en bearbetningsprofil lägger du till en profil i en mapp. Se [använd bearbetningsprofiler för att bearbeta resurser](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
 
-## Kommentera videoresurser {#annotate-video-assets}
+## Kommentera videomaterial {#annotate-video-assets}
 
 1. På [!DNL Assets]-konsolen väljer du **[!UICONTROL Edit]** på resurskortet för att visa sidan med resursinformation.
 1. Om du vill spela upp videon klickar du på **[!UICONTROL Preview]**.
