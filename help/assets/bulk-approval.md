@@ -2,16 +2,15 @@
 title: Granska resurser i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
-feature: Collections,Collaboration
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+feature: samlingar,Samarbete
+role: User
+exl-id: 1e5bdd66-2707-4584-87ed-a0ff1bde3718
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '747'
 ht-degree: 21%
 
 ---
-
 
 # Granska resurser i mappar och samlingar {#review-folder-assets-and-collections}
 
@@ -21,7 +20,7 @@ När du har delat resurserna kan granskarna godkänna eller avvisa dem. Meddelan
 
 När granskaren har slutfört granskningen (godkänner eller avvisar resurser) får du ett meddelande om slutförd granskning.
 
-## Skapar en granskningsåtgärd för mappar {#creating-a-review-task-for-folders}
+## Skapa en granskningsåtgärd för mappar {#creating-a-review-task-for-folders}
 
 1. I Assets-användargränssnittet väljer du den mapp som du vill skapa en granskningsuppgift för.
 1. I verktygsfältet trycker/klickar du på ikonen **[!UICONTROL Create Review Task]** för att öppna sidan **[!UICONTROL Review Task]**. Om du inte kan se ikonen i verktygsfältet trycker/klickar du på **[!UICONTROL More]** och väljer sedan ikonen.
@@ -69,7 +68,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![review_status_listview](assets/review_status_listview.png)
 
-## Skapa en granskningsaktivitet för samlingar {#creating-a-review-task-for-collections}
+## Skapa en granskningsuppgift för samlingar {#creating-a-review-task-for-collections}
 
 1. På sidan Samlingar väljer du den samling som du vill skapa en granskningsuppgift för.
 1. I verktygsfältet trycker/klickar du på ikonen **[!UICONTROL Create Review Task]** för att öppna sidan **[!UICONTROL Review Task]**. Om du inte kan se ikonen i verktygsfältet trycker/klickar du på **[!UICONTROL More]** och väljer sedan ikonen.
@@ -109,4 +108,3 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
    **Listvy**
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
-
