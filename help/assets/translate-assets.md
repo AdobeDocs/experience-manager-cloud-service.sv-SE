@@ -3,9 +3,9 @@ title: Skapa och hantera digitala resurser på flera språk
 description: Lär dig automatisera arbetsflöden för översättning av resurser, inklusive binära filer, metadata och taggar till flera språk.
 contentOwner: AG
 feature: Resurshantering,Översättning
-role: Administrator,Business Practitioner
+role: Admin,User
 exl-id: 98df1412-a957-48a3-81c2-7dfe1d5e6d31
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '2443'
 ht-degree: 20%
@@ -238,7 +238,7 @@ Med Adobe Experience Manager (AEM) kan du använda molnbaserade översättningst
 
 Du kan använda översättningsmolntjänsten direkt i resursmappen så att den kan användas under översättningsarbetsflöden.
 
-### Använd översättningstjänsterna {#applying-the-translation-services}
+### Använda översättningstjänster {#applying-the-translation-services}
 
 Genom att använda översättningsmolntjänster direkt i resursmappen behöver du inte konfigurera översättningstjänster när du skapar eller uppdaterar översättningsarbetsflöden.
 
