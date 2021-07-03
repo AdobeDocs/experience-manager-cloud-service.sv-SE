@@ -3,16 +3,15 @@ title: Hantera samlingar med digitala resurser
 description: Förstå begreppet samling i Adobe Experience Manager Assets. Lär dig hur du samlar, hanterar, redigerar och samlar med andra användare.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Collections,Asset Management
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+feature: Samlingar,Resurshantering
+role: User
+exl-id: b0798adc-56a4-4577-b4ee-8d1fca3bff09
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
-source-wordcount: '2249'
+source-wordcount: '2247'
 ht-degree: 18%
 
 ---
-
 
 # Hantera samlingar {#manage-collections}
 
@@ -245,7 +244,7 @@ Så här tar du bort sparade sökningar:
 1. I listan **[!UICONTROL Saved Searches]** trycker/klickar du på **[!UICONTROL Delete]** bredvid den smarta samling du vill ta bort.
 1. Tryck/klicka på **[!UICONTROL Delete]** i dialogrutan för att ta bort den sparade sökningen.
 
-## Kör ett arbetsflöde i en samling {#run-a-workflow-on-a-collection}
+## Köra ett arbetsflöde i en samling {#run-a-workflow-on-a-collection}
 
 Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehåller kapslade samlingar körs arbetsflödet även på resurserna i de kapslade samlingarna. Om samlingen och den kapslade samlingen innehåller duplicerade resurser körs arbetsflödet bara en gång för sådana resurser.
 
