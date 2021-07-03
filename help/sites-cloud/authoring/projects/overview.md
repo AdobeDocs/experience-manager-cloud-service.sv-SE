@@ -1,14 +1,13 @@
 ---
 title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt
-translation-type: tm+mt
-source-git-commit: 9518a3ddb253ede2e9b713b4a7d0077e8ba3f7e0
+exl-id: c5f3331e-637f-4816-be83-faf2df59bd5f
+source-git-commit: a8d3dcb732fc137f3c92839abeefd5e0c24be6ff
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1256'
 ht-degree: 10%
 
 ---
-
 
 # Projekt {#projects}
 
@@ -43,7 +42,7 @@ Projektkonsolen är den plats där du får åtkomst till och hanterar dina proje
 * **Växla mellan aktiva** projekt och endast aktiva projekt.
 * **Visa** statistikvyer - visa projektstatistik för slutförda uppgifter.
 
-## Projektrutor {#project-tiles}
+## Projektpaneler {#project-tiles}
 
 Med Projekt kan du koppla olika typer av information till dina projekt. Dessa kallas **plattor**. Var och en av plattorna och vilken typ av information de innehåller beskrivs i detta avsnitt.
 
@@ -78,7 +77,7 @@ Precis som resurser kan du lägga till [resurssamlingar](/help/assets/manage-col
 
 Lägg till en samling genom att klicka på **Lägg till samling** och välja önskad samling i listan.
 
-### Upplevelser {#experiences}
+### Erfarenheter {#experiences}
 
 Med **Experience**-panelen kan du lägga till en mobilapp, en webbplats eller en publikation i projektet.
 
@@ -140,7 +139,7 @@ Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Beroende på v
 
 Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-cloud/authoring/projects/workflows.md).
 
-### Launches {#launches}
+### Startar {#launches}
 
 I rutan Launches (Starta) visas alla starter som har begärts med ett [begärandestartarbetsflöde.](/help/sites-cloud/authoring/projects/workflows.md)
 
@@ -157,7 +156,7 @@ Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusiv
 AEM levereras med tre olika mallar:
 
 * Ett enkelt projekt - Ett referensexempel för projekt som inte passar in i andra kategorier (en&quot;catch-all&quot;). Det innehåller tre grundläggande roller (ägare, redigerare och observatörer) och fyra arbetsflöden (projektgodkännande, begäranstart, begäranstartsida och e-postbegäran).
-* Ett medieprojekt - Ett referensexempelprojekt för medierelaterade aktiviteter. Det innehåller flera medierelaterade projektroller (fotografer, redigerare, copywriters, designers, Owners och Observers). Det innehåller även två arbetsflöden för medieinnehåll - Begär kopia (för att begära och granska text) och Produktfoto (för hantering av produktrelaterade foton)
+* Ett medieprojekt - Ett referensexempelprojekt för medierelaterade aktiviteter. Det innehåller flera medierelaterade projektroller (fotografer, redigerare, copywriters, designers, Owners och Observers). Det begär också arbetsflöde för kopiering för att begära och granska text.
 * Ett [översättningsprojekt](/help/sites-cloud/administering/translation/overview.md) - Ett referensexempel för hantering av översättningsrelaterade aktiviteter. Det innehåller tre grundläggande roller (ägare, redigerare och observatörer). Det innehåller två arbetsflöden som du kommer åt i användargränssnittet för arbetsflöden.
 
 Beroende på vilken mall du väljer har du olika alternativ tillgängliga, särskilt när det gäller användarroller och arbetsflöden.
@@ -174,7 +173,7 @@ Alla projekt har stöd för följande standardroller så att du kan administrera
 | Roll | Beskrivning | Behörigheter | Gruppmedlemskap |
 |---|---|---|---|
 | Observer | En användare i den här rollen kan visa projektinformation, inklusive projektstatus. | Skrivskyddade behörigheter i ett projekt | `workflow-users` grupp |
-| Redigerare | En användare med den här rollen kan överföra och redigera innehållet i ett projekt. | Läs- och skrivåtkomst för ett projekt, tillhörande metadata och tillhörande resurser. behörighet att ladda upp en tagningslista, fotografera samt granska och godkänna mediefiler, skrivtillstånd för /etc/commerce, ändra behörighet för ett specifikt projekt | grupp för arbetsflöden-användare |
+| Redigerare | En användare med den här rollen kan överföra och redigera innehållet i ett projekt. | Läs- och skrivåtkomst för ett projekt, tillhörande metadata och tillhörande resurser. behörighet att ladda upp en tagningslista samt granska och godkänna mediefiler, skrivtillstånd för /etc/commerce, ändra behörighet för ett specifikt projekt | grupp för arbetsflöden-användare |
 | Ägare | En användare med den här rollen kan initiera ett projekt. En ägare kan skapa ett projekt, initiera arbete i ett projekt och även flytta godkända resurser till produktionsmappen. Även om alla andra uppgifter i projektet kan visas och utföras av ägaren. | Skriv behörighet på `/etc/commerce` | `dam-users` grupp (för att kunna skapa ett projekt) projekt-administratörsgrupp (för att kunna skapa ett projekt och flytta resurser) |
 
 >[!NOTE]
