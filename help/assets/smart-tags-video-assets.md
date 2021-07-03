@@ -2,17 +2,16 @@
 title: Smarta taggar för videomaterial
 description: Experience Manager lägger automatiskt till kontextuella och beskrivande smarta taggar i videoklipp med  [!DNL Adobe Sensei].
 feature: Smarta taggar,Taggar
-role: Administrator,Business Practitioner
+role: Admin,User
 exl-id: b59043c5-5df3-49a7-b4fc-da34c03649d7
-translation-type: tm+mt
-source-git-commit: 87d7cbb4463235a835d18fce49d06315a7c87526
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '1145'
 ht-degree: 0%
 
 ---
 
-# Smart tagga dina videoresurser {#video-smart-tags}
+# Smarta taggar för videomaterial {#video-smart-tags}
 
 Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som ett  [!DNL Cloud Service] stöd för automatisk taggning av videomaterial med hjälp av artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Med funktionen [!DNL Adobe Sensei] för smart taggning av video används artificiell intelligens för att analysera videoinnehåll och lägga till taggar i videoresurserna. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i videon. den andra uppsättningen avser åtgärder som att dricka, köra och jogga.
 
@@ -30,7 +29,7 @@ De använda smarta taggarna sorteras i fallande ordning i [konfidensintervallet]
 >
 >Du rekommenderas att granska dessa automatiskt genererade taggar för att säkerställa att de överensstämmer med ditt varumärke och dess värden.
 
-## Smart taggning av befintliga videoklipp i DAM {#smart-tag-existing-videos}
+## Smart taggning av befintliga videor i DAM {#smart-tag-existing-videos}
 
 De befintliga videomaterialet i DAM är inte automatiskt smarta taggade. Du måste [!UICONTROL Reprocess Assets] manuellt om du vill generera smarta taggar för dem.
 
@@ -84,7 +83,7 @@ Mer information om hur du modererar smarta taggar för resurser finns i [Hantera
 >
 >Eventuella taggar som modereras med stegen i [Hantera smarta taggar](smart-tags.md#manage-smart-tags-and-searches) sparas inte när resursen bearbetas om. Den ursprungliga uppsättningen taggar visas igen.
 
-## Välj bort smarta taggar för video {#opt-out-video-smart-tagging}
+## Avanmäl dig från smart taggning av video {#opt-out-video-smart-tagging}
 
 När den automatiska taggningen av videor körs parallellt med andra bearbetningsuppgifter som att skapa miniatyrbilder och extrahera metadata kan det vara tidskrävande. Om du vill påskynda resursbearbetningen kan du välja bort smart taggning för video vid överföring på mappnivå.
 
@@ -138,5 +137,5 @@ Så här lägger du till OSGI-konfigurationen med konfidensintervallet i projekt
 >[!MORELIKETHIS]
 >
 >* [Hantera smarta taggar och resurssökningar](smart-tags.md#manage-smart-tags-and-searches)
->* [Utbilda tjänsten Smart Tag och tagga dina bilder](smart-tags.md)
+* [Utbilda tjänsten Smart Tag och tagga dina bilder](smart-tags.md)
 
