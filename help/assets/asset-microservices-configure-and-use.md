@@ -5,9 +5,9 @@ contentOwner: AG
 feature: asset compute Microservices,Workflow,Asset Processing
 role: Architect,Administrator
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: 4b9a48a053a383c2bf3cb5a812fe4bda8e7e2a5a
+source-git-commit: 7256300afd83434839c21a32682919f80097f376
 workflow-type: tm+mt
-source-wordcount: '2574'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -181,7 +181,7 @@ Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade å
 
 ## Efterbehandlingsarbetsflöden {#post-processing-workflows}
 
-I en situation där ytterligare bearbetning av resurser krävs som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Detta gör att du kan lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
+I en situation där ytterligare bearbetning av resurser krävs som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Med efterbearbetning kan du lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
 
 Efterbehandlingsarbetsflöden, om de är konfigurerade, körs automatiskt av [!DNL Experience Manager] när bearbetningen av mikrotjänsterna har slutförts. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa arbetsflödena. Exemplen innehåller:
 
@@ -196,38 +196,41 @@ Så här lägger du till en arbetsflödeskonfiguration efter bearbetning i [!DNL
 * Lägg till [!UICONTROL DAM Update Asset Workflow Completed Process]-steget i slutet. Om du lägger till det här steget vet Experience Manager när bearbetningen avslutas och resursen kan markeras som bearbetad, det vill säga *Ny* visas på resursen.
 * Skapa en konfiguration för tjänsten Custom Workflow Runner som gör att du kan konfigurera körning av en arbetsflödesmodell efter bearbetning antingen med en sökväg (mappsökväg) eller med ett reguljärt uttryck.
 
+Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
+
 ### Skapa arbetsflödesmodeller för efterbearbetning {#create-post-processing-workflow-models}
 
 Arbetsflödesmodeller för efterbearbetning är vanliga [!DNL Experience Manager] arbetsflödesmodeller. Skapa olika modeller om du behöver olika bearbetning för olika databasplatser eller resurstyper.
 
-Bearbetningssteg ska läggas till baserat på behov. Du kan använda alla steg som stöds, samt alla anpassade arbetsflödessteg.
+Bearbetningsstegen läggs till efter behov. Du kan använda båda, de steg som stöds och alla anpassade arbetsflödessteg.
 
 Kontrollera att det sista steget i varje efterbearbetningsarbetsflöde är `DAM Update Asset Workflow Completed Process`. I det sista steget ser du till att Experience Manager vet när bearbetningen av mediefiler är klar.
 
 ### Konfigurera arbetsflödeskörning efter bearbetning {#configure-post-processing-workflow-execution}
 
-När objektets mikrotjänster har slutfört bearbetningen av de överförda resurserna kan du definiera efterbearbetning för att ytterligare bearbeta vissa resurser. Om du vill konfigurera efterbearbetning med arbetsflödesmodeller kan du göra något av följande:
+När objektets mikrotjänster har slutfört bearbetningen av de överförda resurserna kan du definiera arbetsflödet för efterbearbetning för ytterligare bearbetning av resurserna. Om du vill konfigurera efterbearbetning med arbetsflödesmodeller kan du göra något av följande:
 
-* Konfigurera tjänsten Custom Workflow Runner.
-* Använd en arbetsflödesmodell i mappen [!UICONTROL Properties].
+* [Använd en arbetsflödesmodell i mappegenskaper](#apply-workflow-model-to-folder).
+* [Konfigurera tjänsten](#configure-custom-workflow-runner-service) Custom Workflow Runner.
 
-Adobe CQ DAM Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.CustomDamWorkflowRunnerImpl`) är en OSGi-tjänst och har två konfigurationsalternativ:
+#### Tillämpa en arbetsflödesmodell på en mapp {#apply-workflow-model-to-folder}
 
-* Efterbehandlingsarbetsflöden efter sökväg (`postProcWorkflowsByPath`): Flera arbetsflödesmodeller kan listas baserat på olika databassökvägar. Separera banor och modeller med ett kolon. Enkla databassökvägar stöds. Mappa dessa till en arbetsflödesmodell i sökvägen `/var`. Till exempel: `/content/dam/my-brand:/var/workflow/models/my-workflow`.
-* Efterbearbetningsarbetsflöden efter uttryck (`postProcWorkflowsByExpression`): Flera arbetsflödesmodeller kan listas baserat på olika reguljära uttryck. Uttryck och modeller ska separeras med ett kolon. Det reguljära uttrycket ska peka direkt på resursnoden och inte på en av återgivningarna eller filerna. Till exempel: `/content/dam(/.*/)(marketing/seasonal)(/.*):/var/workflow/models/my-workflow`.
-
->[!NOTE]
->
->Konfigurationen av Custom Workflow Runner är en konfiguration av en OSGi-tjänst. Mer information om hur du distribuerar en OSGi-konfiguration finns i [distribuera till Experience Manager](/help/implementing/deploying/overview.md).
->OSGi-webbkonsolen är inte direkt tillgänglig i distributioner av molntjänster, till skillnad från lokala och hanterade tjänster på [!DNL Experience Manager].
-
-Så här använder du en arbetsflödesmodell i mappen [!UICONTROL Properties]:
+För vanliga fall av efterbearbetning bör du överväga att använda metoden för att tillämpa ett arbetsflöde på en mapp. Så här använder du en arbetsflödesmodell i mappen [!UICONTROL Properties]:
 
 1. Skapa en arbetsflödesmodell.
 1. Välj en mapp, klicka på **[!UICONTROL Properties]** i verktygsfältet och klicka sedan på fliken **[!UICONTROL Assets Processing]**.
 1. Välj önskat arbetsflöde under **[!UICONTROL Auto-start Workflow]**, ange en titel på arbetsflödet och spara sedan ändringarna.
 
-Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
+   ![Tillämpa ett efterbearbetningsarbetsflöde på en mapp i dess egenskaper](assets/post-processing-profile-workflow-for-folders.png)
+
+#### Konfigurera tjänsten Custom Workflow Runner {#configure-custom-workflow-runner-service}
+
+Du kan konfigurera den anpassade arbetsflödets körningstjänst för de avancerade konfigurationer som inte kan uppfyllas på ett enkelt sätt genom att tillämpa ett arbetsflöde på en mapp. Ett arbetsflöde som till exempel använder ett reguljärt uttryck. Adobe CQ DAM Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.CustomDamWorkflowRunnerImpl`) är en OSGi-tjänst. Det innehåller följande två konfigurationsalternativ:
+
+* Efterbehandlingsarbetsflöden efter sökväg (`postProcWorkflowsByPath`): Flera arbetsflödesmodeller kan listas baserat på olika databassökvägar. Separera banor och modeller med ett kolon. Enkla databassökvägar stöds. Mappa dessa till en arbetsflödesmodell i sökvägen `/var`. Till exempel: `/content/dam/my-brand:/var/workflow/models/my-workflow`.
+* Efterbearbetningsarbetsflöden efter uttryck (`postProcWorkflowsByExpression`): Flera arbetsflödesmodeller kan listas baserat på olika reguljära uttryck. Uttryck och modeller ska separeras med ett kolon. Det reguljära uttrycket ska peka direkt på resursnoden och inte på en av återgivningarna eller filerna. Till exempel: `/content/dam(/.*/)(marketing/seasonal)(/.*):/var/workflow/models/my-workflow`.
+
+Mer information om hur du distribuerar en OSGi-konfiguration finns i [distribuera till [!DNL Experience Manager]](/help/implementing/deploying/overview.md).
 
 ## God praxis och begränsningar {#best-practices-limitations-tips}
 
