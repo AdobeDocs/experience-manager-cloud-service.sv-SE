@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Smarta taggar,Taggar
 role: Administrator,Business Practitioner
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: ffca94ef8d93cf95011d7e3128c49929f69cdc28
+source-git-commit: 4654706865c6f6511ac2893370db3424b20797cc
 workflow-type: tm+mt
-source-wordcount: '2307'
+source-wordcount: '2298'
 ht-degree: 5%
 
 ---
@@ -63,7 +63,7 @@ Du kan tagga följande typer av resurser:
 
 ## Förstå taggmodeller och riktlinjer {#understand-tag-models-guidelines}
 
-En taggmodell är en grupp relaterade taggar som är kopplade till olika visuella aspekter av bilder som taggas. Taggar är kopplade till de olika visuella aspekterna av bilder så att taggarna när de används hjälper dig att söka efter särskilda typer av bilder. En skosamling kan till exempel ha olika taggar, men alla taggar är relaterade till skor och kan tillhöra samma taggmodell. När märkorden används kan de hjälpa dig att hitta olika typer av skor, till exempel efter färg, design eller användning. Om du vill förstå hur en utbildningsmodell i [!DNL Experience Manager] ser ut visar du en utbildningsmodell som en enhet på den översta nivån som består av en grupp med manuellt tillagda taggar och exempelbilder för varje tagg. Varje tagg kan användas exklusivt på en bild.
+En taggmodell är en grupp relaterade taggar som är kopplade till olika visuella aspekter av bilder som taggas. Taggar är kopplade till de olika visuella aspekterna av bilder så att taggarna när de används hjälper dig att söka efter särskilda typer av bilder. En skosamling kan till exempel ha olika taggar, men alla taggar är relaterade till skor och kan tillhöra samma taggmodell. När märkorden används kan de hjälpa dig att hitta olika typer av skor, till exempel efter design eller efter användning. Om du vill förstå hur en utbildningsmodell i [!DNL Experience Manager] ser ut visar du en utbildningsmodell som en enhet på den översta nivån som består av en grupp med manuellt tillagda taggar och exempelbilder för varje tagg. Varje tagg kan användas exklusivt på en bild.
 
 Innan du skapar en taggmodell och utbildar tjänsten bör du identifiera en uppsättning unika taggar som bäst beskriver objekten i bilderna i ditt företags sammanhang. Kontrollera att resurserna i din kuraterade uppsättning överensstämmer med [riktlinjerna för utbildning](#training-guidelines).
 
@@ -100,7 +100,6 @@ Kontrollera att bilderna i kursuppsättningen överensstämmer med följande rik
 * Skapa en taggmodell som endast innehåller
 
    * Taggar för bilmodeller.
-   * Taggarna för färger i skjortor.
    * Taggar för schaket för kvinnor och män.
 
 * Skapa inte
