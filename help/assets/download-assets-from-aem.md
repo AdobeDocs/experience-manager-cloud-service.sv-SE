@@ -3,9 +3,9 @@ title: Hämta resurser
 description: Hämta resurser från [!DNL Adobe Experience Manager Assets] och aktivera eller inaktivera hämtningsfunktionen.
 contentOwner: AG
 feature: Resurshantering
-role: Business Practitioner
+role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 4c3007b9e38f8a18d61b781ddbcd00bd45b67729
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '876'
 ht-degree: 1%
@@ -96,7 +96,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
    asset.download.prezip.maxcontentsize=I"102400"
    ```
 
-## Inaktivera resurshämtningsservlet {#disable-asset-download-servlet}
+## Inaktivera resurshämtningsserver {#disable-asset-download-servlet}
 
 Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att förhindra DoS-liknande risker. `Asset Download Servlet` kan inaktiveras på en [!DNL Experience Manager]-författare och publicera instanser genom att uppdatera dispatcherkonfigurationen för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
