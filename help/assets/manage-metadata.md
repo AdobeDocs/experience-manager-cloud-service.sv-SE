@@ -4,9 +4,9 @@ description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Mana
 contentOwner: AG
 mini-toc-levels: 1
 feature: Resurshantering,Metadata
-role: Business Practitioner,Architect,Administrator
+role: User,Architect,Admin
 exl-id: 73a82bc2-1dda-4090-b7ee-29d1a632ba25
-source-git-commit: a1451147d50eb6166841ae809b49bdb95cc197f8
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 3%
@@ -158,7 +158,7 @@ To prevent DOS-like situation, [!DNL Experience Manager] limits the number of pa
 To change the limit, access Web Console ( **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**) and change the value of **[!UICONTROL Maximum POST Parameters]** in **[!UICONTROL Apache Sling Request Parameter Handling]** OSGi configuration.
 -->
 
-## Metadata schemata {#metadata-schemata}
+## Metadata-scheman {#metadata-schemata}
 
 Metadata-scheman är fördefinierade uppsättningar metadataegenskapsdefinitioner som kan användas i olika program. Egenskaper är alltid kopplade till en resurs, vilket innebär att egenskaperna är&quot;about&quot; för resursen.
 
@@ -191,7 +191,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * PDF och PDF/X.
 * Photoshop och psAux - [!DNL Adobe Photoshop].
 
-### Digital Rights Management-metadata {#digital-rights-management-metadata}
+### Digital Rights Management metadata {#digital-rights-management-metadata}
 
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights].
@@ -215,12 +215,12 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` - XMP metadata för sidindelad text.
 
-### Multimediespecifika metadata {#multimedia-specific-metadata}
+### Multimediaspecifika metadata {#multimedia-specific-metadata}
 
 * `xmpDM` - [!DNL Dynamic Media].
 * `xmpMM` - Mediehantering.
 
-## Metadatadrivna arbetsflöden {#metadata-driven-workflows}
+## Metadatastyrda arbetsflöden {#metadata-driven-workflows}
 
 Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer, vilket ökar effektiviteten. I ett metadatadrivet arbetsflöde läser arbetsflödet och utför därför en fördefinierad åtgärd. Du kan till exempel använda metadatadrivna arbetsflöden på olika sätt:
 
