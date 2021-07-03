@@ -3,15 +3,14 @@ title: Redigera eller lägga till metadata
 description: Lär dig mer om metadata för resurser i [!DNL Experience Manager Assets] ett antal sätt att redigera metadata för resurser.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+role: User,Admin
+exl-id: 464a97ce-da3e-47b5-9879-fafaf2f2378c
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '412'
 ht-degree: 8%
 
 ---
-
 
 # Redigera eller lägga till metadata {#how-to-edit-or-add-metadata}
 
