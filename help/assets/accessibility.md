@@ -3,9 +3,9 @@ title: Hjälpmedel i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] kan hjälpa användare med funktionshinder.
 contentOwner: AG
 feature: Tillgänglighet,Resurshantering
-role: Business Practitioner,Architect,Leader
+role: User,Architect,Leader
 exl-id: a6d24ba6-3cb1-42cb-9942-f78572c93358
-source-git-commit: 67c4aabea838c1430e43f5ebaa8a52ec55362936
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '1896'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Possible topics to cover in this article are below.
   * Link to a11y-specific online methods to report issues, seek support, or request enhancements, if any. Asked the a11y team on Slack.
 -->
 
-# Hjälpmedelsfunktioner i [!DNL Adobe Experience Manager Assets] som [!DNL Cloud Service] {#accessibility-in-aem-assets}
+# Tillgänglighetsfunktioner i [!DNL Adobe Experience Manager Assets] som en [!DNL Cloud Service] {#accessibility-in-aem-assets}
 
 [!DNL Adobe Experience Manager] gör att skribenter och utgivare kan leverera fantastiska upplevelser på webben. Adobe strävar efter att inkludera personer som skapar funktionshinder genom att förbättra tillgängligheten för [!DNL Experience Manager]. Programmen har ständigt förbättrats för att uppfylla behoven hos alla typer av användare och följer världsstandarden som omfattar personer med nedsatt syn, hörsel, mobilitet eller andra funktionshinder.
 
@@ -46,7 +46,7 @@ Om du vill läsa en rapport med information om efterlevnadsnivån läser du [Rap
 <!-- TBD: Add link after release.
 To know how [!DNL Dynamic Media] is accessible, see [accessibility in [!DNL Dynamic Media]](/). -->
 
-## Hjälpmedelstekniker {#at-support}
+## Hjälpmedel {#at-support}
 
 Användare med funktionshinder förlitar sig ofta på maskinvara och programvara för att få tillgång till webbinnehåll och använda programvaror. Dessa verktyg kallas hjälpmedelstekniker. [!DNL Experience Manager Assets] kan fungera med följande typer av hjälpmedelstekniker (AT) när du använder programmets huvudfunktioner:
 
@@ -56,7 +56,7 @@ Användare med funktionshinder förlitar sig ofta på maskinvara och programvara
 * Hjälpmaskinvara, inklusive switchkontroller, uppdateringsbara blindskriftsskärmar och andra indataenheter.
 * Förstoringsverktygen i användargränssnittet.
 
-## [!DNL Experience Manager Assets] användningsfall som är tillgängliga  {#accessible-assets-use-cases}
+## [!DNL Experience Manager Assets] användningsfall som är tillgängliga {#accessible-assets-use-cases}
 
 I [!DNL Experience Manager] uppfyller hjälpmedelsfunktionerna två viktiga krav för [!DNL Experience Manager]-användare och deras kunder.
 
@@ -174,7 +174,7 @@ För metadataåtgärder som vanligtvis utförs av roller som marknadsförare och
 * Dragningsfunktionen med tangentbordet fungerar korrekt i [!UICONTROL Metadata Schema Editor] i skärmläsarläge.
 * En användare kan flytta fokus med tangentbordet till fältet Lägg till användare eller grupp under [!UICONTROL Closed User Group] på fliken [!UICONTROL Permissions] i mappen [!UICONTROL Properties].
 
-## Sök efter digitala resurser {#search-assets}
+## Söka efter digitala resurser {#search-assets}
 
 En snabb och smidig sökupplevelse av resurser ökar innehållets hastighet. Användningsexempel för innehållshastighet är en del av de centrala [!DNL Assets]-funktionerna. Om du vill starta en sökning från omsökningsfältet kan användarna använda kortkommandot `/` eller använda `Tab` tillsammans med skärmläsare för att snabbt hitta sökalternativet. Skärmläsaren anger namnet på alternativet som &quot;Sökknapp&quot; när sökalternativet ![sökalternativ](assets/do-not-localize/search_icon.png) är i fokus. Användarna kan välja `Return` för att öppna sökrutan. Skärmläsaren lägger inte bara till en berättarröst för det nyckelord som skrivs i sökrutan utan lägger även till en berättarröst för de förslag som ges av [!DNL Experience Manager Assets]. Användare kan använda en kombination av piltangenter, `Return` och `Tab` för att komma åt de olika alternativen för att utlösa en sökning.
 
