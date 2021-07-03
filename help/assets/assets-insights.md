@@ -3,9 +3,9 @@ title: Resursinsikter
 description: Spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar.
 contentOwner: AG
 feature: Resursinsikter,Resursrapporter
-role: Business Practitioner,Leader
+role: User,Leader
 exl-id: e268453b-e7c0-4aa4-bd29-2686edb5f99a
-source-git-commit: 1c841eaa49eeb021fc7583c58aeaefc1236650f9
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 2%
@@ -63,7 +63,7 @@ Du kan visa bakgrundsmusik för resursinsikter från metadatasidan.
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
-## Visa sammanställningsstatistik för bilder {#viewing-aggregate-statistics-for-images}
+## Visa sammanställd statistik för bilder {#viewing-aggregate-statistics-for-images}
 
 Du kan visa bakgrundsmusik för alla resurser i en mapp samtidigt med **[!UICONTROL Insights View]**.
 
@@ -107,7 +107,7 @@ Assets Insights fetches usage data for assets from Adobe Analytics report suites
 1. Klicka på **[!UICONTROL Authenticate]**. När [!DNL Experience Manager] har autentiserat dina inloggningsuppgifter väljer du en Adobe Analytics-rapportsserie från **[!UICONTROL Report Suite]**-listan där du vill att Assets Insights ska hämta data. Klicka på **[!UICONTROL Add]**.
 1. När [!DNL Experience Manager] har konfigurerat rapportsviten klickar du på **[!UICONTROL Done]**.
 
-### Sidspåraren {#page-tracker}
+### Sidspårare {#page-tracker}
 
 När du har konfigurerat ditt Adobe Analytics-konto genereras sidspårningskoden åt dig. Om du vill att Assets Insights ska kunna spåra [!DNL Experience Manager]-resurserna som används på tredjepartswebbplatser, inkluderar du sidspårningskoden i webbplatskoden. Använd verktyget Sidspårare i Assets för att generera sidspårningskod. <!--  For more information on how to include your Page Tracker code in third-party web pages, see [Using Page Tracker and Embed code in web pages](/help/assets/use-page-tracker.md). -->
 
