@@ -1,14 +1,13 @@
 ---
 title: Arbeta med projektarbetsflöden
 description: Det finns en mängd olika projektarbetsflöden att välja mellan.
-translation-type: tm+mt
-source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
+exl-id: a5c9a6df-7def-43f3-b41b-524a4f4211e9
+source-git-commit: a8d3dcb732fc137f3c92839abeefd5e0c24be6ff
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '542'
 ht-degree: 12%
 
 ---
-
 
 # Arbeta med projektarbetsflöden {#working-with-project-workflows}
 
@@ -25,7 +24,6 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 |  | **Enkelt projekt** | **Medieprojekt** | **Översättningsprojekt** |
 |---|:-:|:-:|:-:|
 | Begär kopia |  | x |  |
-| Fotofotografering |  | x |  |
 | Projektgodkännande | x |  |  |
 | Begär start | x |  |  |
 | Begär landningssida | x |  |  |
@@ -75,7 +73,7 @@ I arbetsflödet för projektgodkännande tilldelar du innehåll till en använda
 
    ![Godkännande av begäran har lagts till](/help/sites-cloud/authoring/assets/projects-approval-add.png)
 
-## Begär startarbetsflöde {#request-launch-workflow}
+## Arbetsflödet Begär start {#request-launch-workflow}
 
 Med det här arbetsflödet kan du begära att programmet startas.
 
