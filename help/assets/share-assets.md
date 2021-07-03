@@ -3,9 +3,9 @@ title: Distribuera och dela resurser, mappar och samlingar
 description: Distribuera dina digitala resurser med metoder som att dela som en länk, hämta och via [!DNL Brand Portal], [!DNL desktop app], and [!DNL Asset Link].
 contentOwner: AG
 feature: Resurshantering,Samarbete,Resursdistribution
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 9d9e8d63d0f8cca97eb5a6f2ad026b24e3c6506d
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -112,7 +112,7 @@ A message confirms that you unshared the asset. In addition, the entry for the a
 
 Användare kan hämta de nödvändiga resurserna och dela dem utanför [!DNL Experience Manager]. Mer information finns i [söka efter resurser](/help/assets/search-assets.md), [hämta resurser](/help/assets/download-assets-from-aem.md) och [hämta samlingar](manage-collections.md#download-a-collection)
 
-## Dela resurser med kreatörer {#share-with-creatives}
+## Dela material med kreatörer {#share-with-creatives}
 
 Marknadsförare och andra användare kan enkelt dela godkänt material med sina kreatörer genom att
 
@@ -124,7 +124,7 @@ Marknadsförare och andra användare kan enkelt dela godkänt material med sina 
 
 De olika alternativen för att dela resurserna kräver specifik konfiguration och har särskilda krav.
 
-### Konfigurera resurslänkdelning {#asset-link-sharing}
+### Konfigurera delning av resurslänkar {#asset-link-sharing}
 
 <!-- TBD: Web Console is not there so how to configure Day CQ email service? Or is it not required now? -->
 
@@ -170,7 +170,7 @@ When you download assets from the link shared using the Link Sharing feature, AE
 Add content or link about how to configure sharing via BP, DA, AAL, etc.
 -->
 
-### Aktivera skrivbordsåtgärder att använda med skrivbordsappen {#desktop-actions}
+### Aktivera skrivbordsåtgärder som ska användas med skrivbordsappen {#desktop-actions}
 
 I [!DNL Assets]-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i skrivbordsprogrammet. Dessa alternativ kallas skrivbordsåtgärder och om du vill aktivera dem läser du [aktivera skrivbordsåtgärder i [!DNL Assets] webbgränssnittet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
 
