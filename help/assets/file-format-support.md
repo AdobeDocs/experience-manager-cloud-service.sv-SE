@@ -2,18 +2,17 @@
 title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
 contentOwner: AG
-feature: Asset Management,Renditions
-role: Business Practitioner,Administrator
+feature: Resurshantering,Återgivningar
+role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-translation-type: tm+mt
-source-git-commit: 6b232ab512a6faaf075faa55c238dfb10c00b100
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 5%
 
 ---
 
-# [!DNL Assets] filformat som stöds  {#supported-file-formats}
+# [!DNL Assets] filformat som stöds {#supported-file-formats}
 
 [!DNL Adobe Experience Manager] som en  [!DNL Cloud Service] lösning med stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett filformat. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
 
@@ -107,7 +106,7 @@ Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/ass
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
 | USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
 
-## [!DNL Camera RAW] format  {#camera-raw-formats}
+## [!DNL Camera RAW] format {#camera-raw-formats}
 
 | Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
 | ----------- | -------------------- | ------------------- | ------------ |
@@ -233,5 +232,5 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 >[!MORELIKETHIS]
 >
 >* [Behandling av tillgångar med hjälp av mikrotjänster](asset-microservices-overview.md)
->* [Filformat som stöds för smart taggning av textbaserade resurser](/help/assets/smart-tags.md#smart-tags-supported-file-formats)
+* [Filformat som stöds för smart taggning av textbaserade resurser](/help/assets/smart-tags.md#smart-tags-supported-file-formats)
 
