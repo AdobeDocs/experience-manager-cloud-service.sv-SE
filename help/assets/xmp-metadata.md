@@ -3,9 +3,9 @@ title: XMP-metadata
 description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: fd9af408-d2a3-4c7a-9423-c4b69166f873
-source-git-commit: 212e4e7cfb93d5765f80003c42ba6afb9af45c13
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 16%
@@ -49,7 +49,7 @@ XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassa
 >
 >XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, till exempel miniatyrbilder, måste de kodas i ett XML-anpassat format som `Base64`.
 
-### XMP viktiga begrepp {#xmp-core-concepts}
+### XMP grundläggande begrepp {#xmp-core-concepts}
 
 **Namnutrymmen och scheman**
 
@@ -71,7 +71,7 @@ XMP kan innehålla egenskaper från ett eller flera av scheman. En vanlig delmä
 
 XMP ger dig möjlighet att lägga till en `xml:lang`-egenskap i textegenskaper för att ange textens språk.
 
-## XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
+## XMP till återgivning {#xmp-writeback-to-renditions}
 
 Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen.
 När du ändrar metadata för en resurs från [!DNL Assets] eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin. Med återskrivningsfunktionen kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder namnutrymmet `jcr`, d.v.s. egenskapen `dc:title` skrivs tillbaka, men egenskapen `mytitle` skrivs inte tillbaka.
@@ -88,7 +88,7 @@ I det här fallet sparar [!DNL Assets] ändringarna av egenskapen **[!UICONTROL 
 >
 >Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur du [aktiverar tillbakaskrivning av metadata](#enable-xmp-writeback). MSM för digitala resurser fungerar inte när återkoppling av metadata är aktiverat. Vid tillbakaskrivning avbryts arvet.
 
-### Aktivera XMP-tillbakaskrivning {#enable-xmp-writeback}
+### Aktivera XMP {#enable-xmp-writeback}
 
 [!UICONTROL DAM Metadata Writeback] arbetsflödet används för att skriva tillbaka metadata för en resurs. Om du vill aktivera tillbakaskrivning följer du någon av följande tre metoder:
 
