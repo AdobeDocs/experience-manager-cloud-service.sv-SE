@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 3574bc45dbcd39e3d4b6ed809cc61eb7464fe873
+source-git-commit: eade8d0faf0121260b0822abcab6fae174a796e6
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
@@ -105,7 +105,9 @@ Nästa version är planerad till 15 juli 2021.
 
    ![Ange standardvy i visningsinställningar](/help/assets/assets/view-settings-for-defaults.png)
 
-* Länkdelningsfunktionen använder asynkrona nedladdningar som ökar nedladdningshastigheten.
+* Länkdelningsfunktionen använder asynkrona nedladdningar som ökar nedladdningshastigheten. Se [Hämta resurser som delas med länkdelning](/help/assets/download-assets-from-aem.md#link-share-download).
+
+   ![Hämta inkorg](/help/assets/assets/download-inbox.png)
 
 * Användare kan söka efter och filtrera mapparna baserat på egenskapspredikat.
 
