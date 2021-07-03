@@ -3,9 +3,9 @@ title: Tagga resurser automatiskt med  [!DNL Adobe Sensei] smart tjänst
 description: Tagga tillgångar med en artificiellt intelligent tjänst som använder kontextuella och beskrivande affärstaggar.
 contentOwner: AG
 feature: Smarta taggar,Taggar
-role: Administrator,Business Practitioner
+role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 4654706865c6f6511ac2893370db3424b20797cc
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '2298'
 ht-degree: 5%
