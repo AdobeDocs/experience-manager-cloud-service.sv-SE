@@ -2,9 +2,9 @@
 title: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 feature: Resurshantering,Överför
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 1c841eaa49eeb021fc7583c58aeaefc1236650f9
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 0%
@@ -99,7 +99,7 @@ If you upload many assets to [!DNL Experience Manager], the I/O requests to serv
 >Streaming upload is disabled for [!DNL Experience Manager] running on JEE server with servlet-api version lower than 3.1.
 -->
 
-### Hantera överföringar när resursen redan finns {#handling-upload-existing-file}
+### Hantera överföringar när det redan finns en resurs {#handling-upload-existing-file}
 
 Du kan överföra en resurs med samma sökväg (samma namn och plats) som en befintlig resurs. En varningsdialogruta med följande alternativ visas:
 
@@ -185,7 +185,7 @@ Förutom webbläsarens användargränssnitt har [!DNL Experience Manager] stöd 
 * [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till material från  [!DNL Experience Manager] Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link från dessa skrivbordsprogram.
 * [[!DNL Experience Manager] datorprogram ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) gör det enklare att arbeta med resurser på datorn, oberoende av filtyp eller vilket ursprungsprogram som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
-## Bearbeta resurser när {#process-when-uploaded} överförs
+## Bearbeta resurser när de överförs {#process-when-uploaded}
 
 För att kunna utföra ytterligare bearbetning av de överförda resurserna kan du använda bearbetningsprofiler på överförda mappar. Profilerna är tillgängliga på sidan **[!UICONTROL Properties]** i en mapp i [!DNL Assets]. En digital resurs utan ett tillägg eller med ett felaktigt tillägg bearbetas inte som du vill. När du till exempel överför sådana resurser händer ingenting eller så kan en felaktig bearbetningsprofil gälla för resursen. Användarna kan fortfarande lagra de binära filerna i DAM.
 
