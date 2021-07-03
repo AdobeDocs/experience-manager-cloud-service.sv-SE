@@ -1,14 +1,13 @@
 ---
 title: Hantera projekt
 description: Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet som du kan komma åt och hantera i projektkonsolen
-translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+exl-id: be4616e7-18bc-4b2d-89f6-d04178ac7f3a
+source-git-commit: a8d3dcb732fc137f3c92839abeefd5e0c24be6ff
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 11%
+source-wordcount: '915'
+ht-degree: 12%
 
 ---
-
 
 # Hantera projekt {#managing-projects}
 
@@ -26,8 +25,11 @@ AEM innehåller de här mallarna som du kan välja mellan när du skapar ett pro
 
 * Enkelt projekt
 * Medieprojekt
-* Fotoprojekt för produkt
 * Översättningsprojekt
+
+<!-- Hiding product photoshoot via cqdoc-18072 as it is not available in Skyline.
+* Product Photo Shoot Project 
+-->
 
 Du skapar ett projekt på samma sätt med alla projekt. Projekttyperna skiljer sig åt bland annat vad gäller tillgängliga [användarroller](/help/sites-cloud/authoring/projects/overview.md) och [arbetsflöden](/help/sites-cloud/authoring/projects/workflows.md).  Så här skapar du ett nytt projekt:
 
@@ -59,7 +61,7 @@ Så här associerar du resurser med ditt projekt:
 
 1. Tryck/klicka på **Skapa**. Resursen är länkad till ditt projekt och från och med nu kan du komma åt den från ditt projekt.
 
-### Tar bort ett projekt eller en resurslänk {#deleting-a-project-or-resource-link}
+### Ta bort ett projekt eller en resurslänk {#deleting-a-project-or-resource-link}
 
 Samma metod används för att ta bort ett projekt från konsolen eller en länkad resurs från ditt projekt:
 
@@ -105,7 +107,7 @@ Så här öppnar du en platta så att du kan visa eller ändra objekt:
 
    ![Sida vid sida](/help/sites-cloud/authoring/assets/projects-opened-tile.png)
 
-## Visar projektstatistik {#viewing-project-statistics}
+## Visa projektstatistik {#viewing-project-statistics}
 
 Om du vill visa projektstatistik går du till konsolen **Projekt** och klickar på **Visa statistikvy**. Slutförandenivån för varje projekt visas. Klicka på **Visa statistikvy** igen för att gå till konsolen **Projekt**.
 
@@ -119,7 +121,7 @@ Projektets tidslinje innehåller information om när resurser i projektet senast
 
 ### Visa aktiva/inaktiva projekt {#viewing-active-inactive-projects}
 
-Om du vill växla mellan dina aktiva och inaktiva projekt går du till konsolen **Projekt** och klickar på **Växla aktiva projekt**. Om ikonen har en bockmarkering visas de aktiva projekten.
+Om du vill växla mellan aktiva och inaktiva projekt klickar du på **Växla aktiva projekt** på konsolen **i Projekt**. Om ikonen har en bockmarkering visas de aktiva projekten.
 
 ![Knappen Växla aktiva projekt](/help/sites-cloud/authoring/assets/projects-active.png)
 
@@ -127,7 +129,7 @@ Om ikonen har ett x bredvid visas de inaktiva projekten.
 
 ![Knappen Växla inaktiva projekt](/help/sites-cloud/authoring/assets/projects-inactive.png)
 
-## Gör projekt inaktiva eller aktiva {#making-projects-inactive-or-active}
+## Göra projekt inaktiva eller aktiva {#making-projects-inactive-or-active}
 
 Du kanske vill göra ett projekt inaktivt om du har slutfört det men ändå vill behålla informationen om projektet.
 
@@ -136,8 +138,7 @@ Så här gör du ett projekt inaktivt (eller aktivt):
 1. Öppna projektet i konsolen **Projekt** och hitta sedan panelen **Projektinformation**.
 
    >[!NOTE]
-   >
-   >Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
+   Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
 
 1. Tryck/klicka på **Redigera**.
 1. Ändra väljaren från **Aktiv** till **Inaktiv** (eller tvärtom).
