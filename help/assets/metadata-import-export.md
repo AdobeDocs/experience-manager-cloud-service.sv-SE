@@ -3,9 +3,9 @@ title: Importera och exportera resursers metadata gruppvis
 description: I den här artikeln beskrivs hur du importerar och exporterar flera metadata samtidigt.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: fb70a068-3ba3-4459-952d-79155d286c42
-source-git-commit: 1dc639265570b54c42d04f61178d8d2faec1b433
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 11%
@@ -39,7 +39,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 
 1. Klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
 
-Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du formatet `YYYY-MM-DDThh:mm:ss.fff-00:00` för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Till exempel är `2020-03-26T11:26:00.000-07:00` den 26 mars 2020 kl. 11:26:00.000 PST-tid.
+Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du formatet `YYYY-MM-DDThh:mm:ss.fff-00:00` för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Till exempel är `2020-03-26T11:26:00.000-07:00` 26 mars 2020 vid 11:26:000 AM PST time.
 
 >[!CAUTION]
 >
