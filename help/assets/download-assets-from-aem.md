@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Resurshantering
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: eade8d0faf0121260b0822abcab6fae174a796e6
 workflow-type: tm+mt
-source-wordcount: '876'
-ht-degree: 1%
+source-wordcount: '1004'
+ht-degree: 0%
 
 ---
 
@@ -66,17 +66,19 @@ Så här hämtar du resurser:
 
 1. Klicka på **[!UICONTROL Download]** i dialogrutan.
 
-<!-- TBD: Commenting from May release because the feature is moved to June release 2021.6.0.
-## Download assets shared using link sharing {#link-share-download}
+## Hämta resurser som delas via länkdelning {#link-share-download}
 
-Sharing assets using a link is a convenient way to make it available to interested people without them having to first log in to [!DNL Assets]. To generate a URL to share assets, use the [Link Share functionality](/help/assets/share-assets.md#sharelink). 
+>[!NOTE]
+>
+>Den här funktionen är tillgänglig i prerelease-kanalen i Experience Manager.
 
-When users download assets from shared links, [!DNL Assets] uses an asynchronous service that offers faster and and uninterrupted downloads. The assets to be downloaded are queued in the background in an inbox into ZIP archives of manageable file size. For very large downloads, the download is chunked into files of 100 GB in size.
+Att dela resurser med hjälp av en länk är ett bekvämt sätt att göra det tillgängligt för intresserade utan att de först behöver logga in på [!DNL Assets]. Om du vill generera en URL för att dela resurser använder du funktionen [Länkdelning](/help/assets/share-assets.md#sharelink).
 
-The inbox displays the processing status of each archive. Once the processing is complete, you can download the archives from the inbox.
+När användare hämtar resurser från delade länkar använder [!DNL Assets] en asynkron tjänst som erbjuder snabbare och oavbrutna hämtningar. De resurser som ska laddas ned köas i bakgrunden i en inkorg i ZIP-arkiv med hanterbar filstorlek. Vid mycket stora nedladdningar delas nedladdningen in i filer som är 100 GB stora.
 
-![Download inbox](assets/download-inbox.png)
--->
+I inkorgen visas bearbetningsstatus för varje arkiv. När bearbetningen är klar kan du hämta arkiven från inkorgen.
+
+![Hämta inkorg](assets/download-inbox.png)
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
