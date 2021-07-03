@@ -3,16 +3,16 @@ title: HTTP API för Assets
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Experience Manager Assets].
 contentOwner: AG
 feature: Resurser för HTTP API, API:er
-role: Developer,Architect,Administrator
+role: Developer,Architect,Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: 2e00b62efa07488fbdba723d283b9b76b53f6d34
+source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] HTTP-API  {#assets-http-api}
+# [!DNL Adobe Experience Manager Assets] HTTP-API {#assets-http-api}
 
 ## Översikt {#overview}
 
@@ -197,7 +197,7 @@ Uppdateringarna ersätter en resursåtergivning med nya binära data.
 * 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
 
-## Lägg till en kommentar för en resurs {#create-an-asset-comment}
+## Lägga till en kommentar till en resurs {#create-an-asset-comment}
 
 **Parametrar**: Parametrarna är  `message` för kommentarens meddelandetext och  `annotationData` för anteckningsdata i JSON-format.
 
