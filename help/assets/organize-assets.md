@@ -2,20 +2,19 @@
 title: Ordna digitala resurser
 description: Organisera dina digitala resurser med hjälp av olika metoder i Adobe Experience Manager Assets.
 contentOwner: AG
-feature: Asset Management,Tagging,Asset Distribution
+feature: Resurshantering,Taggar,Resursdistribution
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 8093f6cec446223af58515fd8c91afa5940f9402
+exl-id: 6b3ce076-2dd9-47f6-9b68-4fa52bfedd42
+source-git-commit: 7256300afd83434839c21a32682919f80097f376
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
-
 # Ordna digitala resurser {#organize-digital-assets}
 
-Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokument extraheras och görs sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar fullt ut rätt behörigheter. Metadata beskrivs i detalj i Metadata i Digital Asset Management.
+Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokument extraheras och görs sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar helt rätt behörigheter. Metadata beskrivs i detalj i Metadata i Digital Asset Management.
 
 AEM Assets har stöd för flera sätt att ordna innehåll. Du kan ordna dem hierarkiskt med hjälp av mappar eller så kan du ordna dem på ett oordnat, tillfälligt sätt, t.ex. med hjälp av taggar. Användare kan redigera taggar i DAM-redigeraren för mediefiler där underresurser, återgivningar och metadata visas.
 
@@ -32,7 +31,7 @@ När du organiserar en samling resurser, till exempel alla *Natur*-bilder, kan d
 1. Ange ett mappnamn i fältet **[!UICONTROL Title]**. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
 1. Klicka på **[!UICONTROL Create]**. Mappen visas i mappen med digitala resurser.
 
-## Lägg till CUG-egenskaper i mappar {#add-cug-properties-to-folders}
+## Lägga till CUG-egenskaper i mappar {#add-cug-properties-to-folders}
 
 Du kan begränsa vem som kan få åtkomst till vissa mappar i Resurser genom att göra mappen till en sluten användargrupp (CUG). Så här gör du en mapp till en CUG-fil:
 
