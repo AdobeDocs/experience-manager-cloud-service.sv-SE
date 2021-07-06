@@ -5,9 +5,9 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: 9e64772ac26888e5c1f4c77ffce6048286357e93
+source-git-commit: cde8552925a6b0ceb2c30694f127233b05dcc73c
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '885'
 ht-degree: 30%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 30%
    + [Loggning](developing/introduction/logging.md)
    + [Konfigurationer och Configuration Browser](developing/introduction/configurations.md)
    + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
-   + [API för AEM as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html)
+   + [API-referensmaterial](/help/implementing/developing/reference-materials.md)
    + [Genererar åtkomsttoken för API:er på serversidan](developing/introduction/generating-access-tokens-for-server-side-apis.md)
    + [Headless and Headless in AEM](developing/headful-headless.md)
    + Utveckling AEM hög {#full-stack}
@@ -103,7 +103,6 @@ ht-degree: 30%
          + [Implementera en anpassad predikatutvärderare](/help/implementing/developing/introduction/query-builder-custom-predicate.md)
       + [Anpassade felsidor](/help/implementing/developing/introduction/custom-error-page.md)
       + [AEM](/help/implementing/developing/introduction/node-types.md)
-      + [Riktlinjer för Java API](/help/implementing/developing/introduction/java-api-guidelines.md)
    + Headless Experience Management {#headless}
       + [Headless och AEM](developing/headless/introduction.md)
       + [Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html)
