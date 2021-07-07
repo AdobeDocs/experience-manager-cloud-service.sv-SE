@@ -1,9 +1,9 @@
 ---
 title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som ni kan använda för ert digitala upplevelseprojekt.
-source-git-commit: 4134d87ca40f7834605c7d3496f05ef80fbab554
+source-git-commit: f8d16e515de5ce740398d45a30038793fe021b69
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '665'
 ht-degree: 3%
 
 ---
@@ -58,15 +58,15 @@ Om ett API tillhandahålls av AEM bör du föredra det framför Sling, JCR och O
 
 AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 
-| API | Beskrivning |
+| Funktion | Beskrivning |
 |---|---|
 | [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | Standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser |
 | [JSON-exporterare](/help/implementing/developing/components/json-exporter.md) | Leverera innehåll från alla AEM sidor i JSON-datamodellformat |
 | [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md) | Generera JSON-export av komponentinnehåll baserat på ett modellramverk |
-| [Assets](/help/assets/mac-api-assets.md) | Möjliggör åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se AEM Assets HTTP API |
-| [Innehållsfragment HTTP](/help/assets/content-fragments/assets-api-content-fragments.md) | Få åtkomst till innehåll i innehållsfragment direkt via HTTP API via CRUD-åtgärder |
-| [Content Fragment GraphQL](/help/assets/content-fragments/graphql-api-content-fragments.md) | Möjliggör effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementationer |
-| [Content Fragments Assets HTTP](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
+| [Resurs-API](/help/assets/mac-api-assets.md) | Möjliggör åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se AEM Assets HTTP API |
+| [HTTP API för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md) | Få åtkomst till innehåll i innehållsfragment direkt via HTTP API via CRUD-åtgärder |
+| [Content Fragment GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) | Möjliggör effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementationer |
+| [Content Fragments Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
 
 ## SPA-specifika API:er {#spa-apis}
 
