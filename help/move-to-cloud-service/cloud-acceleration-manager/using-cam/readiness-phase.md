@@ -4,9 +4,9 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: ed196db516a112dad8d6ac9a2917f0a90a0195f1
+source-git-commit: b5b6a4a84c57805770ec1c72741c2d56d4711309
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '594'
 ht-degree: 3%
 
 ---
@@ -102,12 +102,23 @@ Du kan filtrera rapporten baserat på prioritet, undertyp eller antal.
 
 #### Utvärdering av bästa praxis {#best-practices-assessment}
 
-Det här kortet ger en
+Alternativet Best Practices Assessment (Utvärdering av bästa praxis) ger en bedömning av din aktuella AEM och ger vägledning om nästa steg för att anta AEM bästa praxis. Du kan granska följande information på den här fliken:
+
+* Översikt över AEM
+* Anpassade komponenter och mallar
+* Ytterligare resultat
+* Långsamma frågor
+* Underhållsåtgärder
 
 #### Utvärdering av migreringskomplexitet {#migration-complexity-assessment}
 
-Det här kortet innehåller
+Med alternativet Utvärdering av migreringskomplexitet kan du bedöma hur komplicerat det är att migrera den befintliga AEM till AEM som en Cloud Service. Du kan granska följande information på den här fliken:
 
+* Översikt över AEM
+* Bedömning
+* Överväganden vid innehållsmigrering
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/migration-complexity-1.png)
 
 ## Använda Planera och konfigurera kort {#planning-setup}
 
@@ -119,10 +130,8 @@ Följ det här avsnittet för att utforska aktivitetskortet Planning and Setup.
 
 1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-5.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-5-planning.png)
 
 ## What&#39;s Next {#whats-next}
 
 När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg, Använda implementeringsfasen.
-
-
