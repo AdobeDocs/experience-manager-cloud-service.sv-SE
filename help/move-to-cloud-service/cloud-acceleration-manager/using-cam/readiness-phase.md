@@ -4,15 +4,15 @@ description: Den här sidan innehåller en översikt över beredskapsfasen i Clo
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 991ead30264d40bc222b852aa1578787bc27bee3
+source-git-commit: ed196db516a112dad8d6ac9a2917f0a90a0195f1
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
 
-# Beredningsfas i Cloud Acceleration Manager {#readiness-phase-cam}
+# Beredningsfas i molnaccelerationshanteraren {#readiness-phase-cam}
 
 När du har skapat ett projekt i Cloud Acceleration Manager kan du nu börja köra de tillgängliga verktygen i beredskapsfasen.
 
@@ -64,7 +64,7 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
    >[!NOTE]
    >När du överför en ny rapport återställs alla bedömningar.
 
-### Analysrapport för metodtips för granskning {#analysis-report}
+### Analysrapport om metodtips för granskning {#analysis-report}
 
 Utforska följande kort som finns på sidan Best Practices Analysis Report:
 
@@ -79,17 +79,17 @@ Utforska följande kort som finns på sidan Best Practices Analysis Report:
 
 #### Rapportegenskaper {#report-properties}
 
-Det här kortet innehåller information om rapportegenskaper som rapportdatum, varaktighet, filter, överföringsdatum och information om Adobe Experience Manager (AEM).
+Kortet **Rapportegenskaper** innehåller information om rapportegenskaper som rapportdatum, varaktighet, filter, överföringsdatum och information om Adobe Experience Manager (AEM).
 
 ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-properties.png)
 
 #### Rapportöversikt {#report-overview}
 
-Kortet innehåller rapportresultaten
+Detta **rapportöversiktskort** ger rapportresultaten, vilket visas i figuren nedan.
 
 ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-overview.png)
 
-Om du klickar på den här rapporten öppnas fliken **Rapport**, som i bilden nedan.
+Om du klickar på den här rapporten öppnas fliken **Rapport**.
 
 ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-overview2.png)
 
@@ -109,7 +109,7 @@ Det här kortet ger en
 Det här kortet innehåller
 
 
-## Använda Planerings- och inställningskort {#planning-setup}
+## Använda Planera och konfigurera kort {#planning-setup}
 
 Följ det här avsnittet för att utforska aktivitetskortet Planning and Setup.
 
