@@ -4,7 +4,7 @@ description: Den här sidan innehåller en översikt över implementeringsfasen 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 8641c14114c5f1f2f69a3a1b51eac38ab6f4f541
+source-git-commit: 8063afa2df9f5007f686afcc4162abde56c188ef
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%
@@ -30,7 +30,7 @@ Klicka på projektkortet för att öppna projektstartsidan och navigera till avs
 >Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/getting-started-cam.md).
 
 
-## Använda det lokala utvecklingskortet {#local-development}
+## Använda lokalt utvecklingskort {#local-development}
 
 Det lokala utvecklingskortet tillhandahåller allt relevant innehåll som hjälper dig att konfigurera den lokala AEM utvecklingsmiljön när du påbörjar implementeringsfasen av migreringsresan.
 
@@ -45,7 +45,7 @@ Följ det här avsnittet för att utforska aktivitetskortet för lokal utvecklin
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-3.png)
 
 
-## Använda Code Refactoring Card {#code-refactoring}
+## Använda omfaktoriseringskort {#code-refactoring}
 
 Aktivitetskortet Code Refactoring ger all relevant information och markerar de områden för kodomfaktorisering som du behöver granska när du går till AEM som en Cloud Service.
 
@@ -63,7 +63,7 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-5.png)
 
 
-## Använda AEM som ett Cloud Service-distributionskort {#aem-as-a-cloud-service-deployment}
+## Använda AEM som distributionskort för Cloud Service {#aem-as-a-cloud-service-deployment}
 
 AEM som driftsättningskort för Cloud Service innehåller allt relevant innehåll som hjälper dig att distribuera koden till AEM som en Cloud Service.
 
@@ -75,7 +75,7 @@ Följ det här avsnittet för att utforska AEM som aktivitetskort för driftsät
 
 1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-7.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/aem-deployment-card.png)
 
 
 ## Använda innehållsöverföringskort {#content-transfer}
@@ -90,7 +90,7 @@ Följ det här avsnittet för att utforska aktivitetskortet för innehållsöver
 
 1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-9.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/content-transfertool-card.png)
 
    >[!NOTE]
    >Granska [förutsättningarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en) och [god praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en) innan du använder verktyget Innehållsöverföring.
