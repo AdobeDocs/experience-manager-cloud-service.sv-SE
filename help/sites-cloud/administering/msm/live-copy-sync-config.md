@@ -2,17 +2,16 @@
 title: Konfigurera Live Copy-synkronisering
 description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy och hur du kan konfigurera och anpassa dem efter dina projektbehov.
 feature: Multi Site Manager
-role: Administrator
-translation-type: tm+mt
-source-git-commit: fff94f476124d8a2a84c60c478fef624090192d1
+role: Admin
+exl-id: 0c97652c-edac-436e-9b5b-58000bccf534
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '2340'
+source-wordcount: '2339'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurerar Live Copy-synkronisering {#configuring-live-copy-synchronization}
+# Konfigurera Live Copy-synkronisering {#configuring-live-copy-synchronization}
 
 Adobe Experience Manager har ett antal färdiga synkroniseringskonfigurationer. Innan du använder Live-kopior bör du överväga följande för att definiera hur och när Live-kopior ska synkroniseras med sitt källinnehåll.
 
@@ -95,7 +94,7 @@ You can [create a rollout configuration](/help/sites-developing/extending-msm.md
 The new rollout configuration is then available to you when configuring rollout configurations on a blueprint or Live Copy page.
 -->
 
-### Exkluderar egenskaper och nodtyper från synkronisering {#excluding-properties-and-node-types-from-synchronization}
+### Exkludera egenskaper och nodtyper från synkronisering {#excluding-properties-and-node-types-from-synchronization}
 
 Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder så att de inte påverkar specifika nodtyper och egenskaper. Många egenskaper och delnoder som hör till AEM interna funktion bör till exempel inte tas med i en Live-kopia. Endast det innehåll som är relevant för sidans användare ska kopieras.
 
@@ -188,7 +187,7 @@ Du kan också konfigurera utrullningskonfigurationerna för en Live Copy-sida n�
 
 1. Klicka eller tryck på **Spara och stäng**.
 
-### Ställa in utrullningskonfiguration för en blå sida {#setting-the-rollout-configuration-for-a-blueprint-page}
+### Ställa in utrullningskonfiguration för en blåtryckssida {#setting-the-rollout-configuration-for-a-blueprint-page}
 
 Konfigurera en ritningssida med de utrullningskonfigurationer som ska användas när ritningssidan rullas ut.
 
@@ -200,7 +199,7 @@ Observera att de underordnade sidorna för den blå sidan ärver konfigurationen
 1. Välj en eller flera **utrullningskonfigurationer** med den nedrullningsbara väljaren.
 1. Behåll uppdateringarna med **Spara**.
 
-### Anger systemets standardkonfiguration för utrullning {#setting-the-system-default-rollout-configuration}
+### Ange systemets standardkonfiguration för utrullning {#setting-the-system-default-rollout-configuration}
 
 Konfigurera följande OSGi-tjänst om du vill ange en utrullningskonfiguration som ska användas som systemstandard.
 
