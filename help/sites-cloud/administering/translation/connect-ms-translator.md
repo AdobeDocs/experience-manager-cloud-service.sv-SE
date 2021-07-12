@@ -1,16 +1,15 @@
 ---
 title: Ansluter till Microsoft Translator
 description: Lär dig hur du ansluter AEM till Microsoft Translator körklart för att automatisera ditt arbetsflöde för översättning.
-feature: Language Copy
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Språkkopia
+role: Admin
+exl-id: ca3c50f9-005e-4871-8606-0cfd3ed21936
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
-
 
 # Ansluter till Microsoft Translator {#connecting-to-microsoft-translator}
 
@@ -67,7 +66,7 @@ Konfigurationssidorna för Microsoft Translation är en praktisk länk till Micr
 1. Tryck eller klicka på **Redigera**.
 1. I fönstret **Redigera konfiguration** trycker eller klickar du på **Anpassa översättare**. Använd Microsofts webbsida som öppnas för att anpassa tjänsten.
 
-## Aktivera översättartjänstens konfigurationer {#activating-the-translator-service-configurations}
+## Aktivera tjänstkonfigurationer för översättare {#activating-the-translator-service-configurations}
 
 Du måste aktivera dina molntjänstkonfigurationer för att stödja översatt innehåll som replikeras till publiceringsinstansen. Använd metoden [publicera ett träd](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#publishing-and-unpublishing-a-tree) för att aktivera databasnoderna som lagrar Microsoft Translator-konfigurationerna. Noderna finns under följande överordnade noder:
 
