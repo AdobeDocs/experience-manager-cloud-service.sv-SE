@@ -4,8 +4,8 @@ user-guide-title: Säkerhet för AEM as a Cloud Service
 breadcrumb-title: Säkerhetshandbok
 user-guide-description: Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service.
 feature: Konfigurerar
-role: Administrator
-source-git-commit: f5ed5561ed19938b4c647666ff7a6a470d307cf7
+role: Admin
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 60%
