@@ -2,17 +2,16 @@
 title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
 description: Lär dig bädda in Dynamic Media video- eller bildresurser på en webbsida.
 feature: Resurshantering
-role: Business Practitioner
+role: User
 exl-id: 76335781-e39f-4aae-967f-5af8634d8f61
-translation-type: tm+mt
-source-git-commit: 1ad89be4ebddec0705c6f557fed3d697b9f1f3a7
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 21%
 
 ---
 
-# Bädda in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
+# Bädda in Dynamic Media Video-, Image Viewer- eller Dimensional-visningsprogram på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
 
 Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
@@ -50,7 +49,7 @@ Se [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och tryck sedan på **[!UICONTROL Close]**.
 1. Klistra in inbäddningskoden på dina webbsidor.
 
-## Använda HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-deliver-your-dynamic-media-assets}
+## Använd HTTP/2 för att leverera Dynamic Media-material {#using-http-to-deliver-your-dynamic-media-assets}
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
