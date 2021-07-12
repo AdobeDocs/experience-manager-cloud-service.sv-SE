@@ -2,10 +2,10 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 225c47db1af35b29d79ebd16fa437681987b1372
+source-git-commit: e6e5fb6eebcd39b46dc4234999e18de9b8e3950e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1185'
+ht-degree: 1%
 
 ---
 
@@ -60,7 +60,7 @@ Så här utför du en trädaktivering:
 
 Du kan utlösa en trädreplikering genom att välja **Verktyg - Arbetsflöde - Modeller** och kopiera **publiceringsinnehållsträdet** som är körklar, vilket visas nedan:
 
-![](/help/operations/assets/publish-distribute.png)
+![](/help/operations/assets/publishcontenttreeworkflow.png)
 
 Ändra inte och anropa inte den ursprungliga modellen. I stället måste du först kopiera modellen och sedan ändra eller anropa kopian.
 
