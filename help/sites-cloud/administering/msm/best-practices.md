@@ -2,10 +2,9 @@
 title: MSM Best Practices
 description: Lär dig de bästa arbetssätten som skapats av tekniker och konsultteam på Adobe för att komma igång med AEM Multi Site Manager.
 feature: Multi Site Manager
-role: Administrator
+role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
-translation-type: tm+mt
-source-git-commit: 184de9c1391ade3abbf2c6d73f09a324e6fa7e3e
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 0%
@@ -42,7 +41,7 @@ När du skapar en ny webbplats med Live Copy är det fördelaktigt att skapa des
 >
 > Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
 
-## Synkronisering av komponenter och behållare {#components-and-container-synchronization}
+## Komponenter- och behållarsynkronisering {#components-and-container-synchronization}
 
 I allmänhet gäller följande som utrullningsregel i MSM för synkronisering av komponenter:
 
@@ -57,7 +56,7 @@ För att ge stöd åt kapsling av komponenter så att lokalt tillagda komponente
 >
 >Lägg till egenskapen `cq:isContainer` i komponenten för att ange den som en behållare.
 
-## Skapa plats {#create-site}
+## Skapa webbplats {#create-site}
 
 Observera att AEM har två metoder för att skapa Live-kopior:
 
@@ -101,7 +100,7 @@ Mer information finns i [Översätta innehåll för flerspråkiga platser](/help
       * Innehållsarv på respektive Live Copy-sidor uppdateras för att återspegla den nya platsen för deras källor i planen.
       * Om du vill att en sida ska gå från utkast till Live-kopior ska du överväga de bästa sätten att flytta sidan [.](#page-move)
 
-### Bästa metoder för sidflyttning {#page-move}
+### Sidflyttning - bästa praxis {#page-move}
 
 Tänk på följande när du funderar på att flytta sidor i en Live-kopia.
 
