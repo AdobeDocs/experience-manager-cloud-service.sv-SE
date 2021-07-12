@@ -1,9 +1,9 @@
 ---
 title: Använda regeluppsättningar för att omforma URL:er
 description: Lär dig hur du distribuerar regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript™) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
-role: Business Practitioner
+role: User
 exl-id: f8010125-ba89-406a-bede-f6aa2f858c70
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er.
 
    Se [Ta bort specialtecken från URL:er](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
 
-I Dynamic Media-sammanhang kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för Dynamic Media-resurser. Den här filen omstrukturerar standardformatet för URL-protokoll så att det uppfyller företagslogiken i de system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
+I Dynamic Media-sammanhang kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för Dynamic Media-resurser. Den här filen omstrukturerar URL-standardprotokollformatet så att det uppfyller företagslogiken i de system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
 
 >[!CAUTION]
 >
