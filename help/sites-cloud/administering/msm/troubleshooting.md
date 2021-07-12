@@ -2,17 +2,16 @@
 title: Felsökning av MSM-problem och vanliga frågor
 description: Ta reda på hur du felsöker de vanligaste MSM-relaterade problemen och får svar på de vanligaste MSM-relaterade frågorna.
 feature: Multi Site Manager
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+role: Admin
+exl-id: 50f02f4f-a347-4619-ac90-b3136a7b1782
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
 
-
-# Felsökning av MSM-problem och vanliga frågor och svar {#troubleshooting-msm}
+# Felsökning av MSM-problem och vanliga frågor {#troubleshooting-msm}
 
 ## Felsökning av första steg {#first-steps}
 
@@ -32,7 +31,7 @@ MSM registrerar flera servrar som kan begäras med väljare på resurs-URL:erna.
 
 Dessa servrar genererar DEBUG-loggmeddelanden via `com.day.cq.wcm.msm`-loggen som också kan vara till hjälp.
 
-## Kontrollerar MSM-specifik information i databasen {#checking-repo}
+## Kontrollera MSM-specifik information i databasen {#checking-repo}
 
 De tidigare servletarna returnerade beräknad information baserat på MSM-specifika noder och mixins. Informationen lagras i databasen på följande sätt.
 
@@ -55,7 +54,7 @@ Att känna till dessa egenskaper kan också vara användbart för att fråga dat
 
 * `select * from cq:LiveSync` returnerar alla Live Copy-rotsidor.
 
-## Vanliga frågor och svar {#faq}
+## Vanliga frågor {#faq}
 
 Här är några vanliga frågor om MSM och Live Copy.
 
