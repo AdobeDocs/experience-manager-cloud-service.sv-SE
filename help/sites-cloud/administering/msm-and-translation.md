@@ -1,18 +1,17 @@
 ---
 title: Hanterare och översättning av flera webbplatser
 description: Lär dig hur du återanvänder innehåll i hela projektet och hanterar flerspråkiga webbplatser i AEM.
-feature: Administering
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Administratör
+role: Admin
+exl-id: a3d48884-081e-44f8-8055-ee3657757bfd
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
-
-# Multi Site Manager och Translation {#msm-and-translation}
+# Hanterare och översättning av flera webbplatser {#msm-and-translation}
 
 Adobe Experience Manager inbyggda verktyg för Multi Site Manager och översättning gör det enklare att lokalisera innehållet.
 
@@ -23,7 +22,7 @@ Adobe Experience Manager inbyggda verktyg för Multi Site Manager och översätt
 
 Dessa två funktioner kan kombineras för att passa för webbplatser som är både [multinationella och flerspråkiga](#multinational-and-multilingual-sites).
 
-## Flerspråkiga och flerspråkiga platser {#multinational-and-multilingual-sites}
+## Flerspråkiga och flerspråkiga webbplatser {#multinational-and-multilingual-sites}
 
 Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplatser genom att kombinera Multi Site Manager och arbetsflödet för översättning.
 
@@ -56,5 +55,5 @@ För mer avancerade användningsområden kan MSM användas även av flerspråkig
 >För alla användningsfall rekommenderas följande metodtips:
 >
 >* [Bästa praxis för MSM](msm/best-practices.md)
->* [Best Practices for Translation](translation/best-practices.md)
+* [Best Practices for Translation](translation/best-practices.md)
 
