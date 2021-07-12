@@ -2,9 +2,9 @@
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
 feature: Administratör
-role: Administrator
+role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analy
 >
 >Adobe Experience Manager som Cloud Service-kunder som inte har något befintligt Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad volymanvändning av Target.
 
-## Skapar Adobe Target-konfigurationen {#create-configuration}
+## Skapa Adobe Target-konfigurationen {#create-configuration}
 
 1. Navigera till **Verktyg** → **Cloud Services**.
    ![](assets/cloudservice1.png "NavigationNavigation")
@@ -71,7 +71,7 @@ Så här redigerar du målkonfigurationen:
 3. Välj **Återanslut till Adobe Target**.
 4. Välj **Spara och stäng**.
 
-### Lägga till en konfiguration för en plats {#add-configuration}
+### Lägga till en konfiguration till en plats {#add-configuration}
 
 Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Platser** →**Välj en webbplatssida** → **Egenskaper** → **Avancerat** → **Konfiguration** → Välj konfigurationtenant.
 
@@ -91,7 +91,7 @@ Som en allmän översikt är integrationsstegen:
 4. Skapa en sidregel
 5. Bygg och publicera
 
-### Skapar en startegenskap {#create-property}
+### Skapa en startegenskap {#create-property}
 
 En egenskap är en behållare som är fylld med tillägg, regler och dataelement.
 
@@ -101,7 +101,7 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
 4. Välj knappen **Spara**.
    ![](assets/properties_newproperty1.png "LaunchpropertyLaunchproperty")
 
-### Lägga till de nödvändiga tilläggen {#add-extension}
+### Lägga till nödvändiga tillägg {#add-extension}
 
 **** Tillägg är den behållare som hanterar huvudbiblioteksinställningarna. Adobe Target-tillägget stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Du måste lägga till både **Adobe Target** och **Adobe ContextHub**.
 
@@ -113,7 +113,7 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
    ![Spara ](assets/configure_extension1.png "tilläggSpara tillägg")
 5. Upprepa stegen ovan om du vill söka efter tillägget **Adobe ContextHub** och installera det (detta krävs för integrering med ContextHub-parametrar, baserat på vilken målanpassning som ska göras).
 
-### Skapar ett dataelement {#data-element}
+### Skapa ett dataelement {#data-element}
 
 **Dataelement är** platshållare som du kan mappa kontextnavparametrar till.
 
@@ -132,11 +132,11 @@ I **Regel** definierar och ordnar vi en sekvens med åtgärder, som utförs på 
 2. I Lägg till parametrar i alla Mboxes lägger du till dataelementet som konfigurerats tidigare (se dataelementet ovan) i den parameter som ska skickas i mbox-anropet.
    ![](assets/map_data1.png "MboxActions")
 
-### Skapa och publicera {#build-publish}
+### Bygg och publicera {#build-publish}
 
 Mer information om hur du skapar och publicerar finns på den här [sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html).
 
-## Förändringar i innehållsstrukturen mellan klassiska användargränssnittskonfigurationer och användargränssnittskonfigurationer {#changes-content-structure}
+## Förändringar i innehållsstrukturen mellan Classic- och Touch UI-konfigurationer {#changes-content-structure}
 
 | **Ändra** | **Konfiguration av klassiskt användargränssnitt** | **Konfiguration av pekskärmsgränssnitt** | **Konsekvenser** |
 |---|---|---|---|
