@@ -1,16 +1,15 @@
 ---
 title: Förbereder innehåll för översättning
 description: Lär dig hur du förbereder innehåll för översättning.
-feature: Language Copy
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Språkkopia
+role: Admin
+exl-id: afc577a2-2791-481a-ac77-468011e4302e
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
-
 
 # Förbereder innehåll för översättning {#preparing-content-for-translation}
 
@@ -59,7 +58,7 @@ Gör så här för att förbereda webbplatsen för översättning:
 
 När du har förberett innehållet för översättning kan du automatiskt skapa saknade sidor i dina språkkopior och tillhörande översättningsprojekt. (Se [Skapa ett översättningsprojekt](managing-projects.md).) En översikt över innehållsöversättningsprocessen i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](overview.md).
 
-## Skapar en språkrot {#creating-a-language-root}
+## Skapa en språkrot {#creating-a-language-root}
 
 Skapa en språkrot som rotsida för en språkkopia som identifierar språket i innehållet. När du har skapat språkroten kan du skapa översättningsprojekt som innehåller språkkopian.
 
@@ -83,7 +82,7 @@ Du kan använda båda formaten enligt den struktur som du har valt för den glob
 
 1. Klicka eller tryck på **Skapa**. I bekräftelsedialogrutan klickar eller trycker du på **Done** för att gå tillbaka till Sites console eller **Open** för att öppna språkkopian.
 
-## Se språkrotens status {#seeing-the-status-of-language-roots}
+## Se status för språkrötter {#seeing-the-status-of-language-roots}
 
 AEM innehåller en **referens**-räl som visar en lista över språkrötter som har skapats.
 
