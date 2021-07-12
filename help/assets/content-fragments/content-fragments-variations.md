@@ -1,16 +1,15 @@
 ---
 title: Variationer – redigera innehållsfragment
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
-feature: Content Fragments
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+feature: Innehållsfragment
+role: User
+exl-id: af05aae6-d535-4007-ba81-7f41213ff152
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '2259'
+source-wordcount: '2257'
 ht-degree: 11%
 
 ---
-
 
 # Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
 
@@ -60,7 +59,7 @@ Du kan:
 
 * För **fragmentreferensfält** kan alternativet **[Redigera innehållsfragment](#fragment-references-edit-content-fragment)** vara tillgängligt, beroende på modelldefinitionen.
 
-### Helskärmsredigeraren {#full-screen-editor}
+### Helskärmsredigerare {#full-screen-editor}
 
 När du redigerar ett textfält med flera rader kan du öppna redigeraren i helskärmsläge; tryck eller klicka i den faktiska texten och välj sedan följande åtgärdsikon:
 
@@ -132,7 +131,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markdown {#markdown}
+### Markering {#markdown}
 
 >[!NOTE]
 >
@@ -187,7 +186,7 @@ Sedan kan du skapa ett nytt fragment genom att:
    1. **** Donewill return (to the original fragment) and reference the new fragment.
    1. **Öppna** refererar till det nya fragmentet samt öppnar det nya fragmentet, för redigering, på en ny flik i webbläsaren.
 
-### Visar nyckelstatistik {#viewing-key-statistics}
+### Visa nyckelstatistik {#viewing-key-statistics}
 
 När helskärmsredigeraren är öppen visar åtgärden **Textstatistik** information om texten.
 
@@ -251,7 +250,7 @@ Andra språk är tillgängliga som språkmodellpaket från paketresurs:
 
    ![summeringsjämförelse](assets/cfm-variations-06.png)
 
-### Kommentera ett innehållsfragment {#annotating-a-content-fragment}
+### Anteckna ett innehållsfragment {#annotating-a-content-fragment}
 
 Så här kommenterar du ett fragment:
 
@@ -410,7 +409,7 @@ Så här byter du namn på en befintlig variant:
 >[!NOTE]
 Detta påverkar bara variationen **Titel**.
 
-### Tar bort en variant {#deleting-a-variation}
+### Ta bort en variant {#deleting-a-variation}
 
 Så här tar du bort en befintlig variant:
 
