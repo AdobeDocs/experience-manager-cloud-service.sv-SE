@@ -1,10 +1,9 @@
 ---
 title: Felsöka Dynamic Media
 description: Felsökningstips när du använder Dynamic Media.
-role: Administrator,Business Practitioner
+role: Admin,User
 exl-id: 3e8a085f-57eb-4009-a5e8-1080b4835ae2
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 1%
@@ -166,7 +165,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
  </tbody>
 </table>
 
-## Visare {#viewers}
+## Tittare {#viewers}
 
 Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
 
