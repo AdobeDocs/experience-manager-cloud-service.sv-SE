@@ -2,10 +2,9 @@
 title: Modeller för innehållsfragment
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 feature: Innehållsfragment
-role: Business Practitioner
+role: User
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-translation-type: tm+mt
-source-git-commit: 0c7b66e636e36a8036a590e949aea42e33a4e289
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '2309'
 ht-degree: 4%
@@ -325,7 +324,7 @@ Om du vill inaktivera en modell som är flaggad som **Aktiverad** använder du a
 
 ![Inaktivera en aktiverad modell](assets/cfm-status-disable.png)
 
-## Tillåta modeller för innehållsfragment i resursmappen {#allowing-content-fragment-models-assets-folder}
+## Tillåt modeller för innehållsfragment i resursmappen {#allowing-content-fragment-models-assets-folder}
 
 Om du vill implementera innehållsstyrning kan du konfigurera **principer** i resursmappen för att styra vilka innehållsfragmentmodeller som tillåts för att skapa fragment i den mappen.
 
