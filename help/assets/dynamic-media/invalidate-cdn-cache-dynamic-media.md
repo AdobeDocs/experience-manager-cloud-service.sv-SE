@@ -2,16 +2,16 @@
 title: Cacheminnet för CDN (Content Delivery Network) har inte verifierats via Dynamic Media
 description: '"Lär dig hur du ogiltigförklarar det cachelagrade innehållet i CDN (Content Delivery Network) så att du snabbt kan uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla."'
 feature: Resurshantering
-role: Administrator,Business Practitioner
+role: Admin,User
 exl-id: c631079b-8082-4ff7-a122-dac1b20d8acd
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '1221'
 ht-degree: 0%
 
 ---
 
-# CDN-cachen har inte verifierats med Dynamic Media {#invalidating-cdn-cache-for-dm-assets-in-aem-cs}
+# CDN-cachen har inte verifierats via Dynamic Media {#invalidating-cdn-cache-for-dm-assets-in-aem-cs}
 
 Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb leverans till dina kunder. När du uppdaterar resurserna vill du dock att ändringarna ska börja gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan du snabbt uppdatera resurser som levereras av Dynamic Media. Du behöver inte längre vänta på att cachen ska förfalla med ett TTL-värde (Time To Live) (standard är tio timmar). Du kan i stället skicka en begäran från Dynamic Media-användargränssnittet om att cachen ska upphöra att gälla inom några minuter.
 
