@@ -1,16 +1,15 @@
 ---
 title: Bästa praxis för översättning
 description: Lär dig mer om de effektivaste strategierna som sammanställts av Adobe tekniker och konsultteam för att hjälpa dig komma igång med översättningsprojekt.
-feature: Language Copy
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Språkkopia
+role: Admin
+exl-id: 51b98c24-5566-4088-9010-bd39841a1633
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för översättning {#translation-best-practices}
 
@@ -25,7 +24,7 @@ Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men m
 * Om resurserna tillåter är det bäst att hantera översättningsaktiviteter från ett centralt team som kan utveckla expertis i de verktyg, processer och leverantörsrelationer som behövs.
 * **Planera**,  **** skapa prototyper och testa  **** er globala struktur och processer för att säkerställa att de stöder verksamheten och att ni har den support som krävs från intressenter i olika länder.
 
-## Platsstruktur {#site-structure}
+## Webbplatsstruktur {#site-structure}
 
 * När du utformar din webbplatsstruktur börjar du med att undersöka ditt innehåll och avgör var och på vilket språk innehållet skrivs. Platsen bör vara den översta nivån på din plats.
 * Det bästa sättet är en **språkbaserad struktur** med högst tre nivåer mellan den översta utvecklingsnivån och landsplatser.
