@@ -1,10 +1,9 @@
 ---
 title: Arbeta med Dynamic Media
 description: Lär dig hur du använder Dynamic Media för att leverera mediefiler för webben, mobiler och sociala medier.
-role: Administrator,Business Practitioner
+role: Admin,User
 exl-id: 3ec3cb85-88ce-4277-a45c-30e52c75ed42
-translation-type: tm+mt
-source-git-commit: 1ad89be4ebddec0705c6f557fed3d697b9f1f3a7
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 7%
@@ -51,7 +50,7 @@ OBSOLETE UNTIL INTEGRATING SCENE7 TOPIC GETS A MAJOR UPDATE
 
 -->
 
-## Dynamic Media aktiverat jämfört med Dynamic Media inaktiverat {#dynamic-media-on-versus-dynamic-media-off}
+## Dynamic Media-aktiverat jämfört med Dynamic Media inaktiverat {#dynamic-media-on-versus-dynamic-media-off}
 
 Du kan se om Dynamic Media är aktiverat (aktiverat) enligt följande:
 
@@ -79,7 +78,7 @@ Dynamic Media-aktiverade resurser innehåller `pyramid.tiffs`.
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
-### Resursvyer ändras {#asset-views-change}
+### Ändra resursvyer {#asset-views-change}
 
 När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på knapparna `+` och `-`. Du kan också klicka/trycka för att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media-aktiverade ser ut så här:
 
