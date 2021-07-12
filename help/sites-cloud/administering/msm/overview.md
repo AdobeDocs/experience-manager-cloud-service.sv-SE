@@ -2,15 +2,14 @@
 title: Återanvända innehåll - Multi Site Manager och Live Copy
 description: Få en introduktion till att återanvända innehåll med AEM kraftfulla Live-kopior och Multi Site Manager-funktionerna.
 feature: Multi Site Manager
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+role: Admin
+exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2685'
 ht-degree: 0%
 
 ---
-
 
 # Återanvända innehåll: Multi Site Manager och Live Copy {#multi-site-manager-and-live-copy}
 
@@ -144,7 +143,7 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 >
 >Aspekter på MSM-funktionalitet används i flera andra AEM funktioner som Launches. I dessa fall hanteras Live-kopian av den funktionen.
 
-### Använda termer {#terms-used}
+### Villkor {#terms-used}
 
 Som en introduktion ger följande tabell en översikt över de viktigaste termerna som används med MSM. Dessa beskrivs mer ingående i de efterföljande avsnitten och sidorna.
 
@@ -192,7 +191,7 @@ I föregående exempel är `/content/wknd/language-masters/en` den globala över
 * Författare gör ändringar i sidor under `/content/wknd/language-masters/en`.
 * När MSM aktiveras synkroniseras dessa ändringar med Live-kopior.
 
-### Live-kopior - Disposition {#live-copies-composition}
+### Live-kopior - komposition {#live-copies-composition}
 
 >[!NOTE]
 >
