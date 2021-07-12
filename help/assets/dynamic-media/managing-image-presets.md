@@ -2,9 +2,9 @@
 title: Hantera bildförinställningar
 description: '"Lär dig mer om bildförinställningar och hur du skapar, ändrar och hanterar bildförinställningar."'
 feature: Bildförinställningar,visningsprogram,återgivningar
-role: Business Practitioner
+role: User
 exl-id: a53f40ab-0e27-45f8-9142-781c077a04cc
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '3522'
 ht-degree: 8%
@@ -53,7 +53,7 @@ Du hanterar dina bildförinställningar i Experience Manager genom att trycka p�
 >
 >I systemet visas olika återgivningar när du väljer **[!UICONTROL Renditions]** i en tillgångs detaljvy. Du kan öka eller minska antalet bildförinställningar som visas. Se [Öka antalet bildförinställningar som visas](#increasing-or-decreasing-the-number-of-image-presets-that-display).
 
-### Adobe Illustrator (AI), PostScript® (EPS) och PDF-filformat {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
+### Adobe Illustrator (AI), PostScript® (EPS) och PDF {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
 Om du tänker ge stöd för att lägga in AI-, EPS- och PDF-filer så att du kan generera dynamiska återgivningar av dessa filformat bör du granska följande information innan du skapar bildförinställningar.
 
@@ -89,7 +89,7 @@ Du kommer åt alternativen för processkomponenter i `Rasterize PDF/AI Image Pre
 
 Tryck på Adobe Experience Manager i det övre vänstra hörnet, navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Välj **[!UICONTROL DAM Update Asset]** på sidan Arbetsflödesmodeller och tryck sedan på **[!UICONTROL Edit]** i verktygsfältet. Dubbeltryck på processkomponenten `Rasterize PDF/AI Image Preview Rendition` på arbetsflödessidan för DAM-uppdatering av resurser för att öppna dialogrutan Stegegenskaper.
 
-#### Rastrera renderingsalternativen PDF/AI Image Preview {#rasterize-pdf-ai-image-preview-rendition-options}
+#### Rastrera alternativ för PDF/AI-förhandsvisning av återgivning {#rasterize-pdf-ai-image-preview-rendition-options}
 
 ![Argument för att rastrera PDF- eller AI-arbetsflödet](assets/rasterize_pdf_ai_image_preview.png)
 
@@ -131,7 +131,7 @@ Följande skript används av Dynamic Media-integrering:
 | JPEGPagesExport.jsx | Ja | Skapar en JPEG-underresurs på 300 ppi för varje sida. JPEG-underresursen är en verklig resurs som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF genom `DAM Update Asset`-arbetsflödet. |
 | PDFPagesExport.jsx | Nej | Skapar en PDF-delresurs för varje sida. PDF-underresursen bearbetas enligt beskrivningen ovan. Eftersom PDF-filen endast innehåller en sida genereras inga delresurser. |
 
-### Konfigurerar bildens miniatyrstorlek {#configuring-image-thumbnail-size}
+### Konfigurera miniatyrstorlek för bild {#configuring-image-thumbnail-size}
 
 Du kan konfigurera storleken på miniatyrbilder genom att konfigurera de inställningarna i **[!UICONTROL DAM Update Asset]**-arbetsflödet. I arbetsflödet finns två steg där du kan konfigurera miniatyrstorlek för bildresurser. Ett (**[!UICONTROL Dynamic Media Process Image Assets]**) används för dynamiska bildresurser. Den andra (**[!UICONTROL Process Thumbnails]**) används för att generera statiska miniatyrbilder eller när inga andra processer kan generera miniatyrbilder. Oavsett vilket måste *båda* ha samma inställningar.
 
@@ -165,7 +165,7 @@ Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTRO
 
 1. Tryck på **[!UICONTROL Save]** för att spara ändringarna i arbetsflödet.
 
-### Öka eller minska antalet förinställda bilder som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
+### Öka eller minska antalet bildförinställningar som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
 De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. Experience Manager visar olika dynamiska återgivningar när en resurs från **[!UICONTROL Detail View > Renditions]** visas. Du kan öka eller minska gränsen för de återgivningar som visas.
 
@@ -437,11 +437,11 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 1. Välj en förinställning och klicka sedan på **[!UICONTROL Edit]**. Fönstret **[!UICONTROL Edit Image Preset]** öppnas.
 1. Gör ändringarna och klicka på **[!UICONTROL Save]** för att spara ändringarna eller **[!UICONTROL Cancel]** för att avbryta ändringarna.
 
-### Publicerar bildförinställningar {#publishing-image-presets}
+### Förinställningar för publicering {#publishing-image-presets}
 
 Bildförinställningar publiceras automatiskt åt dig.
 
-### Tar bort bildförinställningar {#deleting-image-presets}
+### Ta bort bildförinställningar {#deleting-image-presets}
 
 1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och trycker eller klickar på verktygsikonen och navigerar till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
 1. Välj en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck på **[!UICONTROL Delete]** för att ta bort eller tryck på **[!UICONTROL Cancel]** för att avbryta.
