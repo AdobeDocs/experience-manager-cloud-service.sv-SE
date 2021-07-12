@@ -1,11 +1,10 @@
 ---
 title: Headless Content Delivery using Content Fragments with GraphQL
 description: Lär dig hur du använder AEM innehållsfragment med GraphQL för leverans av headless-innehåll.
-feature: Content Fragments
-role: Business Practitioner
+feature: Innehållsfragment
+role: User
 exl-id: 4a3b030d-ed59-4920-bf94-e00a45f85b51
-translation-type: tm+mt
-source-git-commit: 1d0343dc7940566b88ad490bb8fb08a5ad4ff5c2
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 1%
@@ -104,7 +103,7 @@ Dessa [modeller för innehållsfragment](/help/assets/content-fragments/content-
 
 Om du vill ha hjälp med att designa och utveckla dina modeller för innehållsfragment kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
 
-## Lära sig att använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
+## Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
 Se [Lära dig använda GraphQL med AEM - Sample Content and Queries](/help/assets/content-fragments/content-fragments-graphql-samples.md) för en introduktion till att använda det AEM GraphQL API:t.
 
