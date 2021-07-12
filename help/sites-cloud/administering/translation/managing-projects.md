@@ -1,16 +1,15 @@
 ---
 title: Hantera översättningsprojekt
 description: Lär dig hur du skapar och hanterar både maskinöversättning och mänsklig översättning i AEM.
-feature: Language Copy
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+feature: Språkkopia
+role: Admin
+exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '3828'
+source-wordcount: '3827'
 ht-degree: 0%
 
 ---
-
 
 # Hantera översättningsprojekt {#managing-translation-projects}
 
@@ -39,7 +38,7 @@ Språkroten `/content/wknd/fr` skapas till exempel för den franska översättni
 * Ett översättningsprojekt skapas för `/content/wknd/en/products`-sidan och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian inte innehåller sidan `/content/wknd/fr/products` kopierar AEM omedelbart `/content/wknd/en/products`-sidan och alla underordnade sidor till den franska språkkopian. Kopiorna ingår också i översättningsprojektet.
 * Ett översättningsprojekt skapas för `/content/wknd/en`-sidan och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian innehåller den sida som motsvarar `/content/wknd/en`-sidan (språkroten), AEM kopierar `/content/wknd/en`-sidan och alla underordnade sidor och lägger till dem i en start. Kopiorna ingår också i översättningsprojektet.
 
-## Översättning från platskonsolen {#performing-initial-translations-and-updating-existing-translations}
+## Översättning från webbplatskonsolen {#performing-initial-translations-and-updating-existing-translations}
 
 Översättningsprojekt kan skapas eller uppdateras direkt från webbplatskonsolen.
 
@@ -165,7 +164,7 @@ Fyll i din språkkopia så att den innehåller innehåll från det överordnad s
 
 1. Klicka eller tryck på **Uppdatera**.
 
-### Uppdaterar översättningsminnet {#updating-translation-memory}
+### Uppdaterar översättningsminne {#updating-translation-memory}
 
 Manuella redigeringar av översatt innehåll kan synkroniseras tillbaka till översättningshanteringssystemet (TMS) för att utbilda översättningsminnet.
 
@@ -176,7 +175,7 @@ Manuella redigeringar av översatt innehåll kan synkroniseras tillbaka till öv
 
 AEM skickar tillbaka de markerade strängarna till översättningshanteringssystemet.
 
-### Kontrollerar översättningsstatus för en sida {#check-translation-status}
+### Kontrollera översättningsstatus för en sida {#check-translation-status}
 
 En egenskap kan väljas i listvyn i webbplatskonsolen som visar om en sida har översatts, är i översättning eller ännu inte har översatts.
 
@@ -263,7 +262,7 @@ Du kan lägga till sidor, resurser eller taggar i översättningsjobbet för öv
 
 Du kan lägga till taggar i ett översättningsprojekt som liknar [hur du lägger till resurser och sidor i ett projekt.](#adding-pages-assets-to-a-translation-job) Välj bara  **** Taggar under  **** menyn Lägg till och följ sedan samma steg.
 
-### Information om visningsprojekt {#seeing-translation-project-details}
+### Visa information om översättningsprojekt {#seeing-translation-project-details}
 
 Översättningsprojektegenskaperna är tillgängliga via ellipsknappen i sammanfattningsrutan för projektet. Förutom den allmänna [projektinformationen](/help/sites-cloud/authoring/projects/overview.md#project-info) innehåller översättningsprojektegenskaperna översättningsspecifika.
 
@@ -360,7 +359,7 @@ Du kan också starta alla översättningsjobb för ett projekt.
 1. Tryck eller klicka på **Starta översättningsjobb** i verktygsfältet.
 1. Granska listan över jobb som ska startas i dialogrutan och bekräfta sedan med **Start** eller avbryt med **Avbryt**.
 
-### Avbryter ett översättningsjobb {#canceling-a-translation-job}
+### Avbryta ett översättningsjobb {#canceling-a-translation-job}
 
 Avbryt ett översättningsjobb om du vill stoppa översättningsprocessen och förhindra att översättningsleverantören utför fler översättningar. Du kan avbryta ett jobb när jobbet har statusen **Bekräftat för översättning** eller **Pågående översättning**.
 
@@ -376,7 +375,7 @@ Om du väljer **Avvisa översättning** kan du lägga till en kommentar.
 
 Om du avvisar innehåll skickas det tillbaka till översättningsleverantören där de kan se kommentaren.
 
-### Slutför och arkiverar översättningsjobb {#completing-and-archiving-translation-jobs}
+### Slutföra och arkivera översättningsjobb {#completing-and-archiving-translation-jobs}
 
 Slutför ett översättningsjobb när du har granskat de översatta filerna från leverantören.
 
@@ -397,7 +396,7 @@ När du arkiverar jobbet tas översättningsjobbpanelen bort från projektet.
 
 Du kan använda webbplatskonsolen för att granska innehåll, jämföra språkkopior och aktivera innehållet.
 
-### Befordrar uppdaterat innehåll {#promoting-updated-content}
+### Befordra uppdaterat innehåll {#promoting-updated-content}
 
 När innehåll översätts för en befintlig språkkopia granskar du översättningarna, gör ändringar om det behövs och höjer sedan översättningarna så att de flyttas till språkkopian. Du kan granska översatta filer när översättningsjobbet visar statusen **Klar för granskning**.
 
@@ -442,7 +441,7 @@ Du kan hämta innehållet i ett översättningsjobb, till exempel för att skick
 1. Klicka eller tryck på **Hämta exporterad fil** i dialogrutan och använd vid behov webbläsardialogrutan för att spara filen.
 1. Klicka eller tryck på **Stäng** i dialogrutan.
 
-### Importerar ett översättningsjobb {#importing-a-translation-job}
+### Importera ett översättningsjobb {#importing-a-translation-job}
 
 Du kan importera översatt innehåll till AEM, till exempel när översättningsleverantören skickar det till dig eftersom de inte är integrerade med AEM via en koppling.
 
