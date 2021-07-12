@@ -1,16 +1,15 @@
 ---
 title: Arbeta med innehållsfragment
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för headless-leverans.
-feature: Content Fragments
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 6fa911f39d707687e453de270bc0f3ece208d380
+feature: Innehållsfragment
+role: User
+exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2037'
 ht-degree: 3%
 
 ---
-
 
 # Arbeta med innehållsfragment {#working-with-content-fragments}
 
@@ -52,9 +51,9 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 >
 >* [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 >* [Anpassa och utöka Content Fragments](/help/implementing/developing/extending/content-fragments-customizing.md)
->* [Content Fragments – konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
->* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
->* [AEM GraphQL API för användning med innehållsfragment](/help/assets/content-fragments/graphql-api-content-fragments.md)
+* [Content Fragments – konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
+* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
+* [AEM GraphQL API för användning med innehållsfragment](/help/assets/content-fragments/graphql-api-content-fragments.md)
 
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som
@@ -76,16 +75,12 @@ Med innehållsfragment kan du:
 Dessa innehållsfragment kan sedan samlas ihop för att ge upplevelser över en mängd olika kanaler.
 
 >[!NOTE]
->
->**Innehållsfragment** och  **[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** är olika funktioner i AEM:
->* **Innehållsfragmenterarär** redaktionellt innehåll som kan användas för att komma åt strukturerade data, bland annat texter, siffror och datum. De är rent innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout.
->* **Upplevelsefragment** är helt utformat. ett fragment av en webbsida.
+**Innehållsfragment** och  **[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** är olika funktioner i AEM:
+* **Innehållsfragmenterarär** redaktionellt innehåll som kan användas för att komma åt strukturerade data, bland annat texter, siffror och datum. De är rent innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout.
+* **Upplevelsefragment** är helt utformat. ett fragment av en webbsida.
 
->
->
 Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
->
->Mer information finns också i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=en#content-fragments).
+Mer information finns också i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=en#content-fragments).
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
@@ -104,16 +99,13 @@ AEM kan användas för att beskriva och hantera strukturerat innehåll. Struktur
 Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta strukturerade innehåll sedan användas för att leverera AEM till andra kanaler än AEM.
 
 >[!NOTE]
->
->Se [Headless och AEM](/help/implementing/developing/headless/introduction.md) för en introduktion till Headless Development för AEM Sites som Cloud Service.
+Se [Headless och AEM](/help/implementing/developing/headless/introduction.md) för en introduktion till Headless Development för AEM Sites som Cloud Service.
 
 >[!NOTE]
->
->AEM har också stöd för översättning av fragmentinnehåll.
+AEM har också stöd för översättning av fragmentinnehåll.
 
 >[!NOTE]
->
->AEM har också stöd för översättning av fragmentinnehåll. Mer information finns i [Översätta resurser](/help/assets/translate-assets.md).
+AEM har också stöd för översättning av fragmentinnehåll. Mer information finns i [Översätta resurser](/help/assets/translate-assets.md).
 
 ## Innehållstyp {#content-type}
 
@@ -152,8 +144,7 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Mer information finns i [Infoga resurser i fragment](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment) i fragmentredigeraren.
 
    >[!NOTE]
-   >
-   >Visuella resurser som infogats i själva innehållsfragmentet kopplas till föregående stycke. När fragmentet läggs till på en sida flyttas dessa resurser i relation till det stycket när mellanliggande innehåll läggs till.
+   Visuella resurser som infogats i själva innehållsfragmentet kopplas till föregående stycke. När fragmentet läggs till på en sida flyttas dessa resurser i relation till det stycket när mellanliggande innehåll läggs till.
 
 * **Associerat innehåll**
 
@@ -169,7 +160,7 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Innebär inte att man kan godkänna ett visst fragment.
    * Mer information finns i [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser).
 
-### Ingående delar i ett innehållsfragment {#constituent-parts-of-a-content-fragment}
+### Komponentdelar i ett innehållsfragment {#constituent-parts-of-a-content-fragment}
 
 Resurserna för innehållsfragmentet består av följande delar (antingen direkt eller indirekt):
 
@@ -197,12 +188,10 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Kopplas till föregående text (stycke).
 
       >[!CAUTION]
-      >
-      >Resurser kan tas bort (oavsiktligt) från ett fragment genom att växla till oformaterad text.
+      Resurser kan tas bort (oavsiktligt) från ett fragment genom att växla till oformaterad text.
 
       >[!NOTE]
-      >
-      >Resurser kan också läggas till som [ytterligare (mellanliggande) innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md#using-associated-content) när ett fragment används på en sida. med antingen Associerat innehåll eller resurser från Resurser-webbläsaren.
+      Resurser kan också läggas till som [ytterligare (mellanliggande) innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md#using-associated-content) när ett fragment används på en sida. med antingen Associerat innehåll eller resurser från Resurser-webbläsaren.
 
 * **Associerat innehåll**
 
@@ -226,8 +215,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
          * Genom att redigera **metadata** i fragmentredigeraren
 
    >[!CAUTION]
-   >
-   >Metadatabearbetningsprofiler gäller inte för innehållsfragment.
+   Metadatabearbetningsprofiler gäller inte för innehållsfragment.
 
 * **Överordnad**
 
@@ -260,8 +248,7 @@ Mellanliggande innehåll:
 * Associerat innehåll kan användas, liksom resurser och/eller komponenter från lämplig webbläsare.
 
 >[!CAUTION]
->
->Det mellanliggande innehållet är sidinnehåll. Den lagras inte i innehållsfragmentet.
+Det mellanliggande innehållet är sidinnehåll. Den lagras inte i innehållsfragmentet.
 
 ### Krävs av fragment {#required-by-fragments}
 
@@ -288,7 +275,7 @@ Om du vill använda dina innehållsfragment för att skapa sidor behöver du ock
    * Fragment behöver en eller flera dedikerade komponenter för att definiera layout och leverera vissa eller alla element/varianter och tillhörande innehåll.
    * Om du drar ett fragment till en sida när du redigerar kopplas den nödvändiga komponenten automatiskt till.
 
-## Exempelanvändning {#example-usage}
+## Exempel på användning {#example-usage}
 
 Ett fragment, med dess element och variationer, kan användas för att skapa sammanhängande innehåll för flera kanaler. När du utformar ditt fragment måste du tänka på vad som kommer att användas var.
 
