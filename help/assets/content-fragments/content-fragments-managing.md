@@ -1,13 +1,12 @@
 ---
 title: Hantera innehållsfragment
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
-feature: Content Fragments
-role: Business Practitioner
+feature: Innehållsfragment
+role: User
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-translation-type: tm+mt
-source-git-commit: 114b38142f01b56652a7b840501f7420fdc25562
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '1748'
+source-wordcount: '1746'
 ht-degree: 7%
 
 ---
@@ -177,7 +176,7 @@ Navigera genom de olika lägena med ikonerna på sidopanelen:
 
 ![lägen](assets/cfm-managing-04.png)
 
-### Verktygsfältsåtgärder i redigeraren för innehållsfragment {#toolbar-actions-in-the-content-fragment-editor}
+### Åtgärder i verktygsfältet i redigeraren för innehållsfragment {#toolbar-actions-in-the-content-fragment-editor}
 
 Vissa funktioner i det övre verktygsfältet finns i flera lägen:
 
@@ -338,7 +337,7 @@ Du kan inte redigera fragmentinnehållet när du jämför fragment.
 
 ![jämföra](assets/cfm-managing-06.png)
 
-## Återställer till version {#reverting-to-a-version}
+## Återställa till en version  {#reverting-to-a-version}
 
 Du kan återgå till en viss version av fragmentet:
 
