@@ -1,18 +1,17 @@
 ---
 title: Översätta innehåll för flerspråkiga webbplatser
 description: Få en översikt över hur du översätter innehåll för flerspråkiga webbplatser.
-feature: Language Copy
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Språkkopia
+role: Admin
+exl-id: c3e89719-4d08-401b-b9dd-19d1db03d72c
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
-
-# Översätter innehåll för flerspråkiga webbplatser {#translating-content-for-multilingual-sites}
+# Översätta innehåll för flerspråkiga webbplatser {#translating-content-for-multilingual-sites}
 
 Automatisera översättningen av sidinnehåll och resurser för att skapa och underhålla flerspråkiga webbplatser. Om du vill automatisera arbetsflöden för översättning integrerar du översättare med AEM och skapar projekt för översättning av innehåll till flera språk. AEM har stöd för arbetsflöden för översättning mellan människor och datorer.
 
