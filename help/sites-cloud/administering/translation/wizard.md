@@ -1,18 +1,17 @@
 ---
 title: Guiden Kopiera språk
 description: Läs om hur du använder guiden för språkkopiering i AEM.
-feature: Language Copy
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Språkkopia
+role: Admin
+exl-id: bf8bdc53-0248-47de-bb9d-c884a7179ab0
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
-
-# Guiden för språkkopiering {#language-copy-wizard}
+# Guiden Kopiera språk {#language-copy-wizard}
 
 Guiden för språkkopiering är en guidad upplevelse för att skapa och instrumentera en struktur med flerspråkigt innehåll. Guiden gör det enkelt och snabbt att skapa en språkkopia.
 
