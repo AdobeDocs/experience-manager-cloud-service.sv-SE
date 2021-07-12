@@ -2,9 +2,9 @@
 title: Videoprofiler för Dynamic Media
 description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. Du kan också lägga till smart beskärning i videoklipp.
 feature: Resurshantering, videoprofiler, återgivningar
-role: Business Practitioner
+role: User
 exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '3488'
 ht-degree: 9%
@@ -344,14 +344,14 @@ Tryck på informationsikonen om du vill se en beskrivning av adaptiv strömning.
 
 1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
 
-### Tar bort en videoprofil {#deleting-a-video-encoding-profile}
+### Ta bort en videoprofil {#deleting-a-video-encoding-profile}
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera ett eller flera videoprofilnamn på sidan Videoprofiler.
 1. Tryck på **[!UICONTROL Delete]** i verktygsfältet.
 1. Tryck på **[!UICONTROL OK]**.
 
-## Använda en videoprofil på mappar {#applying-a-video-profile-to-folders}
+## Tillämpa en videoprofil på mappar {#applying-a-video-profile-to-folders}
 
 När du tilldelar en videoprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Därför kan du bara tilldela en videoprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
 
@@ -380,7 +380,7 @@ Se även [Bearbeta resurser i en mapp efter att du har redigerat dess bearbetnin
 1. Tryck på **[!UICONTROL Apply Profile to Folders]** och markera den eller de mappar som du vill ska ta emot de nyligen överförda resurserna och tryck sedan på **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet i **[!UICONTROL Card View]**.
 Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
 
-#### Använda en videoprofil på mappar från egenskaperna {#applying-video-profiles-to-folders-from-properties}
+#### Tillämpa en videoprofil på mappar från Egenskaper {#applying-video-profiles-to-folders-from-properties}
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill använda en videoprofil på.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
@@ -422,7 +422,7 @@ Du kan ta bort en videoprofil från en mapp från menyn **[!UICONTROL Tools]** e
 
    Du kan bekräfta att videoprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
-### Ta bort en videoprofil från mappar med hjälp av egenskaperna {#removing-video-profiles-from-folders-by-way-of-properties}
+### Ta bort en videoprofil från mappar med hjälp av Egenskaper {#removing-video-profiles-from-folders-by-way-of-properties}
 
 1. Tryck eller klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill ta bort en videoprofil från.
 1. Markera mappen genom att trycka eller klicka på bockmarkeringen och sedan trycka på **[!UICONTROL Properties]**.
