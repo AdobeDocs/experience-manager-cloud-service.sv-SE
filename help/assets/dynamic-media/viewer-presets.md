@@ -2,16 +2,16 @@
 title: Använda förinställningar för Dynamic Media-visningsprogram
 description: Lär dig hur du använder förinställningar för visningsprogram i Dynamic Media.
 feature: Förinställningar för visningsprogram,visningsprogram
-role: Business Practitioner
+role: User
 exl-id: bec6fff8-fd79-4537-b915-e68da98e117a
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 23%
 
 ---
 
-# Använda förinställningar för Dynamic Media Viewer {#applying-viewer-presets}
+# Använda förinställningar för Dynamic Media-visningsprogram {#applying-viewer-presets}
 
 En visningsförinställning är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Du kan använda alla förinställningar för visningsprogram som du har skapat av administratören på en resurs.
 
@@ -23,7 +23,7 @@ Du behöver inte publicera förinställningar för visningsprogrammet beroende p
 
 Information om problem med visningsförinställningar finns i [Felsöka Dynamic Media](troubleshoot-dm.md#viewers).
 
-## Använda en förinställning för Dynamic Media-visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
+## Använda en förinställning för Dynamic Media-visningsprogram på en mediefil {#applying-a-viewer-preset-to-an-asset}
 
 1. Öppna resursen och tryck på **[!UICONTROL Viewers]** i den vänstra rutan.
 
@@ -34,6 +34,6 @@ Information om problem med visningsförinställningar finns i [Felsöka Dynamic 
 
 1. Välj ett visningsprogram i den vänstra rutan så att du kan använda det på resursen så som den visas i den högra rutan. Du kan även [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
 
-## Hämtar förinställda URL:er för visningsprogram {#obtaining-viewer-preset-urls}
+## Hämta förinställda URL:er för visningsprogram {#obtaining-viewer-preset-urls}
 
 Mer information om hur du hämtar URL:er för visningsförinställningar finns i [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
