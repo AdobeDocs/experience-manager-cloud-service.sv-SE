@@ -2,9 +2,9 @@
 title: Bilduppsättningar
 description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media.
 feature: Bilduppsättningar
-role: Business Practitioner
+role: User
 exl-id: 2eb71f24-73d9-4b5c-8605-923a0e3d1505
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '1983'
 ht-degree: 8%
@@ -108,7 +108,7 @@ Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bi
 >* En svart, brun och grön färgminiatyrbild.
 
 
-## Skapar bilduppsättningar {#creating-image-sets}
+## Skapa bilduppsättningar {#creating-image-sets}
 
 Du kan skapa bilduppsättningar via användargränssnittet eller via API:t.
 
@@ -238,6 +238,6 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
 
 Se [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md).
 
-## Publicerar bilduppsättningar {#publishing-image-sets}
+## Publicera bilduppsättningar {#publishing-image-sets}
 
 Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
