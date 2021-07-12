@@ -2,17 +2,16 @@
 title: Översiktskonsol för Live Copy
 description: Lär dig mer om grunderna i Live Copy Overview Console där du snabbt kan förstå statusen för dina Live-kopior för att kunna synkronisera innehåll.
 feature: Multi Site Manager
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+role: Admin
+exl-id: 3ef7fbce-10a1-4b21-8486-d3c3706e537c
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
 
-
-# Översiktskonsol för Live-kopia {#live-copy-overview-console}
+# Översiktskonsol för Live Copy {#live-copy-overview-console}
 
 Med konsolen **Live Copy Overview** kan du:
 
@@ -22,7 +21,7 @@ Med konsolen **Live Copy Overview** kan du:
    * Visa egenskaper för utkast och Live Copy
 * Utför utrullningsåtgärder.
 
-## Öppnar Live Copy-översikt {#opening-the-live-copy-overview}
+## Öppna Live Copy-översikt {#opening-the-live-copy-overview}
 
 Du kan öppna Live-kopieringsöversikt från:
 
@@ -75,7 +74,7 @@ En utrullningskonfiguration definieras till exempel som `targetActivate`. Därf�
 1. Öppna **Live Copy Overview**.
 1. Välj önskad plan- eller Live Copy-sida så uppdateras verktygsfältet så att de tillgängliga åtgärderna visas. Vilka [åtgärder](overview.md#terms-used) som är tillgängliga beror på om du väljer en [ritning](#actions-for-a-blueprint-page)- eller [Live Copy](#actions-for-a-live-copy-page)-sida.
 
-### Åtgärder för en blå sida {#actions-for-a-blueprint-page}
+### Åtgärder för en designsida {#actions-for-a-blueprint-page}
 
 När du väljer en ritningssida är följande åtgärder tillgängliga:
 
@@ -111,7 +110,7 @@ Fliken innehåller detaljerad information om statusen för relationen mellan rit
 
 ![Fliken Relationsstatus](../assets/live-copy-relationship-status.png)
 
-### Live-kopia {#live-copy-tab}
+### Live Copy {#live-copy-tab}
 
 På den här fliken kan du visa och redigera Live Copy-konfigurationen.
 
