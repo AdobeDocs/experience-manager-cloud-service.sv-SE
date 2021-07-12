@@ -2,9 +2,9 @@
 title: Hantera visningsförinställningar
 description: Lär dig hur du skapar och hanterar visningsförinställningar i Dynamic Media.
 feature: Förinställningar för visningsprogram,visningsprogram
-role: Business Practitioner
+role: User
 exl-id: da2e1a10-f54b-440e-b70c-f04ad4caeac1
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '4127'
 ht-degree: 12%
@@ -32,7 +32,7 @@ I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprog
 >
 >Att redigera alla fördefinierade *visningsförinställningar* som är klara att användas stöds inte. Om du försöker redigera en förinställning för visningsprogrammet som inte är klar visas en uppmaning om att spara visningsförinställningen med ett nytt namn.
 
-## Tangentbordstillgänglighet för visningsprogram {#keyboard-accessibility-for-viewers}
+## Tangentbordstillgänglighet för tittare {#keyboard-accessibility-for-viewers}
 
 Alla färdiga visningsprogram har stöd för tangentbordstillgänglighet.
 
@@ -59,7 +59,7 @@ Mer information om hur du bäddar in responsiva visningsprogram på dina webbsid
 >Publicera alla färdiga visningsprogram innan du använder dem för första gången.
 >Se [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
 
-### Systemkompatibilitet för visningsförinställningar {#viewer-preset-system-compatibility}
+### Systemkompatibilitet för visningsförinställningar  {#viewer-preset-system-compatibility}
 
 Alla färdiga visningsförinställningar som medföljer Dynamic Media är helt kompatibla med följande system:
 
@@ -310,7 +310,7 @@ Se&quot;Versionsinformation för visningsprogram&quot; i innehållsförteckninge
  </tbody>
 </table>
 
-### Mobil visning - gestmatris {#supported-mobile-viewers-gestures-matrix} som stöds
+### Rörelsematris för mobilvisningsprogram som stöds {#supported-mobile-viewers-gestures-matrix}
 
 Följande tabell visar vilka mobilvisningsgester som stöds på enheter med iOS, Android™ 2.x och Android™ 3.x.
 
@@ -418,7 +418,7 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
 
    * I listrutan **[!UICONTROL Selected Type]** väljer du en komponent vars visuella design du vill anpassa. Du kan också trycka eller klicka på ett visuellt element i visningsprogrammet för att välja det för konfiguration.
 
-      Med den visuella redigeraren kan du se vilken effekt en viss egenskap har på ett format. Ange eller justera en egenskap för att omedelbart se vilken effekt den har på visningsprogrammet med exemplet till vänster om redigeraren.
+      Med den visuella redigeraren kan du se vilken effekt en viss egenskap har på ett format. Ange eller justera valfri egenskap för att omedelbart se vilken effekt den har på visningsprogrammet med exemplet till vänster om redigeraren.
 
       CSS-formategenskaperna för varje typ av visningsförinställning beskrivs i hjälpavsnittet Anpassa *`<viewer name>`*-visningsprogram i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html). Om du till exempel skapar en visningsförinställning av typen `Mixed_Media` kan du läsa [Anpassa blandad mediavisare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) för en lista och en beskrivning av varje egenskap.
 
@@ -456,7 +456,7 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
 
    Se [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
 
-### Specialöverväganden när du skapar en förinställning för Interactive Viewer {#special-considerations-for-creating-an-interactive-viewer-preset}
+### Specialöverväganden när du skapar en interaktiv visningsförinställning {#special-considerations-for-creating-an-interactive-viewer-preset}
 
 **Om Visningslägen för miniatyrbilder på panelen:**
 
@@ -529,7 +529,7 @@ Vilka visningsprogramförinställningar som är tillgängliga i användargränss
 
    De visningsprogramförinställningar som är aktiverade visas till höger, i en blå ruta. förinställningar för inaktiverat visningsprogram har växlingsknappen till vänster, i en ljusgrå ruta.
 
-## Förinställningar för publiceringsvisningsprogrammet {#publishing-viewer-presets}
+## Förinställningar för publiceringsvisningsprogram {#publishing-viewer-presets}
 
 När du aktiverar (eller aktiverar&quot;På&quot;) ett visningsförinställningsläge visas det i Dynamic Media-komponenten, i Interactive Media-komponenten och när du visar en mediefil.
 
@@ -568,7 +568,7 @@ Att redigera alla fördefinierade *visningsförinställningar* som är klara att
    * Tryck på **[!UICONTROL Save]** för att spara ändringarna och återgå till sidan Viewer Preset.
    * Tryck på **[!UICONTROL Cancel]** för att ångra ändringar du gjort och återgå till sidan för visningsförinställningar.
 
-## Tar bort anpassade förinställningar för visningsprogram {#deleting-custom-viewer-presets}
+## Ta bort anpassade visningsprogramförinställningar {#deleting-custom-viewer-presets}
 
 Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dynamic Media.
 
@@ -578,7 +578,7 @@ Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dyna
 1. Markera en förinställningsrubrik på sidan Visningsförinställningar och tryck sedan på ikonen **[!UICONTROL Trash]**.
 1. Tryck på **[!UICONTROL Delete]**.
 
-## Använda förinställningar för visningsprogram för en resurs {#applying-a-viewer-preset-to-an-asset}
+## Använda förinställningar för visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
 
 Om du redan har publicerat både resursen och det valda visningsprogrammet visas knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** när du har valt en visningsförinställning.
 
