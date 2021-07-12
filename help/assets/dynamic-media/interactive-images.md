@@ -2,9 +2,9 @@
 title: Interaktiva bilder
 description: Lär dig hur du arbetar med interaktiva bilder i Dynamic Media.
 feature: Interaktiva bilder
-role: Business Practitioner
+role: User
 exl-id: 89eef5e6-d508-4f33-b54e-24d4df49f8c3
-source-git-commit: 8cf01af44621bec7edb7e710f0797a070d5bf6db
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '4210'
 ht-degree: 1%
@@ -201,7 +201,7 @@ När du har sparat visningsförinställningen aktiveras den automatiskt (aktiver
 
    Du kan nu ladda upp en bildbanderoll.
 
-## Överför en bildbanderoll {#uploading-an-image-banner}
+## Överföra en bildbanderoll {#uploading-an-image-banner}
 
 Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Lägga till aktiveringspunkter i en bildbanderoll](#adding-hotspots-to-an-image-banner).
 
