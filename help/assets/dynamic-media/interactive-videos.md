@@ -2,9 +2,9 @@
 title: Interaktiva videoklipp
 description: Lär dig hur du arbetar med interaktiv video och videor som kan köpas i Dynamic Media.
 feature: Interaktiva videoklipp
-role: Business Practitioner
+role: User
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
-source-git-commit: 8cf01af44621bec7edb7e710f0797a070d5bf6db
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '5974'
 ht-degree: 3%
@@ -46,7 +46,7 @@ There was a link here that showed the video frame of an interactive video and wh
 >
 >Om du skapar en interaktiv video som startar en webbsida när en användare trycker på en miniatyrbild blockerar vissa enheter popup-webbsidan från att öppnas. I så fall ändrar du inställningen för blockering av popup-fönster på enheten. På en Apple iPhone 6 trycker du på **[!UICONTROL Settings > Safari > Block Pop-ups]** och sedan på kontrollen till **[!UICONTROL Off]**. När du spelar upp en interaktiv video och klickar på en miniatyrbild blir du nu tillfrågad om du vill öppna popup-fönstret. Om du accepterar öppnas webbsidan.
 
-### Se hur interaktiva videoklipp skapas {#watch-how-interactive-videos-are-created}
+### Se hur interaktiva videor skapas {#watch-how-interactive-videos-are-created}
 
 Titta på en genomgång om [hur interaktiva videor skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)(7 minuter och 30 sekunder).
 (Även om videogenomgången är märkt med Assets on Demand gäller fortfarande principerna och stegen för Interactive Video i Adobe Experience Manager Assets.)
@@ -234,7 +234,7 @@ När du har sparat visningsförinställningen ställs dess läge automatiskt in 
 
 Se [Skapa en ny visningsförinställning](/help/assets/dynamic-media/managing-viewer-presets.md#creating-a-new-viewer-preset) för att skapa en egen förinställning för Interactive Video Viewer.
 
-## Överföra en video och dess associerade miniatyrresurser {#uploading-a-video-and-its-associated-thumbnail-assets}
+## Överföra en video och dess tillhörande miniatyrbilder {#uploading-a-video-and-its-associated-thumbnail-assets}
 
 Om du redan har överfört videoklipp och miniatyrbilder går du vidare till [Lägga till interaktivitet i videon](#adding-interactivity-to-your-video).
 
@@ -495,11 +495,11 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
 
-## Publicera interaktiva videoresurser {#publishing-interactive-video-assets}
+## Publicera interaktivt videomaterial {#publishing-interactive-video-assets}
 
 Mer information om hur du publicerar interaktiva videoresurser finns i [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
-## Integrera en interaktiv video med din webbplats {#integrating-an-interactive-video-with-your-website}
+## Integrera en interaktiv video med webbplatsen {#integrating-an-interactive-video-with-your-website}
 
 När du har överfört en video, lagt till tidslinjesegment i den och publicerat den interaktiva videon är du nu redo att lägga till den på din befintliga webbplats.
 
@@ -509,7 +509,7 @@ Om du är fristående kund av Experience Manager Assets kan du lägga till den i
 
 1. Kopiera den publicerade interaktiva videons inbäddningskod eller URL.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
+Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
 
 1. Identifiera var den statiska videon finns i målets webbsideskod.
 1. Ta bort den statiska videon och ersätt koden med den inbäddade koden eller URL-adressen som du kopierade från Experience Manager Assets, som den är.
