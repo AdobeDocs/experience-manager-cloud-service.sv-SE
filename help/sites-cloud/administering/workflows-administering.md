@@ -1,16 +1,15 @@
 ---
 title: Administrera arbetsflödesinstanser
 description: Lär dig hur du administrerar arbetsflödesinstanser
-feature: Administering
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Administratör
+role: Admin
+exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
-
 
 # Administrera arbetsflödesinstanser {#administering-workflow-instances}
 
@@ -53,7 +52,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    * Förfallodatum: Förfallodatum före eller efter ett angivet datum
    * Uppdateringsdatum: Uppdaterat datum före eller efter ett angivet datum
 
-## Pausa, återuppta och avsluta en arbetsflödesinstans {#suspending-resuming-and-terminating-a-workflow-instance}
+## Göra uppehåll, återuppta och avsluta en arbetsflödesinstans {#suspending-resuming-and-terminating-a-workflow-instance}
 
 1. Välj **Verktyg** och **Arbetsflöde** med Navigering.
 1. Välj **Instanser** om du vill visa listan över pågående arbetsflödesinstanser.
@@ -168,4 +167,3 @@ Du kan ange den största tillåtna storleken för inkorgen genom att konfigurera
 | Egenskapsnamn (webbkonsol) | OSGi-egenskapsnamn |
 |---|---|
 | Max Inbox Query Size | granite.workflow.inboxQuerySize |
-
