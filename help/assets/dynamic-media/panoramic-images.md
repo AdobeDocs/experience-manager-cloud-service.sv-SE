@@ -2,10 +2,9 @@
 title: Panoramabilder
 description: Lär dig hur du arbetar med panoramabilder i Dynamic Media.
 feature: Panoramabilder
-role: Business Practitioner
+role: User
 exl-id: bdc5d00e-fa92-4db5-a3b2-4dd5885eec0b
-translation-type: tm+mt
-source-git-commit: e94289bccc09ceed89a2f8b926817507eaa19968
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 16%
@@ -81,6 +80,6 @@ If you dropped an image into the Panoramic Media component in your WCM and the c
 
 Se [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md).
 
-## Publicerar panoramabilder {#publishing-panoramic-images}
+## Publicera panoramabilder {#publishing-panoramic-images}
 
 Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
