@@ -2,10 +2,9 @@
 title: Dynamic Media Newsletter
 description: 'Dynamic Media Newsletter från Experience League är ett månatligt nyhetsbrev. Det är utformat för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du direkt kan få mer för pengarna. Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din kunskap. Det finns till exempel instruktionsvideor och lösningsöversikter. Läs om några av de viktigaste funktionerna och funktionerna, som förinställningar för bilder, visningsinställningar, videoprofiler med mera. '
 feature: Resurshantering
-role: Business Practitioner
+role: User
 exl-id: 4c93b448-ff8b-4c63-9c9b-dca53cd1af20
-translation-type: tm+mt
-source-git-commit: 1ad89be4ebddec0705c6f557fed3d697b9f1f3a7
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%
@@ -46,7 +45,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Utforska tre sätt som er investering i multimedia kan hjälpa er i dessa utmanande tider.
    * Anmäl dig till webbinariet för att lära dig hur du gör sidan ljusare med Smart Imaging.
    * Titta på on-demand-webbinariet SKompetens Builder för Dynamic Media Classic.
-   * Se Dynamic Media seminarier från Adobe Summit 2020.
+   * Se Dynamic Media sessioner från Online Adobe Summit 2020.
    * Läs mer om Adobe kostnadsfria Dynamic Media Classic-revisioner.
    * Möt John Monroe, Senior Program Manager för Customer Success Services.
 
@@ -133,7 +132,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    I detta nummer:
 
    * Se videor som belyser hur välbekant det är att uppgradera till Dynamic Media inom AEM Assets.
-   * Se videoklipp med nyckeltips i Experience League.
+   * Se videoklipp om hur man gör i Experience League.
    * Läs mer om den kommande Adobe Insider Tour.
    * Läs om hur ni kan skydda era digitala resurser mot piratkopiering.
    * Lär dig mer om AI-driven Smart Crop för bilder.
@@ -144,7 +143,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    I detta nummer:
 
    * Utforska de tio viktigaste dolda funktionerna i Dynamic Media Classic i ett blogginlägg.
-   * Se videoklipp med nyckeltips i Experience League.
+   * Se videoklipp om hur man gör i Experience League.
    * Läs mer om den kommande Adobe Insider Tour.
    * Läs en bloggserie i tre delar om du vill uppdatera din multimediestrategi.
    * Lär dig mer om AI-styrd videoredigering med smart beskärning.
