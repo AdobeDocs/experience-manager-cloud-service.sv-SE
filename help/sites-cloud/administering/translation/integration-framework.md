@@ -1,18 +1,17 @@
 ---
 title: Konfigurera översättningsintegreringsramverket
 description: Lär dig hur du konfigurerar TLF (Translation Integration Framework) för integrering med översättningstjänster från tredje part.
-feature: Language Copy
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 69c865dbc87ca021443e53b61440faca8fa3c4d4
+feature: Språkkopia
+role: Admin
+exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1383'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurerar översättningsintegreringsramverket {#configuring-the-translation-integration-framework}
+# Konfigurera översättningsintegreringsramverket {#configuring-the-translation-integration-framework}
 
 Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM. Det handlar om tre grundläggande steg.
 
@@ -46,7 +45,7 @@ Du kan skapa flera molnkonfigurationer för samma anslutning om det behövs. Ska
 
 När du har konfigurerat en anslutning kan du skapa den konfiguration av översättningsintegreringsramverket som använder den.
 
-## Skapar en konfiguration för översättningsintegrering {#creating-a-translation-integration-configuration}
+## Skapa en konfiguration för översättningsintegrering {#creating-a-translation-integration-configuration}
 
 Skapa en konfiguration för ramverk för översättningsintegrering som anger hur ditt innehåll ska översättas. Konfigurationen innehåller följande information:
 
@@ -105,7 +104,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
 | Översätt taggar | Aktivera den här egenskapen för att översätta taggar som är kopplade till resursen. |
 | Automatisk översättning | Välj den här egenskapen om du vill köra översättningsjobb automatiskt efter att översättningsprojekt har skapats. Du har inte möjlighet att granska eller omsluta översättningsjobbet när du väljer det här alternativet. |
 
-## Konfigurerar sidor för översättning {#configuring-pages-for-translation}
+## Konfigurera sidor för översättning {#configuring-pages-for-translation}
 
 Om du vill konfigurera översättning av källsidor till andra språk associerar du sidorna med följande molnkonfigurationer:
 
@@ -118,7 +117,7 @@ När du associerar en sida med en molnkonfiguration ärver de underordnade sidor
 
 Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet på en webbplats handlar till exempel mest om resor och livsstil. En av sidorna beskriver dock företaget. I så fall kan webbplatsens rotsida vara kopplad till ett Translation Integration Framework som anger maskinöversättning med kategorin Livsstil, medan den gren som beskriver företaget använder ett ramverk som utför maskinöversättning med kategorin Allmänt.
 
-### Koppla en sida till en översättningsprovider {#associating-a-page-with-a-translation-provider}
+### Koppla en sida till en översättningsleverantör {#associating-a-page-with-a-translation-provider}
 
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
@@ -127,7 +126,7 @@ Koppla en sida till översättningsleverantören som du använder för att över
 1. Välj konfigurationen i listrutan **Lägg till konfiguration**.
 1. Klicka eller tryck på **Spara och stäng**.
 
-### Associera sidor med ett Translation Integration Framework {#associating-pages-with-a-translation-integration-framework}
+### Associera sidor med ett översättningsintegreringsramverk {#associating-pages-with-a-translation-integration-framework}
 
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
