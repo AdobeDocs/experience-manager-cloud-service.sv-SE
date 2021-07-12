@@ -1,9 +1,9 @@
 ---
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
-source-git-commit: 3611b9ede7c7f516c4773ac4b22e8ba9b14b5220
+source-git-commit: c19878b41970f4cd34083395ab11cf82c1db667e
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -12,6 +12,12 @@ ht-degree: 1%
 # Hantera stora innehållsdatabaser {#handling-large-content-repositories}
 
 ## Översikt {#overview}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_precopy"
+>title="Hantera stora innehållsdatabaser"
+>abstract="För att påskynda extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten avsevärt så att innehåll flyttas till AEM som en Cloud Service kan CTT utnyttja AzCopy som ett valfritt förkopieringssteg. När det här försteget är konfigurerat kopierar AzCopy i extraheringsfasen blober från Amazon S3 eller Azure Blob Storage till migreringsuppsättningens blobbutik. Under själva intaget kopierar AzCopy blober från migreringsuppsättningens blobbutik till AEM som en Cloud Service blobbutik."
+>additional-url="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10" text="Kom igång med AzCopy"
 
 Det kan ta flera dagar att kopiera ett stort antal bloggar med innehållsöverföringsverktyget (CTT).
 För att påskynda extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten avsevärt så att innehåll flyttas till AEM som en Cloud Service, kan CTT utnyttja [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) som ett valfritt förkopieringssteg. Detta förkopieringssteg kan användas när AEM är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage-datalager.  När det här försteget är konfigurerat kopierar AzCopy i extraheringsfasen blober från Amazon S3 eller Azure Blob Storage till migreringsuppsättningens blobbutik. Under själva intaget kopierar AzCopy blober från migreringsuppsättningens blobbutik till AEM som en Cloud Service blobbutik.
