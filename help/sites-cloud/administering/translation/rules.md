@@ -1,16 +1,15 @@
 ---
 title: Identifiera innehåll som ska översättas
 description: Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
-feature: Language Copy
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+feature: Språkkopia
+role: Admin
+exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
-
 
 # Identifiera innehåll som ska översättas {#identifying-content-to-translate}
 
@@ -87,7 +86,7 @@ I följande exempel översätts innehållet i alla `text`-egenskaper och även a
 </node>
 ```
 
-## Regelsyntax för att extrahera resurser från sidor {#rule-syntax-for-extracting-assets-from-pages}
+## Regelsyntax för att extrahera resurser från sidor  {#rule-syntax-for-extracting-assets-from-pages}
 
 Använd följande regelsyntax för att inkludera resurser som är inbäddade i eller refererade från komponenter:
 
@@ -106,7 +105,7 @@ I följande exempel extraheras bilder från bildkomponenten:
 <assetNode resourceType="core/wcm/components/image/v2/image" assetReferenceAttribute="fileReference"/>
 ```
 
-## Åsidosätter regler {#overriding-rules}
+## Åsidosätta regler {#overriding-rules}
 
 Filen `translation_rules.xml` består av ett `nodelist`-element med flera underordnade `node`-element. AEM läser nodlistan uppifrån och ned. När flera regler har samma nod som mål används den regel som är lägre i filen. Följande regler gör till exempel att allt innehåll i `text`-egenskaper översätts förutom för grenen `/content/mysite/en` sidor:
 
@@ -187,7 +186,7 @@ Här är ett exempel på den resulterande XML-filen när **är djup** inte är m
 </filter>
 ```
 
-### ärv {#inherit}
+### ärva {#inherit}
 
 **`inherit`** används för egenskaper. Som standard ärvs alla egenskaper, men om du vill att vissa egenskaper inte ska ärvas av den underordnade kan du markera den här egenskapen som false så att den bara tillämpas på den specifika noden.
 
