@@ -3,9 +3,9 @@ title: Konfigurera AEM Assets som en [!DNL Cloud Service] fil med Brand Portal
 description: Konfigurera AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 feature: Brand Portal,Resursdistribution,Konfiguration
-role: Administrator
+role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 9d219b8de11fd977dab4f75468836892cb13364a
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '2267'
 ht-degree: 12%
