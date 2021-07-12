@@ -2,9 +2,9 @@
 title: Bildprofiler för Dynamic Media
 description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller båda. Använd sedan profilen på en mapp med bildresurser.
 feature: Resurshantering, bildprofiler, återgivningar
-role: Business Practitioner
+role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '2631'
 ht-degree: 6%
@@ -96,7 +96,7 @@ I **[!UICONTROL Unsharp Mask]** har du följande filtreringsalternativ:
 
 Skärpa beskrivs i [Skärpa bilder](/help/assets/dynamic-media/assets/sharpening_images.pdf).
 
-## Skapar Dynamic Media-bildprofiler {#creating-image-profiles}
+## Skapa Dynamic Media-bildprofiler {#creating-image-profiles}
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](config-dm.md#configuring-asset-processing).
 
@@ -118,7 +118,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 1. Tryck på **[!UICONTROL Save]**. Den nya profilen visas i listan med tillgängliga profiler.
 
-## Redigera eller ta bort Dynamic Media-bildprofiler {#editing-or-deleting-image-profiles}
+## Redigera eller ta bort Dynamic Media bildprofiler {#editing-or-deleting-image-profiles}
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Markera den bildprofil som du vill redigera eller ta bort. Om du vill redigera den väljer du **[!UICONTROL Edit Image Processing Profile]**. Om du vill ta bort den väljer du **[!UICONTROL Delete Image Processing Profile]**.
@@ -127,7 +127,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 1. Spara ändringarna om du redigerar dem. Bekräfta att du vill ta bort profilen om du tar bort den.
 
-## Använda en Dynamic Media-bildprofil för mappar {#applying-an-image-profile-to-folders}
+## Tillämpa en Dynamic Media-bildprofil på mappar {#applying-an-image-profile-to-folders}
 
 När du tilldelar en bildprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Därför kan du bara tilldela en bildprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
 
@@ -141,7 +141,7 @@ Du kan tillämpa bildprofiler på specifika mappar eller globalt på alla resurs
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig bildprofil som du senare ändrade. Se [Återbearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
-### Använda Dynamic Media Image Profiles på specifika mappar {#applying-image-profiles-to-specific-folders}
+### Använda Dynamic Media-bildprofiler på specifika mappar {#applying-image-profiles-to-specific-folders}
 
 Du kan tillämpa en bildprofil på en mapp från menyn **[!UICONTROL Tools]** eller från **[!UICONTROL Properties]** om du är i mappen.
 
@@ -149,7 +149,7 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Återbearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
-#### Använda Dynamic Media Image Profiles på mappar från användargränssnittet för profiler {#applying-image-profiles-to-folders-from-profiles-user-interface}
+#### Använda Dynamic Media Image Profiles på mappar från användargränssnittet Profiles {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Välj den bildprofil som du vill använda för en eller flera mappar.
@@ -158,7 +158,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 1. Tryck på **[!UICONTROL Apply Processing Profile to Folders]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna. Tryck/klicka sedan på **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-#### Använda Dynamic Media Image Profiles på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
+#### Använda Dynamic Media-bildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill tillämpa en bildprofil på.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
@@ -270,7 +270,7 @@ När du tar bort en bildprofil från en mapp ärver alla undermappar automatiskt
 
 Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** eller från **[!UICONTROL Properties]** om du är i mappen.
 
-### Ta bort Dynamic Media Image Profiles från mappar via profilanvändargränssnittet {#removing-image-profiles-from-folders-via-profiles-user-interface}
+### Ta bort Dynamic Media Image Profiles från mappar via användargränssnittet Profiles {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Markera den bildprofil som du vill ta bort från en eller flera mappar.
@@ -278,7 +278,7 @@ Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** el
 
    Du kan bekräfta att bildprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
-### Ta bort Dynamic Media-bildprofiler från mappar med hjälp av egenskaperna {#removing-image-profiles-from-folders-via-properties}
+### Ta bort Dynamic Media-bildprofiler från mappar via Egenskaper {#removing-image-profiles-from-folders-via-properties}
 
 1. Tryck på Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill ta bort en bildprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
