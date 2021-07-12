@@ -2,15 +2,14 @@
 title: utrullningskonflikter
 description: Lär dig hur du hanterar och löser flera sammanslagningskonflikter för Platshanteraren.
 feature: Multi Site Manager
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 0f2b7176b44bb79bdcd1cecf6debf05bd652a1a1
+role: Admin
+exl-id: 733e9411-50a7-42a5-a5a8-4629f6153f10
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '926'
 ht-degree: 1%
 
 ---
-
 
 # utrullningskonflikter {#msm-rollout-conflicts}
 
@@ -32,7 +31,7 @@ Förutom standardfunktionerna kan anpassade konflikthanterare läggas till för 
 
 ### Exempelscenario {#example-scenario}
 
-I följande avsnitt använder vi exemplet med en ny sida `b`, som skapats både i planbilden och i Live Copy-grenen (skapas manuellt), för att illustrera de olika lösningmetoderna:
+I följande avsnitt använder vi exemplet med en ny sida `b`, som skapats både i planbilden och i Live Copy-grenen (skapas manuellt), för att illustrera de olika konfliktlösningsmetoderna:
 
 * skiss: `/b`
 
@@ -73,7 +72,7 @@ AEM tillhandahåller:
 * Den rangordningsmekanism som gör att du kan ange prioriteten för varje enskild hanterare
    * Tjänsten med högst rankning används.
 
-### Standardhanterare för konflikt {#default-conflict-handler}
+### Standardhanterare för konflikter {#default-conflict-handler}
 
 Standardkonflikthanteraren är `ResourceNameRolloutConflictHandler`
 
@@ -143,6 +142,6 @@ I det här fallet har Live Copy företräde. Den blå sidan `/b` kopieras inte o
 | Värde | `/bp-level-1` | `/lc-level-1` | `/lc-level-1` |
 | Kommentar |  | Ingen ändring | Ingen ändring |
 
-### Tjänstrankningar {#service-rankings}
+### Servicerangordning {#service-rankings}
 
 Tjänstrankningen [OSGi](https://www.osgi.org/) kan användas för att definiera prioriteten för enskilda konflikthanterare.
