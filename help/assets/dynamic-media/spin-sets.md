@@ -2,9 +2,9 @@
 title: Snurrande uppsättningar
 description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 feature: Snurrande uppsättningar
-role: Business Practitioner
+role: User
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 12%
@@ -75,7 +75,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 Om det behövs kan du [redigera snurruppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra [egenskaper för snurruppsättning](/help/assets/manage-digital-assets.md#editing-properties).
 
-## Överför resurser för snurpuppsättningar {#uploading-assets-for-spin-sets}
+## Överför resurser för snurruppsättningar {#uploading-assets-for-spin-sets}
 
 Du behöver minst 8-12 bilder av ett objekt för en endimensionell snurra. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30° (360/12) för varje tagning.
 
@@ -91,7 +91,7 @@ Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fle
 * Se till att produktinformationen är väl belyst och i fokus.
 * Ta snurra bilder till modekläder med mannequin eller modell. Ofta är mannequin antingen maskerat (med hjälp av en glasmannequin) eller en stiliserad mannequin/form visas i bilden. Du kan skapa en omformningsrotation genom att definiera antalet vinklar. Markera varje vinkel med band på golvet så att du kan vägleda modellen till steg och titta i riktningen för varje tagning.
 
-## Skapar snurruppsättningar {#creating-spin-sets}
+## Skapa snurruppsättningar {#creating-spin-sets}
 
 I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
@@ -207,10 +207,10 @@ Om du tar bort den bild som Experience Manager använder som miniatyrbild genom 
 
 1. Klicka på **[!UICONTROL Save]** när redigeringen är klar.
 
-## Förhandsgranska snuruppsättningar {#previewing-spin-sets}
+## Förhandsgranska snurra uppsättningar {#previewing-spin-sets}
 
 Se [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md).
 
-## Publicerar snurruppsättningar {#publishing-spin-sets}
+## Publicera snurruppsättningar {#publishing-spin-sets}
 
 Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
