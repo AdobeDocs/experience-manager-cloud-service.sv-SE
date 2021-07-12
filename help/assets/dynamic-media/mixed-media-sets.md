@@ -2,9 +2,9 @@
 title: Blandade medieuppsättningar
 description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic Media.
 feature: Blandade medieuppsättningar
-role: Business Practitioner
+role: User
 exl-id: 7ccde741-38d2-44c9-9378-f2721384aab7
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '1396'
 ht-degree: 23%
@@ -73,7 +73,7 @@ Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandad
 
 Om du dessutom vill lägga till snurrsuppsättningar eller bilduppsättningar i den blandade medieuppsättningen skapar du även dem.
 
-## Skapar blandade medieuppsättningar {#creating-mixed-media-sets}
+## Skapa blandade medieuppsättningar {#creating-mixed-media-sets}
 
 Du kan lägga till bilder, bilduppsättningar, snurruppsättningar och videoklipp i din uppsättning med blandade media. Se till att dina filer, bilduppsättningar och snurruppsättningar är klara att publiceras innan du lägger till dem i den blandade medieuppsättningen.
 
@@ -165,7 +165,7 @@ Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsät
 
 Se [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md) för mer information om hur du förhandsvisar blandade medieuppsättningar.
 
-## Publicerar blandade medieuppsättningar {#publishing-mixed-media-sets}
+## Publicera blandade medieuppsättningar {#publishing-mixed-media-sets}
 
 Mer information om hur du publicerar blandade medieuppsättningar finns i [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
