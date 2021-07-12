@@ -2,9 +2,9 @@
 title: Video
 description: Lär dig hur du arbetar med video i Dynamic Media.
 feature: Videoprofiler
-role: Business Practitioner
+role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 94ee4dde39a59dff0b351a36dacf66d9f4b22872
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '9094'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 I det här avsnittet beskrivs hur du arbetar med video i Dynamic Media.
 
-## Snabbstart: Videoklipp {#quick-start-videos}
+## Snabbstart: Videor {#quick-start-videos}
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med anpassningsbara videouppsättningar i Dynamic Media. Efter varje steg finns korsreferenser till ämnesrubriker där du kan hitta mer information.
 
@@ -165,7 +165,7 @@ Se [Exempel på dynamisk videouppspelning](https://s7d9.scene7.com/s7/uvideo.jsp
 
 Se även [Visningsprogram för Experience Manager Assets och Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc) och [Endast visningsprogram för Experience Manager Assets](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only) i [Dynamic Media Viewer Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
 
-## Bästa praxis: Använda HTML5-videovisningsprogrammet {#best-practice-using-the-html-video-viewer}
+## Bästa praxis: Använda videovisningsprogrammet för HTML5 {#best-practice-using-the-html-video-viewer}
 
 Förinställningarna för visningsprogrammet för Dynamic Media HTML5-video är robusta videospelare. Du kan använda dem för att undvika många vanliga problem som är kopplade till videouppspelning i HTML5 och problem som är kopplade till mobila enheter. Exempel: brist på adaptiv strömning och begränsad webbläsarräckvidd.
 
@@ -274,7 +274,7 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 ![chlimage_1-428](assets/chlimage_1-428.png)
 
-## Metodtips för att koda videofilmer {#best-practices-for-encoding-videos}
+## Bästa tillvägagångssätt för att koda videofilmer {#best-practices-for-encoding-videos}
 
 Arbetsflödet **Dynamic Media Encode Video** kodar video om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
 
@@ -405,14 +405,14 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 |--- |--- |--- |--- |
 | Källa | 1920 x 1080 | 1 | 1 |
 | Kodad | 960 x 540 | 2 | 2 |
-| Kodad | 640 x 360 | 3 | 1 |
+| Kodad | 640 x 360 | 3 | 3 |
 | Kodad | 480 x 270 | 4 | 4 |
 
 ### Kodat videofilformat {#encoded-video-file-format}
 
 Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställningar. Eftersom MP4-filer använder H.264-videokodeken ger den video med hög kvalitet men i en komprimerad filstorlek.
 
-## Publicera videofilmer till YouTube {#publishing-videos-to-youtube}
+## Publicera videor på YouTube {#publishing-videos-to-youtube}
 
 Du kan publicera videoresurser som hanteras i Experience Manager Assets direkt i en YouTube-kanal som du tidigare har skapat.
 
@@ -777,7 +777,7 @@ Mer detaljerad förloppsinformation finns i YouTube-loggen som replikeras. Tänk
 
    Du kan även verifiera den publicerade videon på din YouTube-kanal.
 
-### (Valfritt) Verifiera den publicerade videon på YouTube {#optional-verifying-the-published-video-on-youtube}
+### (Valfritt) Verifiera publicerad video på YouTube {#optional-verifying-the-published-video-on-youtube}
 
 Du kan också övervaka förloppet för din YouTube-publicering (eller avpublicering).
 
@@ -787,7 +787,7 @@ Publiceringstiderna kan variera avsevärt beroende på olika faktorer, bland ann
 
 Efter åtta timmar, om du fortfarande ser ett statusmeddelande som säger **[!UICONTROL Uploaded (processing, please wait)]**, kan du försöka ta bort videon från webbplatsen och överföra den igen.
 
-### Länka YouTube URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
+### Länka YouTube-URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
 
 Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidor på webbplatsen eller i programmet.
 
@@ -804,7 +804,7 @@ Så här länkar du YouTube URL:er till ditt webbprogram:
 1. Klicka på fliken **[!UICONTROL Advanced]**.
 1. Under rubriken YouTube Publishing (Publicering), i YouTube URL List, markerar och kopierar du URL-texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
 
-### Avpublicerar videoklipp för att ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
+### Avpublicera videoklipp för att ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
 
 När du avpublicerar en videoresurs i Experience Manager tas videon bort från YouTube.
 
@@ -1048,7 +1048,7 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html).
  -->
 
-## Lägga till bildtexter i videon {#adding-captions-to-video}
+## Lägga till bildtexter i video {#adding-captions-to-video}
 
 Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till bildtexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till bildtext undviker du behovet av att duplicera ljudet, eller behovet av att använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
