@@ -2,9 +2,9 @@
 title: Integrera med Adobe Analytics
 description: 'Integrera med Adobe Analytics '
 feature: Administratör
-role: Administrator
+role: Admin
 exl-id: e353a1fa-3e99-4d79-a0d1-40851bc55506
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Jämfört med tidigare versioner av AEM tillhandahålls inte ramverksstöd i Ana
 >
 >Adobe Experience Manager som Cloud Service-kunder som inte har något befintligt Analytics-konto kan begära åtkomst till Analytics Foundation Pack för Experience Cloud. Detta Foundation Pack ger volymbegränsad användning av Analytics.
 
-## Skapar Adobe Analytics-konfigurationen {#analytics-configuration}
+## Skapa Adobe Analytics-konfigurationen {#analytics-configuration}
 
 1. Navigera till **Verktyg** → **Cloud Services**.
 2. Välj **Adobe Analytics**.
@@ -47,7 +47,7 @@ Konfigurationsfälten som finns i konfigurationsfönstret i Adobe Analytics är:
 | Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Mer information finns på [den här sidan](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html). |
 | Rapportsviter | En databas där du skickar data och hämtar rapporter. En rapportsvit definierar den fullständiga, oberoende rapporteringen på en vald webbplats, en uppsättning webbplatser eller en delmängd av webbplatssidor. Du kan visa rapporter som hämtats från en enda rapportserie och kan redigera det här fältet i en konfiguration när som helst enligt dina önskemål. |
 
-### Lägga till en konfiguration för en plats {#add-configuration}
+### Lägga till en konfiguration till en plats {#add-configuration}
 
 Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Platser** →**Välj en webbplatssida** → **Egenskaper** → **Avancerat** → **Konfiguration** → Välj konfigurationtenant.
 
