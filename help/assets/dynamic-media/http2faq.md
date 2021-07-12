@@ -1,10 +1,9 @@
 ---
 title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
-role: Administrator,Business Practitioner
+role: Admin,User
 exl-id: 0a8a5fd8-a341-4e7f-84a5-409e2de97efe
-translation-type: tm+mt
-source-git-commit: 1ad89be4ebddec0705c6f557fed3d697b9f1f3a7
+source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 1%
