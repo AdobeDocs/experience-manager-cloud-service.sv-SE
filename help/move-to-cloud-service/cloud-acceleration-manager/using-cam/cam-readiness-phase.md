@@ -1,17 +1,17 @@
 ---
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
-source-git-commit: 4041e3fd9a479a64ed38e2bf1a6251fda39e55c2
+source-git-commit: 177e24d20bc97e4a7f2be749771463d7e79005c4
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 3%
+source-wordcount: '670'
+ht-degree: 5%
 
 ---
 
 
 # Beredningsfas i molnaccelerationshanteraren {#readiness-phase-cam}
 
-När du har skapat ett projekt i Cloud Acceleration Manager kan du nu börja köra de tillgängliga verktygen i beredskapsfasen.
+När du har skapat ett projekt i Cloud Acceleration Manager kan du nu starta utvärderingen av den aktuella AEM-implementeringen i beredskapsfasen.
 
 Beredskapsfasen omfattar:
 
@@ -39,7 +39,10 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-2.png)
 
-1. Följ de här stegen för att hämta BPA (Best Practices Analyzer) och köra det på en klon av ditt AEM.
+1. Följ de här stegen för att hämta BPA (Best Practices Analyzer).
+
+   >[!NOTE]
+   >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA i en redigeringsmiljö som är så nära produktionsmiljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av författarmiljön i produktion.
 
    1. Navigera till [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen och hämta Best Practices Analyzer som en zip-fil.
 
@@ -82,7 +85,7 @@ Kortet **Rapportegenskaper** innehåller information om rapportegenskaper som ra
 
 #### Rapportöversikt {#report-overview}
 
-Detta **rapportöversiktskort** ger rapportresultaten, vilket visas i figuren nedan.
+Detta **rapportöversiktskort** innehåller rapportresultat och allvarlighetsnivåer som gäller vid bedömning av om AEM kan flyttas som en Cloud Service, vilket visas i figuren nedan.
 
 ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-overview.png)
 
@@ -123,14 +126,14 @@ Du kan granska följande information på den här fliken:
 
 Följ det här avsnittet för att utforska aktivitetskortet Planning and Setup.
 
-1. Klicka på knappen **Visa** på **Planering och installation**-kortet som innehåller allt relevant innehåll som hjälper dig att planera och konfigurera AEM migrering.
+1. Klicka på knappen **Visa** på **Planering och inställningar**-kortet. Det här kortet innehåller allt relevant innehåll som hjälper dig att planera och konfigurera din AEM migrering.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-view.png)
 
-1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
+1. En innehållskarusell visar all relevant information för den här fasen av migreringsresan.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-5-planning.png)
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg med [Implementeringsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-implementation-phase.html?lang=en).
+När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg i [implementeringsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-implementation-phase.html?lang=en).
