@@ -5,10 +5,10 @@ breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 feature: Distribuerar
 role: Architect, Developer
-source-git-commit: a3a90868b64a0639f8a065c8c4d6ef6410094f3d
+source-git-commit: 6fcde5440a5e2eec57b69b14dca93192634b3c3a
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 70%
+source-wordcount: '125'
+ht-degree: 52%
 
 ---
 
@@ -17,9 +17,18 @@ ht-degree: 70%
 
 + [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md)
 + Faser i övergångsprocessen {#phases}
-   + [Planering](/help/move-to-cloud-service/planning.md)
-   + [Körning ](/help/move-to-cloud-service/execution.md)
-   + [Efter publicering](/help/move-to-cloud-service/post-go-live.md)
+   + [Beredskap](/help/move-to-cloud-service/migration-readiness.md)
+   + [Implementering](/help/move-to-cloud-service/migration-implementation.md)
+   + [Post Go Live](/help/move-to-cloud-service/migration-post-go-live.md)
++ Cloud Acceleration Manager {#cloud-acceleration-manager}
+   + Introduktion till Cloud Acceleration Manager {#introduction-cam}
+      + [Översikt](/help/move-to-cloud-service/cloud-acceleration-manager/introduction/overview-cam.md)
+      + [Fördelar](/help/move-to-cloud-service/cloud-acceleration-manager/introduction/benefits-cam.md)
+   + Använda Cloud Acceleration Manager {#using-cam}
+      + [Komma igång med Cloud Acceleration Manager](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/getting-started-cam.md)
+      + [Beredskapsfas](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/cam-readiness-phase.md)
+      + [Implementeringsfas](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/cam-implementation-phase.md)
+      + [Go Live Phase](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/cam-golive-phase.md)
 + Verktyg för övergång till molnet{#cloud-migration}
    + Best Practices Analyzer {#best-practices-analyzer}
       + [Översikt](/help/move-to-cloud-service/best-practices-analyzer/overview-best-practices-analyzer.md)
