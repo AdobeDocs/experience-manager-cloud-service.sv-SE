@@ -1,12 +1,9 @@
 ---
 title: Fördelar med Cloud Acceleration Manager
 description: På den här sidan beskrivs de viktigaste fördelarna med att använda Cloud Acceleration Manager.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: ed196db516a112dad8d6ac9a2917f0a90a0195f1
+source-git-commit: 6fcde5440a5e2eec57b69b14dca93192634b3c3a
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -14,13 +11,25 @@ ht-degree: 0%
 
 # Fördelar med Cloud Acceleration Manager {#benefits-cam}
 
-Cloud Acceleration Manager är en kostnadsfri molnbaserad applikation som ger en bedömning av kundens nuvarande implementering av Adobe Experience Manager (AEM) och hjälper till att hantera kundresan till AEM som en Cloud Service efter Adobe rekommenderade migreringsmetod.
+Med ett stort antal affärskrav och anpassningar kan en övergång till molnet vara ett engagerande projekt. Cloud Acceleration Manager (CAM) förser era team med en guidad upplevelse med bästa praxis och metoder som rekommenderas av Adobe för att hjälpa era team att planera, implementera och, administrera Adobe Go Live utan problem.
 
 De viktigaste fördelarna med att använda Cloud Acceleration Manager är:
 
-* Gör en bedömning i ett format som är enkelt att använda.
-* Vägleder och hanterar övergångsresan.
-* Innehåller bästa praxis, relevant hjälp och tillgång till verktyg för att minimera migreringstiden.
+1. Planera bättre och smartare:
+
+   * Förenkla bedömningen av den aktuella instansen med en lättläst visuell representation av resultaten.
+
+   * Utvärdera och förstå den uppskattade komplexiteten med att gå över till AEM som Cloud Service med en detaljerad anpassad rapport.
+
+1. Effektivisera övergången med hjälp av guider från början till slut:
+
+   * Hantera migreringsresan med inbyggd intelligens som ger sammanhangsbaserad hjälp längs vägen.
+
+   * Granska och identifiera de områden som inte stöds i AEM som en Cloud Service eller kräva omfaktorisering för att säkerställa kompatibilitet.
+
+1. Optimera arbetet:
+
+   Få tillgång till bästa praxis och automatiseringsverktyg som rekommenderas av Adobe för att snabba upp migreringsarbetet och få tillgång till verktyg som minimerar migreringstiden.
 
 ## What’s Next {#whats-next}
 
