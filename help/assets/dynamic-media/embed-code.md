@@ -4,7 +4,7 @@ description: Lär dig bädda in Dynamic Media video- eller bildresurser på en w
 feature: Resurshantering
 role: User
 exl-id: 76335781-e39f-4aae-967f-5af8634d8f61
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 6933f053e11320d8201922723879983084c52209
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 21%
@@ -27,7 +27,7 @@ Se [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 >
 >Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 >
->Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
+>Se [Publicera förinställningar för visningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 >
 >Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
@@ -39,17 +39,17 @@ Se [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
-   Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
+   Se [Publicera förinställningar för visningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
    Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-1. Markera listrutan till vänster och tryck på **[!UICONTROL Viewers]**.
-1. Tryck på ett namn på en visningsförinställning i den vänstra listen. Visningsförinställningen används på resursen.
-1. Tryck på **[!UICONTROL Embed]**.
-1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och tryck sedan på **[!UICONTROL Close]**.
+1. Markera listrutan till vänster och välj **[!UICONTROL Viewers]**.
+1. Välj ett namn på visningsförinställningen i den vänstra listen. Visningsförinställningen används på resursen.
+1. Välj **[!UICONTROL Embed]**.
+1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och välj sedan **[!UICONTROL Close]**.
 1. Klistra in inbäddningskoden på dina webbsidor.
 
-## Använd HTTP/2 för att leverera Dynamic Media-material {#using-http-to-deliver-your-dynamic-media-assets}
+## Använd HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-deliver-your-dynamic-media-assets}
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
