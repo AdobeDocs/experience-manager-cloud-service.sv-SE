@@ -1,10 +1,10 @@
 ---
 title: GoLive Phase i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över GoLive-fasen i Cloud Acceleration Manager.
-source-git-commit: 4041e3fd9a479a64ed38e2bf1a6251fda39e55c2
+source-git-commit: 22ee20401a8c576ae56547cf678b9f5c0d69362d
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 1%
+source-wordcount: '150'
+ht-degree: 2%
 
 ---
 
@@ -12,8 +12,6 @@ ht-degree: 1%
 # Go Live Phase in Cloud Acceleration Manager {#golive-phase-cam}
 
 Go Live-kortet innehåller allt relevant innehåll som är framträdande vid förberedelser, specifika åtgärder som ska vidtas samt ingående överväganden för att säkerställa en smidig och framgångsrik publicering på AEM som en Cloud Service.
-
-GoLive Phase innehåller [Go Live](#go-live).
 
 Klicka på ditt projektkort för att öppna projektstartsidan och navigera till avsnittet **Go Live**, vilket visas i bilden nedan.
 
@@ -31,6 +29,6 @@ Följ det här avsnittet för att utforska Go Live-aktivitetskortet:
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/golive-1.png)
 
-1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
+1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/golive-2.png)
