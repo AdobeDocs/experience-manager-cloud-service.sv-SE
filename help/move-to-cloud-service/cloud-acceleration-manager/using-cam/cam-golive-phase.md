@@ -1,10 +1,10 @@
 ---
 title: GoLive Phase i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över GoLive-fasen i Cloud Acceleration Manager.
-source-git-commit: 6fcde5440a5e2eec57b69b14dca93192634b3c3a
+source-git-commit: 4041e3fd9a479a64ed38e2bf1a6251fda39e55c2
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 2%
+source-wordcount: '157'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Klicka på ditt projektkort för att öppna projektstartsidan och navigera till 
 ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/golive-1.png)
 
 >[!NOTE]
->Mer information finns i Skapa och hantera ett projekt i Cloud Acceleration Manager.
+>Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en#create-project).
 
 
 ## Använda Go Live Activity Card {#go-live}
