@@ -4,10 +4,10 @@ description: Läs om hur Smart Imaging med Adobe Sensei AI använder varje anvä
 feature: Resurshantering,Återgivningar
 role: User
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 1d42305b6a597dc95bff8b34eee8279eb0e511f3
 workflow-type: tm+mt
-source-wordcount: '2583'
-ht-degree: 1%
+source-wordcount: '2588'
+ht-degree: 0%
 
 ---
 
@@ -94,7 +94,7 @@ Förbättringar i den senaste versionen av Smart Imaging:
 * Smart Imaging kan inaktiveras med URL-parametern `bfc`.
 * TTL-oberoende (Time To Live). Tidigare var en minsta TTL på 12 timmar obligatorisk för att Smart Imaging skulle fungera.
 * Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
-* Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägga till ett anpassat rubrikvärde i bildsvar|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
+* Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägg till ett anpassat rubrikvärde i bildsvaren|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
 
 ## Är det några licenskostnader kopplade till Smart Imaging? {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
@@ -174,7 +174,7 @@ Om du vill använda Smart Imaging måste ditt företags Dynamic Media Classic- e
 
 Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
-Tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän domän kan du begära att få gå över till din egen anpassade domän. Gör den här övergångsbegäran när du skickar in en teknisk supportanmälan.
+Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän domän kan du begära att få gå över till din egen anpassade domän. Gör den här övergångsbegäran när du skickar in en teknisk supportanmälan.
 
 Din första anpassade domän kostar inget extra med en Dynamic Media-licens.
 
@@ -200,7 +200,7 @@ Versionsschemat för DPR för Smart Imaging och nätverksoptimering är följand
 
       Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
-      Klicka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
+      Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
 
       Leta efter fältet **[!UICONTROL Published Server Name]**.
    1. Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
@@ -208,7 +208,7 @@ Versionsschemat för DPR för Smart Imaging och nätverksoptimering är följand
 
       Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
-      Klicka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
+      Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
 
       Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
    1. Ange om du vill att den ska fungera över HTTP/2.
@@ -219,7 +219,7 @@ Versionsschemat för DPR för Smart Imaging och nätverksoptimering är följand
 1. Du meddelas när du är klar av Kundtjänst.
 1. För att maximera prestandaförbättringarna av Smart Imaging rekommenderar Adobe att TTL (Time To Live) ställs in på 24 timmar eller längre. TTL-värdet definierar hur länge resurser cachas av CDN. Så här ändrar du den här inställningen:
 
-   1. Om du använder Dynamic Media Classic klickar du på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]**-värdet till 24 eller längre.
+   1. Om du använder Dynamic Media Classic går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]**-värdet till 24 eller längre.
    1. Om du använder Dynamic Media följer du [dessa instruktioner](config-dm.md). Ange **[!UICONTROL Expiration]**-värdet 24 timmar eller längre.
 
 ## När kan jag förvänta mig att mitt konto ska aktiveras med Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
@@ -239,7 +239,7 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 ## Hur kan jag verifiera om Smart Imaging fungerar som väntat?{#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. När ditt konto har konfigurerats med Smart Imaging läser du in en bild-URL för Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media i webbläsaren.
-1. Öppna Chrome-utvecklarfönstret genom att klicka på **[!UICONTROL View]** > **[!UICONTROL Developer]** > **[!UICONTROL Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
+1. Öppna Chrome-utvecklarfönstret genom att gå till **[!UICONTROL View]** > **[!UICONTROL Developer]** > **[!UICONTROL Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
 
 1. Kontrollera att cache är inaktiverat när utvecklingsverktygen är öppna.
 
