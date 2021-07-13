@@ -5,10 +5,10 @@ breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 feature: Distribuerar
 role: Architect, Developer
-source-git-commit: 6fcde5440a5e2eec57b69b14dca93192634b3c3a
+source-git-commit: fadab55c0fb743cb0ce7102686b2f3f10f93d73b
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 52%
+source-wordcount: '127'
+ht-degree: 51%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 52%
 + Faser i övergångsprocessen {#phases}
    + [Beredskap](/help/move-to-cloud-service/migration-readiness.md)
    + [Implementering](/help/move-to-cloud-service/migration-implementation.md)
+   + [Go Live](/help/move-to-cloud-service/migration-go-live.md)
    + [Post Go Live](/help/move-to-cloud-service/migration-post-go-live.md)
 + Cloud Acceleration Manager {#cloud-acceleration-manager}
    + Introduktion till Cloud Acceleration Manager {#introduction-cam}
