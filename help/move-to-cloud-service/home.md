@@ -2,10 +2,10 @@
 title: Flytta till AEM as a Cloud Service
 description: Länkar till självhjälp och dokumentation för Adobe Experience Manager as a Cloud Service som flyttar till AEM as a Cloud Service
 exl-id: 9f5585ce-0740-46a9-938e-6a4424eb6fa1
-source-git-commit: 6fcde5440a5e2eec57b69b14dca93192634b3c3a
+source-git-commit: 4041e3fd9a479a64ed38e2bf1a6251fda39e55c2
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 59%
+source-wordcount: '694'
+ht-degree: 56%
 
 ---
 
@@ -27,10 +27,10 @@ Med AEM as a Cloud Service kan era team fokusera på innovationer i stället fö
 
 Övergången till Cloud Service omfattar följande faser:
 
-* Beredskap
-* Implementering
+* [Beredskap](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/phases/migration-readiness.html?lang=en)
+* [Implementering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/phases/migration-implementation.html?lang=en)
 * Go Live
-* Post Go Live
+* [Post Go Live](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/phases/migration-post-go-live.html?lang=en)
 
 För en lyckad och smidig övergång bör du säkerställa korrekt planering och följa bästa praxis som beskrivs i den här handboken.
 
@@ -43,7 +43,7 @@ I bilden nedan visas en illustration av den rekommenderade övergångsresan till
 
 Cloud Acceleration Manager är en molnbaserad applikation som är utformad för att vägleda era IT-team under hela övergångsresan, från planering till live Cloud Service. Konfigurera era team för en framgångsrik migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa er att AEM som Cloud Service under hela kundresan.
 
-Se Komma igång med Cloud Acceleration Manager för att starta din migreringsresa.
+Se [Komma igång med Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en) för att starta din migreringsresa.
 
 ## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
 
