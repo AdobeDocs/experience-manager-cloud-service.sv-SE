@@ -1,17 +1,17 @@
 ---
-title: Integrera Dynamic Media Viewers med Adobe Analytics och Experience Platform Launch
+title: Integrera Dynamic Media-visningsprogram med Adobe Analytics och Experience Platform Launch
 description: Läs mer om Dynamic Media Viewer-tillägget för Platform launch och Dynamic Media Viewer 5.13. Det gör att kunder som använder Adobe Analytics och Platform launch kan använda händelser och data som är specifika för visningsprogrammen i sin Platform launch.
 feature: Resursrapporter
 role: Admin,User
 exl-id: a71fef45-c9a4-4091-8af1-c3c173324b7a
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 1d42305b6a597dc95bff8b34eee8279eb0e511f3
 workflow-type: tm+mt
-source-wordcount: '6270'
-ht-degree: 9%
+source-wordcount: '6283'
+ht-degree: 8%
 
 ---
 
-# Integrera Dynamic Media Viewers med Adobe Analytics och Experience Platform Launch {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
+# Integrera Dynamic Media-visningsprogram med Adobe Analytics och Experience Platform Launch {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
 ## Vad är Dynamic Media Viewer integrerat med Adobe Analytics och Experience Platform Launch? {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
@@ -59,7 +59,7 @@ I Experience Platform Launch fungerar begreppen i *Dataelement* och *Regler* til
 
 Ett dataelement i Experience Platform Launch är en namngiven egenskap vars värde antingen är statiskt definierat eller dynamiskt beräknat baserat på en webbsidas eller Dynamic Media Viewer-data.
 
-Vilka alternativ som är tillgängliga för en dataelementsdefinition beror på listan med tillägg som är installerade i Experience Platform Launch-egenskapen. Tillägget &quot;Core&quot; är förinstallerat och finns tillgängligt direkt i alla konfigurationer. Med det här tillägget Core kan du definiera ett dataelement som kommer från cookie, JavaScript™-kod, frågesträng och många andra källor.
+Vilka alternativ som är tillgängliga för en dataelementsdefinition beror på listan med tillägg som är installerade i Experience Platform Launch-egenskapen. Tillägget &quot;Core&quot; är förinstallerat och finns tillgängligt direkt i alla konfigurationer. Med det här tillägget Core kan du definiera ett dataelement som kommer från cookie, JavaScript-kod, frågesträng och många andra källor.
 
 För Adobe Analytics tracking måste flera andra tillägg vara installerade, vilket beskrivs i [Installation och installation av tillägg](#installing-and-setup-of-extensions). Tillägget Dynamic Media Viewer ger möjlighet att definiera ett dataelement som är ett argument i Dynamic Viewer-händelsen. Det är till exempel möjligt att referera till visningsprogramtypen, eller resursnamnet som rapporteras av visningsprogrammet vid inläsning, den zoomnivå som rapporteras när slutanvändaren zoomar och mycket annat.
 
@@ -139,13 +139,13 @@ Om du vill spåra Dynamic Media-visningsprogram i Experience Manager Sites måst
 
 När konfigurationen är korrekt spåras data automatiskt i Adobe Analytics, Adobe Analytics for Video eller båda när du lägger till ett visningsprogram från Dynamic Media på en webbplats med en WCM-komponent som stöds av Dynamic Media.
 
-Se [Lägga till Dynamic Media-resurser på sidor med hjälp av Adobe Sites](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+Se [Lägg till Dynamic Media-resurser på sidor med hjälp av Adobe Sites](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
 ### Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod {#tracking-dynamic-media-viewers-using-embed-code}
 
 Kunder som inte använder Experience Manager Sites eller bäddar in Dynamic Media-visningsprogram på webbsidor utanför Experience Manager Sites, eller båda, kan fortfarande använda Experience Platform Launch-integreringen.
 
-Slutför konfigurationsstegen i [Konfigurera Adobe Analytics](#configuring-adobe-analytics-for-the-integration) och [Konfigurera Experience Platform Launch](#configuring-adobe-launch-for-the-integration)-avsnitten. Konfigurationssteg som rör Experience Manager behövs dock inte.
+Slutför konfigurationsstegen från avsnitten [Konfigurera Adobe Analytics](#configuring-adobe-analytics-for-the-integration) och [Konfigurera Experience Platform Launch](#configuring-adobe-launch-for-the-integration). Konfigurationssteg som rör Experience Manager behövs dock inte.
 
 Om konfigurationen är korrekt kan du lägga till stöd för Experience Platform Launch på en webbsida med ett Dynamic Media-visningsprogram.
 
@@ -153,12 +153,12 @@ Mer information om hur du använder inbäddningskod för Experience Platform Lau
 
 Mer information om hur du använder funktionen för att bädda in kod i Experience Manager Dynamic Media finns i [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 
-**Så här spårar du Dynamic Media-visningsprogram med hjälp av inbäddningskod:**
+**Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod:**
 
 1. Ha en webbsida redo för inbäddning av ett Dynamic Media-visningsprogram.
 1. Hämta inbäddningskoden för Experience Platform Launch-biblioteket genom att först logga in på Experience Platform Launch (se [Konfigurera Experience Platform Launch](#configuring-adobe-launch-for-the-integration)).
-1. Klicka på **[!UICONTROL Property]** och sedan på fliken **[!UICONTROL Environments]**.
-1. Plocka upp den miljönivå som är relevant för webbsidans miljö. Klicka sedan på ruteikonen i kolumnen **[!UICONTROL Install]**.
+1. Välj **[!UICONTROL Property]** och sedan fliken **[!UICONTROL Environments]**.
+1. Plocka upp den miljönivå som är relevant för webbsidans miljö. Markera sedan ruteikonen i kolumnen **[!UICONTROL Install]**.
 1. **[!UICONTROL In the Web Install Instructions]** kopierar den fullständiga inbäddningskoden för Experience Platform Launch-biblioteket tillsammans med de omgivande  `<script/>` taggarna.
 
 ## Referenshandbok för tillägget Dynamic Media Viewers {#reference-guide-for-the-dynamic-media-viewers-extension}
@@ -195,7 +195,7 @@ När du väljer det här alternativet återges ett formulär med två fält i da
 
 ![image2019-7-22_12-5-46](assets/image2019-7-22_12-5-46.png)
 
-Se [referenshandboken för Dynamic Media Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) för en lista över händelser som stöds av varje visningsprogramtyp. Gå till ett specifikt visningsprogramavsnitt och klicka sedan på Support för underavsnittet Adobe Analytics tracking. Referenshandboken för Dynamic Media Viewer dokumenterar för närvarande inte händelseargument.
+Se [referenshandboken för Dynamic Media Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) för en lista över händelser som stöds av varje visningsprogramtyp. Gå till ett specifikt visningsprogramavsnitt och välj sedan Support för underavsnittet Adobe Analytics tracking. Referenshandboken för Dynamic Media Viewer dokumenterar för närvarande inte händelseargument.
 
 Nu ska vi titta på livscykeln för Dynamic Media Viewer *Data Element*. Värdet för det dataelementet fylls i efter att motsvarande Dynamic Media-visningsprogramhändelse inträffar på sidan. Anta att dataelementet pekar på händelsen **[!UICONTROL LOAD]** och dess &quot;asset&quot;-argument. Värdet för det dataelementet tar emot giltiga data när visningsprogrammet kör LOAD-händelsen för första gången. Om dataelementet pekar på händelsen **[!UICONTROL ZOOM]** och dess &quot;scale&quot;-argument, är värdet för dataelementet tomt tills användaren skickar en **[!UICONTROL ZOOM]**-händelse för första gången.
 
@@ -252,7 +252,7 @@ Med Dynamic Media Viewer-tillägget kan du använda händelseparametrar för Dyn
 Det enklaste sättet att göra detta är att slutföra följande tvåstegsprocess:
 
 * Börja med att definiera ett eller flera dataelement, där varje dataelement representerar en parameter för en Dynamic Media Viewer-händelse.
-* I redigeraren Ange variabler för Adobe Analytics-tillägget klickar du slutligen på väljarikonen för dataelement (tre skiktade skivor) för att öppna dialogrutan Markera dataelement och väljer sedan ett dataelement.
+* I redigeraren Ange variabler för Adobe Analytics-tillägget markerar du väljarikonen för dataelement (tre skiktade skivor) för att öppna dialogrutan Markera dataelement och väljer sedan ett dataelement.
 
 ![image2019-7-10_20-41-52](assets/image2019-7-10_20-41-52.png)
 
@@ -262,7 +262,7 @@ Det är dock möjligt att använda en alternativ metod och åsidosätta skapande
 
 ![image2019-7-12_19-2-35](assets/image2019-7-12_19-2-35.png)
 
-Det finns en viktig skillnad mellan att använda dataelement och argumentreferens för direkt händelse. För dataelement spelar det ingen roll vilken händelse som utlöser åtgärden Ange variabler. Händelsen som utlöser regeln kan vara orelaterad till Dynamic Viewer (som att klicka på webbsidan från Core-tillägget). Men när du använder en referens för ett direkt argument är det viktigt att se till att händelsen som utlöser regeln motsvarar händelseargumentet som den refererar till.
+Det finns en viktig skillnad mellan att använda dataelement och argumentreferens för direkt händelse. För dataelement spelar det ingen roll vilken händelse som utlöser åtgärden Ange variabler. Händelsen som utlöser regeln kan vara orelaterad till Dynamic Viewer (som att välja webbsidan från Core-tillägget). Men när du använder en referens för ett direkt argument är det viktigt att se till att händelsen som utlöser regeln motsvarar händelseargumentet som den refererar till.
 
 Om du till exempel refererar till `%event.detail.dm.LOAD.asset%` returneras rätt resursnamn om regeln aktiveras av händelsen **[!UICONTROL LOAD]** för tillägget Dynamic Media-visningsprogrammet. Det returnerar dock ett tomt värde för alla andra händelser.
 
@@ -417,7 +417,7 @@ Om den här integrationslösningen används med Experience Manager Sites måste 
 
 Som en del av konfigurationen måste du se till att du har tillgång till ett företag i Adobe Experience Cloud som redan har Adobe Analytics och Experience Platform Launch aktiverat.
 
-## Konfigurera Adobe Analytics för integrering {#configuring-adobe-analytics-for-the-integration}
+## Konfigurera Adobe Analytics för integreringen {#configuring-adobe-analytics-for-the-integration}
 
 När du har konfigurerat Adobe Analytics kommer följande att konfigureras för integreringen:
 
@@ -429,13 +429,13 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
 **Så här konfigurerar du Adobe Analytics för integreringen:**
 
-1. Börja med att gå till Adobe Analytics från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden klickar du på ikonen Lösningar (en tabell med tre punkter) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Analytics]**.
+1. Börja med att gå till Adobe Analytics från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden väljer du ikonen Lösningar (en tabell med tre punkter) i det övre högra hörnet av sidan och väljer sedan **[!UICONTROL Analytics]**.
 
    ![2019-07-22_18-08-47](assets/2019-07-22_18-08-47.png)
 
    Välj en rapportsvit.
 
-### Välja en rapportsvit {#selecting-a-report-suite}
+### Välj en rapportsvit {#selecting-a-report-suite}
 
 1. I det övre högra hörnet av Adobe Analytics-sidan, till höger om fältet **[!UICONTROL Search Reports]**, väljer du rätt rapportsvit i listrutan. Om det finns flera rapportsviter och du är osäker på vilken du ska använda kontaktar du Adobe Analytics-administratören, som kan hjälpa dig att välja rätt rapportsvit.
 
@@ -445,13 +445,13 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
    Se [Rapporter och rapportsviter](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html#manage-report-suites) och [Skapa en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html?lang=en#manage-report-suites).
 
-   I Adobe Analytics hanteras rapportsviter under **[!UICONTROL Admin > Report Suites]**.
+   I Adobe Analytics hanteras rapportsviter under **[!UICONTROL Admin]** > **[!UICONTROL Report Suites]**.
 
    ![2019-07-22_18-09-49](assets/2019-07-22_18-09-49.png)
 
    Konfigurera Adobe Analytics-variabler.
 
-### Konfigurera Adobe Analytics-variabler {#setting-up-adobe-analytics-variables}
+### Ställa in Adobe Analytics-variabler {#setting-up-adobe-analytics-variables}
 
 1. Ange en eller flera Adobe Analytics-variabler som du vill använda för att spåra Dynamic Media Viewer-beteendet på webbsidan.
 
@@ -461,16 +461,16 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
    I den här dokumentationen kommer endast en anpassad trafikvariabel (props) att användas eftersom de blir tillgängliga i en analysrapport inom några minuter efter att en åtgärd har utförts på en webbsida.
 
-   Om du vill aktivera en ny anpassad trafikvariabel klickar du på **[!UICONTROL Admin > Report Suites]** i verktygsfältet i Adobe Analytics.
+   Om du vill aktivera en ny anpassad trafikvariabel går du till **[!UICONTROL Admin]** > **[!UICONTROL Report Suites]** i verktygsfältet i Adobe Analytics.
 
-1. På sidan **[!UICONTROL Report Suite Manager]** väljer du rätt rapport och klickar sedan på **[!UICONTROL Edit Settings]** > **[!UICONTROL Traffic]** > **[!UICONTROL Traffic Variables]** i verktygsfältet.
+1. På sidan **[!UICONTROL Report Suite Manager]** väljer du rätt rapport och går sedan till **[!UICONTROL Edit Settings]** > **[!UICONTROL Traffic]** > **[!UICONTROL Traffic Variables]** i verktygsfältet.
 1. Välj en variabel som inte används, ge den ett beskrivande namn ( **[!UICONTROL Viewer asset (prop 30)]**) och ändra sedan kombinationsrutan till Aktiverad i kolumnen Aktiverad.
 
    Följande skärmbild är ett exempel på en anpassad trafikvariabel ( **[!UICONTROL prop30]**) för att spåra ett resursnamn som används av visningsprogrammet:
 
    ![image2019-6-26_23-6-59](/help/assets/dynamic-media/assets/image2019-6-26_23-6-59.png)
 
-1. Klicka på **[!UICONTROL Save]** längst ned i variabellistan.
+1. Välj **[!UICONTROL Save]** längst ned i variabellistan.
 
 ### Konfigurera en rapport {#setting-up-a-report}
 
@@ -478,7 +478,7 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
    Det räcker dock att känna till att rapporterna om anpassad trafik automatiskt blir tillgängliga i Adobe Analytics när du har konfigurerat anpassade trafikvariabler i **[Konfigurera Adobe Analytics-variabler](#setting-up-adobe-analytics-variables)**.
 
-   Till exempel finns rapporten för variabeln **[!UICONTROL Viewer asset (prop 30)]** på menyn Rapporter under **[!UICONTROL Custom Traffic > Custom Traffic 21-30 > Viewer asset (prop 30)]**.
+   Till exempel finns rapporten för variabeln **[!UICONTROL Viewer asset (prop 30)]** på menyn Rapporter under **[!UICONTROL Custom Traffic]** > **[!UICONTROL Custom Traffic 21-30]** > **[!UICONTROL Viewer asset (prop 30)]**.
 
    Inga data visas när du besöker den här rapporten direkt efter att **[!UICONTROL Viewer asset (prop 30)]** har skapats, vilket är som väntat vid den här tidpunkten i integreringen.
 
@@ -495,7 +495,7 @@ När du har konfigurerat Experience Platform Launch kommer följande att konfigu
 
 **Så här konfigurerar du Experience Platform Launch för integreringen:**
 
-1. Börja med att gå till Experience Platform Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden klickar du på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Launch]**.
+1. Börja med att gå till Experience Platform Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden väljer du ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan och väljer sedan **[!UICONTROL Launch]**.
 
    Du kan även [öppna Experience Platform Launch direkt](https://launch.adobe.com/).
 
@@ -507,34 +507,36 @@ En egenskap i Experience Platform Launch är en namngiven konfiguration som hål
 
 Se även [Skapa en startegenskap](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-mobile-android-apps-with-launch/configure-launch/launch-create-a-property.html#configure-launch).
 
-1. Klicka på **[!UICONTROL New Property]** i Experience Platform Launch.
+**Så här skapar du en egenskap i Experience Platform Launch:**
+
+1. I Experience Platform Launch väljer du **[!UICONTROL New Property]**.
 1. I dialogrutan **[!UICONTROL Create Property]** anger du ett beskrivande namn, till exempel webbplatsens titel, i fältet **[!UICONTROL Name]**. Till exempel, `DynamicMediaViewersProp.`
 1. Ange webbplatsens domän i fältet **[!UICONTROL Domains]**.
 1. Aktivera **[!UICONTROL Configure for extension development (cannot be modified later)]** i listrutan **[!UICONTROL Advanced Options]** om det tillägg som du vill använda – i det här fallet *Dynamic Media-visningsprogram* – inte släppts än.
 
    ![image2019-7-8_16-3-47](assets/image2019-7-8_16-3-47.png)
 
-1. Klicka på **[!UICONTROL Save]**.
+1. Välj **[!UICONTROL Save]**.
 
-   Klicka på den nya egenskapen och fortsätt sedan till *Installation och konfiguration av tillägg*.
+   Välj den nya egenskapen och gå sedan vidare till *Installation och konfiguration av tillägg*.
 
 ### Installera och konfigurera tillägg {#installing-and-setup-of-extensions}
 
-Alla tillgängliga tillägg i Experience Platform Launch visas under **[!UICONTROL Extensions > Catalog]**.
+Alla tillgängliga tillägg i Experience Platform Launch visas under **[!UICONTROL Extensions]** > **[!UICONTROL Catalog]**.
 
-Klicka på **[!UICONTROL Install]** om du vill installera ett tillägg. Utför vid behov en engångskonfiguration och klicka sedan på **[!UICONTROL Save]**.
+Välj **[!UICONTROL Install]** om du vill installera ett tillägg. Utför vid behov en engångskonfiguration och välj sedan **[!UICONTROL Save]**.
 
 Om det behövs måste följande tillägg installeras och konfigureras:
 
 * (Obligatoriskt) *Experience Cloud ID-tjänsttillägg*
 
-Ingen ytterligare konfiguration behövs. Godkänn för föreslagna värden. När du är klar ska du klicka på **[!UICONTROL Save]**.
+Ingen ytterligare konfiguration behövs. Godkänn för föreslagna värden. Se till att du väljer **[!UICONTROL Save]** när du är klar.
 
 Se [Experience Cloud ID-tjänsttillägg](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html#extensions-ref).
 
 * (Obligatoriskt) *Adobe Analytics*-tillägg
 
-Om du vill konfigurera det här tillägget måste du ha det Report Suite-ID som finns i Adobe Analytics, under **[!UICONTROL Admin > Report Suite]**, under kolumnrubriken **[!UICONTROL Report Suite ID]**.
+Om du vill konfigurera det här tillägget måste du ha det Report Suite-ID som finns i Adobe Analytics, under **[!UICONTROL Admin]** > **[!UICONTROL Report Suite]**, under kolumnrubriken **[!UICONTROL Report Suite ID]**.
 
 (Endast i demonstrationssyfte används Report Suite-ID:t för **[!UICONTROL DynamicMediaViewersExtensionDoc]** Report Suite i följande skärmbilder. Detta ID skapades och användes tidigare när du [valde en rapportsvit](#selecting-a-report-suite).)
 
@@ -548,7 +550,7 @@ På sidan Installera tillägg anger du rapportsvits-ID:t i fälten **[!UICONTROL
 
 Expandera **[!UICONTROL General]** på sidan **[!UICONTROL Install Extension]** och ange sedan spårningsservern. Spårningsservern följer mallen `<trackingNamespace>.sc.omtrdc.net`, där `<trackingNamespace>` är den information som hämtas i e-postmeddelandet om etablering.
 
-Klicka på **[!UICONTROL Save]**.
+Välj **[!UICONTROL Save]**.
 
 Se [Adobe Analytics Extension](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html#extensions-ref).
 
@@ -572,7 +574,7 @@ När tilläggen har installerats och konfigurerats visas minst följande fem til
 
 ![image2019-7-22_12-7-36](assets/image2019-7-22_12-7-36.png)
 
-### Konfigurera dataelement och regler {#setting-up-data-elements-and-rules}
+### Ställ in dataelement och regler {#setting-up-data-elements-and-rules}
 
 I Experience Platform Launch skapar du dataelement och regler som behövs för att spåra Dynamic Media-visningsprogram.
 
@@ -580,7 +582,7 @@ Se [Hur data- och händelsespårning fungerar i integreringen](#how-data-and-eve
 
 Se [Exempelkonfiguration](#sample-configuration) för en exempelkonfiguration i Experience Platform Launch som visar hur du spårar ett resursnamn när visningsprogrammet läses in.
 
-Se [Konfigurera tillägget Dynamic Media Viewer](#configuring-the-dynamic-media-viewers-extension) för detaljerad information om tilläggets funktioner.
+Se [Konfigurera tillägget Dynamic Media Viewer](#configuring-the-dynamic-media-viewers-extension) för ingående information om tilläggets funktioner.
 
 ### Publicera ett bibliotek {#publishing-a-library}
 
@@ -599,7 +601,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
 1. Första gången du öppnar fliken Publicering i Experience Platform Launch är bibliotekslistan tom.
 
-   Klicka på **[!UICONTROL Add New Library]** i den vänstra kolumnen.
+   Välj **[!UICONTROL Add New Library]** i den vänstra kolumnen.
 
    ![image2019-7-15_14-43-17](assets/image2019-7-15_14-43-17.png)
 
@@ -607,11 +609,11 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    *DynamicMediaViewersLib*
 
-   Välj miljönivå i listrutan Miljö. Till att börja med är bara utvecklingsnivån tillgänglig för val. Klicka på **[!UICONTROL Add All Changed Resources]** längst ned till vänster på sidan.
+   Välj miljönivå i listrutan Miljö. Till att börja med är bara utvecklingsnivån tillgänglig för val. Välj **[!UICONTROL Add All Changed Resources]** längst ned till vänster på sidan.
 
    ![image2019-7-15_14-49-41](assets/image2019-7-15_14-49-41.png)
 
-1. Klicka på **[!UICONTROL Save & Build for Development]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Save & Build for Development]** längst upp till höger på sidan.
 
    Om några minuter är biblioteket klart att användas.
 
@@ -619,36 +621,36 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    >[!NOTE]
    >
-   >Nästa gång du ändrar konfigurationen för Experience Platform Launch går du till fliken **[!UICONTROL Publishing]** under konfigurationen **[!UICONTROL Property]** och klickar sedan på det bibliotek du skapat tidigare.
+   >Nästa gång du ändrar konfigurationen för Experience Platform Launch går du till fliken **[!UICONTROL Publishing]** under konfigurationen **[!UICONTROL Property]** och väljer sedan det bibliotek du skapat tidigare.
    >
    >
-   >Klicka på **[!UICONTROL Add All Changed Resources]** på bibliotekets publiceringsskärm och klicka sedan på **[!UICONTROL Save & Build for Development]**.
+   >Välj **[!UICONTROL Add All Changed Resources]** på bibliotekets publiceringsskärm och välj sedan **[!UICONTROL Save & Build for Development]**.
 
-#### Flytta upp ett bibliotek genom miljönivåer {#moving-a-library-up-through-environment-levels}
+#### Flytta upp ett bibliotek via miljönivåer {#moving-a-library-up-through-environment-levels}
 
-1. När ett nytt bibliotek har lagts till finns det i utvecklingsmiljön. Om du vill flytta den till nivån Mellanlagringsmiljö (som motsvarar kolumnen Skickat) går du till listrutan i biblioteket och klickar på **[!UICONTROL Submit for Approval]**.
+1. När ett nytt bibliotek har lagts till finns det i utvecklingsmiljön. Om du vill flytta den till nivån Mellanlagringsmiljö (som motsvarar kolumnen Skickat) väljer du **[!UICONTROL Submit for Approval]** i bibliotekets nedrullningsbara meny.
 
    ![image2019-7-15_15-52-37](assets/image2019-7-15_15-52-37.png)
 
-1. Klicka på **[!UICONTROL Submit]** i bekräftelsedialogrutan.
+1. Välj **[!UICONTROL Submit]** i bekräftelsedialogrutan.
 
-   När biblioteket har flyttats till kolumnen Skickat går du till listrutan för biblioteket och klickar på **[!UICONTROL Build for Staging]**.
+   När biblioteket har flyttats till kolumnen Skickat väljer du **[!UICONTROL Build for Staging]** i listrutan för biblioteket.
 
    ![image2019-7-15_15-54-37](assets/image2019-7-15_15-54-37.png)
 
 1. Om du vill flytta biblioteket från mellanlagringsmiljön till produktionsmiljön (kolumnen Publicerad) följer du en liknande process.
 
-   Klicka först på **[!UICONTROL Approve for Publishing]** i listrutan.
+   Välj först **[!UICONTROL Approve for Publishing]** i listrutan.
 
    ![image2019-7-15_16-7-39](assets/image2019-7-15_16-7-39.png)
 
-1. Klicka på **[!UICONTROL Build & Publish to Production]** i listrutan.
+1. Välj **[!UICONTROL Build & Publish to Production]** i listrutan.
 
    ![image2019-7-15_16-8-9](assets/image2019-7-15_16-8-9.png)
 
    Mer information om publiceringsprocessen i Experience Platform Launch finns i [Publicera](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html#publish).
 
-## Konfigurera Adobe Experience Manager för integrering {#configuring-adobe-experience-manager-for-the-integration}
+## Konfigurera Adobe Experience Manager för integreringen {#configuring-adobe-experience-manager-for-the-integration}
 
 <!-- Prerequisites list below should be verified by Sasha -->
 
@@ -665,38 +667,38 @@ Konfigurationen av Experience Manager består av följande två stora steg:
 
 ### Konfigurera Experience Manager IMS {#configuring-aem-ims}
 
-1. Klicka på verktygsikonen (hammer) i författaren till Experience Manager och klicka sedan på **[!UICONTROL Security > Adobe IMS Configurations]**.
+1. I författaren till Experience Manager väljer du verktygsikonen (hammer) och går sedan till **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
    ![2019-07-25_11-52-58](assets/2019-07-25_11-52-58.png)
 
-1. Klicka på **[!UICONTROL Create]** i det övre vänstra hörnet på konfigurationssidan för Adobe IMC.
-1. På sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** går du till listrutan **[!UICONTROL Cloud Solution]** och klickar på **[!UICONTROL Experience Platform Data Collection]**.
-1. Aktivera **[!UICONTROL Create new certificate]** och ange sedan ett meningsfullt värde för certifikatet i textfältet. Exempel: *AdobeLaunchIMSCert*. Klicka på **[!UICONTROL Create certificate]**.
+1. På konfigurationssidan för Adobe IMC, i det övre vänstra hörnet, väljer du **[!UICONTROL Create]**.
+1. På sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** väljer du **[!UICONTROL Experience Platform Data Collection]** i listrutan **[!UICONTROL Cloud Solution]**.
+1. Aktivera **[!UICONTROL Create new certificate]** och ange sedan ett meningsfullt värde för certifikatet i textfältet. Exempel: *AdobeLaunchIMSCert*. Välj **[!UICONTROL Create certificate]**.
 
    Följande informationsmeddelande visas:
 
    *Om du vill hämta en giltig åtkomsttoken måste det nya certifikatets offentliga nyckel läggas till i det tekniska kontot på Adobe I/O!*
 
-   Om du vill stänga dialogrutan Info klickar du på **[!UICONTROL OK]**.
+   Om du vill stänga dialogrutan Info väljer du **[!UICONTROL OK]**.
 
    ![2019-07-25_12-09-24](assets/2019-07-25_12-09-24.png)
 
-1. Klicka på **[!UICONTROL Download Public Key]** om du vill hämta en offentlig nyckelfil (`*.crt`) till ditt lokala system.
+1. Välj **[!UICONTROL Download Public Key]** om du vill hämta en offentlig nyckelfil (`*.crt`) till ditt lokala system.
 
    >[!NOTE]
    >
-   >Nu: ***låt*** sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** vara öppen; stäng ***inte*** sidan och klicka ***inte*** på Nästa. Du kommer att gå tillbaka till den här sidan senare i stegen.
+   >***lämna*** sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** öppen; ***stäng inte*** sidan och ***markera inte*** **[!UICONTROL Next]**. Du kommer att gå tillbaka till den här sidan senare i stegen.
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
 1. Navigera till [Adobe I/O-konsolen](https://console.adobe.io/integrations) på en ny flik i webbläsaren.
 
-1. På sidan **[!UICONTROL Adobe I/O Console Integrations]**, nära det övre högra hörnet, klickar du på **[!UICONTROL New integration]**.
-1. I dialogrutan **[!UICONTROL Create a new integration]** kontrollerar du att alternativknappen **[!UICONTROL Access an API]** är markerad och sedan klickar du på **[!UICONTROL Continue]**.
+1. På sidan **[!UICONTROL Adobe I/O Console Integrations]**, nära det övre högra hörnet, väljer du **[!UICONTROL New integration]**.
+1. Kontrollera att alternativknappen **[!UICONTROL Access an API]** är markerad i dialogrutan **[!UICONTROL Create a new integration]** och välj sedan **[!UICONTROL Continue]**.
 
    ![2019-07-25_13-04-20](assets/2019-07-25_13-04-20.png)
 
-1. På den andra **[!UICONTROL Create a new integration]**-sidan aktiverar du (sätter på) alternativknappen **[!UICONTROL Experience Platform Launch API]**. I sidans nedre högra hörn klickar du på **[!UICONTROL Continue]**.
+1. På den andra **[!UICONTROL Create a new integration]**-sidan aktiverar du (sätter på) alternativknappen **[!UICONTROL Experience Platform Launch API]**. Välj **[!UICONTROL Continue]** längst ned till höger på sidan.
 
    ![2019-07-25_13-13-54](assets/2019-07-25_13-13-54.png)
 
@@ -714,8 +716,8 @@ Konfigurationen av Experience Manager består av följande två stora steg:
 
    ![2019-07-25_13-49-18](assets/2019-07-25_13-49-18.png)
 
-1. Klicka på **[!UICONTROL Create integration]**.
-1. På sidan **[!UICONTROL Integration created]** klickar du på **[!UICONTROL Continue to integration details]**.
+1. Välj **[!UICONTROL Create integration]**.
+1. Välj **[!UICONTROL Continue to integration details]** på sidan **[!UICONTROL Integration created]**.
 
    ![2019-07-25_14-16-33](assets/2019-07-25_14-16-33.png)
 
@@ -728,9 +730,9 @@ Konfigurationen av Experience Manager består av följande två stora steg:
    ![2019-07-25_14-35-30](assets/2019-07-25_14-35-30.png)
    _Sidan med integreringsinformation_
 
-1. Gå tillbaka till sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** som du öppnade tidigare. Klicka på **[!UICONTROL Next]** i det övre högra hörnet av sidan för att öppna sidan **[!UICONTROL Account]** i fönstret **[!UICONTROL Adobe IMS Technical Account Configuration]**.
+1. Gå tillbaka till sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** som du öppnade tidigare. I det övre högra hörnet på sidan väljer du **[!UICONTROL Next]** för att öppna sidan **[!UICONTROL Account]** i fönstret **[!UICONTROL Adobe IMS Technical Account Configuration]**.
 
-   (Om du stängde sidan tidigare går du tillbaka till författaren av Experience Manager och klickar sedan på **[!UICONTROL Tools > Security > Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Experience Platform Launch]**. I listrutan **[!UICONTROL Certificate]** markerar du namnet på det tidigare skapade certifikatet.
+   (Om du stängde sidan tidigare går du tillbaka till författaren till Experience Manager och går till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Välj **[!UICONTROL Create]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Experience Platform Launch]**. I listrutan **[!UICONTROL Certificate]** markerar du namnet på det tidigare skapade certifikatet.
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
    _Adobe IMS Technical Account Configuration - certifikatsida_
@@ -743,7 +745,7 @@ Konfigurationen av Experience Manager består av följande två stora steg:
 1. På sidan **[!UICONTROL Account]** fyller du i följande fält:
 
    * **[!UICONTROL Title]** - Ange en beskrivande kontotitel.
-   * **[!UICONTROL Authorization Server]** - Gå tillbaka till sidan Integreringsinformation som du öppnade tidigare. Klicka på fliken **[!UICONTROL JWT]**. Kopiera servernamnet - utan sökvägen - enligt markeringen nedan.
+   * **[!UICONTROL Authorization Server]** - Gå tillbaka till sidan Integreringsinformation som du öppnade tidigare. Välj fliken **[!UICONTROL JWT]**. Kopiera servernamnet - utan sökvägen - enligt markeringen nedan.
 
 (exempelservernamnet är endast avsett för förklaringar)   Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
 Till exempel `https://ims-na1.adobelogin.com/`
@@ -752,14 +754,14 @@ Till exempel `https://ims-na1.adobelogin.com/`
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
    _Detaljsida för integrering - fliken JWT_
 
-1. **[!UICONTROL API Key]** – Gå tillbaka till sidan med integreringsinformation. Klicka på fliken **[!UICONTROL Overview]** och sedan till höger om fältet **[!UICONTROL API Key (Client ID)]** klickar du på **[!UICONTROL Copy]**.
+1. **[!UICONTROL API Key]** – Gå tillbaka till sidan med integreringsinformation. Välj fliken **[!UICONTROL Overview]** och välj **[!UICONTROL Copy]** till höger om fältet **[!UICONTROL API Key (Client ID)]**.
 
    Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in nyckeln i respektive fält.
 
    ![2019-07-25_14-35-333](assets/2019-07-25_14-35-333.png)
    _Sidan med integreringsinformation_
 
-1. **[!UICONTROL Client Secret]**– Gå tillbaka till sidan med integreringsinformation. Klicka på **[!UICONTROL Retrieve Client Secret]** på fliken **[!UICONTROL Overview]**. Till höger om fältet **[!UICONTROL Client secret]** klickar du på **[!UICONTROL Copy]**.
+1. **[!UICONTROL Client Secret]**– Gå tillbaka till sidan med integreringsinformation. Välj **[!UICONTROL Retrieve Client Secret]** på fliken **[!UICONTROL Overview]**. Välj **[!UICONTROL Copy]** till höger om fältet **[!UICONTROL Client secret]**.
 
    Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in nyckeln i respektive fält.
 
@@ -774,7 +776,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
    ![2019-07-25_22-08-30](assets/2019-07-25_22-08-30.png)
 
-1. Klicka på **[!UICONTROL Create]** i det övre högra hörnet på sidan **[!UICONTROL Account]**.
+1. Välj **[!UICONTROL Create]** i det övre högra hörnet på sidan **[!UICONTROL Account]**.
 
    När Experience Manager IMS är konfigurerat har du nu ett nytt IMSA-konto som listas under **[!UICONTROL Adobe IMS Configurations]**.
 
@@ -782,7 +784,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
 ## Konfigurera Experience Platform Launch Cloud för integrering {#configuring-adobe-launch-cloud-for-the-integration}
 
-1. Klicka på verktygsikonen (hammer) i Experience Manager-författaren, nära det övre vänstra hörnet, och klicka sedan på **[!UICONTROL Cloud Services > Experience Platform Launch Configurations]**.
+1. I författaren till Experience Manager, nära det övre vänstra hörnet, väljer du verktygsikonen (hammer) och går sedan till **[!UICONTROL Cloud Services]** > **[!UICONTROL Experience Platform Launch Configurations]**.
 
    ![2019-07-26_12-10-38](assets/2019-07-26_12-10-38.png)
 
@@ -792,7 +794,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
-1. Klicka på **[!UICONTROL Create]** i det övre vänstra hörnet av sidan.
+1. Välj **[!UICONTROL Create]** längst upp till vänster på sidan.
 1. På sidan **[!UICONTROL General]** (sida 1/3) i fönstret **[!UICONTROL Create Experience Platform Launch Configuration]** fyller du i följande fält:
 
    * **[!UICONTROL Title]** - Ange en beskrivande konfigurationstitel. Till exempel, `We.Retail Launch cloud configuration`.
@@ -806,7 +808,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
    ![image2019-7-15_14-34-23](assets/image2019-7-15_14-34-23.png)
 
-1. Klicka på **[!UICONTROL Next]** i det övre vänstra hörnet.
+1. I närheten av det övre vänstra hörnet väljer du **[!UICONTROL Next]**.
 1. På sidan **[!UICONTROL Staging]** (sida 2/3) i fönstret **[!UICONTROL Create Experience Platform Launch Configuration]** fyller du i följande fält:
 
    I fältet **[!UICONTROL Library URI]** kontrollerar du platsen för mellanlagringsversionen av ditt Experience Platform Launch-bibliotek. Experience Manager fyller i det här fältet automatiskt.
@@ -824,13 +826,13 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
    ![image2019-7-15_15-21-8](assets/image2019-7-15_15-21-8.png)
 
-1. Klicka på **[!UICONTROL Next]** i det övre högra hörnet.
+1. Välj **[!UICONTROL Next]** i det övre högra hörnet.
 1. På sidan **[!UICONTROL Production]** (sida 3/3) i fönstret **[!UICONTROL Create Experience Platform Launch Configuration]** korrigerar du (vid behov) den automatiskt ifyllda produktions-URI:n på samma sätt som på föregående **[!UICONTROL Staging]**-sida.
-1. Klicka på **[!UICONTROL Create]** i det övre högra hörnet.
+1. Välj **[!UICONTROL Create]** i det övre högra hörnet.
 
    Din nya konfiguration för Experience Platform Launch Cloud skapas och visas bredvid din webbplats.
 
-1. Markera din nya Experience Platform Launch Cloud-konfiguration (en bockmarkering visas till vänster om konfigurationstiteln när den är markerad). Klicka på **[!UICONTROL Publish]** i verktygsfältet.
+1. Markera din nya Experience Platform Launch Cloud-konfiguration (en bockmarkering visas till vänster om konfigurationstiteln när den är markerad). Välj **[!UICONTROL Publish]** i verktygsfältet.
 
    ![image2019-7-15_15-47-6](assets/image2019-7-15_15-47-6.png)
 
