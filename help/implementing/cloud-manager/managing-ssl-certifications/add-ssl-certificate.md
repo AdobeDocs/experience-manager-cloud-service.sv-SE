@@ -2,14 +2,14 @@
 title: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 description: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: e8848a006a28e87a622779ae62bc43c159b2b20c
+source-git-commit: 3b4a9d7c04a5f4feecad0f34c27a894c187152e7
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
-# Lägger till ett SSL-certifikat {#adding-an-ssl-certificate}
+# Lägga till ett SSL-certifikat {#adding-an-ssl-certificate}
 
 >[!NOTE]
 >AEM som Cloud Service accepterar endast OV- (Organization Validation) eller EV-certifikat (Extended Validation). DV-certifikat (domänvalidering) godkänns inte. Dessutom måste alla certifikat vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel. AEM som Cloud Service accepterar SSL-jokertecken för en domän.
@@ -38,9 +38,10 @@ Följ stegen nedan för att konvertera SSL-filernas format till PEM:
 
 * En användare måste ha rollen Business Owner eller Deployment Manager för att kunna installera ett SSL-certifikat i Cloud Manager.
 
-* Molnhanteraren tillåter vid en given tidpunkt högst 10 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen.
+* Molnhanteraren tillåter vid en given tidpunkt högst 10 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen. Ett certifikat kan vanligtvis omfatta flera domäner (upp till 100 SAN-nätverk). Överväg därför att gruppera flera domäner i samma certifikat för att hålla sig inom denna gräns.
 
-## Lägger till ett certifikat {#adding-a-cert}
+
+## Lägga till ett certifikat {#adding-a-cert}
 
 Följ stegen nedan för att lägga till ett certifikat:
 
@@ -85,6 +86,6 @@ Du kan verifiera att den privata nyckeln och `main/server`-certifikatet matchar 
 >[!NOTE]
 >Utdata för dessa två kommandon måste vara exakt likadana. Om du inte kan hitta en matchande privat nyckel till ditt `main/server`-certifikat måste du ange en ny nyckel för certifikatet genom att generera en ny CSR och/eller begära ett uppdaterat certifikat från din SSL-leverantör.
 
-### Certifikatets giltighetsdatum {#certificate-validity-dates}
+### Giltighetsdatum för certifikat {#certificate-validity-dates}
 
 SSL-certifikatet förväntas vara giltigt i minst 90 dagar framöver. Du bör kontrollera certifikatkedjans giltighet.
