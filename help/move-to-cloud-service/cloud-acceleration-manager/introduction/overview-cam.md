@@ -1,12 +1,9 @@
 ---
 title: Översikt över Cloud Acceleration Manager
 description: Den här sidan ger en översikt till Cloud Acceleration Manager.
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: a38238ed1bf726fa5a123d820bc2ff4d220f3606
+source-git-commit: 5a726471fb8f049d837b0ae1a44f73e6411ec225
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
@@ -14,4 +11,4 @@ ht-degree: 0%
 
 # Översikt över Cloud Acceleration Manager {#overview-cam}
 
-Cloud Acceleration Manager ger kunderna en helhetsupplevelse för migreringar som vägleder dem under hela resan genom att tillhandahålla en inledande utvärdering som pekar ut dem mot rätt verktyg, dokumentation och bästa metoder för att se till att de kan publicera AEM som en Cloud Service.
+Cloud Acceleration Manager är en molnbaserad applikation som är utformad för att vägleda era IT-team under hela övergångsresan, från planering till live Cloud Service. Konfigurera era team för en framgångsrik migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa er att AEM som Cloud Service under hela kundresan.
