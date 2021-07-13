@@ -1,9 +1,9 @@
 ---
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
-source-git-commit: 6fcde5440a5e2eec57b69b14dca93192634b3c3a
+source-git-commit: 4041e3fd9a479a64ed38e2bf1a6251fda39e55c2
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Klicka på projektkortet för att öppna projektstartsidan och navigera till avs
 ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-1.png)
 
 >[!NOTE]
->Mer information finns i Skapa och hantera ett projekt i Cloud Acceleration Manager.
+>Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en#create-project).
 
 
 ## Använda lokalt utvecklingskort {#local-development}
@@ -102,4 +102,4 @@ Du kan också beräkna storleken på specifika databassökvägar med parametern 
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du använder implementeringsfasen är du nu redo att gå vidare till nästa steg, Using the GoLive Phase.
+När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du använder implementeringsfasen är du nu redo att gå vidare till nästa steg, [Använda Go Live Phase](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-golive-phase.html?lang=en).
