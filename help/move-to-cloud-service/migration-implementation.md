@@ -2,10 +2,10 @@
 title: Implementeringsfas
 description: Implementeringsfas
 exl-id: 176dd79d-0d72-443c-87db-dab24fb48b96
-source-git-commit: 6fcde5440a5e2eec57b69b14dca93192634b3c3a
+source-git-commit: fadab55c0fb743cb0ce7102686b2f3f10f93d73b
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 87%
+source-wordcount: '950'
+ht-degree: 89%
 
 ---
 
@@ -110,17 +110,4 @@ Följ resurserna nedan för att lära dig hur du använder Cloud Manager för at
 
 * [Driftsätta kod](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html)
 
-## Bästa praxis för publiceringsförberedelse {#go-live}
 
->[!CONTEXTUALHELP]
->id="aemcloud_golive_prep"
->title="Go-Live-förberedelser"
->abstract="För att säkerställa en smidig och framgångsrik publicering AEM en Cloud Service bör du planera för frysning av kod och innehåll, testning av iterationer, innehållsuppdateringar, prestandatester, säkerhetstester med mera."
-
-För att säkerställa en smidig och framgångsrik publicering av AEM as a Cloud Service bör du överväga att utföra följande steg:
-
-* Schemalägga kod och frysperiod för innehåll
-* Utföra den slutliga innehållsuppdateringen
-* Slutföra testiterationer
-* Köra prestanda- och säkerhetstester
-* Kom igång
