@@ -4,10 +4,10 @@ description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media.
 feature: Bilduppsättningar
 role: User
 exl-id: 2eb71f24-73d9-4b5c-8605-923a0e3d1505
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 1d42305b6a597dc95bff8b34eee8279eb0e511f3
 workflow-type: tm+mt
-source-wordcount: '1983'
-ht-degree: 8%
+source-wordcount: '1977'
+ht-degree: 5%
 
 ---
 
@@ -49,9 +49,9 @@ Så här kommer du igång snabbt:
 
    I Bilduppsättningar klickar användare på miniatyrbilder i Bilduppsättningsvisningsprogrammet.
 
-   Om du vill skapa en bilduppsättning i Resurser trycker eller klickar du på **[!UICONTROL Create > Image Sets]**. Lägg sedan till bilder och klicka på **[!UICONTROL Save]**.
+   Om du vill skapa en bilduppsättning i Resurser väljer du **[!UICONTROL Create]** > **[!UICONTROL Image Sets]**. Lägg sedan till bilder och klicka på **[!UICONTROL Save]**.
 
-   Se [Förbereda bilduppsättningsresurser för överföring och överföring av filer](#uploading-assets-in-image-sets).
+   Se [Förbered bilduppsättningsresurser för överföring och överföring av filer](#uploading-assets-in-image-sets).
 
    Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
@@ -59,12 +59,12 @@ Så här kommer du igång snabbt:
 
    Administratörer kan skapa eller ändra förinställningar för bildspelsvisningsprogrammet. Om du vill visa bilduppsättningen med en visningsförinställning markerar du bilduppsättningen och väljer **[!UICONTROL Viewers]** i listrutan till vänster.
 
-   Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools > Assets > Viewer Presets]**.
+   Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]**.
 
 1. (Valfritt) [Visa bilduppsättningar](/help/assets/dynamic-media/image-sets.md#viewing-image-sets) som har skapats med gruppuppsättningsförinställningar.
 1. [Förhandsgranska bilduppsättningar](/help/assets/dynamic-media/previewing-assets.md).
 
-   Markera bilduppsättningen och du kan förhandsgranska den. Tryck på miniatyrbildikonerna för att undersöka din bilduppsättning i det valda visningsprogrammet. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan med spår.
+   Markera bilduppsättningen och du kan förhandsgranska den. Markera miniatyrbildikonerna om du vill undersöka bilduppsättningen i det valda visningsprogrammet. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan med spår.
 
 1. [Publicera bilduppsättningar](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
@@ -76,7 +76,7 @@ Så här kommer du igång snabbt:
 
    Markera bilduppsättningen och välj **[!UICONTROL Viewers]** i den vänstra listrutan.
 
-   Läs mer i [Länka en bilduppsättning till en webbsida](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
+   Se [Länka en bilduppsättning till en webbsida](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
 
 Mer information om hur du redigerar bilduppsättningar finns i [redigera bilduppsättningar](#editing-image-sets). Dessutom kan du visa och redigera [bilduppsättningsegenskaper](/help/assets/manage-digital-assets.md#editing-properties).
 
@@ -90,7 +90,7 @@ Bilduppsättningar har stöd för många bildfilsformat, men förlustfria TIFF-,
 
 Du kan överföra bilder för bilduppsättningar på samma sätt som du [överför andra resurser i Resurser](/help/assets/manage-digital-assets.md#uploading-assets).
 
-### Förbereder bilduppsättningsresurser för överföring {#preparing-image-set-assets-for-upload}
+### Förbered bilduppsättningsresurser för överföring {#preparing-image-set-assets-for-upload}
 
 Innan du skapar bilduppsättningar bör du kontrollera att bilderna har rätt storlek och format.
 
@@ -123,10 +123,10 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 >
 >Bilduppsättningar stöds inte för resurser med &quot;,&quot; (komma) i filnamnet.
 
-**Så här skapar du en bilduppsättning:**
+**Så här skapar du bilduppsättningar:**
 
-1. I Adobe Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen.
-1. Tryck på **[!UICONTROL Navigation > Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och tryck sedan på **[!UICONTROL Create > Image Set]** för att öppna sidan Redigerare för bilduppsättningar.
+1. I Adobe Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen.
+1. Tryck på **[!UICONTROL Navigation]** > **[!UICONTROL Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och gå sedan till **[!UICONTROL Create]** > **[!UICONTROL Image Set]** för att öppna sidan Bilduppsättningsredigerare.
 
    Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
 
@@ -138,12 +138,12 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL Add Asset]** i det övre vänstra hörnet av bilduppsättningsredigerarsidan.
+   * Välj **[!UICONTROL Add Asset]** i det övre vänstra hörnet av bilduppsättningsredigeringssidan.
 
-   * Tryck på **[!UICONTROL Tap to open Asset Selector]** mitt på sidan Bilduppsättningsredigerare.
-   Tryck för att välja resurser som du vill inkludera i din bilduppsättning. De markerade resurserna har en bockmarkeringsikon. När du är klar trycker du **[!UICONTROL Select]** i det övre högra hörnet på sidan.
+   * Välj **[!UICONTROL Tap to open Asset Selector]** mitt på sidan Bilduppsättningsredigerare.
+   Tryck för att välja resurser som du vill inkludera i din bilduppsättning. De markerade resurserna har en bockmarkeringsikon. När du är klar väljer du **[!UICONTROL Select]** längst upp till höger på sidan.
 
-   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka eller klicka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
+   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och välja **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och välj sedan ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att markera ikonen Visa och välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
 
    Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
@@ -159,12 +159,12 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 1. (Valfritt) Gör något av följande:
 
-   * Om du vill ta bort en bild markerar du bilden och trycker på **[!UICONTROL Delete Asset]**.
+   * Om du vill ta bort en bild markerar du bilden och väljer **[!UICONTROL Delete Asset]**.
 
-   * Om du vill använda en förinställning trycker du på **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en förinställning som ska användas på alla resurser samtidigt.
+   * Om du vill använda en förinställning väljer du **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en förinställning som ska användas på alla resurser samtidigt.
    >[!NOTE]
    >
-   >När du skapar bilduppsättningen kan du ändra miniatyrbilden för bilduppsättningen. Du kan också låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i bilduppsättningen. Om du vill välja en miniatyrbild trycker du på **[!UICONTROL Change thumbnail]** ovanför fältet Titel på sidan för bilduppsättningsredigeraren. Markera sedan en bild (du kan navigera till andra mappar om du även vill söka efter bilder). Om du markerade en miniatyrbild och sedan vill att Experience Manager ska generera en från bilduppsättningen väljer du **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail]**.
+   >När du skapar bilduppsättningen kan du ändra miniatyrbilden för bilduppsättningen. Du kan också låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i bilduppsättningen. Om du vill välja en miniatyrbild väljer du **[!UICONTROL Change thumbnail]** ovanför fältet Titel på sidan Bilduppsättningsredigerare. Markera sedan en bild (du kan navigera till andra mappar om du även vill söka efter bilder). Om du markerade en miniatyrbild och sedan vill att Experience Manager ska generera en från bilduppsättningen väljer du **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail]**.
 
 1. Klicka på **[!UICONTROL Save]**. Den nya bilduppsättningen visas i den mapp du skapade den i.
 
@@ -178,7 +178,7 @@ Du kan skapa bilduppsättningar antingen i användargränssnittet eller automati
 
 Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet. Du kan visa uppsättningarna på tre olika sätt. (Dessa metoder är tillgängliga även om du har skapat bilduppsättningarna i användargränssnittet).
 
-* Öppna egenskaperna för en resurs. Egenskaper anger vad som ställer in den valda resursen eller en medlem i. Om du vill visa hela uppsättningen trycker du på uppsättningens namn.
+* Öppna egenskaperna för en resurs. Egenskaper anger vad som ställer in den valda resursen eller en medlem i. Om du vill se hela uppsättningen markerar du uppsättningens namn.
 
    ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties.png)
 
@@ -210,27 +210,27 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
 
 1. Gör något av följande:
 
-   * Håll pekaren över en bilduppsättningsresurs och tryck sedan på **[!UICONTROL Edit]** (pennikon).
-   * Håll pekaren över en bilduppsättningsresurs, tryck på **[!UICONTROL Select]** (bockmarkeringsikon) och tryck sedan på **[!UICONTROL Edit]** i verktygsfältet.
-   * Tryck på en bilduppsättningsresurs och tryck sedan på **[!UICONTROL Edit]** (pennikon) i verktygsfältet.
+   * Håll pekaren över en bilduppsättningsresurs och välj sedan **[!UICONTROL Edit]** (pennikon).
+   * Håll pekaren över en bilduppsättningsresurs, välj **[!UICONTROL Select]** (bockmarkeringsikon) och välj sedan **[!UICONTROL Edit]** i verktygsfältet.
+   * Tryck på en bilduppsättningsresurs och välj sedan **[!UICONTROL Edit]** (pennikon) i verktygsfältet.
 
 1. Gör något av följande om du vill redigera bilderna i bilduppsättningen:
 
    * Om du vill ändra ordning på resurser drar du en bild till en ny plats (markera sorteringsikonen för att flytta objekt).
    * Om du vill sortera objekt i stigande eller fallande ordning klickar du på kolumnrubriken.
-   * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Add Asset]**. Navigera till en resurs, markera den och tryck sedan på **[!UICONTROL Select]** nära det övre högra hörnet på sidan.
+   * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Add Asset]**. Navigera till en resurs, markera den och välj sedan **[!UICONTROL Select]** nära det övre högra hörnet på sidan.
 
       >[!NOTE]
       >
       >Om du tar bort den bild som Experience Manager använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
-   * Om du vill ta bort en resurs markerar du den och trycker eller klickar på **[!UICONTROL Delete Asset]**.
-   * Om du vill använda en förinställning trycker du på **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en visningsförinställning.
-   * Om du vill lägga till eller ändra en miniatyrbild markerar du miniatyrbildikonen bredvid resursens högra sida. Navigera till den nya miniatyrbilden eller färgruteresursen, markera den och tryck sedan på **[!UICONTROL Select]**.
-   * Om du vill ta bort en hel bilduppsättning går du till bilduppsättningen, markerar den och trycker på **[!UICONTROL Delete]**.
+   * Om du vill ta bort en resurs markerar du den och väljer **[!UICONTROL Delete Asset]**.
+   * Om du vill använda en förinställning väljer du **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en visningsförinställning.
+   * Om du vill lägga till eller ändra en miniatyrbild markerar du miniatyrbildikonen bredvid resursens högra sida. Navigera till den nya miniatyrbilden eller färgruteresursen, markera den och välj **[!UICONTROL Select]**.
+   * Om du vill ta bort en hel bilduppsättning går du till bilduppsättningen, markerar den och väljer **[!UICONTROL Delete]**.
 
    >[!NOTE]
    >
-   >Du kan redigera bilderna i en bilduppsättning. Navigera till uppsättningen och tryck på **[!UICONTROL Set Members]** i den vänstra listen. Öppna redigeringsfönstret genom att trycka på pennikonen på en resurs.
+   >Du kan redigera bilderna i en bilduppsättning. Navigera till uppsättningen och välj **[!UICONTROL Set Members]** i den vänstra listen. Om du vill öppna redigeringsfönstret väljer du pennikonen på en resurs.
 
 1. Tryck på **[!UICONTROL Save]** när du är klar med redigeringen.
 
