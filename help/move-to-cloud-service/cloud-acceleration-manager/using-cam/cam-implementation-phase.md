@@ -1,9 +1,9 @@
 ---
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
-source-git-commit: 4041e3fd9a479a64ed38e2bf1a6251fda39e55c2
+source-git-commit: b1a2b7b78349524e842e30f69729fb3351765582
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '610'
 ht-degree: 2%
 
 ---
@@ -37,14 +37,14 @@ Följ det här avsnittet för att utforska aktivitetskortet för lokal utvecklin
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-2.png)
 
-1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
+1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-3.png)
 
 
 ## Använda omfaktoriseringskort {#code-refactoring}
 
-Aktivitetskortet Code Refactoring ger all relevant information och markerar de områden för kodomfaktorisering som du behöver granska när du går till AEM som en Cloud Service.
+Aktivitetskortet Code Refactoring ger all relevant information och markerar de områden för kodomfaktorisering som du behöver granska och lösa när du går till AEM som en Cloud Service.
 
 Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 
@@ -70,7 +70,7 @@ Följ det här avsnittet för att utforska AEM som aktivitetskort för driftsät
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-6.png)
 
-1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
+1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/aem-deployment-card.png)
 
@@ -85,16 +85,19 @@ Följ det här avsnittet för att utforska aktivitetskortet för innehållsöver
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-8.png)
 
-1. En innehållskarusell med relevant information för den här fasen av migreringsresan visas.
+1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/content-transfertool-card.png)
 
    >[!NOTE]
    >Granska [förutsättningarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en) och [god praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en) innan du använder verktyget Innehållsöverföring.
 
-### Aktivitet för verktyget Innehållsöverföring beräknas {#calculating}
+### Beräknar överföringstid för innehåll {#calculating}
 
 En ny verktygskalkylator för innehållsöverföring har tillhandahållits för att beräkna hur lång tid det kan ta att slutföra innehållsöverföringsaktiviteten. Du kan använda storleksreglaget för innehållsdatabas för att välja den storlek som gäller för ditt projekt. Överföringstiden varierar för extraherings- och intagsfaserna.
+
+>[!NOTE]
+>Dessa tider är bara uppskattningar. Faktor som nätverkshastigheter och tid att skala upp instanser har inte tagits med i dessa uppskattningar.
 
 Du kan beräkna storleken på AEM databas genom att köra rapporten Diskanvändning under `http://HOST:PORT/etc/reports/diskusage.html`.
 
@@ -102,4 +105,4 @@ Du kan också beräkna storleken på specifika databassökvägar med parametern 
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du använder implementeringsfasen är du nu redo att gå vidare till nästa steg, [Använda Go Live Phase](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-golive-phase.html?lang=en).
+När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du använder implementeringsfasen är du nu redo att gå vidare till nästa steg i [Go Live Phase](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-golive-phase.html?lang=en).
