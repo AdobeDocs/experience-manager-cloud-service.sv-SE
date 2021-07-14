@@ -3,10 +3,10 @@ title: Felsöka Dynamic Media
 description: Felsökningstips när du använder Dynamic Media.
 role: Admin,User
 exl-id: 3e8a085f-57eb-4009-a5e8-1080b4835ae2
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 1%
+source-wordcount: '992'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ Se [Felsöka en ny Dynamic Media-konfiguration](/help/assets/dynamic-media/confi
 
 Här följer några allmänna tips och tricks för alla resurser.
 
-### Egenskaper för resurssynkroniseringsstatus {#asset-synchronization-status-properties}
+### Statusegenskaper för resurssynkronisering {#asset-synchronization-status-properties}
 
 Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att resursen har synkroniserats från Adobe Experience Manager till Dynamic Media:
 
@@ -179,11 +179,11 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
   <tr>
    <td>Visningsförinställningar publiceras inte</td>
    <td><p>Gå till diagnostiksidan för provhanteraren: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>Lägg märke till beräknade värden. När du arbetar korrekt ser du:</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
-       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>Obs</strong>: Det kan ta ca 10 minuter efter konfigureringen av Dynamic Media molninställningar för de visningsprogramresurser som ska synkroniseras.</p> <p>Om det finns oaktiverade resurser kvar klickar du på någon av <strong>Visa alla oaktiverade resurser</strong>-knapparna för att visa information.</p> </td>
+       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>Obs</strong>: Det kan ta ca 10 minuter efter konfigureringen av Dynamic Media molninställningar för de visningsprogramresurser som ska synkroniseras.</p> <p>Om det finns oaktiverade resurser kvar väljer du någon av knapparna <strong>Visa alla oaktiverade resurser</strong> för att se information.</p> </td>
    <td>
     <ol>
      <li>Navigera till förinställningslistan för visningsprogrammet i administratörsverktygen: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></li>
-     <li>Välj alla förinställningar för visningsprogram och klicka sedan på <strong>Publicera</strong>.</li>
+     <li>Välj alla förinställningar för visningsprogram och välj sedan <strong>Publicera</strong>.</li>
      <li>Navigera tillbaka till exempelhanteraren och observera att antalet oaktiverade resurser nu är noll.</li>
     </ol> </td>
   </tr>
