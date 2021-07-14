@@ -1,18 +1,18 @@
 ---
-title: Använda regeluppsättningar för att omforma URL:er
-description: Lär dig hur du distribuerar regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript™) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
+title: Använd regeluppsättningar för att omforma URL:er
+description: Lär dig hur du distribuerar regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
 role: User
 exl-id: f8010125-ba89-406a-bede-f6aa2f858c70
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
 source-wordcount: '729'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
-# Använda regeluppsättningar för att omforma URL:er {#using-rulesets-to-transform-urls}
+# Använd regeluppsättningar för att omforma URL:er {#using-rulesets-to-transform-urls}
 
-Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript™) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor. Varje regel består av minst ett villkor och minst en åtgärd. En regel utvärderar XML-data mot villkoren, och om ett villkor är uppfyllt utförs rätt åtgärd. Exempel på regeluppsättningar är följande:
+Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor. Varje regel består av minst ett villkor och minst en åtgärd. En regel utvärderar XML-data mot villkoren, och om ett villkor är uppfyllt utförs rätt åtgärd. Exempel på regeluppsättningar är följande:
 
 * Lägga till ett MIME-typsuffix. Många tjänster och webbplatser kräver bildsuffix, som att lägga till `.jpg` till en URL.
 * Skapa en mappsökväg till URL:en för sökmotoroptimering.
@@ -36,11 +36,11 @@ I Dynamic Media-sammanhang kan webbplatser som använder ett XML-baserat system 
 >
 >Var försiktig när du använder linjaler. kan de förhindra att Dynamic Media-innehåll visas på din webbplats.
 
-Det finns exempellinjaler som kan hjälpa dig att skapa en egen linjaluppsättning.
+Det finns exempelregeluppsättningar som kan hjälpa dig att skapa en egen regeluppsättning.
 Se [Referens för regeluppsättning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
 
 Precis som när du skapar alla regeluppsättningar måste du se till att XML-filen är giltig innan du överför den med ett XML-valideringsprogram som xmlvalid.
-Se även [Troubleshooting rule sets](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
+Se även [Felsöka regeluppsättningar](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
 
 Kontrollera också först att du testar regeluppsättningen i en staging-miljö som inte påverkar produktionsmiljön.
 Produktionsmiljöer och staging-miljöer kräver normalt olika inloggningar.
@@ -53,7 +53,7 @@ Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](htt
 
 Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en regeluppsättning](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
 
-**Så här distribuerar du XML-regeluppsättningar:**
+## Distribuera XML-regeluppsättningar {#deploy-xml-rule-sets}
 
 1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
@@ -61,19 +61,19 @@ Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en 
 
 1. Överför regeluppsättningsfilen genom att göra följande:
 
-   * Klicka på **[!UICONTROL Upload]** i fältet Global navigering.
-   * På sidan **[!UICONTROL Upload]**, nära det övre vänstra hörnet, klickar du på **[!UICONTROL Browse]**.
+   * Välj **[!UICONTROL Upload]** i fältet Global navigering.
+   * På sidan **[!UICONTROL Upload]**, nära det övre vänstra hörnet, väljer du **[!UICONTROL Browse]**.
    * Bläddra till regeluppsättningsfilen (XML) i dialogrutan **[!UICONTROL Open]**.
-   * Markera filen och klicka sedan på **[!UICONTROL Open]**.
+   * Markera filen och välj sedan **[!UICONTROL Open]**.
    * Till höger på sidan **[!UICONTROL Upload]** väljer du en målmapp för regeluppsättningsfilen.
    * Kontrollera att Publicera efter överföring är markerat längst ned på sidan.
-   * Klicka på **[!UICONTROL Submit Upload]** längst ned till höger på sidan.
-   * Klicka på **[!UICONTROL Jobs]** i fältet Global navigering för att kontrollera överföringsjobbets status. När kolumnen **[!UICONTROL Status]** på sidan **[!UICONTROL Job]** säger Överför klar fortsätter du till nästa steg.
+   * Välj **[!UICONTROL Submit Upload]** längst ned till höger på sidan.
+   * I fältet Global navigering väljer du **[!UICONTROL Jobs]** för att kontrollera överföringsjobbets status. När kolumnen **[!UICONTROL Status]** på sidan **[!UICONTROL Job]** säger Överför klar fortsätter du till nästa steg.
 
-1. Klicka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]** i navigeringsfältet uppe på sidan.
-1. På sidan **[!UICONTROL Image Server Publish]**, under gruppen **[!UICONTROL Catalog Management]**, letar du upp **[!UICONTROL Rule Set Definition File Path]** och klickar sedan på **[!UICONTROL Select]**.
-1. På sidan **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och klickar sedan på **[!UICONTROL Select]** i den nedre högra hörnet av sidan.
-1. Klicka på **[!UICONTROL Close]** längst ned till höger på sidan Inställningar.
+1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]** i navigeringsfältet uppe på sidan.
+1. På sidan **[!UICONTROL Image Server Publish]**, under gruppen **[!UICONTROL Catalog Management]**, letar du reda på **[!UICONTROL Rule Set Definition File Path]** och väljer sedan **[!UICONTROL Select]**.
+1. På sidan **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och väljer **[!UICONTROL Select]** längst ned till höger på sidan.
+1. Välj **[!UICONTROL Close]** längst ned till höger på sidan Inställningar.
 1. Kör ett Image Server-publiceringsjobb.
 
    Regeluppsättningsvillkoren tillämpas på begäranden till Dynamic Media Image-servrar.
