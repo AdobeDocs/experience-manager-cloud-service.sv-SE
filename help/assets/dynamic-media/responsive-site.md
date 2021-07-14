@@ -4,10 +4,10 @@ description: Lär dig hur du använder funktionen för responsiv kod för att le
 feature: Resurshantering
 role: User
 exl-id: 62af6f3f-9c86-44ad-870d-140f572f99c5
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
 source-wordcount: '318'
-ht-degree: 13%
+ht-degree: 11%
 
 ---
 
@@ -23,7 +23,7 @@ Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplicatio
 
 **Så här levererar du optimerade bilder för en responsiv webbplats:**
 
-1. Navigera till bilden som du vill ange responsiv kod för och tryck på **[!UICONTROL Renditions]** i listrutan.
+1. Navigera till bilden som du vill ange responsiv kod för och välj **[!UICONTROL Renditions]** i listrutan.
 
    ![chlimage_1-408](assets/chlimage_1-408.png)
 
@@ -37,7 +37,7 @@ Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplicatio
    >
    >Bildförinställningar publiceras automatiskt.
 
-1. Tryck på **[!UICONTROL RESS]**.
+1. Välj **[!UICONTROL RESS]**.
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
