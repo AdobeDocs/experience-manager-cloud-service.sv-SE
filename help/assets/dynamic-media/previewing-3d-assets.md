@@ -1,10 +1,13 @@
 ---
 title: Förhandsgranska 3D-resurser
 description: Lär dig hur du förhandsgranskar 3D-resurser i Dynamic Media.
-source-git-commit: d3ee23917eba4a2e4ae1f2bd44f5476d2ff7dce1
+feature: 3D-resurser
+role: User
+exl-id: null
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 4%
+source-wordcount: '559'
+ht-degree: 0%
 
 ---
 
@@ -50,17 +53,17 @@ Dessutom är funktioner i klientdatorn - som en arbetsstation, bärbar dator ell
 **Så här förhandsgranskar du 3D-resurser i Experience Manager:**
 
 1. Se till att du har överfört 3D-resurser till Experience Manager.
-Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överföra resurser](/help/assets/manage-digital-assets.md#uploading-assets).
-1. Tryck på **[!UICONTROL Assets]** > **[!UICONTROL Files]** från Experience Manager på sidan **[!UICONTROL Navigation]**.
+Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
+1. Från Experience Manager, på sidan **[!UICONTROL Navigation]**, gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 
    ![Navigeringssida](/help/assets/dynamic-media/assets/navigation-assets.png)
 
-1. I närheten av det övre högra hörnet på sidan trycker du på **[!UICONTROL Card View]** i listrutan Visa och navigerar sedan till en 3D-resurs som du vill förhandsgranska.
+1. I den nedrullningsbara listan Visa i det övre högra hörnet på sidan väljer du **[!UICONTROL Card View]** och navigerar sedan till en 3D-resurs som du vill förhandsgranska.
 
    ![Val av 3D-kort](/help/assets/dynamic-media/assets/3d-card-select.png)
-   _I kortvyn: tryck på kortet för den 3D-resurs som du vill förhandsgranska._
+   _I kortvyn väljer du kortet för den 3D-resurs som du vill förhandsgranska._
 
-1. Tryck på kortet för 3D-resursen.
+1. Välj kortet för 3D-resursen.
 
    ![Interaktiv förhandsvisning av 3D](/help/assets/dynamic-media/assets/3d-preview.png)
    _Interaktiv förhandsgranskning av en 3D-resurs på sidan med resursinformationsvyn._
@@ -72,7 +75,7 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
    | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
    | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
    | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
-   | **Återställ** | I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
-   | **Helskärmsläge** | Om du vill aktivera helskärmsläget trycker du på ikonen Helskärm längst ned till höger på sidan. |  |  |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |  |  |
 
-1. När du är klar trycker du **[!UICONTROL Close]** i det övre högra hörnet på sidan.
+1. När du är klar väljer du **[!UICONTROL Close]** längst upp till höger på sidan.
