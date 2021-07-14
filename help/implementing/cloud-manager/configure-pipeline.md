@@ -1,14 +1,13 @@
 ---
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
-translation-type: tm+mt
-source-git-commit: 97c3ddd5331d55c5d9b45a29251f584e4bac878b
+exl-id: d2024b42-9042-46a0-879e-110b214c7285
+source-git-commit: e3575278fbfd523a2727e4d659deb057bf2cff9e
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '766'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera CI-CD-pipeline {#configure-ci-cd-pipeline}
 
@@ -33,7 +32,7 @@ I Cloud Manager finns det två typer av pipeline:
 > * konfigurera prestandatestparametrarna.
 
 
-## Konfigurerar produktionspipeline {#setting-up-production-pipeline}
+## Ställ in produktionspipeline {#setting-up-production-pipeline}
 
 Distributionshanteraren ansvarar för att ställa in produktionspipelinen.
 
@@ -109,9 +108,9 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
    ![](assets/configure-pipeline5.png)
 
 
-## Icke-produktion och endast kodkvalitet, rör {#non-production-pipelines}
+## Icke-produktion och endast kodkvalitet, rörledningar {#non-production-pipelines}
 
-Förutom den huvudsakliga rörledningen som distribueras till stadium och produktion kan kunderna lägga upp ytterligare rörledningar, som kallas **icke-produktionsförlopp**. Dessa pipelines kör alltid stegen för bygg- och kodkvalitet. De kan också distribuera till Adobes miljö för hanterade tjänster.
+Förutom den huvudsakliga rörledningen som distribueras till stadium och produktion kan kunderna lägga upp ytterligare rörledningar, som kallas **icke-produktionsförlopp**. Dessa pipelines kör alltid stegen för bygg- och kodkvalitet. De kan också distribueras till AEM som en Cloud Service.
 
 På startskärmen visas dessa rörledningar i ett nytt kort:
 
