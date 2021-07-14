@@ -1,20 +1,20 @@
 ---
-title: Publicera Dynamic Media Assets
+title: Publicera Dynamic Media-resurser
 description: Lär dig hur du publicerar Dynamic Media-resurser.
 contentOwner: Rick Brough
 feature: Resurshantering
 role: User
 exl-id: 8ee759dc-cb8f-4e80-8175-2c3ba06da862
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 2%
 
 ---
 
-# Publicera Dynamic Media Assets {#publishing-dynamic-media-assets}
+# Publicera Dynamic Media-resurser {#publishing-dynamic-media-assets}
 
-Du publicerar dina Dynamic Media-resurser genom att välja de resurser du redan har överfört och trycka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in kod på sidan.
+Du publicerar dina Dynamic Media-resurser genom att markera de resurser du redan har överfört och välja **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in kod på sidan.
 
 Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Eller så kan du selektivt publicera dessa resurser. Se [Konfigurera Dynamic Media](config-dm.md). Eller så kan du selektivt publicera resurser på antingen Dynamic Media eller Adobe Experience Manager, som utesluter varandra, med **[!UICONTROL Selective Publish]** på mappnivå. Se [Arbeta med selektiv publicering i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).
 
