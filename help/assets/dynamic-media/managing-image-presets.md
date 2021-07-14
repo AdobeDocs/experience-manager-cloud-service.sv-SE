@@ -4,9 +4,9 @@ description: Lär dig mer om bildförinställningar och hur du skapar, ändrar o
 feature: Bildförinställningar,visningsprogram,återgivningar
 role: User
 exl-id: a53f40ab-0e27-45f8-9142-781c077a04cc
-source-git-commit: aba8896e304619fe7e73d61b52b83da40766477a
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
-source-wordcount: '3504'
+source-wordcount: '3503'
 ht-degree: 7%
 
 ---
@@ -87,7 +87,7 @@ Om du vill använda Dynamic Media för att förhandsgranska och generera dynamis
 
 Du kommer åt alternativen för processkomponenter i `Rasterize PDF/AI Image Preview Rendition` via arbetsflödet i `DAM Update Asset`.
 
-Välj på Adobe Experience Manager i det övre vänstra hörnet, navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. På sidan Arbetsflödesmodeller väljer du **[!UICONTROL DAM Update Asset]** och sedan **[!UICONTROL Edit]** i verktygsfältet. Dubbeltryck på processkomponenten `Rasterize PDF/AI Image Preview Rendition` på arbetsflödessidan för DAM-uppdatering av resurser för att öppna dialogrutan Stegegenskaper.
+Välj Adobe Experience Manager i det övre vänstra hörnet och gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. På sidan Arbetsflödesmodeller väljer du **[!UICONTROL DAM Update Asset]** och sedan **[!UICONTROL Edit]** i verktygsfältet. Dubbeltryck på processkomponenten `Rasterize PDF/AI Image Preview Rendition` på arbetsflödessidan för DAM-uppdatering av resurser för att öppna dialogrutan Stegegenskaper.
 
 #### Rastrera alternativ för PDF/AI-förhandsvisning av återgivning {#rasterize-pdf-ai-image-preview-rendition-options}
 
