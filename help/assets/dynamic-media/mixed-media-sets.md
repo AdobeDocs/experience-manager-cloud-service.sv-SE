@@ -4,7 +4,7 @@ description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic 
 feature: Blandade medieuppsättningar
 role: User
 exl-id: 7ccde741-38d2-44c9-9378-f2721384aab7
-source-git-commit: aba8896e304619fe7e73d61b52b83da40766477a
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 15%
