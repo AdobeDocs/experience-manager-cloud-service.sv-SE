@@ -4,10 +4,10 @@ description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 feature: Snurrande uppsättningar
 role: User
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
-source-wordcount: '1766'
-ht-degree: 12%
+source-wordcount: '1754'
+ht-degree: 9%
 
 ---
 
@@ -53,7 +53,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]**.
 
-   Se [Lägga till och redigera visningsprogramförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
+   Se [Lägg till och redigera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
    Du kan visa och komma åt uppsättningar som skapats med förinställningar för gruppuppsättningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar, *visas inte* i användargränssnittet.)
 
@@ -71,7 +71,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Markera rotationsuppsättningen och välj sedan **[!UICONTROL Viewers]** i listrutan till vänster.
 
-   Läs [Länka en rotationsuppsättning till en webbsida](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
+   Se [Länka en snurruppsättning till en webbsida](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
 
 Om det behövs kan du [redigera snurruppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra [egenskaper för snurruppsättning](/help/assets/manage-digital-assets.md#editing-properties).
 
@@ -107,7 +107,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
 **Så här skapar du snurruppsättningar:**
 
-1. I Assets navigerar du till den plats där du vill skapa en rotationsuppsättning, klickar sedan på **[!UICONTROL Create]** och väljer **[!UICONTROL Spin Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna. Redigeraren för rotationsuppsättningar visas.
+1. I Resurser navigerar du till den plats där du vill skapa en snurruppsättning, väljer **[!UICONTROL Create]** och väljer sedan **[!UICONTROL Spin Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
 
    ![6_5_spinset-createpulldownmenu](assets/6_5_spinset-createpulldownmenu.png)
 
@@ -117,16 +117,16 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
    >[!NOTE]
    >
-   >När du skapar rotationsuppsättningen kan du ändra miniatyrbilden för rotationsuppsättningen eller låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i rotationsuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har markerat en miniatyrbild och sedan vill att Experience Manager ska generera en från rotationsuppsättningen väljer du **[!UICONTROL Switch to Automatic thumbnail]**.
+   >När du skapar rotationsuppsättningen kan du ändra miniatyrbilden för rotationsuppsättningen eller låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i rotationsuppsättningen. Om du vill välja en miniatyrbild väljer du **[!UICONTROL Change thumbnail]** och markerar en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har markerat en miniatyrbild och sedan vill att Experience Manager ska generera en från rotationsuppsättningen väljer du **[!UICONTROL Switch to Automatic thumbnail]**.
 
 1. Gör något av följande:
 
-   * I det övre vänstra hörnet på sidan för redigeraren för uppsättning av snurrar trycker du på **[!UICONTROL Add Asset]**.
+   * Välj **[!UICONTROL Add Asset]** längst upp till vänster på sidan för redigeraren för sned uppsättning.
 
-   * Tryck på **[!UICONTROL Tap to open Asset Selector]** mitt på sidan för redigeringsprogrammet för sned uppsättningar.
-   Tryck för att välja resurser som du vill inkludera i din snurruppsättning. De markerade resurserna visas med en bock. När du är klar trycker du **[!UICONTROL Select]** i det övre högra hörnet på sidan.
+   * Välj **[!UICONTROL Tap to open Asset Selector]** mitt på sidan för redigeringsprogrammet för sned uppsättning.
+   Välj de resurser som du vill inkludera i din snurruppsättning. De markerade resurserna visas med en bock. När du är klar väljer du **[!UICONTROL Select]** längst upp till höger på sidan.
 
-   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
+   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och välj sedan ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
 
    Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
@@ -142,11 +142,11 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
 1. (Valfritt) Gör något av följande:
 
-   * Om du vill ta bort en bild markerar du bilden och trycker på **[!UICONTROL Delete Asset]**.
+   * Om du vill ta bort en bild markerar du bilden och väljer **[!UICONTROL Delete Asset]**.
 
-   * Om du vill använda en förinställning trycker du på **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en förinställning som ska användas på alla resurser samtidigt.
+   * Om du vill använda en förinställning väljer du **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en förinställning som ska användas på alla resurser samtidigt.
 
-1. Klicka på **[!UICONTROL Save]**. Den nyligen skapade rotationsuppsättningen visas i den mapp du skapade den i.
+1. Välj **[!UICONTROL Save]**. Den nyligen skapade rotationsuppsättningen visas i den mapp du skapade den i.
 
 ## Visa snurruppsättningar {#viewing-spin-sets}
 
@@ -158,7 +158,7 @@ Du kan skapa snurruppsättningar antingen i användargränssnittet eller automat
 
 **Så här visar du snurruppsättningar:**
 
-1. När egenskaperna för en enskild resurs öppnas. Egenskaperna anger vad som ställer in den valda resursen som medlem av (under **[!UICONTROL Member of Sets]**). Om du vill visa hela uppsättningen trycker du på uppsättningens namn.
+1. När egenskaperna för en enskild resurs öppnas. Egenskaperna anger vad som ställer in den valda resursen som medlem av (under **[!UICONTROL Member of Sets]**). Om du vill se hela uppsättningen markerar du uppsättningens namn.
 
    ![chlimage_1-156](assets/chlimage_1-384.png)
 
@@ -182,30 +182,30 @@ Du kan utföra olika redigeringsåtgärder på snurra uppsättningar, till exemp
 * Använd förinställningar för visningsprogram.
 * Ta bort rotationsrutan.
 
-**Så här redigerar du en snurra:**
+**Så här redigerar du snurruppsättningar:**
 
 1. Gör något av följande:
 
-   * Håll pekaren över en resurs i en snurruppsättning och tryck sedan på **[!UICONTROL Edit]** (pennikon).
-   * Håll muspekaren över en resurs i en snurruppsättning, tryck på **[!UICONTROL Select]** (bockmarkeringsikon) och tryck sedan på **[!UICONTROL Edit]** i verktygsfältet.
+   * Håll pekaren över en resurs i en snurruppsättning och välj sedan **[!UICONTROL Edit]** (pennikon).
+   * Håll pekaren över en resurs i en snurruppsättning, välj **[!UICONTROL Select]** (bockmarkeringsikon) och välj sedan **[!UICONTROL Edit]** i verktygsfältet.
 
-   * Tryck på en snurra uppsättningsresurs och tryck sedan på **[!UICONTROL Edit]** (pennikon) i verktygsfältet.
+   * Välj en resurs för snurra uppsättning och välj sedan **[!UICONTROL Edit]** (pennikon) i verktygsfältet.
 
 1. Gör något av följande om du vill redigera rotationsuppsättningen:
 
    * Om du vill ändra ordning på bilderna drar du en bild till en ny plats (markera ikonen för att ändra ordning för att flytta objekt).
-   * Om du vill sortera objekt i stigande eller fallande ordning klickar du på kolumnrubriken.
-   * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Add Asset]**. Navigera till en resurs, markera den och tryck sedan på **[!UICONTROL Select]** nära det övre högra hörnet.
+   * Om du vill sortera objekt i stigande eller fallande ordning markerar du kolumnrubriken.
+   * Om du vill lägga till en resurs eller uppdatera en befintlig resurs väljer du **[!UICONTROL Add Asset]**. Navigera till en resurs, markera den och välj sedan **[!UICONTROL Select]** nära det övre högra hörnet.
 Om du tar bort den bild som Experience Manager använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
-   * Om du vill ta bort en resurs markerar du den och klickar eller trycker på **[!UICONTROL Delete Asset]**.
-   * Om du vill använda en förinställning trycker eller klickar du på förinställningsikonen och väljer en förinställning.
+   * Om du vill ta bort en resurs markerar du den och väljer **[!UICONTROL Delete Asset]**.
+   * Om du vill använda en förinställning väljer du förinställningsikonen och väljer en förinställning.
    * Om du vill ta bort en hel snurruppsättning går du till snurra-uppsättningen, markerar den och väljer **[!UICONTROL Delete]**
 
    >[!NOTE]
    >
-   >Du kan redigera bilderna i en snurra genom att navigera till uppsättningen, trycka på **[!UICONTROL Set Members]** i den vänstra listen och sedan trycka på pennikonen på en enskild resurs för att öppna redigeringsfönstret.
+   >Du kan redigera bilderna i en snurruppsättning genom att navigera till uppsättningen, markera **[!UICONTROL Set Members]** i den vänstra listen och sedan välja pennikonen på en enskild resurs för att öppna redigeringsfönstret.
 
-1. Klicka på **[!UICONTROL Save]** när redigeringen är klar.
+1. Välj **[!UICONTROL Save]** när redigeringen är klar.
 
 ## Förhandsgranska snurra uppsättningar {#previewing-spin-sets}
 
