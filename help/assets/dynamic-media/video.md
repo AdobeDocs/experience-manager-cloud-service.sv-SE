@@ -4,10 +4,10 @@ description: Lär dig hur du arbetar med video i Dynamic Media.
 feature: Videoprofiler
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
-source-wordcount: '9094'
-ht-degree: 6%
+source-wordcount: '9091'
+ht-degree: 4%
 
 ---
 
@@ -37,9 +37,9 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * Läs mer om [Bästa tillvägagångssätt för videokodning](#best-practices-for-encoding-videos).
    * Koppla videobearbetningsprofilen till en eller flera mappar där du ska överföra dina primära källvideor.
 
-      * [Tillämpa en videoprofil på mappar](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
+      * [Använd en videoprofil på mappar](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
       * Läs mer om [Bästa tillvägagångssätt för att ordna digitala resurser så att du kan använda bearbetningsprofiler](/help/assets/dynamic-media/best-practices-for-file-management.md).
-      * Läs mer om [Organisera digitala resurser](/help/assets/organize-assets.md).
+      * Läs mer om [Ordna digitala resurser](/help/assets/organize-assets.md).
    * Överför dina primära källvideor till mapparna. Du kan överföra videofiler som är upp till 15 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
       * [Ladda upp videor](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
@@ -54,13 +54,13 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Ordna, bläddra bland och söka efter videomaterial
 
       * [Organisera digitalt ](/help/assets/organize-assets.md)
-materialLäs mer om  [Bästa metoder för att ordna digitala resurser för att använda bearbetningsprofiler](/help/assets/dynamic-media/best-practices-for-file-management.md)
+materialLäs mer om  [Bästa metoder för att ordna digitalt material för användning av bearbetningsprofiler](/help/assets/dynamic-media/best-practices-for-file-management.md)
 
-      * [Söka efter ](/help/assets/search-assets.md#custompredicates) videomaterial eller  [söka resurser](/help/assets/manage-digital-assets.md#search-assets)
+      * [Söka efter ](/help/assets/search-assets.md#custompredicates) videomaterial eller  [söka efter resurser](/help/assets/manage-digital-assets.md#search-assets)
    * Förhandsgranska och publicera videomaterial
 
       * Visa källvideon och de kodade återgivningarna av videon tillsammans med tillhörande miniatyrer:
-         [Förhandsgranska ](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) videoklipp eller  [förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
+         [Förhandsgranska ](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) videoklipp eller  [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
          [Hantera videoåtergivningar](/help/assets/manage-digital-assets.md#managing-renditions)
 
 
@@ -103,18 +103,18 @@ materialLäs mer om  [Bästa metoder för att ordna digitala resurser för att a
 
    * Om du använder Experience Manager som WCM-system (Web Content Management) kan du lägga till videofilmer direkt på dina webbsidor.
 
-      * [Lägga till videoklipp på webbsidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+      * [Lägg till videor på webbsidorna](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
    * Om du använder ett webbinnehållshanteringssystem från en annan leverantör kan du länka eller bädda in videor på dina webbsidor.
 
       * Integrera video med URL:
-         [Länka URL till ett webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md).
+         [Länka URL:er till webbprogrammet](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md).
 
       * Integrera video med inbäddad kod på webbsidan:
          [Bädda in videovisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
    * [Publicera videor på YouTube](#publishing-videos-to-youtube).
-   * [Genererar videorapporter](#viewing-video-reports).
+   * [Generera videorapporter](#viewing-video-reports).
 
-   * [Lägga till bildtexter i videon](#adding-captions-to-video).
+   * [Lägg till bildtexter i videon](#adding-captions-to-video).
 
 
 
@@ -151,7 +151,7 @@ Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok f�
 
 Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta BlackBerry®-enheter som stöder det här videoformatet på följande: [Videoformat som stöds på BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
-Följande Windows®-enheter har stöd för det här videoformatet: [Videoformat som stöds på Windows® Phone](https://msdn.microsoft.com/library/windows/apps/ff462087%28v=vs.105%29.aspx)
+Följande Windows®-enheter har stöd för det här videoformatet: [Videoformat som stöds på Windows® Phone](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105)?redirectedfrom=MSDN)
 
 * Spela upp videon med Dynamic Media Video Viewer Presets, inklusive följande:
 
@@ -276,7 +276,7 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 ## Bästa tillvägagångssätt för att koda videofilmer {#best-practices-for-encoding-videos}
 
-Arbetsflödet **Dynamic Media Encode Video** kodar video om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
+Arbetsflödet **Dynamic Media Encode Video** kodar video om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
 
 Nedan följer några tips om hur du kodar källvideofiler.
 
@@ -335,7 +335,7 @@ Bithastighet är den mängd data som kodas för att skapa en enda sekund av vide
 När du väljer en bithastighetskodning kan du välja mellan två typer:
 
 * **[!UICONTROL Constant Bitrate Encoding]** (CBR) - Under CBR-kodning är bithastigheten eller antalet bitar per sekund densamma under hela kodningsprocessen. CBR-kodning bevarar den angivna datahastigheten enligt inställningen för hela videon. CBR-kodning optimerar inte heller mediefiler för kvalitet utan sparar på lagringsutrymmet.
-Använd CBR om videon innehåller en liknande rörelsenivå i hela videon. CBR används oftast för direktuppspelat videoinnehåll. Se även [Använda egna parametrar för videokodning](/help/assets/dynamic-media/video-profiles.md#using-custom-added-video-encoding-parameters).
+Använd CBR om videon innehåller en liknande rörelsenivå i hela videon. CBR används oftast för direktuppspelat videoinnehåll. Se även [Använd egna parametrar för videokodning](/help/assets/dynamic-media/video-profiles.md#using-custom-added-video-encoding-parameters).
 
 * **[!UICONTROL Variable Bitrate Encoding]** (VBR) - VBR-kodning justerar datahastigheten nedåt och till den övre gräns som du anger, baserat på de data som krävs av kompressorn. Den här funktionen innebär att under en VBR-kodningsprocess ökar eller minskar bithastigheten för mediefilen dynamiskt beroende på mediafilens behov av bithastighet.
 VBR tar längre tid att koda men ger det mest fördelaktiga resultatet. mediefilens kvalitet är överlägsen. VBR används oftast för http-progressiv leverans av videoinnehåll.
@@ -428,10 +428,10 @@ När du publicerar videomaterial till YouTube-servrar utför du följande uppgif
 1. [Skapa en YouTube-kanal](#creating-a-youtube-channel)
 1. [Lägga till taggar för publicering](#adding-tags-for-publishing)
 1. [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem)
-1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
+1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [Publicera videor i din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
-1. [(Valfritt) Verifiera publicerad video på YouTube](/help/assets/dynamic-media/video.md#optional-verifying-the-published-video-on-youtube)
-1. [Länka YouTube-URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
+1. [(Valfritt) Verifiera den publicerade videon på YouTube](/help/assets/dynamic-media/video.md#optional-verifying-the-published-video-on-youtube)
+1. [Länka YouTube URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
 
 Du kan även [avpublicera videoklipp för att ta bort dem från YouTube](#unpublishing-videos-to-remove-them-from-youtube).
 
@@ -455,12 +455,12 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    Om du redan har ett Google-konto går du vidare till nästa steg.
 
 1. Gå till [https://cloud.google.com/](https://cloud.google.com/).
-1. På Google Cloud-sidan uppe till höger klickar du på **[!UICONTROL Console]**.
+1. På Google Cloud-sidan, nära det övre högra hörnet, väljer du **[!UICONTROL Console]**.
 
    Om det behövs kan du **[!UICONTROL Sign in]** använda inloggningsuppgifterna för ditt Google-konto för att se alternativet **[!UICONTROL Console]**.
 
-1. Klicka på listrutan Projekt till höger om **[!UICONTROL Google Cloud Platform]** på sidan Kontrollpanel för att öppna dialogrutan Välj ett projekt.
-1. Tryck på **[!UICONTROL New Project]** i dialogrutan Välj ett projekt.
+1. På kontrollpanelssidan till höger om **[!UICONTROL Google Cloud Platform]** väljer du listrutan Projekt för att öppna dialogrutan Välj ett projekt.
+1. Välj **[!UICONTROL New Project]** i dialogrutan Välj ett projekt.
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
 
@@ -468,22 +468,22 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    Ditt projekt-ID baseras på ditt projektnamn. Välj projektnamnet noggrant. den kan inte ändras efter att den har skapats. Du måste även ange samma projekt-ID igen när du konfigurerar YouTube i Experience Manager senare. Skriv därför ned den.
 
-1. Klicka på **[!UICONTROL Create]**.
+1. Välj **[!UICONTROL Create]**.
 
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL Explore and enable APIs]** på Komma igång-kortet på Dashboard för ditt projekt.
-   * Tryck på **[!UICONTROL Go to APIs overview]** i API-kortet på Dashboard för ditt projekt.
+   * Välj **[!UICONTROL Explore and enable APIs]** på ditt projekts Dashboard på kortet Komma igång.
+   * Välj **[!UICONTROL Go to APIs overview]** i API:n på projektkontrollpanelen.
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. Tryck på **[!UICONTROL Enable APIs and Services]** längst upp på sidan API:er och tjänster.
-1. Tryck på **[!UICONTROL Category]** till vänster på sidan API-bibliotek. **[!UICONTROL YouTube]** Tryck på **[!UICONTROL YouTube Data API]** till höger på sidan.
-1. Tryck på **[!UICONTROL Enable]** på sidan YouTube Data API v3.
+1. Välj **[!UICONTROL Enable APIs and Services]** längst upp på sidan API:er och tjänster.
+1. Välj **[!UICONTROL YouTube]** till vänster på sidan API-bibliotek under **[!UICONTROL Category]**. Välj **[!UICONTROL YouTube Data API]** till höger på sidan.
+1. På sidan YouTube Data API v3 väljer du **[!UICONTROL Enable]**.
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
-1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Om det behövs klickar du på **[!UICONTROL Create Credentials]**.
+1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Välj **[!UICONTROL Create Credentials]** om det behövs.
 
    ![6_5_googleaccount-apis-createcredentials](assets/6_5_googleaccount-apis-createcredentials.png)
 
@@ -493,11 +493,11 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    * I listrutan **[!UICONTROL Where are you calling the API from?]** väljer du **[!UICONTROL Web Server (for example, node.js, Tomcat)]**.
 
-   * Tryck på **[!UICONTROL User data]** i listrutan **[!UICONTROL What data are you accessing?]**.
+   * I listrutan **[!UICONTROL What data are you accessing?]** väljer du **[!UICONTROL User data]**.
 
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
-1. Tryck på **[!UICONTROL What credentials do I need?]**
+1. Välj **[!UICONTROL What credentials do I need?]**
 1. I steg 2 på sidan **[!UICONTROL Add credentials to your project]** anger du ett unikt namn i fältet Namn under rubriken **[!UICONTROL Create an OAuth 2.0 client ID]**. Du kan också använda standardnamnet som anges av Google.
 1. Under rubriken **[!UICONTROL Authorized JavaScript origins]** anger du följande sökväg i textfältet, ersätter din egen domän och portnummer i sökvägen och trycker sedan på **[!UICONTROL Enter]** för att lägga till sökvägen i listan:
 
@@ -517,7 +517,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    **Obs**: Sökvägsexemplet ovan är endast avsett som förklaring.
 
-1. Klicka på **[!UICONTROL Create OAuth client ID]**.
+1. Välj **[!UICONTROL Create OAuth client ID]**.
 1. På sidan **[!UICONTROL Add credentials to your project]**, steg 3, under rubriken **[!UICONTROL Set up the OAuth 2.0 consent screen]**, väljer du den Gmail-e-postadress som du för närvarande använder.
 
    ![6_5_googleaccount-apis-createcredentials-consentscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
@@ -526,8 +526,8 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    Medgivandeskärmen visas för Experience Manager-administratören när de autentiserar sig för YouTube. Experience Manager kontaktar YouTube för tillstånd.
 
-1. Klicka på **[!UICONTROL Continue]**.
-1. Gå till sidan Lägg till inloggningsuppgifter för projektet och i steg 4, under rubriken **[!UICONTROL Download credentials]**, trycker du på **[!UICONTROL Download]**.
+1. Välj **[!UICONTROL Continue]**.
+1. Välj **[!UICONTROL Download]** under rubriken **[!UICONTROL Download credentials]** på sidan Lägg till autentiseringsuppgifter för ditt projekt.
 
    ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
@@ -535,13 +535,13 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    Du behöver den här hämtade JSON-filen när du konfigurerar YouTube i Adobe Experience Manager senare.
 
-1. Klicka på **[!UICONTROL Done]**.
+1. Välj **[!UICONTROL Done]**.
 
    Logga ut från ditt Google-konto. Skapa nu en YouTube-kanal.
 
 ### Skapa en YouTube-kanal {#creating-a-youtube-channel}
 
-Du måste ha en eller flera kanaler för att kunna publicera videofilmer på YouTube. Om du redan har skapat en YouTube-kanal kan du hoppa över den här uppgiften och gå till [Adding tags for publishing](/help/assets/dynamic-media/video.md#adding-tags-for-publishing).
+Du måste ha en eller flera kanaler för att kunna publicera videofilmer på YouTube. Om du redan har skapat en YouTube-kanal kan du hoppa över den här uppgiften och gå till [Lägg till taggar för publicering](/help/assets/dynamic-media/video.md#adding-tags-for-publishing).
 
 >[!CAUTION]
 >
@@ -550,10 +550,10 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 **Så här skapar du en YouTube-kanal:**
 
 1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
-1. Klicka på din profilbild i det övre högra hörnet på YouTube-sidan (den kan också visas som en bokstav i en enfärgad cirkel) och tryck sedan på **[!UICONTROL YouTube settings]** (den runda kugghjulsikonen).
-1. På sidan Översikt, under rubriken Ytterligare funktioner, trycker du på **[!UICONTROL See all my channels or create a new channel]**.
-1. Tryck på **[!UICONTROL Create a new channel]** på sidan Kanaler.
-1. På sidan Varumärkeskonto anger du ett företagsnamn eller ett annat kanalnamn som du väljer där du vill publicera videoresurserna i fältet Märkeskontonamn. Klicka sedan på **[!UICONTROL Create]**.
+1. I det övre högra hörnet av YouTube-sidan markerar du din profilbild (den kan också visas som en bokstav i en enfärgad cirkel) och väljer sedan **[!UICONTROL YouTube settings]** (den runda kugghjulsikonen).
+1. På sidan Översikt, under rubriken Ytterligare funktioner, väljer du **[!UICONTROL See all my channels or create a channel]**.
+1. Välj **[!UICONTROL Create a new channel]** på sidan Kanaler.
+1. På sidan Varumärkeskonto anger du ett företagsnamn eller ett annat kanalnamn som du väljer där du vill publicera videoresurserna i fältet Märkeskontonamn. Välj sedan **[!UICONTROL Create]**.
 
    Kom ihåg namnet som du anger här; Du måste ange det igen när du måste konfigurera YouTube i Experience Manager.
 
@@ -573,13 +573,13 @@ Om du tänker använda standardtaggarna i Experience Manager kan du hoppa över 
 
 <!-- ### Enabling the YouTube Publish replication agent {#enabling-the-youtube-publish-replication-agent}
 
-After you enable the YouTube Publish replication agent, if you want to test the connection to the Google Cloud account, tap **[!UICONTROL Test Connection]**. A browser tab displays the connection results. If you have added YouTube Channels, then a listing of those is displayed as part of the test.
+After you enable the YouTube Publish replication agent, if you want to test the connection to the Google Cloud account, select **[!UICONTROL Test Connection]**. A browser tab displays the connection results. If you have added YouTube Channels, then a listing of those is displayed as part of the test.
 
-1. In the upper-left corner of Experience Manager, click the Experience Manager logo, then in the left rail, click **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author]**.
-1. On the Agents of Author page, click **[!UICONTROL YouTube Publish (youtube)]**.
-1. On the toolbar, to the right of Settings, click **[!UICONTROL Edit]**.
+1. In the upper-left corner of Experience Manager, select the Experience Manager logo, then in the left rail, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author]**.
+1. On the Agents of Author page, select **[!UICONTROL YouTube Publish (youtube)]**.
+1. On the toolbar, to the right of Settings, select **[!UICONTROL Edit]**.
 1. Select the **[!UICONTROL Enabled]** checkbox to turn on the replication agent.
-1. Click **[!UICONTROL OK]**. -->
+1. Select **[!UICONTROL OK]**. -->
 
 ### Konfigurera YouTube i Experience Manager {#setting-up-youtube-in-aem}
 
@@ -591,10 +591,10 @@ Från och med Experience Manager 6.4 introducerades en ny pekgränssnittsmetod f
 #### Konfigurera YouTube i Experience Manager 6.4 och senare {#setting-up-youtube-in-aem-and-later}
 
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
-1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]**(hammer icon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration]** i det vänstra hörnet.
-1. Tryck på **[!UICONTROL global]** (markera det inte).
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen för Experience Manager och navigerar sedan till **[!UICONTROL Tools]**(hammer-ikon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration]** i det vänstra hörnet.
+1. Välj **[!UICONTROL global]** (markera det inte).
 
-1. I det övre högra hörnet av den globala sidan trycker du på **[!UICONTROL Create]**.
+1. Välj **[!UICONTROL Create]** längst upp till höger på den globala sidan.
 1. På sidan Skapa YouTube-konfiguration anger du Googles projekt-ID under Inställningar för Google Cloud-plattform i fältet **[!UICONTROL Application Name]**.
 
    Du angav projekt-ID när du konfigurerade Google Cloud-inställningarna tidigare.
@@ -602,36 +602,36 @@ Lämna sidan Skapa YouTube-konfiguration öppen; du återgår till det om en stu
 
    ![6_5_youtubepublish-createUtubeConfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
-1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften [Konfigurera inställningarna för Google Cloud](/help/assets/dynamic-media/video.md#configuring-google-cloud-settings) med en vanlig textredigerare.
+1. Öppna JSON-filen som du hämtade och sparade tidigare i [Konfigurera inställningarna för Google Cloud](/help/assets/dynamic-media/video.md#configuring-google-cloud-settings) med en vanlig textredigerare.
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
-1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
+1. Välj **[!UICONTROL Save]** längst upp till höger på sidan.
 
    Konfigurera nu YouTube-kanaler i Experience Manager.
 
-1. Tryck på **[!UICONTROL Add Channel]**.
+1. Välj **[!UICONTROL Add Channel]**.
 1. I fältet Kanalnamn anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
 
    Om du vill kan du lägga till en beskrivning.
 
-1. Tryck på **[!UICONTROL Add]**.
+1. Välj **[!UICONTROL Add]**.
 1. YouTube/Google-verifiering visas. Om du inte redan är inloggad på Google Cloud-kontot hoppar du över det här steget.
 
    * Ange det Google-användarnamn och lösenord som är kopplat till Googles projekt-ID och JSON-texten ovan.
    * Beroende på hur många kanaler ditt konto har visas två eller flera objekt. Välj en kanal. Ange inte e-postadressen. det är inte en kanal.
-   * På nästa sida trycker du på **[!UICONTROL Accept]** för att tillåta åtkomst till den här kanalen.
+   * På nästa sida väljer du **[!UICONTROL Accept]** för att tillåta åtkomst till den här kanalen.
 
-1. Tryck på **[!UICONTROL Allow]**.
+1. Välj **[!UICONTROL Allow]**.
 
    Konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - Tryck på pennikonen på Cloud Services > YouTube för att redigera listan med taggar som du vill använda.
-1. Om du vill visa en lista med tillgängliga taggar i Experience Manager trycker du på ikonen för nedrullningsbar lista (cirkumflex upp och ned).
-1. Om du vill lägga till dem trycker du på en eller flera taggar.
+1. **[!UICONTROL Setting up tags for publishing]** - På sidan Cloud Services > YouTube väljer du pennikonen för att redigera listan med taggar som du vill använda.
+1. Om du vill visa en lista med tillgängliga taggar i Experience Manager väljer du listruteikonen (cirkumflex upp och ned).
+1. Om du vill lägga till dem markerar du en eller flera taggar.
 
-   Om du vill ta bort en tagg som du har lagt till markerar du taggen och trycker på **[!UICONTROL X]**.
+   Om du vill ta bort en tagg som du har lagt till markerar du den och väljer **[!UICONTROL X]**.
 
-1. När du är klar med att lägga till de taggar du vill ha trycker du på **[!UICONTROL Save]**.
+1. När du är klar med att lägga till de taggar du vill ha väljer du **[!UICONTROL Save]**.
 
    Nu kan du publicera videor i din YouTube-kanal.
 
@@ -639,10 +639,10 @@ Lämna sidan Skapa YouTube-konfiguration öppen; du återgår till det om en stu
 
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
 
-1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]** till vänster.
-1. Tryck på **[!UICONTROL Configure now]** under rubriken Tredjepartstjänster, under YouTube.
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager och navigerar sedan till **[!UICONTROL Tools]** (hammer-ikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]** i det vänstra hörnet.
+1. Under Tredjepartstjänster väljer du **[!UICONTROL Configure now]** under YouTube.
 1. I dialogrutan Skapa konfiguration anger du en rubrik (obligatoriskt) och ett namn (valfritt) i respektive fält.
-1. Tryck på **[!UICONTROL Create]**.
+1. Välj **[!UICONTROL Create]**.
 1. I dialogrutan YouTube-kontoinställningar anger du Googles projekt-ID i fältet **[!UICONTROL Application Name]**.
 
    Du angav projekt-ID när du först [konfigurerade Google Cloud-inställningar](/help/assets/dynamic-media/video.md#configuring-google-cloud-settings) tidigare.
@@ -651,37 +651,37 @@ Lämna dialogrutan YouTube Kontoinställning öppen; du återgår till det om en
 1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften Konfigurera inställningarna för Google Cloud med en vanlig textredigerare.
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
-1. Tryck på **[!UICONTROL OK]**.
+1. Välj **[!UICONTROL OK]**.
 
    Konfigurera nu YouTube-kanaler i Experience Manager.
 
-1. Till höger om **[!UICONTROL Available Channels]** trycker du på **+** (plustecknet).
+1. Till höger om **[!UICONTROL Available Channels]** väljer du **+** (plusteckenikon).
 1. I dialogrutan YouTube-kanalinställningar, i fältet Titel, anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
 
    Om du vill kan du lägga till en beskrivning.
 
-1. Tryck på **[!UICONTROL OK]**.
+1. Välj **[!UICONTROL OK]**.
 1. YouTube/Google-verifiering visas. Om du inte redan är inloggad på Google Cloud-kontot hoppar du över det här steget.
 
    * Ange det Google-användarnamn och lösenord som är kopplat till Googles projekt-ID och JSON-texten ovan.
    * Beroende på hur många kanaler ditt konto har visas två eller flera objekt. Välj en kanal. Ange inte e-postadressen. det är inte en kanal.
-   * På nästa sida trycker du på **[!UICONTROL Accept]** för att tillåta åtkomst till den här kanalen.
+   * På nästa sida väljer du **[!UICONTROL Accept]** för att tillåta åtkomst till den här kanalen.
 
-1. Tryck på **[!UICONTROL Allow]**.
+1. Välj **[!UICONTROL Allow]**.
 
    Konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - Tryck på pennikonen på Cloud Services > YouTube för att redigera listan med taggar som du vill använda.
-1. Om du vill visa en lista med tillgängliga taggar i Experience Manager trycker du på ikonen för nedrullningsbar lista (cirkumflex upp och ned).
-1. Om du vill lägga till dem trycker du på en eller flera taggar.
+1. **[!UICONTROL Setting up tags for publishing]** - På sidan Cloud Services > YouTube väljer du pennikonen för att redigera listan med taggar som du vill använda.
+1. Om du vill visa en lista med tillgängliga taggar i Experience Manager väljer du listruteikonen (cirkumflex upp och ned).
+1. Om du vill lägga till dem markerar du en eller flera taggar.
 
-   Om du vill ta bort en tagg som du har lagt till markerar du taggen och trycker på **X**.
+   Om du vill ta bort en tagg som du har lagt till markerar du den och väljer **X**.
 
-1. När du är klar med att lägga till de taggar du vill ha trycker du på **[!UICONTROL OK]**.
+1. När du är klar med att lägga till de taggar du vill ha väljer du **[!UICONTROL OK]**.
 
    Nu kan du publicera videor i din YouTube-kanal.
 
-### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 Du kan även automatisera inställningen av YouTube-egenskaper när du överför videoklipp. Skapa en metadatabearbetningsprofil i Experience Manager.
 
@@ -689,11 +689,11 @@ Om du vill skapa en profil för metadatabearbetning kopierar du först värden f
 
 **Så här automatiserar du inställningen av YouTube standardegenskaper för överförda videofilmer:**
 
-1. Klicka på Experience Manager-logotypen i det övre vänstra hörnet av Experience Manager och klicka sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i det vänstra hörnet.
-1. Klicka på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
-1. Markera rutan till vänster om **[!UICONTROL video]** på **[!UICONTROL default]**-sidan och klicka sedan på **[!UICONTROL Edit]**.
-1. Klicka på fliken **[!UICONTROL Advanced]** på sidan Redigerare för metadatamodeller.
-1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Category]**.
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager och navigerar sedan till **[!UICONTROL Tools]** (hammer-ikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i det vänstra hörnet.
+1. Välj **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
+1. Markera kryssrutan till vänster om **[!UICONTROL video]** på sidan **[!UICONTROL default]** och välj sedan **[!UICONTROL Edit]**.
+1. Välj fliken **[!UICONTROL Advanced]** på sidan Redigerare för metadatamodeller.
+1. Välj **[!UICONTROL YouTube Category]** under rubriken YouTube Publishing.
 1. Till höger på sidan, under fliken **[!UICONTROL Settings]**, gör du följande:
 
    * Markera och kopiera värdet i textfältet **[!UICONTROL Map to property]**.
@@ -702,7 +702,7 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * Under **[!UICONTROL Choices]** markerar och kopierar du standardvärdet som du vill använda (till exempel Folk &amp; bloggar eller Vetenskap och teknik).
 Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
-1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Privacy]**.
+1. Välj **[!UICONTROL YouTube Privacy]** under rubriken YouTube Publishing.
 1. Till höger på sidan, under fliken **[!UICONTROL Settings]**, gör du följande:
 
    * Markera och kopiera värdet i textfältet **[!UICONTROL Map to property]**.
@@ -711,35 +711,35 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * Under **[!UICONTROL Choices]** markerar och kopierar du standardvärdet som du vill använda. Observera att alternativen grupperas i par om två. Det undre fältet i paret är standardvärdet som du vill kopiera, till exempel public, unlisted eller private.
 Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
-1. Klicka på **[!UICONTROL Cancel]** i det övre högra hörnet på sidan för redigering av metadatamodell.
-1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]** till vänster.
+1. Välj **[!UICONTROL Cancel]** längst upp till höger på sidan för redigering av metadataschema.
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen för Experience Manager och sedan i den vänstra listen väljer du **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 
-1. Klicka på **[!UICONTROL Create]** längst upp till höger på sidan Metadataprofiler.
-1. I dialogrutan Lägg till metadataprofil i textfältet **[!UICONTROL Profile title]** anger du namnet `YouTube Video` och sedan klickar du på **[!UICONTROL Create]**.
-1. Klicka på fliken **[!UICONTROL Advance]** på sidan Redigerare för metadataprofil.
+1. Välj **[!UICONTROL Create]** på sidan Metadataprofiler, i det övre högra hörnet på sidan.
+1. I dialogrutan Lägg till metadataprofil anger du namnet `YouTube Video` i textfältet **[!UICONTROL Profile title]** och väljer sedan **[!UICONTROL Create]**.
+1. Välj fliken **[!UICONTROL Advance]** på sidan Redigerare för metadataprofil.
 1. Lägg till de kopierade YouTube Publishing-värdena i profilen genom att göra följande:
 
-   * Klicka på fliken **[!UICONTROL Build Form]** till höger på sidan.
+   * Till höger på sidan väljer du fliken **[!UICONTROL Build Form]**.
    * (Valfritt) Dra komponenten **[!UICONTROL Section Header]** till vänster och släpp den i formulärområdet.
-   * (Valfritt) Klicka på **[!UICONTROL Field Label]** för att markera komponenten.
+   * (Valfritt) Välj **[!UICONTROL Field Label]** för att markera komponenten.
    * (Valfritt) Till höger på sidan skriver du `YouTube Publishing` under fliken Inställningar i textfältet Fältetikett.
-   * Klicka på fliken **[!UICONTROL Build Form]** och dra sedan komponenten **[!UICONTROL Multi Value Text]** och släpp den under rubriken **[!UICONTROL YouTube Publishing]** som du skapade.
+   * Välj fliken **[!UICONTROL Build Form]** och dra sedan komponenten **[!UICONTROL Multi Value Text]** och släpp den under rubriken **[!UICONTROL YouTube Publishing]** som du skapade.
 
-   * Om du vill markera komponenten klickar du på **[!UICONTROL Field Label]**.
+   * Markera komponenten genom att välja **[!UICONTROL Field Label]**.
    * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube Publishing-värden (Field Label-värde och Map to property-värde) som du kopierade tidigare i deras respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
 
 1. Lägg till de kopierade sekretessvärdena för YouTube till profilen genom att göra följande:
 
-   * Klicka på fliken **[!UICONTROL Build Form]** till höger på sidan.
+   * Till höger på sidan väljer du fliken **[!UICONTROL Build Form]**.
    * (Valfritt) Dra komponenten **[!UICONTROL Section Header]** till vänster och släpp den i formulärområdet.
-   * (Valfritt) Klicka på **[!UICONTROL Field Label]** för att markera komponenten.
+   * (Valfritt) Välj **[!UICONTROL Field Label]** för att markera komponenten.
    * (Valfritt) Till höger på sidan skriver du `YouTube Privacy` under fliken Inställningar i textfältet Fältetikett.
-   * Klicka på fliken **[!UICONTROL Build Form]** och dra sedan komponenten **[!UICONTROL Multi Value Text]** och släpp den under rubriken **[!UICONTROL YouTube Privacy]** som du skapade.
+   * Välj fliken **[!UICONTROL Build Form]** och dra sedan komponenten **[!UICONTROL Multi Value Text]** och släpp den under rubriken **[!UICONTROL YouTube Privacy]** som du skapade.
 
-   * Om du vill markera komponenten klickar du på **[!UICONTROL Field Label]**.
+   * Markera komponenten genom att välja **[!UICONTROL Field Label]**.
    * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube Publishing-värden (Field Label-värde och Map to property-värde) som du kopierade tidigare i deras respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
 
-1. Klicka på **[!UICONTROL Save]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Save]** längst upp till höger på sidan.
 1. Använd metadataprofilen för YouTube Publishing på de mappar där du ska överföra videoklipp. Du måste ha angett både Metadataprofil och Videoprofil.
 
    Se [Metadataprofiler](/help/assets/metadata-profiles.md) och [Videoprofiler](/help/assets/dynamic-media/video-profiles.md).
@@ -756,38 +756,38 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sä
 
 >[!NOTE]
 För att publicera innehåll från YouTube använder Experience Manager arbetsflödet **[!UICONTROL Publish to YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
-Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
+Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 Mer detaljerad förloppsinformation finns i YouTube-loggen som replikeras. Tänk dock på att sådan övervakning kräver administratörsåtkomst.
 
 **Så här publicerar du videor i din YouTube-kanal:**
 
 1. I Experience Manager navigerar du till en videoresurs som du vill publicera i din YouTube-kanal.
 1. Välj videoresurs (den adaptiva videouppsättningen).
-1. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
-1. Klicka på **[!UICONTROL Open Selection Dialog]** till höger om fältet Taggar under rubriken Metadata på fliken Grundläggande.
+1. Välj **[!UICONTROL Properties]** i verktygsfältet.
+1. Välj **[!UICONTROL Open Selection Dialog]** till höger om fältet Taggar under rubriken Metadata på fliken Grundläggande.
 1. På sidan Välj taggar navigerar du till de taggar du vill använda och markerar sedan en eller flera taggar.
 
    Kom ihåg att taggarna måste kopplas till YouTube-kanalen.
 
-1. Klicka på **[!UICONTROL Select]** i det övre högra hörnet på sidan.
-1. Klicka på **[!UICONTROL Save and Close]** i det övre högra hörnet på egenskapssidan för videon.
-1. Klicka på **[!UICONTROL Quick Publish]** i verktygsfältet.
+1. Välj **[!UICONTROL Select]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Save and Close]** i det övre högra hörnet på egenskapssidan för videon.
+1. Välj **[!UICONTROL Quick Publish]** i verktygsfältet.
 
-   Se även [Använda Publiceringshantering med Experience Manager Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html#page-authoring).
+   Se även [Använd publikationshantering med Experience Manager Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html#page-authoring).
 
    Du kan även verifiera den publicerade videon på din YouTube-kanal.
 
-### (Valfritt) Verifiera publicerad video på YouTube {#optional-verifying-the-published-video-on-youtube}
+### (Valfritt) Verifiera den publicerade videon på YouTube {#optional-verifying-the-published-video-on-youtube}
 
 Du kan också övervaka förloppet för din YouTube-publicering (eller avpublicering).
 
-Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
+Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 Publiceringstiderna kan variera avsevärt beroende på olika faktorer, bland annat formatet för den primära källvideon, filstorleken och överföringstrafiken. Publiceringsprocessen kan ta från några minuter till flera timmar. Högre upplösningsformat återges dessutom mycket långsammare. 720p och 1080p tar till exempel längre tid att visa än 480p.
 
 Efter åtta timmar, om du fortfarande ser ett statusmeddelande som säger **[!UICONTROL Uploaded (processing, please wait)]**, kan du försöka ta bort videon från webbplatsen och överföra den igen.
 
-### Länka YouTube-URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
+### Länka YouTube URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
 
 Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidor på webbplatsen eller i programmet.
 
@@ -800,11 +800,11 @@ Så här länkar du YouTube URL:er till ditt webbprogram:
 
    Kom ihåg att YouTube URL:er endast är tillgängliga för kopiering *efter* att du först *har publicerat* videomaterialet till YouTube.
 
-1. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
-1. Klicka på fliken **[!UICONTROL Advanced]**.
+1. Välj **[!UICONTROL Properties]** i verktygsfältet.
+1. Välj fliken **[!UICONTROL Advanced]**.
 1. Under rubriken YouTube Publishing (Publicering), i YouTube URL List, markerar och kopierar du URL-texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
 
-### Avpublicera videoklipp för att ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
+### Avpublicera videoklipp så att du kan ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
 
 När du avpublicerar en videoresurs i Experience Manager tas videon bort från YouTube.
 
@@ -813,16 +813,16 @@ Om du tar bort en video direkt från YouTube är Experience Manager inte medvete
 
 >[!NOTE]
 Experience Manager använder arbetsflödet **[!UICONTROL Unpublish from YouTube]** för att ta bort innehåll från YouTube, vilket gör att du kan övervaka förloppet och visa felinformation.
-Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
+Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 
-Så här avpublicerar du videoklipp för att ta bort dem från YouTube:
+**Så här avpublicerar du videoklipp för att ta bort dem från YouTube:**
 
 1. Navigera till de videoresurser som du vill avpublicera från din YouTube-kanal.
 1. Välj en eller flera publicerade videoresurser i ett resursurvalsläge.
-1. Klicka på **[!UICONTROL Manage Publication]** i verktygsfältet. Om det behövs trycker du på ikonen med tre punkter (`. . .`) i verktygsfältet för att visa **[!UICONTROL Manage Publication]**.
-1. Tryck på **[!UICONTROL Unpublish]** på sidan Hantera publikation.
-1. Tryck på **[!UICONTROL Next]** i det övre högra hörnet på sidan.
-1. Tryck på **[!UICONTROL Unpublish]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Manage Publication]** i verktygsfältet. Välj vid behov ikonen med tre punkter (`. . .`) i verktygsfältet för att visa **[!UICONTROL Manage Publication]**.
+1. Välj **[!UICONTROL Unpublish]** på sidan Hantera publikation.
+1. Välj **[!UICONTROL Next]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Unpublish]** i det övre högra hörnet på sidan.
 
 ## Övervaka videokodning och YouTube publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
 
@@ -830,7 +830,7 @@ När du överför en ny video till en mapp där videokodning används eller publ
 
 ### Övervaka förlopp {#monitoring-progress}
 
-**Så här övervakar du förloppet, inklusive misslyckad kodning/YouTube-publicering:**
+Du kan övervaka förloppet, inklusive misslyckad kodning/YouTube-publicering.
 
 1. Visa kodningsförloppet för video i resursmappen:
 
@@ -842,11 +842,11 @@ När du överför en ny video till en mapp där videokodning används eller publ
 
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
-   Den här kolumnen visas inte som standard. Om du vill aktivera kolumnen väljer du **[!UICONTROL View Settings]** i listrutan Vyer, lägger till kolumnen **[!UICONTROL Processing Status]** och trycker eller klickar på **[!UICONTROL Update]**.
+   Den här kolumnen visas inte som standard. Om du vill aktivera kolumnen väljer du **[!UICONTROL View Settings]** i listrutan Vyer, lägger till kolumnen **[!UICONTROL Processing Status]** och väljer **[!UICONTROL Update]**.
 
    ![chlimage_1-431](/help/assets/dynamic-media/assets/chlimage_1-431.png)
 
-1. Visa förloppet i tillgångsinformationen. När du trycker eller klickar på en resurs öppnar du den nedrullningsbara menyn och väljer **[!UICONTROL Timeline]**. Om du vill begränsa det till arbetsflödesaktiviteter som kodning eller YouTube-publicering väljer du **[!UICONTROL Workflows]**.
+1. Visa förloppet i tillgångsinformationen. När du markerar en resurs öppnar du den nedrullningsbara menyn och väljer **[!UICONTROL Timeline]**. Om du vill begränsa det till arbetsflödesaktiviteter som kodning eller YouTube-publicering väljer du **[!UICONTROL Workflows]**.
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -867,7 +867,7 @@ När du överför en ny video till en mapp där videokodning används eller publ
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
-   Markera instansen och tryck eller klicka på **[!UICONTROL Open History]**.
+   Markera instansen och välj **[!UICONTROL Open History]**.
 
    ![chlimage_1-434](/help/assets/dynamic-media/assets/chlimage_1-434.png)
 
@@ -911,18 +911,18 @@ How you configure notification depends on whether you want notifications for You
 
 For YouTube publishing jobs, do the following:
 
-1. In Experience Manager, tap **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. On the Workflow Models page, select **[!UICONTROL Publish to YouTube]**, then tap **[!UICONTROL Edit]** on the toolbar.
-1. Near the upper-right corner of the Publish to YouTube workflow page, tap **[!UICONTROL Edit]**.
-1. Hover the mouse pointer on the YouTube Upload component, then tap once to display the inline toolbar.
+1. In Experience Manager, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. On the Workflow Models page, select **[!UICONTROL Publish to YouTube]**, then select **[!UICONTROL Edit]** on the toolbar.
+1. Near the upper-right corner of the Publish to YouTube workflow page, select **[!UICONTROL Edit]**.
+1. Hover the mouse pointer on the YouTube Upload component, then select once to display the inline toolbar.
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
 
-1. On the inline toolbar, tap the Configuration icon (wrench). Click the **[!UICONTROL Arguments]** tab.
+1. On the inline toolbar, select the Configuration icon (wrench). Select the **[!UICONTROL Arguments]** tab.
 
    ![6_5_publishtoyoutubeworkflow-configurationicon](assets/6_5_publishtoyoutubeworkflow-configurationicon.png)
 
-1. In the YouTube Upload Process - Step Properties dialog box, tap the **[!UICONTROL Arguments]** tab.
+1. In the YouTube Upload Process - Step Properties dialog box, select the **[!UICONTROL Arguments]** tab.
 
    ![6_5_publishtoyoutubeworkflow-arguments-tab](assets/6_5_publishtoyoutubeworkflow-arguments-tab.png)
 
@@ -938,8 +938,8 @@ For YouTube publishing jobs, do the following:
    >
    >These emails are specific to YouTube and are in addition to the generic workflow email notifications. As a result, you may receive two sets of email notification - the generic notification available in the **[!UICONTROL Day CQ Workflow Email Notification Service]** and one specific to YouTube depending on your configuration settings.
 
-1. When you are finished, near the upper-right corner of the dialog box, tap the **[!UICONTROL Done]** icon (check mark).
-1. On the Publish to YouTube workflow page, near the upper-right corner, tap **[!UICONTROL Sync]**.
+1. When you are finished, near the upper-right corner of the dialog box, select the **[!UICONTROL Done]** icon (check mark).
+1. On the Publish to YouTube workflow page, near the upper-right corner, select **[!UICONTROL Sync]**.
 
 -->
 
@@ -958,7 +958,7 @@ Videorapporter visar flera aggregerade mätvärden för en angiven period så at
 
 En tabell över alla *publicerade* videoklipp listas också så att du kan spåra de mest visade videoklippen på din webbplats baserat på den totala videostarten.
 
-När du trycker på ett videonamn i listan visas videons rapport för att behålla tittare (bortfall) i form av ett linjediagram. Diagrammet visar antalet vyer för en given tidpunkt under videouppspelning. När du spelar upp videon synkroniseras det lodräta strecket med tidsindikatorn i spelaren. Släppningar i linjediagramdata indikerar var publiken slutar intressera sig.
+När du väljer ett videonamn i listan visas videons rapport om målgruppsinnehållande (bortfall) i form av ett linjediagram. Diagrammet visar antalet vyer för en given tidpunkt under videouppspelning. När du spelar upp videon synkroniseras det lodräta strecket med tidsindikatorn i spelaren. Släppningar i linjediagramdata indikerar var publiken slutar intressera sig.
 
 Om videon kodades utanför Adobe Experience Manager Dynamic Media är inte data för målgruppsinnehållande (bortfall) och uppspelningsprocent tillgängliga i tabellen.
 
@@ -967,22 +967,22 @@ Spårnings- och rapportdata baseras uteslutande på Dynamic Media egen videospel
 
 Första gången du anger Videorapporter visas som standard videodata från och med den första i den aktuella månaden och till och med den aktuella månadens datum. Du kan dock åsidosätta standarddatumintervallet genom att ange ett eget datumintervall. Nästa gång du anger Videorapporter används det datumintervall du har angett.
 
-För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Services konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Den här funktionen kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten. Du måste dock gå tillbaka till Dynamic Media Cloud Configuration och trycka på **[!UICONTROL OK]**.
+För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Services konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Den här funktionen kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten. Du måste dock gå tillbaka till Dynamic Media Cloud Configuration och välja **[!UICONTROL OK]**.
 
-Så här visar du videorapporter:
+**Så här visar du videorapporter:**
 
-1. I det övre vänstra hörnet av Experience Manager trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]** till vänster.
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager och navigerar sedan till **[!UICONTROL Tools]** (hammer-ikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]** i det vänstra hörnet.
 1. Gör något av följande på sidan Videorapporter:
 
-   * I närheten av det övre högra hörnet trycker du på ikonen **[!UICONTROL Refresh Video Report]**.
+   * I närheten av det övre högra hörnet väljer du ikonen **[!UICONTROL Refresh Video Report]**.
 Använd bara Uppdatera om rapportens slutdatum är den aktuella dagen. Med den här funktionen ser du till att du ser videospårningen som har utförts sedan du senast körde rapporten.
 
-   * I närheten av det övre högra hörnet trycker du på ikonen **[!UICONTROL Date Picker]**.
-Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Run Report]**.
+   * I närheten av det övre högra hörnet väljer du ikonen **[!UICONTROL Date Picker]**.
+Ange start- och slutdatumintervallet som du vill ha videodata för och välj sedan **[!UICONTROL Run Report]**.
 
-   I grupprutan Top Metrics (Toppvärden) identifieras olika aggregerade mått för alla *publicerade *videor på webbplatsen.
+   I grupprutan Övre mått identifieras olika aggregerade mått för alla *publicerade* videor på webbplatsen.
 
-1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
+1. I tabellen som listar de publicerade videoklippen väljer du ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
 
 <!-- OBSOLETE CONTENT OBSOLETE CONTENT - SDK ONLY AVAILABLE INTERNALLY NOW 
 ### Viewing video reports based on a video viewer that you created using the Dynamic Media HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
@@ -1048,7 +1048,7 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html).
  -->
 
-## Lägga till bildtexter i video {#adding-captions-to-video}
+## Lägga till bildtexter eller undertexter till video {#adding-captions-to-video}
 
 Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till bildtexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till bildtext undviker du behovet av att duplicera ljudet, eller behovet av att använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
@@ -1075,7 +1075,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Servera st
 
    Du får bäst resultat om du använder verktyget i Internet Explorer 9 eller senare, Google Chrome eller Safari.
 
-   Klistra in den kopierade URL-adressen för videofilen i fältet **[!UICONTROL Enter URL of video file]** i verktyget och klicka sedan på **[!UICONTROL Load]**. Se [Hämta en URL för en resurs](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL-adressen till själva videofilen som du sedan kan klistra in i **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome och Safari kan sedan spela upp videon direkt.
+   Klistra in den kopierade URL-adressen för videofilen i fältet **[!UICONTROL Enter URL of video file]** i verktyget och välj sedan **[!UICONTROL Load]**. Se [Hämta en URL för en resurs](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL:en till själva videofilen som du sedan kan klistra in i **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome och Safari kan sedan spela upp videon direkt.
 
    Följ nu instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget VTT.
 
@@ -1093,13 +1093,13 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Servera st
 
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL URL]** om du vill visa ett videoklipp. I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare. Lägg till den kopierade URL:en för videon med följande syntax:
+   * Välj **[!UICONTROL URL]** om du vill visa en popup-video. I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare. Lägg till den kopierade URL:en för videon med följande syntax:
 
       `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
       Observera `,1` i slutet av bildtextsökvägen. Omedelbart efter filnamnstillägget VTT i sökvägen kan du aktivera (aktivera) eller inaktivera (inaktivera) den stängda bildtextsknappen i videospelarfältet genom att ange `,1` eller `,0`.
 
-   * Tryck på **[!UICONTROL Embed Code]** om du vill få en inbäddad videoredigeringsfunktion. I dialogrutan Bädda in kod markerar och kopierar du den inbäddade koden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
+   * Välj **[!UICONTROL Embed Code]** om du vill ha en inbäddad videovisningsfunktion. I dialogrutan Bädda in kod markerar och kopierar du den inbäddade koden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
 
       `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
@@ -1107,7 +1107,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Servera st
 
 ## Lägga till kapitelmarkörer i video {#adding-chapter-markers-to-video}
 
-Du kan göra det enklare att titta på och navigera i videoklipp med långa formulär genom att lägga till kapitelmarkörer i enstaka videor eller i adaptiva videouppsättningar. När en användare spelar upp videon kan han/hon klicka på kapitelmarkörerna på tidslinjen (kallas även videobandspelare). De kan enkelt navigera till sin intressepunkt eller direkt gå över till nytt innehåll, ny utbildning och nya demonstrationer.
+Du kan göra det enklare att titta på och navigera i videoklipp med långa formulär genom att lägga till kapitelmarkörer i enstaka videor eller i adaptiva videouppsättningar. När en användare spelar upp videon kan han/hon välja kapitelmarkörer på tidslinjen (kallas även videobandskrubber). De kan enkelt navigera till sin intressepunkt eller direkt gå över till nytt innehåll, ny utbildning och nya demonstrationer.
 
 >[!NOTE]
 Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att tredjepartsvideospelare används.
@@ -1160,9 +1160,9 @@ Se [WebVTT: Textspårningsformatet för webbvideo](https://w3c.github.io/webvtt/
        <td>
        <ol>
        <li>Navigera till den <i>publicerade </i>videoresursen som du vill associera med den överförda kapitelfilen. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/dynamic-media/publishing-dynamicmedia-assets.md">Publicera resurser.</a></li>
-       <li>Klicka eller tryck på <strong>Visare</strong> i listrutan.</li>
-       <li>Tryck eller klicka på förinställningsnamnet för videovisningsprogrammet i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
-       <li>Klicka på <strong>URL</strong> längst ned i den vänstra listen.</li>
+       <li>Välj <strong>Visare</strong> i listrutan.</li>
+       <li>Markera namnet på visningsförinställningen för videon i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
+       <li>I den vänstra listen längst ned väljer du <strong>URL</strong>.</li>
        <li>I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare.</li>
        <li>Lägg till den kopierade URL:en för videon med följande syntax så att du kan associera den med den kopierade URL:en till din kapitelfil:<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
        </ol> </td>
@@ -1172,9 +1172,9 @@ Se [WebVTT: Textspårningsformatet för webbvideo](https://w3c.github.io/webvtt/
        <td>
        <ol>
        <li>Navigera till den <i>publicerade </i>videoresursen som du vill associera med den överförda kapitelfilen. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/dynamic-media/publishing-dynamicmedia-assets.md">Publicera resurser.</a></li>
-       <li>Klicka eller tryck på <strong>Visare</strong> i listrutan.</li>
-       <li>Tryck eller klicka på förinställningsnamnet för videovisningsprogrammet i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
-       <li>Klicka på <strong>Bädda in</strong> längst ned i den vänstra listen.</li>
+       <li>Välj <strong>Visare</strong> i listrutan.</li>
+       <li>Markera namnet på visningsförinställningen för videon i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
+       <li>Välj <strong>Bädda in</strong> längst ned i den vänstra listen.</li>
        <li>I dialogrutan Bädda in kod markerar och kopierar du hela koden till Urklipp och klistrar sedan in den i en enkel textredigerare.</li>
        <li>Lägg till videofilens inbäddningskod med följande syntax så att du kan koppla den till den kopierade URL:en till din kapitelfil:<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt>"</code></li>
        </ol> </td>
@@ -1186,7 +1186,7 @@ Se [WebVTT: Textspårningsformatet för webbvideo](https://w3c.github.io/webvtt/
 
 ## About video thumbnails {#about-video-thumbnails}
 
-A video thumbnail is a reduced-size version of a video frame or an image asset representing the video to the customer. The thumbnail should serve to encourage a customer to click on the video.
+A video thumbnail is a reduced-size version of a video frame or an image asset representing the video to the customer. The thumbnail should serve to encourage a customer to select the video.
 
 All videos in Experience Manager must have an associated thumbnail; you cannot delete a thumbnail without replacing it. By default, when you upload a video to Experience Manager, the first frame is used as the thumbnail. However, you can customize the thumbnail for branding purposes or visual search, for example. When you customize a video thumbnail, you can either play the video and pause on the frame you want to use, or you can select an image asset that you have already uploaded and *published* in your digital asset manager.
 
@@ -1206,25 +1206,25 @@ The ability to customize a video thumbnail is only available after you have appl
     * [Uploaded your videos to the folder](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
 
 1. Navigate to an uploaded video asset whose thumbnail image you want to change.
-1. In asset selection mode either from **[!UICONTROL List View]** or **[!UICONTROL Card View]**, tap the video asset.
-1. On the toolbar, tap the **[!UICONTROL Properties** icon (a circle with an "i" in it).
-1. On the video's Properties page, tap **[!UICONTROL Change Thumbnail]**.
+1. In asset selection mode either from **[!UICONTROL List View]** or **[!UICONTROL Card View]**, select the video asset.
+1. On the toolbar, select the **[!UICONTROL Properties** icon (a circle with an "i" in it).
+1. On the video's Properties page, select **[!UICONTROL Change Thumbnail]**.
 1. On the Change Thumbnail page, do one of the following:
 
     * To use a frame from the video as the new thumbnail:
 
-        * On the toolbar, tap **[!UICONTROL Select Frame from video]**.
-        * Tap the Play button, then tap the Pause button on the frame you want to capture as the video's new thumbnail.
+        * On the toolbar, select **[!UICONTROL Select Frame from video]**.
+        * Select the Play button, then select the Pause button on the frame you want to capture as the video's new thumbnail.
 
     * To use an image asset as the new thumbnail:
 
-        * On the toolbar, tap **[!UICONTROL Select Thumbnail from Assets]**.
-        * Tap **[!UICONTROL Select Thumbnail]**.
+        * On the toolbar, select **[!UICONTROL Select Thumbnail from Assets]**.
+        * Select **[!UICONTROL Select Thumbnail]**.
         * Navigate to a previously uploaded and published image asset you want to use. Note that the asset will automatically be resized to serve as a thumbnail image for the video.
-        * Select the image asset, then tap **[!UICONTROL Select]**.
+        * Select the image asset, then select **[!UICONTROL Select]**.
 
-1. On the Change Thumbnail page, tap **[!UICONTROL Save Change]**.
-1. On the video's Properties page, in the upper-right corner, tap **[!UICONTROL Save & Close]**.
+1. On the Change Thumbnail page, select **[!UICONTROL Save Change]**.
+1. On the video's Properties page, in the upper-right corner, select **[!UICONTROL Save & Close]**.
 
 -->
 
@@ -1232,7 +1232,7 @@ The ability to customize a video thumbnail is only available after you have appl
 
 ## About video thumbnails in Dynamic Media Hybrid mode{#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
-You can choose from one of ten thumbnail images automatically generated by Dynamic Media to add to your video. The video player displays your selected thumbnail when a video asset is used with the Dynamic Media component in the authoring environment of Experience Manager Sites, Experience Manager Mobile, or Experience Manager Screens. The thumbnail serves as a static picture that best represents the contents of your entire video and further encourages users to click the Play button.
+You can choose from one of ten thumbnail images automatically generated by Dynamic Media to add to your video. The video player displays your selected thumbnail when a video asset is used with the Dynamic Media component in the authoring environment of Experience Manager Sites, Experience Manager Mobile, or Experience Manager Screens. The thumbnail serves as a static picture that best represents the contents of your entire video and further encourages users to select the Play button.
 
 Based on the total time of the video, Dynamic Media captures ten (default) thumbnail images at 1%, 11%, 21%, 31%, 41%, 51%, 61%, 71%, 81%, and 91% into the video. The ten thumbnails persist meaning that if you decide to choose a different thumbnail later on, you do not need to regenerate the series. You preview the ten thumbnail images and then select the one you want to use with your video. If you want to change to default you can use CRXDE Lite to configure the time interval that thumbnail images are generated. For example, if you only wanted to generate a series of four evenly spaced thumbnail images from your video, you can configure the interval time at 24%, 49%, 74%, and 99%.
 
@@ -1249,15 +1249,15 @@ See also [About video thumbnails](/help/assets/dynamic-media/video.md#about-vide
 ### Adding a video thumbnail {#adding-a-video-thumbnail}
 
 1. Navigate to an uploaded video asset that you want to add a video thumbnail.
-1. In asset selection mode either from the List View or the Card View, tap the video asset.
-1. On the toolbar, tap the **[!UICONTROL View Properties]** icon (a circle with an "i" in it).
-1. On the video's Properties page, tap **[!UICONTROL Change Thumbnail]**.
-1. On the Change Thumbnail page, on the toolbar, tap **[!UICONTROL Select Frame]**.
+1. In asset selection mode either from the List View or the Card View, select the video asset.
+1. On the toolbar, select the **[!UICONTROL View Properties]** icon (a circle with an "i" in it).
+1. On the video's Properties page, select **[!UICONTROL Change Thumbnail]**.
+1. On the Change Thumbnail page, on the toolbar, select **[!UICONTROL Select Frame]**.
 
    Dynamic Media generates a series thumbnail images from your video, based on the default time interval or time interval you customized.
 
 1. Preview the generated thumbnail images, then select the one you want to add to your video.
-1. Tap **[!UICONTROL Save Change]**.
+1. Select **[!UICONTROL Save Change]**.
 
    The video's thumbnail image is updated to use the thumbnail you selected. If you later decide to change the thumbnail image, you can return to the **[!UICONTROL Change Thumbnail]** page and select a new one.
 
@@ -1277,21 +1277,21 @@ See [Adding a video thumbnail](#adding-a-video-thumbnail).
 
 **To configure the default time interval that video thumbnails are generated,**
 
-1. In Experience Manager, tap **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. In Experience Manager, navigate to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 
 1. In the CRXDE Lite page, in the directory panel on the left, navigate t `o etc/dam/imageserver/configuration/jcr:content/settings.`
 
-   if the directory panel is not visible, you may need to tap the >> icon to the left of the Home tab.
+   if the directory panel is not visible, you may need to select the >> icon to the left of the Home tab.
 
 1. On the lower-right panel, in the Properties tab, double-tap `thumbnailtime`.
 1. In the Edit thumbnailtime dialog box, use the text fields to enter interval values as percentages.
 
-    * Tap the plus sign (+) icon to add one or more interval value fields. You may need to scroll to the bottom of the dialog box to see the icon.
-    * Tap the minus sign (-) icon to the right of an interval value field to delete it from the list.
-    * Tap the up arrow icon and the down arrow icon to reorder the interval values.
+    * Select the plus sign (+) icon to add one or more interval value fields. You may need to scroll to the bottom of the dialog box to see the icon.
+    * Select the minus sign (-) icon to the right of an interval value field to delete it from the list.
+    * Select the up arrow icon and the down arrow icon to reorder the interval values.
 
-1. Tap **[!UICONTROL OK]** to return to the Properties tab.
-1. Near the upper-left corner of the CRXDE Lite page, tap **[!UICONTROL Save All]**, then tap the Back Home icon in the upper-left corner to return to Experience Manager.
+1. Select **[!UICONTROL OK]** to return to the Properties tab.
+1. Near the upper-left corner of the CRXDE Lite page, select **[!UICONTROL Save All]**, then select the Back Home icon in the upper-left corner to return to Experience Manager.
 
    See [Adding a video thumbnail](#adding-a-video-thumbnail).
 
@@ -1306,12 +1306,12 @@ These steps apply only to Dynamic Media running in Hybrid mode.
 T**o add a custom video thumbnail**,
 
 1. Navigate to an uploaded video asset that you want to add a custom video thumbnail.
-1. In asset selection mode either from the List View or the Card View, tap the video asset.
-1. On the toolbar, tap the **[!UICONTROL View Properties]** icon (a circle with an "i" in it).
-1. On the video's Properties page, tap **[!UICONTROL Change Thumbnail]**.
-1. On the Change Thumbnail page, on the toolbar, tap **[!UICONTROL Upload New Thumbnail]**.
-1. Navigate to a thumbnail image you want to use, select it, then tap **[!UICONTROL Open]** to begin uploading the image into Experience Manager. Following the upload, be sure you publish the image.
-1. After you have successfully uploaded and published the image, in the Change Thumbnail page, tap **[!UICONTROL Save Changes]**.
+1. In asset selection mode either from the List View or the Card View, select the video asset.
+1. On the toolbar, select the **[!UICONTROL View Properties]** icon (a circle with an "i" in it).
+1. On the video's Properties page, select **[!UICONTROL Change Thumbnail]**.
+1. On the Change Thumbnail page, on the toolbar, select **[!UICONTROL Upload New Thumbnail]**.
+1. Navigate to a thumbnail image you want to use, select it, then select **[!UICONTROL Open]** to begin uploading the image into Experience Manager. Following the upload, be sure you publish the image.
+1. After you have successfully uploaded and published the image, in the Change Thumbnail page, select **[!UICONTROL Save Changes]**.
 
    The custom thumbnail is added to your video.
 
