@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: e6e5fb6eebcd39b46dc4234999e18de9b8e3950e
+source-git-commit: 891658143d44d5bbb0e46c488e078892e2484c08
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1189'
 ht-degree: 1%
 
 ---
@@ -200,4 +200,4 @@ Om du vill felsöka replikering går du till replikeringsköerna i webbgränssni
 ![](assets/publish-logs.png "LogsLogs")
 
 Om innehållet inte kunde publiceras återställs hela publikationen från AEM Publish Service.
-I så fall bör köerna ses över för att identifiera vilka objekt som orsakade att offentliggörandet avbröts. Om du klickar på en kö med röd status visas kön med väntande objekt, från vilken enskilda eller alla objekt kan rensas vid behov.
+I så fall visas den huvudsakliga, redigerbara kön med röd status och bör granskas för att identifiera vilka objekt som orsakade att publiceringen avbröts. Genom att klicka på den kön visas de väntande objekten, från vilka ett eller alla objekt kan rensas vid behov.
