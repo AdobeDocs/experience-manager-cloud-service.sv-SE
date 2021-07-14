@@ -1,14 +1,13 @@
 ---
 title: Roller för Cloud Manager
 description: Den här sidan beskriver användarroller och behörigheter. Följ den här sidan om du vill lära dig hur du lägger till användare och tilldelar dem till roller i molnhanteraren.
-translation-type: tm+mt
-source-git-commit: 7b5973aef0d3296a54bcf1e57bda616cdd618346
+exl-id: d1689134-044a-4d96-97a2-cd09f735a680
+source-git-commit: a0edbaf650fdfbc271a000ab4827a4c414321613
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 6%
+source-wordcount: '542'
+ht-degree: 7%
 
 ---
-
 
 # Roller för Cloud Manager {#user-roles-permissions}
 
@@ -48,9 +47,9 @@ Utöver ovanstående skapar Cloud Manager automatiskt en produktprofil med namne
 
 Var och en av rollerna har särskilda behörigheter som är kopplade till sig. Om du till exempel har rollen som
 
-* ***Business Owner***, du har behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö, lägga till/redigera/ta bort pipelinen och köra valfri pipeline samt distribuera kod AEM miljö eller kodkvalitet.
+* ***Business Owner***, du har behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö och köra valfri pipeline.
 
-* ***Distributionshanteraren*** har behörighet att lägga till eller uppdatera en miljö, köra valfri pipeline och distribuera kod AEM miljön eller kodkvaliteten.
+* ***Distributionshanteraren*** har behörighet att lägga till eller uppdatera en miljö och köra valfri pipeline.
 
 * ***Utvecklare***: du har behörighet att skapa en personlig åtkomsttoken för åtkomst till Git.
 
@@ -74,4 +73,3 @@ I följande tabell sammanfattas rollerna tillsammans med deras tillhörande beh�
 | Ta bort pipeline | Tillåter borttagning av en pipeline. |  | x |  |  |
 | Avbryt körning | Avbryt aktuell körning. |  | x |  |  |
 | Generera token för personlig åtkomst | Access Git. |  | x |  | x |
-
