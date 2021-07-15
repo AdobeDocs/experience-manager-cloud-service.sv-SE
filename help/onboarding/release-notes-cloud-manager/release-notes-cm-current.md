@@ -3,10 +3,10 @@ title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 20
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.7.0
 feature: Versionsinformation
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: 06dca3b3e94b27f592681e661cd5c9883c0f6422
+source-git-commit: 40e5d00abc3caceadbbb26097d6891f62e2cdbd6
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,17 +28,19 @@ Nästa version är planerad till den 12 augusti 2021.
 
 * IP för utgående utgång loggas nu i loggfilen för byggsteget.
 
-* Scen- och produktionsmiljöer som kör gamla versioner av AEM rapporterar nu statusen&quot;Uppdatering tillgänglig&quot;.
+* Scen- och produktionsmiljöer som kör äldre versioner av AEM rapporterar nu statusen **Tillgänglig uppdatering**.
 
 * Det högsta antalet SSL-certifikat som stöds har ökat till 20 per program.
 
-* Öka det högsta antalet domäner som kan konfigureras har ökat till 500 per miljö.
+* Det maximala antalet domäner som kan konfigureras har ökat till 500 per miljö.
 
-* Knapparna Hantera Git har fått namnet Åtkomst till Git-information och dialogrutan har uppdaterats visuellt.
+* Knapparna **Hantera Git** har fått namnet **Åtkomst till Git-information** och dialogrutan har uppdaterats visuellt.
+
+* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 28.
 
 ### Felkorrigeringar {#bug-fixes}
 
-* I vissa situationer var Förhandsvisning inte ett tillgängligt alternativ när en IP-Tillåtelselista skulle bindas till en miljö.
+* I vissa situationer var Förhandsgranskning inte ett tillgängligt alternativ när en IP-Tillåtelselista skulle bindas till en miljö.
 
 * Manuell navigering till sidan med körningsinformation för en körning som inte finns visade inte på något fel, bara en oändlig inläsningsskärm.
 
@@ -48,7 +50,7 @@ Nästa version är planerad till den 12 augusti 2021.
 
 * Guiden Lägg till program angav felaktigt att namnet inte kan ändras efter att det har skapats.
 
-* I vissa situationer var Förhandsvisning inte ett tillgängligt alternativ när en IP-Tillåtelselista skulle bindas till en miljö.
+* I vissa situationer var Förhandsgranskning inte ett tillgängligt alternativ när en IP-Tillåtelselista skulle bindas till en miljö.
 
 ### Kända fel {#known-issues}
 
