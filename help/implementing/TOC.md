@@ -5,9 +5,9 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: 1b52e4af946239309da6eb44d326106d6f552490
+source-git-commit: 6176665d17432999409baca46c46503d20f8f06b
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '913'
 ht-degree: 29%
 
 ---
@@ -180,6 +180,7 @@ ht-degree: 29%
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
    + [AEM versionsuppdateringar](deploying/aem-version-updates.md)
    + [Konfigurera OSGI för AEM as a Cloud Service](deploying/configuring-osgi.md)
+   + [OSGi Configuration API](deploying/osgi-configuration-api.md)
 + Författarnivå {#author-tier}
    + [Åtkomst till författarnivån](/help/implementing/author-tier/accessing-the-author-tier.md)
    + [Skydda författarnivån](/help/implementing/author-tier/securing-the-author-tier.md)
