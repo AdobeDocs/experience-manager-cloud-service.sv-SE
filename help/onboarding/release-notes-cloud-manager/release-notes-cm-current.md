@@ -3,7 +3,7 @@ title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 20
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.7.0
 feature: Versionsinformation
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: 40e5d00abc3caceadbbb26097d6891f62e2cdbd6
+source-git-commit: e24610cef6d134ddf9ce8abe9a5893deac08eeb6
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Nästa version är planerad till den 12 augusti 2021.
 
 * Det maximala antalet domäner som kan konfigureras har ökat till 500 per miljö.
 
-* Knapparna **Hantera Git** har fått namnet **Åtkomst till Git-information** och dialogrutan har uppdaterats visuellt.
+* Knapparna **Hantera Git** har ändrats till **Använd Git-information** och dialogrutan har uppdaterats visuellt.
 
 * Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 28.
 
@@ -46,11 +46,9 @@ Nästa version är planerad till den 12 augusti 2021.
 
 * Felmeddelandet som visades när det maximala antalet SSL-certifikat nåddes var inte till någon hjälp.
 
-* I vissa fall kan det finnas en diskrepans i den version av produkten som visas på pipeline-kortet på översiktssidan.
+* I vissa fall kan det finnas en diskrepans i releaseversionen som visas på pipeline-kortet på sidan **Översikt**.
 
 * Guiden Lägg till program angav felaktigt att namnet inte kan ändras efter att det har skapats.
-
-* I vissa situationer var Förhandsgranskning inte ett tillgängligt alternativ när en IP-Tillåtelselista skulle bindas till en miljö.
 
 ### Kända fel {#known-issues}
 
