@@ -1,7 +1,7 @@
 ---
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
-source-git-commit: 83da3b647e47022a41160f2007d90dc7b23db671
+source-git-commit: 97833dd5b962d8f2a0f50a911d7c41ca17a1a0fe
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
@@ -54,9 +54,9 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 
 1. På sidan visas en lista med kodomfaktoriseringsaktiviteter ordnade efter allvarlighetsgrad. Du kan lära dig mer genom att klicka på de två markerade ikonerna.
 
-   På sidan visas alla aspekter av kodomfaktorisering på tre olika flikar.
+   På sidan visas alla aspekter av kodomfaktorisering på tre olika flikar:
 
-   * Översikt:
+   * Översikt
    * Dispatcher
    * Testning
 
