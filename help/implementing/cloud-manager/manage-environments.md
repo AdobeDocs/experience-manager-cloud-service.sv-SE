@@ -2,7 +2,7 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: ed7436ed0dec228898cfe6795c698e98499f94c9
+source-git-commit: 06de896e0f8180dc1acbbf490345527b92c15d40
 workflow-type: tm+mt
 source-wordcount: '1652'
 ht-degree: 3%
@@ -67,7 +67,7 @@ Kortet **Environment** på sidan Översikt visar upp till tre miljöer.
 
 1. Välj knappen **Visa alla** för att navigera till sammanfattningssidan för **Miljö** för att visa en tabell med en fullständig lista över miljöer.
 
-   ![](assets/environment-view-1.png)
+   ![](/help/implementing/cloud-manager/assets/environment-showall.png)
 
 1. Sidan **Miljöer** visar en lista över alla befintliga miljöer.
 
@@ -111,7 +111,7 @@ Förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmil
 
 1. **Publicera innehåll för förhandsgranskning**: Du kan publicera innehåll i förhandsgranskningstjänsten med hjälp av gränssnittet Hantera publikation i AEM. Mer information finns i [Förhandsgranska innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/previewing-content.html?lang=en).
 
-## Uppdaterar miljön {#updating-dev-environment}
+## Uppdaterar miljö {#updating-dev-environment}
 
 Uppdateringar av scen- och produktionsmiljöer hanteras automatiskt av Adobe.
 
@@ -205,7 +205,7 @@ Gå till sidan Miljöinformation från sidan Miljösammanfattning. Du kan utför
 >[!NOTE]
 >Funktionen IP Tillåtelselista stöds nu i Cloud Manager för författar-, publicerings- och förhandsgranskningstjänster (finns i webbplatsprogram).
 
-### Använda en IP-Tillåtelselista {#apply-ip-allow-list}
+### Använda ett IP-Tillåtelselista {#apply-ip-allow-list}
 
 Att använda en IP-Tillåtelselista är den process genom vilken alla IP-intervall som ingår i definitionen av Tillåt-lista kopplas till en författare eller publiceringstjänst i en miljö. En användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att det ska gå att använda IP Tillåtelselista.
 
