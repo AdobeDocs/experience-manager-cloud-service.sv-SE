@@ -5,10 +5,10 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: cde8552925a6b0ceb2c30694f127233b05dcc73c
+source-git-commit: 1b52e4af946239309da6eb44d326106d6f552490
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 30%
+source-wordcount: '910'
+ht-degree: 29%
 
 ---
 
@@ -186,5 +186,8 @@ ht-degree: 30%
 + Översikt över innehållsleverans {#content-delivery}
    + [Flöde för innehållsleverans](dispatcher/overview.md)
    + [Dispatcher i molnet](dispatcher/disp-overview.md)
+   + [Validera och felsöka med Dispatcher Tools](dispatcher/validation-debug.md)
+   + [Migrera Dispatcher-konfigurationen från AMS till AEM som Cloud Service](dispatcher/ams-aem.md)
+   + [Validera och felsöka med Dispatcher Tools Legacy](dispatcher/validation-debug-legacy.md)
    + [CDN i AEM as a Cloud Service](dispatcher/cdn.md)
    + [Cache i AEM as a Cloud Service](dispatcher/caching.md)
