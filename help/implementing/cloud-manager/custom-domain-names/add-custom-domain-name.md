@@ -2,7 +2,7 @@
 title: Lägga till ett anpassat domännamn
 description: Lägga till ett anpassat domännamn
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: 1eb9423b0128c952bc16cf0b8dff95b0e86964a0
+source-git-commit: bee18f13a7261077821205cad1df5e68a63638e0
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 0%
@@ -23,7 +23,7 @@ En användare måste vara en Business Owner eller Deployment Manager för att ku
 
 * AEM som en Cloud Service saknar stöd för jokerteckendomäner.
 
-* Varje Cloud Manager-miljö har plats för upp till 250 anpassade domäner per miljö.
+* Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö.
 
 * Samma domännamn kan inte användas i mer än en miljö.
 
