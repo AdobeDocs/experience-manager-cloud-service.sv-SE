@@ -4,9 +4,9 @@ description: Generera variationer av resurser med hjälp av Creative Cloud-integ
 contentOwner: AG
 feature: Överför,Resursbearbetning,Publicera,Asset compute Microservices,Arbetsflöde
 role: User,Admin
-source-git-commit: 997f292be2498624c5218addd61ec40727eb48bc
+source-git-commit: cf2cd9726150a286d3328e68cf52857fb262e805
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,9 @@ ht-degree: 0%
 Tillägget för innehållsautomatisering integrerar API:erna [!DNL Adobe Experience Manager Assets as a Cloud Service] och [!DNL Adobe Creative Cloud] för att bearbeta dina resurser i stor skala. [!DNL Experience Manager] använder molnbaserade  [](/help/assets/asset-microservices-overview.md) tillgångsmikrotjänster för att använda  [!DNL Adobe Creative Cloud] funktionerna och automatisera skapandet av resurser och mediehanteringen.
 
 Om du vill redigera resurser i [!DNL Adobe Photoshop] och [!DNL Adobe Lightroom] behöver du inte hämta resurser från [!DNL Experience Manager Assets], redigera och överföra dem igen. Du behöver bara skapa och konfigurera en bearbetningsprofil i [!DNL Experience Manager], tillämpa profilen på en mapp och överföra resurserna till mappen. Dina överförda resurser bearbetas om baserat på bearbetningsprofilerna och du får variationer av dessa resurser. Den enhetliga och smidiga gruppbearbetningen sparar tid och ökar innehållets hastighet utan att man behöver ha superb kreativ kompetens. Utvecklare och partners kan också utöka sina tillgångsmikrotjänster med direkt åtkomst till dessa API:er och inkludera anpassad logik.
-Användare kan skapa bearbetningsprofiler för att automatisera följande kreativa åtgärder för sina resurser:
 
+Användare kan skapa bearbetningsprofiler för att automatisera följande kreativa åtgärder för sina resurser:\
+![automatisera Adobe Photoshop och Adobe Lightroom-operationer på resurser](assets/content-automation.png)
 * **Automatisk ton**: Använder artificiell intelligens för att analysera bildens innehåll och gör intelligent ljus- och färgkorrigeringar baserat på bildens unika attribut.
 * **Automatisk upprätt**: Använder artificiell intelligens för att analysera innehållet i bilden och korrigera skevade perspektiv i bilder. Om du till exempel vill skapa nivåhorisonter.
 * **Lightroom-förinställningar**: Använder ett användardefinierat utseende på bilder för att få ett konsekvent utseende med anpassade förinställningar.
@@ -26,6 +27,8 @@ Användare kan skapa bearbetningsprofiler för att automatisera följande kreati
 * **Bildmask**: Använder artificiell intelligens för att skapa en mask runt salivobjekt med ett enda kommando.
 * **Photoshop Actions**: Tillämpar en serie åtgärder (i Photoshop) på en fil eller en grupp med filer.
 * **Ersättning** av smarta objekt: Gör personalisering i stor skala genom att låta dig växla bilder samtidigt som du behåller alla effekter och justeringar som används i en PSD-fil.
+
+
 
 ## Använd en bearbetningsprofil för att redigera flera kreativa resurser samtidigt {#process-assets}
 
@@ -39,7 +42,7 @@ Så här använder du bearbetningsprofiler för att automatiskt skapa variatione
 
 1. Välj fliken **[!UICONTROL Creative]**, ange utdatamapp och välj **[!UICONTROL Add New]** för att lägga till en kreativ konfiguration.
 
-1. Ange **[!UICONTROL Rendition Name]** (eller utdatanamn), **[!UICONTROL Extension]** (eller filtyp), välj **[!UICONTROL Quality]** (eller utdataparametrar), markera Inkluderar och utelämnar MIME-typlistor (eller indataresursfilter) och välj önskad kreativ åtgärd.
+1. Ange **[!UICONTROL Rendition Name]** (eller utdatanamn), **[!UICONTROL Extension]** (eller filtyp), välj **[!UICONTROL Quality]** (eller utdataparametrar), välj **[!UICONTROL Includes]** och **[!UICONTROL Excludes]** MIME-typlistor (eller indatafiltret) och välj önskad kreativ åtgärd.
    ![fliken creative i bearbetningsprofilen](assets/creative-processing-profile.png)
 
 1. Vissa åtgärder kräver extra parametrar (resurs). Ange vid behov värden för de här extra parametrarna.
