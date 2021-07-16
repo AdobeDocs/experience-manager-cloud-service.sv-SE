@@ -2,9 +2,9 @@
 title: 'Skapa ett produktionsprogram '
 description: Skapa ett produktionsprogram
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: ca960361bea8f62d908a9b6f1408a99722552c75
+source-git-commit: 410986233a599638cb1c2a69f33c94ea67c530fb
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Ett *Production*-program är avsett för en användare som känner till AEM och Cloud Manager och som är redo att börja skriva, bygga och testa kod i syfte att distribuera den till Production.
 
-Titta på de två självstudiekurserna nedan för att lära dig hur du skapar ett program i Cloud Manager:
+Titta på de två självstudiekurserna i två delar för att lära dig hur du skapar ett program i Cloud Manager:
 
 >[!VIDEO](https://video.tv.adobe.com/v/334953)
 
