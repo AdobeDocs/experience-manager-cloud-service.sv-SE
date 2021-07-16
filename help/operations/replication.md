@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 891658143d44d5bbb0e46c488e078892e2484c08
+source-git-commit: 4f647b76860eac8e7c76df4a4ccb7f069534aea4
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1229'
 ht-degree: 1%
 
 ---
@@ -55,6 +55,10 @@ Så här utför du en trädaktivering:
 
    ![](assets/publish-distribute.png "DistribueraDistribuera")
 4. Markera sökvägen i sökvägsläsaren, välj att lägga till en nod, ett träd eller att ta bort efter behov och välj **Skicka**
+
+För bästa prestanda bör du följa dessa riktlinjer när du använder den här funktionen:
+* Den totala storleken på innehållspaketet som genereras för replikering måste vara mindre än 5 MB.
+* Vi rekommenderar att du kopierar färre än 100 banor i taget, med en hård gräns på 500 sökvägar.
 
 ### Publicera arbetsflöde för innehållsträd {#publish-content-tree-workflow}
 
