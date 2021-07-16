@@ -5,7 +5,7 @@ contentOwner: AG
 feature: asset compute Microservices,Workflow,Asset Processing
 role: Architect,Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: cf2cd9726150a286d3328e68cf52857fb262e805
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Så här skapar du en standardbearbetningsprofil:
 
 1. Administratörer har åtkomst till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
 1. Ange ett namn som hjälper dig att identifiera profilen unikt när du använder den i en mapp.
-1. Aktivera **[!UICONTROL Create FPO Rendition]** på fliken **[!UICONTROL Standard]** för att generera FPO-återgivningar. Ange ett **[!UICONTROL Quality]**-värde mellan 1 och 100.
+1. Aktivera **[!UICONTROL Create FPO Rendition]** på fliken **[!UICONTROL Image]** för att generera FPO-återgivningar. Ange ett **[!UICONTROL Quality]**-värde mellan 1 och 100.
 1. Om du vill generera andra återgivningar klickar du på **[!UICONTROL Add New]** och anger följande information:
 
    * Filnamn för varje återgivning.
