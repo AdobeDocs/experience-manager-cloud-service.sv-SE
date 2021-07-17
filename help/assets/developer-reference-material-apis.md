@@ -5,9 +5,9 @@ contentOwner: AG
 feature: API:er,Resurser HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
+source-git-commit: 3051475d20d5b534b74c84f9d541dcaf1a5492f9
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1431'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil visas nedan. Utför dessa steg i ett externt program och inte i JVM-filen [!DNL Experience Manager].
 
 1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]r-distribution av din avsikt att överföra en ny binär fil.
-1. [POST innehållet i ](#upload-binary) binaryen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
+1. [PUT innehållet i ](#upload-binary) binaryen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
 1. [Skicka en HTTP-](#complete-upload) begäran för att informera servern om att innehållet i binärfilen har överförts.
 
 ![Översikt över protokollet för direkt binär överföring](assets/add-assets-technical.png)
@@ -113,7 +113,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 }
 ```
 
-* `completeURI` (sträng): Anropa den här URI:n när den binära filen har överförts. URI:n kan vara en absolut eller relativ URI och klienterna bör kunna hantera båda. Värdet kan alltså vara `"https://author.acme.com/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` Se [fullständig överföring](#complete-upload).
+* `completeURI` (sträng): Anropa den här URI:n när den binära filen har överförts. URI:n kan vara en absolut eller relativ URI och klienterna bör kunna hantera båda. Värdet kan alltså vara `"https://[aem_server]:[port]/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` Se [fullständig överföring](#complete-upload).
 * `folderPath` (sträng): Fullständig sökväg till mappen som binärfilen överförs till.
 * `(files)` (array): En lista med element vars längd och ordning matchar längden och ordningen för listan med binär information som tillhandahålls i initieringsbegäran.
 * `fileName` (sträng): Namnet på motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
@@ -125,7 +125,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 
 ### Ladda upp binärt {#upload-binary}
 
-Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges delar klienten upp binärfilen i delar och begär POST av varje del till varje URI, i ordning. Använd alla URI:er. Se till att storleken på varje del ligger inom de minimi- och maximistorlekar som anges i initieringssvaret. CDN-kantnoder snabbar upp begärd överföring av binärfiler.
+Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges delar klienten upp binärfilen i delar och gör PUT-förfrågningar av varje del till varje URI, i ordning. Använd alla URI:er. Se till att storleken på varje del ligger inom de minimi- och maximistorlekar som anges i initieringssvaret. CDN-kantnoder snabbar upp begärd överföring av binärfiler.
 
 En möjlig metod för att uppnå detta är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. Anta till exempel att binärfilens totala storlek är 20 000 byte och att antalet överförda URI är 2. Följ sedan dessa steg:
 
@@ -154,9 +154,7 @@ Om resursen finns och varken `createVersion` eller `replace` har angetts, uppdat
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
 
-Överföringen av en binär fil utförs inte förrän den fullständiga URL:en anropas för filen. En resurs bearbetas när överföringen är klar. Bearbetningen startar inte även om resursens binära fil överförs helt, men överföringen inte slutförs.
-
-Om det lyckas svarar servern med en `200`-statuskod.
+Överföringen av en binär fil utförs inte förrän den fullständiga URL:en anropas för filen. En resurs bearbetas när överföringen är klar. Bearbetningen startar inte även om resursens binära fil överförs helt, men överföringen inte slutförs. Om överföringen lyckas svarar servern med en `200`-statuskod.
 
 ### Överföringsbibliotek med öppen källkod {#open-source-upload-library}
 
