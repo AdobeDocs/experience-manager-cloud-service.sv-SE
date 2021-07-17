@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Återgivningar
 exl-id: null
-source-git-commit: f6e1ee3a9640f0853d4f518e816cfee4bd5cb20f
+source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -18,7 +18,7 @@ När du monterar stora resurser från Experience Manager i Adobe InDesign-dokume
 
 Resurser innehåller återgivningar som endast används för placering (FPO). Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner. Om det inte finns någon FPO-återgivning tillgänglig för en resurs använder Adobe InDesign den ursprungliga resursen i stället. Denna reservfunktion säkerställer att det kreativa arbetsflödet fortsätter utan avbrott.
 
-Experience Manager som Cloud Service har funktioner för resurshantering i molnet för att generera FPO-renderingar. Använd resurser och mikrotjänster för att generera renderingar. Du kan konfigurera återgivningsgenerering för nyligen överförda resurser och för de resurser som finns i Experience Manager.
+Experience Manager som Cloud Service har funktioner för resurshantering i molnet för att generera FPO-renderingar. Använd resursmikrotjänster för att generera renderingar. Du kan konfigurera återgivningsgenerering för nyligen överförda resurser och för de resurser som finns i Experience Manager.
 
 Så här genererar du FPO-återgivningar:
 1. [Skapa en bearbetningsprofil](#create-processing-profile).
