@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: eef90c6a-b354-4342-8b97-21d067ae2979
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1157'
 ht-degree: 20%
 
 ---
@@ -98,7 +98,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig metadataprofil som
 
 **Om du vill använda en metadataprofil globalt gör du något av följande**
 
-* Navigera till `https://<AEM server>/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` och använd rätt profil och klicka på **Spara**.
+* Navigera till `https://[aem_server]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` och använd rätt profil och klicka på **[!UICONTROL Save]**.
 
 * Navigera till CRXDE Lite till följande nod: `/content/dam/jcr:content`. Lägg till egenskapen `metadataProfile:/etc/dam/metadata/dynamicmedia/<name of metadata profile>`. Klicka på **Spara alla**.
 
@@ -110,7 +110,7 @@ Du kan ta bort en metadataprofil från en mapp från menyn **Verktyg** eller, om
 
 ### Ta bort metadataprofiler från mappar via användargränssnittet Profiles {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. Klicka på AEM logotyp och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. Markera den metadataprofil som du vill ta bort från en eller flera mappar.
 1. Klicka på **[!UICONTROL Remove Metadata Profile from Folder(s)]** och markera den eller de mappar som du vill ta bort en profil från och klicka på **[!UICONTROL Done]**.
 
@@ -118,6 +118,6 @@ Du kan ta bort en metadataprofil från en mapp från menyn **Verktyg** eller, om
 
 ### Ta bort metadataprofiler från mappar via Egenskaper {#removing-metadata-profiles-from-folders-via-properties}
 
-1. Klicka på AEM logotyp, navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en metadataprofil från.
+1. Klicka på Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill ta bort en metadataprofil från.
 1. Markera mappen genom att klicka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Metadata Profiles]**, välj **[!UICONTROL None]** i listrutan och klicka på **[!UICONTROL Save]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
