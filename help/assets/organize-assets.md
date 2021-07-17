@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Resurshantering,Taggar,Resursdistribution
 role: User
 exl-id: 6b3ce076-2dd9-47f6-9b68-4fa52bfedd42
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokument extraheras och görs sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar helt rätt behörigheter. Metadata beskrivs i detalj i Metadata i Digital Asset Management.
 
-AEM Assets har stöd för flera sätt att ordna innehåll. Du kan ordna dem hierarkiskt med hjälp av mappar eller så kan du ordna dem på ett oordnat, tillfälligt sätt, t.ex. med hjälp av taggar. Användare kan redigera taggar i DAM-redigeraren för mediefiler där underresurser, återgivningar och metadata visas.
+Experience Manager Assets stöder flera sätt att ordna innehåll. Du kan ordna dem hierarkiskt med hjälp av mappar eller så kan du ordna dem på ett oordnat, tillfälligt sätt, t.ex. med hjälp av taggar. Användare kan redigera taggar i DAM-redigeraren för mediefiler där underresurser, återgivningar och metadata visas.
 
 ## Skapa mappar {#create-folders}
 
-När du organiserar en samling resurser, till exempel alla *Natur*-bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Assets kräver inte att du ordnar resurser i mappar för att fungera bättre.
+När du organiserar en samling resurser, till exempel alla *Natur*-bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. [!DNL Assets] kräver inte att du ordnar resurser i mappar för att fungera bättre.
 
 >[!NOTE]
 >
