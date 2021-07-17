@@ -4,7 +4,7 @@ description: Generera variationer av resurser med hjälp av Creative Cloud-integ
 contentOwner: AG
 feature: Överför,Resursbearbetning,Publicera,Asset compute Microservices,Arbetsflöde
 role: User,Admin
-source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
+source-git-commit: f21f8bf7975fd4e82785a4c368cf4956096608d4
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -42,7 +42,8 @@ Så här använder du bearbetningsprofiler för att automatiskt skapa variatione
 
 1. Välj fliken **[!UICONTROL Creative]**, ange utdatamapp och välj **[!UICONTROL Add New]** för att lägga till en kreativ konfiguration.
 
-1. Ange **[!UICONTROL Rendition Name]** (eller utdatanamn), **[!UICONTROL Extension]** (eller filtyp), välj **[!UICONTROL Quality]** (eller utdataparametrar), välj **[!UICONTROL Includes]** och **[!UICONTROL Excludes]** MIME-typlistor (eller indatafiltret) och välj önskad kreativ åtgärd.
+1. Ange **[!UICONTROL Rendition Name]** (eller utdatanamn), **[!UICONTROL Extension]** (eller filtyp), välj **[!UICONTROL Quality]** (eller utdataparametrar), välj **[!UICONTROL Includes]** och **[!UICONTROL Excludes]** MIME-typlistor (eller indataresursfilter) och välj önskad kreativ åtgärd.<br/>
+
    ![fliken creative i bearbetningsprofilen](assets/creative-processing-profile.png)
 
 1. Vissa åtgärder kräver extra parametrar (resurs). Ange vid behov värden för de här extra parametrarna.
