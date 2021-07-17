@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 464a97ce-da3e-47b5-9879-fafaf2f2378c
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '416'
 ht-degree: 8%
 
 ---
@@ -28,7 +28,7 @@ Så här redigerar du metadata:
    * Välj snabbåtgärden **[!UICONTROL View Properties]** från miniatyrbilden av resursen.
    * Klicka/tryck på **[!UICONTROL View Properties]** från verktygsfältet på resurssidan.
 
-   Resurssidan visar alla metadata för resursen. Dessa metadata extraherades automatiskt när de överfördes (överfördes) till AEM Assets.
+   Resurssidan visar alla metadata för resursen. Dessa metadata extraherades automatiskt när de överfördes (överfördes) till Experience Manager Assets.
 
 1. Redigera metadata på de olika flikarna efter behov och klicka/tryck sedan på **[!UICONTROL Save]** i verktygsfältet för att spara ändringarna. Klicka/tryck på **[!UICONTROL Close]** för att gå tillbaka till Assets-webbgränssnittet.
 
@@ -36,7 +36,7 @@ Så här redigerar du metadata:
    >
    >Om ett textfält är tomt finns det ingen befintlig metadatauppsättning. Du kan ange ett värde i fältet och spara det för att lägga till metadataegenskapen.
 
-Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Detta görs via AEM arbetsflöde för återskrivning av metadata. Ändringar som görs i befintliga egenskaper (till exempel `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till tillsammans med schemat.
+Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Detta görs via Experience Manager metadata-återskrivningsarbetsflöde. Ändringar som görs i befintliga egenskaper (till exempel `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till tillsammans med schemat.
 
 <!-- XMP write-back is supported and enabled for the platforms and file formats described in technical requirements. -->
 
@@ -44,9 +44,9 @@ Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga
 
 Mer information om hur du redigerar metadataschemat finns i [Redigera metadataschemaformulär](metadata-schemas.md#edit-metadata-schema-forms).
 
-## Registrera ett anpassat namnutrymme i AEM {#registering-a-custom-namespace-within-aem}
+## Registrera ett anpassat namnutrymme i Experience Manager {#registering-a-custom-namespace-within-aem}
 
-Du kan lägga till egna namnutrymmen i AEM. Precis som det finns fördefinierade namnutrymmen som cq, jcr och sling kan du ha ett namnutrymme för databasens metadata och XML-bearbetning.
+Du kan lägga till egna namnutrymmen i Experience Manager. Precis som det finns fördefinierade namnutrymmen som cq, jcr och sling kan du ha ett namnutrymme för databasens metadata och XML-bearbetning.
 
 1. Gå till administrationssidan för nodtypen *https://&lt;host>:&lt;port>/crx/explorer/nodetypes/index.jsp*.
 1. Klicka eller tryck på **[!UICONTROL Namespaces]** överst på sidan. Namnutrymmesadministrationssidan visas i ett fönster.
