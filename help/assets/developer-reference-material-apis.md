@@ -5,9 +5,9 @@ contentOwner: AG
 feature: API:er,Resurser HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: b7034a98b0c64ffb407240b5d17e1dd02faa6eb4
+source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1429'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 | x | Stöds inte. Skall ej användas. |
 | - | Inte tillgängligt |
 
-| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [API:er för AEM/Sling/](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) JCRJava | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)-servrar | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) _(förhandstitt)_ |
+| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [API:er för Experience Manager/Sling/](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) JCRJava | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)-servrar | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) _(förhandstitt)_ |
 | ----------------|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Ursprunglig binär** |  |  |  |  |  |  |
 | Skapa original | ✓ | x | - | x | x | - |
