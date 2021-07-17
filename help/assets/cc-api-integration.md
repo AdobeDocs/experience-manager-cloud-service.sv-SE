@@ -4,9 +4,9 @@ description: Generera variationer av resurser med hjälp av Creative Cloud-integ
 contentOwner: AG
 feature: Överför,Resursbearbetning,Publicera,Asset compute Microservices,Arbetsflöde
 role: User,Admin
-source-git-commit: cf2cd9726150a286d3328e68cf52857fb262e805
+source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Tillägget för innehållsautomatisering integrerar API:erna [!DNL Adobe Experience Manager Assets as a Cloud Service] och [!DNL Adobe Creative Cloud] för att bearbeta dina resurser i stor skala. [!DNL Experience Manager] använder molnbaserade  [](/help/assets/asset-microservices-overview.md) tillgångsmikrotjänster för att använda  [!DNL Adobe Creative Cloud] funktionerna och automatisera skapandet av resurser och mediehanteringen.
 
-Om du vill redigera resurser i [!DNL Adobe Photoshop] och [!DNL Adobe Lightroom] behöver du inte hämta resurser från [!DNL Experience Manager Assets], redigera och överföra dem igen. Du behöver bara skapa och konfigurera en bearbetningsprofil i [!DNL Experience Manager], tillämpa profilen på en mapp och överföra resurserna till mappen. Dina överförda resurser bearbetas om baserat på bearbetningsprofilerna och du får variationer av dessa resurser. Den enhetliga och smidiga gruppbearbetningen sparar tid och ökar innehållets hastighet utan att man behöver ha superb kreativ kompetens. Utvecklare och partners kan också utöka sina tillgångsmikrotjänster med direkt åtkomst till dessa API:er och inkludera anpassad logik.
+Om du vill redigera resurser i [!DNL Adobe Photoshop] och [!DNL Adobe Lightroom] behöver du inte hämta resurser från [!DNL Experience Manager Assets], redigera och överföra dem igen. Du skapar och konfigurerar en bearbetningsprofil i [!DNL Experience Manager], tillämpar profilen på en mapp och överför resurserna till mappen. Dina överförda resurser bearbetas om baserat på bearbetningsprofilerna och du får variationer av dessa resurser. Den enhetliga och smidiga gruppbearbetningen sparar tid och ökar innehållets hastighet utan att man behöver ha superb kreativ kompetens. Utvecklarna och partnerna kan också utöka sina tillgångsmikrotjänster med direkt åtkomst till dessa API:er och inkludera anpassad logik.
 
 Användare kan skapa bearbetningsprofiler för att automatisera följande kreativa åtgärder för sina resurser:\
 ![automatisera Adobe Photoshop och Adobe Lightroom-operationer på resurser](assets/content-automation.png)
