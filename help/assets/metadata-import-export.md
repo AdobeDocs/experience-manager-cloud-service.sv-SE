@@ -5,16 +5,16 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fb70a068-3ba3-4459-952d-79155d286c42
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '647'
 ht-degree: 11%
 
 ---
 
 # Importera och exportera resursers metadata gruppvis {#import-and-export-asset-metadata-in-bulk}
 
-Med AEM Assets kan du importera resursmetadata i grupp med hjälp av en CSV-fil. Du kan göra satsvisa uppdateringar för de nyligen överförda resurserna eller för befintliga resurser genom att importera en CSV-fil. Du kan också importera resursmetadata i grupp från tredjepartssystem i CSV-format.
+Med Adobe Experience Manager Assets kan du importera resursmetadata i grupp med hjälp av en CSV-fil. Du kan göra satsvisa uppdateringar för de nyligen överförda resurserna eller för befintliga resurser genom att importera en CSV-fil. Du kan också importera resursmetadata i grupp från tredjepartssystem i CSV-format.
 
 ## Importera metadata {#import-metadata}
 
@@ -47,7 +47,7 @@ Om du vill lägga till datum och tidsstämpel när du importerar metadata använ
 
 ## Exportera metadata {#export-metadata}
 
-Du kan exportera metadata för flera resurser i ett CSV-format. Metadata exporteras asynkront och påverkar inte systemets prestanda. Om du vill exportera metadata går AEM igenom egenskaperna för objektnoden `jcr:content/metadata` och dess underordnade noder och exporterar metadataegenskaperna i en CSV-fil.
+Du kan exportera metadata för flera resurser i ett CSV-format. Metadata exporteras asynkront och påverkar inte systemets prestanda. Om du vill exportera metadata går Experience Manager igenom egenskaperna för objektnoden `jcr:content/metadata` och dess underordnade noder och exporterar metadataegenskaperna i en CSV-fil.
 
 Några exempel på användningsområden för att exportera flera metadata samtidigt är:
 
