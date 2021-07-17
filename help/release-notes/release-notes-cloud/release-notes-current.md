@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 96f2c99caebd446288720adaf4ac929bbc41950f
+source-git-commit: d30384566f08b8819d3263b12939217cafb3399e
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -219,6 +219,16 @@ Releasedatum för AEM Screens som Cloud Service är 24 juni 2021.
 * Ögonblicksbilden av enhetens hälsostatus sparar tid genom att ge en snabb översikt av kritisk status.
 
 * På sidan med objektinformation finns en sammanfattning av den mest relevanta informationen för varje objekt i ditt projekt.
+
+## Cloud Acceleration Manager {#cam}
+
+### Releasedatum {#release-date-july-cam}
+
+Releasedatum för Cloud Acceleration Manager är 15 juli 2021.
+
+## Vad är nytt? {#what-is-new-cam}
+
+Cloud Acceleration Manager är en molnbaserad applikation som är utformad för att vägleda era IT-team under hela övergångsresan, från planering till live Cloud Service. Konfigurera era team för en framgångsrik migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa er att AEM som Cloud Service under hela kundresan. Läs mer [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en).
 
 ## CIF-tillägg {#cloud-services-cif}
 
