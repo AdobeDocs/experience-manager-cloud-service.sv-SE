@@ -4,9 +4,9 @@ description: '[!DNL Adobe Experience Manager Assets] as a [!DNL Cloud Service] s
 feature: Resurshantering
 role: User,Leader
 exl-id: 315a1091-780f-4eca-ac77-a07d8fb634bf
-source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
+source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '297'
 ht-degree: 21%
 
 ---
@@ -33,8 +33,8 @@ Följande självhjälpsresurser är tillgängliga för [!DNL Experience Manager 
 | [Användarhandbok om säkerhet](/help/security/home.md) | Lär dig mer om viktiga säkerhetsfrågor som rör [!DNL Experience Manager] som [!DNL Cloud Service]. |
 | [Onboarding](/help/onboarding/home.md) | Kom igång med [!DNL Experience Manager] som [!DNL Cloud Service] - få åtkomst till och skydda viktiga data. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Förstå hur du kan redigera med och administrera [!DNL Experience Manager Sites] som en [!DNL Cloud Service]. |
-| [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med hjälp av Experience Manager kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
-| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i Experience Manager som gör dig redo för ditt första headless-projekt. |
+| [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med AEM kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
+| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Flytta  [!DNL Experience Manager] till [!DNL Cloud Service]](/help/move-to-cloud-service/home.md) | Förstå övergångsresan till [!DNL Experience Manager] som en [!DNL Cloud Service]. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig hur du integrerar anslutningar i [!DNL Experience Manager] som en [!DNL Cloud Service]. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Lär dig mer om backend-åtgärder i [!DNL Experience Manager] som en [!DNL Cloud Service], till exempel indexerings- och underhållsåtgärder. |
