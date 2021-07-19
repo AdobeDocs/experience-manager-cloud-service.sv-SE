@@ -5,9 +5,9 @@ contentOwner: AG
 feature: API:er,Resurser HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 3051475d20d5b534b74c84f9d541dcaf1a5492f9
+source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1415'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 | x | Stöds inte. Skall ej användas. |
 | - | Inte tillgängligt |
 
-| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [API:er för Experience Manager/Sling/](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) JCRJava | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)-servrar | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) _(förhandstitt)_ |
+| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [API:er för AEM/Sling/](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) JCRJava | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)-servrar | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) _(förhandstitt)_ |
 | ----------------|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Ursprunglig binär** |  |  |  |  |  |  |
 | Skapa original | ✓ | x | - | x | x | - |
@@ -69,7 +69,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resurserna direkt till molnlagringen med HTTP API. Stegen för att överföra en binär fil visas nedan. Utför dessa steg i ett externt program och inte i JVM-filen [!DNL Experience Manager].
 
 1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]r-distribution av din avsikt att överföra en ny binär fil.
-1. [PUT innehållet i ](#upload-binary) binaryen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
+1. [POST innehållet i ](#upload-binary) binaryen till en eller flera URI:er som tillhandahålls av initieringsbegäran.
 1. [Skicka en HTTP-](#complete-upload) begäran för att informera servern om att innehållet i binärfilen har överförts.
 
 ![Översikt över protokollet för direkt binär överföring](assets/add-assets-technical.png)
@@ -113,7 +113,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 }
 ```
 
-* `completeURI` (sträng): Anropa den här URI:n när den binära filen har överförts. URI:n kan vara en absolut eller relativ URI och klienterna bör kunna hantera båda. Värdet kan alltså vara `"https://[aem_server]:[port]/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` Se [fullständig överföring](#complete-upload).
+* `completeURI` (sträng): Anropa den här URI:n när den binära filen har överförts. URI:n kan vara en absolut eller relativ URI och klienterna bör kunna hantera båda. Värdet kan alltså vara `"https://author.acme.com/content/dam.completeUpload.json"` eller `"/content/dam.completeUpload.json"` Se [fullständig överföring](#complete-upload).
 * `folderPath` (sträng): Fullständig sökväg till mappen som binärfilen överförs till.
 * `(files)` (array): En lista med element vars längd och ordning matchar längden och ordningen för listan med binär information som tillhandahålls i initieringsbegäran.
 * `fileName` (sträng): Namnet på motsvarande binärfil, som anges i initieringsbegäran. Detta värde bör inkluderas i den fullständiga begäran.
@@ -125,7 +125,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 
 ### Ladda upp binärt {#upload-binary}
 
-Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges delar klienten upp binärfilen i delar och gör PUT-förfrågningar av varje del till varje URI, i ordning. Använd alla URI:er. Se till att storleken på varje del ligger inom de minimi- och maximistorlekar som anges i initieringssvaret. CDN-kantnoder snabbar upp begärd överföring av binärfiler.
+Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges delar klienten upp binärfilen i delar och begär POST av varje del till varje URI, i ordning. Använd alla URI:er. Se till att storleken på varje del ligger inom de minimi- och maximistorlekar som anges i initieringssvaret. CDN-kantnoder snabbar upp begärd överföring av binärfiler.
 
 En möjlig metod för att uppnå detta är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. Anta till exempel att binärfilens totala storlek är 20 000 byte och att antalet överförda URI är 2. Följ sedan dessa steg:
 
@@ -154,7 +154,9 @@ Om resursen finns och varken `createVersion` eller `replace` har angetts, uppdat
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
 
-Överföringen av en binär fil utförs inte förrän den fullständiga URL:en anropas för filen. En resurs bearbetas när överföringen är klar. Bearbetningen startar inte även om resursens binära fil överförs helt, men överföringen inte slutförs. Om överföringen lyckas svarar servern med en `200`-statuskod.
+Överföringen av en binär fil utförs inte förrän den fullständiga URL:en anropas för filen. En resurs bearbetas när överföringen är klar. Bearbetningen startar inte även om resursens binära fil överförs helt, men överföringen inte slutförs.
+
+Om det lyckas svarar servern med en `200`-statuskod.
 
 ### Överföringsbibliotek med öppen källkod {#open-source-upload-library}
 
@@ -185,45 +187,21 @@ Använd standardarbetsflödena med tillägg med anpassade steg för konfiguratio
 
 ## Stöd för arbetsflödessteg i efterbearbetningsarbetsflödet {#post-processing-workflows-steps}
 
-Om du uppgraderar från en tidigare version av [!DNL Experience Manager] kan du använda resursens mikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna är enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i [!UICONTROL DAM Update Asset]-arbetsflödet i den tidigare versionen stöds inte. Mer information om klasser som stöds finns i [Java API-referensen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html).
+Kunder som uppgraderar från tidigare versioner av [!DNL Experience Manager] kan använda tillgångsmikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna för resurser är mycket enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i [!UICONTROL DAM Update Asset]-arbetsflödet i den tidigare versionen stöds inte.
 
-Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller så är support inte tillgänglig:
+[!DNL Experience Manager] som  [!DNL Cloud Service] stöd för följande arbetsflödessteg:
 
-* `com.day.cq.dam.cameraraw.process.CameraRawHandlingProcess`
-* `com.day.cq.dam.core.process.CommandLineProcess`
-* `com.day.cq.dam.pdfrasterizer.process.PdfRasterizerHandlingProcess`
-* `com.day.cq.dam.core.process.AddPropertyWorkflowProcess`
-* `com.day.cq.dam.core.process.CreateSubAssetsProcess`
-* `com.day.cq.dam.core.process.DownloadAssetProcess`
-* `com.day.cq.dam.word.process.ExtractImagesProcess`
-* `com.day.cq.dam.word.process.ExtractPlainProcess`
-* `com.day.cq.dam.ids.impl.process.IDSJobProcess`
-* `com.day.cq.dam.indd.process.INDDMediaExtractProcess`
-* `com.day.cq.dam.indd.process.INDDPageExtractProcess`
-* `com.day.cq.dam.core.impl.lightbox.LightboxUpdateAssetProcess`
-* `com.day.cq.dam.pim.impl.sourcing.upload.process.ProductAssetsUploadProcess`
-* `com.day.cq.dam.core.process.SendDownloadAssetEmailProcess`
+* `com.day.cq.dam.similaritysearch.internal.workflow.process.AutoTagAssetProcess`
+* `com.day.cq.dam.core.impl.process.CreateAssetLanguageCopyProcess`
+* `com.day.cq.wcm.workflow.process.CreateVersionProcess`
 * `com.day.cq.dam.similaritysearch.internal.workflow.smarttags.StartTrainingProcess`
 * `com.day.cq.dam.similaritysearch.internal.workflow.smarttags.TransferTrainingDataProcess`
-* `com.day.cq.dam.switchengine.process.SwitchEngineHandlingProcess`
-* `com.day.cq.dam.core.process.GateKeeperProcess`
-* `com.day.cq.dam.s7dam.common.process.DMEncodeVideoWorkflowCompletedProcess`
-* `com.day.cq.dam.core.process.DeleteImagePreviewProcess`
-* `com.day.cq.dam.video.FFMpegTranscodeProcess`
-* `com.day.cq.dam.core.process.ThumbnailProcess`
-* `com.day.cq.dam.video.FFMpegThumbnailProcess`
-* `com.day.cq.dam.core.process.CreateWebEnabledImageProcess`
-* `com.day.cq.dam.core.process.CreatePdfPreviewProcess`
-* `com.day.cq.dam.s7dam.common.process.VideoUserUploadedThumbnailProcess`
-* `com.day.cq.dam.s7dam.common.process.VideoThumbnailDownloadProcess`
-* `com.day.cq.dam.s7dam.common.process.VideoProxyServiceProcess`
-* `com.day.cq.dam.scene7.impl.process.Scene7UploadProcess`
-* `com.day.cq.dam.s7dam.common.process.S7VideoThumbnailProcess`
-* `com.day.cq.dam.core.process.MetadataProcessorProcess`
-* `com.day.cq.dam.core.process.AssetOffloadingProcess`
-* `com.adobe.cq.dam.dm.process.workflow.DMImageProcess`
+* `com.day.cq.dam.core.impl.process.TranslateAssetLanguageCopyProcess`
+* `com.day.cq.dam.core.impl.process.UpdateAssetLanguageCopyProcess`
+* `com.adobe.cq.workflow.replication.impl.ReplicationWorkflowProcess`
+* `com.day.cq.dam.core.impl.process.DamUpdateAssetWorkflowCompletedProcess`
 
-<!-- Commenting the previous list documented at the time of GA. Replacing it with the updated list via cqdoc-18231.
+Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller så är support inte tillgänglig:
 
 * `com.day.cq.dam.core.process.DeleteImagePreviewProcess`
 * `com.day.cq.dam.s7dam.common.process.DMEncodeVideoWorkflowCompletedProcess`
@@ -257,7 +235,7 @@ Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller 
 * `com.day.cq.dam.core.process.ScheduledPublishBPProcess`
 * `com.day.cq.dam.core.process.ScheduledUnPublishBPProcess`
 * `com.day.cq.dam.core.process.SendDownloadAssetEmailProcess`
--->
+* `com.day.cq.dam.core.impl.process.SendTransientWorkflowCompletedEmailProcess`
 
 <!-- PPTX source: slide in add-assets.md - overview of direct binary upload section of 
 https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestaccess.aspx?guestaccesstoken=jexDC5ZnepXSt6dTPciH66TzckS1BPEfdaZuSgHugL8%3D&docid=2_1ec37f0bd4cc74354b4f481cd420e07fc&rev=1&e=CdgElS
