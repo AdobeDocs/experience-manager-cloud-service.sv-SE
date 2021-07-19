@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 9e94afeb-1c54-4653-bf52-b0910c0cb6c1
-source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
+source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
 workflow-type: tm+mt
-source-wordcount: '2416'
+source-wordcount: '2421'
 ht-degree: 5%
 
 ---
@@ -99,7 +99,7 @@ Fliken **[!UICONTROL Build Form]** visar de formulärobjekt som du använder i s
 | [!UICONTROL Products References] | Lägg till om du vill visa listan över produkter som är länkade till resursen. |
 | [!UICONTROL Contextual Metadata] | Lägg till för att styra visningen av andra metadataflikar på egenskapssidan för resurser. |
 
-<!-- TBD: Ratings are not available in AEM as a Cloud Service. Removed via cqdoc-18089 ticket. 
+<!-- TBD: Ratings are not available in Experience Manager as a Cloud Service. Removed via cqdoc-18089 ticket. 
 | [!UICONTROL Asset Rating]        | Add to display options for rating the asset.                                       |
 -->
 
@@ -155,7 +155,7 @@ Klicka på `+` för att lägga till en flik i ett schemaformulär. Som standard 
 
 ## Ta bort metadata-schemaformulär {#deleting-metadata-schema-forms}
 
-AEM låter dig endast ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
+Med Experience Manager kan du bara ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
 
 Om du vill ta bort ett formulär markerar du det och klickar på ikonen Ta bort.
 
@@ -236,16 +236,16 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 
 >[!NOTE]
 >
->Ett metadatafält kan definieras som obligatoriskt baserat på värdet i ett annat fält. I vyn Kort visar AEM inte varningsmeddelandet om att metadata saknas för sådana obligatoriska metadatafält.
+>Ett metadatafält kan definieras som obligatoriskt baserat på värdet i ett annat fält. I vyn Kort visar Experience Manager inte varningsmeddelandet om att metadata saknas för sådana obligatoriska metadatafält.
 
-1. Klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
+1. Klicka på Experience Manager-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
 1. Spara standardformuläret för metadata som ett anpassat formulär. Spara den till exempel som `my_default`.
 1. Redigera det anpassade formuläret. Lägg till ett obligatoriskt fält. Lägg till exempel till ett **[!UICONTROL Category]**-fält och gör fältet obligatoriskt.
 1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret visas på sidan **[!UICONTROL Metadata Schema Forms]**. Markera formuläret och klicka eller tryck sedan på **[!UICONTROL Apply to Folder(s)]** i verktygsfältet för att använda anpassade metadata i en mapp.
 1. Navigera till mappen och överför vissa resurser med saknade metadata för det obligatoriska fältet som du lade till i det anpassade formuläret. Ett meddelande om saknade metadata för det obligatoriska fältet visas i kortvyn för resursen.
-1. (Valfritt) Åtkomst `https://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob`-komponenten som är inaktiverad som standard. Ange en frekvens med vilken AEM kontrollerar om metadata för resurserna är giltiga.
+1. (Valfritt) Åtkomst `https://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob`-komponenten som är inaktiverad som standard. Ange en frekvens som Experience Manager ska kontrollera om metadata för resurserna är giltiga.
 
-   Den här konfigurationen lägger till egenskapen `hasValidMetadata` i `jcr:content` för resurser. Med den här egenskapen kan AEM filtrera resultatet i en sökning.
+   Den här konfigurationen lägger till egenskapen `hasValidMetadata` i `jcr:content` för resurser. Med den här egenskapen kan Experience Manager filtrera resultatet i en sökning.
 
    >[!NOTE]
    >
