@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Smarta taggar,Taggar
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
+source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2298'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ Organisationer som hanterar digitalt material använder i allt högre grad taxon
 
 Jämfört med naturliga språkordsuttryck hjälper taggning som baseras på företagstaxonomi till att anpassa tillgångarna till företagets verksamhet och säkerställer att de mest relevanta resurserna visas i sökningar. En biltillverkare kan t.ex. märka bilderna med modellnamn så att endast relevanta bilder visas när de genomsöks för att utforma en kampanj.
 
-I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
+I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] -distributioner är integrerade med  [!DNL Adobe Developer Console] som standard.
 
 <!-- TBD: Create a flowchart for how training works in CS.
 ![flowchart](assets/flowchart.gif) 
@@ -179,11 +179,11 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 
 ## Tagga resurser med smarta taggar {#tag-assets}
 
-Alla typer av resurser som stöds taggas automatiskt av [!DNL Experience Manager Assets] när de överförs. Taggning är aktiverat och fungerar som standard. [!DNL Experience Manager] använder lämpliga taggar i nära realtid.  <!-- TBD: You can also apply the tagging workflow on-demand. The workflow applies to both, assets and folders. -->
+Alla typer av resurser som stöds taggas automatiskt av [!DNL Experience Manager Assets] när de överförs. Taggning är aktiverat som standard. [!DNL Experience Manager] använder lämpliga taggar i nära realtid.  <!-- TBD: You can also apply the tagging workflow on-demand. The workflow applies to both, assets and folders. -->
 
-* För bilder och videoklipp baseras smarta taggar på vissa visuella aspekter.
+För bilder och videoklipp baseras smarta taggar på vissa visuella proportioner.
 
-* För textbaserade resurser beror effekten av smarta taggar inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text. För textbaserade resurser är smarta taggar nyckelorden som visas i texten men de som bäst beskriver resursen. För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger emellertid en dedikerad, strukturerad och prioriterad sökfaktor som används för att förbättra resursidentifieringen jämfört med ett fullständigt sökindex.
+För textbaserade resurser beror effekten av smarta taggar inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text. För textbaserade resurser är smarta taggar nyckelorden som visas i texten men de som bäst beskriver resursen. För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger emellertid en dedikerad, strukturerad och prioriterad sökfaktor som används för att förbättra resursidentifieringen jämfört med ett fullständigt sökindex.
 
 ## Hantera smarta taggar och resurssökningar {#manage-smart-tags-and-searches}
 
