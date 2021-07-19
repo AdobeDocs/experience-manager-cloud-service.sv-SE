@@ -5,7 +5,7 @@ contentOwner: AG
 feature: asset compute Microservices,arbetsflöde,versionsinformation,tillgångsbearbetning
 role: Architect,Admin
 exl-id: 1e069b95-a018-40ec-be01-9a74ed883b77
-source-git-commit: 568c25d77eb42f7d5fd3c84d71333e083759712d
+source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -43,7 +43,7 @@ De viktigaste stegen för intag och bearbetning med hjälp av tillgångsmikrotj�
 * Klienter, som webbläsare eller Adobe Asset Link, skickar en överföringsbegäran till [!DNL Experience Manager] och börjar överföra binärfilen direkt till det binära molnlagringsutrymmet.
 * När den direkta binära överföringen har slutförts meddelar klienten [!DNL Experience Manager].
 * [!DNL Experience Manager] skickar en bearbetningsbegäran till resursens mikrotjänster. Innehållet i begäran beror på vilken bearbetningsprofilskonfiguration i [!DNL Experience Manager] som anger vilka återgivningar som ska genereras.
-* Resursmikrotjänsterna tar emot begäran och skickar den till en eller flera mikrotjänster baserat på begäran. Varje mikrotjänst får åtkomst till den ursprungliga binärfilen direkt från den binära molnbutiken.
+* Resurserna för mikrotjänster tar emot begäran och skickar den till en eller flera mikrotjänster baserat på begäran. Varje mikrotjänst får åtkomst till den ursprungliga binärfilen direkt från den binära molnbutiken.
 * Resultaten av bearbetningen, t.ex. renderingar, lagras i det binära molnlagringsutrymmet.
 * Experience Manager meddelas om att bearbetningen är klar tillsammans med direktpekare till de genererade binärfilerna (återgivningar). De genererade återgivningarna är tillgängliga i [!DNL Experience Manager] för den överförda resursen.
 
