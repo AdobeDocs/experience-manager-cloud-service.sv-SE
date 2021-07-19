@@ -1,28 +1,28 @@
 ---
 title: XMP-metadata
-description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av AEM som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
+description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av Experience Manager som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fd9af408-d2a3-4c7a-9423-c4b69166f873
-source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
+source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '990'
 ht-degree: 16%
 
 ---
 
 # XMP-metadata {#xmp-metadata}
 
-XMP (Extensible Metadata Platform) är den metadatastandard som används av AEM Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
+XMP (Extensible Metadata Platform) är den metadatastandard som används av Experience Manager Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, innehåller XMP en omfattande [innehållsmodell](#xmp-core-concepts) och [stöds av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
+Förutom universell metadatakodning som kan bäddas in i alla filformat, innehåller XMP en omfattande [innehållsmodell](#xmp-core-concepts) och [stöds av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Assets] har en kraftfull plattform att bygga vidare på.
 
 ## XMP översikt och ekosystem {#xmp-ecosystem}
 
-AEM Assets stöder XMP metadatastandard. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
+[!DNL Assets] stöder XMP metadatastandard. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
-Produktionsproffs kan t.ex. använda det inbyggda XMP-stödet i Adobe-program för att skicka information till flera filformat. AEM Assets-databasen extraherar XMP metadata och använder den för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
+Produktionsproffs kan t.ex. använda det inbyggda XMP-stödet i Adobe-program för att skicka information till flera filformat. Databasen [!DNL Assets] extraherar XMP metadata och använder den för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
 
 XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillhandahålla en datamodell, en lagringsmodell och scheman. Alla dessa begrepp beskrivs i detta avsnitt.
 
@@ -125,7 +125,7 @@ To let the XMP write-back feature propagate metadata changes to select rendition
 
 For the XMP write-back feature to propagate metadata to the rendition thumbnails 140.100.png and 319.319.png, perform these steps.
 
-1. Tap/click the AEM logo, and then navigate to **[!UICONTROL Tools]** &gt; **[!UICONTROL Workflow]** &gt; **[!UICONTROL Models]**.
+1. Tap/click the Experience Manager logo, and then navigate to **[!UICONTROL Tools]** &gt; **[!UICONTROL Workflow]** &gt; **[!UICONTROL Models]**.
 1. From the Models page, open the **[!UICONTROL DAM Metadata Writeback]** workflow model.
 1. In the **[!UICONTROL DAM Metadata Writeback]** properties page, open the **[!UICONTROL XMP Writeback Process]** step.
 1. In the **[!UICONTROL Step Properties]** dialog box, tap/click the **[!UICONTROL Process]** tab.
