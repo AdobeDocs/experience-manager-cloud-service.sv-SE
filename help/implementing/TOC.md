@@ -5,10 +5,10 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
+source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 30%
+source-wordcount: '913'
+ht-degree: 29%
 
 ---
 
@@ -180,11 +180,15 @@ ht-degree: 30%
    + [Distribuera till AEM as a Cloud Service](deploying/overview.md)
    + [AEM versionsuppdateringar](deploying/aem-version-updates.md)
    + [Konfigurera OSGI för AEM as a Cloud Service](deploying/configuring-osgi.md)
+   + [OSGi Configuration API](deploying/osgi-configuration-api.md)
 + Författarnivå {#author-tier}
    + [Åtkomst till författarnivån](/help/implementing/author-tier/accessing-the-author-tier.md)
    + [Skydda författarnivån](/help/implementing/author-tier/securing-the-author-tier.md)
 + Översikt över innehållsleverans {#content-delivery}
    + [Flöde för innehållsleverans](dispatcher/overview.md)
    + [Dispatcher i molnet](dispatcher/disp-overview.md)
+   + [Validera och felsöka med Dispatcher Tools](dispatcher/validation-debug.md)
+   + [Migrera Dispatcher-konfigurationen från AMS till AEM som Cloud Service](dispatcher/ams-aem.md)
+   + [Validera och felsöka med Dispatcher Tools Legacy](dispatcher/validation-debug-legacy.md)
    + [CDN i AEM as a Cloud Service](dispatcher/cdn.md)
    + [Cache i AEM as a Cloud Service](dispatcher/caching.md)
