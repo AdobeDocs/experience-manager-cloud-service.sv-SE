@@ -5,9 +5,9 @@ contentOwner: AG
 feature: asset compute Microservices,Workflow,Asset Processing
 role: Architect,Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: 6d662a7350b851a450b8c20660d7a461d940c1b2
+source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
 workflow-type: tm+mt
-source-wordcount: '2645'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Så här skapar du en standardbearbetningsprofil:
 
 1. Administratörer har åtkomst till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
 1. Ange ett namn som hjälper dig att identifiera profilen unikt när du använder den i en mapp.
-1. Aktivera **[!UICONTROL Create FPO Rendition]** på fliken **[!UICONTROL Image]** för att generera FPO-återgivningar. Ange ett **[!UICONTROL Quality]**-värde mellan 1 och 100.
+1. Aktivera **[!UICONTROL Create FPO Rendition]** på fliken **[!UICONTROL Standard]** för att generera FPO-återgivningar. Ange ett **[!UICONTROL Quality]**-värde mellan 1 och 100.
 1. Om du vill generera andra återgivningar klickar du på **[!UICONTROL Add New]** och anger följande information:
 
    * Filnamn för varje återgivning.
@@ -160,10 +160,8 @@ Skapa och använd de extra anpassade bearbetningsprofilerna på specifika mappar
 Använd bearbetningsprofiler på mappar på något av följande sätt:
 
 * Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda åtgärden **[!UICONTROL Apply Profile to Folder(s)]**. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
-* Användarna kan välja en mapp i Assets-användargränssnittet, använda åtgärden **[!UICONTROL Properties]** för att öppna fönstret för mappegenskaper, klicka på fliken **[!UICONTROL Asset Processing]** och i listan [!UICONTROL Processing Profile] välja lämplig bearbetningsprofil för mappen. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
+* Användarna kan välja en mapp i Assets-användargränssnittet, använda åtgärden **[!UICONTROL Properties]** för att öppna fönstret för mappegenskaper, klicka på fliken **[!UICONTROL Processing Profiles]** och i popup-listan välja lämplig bearbetningsprofil för mappen. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
    ![Använda bearbetningsprofil på en mapp från fliken Resursegenskaper](assets/folder-properties-processing-profile.png)
-
-* Användarna kan välja mappar eller specifika resurser i Assets-användargränssnittet för att tillämpa en bearbetningsprofil och sedan välja ![ikonen för ombearbetning av resurser](assets/do-not-localize/reprocess-assets-icon.png) **[!UICONTROL Reprocess Assets]** bland de tillgängliga alternativen överst.
 
 >[!TIP]
 >
