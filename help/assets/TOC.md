@@ -3,11 +3,11 @@ sub-product: Adobe Experience Manager Assets as a Cloud Service
 user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
-solution: Experience Manager, Experience Manager Assets, Experience Manager as a Cloud Service
-source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
+solution: Experience Manager, Experience Manager as a Cloud Service, Experience Manager Assets
+source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 65%
+source-wordcount: '479'
+ht-degree: 66%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 65%
    + [Smarta taggar för bilder](smart-tags.md)
    + [Smarta taggar för videomaterial](smart-tags-video-assets.md)
    + [Organisera resurser](organize-assets.md)
-   + [Använd  [!DNL Adobe Stock] resurser i AEM](aem-assets-adobe-stock.md)
+   + [Använd [!DNL Adobe Stock] resurser](aem-assets-adobe-stock.md)
    + [Hantera samlingar](manage-collections.md)
    + [Översikt över metadata](manage-metadata.md)
    + [Integrera med [!DNL Adobe Creative Cloud]](aem-cc-integration-best-practices.md)
@@ -54,9 +54,9 @@ ht-degree: 65%
    + [Söka efter fasetter](search-facets.md)
    + [HTTP API för Assets](mac-api-assets.md)
    + [Content Fragments support in Assets HTTP API](content-fragments/assets-api-content-fragments.md)
-   + [AEM GraphQL API för innehållsfragment](content-fragments/graphql-api-content-fragments.md)
-   + [Autentisering för AEM GraphQL-frågor om innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
-   + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
+   + [GraphQL API för innehållsfragment](content-fragments/graphql-api-content-fragments.md)
+   + [Autentisering för fjärrGraphQL-frågor för innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
+   + [GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [Anslutna resurser](use-assets-across-connected-assets-instances.md)
    + [Materialrapporter](asset-reports.md)
    + [Överlappande metadata](cascading-metadata.md)
