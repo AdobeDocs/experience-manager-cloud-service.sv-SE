@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: a585fd8994c00014243f628ac0abbcb6571137f6
+source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1189'
 ht-degree: 1%
 
 ---
@@ -55,10 +55,6 @@ Så här utför du en trädaktivering:
 
    ![](assets/publish-distribute.png "DistribueraDistribuera")
 4. Markera sökvägen i sökvägsläsaren, välj att lägga till en nod, ett träd eller att ta bort efter behov och välj **Skicka**
-
-För bästa prestanda bör du följa dessa riktlinjer när du använder den här funktionen:
-* Vi rekommenderar att du kopierar färre än 100 banor i taget, med en hård gräns på 500 sökvägar.
-* Det replikerade innehållets totala storlek måste vara mindre än 5 MB. Detta inkluderar bara noder och egenskaper, men inte binärfiler, som innehåller arbetsflödespaket och innehållspaket.
 
 ### Publicera arbetsflöde för innehållsträd {#publish-content-tree-workflow}
 
@@ -189,11 +185,6 @@ ReplicationStatus previewStatus = afterStatus.getStatusForAgent(PREVIEW_AGENT); 
 Om du inte anger ett sådant filter och bara använder agenten för publicering, används inte agenten för förhandsgranskning och replikeringsåtgärden påverkar inte förhandsgranskningsnivån.
 
 Den övergripande `ReplicationStatus` för en resurs ändras bara om replikeringsåtgärden innehåller minst en agent som är aktiv som standard. I exemplet ovan är detta inte fallet eftersom replikeringen bara använder agenten för förhandsgranskning. Du måste därför använda den nya metoden `getStatusForAgent()` som gör att du kan fråga efter status för en viss agent. Den här metoden fungerar även för agenten&quot;publish&quot;. Det returnerar ett värde som inte är null om någon replikeringsåtgärd har utförts med den angivna agenten.
-
-
-**Sökväg och storleksbegränsningar för replikerings-API**
-
-Vi rekommenderar att du kopierar färre än 100 sökvägar, där 500 är den hårda gränsen. Ovanför den hårda gränsen genereras ett ReplicationException. Om programlogiken inte kräver atomisk replikering kan den här gränsen övervinnas genom att ställa in värdet false för ReplicationOptions.setUseAtomicCall, som accepterar valfritt antal sökvägar, men internt skapa bucklor som ligger under denna gräns. Mängden innehåll som skickas per replikeringsanrop får inte överstiga 5 MB, vilket inkluderar noderna och egenskaperna, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binära).
 
 ## Felsökning {#troubleshooting}
 
