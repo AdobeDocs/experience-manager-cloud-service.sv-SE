@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
+source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
 
 1. Gå till panelen **Icke-produktionspipelines** från startskärmen i Cloud Manager.
 
-   ![](assets/configure-pipeline6.png)
+   ![](/help/implementing/cloud-manager/assets/non-prod-add.png)
 
 1. Klicka på knappen **Lägg till** för att ange namnet på pipelinen, typen av pipeline och Git-grenen.
 
@@ -124,13 +124,15 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
 
    ![](assets/non-prod-pipe1.png)
 
-1. Klicka på **Spara** så visas pipeline på hemskärmen med tre åtgärder, som visas nedan:
+1. Klicka på **Spara** så visas pipeline på startskärmen med fem åtgärder, som visas nedan:
 
-   ![](assets/configure-pipeline8.png)
+   ![](/help/implementing/cloud-manager/assets/prod-one.png)
 
    * **Redigera**  - tillåter redigering av pipeline-inställningarna
+   * **Detaljer**  - innehåller information om pipelinekörningen
    * **Build** - navigerar till körningssidan, från vilken pipelinen kan köras
-   * **Hantera Git**  - ger användaren tillgång till den information som krävs för att få åtkomst till Git-databasen i Cloud Manager
+   * **Åtkomst till**  upprepningsinformation - gör att användaren kan få den information som behövs för att komma åt Cloud Manager Git-databasen
+   * **Lär dig mer**  - navigerar till att förstå CI/CD-pipeline-dokumentationsresursen.
 
 ## Nästa steg {#the-next-steps}
 
