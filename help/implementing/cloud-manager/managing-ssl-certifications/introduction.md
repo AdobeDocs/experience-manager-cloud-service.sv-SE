@@ -2,9 +2,9 @@
 title: Introduktion - Hantera SSL-certifikat
 description: Introduktion - Hantera SSL-certifikat
 exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
-source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
+source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,8 @@ Med Cloud Manager kan kunderna själva installera SSL-certifikat via användargr
 * AEM som Cloud Service accepterar endast OV- (Organization Validation) eller EV-certifikat (Extended Validation). DV-certifikat (domänvalidering) godkänns inte. Dessutom måste alla certifikat vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
 
 * AEM som Cloud Service accepterar SSL-jokertecken för en domän.
+
+* Molnhanteraren tillåter vid en given tidpunkt högst 20 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen. Ett certifikat kan vanligtvis omfatta flera domäner (upp till 100 SAN-nätverk). Överväg därför att gruppera flera domäner i samma certifikat för att hålla sig inom denna gräns.
 
 Cloud Manager stöder följande SSL-certifikatkrav för kunder:
 
