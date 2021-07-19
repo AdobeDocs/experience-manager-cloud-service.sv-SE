@@ -1,56 +1,61 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.7.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.7.0
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
 feature: Versionsinformation
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: e24610cef6d134ddf9ce8abe9a5893deac08eeb6
+source-git-commit: 00bea8b6a32bab358dae6a8c30aa807cf4586d84
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 1%
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.7.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.6.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.7.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.6.0.
 
 >[!NOTE]
 >Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager som en Cloud Service klickar du [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.7.0 är 15 juli 2021.
-Nästa version är planerad till den 12 augusti 2021.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.6.0 är 10 juni 2021.
+Nästa version är planerad till 15 juli 2021.
 
 ### Nyheter {#what-is-new}
 
-* Kunderna kan nu använda Azul 8 och 11 JDK:er för sina Cloud Manager-byggprocesser och kan antingen välja att använda en av dessa JDK:er för verktygskedjor-kompatibla Maven-plugins *eller* hela Maven-processkörningen.
+* Förhandsgranskningstjänsten kommer att distribueras rullande till alla program. Kunder meddelas i produkten när deras program är aktiverat för förhandsgranskningstjänsten. Mer information finns i [Åtkomst till förhandsgranskningstjänsten](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
 
-* IP för utgående utgång loggas nu i loggfilen för byggsteget.
+* Maven Dependencies som laddas ned under byggfasen cachelagras nu mellan pipeline-körningar. Den här funktionen kommer att aktiveras för kunderna under de kommande veckorna.
 
-* Scen- och produktionsmiljöer som kör äldre versioner av AEM rapporterar nu statusen **Tillgänglig uppdatering**.
+* Namnet på programmet kan nu redigeras via dialogrutan Redigera program.
 
-* Det högsta antalet SSL-certifikat som stöds har ökat till 20 per program.
+* Det standardförgreningsnamn som används både när projektet skapas och i det förvalda push-kommandot via Hantera Git-arbetsflöden har ändrats till `main`.
 
-* Det maximala antalet domäner som kan konfigureras har ökat till 500 per miljö.
+* Redigera programupplevelser i användargränssnittet har uppdaterats.
 
-* Knapparna **Hantera Git** har ändrats till **Använd Git-information** och dialogrutan har uppdaterats visuellt.
+* Kvalitetsregeln `ImmutableMutableMixCheck` har uppdaterats för att klassificera `/oak:index`-noder som oföränderliga.
 
-* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 28.
+* Kvalitetsreglerna `CQBP-84` och `CQBP-84--dependencies` har konsoliderats till en enda regel. Som en del av den här konsolideringen identifierar genomsökningen av beroenden mer korrekt problem i tredjepartsberoenden som distribueras till AEM.
+
+* För att undvika problem har segmentraderna Publicera AEM och Publicera dispatcher på sidan Miljöinformation konsoliderats.
+
+   ![](/help/onboarding/release-notes-cloud-manager/assets/aem-dispatcher.png)
+
+* En ny regel för kodkvalitet har lagts till för att validera strukturen för `damAssetLucene`-index. Mer information finns i [Anpassade DAM-resursindex Luceneak-index](/help/implementing/cloud-manager/custom-code-quality-rules.md#oakpal-damAssetLucene-sanity-check).
+
+* Sidan med miljöinformation visar nu flera domännamn för tjänsterna Publicera och Förhandsgranska (beroende på vad som är tillämpligt). Mer information finns i [Miljöinformation](/help/implementing/cloud-manager/manage-environments.md#viewing-environment).
 
 ### Felkorrigeringar {#bug-fixes}
 
-* I vissa situationer var Förhandsgranskning inte ett tillgängligt alternativ när en IP-Tillåtelselista skulle bindas till en miljö.
+* JCR-noddefinitioner som innehåller en ny rad efter att rotelementnamnet inte tolkades korrekt.
 
-* Manuell navigering till sidan med körningsinformation för en körning som inte finns visade inte på något fel, bara en oändlig inläsningsskärm.
+* API för listdatabaser filtrerar inte borttagna databaser.
 
-* Felmeddelandet som visades när det maximala antalet SSL-certifikat nåddes var inte till någon hjälp.
+* Ett felaktigt felmeddelande visades när ett ogiltigt värde angavs för schemasteget.
 
-* I vissa fall kan det finnas en diskrepans i releaseversionen som visas på pipeline-kortet på sidan **Översikt**.
+* Ibland kan användaren se en grön *aktiv*-status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
 
-* Guiden Lägg till program angav felaktigt att namnet inte kan ändras efter att det har skapats.
+* Vissa programredigeringssekvenser kan leda till att produktionsflödet inte kan skapas eller redigeras.
 
-### Kända fel {#known-issues}
-
-Kunder som byter till Azul JDK bör vara medvetna om att inte alla befintliga program kompileras utan fel i Azul JDK. Vi rekommenderar att du testar lokalt innan du byter.
-
+* Vissa programredigeringssekvenser kan resultera i att sidan **Översikt** visar ett missvisande meddelande om att köra programkonfigurationen igen.
