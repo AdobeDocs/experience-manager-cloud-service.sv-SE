@@ -4,7 +4,7 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 8b30fc9494e152aa742cf17c02f982f5c9479473
+source-git-commit: b45d5824afee9e2d540ea7cb41b199b517f26b25
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå de steg som systemadministratören måste ta för att utse dina teammedlemmar till AEM som produktprofiler för Cloud Service och varför det är viktigt att dina AEM-författare kan ge sig i kast med sin resa med AEM.
+Det här dokumentet hjälper dig att förstå de steg som systemadministratören måste ta för att utse dina teammedlemmar till AEM som produktprofiler för Cloud Service och varför det är viktigt att dina AEM-författare kan ge sig ut på sin resa med AEM.
 
 När du har läst det här avsnittet bör du:
 
