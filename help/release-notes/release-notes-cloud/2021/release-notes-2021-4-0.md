@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 20bb4eaf8cdf0208b145087d27123c25c6293f9f
+source-git-commit: e3540331e3194dce5dcd88e4f785f15ef682f062
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.4.0 är 6 maj 2021.
 Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
-## AEM som en Cloud Service Foundation{#aem-as-a-cloud-service-foundation}
+## AEM som Cloud Service Foundation{#aem-as-a-cloud-service-foundation}
 
-### Nyheter {#what-is-new-foundation}
+### Vad är nytt? {#what-is-new-foundation}
 
 * [Arbetsflöde](/help/operations/replication.md#publish-content-tree-workflow)  för publicering av innehållsträd - En ny arbetsflödesmodell och ett nytt steg ger bättre prestanda vid publicering av djupa hierarkier med innehåll.
 
@@ -65,6 +65,8 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 * När du importerar resurser med bulkimportverktyget har administratörer nu möjlighet att ta bort källfilerna när importen har slutförts. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
 * När du redigerar ett metadataram kan administratörer snabbt och enkelt göra urvalet med ett nytt rotsökvägsväljarfält, vilket minskar konfigurationstiden.
+
+* När du redigerar ett metadataschema läggs en datatyp till som ger ett friformstextområde i metadataredigeraren. Användare kan använda det här textområdet för att ange frihandstext som metadata för en resurs. Se [redigerare för metadatamatema](/help/assets/metadata-schemas.md).
 
 * Metadata för många resurser kan importeras gruppvis med hjälp av en CSV-fil och kan exporteras till en CSV-fil. Standarddatumformatet är nu `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`. Användare kan utnyttja ett annat format genom att uppdatera kolumnrubriken. Lägg till exempel till `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX` som kolumnrubrik i CSV-filen i stället för ordet `Date`.
 
@@ -125,7 +127,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 ## Adobe Experience Manager Commerce som Cloud Service {#cloud-services-commerce}
 
-### Nyheter {#what-is-new-commerce}
+### Vad är nytt? {#what-is-new-commerce}
 
 * Stöd för kategori-UID - Detta frigör e-handelsintegreringar från tredje part för system som använder strängar för kategori-ID
 
