@@ -4,10 +4,10 @@ description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller i
 feature: Resurshantering, bildprofiler, återgivningar
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 1d42305b6a597dc95bff8b34eee8279eb0e511f3
+source-git-commit: b6f25c59e7b0cd239a91dc9eb629957905a77574
 workflow-type: tm+mt
-source-wordcount: '2628'
-ht-degree: 5%
+source-wordcount: '2631'
+ht-degree: 6%
 
 ---
 
@@ -160,7 +160,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 #### Använd Dynamic Media-bildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
 
-1. Markera Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill tillämpa en bildprofil på.
+1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Assets]**. Navigera sedan till den överordnade mappen för den mapp som du vill tillämpa en bildprofil på.
 1. Markera den markerade kryssrutan i mappen och välj sedan **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Image Profiles]**. Välj profilen i listrutan **[!UICONTROL Profile Name]** och välj sedan **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
