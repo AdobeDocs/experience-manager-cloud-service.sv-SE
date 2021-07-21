@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet - Cloud Services
 description: Anpassade regler för kodkvalitet - Cloud Services
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: bd9cb35016b91e247f14a851ad195a48ac30fda0
+source-git-commit: 0217e39ddc8fdaa2aa204568be291d608aef3d0e
 workflow-type: tm+mt
-source-wordcount: '3403'
+source-wordcount: '3520'
 ht-degree: 4%
 
 ---
@@ -252,7 +252,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 }
 ```
 
-### Undantag som fångats upp ska loggas eller kastas, men inte både {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
+### Undantag som fångats upp ska loggas eller kastas, men inte båda {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
 
 **Nyckel**: CQRules:CQBP-44—CatchAndeitherLogOrThrow
 
@@ -297,7 +297,7 @@ public void orDoThis() throws MyCustomException {
 }
 ```
 
-### Undvik att ha en loggsats som omedelbart följs av en throw-sats {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
+### Undvik att ha en log-programsats omedelbart följt av en throw-programsats {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
 **Nyckel**: CQRules:CQBP-44 - ConsecutiousLogAndThrow
 
@@ -326,7 +326,7 @@ public void doThis() throws Exception {
 }
 ```
 
-### Undvik att logga vid INFO när du hanterar förfrågningar från GET eller HEAD {#avoid-logging-at-info-when-handling-get-or-head-requests}
+### Undvik loggning på INFO vid hantering av GET- eller HEAD-förfrågningar {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
 **Nyckel**: CQRules:CQBP-44—LogInfoInGetOrHeadRequests
 
@@ -464,7 +464,7 @@ public void doThis() {
 }
 ```
 
-### Exportera inte till standardutdata eller standardfel {#do-not-output-to-standard-output-or-standard-error}
+### Skriv inte ut till standardutdata eller standardfel {#do-not-output-to-standard-output-or-standard-error}
 
 **Nyckel**: CQRules:CQBP-44—LogLevelConsolePrinters
 
@@ -500,7 +500,7 @@ public void doThis() {
 }
 ```
 
-### Undvik hårdkodade /appar och /libs-sökvägar {#avoid-hardcoded-apps-and-libs-paths}
+### Undvik hårdkodade/appar- och/libs-sökvägar {#avoid-hardcoded-apps-and-libs-paths}
 
 **Nyckel**: CQRules:CQBP-71
 
@@ -556,7 +556,7 @@ AEM API-yta är under ständig revision för att identifiera API:er som inte anv
 
 I många fall är dessa API:er föråldrade med Java-standardanteckningen *@Undertryckt* och, som sådana, enligt `squid:CallToDeprecatedMethod`.
 
-Det finns dock fall där ett API är inaktuellt i AEM men inte i andra sammanhang. Den här regeln identifierar den andra klassen.
+Det finns emellertid fall där ett API är inaktuellt i AEM men inte i andra sammanhang. Den här regeln identifierar den andra klassen.
 
 
 ## OakPAL-innehållsregler {#oakpal-rules}
@@ -592,7 +592,88 @@ public class DontDoThis implements Page {
 }
 ```
 
-### Luceneak-index för anpassade DAM-resurser är korrekt strukturerade {#oakpal-damAssetLucene-sanity-check}
+### Anpassade Lucene-ekindex måste ha en kodtypskonfiguration {#oakpal-indextikanode}
+
+**Nyckel**: IndexTikaNode
+
+**Typ**: Fel
+
+**Allvarlighetsgrad**: Blockera
+
+**Sedan**: 2021.8.0
+
+Flera av indexen AEM Oak innehåller en kodkonfiguration och anpassningar av dessa index **måste** innehålla en kodkodkonfiguration. Den här regeln söker efter anpassningar av indexen `damAssetLucene`, `lucene` och `graphqlConfig` och skapar ett problem om antingen `tika`  noden saknas eller om `tika`-noden saknar en underordnad nod med namnet `config.xml`.
+
+Mer information om hur du anpassar indexdefinitioner finns i [Indexeringsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#preparing-the-new-index-definition).
+
+#### Icke-kompatibel kod {#non-compliant-code-indextikanode}
+
+```+ oak:index
+    + damAssetLucene-1-custom
+      - async: [async]
+      - evaluatePathRestrictions: true
+      - includedPaths: /content/dam
+      - reindex: false
+      - tags: [visualSimilaritySearch]
+      - type: lucene
+```
+
+#### Kompatibel kod {#compliant-code-indextikanode}
+
+```+ oak:index
+    + damAssetLucene-1-custom-2
+      - async: [async]
+      - evaluatePathRestrictions: true
+      - includedPaths: /content/dam
+      - reindex: false
+      - tags: [visualSimilaritySearch]
+      - type: lucene
+      + tika
+        + config.xml
+```
+
+### Egna Lucene-ekindex får inte vara synkrona {#oakpal-indexasync}
+
+**Nyckel**: IndexAsyncProperty
+
+**Typ**: Fel
+
+**Allvarlighetsgrad**: Blockera
+
+**Sedan**: 2021.8.0
+
+Ek-index av typen lucene  måste alltid indexeras asynkront. Om du inte gör detta kan det leda till att systemet blir instabilt. Mer information om strukturen för lucenindex finns i [ekdokumentationen](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition).
+
+#### Icke-kompatibel kod {#non-compliant-code-indexasync}
+
+```+ oak:index
+    + damAssetLucene-1-custom
+      - evaluatePathRestrictions: true
+      - includedPaths: /content/dam
+      - reindex: false
+      - type: lucene
+      - reindex: false
+      - tags: [visualSimilaritySearch]
+      - type: lucene
+      + tika
+        + config.xml
+```
+
+#### Kompatibel kod {#compliant-code-indexasync}
+
+```+ oak:index
+    + damAssetLucene-1-custom-2
+      - async: [async]
+      - evaluatePathRestrictions: true
+      - includedPaths: /content/dam
+      - reindex: false
+      - tags: [visualSimilaritySearch]
+      - type: lucene
+      + tika
+        + config.xml
+```
+
+### Luceneak-index för anpassade DAM-resurser är korrekt strukturerade  {#oakpal-damAssetLucene-sanity-check}
 
 **Nyckel**: IndexDamAssetLucene
 
@@ -602,43 +683,36 @@ public class DontDoThis implements Page {
 
 **Sedan**: 2021.6.0
 
-För att resurssökningen ska fungera korrekt i AEM Assets måste `damAssetLucene`-ekindexet följa en uppsättning riktlinjer. Den här regeln söker efter följande mönster specifikt efter index vars namn innehåller `damAssetLucene`:
-
-Namnet måste följa riktlinjerna för anpassning av indexdefinitioner som beskrivs här.
-
-* Namnet måste följa mönstret `damAssetLucene-<indexNumber>-custom-<customerVersionNumber>`.
-
-* Indexdefinitionen måste ha en flervärdesegenskap med namnet tags som innehåller värdet `visualSimilaritySearch`.
-
-* Indexdefinitionen måste ha en underordnad nod med namnet `tika` och den underordnade noden måste ha en underordnad nod med namnet config.xml.
+För att resurssökningen ska fungera korrekt i AEM Assets måste anpassningar av `damAssetLucene`-aktivitetsindexet följa en uppsättning riktlinjer som är specifika för detta index. Den här regeln kontrollerar att indexdefinitionen måste ha en flervärdesegenskap med namnet `tags` som innehåller värdet `visualSimilaritySearch`.
 
 #### Icke-kompatibel kod {#non-compliant-code-damAssetLucene}
 
 ```+ oak:index
-    + damAssetLucene-1-custom
-      - async: [async, nrt]
-      - evaluatePathRestrictions: true
-      - includedPaths: /content/dam
-      - reindex: false
-      - type: lucene
+    + damAssetLucene-1-custom
+      - async: [async, nrt]
+      - evaluatePathRestrictions: true
+      - includedPaths: /content/dam
+      - reindex: false
+      - type: lucene
+      + tika
+        + config.xml
 ```
 
 #### Kompatibel kod {#compliant-code-damAssetLucene}
 
 ```+ oak:index
-    + damAssetLucene-1-custom-2
-      - async: [async, nrt]
-      - evaluatePathRestrictions: true
-      - includedPaths: /content/dam
-      - reindex: false
-      - reindexCount: -6952249853801250000
-      - tags: [visualSimilaritySearch]
-      - type: lucene
+    + damAssetLucene-1-custom-2
+      - async: [async, nrt]
+      - evaluatePathRestrictions: true
+      - includedPaths: /content/dam
+      - reindex: false
+      - tags: [visualSimilaritySearch]
+      - type: lucene
       + tika
         + config.xml
 ```
 
-### Kundpaket ska inte skapa eller ändra noder under /libs {#oakpal-customer-package}
+### Kundpaket får inte skapa eller ändra noder under /libs {#oakpal-customer-package}
 
 **Nyckel**: BannedPaths
 
@@ -729,7 +803,7 @@ Ett vanligt problem är att använda noder med namnet `config` i komponentdialog
 
 På samma sätt som *Paket ska inte innehålla dubbletter av OSGi-konfigurationer* är detta ett vanligt problem i komplexa projekt där samma nodsökväg skrivs till av flera separata innehållspaket. Även om beroenden för innehållspaket kan användas för att säkerställa ett konsekvent resultat är det bättre att undvika överlappningar helt och hållet.
 
-### Standardredigeringsläget får inte vara klassiskt användargränssnitt {#oakpal-default-authoring}
+### Standardredigeringsläget får inte vara ett klassiskt användargränssnitt {#oakpal-default-authoring}
 
 **Nyckel**: KlassisktUIAuthoringMode
 
@@ -741,7 +815,7 @@ På samma sätt som *Paket ska inte innehålla dubbletter av OSGi-konfiguratione
 
 OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definierar standardredigeringsläget i AEM. Eftersom det klassiska användargränssnittet har tagits bort sedan AEM 6.4 kommer ett problem nu att uppstå när standardredigeringsläget är konfigurerat till Classic UI.
 
-### Komponenter med dialogrutor bör ha Touch UI-dialogrutor {#oakpal-components-dialogs}
+### Komponenter med dialogrutor bör ha gränssnittsdialogrutor med pekskärmar {#oakpal-components-dialogs}
 
 **Nyckel**: ComponentWithOnlyClassicUIDialog
 
@@ -759,7 +833,7 @@ AEM som har en klassisk användargränssnittsdialogruta ska alltid ha en motsvar
 
 Dokumentationen för AEM Moderniseringsverktyg innehåller dokumentation och verktyg för hur du konverterar komponenter från det klassiska gränssnittet till Touch-gränssnittet. Mer information finns i [Verktygen för AEM (a1/>).](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html)
 
-### Paket får inte blandas med muterbart och oföränderligt innehåll {#oakpal-packages-immutable}
+### Paketen får inte innehålla blandbart och oföränderligt innehåll {#oakpal-packages-immutable}
 
 **Nyckel**: ImmutableMutableMixedPackage
 
@@ -857,7 +931,7 @@ Det har tidigare varit mycket vanligt att använda statiska mallar i AEM projekt
 
 De äldre grundkomponenterna (d.v.s. komponenter under `/libs/foundation`) har ersatts för flera AEM-versioner till förmån för WCM Core Components. Användning av de äldre grundkomponenterna som grund för anpassade komponenter, oavsett om det är genom övertäckning eller arv, rekommenderas inte och bör konverteras till motsvarande kärnkomponent. Konverteringen kan underlättas med [AEM Moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/).
 
-### OakPAL - Endast körlägesnamn och -ordning som stöds ska användas {#oakpal-supported-runmodes}
+### OakPAL - Endast Runmode-namn och -ordning som stöds ska användas {#oakpal-supported-runmodes}
 
 **Nyckel**: SupportedRunmode
 
@@ -881,7 +955,7 @@ AEM Cloud Service använder en strikt namngivningsprincip för körningslägesna
 
 AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen oak:QueryIndexDefinition) är direkta underordnade noder till `/oak:index`. Index på andra platser måste flyttas för att vara kompatibla med AEM Cloud Service. Mer information om sökindex finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en).
 
-### OakPAL - Definitionsnoder för anpassade sökindex måste ha en compatVersion på 2 {#oakpal-custom-search-compatVersion}
+### OakPAL - Definitionsnoder för anpassade sökindex måste ha en compatVersion 2 {#oakpal-custom-search-compatVersion}
 
 **Nyckel**: IndexCompatVersion
 
@@ -893,7 +967,7 @@ AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av t
 
 AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen oak:QueryIndexDefinition) måste ha egenskapen compatVersion inställd på 2. Andra värden stöds inte av AEM Cloud Service. Mer information om sökindex finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en).
 
-### OakPAL - Beroende noder för anpassade sökindexdefinitionsnoder måste vara av typen nt:undefined {#oakpal-descendent-nodes}
+### OakPAL - Beroende noder för anpassade sökindexdefinitionsnoder måste vara av typen nt:ostrukturerad {#oakpal-descendent-nodes}
 
 **Nyckel**: IndexDescendantNodeType
 
@@ -905,7 +979,7 @@ AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av t
 
 Det är svårt att felsöka problem när en anpassad sökindexdefinitionsnod har oordnade underordnade noder. För att undvika dessa bör alla underordnade noder för en `oak:QueryIndexDefinition`-nod vara av typen nt:undefined.
 
-### OakPAL - Definitionsnoder för anpassade sökindex måste innehålla en underordnad nod med namnet indexRules som har underordnade {#oakpal-custom-search-index}
+### OakPAL - Definitionsnoder för anpassade sökindex måste innehålla en underordnad nod med namnet indexRules som har underordnade noder {#oakpal-custom-search-index}
 
 **Nyckel**: IndexRulesNode
 
@@ -929,15 +1003,15 @@ En korrekt definierad definitionsnod för ett anpassat sökindex måste innehål
 
 AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) måste namnges efter ett specifikt mönster som beskrivs i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
 
-### OakPAL - Definitionsnoder för anpassade sökindex måste använda indextyplucen {#oakpal-index-type-lucene}
+### OakPAL - Definitionsnoder för anpassade sökindex måste använda indextypsklucen  {#oakpal-index-type-lucene}
 
 **Nyckel**: IndexType
 
-**Typ**: Code Smell
+**Typ**: Fel
 
-**Allvarlighetsgrad**: Mindre
+**Allvarlighetsgrad**: Blockera
 
-**Sedan**: Version 2021.2.0
+**Sedan**: Version 2021.2.0 (ändrad typ och allvarlighetsgrad 2021.8.0)
 
 AEM Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen oak:QueryIndexDefinition) har en type-egenskap med värdet **lucene**. Indexering med äldre indextyper måste uppdateras innan migrering till AEM Cloud Service. Mer information finns i [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
 
