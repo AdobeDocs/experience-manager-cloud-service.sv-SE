@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för ditt h
 feature: Innehållsfragment
 role: User
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: c8462fe370045ad2dc977fdf2f8ce0a5d3e85bc1
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2312'
 ht-degree: 4%
 
 ---
@@ -167,9 +167,10 @@ innehåll (för det specifika fältet) måste vara unikt för alla innehållsfra
    Variationer kan ha samma *unika*-värde som varianter av samma fragment, men inte samma värde som används i andra variationer av fragment.
 
 * ****
-TranslatableMarkera kryssrutan &quot;Translatable&quot; för ett fält i CF-modellredigeraren
+TranslatableKontrollera 
+**En** översättningsmarkeringsruta i ett fält i redigeraren för innehållsfragmentmodellen kommer att:
 
-   * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfiguration, kontext `/content/dam/<sites-configuration>`, om det inte redan finns.
+   * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfigurationen, kontext `/content/dam/<sites-configuration>`, om det inte redan finns.
    * För GraphQL: Ange en `<translatable>`-egenskap i fältet Innehållsfragment till `yes`, så att GraphQL-frågefilter tillåts för JSON-utdata med endast översättningsbart innehåll.
 
 * Mer information om den specifika datatypen och dess egenskaper finns i **[Innehållsreferens](#content-reference)**.
