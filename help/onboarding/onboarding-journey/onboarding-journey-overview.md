@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: bb0931d0a6c53c850013b0162b9c027daec39ceb
+source-git-commit: 491ee21a31ec8496d28b88ba52770516bccc7388
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '709'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 | # | Artikel | Beskrivning |
 |---|---|---|
 | 0 | Onboarding Journey | Det här dokumentet |
-| 1 | Läs om introduktionskoncept, som:<br>Systemadministratör<br>Admin Console<br>Adobe Identity Management System<br>Adobe ID<br>Introduktion till Cloud Manager<br>AEM som Cloud Service Team och produktprofiler<br>Adobe Support | Läs mer om introduktionskoncept. |
+| 1 | Lär dig om introduktionskoncept, som:<br>[Systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en)<br>[Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en)<br>[Adobe Identity Management System](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/ims.html?lang=en)<br>[Adobe ID](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/adobe-id.html?lang=en)<br>[Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html?lang=en)<br>[AEM som Cloud Service Team och produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en)<br>[Stöd för Adobe](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/onboarding-help-resources.html?lang=en) | Läs mer om introduktionskoncept. |
 | 2 | Komma igång med introduktion | Lär dig mer om att logga in på Admin Console och kontrollera din profil som systemadministratör |
 | 3 | Tilldela teammedlemmar till Cloud Manager-produktprofiler | Granska produktprofiler för Cloud Manager och lär dig hur du tilldelar teammedlemmar till produktprofiler för Cloud Manager. |
 | 4 | Konfigurera molnresurser via Cloud Manager | Lär dig hur dina molnresurser skapas och vem som kan göra det. Läs också om hur ditt molnprogram och dina miljöer skapas. |
