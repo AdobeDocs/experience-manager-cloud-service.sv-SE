@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 021146e4e1d65c7fe81ed3dba70b32daf34b9704
+source-git-commit: 806a5a50dee4addc4acd2be50ee501a3985e32d0
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -21,20 +21,14 @@ Som systemadministratör sammanfattar det här dokumentet de första stegen i di
 
 När du har läst det här avsnittet ska du kunna:
 
-* Förstå vad Admin Console är
 * Åtkomst till och inloggning på Admin Console
 * Granska dina behörigheter som systemadministratör via Admin Console
 
-## Förstå Admin Console {#login-admin-console}
-
-När avtalet har undertecknats startar Adobe Managed Services (AMS) kundens introduktion.
-
-När ditt kontrakt har signerats slutför Adobe etableringen för din organisation, varefter din organisations systemadministratör får ett välkomstmeddelande som gör att de kan utföra systemadministratörsuppgifter som att lägga till användare och tilldela dem till roller.
-
-Admin Console i Adobe är en central plats för att administrera och hantera produktlicenser och användare för Adobe. Systemadministratören loggar in på Admin Console i Adobe för att lägga till eller ta bort användare och mycket annat. Klicka [här](https://adminconsole.adobe.com/) för att komma åt Admin Console i Adobe.
+>[!NOTE]
+>Innan du börjar med introduktionsprocessen bör du ta reda på mer om Adobe Admin Console. Admin Console i Adobe är en central plats för att administrera och hantera produktlicenser och användare för Adobe. Systemadministratören loggar in på Admin Console i Adobe för att lägga till eller ta bort användare och mycket annat. Mer information finns i [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en).
 
 
-## Steg för inloggning på Admin Console {#steps-admin-console}
+## Logga in på Admin Console {#steps-admin-console}
 
 Följ stegen nedan för att navigera till Admin Console och granska din systemadministratörsroll från Admin Console:
 
