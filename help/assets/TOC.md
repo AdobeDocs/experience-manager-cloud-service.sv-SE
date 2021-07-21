@@ -4,10 +4,10 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager as a Cloud Service, Experience Manager Assets
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: f97e2f327aa8f49d0a15f3852aa5d8b37f960005
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 66%
+source-wordcount: '481'
+ht-degree: 60%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 66%
    + [Hantera videoresurser](manage-video-assets.md)
    + [Hämta resurser](download-assets-from-aem.md)
    + [Checka in och checka ut resurser för redigering](check-out-and-submit-assets.md)
-   + [Hantera rättigheter för digitala resurser](drm.md)
+   + [Digital Rights Management för tillgångar](drm.md)
    + [Vattenstämpelresurser](watermark-assets.md)
    + [Bearbeta resurser med [!DNL Creative Cloud] API:er](cc-api-integration.md)
 + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
@@ -112,8 +112,8 @@ ht-degree: 66%
    + [Interaktiva bilder](dynamic-media/interactive-images.md)
    + [Interaktiva videoklipp](dynamic-media/interactive-videos.md)
    + [360 VR-video](dynamic-media/360-video.md)
-   + [Integrera Dynamic Media Viewers med Adobe Analytics och Adobe Launch](dynamic-media/launch.md)
-   + [Använda snabbvyer för att skapa anpassade popup-fönster](dynamic-media/custom-pop-ups.md)
+   + [Integrera Dynamic Media Viewer med Adobe Analytics- och Adobe Experience Platform-taggar](dynamic-media/tags.md)
+   + [Använda snabbvyn för att skapa anpassade popup-fönster](dynamic-media/custom-pop-ups.md)
    + [Leverera optimerade bilder för en responsiv webbplats](dynamic-media/responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](dynamic-media/previewing-assets.md)
    + [Lägga till Dynamic Media-resurser på sidor](dynamic-media/adding-dynamic-media-assets-to-pages.md)
