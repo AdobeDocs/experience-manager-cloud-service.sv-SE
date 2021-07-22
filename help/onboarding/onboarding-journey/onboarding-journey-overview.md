@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 6046b29408a9bd61c8bbd809b73f2ba6e5a339da
+source-git-commit: e7fd4fb6175f6aeb0c7e5cead14d1844f6f69bc5
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,10 @@ Grattis till att du har påbörjat din resa med AEM som Cloud Service! Vi är gl
 
 ## Introduktion {#introduction}
 
-Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är klar kan:
+Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är klar får:
 
-* Ha full förståelse för vad man kan förvänta sig under AEM som en Cloud Services introduktionsresa.
-* Har gjort det möjligt för teamet att komma igång och ta de första stegen för att lära sig att skapa och utveckla innehåll för AEM som ett program för Cloud Service.
+* Full insikt i vad som förväntas under AEM som en Cloud Services introduktionsresa.
+* Gör det möjligt för teamet att komma igång och ta de första stegen för att lära sig att skapa och utveckla innehåll för AEM som ett program för Cloud Service.
 
 Detta innebär:
 
@@ -35,6 +35,8 @@ Onboarding är den process under vilken en utsedd [systemadministratör](https:/
 
 Startresan illustreras nedan och varje steg i resan beskrivs i detalj i följande avsnitt.
 
+![](/help/onboarding/onboarding-journey/assets/onboarding-journey.png)
+
 ## Utforska introduktionsresan {#exploring-onboarding-journey}
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om de steg som krävs för att komma igång AEM som en Cloud Service. Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Därför rekommenderar vi att du startar i början och fortsätter sekventiellt om du inte är nybörjare.
@@ -45,10 +47,10 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 | 1 | Lär dig om introduktionskoncept, som:<br>[Systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en)<br>[Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en)<br>[Adobe Identity Management System](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/ims.html?lang=en)<br>[Adobe ID](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/adobe-id.html?lang=en)<br>[Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html?lang=en)<br>[AEM som Cloud Service Team och produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en)<br>[Stöd för Adobe](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/onboarding-help-resources.html?lang=en) | Läs mer om introduktionskoncept. |
 | 2 | Komma igång med introduktion | Lär dig mer om att logga in på Admin Console och kontrollera din profil som systemadministratör |
 | 3 | Tilldela teammedlemmar till Cloud Manager-produktprofiler | Granska produktprofiler för Cloud Manager och lär dig hur du tilldelar teammedlemmar till produktprofiler för Cloud Manager. |
-| 4 | Konfigurera molnresurser via Cloud Manager | Lär dig hur dina molnresurser skapas och vem som kan göra det. Läs också om hur ditt molnprogram och dina miljöer skapas. |
+| 4 | Konfigurera molnresurser via Cloud Manager | Lär dig hur dina molnresurser skapas och vem som kan göra det. Läs också om hur dina molnprogram och miljöer skapas. |
 | 5 | Tilldela teammedlemmar AEM som en Cloud Service produktprofiler | Lär dig hur systemadministratören tilldelar teammedlemmar AEM som produktprofiler för Cloud Service. |
-| 6 | Utbildningsväg för AEM utvecklare och distributionschefer | Lär dig hur du som utvecklare kan få åtkomst till och hantera Cloud Manager Git och hur du som distributionshanterare konfigurerar pipelines och distribuerar kod i Cloud Manager. |
-| 7 | Utbildningsväg för AEM | Lär dig hur du som AEM kan komma åt AEM som en Cloud Service och bekanta dig med att redigera innehåll för AEM som en Cloud Service. |
+| 6 | Utbildningsväg för AEM utvecklare och distributionschefer | Lär dig hur du som utvecklare kan få åtkomst till och hantera Cloud Manager Git och hur du som distributionshanterare kan konfigurera pipelines och distribuera kod i Cloud Manager. |
+| 7 | Utbildningsväg för AEM | Lär dig hur du som AEM kan komma åt AEM som en Cloud Service och lära dig att skapa innehåll för AEM som en Cloud Service. |
 
 ## What&#39;s Next {#what-is-next}
 
