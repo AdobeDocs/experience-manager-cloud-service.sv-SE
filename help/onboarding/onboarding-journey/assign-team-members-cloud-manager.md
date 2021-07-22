@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 21fae2eff51e46ee026cebe135c8a16625ed8f10
+source-git-commit: 0af17da9f1795a2a28808e15ba18c539c74f63bf
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1384'
 ht-degree: 0%
 
 ---
@@ -155,12 +155,11 @@ Grattis! Nu har ditt nybildade Cloud Manager-team, inklusive det du själv tilld
 
 ## What’s Next {#whats-next}
 
-Som systemadministratör tilldelad rollen *Business Owner* måste du komma åt och logga in i Cloud Manager.
->[!NOTE]
->Läs [Navigera till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/what-is-required/navigate-to-cloud-manager.html?lang=en) om du vill veta mer om hur du loggar in och använder Cloud Manager.
+1. Som systemadministratör tilldelad rollen *Business Owner* måste du komma åt och logga in på Cloud Manager. Läs [Navigera till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/what-is-required/navigate-to-cloud-manager.html?lang=en) om du vill veta mer om hur du loggar in och använder Cloud Manager.
 
-En Cloud Manager-användare i rollen Business Owner kan logga in och konfigurera dina molnresurser, inklusive dina program och miljöer. På så sätt kan ditt expertteam börja använda AEM som Cloud Service så snart som möjligt.
-När din Business Owner har konfigurerat dina molnresurser kan utvecklare och distributionsansvariga som har lagts till i Cloud Manager-produktprofilerna få åtkomst till Cloud Manager och inhämta kunskap om hur de kan fortsätta med sin utbildningsväg.
+1. Därefter kan en Cloud Manager-användare i rollen *Business Owner* logga in och konfigurera dina molnresurser, inklusive ditt molnprogram och dina miljöer. På så sätt kan ditt expertteam börja använda AEM som Cloud Service så snart som möjligt.
+
+1. När din *företagsägare* har konfigurerat dina molnresurser kan *utvecklare* och *Distributionshanterare* som har lagts till i produktprofilerna för Cloud Manager få åtkomst till Cloud Manager och bekanta sig med hur de kan fortsätta med sin utbildningsväg.
 
 ## Ytterligare resurser {#additional-resources}
 
