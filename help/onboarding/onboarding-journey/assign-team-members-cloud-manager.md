@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 8b30fc9494e152aa742cf17c02f982f5c9479473
+source-git-commit: 57b29f8ef6c65b5a752aca680557e75ba55f64bd
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1299'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Tilldela teammedlemmar till Cloud Manager-produktprofiler {#assign-team-members}
 
-När du har lärt dig att logga in på Admin Console och visat dina behörigheter som systemadministratör kan du nu tilldela teammedlemmar till produktprofiler för Cloud Manager.
+När du har lärt dig att logga in på [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en) och visat dina behörigheter som [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) är du nu redo att tilldela teammedlemmar till Cloud Manager-produktprofiler.
 
 ## Syfte {#objective}
 
@@ -24,24 +24,43 @@ När du har läst det här avsnittet ska du kunna:
 
 * Förstå varför och hur ni måste lägga till teammedlemmar.
 * Lär dig mer om tre olika Cloud Manager-produktprofiler, som Business Owner, Deployment Manager och Developer.
-* Tilldela teammedlemmar till Cloud Manager-produktprofiler (Business Owner, Deployment Manager och Developer).
+* Tilldela teammedlemmar till Cloud Manager-produktprofiler som Business Owner, Deployment Manager och Developer.
+
+## Förutsättningar {#prerequisites}
+
+Innan du startar det här avsnittet bör du ta hänsyn till följande förutsättningar. Du måste vara en:
+
+* En systemadministratör och förstår [Cloud Manager-produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#cloud-manager-product-profiles).
+* Förstå grunderna i [Adobe Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en).
+* Måste ha information om dina teammedlemmar. En systemadministratör måste ha namn och e-postadresser samt roller och ansvar för de gruppmedlemmar som behöver åtkomst till AEM som Cloud Service.
+
+   >[!NOTE]
+   >För att komma igång rekommenderar vi att du först lägger till användare som ska delta i de omedelbara uppgifterna, till exempel administratörer, utvecklare och innehållsförfattare. Du kan fortsätta med resten av introduktionen utan att lägga till alla användare. När du är klar med introduktionen kan du skala till ett större antal användare senare.
 
 ## Granska produktprofiler för Cloud Manager {#review-product-profiles}
 
 Från Admin Console kan du se en lista med Cloud Manager-profiler.
 
 >[!NOTE]
->Innan du granskar Cloud Manager-produktprofilerna från Admin Console rekommenderar vi att du granskar de tillgängliga produktprofilerna för Cloud Manager.
+>Innan du granskar produktprofilerna för Cloud Manager från Admin Console rekommenderar vi att du granskar de tillgängliga [produktprofilerna för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#cloud-manager-product-profiles).
 
 Följ stegen nedan om du vill visa en lista med Cloud Manager-profiler:
 
-1. Logga in på Adobe Admin Console. På sidan **Översikt** väljer du Adobe Experience Manager som en molntjänst från kortet Produkter och tjänster.
+1. Logga in på [Adobe Admin Console](https://adminconsole.adobe.com/). På sidan **Översikt** väljer du **Adobe Experience Manager som Cloud Service** på **kort för produkter och tjänster**.
+
+   ![](/help/onboarding/onboarding-journey/assets/assign-team1.png)
 
    >[!NOTE]
    >Mer information om hur du använder Admin Console finns i Logga in i Admin Console.
 
 
-1. Navigera till molnhanterarinstansen från tabellen med listan över alla instanser. Du ser en lista över förkonfigurerade Cloud Manager-produktprofiler.
+1. Navigera till instansen **Cloud Manager** från tabellen med listan över alla instanser.
+
+   ![](/help/onboarding/onboarding-journey/assets/assign-team2.png)
+
+1. Du ser listan över förkonfigurerade [Cloud Manager-produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#cloud-manager-product-profiles).
+
+   ![](/help/onboarding/onboarding-journey/assets/assign-team3.png)
 
 
 ## Tilldela användare till företagsägarens produktprofil {#assign-users-business-owner}
@@ -68,7 +87,7 @@ Följ de här stegen:
 
 Grattis! Nu har ditt nybildade Cloud Manager-team, inklusive det du själv tilldelat rollen&quot;Business Owner&quot;, konfigurerats. Medlemmar får ett välkomstmejl där de bjuds in att logga in och öppna Cloud Manager. Som Business Owner är du nu bara ett steg från att logga in i Cloud Manager och göra det möjligt att skapa molnresurser.
 
-## Tilldela användare till produktprofilen för Distributionshanteraren {#assign-users-deployment-manager}
+## Tilldela användare till produktprofil för Distributionshanteraren {#assign-users-deployment-manager}
 
 1. Identifiera de användare som ska hantera Cloud Manager-program och lägga till dem i produktprofilen för Business Owner. Systemadministratören måste vara den första personen som får åtkomst till och loggar in på Cloud Manager. Du måste lägga till dig själv (systemadministratör) till produktprofilen för Business Owner först.
 
@@ -102,7 +121,7 @@ Grattis! Nu har ditt nybildade Cloud Manager-team, inklusive det du själv tilld
 
 Som systemadministratör tilldelad rollen *Business Owner* måste du komma åt och logga in i Cloud Manager.
 >[!NOTE]
->Mer information om hur du loggar in och använder Cloud Manager finns i Navigera till Cloud Manager.
+>Läs [Navigera till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/what-is-required/navigate-to-cloud-manager.html?lang=en) om du vill veta mer om hur du loggar in och använder Cloud Manager.
 
 En Cloud Manager-användare i rollen Business Owner kan logga in och konfigurera dina molnresurser, inklusive dina program och miljöer. På så sätt kan ditt expertteam börja använda AEM som Cloud Service så snart som möjligt.
 När din Business Owner har konfigurerat dina molnresurser kan utvecklare och distributionsansvariga som har lagts till i Cloud Manager-produktprofilerna få åtkomst till Cloud Manager och inhämta kunskap om hur de kan fortsätta med sin utbildningsväg.
