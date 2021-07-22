@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du konfigurerar molnres
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 0af17da9f1795a2a28808e15ba18c539c74f63bf
+source-git-commit: 9caf3447fedf13fa81bb616cc54b7cb6a08ff159
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,9 @@ Följ nedanstående avsnitt för att lära dig hur du skapar dina [molntjänstpr
 
    Bra jobbat! Du har loggat in på Cloud Manager som företagsägare!
 
-## Creating Cloud Service Program {#create-cloud-service-program}
+## Create Cloud Service Program {#create-cloud-service-program}
 
+Följ stegen nedan för att skapa ditt molntjänstprogram från Cloud Manager:
 
 1. Navigera till landningssidan för Cloud Manager enligt nedan.
 
@@ -103,9 +104,11 @@ Följ nedanstående avsnitt för att lära dig hur du skapar dina [molntjänstpr
 
 ## Skapa dina molnmiljöer {#create-cloud-environments}
 
-1. När du har skapat ditt molnprogram skapar du dina molnmiljöer genom att gå till översiktssidan för Cloud Manager och välja Lägg till på miljökortet.
+Följ stegen nedan för att skapa molnmiljöer från Cloud Manager:
 
-   >[!NOTE]
+1. När du har skapat ditt molnprogram kan du skapa dina molnmiljöer genom att gå till översiktssidan för Cloud Manager och välja Lägg till på miljökortet.
+
+   >[!IMPORTANT]
    >En Cloud Manager-användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att det här steget ska kunna slutföras.
 
    Titta dessutom på videosjälvstudiekursen för att lära dig mer om Cloud Manager-miljöer och hur du kan lägga till dem i ditt program.
@@ -119,7 +122,9 @@ Följ nedanstående avsnitt för att lära dig hur du skapar dina [molntjänstpr
 
 ## What’s Next {#whats-next}
 
-Nu måste teammedlemmarna beviljas behörighet till instansen eftersom behörighet att administrera Cloud Manager inte räcker. Nu när dina molnresurser har skapats och är klara att användas av ditt team måste systemadministratören utse dina teammedlemmar till AEM som en Cloud Service produktprofiler från Admin Console.
+Teammedlemmarna måste beviljas behörighet för instansen eftersom behörighet att administrera Cloud Manager inte räcker. Nu när dina molnresurser har skapats och är tillgängliga för ditt team måste systemadministratören utse dina teammedlemmar till AEM som en Cloud Service produktprofiler från Admin Console.
+
+Du bör fortsätta din introduktionsresa genom att gå igenom dokumentet Tilldela teammedlemmar till AEM som en Cloud Service produktprofiler.
 
 >[!NOTE]
 >För att få åtkomst till AEM som Cloud Service måste användare tillhöra någon av produktprofilerna AEM användare eller AEM administratörer. Läs mer.
@@ -128,7 +133,7 @@ Nu måste teammedlemmarna beviljas behörighet till instansen eftersom behörigh
 
 Följ de andra resurserna för att lära dig mer om:
 
-* Programtyper och lägga till ett program
-* Miljötyper och tillägg av en miljö
-* Hantera Cloud Manager Git
-* Konfigurera åtkomst till AEM som en Cloud Service från Admin Console
+* [Programtyper och lägga till ett program](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en)
+* [Miljötyper och tillägg av en miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en)
+* [Hantera Cloud Manager Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en)
+* [Konfigurera åtkomst till AEM som en Cloud Service från Admin Console](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=en#adobe-ims-users)
