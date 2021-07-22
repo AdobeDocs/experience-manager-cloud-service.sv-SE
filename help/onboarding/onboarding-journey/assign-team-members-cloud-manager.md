@@ -4,7 +4,7 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 3dbcc5dd09479a84ed13aad0ee3d8c229520e10f
+source-git-commit: 21fae2eff51e46ee026cebe135c8a16625ed8f10
 workflow-type: tm+mt
 source-wordcount: '1382'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Följ de här stegen:
    >[!NOTE]
    >Se [Cloud Manager-produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#cloud-manager-product-profiles) för att försäkra dig om att rätt användare tilldelas rätt roll(er) i Admin Console enligt nedan.
 
-   ![](/help/onboarding/onboarding-journey/assets/assign-team5.png)
+   ![](/help/onboarding/onboarding-journey/assets/assign-team6.png)
 
    >[!NOTE]
    >Tilldela användaren till minst en produktprofil så att användaren kan komma åt Cloud Manager. Kom ihåg att tilldela dig själv (systemadministratör) till Business Owner.
@@ -121,7 +121,7 @@ Grattis! Nu har ditt nybildade Cloud Manager-team, inklusive det du själv tilld
    >[!NOTE]
    >Se [Cloud Manager-produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#cloud-manager-product-profiles) för att försäkra dig om att rätt användare tilldelas rätt roll(er) i Admin Console enligt nedan.
 
-   ![](/help/onboarding/onboarding-journey/assets/assign-team5.png).
+   ![](/help/onboarding/onboarding-journey/assets/assign-team6.png).
 
    >[!IMPORTANT]
    >Användaren kan läggas till i distributionsledarens produktprofil när Cloud Manager-resurserna har skapats.
@@ -147,7 +147,7 @@ Grattis! Nu har ditt nybildade Cloud Manager-team, inklusive det du själv tilld
    >[!NOTE]
    >Se [Cloud Manager-produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#cloud-manager-product-profiles) för att försäkra dig om att rätt användare tilldelas rätt roll(er) i Admin Console enligt nedan.
 
-   ![](/help/onboarding/onboarding-journey/assets/assign-team5.png).
+   ![](/help/onboarding/onboarding-journey/assets/assign-team6.png).
 
 
    >[!IMPORTANT]
