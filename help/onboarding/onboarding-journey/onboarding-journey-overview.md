@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 491ee21a31ec8496d28b88ba52770516bccc7388
+source-git-commit: 6046b29408a9bd61c8bbd809b73f2ba6e5a339da
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Grattis till att du har påbörjat din resa med AEM som Cloud Service! Vi är gl
 
 ## Introduktion {#introduction}
 
-Den här handboken leder dig igenom de viktigaste avsnitten så att läsaren kan:
+Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är klar kan:
 
 * Ha full förståelse för vad man kan förvänta sig under AEM som en Cloud Services introduktionsresa.
 * Har gjort det möjligt för teamet att komma igång och ta de första stegen för att lära sig att skapa och utveckla innehåll för AEM som ett program för Cloud Service.
@@ -31,18 +31,13 @@ Detta innebär:
 
 ## Målgrupp {#audience}
 
-Onboarding är den process under vilken en utsedd systemadministratör konfigurerar AEM som en Cloud Service för din organisation. Detta innefattar inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service.
+Onboarding är den process under vilken en utsedd [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) konfigurerar AEM som en Cloud Service för din organisation. Detta innefattar inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service.
 
 Startresan illustreras nedan och varje steg i resan beskrivs i detalj i följande avsnitt.
 
 ## Utforska introduktionsresan {#exploring-onboarding-journey}
 
-
 Du kommer att utforska många ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om de steg som krävs för att komma igång AEM som en Cloud Service. Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Därför rekommenderar vi att du startar i början och fortsätter sekventiellt om du inte är nybörjare.
-
-Du kommer att utforska många ämnen under den här resan. I följande artiklar finns grundläggande kunskaper som krävs för introduktionsprocessen och du kan länka till detaljerad teknisk dokumentation.
-
-Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte är van vid att komma igång rekommenderar vi att du börjar med att läsa de artiklar som nämns i avsnittet Lär dig om att komma igång i guiden.
 
 | # | Artikel | Beskrivning |
 |---|---|---|
