@@ -4,9 +4,9 @@ description: Använd funktionen Strukturträd i Content Fragment Editor i AEM f�
 feature: Innehållsfragment
 role: User
 exl-id: 4a134f04-e580-4f69-9d11-0a2fc83a4b3a
-source-git-commit: 61e3b1d883afe0e9a873991fb8fd148de0fbcd4f
+source-git-commit: 426a05db7062c7823dfaa63e1d918792d3e8a290
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '113'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ I redigeraren för innehållsfragment kan du välja ikonen för strukturträdet:
 
 ![Strukturträd för innehållsfragment](assets/cfm-structuretree-01.png)
 
-Då öppnas en representation av fragmentets struktur i den vänstra rutan. Med detta kan du navigera genom och till refererade fragment.
+Då öppnas en representation av fragmentets struktur i den vänstra rutan. Med detta kan du navigera genom och till refererade fragment. Om du markerar en referens öppnas fragmentet för redigering.
 
 >[!NOTE]
 >
