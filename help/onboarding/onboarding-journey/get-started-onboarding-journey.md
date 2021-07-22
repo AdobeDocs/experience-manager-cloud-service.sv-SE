@@ -1,17 +1,17 @@
 ---
-title: Komma igång med introduktionsresan
+title: Komma igång med introduktionsprocessen
 description: Följ den här sidan för att lära dig hur du kommer igång med en introduktionsresa
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 806a5a50dee4addc4acd2be50ee501a3985e32d0
+source-git-commit: e7fd4fb6175f6aeb0c7e5cead14d1844f6f69bc5
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
 
-# Komma igång med introduktionsresan {#getting-started}
+# Komma igång med introduktionsprocessen {#getting-started}
 
 Onboarding är den process under vilken en utsedd systemadministratör konfigurerar AEM som en Cloud Service för din organisation. Detta innefattar inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service.
 
@@ -21,7 +21,7 @@ Som systemadministratör sammanfattar det här dokumentet de första stegen i di
 
 När du har läst det här avsnittet ska du kunna:
 
-* Åtkomst till och inloggning på Admin Console
+* Åtkomst och inloggning till Admin Console
 * Granska dina behörigheter som systemadministratör via Admin Console
 
 >[!NOTE]
