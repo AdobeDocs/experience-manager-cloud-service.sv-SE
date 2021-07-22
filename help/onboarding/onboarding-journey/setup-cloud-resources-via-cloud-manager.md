@@ -4,25 +4,25 @@ description: Följ den här sidan för att lära dig hur du konfigurerar molnres
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 021146e4e1d65c7fe81ed3dba70b32daf34b9704
+source-git-commit: 0af17da9f1795a2a28808e15ba18c539c74f63bf
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
 
 # Konfigurera molnresurser via Cloud Manager {#setup-cloud-resources}
 
-Den systemadministratör som tilldelats rollen&quot;Business Owner&quot; bör ha åtkomst till och logga in i Cloud Manager. Därefter måste en teammedlem som tilldelats produktprofilen&quot;Business Owner&quot; logga in på Cloud Manager och skapa ditt molnprogram och miljöer så att ditt expertteam kan komma igång.
+Den systemadministratör som tilldelats rollen *Business Owner* bör ha åtkomst till och logga in på Cloud Manager. Därefter måste en teammedlem som tilldelats produktprofilen *Business Owner* logga in i Cloud Manager och skapa ditt molnprogram och dina miljöer så att ditt expertteam kan komma igång.
 
 ## Syfte {#objective}
 
 Det här dokumentet hjälper dig att förstå hur dina molnresurser skapas och vem som kan göra det.
 
-När du har läst det här avsnittet bör du:
+När du har läst det här avsnittet bör du förstå:
 
-* Förstå att en systemadministratör som tilldelats rollen Business Owner måste vara den första som får åtkomst till och inloggning med Cloud Manager
-* Förstå hur ditt molnprogram och dina miljöer skapas.
+* En systemadministratör som tilldelats rollen *Business Owner* måste vara den första som får åtkomst till och loggar in på Cloud Manager.
+* Hur ditt molnprogram och dina miljöer skapas.
 
 ## Introduktion {#introduction}
 
@@ -32,34 +32,45 @@ Följ nedanstående avsnitt för att lära dig hur du skapar dina [molntjänstpr
 
 ### Krav {#prerequisites}
 
-* Den systemadministratör som tilldelats rollen&quot;Business Owner&quot; ska ha åtkomst till och logga in i Cloud Manager.
+* Den systemadministratör som tilldelats rollen *Business Owner* bör ha åtkomst till och logga in på Cloud Manager.
 
-* Lär dig navigera och logga in i Cloud Manager
+* Lär dig hur du [navigerar och loggar in på Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/what-is-required/navigate-to-cloud-manager.html?lang=en).
 
-* Bekanta dig med Cloud Manager-produktprofiler
+* Läs om [Cloud Manager-produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#cloud-manager-product-profiles).
 
 * Förstå vad du bör tänka på när du skapar programmet. I den här videon får du veta mer.
 
-* Förstå begreppen för program och miljöer i Cloud Manager
+* Förstå begreppen i Cloud Manager [program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/understand-program-types.html?lang=en) och [miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en)
 
 ## Navigera till Cloud Manager {#navigate-cloud-manager}
 
-1. Användaren&quot;Business Owner&quot; får ett välkomstmeddelande där han/hon kan komma igång, eller om han/hon inte hittar det går du direkt till experience.adobe.com och loggar in med din Adobe ID.
+1. *Business Owner*-användaren får ett välkomstmeddelande där de kan komma igång, eller om de inte kan hitta det går du direkt till [Adobe Experience Cloud](https://experience.adobe.com/#/@ccs/home) och loggar in med din Adobe ID.
 
-1. På Experience Cloud hemsida väljer du Experience Manager:
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources1.png)
 
+1. På Adobe Experience Cloud hemsida väljer du **Experience Manager**.
 
-1. Du kommer nu till AEM startsida. Välj Cloud Manager härifrån:
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources2.png)
 
+1. Du kommer nu till AEM startsida. Starta **Cloud Manager** härifrån.
 
-1. Du kommer nu till landningssidan för Cloud Manager enligt nedan:
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources3.png)
 
+1. Landningssidan för Cloud Manager visas, vilket visas i bilden nedan.
 
-1. Verifiera nu att du har tilldelats produktprofilen Business Owner. Välj din profil längst upp till höger så som visas nedan:
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources4.png)
 
+1. Kontrollera att du har tilldelats produktprofilen Business Owner. Om du vill göra det väljer du din profil högst upp till höger, enligt nedan.
 
-1. Välj sedan Användarroller och kontrollera att du är tilldelad till Business Owner.
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources5.png)
 
+1. Välj **Användarroller** och kontrollera att du är tilldelad till Business Owner.
+
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources6.png)
+
+1. Detta bekräftar din användarroll som företagsägare.
+
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources7.png)
 
    Bra jobbat! Du har loggat in på Cloud Manager som företagsägare!
 
