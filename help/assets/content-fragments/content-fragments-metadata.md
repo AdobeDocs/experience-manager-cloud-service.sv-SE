@@ -4,10 +4,10 @@ description: Se hur du kan visa och redigera metadataegenskaperna för innehåll
 feature: Innehållsfragment
 role: User
 exl-id: bc67480d-a1e4-4ef9-b811-8bd110f70369
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 4d20b83c3324e5c082c26e2fa700f03763da2d19
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 8%
+source-wordcount: '208'
+ht-degree: 5%
 
 ---
 
@@ -34,5 +34,7 @@ Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
    * **Titel**
    * **Beskrivning**
    * **Taggar**
+      * [Taggar ](/help/sites-cloud/authoring/features/tags.md) är särskilt kraftfulla när du organiserar dina fragment eftersom de kan användas för innehållsklassificering och taxonomi. Taggar kan användas för att hitta innehåll (med taggar) och tillämpa gruppåtgärder.
+Du kan till exempel tagga relevanta fragment som&quot;Julstart&quot; så att du bara kan bläddra bland dem som en delmängd, eller kopiera dem för användning med en annan framtida start i en ny mapp.
    * Skapat (endast visning)
    ![metadata](assets/cfm-metadata-02.png)
