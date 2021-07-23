@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du konfigurerar molnres
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 9caf3447fedf13fa81bb616cc54b7cb6a08ff159
+source-git-commit: 730dcb038a3080ff736a83963811aaf39d270845
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -83,40 +83,55 @@ Följ stegen nedan för att skapa ditt molntjänstprogram från Cloud Manager:
    >[!NOTE]
    >Du måste vara en teammedlem som har tilldelats produktprofilen för Cloud Manager Business Owner för att kunna slutföra det här steget.
 
-1. Här väljer du Lägg till program för att starta guiden Lägg till program. I videon får du lära dig hur du skapar AEMaaCS-programmet och viktiga överväganden innan du skapar programmet.
+   Klicka här på **Lägg till program** för att starta guiden Lägg till program.
 
-1. Om du vill ha steg-för-steg-anvisningar om hur du använder guiden Lägg till program går du hit.
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources4.png)
 
-   >[!CAUTION]
-   >Kom ihåg att programnamnet inte kan ändras när det har skapats. Vi rekommenderar att du vet vilket namn du vill ge ditt program.
+   >[!NOTE]
+   >Titta på [videon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en) om du vill lära dig hur du skapar AEM som ett molnprogram och om viktiga saker att tänka på innan du skapar ditt program.
 
-   Om du måste byta namn på ditt program måste du öppna ett ärende hos Adobe Support eller kontakta Adobe. De kommer att bidra till att effektivt ta bort programmet. Du måste börja om från början igen med potentiell förlust av arbete som teamet har gjort.
+   >[!IMPORTANT]
+   >Stegvisa instruktioner om hur du använder guiden Lägg till program finns [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/production-programs/creating-production-program.html?lang=en).
+   >
+   >* Kom ihåg att programnamnet inte kan ändras när det har skapats. Vi rekommenderar att du vet vilket namn du vill ge ditt program.
+   >* Om du måste byta namn på ditt program måste du öppna ett ärende hos Adobe Support eller kontakta Adobe. De kommer att bidra till att effektivt ta bort programmet. Du måste börja om från början igen med potentiell förlust av arbete som teamet har gjort.
 
-1. När ditt molnprogram har skapats kan du navigera till programmet och se programmets översiktssida enligt nedan:
 
-1. Om du inte redan har gjort det är det ett bra tillfälle att lägga till dina utvecklarmedlemmar i ditt Cloud Manager-team, gå till Lägg till användare i Developer-produktprofilen och följ stegen som beskrivs.
+1. När ditt molnprogram har skapats kan du navigera till programmet för att se sidan **Översikt** för ditt program, som visas nedan.
 
-1. Medlemmar som är tilldelade till produktprofilen för utvecklare kan logga in på Cloud Manager och Hantera Cloud Manager Git.
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources8.png)
 
+   >[!NOTE]
+   >Om du inte redan har gjort det är det ett bra tillfälle att lägga till dina utvecklarmedlemmar i ditt Cloud Manager-team nu. Se Lägga till användare i produktprofilen för utvecklare och följ stegen som beskrivs ovan.
+
+1. Medlemmar som är tilldelade till produktprofilen för utvecklare kan logga in på Cloud Manager och [Hantera Cloud Manager Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en).
 
    Bra jobbat! Nu när ditt program har skapats är din Cloud Manager Git tillgänglig för dina utvecklare!
 
 
 ## Skapa dina molnmiljöer {#create-cloud-environments}
 
+När du har skapat ditt molnprogram kan du skapa dina molnmiljöer.
+
 Följ stegen nedan för att skapa molnmiljöer från Cloud Manager:
 
-1. När du har skapat ditt molnprogram kan du skapa dina molnmiljöer genom att gå till översiktssidan för Cloud Manager och välja Lägg till på miljökortet.
+1. Navigera till sidan **Översikt** i Cloud Manager och välj **Lägg till** från miljökortet.
+
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources9.png)
 
    >[!IMPORTANT]
    >En Cloud Manager-användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att det här steget ska kunna slutföras.
 
-   Titta dessutom på videosjälvstudiekursen för att lära dig mer om Cloud Manager-miljöer och hur du kan lägga till dem i ditt program.
+   Titta dessutom på den snabba självstudiekursen [video](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en) för att lära dig mer om Cloud Manager-miljöer och hur du kan lägga till dem i ditt program.
 
-1. Detta startar guiden för att lägga till miljö som hjälper dig att lägga till din miljö. Lägg till din utvecklingsmiljö först för att bekanta dig.
+1. Detta startar guiden för att lägga till miljö som hjälper dig att lägga till din miljö. Lägg till din utvecklingsmiljö först för att bekanta dig. Mer information finns i [Lägga till en miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#adding-environments).
 
-1. Om du inte redan har gjort det kan du lägga till dina utvecklarmedlemmar i ditt Cloud Manager-team nu, gå till Lägg till användare i Developer-produktprofilen och följa stegen som beskrivs. På så sätt kan utvecklarna komma igång med att navigera till Cloud Manager och Managing Cloud Manager Git.
+   >[!NOTE]
+   >Om du inte redan har gjort det är det ett bra tillfälle att lägga till dina utvecklarmedlemmar i ditt Cloud Manager-team nu. Se Lägga till användare i produktprofilen för utvecklare och följ stegen som beskrivs ovan.
 
+1. Medlemmar som är tilldelade till produktprofilen för utvecklare kan logga in på Cloud Manager och [Hantera Cloud Manager Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en).
+
+   Bra jobbat! Nu när ditt program har skapats är din Cloud Manager Git tillgänglig för dina utvecklare!
 
    Grattis! Nu har dina molnmiljöer skapats och dina utvecklare har lagts till i teamet!
 
