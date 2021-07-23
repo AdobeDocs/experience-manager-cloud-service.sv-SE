@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med video i Dynamic Media.
 feature: Videoprofiler
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
+source-git-commit: 769b2da78c7bd01c77c2ee996b145fc54fddea42
 workflow-type: tm+mt
-source-wordcount: '9091'
+source-wordcount: '9083'
 ht-degree: 4%
 
 ---
@@ -151,7 +151,7 @@ Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok f�
 
 Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta BlackBerry®-enheter som stöder det här videoformatet på följande: [Videoformat som stöds på BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
-Följande Windows®-enheter har stöd för det här videoformatet: [Videoformat som stöds på Windows® Phone](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105)?redirectedfrom=MSDN)
+Du kan hitta Windows®-enheter som stöder det här videoformatet på följande [videoformat som stöds på Windows® Phone](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs).
 
 * Spela upp videon med Dynamic Media Video Viewer Presets, inklusive följande:
 
@@ -301,7 +301,7 @@ I följande tabell beskrivs rekommenderad storlek, proportioner och lägsta bith
 
 Du kan hämta metadata för en fil genom att visa dess metadata med ett videoredigeringsverktyg eller med ett program som utformats för att hämta metadata. Nedan följer instruktioner om hur du använder MediaInfo, ett tredjepartsprogram, för att hämta videofilens metadata:
 
-1. Gå till den här webbsidan: [https://mediainfo.sourceforge.net/en/Download](https://mediainfo.sourceforge.net/en/Download).
+1. Gå till [MediaInfo Download](https://mediaarea.net/en/MediaInfo/Download).
 1. Välj och hämta installationsprogrammet för den grafiska användargränssnittsversionen och följ installationsanvisningarna.
 1. Efter installationen högerklickar du på videofilen (endast Windows®) och väljer MediaInfo, eller så öppnar du MediaInfo och drar videofilen till programmet. Alla metadata som är associerade med videofilen, inklusive bredd, höjd och fps, visas.
 
@@ -350,7 +350,7 @@ I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter
 | Hastighet (kbit/s) | Anslutningstyp |
 |--- |--- |
 | 256 | Uppringd anslutning. |
-| 800 | Vanlig mobilanslutning. För den här anslutningen anger du en datahastighet mellan 400 och maximalt 800 för 3G-upplevelser som mål. |
+| 600 | Vanlig mobilanslutning. För den här anslutningen anger du en datahastighet mellan 400 och maximalt 800 för 3G-upplevelser som mål. |
 | 2000 | Vanlig anslutning till stationär bredbandsuppkoppling. För den här anslutningen anger du en datahastighet i intervallet 800-2000 kbit/s med de flesta mål som är i genomsnitt 1200-1500 kbit/s. |
 | 5000 | Vanlig bredbandsanslutning. Kodning i det här övre intervallet rekommenderas inte eftersom videoleverans i den här hastigheten inte är tillgänglig för de flesta konsumenter. |
 
