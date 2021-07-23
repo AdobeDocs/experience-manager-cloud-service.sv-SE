@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 6046b29408a9bd61c8bbd809b73f2ba6e5a339da
+source-git-commit: fa61dc122cec5466827d06ffb2eca1c1c5f8bae6
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -18,26 +18,31 @@ ht-degree: 0%
 
 Det här dokumentet hjälper dig att förstå de steg som systemadministratören måste ta för att utse dina teammedlemmar till AEM som produktprofiler för Cloud Service och varför det är viktigt att dina AEM-författare kan ge sig ut på sin resa med AEM.
 
-När du har läst det här avsnittet bör du:
+När du har läst det här avsnittet bör du förstå:
 
-* Förstå varför och hur teammedlemmarna tilldelas AEM som produktprofiler för Cloud Service
-* Lär dig hur du lägger till teammedlemmar AEM användarproduktprofilen
-* Lär dig hur du lägger till teammedlemmar AEM administratörernas produktprofil
+* Varför och hur teammedlemmarna tilldelas AEM som produktprofiler för Cloud Service.
+* Så här lägger du till teammedlemmar AEM användarproduktprofilen.
+* Så här lägger du till teammedlemmar AEM administratörernas produktprofil.
 
 
 ## Introduktion {#introduction}
 
-För att få åtkomst till AEM som Cloud Service måste användare tillhöra en av två produktprofiler, AEM användare eller AEM administratörer. Teammedlemmarna måste beviljas behörigheter till AEM eftersom behörighet att administrera Cloud Manager inte räcker. Läs mer.
+För att få åtkomst till AEM som Cloud Service måste användare tillhöra en av två produktprofiler, till exempel *AEM Användare* eller *AEM Administratörer*. Teammedlemmarna måste beviljas behörigheter till AEM eftersom behörighet att administrera Cloud Manager inte räcker. Läs mer.
 
 >[!NOTE]
 >Alla användare som tilldelas AEM användarproduktprofilen av systemadministratören har (skrivskyddad) åtkomst till Cloud Manager.
 
 ## Krav {#prerequisites}
 
-* AEM som produktprofiler för Cloud Service
-* Bekanta dig med Admin Console
+Innan du börjar läsa det här avsnittet bör du överväga följande krav:
+
+* Förstå [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles)
+* Bekanta dig med [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en)
 * Produktprofiler för Cloud Manager har tilldelats dina teammedlemmar efter behov, och molnresurserna har konfigurerats
-* Information om teammedlemmen: Systemadministratören måste ha namn och e-postadresser samt roller och ansvar för de teammedlemmar som behöver åtkomst till AEM som Cloud Service. För att komma igång rekommenderar vi att du först lägger till användare som ska delta i de omedelbara uppgifterna, till exempel administratörer, utvecklare och innehållsförfattare. Du kan fortsätta med resten av introduktionen utan att lägga till alla användare. När du är klar med introduktionen kan du skala till ett större antal användare senare.
+* Information om teammedlemmen: Systemadministratören måste ha namn och e-postadresser samt roller och ansvar för de gruppmedlemmar som behöver åtkomst till AEM som Cloud Service.
+
+   >[!NOTE]
+   >För att komma igång rekommenderar vi att du först lägger till användare som ska delta i de omedelbara uppgifterna, till exempel administratörer, utvecklare och innehållsförfattare. Du kan fortsätta med resten av introduktionen utan att lägga till alla användare. När du är klar med introduktionen kan du skala till ett större antal användare senare.
 
 
 1. Logga in i Admin Console
@@ -55,11 +60,9 @@ Från Admin Console kan du se en lista med Cloud Manager-profiler. Så här gör
    Nu kan du se listan över AEM som en produktprofil för Cloud Service som måste tilldelas en användare baserat på deras roll. Läs mer om dessa AEM som produktprofiler för Cloud Service.
 
 
-
-
 ## Lägg till teammedlemmar i AEM användar- eller AEM administratörsproduktprofil {#add-team-members}
 
-För att beviljas åtkomst till AEMaaCS-instansanvändare måste tillhöra någon av produktprofilerna AEM Users eller AEM Administrators.
+För att få åtkomst till AEM som en Cloud Service måste användare tillhöra någon av produktprofilerna AEM Users eller AEM Administrators.
 
 >[!NOTE]
 >Du måste ha behörighet för instansen. Behörigheter att administrera Cloud Manager räcker inte. Läs mer.
@@ -68,7 +71,7 @@ Stegen nedan måste följas av systemadministratören som också har rollen Busi
 
 1. Navigera från Cloud Manager till Cloud Manager och välj knappen Hantera åtkomst i den miljö som är av intresse enligt nedan:
 
-1. När du klickar på Hantera åtkomst, navigerar en ny flik till Admin Console från den plats där du har tillgång till författarinstansen av miljön. Välj&quot;AEM administratörer&quot; eller&quot;AEM användare&quot; baserat på de behörigheter som den enskilda personen måste ge. Läs mer om AEM som produktprofiler för Cloud Service.
+1. När du klickar på Hantera åtkomst, navigerar en ny flik till Admin Console från den plats där du har tillgång till författarinstansen av miljön. Välj *AEM administratörer* eller *AEM Användare* baserat på de behörigheter som den här personen måste ge. Läs mer om [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
 
 1. Välj Lägg till användare enligt nedan och skicka den information som krävs för att lägga till teammedlemmen:
 
@@ -80,7 +83,7 @@ Stegen nedan måste följas av systemadministratören som också har rollen Busi
 
 ## What’s Next {#whats-next}
 
-De användare du tilldelade till AEMaaCS-produktprofilerna är nu redo att lära sig hur du kommer åt Författaren och lär dig mer om hur du skapar sidor i AEM som en Cloud Service. Läs mer.
+De användare som du har angett som AEM för en Cloud Service produktprofiler kan nu lära sig hur du kommer åt Författaren och bekanta dig med redigeringssidor i AEM som en Cloud Service. Du bör följa sökvägen genom att gå igenom dokumentet Learning Path for AEM Users.
 
 ## Ytterligare resurser {#additional-resources}
 
