@@ -4,9 +4,9 @@ description: Observera ändringar i [!DNL Adobe Experience Manager Assets] in [!
 feature: Versionsinformation
 role: User,Leader,Architect,Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 2f0f5d04269ae01f28ce88e87c3269efaf21e657
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -56,13 +56,14 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 | Återskrivning av metadata | Fungerar annorlunda | Inaktiverad som standard. Aktivera motsvarande startprogram för arbetsflödet om det behövs. Återskrivning hanteras av resursmikrotjänster. |
 | Bearbetning av resurser som överförts med hjälp av Package Manager | Kräver manuellt ingripande. | Bearbeta manuellt med åtgärden **[!UICONTROL Reprocess Asset]**. |
 | MIME-typidentifiering | Stöds inte. | Om du överför en digital resurs utan ett tillägg eller med ett felaktigt tillägg kanske den inte bearbetas som du vill. Användarna kan fortfarande lagra de binära filerna utan filtillägg i DAM. Se [MIME-typdetektering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/detect-asset-mime-type-with-tika.html). |
-| Generering av deltillgångar för eller anteckning i sammansatta tillgångar | Stöds inte. | Beroende användningsfall uppfylls inte. Det går till exempel inte att visa eller kommentera en flersidig PDF-, INDD-, PPT-, PPTX- och AI-fil. Se [Skapa delresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets). |
+| Generering av deltillgångar för eller anteckning i sammansatta tillgångar | Stöds inte. | Beroende användningsfall kanske inte uppfylls. Se [Skapa delresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets). |
 | Startsida | Stöds inte. | Se [[!DNL Assets] Home Page experience in [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-home-page.html) |
 | Extrahera resurser från ZIP-arkiv | Stöds inte. | Se [ZIP-extrahering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html#extractzip). |
 | Värderingar av tillgångar | Stöds inte. | Värderingswidgeten i metadataramedigeraren stöds inte. |
 | filtret Innehållsdisposition | Stöds inte. | Ett vanligt användningsexempel för `ContentDispositionFilter` är att låta administratörer konfigurera [!DNL Experience Manager] så att HTML-filer kan hanteras och PDF-filer öppnas infogat i stället för att dessa ska hämtas. På Publish-instanserna kan du hantera dispositionen med Dispatcher-konfigurationen. På författarinstanserna rekommenderar Adobe inte att du ändrar Content Disposition-huvudet. Se [Innehållsdispositionsfilter i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/content-disposition-filter.html). |
 | [Hämta rapport](/help/assets/asset-reports.md) | Stöds inte. | För tillfället är den hämtningsrapport som innehåller information om resursanvändning inte tillgänglig. Se [ladda ned rapport i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html). |
 | Produktfotografimall | Stöds inte. | Se [produktfotofotografimall i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/managing-product-information.html). |
+| Smart översättning | Stöds inte. | [Smart ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/translation/smart-translation-search-feature-video-use.html) översättning stöds inte i  [!DNL Experience Manager] som  [!DNL Cloud Service]. |
 | Klassiskt användargränssnitt | Stöds inte. | Endast det Touch-aktiverade användargränssnittet är tillgängligt. |
 
 >[!MORELIKETHIS]
