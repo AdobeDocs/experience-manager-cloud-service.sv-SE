@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för ditt h
 feature: Innehållsfragment
 role: User
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: c8462fe370045ad2dc977fdf2f8ce0a5d3e85bc1
+source-git-commit: f2ddd93d9a6f8e17dc0eb75ee5adab4354249091
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2258'
 ht-degree: 4%
 
 ---
@@ -166,16 +166,17 @@ innehåll (för det specifika fältet) måste vara unikt för alla innehållsfra
    >[!NOTE]
    Variationer kan ha samma *unika*-värde som varianter av samma fragment, men inte samma värde som används i andra variationer av fragment.
 
-* ****
-TranslatableKontrollera 
-**En** översättningsmarkeringsruta i ett fält i redigeraren för innehållsfragmentmodellen kommer att:
-
-   * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfigurationen, kontext `/content/dam/<sites-configuration>`, om det inte redan finns.
-   * För GraphQL: Ange en `<translatable>`-egenskap i fältet Innehållsfragment till `yes`, så att GraphQL-frågefilter tillåts för JSON-utdata med endast översättningsbart innehåll.
-
 * Mer information om den specifika datatypen och dess egenskaper finns i **[Innehållsreferens](#content-reference)**.
 
 * Mer information om den specifika datatypen och dess egenskaper finns i **[Fragmentreferens (kapslade fragment)](#fragment-reference-nested-fragments)**.
+
+<!--
+* **Translatable**
+  Checking the **Translatable** checkbox on a field in the Content Fragment Model editor will:
+
+  * Ensure the field's property name is added to the translation configuration, context `/content/dam/<sites-configuration>`, if not already present. 
+  * For GraphQL: set a `<translatable>` property on the Content Fragment field to `yes`, to allow GraphQL query filter for JSON output with only translatable content.
+-->
 
 ## Validering {#validation}
 
