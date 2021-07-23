@@ -4,9 +4,9 @@ description: Följ den här sidan om du vill lära dig nästa steg efter att du 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: b45d5824afee9e2d540ea7cb41b199b517f26b25
+source-git-commit: fa61dc122cec5466827d06ffb2eca1c1c5f8bae6
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Läs mer om detta ämne här
 
 ## What’s Next {#whats-next}
 
-Utvecklare och driftsättningsansvariga är nu redo att lära sig hur man utvecklar kod i AEMaaCS. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan.
+Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla kod i AEM som en Cloud Service. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan.
 
 ## Ytterligare resurser {#additional-resources}
 
