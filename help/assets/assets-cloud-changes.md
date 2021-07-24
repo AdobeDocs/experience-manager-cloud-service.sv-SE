@@ -4,9 +4,9 @@ description: Observera ändringar i [!DNL Adobe Experience Manager Assets] in [!
 feature: Versionsinformation
 role: User,Leader,Architect,Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: 2f0f5d04269ae01f28ce88e87c3269efaf21e657
+source-git-commit: bb4c1377da4bbca6c54ec2a0ec0a0b31f9182485
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 | Återskrivning av metadata | Fungerar annorlunda | Inaktiverad som standard. Aktivera motsvarande startprogram för arbetsflödet om det behövs. Återskrivning hanteras av resursmikrotjänster. |
 | Bearbetning av resurser som överförts med hjälp av Package Manager | Kräver manuellt ingripande. | Bearbeta manuellt med åtgärden **[!UICONTROL Reprocess Asset]**. |
 | MIME-typidentifiering | Stöds inte. | Om du överför en digital resurs utan ett tillägg eller med ett felaktigt tillägg kanske den inte bearbetas som du vill. Användarna kan fortfarande lagra de binära filerna utan filtillägg i DAM. Se [MIME-typdetektering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/detect-asset-mime-type-with-tika.html). |
-| Generering av deltillgångar för eller anteckning i sammansatta tillgångar | Stöds inte. | Beroende användningsfall kanske inte uppfylls. Se [Skapa delresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets). |
+| Generering av deltillgångar för sammansatta tillgångar | Stöds inte. | Beroende användningsfall som kommentarer kanske inte uppfylls. Se [Skapa delresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets). PDF-förhandsgranskning av vissa filtyper är tillgänglig som en [prerelease-funktion i version 2021.7.0](/help/release-notes/release-notes-cloud/release-notes-current.md#beta-features-assets). Se [hur du får åtkomst till prerelease-kanalen](/help/release-notes/prerelease.md). |
 | Startsida | Stöds inte. | Se [[!DNL Assets] Home Page experience in [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-home-page.html) |
 | Extrahera resurser från ZIP-arkiv | Stöds inte. | Se [ZIP-extrahering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html#extractzip). |
 | Värderingar av tillgångar | Stöds inte. | Värderingswidgeten i metadataramedigeraren stöds inte. |
