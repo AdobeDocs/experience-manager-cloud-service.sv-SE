@@ -4,9 +4,9 @@ description: Följ den här sidan om du vill lära dig nästa steg efter att du 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: fa61dc122cec5466827d06ffb2eca1c1c5f8bae6
+source-git-commit: d3f721d66cc6b0c9191f8d84d4adc0326ef68d73
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -51,19 +51,19 @@ Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla k
 
 ## Ytterligare resurser {#additional-resources}
 
-* Åtkomst till Git- och Git-kontohantering från Cloud Manager
+* [Åtkomst till Git- och Git-kontohantering från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en)
 
-* Lokal utvecklingsmiljö för AEM som Cloud Service
+* [Lokal utvecklingsmiljö för AEM som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 
-* Komma igång med AEM Sites (självstudiekurs)
+* [Komma igång med AEM Sites (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
-* Komma igång med AEM SPA Editor och React | Adobe Experience Manager
+* [Komma igång med AEM SPA Editor och React | Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=en)
 
-* Komma igång med AEM SPA Editor och Angular
+* [Komma igång med AEM SPA Editor och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html?lang=en)
 
-* Komma igång med AEM Headless - GraphQL
+* [Komma igång med AEM Headless - GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=en)
 
-* Komma igång med AEM SPA Editor för utvecklare
+* [Komma igång med AEM SPA Editor för utvecklare](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens#courses)
 
 ### Experience League-kurser {#experience-league-courses}
 
