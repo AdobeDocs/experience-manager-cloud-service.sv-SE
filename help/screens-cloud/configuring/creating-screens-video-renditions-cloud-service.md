@@ -1,9 +1,9 @@
 ---
 title: Skapa videoåtergivningar för skärmar i skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du skapar skärmvideoåtergivningar i skärmar som en Cloud Service.
-source-git-commit: b8691bb77079eeb7efd141ce89c44c5a312262b3
+source-git-commit: ec939ac6a91523a9ba64a555943eba8e6da071eb
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,24 @@ I den här guiden beskrivs hur du skapar videoåtergivningar som används i skä
 
 ## Steg för att skapa skärmar, videoåtergivningar i skärmar som en Cloud Service {#steps-creating-screens-video-renditions}
 
-1. Navigera till kanaler i användargränssnittet i Skärmar Cloud.
-1. Klicka på Adobe Experience Manager i det övre vänstra hörnet för att navigera till Skärminnehållsleverantören, d.v.s. AEM som en Cloud Service.
-1. Klicka på Verktyg i huvudnavigeringen nu, klicka på Resurser och klicka sedan på Bearbeta profiler
+1. Navigera till kanalen i Screens Content Provider.
 
-1. Klicka på Skapa för att skapa en ny bearbetningsprofil
-1. Ange ett namn som &quot;ScreensProcessingProfile&quot;
-1. Navigera till fliken Video för att lägga till en videokodning och klicka på Lägg till ny
+   >[!NOTE]
+   >Mer information finns i [Använda rasterinnehållsleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en#screens-content-provider).
+
+1. Klicka på Verktyg i det vänstra navigeringsfältet, klicka på **Resurser** och klicka sedan på **Bearbeta profiler**.
+
+   ![](/help/screens-cloud/assets/configure/screens-cp-3.png)
+
+1. Klicka på **Skapa** för att skapa en ny bearbetningsprofil.
+
+   ![](/help/screens-cloud/assets/configure/screens-video-2.png)
+
+1. Ange **namnet**, till exempel **ScreensProcessingProfile**.
+
+   ![](/help/screens-cloud/assets/configure/screens-video-3.png)
+
+1. Navigera till fliken **Video** för att lägga till en videokodning och klicka på **Lägg till ny**.
 
 
    >[!IMPORTANT]
