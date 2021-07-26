@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Resurshantering
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: eade8d0faf0121260b0822abcab6fae174a796e6
+source-git-commit: 2f9e8c00674979c4a245d410b68fd99c60eccfb4
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -109,6 +109,6 @@ Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att 
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md)
-* [Hämta resurser med skrivbordsappen Experience Manager på Win eller Mac](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
+* [Hämta resurser med skrivbordsappen Experience Manager på Win eller Mac](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
 * [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-appar som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
 
