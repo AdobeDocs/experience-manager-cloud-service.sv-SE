@@ -4,16 +4,16 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 9caf3447fedf13fa81bb616cc54b7cb6a08ff159
+source-git-commit: 037add45b8dd11422f771057839b17eaaed1d2fe
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 # Kom igång med introduktionsprocessen {#getting-started}
 
-Onboarding är den process under vilken en utsedd systemadministratör konfigurerar AEM som en Cloud Service för din organisation. Detta innefattar inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service.
+Onboarding är den process under vilken en utsedd [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) konfigurerar AEM som en Cloud Service för din organisation. Detta innefattar inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service.
 
 ## Syfte {#objective}
 
@@ -21,8 +21,8 @@ Som systemadministratör sammanfattar det här dokumentet de första stegen i di
 
 När du har läst det här avsnittet ska du kunna:
 
-* Åtkomst och inloggning till Admin Console
-* Granska dina behörigheter som systemadministratör via Admin Console
+* Åtkomst och inloggning till Admin Console.
+* Granska dina behörigheter som systemadministratör via Admin Console.
 
 >[!NOTE]
 >Innan du börjar med introduktionsprocessen bör du ta reda på mer om Adobe Admin Console. Admin Console i Adobe är en central plats för att administrera och hantera produktlicenser och användare för Adobe. Systemadministratören loggar in på Admin Console i Adobe för att lägga till eller ta bort användare och mycket annat. Mer information finns i [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en).
@@ -42,12 +42,12 @@ Följ stegen nedan för att navigera till Admin Console och granska din systemad
 
    ![](/help/onboarding/onboarding-journey/assets/sys-admin-getstarted.png)
 
-1. Logga in med din Adobe ID. När inloggningen är klar visas sidan **Översikt** för Adobe Admin Console, enligt nedan.
+1. Logga in med din [Adobe ID](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/adobe-id.html?lang=en). När inloggningen är klar visas sidan **Översikt** för Adobe Admin Console, enligt nedan.
 
    ![](/help/onboarding/onboarding-journey/assets/get-started1.png)
 
    >[!NOTE]
-   >Om du har tillgång till flera organisationer måste du se till att du har loggat in på rätt organisation. Om du vill ändra din organisation klickar du på organisationens namn i åtgärdsfältet och väljer den organisation som du behöver åtkomst till, vilket visas i bilden nedan.
+   >Om du har tillgång till flera organisationer måste du se till att du har loggat in på rätt organisation. Om du vill ändra din organisation klickar du på organisationsnamnet i det övre högra hörnet och väljer den organisation du behöver åtkomst till, vilket visas i bilden nedan.
 
    ![](/help/onboarding/onboarding-journey/assets/admin-console-orgswitch.png)
 
