@@ -2,7 +2,7 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation som är specifik för borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: 4b9a48a053a383c2bf3cb5a812fe4bda8e7e2a5a
+source-git-commit: 1adcde525454e779adbd251b9a31f4e456b28998
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 6%
@@ -26,7 +26,7 @@ Följande regler gäller för att kommunicera den förestående borttagningen/er
 
 Den här processen ger kunderna minst en releasecykel för att anpassa implementeringen till en ny version eller en efterföljare till en borttagningsfunktion, innan den faktiska borttagningen.
 
-## Föråldrade funktioner {#deprecated-features}
+## Borttagna funktioner {#deprecated-features}
 
 I det här avsnittet visas funktioner som har markerats som borttagna i [!DNL Experience Manager] som [!DNL Cloud Service]. Vanligtvis är funktioner som ska tas bort i en framtida version först inaktuella, med ett alternativ.
 
