@@ -1,14 +1,13 @@
 ---
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM som en Cloud Service genom att generera en säker JWT-token
-translation-type: tm+mt
-source-git-commit: 41b4bb3a63089c05750a40e910ee7578727d8b15
+exl-id: 20deaf8f-328e-4cbf-ac68-0a6dd4ebf0c9
+source-git-commit: 89b43e14f35e18393ffab538483121c10f6b5a01
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
-
 
 # Introduktion {#introduction}
 
@@ -22,7 +21,7 @@ Flödet server-till-server beskrivs nedan tillsammans med ett förenklat utveckl
 
 ## Server-till-server-flödet {#the-server-to-server-flow}
 
-En användare med en IMS-organisationsadministratörsroll kan generera en AEM som en Cloud Service-autentiseringsuppgift, som sedan kan hämtas av en användare med AEM som en administratörsroll för Cloud Service-miljön och som ska installeras på servern och behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som behövs för att integrera med en AEM som Cloud Service-API. Data används för att skapa en signerad JWT-token, som byts ut mot IMS för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra begäranden till AEM som Cloud Service.
+En användare med en IMS-organisationsadministratörsroll, och som även är medlem i produktprofilen AEM användare eller AEM administratörer på AEM Author, kan generera en AEM som en Cloud Service. Autentiseringsuppgifterna kan sedan hämtas av en användare med AEM som administratörsroll för Cloud Service-miljön och ska installeras på servern och måste behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som behövs för att integrera med en AEM som Cloud Service-API. Data används för att skapa en signerad JWT-token, som byts ut mot IMS för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra begäranden till AEM som Cloud Service.
 
 Flödet server-till-server omfattar följande steg:
 
@@ -62,7 +61,7 @@ Utdata kommer att se ut ungefär så här:
 
 >[!IMPORTANT]
 >
->En IMS-organisationsadministratör (vanligtvis samma användare som tilldelade miljön via Cloud Manager) måste först öppna utvecklarkonsolen och klicka på knappen **Hämta tjänstinloggningsuppgifter** för att inloggningsuppgifterna ska kunna skapas och hämtas senare av en användare med administratörsbehörighet för AEM som en Cloud Service. Om IMS-organisationsadministratören inte har gjort detta kommer ett meddelande att informera dem om att de behöver IMS-organisationsadministratörsrollen.
+>En IMS-organisationsadministratör (vanligtvis samma användare som tilldelade miljön via Cloud Manager), som också bör vara medlem i produktprofilen AEM användare eller AEM administratörer på AEM Author, måste först öppna utvecklarkonsolen och klicka på knappen **Hämta tjänstautentiseringsuppgifter** för att autentiseringsuppgifterna ska kunna genereras och senare hämtas av en användare med administratörsbehörighet till AEM som en Cloud Service. Om IMS-organisationsadministratören inte har gjort detta kommer ett meddelande att informera dem om att de behöver IMS-organisationsadministratörsrollen.
 
 ### Installera autentiseringsuppgifterna för AEM på en icke-AEM server {#install-the-aem-service-credentials-on-a-non-aem-server}
 
@@ -96,7 +95,7 @@ Samma utbyte kan utföras på alla språk som kan generera en signerad JWT-token
 
 Åtkomsttoken definierar när den förfaller, vilket vanligtvis är 24 timmar. Det finns exempelkod i Git-databasen för att hantera en åtkomsttoken och uppdatera den innan den upphör att gälla.
 
-### Anropa AEM-API {#calling-the-aem-api}
+### Anropa AEM API {#calling-the-aem-api}
 
 Gör lämpliga server-till-server-API-anrop till en AEM som en Cloud Service, inklusive åtkomsttoken i huvudet. Använd därför värdet `"Bearer <access_token>"` för auktoriseringshuvudet. Använd till exempel `curl`:
 
@@ -135,11 +134,11 @@ Utvecklare kan också göra API-anrop till ett AEM projekt som körs på deras l
 
 Klicka på knappen **Hämta lokal utvecklingstoken** i Developer Console för att generera en åtkomsttoken.
 
-### Anropa sedan AEM programmet med en åtkomsttoken {#call-the-aem-application-with-an-access-token}
+### Anropa sedan AEM program med en åtkomsttoken {#call-the-aem-application-with-an-access-token}
 
 Gör lämpliga server-till-server-API-anrop från det icke-AEM programmet till en AEM som en Cloud Service, inklusive åtkomsttoken i huvudet. Använd därför värdet `"Bearer <access_token>"` för auktoriseringshuvudet.
 
-## Återkallning av tjänstens autentiseringsuppgifter {#service-credentials-revocation}
+## Återkallande av tjänstautentiseringsuppgifter {#service-credentials-revocation}
 
 Om inloggningsuppgifterna behöver återkallas måste du skicka en förfrågan till kundsupport på följande sätt:
 
