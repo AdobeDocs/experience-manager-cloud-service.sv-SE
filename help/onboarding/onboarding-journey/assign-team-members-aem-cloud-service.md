@@ -4,10 +4,10 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: fa61dc122cec5466827d06ffb2eca1c1c5f8bae6
+source-git-commit: c2301227eb65bedb77acd9754e2bc4b62527863d
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 0%
+source-wordcount: '779'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ När du har läst det här avsnittet bör du förstå:
 
 ## Introduktion {#introduction}
 
-För att få åtkomst till AEM som Cloud Service måste användare tillhöra en av två produktprofiler, till exempel *AEM Användare* eller *AEM Administratörer*. Teammedlemmarna måste beviljas behörigheter till AEM eftersom behörighet att administrera Cloud Manager inte räcker. Läs mer.
+För att få åtkomst till AEM som Cloud Service måste användare tillhöra en av två produktprofiler, till exempel `AEM Users` eller `AEM Administrators`. Teammedlemmarna måste beviljas behörigheter till AEM eftersom behörighet att administrera Cloud Manager inte räcker. Läs mer.
 
 >[!NOTE]
 >Alla användare som tilldelas AEM användarproduktprofilen av systemadministratören har (skrivskyddad) åtkomst till Cloud Manager.
@@ -45,24 +45,22 @@ Innan du börjar läsa det här avsnittet bör du överväga följande krav:
    >För att komma igång rekommenderar vi att du först lägger till användare som ska delta i de omedelbara uppgifterna, till exempel administratörer, utvecklare och innehållsförfattare. Du kan fortsätta med resten av introduktionen utan att lägga till alla användare. När du är klar med introduktionen kan du skala till ett större antal användare senare.
 
 
-1. Logga in i Admin Console
-(Samma som tidigare)
+1. Logga in på [Adobe Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en). Mer information finns i Logga in på Admin Console.
 
-1. Granska AEM som en Cloud Service produktprofiler
-Från Admin Console kan du se en lista med Cloud Manager-profiler. Så här gör du:
+1. Granska [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
+
+Följ stegen nedan för att se en lista över profiler för Cloud Manager från Adobe Admin Console:
 
 1. När du har loggat in på Adobe Admin Console väljer du Adobe Experience Manager som en molntjänst på kortet Produkter och tjänster:
 
 1. Navigera till och markera instansen (Author instance of Development environment) som visas i bilden nedan.
-
-
 
    Nu kan du se listan över AEM som en produktprofil för Cloud Service som måste tilldelas en användare baserat på deras roll. Läs mer om dessa AEM som produktprofiler för Cloud Service.
 
 
 ## Lägg till teammedlemmar i AEM användar- eller AEM administratörsproduktprofil {#add-team-members}
 
-För att få åtkomst till AEM som en Cloud Service måste användare tillhöra någon av produktprofilerna AEM Users eller AEM Administrators.
+För att få åtkomst till AEM som en Cloud Service-instans måste användare tillhöra en av två produktprofiler `AEM Users` eller `AEM Administrators`.
 
 >[!NOTE]
 >Du måste ha behörighet för instansen. Behörigheter att administrera Cloud Manager räcker inte. Läs mer.
@@ -87,5 +85,5 @@ De användare som du har angett som AEM för en Cloud Service produktprofiler ka
 
 ## Ytterligare resurser {#additional-resources}
 
-Konfigurera åtkomst till AEM (videoutgång)
-Snabbstartsguide till framtagning av sidor
+* [Konfigurera åtkomst till AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html?lang=en)
+* [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=en)
