@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: c2301227eb65bedb77acd9754e2bc4b62527863d
+source-git-commit: 196af2ab4801b12017063bc2aab59faabdae45f9
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '814'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,7 @@ Innan du börjar läsa det här avsnittet bör du överväga följande krav:
    >[!NOTE]
    >För att komma igång rekommenderar vi att du först lägger till användare som ska delta i de omedelbara uppgifterna, till exempel administratörer, utvecklare och innehållsförfattare. Du kan fortsätta med resten av introduktionen utan att lägga till alla användare. När du är klar med introduktionen kan du skala till ett större antal användare senare.
 
+Innan du börjar granska stegen för att tilldela teammedlemmar till AEM som en Cloud Service produktprofiler måste du följa dessa två steg:
 
 1. Logga in på [Adobe Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en). Mer information finns i Logga in på Admin Console.
 
@@ -51,11 +52,21 @@ Innan du börjar läsa det här avsnittet bör du överväga följande krav:
 
 Följ stegen nedan för att se en lista över profiler för Cloud Manager från Adobe Admin Console:
 
-1. När du har loggat in på Adobe Admin Console väljer du Adobe Experience Manager som en molntjänst på kortet Produkter och tjänster:
+1. Logga in på [Adobe Admin Console](https://adminconsole.adobe.com/). På sidan **Översikt** väljer du **Adobe Experience Manager som Cloud Service** på **kort för produkter och tjänster**.
+
+   ![](/help/onboarding/onboarding-journey/assets/assign-team1.png)
 
 1. Navigera till och markera instansen (Author instance of Development environment) som visas i bilden nedan.
 
-   Nu kan du se listan över AEM som en produktprofil för Cloud Service som måste tilldelas en användare baserat på deras roll. Läs mer om dessa AEM som produktprofiler för Cloud Service.
+   ![](/help/onboarding/onboarding-journey/assets/cloud-profiles-1.png)
+
+
+1. Listan med AEM visas som en produktprofil för Cloud Service som måste tilldelas en användare baserat på deras roll.
+
+   >[!NOTE]
+   >Mer information finns i [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
+
+   ![](/help/onboarding/onboarding-journey/assets/cloud-profiles-2.png)
 
 
 ## Lägg till teammedlemmar i AEM användar- eller AEM administratörsproduktprofil {#add-team-members}
