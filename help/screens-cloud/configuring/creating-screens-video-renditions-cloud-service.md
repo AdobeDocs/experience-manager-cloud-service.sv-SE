@@ -1,15 +1,15 @@
 ---
-title: Skapa videoåtergivningar för skärmar i skärmar som en Cloud Service
-description: På den här sidan beskrivs hur du skapar skärmvideoåtergivningar i skärmar som en Cloud Service.
-source-git-commit: 0badd4209b35b4c8cdfa765a08b5d9db749f52b5
+title: Skapa videoåtergivningar i skärmar som en Cloud Service
+description: På den här sidan beskrivs hur du skapar videoåtergivningar i skärmar som en Cloud Service.
+source-git-commit: 102aab1d550e950ea880d9b9288bdab41866add6
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
 
 
-# Skapa videoåtergivningar för skärmar i skärmar som en Cloud Service {#creating-screens-video-renditions}
+# Skapa videoåtergivningar i skärmar som en Cloud Service {#creating-screens-video-renditions}
 
 ## Introduktion {#introduction}
 
@@ -18,7 +18,9 @@ I den här guiden beskrivs hur du skapar videoåtergivningar som används i skä
 >[!IMPORTANT]
 >Stegen som markeras i det här avsnittet måste konfigureras om du tänker använda videoklipp i skärmkanaler.
 
-## Steg för att skapa skärmar, videoåtergivningar i skärmar som en Cloud Service {#steps-creating-screens-video-renditions}
+## Steg för att skapa videoåtergivningar i skärmar som en Cloud Service {#steps-creating-screens-video-renditions}
+
+Följ stegen nedan för att skapa videoåtergivningar på skärmar som en molntjänst från leverantören av skärminnehåll:
 
 1. Navigera till kanalen i Screens Content Provider.
 
