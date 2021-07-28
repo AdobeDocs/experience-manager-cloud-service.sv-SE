@@ -55,7 +55,7 @@ Följ stegen nedan för att skapa videoåtergivningar på skärmar som en Cloud 
 
 1. Klicka på **Spara**.
 
-1. Välj Bearbetningsprofilen och klicka på **Använd profil för mapp(ar)**.
+1. Markera bearbetningsprofilen och klicka på **Använd profil för mapp(ar)**.
 
    ![](/help/screens-cloud/assets/configure/screens-video-5.png)
 
