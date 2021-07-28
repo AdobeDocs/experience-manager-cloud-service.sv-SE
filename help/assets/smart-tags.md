@@ -5,21 +5,21 @@ contentOwner: AG
 feature: Smarta taggar,Taggar
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 632bcb3406fc4bc856e7fcf11cb9826a03e6a5d2
 workflow-type: tm+mt
-source-wordcount: '2302'
-ht-degree: 5%
+source-wordcount: '2331'
+ht-degree: 4%
 
 ---
 
 
-# Lägg till smarta taggar i dina resurser för att förbättra sökupplevelsen {#smart-tag-assets-for-faster-search}
+# Lägg till smarta taggar i dina resurser och förbättra sökupplevelsen {#smart-tag-assets-for-faster-search}
 
 Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter sina digitala resurser. Genom att tagga resurser med taxonomistyrd vokabulär ser du till att resurserna är lätta att identifiera och hämta i sökningar.
 
 Jämfört med naturliga språkordsuttryck hjälper taggning som baseras på företagstaxonomi till att anpassa tillgångarna till företagets verksamhet och säkerställer att de mest relevanta resurserna visas i sökningar. En biltillverkare kan t.ex. märka bilderna med modellnamn så att endast relevanta bilder visas när de genomsöks för att utforma en kampanj.
 
-I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://www.adobe.com/sensei/experience-cloud-artificial-intelligence.html) för att träna sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
+I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/why-adobe/experience-cloud-artificial-intelligence.html) för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din affärs-taxonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
 
 <!-- TBD: Create a flowchart for how training works in CS.
 ![flowchart](assets/flowchart.gif) 
@@ -100,7 +100,7 @@ Kontrollera att bilderna i kursuppsättningen överensstämmer med följande rik
 * Skapa en taggmodell som endast innehåller
 
    * Taggar för bilmodeller.
-   * Taggar för schaket för kvinnor och män.
+   * Taggen för fodral för vuxna och barn.
 
 * Skapa inte
 
@@ -139,8 +139,8 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 1. Välj **[!UICONTROL Smart Tags Training]**-rapporten och klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
 1. Ange en titel och beskrivning för rapporten. Under **[!UICONTROL Schedule Report]** låter du alternativet **[!UICONTROL Now]** vara markerat. Om du vill schemalägga rapporten till ett senare tillfälle väljer du **[!UICONTROL Later]** och anger ett datum och en tid. Klicka sedan på **[!UICONTROL Create]** i verktygsfältet.
 1. På sidan **[!UICONTROL Asset Reports]** markerar du rapporten som du skapat. Om du vill visa rapporten klickar du på **[!UICONTROL View]** i verktygsfältet.
-1. Granska informationen i rapporten. Rapporten visar träningsstatusen för de taggar du har tränat. Den gröna färgen i kolumnen **[!UICONTROL Training Status]** anger att tjänsten Smarta taggar har tränats för taggen. Gul färg anger att tjänsten inte är helt tränad för en viss tagg. I det här fallet lägger du till fler bilder med just den taggen och kör träningsarbetsflödet för att träna tjänsten helt för taggen. Om du inte ser dina taggar i den här rapporten kör du utbildningsarbetsflödet igen för de här taggarna.Taggar
-1. Om du vill hämta rapporten markerar du den i listan och klickar på **[!UICONTROL Download]** i verktygsfältet. Rapporten hämtas som ett [!DNL Microsoft Excel]-kalkylblad.
+1. Granska informationen i rapporten. Rapporten visar träningsstatusen för de taggar du har tränat. Den gröna färgen i kolumnen **[!UICONTROL Training Status]** anger att tjänsten Smarta taggar har tränats för taggen. Gul färg anger att tjänsten är delvis tränad för en viss tagg. Om du vill utbilda tjänsten helt för en tagg lägger du till fler bilder med den särskilda taggen och genomför utbildningsarbetsflödet. Om du inte ser dina taggar i den här rapporten kör du utbildningsarbetsflödet igen för de här taggarna.Taggar
+1. Om du vill hämta rapporten markerar du den i listan och klickar på **[!UICONTROL Download]** i verktygsfältet. Rapporten hämtas som ett kalkylblad.
 
 <!--
 ### Tag assets from the workflow console {#tagging-assets-from-the-workflow-console}
@@ -183,7 +183,7 @@ Alla typer av resurser som stöds taggas automatiskt av [!DNL Experience Manager
 
 * För bilder och videoklipp baseras smarta taggar på vissa visuella aspekter.
 
-* För textbaserade resurser beror effekten av smarta taggar inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text. För textbaserade resurser är smarta taggar nyckelorden som visas i texten men de som bäst beskriver resursen. För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger emellertid en dedikerad, strukturerad och prioriterad sökfaktor som används för att förbättra resursidentifieringen jämfört med ett fullständigt sökindex.
+* För textbaserade resurser beror effekten av smarta taggar inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text. För textbaserade resurser är smarta taggar nyckelorden som visas i texten men de som bäst beskriver resursen. För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger dock en dedikerad, strukturerad och prioriterad sökfaktor. Den senare hjälper till att förbättra tillgångsidentifiering jämfört med ett sökindex.
 
 ## Hantera smarta taggar och resurssökningar {#manage-smart-tags-and-searches}
 
@@ -193,13 +193,13 @@ Genom att moderera smarta taggar kan du också förbättra taggbaserade sökning
 
 Du kan också tilldela en högre rankning till en tagg för att öka taggens relevans för resursen. Om du befordrar en tagg för en resurs ökar risken för att resursen visas i sökresultaten när en sökning utförs baserat på den aktuella taggen.
 
-Så här modererar du smarta taggar för dina resurser:
+Så här modererar du smarta taggar för dina digitala resurser:
 
-1. I sökfältet söker du efter resurser baserat på en tagg.
+1. I sökfältet söker du efter digitala resurser baserat på en tagg.
 
-1. Inspect sökresultaten för att identifiera de resurser som du inte tycker är relevanta för sökningen.
+1. Om du vill identifiera de digitala resurser som du inte tycker är relevanta för sökningen kontrollerar du sökresultaten.
 
-1. Markera resursen och välj sedan ![Hantera taggikon](assets/do-not-localize/manage-tags-icon.png) i verktygsfältet.
+1. Markera en resurs och välj sedan ![Hantera taggikon](assets/do-not-localize/manage-tags-icon.png) i verktygsfältet.
 
 1. Granska taggarna på sidan **[!UICONTROL Manage Tags]**. Om du inte vill att resursen ska genomsökas baserat på en viss tagg markerar du taggen och väljer ![Ta bort ikon](assets/do-not-localize/delete-icon.png) i verktygsfältet. Du kan också välja `X`-symbolen bredvid etiketten.
 
@@ -213,9 +213,9 @@ Så här modererar du smarta taggar för dina resurser:
 
 Som standard kombineras söktermerna i [!DNL Experience Manager]-sökningen med en `AND`-sats. Om du använder smarta taggar ändras inte standardbeteendet. Om du använder smarta taggar läggs en `OR`-sats till för att hitta någon av söktermerna i de använda smarta taggarna. Du kan till exempel söka efter `woman running`. Resurser med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som är taggad med antingen `woman` eller `running` med smarta taggar visas i en sådan sökfråga. Sökresultaten är en kombination av
 
-* resurser med `woman` och `running` nyckelord i metadata.
+* Resurser med nyckelorden `woman` och `running` i metadata.
 
-* resurser som är smarta taggade med något av nyckelorden.
+* Resurser som är smarta och taggade med något av nyckelorden.
 
 Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i de smarta taggarna. I ovanstående exempel är den ungefärliga visningsordningen för sökresultat:
 
@@ -223,21 +223,23 @@ Sökresultaten som matchar alla söktermer i metadatafält visas först, följt 
 1. matchar `woman running` i smarta taggar.
 1. matchar `woman` eller `running` i smarta taggar.
 
-## Begränsningar för taggning och bästa praxis {#limitations}
+## Taggningsrelaterade begränsningar och bästa praxis {#limitations}
 
 Förbättrad smart taggning bygger på inlärningsmodeller för bilder och taggar för dessa. Dessa modeller är inte alltid perfekta när det gäller att identifiera taggar. Den aktuella versionen av smarta taggar har följande begränsningar:
 
 * Oförmåga att identifiera små skillnader i bilder. Exempel: skjortor som inte passar lika bra som vanliga.
 * Oförmåga att identifiera taggar baserat på små mönster eller delar av en bild. Till exempel logotyper på skjortor.
 * Taggning stöds på de språk som stöds av [!DNL Experience Manager]. En lista över språk finns i [Versionsinformation för tjänsten Smart Content.](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html#languages).
-* Taggar som inte hanteras realistiskt är relaterade till:
+* De taggar som inte hanteras gäller:
 
-   * Icke-visuella, abstrakta aspekter. Exempel: år eller årstid för en produkts release, stämning eller känslor som en bild orsakar, subjektiv sammanfogning av en video osv.
+   * Icke-visuella, abstrakta aspekter. Exempel: år eller säsong då en produkt släpps, stämning eller känslor som en bild ger upphov till samt en subjektiv nyans av en video.
    * Fina visuella skillnader mellan produkter som skjortor med och utan färg eller små logotyper som är inbäddade i produkter.
 
-<!-- TBD: Add limitations related to text-based assets. -->
+Använd de bilder som passar bäst för att utbilda modellen. Utbildningen kan inte återupptas eller så kan utbildningsmodellen inte tas bort. Hur korrekt taggningen är beror på den aktuella kursen, så gör det med omsorg.
 
-Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du [!DNL Assets]-sökningen (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
+<!-- TBD: Add limitations related to text files. -->
+
+Om du vill söka efter filer med smarta taggar (vanliga eller förbättrade) använder du [!DNL Assets]-sökningen (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 
 >[!NOTE]
 >
@@ -246,6 +248,6 @@ Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) 
 
 >[!MORELIKETHIS]
 >
->* [Förstå hur smarta taggar hjälper till att hantera resurser](https://medium.com/adobetech/efficient-asset-management-with-enhanced-smart-tags-887bd47dbb3f)
->* [Smart tagga videomaterialet](smart-tags-video-assets.md)
+>* [Förstå hur smarta taggar hjälper dig att hantera dina digitala filer](https://medium.com/adobetech/efficient-asset-management-with-enhanced-smart-tags-887bd47dbb3f)
+>* [Använd smarta taggar för videoklipp](smart-tags-video-assets.md)
 
