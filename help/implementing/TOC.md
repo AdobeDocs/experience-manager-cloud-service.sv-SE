@@ -5,9 +5,9 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: ee32ab3659ee4696caa55b945b6b7895d94914a9
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '921'
 ht-degree: 29%
 
 ---
@@ -172,7 +172,9 @@ ht-degree: 29%
    + [Utöka Experience Fragments](developing/extending/experience-fragments.md)
    + [Anpassa och utöka Content Fragments](developing/extending/content-fragments-customizing.md)
    + [Content Fragments – konfigurera komponenter för återgivning](developing/extending/content-fragments-configuring-components-rendering.md)
-   + [Konfigurera sökformulär](developing/extending/search-forms.md)
+   + Hantera sökning i Forms {#manage-search-forms}
+      + [Konfigurera sökformulär](developing/extending/search-forms.md)
+      + [Konfigurera sökfilter för Inkorgen](developing/extending/configure-inbox-search-rail.md)
    + [Konfigurera RTE-redigeraren](/help/implementing/developing/extending/rich-text-editor.md)
    + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
    + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
