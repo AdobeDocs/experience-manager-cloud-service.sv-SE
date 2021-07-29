@@ -11,7 +11,7 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
-source-git-commit: 73822fb3b74472d48a3db59267ed133fc1a40ad6
+source-git-commit: 1575d5d8b06b537fc9754885905aacdfd2e33fbf
 workflow-type: tm+mt
 source-wordcount: '2582'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudieku
 
 Du behöver också GraphQL IDE, t.ex. [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det går att ange begäranrubriker. På Google Chrome är [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) ett tillägg som kan utföra jobbet.
 
-## Klona Venieprojektet {#clone-venia-project}
+## Klona Veniaprojektet {#clone-venia-project}
 
 Vi klonar [Veniaprojektet](https://github.com/adobe/aem-cif-guides-venia) och åsidosätter sedan standardformaten.
 
@@ -56,7 +56,7 @@ Vi klonar [Veniaprojektet](https://github.com/adobe/aem-cif-guides-venia) och å
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallPackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
 1. Lägg till nödvändiga OSGi-konfigurationer för att ansluta AEM till en Magento-instans eller lägga till konfigurationerna i det nyskapade projektet.
@@ -135,7 +135,7 @@ De produkter och produktdata som visas i AEM lagras i Magento. Lägg sedan till 
    >
    > Mer information om [Cache Management finns i användarhandboken för Magento](https://docs.magento.com/user-guide/system/cache-management.html).
 
-## Använd en GraphQL IDE för att verifiera attributet {#use-graphql-ide}
+## Använd en GraphQL IDE för att verifiera attribut {#use-graphql-ide}
 
 Innan du hoppar till AEM kod är det praktiskt att utforska [Magento GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL-utvecklingsmiljö. Integreringen med AEM i Magento görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF Core-komponenterna.
 
@@ -184,7 +184,7 @@ Använd sedan en GraphQL IDE för att verifiera att attributet `eco_friendly` ha
    >
    > Mer detaljerad dokumentation om [Magento GraphQL finns här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
-## Uppdatera Sling-modellen för Product Teaser {#updating-sling-model-product-teaser}
+## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
 Därefter ska vi utöka produktTeaser affärslogik genom att implementera en Sling Model. [Sling Models](https://sling.apache.org/documentation/bundles/models.html) är anteckningsdrivna &quot;POJOs&quot; (Plain Old Java Objects) som implementerar någon av de affärslogik som komponenten behöver. Sling-modeller används tillsammans med HTML-skript som en del av komponenten. Vi följer delegeringsmönstret [för Sling Models](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) så att vi bara kan utöka delar av den befintliga Product Teaser-modellen.
 
@@ -275,11 +275,9 @@ Använd [den utvecklingsmiljö du väljer](https://experienceleague.adobe.com/do
        productRetriever = productTeaser.getProductRetriever();
    
        if (productRetriever != null) {
-           productRetriever.extendProductQueryWith(p ->
-                productRetriever.extendProductQueryWith(p -> p
-                   .createdAt()
-                   .addCustomSimpleField(ECO_FRIENDLY_ATTRIBUTE)
-               );
+           productRetriever.extendProductQueryWith(p -> p
+               .createdAt()
+               .addCustomSimpleField(ECO_FRIENDLY_ATTRIBUTE)
            );
        }
    }
@@ -400,7 +398,7 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallPackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
 1. Öppna ett nytt webbläsarfönster och navigera till AEM och **OSGi-konsolen** > **Status** > **Sling Models**: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
@@ -434,7 +432,7 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
    >
    > Du kan också se vissa stackspår om den produkt som används i teaser inte har attributet `eco_friendly` som en del av dess attributuppsättning.
 
-## Lägg till stilar för etiketten Eco Friendly Badge {#add-styles}
+## Lägg till stilar för etiketten Eco Friendly {#add-styles}
 
 I det här läget fungerar logiken för när märket **Eco Friendly** ska visas, men den oformaterade texten kan använda vissa format. Lägg sedan till en ikon och format i modulen `ui.frontend` för att slutföra implementeringen.
 
@@ -479,7 +477,7 @@ I det här läget fungerar logiken för när märket **Eco Friendly** ska visas,
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallPackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
 1. Uppdatera till startsidan för **Venia** på [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html) där Product Teaser har lagts till.
