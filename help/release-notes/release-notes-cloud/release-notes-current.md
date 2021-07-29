@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 21c4bf1a961ab74165f50feb78ce14cc1fa84725
+source-git-commit: 9ef41bc9f60f16a2fdf1900466db8bad99e619e9
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1284'
 ht-degree: 0%
 
 ---
@@ -140,17 +140,17 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 * `bulk-offline-update-service` saknade alla behörigheter för vissa miljöer.
 
-* Uppdatera hjälplänken så att den matchar den nya dokumentationen för skärmar i molnet.
+* Hjälplänken har uppdaterats för att matcha den nya dokumentationen för skärmar i molnet.
 
-* Tilldela inte spellistor och tillåt inte borttagning av spellistor med tilldelade spelare.
+* Det går nu att ta bort spellistor och inte tillåta att spellistor med tilldelade spelare tas bort.
 
 * Player hämtar nu resurser igen när ALL-cachen har rensats.
 
 * Upprepa schemaläggning fungerar nu om *Sluttiden* är inställd för följande dag.
 
-* `Back&Forward` fungerar nu i molngränssnittet för skärmar.
+* `Back&Forward` fungerar nu i skärmar som ett Cloud Service-gränssnitt.
 
-* Det gick inte att skapa taggar med samma namn men med olika namnutrymmen.
+* Taggar med samma namn men olika namnutrymmen kunde inte skapas tidigare.
 
 ## [!DNL Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
