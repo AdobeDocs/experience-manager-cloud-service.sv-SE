@@ -2,9 +2,9 @@
 title: Skapa och ordna sidor
 description: Skapa och ordna sidor med AEM
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 93e0eac6e329c7a0c54cf592b097014d39a8eb17
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2560'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ Du kan se grenen uppåt från vägbeskrivningar i sidhuvudsfältet:
 
 ![Navigera med vägbeskrivningar](/help/sites-cloud/authoring/assets/organizing-breadcrumbs.png)
 
-### Sidnamnkonventioner {#page-naming-conventions}
+### Konventioner för sidnamngivning {#page-naming-conventions}
 
 När du skapar en ny sida finns det två nyckelfält:
 
@@ -170,7 +170,7 @@ När du har skapat och öppnat en sida kan du [lägga till innehåll med kompone
 
 ## Hantera sidor {#managing-pages}
 
-### Skapar en ny sida {#creating-a-new-page}
+### Skapa en ny sida {#creating-a-new-page}
 
 Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida innan du kan börja skapa innehåll:
 
@@ -264,27 +264,30 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
    ![Kopiera](/help/sites-cloud/authoring/assets/copy.png)
 
-   >[!NOTE]
-   >
-   >Om du är i markeringsläge avslutas detta automatiskt så snart sidan kopieras.
-
 1. Navigera till platsen för den nya kopian av sidan.
-1. Ikonen **Klistra in** är tillgänglig med en nedåtpil direkt till höger:
+1. Tryck eller klicka på ikonen **Klistra in** som blev tillgänglig.
 
    ![Klistra in](/help/sites-cloud/authoring/assets/paste.png)
 
-   Du kan antingen:
+1. Dialogrutan Klistra in innehåller en sammanfattning av inklistringstransaktionen och möjlighet att:
+   * **Nytt platsnamn:** ändra den inklistrade sidans namn
+   * **Klistra in utan underordnade:** Uteslut de underordnade sidorna för den markerade sidan när du klistrar in (som standard klistras underordnade sidor in)
 
-   1. Markera sidikonen **Klistra in**: En kopia av originalsidan och eventuella underordnade sidor skapas på den här platsen.
-   1. Markera listrutepilen för att visa alternativet **Klistra in utan underordnade**. En kopia av originalsidan kommer att skapas på denna plats. underordnade sidor kopieras inte.
+   ![Dialogrutan Klistra in](/help/sites-cloud/authoring/assets/paste-dialog.png)
 
-   >[!NOTE]
-   >
-   >Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `beach` redan finns kommer en ny sida med namnet `beach` att bli `beach1`.
+1. Tryck eller klicka på knappen **Klistra in** för att bekräfta inklistringstransaktionen och skapa nya sidor.
+
+>[!NOTE]
+>
+>Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `beach` redan finns kommer en ny sida med namnet `beach` att bli `beach1`.
+
+>[!NOTE]
+>
+>Om du startar inklistringsåtgärden i markeringsläget avslutas den automatiskt så fort sidan kopieras.
 
 ### Flytta eller byta namn på en sida {#moving-or-renaming-a-page}
 
-Proceduren för att flytta eller byta namn på en sida är i princip densamma och hanteras av samma guide. Med den här guiden kan du:
+Proceduren för att flytta eller byta namn på en sida är i princip densamma och båda åtgärderna hanteras av guiden Flytta sida. Med den här guiden kan du:
 
 * Byta namn på en sida utan att flytta den
 * Flytta sidan utan att byta namn på den
@@ -384,7 +387,7 @@ Status för asynkrona jobb kan kontrolleras i kontrollpanelen [**Async Jobs Stat
 >
 >Mer information om asynkron jobbbearbetning och hur du konfigurerar gränsen för åtgärder för att flytta/byta namn på sidor finns i dokumentet [Asynkrona jobb](/help/operations/asynchronous-jobs.md) i användarhandboken för Operations.
 
-### Tar bort en sida {#deleting-a-page}
+### Ta bort en sida {#deleting-a-page}
 
 1. Navigera tills du ser sidan som du vill ta bort.
 1. Använd [markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) för att markera önskad sida och använd sedan **Ta bort** i verktygsfältet:
@@ -419,7 +422,7 @@ Du kan [låsa/låsa upp en sida](/help/sites-cloud/authoring/fundamentals/editin
 ![Lås ](/help/sites-cloud/authoring/assets/lock.png)
 ![knappLås upp-knapp](/help/sites-cloud/authoring/assets/unlock.png)
 
-### Skapar en ny mapp {#creating-a-new-folder}
+### Skapa en ny mapp {#creating-a-new-folder}
 
 Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 
