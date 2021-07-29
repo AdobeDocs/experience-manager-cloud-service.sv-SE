@@ -5,10 +5,10 @@ breadcrumb-title: Versionsinformation
 user-guide-description: Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service inklusive nyheter, inaktuella och borttagna funktioner samt kända fel.
 feature: Versionsinformation
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: f3207681f16c7db3922c437ce5c57409fcd29f3b
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 28%
+source-wordcount: '128'
+ht-degree: 27%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 28%
 + Versionsinformation {#release-notes}
    + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
    + 2021 {#2021}
+      + [Versionsinformation för 2021.5.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-6-0.md)
       + [Versionsinformation för 2021.5.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-5-0.md)
       + [Versionsinformation för 2021.4.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-4-0.md)
       + [Versionsinformation för 2021.3.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-3-0.md)
