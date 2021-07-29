@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: ec1e83b344b0d237db479f66fbb761db2d8923d5
+source-git-commit: 21c4bf1a961ab74165f50feb78ce14cc1fa84725
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,30 @@ Kunder som byter till Azul JDK bör vara medvetna om att inte alla befintliga pr
 ### Fel som har korrigerats i [!DNL Assets] {#assets-bugs-fixed}
 
 API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [!DNL Experience Manager] som en [!DNL Cloud Service]. (CQ-4326322)
+
+## [!DNL Experience Manager Screens] som  [!DNL Cloud Service] {#screens}
+
+### Felkorrigeringar {#bug-fixes-screens}
+
+* Inställningarna för innehållsleverantören valideras nu när du skapar eller uppdaterar.
+
+* Alla visningsvyer har en mappkolumn.
+
+* Du kan expandera Innehållsstruktur för skärmar.
+
+* `bulk-offline-update-service` saknade alla behörigheter för vissa miljöer.
+
+* Uppdatera hjälplänken så att den matchar den nya dokumentationen för skärmar i molnet.
+
+* Tilldela inte spellistor och tillåt inte borttagning av spellistor med tilldelade spelare.
+
+* Player hämtar nu resurser igen när ALL-cachen har rensats.
+
+* Upprepa schemaläggning fungerar nu om *Sluttiden* är inställd för följande dag.
+
+* `Back&Forward` fungerar nu i molngränssnittet för skärmar.
+
+* Det gick inte att skapa taggar med samma namn men med olika namnutrymmen.
 
 ## [!DNL Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
