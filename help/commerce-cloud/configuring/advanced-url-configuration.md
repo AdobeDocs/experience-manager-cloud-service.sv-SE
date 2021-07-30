@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: 490a93cfcfdac5ba209e52b1de3e1f823e80d26f
+source-git-commit: fe0e93d6f9ab16bf469e52e2b758f5e3f8600413
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '744'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Om du vill konfigurera tjänsten `UrlProvider` enligt SEO-kraven och behöver et
 >
 > Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för det kostnadsfria format som kan konfigureras från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
 
-### Produktsidans URL-format {#product}
+### URL-format för produktsida {#product}
 
 Detta konfigurerar URL:erna för produktsidorna och stöder följande alternativ:
 
@@ -41,7 +41,7 @@ Detta konfigurerar URL:erna för produktsidorna och stöder följande alternativ
 * `{{page}}.html/{{url_path}}.html#{{variant_sku}}`
 * `{{page}}.html/{{sku}}/{{url_path}}.html#{{variant_sku}}`
 
-där, i fallet [Venia Reference store](https://github.com/adobe/aem-cif-guides-venia)
+I fallet [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia):
 
 * `{{page}}` ersätts med  `/content/venia/us/en/products/product-page`
 * `{{sku}}` ersätts med produktens sku, t.ex.  `VP09`
@@ -53,12 +53,12 @@ Med exempeldata ovan kommer en produktvariant-URL som är formaterad med standar
 
 ### URL-format för kategorisida {#product-list}
 
-Detta konfigurerar URL:erna för kategori- eller produktlistsidorna och stöder följande alternativ:
+Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder följande alternativ:
 
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`
 
-där, i fallet [Venia Reference store](https://github.com/adobe/aem-cif-guides-venia)
+I fallet [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia):
 
 * `{{page}}` ersätts med  `/content/venia/us/en/products/category-page`
 * `{{url_key}}` ersätts av kategorins  `url_key` egenskap
