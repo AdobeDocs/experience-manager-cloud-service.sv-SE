@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: dbf32230042f39760733b711ffe8b5b4143e0544
+source-git-commit: 490a93cfcfdac5ba209e52b1de3e1f823e80d26f
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '746'
 ht-degree: 2%
 
 ---
@@ -53,7 +53,7 @@ Med exempeldata ovan kommer en produktvariant-URL som är formaterad med standar
 
 ### URL-format för kategorisida {#product-list}
 
-Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder följande alternativ:
+Detta konfigurerar URL:erna för kategori- eller produktlistsidorna och stöder följande alternativ:
 
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`
@@ -72,7 +72,7 @@ Med exempeldata ovan kommer en kategorisidas URL-adress som är formaterad med s
 
 ## Anpassade URL-format {#custom-url-format}
 
-Om du vill ange ett anpassat URL-format kan ett projekt implementera gränssnittet [`UrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/UrlFormat.html) och registrera implementeringen som en OSGI-tjänst, med hjälp av det antingen som kategorisida eller som URL för produktsida. Egenskapen `UrlFormat#PROP_USE_AS` för tjänsten indikerar med de konfigurerade, fördefinierade formaten som ska ersättas:
+Om ett projekt ska tillhandahålla ett anpassat URL-format kan det implementera gränssnittet [`UrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/UrlFormat.html) och registrera implementeringen som en OSGI-tjänst, med det antingen som kategorisida eller som URL-format för produktsida. Egenskapen `UrlFormat#PROP_USE_AS` för tjänsten anger vilket av de fördefinierade formaten som ska ersättas:
 
 * `useAs=productPageUrlFormat`, ersätter det konfigurerade URL-formatet för produktsidan
 * `useAs=categoryPageUrlFormat`, ersätter det konfigurerade URL-formatet för kategorisidan
