@@ -1,13 +1,13 @@
 ---
 title: Läs vad är Cloud Manager
 description: Följ den här sidan om du vill veta mer om Cloud Manager, Cloud Manager-program och miljöer.
-source-git-commit: 185a933e12ad81689168ad88574019ed219db06d
+exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
+source-git-commit: 42c565c8c5a3300b95a9153cb402cdb3e847f6a2
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Introduktion till Cloud Manager {#intro-cloud-manager}
 
@@ -26,10 +26,10 @@ Cloud Manager-program representerar uppsättningar av Cloud Manager-miljöer som
 En användare kan skapa en **sandlåda** eller ett **Production**-program.
 
 * Ett *produktionsprogram* skapas för att aktivera livstrafik vid rätt tidpunkt i framtiden.
-Mer information finns i [Introduktion till produktionsprogram](/help/onboarding/getting-access-to-aem-in-cloud/introduction-production-programs.md).
+Mer information finns i Introduktion till produktionsprogram.
 
 * Ett *sandlådeprogram* skapas vanligtvis för att användas i utbildningssyfte, köra demo, aktivering, POC eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett produktionsprogram inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
-Mer information finns i [Introduktion till sandlådeprogram](/help/onboarding/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md).
+Mer information finns i Introduktion till sandlådeprogram.
 
 ## Cloud Manager-miljöer {#cloud-manager-environments}
 
