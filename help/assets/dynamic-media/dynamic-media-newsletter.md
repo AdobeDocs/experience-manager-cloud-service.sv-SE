@@ -1,27 +1,31 @@
 ---
-title: Dynamic Media Newsletter
-description: 'Dynamic Media Newsletter från Experience League är ett månatligt nyhetsbrev. Det är utformat för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du direkt kan få mer för pengarna. Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din kunskap. Det finns till exempel instruktionsvideor och lösningsöversikter. Läs om några av de viktigaste funktionerna och funktionerna, som förinställningar för bilder, visningsinställningar, videoprofiler med mera. '
+title: Dynamic Media nyhetsbrevarkiv
+description: 'Dynamic Media nyhetsbrev från Experience League är ett månatligt nyhetsbrev. Det är utformat för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du direkt kan få mer för pengarna. Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din kunskap. Det finns till exempel instruktionsvideor och lösningsöversikter. Läs om några av de viktigaste funktionerna och funktionerna, som förinställningar för bilder, visningsinställningar, videoprofiler med mera. '
 feature: Resurshantering
 role: User
 exl-id: 4c93b448-ff8b-4c63-9c9b-dca53cd1af20
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 6a7634dd96b620979b7087e1c51a829ba708a496
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
 
 # ![Dynamic Media Newsletter logo](/help/assets/dynamic-media/assets/dynamic-media-newsletter-logo.png)
 
-Det här nyhetsbrevet är utformat för att hjälpa dig att komma igång snabbt med Dynamic Media och Dynamic Media Classic.
+>[!NOTE]
+>
+>Det månatliga nyhetsbrevet har nu upphört. Du har dock fortfarande tillgång till nyhetsbrevarkiven nedan.
 
-Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och lösningsöversikter. Läs introduktioner till några av de viktigaste funktionerna i lösningen, som bildförinställningar, visningsförinställningar, videoprofiler med mera.
+Nyhetsbrevet från Dynamic Media från Experience League har utformats för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du kan börja få valuta för pengarna direkt.
 
-## Få inspiration. Håll dig informerad.
+I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga upp din kunskap, som instruktionsvideor och lösningsöversikter. Det finns även introduktioner till viktiga funktioner som bildförinställningar, visningsförinställningar och videoprofiler.
 
-[Logga ](https://www.adobe.com/subscription/dynamic-media-newsletter.html) in och få Dynamic Media Newsletter månadsvis i din inkorg.
+<!-- ## Get inspired. Stay informed.
 
-## Missade du ett nummer av Dynamic Media Newsletter?
+[Sign up](https://www.adobe.com/subscription/dynamic-media-newsletter.html) to receive the Dynamic Media Newsletter on a monthly basis in your inbox. -->
+
+## Dynamic Media nyhetsbrevarkiv
 
 <!-- * **[May 2020, Issue 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
 
@@ -49,9 +53,9 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Läs mer om Adobe kostnadsfria Dynamic Media Classic-revisioner.
    * Möt John Monroe, Senior Program Manager för Customer Success Services.
 
-      >[!IMPORTANT]
-      >
-      >Adobe vill se till att de bara skickar Dynamic Media nyhetsbrev till dem som vill ha det. Om du vill fortsätta att få nyhetsbrevet efter det här numret måste du registrera dig för det [här](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0).
+<!--     >[!IMPORTANT]
+    >
+    >Adobe wants to make sure that they are sending the Dynamic Media newsletter only to folks who want to receive it. To continue receiving the newsletter after this issue, sign up for it [here](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&reserved=0). -->
 
 * **[Februari 2020, utgåva 2](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
@@ -62,7 +66,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Upptäck hur du använder Dynamic Media beskärningsmagi.
    * Få ut mer av Dynamic Media Classic genom att utnyttja kostnadsfri revision från Adobe.
    * Läs om det nya användargränssnittet för Dynamic Media Classic.
-   * Träffa Georgia Myers, chef för Customer Success for Adobe Experience Cloud.
+   * `Georgia Myers`, chef för Customer Success for Adobe Experience Cloud.
 
 * **[Januari 2020, utgåva 1](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_01_2020_Jan.html)**
 
@@ -82,7 +86,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Kraftfulla nya säkerhetsfunktioner.
    * Hur Adobe förbereder sig för en lyckad semestersäsong.
    * Dela nyhetsbrevet med dina kollegor för att bygga upp teamets expertis.
-   * Möt Apoorva Gupta, Senior Product Manager, Dynamic Media.
+   * `Apoorva Gupta`, Senior Product Manager, Dynamic Media.
 
 * **[Oktober 2019, utgåva 10](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_10_2019_Oct.html)**
 
@@ -92,7 +96,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * En infografik med tips för att hoppa över resultatet av att leverera högkvalitativa bilder och videor.
    * En CMSwire-artikel som hjälper er att förstå hur ni uppdaterar er multimediestrategi för att uppfylla dagens kunders förväntningar.
    * Tillgång till on-demand-webbinariet på Dynamic Media från serien SKill Builder.
-   * Möt Nick Peters, Manager, Site Reliable Engineering, Adobe Experience Manager.
+   * Träffa `Nick Peters`, chef, Site Reliable Engineering, Adobe Experience Manager.
    * Kom igång med Dynamic Media och Dynamic Media Classic i Experience League.
 
 * **[September 2019, utgåva 09](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_09_2019_Sept.html)**
@@ -114,7 +118,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Läs mer om en webbinarieserie som hjälper dig att komma igång med Experience Manager Assets och Dynamic Media.
    * Börja din resa och få värde från Dynamic Media på Experience League.
    * Få en smygtitt på den kraftfulla integrering som kommer i september och som låter er analysera hur besökarna interagerar med ert multimediematerial.
-   * Träffa PieterJan Pieper, Dynamic Media tekniska support wiz.
+   * `PieterJan Pieper`, Dynamic Media tekniska support wiz.
 
 * **[Juli 2019, utgåva 07](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**
 
@@ -125,7 +129,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Nästa steg på informationsfyllda Adobe Insider Tour.
    * Spännande funktioner är tillgängliga när du har Dynamic Media i Experience Manager Assets (Experience Manager Assets).
    * Lägga till 360-gradersvideor och anpassade videominiatyrer på webbplatsen.
-   * Möt Andrew Hathaway, Principal Solutions Consultant för Dynamic Media i Experience Manager Assets.
+   * `Andrew Hathaway`, Principal Solutions Consultant for Dynamic Media inom Experience Manager Assets.
 
 * **[Juni 2019, utgåva 06](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_06_2019_June.html)**
 
@@ -136,7 +140,7 @@ Utforska värdefulla resurser för kunskapsbyggande, som instruktionsvideor och 
    * Läs mer om den kommande Adobe Insider Tour.
    * Läs om hur ni kan skydda era digitala resurser mot piratkopiering.
    * Lär dig mer om AI-driven Smart Crop för bilder.
-   * Möt Alex Thiers, en av de främsta bakom många av de fantastiska funktionerna och innovationerna i Dynamic Media och Dynamic Media Classic.
+   * Möt `Alex Thiers`, en av drivkrafterna bakom många av de fantastiska funktionerna och innovationerna i Dynamic Media och Dynamic Media Classic.
 
 * **[maj 2019, utgåva 05](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_05_2019_May.html)**
 
