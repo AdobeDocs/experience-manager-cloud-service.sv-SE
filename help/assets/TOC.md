@@ -4,10 +4,10 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager as a Cloud Service, Experience Manager Assets
-source-git-commit: f97e2f327aa8f49d0a15f3852aa5d8b37f960005
+source-git-commit: 6a7634dd96b620979b7087e1c51a829ba708a496
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 60%
+source-wordcount: '484'
+ht-degree: 40%
 
 ---
 
@@ -81,8 +81,8 @@ ht-degree: 60%
    + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
    + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
 + Dynamic Media {#dynamicmedia}
-   + [Dynamic Media-nyhetsbrev från Experience League](dynamic-media/dynamic-media-newsletter.md)
-   + [Installera Dynamic Media](dynamic-media/administering-dynamic-media.md)
+   + [Dynamic Media nyhetsbrevarkiv från Experience League](dynamic-media/dynamic-media-newsletter.md)
+   + [Konfigurera Dynamic Media](dynamic-media/administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media/dynamic-media.md)
    + [Konfigurera Dynamic Media](dynamic-media/config-dm.md)
    + [Felsöka Dynamic Media](dynamic-media/troubleshoot-dm.md)
@@ -92,34 +92,34 @@ ht-degree: 60%
    + [Bästa tillvägagångssätt för filhantering](dynamic-media/best-practices-for-file-management.md)
    + [Bildprofiler](dynamic-media/image-profiles.md)
    + [Videoprofiler](dynamic-media/video-profiles.md)
-   + [Hantera förinställningar för Dynamic Media-bilder](dynamic-media/managing-image-presets.md)
-   + [Använda förinställningar för Dynamic Media-bilder](dynamic-media/image-presets.md)
+   + [Hantera Dynamic Media bildförinställningar](dynamic-media/managing-image-presets.md)
+   + [Använd Dynamic Media-bildförinställningar](dynamic-media/image-presets.md)
    + [Hantera förinställningar för Dynamic Media Viewer](dynamic-media/managing-viewer-presets.md)
    + [Använda förinställningar för Dynamic Media Viewer](dynamic-media/viewer-presets.md)
    + [Förinställningar för gruppuppsättning](dynamic-media/batch-set-presets-dm.md)
-   + [CDN-cachen har inte verifierats via Dynamic Media](dynamic-media/invalidate-cdn-cache-dynamic-media.md)
-   + [CDN-cachen har inte verifierats med Dynamic Media Classic](dynamic-media/invalidate-cdn-cache-dm-classic.md)
+   + [Invalidera CDN-cachen med Dynamic Media](dynamic-media/invalidate-cdn-cache-dynamic-media.md)
+   + [Invalidera CDN-cachen med Dynamic Media Classic](dynamic-media/invalidate-cdn-cache-dm-classic.md)
    + [Smart bildbehandling](dynamic-media/imaging-faq.md)
-   + [Leverera Dynamic Media-resurser](dynamic-media/delivering-dynamic-media-assets.md)
+   + [Leverera Dynamic Media-material](dynamic-media/delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](dynamic-media/hotlink-protection.md)
    + [Stöd för 3D](dynamic-media/assets-3d.md)
    + [Bilduppsättningar](dynamic-media/image-sets.md)
    + [Panoramabilder](dynamic-media/panoramic-images.md)
    + [Blandade medieuppsättningar](dynamic-media/mixed-media-sets.md)
    + [Snurrande uppsättningar](dynamic-media/spin-sets.md)
-   + [Video](dynamic-media/video.md)
+   + [Video i Dynamic Media](dynamic-media/video.md)
    + [Karusellbanner](dynamic-media/carousel-banners.md)
    + [Interaktiva bilder](dynamic-media/interactive-images.md)
    + [Interaktiva videoklipp](dynamic-media/interactive-videos.md)
    + [360 VR-video](dynamic-media/360-video.md)
-   + [Integrera Dynamic Media Viewer med Adobe Analytics- och Adobe Experience Platform-taggar](dynamic-media/tags.md)
-   + [Använda snabbvyn för att skapa anpassade popup-fönster](dynamic-media/custom-pop-ups.md)
+   + [Integrera Dynamic Media-visningsprogram med taggar från Adobe Analytics och Adobe Experience Platform](dynamic-media/tags.md)
+   + [Skapa anpassade popup-fönster med snabbvyn](dynamic-media/custom-pop-ups.md)
    + [Leverera optimerade bilder för en responsiv webbplats](dynamic-media/responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](dynamic-media/previewing-assets.md)
    + [Lägga till Dynamic Media-resurser på sidor](dynamic-media/adding-dynamic-media-assets-to-pages.md)
-   + [Bädda in läsare för Dynamic-video eller -bilder på en webbsida](dynamic-media/embed-code.md)
-   + [Länka URL till ett webbprogram](dynamic-media/linking-urls-to-yourwebapplication.md)
-   + [Omforma URL:er med regeluppsättningar](dynamic-media/using-rulesets-to-transform-urls.md)
+   + [Bädda in det dynamiska video- eller bildvisningsprogrammet på en webbsida](dynamic-media/embed-code.md)
+   + [Länka URL:er till ditt webbprogram](dynamic-media/linking-urls-to-yourwebapplication.md)
+   + [Använd regeluppsättningar för att omforma URL:er](dynamic-media/using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](dynamic-media/publishing-dynamicmedia-assets.md)
    + [Arbeta med selektiv publicering i Dynamic Media](dynamic-media/selective-publishing.md)
    + [Arbeta med väljare](dynamic-media/working-with-selectors.md)
