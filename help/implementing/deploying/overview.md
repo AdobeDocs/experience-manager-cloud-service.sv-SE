@@ -3,10 +3,10 @@ title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Distribuerar
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: f5f2c7c4dfacc113994c380e8caa37508030ee92
+source-git-commit: 596a7a41dac617e2fb57ba2e4891a2b4dce31fad
 workflow-type: tm+mt
-source-wordcount: '3290'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ I resten av det här dokumentet beskrivs hur utvecklare ska anpassa sina rutiner
 
 ## Kundreleaser {#customer-releases}
 
-### Kodning mot rätt AEM version {#coding-against-the-right-aem-version}
+### Kodning mot rätt AEM {#coding-against-the-right-aem-version}
 
 För tidigare AEM ändrades den senaste AEM versionen sällan (ungefär en gång om året med kvartalsvisa servicepaket) och kunderna uppdaterar produktionsinstanserna till den senaste snabbstarten på egen tid med referens till API Jar. AEM som en Cloud Service uppdateras automatiskt till den senaste versionen av AEM oftare, så att anpassad kod för interna releaser byggs mot den senaste AEM versionen.
 
@@ -84,7 +84,7 @@ I vissa fall kan det vara användbart att förbereda innehållsändringar i käl
 
 Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
 
-### Ändringsbara innehållspaket {#mutable-content-packages}
+### Innehållspaket som kan ändras {#mutable-content-packages}
 
 Innehåll som mappsökvägshierarkier, tjänstanvändare och åtkomstkontroller (ACL:er) är vanligtvis implementerade i ett maven-arkivtypsbaserat AEM. Teknikerna är bland annat att exportera från AEM eller skriva direkt som XML. Under bygg- och distributionsprocessen paketerar Cloud Manager det resulterande innehållspaketet som kan ändras. Det muterbara innehållet installeras vid tre olika tillfällen under distributionsfasen i pipeline:
 
@@ -165,7 +165,7 @@ Mer information om repoinit finns i [Sling-dokumentationen](https://sling.apache
 
 above appears to be internal, to confirm with Brian -->
 
-### Pakethanteraren &quot;one offs&quot; för paket med ändringsbart innehåll {#package-manager-oneoffs-for-mutable-content-packages}
+### Package Manager &quot;one offs&quot; för paket med olika innehåll {#package-manager-oneoffs-for-mutable-content-packages}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_packagemanager"
@@ -179,9 +179,9 @@ Eftersom Package Manager är ett runtime-koncept går det inte att installera in
 
 Alla innehållspaket som installeras via Cloud Manager (både ändringsbart och oföränderligt) visas i ett låst läge i AEM användargränssnitt. Dessa paket kan inte installeras om, byggas om eller laddas ned, och visas med suffixet **&quot;cp2fm&quot;**, vilket anger att installationen hanterades av Cloud Manager.
 
-### Inkluderar tredjepartspaket {#including-third-party}
+### Inklusive paket från tredje part {#including-third-party}
 
-Det är vanligt att kunder inkluderar färdiga paket från tredjepartskällor som programvaruleverantörer som Adobe översättning partners. Rekommendationen är att lagra dessa paket i en fjärrdatabas och referera till dem i `pom.xml`. Detta är möjligt för offentliga databaser och även för privata databaser med lösenordsskydd, vilket beskrivs i [lösenordsskyddade maven-databaser](/help/onboarding/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repositories).
+Det är vanligt att kunder inkluderar färdiga paket från tredjepartskällor som programvaruleverantörer som Adobe översättning partners. Rekommendationen är att lagra dessa paket i en fjärrdatabas och referera till dem i `pom.xml`. Detta är möjligt för offentliga databaser och även för privata databaser med lösenordsskydd, vilket beskrivs i [lösenordsskyddade maven-databaser](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repositories).
 
 Om det inte går att lagra paketet i en fjärrdatabas kan kunderna placera det i en lokal, filsystemsbaserad Maven-databas som är kopplad till SCM som en del av projektet och som refereras av det som beror på det. Databasen skulle deklareras i projektforumen som visas nedan:
 
@@ -233,7 +233,7 @@ Följande XML-kodfragment för Maven POM visar hur paket från tredje part kan b
 ...
 ```
 
-## Så här fungerar rullande distributioner {#how-rolling-deployments-work}
+## Hur rullande distributioner fungerar {#how-rolling-deployments-work}
 
 Precis som AEM uppdateringar distribueras kundreleaser med hjälp av en strategi för rullande driftsättning för att eliminera driftavbrott i utvecklarklustret under rätt omständigheter. Den allmänna händelsesekvensen beskrivs nedan, där **Blue** är den gamla versionen av kundkoden och **Green** är den nya versionen. Både blått och grönt körs i samma version AEM koden.
 
@@ -313,6 +313,6 @@ När du utvecklar lokalt kan en startparameter för körningsläge skickas in f�
 
 Developers want to ensure that their custom code is performing well. For Cloud environments, performance reports can be viewed on Cloud Manager. -->
 
-## Konfiguration av underhållsaktiviteter i källkontrollen {#maintenance-tasks-configuration-in-source-control}
+## Konfiguration av underhållsaktiviteter i källkontroll {#maintenance-tasks-configuration-in-source-control}
 
 Konfigurationer av underhållsaktiviteter måste sparas i källkontrollen eftersom skärmen **Verktyg > Åtgärder** inte längre är tillgänglig i molnmiljöer. Fördelen med detta är att man ser till att ändringarna bevaras avsiktligt i stället för att tillämpas reaktivt och kanske glöms bort. Mer information finns i [underhållsaktivitetsartikeln](/help/operations/maintenance.md).
