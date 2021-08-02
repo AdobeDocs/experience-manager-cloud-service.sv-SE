@@ -2,10 +2,10 @@
 title: Versionsinformation för 2020.7.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: '[!DNL Adobe Experience Manager] som Cloud Service Release Notes för 2020.7.0.'
 exl-id: 75d354a3-6987-4de0-aec8-24043461c516
-source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
+source-git-commit: 596a7a41dac617e2fb57ba2e4891a2b4dce31fad
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +43,7 @@ Releasedatum för [!DNL Experience Manager] som Cloud Service 2020.7.0 är 30 ju
 
 * Arbetsflödesmodeller som skapats av kunder som distribueras till `/conf/global` i Git-projektet som är kopplat till miljön i [!DNL Cloud Manager] distribueras automatiskt till `/var` och är därmed tillgängliga i [!DNL Experience Manager]. Arbetsflödesmodellerna i `/libs` som ändrades av kunden distribueras inte automatiskt till `/var`.
 
-### Åtgärdade fel {#assets-bugs-fixed}
+### Fel har åtgärdats {#assets-bugs-fixed}
 
 * Guiden Flytta resurs läses inte in som förväntat för resurserna som ingår i samlingar. (CQ-4296756)
 * Värdena `dam:size` och `dam:sha1` är exkluderade från XMP. (CQ-4237355)
@@ -88,12 +88,12 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.7.0 är 9 juli 2020.
 
 * Molnhanterarens pipelines har nu stöd för kundspecifika variabler och hemligheter.
 
-   Mer information finns i [Pipeline Variables](/help/onboarding/getting-access-to-aem-in-cloud/build-environment-details.md#pipeline-variables).
+   Mer information finns i Pipeline-variabler.
 
 * Stöd finns nu för autentiseringsbundna privata Maven-databaser.
 
 * Molnhanterarens byggbehållare har nu stöd för både Java 8 och Java 11.
-Mer information finns i [Använda Java 11-stöd](/help/onboarding/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support).
+Mer information finns i Använda Java 11-stöd.
 
 ### Felkorrigeringar {#bug-fixes-cm}
 
@@ -117,7 +117,7 @@ Mer information finns i [Använda Java 11-stöd](/help/onboarding/getting-access
 
 * På grund av en förändring i hur kodens täckning beräknas är versionen *minimum* av Jacoco-pluginprogrammet nu 0.7.5.201505241946 (släppt i maj 2015). Kunder som uttryckligen hänvisar till en äldre version får ett felmeddelande i kodkvalitetsprocessen.
 
-## Adobe Experience Manager as a Cloud Service Foundation {#cloud-foundation}
+## Adobe Experience Manager som Cloud Service Foundation {#cloud-foundation}
 
 ### Nyheter {#what-is-new-foundations}
 
