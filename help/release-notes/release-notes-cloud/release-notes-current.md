@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: d977ff765accb650daff4c35f2668489454305cd
+source-git-commit: 14dc3b308a839040fdf2efe42d2fa4ce35253df0
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Följande version (2021.8.0) är den 26 augusti 2021.
 
 Titta på videon [Versionsöversikt från juli 2021](https://video.tv.adobe.com/v/335580) om du vill se en sammanfattning av de nya funktionerna.
 
-## Experience Manager Foundation som Cloud Service {#foundation}
+## [!DNL Experience Manager] som  [!DNL Cloud Service] grund {#foundation}
 
 ### Nyheter {#what-is-new-foundation}
 
