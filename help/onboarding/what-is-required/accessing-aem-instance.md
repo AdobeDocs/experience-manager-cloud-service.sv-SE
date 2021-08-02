@@ -1,14 +1,13 @@
 ---
 title: 'Bevilja användaråtkomst till en AEM instans '
 description: Följ den här sidan för att lära dig hur en systemadministratör beviljar användaråtkomst till en AEM instans
-translation-type: tm+mt
-source-git-commit: b48be794da0b91722fb45ccefbe83e2b0b22d2a9
+exl-id: 9f637030-dbcf-4330-9360-99d6aaea45b8
+source-git-commit: 42c565c8c5a3300b95a9153cb402cdb3e847f6a2
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Bevilja användaråtkomst till en AEM instans {#accessing-aem-instance}
 
@@ -19,18 +18,18 @@ Som systemadministratör följer du stegen nedan för att ge användare åtkomst
    >[!NOTE]
    >Du måste vara systemadministratör eller användare som skapade miljön för att kunna lägga till användare i Admin Console. Endast Business Owner- eller Deployment Manager-roller har behörighet att skapa en miljö. Mer information om roller och associerade behörigheter finns i [Cloud Manager-roller](/help/onboarding/what-is-required/user-roles-permissions.md). Mer information om miljöer finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
-   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/sys-admin6.png)
+   ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/sys-admin6.png)
 
    Eller
 
    På sidan **Miljö** väljer du **Hantera** —> **Hantera åtkomst**.
 
-   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/sys-admin4.png)
+   ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/sys-admin4.png)
 
 
 1. När du klickar på **Hantera åtkomst** navigerar en ny flik till **Admin Console** från vilken du har åtkomst till författarinstansen av miljön.
 
-   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/sys-admin-2.png)
+   ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/sys-admin-2.png)
 
 1. Välj fliken **Användare** och klicka på **Lägg till användare**.
 
@@ -57,4 +56,3 @@ Som systemadministratör följer du stegen nedan för att ge användare åtkomst
 
       >[!NOTE]
       >För vissa organisationer som fick åtkomst till AEM som Cloud Service före januari 2020 kommer dessa att hämtas till Adobe Admin Console och produkt- och miljöproduktprofilen måste väljas.
-
