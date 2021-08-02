@@ -1,9 +1,9 @@
 ---
 title: Använda providern för skärminnehåll
 description: Den här sidan beskriver hur du använder Screens Content Provider för att skapa innehåll.
-source-git-commit: aea66e38a54c8e96b0dfe06cc7cb8f7733e8bc09
+source-git-commit: e7f8e7daa88c5bf8bb13c2a635fb84724f8bd7bb
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -30,10 +30,10 @@ Följ stegen nedan för att logga in på leverantör av skärminnehåll:
 1. Gå till startsidan för [Adobe Experience Cloud](https://experience.adobe.com).
 
 1. Välj **Experience Manager**.
-   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page1.png)
+   ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page1.png)
 
 1. Klicka på **Starta** från Cloud Manager-kortet. När du har loggat in på [!UICONTROL Cloud Manager] är du redo att använda användargränssnittet.
-   ![](/help/onboarding/getting-access-to-aem-in-cloud/assets/landing-page2.png)
+   ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page2.png)
 
 1. Markera programmet för skärmar som Cloud Service och klicka på ikonen, så som visas nedan, för att öppna sidan **Översikt** för det specifika programmet.
 
