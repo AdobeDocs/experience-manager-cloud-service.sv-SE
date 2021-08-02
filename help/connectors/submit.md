@@ -1,14 +1,13 @@
 ---
 title: Skicka en AEM-anslutning
 description: Skicka en AEM-anslutning
-translation-type: tm+mt
-source-git-commit: d4e376ab30bb3e1fb533ed32f6ac43580775787c
+exl-id: 9be1f00e-3666-411c-9001-c047e90b6ee5
+source-git-commit: eb6aa8741a07e14727b4e74df66b9643936e9231
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 11%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 Skicka en AEM-anslutning
 ===========================
@@ -22,7 +21,7 @@ I tidigare AEM lösningar användes Package Manager för att installera anslutni
 Det finns olika alternativ för hur paketen kan inkluderas i ett projekt:
 
 1. Partnerns offentliga arkiv - en partner skulle vara värd för innehållspaketet i ett offentligt tillgängligt arkiv
-1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Mer information finns i [lösenordsskyddade maven-databaser på](/help/onboarding/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repositories).
+1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Mer information finns i lösenordsskyddade maven-databaser.
 1. Paket med sammankopplade artefakter - i det här fallet inkluderas kopplingspaketet lokalt i kundens maven-projekt.
 
 Oavsett var de finns måste paket refereras som beroenden i pom.xml, vilket tillhandahålls av leverantören.
