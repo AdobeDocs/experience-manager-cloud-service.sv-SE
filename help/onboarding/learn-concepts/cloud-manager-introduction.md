@@ -2,9 +2,9 @@
 title: Läs vad är Cloud Manager
 description: Följ den här sidan om du vill veta mer om Cloud Manager, Cloud Manager-program och miljöer.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: 42c565c8c5a3300b95a9153cb402cdb3e847f6a2
+source-git-commit: 4b6d02bc93a904c8ca666d027923fa5df88d1934
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -26,10 +26,10 @@ Cloud Manager-program representerar uppsättningar av Cloud Manager-miljöer som
 En användare kan skapa en **sandlåda** eller ett **Production**-program.
 
 * Ett *produktionsprogram* skapas för att aktivera livstrafik vid rätt tidpunkt i framtiden.
-Mer information finns i Introduktion till produktionsprogram.
+Mer information finns i [Introduktion till produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/introduction-production-programs.html?lang=en).
 
 * Ett *sandlådeprogram* skapas vanligtvis för att användas i utbildningssyfte, köra demo, aktivering, POC eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett produktionsprogram inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
-Mer information finns i Introduktion till sandlådeprogram.
+Mer information finns i [Introduktion till sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sandbox-programs/introduction-sandbox-programs.html?lang=en).
 
 ## Cloud Manager-miljöer {#cloud-manager-environments}
 
