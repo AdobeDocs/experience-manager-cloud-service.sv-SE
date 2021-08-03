@@ -2,9 +2,9 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation som är specifik för borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: 1adcde525454e779adbd251b9a31f4e456b28998
+source-git-commit: 8742c4058a5b89a0d6aca0d6e58ed993b01d084d
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '513'
 ht-degree: 6%
 
 ---
@@ -38,6 +38,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | [!DNL Assets] | Överför resurser direkt till [!DNL Experience Manager]. Se [API:er för inaktuell överföring av resurser](/help/assets/developer-reference-material-apis.md#deprecated-asset-upload-api). | Använd [direkt binär överföring](/help/assets/add-assets.md). Mer teknisk information finns i [API:er för direkt överföring](/help/assets/developer-reference-material-apis.md#upload-binary). |
 | [!DNL Assets] | [Vissa arbetsflödessteg ](/help/assets/developer-reference-material-apis.md#post-processing-workflows-steps) i  `DAM Asset Update` arbetsflödet stöds inte, inklusive anrop av kommandoradsverktyg som  [!DNL ImageMagick]. | [Resursmikrotjänster ](/help/assets/asset-microservices-overview.md) ersätter många arbetsflöden. Använd [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) för anpassad bearbetning. |
 | [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) för att generera miniatyrbilder för MPEG. Använd [Dynamic Media](/help/assets/manage-video-assets.md) för MPEG-omkodning. |
+| [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera i replikeringsagenten (borttagning efter 30 september 2021) | [Hantera ](/help/operations/replication.md#manage-publication) publicerings- eller  [publicera ](/help/operations/replication.md#publish-content-tree-workflow) arbetsflöden för innehållsträd |
 
 ## Borttagna funktioner {#removed-features}
 
@@ -50,3 +51,4 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 | [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. |
 | [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort eftersom oföränderliga avsnitt i [!DNL Experience Manager]-databasen inte är tillgängliga vid körning. |
 | [!DNL Assets] | [!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud. | Använd [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. |
+| [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource). | Ej tillämpligt |
