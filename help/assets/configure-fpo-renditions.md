@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Återgivningar
 exl-id: null
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 69f1ac34dc24f92cae47e1bfcffb39f6f3b03b7b
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Så här genererar du FPO-återgivningar:
 
 ## Skapa en bearbetningsprofil {#create-processing-profile}
 
-Om du vill generera FPO-återgivningar skapar du en **[!UICONTROL Processing Profile]**. Profilerna använder molnbaserade resurstjänster för bearbetning. Instruktioner finns i [skapa bearbetningsprofiler för resursmikrotjänster](asset-microservices-configure-and-use.md).
+Skapa en **[!UICONTROL Processing Profile]** om du vill generera FPO-återgivningar. Profilerna använder molnbaserade resurstjänster för bearbetning. Instruktioner finns i [skapa bearbetningsprofiler för resursmikrotjänster](asset-microservices-configure-and-use.md).
 
 Välj **[!UICONTROL Create FPO Rendition]** för att generera FPO-återgivning. Du kan också klicka på **[!UICONTROL Add New]** om du vill lägga till ytterligare återgivningsinställningar i samma profil.
 
