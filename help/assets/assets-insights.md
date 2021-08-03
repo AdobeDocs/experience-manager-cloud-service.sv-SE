@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Resursinsikter,Resursrapporter
 role: User,Leader
 exl-id: e268453b-e7c0-4aa4-bd29-2686edb5f99a
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: def144cecaa7672e7af1807a5157730014c550b2
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '774'
 ht-degree: 2%
 
 ---
@@ -67,8 +67,8 @@ Du kan visa bakgrundsmusik för resursinsikter från metadatasidan.
 
 Du kan visa bakgrundsmusik för alla resurser i en mapp samtidigt med **[!UICONTROL Insights View]**.
 
-1. I resursgränssnittet navigerar du till den mapp som innehåller de resurser som du vill visa insikter för.
-1. Klicka på alternativet Layout i verktygsfältet och välj sedan **[!UICONTROL Insights View]**.
+1. I Assets-användargränssnittet navigerar du till den mapp som innehåller de resurser som du vill visa insikter för.
+1. Klicka på alternativet **[!UICONTROL Layout]** i verktygsfältet och välj **[!UICONTROL Insights View]**.
 1. På sidan visas användningsresultat för resurserna. Jämför omdömen om de olika tillgångarna och få insikter.
 
 <!-- TBD: Commenting as Web Console is not available. Document the appropriate OSGi config method if available in CS.
@@ -95,7 +95,7 @@ Assets Insights fetches usage data for assets from Adobe Analytics report suites
 
 1. I [!DNL Experience Manager] klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]**.
 
-   ![chlimage_1-72](assets/chlimage_1-72.png)
+   ![chlimage_1-73](assets/chlimage_1-73.png)
 
 1. Klicka på **[!UICONTROL Insights Configuration]**-kortet.
 1. Välj ett datacenter i guiden och ange dina autentiseringsuppgifter, inklusive namnet på din organisation, användarnamn och delad hemlighet.
@@ -117,6 +117,29 @@ När du har konfigurerat ditt Adobe Analytics-konto genereras sidspårningskoden
 
 1. Klicka på **[!UICONTROL Insights Page Tracker]**-kortet på sidan **[!UICONTROL Navigation]**.
 1. Klicka på **[!UICONTROL Download]** om du vill hämta sidspårningskoden.
+
+<!--
+Add page tracker code, CQDOC-18045, 30/07/2021
+-->
+I följande exempelkodfragment visas den sidspårningskod som finns på en exempelwebbsida:
+
+```xml
+ <head>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/sitecatalyst/appmeasurement.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/foundation/assetinsights/pagetracker.js"></script>
+            <script type="text/javascript">
+                                assetAnalytics.attrTrackable = 'trackable';
+                assetAnalytics.defaultTrackable = false;
+                assetAnalytics.attrAssetID = 'aem-asset-id';
+                assetAnalytics.assetImpressionPollInterval = 200; // interval in millis
+                assetAnalytics.charsLimitForGET = 2000; // bytes
+                assetAnalytics.dispatcher.init("assetstesting","abc.net","bee","list1","eVar3","event8","event7");
+            </script>
+
+ </head>
+```
+
+
 
 <!--
 
