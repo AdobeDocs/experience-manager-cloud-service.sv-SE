@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 529fbdcba9fc4c1432beef1b63ff89079a900224
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1618'
 ht-degree: 3%
 
 ---
@@ -74,9 +74,6 @@ Kortet **Environment** på sidan Översikt visar upp till tre miljöer.
    ![](assets/environment-view-2.png)
 
 1. Välj någon av miljöerna i listan för att visa miljöinformationen.
-
-   >[!NOTE]
-   >Förhandsgranskningstjänsten kommer att distribueras rullande till alla program. Kunder meddelas i produkten när deras program är aktiverat för förhandsgranskningstjänsten. Mer information finns i avsnittet [Accessing Preview Service](#access-preview-service).
 
    ![](assets/environ-preview1.png)
 
