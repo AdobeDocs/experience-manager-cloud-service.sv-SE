@@ -4,9 +4,9 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager as a Cloud Service, Experience Manager Assets
-source-git-commit: 6a7634dd96b620979b7087e1c51a829ba708a496
+source-git-commit: 69f1ac34dc24f92cae47e1bfcffb39f6f3b03b7b
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '490'
 ht-degree: 40%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 40%
    + [Autentisering för fjärrGraphQL-frågor för innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
    + [GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+   + [Generera FPO-återgivningar för Adobe InDesign](configure-fpo-renditions.md)
    + [Materialrapporter](asset-reports.md)
    + [Överlappande metadata](cascading-metadata.md)
    + [XMP-metadata](xmp-metadata.md)
