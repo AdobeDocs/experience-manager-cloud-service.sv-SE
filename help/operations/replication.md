@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: d00514eb3a840fe1fc5c021c84d61261f9dfe4f1
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1347'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Mer detaljerad information om Hantera publikation finns i [Publishing Fundamenta
 
 >[!NOTE]
 >
->Denna metod bör anses vara föråldrad eftersom den inte består av statyer och är mindre skalbar än andra metoder. Adobe rekommenderar att publicerings- eller arbetsflödesmetoder används i stället
+>Denna metod bör anses vara föråldrad och kommer att tas bort den 30 september 2021 eller senare, eftersom den inte behåller status och är mindre skalbar än andra metoder. Adobe rekommenderar att publicerings- eller arbetsflödesmetoder används i stället
 
 Så här utför du en trädaktivering:
 
