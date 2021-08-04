@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du konfigurerar molnres
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 7fc39615e29a5523b4d2b0e159a10be5771f5120
+source-git-commit: 7dc150c51888ff2bfd80969d901f4996805498bf
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1383'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Följ stegen nedan för att navigera till Cloud Manager:
 1. Du går till sidan **Program och produkter** i Cloud Manager.
 
    >[!IMPORTANT]
-   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
+   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Bokmärk den här sidan för framtida bruk och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
 
 Dessutom kan du gå till sidan **Program och produkter** i Cloud Manager från Adobe Experience Cloud hemsida. Följ stegen nedan:
 
@@ -91,7 +91,6 @@ Dessutom kan du gå till sidan **Program och produkter** i Cloud Manager från A
       Om det redan finns program i organisationen, och du är systemadministratör, visar landningssidan knappen **Hantera åtkomst** tillsammans med alternativet **Lägg till program**, vilket visas i bilden nedan.
 
       ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/admin-console-4.png)
-
 
 
 ## Verifiera dina användarroller {#verify-user-roles}
