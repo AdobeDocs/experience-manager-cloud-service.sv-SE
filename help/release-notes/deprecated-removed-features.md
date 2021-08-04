@@ -2,10 +2,10 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation som är specifik för borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: 8742c4058a5b89a0d6aca0d6e58ed993b01d084d
+source-git-commit: 6a850b03501c899cf5b91fca9012036cad2a78ef
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 6%
+source-wordcount: '550'
+ht-degree: 5%
 
 ---
 
@@ -52,3 +52,11 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 | [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort eftersom oföränderliga avsnitt i [!DNL Experience Manager]-databasen inte är tillgängliga vid körning. |
 | [!DNL Assets] | [!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud. | Använd [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. |
 | [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource). | Ej tillämpligt |
+
+## Java API {#java-api}
+
+Se [den här sidan](/help/release-notes/deprecated-apis.md) för alla borttagna Java API:er som ibland introduceras.
+
+## OSGI-konfiguration {#osgi-configuration}
+
+Läs [den här artikeln](/help/implementing/deploying/osgi-configuration-api.md) om du vill se begränsningar för konfigurering av OSGI-egenskaper, varav vissa kan introduceras över tid.
