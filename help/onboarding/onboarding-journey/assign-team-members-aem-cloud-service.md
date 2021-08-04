@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: bb29126590751edcb1f99731de0ee4ee004f017d
+source-git-commit: ae8e5bde38472f4d9bce0e69bf70acbef5932146
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
@@ -102,7 +102,7 @@ Stegen nedan måste följas av en systemadministratör som också har rollen Bus
 
 ## What’s Next {#whats-next}
 
-De användare som du har angett som AEM för en Cloud Service produktprofiler kan nu lära sig hur du kommer åt Författaren och bekanta dig med redigeringssidor i AEM som en Cloud Service. Du bör följa sökvägen genom att gå igenom dokumentet Learning Path for AEM Users.
+De användare som du har angett som AEM för en Cloud Service produktprofiler kan nu lära sig hur du kommer åt Författaren och bekanta dig med redigeringssidor i AEM som en Cloud Service. Du bör följa sökvägen genom att gå igenom dokumentet Learning Path for AEM Users eller Learning Path for Developers and Deployment Managers.
 
 ## Ytterligare resurser {#additional-resources}
 
