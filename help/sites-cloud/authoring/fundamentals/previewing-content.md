@@ -2,9 +2,9 @@
 title: Förhandsgranska innehåll
 description: Lär dig hur du använder AEM Preview Service för att förhandsgranska innehåll innan du publicerar.
 exl-id: 6b4b57f6-2e66-4c83-94d9-bc1e0daab0f3
-source-git-commit: c30470b321a4fba8c8de9becb62c518faff05498
+source-git-commit: 78c5649c6b9c04cb459f5730161affeb452c916c
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Förhandsgranskningsfunktionen ingår i version 2021.5.0 och kommer att lanseras gradvis under de kommande veckorna.
+>Om du vill aktivera förhandsvisningsfunktionen i miljöer som skapats före 3 augusti 2021 ska du kontrollera att miljön har AEM version 2021.05.5368.20210529T101701Z eller senare och sedan köra en kundinitierad pipeline.
 
 AEM har en Site Preview Service som är avsedd att låta utvecklare och skribenter förhandsgranska en webbplats innan den når publiceringsmiljön och är tillgänglig för allmänheten.
 
 Det underlättar förhandsgranskning av sidupplevelser som annars inte skulle vara synliga i redigeringsmiljön, som sidövergångar och annat innehåll på publiceringssidan.
+
+Läs även om [åtkomst till tjänsten Preview](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
 
 ## Publicera innehåll för förhandsgranskning {#publishing-content-to-preview}
 
@@ -40,7 +42,7 @@ Du kan publicera innehåll till förhandsgranskningstjänsten med hjälp av grä
    https://preview-p[programID]-e[environmentID].adobeaemcloud.com/pathtopage.html
    ```
 
-Mer information om hur du hämtar URL:er för dina miljöer finns i [Hantera dina miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=en).
+Mer information om hur du hämtar URL:er för dina miljöer finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
 Innehåll kan också publiceras för förhandsgranskning med hjälp av ett [Publicera innehållsträdsarbetsflöde](/help/operations/replication.md#publish-content-tree-workflow) med parametern agentId inställd på förhandsgranskning eller med hjälp av [replikerings-API](/help/operations/replication.md#replication-api) med ett AgentFilter konfigurerat för förhandsgranskning.
 
@@ -67,4 +69,4 @@ Följ de här stegen för att felsöka förhandsvisningsnivån med hjälp av utv
 
 * I [Developer Console](/help/implementing/developing/introduction/development-guidelines.md#aem-as-a-cloud-service-development-tools) väljer du antingen **— All Preview —** eller en produktionsmiljö som innehåller **prev** i namnet
 * Generera relevant information för förhandsvisningsinstansen
-Mer information om hur du hämtar URL:er för dina miljöer finns i [Hantera dina miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=en).
+Mer information om hur du hämtar URL:er för dina miljöer finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
