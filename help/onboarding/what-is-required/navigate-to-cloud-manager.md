@@ -2,10 +2,10 @@
 title: Navigera till Cloud Manager
 description: Följ den här sidan för att lära dig hur du navigerar till startsidan för Cloud Manager
 exl-id: 9cf25d1d-a351-4ea0-b2e9-1df6ca4915b7
-source-git-commit: e7f8e7daa88c5bf8bb13c2a635fb84724f8bd7bb
+source-git-commit: 7dc150c51888ff2bfd80969d901f4996805498bf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '483'
+ht-degree: 7%
 
 ---
 
@@ -21,14 +21,21 @@ När din systemadministratör har gett dig åtkomst till Cloud Manager får du e
 1. I välkomstmeddelandet klickar du på **Kom igång**, vilket visas i bilden nedan.
    ![](/help/onboarding/what-is-required/assets/get-started-email.png)
 
-   >[!NOTE]
-   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Beroende på vilka roller som har tilldelats i [!UICONTROL Cloud Manager] och programmets status visas olika skärmar när du använder användargränssnittet för [!UICONTROL Cloud Manager]. Mer information finns i avsnittet [Cloud Manager Landing page](#cloud-manager-landing) nedan.
+
+   >[!IMPORTANT]
+   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Bokmärk den här sidan för framtida bruk och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
+
+Du kan även navigera till sidan **Program och produkter** i Cloud Manager från Adobe Experience Cloud hemsida. Följ stegen nedan:
+
+1. Navigera direkt till [Adobe Experience Cloud](https://experience.adobe.com) och logga in med din Adobe ID.
 
 1. Välj **Experience Manager**.
    ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page1.png)
 
 1. Klicka på **Starta** från Cloud Manager-kortet. När du har loggat in på [!UICONTROL Cloud Manager] är du redo att använda användargränssnittet.
    ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page2.png)
+
+1. När inloggningen är klar dirigeras du till landningssidan för Cloud Manager.
 
 
 ## Startsida för Cloud Manager {#cloud-manager-landing}
