@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du konfigurerar molnres
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 5a909976909eb7ce2c008d2eac9ffb60e906023e
+source-git-commit: 7fc39615e29a5523b4d2b0e159a10be5771f5120
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1366'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,21 @@ Följ nedanstående avsnitt för att lära dig hur du skapar dina [molntjänstpr
 
 ## Navigera till Cloud Manager {#navigate-cloud-manager}
 
-1. *Business Owner*-användaren får ett välkomstmeddelande där de kan komma igång, eller om de inte kan hitta det går du direkt till [Adobe Experience Cloud](https://experience.adobe.com/#/@ccs/home) och loggar in med din Adobe ID.
+*Business Owner*-användaren får ett välkomstmeddelande där de kan komma igång, eller om de inte kan hitta det går du direkt till [Adobe Experience Cloud](https://experience.adobe.com) och loggar in med din Adobe ID.
 
-   ![](/help/onboarding/onboarding-journey/assets/setup-resources1.png)
+Följ stegen nedan för att navigera till Cloud Manager:
+
+1. I välkomstmeddelandet klickar du på **Kom igång**, vilket visas i bilden nedan.
+   ![](/help/onboarding/onboarding-journey/assets/get-started-email.png)
+
+1. Du går till sidan **Program och produkter** i Cloud Manager.
+
+   >[!IMPORTANT]
+   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
+
+Dessutom kan du gå till sidan **Program och produkter** i Cloud Manager från Adobe Experience Cloud hemsida. Följ stegen nedan:
+
+1. Navigera direkt till [Adobe Experience Cloud](https://experience.adobe.com) och logga in med din Adobe ID.
 
 1. På Adobe Experience Cloud hemsida väljer du **Experience Manager**.
 
@@ -56,11 +68,37 @@ Följ nedanstående avsnitt för att lära dig hur du skapar dina [molntjänstpr
 
    ![](/help/onboarding/onboarding-journey/assets/setup-resources3.png)
 
-1. Landningssidan för Cloud Manager visas, vilket visas i bilden nedan.
+1. När inloggningen är klar dirigeras du till landningssidan för Cloud Manager.
 
-   ![](/help/onboarding/onboarding-journey/assets/setup-resources4.png)
+   >[!NOTE]
+   >Beroende på vilka roller som har tilldelats i [!UICONTROL Cloud Manager] och programmets status visas olika skärmar när du använder användargränssnittet för [!UICONTROL Cloud Manager].
 
-1. Kontrollera att du har tilldelats produktprofilen Business Owner. Om du vill göra det väljer du din profil högst upp till höger, enligt nedan.
+   Ett av de tre alternativen som beskrivs nedan visas:
+
+   * **När det inte finns några program i Cloud Manager**
+
+      Om det inte finns några program i organisationen instruerar landningssidan dig att skapa ditt första program, vilket visas i bilden nedan.
+      ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin0.png)
+
+   * **När program redan finns i Cloud Manager**
+
+      Om det redan finns program i organisationen instruerar landningssidan dig att lägga till ett annat program och att visa alla befintliga program också, vilket visas i bilden nedan.
+
+      ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin1.png)
+
+   * **När ett program finns och användaren är systemadministratör**
+
+      Om det redan finns program i organisationen, och du är systemadministratör, visar landningssidan knappen **Hantera åtkomst** tillsammans med alternativet **Lägg till program**, vilket visas i bilden nedan.
+
+      ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/admin-console-4.png)
+
+
+
+## Verifiera dina användarroller {#verify-user-roles}
+
+När du har loggat in på Cloud Manager följer du stegen nedan för att verifiera att du har tilldelats produktprofilen Business Owner:
+
+1. Välj din profil högst upp till höger, enligt nedan.
 
    ![](/help/onboarding/onboarding-journey/assets/setup-resources5.png)
 
