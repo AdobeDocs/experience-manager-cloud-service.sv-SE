@@ -4,9 +4,9 @@ description: Följ den här sidan om du vill lära dig nästa steg efter att du 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: d3f721d66cc6b0c9191f8d84d4adc0326ef68d73
+source-git-commit: ae8e5bde38472f4d9bce0e69bf70acbef5932146
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 Det här dokumentet hjälper utvecklare och distributionsansvariga att få tillgång till Cloud Manager och bekanta sig med hur de kan förbereda sig för utbildningsvägar.
 
-När du har läst bör du:
+När du har läst det här dokumentet bör du:
 
-* Som utvecklare bör du kunna förstå hur du får åtkomst till och hanterar Creative Cloud Manager Git
-* Som distributionshanterare bör du kunna förstå hur du konfigurerar pipelines och distribuerar koden i Cloud Manager
+* Som utvecklare kan du förstå hur du får åtkomst till och hanterar Creative Cloud Manager Git
+* Som driftsättningshanterare kan du förstå hur du konfigurerar pipelines och distribuerar koden i Cloud Manager
 
 ## Introduktion {#introduction}
 
@@ -39,11 +39,13 @@ Du förstår hur du navigerar och loggar in i Cloud Manager
 
 ## Hantera Git {#manage-git}
 
-Läs mer om detta ämne här.
+Du kan komma åt och hantera din Git-databas med hjälp av Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager.
+Mer information om det här avsnittet finns i [Åtkomst till Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en).
 
 ## Ställ in pipeline {#setup-pipeline}
 
-Läs mer om detta ämne här
+Du kan konfigurera din produktion eller icke-produktion-pipeline från användargränssnittet i Cloud Manager.
+Mer information om det här avsnittet finns i [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en).
 
 ## What’s Next {#whats-next}
 
