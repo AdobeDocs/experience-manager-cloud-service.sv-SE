@@ -2,10 +2,10 @@
 title: Navigera till Cloud Manager
 description: Följ den här sidan för att lära dig hur du navigerar till startsidan för Cloud Manager
 exl-id: 9cf25d1d-a351-4ea0-b2e9-1df6ca4915b7
-source-git-commit: 7dc150c51888ff2bfd80969d901f4996805498bf
+source-git-commit: 149776bdd7acce3e00710e50600d9bd1d7cc6b9b
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 7%
+source-wordcount: '500'
+ht-degree: 6%
 
 ---
 
@@ -66,7 +66,7 @@ Ett av de tre alternativen som beskrivs nedan visas:
 
 Härifrån kan en användare med rätt behörigheter, t.ex. en Business Owner-roll i Cloud Manager välja **Lägg till program** för att starta [guiden Lägg till program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/production-programs/creating-production-program.html?lang=en#getting-access).
 
-Mer information om hur du lägger till ett program i Cloud Manager finns i:
+Mer information om hur du lägger till ett program i Cloud Manager finns i Skapa:
 
-* Skapa ett produktionsprogram
-* Skapa ett sandlådeprogram
+* [Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html?lang=en)
+* [Sandbox Program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sandbox-programs/creating-sandbox-program.html?lang=en)
