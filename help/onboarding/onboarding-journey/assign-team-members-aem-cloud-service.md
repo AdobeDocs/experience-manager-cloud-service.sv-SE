@@ -4,7 +4,7 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 196af2ab4801b12017063bc2aab59faabdae45f9
+source-git-commit: bb29126590751edcb1f99731de0ee4ee004f017d
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 1%
@@ -44,11 +44,15 @@ Innan du börjar läsa det här avsnittet bör du överväga följande krav:
    >[!NOTE]
    >För att komma igång rekommenderar vi att du först lägger till användare som ska delta i de omedelbara uppgifterna, till exempel administratörer, utvecklare och innehållsförfattare. Du kan fortsätta med resten av introduktionen utan att lägga till alla användare. När du är klar med introduktionen kan du skala till ett större antal användare senare.
 
-Innan du börjar granska stegen för att tilldela teammedlemmar till AEM som en Cloud Service produktprofiler måste du följa dessa två steg:
 
-1. Logga in på [Adobe Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en). Mer information finns i Logga in på Admin Console.
+   >[!IMPORTANT]
+   >Innan du börjar granska stegen för att tilldela teammedlemmar till AEM som en Cloud Service produktprofiler måste du följa dessa två steg:
+   >
+   >1. Logga in på [Adobe Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en). Mer information finns i Logga in på Admin Console.
+      >
+      >
+   1. Granska [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
 
-1. Granska [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
 
 Följ stegen nedan för att se en lista över profiler för Cloud Manager från Adobe Admin Console:
 
@@ -76,18 +80,24 @@ För att få åtkomst till AEM som en Cloud Service-instans måste användare ti
 >[!NOTE]
 >Du måste ha behörighet för instansen. Behörigheter att administrera Cloud Manager räcker inte. Läs mer.
 
-Stegen nedan måste följas av systemadministratören som också har rollen Business Owner.
+Stegen nedan måste följas av en systemadministratör som också har rollen Business Owner.
 
-1. Navigera från Cloud Manager till Cloud Manager och välj knappen Hantera åtkomst i den miljö som är av intresse enligt nedan:
+1. Navigera till ditt program från Cloud Manager och välj knappen **Hantera åtkomst** i den miljö som är av intresse enligt nedan.
 
-1. När du klickar på Hantera åtkomst, navigerar en ny flik till Admin Console från den plats där du har tillgång till författarinstansen av miljön. Välj *AEM administratörer* eller *AEM Användare* baserat på de behörigheter som den här personen måste ge. Läs mer om [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
+   ![](/help/onboarding/onboarding-journey/assets/add-team1.png)
 
-1. Välj Lägg till användare enligt nedan och skicka den information som krävs för att lägga till teammedlemmen:
+1. En ny flik används för att navigera till Adobe Admin Console där du har tillgång till författarinstansen av miljön. Välj *AEM administratörer* eller *AEM Användare* baserat på de behörigheter som den här personen måste ge. Läs mer om [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
 
+   ![](/help/onboarding/onboarding-journey/assets/add-team2.png)
 
-1. Du vill upprepa dessa steg för alla miljöer, inklusive utveckling, scen och produktion, om du har information om teammedlemmar som behöver åtkomst till dem.
+1. Välj `AEM Administrator` eller `AEM User` och klicka på **Lägg till användare** enligt nedan och skicka den information som krävs för att lägga till teammedlemmen.
+
+   ![](/help/onboarding/onboarding-journey/assets/add-team3.png)
 
    Användaren du lade till har nu åtkomst till AEM som Cloud Service Author-tjänster!
+
+   >[!NOTE]
+   >Du vill upprepa dessa steg för alla miljöer, inklusive utveckling, scen och produktion, om du har information om teammedlemmar som behöver åtkomst till dem.
 
 
 ## What’s Next {#whats-next}
