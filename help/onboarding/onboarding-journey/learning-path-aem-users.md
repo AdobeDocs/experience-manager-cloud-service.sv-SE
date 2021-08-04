@@ -4,10 +4,10 @@ description: Följ den här sidan om du vill lära dig mer om hur du gör när d
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: fa61dc122cec5466827d06ffb2eca1c1c5f8bae6
+source-git-commit: 7fc39615e29a5523b4d2b0e159a10be5771f5120
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 2%
+source-wordcount: '328'
+ht-degree: 3%
 
 ---
 
@@ -47,7 +47,8 @@ Följande steg måste följas för att du ska få tillgång till författaren:
 
 ## What’s Next {#whats-next}
 
-Nu kan du börja initiera din utbildningsväg för att skapa och publicera sidor. Du bör följa sökvägen genom att gå igenom dokumentet Learning Path for AEM Users.
+Nu kan du skapa och publicera AEM sidor. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan.
+
 
 ## Ytterligare resurser {#additional-resources}
 
