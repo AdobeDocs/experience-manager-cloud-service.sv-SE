@@ -1,15 +1,15 @@
 ---
 title: '[!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service'
 description: '[!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service'
-source-git-commit: 4ee9a5744cdcec00dd497a00b0d8dbf288a5adcb
+exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
+source-git-commit: bcd106a39bec286e2a09ac7709758728f76f9544
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service  {#prerelease-channel}
+# [!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service {#prerelease-channel}
 
 
 ## Introduktion {#introduction}
@@ -54,7 +54,7 @@ Variabeln kan tas bort eller återställas till ett annat värde om du vill att 
 
 Du kan se nya funktioner i Sites-konsolen i den lokala QuickStart SDK och koda mot nya API:er i prerelease genom att låta din maven-projektreferens vara prerelease `API Jar` i Maven Central. Du kan även se de här förhandsversionsfunktionerna på den lokala datorn genom att starta den vanliga QuickStart SDK i förhandsversionsläge:
 
-* Hämta SDK från programdistributionsportalen och installera enligt beskrivningen i [Öppna AEM som en Cloud Service-SDK](/help/implementing/developing/aem-as-a-cloud-service-sdk.md#accessing-the-aem-as-a-cloud-service-sdk.)
+* Hämta SDK från programdistributionsportalen och installera enligt beskrivningen i [Öppna AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
 * Inkludera argumentet `-r prerelease` när du startar SDK QuickStart.
 * Värdet är *sticky* så det kan bara markeras vid första starten. Installera om SDK för att ändra kommandoradsalternativet.
 
