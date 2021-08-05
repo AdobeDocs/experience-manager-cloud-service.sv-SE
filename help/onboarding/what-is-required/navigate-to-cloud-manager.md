@@ -2,9 +2,9 @@
 title: Navigera till Cloud Manager
 description: Följ den här sidan för att lära dig hur du navigerar till startsidan för Cloud Manager
 exl-id: 9cf25d1d-a351-4ea0-b2e9-1df6ca4915b7
-source-git-commit: 149776bdd7acce3e00710e50600d9bd1d7cc6b9b
+source-git-commit: 058622fd2628656c7b2fb3a02445724ca6a62f3b
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '509'
 ht-degree: 6%
 
 ---
@@ -24,6 +24,8 @@ När din systemadministratör har gett dig åtkomst till Cloud Manager får du e
 
    >[!IMPORTANT]
    >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Bokmärk den här sidan för framtida bruk och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
+
+1. Du dirigeras till Cloud Managers landningssida.
 
 Du kan även navigera till sidan **Program och produkter** i Cloud Manager från Adobe Experience Cloud hemsida. Följ stegen nedan:
 
