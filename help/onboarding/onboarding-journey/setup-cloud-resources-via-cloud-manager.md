@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du konfigurerar molnres
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 7dc150c51888ff2bfd80969d901f4996805498bf
+source-git-commit: 058622fd2628656c7b2fb3a02445724ca6a62f3b
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1431'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,8 @@ Följ stegen nedan för att navigera till Cloud Manager:
    >[!IMPORTANT]
    >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Bokmärk den här sidan för framtida bruk och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
 
+1. Du dirigeras till Cloud Managers landningssida. Mer information finns i [Visa Cloud Managers programavsnitt](#viewing-programs).
+
 Dessutom kan du gå till sidan **Program och produkter** i Cloud Manager från Adobe Experience Cloud hemsida. Följ stegen nedan:
 
 1. Navigera direkt till [Adobe Experience Cloud](https://experience.adobe.com) och logga in med din Adobe ID.
@@ -68,29 +70,32 @@ Dessutom kan du gå till sidan **Program och produkter** i Cloud Manager från A
 
    ![](/help/onboarding/onboarding-journey/assets/setup-resources3.png)
 
-1. När inloggningen är klar dirigeras du till landningssidan för Cloud Manager.
+1. När inloggningen är klar dirigeras du till landningssidan för Cloud Manager. Mer information finns i [Visa Cloud Managers programavsnitt](#viewing-programs).
 
    >[!NOTE]
    >Beroende på vilka roller som har tilldelats i [!UICONTROL Cloud Manager] och programmets status visas olika skärmar när du använder användargränssnittet för [!UICONTROL Cloud Manager].
 
-   Ett av de tre alternativen som beskrivs nedan visas:
+### Visa program på Cloud Managers startsida {#viewing-programs}
 
-   * **När det inte finns några program i Cloud Manager**
+När inloggningen är klar dirigeras du till landningssidan för Cloud Manager. Ett av de tre alternativen som beskrivs nedan visas:
 
-      Om det inte finns några program i organisationen instruerar landningssidan dig att skapa ditt första program, vilket visas i bilden nedan.
-      ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin0.png)
+#### När det inte finns några program i Cloud Manager {#no-programs}
 
-   * **När program redan finns i Cloud Manager**
+Om det inte finns några program i organisationen instruerar landningssidan dig att skapa ditt första program, vilket visas i bilden nedan.
 
-      Om det redan finns program i organisationen instruerar landningssidan dig att lägga till ett annat program och att visa alla befintliga program också, vilket visas i bilden nedan.
+![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin0.png)
 
-      ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin1.png)
+#### När program redan finns i Cloud Manager {#programs-exist}
 
-   * **När ett program finns och användaren är systemadministratör**
+Om det redan finns program i organisationen instruerar landningssidan dig att lägga till ett annat program och att visa alla befintliga program också, vilket visas i bilden nedan.
 
-      Om det redan finns program i organisationen, och du är systemadministratör, visar landningssidan knappen **Hantera åtkomst** tillsammans med alternativet **Lägg till program**, vilket visas i bilden nedan.
+![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin1.png)
 
-      ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/admin-console-4.png)
+#### När ett program finns och användaren är systemadministratör {#programs-exist-sysadmin}
+
+Om det redan finns program i organisationen, och du är systemadministratör, visar landningssidan knappen **Hantera åtkomst** tillsammans med alternativet **Lägg till program**, vilket visas i bilden nedan.
+
+![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/admin-console-4.png)
 
 
 ## Verifiera dina användarroller {#verify-user-roles}
