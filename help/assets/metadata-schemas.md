@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 9e94afeb-1c54-4653-bf52-b0910c0cb6c1
-source-git-commit: 1d7148e71e5a145a8dc62782e5f4dfb65e2a816b
+source-git-commit: a7da1deb71a7c6ebf9c73b8d33877fb56b73be47
 workflow-type: tm+mt
-source-wordcount: '2421'
+source-wordcount: '2453'
 ht-degree: 5%
 
 ---
@@ -105,13 +105,13 @@ Fliken **[!UICONTROL Build Form]** visar de formulärobjekt som du använder i s
 
 #### Redigera metadatakomponenten {#edit-the-metadata-component}
 
-Om du vill redigera egenskaperna för en metadatakomponent i formuläret klickar du på komponenten för att redigera alla eller en delmängd av följande egenskaper på fliken **[!UICONTROL Settings]**.
+Om du vill redigera egenskaperna för en metadatakomponent i formuläret klickar du på komponenten för att redigera alla eller en delmängd av följande egenskaper på fliken **[!UICONTROL Settings]**. Vi rekommenderar att du bara mappar ett fält till en viss egenskap i metadataschemat. I annat fall hämtas det senast tillagda fältet som är mappat till egenskapen av systemet.
 
 **Fältetikett**: Namnet på metadataegenskapen som visas på egenskapssidan för resursen.
 
 **Mappa till egenskap**: This property specifies the relative path to or name of the asset node where it is saved in the CRX database. Den börjar med `./` för att ange att sökvägen finns under objektets nod.
 
-Följande är giltiga värden för den här egenskapen:
+Nedan följer exempel på giltiga värden för en egenskap:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskapen `dc:title`.
 
