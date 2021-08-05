@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: c86760ed-169d-40f7-91a4-8aee449b286c
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 7ea0e6c2d277199fc5216aab70e587bd23ac6baa
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1003'
 ht-degree: 5%
 
 ---
@@ -101,13 +101,13 @@ Fliken **[!UICONTROL Build Form]** innehåller en lista över formulärobjekt so
 
 ### Redigera formulärobjekt {#editing-form-items}
 
-Om du vill redigera egenskaperna för formulärobjekt trycker/klickar du på komponenten och redigerar alla eller en delmängd av följande egenskaper på fliken **[!UICONTROL Settings]**.
+Om du vill redigera egenskaperna för formulärobjekt trycker/klickar du på komponenten och redigerar alla eller en delmängd av följande egenskaper på fliken **[!UICONTROL Settings]**. Vi rekommenderar att du bara mappar ett fält till en viss egenskap i metadataschemat. I annat fall hämtas det senast tillagda fältet som är mappat till egenskapen av systemet.
 
 **[!UICONTROL Field Label]**: Namnet på metadataegenskapen som visas på egenskapssidan för mappen.
 
 **[!UICONTROL Map to Property]**: This property specifies the relative path of the folder node in the CRX database where it is saved. Den börjar med **./**&quot;, vilket anger att sökvägen finns under mappens nod.
 
-Följande är giltiga värden för den här egenskapen:
+Nedan följer exempel på giltiga värden för en egenskap:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet i mappens metadatanod som egenskap  `dc:title`.
 
