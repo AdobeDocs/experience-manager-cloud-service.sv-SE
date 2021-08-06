@@ -2,9 +2,9 @@
 title: Funktionstestning - Cloud Services
 description: Funktionstestning - Cloud Services
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: 006fd74a9c4f4d5321bb3d0b35b5c9d49def7bc4
+source-git-commit: cf2e206b0ad186e0f4caa4a2ec9c34faf2078b76
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Om JAR-test inte skapas av bygget godkänns testet som standard.
 >[!NOTE]
 >Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md).
 
-## Anpassad gränssnittstestning {#custom-ui-testing}
+## Testning av anpassat användargränssnitt {#custom-ui-testing}
 
 AEM förser sina kunder med en integrerad uppsättning kvalitetsportar för Cloud Manager för att säkerställa smidiga uppdateringar av deras program. I synnerhet tillåter IT-testportar redan kunderna att skapa och automatisera sina egna tester som använder AEM API:er.
 
@@ -62,15 +62,27 @@ För att få sina gränssnittstester skapade och körda måste kunderna&quot;anm
 
 *Filnamn*: `testing.properties`
 
-*Innehåll*:  `one line: ui-tests.version=1`
+*Innehåll*:  `ui-tests.version=1`
 
 Om detta inte finns i den skapade `tar.gz`-filen, byggs gränssnittstesterna och körningarna hoppas över
+
+Om du vill lägga till `testing.properties`-filen i den inbyggda artefakten lägger du till en `include`-sats i `assembly-ui-test-docker-context.xml`-filen (i undermodulen för gränssnittstester):
+
+    &quot;
+    [..]
+    &lt;includes>
+    &lt;include>&lt;/include>
+    &lt;include>Dockerfilewait-for-grid.&lt;/include>
+    &lt;include>shtesting.properties&lt;/include> &lt;!- anmälningstestmodul i Cloud Manager —>
+    &lt;/includes>
+    [...]
+    &quot;
 
 >[!NOTE]
 >Produktionspipelinor som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs i detta avsnitt ska kunna användas. Detta innebär i princip att användaren måste redigera produktionsflödet och klicka på **Spara** i användargränssnittet även om inga ändringar gjorts.
 >Mer information om konfigurationen av pipeline finns i [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager).
 
-### Skriver funktionstester {#writing-functional-tests}
+### Skriva funktionstester {#writing-functional-tests}
 
 Funktionstester som skrivs av kunden måste paketeras som en separat JAR-fil som skapas av samma Maven-bygge som de artefakter som ska distribueras till AEM. I allmänhet är detta en separat Maven-modul. Den resulterande JAR-filen måste innehålla alla nödvändiga beroenden och skapas vanligtvis med maven-assembly-plugin med hjälp av jar-with-berodencies-beskrivningen.
 
