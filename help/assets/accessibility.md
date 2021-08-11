@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Tillgänglighet,Resurshantering
 role: User,Architect,Leader
 exl-id: a6d24ba6-3cb1-42cb-9942-f78572c93358
-source-git-commit: 2f9e8c00674979c4a245d410b68fd99c60eccfb4
+source-git-commit: 60acec6116f624188b484ffa1abd657cd4301e77
 workflow-type: tm+mt
 source-wordcount: '1896'
 ht-degree: 1%
@@ -60,7 +60,7 @@ Användare med funktionshinder förlitar sig ofta på maskinvara och programvara
 
 I [!DNL Experience Manager] uppfyller hjälpmedelsfunktionerna två viktiga krav för [!DNL Experience Manager]-användare och deras kunder.
 
-* För designers och kreatörer finns det funktioner för att skapa och publicera tillgängligt innehåll som i sin tur används av kunder och besökare på webbplatser. Innehållet kan användas av personer med funktionshinder med hjälp av hjälpmedelstekniker. Mer information finns i [riktlinjer för webbhjälpmedel](/help/onboarding/accessibility/web-accessibility.md).
+* För designers och kreatörer finns det funktioner för att skapa och publicera tillgängligt innehåll som i sin tur används av kunder och besökare på webbplatser. Innehållet kan användas av personer med funktionshinder med hjälp av hjälpmedelstekniker. Mer information finns i [riktlinjer för webbhjälpmedel](/help/compliance/accessibility/quick-guide-wcag.md).
 * [!DNL Experience Manager] gör det även möjligt för användare och administratörer med funktionshinder att få tillgång till användargränssnittet och kontrollerna för att skapa och hantera innehåll. Personer med funktionshinder kan använda hjälpmedelstekniker för att navigera, använda och hantera [!DNL Assets]-funktionen.
 
 Kärnfunktionerna i [!DNL Assets] är mer tillgängliga än tidigare och uppdateras regelbundet för att förbättra efterlevnaden av globala standarder. CRUD-åtgärderna i [!DNL Assets] har en viss grad av inbyggt hjälpmedel. DAM-arbetsflöden som att lägga till, hantera, söka efter och distribuera resurser är tillgängliga med hjälp av kortkommandon, skärmläsartext, färgkontrast och så vidare.
@@ -226,6 +226,6 @@ Använd följande metoder för att ge feedback, ställa frågor och begära prod
 >[!MORELIKETHIS]
 >
 >* [Versionsinformation om förbättringar som gjorts i varje release](/help/release-notes/release-notes-cloud/release-notes-current.md).
->* [[!DNL Adobe Experience Manager] hjälpmedelsvägledning](/help/onboarding/accessibility/web-accessibility.md).
+>* [[!DNL Adobe Experience Manager] hjälpmedelsvägledning](/help/compliance/accessibility/web-accessibility.md).
 >* [Överensstämmelserapporter (ACR) och VPAT-listor för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).
 
