@@ -2,14 +2,13 @@
 title: Konfigurera RTE för att skapa tillgängliga webbsidor och webbplatser.
 description: Lär dig konfigurera RTF-redigeraren för att skapa tillgängliga webbplatser i [!DNL Adobe Experience Manager].
 contentOwner: AG
-translation-type: tm+mt
-source-git-commit: 96c59974a868779df6979818bea0d942060cf5bc
+exl-id: 54050fc9-0348-4033-8e2b-b3897588cb62
+source-git-commit: e9c1ec6807f86ab00f89ef292a89a0c8efdf802b
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurera RTE för att skapa tillgängliga webbplatser {#configure-rte-accessible-sites}
 
@@ -38,7 +37,7 @@ Om du vill aktivera några eller alla funktioner för ett plugin-program konfigu
 
 ![CRXDE Lite med exempelplugin-programmet](assets/example-rteplugin-crxde-lite.png)
 
-### Exempel på hur du anger styckeformat som är tillgängliga i RTE-markeringsfältet {#example-specifying-paragraph-formats-available-in-rte-selection-field}
+### Exempel på hur du anger styckeformat i markeringsfältet för textredigering {#example-specifying-paragraph-formats-available-in-rte-selection-field}
 
 Nya semantiska blockformat är tillgängliga för markering.
 
@@ -49,7 +48,7 @@ Nya semantiska blockformat är tillgängliga för markering.
 
 Med strukturella element som är tillgängliga i textredigeraren via styckeformatalternativen är [!DNL Experience Manager] en bra grund för utveckling av hjälpmedelsanpassat innehåll. Innehållsförfattare kan inte använda textredigeraren för att formatera teckenstorlek, färger eller andra relaterade attribut, vilket förhindrar att textbunden formatering skapas. I stället kan författarna välja lämpliga strukturella element, t.ex. rubriker, och använda globala format som valts med alternativet Format för att säkerställa ren markering och fler alternativ för användare som bläddrar med egna formatmallar och korrekt strukturerat innehåll.
 
-## Användning av funktionen för källredigering {#use-of-the-source-edit-feature}
+## Användning av funktionen Källredigering {#use-of-the-source-edit-feature}
 
 I vissa fall måste innehållsförfattare granska och justera HTML-källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva mer kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med alternativet [källredigering](rich-text-editor.md#aboutplugins) i textredigeringsprogrammet. Du kan ange funktionen [`sourceedit` i `misctools`-plugin-programmet](rich-text-editor.md#aboutplugins).
 
@@ -148,6 +147,6 @@ In a `Table`, set the attribute to the DOM element or or remove it from the DOM 
 
 >[!MORELIKETHIS]
 >
->* [En snabbguide till WCAG-standarder](/help/onboarding/accessibility/quick-guide-wcag.md)
->* [Skapa tillgängligt innehåll i Experience Manager](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
+>* [En snabbguide till WCAG-standarder](/help/compliance/accessibility/quick-guide-wcag.md)
+* [Skapa tillgängligt innehåll i Experience Manager](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
 
