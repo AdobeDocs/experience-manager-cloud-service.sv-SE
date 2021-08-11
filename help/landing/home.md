@@ -2,7 +2,7 @@
 title: Användarhandböcker om Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om Adobe Experience Manager as a Cloud Service
 exl-id: 1dbeb42c-3c84-407a-bc7b-d9f0403ee73a
-source-git-commit: 560775956fbf8eb6376150e8fbf08af2ea9e5c1e
+source-git-commit: 390b06ab7bede2dfac9011ebd78f4dbd1dc62df4
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 73%
@@ -40,7 +40,7 @@ På den här sidan visas användarhandböckerna för självhjälp för Experienc
 * [HTML-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Dokumentation om Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html)
-* [GDPR-efterlevnad](/help/onboarding/data-privacy-and-protection-readiness/aem-readiness.md)
+* [GDPR-efterlevnad](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
