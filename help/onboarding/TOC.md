@@ -5,10 +5,10 @@ breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 feature: Distribuerar
 role: Architect, Developer
-source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
+source-git-commit: e4527b155179c50e1e423e7e835b3fcde3a4f2af
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '138'
+ht-degree: 43%
 
 ---
 
@@ -30,13 +30,6 @@ ht-degree: 0%
    + [Systemadministratörsuppgifter](what-is-required/add-users-assign-cm-roles.md)
    + [Navigera till Cloud Manager](what-is-required/navigate-to-cloud-manager.md)
    + [Bevilja användaråtkomst till en AEM instans](/help/onboarding/what-is-required/accessing-aem-instance.md)
-+ Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
-   + [AEM-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/aem-readiness.md)
-   + [AEM Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/foundation-readiness.md)
-   + [AEM Sites-kompatibilitet med föreskrifter om dataskydd och dataintegritet](data-privacy-and-protection-readiness/sites-readiness.md)
-+ Tillgänglighet {#accessibility}
-   + [AEM as a Cloud Service och riktlinjerna för webbtillgänglighet](accessibility/web-accessibility.md)
-   + [En snabbguide till WCAG 2.1](accessibility/quick-guide-wcag.md)
 + Migreringsmetod {#migration-methodology}
    + [Migrering till Adobe Experience Manager som Cloud Service](migration-methodology/getting-started.md)
 + Bästa praxis {#best-practices}
