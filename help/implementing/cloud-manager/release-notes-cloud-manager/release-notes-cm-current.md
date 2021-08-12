@@ -1,56 +1,51 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.7.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.7.0
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
 feature: Versionsinformation
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
+source-git-commit: 05cd993df7293691a0f8b91e9bde278ec7b7af69
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.7.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.8.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.7.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.8.0.
 
 >[!NOTE]
 >Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager som en Cloud Service klickar du [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.7.0 är 15 juli 2021.
-Nästa version är planerad till den 12 augusti 2021.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.8.0 är 12 augusti 2021.
+Nästa version är planerad till 9 september 2021.
 
 ### Nyheter {#what-is-new}
 
-* Kunderna kan nu använda Azul 8 och 11 JDK:er för sina Cloud Manager-byggprocesser och kan antingen välja att använda en av dessa JDK:er för verktygskedjor-kompatibla Maven-plugins *eller* hela Maven-processkörningen.
+* Cloud Service kan nu visa serviceavtalsrapporter (SLA) i Cloud Manager. Detta kommer att göras tillgängligt stegvis under de närmaste månaderna.
 
-* IP för utgående utgång loggas nu i loggfilen för byggsteget.
+* Typen och allvarlighetsgraden för kvalitetsreglerna IndexType och `IndexDamAssetLucene` har ändrats. Dessa är nu båda Bugs of Blocker *serverity*.
 
-* Scen- och produktionsmiljöer som kör äldre versioner av AEM rapporterar nu statusen **Tillgänglig uppdatering**.
+* Nya kvalitetsregler för Oak-index har införts för att omfatta asynkrona konfigurationer och kodkonfigurationer.
 
-* Det högsta antalet SSL-certifikat som stöds har ökat till 20 per program.
+* Öka det högsta antalet SSL-certifikat per program till 50.
 
-* Det maximala antalet domäner som kan konfigureras har ökat till 500 per miljö.
+* Självbetjäning som gör att användare kan skapa och hantera flera databaser via användargränssnittet i Cloud Manager.
 
-* Knapparna **Hantera Git** har ändrats till **Använd Git-information** och dialogrutan har uppdaterats visuellt.
+* SonarQube läste historikdata för Git i onödan. På stora kodbaser kan detta leda till en onödig prestandaförbättring.
+
+* Det finns nu ett API för att göra Maven-beroendecachen ogiltig per pipeline.
 
 * Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 28.
 
 ### Felkorrigeringar {#bug-fixes}
 
-* I vissa situationer var Förhandsgranskning inte ett tillgängligt alternativ när en IP-Tillåtelselista skulle bindas till en miljö.
+* Status för tillgänglig uppdatering ska inte visas när den senaste versionen är mindre än den aktuella versionen.
 
-* Manuell navigering till sidan med körningsinformation för en körning som inte finns visade inte på något fel, bara en oändlig inläsningsskärm.
+* Inledande introduktion misslyckades för nya organisationer med mycket långa namn.
 
-* Felmeddelandet som visades när det maximala antalet SSL-certifikat nåddes var inte till någon hjälp.
+* När en pipeline aktiveras två gånger av någon anledning resulterar det i att en av körningarna misslyckas med *det går inte att uppdatera pipelinekörningsstatus*-fel.
 
-* I vissa fall kan det finnas en diskrepans i releaseversionen som visas på pipeline-kortet på sidan **Översikt**.
-
-* Guiden Lägg till program angav felaktigt att namnet inte kan ändras efter att det har skapats.
-
-### Kända fel {#known-issues}
-
-Kunder som byter till Azul JDK bör vara medvetna om att inte alla befintliga program kompileras utan fel i Azul JDK. Vi rekommenderar att du testar lokalt innan du byter.
 
