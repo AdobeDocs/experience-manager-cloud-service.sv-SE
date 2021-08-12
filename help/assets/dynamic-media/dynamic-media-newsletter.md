@@ -4,9 +4,9 @@ description: 'Dynamic Media nyhetsbrev från Experience League är ett månatlig
 feature: Resurshantering
 role: User
 exl-id: 4c93b448-ff8b-4c63-9c9b-dca53cd1af20
-source-git-commit: af6ff1545c3aee8b67c47e97142419f1fdf0928e
+source-git-commit: 07f7ec3fae8af6739e49d5bce55a980aca391e06
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Titta på on-demand-webbinariet SKompetens Builder för Dynamic Media Classic.
    * Se Dynamic Media sessioner från Online Adobe Summit 2020.
    * Läs mer om Adobe kostnadsfria Dynamic Media Classic-revisioner.
-   * Möt John Monroe, Senior Program Manager för Customer Success Services.
+   * `John Monroe`, Senior Program Manager för Customer Success Services.
 
 * **[Februari 2020, utgåva 2](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
@@ -72,7 +72,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Gratis revision som hjälper dig att få ut mer av Dynamic Media Classic.
    * En rekordinställd semestersäsong för Adobe multimediekunder.
    * Guiden för att välja ett digitalt resurshanteringssystem (Digital Asset Manager) som uppfyller dina behov idag och förbereder dig för det som är nytt i multimedia imorgon.
-   * Möt Mark Dean, Digital Media Specialist.
+   * `Mark Dean`, Digital Media Specialist.
 
 * **[November 2019, utgåva 11](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_11_2019_Nov.html)**
 
@@ -103,7 +103,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Se hur Dynamic Media team kan hjälpa er att förbereda er för en dag med större trafik än normalt.
    * En andra chans att fånga två av de senaste webbinarierna i SKill Builder.
    * Titta på on-demand-webbinariet om hur du skyddar dina digitala resurser från piratkopiering.
-   * Möt Bridget Roman, Senior Product Marketing Manager för Experience Manager Assets.
+   * `Bridget Roman`, Senior Product Marketing Manager för Experience Manager Assets.
    * Kom igång med Dynamic Media och Dynamic Media Classic i Experience League.
 
 * **[Augusti 2019, utgåva 08](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_08_2019_Aug.html)**
