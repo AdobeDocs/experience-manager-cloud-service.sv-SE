@@ -5,9 +5,9 @@ contentOwner: AG
 feature: API:er,Resurser HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: f993148a9f678cfdaf0693e4964f02b9163cf2ff
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1433'
 ht-degree: 1%
 
 ---
@@ -185,7 +185,7 @@ Använd standardarbetsflödena med tillägg med anpassade steg för konfiguratio
 
 ## Stöd för arbetsflödessteg i efterbearbetningsarbetsflödet {#post-processing-workflows-steps}
 
-Om du uppgraderar från en tidigare version av [!DNL Experience Manager] kan du använda resursens mikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna är enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i [!UICONTROL DAM Update Asset]-arbetsflödet i den tidigare versionen stöds inte. Mer information om klasser som stöds finns i [Java API-referensen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html).
+Om du uppgraderar från en tidigare version av [!DNL Experience Manager] kan du använda resursens mikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna är enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i [!UICONTROL DAM Update Asset]-arbetsflödet i den tidigare versionen stöds inte. Mer information om klasser som stöds finns i [Java API-referensen eller Javadocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html).
 
 Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller så är support inte tillgänglig:
 
