@@ -2,10 +2,10 @@
 title: Program- och programtyper
 description: Program- och programtyper - Cloud Services
 exl-id: 507df619-a5b5-419a-9e38-db77541425a2
-source-git-commit: d7d138c7442ee8bee7a1ad69144b26d74d364eee
+source-git-commit: 81f891b579fc6fb5b6241e38fe5859605fe6f4e1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '329'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ Cloud Manager-programmet kommer att etableras automatiskt med sin egen Git-datab
 
 För att en användare ska få åtkomst till molnhanterarens Git-databas måste användaren använda en Git-klient med ett kommandoradsverktyg, en fristående visuell Git-klient eller användarens IDE som Eclipse, IntelliJ, NetBeans.
 
-När en Git-klient har konfigurerats kan du hantera din Git-databas via användargränssnittet i Cloud Manager. Mer information om hur du hanterar Git med hjälp av användargränssnittet i Cloud Manager finns i [Åtkomst till Git](/help/implementing/cloud-manager/accessing-git.md).
+När en Git-klient har konfigurerats kan du hantera din Git-databas via användargränssnittet i Cloud Manager. Mer information om hur du hanterar Git med hjälp av användargränssnittet i Cloud Manager finns i [Åtkomst till Git](/help/implementing/cloud-manager/accessing-repos.md).
 
 För att börja utveckla AEM Cloud-programmet måste en lokal kopia av programkoden göras genom att checka ut den från Cloud Manager-databasen till en plats på den lokala datorn där de vill skapa sin databas.
 
