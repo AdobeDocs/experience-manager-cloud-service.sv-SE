@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 14dc3b308a839040fdf2efe42d2fa4ce35253df0
+source-git-commit: 3f16144a95bdb3da08c15f15613031cdd069a977
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1404'
 ht-degree: 0%
 
 ---
@@ -182,6 +182,21 @@ Nästa version är planerad till den 12 augusti 2021.
 ### Kända fel {#known-issues-cm-july}
 
 Kunder som byter till Azul JDK bör vara medvetna om att inte alla befintliga program kompileras utan fel i Azul JDK. Vi rekommenderar att du testar lokalt innan du byter.
+
+## Content Transfer Tool {#content-transfer-tool}
+
+### Releasedatum {#release-date-ctt-latest}
+
+Releasedatum för Content Transfer Tool v1.5.6 är 11 augusti 2021.
+
+### Felkorrigeringar {#bug-fixes-ctt}
+
+* I vissa fall migrerades inte alla användare till målinstansen. För att få den här korrigeringen krävs CTT v1.5.6 tillsammans med aem-ethos-tools 1.2.354 eller senare version på AEM som en Cloud Service-instans.
+
+* Knappen **Stoppa inmatning** inaktiverades under hämtning till Publish-instansen. Detta är inte nödvändigt eftersom det inte finns något steg för monoåterställning vid publiceringsintag.
+
+* CTT rensade inte katalogen `/tmp` efter en lyckad extrahering. Detta kan leda till problem med diskutrymmet.
+
 
 ## Cloud Acceleration Manager {#cam}
 
