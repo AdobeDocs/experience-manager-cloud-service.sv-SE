@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: bcbb0cc739c3be8e39585dd752af1b1da801a434
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -107,6 +107,35 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
 
    ![](assets/configure-pipeline5.png)
 
+### Redigera en produktionspipeline {#editing-prod-pipeline}
+
+Du kan redigera pipelinekonfigurationerna på sidan **Programöversikt**.
+
+Följ stegen nedan för att redigera den konfigurerade pipeline:
+
+1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
+
+1. Klicka på **Redigera** på **Pipelines**-kortet.
+
+   ![](assets/configure-pipeline/edit-pipeline-1.png)
+
+1. På fliken **Källkod** kan du uppdatera databasen. Klicka på **Öppna repo-information** för att uppdatera databasen.
+
+   >[!NOTE]
+   >Mer information om hur du lägger till och hanterar databaser i Cloud Manager finns i [Lägga till och hantera databaser](/help/implementing/cloud-manager/cloud-manager-repositories.md#add-manage-repos).
+
+   ![](assets/configure-pipeline/edit-pipeline-2.png)
+
+
+1. På fliken **Miljö** kan du uppdatera scen- och produktionsalternativen.
+
+   ![](assets/configure-pipeline/edit-pipeline-3.png)
+
+1. Med alternativet **Experience Audit** kan du uppdatera eller lägga till nya sidor.
+
+   ![](assets/configure-pipeline/edit-pipeline-4.png)
+
+1. Klicka på **Spara** när du är klar med redigeringen av pipeline.
 
 ## Icke-produktion och endast kodkvalitet, rörledningar {#non-production-pipelines}
 
@@ -133,6 +162,22 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
    * **Build** - navigerar till körningssidan, från vilken pipelinen kan köras
    * **Åtkomst till**  upprepningsinformation - gör att användaren kan få den information som behövs för att komma åt Cloud Manager Git-databasen
    * **Lär dig mer**  - navigerar till att förstå CI/CD-pipeline-dokumentationsresursen.
+
+### Redigera en icke-produktionspipeline {#editing-nonprod-pipeline}
+
+Du kan redigera pipelinekonfigurationerna på sidan **Programöversikt**.
+
+Följ stegen nedan för att redigera den konfigurerade icke-produktionsflödet:
+
+1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
+
+1. Välj fliken **Icke-produktion** och klicka på **Redigera** när du har valt önskade pipelines.
+
+   ![](assets/configure-pipeline/non-prod-edit-1.png)
+
+1. Välj önskad databas och klicka på **Spara**.
+
+   ![](assets/configure-pipeline/non-prod-edit2.png)
 
 ## Nästa steg {#the-next-steps}
 
