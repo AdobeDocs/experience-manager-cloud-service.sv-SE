@@ -2,7 +2,7 @@
 title: Regelefterlevnad
 description: Regelefterlevnad
 exl-id: d346ad01-af00-48a1-96a4-e742369defff
-source-git-commit: d022b73d84d150c156695106f4a5fe2c75d90664
+source-git-commit: b994725c4af3c108aa7c957c8669181379b6728c
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 72%
@@ -15,11 +15,11 @@ På den här sidan visas självhjälpsresurser med information om efterlevnad i 
 
 ## Viktiga översiktsartiklar {#key-articles}
 
-* [Beredskap för dataskydd och dataintegritet](aem-readiness.md)
-* [Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](foundation-readiness.md)
-* [Sites-kompatibilitet med föreskrifter om dataskydd och dataintegritet](sites-readiness.md)
-* [Riktlinjer för webbtillgänglighet](web-accessibility.md)
-* [En snabbguide till WCAG 2.1](quick-guide-wcag.md)
+* [Beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
+* [Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)
+* [Sites-kompatibilitet med föreskrifter om dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/sites-readiness.md)
+* [Riktlinjer för webbtillgänglighet](/help/compliance/accessibility/web-accessibility.md)
+* [En snabbguide till WCAG 2.1](/help/compliance/accessibility/quick-guide-wcag.md)
 
 ## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
 
