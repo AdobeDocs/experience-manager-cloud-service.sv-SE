@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: bcbb0cc739c3be8e39585dd752af1b1da801a434
+source-git-commit: 5dfe46c6a5cacc3d1d3d863ed5990214d778a1e7
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
 
    ![](/help/implementing/cloud-manager/assets/non-prod-add.png)
 
-1. Klicka på knappen **Lägg till** för att ange namnet på pipelinen, typen av pipeline och Git-grenen.
+1. Klicka på knappen **Lägg till** för att ange namnet på pipeline, typen av pipeline och Git-grenen.
 
    Dessutom kan du konfigurera utlösare för distribution och Beteende för viktigt fel i alternativen för pipeline.
 
@@ -175,7 +175,7 @@ Följ stegen nedan för att redigera den konfigurerade icke-produktionsflödet:
 
    ![](assets/configure-pipeline/non-prod-edit-1.png)
 
-1. Välj önskad databas och klicka på **Spara**.
+1. Välj önskad databas och andra nödvändiga uppdateringar och klicka på **Spara**.
 
    ![](assets/configure-pipeline/non-prod-edit2.png)
 
