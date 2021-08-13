@@ -3,7 +3,7 @@ title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
 feature: Versionsinformation
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: d5e7354cb76369c36ee64866bcf8aa0c148ec472
+source-git-commit: d04194bd83ced844dffc94da35c996d363c5ba30
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Mer information finns i [SLA-rapportering](https://experienceleague.adobe.com/do
 
 * Det finns nu ett API för att göra Maven-beroendecachen ogiltig per pipeline.
 
-* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 28.
+* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 29.
 
 ### Felkorrigeringar {#bug-fixes}
 
