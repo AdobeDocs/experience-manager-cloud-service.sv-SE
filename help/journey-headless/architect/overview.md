@@ -4,9 +4,9 @@ description: Börja här för en guidad resa med de kraftfulla och flexibla head
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 41ad9e8ee77ae4494d28026b5ad9da45c06eaeaf
+source-git-commit: 498b07fda7ead201fd3afa601d67bd19c6ad96f7
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '655'
 ht-degree: 1%
 
 ---
@@ -52,3 +52,14 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 ## What&#39;s Next {#what-is-next}
 
 Du är nu redo att sätta igång med din resa utan Adobe Headless. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Innehållsmodellering för Headless med AEM - En introduktion](introduction.md).
+
+## Ytterligare resurser {#additional-resources}
+
+Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandahålla en berättelse som vägleder dig genom komplexa, sammanhörande processer och funktioner. En resa visar hur flera funktioner fungerar tillsammans för att tillgodose ett enda affärsbehov.
+
+Som sådana resor är utformade för att stå på egen hand. Ett antal av dem kan dock vara relaterade till varandra. Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
+
+* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md)  - Den här dokumentationsresan ger dig en bred förståelse för headless-teknik, hur AEM används för headless-innehåll och hur du kan översätta det.
+* [Headless Authoring Journey](/help/journey-headless/author/overview.md)  - Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du modellerar ditt innehåll i ditt första headless-projekt.
+* [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md)  - Börja här för en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
+* [AEM som teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)  för Cloud Service- Om du redan har en god förståelse för AEM och headless-teknik kan du behöva läsa våra tekniska dokument direkt.
