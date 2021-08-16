@@ -1,9 +1,9 @@
 ---
 title: AEM Headless Journeys
 description: Börja här för att få en översikt över de guidade resor som finns för att förstå AEM kraftfulla headless-funktioner.
-source-git-commit: bc56a739d8aa59d8474f47c9882662baacfdda84
+source-git-commit: 5cfe3bf09d0f91aa2eaa493f04ae0cde1f2541d4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -52,5 +52,7 @@ Följande dokumentationsresor är tillgängliga för ämnesområden.
 |---|---|---|
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Lär dig mer om headless-teknik, vad de ger användarupplevelsen, hur AEM stöder headless-modeller och hur du implementerar ett eget headless-utvecklingsprojekt från A till Z. | Utvecklare |
 | [Headless Translation Journey](/help/journey-headless/translation/overview.md) | Lär dig mer om headless-teknik, varför de kan användas i ditt projekt och hur du skapar och uppdaterar översättningsprojekt i AEM från A till Z. | Översättningsspecialister |
+| [Headless Authoring Journey](/help/journey-headless/author/overview.md) | Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan modellera ditt innehåll i ditt första headless-projekt. | Arkitekter |
+| [Headless Architect Journey](/help/journey-headless/architect/overview.md) | Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager som Cloud Service och hur du modellerar innehåll för ditt projekt. | Innehållsskapare och författare |
 
 Stanna kvar på de [kommande resorna som omfattar ytterligare roller.](/help/journey-documentation/home.md#journeys)
