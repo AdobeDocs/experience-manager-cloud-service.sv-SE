@@ -1,9 +1,9 @@
 ---
 title: AEM dokumentationsresor
 description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner för att lösa ett affärsmål på ett sätt som är beprövat med bästa praxis. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
-source-git-commit: bc56a739d8aa59d8474f47c9882662baacfdda84
+source-git-commit: 5cfe3bf09d0f91aa2eaa493f04ae0cde1f2541d4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1262'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,8 @@ Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom v
 | Resa | Beskrivning |
 |---|---|
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Börja här för att se hur AEM stöder headless-utvecklingsmodeller och hur du kan komma igång med ditt projekt från planering till implementering till publicering. |
-| Headless Authoring Journey | Börja här för att se hur du kan skapa och hantera headless-innehåll i AEM. |
+| [Headless Authoring Journey](/help/journey-headless/author/overview.md) | Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan modellera ditt innehåll i ditt första headless-projekt. |
+| [Headless Architect Journey](/help/journey-headless/architect/overview.md) | Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager som Cloud Service och hur du modellerar innehåll för ditt projekt. |
 | [Headless Translation Journey](/help/journey-headless/translation/overview.md) | Börja här för att se hur du konfigurerar och hanterar dina headless-översättningsprojekt i AEM. |
 | AEM på introduktionsresan | Kommer snart! |
 | AEM Commerce Journey | Kommer snart! |
