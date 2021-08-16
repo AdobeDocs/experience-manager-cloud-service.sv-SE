@@ -2,9 +2,9 @@
 title: Cloud Manager-databaser
 description: Cloud Manager-databaser
 exl-id: Cloud Manager Repositories
-source-git-commit: d2a8329fff12be6581f2ee2caf7f9764c765d0e6
+source-git-commit: cebc603aab9c558239588f574f52568d05081b34
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,9 @@ ht-degree: 0%
 # Cloud Manager-databaser {#cloud-manager-repos}
 
 Databaser som skapas och är tillgängliga i Cloud Manager kan visas och hanteras via sidan Databaser.
+
+>[!NOTE]
+>Det finns en gräns på 300 databaser i alla program i ett visst företag eller [Adobe Identity Management System](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/ims.html)).
 
 ## Lägga till och hantera databaser {#add-manage-repos}
 
@@ -32,6 +35,9 @@ Följ stegen nedan för att visa och hantera databaser i Cloud Manager:
    ![](assets/repos/repo-1.png)
 
 1. Välj **Spara**. Din nyskapade rapport visas i tabellen enligt nedan.
+
+   >[!NOTE]
+   >Det finns en enskild *primär*-databas eller en gren för en given pipeline. Med [stöd för Git-undermodul](#git-submodule-support) kan dock många sekundära grenar inkluderas vid byggtiden.
 
    ![](assets/repos/create-repo3.png)
 
