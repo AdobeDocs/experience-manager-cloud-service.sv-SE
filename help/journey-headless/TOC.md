@@ -5,9 +5,9 @@ breadcrumb-title: AEM Headless Developer Journey
 user-guide-description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt projekt.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: bcfe00727e443e2598beb4dbdeee90644447211c
+source-git-commit: 15ecba196c76acc0f11869ca8f91e9e268ea5601
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,11 @@ ht-degree: 0%
    + [Grundläggande om redigering för Headless med AEM](author/basics.md)
    + [Läs om hur du använder referenser i innehållsfragment](author/references.md)
    + [Läs om hur du definierar metadata och taggar för innehållsfragment](author/metadata-tagging.md)
++ AEM Headless Content Architect Journey {#content-architect}
+   + [AEM Headless Content Architect Journey Overview](architect/overview.md)
+   + [Innehållsmodellering för Headless med AEM - en introduktion](architect/introduction.md)
+   + [Lär dig grunderna i innehållsmodellering för Headless med AEM](architect/basics.md)
+   + [Läs om hur du skapar modeller för innehållsfragment i AEM](architect/model-structure.md)
 + AEM Headless Translation Journey {#translation}
    + [Förstå headless-lokalisering i AEM](translation/overview.md)
    + [Kom igång med AEM headless-lokalisering](translation/getting-started.md)
