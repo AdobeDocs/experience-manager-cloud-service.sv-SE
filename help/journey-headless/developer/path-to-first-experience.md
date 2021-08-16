@@ -1,19 +1,19 @@
 ---
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
-source-git-commit: ddd320ae703225584d4a2055d0f882d238d60987
+exl-id: 172ad8d8-5067-4452-bf91-1eea9a39a7bc
+source-git-commit: bc56a739d8aa59d8474f47c9882662baacfdda84
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '2016'
 ht-degree: 0%
 
 ---
 
-
-# Sökväg till din första upplevelse med AEM Headless {#path-to-first-experience}
+# Vägen till din första upplevelse med AEM utan headless {#path-to-first-experience}
 
 I den här delen av [AEM Headless Developer Journey,](overview.md), kommer du att förstå hur du implementerar din första headless-upplevelse av AEM, inklusive planeringsöverväganden, och även lära dig bästa praxis för att göra din väg så smidig som möjligt.
 
-## Berättelsen hittills {#story-so-far}
+## Story hittills {#story-so-far}
 
 I det föregående dokumentet om den AEM resan utan huvud, [Getting Started with AEM Headless as a Cloud Service](getting-started.md), lärde du dig den grundläggande teorin om vad ett headless CMS är och du bör nu:
 
@@ -40,7 +40,7 @@ Innan du fortsätter med det här dokumentet måste du kontrollera att du har gr
 * Uppfyll de angivna kraven.
 * Har tänkt på din egen projektdefinition, inklusive omfång, roller och prestanda.
 
-## Planering för lyckat {#planning-for-success}
+## Planering för lyckat resultat {#planning-for-success}
 
 För att starta ditt första AEM headless-projekt måste ni se till att ni har en innehållsmodell som stöder den personalisering och de uppdateringar ni vill göra i alla era kanaler.
 
@@ -50,11 +50,11 @@ Förutom AEM vill du också se till att du har en korrekt utvecklingsmiljö konf
 
 Ni vill skapa en enhetlig upplevelse och hantera personaliserade kampanjer i alla kanaler, så att ni kan se varje enskild kanal och yta som sin egen innehållsstruktur att leverera till. Det är dock en utmaning att behålla varje kanal med en egen innehållsmodell.
 
-Istället bör ni överväga hur innehåll på olika ytor är relaterat till en organiseringsprincip som varumärken och produkthierarkier, kategorier av varor eller ytor, eller steg i kundresan. Om du till exempel har en uppsättning ytor som stöder ett visst varumärke med bilar som du tillverkar, kanske du vill börja med en innehållsmodell för allmän information som skulle vara sann för hela bilen och sedan ha mer sammanhangsberoende specifika element, till exempel innehåll som behövs när bilen startar vid serviceproblem. En sådan modell kommer att genomdriva ett arv av allmänt varumärkesinnehåll samtidigt som den möjliggör förändringar baserat på det specifika sammanhang som behövs. Det hjälper även till med framtida hantering av uppdateringar av det här innehållet eftersom ni kan tillämpa kontroll baserat på roller som den övergripande marknadsföraren eller produktchefen för hela varumärket jämfört med en författare som ansvarar för upplevelsen av att starta bilen.
+Istället bör ni överväga hur innehåll på olika ytor är relaterat till en organiseringsprincip som varumärken och produkthierarkier, kategorier av varor eller ytor, eller steg i kundresan. Om du t.ex. har en uppsättning ytor som stöder ett visst varumärke med bilar som du tillverkar, kanske du vill börja med en innehållsmodell för allmän information som är sann för hela bilen och sedan har mer - specifika element som innehåll som behövs när bilen startar vid serviceproblem. En sådan modell kommer att genomdriva arv av allmänt varumärkesinnehåll samtidigt som den möjliggör förändringar baserat på det specifika sammanhang som behövs. Det hjälper även till med framtida hantering av uppdateringar av det här innehållet eftersom ni kan tillämpa kontroll baserat på roller som den övergripande marknadsföraren eller produktchefen för hela varumärket jämfört med en författare som ansvarar för upplevelsen av att starta bilen.
 
 När du har innehållsmodellen och en tydlig vy över de olika klienter som innehållet ska visas för, måste du se till att de GraphQL/API:er som är kopplade till åtkomsten till olika innehållsmodeller publiceras till alla klienter som behöver det här innehållet. Det finns olika sätt att komma åt visst innehåll. Du kan begära ett visst statiskt innehåll som möjliggör cachelagring av innehållet och högre prestanda. Du kan också begära dynamiskt genererat innehåll som kräver mer bearbetning. Se till att kunderna utnyttjar de API:er som är mest effektiva för deras affärsbehov.
 
-## Förstå dina miljöer {#understanding-environments}
+## Förstå era miljöer {#understanding-environments}
 
 Inom AEM finns det tre typer av miljöer: utveckling, staging och produktion.
 
@@ -111,7 +111,7 @@ Ett headless-projekt är inte bara framgångsrikt på grund av den teknik som an
 ### Skapa innehåll {#authoring}
 
 * För kanalspecifika versioner av ditt innehåll bör du överväga att använda variationer för innehållsfragment. Variationer synkroniseras mot det överordnad innehållet för att effektivisera hanteringen av innehållsändringar.
-* Bjud in andra innehållsproducenter att granska innehållet och ge feedback med anteckningar och kommentarer, som är tillgängliga i innehållsfragmentredigeraren och globalt över fragment i administratörskonsolen för innehållsfragment.
+* Bjud in andra innehållsproducenter att granska materialet och ge feedback med kommentarer och kommentarer som är tillgängliga i innehållsfragmentredigeraren och globalt över fragment i innehållsfragment Admin Console.
 * Håll saker i rörelse med så få obligatoriska element som möjligt. Obligatoriska element kan blockera arbetsflödet.
 
 ### Skapa globalt innehåll {#localization}
@@ -131,7 +131,7 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 
 Vi vill att du bygger vidare på denna grundläggande kunskap för att till fullo förstå styrkan och flexibiliteten hos AEM Headless så att du kan utnyttja den för dina egna projekt. För att göra detta har du alternativ.
 
-### Välj din egen äventyr {#choose-your-path}
+### Välj egen Adventure {#choose-your-path}
 
 Oavsett vilken inlärningsstil du har vill Adobe att du ska lyckas när du börjar med AEM Headless-projekt.
 
@@ -142,6 +142,7 @@ Oavsett vilken inlärningsstil du har vill Adobe att du ska lyckas när du börj
 
 Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att läsa dokumentet [How to Model Your Content as AEM Content Models,](model-your-content.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta den headless-resan.
 
+* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md)  - Den här dokumentationsresan ger dig en bred förståelse för headless-teknik, hur AEM används för headless-innehåll och hur du kan översätta det.
 * [Headless Development for AEM Sites as a Cloud Service](/help/implementing/developing/headless/introduction.md)  - En snabb introduktion som ger utvecklaren av AEM Headless de nödvändiga funktionerna
 * [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  - Använd dessa praktiska självstudiekurser för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless endpoints med AEM och välja vad som är rätt för dig.
 * [Headless Content Management Using GraphQL APIs](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) - Följ den här kursen för en översikt över GraphQL API som implementerats i AEM. Autentisering via AdobeID krävs.
