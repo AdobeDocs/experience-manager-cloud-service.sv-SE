@@ -1,11 +1,11 @@
 ---
-sub-product: AEM Headless Developer Journey
-user-guide-title: AEM Headless Developer Journey
-breadcrumb-title: AEM Headless Developer Journey
+sub-product: AEM Headless Journeys
+user-guide-title: AEM Headless Journeys
+breadcrumb-title: AEM Headless Journeys
 user-guide-description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt projekt.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: c4c6da1219a110ecfc7f24a19d3a775201fb8069
+source-git-commit: 498b07fda7ead201fd3afa601d67bd19c6ad96f7
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -13,8 +13,9 @@ ht-degree: 0%
 ---
 
 
-# AEM Headless Journey {#headless-journey}
+# AEM Headless Journeys {#headless-journey}
 
++ [AEM Headless Journeys](/help/journey-headless/home.md)
 + AEM Headless Developer Journey {#developer}
    + [Förstå Headless i AEM](developer/overview.md)
    + [Läs om CMS Headless Development](developer/learn-about.md)
