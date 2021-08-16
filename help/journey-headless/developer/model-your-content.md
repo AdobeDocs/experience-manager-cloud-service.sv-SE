@@ -1,21 +1,21 @@
 ---
 title: Så här modellerar du innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
-source-git-commit: dc1ed5c55cc17bcba97972bc79d04aa3530664e7
+exl-id: f052183d-18fd-4615-a81e-e45db5928fc1
+source-git-commit: 8107e6fdf4a1e4b49d0ab1ac213cfcf286c5dc86
 workflow-type: tm+mt
 source-wordcount: '1830'
 ht-degree: 0%
 
 ---
 
-
-# Så här modellerar du ditt innehåll {#model-your-content}
+# Så här modellerar du innehåll {#model-your-content}
 
 I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig att modellera innehållsstrukturen. Förverkliga sedan strukturen för Adobe Experience Manager (AEM) med Content Fragments Models och Content Fragments, för återanvändning i alla kanaler.
 
-## Berättelsen hittills {#story-so-far}
+## Story hittills {#story-so-far}
 
-I början av [Läs mer om CMS Headless Development](learn-about.md) täckte headless content delivery och varför den skulle användas. [Komma igång med AEM Headless som Cloud Service](getting-started.md) AEM Headless i ditt projekt
+I början av [Läs mer om CMS Headless Development](learn-about.md) täckte headless content delivery och varför den skulle användas. [Komma igång med AEM Headless som Cloud Service](getting-started.md) AEM Headless i ditt projekt.
 
 I det föregående dokumentet på den AEM resan utan rubrik, [Vägen till din första upplevelse med AEM Headless](path-to-first-experience.md), lärde du dig sedan de steg som krävs för att implementera ditt första projekt. Efter att ha läst den bör du:
 
@@ -110,7 +110,7 @@ Dataintegritet krävs för att garantera innehållets exakthet och enhetlighet u
 * validering av enskilda fält
 * vid behov begränsa innehållet i specifika fält till vad som är meningsfullt
 
-### Eliminerar dataredundans {#data-redundancy}
+### Eliminera redundans {#data-redundancy}
 
 Dataredundans inträffar när samma information lagras två gånger i innehållsstrukturen. Detta bör undvikas eftersom det kan leda till missförstånd när innehållet skapas och fel vid frågor. för att inte tala om missbruk av lagringsutrymme.
 
@@ -204,7 +204,7 @@ Datatypen kan konfigureras så att fragmentförfattare kan:
    * Redigera det refererade fragmentet direkt.
    * Skapa ett nytt innehållsfragment, baserat på lämplig modell
 
-### Skapar modeller för innehållsfragment {#creating-content-fragment-models}
+### Skapa modeller för innehållsfragment {#creating-content-fragment-models}
 
 Först måste du aktivera Content Fragment Models för platsen. Detta görs i Configuration Browser. under Verktyg -> Allmänt -> Konfigurationsläsaren. Du kan antingen välja att konfigurera den globala posten eller skapa en ny konfiguration. Till exempel:
 
