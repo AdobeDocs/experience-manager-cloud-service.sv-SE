@@ -2,10 +2,10 @@
 title: Information om projektinställningar
 description: Projektkonfigurationsinformation - Cloud Services
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: 596a7a41dac617e2fb57ba2e4891a2b4dce31fad
+source-git-commit: b9bb9e7b63a53ea1a6ce1e126285bb84c8351083
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '845'
+ht-degree: 7%
 
 ---
 
@@ -107,7 +107,7 @@ Om du bara vill få ut ett enkelt meddelande när bygget körs utanför Cloud Ma
 ## Lösenordsskyddat databasstöd för Maven {#password-protected-maven-repositories}
 
 >[!NOTE]
->Artefakter från en lösenordsskyddad Maven-databas bör endast användas mycket försiktigt eftersom kod som distribueras via den här mekanismen för närvarande inte körs via Cloud Managers Quality Gates. Därför bör det endast användas i sällsynta fall och för kod som inte är knuten till AEM. Du bör också distribuera Java-källorna samt hela projektets källkod tillsammans med binärfilen.
+>Artefakter från en lösenordsskyddad Maven-databas bör endast användas med försiktighet eftersom kod som distribueras via den här mekanismen för närvarande inte kan köras med alla kvalitetsregler som implementerats i Cloud Managers Quality Gates. Därför bör det endast användas i sällsynta fall och för kod som inte är knuten till AEM. Du bör också distribuera Java-källorna samt hela projektets källkod tillsammans med binärfilen.
 
 Om du vill använda en lösenordsskyddad Maven-databas från Cloud Manager anger du lösenordet (och eventuellt användarnamnet) som en hemlig Pipeline-variabel och refererar sedan till den hemligheten i en fil med namnet `.cloudmanager/maven/settings.xml` i Git-databasen. Filen följer schemat [Maven Settings File](https://maven.apache.org/settings.html). När Cloud Manager-byggprocessen startar sammanfogas elementet `<servers>` i den här filen med standardfilen `settings.xml` som tillhandahålls av Cloud Manager. Server-ID:n som börjar med `adobe` och `cloud-manager` betraktas som reserverade och bör inte användas av anpassade servrar. Server-ID:n **inte** som matchar något av dessa prefix, eller standard-ID:t `central` kommer aldrig att speglas av Cloud Manager. När den här filen är på plats refereras server-ID:t inifrån ett `<repository>`- och/eller `<pluginRepository>`-element i `pom.xml`-filen. I allmänhet finns dessa `<repository>`- och/eller `<pluginRepository>`-element i en [Cloud Manager-specifik profil](#activating-maven-profiles-in-cloud-manager), även om det inte är absolut nödvändigt.
 
