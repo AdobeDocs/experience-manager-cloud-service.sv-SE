@@ -1,9 +1,10 @@
 ---
 title: AEM Headless Content Architect Journey
 description: En introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager som Cloud Service och hur du modellerar innehåll för ditt projekt.
+index: false
 hide: true
 hidefromtoc: true
-source-git-commit: d0e870f5e49580bb95d347092a2ece4c2497a1c9
+source-git-commit: 41ad9e8ee77ae4494d28026b5ad9da45c06eaeaf
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 0%
