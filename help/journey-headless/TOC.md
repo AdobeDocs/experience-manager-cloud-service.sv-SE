@@ -5,7 +5,7 @@ breadcrumb-title: AEM Headless Developer Journey
 user-guide-description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt projekt.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: 15ecba196c76acc0f11869ca8f91e9e268ea5601
+source-git-commit: c4c6da1219a110ecfc7f24a19d3a775201fb8069
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -38,9 +38,9 @@ ht-degree: 0%
    + [Lär dig grunderna i innehållsmodellering för Headless med AEM](architect/basics.md)
    + [Läs om hur du skapar modeller för innehållsfragment i AEM](architect/model-structure.md)
 + AEM Headless Translation Journey {#translation}
-   + [Förstå headless-lokalisering i AEM](translation/overview.md)
-   + [Kom igång med AEM headless-lokalisering](translation/getting-started.md)
-   + [Lär dig mer om headless-innehåll och hur du lokaliserar i AEM](translation/learn-about.md)
+   + [Förstå headlessöversättning i AEM](translation/overview.md)
+   + [Kom igång med AEM headless translation](translation/getting-started.md)
+   + [Lär dig mer om headless-innehåll och hur du översätter i AEM](translation/learn-about.md)
    + [Konfigurera översättningskoppling](translation/configure-connector.md)
    + [Konfigurera översättningsregler](translation/translation-rules.md)
    + [Översätta innehåll](translation/translate-content.md)
