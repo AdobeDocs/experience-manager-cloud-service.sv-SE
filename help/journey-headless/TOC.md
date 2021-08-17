@@ -5,7 +5,7 @@ breadcrumb-title: AEM Headless Journeys
 user-guide-description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt projekt.
 feature: Utvecklarverktyg
 role: Developer, Architect
-source-git-commit: 498b07fda7ead201fd3afa601d67bd19c6ad96f7
+source-git-commit: fe1d8f29e59f1f54c4f8e3a419103926005c0e48
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -27,17 +27,17 @@ ht-degree: 0%
    + [Hur man sammanför allt](developer/put-it-all-together.md)
    + [Så här lever du med ditt headless-program](developer/go-live.md)
    + [Valfritt - Så här skapar du enkelsidiga program med AEM](developer/create-spa.md)
-+ AEM Headless Content Author Journey {#content-author}
++ AEM Headless Content Architect Journey {#architect}
+   + [AEM Headless Content Architect Journey Overview](architect/overview.md)
+   + [Innehållsmodellering för Headless med AEM - en introduktion](architect/introduction.md)
+   + [Lär dig grunderna i innehållsmodellering för Headless med AEM](architect/basics.md)
+   + [Läs om hur du skapar modeller för innehållsfragment i AEM](architect/model-structure.md)
++ AEM Headless Content Author Journey {#author}
    + [AEM Headless Content Author Journey - översikt](author/overview.md)
    + [Om du skriver för Headless med AEM - en introduktion](author/introduction.md)
    + [Grundläggande om redigering för Headless med AEM](author/basics.md)
    + [Läs om hur du använder referenser i innehållsfragment](author/references.md)
    + [Läs om hur du definierar metadata och taggar för innehållsfragment](author/metadata-tagging.md)
-+ AEM Headless Content Architect Journey {#content-architect}
-   + [AEM Headless Content Architect Journey Overview](architect/overview.md)
-   + [Innehållsmodellering för Headless med AEM - en introduktion](architect/introduction.md)
-   + [Lär dig grunderna i innehållsmodellering för Headless med AEM](architect/basics.md)
-   + [Läs om hur du skapar modeller för innehållsfragment i AEM](architect/model-structure.md)
 + AEM Headless Translation Journey {#translation}
    + [Förstå headlessöversättning i AEM](translation/overview.md)
    + [Kom igång med AEM headless translation](translation/getting-started.md)
