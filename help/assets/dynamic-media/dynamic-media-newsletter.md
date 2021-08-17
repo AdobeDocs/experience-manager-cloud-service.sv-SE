@@ -4,9 +4,9 @@ description: 'Dynamic Media nyhetsbrev från Experience League är ett månatlig
 feature: Resurshantering
 role: User
 exl-id: 4c93b448-ff8b-4c63-9c9b-dca53cd1af20
-source-git-commit: 07f7ec3fae8af6739e49d5bce55a980aca391e06
+source-git-commit: 0cc54dd3590792b6842af030f4bb5b87e3c0fbe8
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1053'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
     * Connect with the Adobe Experience Manager Community.
     * Fast-track your Adobe expertise with Adobe Experience League. -->
 
-* **[April 2020, utgåva 3](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2020_April.html)**
+* **[April 2020, utgåva 3](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_04_2020_April.html)**
 
    I detta nummer:
 
@@ -64,7 +64,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Läs om det nya användargränssnittet för Dynamic Media Classic.
    * `Georgia Myers`, chef för Customer Success for Adobe Experience Cloud.
 
-* **[Januari 2020, utgåva 1](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_01_2020_Jan.html)**
+* **[Januari 2020, utgåva 1](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_01_2020_Jan.html)**
 
    I detta nummer:
 
@@ -74,7 +74,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Guiden för att välja ett digitalt resurshanteringssystem (Digital Asset Manager) som uppfyller dina behov idag och förbereder dig för det som är nytt i multimedia imorgon.
    * `Mark Dean`, Digital Media Specialist.
 
-* **[November 2019, utgåva 11](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_11_2019_Nov.html)**
+* **[November 2019, utgåva 11](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_11_2019_Nov.html)**
 
    I detta nummer:
 
@@ -84,7 +84,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Dela nyhetsbrevet med dina kollegor för att bygga upp teamets expertis.
    * `Apoorva Gupta`, Senior Product Manager, Dynamic Media.
 
-* **[Oktober 2019, utgåva 10](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_10_2019_Oct.html)**
+* **[Oktober 2019, utgåva 10](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_10_2019_Oct.html)**
 
    I detta nummer:
 
@@ -95,7 +95,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Träffa `Nick Peters`, chef, Site Reliable Engineering, Adobe Experience Manager.
    * Kom igång med Dynamic Media och Dynamic Media Classic i Experience League.
 
-* **[September 2019, utgåva 09](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_09_2019_Sept.html)**
+* **[September 2019, utgåva 09](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_09_2019_Sept.html)**
 
    I detta nummer:
 
@@ -106,7 +106,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * `Bridget Roman`, Senior Product Marketing Manager för Experience Manager Assets.
    * Kom igång med Dynamic Media och Dynamic Media Classic i Experience League.
 
-* **[Augusti 2019, utgåva 08](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_08_2019_Aug.html)**
+* **[Augusti 2019, utgåva 08](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_08_2019_Aug.html)**
 
    I detta nummer:
 
@@ -116,7 +116,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Få en smygtitt på den kraftfulla integrering som kommer i september och som låter er analysera hur besökarna interagerar med ert multimediematerial.
    * `PieterJan Pieper`, Dynamic Media tekniska support wiz.
 
-* **[Juli 2019, utgåva 07](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**
+* **[Juli 2019, utgåva 07](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_07_2019_July.html)**
 
    I detta nummer:
 
@@ -127,7 +127,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Lägga till 360-gradersvideor och anpassade videominiatyrer på webbplatsen.
    * `Andrew Hathaway`, Principal Solutions Consultant for Dynamic Media inom Experience Manager Assets.
 
-* **[Juni 2019, utgåva 06](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_06_2019_June.html)**
+* **[Juni 2019, utgåva 06](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_06_2019_June.html)**
 
    I detta nummer:
 
@@ -138,7 +138,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Lär dig mer om AI-driven Smart Crop för bilder.
    * Möt `Alex Thiers`, en av drivkrafterna bakom många av de fantastiska funktionerna och innovationerna i Dynamic Media och Dynamic Media Classic.
 
-* **[maj 2019, utgåva 05](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_05_2019_May.html)**
+* **[maj 2019, utgåva 05](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_05_2019_May.html)**
 
    I detta nummer:
 
@@ -148,7 +148,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Läs en bloggserie i tre delar om du vill uppdatera din multimediestrategi.
    * Lär dig mer om AI-styrd videoredigering med smart beskärning.
 
-* **[April 2019, utgåva 04](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2019_April.html)**
+* **[April 2019, utgåva 04](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_04_2019_April.html)**
 
    Välkommen till utgåvan av Dynamic Media Newsletter. Adobe nya månatliga nyhetsbrev innehåller nyheter, evenemang och resurser. Innehållet är avsett för användare av Dynamic Media i Experience Manager Assets och Adobe Dynamic Media Classic.
 
