@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Resurshantering,Återgivningar
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 4b7dc19d691e8077600f56ce57dc72749f157234
+source-git-commit: 0c2c69423a042f6ef5b0dd0a2bdbcacc7103ddae
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 5%
+source-wordcount: '784'
+ht-degree: 6%
 
 ---
 
@@ -213,12 +213,8 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft Video 1 (MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | OGV, OGG | Ogg | Theora, VP3, Dirac | - |
-| MXF | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
-| MTS | AVCHD | H264/AVC | - |
 | MKV | Matroska | H264/AVC | - |
-| R3D, RM | Red Raw-video | MJPEG 2000 | - |
 | RAM, RM | RealVideo | Stöds inte | Real G2 (RV20), Real 8 (RV30), Real 10 (RV40) |
-| FLAC | Inbyggd Flash | Kostnadsfri förlustfri ljudkodek | - |
 | MJ2 | Motion JPEG 2000 | Motion JPEG 2000-kodek | - |
 
 ## Ljudformat {#audio-formats}
