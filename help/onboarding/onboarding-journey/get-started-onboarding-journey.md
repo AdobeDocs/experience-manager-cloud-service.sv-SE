@@ -4,7 +4,7 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 037add45b8dd11422f771057839b17eaaed1d2fe
+source-git-commit: 1ce3849cee513d061df0664ca50d400e6cf41a8d
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Kom igång med introduktionsprocessen {#getting-started}
 
-Onboarding är den process under vilken en utsedd [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) konfigurerar AEM som en Cloud Service för din organisation. Detta innefattar inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service.
+Onboarding är den process under vilken en utsedd [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) konfigurerar AEM som en Cloud Service för din organisation. Detta inkluderar inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Därför kan varje medlem logga in och komma åt sina AEM som en Cloud Service.
 
 ## Syfte {#objective}
 
@@ -33,7 +33,7 @@ När du har läst det här avsnittet ska du kunna:
 Följ stegen nedan för att navigera till Admin Console och granska din systemadministratörsroll från Admin Console:
 
 >[!NOTE]
->Du måste vara systemadministratör för att kunna slutföra följande steg.
+>Du måste vara systemadministratör för att kunna utföra följande steg.
 
 1. Klicka på **Kom igång** i ditt välkomstmeddelande, som visas i figuren nedan, för att navigera till Admin Console eller direkt till Admin Console från [här](https://adminconsole.adobe.com).
 
@@ -55,11 +55,11 @@ Följ stegen nedan för att navigera till Admin Console och granska din systemad
 
    ![](/help/onboarding/onboarding-journey/assets/get-started2.png)
 
-1. När du klickar på **Administratörer** på **kortet Användare** i det föregående steget kan du söka genom att ange din Adobe ID-e-postadress, ditt användarnamn, för- eller efternamn.
+1. När du klickar på **Administratörer** på **kortet Användare** kan du söka genom att ange din Adobe ID-e-postadress, ditt användarnamn, för- eller efternamn.
 
    ![](/help/onboarding/onboarding-journey/assets/get-started3.png)
 
-1. Sökningen måste returnera din e-postpost med **System** under kolumnen **ADMIN ROLE**, som visas nedan. Detta bekräftar att du är systemadministratör.
+1. Sökningen måste hitta din e-postpost. Dessutom måste ADMIN ROLE **visa** System **enligt nedan.** Detta bekräftar att du är systemadministratör. Detta bekräftar din roll som systemadministratör.
 
    ![](/help/onboarding/onboarding-journey/assets/get-started4.png)
 
