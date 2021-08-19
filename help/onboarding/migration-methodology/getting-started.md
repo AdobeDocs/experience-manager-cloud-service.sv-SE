@@ -2,9 +2,9 @@
 title: Migrering till Experience Manager som Cloud Service
 description: Migrering till Experience Manager som Cloud Service
 exl-id: 4d1addcf-b22d-41a3-ba5c-e5c42244e5cd
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: c5b98c25ec8999c36e2aa44266ca42150c3b2906
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2105'
 ht-degree: 7%
 
 ---
@@ -53,10 +53,10 @@ Se självhjälpsresurser om implementering för Experience Manager som Cloud Ser
 
 | Lokal utveckling | Saker att veta innan du börjar |
 |-----------|------------|
-| <ol><li>Läs [dokumentationen för Adobe Experience Manager SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#developing) om du vill veta mer.</li><li>Titta på [Installera Dispatcher SDK](https://video.tv.adobe.com/v/30601) om du vill veta hur du installerar Dispatcher SDK</li><li>Titta på [Konfigurera Dispatcher SDK](https://video.tv.adobe.com/v/30602) för att förstå hur du konfigurerar Dispatcher SDK</li><li>Läs [dokumentationen till den lokala utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up) om du vill veta mer</li><li>Konfigurerar åtkomst till Experience Manager [genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html?lang=en#accessing)</li></ol> | <ol><li>[Grundläggande om utveckling](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#developing)</li><li>[Utvecklingsriktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#developing)</li><li>[Om projektstrukturen Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=en#developing)</li><li>[Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)</li><li>[Digital Foundation Blueprint](https://solutionpartners.adobe.com/content/dam/spp_assets/restricted/community/community_31/digital_foundation_best_practices_and_documentation.zip)</li><li>[Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=en#authoring)</li><li>[Övertäckningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/overlays.html?lang=en#developing)</li><li>[Experience Manager som Cloud Service-API-referens](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/)</li></ol> |
+| <ol><li>Läs [dokumentationen för Adobe Experience Manager SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#developing) om du vill veta mer.</li><li>Titta på [Installera Dispatcher SDK](https://video.tv.adobe.com/v/30601) om du vill veta hur du installerar Dispatcher SDK</li><li>Titta på [Konfigurera Dispatcher SDK](https://video.tv.adobe.com/v/30602) för att förstå hur du konfigurerar Dispatcher SDK</li><li>Läs [dokumentationen till den lokala utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up) om du vill veta mer</li><li>Konfigurerar åtkomst till Experience Manager [genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html?lang=en#accessing)</li></ol> | <ol><li>[Grundläggande om utveckling](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#developing)</li><li>[Utvecklingsriktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#developing)</li><li>[Om projektstrukturen Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=en#developing)</li><li>[Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)</li><li>[Digital Foundation Blueprint](https://solutionpartners.adobe.com/content/dam/spp_assets/restricted/community/community_31/digital_foundation_best_practices_and_documentation.zip)</li><li>[Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=en#authoring)</li><li>[Övertäckningar](/help/implementing/developing/introduction/overlays.md)</li><li>[Experience Manager som Cloud Service-API-referens](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/)</li></ol> |
 
 >[!TIP]
-> Se självstudiekurs om hur du [utvecklar och distribuerar WKND på lokal Experience Manager SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en)
+> Se självstudiekurs om hur du [utvecklar och distribuerar WKND på lokal Experience Manager SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
 ### Distribuerar
 
@@ -99,7 +99,7 @@ Se självhjälpsresurser om hur du konfigurerar och distribuerar till AEM som en
 
 <br>
 
-## Flyttar till Adobe Experience Manager som Cloud Service {#move-to-cloud}
+## Gå till Adobe Experience Manager som Cloud Service {#move-to-cloud}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_move_to_cloud"
