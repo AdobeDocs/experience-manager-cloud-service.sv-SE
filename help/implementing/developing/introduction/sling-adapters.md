@@ -2,9 +2,9 @@
 title: Använda Sling-adaptrar
 description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 exl-id: 8ffe3bbd-01fe-44c2-bf60-7a4d25a6ba2b
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: 04767681216ebee845fa6120e3da8db8e105f68f
 workflow-type: tm+mt
-source-wordcount: '2232'
+source-wordcount: '2234'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Om du till exempel vill översätta ett Resource-objekt till motsvarande Node-ob
 Node node = resource.adaptTo(Node.class);
 ```
 
-## Använd fall {#use-cases}
+## Användningsexempel {#use-cases}
 
 Det finns följande användningsområden:
 
@@ -29,7 +29,7 @@ Det finns följande användningsområden:
 
 * Skapa genvägar för objekt som kräver att interna kontextobjekt skickas.
 
-   Den JCR-baserade [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) innehåller till exempel en referens till förfrågningens [`JCR Session`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html), som i sin tur behövs för många objekt som ska fungera baserat på den begärandesessionen, till exempel [`PageManager`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html) eller [`UserManager`](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/security/UserManager.html).
+   Den JCR-baserade [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) innehåller till exempel en referens till förfrågningens [`JCR Session`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html), som i sin tur behövs för många objekt som ska fungera baserat på den begärandesessionen, till exempel [`PageManager`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html) eller [`UserManager`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/security/UserManager.html).
 
 * Genväg till tjänster.
 
