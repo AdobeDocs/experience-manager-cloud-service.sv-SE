@@ -2,10 +2,10 @@
 title: Implementeringsfas
 description: Implementeringsfas
 exl-id: 176dd79d-0d72-443c-87db-dab24fb48b96
-source-git-commit: fadab55c0fb743cb0ce7102686b2f3f10f93d73b
+source-git-commit: 82e22f0a0684491b5071fa232a0f90fb87da6992
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 89%
+source-wordcount: '943'
+ht-degree: 90%
 
 ---
 
@@ -98,7 +98,7 @@ Körningar av pipeline för Cloud Manager för Cloud Services stöder körning a
 
 Läs [Kodkvalitetstestning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/understand-test-results.html#code-quality-testing) om du vill veta hur du skriver testskript och om rekommenderad täckning på minst 50 %.
 
-Läs även [Förstå regler för anpassad kodkvalitet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-code-quality-rules.html) om du vill veta mer om regler för anpassad kodkvalitet som körs av Cloud Manager och som skapats utifrån bästa praxis från AEM Engineering.
+Läs även [Förstå regler för anpassad kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) om du vill veta mer om regler för anpassad kodkvalitet som körs av Cloud Manager och som skapats utifrån bästa praxis från AEM Engineering.
 
 Användning av Cloud Manager är den enda mekanismen för att driftsätta kod till Cloud Service-miljöer.
 
