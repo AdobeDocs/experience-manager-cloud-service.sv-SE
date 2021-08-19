@@ -4,16 +4,16 @@ description: Följ den här sidan för att lära dig hur du konfigurerar molnres
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 058622fd2628656c7b2fb3a02445724ca6a62f3b
+source-git-commit: 5f599eb877565c65aad3d54af411bd8d40f4580d
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
 
 # Konfigurera molnresurser via Cloud Manager {#setup-cloud-resources}
 
-Den systemadministratör som tilldelats rollen *Business Owner* bör ha åtkomst till och logga in på Cloud Manager. Därefter måste en teammedlem som tilldelats produktprofilen *Business Owner* logga in i Cloud Manager och skapa ditt molnprogram och dina miljöer så att ditt expertteam kan komma igång.
+Den systemadministratör som tilldelats rollen Business Owner ska ha åtkomst till och logga in i Cloud Manager. Därefter måste en teammedlem som tilldelats produktprofilen Business Owner logga in på Cloud Manager och skapa ditt molnprogram och miljöer så att ditt expertteam kan komma igång.
 
 ## Syfte {#objective}
 
@@ -21,7 +21,7 @@ Det här dokumentet hjälper dig att förstå hur dina molnresurser skapas och v
 
 När du har läst det här avsnittet bör du förstå:
 
-* En systemadministratör som tilldelats rollen *Business Owner* måste vara den första som får åtkomst till och loggar in på Cloud Manager.
+* En systemadministratör som tilldelats rollen Business Owner måste vara den första som har åtkomst till och loggar in på Cloud Manager.
 * Hur ditt molnprogram och dina miljöer skapas.
 
 ## Introduktion {#introduction}
@@ -32,19 +32,17 @@ Följ nedanstående avsnitt för att lära dig hur du skapar dina [molntjänstpr
 
 ### Krav {#prerequisites}
 
-* Den systemadministratör som tilldelats rollen *Business Owner* bör ha åtkomst till och logga in på Cloud Manager.
+* Den systemadministratör som tilldelats rollen Business Owner ska ha åtkomst till och logga in i Cloud Manager.
 
 * Lär dig hur du [navigerar och loggar in på Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/what-is-required/navigate-to-cloud-manager.html?lang=en).
 
 * Läs om [Cloud Manager-produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#cloud-manager-product-profiles).
 
-* Förstå vad du bör tänka på när du skapar programmet. I den här videon får du veta mer.
-
 * Förstå begreppen i Cloud Manager [program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/understand-program-types.html?lang=en) och [miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en)
 
 ## Navigera till Cloud Manager {#navigate-cloud-manager}
 
-*Business Owner*-användaren får ett välkomstmeddelande där de kan komma igång, eller om de inte kan hitta det går du direkt till [Adobe Experience Cloud](https://experience.adobe.com) och loggar in med din Adobe ID.
+Business Owner-användaren får ett välkomstmeddelande med en länk för att komma igång, eller om de inte hittar det går du direkt till [Adobe Experience Cloud](https://experience.adobe.com) och loggar in med din Adobe ID.
 
 Följ stegen nedan för att navigera till Cloud Manager:
 
@@ -54,7 +52,7 @@ Följ stegen nedan för att navigera till Cloud Manager:
 1. Du går till sidan **Program och produkter** i Cloud Manager.
 
    >[!IMPORTANT]
-   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Bokmärk den här sidan för framtida bruk och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
+   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Bokmärk den här sidan för framtida referens och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
 
 1. Du dirigeras till Cloud Managers landningssida. Mer information finns i [Visa Cloud Managers programavsnitt](#viewing-programs).
 
@@ -100,7 +98,7 @@ Om det redan finns program i organisationen, och du är systemadministratör, vi
 
 ## Verifiera dina användarroller {#verify-user-roles}
 
-När du har loggat in på Cloud Manager följer du stegen nedan för att verifiera att du har tilldelats produktprofilen Business Owner:
+När du har loggat in på Cloud Manager följer du stegen nedan för att verifiera att du har tilldelats produktprofilen för företagsägare:
 
 1. Välj din profil högst upp till höger, enligt nedan.
 
@@ -166,14 +164,14 @@ Följ stegen nedan för att skapa molnmiljöer från Cloud Manager:
 
    Titta dessutom på den snabba självstudiekursen [video](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en) för att lära dig mer om Cloud Manager-miljöer och hur du kan lägga till dem i ditt program.
 
-1. Detta startar guiden för att lägga till miljö som hjälper dig att lägga till din miljö. Lägg till din utvecklingsmiljö först för att bekanta dig. Mer information finns i [Lägga till en miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#adding-environments).
+1. Detta startar guiden för att lägga till miljö som vägleder dig genom att lägga till din miljö. Lägg till utvecklingsmiljön först för att bekanta dig med guiden. Mer information finns i [Lägga till en miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#adding-environments).
 
    >[!NOTE]
    >Om du inte redan har gjort det är det ett bra tillfälle att lägga till dina utvecklarmedlemmar i ditt Cloud Manager-team nu. Se Lägga till användare i produktprofilen för utvecklare och följ stegen som beskrivs ovan.
 
 1. Medlemmar som är tilldelade till produktprofilen för utvecklare kan logga in på Cloud Manager och [Hantera Cloud Manager Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en).
 
-   Bra jobbat! Nu när ditt program har skapats är din Cloud Manager Git tillgänglig för dina utvecklare!
+   Bra jobbat! Nu har ditt program skapats och din Cloud Manager Git är tillgänglig för dina utvecklare!
 
    Grattis! Nu har dina molnmiljöer skapats och dina utvecklare har lagts till i teamet!
 
