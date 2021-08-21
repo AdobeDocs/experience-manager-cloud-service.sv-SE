@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: ae8e5bde38472f4d9bce0e69bf70acbef5932146
+source-git-commit: 85cf0d69fcc3dcaadf3259576d277698eeb826fe
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '820'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ När du har läst det här avsnittet bör du förstå:
 
 ## Introduktion {#introduction}
 
-För att få åtkomst till AEM som Cloud Service måste användare tillhöra en av två produktprofiler, till exempel `AEM Users` eller `AEM Administrators`. Teammedlemmarna måste beviljas behörigheter till AEM eftersom behörighet att administrera Cloud Manager inte räcker. Läs mer.
+För att få tillgång till AEM som Cloud Service måste användarna höra till en av två produktprofiler:  `AEM Users` eller `AEM Administrators`. Teammedlemmarna måste beviljas behörigheter till AEM eftersom behörighet att administrera Cloud Manager inte räcker. Läs mer.
 
 >[!NOTE]
 >Alla användare som tilldelas AEM användarproduktprofilen av systemadministratören har (skrivskyddad) åtkomst till Cloud Manager.
