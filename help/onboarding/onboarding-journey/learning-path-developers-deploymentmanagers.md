@@ -4,9 +4,9 @@ description: Följ den här sidan om du vill lära dig nästa steg efter att du 
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: ae8e5bde38472f4d9bce0e69bf70acbef5932146
+source-git-commit: 85cf0d69fcc3dcaadf3259576d277698eeb826fe
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper utvecklare och distributionsansvariga att få tillgång till Cloud Manager och bekanta sig med hur de kan förbereda sig för utbildningsvägar.
+Det här dokumentet hjälper utvecklare och distributionsansvariga att få tillgång till Cloud Manager och lära sig hur de kan förbereda sig för sin utbildningsväg.
 
 När du har läst det här dokumentet bör du:
 
@@ -33,23 +33,25 @@ Om du läser det här avsnittet är du troligtvis tilldelad en produktprofil fö
 
 ## Krav {#prerequisites}
 
-Systemadministratören har tilldelat utvecklare och distributionsansvariga till sina respektive produktprofiler. Utvecklare måste dessutom tilldelas produktprofilen AEM användare eller AEM administratörer.\
-Molnresurser har konfigurerats.
-Du förstår hur du navigerar och loggar in i Cloud Manager
+Innan du börjar bör du kontrollera följande:
 
-## Hantera Git {#manage-git}
+* Systemadministratören har tilldelat utvecklare och distributionsansvariga till sina respektive produktprofiler. Utvecklare måste dessutom tilldelas produktprofilen AEM användare eller AEM administratörer.
+* Molnresurser har konfigurerats.
+* Du förstår hur du navigerar och loggar in i Cloud Manager
+
+## Hantera GitHub {#manage-git}
 
 Du kan komma åt och hantera din Git-databas med hjälp av Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager.
 Mer information om det här avsnittet finns i [Åtkomst till Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en).
 
-## Ställ in pipeline {#setup-pipeline}
+## Konfigurera pipeline {#setup-pipeline}
 
 Du kan konfigurera din produktion eller icke-produktion-pipeline från användargränssnittet i Cloud Manager.
 Mer information om det här avsnittet finns i [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en).
 
 ## What’s Next {#whats-next}
 
-Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla kod i AEM som en Cloud Service. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan.
+Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla kod i AEM som en Cloud Service. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan. Mer information om inlärningsprocessen för innehållsförfattare finns i Utbildningsväg för AEM-författare.
 
 ## Ytterligare resurser {#additional-resources}
 
