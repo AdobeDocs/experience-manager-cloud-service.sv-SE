@@ -2,9 +2,8 @@
 title: 'Tilldela teammedlemmar AEM som en Cloud Service produktprofiler '
 description: Följ den här sidan för att lära dig hur du tilldelar teammedlemmar till AEM som en Cloud Service produktprofiler
 hide: true
-hidefromtoc: true
 index: false
-source-git-commit: f0d7886c0bf88fe42d05a1cdd6eb03b07b165c52
+source-git-commit: 4ef8c167e24a18af578d58c21fd1079a080f71d1
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 1%
