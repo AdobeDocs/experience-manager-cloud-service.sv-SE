@@ -3,9 +3,9 @@ title: 'Tilldela teammedlemmar AEM som en Cloud Service produktprofiler '
 description: Följ den här sidan för att lära dig hur du tilldelar teammedlemmar till AEM som en Cloud Service produktprofiler
 hide: true
 index: false
-source-git-commit: 4ef8c167e24a18af578d58c21fd1079a080f71d1
+source-git-commit: 3f69a3a8775a5bf824b94d6b10dc20be4036015c
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '818'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ Stegen nedan måste följas av en systemadministratör som också har rollen Bus
 
 ## What’s Next {#whats-next}
 
-De användare som du har angett som AEM för en Cloud Service produktprofiler kan nu lära sig hur du kommer åt Författaren och bekanta dig med redigeringssidor i AEM som en Cloud Service. Du bör följa sökvägen genom att gå igenom dokumentet Learning Path for AEM Users eller Learning Path for Developers and Deployment Managers.
+De användare som du har angett som AEM för en Cloud Service produktprofiler kan nu lära sig hur du kommer åt Författaren och bekanta dig med redigeringssidor i AEM som en Cloud Service. Du bör följa sökvägen genom att gå igenom dokumentets utbildningssökväg för [AEM Users](/help/onboarding/onboarding-journey/learning-path-aem-users.md) eller för [Developers and Deployment Managers](/help/onboarding/onboarding-journey/learning-path-developers-deploymentmanagers.md).
 
 ## Ytterligare resurser {#additional-resources}
 
