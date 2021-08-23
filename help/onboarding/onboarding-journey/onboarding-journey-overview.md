@@ -3,7 +3,7 @@ title: Onboarding Journey
 description: Följ den här sidan för att lära dig hur du kommer igång med en introduktionsresa
 hide: true
 index: false
-source-git-commit: 4ef8c167e24a18af578d58c21fd1079a080f71d1
+source-git-commit: 47524cd63e0592f20818a1918423fdaf45970115
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 1%
@@ -64,4 +64,4 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 
 ## What&#39;s Next {#what-is-next}
 
-Du är nu redo att komma igång med din introduktionsresa. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln Getting Started with Onboarding Process (Komma igång med introduktionsprocessen).
+Du är nu redo att komma igång med din introduktionsresa. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Get Started with Onboarding Process](/help/onboarding/onboarding-journey/get-started-onboarding-journey.md).
