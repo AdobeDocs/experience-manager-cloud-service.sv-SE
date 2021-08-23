@@ -3,7 +3,7 @@ title: Utbildningsväg för utvecklare och distributionschefer
 description: Följ den här sidan om du vill lära dig nästa steg efter att du har fått åtkomst, om du är en utvecklare eller en distributionshanterare
 hide: true
 index: false
-source-git-commit: 4ef8c167e24a18af578d58c21fd1079a080f71d1
+source-git-commit: 3f69a3a8775a5bf824b94d6b10dc20be4036015c
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Mer information om det här avsnittet finns i [Konfigurera CI-CD-pipeline](https
 
 ## What’s Next {#whats-next}
 
-Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla kod i AEM som en Cloud Service. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan. Mer information om inlärningsprocessen för innehållsförfattare finns i Utbildningsväg för AEM-författare.
+Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla kod i AEM som en Cloud Service. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan. Mer information om utbildningsprocessen för innehållsförfattare finns i [Utbildningsväg för AEM-författare](/help/onboarding/onboarding-journey/learning-path-aem-users.md).
 
 ## Ytterligare resurser {#additional-resources}
 
