@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 2ec7a48165a5e1a30026b41a8cf1d63457ab922d
+source-git-commit: ae7b9f45b0a50bf6816c85934997c7562718c2be
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '834'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,17 @@ Onboarding är den process under vilken en utsedd [systemadministratör](https:/
 Startresan illustreras nedan och varje steg i resan beskrivs i detalj i följande avsnitt.
 
 ![](/help/onboarding/onboarding-journey/assets/onboarding-journey.png)
+
+Den här resan är utformad för en systemadministratörspersonal som anger krav, steg och tillvägagångssätt. Under resan definieras ytterligare profiler som systemadministratören måste interagera med för ett framgångsrikt projekt, men utgångspunkten för resan är en administratörs.
+
+Följande personer interagerar på den här resan.
+
+| Persona | Beskrivning | Roll på resan |
+|---|---|---|
+| Systemadministratör | Tillhandahåller inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service. | Hanterar alla aspekter av sina användare, från åtkomst till behörigheter. |
+| AEM Author | Skapar och granskar innehållet (kan vara av flera typer), till exempel sidor, resurser, publikationer) innan det publiceras på din webbplats. | När de har beviljats tillstånd kan de påbörja sin egen driftsättningshanterares resa. |
+| Developer | Har erfarenhet av att utveckla AEM program som använder innehåll från olika källor | När de har beviljats tillstånd kan starta en egen utvecklarresa |
+| Deployment Manager | Lägger till eller uppdaterar en miljö, kör valfri pipeline och distribuerar kod AEM miljön eller kodkvaliteten. | När de har beviljats tillstånd kan de påbörja sin egen driftsättningshanterares resa. |
 
 ## Utforska introduktionsresan {#exploring-onboarding-journey}
 
