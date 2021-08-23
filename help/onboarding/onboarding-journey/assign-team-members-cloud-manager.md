@@ -3,7 +3,7 @@ title: 'Tilldela teammedlemmar till Cloud Manager-produktprofiler '
 description: Följ den här sidan för att lära dig hur du tilldelar teammedlemmar till produktprofiler för Cloud Manager
 hide: true
 index: false
-source-git-commit: 4ef8c167e24a18af578d58c21fd1079a080f71d1
+source-git-commit: 3f69a3a8775a5bf824b94d6b10dc20be4036015c
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 0%
@@ -157,7 +157,7 @@ Följ de här stegen:
 
 ## What’s Next {#whats-next}
 
-Du har lärt dig om tre olika produktprofiler för Cloud Manager, som Business Owner, Deployment Manager och Developer. Därefter tilldelade du teammedlemmar till produktprofiler för Cloud Manager, som Business Owner, Deployment Manager och Developer. Du är nu redo att fortsätta din introduktionsresa genom att gå igenom dokumentet Setup Cloud Resources via Cloud Manager där du får lära dig:
+Du har lärt dig om tre olika produktprofiler för Cloud Manager, som Business Owner, Deployment Manager och Developer. Därefter tilldelade du teammedlemmar till produktprofiler för Cloud Manager, som Business Owner, Deployment Manager och Developer. Du kan nu fortsätta din introduktionsresa genom att nästa gång granska dokumentet [Konfigurera molnresurser via Cloud Manager](/help/onboarding/onboarding-journey/setup-cloud-resources-via-cloud-manager.md), där du får lära dig:
 
 1. Som systemadministratör tilldelad rollen *Business Owner* måste du komma åt och logga in i Cloud Manager.
 
