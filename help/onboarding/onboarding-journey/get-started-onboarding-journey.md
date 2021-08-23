@@ -3,7 +3,7 @@ title: Komma igång med introduktionsprocessen
 description: Följ den här sidan för att lära dig hur du kommer igång med en introduktionsresa
 hide: true
 index: false
-source-git-commit: 4ef8c167e24a18af578d58c21fd1079a080f71d1
+source-git-commit: 3f69a3a8775a5bf824b94d6b10dc20be4036015c
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -66,5 +66,5 @@ Följ stegen nedan för att navigera till Admin Console och granska din systemad
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har loggat in på Admin Console och kontrollerat din profil som systemadministratör bör du fortsätta din introduktionsresa genom att gå igenom dokumentet Tilldela teammedlemmar till produktprofiler för Cloud Manager nästa gång.
+Nu när du har loggat in på Admin Console och kontrollerat din profil som systemadministratör bör du fortsätta din introduktionsresa genom att nästa gång du granskar dokumentet [Tilldela teammedlemmar till Cloud Manager-produktprofiler](/help/onboarding/onboarding-journey/assign-team-members-cloud-manager.md).
 
