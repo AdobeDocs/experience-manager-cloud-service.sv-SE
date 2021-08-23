@@ -4,9 +4,9 @@ description: Börja här för en guidad resa med de kraftfulla och flexibla head
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 498b07fda7ead201fd3afa601d67bd19c6ad96f7
+source-git-commit: 0d7d1150e0156f08f4289054e8fb626713c7bc79
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '773'
 ht-degree: 1%
 
 ---
@@ -77,3 +77,4 @@ Som sådana resor är utformade för att stå på egen hand. Ett antal av dem ka
 * [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md)  - Börja här för en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md)  - Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager som Cloud Service och hur du modellerar innehåll för ditt projekt.
 * [AEM som teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)  för Cloud Service- Om du redan har en god förståelse för AEM och headless-teknik kan du behöva läsa våra tekniska dokument direkt.
+* [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  - Om du föredrar att lära dig genom att göra och är tekniskt inriktad kan du ta våra praktiska självstudiekurser ordnade efter API och ramverk som utforskar att skapa och använda program som är byggda AEM Headless.
