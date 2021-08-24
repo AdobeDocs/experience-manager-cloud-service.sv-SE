@@ -3,9 +3,9 @@ title: Utbildningsväg för AEM
 description: Följ den här sidan om du vill lära dig mer om hur du gör när du har fått åtkomst, om du är en AEM användare
 hide: true
 index: false
-source-git-commit: 4ef8c167e24a18af578d58c21fd1079a080f71d1
+source-git-commit: 4a6408c498b093fc8b3baf4bdf1798b4281c90c2
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '383'
 ht-degree: 2%
 
 ---
@@ -34,11 +34,24 @@ Systemadministratören måste ha slutfört alla nödvändiga steg och tilldelat 
 
 ## Logga in på författare {#login-author}
 
-Följande steg måste följas för att du ska få tillgång till författaren:
+Följ stegen nedan för att få åtkomst till författaren:
 
-1. Följ de här stegen för att navigera till Cloud Manager. Du kan också gå direkt till Cloud Manager och logga in.
+1. Navigera direkt till [Adobe Experience Cloud](https://experience.adobe.com) och logga in med din Adobe ID.
+
+1. På Adobe Experience Cloud hemsida väljer du **Experience Manager**.
+
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources2.png)
+
+1. Du kommer nu till AEM startsida. Starta **Cloud Manager** härifrån.
+
+   ![](/help/onboarding/onboarding-journey/assets/setup-resources3.png)
+
+   >[!IMPORTANT]
+   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Bokmärk den här sidan för framtida referens och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
 
 1. På sidan **Översikt** i Cloud Manager klickar du på författarlänken på **miljökortet**.
+
+   ![](/help/onboarding/onboarding-journey/assets/author-environ.png)
 
 1. Då öppnas en ny flik där du kan logga in i redigeringsmiljön med din Adobe ID.
 
