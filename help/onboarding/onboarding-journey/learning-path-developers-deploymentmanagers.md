@@ -3,9 +3,9 @@ title: Utbildningsväg för utvecklare och distributionschefer
 description: Följ den här sidan om du vill lära dig nästa steg efter att du har fått åtkomst, om du är en utvecklare eller en distributionshanterare
 hide: true
 index: false
-source-git-commit: 4a6408c498b093fc8b3baf4bdf1798b4281c90c2
+source-git-commit: 53b98708044a7df8c4d24f25046c098f1a307743
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -68,3 +68,14 @@ Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla k
 
 * [Komma igång med AEM SPA Editor för utvecklare](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens#courses)
 
+## Experience League-kurser {#exp-league-courses}
+
+Lär dig mer genom att följa upplevelsekurserna. Se till att du är registrerad för att få tillgång till kurserna:
+
+* [Traditionella webbplatser](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens#courses)
+
+* [SPA](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens#courses)
+
+* [Headless](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens#courses)
+
+* [Handel](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens#courses)
