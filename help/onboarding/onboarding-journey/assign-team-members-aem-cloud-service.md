@@ -3,10 +3,10 @@ title: 'Tilldela teammedlemmar AEM som en Cloud Service produktprofiler '
 description: Följ den här sidan för att lära dig hur du tilldelar teammedlemmar till AEM som en Cloud Service produktprofiler
 hide: true
 index: false
-source-git-commit: 3f69a3a8775a5bf824b94d6b10dc20be4036015c
+source-git-commit: 4a6408c498b093fc8b3baf4bdf1798b4281c90c2
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 1%
+source-wordcount: '833'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ När du har läst det här avsnittet bör du förstå:
 
 ## Introduktion {#introduction}
 
-För att få tillgång till AEM som Cloud Service måste användarna höra till en av två produktprofiler:  `AEM Users` eller `AEM Administrators`. Teammedlemmarna måste beviljas behörigheter till AEM eftersom behörighet att administrera Cloud Manager inte räcker. Läs mer.
+För att få tillgång till AEM som Cloud Service måste användarna höra till en av två produktprofiler:  `AEM Users` eller `AEM Administrators`. Teammedlemmarna måste beviljas behörigheter till AEM eftersom behörighet att administrera Cloud Manager inte räcker.
 
 >[!NOTE]
 >Alla användare som tilldelas AEM användarproduktprofilen av systemadministratören har (skrivskyddad) åtkomst till Cloud Manager.
@@ -85,7 +85,7 @@ Stegen nedan måste följas av en systemadministratör som också har rollen Bus
 
    ![](/help/onboarding/onboarding-journey/assets/add-team1.png)
 
-1. En ny flik används för att navigera till Adobe Admin Console där du har tillgång till författarinstansen av miljön. Välj *AEM administratörer* eller *AEM Användare* baserat på de behörigheter som den här personen måste ge. Läs mer om [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
+1. En ny flik används för att navigera till Adobe Admin Console där du har tillgång till författarinstansen av miljön. Välj **AEM administratörer** eller **AEM Användare** baserat på de behörigheter som den här personen måste ge. Läs mer om [AEM som en Cloud Service produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en#aem-product-profiles).
 
    ![](/help/onboarding/onboarding-journey/assets/add-team2.png)
 
@@ -105,5 +105,6 @@ De användare som du har angett som AEM för en Cloud Service produktprofiler ka
 
 ## Ytterligare resurser {#additional-resources}
 
+* [Hantera produkter och användaråtkomst i Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#managing-products-and-user-access-in-admin-console)
 * [Konfigurera åtkomst till AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html?lang=en)
 * [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=en)
