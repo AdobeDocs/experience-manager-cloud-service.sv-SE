@@ -3,9 +3,9 @@ title: Konfigurera molnresurser via Cloud Manager
 description: Följ den här sidan för att lära dig hur du konfigurerar molnresurser via Cloud Manager
 hide: true
 index: false
-source-git-commit: 4ef8c167e24a18af578d58c21fd1079a080f71d1
+source-git-commit: 4a6408c498b093fc8b3baf4bdf1798b4281c90c2
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Följ nedanstående avsnitt för att lära dig hur du skapar dina [molntjänstpr
 
 ## Navigera till Cloud Manager {#navigate-cloud-manager}
 
-Business Owner-användaren får ett välkomstmeddelande med en länk för att komma igång, eller om de inte hittar det går du direkt till [Adobe Experience Cloud](https://experience.adobe.com) och loggar in med din Adobe ID.
+Business Owner-användaren får ett välkomstmeddelande med en länk för att komma igång, eller om de inte kan hitta det kan du komma åt [Cloud Manager](https://my.cloudmanager.adobe.com/) direkt genom att logga in med din Adobe ID.
 
 Följ stegen nedan för att navigera till Cloud Manager:
 
