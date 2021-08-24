@@ -3,9 +3,9 @@ title: Utbildningsväg för utvecklare och distributionschefer
 description: Följ den här sidan om du vill lära dig nästa steg efter att du har fått åtkomst, om du är en utvecklare eller en distributionshanterare
 hide: true
 index: false
-source-git-commit: 3f69a3a8775a5bf824b94d6b10dc20be4036015c
+source-git-commit: 4a6408c498b093fc8b3baf4bdf1798b4281c90c2
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -68,9 +68,3 @@ Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla k
 
 * [Komma igång med AEM SPA Editor för utvecklare](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens#courses)
 
-### Experience League-kurser {#experience-league-courses}
-
-* Traditionella webbplatser
-* SPA
-* Headless
-* Handel
