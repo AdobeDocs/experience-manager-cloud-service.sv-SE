@@ -3,7 +3,7 @@ title: Onboarding Journey
 description: Följ den här sidan för att lära dig hur du kommer igång med en introduktionsresa
 hide: true
 index: false
-source-git-commit: 47524cd63e0592f20818a1918423fdaf45970115
+source-git-commit: d5a948bd296d7e6ac9aca0b7bfc72202c1046b99
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 1%
@@ -55,12 +55,12 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 |---|---|---|
 | 0 | Onboarding Journey | Det här dokumentet |
 | 1 | Lär dig om introduktionskoncept, som:<br>[Systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en)<br>[Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en)<br>[Adobe Identity Management System](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/ims.html?lang=en)<br>[Adobe ID](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/adobe-id.html?lang=en)<br>[Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html?lang=en)<br>[AEM som Cloud Service Team och produktprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/aem-cs-team-product-profiles.html?lang=en)<br>[Kontakta supporten för Adobe](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/onboarding-help-resources.html?lang=en) | Läs mer om introduktionskoncept. |
-| 2 | Komma igång med introduktion | Lär dig mer om att logga in på Admin Console och kontrollera din profil som systemadministratör |
-| 3 | Tilldela teammedlemmar till Cloud Manager-produktprofiler | Granska produktprofiler för Cloud Manager och lär dig hur du tilldelar teammedlemmar till produktprofiler för Cloud Manager. |
-| 4 | Konfigurera molnresurser via Cloud Manager | Lär dig hur dina molnresurser skapas och vem som kan göra det. Läs också om hur dina molnprogram och miljöer skapas. |
-| 5 | Tilldela teammedlemmar AEM som en Cloud Service produktprofiler | Lär dig hur systemadministratören tilldelar teammedlemmar AEM som produktprofiler för Cloud Service. |
-| 6 | Utbildningsväg för AEM utvecklare och distributionschefer | Lär dig hur du som utvecklare kan få åtkomst till och hantera Cloud Manager Git och hur du som distributionshanterare kan konfigurera pipelines och distribuera kod i Cloud Manager. |
-| 7 | Utbildningsväg för AEM | Lär dig hur du som AEM kan komma åt AEM som en Cloud Service och lära dig att skapa innehåll för AEM som en Cloud Service. |
+| 2 | [Komma igång med introduktion](/help/onboarding/onboarding-journey/get-started-onboarding-journey.md) | Lär dig mer om att logga in på Admin Console och kontrollera din profil som systemadministratör |
+| 3 | [Tilldela teammedlemmar till Cloud Manager-produktprofiler](/help/onboarding/onboarding-journey/assign-team-members-cloud-manager.md) | Granska produktprofiler för Cloud Manager och lär dig hur du tilldelar teammedlemmar till produktprofiler för Cloud Manager. |
+| 4 | [Konfigurera molnresurser via Cloud Manager](/help/onboarding/onboarding-journey/setup-cloud-resources-via-cloud-manager.md) | Lär dig hur dina molnresurser skapas och vem som kan göra det. Läs också om hur dina molnprogram och miljöer skapas. |
+| 5 | [Tilldela teammedlemmar AEM som en Cloud Service produktprofiler](/help/onboarding/onboarding-journey/assign-team-members-aem-cloud-service.md) | Lär dig hur systemadministratören tilldelar teammedlemmar AEM som produktprofiler för Cloud Service. |
+| 6 | [Utbildningsväg för AEM utvecklare och distributionschefer](/help/onboarding/onboarding-journey/learning-path-developers-deploymentmanagers.md) | Lär dig hur du som utvecklare kan få åtkomst till och hantera Cloud Manager Git och hur du som distributionshanterare kan konfigurera pipelines och distribuera kod i Cloud Manager. |
+| 7 | [Utbildningsväg för AEM](/help/onboarding/onboarding-journey/learning-path-aem-users.md) | Lär dig hur du som AEM kan komma åt AEM som en Cloud Service och lära dig att skapa innehåll för AEM som en Cloud Service. |
 
 ## What&#39;s Next {#what-is-next}
 
