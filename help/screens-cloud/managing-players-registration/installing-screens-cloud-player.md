@@ -1,9 +1,9 @@
 ---
 title: Installera och konfigurera spelare i skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du installerar och konfigurerar spelare på skärmar som en Cloud Service.
-source-git-commit: 1fc06f987bb40d940bbec9c37e6d58c2c1ca9266
+source-git-commit: d5970e27773433c9e6e7175a103768ae591e87ba
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ Spelaren rapporterar olika uppspelningsmått med varje `ping` som har standardv�
 
 Med grundläggande uppspelningsövervakning i en AEM Screens-spelare kan du:
 
-* Fjärrövervaka om en spelare spelar upp innehåll korrekt
+* Fjärrövervaka om en spelare spelar upp innehållet på rätt sätt.
 
-* Förbättra reaktiviteten till tomma skärmar eller trasiga upplevelser på fältet
+* Förbättra reaktiviteten till tomma skärmar eller trasiga upplevelser på fältet.
 
-* Minska risken för att slutanvändaren får en trasig upplevelse
+* Minskar risken för att slutanvändaren får en trasig upplevelse.
 
 ### Förstå egenskaper {#understand-properties}
 
@@ -78,11 +78,11 @@ Följande egenskaper ingår i varje `ping`:
 
 Några begränsningar för grundläggande uppspelningsövervakning visas nedan:
 
-* Eftersom spelaren rapporterar ett eget uppspelningsläge till servern behöver den en aktiv anslutning.
+* Spelaren rapporterar ett eget uppspelningsläge till servern, vilket kräver en aktiv anslutning.
 
 * Egenskapen `isContentRendering` som kontrollerar grafikprocessorn är för närvarande resurskrävande att aktiveras som standard och kräver explicit deltagande från spelarinställningarna. Du bör inte använda den tillsammans med videoklipp.
 
-* Stöds för sekvenskanaler.
+* Den här funktionen stöds för sekvenskanaler.
 
 ## What&#39;s Next {#whats-next}
 
