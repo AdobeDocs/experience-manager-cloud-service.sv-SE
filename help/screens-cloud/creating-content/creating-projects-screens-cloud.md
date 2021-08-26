@@ -1,9 +1,9 @@
 ---
 title: Skapa ett projekt på skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du skapar ett projekt i skärmar som en Cloud Service.
-source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
+source-git-commit: d9d38f5949c9590ae68276452eea28044c7e5155
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Följ stegen nedan för att skapa ett nytt projekt i Skärmar som en Cloud Servi
 1. Navigera till Screens Content Provider.
 
    >[!NOTE]
-   >Läs [Använda rasterinnehållsleverantör] om du vill veta hur du får åtkomst till rasterinnehållsleverantör för att skapa ditt projekt.
+   >Läs [Använda rasterinnehållsleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en) om du vill veta hur du får åtkomst till rasterinnehållsleverantör för att skapa ditt projekt.
 
 1. Klicka på **Skapa skärmprojekt** i åtgärdsfältets övre högra hörn.
 
