@@ -1,9 +1,9 @@
 ---
 title: Installera och konfigurera spelare i skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du installerar och konfigurerar spelare på skärmar som en Cloud Service.
-source-git-commit: 6afb71803ae24bed2d5d5662a7cdd4af5637e329
+source-git-commit: 1fc06f987bb40d940bbec9c37e6d58c2c1ca9266
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,15 @@ Följande egenskaper ingår i varje `ping`:
 >|—|—|
 >|isContentRendering {boolean}|true om grafikprocessorn kan bekräfta att det faktiska innehållet spelas upp (baserat på pixelanalys)|
 
+### Begränsningar {#limitations}
+
+Några begränsningar för grundläggande uppspelningsövervakning visas nedan:
+
+* Eftersom spelaren rapporterar ett eget uppspelningsläge till servern behöver den en aktiv anslutning.
+
+* Egenskapen `isContentRendering` som kontrollerar grafikprocessorn är för närvarande resurskrävande att aktiveras som standard och kräver explicit deltagande från spelarinställningarna. Du bör inte använda den tillsammans med videoklipp.
+
+* Stöds för sekvenskanaler.
 
 ## What&#39;s Next {#whats-next}
 
