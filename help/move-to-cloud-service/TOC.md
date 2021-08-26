@@ -1,14 +1,14 @@
 ---
-sub-product: Flytta till AEM as a Cloud Service
+sub-product: Move to AEM as a Cloud Service
 user-guide-title: Flytta till AEM as a Cloud Service
 breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
-feature: Distribuerar
+feature: Deploying
 role: Architect, Developer
-source-git-commit: fadab55c0fb743cb0ce7102686b2f3f10f93d73b
+source-git-commit: f193c4e81b9b16d07e7ccff6c2f9705b7234f80b
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 51%
+source-wordcount: '130'
+ht-degree: 44%
 
 ---
 
@@ -47,3 +47,4 @@ ht-degree: 51%
    + [Resursarbetsflödesmigrering](/help/move-to-cloud-service/moving-to-aem-assets/asset-workflow-migration-tool.md)
    + [AEM Dispatcher Converter](/help/move-to-cloud-service/refactoring-tools/dispatcher-transformation-utility-tools.md)
    + [AEM Modernization Tools](/help/move-to-cloud-service/refactoring-tools/aem-modernization-tools.md)
++ [Migreringshandbok för Experience Manager som Cloud Service för partners](/help/move-to-cloud-service/getting-started.md)
