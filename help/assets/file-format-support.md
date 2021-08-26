@@ -2,12 +2,12 @@
 title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
 contentOwner: AG
-feature: Resurshantering,Återgivningar
+feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 0c2c69423a042f6ef5b0dd0a2bdbcacc7103ddae
+source-git-commit: a3e884347e87358d7e0ab8d0fe9d416f15b184ab
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '781'
 ht-degree: 6%
 
 ---
@@ -159,7 +159,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | PPTX | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PS | - | - | ✓ | - | - |
 | RTF | - | ✓ | - | ✓ | ✓ |
-| TXT | - | ✓ | - | ✓ | ✓ |
+| TXT | ✓ | ✓ | - | ✓ | ✓ |
 | XLS | - | - | - | ✓ | ✓ |
 | XLSX | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | - | ✓ | - | - | - |
@@ -228,5 +228,5 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 >[!MORELIKETHIS]
 >
 >* [Behandling av tillgångar med hjälp av mikrotjänster](asset-microservices-overview.md)
-* [Filformat som stöds för smart taggning av textbaserade resurser](/help/assets/smart-tags.md#smart-tags-supported-file-formats)
+>* [Filformat som stöds för smart taggning av textbaserade resurser](/help/assets/smart-tags.md#smart-tags-supported-file-formats)
 
