@@ -1,9 +1,9 @@
 ---
 title: Installera och konfigurera spelare i skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du installerar och konfigurerar spelare på skärmar som en Cloud Service.
-source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
+source-git-commit: 6afb71803ae24bed2d5d5662a7cdd4af5637e329
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,38 @@ Uppdatera spelaren genom att följa stegen nedan:
    ![bild](/help/screens-cloud/assets/player/installplayer-1.png)
 
 1. Klicka på **Bekräfta** som visas när du växlar till molnläge för att avregistrera spelaren.
+
+## Grundläggande uppspelningsövervakning {#playback-monitoring}
+
+Spelaren rapporterar olika uppspelningsmått med varje `ping` som har standardvärdet 30 sekunder. Baserat på mätvärden kan du identifiera olika kantfall, t.ex. problem med fastnade bilder, tomma skärmar och schemaläggning. På så sätt kan du förstå och felsöka problem på enheten och därmed snabba upp en utredning och korrigerande åtgärder.
+
+Med grundläggande uppspelningsövervakning i en AEM Screens-spelare kan du:
+
+* Fjärrövervaka om en spelare spelar upp innehåll korrekt
+
+* Förbättra reaktiviteten till tomma skärmar eller trasiga upplevelser på fältet
+
+* Minska risken för att slutanvändaren får en trasig upplevelse
+
+### Förstå egenskaper {#understand-properties}
+
+Följande egenskaper ingår i varje `ping`:
+
+| Egenskap | Beskrivning |
+|---|---|
+| id {string} | spelarens identifierare |
+| activeChannel {string} | spelar upp kanalsökvägen eller null om inget är schemalagt |
+| activeElements {string} | kommaavgränsad sträng, för närvarande synliga element i alla uppspelningskanaler (flera vid en flerzonslayout) |
+| isDefaultContent {boolean} | true om den spelande kanalen betraktas som en standard- eller reservkanal (d.v.s. har prioritet 1 och inget schema) |
+| hasContentChanged {boolean} | true om innehållet har ändrats under de senaste fem minuterna, annars false |
+| lastContentChange {string} | tidsstämpel för den senaste innehållsändringen |
+
+>[!NOTE]
+>Om du vill kan du aktivera en mer avancerad egenskap från spelarens inställningar (Aktivera övervakning av uppspelning). Det vill säga:
+>|Egenskap|Beskrivning|
+>|—|—|
+>|isContentRendering {boolean}|true om grafikprocessorn kan bekräfta att det faktiska innehållet spelas upp (baserat på pixelanalys)|
+
 
 ## What&#39;s Next {#whats-next}
 
