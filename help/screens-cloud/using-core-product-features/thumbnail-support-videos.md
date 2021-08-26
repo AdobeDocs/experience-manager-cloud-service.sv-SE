@@ -3,9 +3,9 @@ title: Miniatyrbildsstöd för video på skärmar som Cloud Service
 description: På den här sidan beskrivs hur du lägger till stöd för miniatyrbilder för videoklipp på skärmar som en Cloud Service.
 hide: true
 index: false
-source-git-commit: ea96e811c0164e3cc7d323e734c1617d3c0e9308
+source-git-commit: bd1efae4453e2c3a73eb962c4e6b4b4b9ba064d2
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -45,13 +45,21 @@ Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 
    ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-2.png)
 
-1. Redigera videokomponentens egenskaper.
+1. Markera videon och klicka på ikonen *skiftnyckel* för att öppna videoegenskaperna.
 
-1. Dra en bild från resursväljaren till släppzonen Miniatyrbilder.
+   ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-3.png)
 
-1. Förhandsgranska kanalen.
+1. Dialogrutan **Video** öppnas där du kan visa släppzonen **Miniatyrbild**.
 
-1. Om en video är inställd på komponenten spelas videon upp. Om inte, och miniatyrbilden är inställd, spelas miniatyrbilden upp. Annars betraktas komponenten som inte konfigurerad och hoppas över
+   ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-4.png)
+
+1. Dra och släpp en bild från resursväljaren till släppzonen **Miniatyrbild** och klicka på **Klar**.
+
+   ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-5.png)
+
+1. Klicka på **Förhandsgranska**.
+
+1. Om en video är inställd på komponenten spelas videon upp. Om inte, och miniatyrbilden är inställd, spelas miniatyrbilden upp. Annars betraktas komponenten som inte konfigurerad och kommer att hoppas över.
 
 ## Användningsexempel som stöds vid användning av miniatyrbilder i videoklipp {#understand-use-case}
 
