@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 03151f72a86e708a0a91c141d5901a9fb7a311a5
+source-git-commit: 8dae2fd4b830cfe77b1f8c65a24e6f0fb7456dc8
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1196'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Titta på videon [Versionsöversikt från augusti 2021](https://video.tv.adobe.c
 
 <!-- * Automated Forms Conversion service can [convert PDF Forms in Italian and Portuguese language](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?#language-specific-meta-model) to Adaptive Forms. -->
 
-* AEM Archetype-projekt för Forms som Cloud Service innehåller nu [4 nya teman och formulärdatamodeller för Microsoft Dynamics och Salesforce.com](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?#forms-cloud-service-local-development-environment).
+* AEM Archetype-projekt för Forms som Cloud Service innehåller nu [Canvas 3.0-tema och formulärdatamodeller för Microsoft Dynamics och Salesforce.com](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?#forms-cloud-service-local-development-environment).
 
 * **Acroform-based Document of Record**: AEM Forms som Cloud Service har stöd för att använda  [Adobe Acrobat Form PDF (Acrobat PDF) ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för arkivhandlingar förutom XFA-baserad formulärmall.
 
@@ -72,7 +72,9 @@ Titta på videon [Versionsöversikt från augusti 2021](https://video.tv.adobe.c
 
 ### Betafunktion i [!DNL Forms] {#aug-what-is-new-forms-prerelease}
 
-* **Enhetlig lagringsanslutning:** Enhetlig lagringskontakt gör att du kan ansluta datakällor till ett AEM arbetsflöde eller ett adaptivt formulär utan att behöva lagra några data i AEM Forms Cloud Service. Med den kan du på ett säkert sätt bearbeta PII (personligt identifierbar information) och lagra information direkt i Azure-datalagret.
+* **Enhetlig lagringskontakt:** Använd Enhetlig lagringskontakt för att externalisera processdata i kundhanterade databaser. Du kan till exempel
+   * Möjliggör Forms Portals funktioner för att spara och återuppta samt lagra adaptiva formulärutkast i ett kundhanterat datalager.
+   * Lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
 
 * **[!DNL AEM Forms as a Cloud Service - Communications]**:  [Communication ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/aem-forms-cloud-service-communications.html) API - använd XDP-mallar och XML-data för att generera trycksaker i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera dokument genom att fylla i mallfiler med XML-data.
