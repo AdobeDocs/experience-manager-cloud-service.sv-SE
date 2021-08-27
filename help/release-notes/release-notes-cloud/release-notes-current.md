@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 6277325b80f1cdb8735f88b5ad856e405572bffe
+source-git-commit: 2451a29b71b113f28ffc00737ed825381dd5ad07
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för bet
 
 * **Anslut enkelt AEM Forms med Microsoft Dynamics och Salesforce.com**: Tjänsten tillhandahåller direkt konfiguration av datakällor och datamodeller för Microsoft Dynamics och Salesforce.com, vilket gör det  [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce.com som datakällor för ett anpassningsbart formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-msdynamics-salesforce.html).
 
-## [!DNL Screens] som  [!DNL Cloud Service] {#screens}
+## [!DNL Experience Manager Screens] som  [!DNL Cloud Service] {#screens}
 
 ### Vad är nytt? {#what-is-new-screens}
 
