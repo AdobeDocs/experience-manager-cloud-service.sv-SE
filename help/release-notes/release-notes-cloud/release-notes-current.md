@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 8dae2fd4b830cfe77b1f8c65a24e6f0fb7456dc8
+source-git-commit: 6277325b80f1cdb8735f88b5ad856e405572bffe
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1366'
 ht-degree: 0%
 
 ---
@@ -90,6 +90,24 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för bet
 * **Analytics for Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
 * **Anslut enkelt AEM Forms med Microsoft Dynamics och Salesforce.com**: Tjänsten tillhandahåller direkt konfiguration av datakällor och datamodeller för Microsoft Dynamics och Salesforce.com, vilket gör det  [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce.com som datakällor för ett anpassningsbart formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-msdynamics-salesforce.html).
+
+## [!DNL Screens] som  [!DNL Cloud Service] {#screens}
+
+### Vad är nytt? {#what-is-new-screens}
+
+* Som innehållsförfattare kan du nu definiera en miniatyrbild för videoklipp så att du kan använda den som en platshållare och testa uppspelning och målinriktning av innehåll på rätt sätt, medan videon färdigställs av rätt team.
+Mer information finns i [Grundläggande uppspelningsövervakning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html?lang=en#playback-monitoring).
+
+* Miniatyrbildsstöd för videor i stöds nu som Cloud Service på skärmar. Innehållsförfattare kan definiera en miniatyrbild för videoklipp så att bilden kan användas som platshållare och testa uppspelning och målgruppsanpassning av innehållet medan videon färdigställs av rätt team. Bilden kan också användas om videouppspelningen misslyckas.
+
+### Felkorrigeringar {#bug-fixes-screens}
+
+* Spelaren kunde inte visa innehåll från den inbäddade sidan och problemet är nu åtgärdat.
+
+* Efter en lyckad inloggning hamnade navigeringen till standardsidan (kanalerna) i en intern serverfelsida.
+
+* Associerade taggposter togs inte bort när spellistor togs bort.
+
 
 ## CIF-tillägg {#cloud-services-cif}
 
