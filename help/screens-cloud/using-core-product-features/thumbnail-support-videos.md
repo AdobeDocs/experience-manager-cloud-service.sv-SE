@@ -2,9 +2,9 @@
 title: Miniatyrbildsstöd för video på skärmar som Cloud Service
 description: På den här sidan beskrivs hur du lägger till stöd för miniatyrbilder för videoklipp på skärmar som en Cloud Service.
 index: true
-source-git-commit: cd06e409ec085fcc77fc7bb466169de3a14dba40
+source-git-commit: e5dc848ca58e176b89861414d0e711866f96eb0e
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Med stöd för miniatyrbilder kan du:
 * Ange en reservmekanism om det skulle uppstå uppspelningsproblem på enheten.
 
 ## Använda miniatyrer i videoklipp {#using-thumbnails}
+
+>[!IMPORTANT]
+>**Förutsättningar**
+>Innan du lär dig hur du använder miniatyrer för videofilmer bör du lära dig hur du skapar videoåtergivningar för kanaler i skärmar som ett videoprojekt. Mer information finns i [här](/help/screens-cloud/configuring/creating-screens-video-renditions-cloud-service.md).
 
 Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 
@@ -68,6 +72,6 @@ Miniatyrbilder i videoklipp har stöd för följande användningsområden:
 
 * En videokomponent som bara innehåller en miniatyrbilduppsättning spelar upp miniatyrbilden.
 
-* En videokomponent med både videon och miniatyrbilderna inställda spelas upp.
+* En videokomponent med både videon (om videon har rätt återgivning) och en miniatyrbildsuppsättning spelar upp videon.
 
 * En videokomponent med videouppsättningen spelar upp miniatyrbilden om det uppstår ett uppspelningsfel, eller hoppar bara till nästa objekt om miniatyrbilden inte är konfigurerad.
