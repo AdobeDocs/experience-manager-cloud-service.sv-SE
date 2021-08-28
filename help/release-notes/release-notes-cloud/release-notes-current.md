@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 2451a29b71b113f28ffc00737ed825381dd5ad07
+source-git-commit: 1ae9a03c76e6ef1e84ac9f3402c1e48b07fdac8c
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1383'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för bet
 Mer information finns i [Grundläggande uppspelningsövervakning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html?lang=en#playback-monitoring).
 
 * Miniatyrbildsstöd för videor i stöds nu som Cloud Service på skärmar. Innehållsförfattare kan definiera en miniatyrbild för videoklipp så att bilden kan användas som platshållare och testa uppspelning och målgruppsanpassning av innehållet medan videon färdigställs av rätt team. Bilden kan också användas om videouppspelningen misslyckas.
+Mer information finns i [Stöd för miniatyrbilder för videoklipp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/core-product-features/thumbnail-support-videos.html?lang=en).
 
 ### Felkorrigeringar {#bug-fixes-screens}
 
