@@ -1,19 +1,19 @@
 ---
 title: 360/VR-video
 description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i Dynamic Media.
-feature: 360 VR-video
+feature: 360 VR Video
 role: User
 exl-id: ffd092d3-2188-47b0-a475-8bfa660c03c1
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: fa6de4e383b4de628938fce455f321911cad452c
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # 360/VR-video {#vr-video}
 
-360-gradersvyer spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. de inbyggda gyroskopiska kontrollerna används vanligtvis vid uppspelning på mobila enheter.
+360-gradersvideor spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. de inbyggda gyroskopiska kontrollerna används vanligtvis vid uppspelning på mobila enheter.
 
 Dynamic Media har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.
 

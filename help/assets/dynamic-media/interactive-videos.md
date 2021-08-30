@@ -1,12 +1,12 @@
 ---
 title: Interaktiva videoklipp
 description: Lär dig hur du arbetar med interaktiv video och videor som kan köpas i Dynamic Media.
-feature: Interaktiva videoklipp
+feature: Interactive Videos
 role: User
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
-source-git-commit: 1d42305b6a597dc95bff8b34eee8279eb0e511f3
+source-git-commit: fa6de4e383b4de628938fce455f321911cad452c
 workflow-type: tm+mt
-source-wordcount: '5894'
+source-wordcount: '5891'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Om du vill se en interaktiv, köpbar video in action väljer du [Live Demos](htt
 
 * Under uppspelningen, när produkterna används i videon, visas den identiska produkten till höger som en miniatyrbild.
 
-* Om du vill pausa videon och öppna snabbvyn för produkten väljer du miniatyrbilden. Välj till exempel miniatyrbilden Kitchenaid i videon för att få en 360-gradersvy av blandaren, eller zooma in för att se blandarinformationen.
+* Om du vill pausa videon och öppna snabbvyn för produkten väljer du miniatyrbilden. Välj till exempel miniatyrbilden Kitchenaid i videon om du vill se en 360-graderssnurra över blandaren, eller zooma in om du vill se blandningsinformationen.
 
 Se även [Använd interaktiv video med Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-interactive-video-feature-video-use.html?lang=en#dynamic-media)
 
@@ -99,8 +99,7 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part måste du int
 >* Din implementering av Experience Manager *använder inte* ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från en e-handelslösning som IBM® WebSphere® Commerce, Elastic Path, SAP Hybris eller Intershop. <!-- See [eCommerce concepts in Experience Manager Assets](/help/sites-administering/concepts.md).-->
 
 >
->
-Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
+>Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
 
 Börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen, så att du kan mappa produktminiatyrbilder till deras motsvarande produkt i QuickView när du skapar interaktiva videofilmer.
 
@@ -490,7 +489,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
 1. Publicera den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kopierar och klistrar in på webbplatsupplevelserna.
 
-   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
+   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-webbplatser.
 
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 

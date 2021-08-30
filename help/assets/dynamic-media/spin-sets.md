@@ -1,12 +1,12 @@
 ---
 title: Snurrande uppsättningar
 description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
-feature: Snurrande uppsättningar
+feature: Spin Sets
 role: User
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
+source-git-commit: fa6de4e383b4de628938fce455f321911cad452c
 workflow-type: tm+mt
-source-wordcount: '1754'
+source-wordcount: '1751'
 ht-degree: 9%
 
 ---
@@ -103,7 +103,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
 >[!NOTE]
 >
->Den ordning i vilken bilderna visas i en snurrfunktion. Se till att ordna dem så att snurret blir en jämn 360-gradersvy.
+>Den ordning i vilken bilderna visas i en snurrfunktion. Se till att ordna dem så att snurret blir en mjuk 360-gradersvy.
 
 **Så här skapar du snurruppsättningar:**
 
