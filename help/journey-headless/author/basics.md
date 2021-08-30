@@ -4,9 +4,9 @@ description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjäl
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 41ad9e8ee77ae4494d28026b5ad9da45c06eaeaf
+source-git-commit: d925333421b4a9ec1e2a7c553b43e042bb1e6fbe
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1693'
 ht-degree: 1%
 
 ---
@@ -73,7 +73,7 @@ I konsolen kan du välja mappar för att navigera till ditt innehållsfragment, 
 
 Konsolen **Resurser** har dedikerade **åtgärdsverktygsfält** och **snabbåtgärder** som du kan använda efter att du har valt en resurs (till exempel en mapp eller ett innehålls fragment).
 
-Snabbåtgärderna är tillgängliga för en enskild resurs:
+Snabbåtgärderna är tillgängliga för en enskild resurs, se **Basel** i exemplet nedan:
 
 ![Snabbåtgärder](/help/journey-headless/author/assets/headless-journey-author-navigation-05.png)
 
@@ -101,7 +101,7 @@ Om du inte har ett fåtal innehållsfragment vill du ordna dem så att du (och a
 
 #### Skapa en mapp {#creating-folder}
 
-Du kan göra detta genom att skapa en serie mappar i avsnittet **Filer** i resurskonsolen. Välj alternativet **Skapa** (överst till höger) följt av **Skapa mapp**:
+Du kan göra detta genom att skapa en serie mappar i avsnittet **Filer** i resurskonsolen. Välj alternativet **Skapa** (överst till höger) följt av **Mapp**:
 
 ![Alternativet Skapa mapp](/help/journey-headless/author/assets/headless-journey-author-folder-01.png)
 
@@ -113,7 +113,7 @@ En dialogruta öppnas där du kan ange informationen och sedan bekräfta med **S
 
 Det här avsnittet är något mer avancerat. Du behöver det egentligen inte om du just har börjat och provar saker, men det är *mycket* användbart när du har många fragment. Så det är bra att veta om - även om du inte använder det helt än.
 
-Din innehållsarkitekt har skapat alla innehållsfragmentmodeller som krävs för ditt aktuella projekt, och kanske även några andra projekt. För att förenkla för författarna kan du begränsa listan med modeller som är tillgängliga för en viss mapp.
+Din innehållsarkitekt har skapat alla innehållsfragmentmodeller som krävs för ditt aktuella projekt, och kanske även några andra projekt. För att göra det enklare för dig själv och andra författare kan du begränsa listan med modeller som är tillgängliga för en viss mapp.
 
 När du har skapat mappen kan du öppna mappen **Egenskaper**. Här finns olika flikar med information och konfigurationsinformation om mappen. Särskilt för innehållsfragment kan du använda fliken **Profiler** för att definiera specifika sökvägar och/eller taggar för den här mappen. Detta begränsar vilka modeller för innehållsfragment som är tillgängliga för användning i mappen, eftersom det innebär att modeller för innehållsfragment måste uppfylla dessa krav innan de kan användas för att generera fragment i den här mappen.
 
@@ -147,7 +147,7 @@ Den här gången öppnas en guide. Det första steget är att välja den innehå
 
 ![Skapa innehållsfragment - välj modell](/help/journey-headless/author/assets/headless-journey-author-content-fragment-02.png)
 
-När du har fortsätter med **Nästa** kan du ange information för ditt fragment:
+När du har fortsätter med **Nästa** kan du ange information (**Basic** och **Advanced**) för fragmentet:
 
 ![Skapa innehållsfragment - ange namn](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
