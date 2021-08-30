@@ -1,12 +1,11 @@
 ---
 title: 'Tilldela teammedlemmar till Cloud Manager-produktprofiler '
 description: Följ den här sidan för att lära dig hur du tilldelar teammedlemmar till produktprofiler för Cloud Manager
-hide: true
 index: false
 role: Admin, User, Developer
-source-git-commit: e58ee2d3669cfce25b354bd78047119c4132c64e
+source-git-commit: a9eacc44c6be9101fae131c6fb6b95612efeac53
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---

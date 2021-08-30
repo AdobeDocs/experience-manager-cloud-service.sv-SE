@@ -1,12 +1,11 @@
 ---
 title: Konfigurera molnresurser via Cloud Manager
 description: Följ den här sidan för att lära dig hur du konfigurerar molnresurser via Cloud Manager
-hide: true
 index: false
 role: Admin, User, Developer
-source-git-commit: e58ee2d3669cfce25b354bd78047119c4132c64e
+source-git-commit: a9eacc44c6be9101fae131c6fb6b95612efeac53
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
