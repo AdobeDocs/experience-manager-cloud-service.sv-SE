@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: f5ed5561ed19938b4c647666ff7a6a470d307cf7
+source-git-commit: bacc6335e25387933a1d39dba10c4cc930a71cdb
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2375'
 ht-degree: 1%
 
 ---
@@ -67,7 +67,7 @@ AEM som Cloud Service stöder endast Touch-gränssnittet för kundkod från tred
 
 Koden kommer inte att kunna hämta binärfiler vid körning och inte heller ändra dem. Den kan till exempel inte packa upp `jar`- eller `tar`-filer.
 
-## Det finns inga bindningar för direktuppspelning via AEM som en Cloud Service {#no-streaming-binaries}
+## Ingen direktuppspelande binärfiler via AEM som Cloud Service {#no-streaming-binaries}
 
 Binärfiler bör nås via CDN, som kommer att betjäna binärfiler utanför de centrala AEM.
 
@@ -129,7 +129,7 @@ För lokal utveckling har utvecklare fullständig åtkomst till CRXDE Lite (`/cr
 
 Observera att vid lokal utveckling (med SDK) kan `/apps` och `/libs` skrivas direkt till , vilket skiljer sig från molnmiljöer där mapparna på den översta nivån inte kan ändras.
 
-### AEM som ett utvecklingsverktyg för Cloud Service {#aem-as-a-cloud-service-development-tools}
+### AEM som verktyg för Cloud Service Development {#aem-as-a-cloud-service-development-tools}
 
 Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det uppstår fel.
 
@@ -169,7 +169,7 @@ Kunderna har inte tillgång till utvecklarverktyg för staging- och produktionsm
 
 Adobe övervakar programmets prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte programmått beaktas.
 
-## IP-adress för dedikerad gruppress {#dedicated-egress-ip-address}
+## IP-adress för dedikerad utpressning {#dedicated-egress-ip-address}
 
 På begäran kommer AEM som Cloud Service att tillhandahålla en statisk, dedikerad IP-adress för HTTP (port 80) och HTTPS (port 443) utgående trafik som programmerats i Java-kod.
 
@@ -189,7 +189,7 @@ Funktionen är kompatibel med Java-kod eller bibliotek som resulterar i utgåend
 
 Nedan visas ett kodexempel:
 
-```
+```java
 public JSONObject getJsonObject(String relativePath, String queryString) throws IOException, JSONException {
   String relativeUri = queryString.isEmpty() ? relativePath : (relativePath + '?' + queryString);
   URL finalUrl = endpointUri.resolve(relativeUri).toURL();
@@ -200,6 +200,26 @@ public JSONObject getJsonObject(String relativePath, String queryString) throws 
   try (InputStream responseStream = connection.getInputStream(); Reader responseReader = new BufferedReader(new InputStreamReader(responseStream, Charsets.UTF_8))) {
     return new JSONObject(new JSONTokener(responseReader));
   }
+}
+```
+
+Vissa bibliotek kräver explicit konfiguration för att använda Java-standardegenskaper för proxykonfigurationer.
+
+Ett exempel med Apache HttpClient, som kräver explicita anrop till
+[`HttpClientBuilder.useSystemProperties()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html) eller använd
+[`HttpClients.createSystem()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
+
+```java
+public JSONObject getJsonObject(String relativePath, String queryString) throws IOException, JSONException {
+  String relativeUri = queryString.isEmpty() ? relativePath : (relativePath + '?' + queryString);
+  URL finalUrl = endpointUri.resolve(relativeUri).toURL();
+
+  HttpClient httpClient = HttpClientBuilder.create().useSystemProperties().build();
+  HttpGet request = new HttpGet(finalUrl.toURI());
+  request.setHeader("Accept", "application/json");
+  request.setHeader("X-API-KEY", apiKey);
+  HttpResponse response = httpClient.execute(request);
+  String result = EntityUtils.toString(response.getEntity());
 }
 ```
 
@@ -228,7 +248,7 @@ Som standard är utgående e-post inaktiverad. Aktivera den genom att skicka en 
 1. Program-ID och miljö-ID för de miljöer de vill skicka ut
 1. Oavsett om SMTP-åtkomst krävs för författare, publicering eller båda.
 
-### Skickar e-postmeddelanden {#sending-emails}
+### Skicka e-post {#sending-emails}
 
 Tjänsten [Day CQ Mail OSGI](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
 
@@ -256,6 +276,6 @@ Om port 587 har begärts (endast tillåtet om e-postservern inte stöder port 46
 
 Egenskapen `smtp.starttls` anges automatiskt av AEM som en Cloud Service vid körning till ett lämpligt värde. Om `smtp.tls` är true ignoreras `smtp.startls`. Om `smtp.ssl` är inställt på false är `smtp.starttls` inställt på true. Detta är oavsett `smtp.starttls`-värdena som angetts i OSGI-konfigurationen.
 
-## [!DNL Assets] riktlinjer för utveckling och användningsfall  {#use-cases-assets}
+## [!DNL Assets] riktlinjer för utveckling och användningsfall {#use-cases-assets}
 
 Mer information om användningsfall, rekommendationer och referensmaterial för Assets som Cloud Service finns i [Utvecklarreferenser för Assets](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis).
