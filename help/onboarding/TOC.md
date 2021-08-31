@@ -24,7 +24,7 @@ ht-degree: 35%
    + [Introduktion till Cloud Manager](/help/onboarding/learn-concepts/cloud-manager-introduction.md)
    + [AEM som Cloud Service team och produktprofiler](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md)
    + [Stöd för Adobe](/help/onboarding/learn-concepts/onboarding-help-resources.md)
-+ [Handbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/journey-onboarding/home.html) för introduktionsresan {target=&quot;_blank&quot;}
++ [Handbok för introduktionsresan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/journey-onboarding/home.html){target="_blank"}
 + Komma igång med AEM som Cloud Service {#what-is-required}
    + [Skaffa Adobe ID](what-is-required/get-your-adobe-id.md)
    + [Roller för Cloud Manager](what-is-required/user-roles-permissions.md)
