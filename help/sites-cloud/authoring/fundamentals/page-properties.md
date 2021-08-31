@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: af06d288af688dbc3baf73526460bc17d6ff7a35
+source-git-commit: 34247d8de3dc1a243eaac152b1d2036f9c237303
 workflow-type: tm+mt
-source-wordcount: '1930'
+source-wordcount: '1955'
 ht-degree: 5%
 
 ---
@@ -55,11 +55,14 @@ Egenskaperna fördelas på flera flikar.
 
 * **På/av-tid**
 
-   * **Tid**  - Det datum och den tidpunkt då den publicerade sidan visas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
+   >[!NOTE]
+   >
+   > Mer information om hur du konfigurerar den relaterade automatiska replikeringen finns i [På- och Av-tider - Utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration).
 
-      >[!NOTE]
-      >
-      > Mer information om hur du konfigurerar den relaterade automatiska replikeringen finns i [På- och Av-tider - Utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration).
+   >[!NOTE]
+   >Om **On Time** eller **Off Time** redan är aktiverat och automatisk replikering har konfigurerats, kommer den relevanta åtgärden att aktiveras omedelbart.
+
+   * **Tid**  - Det datum och den tidpunkt då den publicerade sidan visas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
 
       * Om redan [har publicerats (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) kommer den här sidan att behållas vilande (dold) tills den återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och konfigureras för automatisk replikering kommer den att publiceras automatiskt och sedan återges vid den angivna tidpunkten.
@@ -86,9 +89,7 @@ Egenskaperna fördelas på flera flikar.
    * **Lägg till**  - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
       * Tryck eller klicka igen för att lägga till flera.
       * Tryck eller klicka på ikonen **Ta bort** för att ta bort fågel-URL:en.
-   * **Omdirigerings-URL**  för vanity - Anger om du vill att sidan ska använda innehålls-URL:en.
-
-
+   * **Omdirigerings-URL**  för vanity - Anger om du vill att sidan ska använda standard-URL:en.
 
 
 ### Avancerat {#advanced}
