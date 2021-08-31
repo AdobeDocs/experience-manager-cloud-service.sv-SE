@@ -5,7 +5,7 @@ breadcrumb-title: Onboarding Journey
 user-guide-description: Börja här för en guidad resa som utformats för en systemadministratörspersonal och som innehåller krav, steg och tillvägagångssätt. Under resan definieras ytterligare profiler som systemadministratören måste interagera med för ett framgångsrikt projekt, men utgångspunkten för resan är en administratörs.
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: d72ecc81e3afd68dee64e7e4934703db84df25d6
+source-git-commit: 673340ba6e33daca2b1a371286ec38d6eaaca461
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Onboarding Journey {#onboarding-journey}
+# Onboarding Journey {#journey-onboarding}
 
 + [Onboarding Journey](/help/journey-onboarding/home.md)
 + Utforska introduktionsresan {#onboarding}
