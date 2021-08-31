@@ -4,7 +4,7 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 index: false
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: e7cdb26b588c1dc8a8cd9634ac45927c3cee10c6
+source-git-commit: 533e6cb780f908cfa4a30831bab7b80174872f24
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Följ stegen nedan för att navigera till Admin Console och granska din systemad
 >[!NOTE]
 >Du måste vara systemadministratör för att kunna utföra följande steg.
 
-1. Klicka på **Kom igång** i ditt välkomstmeddelande, som visas i figuren nedan, för att navigera till Admin Console eller direkt till Admin Console från [här](https://adminconsole.adobe.com).
+1. Klicka på **Kom igång** från ditt välkomstmeddelande, som visas i figuren nedan, för att navigera till Admin Console eller direkt till Admin Console från [här](https://adminconsole.adobe.com).
 
    >[!NOTE]
    >Som systemadministratör får du flera e-postmeddelanden. Leta efter det välkomstmeddelande som innehåller information om organisationsnamnet som du har fått åtkomst till och klicka på **Kom igång**. Om du inte hittar e-postmeddelandet går du direkt till [Admin Console](https://adminconsole.adobe.com/).
