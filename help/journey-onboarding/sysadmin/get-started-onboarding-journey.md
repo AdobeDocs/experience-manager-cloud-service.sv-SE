@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 index: false
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: d72ecc81e3afd68dee64e7e4934703db84df25d6
+source-git-commit: e7cdb26b588c1dc8a8cd9634ac45927c3cee10c6
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -35,10 +35,12 @@ Följ stegen nedan för att navigera till Admin Console och granska din systemad
 >[!NOTE]
 >Du måste vara systemadministratör för att kunna utföra följande steg.
 
-1. Klicka på **Kom igång** i ditt välkomstmeddelande om du vill navigera till Admin Console eller direkt till Admin Console från [här](https://adminconsole.adobe.com).
+1. Klicka på **Kom igång** i ditt välkomstmeddelande, som visas i figuren nedan, för att navigera till Admin Console eller direkt till Admin Console från [här](https://adminconsole.adobe.com).
 
    >[!NOTE]
    >Som systemadministratör får du flera e-postmeddelanden. Leta efter det välkomstmeddelande som innehåller information om organisationsnamnet som du har fått åtkomst till och klicka på **Kom igång**. Om du inte hittar e-postmeddelandet går du direkt till [Admin Console](https://adminconsole.adobe.com/).
+
+   ![](/help/journey-onboarding/assets/get-started-email.png)
 
 1. Logga in med din [Adobe ID](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/adobe-id.html?lang=en). När inloggningen är klar visas sidan **Översikt** för Adobe Admin Console, enligt nedan.
 
