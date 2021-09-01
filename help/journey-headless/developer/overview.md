@@ -2,9 +2,9 @@
 title: AEM Headless Developer Journey
 description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: d7d647e2114ed808ad29ed0802d838d257a9df03
+source-git-commit: 387e75faeccb0671a32a54ff0c12f05219844311
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1201'
 ht-degree: 1%
 
 ---
@@ -15,11 +15,9 @@ Börja här för en guidad resa med de kraftfulla och flexibla headless-funktion
 
 ## Introduktion {#introduction}
 
-Headless-implementering blir allt viktigare för att ni ska kunna leverera upplevelser till er målgrupp, oavsett var de finns och kanal.
-
 Den Headless-implementeringen förskjuter hantering av sidor och komponenter på samma sätt som traditionella lösningar med fullständiga stackar och fokuserar på att skapa kanalneutrala, återanvändbara fragment av innehåll och deras flerkanalsleverans. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av digitala upplevelser.
 
-Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är klar:
+Den här guiden leder dig igenom de mest rubrikfria implementeringsämnena i AEM så att du när du är klar:
 
 * Få en fullständig förståelse för vad headless content delivery är och dess fördelar.
 * Förstå AEM headless-funktioner och hur de fungerar tillsammans för att leverera en headless-upplevelse.
@@ -31,7 +29,7 @@ Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är 
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
-Om du vill veta hur Adobe rekommenderar hur man löser problem med headless business case med AEM, är AEM Headless Journeys där man ska börja.
+Om du vill veta hur Adobe rekommenderar att man löser problem med headless business with AEM är det [AEM Headless Journeys](/help/journey-headless/home.md) som ska börja.
 
 >[!TIP]
 >
@@ -43,13 +41,12 @@ Den här resan är utformad för utvecklarprofiler och innehåller krav, steg oc
 
 Följande personer interagerar på den här resan.
 
-| Persona | Beskrivning | Roll på resan |
+| Persona | Beskrivning | Roll på den här resan |
 |---|---|---|
-| Developer | Har erfarenhet av att utveckla headless-program som använder innehåll från olika källor | Målgrupp för den här resan |
+| Utvecklare (målgrupp) | Har erfarenhet av att utveckla headless-program som använder innehåll från olika källor | Målgrupp för den här resan |
 | Innehållsförfattare | Skapar och hanterar innehåll som levereras utan problem | Innehållsförfattare skapar innehåll som utvecklaren själv levererar. |
 | Administratör | Hanterar AEM grundinställningar och konfiguration | Utvecklaren arbetar tillsammans med administratören för att göra de konfigurationsändringar som behövs för utvecklingen. |
 | Innehållsarkitekt | Analyserar kraven för de data som måste levereras utan huvud och definierar strukturen för dessa data | Utvecklarna arbetar tillsammans med innehållsarkitekten för att förstå datastrukturen och kraven för att kunna leverera den utan problem. |
-| Översättningsspecialist | Definierar vilket innehåll som ska översättas och hanterar dessa arbetsflöden | Översättningsexperten arbetar tillsammans med innehållsarkitekten för att definiera den inledande organisationen av innehållet och kan behöva arbeta med utvecklaren för att uppfylla eventuella översättningsspecifika krav. |
 
 Information under denna resa kan förstås vara användbar för alla personer, men viss information kan vara överflödig för vissa roller. Stanna kvar på de [kommande resorna som omfattar ytterligare roller.](/help/journey-documentation/home.md#journeys)
 

@@ -1,9 +1,9 @@
 ---
 title: AEM Headless Journeys
 description: Börja här för att få en översikt över de guidade resor som finns för att förstå AEM kraftfulla headless-funktioner.
-source-git-commit: 5cfe3bf09d0f91aa2eaa493f04ae0cde1f2541d4
+source-git-commit: 387e75faeccb0671a32a54ff0c12f05219844311
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -30,19 +30,11 @@ Om du vill veta hur Adobe rekommenderar hur man löser problem med headless busi
 
 ## Målgrupper {#audiences}
 
-Headless Journeys är utformade för flera olika personligheter och innehåller krav, steg och tillvägagångssätt för att implementera headless-lösningar från olika perspektiv. En resa definieras för en viss person, men definierar även ytterligare profiler som läsaren interagerar med.
+Headless Journeys är utformade för olika personligheter och innehåller krav, steg och tillvägagångssätt för att implementera headless-lösningar från olika perspektiv.
 
-Nedan följer de personligheter som interagerar i Headless Journeys.
+En enskild resa definieras för en viss person eller målgrupp, men definierar även ytterligare personligheter som läsaren interagerar med.
 
-| Persona | Beskrivning | Roll på resan |
-|---|---|---|
-| Developer | Har erfarenhet av att utveckla headless-program som använder innehåll från olika källor | Utvecklaren arbetar tillsammans med författare, administratörer och arkitekter för att förstå data och bygga en headless-applikation som förbrukar dessa data. |
-| Innehållsförfattare | Skapar och hanterar innehåll som levereras utan problem | Innehållsförfattare skapar innehåll som utvecklaren själv levererar. |
-| Administratör | Hanterar AEM grundinställningar och konfiguration | Utvecklaren arbetar tillsammans med administratören för att göra de konfigurationsändringar som behövs för utvecklingen. |
-| Innehållsarkitekt | Analyserar kraven för de data som måste levereras utan huvud och definierar strukturen för dessa data | Utvecklarna arbetar tillsammans med innehållsarkitekten för att förstå datastrukturen och kraven för att kunna leverera den utan problem. |
-| Översättningsspecialist | Definierar vilket innehåll som ska översättas och hanterar dessa arbetsflöden | Översättningsexperten arbetar tillsammans med innehållsarkitekten för att definiera den inledande organisationen av innehållet och kan arbeta med utvecklaren för alla översättningsspecifika krav. |
-
-Information på dessa resor kan förstås vara användbar för alla människor, men viss information kan vara överflödig för vissa roller.
+Information på resorna kan förstås vara användbar för flera personer, men en resa är inriktad på en viss person och viss information kan vara överflödig för vissa roller.
 
 ## Huvudlösa resor {#headless-journeys}
 

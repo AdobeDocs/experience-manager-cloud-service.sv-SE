@@ -1,12 +1,12 @@
 ---
 title: AEM Headless Content Architect Journey
 description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan modellera ditt innehåll i ditt första headless-projekt.
-index: false
-hide: true
-hidefromtoc: true
-source-git-commit: 1fb3665007439940617c48fd61de7a7c19aee8d2
+index: true
+hide: false
+hidefromtoc: false
+source-git-commit: 387e75faeccb0671a32a54ff0c12f05219844311
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '789'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,14 @@ Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är 
 * Förstå vad headless content delivery är och dess fördelar.
 * Förstå hur du modellerar ditt innehåll för AEM headless-funktioner.
 * Har möjlighet att ta de första stegen för att modellera ditt innehåll för ditt första AEM headless-projekt.
+
+## AEM dokumentationsresor {#documentation-journeys}
+
+[I en dokumentation ](/help/journey-documentation/home.md) samlas många olika och kanske komplicerade ämnen och funktioner in, genom en berättelse som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskaper.
+
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
+
+Om du vill veta hur Adobe rekommenderar att man löser problem med headless business with AEM är det [AEM Headless Journeys](/help/journey-headless/home.md) som ska börja.
 
 ## Målgrupp {#audience}
 

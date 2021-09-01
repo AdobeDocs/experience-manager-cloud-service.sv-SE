@@ -1,10 +1,10 @@
 ---
 title: AEM Headless Translation Journey
 description: Börja här för en guidad resa genom att översätta ert headless-innehåll med AEM kraftfulla översättningsverktyg.
-index: false
-hide: true
-hidefromtoc: true
-source-git-commit: 9de8b0b295808d0f0fa5bc21a74345e2ba2655d4
+index: true
+hide: false
+hidefromtoc: false
+source-git-commit: 387e75faeccb0671a32a54ff0c12f05219844311
 workflow-type: tm+mt
 source-wordcount: '1044'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Om du redan är bekant med AEM, headless och translation kanske du redan har gru
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
-Om du vill veta hur Adobe rekommenderar hur man löser problem med headless business case med AEM, är AEM Headless Journeys där man ska börja.
+Om du vill veta hur Adobe rekommenderar att man löser problem med headless business with AEM är det [AEM Headless Journeys](/help/journey-headless/home.md) som ska börja.
 
 ## Målgrupp {#audience}
 

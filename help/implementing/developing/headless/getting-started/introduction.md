@@ -1,23 +1,29 @@
 ---
 title: Starthandbok för Headless
 description: Med den här snabbstartsguiden lär du dig grunderna i AEM som en Cloud Services kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API.
-source-git-commit: 8dc9bf522a9b1c750ae8c92659cc83b444cb3c94
+exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
+source-git-commit: 6605349c698325d432479fac0253a6fd53d7f175
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
-
 # Starthandbok för Headless {#introduction}
 
-Med de Headless Getting Started Guides kan du enkelt skapa, hantera och leverera upplevelser med AEM som Cloud Service i fem steg. Varje guide bygger vidare på det föregående, så vi rekommenderar att du tittar noga igenom dem i ordning.
+De Headless Getting Started Guides utgör en enkel väg för att skapa, hantera och leverera upplevelser med AEM som Cloud Service i fem steg för användare som redan är bekanta med AEM och headless-teknik. Varje guide bygger vidare på det föregående, så vi rekommenderar att du tittar noga igenom dem i ordning.
 
 1. [Skapa en konfiguration](create-configuration.md)
 1. [Skapa en innehållsfragmentmodell](create-content-model.md)
 1. [Skapa en resursmapp](create-assets-folder.md)
 1. [Skapa ett innehållsfragment](create-content-fragment.md)
 1. [Åtkomst och leverans av innehållsfragment](create-api-request.md)
+
+>[!TIP]
+>
+>Den här guiden för att komma igång förutsätter kunskap om både AEM och headless-teknik.
+>
+>Om du inte har använt AEM eller headless tidigare kan du läsa vår [Headless Documentation Journeys](/help/journey-headless/home.md) för att få en introduktion från början till slut till både headless och hur AEM klarar det.
 
 ## Målgrupp {#audience}
 

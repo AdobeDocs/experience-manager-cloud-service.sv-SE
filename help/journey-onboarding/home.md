@@ -1,9 +1,9 @@
 ---
 title: Onboarding Journey
 description: Börja här för att få en översikt över den guidade introduktionsresan som är tillgänglig för att förstå introduktionsupplevelsen.
-source-git-commit: 7a8d21e9a5cd4f1767e55aaf68114199a6a0d1cf
+source-git-commit: 9cea7a8a7adf363b6b969a1a427ebf7ff473469b
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,14 @@ Detta innebär:
 * Ditt team är konfigurerat och har tillgång till molnresurser,
 * AEM Authors kommer att ha tillgång till AEM som Cloud Service,
 * AEM utvecklare och distributionsansvariga får tillgång till AEM som Cloud Service.
+
+## AEM dokumentationsresor {#documentation-journeys}
+
+[I en dokumentation ](/help/journey-documentation/home.md) samlas många olika och kanske komplicerade ämnen och funktioner in, genom en berättelse som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskaper.
+
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
+
+Om du vill veta hur Adobe rekommenderar att ditt team ska komma igång med att skapa innehåll för AEM som ett program för Cloud Service är det här du ska börja!
 
 ## Målgrupper {#audiences}
 

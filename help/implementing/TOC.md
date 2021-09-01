@@ -1,14 +1,14 @@
 ---
-sub-product: Implementera för AEM as a Cloud Service
+sub-product: Implementing for AEM as a Cloud Service
 user-guide-title: Implementera för AEM as a Cloud Service
 breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
-feature: Utvecklarverktyg
+feature: Developer Tools
 role: Developer, Architect
-source-git-commit: a9b81e6bcefc95cac305f8387928cf515939aef0
+source-git-commit: 6605349c698325d432479fac0253a6fd53d7f175
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 27%
+source-wordcount: '1033'
+ht-degree: 26%
 
 ---
 
@@ -144,7 +144,7 @@ ht-degree: 27%
       + [AEM](/help/implementing/developing/introduction/node-types.md)
    + Headless Experience Management {#headless}
       + [Headless och AEM](developing/headless/introduction.md)
-      + [Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html)
+      + [Headless Documentation Journeys](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/home.html)
       + Komma igång-guider {#getting-started}
          + [Introduktion](developing/headless/getting-started/introduction.md)
          + [Skapa en konfiguration](developing/headless/getting-started/create-configuration.md)
