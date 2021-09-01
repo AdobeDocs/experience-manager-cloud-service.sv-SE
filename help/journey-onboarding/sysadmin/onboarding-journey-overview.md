@@ -4,30 +4,14 @@ description: Följ den här sidan för att lära dig hur du kommer igång med en
 index: false
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 792ec993bd9d628fac49b9553d5923c74195f4c7
+source-git-commit: 5a91f45b4ed933e37f5af61a194d08e204cd1514
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '532'
 ht-degree: 1%
 
 ---
 
 # Onboarding Journey {#onboarding-jourrney}
-
-Grattis till att du har påbörjat din resa med AEM som Cloud Service! Vi är glada över att du är här och vi kan inte vänta på att få dig att komma igång med din introduktionsresa. Oavsett om du distribuerar ett nytt program eller migrerar ett befintligt, fungerar den här guiden som en startpunkt för att säkerställa att dina team har konfigurerat och har tillgång till AEM som Cloud Service.
-
-## Introduktion {#introduction}
-
-Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är klar får:
-
-* Full insikt i vad som förväntas under AEM som en Cloud Services introduktionsresa.
-* Gör det möjligt för teamet att komma igång och ta de första stegen för att lära sig att skapa och utveckla innehåll för AEM som ett program för Cloud Service.
-
-Detta innebär:
-
-* Ditt team är konfigurerat och har tillgång till molnresurser,
-* AEM Authors kommer att ha tillgång till AEM som Cloud Service,
-* AEM utvecklare och distributionsansvariga får tillgång till AEM som Cloud Service.
-
 
 ## Onboarding Experience {#audience}
 
