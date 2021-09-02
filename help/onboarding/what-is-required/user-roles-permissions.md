@@ -2,9 +2,9 @@
 title: Roller för Cloud Manager
 description: Den här sidan beskriver användarroller och behörigheter. Följ den här sidan om du vill lära dig hur du lägger till användare och tilldelar dem till roller i molnhanteraren.
 exl-id: d1689134-044a-4d96-97a2-cd09f735a680
-source-git-commit: a0edbaf650fdfbc271a000ab4827a4c414321613
+source-git-commit: e4bb8b99ad1ff2accfb94dd94f7c9bae04d4f60b
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '529'
 ht-degree: 7%
 
 ---
@@ -30,9 +30,6 @@ I Cloud Manager definieras för närvarande fyra roller för användare som styr
 ## Visa dina roller {#view-roles}
 
 Om du vill visa dina roller i Cloud Manager loggar du in på användargränssnittet i Cloud Manager, markerar din profilikon i det övre högra hörnet och väljer **Användarroller**, vilket visas i bilden nedan.
-
->[!NOTE]
->Mer information om hur du loggar in i Cloud Manager finns i [Navigera till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md).
 
 ![](/help/onboarding/what-is-required/assets/admin-console-9.png)
 

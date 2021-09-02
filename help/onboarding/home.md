@@ -2,7 +2,7 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
-source-git-commit: 646c6884dc7397d69f40f074b6c4c1cef4510796
+source-git-commit: 786ff1c2e715869ecd12cf54ede0fb650e8ef33f
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 17%
@@ -34,7 +34,7 @@ När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
 1. Adobe slutför etableringen för din organisation och därefter får din organisations systemadministratör ett välkomstmeddelande som gör att de kan utföra [systemadministratörsuppgifter](/help/onboarding/what-is-required/add-users-assign-cm-roles.md), inklusive lägga till användare, tilldela dem till roller och därmed ge dem lämplig åtkomst till Cloud Manager.
 
-1. Användare som läggs till av din systemadministratör får i sin tur ett välkomstmeddelande via e-post som gör att de kan [navigera till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md). Nu kan användare använda sin Adobe ID för att logga in och påbörja sin resa med Cloud Manager härifrån.
+1. Användare som läggs till av din systemadministratör får i sin tur ett välkomstmeddelande via e-post som gör att de kan navigera till Cloud Manager. Nu kan användare använda sin Adobe ID för att logga in och påbörja sin resa med Cloud Manager härifrån.
 
 1. En systemadministratör kan [bevilja användare åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md) i utvecklingssyfte.
 
@@ -54,7 +54,7 @@ Följande dokumentationssidor innehåller information om grundläggande organisa
 * Lägga till användare
 * Tilldela användare roller och behörigheter i Cloud Manager
 
-**[Navigera till Cloud Manager](/help/onboarding/what-is-required/navigate-to-cloud-manager.md)**
+* **Navigera till Cloud Manager**
 
 Nu när du har lagts till som användare och tilldelats en molnhanterarroll kan du komma åt Cloud Manager för att komma igång med din molnresa med AEM. Användarna är redo att utföra olika åtgärder, t.ex. skapa ett program, lägga till en miljö, komma åt Git, [konfigurera en pipeline](/help/implementing/cloud-manager/configure-pipeline.md) och [distribuera kod](/help/implementing/cloud-manager/deploy-code.md).
 Cloud Manager är en viktig del av AEM som Cloud Service. Det gör det möjligt för organisationer att självhantera [!DNL Experience Manager] i molnet. Det innehåller ett ramverk för kontinuerlig integrering och kontinuerligt leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Med användargränssnittet kan du konfigurera och starta CI/CD-flödet.
