@@ -1,10 +1,10 @@
 ---
 title: OSGi Configuration API
 description: Beskrivning av AEM som en Cloud Service OSGi-konfigurationsyta
-feature: Distribuerar
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+feature: Deploying
+source-git-commit: 5223d57377f5c00b090aee1ddd4dbfe2d7113181
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,7 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
 * **`com.day.cq.auth.impl.cug.CugSupportImpl`** (Anmälningsdatum: 2021-04-30: 7/31/2021)
 * **`com.day.cq.jcrclustersupport.ClusterStartLevelController`** (Anmälningsdatum: 2021-04-30: 7/31/2021)
 * **`org.apache.felix.http (Factory)`** (Anmälningsdatum: 2021-04-30: 7/31/2021)
+* **`org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`** (Anmälningsdatum: 2021-08-25: 11/26/2021)
 
 ## OSGi-konfigurationer som omfattas av Build Validation Rules {#osgi-configurations-subject-to-build-validation-rules}
 
