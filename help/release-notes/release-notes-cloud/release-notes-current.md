@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 58d9022b2b65aec4709a41ebfc80cc03c4c162a6
+source-git-commit: 2d75c44420c5211d99e8e2e1eabea79ebf6b5162
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1423'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Titta på videon [Versionsöversikt från augusti 2021](https://video.tv.adobe.c
 
 <!-- * Automated Forms Conversion service can [convert PDF Forms in Italian and Portuguese language](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?#language-specific-meta-model) to Adaptive Forms. -->
 
-* AEM Archetype-projekt för Forms som Cloud Service innehåller nu [Canvas 3.0-tema och formulärdatamodeller för Microsoft Dynamics och Salesforce.com](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?#forms-cloud-service-local-development-environment).
+* AEM Archetype-projekt för Forms som Cloud Service innehåller nu [formulärdatamodeller för Microsoft Dynamics och Salesforce.com](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?#forms-cloud-service-local-development-environment).
 
 * **Acroform-based Document of Record**: AEM Forms som Cloud Service har stöd för att använda  [Adobe Acrobat Form PDF (Acrobat PDF) ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för arkivhandlingar förutom XFA-baserad formulärmall.
 
