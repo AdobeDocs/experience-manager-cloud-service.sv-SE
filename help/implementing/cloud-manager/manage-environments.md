@@ -2,9 +2,9 @@
 title: Hantera miljöer - Cloud Service
 description: Hantera miljöer - Cloud Service
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 529fbdcba9fc4c1432beef1b63ff89079a900224
+source-git-commit: c25756f16f5e86958c1cc9224e51d07c4d864da4
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1608'
 ht-degree: 3%
 
 ---
@@ -145,8 +145,6 @@ Alternativet Ta bort är också tillgängligt om du klickar på **Information** 
 ## Hantera åtkomst {#managing-access}
 
 Välj **Hantera åtkomst** i listrutan på kortet **Miljö**. Du kan navigera till författarinstansen direkt och hantera åtkomsten för din miljö.
-
-Mer information finns i [Hantera åtkomst till författarinstansen](/help/onboarding/what-is-required/accessing-aem-instance.md).
 
 ![](assets/environ-access.png)
 

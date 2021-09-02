@@ -2,7 +2,7 @@
 title: Läs vad är Cloud Manager
 description: Följ den här sidan om du vill veta mer om Cloud Manager, Cloud Manager-program och miljöer.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: 900bcfd2b05b7c996c7ef51118d1f09a16020332
+source-git-commit: a37b460d467e6e86394ae4baa61f044486c73b24
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Dessutom kan du gå till sidan Program och produkter i Cloud Manager från Adobe
 
 1. Klicka på **Starta** från Cloud Manager-kortet. När du har loggat in på Cloud Manager är du redo att använda användargränssnittet.
 
-När inloggningen är klar dirigeras du till landningssidan för Cloud Manager.
+   När inloggningen är klar dirigeras du till landningssidan för Cloud Manager.
 
 ## Cloud Manager-program {#cloud-manager-programs}
 
