@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: 7634c146ca6f8cd4a218b07dae0c063ab581f221
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1531'
 ht-degree: 1%
 
 ---
@@ -40,10 +40,12 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
    </LocationMatch>
    ```
 
-   Var försiktig när du anger rubriker för global cachekontroll eller rubriker som matchar ett brett område så att de inte tillämpas på innehåll som du kanske tänker behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM som en Cloud Service tar då bort cachehuvudet om det upptäcker att det har tillämpats på det som inte kan nås av dispatchern, vilket beskrivs i dispatcherdokumentationen. Om du vill tvinga AEM att alltid använda cachelagring kan du lägga till alternativet &quot;always&quot; enligt följande:
+   Var försiktig när du anger rubriker för global cachekontroll eller rubriker som matchar ett brett område så att de inte tillämpas på innehåll som du kanske tänker behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM som en Cloud Service tar då bort cachehuvudet om det upptäcker att det har tillämpats på det som inte kan nås av dispatchern, vilket beskrivs i dispatcherdokumentationen. För att tvinga AEM att alltid använda cachelagringshuvuden kan du lägga till alternativet **always** enligt följande:
 
    ```
    <LocationMatch "^/content/.*\.(html)$">
+        Header unset Cache-Control
+        Header unset Expires
         Header always set Cache-Control "max-age=200"
         Header set Age 0
    </LocationMatch>
@@ -56,11 +58,13 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
    { /glob "*" /type "allow" }
    ```
 
-* Om du vill förhindra att specifikt innehåll cachelagras anger du rubriken Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll i en katalog med namnet **myfolder** cachelagras:
+* Om du vill förhindra att specifikt innehåll cachelagras anger du rubriken Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll i en katalog med namnet **secure** cachelagras:
 
    ```
-      <LocationMatch "/content/myfolder/.*\.(html)$">.  // replace with the right regex
-      Header set Cache-Control “private”
+      <LocationMatch "/content/secure/.*\.(html)$">.  // replace with the right regex
+      Header unset Cache-Control
+      Header unset Expires
+      Header always set Cache-Control “private”
      </LocationMatch>
    ```
 
@@ -114,7 +118,7 @@ Precis som i tidigare versioner av AEM rensas innehållet från dispatcherns cac
 
 När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatcher-cachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilnivå](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level).
 
-### Cacheminnet för explicit dispatcher är ogiltigt {#explicit-invalidation}
+### Cacheogiltigförklaring av explicit dispatcher {#explicit-invalidation}
 
 I allmänhet behöver du inte göra innehåll i dispatchern ogiltigt manuellt, men det är möjligt om det behövs, vilket beskrivs nedan.
 
@@ -134,7 +138,7 @@ Om det finns oro för att dispatchercachen inte rensas kontaktar du [kundsupport
 
 CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas. Om ett problem misstänks ska du [kontakta kundsupport](https://helpx.adobe.com/support.ec.html) som kan tömma ett CDN-cache som hanteras av Adobe vid behov.
 
-## Klientbibliotek och versionskonsekvens {#content-consistency}
+## Bibliotek på klientsidan och versionskonsekvens {#content-consistency}
 
 Sidorna består av HTML, JavaScript, CSS och bilder. Kunder uppmuntras att använda [Client-Side Libraries (clientlibs)-ramverket](/help/implementing/developing/introduction/clientlibs.md) för att importera JavaScript- och CSS-resurser till HTML-sidor, med hänsyn tagen till beroenden mellan JS-bibliotek.
 
@@ -144,7 +148,7 @@ När de nya versionerna av biblioteken släpps i produktion uppdateras de refere
 
 Mekanismen för det här är en serialiserad hash-konvertering som läggs till i klientbibliotekslänken, vilket garanterar en unik versionshanterad URL-adress som webbläsaren kan använda för att cachelagra CSS/JS. Den serialiserade hashen uppdateras bara när innehållet i klientbiblioteket ändras. Detta innebär att om det inte sker några ändringar (dvs. inga ändringar av klientbibliotekets underliggande css/js) även med en ny distribution, förblir referensen densamma, vilket säkerställer färre avbrott i webbläsarens cache.
 
-### Aktivera Longcache-versioner av klientbibliotek - AEM som en Cloud Service-SDK QuickStart {#enabling-longcache}
+### Aktivera Longcache-versioner av klientbibliotek - AEM som en Cloud Service SDK QuickStart {#enabling-longcache}
 
 Klientlib som standard finns på en HTML-sida ser ut som i följande exempel:
 
