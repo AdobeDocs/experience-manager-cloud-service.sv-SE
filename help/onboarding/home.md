@@ -2,9 +2,9 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
-source-git-commit: e5d5e838a027af983db51a3292962200faaf3cfa
+source-git-commit: 646c6884dc7397d69f40f074b6c4c1cef4510796
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '934'
 ht-degree: 17%
 
 ---
@@ -38,7 +38,7 @@ När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
 
 1. En systemadministratör kan [bevilja användare åtkomst till en AEM](/help/onboarding/what-is-required/accessing-aem-instance.md) i utvecklingssyfte.
 
-**[Skaffa Adobe ID](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/adobe-id.html?lang=en)**
+**Skaffa Adobe ID**
 
 Du behöver din Adobe ID och din systemadministratörs hjälp för att lägga till användare i Cloud Manager till deras tilldelade roller.
 
