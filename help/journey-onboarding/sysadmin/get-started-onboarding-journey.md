@@ -1,10 +1,9 @@
 ---
 title: Komma igång med introduktionsprocessen
 description: Följ den här sidan för att lära dig hur du kommer igång med en introduktionsresa
-index: false
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 533e6cb780f908cfa4a30831bab7b80174872f24
+source-git-commit: d8ff6f4386ab0e5df4f770cdb566facc1cc0cc98
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
