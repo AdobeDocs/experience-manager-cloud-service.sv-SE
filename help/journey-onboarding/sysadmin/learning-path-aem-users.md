@@ -3,9 +3,9 @@ title: Utbildningsväg för AEM
 description: Följ den här sidan om du vill lära dig mer om hur du gör när du har fått åtkomst, om du är en AEM användare
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: d8ff6f4386ab0e5df4f770cdb566facc1cc0cc98
+source-git-commit: 12ca20c750d7332ebfaf62c781cbe5ec386c2d64
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '356'
 ht-degree: 2%
 
 ---
@@ -36,18 +36,12 @@ Systemadministratören måste ha slutfört alla nödvändiga steg och tilldelat 
 
 Följ stegen nedan för att få åtkomst till författaren:
 
-1. Navigera direkt till [Adobe Experience Cloud](https://experience.adobe.com) och logga in med din Adobe ID.
+1. Navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
 
-1. På Adobe Experience Cloud hemsida väljer du **Experience Manager**.
+   >[!NOTE]
+   >Bokmärk [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) för framtida referens och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
 
-   ![](/help/journey-onboarding/assets/setup-resources2.png)
-
-1. Du kommer nu till AEM startsida. Starta **Cloud Manager** härifrån.
-
-   ![](/help/journey-onboarding/assets/setup-resources3.png)
-
-   >[!IMPORTANT]
-   >Du kan också navigera direkt till inloggningssidan för Cloud Manager från [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/). Bokmärk den här sidan för framtida referens och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
+1. Välj programmet på sidan **Program och produkter** i Cloud Manager för att starta sidan **Översikt**.
 
 1. På sidan **Översikt** i Cloud Manager klickar du på författarlänken på **miljökortet**.
 
