@@ -1,7 +1,7 @@
 ---
 title: Avancerade URL-konfigurationer
 description: Lär dig hur du anpassar URL:er för produkt- och kategorisidor. Detta gör att implementeringar kan optimera URL:er för sökmotorer och främja identifiering.
-sub-product: Handel
+sub-product: Commerce
 version: cloud-service
 doc-type: technical-video
 activity: setup
@@ -10,14 +10,18 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: fe0e93d6f9ab16bf469e52e2b758f5e3f8600413
+source-git-commit: c956aab4dbbbb7daede3e115616ae923f7a68b90
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 2%
+source-wordcount: '789'
+ht-degree: 6%
 
 ---
 
 # Avancerade URL-konfigurationer {#url}
+
+>[!NOTE]
+>
+> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor hanteras i många Adobe Experience Manager (AEM) as a Cloud Service-projekt. Mer information finns i [Bästa praxis för SEO- och URL-hantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html).
 
 [AEM CIF Core ](https://github.com/adobe/aem-core-cif-components) Components innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO).  Följande video visar hur du konfigurerar tjänsten `UrlProvider` och funktionerna i [Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
