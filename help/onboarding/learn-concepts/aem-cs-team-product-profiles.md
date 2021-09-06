@@ -1,15 +1,15 @@
 ---
 title: AEM som Cloud Service team och produktprofiler
 description: Följ den här sidan om du vill veta mer om AEM som Cloud Service Team och produktprofiler.
-source-git-commit: 976fc51be0ba8c407ff7d6f7c1a6efecbbdad5c9
+exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
+source-git-commit: 56ca8e80081e62ceb3f5fc2bf9c32aa3bcee12c6
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 0%
 
 ---
 
-
-# AEM som Cloud Service Team och produktprofiler {#product-profiles}
+# AEM som Cloud Service team och produktprofiler {#product-profiles}
 
 ## Produktprofiler {#profiles}
 
@@ -36,7 +36,7 @@ AEM som teammedlemmar i Cloud Servicen läggs till och tilldelas en eller flera 
 
 Cloud Manager har förkonfigurerade produktprofiler, eller mer enkelt, rollbaserade behörigheter. Din systemadministratör ansvarar för att konfigurera ditt Cloud Manager-team genom att tilldela dem till dessa produktprofiler, och måste bekanta sig med dessa produktprofiler och vilka gruppmedlemmar de ska tilldelas till.
 >[!NOTE]
->Mer information finns i [Rollbaserade behörigheter i Cloud Manager](/help/onboarding/what-is-required/user-roles-permissions.md).
+>Mer information finns i [Rollbaserade behörigheter i Cloud Manager](/help/onboarding/learn-concepts/cloud-manager-introduction.md##role-based-permissions).
 
 Var och en av produktprofilerna har tillhörande behörigheter. Om du till exempel har rollen som
 

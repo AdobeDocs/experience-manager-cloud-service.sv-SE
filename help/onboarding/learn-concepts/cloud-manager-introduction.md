@@ -2,10 +2,10 @@
 title: Läs vad är Cloud Manager
 description: Följ den här sidan om du vill veta mer om Cloud Manager, Cloud Manager-program och miljöer.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: a37b460d467e6e86394ae4baa61f044486c73b24
+source-git-commit: a21116e9ea59e608590151dc2682ff6e73dde9ed
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 0%
+source-wordcount: '907'
+ht-degree: 3%
 
 ---
 
@@ -39,6 +39,26 @@ Dessutom kan du gå till sidan Program och produkter i Cloud Manager från Adobe
 1. Klicka på **Starta** från Cloud Manager-kortet. När du har loggat in på Cloud Manager är du redo att använda användargränssnittet.
 
    När inloggningen är klar dirigeras du till landningssidan för Cloud Manager.
+
+## Rollbaserade behörigheter i Cloud Manager {#role-based-permissions}
+
+| Behörighet | Beskrivning | Business Owner | Deployment Manager | Program Manager | Developer |
+|--- |--- |--- |--- |--- |--- |
+| Lägg till program<br>Redigera program | Lägg till ett nytt program.<br>Redigera ett program - Lägg till eller ta bort lösningar eller tillägg | x |  |  |  |
+| Skapa miljö | Skapa prod+stage, dev, environment. | x | x |  |  |
+| Uppdateringsmiljö | Uppdatera Prod+Stage, Dev, Environmental. | x | x |  |  |
+| Ta bort Dev-miljö | Ta bort Dev-miljöer. | x | x |  |  |
+| Inställningar för pipeline | Konfigurera eller redigera pipeline. |  | x |  |  |
+| Körning av pipeline | Starta rörledningen. | x | x |  |  |
+| Körning av pipeline | Avvisa/godkänn viktiga 3-nivåfel. | x | x | x |  |
+| Körning av pipeline | Godkänn GoLive. | x | x | x |  |
+| Körning av pipeline | Schemalägg produktionsdistribution. | x | x | x |  |
+| Ta bort pipeline | Tillåter borttagning av en pipeline. |  | x |  |  |
+| Avbryt körning | Avbryt aktuell körning. |  | x |  |  |
+| Generera token för personlig åtkomst | Access Git. |  | x |  | x |
+
+>[!NOTE]
+>En användare kan tilldelas flera roller. Om du till exempel tilldelar både Business Owner- och Deployment Manager-roller till en användare får användaren en kombination av eller summan av dessa behörigheter.
 
 ## Cloud Manager-program {#cloud-manager-programs}
 

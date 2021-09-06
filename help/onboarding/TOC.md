@@ -5,10 +5,10 @@ breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 feature: Deploying
 role: Admin, User, Developer
-source-git-commit: a37b460d467e6e86394ae4baa61f044486c73b24
+source-git-commit: 99c9fcf5e7593af5cca4999584d9c93c4ac8c030
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 41%
+source-wordcount: '85'
+ht-degree: 48%
 
 ---
 
@@ -25,6 +25,3 @@ ht-degree: 41%
    + [AEM som Cloud Service team och produktprofiler](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md)
    + [Stöd för Adobe](/help/onboarding/learn-concepts/onboarding-help-resources.md)
 + [Handbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/journey-onboarding/home.html) för introduktionsresan {target=&quot;_blank&quot;}
-+ Komma igång med AEM som Cloud Service {#what-is-required}
-   + [Roller för Cloud Manager](what-is-required/user-roles-permissions.md)
-   + [Systemadministratörsuppgifter](what-is-required/add-users-assign-cm-roles.md)
