@@ -2,9 +2,10 @@
 title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
+source-git-commit: a81bd6ee4957f17acb79093f6ed232674fd93d60
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2413'
 ht-degree: 1%
 
 ---
@@ -412,7 +413,7 @@ Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `R
 # Define REWRITE_LOG_LEVEL Warn
 ```
 
-När du kör Dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh out docker.for.mac.localhost:4503 8080`.
+När du kör Dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh src docker.for.mac.localhost:4503 8080`.
 
 Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 
@@ -446,7 +447,7 @@ I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik
 När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till `docker_run.sh`-skriptet direkt:
 
 ```
-$ DISP_RUN_MODE=stage docker_run.sh out docker.for.mac.localhost:4503 8080
+$ DISP_RUN_MODE=stage docker_run.sh src docker.for.mac.localhost:4503 8080
 ```
 
 Standardkörningsläget när inget värde för DISP_RUN_MODE skickas är &quot;dev&quot;.
