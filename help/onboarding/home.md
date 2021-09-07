@@ -2,10 +2,10 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
-source-git-commit: 5a0c744d848397d9eb9581e0a0a2cd143c5a7412
+source-git-commit: 620972f1a9b4cf9cc4cc888b440b59af28b1127a
 workflow-type: tm+mt
-source-wordcount: '934'
-ht-degree: 17%
+source-wordcount: '595'
+ht-degree: 22%
 
 ---
 
@@ -24,44 +24,18 @@ Bilden nedan visar din introduktionsresa, med början i det välkomstmeddelande 
 
 ![](/help/onboarding/what-is-required/assets/cust-journey.png)
 
-## Viktiga artiklar om onboarding {#key-articles}
+Se [Onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/journey-onboarding/home.html) för att komma igång med introduktionsresan.
 
-I det här avsnittet beskrivs de viktigaste artiklarna som fokuserar på din resa när du börjar med AEM som Cloud Service:
+>[!NOTE]
+>Innan du börjar fördjupa dig i introduktionsresan rekommenderar vi att du läser avsnittet Lär dig om introduktionskoncept som omfattar följande ämnen:
+>* [Systemadministratör](/help/onboarding/learn-concepts/system-administrator.md)
+>* [Admin Console](/help/onboarding/learn-concepts/admin-console.md)
+>* [Adobe Identity Management System](/help/onboarding/learn-concepts/ims.md)
+>* [Adobe ID](/help/onboarding/learn-concepts/adobe-id.md)
+>* [Introduktion till Cloud Manager](/help/onboarding/learn-concepts/cloud-manager-introduction.md)
+>* [AEM som Cloud Service team och produktprofiler](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md)
+>* [Stöd för Adobe](/help/onboarding/learn-concepts/onboarding-help-resources.md)
 
-**Vad som väntar vid introduktion**
-
-När ditt kontrakt har undertecknats kommer följande evenemang att äga rum:
-
-1. Adobe slutför etableringen för din organisation och därefter får din organisations systemadministratör ett välkomstmeddelande som gör att de kan utföra systemadministratörsuppgifter, inklusive lägga till användare, tilldela dem till roller och därmed ge dem lämplig åtkomst till Cloud Manager.
-
-1. Användare som läggs till av din systemadministratör får i sin tur ett välkomstmeddelande via e-post som gör att de kan navigera till Cloud Manager. Nu kan användare använda sin Adobe ID för att logga in och påbörja sin resa med Cloud Manager härifrån.
-
-1. En systemadministratör kan ge användare åtkomst till en AEM instans i utvecklingssyfte.
-
-**Skaffa Adobe ID**
-
-Du behöver din Adobe ID och din systemadministratörs hjälp för att lägga till användare i Cloud Manager till deras tilldelade roller.
-
-**Roller för Cloud Manager**
-
-Systemadministratören kan lägga till användare och tilldela dem till roller i Cloud Manager. I det här avsnittet får du hjälp med att förstå vad *roller i molnhanteraren* är och behörigheter som är kopplade till rollerna innan du börjar.
-
-**Systemadministratörsuppgifter**
-
-Systemadministratörer hanterar alla aspekter av sina användare, från åtkomst till behörigheter. Den här användaren är den första personen som har tillgång till att börja utföra uppgifter i Admin Console och Cloud Manager.
-Följande dokumentationssidor innehåller information om grundläggande organisatoriska uppgifter:
-
-* Lägga till användare
-* Tilldela användare roller och behörigheter i Cloud Manager
-
-**Navigera till Cloud Manager**
-
-Nu när du har lagts till som användare och tilldelats en molnhanterarroll kan du komma åt Cloud Manager för att komma igång med din molnresa med AEM. Användarna är redo att utföra olika åtgärder, t.ex. skapa ett program, lägga till en miljö, komma åt Git, [konfigurera en pipeline](/help/implementing/cloud-manager/configure-pipeline.md) och [distribuera kod](/help/implementing/cloud-manager/deploy-code.md).
-Cloud Manager är en viktig del av AEM som Cloud Service. Det gör det möjligt för organisationer att självhantera [!DNL Experience Manager] i molnet. Det innehåller ett ramverk för kontinuerlig integrering och kontinuerligt leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Med användargränssnittet kan du konfigurera och starta CI/CD-flödet.
-
-**Bevilja användaråtkomst till en AEM instans**
-
-Följ det här avsnittet för att lära dig hur en systemadministratör eller en användare som har skapat en miljö kan ge andra användare åtkomst till en AEM.
 
 ## [!DNL Experience Manager as a Cloud Service] Stödlinjer {#aem-guides}
 
