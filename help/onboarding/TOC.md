@@ -5,10 +5,10 @@ breadcrumb-title: Onboarding Guide
 user-guide-description: Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation.
 feature: Deploying
 role: Admin, User, Developer
-source-git-commit: 99c9fcf5e7593af5cca4999584d9c93c4ac8c030
+source-git-commit: f6d99949d562e16445ca5147e76d9006ebfe9974
 workflow-type: tm+mt
-source-wordcount: '85'
-ht-degree: 48%
+source-wordcount: '82'
+ht-degree: 50%
 
 ---
 
@@ -24,4 +24,4 @@ ht-degree: 48%
    + [Introduktion till Cloud Manager](/help/onboarding/learn-concepts/cloud-manager-introduction.md)
    + [AEM som Cloud Service team och produktprofiler](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md)
    + [Stöd för Adobe](/help/onboarding/learn-concepts/onboarding-help-resources.md)
-+ [Handbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/journey-onboarding/home.html) för introduktionsresan {target=&quot;_blank&quot;}
++ [Onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/journey-onboarding/home.html)

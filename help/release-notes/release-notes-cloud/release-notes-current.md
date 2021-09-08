@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 2d75c44420c5211d99e8e2e1eabea79ebf6b5162
+source-git-commit: 56f799b7583c82694f20de096855d6c5c1741f49
 workflow-type: tm+mt
-source-wordcount: '1423'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -169,4 +169,20 @@ Releasedatum för Content Transfer Tool v1.5.6 är 11 augusti 2021.
 * Knappen **Stoppa inmatning** inaktiverades under hämtning till Publish-instansen. Detta är inte nödvändigt eftersom det inte finns något steg för monoåterställning vid publiceringsintag.
 
 * CTT rensade inte katalogen `/tmp` efter en lyckad extrahering. Detta kan leda till problem med diskutrymmet.
+
+## Best Practices Analyzer {#best-practices-analyzer}
+
+### Releasedatum {#release-date-bpa-latest}
+
+Releasedatum för Best Practices Analyzer v2.1.18 är 2 september 2021.
+
+### Nyheter {#what-is-new}
+
+* Möjlighet att identifiera och rapportera totalt antal noder.
+
+* Möjlighet att identifiera och rapportera om nodlagringstyp och -storlek.
+
+### Felkorrigeringar {#bug-fixes-bpa}
+
+* BPA upptäckte felaktigt förekomsten av Commerce Integration Framework.
 
