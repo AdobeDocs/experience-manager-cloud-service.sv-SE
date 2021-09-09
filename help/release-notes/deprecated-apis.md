@@ -2,10 +2,10 @@
 title: Föråldrade API:er
 description: Versionsinformation som är specifik för borttagna och borttagna API:er i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 exl-id: fbd8c60a-3e2b-4696-aaba-f4db97923184
-source-git-commit: 02b610b830911b737f8caa7356d0e446958bcc2f
+source-git-commit: 70ca1cce6995634d330da68cf8bce8ee12c71f1e
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
@@ -40,7 +40,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>com.day.cq.jcrclustersupport</td>
     <td>Använd Sling's Discovery API som ett alternativ</td>
     <td>2015</td>
-    <td>7/30/21</td>
+    <td>borttagen</td>
   </tr>
   <tr>
     <td>org.apache.sling.settings</td>
@@ -58,7 +58,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>org.apache.jackrabbit.vault.util.xml.xerces.dom<br>org.apache.jackrabbit.vault.util.xml.xerces.util<br>org.apache.jackrabbit.vault.util.xml.xerces.xni<br>org.apache.jackrabbit.vault.util.xml.xerces.xni.parser</td>
     <td></td>
     <td>3/5/21</td>
-    <td>6/6/21</td>
+    <td>borttagen</td>
   </tr>
   <tr>
     <td>org.json</td>
@@ -70,7 +70,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>org.apache.felix.cm<br>org.apache.felix.cm.file</td>
     <td>Anpassade beständiga hanterare stöds inte som Cloud Service i AEM.</td>
     <td>4/30/21</td>
-    <td>7/30/21</td>
+    <td>borttagen</td>
   </tr>
   <tr>
     <td>org.apache.commons.lang<br>org.apache.commons.lang.enums<br>org.apache.commons.lang.builder<br>org.apache.commons.lang.exception<br>org.apache.commons.lang.math<br>org.apache.commons.lang.mutable<br>org.apache.commons.lang.reflect<br>org.apache.commons.lang.text<br>org.apache.commons.lang.time</td>
@@ -88,7 +88,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>org.apache.felix.systemready</td>
     <td>Vi rekommenderar att du använder API:t Apache Felix HealthCheck i stället</td>
     <td>4/30/21</td>
-    <td>7/30/21</td>
+    <td>borttagen</td>
   </tr>
   <tr>
     <td>org.apache.felix.webconsole<br>org.apache.felix.webconsole.bundleinfo<br>org.apache.felix.webconsole.i18n</td>
