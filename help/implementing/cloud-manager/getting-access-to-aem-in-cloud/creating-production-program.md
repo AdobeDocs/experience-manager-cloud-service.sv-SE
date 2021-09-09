@@ -2,9 +2,9 @@
 title: 'Skapa ett produktionsprogram '
 description: Skapa ett produktionsprogram
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: e4bb8b99ad1ff2accfb94dd94f7c9bae04d4f60b
+source-git-commit: 0d3a4b296440becab8ef372a1061f1981cb05897
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,9 @@ Följ stegen nedan för att skapa ett produktionsprogram:
 
    ![](assets/setup-prod-commerce.png)
 
-1. När du ser ditt programkort på landningssidan för du pekaren över det och väljer ikonen Cloud Manager för att gå till sidan med Cloud Manager **Översikt**.
+1. När du ser programkortet på landningssidan väljer du **..** om du vill visa de menyalternativ som är tillgängliga för dig. Välj **Cloud Manager**, så som visas i figuren nedan, för att gå till sidan **Översikt** för Cloud Manager.
 
-   ![](assets/set-up-prod4.png)
+   ![](assets/navigate-cm.png)
 
 1. Det huvudsakliga anropskortet leder användaren till att skapa en miljö, skapa ett icke-produktionsflöde och slutligen till en produktionsprocess.
    ![](assets/set-up-prod5.png)
