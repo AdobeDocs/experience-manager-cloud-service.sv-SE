@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 20
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.9.0
 feature: Release Information
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: f9f24fb4cdf1a98aeb08248f027e2df40d844337
+source-git-commit: e06a8d28eef4faaa23603adc846033ab5ef55000
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,8 @@ Nästa version är planerad till 7 oktober 2021.
 
 ### Nyheter {#what-is-new}
 
+* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 30.
+
 * Programkorten på Cloud Managers landningssida och den tillhörande upplevelsen har uppdaterats.
 
 * Kodkvalitetsstegloggen innehåller nu utförlig loggningsinformation om OakPal-skanningen.
@@ -31,8 +33,6 @@ Nästa version är planerad till 7 oktober 2021.
 * Menyalternativen på sidan Aktivitet kommer nu att innehålla ett alternativ till **Hämta logg** för slutförda kodgeneratorkörningar. Om du väljer det här alternativet hämtas loggen för byggsteget.
 
 * Om du klickar direkt på programkortet går du nu till sidan Översikt över Cloud Manager.
-
-* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 30.
 
 ### Felkorrigeringar {#bug-fixes}
 
