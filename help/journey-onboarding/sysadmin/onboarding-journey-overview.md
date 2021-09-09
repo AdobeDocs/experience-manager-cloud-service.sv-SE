@@ -3,24 +3,15 @@ title: Onboarding Journey
 description: Följ den här sidan för att lära dig hur du kommer igång med en introduktionsresa
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: d8ff6f4386ab0e5df4f770cdb566facc1cc0cc98
+exl-id: fa88a919-af6a-4266-b38c-647706decba4
+source-git-commit: 91b84e3c312d3f1e01ccaa9a5d541a69ef3c4da6
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Onboarding Journey {#onboarding-jourrney}
-
-## Onboarding Experience {#audience}
-
-Onboarding är den process under vilken en utsedd [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) konfigurerar AEM som en Cloud Service för din organisation. Detta innefattar inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service.
-
-Startresan illustreras nedan och varje steg i resan beskrivs i detalj i följande avsnitt.
-
-![](/help/journey-onboarding/assets/onboarding-journey.png)
-
-Den här resan är utformad för en systemadministratörspersonal som anger krav, steg och tillvägagångssätt. Under resan definieras ytterligare profiler som systemadministratören måste interagera med för ett framgångsrikt projekt, men utgångspunkten för resan är en administratörs.
 
 ## Utforska introduktionsresan {#exploring-onboarding-journey}
 
