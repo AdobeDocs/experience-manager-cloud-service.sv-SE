@@ -2,7 +2,7 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: c43b55243a73285b78447e32beb16b25608f6d3c
 workflow-type: tm+mt
 source-wordcount: '1808'
 ht-degree: 1%
@@ -16,10 +16,6 @@ Inom Adobe Experience Manager som Cloud Service utökar ett innehållsfragment e
 * [Skapa och hantera ](/help/assets/content-fragments/content-fragments.md) innehållsfragment och  [sidredigering med ](/help/sites-cloud/authoring/fundamentals/content-fragments.md) innehållsfragment för mer information om innehållsfragment.
 
 * [Hantera ](/help/assets/manage-digital-assets.md) resurser för mer information om standardresurser.
-
-<!-- Removing the extend-asset-editor article for now as I'm unsure of its accuracy. Hence commenting this link.
-* [Managing Assets](/help/assets/manage-digital-assets.md) and [Customizing and Extending the Asset Editor](/help/assets/extend-asset-editor.md) for further information about standard assets.
--->
 
 ## Arkitektur {#architecture}
 
@@ -44,7 +40,7 @@ De enskilda innehållsfragmenten baseras på modeller för innehållsfragment:
    >
    >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
 
-### Integrering av platser med resurser {#integration-of-sites-with-assets}
+### Integrering av webbplatser med resurser {#integration-of-sites-with-assets}
 
 Content Fragment Management (CFM) ingår i AEM Assets som:
 
@@ -83,7 +79,7 @@ Precis som med standardresurser finns ett innehållsavdrag under:
 
 `/content/dam`
 
-#### Resursbehörigheter {#asset-permissions}
+#### Tillgångsbehörigheter {#asset-permissions}
 
 Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/assets/content-fragments/content-fragments-delete.md).
 
@@ -129,13 +125,13 @@ Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. 
 >
 >Det innebär att om modellen inte har publicerats när du publicerar sidan, kommer den att flaggas och läggas till i resurserna som ska publiceras med sidan.
 
-### Integrering med andra ramverk {#integration-with-other-frameworks}
+### Integrering med andra ramar {#integration-with-other-frameworks}
 
 Innehållsfragment kan integreras med:
 
 * **Översättningar**
 
-   Content Fragments är helt integrerat med arbetsflödet för AEM. Arkitekturnivå innebär följande:
+   Content Fragments are fully integrated with the [AEM translation workflow](/help/sites-cloud/administering/translation/overview.md). Arkitekturnivå innebär följande:
 
    * De enskilda översättningarna av ett innehållsfragment är i själva verket separata fragment. till exempel:
 
@@ -236,7 +232,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
 
 
-### Anpassning - Använder customito() {#adapting-using-adaptto}
+### Adapting - Using customito() {#adapting-using-adaptto}
 
 Följande kan anpassas:
 
@@ -268,7 +264,7 @@ Det bör noteras att
 
    * Om du tar bort befintliga variationer genom ett element med `ContentElement.removeVariation()` uppdateras inte de globala datastrukturer som är tilldelade variationen. Om du vill vara säker på att dessa datastrukturer är synkroniserade använder du `ContentFragment.removeVariation()` i stället, vilket tar bort en global variation.
 
-## API för hantering av innehållsfragment - klientsidan {#the-content-fragment-management-api-client-side}
+## API:t för hantering av innehållsfragment - klientsidan {#the-content-fragment-management-api-client-side}
 
 >[!CAUTION]
 >

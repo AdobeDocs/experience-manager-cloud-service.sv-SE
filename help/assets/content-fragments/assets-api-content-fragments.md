@@ -3,9 +3,9 @@ title: Adobe Experience Manager som Cloud Service Content Fragments Support in A
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: ac760e782f80ee82a9b0604ef64721405fc44ee4
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1951'
 ht-degree: 1%
 
 ---
@@ -24,14 +24,13 @@ Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del A
 >* inklusive stöd för innehållsfragment
 
 >
->
-Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen [REST](https://en.wikipedia.org/wiki/Representational_state_transfer).
+>Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen [REST](https://en.wikipedia.org/wiki/Representational_state_transfer).
 
 Med [Resursens REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Experience Manager som Cloud Service komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Create, Read, Update, Delete).
 
 Med API kan du använda Adobe Experience Manager som en Cloud Service som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
-Enkelsidiga program (SPA), ramverksbaserade eller anpassade, kräver till exempel innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
+Exempelvis kräver [Single Page Applications (SPA)](/help/implementing/developing/hybrid/introduction.md), framework-based eller custom, innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 
 Även om [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en mycket omfattande, flexibel och anpassningsbar API som kan hantera nödvändiga läsåtgärder i detta syfte, och vars JSON-utdata kan anpassas, kräver de AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Det är inte varje SPA utvecklingsorganisation som har direkt tillgång till sådan kunskap.
 
@@ -53,7 +52,7 @@ Resursens REST API:
 
 Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager som Cloud Service-version.
 
-## Nyckelbegrepp {#key-concepts}
+## Viktiga begrepp {#key-concepts}
 
 Resursens REST API ger [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-åtkomst till resurser som lagras i en AEM.
 
@@ -151,7 +150,6 @@ Om REST API:t för Resurser används i en miljö utan särskilda autentiseringsk
 >* [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
 
 >
-
 
 
 I miljöer med specifika autentiseringskrav rekommenderas OAuth.
@@ -260,7 +258,7 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 >
 >Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
 
-### Läs/Leverera {#read-delivery}
+### Läsning/leverans {#read-delivery}
 
 Användning sker via:
 

@@ -1,14 +1,13 @@
 ---
 title: Använda Sling Resource Merger i Adobe Experience Manager som Cloud Service
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
-translation-type: tm+mt
-source-git-commit: 23349f3350631f61f80b54b69104e5a19841272f
+exl-id: 5b6e5cb5-4c6c-4246-ba67-6b9f752867f5
+source-git-commit: ac760e782f80ee82a9b0604ef64721405fc44ee4
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 1%
 
 ---
-
 
 # Använda Sling Resource Merger i AEM as a Cloud Service {#using-the-sling-resource-merger-in-aem}
 
@@ -25,8 +24,6 @@ Med Sling Resource Merger sammanfogas överläggnings-/åsidosättningsresursern
 * Innehållet i den anpassade definitionen har en högre prioritet än originalets (d.v.s. *övertäckningar* eller *åsidosätter*).
 
 * Om det behövs anger [egenskaper](#properties) som definierats i anpassningen hur innehåll som sammanfogats från originalet ska användas.
-
-<!-- Still links to reference material in 6.5 -->
 
 >[!CAUTION]
 >
@@ -50,6 +47,7 @@ Målet med Sling Resource Merger i AEM är att
 >* Övertäckningar är beroende av [sökvägar](/help/implementing/developing/introduction/overlays.md#search-paths).
 >
 >* Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
+
 >
 >Åsidosättningar definieras ofta under `/apps`, eftersom det bästa sättet i AEM är att definiera anpassningar under `/apps`. Detta beror på att du inte får ändra något under `/libs`.
 
@@ -79,7 +77,7 @@ Resurskoncentrationen har följande egenskaper:
 
 Dessa egenskaper påverkar hur motsvarande/ursprungliga resurser/egenskaper (från `/libs`) används av övertäckningen/åsidosättningen (ofta i `/apps`).
 
-### Skapar strukturen {#creating-the-structure}
+### Skapa strukturen {#creating-the-structure}
 
 Om du vill skapa en övertäckning eller åsidosättning måste du återskapa den ursprungliga noden, med motsvarande struktur, under målet (vanligtvis `/apps`). Till exempel:
 
@@ -122,7 +120,7 @@ I ovanstående övertäckningsexempel behövs alltså följande noder:
 >
 >När du använder Sling Resource Merger (d.v.s. när du arbetar med standardgränssnittet med pekfunktioner) bör du inte kopiera hela strukturen från `/libs` eftersom det skulle resultera i att för mycket information hålls i `/apps`. Detta kan orsaka problem när systemet uppgraderas på något sätt.
 
-### Använd fall {#use-cases}
+### Användningsexempel {#use-cases}
 
 Dessa tillsammans med standardfunktioner gör att du kan:
 
@@ -243,17 +241,3 @@ Sling Resource Merger innehåller två anpassade resursprovidrar - en för över
 
       * `getResource('/mnt/override' + '<absolute-path-to-resource>');`
 
-<!--
-### Example of Usage {#example-of-usage}
-
-Some examples are covered:
-
-* Overlay:
-
-    * [Customizing the Consoles](/help/sites-developing/customizing-consoles-touch.md)
-    * [Customizing Page Authoring](/help/sites-developing/customizing-page-authoring-touch.md)
-
-* Override:
-
-    * [Configuring your Page Properties](/help/sites-developing/page-properties-views.md#configuring-your-page-properties)
--->
