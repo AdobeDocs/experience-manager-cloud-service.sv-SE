@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 20
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.9.0
 feature: Release Information
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: e06a8d28eef4faaa23603adc846033ab5ef55000
+source-git-commit: ae619bb5a9ecc030fd3fa486445bcca7d3386df6
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Nästa version är planerad till 7 oktober 2021.
 
 * Menyalternativen på sidan Aktivitet kommer nu att innehålla ett alternativ till **Hämta logg** för slutförda kodgeneratorkörningar. Om du väljer det här alternativet hämtas loggen för byggsteget.
 
-* Om du klickar direkt på programkortet går du nu till sidan Översikt över Cloud Manager.
+* Om du klickar direkt på programkortet går du nu till sidan **Översikt** i Cloud Manager. Mer information finns i [Skapa ett produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html?lang=en).
 
 ### Felkorrigeringar {#bug-fixes}
 
