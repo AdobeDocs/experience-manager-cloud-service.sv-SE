@@ -1,52 +1,42 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
+title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.9.0
+description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.9.0
 feature: Release Information
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: 4a4e473639ccf10410afc07b77b1bfd880b95543
+source-git-commit: f9f24fb4cdf1a98aeb08248f027e2df40d844337
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.8.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.9.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.8.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.9.0.
 
 >[!NOTE]
 >Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager som en Cloud Service klickar du [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.8.0 är 12 augusti 2021.
-Nästa version är planerad till 9 september 2021.
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.9.0 är 9 september 2021.
+Nästa version är planerad till 7 oktober 2021.
 
 ### Nyheter {#what-is-new}
 
-* Cloud Service kan nu visa serviceavtalsrapporter (SLA) i Cloud Manager. Detta kommer att göras tillgängligt stegvis under de närmaste månaderna.
-Mer information finns i [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sla-reporting.html).
+* Programkorten på Cloud Managers landningssida och den tillhörande upplevelsen har uppdaterats.
 
-* Typen och allvarlighetsgraden för kvalitetsreglerna IndexType och `IndexDamAssetLucene` har ändrats. Dessa är nu båda Bugs of Blocker *serverity*.
+* Kodkvalitetsstegloggen innehåller nu utförlig loggningsinformation om OakPal-skanningen.
 
-* Nya kvalitetsregler för Oak-index har införts för att omfatta asynkrona konfigurationer och kodkonfigurationer.
+* Menyalternativen på sidan Aktivitet kommer nu att innehålla ett alternativ till **Hämta logg** för slutförda kodgeneratorkörningar. Om du väljer det här alternativet hämtas loggen för byggsteget.
 
-* Öka det högsta antalet SSL-certifikat per program till 50.
+* Om du klickar direkt på programkortet går du nu till sidan Översikt över Cloud Manager.
 
-* Självbetjäning som gör att användare kan skapa och hantera flera databaser via användargränssnittet i Cloud Manager.
-
-* SonarQube läste historikdata för Git i onödan. På stora kodbaser kan detta leda till en onödig prestandaförbättring.
-
-* Det finns nu ett API för att göra Maven-beroendecachen ogiltig per pipeline.
-
-* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 29.
+* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 30.
 
 ### Felkorrigeringar {#bug-fixes}
 
-* Status för tillgänglig uppdatering ska inte visas när den senaste versionen är mindre än den aktuella versionen.
+* Användaren kommer nu att se ett mer begripligt meddelande när han/hon försöker lägga till ett nytt IP-Tillåtelselista i ett program som har nått det högsta tillåtna antalet IP-Tillåtelselista som kan konfigureras.
 
-* Inledande introduktion misslyckades för nya organisationer med mycket långa namn.
-
-* När en pipeline aktiveras två gånger av någon anledning resulterar det i att en av körningarna misslyckas med *det går inte att uppdatera pipelinekörningsstatus*-fel.
-
+* Fel URL kopierades när menyalternativet Kopiera URL valdes på skärmen Databaser.
 

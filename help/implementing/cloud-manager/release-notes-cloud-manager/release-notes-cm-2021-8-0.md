@@ -2,10 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
 feature: Release Information
-exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: 07a80076493070cb5e754a4cfbafe51cfcd6442e
+source-git-commit: f9f24fb4cdf1a98aeb08248f027e2df40d844337
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -48,5 +47,3 @@ Mer information finns i [SLA-rapportering](https://experienceleague.adobe.com/do
 * Inledande introduktion misslyckades för nya organisationer med mycket långa namn.
 
 * När en pipeline aktiveras två gånger av någon anledning resulterar det i att en av körningarna misslyckas med *det går inte att uppdatera pipelinekörningsstatus*-fel.
-
-
