@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 56f799b7583c82694f20de096855d6c5c1741f49
+source-git-commit: 2999a86cdf674e1e03a3ce6a05deb7386b9bf1ad
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1629'
 ht-degree: 0%
 
 ---
@@ -122,12 +122,34 @@ Mer information finns i [Stöd för miniatyrbilder för videoklipp](https://expe
 
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.8.0 och 2021.7.0.
+I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.9.0 och 2021.8.0.
+
+## Releasedatum {#release-date-cm-sept}
+
+Releasedatum för Cloud Manager i AEM som Cloud Service 2021.9.0 är 9 september 2021.
+Nästa version är planerad till 7 oktober 2021.
+
+### Nyheter {#what-is-new-cm-sept}
+
+* Programkorten på Cloud Managers landningssida och den tillhörande upplevelsen har uppdaterats.
+
+* Kodkvalitetsstegloggen innehåller nu utförlig loggningsinformation om OakPal-skanningen.
+
+* Menyalternativen på sidan Aktivitet kommer nu att innehålla ett alternativ till **Hämta logg** för slutförda kodgeneratorkörningar. Om du väljer det här alternativet hämtas loggen för byggsteget.
+
+* Om du klickar direkt på programkortet går du nu till sidan Översikt över Cloud Manager.
+
+* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 30.
+
+### Felkorrigeringar {#bug-fixes}
+
+* Användaren kommer nu att se ett mer begripligt meddelande när han/hon försöker lägga till ett nytt IP-Tillåtelselista i ett program som har nått det högsta tillåtna antalet IP-Tillåtelselista som kan konfigureras.
+
+* Fel URL kopierades när menyalternativet Kopiera URL valdes på skärmen Databaser.
 
 ## Releasedatum {#release-date-cm-aug}
 
 Releasedatum för Cloud Manager i AEM som Cloud Service 2021.8.0 är 12 augusti 2021.
-Nästa version är planerad till 9 september 2021.
 
 ### Nyheter {#what-is-new-aug}
 
