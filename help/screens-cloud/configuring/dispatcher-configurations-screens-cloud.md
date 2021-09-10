@@ -1,19 +1,19 @@
 ---
 title: Dispatcher Configurations in Screens as a Cloud Service
 description: På den här sidan beskrivs Dispatcher Configurations in Screens som en Cloud Service.
-source-git-commit: f7a201ed72011df2ed603528ad80cf191c9f2d77
+source-git-commit: b00fd1e3826a7d0b0a4bf80b002fffda8f3983d0
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
 
-# Dispatcher Configurations in Screens as a Cloud Service{#dispatcher-configurations-screens-cloud}
+# Dispatcher Configurations in Screens as a Cloud Service {#dispatcher-configurations-screens-cloud}
 
 I det här avsnittet beskrivs dispatcherkonfigurationerna för skärmar som en Cloud Service.
 
-## Distribuera konfigurationer för skärmar som en Cloud Service-distribution {#deployment}
+## Lägga till filter och cacheregler i Dispatcher för skärmar som en Cloud Service-distribution {#deployment}
 
 Tillåt följande filter och cacheregler i utskickare för publiceringsinstanserna på skärmar som en Cloud Service.
 
