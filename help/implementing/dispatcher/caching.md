@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 7634c146ca6f8cd4a218b07dae0c063ab581f221
+source-git-commit: 993f5fa5b602354b03ab1635da660ae67fff7653
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
    { /glob "*" /type "allow" }
    ```
 
-* Om du vill förhindra att specifikt innehåll cachelagras anger du rubriken Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll i en katalog med namnet **secure** cachelagras:
+* Om du vill förhindra att specifikt innehåll cachas **vid CDN** anger du huvudet Cache-Control till *private*. Följande förhindrar till exempel att HTML-innehåll i en katalog med namnet **secure** cachas vid CDN:
 
    ```
       <LocationMatch "/content/secure/.*\.(html)$">.  // replace with the right regex
@@ -70,6 +70,9 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 
    >[!NOTE]
    >De andra metoderna, inklusive [dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
+
+   >[!NOTE]
+   >Observera att dispatchern fortfarande kan cache-lagra innehåll enligt sina egna [cachningsregler](https://helpx.adobe.com/experience-manager/kb/find-out-which-requests-does-aem-dispatcher-cache.html). Om du vill göra innehållet helt privat bör du se till att det inte cachas av dispatchern.
 
 ### Klientbibliotek (js, css) {#client-side-libraries}
 
