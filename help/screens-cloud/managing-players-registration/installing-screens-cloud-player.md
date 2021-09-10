@@ -1,13 +1,13 @@
 ---
 title: Installera och konfigurera spelare i skärmar som en Cloud Service
 description: På den här sidan beskrivs hur du installerar och konfigurerar spelare på skärmar som en Cloud Service.
-source-git-commit: d5970e27773433c9e6e7175a103768ae591e87ba
+exl-id: a022738a-c543-4629-a244-f70fa294fe7f
+source-git-commit: 3367977496d3edad0f6f1e27e98eac95c791e870
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera spelare i skärmar som en Cloud Service {#installing-players-screens-cloud}
 
@@ -45,9 +45,9 @@ Uppdatera spelaren genom att följa stegen nedan:
 
 ## Grundläggande uppspelningsövervakning {#playback-monitoring}
 
-Spelaren rapporterar olika uppspelningsmått med varje `ping` som har standardvärdet 30 sekunder. Baserat på mätvärden kan du identifiera olika kantfall, t.ex. problem med fastnade bilder, tomma skärmar och schemaläggning. På så sätt kan du förstå och felsöka problem på enheten och därmed snabba upp en utredning och korrigerande åtgärder.
+Spelaren rapporterar olika uppspelningsmått med varje `ping` som har standardvärdet 30 sekunder. Baserat på dessa mätvärden kan vi identifiera olika kantfall, t.ex. problem med fastsittning, tomma skärmar och schemaläggning. Detta gör att vi kan förstå och felsöka problem på enheten och därmed underlätta en utredning och korrigerande åtgärder med dig.
 
-Med grundläggande uppspelningsövervakning i en AEM Screens-spelare kan du:
+Med grundläggande uppspelningsövervakning i en AEM Screens-spelare kan vi:
 
 * Fjärrövervaka om en spelare spelar upp innehållet på rätt sätt.
 
@@ -80,9 +80,11 @@ Några begränsningar för grundläggande uppspelningsövervakning visas nedan:
 
 * Spelaren rapporterar ett eget uppspelningsläge till servern, vilket kräver en aktiv anslutning.
 
-* Egenskapen `isContentRendering` som kontrollerar grafikprocessorn är för närvarande resurskrävande att aktiveras som standard och kräver explicit deltagande från spelarinställningarna. Du bör inte använda den tillsammans med videoklipp.
+* Egenskapen `isContentRendering` som kontrollerar grafikprocessorn är för närvarande för resurskrävande för att aktiveras som standard och kräver explicit deltagande från spelarinställningarna. Du bör inte använda den tillsammans med videofilmer i produktionen.
 
-* Den här funktionen stöds för sekvenskanaler.
+* Den här funktionen stöds bara för sekvenskanaler och täcker ännu inte de interaktiva kanalernas (SPA) användningsfall.
+
+* Måtten är ännu inte helt exponerade för våra kunder. Vi arbetar hårt med att aktivera kontrollpanelsliknande rapporterings- och varningsmekanismer inom den närmaste framtiden.
 
 ## What&#39;s Next {#whats-next}
 
