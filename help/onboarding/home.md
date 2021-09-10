@@ -2,9 +2,9 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
-source-git-commit: 0354f4782ff02d0c0d890ec6a99262b6b5002729
+source-git-commit: 7f641dc31ebe6e3847c98ed5ec44c74c6bbdf6bc
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '539'
 ht-degree: 24%
 
 ---
@@ -22,13 +22,13 @@ Grattis till att du har påbörjat din resa med AEM som Cloud Service! Oavsett o
 
 Onboarding är den process under vilken en utsedd [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) konfigurerar AEM som en Cloud Service för din organisation. Detta innefattar inledande etablering av molnresurser och tilldelning av användare till lämpliga roller baserat på deras jobbansvar, varefter varje medlem kan logga in och komma åt sina AEM som en Cloud Service.
 
-Startresan visas nedan.
+Den introduktionsresa som visas nedan är utformad för en systemadministratörspersonal med krav, steg och tillvägagångssätt. Under resan definieras ytterligare profiler som systemadministratören måste interagera med för ett framgångsrikt projekt, men utgångspunkten för resan är en administratörs.
 
 ![](/help/journey-onboarding/assets/onboarding-journey.png)
 
-Den här resan är utformad för en systemadministratörspersonal som anger krav, steg och tillvägagångssätt. Under resan definieras ytterligare profiler som systemadministratören måste interagera med för ett framgångsrikt projekt, men utgångspunkten för resan är en administratörs.
+>[!NOTE]
+>Se [Onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/journey-onboarding/home.html?lang=en) för att komma igång med din introduktionsupplevelse.
 
-Se [Onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/journey-onboarding/home.html?lang=en) för att komma igång med din introduktionsupplevelse.
 
 ## [!DNL Experience Manager as a Cloud Service] Stödlinjer {#aem-guides}
 
