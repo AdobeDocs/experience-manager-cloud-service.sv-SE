@@ -1,9 +1,9 @@
 ---
 title: Dispatcher Configurations in Screens as a Cloud Service
 description: På den här sidan beskrivs Dispatcher Configurations in Screens som en Cloud Service.
-source-git-commit: b00856e1be8842c4e9fa6ed4ada9129926c73ef5
+source-git-commit: f7a201ed72011df2ed603528ad80cf191c9f2d77
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,7 @@ I det här avsnittet beskrivs dispatcherkonfigurationerna för skärmar som en C
 
 Tillåt följande filter och cacheregler i utskickare för publiceringsinstanserna på skärmar som en Cloud Service.
 
-### Filter {#filters}
-
-## AEM Screens Filters
+### AEM Screens Filters {#filters}
 
 ```
 ## # Content Configurations
@@ -32,12 +30,12 @@ Tillåt följande filter och cacheregler i utskickare för publiceringsinstanser
 /0210 { /type "allow" /method "GET" /url "/etc.clientlibs/*" }
 ```
 
-## Cache-regler {#cache-rules}
+### Cache-regler {#cache-rules}
 
 * Lägg till `/statfileslevel "10"` i `/cache`-avsnittet i `publish_farm.any`/.
 
    >[!NOTE]
-   >Detta stöder cachelagring av upp till 10 nivåer från cache-dokumentet och gör innehållet ogiltigt när det publiceras i stället för att göra allt ogiltigt. Du kan ändra den här nivån baserat på hur detaljerad innehållsstrukturen är.
+   >Den här cacheregeln stöder cachelagring av upp till 10 nivåer från cachedokumentroten och gör innehållet ogiltigt när innehållet publiceras i stället för att göra allt ogiltigt. Du kan ändra den här nivån baserat på hur detaljerad innehållsstrukturen är.
 
 * Lägg till följande i `/invalidate`-avsnittet i `publish_farm.any`.
 
@@ -56,7 +54,7 @@ Tillåt följande filter och cacheregler i utskickare för publiceringsinstanser
         {
         /glob "/content/screens/*.html"
         /type "allow"
-            }
+        }
    
    ## Allow Dispatcher Cache for Screens offline manifests
    
