@@ -1,11 +1,10 @@
 ---
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.4.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.4.0
-feature: Versionsinformation
-exl-id: 456f945a-0320-4334-a407-ee2fcb1dbc0f
-source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
+feature: Release Information
+source-git-commit: a707968483dc1196628b737ad207bfefe63ca94b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
