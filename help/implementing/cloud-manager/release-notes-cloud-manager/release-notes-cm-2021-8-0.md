@@ -2,9 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
 description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
 feature: Release Information
-source-git-commit: f9f24fb4cdf1a98aeb08248f027e2df40d844337
+source-git-commit: 11910316836b33e886aeba84f89d1b2eebfe7de2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,6 @@ På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som e
 ## Releasedatum {#release-date}
 
 Releasedatum för Cloud Manager i AEM som Cloud Service 2021.8.0 är 12 augusti 2021.
-Nästa version är planerad till 9 september 2021.
 
 ### Nyheter {#what-is-new}
 
