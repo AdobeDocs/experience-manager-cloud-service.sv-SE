@@ -2,7 +2,7 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: 90d75ddd0ace3eff8c3e1cde68208cf0a483ef86
+source-git-commit: c206bc241bccf6f8a5bfb4946d6231f53438861a
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 0%
@@ -122,7 +122,7 @@ Följ stegen nedan för att redigera den konfigurerade pipeline:
 1. På fliken **Källkod** kan du uppdatera databasen. Klicka på **Öppna repo-information** för att uppdatera databasen.
 
    >[!NOTE]
-   >Mer information om hur du lägger till och hanterar databaser i Cloud Manager finns i [Lägga till och hantera databaser](/help/implementing/cloud-manager/cloud-manager-repositories.md#add-manage-repos).
+   >Mer information om hur du lägger till och hanterar databaser i Cloud Manager finns i [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md).
 
    ![](assets/configure-pipeline/edit-pipeline-2.png)
 

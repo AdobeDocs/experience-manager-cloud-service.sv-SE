@@ -5,10 +5,10 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: f9f24fb4cdf1a98aeb08248f027e2df40d844337
+source-git-commit: 21669a29fbfd1072b637f407f5220825c4d1edbb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1036'
+ht-degree: 26%
 
 ---
 
@@ -56,6 +56,13 @@ ht-degree: 0%
       + [Konfigurera projektet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
       + [Förstå byggmiljön](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md)
    + [Hantera miljöer](cloud-manager/manage-environments.md)
+   + Hantera kod {#managing-code}
+      + [Versionshantering för Maven Project](cloud-manager/managing-code/project-version-handling.md)
+      + [Databaser i Cloud Manager](cloud-manager/managing-code/cloud-manager-repositories.md)
+      + [Åtkomst till databaser](cloud-manager/managing-code/accessing-repos.md)
+      + [Integrera Git med Adobe Cloud Manager](cloud-manager/managing-code/integrating-with-git.md)
+      + [Arbeta med Git-databaser med flera källor](cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
+      + [Konfiguration av företagsgruppsutveckling för AEM som Cloud Service](cloud-manager/managing-code/enterprise-team-dev-setup.md)
    + [Konfigurera CI/CD-pipeline](cloud-manager/configure-pipeline.md)
    + [Driftsätta kod](cloud-manager/deploy-code.md)
    + Förstå testresultat {#test-results}
@@ -95,13 +102,6 @@ ht-degree: 0%
       + [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
       + [Kontrollera status för IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
    + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/cloud-manager-cs-faqs.md)
-+ Hantera kod {#managing-code}
-   + [Versionshantering för Maven Project](cloud-manager/project-version-handling.md)
-   + [Databaser i Cloud Manager](cloud-manager/cloud-manager-repositories.md)
-   + [Åtkomst till databaser](cloud-manager/accessing-repos.md)
-   + [Integrera Git med Adobe Cloud Manager](cloud-manager/integrating-with-git.md)
-   + [Arbeta med Git-databaser med flera källor](/help/implementing/cloud-manager/working-with-multiple-source-git-repositories.md)
-   + [Konfiguration av företagsgruppsutveckling för AEM som Cloud Service](/help/implementing/cloud-manager/enterprise-team-dev-setup.md)
 + Utveckla för AEM as a Cloud Service {#developing}
    + [AEM-projektstruktur](developing/introduction/aem-project-content-package-structure.md)
    + [Strukturpaket för AEM-projektdatabas](developing/introduction/repository-structure-package.md)

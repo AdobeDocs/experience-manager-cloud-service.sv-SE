@@ -2,7 +2,7 @@
 title: 'Skapa ett sandlådeprogram '
 description: Skapa ett sandlådeprogram
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
-source-git-commit: e4bb8b99ad1ff2accfb94dd94f7c9bae04d4f60b
+source-git-commit: c206bc241bccf6f8a5bfb4946d6231f53438861a
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Följ stegen nedan för att skapa ett sandlådeprogram:
 
    >[!NOTE]
    >
-   >Mer information om hur du får åtkomst till och hanterar Git-databasen med hjälp av Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager finns i [Åtkomst till Git](/help/implementing/cloud-manager/accessing-repos.md).
+   >Mer information om hur du får åtkomst till och hanterar Git-databasen med hjälp av Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager finns i [Åtkomst till Git](/help/implementing/cloud-manager/managing-code/accessing-repos.md).
 
 
 1. När utvecklingsmiljön har skapats kan användaren **komma åt AEM**-länken, vilket visas i bilden nedan:
