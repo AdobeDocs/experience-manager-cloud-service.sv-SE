@@ -1,13 +1,13 @@
 ---
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
-source-git-commit: 97833dd5b962d8f2a0f50a911d7c41ca17a1a0fe
+exl-id: 4ea13f12-7251-448f-9f54-c8d710aef2ba
+source-git-commit: e786fe40d97294b4ab5e8657920f2ecbb401d8e9
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '674'
 ht-degree: 2%
 
 ---
-
 
 # Implementeringsfas i Cloud Acceleration Manager {#implementation-phase-cam}
 
@@ -60,21 +60,16 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
    * Dispatcher
    * Testning
 
-   På fliken **Översikt** visas en lista med kodomfaktoriseringsaktiviteter.
+>[!NOTE]
+>Granska innehållet på de här flikarna för att få en förståelse för ytterligare områden som inte omfattas av Best Practices Analyzer.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/coderefactoring-1.png)
+På fliken **Dispatcher** finns information om hur du strukturerar AEM som en Cloud Service-Apache och Dispatcher-konfiguration, samt om hur du validerar och kör den lokalt innan du distribuerar den till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
 
-   På fliken **Dispatcher** finns information om hur du strukturerar AEM som en Cloud Service-Apache och Dispatcher-konfiguration, samt om hur du validerar och kör den lokalt innan du distribuerar den till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/coderefactoring-2.png)
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/coderefactoring-2.png)
+På fliken **Testning** finns information om funktioner, Experience Audit och UI-testning.
 
-   På fliken **Testning** finns information om funktioner, Experience Audit och UI-testning.
-
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/coderefactoring-3.png)
-
-
-   >[!NOTE]
-   >Granska dessutom innehållet på flikarna på sidan för att få reda på ytterligare områden som inte omfattas av Best Practices Analyzer.
+![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/coderefactoring-3.png)
 
 
 ## Använda AEM som distributionskort för Cloud Service {#aem-as-a-cloud-service-deployment}
