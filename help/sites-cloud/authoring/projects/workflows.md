@@ -2,10 +2,10 @@
 title: Arbeta med projektarbetsflöden
 description: Det finns en mängd olika projektarbetsflöden att välja mellan.
 exl-id: a5c9a6df-7def-43f3-b41b-524a4f4211e9
-source-git-commit: a8d3dcb732fc137f3c92839abeefd5e0c24be6ff
+source-git-commit: 89972691dadb9573160ba16a220c5b7cb3ae9742
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 12%
+source-wordcount: '452'
+ht-degree: 11%
 
 ---
 
@@ -21,15 +21,14 @@ De projektarbetsflöden som är tillgängliga från paketet innehåller följand
 
 Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
-|  | **Enkelt projekt** | **Medieprojekt** | **Översättningsprojekt** |
-|---|:-:|:-:|:-:|
-| Begär kopia |  | x |  |
-| Projektgodkännande | x |  |  |
-| Begär start | x |  |  |
-| Begär landningssida | x |  |  |
-| Begär e-post | x |  |  |
-| DAM - skapa språkkopia&amp;ast; |  |  | x |
-| DAM Skapa och översätt språkkopia&amp;ast; |  |  | x |
+|  | **Enkelt projekt** | **Översättningsprojekt** |
+|---|:-:|:-:|
+| Arbetsflöde för projektgodkännande | x |  |
+| Begär start | x |  |
+| Begär landningssida | x |  |
+| Begär e-post | x |  |
+| DAM - skapa språkkopia&amp;ast; |  | x |
+| DAM Skapa och översätt språkkopia&amp;ast; |  | x |
 
 >[!NOTE]
 >
@@ -47,19 +46,6 @@ Mer information om hur du arbetar med arbetsflöden i AEM finns i:
 
 I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projekt.
 
-## Arbetsflödet Begär kopia {#request-copy-workflow}
-
-Med det här arbetsflödet kan du begära ett manuskript från en användare och sedan godkänna det. Så här startar du arbetsflödet för begärandekopia:
-
-1. I medieprojektet väljer du plustecknet (**+**) i rutan **Arbetsflöden** och väljer **arbetsflödet Begär kopiering**.
-1. Ange en titel och en kort sammanfattning av vad du begär. Ange ett målordsantal, uppgiftsprioritet och ett förfallodatum om tillämpligt.
-
-   ![Arbetsflödet Begär kopia](/help/sites-cloud/authoring/assets/projects-request-copy.png)
-
-1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
-
-   ![Begärankopia har lagts till](/help/sites-cloud/authoring/assets/projects-request-copy-add.png)
-
 ## Arbetsflöde för projektgodkännande {#project-approval-workflow}
 
 I arbetsflödet för projektgodkännande tilldelar du innehåll till en användare, granskar och godkänner sedan innehållet.
@@ -70,8 +56,6 @@ I arbetsflödet för projektgodkännande tilldelar du innehåll till en använda
    ![Begär godkännande](/help/sites-cloud/authoring/assets/projects-approval.png)
 
 1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
-
-   ![Godkännande av begäran har lagts till](/help/sites-cloud/authoring/assets/projects-approval-add.png)
 
 ## Arbetsflödet Begär start {#request-launch-workflow}
 
@@ -86,4 +70,4 @@ Med det här arbetsflödet kan du begära att programmet startas.
 
 ## Skapa (och översätt) språkkopieringsarbetsflöde för resurser {#create-and-translate-language-copy-workflow-for-assets}
 
-Arbetsflödena **Skapa språkkopia** och **Skapa och översätt språkkopia** beskrivs i detalj när du skapar språkkopior för resurser.
+Arbetsflödena **Skapa språkkopia** och **Skapa och översätt språkkopia**[ beskrivs i detalj när du skapar språkkopior för resurser.](/help/assets/translate-assets.md)

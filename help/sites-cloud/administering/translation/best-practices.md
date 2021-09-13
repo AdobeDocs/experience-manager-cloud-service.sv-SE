@@ -1,17 +1,21 @@
 ---
 title: Bästa praxis för översättning
 description: Lär dig mer om de effektivaste strategierna som sammanställts av Adobe tekniker och konsultteam för att hjälpa dig komma igång med översättningsprojekt.
-feature: Språkkopia
+feature: Language Copy
 role: Admin
 exl-id: 51b98c24-5566-4088-9010-bd39841a1633
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
 
 # Bästa praxis för översättning {#translation-best-practices}
+
+>[!TIP]
+>
+>Om du inte är van vid att översätta innehåll kan du läsa vår [Site Translation Journey,](/help/journey-sites/translation/overview.md), där du vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 ## Allmänt {#general}
 

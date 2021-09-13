@@ -1,12 +1,12 @@
 ---
 title: Ansluter till Microsoft Translator
 description: Lär dig hur du ansluter AEM till Microsoft Translator körklart för att automatisera ditt arbetsflöde för översättning.
-feature: Språkkopia
+feature: Language Copy
 role: Admin
 exl-id: ca3c50f9-005e-4871-8606-0cfd3ed21936
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Ansluter till Microsoft Translator {#connecting-to-microsoft-translator}
 
 Skapa en konfiguration för molntjänsten [Microsoft Translator](https://hub.microsofttranslator.com) om du vill använda ditt Microsoft Translation-konto för översättning AEM sidinnehåll eller resurser.
+
+>[!TIP]
+>
+>Om du inte är van vid att översätta innehåll kan du läsa vår [Site Translation Journey,](/help/journey-sites/translation/overview.md), där du vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 >[!NOTE]
 >

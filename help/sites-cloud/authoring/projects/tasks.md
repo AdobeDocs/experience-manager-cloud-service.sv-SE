@@ -1,14 +1,13 @@
 ---
 title: Arbeta med uppgifter
 description: Uppgifter representerar arbetsuppgifter som ska utföras på innehåll och används i projekt för att fastställa slutförandenivån för aktuella uppgifter
-translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+exl-id: 66f95a1f-34d0-4e2e-aa8c-addc2029a1d9
+source-git-commit: fef0aef0d440eaedbf1a88cba0640e1f98e85e3e
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '578'
 ht-degree: 11%
 
 ---
-
 
 # Arbeta med uppgifter {#working-with-tasks}
 
@@ -16,7 +15,7 @@ Uppgifter representerar arbetsuppgifter som ska utföras på innehåll. När du 
 
 Uppgifter används också i projekt för att avgöra hur fullständiga de aktuella uppgifterna är, inklusive arbetsflödesuppgifter.
 
-## Spårar projektförlopp {#tracking-project-progress}
+## Spåra projektförlopp {#tracking-project-progress}
 
 Du kan spåra projektförloppet genom att titta på de aktiva/slutförda aktiviteterna i ett projekt som representeras av **aktivitetspanelen**. Projektets förlopp kan avgöras av:
 
@@ -26,7 +25,7 @@ Du kan spåra projektförloppet genom att titta på de aktiva/slutförda aktivit
 
 Båda listar arbetsflödesuppgifter och uppgifter som du skapar direkt i rutan **Uppgifter**.
 
-### Aktivitetsruta {#task-tile}
+### Åtgärdsfönster {#task-tile}
 
 Om ett projekt innehåller några relaterade uppgifter visas en åtgärdsruta i projektet. Åtgärdsrutan visar projektets aktuella status. Detta baseras på befintliga uppgifter i arbetsflödet och inkluderar inga uppgifter som kommer att genereras i framtiden allt eftersom arbetsflödet fortsätter. Följande information visas i åtgärdsrutan:
 
@@ -34,7 +33,7 @@ Om ett projekt innehåller några relaterade uppgifter visas en åtgärdsruta i 
 * Procent av aktiva uppgifter
 * Procent av försenade uppgifter
 
-![Aktivitetspanel](/help/sites-cloud/authoring/assets/projects-tasks.png)
+![Aktivitetspanel](/help/sites-cloud/authoring/assets/projects-tasks-breakdown.png)
 
 ### Visa eller ändra uppgifter i ett projekt {#viewing-or-modifying-the-tasks-in-a-project}
 
@@ -48,7 +47,7 @@ Klicka på ellipsen (..) i aktivitetspanelen för att visa en lista med uppgifte
 
 #### Uppgiftsinformation {#task-details}
 
-Mer information om en viss uppgift får du om du trycker/klickar på uppgiften i uppgiftslistan och **Aktivitetsinformation **öppna.
+Mer information om en viss uppgift får du om du trycker/klickar på uppgiften i uppgiftslistan och **Öppna**.
 
 ![Uppgiftsinformation](/help/sites-cloud/authoring/assets/projects-task-details.png)
 
@@ -58,7 +57,7 @@ I Uppgiftsinformation kan du redigera eller lägga till kommentarer. Alla kommen
 
 ![Kommentarer om uppgifter](/help/sites-cloud/authoring/assets/projects-tasks-comments.png)
 
-### Lägger till uppgifter {#adding-tasks}
+### Lägga till uppgifter {#adding-tasks}
 
 Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan på aktivitetspanelen och är tillgängliga i inkorgen Meddelanden för att utföra åtgärder.
 
@@ -71,7 +70,7 @@ Så här lägger du till en uppgift:
 
 1. Tryck/klicka på **Skapa**.
 
-## Arbeta med uppgifter i inkorgen {#working-with-tasks-in-the-inbox}
+## Arbeta med uppgifter i Inkorgen {#working-with-tasks-in-the-inbox}
 
 Ett annat sätt att komma åt uppgifter är via Inkorgen. I inkorgen kan du öppna innehållet för att implementera ändringarna. När du är klar anger du aktivitetsstatus till Slutförd. Uppgifter visas också i inkorgen när de tilldelas till en användargrupp som du tillhör. I det här fallet kan alla medlemmar i gruppen utföra arbetet och slutföra uppgiften.
 

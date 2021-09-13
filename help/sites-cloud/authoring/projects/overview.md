@@ -2,10 +2,10 @@
 title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt
 exl-id: c5f3331e-637f-4816-be83-faf2df59bd5f
-source-git-commit: a8d3dcb732fc137f3c92839abeefd5e0c24be6ff
+source-git-commit: 8ea043b4b6424d6922c41c143ca74fd25ac60cf8
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 10%
+source-wordcount: '1259'
+ht-degree: 9%
 
 ---
 
@@ -83,7 +83,7 @@ Med **Experience**-panelen kan du lägga till en mobilapp, en webbplats eller en
 
 ![Erfarenheter](/help/sites-cloud/authoring/assets/project-experiences.png)
 
-Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapp eller publikation. Lägg till upplevelser genom att klicka på plustecknet (+) eller på **Lägg till upplevelse** och välja typ av upplevelse.
+Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapp eller publikation. Lägg till upplevelser genom att trycka på eller klicka på nedåtpilen och trycka på **Lägg till upplevelse** och välj typ av upplevelse.
 
 ![Lägg till en upplevelse](/help/sites-cloud/authoring/assets/projects-add-experience.png)
 

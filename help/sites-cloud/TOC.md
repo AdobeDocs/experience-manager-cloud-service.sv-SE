@@ -1,15 +1,15 @@
 ---
 solution: Experience Manager, Experience Manager Sites, Experience Manager as a Cloud Service
-sub-product: Redigera innehåll i AEM as a Cloud Service
+sub-product: Authoring Content in AEM as a Cloud Service
 user-guide-title: Redigera innehåll i AEM as a Cloud Service
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service.
-feature: Redigering
+feature: Authoring
 role: User
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 69%
+source-wordcount: '311'
+ht-degree: 66%
 
 ---
 
@@ -94,6 +94,7 @@ ht-degree: 69%
          + [MSM Best Practices](administering/msm/best-practices.md)
          + [Felsökning och vanliga frågor](administering/msm/troubleshooting.md)
       + Översättning {#translation}
+         + [Översättningsdokumentationsresa](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites-journey/translation/overview.html)
          + [Översätta innehåll för flerspråkiga webbplatser](administering/translation/overview.md)
          + [Förbereder innehåll för översättning](administering/translation/preparation.md)
          + [Hantera översättningsprojekt](administering/translation/managing-projects.md)

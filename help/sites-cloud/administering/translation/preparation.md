@@ -1,12 +1,12 @@
 ---
 title: Förbereder innehåll för översättning
 description: Lär dig hur du förbereder innehåll för översättning.
-feature: Språkkopia
+feature: Language Copy
 role: Admin
 exl-id: afc577a2-2791-481a-ac77-468011e4302e
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Förbereder innehåll för översättning {#preparing-content-for-translation}
 
 Flerspråkiga webbplatser har i allmänhet en viss mängd innehåll på flera språk. Webbplatsen är skriven på ett språk och sedan översatt till andra språk. Vanligtvis består flerspråkiga webbplatser av sidgrenar, där varje gren innehåller webbplatsens sidor på ett annat språk.
+
+>[!TIP]
+>
+>Om du inte är van vid att översätta innehåll kan du läsa vår [Site Translation Journey,](/help/journey-sites/translation/overview.md), där du vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 [WKND-självstudiewebbplatsen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) innehåller flera språkgrenar och använder följande struktur:
 
@@ -136,8 +140,7 @@ Språkrötter kan också grupperas under noder, till exempel efter region, samti
 >* `/content/wknd/language-masters/americas/central-america/es`
 
 >
-> 
-Denna `es`-språkkopia kommer inte att identifieras eftersom den ligger två nivåer (`americas/central-america`) utanför `en`-noden.
+> Denna `es`-språkkopia kommer inte att identifieras eftersom den ligger två nivåer (`americas/central-america`) utanför `en`-noden.
 
 >[!TIP]
 >
