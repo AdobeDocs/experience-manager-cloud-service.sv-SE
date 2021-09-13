@@ -4,11 +4,11 @@ description: Läs mer om tillgänglighet i Dynamic Media och Dynamic Media Viewe
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
-feature: Tillgänglighet
+feature: Accessibility
 role: Admin,User
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 0d0a3247e42e0f4a9b2965104814fe6bcd8e6128
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Se [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.c
 ## Stöd för hjälpfunktioner i visningsprogram för Dynamic Media {#assistive-technology=support-for-dm-viewers}
 
 Alla Dynamic Media-visningsprogramkomponenter har stöd för ARIA-roller (Accessible Rich Internet Applications) och -attribut för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
-Se hjälpavsnittet **Stöd för hjälpteknik** i eventuella hjälpavsnitt för anpassning av visningsprogram i referenshandboken för Dynamic Media Viewer. Se till exempel [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer eller [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=en#viewers-for-aem-assets-only) för Interactive Image Viewer.
+Se hjälpavsnittet **Stöd för hjälpteknik** i eventuella hjälpavsnitt för anpassning av visningsprogram i referenshandboken för Dynamic Media Viewer. Se till exempel [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer eller [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only) för Interactive Image Viewer.
 
 >[!MORELIKETHIS]
 >

@@ -1,11 +1,11 @@
 ---
 title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) som en Cloud Service med det AEM GraphQL-API:t för leverans av headless-innehåll.
-feature: Innehållsfragment,GraphQL API
+feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 8be8308c15ede115c21ccca8f91a13a23356d0b1
+source-git-commit: 0d0a3247e42e0f4a9b2965104814fe6bcd8e6128
 workflow-type: tm+mt
-source-wordcount: '3935'
+source-wordcount: '3929'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ GraphQL för AEM är baserad på standardbiblioteket GraphQL Java Library. Se:
 
 * [GraphQL Java vid GitHub](https://github.com/graphql-java)
 
-### GraphQL-terminologi {#graphql-terminology}
+### GraphQL Terminologi {#graphql-terminology}
 
 GraphQL använder följande:
 
@@ -108,7 +108,7 @@ Du kan också utföra:
 >[!NOTE]
 >Du kan testa och felsöka GraphQL-frågor med [GraphiQL IDE](#graphiql-interface).
 
-## The GraphQL for AEM Endpoint {#graphql-aem-endpoint}
+## GraphQL för AEM {#graphql-aem-endpoint}
 
 Slutpunkten är den bana som används för att komma åt GraphQL för AEM. Med den här sökvägen kan du (eller din app):
 
@@ -180,7 +180,7 @@ Så här aktiverar du motsvarande slutpunkt:
    >
    >Du kan ställa in åtkomstkontrollistor, som passar ditt användningsfall, på slutpunkten.
 
-### Publicerar GraphQL-slutpunkten {#publishing-graphql-endpoint}
+### Publicera GraphQL-slutpunkten {#publishing-graphql-endpoint}
 
 Markera den nya slutpunkten och **Publicera** för att göra den helt tillgänglig i alla miljöer.
 
@@ -214,7 +214,7 @@ Detta innehåller funktioner som syntaxmarkering, automatisk komplettering, auto
 
 Användargränssnittet GraphiQL kan installeras på AEM med ett dedikerat paket: [Innehållspaketet GraphiQL v0.0.6 (2021.3)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-graphql/graphiql-0.0.6.zip).
 
-## Användningsexempel för redigerings- och publiceringsmiljöer {#use-cases-author-publish-environments}
+## Användningsexempel för skribent- och publiceringsmiljöer {#use-cases-author-publish-environments}
 
 Användningsexempel kan bero på vilken typ av AEM som en Cloud Service-miljö:
 
@@ -801,7 +801,7 @@ Här följer de steg som krävs för att behålla en given fråga:
    >curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    >```
 
-## Frågar GraphQL-slutpunkten från en extern webbplats {#query-graphql-endpoint-from-external-website}
+## Fråga GraphQL-slutpunkten från en extern webbplats {#query-graphql-endpoint-from-external-website}
 
 Om du vill komma åt GraphQL-slutpunkten från en extern webbplats måste du konfigurera:
 
@@ -812,7 +812,7 @@ Om du vill komma åt GraphQL-slutpunkten från en extern webbplats måste du kon
 
 >[!NOTE]
 >
->En detaljerad översikt över CORS resursdelningsprincip i AEM finns i [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=en#understand-cross-origin-resource-sharing-(cors)).
+>En detaljerad översikt över CORS resursdelningsprincip i AEM finns i [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors)).
 
 För att komma åt GraphQL-slutpunkten måste en CORS-princip konfigureras i kundens Git-databas. Detta görs genom att en lämplig OSGi CORS-konfigurationsfil läggs till för de önskade slutpunkterna.
 

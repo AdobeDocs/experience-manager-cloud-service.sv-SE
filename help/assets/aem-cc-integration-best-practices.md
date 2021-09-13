@@ -3,12 +3,12 @@ title: Bästa tillvägagångssätt att integrera med [!DNL Adobe Creative Cloud]
 description: Bästa praxis är att integrera driftsättning i Experience Manager med Adobe Creative Cloud för att effektivisera arbetsflöden för överföring av resurser och uppnå maximal effektivitet.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Samarbete,Adobe Asset Link,Skrivbordsapp
+feature: Collaboration,Adobe Asset Link,Desktop App
 role: Architect,User,Admin
 exl-id: cbed0d62-5148-45eb-b6a0-9fd164060fdc
-source-git-commit: 09aecfac8bab0377e9e777b80e7db986d7aa4914
+source-git-commit: 0d0a3247e42e0f4a9b2965104814fe6bcd8e6128
 workflow-type: tm+mt
-source-wordcount: '3451'
+source-wordcount: '3443'
 ht-degree: 14%
 
 ---
@@ -39,7 +39,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 | Värdeförslag för berörda personer | Adobe | Involverade ytor |
 |---|---|---|
 | Creative users identifierar resurser från [!DNL Experience Manager], öppnar och använder dem, redigerar och överför ändringar till [!DNL Experience Manager] samt överför nya filer till [!DNL Experience Manager], utan att lämna sin [!DNL Creative Cloud]-app. | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Photoshop, Illustrator och InDesign. |
-| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar i [!DNL Experience Manager] och överföring av nya filer till [!DNL Experience Manager] från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda skrivbordsprogrammet, inklusive andra typer än Adobe. | [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en) | Skrivbordsappen Experience Manager på Win och Mac |
+| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar i [!DNL Experience Manager] och överföring av nya filer till [!DNL Experience Manager] från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda skrivbordsprogrammet, inklusive andra typer än Adobe. | [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | Skrivbordsappen Experience Manager på Win och Mac |
 | Marknadsförare och affärsanvändare upptäcker, förhandsgranskar, licensierar och sparar Adobe Stock-resurser inifrån Experience Manager. Licensierade och sparade mediefiler innehåller utvalda Adobe Stock-metadata för bättre styrning. | [Integrering med Experience Manager och Adobe Stock](aem-assets-adobe-stock.md) | [!DNL Experience Manager] webbgränssnitt |
 | Förbättra samarbetet mellan digitala produktdesigners och marknadsförare. Låt designers använda digitalt material i design- och trådramsmodeller på Adobe XD Canvas. | [[!DNL Adobe Asset Link] for [!DNL Adobe XD]](https://helpx.adobe.com/enterprise/using/adobe-asset-link-for-xd.html) | [!DNL Adobe XD] |
 | Marknadsförarna kan automatiskt skapa variationer och derivat baserade på överförda tillgångar och fördefinierade åtgärder som skapats med anpassning. Använd den här automatiseringen för att förbättra innehållets hastighet och minska den manuella ansträngningen. | [Automatisering av innehåll](/help/assets/cc-api-integration.md) | [!DNL Experience Manager Assets] webbgränssnitt |
