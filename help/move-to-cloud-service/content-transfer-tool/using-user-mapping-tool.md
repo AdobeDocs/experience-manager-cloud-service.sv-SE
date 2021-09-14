@@ -2,9 +2,9 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 exl-id: 88ce7ed3-46fe-4b3f-8e18-c7c8423faf24
-source-git-commit: a9119ac04762c91230d52d6418b7808bca7e9f9f
+source-git-commit: 3adbaf4735b65125178a24a223100d50e132967a
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1315'
 ht-degree: 4%
 
 ---
@@ -24,13 +24,13 @@ Som en del av övergången till Adobe Experience Manager (AEM) som Cloud Service
 
 En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön.  Detta kräver att du använder [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) för att hantera användare och användargrupper. Användarprofilsinformationen är centraliserad i Adobe Identity Management System (IMS) som möjliggör enkel inloggning i alla Adobe-molnprogram. Mer information finns i [Identity Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/what-is-new-and-different.html?lang=en#identity-management). På grund av den här ändringen måste befintliga användare och grupper mappas till sina IMS-ID:n för att undvika dubbletter av användare och grupper på Cloud Servicens författarinstans.
 
-### Användarmappningsverktyg {#mapping-tool}
+### Verktyg för användarmappning {#mapping-tool}
 
 Verktyget Innehållsöverföring (utan användarmappning) migrerar alla användare och grupper som är kopplade till innehållet som migreras. Verktyget för användarmappning är en del av verktyget för innehållsöverföring, och dess enda syfte är att ändra användare och grupper så att de kan identifieras korrekt av IMS, den enkelinloggningsfunktion som används av AEM som en Cloud Service. När ändringarna är klara migrerar verktyget Innehållsöverföring det angivna innehållets användare och grupper som vanligt.
 
 ## Viktiga överväganden {#important-considerations}
 
-### Undantag {#exceptional-cases}
+### Exceptionella ärenden {#exceptional-cases}
 
 Följande specialfall loggas:
 
@@ -50,11 +50,10 @@ Följande specialfall loggas:
 
 * När innehållsöverläggningar utförs och innehållet inte överförs eftersom det inte har ändrats sedan den tidigare överföringen, kommer användare och grupper som är kopplade till det innehållet inte heller att överföras, även om användare och grupper har ändrats under tiden. Detta beror på att användare och grupper migreras tillsammans med det innehåll de är kopplade till.
 
-* Inmatning misslyckas i följande scenarier:
+* Om målinstansen AEM Cloud Servicen har en användare med ett annat användarnamn men samma e-postadress som en av användarna i AEM och användarmappning är aktiverat, kommer ett felmeddelande att skrivas i loggarna och AEM användare kommer inte att överföras eftersom endast en användare med en angiven e-postadress tillåts i målsystemet.
 
-1. Om målinstansen AEM Cloud Servicen har en användare med ett annat användarnamn men samma e-postadress som en av användarna i AEM.
+* Om två användare på AEM källinstansen har samma e-postadress och användarmappning är aktiverat, skrivs ett felmeddelande i loggarna och en av AEM-användarna kommer inte att överföras, eftersom endast en användare med en given e-postadress tillåts på måldatorn.
 
-1. Om det finns två användare i AEM med olika användarnamn men samma e-postadress. AEM som en Cloud Service tillåter inte att två användare har samma e-postadress.
 
 ## Använda verktyget för användarmappning {#using-user-mapping-tool}
 
