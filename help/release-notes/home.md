@@ -2,10 +2,10 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) som en Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) som en Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: 0d0a3247e42e0f4a9b2965104814fe6bcd8e6128
+source-git-commit: a5fb7cd1f0c1041f0dbaa1e261f6e1454f363fd5
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 36%
+source-wordcount: '636'
+ht-degree: 33%
 
 ---
 
@@ -51,7 +51,6 @@ Så här förbereder du en release:
 |---|---|
 | [Startsida för Experience Manager as a Cloud Service](/help/landing/home.md) | Börja här för att få en översikt över dokumentationen om Experience Manager as a Cloud Service. |
 | [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över Experience Manager as a Cloud Service, med bland annat en introduktion och en terminologilista. |
-| [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden är en introduktion till de viktigaste begreppen i Experience Manager as a Cloud Service, inklusive den nya tjänstens arkitektur. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
 | [Onboarding](/help/onboarding/home.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager som Cloud Service, inklusive hur du får åtkomst och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |

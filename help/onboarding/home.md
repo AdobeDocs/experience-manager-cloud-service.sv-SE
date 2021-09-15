@@ -2,9 +2,9 @@
 title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
-source-git-commit: 7f641dc31ebe6e3847c98ed5ec44c74c6bbdf6bc
+source-git-commit: a5fb7cd1f0c1041f0dbaa1e261f6e1454f363fd5
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '521'
 ht-degree: 24%
 
 ---
@@ -35,9 +35,8 @@ Den introduktionsresa som visas nedan är utformad för en systemadministratörs
 | Användarhandbok | Beskrivning |
 |---|---|
 | [Startsida för Experience Manager as a Cloud Service](/help/landing/home.md) | Börja här för att få en översikt över dokumentationen om Experience Manager as a Cloud Service. |
-| [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över [!DNL Experience Manager as a Cloud Service], inklusive en introduktion, terminologi och så vidare. |
+| [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över [!DNL Experience Manager as a Cloud Service], inklusive en introduktion, terminologi, arkitektur och så vidare. |
 | [Versionsinformation](/help/release-notes/home.md) | Den här handboken innehåller viktig information om den senaste versionen av [!DNL Experience Manager as a Cloud Service], inklusive vad som är nya, borttagna och borttagna funktioner samt kända fel. |
-| [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden ger en introduktion till de centrala begreppen i [!DNL Experience Manager as a Cloud Service], inklusive arkitekturen för den nya tjänsten. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs mer om viktiga säkerhetsfrågor om [!DNL Experience Manager as a Cloud Service]. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Förstå hur du kan redigera med och administrera [!DNL Experience Manager Sites] som en Cloud Service. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du använder och administrerar [!DNL Experience Manager Assets as a Cloud Service]. |

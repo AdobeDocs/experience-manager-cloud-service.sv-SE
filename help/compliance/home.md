@@ -2,10 +2,10 @@
 title: Regelefterlevnad
 description: Regelefterlevnad
 exl-id: d346ad01-af00-48a1-96a4-e742369defff
-source-git-commit: 6569b98bafa98b3f85c55d95f5e6db0ec1de77f8
+source-git-commit: a5fb7cd1f0c1041f0dbaa1e261f6e1454f363fd5
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 71%
+source-wordcount: '382'
+ht-degree: 69%
 
 ---
 
@@ -27,7 +27,6 @@ På den här sidan visas självhjälpsresurser med information om efterlevnad i 
 |---|---|
 | [Startsida för Experience Manager as a Cloud Service](/help/landing/home.md) | Börja här för att få en översikt över dokumentationen om Experience Manager as a Cloud Service. |
 | [Versionsinformation](/help/release-notes/home.md) | Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service inklusive nyheter, inaktuella och borttagna funktioner samt kända fel. |
-| [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden är en introduktion till de viktigaste begreppen i Experience Manager as a Cloud Service, inklusive den nya tjänstens arkitektur. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
 | [Onboarding](/help/onboarding/home.md) | Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |

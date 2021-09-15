@@ -2,10 +2,10 @@
 title: Användarhandböcker om Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om Adobe Experience Manager as a Cloud Service
 exl-id: 1dbeb42c-3c84-407a-bc7b-d9f0403ee73a
-source-git-commit: 90e9dd3c9c61a1e3f0aa1681475afa4e4d12106b
+source-git-commit: a5fb7cd1f0c1041f0dbaa1e261f6e1454f363fd5
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 71%
+source-wordcount: '406'
+ht-degree: 65%
 
 ---
 
@@ -17,9 +17,8 @@ På den här sidan visas användarhandböckerna för självhjälp för Experienc
 
 | Användarhandbok | Beskrivning |
 |---|---|
-| [Översikt](/help/overview/home.md) | Börja här för en översikt över Experience Manager as a Cloud Service, med bland annat en introduktion och en terminologilista. |
+| [Översikt](/help/overview/home.md) | Börja här om du vill få en översikt över Experience Manager som en molntjänst, inklusive en introduktion, terminologi, arkitektur osv. |
 | [Versionsinformation](/help/release-notes/home.md) | Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service inklusive nyheter, inaktuella och borttagna funktioner samt kända fel. |
-| [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden är en introduktion till de viktigaste begreppen i Experience Manager as a Cloud Service, inklusive den nya tjänstens arkitektur. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
 | [Onboarding](/help/onboarding/home.md) | Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |

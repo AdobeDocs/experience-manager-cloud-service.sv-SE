@@ -2,10 +2,10 @@
 title: Implementera Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om att implementera Adobe Experience Manager as a Cloud Service
 exl-id: d1e359a0-8a03-4f57-aa9c-cf1d0e9b7d0c
-source-git-commit: d022b73d84d150c156695106f4a5fe2c75d90664
+source-git-commit: a5fb7cd1f0c1041f0dbaa1e261f6e1454f363fd5
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 82%
+source-wordcount: '422'
+ht-degree: 77%
 
 ---
 
@@ -26,9 +26,8 @@ På den här sidan visas självhjälp om att implementera Experience Manager as 
 | Användarhandbok | Beskrivning |
 |---|---|
 | [Startsida för Experience Manager as a Cloud Service](/help/landing/home.md) | Börja här för att få en översikt över dokumentationen om Experience Manager as a Cloud Service. |
-| [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över Experience Manager as a Cloud Service, med bland annat en introduktion och en terminologilista. |
+| [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över Experience Manager som en molntjänst, inklusive en introduktion, terminologi, arkitektur osv. |
 | [Versionsinformation](/help/release-notes/home.md) | Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service inklusive nyheter, inaktuella och borttagna funktioner samt kända fel. |
-| [Viktiga begrepp](/help/core-concepts/home.md) | Den här guiden är en introduktion till de viktigaste begreppen i Experience Manager as a Cloud Service, inklusive den nya tjänstens arkitektur. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
 | [Onboarding](/help/onboarding/home.md) | Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |
