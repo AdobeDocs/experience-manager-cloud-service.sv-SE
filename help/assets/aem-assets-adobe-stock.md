@@ -2,12 +2,12 @@
 title: Hantera [!DNL Adobe Stock] resurser i [!DNL Assets].
 description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock] resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
-feature: Sök,Adobe Stock
+feature: Search,Adobe Stock
 role: Admin,User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 034899c2a717fafdc50cc269d6db3feb77d907c5
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '914'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Organisationer kan integrera sin [!DNL Adobe Stock] Enterprise-plan med [!DNL Ex
 
 ## Integrera [!DNL Experience Manager] och [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
-Om du vill tillåta kommunikation mellan [!DNL Experience Manager] och [!DNL Adobe Stock] skapar du en IMS-konfiguration och en [!DNL Adobe Stock]-konfiguration i [!DNL Experience Manager].
+Om du vill upprätta kommunikation mellan [!DNL Experience Manager] och [!DNL Adobe Stock] skapar du en IMS-konfiguration och en [!DNL Adobe Stock]-konfiguration i [!DNL Experience Manager].
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Om du vill tillåta kommunikation mellan [!DNL Experience Manager] och [!DNL Ado
 
 ## Använd och hantera [!DNL Adobe Stock]-resurser i [!DNL Experience Manager] {#usemanage}
 
-Med den här funktionen kan organisationer tillåta användare att arbeta med [!DNL Adobe Stock]-resurser i [!DNL Experience Manager Assets]. I [!DNL Experience Manager]-användargränssnittet kan användare söka efter [!DNL Adobe Stock]-resurser och licensiera de nödvändiga resurserna.
+Med den här funktionen kan organisationer som användare arbetar med [!DNL Adobe Stock]-resurser i [!DNL Experience Manager Assets]. I [!DNL Experience Manager]-användargränssnittet kan användare söka efter [!DNL Adobe Stock]-resurser och licensiera de nödvändiga resurserna.
 
 När en [!DNL Adobe Stock]-resurs har licensierats i [!DNL Experience Manager] kan den användas och hanteras som en vanlig resurs. I [!DNL Experience Manager] kan användarna söka efter och förhandsgranska resurserna; kopiera och publicera tillgångarna, dela resurserna på [!DNL Brand Portal], få tillgång till och använda resurserna via [!DNL Experience Manager]-datorprogrammet; och så vidare.
 
