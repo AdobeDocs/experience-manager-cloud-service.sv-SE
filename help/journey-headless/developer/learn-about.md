@@ -1,15 +1,15 @@
 ---
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
-source-git-commit: ddd320ae703225584d4a2055d0f882d238d60987
+exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
+source-git-commit: ab81bca96bcf06b06357f900464e999163bb1bb2
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
 
 ---
 
-
-# Lär dig mer om CMS Headless Development {#learn-about}
+# Läs om CMS Headless Development {#learn-about}
 
 I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig mer om headless technology och varför du skulle använda den.
 
@@ -21,7 +21,7 @@ Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras o
 * Förstå varför och när headless krävs
 * Lär dig på en hög nivå hur headless-koncept används och hur de fungerar ihop
 
-## Leverans av innehåll i fullhög {#full-stack}
+## Leverans av högklassigt innehåll {#full-stack}
 
 Ända sedan de lättanvända, storskaliga CMS-systemen (Content Management System) började användas har organisationer utnyttjat dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Att använda CMS som en central punkt för att administrera upplevelser har förbättrat effektiviteten genom att eliminera behovet av att duplicera uppgifter i olika system.
 
@@ -52,7 +52,7 @@ Begränsningarna i den här naturliga silon kan bli tydligare när du lägger me
 
 Användarna förväntar sig engagemang oavsett plattform eller kontaktyta och behöver flexibilitet i hur ni levererar era upplevelser.  Detta flerkanalsarbetssätt är standarden för digitala upplevelser och en helhetsstrategi kan under vissa omständigheter visa sig vara stelbent.
 
-## Huvudet i Headless {#the-head}
+## Huvudet utan huvud {#the-head}
 
 Huvudet för alla system är vanligtvis systemets utdatarenderare, vanligtvis i form av ett grafiskt gränssnitt eller andra grafiska utdata.
 
@@ -110,7 +110,7 @@ När du fortsätter med den här utvecklarresan får du lära dig hur AEM stöde
 
 Som branschledare inom digital upplevelsehantering inser Adobe att den idealiska lösningen på verkliga utmaningar som upplevelseskapare står inför sällan är ett binärt val. Det är därför AEM inte bara stöder båda modellerna, utan också ger en unik kombination av de båda, vilket kombinerar fördelarna med headless och full stack, så att ni kan hjälpa era kunder med ert innehåll, oavsett var de befinner sig.
 
-Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har den här grundläggande kunskapen kan ni ytterligare utforska hur ni kan utnyttja båda modellernas möjligheter.
+Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har den här grundläggande kunskapen kan ni utforska hur ni kan utnyttja båda modellernas möjligheter ytterligare.
 
 ## What&#39;s Next {#what-is-next}
 
@@ -126,5 +126,5 @@ Bygg vidare på denna kunskap och fortsätt din AEM resa utan trassel genom att 
 
 Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Getting Started with AEM Headless as a Cloud Service,](getting-started.md) nedan är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta den headless-resan.
 
-* [An Introduction to the Architecture of Adobe Experience Manager as a Cloud Service](/help/core-concepts/architecture.md)  - Understanding AEM as a Cloud Services structure
+* [An Introduction to the Architecture of Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md)  - Understanding AEM as a Cloud Services structure
 * [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  - Använd dessa praktiska självstudiekurser för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless endpoints med AEM och välja vad som är rätt för dig.

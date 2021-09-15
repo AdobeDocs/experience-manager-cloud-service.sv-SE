@@ -1,14 +1,13 @@
 ---
 title: Vad är nytt?
-description: 'Nyheter i Adobe Experience Manager (AEM) som Cloud Service. '
-translation-type: tm+mt
-source-git-commit: e381807d7c199113689304e9481dfe2022ee5f93
+description: Nyheter i Adobe Experience Manager (AEM) som Cloud Service.
+exl-id: f854aaf8-e84d-4904-832f-f72433590920
+source-git-commit: ab81bca96bcf06b06357f900464e999163bb1bb2
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 15%
 
 ---
-
 
 # Vad är Nytt? {#what-is-new}
 
@@ -18,7 +17,7 @@ Adobe Experience Manager (AEM) som Cloud Service är en molnbaserad plattform so
 
 En översikt över Adobe Experience Manager som Cloud Service finns i:
 * [Introduktion till AEM som en Cloud Service](/help/overview/introduction.md)
-* [Arkitekturen](/help/core-concepts/architecture.md) för Adobe Experience Manager som en Cloud Service
+* [Arkitekturen](/help/overview/architecture.md) för Adobe Experience Manager som en Cloud Service
 * En [översikt över AEM som en Cloud Service - What is New and What is Different](/help/overview/what-is-new-and-different.md)
 
 <!-- Please link to introduction or what's new of Sites. -->

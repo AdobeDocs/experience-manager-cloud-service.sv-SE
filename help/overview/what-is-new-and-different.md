@@ -2,7 +2,7 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: c25756f16f5e86958c1cc9224e51d07c4d864da4
+source-git-commit: ab81bca96bcf06b06357f900464e999163bb1bb2
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 86%
@@ -42,7 +42,7 @@ Det finns grundläggande skillnader mellan dessa tidigare metoder och AEM as a C
 
 >[!NOTE]
 >
->Mer information finns i [Arkitektur](/help/core-concepts/architecture.md).
+>Mer information finns i [Arkitektur](/help/overview/architecture.md).
 
 AEM as a Cloud Service har nu:
 
@@ -264,7 +264,7 @@ Mer information finns i [Översikt och introduktion till Assets as a Cloud Servi
 Mer information finns i:
 
 * [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
-* [Arkitekturen](/help/core-concepts/architecture.md) i Adobe Experience Manager as a Cloud Service
+* [Arkitekturen](/help/overview/architecture.md) i Adobe Experience Manager as a Cloud Service
 * [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
 * [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
 * [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
