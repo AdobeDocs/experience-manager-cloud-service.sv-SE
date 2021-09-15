@@ -1,15 +1,21 @@
 ---
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
-exl-id: fb169e85-ac19-4962-93d9-abaed812f948
-source-git-commit: f96561e46cfaa217398ec496bf9d5df669e01c29
+source-git-commit: a54841ca2e959e885a997b19dd03c6ece3f00d1c
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 84%
+source-wordcount: '1782'
+ht-degree: 82%
 
 ---
 
 # En introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service {#an-introduction-to-the-architecture-adobe-experience-manager-as-a-cloud-service}
+
+>[!CONTEXTUALHELP]
+>id="intro_aem_cloudservice_architecture"
+>title="Introduktion till AEM som Cloud Service Architecture"
+>abstract="På den här fliken kan du visa den nya arkitekturen för AEM som en Cloud Service och förstå ändringarna. AEM har resulterat i en dynamisk arkitektur med ett varierande antal bilder, så det är viktigt att du tar dig tid att förstå.molnarkitekturen"
+>additional-url="https://video.tv.adobe.com/v/330542/" text="Arkitektur - översikt"
+
 
 Adobe Experience Manager (AEM) as a Cloud Service har lett till ändringar i arkitekturen.
 
