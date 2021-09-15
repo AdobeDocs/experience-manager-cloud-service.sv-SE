@@ -4,10 +4,10 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager as a Cloud Service, Experience Manager Assets
-source-git-commit: 69f1ac34dc24f92cae47e1bfcffb39f6f3b03b7b
+source-git-commit: 8ed1d93a11c326df449164d35c7433f21b64d187
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 40%
+source-wordcount: '483'
+ht-degree: 38%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 40%
    + [Metadataprofiler](metadata-profiles.md)
    + [Metadataschema](metadata-schemas.md)
    + [Hantera videoresurser](manage-video-assets.md)
+   + [Återanvända resurser med MSM](reuse-assets-using-msm.md)
    + [Hämta resurser](download-assets-from-aem.md)
    + [Checka in och checka ut resurser för redigering](check-out-and-submit-assets.md)
    + [Digital Rights Management för tillgångar](drm.md)
@@ -58,7 +59,7 @@ ht-degree: 40%
    + [Autentisering för fjärrGraphQL-frågor för innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
    + [GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-   + [Generera FPO-återgivningar för Adobe InDesign](configure-fpo-renditions.md)
+   + [Generera renderingar endast för placering](configure-fpo-renditions.md)
    + [Materialrapporter](asset-reports.md)
    + [Överlappande metadata](cascading-metadata.md)
    + [XMP-metadata](xmp-metadata.md)
@@ -67,7 +68,7 @@ ht-degree: 40%
 + Dela och driftsätta resurser {#brand-portal}
    + [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
    + [Publicera resurser till [!DNL Brand Portal]](publish-to-brand-portal.md)
-   + [Publicera resurser  [!DNL Brand Portal] från [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=en)
+   + [Publicera resurser  [!DNL Brand Portal] från [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
    + [Headless Delivery with Content Fragments and GraphQL](content-fragments/content-fragments-graphql.md)
