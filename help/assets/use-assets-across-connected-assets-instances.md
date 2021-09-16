@@ -2,13 +2,13 @@
 title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
-feature: Resurshantering,Anslutna resurser,Resursdistribution,Användare och grupper
+feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 69242846bcd27a4d70f31cc17688d651e4733b5f
 workflow-type: tm+mt
-source-wordcount: '2851'
-ht-degree: 25%
+source-wordcount: '2932'
+ht-degree: 24%
 
 ---
 
@@ -20,9 +20,11 @@ Funktionen för anslutna resurser stöder ovanstående användningsfall genom at
 
 ## Översikt över Connected Assets {#overview-of-connected-assets}
 
-När du redigerar sidor i [!UICONTROL Page Editor] som målmål kan författarna sömlöst söka efter, bläddra bland och bädda in resurser från en annan [!DNL Assets]-distribution som fungerar som en källa för resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites]-funktioner med en annan distribution av [!DNL Experience Manager] med [!DNL Assets]-funktioner.
+När du redigerar sidor i [!UICONTROL Page Editor] som målmål kan författarna sömlöst söka efter, bläddra bland och bädda in resurser från en annan [!DNL Assets]-distribution som fungerar som en källa för resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites]-funktioner med en annan distribution av [!DNL Experience Manager] med [!DNL Assets]-funktioner. Du kan också använda Dynamic Media-bilder på webbplatsens webbsidor med hjälp av Anslutna resurser och använda Dynamic Media-funktionerna, till exempel smarta beskärnings- och bildförinställningar.
 
 För [!DNL Sites]-författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. Om du vill göra många fjärrresurser tillgängliga för en [!DNL Sites]-distribution på en gång bör du överväga att migrera resurserna samtidigt.
+
+Du kan konfigurera en anslutning mellan Sites-distribution och Dynamic Media-distribution som tillåter webbsideskonstruktörer att använda Dynamic Media-bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och distributioner av Dynamic Media på fjärrbasis densamma. På så sätt kan du utnyttja Dynamic Media-funktionaliteten via funktionen Anslutna resurser, till exempel smarta beskärnings- och bildförinställningar.
 
 ### Förutsättningar och distributioner som stöds {#prerequisites}
 
@@ -147,7 +149,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
 1. Navigera till gränssnittet [!DNL Assets] i fjärrdistributionen genom att gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** från arbetsytan [!DNL Experience Manager]. Du kan även få åtkomst till `https://[assets_servername_ams]:[port]/assets.html/content/dam` i en webbläsare. Ladda upp de resurser du vill ha.
 1. I [!DNL Sites]-distributionen klickar du på **[!UICONTROL Impersonate as]** i profilaktiveraren i det övre högra hörnet. Ange `ksaner` som användarnamn, markera det angivna alternativet och klicka på **[!UICONTROL OK]**.
-1. Öppna en `We.Retail`-webbsida på **[!UICONTROL Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL us]** > **[!UICONTROL en]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` i en webbläsare när du vill redigera en sida.
+1. Öppna en webbsida på **[!UICONTROL Navigation]** > **[!UICONTROL Sites]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/<site page>` i en webbläsare när du vill redigera en sida.
 
    Klicka på **[!UICONTROL Toggle Side Panel]** överst till vänster på sidan.
 
