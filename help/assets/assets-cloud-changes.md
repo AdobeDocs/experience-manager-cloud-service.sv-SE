@@ -4,7 +4,7 @@ description: Observera ändringar i [!DNL Adobe Experience Manager Assets] in [!
 feature: Release Information
 role: User,Leader,Architect,Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: baa08b242e83d944bd7474c50e115a7c4b49900d
+source-git-commit: ab2cc4e62886eaf67099d16312d255ea38686c9d
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 >* [Lista över borttagna och borttagna funktioner](/help/release-notes/deprecated-removed-features.md)
 >* [En introduktion](/help/overview/introduction.md)
 >* [Vad är nytt och annorlunda?](/help/overview/what-is-new-and-different.md)
->* [Arkitekturen](/help/core-concepts/architecture.md)
+>* [Arkitekturen](/help/overview/architecture.md)
 >* [Betydande ändringar](/help/release-notes/aem-cloud-changes.md)
 >* [Betydande ändringar [!DNL Sites]](/help/sites-cloud/sites-cloud-changes.md)
 >* [Videosjälvstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
