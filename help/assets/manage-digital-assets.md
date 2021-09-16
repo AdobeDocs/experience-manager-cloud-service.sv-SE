@@ -3,12 +3,12 @@ title: Hantera digitala resurser
 description: Läs om olika metoder för resurshantering och redigering.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Resurshantering, publicering, samarbete, tillgångsbearbetning
+feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: cec07dad7a62439e26d9657459964b01ce6e3dba
 workflow-type: tm+mt
-source-wordcount: '4397'
+source-wordcount: '4390'
 ht-degree: 11%
 
 ---
@@ -531,8 +531,6 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du p
    ![chlimage_1-247](assets/chlimage_1-247.png)
 
    Om du vill ändra utseendet på den återgivna PDF-filen, till exempel teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** i Configuration Manager och ändrar önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg i anteckningar finns i [Kommentera](/help/assets/manage-digital-assets.md#annotating).
-
-   ![chlimage_1-248](assets/chlimage_1-248.png)
 
    Återgå till den återgivna PDF-filen och uppdatera den. Den uppdaterade PDF-filen återspeglar de ändringar du har gjort.
 

@@ -4,14 +4,14 @@ description: Lär dig hur du arbetar med video i Dynamic Media.
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 0d0a3247e42e0f4a9b2965104814fe6bcd8e6128
+source-git-commit: d174ff3a27d9a0a3d89bb146b847cf253b8afbdc
 workflow-type: tm+mt
-source-wordcount: '9121'
+source-wordcount: '9051'
 ht-degree: 4%
 
 ---
 
-# Video{#video}
+# Video {#video}
 
 I det här avsnittet beskrivs hur du arbetar med video i Dynamic Media.
 
@@ -37,7 +37,6 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Koppla videobearbetningsprofilen till en eller flera mappar där du ska överföra dina primära källvideor.
 
       * [Använd en videoprofil på mappar](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
-      * Läs mer om [Bästa tillvägagångssätt för att ordna digitala resurser så att du kan använda bearbetningsprofiler](/help/assets/dynamic-media/best-practices-for-file-management.md).
       * Läs mer om [Ordna digitala resurser](/help/assets/organize-assets.md).
    * Överför dina primära källvideor till mapparna. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
@@ -54,9 +53,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
    * Ordna, bläddra bland och söka efter videomaterial
 
-      * [Organisera digitalt ](/help/assets/organize-assets.md)
-materialLäs mer om  [Bästa metoder för att ordna digitalt material för användning av bearbetningsprofiler](/help/assets/dynamic-media/best-practices-for-file-management.md)
-
+      * [Ordna digitala resurser](/help/assets/organize-assets.md)
       * [Söka efter ](/help/assets/search-assets.md#custompredicates) videomaterial eller  [söka efter resurser](/help/assets/manage-digital-assets.md#search-assets)
    * Förhandsgranska och publicera videomaterial
 
@@ -64,41 +61,27 @@ materialLäs mer om  [Bästa metoder för att ordna digitalt material för anvä
          [Förhandsgranska ](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) videoklipp eller  [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
          [Hantera videoåtergivningar](/help/assets/manage-digital-assets.md#managing-renditions)
 
+      * [Hantera förinställningar för visningsprogram](/help/assets/dynamic-media/managing-viewer-presets.md)
+      * [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
+   * Arbeta med videometadata
 
-<!-- Commented video-renditions.md as the file is not published yet and will lead to broken link.
-        * View the source video and encoded renditions of the video along with its associated thumbnails:
-          [Previewing videos](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) or [Previewing assets](/help/assets/dynamic-media/previewing-assets.md)
-          [Viewing video renditions](/help/assets/video-renditions.md)
-          [Managing video renditions](/help/assets/manage-digital-assets.md#managing-renditions) -->
+      * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
+         [Redigera videoegenskaper](/help/assets/manage-digital-assets.md#editing-properties)
 
-    * [Hantera förinställningar för visningsprogram](/help/assets/dynamic-media/managing-viewer-presets.md)
-    * [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
-    
-    * Arbeta med videometadata
+      * [Hantera metadata för digitala resurser](/help/assets/manage-metadata.md)
+      * [Metadata-scheman](/help/assets/metadata-schemas.md)
+   * Granska, godkänn och kommentera videoklipp och behåll fullständig versionskontroll
 
-<!--      * View the properties of an encoded video rendition such as frame rate, audio and video bitrate, and codec:
-          [Viewing video rendition properties](/help/assets/video-renditions.md) -->
+      * [Anteckna ](/help/assets/manage-video-assets.md#annotate-video-assets) videor eller  [Anteckna material](/help/assets/manage-digital-assets.md#annotating)
 
-    * Redigera egenskaperna för videon, t.ex. titel, beskrivning och taggar, egna metadatafält:
-    [Redigera videoegenskaper](/help/assets/manage-digital-assets.md#editing-properties)
-    
-    * [Hantera metadata för digitala resurser](/help/assets/manage-metadata.md)
-    * [Metadata scheme](/help/assets/metadata-schemas.md)
-    
-    * Granska, godkänn och kommentera videoklipp och behåll fullständig versionskontroll
-    
-    * [Anteckna videoklipp](/help/assets/manage-video-assets.md#annotate-video-assets) eller [Anteckningsresurser](/help/assets/manage-digital-assets.md#annotating)
-    
-    * [Skapa en version](/help/assets/manage-digital-assets.md#asset-versioning)
-    * [Starta ett arbetsflöde för en resurs](/help/assets/manage-digital-assets.md#starting-a-workflow-on-an-asset)
+      * [Skapa en version](/help/assets/manage-digital-assets.md#asset-versioning)
+      * [Starta ett arbetsflöde för en resurs](/help/assets/manage-digital-assets.md#starting-a-workflow-on-an-asset)
 
-<!-- Removing assets-workflow.md file link as it is not applicable anymore. Workflows are replaced by processing profiles.
-        * [Creating a version](/help/assets/manage-digital-assets.md#asset-versioning)
-        * [Applying workflows to assets](/help/assets/assets-workflow.md) or see [Starting a workflow on an asset](/help/assets/manage-digital-assets.md#starting-a-workflow-on-an-asset)
--->
+      * [Granska mappresurser](/help/assets/bulk-approval.md)
+      * [Projekt](/help/sites-cloud/authoring/projects/overview.md)
 
-    * [Granska mappresurser](/help/assets/bulk-approval.md)
-    * [Projekt](/help/sites-cloud/authoring/projects/overview.md)
+
+
 
 1. **Publicera dina Dynamic Media-** filmer genom att göra något av följande:
 
@@ -407,7 +390,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 | Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Källa | 1920 x 1080 | 1 | 3 |
+| Källa | 1920 x 1080 | 1 | 1 |
 | Kodad | 960 x 540 | 2 | 2 |
 | Kodad | 640 x 360 | 3 | 3 |
 | Kodad | 480 x 270 | 4 | 4 |

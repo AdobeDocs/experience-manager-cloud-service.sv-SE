@@ -4,12 +4,13 @@ description: Generera FPO-återgivningar av nya och befintliga resurser med hjä
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Renditions
-source-git-commit: 1152ce8be74b5049d4c28cb49d925f55fb09585b
+source-git-commit: 7e82c3c5490c2f6d43167e6784cdbbb60f811a6f
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
 
 ---
+
 
 # Generera renderingar endast för placering för Adobe InDesign {#fpo-renditions}
 
@@ -20,7 +21,9 @@ Resurser innehåller återgivningar som endast används för placering (FPO). De
 Experience Manager som Cloud Service har funktioner för resurshantering i molnet för att generera FPO-renderingar. Använd resursmikrotjänster för att generera renderingar. Du kan konfigurera återgivningsgenerering för nyligen överförda resurser och för de resurser som finns i Experience Manager.
 
 Så här genererar du FPO-återgivningar:
+
 1. [Skapa en bearbetningsprofil](#create-processing-profile).
+
 1. Konfigurera Experience Manager att använda den här profilen för att [bearbeta nya resurser](#generate-renditions-of-new-assets).
 1. Använd profilerna för att [bearbeta befintliga resurser](#generate-renditions-of-existing-assets).
 

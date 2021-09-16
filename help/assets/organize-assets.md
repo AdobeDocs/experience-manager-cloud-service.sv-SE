@@ -1,49 +1,106 @@
 ---
-title: Ordna digitala resurser
-description: Organisera dina digitala resurser med hjälp av olika metoder i Adobe Experience Manager Assets.
+title: Ordna dina digitala resurser
+description: Organisera dina digitala resurser, bilder, filer, mappar och så vidare med Experience Manager.
 contentOwner: AG
-feature: Resurshantering,Taggar,Resursdistribution
+feature: Asset Management, Search
 role: User
 exl-id: 6b3ce076-2dd9-47f6-9b68-4fa52bfedd42
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 843d6660fc2a2048d138601b4b74ee9f2faa54c9
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
 
-# Ordna digitala resurser {#organize-digital-assets}
+# Ordna dina digitala resurser {#organize-digital-assets}
 
-Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokument extraheras och görs sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar helt rätt behörigheter. Metadata beskrivs i detalj i Metadata i Digital Asset Management.
+Alla digitala resurser, metadata och innehåll i Microsoft® Office- och PDF-dokument extraheras och blir sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar helt rätt behörigheter. Metadata beskrivs i detalj i Metadata i Digital Asset Management.
 
-Experience Manager Assets stöder flera sätt att ordna innehåll. Du kan ordna dem hierarkiskt med hjälp av mappar eller så kan du ordna dem på ett oordnat, tillfälligt sätt, t.ex. med hjälp av taggar. Användare kan redigera taggar i DAM-redigeraren för mediefiler där underresurser, återgivningar och metadata visas.
+[!DNL Experience Manager Assets] har stöd för flera sätt att ordna innehåll. Du kan ordna dem hierarkiskt med hjälp av mappar eller ordna dem på ett oordnat sätt, t.ex. med taggar. Användare kan redigera taggar i DAM-redigeraren där delresurser, återgivningar och metadata visas.
 
-## Skapa mappar {#create-folders}
+<!-- Commenting to pull down the existing content before applying changes wrt CQDOC-15930
+## Create folders {#create-folders}
 
-När du organiserar en samling resurser, till exempel alla *Natur*-bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. [!DNL Assets] kräver inte att du ordnar resurser i mappar för att fungera bättre.
+When organizing a collection of assets, for example, all *Nature* images, you can create folders to keep them together. You can use folders to categorize and organize your assets. [!DNL Assets] does not require you to organize assets in folders to work better.
 
 >[!NOTE]
 >
->Det går inte att dela en resursmapp (i Marketing Cloud) av typen `sling:OrderedFolder`. Om du vill dela en mapp ska du inte välja Ordnad när du skapar en mapp.
+>Sharing an Assets folder (in Marketing Cloud) of the type `sling:OrderedFolder`, is not supported. If you want to share a folder, do not select Ordered when creating a folder.
 
-1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp.
-1. Klicka på **[!UICONTROL Create]** på menyn. Välj **[!UICONTROL New Folder]**.
-1. Ange ett mappnamn i fältet **[!UICONTROL Title]**. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
-1. Klicka på **[!UICONTROL Create]**. Mappen visas i mappen med digitala resurser.
+1. Navigate to the place in your digital assets folder where you want to create a new folder.
+1. In the menu, click **[!UICONTROL Create]**. Select **[!UICONTROL New Folder]**.
+1. In the **[!UICONTROL Title]** field, provide a folder name. By default, DAM uses the title that you provided as the folder name. Once the folder is created, you can override the default and specify another folder name.
+1. Click **[!UICONTROL Create]**. Your folder is displayed in the digital assets folder.
 
-## Lägga till CUG-egenskaper i mappar {#add-cug-properties-to-folders}
+## Add CUG properties to folders {#add-cug-properties-to-folders}
 
-Du kan begränsa vem som kan få åtkomst till vissa mappar i Resurser genom att göra mappen till en sluten användargrupp (CUG). Så här gör du en mapp till en CUG-fil:
+You can limit who can access certain folders in Assets by making the folder part of a closed user group (CUG). To make a folder part of a CUG:
 
-1. Högerklicka på den mapp som du vill lägga till slutna användargruppsegenskaper för i Resurser och välj **Egenskaper**.
-1. Klicka på fliken **CUG**.
-1. Markera kryssrutan **Aktiverad** om du vill att mappen och dess resurser endast ska vara tillgängliga för en stängd användargrupp.
-1. Bläddra till inloggningssidan, om det finns någon, för att lägga till den informationen. Lägg till godkända grupper genom att klicka på **Lägg till objekt**. Lägg till sfären om det behövs. Klicka på **OK** för att spara ändringarna.
+1. In Assets, right-click the folder you want to add closed user group properties for and select **Properties**.  
+1. Click the **CUG** tab.
+1. Select the **Enabled** check box to make the folder and its assets available only to a closed user group.  
+1. Browse to the login page, if there is one, to add that information. Add admitted groups by clicking **Add item**. If necessary, add the realm. Click **OK** to save your changes.
 
-## Använd taggar för att ordna resurser {#use-tags-to-organize-assets}
+## Use tags to organize assets {#use-tags-to-organize-assets}
 
-Du kan använda mappar eller taggar, eller båda, för att ordna resurser. Om du lägger till taggar i resurser blir det enklare att hämta dem vid en sökning. Så här lägger du till taggar i en resurs:
+You can use folders or tags or both to organize assets. Adding tags to assets makes them more easy to retrieve during a search. To add tags to an asset, follow these steps:
 
-1. Öppna resursen genom att dubbelklicka på den i Digital Asset Manager.
-1. I området **Taggar** öppnar du menyn för att visa de tillgängliga taggarna. Välj taggar efter behov. Om du vill ta bort en tagg håller du pekaren över taggen och klickar på `X` för att ta bort den.
-1. Klicka på **Spara** för att spara alla taggar du har lagt till.
+1. In the Digital Asset Manager, double-click the asset to open it.
+1. In the **Tags** area, open the menu to reveal the available tags. Select tags as appropriate. To delete a tag, hover the pointer over the tag and click `X` to delete it.
+1. Click **Save** to save any tags you added.
+
+Date24/08/2021
+-->
+
+## Ordna resurser i mappar {#organize-using-folders}
+
+Det mest grundläggande sättet att ordna resurser är att spara resurserna i mappar. Det motsvarar att ordna filer i mappar i det lokala filsystemet. Mer information om hur du skapar och hanterar mappar finns i [Hantera resurser](manage-digital-assets.md). Hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar kan påverka hur dessa resurser bearbetas. Genom att använda enhetliga och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan ni få ut det mesta av era digitala resurslager.
+
+* Vanligtvis växer databasen med digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning tidigt när du skapar innehåll.
+* Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att arbeta och hantera ert material bättre. Resurser som placeras i följande typer av mappar kan till exempel hjälpa dig att dela upp dina resurser:
+
+   * **Utvecklingsmappar**: innehåller digitala resurser som du arbetar med just nu.
+   * **Klientmappar**: innehåller digitala resurser baserade på klienter eller projektnamn.
+   * **Primära mappar**: innehåller digitala källresurser.
+   * **Återgivningsmappar**: innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
+   * **Filstorleksmappar**: innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
+   * **Mellanlagringsmappar**: innehåller digitala resurser som är klara att publiceras live på din webbplats.
+   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer, som bilder, dokument och multimedia.
+   * **Arkivmappar**: innehåller pensionerade digitala resurser.
+   * **Datumbaserade mappar**: innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
+
+* Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
+* Om en resurs redan är publicerad använder du [!DNL Experience Manager] för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen. Den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är *borttappad* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
+
+## Ordna resurser med taggar {#use-tags-to-organize-assets}
+
+Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda AI-algoritmer för resursidentifiering i Adobe Sensei.
+
+[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa mycket beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, artificiell intelligens och maskininlärningsmiljö, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser
+
+Mer information finns i följande artiklar:
+
+* [Redigera metadata för resurser](meta-edit.md)
+* [Smarta taggar i resurser](smart-tags.md)
+
+## Ordna som samlingar {#organize-as-collections}
+
+Med resurssamlingar i [!DNL Experience Manager Assets] kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar samt samlingar som hämtar resurser baserat på sökvillkor. Du kan skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
+
+Mer information finns i [hantera samlingar](manage-collections.md)
+
+
+## Använd profiler för att ordna dina resurser {#organize-to-use-profiles}
+
+En bearbetningsprofil innehåller [!DNL Assets] bearbetningskommandon som gäller för resurser som överförs till fördefinierade mappar. Profiler används för att automatisera bearbetningen av innehållet i en mapp eller nyligen överförda resurser. Du kan använda profiler för att ordna dina resurser bättre.
+
+Genom att standardisera metadataanvändning, filnamngivning och mappstruktur säkerställer du att du kan tillämpa bearbetningsprofiler på mappar med större precision och enhetlighet när din pool med digitala resurser växer.
+
+>[!MORELIKETHIS]
+>
+>* [Använda mikrotjänster och bearbetningsprofiler](asset-microservices-configure-and-use.md)
+>* [Metadataprofiler](metadata-profiles.md)
+>* [Videoprofiler](/help/assets/dynamic-media/video-profiles.md)
+>* [Dynamic Media bildprofiler](/help/assets/dynamic-media/image-profiles.md)
+
+

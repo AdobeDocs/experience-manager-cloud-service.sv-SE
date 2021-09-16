@@ -4,9 +4,9 @@ user-guide-title: Resurser som en Cloud Service Guide
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager as a Cloud Service, Experience Manager Assets
-source-git-commit: 8ed1d93a11c326df449164d35c7433f21b64d187
+source-git-commit: ba962df2fe3a690b50a1f938aef42d9d907e8797
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '478'
 ht-degree: 38%
 
 ---
@@ -91,7 +91,6 @@ ht-degree: 38%
    + [Tillgänglighet i Dynamic Media](dynamic-media/accessibility-dm.md)
    + [Hantera Dynamic Media-resurser](dynamic-media/managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
-   + [Bästa tillvägagångssätt för filhantering](dynamic-media/best-practices-for-file-management.md)
    + [Bildprofiler](dynamic-media/image-profiles.md)
    + [Videoprofiler](dynamic-media/video-profiles.md)
    + [Hantera Dynamic Media bildförinställningar](dynamic-media/managing-image-presets.md)

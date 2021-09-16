@@ -1,12 +1,12 @@
 ---
 title: Om Dynamic Media bildprofiler och videoprofiler
 description: En bildprofil eller en videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för Dynamic Media videoresurser som du överför. Eller vilken bildprofil som ska användas för Dynamic Media bildresurser för att de ska beskäras ordentligt.
-feature: Resurshantering, bildprofiler, videoprofiler
+feature: Asset Management,Image Profiles,Video Profiles
 role: Admin,User
 exl-id: 8c8f0a57-13f5-4903-8d76-bfb6ee83323c
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: cec07dad7a62439e26d9657459964b01ce6e3dba
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,8 @@ Du måste ha administratörsbehörighet för att skapa, redigera och ta bort Dyn
 
 När du har skapat din bildprofil eller videoprofil tilldelar du den till en eller flera mappar som du använder för nyligen överförda Dynamic Media-resurser.
 
-Se även [Bästa metoder för att ordna dina digitala resurser så att du kan använda bildprofiler eller videoprofiler](/help/assets/dynamic-media/best-practices-for-file-management.md).
+Se även [Bästa metoder för att ordna dina digitala resurser så att du kan använda Bearbeta profiler](/help/assets/organize-assets.md).
+
 
 >[!NOTE]
 >

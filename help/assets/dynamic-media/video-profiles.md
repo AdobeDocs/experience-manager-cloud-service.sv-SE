@@ -1,12 +1,12 @@
 ---
 title: Videoprofiler för Dynamic Media
 description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. Du kan också lägga till smart beskärning i videoklipp.
-feature: Resurshantering, videoprofiler, återgivningar
+feature: Asset Management,Video Profiles,Renditions
 role: User
 exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
-source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
+source-git-commit: cec07dad7a62439e26d9657459964b01ce6e3dba
 workflow-type: tm+mt
-source-wordcount: '3484'
+source-wordcount: '3479'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,8 @@ Följande är andra faktorer som avgör kvaliteten på videoklipp:
 
 Se [Bästa praxis för videokodning](/help/assets/dynamic-media/video.md#best-practices-for-encoding-videos).
 
-Se även [Bästa metoder för att ordna digitala resurser så att du kan använda Bearbeta profiler](/help/assets/dynamic-media/best-practices-for-file-management.md).
+Se även [Bästa metoder för att ordna dina digitala resurser så att du kan använda Bearbeta profiler](/help/assets/organize-assets.md).
+
 
 >[!NOTE]
 >

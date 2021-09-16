@@ -1,12 +1,12 @@
 ---
 title: Bildprofiler för Dynamic Media
 description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller båda. Använd sedan profilen på en mapp med bildresurser.
-feature: Resurshantering, bildprofiler, återgivningar
+feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 02af43ae7a8aa579f4679fbed4626718b895d453
+source-git-commit: cec07dad7a62439e26d9657459964b01ce6e3dba
 workflow-type: tm+mt
-source-wordcount: '2676'
+source-wordcount: '2671'
 ht-degree: 5%
 
 ---
@@ -102,7 +102,7 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 
 Se [Om Dynamic Media bildprofiler och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md).
 
-Se även [Bästa metoder för att ordna dina digitala resurser så att du kan använda Bearbeta profiler](/help/assets/dynamic-media/best-practices-for-file-management.md).
+Se även [Bästa metoder för att ordna dina digitala resurser så att du kan använda Bearbeta profiler](/help/assets/organize-assets.md).
 
 **Så här skapar du Dynamic Media-bildprofiler:**
 
