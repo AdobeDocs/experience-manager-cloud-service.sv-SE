@@ -5,7 +5,7 @@ breadcrumb-title: AEM dokumentationsresor
 user-guide-description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt projekt.
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: de797ba7a59afa911a5a0d719b4b905d6cfcbad4
+source-git-commit: 737e03d283d5ae3d7df5b3c1ef85cf94e1e9cd45
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
@@ -60,13 +60,13 @@ Please note that all links to other guides need to be absolute references with l
       + [Översätta innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/translation/translate-content.html)
       + [Publicera översatt innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/translation/publish-content.html)
    + Headless Content Author Journey {#author}
-      + [AEM Headless Content Author Journey - översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/overview.md)
-      + [Om du skriver för Headless med AEM - en introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/introduction.md)
-      + [Grundläggande om redigering för Headless med AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/basics.md)
-      + [Läs om hur du använder referenser i innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/references.md)
-      + [Läs om hur du definierar metadata och taggar för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/metadata-tagging.md)
+      + [AEM Headless Content Author Journey - översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/overview.html)
+      + [Om du skriver för Headless med AEM - en introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/introduction.html)
+      + [Grundläggande om redigering för Headless med AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/basics.html)
+      + [Läs om hur du använder referenser i innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/references.html)
+      + [Läs om hur du definierar metadata och taggar för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/author/metadata-tagging.html)
    + Headless Content Architect Journey {#architect}
-      + [AEM Headless Content Architect Journey Overview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/architect/overview.md)
-      + [Innehållsmodellering för Headless med AEM - en introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/architect/introduction.md)
-      + [Lär dig grunderna i innehållsmodellering för Headless med AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/architect/basics.md)
-      + [Läs om hur du skapar modeller för innehållsfragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/architect/model-structure.md)
+      + [AEM Headless Content Architect Journey Overview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/architect/overview.html)
+      + [Innehållsmodellering för Headless med AEM - en introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/architect/introduction.html)
+      + [Lär dig grunderna i innehållsmodellering för Headless med AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/architect/basics.html)
+      + [Läs om hur du skapar modeller för innehållsfragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/architect/model-structure.html)
