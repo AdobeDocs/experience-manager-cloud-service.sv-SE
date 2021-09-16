@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 69242846bcd27a4d70f31cc17688d651e4733b5f
+source-git-commit: 6e7b2dd71f7e5a820ebca5e6e3928c712dfc359c
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2968'
 ht-degree: 24%
 
 ---
@@ -148,13 +148,24 @@ Endast de taggar för fjärrresurser som har en exakt motsvarande tagg tillsamma
 Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur den fungerar. Använd de dokument eller bilder du vill ha på den fjärranslutna DAM-distributionen.
 
 1. Navigera till gränssnittet [!DNL Assets] i fjärrdistributionen genom att gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** från arbetsytan [!DNL Experience Manager]. Du kan även få åtkomst till `https://[assets_servername_ams]:[port]/assets.html/content/dam` i en webbläsare. Ladda upp de resurser du vill ha.
+&lt;>
 1. I [!DNL Sites]-distributionen klickar du på **[!UICONTROL Impersonate as]** i profilaktiveraren i det övre högra hörnet. Ange `ksaner` som användarnamn, markera det angivna alternativet och klicka på **[!UICONTROL OK]**.
 1. Öppna en webbsida på **[!UICONTROL Navigation]** > **[!UICONTROL Sites]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/<site page>` i en webbläsare när du vill redigera en sida.
+=======
+1. I [!DNL Sites]-distributionen klickar du på **[!UICONTROL Impersonate as]** i profilaktiveraren i det övre högra hörnet. Ange önskat användarnamn och klicka på **[!UICONTROL OK]**.
+1. Öppna en webbsida från **[!UICONTROL Navigation]** > **[Platser]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/<page name>` i en webbläsare när du vill redigera en sida.
+>>>>>>>>>>Streckade ändringar
 
-   Klicka på **[!UICONTROL Toggle Side Panel]** överst till vänster på sidan.
+
+
+
+
+> 
+
+Klicka på **[!UICONTROL Toggle Side Panel]** överst till vänster på sidan.
 
 1. Öppna fliken [!UICONTROL Assets] och klicka på **[!UICONTROL Log in to Connected Assets]**.
-1. Ange inloggningsuppgifterna, `ksaner` som användarnamn och `password` som lösenord. Den här användaren har redigeringsbehörighet för båda [!DNL Experience Manager]-distributionerna.
+1. Ange lämpliga autentiseringsuppgifter. Den här användaren har redigeringsbehörighet för båda [!DNL Experience Manager]-distributionerna.
 1. Sök efter resursen som du har lagt till i DAM. Fjärresurserna visas i den vänstra panelen. Filtrera efter bilder eller dokument och filtrera efter olika typer av dokument som stöds. Dra bilderna till en `Image`-komponent och dokument till en `Download`-komponent.
 
    De hämtade resurserna är skrivskyddade i den lokala [!DNL Sites]-distributionen. Du kan fortfarande använda alternativen i dina [!DNL Sites]-komponenter för att redigera den hämtade resursen. Redigering med komponenter är icke-destruktiv.
@@ -172,12 +183,10 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 1. När du publicerar en sida visar [!DNL Experience Manager] en fullständig lista över resurser som används på sidan. Kontrollera att fjärresurserna har hämtats vid publiceringen. Om du vill kontrollera statusen för varje hämtad resurs läser du [asynkrona jobb](/help/operations/asynchronous-jobs.md) användargränssnitt.
 
    >[!NOTE]
-   >
-   >Sidan publiceras även om en eller flera fjärresurser inte hämtats. Komponenten som använder fjärresursen publiceras tom. I meddelandefältet [!DNL Experience Manager] visas ett meddelande om fel som visas på sidan för asynkrona jobb.
+   Sidan publiceras även om en eller flera fjärresurser inte hämtats. Komponenten som använder fjärresursen publiceras tom. I meddelandefältet [!DNL Experience Manager] visas ett meddelande om fel som visas på sidan för asynkrona jobb.
 
 >[!CAUTION]
->
->När de hämtade fjärrresurserna har använts på en webbsida är de sökbara och användbara för alla som har behörighet att komma åt den lokala mappen. De hämtade resurserna lagras i den lokala mappen (`connectedassets` i ovanstående genomgång). Resurserna är också sökbara och synliga i det lokala datalagret via [!UICONTROL Content Finder].
+När de hämtade fjärrresurserna har använts på en webbsida är de sökbara och användbara för alla som har behörighet att komma åt den lokala mappen. De hämtade resurserna lagras i den lokala mappen (`connectedassets` i ovanstående genomgång). Resurserna är också sökbara och synliga i det lokala datalagret via [!UICONTROL Content Finder].
 
 De hämtade resurserna kan användas som andra lokala resurser, förutom att associerade metadata inte kan redigeras.
 
