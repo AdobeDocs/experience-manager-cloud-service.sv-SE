@@ -4,9 +4,9 @@ description: Observera ändringar i [!DNL Adobe Experience Manager Assets] in [!
 feature: Release Information
 role: User,Leader,Architect,Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: 034899c2a717fafdc50cc269d6db3feb77d907c5
+source-git-commit: baa08b242e83d944bd7474c50e115a7c4b49900d
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,7 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 | [Hämta rapport](/help/assets/asset-reports.md) | Stöds inte. | För tillfället är den hämtningsrapport som innehåller information om resursanvändning inte tillgänglig. Se [ladda ned rapport i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html). |
 | Produktfotografimall | Stöds inte. | Se [produktfotofotografimall i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/managing-product-information.html). |
 | Smart översättning | Stöds inte. | [Smart ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/translation/smart-translation-search-feature-video-use.html) översättning stöds inte i  [!DNL Experience Manager] som  [!DNL Cloud Service]. |
+| WebDAV | Stöds inte. | Alternativ finns i [[!DNL Creative Cloud] integration](/help/assets/aem-cc-integration-best-practices.md) eller [Utvecklarreferensmaterial](/help/assets/developer-reference-material-apis.md). |
 | Klassiskt användargränssnitt | Stöds inte. | Endast det Touch-aktiverade användargränssnittet är tillgängligt. |
 
 >[!MORELIKETHIS]
