@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: 5c5ddac1a3b948d1efbd06aa188ac6d8d897d37f
+source-git-commit: 2f811c5c6ccbb1d05aa1825dd110e0c9d5e6b219
 workflow-type: tm+mt
-source-wordcount: '2929'
-ht-degree: 39%
+source-wordcount: '3063'
+ht-degree: 37%
 
 ---
 
@@ -286,6 +286,23 @@ Följ stegen nedan:
 1. Klicka på **Delete** i dialogrutan **Delete Migration Set** för att bekräfta borttagningen.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/delete-3.png)
+
+
+## Köra verktyget Innehållsöverföring på en publiceringsinstans {#running-ctt-on-publish}
+
+Vi rekommenderar att CTT installeras på källpubliceringsinstansen när innehåll flyttas till en publiceringsinstans för att flytta innehållet till målpubliceringsinstansen. Följ de rekommenderade tillvägagångssätten som beskrivs nedan:
+
+* Använd samma version av CTT som användes på Author-instansen.
+
+* Endast en publiceringsnod behöver migreras. Den bör avlägsnas från belastningsutjämnaren innan extraheringen påbörjas.
+
+* När du skapar en migreringsuppsättning använder du URL:en till författarens AEMaaCS-miljö.
+
+* Under publiceringsprocessen kommer publiceringsnivån INTE att förminskas (till skillnad från författaren). Som en försiktighetsåtgärd bör du undvika att användare startar skrivåtgärder som:
+
+   * Innehållsdistribution från AEMaaCS Author till Publish i den miljön
+   * Användarsynkronisering mellan publiceringsinstanser
+
 
 ## Felsökning {#troubleshooting}
 
