@@ -2,10 +2,10 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: eae25dc48a7cd5d257e23b515f497588a13917ea
+source-git-commit: 8e978616bd1409c12e8a40eeeeb828c853faa408
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 2%
+source-wordcount: '2098'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +67,7 @@ Paketet från ovanstående exempel byggs som `com.adobe.granite:new-index-conten
 >
 >`noIntermediateSaves=true`
 
-### Distribuerar indexdefinitioner {#deploying-index-definitions}
+### Distribuera indexdefinitioner {#deploying-index-definitions}
 
 >[!NOTE]
 >
@@ -85,13 +85,13 @@ När den nya indexdefinitionen har lagts till måste det nya programmet distribu
 >
 >Mer information om vilken paketstruktur som krävs för AEM som Cloud Service finns i dokumentet [AEM Projektstruktur.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
 
-## Indexhantering med blå-grön distribution {#index-management-using-blue-green-deployments}
+## Indexhantering med användning av blå-gröna distributioner {#index-management-using-blue-green-deployments}
 
-### Vad är indexhantering {#what-is-index-management}?
+### Vad är indexhantering? {#what-is-index-management}
 
 Indexhantering handlar om att lägga till, ta bort och ändra index. Det går snabbt att ändra *definitionen* för ett index, men det tar lång tid att tillämpa ändringen (kallas ofta&quot;skapa ett index&quot; eller&quot;omindexering&quot; för befintliga index). Det är inte omedelbart: databasen måste genomsökas för att data ska kunna indexeras.
 
-### Vad är Blue-Green Deployment {#what-is-blue-green-deployment}
+### Vad är Blue-Green Deployment? {#what-is-blue-green-deployment}
 
 Blue-Green-driftsättning kan minska driftstoppen. Det ger även inga driftavbrott och ger snabba återställningar. Den gamla versionen av programmet (blå) körs samtidigt som den nya versionen av programmet (grön).
 
@@ -111,11 +111,11 @@ Vissa delar av databasen (skrivskyddade delar av databasen) kan vara olika i den
 
 Databasens läs- och skrivområden delas mellan alla programversioner, medan det för varje programversion finns en specifik uppsättning `/apps` och `/libs`.
 
-### Indexhantering utan blå-grön distribution {#index-management-without-blue-green-deployment}
+### Indexhantering utan blå-grön driftsättning {#index-management-without-blue-green-deployment}
 
 Under utvecklingen, eller vid användning av lokala installationer, kan index läggas till, tas bort eller ändras under körningen. Index används så snart de är tillgängliga. Om ett index inte ska användas i den gamla versionen av programmet än, skapas indexet vanligtvis under en schemalagd driftstopp. Samma sak händer när du tar bort ett index eller ändrar ett befintligt index. När du tar bort ett index blir det otillgängligt så fort det tas bort.
 
-### Indexhantering med blå-grön distribution {#index-management-with-blue-green-deployment}
+### Indexhantering med blå-grön driftsättning {#index-management-with-blue-green-deployment}
 
 Med blågröna installationer blir det inga driftstopp. För indexhantering kräver detta dock att index bara används av vissa versioner av programmet. Om du till exempel lägger till ett index i version 2 av programmet, vill du inte att det ska användas av version 1 av programmet än. Det motsatta är fallet när ett index tas bort: ett index som tagits bort i version 2 behövs fortfarande i version 1. När du ändrar en indexdefinition vill vi att den gamla versionen av indexet bara ska användas för version 1 och att den nya versionen av indexet bara ska användas för version 2.
 
@@ -135,7 +135,7 @@ I följande tabell visas fem indexdefinitioner: index `cqPageLucene` används i 
 
 Versionsnumret ökas stegvis varje gång indexvärdet ändras. För att undvika att egna indexnamn kolliderar med indexnamnen för själva produkten måste anpassade index, liksom ändringar av index utanför rutan, sluta med `-custom-<number>`.
 
-### Ändringar i ej ifyllda index {#changes-to-out-of-the-box-indexes}
+### Ändringar av färdiga index {#changes-to-out-of-the-box-indexes}
 
 När Adobe ändrar ett körklart index som &quot;damAssetLucene&quot; eller &quot;cqPageLucene&quot; skapas ett nytt index med namnet `damAssetLucene-2` eller `cqPageLucene-2`. Om indexet redan har anpassats sammanfogas den anpassade indexdefinitionen med ändringarna i indexet som visas nedan. Ändringarna sammanfogas automatiskt. Det innebär att du inte behöver göra något om ett index som inte finns i kartongen ändras. Det går dock att anpassa indexet igen senare.
 
@@ -180,7 +180,7 @@ I den nya versionen av programmet används följande (ändrade) konfiguration:
 
 Ibland behöver en ändring i en indexdefinition återställas. Orsaken kan vara att en ändring har gjorts av misstag eller att en ändring inte längre behövs. Indexdefinitionen `damAssetLucene-8-custom-3` skapades till exempel av misstag och har redan distribuerats. Därför kanske du vill återgå till den tidigare indexdefinitionen `damAssetLucene-8-custom-2`. För att göra det måste du lägga till ett nytt index med namnet `damAssetLucene-8-custom-4` som innehåller definitionen för det föregående indexet, `damAssetLucene-8-custom-2`.
 
-### Tar bort ett index {#removing-an-index}
+### Ta bort ett index {#removing-an-index}
 
 Följande gäller bara för anpassade index. Produktindex kan inte tas bort eftersom de används av AEM.
 
@@ -208,3 +208,12 @@ Om ett index ska tas bort i en senare version av programmet kan du definiera ett
 ```
 
 Om det inte längre behövs någon anpassning av ett index som inte finns i kartongen måste du kopiera indexdefinitionen som finns i kartongen. Om du till exempel redan har distribuerat `damAssetLucene-8-custom-3`, men inte längre behöver anpassningarna och vill växla tillbaka till standardindexvärdet `damAssetLucene-8`, måste du lägga till ett index `damAssetLucene-8-custom-4` som innehåller indexdefinitionen `damAssetLucene-8`.
+
+## Indexoptimeringar
+
+Apache Jackrabbit Oak möjliggör flexibla indexkonfigurationer för att effektivt hantera sökfrågor. Även om indexoptimeringar kanske inte spelar någon större roll för små till medelstora projekt är det av största vikt att projekt med stora innehållsarkiv och högre innehållshastighet utför riktade effektivitetsförbättringar för indexering. Icke-optimerade index och reservindex bör undvikas så mycket som möjligt. Vi rekommenderar att du vidtar proaktiva åtgärder för att se till att lämpliga och optimerade index är tillgängliga för alla dina frågor i AEM. Om det inte finns något lämpligt index går frågorna igenom hela databasen. Sådana frågor bör identifieras genom att loggfilerna analyseras för att indexdefinitionerna ska kunna optimeras, eftersom en databasgenomgång är den minst effektiva AEM. Mer information finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=en#tips-for-creating-efficient-indexes).
+
+### Lucene full text index on AEM as a Cloud Service
+
+Fulltextindexet lucene2 indexerar som standard allt innehåll i AEM och är därför mycket ineffektivt på grund av dess databasberoende storlek. Fulltextindexet Lucene har tagits bort internt och kommer inte längre att användas i AEM som Cloud Service från september 2021. Den används inte längre som Cloud Service på produktsidan i AEM och behöver inte köra kundkod. För AEM som en Cloud Service med de vanligaste Lucene-indexen arbetar Adobe med sina kunder var för sig för att kompensera för detta index och för att använda bättre, optimerade index. Om det, till skillnad från vad man förväntar sig, krävs ett fulltextindex för att utföra frågor i anpassad kod, bör indexdefinitionen som är analog till Lucene-indexet skapas under ett annat namn för att undvika konflikter vid underhåll.
+Denna optimering gäller inte andra AEM miljöer som hanteras lokalt eller av Adobes hanterade tjänster, såvida inte Adobe rekommenderar något annat.
