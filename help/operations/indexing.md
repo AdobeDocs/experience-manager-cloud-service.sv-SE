@@ -2,10 +2,10 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 8e978616bd1409c12e8a40eeeeb828c853faa408
+source-git-commit: 10dea59cb196487adc1300b52dd9edc5afb33cb3
 workflow-type: tm+mt
-source-wordcount: '2098'
-ht-degree: 1%
+source-wordcount: '2038'
+ht-degree: 2%
 
 ---
 
@@ -211,9 +211,9 @@ Om det inte längre behövs någon anpassning av ett index som inte finns i kart
 
 ## Indexoptimeringar
 
-Apache Jackrabbit Oak möjliggör flexibla indexkonfigurationer för att effektivt hantera sökfrågor. Även om indexoptimeringar kanske inte spelar någon större roll för små till medelstora projekt är det av största vikt att projekt med stora innehållsarkiv och högre innehållshastighet utför riktade effektivitetsförbättringar för indexering. Icke-optimerade index och reservindex bör undvikas så mycket som möjligt. Vi rekommenderar att du vidtar proaktiva åtgärder för att se till att lämpliga och optimerade index är tillgängliga för alla dina frågor i AEM. Om det inte finns något lämpligt index går frågorna igenom hela databasen. Sådana frågor bör identifieras genom att loggfilerna analyseras för att indexdefinitionerna ska kunna optimeras, eftersom en databasgenomgång är den minst effektiva AEM. Mer information finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=en#tips-for-creating-efficient-indexes).
+Apache Jackrabbit Oak möjliggör flexibla indexkonfigurationer för att effektivt hantera sökfrågor. Index är särskilt viktiga för större databaser. Icke-optimerade index och reservindex bör undvikas så mycket som möjligt. Se till att alla frågor backas upp av ett lämpligt index. Frågor utan lämpligt index kan läsa tusentals noder, som sedan loggas som en varning. Sådana frågor bör identifieras genom analys av loggfilerna så att indexdefinitionerna kan optimeras. Mer information finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=en#tips-for-creating-efficient-indexes).
 
 ### Lucene full text index on AEM as a Cloud Service
 
-Fulltextindexet lucene2 indexerar som standard allt innehåll i AEM och är därför mycket ineffektivt på grund av dess databasberoende storlek. Fulltextindexet Lucene har tagits bort internt och kommer inte längre att användas i AEM som Cloud Service från september 2021. Den används inte längre som Cloud Service på produktsidan i AEM och behöver inte köra kundkod. För AEM som en Cloud Service med de vanligaste Lucene-indexen arbetar Adobe med sina kunder var för sig för att kompensera för detta index och för att använda bättre, optimerade index. Om det, till skillnad från vad man förväntar sig, krävs ett fulltextindex för att utföra frågor i anpassad kod, bör indexdefinitionen som är analog till Lucene-indexet skapas under ett annat namn för att undvika konflikter vid underhåll.
+Fulltextindexet `/oak:index/lucene-2` kan bli mycket stort eftersom det indexerar alla noder i AEM. Fulltextindexet Lucene har tagits bort internt och kommer inte längre att användas i AEM som Cloud Service från september 2021. Den används inte längre som Cloud Service på produktsidan i AEM och behöver inte köra kundkod. För AEM som en Cloud Service med de vanligaste Lucene-indexen arbetar Adobe med sina kunder var för sig för att kompensera för detta index och för att använda bättre, optimerade index. Om det här indexet krävs för anpassade frågor, som en tillfällig lösning, bör en kopia av indexet skapas med ett annat namn, till exempel `/oak:index/acme.lucene-1-custom-1`, enligt beskrivningen [här](/help/operations/indexing.md).
 Denna optimering gäller inte andra AEM miljöer som hanteras lokalt eller av Adobes hanterade tjänster, såvida inte Adobe rekommenderar något annat.
