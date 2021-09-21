@@ -2,9 +2,9 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation som är specifik för borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: 6a850b03501c899cf5b91fca9012036cad2a78ef
+source-git-commit: 8294709d6c5685fd5b88a52835b4082e3e713a51
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '559'
 ht-degree: 5%
 
 ---
@@ -34,6 +34,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 | Funktioner | Inaktuell funktion | Ersättning |
 | ------------ | ------------------ | ----------- |
+| [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserat strukturerat innehåll ](/help/assets/content-fragments/content-fragments-models.md) fragmenterar snön. |
 | [!DNL Assets] | `DAM Asset Update` arbetsflöde för att bearbeta inkapslade bilder. | Tillgångsintaget använder [tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md) nu. |
 | [!DNL Assets] | Överför resurser direkt till [!DNL Experience Manager]. Se [API:er för inaktuell överföring av resurser](/help/assets/developer-reference-material-apis.md#deprecated-asset-upload-api). | Använd [direkt binär överföring](/help/assets/add-assets.md). Mer teknisk information finns i [API:er för direkt överföring](/help/assets/developer-reference-material-apis.md#upload-binary). |
 | [!DNL Assets] | [Vissa arbetsflödessteg ](/help/assets/developer-reference-material-apis.md#post-processing-workflows-steps) i  `DAM Asset Update` arbetsflödet stöds inte, inklusive anrop av kommandoradsverktyg som  [!DNL ImageMagick]. | [Resursmikrotjänster ](/help/assets/asset-microservices-overview.md) ersätter många arbetsflöden. Använd [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) för anpassad bearbetning. |
