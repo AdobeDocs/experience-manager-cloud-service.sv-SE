@@ -1,9 +1,9 @@
 ---
 title: Cloud Manager-databaser
 description: Cloud Manager-databaser
-source-git-commit: f2a93373d6f3d6e92dc170fd98315b5989b2b296
+source-git-commit: 66cc18f0449668f62c416482e27a72ea1baec0a1
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,25 @@ Följ stegen nedan för att visa och hantera databaser i Cloud Manager:
 
    ![](/help/implementing/cloud-manager/assets/repos/create-repo3.png)
 
-1. Du kan markera databasen och klicka på menyalternativen längst till höger i tabellen till **Kopiera databas-URL**, **Visa och uppdatera** eller **Ta bort** databasen, vilket visas i bilden nedan.
+1. Du kan markera databasen och klicka på menyalternativen längst till höger i tabellen till **Kopiera databas-URL** eller **Visa och uppdatera** eller **Ta bort** databasen, vilket visas i bilden nedan.
 
    ![](/help/implementing/cloud-manager/assets/repos/create-repo3.png)
+
+## Ta bort en databas {#delete-repo}
+
+Följ stegen nedan för att ta bort en databas i Cloud Manager:
+>[!NOTE]
+>Om du tar bort en databas:
+>1. Gör det borttagna databasnamnet oanvändbart för nya databaser som kan skapas i framtiden. Ett felmeddelande som visas nedan visas i det här fallet:
+   >*Databasnamnet måste vara unikt inom organisationen.*
+>1. Gör den borttagna databasen otillgänglig i Cloud Manager och kan därför inte länkas till en pipeline.
+
+
+1. På sidan **Programöversikt** klickar du på fliken **Databaser** och går till sidan **Databaser**.
+
+1. Markera databasen och klicka på menyalternativen längst till höger i tabellen. Klicka på **Ta bort** om du vill ta bort databasen, enligt bilden nedan.
+
+   ![](/help/implementing/cloud-manager/assets/repos/delete-repo.png)
 
 
 ## Stöd för Git-undermodul {#git-submodule-support}
