@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
 description: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
-source-git-commit: 6a81e04a7de657d222cdd965fb6e2d4351b4c338
+exl-id: 3f9d7339-7e37-4702-821e-f2b03cd7e224
+source-git-commit: af5eb5aeb34e2f0ead98e0a0acb412b19bcfe517
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1355'
 ht-degree: 0%
 
 ---
-
 
 # Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service {#release-notes}
 
@@ -68,35 +68,8 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 #### Nyheter i Dynamic Media {#what-is-new-dm}
 
-* Med DPR (Smart Imaging DPR) (Device Pixel Ratio) och optimering av nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information finns i [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md).
-
-   >[!NOTE]
-   >
-   >Tidslinjen i releasen för de ovanstående förbättringarna av Smart Imaging är:
-   >
-   >* Nordamerika 24 maj 2021 i NA,
-      >
-      >
-   * Europa, Mellanöstern och Afrika 25 juni 2021,
-      >
-      >
-   * Asien-Stillahavsområdet 19 juli 2021.
-
-
+* Med DPR (Smart Imaging DPR) (Device Pixel Ratio) och optimering av nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information finns i [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md) och [Bildoptimering med nästa generationens bildformat WebP och AVIF.](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
 * Introducerat stöd för nästa generationens AVIF-bildformat i Dynamic Media-leverans (fmt URL-modifierare).
-
-   >[!NOTE]
-   >
-   >Tidslinjen för releasen för AVIF-stöd är:
-   >
-   >* Nordamerika 10 maj 2021,
-      >
-      >
-   * Europa, Mellanöstern och Afrika 24 maj 2021,
-      >
-      >
-   * Asien-Stillahavsområdet 24 juni 2021.
-
 
 ## [!DNL Adobe Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
