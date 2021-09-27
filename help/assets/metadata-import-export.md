@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fb70a068-3ba3-4459-952d-79155d286c42
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 561df1d2a2f7b900470084d28b832b4c7a568d3e
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 11%
 
 ---
@@ -34,7 +34,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
    | Batchstorlek | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
    | Fältavgränsare | Standardvärdet är `,` (ett komma). Du kan ange andra tecken. |
    | Flervärdesavgränsare | Avgränsare för metadatavärden. Standardvärdet är `|`. |
-   | Starta arbetsflöden | Falskt som standard. När inställningen är `true` och standardinställningarna för startprogrammet används för arbetsflödet WriteBack för DAM-metadata (som skriver metadata till binära XMP). Om du aktiverar startarbetsflöden blir systemet långsammare. |
+   | Starta arbetsflöden | Falskt som standard. När det är inställt på `true` och standardinställningarna används för arbetsflödet WriteBack för DAM-metadata (som skriver metadata till binära XMP). Om du aktiverar arbetsflödena blir systemet långsammare. |
    | Kolumnnamn för resurssökväg | Definierar kolumnnamnet för CSV-filen med resurser. |
 
 1. Klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
