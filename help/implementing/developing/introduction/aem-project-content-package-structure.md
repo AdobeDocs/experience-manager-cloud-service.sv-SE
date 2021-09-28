@@ -2,9 +2,9 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 798cd0f459b668dc372a88773ed6221927e7d02e
 workflow-type: tm+mt
-source-wordcount: '2869'
+source-wordcount: '2880'
 ht-degree: 12%
 
 ---
@@ -37,7 +37,7 @@ Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/sys
 >
 >Precis som i tidigare versioner av AEM ska `/libs` inte ändras. Endast AEM produktkod kan distribueras till `/libs`.
 
-### Oak Indexes {#oak-indexes}
+### Oak Index {#oak-indexes}
 
 Oak-index (`/oak:index`) hanteras specifikt av AEM som en distributionsprocess för Cloud Service. Detta beror på att Cloud Manager måste vänta tills ett nytt index har distribuerats och indexerats om fullständigt innan det går över till den nya kodbilden.
 
@@ -70,6 +70,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `/apps/settings`
    + ACL-listor (behörigheter)
       + Valfri `rep:policy` för alla sökvägar under `/apps`
+   + [Förkompilerade paketerade skript](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/using/developing/archetype/precompiled-bundled-scripts.html)
 
 + Paketet `ui.config` innehåller alla [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md):
    + Organisationsmapp som innehåller körlägesspecifika OSGi-konfigurationsdefinitioner
@@ -153,7 +154,7 @@ Mer information finns i [dokumentationen till Apache Jackrabbit FileVault - Pack
 >
 >Se avsnittet [POM XML-kodfragment](#xml-package-types) nedan för ett fullständigt kodfragment.
 
-## Markera paket för distribution av Adobe Cloud Manager {#marking-packages-for-deployment-by-adoube-cloud-manager}
+## Markera paket för distribution med Adobe Cloud Manager {#marking-packages-for-deployment-by-adoube-cloud-manager}
 
 Som standard hämtar Adobe Cloud Manager alla paket som skapas av Maven-bygget, men eftersom behållarpaketet (`all`) är en enda distributionsartefakt som innehåller all kod och alla innehållspaket måste vi se till att **endast** behållarpaketet (`all`) distribueras. För att säkerställa detta måste andra paket som genereras av Maven-bygget markeras med FileVaults Maven-pluginkonfiguration `<properties><cloudManagerTarget>none</cloudManageTarget></properties>` för innehållspaket.
 
@@ -296,7 +297,7 @@ Ett betydande undantag från den här allmänna regeln är om det oföränderlig
 
 De vanligaste mönstren för innehållspaketberoenden är:
 
-### Beroenden för enkelt distributionspaket {#simple-deployment-package-dependencies}
+### Enkla distributionspaketberoenden {#simple-deployment-package-dependencies}
 
 Det enkla fallet anger att det ändringsbara innehållspaketet `ui.content` är beroende av det ändringsbara kodpaketet `ui.apps`.
 
@@ -315,7 +316,7 @@ Komplexa driftsättningar bygger vidare på det enkla fallet och ställer in ber
    + `site-b.ui.apps` är beroende av  `common.ui.apps`
    + `site-b.ui.content` är beroende av  `site-b.ui.apps`
 
-## Lokal utveckling och distribution {#local-development-and-deployment}
+## Lokal utveckling och driftsättning {#local-development-and-deployment}
 
 Projektstrukturerna och organisationen som beskrivs i den här artikeln är **helt kompatibla** lokala AEM.
 
@@ -358,7 +359,7 @@ I `ui.apps/pom.xml` deklarerar `<packageType>application</packageType>` byggkonf
     ...
 ```
 
-#### Innehållspakettyper (muterbara) {#mutable-package-types}
+#### Pakettyper för innehåll (ändringsbart) {#mutable-package-types}
 
 Innehållspaket måste ange `packageType` som `content`.
 
@@ -385,7 +386,7 @@ I `ui.content/pom.xml` deklarerar `<packageType>content</packageType>` build con
     ...
 ```
 
-### Markerar paket för distribution av Adobe Cloud Manager {#cloud-manager-target}
+### Markera paket för distribution av Adobe Cloud Manager {#cloud-manager-target}
 
 I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`), lägger du till `<cloudManagerTarget>none</cloudManagerTarget>` i `<properties>`-konfigurationen för plugin-deklarationen `filevault-package-maven-plugin` för att vara säker på att de **inte** distribueras av Adobe Cloud Manager. Behållarpaketet (`all`) ska vara det enskilda paket som distribueras via Cloud Manager, som i sin tur bäddar in all kod och alla innehållspaket som behövs.
 
@@ -543,7 +544,7 @@ I `all`-projektets `filter.xml` (`all/src/main/content/jcr_root/META-INF/vault/d
 
 Om flera `/apps/*-packages` används i de inbäddade målen måste alla räknas upp här.
 
-### Maven Repositories {#xml-3rd-party-maven-repositories} från tredje part
+### Maven Repositories från tredje part {#xml-3rd-party-maven-repositories}
 
 >[!WARNING]
 >
@@ -596,7 +597,7 @@ I `ui.content/pom.xml` lägger du till följande `<dependencies>`-direktiv i `fi
 ...
 ```
 
-### Rensar målmappen för behållarprojektet {#xml-clean-container-package}
+### Rensa behållarprojektets målmapp {#xml-clean-container-package}
 
 I `all/pom.xml` lägger du till plugin-programmet `maven-clean-plugin` som rensar målkatalogen innan en Maven byggs.
 
