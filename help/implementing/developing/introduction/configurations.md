@@ -1,16 +1,15 @@
 ---
 title: Konfigurationer och Configuration Browser
 description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
-translation-type: tm+mt
-source-git-commit: 47d2ff211b5c00457793dc7bd321df1139cfc327
+source-git-commit: 4892f644929bc308762ca4fb8a2ebfb85e5fb5e2
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1498'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurationer och konfigurationsläsaren {#configuration-browser}
+# Konfigurationer och Configuration Browser {#configuration-browser}
 
 AEM konfigurationer används för att hantera inställningar i AEM och fungerar som arbetsytor.
 
@@ -34,10 +33,10 @@ AEM administratör och författare kan betrakta konfigurationer som arbetsytor. 
 
 Du kan skapa konfigurationer för många olika funktioner i AEM.
 
-* [Molnkonfigurationer](/help/implementing/developing/introduction/configurations.md)
 * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
+* olika molnkonfigurationer
 
 ### Exempel {#administrator-example}
 
@@ -57,7 +56,7 @@ Genom att göra detta:
 
 Liknande inställningar kan göras inte bara för redigerbara mallar utan även för molnkonfigurationer, ContextHub-segment och Content Fragment-modeller.
 
-### Använda konfigurationsläsaren {#using-configuration-browser}
+### Använda Konfigurationsläsaren {#using-configuration-browser}
 
 Med Configuration Browser kan en administratör enkelt skapa, hantera och konfigurera åtkomsträttigheter för konfigurationer i AEM.
 
@@ -65,7 +64,7 @@ Med Configuration Browser kan en administratör enkelt skapa, hantera och konfig
 >
 >Det är bara möjligt att skapa konfigurationer med hjälp av Konfigurationsläsaren om användaren har `admin`-behörighet. `admin` Rättigheter krävs också för att tilldela behörighet till konfigurationen eller på annat sätt ändra en konfiguration.
 
-#### Skapar en konfiguration {#creating-a-configuration}
+#### Skapa en konfiguration {#creating-a-configuration}
 
 Det är mycket enkelt att skapa en ny konfiguration i AEM med hjälp av Configuration Browser.
 
@@ -80,10 +79,10 @@ Det är mycket enkelt att skapa en ny konfiguration i AEM med hjälp av Configur
       * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](naming-conventions.md)
       * Den kan vid behov justeras.
 1. Kontrollera vilken typ av konfigurationer du vill tillåta.
-   * [Molnkonfigurationer](/help/implementing/developing/introduction/configurations.md)
    * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
    * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
    * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
+   * olika molnkonfigurationer
 1. Tryck eller klicka på **Skapa**.
 
 >[!TIP]
@@ -164,7 +163,7 @@ Slutligen ser vi egenskapen `bgkcolor` som vår exempelkod behöver. `ValueMap` 
 
 ### Konfigurationsupplösning {#configuration-resolution}
 
-I det grundläggande exemplet ovan visades en enda konfiguration. Men det finns många fall där du vill ha olika konfigurationer, till exempel en global standardkonfiguration, en som skiljer sig åt för varje varumärke och kanske en specifik konfiguration för dina delprojekt.
+I det grundläggande exemplet ovan visades en enda konfiguration. Men det finns många fall där du vill ha olika konfigurationer, till exempel en global standardkonfiguration, en som skiljer sig åt för varje varumärke och kanske en som är specifik för dina underprojekt.
 
 Som stöd för detta har konfigurationssökningen i AEM arv- och reservmekanism i följande prioritetsordning:
 
@@ -195,11 +194,11 @@ Som stöd för detta har konfigurationssökningen i AEM arv- och reservmekanism 
 
 ### Använda konfigurationer {#using-configurations}
 
-Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd, vilket beskrivs i föregående exempel.[](#developer-example)
+Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd, vilket beskrivs i föregående exempel.](#developer-example)[
 
 Mer information om kontextmedvetna konfigurationer, exempel och hur du använder dem finns i [Sling-dokumentationen.](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html)
 
-### ConfMgr-webbkonsolen {#confmgr-web-console}
+### ConfMgr-webbkonsol {#confmgr-web-console}
 
 För felsökning och testning finns en **ConfMgr**-webbkonsol på `https://<host>:<port>/system/console/conf`, som kan visa konfigurationer för en viss sökväg/ett visst objekt.
 
