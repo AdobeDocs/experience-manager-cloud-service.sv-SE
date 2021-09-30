@@ -2,12 +2,12 @@
 title: Utvecklarreferenser för [!DNL Assets]
 description: '[!DNL Assets] APIs and developer reference content lets you manage assets, including binary files, metadata, renditions, comments, and [!DNL Content Fragments].'
 contentOwner: AG
-feature: API:er,Resurser HTTP API
+feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: f993148a9f678cfdaf0693e4964f02b9163cf2ff
+source-git-commit: 4eb2beeb97d2aa2aed4af869897db470b732fd1f
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1425'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 | x | Stöds inte. Skall ej användas. |
 | - | Inte tillgängligt |
 
-| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [API:er för Experience Manager/Sling/](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) JCRJava | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)-servrar | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) _(förhandstitt)_ |
+| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [API:er för Experience Manager/Sling/](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/index.html) JCRJava | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)-servrar | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) _(förhandstitt)_ |
 | ----------------|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Ursprunglig binär** |  |  |  |  |  |  |
 | Skapa original | ✓ | x | - | x | x | - |
@@ -121,7 +121,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 * `uploadToken` (sträng): En överföringstoken för motsvarande binär fil. Detta värde bör inkluderas i den fullständiga begäran.
 * `uploadURIs` (array): En lista över strängar vars värden är fullständiga URI:er som binärens innehåll ska överföras till (se  [Överför binärt](#upload-binary)).
 * `minPartSize` (tal): Den minsta längden, i byte, på data som kan tillhandahållas till någon av dem  `uploadURIs`om det finns mer än en URI.
-* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan anges för någon av dem  `uploadURIs`om det finns mer än en URI.
+* `maxPartSize` (tal): Den maximala längden, i byte, på data som kan tillhandahållas till någon av dem  `uploadURIs`om det finns mer än en URI.
 
 ### Ladda upp binärt {#upload-binary}
 
@@ -185,7 +185,7 @@ Använd standardarbetsflödena med tillägg med anpassade steg för konfiguratio
 
 ## Stöd för arbetsflödessteg i efterbearbetningsarbetsflödet {#post-processing-workflows-steps}
 
-Om du uppgraderar från en tidigare version av [!DNL Experience Manager] kan du använda resursens mikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna är enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i [!UICONTROL DAM Update Asset]-arbetsflödet i den tidigare versionen stöds inte. Mer information om klasser som stöds finns i [Java API-referensen eller Javadocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html).
+Om du uppgraderar från en tidigare version av [!DNL Experience Manager] kan du använda resursens mikrotjänster för att bearbeta resurser. De molnbaserade mikrotjänsterna är enklare att konfigurera och använda. Ett fåtal arbetsflödessteg som används i [!UICONTROL DAM Update Asset]-arbetsflödet i den tidigare versionen stöds inte. Mer information om klasser som stöds finns i [Java API-referensen eller Javadocs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/index.html).
 
 Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller så är support inte tillgänglig:
 

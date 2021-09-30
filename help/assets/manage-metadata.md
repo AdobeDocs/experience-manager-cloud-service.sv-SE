@@ -3,12 +3,12 @@ title: Hantera metadata för digitala resurser
 description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] gör det möjligt att automatiskt ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Resurshantering,Metadata
+feature: Asset Management,Metadata
 role: User,Architect,Admin
 exl-id: 73a82bc2-1dda-4090-b7ee-29d1a632ba25
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 4eb2beeb97d2aa2aed4af869897db470b732fd1f
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1841'
 ht-degree: 3%
 
 ---
@@ -183,7 +183,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * Album - [!DNL Adobe Photoshop Album].
 * CQ - Används av [!DNL Experience Manager Assets].
 * DAM - Används av [!DNL Experience Manager Assets].
-* DEX - [Optima SC Description Explorer](http://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering för Windows.
+* DEX - [Optima SC Description Explorer](https://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering för Windows.
 * CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html).
 * LR - [!DNL Adobe Lightroom].
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
@@ -231,5 +231,5 @@ Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer
 >[!MORELIKETHIS]
 >
 >* [XMP-metadata](xmp-metadata.md)
-* [Redigera eller lägga till metadata](meta-edit.md)
+>* [Redigera eller lägga till metadata](meta-edit.md)
 

@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: ab84fe6c5b1ea16de2b4dff9bf5dc55ba196fb6f
+source-git-commit: 4eb2beeb97d2aa2aed4af869897db470b732fd1f
 workflow-type: tm+mt
 source-wordcount: '2260'
 ht-degree: 12%
@@ -78,7 +78,7 @@ Där är innehavar-ID:t IMS-organisationen.
 
 Utför följande steg om du inte är säker på Brand Portal URL:
 
-1. Logga in på [Admin Console](http://adminconsole.adobe.com/) och navigera till **[!UICONTROL Products]**.
+1. Logga in på [Admin Console](https://adminconsole.adobe.com/) och navigera till **[!UICONTROL Products]**.
 1. Välj **[!UICONTROL Adobe Experience Manager Brand Portal – Brand Portal]** i den vänstra listen.
 1. Klicka på **[!UICONTROL Go to Brand Portal]** för att öppna Brand Portal direkt i webbläsaren.
 
