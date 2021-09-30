@@ -1,12 +1,12 @@
 ---
 title: Administrera arbetsflödesinstanser
 description: Lär dig hur du administrerar arbetsflödesinstanser
-feature: Administratör
+feature: Administering
 role: Admin
 exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 079c9a64aeee62b36a12083645ca43b115838705
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -167,3 +167,79 @@ Du kan ange den största tillåtna storleken för inkorgen genom att konfigurera
 | Egenskapsnamn (webbkonsol) | OSGi-egenskapsnamn |
 |---|---|
 | Max Inbox Query Size | granite.workflow.inboxQuerySize |
+
+## Använda arbetsflödesvariabler för kundägda datalager {#using-workflow-variables-customer-datastore}
+
+Data som används i arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som tillhandahålls av Adobe. I det här avsnittet beskrivs hur du konfigurerar dessa variabler för extern lagring.
+
+### Ange modellen för extern lagring av metadata {#set-model-for-external-storage}
+
+På arbetsflödesmodellnivån planeras en flagga som anger att modellen (och dess körningsinstanser) har extern lagring av metadata. Användarmetadata sparas inte i JCR för arbetsflödesinstanserna för modellerna som är markerade för extern lagring.
+
+Om du vill aktivera den här funktionen måste du aktivera flaggan för extern beständighet: **userMetaDataCustomPersistenceEnabled = &quot;true&quot;**.
+Egenskapen *userMetadataPersistenceEnabled* kommer att lagras på *jcr:content-noden* i arbetsflödesmodellen. Den här flaggan bevaras i arbetsflödets metadata som *cq:userMetaDataCustomPersistenceEnabled*.
+
+Bilden nedan måste ange flaggan i ett arbetsflöde.
+
+![workflow-externalize-config](/help/sites-cloud/administering/assets/workflow-externalize-config.png)
+
+### API:er för metadata i extern lagring {#apis-for-metadata-external-storage}
+
+UserMetaDataPersistenceContext
+
+I följande exempel visas hur du använder API:t.
+
+```
+@ProviderType
+public interface UserMetaDataPersistenceContext {
+ 
+    /**
+     * Gets the workflow for persistence
+     * @return workflow
+     */
+    Workflow getWorkflow();
+ 
+    /**
+     * Gets the workflow id for persistence
+     * @return workflowId
+     */
+    String getWorkflowId();
+ 
+    /**
+     * Gets the user metadata persistence id
+     * @return userDataId
+     */
+    String getUserDataId();
+}
+```
+
+UserMetaDataPersistenceProvider
+
+```
+/**
+ * This provider can be implemented to store the user defined workflow-data metadata in a custom storage location
+ */
+@ConsumerType
+public interface UserMetaDataPersistenceProvider {
+ 
+   /**
+    * Retrieves the metadata using a unique identifier
+    * @param userMetaDataPersistenceContext
+    * @param metaDataMap of user defined workflow data metaData
+    * @throws WorkflowException
+    */
+   void get(UserMetaDataPersistenceContext userMetaDataPersistenceContext, MetaDataMap metaDataMap) throws WorkflowException;
+ 
+   /**
+    * Stores the given metadata to the custom storage location
+    * @param userMetaDataPersistenceContext
+    * @param metaDataMap metadata map
+    * @return the unique identifier that can be used to retrieve metadata. If null is returned, then workflowId is used.
+    * @throws WorkflowException
+    */
+   String put(UserMetaDataPersistenceContext userMetaDataPersistenceContext, MetaDataMap metaDataMap) throws WorkflowException;
+ 
+} 
+```
+
+
