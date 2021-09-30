@@ -2,10 +2,10 @@
 title: Hantera loggar - Cloud Service
 description: Hantera loggar - Cloud Service
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: d44a4239205b88f05ab5ae9ef3263e6549f998fc
+source-git-commit: b3c26b4e7ad588e0d3214350792d05e55e9db44c
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,7 @@ Följ stegen nedan för att hämta loggar.
 
 Förutom att hämta loggar via användargränssnittet är loggar tillgängliga via API:t och kommandoradsgränssnittet.
 
-Om du till exempel vill hämta loggfilerna för en viss miljö, skulle kommandot vara något alldeles för stort som raderna i
+Om du t.ex. vill hämta loggfilerna för en viss miljö, skulle kommandot vara något som följer linjerna i
 
 ```java
 $ aio cloudmanager:download-logs --programId 5 1884 author aemerror
