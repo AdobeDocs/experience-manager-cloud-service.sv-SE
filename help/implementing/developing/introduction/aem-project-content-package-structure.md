@@ -2,7 +2,7 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: 798cd0f459b668dc372a88773ed6221927e7d02e
+source-git-commit: 1cf9834d840709ed340aaef235860d7c6d26c6d5
 workflow-type: tm+mt
 source-wordcount: '2880'
 ht-degree: 12%
@@ -70,7 +70,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `/apps/settings`
    + ACL-listor (behörigheter)
       + Valfri `rep:policy` för alla sökvägar under `/apps`
-   + [Förkompilerade paketerade skript](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/using/developing/archetype/precompiled-bundled-scripts.html)
+   + [Förkompilerade paketerade skript](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/precompiled-bundled-scripts.html)
 
 + Paketet `ui.config` innehåller alla [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md):
    + Organisationsmapp som innehåller körlägesspecifika OSGi-konfigurationsdefinitioner
