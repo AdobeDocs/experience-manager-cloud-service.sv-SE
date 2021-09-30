@@ -2,9 +2,9 @@
 title: Program- och programtyper
 description: Program- och programtyper - Cloud Services
 exl-id: 507df619-a5b5-419a-9e38-db77541425a2
-source-git-commit: aae4d942ef1e7ffd0065de73c3fbd044a19c3e8e
+source-git-commit: 7e51fb98c76a5913ef237aca3b66c73a8263f4ff
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '349'
 ht-degree: 2%
 
 ---
@@ -39,8 +39,8 @@ $ git clone {URL}
 En användare kan skapa en **sandlåda** eller ett **Production**-program.
 
 * Ett *produktionsprogram* skapas för att aktivera livstrafik vid rätt tidpunkt i framtiden.
-Mer information finns i Introduktion till produktionsprogram.
+Mer information finns i [Introduktion till produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/introduction-production-programs.html?lang=en).
 
 
 * Ett *sandlådeprogram* skapas vanligtvis för att användas i utbildningssyfte, köra demo, aktivering, POC eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett produktionsprogram inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
-Mer information finns i Introduktion till sandlådeprogram.
+Mer information finns i [Introduktion till sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sandbox-programs/introduction-sandbox-programs.html?lang=en).
