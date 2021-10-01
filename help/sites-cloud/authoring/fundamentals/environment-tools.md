@@ -1,20 +1,19 @@
 ---
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
-translation-type: tm+mt
-source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
+exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
+source-git-commit: f9a122f27ab1e2dc8ba429ce9048e3eab0509db9
 workflow-type: tm+mt
-source-wordcount: '2152'
+source-wordcount: '2154'
 ht-degree: 12%
 
 ---
-
 
 # Redigeringsmiljö och -verktyg {#authoring-the-environment-and-tools}
 
 I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll. Verktygen som tillhandahålls är tillgängliga från olika konsoler och sidredigerare.
 
-## Hantera din plats {#managing-your-site}
+## Hantera din webbplats {#managing-your-site}
 
 Med **Sites**-konsolen kan du navigera och hantera webbplatsen med hjälp av sidhuvudsfältet, verktygsfältet, åtgärdsikonerna (som gäller för den valda resursen), vägbeskrivningar och, om det är valt, sekundära rutor (till exempel tidslinje och referenser).
 
@@ -270,6 +269,7 @@ Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 * [Målinriktning](/help/sites-cloud/authoring/personalization/targeted-content.md)  - öka innehållets relevans genom målinriktning och mätning i alla kanaler.
 * [Timewarp](/help/sites-cloud/authoring/features/page-versions.md#timewarp)  - gör att du kan visa ett sidläge vid en viss tidpunkt.
 * [Live Copy-status](/help/sites-cloud/authoring/fundamentals/editing-content.md#live-copy-status)  - ger en snabb översikt av live-kopians status och vilka komponenter som ärvs/inte ärvs.
+* [Utvecklarläge](/help/implementing/developing/tools/developer-mode.md)
 * [Förhandsgranska](/help/sites-cloud/authoring/fundamentals/editing-content.md#previewing-pages)  - används för att visa sidan så som den kommer att visas i publiceringsmiljön. eller navigera med hjälp av länkar i innehållet.
 * [Anteckning](/help/sites-cloud/authoring/fundamentals/annotations.md)  - används för att lägga till eller visa anteckningar på sidan.
 
@@ -285,7 +285,6 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Det finns ett [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) (`Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera** eller **Layout**).
 
 >
-
 
 
 ## Banmarkering {#path-selection}
