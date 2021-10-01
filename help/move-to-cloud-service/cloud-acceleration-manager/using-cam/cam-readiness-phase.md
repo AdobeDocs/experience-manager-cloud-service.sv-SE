@@ -1,13 +1,13 @@
 ---
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
-source-git-commit: 177e24d20bc97e4a7f2be749771463d7e79005c4
+exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
+source-git-commit: 2436d7a7a0127219f3d7cb383b857431ba2a2bb4
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '682'
 ht-degree: 5%
 
 ---
-
 
 # Beredningsfas i molnaccelerationshanteraren {#readiness-phase-cam}
 
@@ -54,6 +54,9 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
 1. Klicka på **Överför ny rapport** för att överföra BPA-rapporten i CAM.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-3.png)
+
+   >[!IMPORTANT]
+   >Rapporten kan inte överföras om du är i webbläsarens Incognito-läge.
 
 1. När du har överfört en ny rapport visas rapporten Best Practices Analysis.
 
