@@ -1,9 +1,9 @@
 ---
 title: Utöka [!DNL Adobe Experience Manager] som en Cloud Service med Adobe Developer App Builder.
 description: Utöka [!DNL Adobe Experience Manager] som en Cloud Service med Adobe Developer App Builder.
-source-git-commit: 4bd0419ff31195fef1565b50f87b4b55f81361f0
+source-git-commit: 7b8d214ebba9e8dfc89f7787b0d442752650210e
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,10 @@ Med App Builder kan kunderna enkelt utöka Adobe Experience Manager i olika fall
 * Utbyggbarhet för användarupplevelse - Utöka kärnupplevelsen för att uppfylla verksamhetskrav eller bygga kundspecifika digitala resurser, butiker och back-office-appar.
 
 App Builder (tidigare kallat Project Fire) har varit tillgängligt för företagskunder och partners via vår förhandsgranskning av utvecklare sedan sommaren 2020. Den allmänna tillgängligheten (GA) för App Builder är planerad till december 2021. Vi välkomnar att utvecklare provar App Builder via vårt [testprogram](http://adobe.ly/appbuilder-trial).
+
+>[!NOTE]
+>
+> För AEM 6.5-kunder som vill utnyttja App Builder går du till [Extending Adobe Experience Manager 6.5 med Adobe Developer App Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/app-builder.html).
 
 ## Arkitektur {#architecture}
 
