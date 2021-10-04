@@ -2,10 +2,10 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 exl-id: 88ce7ed3-46fe-4b3f-8e18-c7c8423faf24
-source-git-commit: c8e7c6c45d898029b55bcfc09f7f2b7051d03031
+source-git-commit: b290b402fe58d449dd85e9eaaef5b75e61ac1a74
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 4%
+source-wordcount: '1367'
+ht-degree: 3%
 
 ---
 
@@ -75,17 +75,20 @@ Följ stegen nedan för att konfigurera detta:
 
 Verktyget för användarmappning är integrerat i verktyget Innehållsöverföring. Du kan hämta innehållsöverföringsverktyget från [portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Mer information om den senaste versionen finns i [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
-1. Välj Adobe Experience Manager och navigera till tools -> **Operations** -> **Content Transfer**.
+1. Markera Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Användarmappning**.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-landing1.png)
+
 1. Klicka på **Skapa konfiguration för användarmappning**.
 
    >[!NOTE]
    >Om du hoppar över det här steget hoppas användare och grupper över under extraheringsfasen.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-1.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-landing2.png)
 
-   Fyll i fälten i API-konfiguration för användarhantering enligt beskrivningen nedan:
+   Fyll i fälten i **API-konfiguration för användarhantering** enligt beskrivningen nedan.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-2.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-landing3.png)
 
    * **Organisations-ID**: Ange IMS-organisationsnumret (Adobe Identity Management System) för den organisation som användarna migreras till.
 
@@ -99,16 +102,15 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
       >[!NOTE]
       >Åtkomsttoken upphör att gälla var 24:e timme och en ny måste skapas. Om du vill skapa en ny token går du tillbaka till [Adobe Developer Console](https://console.adobe.io), väljer ditt projekt, klickar på **API för användarhantering** och klistrar in samma privata nyckel i rutan.
 
-1. När du har angett ovanstående information klickar du på **Spara**.
+1. När du har fyllt i fälten klickar du på **Testa konfiguration** för att testa anslutningen till API-tjänsten för användarhantering. Om anslutningen lyckas kan du klicka på **Spara** för att spara konfigurationen.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-3.png)
+1. När du har sparat konfigurationen markerar du konfigurationen och klickar på **Starta användarmappning**.
 
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-landing4.png)
 
-1. Skapa en migreringsuppsättning genom att klicka på **Skapa migreringsuppsättning** och fylla i fälten och sedan klicka på **Spara**. Mer information finns i [Köra verktyget innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#running-tool).
+1. När användarmappningen är klar klickar du på **Resultat** för att visa sammanfattningen.
 
-   >[!NOTE]
-   >Växlingsväxeln som tar med Mappningsanvändare från IMS-användare och -grupper är som standard PÅ. Med den här inställningen körs användarmappningsverktyget som en del av extraheringsfasen när extraheringen utförs på den här migreringsuppsättningen. Detta är det rekommenderade sättet att köra extraheringsfasen av verktyget Innehållsöverföring. Om den här växeln är inaktiverad och/eller konfigurationen för användarmappning inte skapas, hoppas användare och grupper över under extraheringsfasen.
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-landing5.png)
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-4.png)
-
-1. Mer information om hur du kör extraheringsfasen finns i [Köra verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#running-tool).
+   >[!IMPORTANT]
+   >När användarmappningen är klar kan du gå tillbaka till sidan Innehållsmigrering med hjälp av den synliga sökvägen. Kortet för användarmappning visar status och tidsstämpel. Klicka på **Innehållsöverföring** för att skapa en migreringsuppsättning som ska köras extrahering. Mer information finns i [Köra verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-tool).

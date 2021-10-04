@@ -2,10 +2,10 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: 7688bc78-0ec2-4838-8ade-7db5788fb70f
-source-git-commit: 36ead0181ab9d1a0eb874d8e3584df2e4c760f30
+source-git-commit: a6b3ff2ede7046e91562eff1a1eb0d86e5dd6d6f
 workflow-type: tm+mt
-source-wordcount: '2522'
-ht-degree: 42%
+source-wordcount: '2591'
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 42%
 >id="aemcloud_bpa_using"
 >title="Använda Best Practices Analyzer"
 >abstract="Läs dokumentationen om hur du använder Best Practices Analyzer (tidigare Cloud Readiness Analyzer) och den genererade rapporten. Best Practices Analyzer-rapporten används för att få en god förståelse för den allmänna uppgraderingsberedskapen."
->additional-url="https://my.adobeconnect.com/pqgrfezoxghs?proto=true" text="[Webinar] Introducing Tools to Accelerate the Journey to Adobe Experience Manager as a Cloud Service"
+>additional-url=""
 
 ## Viktigt att tänka på när du använder Best Practices Analyzer {#imp-considerations}
 
@@ -91,6 +91,19 @@ Du kan tvinga BPA att rensa sin cache och återskapa rapporten genom att klicka 
 Medan rapporten återskapas visas förloppet i procent som slutförts enligt bilden nedan.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic8.png)
+
+1. Klicka på ikonen **Förhandsgranska** så blir det enkelt att dela.
+
+   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/bpa-printpreview1.png)
+
+1. Om du klickar på **Förhandsgranska** öppnas en ny flik med rapporterna visade i en förhandsgranskning som kan skrivas ut. Klicka på **Skriv ut** för att skriva ut rapporten i PDF-format.
+
+   >[!IMPORTANT]
+   * Alternativet **Spara som PDF** rekommenderas och stöds för ovanstående funktioner.
+   * Om webbläsarens utskriftsknapp används skrivs bara en sida ut.
+
+
+   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/bpa-printpreview2.png)
 
 
 #### Använda filter i rapporten Best Practices Analyzer {#bpa-filters}
