@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 29af6f91f5aeb6ad971a35637f1635e0b038a57f
+source-git-commit: 49e88e18e17a2675151a11339a01b3ea7b71d555
 workflow-type: tm+mt
 source-wordcount: '1627'
 ht-degree: 0%
@@ -26,7 +26,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 ## Releasedatum {#release-date}
 
 Lanseringsdatumet [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] aktuell version (2021.8.0) är 26 augusti 2021.
-Följande version (2021.9.0) är den 4 oktober 2021.
+Följande version (2021.9.0) är den 6 oktober 2021.
 
 ## Släpp video {#release-video}
 
