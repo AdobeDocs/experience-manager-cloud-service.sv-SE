@@ -2,10 +2,10 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: 7688bc78-0ec2-4838-8ade-7db5788fb70f
-source-git-commit: a6b3ff2ede7046e91562eff1a1eb0d86e5dd6d6f
+source-git-commit: 090902d65a9bd4c4d83722534a2d9fb78bac314d
 workflow-type: tm+mt
-source-wordcount: '2591'
-ht-degree: 41%
+source-wordcount: '2522'
+ht-degree: 42%
 
 ---
 
@@ -92,18 +92,6 @@ Medan rapporten återskapas visas förloppet i procent som slutförts enligt bil
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic8.png)
 
-1. Klicka på ikonen **Förhandsgranska** så blir det enkelt att dela.
-
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/bpa-printpreview1.png)
-
-1. Om du klickar på **Förhandsgranska** öppnas en ny flik med rapporterna visade i en förhandsgranskning som kan skrivas ut. Klicka på **Skriv ut** för att skriva ut rapporten i PDF-format.
-
-   >[!IMPORTANT]
-   * Alternativet **Spara som PDF** rekommenderas och stöds för ovanstående funktioner.
-   * Om webbläsarens utskriftsknapp används skrivs bara en sida ut.
-
-
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/bpa-printpreview2.png)
 
 
 #### Använda filter i rapporten Best Practices Analyzer {#bpa-filters}
