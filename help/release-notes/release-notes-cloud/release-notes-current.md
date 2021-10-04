@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en C
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 49e88e18e17a2675151a11339a01b3ea7b71d555
+source-git-commit: 1062b65da46d85e3777656dbef4b7667b130a6ec
 workflow-type: tm+mt
-source-wordcount: '1627'
+source-wordcount: '1721'
 ht-degree: 0%
 
 ---
@@ -179,19 +179,35 @@ Mer information finns i [SLA-rapportering](https://experienceleague.adobe.com/do
 
 * När en pipeline aktiveras två gånger av någon anledning resulterar det i att en av körningarna misslyckas med *det går inte att uppdatera pipelinekörningsstatus*-fel.
 
+
+## Cloud Acceleration Manager {#cam}
+
+### Releasedatum {#release-date-october-cam}
+
+Releasedatum för Cloud Acceleration Manager är 4 oktober 2021.
+
+### Vad är nytt? {#what-is-new-cam}
+
+* Med Cloud Acceleration Manager kan användarna nu visa BPA-rapporter i en förhandsgranskning som kan skrivas ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela. Se steg 6 och 7 i [Using Best Practices Analysis Card](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=en#best-practices-analysis).
+
+
 ## Content Transfer Tool {#content-transfer-tool}
 
 ### Releasedatum {#release-date-ctt-latest}
 
-Releasedatum för Content Transfer Tool v1.5.6 är 11 augusti 2021.
+Releasedatum för innehållsöverföringsverktyget v1.6.0 är 4 oktober 2021.
 
-### Felkorrigeringar {#bug-fixes-ctt}
+### Nyheter {#what-is-new-ctt}
 
-* I vissa fall migrerades inte alla användare till målinstansen. För att få den här korrigeringen krävs CTT v1.5.6 tillsammans med aem-ethos-tools 1.2.354 eller senare version på AEM som en Cloud Service-instans.
+* Förbättrad användarmappning med en förenklad användarupplevelse, inklusive följande funktioner som listas nedan. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#using-user-mapping-tool).
+   * Testa anslutningen till API:t för användarhantering innan du kör användarmappningen
+   * Hoppa över fel utan problem och fortsätt med aktiviteten Användarmappning
+   * Användarmappning misslyckas inte längre om åtkomsttoken upphör att gälla (efter 24 timmar). Användarmappning kan köras igen från den plats där den senast stoppades.
 
-* Knappen **Stoppa inmatning** inaktiverades under hämtning till Publish-instansen. Detta är inte nödvändigt eftersom det inte finns något steg för monoåterställning vid publiceringsintag.
+* Om du vill öka CTT-tillförlitligheten kan innehåll hämtas till antingen Author-instansen eller Publish-instansen åt gången.
 
-* CTT rensade inte katalogen `/tmp` efter en lyckad extrahering. Detta kan leda till problem med diskutrymmet.
+* När versioner inkluderas inkluderas sökvägen `/var/audit` automatiskt för att migrera granskningshändelser.
+
 
 ## Best Practices Analyzer {#best-practices-analyzer}
 
