@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 34247d8de3dc1a243eaac152b1d2036f9c237303
+source-git-commit: e51490a9422dab3cc4980eb1d2288d7c264343be
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1966'
 ht-degree: 5%
 
 ---
@@ -101,14 +101,9 @@ Egenskaperna fördelas på flera flikar.
    * **Omdirigering**  - Anger den sida som den här sidan automatiskt ska omdirigeras till
    * **Design**  - Anger om sidan visas eller döljs i sidnavigeringen på den slutliga webbplatsen
    * **Alias**  - Anger ett alias som ska användas för den här sidan
-
-   >[!NOTE]
-   >
-   >Alias anger egenskapen `sling:alias` för att definiera ett aliasnamn för resursen (detta påverkar bara resursen, inte sökvägen).
-   >
-   >Till exempel: Om du definierar ett alias på `latin-lang` för noden `/content/we-retail/spanish` kan du komma åt den här sidan via `/content/we-retail/latin-language`
-   >
-   >Mer information finns i Lokaliserade sidnamn under SEO och Bästa metoder för URL-hantering.
+      * Om du till exempel definierar ett alias på `private` för sidan `/content/wknd/us/en/magazine/members-only` kan du även komma åt den här sidan via `/content/wknd/us/en/magazine/private`
+      * Om du skapar ett alias anges egenskapen `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
+      * Sidor som används av alias i redigeraren kan inte publiceras. [Publiceringsalternativen ](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
    <!--
   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).

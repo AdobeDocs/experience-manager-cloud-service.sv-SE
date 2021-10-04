@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 232ef0198888e55806bd1358d12829035c140c75
+source-git-commit: e51490a9422dab3cc4980eb1d2288d7c264343be
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1769'
 ht-degree: 5%
 
 ---
@@ -79,6 +79,10 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 >[!NOTE]
 >
 >Publicering från redigeraren är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och eventuella underordnade sidor publiceras/inte.
+
+>[!NOTE]
+>
+>Sidor som används av [alias](/help/sites-cloud/authoring/fundamentals/page-properties.md#advanced) i redigeraren kan inte publiceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
 ### Publicera från konsolen {#publishing-from-the-console}
 
@@ -217,6 +221,10 @@ På ett [sätt som liknar publicering](#publishing-pages) kan en eller flera sid
 ### Avpublicera från redigeraren {#unpublishing-from-the-editor}
 
 Om du vill avpublicera sidan när du redigerar den väljer du **Avpublicera sida** på menyn **Sidinformation**, på samma sätt som du skulle [publicera sidan](#publishing-from-the-editor).
+
+>[!NOTE]
+>
+>Sidor som används av [alias](/help/sites-cloud/authoring/fundamentals/page-properties.md#advanced) i redigeraren kan inte avpubliceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
 ### Avpublicera från konsolen {#unpublishing-from-the-console}
 
