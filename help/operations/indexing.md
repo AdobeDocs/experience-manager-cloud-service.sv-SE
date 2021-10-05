@@ -2,10 +2,10 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 6e8ea8c4db2004ed26ee0cd6c5c3d047c3a1815b
+source-git-commit: 8df5e800cd08fa0eb08edca06e98786a1864db84
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 2%
+source-wordcount: '2139'
+ht-degree: 1%
 
 ---
 
@@ -219,3 +219,9 @@ Apache Jackrabbit Oak möjliggör flexibla indexkonfigurationer för att effekti
 
 Fulltextindexet `/oak:index/lucene-2` kan bli mycket stort eftersom det indexerar alla noder i AEM. Fulltextindexet Lucene har tagits bort internt och kommer inte längre att användas i AEM som Cloud Service från september 2021. Den används inte längre som Cloud Service på produktsidan i AEM och behöver inte köra kundkod. För AEM som en Cloud Service med de vanligaste Lucene-indexen arbetar Adobe med sina kunder var för sig för att kompensera för detta index och för att använda bättre, optimerade index. Om det här indexet krävs för anpassade frågor, som en tillfällig lösning, bör en kopia av indexet skapas med ett annat namn, till exempel `/oak:index/acme.lucene-1-custom-1`, enligt beskrivningen [här](/help/operations/indexing.md).
 Denna optimering gäller inte andra AEM miljöer som hanteras lokalt eller av Adobes hanterade tjänster, såvida inte Adobe rekommenderar något annat.
+
+## Frågeoptimeringar
+
+Med verktyget **Query Performance** kan du observera både vanliga och långsamma JCR-frågor. Dessutom kan den analysera frågor och visa olika information om, särskilt om ett index används för frågan eller inte.
+
+Till skillnad från i AEM lokalt, visas inte verktyget **Query Performance** i användargränssnittet längre i AEM som en Cloud Service. Istället är den nu tillgänglig via Developer Console (i Cloud Manager) på fliken **Frågor**.
