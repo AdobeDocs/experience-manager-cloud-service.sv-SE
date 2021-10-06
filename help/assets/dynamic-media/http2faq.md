@@ -3,9 +3,9 @@ title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
 role: Admin,User
 exl-id: 0a8a5fd8-a341-4e7f-84a5-409e2de97efe
-source-git-commit: 6933f053e11320d8201922723879983084c52209
+source-git-commit: 49302452b9544b9414ec49ce2862d9913fbfc6a6
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '770'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media-konto? {#what-is-the-process-for-enabling-http-for-my-dm-account}
 
-[Använd Admin Console för att skapa ett supportärende ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) och begära att gå över till HTTP/2. det görs inte automatiskt åt dig.
+[Använd Admin Console för att skapa ett supportärende ](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) och begära att gå över till HTTP/2. det görs inte automatiskt åt dig.
 
 1. Ange följande information i ditt supportärende:
 
@@ -70,15 +70,15 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
    Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
-   1. Teknisk support lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
-   1. När Adobe är redo att hantera din begäran kontaktar kundtjänst dig för att koordinera övergången och ange ett måldatum.
+   1. Kundsupport lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
+   1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera övergången och ange ett måldatum.
    1. Du får ett meddelande när du är klar och du kan verifiera en lyckad övergång till HTTP2.
 
 
 
 ## När kan jag förvänta mig att gå över till HTTP/2? {#when-can-i-expect-to-be-transitioned-over-to-http}
 
-Förfrågningar behandlas i den ordning som de tas emot av teknisk support.
+Förfrågningar behandlas i den ordning som de tas emot av kundsupporten.
 
 >[!NOTE]
 >
