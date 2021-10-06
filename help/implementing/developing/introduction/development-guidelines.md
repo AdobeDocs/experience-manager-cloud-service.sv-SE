@@ -2,18 +2,18 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: bacc6335e25387933a1d39dba10c4cc930a71cdb
+source-git-commit: bcb3beb893d5e8aa6d5911866e78cb72fe7d4ae0
 workflow-type: tm+mt
-source-wordcount: '2375'
-ht-degree: 1%
+source-wordcount: '2073'
+ht-degree: 2%
 
 ---
 
 # Utvecklingsriktlinjer för AEM as a Cloud Service {#aem-as-a-cloud-service-development-guidelines}
 
-Kod som körs i AEM som Cloud Service måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs. Koden måste vara flexibel, särskilt eftersom en instans kan stoppas när som helst.
+Kod som körs AEM as a Cloud Service måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs. Koden måste vara flexibel, särskilt eftersom en instans kan stoppas när som helst.
 
-Under uppdateringen av AEM som Cloud Service kommer det att finnas instanser där gammal och ny kod körs parallellt. Därför får gammal kod inte bryta med innehåll som skapas av ny kod och ny kod måste kunna hantera gammalt innehåll.
+Under uppdateringen av AEM as a Cloud Service kommer det att finnas instanser där gammal och ny kod körs parallellt. Därför får gammal kod inte bryta med innehåll som skapas av ny kod och ny kod måste kunna hantera gammalt innehåll.
 <!--
 
 >[!NOTE]
@@ -29,7 +29,7 @@ Tillståndet får inte sparas i minnet utan sparas i databasen. Annars kan det h
 
 ## Läge i filsystemet {#state-on-the-filesystem}
 
-Instansens filsystem ska inte användas i AEM som Cloud Service. Disken är tillfällig och kommer att kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
+Instansens filsystem bör inte användas på AEM as a Cloud Service. Disken är tillfällig och kommer att kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
 
 Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som behöver vara beständiga skickas iväg till en extern tjänst för längre lagring.
 
@@ -39,7 +39,7 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 ## Bakgrundsuppgifter och tidskrävande jobb {#background-tasks-and-long-running-jobs}
 
-Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Koden måste därför vara flexibel och de flesta importer kan återupptas. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det mer sannolikt att en instans kommer att tas bort i AEM som en Cloud Service.
+Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Koden måste därför vara flexibel och de flesta importer kan återupptas. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det AEM as a Cloud Service mer sannolikt att en instans kommer att tas bort.
 
 För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda schemaläggaren [Sling Jobs](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) så här igen med minst en körning.
 
@@ -49,7 +49,7 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 ## Utgående HTTP-anslutningar {#outgoing-http-connections}
 
-Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästidsgränser. För kod som inte tillämpar dessa tidsgränser AEM instanser som körs på AEM som en Cloud Service en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar som används av följande populära Java-bibliotek:
+Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästidsgränser. För kod som inte tillämpar dessa tidsgränser kommer AEM instanser som körs på AEM as a Cloud Service att tillämpa en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar som används av följande populära Java-bibliotek:
 
 Adobe rekommenderar att du använder det angivna [Apache HttpComponents Client 4.x-biblioteket](https://hc.apache.org/httpcomponents-client-ga/) för att skapa HTTP-anslutningar.
 
@@ -61,13 +61,13 @@ Alternativ som är kända för att fungera, men som kan kräva att du själv ang
 
 ## Inga klassiska gränssnittsanpassningar {#no-classic-ui-customizations}
 
-AEM som Cloud Service stöder endast Touch-gränssnittet för kundkod från tredje part. Klassiskt användargränssnitt är inte tillgängligt för anpassning.
+AEM as a Cloud Service stöder bara Touch-gränssnittet för kundkod från tredje part. Klassiskt användargränssnitt är inte tillgängligt för anpassning.
 
 ## Undvik inbyggda binärfiler {#avoid-native-binaries}
 
 Koden kommer inte att kunna hämta binärfiler vid körning och inte heller ändra dem. Den kan till exempel inte packa upp `jar`- eller `tar`-filer.
 
-## Ingen direktuppspelande binärfiler via AEM som Cloud Service {#no-streaming-binaries}
+## Inga bindningar för direktuppspelning via AEM as a Cloud Service {#no-streaming-binaries}
 
 Binärfiler bör nås via CDN, som kommer att betjäna binärfiler utanför de centrala AEM.
 
@@ -75,7 +75,7 @@ Använd t.ex. inte `asset.getOriginal().getStream()`, som utlöser hämtning av 
 
 ## Inga omvända replikeringsagenter {#no-reverse-replication-agents}
 
-Omvänd replikering från Publicera till Författare stöds inte i AEM som Cloud Service. Om en sådan strategi behövs kan du använda ett externt beständigt arkiv som delas mellan gruppen med publiceringsinstanser och eventuellt klustret Författare.
+Omvänd replikering från Publicera till Författare stöds inte i AEM as a Cloud Service. Om en sådan strategi behövs kan du använda ett externt beständigt arkiv som delas mellan gruppen med publiceringsinstanser och eventuellt klustret Författare.
 
 ## Vidarebefordra replikeringsagenter kan behöva porteras {#forward-replication-agents}
 
@@ -95,7 +95,7 @@ Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging O
 
 >[!NOTE]
 >
->För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM som en Cloud Service-instans. Mer information om hur du gör detta finns i [Distribuera till AEM som en Cloud Service](/help/implementing/deploying/overview.md).
+>För att kunna utföra de konfigurationsändringar som anges nedan måste du skapa dem i en lokal utvecklingsmiljö och sedan överföra dem till en AEM as a Cloud Service instans. Mer information om hur du gör detta finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md).
 
 **Aktivera felsökningsloggnivån**
 
@@ -129,11 +129,11 @@ För lokal utveckling har utvecklare fullständig åtkomst till CRXDE Lite (`/cr
 
 Observera att vid lokal utveckling (med SDK) kan `/apps` och `/libs` skrivas direkt till , vilket skiljer sig från molnmiljöer där mapparna på den översta nivån inte kan ändras.
 
-### AEM som verktyg för Cloud Service Development {#aem-as-a-cloud-service-development-tools}
+### AEM as a Cloud Service utvecklingsverktyg {#aem-as-a-cloud-service-development-tools}
 
 Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det uppstår fel.
 
-En uppsättning verktyg för felsökning AEM som utvecklingsmiljö finns i Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
+En uppsättning verktyg för felsökning AEM as a Cloud Service utvecklingsmiljöer finns på Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
 `https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
@@ -159,7 +159,7 @@ Utvecklarkonsolen är också användbar vid felsökning och har en länk till ve
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-I produktionsprogram definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM som Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer på både författare och publiceringstjänster för att kunna visa statusdumpdata från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+För produktionsprogram definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer på både författare och publiceringstjänster för att kunna visa statusdumpdata från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 ### AEM för mellanlagring och produktion {#aem-staging-and-production-service}
 
@@ -169,90 +169,27 @@ Kunderna har inte tillgång till utvecklarverktyg för staging- och produktionsm
 
 Adobe övervakar programmets prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte programmått beaktas.
 
-## IP-adress för dedikerad utpressning {#dedicated-egress-ip-address}
-
-På begäran kommer AEM som Cloud Service att tillhandahålla en statisk, dedikerad IP-adress för HTTP (port 80) och HTTPS (port 443) utgående trafik som programmerats i Java-kod.
-
-### Fördelar {#benefits}
-
-Den här dedikerade IP-adressen kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM som en Cloud Service som erbjuder en tillåtelselista IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från kundens AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
-
-Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM som en Cloud Service genom en uppsättning IP-adresser som delas med andra kunder.
-
-### Konfiguration {#configuration}
-
-Om du vill aktivera en dedikerad IP-adress skickar du en begäran till kundsupporten som ska ange IP-adressinformationen. I begäran bör varje miljö anges, och ytterligare förfrågningar bör göras om nya miljöer behöver funktionen efter den ursprungliga begäran. Sandlådeprogrammiljöer stöds inte.
-
-### Funktionsanvändning {#feature-usage}
-
-Funktionen är kompatibel med Java-kod eller bibliotek som resulterar i utgående trafik, förutsatt att de använder Java-standardegenskaper för proxykonfigurationer. I praktiken bör detta omfatta de vanligaste biblioteken.
-
-Nedan visas ett kodexempel:
-
-```java
-public JSONObject getJsonObject(String relativePath, String queryString) throws IOException, JSONException {
-  String relativeUri = queryString.isEmpty() ? relativePath : (relativePath + '?' + queryString);
-  URL finalUrl = endpointUri.resolve(relativeUri).toURL();
-  URLConnection connection = finalUrl.openConnection();
-  connection.addRequestProperty("Accept", "application/json");
-  connection.addRequestProperty("X-API-KEY", apiKey);
-
-  try (InputStream responseStream = connection.getInputStream(); Reader responseReader = new BufferedReader(new InputStreamReader(responseStream, Charsets.UTF_8))) {
-    return new JSONObject(new JSONTokener(responseReader));
-  }
-}
-```
-
-Vissa bibliotek kräver explicit konfiguration för att använda Java-standardegenskaper för proxykonfigurationer.
-
-Ett exempel med Apache HttpClient, som kräver explicita anrop till
-[`HttpClientBuilder.useSystemProperties()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html) eller använd
-[`HttpClients.createSystem()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
-
-```java
-public JSONObject getJsonObject(String relativePath, String queryString) throws IOException, JSONException {
-  String relativeUri = queryString.isEmpty() ? relativePath : (relativePath + '?' + queryString);
-  URL finalUrl = endpointUri.resolve(relativeUri).toURL();
-
-  HttpClient httpClient = HttpClientBuilder.create().useSystemProperties().build();
-  HttpGet request = new HttpGet(finalUrl.toURI());
-  request.setHeader("Accept", "application/json");
-  request.setHeader("X-API-KEY", apiKey);
-  HttpResponse response = httpClient.execute(request);
-  String result = EntityUtils.toString(response.getEntity());
-}
-```
-
-Samma dedikerade IP-adress används för alla kundprogram i Adobe och för alla miljöer i respektive program. Det gäller både författare och publiceringstjänster.
-
-Endast HTTP- och HTTPS-portar stöds. Detta inkluderar HTTP/1.1 och HTTP/2 när de är krypterade.
-
-### Felsökningsöverväganden {#debugging-considerations}
-
-Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. Annars kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/ip](https://ifconfig.me/ip), som returnerar den anropande IP-adressen.
-
 ## Skickar e-post {#sending-email}
 
-AEM som en Cloud Service kräver att utgående e-post krypteras. Avsnitten nedan beskriver hur du begär, konfigurerar och skickar e-post.
+AEM as a Cloud Service kräver att utgående e-post krypteras. Avsnitten nedan beskriver hur du begär, konfigurerar och skickar e-post.
 
 >[!NOTE]
 >
 >E-posttjänsten kan konfigureras med OAuth2-stöd. Mer information finns i [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md).
 
-### Begär åtkomst {#requesting-access}
+### Aktivera utgående e-post {#enabling-outbound-email}
 
-Som standard är utgående e-post inaktiverad. Aktivera den genom att skicka en supportanmälan med:
+Portar som används för att skicka är som standard inaktiverade. Om du vill aktivera det konfigurerar du [avancerat nätverk](/help/security/configuring-advanced-networking.md) och ser till att `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking`-slutpunktens portvidarebefordringsregler ställs in för varje nödvändig miljö så att trafiken kan gå via port 465 (om det stöds av e-postservern) eller port 587 (om e-postservern kräver det och även tillämpar TLS på den porten).
 
-1. Det fullständiga domännamnet för e-postservern (till exempel `smtp.sendgrid.net`)
-1. Den port som ska användas. Den bör vara port 465 om den stöds av e-postservern, annars port 587. Observera att port 587 bara kan användas om e-postservern kräver och tillämpar TLS på den porten
-1. Program-ID och miljö-ID för de miljöer de vill skicka ut
-1. Oavsett om SMTP-åtkomst krävs för författare, publicering eller båda.
+Vi rekommenderar att du konfigurerar avancerat nätverk med parametern `kind` inställd på `flexiblePortEgress` eftersom Adobe kan optimera prestanda för flexibel portbelastningstrafik. Om en unik egress-IP-adress krävs väljer du parametern `kind` `dedicatedEgressIp`. Om du redan har konfigurerat VPN av andra skäl kan du även använda den unika IP-adressen som den avancerade nätverksvarianten ger.
+
+Du måste skicka e-post via en e-postserver i stället för direkt till e-postklienter. Annars kan e-postmeddelandena vara blockerade.
 
 ### Skicka e-post {#sending-emails}
 
 Tjänsten [Day CQ Mail OSGI](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
 
-AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
+AEM as a Cloud Service kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
 
 >[!NOTE]
 >
@@ -262,7 +199,7 @@ AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder 
 
 E-post i AEM ska skickas med tjänsten [Day CQ Mail Service OSGi](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
 
-Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html). För AEM som Cloud Service måste följande justeringar göras för tjänsten `com.day.cq.mailer.DefaultMailService OSGI`:
+Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html). För AEM as a Cloud Service måste följande justeringar göras för tjänsten `com.day.cq.mailer.DefaultMailService OSGI`:
 
 Om port 465 har begärts:
 
@@ -274,8 +211,10 @@ Om port 587 har begärts (endast tillåtet om e-postservern inte stöder port 46
 * ange `smtp.port` till `587`
 * ange `smtp.ssl` till `false`
 
-Egenskapen `smtp.starttls` anges automatiskt av AEM som en Cloud Service vid körning till ett lämpligt värde. Om `smtp.tls` är true ignoreras `smtp.startls`. Om `smtp.ssl` är inställt på false är `smtp.starttls` inställt på true. Detta är oavsett `smtp.starttls`-värdena som angetts i OSGI-konfigurationen.
+Egenskapen `smtp.starttls` anges automatiskt av AEM as a Cloud Service vid körning till ett lämpligt värde. Om `smtp.tls` är true ignoreras `smtp.startls`. Om `smtp.ssl` är inställt på false är `smtp.starttls` inställt på true. Detta är oavsett `smtp.starttls`-värdena som angetts i OSGI-konfigurationen.
+
+E-posttjänsten kan även konfigureras med OAuth2-stöd. Mer information finns i [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md).
 
 ## [!DNL Assets] riktlinjer för utveckling och användningsfall {#use-cases-assets}
 
-Mer information om användningsfall, rekommendationer och referensmaterial för Assets som Cloud Service finns i [Utvecklarreferenser för Assets](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis).
+Mer information om användningsfall, rekommendationer och referensmaterial för Assets as a Cloud Service finns i [Utvecklarreferenser för Assets](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis).

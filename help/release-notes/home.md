@@ -1,8 +1,8 @@
 ---
-title: Versionsinformation för Adobe Experience Manager (AEM) som en Cloud Service.
-description: Versionsinformation för Adobe Experience Manager (AEM) som en Cloud Service.
+title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
+description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: a5fb7cd1f0c1041f0dbaa1e261f6e1454f363fd5
+source-git-commit: 72c1e85fca032f82a2755f9ca601625e1a3f7461
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 33%
@@ -13,18 +13,18 @@ ht-degree: 33%
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2021.08.0 |
+| Version | 2021.09.0 |
 | Typ | Kontinuerliga uppdateringar |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 
 ## Förbereda för en release {#how-to-prepare}
 
-Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager] som Cloud Service uppdateras programmet automatiskt fortlöpande. Det finns två typer av uppdateringar, funktionsreleaser och viktiga uppdateringar:
+Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager]-as a Cloud Service uppdateras programmet automatiskt fortlöpande. Det finns två typer av uppdateringar, funktionsreleaser och viktiga uppdateringar:
 
 * Funktionsreleaser görs med en förutsägbar månadsfrekvens och fokuserar på nya funktioner och produktinnovationer.
-* Viktiga uppdateringar görs ofta och fokuseras på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta garanterar att [!DNL Adobe Experience Manager] som Cloud Service alltid är uppdaterad med alla viktiga korrigeringar.
+* Viktiga uppdateringar görs ofta och fokuseras på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta garanterar att [!DNL Adobe Experience Manager]-as a Cloud Service alltid är uppdaterad med alla viktiga korrigeringar.
 
-Förutom innovationshastigheten ger [!DNL Adobe Experience Manager] som en Cloud Service även flexibilitet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna långt i förväg.
+Förutom innovationshastigheten ger [!DNL Adobe Experience Manager] as a Cloud Service även flexibilitet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna långt i förväg.
 
 >[!NOTE]
 >
@@ -52,7 +52,7 @@ Så här förbereder du en release:
 | [Startsida för Experience Manager as a Cloud Service](/help/landing/home.md) | Börja här för att få en översikt över dokumentationen om Experience Manager as a Cloud Service. |
 | [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över Experience Manager as a Cloud Service, med bland annat en introduktion och en terminologilista. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
-| [Onboarding](/help/onboarding/home.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager som Cloud Service, inklusive hur du får åtkomst och viktig dataskyddsinformation. |
+| [Onboarding](/help/onboarding/home.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service. |
 | [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md) | Förstå övergången till Cloud Service. |
@@ -60,7 +60,7 @@ Så här förbereder du en release:
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Läs om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
-| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM som en Cloud Service. |
+| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM as a Cloud Service. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 

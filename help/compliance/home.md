@@ -1,17 +1,16 @@
 ---
 title: Regelefterlevnad
 description: Regelefterlevnad
-exl-id: d346ad01-af00-48a1-96a4-e742369defff
-source-git-commit: a5fb7cd1f0c1041f0dbaa1e261f6e1454f363fd5
+source-git-commit: 85b78564620dce8f660098a8cbaadd6f5ed0c616
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 69%
 
 ---
 
-# Efterlevnad av AEM som Cloud Service {#aem-compliance}
+# Efterlevnad av AEM as a Cloud Service {#aem-compliance}
 
-På den här sidan visas självhjälpsresurser med information om efterlevnad i Experience Manager som Cloud Service.
+På den här sidan visas självhjälpsresurser med information om efterlevnad på Experience Manager-as a Cloud Service.
 
 ## Viktiga översiktsartiklar {#key-articles}
 
@@ -36,7 +35,7 @@ På den här sidan visas självhjälpsresurser med information om efterlevnad i 
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Läs om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
-| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM som en Cloud Service. |
+| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM as a Cloud Service. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 

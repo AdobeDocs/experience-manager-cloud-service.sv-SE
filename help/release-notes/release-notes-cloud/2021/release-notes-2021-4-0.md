@@ -1,8 +1,7 @@
 ---
-title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
-description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] som en Cloud Service.
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: e3540331e3194dce5dcd88e4f785f15ef682f062
+title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+source-git-commit: 85b78564620dce8f660098a8cbaadd6f5ed0c616
 workflow-type: tm+mt
 source-wordcount: '1535'
 ht-degree: 0%
@@ -23,10 +22,10 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som Cloud Service 2021.4.0 är 6 maj 2021.
+Releasedatum för [!DNL Adobe Experience Manager] as a Cloud Service 2021.4.0 är 6 maj 2021.
 Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
-## AEM som Cloud Service Foundation{#aem-as-a-cloud-service-foundation}
+## AEM as a Cloud Service Foundation{#aem-as-a-cloud-service-foundation}
 
 ### Vad är nytt? {#what-is-new-foundation}
 
@@ -114,7 +113,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * **Använd lokal utvecklingsmiljö för att skapa en dokumentfil (DoR)**
 
-   Du kan använda en XDP-fil som en dokumentmall på Cloud Service och AEM Forms som en Cloud Service-SDK (lokal utvecklingsmiljö). Tidigare var stödet begränsat till endast Cloud Service.
+   Du kan använda en XDP-fil som en dokumentmall på Cloud Service och AEM Forms as a Cloud Service SDK (lokal utvecklingsmiljö). Tidigare var stödet begränsat till endast Cloud Service.
 
 ### Felkorrigeringar i [!DNL Forms] {#bug-fixes-forms}
 
@@ -123,9 +122,9 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 ### Andra uppdateringar {#misc-2021-04-0-forms}
 
 * För att göra det enklare att identifiera innehåll genererar tjänsten nu dynamiska miniatyrbilder för XDP-, Dynamic PDF- och Schema-filer.
-* Lägg till möjligheten att flytta en PDF-fil till en mapp som ligger i AEM Forms-gränssnittet.
+* Lägg till möjligheten att flytta en PDF-fil till en mapp som är placerad i AEM Forms användargränssnitt.
 
-## Adobe Experience Manager Commerce som Cloud Service {#cloud-services-commerce}
+## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
 ### Vad är nytt? {#what-is-new-commerce}
 
@@ -145,11 +144,11 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.4.0.
+I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.4.0.
 
 ### Releasedatum {#release-date-cm-april}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.4.0 är 8 april 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.4.0 är 8 april 2021.
 Nästa version är planerad till 6 maj 2021.
 
 ### Nyheter {#what-is-new-april}

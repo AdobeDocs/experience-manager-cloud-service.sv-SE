@@ -2,9 +2,9 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: 1cf9834d840709ed340aaef235860d7c6d26c6d5
+source-git-commit: 6548e05850d5499f1ce7d1f23f2cea2adb9d06fd
 workflow-type: tm+mt
-source-wordcount: '2880'
+source-wordcount: '2878'
 ht-degree: 12%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 12%
 >
 >Bekanta dig med grundläggande [AEM Project Archetype-användning](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och [FileVault Content Maven-plugin](/help/implementing/developing/tools/maven-plugin.md) när den här artikeln bygger på dessa inlärningar och koncept.
 
-I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Manager Maven-projekt som ska AEM som en Cloud Service-kompatibel genom att säkerställa att de respekterar uppdelningen av muterbart och oföränderligt innehåll, att beroenden etableras för att skapa icke-konfliktskapande, deterministiska distributioner och att de paketeras i en installerbar struktur.
+I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Manager Maven-projekt som är AEM as a Cloud Service kompatibla genom att säkerställa att de respekterar uppdelningen av muterbart och oföränderligt innehåll, att beroenden etableras för att skapa icke-konfliktskapande, deterministiska distributioner och att de paketeras i en driftsättningsbar struktur.
 
 AEM programdistributioner måste bestå av ett enda AEM. Paketet ska i sin tur innehålla underpaket som innehåller allt som programmet behöver för att fungera, inklusive kod, konfiguration och eventuellt baslinjeinnehåll som stöds.
 
@@ -39,13 +39,13 @@ Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/sys
 
 ### Oak Index {#oak-indexes}
 
-Oak-index (`/oak:index`) hanteras specifikt av AEM som en distributionsprocess för Cloud Service. Detta beror på att Cloud Manager måste vänta tills ett nytt index har distribuerats och indexerats om fullständigt innan det går över till den nya kodbilden.
+Oak-index (`/oak:index`) hanteras specifikt av den AEM as a Cloud Service distributionsprocessen. Detta beror på att Cloud Manager måste vänta tills ett nytt index har distribuerats och indexerats om fullständigt innan det går över till den nya kodbilden.
 
 Därför måste Oak-index, även om de kan ändras vid körning, distribueras som kod så att de kan installeras innan några ändringsbara paket installeras. Därför är `/oak:index`-konfigurationer en del av kodpaketet och inte en del av innehållspaketet [enligt beskrivningen nedan](#recommended-package-structure).
 
 >[!TIP]
 >
->Mer information om hur du indexerar AEM som en Cloud Service finns i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
+>Mer information om indexering på AEM as a Cloud Service finns i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
 
 ## Rekommenderad paketstruktur {#recommended-package-structure}
 
@@ -75,9 +75,9 @@ Den rekommenderade programdistributionsstrukturen är följande:
 + Paketet `ui.config` innehåller alla [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md):
    + Organisationsmapp som innehåller körlägesspecifika OSGi-konfigurationsdefinitioner
       + `/apps/my-app/osgiconfig`
-   + Vanlig OSGi-konfigurationsmapp som innehåller standardOSGi-konfigurationer som gäller för alla AEM som mål för Cloud Service-distribution
+   + Vanlig OSGi-konfigurationsmapp som innehåller standardkonfigurationer för OSGi som gäller för alla mål AEM as a Cloud Service distributionsmål
       + `/apps/my-app/osgiconfig/config`
-   + Kör lägesspecifika OSGi-konfigurationsmappar som innehåller standardkonfigurationer för OSGi som gäller för alla AEM som Cloud Servicens distributionsmål
+   + Kör lägesspecifika OSGi-konfigurationsmappar som innehåller standardkonfigurationer för OSGi som gäller för alla mål AEM as a Cloud Service distributionsmål
       + `/apps/my-app/osgiconfig/config.<author|publish>.<dev|stage|prod>`
    + Repo Init OSGi-konfigurationsskript
       + [Repo ](#repo-init) Init är det rekommenderade sättet att distribuera (muterbart) innehåll som logiskt är en del av AEM. Repo Init OSGi-konfigurationerna ska placeras i lämplig `config.<runmode>`-mapp enligt ovan och användas för att definiera:
@@ -269,7 +269,7 @@ Lägg bara till `<filter root="/apps/<my-app>-packages"/>`-posterna för mappar 
 
 ## Bädda in paket från tredje part {#embedding-3rd-party-packages}
 
-Alla paket måste vara tillgängliga via [Adobe offentliga Maven-artefaktarkivet](https://repo.adobe.com/nexus/content/groups/public/com/adobe/) eller en tillgänglig offentlig, refererbar databas från tredje part för Maven-artefakter.
+Alla paket måste vara tillgängliga via [Adobe offentliga Maven-artefaktarkivet](https://repo1.maven.org/maven2/com/adobe/) eller en tillgänglig offentlig, refererbar databas från tredje part för Maven-artefakter.
 
 Om tredjepartspaketen finns i **Adobes offentliga Maven-databas** behövs ingen ytterligare konfiguration för att Adobe Cloud Manager ska kunna lösa artefakterna.
 

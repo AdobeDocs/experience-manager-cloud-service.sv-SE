@@ -1,28 +1,28 @@
 ---
 title: Integrera med Adobe Target
 description: 'Integrera med Adobe Target '
-feature: Administratör
+feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 85b78564620dce8f660098a8cbaadd6f5ed0c616
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Marketing Cloud kan Adobe Target öka innehållets relevans genom målinriktning och mätning i alla kanaler. För att integrera Adobe Target och AEM som en Cloud Service krävs följande:
+Som en del av Adobe Marketing Cloud kan Adobe Target öka innehållets relevans genom målinriktning och mätning i alla kanaler. Integrering av Adobe Target och AEM as a Cloud Service kräver:
 
-* med Touch-gränssnittet för att skapa en målkonfiguration i AEM som en Cloud Service (IMS-konfiguration krävs).
-* lägga till och konfigurera Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html).
+* med Touch-gränssnittet för att skapa en målkonfiguration i AEM as a Cloud Service (IMS-konfiguration krävs).
+* lägga till och konfigurera Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
 
 Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;upplevelseanpassning&quot;. För Experience Fragments export till Target behöver du bara Adobe Target Configuration och IMS.
 
 >[!NOTE]
 >
->Adobe Experience Manager som Cloud Service-kunder som inte har något befintligt Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad volymanvändning av Target.
+>Adobe Experience Manager as a Cloud Service-kunder som inte har något befintligt Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad volymanvändning av Target.
 
 ## Skapa Adobe Target-konfigurationen {#create-configuration}
 
@@ -36,7 +36,7 @@ Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analy
 
 ### IMS-konfiguration {#ims-configuration}
 
-En IMS-konfiguration för både Launch och Target krävs för att Target ska kunna integreras korrekt med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM som en Cloud Service, men IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). I [den här videon](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html) och [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/integration-ims-adobe-io.html) får du lära dig hur du skapar mål-IMS-konfigurationen.
+En IMS-konfiguration för både Launch och Target krävs för att Target ska kunna integreras korrekt med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM as a Cloud Service, men mål-IMS-konfigurationen måste skapas (efter att Target har etablerats). I [den här videon](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html) och [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/integration-ims-adobe-io.html) får du lära dig hur du skapar mål-IMS-konfigurationen.
 
 ### Adobe Target klientorganisations-ID och Adobe Target klientkod {#tenant-client}
 
@@ -51,7 +51,7 @@ I båda fallen ska du tänka på följande:
 * Du kan ändra standardinställningen för klient-ID.
 * Därför kommer serverdelsanropen till Target att baseras på klientens ID och klientsidans anrop till Target kommer att baseras på klientkoden.
 
-Som tidigare nämnts är det första fallet det vanligaste för AEM som en Cloud Service. Oavsett vad du väljer bör du kontrollera att **båda**-fälten innehåller rätt information beroende på dina behov.
+Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud Service. Oavsett vad du väljer bör du kontrollera att **båda**-fälten innehåller rätt information beroende på dina behov.
 
 >[!NOTE]
 >
