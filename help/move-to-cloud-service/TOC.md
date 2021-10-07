@@ -5,7 +5,7 @@ breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 feature: Deploying
 role: Architect, Developer
-source-git-commit: 9d131daf5b6a0b1530ebff48627f6130ef716f3e
+source-git-commit: 70811e1ba231dbd9a4bdf8764a4d93ba49413d0e
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 43%
@@ -38,11 +38,11 @@ ht-degree: 43%
       + [Översikt](/help/move-to-cloud-service/content-transfer-tool/overview-content-transfer-tool.md)
       + [Krav för verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/prerequisites-content-transfer-tool.md)
       + [Hantera stora innehållsdatabaser](/help/move-to-cloud-service/content-transfer-tool/handling-large-content-repositories.md)
+      + [Använda Content Transfer Tool](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
       + Användarmappningsverktyg {#user-mapping-tool}
          + [Översikt](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md)
          + [Viktiga överväganden](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/considerations-user-mapping-tool.md)
          + [Använda verktyget för användarmappning](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.md)
-      + [Använda Content Transfer Tool](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
 + Verktyg för omstrukturering av kod {#refactoring-tools}
    + [Enhetlig upplevelse](/help/move-to-cloud-service/unified-experience.md)
    + [Databasmodernisering](/help/move-to-cloud-service/refactoring-tools/repo-modernizer.md)
