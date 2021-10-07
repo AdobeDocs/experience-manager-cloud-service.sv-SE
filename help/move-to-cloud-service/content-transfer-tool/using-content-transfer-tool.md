@@ -2,10 +2,10 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
+source-git-commit: cde5514a0585dc0c882369e7603a62366d009a8c
 workflow-type: tm+mt
-source-wordcount: '3104'
-ht-degree: 36%
+source-wordcount: '3216'
+ht-degree: 35%
 
 ---
 
@@ -50,6 +50,8 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 * Om du använder anpassade index måste du se till att konfigurera anpassade index med noden `tika` innan du kör verktyget Innehållsöverföring. Mer information finns i [Förbereda den nya indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#preparing-the-new-index-definition).
 
 * Om du tänker göra toppuppsättningar är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då den övre extraheringen körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
+
+* Om du tänker ta med versioner som en del av en migreringsuppsättning och utför uppsättningar med `wipe=false`, måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför toppuppsättningar i en migreringsuppsättning, måste du utföra intaget som `wipe=true`.
 
 ## Tillgänglighet {#availability}
 
@@ -120,6 +122,8 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
 
       1. **Include Version**: Välj det som behövs. När versioner inkluderas inkluderas sökvägen `/var/audit` automatiskt för att migrera granskningshändelser.
+      >[!NOTE]
+      >Om du tänker ta med versioner som en del av en migreringsuppsättning och utför uppsättningar med `wipe=false`, måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför toppuppsättningar i en migreringsuppsättning, måste du utföra intaget som `wipe=true`.
 
       1. **Inkludera mappning från IMS-användare och -grupper**: Välj alternativet att inkludera mappning från IMS-användare och -grupper.
 Mer information finns i [Användarmappningsverktyget](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
@@ -132,6 +136,7 @@ Mer information finns i [Användarmappningsverktyget](https://experienceleague.a
          >* `/libs`
          >* `/home`
          >* `/etc` (vissa  `/etc` banor kan markeras i CTT)
+
 
 
 1. Klicka på **Spara** när du har fyllt i alla fält i **informationsskärmen för Skapa migreringsuppsättning**.
