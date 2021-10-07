@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Publishing
 role: User,Architect,Leader
 exl-id: 4737d5ee-9a93-49f3-9f20-d4368e60e9fb
-source-git-commit: 51ebeda46fbacb2479a5bd007cb741486caa218f
+source-git-commit: d8f24c10724a09acf911f6a80a87af32e4685ad5
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -52,15 +52,9 @@ Media Library omfattar i stort sett följande användningsområden:
 
 <!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
-* Basic metadata properties
-* Tag management
-* Version control
 * Static renditions
-* Projects, tasks, workflow authoring
+* Projects, tasks authoring
 * Activity stream (timeline)
-* Query Builder (API)
-* Marketing Cloud integration
-* User interface customization and extension
 * Comments and annotation
 -->
 
@@ -79,13 +73,22 @@ Om du vill använda Media Library-funktionen kan du använda standardanvändargr
 * Anteckna resurser.
 * Lägg till resurser på [!DNL Sites]-sidor via Content Finder.
 * Använd [!DNL Content Fragments].
+* Använd HTTP REST och GraphQL API:er för [!DNL Content Fragments] och refererade medieresurser, under Sites-licens.
+* Integrering med Marketing Cloud.
+* Anpassa och utöka gränssnittet för resurshantering.
+* Gå till Query Builder (API) för att utöka sökfunktionen.
+* Skapa statiska taggar.
 
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
+
+As per PM, we must avoid stating such a list, as we don't have a list that makes sense in Cloud Service.
 -->
 
 >[!IMPORTANT]
 >
->Många avancerade DAM-användningsfall uppfylls av [!DNL Experience Manager Assets]. Media Library-licens berättigar dig att endast fylla i de angivna användningsområdena med Media Library. Om ett användningsexempel inte finns med i listan ska du inte använda det med Media Library-licens. Kontakta Adobe kundtjänst om du har frågor.
+>Många avancerade DAM-användningsfall uppfylls av [!DNL Experience Manager Assets]. Media Library-licens berättigar dig att endast fylla i de angivna användningsområdena med Media Library. Om ett användningsexempel inte finns med i listan ska du inte använda det med Media Library-licens. Kontakta kundsupport om du har frågor.
+
+Observera att du inte kan använda smarta taggar, [!DNL Asset]-länk, [!DNL Asset]-väljare, bulktaggning, ändra resursarbetsflöden utan [!DNL Assets]-licens.
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
