@@ -2,12 +2,12 @@
 title: Använd Media Library för grundläggande hantering av digitala resurser
 description: '[!DNL Experience Manager Assets] och Media Library för filhantering.'
 contentOwner: AG
-feature: Resurshantering,publicering
+feature: Asset Management,Publishing
 role: User,Architect,Leader
 exl-id: 4737d5ee-9a93-49f3-9f20-d4368e60e9fb
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: e294ecdefca89bc3fd16ee2166a1a8418d0237ee
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Media Library installeras som en del av Sites. Ingen ytterligare licens eller pa
 
 ## [!DNL Assets] jämfört med Media Library {#assets-and-media-library}
 
-Experience Manager Assets har funktioner för företagsövergripande resurshantering (DAM). Resursfunktionaliteten levereras med [!DNL Experience Manager] i ett enda paket. Användare som inte har köpt en Assets-licens har dock inte rätt att använda de avancerade DAM-funktionerna. Utan Assets-licens är endast [Media Library-funktioner](#use-media-library) tillgängliga.
+Experience Manager Assets tillhandahåller DAM-funktioner i enterpriseklass. Resursfunktionaliteten levereras med [!DNL Experience Manager] i ett enda paket. Användare som inte har köpt en Assets-licens har dock inte rätt att använda de avancerade DAM-funktionerna. Utan Assets-licens är endast [Media Library-funktioner](#use-media-library) tillgängliga.
 
 Om du vill förhindra oavsiktlig användning av [!DNL Assets]-funktioner som du inte har licensierat tar du bort alla [!DNL Assets]-specifika arbetsflöden, komponenter, taxonomier, alternativ och [!DNL Assets]-administratören från [!DNL Experience Manager]. På så sätt förhindras användarna från att oavsiktligt använda [!DNL Assets]-funktioner som du inte har licensierat.
 
@@ -52,15 +52,9 @@ Media Library omfattar i stort sett följande användningsområden:
 
 <!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
-* Basic metadata properties
-* Tag management
-* Version control
 * Static renditions
-* Projects, tasks, workflow authoring
+* Projects, tasks authoring
 * Activity stream (timeline)
-* Query Builder (API)
-* Marketing Cloud integration
-* User interface customization and extension
 * Comments and annotation
 -->
 
@@ -79,13 +73,21 @@ Om du vill använda Media Library-funktionen kan du använda standardanvändargr
 * Anteckna resurser.
 * Lägg till resurser på [!DNL Sites]-sidor via Content Finder.
 * Använd [!DNL Content Fragments].
+* Använd HTTP REST och GraphQL API:er för [!DNL Content Fragments] och refererade medieresurser, under Sites-licens.
+* Integrering med Marketing Cloud.
+* Anpassa och utöka gränssnittet för resurshantering.
+* Gå till Query Builder (API) för att utöka sökfunktionen.
+* Skapa statiska taggar.
 
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
+As per PM, we must avoid stating such a list, as we don't have a list that makes sense in Cloud Service.
 -->
 
 >[!IMPORTANT]
 >
->Många avancerade DAM-användningsfall uppfylls av [!DNL Experience Manager Assets]. Media Library-licens berättigar dig att endast fylla i de angivna användningsområdena med Media Library. Om ett användningsexempel inte finns med i listan ska du inte använda det med Media Library-licens. Kontakta Adobe kundtjänst om du har frågor.
+>Många avancerade DAM-användningsfall uppfylls av [!DNL Experience Manager Assets]. Media Library-licens berättigar dig att endast fylla i de angivna användningsområdena med Media Library. Om ett användningsexempel inte finns med i listan ska du inte använda det med Media Library-licens. Kontakta kundsupport om du har frågor.
+
+Observera att du inte kan använda smarta taggar, [!DNL Asset]-länk, [!DNL Asset]-väljare, bulktaggning, ändra resursarbetsflöden utan [!DNL Assets]-licens.
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 

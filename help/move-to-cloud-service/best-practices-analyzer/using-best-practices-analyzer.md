@@ -15,7 +15,7 @@ ht-degree: 42%
 >id="aemcloud_bpa_using"
 >title="Använda Best Practices Analyzer"
 >abstract="Läs dokumentationen om hur du använder Best Practices Analyzer (tidigare Cloud Readiness Analyzer) och den genererade rapporten. Best Practices Analyzer-rapporten används för att få en god förståelse för den allmänna uppgraderingsberedskapen."
->additional-url="https://my.adobeconnect.com/pqgrfezoxghs?proto=true" text="[Webinar] Introducing Tools to Accelerate the Journey to Adobe Experience Manager as a Cloud Service"
+>additional-url=""
 
 ## Viktigt att tänka på när du använder Best Practices Analyzer {#imp-considerations}
 
@@ -110,7 +110,7 @@ Ikonen för vänster spår visas bara om BPA upptäcker att ACS Commons används
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/report_filter_2.png)
 
    >[!NOTE]
-ACS Commons-resultaten ska inte ignoreras. Mer information finns i [dokumentationen](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility) för att avgöra kompatibilitet med AEM som Cloud Service.
+ACS Commons-resultaten ska inte ignoreras. Mer information finns i [dokumentationen](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility) för att fastställa kompatibilitet med AEM as a Cloud Service.
 
 
 ### Adobe Experience Manager 6.2 och 6.1 {#aem-specific-versions}

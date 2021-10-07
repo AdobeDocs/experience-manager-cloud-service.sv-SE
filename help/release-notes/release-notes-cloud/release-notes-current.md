@@ -83,7 +83,7 @@ CQ-4328183 was not reported on CS so not documented here.
 * **[!DNL AEM Forms as a Cloud Service - Communications]**:  [Communication ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/aem-forms-cloud-service-communications.html?lang=en) API - använd XDP-mallar och XML-data för att generera trycksaker i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera dokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
-   * Generera tryckta PDF-filer från ett XFA-formulär i PDF- och Adobe Acrobat-format.
+   * Generera PDF-filer från ett XFA-formulär PDF och Adobe Acrobat-formulär.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för betaprogrammet.
 
@@ -151,11 +151,11 @@ För att förbättra prestanda för sökfrågor och indexering ingår inte fullt
 
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.9.0 och 2021.8.0.
+I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.9.0 och 2021.8.0.
 
 ## Releasedatum {#release-date-cm-sept}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.9.0 är 9 september 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.9.0 är 9 september 2021.
 Nästa version är planerad till 7 oktober 2021.
 
 ### Nyheter {#what-is-new-cm-sept}

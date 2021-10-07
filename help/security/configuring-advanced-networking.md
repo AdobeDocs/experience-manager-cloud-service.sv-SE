@@ -49,7 +49,7 @@ När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter inn
 
 Om den programomfattande konfigurationen av flexibel portutgång är klar måste slutpunkten `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` anropas per miljö för att aktivera nätverk på miljönivå och för att deklarera eventuella regler för portvidarebefordran. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
 
-Reglerna för portvidarebefordran bör deklareras för alla portar utom 80/443 genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
+Reglerna för portvidarebefordran ska deklareras för alla portar utom 80/443 genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
 
 API:t ska svara på bara några sekunder, vilket anger uppdateringsstatus och efter cirka 10 minuter ska slutpunktens `GET`-metod indikera att avancerade nätverk är aktiverade.
 

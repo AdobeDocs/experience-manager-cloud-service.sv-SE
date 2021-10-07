@@ -62,7 +62,7 @@ ht-degree: 26%
       + [Åtkomst till databaser](cloud-manager/managing-code/accessing-repos.md)
       + [Integrera Git med Adobe Cloud Manager](cloud-manager/managing-code/integrating-with-git.md)
       + [Arbeta med Git-databaser med flera källor](cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
-      + [Konfiguration av företagsgruppsutveckling för AEM som Cloud Service](cloud-manager/managing-code/enterprise-team-dev-setup.md)
+      + [Inställningar för utveckling av Enterprise-team för AEM as a Cloud Service](cloud-manager/managing-code/enterprise-team-dev-setup.md)
    + [Konfigurera CI/CD-pipeline](cloud-manager/configure-pipeline.md)
    + [Driftsätta kod](cloud-manager/deploy-code.md)
    + Förstå testresultat {#test-results}
@@ -232,7 +232,7 @@ ht-degree: 26%
    + [Flöde för innehållsleverans](dispatcher/overview.md)
    + [Dispatcher i molnet](dispatcher/disp-overview.md)
    + [Validera och felsöka med Dispatcher Tools](dispatcher/validation-debug.md)
-   + [Migrera Dispatcher-konfigurationen från AMS till AEM som Cloud Service](dispatcher/ams-aem.md)
+   + [Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service](dispatcher/ams-aem.md)
    + [Validera och felsöka med Dispatcher Tools Legacy](dispatcher/validation-debug-legacy.md)
    + [CDN i AEM as a Cloud Service](dispatcher/cdn.md)
    + [Cache i AEM as a Cloud Service](dispatcher/caching.md)

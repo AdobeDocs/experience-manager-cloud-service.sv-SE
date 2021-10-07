@@ -37,7 +37,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 
-* När du har slutfört *extraheringsfasen* av innehållsöverföringsprocessen och innan du startar *överföringsfasen* för att importera innehåll till din AEM som en Cloud Service *Stage* eller *Produktion*-instanser måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Input överbelastning* så att Adobe kan säkerställa att inga avbrott inträffar under *Inmatningsprocessen*. Du måste logga supportbiljetten en vecka före ditt planerade *intag*-datum. När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg. Du kan logga en supportanmälan med följande information:
+* När du har slutfört *extraheringsfasen* av innehållsöverföringsprocessen och innan du startar *Inmatningsfasen* för att importera innehåll till din AEM as a Cloud Service *Stage* eller *Produktion*-instanser måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Inmatning a9/> så att Adobe kan se till att inga avbrott inträffar under* Ingrediensprocessen *.* Du måste logga supportbiljetten en vecka före ditt planerade *intag*-datum. När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg. Du kan logga en supportanmälan med följande information:
 
    * Exakt datum och beräknad tid (med din tidszon) när du tänker starta fasen *Inmatning*.
    * Miljötyp (Stage eller Production) som du vill importera data till.
@@ -70,7 +70,7 @@ Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Di
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_demo"
 >title="Verktyget Innehållsöverföring körs"
->abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehållet till AEM som en Cloud Service (Författare/Publicera)."
+>abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehållet till AEM as a Cloud Service (Författare/Publicera)."
 >additional-url="https://video.tv.adobe.com/v/35460/?quality=12&amp;learn=on" text=" Se demo"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=en#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 

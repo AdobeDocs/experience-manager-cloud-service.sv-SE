@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 4eb2beeb97d2aa2aed4af869897db470b732fd1f
+source-git-commit: 87306ae90f6411d2d4e48f3afdb66e5e848073fe
 workflow-type: tm+mt
 source-wordcount: '2260'
 ht-degree: 12%
@@ -63,7 +63,7 @@ Du kan aktivera Brand Portal när du skapar miljöer för din AEM Assets som en 
 >Ändra inte några autogenererade inställningar.
 
 **Se även**:
-* [Lägga till användare och roller i AEM Assets som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)
+* [Lägga till användare och roller i AEM Assets as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)
 
 * [Hantera miljöer i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html#adding-environments)
 
@@ -178,7 +178,7 @@ Förutom automatiseringsarbetsflödet för att aktivera Brand Portal på AEM Ass
 
 >[!NOTE]
 >
->Kontakta Adobe Support om du stöter på problem när du aktiverar din Brand Portal-klient.
+>Kontakta kundsupport om du har problem med att aktivera din Brand Portal-klient.
 
 ## Manuell konfiguration med Adobe Developer Console {#manual-configuration}
 

@@ -2,15 +2,15 @@
 title: Integrering med Content Automation for Creative Cloud
 description: Generera variationer av resurser med hjälp av Creative Cloud-integrering
 contentOwner: AG
-feature: Överför,Resursbearbetning,Publicera,Asset compute Microservices,Arbetsflöde
+feature: Upload,Asset Processing,Publishing,Asset Compute Microservices,Workflow
 role: User,Admin
-source-git-commit: 09aecfac8bab0377e9e777b80e7db986d7aa4914
+exl-id: 4cff355e-d12c-44c7-b519-4cc37f49e396
+source-git-commit: 87306ae90f6411d2d4e48f3afdb66e5e848073fe
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
-
 
 # Generera variationer av resurser med [!DNL Adobe Creative Cloud]-integrering {#content-automation}
 
@@ -32,7 +32,7 @@ Användare kan skapa bearbetningsprofiler för att automatisera följande kreati
 
    ![Lightroom-förinställning](/help/assets/assets/content-automation-lrpresets.png)
 
-   *Bild: Adobe Lightroom-förinställning för att förbättra bildkvaliteten på ett konsekvent sätt för många bilder.*
+   *Bild: Adobe Lightroom förinställning för att förbättra bildkvaliteten på ett konsekvent sätt för många bilder.*
 
 * **Bildurklipp**: Använder artificiell intelligens för att skapa markering runt utjämnade objekt och ta bort bakgrund med ett enda kommando.
 
@@ -54,7 +54,7 @@ Användare kan skapa bearbetningsprofiler för att automatisera följande kreati
 
 Så här använder du bearbetningsprofiler för att automatiskt skapa variationer:
 
-1. Kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/#support) för att få licensen.
+1. Kontakta [Adobe kundsupport](https://experienceleague.adobe.com/#support) för att få licensen.
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**.
 
@@ -84,6 +84,6 @@ Om du vill bearbeta befintliga resurser markerar du resurserna, väljer alternat
 >[!MORELIKETHIS]
 >
 >* [Konfigurera och använda resursmikrotjänster via bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
->* [Integrera  [!DNL Experience Manager] med [!DNL Creative Cloud]](/help/assets/aem-cc-integration-best-practices.md).
+>* [ [!DNL Experience Manager] Integrera med [!DNL Creative Cloud]](/help/assets/aem-cc-integration-best-practices.md).
 >* [Tillgångsinmatning och bearbetning med tillgångsmikrotjänster: En översikt](/help/assets/asset-microservices-overview.md).
 

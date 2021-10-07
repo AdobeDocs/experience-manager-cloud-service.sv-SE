@@ -11,9 +11,9 @@ ht-degree: 1%
 
 # Innehållssökning och indexering {#indexing}
 
-## Ändringar i AEM som en Cloud Service {#changes-in-aem-as-a-cloud-service}
+## Ändringar i AEM as a Cloud Service {#changes-in-aem-as-a-cloud-service}
 
-Med AEM som Cloud Service går Adobe från en AEM instanscentrerad modell till en tjänstebaserad vy med n-x-AEM-behållare, som drivs av CI/CD-ledningar i Cloud Manager. I stället för att konfigurera och underhålla index för enskilda AEM måste indexkonfigurationen anges före en distribution. Konfigurationsförändringar i produktionen bryter helt klart CI/CD-reglerna. Detsamma gäller för indexändringar eftersom det kan påverka systemets stabilitet och prestanda om det inte anges testat och omindexerat innan de tas i produktion.
+Med AEM as a Cloud Service går Adobe från en AEM instanscentrerad modell till en tjänstebaserad vy med n-x-AEM-behållare, som drivs av CI/CD-pipelines i Cloud Manager. I stället för att konfigurera och underhålla index för enskilda AEM måste indexkonfigurationen anges före en distribution. Konfigurationsförändringar i produktionen bryter helt klart CI/CD-reglerna. Detsamma gäller för indexändringar eftersom det kan påverka systemets stabilitet och prestanda om det inte anges testat och omindexerat innan de tas i produktion.
 
 Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och tidigare versioner:
 
@@ -31,12 +31,12 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 1. Indexkonfigurationen ändras via distributioner. Ändringar av indexdefinitioner konfigureras på samma sätt som andra innehållsändringar.
 
-1. På en hög nivå AEM som Cloud Service, med introduktionen av [Blue-Green-distributionsmodellen](#index-management-using-blue-green-deployments) finns två uppsättningar index: en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
+1. På en hög nivå på AEM as a Cloud Service, med introduktionen av [Blue-Green-distributionsmodellen](#index-management-using-blue-green-deployments), finns två uppsättningar index: en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
 
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
 1. Begränsningar:
-* För närvarande stöds indexhantering på AEM som en Cloud Service bara för index av typen lucene.
+* För närvarande stöds bara indexhantering på AEM as a Cloud Service för index av typen lucene.
 * Endast standardanalysatorer stöds (dvs. de som levereras tillsammans med produkten). Anpassade analysatorer stöds inte.
 
 ## Användning {#how-to-use}
@@ -47,7 +47,7 @@ Att definiera index kan omfatta följande tre användningsområden:
 1. Uppdaterar en befintlig indexdefinition. Detta innebär att en ny version av en befintlig indexdefinition läggs till
 1. Tar bort ett befintligt index som är överflödigt eller föråldrat.
 
-För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM som en Cloud Service-dokumentation](/help/implementing/deploying/overview.md).
+För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM as a Cloud Service dokumentation](/help/implementing/deploying/overview.md).
 
 ### Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
 
@@ -85,7 +85,7 @@ När den nya indexdefinitionen har lagts till måste det nya programmet distribu
 
 >[!TIP]
 >
->Mer information om vilken paketstruktur som krävs för AEM som Cloud Service finns i dokumentet [AEM Projektstruktur.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
+>Mer information om den paketstruktur som krävs för AEM as a Cloud Service finns i dokumentet [AEM Projektstruktur.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
 
 ## Indexhantering med användning av blå-gröna distributioner {#index-management-using-blue-green-deployments}
 
@@ -125,7 +125,7 @@ I följande tabell visas fem indexdefinitioner: index `cqPageLucene` används i 
 
 >[!NOTE]
 >
->`<indexName>-custom-<customerVersionNumber>` behövs för AEM som Cloud Service för att markera detta som en ersättning för ett befintligt index.
+>`<indexName>-custom-<customerVersionNumber>` är nödvändigt för AEM as a Cloud Service att markera detta som en ersättning för ett befintligt index.
 
 | Index | Index som inte är tillgängligt | Använd i version 1 | Använd i version 2 |
 |---|---|---|---|
@@ -176,7 +176,7 @@ I den nya versionen av programmet används följande (ändrade) konfiguration:
 
 >[!NOTE]
 >
->Indexdefinitioner på AEM som en Cloud Service kanske inte helt matchar indexdefinitionerna i en lokal utvecklingsinstans. Utvecklingsinstansen har ingen Tika-konfiguration, medan AEM som en Cloud Service-instans har en. Om du anpassar ett index med en Tika-konfiguration bör du behålla Tika-konfigurationen.
+>Indexdefinitioner på AEM as a Cloud Service kanske inte helt matchar indexdefinitionerna på en lokal utvecklingsinstans. Utvecklingsinstansen har ingen Tika-konfiguration, medan AEM as a Cloud Service instanser har en. Om du anpassar ett index med en Tika-konfiguration bör du behålla Tika-konfigurationen.
 
 ### Ångra en ändring {#undoing-a-change}
 
@@ -215,13 +215,13 @@ Om det inte längre behövs någon anpassning av ett index som inte finns i kart
 
 Apache Jackrabbit Oak möjliggör flexibla indexkonfigurationer för att effektivt hantera sökfrågor. Index är särskilt viktiga för större databaser. Se till att alla frågor backas upp av ett lämpligt index. Frågor utan lämpligt index kan läsa tusentals noder, som sedan loggas som en varning. Sådana frågor bör identifieras genom analys av loggfilerna så att indexdefinitionerna kan optimeras. Mer information finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=en#tips-for-creating-efficient-indexes).
 
-### Lucene full text index on AEM as a Cloud Service {#index-lucene}
+### Lucene fulltextindex på AEM as a Cloud Service {#index-lucene}
 
-Fulltextindexet `/oak:index/lucene-2` kan bli mycket stort eftersom det indexerar alla noder i AEM.  Efter Adobe planer på att pensionera detta index kommer det inte längre att distribueras i AEM som en Cloud Service från september 2021. Den används inte längre som Cloud Service på produktsidan i AEM och behöver inte köra kundkod. För AEM som en Cloud Service med de vanligaste Lucene-indexen arbetar Adobe med sina kunder var för sig för att kompensera för detta index och för att använda bättre, optimerade index. Kunderna behöver inte vidta några åtgärder utan vidare besked från Adobe. AEM som Cloud Service kommer att informeras av Adobe när det finns behov av åtgärder för denna optimering. Om det här indexet krävs för anpassade frågor, som en tillfällig lösning, bör en kopia av indexet skapas med ett annat namn, till exempel `/oak:index/acme.lucene-1-custom-1`, enligt beskrivningen [här](/help/operations/indexing.md).
+Fulltextindexet `/oak:index/lucene-2` kan bli mycket stort eftersom det indexerar alla noder i AEM.  Efter Adobe planer på att ta tillbaka detta index kommer det inte längre att distribueras i AEM as a Cloud Service från september 2021. Den används inte längre på produktsidan i AEM as a Cloud Service och behöver inte köra kundkod. För AEM as a Cloud Service miljöer med gemensamma Lucene-index arbetar Adobe med kunder var för sig för att kompensera för detta index och för att använda bättre, optimerade index. Kunderna behöver inte vidta några åtgärder utan vidare besked från Adobe. AEM as a Cloud Service kunder kommer att informeras av Adobe när det finns behov av åtgärder för denna optimering. Om det här indexet krävs för anpassade frågor, som en tillfällig lösning, bör en kopia av indexet skapas med ett annat namn, till exempel `/oak:index/acme.lucene-1-custom-1`, enligt beskrivningen [här](/help/operations/indexing.md).
 Optimeringen gäller inte som standard andra AEM miljöer som hanteras av Adobes hanterade tjänster.
 
 ## Frågeoptimeringar {#index-query}
 
 Med verktyget **Query Performance** kan du observera både vanliga och långsamma JCR-frågor. Dessutom kan den analysera frågor och visa olika information om, särskilt om ett index används för frågan eller inte.
 
-Till skillnad från i AEM lokalt, visas inte verktyget **Query Performance** i användargränssnittet längre i AEM som en Cloud Service. Istället är den nu tillgänglig via Developer Console (i Cloud Manager) på fliken **Frågor**.
+Till skillnad från i AEM lokalt, visar inte AEM as a Cloud Service längre verktyget **Frågeprestanda** i användargränssnittet. Istället är den nu tillgänglig via Developer Console (i Cloud Manager) på fliken **Frågor**.

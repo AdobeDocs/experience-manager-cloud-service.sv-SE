@@ -71,7 +71,7 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/bpa-printpreview1.png)
 
-1. Om du klickar på **Förhandsgranska** öppnas en ny flik där rapporten visas i en förhandsgranskning som kan skrivas ut. Klicka på **Skriv ut** för att skriva ut rapporten i PDF-format.
+1. Om du klickar på **Förhandsgranska** öppnas en ny flik där rapporten visas i en förhandsgranskning som kan skrivas ut. Klicka på **Skriv ut** för att skriva ut rapporten i PDF-format för att göra den enkel att dela.
 
    >[!IMPORTANT]
    >* Alternativet **Spara som PDF** rekommenderas och stöds för ovanstående funktioner.
@@ -101,7 +101,7 @@ Kortet **Rapportegenskaper** innehåller information om rapportegenskaper som ra
 
 #### Rapportöversikt {#report-overview}
 
-Detta **rapportöversiktskort** innehåller rapportresultat och allvarlighetsnivåer som gäller vid bedömning av om AEM kan flyttas som en Cloud Service, vilket visas i figuren nedan.
+Detta **rapportöversiktskort** innehåller rapportresultat och allvarlighetsnivåer som gäller vid bedömning av om det går att gå AEM as a Cloud Service, vilket visas i bilden nedan.
 
 ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/report-overview.png)
 
@@ -128,7 +128,7 @@ Alternativet Best Practices Assessment (Utvärdering av bästa praxis) ger en be
 
 #### Utvärdering av migreringskomplexitet {#migration-complexity-assessment}
 
-Med alternativet Utvärdering av migreringskomplexitet kan du bedöma hur komplicerat det är att migrera den befintliga AEM till AEM som en Cloud Service.
+Med alternativet Utvärdering av migreringskomplexitet kan du bedöma hur komplicerat det är att migrera den befintliga AEM till AEM as a Cloud Service.
 
 Du kan granska följande information på den här fliken:
 

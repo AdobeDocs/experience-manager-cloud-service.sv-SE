@@ -9,9 +9,9 @@ ht-degree: 0%
 ---
 
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] som en Cloud Service {#release-notes}
+# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] som en Cloud Service.
+I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.

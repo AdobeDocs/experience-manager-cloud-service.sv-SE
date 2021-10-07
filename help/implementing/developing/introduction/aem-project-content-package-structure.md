@@ -64,7 +64,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `/apps/my-app/components`
    + JavaScript och CSS (via [Klientbibliotek](/help/implementing/developing/introduction/clientlibs.md))
       + `/apps/my-app/clientlibs`
-   + [Överlappningar ](/help/implementing/developing/introduction/overlays.md) av  `/libs`
+   + [](/help/implementing/developing/introduction/overlays.md) Överlayout  `/libs`
       + `/apps/cq`,  `/apps/dam/`osv.
    + Kontextmedvetna reservkonfigurationer
       + `/apps/settings`

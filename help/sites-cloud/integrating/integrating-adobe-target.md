@@ -128,7 +128,7 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
 I **Regel** definierar och ordnar vi en sekvens med åtgärder, som utförs på webbplatsen, för att uppnå målgruppsanpassning.
 
 1. Lägg till en uppsättning åtgärder som visas i skärmbilden.
-   ![](assets/rules1.png "ÅtgärderÅtgärder")
+   ![](assets/rules1.png "ActionsActions")
 2. I Lägg till parametrar i alla Mboxes lägger du till dataelementet som konfigurerats tidigare (se dataelementet ovan) i den parameter som ska skickas i mbox-anropet.
    ![](assets/map_data1.png "MboxActions")
 

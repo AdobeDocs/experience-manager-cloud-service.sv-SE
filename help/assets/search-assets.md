@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 0d0a3247e42e0f4a9b2965104814fe6bcd8e6128
+source-git-commit: aa5d529b132a4ff517950192a81a13c05fe92b4c
 workflow-type: tm+mt
-source-wordcount: '4849'
+source-wordcount: '4848'
 ht-degree: 5%
 
 ---
@@ -42,7 +42,7 @@ Använd panelen **[!UICONTROL Filters]** för att söka efter resurser, mappar, 
 
 Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
 
-![Förstå gränssnittet för sökresultat i Experience Manager Assets](assets/aem_search_results.png)
+![Experience Manager Assets sökresultatgränssnitt](assets/aem_search_results.png)
 
 *Bild: Förstå gränssnittet för  [!DNL Experience Manager Assets] sökresultat.*
 
@@ -157,7 +157,7 @@ Du kan söka efter resurser baserat på exakta värden för metadatafält, som t
 | Originalformat | skapare:John |
 | Plats | plats:NA |
 | Beskrivning | description:&quot;Sample Image&quot; |
-| Skapare | creatortool:&quot;Adobe Photoshop CC 2015&quot; |
+| Skapare | creatortool:&quot;Adobe Photoshop&quot; |
 | Copyright-ägare | copyrightowner:&quot;Adobe Systems&quot; |
 | Medarbetare | medarbetare:John |
 | Användningsvillkor | usageterms:&quot;CopyRights Reserved&quot; |
@@ -167,7 +167,7 @@ Du kan söka efter resurser baserat på exakta värden för metadatafält, som t
 | Fråntid | offtime:YYY-MM-DDTHH |
 | Tidsintervall (förfaller dateontime, offtime) | faktafält: nedsänkt..upperbound |
 | Bana | /content/dam/&lt;mappnamn> |
-| PDF-titel | pdftitle:&quot;Adobe-dokument&quot; |
+| PDF | pdftitle:&quot;Adobe-dokument&quot; |
 | Ämne | ämne:&quot;Utbildning&quot; |
 | Taggar | taggar:&quot;Plats och resa&quot; |
 | Typ | type:&quot;image\png&quot; |
@@ -202,7 +202,7 @@ Med Adobe Asset Link kan formgivare nu komma åt innehåll som lagras i [!DNL Ex
 
 ### Sök efter resurser i [!DNL Experience Manager]-datorprogrammet {#desktop-app}
 
-Kreatörer använder datorprogrammet för att göra [!DNL Experience Manager Assets] enkelt sökbart och tillgängligt på sin lokala dator (Win eller Mac). Det är enkelt att visa de önskade resurserna i Finder eller Utforskaren i Windows, som öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan till [!DNL Experience Manager] med en ny version som skapas i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, jokertecken `*` och `?` och operatorn `AND`. Se [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
+Kreatörer använder datorprogrammet för att göra [!DNL Experience Manager Assets] enkelt sökbart och tillgängligt på sin lokala dator (Win eller Mac). Kreatörerna kan enkelt visa de önskade resurserna i Mac Finder eller Utforskaren i Windows, som har öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan till [!DNL Experience Manager] med en ny version som har skapats i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, jokertecken `*` och `?` och operatorn `AND`. Se [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
 
 ### Sök efter resurser i [!DNL Brand Portal] {#brand-portal}
 

@@ -144,8 +144,8 @@ somDe olika alternativen för att realisera/återge fältet i ett fragment. Dett
 LabelAnge en 
 **Fältetiketter** genererar automatiskt ett  **egenskapsnamn** som sedan kan uppdateras manuellt om det behövs.
 
-* **Validering av**
-Basic är tillgängligt med hjälp av mekanismer som  **** egenskapen Required. Vissa datatyper har ytterligare valideringsfält. Mer information finns i [Validering](#validation).
+* ****
+ValidationBasic-validering är tillgänglig via mekanismer som egenskapen  **** Required. Vissa datatyper har ytterligare valideringsfält. Mer information finns i [Validering](#validation).
 
 * För datatypen **Flerradig text** går det att definiera **standardtypen** som endera:
 
@@ -157,8 +157,8 @@ Basic är tillgängligt med hjälp av mekanismer som  **** egenskapen Required. 
 
    Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
 
-* **Unikt**
-innehåll (för det specifika fältet) måste vara unikt för alla innehållsfragment som skapas från den aktuella modellen.
+* ****
+UniqueContent (för det specifika fältet) måste vara unikt för alla innehållsfragment som skapas från den aktuella modellen.
 
    Detta används för att säkerställa att innehållsförfattare inte kan upprepa innehåll som redan har lagts till i ett annat fragment av samma modell.
 
@@ -365,7 +365,7 @@ Så här konfigurerar du **principer** för **Tillåtna modeller för innehålls
       Flera modeller kan tillåtas.
    ![Princip för innehållsfragmentmodell](assets/cfm-model-policy-assets-folder.png)
 
-1. **** Spara ändringar.
+1. **** Spara eventuella ändringar.
 
 De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
 * **Profiler** för **Tillåtna modeller för innehållsfragment**.
@@ -493,4 +493,4 @@ Du kan hantera **låsta**-modeller från antingen konsolen eller modellredigerar
       >[!NOTE]
       Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
 
-   * **Du** kommer tillbaka till konsolen när du avbryter.
+   * **** Avbryt återgår till konsolen.
