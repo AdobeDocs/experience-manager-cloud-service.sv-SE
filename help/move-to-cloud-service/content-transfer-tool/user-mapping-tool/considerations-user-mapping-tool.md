@@ -1,9 +1,9 @@
 ---
 title: Viktigt att tänka på när du ska mappa användare
 description: Viktigt att tänka på när du ska mappa användare
-source-git-commit: 9d131daf5b6a0b1530ebff48627f6130ef716f3e
+source-git-commit: 60e67e92f4f1ecaaf12c58f16f4324868d223934
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -35,3 +35,7 @@ Följande specialfall loggas:
 * Om målinstansen av AEM Cloud Service har en användare med ett annat användarnamn men samma e-postadress som en av användarna i AEM och användarmappning är aktiverat, kommer ett felmeddelande att skrivas i loggarna och AEM-användaren kommer inte att överföras eftersom endast en användare med en angiven e-postadress tillåts i målsystemet.
 
 * Om två användare på AEM källinstansen har samma e-postadress och användarmappning är aktiverat, skrivs ett felmeddelande i loggarna och en av AEM-användarna kommer inte att överföras, eftersom endast en användare med en given e-postadress tillåts på måldatorn.
+
+### What’s Next {#whats-next}
+
+När du har lärt dig viktiga saker och exceptionella saker är du nu redo att använda verktyget. Mer information finns i [Använda verktyget för användarmappning](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.md).
