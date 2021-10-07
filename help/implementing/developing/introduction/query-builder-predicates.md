@@ -2,14 +2,14 @@
 title: Predikatreferens för Query Builder
 description: Predikatreferens för Query Builder API.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: 08559417c8047c592f2db54321afe68836b75bd1
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2218'
 ht-degree: 1%
 
 ---
 
-# Predikatreferens för frågebyggaren {#query-builder-predicate-reference}
+# Predikatreferens för Query Builder {#query-builder-predicate-reference}
 
 ## Allmänt {#general}
 
@@ -167,7 +167,7 @@ Det stöder inte facetextrahering.
 
 ### hasPermission {#haspermission}
 
-Detta predikat begränsar resultatet till objekt där den aktuella sessionen har de angivna [JCR-behörigheterna.](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
+Detta predikat begränsar resultatet till objekt där den aktuella sessionen har de angivna [JCR-behörigheterna.](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
 
 Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex. Det stöder inte facetextrahering.
 

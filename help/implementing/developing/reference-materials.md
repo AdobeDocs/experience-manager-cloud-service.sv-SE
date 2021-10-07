@@ -1,9 +1,10 @@
 ---
 title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som ni kan använda för ert digitala upplevelseprojekt.
-source-git-commit: f8d16e515de5ce740398d45a30038793fe021b69
+exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
+source-git-commit: 08559417c8047c592f2db54321afe68836b75bd1
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '664'
 ht-degree: 3%
 
 ---
@@ -34,7 +35,7 @@ AEM förlitar sig på ett antal andra API:er med öppen källkod.
 |---|---|
 | [Apache Sling](https://sling.apache.org/apidocs/sling11/) | Webbramverk som använder en Java Content Repository (JCR) för att lagra och hantera innehåll |
 | [Apache Jackrabbit Oak](http://jackrabbit.apache.org/oak/docs/oak_api/overview.html) | Implementera en skalbar och högpresterande hierarkisk Java Content Repository (JCR) som kan användas som grund för moderna webbplatser i världsklass |
-| [Java Content Repository](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) | Specifikation för JCR version 2.0 |
+| [Java Content Repository](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) | Specifikation för JCR version 2.0 |
 | [Apache Felix](https://felix.apache.org) | Implementering av Open Services Gateway-initiativet (OSGi) och serviceplattformen |
 
 ## Riktlinjer för API-inställningar {#guidelines}
@@ -43,7 +44,7 @@ AEM bygger på följande fyra primära Java API-uppsättningar i fallande priori
 
 | Prioritet | API | Beskrivning |
 |---|---|---|
-| 1 | [Adobe Experience Manager som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden osv. |
+| 1 | [Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden osv. |
 | 2 | [Apache Sling](https://sling.apache.org/apidocs/sling11/) | REST och resursbaserade abstraktioner som resurser, värdescheman och HTTP-begäranden. |
 | 3 | [Apache Jackrabbit Oak](http://jackrabbit.apache.org/oak/docs/oak_api/overview.html) | Data- och innehållsabstraktioner som nod, egenskaper och sessioner. |
 | 4 | [Apache Felix](https://felix.apache.org/) | OSSGi-programbehållarabstraktioner som tjänster och OSGi-komponenter. |

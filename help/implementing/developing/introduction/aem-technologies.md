@@ -2,9 +2,9 @@
 title: AEM Technical Foundations
 description: En översikt över den tekniska grunden för AEM, inklusive hur AEM är strukturerad och grundläggande tekniker som JCR, Sling och OSGi.
 exl-id: ab6e7fe9-a25d-4351-a005-f4466cc0f40e
-source-git-commit: 8ba7968ee7f4d3c808740054bf841dbaf9dd4254
+source-git-commit: 08559417c8047c592f2db54321afe68836b75bd1
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2186'
 ht-degree: 0%
 
 ---
@@ -34,9 +34,9 @@ Den underliggande innehållsdatabasen och affärslogiken bygger på Java-teknike
 
 ## Java Content Repository {#java-content-repository}
 
-Java Content Repository (JCR)-standarden, [JSR 283](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att komma åt innehåll dubbelriktat på en detaljnivå i en innehållsdatabas. Specifikationsledaren innehas av Adobe Research (Schweiz) AG.
+Java Content Repository (JCR)-standarden, [JSR 283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att komma åt innehåll dubbelriktat på en detaljnivå i en innehållsdatabas. Specifikationsledaren innehas av Adobe Research (Schweiz) AG.
 
-[JCR API 2.0](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)-paketet `javax.jcr.*` används för direkt åtkomst och redigering av databasinnehåll.
+[JCR API 2.0](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)-paketet `javax.jcr.*` används för direkt åtkomst och redigering av databasinnehåll.
 
 AEM bygger på en JCR.
 
@@ -46,7 +46,7 @@ AEM bygger på en JCR.
 
 Jackrabbit Oak (även kallad Oak) är implementeringen av JCR-standarden som AEM bygger på.
 
-## Sling Request Processing {#sling-request-processing}
+## Bearbetning av försäljningsbegäran {#sling-request-processing}
 
 AEM byggs med [Sling](https://sling.apache.org/site/index.html), ett ramverk för webbapplikationer som bygger på REST-principer som gör det enkelt att utveckla innehållsorienterade applikationer. Sling använder en JCR-databas, som Apache Jackrabbit Oak, som datalager. Sling har bidragit till Apache Software Foundation - mer information finns på Apache.
 
@@ -66,7 +66,7 @@ I följande diagram förklaras alla dolda, men kraftfulla, frågeparametrar som 
 
 ![Använda SlingPostServlet](assets/sling-cheatsheet-02.png)
 
-### Sling är innehållscentrerad {#sling-is-content-centric}
+### Sling är innehållscentrerat {#sling-is-content-centric}
 
 Sling är *innehållscentrerad*. Detta innebär att bearbetningen är inriktad på innehållet eftersom varje HTTP-begäran mappas till innehåll i form av en JCR-resurs (en databasnod):
 
@@ -170,7 +170,7 @@ Om du använder föregående exempel om `sling:resourceType` är `hr/jobs` är d
    * Skriptet för `../content/corporate/jobs/developer.html` skulle till exempel generera en sökning i `/apps/content/corporate/jobs/`.
    * Den primära nodtypen kommer att användas.
 * Om inget skript hittas används standardskriptet.
-   * Standardåtergivningen stöds för närvarande som oformaterad text (`.txt`), HTML (`.html`) och JSON (`.json`), som alla listar nodens egenskaper (lämpligt formaterade). Standardåtergivningen för tillägget `.res`, eller begäranden utan ett tillägg till en begäran, är att resursen ska buffras (där det är möjligt).
+   * Standardåtergivningen stöds för närvarande som oformaterad text (`.txt`), HTML (`.html`) och JSON (`.json`), som alla visar nodens egenskaper (lämpligt formaterade). Standardåtergivningen för tillägget `.res`, eller begäranden utan ett tillägg till en begäran, är att resursen ska buffras (där det är möjligt).
 * För http-felhantering (kod 403 eller 404) söker Sling efter ett skript på antingen:
    * Platsen `/apps/sling/servlet/errorhandler` för anpassade skript
    * Eller platsen för standardskriptet `/libs/sling/servlet/errorhandler/404.jsp`
@@ -228,7 +228,7 @@ Typhierarkin för:
 
 Detta beror på att `/y` har egenskapen `sling:resourceSuperType` men `/x` inte har det och dess supertyp tas därför från sin resurstyp.
 
-#### Sling-skript kan inte anropas direkt {#sling-scripts-cannot-be-called-directly}
+#### Sling Scripts kan inte anropas direkt {#sling-scripts-cannot-be-called-directly}
 
 I Sling kan skript inte anropas direkt eftersom detta skulle bryta det strikta begreppet med en REST-server. kan du blanda resurser och representationer.
 
@@ -243,7 +243,7 @@ Om du anropar representationen (skriptet) direkt döljer du resursen i skriptet,
 
 Detta använder Sling API-paketet, `org.apache.sling.*` och taggbiblioteken.
 
-### Referera till befintliga element med sling:include {#referencing-existing-elements-using-sling-include}
+### referera till befintliga element med sling:include {#referencing-existing-elements-using-sling-include}
 
 En sista sak är behovet av att referera till befintliga element i skripten.
 
@@ -280,7 +280,7 @@ Detta gör att du kan utföra följande åtgärder på något av paketen i din i
 * Se aktuell status
 * Få mer detaljerad information (t.ex. symboliskt namn, version, plats) om de specifika paketen
 
-Mer information finns i [Konfigurera OSGi för AEM som en Cloud Service](/help/implementing/deploying/configuring-osgi.md).
+Mer information finns i [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md).
 
 ## Struktur i databasen {#structure-within-the-repository}
 
