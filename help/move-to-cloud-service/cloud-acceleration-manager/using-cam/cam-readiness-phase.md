@@ -2,10 +2,10 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
-source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
+source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 5%
+source-wordcount: '748'
+ht-degree: 4%
 
 ---
 
@@ -66,6 +66,19 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
 
    >[!NOTE]
    >När du överför en ny rapport återställs alla bedömningar.
+
+1. Klicka på ikonen **Förhandsgranska** som visas nedan.
+
+   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/bpa-printpreview1.png)
+
+1. Om du klickar på **Förhandsgranska** öppnas en ny flik där rapporten visas i en förhandsgranskning som kan skrivas ut. Klicka på **Skriv ut** för att skriva ut rapporten i PDF-format för att göra den enkel att dela.
+
+   >[!IMPORTANT]
+   >* Alternativet **Spara som PDF** rekommenderas och stöds för ovanstående funktioner.
+   >* Om webbläsarens utskriftsknapp används skrivs bara en sida ut.
+
+
+   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/bpa-printpreview2.png)
 
 ### Analysrapport om metodtips för granskning {#analysis-report}
 

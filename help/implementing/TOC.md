@@ -5,9 +5,9 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
+source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1046'
 ht-degree: 26%
 
 ---
@@ -29,9 +29,9 @@ ht-degree: 26%
          + [Versionsinformation för 2021.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-2-0.md)
          + [Versionsinformation för 2021.1.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-1-0.md)
       + 2020 {#2020}
-         + [Versionsinformation för 2020.12.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-12-0.md)
+         + [Release Notes for 2020.12.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-12-0.md)
          + [Versionsinformation för 2020.11.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-11-0.md)
-         + [Versionsinformation för 2020.10.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-10-0.md)
+         + [Release Notes for 2020.10.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-10-0.md)
          + [Versionsinformation för 2020.9.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-9-0.md)
          + [Versionsinformation för 2020.8.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-8-0.md)
          + [Versionsinformation för 2020.7.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-7-0.md)
@@ -39,7 +39,7 @@ ht-degree: 26%
          + [Versionsinformation för 2020.5.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-5-0.md)
          + [Versionsinformation för 2020.4.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-4-0.md)
          + [Versionsinformation för 2020.3.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-3-0.md)
-         + [Versionsinformation för 2020.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-2-0.md)
+         + [Release Notes for 2020.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-2-0.md)
    + [Förstå program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/understand-program-types.md)
    + Produktionsprogram {#production-programs}
       + [Introduktion](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md)
@@ -73,33 +73,33 @@ ht-degree: 26%
       + [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
       + [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
    + [Komma åt och hantera loggar](cloud-manager/manage-logs.md)
-   + [SLA-rapportering](cloud-manager/sla-reporting.md)
+   + [SLA Reporting](cloud-manager/sla-reporting.md)
    + [Förstår aviseringar](cloud-manager/notifications.md)
    + Hantera SSL-certifikat {#manage-ssl-certificates}
       + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
-      + [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md)
+      + [Getting an SSL Certificate](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md)
       + [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
       + [Visa och uppdatera och ersätta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/view-update-replace-ssl-certificate.md)
       + [Kontrollerar status för ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md)
       + [Ta bort ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/delete-ssl-certificate.md)
-   + Hantera anpassade domännamn {#custom-domain-names}
+   + Managing Custom Domain Names {#custom-domain-names}
       + [Introduktion](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
-      + [Hämta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/get-custom-domain-name.md)
+      + [Getting a Custom Domain Name](/help/implementing/cloud-manager/custom-domain-names/get-custom-domain-name.md)
       + [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
       + [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md)
       + [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
       + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
       + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
       + [Visa, uppdatera och ersätta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
-      + [Uppdatera ett anpassat domännamns SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/update-cdn-ssl-certificate.md)
-      + [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+      + [Updating a  Custom Domain Name’s SSL Certificate](/help/implementing/cloud-manager/custom-domain-names/update-cdn-ssl-certificate.md)
+      + [Deleting a Custom Domain Name](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
    + Hantera IP-Tillåtelselista {#ip-allow-lists}
       + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
       + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
       + [Visa och uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)
-      + [Använda ett IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
+      + [Applying an IP Allow List](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
       + [Avaktivera användning av en IP-Tillåt-lista](/help/implementing/cloud-manager/ip-allow-lists/unapply-ip-allow-list.md)
-      + [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
+      + [Deleting an IP Allow List](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
       + [Kontrollera status för IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md)
    + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/cloud-manager-cs-faqs.md)
 + Utveckla för AEM as a Cloud Service {#developing}
@@ -133,7 +133,7 @@ ht-degree: 26%
          + [Aktivera JSON-export för en komponent](developing/components/enabling-json-exporter.md)
          + [Bildredigeraren](developing/components/image-editor.md)
          + [Dekoration-taggar](developing/components/decoration-tag.md)
-         + [Använda Dölj villkor](developing/components/hide-conditions.md)
+         + [Using Hide Conditions](developing/components/hide-conditions.md)
          + [Referenshandbok för komponenter](developing/components/reference.md)
       + [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md)
       + [Bygga in märkord i AEM](/help/implementing/developing/introduction/tagging-applications.md)
@@ -148,11 +148,11 @@ ht-degree: 26%
       + [Headless Documentation Journeys](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/home.html)
       + Komma igång-guider {#getting-started}
          + [Introduktion](developing/headless/getting-started/introduction.md)
-         + [Skapa en konfiguration](developing/headless/getting-started/create-configuration.md)
+         + [Creating a Configuration](developing/headless/getting-started/create-configuration.md)
          + [Skapa en innehållsfragmentmodell](developing/headless/getting-started/create-content-model.md)
          + [Skapa en resursmapp](developing/headless/getting-started/create-assets-folder.md)
          + [Skapa ett innehållsfragment](developing/headless/getting-started/create-content-fragment.md)
-         + [Åtkomst och leverans av innehållsfragment](developing/headless/getting-started/create-api-request.md)
+         + [Accessing and Delivering Content Fragments](developing/headless/getting-started/create-api-request.md)
       + Innehållsfragment {#content-fragments}
          + [Headless Delivery with Content Fragments and GraphQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
          + [Arbeta med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments.html)
@@ -164,12 +164,12 @@ ht-degree: 26%
          + [Använda associerat innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-assoc-content.html)
          + [Metadata – fragmentegenskaper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-metadata.html)
          + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-structure-tree.html)
-         + [Förhandsgranska - JSON-representation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-json-preview.html)
-      + Leverans-API {#delivery-api}
-         + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
+         + [Preview - JSON Representation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-json-preview.html)
+      + Delivery API {#delivery-api}
+         + [Content Fragments REST API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
          + [Content Fragments GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
-         + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)
-         + [Autentisering för AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-authentication-content-fragments.html)
+         + [AEM GraphQL API with Content Fragments - Sample Content and Queries](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)
+         + [Authentication for Remote AEM GraphQL Queries on Content Fragments](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-authentication-content-fragments.html)
    + Hybrid och SPA AEM {#hybrid}
       + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
       + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
@@ -210,10 +210,11 @@ ht-degree: 26%
    + [Integrera med Adobe Target](/help/sites-cloud/integrating/adobe-target.md)
    + [Konfigurera segmentering med ContextHub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/personalization/contexthub-segmentation.html)
 + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
+   + [Utöka AEM med Adobe Developer App Builder](developing/extending/app-builder.md)
    + [Utöka Experience Fragments](developing/extending/experience-fragments.md)
    + [Anpassa och utöka Content Fragments](developing/extending/content-fragments-customizing.md)
    + [Content Fragments – konfigurera komponenter för återgivning](developing/extending/content-fragments-configuring-components-rendering.md)
-   + Hantera sökning i Forms {#manage-search-forms}
+   + Manage Search Forms {#manage-search-forms}
       + [Konfigurera sökformulär](developing/extending/search-forms.md)
       + [Konfigurera sökfilter för Inkorgen](developing/extending/configure-inbox-search-rail.md)
    + [Konfigurera RTE-redigeraren](/help/implementing/developing/extending/rich-text-editor.md)

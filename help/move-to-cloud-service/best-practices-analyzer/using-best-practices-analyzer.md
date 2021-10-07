@@ -2,7 +2,7 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: 7688bc78-0ec2-4838-8ade-7db5788fb70f
-source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
+source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
 workflow-type: tm+mt
 source-wordcount: '2522'
 ht-degree: 42%
@@ -91,6 +91,7 @@ Du kan tvinga BPA att rensa sin cache och återskapa rapporten genom att klicka 
 Medan rapporten återskapas visas förloppet i procent som slutförts enligt bilden nedan.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic8.png)
+
 
 
 #### Använda filter i rapporten Best Practices Analyzer {#bpa-filters}

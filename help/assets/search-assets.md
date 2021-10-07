@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
+source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
 workflow-type: tm+mt
-source-wordcount: '4849'
+source-wordcount: '4848'
 ht-degree: 5%
 
 ---
@@ -157,7 +157,7 @@ Du kan söka efter resurser baserat på exakta värden för metadatafält, som t
 | Originalformat | skapare:John |
 | Plats | plats:NA |
 | Beskrivning | description:&quot;Sample Image&quot; |
-| Skapare | creatortool:&quot;Adobe Photoshop CC 2015&quot; |
+| Skapare | creatortool:&quot;Adobe Photoshop&quot; |
 | Copyright-ägare | copyrightowner:&quot;Adobe Systems&quot; |
 | Medarbetare | medarbetare:John |
 | Användningsvillkor | usageterms:&quot;CopyRights Reserved&quot; |

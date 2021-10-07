@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Upload,Asset Processing,Publishing,Asset Compute Microservices,Workflow
 role: User,Admin
 exl-id: 4cff355e-d12c-44c7-b519-4cc37f49e396
-source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
+source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Användare kan skapa bearbetningsprofiler för att automatisera följande kreati
 
 Så här använder du bearbetningsprofiler för att automatiskt skapa variationer:
 
-1. Kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/#support) för att få licensen.
+1. Kontakta [Adobe kundsupport](https://experienceleague.adobe.com/#support) för att få licensen.
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**.
 

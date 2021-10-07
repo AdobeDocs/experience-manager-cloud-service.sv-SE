@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
-source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
+source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '690'
 ht-degree: 2%
 
 ---
@@ -101,6 +101,10 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 >
 >Om en författare försöker publicera ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
+Så snart en modell har publicerats är den *låst* i skrivskyddat läge vid författaren. Detta syftar till att förhindra ändringar som kan leda till fel i befintliga GraphQL-scheman och frågor, särskilt i publiceringsmiljön. Den anges i konsolen av **Locked**.
+
+När modellen är **låst** (i läget SKRIVSKYDDAD) kan du se innehållet och strukturen i modellerna, men du kan inte redigera dem direkt. men du kan hantera **låsta**-modeller från antingen konsolen eller modellredigeraren.
+
 ## What&#39;s Next {#whats-next}
 
 Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modeller för innehållsfragment.
@@ -126,6 +130,8 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
       * [Publicera en innehållsfragmentmodell](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model)
 
       * [Avpublicera en innehållsfragmentmodell](/help/assets/content-fragments/content-fragments-models.md#unpublishing-a-content-fragment-model)
+
+      * [Låsta (publicerade) modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#locked-published-content-fragment-models)
 
 * Komma igång-guider
 

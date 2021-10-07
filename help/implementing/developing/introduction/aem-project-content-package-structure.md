@@ -2,9 +2,9 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
+source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
 workflow-type: tm+mt
-source-wordcount: '2880'
+source-wordcount: '2878'
 ht-degree: 12%
 
 ---
@@ -269,7 +269,7 @@ Lägg bara till `<filter root="/apps/<my-app>-packages"/>`-posterna för mappar 
 
 ## Bädda in paket från tredje part {#embedding-3rd-party-packages}
 
-Alla paket måste vara tillgängliga via [Adobe offentliga Maven-artefaktarkivet](https://repo.adobe.com/nexus/content/groups/public/com/adobe/) eller en tillgänglig offentlig, refererbar databas från tredje part för Maven-artefakter.
+Alla paket måste vara tillgängliga via [Adobe offentliga Maven-artefaktarkivet](https://repo1.maven.org/maven2/com/adobe/) eller en tillgänglig offentlig, refererbar databas från tredje part för Maven-artefakter.
 
 Om tredjepartspaketen finns i **Adobes offentliga Maven-databas** behövs ingen ytterligare konfiguration för att Adobe Cloud Manager ska kunna lösa artefakterna.
 

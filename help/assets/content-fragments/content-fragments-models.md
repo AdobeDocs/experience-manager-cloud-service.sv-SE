@@ -1,28 +1,32 @@
 ---
 title: Modeller för innehållsfragment
-description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
+description: Learn how Content Fragment Models serve as a foundation for your headless content in AEM and how to create Content Fragments with structured content.
 feature: Content Fragments
 role: User
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
+source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
 workflow-type: tm+mt
-source-wordcount: '2256'
-ht-degree: 4%
+source-wordcount: '2772'
+ht-degree: 3%
 
 ---
 
 # Modeller för innehållsfragment {#content-fragment-models}
 
+>[!NOTE]
+>
+>The [Locked (Published) Content Fragment Models](#locked-published-content-fragment-models) feature is in beta.
+
 Content Fragment Models i AEM definierar innehållsstrukturen för dina [innehållsfragment,](/help/assets/content-fragments/content-fragments.md) fungerar som en grund för ditt headless-innehåll.
 
-Så här använder du modeller för innehållsfragment:
+To use Content Fragment Models you:
 
-1. [Aktivera funktionen Content Fragment Model för instansen](/help/assets/content-fragments/content-fragments-configuration-browser.md)
+1. [Enable Content Fragment Model functionality for your instance](/help/assets/content-fragments/content-fragments-configuration-browser.md)
 1. [Skapa](#creating-a-content-fragment-model) och  [konfigurera](#defining-your-content-fragment-model) modeller för innehållsfragment
 1. [Aktivera ](#enabling-disabling-a-content-fragment-model) modeller för innehållsfragment för användning när du skapar innehållsfragment för användning när du skapar innehållsfragment
 1. [Tillåt dina modeller för innehållsfragment på ](#allowing-content-fragment-models-assets-folder) mapparna Resurser genom att konfigurera  **profiler**.
 
-## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
+## Creating a Content Fragment Model {#creating-a-content-fragment-model}
 
 1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Modeller för innehållsfragment**.
 1. Navigera till den mapp som passar din [konfiguration](/help/assets/content-fragments/content-fragments-configuration-browser.md).
@@ -32,15 +36,15 @@ Så här använder du modeller för innehållsfragment:
    >
    >Om [användningen av innehållsfragmentmodeller inte har aktiverats](/help/assets/content-fragments/content-fragments-configuration-browser.md) är alternativet **Skapa** inte tillgängligt.
 
-1. Ange **modelltitel**. Du kan också lägga till **taggar**, en **beskrivning** och välja **Aktivera modell** till [aktivera modellen](#enabling-disabling-a-content-fragment-model) om det behövs.
+1. Ange **modelltitel**. You can also add **Tags**, a **Description**, and select **Enable model** to [enable the model](#enabling-disabling-a-content-fragment-model) if required.
 
    ![titel och beskrivning](assets/cfm-models-02.png)
 
-1. Använd **Skapa** för att spara den tomma modellen. Ett meddelande visar att åtgärden lyckades, du kan välja **Öppna** om du vill redigera modellen direkt eller **Klar** om du vill återgå till konsolen.
+1. Use **Create** to save the empty model. Ett meddelande visar att åtgärden lyckades, du kan välja **Öppna** om du vill redigera modellen direkt eller **Klar** om du vill återgå till konsolen.
 
 ## Definiera innehållsfragmentmodellen {#defining-your-content-fragment-model}
 
-Modellen för innehållsfragment definierar effektivt strukturen för de resulterande innehållsfragmenten med en **[datatyper](#data-types)**. Med modellredigeraren kan du lägga till instanser av datatyperna och sedan konfigurera dem för att skapa de obligatoriska fälten:
+The content fragment model effectively defines the structure of the resulting content fragments using a selection of **[Data Types](#data-types)**. Med modellredigeraren kan du lägga till instanser av datatyperna och sedan konfigurera dem för att skapa de obligatoriska fälten:
 
 >[!CAUTION]
 >
@@ -68,7 +72,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
       ![datatyp till fält](assets/cfm-models-04.png)
 
-   * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet.
+   * Once a field has been added to the model, the right panel will show the **Properties** that can be defined for that particular data type. Här definierar du vad som krävs för fältet.
 
       * Många egenskaper är självförklarande. Mer information finns i [Egenskaper](#properties).
       * Om du skriver en **fältetikett** slutförs **egenskapsnamnet** automatiskt, om det är tomt, och den kan uppdateras manuellt senare.
@@ -106,28 +110,28 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Lägg till ett datum och/eller en tid
 * **Uppräkning**
    * Lägga till en uppsättning kryssrutor, alternativknappar eller listrutefält
-* **Taggar**
+* **Tags**
    * Tillåter fragmentförfattare att komma åt och markera taggområden
 * **Innehållsreferens**
-   * Hänvisningar till annat innehåll, oavsett typ. kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * References other content, of any type; can be used to [create nested content](#using-references-to-form-nested-content)
    * Om det finns referenser till en bild kan du välja att visa en miniatyrbild
 * **Fragmentreferens**
-   * Hänvisar till andra innehållsfragment. kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * References other content fragments; can be used to [create nested content](#using-references-to-form-nested-content)
    * Datatypen kan konfigureras så att fragmentförfattare kan:
       * Redigera det refererade fragmentet direkt.
       * Skapa ett nytt innehållsfragment, baserat på lämplig modell
-* **JSON-objekt**
+* **JSON Object**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
       * För att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
       * JSON skickas och skrivs ut som JSON i GraphQL.
       * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i innehållsfragmentredigeraren.
 * **Platshållare för flik**
-   * Tillåter introduktion av flikar som kan användas när innehållet i innehållsfragmentet redigeras.
+   * Allows the introduction of tabs for use when editing the Content Fragment content.
 Detta visas som en avgränsare i modellredigeraren, som avgränsar avsnitt i listan med innehållsdatatyper. Varje instans representerar början på en ny flik.
 I fragmentredigeraren visas varje instans som en flik.
 
       >[!NOTE]
-      Den här datatypen används endast för formatering, den ignoreras av det AEM GraphQL-schemat.
+      This data type is purely used for formatting, it is ignored by the AEM GraphQL schema.
 
 ## Egenskaper {#properties}
 
@@ -161,7 +165,7 @@ UniqueContent (för det specifika fältet) måste vara unikt för alla innehåll
    Ett **enradigt textfält** med namnet `Country` i modellen för innehållsfragment kan till exempel inte ha värdet `Japan` i två beroende innehållsfragment. En varning kommer att skickas när ett försök görs att utföra den andra instansen.
 
    >[!NOTE]
-   Unikitet säkerställs per språkrot.
+   Uniqueness is ensured per language root.
 
    >[!NOTE]
    Variationer kan ha samma *unika*-värde som varianter av samma fragment, men inte samma värde som används i andra variationer av fragment.
@@ -206,13 +210,13 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
    * Gör att du kan ta med/hämta strukturerade data.
 
       >[!NOTE]
-      Den här metoden är av särskilt intresse i samband med [leverans av Headless-innehåll med innehållsfragment med GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
-   * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
+      This method is of particular interest in conjunction with [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+   * Can be configured for one or multiple references (in the resulting fragment)..
 
 >[!NOTE]
 AEM har ett upprepningsskydd för:
-* Innehållsreferenser
-Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+* Content References
+This prevents the user from adding a reference to the current fragment. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
 * Fragmentreferenser i GraphQL
 Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
@@ -221,11 +225,11 @@ Om du skapar en djup fråga som returnerar flera innehållsfragment som referera
 
 Med innehållsreferensen kan du återge innehåll från en annan källa; till exempel bild- eller innehållsfragment.
 
-Förutom standardegenskaper kan du ange:
+In addition to standard properties you can specify:
 
 * **Rotsökväg** för refererat innehåll
 * De innehållstyper som kan refereras
-* Begränsningar för filstorlekar
+* Limitations for file sizes
 * Om det refereras till en bild:
    * Visa miniatyrbild
    * Bildbegränsningar för höjd och bredd
@@ -234,7 +238,7 @@ Förutom standardegenskaper kan du ange:
 
 ### Fragmentreferens (kapslade fragment) {#fragment-reference-nested-fragments}
 
-Fragmentreferensen refererar till ett eller flera innehållsfragment. Den här funktionen är särskilt intressant när du hämtar innehåll som ska användas i appen, eftersom den gör det möjligt att hämta strukturerade data med flera lager.
+The Fragment Reference references one, or more, content fragments. Den här funktionen är särskilt intressant när du hämtar innehåll som ska användas i appen, eftersom den gör det möjligt att hämta strukturerade data med flera lager.
 
 Till exempel:
 
@@ -256,7 +260,7 @@ type CompanyModel {
 ```
 
 >[!NOTE]
-Detta är särskilt intressant i samband med [Headless Content Delivery med hjälp av Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+This is of particular interest in conjunction with [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
 
 Förutom standardegenskaper kan du definiera:
 
@@ -324,18 +328,18 @@ En modell kan också inaktiveras så att:
 
 * Modellen är inte längre tillgänglig som grund för att skapa *nya* innehållsfragment.
 * Men:
-   * GraphQL-schemat genereras och är fortfarande frågningsbart (för att inte påverka JSON API).
-   * Alla innehållsfragment som är baserade på modellen kan fortfarande efterfrågas och returneras från GraphQL-slutpunkten.
-* Det går inte att referera till modellen längre, men befintliga referenser behålls orörda och kan fortfarande frågas och returneras från GraphQL-slutpunkten.
+   * The GraphQL schema keeps being generated and is still queryable (to avoid impacting JSON API).
+   * Any Content Fragments based of the model can still be queried and returned from the GraphQL endpoint.
+* The model cannot be referenced anymore, but existing references are kept untouched, and can still be queried and returned from the GraphQL endpoint.
 
-Om du vill inaktivera en modell som är flaggad som **Aktiverad** använder du alternativet **Inaktivera** från antingen:
+To disable a Model that is flagged as **Enabled** you use the **Disable** option from either:
 
 * Det övre verktygsfältet när den obligatoriska modellen är markerad.
 * Motsvarande snabbåtgärd (mouse-over the required Model).
 
 ![Inaktivera en aktiverad modell](assets/cfm-status-disable.png)
 
-## Tillåt modeller för innehållsfragment i resursmappen {#allowing-content-fragment-models-assets-folder}
+## Allowing Content Fragment Models on your Assets Folder {#allowing-content-fragment-models-assets-folder}
 
 Om du vill implementera innehållsstyrning kan du konfigurera **principer** i resursmappen för att styra vilka innehållsfragmentmodeller som tillåts för att skapa fragment i den mappen.
 
@@ -354,9 +358,9 @@ Så här konfigurerar du **principer** för **Tillåtna modeller för innehålls
 
    * **Tillåtna modeller för innehållsfragment efter sökväg**
 
-      Flera modeller kan tillåtas.
+      Multiple models can be allowed.
 
-   * **Tillåtna modeller för innehållsfragment efter tagg**
+   * **Allowed Content Fragment Models by Tag**
 
       Flera modeller kan tillåtas.
    ![Princip för innehållsfragmentmodell](assets/cfm-model-policy-assets-folder.png)
@@ -411,28 +415,82 @@ Så här avpublicerar du en innehållsfragmentmodell:
 1. Markera modellen, följt av **Avpublicera** från verktygsfältet.
 Publiceringsstatusen anges i konsolen.
 
-<!--
-## Locked Content Fragment Models {#locked-content-fragment-models}
+Om du försöker avpublicera en modell som för närvarande används av ett eller flera fragment visas en felvarning om detta:
 
-This feature provides governance for Content Fragment Models that have been published. 
+![Felmeddelande för innehållsfragmentmodell när en modell som används avpubliceras](assets/cfm-model-unpublish-error.png)
 
-The challenge:
+Meddelandet föreslår att du kontrollerar panelen [Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references) för att ytterligare undersöka:
 
-* Content Fragment Models determine the schema for GraphQL queries in AEM. 
+![Content Fragment Model in References](assets/cfm-model-references.png)
 
-  * AEM GraphQL schemas are created as soon as a Content Fragment Model is created, and they can exist on both author and publish environments. 
+## Låsta (publicerade) modeller för innehållsfragment {#locked-published-content-fragment-models}
 
-  * Schemas on publish are the most critical as they provide the foundation for live delivery of Content Fragment content in JSON format.  
+>[!NOTE]
+Funktionen Låsta (publicerade) modeller för innehållsfragment är i betaversion.
 
-* Problems can occur when Content Fragment Models are modified, or in other words edited. This means that the schema changes, which in turn may affect existing GraphQL queries. 
+Den här funktionen tillhandahåller styrning för publicerade modeller för innehållsfragment.
 
-* Adding new fields to a Content Fragment Model should (typically) not have any detrimental effects. However, modifying existing data fields (for example, their name) or deleting field definitions, will break existing GraphQL queries when they are requesting these fields. 
+### Utmaningen {#the-challenge}
 
-The solution:
+* Content Fragment Models bestämmer schemat för GraphQL-frågor i AEM.
 
-* To make users aware of the risks when editing models that are already used for live content delivery (i.e. that have been published). Also, to avoid unintended changes. As either of these might break queries if the modified models are re-published. 
+   * AEM GraphQL-scheman skapas så snart en Content Fragment Model skapas, och de kan finnas både i författar- och publiceringsmiljöer.
 
-* To address this issue, Content Fragment Models are put in a READ-ONLY mode on author - as soon as they have been published. 
+   * Publiceringsscheman är de viktigaste eftersom de utgör grunden för leverans av innehåll i innehållsfragment i JSON-format.
 
-* In READ-ONLY mode, users can still see contents and structure of models but they cannot edit them. 
--->
+* Problem kan uppstå när modeller för innehållsfragment ändras, eller med andra ord redigeras. Det innebär att schemat ändras, vilket i sin tur kan påverka befintliga GraphQL-frågor.
+
+* Att lägga till nya fält i en innehållsfragmentmodell bör (vanligtvis) inte ha några skadliga effekter. However, modifying existing data fields (for example, their name) or deleting field definitions, will break existing GraphQL queries when they are requesting these fields.
+
+### Krav {#the-requirements}
+
+* To make users aware of the risks when editing models that are already used for live content delivery - in other words, models that have been published).
+
+* För att undvika oönskade ändringar.
+
+Någon av dessa kan göra att frågor bryts om de ändrade modellerna publiceras på nytt.
+
+### Lösningen {#the-solution}
+
+För att åtgärda dessa problem är Content Fragment Models *låst* i READ-ONLY-läge när de har skapats - så snart de har publicerats. This is indicated by **Locked**:
+
+![Kort för låst innehållsfragmentmodell](assets/cfm-model-locked.png)
+
+När modellen är **låst** (i läget SKRIVSKYDDAD) kan du se innehållet och strukturen i modellerna, men du kan inte redigera dem.
+
+You can manage **Locked** models from either the console, or the model editor:
+
+* Konsol
+
+   I konsolen kan du hantera läget SKRIVSKYDDAD med åtgärderna **Lås upp** och **Lås** i verktygsfältet:
+
+   ![Verktygsfält för låst innehållsfragmentmodell](assets/cfm-model-locked.png)
+
+   * Du kan **Lås upp** en modell om du vill aktivera redigeringar.
+
+      Om du väljer **Lås upp** visas en varning och du måste bekräfta åtgärden **Lås upp**:
+      ![Meddelande när innehållsfragmentmodellen låses upp](assets/cfm-model-unlock-message.png)
+
+      Du kan sedan öppna modellen för redigering.
+
+   * Du kan även **låsa** modellen efteråt.
+   * Om du publicerar om modellen återställs den omedelbart till läget **Låst** (SKRIVSKYDDAT).
+
+* Modellredigerare
+
+   * När du öppnar en låst modell får du en varning och tre åtgärder: **Avbryt**, **Visa skrivskyddat**, **Redigera**:
+
+      ![Meddelande när en låst innehållsfragmentmodell visas](assets/cfm-model-editor-lock-message.png)
+
+   * Om du väljer **Visa skrivskyddat** kan du se modellens innehåll och struktur:
+
+      ![Visa skrivskyddad - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-view-only.png)
+
+   * Om du väljer **Redigera** kan du redigera och spara dina uppdateringar:
+
+      ![Redigera - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-edit.png)
+
+      >[!NOTE]
+      Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
+
+   * **** Avbryt återgår till konsolen.
