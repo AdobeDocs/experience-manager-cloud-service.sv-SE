@@ -2,9 +2,9 @@
 title: Kontrollerar DNS-poststatus
 description: Kontrollerar DNS-poststatus
 exl-id: 76ca1584-e21d-4e3a-a08a-82b2779167cf
-source-git-commit: 17dffaae3beac678ce89b5fde7abea3b2dff86a8
+source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av föl
 upptäcktes inte DNS-status kommer inte att identifieras förrän det anpassade domännamnet har verifierats och distribuerats. Den här statusen visas även när ditt anpassade domännamn håller på att tas bort.
 
 * **DNS-matchningen**
-är felaktig Detta indikerar att konfigurationen av DNS-poster inte har matchats/pekats över än eller är felaktig.
+är felaktig Detta indikerar att konfigurationen av DNS-poster inte har matchats/pekats över än eller är felaktig. En Adobe-representant meddelas automatiskt.
 
    >[!NOTE]
    >Du måste konfigurera antingen en `CNAME` eller `A-record` genom att följa motsvarande instruktioner. Mer information finns i Konfigurera DNS-inställningar. När du är klar måste du välja ikonen **lös igen** bredvid statusen.

@@ -1,8 +1,8 @@
 ---
-source-git-commit: 87306ae90f6411d2d4e48f3afdb66e5e848073fe
+source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 4%
+source-wordcount: '752'
+ht-degree: 5%
 
 ---
 # Riktlinjer för att bidra till Adobe Experience Manager-dokumentation
@@ -37,9 +37,9 @@ Undantag från den här regeln gäller versionsinformationen där kända problem
 
 Alla idéer du kan behöva förbättra AEM dokumentation är välkomna som bidrag. Kommentarer, utgåvor och pull-begäranden är dock endast avsedda för *bidrag*. De är inte avsedda att användas för att besvara frågor om hur du använder AEM, implementerar ditt AEM eller löser tekniska problem.
 
-Frågor om hur du använder AEM eller tekniska fel som du kan ha gjort ska rapporteras via den normala supportprocessen via [Experience Manager supportportal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) eller diskuteras i [Experience Manager community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Frågor om hur du använder AEM eller tekniska fel som du har kan ha rapporterats via den normala supportprocessen via [Experience Cloud Enterprise Support-portalen](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) eller diskuteras i [Experience Manager-communityn](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager).
 
-***AEM är inte en ersättning för Adobe*** kundsupport och eventuella bidrag som söker svar på supportrelaterade frågor kommer att refuseras.
+***AEM bidrag till dokumentationen ersätter inte Adobe Customer*** Careoch eventuella bidrag som söker svar på frågor som rör support kommer att refuseras.
 
 ### Bidragen ska tydligt hänvisa till berörda dokumentationssidor.
 

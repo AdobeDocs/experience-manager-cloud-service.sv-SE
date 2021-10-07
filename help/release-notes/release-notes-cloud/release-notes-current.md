@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cl
 description: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: e9fa68869ca92945c44a79b783fbc8a53a875e81
+source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1627'
 ht-degree: 0%
 
 ---
@@ -25,89 +25,71 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] aktuell version (2021.9.0) är 6 oktober 2021.
-Följande version (2021.10.0) är den 28 oktober 2021.
+Lanseringsdatumet [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] aktuell version (2021.8.0) är 26 augusti 2021.
+Följande version (2021.9.0) är den 4 oktober 2021.
 
 ## Släpp video {#release-video}
 
-Titta på videon [Versionsöversikt](https://video.tv.adobe.com/v/337381) från september 2021 om du vill se en sammanfattning av de nya funktionerna.
-
-## [!DNL Experience Manager Sites] som  [!DNL Cloud Service] {#sites}
-
-### Ny funktion i betaversionskanalen [!DNL Sites] {#sites-prerelease-features}
-
-* Modeller för innehållsfragment anges nu automatiskt i skrivskyddat läge när de har publicerats, för att undvika att direktsända API-frågor bryts efter att en redigerad modell har publicerats om. Användarna får en varning när de försöker redigera en publicerad modell. Du kan redigera när du har godkänt varningen.
+Titta på videon [Versionsöversikt från augusti 2021](https://video.tv.adobe.com/v/336277) om du vill se en sammanfattning av de nya funktionerna.
 
 ## [!DNL Experience Manager Assets] som  [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
+
+* När användarna delar digitala resurser som en länk kan de kopiera URL:en till Urklipp direkt. Förbättringen gör att du kan dela resurser snabbare och bekvämare. Den här funktionen gör det möjligt att dela material snabbare och smidigt.
+
+   ![Alternativet Kopiera URL när du delar en resurs som en länk](/help/assets/assets/link-share-copy-URL-option.png)
+   *Bild: När du delar en resurs som en länk kan du nu kopiera URL-adressen och dela den separat.*
+
+* När du överför TXT-filer genererar resursens mikrotjänster automatiskt en miniatyrbild. PNG-miniatyrbilden är en återgivning av TXT-filen som gör det lättare för användare att identifiera innehållet eller filerna i viss utsträckning, utan att öppna filerna. Den här funktionen kräver ingen konfiguration och fungerar som standard.
+
+   ![En återgivning av en TXT-fil genereras automatiskt av  [!DNL Assets] i PNG-format](/help/assets/assets/thumbnail-rendition-txt-file.png)
+   *Bild: En återgivning av en TXT-fil genereras automatiskt så att du lättare kan identifiera filen utan att öppna den.*
+
+### Ny funktion i betaversionskanalen [!DNL Assets] {#assets-prerelease-features}
 
 * Användarna kan nu sortera de resurser som visas i sökresultaten i kolumn- och kortvyn. Sorteringen fungerar på kolumnerna Namn, Skapad, Ändrad eller Ingen.
 
    ![Sortera sökresultaten  [!DNL Assets] i kolumn- och kortvyn](/help/assets/assets/sort-searched-assets.png)
    *Bild: Sortera sökresultaten  [!DNL Assets] i kolumn- och kortvyn.*
 
-* Ett nytt API introduceras för programmässig bearbetning med hjälp av objektmikrotjänster. Utvecklare kan nu använda en befintlig bearbetningsprofil på mappnivå på en eller flera specifika resurser i en mapp. Bearbetningsprofilen tillämpas baserat på uppdateringar av anpassade metadataegenskaper. Se `AssetProcessor` i [[!DNL Experience Manager] API-referensen](https://www.adobe.io/experience-manager/reference-materials/). Som tidigare är det möjligt att [använda resursmikrotjänster från användargränssnittet](/help/assets/asset-microservices-configure-and-use.md).
+### Fel som har korrigerats i [!DNL Assets] {#assets-bugs-fixed}
 
-<!-- Leave this commented.
-
-### New feature in the [!DNL Assets] prerelease channel {#assets-prerelease-features}
-
-Apparently, no new Assets features in Sep beta channel.
-A/V transcription feature via CQ-4303854 has moved to Oct beta now.
-
-### Bugs fixed in [!DNL Assets] {#assets-bugs-fixed}
-
-No customer-reported bugs fixed in Sep release.
-CQ-4328183 was not reported on CS so not documented here.
--->
+* När en medlem i medverkargruppen navigerar till [!DNL Assets]-konsolen skapas en extra `POST`-begäran för att försöka skapa en samling. Denna begäran är inte obligatorisk, den misslyckas på grund av behörighetsproblem och skapar många fel i loggarna. (CQ-4328856)
+* När användare visar en resurs och väljer [!UICONTROL Timeline] på popup-menyn i den vänstra panelen visas ett fel. I loggarna loggas många varningar på grund av en felaktig fråga. (CQ-4328919)
 
 ## [!DNL Experience Manager Forms] som  [!DNL Cloud Service] {#forms}
 
-### Nyheter i [!DNL Forms] {#what-is-new-forms-sep-2021}
+### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Använd Adobe Sign-roller i ett adaptivt format**: Adobe Sign för företags- och företagsnivåer har möjlighet att utöka rollerna för avtalsmottagare, utöver bara signeraren, så att de bättre motsvarar deras arbetsflödesbehov. Du kan nu [aktivera varje mottagare av avtal att konfigurera sin roll i ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/use-adobe-sign/working-with-adobe-sign.html#addsignerstoanadaptiveform), med signerare som standardroll.
+<!-- * Automated Forms Conversion service can [convert PDF Forms in Italian and Portuguese language](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?#language-specific-meta-model) to Adaptive Forms. -->
 
-* **Analytics for Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+* AEM Archetype-projekt för Forms as a Cloud Service innehåller nu [formulärdatamodeller för Microsoft Dynamics och Salesforce.com](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?#forms-cloud-service-local-development-environment).
 
-* **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller direkt konfiguration av datakällor och datamodeller för Microsoft Dynamics och Salesforce, vilket gör det  [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett anpassat formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-msdynamics-salesforce.html?lang=en).
+* **Acroform-based Document of Record**: AEM Forms as a Cloud Service har stöd för att använda  [Adobe Acrobat Form PDF (Acrobat PDF) ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för arkivhandlingar förutom XFA-baserad formulärmall.
 
-* **E-signera ett anpassat formulär med DocuSign:** Du kan använda DocuSign för att e-signera ett anpassat formulär. Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär. Du kan installera det paket som är tillgängligt på Programvarudistribution för att importera sändningsåtgärden.
+* **Microsoft Azure-dataarkivanslutning**: Du kan nu  [ansluta formulärdatamodellen till Microsoft Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-azure-storage.html). Det gör att du kan hämta och lagra adaptiva formulärdata till Microsoft Azure Storage som en BLOB.
 
-### Betafunktioner i [!DNL Forms] {#sep-what-is-new-forms-prerelease}
+### Betafunktion i [!DNL Forms] {#aug-what-is-new-forms-prerelease}
 
 * **Enhetlig lagringskontakt:** Använd Enhetlig lagringskontakt för att externalisera processdata i kundhanterade databaser. Du kan till exempel
    * Möjliggör Forms Portals funktioner för att spara och återuppta samt lagra adaptiva formulärutkast i ett kundhanterat datalager.
    * Lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
 
-* **[!DNL AEM Forms as a Cloud Service - Communications]**:  [Communication ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/aem-forms-cloud-service-communications.html?lang=en) API - använd XDP-mallar och XML-data för att generera trycksaker i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
+* **[!DNL AEM Forms as a Cloud Service - Communications]**:  [Communication ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/aem-forms-cloud-service-communications.html) API - använd XDP-mallar och XML-data för att generera trycksaker i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera dokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
    * Generera PDF-filer från ett XFA-formulär PDF och Adobe Acrobat-formulär.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för betaprogrammet.
 
-## CIF-tillägg {#cloud-services-cif}
+### Nya funktioner i prerelease Channel [!DNL Forms] {#prerelease-features-forms}
 
-### Vad är nytt? {#what-is-new-cif}
+* **Använd Adobe Sign-roller i ett adaptivt format**: Adobe Sign för företags- och företagsnivåer har möjlighet att utöka rollerna för avtalsmottagare, utöver bara signeraren, så att de bättre motsvarar deras arbetsflödesbehov. Du kan nu [aktivera varje mottagare av avtal att konfigurera sin roll i ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/use-adobe-sign/working-with-adobe-sign.html?#addsignerstoanadaptiveform), med signerare som standardroll.
 
-* Ny flik för associerat e-handelsinnehåll i Sites editor ökar redigeringens effektivitet genom att snabbt få tillgång till relevant AEM för det aktuella sammanhanget
+* **Analytics for Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
-   ![Associerat e-handelsinnehåll](/help/assets/CIF/associated-commerce-content.png)
-
-* Förbättrat användargränssnitt för produktväljare för bättre användarupplevelse, ökad effektivitet och stöd för komplexa produktkataloger
-
-   ![Ny produktväljare](/help/assets/CIF/product-picker.png)
-
-* Respektera egenskapen include_in_menu i navigeringskomponenten
-
-### Felkorrigeringar {#bug-fixes-cif}
-
-* Borttagning av menycache fungerar inte som förväntat
-
-* JS-fel under AEM CS-driftsättningssteg och när komponenter på klientsidan inte används
-
-* Det går inte att skapa CIF-molnkonfigurationen i mappar som har en sling:configs-nod
+* **Anslut enkelt AEM Forms till Microsoft Dynamics och Salesforce.com**: Tjänsten tillhandahåller direkt konfiguration av datakällor och datamodeller för Microsoft Dynamics och Salesforce.com, vilket gör det  [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce.com som datakällor för ett anpassningsbart formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-msdynamics-salesforce.html).
 
 ## [!DNL Experience Manager Screens] som  [!DNL Cloud Service] {#screens}
 
@@ -127,27 +109,16 @@ Mer information finns i [Stöd för miniatyrbilder för videoklipp](https://expe
 
 * Associerade taggposter togs inte bort när spellistor togs bort.
 
-## [!DNL Experience Manager as a Cloud Service] Foundation {#foundation}
 
-### Nya funktioner i [!DNL Experience Manager as a Cloud Service] {#foundation-features}
+## CIF-tillägg {#cloud-services-cif}
 
-**Avancerat nätverksbyggande**
+### Vad är nytt? {#what-is-new-cif}
 
->[!INFO]
->
->Den avancerade nätverksfunktionen ingår i version 2021.9.0 och kommer att aktiveras för kunder i mitten av oktober.
+* Nytt användargränssnitt för kategoriväljare för förbättrad användarupplevelse, ökad effektivitet och bättre stöd för komplexa produktkataloger
 
-[!DNL Adobe Experience Manager] som  [!DNL Cloud Service] nu erbjuder flera typer av avancerade nätverksfunktioner, bland annat:
+   ![Ny kategoriväljare](/help/assets/CIF/category-picker.png)
 
-* Flexibel portutgång för att utlösa trafik från icke-standardiserade portar. Nu möjligt utan att kontakta Adobe Support.
-* Dedikerad IP-adress för utgångar för att ta ut trafik från AEM as a Cloud Service från en unik IP-adress, som nu stöder alla portar.
-* VPN för att säkra trafiken mellan din infrastruktur och AEM as a Cloud Service.
-
-Läs [dokumentationen](/help/security/configuring-advanced-networking.md) om du vill ha mer information, inklusive hur du självbetjänar avancerade nätverk med hjälp av API:er för Cloud Manager.
-
-**Indexoptimeringar**
-
-För att förbättra prestanda för sökfrågor och indexering ingår inte fulltextindexet lucene-2 i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] från den här versionen. För att ta bort detta fulltextindex i AEM miljöer i enlighet med AEM kunder arbetar Adobe Engineering individuellt och aktivt med kunderna för att få ett mjukt och hållbart borttagande av Lucene-fulltextindexet. Gå till [!DNL Adobe Experience Manager] som [!DNL Cloud Service] [dokumentation](/help/operations/indexing.md#index-optimizations) för mer information och kontakta vår support direkt om du har några frågor.
+* Bättre stöd för A11Y för CIF Core-komponenter
 
 ## Cloud Manager {#cloud-manager}
 
@@ -170,38 +141,57 @@ Nästa version är planerad till 7 oktober 2021.
 
 * Om du klickar direkt på programkortet går du nu till sidan Översikt över Cloud Manager.
 
+
 ### Felkorrigeringar {#bug-fixes-sept}
 
 * Användaren kommer nu att se ett mer begripligt meddelande när han/hon försöker lägga till ett nytt IP-Tillåtelselista i ett program som har nått det högsta tillåtna antalet IP-Tillåtelselista som kan konfigureras.
 
 * Fel URL kopierades när menyalternativet Kopiera URL valdes på skärmen Databaser.
 
-## Cloud Acceleration Manager {#cam}
+## Releasedatum {#release-date-cm-aug}
 
-### Releasedatum {#release-date-october-cam}
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.8.0 är 12 augusti 2021.
 
-Releasedatum för Cloud Acceleration Manager är 4 oktober 2021.
+### Nyheter {#what-is-new-aug}
 
-### Vad är nytt? {#what-is-new-cam}
+* Cloud Service kan nu visa serviceavtalsrapporter (SLA) i Cloud Manager. Detta kommer att göras tillgängligt stegvis under de närmaste månaderna.
+Mer information finns i [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sla-reporting.html).
 
-* Med Cloud Acceleration Manager kan användarna nu visa BPA-rapporter i en förhandsgranskning som kan skrivas ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela. Se steg 6 och 7 i [Using Best Practices Analysis Card](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=en#best-practices-analysis).
+* Typen och allvarlighetsgraden för kvalitetsreglerna IndexType och `IndexDamAssetLucene` har ändrats. Dessa är nu båda Bugs of Blocker *serverity*.
+
+* Nya kvalitetsregler för Oak-index har införts för att omfatta asynkrona konfigurationer och kodkonfigurationer.
+
+* Öka det högsta antalet SSL-certifikat per program till 50.
+
+* Självbetjäning som gör att användare kan skapa och hantera flera databaser via användargränssnittet i Cloud Manager.
+
+* SonarQube läste historikdata för Git i onödan. På stora kodbaser kan detta leda till en onödig prestandaförbättring.
+
+* Det finns nu ett API för att göra Maven-beroendecachen ogiltig per pipeline.
+
+* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 29.
+
+### Felkorrigeringar {#bug-fixes-aug}
+
+* Status för tillgänglig uppdatering ska inte visas när den senaste versionen är mindre än den aktuella versionen.
+
+* Inledande introduktion misslyckades för nya organisationer med mycket långa namn.
+
+* När en pipeline aktiveras två gånger av någon anledning resulterar det i att en av körningarna misslyckas med *det går inte att uppdatera pipelinekörningsstatus*-fel.
 
 ## Content Transfer Tool {#content-transfer-tool}
 
 ### Releasedatum {#release-date-ctt-latest}
 
-Releasedatum för innehållsöverföringsverktyget v1.6.0 är 4 oktober 2021.
+Releasedatum för Content Transfer Tool v1.5.6 är 11 augusti 2021.
 
-### Nyheter {#what-is-new-ctt}
+### Felkorrigeringar {#bug-fixes-ctt}
 
-* Förbättrad användarmappning med en förenklad användarupplevelse, inklusive följande funktioner som listas nedan. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#using-user-mapping-tool).
-   * Testa anslutningen till API:t för användarhantering innan du kör användarmappningen
-   * Hoppa över fel utan problem och fortsätt med aktiviteten Användarmappning
-   * Användarmappning misslyckas inte längre om åtkomsttoken upphör att gälla (efter 24 timmar). Användarmappning kan köras igen från den plats där den senast stoppades.
+* I vissa fall migrerades inte alla användare till målinstansen. För att få den här korrigeringen krävs CTT v1.5.6 tillsammans med aem-ethos-tools 1.2.354 eller senare version på AEM as a Cloud Service målinstansen.
 
-* Om du vill öka CTT-tillförlitligheten kan innehåll hämtas till antingen Author-instansen eller Publish-instansen åt gången.
+* Knappen **Stoppa inmatning** inaktiverades under hämtning till Publish-instansen. Detta är inte nödvändigt eftersom det inte finns något steg för monoåterställning vid publiceringsintag.
 
-* När versioner inkluderas inkluderas sökvägen `/var/audit` automatiskt för att migrera granskningshändelser.
+* CTT rensade inte katalogen `/tmp` efter en lyckad extrahering. Detta kan leda till problem med diskutrymmet.
 
 ## Best Practices Analyzer {#best-practices-analyzer}
 
@@ -218,3 +208,4 @@ Releasedatum för Best Practices Analyzer v2.1.18 är 2 september 2021.
 ### Felkorrigeringar {#bug-fixes-bpa}
 
 * BPA upptäckte felaktigt förekomsten av Commerce Integration Framework.
+

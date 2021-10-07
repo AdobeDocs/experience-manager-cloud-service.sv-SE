@@ -4,18 +4,14 @@ description: Lär dig hur Content Fragment Models fungerar som grund för ditt h
 feature: Content Fragments
 role: User
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: ce6741f886cc87b1be5b32dbf34e454d66a3608b
+source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
 workflow-type: tm+mt
-source-wordcount: '2772'
-ht-degree: 3%
+source-wordcount: '2256'
+ht-degree: 4%
 
 ---
 
 # Modeller för innehållsfragment {#content-fragment-models}
-
->[!NOTE]
->
->Funktionen [Låsta (publicerade) modeller för innehållsfragment](#locked-published-content-fragment-models) är i betaversion.
 
 Content Fragment Models i AEM definierar innehållsstrukturen för dina [innehållsfragment,](/help/assets/content-fragments/content-fragments.md) fungerar som en grund för ditt headless-innehåll.
 
@@ -415,82 +411,28 @@ Så här avpublicerar du en innehållsfragmentmodell:
 1. Markera modellen, följt av **Avpublicera** från verktygsfältet.
 Publiceringsstatusen anges i konsolen.
 
-Om du försöker avpublicera en modell som för närvarande används av ett eller flera fragment visas en felvarning om detta:
+<!--
+## Locked Content Fragment Models {#locked-content-fragment-models}
 
-![Felmeddelande för innehållsfragmentmodell när en modell som används avpubliceras](assets/cfm-model-unpublish-error.png)
+This feature provides governance for Content Fragment Models that have been published. 
 
-Meddelandet föreslår att du kontrollerar panelen [Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references) för att ytterligare undersöka:
+The challenge:
 
-![Content Fragment Model in References](assets/cfm-model-references.png)
+* Content Fragment Models determine the schema for GraphQL queries in AEM. 
 
-## Låsta (publicerade) modeller för innehållsfragment {#locked-published-content-fragment-models}
+  * AEM GraphQL schemas are created as soon as a Content Fragment Model is created, and they can exist on both author and publish environments. 
 
->[!NOTE]
-Funktionen Låsta (publicerade) modeller för innehållsfragment är i betaversion.
+  * Schemas on publish are the most critical as they provide the foundation for live delivery of Content Fragment content in JSON format.  
 
-Den här funktionen tillhandahåller styrning för publicerade modeller för innehållsfragment.
+* Problems can occur when Content Fragment Models are modified, or in other words edited. This means that the schema changes, which in turn may affect existing GraphQL queries. 
 
-### Utmaningen {#the-challenge}
+* Adding new fields to a Content Fragment Model should (typically) not have any detrimental effects. However, modifying existing data fields (for example, their name) or deleting field definitions, will break existing GraphQL queries when they are requesting these fields. 
 
-* Content Fragment Models bestämmer schemat för GraphQL-frågor i AEM.
+The solution:
 
-   * AEM GraphQL-scheman skapas så snart en Content Fragment Model skapas, och de kan finnas både i författar- och publiceringsmiljöer.
+* To make users aware of the risks when editing models that are already used for live content delivery (i.e. that have been published). Also, to avoid unintended changes. As either of these might break queries if the modified models are re-published. 
 
-   * Publiceringsscheman är de viktigaste eftersom de utgör grunden för leverans av innehåll i innehållsfragment i JSON-format.
+* To address this issue, Content Fragment Models are put in a READ-ONLY mode on author - as soon as they have been published. 
 
-* Problem kan uppstå när modeller för innehållsfragment ändras, eller med andra ord redigeras. Det innebär att schemat ändras, vilket i sin tur kan påverka befintliga GraphQL-frågor.
-
-* Att lägga till nya fält i en innehållsfragmentmodell bör (vanligtvis) inte ha några skadliga effekter. Om du ändrar befintliga datafält (till exempel namn) eller tar bort fältdefinitioner bryts befintliga GraphQL-frågor när de begär dessa fält.
-
-### Krav {#the-requirements}
-
-* Att göra användarna medvetna om riskerna vid redigering av modeller som redan används för leverans av direktsänt innehåll, med andra ord, publicerade modeller).
-
-* För att undvika oönskade ändringar.
-
-Någon av dessa kan göra att frågor bryts om de ändrade modellerna publiceras på nytt.
-
-### Lösningen {#the-solution}
-
-För att åtgärda dessa problem är Content Fragment Models *låst* i READ-ONLY-läge när de har skapats - så snart de har publicerats. Detta anges av **Låst**:
-
-![Kort för låst innehållsfragmentmodell](assets/cfm-model-locked.png)
-
-När modellen är **låst** (i läget SKRIVSKYDDAD) kan du se innehållet och strukturen i modellerna, men du kan inte redigera dem.
-
-Du kan hantera **låsta**-modeller från antingen konsolen eller modellredigeraren:
-
-* Konsol
-
-   I konsolen kan du hantera läget SKRIVSKYDDAD med åtgärderna **Lås upp** och **Lås** i verktygsfältet:
-
-   ![Verktygsfält för låst innehållsfragmentmodell](assets/cfm-model-locked.png)
-
-   * Du kan **Lås upp** en modell om du vill aktivera redigeringar.
-
-      Om du väljer **Lås upp** visas en varning och du måste bekräfta åtgärden **Lås upp**:
-      ![Meddelande när innehållsfragmentmodellen låses upp](assets/cfm-model-unlock-message.png)
-
-      Du kan sedan öppna modellen för redigering.
-
-   * Du kan även **låsa** modellen efteråt.
-   * Om du publicerar om modellen återställs den omedelbart till läget **Låst** (SKRIVSKYDDAT).
-
-* Modellredigerare
-
-   * När du öppnar en låst modell får du en varning och tre åtgärder: **Avbryt**, **Visa skrivskyddat**, **Redigera**:
-
-      ![Meddelande när en låst innehållsfragmentmodell visas](assets/cfm-model-editor-lock-message.png)
-
-   * Om du väljer **Visa skrivskyddat** kan du se modellens innehåll och struktur:
-
-      ![Visa skrivskyddad - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-view-only.png)
-
-   * Om du väljer **Redigera** kan du redigera och spara dina uppdateringar:
-
-      ![Redigera - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-edit.png)
-
-      >[!NOTE]
-      Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
-
-   * **** Avbryt återgår till konsolen.
+* In READ-ONLY mode, users can still see contents and structure of models but they cannot edit them. 
+-->

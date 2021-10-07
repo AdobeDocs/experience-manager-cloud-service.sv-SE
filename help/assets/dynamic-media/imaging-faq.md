@@ -4,7 +4,7 @@ description: Läs om hur Smart Imaging med Adobe Sensei AI använder varje anvä
 feature: Asset Management,Renditions
 role: User
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: 87306ae90f6411d2d4e48f3afdb66e5e848073fe
+source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
 workflow-type: tm+mt
 source-wordcount: '2573'
 ht-degree: 0%
@@ -213,10 +213,10 @@ Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (ina
       Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
    1. Ange om du vill att den ska fungera över HTTP/2.
 
-1. Adobe kundsupport lägger till dig i kundväntelistan för Smart Imaging baserat på i vilken ordning begäranden skickas.
-1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera och ange ett måldatum.
+1. Adobe kundtjänst lägger till dig i väntelistan för Smart Imaging baserat på i vilken ordning begäranden skickas.
+1. När Adobe är redo att hantera din begäran kontaktar kundtjänst dig för att koordinera och ange ett måldatum.
 1. **Valfritt**: Om du vill kan du testa Smart Imaging i Förproduktion innan Adobe publicerar den nya funktionen.
-1. Du meddelas när du är klar av kundsupporten.
+1. Du meddelas när du är klar av Kundtjänst.
 1. För att maximera prestandaförbättringarna av Smart Imaging rekommenderar Adobe att TTL (Time To Live) ställs in på 24 timmar eller längre. TTL-värdet definierar hur länge resurser cachas av CDN. Så här ändrar du den här inställningen:
 
    1. Om du använder Dynamic Media Classic går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]**-värdet till 24 eller längre.
@@ -224,7 +224,7 @@ Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (ina
 
 ## När kan jag förvänta mig att mitt konto ska aktiveras med Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
-Förfrågningar behandlas i den ordning som de tas emot av kundsupporten, enligt väntelistan.
+Förfrågningar behandlas i den ordning som de tas emot av kundtjänst, enligt väntelistan.
 
 >[!NOTE]
 >

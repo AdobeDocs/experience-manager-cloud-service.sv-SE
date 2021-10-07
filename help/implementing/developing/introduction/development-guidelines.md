@@ -2,10 +2,10 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: bcb3beb893d5e8aa6d5911866e78cb72fe7d4ae0
+source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
 workflow-type: tm+mt
-source-wordcount: '2073'
-ht-degree: 2%
+source-wordcount: '2375'
+ht-degree: 1%
 
 ---
 
@@ -169,6 +169,68 @@ Kunderna har inte tillgång till utvecklarverktyg för staging- och produktionsm
 
 Adobe övervakar programmets prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte programmått beaktas.
 
+## IP-adress för dedikerad utpressning {#dedicated-egress-ip-address}
+
+På begäran kommer AEM as a Cloud Service att tillhandahålla en statisk, dedikerad IP-adress för utgående HTTP-trafik (port 80) och HTTPS-trafik (port 443) som programmeras i Java-kod.
+
+### Fördelar {#benefits}
+
+Den här dedikerade IP-adressen kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM as a Cloud Service som erbjuder en tillåtelselista av IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från kundens AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
+
+Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM as a Cloud Service genom en uppsättning IP-adresser som delas med andra kunder.
+
+### Konfiguration {#configuration}
+
+Om du vill aktivera en dedikerad IP-adress skickar du en begäran till kundsupporten som ska ange IP-adressinformationen. I begäran bör varje miljö anges, och ytterligare förfrågningar bör göras om nya miljöer behöver funktionen efter den ursprungliga begäran. Sandlådeprogrammiljöer stöds inte.
+
+### Funktionsanvändning {#feature-usage}
+
+Funktionen är kompatibel med Java-kod eller bibliotek som resulterar i utgående trafik, förutsatt att de använder Java-standardegenskaper för proxykonfigurationer. I praktiken bör detta omfatta de vanligaste biblioteken.
+
+Nedan visas ett kodexempel:
+
+```java
+public JSONObject getJsonObject(String relativePath, String queryString) throws IOException, JSONException {
+  String relativeUri = queryString.isEmpty() ? relativePath : (relativePath + '?' + queryString);
+  URL finalUrl = endpointUri.resolve(relativeUri).toURL();
+  URLConnection connection = finalUrl.openConnection();
+  connection.addRequestProperty("Accept", "application/json");
+  connection.addRequestProperty("X-API-KEY", apiKey);
+
+  try (InputStream responseStream = connection.getInputStream(); Reader responseReader = new BufferedReader(new InputStreamReader(responseStream, Charsets.UTF_8))) {
+    return new JSONObject(new JSONTokener(responseReader));
+  }
+}
+```
+
+Vissa bibliotek kräver explicit konfiguration för att använda Java-standardegenskaper för proxykonfigurationer.
+
+Ett exempel med Apache HttpClient, som kräver explicita anrop till
+[`HttpClientBuilder.useSystemProperties()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html) eller använd
+[`HttpClients.createSystem()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
+
+```java
+public JSONObject getJsonObject(String relativePath, String queryString) throws IOException, JSONException {
+  String relativeUri = queryString.isEmpty() ? relativePath : (relativePath + '?' + queryString);
+  URL finalUrl = endpointUri.resolve(relativeUri).toURL();
+
+  HttpClient httpClient = HttpClientBuilder.create().useSystemProperties().build();
+  HttpGet request = new HttpGet(finalUrl.toURI());
+  request.setHeader("Accept", "application/json");
+  request.setHeader("X-API-KEY", apiKey);
+  HttpResponse response = httpClient.execute(request);
+  String result = EntityUtils.toString(response.getEntity());
+}
+```
+
+Samma dedikerade IP-adress används för alla kundprogram i Adobe och för alla miljöer i respektive program. Det gäller både författare och publiceringstjänster.
+
+Endast HTTP- och HTTPS-portar stöds. Detta inkluderar HTTP/1.1 och HTTP/2 när de är krypterade.
+
+### Felsökningsöverväganden {#debugging-considerations}
+
+Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. Annars kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/ip](https://ifconfig.me/ip), som returnerar den anropande IP-adressen.
+
 ## Skickar e-post {#sending-email}
 
 AEM as a Cloud Service kräver att utgående e-post krypteras. Avsnitten nedan beskriver hur du begär, konfigurerar och skickar e-post.
@@ -177,19 +239,20 @@ AEM as a Cloud Service kräver att utgående e-post krypteras. Avsnitten nedan b
 >
 >E-posttjänsten kan konfigureras med OAuth2-stöd. Mer information finns i [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md).
 
-### Aktivera utgående e-post {#enabling-outbound-email}
+### Begär åtkomst {#requesting-access}
 
-Portar som används för att skicka är som standard inaktiverade. Om du vill aktivera det konfigurerar du [avancerat nätverk](/help/security/configuring-advanced-networking.md) och ser till att `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking`-slutpunktens portvidarebefordringsregler ställs in för varje nödvändig miljö så att trafiken kan gå via port 465 (om det stöds av e-postservern) eller port 587 (om e-postservern kräver det och även tillämpar TLS på den porten).
+Som standard är utgående e-post inaktiverad. Aktivera den genom att skicka en supportanmälan med:
 
-Vi rekommenderar att du konfigurerar avancerat nätverk med parametern `kind` inställd på `flexiblePortEgress` eftersom Adobe kan optimera prestanda för flexibel portbelastningstrafik. Om en unik egress-IP-adress krävs väljer du parametern `kind` `dedicatedEgressIp`. Om du redan har konfigurerat VPN av andra skäl kan du även använda den unika IP-adressen som den avancerade nätverksvarianten ger.
-
-Du måste skicka e-post via en e-postserver i stället för direkt till e-postklienter. Annars kan e-postmeddelandena vara blockerade.
+1. Det fullständiga domännamnet för e-postservern (till exempel `smtp.sendgrid.net`)
+1. Den port som ska användas. Den bör vara port 465 om den stöds av e-postservern, annars port 587. Observera att port 587 bara kan användas om e-postservern kräver och tillämpar TLS på den porten
+1. Program-ID och miljö-ID för de miljöer de vill skicka ut
+1. Oavsett om SMTP-åtkomst krävs för författare, publicering eller båda.
 
 ### Skicka e-post {#sending-emails}
 
 Tjänsten [Day CQ Mail OSGI](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
 
-AEM as a Cloud Service kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
+AEM CS kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
 
 >[!NOTE]
 >
@@ -212,8 +275,6 @@ Om port 587 har begärts (endast tillåtet om e-postservern inte stöder port 46
 * ange `smtp.ssl` till `false`
 
 Egenskapen `smtp.starttls` anges automatiskt av AEM as a Cloud Service vid körning till ett lämpligt värde. Om `smtp.tls` är true ignoreras `smtp.startls`. Om `smtp.ssl` är inställt på false är `smtp.starttls` inställt på true. Detta är oavsett `smtp.starttls`-värdena som angetts i OSGI-konfigurationen.
-
-E-posttjänsten kan även konfigureras med OAuth2-stöd. Mer information finns i [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md).
 
 ## [!DNL Assets] riktlinjer för utveckling och användningsfall {#use-cases-assets}
 

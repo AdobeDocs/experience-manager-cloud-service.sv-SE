@@ -3,9 +3,9 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager as a Cloud Service.
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 49302452b9544b9414ec49ce2862d9913fbfc6a6
+source-git-commit: 7d67bdb5e0571d2bfee290ed47d2d7797a91e541
 workflow-type: tm+mt
-source-wordcount: '3752'
+source-wordcount: '3755'
 ht-degree: 3%
 
 ---
@@ -65,7 +65,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 1. I Experience Manager as a Cloud Service väljer du den as a Cloud Service logotypen för Experience Manager för att komma åt den globala navigeringskonsolen.
 1. Till vänster om konsolen väljer du verktygsikonen och går till **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** i den vänstra rutan (markera inte mappikonen till vänster om **[!UICONTROL global]**). Välj sedan **[!UICONTROL Create]**.
-1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-konto, lösenord och väljer sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundsupport om du inte fått det här mejlet.
+1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-konto, lösenord och väljer sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundtjänst om du inte har fått det här e-postmeddelandet.
 1. Välj **[!UICONTROL Connect to Dynamic Media]**.
 1. I dialogrutan **[!UICONTROL Change Password]** anger du ett nytt lösenord som består av 8-25 tecken i fältet **[!UICONTROL New Password]**. Lösenordet måste innehålla minst ett av följande:
 
@@ -117,7 +117,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 1. För att på ett säkert sätt förhandsgranska Dynamic Media-innehåll innan det publiceras använder Experience Manager as a Cloud Service tokenbaserad validering som standard. Du kan även tillåtslista fler IP-adresser för att ge användarna tillgång till säkert förhandsgranskningsmaterial. Så här konfigurerar du den här åtgärden: <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
 
-   * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
+   * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Kontakta Adobe kundtjänst om du inte har dessa uppgifter.
    * I navigeringsfältet uppe till höger på sidan går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
    * Välj **[!UICONTROL Test Image Serving]** i listrutan **[!UICONTROL Publish Context]** på sidan Image Server Publish.
    * Välj **[!UICONTROL Add]** som klientadressfilter.
@@ -147,7 +147,7 @@ Se även [Inkorgen](/help/sites-cloud/authoring/getting-started/inbox.md).
 
    ![Dynamic Media-installationen misslyckades](/help/assets/dynamic-media/assets/dmconfig-fail-notification.png)
 
-1. Granska konfigurationsinformationen som beskriver felet på sidan **[!UICONTROL DMSETUP]**. Tänk särskilt på eventuella felmeddelanden eller felkoder. Kontakta Adobe kundsupport med den här informationen.
+1. Granska konfigurationsinformationen som beskriver felet på sidan **[!UICONTROL DMSETUP]**. Tänk särskilt på eventuella felmeddelanden eller felkoder. Kontakta Adobe kundtjänst.
 
    ![Dynamic Media - konfigurationssida](/help/assets/dynamic-media/assets/dmconfig-fail-page.png)
 
@@ -391,8 +391,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 **Så här uppdaterar du kön för Granska tillfälligt arbetsflöde:**
 
-1. Gå till **Adobe Experience Manager Web Console Configuration** `http://<host>:<port>/system/console/configMgr`
-1. Sök efter **kö: Bevilja övergångsarbetsflödeskö**.
+1. Gå till [https://&lt;server>/system/console/configMgr](https://localhost:4502/system/console/configMgr) och sök efter **kö: Bevilja övergångsarbetsflödeskö**.
 
    >[!NOTE]
    >
