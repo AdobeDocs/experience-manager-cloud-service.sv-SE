@@ -5,10 +5,10 @@ breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 feature: Deploying
 role: Architect, Developer
-source-git-commit: f193c4e81b9b16d07e7ccff6c2f9705b7234f80b
+source-git-commit: 9d131daf5b6a0b1530ebff48627f6130ef716f3e
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 44%
+source-wordcount: '136'
+ht-degree: 43%
 
 ---
 
@@ -38,7 +38,10 @@ ht-degree: 44%
       + [Översikt](/help/move-to-cloud-service/content-transfer-tool/overview-content-transfer-tool.md)
       + [Krav för verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/prerequisites-content-transfer-tool.md)
       + [Hantera stora innehållsdatabaser](/help/move-to-cloud-service/content-transfer-tool/handling-large-content-repositories.md)
-      + [Använda verktyget för användarmappning](/help/move-to-cloud-service/content-transfer-tool/using-user-mapping-tool.md)
+      + Användarmappningsverktyg {#user-mapping-tool}
+         + [Översikt](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md)
+         + [Viktiga överväganden](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/considerations-user-mapping-tool.md)
+         + [Använda verktyget för användarmappning](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.md)
       + [Använda Content Transfer Tool](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
 + Verktyg för omstrukturering av kod {#refactoring-tools}
    + [Enhetlig upplevelse](/help/move-to-cloud-service/unified-experience.md)
@@ -47,4 +50,4 @@ ht-degree: 44%
    + [Resursarbetsflödesmigrering](/help/move-to-cloud-service/moving-to-aem-assets/asset-workflow-migration-tool.md)
    + [AEM Dispatcher Converter](/help/move-to-cloud-service/refactoring-tools/dispatcher-transformation-utility-tools.md)
    + [AEM Modernization Tools](/help/move-to-cloud-service/refactoring-tools/aem-modernization-tools.md)
-+ [Migreringshandbok för Experience Manager som Cloud Service för partners](/help/move-to-cloud-service/getting-started.md)
++ [Migreringshandbok till Experience Manager as a Cloud Service for Partners](/help/move-to-cloud-service/getting-started.md)
