@@ -2,7 +2,7 @@
 title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som ni kan använda för ert digitala upplevelseprojekt.
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
-source-git-commit: 08559417c8047c592f2db54321afe68836b75bd1
+source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 3%
@@ -19,7 +19,7 @@ Följande API:er är viktiga för AEM.
 
 | API | Beskrivning |
 |---|---|
-| [Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden osv. |
+| [Adobe Experience Manager as a Cloud Service](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden osv. |
 | [Granite-gränssnitt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html#) | Adobe&#39;s Open Web stack, med olika viktiga komponenter (Observera att 6.5 Granite-material gäller för AEMaaCS) |
 | [Coral UI](https://opensource.adobe.com/coral-spectrum/documentation/) | Adobe visuella stil för molngränssnitt som är utformade för att ge en konsekvent användarupplevelse |
 
@@ -44,7 +44,7 @@ AEM bygger på följande fyra primära Java API-uppsättningar i fallande priori
 
 | Prioritet | API | Beskrivning |
 |---|---|---|
-| 1 | [Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden osv. |
+| 1 | [Adobe Experience Manager as a Cloud Service](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden osv. |
 | 2 | [Apache Sling](https://sling.apache.org/apidocs/sling11/) | REST och resursbaserade abstraktioner som resurser, värdescheman och HTTP-begäranden. |
 | 3 | [Apache Jackrabbit Oak](http://jackrabbit.apache.org/oak/docs/oak_api/overview.html) | Data- och innehållsabstraktioner som nod, egenskaper och sessioner. |
 | 4 | [Apache Felix](https://felix.apache.org/) | OSSGi-programbehållarabstraktioner som tjänster och OSGi-komponenter. |

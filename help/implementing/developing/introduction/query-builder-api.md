@@ -2,7 +2,7 @@
 title: Query Builder API
 description: Funktionerna i Asset Share Query Builder visas via Java API och REST API.
 exl-id: d5f22422-c9da-4c9d-b81c-ffa5ea7cdc87
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Med Query Builder kan du enkelt hämta AEM innehållsdatabas. Funktionerna visas via ett Java-API och ett REST-API. I det här dokumentet beskrivs dessa API:er.
 
-Frågebyggaren på serversidan ([`QueryBuilder`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/QueryBuilder.html)) accepterar en frågebeskrivning, skapar och kör en XPath-fråga, kan filtrera resultatuppsättningen och extrahera facets, om så önskas.
+Frågebyggaren på serversidan ([`QueryBuilder`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/QueryBuilder.html)) accepterar en frågebeskrivning, skapar och kör en XPath-fråga, kan filtrera resultatuppsättningen och extrahera facets, om så önskas.
 
-Frågebeskrivningen är bara en uppsättning predikat ([`Predicate`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/Predicate.html)). Exemplen innehåller ett fulltextpredikat, som motsvarar funktionen `jcr:contains()` i XPath.
+Frågebeskrivningen är bara en uppsättning predikat ([`Predicate`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/Predicate.html)). Exemplen innehåller ett fulltextpredikat, som motsvarar funktionen `jcr:contains()` i XPath.
 
-För varje predikattyp finns det en utvärderingskomponent ([`PredicateEvaluator`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/eval/PredicateEvaluator.html)) som kan hantera det specifika predikatet för XPath, filtrering och ansiktsextrahering. Det är mycket enkelt att skapa anpassade utvärderare, som kopplas in via OSGi-komponentkörningen.
+För varje predikattyp finns det en utvärderingskomponent ([`PredicateEvaluator`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)) som kan hantera det specifika predikatet för XPath, filtrering och ansiktsextrahering. Det är mycket enkelt att skapa anpassade utvärderare, som kopplas in via OSGi-komponentkörningen.
 
 REST API ger åtkomst till exakt samma funktioner via HTTP med svar som skickas i JSON.
 
@@ -49,7 +49,7 @@ För JSON-servern `QueryBuilder` innehåller varje exempel en exempellänk till 
 >
 >Om du vill visa returnerade JSON-data i webbläsaren kan du använda ett plugin-program som JSONView för Firefox.
 
-### Returnerar alla resultat {#returning-all-results}
+### Returnera alla resultat {#returning-all-results}
 
 Följande fråga kommer att **returnera tio resultat** (eller som mest exakt 10), men informera dig om **Antal träffar:** som är tillgängliga:
 
@@ -125,7 +125,7 @@ Som standard ger Query Builder även antalet träffar. Beroende på den resulter
 
 Gränssnittet kan till exempel anpassa följande metod:
 
-* Hämta och visa det exakta antalet för det totala antalet träffar ([SearchResult.getTotalMatches()](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/result/SearchResult.html#getTotalMatches) eller totalt i `querybuilder.json`-svaret) är mindre än eller lika med 100,
+* Hämta och visa det exakta antalet för det totala antalet träffar ([SearchResult.getTotalMatches()](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/result/SearchResult.html#getTotalMatches) eller totalt i `querybuilder.json`-svaret) är mindre än eller lika med 100,
 * Ange `guessTotal` till 100 när du anropar Query Builder.
 
 * Svaret kan ha följande resultat:
@@ -185,13 +185,13 @@ tagid=wknd:activity/cycling
 tagid.property=jcr:content/cq:tags
 ```
 
-Använd predikatet `tagid` som i exemplet om du känner till det explicita tagg-ID:t.
+Use the `tagid` predicate as in the example if you know the explicit tag ID.
 
 Använd predikatet `tag` för taggens titelsökväg (utan blanksteg).
 
-Eftersom du i föregående exempel söker efter sidor (`cq:Page` noder) måste du använda den relativa sökvägen från den noden för predikatet `tagid.property`, som är `jcr:content/cq:tags`. Som standard är `tagid.property` bara `cq:tags`.
+Because, in the previous example, you are searching for pages (`cq:Page` nodes), you need to use the relative path from that node for the `tagid.property` predicate, which is `jcr:content/cq:tags`. Som standard är `tagid.property` bara `cq:tags`.
 
-### Sök efter flera sökvägar (med grupper) {#search-under-multiple-paths-using-groups}
+### Search Multiple Paths (using groups) {#search-under-multiple-paths-using-groups}
 
 `http://<host>:<port>/bin/querybuilder.json?fulltext=Experience&group.1_path=/content/wknd/us/en/magazine&group.2_path=/content/wknd/us/en/adventures&group.p.or=true`
 
@@ -202,7 +202,7 @@ group.1_path=/content/wknd/us/en/magazine
 group.2_path=/content/wknd/us/en/adventures
 ```
 
-Den här frågan använder en *grupp* (med namnet `group`) som avgränsa deluttryck i en fråga, ungefär som parenteser gör i fler standardanteckningar. Den föregående frågan kan till exempel uttryckas i ett mer välbekant format som:
+Den här frågan använder en *grupp* (med namnet `group`) som avgränsa deluttryck i en fråga, ungefär som parenteser gör i fler standardanteckningar. For example, the previous query might be expressed in a more familiar style as:
 
 `"Experience" and ("/content/wknd/us/en/magazine" or "/content/wknd/us/en/adventures")`
 
@@ -347,13 +347,13 @@ p.nodedepth=5
 
 Mer information finns på [sidan Predicate Reference i Query Builder](query-builder-predicates.md).
 
-Du kan också kontrollera [Javadoc för `PredicateEvaluator`-klasserna](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/eval/PredicateEvaluator.html). Javadoc för dessa klasser innehåller en lista med egenskaper som du kan använda.
+Du kan också kontrollera [Javadoc för `PredicateEvaluator`-klasserna](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/PredicateEvaluator.html). Javadoc för dessa klasser innehåller en lista med egenskaper som du kan använda.
 
-Prefixet för klassnamnet (till exempel `similar` i [`SimilarityPredicateEvaluator`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)) är *egenskapen* för klassen. Den här egenskapen är också namnet på predikatet som ska användas i frågan (i gemener).
+Prefixet för klassnamnet (till exempel `similar` i [`SimilarityPredicateEvaluator`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)) är *egenskapen* för klassen. Den här egenskapen är också namnet på predikatet som ska användas i frågan (i gemener).
 
 För sådana huvudegenskaper kan du korta ned frågan och använda `similar=/content/en` i stället för den fullständigt kvalificerade varianten `similar.similar=/content/en`. Det fullständiga, kvalificerade formuläret måste användas för alla icke-huvudsakliga egenskaper i en klass.
 
-## Exempel på Query Builder API-användning {#example-query-builder-api-usage}
+## Exempel på API-användning för frågebyggaren {#example-query-builder-api-usage}
 
 ```java
    String fulltextSearchTerm = "WKND";
@@ -421,13 +421,13 @@ Frågor kan lagras i databasen så att du kan använda dem senare. `QueryBuilder
 void storeQuery(Query query, String path, boolean createFile, Session session) throws RepositoryException, IOException;
 ```
 
-När du använder metoden [`QueryBuilder#storeQuery`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/QueryBuilder.html#storeQuery-com.day.cq.search.Query-java.lang.String-boolean-javax.jcr.Session-) lagras den angivna `Query` i databasen som en fil eller som en egenskap enligt argumentvärdet `createFile`. I följande exempel visas hur du sparar en `Query` i sökvägen `/mypath/getfiles` som en fil:
+När du använder metoden [`QueryBuilder#storeQuery`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/QueryBuilder.html#storeQuery-com.day.cq.search.Query-java.lang.String-boolean-javax.jcr.Session-) lagras den angivna `Query` i databasen som en fil eller som en egenskap enligt argumentvärdet `createFile`. I följande exempel visas hur du sparar en `Query` i sökvägen `/mypath/getfiles` som en fil:
 
 ```java
 builder.storeQuery(query, "/mypath/getfiles", true, session);
 ```
 
-Tidigare lagrade frågor kan läsas in från databasen med metoden [`QueryBuilder#loadQuery`](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/QueryBuilder.html#loadQuery-java.lang.String-javax.jcr.Session-):
+Tidigare lagrade frågor kan läsas in från databasen med metoden [`QueryBuilder#loadQuery`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/QueryBuilder.html#loadQuery-java.lang.String-javax.jcr.Session-):
 
 ```java
 Query loadQuery(String path, Session session) throws RepositoryException, IOException
@@ -439,7 +439,7 @@ Ett `Query`-värde som lagras till sökvägen `/mypath/getfiles` kan läsas in m
 Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 ```
 
-## Testa och felsöka {#testing-and-debugging}
+## Testning och felsökning {#testing-and-debugging}
 
 Om du vill spela upp frågor runt och felsöka frågor i Frågebyggaren kan du använda felsökningskonsolen i Query Builder på
 
@@ -453,7 +453,7 @@ eller också kan du använda JSON-servern Query Builder på
 
 ### Allmän felsökning av Recommendations {#general-debugging-recommendations}
 
-### Hämta förklarlig XPath via loggning {#obtain-explain-able-xpath-via-logging}
+### Få förklarlig XPath via loggning {#obtain-explain-able-xpath-via-logging}
 
 Förklara **alla**-frågor under utvecklingscykeln mot målindexuppsättningen.
 
@@ -470,10 +470,10 @@ Använd felsökningsprogrammet AEM Query Builder för att generera en förklarli
 
 ![Query Builder-felsökning](assets/query-builder-debugger.png)
 
-1. Ange frågan i Query Builder i felsökningsprogrammet i Query Builder
+1. Provide the Query Builder query in the Query Builder debugger
 1. Utför sökningen
-1. Hämta genererad XPath
-1. Klistra in XPath-frågan i XPath som XPath för att hämta frågeplanen
+1. Obtain the generated XPath
+1. Paste the XPath query into Explain Query as XPath to obtain the query plan
 
 >[!NOTE]
 >
@@ -502,7 +502,7 @@ com.day.cq.search.impl.builder.QueryImpl no filtering predicates
 com.day.cq.search.impl.builder.QueryImpl query execution took 69 ms
 ```
 
-Om du har en fråga med prediktiva utvärderare som filtrerar eller som använder en anpassad ordning efter jämförelseoperatorn, kommer detta även att noteras i frågan:
+If you have a query using predicate evaluators that filter or that use a custom order by comparator, this will also be noted in the query:
 
 ```xml
 com.day.cq.search.impl.builder.QueryImpl executing query (predicate tree):
@@ -521,10 +521,10 @@ com.day.cq.search.impl.builder.QueryImpl query execution took 272 ms
 
 | **Javadoc** | **Beskrivning** |
 |---|---|
-| [com.day.cq.search](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/package-summary.html) | Basic Query Builder och Query API |
-| [com.day.cq.search.result](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/result/package-summary.html) | Resultat-API |
-| [com.day.cq.search.facets](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/facets/package-summary.html) | Fasetter |
-| [com.day.cq.search.facets.bufickor](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/facets/buckets/package-summary.html) | Bucklar (inneslutna i facets) |
-| [com.day.cq.search.eval](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/eval/package-summary.html) | Förutse utvärderare |
-| [com.day.cq.search.facets.extractor](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Facet Extractor (för utvärderare) |
-| [com.day.cq.search.writer](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/writer/package-summary.html) | JSON Result Hit Writer för Query Builder-servlet (`/bin/querybuilder.json`) |
+| [com.day.cq.search](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/package-summary.html) | Basic Query Builder och Query API |
+| [com.day.cq.search.result](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/result/package-summary.html) | Resultat-API |
+| [com.day.cq.search.facets](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/facets/package-summary.html) | Fasetter |
+| [com.day.cq.search.facets.bufickor](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/facets/buckets/package-summary.html) | Bucklar (inneslutna i facets) |
+| [com.day.cq.search.eval](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/package-summary.html) | Förutse utvärderare |
+| [com.day.cq.search.facets.extractor](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Facet Extractor (för utvärderare) |
+| [com.day.cq.search.writer](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/writer/package-summary.html) | JSON Result Hit Writer for Query Builder servlet (`/bin/querybuilder.json`) |

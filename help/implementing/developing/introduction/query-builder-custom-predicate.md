@@ -2,14 +2,14 @@
 title: Implementera en anpassad predikatutvärderare för Query Builder
 description: AEM i Query Builder är ett enkelt och anpassningsbart sätt att fråga innehållsdatabasen
 exl-id: 8c2f8c22-1851-4313-a1c9-10d6d9b65824
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 0%
 
 ---
 
-# Implementera en anpassad predikatutvärderare för frågebyggaren {#implementing-a-custom-predicate-evaluator-for-the-query-builder}
+# Implementera en anpassad predikatutvärderare för Query Builder {#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
 I det här dokumentet beskrivs hur du utökar [Query Builder](query-builder-api.md) genom att implementera en anpassad predikatutvärderare.
 
@@ -52,7 +52,7 @@ Den mappar en sökbegränsning på högre nivå (till exempel `width>200`) till 
 
 >[!TIP]
 >
->Mer information om `PredicateEvaluator` och `com.day.cq.search`-paketet finns i [Java-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/index.html?com/day/cq/search/package-summary.html).
+>Mer information om `PredicateEvaluator` och `com.day.cq.search`-paketet finns i [Java-dokumentationen](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html?com/day/cq/search/package-summary.html).
 
 ### Implementera en anpassad predikatutvärderare för replikeringsmetadata {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
@@ -131,7 +131,7 @@ Följande kodutdrag visar skillnaderna i filen `pom.xml` i [enhetligt diff-forma
 
 >[!NOTE]
 >
->I proceduren nedan beskrivs hur du skapar ett `Xpath`-uttryck för att filtrera data. Ett annat alternativ är att implementera metoden `includes` som markerar data på radbasis. Mer information finns i [Java-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/search/eval/PredicateEvaluator.html).
+>I proceduren nedan beskrivs hur du skapar ett `Xpath`-uttryck för att filtrera data. Ett annat alternativ är att implementera metoden `includes` som markerar data på radbasis. Mer information finns i [Java-dokumentationen](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/PredicateEvaluator.html).
 
 1. Skapa en ny Java-klass som utökar `com.day.cq.search.eval.AbstractPredicateEvaluator`
 1. Anteckna din klass med ett `@Component`-liknande utdrag som visas i [enhetligt diff-format](https://en.wikipedia.org/wiki/Diff#Unified_format)

@@ -2,26 +2,26 @@
 title: Extern URL
 description: Externalizer är en OSGi-tjänst som gör att du kan omvandla en resurssökväg programmatiskt till en extern och absolut URL.
 exl-id: 06efb40f-6344-4831-8ed9-9fc49f2c7a3f
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
 
 ---
 
-# Externaliserar URL:er {#externalizing-urls}
+# Extern URL {#externalizing-urls}
 
 I AEM är **Externalizer** en OSGi-tjänst som gör att du kan omforma en resurssökväg programmatiskt (t.ex. `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefix-sökvägen med en förkonfigurerad DNS.
 
-Eftersom en AEM som en Cloud Service-instans inte kan känna till sin externt synliga URL och eftersom en länk ibland måste skapas utanför det begärda omfånget, tillhandahåller den här tjänsten en central plats för att konfigurera dessa externa URL:er och skapa dem.
+Eftersom en AEM as a Cloud Service instans inte kan känna till sin externt synliga URL och eftersom en länk ibland måste skapas utanför det begärda omfånget, tillhandahåller den här tjänsten en central plats för att konfigurera dessa externa URL:er och skapa dem.
 
-I den här artikeln beskrivs hur du konfigurerar tjänsten Externalizer och hur du använder den. Teknisk information om tjänsten finns i [Javadocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/commons/Externalizer.html).
+I den här artikeln beskrivs hur du konfigurerar tjänsten Externalizer och hur du använder den. Teknisk information om tjänsten finns i [Javadocs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## Externalizerns standardbeteende och hur du åsidosätter {#default-behavior}
 
 Externalizer-tjänsten är inte klar att användas och har värden som `author-p12345-e6789.adobeaemcloud.com` och `publish-p12345-e6789.adobeaemcloud.com`.
 
-Om du vill åsidosätta sådana värden använder du Cloud Managers miljövariabler enligt beskrivningen i artikeln [Konfigurera OSGi för AEM som en Cloud Service](/help/implementing/deploying/configuring-osgi.md#cloud-manager-api-format-for-setting-properties) och anger de fördefinierade variablerna `AEM_CDN_DOMAIN_AUTHOR` och `AEM_CDN_DOMAIN_PUBLISH`.
+Om du vill åsidosätta sådana värden använder du Cloud Managers miljövariabler enligt beskrivningen i artikeln [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md#cloud-manager-api-format-for-setting-properties) och ange de fördefinierade variablerna `AEM_CDN_DOMAIN_AUTHOR` och `AEM_CDN_DOMAIN_PUBLISH`.
 
 ## Konfigurera tjänsten Externalizer {#configuring-the-externalizer-service}
 
@@ -29,7 +29,7 @@ Med tjänsten Externalizer kan du centralt definiera den domän som kan använda
 
 >[!NOTE]
 >
->Precis som när du använder en [OSGi-konfiguration för AEM som en Cloud Service ska följande steg utföras på en lokal utvecklarinstans och sedan implementeras i projektkoden för distribution.](/help/implementing/deploying/overview.md#osgi-configuration)
+>As when applying any [OSGi configurations for AEM as a Cloud Service,](/help/implementing/deploying/overview.md#osgi-configuration) the following steps should be performed on a local developer instance and then committed to your project code for deployment.
 
 Så här definierar du en domänmappning för tjänsten Externalizer:
 
@@ -79,7 +79,7 @@ I det här avsnittet visas några exempel på hur Externalizer-tjänsten kan anv
 
 >[!NOTE]
 >
->Inga absoluta länkar ska skapas i HTML-kontexten. Denna funktion bör därför inte användas i sådana fall.
+>Inga absoluta länkar bör skapas i HTML. Denna funktion bör därför inte användas i sådana fall.
 
 * **Så här gör du en extern sökväg med domänen &#39;publish&#39;:**
 
@@ -125,4 +125,4 @@ I det här avsnittet visas några exempel på hur Externalizer-tjänsten kan anv
 
 >[!TIP]
 >
->Fler exempel finns i [Javadocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/commons/Externalizer.html).
+>Fler exempel finns i [Javadocs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html).

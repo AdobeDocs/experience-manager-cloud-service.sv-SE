@@ -2,7 +2,7 @@
 title: Namnkonventioner
 description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository
 exl-id: 3c5c39dd-b209-488b-a93e-e840786fe224
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Noderna i databasen omfattas av namnkonventioner i Java Content Repository. AEM lägger dock till ytterligare konventioner för sidnodernas namn.
 
-## Namngivningskonventioner för sidor {#naming-conventions-for-pages}
+## Namnkonventioner för sidor {#naming-conventions-for-pages}
 
 Dessa namnkonventioner implementeras på olika nivåer:
 
@@ -23,7 +23,7 @@ Dessa namnkonventioner implementeras på olika nivåer:
 
 ### JCR-verktyg {#jcr-utilities}
 
-[JCR](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/commons/jcr/JcrUtil.html) använder den AEM implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
+[](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/jcr/JcrUtil.html) JCRutiliserar den AEM implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
 
 * `isValidName`
    * Kontrollerar om namnet inte är tomt och bara innehåller giltiga tecken.
@@ -32,9 +32,9 @@ Dessa namnkonventioner implementeras på olika nivåer:
    * Detta skapar en giltig etikett av en godtycklig sträng.
    * Den kan användas för att skapa ett namn från en titel.
 
-### Sidhanteraren {#page-manager}
+### Page Manager {#page-manager}
 
-[I ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html) PageManager finns metoder för sidnivååtgärder som baseras på  [JCRUtil](#jcr-utilities).
+[](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) PageManager innehåller metoder för åtgärder på sidnivå, baserade på  [JCRUtil](#jcr-utilities).
 
 ### AEM gränssnittsbeteende {#ui-behavior}
 
