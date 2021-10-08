@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
+source-git-commit: c9ebeefa2a8707cbbf43df15cf90c10aadbba45f
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '2059'
 ht-degree: 2%
 
 ---
@@ -190,10 +190,6 @@ Du måste skicka e-post via en e-postserver i stället för direkt till e-postkl
 Tjänsten [Day CQ Mail OSGI](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
 
 AEM as a Cloud Service kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
-
->[!NOTE]
->
->Observera att Adobe inte stöder SMTP-komprimering över en unik dedikerad IP-adress.
 
 ### Konfiguration {#email-configuration}
 
