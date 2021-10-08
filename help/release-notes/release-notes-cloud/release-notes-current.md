@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cl
 description: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: cf5fd3f483876eab8e9ec7bf22fae5dd1c6aa147
+source-git-commit: 5f80ad85ddf9ffdda7cd975d00699eb5085d2365
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1476'
 ht-degree: 0%
 
 ---
@@ -75,13 +75,13 @@ CQ-4328183 was not reported on CS so not documented here.
 
 * **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller direkt konfiguration av datakällor och datamodeller för Microsoft Dynamics och Salesforce, vilket gör det  [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett anpassat formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-msdynamics-salesforce.html?lang=en).
 
-* **E-signera ett anpassat formulär med DocuSign:** Du kan använda DocuSign för att e-signera ett anpassat formulär. Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär. Du kan installera det paket som är tillgängligt på Programvarudistribution för att importera sändningsåtgärden.
+* **E-signera ett anpassat formulär med DocuSign:** Du kan använda DocuSign för att e-signera ett anpassat formulär. Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär.
 
 ### Betafunktioner i [!DNL Forms] {#sep-what-is-new-forms-prerelease}
 
-* **Enhetlig lagringskontakt:** Använd Enhetlig lagringskontakt för att externalisera processdata i kundhanterade databaser. Du kan till exempel
-   * Möjliggör Forms Portals funktioner för att spara och återuppta samt lagra adaptiva formulärutkast i ett kundhanterat datalager.
-   * Lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
+* **Enhetlig lagringskontakt:** Använd Enhetlig lagringskontakt för att externalisera processdata i kundhanterade databaser. Du kan t.ex. lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
+
+   <!--* Enable Forms Portal’s save and resume functionality and store adaptive forms drafts in a customer-managed data repository.-->
 
 * **[!DNL AEM Forms as a Cloud Service - Communications]**:  [Communication ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/aem-forms-cloud-service-communications.html?lang=en) API - använd XDP-mallar och XML-data för att generera trycksaker i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera dokument genom att fylla i mallfiler med XML-data.
