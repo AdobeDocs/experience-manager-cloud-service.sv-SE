@@ -1,39 +1,32 @@
 ---
-title: Underhållsaktiviteter i AEM som en Cloud Service
-description: Underhållsaktiviteter i AEM som en Cloud Service
+title: Underhållsaktiviteter på AEM as a Cloud Service
+description: Underhållsaktiviteter på AEM as a Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: 22228ebfbc754551f93907502c53427ba43983b3
+source-git-commit: 3e0de69033883bb77fae5be83d47167663bea3fd
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
 
-# Underhållsaktiviteter i AEM som en Cloud Service
+# Underhållsaktiviteter på AEM as a Cloud Service
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_maintenance"
 >title="Underhållsåtgärder"
->abstract="Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM som Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimalt. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe."
->additional-url="https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html" text="AEM Maintenance Guide"
->additional-url="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html#AutomatedMaintenanceTasks" text="Underhållsuppgifter för instrumentpanelen för åtgärder"
+>abstract="Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimalt. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe."
 
-Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM som Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimalt. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe.
-
-Mer information om underhållsåtgärder finns på följande sidor:
-
-* [AEM Maintenance Guide](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html)
-* [Underhållsuppgifter för instrumentpanelen för åtgärder](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html#AutomatedMaintenanceTasks)
+Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimalt. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe.
 
 ## Konfigurera underhållsåtgärder
 
-I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet är inte längre tillgängligt för AEM som Cloud Service, så konfigurationer bör implementeras med källkontroll och driftsättas med hjälp av Cloud Manager. Adobe hanterar underhållsåtgärder som inte kräver kundbeslut (t.ex. Datastore Garbage Collection) medan andra underhållsåtgärder kan konfigureras av kunden (se tabellen nedan).
+I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet är inte längre tillgängligt för AEM as a Cloud Service, så konfigurationer bör implementeras för källkontroll och driftsättas med hjälp av Cloud Manager. Adobe hanterar underhållsåtgärder som inte kräver kundbeslut (t.ex. Datastore Garbage Collection) medan andra underhållsåtgärder kan konfigureras av kunden (se tabellen nedan).
 
 >[!CAUTION]
 >
 >Adobe förbehåller sig rätten att åsidosätta en kunds konfigurationsinställningar för underhållsaktiviteter för att minska problem som prestandaförsämringar.
 
-I följande tabell visas underhållsåtgärder som är tillgängliga när AEM släpps som en Cloud Service.
+I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as a Cloud Service släpps.
 
 | Underhållsaktivitet | Vem äger konfigurationen | Konfigurera (valfritt) |
 |---|---|---|
