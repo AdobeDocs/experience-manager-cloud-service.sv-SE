@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cl
 description: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 9eeb47dbca36f1b9f23e3ac4e0bee6594ffb7fda
+source-git-commit: 1be37bf1b6cb248bcc7d12f0d4039cfa12c90f7d
 workflow-type: tm+mt
 source-wordcount: '1488'
 ht-degree: 0%
@@ -210,14 +210,13 @@ Releasedatum för innehållsöverföringsverktyget v1.6.0 är 4 oktober 2021.
 
 ### Releasedatum {#release-date-bpa-latest}
 
-Releasedatum för Best Practices Analyzer v2.1.18 är 2 september 2021.
+Releasedatum för Best Practices Analyzer v2.1.20 är 5 oktober 2021.
 
 ### Nyheter {#what-is-new}
 
-* Möjlighet att identifiera och rapportera totalt antal noder.
+* Möjlighet att identifiera och rapportera nodnamnets längd.
 
-* Möjlighet att identifiera och rapportera om nodlagringstyp och -storlek.
+* Möjlighet att identifiera och rapportera om den totala indexstorleken.
 
-### Felkorrigeringar {#bug-fixes-bpa}
+* Möjlighet att upptäcka och rapportera resurser som saknar sin ursprungliga återgivning.
 
-* BPA upptäckte felaktigt förekomsten av Commerce Integration Framework.
