@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Manager som Cloud Service Content Fragments Support in Assets HTTP API
+title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments i Assets HTTP API
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: 4eb2beeb97d2aa2aed4af869897db470b732fd1f
+source-git-commit: 88f43d2f1acaa4e00bc9ce06d188e4b9312a1c08
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1951'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del A
 >
 >Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen [REST](https://en.wikipedia.org/wiki/Representational_state_transfer).
 
-Med [Resursens REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Experience Manager som Cloud Service komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Create, Read, Update, Delete).
+Med [Resursens REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Experience Manager as a Cloud Service komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
 
-Med API kan du använda Adobe Experience Manager som en Cloud Service som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
+Med API kan du använda Adobe Experience Manager as a Cloud Service som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
 Exempelvis kräver [Single Page Applications (SPA)](/help/implementing/developing/hybrid/introduction.md), framework-based eller custom, innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 
@@ -50,7 +50,7 @@ Resursens REST API:
 
 ## Förutsättningar {#prerequisites}
 
-Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager som Cloud Service-version.
+Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager as a Cloud Service-version.
 
 ## Viktiga begrepp {#key-concepts}
 
@@ -69,7 +69,7 @@ Om du till exempel vill komma åt `/content/dam/wknd/en/adventures/cycling-tusca
 >Åtkomst över:
 >
 >* `/api/assets` **använder** inte  `.model` väljaren.
->* `/content/path/to/page` **kräver** att du använder  `.model` väljaren.
+>* `/content/path/to/page` **** kräver att  `.model` väljaren används.
 
 
 HTTP-metoden avgör vilken åtgärd som ska utföras:
@@ -256,7 +256,7 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
 >[!NOTE]
 >
->Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
+>Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
 
 ### Läsning/leverans {#read-delivery}
 
@@ -374,7 +374,7 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
 
 Här finns detaljerade API-referenser:
 
-* [Adobe Experience Manager Assets API - innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html)
 
 * [HTTP API för Assets](/help/assets/mac-api-assets.md)
 
