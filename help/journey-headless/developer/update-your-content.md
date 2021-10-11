@@ -1,19 +1,19 @@
 ---
 title: Så här uppdaterar du innehåll via AEM Assets API:er
 description: I den här delen av den AEM Headless Developer Journey kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
-source-git-commit: a446efacb91f1a620d227b9413761dd857089c96
+exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
+source-git-commit: 335d7760886fe8dc489335a050d3cb6d0d2652a1
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 1%
 
 ---
 
-
-# Så här uppdaterar du ditt innehåll via AEM Assets API:er {#update-your-content}
+# Så här uppdaterar du innehåll via AEM Assets API:er {#update-your-content}
 
 I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 
-## Berättelsen hittills {#story-so-far}
+## Story hittills {#story-so-far}
 
 I det föregående dokumentet på den AEM resan [Hur du får åtkomst till ditt innehåll via AEM Delivery APIs](access-your-content.md) lärde du dig att få åtkomst till ditt headless-innehåll i AEM via AEM GraphQL API och du bör nu:
 
@@ -43,7 +43,7 @@ Varför behövs en annan API?
 
 Med Assets HTTP API kan du **läsa** ditt innehåll, men du kan även **skapa**, **uppdatera** och **ta bort** innehåll - åtgärder som inte är möjliga med GraphQL API.
 
-Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager som Cloud Service-version.
+Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager as a Cloud Service-version.
 
 ## HTTP API för Assets {#assets-http-api}
 
@@ -54,7 +54,7 @@ Resursens HTTP-API omfattar:
 
 Den aktuella implementeringen av Assets HTTP API baseras på arkitekturformatet **REST** och gör att du kan komma åt innehåll (som lagras i AEM) via **CRUD**-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
 
-Med den här åtgärden kan du med API:t köra Adobe Experience Manager som en Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
+Med den här åtgärden kan du med API:t köra Adobe Experience Manager as a Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
 
 <!--
 >[!NOTE]
@@ -205,7 +205,7 @@ To create a new content fragment, the (internal repository) path of the model ha
 Associated content is currently not exposed.
 -->
 
-## Använda Resurser REST API {#using-aem-assets-rest-api}
+## Använda REST API för resurser {#using-aem-assets-rest-api}
 
 ### Åtkomst {#access}
 
@@ -222,7 +222,7 @@ Om du till exempel vill komma åt `/content/dam/wknd/en/adventures/cycling-tusca
 >Åtkomst över:
 >
 >* `/api/assets` **använder** inte  `.model` väljaren.
->* `/content/path/to/page` **kräver** att du använder  `.model` väljaren.
+>* `/content/path/to/page` **** kräver att  `.model` väljaren används.
 
 
 ### Åtgärd {#operation}
@@ -255,9 +255,9 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
 >[!NOTE]
 >
->Mer information finns i API-referensen. Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html).
+>Mer information finns i API-referensen. Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
 
-### Läs/Leverera {#read-delivery}
+### Läsning/leverans {#read-delivery}
 
 Användning sker via:
 
@@ -325,7 +325,7 @@ Du bör fortsätta din AEM resa utan trassel genom att nästa gång granska doku
 * [HTTP API för Assets](/help/assets/mac-api-assets.md)
 * [Innehållsfragment REST API](/help/assets/content-fragments/assets-api-content-fragments.md)
    * [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference)
-* [Adobe Experience Manager Assets API - innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html)
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
 * [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
