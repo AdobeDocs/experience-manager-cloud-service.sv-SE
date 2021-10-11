@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cl
 description: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 5f80ad85ddf9ffdda7cd975d00699eb5085d2365
+source-git-commit: 9eeb47dbca36f1b9f23e3ac4e0bee6594ffb7fda
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1488'
 ht-degree: 0%
 
 ---
@@ -71,11 +71,11 @@ CQ-4328183 was not reported on CS so not documented here.
 
 * **Använd Adobe Sign-roller i ett adaptivt format**: Adobe Sign för företags- och företagsnivåer har möjlighet att utöka rollerna för avtalsmottagare, utöver bara signeraren, så att de bättre motsvarar deras arbetsflödesbehov. Du kan nu [aktivera varje mottagare av avtal att konfigurera sin roll i ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/use-adobe-sign/working-with-adobe-sign.html#addsignerstoanadaptiveform), med signerare som standardroll.
 
-* **Analytics for Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+* **Analytics for Adaptive Forms**: Nu kan du hämta in och  [spåra användarbeteende via Adobe ](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/integrate-aem-forms-with-adobe-analytics.html) Analytics för Adaptive Forms för att samla in användarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
 * **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller direkt konfiguration av datakällor och datamodeller för Microsoft Dynamics och Salesforce, vilket gör det  [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett anpassat formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-msdynamics-salesforce.html?lang=en).
 
-* **E-signera ett anpassat formulär med DocuSign:** Du kan använda DocuSign för att e-signera ett anpassat formulär. Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär.
+* **E-signera ett anpassat formulär med DocuSign:** [Du kan använda DocuSign för att e-signera ett anpassat formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/integrate-docusign-adaptive-forms.html). Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär.
 
 ### Betafunktioner i [!DNL Forms] {#sep-what-is-new-forms-prerelease}
 
