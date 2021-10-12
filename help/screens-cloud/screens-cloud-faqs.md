@@ -1,21 +1,21 @@
 ---
-title: Skärmar som vanliga Cloud Service
-description: På den här sidan beskrivs skärmar som vanliga Cloud Service.
-source-git-commit: 7a26bb50a8b95a2358912249e21daeb9c5e9c1a3
+title: Vanliga frågor och svar om skärmar
+description: På den här sidan beskrivs as a Cloud Service frågor och svar för skärmar.
+exl-id: 93f2144c-0e64-4012-88c6-86972d8cad9f
+source-git-commit: cf091056bdb96917a6d22bf1197d9b34ebbf9610
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
 
+# Vanliga frågor och svar om skärmar {#screens-cloud-faqs}
 
-# Skärmar som vanliga Cloud Service {#screens-cloud-faqs}
+I följande avsnitt finns svar på vanliga frågor och svar (FAQ) om as a Cloud Service skärmprojekt.
 
-I följande avsnitt finns svar på vanliga frågor (FAQ) om skärmar som ett Cloud Service-projekt.
+## Vad ska jag göra om AEM Screens-spelare som pekar på Skärmar as a Cloud Service inte väljer något anpassat klipp i formatet /etc.clientlibs/xxx/clientlibs/clientlib-site.lc-813643788974b0f89d686d9591526d63-lc.min.css?
 
-## Vad ska jag göra om AEM Screens-spelaren som pekar på skärmar som en Cloud Service inte väljer de anpassade klientlibs i formatet /etc.clientlibs/xxx/clientlibs/clientlib-site.lc-813643788974b0f89d686d9591526d63-lc.min.css?
-
-AEM som en Cloud Service ändras de långa cachenycklarna för varje distribution. AEM Screens genererar offline-cacheminnen när innehållet ändras, i stället för när Cloud Manager kör distributionen. De här långa cachenycklarna i manifesten är ogiltiga, så spelaren kan inte hämta de här *klientlibs*.
+AEM as a Cloud Service ändrar de långa cachenycklarna för varje distribution. AEM Screens genererar offline-cacheminnen när innehållet ändras, i stället för när Cloud Manager kör distributionen. De här långa cachenycklarna i manifesten är ogiltiga, så spelaren kan inte hämta de här *klientlibs*.
 
 Om du använder `longCacheKey="none"` i din `clientlib`-mapp tas de långa cachenycklarna bort helt för dessa *klientlibs*.
 
@@ -35,3 +35,8 @@ scripts=[
         end
         "] 
 ```
+
+## Vilka bildformat rekommenderas för smidig återgivning av bilder i AEM Screens as a Cloud Service kanaler?{#screens-cloud-image-format}
+
+Vi rekommenderar att du använder bilder i formatet `.png` och `.jpeg` i en as a Cloud Service AEM Screens-kanal för att få bästa möjliga digitala signeringsupplevelse.
+Bilderna i formatet `*.tif` (taggbildfilsformat) stöds inte i AEM Screens as a Cloud Service. Om en kanal har detta bildformat återges bilden inte på spelarsidan.
