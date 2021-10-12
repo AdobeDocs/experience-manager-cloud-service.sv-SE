@@ -1,10 +1,10 @@
 ---
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
-source-git-commit: 25b4bfb624866cb615fca32377e43c05a597cd67
+source-git-commit: 32220016fbe8c0ac0f906e62098398d4508af4cd
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -74,6 +74,11 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
 1. Klicka på **Starta** i dialogrutan för att starta användarmappningsprocessen.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/resume-user-mapping3.png)
+
+   Den visar **status** som **KÖRNING**.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-start1.png)
+
 
 1. När användarmappningen är klar klickar du på **Resultat** för att visa sammanfattningen.
 
