@@ -1,10 +1,10 @@
 ---
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
-source-git-commit: 32220016fbe8c0ac0f906e62098398d4508af4cd
+source-git-commit: 09ab81364f0fd45ddedcd5f918e6ab5a4bdd1f0d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '752'
+ht-degree: 3%
 
 ---
 
@@ -99,7 +99,7 @@ Om användarmappningsprocessen stoppas på grund av någon av följande orsaker:
    >[!NOTE]
    >Förloppet sparas från den plats där processen stoppades.
 
-Följ stegen nedan för att återuppta användarmappningsprocessen:
+Så här återupptar du användarmappningsprocessen:
 
 1. Klicka på **Visa logg** för att kontrollera den sparade förloppet i användarmappningsloggen.
 
@@ -115,3 +115,7 @@ Följ stegen nedan för att återuppta användarmappningsprocessen:
 1. Klicka på **Start** i dialogrutan för att återuppta användarmappningsprocessen.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/resume-user-mapping3.png)
+
+   När användarmappningsprocessen har slutförts visas **Status** som **FINISHED** för den specifika konfigurationen.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/resume-user-mapping4.png)
