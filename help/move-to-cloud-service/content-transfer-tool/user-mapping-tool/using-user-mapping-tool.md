@@ -1,10 +1,10 @@
 ---
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
-source-git-commit: 2f763f774b21b0c3b43d61964dda2d2ae596161a
+source-git-commit: 6ab32a952a53eed612192ee8359373087e6cf624
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 3%
+source-wordcount: '680'
+ht-degree: 2%
 
 ---
 
@@ -76,4 +76,15 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-landing5.png)
 
    >[!IMPORTANT]
-   >När användarmappningen är klar kan du gå tillbaka till sidan Innehållsmigrering med hjälp av den synliga sökvägen. Kortet för användarmappning visar status och tidsstämpel. Klicka på **Innehållsöverföring** för att skapa en migreringsuppsättning som ska köras extrahering. Mer information finns i [Köra verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-tool).
+   >* När användarmappningen är klar kan du gå tillbaka till sidan Innehållsmigrering med hjälp av den synliga sökvägen. Kortet för användarmappning visar status och tidsstämpel. Klicka på **Innehållsöverföring** för att skapa en migreringsuppsättning som ska köras extrahering. Mer information finns i [Köra verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-tool).
+
+
+### Återuppta användarmappningsprocessen {#resume-user-mapping}
+
+Om användarmappningsprocessen stoppas på grund av någon av följande orsaker:
+
+* Användaren valde **Stoppa användarmappning**
+* åtkomsttoken upphörde att gälla under processen, eller
+* någon annan orsak.
+
+Förloppet sparas från den plats där processen stoppades. Granska loggen för användarmappning för att kontrollera den sparade förloppet. Klicka på knappen **Starta användarmappning** igen för att fortsätta där den slutade. Kontrollera att åtkomsttoken fortfarande är giltig eller har uppdaterats innan du startar om den.
