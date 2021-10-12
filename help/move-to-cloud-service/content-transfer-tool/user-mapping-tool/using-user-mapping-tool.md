@@ -1,10 +1,10 @@
 ---
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
-source-git-commit: 77c412c1050be8843e7185b0511a9d7af41669e3
+source-git-commit: 25b4bfb624866cb615fca32377e43c05a597cd67
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 2%
+source-wordcount: '727'
+ht-degree: 3%
 
 ---
 
@@ -71,6 +71,10 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-landing4.png)
 
+1. Klicka på **Starta** i dialogrutan för att starta användarmappningsprocessen.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/resume-user-mapping3.png)
+
 1. När användarmappningen är klar klickar du på **Resultat** för att visa sammanfattningen.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/user-mapping-landing5.png)
@@ -87,4 +91,22 @@ Om användarmappningsprocessen stoppas på grund av någon av följande orsaker:
 * åtkomsttoken upphörde att gälla under processen, eller
 * annan orsak
 
-Förloppet sparas från den plats där processen stoppades. Granska loggen för användarmappning för att kontrollera den sparade förloppet. Klicka på knappen **Starta användarmappning** igen för att fortsätta där den slutade. Kontrollera att åtkomsttoken fortfarande är giltig eller har uppdaterats innan du startar om den.
+   >[!NOTE]
+   >Förloppet sparas från den plats där processen stoppades.
+
+Följ stegen nedan för att återuppta användarmappningsprocessen:
+
+1. Klicka på **Visa logg** för att kontrollera den sparade förloppet i användarmappningsloggen.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/resume-user-mapping1.png)
+
+1. Klicka på knappen **Starta användarmappning** igen för att fortsätta där den slutade.
+
+   >[!NOTE]
+   >Kontrollera att åtkomsttoken fortfarande är giltig eller har uppdaterats innan du startar om den.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/resume-user-mapping2.png)
+
+1. Klicka på **Start** i dialogrutan för att återuppta användarmappningsprocessen.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-user-mapping/resume-user-mapping3.png)
