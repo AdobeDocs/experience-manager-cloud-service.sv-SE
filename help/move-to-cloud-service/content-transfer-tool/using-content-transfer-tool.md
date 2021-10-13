@@ -2,163 +2,16 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: 5243efa12fdca7e2e2d6ab23b38e8d09c6ea4945
+source-git-commit: 04494e116fcdd38622ae2d4434d7cf8e4034d5aa
 workflow-type: tm+mt
-source-wordcount: '3199'
-ht-degree: 35%
+source-wordcount: '1503'
+ht-degree: 52%
 
 ---
 
 # Använda Content Transfer Tool {#using-content-transfer-tool}
 
-## Viktigt att tänka på när du använder Content Transfer Tool {#pre-reqs}
-
-Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder Content Transfer Tool:
-
-* Lägsta systemkrav för Content Transfer Tool är AEM 6.3 + och JAVA 8. Om du har en lägre AEM måste du uppgradera ditt innehållsarkiv till AEM 6.5 för att kunna använda verktyget för innehållsöverföring.
-
-* Java måste vara konfigurerat i AEM så att kommandot `java` kan köras av den användare som startar AEM.
-
-* Vi rekommenderar att du avinstallerar äldre versioner av verktyget Innehållsöverföring när du installerar version 1.3.0 eftersom det har skett en stor förändring i arkitekturen i verktyget. Med 1.3.0 bör du också skapa nya migreringsuppsättningar och köra extrahering och förtäring på nytt för de nya migreringsuppsättningarna.
-
-* Verktyget Innehållsöverföring kan användas med följande typer av datalager: File Data Store, S3 Data Store, Shared S3 Data Store och Azure Blob Store Data Store.
-
-* Om du använder en *sandlådemiljö* kontrollerar du att miljön är aktuell och uppgraderad till den senaste versionen. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
-
-* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare i källinstansen och tillhöra den lokala gruppen **administratörer** i den Cloud Service du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
-
-* Om inställningen **Rensa befintligt innehåll i molninstansen innan du använder**, tas hela den befintliga databasen bort och en ny databas skapas för att importera innehåll till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i gruppen **administratörer**. Användaren måste läggas till på nytt i gruppen **administratörer** för att hämta åtkomsttoken för CTT.
-
-* Åtkomsttoken kan upphöra att gälla regelbundet antingen efter en viss tidsperiod eller efter att Cloud Servicens miljö har uppgraderats. Om åtkomsttoken har upphört att gälla kan du inte ansluta till Cloud Servicen och du måste hämta den nya åtkomsttoken. Statusikonen som är kopplad till en befintlig migreringsuppsättning ändras till ett rött moln och ett meddelande visas när du hovrar över den.
-
-* Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer till exempel inte mellan publicerat och opublicerat innehåll när innehåll hämtas till en publiceringsmiljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. Användaren kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Vi rekommenderar att CTT installeras på källinstansen Author för att flytta innehåll till målinstansen Author när du flyttar innehåll till en Production-instans och att CTT på källinstansen av Publish installeras för att flytta innehåll till målpubliceringsinstansen. Mer information finns i [Köra verktyget Innehållsöverföring på en publiceringsinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-ctt-on-publish).
-
-* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. Processen *Extrahering* kopierar hela `/home` till migreringsuppsättningen och processen *Ing* kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna. Om du vill mappa befintliga användare och grupper automatiskt till deras IMS-ID:n läser du [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration).
-
-* Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
-
-* När du har slutfört *extraheringsfasen* av innehållsöverföringsprocessen och innan du startar *Inmatningsfasen* för att importera innehåll till din AEM as a Cloud Service *Stage* eller *Produktion*-instanser måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Inmatning a9/> så att Adobe kan se till att inga avbrott inträffar under* Ingrediensprocessen *.* Du måste logga supportbiljetten en vecka före ditt planerade *intag*-datum. När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg. Du kan logga en supportanmälan med följande information:
-
-   * Exakt datum och beräknad tid (med din tidszon) när du tänker starta fasen *Inmatning*.
-   * Miljötyp (Stage eller Production) som du vill importera data till.
-   * Program-ID.
-
-* *Inmatningsfasen* för författaren skalas ned för hela författardistributionen. Detta innebär att författar-AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör fasen *Inmatning*.
-
-* När du använder `Amazon S3` eller `Azure` som datalager i AEM, bör datalagret konfigureras så att de lagrade blobbarna inte kan tas bort (skräpsamling). Detta garanterar indexdataintegritet och om detta inte konfigureras på det här sättet kan det leda till misslyckade extraheringar på grund av att dessa indexdata saknar integritet.
-
-* Om du använder anpassade index måste du se till att konfigurera anpassade index med noden `tika` innan du kör verktyget Innehållsöverföring. Mer information finns i [Förbereda den nya indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#preparing-the-new-index-definition).
-
-* Om du tänker göra toppuppsättningar är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då den övre extraheringen körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
-
-* Om du tänker ta med versioner som en del av en migreringsuppsättning och utför uppsättningar med `wipe=false`, måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför toppuppsättningar i en migreringsuppsättning, måste du utföra intaget som `wipe=true`.
-
-## Tillgänglighet {#availability}
-
->[!CONTEXTUALHELP]
->id="aemcloud_ctt_download"
->title="Hämta"
->abstract="Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
-
-Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns i [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
-
->[!NOTE]
->Hämta Content Transfer Tool från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen.
-
-## Köra Content Transfer Tool {#running-tool}
-
->[!CONTEXTUALHELP]
->id="aemcloud_ctt_demo"
->title="Verktyget Innehållsöverföring körs"
->abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehållet till AEM as a Cloud Service (Författare/Publicera)."
->additional-url="https://video.tv.adobe.com/v/35460/?quality=12&amp;learn=on" text=" Se demo"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=en#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
-
->[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
-
-
-Följ det här avsnittet för att lära dig hur du använder Content Transfer Tool för att migrera innehållet till AEM as a Cloud Service (Author/Publish):
-
-1. Markera Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Innehållsmigrering**.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt01.png)
-
-1. Välj alternativet **Innehållsöverföring** i guiden **Innehållsmigrering**.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt02.png)
-
-
-1. Konsolen nedan visas när du skapar den första migreringsuppsättningen. Klicka på **Create Migration Set** om du vill skapa en ny migreringsuppsättning.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt03.png)
-
-   >[!NOTE]
-   >Om du har befintliga migreringsuppsättningar visas en lista med befintliga migreringsuppsättningar med aktuell status.
-
-
-1. Fyll i fälten på **skärmen Skapa migreringsuppsättning** enligt beskrivningen nedan.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt04.png)
-
-   1. **Name**: Ange namnet på migreringsuppsättningen.
-      >[!NOTE]
-      >Inga specialtecken tillåts för migreringsuppsättningens namn.
-
-   1. **Cloud Service Configuration**: Ange målförfattar-URL för AEM as a Cloud Service.
-
-      >[!NOTE]
-      >Du kan skapa och underhålla högst tio migreringsuppsättningar åt gången under innehållsöverföringsaktiviteten.
-      >Dessutom måste du skapa en migrering separat för varje specifik miljö – *Stage*, *Development* eller *Production*.
-
-   1. **Access Token**: Ange åtkomsttoken.
-
-      >[!NOTE]
-      >Du kan hämta åtkomsttoken med knappen **Öppna åtkomsttoken**. Du måste kontrollera att du tillhör gruppen AEM administratörer i målinstansen av Cloud Service.
-
-   1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
-
-      1. **Include Version**: Välj det som behövs. När versioner inkluderas inkluderas sökvägen `/var/audit` automatiskt för att migrera granskningshändelser.
-
-      ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt05.png)
-
-      >[!NOTE]
-      >Om du tänker ta med versioner som en del av en migreringsuppsättning och utför uppsättningar med `wipe=false`, måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför toppuppsättningar i en migreringsuppsättning, måste du utföra intaget som `wipe=true`.
-
-      1. **Inkludera mappning från IMS-användare och -grupper**: Välj alternativet att inkludera mappning från IMS-användare och -grupper.
-Mer information finns i [Användarmappningsverktyget](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
-
-      1. **Paths to be included**: Använd sökvägsläsaren för att välja sökvägar som behöver migreras. Banväljaren accepterar indata genom att skriva eller genom att välja.
-
-         >[!IMPORTANT]
-         >Följande sökvägar är begränsade när du skapar en migreringsuppsättning:
-         >* `/apps`
-         >* `/libs`
-         >* `/home`
-         >* `/etc` (vissa  `/etc` banor kan markeras i CTT)
-
-
-
-
-1. Klicka på **Spara** när du har fyllt i alla fält i **informationsskärmen för Skapa migreringsuppsättning**.
-
-1. Du kommer att visa din migreringsuppsättning i guiden **Innehållsöverföring**, vilket visas i bilden nedan.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/04-item-selection-and-quick-actions.png)
-
-   Alla befintliga migreringsuppsättningar visas i guiden **Innehållsöverföring** med aktuell status- och statusinformation. Du kan se några av dessa ikoner som beskrivs nedan.
-
-   * Ett *rött moln* anger att du inte kan slutföra extraheringsprocessen.
-   * Ett *grönt moln* anger att du kan slutföra extraheringsprocessen.
-   * En *gul ikon* anger att du inte har skapat den befintliga migreringsuppsättningen och att den specifika skapas av en annan användare i samma instans.
-
-1. Välj en migreringsuppsättning och klicka på **Egenskaper** för att visa eller redigera migreringsuppsättningsegenskaperna. När du redigerar egenskaper går det inte att ändra **migreringsuppsättningens namn** eller **tjänst-URL**.
-
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt06.png)
-
-
-### Extraheringsprocess i innehållsöverföring {#extraction-process}
+## Extraheringsprocess i innehållsöverföring {#extraction-process}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_extraction"
@@ -190,7 +43,7 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
    >Gränssnittet har en automatisk inläsningsfunktion som laddar om översiktssidan var 30:e sekund.
    >När extraheringsfasen startas skapas ett skrivlås som frisläpps efter *60 sekunder*. Om extraheringen avbryts måste du alltså vänta en minut på att låset ska frisläppas innan du startar extraheringen igen.
 
-#### Uppdateringsextrahering {#top-up-extraction-process}
+### Uppdateringsextrahering {#top-up-extraction-process}
 
 Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
@@ -208,7 +61,7 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
    >
    >![bild](/help/move-to-cloud-service/content-transfer-tool/assets/11-topup-extraction.png)
 
-### Inmatningsprocess i innehållsöverföring {#ingestion-process}
+## Inmatningsprocess i innehållsöverföring {#ingestion-process}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_ingestion"
@@ -236,7 +89,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/15-ingestion-complete.png)
 
-#### Uppdatera inmatning {#top-up-ingestion-process}
+### Uppdatera inmatning {#top-up-ingestion-process}
 
 Content Transfer Tool har en funktion för differentiell *innehållsuppdatering* som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 

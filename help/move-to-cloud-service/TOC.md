@@ -5,10 +5,10 @@ breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 feature: Deploying
 role: Architect, Developer
-source-git-commit: 70811e1ba231dbd9a4bdf8764a4d93ba49413d0e
+source-git-commit: a309e668cb99231b274cf933c8392df873f33a81
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 43%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -35,9 +35,11 @@ ht-degree: 43%
       + [Översikt](/help/move-to-cloud-service/best-practices-analyzer/overview-best-practices-analyzer.md)
       + [Använda Best Practices Analyzer](/help/move-to-cloud-service/best-practices-analyzer/using-best-practices-analyzer.md)
    + Content Transfer Tool {#content-transfer-tool}
-      + [Översikt](/help/move-to-cloud-service/content-transfer-tool/overview-content-transfer-tool.md)
-      + [Krav för verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/prerequisites-content-transfer-tool.md)
-      + [Hantera stora innehållsdatabaser](/help/move-to-cloud-service/content-transfer-tool/handling-large-content-repositories.md)
+      + [Översikt](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)
+      + [Krav för verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md)
+      + [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/guidelines-best-practices-content-transfer-tool.md)
+      + [Komma igång med verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/gettting-started-content-transfer-tool.md)
+      + [Hantera stora innehållsdatabaser](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md)
       + [Använda Content Transfer Tool](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md)
       + Användarmappningsverktyg {#user-mapping-tool}
          + [Översikt](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md)
