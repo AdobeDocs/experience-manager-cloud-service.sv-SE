@@ -2,10 +2,10 @@
 title: Översikt över Content Transfer Tool
 description: Översikt över Content Transfer Tool
 exl-id: 4715937e-4c4c-4680-af15-016db4fe7db9
-source-git-commit: b421cc5e6078112adecb856d723a1bae628d8ec7
+source-git-commit: 001c0003a19153edeb238938a8eae330396e67c5
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 65%
+source-wordcount: '532'
+ht-degree: 61%
 
 ---
 
@@ -26,15 +26,15 @@ Det finns två faser som är associerade med innehållsöverföring:
 
 1. **Extrahering**: Extrahering avser att extrahera innehåll från AEM-källinstansen till ett temporärt område som kallas *migreringsuppsättning*. En *migreringsuppsättning* är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen.
 
-   Mer information finns i [Extraheringsprocess i innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#extraction-process).
+   Mer information finns i [Extraheringsprocess i innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/extracting-content.html).
 
 >[!NOTE]
 >
-> Vi rekommenderar att du kör verktyget för användarmappning som en del av extraheringsfasen. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration).
+> Vi rekommenderar att du kör verktyget för användarmappning som en del av extraheringsfasen. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.html).
 
 1. **Inmatning**: Inmatning avser att hämta innehåll från *migreringsuppsättningen* till Cloud Service-instansen.
 
-   Mer information finns i [Inmatningsprocess i innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#ingestion-process).
+   Mer information finns i [Inmatningsprocess i innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/ingesting-content.html).
 
 En *migreringsuppsättning* har följande attribut:
 
@@ -50,9 +50,9 @@ Content Transfer Tool har en funktion för differentiell innehållsuppdatering s
 >
 >Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service.
 
-I extraheringsfasen måste alternativet för ***overwrite*** vara inaktiverat för att en befintlig migreringsuppsättning ska kunna *uppdateras*. Mer information finns i [Extrahering av ändringar](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#top-up-extraction-process).
+I extraheringsfasen måste alternativet för ***overwrite*** vara inaktiverat för att en befintlig migreringsuppsättning ska kunna *uppdateras*. Mer information finns i [Extrahering av ändringar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/extracting-content.html?lang=en#top-up-extraction-process).
 
-För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet måste alternativet *wipe* vara inaktiverat i inmatningsfasen. Mer information finns i [Uppdatera inmatning](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#top-up-ingestion-process).
+För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet måste alternativet *wipe* vara inaktiverat i inmatningsfasen. Mer information finns i [Uppdatera inmatning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/ingesting-content.html?lang=en#top-up-ingestion-process).
 
 ## What&#39;s Next {#whats-next}
 
