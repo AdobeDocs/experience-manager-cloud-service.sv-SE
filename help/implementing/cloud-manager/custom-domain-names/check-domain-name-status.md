@@ -2,9 +2,9 @@
 title: Kontrollerar domännamnsstatus
 description: Kontrollerar domännamnsstatus
 exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
-source-git-commit: 417939cb7a206d2b98b5e631a09307edc6724c17
+source-git-commit: 4533cbc689d69cbe126791b4426123f890754507
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -27,15 +27,15 @@ pågårVerifiering pågår. Den här statusen visas vanligtvis när du har valt
 *verifiera* againicon bredvid statusen.
 
 * **Verifierad, Distributionen**
-FailedTXT-verifieringen lyckades. CDN-distributionen misslyckades dock. En Adobe-representant meddelas automatiskt.
+FailedTXT-verifieringen lyckades. CDN-distributionen misslyckades dock. Kontakta din Adobe-representant.
 
 * **Domän verifierad och**
 distribueradDen här statusen anger att ditt anpassade domännamn är klart att användas.
    >[!NOTE]
    >Nu är ditt anpassade domännamn klart för testning och kan hänvisas till molnhanterarens domännamn. Mer information finns i [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md).
 
-* **Borttagning**
-av anpassat domännamn pågår.
+* ****
+DeleteDeletion av det anpassade domännamnet pågår.
 
 * **Borttagningen**
 misslyckades. Det gick inte att ta bort det anpassade domännamnet. Du måste försöka igen. Mer information finns i [Ta bort ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md).
