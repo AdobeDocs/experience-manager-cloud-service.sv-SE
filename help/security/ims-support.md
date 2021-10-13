@@ -2,9 +2,9 @@
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: IMS-stöd för Adobe Experience Manager as a Cloud Service
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
-source-git-commit: 270a38412c14a869676ea6aa60428b319fa6228d
+source-git-commit: 5fa6809a9b4cdfa230ea3ebb3b0c9964807e0230
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2022'
 ht-degree: 90%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 90%
 
 >[!TIP]
 >
->Se vår Experience League-kurs [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS för att AEM som Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM och dess funktioner och funktioner. Adobe ID krävs.
+>Se vår Experience League-kurs [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS för att AEM as a Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomst till AEM samt funktioner och funktioner. Adobe ID krävs.
 
 >[!NOTE]
 >
->IMS-inloggning för AEM som Cloud Service stöder inte kapslade grupper i Admin Console.
+>AEM stöder för närvarande inte tilldelning av grupper till profiler. Användare bör läggas till individuellt i stället.
 
 ## Viktiga funktioner {#key-highlights}
 
@@ -132,7 +132,7 @@ Nedan anges de viktigaste OSGI-konfigurationerna som måste ändras för att ege
 
 ### Hantera produkter och användaråtkomst i Admin Console {#managing-products-and-user-access-in-admin-console}
 
-När produktadministratören loggar in på Admin Console visas flera instanser av AEM som en produktkontext för Cloud Service, vilket visas nedan. Välj till exempel någon av produkterna på sidan **Översikt**:
+När produktadministratören loggar in på Admin Console visas flera instanser av den AEM as a Cloud Service produktkontexten, vilket visas nedan. Välj till exempel någon av produkterna på sidan **Översikt**:
 
 ![Inloggning på instanser](/help/security/assets/ims6.png)
 
