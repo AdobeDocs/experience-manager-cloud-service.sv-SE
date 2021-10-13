@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: dbca0404c310bc0fa9372347bb7b37649adf8b94
+source-git-commit: 5243efa12fdca7e2e2d6ab23b38e8d09c6ea4945
 workflow-type: tm+mt
-source-wordcount: '3193'
+source-wordcount: '3199'
 ht-degree: 35%
 
 ---
@@ -143,17 +143,19 @@ Mer information finns i [Användarmappningsverktyget](https://experienceleague.a
 
 1. Klicka på **Spara** när du har fyllt i alla fält i **informationsskärmen för Skapa migreringsuppsättning**.
 
-1. Migreringsuppsättningen visas på sidan *Overview*.
+1. Du kommer att visa din migreringsuppsättning i guiden **Innehållsöverföring**, vilket visas i bilden nedan.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/04-item-selection-and-quick-actions.png)
 
-   Alla befintliga migreringsuppsättningar på den här skärmen visas på sidan *Översikt* med aktuell status- och statusinformation. Du kan se några av dessa ikoner som beskrivs nedan.
+   Alla befintliga migreringsuppsättningar visas i guiden **Innehållsöverföring** med aktuell status- och statusinformation. Du kan se några av dessa ikoner som beskrivs nedan.
 
    * Ett *rött moln* anger att du inte kan slutföra extraheringsprocessen.
    * Ett *grönt moln* anger att du kan slutföra extraheringsprocessen.
    * En *gul ikon* anger att du inte har skapat den befintliga migreringsuppsättningen och att den specifika skapas av en annan användare i samma instans.
 
-1. Välj en migreringsuppsättning från översiktssidan och klicka på **Properties** för att visa eller redigera migreringsuppsättningens egenskaper. När du redigerar egenskaper går det inte att ändra behållarnamnet eller tjänst-URL:en.
+1. Välj en migreringsuppsättning och klicka på **Egenskaper** för att visa eller redigera migreringsuppsättningsegenskaperna. När du redigerar egenskaper går det inte att ändra **migreringsuppsättningens namn** eller **tjänst-URL**.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt06.png)
 
 
 ### Extraheringsprocess i innehållsöverföring {#extraction-process}
