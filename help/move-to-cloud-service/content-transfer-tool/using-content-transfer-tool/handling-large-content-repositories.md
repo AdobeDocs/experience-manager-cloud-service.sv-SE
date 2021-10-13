@@ -2,9 +2,9 @@
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
 exl-id: 2eca7fa6-fb34-4b08-b3ec-4e9211e94275
-source-git-commit: 5ae76fbc3926f5e2cd7ed5597a9d4521adc9ddb1
+source-git-commit: 65847fc03770fe973c3bfee4a515748f7e487ab6
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1282'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Stöd för AzCopy finns i CTT 1.5.4. Du kan hämta den senaste versionen av CTT 
 
 ### 3. Konfigurera en azcopy.config-fil {#configure-azcopy-config-file}
 
-Skapa en ny fil med namnet azcopy.config i AEM crx-quickstart/cloud-migration .
+Skapa en ny fil med namnet azcopy.config i `crx-quickstart/cloud-migration` AEM källinstansen i .
 
 Innehållet i den här konfigurationsfilen kommer att vara annorlunda beroende på om AEM använder ett Azure- eller Amazon S3-datalager.
 
@@ -106,7 +106,8 @@ s3SecretKey=--REDACTED--
 
 När ovanstående konfigurationsfil är på plats körs AzCopy-förkopieringsfasen som en del av varje efterföljande extrahering. Du kan förhindra att den körs genom att byta namn på filen eller ta bort den.
 
-1. Starta en extrahering från CTT-gränssnittet. Mer information finns i [Köra verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#running-tool) och [Extraheringsprocessen](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#extraction-process).
+1. Starta en extrahering från CTT-gränssnittet. Mer information finns i [Getting Started with Content Transfer Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en) och [Extraction Process](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/extracting-content.html?lang=en).
+
 1. Bekräfta att följande rad skrivs ut i extraheringsloggen:
 
 ```
@@ -143,7 +144,7 @@ I och med Content Transfer Tool 1.5.4 har vi lagt till AzCopy-stöd för rediger
 
 För att du ska kunna utnyttja AzCopy under importen måste du ha en AEM as a Cloud Service version som är minst version 2021.6.5561.
 
-Börja skriva in författarförslaget från CTT-gränssnittet. Mer information finns i [Instruktionsprocessen](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool.md#ingestion-process).
+Börja skriva in författarförslaget från CTT-gränssnittet. Mer information finns i [Instruktionsprocessen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/ingesting-content.html?lang=en).
 Loggposterna från AzCopy visas i matningsloggen. De kommer att se ut så här:
 
 ```

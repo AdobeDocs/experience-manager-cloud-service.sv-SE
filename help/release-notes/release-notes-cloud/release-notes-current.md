@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cl
 description: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: f104f67af759e76c51d9cc125be5046aa8e62711
+source-git-commit: 8814627c3144d657b564fee839ace8e4bdcf6f78
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
@@ -208,7 +208,7 @@ Releasedatum för innehållsöverföringsverktyget v1.6.0 är 4 oktober 2021.
    * Hoppa över fel utan problem och fortsätt med aktiviteten Användarmappning
    * Användarmappning misslyckas inte längre om **åtkomsttoken** upphör att gälla efter 24 timmar. Användarmappning kan köras igen från den plats där den senast stoppades.
 
-* Om du vill öka tillförlitligheten för verktyget Innehållsöverföring kan innehållet importeras till antingen Author-instansen eller Publish-instansen åt gången. Mer information finns i [Använda verktyget för innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en).
+* Om du vill öka tillförlitligheten för verktyget Innehållsöverföring kan innehållet importeras till antingen Author-instansen eller Publish-instansen åt gången. Mer information finns i [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en).
 
 * När versioner inkluderas inkluderas sökvägen `/var/audit` automatiskt för att migrera granskningshändelser.
 

@@ -1,9 +1,9 @@
 ---
 title: Köra verktyget Innehållsöverföring på en publiceringsinstans
 description: Köra verktyget Innehållsöverföring på en publiceringsinstans
-source-git-commit: 5ae76fbc3926f5e2cd7ed5597a9d4521adc9ddb1
+source-git-commit: 65847fc03770fe973c3bfee4a515748f7e487ab6
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys inna
 
 Följ de rekommenderade tillvägagångssätten som beskrivs nedan:
 
-* Använd samma version av CTT som användes på Author-instansen.
+* Använd samma version av verktyget Innehållsöverföring som användes på författarinstansen.
 
 * Endast en publiceringsnod behöver migreras. Den bör avlägsnas från belastningsutjämnaren innan extraheringen påbörjas.
 
-* När du skapar en migreringsuppsättning använder du URL:en till författarens AEMaaCS-miljö.
+* När du skapar migreringsuppsättningen använder du URL:en för författaren AEM den as a Cloud Service miljön.
 
 * Under publiceringsprocessen kommer publiceringsnivån INTE att förminskas (till skillnad från författaren). Som en försiktighetsåtgärd bör du undvika att användare startar skrivåtgärder som:
 
