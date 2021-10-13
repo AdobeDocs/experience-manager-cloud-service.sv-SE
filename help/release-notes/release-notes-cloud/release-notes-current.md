@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cl
 description: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 8382dc404ed8d5525e466de8ca79d1db70ce93f5
+source-git-commit: f104f67af759e76c51d9cc125be5046aa8e62711
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,16 @@ Titta på videon [Versionsöversikt](https://video.tv.adobe.com/v/337381) från 
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
+* Anteckningar av PDF-filer stöds nu med inbyggda kommentarverktyg från Adobe Document Cloud. Anteckna PDF genom att lägga in text, markeringar, notislappar och teckningar direkt i dokumentets förhandsgranskningsfönster. Man kan också hoppa till intressanta sidor i PDF genom att klicka på specifika kommentarer
+
 * Användarna kan nu sortera de resurser som visas i sökresultaten i kolumn- och kortvyn. Sorteringen fungerar på kolumnerna Namn, Skapad, Ändrad eller Ingen.
 
    ![Sortera sökresultaten  [!DNL Assets] i kolumn- och kortvyn](/help/assets/assets/sort-searched-assets.png)
    *Bild: Sortera sökresultaten  [!DNL Assets] i kolumn- och kortvyn.*
+
+### Ny funktion i betaversionskanalen [!DNL Assets] {#assets-prerelease-features}
+
+* [!DNL Assets] innehåller nu en inbyggd anslutning  [!DNL Azure Media Services] för ljud- och videotranskription. När de konfigureras, transkriberas och genereras WebVTT-filer automatiskt. WebVTT-bildtexter används för effektivare sökning, bildtext eller översättning för att användas som undertexter.
 
 <!-- TBD: 'Unpublishing' this feature as suggested by engineering.
 
@@ -56,8 +62,8 @@ Titta på videon [Versionsöversikt](https://video.tv.adobe.com/v/337381) från 
 
 ### New feature in the [!DNL Assets] prerelease channel {#assets-prerelease-features}
 
-Apparently, no new Assets features in Sep beta channel.
-A/V transcription feature via CQ-4303854 has moved to Oct beta now.
+Apparently, no new Assets features in Sep prerelease channel.
+A/V transcription feature via CQ-4303854 has moved to Oct prerelease now.
 
 ### Bugs fixed in [!DNL Assets] {#assets-bugs-fixed}
 
