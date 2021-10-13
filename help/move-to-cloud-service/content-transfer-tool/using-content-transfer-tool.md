@@ -2,9 +2,9 @@
 title: Använda Content Transfer Tool
 description: Använda Content Transfer Tool
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: cde5514a0585dc0c882369e7603a62366d009a8c
+source-git-commit: dbca0404c310bc0fa9372347bb7b37649adf8b94
 workflow-type: tm+mt
-source-wordcount: '3216'
+source-wordcount: '3193'
 ht-degree: 35%
 
 ---
@@ -83,26 +83,24 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
 1. Markera Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Innehållsmigrering**.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ctt-entry-card01.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt01.png)
 
 1. Välj alternativet **Innehållsöverföring** i guiden **Innehållsmigrering**.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/ctt-entry-card02.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt02.png)
 
 
 1. Konsolen nedan visas när du skapar den första migreringsuppsättningen. Klicka på **Create Migration Set** om du vill skapa en ny migreringsuppsättning.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/01-create-migrationset.png)
-
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt03.png)
 
    >[!NOTE]
    >Om du har befintliga migreringsuppsättningar visas en lista med befintliga migreringsuppsättningar med aktuell status.
 
-   Klicka på **Skapa konfiguration för användarmappning** för att komma åt [verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#using-user-mapping-tool).
 
 1. Fyll i fälten på **skärmen Skapa migreringsuppsättning** enligt beskrivningen nedan.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/migration-set-creation-04.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt04.png)
 
    1. **Name**: Ange namnet på migreringsuppsättningen.
       >[!NOTE]
@@ -122,6 +120,9 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
 
       1. **Include Version**: Välj det som behövs. När versioner inkluderas inkluderas sökvägen `/var/audit` automatiskt för att migrera granskningshändelser.
+
+      ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt05.png)
+
       >[!NOTE]
       >Om du tänker ta med versioner som en del av en migreringsuppsättning och utför uppsättningar med `wipe=false`, måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför toppuppsättningar i en migreringsuppsättning, måste du utföra intaget som `wipe=true`.
 
@@ -136,6 +137,7 @@ Mer information finns i [Användarmappningsverktyget](https://experienceleague.a
          >* `/libs`
          >* `/home`
          >* `/etc` (vissa  `/etc` banor kan markeras i CTT)
+
 
 
 
