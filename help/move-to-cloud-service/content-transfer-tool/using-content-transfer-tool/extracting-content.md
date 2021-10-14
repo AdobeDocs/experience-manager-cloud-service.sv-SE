@@ -1,15 +1,15 @@
 ---
-title: Extrahera innehåll från källan i verktyget Innehållsöverföring
-description: Extrahera innehåll från källan i verktyget Innehållsöverföring
-source-git-commit: 0316ba8ee66695836a676ab764ce1f0cb415f95d
+title: Extraherar innehåll från källa
+description: Extraherar innehåll från källa
+source-git-commit: 6a6fa69d2eb79e41c79a0916bfd6e34ecf490d34
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '522'
 ht-degree: 41%
 
 ---
 
 
-# Extrahera innehåll från källan i verktyget Innehållsöverföring {#extracting-content}
+# Extraherar innehåll från källa {#extracting-content}
 
 ## Extraheringsprocess i verktyget Innehållsöverföring {#extraction-process}
 
