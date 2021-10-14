@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: 16e3280d7eaf53d8f944a60ec93b21c6676f0133
+source-git-commit: cbc5d8c2c4c1901556d5eaa336c61b68500ed8b8
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -45,44 +45,47 @@ Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställn
 >
 >Du kan ändra pipeline-inställningarna efter den första konfigurationen.
 
-## Konfigurera förloppsinställningarna från [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
+## Lägga till en ny produktionspipeline {#adding-production-pipeline}
 
-När du har konfigurerat ditt program och har minst en miljö med användargränssnittet [!UICONTROL Cloud Manager] är du redo att konfigurera din distributionskanal.
+När du har konfigurerat programmet och har minst en miljö med användargränssnittet [!UICONTROL Cloud Manager] är du redo att lägga till en produktionspipeline.
 
-Följ de här stegen för att konfigurera beteendet och inställningarna för din pipeline:
+Så här konfigurerar du beteendet och inställningarna för produktionsflödet:
 
-1. Klicka på **Konfigurera pipeline** för att konfigurera och konfigurera din pipeline.
+1. Gå till **Pipelines**-kortet från sidan **Programöversikt**.
+Klicka på **+Lägg till** och välj **Lägg till produktionspipeline**.
 
-   ![](assets/set-up-pipeline1.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add1.png)
 
-1. Skärmen **Setup Pipeline** visas. Markera grenen och klicka på **Nästa**.
+1. **Dialogrutan Lägg till** produktionspipeline visas. Ange pipelinenamnet.
 
-   ![](assets/setup-1.png)
+   Dessutom kan du ställa in **Distributionutlösare** och **Viktigt felbeteende** från **Distributionsalternativ**. Klicka på **Fortsätt**.
 
-1. Konfigurera distributionsalternativen.
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add2.png)
 
-   ![](assets/setup-pipeline.png)
 
    Du kan definiera utlösaren för att starta pipelinen:
 
    * **Manuell**  - använd gränssnittet för att starta pipelinen manuellt.
    * **På Git Changes**  - startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Även om du väljer det här alternativet kan du alltid starta pipelinen manuellt.
 
-   Under pipeline-konfigurationen eller -redigeringen kan Deployment Manager välja att definiera pipeline-beteendet när ett viktigt fel påträffas i någon av kvalitetsportarna.
+      Under pipeline-konfigurationen eller -redigeringen kan Deployment Manager välja att definiera pipeline-beteendet när ett viktigt fel påträffas i någon av kvalitetsportarna.
 
-   Detta är användbart för kunder som vill ha mer automatiserade processer. De tillgängliga alternativen är:
+      Detta är användbart för kunder som vill ha mer automatiserade processer. De tillgängliga alternativen är:
 
-   * **Fråga varje gång**  - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
-   * **Avbryt omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
-   * **Godkänn omedelbart**  - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
+      * **Fråga varje gång**  - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
+      * **Avbryt omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
+      * **Godkänn omedelbart**  - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
+1. **Fullständig** stackkod har valts. Du kan välja **databasen** och **Git-grenen**. Klicka på **Spara**.
 
-1. Produktionens pipeline-inställningar innehåller en tredje flik med namnet **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit.
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add3.png)
+
+1. Dialogrutan **Lägg till produktionsflöde** innehåller en tredje flik med namnet **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit.
 
    >[!NOTE]
-   >Du måste klicka på **Lägg till ny sida** för att definiera en egen anpassad länk.
+   >Du måste klicka på **Lägg till sida** för att definiera en egen anpassad länk.
 
-   ![](assets/setup-3.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add4.png)
 
    Klicka på **Lägg till ny sida** för att ange en URL-sökväg som ska inkluderas i Experience Audit.
 
@@ -103,9 +106,13 @@ Följ de här stegen för att konfigurera beteendet och inställningarna för di
    >[!NOTE]
    > De konfigurerade sidorna skickas till tjänsten och utvärderas utifrån prestanda, tillgänglighet, SEO (Search Engine Optimization), bästa praxis och PWA (Progressive Web App)-tester.
 
-1. Klicka på **Spara** på skärmen **Redigera pipeline**. Sidan **Översikt** visar nu **Distribuera ditt program**-kort. Klicka på **Distribuera** för att distribuera programmet.
+1. Klicka på **Spara**. Produktionspipelinen som skapades visas nu på kortet **Pipelines**.
 
-   ![](assets/configure-pipeline5.png)
+   Rörledningen visas på kortet på startskärmen med tre åtgärder, som visas nedan:
+
+   * **Lägg till**  - tillåter tillägg av en ny pipeline.
+   * **Åtkomst till replikinformation**  - gör att användaren kan få den information som behövs för att komma åt Cloud Manager Git-databasen.
+   * **Lär dig mer**  - navigerar till att förstå CI/CD-pipeline-dokumentationsresursen.
 
 ### Redigera en produktionspipeline {#editing-prod-pipeline}
 
