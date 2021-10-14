@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: 03f9a566d56acee12e5c1855df063e5db2bc59c1
+source-git-commit: 16e3280d7eaf53d8f944a60ec93b21c6676f0133
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1057'
 ht-degree: 0%
 
 ---
@@ -129,12 +129,9 @@ Följ stegen nedan för att redigera den konfigurerade pipeline:
       ![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-edit2.png)
 
 
-   1. På fliken **Källa** kan du ignorera webbnivåkonfigurationen för din pipeline och kontrollera eller avmarkera **Paus innan du distribuerar till Production** och **Schemalagda** alternativ från **Produktionsdistributionsalternativ**.
+   1. På fliken **Källa** kan du kontrollera eller avmarkera alternativen **Paus innan du distribuerar till produktion** och **Schemalagda** från **Alternativ för produktionsdistribution**.
 
-      >[!NOTE]
-      >Om **Ignorera webbnivåkonfiguration** inte är markerat distribueras även konfigurationen för webbnivån.
-
-      ![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-edit3.png)
+      ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-editnotier.png)
 
    1. Med alternativet **Experience Audit** kan du uppdatera eller lägga till nya sidor.
 
@@ -148,41 +145,59 @@ Förutom den huvudsakliga rörledningen som distribueras till stadium och produk
 
 På startskärmen visas dessa rörledningar i ett nytt kort:
 
-1. Gå till panelen **Icke-produktionspipelines** från startskärmen i Cloud Manager.
+1. Gå till **Pipelines**-kortet från startskärmen i Cloud Manager. Klicka på **+Lägg till** och välj **Lägg till icke-produktionsförlopp**.
 
-   ![](/help/implementing/cloud-manager/assets/non-prod-add.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add1.png)
 
-1. Klicka på knappen **Lägg till** för att ange namnet på pipeline, typen av pipeline och Git-grenen.
+1. **Dialogrutan Lägg till icke-produktionsförlopp**  visas. Välj den typ av pipeline som du vill skapa, antingen **Kodkvalitetspipeline** eller **Distributionspipeline**.
 
-   Dessutom kan du konfigurera utlösare för distribution och Beteende för viktigt fel i alternativen för pipeline.
+   Dessutom kan du ställa in **Distributionutlösare** och **Viktigt felbeteende** från **Distributionsalternativ**. Klicka på **Fortsätt**.
 
-   ![](assets/non-prod-pipe1.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add2.png)
 
-1. Klicka på **Spara** så visas pipeline på startskärmen med fem åtgärder, som visas nedan:
+1. **Fullständig** stackkod har valts. Du kan välja **databasen** och **Git-grenen**. Klicka på **Spara**.
 
-   ![](/help/implementing/cloud-manager/assets/prod-one.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add3.png)
 
-   * **Redigera**  - tillåter redigering av pipeline-inställningarna
-   * **Detaljer**  - innehåller information om pipelinekörningen
-   * **Build** - navigerar till körningssidan, från vilken pipelinen kan köras
-   * **Åtkomst till**  upprepningsinformation - gör att användaren kan få den information som behövs för att komma åt Cloud Manager Git-databasen
+1. Den nyligen skapade icke-produktionspipelinen visas nu på **pipelines**-kortet.
+
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add4.png)
+
+
+   Rörledningen visas på kortet på startskärmen med tre åtgärder, som visas nedan:
+
+   * **Lägg till**  - tillåter tillägg av en ny pipeline.
+   * **Åtkomst till replikinformation**  - gör att användaren kan få den information som behövs för att komma åt Cloud Manager Git-databasen.
    * **Lär dig mer**  - navigerar till att förstå CI/CD-pipeline-dokumentationsresursen.
 
 ### Redigera en icke-produktionspipeline {#editing-nonprod-pipeline}
 
-Du kan redigera pipelinekonfigurationerna på sidan **Programöversikt**.
+Du kan redigera pipelinekonfigurationerna från sidan **Pipelines card** från **Program Overview**.
 
 Följ stegen nedan för att redigera den konfigurerade icke-produktionsflödet:
 
 1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
 
-1. Välj fliken **Icke-produktion** och klicka på **Redigera** när du har valt önskade pipelines.
+1. Markera produktionsflödet och klicka på **..**. Klicka på **Redigera**, vilket visas i bilden nedan.
 
-   ![](assets/configure-pipeline/non-prod-edit-1.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-edit1.png)
 
-1. Välj önskad databas och andra nödvändiga uppdateringar och klicka på **Spara**.
+1. Dialogrutan **Redigera produktionspipeline** visas.
 
-   ![](assets/configure-pipeline/edit-nonprodenv.png)
+   1. På fliken **Konfiguration** kan du uppdatera **pipelinenamnet**, **Distributionutlösaren** och **Beteendet Viktigt mätningsfel**.
+
+      >[!NOTE]
+      >Mer information om hur du lägger till och hanterar databaser i Cloud Manager finns i [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md).
+
+      ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-edit2.png)
+
+
+   1. På fliken **Källkod** kan du uppdatera **databasen** och **Git-grenen**.
+
+      ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-edit3.png)
+
+1. Klicka på **Uppdatera** när du är klar med redigeringen av produktionsflödet.
+
 
 ## Nästa steg {#the-next-steps}
 
