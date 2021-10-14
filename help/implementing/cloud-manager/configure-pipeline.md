@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: 0161c1f5a2dac98316abcf28aef70cb23f9a1147
+source-git-commit: 03f9a566d56acee12e5c1855df063e5db2bc59c1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,10 @@ Följ stegen nedan för att redigera den konfigurerade pipeline:
       ![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-edit2.png)
 
 
-   1. På fliken **Källa** kan du ignorera webbnivåkonfigurationer och uppdatera från **Alternativ för produktionsdistribution**.
+   1. På fliken **Källa** kan du ignorera webbnivåkonfigurationen för din pipeline och kontrollera eller avmarkera **Paus innan du distribuerar till Production** och **Schemalagda** alternativ från **Produktionsdistributionsalternativ**.
+
+      >[!NOTE]
+      >Om **Ignorera webbnivåkonfiguration** inte är markerat distribueras även konfigurationen för webbnivån.
 
       ![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-edit3.png)
 
