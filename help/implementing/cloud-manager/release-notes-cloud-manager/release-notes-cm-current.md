@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2
 description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.10.0
 feature: Release Information
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: 3b1ff5f1715cd18228a9b7e5c57b0f3d84ee0eb0
+source-git-commit: 62e9466fdfd6d6ac63dad9a2bc19693f7dc8d098
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Nästa version är planerad till den 4 november 2021.
 
 * Guiden Lägg till IP Tillåtelselista informerar nu användaren om maximalt tillåtet antal IP-Tillåtelselista har uppnåtts.
 
-* API-dokumentationen för Cloud Manager innehåller nu en interaktiv spelningsmiljö som gör att inloggade användare kan experimentera med API:t från sin webbläsare. Se [API-uppspelning för Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/)
+* API-dokumentationen för Cloud Manager innehåller nu en interaktiv spelningsmiljö som gör att inloggade användare kan experimentera med API:t från sin webbläsare. Mer information finns i [API-spelningsvyn för Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/).
 
 * Verktygstipset på programkortet blir mer beskrivande om ett markeringsalternativ under Navigera till är inaktiverat. Nu visas&quot;En produktionsmiljö finns inte&quot;.
 

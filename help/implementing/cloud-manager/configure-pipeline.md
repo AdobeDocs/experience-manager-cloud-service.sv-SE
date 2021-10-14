@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: c206bc241bccf6f8a5bfb4946d6231f53438861a
+source-git-commit: 0161c1f5a2dac98316abcf28aef70cb23f9a1147
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ I Cloud Manager finns det två typer av pipeline:
 
    Mer information finns i [Icke-produktion och Endast kodkvalitet i pipeline](configure-pipeline.md#non-production-pipelines).
 
->[!NOTE]
->Om du vill konfigurera din pipeline måste du:
-> * Definiera den utlösare som ska starta pipelinen.
-> * Definiera parametrarna som styr produktionsdistributionen.
-> * konfigurera prestandatestparametrarna.
+   >[!NOTE]
+   >Om du vill konfigurera din pipeline måste du:
+   > * Definiera den utlösare som ska starta pipelinen.
+   > * Definiera parametrarna som styr produktionsdistributionen.
+   > * konfigurera prestandatestparametrarna.
 
 
 ## Ställ in produktionspipeline {#setting-up-production-pipeline}
@@ -115,31 +115,33 @@ Följ stegen nedan för att redigera den konfigurerade pipeline:
 
 1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
 
-1. Klicka på **Redigera** på **Pipelines**-kortet.
+1. Klicka på **..** på **Pipelines**-kortet och klicka på **Redigera**, som bilden nedan visar.
 
-   ![](assets/configure-pipeline/edit-pipeline-1.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-edit1.png)
 
-1. På fliken **Källkod** kan du uppdatera databasen. Klicka på **Öppna repo-information** för att uppdatera databasen.
+1. Dialogrutan **Redigera produktionspipeline** visas.
 
-   >[!NOTE]
-   >Mer information om hur du lägger till och hanterar databaser i Cloud Manager finns i [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md).
+   1. På fliken **Konfiguration** kan du uppdatera **pipelinenamnet**, **Distributionutlösaren** och **Beteendet Viktigt mätningsfel**.
 
-   ![](assets/configure-pipeline/edit-pipeline-2.png)
+      >[!NOTE]
+      >Mer information om hur du lägger till och hanterar databaser i Cloud Manager finns i [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md).
+
+      ![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-edit2.png)
 
 
-1. På fliken **Miljö** kan du uppdatera scen- och produktionsalternativen.
+   1. På fliken **Källa** kan du ignorera webbnivåkonfigurationer och uppdatera från **Alternativ för produktionsdistribution**.
 
-   ![](assets/configure-pipeline/edit-pipeline-3.png)
+      ![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-edit3.png)
 
-1. Med alternativet **Experience Audit** kan du uppdatera eller lägga till nya sidor.
+   1. Med alternativet **Experience Audit** kan du uppdatera eller lägga till nya sidor.
 
-   ![](assets/configure-pipeline/edit-pipeline-4.png)
+      ![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-edit4.png)
 
-1. Klicka på **Spara** när du är klar med redigeringen av pipeline.
+1. Klicka på **Uppdatera** när du är klar med redigeringen av pipeline.
 
 ## Icke-produktion och endast kodkvalitet, rörledningar {#non-production-pipelines}
 
-Förutom den huvudsakliga rörledningen som distribueras till stadium och produktion kan kunderna lägga upp ytterligare rörledningar, som kallas **icke-produktionsförlopp**. Dessa pipelines kör alltid stegen för bygg- och kodkvalitet. De kan också distribueras till AEM som en Cloud Service.
+Förutom den huvudsakliga rörledningen som distribueras till stadium och produktion kan kunderna lägga upp ytterligare rörledningar, som kallas **icke-produktionsförlopp**. Dessa pipelines kör alltid stegen för bygg- och kodkvalitet. De kan också distribueras till AEM as a Cloud Service miljö.
 
 På startskärmen visas dessa rörledningar i ett nytt kort:
 
