@@ -1,9 +1,9 @@
 ---
 title: Cloud Manager-databaser
 description: Cloud Manager-databaser
-source-git-commit: 66cc18f0449668f62c416482e27a72ea1baec0a1
+source-git-commit: e5d52c92c9162a58cc1a8e4f5d1169d59ee13119
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -118,4 +118,5 @@ Tänk på följande när du använder Git-undermoduler:
 * Git-URL:en måste vara exakt i den syntax som beskrivs ovan. Av säkerhetsskäl ska du inte bädda in autentiseringsuppgifter i dessa URL:er.
 * Det finns bara stöd för undermoduler i roten av förgreningen.
 * Git-undermoduler lagras som specifika Git-implementeringar. När ändringar görs i undermodulens databas måste därför den implementering som refereras uppdateras, till exempel med `git submodule update --remote` .
+* Om inte annat är nödvändigt rekommenderas starkt att undermoduler av typen&quot;ytlig&quot; används. Det gör du genom att köra `git config -f .gitmodules submodule.<submodule path>.shallow true` för varje undermodul.
 

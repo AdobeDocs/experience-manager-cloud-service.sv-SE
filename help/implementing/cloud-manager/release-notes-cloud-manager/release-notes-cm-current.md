@@ -1,42 +1,52 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.9.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.9.0
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.10.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.10.0
 feature: Release Information
 exl-id: 42cc9cab-6e66-4976-a3b1-ecb9dbaaabf4
-source-git-commit: ae619bb5a9ecc030fd3fa486445bcca7d3386df6
+source-git-commit: 3b1ff5f1715cd18228a9b7e5c57b0f3d84ee0eb0
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.9.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.10.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.9.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.10.0.
 
 >[!NOTE]
->Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager som en Cloud Service klickar du [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+>Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html) om du vill se den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.9.0 är 9 september 2021.
-Nästa version är planerad till 7 oktober 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.10.0 är 14 oktober 2021.
+Nästa version är planerad till den 4 november 2021.
 
 ### Nyheter {#what-is-new}
 
-* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 30.
+* Som förberedelse för vissa kommande ändringar kommer befintliga distributionsledningar nu att refereras och märkas i användargränssnittet som **fullständiga stackrörledningar**.
 
-* Programkorten på Cloud Managers landningssida och den tillhörande upplevelsen har uppdaterats.
+* Pipelinekortet har uppdaterats så att det nu visas ett enda, integrerat ansikte som visar både pipelines för produktion och icke-produktion, och användaren kan välja Kör/Pausa/Fortsätt direkt på den åtgärdsmeny som är kopplad till varje pipeline.
 
-* Kodkvalitetsstegloggen innehåller nu utförlig loggningsinformation om OakPal-skanningen.
+* En användare i rollen Distributionshanterare kan nu ta bort produktionsflödet via självbetjäning via gränssnittet.
 
-* Menyalternativen på sidan Aktivitet kommer nu att innehålla ett alternativ till **Hämta logg** för slutförda kodgeneratorkörningar. Om du väljer det här alternativet hämtas loggen för byggsteget.
+* Lägg till och redigera rörliga upplevelser har uppdaterats för att nu använda välbekanta, moderna moduler.
 
-* Om du klickar direkt på programkortet går du nu till sidan **Översikt** i Cloud Manager. Mer information finns i [Skapa ett produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html?lang=en).
+* Användare av Cloud Manager kan nu skicka feedback direkt från användargränssnittet via knappen **Feedback** längst upp till höger på landningssidan.
+
+* Årliga SLA-diagram kan nu hämtas från användargränssnittet i Cloud Manager.
+
+* Kodkvalitet och icke-produktionsrelaterade pipeline-körningar kommer nu att använda en mer effektiv, ytlig kloningsprocess under byggsteget, vilket ger en snabbare byggtid för kunder med särskilt stora Git-databaser.
+
+* Guiden Lägg till IP Tillåtelselista informerar nu användaren om maximalt tillåtet antal IP-Tillåtelselista har uppnåtts.
+
+* API-dokumentationen för Cloud Manager innehåller nu en interaktiv spelningsmiljö som gör att inloggade användare kan experimentera med API:t från sin webbläsare. Se [API-uppspelning för Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/)
+
+* Verktygstipset på programkortet blir mer beskrivande om ett markeringsalternativ under Navigera till är inaktiverat. Nu visas&quot;En produktionsmiljö finns inte&quot;.
 
 ### Felkorrigeringar {#bug-fixes}
 
-* Användaren kommer nu att se ett mer begripligt meddelande när han/hon försöker lägga till ett nytt IP-Tillåtelselista i ett program som har nått det högsta tillåtna antalet IP-Tillåtelselista som kan konfigureras.
+* I sällsynta fall, när en Adobe-personal skulle återställa en kunds miljö, ansågs återställningen vara fullständig innan miljön var helt i drift.
 
-* Fel URL kopierades när menyalternativet Kopiera URL valdes på skärmen Databaser.
+* Vissa interna begäranden som gjordes när miljön skapades har inte gjorts om.
 
