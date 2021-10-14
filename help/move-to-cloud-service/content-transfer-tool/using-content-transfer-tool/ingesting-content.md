@@ -1,10 +1,10 @@
 ---
 title: Infoga innehåll i mål i verktyget Innehållsöverföring
 description: Infoga innehåll i mål i verktyget Innehållsöverföring
-source-git-commit: d638fe0f4711bd152bd9c4be99a68662f12072e6
+source-git-commit: 253ec197947cfa3aa3f1e4f84be1226981a90fe0
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 34%
+source-wordcount: '554'
+ht-degree: 27%
 
 ---
 
@@ -47,7 +47,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
 1. När intaget är slutfört uppdateras statusen under **Författarintag** till **FINISHED**.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/15-ingestion-complete.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ingestion-05.png)
 
 ## Uppdatera inmatning {#top-up-ingestion-process}
 
@@ -58,9 +58,18 @@ Content Transfer Tool har en funktion för differentiell *innehållsuppdatering*
 
 När inmatningen är klar kan du använda delta-innehåll med hjälp av inmatningsmetoden för uppdateringar. Följ stegen nedan:
 
-1. Navigera till sidan *Overview* och välj den migreringsuppsättning som du vill utföra uppdateringsinmatningen för. Klicka på **Ingest** för att starta uppdateringsextraheringen. Dialogrutan **Migration Set ingestion** visas.
+1. Navigera till guiden **Innehållsöverföring** och välj den migreringsuppsättning som du vill utföra det översta intaget för. Klicka på **Ingest** för att starta uppdateringsextraheringen.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/content-ingestion-02.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/topup-ingest1.png)
+
+
+1. Dialogrutan **Migration Set ingestion** visas.
+
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/topup-ingest2.png)
 
    >[!IMPORTANT]
    >Du bör inaktivera alternativet **Rensa befintligt innehåll i molninstansen före intag**, för att förhindra att befintligt innehåll tas bort från den tidigare intagsaktiviteten. Klicka på **Kundtjänst** för att logga en biljett, vilket visas i föregående bild.
+
+## What&#39;s Next {#whats-next}
+
+När du har lärt dig Inkludera innehåll i mål i verktyget för innehållsöverföring kan du visa loggar när varje steg har slutförts (extrahering och förtäring) och leta efter fel. Mer information finns i [Visa loggar för en migreringsuppsättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/viewing-logs.html?lang=en).
