@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: 3c9c14745e784c47eecd04ac622cc48f65d7442a
+source-git-commit: 03c058c17e8a9ff5a0be9203a65207bb367a02a6
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -54,11 +54,11 @@ Så här konfigurerar du beteendet och inställningarna för produktionsflödet:
 1. Gå till **Pipelines**-kortet från sidan **Programöversikt**.
 Klicka på **+Lägg till** och välj **Lägg till produktionspipeline**.
 
-   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add1.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-1.png)
 
 1. **Dialogrutan Lägg till** produktionspipeline visas. Ange pipelinenamnet.
 
-   Dessutom kan du ställa in **Distributionutlösare** och **Viktigt felbeteende** från **Distributionsalternativ**. Klicka på **Fortsätt**.
+   Dessutom kan du ställa in **Distributionutlösare** och **Beteende för viktiga måttfel** från **Distributionsalternativ**. Klicka på **Fortsätt**.
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add2.png)
 
@@ -75,19 +75,24 @@ Klicka på **+Lägg till** och välj **Lägg till produktionspipeline**.
 
    * **Fråga varje gång**  - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
    * **Misslyckas omedelbart**  - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
-   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
+   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipelinen automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 
-1. Dialogrutan **Lägg till produktionspipeline** innehåller en andra flik med namnet **Källkod**. **Fullständig** stackkod har valts. Du kan välja **databasen** och **Git-grenen**. Klicka på **Spara**.
+1. Dialogrutan **Lägg till produktionspipeline** innehåller en andra flik med namnet **Källkod**. **Fullständig** stackkod har valts. Du kan välja **databasen** och **Git-grenen**. Välj alternativ för produktionsdistribution enligt nedan. Klicka på **Fortsätt**.
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-fullstack1.png)
+
+   Alternativ för produktionsdistribution:
+
+   * **Pausa före distribuering till produktion**: Med det här alternativet kan distributionen pausa pausen före produktion.
+   * **Schemalagd**: Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen.
 
 1. Dialogrutan **Lägg till produktionspipeline** innehåller en tredje flik med namnet **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit.
 
    >[!NOTE]
    >Du måste klicka på **Lägg till sida** för att definiera en egen anpassad länk.
 
-   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add4.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-audit.png)
 
    Klicka på **Lägg till ny sida** för att ange en URL-sökväg som ska inkluderas i Experience Audit.
 
@@ -234,6 +239,28 @@ Följ stegen nedan för att redigera den konfigurerade icke-produktionsflödet:
       ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-edit3.png)
 
 1. Klicka på **Uppdatera** när du är klar med redigeringen av produktionsflödet.
+
+### Ytterligare icke-produktionsförloppsindikatorer {#additional-nonprod-actions}
+
+#### Köra en icke-produktionspipeline {#run-nonprod}
+
+Du kan köra produktionsflödet från pipelines-kortet:
+
+1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
+
+1. Klicka på **..** på **Pipelines**-kortet och klicka på **Kör**, som bilden nedan visar.
+
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-run1.png)
+
+#### Ta bort en icke-produktionspipeline {#delete-nonprod}
+
+Du kan ta bort produktionsflödet från pipelines-kortet:
+
+1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
+
+1. Klicka på **..** på **Pipelines**-kortet och klicka på **Ta bort**, enligt bilden nedan.
+
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-delete.png)
 
 
 ## Nästa steg {#the-next-steps}
