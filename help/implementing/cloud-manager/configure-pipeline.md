@@ -2,7 +2,7 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: feafcc0c3c8e32e86824efb293a1a0141a318280
+source-git-commit: 3c9c14745e784c47eecd04ac622cc48f65d7442a
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställn
 >
 >Du kan ändra pipeline-inställningarna efter den första konfigurationen.
 
-## Lägga till en ny produktionspipeline {#adding-production-pipeline}
+### Lägga till en ny produktionspipeline {#adding-production-pipeline}
 
 När du har konfigurerat programmet och har minst en miljö med användargränssnittet [!UICONTROL Cloud Manager] är du redo att lägga till en produktionspipeline.
 
