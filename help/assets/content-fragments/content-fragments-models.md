@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för ditt h
 feature: Content Fragments
 role: User
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: e099272245054bdff0bbeaa1fd9b01e564198dee
+source-git-commit: d5032670c243779289e8e86850bbfd137d8d6286
 workflow-type: tm+mt
-source-wordcount: '2850'
+source-wordcount: '2858'
 ht-degree: 3%
 
 ---
@@ -78,7 +78,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
       * Om du skriver en **fältetikett** slutförs **egenskapsnamnet** automatiskt, om det är tomt, och den kan uppdateras manuellt senare.
 
          >[!CAUTION]
-         När du uppdaterar en datatyp **Egenskapsnamn** manuellt måste du tänka på att namn bara får innehålla latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
+         När du uppdaterar egenskapen **Egenskapsnamn** manuellt för en datatyp, bör du tänka på att namn endast får innehålla latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
          Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
       Till exempel:
 
@@ -140,9 +140,12 @@ I fragmentredigeraren visas varje instans som en flik.
 
 Många egenskaper är självförklarande, för vissa egenskaper finns ytterligare information nedan:
 
->[!CAUTION]
-När du uppdaterar **egenskapsnamnet** manuellt bör du tänka på att namn endast får innehålla latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
-Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+* **Egenskapsnamn**
+
+   När du uppdaterar den här egenskapen manuellt för en datatyp bör du tänka på att namn **måste** endast innehålla *latinska tecken, numeriska siffror och understreck &quot;_&quot; som specialtecken.*
+
+   >[!CAUTION]
+   Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
 * **Återge**
 somDe olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan ange om författaren ska se en enda instans av fältet eller om den ska kunna skapa flera instanser.
