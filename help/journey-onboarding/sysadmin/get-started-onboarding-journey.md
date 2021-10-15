@@ -3,16 +3,17 @@ title: Komma igång med introduktionsprocessen
 description: Följ den här sidan för att lära dig hur du kommer igång med en introduktionsresa
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: d8ff6f4386ab0e5df4f770cdb566facc1cc0cc98
+exl-id: a02ff46f-1319-4c0c-8ecc-d8d2d4276229
+source-git-commit: aeee4c4865e2ba7a8c9c7ffb392a08c45dffb20a
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 0%
+source-wordcount: '549'
+ht-degree: 1%
 
 ---
 
 # Kom igång med introduktionsprocessen {#getting-started}
 
-Onboarding är den process under vilken en utsedd [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) konfigurerar AEM som en Cloud Service för din organisation. Detta inkluderar inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Därför kan varje medlem logga in och komma åt sina AEM som en Cloud Service.
+Onboarding är den process under vilken en utsedd [systemadministratör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/system-administrator.html?lang=en) konfigurerar AEM as a Cloud Service för din organisation. Detta inkluderar inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Det innebär att varje medlem kan logga in och komma åt sina AEM as a Cloud Service resurser.
 
 ## Syfte {#objective}
 
@@ -26,6 +27,11 @@ När du har läst det här avsnittet ska du kunna:
 >[!NOTE]
 >Innan du börjar med introduktionsprocessen bör du ta reda på mer om Adobe Admin Console. Admin Console i Adobe är en central plats för att administrera och hantera produktlicenser och användare för Adobe. Systemadministratören loggar in på Admin Console i Adobe för att lägga till eller ta bort användare och mycket annat. Mer information finns i [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/admin-console.html?lang=en).
 
+## Onboarding för AEM as a Cloud Service {#onboarding-process}
+
+Lär dig mer om att komma igång med AEM as a Cloud Service från avtalsfasen genom att konfigurera miljöerna med Cloud Manager.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336959/?quality=12&learn=on)
 
 ## Logga in på Admin Console {#steps-admin-console}
 
@@ -67,4 +73,3 @@ Följ stegen nedan för att navigera till Admin Console och granska din systemad
 ## What&#39;s Next {#whats-next}
 
 Nu när du har loggat in på Admin Console och kontrollerat din profil som systemadministratör bör du fortsätta din introduktionsresa genom att nästa gång du granskar dokumentet [Tilldela teammedlemmar till Cloud Manager-produktprofiler](/help/journey-onboarding/sysadmin/assign-team-members-aem-cloud-service.md).
-
