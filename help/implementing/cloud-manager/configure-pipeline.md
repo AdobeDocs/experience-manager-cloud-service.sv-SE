@@ -2,9 +2,9 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: cbc5d8c2c4c1901556d5eaa336c61b68500ed8b8
+source-git-commit: feafcc0c3c8e32e86824efb293a1a0141a318280
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Klicka på **+Lägg till** och välj **Lägg till produktionspipeline**.
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add2.png)
 
 
-   Du kan definiera utlösaren för att starta pipelinen:
+   Du kan definiera distributionsutlösarna för att starta pipelinen.
 
    * **Manuell**  - använd gränssnittet för att starta pipelinen manuellt.
    * **På Git Changes**  - startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Även om du väljer det här alternativet kan du alltid starta pipelinen manuellt.
@@ -71,16 +71,18 @@ Klicka på **+Lägg till** och välj **Lägg till produktionspipeline**.
       Under pipeline-konfigurationen eller -redigeringen kan Deployment Manager välja att definiera pipeline-beteendet när ett viktigt fel påträffas i någon av kvalitetsportarna.
 
       Detta är användbart för kunder som vill ha mer automatiserade processer. De tillgängliga alternativen är:
+   Du kan definiera det viktiga felmåttets beteende för att starta pipelinen.
 
-      * **Fråga varje gång**  - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
-      * **Avbryt omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
-      * **Godkänn omedelbart**  - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
+   * **Fråga varje gång**  - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
+   * **Misslyckas omedelbart**  - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
+   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
-1. **Fullständig** stackkod har valts. Du kan välja **databasen** och **Git-grenen**. Klicka på **Spara**.
 
-   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-add3.png)
+1. Dialogrutan **Lägg till produktionspipeline** innehåller en andra flik med namnet **Källkod**. **Fullständig** stackkod har valts. Du kan välja **databasen** och **Git-grenen**. Klicka på **Spara**.
 
-1. Dialogrutan **Lägg till produktionsflöde** innehåller en tredje flik med namnet **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit.
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-fullstack1.png)
+
+1. Dialogrutan **Lägg till produktionspipeline** innehåller en tredje flik med namnet **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit.
 
    >[!NOTE]
    >Du måste klicka på **Lägg till sida** för att definiera en egen anpassad länk.
@@ -146,9 +148,37 @@ Följ stegen nedan för att redigera den konfigurerade pipeline:
 
 1. Klicka på **Uppdatera** när du är klar med redigeringen av pipeline.
 
+### Ytterligare produktionsförloppsåtgärder {#additional-prod-actions}
+
+#### Köra en produktionspipeline {#run-prod}
+
+Du kan köra produktionsflödet från pipelines-kortet:
+
+1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
+
+1. Klicka på **..** på **Pipelines**-kortet och klicka på **Kör**, som bilden nedan visar.
+
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-run.png)
+
+#### Ta bort en produktionspipeline {#delete-prod}
+
+Du kan ta bort produktionsflödet från pipelines-kortet:
+
+1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
+
+1. Klicka på **..** på **Pipelines**-kortet och klicka på **Ta bort**, enligt bilden nedan.
+
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-delete.png)
+
+   >[!NOTE]
+   >En användare i rollen Distributionshanterare kan nu ta bort produktionsflöde på ett självbetjäningssätt via alternativet **Ta bort** från pipeline-kortet.
+
+
 ## Icke-produktion och endast kodkvalitet, rörledningar {#non-production-pipelines}
 
 Förutom den huvudsakliga rörledningen som distribueras till stadium och produktion kan kunderna lägga upp ytterligare rörledningar, som kallas **icke-produktionsförlopp**. Dessa pipelines kör alltid stegen för bygg- och kodkvalitet. De kan också distribueras till AEM as a Cloud Service miljö.
+
+### Lägga till en ny icke-produktionspipeline {#adding-non-production-pipeline}
 
 På startskärmen visas dessa rörledningar i ett nytt kort:
 
@@ -158,7 +188,7 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
 
 1. **Dialogrutan Lägg till icke-produktionsförlopp**  visas. Välj den typ av pipeline som du vill skapa, antingen **Kodkvalitetspipeline** eller **Distributionspipeline**.
 
-   Dessutom kan du ställa in **Distributionutlösare** och **Viktigt felbeteende** från **Distributionsalternativ**. Klicka på **Fortsätt**.
+   Dessutom kan du ställa in **Distributionutlösare** och **Beteende för viktiga måttfel** från **Distributionsalternativ**. Klicka på **Fortsätt**.
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add2.png)
 
@@ -191,7 +221,7 @@ Följ stegen nedan för att redigera den konfigurerade icke-produktionsflödet:
 
 1. Dialogrutan **Redigera produktionspipeline** visas.
 
-   1. På fliken **Konfiguration** kan du uppdatera **pipelinenamnet**, **Distributionutlösaren** och **Beteendet Viktigt mätningsfel**.
+   1. På fliken **Konfiguration** kan du uppdatera **pipelinenamnet**, **Distributionutlösaren** och **Beteendet Viktiga måttfel**.
 
       >[!NOTE]
       >Mer information om hur du lägger till och hanterar databaser i Cloud Manager finns i [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md).
