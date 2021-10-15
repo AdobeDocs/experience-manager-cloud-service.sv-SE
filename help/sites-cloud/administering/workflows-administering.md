@@ -4,7 +4,7 @@ description: Lär dig hur du administrerar arbetsflödesinstanser
 feature: Administering
 role: Admin
 exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
-source-git-commit: 079c9a64aeee62b36a12083645ca43b115838705
+source-git-commit: c03959a9acc22a119b2a4c8c473abc84b0b9bf0d
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 0%
@@ -94,7 +94,7 @@ ett fönster där
 historik Visar information om arbetsflödeshistoriken.
 
 * **Försök** stega igenKör komponentinstansen för skriptsteget igen. Använd kommandot Försök igen när du har åtgärdat orsaken till det ursprungliga felet. Du kan till exempel försöka utföra steget igen när du har åtgärdat ett fel i skriptet som utförs av processteget.
-* **Avsluta** Avsluta arbetsflödet om felet har orsakat en situation som inte kan stämmas av för arbetsflödet. Arbetsflödet kan t.ex. förlita sig på miljöförhållanden som information i databasen som inte längre är giltig för arbetsflödesinstansen.
+* **** AvslutaAvsluta arbetsflödet om felet har orsakat en situation som inte kan stämmas av för arbetsflödet. Arbetsflödet kan t.ex. förlita sig på miljöförhållanden som information i databasen som inte längre är giltig för arbetsflödesinstansen.
 * **Avsluta och** RetryLiknar  **** Terminate förutom att en ny arbetsflödesinstans startas med den ursprungliga nyttolasten, titeln och beskrivningen.
 
 Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflödet:
@@ -170,13 +170,12 @@ Du kan ange den största tillåtna storleken för inkorgen genom att konfigurera
 
 ## Använda arbetsflödesvariabler för kundägda datalager {#using-workflow-variables-customer-datastore}
 
-Data som används i arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som tillhandahålls av Adobe. I det här avsnittet beskrivs hur du konfigurerar dessa variabler för extern lagring.
+Data som bearbetas av arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som tillhandahålls av Adobe. I dessa avsnitt beskrivs hur du konfigurerar dessa variabler för extern lagring.
 
 ### Ange modellen för extern lagring av metadata {#set-model-for-external-storage}
 
-På arbetsflödesmodellnivån planeras en flagga som anger att modellen (och dess körningsinstanser) har extern lagring av metadata. Användarmetadata sparas inte i JCR för arbetsflödesinstanserna för modellerna som är markerade för extern lagring.
+På arbetsflödesmodellnivån anges en flagga som anger att modellen (och dess körningsinstanser) har extern lagring av metadata. Arbetsflödesvariabler sparas inte i JCR för arbetsflödesinstanser av modeller som är markerade för extern lagring.
 
-Om du vill aktivera den här funktionen måste du aktivera flaggan för extern beständighet: **userMetaDataCustomPersistenceEnabled = &quot;true&quot;**.
 Egenskapen *userMetadataPersistenceEnabled* kommer att lagras på *jcr:content-noden* i arbetsflödesmodellen. Den här flaggan bevaras i arbetsflödets metadata som *cq:userMetaDataCustomPersistenceEnabled*.
 
 Bilden nedan måste ange flaggan i ett arbetsflöde.
@@ -184,6 +183,8 @@ Bilden nedan måste ange flaggan i ett arbetsflöde.
 ![workflow-externalize-config](/help/sites-cloud/administering/assets/workflow-externalize-config.png)
 
 ### API:er för metadata i extern lagring {#apis-for-metadata-external-storage}
+
+För att kunna lagra variablerna externt måste du implementera de API:er som arbetsflödet visar.
 
 UserMetaDataPersistenceContext
 
