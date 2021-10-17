@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2
 description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.10.0
 feature: Release Information
 exl-id: null
-source-git-commit: a519b5bd774506f50f49c8309b14d4a62c7e7ba5
+source-git-commit: 23b19789e9e9857c9ae3d763fc71586a5e5da25b
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -49,4 +49,6 @@ Nästa version är planerad till den 4 november 2021.
 * I sällsynta fall, när en Adobe-personal skulle återställa en kunds miljö, ansågs återställningen vara fullständig innan miljön var helt i drift.
 
 * Vissa interna begäranden som gjordes när miljön skapades har inte gjorts om.
+
+* Om ett distributionsfel uppstår efter domännamnsverifiering har felmeddelandet korrigerats för att begära att kunden kontaktar sin Adobe-representant.
 
