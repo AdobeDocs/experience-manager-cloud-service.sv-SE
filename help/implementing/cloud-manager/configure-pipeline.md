@@ -2,7 +2,7 @@
 title: Konfigurera CI/CD-pipeline - Cloud Services
 description: Konfigurera CI/CD-pipeline - Cloud Services
 exl-id: d2024b42-9042-46a0-879e-110b214c7285
-source-git-commit: eb8fb1f4134ceb9117773d01f4d97c68bd8c41a2
+source-git-commit: 01cd4efc920515996c928a8cb455bb44d4f722f2
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Klicka på **+Lägg till** och välj **Lägg till produktionspipeline**.
 
    Den URL som visas i tabellen är:
 
-   `https://publish-p14253-e43686.adobeaemcloud.com/us/en/about-us.html`
+   `https://publish-p12361-e112003.adobeaemcloud.com/us/en/about-us.html`
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-audit4.png)
 
