@@ -1,18 +1,18 @@
 ---
-title: Konfigurera OSGi för Adobe Experience Manager som Cloud Service
+title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
-feature: Distribuerar
+feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: 2555e5e1545f198a235d44f8cb07e25d7490d1d5
+source-git-commit: 9f1183430255bd4f026eedff5c9e8f76ce68b76f
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2936'
 ht-degree: 0%
 
 ---
 
-# Konfigurera OSGi för Adobe Experience Manager som Cloud Service {#configuring-osgi-for-aem-as-a-cloud-service}
+# Konfigurera OSGi för Adobe Experience Manager as a Cloud Service {#configuring-osgi-for-aem-as-a-cloud-service}
 
-[OSG ](https://www.osgi.org/) är en viktig del i Adobe Experience Manager (AEM) teknikstack. Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
+[](https://www.osgi.org/) OSGiis a basic element in the technology stack of Adobe Experience Manager (AEM). Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
 
 OSGi innehåller standardmallar som gör att applikationer kan byggas av små, återanvändbara och samverkansbaserade komponenter. Dessa komponenter kan sättas samman till ett program och distribueras. Detta gör det enkelt att hantera OSGi-paket eftersom de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent finns i ett av de olika paketen. Mer information finns i [OSGi-specifikationen](https://www.osgi.org/Specifications/HomePage).
 
@@ -62,7 +62,7 @@ När du utvecklar lokalt kan en startparameter för körningsläge skickas in f�
 
 ## Typer av OSGi-konfigurationsvärden {#types-of-osgi-configuration-values}
 
-Det finns tre sorters OSGi-konfigurationsvärden som kan användas med Adobe Experience Manager som Cloud Service.
+Det finns tre sorters OSGi-konfigurationsvärden som kan användas med Adobe Experience Manager as a Cloud Service.
 
 1. **Textbundna värden**, som är värden som är hårdkodade i OSGi-konfigurationen och lagrade i Git. Till exempel:
 
@@ -80,7 +80,7 @@ Det finns tre sorters OSGi-konfigurationsvärden som kan användas med Adobe Exp
    } 
    ```
 
-1. **Miljöspecifika värden**, som är värden som varierar mellan olika utvecklingsmiljöer, och som därför inte kan anges korrekt av körningsläget (eftersom det finns ett enda  `dev` körningsläge i Adobe Experience Manager som Cloud Service). Till exempel:
+1. **Miljöspecifika värden**, som är värden som varierar mellan olika utvecklingsmiljöer, och som därför inte kan anges korrekt av körningsläget (eftersom det finns ett enda  `dev` körningsläge i Adobe Experience Manager as a Cloud Service). Till exempel:
 
    ```json
    {
@@ -120,16 +120,16 @@ När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden
 
 ### När icke-hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-non-secret-environment-specific-configuration-values}
 
-Använd bara miljöspecifika konfigurationer (`$[env:ENV_VAR_NAME]`) för icke-hemliga konfigurationsvärden när värdena varierar för förhandsvisningsnivån eller varierar mellan olika utvecklingsmiljöer. Detta omfattar lokala utvecklingsinstanser och alla Adobe Experience Manager som en Cloud Service utvecklingsmiljö. Förutom för att ange unika värden för förhandsvisningsnivån bör du undvika att använda icke-hemliga miljöspecifika konfigurationer för Adobe Experience Manager som Cloud Service- eller produktionsmiljöer.
+Använd bara miljöspecifika konfigurationer (`$[env:ENV_VAR_NAME]`) för icke-hemliga konfigurationsvärden när värdena varierar för förhandsvisningsnivån eller varierar mellan olika utvecklingsmiljöer. Detta omfattar lokala utvecklingsinstanser och alla Adobe Experience Manager as a Cloud Service utvecklingsmiljöer. Förutom för att ange unika värden för förhandsvisningsnivån bör du undvika att använda icke-hemliga miljöspecifika konfigurationer för Adobe Experience Manager as a Cloud Service Stage- eller Production-miljöer.
 
 * Använd bara icke-hemliga miljöspecifika konfigurationer för konfigurationsvärden som skiljer sig mellan publicerings- och förhandsgranskningsskikt, eller för värden som skiljer sig åt mellan utvecklingsmiljöer, inklusive lokala utvecklingsinstanser.
 * Förutom scenariot när förhandsvisningsnivån behöver variera från publiceringsnivån, använder du standardvärdena för intern visning i OSGi-konfigurationerna för icke-hemliga värden för scenen och produktionen. Det rekommenderas inte att man använder miljöspecifika konfigurationer för att underlätta konfigurationsändringar vid körning till scen- och produktionsmiljöer. dessa ändringar bör införas via källkodshantering.
 
 ### När hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-secret-environment-specific-configuration-values}
 
-Adobe Experience Manager som Cloud Service kräver att miljöspecifika konfigurationer (`$[secret:SECRET_VAR_NAME]`) används för alla hemliga OSGi-konfigurationsvärden, som lösenord, privata API-nycklar eller andra värden som inte kan lagras i Git av säkerhetsskäl.
+Adobe Experience Manager as a Cloud Service kräver att miljöspecifika konfigurationer (`$[secret:SECRET_VAR_NAME]`) används för alla hemliga OSGi-konfigurationsvärden, till exempel lösenord, privata API-nycklar eller andra värden som inte kan lagras i Git av säkerhetsskäl.
 
-Använd hemliga miljöspecifika konfigurationer för att lagra värdet för hemligheter på alla Adobe Experience Manager som en Cloud Service, inklusive scenen och produktionen.
+Använd hemliga miljöspecifika konfigurationer för att lagra värdet för hemligheter i alla Adobe Experience Manager as a Cloud Service-miljöer, inklusive Stage och Production.
 
 ## Skapa OSGi-konfigurationer {#creating-sogi-configurations}
 
@@ -140,9 +140,9 @@ Det finns två sätt att skapa OSGi-konfigurationer enligt beskrivningen nedan. 
 JSON-formaterade OSGi-konfigurationsfiler kan skrivas för hand direkt i AEM. Detta är ofta det snabbaste sättet att skapa OSGi-konfigurationer för välkända OSGi-komponenter, och särskilt anpassade OSGi-komponenter som har utformats och utvecklats av samma utvecklare som definierar konfigurationerna. Den här metoden kan också användas för att kopiera/klistra in och uppdatera konfigurationer för samma OSGi-komponent i olika körningslägemappar.
 
 1. I din utvecklingsmiljö öppnar du `ui.apps`-projektet, letar upp eller skapar konfigurationsmappen (`/apps/.../config.<runmode>`) som anger för de körningslägen som den nya OSGi-konfigurationen behöver använda
-1. Skapa en ny `<PID>.cfg.json`-fil i den här konfigurationsmappen. PID är den beständiga identiteten för OSGi-komponenten är vanligtvis OSGi-komponentimplementeringens fullständiga klassnamn. Till exempel:
+1. Skapa en ny `<PID>.cfg.json`-fil i den här konfigurationsmappen. PID är den beständiga identiteten för OSGi-komponenten. Det är vanligtvis det fullständiga klassnamnet för OSGi-komponentimplementeringen. Till exempel:
    `/apps/.../config/com.example.workflow.impl.ApprovalWorkflow.cfg.json`
-Observera att namn på OSGi-konfigurationsfabriksfiler använder  `<PID>-<factory-name>.cfg.json` namnkonventionen
+Observera att namn på OSGi-konfigurationsfabriksfiler använder  `<factoryPID>-<name>.cfg.json` namnkonventionen
 1. Öppna den nya `.cfg.json`-filen och definiera nyckel/värde-kombinationerna för OSGi-egenskapen och -värdepar enligt [JSON OSGi-konfigurationsformatet](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
 1. Spara ändringarna i den nya `.cfg.json`-filen
 1. Lägg till och implementera din nya OSGi-konfigurationsfil i Git
@@ -537,7 +537,7 @@ Upp till 200 variabler per miljö kan deklareras.
 
 ## Distributionsöverväganden för Hemliga och miljöspecifika konfigurationsvärden {#deployment-considerations-for-secret-and-environment-specific-configuration-values}
 
-Eftersom de hemliga och miljöspecifika konfigurationsvärdena finns utanför Git, och därför inte är en del av det formella Adobe Experience Manager som en distributionsmekanism för Cloud Service, bör kunden hantera, styra och integrera i Adobe Experience Manager som en distributionsprocess för Cloud Service.
+Eftersom de hemliga och miljöspecifika konfigurationsvärdena finns utanför Git, och därför inte ingår i de formella distributionsmekanismerna för Adobe Experience Manager as a Cloud Service, bör kunden hantera, styra och integrera dem i Adobe Experience Manager as a Cloud Service distributionsprocess.
 
 Som nämnts ovan distribueras de nya variablerna och värdena till Cloud-miljöer när API anropas, på samma sätt som en vanlig pipeline för kundkoddistribution. Tjänsterna för författare och publicering kommer att startas om och de nya värdena anges, vilket normalt tar några minuter. Observera att de kvalitetsportar och tester som körs av Cloud Manager under en vanlig koddistribution inte utförs under den här processen.
 
