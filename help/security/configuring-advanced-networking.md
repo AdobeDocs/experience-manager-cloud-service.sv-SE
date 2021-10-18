@@ -1,9 +1,9 @@
 ---
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller dedikerad IP-adress för AEM as a Cloud Service
-source-git-commit: 1c9e83a0351d51d96998f7126f0ab76db56144ce
+source-git-commit: 790feb2e43c60733a9f57062b014d67cc33ac2f9
 workflow-type: tm+mt
-source-wordcount: '2797'
+source-wordcount: '2798'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ AEM as a Cloud Service har flera typer av avancerade nätverksfunktioner som kan
 
 * [Flexibel portutgång](#flexible-port-egress)  - konfigurera AEM as a Cloud Service för att tillåta utgående trafik från icke-standardportar
 * [Dedikerad IP-adress](#dedicated-egress-IP-address)  för utgångar - konfigurera trafik från AEM as a Cloud Service till att härröra från en unik IP-adress
-* [Virtuellt privat nätverk](#vpn)  - säker trafik mellan en kunds infrastruktur och AEM as a Cloud Service, för kunder som har VPN-teknik
+* [VPN (Virtual Private Network)](#vpn)  - säker trafik mellan en kunds infrastruktur och AEM as a Cloud Service, för kunder som har VPN-teknik
 
 I den här artikeln beskrivs dessa alternativ i detalj, inklusive hur de kan konfigureras. Som en allmän konfigurationsstrategi anropas API-slutpunkten `/networkInfrastructures` på programnivå för att deklarera önskad typ av avancerat nätverk, följt av ett anrop till slutpunkten `/advancedNetworking` för varje miljö för att aktivera infrastrukturen och konfigurera miljöspecifika parametrar. Referera till lämpliga slutpunkter i Cloud Managers API-dokumentation för varje formell syntax samt exempelbegäranden och svar.
 
