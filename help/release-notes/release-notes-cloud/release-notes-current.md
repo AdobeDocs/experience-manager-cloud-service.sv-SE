@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cl
 description: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 8814627c3144d657b564fee839ace8e4bdcf6f78
+source-git-commit: 3542d5a6b89b8673444786e3f9062dae0d315946
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1928'
 ht-degree: 0%
 
 ---
@@ -160,12 +160,47 @@ För att förbättra prestanda för sökfrågor och indexering ingår inte fullt
 
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.9.0 och 2021.8.0.
+I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.10.0 och 2021.9.0.
+
+## Releasedatum {#release-date-cm-oct}
+
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.10.0 är 14 oktober 2021.
+Nästa version är planerad till den 4 november 2021.
+
+### Nyheter {#what-is-new-cm-oct}
+
+* Som förberedelse för vissa kommande ändringar kommer befintliga distributionsledningar nu att refereras och märkas i användargränssnittet som **fullständiga stackrörledningar**.
+
+* Pipelinekortet har uppdaterats så att det nu visas ett enda, integrerat ansikte som visar både pipelines för produktion och icke-produktion, och användaren kan välja Kör/Pausa/Fortsätt direkt på den åtgärdsmeny som är kopplad till varje pipeline.
+
+* En användare i rollen Distributionshanterare kan nu ta bort produktionsflödet via självbetjäning via gränssnittet.
+
+* Lägg till och redigera rörliga upplevelser har uppdaterats för att nu använda välbekanta, moderna moduler.
+
+* Användare av Cloud Manager kan nu skicka feedback direkt från användargränssnittet via knappen **Feedback** längst upp till höger på landningssidan.
+
+* Årliga SLA-diagram kan nu hämtas från användargränssnittet i Cloud Manager.
+
+* Kodkvalitet och icke-produktionsrelaterade pipeline-körningar kommer nu att använda en mer effektiv, ytlig kloningsprocess under byggsteget, vilket ger en snabbare byggtid för kunder med särskilt stora Git-databaser.
+
+* Guiden Lägg till IP Tillåtelselista informerar nu användaren om maximalt tillåtet antal IP-Tillåtelselista har uppnåtts.
+
+* API-dokumentationen för Cloud Manager innehåller nu en interaktiv spelningsmiljö som gör att inloggade användare kan experimentera med API:t från sin webbläsare. Mer information finns i [API-spelningsvyn för Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/).
+
+* Verktygstipset på programkortet blir mer beskrivande om ett markeringsalternativ under Navigera till är inaktiverat. Nu visas&quot;En produktionsmiljö finns inte&quot;.
 
 ## Releasedatum {#release-date-cm-sept}
 
 Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.9.0 är 9 september 2021.
-Nästa version är planerad till 7 oktober 2021.
+
+### Felkorrigeringar {#bug-fixes-cm-oct}
+
+* I sällsynta fall, när en Adobe-personal skulle återställa en kunds miljö, ansågs återställningen vara fullständig innan miljön var helt i drift.
+
+* Vissa interna begäranden som gjordes när miljön skapades har inte gjorts om.
+
+* Om ett distributionsfel uppstår efter domännamnsverifiering har felmeddelandet korrigerats för att begära att kunden kontaktar sin Adobe-representant.
+
 
 ### Nyheter {#what-is-new-cm-sept}
 

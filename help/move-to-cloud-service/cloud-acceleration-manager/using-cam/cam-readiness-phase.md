@@ -2,10 +2,10 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
-source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
+source-git-commit: 970c8131e73f0d5d0a3c623d621d599aba65cfbc
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 4%
+source-wordcount: '782'
+ht-degree: 5%
 
 ---
 
@@ -67,11 +67,17 @@ Följ stegen nedan för att använda Best Practices Analysis-kortet:
    >[!NOTE]
    >När du överför en ny rapport återställs alla bedömningar.
 
+### Använda Förhandsgranska {#print-preview-cam}
+
+Du kan välja alternativet för förhandsgranskning i Cloud Acceleration Manager för att få en utskrivbar förhandsgranskning av rapporterna eller för att skriva ut rapporten till ett PDF-format för att göra den enkel att dela.
+
+Följ stegen nedan:
+
 1. Klicka på ikonen **Förhandsgranska** som visas nedan.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/bpa-printpreview1.png)
 
-1. Om du klickar på **Förhandsgranska** öppnas en ny flik där rapporten visas i en förhandsgranskning som kan skrivas ut. Klicka på **Skriv ut** för att skriva ut rapporten i PDF-format för att göra den enkel att dela.
+1. Om du klickar på **Förhandsgranska** öppnas en ny flik där rapporten visas i en förhandsgranskning som kan skrivas ut. Klicka på **Skriv ut** för att skriva ut rapporten i PDF-format.
 
    >[!IMPORTANT]
    >* Alternativet **Spara som PDF** rekommenderas och stöds för ovanstående funktioner.

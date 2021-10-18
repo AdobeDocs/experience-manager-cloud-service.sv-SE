@@ -1,7 +1,7 @@
 ---
 title: Köra verktyget Innehållsöverföring på en publiceringsinstans
 description: Köra verktyget Innehållsöverföring på en publiceringsinstans
-source-git-commit: 65847fc03770fe973c3bfee4a515748f7e487ab6
+source-git-commit: 86b118e05b1e6947610c6032ed973394ba4b68e5
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -28,7 +28,10 @@ Följ de rekommenderade tillvägagångssätten som beskrivs nedan:
 
 * När du skapar migreringsuppsättningen använder du URL:en för författaren AEM den as a Cloud Service miljön.
 
-* Under publiceringsprocessen kommer publiceringsnivån INTE att förminskas (till skillnad från författaren). Som en försiktighetsåtgärd bör du undvika att användare startar skrivåtgärder som:
+* Publiceringsnivån skalas inte ned under publiceringsprocessen (till skillnad från författaren).
 
-   * Innehållsdistribution från AEM as a Cloud Service Author till Publish i den miljön
-   * Användarsynkronisering mellan publiceringsinstanser
+   >[!IMPORTANT]
+   >Som en försiktighetsåtgärd bör du undvika att användare startar skrivåtgärder, som:
+   > * Innehållsdistribution från AEM as a Cloud Service Author till Publish i den miljön
+   > * Användarsynkronisering mellan publiceringsinstanser
+

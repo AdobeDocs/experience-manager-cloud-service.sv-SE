@@ -1,25 +1,25 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.7.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.7.0
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.7.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.7.0
 feature: Release Information
-source-git-commit: a707968483dc1196628b737ad207bfefe63ca94b
+source-git-commit: 3542d5a6b89b8673444786e3f9062dae0d315946
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '340'
 ht-degree: 1%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.7.0 {#release-notes}
+# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.7.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.7.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.7.0.
 
 >[!NOTE]
->Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager som en Cloud Service klickar du [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+>Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html) om du vill se den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.7.0 är 15 juli 2021.
-Nästa version är planerad till den 12 augusti 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.7.0 är 15 juli 2021.
+
 
 ### Nyheter {#what-is-new}
 
