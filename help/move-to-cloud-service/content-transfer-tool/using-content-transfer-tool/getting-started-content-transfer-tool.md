@@ -2,14 +2,14 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: 1083f3913bdf0ff64f50f6e731e4fc2804a3036e
+source-git-commit: fa7e5d07ed52a71999de95bbf6299ae5eb7af537
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '752'
 ht-degree: 31%
 
 ---
 
-# Komma igång med verktyget Innehållsöverföring {#getting-started-content-transfer-tool}
+# Getting Started with Content Transfer Tool {#getting-started-content-transfer-tool}
 
 ## Tillgänglighet {#availability}
 
@@ -31,7 +31,7 @@ Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Di
 >id="aemcloud_ctt_demo"
 >title="Verktyget Innehållsöverföring körs"
 >abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehållet till AEM as a Cloud Service (Författare/Publicera)."
->additional-url="https://video.tv.adobe.com/v/35460/?quality=12&amp;learn=on" text=" Se demo"
+>additional-url="https://video.tv.adobe.com/v/35460/?quality=12&amp;learn=on" text=" See Demo"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=en#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
 >[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
@@ -43,7 +43,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt01.png)
 
-1. Välj alternativet **Innehållsöverföring** i guiden **Innehållsmigrering**.
+1. Select the **Content Transfer** option from **Content Migration** wizard.
 
    ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt02.png)
 
@@ -73,7 +73,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    1. **Access Token**: Ange åtkomsttoken.
 
       >[!NOTE]
-      >Du kan hämta åtkomsttoken med knappen **Öppna åtkomsttoken**. Du måste kontrollera att du tillhör gruppen AEM administratörer i målinstansen av Cloud Service.
+      >Du kan hämta åtkomsttoken med knappen **Öppna åtkomsttoken**. You need to ensure that you belong to the AEM administrators&#39; group in the target Cloud Service instance.
 
    1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
 
@@ -95,7 +95,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
          >* `/etc` (vissa  `/etc` banor kan markeras i CTT)
 
 
-1. Klicka på **Spara** när du har fyllt i alla fält i **informationsskärmen för Skapa migreringsuppsättning**.
+1. Click on **Save** after you populate all the fields in the **Create Migration Set** details screen.
 
 1. Du kommer att visa din migreringsuppsättning i guiden **Innehållsöverföring**, vilket visas i bilden nedan.
 
@@ -114,4 +114,4 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du skapar en migreringsuppsättning kan du nu lära dig mer om extraherings- och inmatningsprocesser i verktyget Innehållsöverföring. Innan du lär dig dessa processer måste du granska [Hantera stora innehållsdatabaser](help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för att avsevärt snabba upp extraherings- och intagsfaserna i innehållsöverföringsaktiviteten så att innehållet flyttas till AEM as a Cloud Service.
+När du har lärt dig hur du skapar en migreringsuppsättning kan du nu lära dig mer om extraherings- och inmatningsprocesser i verktyget Innehållsöverföring. Innan du lär dig dessa processer måste du granska [Hantera stora innehållsdatabaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) för att avsevärt snabba upp extraherings- och intagsfaserna i innehållsöverföringsaktiviteten så att innehållet flyttas till AEM as a Cloud Service.
