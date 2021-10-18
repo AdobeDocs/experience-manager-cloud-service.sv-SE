@@ -1,10 +1,10 @@
 ---
 title: Extraherar innehåll från källa
 description: Extraherar innehåll från källa
-source-git-commit: 86df5e29567d9da8bc56c1c62b11ab1444586415
+source-git-commit: 6f53a4379826d7c91b977722ab2ed14d3a960d22
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 39%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -36,6 +36,10 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 
    >[!NOTE]
    >Du kan skriva över mellanlagringsbehållaren under extraheringsfasen.
+
+   >[!IMPORTANT]
+   >Om Användarmappning inte har körts på den här migreringsuppsättningen innan innehåll extraheras från källan visas en varning om att steget Användarmappning väntar, vilket visas i bilden nedan. Klicka på **Mappa användare** för att köra verktyget för användarmappning.
+   >![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/user-mapping-extract.png)
 
 1. The **Extrahering** fältet visas nu **KÖRS** status för att ange att extraheringen pågår.
 
