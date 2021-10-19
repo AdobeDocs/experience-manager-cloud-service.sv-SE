@@ -2,9 +2,9 @@
 title: Funktionstestning - Cloud Services
 description: Funktionstestning - Cloud Services
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: cf2e206b0ad186e0f4caa4a2ec9c34faf2078b76
+source-git-commit: 058fa606bbc667a36b78d5271947e2741f36240f
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Funktionstester för produkter är en uppsättning stabila HTTP-integrationstest
 
 Funktionstester för produkter körs automatiskt när en kund distribuerar ny kod till Cloud Manager och kan inte hoppas över.
 
-Se [Produktfunktionstester](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) för exempeltester.
+Se [Funktionstester för produkten](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) för stickprov.
 
 ## Anpassad funktionstestning {#custom-functional-testing}
 
@@ -39,48 +39,48 @@ Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas ö
 Om JAR-test inte skapas av bygget godkänns testet som standard.
 
 >[!NOTE]
->Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md).
+>Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Se [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) för mer information.
 
 ## Testning av anpassat användargränssnitt {#custom-ui-testing}
 
 AEM förser sina kunder med en integrerad uppsättning kvalitetsportar för Cloud Manager för att säkerställa smidiga uppdateringar av deras program. I synnerhet tillåter IT-testportar redan kunderna att skapa och automatisera sina egna tester som använder AEM API:er.
 
-Funktionen för testning av anpassat användargränssnitt är en valfri funktion [Customer Opt-in](#customer-opt-in) som gör det möjligt för våra kunder att skapa och automatiskt köra gränssnittstester för sina program. Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Du kan läsa mer om hur du skapar gränssnittstester och skriver gränssnittstester härifrån. Dessutom kan ett UI-testprojekt enkelt genereras med den AEM projekttypen.
+Testfunktionen för anpassat användargränssnitt är en [valfri funktion](#customer-opt-in) som gör det möjligt för våra kunder att skapa och automatiskt köra gränssnittstester för sina program. Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Du kan läsa mer om hur du skapar gränssnittstester och skriver gränssnittstester härifrån. Dessutom kan ett UI-testprojekt enkelt genereras med den AEM projekttypen.
 
 Kunderna kan skapa (via GIT) anpassade tester och testsvit för användargränssnittet. Gränssnittstestet kommer att utföras som en del av en särskild kvalitetsport för varje Cloud Manager-pipeline med deras specifika steg och feedbackinformation. Alla gränssnittstester, inklusive regression och nya funktioner, gör att fel kan upptäckas och rapporteras i kundsammanhang.
 
 Kundens gränssnittstester körs automatiskt på produktionsflödet under steget&quot;Anpassad gränssnittstestning&quot;.
 
-Till skillnad från Custom Functional Testing, som är HTTP-tester skrivna i java, kan gränssnittstesterna vara en dockningsbild med tester skrivna på vilket språk som helst, förutsatt att de följer konventionerna som definieras i [Building UI Tests](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/ui-testing.html?lang=en#building-ui-tests).
+Till skillnad från Custom Functional Testing, som är HTTP-tester skrivna i java, kan gränssnittstesterna vara en dockningsbild med tester skrivna på vilket språk som helst, förutsatt att de följer konventionerna som definieras i [Skapar gränssnittstester](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/ui-testing.html?lang=en#building-ui-tests).
 
 >[!NOTE]
->Vi rekommenderar att du som utgångspunkt följer strukturen och språket *(js och wdio)* som finns i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests).
+>Vi rekommenderar att du följer strukturen och språket *(js and wdio)* finns i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests) som startpunkt.
 
 ### Kundens deltagande {#customer-opt-in}
 
-För att få sina gränssnittstester skapade och körda måste kunderna&quot;anmäla sig&quot; genom att lägga till en fil i sin koddatabas, under huvudundermodulen för UI-tester (bredvid filen pom.xml i undermodulen för användargränssnittstester) och se till att den här filen finns i roten för den skapade `tar.gz`-filen.
+För att få sina gränssnittstester skapade och körda måste kunderna&quot;anmäla sig&quot; genom att lägga till en fil i sin koddatabas, under huvudundermodulen för UI-tester (bredvid filen pom.xml i undermodulen för användargränssnittstester) och se till att den här filen finns i roten för de inbyggda `tar.gz` -fil.
 
 *Filnamn*: `testing.properties`
 
-*Innehåll*:  `ui-tests.version=1`
+*Innehåll*: `ui-tests.version=1`
 
-Om detta inte finns i den skapade `tar.gz`-filen, byggs gränssnittstesterna och körningarna hoppas över
+Om detta inte finns i `tar.gz` fil, UI-testerna byggs och körningar hoppas över
 
-Om du vill lägga till `testing.properties`-filen i den inbyggda artefakten lägger du till en `include`-sats i `assembly-ui-test-docker-context.xml`-filen (i undermodulen för gränssnittstester):
+Lägg till `testing.properties` i den inbyggda artefakten lägger du till en `include` programsats in `assembly-ui-test-docker-context.xml` -fil (i undermodulen UI-tester):
 
     &quot;
-    [..]
+    [...]
     &lt;includes>
-    &lt;include>&lt;/include>
-    &lt;include>Dockerfilewait-for-grid.&lt;/include>
-    &lt;include>shtesting.properties&lt;/include> &lt;!- anmälningstestmodul i Cloud Manager —>
+    &lt;include>Dockerfile&lt;/include>
+    &lt;include>wait-for-grid.sh&lt;/include>
+    &lt;include>testing.properties&lt;/include> &lt;!>- testmodul för deltagande i Cloud Manager —>
     &lt;/includes>
     [...]
     &quot;
 
 >[!NOTE]
->Produktionspipelinor som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs i detta avsnitt ska kunna användas. Detta innebär i princip att användaren måste redigera produktionsflödet och klicka på **Spara** i användargränssnittet även om inga ändringar gjorts.
->Mer information om konfigurationen av pipeline finns i [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager).
+>Produktionspipelinor som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs i detta avsnitt ska kunna användas. Detta innebär att användaren måste redigera produktionsflödet och klicka på **Spara** från användargränssnittet även om inga ändringar gjorts.
+>Se [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager) om du vill veta mer om pipelinekonfigurationen.
 
 ### Skriva funktionstester {#writing-functional-tests}
 
@@ -121,9 +121,9 @@ Dessutom måste JAR ha manifesthuvudet Cloud-Manager-TestType inställt på inte
 
 I den här JAR-filen måste klassnamnen för de faktiska tester som ska köras sluta i IT.
 
-En klass med namnet `com.myco.tests.aem.ExampleIT` skulle till exempel köras, men en klass med namnet `com.myco.tests.aem.ExampleTest` skulle inte göra det.
+En klass med namnet `com.myco.tests.aem.ExampleIT` skulle köras men en klass med namnet `com.myco.tests.aem.ExampleTest` skulle inte göra det.
 
-Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad för att vara kompatibel med de konventioner som används av testbiblioteket för aem-testing-clients. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder. Mer information finns i [Git Link](https://github.com/adobe/aem-testing-clients).
+Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad för att vara kompatibel med de konventioner som används av testbiblioteket för aem-testing-clients. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder. Se [Git-länk](https://github.com/adobe/aem-testing-clients) för mer information.
 
 ### Lokal testkörning {#local-test-execution}
 
