@@ -1,9 +1,9 @@
 ---
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
-source-git-commit: 47803e6af4ae3c95600c75be58c907da82112e1b
+source-git-commit: 8990113529fb892f58b9171ebc2b04736bf45003
 workflow-type: tm+mt
-source-wordcount: '2837'
+source-wordcount: '2832'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Konfigurera avancerat nätverk för AEM as a Cloud Service {#configuring-advanced-networking}
 
-Den här artikeln beskriver de olika avancerade nätverksfunktionerna i AEM as a Cloud Service, inklusive VPN- och IP-adresser för utgångar som kan dedikeras eller tilldelas på ett flexibelt sätt.
+Den här artikeln beskriver de olika avancerade nätverksfunktionerna i AEM as a Cloud Service, inklusive självbetjäningsprovisionering av VPN, icke-standardportar och dedikerade IP-adresser.
 
 ## Översikt {#overview}
 
@@ -21,11 +21,11 @@ Den här artikeln beskriver de olika avancerade nätverksfunktionerna i AEM as a
 
 AEM as a Cloud Service har flera typer av avancerade nätverksfunktioner som kan konfigureras av kunder med API:er för Cloud Manager. Bland dessa finns:
 
-* [Flexibel portutgång](#flexible-port-egress)  - konfigurera AEM as a Cloud Service för att tillåta utgående trafik från icke-standardportar
-* [Dedikerad IP-adress](#dedicated-egress-IP-address)  för utgångar - konfigurera trafik från AEM as a Cloud Service till att härröra från en unik IP-adress
-* [VPN (Virtual Private Network)](#vpn)  - säker trafik mellan en kunds infrastruktur och AEM as a Cloud Service, för kunder som har VPN-teknik
+* [Flexibel portutgång](#flexible-port-egress) - konfigurera AEM as a Cloud Service för att tillåta utgående trafik från icke-standardportar
+* [Dedikerad IP-adress för utgångar](#dedicated-egress-IP-address) - konfigurera trafik från AEM as a Cloud Service till att härröra från en unik IP-adress
+* [VPN (Virtual Private Network)](#vpn) - säker trafik mellan en kunds infrastruktur och AEM as a Cloud Service, för kunder som har VPN-teknik
 
-I den här artikeln beskrivs dessa alternativ i detalj, inklusive hur de kan konfigureras. Som en allmän konfigurationsstrategi anropas API-slutpunkten `/networkInfrastructures` på programnivå för att deklarera önskad typ av avancerat nätverk, följt av ett anrop till slutpunkten `/advancedNetworking` för varje miljö för att aktivera infrastrukturen och konfigurera miljöspecifika parametrar. Referera till lämpliga slutpunkter i Cloud Managers API-dokumentation för varje formell syntax samt exempelbegäranden och svar.
+I den här artikeln beskrivs dessa alternativ i detalj, inklusive hur de kan konfigureras. Som en allmän konfigurationsstrategi `/networkInfrastructures` API-slutpunkten anropas på programnivå för att deklarera önskad typ av avancerat nätverk, följt av ett anrop till `/advancedNetworking` slutpunkt för varje miljö för att aktivera infrastrukturen och konfigurera miljöspecifika parametrar. Referera till lämpliga slutpunkter i Cloud Managers API-dokumentation för varje formell syntax samt exempelbegäranden och svar.
 
 När du ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar bör du välja flexibel portutgång om en viss IP-adress inte krävs, eftersom Adobe kan optimera prestanda för flexibel portbelastningstrafik.
 
@@ -47,33 +47,33 @@ Det rekommenderas att du väljer Flexibel portutgång om du inte behöver VPN oc
 
 ### Konfiguration {#configuring-flexible-port-egress-provision}
 
-När POSTEN `/program/<programId>/networkInfrastructures`-slutpunkten har anropats per program skickar du värdet `flexiblePortEgress` för parametern och regionen `kind`. Slutpunkten svarar med `network_id` och annan information inklusive status. Alla parametrar och den exakta syntaxen bör refereras i API-dokumenten.
+En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas, bara värdet för `flexiblePortEgress` för `kind` parameter och region. Slutpunkten svarar med `network_id`, samt annan information, inklusive status. Alla parametrar och den exakta syntaxen bör refereras i API-dokumenten.
 
-När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter innan den etableras. Ett anrop till Cloud Managers [miljöslutpunkt för GET](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getEnvironment) skulle visa statusen &quot;ready&quot;.
+När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter innan den etableras. Ett anrop till Cloud Managers [miljöslutpunkt för GET](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getEnvironment) skulle visa statusen&quot;ready&quot;.
 
-Om den programomfattande konfigurationen av flexibel portutgång är klar måste slutpunkten `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` anropas per miljö för att aktivera nätverk på miljönivå och för att deklarera eventuella regler för portvidarebefordran. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
+Om konfigurationen för flexibel portutgångar som omfattar programmet är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkten måste anropas per miljö för att aktivera nätverk på miljönivå och för att deklarera regler för portvidarebefordran. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
 
 Reglerna för portvidarebefordran ska deklareras för alla portar utom 80/443 genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
 
-API:t ska svara på bara några sekunder, vilket anger uppdateringsstatus och efter cirka 10 minuter ska slutpunktens `GET`-metod indikera att avancerade nätverk är aktiverade.
+API:t bör svara på bara några sekunder, vilket anger uppdateringsstatus och efter cirka 10 minuter, slutpunktens `GET` -metoden ska ange att avancerade nätverk är aktiverade.
 
 ### Uppdateringar {#updating-flexible-port-egress-provision}
 
-Programnivåkonfigurationen kan uppdateras genom att slutpunkten `PUT /api/program/<program_id>/network/<network_id>` anropas och börjar gälla inom några minuter.
+Programnivåkonfigurationen kan uppdateras genom att anropa `PUT /api/program/<program_id>/network/<network_id>` slutpunkten och börjar gälla inom några minuter.
 
 >[!NOTE]
 >
 > Parametern &quot;kind&quot; (`flexiblePortEgress`, `dedicatedEgressIP` eller `VPN`) kan inte ändras. Kontakta kundsupporten om du behöver hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
 
-Portvidarebefordringsreglerna per miljö kan uppdateras genom att slutpunkten för `PUT /program/{programId}/environment/{environmentId}/advancedNetworking` anropas igen, så att hela uppsättningen konfigurationsparametrar tas med i stället för en delmängd.
+Portvidarebefordringsreglerna per miljö kan uppdateras genom att anropa `PUT /program/{programId}/environment/{environmentId}/advancedNetworking` slutpunkt, se till att inkludera hela uppsättningen konfigurationsparametrar, i stället för en delmängd.
 
 ### Ta bort eller inaktivera flexibla portklasser {#deleting-disabling-flexible-port-egress-provision}
 
-Om du vill **ta bort** nätverksinfrastrukturen skickar du en kundsupportanmälan med en beskrivning av vad som har skapats och varför det måste tas bort.
+För att **delete** nätverksinfrastrukturen, skicka in en kundsupportanmälan med en beskrivning av vad som har skapats och varför det behöver tas bort.
 
-Om du vill **inaktivera** flexibel portutgångar från en viss miljö anropar du `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
+För att **disable** flexibel portutgång från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
 
-Mer information finns i [API-dokumentationen för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
+Mer information finns i [API-dokumentation för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
 
 ### Trafikroutning {#flexible-port-egress-traffic-routing}
 
@@ -82,7 +82,7 @@ Http- eller https-trafik som går till mål via port 80 eller 443 kommer att gå
 * `AEM_HTTP_PROXY_HOST / AEM_HTTPS_PROXY_HOST`
 * `AEM_HTTP_PROXY_PORT / AEM_HTTPS_PROXY_PORT`
 
-Här följer exempelkoden som skickar en begäran till `www.example.com:8443`:
+Här följer till exempel exempelkoden som du kan skicka en begäran till `www.example.com:8443`:
 
 ```java
 String url = "www.example.com:8443"
@@ -98,7 +98,7 @@ HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 
 Om du använder Java-nätverksbibliotek som inte är standard ska du konfigurera proxies med egenskaperna ovan för all trafik.
 
-Trafik som inte är http/s med mål genom portar som deklarerats i parametern `portForwards` ska referera till egenskapen `AEM_PROXY_HOST`, tillsammans med den mappade porten. Till exempel:
+Ej http/s-trafik med destinationer via portar som deklarerats i `portForwards` parametern ska referera till en egenskap som kallas `AEM_PROXY_HOST`, tillsammans med den mappade porten. Till exempel:
 
 ```java
 DriverManager.getConnection("jdbc:mysql://" + System.getenv("AEM_PROXY_HOST") + ":53306/test");
@@ -142,7 +142,7 @@ Tabellen nedan beskriver trafikdirigering:
   </tr>
   <tr>
     <td><b>Non-http or non-https</b></td>
-    <td>Klienten ansluter till miljövariabeln <code>AEM_PROXY_HOST</code> med hjälp av en <code>portOrig</code> som deklarerats i API-parametern <code>portForwards</code>.</td>
+    <td>Klienten ansluter till <code>AEM_PROXY_HOST</code> miljövariabel med <code>portOrig</code> deklareras i <code>portForwards</code> API-parameter.</td>
     <td>Alla</td>
     <td>Tillåtet</td>
     <td><code>mysql.example.com:3306</code></td>
@@ -159,7 +159,7 @@ Tabellen nedan beskriver trafikdirigering:
 
 **Konfiguration av Apache/Dispatcher**
 
-`mod_proxy`-direktivet för AEM Cloud Service Apache/Dispatcher-skiktet kan konfigureras med de egenskaper som beskrivs ovan.
+AEM Cloud Service Apache/Dispatcher-skiktets `mod_proxy` -direktivet kan konfigureras med hjälp av de egenskaper som beskrivs ovan.
 
 ```
 ProxyRemote "http://example.com" "http://${AEM_HTTP_PROXY_HOST}:${AEM_HTTP_PROXY_PORT}"
@@ -179,7 +179,7 @@ ProxyPassReverse "/somepath" "https://example.com:8443"
 
 >[!NOTE]
 >
->Om du har fått en dedikerad utgående IP-adress före versionen från september 2021 (10/6/21), refererar du till [Legacy Dedicated Egress Address Customers](#legacy-dedicated-egress-address-customers).
+>Om du har fått en dedikerad utgående IP-adress före versionen från september 2021 (10/6/21), se [Äldre dedikerade gruppadresskunder](#legacy-dedicated-egress-address-customers).
 
 ### Fördelar {#benefits}
 
@@ -193,11 +193,11 @@ Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM as a 
 >
 >Splunk-vidarebefordringsfunktionen är inte möjlig från en dedikerad IP-adress.
 
-Konfigurationen av IP-adressen för den dedikerade IP-adressen är identisk med [den flexibla portadressen](#configuring-flexible-port-egress-provision).
+IP-adressen för den dedikerade IP-adressen är identisk med [flexibel portutgång](#configuring-flexible-port-egress-provision).
 
-Den största skillnaden är att trafiken alltid kommer att gå från en dedikerad, unik IP-adress. Om du vill hitta den IP-adressen använder du en DNS-matchare för att identifiera den IP-adress som är associerad med `p{PROGRAM_ID}.external.adobeaemcloud.com`. IP-adressen förväntas inte ändras, men om den behöver ändras i framtiden kommer ett avancerat meddelande att skickas.
+Den största skillnaden är att trafiken alltid kommer att gå från en dedikerad, unik IP-adress. Om du vill hitta IP-adressen använder du en DNS-matchare för att identifiera IP-adressen som är associerad med `p{PROGRAM_ID}.external.adobeaemcloud.com`. IP-adressen förväntas inte ändras, men om den behöver ändras i framtiden kommer ett avancerat meddelande att skickas.
 
-Förutom de routningsregler som stöds av flexibel portaregress i `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking`-slutpunkten stöder den dedikerade IP-adressen en `nonProxyHosts`-parameter. Detta gör att du kan deklarera en uppsättning värdar som ska dirigeras genom ett delat IP-adressintervall i stället för den dedikerade IP-adressen, vilket kan vara användbart eftersom trafikutjämning via delade IP-adresser kan optimeras ytterligare. URL:erna för `nonProxyHost` kan följa mönstren för `example.com` eller `*.example.com`, där jokertecknet bara stöds i början av domänen.
+Förutom routningsreglerna som stöds av flexibel portutgång i `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkt, dedikerad IP-adress för utgångar har stöd för en `nonProxyHosts` parameter. Detta gör att du kan deklarera en uppsättning värdar som ska dirigeras genom ett delat IP-adressintervall i stället för den dedikerade IP-adressen, vilket kan vara användbart eftersom trafikutjämning via delade IP-adresser kan optimeras ytterligare. The `nonProxyHost` URL:er kan följa mönstren för `example.com` eller `*.example.com`, där jokertecknet bara stöds i början av domänen.
 
 När man ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar bör man välja flexibel portutgång om en viss IP-adress inte krävs, eftersom Adobe kan optimera prestanda för flexibel portutgångstrafik.
 
@@ -223,14 +223,14 @@ När man ska välja mellan flexibel portutgång och dedikerad IP-adress för utg
   </tr>
   <tr>
     <td></td>
-    <td>Värd som matchar parametern <code>nonProxyHosts</code></td>
+    <td>Värden som matchar <code>nonProxyHosts</code> parameter</td>
     <td>80 eller 443</td>
     <td>Genom de delade kluster-IP:n</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td>Värd som matchar parametern <code>nonProxyHosts</code></td>
+    <td>Värden som matchar <code>nonProxyHosts</code> parameter</td>
     <td>Portar utanför 80 eller 443</td>
     <td>Blockerad</td>
     <td></td>
@@ -258,7 +258,7 @@ När man ska välja mellan flexibel portutgång och dedikerad IP-adress för utg
   </tr>
   <tr>
     <td><b>Non-http or non-https</b></td>
-    <td>Klienten ansluter till <code>AEM_PROXY_HOST</code>-systemvariabeln med hjälp av en <code>portOrig</code> som deklarerats i API-parametern <code>portForwards</code></td>
+    <td>Klienten ansluter till <code>AEM_PROXY_HOST</code> env-variabel med en <code>portOrig</code> deklareras i <code>portForwards</code> API-parameter</td>
     <td>Alla</td>
     <td>Genom den dedikerade IP-adressen för utgångar</td>
     <td><code>mysql.example.com:3306</code></td>
@@ -300,7 +300,7 @@ public JSONObject getJsonObject(String relativePath, String queryString) throws 
 Vissa bibliotek kräver explicit konfiguration för att använda Java-standardegenskaper för proxykonfigurationer.
 
 Ett exempel med Apache HttpClient, som kräver explicita anrop till
-[`HttpClientBuilder.useSystemProperties()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html) eller använd
+[`HttpClientBuilder.useSystemProperties()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html) eller använda
 [`HttpClients.createSystem()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
 
 ```java
@@ -323,7 +323,7 @@ Endast HTTP- och HTTPS-portar stöds. Detta inkluderar HTTP/1.1 och HTTP/2 vid k
 
 ### Felsökningsöverväganden {#debugging-considerations}
 
-Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. Annars kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/IP](https://ifconfig.me/IP), som returnerar den anropande IP-adressen.
+Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. I annat fall kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/IP](https://ifconfig.me/IP), som returnerar den anropande IP-adressen.
 
 ## VPN (Virtual Private Network) {#vpn}
 
@@ -331,7 +331,7 @@ Med VPN kan du ansluta till en lokal infrastruktur eller ett datacenter från f�
 
 Det gör det även möjligt att ansluta till SaaS-leverantörer som CRM-leverantörer som stöder VPN eller ansluter från ett företagsnätverk till AEM as a Cloud Service författare, förhandsgranska eller publicera.
 
-De flesta VPN-enheter med IPSec-teknik stöds. Se listan över enheter på [den här sidan](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#devicetable), baserat på informationen i kolumnen **RouteBased configuration instructions**. Konfigurera enheten enligt beskrivningen i tabellen.
+De flesta VPN-enheter med IPSec-teknik stöds. Läs listan över enheter på [den här sidan](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#devicetable), baserat på informationen i **RouteBased configuration instructions** kolumn. Konfigurera enheten enligt beskrivningen i tabellen.
 
 ### Allmänna överväganden {#general-vpn-considerations}
 
@@ -340,33 +340,33 @@ De flesta VPN-enheter med IPSec-teknik stöds. Se listan över enheter på [den 
 
 ### Skapande {#vpn-creation}
 
-En gång per program anropas slutpunkten för POSTEN `/program/<programId>/networkInfrastructures`, vilket skickar en nyttolast med konfigurationsinformation som: värdet på vpn för parametern `kind`, regionen, adressutrymmet (listan över CIDR - observera att detta inte kan ändras senare), DNS-matchare (för att matcha namn i kundens nätverk) och VPN-anslutningsinformation som gatewaykonfiguration, delad VPN-nyckel och IP-säkerhetsprincipen. Slutpunkten svarar med `network_id` och annan information inklusive status. Hela uppsättningen parametrar och exakt syntax bör refereras i [API-dokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
+En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas och skickar en nyttolast med konfigurationsinformation som: värdet på vpn för `kind` parameter, region, adressutrymme (lista med CIDR - observera att detta inte kan ändras senare), DNS-matchare (för att matcha namn i kundens nätverk) och VPN-anslutningsinformation som gatewaykonfiguration, delad VPN-nyckel och IP-säkerhetsprincipen. Slutpunkten svarar med `network_id`, samt annan information, inklusive status. Hela uppsättningen parametrar och exakt syntax ska refereras i [API-dokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
 
-När det anropas tar det normalt mellan 45 och 60 minuter innan nätverksinfrastrukturen etableras. API:ts GET-metod kan anropas för att returnera den aktuella statusen, som till slut kommer att vändas från `creating` till `ready`. Läs API-dokumentationen för alla lägen.
+När det anropas tar det normalt mellan 45 och 60 minuter innan nätverksinfrastrukturen etableras. API:ts GET-metod kan anropas för att returnera den aktuella statusen, som så småningom kommer att vändas från `creating` till `ready`. Läs API-dokumentationen för alla lägen.
 
-Om den programomfattande VPN-konfigurationen är klar måste slutpunkten `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` anropas per miljö för att aktivera nätverk på miljönivå och för att deklarera eventuella regler för portvidarebefordran. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
+Om den programomfattande VPN-konfigurationen är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkten måste anropas per miljö för att aktivera nätverk på miljönivå och för att deklarera regler för portvidarebefordran. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
 
-Mer information finns i [API-dokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration).
+Se [API-dokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) för mer information.
 
-Regler för portvidarebefordran ska deklareras för TCP-trafik som inte är http/s-protokoll och som ska dirigeras via VPN genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port mellan 30000 och 30999, där värdena måste vara unika för alla miljöer i programmet. Kunderna kan också lista en uppsättning URL i parametern `nonProxyHosts` som deklarerar URL som trafik ska kringgå VPN-routning, men i stället via ett delat IP-intervall. Den följer mönstren för `example.com` eller `*.example.com`, där jokertecknet bara stöds i början av domänen.
+Regler för portvidarebefordran ska deklareras för TCP-trafik som inte är http/s-protokoll och som ska dirigeras via VPN genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port mellan 30000 och 30999, där värdena måste vara unika för alla miljöer i programmet. Kunderna kan även lista en uppsättning URL i `nonProxyHosts` parameter, som deklarerar URL för vilken trafik ska kringgå VPN-routning, men i stället via ett delat IP-intervall. Den följer mönstren i `example.com` eller `*.example.com`, där jokertecknet bara stöds i början av domänen.
 
-API:t ska svara på bara några sekunder, vilket anger statusen `updating` och efter cirka 10 minuter, skulle ett anrop till Cloud Managers miljöslutpunkt visa statusen `ready`, vilket anger att GETEN till miljön har tillämpats.
+API:t bör svara på bara några sekunder, vilket anger statusen `updating` och efter cirka 10 minuter visar ett anrop till Cloud Managers miljöslutpunkt statusen för GET `ready`, vilket anger att uppdateringen av miljön har tillämpats.
 
-Observera att även om det inte finns några trafikdirigeringsregler (värdar eller bypass) måste `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` fortfarande anropas, bara med en tom nyttolast.
+Observera att även om det inte finns några trafikdirigeringsregler för miljön (värdar eller bypass), `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` måste fortfarande anropas, bara med en tom nyttolast.
 
 ### Uppdaterar VPN {#updating-the-vpn}
 
-VPN-konfigurationen på programnivå kan uppdateras genom att anropa slutpunkten `PUT /api/program/<program_id>/network/<network_id>`.
+VPN-konfigurationen på programnivå kan uppdateras genom att anropa `PUT /api/program/<program_id>/network/<network_id>` slutpunkt.
 
-Observera att adressutrymmet inte kan ändras efter den första VPN-etableringen. Kontakta kundsupport om det är nödvändigt. Dessutom kan parametern `kind` (`flexiblePortEgress`, `dedicatedEgressIP` eller `VPN`) inte ändras. Kontakta kundsupporten om du behöver hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
+Observera att adressutrymmet inte kan ändras efter den första VPN-etableringen. Kontakta kundsupport om det är nödvändigt. Dessutom är `kind` parameter (`flexiblePortEgress`, `dedicatedEgressIP` eller `VPN`) kan inte ändras. Kontakta kundsupporten om du behöver hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
 
-Cirkulationsreglerna per miljö kan uppdateras genom att slutpunkten `PUT /program/{programId}/environment/{environmentId}/advancedNetworking` anropas igen, så att hela uppsättningen konfigurationsparameter tas med i stället för en delmängd. Miljöuppdateringar tar vanligtvis 5-10 minuter att installera.
+Cirkulationsregler per miljö kan uppdateras genom att anropa `PUT /program/{programId}/environment/{environmentId}/advancedNetworking` slutpunkt, se till att inkludera hela uppsättningen konfigurationsparameter, i stället för en delmängd. Miljöuppdateringar tar vanligtvis 5-10 minuter att installera.
 
 ### Ta bort eller inaktivera VPN {#deleting-or-disabling-the-vpn}
 
 Om du vill ta bort nätverksinfrastrukturen skickar du en kundsupportanmälan med en beskrivning av vad som har skapats och varför det måste tas bort.
 
-Om du vill inaktivera VPN för en viss miljö anropar du `DELETE /program/{programId}/environment/{environmentId}/advancedNetworking`. Mer information finns i [API-dokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
+Om du vill inaktivera VPN för en viss miljö anropar du `DELETE /program/{programId}/environment/{environmentId}/advancedNetworking`. Mer information finns i [API-dokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
 
 ### Trafikroutning {#vpn-traffic-routing}
 
@@ -392,28 +392,28 @@ Tabellen nedan beskriver trafikdirigering.
   </tr>
   <tr>
     <td></td>
-    <td>Värd som matchar parametern <code>nonProxyHosts</code></td>
+    <td>Värden som matchar <code>nonProxyHosts</code> parameter</td>
     <td>80 eller 443</td>
     <td>Genom de delade kluster-IP:n</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td>Värd som matchar parametern <code>nonProxyHosts</code></td>
+    <td>Värden som matchar <code>nonProxyHosts</code> parameter</td>
     <td>Portar utanför 80 eller 443</td>
     <td>Blockerad</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td>Om IP-adressen finns i <i>VPN-gatewayadressen</i> och i http-proxykonfigurationen (konfigureras som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
+    <td>Om IP-värdet faller inom <i>VPN-gateway-adress</i> utrymme och genom http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
     <td>Alla</td>
     <td>Via VPN</td>
     <td><code>10.0.0.1:443</code>Det kan också vara ett värdnamn.</td>
   </tr>
   <tr>
     <td></td>
-    <td>Om IP-adressen inte faller inom intervallet <i>VPN-gatewayadress</i> och via http-proxykonfiguration (konfigureras som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
+    <td>Om IP-adressen inte faller inom <i>Adressutrymme för VPN-gateway</i> och via http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
     <td>Alla</td>
     <td>Genom den dedikerade IP-adressen för utgångar</td>
     <td></td>
@@ -435,14 +435,14 @@ Tabellen nedan beskriver trafikdirigering.
   </tr>
   <tr>
     <td><b>Non-http or non-https</b></td>
-    <td>Om IP-adressen ligger i <i>VPN-gatewayadressutrymmet</i> och klienten ansluter till <code>AEM_PROXY_HOST</code>-systemvariabeln med hjälp av en <code>portOrig</code> som deklarerats i API-parametern <code>portForwards</code></td>
+    <td>Om IP-värdet faller inom <i>Adressutrymme för VPN-gateway</i> och klienten ansluter till <code>AEM_PROXY_HOST</code> env-variabel med en <code>portOrig</code> deklareras i <code>portForwards</code> API-parameter</td>
     <td>Alla</td>
     <td>Via VPN</td>
     <td><code>10.0.0.1:3306</code>Det kan också vara ett värdnamn.</td>
   </tr>
   <tr>
     <td></td>
-    <td>Om IP inte faller inom <i>VPN-gatewayadressrymden</i> och klienten ansluter till <code>AEM_PROXY_HOST</code>-systemvariabeln med en <code>portOrig</code> som deklarerats i API-parametern <code>portForwards</code></td>
+    <td>Om IP-adressen inte faller inom <i>Adressutrymme för VPN-gateway</i> omfång och klienten ansluter till <code>AEM_PROXY_HOST</code> env-variabel med en <code>portOrig</code> deklareras i <code>portForwards</code> API-parameter</td>
     <td>Alla</td>
     <td>Genom den dedikerade IP-adressen för utgångar</td>
     <td></td>
@@ -485,14 +485,14 @@ Bilden nedan visar en visuell representation av en uppsättning domäner och ass
   <tr>
     <td><code>p{PROGRAM_ID}.inner.adobeaemcloud.net</code></td>
     <td>IP-adressen för trafik från VPN:s AEM till kundsidan. Detta kan tillåtslista i kundens konfiguration för att säkerställa att anslutningar bara kan göras från AEM.</td>
-    <td>Om kunden bara vill tillåta VPN-åtkomst till AEM bör de konfigurera CNAME DNS-poster att mappa <code>author-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> och/eller <code>publish-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> till detta.</td>
+    <td>Om kunden bara vill tillåta VPN-åtkomst till AEM bör de konfigurera CNAME DNS-poster att mappa <code>author-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code>  och/eller <code>publish-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> till detta.</td>
   </tr>
 </tbody>
 </table>
 
 ### Begränsa VPN till ingångsanslutningar {#restrict-vpn-to-ingress-connections}
 
-Om du bara vill tillåta VPN-åtkomst till AEM kan tillåtelselista i molnhanteraren konfigureras så att endast den IP som definieras av `p{PROGRAM_ID}.external.adobeaemcloud.com` tillåts kommunicera med miljön. Detta kan göras på samma sätt som andra IP-baserade tillåtelselista i Cloud Manager.
+Om du bara vill tillåta VPN-åtkomst till AEM kan tillåtelselista konfigureras i Cloud Manager så att endast IP-adressen som definieras av `p{PROGRAM_ID}.external.adobeaemcloud.com` får tala med miljön. Detta kan göras på samma sätt som andra IP-baserade tillåtelselista i Cloud Manager.
 
 Om reglerna måste vara sökvägsbaserade använder du http-standarddirektiv på dispatchernivå för att neka eller tillåta vissa IP-adresser. De bör se till att de önskade sökvägarna inte heller är tillgängliga vid CDN så att begäran alltid kommer till ursprungsläget.
 
@@ -507,4 +507,4 @@ Header always set Cache-Control private
 
 ## Övergång mellan avancerade nätverkstyper {#transitioning-between-advanced-networking-types}
 
-Eftersom det inte går att ändra parametern `kind` kontaktar du kundsupport för att få hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
+Sedan `kind` parametern kan inte ändras. Kontakta kundsupport om du behöver hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
