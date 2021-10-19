@@ -1,10 +1,10 @@
 ---
 title: Extraherar innehåll från källa
 description: Extraherar innehåll från källa
-source-git-commit: 6f53a4379826d7c91b977722ab2ed14d3a960d22
+source-git-commit: 5cdfa5a84e74563245d95661dc6875e16982d941
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '601'
+ht-degree: 36%
 
 ---
 
@@ -19,12 +19,13 @@ ht-degree: 0%
 >abstract="Extrahering avser att extrahera innehåll från AEM till ett temporärt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#top-up-extraction-process" text="Extrahering uppifrån"
 
->[!IMPORTANT]
->Du bör köra verktyget för användarmappning innan du extraherar innehåll från källan. Se [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.html?lang=en) för mer information.
 
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 >[!NOTE]
 >Om Amazon S3 eller Azure Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp extraheringsfasen. Om du vill göra det måste du konfigurera en `azcopy.config` filen innan extraheringen körs. Se [Hantera stora innehållsdatabaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) för mer information.
+
+**Innan innehåll extraheras från källan**
+Du bör köra verktyget för användarmappning innan du extraherar innehåll från källan. Se [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.html?lang=en) för mer information.
 
 1. Välj en migreringsuppsättning från **Innehållsöverföring** guide och klicka **Extract** för att påbörja extraheringen.
 

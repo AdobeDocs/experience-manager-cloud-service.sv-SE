@@ -1,10 +1,10 @@
 ---
 title: Ta bort en migreringsuppsättning i verktyget Innehållsöverföring
 description: Ta bort en migreringsuppsättning i verktyget Innehållsöverföring
-source-git-commit: 01c657a994e1f8d6bd71acda90cf3b0e290d826b
+source-git-commit: 6397bef5611dd75568f23c8d1adbf4afa53c5f42
 workflow-type: tm+mt
-source-wordcount: '80'
-ht-degree: 67%
+source-wordcount: '81'
+ht-degree: 39%
 
 ---
 
@@ -17,10 +17,10 @@ Du kan ta bort migreringsuppsättningen från sidan *Overview.*
 
 Följ stegen nedan:
 
-1. Navigera till sidan *Overview* och markera den migreringsuppsättning som du vill ta bort. Klicka sedan på **Delete** i åtgärdsfältet.
+1. Navigera till **Innehållsöverföring** och välj den migreringsuppsättning som du vill ta bort och klicka på **Ta bort** i åtgärdsfältet.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/delete-1.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/migration-delete1.png)
 
 1. Klicka på **Delete** i dialogrutan **Delete Migration Set** för att bekräfta borttagningen.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets/delete-3.png)
+   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/migration-delete2.png)
