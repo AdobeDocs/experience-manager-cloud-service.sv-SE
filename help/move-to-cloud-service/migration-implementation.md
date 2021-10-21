@@ -2,7 +2,7 @@
 title: Implementeringsfas
 description: Implementeringsfas
 exl-id: 176dd79d-0d72-443c-87db-dab24fb48b96
-source-git-commit: 82e22f0a0684491b5071fa232a0f90fb87da6992
+source-git-commit: 3b0b1a192e25958b3b049893f5b7e1001e071f69
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 90%
@@ -41,7 +41,7 @@ Med det här verktyget kan du ange önskad delmängd av innehållet som du vill 
 >[!NOTE]
 >Vi rekommenderar att du gör regelbundna uppdateringar av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service.
 
-Mer information finns i [Verktyget för innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/overview-content-transfer-tool.md).
+Mer information finns i [Verktyget för innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md).
 
 >[!IMPORTANT]
 >Lägsta systemkrav för verktyget för innehållsöverföring är AEM 6.3 + och JAVA 8. Om du har en tidigare AEM-version måste du uppgradera din innehållsdatabas till AEM 6.5 för att kunna använda verktyget för innehållsöverföring.
