@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 8eafe30b69014f5affad6da7e80f8f9a1c42eb38
+source-git-commit: abaee9b289bbcd6a7d201f4b17ef860799fe68aa
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2165'
 ht-degree: 1%
 
 ---
@@ -218,10 +218,10 @@ Apache Jackrabbit Oak möjliggör flexibla indexkonfigurationer för att effekti
 ### Lucene fulltextindex på AEM as a Cloud Service {#index-lucene}
 
 fulltextindexet `/oak:index/lucene-2` kan bli mycket stor eftersom den indexerar alla noder i AEM som standard.  Efter Adobe planer på att ta tillbaka detta index kommer det inte längre att distribueras i AEM as a Cloud Service från september 2021. Den används inte längre på produktsidan i AEM as a Cloud Service och behöver inte köra kundkod. För AEM as a Cloud Service miljöer med gemensamma Lucene-index arbetar Adobe med kunder var för sig för att kompensera för detta index och för att använda bättre, optimerade index. Kunderna behöver inte vidta några åtgärder utan vidare besked från Adobe. AEM as a Cloud Service kunder kommer att informeras av Adobe när det finns behov av åtgärder för denna optimering. Om det här indexet behövs för anpassade frågor, som en tillfällig lösning, bör en kopia av indexet skapas med ett annat namn, till exempel `/oak:index/acme.lucene-1-custom-1`, enligt beskrivning [här](/help/operations/indexing.md).
-Optimeringen gäller inte som standard andra AEM miljöer som hanteras av Adobes hanterade tjänster.
+Optimeringen gäller som standard inte andra AEM miljöer som lagras lokalt eller hanteras av Adobes hanterade tjänster.
 
 ## Frågeoptimeringar {#index-query}
 
-The **Frågeprestanda** kan du observera både vanliga och långsamma JCR-frågor. Dessutom kan den analysera frågor och visa olika information om, särskilt om ett index används för frågan eller inte.
+The **Frågeprestanda** kan du observera både vanliga och långsamma JCR-frågor. Dessutom kan programmet analysera frågor och visa olika information om, särskilt om ett index används för frågan eller inte.
 
 Till skillnad från i AEM lokalt visas inte AEM as a Cloud Service **Frågeprestanda** i användargränssnittet längre. Istället är den nu tillgänglig via Developer Console (i Cloud Manager) på [Frågor](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries) -fliken.
