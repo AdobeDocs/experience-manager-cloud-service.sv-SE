@@ -2,10 +2,10 @@
 title: Introduktion till Adobe Experience Manager as a Cloud Service
 description: Introduktion till Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d81b85bb-a69d-49a4-9e75-76f1c6bbcd67
-source-git-commit: 438a43d7b57d8b1ca78873eecfd94a4b30004829
+source-git-commit: 7d5445ae4081065fd869684f2aacdb9de1951089
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 51%
+source-wordcount: '584'
+ht-degree: 53%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Manager (AEM) as a Cloud Service är det senaste erbjudandet p�
 
 Med AEM as a Cloud Service kan du utnyttja de AEM programmen på ett molnbaserat sätt så att du kan:
 
-* Skala upp dina DevOps-satsningar med [Cloud Manager: CI/CD-ramverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en), autoskalning, API-anslutning, flexibla driftsättningslägen, [portar för kodkvalitet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/code-quality-testing.html?lang=en)och service.
+* Skala upp DevOps-satsningarna med Cloud Manager: CI/CD-ramverk, autoskalning, API-anslutning, flexibla driftsättningslägen, portar för kodkvalitet och service.
 
 * Gör det möjligt för utvecklare att lägga till automatisering i applikationsutvecklingsrutiner.
 
