@@ -2,10 +2,10 @@
 title: Introduktion till Adobe Experience Manager as a Cloud Service
 description: Introduktion till Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d81b85bb-a69d-49a4-9e75-76f1c6bbcd67
-source-git-commit: ab81bca96bcf06b06357f900464e999163bb1bb2
+source-git-commit: 438a43d7b57d8b1ca78873eecfd94a4b30004829
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 98%
+source-wordcount: '603'
+ht-degree: 51%
 
 ---
 
@@ -13,42 +13,37 @@ ht-degree: 98%
 
 [Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html) (AEM) finns nu som en molntjänst.
 
-Adobe Experience Manager as a Cloud Service:
+Adobe Experience Manager (AEM) as a Cloud Service är det senaste erbjudandet på AEM produktlinje, vilket hjälper er att fortsätta erbjuda era kunder personaliserade, innehållsledda upplevelser. Den ger molnbaserad flexibilitet för att snabba upp time to value och är utbyggbar för att uppfylla just era verksamhetskrav. Ni kan bygga vidare på tidigare investeringar och innovationer genom att bevara och utöka alla era användningsfall och funktioner.
 
-* Det molnbaserade sättet att dra nytta av AEM-programmen.
+Med AEM as a Cloud Service kan du utnyttja de AEM programmen på ett molnbaserat sätt så att du kan:
 
-* Gör att ni kan ge kunderna anpassade, innehållsledda upplevelser genom att kombinera kraften i AEM Content Management System med AEM Digital Asset Management.
+* Skala upp dina DevOps-satsningar med [Cloud Manager: CI/CD-ramverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en), autoskalning, API-anslutning, flexibla driftsättningslägen, [portar för kodkvalitet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/code-quality-testing.html?lang=en)och service.
 
-* Ger kontinuerlig leverans och integrering för uppdateringar utan driftavbrott.
+* Gör det möjligt för utvecklare att lägga till automatisering i applikationsutvecklingsrutiner.
 
-* Levererar innehåll snabbt och effektivt med hjälp av ett inbyggt CDN-nätverk (Content Delivery Network) och andra procedurer för nätverkslager.
+* Leverera innehåll snabbt och effektivt i global skala med ett inbyggt CDN-nätverk (Content Delivery Network) och andra bästa praxis på nätverksnivå.
 
-* Baseras på en dynamisk arkitektur som automatiskt skalas vilket eliminerar anpassningar av infrastrukturen.
+* Utnyttja en dynamisk arkitektur som automatiskt skalas, vilket eliminerar behovet av infrastruktur.
 
-* Fokus på säkerhet med automatiserade tester som söker efter vanliga sårbarheter.
+* Håll dig uppdaterad om hot och säkerhetsriskreducering med hjälp av automatiska tester för att söka efter vanliga sårbarheter.
 
-* Validerar kundkod med automatiska tester.
+* Säkerställ maximal flexibilitet och effektivitet med optimerade prestandatopologier.
 
-* Har prestandatopologier optimerade för maximal flexibilitet och effektivitet.
+* Dra nytta av AEM as a Cloud Service integrering med Adobe Experience Cloud för att skapa bättre kundupplevelser med produkter för webbmarknadsföring och webbanalys.
 
-* Minskar den manuella konfigurationen avsevärt.
+* Använd verktyg som snabbar upp migreringen, t.ex. kodomfaktorisering, innehållsöverföring med mera.
 
-* Är nära integrerat med Adobe Experience Cloud.
+Med AEM as a Cloud Service
 
-* Vi presenterar nästa generation av Adobe Experience Manager-produktlinjen som bygger på tidigare investeringar och innovationer vilket bevarar och utökar alla användningsområden och funktioner.
+* Utvecklarna kan koncentrera sig på att konfigurera och utöka AEM med det nya molnbaserade utvecklingsmönstret.
 
-Det innebär att:
+* Innehållsförfattare kan regelbundet utnyttja de senaste innovationerna som de fått.
 
-* Utvecklarna kan koncentrera sig på att konfigurera och utöka AEM i det nya molnbaserade systemet genom att följa samma mönster som använts tidigare i AEM.
+* Systemadministratörer kan minimera manuella uppgifter vid konfiguration och infrastrukturunderhåll.
 
-* Författarna får regelbundet nya funktioner.
-
-* Systemadministratörer ges förenklad konfiguration och infrastruktur.
-
-* Marknadsförare får snabbare time-to-value.
+* Marknadsförare kan få snabbare time-to-value.
 
 >[!NOTE]
->
 >Se [Terminologi](terminology.md) för några av de nya termer som har introducerats med AEM as a Cloud Service.
 
 ## Mervärde med en molntjänst {#value-added-as-a-cloud-service}
