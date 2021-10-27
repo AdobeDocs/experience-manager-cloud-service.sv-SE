@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: adb0aa2812871f6efedd1fb88663170127dc59d4
+source-git-commit: f89fbf4e693fb1b17e8923dfcc6c9b4de92b536d
 workflow-type: tm+mt
 source-wordcount: '1928'
 ht-degree: 0%
@@ -156,7 +156,7 @@ Läs [dokumentation](/help/security/configuring-advanced-networking.md) för mer
 
 **Indexoptimeringar**
 
-För att förbättra prestanda för sökfrågor och indexering tas inte fulltextindexet lucene-2 med i [!DNL Adobe Experience Manager] som [!DNL Cloud Service] från den här versionen. För att ta bort detta fulltextindex i AEM miljöer i enlighet med AEM kunder arbetar Adobe Engineering individuellt och aktivt med kunderna för att få ett mjukt och hållbart borttagande av Lucene-fulltextindexet. Besök [!DNL Adobe Experience Manager] som [!DNL Cloud Service] [dokumentation](/help/operations/indexing.md#index-optimizations) för mer information och kontakta vår support direkt om du har några frågor.
+För att förbättra prestanda för sökfrågor och indexering används heltextindexet lucene-2 inte längre i [!DNL Adobe Experience Manager] som [!DNL Cloud Service] från den här versionen. För att ta bort detta fulltextindex i AEM miljöer i enlighet med AEM kunder arbetar Adobe Engineering individuellt och aktivt med kunderna för att få ett mjukt och hållbart borttagande av Lucene-fulltextindexet. Besök [!DNL Adobe Experience Manager] som [!DNL Cloud Service] [dokumentation](/help/operations/indexing.md#index-optimizations) för mer information och kontakta vår support direkt om du har några frågor.
 
 ## Cloud Manager {#cloud-manager}
 
