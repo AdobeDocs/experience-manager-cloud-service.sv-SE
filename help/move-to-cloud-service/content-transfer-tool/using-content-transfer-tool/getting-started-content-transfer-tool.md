@@ -2,7 +2,7 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: fc0628c2bfd345a7846d3d4fbd0fe11a459b10a1
+source-git-commit: 6ee0cdc1a2c75bdf91354285c0e21ca618ceeb46
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 27%
@@ -11,7 +11,7 @@ ht-degree: 27%
 
 # Komma igång med verktyget Innehållsöverföring {#getting-started-content-transfer-tool}
 
-## Anslutning för källmiljö
+## Anslutning för källmiljö {#source-environment-connectivity}
 
 Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. För att en extrahering ska kunna köras måste följande slutpunkter vara tillgängliga från den instans som körs AEM:
 
@@ -30,6 +30,7 @@ Om du vill testa anslutningen till AEM as a Cloud Service målmiljön skickar du
 
 >[!NOTE]
 >Om en `HTTP/2 200` har tagits emot har en anslutning till AEM as a Cloud Service upprättats.
+
 
 ## Tillgänglighet {#availability}
 
