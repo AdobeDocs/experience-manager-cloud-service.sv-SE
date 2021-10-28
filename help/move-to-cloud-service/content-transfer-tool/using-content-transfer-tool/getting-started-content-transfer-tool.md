@@ -2,7 +2,7 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: d8c9373da79b46d32f8da37b4dfeae815348ae8a
+source-git-commit: ce0c9349cf6b52f7cba27397f1b85896ee156a35
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 27%
@@ -11,21 +11,6 @@ ht-degree: 27%
 
 # Komma igång med verktyget Innehållsöverföring {#getting-started-content-transfer-tool}
 
-## Anslutning för källmiljö {#source-environment-connectivity}
-
-Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. För att en extrahering ska kunna köras måste följande slutpunkter vara tillgängliga från den instans som körs AEM:
-
-* Målet AEM den as a Cloud Service miljön: `author-p<program_id>-e<env_id>.adobeaemcloud.com`
-* Azure-blobblagringstjänsten: `*.blob.core.windows.net`
-* I/O-slutpunkten för användarmappning: `usermanagement.adobe.io`
-
-Om du vill testa anslutningen till AEM as a Cloud Service målmiljön skickar du följande cURL-kommando från skalet för källinstansen (ersätt `program_id`, `environment_id`och `migration_token`):
-
-`curl -i https://author-p<program_id>-e<environment_id>.adobeaemcloud.com/api/migration/migrationSet -H "Authorization: Bearer <migration_token>"`
-
-
->[!NOTE]
->Om en `HTTP/2 200` har tagits emot har en anslutning till AEM as a Cloud Service upprättats.
 
 ## Tillgänglighet {#availability}
 
@@ -40,6 +25,21 @@ Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Di
 
 >[!NOTE]
 >Hämta Content Transfer Tool från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen.
+
+## Anslutning för källmiljö {#source-environment-connectivity}
+
+Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. För att en extrahering ska kunna köras måste följande slutpunkter vara tillgängliga från den instans som körs AEM:
+
+* Målet AEM den as a Cloud Service miljön: `author-p<program_id>-e<env_id>.adobeaemcloud.com`
+* Azure-blobblagringstjänsten: `*.blob.core.windows.net`
+* I/O-slutpunkten för användarmappning: `usermanagement.adobe.io`
+
+Om du vill testa anslutningen till AEM as a Cloud Service målmiljön skickar du följande cURL-kommando från skalet för källinstansen (ersätt `program_id`, `environment_id`och `migration_token`):
+
+`curl -i https://author-p<program_id>-e<environment_id>.adobeaemcloud.com/api/migration/migrationSet -H "Authorization: Bearer <migration_token>"`
+
+>[!NOTE]
+>Om en `HTTP/2 200` har tagits emot har en anslutning till AEM as a Cloud Service upprättats.
 
 ## Köra Content Transfer Tool {#running-tool}
 
