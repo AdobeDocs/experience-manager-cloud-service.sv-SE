@@ -2,9 +2,9 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
-source-git-commit: a6d0ab0245ed33fcffe1c4811674435e6f97abf8
+source-git-commit: 5f65d9045e30e9192b7e4833d4667ab5be588e92
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1042'
 ht-degree: 4%
 
 ---
@@ -90,7 +90,7 @@ Följ stegen nedan:
 
 När du överför mer än en BPA-rapport (Best Practices Analyzer) i ett projekt kan du välja **Visa trendlinje** för att visa och jämföra resultat från gamla BPA-rapporter.
 
-Följ stegen nedan för att visa trendlinjen:
+Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 
 >[!NOTE]
 >När du överför mer än en BPA-rapport i ett projekt visas ikonen **...**.
@@ -104,7 +104,7 @@ Följ stegen nedan för att visa trendlinjen:
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view1.png)
 
    >[!IMPORTANT]
-   >Rapporten som visas är alltid den rapport som har det senaste rapportdatumet.
+   >Rapporten visas i **Raster för trendrapport** är alltid den som har det senaste rapportdatumet.
 
 1. Klicka på **Visa trendlinje**, vilket visas i figuren nedan.
 
@@ -116,12 +116,14 @@ Följ stegen nedan för att visa trendlinjen:
 
    >[!NOTE]
    >Trendlinjerapporten visar resultaten från de historiska BPA-rapporterna i en grafisk representation.
+   >
    >Du ser två diagram som visar trenden för:
-   >1. Trend för rapportresultat
-   >1. Trend för anpassade komponenter och mallar
-      >Du kan lägga till eller ändra den grafiska vyn via listrutan enligt nedan.
-      >![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view4.png)
+   >1. **Trend för rapportresultat**
+   >1. **Anpassade komponenter och malltrend**
 
+   >
+   >Du kan lägga till eller ändra den grafiska vyn via listrutan enligt bilden nedan:
+   >![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view4.png)
 
 #### Ta bort trendlinjerapporten {#delete-trendline}
 
