@@ -2,9 +2,9 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
-source-git-commit: 399698d512252b0a683f83a06ffbc71cd606ed72
+source-git-commit: c10d04d6d423529549a760945f72fc3c64ed72ed
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1058'
 ht-degree: 4%
 
 ---
@@ -125,9 +125,12 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
    >Du kan lägga till eller ändra den grafiska vyn via listrutan enligt bilden nedan:
    >![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view4.png)
 
-#### Ta bort trendlinjerapporten {#delete-trendline}
+#### Ta bort rapporten {#delete-trendline}
 
 Följ stegen nedan för att ta bort en rapport från trendlinjevyn:
+
+>[!IMPORTANT]
+>En rapport kan bara tas bort när mer än en rapport har överförts till ett projekt.
 
 1. Navigera till projektet och klicka på **Granska** från **Best Practices Analysis** i **Beredskap** fas.
 
