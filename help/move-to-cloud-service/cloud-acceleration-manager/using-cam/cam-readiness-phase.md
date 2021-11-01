@@ -2,7 +2,7 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
-source-git-commit: 5f65d9045e30e9192b7e4833d4667ab5be588e92
+source-git-commit: 399698d512252b0a683f83a06ffbc71cd606ed72
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 4%
@@ -93,7 +93,7 @@ När du överför mer än en BPA-rapport (Best Practices Analyzer) i ett projekt
 Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 
 >[!NOTE]
->När du överför mer än en BPA-rapport i ett projekt visas ikonen **...**.
+>När du överför mer än en BPA-rapport i ett projekt visas **...** ikon.
 
 1. Navigera till projektet och klicka på **Granska** från **Best Practices Analysis** i **Beredskap** fas.
 
