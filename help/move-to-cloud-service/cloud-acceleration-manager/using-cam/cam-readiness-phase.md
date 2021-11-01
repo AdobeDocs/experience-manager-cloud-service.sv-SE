@@ -2,9 +2,9 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
-source-git-commit: c10d04d6d423529549a760945f72fc3c64ed72ed
+source-git-commit: d706f8229cbca27ece5faedbecc4d02f58d40fb2
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1057'
 ht-degree: 4%
 
 ---
@@ -104,7 +104,7 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view1.png)
 
    >[!IMPORTANT]
-   >Rapporten visas i **Raster för trendrapport** är alltid den som har det senaste rapportdatumet.
+   >Rapporten som visas är alltid den rapport som har det senaste rapportdatumet.
 
 1. Klicka på **Visa trendlinje**, vilket visas i figuren nedan.
 
@@ -124,33 +124,6 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
    >
    >Du kan lägga till eller ändra den grafiska vyn via listrutan enligt bilden nedan:
    >![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view4.png)
-
-#### Ta bort rapporten {#delete-trendline}
-
-Följ stegen nedan för att ta bort en rapport från trendlinjevyn:
-
->[!IMPORTANT]
->En rapport kan bara tas bort när mer än en rapport har överförts till ett projekt.
-
-1. Navigera till projektet och klicka på **Granska** från **Best Practices Analysis** i **Beredskap** fas.
-
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view1a.png)
-
-1. Klicka på **...** för att visa listrutan.
-
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view1.png)
-
-1. Klicka på **Visa trendlinje**, vilket visas i figuren nedan.
-
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view2.png)
-
-1. Klicka på borttagningsikonen i dialogrutan **Trendlinjerapport** skärm.
-
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view5.png)
-
-1. Klicka på **Ta bort** för att bekräfta borttagningen.
-
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view6.png)
 
 
 ### Analysrapport om metodtips för granskning {#analysis-report}
@@ -222,6 +195,33 @@ Följ det här avsnittet för att utforska aktivitetskortet Planning and Setup.
 1. En innehållskarusell visar all relevant information för den här fasen av migreringsresan.
 
    ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/readiness-5-planning.png)
+
+### Ta bort en analysrapport om bästa praxis {#delete-trendline}
+
+Följ stegen nedan för att ta bort en rapport från trendlinjevyn:
+
+>[!IMPORTANT]
+>En rapport kan bara tas bort när mer än en rapport har överförts till ett projekt.
+
+1. Navigera till projektet och klicka på **Granska** från **Best Practices Analysis** i **Beredskap** fas.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view1a.png)
+
+1. Klicka på **...** för att visa listrutan.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view1.png)
+
+1. Klicka på **Visa trendlinje**, vilket visas i figuren nedan.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view2.png)
+
+1. Klicka på borttagningsikonen i dialogrutan **Trendlinjerapport** skärm.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view5.png)
+
+1. Klicka på **Ta bort** för att bekräfta borttagningen.
+
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view6.png)
 
 ## What&#39;s Next {#whats-next}
 
