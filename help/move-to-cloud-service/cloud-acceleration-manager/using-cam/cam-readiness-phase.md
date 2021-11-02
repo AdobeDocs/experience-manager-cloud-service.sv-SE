@@ -2,7 +2,7 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
-source-git-commit: ba405db754fd6335c76180c7520ab9c08e259f6e
+source-git-commit: 3063a9d3a28e974300afa1b91c2b6a344b3361b8
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 4%
@@ -112,7 +112,8 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 
 1. Klicka på **Visa trendlinje** öppnar trendlinjevyn för rapporten, så som visas i figuren nedan.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view3.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view3a.png)
+
 
    >[!NOTE]
    >Trendlinjerapporten visar resultaten från de historiska BPA-rapporterna i en grafisk representation.
@@ -217,11 +218,11 @@ Följ stegen nedan för att ta bort en rapport från trendlinjevyn:
 
 1. Klicka på borttagningsikonen i dialogrutan **Trendlinjerapport** skärm.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view5.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view5a.png)
 
 1. Klicka på **Ta bort** för att bekräfta borttagningen.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view6.png)
+   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/trendline-view6a.png)
 
 ## What&#39;s Next {#whats-next}
 
