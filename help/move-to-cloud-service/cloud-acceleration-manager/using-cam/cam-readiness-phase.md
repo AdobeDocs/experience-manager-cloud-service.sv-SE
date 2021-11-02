@@ -2,7 +2,7 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 91a13cae-4934-42e8-9538-896fd72f5acb
-source-git-commit: d706f8229cbca27ece5faedbecc4d02f58d40fb2
+source-git-commit: ba405db754fd6335c76180c7520ab9c08e259f6e
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 4%
@@ -88,7 +88,7 @@ Följ stegen nedan:
 
 ### Använda Visa trendlinje {#trendline-view-cam}
 
-När du överför mer än en BPA-rapport (Best Practices Analyzer) i ett projekt kan du välja **Visa trendlinje** för att visa och jämföra resultat från gamla BPA-rapporter.
+När du överför mer än en BPA-rapport (Best Practices Analyzer) i ett projekt kan du välja **Visa trendlinje** möjlighet att visa och jämföra resultat från historiska BPA-rapporter.
 
 Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 

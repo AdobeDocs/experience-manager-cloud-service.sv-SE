@@ -5,10 +5,10 @@ breadcrumb-title: Flytta stödlinje
 user-guide-description: Förstå övergången till Cloud Service.
 feature: Deploying
 role: Architect, Developer
-source-git-commit: f40a2f2fc885b2f81982ff8cd6883186d505d7f9
+source-git-commit: ba405db754fd6335c76180c7520ab9c08e259f6e
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 36%
+source-wordcount: '190'
+ht-degree: 34%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 36%
 # Användarhandboken Flytta till AEM as a Cloud Service {#moving}
 
 + [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md)
++ Versionsinformation för migreringsverktyg {#release-notes-migration-tools}
+   + [Aktuell versionsinformation (2021.11.0)](/help/move-to-cloud-service/release-notes/release-notes-migration-tools-current.md)
+   + 2021 {#2021}
+      + [Versionsinformation för 2021.10.0](/help/move-to-cloud-service/release-notes/release-notes-migration-tools-2021-10-0.md)
 + Faser i övergångsprocessen {#phases}
    + [Beredskap](/help/move-to-cloud-service/migration-readiness.md)
    + [Implementering](/help/move-to-cloud-service/migration-implementation.md)
@@ -46,7 +50,7 @@ ht-degree: 36%
       + [Ta bort en migreringsuppsättning](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/deleting-migrationset.md)
       + [Köra verktyget Innehållsöverföring på en publiceringsinstans](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/running-content-transfer-tool-publish-instance.md)
       + [Felsöka verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/troubleshooting-content-transfer-tool.md)
-      + Användarmappningsverktyg {#user-mapping-tool}
+      + Verktyg för användarmappning {#user-mapping-tool}
          + [Översikt](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md)
          + [Viktiga överväganden](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/considerations-user-mapping-tool.md)
          + [Använda verktyget för användarmappning](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.md)
