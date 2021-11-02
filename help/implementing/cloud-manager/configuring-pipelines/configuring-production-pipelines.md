@@ -2,7 +2,7 @@
 title: Konfigurera produktionsförlopp
 description: Konfigurera produktionsförlopp
 index: false
-source-git-commit: e0c21561a9a6e2940768ecb86da9b4d16e2fbfa8
+source-git-commit: 76cff84003576cf23eb1d23674ce6eaf082bbbb1
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -99,3 +99,7 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
    * **Lägg till** - gör det möjligt att lägga till en ny pipeline.
    * **Åtkomst till svarsinformation** - ger användaren tillgång till den information som krävs för att få åtkomst till Git-databasen i Cloud Manager.
    * **Läs mer** - navigerar till att förstå CI/CD-pipeline-dokumentationsresursen.
+
+
+
+

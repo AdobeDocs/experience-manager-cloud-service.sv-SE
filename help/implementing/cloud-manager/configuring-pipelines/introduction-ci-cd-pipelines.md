@@ -2,9 +2,9 @@
 title: CI-CD-rör
 description: CI-CD-rör
 index: false
-source-git-commit: 1887cc7374ece840b2dcca4482924b14c4793567
+source-git-commit: 76cff84003576cf23eb1d23674ce6eaf082bbbb1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ En CI/CD-pipeline i Cloud Manager kan utlösas av någon typ av händelse, till 
 >* konfigurera parametrar för prestandatestning
 
 
-I Cloud Manager finns det två typer av pipeline:
+I Cloud Manager finns det två typer av pipelines:
 
 * [Produktionspipeline](#prod-pipeline)
 * [Icke-produktionsförlopp](#non-prod-pipeline)
@@ -40,3 +40,48 @@ Mer information finns i Konfigurera produktionspipeline.
 En icke-produktionspipeline syftar till att köra kodkvalitetssökningar eller att distribuera källkod i en utvecklingsmiljö.
 
 Mer information finns i Icke-produktion och Endast kodkvalitet i pipeline.
+
+## Förstå CI-CD-pipeline i Cloud Manager {#understand-pipelines}
+
+I följande tabell kategoriseras pipelines i Cloud Manager tillsammans med deras användning.
+
+| Typ av pipeline | Driftsättnings- eller kodkvalitet | Källkod | När ska användas | När eller varför ska jag använda? |
+|--- |--- |--- |---|---|---|
+| Produktion eller icke-produktion | Distribution | Front End | För att distribuera slutkod. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar. Måste vara i AEM version. | Snabba driftsättningstider.<br> Flera frontledningar kan konfigureras och köras samtidigt per miljö. |
+|  | Distribution | Hel hög | Distribuera serverdelen, frontdelen och HTTPD/dispatcher-konfigurationen samtidigt. Obs! Vissa begränsningar gäller. | När pipelines för Front end- eller Web Tier Config ännu inte har antagits. |
+|  | Distribution | Webbnivåkonfiguration | Distribuera HTTPD/dispatcher-konfigurationen på bara några minuter.  Detta smidiga tillvägagångssätt ger användare som bara vill distribuera ändringar i dispatcherkonfigurationen, ett snabbare sätt att göra det. Obs! Måste vara i AEM version [version] | Snabba driftsättningstider. |
+
+
+
+## Front End Pipelines för Cloud Manager {#front-end}
+
+Front End-pipelines hjälper era team att effektivisera design- och utvecklingsprocessen genom att aktivera snabbredigerade front end-pipelines för implementering av front end-kod. Denna differentierade pipeline distribuerar JavaScript och CSS till AEM distributionslager som ett tema, vilket resulterar i en ny temaversion som kan refereras från sidor som levereras från AEM. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar.
+
+>[!NOTE]
+>En användare som är inloggad som rollen Distributionshanterare kan skapa och köra flera frontendpipelines samtidigt. Det finns dock en högsta gräns på 300 rörledningar per program (för alla typer).
+
+Det finns två typer av frontledningar:
+
+* Front End-kodkvalitet
+* Front End-distribution
+
+## Kompletta stackrör {#full-stack-pipeline}
+
+Med en fullständig stackpipeline kan användaren välja att distribuera back-end-, front-end- och HTTPD/dispatcher-konfiguration samtidigt.  Den distribuerar kod och innehåll till AEM, inklusive klientkod (JavaScript/CSS) som paketerats som AEM klientbibliotek. Den kan distribuera webbnivåkonfiguration om en webbnivåpipeline inte har konfigurerats. Detta representerar rörledningen&quot;uber&quot;, samtidigt som användarna får möjlighet att exklusivt distribuera sin Front End-kod eller dispatcherkonfiguration via Front End-pipeline respektive Web Tier Config-pipeline.
+
+
+Följande begränsningar gäller:
+
+1. En användare måste vara inloggad som Deployment Manager för att kunna konfigurera eller köra pipelines.
+
+1. Det kan bara finnas en fullständig stackpipeline per miljö.
+
+1. Användaren kan konfigurera pipelinen Full stack för en miljö så att den ignorerar eller inte ignorerar dispatcherkonfigurationen, om motsvarande pipeline för Web Tier Config för miljön inte finns.
+
+1. Komplett stapel-pipeline för en miljö ignorerar dispatcherkonfigurationen om motsvarande Web Tier Config-pipeline för miljön finns.
+
+Det finns två typer av rörledningar i full hög:
+
+* Komplett kvalitetspipeline för stackkod
+* Distributionsförlopp för hel hög
+
