@@ -3,7 +3,7 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: b71299a08c6dec8e88c4259b3d03481b20b310cb
+source-git-commit: 92b8a54f585e25db807914601ea5b3c07da681fc
 workflow-type: tm+mt
 source-wordcount: '926'
 ht-degree: 8%
@@ -69,7 +69,7 @@ Innan du godkänner direkttrafik bör du validera med Adobe kundsupport att hela
 När du har fått `X-AEM-Edge-Key`kan du testa att begäran dirigeras korrekt enligt följande:
 
 ```
-curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -H 'X-Forwarded-Host: example.com' -H 'X-AEM-Edge-Key: <PROVIDED_EDGE_KEY>'
+https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -H 'X-Forwarded-Host: example.com' -H 'X-AEM-Edge-Key: <PROVIDED_EDGE_KEY>'
 ```
 
 Observera att när du använder ditt eget CDN behöver du inte installera domänerna och certifikaten i Cloud Manager. Cirkulationen i Adobe CDN görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
