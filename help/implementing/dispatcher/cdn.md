@@ -3,7 +3,7 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: 997caea86978a2306a5081ef26270dfd451ab8a4
+source-git-commit: e5455985df0dad352fa158c7fb0df7d6c6a8dee0
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 8%
@@ -57,7 +57,7 @@ Om en kund måste använda sitt befintliga CDN kan de hantera det och peka det m
 Konfigurationsinstruktioner:
 
 1. Peka ditt CDN mot Adobe CDN:s ingress som ursprungsdomän. Till exempel, `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
-1. SNI måste också ställas in på Adobe CDN:s ingress
+1. SNI måste också ställas in på Adobe CDN:s ingress.
 1. Ange värdhuvudet som den ursprungliga domänen. Till exempel: `Host:publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ange `X-Forwarded-Host` header med domännamnet så att AEM kan avgöra värdhuvudet. Till exempel: `X-Forwarded-Host:example.com`.
 1. Uppsättning `X-AEM-Edge-Key`. Värdet ska komma från Adobe.
