@@ -2,10 +2,10 @@
 title: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 description: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 exl-id: 4d1addcf-b22d-41a3-ba5c-e5c42244e5cd
-source-git-commit: 4071bbc7b17abd3a81b231dd4e2f0025f8d520c2
+source-git-commit: 7ff1acb5558ac77329b6fc766191f78a8b735888
 workflow-type: tm+mt
-source-wordcount: '2112'
-ht-degree: 7%
+source-wordcount: '2092'
+ht-degree: 8%
 
 ---
 
@@ -152,8 +152,8 @@ Med Cloud Manager kan organisationer självhantera Experience Manager i molnet. 
 
 #### Innehållsmigrering
 
-1. [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=en#migration) : används för att flytta befintligt innehåll från en AEM (lokal eller AMS) till AEM Cloud Service-målinstansen.
-2. [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en#package-manager) : används för att importera och exportera muterbart innehåll i databasen.
+1. [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=en#migration) - Används för att flytta befintligt innehåll från en AEM (lokal eller AMS) till AEM Cloud Service-målinstansen.
+2. Pakethanteraren - Används för att importera och exportera muterbart innehåll i databasen.
 
 
 #### Baktor/optimera
@@ -196,7 +196,7 @@ I fasen efter publicering bör du se till att tillfälliga filer rensas, granska
 
 | Bedömning | Refactoring | Modernisering av Experience Manager | Innehållsmigrering |
 |------------|-------------|---------------------------------|-------------------|
-| <ul><li>[Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=en#cloud-migration)</li></li> | <ul><li>[Unified Experience Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html?lang=en#refactoring-tools)</li></ul> | <ul><li>[Statiska mallar till redigerbara mallar](https://opensource.adobe.com/aem-modernize-tools/pages/tools/page-structure.html)</li><li>[Designkonfigurationer till policyer](https://opensource.adobe.com/aem-modernize-tools/pages/tools/policy-importer.html) <li>[Foundation-komponenter till Core-komponenter](https://opensource.adobe.com/aem-modernize-tools/pages/tools/component.html)</li><li>[Klassiskt användargränssnitt till pekaktiverat användargränssnitt ](https://opensource.adobe.com/aem-modernize-tools/pages/tools/dialog.html)</li></ul> | <ul><li>[Content Transfer Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#cloud-migration)</li><li>[Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en#contentmanagement)</li></ul> |
+| <ul><li>[Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=en#cloud-migration)</li></li> | <ul><li>[Unified Experience Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html?lang=en#refactoring-tools)</li></ul> | <ul><li>[Statiska mallar till redigerbara mallar](https://opensource.adobe.com/aem-modernize-tools/pages/tools/page-structure.html)</li><li>[Designkonfigurationer till policyer](https://opensource.adobe.com/aem-modernize-tools/pages/tools/policy-importer.html) <li>[Foundation-komponenter till Core-komponenter](https://opensource.adobe.com/aem-modernize-tools/pages/tools/component.html)</li><li>[Klassiskt användargränssnitt till pekaktiverat användargränssnitt ](https://opensource.adobe.com/aem-modernize-tools/pages/tools/dialog.html)</li></ul> | <ul><li>[Content Transfer Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#cloud-migration)</li><li>[Pakethanteraren](/help/implementing/developing/tools/package-manager.md)</li></ul> |
 
 >[!NOTE]
 > Om du behöver mer hjälp kan du:

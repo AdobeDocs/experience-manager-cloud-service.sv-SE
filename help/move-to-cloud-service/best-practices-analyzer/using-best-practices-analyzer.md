@@ -2,10 +2,10 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: 7688bc78-0ec2-4838-8ade-7db5788fb70f
-source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
+source-git-commit: cf3273af030a8352044dcf4f88539121249b73e7
 workflow-type: tm+mt
 source-wordcount: '2522'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 42%
 >id="aemcloud_bpa_using"
 >title="Använda Best Practices Analyzer"
 >abstract="Läs dokumentationen om hur du använder Best Practices Analyzer (tidigare Cloud Readiness Analyzer) och den genererade rapporten. Best Practices Analyzer-rapporten används för att få en god förståelse för den allmänna uppgraderingsberedskapen."
->additional-url="https://my.adobeconnect.com/pqgrfezoxghs?proto=true" text="[Webinar] Introducing Tools to Accelerate the Journey to Adobe Experience Manager as a Cloud Service"
+>additional-url=""
 
 ## Viktigt att tänka på när du använder Best Practices Analyzer {#imp-considerations}
 
@@ -23,17 +23,17 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best 
 
 * BPA-rapporten byggs med utdata från Adobe Experience Manager (AEM) [Mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Mönsteravkännare som används av BPA ingår i BPA-installationspaketet.
 
-* BPA kan bara köras av **admin**-användaren eller en användare i **administratörsgruppen**.
+* BPA kan bara köras av **admin** användare eller användare i **administratörer** grupp.
 
 * BPA stöds på AEM med version 6.1 och senare.
 
    >[!NOTE]
-Se  [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
+Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
 
-* BPA kan köras i alla miljöer, men bör köras på en *Stage*-miljö.
+* BPA kan köras i alla miljöer, men det är bäst att det körs på en *Scen* miljö.
 
    >[!NOTE]
-För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA i en  ** redigeringsmiljö som är så nära  ** produktionsmiljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
+För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA på en *Upphovsman* miljö som är så nära *Produktion* miljö när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
 
 * Det kan ta lång tid att generera BPA-rapportinnehåll, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
@@ -46,10 +46,10 @@ id="aemcloud_bpa_download"
 title="Ladda ned Best Practices Analyzer"
 abstract="Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM)."
 
-Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM).
+Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) på din källinstans av Adobe Experience Manager (AEM).
 
 >[!NOTE]
-Hämta Best Practices Analyzer från  [Software ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) Distribution Portal.
+Hämta Best Practices Analyzer från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portal.
 
 ## Visa rapporten Best Practices Analyzer {#viewing-report}
 
@@ -57,7 +57,7 @@ Hämta Best Practices Analyzer från  [Software ](https://experience.adobe.com/#
 
 Följ det här avsnittet för att lära dig hur du visar rapporten Best Practices Analyzer:
 
-1. Välj Adobe Experience Manager och navigera till verktyg -> **Åtgärder** -> **Best Practices Analyzer**.
+1. Välj Adobe Experience Manager och navigera till verktyg -> **Operationer** -> **Best Practices Analyzer**.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic1.png)
 
@@ -78,12 +78,12 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic5.png)
 
-1. Du kan hämta rapporten i ett kommaavgränsat värdeformat (CSV) genom att klicka på **Exportera till CSV**, vilket visas i bilden nedan.
+1. Du kan hämta rapporten i ett kommaavgränsat värdeformat (CSV) genom att klicka på **Exportera till CSV**, vilket visas i figuren nedan.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic6.png)
 
    >[!NOTE]
-Du kan tvinga BPA att rensa sin cache och återskapa rapporten genom att klicka på  **Uppdatera rapport**.
+Du kan tvinga BPA att rensa cacheminnet och återskapa rapporten genom att klicka på **Uppdatera rapport**.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic7.png)
 
@@ -96,21 +96,21 @@ Medan rapporten återskapas visas förloppet i procent som slutförts enligt bil
 
 #### Använda filter i rapporten Best Practices Analyzer {#bpa-filters}
 
-Om du vill filtrera bort resultat relaterade till [ACS-kommandon](https://adobe-consulting-services.github.io/acs-aem-commons/) följer du stegen nedan:
+Filtrera bort resultat som är relaterade till [ACS-kommandon](https://adobe-consulting-services.github.io/acs-aem-commons/)följer du stegen nedan:
 
-1. Klicka på ikonen för den vänstra listen till vänster på sidan. Då visas filtret **ACS-kommandon**. Klicka på **ACS-kommandofiltret** för att visa den interaktiva kryssrutan som visas i bilden nedan.
+1. Klicka på ikonen för den vänstra listen till vänster på sidan. Det här visar **ACS-kommandofilter**. Klicka på **ACS-kommandofilter** för att visa den interaktiva kryssrutan så som visas i bilden nedan.
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/report_filter_1.png)
 
    >[!NOTE]
 Ikonen för vänster spår visas bara om BPA upptäcker att ACS Commons används.
 
-1. Avmarkera rutan om du vill filtrera bort alla resultat som rör ACS-kommandon. Du bör se ett **antal filtrerade sökningar** i rapporten enligt bilden nedan. Filtret används också i rapporten när den exporteras i ett CSV-format (kommaavgränsat värde).
+1. Avmarkera rutan om du vill filtrera bort alla resultat som rör ACS-kommandon. Du borde se en **Antal filtrerade sökningar** på rapporten enligt bilden nedan. Filtret används också i rapporten när den exporteras i ett CSV-format (kommaavgränsat värde).
 
    ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/report_filter_2.png)
 
    >[!NOTE]
-ACS Commons-resultaten ska inte ignoreras. Mer information finns i [dokumentationen](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility) för att fastställa kompatibilitet med AEM as a Cloud Service.
+ACS Commons-resultaten ska inte ignoreras. Se [dokumentation](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility) för att fastställa kompatibiliteten med AEM as a Cloud Service.
 
 
 ### Adobe Experience Manager 6.2 och 6.1 {#aem-specific-versions}
@@ -146,7 +146,7 @@ Rapportens format är:
 Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder.
 
 >[!NOTE]
-Mer information om varje sökkategori finns i Kategorier för  [mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
+Om du vill veta mer om varje sökkategori kan du läsa [Kategorier för mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
 
 Läs tabellen nedan för mer information om viktighetsgrad:
 
@@ -160,7 +160,7 @@ Läs tabellen nedan för mer information om viktighetsgrad:
 
 ## Tolka CSV-rapporten för Best Practices Analyzer {#cra-csv-report}
 
-När du klickar på alternativet **CSV** från din AEM skapas CSV-formatet för rapporten Best Practices Analyzer från innehållscachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas rapporten automatiskt som en fil med standardnamnet `results.csv`.
+När du klickar på **CSV** CSV-formatet i Best Practices Analyzer-rapporten byggs från innehållscachen och returneras till din webbläsare. Beroende på inställningarna i webbläsaren hämtas rapporten automatiskt som en fil med standardnamnet `results.csv`.
 
 Om cacheminnet har gått ut genereras rapporten på nytt innan CSV-filen skapas och hämtas.
 
@@ -210,10 +210,10 @@ Följande HTTP-sidhuvuden används i gränssnittet:
 
 Följande HTTP-frågeparametrar är praktiska när det är svårt att använda HTTP-sidhuvuden:
 
-* `max-age` (tal, valfritt): Anger livstid för cachefrihet i sekunder. Siffran måste vara 0 eller större. Standardlivstiden för färskhet är 86400 sekunder. Utan den här parametern eller motsvarande rubrik används ett nytt cacheminne för att hantera begäranden i 24 timmar, och då måste cacheminnet genereras om. Om du använder `max-age=0` kommer cachen att rensas och en omgenerering av rapporten kommer att påbörjas, med den tidigare icke-nollvaraktigheten för det nyligen genererade cacheminnet.
-* `respond-async` (boolesk, valfritt): Anger att svaret ska anges asynkront. Om du använder `respond-async=true` när cachen är inaktiv returnerar servern svaret `202 Accepted` utan att vänta på att cachen ska uppdateras och att rapporten ska genereras. Om cacheminnet är uppdaterat har den här parametern ingen effekt. Standardvärdet är `false`. Utan den här parametern eller motsvarande rubrik kommer servern att svara synkront, vilket kan kräva mycket tid och en justering av den maximala svarstiden för HTTP-klienten.
-* `may-refresh-cache` (boolesk, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. Om `may-refresh-cache=true`, eller om den inte anges, kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. Om `may-refresh-cache=false` kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha gjorts om cachen är tom eller inaktuell. I så fall kommer rapporten att vara tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
-* `return-minimal` (boolesk, valfritt): Anger att svaret från servern endast ska innehålla statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. Om `return-minimal=true` begränsas svarstexten till statusobjektet. Om `return-minimal=false`, eller om det inte anges, kommer ett fullständigt svar att ges.
+* `max-age` (tal, valfritt): Anger livstid för cachefrihet i sekunder. Siffran måste vara 0 eller större. Standardlivstiden för färskhet är 86400 sekunder. Utan den här parametern eller motsvarande rubrik används ett nytt cacheminne för att hantera begäranden i 24 timmar, och då måste cacheminnet genereras om. Använda `max-age=0` kommer att tvinga cachen att rensas och initiera en omgenerering av rapporten med hjälp av den tidigare icke-nollvaraktigheten för det nyligen genererade cacheminnet.
+* `respond-async` (boolesk, valfritt): Anger att svaret ska anges asynkront. Använda `respond-async=true` när cacheminnet är inaktuellt returnerar servern ett svar på `202 Accepted` utan att vänta på att cachen ska uppdateras och att rapporten ska genereras. Om cacheminnet är uppdaterat har den här parametern ingen effekt. Standardvärdet är `false`. Utan den här parametern eller motsvarande rubrik kommer servern att svara synkront, vilket kan kräva mycket tid och en justering av den maximala svarstiden för HTTP-klienten.
+* `may-refresh-cache` (boolesk, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. If `may-refresh-cache=true`, eller om den inte anges, kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. If `may-refresh-cache=false` kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha gjorts om cachen är tom eller inaktuell, och då kommer rapporten att vara tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
+* `return-minimal` (boolesk, valfritt): Anger att svaret från servern endast ska innehålla statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. If `return-minimal=true`, kommer svarstexten att begränsas till statusobjektet. If `return-minimal=false`, eller om det inte anges, kommer ett fullständigt svar att ges.
 * `log-findings` (boolesk, valfritt): Anger att servern ska logga innehållet i cachen när den skapas eller uppdateras för första gången. Varje sökning från cachen loggas som en JSON-sträng. Denna loggning sker endast om `log-findings=true` och begäran genererar ett nytt cacheminne.
 
 När det finns både ett HTTP-sidhuvud och motsvarande frågeparameter har frågeparametern företräde.
@@ -228,7 +228,7 @@ När en begäran har skickats behöver klienten inte vara aktiv för att rapport
 Följande svarsvärden är möjliga:
 
 * `200 OK`: Anger att svaret innehåller upptäckter från mönsteravkännaren som genererades under cachelagringens aktualitetstid.
-* `202 Accepted`: Används för att ange att cachen är inaktuell. När `respond-async=true` och `may-refresh-cache=true` anger det här svaret att en uppdateringsaktivitet pågår. När `may-refresh-cache=false` anger det här svaret helt enkelt att cachen är inaktuell.
+* `202 Accepted`: Används för att ange att cachen är inaktuell. När `respond-async=true` och `may-refresh-cache=true` det här svaret anger att en uppdateringsaktivitet pågår. När `may-refresh-cache=false` det här svaret indikerar helt enkelt att cachen är inaktuell.
 * `400 Bad Request`: Anger att det uppstod ett fel med begäran. Ett meddelande i formatet Probleminformation (se [RFC 7807](https://tools.ietf.org/html/rfc7807)) innehåller mer information.
 * `401 Unauthorized`: Anger att begäran inte var auktoriserad.
 * `500 Internal Server Error`: Anger att ett internt serverfel uppstod. Ett meddelande i formatet Problem Details innehåller mer information.
@@ -247,7 +247,7 @@ Värdet för den här egenskapen är cachelivslängden i sekunder. Administratö
 
 ### Installera på AEM 6.1 {#installing-on-aem61}
 
-BPA använder ett användarkonto för systemtjänsten med namnet `repository-reader-service` för att köra mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. På AEM 6.1 måste det här kontot skapas *innan* BPA-installationen installeras enligt följande:
+BPA använder ett användarkonto för systemtjänst med namnet `repository-reader-service` för att köra mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. AEM 6.1 måste det här kontot skapas *före* installation av BPA enligt följande:
 
 1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom. Klicka sedan på den gröna bockmarkeringen.
 

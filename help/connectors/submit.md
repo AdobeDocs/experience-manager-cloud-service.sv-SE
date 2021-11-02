@@ -2,7 +2,7 @@
 title: Skicka en AEM-anslutning
 description: Skicka en AEM-anslutning
 exl-id: 9be1f00e-3666-411c-9001-c047e90b6ee5
-source-git-commit: 4b6d02bc93a904c8ca666d027923fa5df88d1934
+source-git-commit: cf3273af030a8352044dcf4f88539121249b73e7
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 11%
@@ -14,14 +14,14 @@ Skicka en AEM-anslutning
 
 Nedan finns användbar information om hur du skickar in AEM-kopplingar och den bör läsas tillsammans med artiklarna om [implementering](implement.md) och [underhåll](maintain.md) av kopplingar.
 
-AEM Connectors listas på [Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud).
+AEM Connectors finns listade på [Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud).
 
-I tidigare AEM lösningar användes Package Manager för att installera anslutningar på olika AEM instanser. Men med AEM som Cloud Service distribueras anslutningar under CI/CD-processen i Cloud Manager. För att anslutningarna ska kunna distribueras måste det finnas referenser till anslutningarna i maven-projektets pom.xml.
+I tidigare AEM lösningar [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) användes för att installera anslutningar på olika AEM instanser. Men med AEM as a Cloud Service driftsätts anslutningar under CI/CD-processen i Cloud Manager. För att anslutningarna ska kunna distribueras måste det finnas referenser till anslutningarna i maven-projektets pom.xml.
 
 Det finns olika alternativ för hur paketen kan inkluderas i ett projekt:
 
 1. Partnerns offentliga arkiv - en partner skulle vara värd för innehållspaketet i ett offentligt tillgängligt arkiv
-1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Mer information finns i [lösenordsskyddade maven-databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories).
+1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Se [lösenordsskyddade maven-databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories) för instruktioner.
 1. Paket med sammankopplade artefakter - i det här fallet inkluderas kopplingspaketet lokalt i kundens maven-projekt.
 
 Oavsett var de finns måste paket refereras som beroenden i pom.xml, vilket tillhandahålls av leverantören.
@@ -54,4 +54,4 @@ Om ISV-partnern är värd för anslutningen på en Internet-åtkomlig (till exem
 </repository>
 ```
 
-Om ISV-partnern väljer att distribuera anslutningsprogrammet som hämtningsbara filer, ska ISV-partnern ge instruktioner om hur filerna kan distribueras till en lokal filsystemmaven-databas som måste checkas in i Git som en del av AEM, så att Cloud Manager kan lösa dessa beroenden.
+Om ISV-partnern väljer att distribuera anslutningsprogrammet som hämtningsbara filer, ska ISV-partnern ge instruktioner om hur filerna kan distribueras till en lokal filsystemmaven som måste checkas in i Git som en del av AEM, så att Cloud Manager kan lösa dessa beroenden.

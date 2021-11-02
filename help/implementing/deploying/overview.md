@@ -3,7 +3,7 @@ title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: f85a4dd109459e216d23a9da67f67d4ad7aa8709
+source-git-commit: cf3273af030a8352044dcf4f88539121249b73e7
 workflow-type: tm+mt
 source-wordcount: '3334'
 ht-degree: 1%
@@ -51,7 +51,7 @@ I följande video visas en översikt på hög nivå över hur du distribuerar ko
 
 ### Distributioner via Cloud Manager {#deployments-via-cloud-manager}
 
-Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, vilket är hur ett AEM as a Cloud Service program beskrivs när det körs i en molnmiljö. När du tittar på paketen i Package Manager i Cloud-miljöer kommer namnet därför att innehålla &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren kan [hittades här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
+Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, vilket är hur ett AEM as a Cloud Service program beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) i molnmiljöer kommer namnet att innehålla &quot;cp2fm&quot; och de transformerade paketen har alla metadata borttagna. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren kan [hittades här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
 
 Innehållspaket som skrivits för AEM as a Cloud Service program måste ha en ren separation mellan oföränderligt och muterbart innehåll och Cloud Manager installerar bara det muterbara innehållet, och ett meddelande som:
 
@@ -109,7 +109,7 @@ Efter övergång till en ny version av programmet:
 Det går att begränsa installationer av muterbart innehåll till författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna uppdelning gjordes i AEM 6.5 och närmare information om den rekommenderade projektomstruktureringen finns i [AEM 6.5-dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
 >[!NOTE]
->Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via Package Manager.
+>Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en viss miljö kräver manuell installation via [Pakethanteraren.](/help/implementing/developing/tools/package-manager.md)
 
 Det finns heller ingen mekanism för att återställa ändringar i det ändringsbara innehållspaketet efter att de har tillämpats. Om kunderna upptäcker ett problem kan de välja att åtgärda det i nästa kodversion eller som en sista utväg, återställa hela systemet till en tidpunkt före distributionen.
 
@@ -173,7 +173,7 @@ above appears to be internal, to confirm with Brian -->
 >abstract="Utforska användningen av pakethanteraren i användningsfall där ett innehållspaket ska installeras som en engångslösning, vilket inkluderar import av specifikt innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer och mycket mer."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en#cloud-migration" text="Content Transfer Tool"
 
-I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. I dessa scenarier kan Package Manager användas i AEM as a Cloud Service miljöer.
+I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. För dessa scenarier [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) kan användas i AEM as a Cloud Service miljöer.
 
 Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt innehåll) installeras endast det muterbara innehållet.
 

@@ -5,9 +5,9 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: 51e36bc72c74026e54f36ee41848f4f15e644d32
+source-git-commit: f9d224c1f06b424717942a8a285dd42ce746ede9
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1051'
 ht-degree: 26%
 
 ---
@@ -114,7 +114,7 @@ ht-degree: 26%
    + [API-referensmaterial](/help/implementing/developing/reference-materials.md)
    + [Genererar åtkomsttoken för API:er på serversidan](developing/introduction/generating-access-tokens-for-server-side-apis.md)
    + [Headless and Headless in AEM](developing/headful-headless.md)
-   + Utveckling AEM hög {#full-stack}
+   + Full Stack AEM Development {#full-stack}
       + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)
       + [Struktur för AEM](developing/introduction/ui-structure.md)
       + [Fusklapp för Sling](developing/introduction/sling-cheatsheet.md)
@@ -171,7 +171,7 @@ ht-degree: 26%
          + [Content Fragments GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
          + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)
          + [Autentisering för AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-authentication-content-fragments.html)
-   + Hybrid och SPA AEM {#hybrid}
+   + Hybrid- och SPA AEM {#hybrid}
       + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
       + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
       + [SPA introduktion och genomgång](developing/hybrid/introduction.md)
@@ -198,6 +198,7 @@ ht-degree: 26%
    + [Innehållspaket Maven Plugin](/help/implementing/developing/tools/maven-plugin.md)
    + [AEM](/help/implementing/developing/tools/repo-tool.md)
    + [Använda CRXDE Lite](/help/implementing/developing/tools/crxde.md)
+   + [Pakethanteraren](/help/implementing/developing/tools/package-manager.md)
    + [Länkutjämnaren](/help/implementing/developing/tools/externalizer.md)
 + Personanpassning {#personalization}
    + [ContextHub](developing/personalization/contexthub.md)
