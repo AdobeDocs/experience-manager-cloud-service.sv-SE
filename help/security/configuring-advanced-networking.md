@@ -1,9 +1,9 @@
 ---
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
-source-git-commit: 8990113529fb892f58b9171ebc2b04736bf45003
+source-git-commit: 2f9ba938d31c289201785de24aca2d617ab9dfca
 workflow-type: tm+mt
-source-wordcount: '2832'
+source-wordcount: '2836'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,6 @@ Den här artikeln beskriver de olika avancerade nätverksfunktionerna i AEM as a
 
 ## Översikt {#overview}
 
->[!INFO]
->
->Den avancerade nätverksfunktionen ingår i version 2021.9.0 och kommer att aktiveras för kunder i mitten av oktober.
-
 AEM as a Cloud Service har flera typer av avancerade nätverksfunktioner som kan konfigureras av kunder med API:er för Cloud Manager. Bland dessa finns:
 
 * [Flexibel portutgång](#flexible-port-egress) - konfigurera AEM as a Cloud Service för att tillåta utgående trafik från icke-standardportar
@@ -27,11 +23,12 @@ AEM as a Cloud Service har flera typer av avancerade nätverksfunktioner som kan
 
 I den här artikeln beskrivs dessa alternativ i detalj, inklusive hur de kan konfigureras. Som en allmän konfigurationsstrategi `/networkInfrastructures` API-slutpunkten anropas på programnivå för att deklarera önskad typ av avancerat nätverk, följt av ett anrop till `/advancedNetworking` slutpunkt för varje miljö för att aktivera infrastrukturen och konfigurera miljöspecifika parametrar. Referera till lämpliga slutpunkter i Cloud Managers API-dokumentation för varje formell syntax samt exempelbegäranden och svar.
 
-När du ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar bör du välja flexibel portutgång om en viss IP-adress inte krävs, eftersom Adobe kan optimera prestanda för flexibel portbelastningstrafik.
+Ett program kan tillhandahålla en enda avancerad nätverksvariant. När du ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar bör du välja flexibel portutgång om en viss IP-adress inte krävs, eftersom Adobe kan optimera prestanda för flexibel portbelastningstrafik.
 
 >[!INFO]
 >
 >Avancerade nätverk är inte tillgängliga för sandlådeprogrammet.
+>Miljöer måste också uppgraderas till AEM version 5958 eller senare.
 
 >[!NOTE]
 >
@@ -49,9 +46,9 @@ Det rekommenderas att du väljer Flexibel portutgång om du inte behöver VPN oc
 
 En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas, bara värdet för `flexiblePortEgress` för `kind` parameter och region. Slutpunkten svarar med `network_id`, samt annan information, inklusive status. Alla parametrar och den exakta syntaxen bör refereras i API-dokumenten.
 
-När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter innan den etableras. Ett anrop till Cloud Managers [miljöslutpunkt för GET](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getEnvironment) skulle visa statusen&quot;ready&quot;.
+När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter innan den etableras. Ett anrop till Cloud Managers [slutpunkt för GET av nätverksinfrastruktur](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) skulle visa statusen&quot;ready&quot;.
 
-Om konfigurationen för flexibel portutgångar som omfattar programmet är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkten måste anropas per miljö för att aktivera nätverk på miljönivå och för att deklarera regler för portvidarebefordran. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
+Om konfigurationen för flexibel portutgångar som omfattar programmet är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` Slutpunkten måste anropas per miljö för att nätverk på miljönivå ska kunna aktiveras och för att eventuella regler för portvidarebefordran ska kunna deklareras. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
 
 Reglerna för portvidarebefordran ska deklareras för alla portar utom 80/443 genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
 
