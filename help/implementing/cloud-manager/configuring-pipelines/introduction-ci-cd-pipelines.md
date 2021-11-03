@@ -1,10 +1,10 @@
 ---
 title: CI-CD-rör
-description: CI-CD-rör
+description: Följ den här sidan för att lära dig mer om Cloud Manager CI-CD-förgreningar
 index: false
-source-git-commit: 6d2f4aa11b3d23343b985b4871b6d7202e3181c7
+source-git-commit: b6749b149e2166a6f2881817368e418d8b2adb00
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
@@ -32,14 +32,14 @@ I Cloud Manager finns det två typer av pipelines:
 
 En produktionspipeline är en konstruerad pipeline som innehåller en serie samordnade steg för att ta källkod hela vägen in i produktionen. Stegen omfattar att först bygga, paketera, testa, validera och distribuera till alla scenmiljöer. Det behöver väl inte sägas att en produktionspipeline bara kan läggas till när en produktions- och scenmiljöuppsättning skapas.
 
-Mer information finns i Konfigurera produktionspipeline.
+Se [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för mer information.
 
 
 ## Icke-produktionsförlopp {#non-prod-pipeline}
 
 En icke-produktionspipeline syftar till att köra kodkvalitetssökningar eller att distribuera källkod i en utvecklingsmiljö.
 
-Mer information finns i Icke-produktion och Endast kodkvalitet i pipeline.
+Se [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
 
 ## Förstå CI-CD-pipeline i Cloud Manager {#understand-pipelines}
 
@@ -47,10 +47,14 @@ I följande tabell sammanfattas alla pipelines i Cloud Manager tillsammans med d
 
 | Typ av pipeline | Driftsättnings- eller kodkvalitet | Källkod | När ska användas | När eller varför ska jag använda? |
 |--- |--- |--- |---|---|---|
-| Produktion eller icke-produktion | Distribution | Front End | För att distribuera slutkod. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar. Måste vara i AEM version. | Snabba driftsättningstider.<br> Flera frontledningar kan konfigureras och köras samtidigt per miljö. |
-|  | Distribution | Hel hög | Distribuera serverdelen, frontdelen och HTTPD/dispatcher-konfigurationen samtidigt. Obs! Vissa begränsningar gäller. | När pipelines för Front end- eller Web Tier Config ännu inte har antagits. |
-|  | Distribution | Webbnivåkonfiguration | Distribuera HTTPD/dispatcher-konfigurationen på bara några minuter.  Detta smidiga tillvägagångssätt ger användare som bara vill distribuera ändringar i dispatcherkonfigurationen, ett snabbare sätt att göra det. Obs! Måste vara i AEM version [version] | Snabba driftsättningstider. |
+| Produktion eller icke-produktion | Distribution | Front End | För att distribuera slutkod. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar. Måste vara i AEM version. | Snabba driftsättningstider<br> Flera frontledningar kan konfigureras och köras samtidigt per miljö |
+|  | Distribution | Hel hög | Distribuera serverdelen, frontdelen och HTTPD/dispatcher-konfigurationen samtidigt. Vissa begränsningar gäller. | När frontledningarna ännu inte har anammats. |
+| Icke-produktion | Kodkvalitet | Front End | Kör kodkvalitetsgenomsökningar på slutkoden | Snabba driftsättningstider<br> Flera rörledningar kan konfigureras och köras |
+|  | Kodkvalitet | Hel hög | Kör kodkvalitetssökning på hela stackkoden | Snabba driftsättningstider<br> Flera rörledningar kan konfigureras och köras |
 
+I följande diagram visas molnhanterarens pipeline-konfigurationer med traditionella, enskilda front end-databaser eller oberoende front end-databaskonfigurationer:
+
+![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-configurations.png)
 
 ## Front End Pipelines för Cloud Manager {#front-end}
 
@@ -59,10 +63,7 @@ Front End-pipelines hjälper era team att effektivisera design- och utvecklingsp
 >[!NOTE]
 >En användare som är inloggad som rollen Distributionshanterare kan skapa och köra flera frontendpipelines samtidigt. Det finns dock en högsta gräns på 300 rörledningar per program (för alla typer).
 
-Det finns två typer av frontledningar:
-
-* Front End-kodkvalitet
-* Front End-distribution
+Dessa kan vara av typen frontslutskodens kvalitet eller frontslutets distributionsrör.
 
 ### Innan du konfigurerar frontmatriser {#before-start}
 
@@ -89,10 +90,7 @@ Följande begränsningar gäller:
 
 1. Komplett stapel-pipeline för en miljö ignorerar dispatcherkonfigurationen om motsvarande Web Tier Config-pipeline för miljön finns.
 
-Det finns två typer av rörledningar i full hög:
-
-* Komplett kvalitetspipeline för stackkod
-* Distributionsförlopp för hel hög
+De kan vara av typen Full Stack - Kodkvalitet eller Full Stack - Deployment.
 
 ### Konfigurera din fullständiga stackpipeline {#configure-full-stack}
 
