@@ -2,9 +2,9 @@
 title: Redigera en produktionspipeline
 description: Redigera en produktionspipeline
 index: false
-source-git-commit: b9d28088ad18a389108ebfb81aa750c63e637922
+source-git-commit: 881b4d75a15af55aaf1203e8d673059aab15b793
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,9 @@ ht-degree: 0%
 # Redigera en produktionspipeline {#edit-prod-pipeline}
 
 Du kan redigera pipeline-konfigurationerna från **Programöversikt** sida.
+
+>[!IMPORTANT]
+>Du kan inte redigera en pipeline som körs.
 
 Följ stegen nedan för att redigera den konfigurerade pipeline:
 

@@ -2,9 +2,9 @@
 title: Redigera en icke-produktionspipeline
 description: Redigera en icke-produktionspipeline
 index: false
-source-git-commit: 6d2f4aa11b3d23343b985b4871b6d7202e3181c7
+source-git-commit: 881b4d75a15af55aaf1203e8d673059aab15b793
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,9 @@ ht-degree: 0%
 # Redigera en icke-produktionspipeline {#edit-non-prod-pipeline}
 
 Du kan redigera pipeline-konfigurationerna från **Förloppskort** från **Programöversikt** sida.
+
+>[!IMPORTANT]
+>Du kan inte redigera en pipeline som körs.
 
 Följ stegen nedan för att redigera den konfigurerade icke-produktionsflödet:
 
