@@ -2,9 +2,9 @@
 title: Konfigurera produktionsförlopp
 description: Konfigurera produktionsförlopp
 index: false
-source-git-commit: 76cff84003576cf23eb1d23674ce6eaf082bbbb1
+source-git-commit: 6d2f4aa11b3d23343b985b4871b6d7202e3181c7
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
    * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 
-1. The **Lägg till produktionspipeline** innehåller en andra flik med etiketten **Källkod**. **Full Stack-kod** är markerat. Du kan välja **Databas** och **Git-gren**. Välj alternativ för produktionsdistribution enligt nedan. Klicka på **Fortsätt**.
+1. The **Lägg till produktionspipeline** innehåller en andra flik med etiketten **Källkod**. Du kan antingen välja **Full Stack-kod**, **Front End-kod** eller **Webbnivåkonfiguration**. Du kan välja **Databas** och **Git-gren**. Välj alternativ för produktionsdistribution enligt nedan. Klicka på **Fortsätt**.
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-fullstack1.png)
 

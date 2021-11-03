@@ -2,9 +2,9 @@
 title: CI-CD-rör
 description: CI-CD-rör
 index: false
-source-git-commit: 76cff84003576cf23eb1d23674ce6eaf082bbbb1
+source-git-commit: 6d2f4aa11b3d23343b985b4871b6d7202e3181c7
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -43,14 +43,13 @@ Mer information finns i Icke-produktion och Endast kodkvalitet i pipeline.
 
 ## Förstå CI-CD-pipeline i Cloud Manager {#understand-pipelines}
 
-I följande tabell kategoriseras pipelines i Cloud Manager tillsammans med deras användning.
+I följande tabell sammanfattas alla pipelines i Cloud Manager tillsammans med deras användning.
 
 | Typ av pipeline | Driftsättnings- eller kodkvalitet | Källkod | När ska användas | När eller varför ska jag använda? |
 |--- |--- |--- |---|---|---|
 | Produktion eller icke-produktion | Distribution | Front End | För att distribuera slutkod. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar. Måste vara i AEM version. | Snabba driftsättningstider.<br> Flera frontledningar kan konfigureras och köras samtidigt per miljö. |
 |  | Distribution | Hel hög | Distribuera serverdelen, frontdelen och HTTPD/dispatcher-konfigurationen samtidigt. Obs! Vissa begränsningar gäller. | När pipelines för Front end- eller Web Tier Config ännu inte har antagits. |
 |  | Distribution | Webbnivåkonfiguration | Distribuera HTTPD/dispatcher-konfigurationen på bara några minuter.  Detta smidiga tillvägagångssätt ger användare som bara vill distribuera ändringar i dispatcherkonfigurationen, ett snabbare sätt att göra det. Obs! Måste vara i AEM version [version] | Snabba driftsättningstider. |
-
 
 
 ## Front End Pipelines för Cloud Manager {#front-end}
@@ -65,10 +64,20 @@ Det finns två typer av frontledningar:
 * Front End-kodkvalitet
 * Front End-distribution
 
+### Innan du konfigurerar frontmatriser {#before-start}
+
+Innan du börjar konfigurera frontend-pipelines ska du läsa AEM Quick Site Creation Journey för ett komplett arbetsflöde med det lättanvända AEM Quick Site Creation-verktyget. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
+
+### Konfigurera frontendpipeline {#configure-front-end}
+
+Mer information om hur du konfigurerar frontendpipeline finns i:
+
+* Lägga till en produktionspipeline
+* Lägga till en icke-produktionspipeline
+
 ## Kompletta stackrör {#full-stack-pipeline}
 
 Med en fullständig stackpipeline kan användaren välja att distribuera back-end-, front-end- och HTTPD/dispatcher-konfiguration samtidigt.  Den distribuerar kod och innehåll till AEM, inklusive klientkod (JavaScript/CSS) som paketerats som AEM klientbibliotek. Den kan distribuera webbnivåkonfiguration om en webbnivåpipeline inte har konfigurerats. Detta representerar rörledningen&quot;uber&quot;, samtidigt som användarna får möjlighet att exklusivt distribuera sin Front End-kod eller dispatcherkonfiguration via Front End-pipeline respektive Web Tier Config-pipeline.
-
 
 Följande begränsningar gäller:
 
@@ -85,3 +94,9 @@ Det finns två typer av rörledningar i full hög:
 * Komplett kvalitetspipeline för stackkod
 * Distributionsförlopp för hel hög
 
+### Konfigurera din fullständiga stackpipeline {#configure-full-stack}
+
+Mer information om hur du konfigurerar en hel stackpipeline finns i:
+
+* Lägga till en produktionspipeline
+* Lägga till en icke-produktionspipeline
