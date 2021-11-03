@@ -2,9 +2,9 @@
 title: Konfigurera icke-produktionsförlopp
 description: Följ den här sidan om du vill veta mer om hur du konfigurerar en icke-produktionspipeline i Cloud Manager
 index: false
-source-git-commit: 7d45179093366dda2d035b5a8eed219e4846f777
+source-git-commit: fe3bd08e32cef20403d3d2799d027b3ed03e6d36
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
@@ -36,12 +36,15 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add2.png)
 
-1. Välj **Full Stack-kod** eller **Front End-kod**. Du kan välja **Databas** och **Git-gren**. Klicka på **Spara**.
+1. Välj **[Full Stack-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#full-stack-pipeline)** eller **[Front End-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end)**. Du kan välja **Databas** och **Git-gren**. Klicka på **Spara**.
+
+   >[!IMPORTANT]
+   >Om det redan finns en pipeline med fullständig stackkod för den valda miljön inaktiveras det här valet.
+
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add3.png)
 
    >[!NOTE]
    >Innan du börjar konfigurera frontend-pipelines ska du läsa AEM Quick Site Creation Journey för ett komplett arbetsflöde med det lättanvända AEM Quick Site Creation-verktyget. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
-
-   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add3.png)
 
 1. Den nyligen skapade icke-produktionsflödet visas nu i **Pipelines** kort.
 
