@@ -3,7 +3,7 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: e5455985df0dad352fa158c7fb0df7d6c6a8dee0
+source-git-commit: e5522483a15b6253e0b149200bd41d27246d2be1
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 8%
@@ -11,7 +11,6 @@ ht-degree: 8%
 ---
 
 # CDN i AEM as a Cloud Service {#cdn}
-
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_cdn"
@@ -61,6 +60,7 @@ Konfigurationsinstruktioner:
 1. Ange värdhuvudet som den ursprungliga domänen. Till exempel: `Host:publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ange `X-Forwarded-Host` header med domännamnet så att AEM kan avgöra värdhuvudet. Till exempel: `X-Forwarded-Host:example.com`.
 1. Uppsättning `X-AEM-Edge-Key`. Värdet ska komma från Adobe.
+
    * Detta behövs för att CDN-nätverket i Adobe ska kunna validera källan för förfrågningarna och skicka `X-Forwarded-*` rubriker i AEM. Till exempel:`X-Forwarded-For` används för att fastställa klientens IP-adress. Det blir alltså den betrodda uppringarens (dvs. kundhanterade CDN) ansvar att se till att `X-Forwarded-*` rubriker (se anteckningen nedan).
    * Åtkomst till Adobe CDN-ingången kan blockeras om en `X-AEM-Edge-Key` finns inte. Informera Adobe om du behöver direktåtkomst till Adobe CDN:s ingress (som ska blockeras).
 
