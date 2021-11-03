@@ -2,9 +2,9 @@
 title: Konfigurera produktionsförlopp
 description: Konfigurera produktionsförlopp
 index: false
-source-git-commit: 6d2f4aa11b3d23343b985b4871b6d7202e3181c7
+source-git-commit: 84d04d8399668b8b1051d4edf9de851bca271071
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '691'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,12 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
    * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 
-1. The **Lägg till produktionspipeline** innehåller en andra flik med etiketten **Källkod**. Du kan antingen välja **Full Stack-kod**, **Front End-kod** eller **Webbnivåkonfiguration**. Du kan välja **Databas** och **Git-gren**. Välj alternativ för produktionsdistribution enligt nedan. Klicka på **Fortsätt**.
+1. The **Lägg till produktionspipeline** innehåller en andra flik med etiketten **Källkod**. Du kan antingen välja **Full Stack-kod** och **Front End-kod**. Du kan välja **Databas** och **Git-gren**. Välj alternativ för produktionsdistribution enligt nedan. Klicka på **Fortsätt**.
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-fullstack1.png)
+
+   >[!NOTE]
+   >Innan du börjar konfigurera frontend-pipelines ska du läsa AEM Quick Site Creation Journey för ett komplett arbetsflöde med det lättanvända AEM Quick Site Creation-verktyget. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
 
    Alternativ för produktionsdistribution:
 
@@ -99,7 +102,5 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
    * **Lägg till** - gör det möjligt att lägga till en ny pipeline.
    * **Åtkomst till svarsinformation** - ger användaren tillgång till den information som krävs för att få åtkomst till Git-databasen i Cloud Manager.
    * **Läs mer** - navigerar till att förstå CI/CD-pipeline-dokumentationsresursen.
-
-
 
 
