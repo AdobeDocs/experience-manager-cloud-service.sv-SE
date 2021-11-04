@@ -1,10 +1,10 @@
 ---
 title: Konfigurera icke-produktionsförlopp
 description: Följ den här sidan om du vill veta mer om hur du konfigurerar en icke-produktionspipeline i Cloud Manager
-index: false
-source-git-commit: fe3bd08e32cef20403d3d2799d027b3ed03e6d36
+index: true
+source-git-commit: d090329c46155d77a7b132583c777c09555a03c9
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,10 @@ På startskärmen visas dessa rörledningar i ett nytt kort:
    >[!IMPORTANT]
    >Om det redan finns en pipeline med fullständig stackkod för den valda miljön inaktiveras det här valet.
 
-   ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add3.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-confignew1.png)
 
    >[!NOTE]
-   >Innan du börjar konfigurera frontend-pipelines ska du läsa AEM Quick Site Creation Journey för ett komplett arbetsflöde med det lättanvända AEM Quick Site Creation-verktyget. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
+   >Innan du börjar konfigurera frontledningarna finns mer information i [AEM för att skapa webbplatser snabbt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites-journey/quick-site/overview.html) för ett komplett arbetsflöde med det lättanvända AEM för att skapa en webbplats. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
 
 1. Den nyligen skapade icke-produktionsflödet visas nu i **Pipelines** kort.
 

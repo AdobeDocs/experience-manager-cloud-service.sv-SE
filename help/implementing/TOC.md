@@ -5,10 +5,10 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: f9d224c1f06b424717942a8a285dd42ce746ede9
+source-git-commit: 2f428f4401d7c60685332e9d23a02bf0bfb27c23
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 26%
+source-wordcount: '1079'
+ht-degree: 25%
 
 ---
 
@@ -18,8 +18,9 @@ ht-degree: 26%
 + [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
 + Använda Cloud Manager {#using-cloud-manager}
    + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
-      + [Aktuell versionsinformation (2021.10.0)](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md)
+      + [Aktuell versionsinformation (2021.11.0)](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md)
       + 2021 {#2021}
+         + [Versionsinformation för 2021.10.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-10-0.md)
          + [Versionsinformation för 2021.9.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-9-0.md)
          + [Versionsinformation för 2021.8.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-8-0.md)
          + [Versionsinformation för 2021.7.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-7-0.md)
@@ -64,7 +65,14 @@ ht-degree: 26%
       + [Integrera Git med Adobe Cloud Manager](cloud-manager/managing-code/integrating-with-git.md)
       + [Arbeta med Git-databaser med flera källor](cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
       + [Inställningar för utveckling av Enterprise-team för AEM as a Cloud Service](cloud-manager/managing-code/enterprise-team-dev-setup.md)
-   + [Konfigurera CI/CD-pipeline](cloud-manager/configure-pipeline.md)
+   + Cloud Manager CI-CD-pipeline {#cicd-pipelines}
+      + [Introduktion](cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
+      + Produktionsförlopp {#production-pipelines}
+         + [Konfigurera en produktionspipeline](cloud-manager/configuring-pipelines/editing-production-pipelines.md)
+         + [Redigera en produktionspipeline](cloud-manager/configuring-pipelines/configuring-production-pipelines.md)
+      + Icke-produktionsförlopp {#non-production-pipelines}
+         + [Konfigurera en icke-produktionspipeline](cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
+         + [Redigera en icke-produktionspipeline](cloud-manager/configuring-pipelines/editing-non-production-pipelines.md)
    + [Driftsätta kod](cloud-manager/deploy-code.md)
    + Förstå testresultat {#test-results}
       + [Översikt](/help/implementing/cloud-manager/overview-test-results.md)
@@ -113,6 +121,7 @@ ht-degree: 26%
    + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
    + [API-referensmaterial](/help/implementing/developing/reference-materials.md)
    + [Genererar åtkomsttoken för API:er på serversidan](developing/introduction/generating-access-tokens-for-server-side-apis.md)
+   + [Anpassa webbplatsmallar och teman](developing/introduction/customizing-site-templates-themes.md)
    + [Headless and Headless in AEM](developing/headful-headless.md)
    + Full Stack AEM Development {#full-stack}
       + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](developing/introduction/develop-wknd-tutorial.md)

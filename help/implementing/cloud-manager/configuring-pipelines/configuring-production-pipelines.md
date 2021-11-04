@@ -1,10 +1,10 @@
 ---
 title: Konfigurera produktionsförlopp
 description: Konfigurera produktionsförlopp
-index: false
-source-git-commit: fe3bd08e32cef20403d3d2799d027b3ed03e6d36
+index: true
+source-git-commit: 307472d5b9887101b9e365cafc781ec97a1bcdb5
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -57,13 +57,14 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
 
 1. The **Lägg till produktionspipeline** innehåller en andra flik med etiketten **Källkod**. Du kan antingen välja **[Full Stack-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#full-stack-pipeline)** eller **[Front End-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end)**. Du kan välja **Databas** och **Git-gren**. Välj alternativ för produktionsdistribution enligt nedan. Klicka på **Fortsätt**.
 
-   >[!IMPORTANT]
-   >Om det redan finns en pipeline med fullständig stackkod för den valda miljön inaktiveras det här valet.
-
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-fullstack1.png)
 
+   >[!IMPORTANT]
+   >Om det redan finns en pipeline med fullständig stackkod för den valda miljön inaktiveras det här valet.
+   >![](/help/implementing/cloud-manager/assets/configure-pipeline/full-stack-disabled.png)
+
    >[!NOTE]
-   >Innan du börjar konfigurera frontend-pipelines ska du läsa AEM Quick Site Creation Journey för ett komplett arbetsflöde med det lättanvända AEM Quick Site Creation-verktyget. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
+   >Innan du börjar konfigurera frontledningarna finns mer information i [AEM för att skapa webbplatser snabbt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites-journey/quick-site/overview.html) för ett komplett arbetsflöde med det lättanvända AEM för att skapa en webbplats. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
 
    Alternativ för produktionsdistribution:
 

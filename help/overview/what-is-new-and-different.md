@@ -2,7 +2,7 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: ab81bca96bcf06b06357f900464e999163bb1bb2
+source-git-commit: f8695dd8fdc9ffb203bab943c335ab2957df6251
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 86%
@@ -70,7 +70,7 @@ Det möjliggör automatisk skalning för olika användningsmönster:
 >[!NOTE]
 >Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
 
-AEM som Cloud Service använder nu Continuous Integration och Continuous Delivery (CI/CD) för att säkerställa att dina projekt finns i den senaste AEM versionen. Det innebär att instanser av Production och Stage uppdateras till den senaste AEM utan att tjänsten avbryts för användarna.
+AEM as a Cloud Service använder nu Continuous Integration och Continuous Delivery (CI/CD) för att säkerställa att dina projekt har den senaste AEM versionen. Det innebär att instanser av Production och Stage uppdateras till den senaste AEM utan att tjänsten avbryts för användarna.
 
 >[!NOTE]
 > Om uppdateringen till produktionsmiljön misslyckas kommer Cloud Manager automatiskt att återställa scenmiljön. Detta görs automatiskt för att säkerställa att både fas- och produktionsmiljöer har samma AEM när uppdateringen är klar.
@@ -112,11 +112,11 @@ Antal och typer av AEM-program som kan skapas via Cloud Manager beror på:
 
 Cloud Manager har utvecklats till en självbetjäningsportal där huvudkomponenterna i AEM as a Cloud Service kan skapas och konfigureras:
 
-* Skapa och hantera nya program. Mer information finns i [Förstå program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/understand-program-types.md).
+* Skapa och hantera nya program. Se [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/understand-program-types.md) för mer information.
 
-* Skapa och hantera AEM-miljöer i dessa program. Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
+* Skapa och hantera AEM-miljöer i dessa program. Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) för mer information.
 
-* Skapa och hantera pipelines för distribution av kundkoden och den relaterade konfigurationen för en viss miljö. Mer information finns i [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md).
+* Skapa och hantera pipelines för distribution av kundkoden och den relaterade konfigurationen för en viss miljö. Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) för mer information.
 
 * Meddelas om viktiga livscykelhändelser för dessa komponenter (t.ex. produktuppdateringar).
 
@@ -253,7 +253,7 @@ Mer information finns i översikten över [Ändringar i Sites](/help/sites-cloud
 
 ## AEM Assets {#aem-assets}
 
-Adobe Experience Manager Assets som Cloud Service är en molnbaserad, PaS-lösning som gör att företag inte bara kan hantera sina digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är tillgängligt och alltid är inlärningsbart.
+Adobe Experience Manager Assets as a Cloud Service är en molnbaserad, PaaS-lösning som gör att företag inte bara kan utföra sin hantering av digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
 
 Assets inkluderar nästa generations materialbearbetning i molnet samt högpresterande materialimport och sökning.
 

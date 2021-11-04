@@ -2,9 +2,9 @@
 title: UI-testning - Cloud Services
 description: UI-testning - Cloud Services
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 749daae8825b63dbf5b0101b4cab39730e9b1973
+source-git-commit: 0be391cb760d81a24f2a4815aa6e1e599243c37b
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Användargränssnittstester är självstudiebaserade tester som paketeras i en D
 
 >[!NOTE]
 > Scen- och produktionsrörledningar som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs på den här sidan ska kunna användas.
-> Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md) för information om pipeline-konfiguration.
+> Se [CI-CD-pipeline i Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) för information om pipeline-konfiguration.
 
 ## Skapar gränssnittstester {#building-ui-tests}
 
