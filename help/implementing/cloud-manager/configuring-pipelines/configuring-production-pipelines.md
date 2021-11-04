@@ -2,9 +2,9 @@
 title: Konfigurera produktionsförlopp
 description: Konfigurera produktionsförlopp
 index: true
-source-git-commit: e8ceeb0eb4fb26553683ced74a2e20628fc2952e
+source-git-commit: 8bdc246d1f47e1bdc9a217588f0be69a09982be5
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
    * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 
-1. The **Lägg till produktionspipeline** innehåller en andra flik med etiketten **Källkod**. Du kan antingen välja **[Front End-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end)** eller **[Full Stack-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#full-stack-pipeline)**. Du kan välja **Databas** och **Git-gren**. Välj alternativ för produktionsdistribution enligt nedan. Klicka på **Fortsätt**.
+1. The **Lägg till produktionspipeline** innehåller en andra flik med etiketten **Källkod**. Du kan antingen välja **[Front End-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end)** eller **[Full Stack-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#full-stack-pipeline)**.
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/prodpipeline-fullstack1.png)
 
@@ -77,6 +77,7 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
    >[!NOTE]
    >Innan du börjar konfigurera frontledningarna finns mer information i [AEM för att skapa webbplatser snabbt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites-journey/quick-site/overview.html) för ett komplett arbetsflöde med det lättanvända AEM för att skapa en webbplats. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
 
+1. Klicka på **Fortsätt** när du har valt alternativ i **Källkod** -fliken.
 
 1. The **Lägg till produktionspipeline** innehåller en tredje flik med etiketten **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit.
 
@@ -108,9 +109,12 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
 
 1. Klicka på **Spara**. Produktionspipelinen som skapades visas nu i **Pipelines** kort.
 
-   Rörledningen visas på kortet på startskärmen med tre åtgärder, som visas nedan:
+   Rörledningen visas på kortet på startskärmen med fyra åtgärder, vilket visas nedan:
+
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-created.png)
 
    * **Lägg till** - gör det möjligt att lägga till en ny pipeline.
+   * **Visa alla** - gör att användaren kan se alla rörledningar.
    * **Åtkomst till svarsinformation** - ger användaren tillgång till den information som krävs för att få åtkomst till Git-databasen i Cloud Manager.
    * **Läs mer** - navigerar till att förstå CI/CD-pipeline-dokumentationsresursen.
 
