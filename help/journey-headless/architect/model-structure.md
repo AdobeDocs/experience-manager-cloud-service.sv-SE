@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
-source-git-commit: ddea30a50c0c6146b0ac5b44c609d4a6f78f1fcc
+source-git-commit: 04e7cd99c98855ca109e112fd87877d0b6b536fc
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '690'
 ht-degree: 2%
 
 ---
@@ -16,14 +16,14 @@ ht-degree: 2%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) innehöll [Content Modeling Basics for Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering för headless.
+I början av [AEM Headless Content Author Journey](overview.md) den [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 Den här artikeln bygger vidare på dessa så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Mål**: koncept och mekanismer för att modellera innehåll för headless CMS med Content Fragments Models.
+* **Syfte**: koncept och mekanismer för att modellera innehåll för headless CMS med Content Fragments Models.
 
 <!-- which persona does this? -->
 <!-- and who allows the configuration on the folders? -->
@@ -52,21 +52,21 @@ Alternativet **Aktivera modell** är aktiverat som standard. Det innebär att di
 
 ![Skapa innehållsfragmentmodell](/help/assets/content-fragments/assets/cfm-models-02.png)
 
-Bekräfta med **Skapa** och du kan sedan **öppna** din modell för att börja definiera strukturen.
+Bekräfta med **Skapa** så kan du **Öppna** din modell för att börja definiera strukturen.
 
 ## Definiera modeller för innehållsfragment {#defining-content-fragment-models}
 
-När du först öppnar en ny modell visas ett stort tomt utrymme till vänster och en lång lista med **datatyper** till höger:
+När du först öppnar en ny modell ser du en stor tom yta till vänster och en lång lista med **Datatyper** till höger:
 
 ![Tom modell](/help/assets/content-fragments/assets/cfm-models-03.png)
 
 Så vad ska man göra?
 
-Du kan dra instanser av **datatyper** till det vänstra utrymmet - du definierar redan modellen!
+Du kan dra instanser av **Datatyper** till vänster - du definierar redan din modell!
 
 ![Definiera fält](/help/assets/content-fragments/assets/cfm-models-04.png)
 
-När du har lagt till en datatyp måste du definiera **egenskaperna** för det fältet. De beror på vilken typ som används. Till exempel:
+När du lägger till en datatyp måste du definiera **Egenskaper** för det fältet. De beror på vilken typ som används. Till exempel:
 
 ![Dataegenskaper](/help/assets/content-fragments/assets/cfm-models-05.png)
 
@@ -101,13 +101,9 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 >
 >Om en författare försöker publicera ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
->[!NOTE]
->
->Funktionen Låsta (publicerade) modeller för innehållsfragment är i betaversion.
+Så snart en modell har publicerats *låst* till skrivskyddat läge på författaren. Detta syftar till att förhindra ändringar som skulle leda till fel i befintliga GraphQL-scheman och frågor, särskilt i publiceringsmiljön. Den anges i konsolen av **Låst**.
 
-Så snart en modell har publicerats är den *låst* i skrivskyddat läge vid författaren. Detta syftar till att förhindra ändringar som skulle leda till fel i befintliga GraphQL-scheman och frågor, särskilt i publiceringsmiljön. Den anges i konsolen av **Locked**.
-
-När modellen är **låst** (i läget SKRIVSKYDDAD) kan du se innehållet och strukturen i modellerna, men du kan inte redigera dem direkt. men du kan hantera **låsta**-modeller från antingen konsolen eller modellredigeraren.
+När modellen är **Låst** (i läget SKRIVSKYDDAD) kan du se modellernas innehåll och struktur, men du kan inte redigera dem direkt; trots att du kan hantera **Låst** modeller från antingen konsolen eller modellredigeraren.
 
 ## What&#39;s Next {#whats-next}
 
@@ -117,7 +113,7 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
 * [Redigeringsbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
 
-* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md)  - Den här sidan är i första hand baserad på  **** webbplatskonsolen, men många/de flesta funktioner är också relevanta för att navigera till och vidta åtgärder i  **Content Fragment** Modelsunder  **** Resurskonsolen.
+* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för att navigera till och vidta åtgärder på, **Modeller för innehållsfragment** under **Resurser** konsol.
 
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
 
