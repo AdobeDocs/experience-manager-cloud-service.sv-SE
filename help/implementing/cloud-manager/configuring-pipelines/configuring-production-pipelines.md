@@ -2,9 +2,9 @@
 title: Konfigurera produktionsförlopp
 description: Konfigurera produktionsförlopp
 index: true
-source-git-commit: 307472d5b9887101b9e365cafc781ec97a1bcdb5
+source-git-commit: f25e26c84a87cf793f9c8a5ac53009034e6cd2e9
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,18 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
 
 1. The **Lägg till produktionspipeline** innehåller en andra flik med etiketten **Källkod**. Du kan antingen välja **[Full Stack-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#full-stack-pipeline)** eller **[Front End-kod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end)**. Du kan välja **Databas** och **Git-gren**. Välj alternativ för produktionsdistribution enligt nedan. Klicka på **Fortsätt**.
 
-   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prod-fullstack1.png)
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prodpipeline-fullstack1.png)
+
+   Om du valde **Front End-kod** måste du välja **Databas**, **Git-gren** och **Kodplats**, vilket visas i figuren nedan:
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prodpipeline-fullstack1.png)
+
+   Om du valde **Full Stack-kod** måste du välja **Databas**, **Git-gren** och **Alternativ för produktionsdistribution**, vilket visas i figuren nedan:
+   ![](/help/implementing/cloud-manager/assets/configure-pipeline/prodpipeline-fullstack2.png)
+
+   **Alternativ för produktionsdistribution:**
+
+   * **Pausa före distribution till produktion**: Med det här alternativet kan distributionen pausa före produktionen.
+   * **Schemalagd**: Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen.
 
    >[!IMPORTANT]
    >Om det redan finns en pipeline med fullständig stackkod för den valda miljön inaktiveras det här valet.
@@ -66,10 +77,9 @@ Klicka på **+Lägg till** och markera **Lägg till produktionspipeline**.
    >[!NOTE]
    >Innan du börjar konfigurera frontledningarna finns mer information i [AEM för att skapa webbplatser snabbt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites-journey/quick-site/overview.html) för ett komplett arbetsflöde med det lättanvända AEM för att skapa en webbplats. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
 
-   Alternativ för produktionsdistribution:
 
-   * **Pausa före distribution till produktion**: Med det här alternativet kan distributionen pausa pausen före produktion.
-   * **Schemalagd**: Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen.
+
+
 
 1. The **Lägg till produktionspipeline** innehåller en tredje flik med etiketten **Experience Audit**. Det här alternativet innehåller en tabell för de URL-sökvägar som alltid ska inkluderas i Experience Audit.
 
