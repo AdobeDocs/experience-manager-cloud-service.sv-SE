@@ -1,54 +1,63 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.10.0
-description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.10.0
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.11.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.11.0
 feature: Release Information
 exl-id: null
-source-git-commit: 23b19789e9e9857c9ae3d763fc71586a5e5da25b
+source-git-commit: 471924b2edd5e0bccd7c1eb9d6dd36ad2bd89f88
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.10.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.11.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.10.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.11.0.
 
 >[!NOTE]
->Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html) om du vill se den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
+>Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.10.0 är 14 oktober 2021.
-Nästa version är planerad till den 4 november 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.11.0 är 4 november 2021.
+Nästa version är planerad till 9 december 2021.
 
 ### Nyheter {#what-is-new}
 
-* Som förberedelse för vissa kommande ändringar kommer befintliga distributionsledningar nu att refereras och märkas i användargränssnittet som **fullständiga stackrörledningar**.
+* Användare kan nu utnyttja nya frontledningslinjer för att exklusivt distribuera frontendkod snabbare. Se [Front End Pipelines för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill veta mer.
 
-* Pipelinekortet har uppdaterats så att det nu visas ett enda, integrerat ansikte som visar både pipelines för produktion och icke-produktion, och användaren kan välja Kör/Pausa/Fortsätt direkt på den åtgärdsmeny som är kopplad till varje pipeline.
+   >[!IMPORTANT]
+   >Du måste ha AEM version `2021.10.5933.20211012T154732Z` för att utnyttja nya frontledningslinjer.
 
-* En användare i rollen Distributionshanterare kan nu ta bort produktionsflödet via självbetjäning via gränssnittet.
+* Varaktigheten i bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett mer effektivt sätt utan att behöva skapa en hel AEM. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
 
-* Lägg till och redigera rörliga upplevelser har uppdaterats för att nu använda välbekanta, moderna moduler.
+* Git-implementerings-ID visas nu i körningsinformationen för pipeline, vilket gör det enklare att spåra koden som skapades.
 
-* Användare av Cloud Manager kan nu skicka feedback direkt från användargränssnittet via knappen **Feedback** längst upp till höger på landningssidan.
+* Nu kan du skapa program via offentligt exponerade API:er.
 
-* Årliga SLA-diagram kan nu hämtas från användargränssnittet i Cloud Manager.
+* Miljöskapande är nu tillgängligt via offentligt exponerade API.
 
-* Kodkvalitet och icke-produktionsrelaterade pipeline-körningar kommer nu att använda en mer effektiv, ytlig kloningsprocess under byggsteget, vilket ger en snabbare byggtid för kunder med särskilt stora Git-databaser.
+* The `x-request-id` svarshuvudet är nu synligt i API-uppspelningen på [www.adobe.io](https://www.adobe.io/). Det här huvudet är användbart när du skickar in kundvårdsproblem för felsökning.
 
-* Guiden Lägg till IP Tillåtelselista informerar nu användaren om maximalt tillåtet antal IP-Tillåtelselista har uppnåtts.
+* Som användare ser jag att Pipeline-kortet med noll rörledningar ger mig lämplig vägledning.
 
-* API-dokumentationen för Cloud Manager innehåller nu en interaktiv spelningsmiljö som gör att inloggade användare kan experimentera med API:t från sin webbläsare. Mer information finns i [API-spelningsvyn för Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/).
+* Nu finns det en ny sida med Pipelines (Pipelines) med en statuspekare som du kan använda när du hovrar för att enkelt visa sammanfattningen av detaljer. Pipeline-körningar kan visas tillsammans med tillhörande information.
 
-* Verktygstipset på programkortet blir mer beskrivande om ett markeringsalternativ under Navigera till är inaktiverat. Nu visas&quot;En produktionsmiljö finns inte&quot;.
+* API:t Redigera pipeline har nu stöd för att ändra miljön som används i distributionsfaserna.
+
+* En optimering i OakPal-skanningsprocessen har införts för stora paket.
+
+* CSV-filen för kvalitetsutgåva kommer nu att innehålla tidsstämpeln för varje kvalitetsproblem.
 
 ### Felkorrigeringar {#bug-fixes}
 
-* I sällsynta fall, när en Adobe-personal skulle återställa en kunds miljö, ansågs återställningen vara fullständig innan miljön var helt i drift.
+* Vissa oortodoxa byggkonfigurationer resulterade i att onödiga filer sparades i Pipelins Maven-artefaktcache, vilket resulterade i överflödig nätverks-I/O när byggbehållaren startades och stoppades.
 
-* Vissa interna begäranden som gjordes när miljön skapades har inte gjorts om.
+* Pipeline PATCH API misslyckas om det inte finns någon distributionsfas.
 
-* Om ett distributionsfel uppstår efter domännamnsverifiering har felmeddelandet korrigerats för att begära att kunden kontaktar sin Adobe-representant.
+* The `ClientlibProxyResourceCheck` kvalitetsregeln genererade falskt positiva problem när det fanns klientbibliotek med gemensamma grundsökvägar.
+
+* Felmeddelandet när det maximala antalet databaser har uppnåtts specificerade inte orsaken till felet.
+
+* I sällsynta fall misslyckades rörledningar på grund av olämplig hantering av vissa svarskoder.
 

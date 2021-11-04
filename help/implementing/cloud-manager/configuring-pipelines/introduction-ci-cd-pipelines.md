@@ -2,7 +2,7 @@
 title: CI-CD-rör
 description: Följ den här sidan för att lära dig mer om Cloud Manager CI-CD-förgreningar
 index: true
-source-git-commit: 45cb3ea26a86de07f98e576a23542e250c99291f
+source-git-commit: 471924b2edd5e0bccd7c1eb9d6dd36ad2bd89f88
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
@@ -86,6 +86,7 @@ Mer information om hur du konfigurerar frontendpipeline finns i:
 ## Kompletta stackrör {#full-stack-pipeline}
 
 Med en fullständig stackpipeline kan användaren välja att distribuera back-end-, front-end- och HTTPD/dispatcher-konfiguration samtidigt.  Den distribuerar kod och innehåll till AEM, inklusive klientkod (JavaScript/CSS) som paketerats som AEM klientbibliotek. Den kan distribuera webbnivåkonfiguration om en webbnivåpipeline inte har konfigurerats. Detta representerar rörledningen&quot;uber&quot;, samtidigt som användarna får möjlighet att exklusivt distribuera sin Front End-kod eller dispatcherkonfiguration via Front End-pipeline respektive Web Tier Config-pipeline.
+De kan vara av typen Full Stack - Kodkvalitet eller Full Stack - Deployment.
 
 Följande begränsningar gäller:
 
@@ -97,7 +98,6 @@ Följande begränsningar gäller:
 
 1. Komplett stapel-pipeline för en miljö ignorerar dispatcherkonfigurationen om motsvarande Web Tier Config-pipeline för miljön finns.
 
-De kan vara av typen Full Stack - Kodkvalitet eller Full Stack - Deployment.
 
 ### Konfigurera en hel stackpipeline {#configure-full-stack}
 
