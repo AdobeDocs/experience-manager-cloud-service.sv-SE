@@ -2,9 +2,9 @@
 title: Funktionstestning - Cloud Services
 description: Funktionstestning - Cloud Services
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: 058fa606bbc667a36b78d5271947e2741f36240f
+source-git-commit: 749daae8825b63dbf5b0101b4cab39730e9b1973
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '920'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Se [Funktionstester för produkten](https://github.com/adobe/aem-test-samples/tr
 
 Det anpassade funktionsteststeget i pipeline finns alltid och kan inte hoppas över.
 
-Om JAR-test inte skapas av bygget godkänns testet som standard.
+Byggnaden bör producera antingen noll eller en test-JAR. Om inga JAR-testversioner skapas godkänns teststeget som standard. Om bygget skapar fler än en test-JAR är den JAR som är vald icke-deterministisk.
 
 >[!NOTE]
 >Använd knappen **Ladda ned logg** för att hämta en ZIP-fil med loggarna för det detaljerade formuläret för testkörning. Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen, som du kommer åt med de vanliga funktionerna för hämtning och spårningsloggar. Se [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) för mer information.

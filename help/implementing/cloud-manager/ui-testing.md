@@ -2,15 +2,14 @@
 title: UI-testning - Cloud Services
 description: UI-testning - Cloud Services
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-translation-type: tm+mt
-source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
+source-git-commit: 749daae8825b63dbf5b0101b4cab39730e9b1973
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
 
-# Gränssnittstestning {#ui-testing}
+# UI-testning {#ui-testing}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_nonbpa_uitesting"
@@ -21,22 +20,22 @@ Användargränssnittstester är självstudiebaserade tester som paketeras i en D
 
 >[!NOTE]
 > Scen- och produktionsrörledningar som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs på den här sidan ska kunna användas.
-> Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md) för information om pipeline-konfigurationen.
+> Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configure-pipeline.md) för information om pipeline-konfiguration.
 
 ## Skapar gränssnittstester {#building-ui-tests}
 
 UI-tester är byggda utifrån Docker-byggkontext som genereras av ett Maven-projekt. Cloud Manager använder Docker-byggkontexten för att generera en Docker-bild som innehåller de faktiska gränssnittstesterna. Sammanfattningsvis genererar ett Maven-projekt en Docker-byggkontext och Docker-byggkontexten beskriver hur du skapar en Docker-bild som innehåller UI-testerna.
 
-I det här avsnittet beskrivs stegen som krävs för att lägga till ett UI-testprojekt i din databas. Om du har bråttom eller inte har några särskilda krav för programmeringsspråket, kan [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) generera ett UI Tests-projekt åt dig.
+I det här avsnittet beskrivs stegen som krävs för att lägga till ett UI-testprojekt i din databas. Om du har bråttom eller inte har några särskilda krav för programmeringsspråket [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) kan generera ett UI-testprojekt åt dig.
 
-### Skapa en Docker-byggkontext {#generate-docker-build-context}
+### Generera kontext för Docker-bygge {#generate-docker-build-context}
 
 För att skapa en Docker-byggkontext behöver du en Maven-modul som:
 
-- Skapar ett arkiv som innehåller en `Dockerfile` och alla andra filer som behövs för att skapa Docker-bilden med dina tester.
-- Taggar arkivet med `ui-test-docker-context`-klassificeraren.
+- Skapar ett arkiv som innehåller en `Dockerfile` och alla andra filer som behövs för att bygga Docker-bilden med testerna.
+- Taggar arkivet med `ui-test-docker-context` klassificerare.
 
-Det enklaste sättet att uppnå detta är att konfigurera plugin-programmet [Maven Assembly](http://maven.apache.org/plugins/maven-assembly-plugin/) för att skapa kontextarkivet för Docker-bygget och tilldela rätt klassificerare till det.
+Det enklaste sättet att uppnå detta är att konfigurera [Maven Assembly Plugin](http://maven.apache.org/plugins/maven-assembly-plugin/) för att skapa kontextarkivet för Docker-bygget och tilldela rätt klassificerare till det.
 
 Du kan skapa gränssnittstester med olika tekniker och ramverk, men i det här avsnittet förutsätts att ditt projekt är utformat på ett sätt som liknar följande.
 
@@ -51,7 +50,7 @@ Du kan skapa gränssnittstester med olika tekniker och ramverk, men i det här a
 └── wait-for-grid.sh
 ```
 
-Filen `pom.xml` tar hand om Maven-bygget. Lägg till en exekvering av Maven Assembly Plugin som liknar följande.
+The `pom.xml` filen tar hand om Maven-bygget. Lägg till en exekvering av Maven Assembly Plugin som liknar följande.
 
 ```xml
 <plugin>
@@ -75,7 +74,7 @@ Filen `pom.xml` tar hand om Maven-bygget. Lägg till en exekvering av Maven Asse
 </plugin>
 ```
 
-Den här körningen instruerar Maven Assembly Plugin att skapa ett arkiv baserat på instruktionerna i `assembly-ui-test-docker-context.xml`, som kallas sammansättningsbeskrivare i plugin-programmets jargon. Sammansättningsbeskrivningen visar alla filer som måste ingå i arkivet.
+Den här exekveringen instruerar Maven Assembly Plugin att skapa ett arkiv baserat på instruktionerna i `assembly-ui-test-docker-context.xml`, anropade en sammansättningsbeskrivning i plugin-programmets jargon. Sammansättningsbeskrivningen visar alla filer som måste ingå i arkivet.
 
 ```xml
 <assembly>
@@ -104,15 +103,17 @@ Den här körningen instruerar Maven Assembly Plugin att skapa ett arkiv baserat
 </assembly>
 ```
 
-Sammansättningsbeskrivningen instruerar plugin-programmet att skapa ett arkiv av typen `.tar.gz` och tilldelar klassificeraren `ui-test-docker-context` till det. Dessutom listas de filer som måste ingå i arkivet:
+Sammansättningsbeskrivningen instruerar plugin-programmet att skapa ett arkiv av typen `.tar.gz` och tilldelar `ui-test-docker-context` klassificerare. Dessutom listas de filer som måste ingå i arkivet:
 
-- A `Dockerfile`, mandatory for building the Docker image.
-- `wait-for-grid.sh`-skriptet, vars syften beskrivs nedan.
-- De faktiska gränssnittstesterna, som implementeras av ett Node.js-projekt i mappen `test-module`.
+- A `Dockerfile`, obligatoriskt för att bygga Docker-bilden.
+- The `wait-for-grid.sh` skript, vars syften beskrivs nedan.
+- De faktiska gränssnittstesterna, som implementeras av ett Node.js-projekt i `test-module` mapp.
 
 Sammansättningsbeskrivningen utesluter också vissa filer som kan genereras när gränssnittstesterna körs lokalt. Detta garanterar ett mindre arkiv och snabbare byggen.
 
 Arkivet som innehåller Docker-byggkontexten hämtas automatiskt av Cloud Manager, som skapar Docker-bilden som innehåller testerna under driftsättningsfasen. Till slut körs Docker-avbildningen i Cloud Manager för att köra gränssnittstester mot ditt program.
+
+Bygget ska antingen producera noll eller ett arkiv. Om det skapar ett nollarkiv godkänns teststeget som standard. Om bygget skapar mer än ett arkiv är det valda arkivet inte deterministiskt.
 
 ## Skriver gränssnittstester {#writing-ui-tests}
 
@@ -139,18 +140,18 @@ Följande miljövariabler skickas till Docker-bilden vid körning.
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess:
 
-1. Läs URL:en för Selenium-tjänsten från miljövariabeln `SELENIUM_BASE_URL`.
-2. Avsök med regelbundna mellanrum mot [statusslutpunkten](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) som exponeras av Selenium API.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
+2. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna slutligen börja.
 
 ### Generera testrapporter {#generate-test-reports}
 
-Docker-bilden måste generera testrapporter i JUnit XML-format och spara dem i den sökväg som anges av miljövariabeln `REPORTS_PATH`. JUnit XML-formatet är ett utbrett format för rapportering av testresultat. Om Docker-bilden använder Java och Maven, kan du använda både [Plugin-programmet Maven Surefire](https://maven.apache.org/surefire/maven-surefire-plugin/) och plugin-programmet [Maven Failsafe](https://maven.apache.org/surefire/maven-failsafe-plugin/). Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare bör du kontrollera dokumentationen för de valda verktygen för att se hur du genererar JUnit XML-rapporter.
+Docker-bilden måste generera testrapporter i JUnit XML-format och spara dem i den sökväg som anges av systemvariabeln `REPORTS_PATH`. JUnit XML-formatet är ett utbrett format för rapportering av testresultat. Om Docker-bilden använder Java och Maven är båda [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) och [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/). Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare bör du kontrollera dokumentationen för de valda verktygen för att se hur du genererar JUnit XML-rapporter.
 
 ### Överför filer (#upload-files)
 
 Testerna ibland måste överföra filer till det program som testas. För att behålla distributionen av Selenium i förhållande till dina tester är det inte möjligt att överföra en resurs direkt till Selenium. I stället överförs en fil genom några steg:
 
-1. Överför filen på den URL som anges av miljövariabeln `UPLOAD_URL`. Överföringen måste utföras i en POST med ett multipart-formulär. Multipart-formuläret måste ha ett enda filfält. Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`. Läs dokumentationen och biblioteken för programmeringsspråket som används i Docker-bilden för att få reda på hur en sådan HTTP-begäran ska utföras.
-2. Om överföringen lyckas returnerar begäran ett `200 OK`-svar av typen `text/plain`. Svarets innehåll är ett ogenomskinligt filhandtag. Du kan använda det här handtaget i stället för en filsökväg i ett `<input>`-element för att testa filöverföringar i programmet.
+1. Överför filen på den URL som anges av `UPLOAD_URL` miljövariabel. Överföringen måste utföras i en POST med ett multipart-formulär. Multipart-formuläret måste ha ett enda filfält. Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`. Läs dokumentationen och biblioteken för programmeringsspråket som används i Docker-bilden för att få reda på hur en sådan HTTP-begäran ska utföras.
+2. Om överföringen lyckas returnerar begäran en `200 OK` typsvar `text/plain`. Svarets innehåll är ett ogenomskinligt filhandtag. Du kan använda det här handtaget i stället för en filsökväg i en `<input>` -element för att testa filöverföringar i programmet.
