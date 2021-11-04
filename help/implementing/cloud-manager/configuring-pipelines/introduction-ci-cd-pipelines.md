@@ -2,9 +2,9 @@
 title: CI-CD-rör
 description: Följ den här sidan för att lära dig mer om Cloud Manager CI-CD-förgreningar
 index: false
-source-git-commit: 84d04d8399668b8b1051d4edf9de851bca271071
+source-git-commit: 71e4a9932ef89ebf263ebbc0300bf2c938fa50f5
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -50,14 +50,14 @@ I följande tabell sammanfattas alla pipelines i Cloud Manager tillsammans med d
 
 | Typ av pipeline | Driftsättnings- eller kodkvalitet | Källkod | När ska användas | När eller varför ska jag använda? |
 |--- |--- |--- |---|---|---|
-| Produktion eller icke-produktion | Distribution | Front End | För att distribuera slutkod. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar. Måste vara i AEM version. | Snabba driftsättningstider<br> Flera frontledningar kan konfigureras och köras samtidigt per miljö |
-|  | Distribution | Hel hög | Distribuera serverdelen, frontdelen och HTTPD/dispatcher-konfigurationen samtidigt. Vissa begränsningar gäller. | När frontledningarna ännu inte har anammats. |
-| Icke-produktion | Kodkvalitet | Front End | Kör kodkvalitetsgenomsökningar på slutkoden | Snabba driftsättningstider<br> Flera rörledningar kan konfigureras och köras |
-|  | Kodkvalitet | Hel hög | Kör kodkvalitetssökning på hela stackkoden | Snabba driftsättningstider<br> Flera rörledningar kan konfigureras och köras |
+| Produktion eller icke-produktion | Distribution | Front End | Snabba driftsättningstider.<br>Flera frontledningar kan konfigureras och köras samtidigt per miljö.<br>Front End-pipeline-bygget spolar ut ur bygget till ett lagringsutrymme. När en HTML-sida hanteras kan den referera till statiska Frontend Code-filer som hanteras av CDN med detta lagringsutrymme som ursprung. | För exklusiv driftsättning av klientslutkod som innehåller ett eller flera användargränssnittsprogram. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar.<br>Måste vara i AEM version `2021.10.5933.20211012T154732Z` |
+| Produktion eller icke-produktion | Distribution | Hel hög | När frontledningarna ännu inte har anammats.<br>I de fall där Front End-koden måste distribueras exakt samtidigt som AEM Server-koden. | Distribuera AEM Server-kod (oföränderligt innehåll, Java-kod, OSGi-konfigurationer, HTTPD/dispatcher-konfiguration, återanvisning, ändringsbart innehåll, teckensnitt) som innehåller ett eller flera AEM serverprogram samtidigt. |
+| Icke-produktion | Kodkvalitet | Front End | För att Cloud Manager ska kunna utvärdera din programutveckling och kodkvalitet utan att behöva göra någon distribution.<br>Flera rörledningar kan konfigureras och köras. | Kör kodkvalitetsgenomsökningar på slutkoden. |
+| Icke-produktion | Kodkvalitet | Hel hög | För att Cloud Manager ska kunna utvärdera din programutveckling och kodkvalitet utan att behöva göra någon distribution.<br>Flera rörledningar kan konfigureras och köras. | Kör kodkvalitetssökning på den fullständiga stackkoden. |
 
 I följande diagram visas molnhanterarens pipeline-konfigurationer med traditionella, enskilda front end-databaser eller oberoende front end-databaskonfigurationer:
 
-![](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-configurations.png)
+![](/help/implementing/cloud-manager/assets/configure-pipeline/cm-setup.png)
 
 ## Front End Pipelines för Cloud Manager {#front-end}
 
@@ -72,12 +72,12 @@ Dessa kan vara av typen frontslutskodens kvalitet eller frontslutets distributio
 
 Innan du börjar konfigurera frontend-pipelines ska du läsa AEM Quick Site Creation Journey för ett komplett arbetsflöde med det lättanvända AEM Quick Site Creation-verktyget. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
 
-### Konfigurera frontendpipeline {#configure-front-end}
+### Konfigurera en frontpipeline {#configure-front-end}
 
 Mer information om hur du konfigurerar frontendpipeline finns i:
 
-* Lägga till en produktionspipeline
-* Lägga till en icke-produktionspipeline
+* [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline)
+* [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)
 
 ## Kompletta stackrör {#full-stack-pipeline}
 
@@ -95,9 +95,9 @@ Följande begränsningar gäller:
 
 De kan vara av typen Full Stack - Kodkvalitet eller Full Stack - Deployment.
 
-### Konfigurera din fullständiga stackpipeline {#configure-full-stack}
+### Konfigurera en hel stackpipeline {#configure-full-stack}
 
 Mer information om hur du konfigurerar en hel stackpipeline finns i:
 
-* Lägga till en produktionspipeline
-* Lägga till en icke-produktionspipeline
+* [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline))
+* [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)
