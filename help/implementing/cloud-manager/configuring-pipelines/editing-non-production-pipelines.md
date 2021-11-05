@@ -2,7 +2,7 @@
 title: Redigera en icke-produktionspipeline
 description: Redigera en icke-produktionspipeline
 index: true
-source-git-commit: d090329c46155d77a7b132583c777c09555a03c9
+source-git-commit: 7dc9f9a189927f3522445fac36a1606521f410b2
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Du kan köra produktionsflödet från pipelines-kortet:
 
    ![](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-run1.png)
 
-#### Ta bort en icke-produktionspipeline {#delete-nonprod}
+### Ta bort en icke-produktionspipeline {#delete-nonprod}
 
 Du kan ta bort produktionsflödet från pipelines-kortet:
 
