@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 719ee458fee7d4b19907b8aaf51eb2f2e8062abd
+source-git-commit: a0bf314ff8f994dd77c2c124db1ab604dcae74b6
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1435'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+The following section outlines the general Release Notes for the current (latest) version of [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -42,9 +42,9 @@ Ta en titt på [Oktober 2021 versionsöversikt](https://video.tv.adobe.com/v/338
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* [!DNL Experience Manager] har nu stöd för automatisk generering av texttranskript från ljud- och videomaterial som stöds, med en inbyggd koppling till [!DNL Azure Media Services]. De filer som stöds transkriberas automatiskt och texten lagras i WebVTT-format. WebVTT-bildtexter används för effektivare sökning, bildtext eller översättning. Funktionen förbättrar också tillgängligheten, identifieringen och lokaliseringen av resurserna.
+* [!DNL Experience Manager] har nu stöd för automatisk generering av texttranskript från ljud- och videomaterial som stöds, med en inbyggd koppling till [!DNL Azure Media Services]. The supported files are automatically transcribed and the text is stored in WebVTT format. The WebVTT captions are used for more effective searching, captioning, or translation. Funktionen förbättrar också tillgängligheten, identifieringen och lokaliseringen av resurserna.
 
-### Ny funktion i [!DNL Assets] prerelease channel {#assets-prerelease-features}
+### New feature in the [!DNL Assets] prerelease channel {#assets-prerelease-features}
 
 * [!DNL Dynamic Media] Image Smart Crop och Swatch bygger nu på de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom bevaras alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
 
@@ -60,7 +60,7 @@ No customer-reported bugs fixed in Oct release. Details in CQDOC-18404.
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
 
-* **Analytics för Adaptive Forms**: Nu kan du fånga in och spåra beteenden hos både inloggade och ej inloggade (anonyma) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+* **Analytics for Adaptive Forms**: You can now capture and track behavior of both logged-in and not logged-in (Anonymous) via Adobe Analytics for Adaptive Forms to gather end user insights. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms-oct-2021}
 
@@ -73,9 +73,9 @@ No customer-reported bugs fixed in Oct release. Details in CQDOC-18404.
    * Generera dokument genom att fylla i mallfiler (PDF och XDP) med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
 
-Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betaprogrammet.
+You can write to [!DNL formscsbeta@adobe.com] to sign up for the beta program.
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF Add-on {#cloud-services-cif}
 
 ### Vad är nytt? {#what-is-new-cif}
 
@@ -93,10 +93,56 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.10.0.
 
+### Releasedatum {#release-date-cm-nov}
+
+The Release Date for Cloud Manager in AEM as a Cloud Service 2021.11.0 is November 04, 2021.
+Nästa version är planerad till 9 december 2021.
+
+### Nyheter {#what-is-new-cm-nov}
+
+* Users can now leverage new Front End pipelines to exclusively deploy front end code in an accelerated manner. Se [Front End Pipelines för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill veta mer.
+
+   >[!IMPORTANT]
+   >You must be on AEM version `2021.10.5933.20211012T154732Z` to leverage new Front End pipelines.
+
+* Varaktigheten i bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett mer effektivt sätt utan att behöva skapa en hel AEM. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
+
+* The Git Commit ID will now be displayed in the pipeline execution details making it easier to track the code that was built.
+
+* Nu kan du skapa program via offentligt exponerade API:er.
+
+* Miljöskapande är nu tillgängligt via offentligt exponerade API.
+
+* The `x-request-id` svarshuvudet är nu synligt i API-uppspelningen på [www.adobe.io](https://www.adobe.io/). Det här huvudet är användbart när du skickar in kundvårdsproblem för felsökning.
+
+* Som användare ser jag att Pipeline-kortet med noll rörledningar ger mig lämplig vägledning.
+
+* Det finns nu en ny aktivitetssida där aktiviteter som pipeline och kodkörningar kan visas tillsammans med tillhörande information. Med tiden kommer de aktiviteter som listas på den här sidan att utvidgas tillsammans med den information som ges.
+
+* Nu finns det en ny sida med Pipelines (Pipelines) med en statuspekare som du kan använda när du hovrar för att enkelt visa sammanfattningen av detaljer. Pipeline-körningar kan visas tillsammans med tillhörande information.
+
+* API:t Redigera pipeline har nu stöd för att ändra miljön som används i distributionsfaserna.
+
+* En optimering i OakPal-skanningsprocessen har införts för stora paket.
+
+* CSV-filen för kvalitetsutgåva kommer nu att innehålla tidsstämpeln för varje kvalitetsproblem.
+
+### Felkorrigeringar {#bug-fixes-nov}
+
+* Vissa oortodoxa byggkonfigurationer resulterade i att onödiga filer sparades i Pipelins Maven-artefaktcache, vilket resulterade i överflödig nätverks-I/O när byggbehållaren startades och stoppades.
+
+* Pipeline PATCH API misslyckas om det inte finns någon distributionsfas.
+
+* The `ClientlibProxyResourceCheck` kvalitetsregeln genererade falskt positiva problem när det fanns klientbibliotek med gemensamma grundsökvägar.
+
+* Felmeddelandet när det maximala antalet databaser har uppnåtts specificerade inte orsaken till felet.
+
+* I sällsynta fall misslyckades rörledningar på grund av olämplig hantering av vissa svarskoder.
+
+
 ## Releasedatum {#release-date-cm-oct}
 
 Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.10.0 är 14 oktober 2021.
-Nästa version är planerad till den 4 november 2021.
 
 ### Nyheter {#what-is-new-cm-oct}
 
@@ -108,7 +154,7 @@ Nästa version är planerad till den 4 november 2021.
 
 * Lägg till och redigera rörliga upplevelser har uppdaterats för att nu använda välbekanta, moderna moduler.
 
-* Användare av Cloud Manager kan nu skicka feedback direkt från användargränssnittet via **Feedback** överst till höger på landningssidan.
+* Users of Cloud Manager can now submit feedback directly from the user interface via the **Feedback** button on top right of the landing page.
 
 * Årliga SLA-diagram kan nu hämtas från användargränssnittet i Cloud Manager.
 
@@ -124,15 +170,15 @@ Nästa version är planerad till den 4 november 2021.
 
 * I sällsynta fall, när en Adobe-personal skulle återställa en kunds miljö, ansågs återställningen vara fullständig innan miljön var helt i drift.
 
-* Vissa interna begäranden som gjordes när miljön skapades har inte gjorts om.
+* Certain internal requests made during environment creation were not being retried.
 
 * Om ett distributionsfel uppstår efter domännamnsverifiering har felmeddelandet korrigerats för att begära att kunden kontaktar sin Adobe-representant.
 
 ## Best Practices Analyzer {#best-practices-analyzer}
 
-### Releasedatum {#release-date-bpa-latest}
+### Release Date {#release-date-bpa-latest}
 
-Releasedatum för Best Practices Analyzer v2.1.20 är 5 oktober 2021.
+The Release Date for Best Practices Analyzer v2.1.20 is October 05, 2021.
 
 ### Nyheter {#what-is-new}
 
