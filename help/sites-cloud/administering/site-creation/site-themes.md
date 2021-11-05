@@ -1,0 +1,60 @@
+---
+title: Webbplatsteman
+description: Lär dig hur AEM webbplatsteman kan användas för att anpassa webbplatsens stil och design.
+feature: Administering
+role: Admin
+source-git-commit: 9e7ad4a640f1783be5aed75e01e860b647662f52
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 0%
+
+---
+
+
+# Webbplatsteman {#site-themes}
+
+Lär dig hur AEM webbplatsteman kan användas för att anpassa webbplatsens stil och design.
+
+>[!CAUTION]
+>
+>Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
+
+## Översikt {#overview}
+
+Ett AEM webbplatstema är ett paket som innehåller CSS-, JavaScript- och statiska resurser som definierar formateringen för din AEM och som följer strukturen för ett AEM webbplatstema.
+
+Webbplatser som skapats med AEM webbplatsmallar gör det enkelt att hämta, anpassa och omdistribuera teman.
+
+>[!NOTE]
+>
+>AEM teman ska inte blandas ihop med [AEM webbplatsmallar.](site-templates.md) AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM platstema för att möjliggöra [skapa webbplatser snabbt.](create-site.md)
+
+## Använda webbplatsteman {#using-themes}
+
+Webbplatsteman används på två olika sätt:
+
+* De används som en del av en webbplatsmall för att definiera format när [skapa en plats.](create-site.md)
+* De laddas ned när du har skapat en webbplats baserad på en webbplatsmall så att en gränssnittsutvecklare kan anpassa formatet ytterligare.
+
+>[!TIP]
+>
+>En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [En resa där man snabbt skapar webbplatser.](/help/journey-sites/quick-site/overview.md)
+
+## Platstemastruktur {#structure}
+
+Webbplatsteman är helt enkelt paket med en logisk struktur som tydligt återspeglar syftet med paketinnehållet. Ett webbplatstema har följande struktur som är typisk för ett frontendprojekt.
+
+* `src/main.ts`: Huvudingångspunkten för JS- och CSS-temat
+* `src/site`: JS- och CSS-filer som gäller för hela platsen
+* `src/components`: JS- och CSS-filer som är specifika för AEM
+* `src/resources`: Statiska filer som ikoner, logotyper och teckensnitt
+
+## Standardtema för webbplats {#standard-site-theme}
+
+Adobe tillhandahåller ett referenstema som du kan använda som utgångspunkt för att skapa ett eget tema. [Standardwebbplatstemat är tillgängligt på GitHub.](https://github.com/adobe/aem-site-template-standard-theme-e2e)
+
+## Utveckla webbplatsteman {#developing-themes}
+
+Adobe tillhandahåller och AEM Site Theme Builder som en uppsättning skript för att skapa nya webbplatsteman.
+
+[AEM Site Theme Builder finns tillsammans med användningsdokumentation för GitHub.](https://github.com/adobe/aem-site-theme-builder) Utvecklingsupplevelsen i gränssnittet krävs för att anpassa temat.
