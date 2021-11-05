@@ -1,29 +1,29 @@
 ---
 title: Filformat och MIME-typer som stöds
-description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som a [!DNL Cloud Service].
+description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som [!DNL Cloud Service].
 contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 6b20a7bcbd16b59da8dc29b324016c3da1e71686
+source-git-commit: e911abd75cf44d2188e936e9143a48cb88236865
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 6%
+source-wordcount: '823'
+ht-degree: 5%
 
 ---
 
 # [!DNL Assets] filformat som stöds {#supported-file-formats}
 
-[!DNL Adobe Experience Manager] som en  [!DNL Cloud Service] lösning med stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett filformat. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
+[!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för grundläggande funktioner för innehållshantering - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett format. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
 
-[!DNL Experience Manager Assets] har dessutom utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Detta utökade stöd tillhandahålls med [asset microservices](asset-microservices-configure-and-use.md).
+Dessutom [!DNL Experience Manager Assets] har utökat stöd för att generera förhandsgranskningar och återgivningar och för att extrahera metadata och text för fulltextindexering. Den här utökade supporten tillhandahålls med [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
 
 Några av de viktigaste funktionerna för resurskonvertering är följande:
 
-* Nyckelformat [Adobe](#adobe-formats) som skapats av Adobe program och tjänster, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension] och [!DNL Adobe Acrobat] eller PDF.
-* Nyckel [filformat för bildåtergivning](#image-formats).
-* [Camera Raw filformat ](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw i botten).
-* Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office- och Open Document-format.
+* Nyckel [Adobe-filformat](#adobe-formats) som producerats av Adobe program och tjänster, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension]och [!DNL Adobe Acrobat] eller PDF.
+* Nyckel [bildfilformat](#image-formats).
+* [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
+* Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office och Open Document-format.
 * Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
 
 I följande förklaring beskrivs stödnivån för varje format.
@@ -50,7 +50,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 | PSD | ✓ | - | ✓ | ✓ |
 | XD | ✓ | - | ✓ | ✓ |
 
-\* För [!DNL Adobe InDesign]-filer (INDD) bestäms återgivningens storlek av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) för att bädda in större återgivning.
+\* för [!DNL Adobe InDesign] filer (INDD) bestäms storleken på återgivningen av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) för att bädda in större återgivning.
 
 ## Bildformat {#image-formats}
 
@@ -77,7 +77,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ | - | - | - | - |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PSD   ‡ | ✓ | - | - | - | - |
+| PSD ‡ | ✓ | - | - | - | - |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av [!DNL Adobe Photoshop] och ingår i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
@@ -217,7 +217,20 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Ljudformat {#audio-formats}
 
-[!DNL Assets] som en  [!DNL Cloud Service] funktion för XMP metadataextraheringsstöd för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
+[!DNL Assets] som [!DNL Cloud Service] har stöd för XMP metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
+
+## Indataformat som stöds för ljud- och videotranskription {#audio-video-transcription-formats}
+
+* FLV (med H.264- och AAC-kodekar) (.flv)
+* MXF (.mxf)
+* MPEG2-PS, MPEG2-TS, 3GP (.ts, .ps, .3gp, .3gpp, .mpg)
+* Windows Media Video (WMV)/ASF (.wmv, .asf)
+* AVI (okomprimerad 8 bitar/10 bitar) (.avi)
+* MP4 (.mp4, .m4a, .m4v)
+* Microsoft Digital Video Recording (DVR-MS) (.dvr-ms)
+* Matroska/WebM (.mkv)
+* WAVE/WAV (.wav)
+* QuickTime (.mov)
 
 ## Tips och begränsningar {#limitations-and-tips}
 
