@@ -1,9 +1,9 @@
 ---
 title: Hämta Git-databasåtkomstinformation
 description: Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.
-source-git-commit: 348e26a9af260d89841d19d00ce4102c00ae34ed
+source-git-commit: 44dc1ce4b8771ce848652364a5ac9e3ee28c56b0
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '928'
 ht-degree: 3%
 
 ---
@@ -82,19 +82,11 @@ Om du inte har fått det här e-postmeddelandet kontaktar du Cloud Manager-admin
 
 1. Logga in på Adobe Experience Cloud på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) eller klicka på länken i välkomstmeddelandet.
 
-1. När du är inloggad kontrollerar du att du är i rätt ordning genom att kontrollera den i skärmens övre högra hörn. Om du bara är medlem i en organisation är det här steget inte nödvändigt. Tryck sedan på eller klicka **Experience Manager**.
-
-   ![Översikt över Experience Cloud](assets/experience-cloud-overview.png)
-
-1. På nästa sida trycker eller klickar du på **Starta** för att starta **Cloud Manager** app.
-
-   ![Experience Manager-appar](assets/experience-manager-apps.png)
-
-1. På nästa sida visas de olika tillgängliga programmen. Tryck eller klicka på den som du behöver ha åtkomst till enligt vad som angetts av Cloud Manager-administratören. Om detta är ditt första front end-projekt för AEMaaCS har du troligen bara ett program tillgängligt.
+1. Cloud Manager visar de olika tillgängliga programmen. Tryck eller klicka på den som du behöver ha åtkomst till enligt vad som angetts av Cloud Manager-administratören. Om detta är ditt första front end-projekt för AEMaaCS har du troligen bara ett program tillgängligt.
 
    ![Välja ett program i Cloud Manager](assets/cloud-manager-select-program.png)
 
-Nu visas en översikt över din Cloud Manager. Sidan ser annorlunda ut men liknar det här exemplet.
+Nu visas en översikt över programmet. Sidan ser annorlunda ut men liknar det här exemplet.
 
 ![Översikt över Cloud Manager](assets/cloud-manager-overview.png)
 

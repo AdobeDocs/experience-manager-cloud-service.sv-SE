@@ -1,9 +1,9 @@
 ---
 title: Driftsätt ditt anpassade tema
 description: Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.
-source-git-commit: f8695dd8fdc9ffb203bab943c335ab2957df6251
+source-git-commit: b3cd9cd6ce840a57d41271d1b3c8a1cf918772b9
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Driftsätt ditt anpassade tema {#deploy-your-customized-theme}
 
-Learn how to deploy the site theme using the pipeline.
+Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.
 
 >[!CAUTION]
 >
->The Quick Site Creation tool is currently a tech preview. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
+>Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
-## The Story So Far {#story-so-far}
+## Story hittills {#story-so-far}
 
 I det föregående dokumentet från den AEM snabbplatsgenereringsresan [Anpassa webbplatstemat,](customize-theme.md) du har lärt dig hur temat byggs, hur det anpassas och hur du testar det med hjälp av AEM innehåll, och du bör nu:
 
@@ -42,7 +42,7 @@ Den här delen av resan gäller för den som utvecklar gränssnittet.
 
 När du har implementerat ändringarna av temaanpassningen i AEM Git-databasen kan du köra [den pipeline som administratören skapade](pipeline-setup.md) för att distribuera ändringarna.
 
-1. Access Cloud Manager [som du gjorde för att hämta Git-åtkomstinformation.](retrieve-access.md) På **Översikt** en flik där du kan se ett kort för **Pipelines**.
+1. Logga in i Cloud Manager [som du gjorde för att hämta Git-åtkomstinformation](retrieve-access.md) Och få tillgång till programmet. På **Översikt** en flik där du kan se ett kort för **Pipelines**.
 
    ![Översikt över Cloud Manager](assets/cloud-manager-overview.png)
 
@@ -54,9 +54,9 @@ När du har implementerat ändringarna av temaanpassningen i AEM Git-databasen k
 
    ![Bekräfta pipeline-körning](assets/pipeline-confirm.png)
 
-1. In the list of pipelines, the status column indicates that your pipeline is now running.
+1. Statuskolumnen i listan över pipelines anger att din pipeline nu körs.
 
-   ![Pipeline running status](assets/pipeline-running.png)
+   ![Körningsstatus för pipeline](assets/pipeline-running.png)
 
 ## Kontrollera pipeline-status {#pipeline-status}
 
@@ -68,7 +68,7 @@ Du kan när som helst kontrollera status för pipeline för att se hur långt f�
 
 1. I informationsfönstret för pipeline visas en beskrivning av förloppet för pipeline.
 
-   ![Pipeline details](assets/pipeline-details.png)
+   ![Information om pipeline](assets/pipeline-details.png)
 
 >[!TIP]
 >
@@ -85,7 +85,7 @@ När pipeline är klar kan du informera administratören om att validera ändrin
 
 ![Ändringarna används](assets/changes-applied.png)
 
-## End of the Journey? {#end-of-journey}
+## Slut på resan? {#end-of-journey}
 
 Grattis! Du har slutfört AEM snabbwebbplats! Nu bör du:
 
@@ -108,8 +108,8 @@ Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebb
 * [Konfigurera CI/CD-pipeline - Cloud Services](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) - Läs mer om hur du ställer in rörledningar, både i full hög och i framände, i det här dokumentet.
 * [AEM standardmall för webbplats](https://github.com/adobe/aem-site-template-standard) - Detta är GitHub-databasen för AEM standardplatsmall.
 * [AEM](https://github.com/adobe/aem-site-template-standard-theme-e2e) - Detta är GitHub-databasen för AEM webbplatstema.
-* [npm](https://www.npmjs.com) - AEM themes used to quickly build sites are based on npm.
-* [webpack](https://webpack.js.org) - AEM themes used to quickly build sites rely on webpack.
+* [npm](https://www.npmjs.com) - AEM teman som används för att snabbt skapa webbplatser baseras på npm.
+* [webbpaket](https://webpack.js.org) - AEM teman som används för att snabbt bygga sajter bygger på webbpaket.
 * [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) - Den här guiden beskriver hur du hanterar sidor på din AEM webbplats om du vill anpassa den ytterligare efter att du har skapat den från mallen.
 * [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md) - Med paket kan du importera och exportera databasinnehåll. I det här dokumentet förklaras hur du arbetar med paket i AEM 6.5, som även gäller för AEMaaCS.
 * [Onboarding Journey](/help/journey-onboarding/home.md) - Den här guiden fungerar som en startpunkt för att säkerställa att era team är konfigurerade och har tillgång till AEM as a Cloud Service.
