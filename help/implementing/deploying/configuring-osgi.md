@@ -3,9 +3,9 @@ title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: f1ad12d308319ecfff6c0138ca77862976594e42
+source-git-commit: f947650b0872785e1f1b5f4c6542afd41fa61309
 workflow-type: tm+mt
-source-wordcount: '2938'
+source-wordcount: '2993'
 ht-degree: 0%
 
 ---
@@ -224,9 +224,15 @@ Värdena för variablerna får inte överstiga 2 048 tecken.
 
 >[!CAUTION]
 >
->Variabelnamn med prefix `INTERNAL_`, `ADOBE_`, eller `CONST_` reserveras av Adobe. Alla kundinställda variabler som börjar med dessa prefix ignoreras.
+>Det finns regler för användning av vissa prefix för variabelnamn:
 >
->Kunderna får inte referera till variabler som är prefix med `INTERNAL_` eller `ADOBE_` antingen.
+>1. Variabelnamn med prefix `INTERNAL_`, `ADOBE_`, eller `CONST_` reserveras av Adobe. Alla kundinställda variabler som börjar med dessa prefix ignoreras.
+>
+>1. Kunderna får inte referera till variabler som är prefix med `INTERNAL_` eller `ADOBE_` antingen.
+>
+>1. Miljövariabler med prefix `AEM_` definieras av produkten som publikt API som ska användas och anges av kunderna.
+   >   När kunderna kan använda och ange miljövariabler som börjar med prefixet `AEM_` de ska inte definiera sina egna variabler med det här prefixet.
+
 
 ### Standardvärden {#default-values}
 
