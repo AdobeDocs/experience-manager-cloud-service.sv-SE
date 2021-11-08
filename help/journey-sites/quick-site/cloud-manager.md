@@ -50,7 +50,7 @@ Det är viktigt att förstå att det inte krävs någon AEM eller kunskap för d
 
 | Kunskap | Roll |
 |---|---|
-| Förstå standardverktygen och processerna för framtagningsutveckling | Front-End Developer |
+| Förståelse av standardverktyg och processer för framtagningsutveckling | Front-End Developer |
 | Grundläggande kunskap i hur man skapar och hanterar webbplatser i AEM | AEM-administratör |
 | Grundläggande kunskaper i Cloud Manager | Administratör för Cloud Manager |
 
