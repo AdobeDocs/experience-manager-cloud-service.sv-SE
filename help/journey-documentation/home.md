@@ -1,13 +1,13 @@
 ---
 title: AEM dokumentationsresor
 description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner för att lösa ett affärsmål på ett sätt som är beprövat med bästa praxis. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
-source-git-commit: 5cfe3bf09d0f91aa2eaa493f04ae0cde1f2541d4
+exl-id: aab346b8-26dc-4d5b-88bb-720cf634e0a2
+source-git-commit: 1f8f6aea389ecf5416121354876a68273cd653e7
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
-
 
 # AEM dokumentationsresor {#aem-documentation-journeys}
 
@@ -33,7 +33,7 @@ Resorna ser till att läsaren vet hur AEM kan lösa ett problem i stället för 
 
 ### Orientering för bästa praxis {#best-practices}
 
-Dokumentationsresor har utformats utifrån principer för bästa praxis, som bygger på Adobe senaste forskning, beprövad implementeringserfarenhet från Adobe tjänster och återkoppling från kundprojekt.
+Dokumentationsresor har utformats utifrån principer för god praxis, som bygger på Adobe senaste forskning, dokumenterad implementeringserfarenhet från Adobes tjänster och feedback från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar att du löser ett affärsärende med AEM, så är Documentation Journeys där du ska börja.
 
@@ -74,10 +74,10 @@ Dokumentationsresor är avsedda som komplement till befintlig AEM teknisk dokume
 
 | Dokumentationstyp | Syfte | Målgrupp | Anta | Utelämnanden | Innehållstyp | Längd |
 |---|---|---|---|---|---|---|
-| Dokumentationsresa | En resa definierar hur AEM kan lösa ett allmänt affärsproblem med hjälp av en berättelse som vägleder läsarna genom komplexa, samhörande processer och funktioner. Det visar hur flera funktioner fungerar tillsammans för att lösa ett affärsbehov på ett bra sätt. | Reader nybörjare på AEM | Allmän CMS-kunskap | Detaljerade alternativ och konfigurationer | Text | 1 timme |
+| Dokumentationsresa | En resa definierar hur AEM kan lösa ett allmänt affärsproblem med hjälp av en berättelse som vägleder läsarna genom komplexa, samhörande processer och funktioner. Det visar hur flera funktioner fungerar tillsammans för att lösa ett affärsbehov på ett bra sätt. | Reader nybörjare på AEM | Allmän CMS-kunskap | Detaljerade alternativ och konfigurationer | Text | Ca. 1 timme |
 | Tekniska dokument | Tekniska dokument fokuserar på enskilda funktioner, med detaljerad information om funktionens tekniska arbetssätt och alla alternativ som är tillgängliga för användaren. | Erfarna AEM | AEM upplevelse | Kontext och bakgrund | Text | Varierar |
 | Självstudiekurs | En självstudiekurs är en djupdykning i ett ämne som visar en utvecklare eller administratör hur du kan uppnå ett tekniskt mål (vanligtvis programmering eller systemkonfiguration) steg för steg, med specifika exempel och exempelkod, som vanligtvis utnyttjar en begränsad uppsättning funktioner. | AEM utvecklare eller administratörer | AEM upplevelse | Bakgrund och teori | Video | >1 timme |
-| Starthandbok | En guide för att komma igång är en blixtsnabb genomgång av en viss ny AEM. Det är en snabb översikt av en enskild funktion, som leder användaren genom de viktiga (men inte alla) stegen för att konfigurera och använda ett enkelt användningssätt. | AEM | AEM upplevelse | Bakgrund, teori, detaljerade alternativ | Text | &lt;1 hour=&quot;&quot;> |
+| Starthandbok | En guide för att komma igång är en blixtsnabb genomgång av en viss ny AEM. Det är en snabb översikt av en enskild funktion, som leder användaren genom de viktiga (men inte alla) stegen för att konfigurera och använda ett enkelt användningssätt. | AEM | AEM upplevelse | Bakgrund, teori, detaljerade alternativ | Text | &lt;1 timme |
 
 ## Vilka resor finns det? {#journeys}
 
@@ -87,9 +87,10 @@ Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom v
 |---|---|
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Börja här för att se hur AEM stöder headless-utvecklingsmodeller och hur du kan komma igång med ditt projekt från planering till implementering till publicering. |
 | [Headless Authoring Journey](/help/journey-headless/author/overview.md) | Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan modellera ditt innehåll i ditt första headless-projekt. |
-| [Headless Architect Journey](/help/journey-headless/architect/overview.md) | Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager som Cloud Service och hur du modellerar innehåll för ditt projekt. |
+| [Headless Architect Journey](/help/journey-headless/architect/overview.md) | Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du modellerar innehåll för ditt projekt. |
 | [Headless Translation Journey](/help/journey-headless/translation/overview.md) | Börja här för att se hur du konfigurerar och hanterar dina headless-översättningsprojekt i AEM. |
-| AEM på introduktionsresan | Kommer snart! |
+| [AEM på introduktionsresan](/help/journey-onboarding/home.md) | Börja här för att komma igång snabbt med din nya AEM as a Cloud Service miljö! |
+| [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) | Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av din AEM webbplats och snabbt anpassar sajten utan någon AEM bakgrundsinformation. |
 | AEM Commerce Journey | Kommer snart! |
 | AEMaaCS Migration Journey | Kommer snart! |
 
