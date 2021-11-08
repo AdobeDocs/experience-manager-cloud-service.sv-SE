@@ -6,10 +6,10 @@ breadcrumb-title: Redigeringshandbok
 user-guide-description: Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service.
 feature: Authoring
 role: User
-source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
+source-git-commit: 4d87cb0db8219bd2b69906e041b74961e9638327
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 66%
+source-wordcount: '325'
+ht-degree: 63%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 66%
    + Grundläggande om redigering {#fundamentals}
       + [Miljö och verktyg](authoring/fundamentals/environment-tools.md)
       + [Lägga till sidanteckningar](authoring/fundamentals/annotations.md)
+      + [Skapa en ny plats](authoring/fundamentals/create-site.md)
       + [Skapa och ordna sidor](authoring/fundamentals/organizing-pages.md)
       + [Redigera sidinnehåll](authoring/fundamentals/editing-content.md)
       + [RTF-redigeraren](authoring/fundamentals/rich-text-editor.md)
@@ -81,9 +82,13 @@ ht-degree: 66%
       + [Förstå segmentering](authoring/personalization/segmentation.md)
       + [Konfigurera segmentering med ContextHub](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
       + [Registrering, inloggning och användarprofil](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md)
-+ Administrera {#administering}
++ Administratör {#administering}
+   + Skapa webbplats {#site-creation}
+      + [Skapa en ny plats](administering/site-creation/create-site.md)
+      + [Webbplatsmallar](administering/site-creation/site-templates.md)
+      + [Webbplatsteman](administering/site-creation/site-themes.md)
    + [Administrera arbetsflöden](administering/workflows-administering.md)
-   + Återanvänder innehåll {#reusing-content}
+   + Återanvända innehåll {#reusing-content}
       + [MSM och översättning](administering/msm-and-translation.md)
       + Multi Site Manager {#msm}
          + [MSM och Live Copy - översikt](administering/msm/overview.md)
@@ -101,7 +106,7 @@ ht-degree: 66%
          + [Guiden Kopiera språk](administering/translation/wizard.md)
          + [Identifiera innehåll som ska översättas](administering/translation/rules.md)
          + [Konfigurera översättningsintegreringsramverket](administering/translation/integration-framework.md)
-         + [Ansluter till Microsoft Translator](administering/translation/connect-ms-translator.md)
+         + [Ansluta till Microsoft Translator](administering/translation/connect-ms-translator.md)
          + [Bästa praxis för översättning](administering/translation/best-practices.md)
 + Integrera med AEM as a Cloud Service {#integrations}
    + [Integrera med Adobe Analytics](integrating/integrating-adobe-analytics.md)
