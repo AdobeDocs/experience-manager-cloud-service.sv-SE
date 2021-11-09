@@ -1,12 +1,12 @@
 ---
-sub-product: AEM innehåll och handel som en Cloud Service
-user-guide-title: AEM innehåll och handel som en Cloud Service
+sub-product: AEM Content and Commerce as a Cloud Service
+user-guide-title: AEM innehåll och handel as a Cloud Service
 breadcrumb-title: AEM Content and Commerce Guide
-user-guide-description: Lär dig hur du använder och administrerar innehåll och handel i Experience Manager som en Cloud Service.
-source-git-commit: 677ac2c35fa79caf16f5f0ef3de7b0791272c44b
+user-guide-description: Lär dig hur du använder och administrerar Experience Manager Content and Commerce as a Cloud Service.
+source-git-commit: 2bc33096132164b54a8206c69945f3a3fd4227db
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 1%
+source-wordcount: '109'
+ht-degree: 2%
 
 ---
 
@@ -14,17 +14,20 @@ ht-degree: 1%
 # AEM innehåll och handel {#content-and-commerce}
 
 + [AEM innehåll och handel](/help/commerce-cloud/home.md)
-+ [Betydande förändringar AEM innehåll och handel som en Cloud Service](changes.md)
++ [Betydande förändringar AEM innehåll och handel as a Cloud Service](changes.md)
 + [Introduktion och översikt](introduction.md)
 + Integreringar {#integrations}
    + [Adobe Commerce](integrating/magento.md)
    + [Commerce Solution från tredje part](integrating/third-party.md)
+   + Redigering {#authoring}
+      + [Handelsupplevelser](authoring/authoring-commerce-experiences.md)
+      + [Produktcockpit](authoring/product-cockpit.md)
+      + [Användning i flera mallar](authoring/multi-template-usage.md)
+      + [Förbättra produktdata med tillhörande innehåll](authoring/enrich-product-associated-content.md)
 + AEM Storefront {#storefront}
    + [Komma igång](getting-started.md)
-   + Administrera {#administering}
+   + Administratör {#administering}
       + [Installation i flera butiker](configuring/multi-store-setup.md)
-      + [Användning i flera mallar](configuring/multi-template-usage.md)
-      + [Förbättra produktdata med tillhörande innehåll](configuring/enrich-product-associated-content.md)
       + [Konfigurera URL:er för SEO](configuring/advanced-url-configuration.md)
       + [Cachealternativ](configuring/caching.md)
       + [Anpassade HTTP-huvuden](/help/commerce-cloud/configuring/custom-http-headers.md)
