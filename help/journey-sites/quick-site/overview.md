@@ -1,9 +1,9 @@
 ---
 title: AEM för att skapa webbplatser snabbt
 description: Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av AEM sajt och snabbt anpassar sajten utan någon AEM backend-kunskap.
-source-git-commit: efeb97d4bd7e7c11ec2c0ba1244a32b8b9affdab
+source-git-commit: 8daa6bc7d5df3263e8f2b506d8e0a23ecc547872
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,19 @@ Med AEM snabbverktyg kan andra användare snabbt skapa en ny webbplats från gru
 
 Genom att eliminera all utvecklarkunskap för att skapa webbplatser, eliminera AEM kunskapsbehov för framtagning och låta temautvecklingen fortsätta parallellt med att innehåll skapas, snabbredigerar det AEM verktyget för framtagning av snabbwebbplatser avsevärt webbplatsens time-to-value och ökar möjligheten att anpassa och driftsätta webbplatsen.
 
+## Videoöversikt {#video-overview}
+
+Om du vill få en snabb översikt över den här funktionen kan du se den här fem minuter långa introduktionen.
+
+>[!VIDEO]
+>
+>https://www.youtube.com/watch?v=NQeQ1jZ7ZBw
+
+Den här dokumentationsresan tar dig steg för steg igenom alla funktioner i videon i detalj så att du förstår processen och kan återskapa processen i din egen miljö.
+
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren att, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
@@ -48,16 +58,7 @@ Den här resan innehåller krav, steg och tillvägagångssätt för att anpassa 
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om hur du skapar och anpassar AEM webbplatser med verktyget Skapa snabbwebbplats och länkar till detaljerad teknisk dokumentation.
 
-|#|Artikel|Beskrivning|Ansvarig roll|
-|---|---|---|---|
-|0|AEM snabbresa för att skapa webbplatser|Det här dokumentet|Administratörer för AEM &amp; Cloud Manager|
-|1|[Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md)|Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.|AEM Administratör|
-|2|[Skapa webbplats från mall](create-site.md)|Lär dig hur du snabbt skapar en ny AEM webbplats med hjälp av en webbplatsmall.|AEM Administratör|
-|3|[Konfigurera din pipeline](pipeline-setup.md)|Skapa en pipeline i gränssnittet för att hantera anpassningen av webbplatsens tema.Administratör för |Cloud Manager|
-|4|[Bevilja åtkomst till klientutvecklaren](grant-access.md)|Lägg in gränssnittsutvecklarna i Cloud Manager så att de får tillgång till databasen och pipeline för AEM webbplats.Administratör för |Cloud Manager|
-|5|[Hämta åtkomstinformation för Git-databasen](retrieve-access.md)|Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.|Front-End Developer|
-|6|[Anpassa webbplatstemat](customize-theme.md)|Lär dig hur ett webbplatstema byggs, hur du anpassar det och hur du testar det med AEM.|Front-End Developer|
-|7|[Distribuera ditt anpassade tema](deploy-theme.md)|Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.|Front-End Developer|
+|#|Artikel|Beskrivning|Ansvarig roll| |—|—|—|—| |0|AEM snabbresa för att skapa webbplatser|Det här dokumentet|Administratörer för AEM &amp; Cloud Manager| |1|[Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md)|Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.|AEM Administratör| |2|[Skapa webbplats från mall](create-site.md)|Lär dig hur du snabbt skapar en ny AEM webbplats med hjälp av en webbplatsmall.|AEM Administratör| |3|[Konfigurera din pipeline](pipeline-setup.md)|Skapa en pipeline i gränssnittet för att hantera anpassningen av webbplatsens tema.Administratör för |Cloud Manager| |4|[Bevilja åtkomst till klientutvecklaren](grant-access.md)|Lägg in gränssnittsutvecklarna i Cloud Manager så att de får tillgång till databasen och pipeline för AEM webbplats.Administratör för |Cloud Manager| |5|[Hämta åtkomstinformation för Git-databasen](retrieve-access.md)|Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.|Front-End Developer| |6|[Anpassa webbplatstemat](customize-theme.md)|Lär dig hur ett webbplatstema byggs, hur du anpassar det och hur du testar det med AEM.|Front-End Developer| |7|[Distribuera ditt anpassade tema](deploy-theme.md)|Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.|Front-End Developer|
 
 ## What&#39;s Next {#what-is-next}
 
