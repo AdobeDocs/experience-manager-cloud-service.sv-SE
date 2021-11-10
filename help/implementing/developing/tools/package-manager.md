@@ -3,9 +3,9 @@ title: Pakethanteraren
 description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering
 role: Admin
-source-git-commit: ddccd7f5b145283ff0f0ab39e53fce6584e147a8
+source-git-commit: 108ebef7e2ea79323d873a126cc89aef26faae60
 workflow-type: tm+mt
-source-wordcount: '3554'
+source-wordcount: '3584'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,11 @@ Innehållspaket som skapas för AEM as a Cloud Service program måste ha en ren 
 
 >[!IMPORTANT]
 >
->Gränssnittet för Package Manager kan returnera ett **undefined** felmeddelande om ett paket tar längre tid än 10 minuter att installera. Försök inte att installera igen om det inträffar, eftersom det utförs korrekt i bakgrunden och vissa konflikter kan uppstå vid flera samtidiga importprocesser.
+>Pakethanterarens gränssnitt kan returnera en **undefined** felmeddelande om ett paket tar längre tid än 10 minuter att installera.
+>
+>Detta beror inte på ett fel i installationen, utan på en timeout som Cloud Servicen har för alla begäranden.
+>
+>Försök inte installera igen om du ser ett sådant fel. Installationen fortsätter korrekt i bakgrunden. Om du startar om installationen kan vissa konflikter uppstå vid flera samtidiga importprocesser.
 
 Mer information om hur du hanterar paket för AEMaaCS finns i dokumentet [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md) i användarhandboken för distribution.
 
@@ -561,4 +565,4 @@ AEM kan användas för att skapa och dela innehåll i AEMaaCS-miljöer.
 
 [Programvarudistribution](https://downloads.experiencecloud.adobe.com) innehåller AEM paket som kan användas på den lokala utvecklingen AEM SDK. AEM som tillhandahålls vid programvarudistribution får inte installeras i AEMaaCS-molnmiljöer om inte Adobe Support uttryckligen har godkänt detta.
 
-Mer information finns i [Dokumentation om programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+Mer information finns i [Dokumentation om programdistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).

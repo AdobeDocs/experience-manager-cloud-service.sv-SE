@@ -3,9 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: cf3273af030a8352044dcf4f88539121249b73e7
+source-git-commit: 7d5cae8292822dd8db7ce3f92c10cf5ad7edbdc1
 workflow-type: tm+mt
-source-wordcount: '3334'
+source-wordcount: '3364'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ I följande video visas en översikt på hög nivå över hur du distribuerar ko
 
 ### Distributioner via Cloud Manager {#deployments-via-cloud-manager}
 
-Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, vilket är hur ett AEM as a Cloud Service program beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) i molnmiljöer kommer namnet att innehålla &quot;cp2fm&quot; och de transformerade paketen har alla metadata borttagna. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren kan [hittades här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
+Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling-funktionsmodellen, vilket är hur ett AEM as a Cloud Service program beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) i molnmiljöer kommer namnet att innehålla &quot;cp2fm&quot; och de transformerade paketen har alla metadata borttagna. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren kan [hittades här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
 
 Innehållspaket som skrivits för AEM as a Cloud Service program måste ha en ren separation mellan oföränderligt och muterbart innehåll och Cloud Manager installerar bara det muterbara innehållet, och ett meddelande som:
 
@@ -82,7 +82,7 @@ Läs mer om OSGI-konfiguration på [Konfigurera OSGi för AEM as a Cloud Service
 
 I vissa fall kan det vara användbart att förbereda innehållsändringar i källkontrollen så att den kan distribueras av Cloud Manager när en miljö har uppdaterats. Det kan till exempel vara rimligt att skapa startvärden för vissa rotmappsstrukturer eller att göra ändringar i redigerbara mallar för att aktivera principer i de för komponenter som uppdaterades i programdistributionen.
 
-Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
+Det finns två strategier för att beskriva innehållet som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och poinit-satser.
 
 ### Innehållspaket som kan ändras {#mutable-content-packages}
 
@@ -175,11 +175,15 @@ above appears to be internal, to confirm with Brian -->
 
 I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. För dessa scenarier [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) kan användas i AEM as a Cloud Service miljöer.
 
-Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt innehåll) installeras endast det muterbara innehållet.
+Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt) installeras endast det muterbara innehållet.
 
 >[!IMPORTANT]
 >
->Gränssnittet för Package Manager kan returnera ett **undefined** felmeddelande om ett paket tar längre tid än 10 minuter att installera. Försök inte att installera igen om det inträffar, eftersom det utförs korrekt i bakgrunden och vissa konflikter kan uppstå vid flera samtidiga importprocesser.
+>Pakethanterarens gränssnitt kan returnera en **undefined** felmeddelande om ett paket tar längre tid än 10 minuter att installera.
+>
+>Detta beror inte på ett fel i installationen, utan på en timeout som Cloud Servicen har för alla begäranden.
+>
+>Försök inte installera igen om du ser ett sådant fel. Installationen fortsätter korrekt i bakgrunden. Om du startar om installationen kan vissa konflikter uppstå vid flera samtidiga importprocesser.
 
 Alla innehållspaket som installeras via Cloud Manager (både ändringsbart och oföränderligt) visas i ett låst läge i AEM användargränssnitt. Dessa paket kan inte installeras om, byggas om eller laddas ned, och listas med en **&quot;cp2fm&quot;** som anger att installationen hanterades av Cloud Manager.
 
@@ -311,7 +315,7 @@ De runmode-konfigurationer som stöds är:
 
 Den OSGI-konfiguration som har de mest matchande körlägena används.
 
-När du utvecklar lokalt kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
+Vid lokal utveckling kan en startparameter för körningsläge skickas in för att ange vilken OSGI-konfiguration som ska användas i körningsläget.
 
 <!-- ### Performance Monitoring {#performance-monitoring}
 
