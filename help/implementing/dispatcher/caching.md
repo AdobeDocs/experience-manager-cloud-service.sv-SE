@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: a6e0b19fae56328a587cf2fb8fdca29fe373b084
+source-git-commit: b9829a033b99da10217ede18b1591e4bb04762c0
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -134,7 +134,12 @@ I allmänhet behöver du inte göra innehåll i dispatchern ogiltigt manuellt, m
 >
 >Avsändaren `invalidate.cache` API-metoden stöds inte längre eftersom den bara riktar sig till en viss dispatchernod. AEM as a Cloud Service arbetar på tjänstenivå, inte på den enskilda nodnivån, och därmed görs ogiltighetsinstruktionerna i [Invaliderar cachelagrade sidor från AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html) sidan är inte längre giltig för AEM as a Cloud Service.
 
-Replikeringsrensningsagenten ska användas. Detta kan du göra med hjälp av replikerings-API:t. The [Dokumentation för replikerings-API finns tillgänglig](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/replication/Replicator.html)och om du vill ha ett exempel på hur du tömmer cacheminnet kan du läsa [API-exempelsida](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) (särskilt `CustomStep` exempel som skickar en replikeringsåtgärd av typen ACTIVATE till alla tillgängliga agenter). Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
+Replikeringsrensningsagenten ska användas. Detta kan du göra med [Replikerings-API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/replication/Replicator.html). Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
+
+<!-- Need to find a new link and/or example -->
+<!-- 
+and for an example of flushing the cache, see the [API example page](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) (specifically the `CustomStep` example issuing a replication action of type ACTIVATE to all available agents). 
+-->
 
 Bilden nedan visar detta.
 
