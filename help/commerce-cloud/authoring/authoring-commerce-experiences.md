@@ -1,15 +1,14 @@
 ---
-title: Skapa e-handelsupplevelser
+title: Redigering av handelsupplevelser
 description: Arbeta med e-handelsupplevelser
-exl-id: 2cef5d4b-45f6-4d72-a24b-67ca53d9057d
-source-git-commit: a23b4767d5ef26363fa426c7d0a01a3342a81423
+source-git-commit: a5aa45f150ac6c26be9368edb3bb10cbc7d0c77f
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
 
-# Skapa e-handelsupplevelser {#authoring-commerce-experiences}
+# Redigering av handelsupplevelser {#authoring-commerce-experiences}
 
 ## Översikt {#overview}
 
@@ -43,7 +42,7 @@ Den här väljaren gör att du kan bläddra i katalogstrukturen för att hitta k
 
 ![Kategoriväljaren](../assets/authoring/category-picker.png)
 
-**Exempel på karusell**
+**Exempel: karusell**
 
 ![Carousel-komponent utan markering](../assets/authoring/carousel_component_without_selection.png)
 
@@ -63,9 +62,9 @@ Fliken Resurser i redigerarens sidpanel ger åtkomst till produktdata genom att 
 
 I motsats till resurser kan produkter läggas till på en sida (vilket skapar en produktlaserkomponent som standard) eller komponenter (som för närvarande stöds är produktteaser och produktkarusell).
 
-### Lägga till länkar till produkt- eller kategorisidor i textfält med RTE (Rich Text Editor)  {#rte}
+### Lägga till länkar i textfält med RTE {#rte}
 
-CIF-produktkatalogsidor är virtuella sidor som återges direkt. Därför går det inte att bädda in hyperlänkar som för vanliga AEM. CIF lägger till en ny åtgärd,&quot;Commerce Links&quot;, i textredigeringsavtalet. Den här åtgärden fungerar precis som den vanliga hyperlänksåtgärden, men tillåter författare att välja en produkt eller kategori med hjälp av väljarna.
+CIF-produktkatalogsidor är virtuella sidor som återges direkt. Därför går det inte att bädda in hyperlänkar som för vanliga AEM. CIF lägger till en ny åtgärd,&quot;Commerce Links&quot;, i textredigeraren. Den här åtgärden fungerar precis som den vanliga hyperlänksåtgärden, men tillåter författare att välja en produkt eller kategori med hjälp av väljarna.
 
 ![RTE](../assets/authoring/RTE.png)
 

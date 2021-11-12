@@ -3,10 +3,10 @@ sub-product: AEM Content and Commerce as a Cloud Service
 user-guide-title: AEM innehåll och handel as a Cloud Service
 breadcrumb-title: AEM Content and Commerce Guide
 user-guide-description: Lär dig hur du använder och administrerar Experience Manager Content and Commerce as a Cloud Service.
-source-git-commit: 2bc33096132164b54a8206c69945f3a3fd4227db
+source-git-commit: c96d2f41a09449ee742c4c153d8c4353eb75c35a
 workflow-type: tm+mt
 source-wordcount: '109'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 2%
 + Integreringar {#integrations}
    + [Adobe Commerce](integrating/magento.md)
    + [Commerce Solution från tredje part](integrating/third-party.md)
-   + Redigering {#authoring}
-      + [Handelsupplevelser](authoring/authoring-commerce-experiences.md)
-      + [Produktcockpit](authoring/product-cockpit.md)
-      + [Användning i flera mallar](authoring/multi-template-usage.md)
-      + [Förbättra produktdata med tillhörande innehåll](authoring/enrich-product-associated-content.md)
 + AEM Storefront {#storefront}
    + [Komma igång](getting-started.md)
+   + Redigering {#authoring}
+      + [Commerce Experiences](authoring/authoring-commerce-experiences.md)
+      + [Product Cockpit](authoring/product-cockpit.md)
+      + [Användning av flera mallar](authoring/multi-template-usage.md)
+      + [Berika produktdata med tillhörande innehåll](authoring/enrich-product-associated-content.md)
    + Administratör {#administering}
       + [Installation i flera butiker](configuring/multi-store-setup.md)
       + [Konfigurera URL:er för SEO](configuring/advanced-url-configuration.md)
