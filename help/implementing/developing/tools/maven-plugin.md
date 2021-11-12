@@ -2,7 +2,7 @@
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
-source-git-commit: cf3273af030a8352044dcf4f88539121249b73e7
+source-git-commit: 278470482a582db7d88bfbe6f851eb3070afc0df
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 4%
@@ -117,7 +117,7 @@ Installerar ett paket i databasen. För att detta mål ska kunna uppnås krävs 
 Förutom följande parametrar finns beskrivningarna i [Gemensamma parametrar](#common-parameters) -avsnitt.
 
 | Namn | Typ | Krävs | Standardvärde | Beskrivning |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | `artifact` | `String` | Nej | Värdet för `artifactId` Maven-projektets egendom | En sträng i formuläret `groupId:artifactId:version[:packaging]` |
 | `artifactId` | `String` | Nej | Inget | ID för den artefakt som ska installeras |
 | `groupId` | `String` | Nej | Inget | The `groupId` av den artefakt som ska installeras |
