@@ -1,9 +1,9 @@
 ---
 title: Bygga produktupplevelser
 description: Lär dig skapa produktupplevelser.
-source-git-commit: 2d981424d22e2c8d16505eb0cc77c67d5df2bc64
+source-git-commit: cadb903c08bd491db12c5d0ad24acc7f65396825
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -113,4 +113,5 @@ Nu är ni redo att hantera produktupplevelser med hjälp AEM innehåll och hande
 ## Ytterligare resurser {#additional-resources}
 
 * [Redigering av handelsupplevelser](/help/commerce-cloud/authoring/authoring-commerce-experiences.md)
+* [Product Cockpit](/help/commerce-cloud/authoring/product-cockpit.md)
 * [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=en)
