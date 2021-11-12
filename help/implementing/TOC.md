@@ -5,9 +5,9 @@ breadcrumb-title: Implementeringshandbok
 user-guide-description: Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service, med bland annat ämnen om utveckling och distribution.
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: dbd6eee96d05182a38d6edd91c31bbb356dc99ce
+source-git-commit: b89869223986dcc64ebefc9ae6bfb8587456d4da
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1084'
 ht-degree: 25%
 
 ---
@@ -83,6 +83,7 @@ ht-degree: 25%
       + [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
    + [Komma åt och hantera loggar](cloud-manager/manage-logs.md)
    + [SLA-rapportering](cloud-manager/sla-reporting.md)
+   + [Användaråtkomst till New Relic](cloud-manager/user-access-new-relic.md)
    + [Förstår aviseringar](cloud-manager/notifications.md)
    + Hantera SSL-certifikat {#manage-ssl-certificates}
       + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
