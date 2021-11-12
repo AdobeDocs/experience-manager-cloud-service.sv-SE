@@ -3,7 +3,7 @@ title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2
 description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.11.0
 feature: Release Information
 exl-id: null
-source-git-commit: e8ceeb0eb4fb26553683ced74a2e20628fc2952e
+source-git-commit: ec2719fca19f366e0021fea7429e93c15e9579df
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
@@ -20,7 +20,7 @@ På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a 
 ## Releasedatum {#release-date}
 
 Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.11.0 är 4 november 2021.
-Nästa version är planerad till 9 december 2021.
+Nästa version är planerad till den 16 december 2021.
 
 ### Nyheter {#what-is-new}
 
@@ -41,7 +41,7 @@ Nästa version är planerad till 9 december 2021.
 
 * Som användare ser jag att Pipeline-kortet med noll rörledningar ger mig lämplig vägledning.
 
-* Det finns nu en ny aktivitetssida där aktiviteter som pipeline och kodkörningar kan visas tillsammans med tillhörande information. Med tiden kommer de aktiviteter som listas på den här sidan att utvidgas tillsammans med den information som ges.
+* Det finns nu en ny aktivitetssida där aktiviteter som pipeline och kodkörningar kan visas tillsammans med tillhörande information. Med tiden kommer de aktiviteter som listas på den här sidan att utvidgas tillsammans med de angivna detaljerna.
 
 * Nu finns det en ny sida med Pipelines (Pipelines) med en statuspekare som du kan använda när du hovrar för att enkelt visa sammanfattningen av detaljer. Pipeline-körningar kan visas tillsammans med tillhörande information.
 
