@@ -1,9 +1,9 @@
 ---
 title: Användaråtkomst till New Relic
 description: Följ den här sidan om du vill veta mer om prestandaövervakning för nya Relic-program för AEM as a Cloud Service
-source-git-commit: 62bee2d28c92c1d36651eb8b88607255640e511b
+source-git-commit: bb9532685c10baf13bc31898c0038fde2c5fd43d
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Tre var AEM as a Cloud Service miljö:
 * Ett program för publiceringstjänsten per miljö (inklusive Golden Publish)
 * Ett program för förhandsgranskningstjänsten per miljö
    >[!IMPORTANT]
-   >Alla program använder en licensnyckel, AEM as a Cloud Service miljöer rapporterar till endast ett nytt Relic-konto. Full övervakning av mått och händelser för både New Relic APM och Infrastructure sparas i 7 dagar.
+   >Alla program använder en licensnyckel, AEM as a Cloud Service miljöer rapporterar till endast ett nytt Relic-konto. Full övervakning av mått och händelser för både New Relic APM bevaras i 7 dagar.
 
 ### Vem har åtkomst till New Relic-Cloud Servicens data? {#access-new-relic-cloud}
 
