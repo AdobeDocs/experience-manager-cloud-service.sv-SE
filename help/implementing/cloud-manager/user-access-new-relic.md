@@ -1,9 +1,9 @@
 ---
 title: Användaråtkomst till New Relic
 description: Följ den här sidan om du vill veta mer om prestandaövervakning för nya Relic-program för AEM as a Cloud Service
-source-git-commit: bb9532685c10baf13bc31898c0038fde2c5fd43d
+source-git-commit: 696b86e9e88ca1fd7c0a5b688fa78f46227df3a4
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Om användaren inte kan hitta e-postadressen till den ursprungliga kontobekräft
    >[!NOTE]
    >Om du inte får något e-postmeddelande från New Relic:
    >Kontrollera [skräppostfilter](https://docs.newrelic.com/docs/accounts/accounts-billing/account-setup/create-your-new-relic-account/). Om tillämpligt, [lägg till New Relic i e-postmeddelandet tillåtelselista](https://docs.newrelic.com/docs/accounts/accounts/account-maintenance/account-email-settings/#email-whitelist).
-   >Ge feedback på supportanmälan så hjälper våra team dig vidare
+   >Ge gärna feedback på supportanmälan så hjälper supporten på Adobe ytterligare.
 
 1. Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden via e-post eller lösenord loggar du en supportanmälan via [Admin Console](https://adminconsole.adobe.com/).
 
