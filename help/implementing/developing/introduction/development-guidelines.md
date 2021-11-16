@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 333ebbed52577a82eb9b65b20a173e4e65e09537
+source-git-commit: 477546f882197291403e59d8ba2e53dd4918a719
 workflow-type: tm+mt
-source-wordcount: '2177'
+source-wordcount: '2178'
 ht-degree: 1%
 
 ---
@@ -39,9 +39,9 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 ## Bakgrundsuppgifter och tidskrävande jobb {#background-tasks-and-long-running-jobs}
 
-Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Koden måste därför vara flexibel och de flesta importer kan återupptas. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det AEM as a Cloud Service mer sannolikt att en instans kommer att tas bort.
+Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Därför måste koden vara flexibel och viktigast av allt återtagbar. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det AEM as a Cloud Service mer sannolikt att en instans kommer att tas bort.
 
-För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda [Försäljningsjobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) schemaläggaren så här igen är minst en gång körningen.
+För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda [Försäljningsjobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) schemaläggaren på samma sätt säkerställer körningen minst en gång.
 
 Schemaläggaren för Sling Commons ska inte användas för schemaläggning eftersom körning inte kan garanteras. Det är bara mer sannolikt att det kommer att planeras.
 
@@ -179,7 +179,7 @@ Avsnitten nedan beskriver hur du begär, konfigurerar och skickar e-post.
 
 ### Aktivera utgående e-post {#enabling-outbound-email}
 
-Portar som används för att skicka e-post är som standard inaktiverade. Om du vill aktivera en port konfigurerar du [avancerat nätverk](/help/security/configuring-advanced-networking.md)och se till att du för varje miljö som behövs anger `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunktens regler för portvidarebefordran, som mappar den avsedda porten (t.ex. 465 eller 587) till en proxyport.
+Portar som används för att skicka e-post är som standard inaktiverade. Om du vill aktivera en port konfigurerar du [avancerat nätverk](/help/security/configuring-advanced-networking.md)och se till att för varje nödvändig miljö ställa in `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunktens regler för portvidarebefordran, som mappar den avsedda porten (t.ex. 465 eller 587) till en proxyport.
 
 Vi rekommenderar att du konfigurerar avancerade nätverk med `kind` parametern inställd på `flexiblePortEgress` eftersom Adobe kan optimera prestandan för flexibel trafik i hamnutgångar. Om en unik IP-adress för utgångar krävs väljer du en `kind` parameter för `dedicatedEgressIp`. Om du redan har konfigurerat VPN av andra skäl kan du även använda den unika IP-adressen som den avancerade nätverksvarianten ger.
 
