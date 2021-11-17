@@ -3,10 +3,10 @@ title: '[!DNL Experience Manager Assets] integration with [!DNL Adobe Workfront]
 description: Introduktion till integrering mellan [!DNL Assets] och [!DNL Workfront]
 role: Admin,Leader,Architect
 feature: Integrations
-source-git-commit: d75d9ac16f64b6770fcf35d58474c47c52b1585b
+source-git-commit: 533217df95115505535544aaf9d6a8f5a4e2a81f
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 1%
+source-wordcount: '922'
+ht-degree: 2%
 
 ---
 
@@ -15,17 +15,19 @@ ht-degree: 1%
 
 [!DNL Adobe Workfront] är ett program för arbetshantering som hjälper dig att hantera hela arbetscykeln på ett och samma ställe. Integrationen mellan [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] gör att organisationer kan förbättra innehållets hastighet och time-to-market genom att knyta samman arbete och hantering av digitala resurser. När man arbetar i Workfront får man tillgång till dokument och bilder.
 
+The [!DNL Workfront for Experience Manager enhanced connector] möjliggör förbättrade affärsprocesser med kompletta arbetsflöden och ger personaliserade kundupplevelser från början till slut och central lagring. Mer information om funktionerna och funktionerna i [!DNL enhanced connector], se [nyheter i [!DNL enhanced connector]](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
+
 Adobe har två olika kontakter för att integrera båda lösningarna. Kopplingarna möjliggör komplex automatisering, konfiguration och utbyggbara arbetsflöden mellan [!DNL Assets] och [!DNL Workfront]. Dessutom [!DNL Assets Essentials] är tillgängligt som ett tillägg till det nya [!DNL Workfront] kunderna kan köpa separat. Mer information finns på [[!DNL Workfront] and [!DNL Assets Essentials] integration](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/integration.html).
 
 [!DNL Workfront for Experience Manage enhanced connector] gör att din organisation kan:
 
-* Samarbeta enkelt. Creative Teams kan oroa sig för en sak mindre. När arbetet är klart kan de skicka det till AEM Assets med en enkel musklickning
-* Berika materialet i varje steg. Samla in nya data i varje fas av resursens livscykel. Från idé till leverans kan er organisation hämta in nyckeltal och fatta mer välgrundade affärsbeslut om framtida resursutveckling.
-* Referera till befintliga resurser. Hitta och återanvänd enkelt befintliga resurser i produktionen och lägg till dem i nya projekt som referensobjekt.
-* Synka alla metadata. Förbättra dina metadata genom att göra det så enkelt som möjligt att lägga till dem. Med kopplingen synkroniseras metadata dubbelriktat mellan Workfront och AEM Assets
-* Utnyttja [!DNL Experience Manager Assets] funktioner för digital hantering. Tillgång till alla digitala resurser direkt inifrån dina favoriter [!DNL Creative Cloud] program. AI-aktiverad smart taggning och beskärning, sökverktyg, dynamisk leverans via [!DNL Dynamic Media]och mycket annat.
+* Skapa automatiskt länkade Experience Manager-mappar i Workfront och ordna mapparna baserat på Workfront Portfolio, Program och Projekt.
+* Synkronisera Workfront-projektmetadata med länkade Experience Manager-mappar.
+* Experience Manager metadatauppdateringar med nya versioner.
+* Ange objektstatus för Workfront baserat på konfigurerbara villkor med hjälp av arbetsflöden i Experience Manager.
+* Publicera material i Experience Manager eller Brand Portal.
 
-Se plattformsstödet och andra [krav för den förbättrade anslutningen](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
+Se plattformsstödet och [krav för den förbättrade anslutningen](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
 
 >[!IMPORTANT]
 >
