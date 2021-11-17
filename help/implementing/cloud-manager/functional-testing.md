@@ -2,9 +2,9 @@
 title: Funktionstestning - Cloud Services
 description: Funktionstestning - Cloud Services
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: 749daae8825b63dbf5b0101b4cab39730e9b1973
+source-git-commit: 2bb72c591d736dd1fe709abfacf77b02fa195e4c
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Kunderna kan skapa (via GIT) anpassade tester och testsvit för användargränss
 
 Kundens gränssnittstester körs automatiskt på produktionsflödet under steget&quot;Anpassad gränssnittstestning&quot;.
 
-Till skillnad från Custom Functional Testing, som är HTTP-tester skrivna i java, kan gränssnittstesterna vara en dockningsbild med tester skrivna på vilket språk som helst, förutsatt att de följer konventionerna som definieras i [Skapar gränssnittstester](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/ui-testing.html?lang=en#building-ui-tests).
+Till skillnad från Custom Functional Testing, som är HTTP-tester skrivna i java, kan UI-testerna vara en dockningsbild med tester skrivna på vilket språk som helst, förutsatt att de följer konventionerna som definieras i [Skapar gränssnittstester](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/ui-testing.html?lang=en#building-ui-tests).
 
 >[!NOTE]
 >Vi rekommenderar att du följer strukturen och språket *(js and wdio)* finns i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests) som startpunkt.
@@ -119,9 +119,11 @@ Dessutom måste JAR ha manifesthuvudet Cloud-Manager-TestType inställt på inte
     </plugins>
 ```
 
-I den här JAR-filen måste klassnamnen för de faktiska tester som ska köras sluta i IT.
+I den här JAR-filen måste klassnamnen för de faktiska tester som ska köras sluta med `IT`.
 
-En klass med namnet `com.myco.tests.aem.ExampleIT` skulle köras men en klass med namnet `com.myco.tests.aem.ExampleTest` skulle inte göra det.
+En klass med namnet `com.myco.tests.aem.it.ExampleIT` skulle köras, men en klass med namnet `com.myco.tests.aem.it.ExampleTest` skulle inte göra det.
+
+Om du vill utesluta testkoden från disponeringskontrollen för kodskanningen måste testkoden dessutom finnas under ett paket med namnet `it` (filtret för uteslutning av täckning är `**/it/**/*.java`).
 
 Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad för att vara kompatibel med de konventioner som används av testbiblioteket för aem-testing-clients. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder. Se [Git-länk](https://github.com/adobe/aem-testing-clients) för mer information.
 
