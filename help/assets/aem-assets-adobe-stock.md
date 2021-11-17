@@ -5,10 +5,10 @@ contentOwner: Vishabh Gupta
 feature: Search,Adobe Stock
 role: Admin,User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: f64901e1f9c4ab4af6e592a7039b9e50ddbea708
+source-git-commit: 3761d399de29645ec62cabf50bf6b26a64f3c7be
 workflow-type: tm+mt
-source-wordcount: '2271'
-ht-degree: 4%
+source-wordcount: '2286'
+ht-degree: 3%
 
 ---
 
@@ -314,9 +314,9 @@ I följande tabell förklaras hur användarbehörigheter fungerar när du använ
 | Användare | Grupp | Behörigheter | Acceptera Stock-konfigurationen i användarinställningarna | Åtkomst till resurser | Använd Adobe Stock |
 | --- | --- | --- | --- | --- | --- |
 | admin | Ej tillämpligt | Alla | Ej tillämpligt | Ja | Ja |
-| test-doc1 | DAM-användare | `/conf/global/settings/stock/cloud-config` | Ja | Ja | Ja |
-| test-doc1 | DAM-användare | `/conf/global/settings/stock/cloud-config` | Nej | Fel: Det gick inte att läsa in data | Nej |
-| test-doc1 | DAM-användare | tillåt: `/conf/global/settings/stock` neka: `/cloud-config` | Lagerkonfigurationen visas inte | Ja | Nej |
+| test-doc1 | DAM-användare | /conf/global/settings/stock/cloud-config | Ja | Ja | Ja |
+| test-doc1 | DAM-användare | /conf/global/settings/stock/cloud-config | Nej | Fel: Det gick inte att läsa in data | Nej |
+| test-doc1 | DAM-användare | **tillåt**: /conf/global/settings/stock **neka**: /cloud-config | Lagerkonfigurationen visas inte | Ja | Nej |
 
 ## Använd och hantera [!DNL Adobe Stock] resurser i [!DNL Experience Manager] {#usemanage}
 
