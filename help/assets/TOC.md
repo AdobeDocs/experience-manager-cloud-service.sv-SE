@@ -1,13 +1,13 @@
 ---
 sub-product: Adobe Experience Manager Assets as a Cloud Service
-user-guide-title: Resurser som en Cloud Service Guide
+user-guide-title: as a Cloud Service Guide för resurser
 breadcrumb-title: Resurshandbok
 user-guide-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 solution: Experience Manager, Experience Manager as a Cloud Service, Experience Manager Assets
-source-git-commit: ba962df2fe3a690b50a1f938aef42d9d907e8797
+source-git-commit: d75d9ac16f64b6770fcf35d58474c47c52b1585b
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 38%
+source-wordcount: '488'
+ht-degree: 37%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 38%
 
 + [[!DNL Assets] as a [!DNL Cloud Service]](/help/assets/home.md)
 + [Översikt och nyheter](overview.md)
-+ [Noterbara ändringar i [!DNL Assets] som a [!DNL Cloud Service]](assets-cloud-changes.md)
++ [Betydande ändringar i [!DNL Assets] som [!DNL Cloud Service]](assets-cloud-changes.md)
 + [[!DNL Assets] arkitektur](architecture.md)
 + [Filformat som stöds](file-format-support.md)
 + [Översikt över mikrotjänster för material](asset-microservices-overview.md)
-+ [Hjälpmedel i [!DNL Assets]](accessibility.md)
++ [Tillgänglighet i [!DNL Assets]](accessibility.md)
 + Hantera digitala resurser {#manage}
    + [Dela resurser](share-assets.md)
    + [Övervaka aktiviteter och DAM-uppgifter](assets-activity-history.md)
@@ -67,8 +67,8 @@ ht-degree: 38%
    + [Importera och exportera metadata för material](metadata-import-export.md)
 + Dela och driftsätta resurser {#brand-portal}
    + [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
-   + [Publicera resurser till [!DNL Brand Portal]](publish-to-brand-portal.md)
-   + [Publicera resurser  [!DNL Brand Portal] från [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)
+   + [Publicera resurser på [!DNL Brand Portal]](publish-to-brand-portal.md)
+   + [Publicera resurser från [!DNL Brand Portal] till [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)
 + Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
    + [Headless Delivery with Content Fragments and GraphQL](content-fragments/content-fragments-graphql.md)
@@ -127,3 +127,7 @@ ht-degree: 38%
    + [Vanliga frågor om leverans av innehåll med HTTP2](dynamic-media/http2faq.md)
    + [Flash-tittare som slutar svara](dynamic-media/flash-viewers-eol.md)
    + [DHTML-visningsprogram - slutdatum](dynamic-media/dhtml-viewer-endoflifefaqs.md)
++ Integration med andra lösningar {#integrations}
+   + [Integrering med [!DNL Adobe Workfront]](workfront-integrations.md)
+   + [Installera [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-install.md)
+   + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-configure.md)
