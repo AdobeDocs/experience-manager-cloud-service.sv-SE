@@ -1,7 +1,7 @@
 ---
 title: Inställningar för Commerce Multi-Store
 description: Lär dig hur du mappar olika butiksvyer från Magento till AEM. Detta gör att projekt kan stödja multi-tenant- och multi-lingual use-fall.
-sub-product: Handel
+sub-product: Commerce
 version: cloud-service
 doc-type: technical-video
 activity: setup
@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 exl-id: 4385c9e5-2b25-4f95-952f-72349431cf94,7f6e04a2-89e9-4613-8ea8-9dac1acea30b
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: c5ae2fb098c30d2be45316367f87725d16d84af7
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -52,10 +52,10 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 4. Tilldela den underordnade konfigurationen till en AEM plats
 
    * Gå till AEM Sites Console
-   * Navigera till regionen eller språkroten i platsstrukturen, t.ex. /content/venia/us _eller_ /content/venia/us/en för Venias exempelsida
+   * Navigera till regionen eller språkroten i platsstrukturen, t.ex. /content/venia/us _eller_ /content/venia/us/en för exempelsidan Venia
    * Markera sidan och öppna sidegenskaper
    * Välj fliken Avancerat
-   * I avsnittet `Configuration` väljer du konfigurationen som du skapade i steg
+   * I `Configuration` väljer du konfigurationen som du skapade i steg 3
 
 ## Ytterligare resurser
 
