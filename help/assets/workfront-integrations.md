@@ -3,9 +3,9 @@ title: '[!DNL Experience Manager Assets] integration with [!DNL Adobe Workfront]
 description: Introduktion till integrering mellan [!DNL Assets] och [!DNL Workfront]
 role: Admin,Leader,Architect
 feature: Integrations
-source-git-commit: 045387bc02ca5a30e0caa020885d4cf63b4e9aef
+source-git-commit: 78c9f745465bf9dd4ca268b71391c6a23b1c61e2
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '888'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 [!DNL Adobe Workfront] är ett program för arbetshantering som hjälper dig att hantera hela arbetscykeln på ett och samma ställe. Integrationen mellan [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] gör att organisationer kan förbättra innehållets hastighet och time-to-market genom att knyta samman arbete och hantering av digitala resurser. När man arbetar i Workfront får man tillgång till dokument och bilder.
 
-The [!DNL Workfront for Experience Manager enhanced connector] möjliggör förbättrade affärsprocesser med kompletta arbetsflöden och ger personaliserade kundupplevelser från början till slut och central lagring. Mer information om funktionerna och funktionerna i [!DNL enhanced connector], se [nyheter i [!DNL enhanced connector]](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
+The [!DNL Workfront for Experience Manager enhanced connector] möjliggör förbättrade affärsprocesser med kompletta arbetsflöden och ger personaliserade kundupplevelser från början till slut och central lagring. Adobe har en standardanslutning och en förbättrad anslutning för att integrera de två lösningarna. Se funktionerna nedan för en jämförelse och se [nyheter i [!DNL enhanced connector]](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
 
 [!DNL Workfront for Experience Manage enhanced connector] gör att din organisation kan:
 
