@@ -2,10 +2,9 @@
 title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-translation-type: tm+mt
-source-git-commit: 36a598961081b7c2229065a031ad163a5336ee43
+source-git-commit: 282742f043aef33bcd14b7a40d388a6d3f8748c1
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -16,9 +15,9 @@ ht-degree: 0%
 
 Adobe har antagit Magento&#39;s GraphQL API:er som dess officiella e-handels-API för alla handelsrelaterade data. Därför använder AEM GraphQL för att utbyta affärsdata med Magento och med valfri e-handelsmotor via I/O Runtime. Detta GraphQL-API är oberoende av AEM GraphQL-API för åtkomst till innehållsfragment.
 
-## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce (Magento)-administratören? Hur kan resurser från Dynamic Media förbrukas?
+## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce-administratören (Magento)? Hur kan resurser från Dynamic Media förbrukas?
 
-Det finns ingen officiell integrering mellan AEM Assets och Magento. Det finns en partnerkoppling tillgänglig på [marknadsplatsen](https://marketplace.magento.com/bounteous-dam.html).
+Det finns ingen officiell integrering mellan AEM Assets och Magento. Det finns en partnerkoppling på [marknadsplats](https://marketplace.magento.com/bounteous-dam.html).
 
 Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL:er manuellt i Magento. Dynamic Media är nu en del av AEM Assets och kommer att fungera på samma sätt.
 
@@ -48,7 +47,7 @@ Dynamiska data som pris eller lager cachelagras inte i Dispatcher. Dynamiska dat
 
 ## 9. Hur fungerar cacheminnet för AEM Dispatcher med AEM och e-handel?
 
-Vi rekommenderar att du konfigurerar en TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar vi att du återger datumet på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [AEM Dispatcher](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
+Vi rekommenderar att du konfigurerar en TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar vi att du återger data på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [AEM Dispatcher](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
 
 ## 10. Finns det någon rekommendation om enhetlig sökning i allt AEM innehåll med Commerce?
 
@@ -68,7 +67,7 @@ Vi rekommenderar att ni hanterar marknadsföringsrelaterade data och innehåll i
 
 ## 14. Hur kan vi säkerställa PCI-kompatibilitet när vi använder AEM för hela presentationslagret?
 
-Vi rekommenderar att du använder abstrakta betalningsmetoder. Detta innebär att webbläsarklienten kommunicerar direkt med betalgatewayleverantören så att varken Adobe eller e-handelslösningarna lagrar eller skickar kortinnehavardata. Den här metoden kräver endast en nivå 3 PCI-kompatibilitet. Det finns dock ytterligare saker att tänka på som helt PCI-kompatibla, till exempel hur medarbetarna interagerar med systemet och data. Mer information om Magento PCI-kompatibilitet finns i <https://magento.com/pci-compliance>
+Vi rekommenderar att du använder abstrakta betalningsmetoder. Detta innebär att webbläsarklienten kommunicerar direkt med betalgatewayleverantören så att varken Adobe eller e-handelslösningarna lagrar eller skickar kortinnehavardata. Den här metoden kräver endast en nivå 3 PCI-kompatibilitet. Det finns dock ytterligare saker att tänka på som helt PCI-kompatibla, till exempel hur medarbetarna interagerar med systemet och data. Mer information om Magento PCI-kompatibilitet finns i [Krav för PCI-kompatibilitet](https://magento.com/pci-compliance).
 
 ## 15. Om jag använder AEM och Magento molnversioner, är denna gemensamma lösning PCI-kompatibel?
 
@@ -76,4 +75,4 @@ Ja, självutvärderingsformulär D och försäkran om överensstämmelse finns t
 
 ## 16. Hur begär jag en I/O Runtime-testlicens?
 
-Du kan begära en testlicens att använda I/O Runtime [här](https://adobeio.typeform.com/to/obqgRm).
+Du kan begära en testlicens för att använda I/O Runtime [här](https://adobeio.typeform.com/to/obqgRm).
