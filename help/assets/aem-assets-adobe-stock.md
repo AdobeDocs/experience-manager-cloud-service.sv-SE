@@ -1,13 +1,13 @@
 ---
 title: Hantera [!DNL Adobe Stock] resurser i [!DNL Assets].
 description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock] resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
-contentOwner: AG
+contentOwner: Vishabh Gupta
 feature: Search,Adobe Stock
 role: Admin,User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: ea1b2d58c04937304bddd528a9839bdf627f1ae9
+source-git-commit: f64901e1f9c4ab4af6e592a7039b9e50ddbea708
 workflow-type: tm+mt
-source-wordcount: '2264'
+source-wordcount: '2271'
 ht-degree: 4%
 
 ---
@@ -28,6 +28,7 @@ Organisationer kan integrera sina företag [!DNL Adobe Stock] planera med [!DNL 
 
 Integreringen kräver:
 
+* En igång [!DNL Experience Manager Assets] som [!DNL Cloud Service] instance
 * An [företag [!DNL Adobe Stock] plan](https://stockenterprise.adobe.com/)
 * En användare med behörigheter i Admin Console till standardproduktprofilen för Stock
 * En användare med behörighet till Developer Access-profilen för att skapa integrering i Adobe Developer Console
@@ -39,7 +40,7 @@ Ett företag [!DNL Adobe Stock] plan,
 * Aktiverar JWT-autentisering (Service Account) inom [!DNL Adobe Developer Console] för ditt Stock-berättigande
 * Gör det möjligt att hantera krediter och licenser globalt inifrån [!DNL Adobe Admin Console]
 
-Inom berättigandet finns en standardproduktprofil för [!DNL Adobe Stock] finns i [!DNL Admin Console]. Det går att skapa flera profiler, och de här profilerna avgör vem som kan licensiera Stock-mediefiler. En användare som har direkt åtkomst till produktprofilen har åtkomst [https://stock.adobe.com/](https://stock.adobe.com/) och licensiera Stock-mediefiler. Det finns ett annat sätt att använda Developer Access för att skapa integrerings-API för att autentisera kommunikationen mellan [!DNL Experience Manager] och [!DNL Adobe Stock].
+Inom berättigandet finns en standardproduktprofil för [!DNL Adobe Stock] finns i [!DNL Admin Console]. Det går att skapa flera profiler, och de här profilerna avgör vem som kan licensiera Stock-mediefiler. En användare som har direktåtkomst till produktprofilen har åtkomst [https://stock.adobe.com/](https://stock.adobe.com/) och licensiera Stock-mediefiler. Det finns ett annat sätt att använda Developer Access för att skapa en integrering (API). Integreringen autentiserar kommunikationen mellan [!DNL Experience Manager Assets] och [!DNL Adobe Stock].
 
 >[!NOTE]
 >
@@ -112,7 +113,7 @@ IMS-konfigurationen har två steg:
 
 Den offentliga nyckeln (certifikatet) autentiserar din produktprofil i Adobe Developer Console.
 
-1. Logga in på [!DNL Experience Manager Assets] författarinstans. Standardwebbadressen är `http://localhost:4502/aem/start.html`.
+1. Logga in på [!DNL Experience Manager Assets] molninstans.
 
 1. Från **[!UICONTROL Tools]** panel, navigera till **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
