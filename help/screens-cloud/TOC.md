@@ -3,7 +3,7 @@ sub-product: AEM Screens as a Cloud Service
 user-guide-title: AEM Screens as a Cloud Service
 breadcrumb-title: AEM Screens as a Cloud Service
 user-guide-description: Förstå AEM Screens as a Cloud Service.
-source-git-commit: 34d67344340da51fd3f7b2ec38ca1fb498a5cddb
+source-git-commit: 5e2d3df282addcb42072f577f32e9b8b299af346
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -42,6 +42,6 @@ ht-degree: 0%
    + [Tilldela spelare till en bildskärm](/help/screens-cloud/managing-players-registration/assigning-player-display.md)
 + Använda funktioner för kodprodukter {#core-product-features}
    + [Stöd för miniatyrbilder för videoklipp](/help/screens-cloud/using-core-product-features/thumbnail-support-videos.md)
-+ [Vanliga frågor och svar om skärmar](/help/screens-cloud/screens-cloud-faqs.md)
 + Utveckling på skärmar as a Cloud Service {#developing-screens-cloud}
    + [Utveckla en anpassad komponent för skärmar as a Cloud Service](/help/screens-cloud/developing/developing-custom-components-tutorial.md)
++ [Vanliga frågor och svar om skärmar](/help/screens-cloud/screens-cloud-faqs.md)
