@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: e911abd75cf44d2188e936e9143a48cb88236865
+source-git-commit: f542d9423450086fcc4c0ba62f0e6f178df462e3
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Ta en titt på [Oktober 2021 versionsöversikt](https://video.tv.adobe.com/v/338
 
 ### Ny funktion i [!DNL Sites] {#sites-features}
 
-* Modeller för innehållsfragment anges nu automatiskt i skrivskyddat läge när de har publicerats, för att undvika att direktsända API-frågor bryts efter att en redigerad modell har publicerats om. Användarna får en varning när de försöker redigera en publicerad modell. Du kan redigera när du har godkänt varningen.
+* Modeller för innehållsfragment ställs nu automatiskt in i skrivskyddat läge när de har publicerats, så att du inte oavsiktligt kan bryta aktiva API-frågor efter att ha publicerat om en redigerad modell. Användarna får en varning när de försöker redigera en publicerad modell. Du kan redigera när du har godkänt varningen.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
@@ -117,7 +117,7 @@ Nästa version är planerad till 9 december 2021.
 
 * Som användare ser jag att Pipeline-kortet med noll rörledningar ger mig lämplig vägledning.
 
-* Det finns nu en ny aktivitetssida där aktiviteter som pipeline och kodkörningar kan visas tillsammans med tillhörande information. Med tiden kommer de aktiviteter som listas på den här sidan att utvidgas tillsammans med den information som ges.
+* Det finns nu en ny aktivitetssida där aktiviteter som pipeline och kodkörningar kan visas tillsammans med tillhörande information. Med tiden kommer de aktiviteter som listas på den här sidan att utvidgas tillsammans med de angivna detaljerna.
 
 * Nu finns det en ny sida med Pipelines (Pipelines) med en statuspekare som du kan använda när du hovrar för att enkelt visa sammanfattningen av detaljer. Pipeline-körningar kan visas tillsammans med tillhörande information.
 

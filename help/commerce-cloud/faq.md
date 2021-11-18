@@ -2,9 +2,9 @@
 title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: 282742f043aef33bcd14b7a40d388a6d3f8748c1
+source-git-commit: 283bef84f2d5973150be8f62bd6f86193252d4f4
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---

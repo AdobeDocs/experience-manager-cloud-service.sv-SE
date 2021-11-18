@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: 9844a092f440f4520b4dd75e6a6253a4593eb630
+source-git-commit: 3ea19210049e49401da892021f098005759542a3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 6%
 
 ---
@@ -29,11 +29,11 @@ ht-degree: 6%
 
 ## Konfiguration {#configuration}
 
-Så här konfigurerar du `UrlProvider` enligt SEO-kraven och ett projekt måste tillhandahålla en OSGI-konfiguration för CIF URL Provider-konfigurationen.
+Så här konfigurerar du `UrlProvider` i enlighet med SEO-kraven och ett projekt måste tillhandahålla en OSGI-konfiguration för CIF URL Provider-konfigurationen.
 
 >[!NOTE]
 >
-> Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för det kostnadsfria format som kan konfigureras från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
+> Sedan version 2.0.0 av de AEM CIF Core-komponenterna finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för de format som kan konfigureras fritt från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
 
 ### URL-format för produktsida {#product}
 
@@ -76,7 +76,7 @@ Med exempeldata ovan ser en kategorisidas URL-adress formaterad med standardform
 
 ## Anpassade URL-format {#custom-url-format}
 
-Ett projekt kan implementera det anpassade URL-formatet [`UrlFormat` gränssnitt](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/UrlFormat.html) och registrera implementeringen som en tjänst av allmänt ekonomiskt intresse, antingen som kategorisida eller som webbsidesformat för produktsidor. The `UrlFormat#PROP_USE_AS` egenskapen service anger vilket av de fördefinierade formaten som ska ersättas:
+Ett projekt kan implementera det anpassade URL-formatet [`UrlFormat` gränssnitt](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/UrlFormat.html) och registrera implementeringen som en tjänst av allmänt ekonomiskt intresse, med den som kategorisida eller som webbsidesformat för produktsidor. The `UrlFormat#PROP_USE_AS` egenskapen service anger vilket av de fördefinierade formaten som ska ersättas:
 
 * `useAs=productPageUrlFormat`, ersätter det konfigurerade URL-formatet för produktsidan
 * `useAs=categoryPageUrlFormat`, ersätter det konfigurerade URL-formatet för kategorisidan
@@ -93,15 +93,15 @@ Förutom `UrlProvider`går det också att konfigurera [Samlingsmappningar](https
 
 URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewrite` -modul. The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher-konfiguration som redan innehåller grundläggande [skriv om regler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
 
-## Exempel
+## Exempel {#example}
 
-The [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia) projektet innehåller exempelkonfigurationer som visar hur anpassade URL:er används för produkt- och kategorisidor. På så sätt kan varje projekt konfigurera individuella URL-mönster för produkt- och kategorisidor efter sina SEO-behov. En kombination av CIF `UrlProvider` och Samlingsmappningar enligt ovan används.
+The [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia) projektet innehåller exempelkonfigurationer som visar hur anpassade URL:er används för produkt- och kategorisidor. På så sätt kan varje projekt skapa individuella URL-mönster för produkt- och kategorisidor efter sina SEO-behov. En kombination av CIF `UrlProvider` och Samlingsmappningar enligt ovan används.
 
 >[!NOTE]
 >
 >Den här konfigurationen måste justeras med den externa domän som används av projektet. Samlingsmappningarna fungerar baserat på värdnamnet och domänen. Den här konfigurationen är därför inaktiverad som standard och måste aktiveras före distributionen. Om du vill göra det byter du namn på kopplingsmappningen `hostname.adobeaemcloud.com` mapp i `ui.content/src/main/content/jcr_root/etc/map.publish/https` enligt det använda domännamnet och aktivera den här konfigurationen genom att lägga till `resource.resolver.map.location="/etc/map.publish"` till `JcrResourceResolver` projektets konfiguration.
 
-## Ytterligare resurser
+## Ytterligare resurser {#additional}
 
 * [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
 * [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)

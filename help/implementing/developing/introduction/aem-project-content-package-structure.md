@@ -2,7 +2,7 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: b9ada47611a3e4c38bedeae21f0bcf638c13b17a
+source-git-commit: ed8150e3b1e7d318a15ad84ebda7df52cf40128b
 workflow-type: tm+mt
 source-wordcount: '2877'
 ht-degree: 12%

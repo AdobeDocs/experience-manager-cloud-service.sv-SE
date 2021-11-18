@@ -1,7 +1,7 @@
 ---
 title: Komma igång med CIF-redigering
 description: Komma igång med CIF-redigering
-source-git-commit: a98d525512dcba790d002d6a4042558962c36c97
+source-git-commit: e497b5b4439cf91ec7ea698d9bedcb4210802414
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Den här artikeln bygger på dessa grunder.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du använder CIF för innehåll- och handelsspecifik redigering. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur du använder CIF för innehåll- och handelsspecifik redigering. Efter läsning bör du:
 
 * Förstå begreppen för CIF-redigering med den universella redigeraren
 * Få åtkomst till produktkatalogdata i AEM med produkt- och kategoriväljare
