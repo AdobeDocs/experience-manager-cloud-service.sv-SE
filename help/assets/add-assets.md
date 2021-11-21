@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: e7028272a32c2f53c3438cb918caaf04445442af
+source-git-commit: bfd049ceb1d218df69cd387e0ab370575d8ea4d5
 workflow-type: tm+mt
-source-wordcount: '2093'
+source-wordcount: '2112'
 ht-degree: 0%
 
 ---
@@ -156,6 +156,7 @@ Så här konfigurerar du verktyget:
    * [!UICONTROL Filter by Max Size]: Ange maximal filstorlek för resurser i MB.
    * [!UICONTROL Exclude Mime Types]: Kommaavgränsad lista med MIME-typer som ska uteslutas från intaget. Till exempel, `image/jpeg, image/.*, video/mp4`. Se [alla filformat som stöds](/help/assets/file-format-support.md).
    * [!UICONTROL Include Mime Types]: Kommaavgränsad lista med MIME-typer som ska ingå i intaget. Se [alla filformat som stöds](/help/assets/file-format-support.md).
+   * [!UICONTROL Delete source file after import]: Välj det här alternativet om du vill ta bort originalfilerna från källdatalagret efter att filerna har importerats till [!DNL Experience Manager].
    * [!UICONTROL Import Mode]: Välj Hoppa över, Ersätt eller Skapa version. Hoppa över är standardläget och i det här läget hoppar användaren över att importera en resurs om den redan finns. Se innebörden i [ersätta och skapa versionsalternativ](#handling-upload-existing-file).
    * [!UICONTROL Assets Target Folder]: Importera mapp i DAM där resurser ska importeras. Till exempel, `/content/dam/imported_assets`
    * [!UICONTROL Metadata File]: Den metadatafil som ska importeras, i CSV-format. Du anger den här CSV-filen på blobbplatsen för källan och refererar till sökvägen i konfigurationen för verktyget för massinmatning.
