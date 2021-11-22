@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fb70a068-3ba3-4459-952d-79155d286c42
-source-git-commit: e7028272a32c2f53c3438cb918caaf04445442af
+source-git-commit: ce7ba090a97c2f265af8ed21f11a5a45880e010a
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 11%
+source-wordcount: '639'
+ht-degree: 10%
 
 ---
 
@@ -24,9 +24,8 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 >
 >Om du vill importera metadata för anpassade namnutrymmen måste du först registrera namnutrymmena.
 
-1. Navigera till användargränssnittet Resurser och tryck/klicka **[!UICONTROL Create]** i verktygsfältet.
-1. Välj **[!UICONTROL Metadata]** i menyn.
-1. På sidan **[!UICONTROL Metadata Import]** trycker/klickar du på **[!UICONTROL Select File]**. Markera CSV-filen med metadata.
+1. Navigera till [!DNL Assets] användargränssnitt, välja **[!UICONTROL Create]** i verktygsfältet och väljer **[!UICONTROL Metadata]** på menyn.
+1. I **[!UICONTROL Metadata Import]** sida, klicka **[!UICONTROL Select File]**. Markera CSV-filen med metadata.
 1. Ange följande parametrar:
 
    | Parameter | Beskrivning |
@@ -37,13 +36,19 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
    | Starta arbetsflöden | Falskt som standard. När inställt på `true` och standardinställningar används för arbetsflödet WriteBack för DAM-metadata (som skriver metadata till binära XMP). Om du aktiverar arbetsflödena blir systemet långsammare. |
    | Kolumnnamn för resurssökväg | Definierar kolumnnamnet för CSV-filen med resurser. |
 
-1. Klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
+1. Välj **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
 
-Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du `YYYY-MM-DDThh:mm:ss.fff-00:00` format för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder, och `-00:00` är tidszonsförskjutning. Till exempel: `2020-03-26T11:26:00.000-07:00` är 26 mars 2020 kl. 11:26:00 000 PST-tid.
+1. Om du vill lägga till datum och tidsstämpel för att importera metadata använder du `YYYY-MM-DDThh:mm:ss.fff-00:00` format för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder, och `-00:00` är tidszonsförskjutning. Till exempel: `2020-03-26T11:26:00.000-07:00` är 26 mars 2020 kl. 11:26:00 000 PST.
+
+   * Datumformatet beror på kolumnrubriken och formatet i den. Om datumet till exempel är ett klagomål med format `yyyy-MM-dd'T'HH:mm:ssXXX` måste respektive kolumnrubrik `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX`.
+   * Standarddatumformatet är `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`.
+
+<!-- Hidden via cqdoc-17869>
 
 >[!CAUTION]
 >
->Om datumformatet inte matchar `YYYY-MM-DDThh:mm:ss.fff-00:00`, ställs datumvärdena inte in. Datumformaten för den exporterade CSV-metadatafilen har formatet `YYYY-MM-DDThh:mm:ss-00:00`. Om du vill importera den konverterar du den till ett godkänt format genom att lägga till värdet för nanosekunder som markeras med `fff`.
+>If the date format does not match `YYYY-MM-DDThh:mm:ss.fff-00:00`, the date values are not set. The date formats of exported metadata CSV file is in the format `YYYY-MM-DDThh:mm:ss-00:00`. If you want to import it, convert it to the acceptable format by adding the nanoseconds value denoted by `fff`.
+-->
 
 ## Exportera metadata {#export-metadata}
 
