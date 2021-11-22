@@ -2,10 +2,9 @@
 title: Lägga till en TXT-post
 description: Lägga till ett anpassat domännamn
 exl-id: d441de29-af41-4d3e-9155-531af9702841
-translation-type: tm+mt
-source-git-commit: 4903f97c1bf0e7c8e96d604feb005d9611a7d9bb
+source-git-commit: 26ac0c63e4fba167206f43f64f046452c922c10e
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -27,13 +26,13 @@ Se exemplen i tabellen nedan.
 
 | Domän | Namn | TXT-värde |
 |--- |--- |---|
-| `example.com` | `_aemverification` | Visas i användargränssnittet för Cloud Manager och är specifikt för domänen och Cloud Manager-miljön |
-| `test.example.com` | `_aemverification` | Visas i användargränssnittet för Cloud Manager och är specifikt för domänen och Cloud Manager-miljön |
+| `example.com` | `_aemverification.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. `Ex:adobe-aem-verification=example.com/[program]/[env]/..` |
+| `test.example.com`<br>`www.example.com` | `_aemverification.www.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. `Ex:adobe-aem-verification=www.example.com/[program]/[env]/..` |
 
 När du är klar kan du verifiera resultatet genom att köra: `dig _aemverification.[yourdomainname] -t txt`.
 Det förväntade resultatet ska visa det TXT-värde som anges i användargränssnittet i molnhanteraren.
 
-Om din domän till exempel är `example.com` kör du: `dig TXT _aemverification.example.com -t txt`.
+Om din domän till exempel är `example.com`och kör sedan: `dig TXT _aemverification.example.com -t txt`.
 
 >[!NOTE]
->Det finns också olika [verktyg för DNS-sökning](https://www.ultratools.com/tools/dnsLookup), Google DoH kan användas för att söka efter TXT-postposter och identifiera om TXT-posten saknas eller är felaktig.
+>Det finns också olika [Verktyg för DNS-sökning](https://www.ultratools.com/tools/dnsLookup)kan Google DoH användas för att söka efter TXT-postposter och identifiera om TXT-posten saknas eller är felaktig.
