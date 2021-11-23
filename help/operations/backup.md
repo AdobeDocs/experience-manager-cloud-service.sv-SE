@@ -2,9 +2,9 @@
 title: Säkerhetskopiera och återställ i AEM as a Cloud Service
 description: Säkerhetskopiera och återställ i AEM as a Cloud Service
 exl-id: 469fb1a1-7426-4379-9fe3-f5b0ebf64d74
-source-git-commit: cac25668240a87ecbf86c4f71881310b3c3d17d2
+source-git-commit: 706d33e4a07eb95c578996ffe8989fafeebaa06c
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ AEM as a Cloud Service stöder:
 
 I samtliga fall hämtas den anpassade kodversionen från den senaste distributionen som lyckades före återställningspunkten.
 
-Målet för återställningstiden (RTO) varierar beroende på databasens storlek, men som en allmän riktlinje när återställningssekvensen börjar bör det ta ca 30 minuter.
+Målet för återställningstiden (RTO) varierar beroende på databasens storlek, men som en allmän riktlinje bör återställningssekvensen ta från 30 minuter till flera timmar.
 
 Efter en återställning uppdateras den AEM versionen till den senaste.
 
