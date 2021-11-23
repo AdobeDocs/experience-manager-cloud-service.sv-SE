@@ -1,25 +1,25 @@
 ---
 title: OSGi Configuration API
-description: Beskrivning av AEM som en Cloud Service OSGi-konfigurationsyta
+description: Beskrivning av den AEM as a Cloud Service OSGi-konfigurationsytan
 feature: Deploying
-source-git-commit: 5223d57377f5c00b090aee1ddd4dbfe2d7113181
+exl-id: 94d3df65-71d7-4442-8412-fe2cca7e79ff
+source-git-commit: cba6648d7ef18f3cccbd9562f3a66d9c683ae852
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
 
-
 # OSGi Configuration API
 
-De två listorna nedan visar AEM som en Cloud Service OSGi-konfigurationsyta och beskriver vad kunderna kan konfigurera.
+De två listorna nedan återspeglar den AEM as a Cloud Service OSGi-konfigurationsytan och beskriver vad kunderna kan konfigurera.
 
 1. En lista med OSGi-konfigurationer som inte får konfigureras av kundkoden
 1. En lista över OSGi-konfigurationer vars egenskaper kan konfigureras, men måste följa de angivna verifieringsreglerna. Dessa regler omfattar huruvida deklarationen av egenskapen är obligatorisk, dess typ och i vissa fall dess tillåtna värdeintervall.
 
 Om en OSGI-konfiguration inte anges kan den konfigureras med kundkod.
 
-Dessa regler valideras under Cloud Managers byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager-byggprocessen. Maven-projekt ska innehålla [AEM som en Cloud Service-SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
+Dessa regler valideras under Cloud Managers byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager-byggprocessen. Maven-projekten bör omfatta [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
 
 Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/help/implementing/deploying/configuring-osgi.md).
 
@@ -46,7 +46,7 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
    * `org.apache.felix.eventadmin.IgnoreTimeout`
       * Krävs
       * Typ: array med strängar
-      * Obligatoriskt intervall: Måste innehålla minst `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*`
+      * Obligatoriskt intervall: Måste innehålla minst alla `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*`
    * `org.apache.felix.eventadmin.IgnoreTopic`
       * Typ: array med strängar
 * **`org.apache.felix.http`** (Anmälningsdatum: 2021-04-30: 7/31/2021)
@@ -141,4 +141,14 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
    * `debug.email`
       * Typ: boolesk
    * `oauth.flow`
+      * Typ: boolesk
+* **`org.apache.sling.commons.log.LogManager.factory.config`** (Anmälningsdatum: 11/16/21, Krävsdatum: 2/16/21)
+   * `org.apache.sling.commons.log.level`
+      * Typ: uppräkning
+      * Obligatoriskt intervall: INFO, DEBUG eller TRACE
+   * `org.apache.sling.commons.log.names`
+      * Typ: string
+   * `org.apache.sling.commons.log.file`
+      * Typ: string
+   * `org.apache.sling.commons.log.additiv`
       * Typ: boolesk
