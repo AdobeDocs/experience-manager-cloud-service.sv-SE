@@ -2,10 +2,10 @@
 title: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 description: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 exl-id: abe3f088-95ff-4093-95a1-cfc610d4b9e9
-source-git-commit: b7ed0d16b9cd4ba9fdfaa20e17f3c3c73659f914
+source-git-commit: 99c37c941dfd285c63199aba4970a019b245f3b1
 workflow-type: tm+mt
-source-wordcount: '3641'
-ht-degree: 79%
+source-wordcount: '3787'
+ht-degree: 76%
 
 ---
 
@@ -80,7 +80,7 @@ Här följer några allmänna tips om hur du skapar URL:er för SEO:
 
    * Ibland hanteras webbplatser över `http` tills en användare når en sida med t.ex. ett utchecknings- eller inloggningsformulär, då sidan växlar till `https`. Om användaren kan återvända till `http`-sidor och komma åt dem via `https`, spåras de som två separata sidor vid länkning från den här sidan.
 
-   * Google föredrar för närvarande `https`-sidor framför `http`-sidor. Därför blir det ofta enklare att betjäna hela webbplatsen över `https`.
+   * Google föredrar för närvarande `https`-sidor framför `http`-sidor. Därför gör det ofta att allas liv blir lättare att betjäna hela webbplatsen `https`.
 
 ### Serverkonfiguration {#server-configuration}
 
@@ -357,11 +357,11 @@ Något att tänka på när `robots.txt`-filen placeras i webbplatsroten är att 
 
 Crawlers använder XML-webbplatskartor för att bättre förstå webbplatsernas struktur. Det är en vedertagen bästa metod, även om det inte finns någon garanti för att en webbplatskarta kommer att ge en förbättrad SEO-rankning. Du kan underhålla en XML-fil manuellt på webbservern och använda den som en webbplatskarta, men vi rekommenderar att du genererar webbplatskartan programmatiskt, vilket säkerställer att webbplatskartan automatiskt återspeglar ändringarna när författare skapar nytt innehåll.
 
-AEM använder modulen [Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap) för att generera XML-webbplatskartor, som innehåller ett stort antal alternativ för utvecklare och redigerare att hålla webbplatsernas XML-platskarta uppdaterad.
+AEM använder [Modulen Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap) för att generera XML-webbplatskartor, som innehåller ett stort antal alternativ för utvecklare och redigerare att hålla webbplatsernas XML-webbplatskarta uppdaterad.
 
-Modulen Apache Sling Sitemap skiljer mellan en platskarta på den översta nivån och en kapslad platskarta, som båda genereras för en resurs som har egenskapen `sling:sitemapRoot` inställd på `true`. I allmänhet återges platskartor med hjälp av väljare på sökvägen till platskartan på den översta nivån i trädet, vilket är den resurs som inte har något annat överordnat platskarta. Denna platskarta på den översta nivån visar också platskartsindexet, som vanligtvis är det som en webbplatsägare konfigurerar i sökmotorns konfigurationsportal eller lägger till i webbplatsens `robots.txt`.
+Modulen Apache Sling Sitemap skiljer mellan en webbplatskarta på den översta nivån och en kapslad platskarta, som båda genereras för en resurs som har den `sling:sitemapRoot` egenskap inställd på `true`. I allmänhet återges platskartor med hjälp av väljare på sökvägen till platskartan på den översta nivån i trädet, vilket är den resurs som inte har något annat överordnat platskarta. Denna platskarta på den översta nivån visar också platskartsindexet, som vanligtvis är det som en webbplatsägare konfigurerar i sökmotorns konfigurationsportal eller lägger till i webbplatsens `robots.txt`.
 
-Ta till exempel en plats som definierar en platskarta på den översta nivån på `my-page` och en kapslad platskarta på `my-page/news`, för att generera en dedikerad platskarta för sidorna i nyhetsunderträdet. De resulterande, relevanta URL-adresserna skulle
+Ta till exempel en plats som definierar en platskarta på den översta nivån på `my-page` och en kapslad platskarta på `my-page/news`, för att generera en dedikerad webbplatskarta för sidor i nyhetsunderträdet. De resulterande, relevanta URL-adresserna skulle
 
 * https://www.mydomain.com/my-brand/my-page.sitemap-index.xml
 * https://www.mydomain.com/my-brand/my-page.sitemap.xml
@@ -369,22 +369,99 @@ Ta till exempel en plats som definierar en platskarta på den översta nivån p�
 
 >[!NOTE]
 >
-> Väljarna `sitemap` och `sitemap-index` kan störa anpassade implementeringar. Om du inte vill använda produktfunktionen konfigurerar du en egen servertjänst som betjänar väljarna med ett `service.ranking` högre än 0.
+> Väljarna `sitemap` och `sitemap-index` kan störa anpassade implementeringar. Om du inte vill använda produktfunktionen konfigurerar du en egen servertjänst som servar väljarna med en `service.ranking` högre än 0.
 
-I standardkonfigurationen finns ett alternativ i dialogrutan Sidegenskaper för att markera en sida som en platskarta och på så sätt generera en platskarta för sig själv och dess underordnade. Detta beteende implementeras av implementeringar av gränssnittet `SitemapGenerator` och kan utökas genom att lägga till alternativa implementeringar. Eftersom hur ofta XML-webbplatskartorna ska genereras om i hög grad beror på arbetsflödena för innehållsredigering och arbetsbelastningar, levereras inte produkten någon `SitemapScheduler`-konfiguration. Detta gör att funktionen effektivt kan välja att delta.
+I standardkonfigurationen finns ett alternativ i dialogrutan Sidegenskaper för att markera en sida som en platskarta och på så sätt generera en platskarta för sig själv och dess underordnade. Detta beteende implementeras av implementeringar av `SitemapGenerator` gränssnitt och kan utökas genom att man lägger till alternativa implementeringar. Men eftersom hur ofta XML-webbplatskartorna ska genereras om beror på arbetsflödena och arbetsbelastningarna för att skapa innehåll, levereras inte produkten `SitemapScheduler` konfiguration. Detta gör att funktionen effektivt kan välja att delta.
 
-För att aktivera bakgrundsjobbet som genererar XML-platskartorna måste en `SitemapScheduler` konfigureras. Det gör du genom att skapa en OSGI-konfiguration för PID `org.apache.sling.sitemap.impl.SitemapScheduler`. Schemaläggaruttrycket `0 0 0 * * ?` kan användas som startpunkt för att återskapa alla XML-platskartor en gång om dagen vid midnatt.
+För att aktivera bakgrundsjobbet som genererar XML-platskartorna är `SitemapScheduler` måste konfigureras. Om du vill göra det skapar du en OSGI-konfiguration för PID `org.apache.sling.sitemap.impl.SitemapScheduler`. Schemaläggarens uttryck `0 0 0 * * ?` kan användas som utgångspunkt för att generera om alla XML-webbplatskartor en gång om dagen vid midnatt.
 
 ![Apache Sling Sitemap - Schemaläggare](assets/sling-sitemap-scheduler.png)
 
-Jobbet för att skapa platskartor kan köras både på instanser för författare och publiceringsnivåer. I de flesta fall rekommenderas att du kör genereringen på instanser av publiceringsskikt, eftersom det bara går att generera korrekta kanoniska URL:er (på grund av att reglerna för delningskoppling för resurser vanligtvis bara finns på instanser av publiceringsskikt). Det går dock att plugin-program för en anpassad implementering av den externaliseringsmekanism som används för att generera kanoniska URL:er genom att implementera gränssnittet `SitemapLinkExternalizer`. Om en anpassad implementering kan generera de kanoniska URL:erna för en platskarta på författarskiktsinstanserna, kan `SitemapScheduler` konfigureras för författarens körningsläge och arbetsbelastningen för generering av XML-platskarta kan fördelas över författartjänstklustrets instanser. I det här scenariot måste särskild försiktighet användas för att hantera innehåll som ännu inte har publicerats, som har ändrats eller som bara är synligt för en begränsad grupp användare.
+Jobbet för att skapa platskartor kan köras både på instanser för författare och publiceringsnivåer. I de flesta fall rekommenderas att du kör genereringen på instanser av publiceringsskikt, eftersom rätt kanoniska URL:er bara kan genereras där (på grund av att reglerna för Sling Resource Mapping vanligtvis bara finns på instanser av publiceringsskikt). Det är dock möjligt att plugin-program för en anpassad implementering av den externaliseringsmekanism som används för att generera kanoniska URL:er genom att implementera [SitemapLinkExternalizer](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/externalizer/SitemapLinkExternalizer.html) gränssnitt. Om en anpassad implementering kan generera de kanoniska URL:erna för en platskarta på författarskiktsinstansen, `SitemapScheduler` kan konfigureras för utvecklarens körningsläge och arbetsbelastningen för generering av XML-platskarta kan fördelas mellan författartjänstklustrets instanser. I det här scenariot måste särskild försiktighet ägnas åt hantering av innehåll som ännu inte har publicerats, som har ändrats eller som bara är synligt för en begränsad grupp användare.
 
-Utöver tilläggen Apache Sling Sitemap [SitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/SitemapGenerator.html) och [SitemapLinkExternalizer](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/common/SitemapLinkExternalizer.html) som beskrivs ovan, och även [SitemapExtensionProvider](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/builder/SitemapExtensionProvider.html), definierar den AEM specifika implementeringen även ett par tilläggspunkter:
+AEM Sites innehåller en standardimplementering av en `SitemapGenerator` som går igenom ett träd med sidor för att generera en platskarta. Den är förkonfigurerad så att bara kanoniska URL:er för en webbplats och eventuella språkalternativ genereras, om sådana finns. Den kan även konfigureras så att den innehåller det senaste ändringsdatumet för en sida vid behov. Aktivera _Lägg till senast ändrad_ alternativ för _Adobe AEM SEO - Generator för sidträdsschema_ Konfiguration och val _Senast ändrad källa_. När platskartor genereras på publiceringsnivån bör du använda `cq:lastModified` datum.
 
-* Ett [SiteMapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) kan implementeras för att ta bort sidor från XML-webbplatskartor som genererats av AEM Sites specifika sidträdsgenerator
-* Ett [SiteMapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) eller [SiteMapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) kan implementeras för att filtrera bort produkter eller kategorier från XML-webbplatskartor som genereras av [Commerce Integration Frameworks](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)-specifika webbplatskartgeneratorer.
+![Adobe AEM SEO - Konfiguration av platskarta för sidträd](assets/sling-sitemap-pagetreegenerator.png)
 
-Dessutom kan de funktioner som implementeras för XML-webbplatskartor även användas i olika fall, t.ex. för att lägga till den kanoniska länken eller språkvarianterna på en sidas huvud. Mer information finns i [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html)-gränssnittet.
+För att begränsa innehållet i en webbplatskarta kan följande gränssnitt implementeras vid behov:
+
+* den [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) kan implementeras för att dölja sidor från XML-webbplatskartor som genereras av den AEM Sites-specifika webbplatskartegeneratorn
+* a [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) eller [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) kan implementeras för att filtrera bort produkter eller kategorier från XML-webbplatskartor som genereras av [Ramverk för handelsintegrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html) specifika generatorer för webbplatskartor
+
+Om standardimplementeringarna inte fungerar med ett visst användningsfall eller om tilläggspunkterna inte är tillräckligt flexibla, kan en anpassad `SitemapGenerator` kan implementeras för att få full kontroll över innehållet i en genererad webbplatskarta. I följande exempel visas hur detta kan göras med hjälp av standardimplementeringens logik för AEM Sites. Den använder [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) som en startpunkt för att gå igenom ett sidträd:
+
+```
+import java.util.Optional;
+
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.sitemap.SitemapException;
+import org.apache.sling.sitemap.builder.Sitemap;
+import org.apache.sling.sitemap.builder.Url;
+import org.apache.sling.sitemap.spi.common.SitemapLinkExternalizer;
+import org.apache.sling.sitemap.spi.generator.ResourceTreeSitemapGenerator;
+import org.apache.sling.sitemap.spi.generator.SitemapGenerator;
+import org.jetbrains.annotations.NotNull;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.adobe.aem.wcm.seo.sitemap.PageTreeSitemapGenerator;
+import com.day.cq.wcm.api.Page;
+
+@Component(
+    service = SitemapGenerator.class,
+    property = { "service.ranking:Integer=20" }
+)
+public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
+
+    private static final Logger LOG = LoggerFactory.getLogger(SitemapGeneratorImpl.class);
+
+    @Reference
+    private SitemapLinkExternalizer externalizer;
+    @Reference
+    private PageTreeSitemapGenerator defaultGenerator;
+
+    @Override
+    protected void addResource(@NotNull String name, @NotNull Sitemap sitemap, Resource resource) throws SitemapException {
+        Page page = resource.adaptTo(Page.class);
+        if (page == null) {
+            LOG.debug("Skipping resource at {}: not a page", resource.getPath());
+            return;
+        }
+        String location = externalizer.externalize(resource);
+        Url url = sitemap.addUrl(location + ".html");
+        // add any additional content to the Url like lastmod, change frequency, etc
+    }
+
+    @Override
+    protected final boolean shouldFollow(@NotNull Resource resource) {
+        return super.shouldFollow(resource)
+            && Optional.ofNullable(resource.adaptTo(Page.class)).map(this::shouldFollow).orElse(Boolean.TRUE);
+    }
+
+    private boolean shouldFollow(Page page) {
+        // add additional conditions to stop traversing some pages
+        return !defaultGenerator.isProtected(page);
+    }
+
+    @Override
+    protected final boolean shouldInclude(@NotNull Resource resource) {
+        return super.shouldInclude(resource)
+            && Optional.ofNullable(resource.adaptTo(Page.class)).map(this::shouldInclude).orElse(Boolean.FALSE);
+    }
+
+    private boolean shouldInclude(Page page) {
+        // add additional conditions to stop including some pages
+        return defaultGenerator.isPublished(page)
+            && !defaultGenerator.isNoIndex(page)
+            && !defaultGenerator.isRedirect(page)
+            && !defaultGenerator.isProtected(page);
+    }
+}
+```
+
+Dessutom kan de funktioner som implementeras för XML-webbplatskartor även användas i olika fall, t.ex. för att lägga till den kanoniska länken eller språkvarianterna på en sidas huvud. Se [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html) för mer information.
 
 ### Skapa 301-omdirigeringar för äldre URL:er {#creating-redirects-for-legacy-urls}
 
