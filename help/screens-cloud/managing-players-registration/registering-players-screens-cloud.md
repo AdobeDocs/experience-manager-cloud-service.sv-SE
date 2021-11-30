@@ -2,7 +2,7 @@
 title: Registrerar spelare på skärmar as a Cloud Service
 description: Den här sidan beskriver hur du registrerar spelare på skärmar as a Cloud Service.
 exl-id: 1a0d6b22-71b1-4f3c-acaa-82d8d9c0f81a
-source-git-commit: 489cc9963910ba9f94d30906127beb75f9ad37df
+source-git-commit: fb82970154fa37e3b3d1591a2e25989853ec6b90
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 1%
@@ -63,9 +63,9 @@ Följ stegen nedan för att registrera spelaren:
 
    ![bild](/help/screens-cloud/assets/player/register-player6.png)
 
->[!IMPORTANT]
->**Rekommendation om bästa praxis för säkerhet vid användning av registreringskod
->Det bästa sättet är att begränsa användningen av registreringskoden. Om en registreringskod har komprometterats men har en gräns på 100 registreringar kan angriparen bara registrera upp till det numret, men inte mer. Du kan alltid uppdatera användningsgränsen när registreringskoden har skapats och vissa av kundens spelare har redan registrerats. Om kunden observerar ovanlig registreringsaktivitet för en viss registreringskod kan de sänka gränsen i realtid medan de undersöker och kan öka antalet tillbaka om det var ett falskt larm, utan att det påverkar de spelare som redan är registrerade.
+   >[!IMPORTANT]
+   >**Rekommendationer om bästa praxis för säkerhet vid användning av registreringskod**
+   >Det bästa sättet är att begränsa användningen av registreringskoden. Om en registreringskod har komprometterats men har en gräns på 100 registreringar kan angriparen bara registrera upp till det numret, men inte mer. Du kan alltid uppdatera användningsgränsen när registreringskoden har skapats och vissa av kundens spelare har redan registrerats. Om kunden observerar ovanlig registreringsaktivitet för en viss registreringskod kan de sänka gränsen i realtid medan de undersöker och kan öka antalet tillbaka om det var ett falskt larm, utan att det påverkar de spelare som redan är registrerade.
 
 
 ## What&#39;s Next {#whats-next}
