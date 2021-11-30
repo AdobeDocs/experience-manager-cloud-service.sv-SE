@@ -2,9 +2,9 @@
 title: Lägga till en TXT-post
 description: Lägga till ett anpassat domännamn
 exl-id: d441de29-af41-4d3e-9155-531af9702841
-source-git-commit: 12849a79975f70dafd59f4b6ebf4b4ff24145cbf
+source-git-commit: f7688559a791281d0e157dd1d48a5f63568914f5
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Se exemplen i tabellen nedan.
 
 | Domän | Namn | TXT-värde |
 |--- |--- |---|
-| `example.com` | `_aemverification.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. Exempel:<br>*adobe-aem-verification=example.com/[program]/[env]/..* |
-| `www.example.com` | `_aemverification.www.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. Exempel:<br>*adobe-aem-verification=www.example.com/[program]/[env]/..* |
+| `example.com` | `_aemverification.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. Till exempel:<br>*adobe-aem-verification=<br>example.com/[program]/[env]/..* |
+| `www.example.com` | `_aemverification.www.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. Till exempel:<br>*adobe-aem-verification=<br>www.example.com/[program]/[env]/..* |
 
 När du är klar kan du verifiera resultatet genom att köra: `dig _aemverification.[yourdomainname] -t txt`.
 Det förväntade resultatet ska visa det TXT-värde som anges i användargränssnittet i molnhanteraren.

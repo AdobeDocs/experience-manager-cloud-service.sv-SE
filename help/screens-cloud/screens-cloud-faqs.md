@@ -2,9 +2,9 @@
 title: Vanliga frågor och svar om skärmar
 description: På den här sidan beskrivs as a Cloud Service frågor och svar för skärmar.
 exl-id: 93f2144c-0e64-4012-88c6-86972d8cad9f
-source-git-commit: 41f057fa2a52068aa6dce97f1a445e072ce2a0af
+source-git-commit: 489cc9963910ba9f94d30906127beb75f9ad37df
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -48,3 +48,7 @@ Vi rekommenderar att du utnyttjar AEM Screens cachningsfunktioner, men om du beh
 ```
 Header set Content-Security-Policy "frame-ancestors ‘self’ file: localhost:*;"
 ```
+
+## Hur används registreringskodsgränsen?
+
+Det bästa sättet är att begränsa användningen av registreringskoden. Om en registreringskod har komprometterats men har en gräns på 100 registreringar kan angriparen bara registrera upp till det numret, men inte mer. Du kan alltid uppdatera användningsgränsen när registreringskoden har skapats och vissa av kundens spelare har redan registrerats. Om kunden observerar ovanlig registreringsaktivitet för en viss registreringskod kan de sänka gränsen i realtid medan de undersöker och kan öka antalet tillbaka om det var ett falskt larm, utan att det påverkar de spelare som redan är registrerade.
