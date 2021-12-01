@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: bfd049ceb1d218df69cd387e0ab370575d8ea4d5
+source-git-commit: 510e71a3bbfb231182ff525415f1e6967723096f
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2183'
 ht-degree: 0%
 
 ---
@@ -159,7 +159,7 @@ Så här konfigurerar du verktyget:
    * [!UICONTROL Delete source file after import]: Välj det här alternativet om du vill ta bort originalfilerna från källdatalagret efter att filerna har importerats till [!DNL Experience Manager].
    * [!UICONTROL Import Mode]: Välj Hoppa över, Ersätt eller Skapa version. Hoppa över är standardläget och i det här läget hoppar användaren över att importera en resurs om den redan finns. Se innebörden i [ersätta och skapa versionsalternativ](#handling-upload-existing-file).
    * [!UICONTROL Assets Target Folder]: Importera mapp i DAM där resurser ska importeras. Till exempel, `/content/dam/imported_assets`
-   * [!UICONTROL Metadata File]: Den metadatafil som ska importeras, i CSV-format. Du anger den här CSV-filen på blobbplatsen för källan och refererar till sökvägen i konfigurationen för verktyget för massinmatning.
+   * [!UICONTROL Metadata File]: Den metadatafil som ska importeras, i CSV-format. Ange CSV-filen på källblobbens plats och referera till sökvägen när verktyget Massingestor konfigureras. CSV-filformatet som refereras i det här fältet är detsamma som CSV-filformatet när du [Importera och exportera metadata för resurser i grupp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/metadata-import-export.html). Om du väljer **Ta bort källfil efter import** -alternativ, filtrera CSV-filer med **Exkludera** eller **Inkludera MIME-typ** eller **Filtrera efter sökväg/fil** fält. Du kan använda ett reguljärt uttryck för att filtrera CSV-filer i dessa fält.
 
 1. Du kan ta bort, ändra, köra och göra mer med dina inmatningskonfigurationer. När du väljer en import av flera lager är följande alternativ tillgängliga i verktygsfältet.
 
