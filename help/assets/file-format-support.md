@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 6c17b048631a7f61305ec4f0a4f84c4b0577aec0
+source-git-commit: 2c6bf90f51628fb1580a2ad287cfb1500063abc0
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '831'
 ht-degree: 5%
 
 ---
@@ -208,10 +208,10 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
 | M4V | Apple iTunes | H264/AVC | - |
 | MKV | Matroska | H264/AVC | - |
-| MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
+| MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
 | MP4 | MPEG-4 | H264/AVC (alla profiler) | - |
 | MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | - |
-| MXF |  | Media eXchange Format.<br>Apple ProRes422 | - |
+| MXF | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
 | OGV, OGG | Ogg | Theora, VP3, Dirac | - |
 | WebM | WebM | Google VP8 | - |
 | WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft Screen (MSS2), Microsoft Photo Story (WVP2) |
