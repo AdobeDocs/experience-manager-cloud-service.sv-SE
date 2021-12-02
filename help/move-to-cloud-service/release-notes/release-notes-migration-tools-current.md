@@ -1,31 +1,36 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.11.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.11.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.12.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.12.0
 feature: Release Information
 exl-id: null
-source-git-commit: 43b56f074c0e09074c6745c2384e9bfd6b2eebb2
+source-git-commit: 3bd73869fb04c82fb908a5530728040c7e573eb0
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 3%
+source-wordcount: '163'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.11.0 {#release-notes}
+# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.12.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2021.11.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2021.12.0.
 
 >[!NOTE]
 >Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
-## Content Transfer Tool {#ctt-release}
+## Best Practices Analyzer {#bpa-release}
 
-### Releasedatum {#release-date-ctt}
+### Releasedatum {#release-date-bpa}
 
-Releasedatum för innehållsöverföringsverktyget v1.7.2 är 1 november 2021.
+Releasedatum för Best Practices Analyzer v2.1.22 är 1 december 2021.
 
-### Nyheter {#what-is-new-ctt}
+### Nyheter {#what-is-new-bpa}
 
-* Stöd för ett valfritt [förkopia](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) steg som lagts till för att användas med verktyget Innehållsöverföring när AEM är konfigurerad att använda File Data Store för att avsevärt snabba upp extraheringsfasen.
+* Möjlighet att upptäcka och rapportera vilken version av ACS-kommandon som används.
+* Möjlighet att identifiera och rapportera antalet användare och undergrupper i en grupp.
+* Möjlighet att identifiera och rapportera om egenskapsvärden för noder i MongoDB som överstiger 16 MB.
 
-* Ytterligare beskrivande meddelanden som lagts till i inmatningsfasen i användargränssnittet för verktyget Innehållsöverföring för att ange när indexering och mongo-återställning pågår.
+### Felkorrigeringar {#bug-fixes-bpa}
+
+* Identifieringen av Foundation-komponenter förfinades för att minska falska negativ.
+* För AEM Forms-kunder gäller BPA-meddelanden `EMAIL_PDF_SUBMIT_ACTION` som inte är tillgänglig på AEM as a Cloud Service har åtgärdats.
