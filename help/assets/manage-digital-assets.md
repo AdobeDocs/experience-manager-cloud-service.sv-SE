@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: 2298aa1a3fbfbaa21d3ce81323221d68c965f7fe
+source-git-commit: 764ddc2621d8da3323af4eb037ec5b92e1214503
 workflow-type: tm+mt
-source-wordcount: '4118'
+source-wordcount: '4137'
 ht-degree: 10%
 
 ---
@@ -23,15 +23,15 @@ När du organiserar en samling resurser, till exempel, alla `Nature` kan du skap
 
 >[!NOTE]
 >
->* Dela en resursmapp av typen `sling:OrderedFolder`, stöds inte vid delning till Marketing Cloud. Om du vill dela en mapp ska du inte markera [!UICONTROL Ordered] när du skapar en mapp.
->* Experience Manager tillåter inte att `subassets` ord som namnet på en mapp. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser
+>* Sharing an Assets folder of the type `sling:OrderedFolder`, is not supported when sharing to Marketing Cloud. If you want to share a folder, do not select [!UICONTROL Ordered] when creating a folder.
+>* Experience Manager does not allow using `subassets` word as the name of a folder. It is a keyword reserved for node that contain subassets for compound assets
 
 
-1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp. Klicka på **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
-1. I **[!UICONTROL Title]** anger du ett mappnamn. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
-1. Klicka på **[!UICONTROL Create]**. Mappen visas i mappen med digitala resurser.
+1. Navigate to the place in your digital assets folder where you want to create a new folder. Klicka på **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
+1. I **[!UICONTROL Title]** anger du ett mappnamn. Som standard använder DAM den titel som du angav som mappnamn. Once the folder is created, you can override the default and specify another folder name.
+1. Klicka på **[!UICONTROL Create]**. Your folder is displayed in the digital assets folder.
 
-Följande (blankstegsavgränsad lista med) tecken stöds inte:
+The following (space-separated list of) characters are not supported:
 
 * Namnet på en resursfil får inte innehålla något av följande tecken: `* / : [ \\ ] | # % { } ? &`
 * Namnet på en resursmapp får inte innehålla något av följande tecken: `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
@@ -58,6 +58,10 @@ Du kan lägga till konfigurationsfilen `/apps/example/config.author/com.adobe.cq
 När den är aktiverad skickar Experience Manager meddelanden om duplicerade resurser till Inkorgen Experience Manager. Det är ett aggregerat resultat för flera dubbletter. Användarna kan välja att ta bort resurserna baserat på resultatet.
 
 ![Inkorgsmeddelande för duplicerade resurser](assets/duplicate-detect-inbox-notification.png)
+
+>[!NOTE]
+>
+>När du överför resurser till databasen upptäcker Experience Manager duplicering och meddelar dig om de första 100 duplicerade resurserna.
 
 ## Förhandsgranska resurser {#previewing-assets}
 
@@ -138,7 +142,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >Om du använder [!UICONTROL Copy] kan du bara kopiera en resurs åt gången.
+   >If you use the [!UICONTROL Copy] quick action, you can only copy one asset at a time.
 
 1. Navigera till den plats där du vill kopiera resurserna.
 
@@ -152,11 +156,11 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Paste]** ikonen är tillgänglig i verktygsfältet tills inklistringen är klar.
+   >The **[!UICONTROL Paste]** icon is available in the toolbar until the paste operation is completed.
 
-### Flytta eller byta namn på resurser {#moving-or-renaming-assets}
+### Move or rename assets {#moving-or-renaming-assets}
 
-1. Navigera till platsen för resursen som du vill flytta.
+1. Navigate to the location of the asset you want to move.
 
 1. Markera resursen och tryck/klicka på **[!UICONTROL Move]** icon ![move_icon](assets/move_icon.png) i verktygsfältet.
 
@@ -257,18 +261,18 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
    * **[!UICONTROL Cancel]** för att stoppa åtgärden
    * **[!UICONTROL Delete]** för att bekräfta åtgärden:
 
-      * Om resursen inte har några referenser tas resursen bort.
-      * Om resursen har referenser visas ett felmeddelande om att **[!UICONTROL One or more assets are referenced]**. Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
+      * If the asset has no references, the asset is deleted.
+      * If the asset has references, an error-message informs you that **[!UICONTROL One or more assets are referenced]**. Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
 
    >[!NOTE]
    >
-   >Du måste ha behörighet att ta bort en resurs för att den ska kunna tas bort. Om du bara har ändringsbehörighet kan du bara redigera metadata för resursen och lägga till anteckningar till resursen. Du kan dock inte ta bort resursen eller dess metadata.
+   >Du måste ha behörighet att ta bort en resurs för att den ska kunna tas bort. Om du bara har ändringsbehörighet kan du bara redigera metadata för resursen och lägga till anteckningar till resursen. However, you cannot delete the asset or its metadata.
 
    >[!NOTE]
    >
-   >Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Du kan inte tillåta borttagning av refererade resurser eftersom det orsakar brutna länkar. Inaktivera Tvinga borttagningsknappen med hjälp av en övertäckning.
+   >Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. You can disallow deletion of referenced assets as it causes broken links. Inaktivera Tvinga borttagningsknappen med hjälp av en övertäckning.
 
-## Hämta resurser {#download-assets}
+## Download assets {#download-assets}
 
 Se [hämta resurser från [!DNL Experience Manager]](/help/assets/download-assets-from-aem.md).
 
@@ -402,11 +406,11 @@ På tidslinjen kan du visa olika händelser för ett markerat objekt, t.ex. akti
 >
 >Tidslinjen innehåller flera [alternativ som är specifika för innehållsfragment](content-fragments/content-fragments.md).
 
-## Anteckna resurser {#annotating}
+## Annotate assets {#annotating}
 
-Anteckningar är kommentarer eller förklarande kommentarer som läggs till i bilder eller videoklipp. Anteckningar ger marknadsförarna möjlighet att samarbeta och lämna feedback om resurser.
+Annotations are comments or explanatory notes added to images or videos. Annotations provide marketers the ability to collaborate and leave feedback about assets.
 
-Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Videoformat som Assets stöder beror på webbläsaren.
+Video annotations are only supported on browsers with HTML5-compatible video formats. Videoformat som Assets stöder beror på webbläsaren.
 
 >[!NOTE]
 >
