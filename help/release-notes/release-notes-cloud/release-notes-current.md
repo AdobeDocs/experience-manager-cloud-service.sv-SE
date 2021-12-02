@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: c4d664450244394a65ddbc8097731d913db59091
+source-git-commit: 1db35798a00975237b6b83d5c4ce69a31145b4bf
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1525'
 ht-degree: 0%
 
 ---
@@ -187,3 +187,21 @@ Releasedatum för Best Practices Analyzer v2.1.20 är 5 oktober 2021.
 * Möjlighet att identifiera och rapportera om den totala indexstorleken.
 
 * Möjlighet att upptäcka och rapportera resurser som saknar sin ursprungliga återgivning.
+
+
+## Best Practices Analyzer {#bpa-release}
+
+### Releasedatum {#release-date-bpa}
+
+Releasedatum för Best Practices Analyzer v2.1.22 är 1 december 2021.
+
+### Nyheter {#what-is-new-bpa}
+
+* Möjlighet att upptäcka och rapportera vilken version av ACS-kommandon som används.
+* Möjlighet att identifiera och rapportera antalet användare och undergrupper i en grupp.
+* Möjlighet att identifiera och rapportera om egenskapsvärden för noder i MongoDB som överstiger 16 MB.
+
+### Felkorrigeringar {#bug-fixes-bpa}
+
+* Identifieringen av Foundation-komponenter förfinades för att minska falska negativ.
+* För AEM Forms-kunder gäller BPA-meddelanden `EMAIL_PDF_SUBMIT_ACTION` som inte är tillgänglig på AEM as a Cloud Service har åtgärdats.

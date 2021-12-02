@@ -2,8 +2,7 @@
 title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.10.0
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.11.0
 feature: Release Information
-exl-id: null
-source-git-commit: 43b56f074c0e09074c6745c2384e9bfd6b2eebb2
+source-git-commit: 587258a831fb5cd3b3a23d1f891db8c2254a8d6b
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 2%
