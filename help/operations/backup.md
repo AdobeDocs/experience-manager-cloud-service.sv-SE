@@ -2,14 +2,14 @@
 title: Säkerhetskopiera och återställ i AEM as a Cloud Service
 description: Säkerhetskopiera och återställ i AEM as a Cloud Service
 exl-id: 469fb1a1-7426-4379-9fe3-f5b0ebf64d74
-source-git-commit: 706d33e4a07eb95c578996ffe8989fafeebaa06c
+source-git-commit: 7b4eaa18b57ea6d18f517ffd0e1934d6c5e8b2f8
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
 
-# Säkerhetskopiera och återställ i AEM as a Cloud Service
+# Säkerhetskopiera och återställ i AEM as a Cloud Service {#backup-aemaacs}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_backuprestore"
@@ -23,7 +23,7 @@ Om en kunds distribution, dvs. den distribuerade programkoden antingen är trasi
 >
 >Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll. De senaste data mellan tidpunkten för den återställda säkerhetskopieringen och den aktuella kommer att gå förlorade. Mellanlagring återställs också till den gamla versionen.
 
-## Användning
+## Användning {#how-to-use}
 
 Kunderna ska lämna in en supportanmälan som beskriver det problem som uppstår. Detta kommer att leda till en utredning av Adobe support, som kommer att avgöra om en återställning är nödvändig.
 
@@ -41,3 +41,9 @@ Efter en återställning uppdateras den AEM versionen till den senaste.
 >[!CAUTION]
 >
 >Data från borttagna miljöer går förlorade permanent och kan inte återställas.
+
+## Säkerhetskopiering offline {#offsite-backup}
+
+Även om regelbundna säkerhetskopieringar täcker risken för oavsiktliga borttagningar eller tekniska fel i AEM Cloud Services, måste även riskerna som kan uppstå om en region slutar fungera täckas. Förutom tillgänglighet är den största risken i sådana dataområdesavbrott i första hand en dataförlust.
+AEM as a Cloud Service täcker denna risk som standard för alla AEM produktionsmiljöer genom att kontinuerligt kopiera hela AEM till en fjärrregion och göra den tillgänglig för återställning under en period av tre månader. Den här funktionen kallas för säkerhetskopiering offline.
+Återskapandet av AEM Cloud-tjänster för scen- och produktionsmiljöer utförs av AEM Service Reliable Engineering i händelse av dataregionala avbrott.
