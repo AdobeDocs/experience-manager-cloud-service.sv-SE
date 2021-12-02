@@ -2,9 +2,9 @@
 title: UI-testning - Cloud Services
 description: UI-testning - Cloud Services
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 02db915e114c2af8329eaddbb868045944a3574d
+source-git-commit: 710f156e606902ab5548169661d4a82c8cf4f819
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,10 @@ För att få sina gränssnittstester skapade och körda måste kunderna&quot;anm
 
 Om detta inte finns i `tar.gz` fil, UI-testerna byggs och körningar hoppas över
 
-Lägg till `testing.properties` i den inbyggda artefakten lägger du till en `include` programsats in `assembly-ui-test-docker-context.xml` (i undermodulen för gränssnittstester). Om projektet inte innehåller raden måste du redigera filen för att kunna välja UI-testning. Om det finns en rad i filen som anger att du inte ska redigera, ska du bortse från den råden.
+Lägg till `testing.properties` i den inbyggda artefakten lägger du till en `include` programsats in `assembly-ui-test-docker-context.xml` (i undermodulen för gränssnittstester).
+
+>[!NOTE]
+>Om projektet inte innehåller raden måste du redigera filen för att kunna välja UI-testning. Om det finns en rad i filen som anger att du inte ska redigera, ska du bortse från den råden.
 
     &quot;
     [...]
@@ -181,7 +184,7 @@ Följande miljövariabler skickas till Docker-bilden vid körning.
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess:
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
 2. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna slutligen börja.
@@ -194,5 +197,5 @@ Docker-bilden måste generera testrapporter i JUnit XML-format och spara dem i d
 
 Testerna ibland måste överföra filer till det program som testas. För att behålla distributionen av Selenium i förhållande till dina tester är det inte möjligt att överföra en resurs direkt till Selenium. I stället överförs en fil genom några steg:
 
-1. Överför filen på den URL som anges av `UPLOAD_URL` miljövariabel. Överföringen måste utföras i en POST med ett multipart-formulär. Multipart-formuläret måste ha ett enda filfält. Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`. Läs dokumentationen och biblioteken för programmeringsspråket som används i Docker-bilden för att få reda på hur en sådan HTTP-begäran ska utföras.
+1. Överför filen på den URL som anges av `UPLOAD_URL` systemvariabel. Överföringen måste utföras i en POST med ett multipart-formulär. Multipart-formuläret måste ha ett enda filfält. Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`. Läs dokumentationen och biblioteken för programmeringsspråket som används i Docker-bilden för att få reda på hur en sådan HTTP-begäran ska utföras.
 2. Om överföringen lyckas returnerar begäran en `200 OK` typsvar `text/plain`. Svarets innehåll är ett ogenomskinligt filhandtag. Du kan använda det här handtaget i stället för en filsökväg i en `<input>` -element för att testa filöverföringar i programmet.
