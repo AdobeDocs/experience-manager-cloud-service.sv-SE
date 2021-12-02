@@ -2,9 +2,9 @@
 title: UI-testning - Cloud Services
 description: UI-testning - Cloud Services
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 778fa187df675eada645c73911e6f02e8a112753
+source-git-commit: 02db915e114c2af8329eaddbb868045944a3574d
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1617'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ För att få sina gränssnittstester skapade och körda måste kunderna&quot;anm
 
 Om detta inte finns i `tar.gz` fil, UI-testerna byggs och körningar hoppas över
 
-Lägg till `testing.properties` i den inbyggda artefakten lägger du till en `include` programsats in `assembly-ui-test-docker-context.xml` -fil (i undermodulen UI-tester):
+Lägg till `testing.properties` i den inbyggda artefakten lägger du till en `include` programsats in `assembly-ui-test-docker-context.xml` (i undermodulen för gränssnittstester). Om projektet inte innehåller raden måste du redigera filen för att kunna välja UI-testning. Om det finns en rad i filen som anger att du inte ska redigera, ska du bortse från den råden.
 
     &quot;
     [...]
@@ -181,7 +181,7 @@ Följande miljövariabler skickas till Docker-bilden vid körning.
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess:
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
 2. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna slutligen börja.

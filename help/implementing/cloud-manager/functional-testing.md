@@ -2,7 +2,7 @@
 title: Funktionstestning - Cloud Services
 description: Funktionstestning - Cloud Services
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: 778fa187df675eada645c73911e6f02e8a112753
+source-git-commit: 02db915e114c2af8329eaddbb868045944a3574d
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 3%
@@ -20,9 +20,9 @@ ht-degree: 3%
 Funktionstestning indelas i tre typer:
 
 
-* Funktionstestning av produkten
-* Anpassad funktionstestning
-* Testning av anpassat användargränssnitt
+* [Funktionstestning av produkten](#product-functional-testing)
+* [Anpassad funktionstestning](#custom-functional-testing)
+* [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing)
 
 ## Funktionstestning av produkten {#product-functional-testing}
 
