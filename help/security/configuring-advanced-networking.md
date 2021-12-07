@@ -1,7 +1,7 @@
 ---
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
-source-git-commit: 2f9ba938d31c289201785de24aca2d617ab9dfca
+source-git-commit: fa11beb1dfdd8dd2a1a5d49ece059f5894c835be
 workflow-type: tm+mt
 source-wordcount: '2836'
 ht-degree: 0%
@@ -50,7 +50,7 @@ När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter inn
 
 Om konfigurationen för flexibel portutgångar som omfattar programmet är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` Slutpunkten måste anropas per miljö för att nätverk på miljönivå ska kunna aktiveras och för att eventuella regler för portvidarebefordran ska kunna deklareras. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
 
-Reglerna för portvidarebefordran ska deklareras för alla portar utom 80/443 genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
+Reglerna för portvidarebefordran bör deklareras för alla portar utom 80/443 genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
 
 API:t bör svara på bara några sekunder, vilket anger uppdateringsstatus och efter cirka 10 minuter, slutpunktens `GET` -metoden ska ange att avancerade nätverk är aktiverade.
 
@@ -159,7 +159,7 @@ Tabellen nedan beskriver trafikdirigering:
 AEM Cloud Service Apache/Dispatcher-skiktets `mod_proxy` -direktivet kan konfigureras med hjälp av de egenskaper som beskrivs ovan.
 
 ```
-ProxyRemote "http://example.com" "http://${AEM_HTTP_PROXY_HOST}:${AEM_HTTP_PROXY_PORT}"
+ProxyRemote "http://example.com" "http://${AEM_HTTP_PROXY_HOST}:3128"
 ProxyPass "/somepath" "http://example.com"
 ProxyPassReverse "/somepath" "http://example.com"
 ```
@@ -167,7 +167,7 @@ ProxyPassReverse "/somepath" "http://example.com"
 ```
 SSLProxyEngine on //needed for https backends
  
-ProxyRemote "https://example.com:8443" "http://${AEM_HTTPS_PROXY_HOST}:${AEM_HTTPS_PROXY_PORT}"
+ProxyRemote "https://example.com:8443" "http://${AEM_HTTPS_PROXY_HOST}:3128"
 ProxyPass "/somepath" "https://example.com:8443"
 ProxyPassReverse "/somepath" "https://example.com:8443"
 ```
