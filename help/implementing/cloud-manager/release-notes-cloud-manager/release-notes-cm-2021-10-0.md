@@ -2,8 +2,7 @@
 title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.10.0
 description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.10.0
 feature: Release Information
-exl-id: null
-source-git-commit: c6c1d3bef85afda0ff86ec073d0ac91ad532c93b
+source-git-commit: 14042b45b14f2c5575fc96979579bb0aaffc9a17
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
