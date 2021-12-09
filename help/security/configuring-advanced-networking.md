@@ -1,9 +1,9 @@
 ---
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
-source-git-commit: fa11beb1dfdd8dd2a1a5d49ece059f5894c835be
+source-git-commit: 76cc8f5ecac4fc8e1663c1500433a9e3eb1485df
 workflow-type: tm+mt
-source-wordcount: '2836'
+source-wordcount: '2867'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Konfigurera avancerat nätverk för AEM as a Cloud Service {#configuring-advanced-networking}
 
 Den här artikeln beskriver de olika avancerade nätverksfunktionerna i AEM as a Cloud Service, inklusive självbetjäningsprovisionering av VPN, icke-standardportar och dedikerade IP-adresser.
+
+>[!INFO]
+>
+>Du kan även hitta en serie artiklar som är utformade för att hjälpa dig igenom de avancerade nätverksalternativen i det här [plats](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html?lang=en).
 
 ## Översikt {#overview}
 
