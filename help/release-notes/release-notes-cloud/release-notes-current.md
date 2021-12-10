@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 1db35798a00975237b6b83d5c4ce69a31145b4bf
+source-git-commit: 4efac10fe32ef0aa0ab5a4de3f16c3f0dbf91551
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
@@ -205,3 +205,14 @@ Releasedatum för Best Practices Analyzer v2.1.22 är 1 december 2021.
 
 * Identifieringen av Foundation-komponenter förfinades för att minska falska negativ.
 * För AEM Forms-kunder gäller BPA-meddelanden `EMAIL_PDF_SUBMIT_ACTION` som inte är tillgänglig på AEM as a Cloud Service har åtgärdats.
+
+## Content Transfer Tool {#ctt-release}
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v1.7.10 är 8 december 2021.
+
+### Nyheter {#what-is-new-ctt}
+
+* Växla som lagts till i inmatningsfasen i verktyget Innehållsöverföring så att användarna kan inaktivera [förkopia](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) under intag. För optimal överföringshastighet bör pre-copy under intag inaktiveras för små migreringsuppsättningar eller om endast ett fåtal bloggar har lagts till sedan det senaste intaget.
+* Användarmappning har uppdaterats för att använda ett förbättrat API för användarhantering som gör att 2 000 användare kan hämtas samtidigt, vilket avsevärt förbättrar prestandan.
