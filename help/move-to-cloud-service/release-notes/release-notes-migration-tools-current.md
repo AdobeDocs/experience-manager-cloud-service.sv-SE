@@ -2,10 +2,10 @@
 title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.12.0
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2021.12.0
 feature: Release Information
-source-git-commit: 587258a831fb5cd3b3a23d1f891db8c2254a8d6b
+source-git-commit: 58dcf083ebf4cd2546213ba574f0f9c547aef008
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 1%
+source-wordcount: '257'
+ht-degree: 2%
 
 ---
 
@@ -33,3 +33,15 @@ Releasedatum för Best Practices Analyzer v2.1.22 är 1 december 2021.
 
 * Identifieringen av Foundation-komponenter förfinades för att minska falska negativ.
 * För AEM Forms-kunder gäller BPA-meddelanden `EMAIL_PDF_SUBMIT_ACTION` som inte är tillgänglig på AEM as a Cloud Service har åtgärdats.
+
+
+## Content Transfer Tool {#ctt-release}
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v1.7.10 är 8 december 2021.
+
+### Nyheter {#what-is-new-ctt}
+
+* Växla som lagts till i inmatningsfasen i verktyget Innehållsöverföring så att användarna kan inaktivera [förkopia](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) under intag. För optimal överföringshastighet bör pre-copy under intag inaktiveras för små migreringsuppsättningar eller om endast ett fåtal bloggar har lagts till sedan det senaste intaget.
+* Användarmappning har uppdaterats för att använda ett förbättrat API för användarhantering som gör att 2 000 användare kan hämtas samtidigt, vilket avsevärt förbättrar prestandan.
