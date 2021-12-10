@@ -4,10 +4,12 @@ product: Adobe Experience Manager
 sub-product: Adobe Experience Manager as a Cloud Service
 solution-title: Experience Cloud
 feature: Release Information
+user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
+user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: aaeecc897157b08686a741ed7c2143a443fb2633
 workflow-type: tm+mt
-source-wordcount: '3336'
+source-wordcount: '3354'
 ht-degree: 25%
 
 ---
