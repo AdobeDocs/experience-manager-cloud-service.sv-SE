@@ -2,10 +2,10 @@
 title: AEM innehåll och handel
 description: AEM självhjälp och dokumentationslänkar för innehåll och handel
 exl-id: 7f7ece35-f78b-4c66-8a0b-38d248430d85
-source-git-commit: a5fb7cd1f0c1041f0dbaa1e261f6e1454f363fd5
+source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 57%
+source-wordcount: '350'
+ht-degree: 55%
 
 ---
 
@@ -15,7 +15,7 @@ På den här sidan visas självhjälpsresurser AEM innehåll och handel.
 
 >[!NOTE]
 >
->AEM innehåll och handel med AEM 6.5 och klassisk CIF finns i [AEM 6.5 Innehåll och handel](https://experienceleague.adobe.com/docs/experience-manager-65/commerce/home.html).
+>AEM innehåll och handel med AEM 6.5 och klassisk CIF finns på [AEM 6.5 Innehåll och handel](https://experienceleague.adobe.com/docs/experience-manager-65/commerce/home.html).
 
 ## Viktiga artiklar om innehåll och handel {#key-articles}
 
@@ -27,7 +27,6 @@ På den här sidan visas självhjälpsresurser AEM innehåll och handel.
 
 | Användarhandbok | Beskrivning |
 |---|---|
-| [Startsida för Experience Manager as a Cloud Service](/help/landing/home.md) | Börja här om du vill få en översikt över dokumentationen för Experience Manager as a Cloud Service. |
 | [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över Experience Manager som en molntjänst, inklusive en introduktion, terminologi, arkitektur osv. |
 | [Versionsinformation](/help/release-notes/home.md) | Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service, inklusive nyheter, borttagna funktioner och kända fel. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
