@@ -1,11 +1,12 @@
 ---
 title: Använda och underhålla Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om att använda och underhålla Adobe Experience Manager as a Cloud Service
+landing-page-description: Lär dig mer om backend-åtgärder för AEM as a Cloud Service, som indexering och underhållsuppgifter.
 exl-id: ad50434c-1b4c-4e04-be91-2556d773cfbd
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 231e7446708cd0240be73ee74897d2c58b47ce22
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 72%
+source-wordcount: '380'
+ht-degree: 69%
 
 ---
 

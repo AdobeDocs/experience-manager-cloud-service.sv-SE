@@ -1,11 +1,12 @@
 ---
 title: Säkerhet för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om säkerhet för Adobe Experience Manager as a Cloud Service
+landing-page-description: Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service.
 exl-id: 17a5f951-84e4-4a15-8919-985451e3b527
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 231e7446708cd0240be73ee74897d2c58b47ce22
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 68%
+source-wordcount: '389'
+ht-degree: 69%
 
 ---
 

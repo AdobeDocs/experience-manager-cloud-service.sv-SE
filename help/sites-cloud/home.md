@@ -1,11 +1,12 @@
 ---
 title: Adobe Experience Manager Sites as a Cloud Service
 description: Länkar till självhjälp och dokumentation om Adobe Experience Manager Sites as a Cloud Service
+landing-page-description: Förstå hur du redigerar och administrerar AEM Sites as a Cloud Service.
 exl-id: 0fedbd4b-9d6b-40d9-88b7-e7469db420fc
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 231e7446708cd0240be73ee74897d2c58b47ce22
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 74%
+source-wordcount: '398'
+ht-degree: 71%
 
 ---
 

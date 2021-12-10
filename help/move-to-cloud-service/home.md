@@ -1,11 +1,12 @@
 ---
 title: Flytta till AEM as a Cloud Service
 description: Länkar till självhjälp och dokumentation för Adobe Experience Manager as a Cloud Service som flyttar till AEM as a Cloud Service
+landing-page-description: Förstå övergången till Cloud Service.
 exl-id: 9f5585ce-0740-46a9-938e-6a4424eb6fa1
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 231e7446708cd0240be73ee74897d2c58b47ce22
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 49%
+source-wordcount: '685'
+ht-degree: 50%
 
 ---
 
