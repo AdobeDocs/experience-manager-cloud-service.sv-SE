@@ -1,9 +1,9 @@
 ---
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
-source-git-commit: 76cc8f5ecac4fc8e1663c1500433a9e3eb1485df
+source-git-commit: 4079e44d4fdce49b1c60caf178583a8800e17c0e
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2982'
 ht-degree: 0%
 
 ---
@@ -78,17 +78,17 @@ Mer information finns i [API-dokumentation för Cloud Manager](https://developer
 
 ### Trafikroutning {#flexible-port-egress-traffic-routing}
 
-Http- eller https-trafik som går till mål via port 80 eller 443 kommer att gå via en förkonfigurerad proxy, förutsatt att Java-standardbiblioteket används. För http- och https-trafik som går genom andra portar bör en proxy konfigureras med följande egenskaper.
+För http- eller https-trafik som går till andra portar än 80 eller 443 bör en proxy konfigureras med följande värden och portmiljövariabler:
 
-* `AEM_HTTP_PROXY_HOST / AEM_HTTPS_PROXY_HOST`
-* `AEM_HTTP_PROXY_PORT / AEM_HTTPS_PROXY_PORT`
+* för HTTP: `AEM_PROXY_HOST` / `AEM_HTTP_PROXY_PORT ` (standard till `proxy.tunnel:3128` i AEM versioner &lt; 6094)
+* för HTTPS: `AEM_PROXY_HOST` / `AEM_HTTPS_PROXY_PORT ` (standard till `proxy.tunnel:3128` i AEM versioner &lt; 6094)
 
 Här följer till exempel exempelkoden som du kan skicka en begäran till `www.example.com:8443`:
 
 ```java
 String url = "www.example.com:8443"
-var proxyHost = System.getenv("AEM_HTTPS_PROXY_HOST");
-var proxyPort = Integer.parseInt(System.getenv("AEM_HTTPS_PROXY_PORT"));
+String proxyHost = System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel");
+int proxyPort = Integer.parseInt(System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", "3128"));
 HttpClient client = HttpClient.newBuilder()
       .proxy(ProxySelector.of(new InetSocketAddress(proxyHost, proxyPort)))
       .build();
@@ -111,10 +111,10 @@ Tabellen nedan beskriver trafikdirigering:
 <thead>
   <tr>
     <th>Trafik</th>
-    <th>Målningsvillkor</th>
+    <th>Målvillkor</th>
     <th>Port</th>
     <th>Anslutning</th>
-    <th>Exempel</th>
+    <th>Exempel på externt mål</th>
   </tr>
 </thead>
 <tbody>
@@ -127,12 +127,13 @@ Tabellen nedan beskriver trafikdirigering:
   </tr> 
   <tr>
     <td></td>
-    <td>Ej standardiserad trafik (på andra portar utanför 80 eller 443) via http-proxy som konfigurerats med dessa miljövariabler:<br><ul>
-     <li>AEM_HTTP_PROXY_HOST / AEM_HTTPS_PROXY_HOST</li>
-     <li>AEM_HTTP_PROXY_PORT / AEM_HTTPS_PROXY_PORT</li>
+    <td>Ej standardiserad trafik (på andra portar utanför 80 eller 443) via http-proxy som konfigurerats med följande miljövariabel och proxyportnummer. Deklarera inte målporten i API-anropets portForwards-parameter för Cloud Manager:<br><ul>
+     <li>AEM_PROXY_HOST (standard är "proxy.tunnel" i AEM versioner &lt; 6094)</li>
+     <li>AEM_HTTPS_PROXY_PORT (standard är port 3128 i AEM utgåvor &lt; 6094)</li>
     </ul>
     <td>Portar utanför 80 eller 443</td>
     <td>Tillåtet</td>
+    <td>example.com:8443</td>
   </tr>
   <tr>
     <td></td>
@@ -163,15 +164,15 @@ Tabellen nedan beskriver trafikdirigering:
 AEM Cloud Service Apache/Dispatcher-skiktets `mod_proxy` -direktivet kan konfigureras med hjälp av de egenskaper som beskrivs ovan.
 
 ```
-ProxyRemote "http://example.com" "http://${AEM_HTTP_PROXY_HOST}:3128"
-ProxyPass "/somepath" "http://example.com"
-ProxyPassReverse "/somepath" "http://example.com"
+ProxyRemote "http://example.com:8080" "http://${AEM_PROXY_HOST}:3128"
+ProxyPass "/somepath" "http://example.com:8080"
+ProxyPassReverse "/somepath" "http://example.com:8080"
 ```
 
 ```
 SSLProxyEngine on //needed for https backends
  
-ProxyRemote "https://example.com:8443" "http://${AEM_HTTPS_PROXY_HOST}:3128"
+ProxyRemote "https://example.com:8443" "http://${AEM_PROXY_HOST}:3128"
 ProxyPass "/somepath" "https://example.com:8443"
 ProxyPassReverse "/somepath" "https://example.com:8443"
 ```
@@ -204,6 +205,36 @@ När man ska välja mellan flexibel portutgång och dedikerad IP-adress för utg
 
 ### Trafikroutning {#dedcated-egress-ip-traffic-routing}
 
+Http- eller https-trafik som går till mål via port 80 eller 443 kommer att gå via en förkonfigurerad proxy, förutsatt att Java-standardbiblioteket används. För http- och https-trafik som går genom andra portar bör en proxy konfigureras med följande egenskaper.
+
+```
+AEM_HTTP_PROXY_HOST / AEM_HTTPS_PROXY_HOST
+AEM_HTTP_PROXY_PORT / AEM_HTTPS_PROXY_PORT
+```
+
+Här följer till exempel exempelkoden som du kan skicka en begäran till `www.example.com:8443`:
+
+```java
+String url = "www.example.com:8443"
+String proxyHost = System.getenv("AEM_HTTPS_PROXY_HOST");
+int proxyPort = Integer.parseInt(System.getenv("AEM_HTTPS_PROXY_PORT"));
+
+HttpClient client = HttpClient.newBuilder()
+      .proxy(ProxySelector.of(new InetSocketAddress(proxyHost, proxyPort)))
+      .build();
+ 
+HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
+HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+```
+
+Om du använder Java-nätverksbibliotek som inte är standard ska du konfigurera proxies med egenskaperna ovan för all trafik.
+
+Ej http/s-trafik med destinationer via portar som deklarerats i `portForwards` parametern ska referera till en egenskap som kallas `AEM_PROXY_HOST`, tillsammans med den mappade porten. Till exempel:
+
+```java
+DriverManager.getConnection("jdbc:mysql://" + System.getenv("AEM_PROXY_HOST") + ":53306/test");
+```
+
 <table>
 <thead>
   <tr>
@@ -211,7 +242,7 @@ När man ska välja mellan flexibel portutgång och dedikerad IP-adress för utg
     <th>Målvillkor</th>
     <th>Port</th>
     <th>Anslutning</th>
-    <th>Exempel</th>
+    <th>Exempel på externt mål</th>
   </tr>
 </thead>
 <tbody>
@@ -380,7 +411,7 @@ Tabellen nedan beskriver trafikdirigering.
     <th>Målvillkor</th>
     <th>Port</th>
     <th>Anslutning</th>
-    <th>Exempel</th>
+    <th>Exempel på externt mål</th>
   </tr>
 </thead>
 <tbody>
