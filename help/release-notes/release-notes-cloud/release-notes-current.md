@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 4efac10fe32ef0aa0ab5a4de3f16c3f0dbf91551
+source-git-commit: 23b06ce1f3c49b2a63c71d53fdc6c26ad02160f5
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1591'
 ht-degree: 0%
 
 ---
@@ -47,14 +47,6 @@ Ta en titt på [Oktober 2021 versionsöversikt](https://video.tv.adobe.com/v/338
 ### Ny funktion i [!DNL Assets] prerelease channel {#assets-prerelease-features}
 
 * [!DNL Dynamic Media] Image Smart Crop och Swatch bygger nu på de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom bevaras alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
-
-* Smarta taggar tillämpas automatiskt på resurserna med hjälp av resursmikrotjänster i stället för med smarta innehållstjänster. Den underliggande modellen uppdateras för att förbättra taggningsresultaten och minska bias. <!-- As it uses asset microservices, it is now possible to develop custom workers using Stock10-based Smart Tags. -->
-
-<!-- Leave this commented.
-### Bugs fixed in [!DNL Assets] {#assets-bugs-fixed}
-
-No customer-reported bugs fixed in Oct release. Details in CQDOC-18404.
--->
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
