@@ -1,13 +1,13 @@
 ---
 title: Hantera videoresurser
-description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
+description: Överföra, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
-feature: Resurshantering, publicering, samarbete, video
+feature: Asset Management,Publishing,Collaboration,Video
 role: User
 exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 038dbc4b0febfa58f69e05f837760162210f8689
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '645'
 ht-degree: 6%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 6%
 
 Videoformatet är en viktig del av ett företags digitala resurser. [!DNL Adobe Experience Manager] erbjuder mogna erbjudanden och funktioner för att hantera hela livscykeln för videomaterialet när de har skapats.
 
-Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience Manager Assets]. Videokodning och omkodning, till exempel FFmpeg-omkodning, är möjlig med Bearbeta profiler och [!DNL Dynamic Media]-integrering. Utan [!DNL Dynamic Media]-licens ger [!DNL Experience Manager] grundläggande stöd för videoklipp, till exempel omkodning med FFmpeg, extrahering av förhandsvisningsminiatyrer för de filformat som stöds samt förhandsgranskning i användargränssnittet för format som stöds för direktuppspelning i webbläsaren.
+Lär dig hantera och redigera videomaterialet i [!DNL Adobe Experience Manager Assets]. Videokodning och omkodning, till exempel FFmpeg-omkodning, kan användas med Bearbeta profiler och med [!DNL Dynamic Media] integrering. Utan [!DNL Dynamic Media] licens, [!DNL Experience Manager] har grundläggande stöd för videor, till exempel omkodning med FFmpeg, extrahering av förhandsvisningsminiatyrer för de filformat som stöds samt förhandsgranskning i användargränssnittet för format som stöds för direktuppspelning i webbläsaren.
 
 ## Överföra och förhandsgranska videomaterial {#upload-and-preview-video-assets}
 
-[!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Du kan förhandsgranska återgivningarna i [!DNL Assets]-användargränssnittet.
+[!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Du kan förhandsgranska återgivningarna i [!DNL Assets] användargränssnitt.
 
 1. Navigera till den plats där du vill lägga till digitala resurser i mappen eller undermapparna för digitala resurser.
-1. Om du vill överföra resursen klickar du på **[!UICONTROL Create]** i verktygsfältet och väljer **[!UICONTROL Files]**. Du kan också dra en fil till användargränssnittet. Mer information finns i [överföra resurser](manage-digital-assets.md#uploading-assets).
-1. Om du vill förhandsgranska en video i kortvyn klickar du på **[!UICONTROL Play]** ![uppspelningsalternativet](assets/do-not-localize/play.png) för videoresursen. Du kan bara pausa eller spela upp video i kortvyn. Alternativen [!UICONTROL Play] och [!UICONTROL Pause] är inte tillgängliga i listvyn.
+1. Om du vill överföra resursen klickar du på **[!UICONTROL Create]** i verktygsfältet och välj **[!UICONTROL Files]**. Du kan också dra en fil till användargränssnittet. Se [överföra resurser](manage-digital-assets.md#uploading-assets) för mer information.
+1. Om du vill förhandsgranska en video i kortvyn klickar du på **[!UICONTROL Play]** ![uppspelningsalternativ](assets/do-not-localize/play.png) på videoresursen. Du kan bara pausa eller spela upp video i kortvyn. The [!UICONTROL Play] och [!UICONTROL Pause] alternativen är inte tillgängliga i listvyn.
 1. Om du vill förhandsgranska videon på sidan med resursinformation väljer du **[!UICONTROL Edit]** på kortet. Videon spelas upp i webbläsarens inbyggda videospelare. Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
 
 ## Publicera videomaterial {#publish-video-assets}
@@ -33,30 +33,36 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 
 ## Omkoda med Bearbetningsprofil {#transcode-video}
 
-[!DNL Experience Manager] som  [!DNL Cloud Service] gör att du kan utföra grundläggande omkodning av MP4-videofiler med Bearbeta profiler. Med den här funktionen kan du inte bara överföra utan även förhandsgranska och skala en MP4-videofil.
+[!DNL Experience Manager] som [!DNL Cloud Service] Med kan du utföra grundläggande omkodning av MP4-videofiler med Bearbeta profiler. Med den här funktionen kan du inte bara överföra utan även förhandsgranska och skala en MP4-videofil.
 
-![Skapa bearbetningsprofil för videoomkodning i  [!DNL Experience Manager]](assets/video-processing-profile-for-mp4.png)
+![Skapa bearbetningsprofil för videoomkodning i [!DNL Experience Manager]](assets/video-processing-profile-for-mp4.png)
 
-*Bild: En bearbetningsprofil för videoomkodning i  [!DNL Experience Manager].*
+*Bild: En bearbetningsprofil för videoomkodning i [!DNL Experience Manager].*
 
 Om du bara anger bredd eller enbart höjd och lämnar det andra fältet tomt behåller återgivningarna proportionerna. H.264-videokodeken finns tillgänglig för transkodning.
 
-Om du vill bearbeta resurser med en bearbetningsprofil lägger du till en profil i en mapp. Se [använd bearbetningsprofiler för att bearbeta resurser](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
+Om du vill bearbeta resurser med en bearbetningsprofil lägger du till en profil i en mapp. Se [använda bearbetningsprofiler för att bearbeta resurser](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
 
 ## Kommentera videomaterial {#annotate-video-assets}
 
-1. På [!DNL Assets]-konsolen väljer du **[!UICONTROL Edit]** på resurskortet för att visa sidan med resursinformation.
+Du kan lägga till anteckningar i videoresurser. När du kommenterar videoklipp pausas spelaren så att du kan anteckna i en bildruta. Mer information finns i [hantera videomaterial](manage-video-assets.md).
+
+>[!NOTE]
+>
+>MXF-videoformatet stöds ännu inte med videoresursanteckningar.
+
+1. Från [!DNL Assets] konsol, välj **[!UICONTROL Edit]** på tillgångskortet för att visa sidan med tillgångsinformation.
 1. Om du vill spela upp videon klickar du på **[!UICONTROL Preview]**.
-1. Klicka på **[!UICONTROL Annotate]** om du vill kommentera videon. En anteckning läggs till vid en viss tidpunkt (bildruta) i videon. När du gör anteckningar kan du rita på arbetsytan och ta med en kommentar med ritningen. Kommentarerna sparas automatiskt. Om du vill avsluta anteckningsguiden klickar du på **[!UICONTROL Close]**.
+1. Om du vill kommentera videon klickar du på **[!UICONTROL Annotate]**. En anteckning läggs till vid en viss tidpunkt (bildruta) i videon. När du gör anteckningar kan du rita på arbetsytan och ta med en kommentar med ritningen. Kommentarerna sparas automatiskt. Om du vill avsluta anteckningsguiden klickar du på **[!UICONTROL Close]**.
 1. Gå till en viss punkt i videon, ange tiden i sekunder i **textfältet** och klicka på **Hoppa**. Om du till exempel vill hoppa över de första 20 sekunderna av videon anger du 20 i textfältet.
 1. Klicka på en anteckning om du vill visa den i tidslinjen. Om du vill ta bort anteckningen från tidslinjen klickar du på **[!UICONTROL Delete]**.
 
 ## God praxis och begränsningar {#tips-limitations}
 
-* Utan [!DNL Dynamic Media]-licens kan du bara bearbeta MP4-filer med bearbetningsprofiler.
+* Utan [!DNL Dynamic Media] kan du bara bearbeta MP4-filer med bearbetningsprofiler.
 * När MP4-filer kodas om med Bearbeta profiler gäller följande riktlinjer och begränsningar:
 
-   * Apple ProRes-filer kan bara koda om till en maximal upplösning på 1080p.
+   * Apple ProRes-filer kan endast kodas om till en maximal upplösning på 1080p.
    * Om källfilen har en bithastighet på >200 Mbit/s kan du bara omkoda till en maximal upplösning på 1080p.
    * Om källbildrutefrekvensen är >=60 fps blir den maximala storleken på källfilen som du kan använda:
 
@@ -69,5 +75,5 @@ Om du vill bearbeta resurser med en bearbetningsprofil lägger du till en profil
 >[!MORELIKETHIS]
 >
 >* [Dynamic Media videodokumentation](/help/assets/dynamic-media/video.md).
->* [Lär dig mer om användning, typer och konfiguration av bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
+>* [Läs mer om användning, typer och konfiguration av bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
 
