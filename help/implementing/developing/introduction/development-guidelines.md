@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 477546f882197291403e59d8ba2e53dd4918a719
+source-git-commit: 86802ae7063f4eec1193fee4b9eaefbb460a7785
 workflow-type: tm+mt
-source-wordcount: '2178'
+source-wordcount: '2180'
 ht-degree: 1%
 
 ---
@@ -195,7 +195,7 @@ E-post i AEM ska skickas med [Day CQ Mail Service OSGi-tjänst](https://experien
 
 Se [AEM 6.5-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html) för mer information om hur du konfigurerar e-postinställningar. Observera följande nödvändiga justeringar för AEM as a Cloud Service `com.day.cq.mailer.DefaultMailService OSGI` tjänst:
 
-* SMTP-serverns värdnamn ska anges till $[env:AEM_PROXY_HOST]
+* SMTP-serverns värdnamn ska anges till $[env:AEM_PROXY_HOST;default=proxy.tunnel]
 * SMTP-serverporten ska anges till värdet för den ursprungliga proxyporten som angetts i parametern portForwards som används i API-anropet när avancerade nätverk konfigureras. Exempel: 30465 (i stället för 465)
 
 Vi rekommenderar även att om port 465 har begärts:
