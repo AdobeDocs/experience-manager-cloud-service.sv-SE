@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 23b06ce1f3c49b2a63c71d53fdc6c26ad02160f5
+source-git-commit: 994ecec88f2724a75d9b11ba38c9c854a6983066
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -25,65 +25,59 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.10.0) är 4 november 2021.
-Följande version (2021.11.0) är den 16 december 2021.
+Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.11.0) är 16 december 2021.
+Följande version (2022.1.0) är den 27 januari 2022.
 
 ## Släpp video {#release-video}
 
-Ta en titt på [Oktober 2021 versionsöversikt](https://video.tv.adobe.com/v/338253) video med en sammanfattning av tillagda funktioner.
-
-## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
-
-### Ny funktion i [!DNL Sites] {#sites-features}
-
-* Modeller för innehållsfragment ställs nu automatiskt in i skrivskyddat läge när de har publicerats, så att du inte oavsiktligt kan bryta aktiva API-frågor efter att ha publicerat om en redigerad modell. Användarna får en varning när de försöker redigera en publicerad modell. Du kan redigera när du har godkänt varningen.
+Ta en titt på [Versionsöversikt december 2021](https://video.tv.adobe.com/v/339278) video med en sammanfattning av tillagda funktioner.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* [!DNL Experience Manager] har nu stöd för automatisk generering av texttranskript från ljud- och videomaterial som stöds, med en inbyggd koppling till [!DNL Azure Media Services]. The [filtyper som stöds](/help/assets/file-format-support.md#audio-video-transcription-formats) transkriberas automatiskt och texten lagras i WebVTT-format. WebVTT-bildtexter används för effektivare sökning, bildtext eller översättning. Funktionen förbättrar också tillgängligheten, identifieringen och lokaliseringen av resurserna.
+* Dynamic Media Image Smart Crop och Swatch drivs nu av de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom bevaras alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
 
-### Ny funktion i [!DNL Assets] prerelease channel {#assets-prerelease-features}
+### Nya funktioner i [!DNL Assets] prerelease channel {#assets-prerelease-features}
 
-* [!DNL Dynamic Media] Image Smart Crop och Swatch bygger nu på de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom bevaras alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
+* [!DNL Dynamic Media] - Du kan nu använda AEM Dynamic Media gränssnitt för att konfigurera allmänna inställningar och publiceringsinställningar i stället för att behöva gå igenom Dynamic Media Classic datorprogram.
+
+* [!DNL Dynamic Media] har nu stöd för inhämtning, förhandsgranskning, uppspelning och publicering av MXF-videor. Anteckningar och videor som kan köpas för MXF-videor stöds ännu inte.
+
+* När du har konfigurerat en anslutning mellan distributioner av fjärr-DAM och platser, blir resurserna på fjärr-DAM tillgängliga i Sites-distributionen. Nu kan du uppdatera, ta bort, byta namn på och flytta resurser eller mappar i fjärr-DAM. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen.
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
-### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
+### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Analytics för Adaptive Forms**: Nu kan du fånga in och spåra beteenden hos både inloggade och ej inloggade (anonyma) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
-
-### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms-oct-2021}
+* **Forms Portal**: Du kan använda [Forms Portal](/help/forms/configure-forms-portal.md) för att lista dina publicerade adaptiva formulär på en AEM Sites-sida. Det hjälper en besökare att hitta alla tillgängliga formulär. Dessutom kan besökaren använda formulärportalen för att spara och komma åt utkast av ett adaptivt formulär och titta på PDF-versionen av ett skickat adaptivt formulär.
 
 * **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra AEM arbetsflödesdata (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
 
-### Betafunktioner i [!DNL Forms] {#what-is-new-forms-oct2021-beta}
+### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
 * **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera en mall och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge och gruppläge. Med API:erna kan du skapa program som gör att du kan:
 
    * Generera dokument genom att fylla i mallfiler (PDF och XDP) med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
 
-Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betaprogrammet.
+* **Anpassade teckensnitt för dokument i dokumentformat och PDF som skapats med kommunikationsAPI:er**: Nu kan du använda typsnitt som är godkända av varumärket i PDF-dokument som genererats med kommunikations-API:er för att anpassa dig till organisationens krav.
 
 ## CIF-tillägg {#cloud-services-cif}
 
 ### Vad är nytt? {#what-is-new-cif}
 
-* CIF-tillägget stöder den senaste Commerce v2.4.3 med nya GraphQL API:er och scheman
+* Utökade myAccount-komponenter som baseras på Commerce:s utökningsbara Premiere-komponenter
 
-* Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF-ikon har lagts till i verktygsfältet för textredigering som öppnar väljarna för att snabbt söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
+![Utökade komponenter för myAccount](/help/assets/CIF/extended-myAccount-components.png)
 
-* Befintlig snabbkundvagn och utcheckning har ersatts med dedikerade AEM- och utcheckningssidor. Komponenterna på dessa sidor byggs med Magento utökningsbara Premiere-komponenter
+* Författare kan skapa ad hoc-Commerce Product Recommendations med hjälp av ytterligare rekommendationstyper
 
-* Handlare kan dölja vissa produktkatalogkategorier i navigeringen med Commerce-serverdelen. CIF Navigation Core Component (kärnkomponent för CIF-navigering) respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
-
-* AEM Storefront Venia returnerar HTTP 404-fel om kategori eller produktsida inte hittas
+* Stöd för presentkort i AEM Storefront
 
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.10.0.
+I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.11.0.
 
 ### Releasedatum {#release-date-cm-nov}
 
@@ -131,56 +125,6 @@ Nästa version är planerad till 9 december 2021.
 
 * I sällsynta fall misslyckades rörledningar på grund av olämplig hantering av vissa svarskoder.
 
-
-## Releasedatum {#release-date-cm-oct}
-
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.10.0 är 14 oktober 2021.
-
-### Nyheter {#what-is-new-cm-oct}
-
-* Som en förberedelse för vissa kommande ändringar kommer befintliga distributionsrutnät nu att refereras och märkas i användargränssnittet som **Hel hög** rörledningar.
-
-* Pipelinekortet har uppdaterats så att det nu visas ett enda, integrerat ansikte som visar både pipelines för produktion och icke-produktion, och användaren kan välja Kör/Pausa/Fortsätt direkt på den åtgärdsmeny som är kopplad till varje pipeline.
-
-* En användare i rollen Distributionshanterare kan nu ta bort produktionsflödet via självbetjäning via gränssnittet.
-
-* Lägg till och redigera rörliga upplevelser har uppdaterats för att nu använda välbekanta, moderna moduler.
-
-* Användare av Cloud Manager kan nu skicka feedback direkt från användargränssnittet via **Feedback** överst till höger på landningssidan.
-
-* Årliga SLA-diagram kan nu hämtas från användargränssnittet i Cloud Manager.
-
-* Kodkvalitet och icke-produktionsrelaterade pipeline-körningar kommer nu att använda en mer effektiv, ytlig kloningsprocess under byggsteget, vilket ger en snabbare byggtid för kunder med särskilt stora Git-databaser.
-
-* Guiden Lägg till IP Tillåtelselista informerar nu användaren om maximalt tillåtet antal IP-Tillåtelselista har uppnåtts.
-
-* API-dokumentationen för Cloud Manager innehåller nu en interaktiv spelningsmiljö som gör att inloggade användare kan experimentera med API:t från sin webbläsare. Se [API-spelning för Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/) för mer information.
-
-* Verktygstipset på programkortet blir mer beskrivande om ett markeringsalternativ under Navigera till är inaktiverat. Nu visas&quot;En produktionsmiljö finns inte&quot;.
-
-### Felkorrigeringar {#bug-fixes-cm-oct}
-
-* I sällsynta fall, när en Adobe-personal skulle återställa en kunds miljö, ansågs återställningen vara fullständig innan miljön var helt i drift.
-
-* Vissa interna begäranden som gjordes när miljön skapades har inte gjorts om.
-
-* Om ett distributionsfel uppstår efter domännamnsverifiering har felmeddelandet korrigerats för att begära att kunden kontaktar sin Adobe-representant.
-
-## Best Practices Analyzer {#best-practices-analyzer}
-
-### Releasedatum {#release-date-bpa-latest}
-
-Releasedatum för Best Practices Analyzer v2.1.20 är 5 oktober 2021.
-
-### Nyheter {#what-is-new}
-
-* Möjlighet att identifiera och rapportera nodnamnets längd.
-
-* Möjlighet att identifiera och rapportera om den totala indexstorleken.
-
-* Möjlighet att upptäcka och rapportera resurser som saknar sin ursprungliga återgivning.
-
-
 ## Best Practices Analyzer {#bpa-release}
 
 ### Releasedatum {#release-date-bpa}
@@ -197,14 +141,3 @@ Releasedatum för Best Practices Analyzer v2.1.22 är 1 december 2021.
 
 * Identifieringen av Foundation-komponenter förfinades för att minska falska negativ.
 * För AEM Forms-kunder gäller BPA-meddelanden `EMAIL_PDF_SUBMIT_ACTION` som inte är tillgänglig på AEM as a Cloud Service har åtgärdats.
-
-## Content Transfer Tool {#ctt-release}
-
-### Releasedatum {#release-date-ctt}
-
-Releasedatum för innehållsöverföringsverktyget v1.7.10 är 8 december 2021.
-
-### Nyheter {#what-is-new-ctt}
-
-* Växla som lagts till i inmatningsfasen i verktyget Innehållsöverföring så att användarna kan inaktivera [förkopia](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) under intag. För optimal överföringshastighet bör pre-copy under intag inaktiveras för små migreringsuppsättningar eller om endast ett fåtal bloggar har lagts till sedan det senaste intaget.
-* Användarmappning har uppdaterats för att använda ett förbättrat API för användarhantering som gör att 2 000 användare kan hämtas samtidigt, vilket avsevärt förbättrar prestandan.

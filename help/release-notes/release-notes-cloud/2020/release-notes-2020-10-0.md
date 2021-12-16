@@ -2,7 +2,7 @@
 title: Versionsinformation för version 2020.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: '[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.10.0.'
 exl-id: ac741744-5b47-47a4-b5af-e1089e92c3f0
-source-git-commit: 15908636f916a55008513035e3072cf1b1cc5f1c
+source-git-commit: 95ea603db207d93fa025a2ae20552f790b47f27c
 workflow-type: tm+mt
 source-wordcount: '1195'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 * **[!DNL Assets]Stöd för WebP-filer**: [!DNL Assets] as a Cloud Service har nu stöd för WebP-bildformat. WebP är ett framväxande bildformat som skapas av Google. Bilder i WebP-filformat kan inte skiljas från JPG eller PNG-filer och filerna är mycket mindre. Lägre filstorlek förbättrar sidinläsningen och hjälper innehållsskaparna att leverera en snabbare webbupplevelse. Se hur du använder WebP i [skapa bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-standard-profile).
 
-## [!DNL Adobe Experience Manager Assets] as a Cloud Service {#forms-oct-2021}
+## [!DNL Adobe Experience Manager Forms] as a Cloud Service {#forms-oct-2021}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
 
@@ -85,7 +85,7 @@ Releasedatum för Cloud Manager i Experience Manager as a Cloud Service 2020.10.
 
 * Vilolägen miljöer har nu en diskret status i Cloud Manager när de är i viloläge.
 
-* Cloud Manager &quot;build container&quot; har nu stöd för kompilering av projekt med antingen Java™ 8 eller Java™ 11. Stöd för Java™ 11 finns i Maven ToolChain System.
+* Cloud Manager &quot;build container&quot; har nu stöd för kompilering av projekt med Java™ 8 eller Java™ 11. Stöd för Java™ 11 finns i Maven ToolChain System.
 
 * Antalet miljövariabler per miljö har ökat till 200.
 
