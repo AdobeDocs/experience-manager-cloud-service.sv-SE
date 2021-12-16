@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: dd127862d65ed2f6a2dc2f93f9668552c577181c
+source-git-commit: 7b636396dd9ca34955d2f40a7191821e43cb30f9
 workflow-type: tm+mt
-source-wordcount: '3362'
+source-wordcount: '3365'
 ht-degree: 25%
 
 ---
@@ -432,6 +432,7 @@ ht-degree: 25%
          + [Återanvända metadataegenskaper i ett adaptivt formulär](/help/forms/reusing-adaptive-forms.md)
       + Förbättra tillgängligheten för ett adaptivt formulär {#accessible-adaptive-forms}
          + [Skapa ett tillgängligt adaptivt formulär](/help/forms/creating-accessible-adaptive-forms.md)
+      + [Konfigurera Forms Portal](/help/forms/configure-forms-portal.md)
    + Integrera ett formulär med en eller flera datakällor {#use-form-data-model}
       + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
       + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
