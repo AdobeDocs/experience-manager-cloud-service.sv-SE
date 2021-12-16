@@ -3,10 +3,10 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager as a Cloud Service.
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 3f90ce1b9325d4dabcd97b515cebffe008b199c7
+source-git-commit: a7ae5e7bd9de4762e8f9a560e327b3f1358155b7
 workflow-type: tm+mt
-source-wordcount: '3765'
-ht-degree: 3%
+source-wordcount: '3279'
+ht-degree: 2%
 
 ---
 
@@ -207,46 +207,19 @@ Installations- och konfigureringsuppgifter omfattar följande:
 * [Redigera MIME-typer för format som stöds](#editing-mime-types-for-supported-formats)
 * [Lägg till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats)
 
-<!-- * [Creating batch set presets to auto-generate Image Sets and Spin Sets](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) -->
+<!-- OBSOLETE BUT LEAVE FOR POSSIBLE FUTURE* [Creating batch set presets to auto-generate Image Sets and Spin Sets](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) -->
 
-<!-- #### Configure Dynamic Media Publish Setup for Image Server {#publishing-setup-for-image-server}
+#### Konfigurera Dynamic Media Publish Setup för Image Server {#publishing-setup-for-image-server}
 
-The Dynamic Media Publish Setup page establishes default settings that determine how assets are delivered from Adobe Dynamic Media servers to web sites or applications.
+På sidan Dynamic Media Publish Setup (Publiceringsinställningar) anges standardinställningar som avgör hur resurser levereras från Adobe Dynamic Media-servrar till webbplatser eller program.
 
-See [Configure Dynamic Media Publish Setup for Image Server](/help/assets/dynamic-media/dm-publish-settings.md). -->
+Se [Konfigurera Dynamic Media Publish Setup för Image Server](/help/assets/dynamic-media/dm-publish-settings.md).
 
-#### Publiceringskonfiguration för Image Server {#publishing-setup-for-image-server}
+#### Konfigurera allmänna inställningar för Dynamic Media {#configuring-application-general-settings}
 
-Publiceringsinställningarna avgör hur resurser levereras som standard från Dynamic Media. Om ingen inställning anges levererar Dynamic Media en resurs enligt standardinställningarna som definierats i Publiceringsinställningar. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning.
+Konfigurera Dynamic Media **[!UICONTROL Publish Server Name]** URL och **[!UICONTROL Origin Server Name]** URL. Du kan också ange **[!UICONTROL Upload to Application]** inställningar och **[!UICONTROL Default Upload Options]** allt baserat på ditt specifika användningsfall.
 
-Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic: **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
-
-Bildserverskärmen anger standardinställningar för att leverera bilder. I gränssnittsskärmen finns en beskrivning av varje inställning.
-
-**[!UICONTROL Request Attributes]** - De här inställningarna begränsar antalet bilder som kan levereras från servern.
-**[!UICONTROL Default Request Attributes]** - De här inställningarna gäller standardutseendet för bilder.
-**[!UICONTROL Common Thumbnail Attributes]** - De här inställningarna gäller för miniatyrbildernas standardutseende.
-**[!UICONTROL Defaults for Catalog Fields]**- De här inställningarna gäller bildernas upplösning och standardtyp av miniatyrbilder.
-**[!UICONTROL Color Management Attributes]** - De här inställningarna avgör vilka ICC-färgprofiler som används.
-**[!UICONTROL Compatibility Attributes]** - Den här inställningen gör att inledande och avslutande stycken i textlager kan hanteras som de var i version 3.6 för bakåtkompatibilitet.
-**[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om konfiguration **[!UICONTROL Localization Support]**, se [Att tänka på när lokalisering av resurser konfigureras](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets).
-
-<!-- #### Configure Dynamic Media General Settings {#configuring-application-general-settings}
-
-Configure the Dynamic Media **[!UICONTROL Publish Server Name]** URL and the **[!UICONTROL Origin Server Name]** URL. You can also specify **[!UICONTROL Upload to Application]** settings and **[!UICONTROL Default Upload Options]** all based on your particular use case.
-
-See [Configure Dynamic Media General Settings](/help/assets/dynamic-media/dm-general-settings.md). -->
-
-#### Konfigurera allmänna inställningar för program {#configuring-application-general-settings}
-
-Öppna sidan Allmänna inställningar för programmet i Dynamic Media Classic Global Navigation-fältet på **[!UICONTROL Setup > Application Setup > General Settings]**.
-
-**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har instruerats att göra det av Experience Manager as a Cloud Service support.
-**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filtillägg än den ursprungliga mappen.
-**[!UICONTROL Overwrite in current folder, same base image name/extension]** - Det här alternativet är den striktaste regeln för ersättning. Du måste överföra ersättningsbilden till samma mapp som originalet och ha samma filtillägg som originalet. Om dessa krav inte uppfylls skapas en dubblett. Om du vill vara konsekvent med Experience Manager as a Cloud Service ska du alltid välja **[!UICONTROL Overwrite in current folder, same base image name/extension]**.
-**[!UICONTROL Overwrite in any folder, same base asset name/extension]** - Kräver att ersättningsbilden har samma filtillägg som originalbilden. Till exempel måste stol.jpg ersätta stol.jpg, inte stol.tif. Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats.
-**[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** - Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filtillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
-**[!UICONTROL Default Color Profiles]** - Se [Konfigurera färghantering](#configuring-color-management) för ytterligare information. Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka eller minska antalet bildförinställningar som visas](/help/assets/dynamic-media/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka eller minska antalet visningsförinställningar som visas](/help/assets/dynamic-media/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+Se [Konfigurera allmänna inställningar för Dynamic Media](/help/assets/dynamic-media/dm-general-settings.md).
 
 #### Konfigurera färghantering {#configuring-color-management}
 
@@ -330,17 +303,17 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 1. På sidan bläddrar du nedåt till namnet *Adobe CQ Scene7 Asset MIME type Service* enligt följande skärmbild. Tryck på **[!UICONTROL Edit the configuration values]** (pennikonen) till höger om namnet.
 
-   ![2019-08-02_16-44-56](assets/2019-08-02_16-44-56.png)
+   ![Redigera konfigurationsvärdena](assets/2019-08-02_16-44-56.png)
 
 1. På **Adobe CQ Scene7 Asset MIME Type Service** väljer du en plusteckenikon &lt;+>. Platsen i tabellen där du väljer plustecknet för att lägga till den nya MIME-typen är enkel.
 
-   ![2019-08-02_16-27-27](assets/2019-08-02_16-27-27.png)
+   ![Adobe CQ Scene7 MIME Type Service](assets/2019-08-02_16-27-27.png)
 
 1. Typ `DWG=image/vnd.dwg` i det tomma textfältet som du just lade till.
 
    The `DWG=image/vnd.dwg` MIME-typen är endast avsedd som exempel. MIME-typen som du lägger till här kan vara ett annat format som inte stöds.
 
-   ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
+   ![Lägger till MIME-typ för DWG](assets/2019-08-02_16-36-36.png)
 
 1. Välj **[!UICONTROL Save]**.
 
@@ -349,7 +322,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 1. Gå tillbaka till webbläsarfliken som har din öppna Experience Manager as a Cloud Service konsol.
 1. Från Experience Manager as a Cloud Service, gå till **[!UICONTROL Tools > General > CRXDE Lite]**.
 
-   ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
+   ![Verktyg > Allmänt > CRXDE Lite](assets/2019-08-02_16-55-41.png)
 
 1. Navigera till följande i den vänstra listen:
 
@@ -357,12 +330,12 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 1. Dra MIME-typen `image_vnd.dwg` och släpp det direkt ovanför `image_` i trädet enligt följande skärmbild.
 
-   ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
+   ![Redigera en DWG-fil i CRXDE Lite](assets/crxdelite_cqdoc-14627.png)
 
 1. Med MIME-typen `image_vnd.dwg` fortfarande markerad, från **[!UICONTROL Properties]** -fliken, i **[!UICONTROL enabled]** rad, under **[!UICONTROL Value]** kolumnrubrik, dubbeltryck på värdet. The **[!UICONTROL Value]** listrutan öppnas.
 1. Typ `false` i fältet (eller markera **[!UICONTROL false]** från listrutan).
 
-   ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
+   ![Redigera MIME-typer i CRXDE Lite](assets/2019-08-02_16-60-30.png)
 
 1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan väljer du **[!UICONTROL Save All]**.
 
@@ -415,7 +388,7 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
    I de flesta fall räcker standardinställningen 0,5.
 
-   ![chlimage_1-1](assets/chlimage_1-1.jpeg)
+   ![Konfiguration av en jobbbehandlingskö](assets/chlimage_1-1.jpeg)
 
 1. Välj **[!UICONTROL Save]**.
 
@@ -459,7 +432,7 @@ Inställningen Dynamic Media Classic (Scene7) Upload Connection synkroniserar Ex
 
    I de flesta fall räcker det med inställningen 2 100.
 
-   ![chlimage_1-2](assets/chlimage_1-2.jpeg)
+   ![Adobe Scene7 Upload Service](assets/chlimage_1-2.jpeg)
 
 1. Välj **[!UICONTROL Save]**.
 
