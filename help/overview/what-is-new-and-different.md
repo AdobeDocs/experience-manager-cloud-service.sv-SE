@@ -120,7 +120,7 @@ Cloud Manager har utvecklats till en självbetjäningsportal där huvudkomponent
 
 * Meddelas om viktiga livscykelhändelser för dessa komponenter (t.ex. produktuppdateringar).
 
-Cloud Manager skapar miljöer i datacentraler i många geografiska regioner, vilket ger global täckning. CDN:s (Points of Presence) garanterar leverans av innehåll med låg latens för kunder som finns i hela världen.
+Cloud Manager skapar miljöer i datacentraler i många geografiska regioner, vilket ger global täckning. CDN:s (Points of Presence) garanterar leverans av innehåll med låg latens för kunder i hela världen.
 
 
 ## Onboarding {#onboarding}
