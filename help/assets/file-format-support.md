@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: ba752888601413dd4725a7a137f8b468b92ad5c7
+source-git-commit: 479cfffd17dcde12bda7d53a7acddfbb46782a8f
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 5%
+source-wordcount: '974'
+ht-degree: 4%
 
 ---
 
@@ -66,30 +66,6 @@ I följande förklaring beskrivs stödnivån för varje format.
 | SGI | ✓ | ✓ | ✓ | ✓ |
 | SVG | ✓ | - | ✓ | ✓ |
 | TIFF | ✓ | ✓ | ✓ | - |
-
-## Bildformat i [!DNL Dynamic Media] {#image-support-dynamic-media}
-
-| Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning |
-| ------- | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
-| BMP | ✓ | - | - | - | - |
-| EPS | ✓ | ✓ | ✓ | ✓ | ✓ |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PICT | ✓ | - | - | - | - |
-| PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PSD ‡ | ✓ | - | - | - | - |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
-
-‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av [!DNL Adobe Photoshop] och ingår i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
-
-Följande undertyper av rasterbildfilformat som inte stöds i [!DNL Dynamic Media]:
-
-* PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
-* PSB-filer.
-* PSD-filer med en annan färgmodell än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
-* PSD-filer med ett bitdjup som är större än 16.
-* TIFF-filer med flyttalsdata.
-* TIFF-filer med Lab-färgrymd.
 
 ## 3D-format {#support-3d-formats}
 
@@ -164,14 +140,6 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | XLSX | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | - | ✓ | - | - | - |
 
-## Dokumentformat i [!DNL Dynamic Media] {#document-support-dynamic-media}
-
-| Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning |
-| ------ | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
-| AI | ✓ | - | - | - | - |
-| INDD | ✓ | - | - | - | - |
-| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
-
 ## Videoformat {#video-formats}
 
 | Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
@@ -200,24 +168,6 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | WebM | ✓ | - | ✓ |
 | WMV | ✓ | ✓ | ✓ |
 
-## Videoformat i [!DNL Dynamic Media] för omkodning {#video-dynamic-media-transcoding}
-
-| Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
-| --- | --- | --- | --- |
-| AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft Video 1 (MS-CRAM) |
-| FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
-| M4V | Apple iTunes | H264/AVC | - |
-| MKV | Matroska | H264/AVC | - |
-| MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
-| MP4 | MPEG-4 | H264/AVC (alla profiler) | - |
-| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | - |
-| MXF ‡ | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
-| OGV, OGG | Ogg | Theora, VP3, Dirac | - |
-| WebM | WebM | Google VP8 | - |
-| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft Screen (MSS2), Microsoft Photo Story (WVP2) |
-
-‡ Det här videoformatet stöds ännu inte för interaktiva videoklipp i Dynamic Media eller för användning med anteckningar i Experience Manager Assets.
-
 ## Ljudformat {#audio-formats}
 
 [!DNL Assets] som [!DNL Cloud Service] har stöd för XMP metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
@@ -238,6 +188,69 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 ## Tips och begränsningar {#limitations-and-tips}
 
 * För närvarande är filstorleksgränsen för metadataextrahering ungefär 15 GB. När mycket stora resurser överförs misslyckas ibland metadataextraheringen.
+
+## Dynamic Media - Videoformat som stöds för transkodning {#video-dynamic-media-transcoding}
+
+| Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
+| --- | --- | --- | --- |
+| AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft Video 1 (MS-CRAM) |
+| FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
+| M4V | Apple iTunes | H264/AVC | - |
+| MKV | Matroska | H264/AVC | - |
+| MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
+| MP4 | MPEG-4 | H264/AVC (alla profiler) | - |
+| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | - |
+| MXF ‡ | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
+| OGV, OGG | Ogg | Theora, VP3, Dirac | - |
+| WebM | WebM | Google VP8 | - |
+| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft Screen (MSS2), Microsoft Photo Story (WVP2) |
+
+‡ Det här videoformatet stöds ännu inte för interaktiva videoklipp i Dynamic Media eller för användning med anteckningar i Experience Manager Assets.
+
+## Dynamic Media - dokumentformat som stöds {#document-support-dynamic-media}
+
+| Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning |
+| ------ | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
+| AI | ✓ | - | - | - | - |
+| INDD | ✓ | - | - | - | - |
+| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+## Dynamic Media - Rasterbildformat som stöds {#image-support-dynamic-media}
+
+| Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning | Ange typer som stöder det här formatet |
+| ------- | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- | ---------------------------------- |
+| BMP | ✓ | - | - | - | - | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+| EPS | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+| PICT | ✓ | - | - | - | - | - |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+| PSD ‡ | ✓ | - | - | - | - | - |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+
+‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av [!DNL Adobe Photoshop] och ingår i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+
+## Dynamic Media - Rasterbildformat som inte stöds {#unsupported-raster-image-formats-dm}
+
+Följande undertyper av rasterbildfilformat som är *not* stöds i [!DNL Dynamic Media]:
+
+* PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
+* PSB-filer.
+* PSD-filer med en annan färgmodell än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
+* PSD-filer med ett bitdjup som är större än 16.
+* TIFF-filer med flyttalsdata.
+* TIFF-filer med Lab-färgrymd.
+
+## Dynamic Media - 3D-filformat som stöds {#support-3d-formats-dynamic-media}
+
+Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-formats)
+
+| 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
+|---|---|---|---|
+| GLB | Binary GL Transmission | model/gltf-binary | Includes the materials and textures as a single asset. |
+| OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
+| STL | Stereolitografi | application/vnd.ms-pki.stl |  |
+| USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd endast för förtäring. ingen visning eller interaktion är tillgänglig.* USDZ är ett tillverkarspecifikt 3D-format som kan visas direkt av Safari eller iOS. |
 
 >[!MORELIKETHIS]
 >
