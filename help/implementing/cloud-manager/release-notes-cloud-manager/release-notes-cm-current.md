@@ -1,64 +1,48 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.11.0
-description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.11.0
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.12.0
+description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2021.12.0.
 feature: Release Information
-source-git-commit: 14042b45b14f2c5575fc96979579bb0aaffc9a17
+source-git-commit: 72853f1278be4dd429be28fd611b5a0cb77bcb3d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.11.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.11.0.
+# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.12.0 {#release-notes}
+
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.12.0.
 
 >[!NOTE]
->Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+>
+>Se [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md) för den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.11.0 är 4 november 2021.
-Nästa version är planerad till den 16 december 2021.
+Lanseringsdatumet för Cloud Manager i AEM as a Cloud Service 2021.12.0 är 16 december 2021. Nästa version är planerad till januari 2022.
 
 ### Nyheter {#what-is-new}
 
-* Användare kan nu utnyttja nya frontledningslinjer för att exklusivt distribuera frontendkod snabbare. Se [Front End Pipelines för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill veta mer.
-
-   >[!IMPORTANT]
-   >Du måste ha AEM version `2021.10.5933.20211012T154732Z` för att utnyttja nya frontledningslinjer.
-
-* Varaktigheten i bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett mer effektivt sätt utan att behöva skapa en hel AEM. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
-
-* Git-implementerings-ID visas nu i körningsinformationen för pipeline, vilket gör det enklare att spåra koden som skapades.
-
-* Nu kan du skapa program via offentligt exponerade API:er.
-
-* Miljöskapande är nu tillgängligt via offentligt exponerade API.
-
-* The `x-request-id` svarshuvudet är nu synligt i API-uppspelningen på [www.adobe.io](https://www.adobe.io/). Det här huvudet är användbart när du skickar in kundvårdsproblem för felsökning.
-
-* Som användare ser jag att Pipeline-kortet med noll rörledningar ger mig lämplig vägledning.
-
-* Det finns nu en ny aktivitetssida där aktiviteter som pipeline och kodkörningar kan visas tillsammans med tillhörande information. Med tiden kommer de aktiviteter som listas på den här sidan att utvidgas tillsammans med de angivna detaljerna.
-
-* Nu finns det en ny sida med Pipelines (Pipelines) med en statuspekare som du kan använda när du hovrar för att enkelt visa sammanfattningen av detaljer. Pipeline-körningar kan visas tillsammans med tillhörande information.
-
-* API:t Redigera pipeline har nu stöd för att ändra miljön som används i distributionsfaserna.
-
-* En optimering i OakPal-skanningsprocessen har införts för stora paket.
-
-* CSV-filen för kvalitetsutgåva kommer nu att innehålla tidsstämpeln för varje kvalitetsproblem.
+* Den implementerade hashen, som redan är synlig i användargränssnittet, finns nu även i API:t.
+* På sidan Activity (Aktivitet) finns nu ett popup-fönster för rörledningar som ger en översikt över pipelineinformationen.
+* Uppdateringar för att inkludera ytterligare information som presenteras på aktivitetssidan lades till.
+* Fliken Lär dig i Cloud Manager innehåller nu snabb åtkomst till API-guider och associerade resurser.
+* En användare med rollen Distributionshanterare kan nu initiera guiden Skapa projekt/gren för en databas utan grenar från åtgärdsmenyn på databassidan.
+* Distributionshanteraren, som är i arbetsflödet för att lägga till eller redigera pipeline, får nu information om hur du skapar en gren eller ett projekt om den valda databasen inte har några grenar.
+* En ny självbetjäningsfunktion för Cloud Manager har lagts till för att tillåta [lägga till frihandsvariabler och hemligheter på miljönivå.](/help/implementing/cloud-manager/environment-variables.md)
+* Med det nya tillägget för referensdemonstrationer (tillgängligt den 17 december 2021) kan de senaste demokodsbaserna för AEM installeras och vara klara att driftsättas via det nya [snabbverktyg för att skapa webbplatser](/help/journey-sites/quick-site/overview.md) i Sites.
+* Framtidsrörledningar har nu stöd för rörliga variabler.
+* Skärmar kan nu aktiveras i dialogrutan Programredigering för alla sandlådor.
+* Vägledningen från anropskortet på översiktssidan har uppdaterats för att korrekt återge dess koppling till produktionsflödet för hela stacken.
+* Förbättringar av aktivitetssidan har lagts till i ytterligare information som gäller för rörledningar, inklusive källkod, ID för genomförande osv.
+* Mindre uppdateringar gjordes i användargränssnittet när TXT-poster kopierades (&quot;TXT-värde&quot; istället för&quot;TXT-post&quot;) för att undanröja eventuella förvirringar.
+* [Dokumentationen som rör certifikatfel](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md#certificate-errors) har uppdaterats för att omfatta ytterligare exempel tillsammans med felsökningssteg.
+* Det finns nu ett alternativ för att avvisa eller godkänna i den främre pipeline-körningen innan distributionen till produktionen.
 
 ### Felkorrigeringar {#bug-fixes}
 
-* Vissa oortodoxa byggkonfigurationer resulterade i att onödiga filer sparades i Pipelins Maven-artefaktcache, vilket resulterade i överflödig nätverks-I/O när byggbehållaren startades och stoppades.
-
-* Pipeline PATCH API misslyckas om det inte finns någon distributionsfas.
-
-* The `ClientlibProxyResourceCheck` kvalitetsregeln genererade falskt positiva problem när det fanns klientbibliotek med gemensamma grundsökvägar.
-
-* Felmeddelandet när det maximala antalet databaser har uppnåtts specificerade inte orsaken till felet.
-
-* I sällsynta fall misslyckades rörledningar på grund av olämplig hantering av vissa svarskoder.
-
+* Funktionella och gränssnittstestartefakter inkluderades inte i byggstegsloggen.
+* Loggarna för teststegen för produkten, funktionen och användargränssnittet kunde inte nås via det publika API:t.
+* I sällsynta fall är länken från sidan med miljöinformation till publicerings- eller förhandsgranskningstjänsten icke-funktionell.
+* Kompletta produktionsledningar för stackproduktion förblir namngivna&quot;Production Pipeline&quot; även när användaren anger ett annat namn i namnfältet.
