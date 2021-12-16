@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 55ed91d87d5b57d467604f7723949b4bf918f2ff
+source-git-commit: bd5611c32591562697750e6e6c86767a42bb7727
 workflow-type: tm+mt
-source-wordcount: '3373'
+source-wordcount: '3403'
 ht-degree: 25%
 
 ---
@@ -754,7 +754,19 @@ ht-degree: 25%
       + [ContextHub API](/help/implementing/developing/personalization/contexthub-api.md)
       + [Konfigurera segmentering med ContextHub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-prerelease/sites/authoring/personalization/contexthub-segmentation.html)
    + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
-      + [Utöka AEM med Adobe Developer App Builder](/help/implementing/developing/extending/app-builder.md)
+      + Utöka AEM med App Builder{#app-builder}
+         + [Utöka AEM med Adobe Developer App Builder](/help/implementing/developing/extending/app-builder/extending-aem-with-app-builder.md)
+         + [Introduktion till App Builder](/help/implementing/developing/extending/app-builder/videos/introduction.md)
+         + [Adobe Developer Console](/help/implementing/developing/extending/app-builder/videos/adobe-developer-console.md)
+         + [SDK och CLI](/help/implementing/developing/extending/app-builder/videos/sdks-and-cli.md)
+         + [Skapa ett program](/help/implementing/developing/extending/app-builder/videos/create.md)
+         + [Åtgärder](/help/implementing/developing/extending/app-builder/videos/actions.md)
+         + [Lagringsbibliotek](/help/implementing/developing/extending/app-builder/videos/storage-libraries.md)
+         + [Händelsestyrda program](/help/implementing/developing/extending/app-builder/videos/event-driven-applications.md)
+         + [Front-end-applikationer](/help/implementing/developing/extending/app-builder/videos/front-end-applications.md)
+         + [Dokumentskydd](/help/implementing/developing/extending/app-builder/videos/security.md)
+         + [Distribuera program](/help/implementing/developing/extending/app-builder/videos/deploy.md)
+         + [Publicera program](/help/implementing/developing/extending/app-builder/videos/publish.md)
       + [Utöka Experience Fragments](/help/implementing/developing/extending/experience-fragments.md)
       + [Anpassa och utöka Content Fragments](/help/implementing/developing/extending/content-fragments-customizing.md)
       + [Content Fragments – konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
