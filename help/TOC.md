@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: aaeecc897157b08686a741ed7c2143a443fb2633
+source-git-commit: dd127862d65ed2f6a2dc2f93f9668552c577181c
 workflow-type: tm+mt
-source-wordcount: '3354'
+source-wordcount: '3362'
 ht-degree: 25%
 
 ---
@@ -262,7 +262,7 @@ ht-degree: 25%
       + [Integrera med Adobe Analytics](/help/sites-cloud/integrating/integrating-adobe-analytics.md)
       + [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md)
 + Assets {#assets}
-   + [[!DNL Assets] as a [!DNL Cloud Service]](/help/assets/home.md)
+   + [[!DNL Assets] som [!DNL Cloud Service]](/help/assets/home.md)
    + [Översikt och nyheter](/help/assets/overview.md)
    + [Betydande ändringar i [!DNL Assets] som [!DNL Cloud Service]](/help/assets/assets-cloud-changes.md)
    + [[!DNL Assets] arkitektur](/help/assets/architecture.md)
@@ -292,6 +292,7 @@ ht-degree: 25%
       + [Återanvända resurser med MSM](/help/assets/reuse-assets-using-msm.md)
       + [Hämta resurser](/help/assets/download-assets-from-aem.md)
       + [Checka in och checka ut resurser för redigering](/help/assets/check-out-and-submit-assets.md)
+      + [Skapa och dela privata mappar](/help/assets/private-folder.md)
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
       + [Bearbeta resurser med [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
@@ -435,7 +436,7 @@ ht-degree: 25%
       + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
       + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
       + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
-      + [Konfigurera [!DNL Microsoft Dynamics 365] and [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
+      + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
       + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
       + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
       + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
