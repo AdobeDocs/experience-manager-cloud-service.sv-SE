@@ -2,9 +2,9 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: ed8150e3b1e7d318a15ad84ebda7df52cf40128b
+source-git-commit: 758e3df9e11b5728c3df6a83baefe6409bef67f9
 workflow-type: tm+mt
-source-wordcount: '2877'
+source-wordcount: '2930'
 ht-degree: 12%
 
 ---
@@ -72,21 +72,6 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + Alla `rep:policy` för alla banor under `/apps`
    + [Förkompilerade paketerade skript](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/precompiled-bundled-scripts.html)
 
-+ The `ui.config` paket, innehåller alla [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md):
-   + Organisationsmapp som innehåller körlägesspecifika OSGi-konfigurationsdefinitioner
-      + `/apps/my-app/osgiconfig`
-   + Vanlig OSGi-konfigurationsmapp som innehåller standardkonfigurationer för OSGi som gäller för alla mål AEM as a Cloud Service distributionsmål
-      + `/apps/my-app/osgiconfig/config`
-   + Kör lägesspecifika OSGi-konfigurationsmappar som innehåller standardkonfigurationer för OSGi som gäller för alla mål AEM as a Cloud Service distributionsmål
-      + `/apps/my-app/osgiconfig/config.<author|publish>.<dev|stage|prod>`
-   + Repo Init OSGi-konfigurationsskript
-      + [Repo Init](#repo-init) är det rekommenderade sättet att distribuera (ändringsbart) innehåll som logiskt är en del av AEM. Repo Init OSGi-konfigurationerna ska vara platser i lämpliga `config.<runmode>` enligt ovan och användas för att definiera:
-         + Baslinjeinnehållsstrukturer
-         + Användare
-         + Tjänstanvändare
-         + Grupper
-         + ACL-listor (behörigheter)
-
 >[!NOTE]
 >
 >Samma kod måste distribueras till alla miljöer. Detta är nödvändigt för att säkerställa en nivå av konfidensvalidering i scenmiljön som också är i produktion. Mer information finns i avsnittet om [Runmodes](/help/implementing/deploying/overview.md#runmodes).
@@ -125,6 +110,22 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `site-b.ui.config` distribuerar OSGi-konfigurationer som krävs av plats B
       + `site-b.ui.content` distribuerar innehåll och konfiguration som krävs av plats B
 
++ The `ui.config` paketet innehåller alla [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md):
+   + Betraktad kod och hör till OSGi-paket, men innehåller inte vanliga innehållsnoder. Därför markeras det som ett behållarpaket
+   + Organisationsmapp som innehåller körlägesspecifika OSGi-konfigurationsdefinitioner
+      + `/apps/my-app/osgiconfig`
+   + Vanlig OSGi-konfigurationsmapp som innehåller standardkonfigurationer för OSGi som gäller för alla mål AEM as a Cloud Service distributionsmål
+      + `/apps/my-app/osgiconfig/config`
+   + Kör lägesspecifika OSGi-konfigurationsmappar som innehåller standardkonfigurationer för OSGi som gäller för alla mål AEM as a Cloud Service distributionsmål
+      + `/apps/my-app/osgiconfig/config.<author|publish>.<dev|stage|prod>`
+   + Repo Init OSGi-konfigurationsskript
+      + [Repo Init](#repo-init) är det rekommenderade sättet att distribuera (ändringsbart) innehåll som logiskt är en del av AEM. Repo Init OSGi-konfigurationerna ska vara platser i lämpliga `config.<runmode>` enligt ovan och användas för att definiera:
+         + Baslinjeinnehållsstrukturer
+         + Användare
+         + Tjänstanvändare
+         + Grupper
+         + ACL-listor (behörigheter)
+
 ### Extra programpaket{#extra-application-packages}
 
 Om andra AEM, som i sig själva består av sina egna kod- och innehållspaket, används av den AEM distributionen, bör deras behållarpaket bäddas in i projektets `all` paket.
@@ -141,14 +142,14 @@ Ett AEM projekt som innehåller 2 AEM program kan se ut så här:
 
 ## Pakettyper {#package-types}
 
-Paket ska märkas med sin deklarerade pakettyp.
+Paket ska märkas med sin deklarerade pakettyp. Pakettyper gör det lättare att klargöra syftet med och distributionen av ett paket.
 
-+ Behållarpaket måste ange sina `packageType` till `container`. Behållarpaket får inte innehålla OSGi-paket, OSGi-konfigurationer och får inte användas [installera kopplingar](http://jackrabbit.apache.org/filevault/installhooks.html).
++ Behållarpaket måste ange sina `packageType` till `container`. Behållarpaket får inte innehålla vanliga noder. Endast OSGi-paket, konfigurationer och underpaket tillåts. Behållare i AEM as a Cloud Service får inte användas [installera kopplingar](http://jackrabbit.apache.org/filevault/installhooks.html).
 + Kodpaket (ej ändringsbara) måste ange sina `packageType` till `application`.
 + Innehållspaket (mutable) måste ange sina `packageType` till `content`.
 
 
-Mer information finns i [Apache Jackrabbit FileVault - dokumentation för Plugin-programmet Package Maven](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType) och [FileVault Maven-konfigurationsfragment](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
+Mer information finns i [Apache Jackrabbit FileVault - dokumentation för Plugin-programmet Package Maven](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType), [Pakettyper för Apache Jackrabbit](http://jackrabbit.apache.org/filevault/packagetypes.html)och [FileVault Maven-konfigurationsfragment](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
 
 >[!TIP]
 >
