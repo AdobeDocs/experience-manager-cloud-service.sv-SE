@@ -3,9 +3,9 @@ title: Webbplatsteman
 description: Lär dig hur AEM webbplatsteman kan användas för att anpassa webbplatsens stil och design.
 feature: Administering
 role: Admin
-source-git-commit: 9e7ad4a640f1783be5aed75e01e860b647662f52
+source-git-commit: 0b00d579886a106f5f66cfc54d90eab9563724cd
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 0%
 # Webbplatsteman {#site-themes}
 
 Lär dig hur AEM webbplatsteman kan användas för att anpassa webbplatsens stil och design.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 ## Översikt {#overview}
 
@@ -55,6 +51,6 @@ Adobe tillhandahåller ett referenstema som du kan använda som utgångspunkt f�
 
 ## Utveckla webbplatsteman {#developing-themes}
 
-Adobe tillhandahåller och AEM Site Theme Builder som en uppsättning skript för att skapa nya webbplatsteman.
+Adobe tillhandahåller en AEM Site Theme Builder som en uppsättning skript för att skapa nya webbplatsteman.
 
 [AEM Site Theme Builder finns tillsammans med användningsdokumentation för GitHub.](https://github.com/adobe/aem-site-theme-builder) Utvecklingsupplevelsen i gränssnittet krävs för att anpassa temat.

@@ -3,9 +3,9 @@ title: Webbplatsmallar
 description: Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet så att du snabbt kan skapa webbplatser.
 feature: Administering
 role: Admin
-source-git-commit: 2dd35f1ea25f6bfc515d7b50fd53cf4638af4026
+source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 0%
 # Webbplatsmallar {#site-templates}
 
 Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet så att du snabbt kan skapa webbplatser.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 ## Översikt {#overview}
 
@@ -65,7 +61,7 @@ Webbplatsmallar är helt enkelt paket med en logisk struktur som tydligt återsp
 
 * `files`: Mapp med UI-kit, XD och eventuellt andra filer
 * `previews`: Mapp med skärmbilder av platsmallen
-* `site`: Innehållspaket med innehåll som kopieras för varje plats som skapas från den här mallen, t.ex. sidmallar, sidor osv.
+* `site`: Innehållspaket för det innehåll som kopieras för varje plats som skapas från den här mallen, t.ex. sidmallar, sidor osv.
 * `theme`: Källor till [webbplatstema](site-themes.md) för att ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript osv.
 
 ## Standardmall för webbplats {#standard-site-template}

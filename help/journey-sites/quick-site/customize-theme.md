@@ -1,9 +1,9 @@
 ---
 title: Anpassa webbplatstemat
 description: Lär dig hur webbplatstemat byggs, hur du anpassar och hur du testar med AEM.
-source-git-commit: 348e26a9af260d89841d19d00ce4102c00ae34ed
+source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Anpassa webbplatstemat {#customize-the-site-theme}
 
 Lär dig hur webbplatstemat byggs, hur du anpassar och hur du testar med AEM.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 ## Story hittills {#story-so-far}
 
@@ -31,7 +27,7 @@ Den här delen av resan tar nästa steg och går in i webbplatstemat och visar h
 I det här dokumentet förklaras hur det AEM webbplatstemat byggs, hur det anpassas och hur du testar det med AEM. När du har läst bör du:
 
 * Förstå webbplatsens grundläggande struktur och hur du redigerar den.
-* Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokala utkast.
+* Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokal proxy.
 * Lär dig hur du implementerar dina ändringar i AEM Git-databasen.
 
 ## Ansvarig roll {#responsible-role}
@@ -132,7 +128,7 @@ Dina anpassningar lagras nu säkert i AEM Git-databasen.
 Nu när du är klar med den här delen av AEM snabbwebbplats:
 
 * Förstå webbplatsens grundläggande struktur och hur du redigerar den.
-* Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokala utkast.
+* Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokal proxy.
 * Lär dig hur du implementerar dina ändringar i AEM Git-databasen.
 
 Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att nästa gång du granskar dokumentet [Driftsätt ditt anpassade tema,](deploy-theme.md) där du får lära dig hur du distribuerar temat med hjälp av frontendriet.

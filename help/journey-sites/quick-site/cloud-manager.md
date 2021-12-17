@@ -1,9 +1,9 @@
 ---
 title: Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser
 description: Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.
-source-git-commit: efeb97d4bd7e7c11ec2c0ba1244a32b8b9affdab
+source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser {#understand-cloud-manager}
 
 Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 >[!TIP]
 >

@@ -1,9 +1,9 @@
 ---
 title: Konfigurera din pipeline
 description: Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
-source-git-commit: 2d575036c8e84e282a6599015360dcd25e4c8aa9
+source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Konfigurera din pipeline {#set-up-your-pipeline}
 
 Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 ## Story hittills {#story-so-far}
 

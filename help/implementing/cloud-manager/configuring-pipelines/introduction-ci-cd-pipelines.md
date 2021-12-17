@@ -2,9 +2,9 @@
 title: CI-CD-rör
 description: Följ den här sidan för att lära dig mer om Cloud Manager CI-CD-förgreningar
 index: true
-source-git-commit: e8ceeb0eb4fb26553683ced74a2e20628fc2952e
+source-git-commit: 3d48bd507305e7a1d3efa2b61123afdae1f52ced
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Dessa kan vara av typen frontslutskodens kvalitet eller frontslutets distributio
 
 ### Innan du konfigurerar frontmatriser {#before-start}
 
-Innan du börjar konfigurera frontledningarna finns mer information i [AEM för att skapa webbplatser snabbt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites-journey/quick-site/overview.html) för ett komplett arbetsflöde med det lättanvända AEM för att skapa en webbplats. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
+Innan du börjar konfigurera frontledningarna finns mer information i [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) för ett komplett arbetsflöde med det lättanvända AEM för att skapa en webbplats. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
 
 ### Konfigurera en frontpipeline {#configure-front-end}
 
@@ -82,6 +82,12 @@ Mer information om hur du konfigurerar frontendpipeline finns i:
 
 * [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline)
 * [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)
+
+### Developing Sites with the Front-End Pipeline {#developing-with-front-end-pipeline}
+
+Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan gå mycket snabbare.
+
+Se [det här dokumentet](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) för hur denna process fungerar tillsammans med vissa överväganden som måste beaktas för att man ska få ut mesta möjliga av denna process.
 
 ## Kompletta stackrör {#full-stack-pipeline}
 

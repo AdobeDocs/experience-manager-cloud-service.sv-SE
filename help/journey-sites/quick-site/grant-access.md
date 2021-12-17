@@ -1,9 +1,9 @@
 ---
 title: Bevilja åtkomst till klientutvecklaren
 description: Anlita gränssnittsutvecklare i Cloud Manager så att de får tillgång till era AEM och er pipeline.
-source-git-commit: 7c70be541e811e1be236763081d5571db4269b7a
+source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Bevilja åtkomst till klientutvecklaren {#grant-fed-access}
 
 Anlita gränssnittsutvecklare i Cloud Manager så att de får tillgång till era AEM och er pipeline.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 ## Story hittills {#story-so-far}
 

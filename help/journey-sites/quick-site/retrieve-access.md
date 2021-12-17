@@ -1,9 +1,9 @@
 ---
 title: Hämta Git-databasåtkomstinformation
 description: Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.
-source-git-commit: 44dc1ce4b8771ce848652364a5ac9e3ee28c56b0
+source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '897'
 ht-degree: 3%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 3%
 # Hämta Git-databasåtkomstinformation {#retrieve-access}
 
 Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 ## Story hittills {#story-so-far}
 

@@ -3,9 +3,9 @@ title: Skapa en plats
 description: Lär dig hur du använder AEM för att skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
 feature: Administering
 role: Admin
-source-git-commit: efeb97d4bd7e7c11ec2c0ba1244a32b8b9affdab
+source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 0%
 # Skapa en plats {#creating-site}
 
 Lär dig hur du använder AEM skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 ## Översikt {#overview}
 
@@ -93,7 +89,7 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    ![Ny webbplatsstruktur](../assets/new-site.png)
 
-Nu kan författare av innehåll börja skriva!
+Innehållsförfattare kan nu börja skriva!
 
 ## Webbplatsanpassning {#site-customization}
 

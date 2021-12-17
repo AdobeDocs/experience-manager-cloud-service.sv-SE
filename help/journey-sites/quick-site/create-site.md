@@ -1,9 +1,9 @@
 ---
 title: Skapa webbplats från mall
 description: Lär dig hur du snabbt skapar en ny AEM med hjälp av en webbplatsmall.
-source-git-commit: 73e9d1debe70aff7f53d658bbac074fc53d8f1ae
+source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1487'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Skapa webbplats från mall {#create-site-from-template}
 
 Lär dig hur du snabbt skapar en ny AEM med hjälp av en webbplatsmall.
-
->[!CAUTION]
->
->Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 ## Story hittills {#story-so-far}
 
@@ -44,7 +40,7 @@ Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i 
 
 * `files`: Mapp med UI-kit, XD och eventuellt andra filer
 * `previews`: Mapp med skärmbilder av platsmallen
-* `site`: Innehållspaket med innehåll som kopieras för varje plats som skapas från den här mallen, t.ex. sidmallar, sidor osv.
+* `site`: Innehållspaket för det innehåll som kopieras för varje plats som skapas från den här mallen, t.ex. sidmallar, sidor osv.
 * `theme`: Källor till malltemat för att ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript osv.
 
 Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt kan skapa en webbplats. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du tillgodose olika affärsbehov.
