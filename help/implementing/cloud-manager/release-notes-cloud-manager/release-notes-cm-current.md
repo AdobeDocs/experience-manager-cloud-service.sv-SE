@@ -2,7 +2,7 @@
 title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.12.0
 description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2021.12.0.
 feature: Release Information
-source-git-commit: 72853f1278be4dd429be28fd611b5a0cb77bcb3d
+source-git-commit: fc1eae86097f0cc928860ff7f43e3177f2e8f3a1
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Lanseringsdatumet för Cloud Manager i AEM as a Cloud Service 2021.12.0 är 16 d
 * En användare med rollen Distributionshanterare kan nu initiera guiden Skapa projekt/gren för en databas utan grenar från åtgärdsmenyn på databassidan.
 * Distributionshanteraren, som är i arbetsflödet för att lägga till eller redigera pipeline, får nu information om hur du skapar en gren eller ett projekt om den valda databasen inte har några grenar.
 * En ny självbetjäningsfunktion för Cloud Manager har lagts till för att tillåta [lägga till frihandsvariabler och hemligheter på miljönivå.](/help/implementing/cloud-manager/environment-variables.md)
-* Med det nya tillägget för referensdemonstrationer (tillgängligt den 17 december 2021) kan de senaste demokodsbaserna för AEM installeras och vara klara att driftsättas via det nya [snabbverktyg för att skapa webbplatser](/help/journey-sites/quick-site/overview.md) i Sites.
+* Med nya [Tilläggsprogram för referensdemonstrationer](/help/journey-sites/demos-add-on/overview.md) (tillgängligt den 17 december 2021) kan de senaste demokodsbaserna för AEM installeras och vara klara att driftsättas via den nya [snabbverktyg för att skapa webbplatser](/help/journey-sites/quick-site/overview.md) i Sites.
 * Framtidsrörledningar har nu stöd för rörliga variabler.
 * Skärmar kan nu aktiveras i dialogrutan Programredigering för alla sandlådor.
 * Vägledningen från anropskortet på översiktssidan har uppdaterats för att korrekt återge dess koppling till produktionsflödet för hela stacken.

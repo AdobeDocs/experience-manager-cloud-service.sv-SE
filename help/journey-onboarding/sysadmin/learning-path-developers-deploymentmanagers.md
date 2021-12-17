@@ -3,9 +3,10 @@ title: Utbildningsväg för utvecklare och distributionschefer
 description: Följ den här sidan om du vill lära dig nästa steg efter att du har fått åtkomst, om du är en utvecklare eller en distributionshanterare
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: d8ff6f4386ab0e5df4f770cdb566facc1cc0cc98
+exl-id: f57a856b-0932-4e8f-be59-a19fe692e2ab
+source-git-commit: cf688addd731d7a7107a648b40fbbdd149fef503
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -26,8 +27,8 @@ När du har läst det här dokumentet bör du:
 Om du läser det här avsnittet är du troligtvis tilldelad en produktprofil för utvecklare eller Deployment Manager och är redo att börja och fortsätta din inlärningsväg.
 
 >[!NOTE]
->* Som *utvecklare* vill du logga in på Cloud Manager och bekanta dig med att använda Git.
->* Som *Distributionshanterare* vill du veta hur du konfigurerar pipelines och till och med distribuerar kod.
+>* Som *Utvecklare* ska du logga in på Cloud Manager och bekanta dig med att använda Git.
+>* Som *Distributionshanteraren* vill du bekanta dig med hur du skapar rörledningar och till och med distribuerar kod.
 
 
 ## Krav {#prerequisites}
@@ -41,22 +42,26 @@ Innan du börjar bör du kontrollera följande:
 ## Hantera GitHub {#manage-git}
 
 Du kan komma åt och hantera din Git-databas med hjälp av Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager.
-Mer information om det här avsnittet finns i [Åtkomst till Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en).
+Mer information om detta avsnitt finns i [Åtkomst till Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en).
 
 ## Konfigurera pipeline {#setup-pipeline}
 
 Du kan konfigurera din produktion eller icke-produktion-pipeline från användargränssnittet i Cloud Manager.
-Mer information om det här avsnittet finns i [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en).
+Mer information om detta avsnitt finns i [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en).
 
 ## What’s Next {#whats-next}
 
-Utvecklare och driftsättningshanterare är nu redo att lära sig att utveckla kod i AEM som en Cloud Service. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan. Mer information om utbildningsprocessen för innehållsförfattare finns i [Utbildningsväg för AEM-författare](/help/journey-onboarding/sysadmin/learning-path-aem-users.md).
+Utvecklings- och distributionsansvariga är nu redo att lära sig hur man utvecklar kod på AEM as a Cloud Service. Läs mer eller hitta fler utbildningsvägar under avsnittet Ytterligare resurser nedan. Mer information om inlärningsprocessen för innehållsförfattare finns i [Utbildningsväg för AEM-författare](/help/journey-onboarding/sysadmin/learning-path-aem-users.md).
+
+>[!TIP]
+>
+>Nu när du är ombord kan du [lära dig hur du enkelt lägger till tillägget AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) till en sandlådemiljö med minimal AEM och möjlighet att testa de kraftfulla funktionerna i AEM med omfattande exempel baserade på bästa praxis.
 
 ## Ytterligare resurser {#additional-resources}
 
 * [Åtkomst till Git- och Git-kontohantering från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/accessing-git.html?lang=en)
 
-* [Lokal utvecklingsmiljö för AEM som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
+* [Lokal utvecklingsmiljö för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 
 * [Komma igång med AEM Sites (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 

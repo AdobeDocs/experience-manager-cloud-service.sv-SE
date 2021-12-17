@@ -2,9 +2,9 @@
 title: AEM Sites Journeys
 description: Börja här för att få en översikt över de guidade resor som finns för att förstå AEM kraftfulla webbplatsfunktioner.
 exl-id: d18bc8b8-8d94-4296-a218-b21b59e6563d
-source-git-commit: ada7c256de5d050724781e4cbad6d877c1562c7b
+source-git-commit: fd663a98cc4b2924edb274baa452264a37641e0c
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,8 @@ Följande dokumentationsresor är tillgängliga för AEM Sites.
 
 | Titel | Beskrivning | Primär målgrupp |
 |---|---|---|
-| [Site Translation Journey](/help/journey-sites/translation/overview.md) | Lär dig mer om AEM Sites tekniker, hur de kan användas i ditt projekt och hur du skapar och uppdaterar översättningsprojekt i AEM från A till Z. | Översättningsspecialister |
 | [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md) | Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av AEM sajt och snabbt anpassar sajten utan någon AEM backend-kunskap. | Framtidsutvecklare |
+| [Referensdemonstrationer, tilläggsresa](/help/journey-sites/demos-add-on/overview.md) | Börja här för en guidad resa genom hur du enkelt lägger till tillägget AEM Reference Demos i en sandlådemiljö med minimal AEM och kan testa de kraftfulla funktionerna i AEM med detaljerade exempel baserade på bästa praxis. | Systemadministratör |
+| [Site Translation Journey](/help/journey-sites/translation/overview.md) | Lär dig mer om AEM Sites tekniker, hur de kan användas i ditt projekt och hur du skapar och uppdaterar översättningsprojekt i AEM från A till Z. | Översättningsspecialister |
 
 Stanna kvar på [kommande resor som omfattar ytterligare roller.](/help/journey-documentation/documentation-journeys.md#journeys)
