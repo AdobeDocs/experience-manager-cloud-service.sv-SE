@@ -1,22 +1,22 @@
 ---
-title: '[!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service'
-description: '[!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service'
+title: '[!DNL Adobe Experience Manager] as a Cloud Service prerelease Channel'
+description: '[!DNL Adobe Experience Manager] as a Cloud Service prerelease Channel'
 exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
-source-git-commit: bcd106a39bec286e2a09ac7709758728f76f9544
+source-git-commit: 6cd454eaf70400f3507bc565237567cace66991f
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Experience Manager] som en förhandsversion av Cloud Service {#prerelease-channel}
+# [!DNL Adobe Experience Manager] as a Cloud Service prerelease Channel {#prerelease-channel}
 
 
 ## Introduktion {#introduction}
 
-[!DNL Adobe Experience Manager] som en Cloud Service levererar nya funktioner på månadsbasis, enligt schemat för lanseringar av  [Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-as-cloud-service). För att bekanta sig med de funktioner som kommer att bli tillgängliga nästa månad kan kunderna prenumerera på betaversionskanalen, som nås genom att konfigurera i standardprogramutvecklingsmiljöer eller i sandlådeprogrammiljöer på lämpligt sätt. Kunderna kan förhandsgranska ändringar i Sites-konsolen samt bygga kod mot nya prerelease-API:er.
+[!DNL Adobe Experience Manager] as a Cloud Service levererar nya funktioner på månadsbasis, enligt schemat [Experience Manager släpper färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-as-cloud-service). För att bekanta sig med de funktioner som kommer att bli tillgängliga nästa månad kan kunderna prenumerera på betaversionskanalen, som nås genom att konfigurera i standardprogramutvecklingsmiljöer eller i sandlådeprogrammiljöer på lämpligt sätt. Kunderna kan förhandsgranska ändringar i Sites-konsolen samt bygga kod mot nya prerelease-API:er.
 
-Listan över förhandsversionsfunktioner för en viss månad visas i [månadsversionsinformationen](/help/release-notes/release-notes-cloud/release-notes-current.md).
+Listan över förhandsversionsfunktioner för en viss månad publiceras i [månadsversionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
 >[!VIDEO](/help/release-notes/assets/prerelease-overview.mp4)
 
@@ -31,7 +31,7 @@ Förhandsversionsfunktionerna kan användas på olika sätt:
 
 Så här visar du nya funktioner i Sites-konsolen i molnmiljöer samt resultatet av eventuella projektanpassningar:
 
-* Med hjälp av [Cloud Managers API:s miljövariabelslutpunkt](https://www.adobe.io/apis/experiencecloud/cloud-manager/api-reference.html#/Variables/patchEnvironmentVariables) anger du miljövariabeln **AEM_RELEASE_CHANNEL** till **prerelease**.
+* Använda [Slutpunkt för miljövariablerna i API:t för Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/api-reference.html#/Variables/patchEnvironmentVariables), ange **AEM_RELEASE_CHANNEL** miljövariabel till värdet **prerelease**.
 
 ```
 PATCH /program/{programId}/environment/{environmentId}/variables
@@ -44,19 +44,21 @@ PATCH /program/{programId}/environment/{environmentId}/variables
 ]
 ```
 
-Cloud Manager CLI kan också användas enligt instruktionerna på [https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)
+CLI:n för Cloud Manager kan även användas enligt instruktionerna på [https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)
 ```aio cloudmanager:environment:set-variables <ENVIRONMENT_ID> --programId=<PROGRAM_ID> --variable AEM_RELEASE_CHANNEL “prerelease”```
 
 
 Variabeln kan tas bort eller återställas till ett annat värde om du vill att miljön ska återställas till det vanliga (ej prerelease) kanalens beteende
 
+* Du kan också konfigurera miljövariabler från [Användargränssnitt för Cloud Manager](/help/implementing/cloud-manager/environment-variables.md).
+
 ### Lokal SDK {#local-sdk}
 
-Du kan se nya funktioner i Sites-konsolen i den lokala QuickStart SDK och koda mot nya API:er i prerelease genom att låta din maven-projektreferens vara prerelease `API Jar` i Maven Central. Du kan även se de här förhandsversionsfunktionerna på den lokala datorn genom att starta den vanliga QuickStart SDK i förhandsversionsläge:
+Du kan se nya funktioner i Sites-konsolen i den lokala QuickStart SDK och koda mot nya API:er i förhandsversionen genom att låta din maven-projektreferens vara förhandsversionen `API Jar` i Maven Central. Du kan även se de här förhandsversionsfunktionerna på den lokala datorn genom att starta den vanliga QuickStart SDK i förhandsversionsläge:
 
-* Hämta SDK från programdistributionsportalen och installera enligt beskrivningen i [Öppna AEM som en Cloud Service-SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
-* Inkludera argumentet `-r prerelease` när du startar SDK QuickStart.
-* Värdet är *sticky* så det kan bara markeras vid första starten. Installera om SDK för att ändra kommandoradsalternativet.
+* Hämta SDK från programdistributionsportalen och installera enligt beskrivningen i [Åtkomst till AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
+* Inkludera argumentet när du startar SDK QuickStart `-r prerelease`.
+* Värdet är *klibbig* så att den bara kan väljas vid första starten. Installera om SDK för att ändra kommandoradsalternativet.
 
 Eftersom det kan finnas flera AEM underhållsreleaser mellan de olika månadsvisa funktionsreleaserna kan du ladda ned dessa nya SDK och hänvisa till de nya Jar-versionerna av SDK API i större projekt. Underhållsreleaserna kommer inte att innehålla ytterligare förhandsversionsfunktioner, men kan innehålla andra mindre ändringar som felkorrigeringar, säkerhetskorrigeringar och prestandaförbättringar.
 Javadocs publiceras i Maven Central.
@@ -88,7 +90,7 @@ Så här bygger du mot betaversionen av SDK:
      </dependency>
    ```
 
-   Om du vill ändra till prerelease SDK ändrar du bara beroendet från `com.adobe.aem:aem-sdk-api` till `com.adobe.aem:aem-prerelease-sdk-api` enligt vad som anges nedan:
+   Ändra bara beroendet från `com.adobe.aem:aem-sdk-api` till `com.adobe.aem:aem-prerelease-sdk-api` enligt vad som anges nedan:
 
    ```
    <dependencyManagement>
@@ -112,9 +114,10 @@ Så här bygger du mot betaversionen av SDK:
 1. Om du är säker på att det fungerar som väntat lokalt, bekräftar du koden till en utvecklingsgren och använder ett icke-produktionsflöde i Cloud Manager för att distribuera till en miljö som prenumererar på betaversionskanalen
 
 >[!CAUTION]
-`aem-prerelease-sdk-api`-artefactId får aldrig användas vid distribution till Stage eller Production. Använd alltid aem-sdk-api när du distribuerar via produktionskanalen. Kod som refererar till prerelease-API:er ska inte heller distribueras via produktionskanalen.
+> 
+> The `aem-prerelease-sdk-api` artifactId får aldrig användas vid distribution till Stage eller Production. Använd alltid aem-sdk-api när du distribuerar via produktionskanalen. Kod som refererar till prerelease-API:er ska inte heller distribueras via produktionskanalen.
 
-[AEM CS SDK build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=en#developing) identifierar om prerelease API används i ett projekt genom att undersöka beroendena. Om analyseraren hittar den använder den prerelease sdk api för att analysera projektet.
+The [AEM CS SDK build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=en#developing) identifierar om prerelease API används i ett projekt genom att undersöka beroendena. Om analyseraren hittar den använder den prerelease sdk api för att analysera projektet.
 
 ## Överväganden {#considerations}
 
@@ -122,6 +125,6 @@ Det finns några saker att tänka på när det gäller prerelease-kanalen:
 
 * Vissa funktioner som kommer att lanseras i nästa månadsutgåva kanske inte ingår i prerelease-kanalen.
 * Funktioner i betaversionen är strikta och avsedda att vara fullständiga snarare än betakvalitet. Om du upptäcker några problem ska du rapportera dem, precis som du skulle göra om du misstänker att det finns fel i en vanlig AEM.
-* Om du vill ta reda på om en miljö är konfigurerad för betaversionskanalen går du till sidan **Om** på AEM Console och kontrollerar om det AEM versionsnumret innehåller ett *prerelease*-suffix som ```Adobe Experience Manager 2021.4.5226.20210427T070726Z-210429-PRERELEASE```.
+* Om du vill avgöra om en miljö är konfigurerad för betaversionskanalen går du till AEM Console **Om** och kontrollera om AEM innehåller en *prerelease* suffix som ```Adobe Experience Manager 2021.4.5226.20210427T070726Z-210429-PRERELEASE```.
 
 ![om](/help/release-notes/assets/about.png)

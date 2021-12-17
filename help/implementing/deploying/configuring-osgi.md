@@ -3,14 +3,18 @@ title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
 description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: f947650b0872785e1f1b5f4c6542afd41fa61309
+source-git-commit: 6cd454eaf70400f3507bc565237567cace66991f
 workflow-type: tm+mt
-source-wordcount: '2993'
+source-wordcount: '3020'
 ht-degree: 0%
 
 ---
 
 # Konfigurera OSGi för Adobe Experience Manager as a Cloud Service {#configuring-osgi-for-aem-as-a-cloud-service}
+
+>[!NOTE]
+>
+>AEM har introducerat möjligheten att använda användargränssnittet i Cloud Manager för att konfigurera standardmiljövariabler med version 2021.12.0. Mer information finns i dokumentationen [här](/help/implementing/cloud-manager/environment-variables.md).
 
 [OSGi](https://www.osgi.org/) är en grundläggande del i Adobe Experience Manager (AEM) teknikstack. Det används för att styra de sammansatta paketen av AEM och dess konfigurationer.
 
@@ -42,7 +46,7 @@ efter konfigurationsformatet cfg.json OSGi.
 
 ## Upplösning för körningsläge {#runmode-resolution}
 
-Specifika OSGi-konfigurationer kan riktas mot specifika AEM genom att använda runmodes. Om du vill använda körningsläget skapar du konfigurationsmappar under `/apps/example` (där till exempel är ditt projektnamn), i formatet:
+Specifika OSGi-konfigurationer kan riktas mot specifika AEM genom att använda runmodes. Skapa konfigurationsmappar under `/apps/example` (där till exempel är ditt projektnamn), i formatet:
 
 `/apps/example/config.<author|publish>.<dev|stage|prod>/`
 
@@ -123,7 +127,7 @@ När du definierar ett OSGi-konfigurationsvärde börjar du med infogade värden
 Använd endast miljöspecifika konfigurationer (`$[env:ENV_VAR_NAME]`) för icke-hemliga konfigurationsvärden när värdena varierar för förhandsvisningsnivån eller varierar mellan olika utvecklingsmiljöer. Detta omfattar lokala utvecklingsinstanser och alla Adobe Experience Manager as a Cloud Service utvecklingsmiljöer. Förutom för att ange unika värden för förhandsvisningsnivån bör du undvika att använda icke-hemliga miljöspecifika konfigurationer för Adobe Experience Manager as a Cloud Service Stage- eller Production-miljöer.
 
 * Använd bara icke-hemliga miljöspecifika konfigurationer för konfigurationsvärden som skiljer sig mellan publicerings- och förhandsgranskningsskikt, eller för värden som skiljer sig åt mellan utvecklingsmiljöer, inklusive lokala utvecklingsinstanser.
-* Förutom scenariot när förhandsvisningsnivån behöver variera från publiceringsnivån, använder du standardvärdena för intern visning i OSGi-konfigurationerna för icke-hemliga värden för scenen och produktionen. Det rekommenderas inte att man använder miljöspecifika konfigurationer för att underlätta konfigurationsändringar vid körning till scen- och produktionsmiljöer. dessa ändringar bör införas via källkodshantering.
+* Förutom scenariot när förhandsvisningsnivån behöver variera från publiceringsnivån, använder du standardvärdena för intern visning i OSGi-konfigurationerna för icke-hemliga värden för scenen och produktionen. Det rekommenderas inte att man använder miljöspecifika konfigurationer för att underlätta konfigurationsändringar under körning till scen- och produktionsmiljöer. dessa ändringar bör införas via källkodshantering.
 
 ### När hemliga miljöspecifika konfigurationsvärden ska användas {#when-to-use-secret-environment-specific-configuration-values}
 
@@ -143,7 +147,7 @@ JSON-formaterade OSGi-konfigurationsfiler kan skrivas för hand direkt i AEM. De
 1. Skapa en ny `<PID>.cfg.json` -fil. PID är den beständiga identiteten för OSGi-komponenten. Det är vanligtvis det fullständiga klassnamnet för OSGi-komponentimplementeringen. Till exempel:
    `/apps/.../config/com.example.workflow.impl.ApprovalWorkflow.cfg.json`
 Observera att namn på OSGi-konfigurationsfabriksfiler använder `<factoryPID>-<name>.cfg.json` namnkonvention
-1. Öppna den nya `.cfg.json` och definiera nyckel/värde-kombinationerna för OSGi-egenskapen och värdepar enligt följande [Konfigurationsformat för JSON OSGi](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
+1. Öppna den nya `.cfg.json` och definiera nyckel/värde-kombinationerna för OSGi-egenskapen och värdepar, enligt följande [Konfigurationsformat för JSON OSGi](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
 1. Spara ändringarna i den nya `.cfg.json` fil
 1. Lägg till och implementera din nya OSGi-konfigurationsfil i Git
 
