@@ -1,9 +1,9 @@
 ---
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
-source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
+source-git-commit: fe0261fa9708b2250b6f5e4931100a9fc006e55d
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -37,10 +37,6 @@ Innan du kan utföra produktionsmigreringen följer du stegen för implementerin
 * Starta migreringen från produktionen baserat på den erfarenhet du fick under den AEM as a Cloud Service migreringen av scenen som utfördes på kloner:
    * Författare/Författare
    * Publish-Publish
-
->[!NOTE]
->
->En as a Cloud Service författare kommer att visas under importen, men AEM as a Cloud Service publicering kommer att aktiveras vid importen.
 
 * Validera det innehåll som är inkapslat i både den AEM as a Cloud Service författaren och publiceringsnivån.
 * Instruera innehållsredigeringsteamet att undvika att flytta innehåll på både källa och mål tills det är fullständigt
