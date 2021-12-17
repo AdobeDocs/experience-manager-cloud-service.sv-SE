@@ -2,7 +2,7 @@
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
 exl-id: 4ea13f12-7251-448f-9f54-c8d710aef2ba
-source-git-commit: e786fe40d97294b4ab5e8657920f2ecbb401d8e9
+source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 2%
@@ -15,16 +15,16 @@ Implementeringsfasen omfattar:
 
 * [Lokal utveckling](#local-development)
 * [Omstrukturering av kod](#code-refactoring)
-* [AEM som Cloud Service](#aem-as-a-cloud-service-deployment)
+* [AEM as a Cloud Service driftsättning](#aem-as-a-cloud-service-deployment)
 * [Innehållsöverföring](#content-transfer)
 
 
-Klicka på projektkortet för att öppna projektstartsidan och navigera till avsnittet **Implementering**, som visas i bilden nedan.
+Klicka på projektkortet för att öppna projektstartsidan och navigera till **Implementering** som visas i figuren nedan.
 
-![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-1.png)
+![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-1.png)
 
 >[!NOTE]
->Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en#create-project).
+>Se [Skapa och hantera ett projekt i Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en#create-project) om du vill veta mer.
 
 
 ## Använda lokalt utvecklingskort {#local-development}
@@ -33,24 +33,24 @@ Det lokala utvecklingskortet tillhandahåller allt relevant innehåll som hjälp
 
 Följ det här avsnittet för att utforska aktivitetskortet för lokal utveckling:
 
-1. Klicka på knappen **Visa** på kortet **Lokal utveckling**.
+1. Klicka på **Visa** från **Lokal utveckling** kort.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-2.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-2.png)
 
 1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-3.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-3.png)
 
 
 ## Använda omfaktoriseringskort {#code-refactoring}
 
-Aktivitetskortet Code Refactoring ger all relevant information och markerar de områden för kodomfaktorisering som du behöver granska och lösa när du går till AEM som en Cloud Service.
+Aktivitetskortet Code Refactoring ger all relevant information och markerar de områden för kodomfaktorisering som du behöver granska och lösa när du går till AEM as a Cloud Service.
 
 Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 
-1. Klicka på knappen **Granska** på aktivitetskortet **Kodkorrigering**.
+1. Klicka på **Granska** från **Kodomfaktorisering** aktivitetskort.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-4.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-4.png)
 
 1. På sidan visas en lista med kodomfaktoriseringsaktiviteter ordnade efter allvarlighetsgrad. Du kan lära dig mer genom att klicka på de två markerade ikonerna.
 
@@ -63,46 +63,46 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 >[!NOTE]
 >Granska innehållet på de här flikarna för att få en förståelse för ytterligare områden som inte omfattas av Best Practices Analyzer.
 
-På fliken **Dispatcher** finns information om hur du strukturerar AEM som en Cloud Service-Apache och Dispatcher-konfiguration, samt om hur du validerar och kör den lokalt innan du distribuerar den till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
+The **Dispatcher** På -fliken finns information om hur du strukturerar de AEM as a Cloud Service Apache- och Dispatcher-konfigurationerna samt om hur du validerar och kör dem lokalt innan du distribuerar dem till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
 
-![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/coderefactoring-2.png)
+![bild](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-2.png)
 
-På fliken **Testning** finns information om funktioner, Experience Audit och UI-testning.
+The **Testning** -fliken innehåller information om funktioner, Experience Audit och UI-testning.
 
-![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/coderefactoring-3.png)
+![bild](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-3.png)
 
 
-## Använda AEM som distributionskort för Cloud Service {#aem-as-a-cloud-service-deployment}
+## Använda AEM as a Cloud Service distributionskort {#aem-as-a-cloud-service-deployment}
 
-AEM som driftsättningskort för Cloud Service innehåller allt relevant innehåll som hjälper dig att distribuera koden till AEM som en Cloud Service.
+AEM as a Cloud Service driftsättningskort innehåller allt relevant innehåll som hjälper dig att distribuera koden till AEM as a Cloud Service.
 
-Följ det här avsnittet för att utforska AEM som aktivitetskort för driftsättningskort för Cloud Service:
+Följ det här avsnittet för att utforska AEM aktivitetskort för as a Cloud Service distributionskort:
 
-1. Klicka på knappen **Visa** på **AEM som aktivitetskort för Cloud Service Deployment**.
+1. Klicka på **Visa** från **AEM as a Cloud Service driftsättning** aktivitetskort.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-6.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-6.png)
 
 1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/aem-deployment-card.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/aem-deployment-card.png)
 
 
 ## Använda innehållsöverföringskort {#content-transfer}
 
-Aktivitetskortet för innehållsöverföring innehåller riktlinjer och överväganden som ska granskas när du använder verktyget Innehållsöverföring för att flytta innehåll från den aktuella AEM till AEM som en Cloud Service.
+Aktivitetskortet för innehållsöverföring innehåller riktlinjer och överväganden som bör granskas när du använder verktyget Innehållsöverföring för att flytta innehåll från den aktuella AEM till AEM as a Cloud Service.
 
 Följ det här avsnittet för att utforska aktivitetskortet för innehållsöverföring:
 
-1. Klicka på knappen **Visa** på aktivitetskortet **Innehållsöverföring**.
+1. Klicka på **Visa** från **Innehållsöverföring** aktivitetskort.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/implementation-8.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-8.png)
 
 1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
-   ![bild](/help/move-to-cloud-service/cloud-acceleration-manager/assets/content-transfertool-card.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/content-transfertool-card.png)
 
    >[!NOTE]
-   >Granska [förutsättningarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en) och [god praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en) innan du använder verktyget Innehållsöverföring.
+   >Granska [krav](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en) och [bästa praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en) innan du använder verktyget Innehållsöverföring.
 
 ### Beräknar överföringstid för innehåll {#calculating}
 
@@ -111,9 +111,9 @@ En ny verktygskalkylator för innehållsöverföring har tillhandahållits för 
 >[!NOTE]
 >Dessa tider är bara uppskattningar. Faktor som nätverkshastigheter och tid att skala upp instanser har inte tagits med i dessa uppskattningar.
 
-Du kan beräkna storleken på AEM databas genom att köra rapporten Diskanvändning under `http://HOST:PORT/etc/reports/diskusage.html`.
+Om du vill beräkna storleken på AEM kan du köra rapporten Diskanvändning under `http://HOST:PORT/etc/reports/diskusage.html`.
 
-Du kan också beräkna storleken på specifika databassökvägar med parametern `path`, till exempel `http://HOST:PORT/etc/reports/diskusage.html?path=/content/dam`.
+Du kan också beräkna storleken på specifika databassökvägar med hjälp av `path` parameter, till exempel `http://HOST:PORT/etc/reports/diskusage.html?path=/content/dam`.
 
 ## What&#39;s Next {#whats-next}
 

@@ -2,7 +2,7 @@
 title: Beredskapsfas
 description: Beredskapsfas
 exl-id: 987cb929-7871-4fec-8ef5-4d2f5f2f2186
-source-git-commit: 6fcde5440a5e2eec57b69b14dca93192634b3c3a
+source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 87%
@@ -37,7 +37,7 @@ Läs [Borttagna funktioner](https://experienceleague.adobe.com/docs/experience-m
 
 I följande bild visas de viktigaste stegen under planeringsfasen:
 
-![bild](/help/move-to-cloud-service/assets/planning-phaseimg1.png)
+![bild](/help/journey-migration/assets/planning-phaseimg1.png)
 
 ### Utvärderar beredskap för Cloud Service {#access-cloud-readiness}
 
@@ -45,7 +45,7 @@ Det första steget i planeringsfasen är att utvärdera om du är redo att gå �
 
 Du måste göra en omfattande utvärdering av din aktuella AEM-källkod mot de märkbara ändringarna och de borttagna funktionerna för att avgöra hur stor insats som förväntas under övergången.
 
-Du kan snabba upp bedömningssteget genom att köra Best Practices Analyzer på den aktuella AEM. Mer information finns i [Best Practices Analyzer](/help/move-to-cloud-service/best-practices-analyzer/overview-best-practices-analyzer.md).
+Du kan snabba upp bedömningssteget genom att köra Best Practices Analyzer på den aktuella AEM. Mer information finns i [Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md).
 
 >[!NOTE]
 >Om du redan har tillgång till Cloud Manager och en Cloud Service-miljö rekommenderar vi att du kör den aktuella koden i en kvalitetspipeline för Cloud Manager-kod för att utvärdera om de kodändringar som krävs är kompatibla med Cloud Service.

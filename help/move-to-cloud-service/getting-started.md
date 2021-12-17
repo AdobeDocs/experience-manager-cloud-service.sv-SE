@@ -2,7 +2,7 @@
 title: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 description: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 exl-id: 4d1addcf-b22d-41a3-ba5c-e5c42244e5cd
-source-git-commit: 7ff1acb5558ac77329b6fc766191f78a8b735888
+source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
 workflow-type: tm+mt
 source-wordcount: '2092'
 ht-degree: 8%
@@ -115,7 +115,7 @@ För en lyckad och smidig övergång bör du säkerställa korrekt planering och
 
 Bilden nedan visar en illustrativ representation av den rekommenderade övergångsprocessen till Cloud Service.
 
-![bild](/help/move-to-cloud-service/assets/home-img1.png)
+![bild](/help/journey-migration/assets/home-img1.png)
 
 <br>
 
@@ -146,7 +146,7 @@ Innan du påbörjar en övergångsresa till Cloud Service bör du bekanta dig me
 
 ### Körning 
 
-Innan du startar körningsfasen av ett projekt bör du vara ombord på Cloud Servicen. Du måste också bekanta dig med Cloud Manager. Detta är den mekanism som används för att distribuera projektkod till en Experience Manager Cloud Service-instans.
+Innan du påbörjar körningsfasen av ett projekt bör du vara ombord på Cloud Servicen. Du måste också bekanta dig med Cloud Manager. Detta är den mekanism som används för att distribuera projektkod till en Experience Manager Cloud Service-instans.
 
 Med Cloud Manager kan organisationer självhantera Experience Manager i molnet. Den har en kontinuerlig integrering och kontinuerlig leverans ([CI/CD](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/overview/ci-cd-pipeline.html?lang=en#overview)) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet.
 
@@ -171,7 +171,7 @@ Med Cloud Manager kan organisationer självhantera Experience Manager i molnet. 
 1. [Distribuera till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html?lang=en#managing-code) git
 2. Kör kundkod via [Kvalitetspipeline för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use)
 3. [Distribuera till utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/build-and-deployment.html?lang=en#debugging)
-4. [**Endast migrering**] Innehållsöverföring med paket eller [Verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)(CTT)
+4. [**Endast migrering**] Innehållsöverföring med paket eller [Verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)(CTT)
 5. Utför rekommenderade testcykler (rök, kvalitetskontroll med mera)
 6. Befordra till Cloud Manager Production Pipeline
 7. Validering av röktest

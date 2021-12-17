@@ -2,7 +2,7 @@
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
 exl-id: 2eca7fa6-fb34-4b08-b3ec-4e9211e94275
-source-git-commit: 6228e4072ad0042dae8ce415464c7bd5ed36612c
+source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
 workflow-type: tm+mt
 source-wordcount: '1739'
 ht-degree: 0%
@@ -70,14 +70,14 @@ Det är viktigt att fastställa den totala storleken på datalagret av två skä
 
 På sidan för behållaregenskaper i Azure-portalen använder du **Beräkna storlek** för att bestämma storleken på allt innehåll i behållaren. Till exempel:
 
-![bild](/help/move-to-cloud-service/content-transfer-tool/assets/Azure-blob-storage-data-store.png)
+![bild](/help/journey-migration/content-transfer-tool/assets/Azure-blob-storage-data-store.png)
 
 #### Amazon S3 - datalager {#amazon-data}
 
 Du kan använda behållarens Metrisk-flik för att bestämma storleken på allt innehåll i behållaren. Till exempel:
 
 
-![bild](/help/move-to-cloud-service/content-transfer-tool/assets/amazon-s3-data-store.png)
+![bild](/help/journey-migration/content-transfer-tool/assets/amazon-s3-data-store.png)
 
 #### Fildatalager {#file-data-store-determine-size}
 
@@ -243,4 +243,4 @@ Extrahering av azcopy kan till exempel inaktiveras med: `mv /mnt/crx/author/crx-
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig att hantera stora innehållsdatabaser för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten så att innehållet flyttas till AEM as a Cloud Service, är du nu redo att lära dig extraheringsprocessen i verktyget Innehållsöverföring. Se [Extrahera innehåll från källan i verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/extracting-content.md) om du vill lära dig hur du extraherar din migreringsuppsättning från verktyget Innehållsöverföring.
+När du har lärt dig att hantera stora innehållsdatabaser för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten så att innehållet flyttas till AEM as a Cloud Service, är du nu redo att lära dig extraheringsprocessen i verktyget Innehållsöverföring. Se [Extrahera innehåll från källan i verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md) om du vill lära dig hur du extraherar din migreringsuppsättning från verktyget Innehållsöverföring.

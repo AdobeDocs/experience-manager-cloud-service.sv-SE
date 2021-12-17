@@ -3,9 +3,9 @@ title: AEM dokumentationsresor
 description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner för att lösa ett affärsmål på ett sätt som är beprövat med bästa praxis. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 exl-id: aab346b8-26dc-4d5b-88bb-720cf634e0a2
 hidefromtoc: true
-source-git-commit: fee595892367448a95b7f26bb03713e1b6e43822
+source-git-commit: c3b8a45f27b7863cb5d1ea7af1f35675ac04b456
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1352'
 ht-degree: 0%
 
 ---
@@ -93,6 +93,6 @@ Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom v
 | [AEM på introduktionsresan](/help/journey-onboarding/home.md) | Börja här för att komma igång snabbt med din nya AEM as a Cloud Service miljö! |
 | [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) | Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av din AEM webbplats och snabbt anpassar sajten utan någon AEM bakgrundsinformation. |
 | AEM Commerce Journey | Kommer snart! |
-| AEMaaCS Migration Journey | Kommer snart! |
+| [AEM as a Cloud Service migreringsresa](/help/journey-migration/getting-started.md) | Börja här om du vill ha en stegvis resa om hur du migrerar från en lokal installation eller en Adobe-hanterad AEM till den helt molnbaserade AEM-as a Cloud Service och får en introduktion till många fördelar. |
 
 Kontrollera om det finns mer innehåll när nya resor blir tillgängliga.

@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 6e78e3c72bd67ca63503cf4d1710826b53994675
+source-git-commit: 0c079a38f7137a8bb469f4a45df70ffcb13cca76
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3433'
 ht-degree: 24%
 
 ---
@@ -93,55 +93,54 @@ ht-degree: 24%
       + [Skapa program](/help/journey-sites/demos-add-on/create-program.md)
       + [Skapa demowebbplats](/help/journey-sites/demos-add-on/create-site.md)
       + [Hantera din demowebbplats](/help/journey-sites/demos-add-on/manage.md)
-+ Byt till AEMaaCS {#moving}
-   + [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md)
++ AEM as a Cloud Service migreringsresa {#migration-journey}
+   + [Komma igång med att flytta AEM as a Cloud Service](/help/journey-migration/getting-started.md)
+   + [Beredskap](/help/journey-migration/readiness.md)
+   + [Implementering](/help/journey-migration/implementation.md)
+   + [Go Live](/help/journey-migration/go-live.md)
+   + [Post Go Live](/help/journey-migration/post-go-live.md)
+   + [Migreringshandbok till Experience Manager as a Cloud Service for Partners](/help/journey-migration/getting-started-partners.md)
    + Versionsinformation för migreringsverktyg {#release-notes-migration-tools}
-      + [Aktuell versionsinformation (2021.12.0)](/help/move-to-cloud-service/release-notes/release-notes-migration-tools-current.md)
+      + [Aktuell versionsinformation (2021.12.0)](/help/journey-migration/release-notes/release-notes-migration-tools-current.md)
       + 2021 {#2021}
-         + [Versionsinformation för 2021.11.0](/help/move-to-cloud-service/release-notes/release-notes-migration-tools-2021-11-0.md)
-         + [Versionsinformation för 2021.10.0](/help/move-to-cloud-service/release-notes/release-notes-migration-tools-2021-10-0.md)
-   + Faser i övergångsprocessen {#phases}
-      + [Beredskap](/help/move-to-cloud-service/migration-readiness.md)
-      + [Implementering](/help/move-to-cloud-service/migration-implementation.md)
-      + [Go Live](/help/move-to-cloud-service/migration-go-live.md)
-      + [Post Go Live](/help/move-to-cloud-service/migration-post-go-live.md)
+         + [Versionsinformation för 2021.11.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-11-0.md)
+         + [Versionsinformation för 2021.10.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-10-0.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + Introduktion till Cloud Acceleration Manager {#introduction-cam}
-         + [Översikt](/help/move-to-cloud-service/cloud-acceleration-manager/introduction/overview-cam.md)
-         + [Fördelar](/help/move-to-cloud-service/cloud-acceleration-manager/introduction/benefits-cam.md)
+         + [Översikt](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md)
+         + [Fördelar](/help/journey-migration/cloud-acceleration-manager/introduction/benefits-cam.md)
       + Använda Cloud Acceleration Manager {#using-cam}
-         + [Komma igång med Cloud Acceleration Manager](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/getting-started-cam.md)
-         + [Beredskapsfas](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/cam-readiness-phase.md)
-         + [Implementeringsfas](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/cam-implementation-phase.md)
-         + [Go Live Phase](/help/move-to-cloud-service/cloud-acceleration-manager/using-cam/cam-golive-phase.md)
+         + [Komma igång med Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md)
+         + [Beredskapsfas](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-readiness-phase.md)
+         + [Implementeringsfas](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-implementation-phase.md)
+         + [Go Live Phase](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-golive-phase.md)
    + Verktyg för övergång till molnet{#cloud-migration}
       + Best Practices Analyzer {#best-practices-analyzer}
-         + [Översikt](/help/move-to-cloud-service/best-practices-analyzer/overview-best-practices-analyzer.md)
-         + [Använda Best Practices Analyzer](/help/move-to-cloud-service/best-practices-analyzer/using-best-practices-analyzer.md)
+         + [Översikt](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md)
+         + [Använda Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md)
       + Content Transfer Tool {#content-transfer-tool}
-         + [Översikt](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)
-         + [Krav för verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md)
-         + [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/guidelines-best-practices-content-transfer-tool.md)
-         + [Komma igång med verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/getting-started-content-transfer-tool.md)
-         + [Hantera stora innehållsdatabaser](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md)
-         + [Extraherar innehåll från källa](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/extracting-content.md)
-         + [Infoga innehåll i mål](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/ingesting-content.md)
-         + [Visa loggar för en migreringsuppsättning](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/viewing-logs.md)
-         + [Ta bort en migreringsuppsättning](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/deleting-migrationset.md)
-         + [Köra verktyget Innehållsöverföring på en publiceringsinstans](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/running-content-transfer-tool-publish-instance.md)
-         + [Felsöka verktyget Innehållsöverföring](/help/move-to-cloud-service/content-transfer-tool/using-content-transfer-tool/troubleshooting-content-transfer-tool.md)
+         + [Översikt](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)
+         + [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md)
+         + [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/guidelines-best-practices-content-transfer-tool.md)
+         + [Komma igång med verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/getting-started-content-transfer-tool.md)
+         + [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md)
+         + [Extraherar innehåll från källa](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md)
+         + [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md)
+         + [Visa loggar för en migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/viewing-logs.md)
+         + [Ta bort en migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/deleting-migrationset.md)
+         + [Köra verktyget Innehållsöverföring på en publiceringsinstans](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/running-content-transfer-tool-publish-instance.md)
+         + [Felsöka verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/troubleshooting-content-transfer-tool.md)
          + Verktyg för användarmappning {#user-mapping-tool}
-            + [Översikt](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md)
-            + [Viktiga överväganden](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/considerations-user-mapping-tool.md)
-            + [Använda verktyget för användarmappning](/help/move-to-cloud-service/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.md)
+            + [Översikt](/help/journey-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md)
+            + [Viktiga överväganden](/help/journey-migration/content-transfer-tool/user-mapping-tool/considerations-user-mapping-tool.md)
+            + [Använda verktyget för användarmappning](/help/journey-migration/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.md)
    + Verktyg för omstrukturering av kod {#refactoring-tools}
-      + [Enhetlig upplevelse](/help/move-to-cloud-service/unified-experience.md)
-      + [Databasmodernisering](/help/move-to-cloud-service/refactoring-tools/repo-modernizer.md)
-      + [Indexkonverterare](/help/move-to-cloud-service/refactoring-tools/index-converter.md)
-      + [Resursarbetsflödesmigrering](/help/move-to-cloud-service/moving-to-aem-assets/asset-workflow-migration-tool.md)
-      + [AEM Dispatcher Converter](/help/move-to-cloud-service/refactoring-tools/dispatcher-transformation-utility-tools.md)
-      + [AEM Modernization Tools](/help/move-to-cloud-service/refactoring-tools/aem-modernization-tools.md)
-   + [Migreringshandbok till Experience Manager as a Cloud Service for Partners](/help/move-to-cloud-service/getting-started.md)
+      + [Enhetlig upplevelse](/help/journey-migration/unified-experience.md)
+      + [Databasmodernisering](/help/journey-migration/refactoring-tools/repo-modernizer.md)
+      + [Indexkonverterare](/help/journey-migration/refactoring-tools/index-converter.md)
+      + [Resursarbetsflödesmigrering](/help/journey-migration/moving-to-aem-assets/asset-workflow-migration-tool.md)
+      + [AEM Dispatcher Converter](/help/journey-migration/refactoring-tools/dispatcher-transformation-utility-tools.md)
+      + [AEM Modernization Tools](/help/journey-migration/refactoring-tools/aem-modernization-tools.md)
 + Sites {#sites}
    + [AEM Sites as a Cloud Service](/help/sites-cloud/home.md)
    + [Viktiga ändringar av AEM Sites i AEM Cloud Service](/help/sites-cloud/sites-cloud-changes.md)

@@ -2,7 +2,7 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: a19b8424-33ab-488a-91b3-47f0d3c8abf5
-source-git-commit: c1a530f749e766650d5fe20c89d5672f56885fbb
+source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 25%
@@ -57,16 +57,16 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
 1. Markera Adobe Experience Manager och gå till verktygen -> **Operationer** -> **Innehållsmigrering**.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt01.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ctt01.png)
 
 1. Välj **Innehållsöverföring** alternativ från **Innehållsmigrering** guide.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt02.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ctt02.png)
 
 
 1. Konsolen nedan visas när du skapar den första migreringsuppsättningen. Klicka på **Create Migration Set** om du vill skapa en ny migreringsuppsättning.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt03.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ctt03.png)
 
    >[!NOTE]
    >Om du har befintliga migreringsuppsättningar visas en lista med befintliga migreringsuppsättningar med aktuell status.
@@ -74,7 +74,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
 1. Fyll i fälten i **Skapa migreringsuppsättning** skärm enligt beskrivningen nedan.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt04.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ctt04.png)
 
    1. **Name**: Ange namnet på migreringsuppsättningen.
       >[!NOTE]
@@ -95,7 +95,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
       1. **Include Version**: Välj det som behövs. När versioner inkluderas, banan `/var/audit` inkluderas automatiskt för att migrera granskningshändelser.
 
-         ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt05.png)
+         ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ctt05.png)
 
          >[!NOTE]
          >Om du tänker ta med versioner som en del av en migreringsuppsättning och utför uppsättningar med `wipe=false`måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför summeringar i en migreringsuppsättning, måste du utföra inmatningen som `wipe=true`.
@@ -115,7 +115,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
 1. Du kan visa din migreringsuppsättning i **Innehållsöverföring** guiden, enligt bilden nedan.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt07.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ctt07.png)
 
    Alla befintliga migreringsuppsättningar visas på **Innehållsöverföring** guide med aktuell status- och statusinformation. Du kan se några av dessa ikoner som beskrivs nedan.
 
@@ -125,7 +125,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 
 1. Välj en migreringsuppsättning och klicka på **Egenskaper** om du vill visa eller redigera migreringsuppsättningens egenskaper. När du redigerar egenskaper går det inte att ändra **Namn på migreringsuppsättning** eller **Tjänst-URL**.
 
-   ![bild](/help/move-to-cloud-service/content-transfer-tool/assets-ctt/ctt06.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ctt06.png)
 
 
 ## What&#39;s Next {#whats-next}

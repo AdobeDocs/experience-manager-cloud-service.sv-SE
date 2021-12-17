@@ -2,7 +2,7 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: e868b7fa043f65c882242d54c4842b4a0094a93d
+source-git-commit: fdd430530c3dda304eeffb567f50cd389e1ee535
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 31%
@@ -54,7 +54,7 @@ Så här förbereder du en release:
 | [Onboarding](/help/onboarding/home.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service. |
-| [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md) | Förstå övergången till Cloud Service. |
+| [Flytta till AEM as a Cloud Service](/help/journey-migration/getting-started.md) | Förstå övergången till Cloud Service. |
 | [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med AEM kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a Cloud Service. |

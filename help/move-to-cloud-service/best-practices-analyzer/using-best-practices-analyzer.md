@@ -2,7 +2,7 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: 7688bc78-0ec2-4838-8ade-7db5788fb70f
-source-git-commit: 7dd3a658a88cae98732820ab92da0d27d21beb6f
+source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
 workflow-type: tm+mt
 source-wordcount: '2470'
 ht-degree: 41%
@@ -15,7 +15,7 @@ ht-degree: 41%
 >id="aemcloud_bpa_using"
 >title="Använda Best Practices Analyzer"
 >abstract="Läs dokumentationen om hur du använder Best Practices Analyzer (tidigare Cloud Readiness Analyzer) och den genererade rapporten. Best Practices Analyzer-rapporten används för att få en god förståelse för den allmänna uppgraderingsberedskapen."
->additional-url="https://my.adobeconnect.com/pqgrfezoxghs?proto=true" text="[Webinar] Introducing Tools to Accelerate the Journey to Adobe Experience Manager as a Cloud Service"
+>additional-url=""
 
 ## Viktigt att tänka på när du använder Best Practices Analyzer {#imp-considerations}
 
@@ -59,38 +59,38 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
 1. Välj Adobe Experience Manager och navigera till verktyg -> **Operationer** -> **Best Practices Analyzer**.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic1.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic1.png)
 
 1. Klicka på **Generera rapport** för att köra Best Practices Analyzer.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic2.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic2.png)
 
 1. Medan BPA genererar rapporten kan du se hur verktyget utvecklas på skärmen. Här visas antalet analyserade objekt och även antalet upptäckter.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic3.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic3.png)
 
 
 1. När BPA-rapporten har genererats visas en sammanfattning och antalet resultat i tabellformat, ordnade efter typ av fynd och prioritetsnivå. Om du vill ha mer information om en viss sökning kan du klicka på talet som motsvarar sökningstypen i tabellen.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic4.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic4.png)
 
    Ovanstående åtgärd rullar automatiskt till platsen för sökningen i rapporten.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic5.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic5.png)
 
 1. Du kan hämta rapporten i ett kommaavgränsat värdeformat (CSV) genom att klicka på **Exportera till CSV**, vilket visas i figuren nedan.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic6.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic6.png)
 
    >[!NOTE]
 Du kan tvinga BPA att rensa cacheminnet och återskapa rapporten genom att klicka på **Uppdatera rapport**.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic7.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic7.png)
 
    >[!NOTE]
 Medan rapporten återskapas visas förloppet i procent som slutförts enligt bilden nedan.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/BPA_pic8.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic8.png)
 
 
 
@@ -100,14 +100,14 @@ Filtrera bort resultat som är relaterade till [ACS-kommandon](https://adobe-con
 
 1. Klicka på ikonen för den vänstra listen till vänster på sidan. Det här visar **ACS-kommandofilter**. Klicka på **ACS-kommandofilter** för att visa den interaktiva kryssrutan så som visas i bilden nedan.
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/report_filter_1.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/report_filter_1.png)
 
    >[!NOTE]
 Ikonen för vänster spår visas bara om BPA upptäcker att ACS Commons används.
 
 1. Avmarkera rutan om du vill filtrera bort alla resultat som rör ACS-kommandon. Du borde se en **Antal filtrerade sökningar** på rapporten enligt bilden nedan. Filtret används också i rapporten när den exporteras i ett CSV-format (kommaavgränsat värde).
 
-   ![bild](/help/move-to-cloud-service/best-practices-analyzer/assets/report_filter_2.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/report_filter_2.png)
 
    >[!NOTE]
 ACS Commons-resultaten ska inte ignoreras. Se [dokumentation](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility) för att fastställa kompatibiliteten med AEM as a Cloud Service.

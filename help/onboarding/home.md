@@ -3,7 +3,7 @@ title: Onboarding för Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
 landing-page-description: Den här guiden innehåller en sammanfattning av hur du kommer igång med AEM as a Cloud Service, inklusive hur du får tillgång till och viktig dataskyddsinformation.
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
-source-git-commit: 231e7446708cd0240be73ee74897d2c58b47ce22
+source-git-commit: fdd430530c3dda304eeffb567f50cd389e1ee535
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 20%
@@ -40,7 +40,7 @@ Den introduktionsresa som visas nedan är utformad för en systemadministratörs
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor om [!DNL Experience Manager as a Cloud Service]. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Förstå hur man redigerar och administrerar [!DNL Experience Manager Sites] as a Cloud Service. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Förstå hur man använder och administrerar [!DNL Experience Manager Assets as a Cloud Service]. |
-| [Flytta till AEM as a Cloud Service](/help/move-to-cloud-service/home.md) | Förstå övergången till Cloud Service |
+| [Flytta till AEM as a Cloud Service](/help/journey-migration/getting-started.md) | Förstå övergången till Cloud Service |
 | [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med AEM kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Lär dig integrera Connectors i [!DNL Experience Manager as a Cloud Service]. |
