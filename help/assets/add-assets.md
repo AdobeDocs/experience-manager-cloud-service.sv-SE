@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 510e71a3bbfb231182ff525415f1e6967723096f
+source-git-commit: 98249e838f1434ae6f4a40fefee4ca78f0812457
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '2631'
 ht-degree: 0%
 
 ---
@@ -132,57 +132,111 @@ Om du vill överföra fler filer använder du någon av följande metoder. Se ä
 * [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html): Användbart för kreatörer och marknadsförare som överför resurser från det lokala filsystemet. Använd den för att överföra kapslade mappar som är tillgängliga lokalt.
 * [Verktyget Massintag](#asset-bulk-ingestor): Används för konsumtion av stora mängder resurser, antingen vid enstaka tillfällen eller vid första driftsättningen [!DNL Experience Manager].
 
-### Verktyget Massinhämtning {#asset-bulk-ingestor}
+### Verktyget Importera flera resurser {#asset-bulk-ingestor}
 
 Verktyget tillhandahålls bara till administratörsgruppen som kan användas för storskalig förtäring av resurser från Azure- eller S3-datalager. Se en video som visar hur konfigurationen och intagandet fungerar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
 
-Så här konfigurerar du verktyget:
+Följande bild visar de olika faserna när du importerar resurser till Experience Manager från ett datalager:
+
+![Verktyget Massintag](assets/bulk-ingestion.png)
+
+#### Förutsättningar {#prerequisites-bulk-ingestion}
+
+Du måste ha information om blobblagring för att kunna ansluta din Experience Manager-instans till ett datalagringsutrymme.
+
+#### Konfigurera verktyget Massimport {#configure-bulk-ingestor-tool}
+
+Så här konfigurerar du verktyget för massimport:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]**. Välj **[!UICONTROL Create]** alternativ.
 
-![Konfiguration av bulkimporterare](assets/bulk-import-config.png)
+1. Ange en rubrik för bulkimportkonfigurationen i dialogrutan **[!UICONTROL Title]** fält.
 
-1. På **[!UICONTROL bulk import configuration]** anger du önskade värden och väljer sedan **[!UICONTROL Save]**.
+1. Välj typ av datakälla på menyn **[!UICONTROL Import Source]** listruta.
 
-   * [!UICONTROL Title]: En beskrivande titel.
-   * [!UICONTROL Import Source]: Välj lämplig datakälla.
-   * [!UICONTROL Azure Storage Account]: Ange namnet på [!DNL Azure] lagringskonto.
-   * [!UICONTROL Azure Blob Container]: Ange [!DNL Azure] lagringsbehållare.
-   * [!UICONTROL Azure Access Key]: Ange åtkomstnyckeln för [!DNL Azure] konto.
-   * [!UICONTROL Source Folder]: Det här filtret stöds vanligtvis av Azure och AWS molnlagringsleverantörer.
-   * [!UICONTROL Filter by Min Size]: Ange den minsta filstorleken för resurser i MB.
-   * [!UICONTROL Filter by Max Size]: Ange maximal filstorlek för resurser i MB.
-   * [!UICONTROL Exclude Mime Types]: Kommaavgränsad lista med MIME-typer som ska uteslutas från intaget. Till exempel, `image/jpeg, image/.*, video/mp4`. Se [alla filformat som stöds](/help/assets/file-format-support.md).
-   * [!UICONTROL Include Mime Types]: Kommaavgränsad lista med MIME-typer som ska ingå i intaget. Se [alla filformat som stöds](/help/assets/file-format-support.md).
-   * [!UICONTROL Delete source file after import]: Välj det här alternativet om du vill ta bort originalfilerna från källdatalagret efter att filerna har importerats till [!DNL Experience Manager].
-   * [!UICONTROL Import Mode]: Välj Hoppa över, Ersätt eller Skapa version. Hoppa över är standardläget och i det här läget hoppar användaren över att importera en resurs om den redan finns. Se innebörden i [ersätta och skapa versionsalternativ](#handling-upload-existing-file).
-   * [!UICONTROL Assets Target Folder]: Importera mapp i DAM där resurser ska importeras. Till exempel, `/content/dam/imported_assets`
-   * [!UICONTROL Metadata File]: Den metadatafil som ska importeras, i CSV-format. Ange CSV-filen på källblobbens plats och referera till sökvägen när verktyget Massingestor konfigureras. CSV-filformatet som refereras i det här fältet är detsamma som CSV-filformatet när du [Importera och exportera metadata för resurser i grupp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/metadata-import-export.html). Om du väljer **Ta bort källfil efter import** -alternativ, filtrera CSV-filer med **Exkludera** eller **Inkludera MIME-typ** eller **Filtrera efter sökväg/fil** fält. Du kan använda ett reguljärt uttryck för att filtrera CSV-filer i dessa fält.
+1. Ange värdena för att skapa en anslutning till datakällan. Om du till exempel väljer **Azure Blob Storage** som datakälla anger du värdena för Azure-lagringskontot, Azure-blobbehållaren och Azure-åtkomstnyckeln.
 
-1. Du kan ta bort, ändra, köra och göra mer med dina inmatningskonfigurationer. När du väljer en import av flera lager är följande alternativ tillgängliga i verktygsfältet.
+1. Ange namnet på rotmappen som innehåller resurser i datakällan i **[!UICONTROL Source Folder]** fält.
 
-   * [!UICONTROL Edit]: Redigera den valda konfigurationen.
-   * [!UICONTROL Delete]: Ta bort den valda konfigurationen.
-   * [!UICONTROL Check]: Validera anslutningen till datalagret.
-   * [!UICONTROL Dry Run]: Anropa en testkörning av massintagning.
-   * [!UICONTROL Run]: Kör den valda konfigurationen.
-   * [!UICONTROL Stop]: Avsluta en aktiv konfiguration.
-   * [!UICONTROL Schedule]: Ställ in engångs- eller återkommande schema för att importera resurser.
-   * [!UICONTROL Job Status]: Visa konfigurationsstatus när den används i ett pågående importjobb eller används för ett slutfört jobb.
-   * [!UICONTROL Job History]: Tidigare instanser av jobbet.
-   * [!UICONTROL View Assets]: Visa målmappen om den finns.
+1. (Valfritt) Ange den minsta filstorleken för resurser i MB för att inkludera dem i inmatningsprocessen i **[!UICONTROL Filter by Min Size]** fält.
 
-   ![Alternativ i verktygsfältet för inmatningskonfigurationer](assets/bulk-ingest-toolbar-options.png)
+1. (Valfritt) Ange den maximala filstorleken för resurser i MB för att inkludera dem i inmatningsprocessen i **[!UICONTROL Filter by Max Size]** fält.
 
-Så här schemalägger du en engångsimport eller en återkommande bulkimport:
+1. (Valfritt) Ange en kommaavgränsad lista med MIME-typer som ska uteslutas från intaget i dialogrutan **[!UICONTROL Exclude MIME Types]** fält. Till exempel, `image/jpeg, image/.*, video/mp4`. Se [alla filformat som stöds](/help/assets/file-format-support.md).
+
+1. Ange en kommaavgränsad lista med MIME-typer som ska tas med i intaget i **[!UICONTROL Include MIME Types]** fält. Se [alla filformat som stöds](/help/assets/file-format-support.md).
+
+1. Välj **[!UICONTROL Delete source file after import]** om du vill ta bort originalfilerna från källdatalagret efter att filerna har importerats till [!DNL Experience Manager].
+
+1. Välj **[!UICONTROL Import Mode]**. Välj **Hoppa över**, **Ersätt**, eller **Skapa version**. Hoppa över är standardläget och i det här läget hoppar användaren över att importera en resurs om den redan finns. Se innebörden i [ersätta och skapa versionsalternativ](#handling-upload-existing-file).
+
+1. Ange en sökväg för att definiera en plats i DAM där resurser ska importeras med **[!UICONTROL Assets Target Folder]** fält. Till exempel, `/content/dam/imported_assets`.
+
+1. (Valfritt) Ange den metadatafil som ska importeras, som finns i CSV-format, i **[!UICONTROL Metadata File]** fält. Ange CSV-filen på blobbplatsen för källan och referera till sökvägen när verktyget för massimport konfigureras. CSV-filformatet som refereras i det här fältet är detsamma som CSV-filformatet när du [Importera och exportera metadata för resurser i grupp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/metadata-import-export.html). Om du väljer **Ta bort källfil efter import** -alternativ, filtrera CSV-filer med **Exkludera** eller **Inkludera MIME-typ** eller **Filtrera efter sökväg/fil** fält. Du kan använda ett reguljärt uttryck för att filtrera CSV-filer i dessa fält.
+
+1. Klicka **[!UICONTROL Save]** för att spara konfigurationen.
+
+#### Hantera konfigurationen för verktyget Massimport {#manage-bulk-import-configuration}
+
+När du har skapat konfigurationen för verktyget Massimport kan du utföra uppgifter för att utvärdera konfigurationen innan du gruppimporterar resurser till din Experience Manager-instans. Välj den konfiguration som är tillgänglig på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]** om du vill visa tillgängliga alternativ för att hantera konfigurationen av verktyget för massimport.
+
+##### Redigera konfigurationen {#edit-configuration}
+
+Välj konfigurationen och klicka på **[!UICONTROL Edit]** om du vill ändra konfigurationsinformationen. Du kan inte redigera titeln för konfigurationen och importdatakällan när du utför redigeringsåtgärden.
+
+##### Ta bort konfigurationen {#delete-configuration}
+
+Välj konfigurationen och klicka på **[!UICONTROL Delete]** om du vill ta bort konfigurationen för massimport.
+
+##### Validera anslutningen till datakällan {#validate-connection}
+
+Välj konfigurationen och klicka på **[!UICONTROL check]** för att validera anslutningen till datakällan. Om anslutningen lyckas visas följande meddelande i Experience Manager:
+
+![Meddelande om att gruppimporten lyckades](assets/bulk-import-success-message.png)
+
+##### Anropa en testkörning för massimportjobbet {#invoke-test-run-bulk-import}
+
+Välj konfigurationen och klicka på **[!UICONTROL Dry Run]** för att anropa en testkörning för massimportjobbet. Experience Manager visar följande information om massimportjobbet:
+
+![Resultat för torr körning](assets/dry-assets-result.png)
+
+##### Schemalägg en engångs- eller återkommande bulkimport {#schedule-bulk-import}
+
+Så här schemalägger du en enstaka eller återkommande bulkimport:
 
 1. Skapa en bulkimportkonfiguration.
 1. Välj konfigurationen och välj **[!UICONTROL Schedule]** i verktygsfältet.
 1. Ställ in ett engångsintag eller schemalägg ett timschema, ett dagligt eller ett veckoschema. Klicka på **[!UICONTROL Submit]**.
 
    ![Schemalägg massinmatningsjobb](assets/bulk-ingest-schedule1.png)
+
+
+##### Visa målmappen Resurser {#view-assets-target-folder}
+
+Välj konfigurationen och klicka på **[!UICONTROL View Assets]** om du vill visa målplatsen för resurser där resurserna importeras efter att du har kört jobbet för massimport.
+
+#### Kör verktyget Massimport {#run-bulk-import-tool}
+
+Efter [konfigurera verktyget Massimport](#configure-bulk-ingestor-tool) och valfritt [hantera konfigurationen för verktyget Massimport](#manage-bulk-import-configuration)kan du köra konfigurationsjobbet för att starta massinmatningen av resurser.
+
+Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]** väljer du [Konfiguration av massimport](#configure-bulk-ingestor-tool) och klicka **[!UICONTROL Run]** för att starta processen för massimport. Klicka **[!UICONTROL Run]** igen för att bekräfta.
+
+Experience Manager uppdaterar jobbets status till **Bearbetar** och till **Slutförd** när jobbet har slutförts. Klicka **Visa resurser** om du vill visa de importerade resurserna i Experience Manager.
+
+När jobbet pågår kan du även välja konfigurationen och klicka på **Stoppa** för att stoppa massintagsprocessen. Klicka **Kör** för att återuppta processen. Du kan också klicka **Torr körning** för att få information om de resurser som fortfarande väntar på import.
+
+#### Hantera jobb efter körning {#manage-jobs-after-execution}
+
+Med Experience Manager kan du se historiken för massimportjobben. Jobbhistoriken omfattar jobbstatus, jobbskapare, loggar och annan information, t.ex. startdatum och starttid, datum och tid för när jobbet skapades samt slutdatum och sluttid.
+
+Om du vill komma åt jobbhistoriken för en konfiguration väljer du konfigurationen och klickar på **[!UICONTROL Job History]**. Välj ett jobb och klicka på **Öppna**.
+
+![Schemalägg massinmatningsjobb](assets/job-history-bulk-import.png)
+
+Experience Manager visar jobbhistoriken. På historiksidan för massimportjobb kan du även klicka på **Ta bort** om du vill ta bort jobbet för konfigurationen av massimport.
+
 
 ## Överför resurser med skrivbordsklienter {#upload-assets-desktop-clients}
 
