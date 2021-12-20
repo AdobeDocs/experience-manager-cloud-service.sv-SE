@@ -1,10 +1,10 @@
 ---
 title: AEM Reference Demos Add-On Journey
 description: Börja här för en guidad resa genom hur du enkelt lägger till tillägget AEM Reference Demos i en sandlådemiljö med minimal AEM och kan testa de kraftfulla funktionerna i AEM med detaljerade exempel baserade på bästa praxis.
-source-git-commit: f9794f52f2d09723a62e1f19cc951a5032661fce
+source-git-commit: 3dc268060188defcc84971f73baced1f30dccd49
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 0%
+source-wordcount: '813'
+ht-degree: 1%
 
 ---
 
@@ -40,7 +40,13 @@ Den här resan innehåller krav, steg och tillvägagångssätt för att skapa et
 
 Du kommer att utforska flera ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om hur du skapar ett nytt program och konfigurerar och använder AEM Reference Demos Add-On och är avsedda att läsas i ordning. De länkar till detaljerad teknisk dokumentation efter behov.
 
-|#|Artikel|Beskrivning| |—|—|—|—| |0|AEM Reference Demos Add-On Journey|Det här dokumentet| |1|[Förstå installationen av tilläggsprogrammet för referensdemo](installation.md)|Lär dig mer om Cloud Manager och hur det används för att installera tillägget.| |2|[Skapa ett program och en pipeline](create-program.md)|Lär dig hur du konfigurerar ett nytt program och en ny pipeline för att distribuera tillägget.| |3|[Skapa en demowebbplats](create-site.md)|Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mallar.| |4|[Hantera dina demowebbplatser](manage.md)|Läs mer om de verktyg du kan använda för att hantera demowebbplatser och hur du tar bort dem.|
+| # | Artikel | Beskrivning |
+|---|---|---|
+| 0 | AEM Reference Demos Add-On Journey | Det här dokumentet |
+| 1 | [Förstå installationen av tilläggsprogrammet för referensdemo](installation.md) | Lär dig mer om Cloud Manager och hur det används för att installera tillägget. |
+| 2 | [Skapa ett program och en pipeline](create-program.md) | Lär dig hur du konfigurerar ett nytt program och en ny pipeline för att distribuera tillägget. |
+| 3 | [Skapa en demowebbplats](create-site.md) | Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mallar. |
+| 4 | [Hantera dina demowebbplatser](manage.md) | Lär dig mer om de verktyg du kan använda för att hantera demowebbplatser och hur du tar bort dem. |
 
 ## What&#39;s Next {#what-is-next}
 
