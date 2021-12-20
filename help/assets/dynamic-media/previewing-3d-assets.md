@@ -1,9 +1,9 @@
 ---
 title: Förhandsgranska 3D-resurser
-description: Lär dig hur du förhandsgranskar 3D-resurser i Dynamic Media.
+description: Lär dig hur du förhandsgranskar 3D-resurser i Experience Manager.
 feature: 3D Assets
 role: User
-source-git-commit: 14042b45b14f2c5575fc96979579bb0aaffc9a17
+source-git-commit: 9ecfb0c5dceb0574114aa1acbdda2ac9c3ce2675
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
