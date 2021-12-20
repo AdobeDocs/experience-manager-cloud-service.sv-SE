@@ -7,7 +7,7 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: a1b1709fb705b509015478c16c32a02af0502a77
+source-git-commit: d390ea1f0bcdff22869cfa8418cc3445aa149cf7
 workflow-type: tm+mt
 source-wordcount: '3437'
 ht-degree: 24%
@@ -282,6 +282,7 @@ ht-degree: 24%
       + [Lägga till och överföra resurser](/help/assets/add-assets.md)
       + [Söka efter resurser](/help/assets/search-assets.md)
       + [Vanliga åtgärder för hantering av material](/help/assets/manage-digital-assets.md)
+      + [Förhandsgranska-3d-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)
       + [Smarta taggar för bilder](/help/assets/smart-tags.md)
       + [Smarta taggar för videomaterial](/help/assets/smart-tags-video-assets.md)
       + [Organisera resurser](/help/assets/organize-assets.md)
@@ -361,7 +362,6 @@ ht-degree: 24%
       + [Leverera Dynamic Media-material](/help/assets/dynamic-media/delivering-dynamic-media-assets.md)
       + [Aktivera hotlink-skydd i Dynamic Media](/help/assets/dynamic-media/hotlink-protection.md)
       + [Stöd för 3D](/help/assets/dynamic-media/assets-3d.md)
-      + [Förhandsgranska-3d-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)
       + [Bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
       + [Panoramabilder](/help/assets/dynamic-media/panoramic-images.md)
       + [Blandade medieuppsättningar](/help/assets/dynamic-media/mixed-media-sets.md)
