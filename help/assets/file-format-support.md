@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 479cfffd17dcde12bda7d53a7acddfbb46782a8f
+source-git-commit: 1ea99c0eb602fa48674a03e25ee615add425f6af
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 4%
@@ -57,7 +57,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 | Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd | Beskär |
 | ----------- | -------------------- | ------------------- | ------------ | -------- |
 | BMP | ✓ | - | ✓ | ✓ |
-| EPS | - | ✓ | - | - |
+| EPS | ✓ | ✓ | - | - |
 | GIF | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ |
 | PNG | ✓ | ✓ | ✓ | ✓ |
@@ -247,7 +247,7 @@ Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-f
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
-| GLB | Binary GL Transmission | model/gltf-binary | Includes the materials and textures as a single asset. |
+| GLB | Binär GL-överföring | model/gltf-binary | Materialen och texturerna inkluderas som en enda resurs. |
 | OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
 | STL | Stereolitografi | application/vnd.ms-pki.stl |  |
 | USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd endast för förtäring. ingen visning eller interaktion är tillgänglig.* USDZ är ett tillverkarspecifikt 3D-format som kan visas direkt av Safari eller iOS. |

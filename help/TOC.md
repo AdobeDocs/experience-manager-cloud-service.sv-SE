@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 9dc60e627a6770ee636ad5f8a8e0a8eb81adae9b
+source-git-commit: f6b9a8d09ae0bbc57ec2ba30694f3c1b0b163379
 workflow-type: tm+mt
-source-wordcount: '3438'
+source-wordcount: '3441'
 ht-degree: 24%
 
 ---
@@ -393,7 +393,6 @@ ht-degree: 24%
    + [Introduktion](/help/forms/home.md)
    + [Viktiga funktioner](/help/forms/key-features.md)
    + [Betydande ändringar](/help/forms/notable-changes.md)
-   + [Versionsinformation](/help/forms/release-notes.md)
    + Konfigurera och konfigurera tjänsten {#setup-environment}
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
@@ -450,7 +449,7 @@ ht-degree: 24%
       + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
    + [Integrera med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
    + [Integrera med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
-   + [Integrera med AEM Sites](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/aemform/v1/aemform)
+   + [Integrera med webbplatser](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/aemform/v1/aemform)
    + [Integrera med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
    + Skapa och använda arbetsflöden {#create-form-centric-workflows}
       + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
@@ -459,7 +458,8 @@ ht-degree: 24%
    + Använda kommunikation {#using-communications}
       + [Introduktion](/help/forms/aem-forms-cloud-service-communications-introduction.md)
       + [Kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications.md)
-      + [Kommunikations-API:er + gruppbearbetning](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+      + [Batchbearbetning av kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+      + [Använda anpassade teckensnitt i PDF-dokument](/help/forms/use-custom-fonts.md)
    + [Migrera till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
    + [Vanliga frågor](/help/forms/faq.md)
    + [Kända fel](/help/forms/known-issues.md)
