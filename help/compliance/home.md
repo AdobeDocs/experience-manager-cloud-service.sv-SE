@@ -2,10 +2,10 @@
 title: Regelefterlevnad
 description: På den här sidan visas självhjälpsresurser med information om efterlevnad på Experience Manager-as a Cloud Service.
 landing-page-description: Börja här om du vill få en översikt över hur AEM fungerar som en molntjänst, inklusive sekretess och tillgänglighet.
-source-git-commit: fdd430530c3dda304eeffb567f50cd389e1ee535
+source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 61%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +43,7 @@ På den här sidan visas självhjälpsresurser med information om efterlevnad p�
 * [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Dokumentation om Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/first-time-login.html)
+* [Dokumentation om Cloud Manager](/help/onboarding/learn-concepts/cloud-manager-introduction.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)

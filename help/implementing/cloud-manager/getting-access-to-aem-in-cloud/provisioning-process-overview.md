@@ -1,7 +1,7 @@
 ---
 title: Provisioneringsprocess - översikt
 description: Provisioneringsprocess - översikt
-source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
+source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -9,20 +9,20 @@ ht-degree: 0%
 ---
 
 
-# AEM som en Cloud Service: Onboarding och Access
+# AEM as a Cloud Service: Onboarding och Access
 
-På den här sidan visas självhjälpsresurser om provisioneringsprocessen för Experience Manager som Cloud Service.
+På den här sidan visas självhjälpsresurser om provisioneringsprocessen för Experience Manager as a Cloud Service.
 
-## AEM som Cloud Service Provisioning Process Overview
+## AEM as a Cloud Service Provisioning Process Overview
 
 Detta avsnitt behandlar de viktigaste artiklarna med fokus på:
 
-* Få åtkomst till AEM som en Cloud Service
-* Adobe Experience Manager som Cloud Service för introduktion och etablering
+* Åtkomst AEM as a Cloud Service
+* Adobe Experience Manager as a Cloud Service introduktions- och provisioneringsprocess
 * Hjälp och resurser
 
 
-### Få åtkomst till AEM som en Cloud Service
+### Åtkomst AEM as a Cloud Service
 
 När automatisk etablering är klar:
 
@@ -34,7 +34,7 @@ När automatisk etablering är klar:
 > ![processurview.jpg](./assets/processOverview.jpg)
 
 
-Mer information finns på [Onboarding to Experience Manager as a Cloud Service on Experience League](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=en)
+Mer information finns på [Anordnande av nyanställda på Experience Manager as a Cloud Service på Experience League](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=en)
 
 ### Resurser och länkar
 
@@ -43,14 +43,13 @@ Mer information finns på [Onboarding to Experience Manager as a Cloud Service o
 • [Få tillgång till Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html?lang=en#getting-access)
 
 
-## Adobe Experience Manager som Cloud Service Onboarding Process
+## Adobe Experience Manager as a Cloud Service introduktionsprocess
 
 ### 1. Automatisk etablering av utlösare för inköpsorder.
 
 ### 2. Anlita organisationer på Adobe Admin Console:
 
 >   ![processurview2.jpg](./assets/processOverview2.jpg)
-
 * Systemadministratör:
    * Tillhandahålla AEM program och miljöer.
    * Navigera till Admin Console för administrativa uppgifter.
@@ -67,12 +66,11 @@ Mer information finns på [Onboarding to Experience Manager as a Cloud Service o
 Tre metoder att introducera användare, beroende på storlek och inställning:
 * Skapa användare i Admin Console manuellt
 * Överför CSV-fil
-* Synkronisera användare från Enterprise Active
-Katalog
+* Synkronisera användare från Enterprise Active Directory
 
 ### 4. Admin konfigurerar organisationen och ger användare och grupper åtkomst till miljöer
 
 ## Hjälp och resurser
 
-* [Inloggning för första gången - Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/first-time-login.html#getting-access)
-* [Konfigurera åtkomst till AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=en#accessing)
+* [Inloggning för första gången - Cloud Service](/help/journey-onboarding/sysadmin/learning-path-aem-users.md)
+* [Konfigurera åtkomst till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=en#accessing)

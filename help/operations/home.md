@@ -1,12 +1,12 @@
 ---
 title: Använda och underhålla Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om att använda och underhålla Adobe Experience Manager as a Cloud Service
-landing-page-description: Lär dig mer om backend-åtgärder för AEM as a Cloud Service, som indexering och underhållsuppgifter.
+landing-page-description: Learn about the back-end operations of AEM as a Cloud Service, such as indexing and maintenance tasks.
 exl-id: ad50434c-1b4c-4e04-be91-2556d773cfbd
-source-git-commit: fdd430530c3dda304eeffb567f50cd389e1ee535
+source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 69%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +34,7 @@ På den här sidan visas självhjälp om att använda och underhålla Experience
 | [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med AEM kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a Cloud Service. |
-| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM as a Cloud Service. |
+| [Handbok för Commerce](/help/commerce-cloud/home.md) | Learn about Commerce Integration Framework on AEM as a Cloud Service. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 
@@ -42,7 +42,7 @@ På den här sidan visas självhjälp om att använda och underhålla Experience
 * [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Dokumentation om Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/first-time-login.html)
+* [Dokumentation om Cloud Manager](/help/onboarding/learn-concepts/cloud-manager-introduction.md)
 * [GDPR-efterlevnad](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
