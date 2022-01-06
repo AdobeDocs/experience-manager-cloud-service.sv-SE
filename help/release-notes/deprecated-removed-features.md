@@ -2,9 +2,9 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: 9410b061278d916c95233ecba7f7f946fccc51ed
+source-git-commit: e613ba71347d60dd9c4a2cdd6da8bd0696b00070
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '582'
 ht-degree: 5%
 
 ---
@@ -53,7 +53,8 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 | [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. |
 | [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort som oföränderliga avsnitt i [!DNL Experience Manager] databasen är inte tillgänglig vid körning. |
 | [!DNL Assets] | [!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud. | För integrering med [!DNL Adobe Creative Cloud], använda [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html). |
-| [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource). | Ej tillämpligt |
+| [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt |
+| [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt |
 
 ## Java API {#java-api}
 
