@@ -1,9 +1,9 @@
 ---
-title: Hur skapar man en Forms Portal på en Experience Manager Sites-sida?
+title: Skapa en Forms Portal på en Experience Manager Sites-sida
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
-source-git-commit: 4c42abfe2cc1b11aefb2b298e883406ca5c17fd2
+source-git-commit: 50eeb2c1e6925b39b03bbbdd627169453ea1c1d8
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
@@ -59,22 +59,15 @@ Så här importerar du färdiga Forms Portal-komponenter på AEM Forms as a Clou
 
    Ändra också `appTitle`, `appId`och `groupId`, i ovanstående kommando för att återspegla din miljö.
 
+1. **Utför följande steg i förhandsversionen när du vill använda komponenterna i Forms Portal:**
+   * [Aktivera betaversionskanalen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en).
+   * Ersätt `core-forms-components-*` version med önskad prerelease-version (till exempel 1.0.4-PRERELEASE-20211223) i `Cloud Manager/AEM Archetype` genom att uppdatera `<core.forms.components.version>x.y.z</core.forms.components.version>` på den översta nivån `pom.xml` av Arketype-projektet.
+
 1. **Distribuera projektet till din lokala utvecklingsmiljö:** Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
 
    `mvn -PautoInstallPackage clean install`
 
    En fullständig lista med kommandon finns på [Bygga och installera](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en#building-and-installing)
-
-1. [Inkludera kärnkomponentens artefakter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html#embeddeds) och beroendet enligt följande:
-
-   ```shell
-   <dependency>
-               <groupId>com.adobe.aem</groupId>
-               <artifactId>{TBD}</artifactId>
-               <type>content-package</type>
-               <version>{TBD}</version>
-   </dependency>
-   ```
 
 1. [Distribuera koden till [!DNL AEM Forms] as a Cloud Service miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html#embeddeds).
 
@@ -85,7 +78,7 @@ Så här importerar du färdiga Forms Portal-komponenter på AEM Forms as a Clou
 
 ### Skapa Azure Storage-konfiguration {#create-azure-storage-configuration}
 
-Innan du utför dessa steg måste du se till att du har en [!DNL Azure] lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till [!DNL Azure] lagringskonto.
+Innan du utför dessa steg måste du se till att du har ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till [!DNL Azure] lagringskonto.
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
 1. Välj en mapp för att skapa konfigurationen och tryck på **[!UICONTROL Create]**.
