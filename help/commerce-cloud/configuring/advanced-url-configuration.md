@@ -10,10 +10,10 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: 3ea19210049e49401da892021f098005759542a3
+source-git-commit: dadf4f21ebaac12386153b2a9c69dc8f10951e9c
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 6%
+source-wordcount: '916'
+ht-degree: 5%
 
 ---
 
@@ -53,6 +53,8 @@ När det gäller [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-g
 * `{{url_path}}` ersätts av produktens `url_path`, t.ex. `venia-bottoms/venia-pants/lenora-crochet-shorts`
 * `{{variant_sku}}` ersätts med den aktuella varianten, t.ex. `VP09-KH-S`
 
+Sedan `url_path` eftersom de fördefinierade produkt-URL-formaten är inaktuella används en produkts `url_rewrites` och välja den med de flesta bansegment som alternativ om `url_path` är inte tillgängligt.
+
 Med exempeldata ovan ser en produktvariant-URL som är formaterad med standardformatet för URL ut som `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
 
 ### URL-format för kategorisida {#product-list}
@@ -74,16 +76,19 @@ Med exempeldata ovan ser en kategorisidas URL-adress formaterad med standardform
 > 
 > The `url_path` är en sammanfogning av `url_keys` för en produkts eller kategoris överordnade och produkten eller kategorin `url_key` avgränsad med `/` snedstreck.
 
+### Specifik kategori-/produktsida {#specific-pages}
+
+Det går att skapa [flera kategorier och produktsidor](../authoring/multi-template-usage.md) för endast en viss delmängd av kategorier eller produkter i en katalog.
+
+The `UrlProvider` är förkonfigurerat för att generera djupa länkar till sådana sidor på författarskiktsinstanser. Detta är användbart för redigerare som bläddrar på en webbplats i förhandsgranskningsläge, navigerar till en viss produkt- eller kategorisida och växlar tillbaka till redigeringsläget för att redigera sidan.
+
+Vid publiceringsnivåinstanser å andra sidan bör katalogsidans URL-adresser hållas stabila så att de inte förlorar vinster på rankningar för sökmotorer. På grund av detta kommer instanser av publiceringsnivån inte att återge djuplänkar till specifika katalogsidor per standard. Om du vill ändra det här beteendet _CIF URL Provider Specific Page Strategy_ kan konfigureras för att alltid generera särskilda sidadresser.
+
 ## Anpassade URL-format {#custom-url-format}
 
-Ett projekt kan implementera det anpassade URL-formatet [`UrlFormat` gränssnitt](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/UrlFormat.html) och registrera implementeringen som en tjänst av allmänt ekonomiskt intresse, med den som kategorisida eller som webbsidesformat för produktsidor. The `UrlFormat#PROP_USE_AS` egenskapen service anger vilket av de fördefinierade formaten som ska ersättas:
+För att kunna tillhandahålla ett anpassat URL-format kan ett projekt implementera antingen [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) eller [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) och registrera implementeringen som en tjänst av allmänt ekonomiskt intresse. Dessa implementeringar, om de är tillgängliga, ersätter det konfigurerade fördefinierade formatet. Om det finns flera registrerade implementeringar ersätter den med den högre rangordningen dem med den lägre rangordningen.
 
-* `useAs=productPageUrlFormat`, ersätter det konfigurerade URL-formatet för produktsidan
-* `useAs=categoryPageUrlFormat`, ersätter det konfigurerade URL-formatet för kategorisidan
-
-Om det finns flera implementeringar av `UrlFormat` som är registrerade som OSGI-tjänster ersätter den med den högre rankningen den med den lägre rankningen.
-
-The `UrlFormat` måste implementera ett par metoder för att skapa en URL från en given parameterkarta och tolka en URL för att returnera samma parameterkarta. Parametrarna är desamma som beskrivs ovan, endast för kategorier och ytterligare `{{uid}}` parametern anges för `UrlFormat`.
+Implementeringarna av det anpassade URL-formatet måste implementera ett par metoder för att skapa en URL från angivna parametrar och för att tolka en URL för att returnera samma parametrar.
 
 ## Kombinera med delningskartor {#sling-mapping}
 
