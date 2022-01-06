@@ -1,22 +1,19 @@
 ---
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 6605349c698325d432479fac0253a6fd53d7f175
+exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
+source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 1%
 
 ---
 
-
 # Läs om hur du använder referenser i innehållsfragment {#author-headless-references}
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
+I början av [AEM Headless Content Author Journey](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 Du har lärt dig grunderna i Headless CMS Authoring, med en introduktion till redigering med AEMaaCS och i synnerhet framtagning av Content Fragments.
 
@@ -25,7 +22,7 @@ Den här artikeln bygger vidare på dessa så att du förstår hur du använder 
 ## Syfte {#objective}
 
 * **Målgrupp**: Avancerat
-* **Mål**: Introduktion till användning av referenser för Headless CMS Authoring. Vilka typer av referenser som finns tillgängliga, och vad är syftet med dem:
+* **Syfte**: Introduktion till användning av referenser för Headless CMS Authoring. Vilka typer av referenser som finns tillgängliga, och vad är syftet med dem:
 
    * Innehållsreferenser
    * Resurs-/mediereferenser
@@ -46,7 +43,7 @@ Innehållsreferenser gör just det - de gör det möjligt att referera till anna
 
 ## Resurs-/mediereferenser {#assets-media-references}
 
-Resurser (till exempel bilder eller media) kan refereras inom ett textblock med alternativet **Infoga resurs**. Då öppnas en webbläsare där du kan välja resursen.
+Resurser (till exempel bilder eller media) kan refereras inom ett textblock med hjälp av **Infoga resurs** alternativ. Då öppnas en webbläsare där du kan välja resursen.
 
 ![Innehållsfragment - infoga resurs](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
@@ -82,7 +79,7 @@ Som författare ansvarar du inte för att definiera dessa relationer (det gör i
 
 ### Så här skapar du kapslade fragment {#author-nested-fragment}
 
-Att skapa fragmentreferenser är ganska okomplicerat (men fältet kommer vanligtvis inte att ha **fragmentreferens**). Du kan antingen skriva in referensen direkt eller (troligare) välja mappikonen för att öppna en webbläsare där du kan navigera och välja det fragment du behöver.
+Att skapa fragmentreferenser är ganska okomplicerat (men vanligtvis kommer fältet inte att märkas som **Fragmentreferens**). Du kan antingen skriva in referensen direkt eller (troligare) välja mappikonen för att öppna en webbläsare där du kan navigera och välja det fragment du behöver.
 
 ![Innehållsfragment - referenser](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 
@@ -93,7 +90,7 @@ Definitionen av kontrollerna för innehållsfragmentmodellen:
 
 ### Navigera i kapslade fragment {#navigate-nested-fragment}
 
-På fliken **Strukturträd** i redigeraren för innehållsfragment kan du navigera bland fragmenten som refereras av fragmentet och sedan genom alla referenser som de kan innehålla. Om du markerar en referens öppnas fragmentet för redigering.
+Använda **Strukturträd** på fliken i redigeraren för innehållsfragment kan du navigera genom fragmenten som fragmentet refererar till och sedan genom eventuella referenser. Om du markerar en referens öppnas fragmentet för redigering.
 
 >[!NOTE]
 >
@@ -109,7 +106,7 @@ Ad hoc-referenser kan läggas till som en enkel länk i ett textblock:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är nästa steg att [Lär dig mer om metadata och taggning](metadata-tagging.md). Då introduceras och diskuteras hur du kan definiera metadata och taggar för dina innehållsfragment.
+Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är nästa steg att [Läs mer om metadata och taggning](metadata-tagging.md). Då introduceras och diskuteras hur du kan definiera metadata och taggar för dina innehållsfragment.
 
 ## Ytterligare resurser {#additional-resources}
 

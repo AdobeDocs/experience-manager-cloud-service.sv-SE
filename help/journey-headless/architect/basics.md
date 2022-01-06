@@ -1,29 +1,26 @@
 ---
 title: Lär dig grunderna i innehållsmodellering
 description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 6605349c698325d432479fac0253a6fd53d7f175
+exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
+source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 2%
 
 ---
 
-
 # Lär dig grunderna i innehållsmodellering för Headless med AEM {#content-modeling-headless-basics}
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Architect Journey](overview.md) innehöll [introduktionen](introduction.md) grundläggande koncept och terminologi som är relevant för att modellera innehåll för headless.
+I början av [AEM Headless Content Architect Journey](overview.md) den [Introduktion](introduction.md) De grundläggande begrepp och termer som är relevanta för att modellera innehåll för headless.
 
 Den här artikeln bygger på dessa så att du förstår hur du modellerar innehåll för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Mål**: Presentera koncepten för innehållsmodellering för Headless CMS.
+* **Syfte**: Presentera koncepten för innehållsmodellering för Headless CMS.
 
 ## Innehållsmodellering med modeller för innehållsfragment {#architect-content-fragment-models}
 
@@ -67,14 +64,14 @@ En innehållsfragmentmodell beskriver en enhet.
 
 Inom en modell:
 
-1. **Med** datatyper kan du definiera de enskilda attributen.
-Definiera till exempel fältet som innehåller en lärares namn som **Text** och deras tjänsteår som **Number**.
-1. Med datatyperna **Content Reference** och **Fragment Reference** kan du skapa relationer till annat innehåll i AEM.
-1. Med datatypen **Fragmentreferens** kan du realisera flera strukturnivåer genom att kapsla dina innehållsfragment (enligt modelltypen). Detta är viktigt för er innehållsmodellering.
+1. **Datatyper** gör att du kan definiera de enskilda attributen.
+Definiera till exempel fältet som innehåller en lärares namn som **Text** och deras tjänsteår som **Nummer**.
+1. Datatyperna **Innehållsreferens** och **Fragmentreferens** gör att du kan skapa relationer till annat innehåll i AEM.
+1. The **Fragmentreferens** datatypen gör att du kan realisera flera strukturnivåer genom att kapsla dina innehållsfragment (enligt modelltypen). Detta är viktigt för er innehållsmodellering.
 
 Till exempel:
 
-![Innehållsmodellering med ](assets/headless-modeling-01.png "innehållsfragmentInnehållsmodellering med innehållsfragment")
+![Innehållsmodellering med innehållsfragment](assets/headless-modeling-01.png "Innehållsmodellering med innehållsfragment")
 
 ## Datatyper {#data-types}
 
@@ -99,8 +96,8 @@ AEM innehåller följande datatyper som du kan använda för att modellera ditt 
 
 Två datatyper ger referenser till innehåll utanför ett visst fragment:
 
-* **Content**
-ReferenceDet här är en enkel referens till annat innehåll av valfri typ.
+* **Innehållsreferens**
+Detta ger en enkel referens till annat innehåll av valfri typ.
 Du kan till exempel referera till en bild på en viss plats.
 
 * **Fragmentreferens**
@@ -116,13 +113,13 @@ Datatypen kan konfigureras så att fragmentförfattare kan:
 
 ## Strukturnivåer (kapslade fragment) {#levels-of-structure-nested-fragments}
 
-Med datatypen **Fragmentreferens** kan du skapa flera nivåer av struktur och relationer för innehållsmodellering.
+För innehållsmodellering **Fragmentreferens** Med datatypen kan du skapa flera nivåer av struktur och relationer.
 
-Med den här referensen kan du *ansluta* olika modeller för innehållsfragment för att representera interrelationer. Detta gör att det headless-program kan följa anslutningarna och komma åt innehållet efter behov.
+Med den här referensen kan du *koppla* olika modeller för innehållsfragment som representerar inbördes relationer. Detta gör att det headless-program kan följa anslutningarna och komma åt innehållet efter behov.
 
 >[!NOTE]
 >
->Detta bör användas med försiktighet och den bästa metoden kan definieras som *nest så mycket som behövs, men så lite som möjligt*.
+>Detta bör användas med försiktighet och den bästa metoden kan definieras som *kapsla så mycket som behövs, men så lite som möjligt*.
 
 Fragmentreferenser gör just det - de gör att du kan referera till ett annat fragment.
 
@@ -148,7 +145,7 @@ Att representera dessa inbördes relationer kan uppnås med Fragmentreferenser, 
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig grunderna är nästa steg att [Lär dig hur du skapar modeller för innehållsfragment i AEM](model-structure.md). Här presenteras och behandlas de olika referenser som finns tillgängliga och hur du skapar strukturnivåer med fragmentreferenserna - en viktig del av modelleringen för headless.
+Nu när du har lärt dig grunderna är nästa steg att [Läs om hur du skapar modeller för innehållsfragment i AEM](model-structure.md). Här presenteras och behandlas de olika referenser som finns tillgängliga och hur du skapar strukturnivåer med fragmentreferenserna - en viktig del av modelleringen för headless.
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -158,6 +155,6 @@ Nu när du har lärt dig grunderna är nästa steg att [Lär dig hur du skapar m
 
 * [Redigeringsbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
 
-* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md)  - Den här sidan är i första hand baserad på  **** webbplatskonsolen, men många/de flesta funktioner är också relevanta för att skapa  **innehållfragment** under  **** Resurskonsolen.
+* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för redigering **Innehållsfragment** under **Resurser** konsol.
 
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)

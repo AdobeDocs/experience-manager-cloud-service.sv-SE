@@ -1,11 +1,8 @@
 ---
 title: AEM Headless Content Architect Journey
 description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan modellera ditt innehåll i ditt första headless-projekt.
-index: true
-hide: false
-hidefromtoc: false
 exl-id: ccfec100-8005-4f47-b5b6-ca188b35315c
-source-git-commit: ada7c256de5d050724781e4cbad6d877c1562c7b
+source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 1%

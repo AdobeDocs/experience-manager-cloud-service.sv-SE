@@ -1,25 +1,22 @@
 ---
 title: AEM Headless Content Author Journey
-description: En introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager som Cloud Service och hur du skapar innehåll för ditt projekt.
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 6605349c698325d432479fac0253a6fd53d7f175
+description: En introduktion till de kraftfulla och flexibla headlessfunktionerna i Adobe Experience Manager as a Cloud Service och hur du skapar innehåll för ditt projekt.
+exl-id: 065b00cb-a82d-4bcb-b2c9-44542cee6303
+source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 1%
 
 ---
 
-
 # Om du skriver för Headless med AEM - en introduktion {#author-headless-introduction}
 
-I den här delen av [AEM Headless Content Author Journey](overview.md) kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du skapar innehåll för headless content delivery med Adobe Experience Manager (AEM) som en Cloud Service.
+I den här delen av [AEM Headless Content Author Journey](overview.md)kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du skapar innehåll för rubrikfri innehållsleverans med Adobe Experience Manager (AEM) as a Cloud Service.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Mål**: Innehåller koncept och terminologi för Headless Authoring.
+* **Syfte**: Innehåller koncept och terminologi för Headless Authoring.
 
 ## CMS (Content Management System) {#content-management-system}
 
@@ -50,8 +47,8 @@ Först och främst är AEM ett innehållshanteringssystem med många olika funkt
 Detta innebär att det kan användas som
 
 * Headless CMS
-   * För headless kan du skapa ditt innehåll som **innehållsfragment**.
-Dessa är självständiga innehållsobjekt som kan nås direkt av ett antal program, eftersom de har en fördefinierad struktur som baseras på **modeller för innehållsfragment**.
+   * För headless kan du skapa ditt innehåll som **Innehållsfragment**.
+Detta är självständiga innehållsobjekt som kan nås direkt av ett antal program, eftersom de har en fördefinierad struktur som baseras på **Modeller för innehållsfragment**.
 Det innebär att innehållet kan nå ut till en mängd olika enheter, i en mängd olika format och med ett stort urval av funktioner.
 (Och som en dubbelpanorering kan dessa fragment också användas när du skapar AEM webbsidor - om du vill.)
 
@@ -62,11 +59,11 @@ Det innebär att innehållet kan nå ut till en mängd olika enheter, i en mäng
 
 Innehållsmodellering (även kallat datamodellering) är alltså en annan teknisk term - varför ska det intressera dig som författare?
 
-För att de headless-appar ska kunna komma åt ditt innehåll och göra något med det måste innehållet verkligen ha en fördefinierad struktur. Det skulle vara möjligt att ha ditt innehåll som friform, men det skulle göra livet *mycket* komplicerat för programmen.
+För att de headless-appar ska kunna komma åt ditt innehåll och göra något med det måste innehållet verkligen ha en fördefinierad struktur. Det skulle vara möjligt att ha ert innehåll som fri form, men det skulle göra livet till *mycket* komplicerade för programmen.
 
 Processen att definiera strukturen för ditt innehåll som ska följas inbegriper att utforma en modell - och detta kallas datamodellering.
 
-För AEM rollen Innehållsarkitektur (ofta en annan person) utför datamodelleringen för att utforma ett intervall av **modeller för innehållsfragment**, som du sedan använder som grund för ditt innehåll genom att använda **Innehållsfragment**.
+För AEM rollen Innehållsarkitekt (ofta en annan person) utför datamodelleringen för att utforma en rad olika **Modeller för innehållsfragment** - som du sedan använder som grund för ditt innehåll genom att använda **Innehållsfragment**.
 
 >[!NOTE]
 >

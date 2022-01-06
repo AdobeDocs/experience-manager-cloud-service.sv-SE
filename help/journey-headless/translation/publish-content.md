@@ -1,10 +1,8 @@
 ---
 title: Publicera översatt innehåll
 description: Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna när innehållet uppdateras.
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 6605349c698325d432479fac0253a6fd53d7f175
+exl-id: eb8d1152-ed37-47ca-86a8-6a66c010ee62
+source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 0%
@@ -17,7 +15,7 @@ Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet på den AEM översättningsresan [Translate Content,](configure-connector.md) lärde du dig att använda AEM Translation Projects för att översätta det headless-innehållet. Nu bör du:
+I det föregående dokumentet om den AEM översättningsresan utan headless [Översätta innehåll,](configure-connector.md) du lärde dig att använda AEM översättningsprojekt för att översätta ditt headless-innehåll. Nu bör du:
 
 * Förstå vad ett översättningsprojekt är.
 * Skapa nya översättningsprojekt.
@@ -42,10 +40,10 @@ Innan du publicerar ditt innehåll är det en bra idé att förstå AEM författ
 
 AEM separeras därför fysiskt i två instanser.
 
-1. **författarinstansen** är det system där innehållsförfattare och administratörer arbetar med att skapa och hantera innehåll.
-1. **publish**-instansen är det system som skickar innehållet till konsumenterna.
+1. The **författare** -instans är det system där innehållsförfattare och -administratörer arbetar med att skapa och hantera innehåll.
+1. The **publicera** -instans är det system som levererar innehållet till konsumenterna.
 
-När innehållet har skapats på författarinstansen måste det överföras till publiceringsinstansen för att det ska vara tillgängligt för konsumtion. Processen att överföra från författare till publicering kallas **publikation**.
+När innehållet har skapats på författarinstansen måste det överföras till publiceringsinstansen för att det ska vara tillgängligt för konsumtion. Processen att överföra från författare till publicering anropas **publikation**.
 
 ## Publicera översatt innehåll {#publishing}
 
@@ -68,10 +66,10 @@ Under den här sökvägen har du undermappar för varje översättningsspråk oc
 1. Gå till **Navigering** -> **Resurser** -> **Filer** och öppna projektmappen.
 1. Här visas språkrotmappen och alla andra språkmappar. Välj det eller de lokaliserade språk som du vill publicera.
    ![Välj språkmapp](assets/select-language-folder.png)
-1. Tryck eller klicka på **Hantera publikation**.
-1. I fönstret **Hantera publikation** kontrollerar du att **Publicera** automatiskt är markerat under **Åtgärd** och att **Now** är markerat under **Schemaläggning**. Tryck eller klicka på **Nästa**.
+1. Tryck eller klicka **Hantera publikation**.
+1. I **Hantera publikation** se till att **Publicera** markeras automatiskt under **Åtgärd** och **Nu** är markerat under **Schemaläggning**. Tryck eller klicka **Nästa**.
    ![Hantera publiceringsalternativ](assets/manage-publication-options.png)
-1. I nästa **Manage Publication**-fönster bekräftar du att rätt sökväg är/är markerad. Tryck eller klicka på **Publicera**.
+1. I nästa **Hantera publikation** bekräftar du att rätt sökväg är markerad. Tryck eller klicka **Publicera**.
    ![Hantera publikationsomfång](assets/manage-publication-scope.png)
 1. AEM bekräftar publiceringsåtgärden med ett popup-meddelande längst ned på skärmen.
    ![Publicerad banner](assets/resources-published-message.png)
@@ -82,7 +80,7 @@ Ditt översatta headless-innehåll publiceras nu! Den kan nu nås och användas 
 >
 >Du kan markera flera objekt (d.v.s. flera språkmappar) när du publicerar för att kunna publicera flera översättningar samtidigt.
 
-Det finns ytterligare alternativ när du publicerar innehåll, till exempel schemaläggning av en publiceringstid, som ligger utanför den här kundresan. Mer information finns i avsnittet [Ytterligare resurser](#additional-resources) i slutet av dokumentet.
+Det finns ytterligare alternativ när du publicerar innehåll, till exempel schemaläggning av en publiceringstid, som ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) i slutet av dokumentet om du vill ha mer information.
 
 ## Uppdatera ditt översatta innehåll {#updating-translations}
 
@@ -96,13 +94,13 @@ Som tidigare skiljer sig dock processen något om du väljer att automatiskt ska
 
 1. Navigera till **Navigering** -> **Resurser** -> **Filer**. Kom ihåg att innehåll utan rubrik i AEM lagras som resurser som kallas för innehållsfragment.
 1. Välj språkroten för projektet. I det här fallet har vi valt `/content/dam/wknd/en`.
-1. Tryck eller klicka på rälsväljaren och visa panelen **Referenser**.
+1. Tryck eller klicka på rälsväljaren och visa **Referenser** -panelen.
 1. Tryck eller klicka på **Språkkopior**.
-1. Markera kryssrutan **Språkkopior**.
+1. Kontrollera **Språkkopior** kryssrutan.
 1. Expandera avsnittet **Uppdatera språkkopior** längst ned på referenspanelen.
-1. I listrutan **Projekt** väljer du **Lägg till i ett befintligt översättningsprojekt**.
-1. I listrutan **Befintligt översättningsprojekt** väljer du det projekt som skapats för den inledande översättningen.
-1. Tryck eller klicka på **Start**.
+1. I **Projekt** listruta, välja **Lägg till i ett befintligt översättningsprojekt**.
+1. I **Befintligt översättningsprojekt** väljer du det projekt som skapats för den inledande översättningen.
+1. Tryck eller klicka **Starta**.
 
 ![Lägg till artiklar i befintligt översättningsprojekt](assets/add-to-existing-project.png)
 
@@ -118,7 +116,7 @@ Du ser att ett nytt jobbkort har lagts till i projektet. I det här exemplet har
 
 Du kan lägga märke till att statistiken på det nya kortet (antal tillgångar och innehållsfragment) är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som behöver översättas. Detta inkluderar omöversättning av uppdaterat innehåll samt förstagångsöversättning av nytt innehåll.
 
-Från och med nu [börjar och hanterar du översättningsjobbet på samma sätt som i originalet.](translate-content.md#using-translation-project)
+Från och med nu [starta och hantera översättningsjobbet på samma sätt som du gjorde originalet.](translate-content.md#using-translation-project)
 
 ### Uppdatera ett manuellt skapat översättningsprojekt {#updating-manual-project}
 
@@ -126,8 +124,8 @@ Om du vill uppdatera en översättning kan du lägga till ett nytt jobb i ditt b
 
 1. Navigera till **Navigering** -> **Projekt**.
 1. Tryck eller klicka på det projekt som du vill uppdatera.
-1. Tryck eller klicka på knappen **Lägg till** högst upp i fönstret.
-1. I fönstret **Lägg till sida vid sida** trycker eller klickar du på **Översättningsjobb** och sedan **Skicka**.
+1. Tryck eller klicka på **Lägg till** längst upp i fönstret.
+1. I **Lägg till platta** fönster, trycka eller klicka **Översättningsjobb** och sedan **Skicka**.
 
    ![Lägg till platta](assets/add-translation-job-tile.png)
 
@@ -135,20 +133,20 @@ Om du vill uppdatera en översättning kan du lägga till ett nytt jobb i ditt b
 
    ![Uppdatera mål](assets/update-target.png)
 
-1. I dialogrutan **Välj målspråk** använder du listrutan för att välja språk och trycker eller klickar på **Klar**.
+1. I **Välj målspråk** väljer du språk i listrutan och trycker på eller klickar på **Klar**.
 
    ![Välj målspråk](assets/select-target-language.png)
 
 1. När det nya översättningsjobbets målspråk är inställt trycker eller klickar du på ellipsknappen längst ned på jobbkortet för att visa information om jobbet.
-1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på knappen **Lägg till** och använda sökvägsläsaren [som du gjorde innan du skapade översättningsprojektet.](translate-content.md##manually-creating)
+1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på **Lägg till** och använda sökvägsläsaren [som du gjorde tidigare när du ursprungligen skapade översättningsprojektet.](translate-content.md##manually-creating)
 
 >[!TIP]
 >
 >Banwebbläsarens kraftfulla filter kan vara användbara för att hitta just det innehåll som har uppdaterats.
 >
->Du kan läsa mer om sökvägsläsaren i [avsnittet med ytterligare resurser.](#additional-resources)
+>Du kan läsa mer om sökvägsläsaren i [ytterligare resursavsnitt.](#additional-resources)
 
-Från och med nu [börjar och hanterar du översättningsjobbet på samma sätt som i originalet.](translate-content.md#using-translation-project)
+Från och med nu [starta och hantera översättningsjobbet på samma sätt som du gjorde originalet.](translate-content.md#using-translation-project)
 
 ## Slut på resan? {#end-of-journey}
 
@@ -159,11 +157,11 @@ Grattis! Du har fullföljt den headless översättningsresan! Nu bör du:
 * Förstå AEM översättningsfunktioner och hur de relaterar till headless-innehåll.
 * Har möjlighet att börja översätta sitt eget headless-innehåll.
 
-Nu kan du översätta ditt eget headless-innehåll i AEM. AEM är dock ett kraftfullt verktyg och det finns många andra alternativ. Se vilka ytterligare resurser som finns i [Additional Resources section](#additional-resources) om du vill veta mer om de funktioner du såg under resan.
+Nu kan du översätta ditt eget headless-innehåll i AEM. AEM är dock ett kraftfullt verktyg och det finns många andra alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) om du vill veta mer om de funktioner du såg under den här resan.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md)  - Läs mer om översättningsprojekt och andra funktioner som arbetsflöden för översättning och flerspråkiga projekt.
-* [Designkoncept](/help/sites-cloud/authoring/getting-started/concepts.md)  - Läs mer om författaren och publicera AEM i detalj. Det här dokumentet fokuserar på att skapa sidor i stället för på innehållsfragment, men teorin gäller fortfarande.
-* [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md)  - Läs mer om de extrafunktioner som är tillgängliga vid publicering av innehåll. Det här dokumentet fokuserar på att skapa sidor i stället för på innehållsfragment, men teorin gäller fortfarande.
-* [Redigeringsmiljö och verktyg](/help/sites-cloud/authoring/fundamentals/environment-tools.md##path-selection)  - AEM innehåller olika sätt att ordna och redigera ditt innehåll, inklusive en robust sökvägsläsare.
+* [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md) - Läs mer om översättningsprojekt och andra funktioner som arbetsflöden för översättning och flerspråkiga projekt.
+* [Skapa koncept](/help/sites-cloud/authoring/getting-started/concepts.md) - Läs mer om författaren och publicera AEM i detalj. Det här dokumentet fokuserar på att skapa sidor i stället för på innehållsfragment, men teorin gäller fortfarande.
+* [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) - Läs mer om de ytterligare funktioner som är tillgängliga vid publicering av innehåll. Det här dokumentet fokuserar på att skapa sidor i stället för på innehållsfragment, men teorin gäller fortfarande.
+* [Redigeringsmiljö och -verktyg](/help/sites-cloud/authoring/fundamentals/environment-tools.md##path-selection) - AEM innehåller olika sätt att ordna och redigera ditt innehåll, bland annat en robust sökvägsläsare.

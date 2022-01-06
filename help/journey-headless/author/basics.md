@@ -1,29 +1,26 @@
 ---
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 6605349c698325d432479fac0253a6fd53d7f175
+exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
+source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 1%
 
 ---
 
-
 # Grundläggande om redigering för Headless med AEM {#author-headless-basics}
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
+I början av [AEM Headless Content Author Journey](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du skapar ditt eget innehåll för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Mål**: Introducing the basics of Headless CMS Authoring:
+* **Syfte**: Introducing the basics of Headless CMS Authoring:
    * Introduktion till utveckling med AEMaaCS
    * Introduktion till innehållsfragment
 
@@ -56,14 +53,14 @@ Ditt konto har konfigurerats med de privilegier du behöver. Om du har problem r
 
 Första gången du loggar in i en liten onlinekurs kommer några av huvudfunktionerna i användargränssnittet att markeras.
 
-Du kan sedan använda navigeringspanelen för att komma åt AEM nyckelområden. För innehållsfragment använder du **Resurskonsolen**.
+Du kan sedan använda navigeringspanelen för att komma åt AEM nyckelområden. För innehållsfragment använder du **Resurskonsol**.
 
 Du kan öppna navigeringspanelen genom att välja ikonen Adobe längst upp till vänster, följt av den lilla kompassikonen:
 
 ![Navigeringspanelen](/help/journey-headless/author/assets/headless-journey-author-navigation-01.png)
 
 >[!NOTE]
->Innehållsfragment är en funktion i AEM **Platser**, men finns i konsolen **Resurser**. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
+>Innehållsfragment är en funktion i AEM **Webbplatser** finns de i **Resurser** konsol. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
 
 I konsolen kan du välja mappar för att navigera till ditt innehållsfragment, eller de synliga mapparna (i sidhuvudet) för att gå tillbaka till trädet.
 
@@ -71,9 +68,9 @@ I konsolen kan du välja mappar för att navigera till ditt innehållsfragment, 
 
 ### funktionsmakron, markera, visa {#actions-selecting-viewing}
 
-Konsolen **Resurser** har dedikerade **åtgärdsverktygsfält** och **snabbåtgärder** som du kan använda efter att du har valt en resurs (till exempel en mapp eller ett innehålls fragment).
+The **Resurser** konsolen har dedikerat **Åtgärdsverktygsfält** och **Snabbåtgärder** som du kan använda när du har valt en resurs (till exempel en mapp eller ett innehållsfragment).
 
-Snabbåtgärderna är tillgängliga för en enskild resurs, se **Basel** i exemplet nedan:
+Snabbåtgärder är tillgängliga för en enskild resurs, se **Basel** i exemplet nedan:
 
 ![Snabbåtgärder](/help/journey-headless/author/assets/headless-journey-author-navigation-05.png)
 
@@ -101,21 +98,21 @@ Om du inte har ett fåtal innehållsfragment vill du ordna dem så att du (och a
 
 #### Skapa en mapp {#creating-folder}
 
-Du kan göra detta genom att skapa en serie mappar i avsnittet **Filer** i resurskonsolen. Välj alternativet **Skapa** (överst till höger) följt av **Mapp**:
+Du kan göra detta genom att skapa en serie mappar i **Filer** i Assets-konsolen. Välj **Skapa** alternativ (överst till höger), följt av **Mapp**:
 
 ![Alternativet Skapa mapp](/help/journey-headless/author/assets/headless-journey-author-folder-01.png)
 
-En dialogruta öppnas där du kan ange informationen och sedan bekräfta med **Skapa**:
+En dialogruta öppnas där du kan ange information och sedan bekräfta med **Skapa**:
 
 ![Dialogrutan Skapa mapp](/help/journey-headless/author/assets/headless-journey-author-folder-02.png)
 
 #### Använda banor och taggar för att begränsa vilka modeller för innehållsfragment som finns i mappen {#tags-paths-for-models-in-folder}
 
-Det här avsnittet är något mer avancerat. Du behöver det egentligen inte om du just har börjat och provar saker, men det är *mycket* användbart när du har många fragment. Så det är bra att veta om - även om du inte använder det helt än.
+Det här avsnittet är något mer avancerat. Du behöver det inte om du bara börjar och provar saker, men det är *mycket* är användbart när du har många fragment. Så det är bra att veta om - även om du inte använder det helt än.
 
 Din innehållsarkitekt har skapat alla innehållsfragmentmodeller som krävs för ditt aktuella projekt, och kanske även några andra projekt. För att göra det enklare för dig själv och andra författare kan du begränsa listan med modeller som är tillgängliga för en viss mapp.
 
-När du har skapat mappen kan du öppna mappen **Egenskaper**. Här finns olika flikar med information och konfigurationsinformation om mappen. Särskilt för innehållsfragment kan du använda fliken **Profiler** för att definiera specifika sökvägar och/eller taggar för den här mappen. Detta begränsar vilka modeller för innehållsfragment som är tillgängliga för användning i mappen, eftersom det innebär att modeller för innehållsfragment måste uppfylla dessa krav innan de kan användas för att generera fragment i den här mappen.
+När du har skapat mappen kan du öppna den **Egenskaper**. Här finns olika flikar med information och konfigurationsinformation om mappen. Du kan använda kommandot **Profiler** om du vill definiera specifika sökvägar och/eller taggar för den här mappen. Detta begränsar vilka modeller för innehållsfragment som är tillgängliga för användning i mappen, eftersom det innebär att modeller för innehållsfragment måste uppfylla dessa krav innan de kan användas för att generera fragment i den här mappen.
 
 ![Skapa mappegenskaper - principer](/help/journey-headless/author/assets/headless-journey-author-folder-04.png)
 
@@ -125,11 +122,11 @@ När du har skapat mappen kan du öppna mappen **Egenskaper**. Här finns olika 
 
 Du navigerar sedan genom de här mapparna för att skapa och redigera dina innehållsfragment.
 
-#### Precis in case - Konfiguration av mappkonfiguration {#cloud-services-folder}
+#### Precis in case - konfiguration av mappkonfiguration {#cloud-services-folder}
 
 Bara om..
 
-Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Detta intresserar dig förmodligen inte, men om det behövs kan du kontrollera **konfigurationen** i **Cloud Servicens** för mappen **Egenskaper**:
+Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Det här intresserar dig förmodligen inte, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Services** i mappen **Egenskaper**:
 
 ![Skapa mappegenskaper - Konfiguration](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
 
@@ -139,7 +136,7 @@ Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. De
 
 ### Skapa ett innehållsfragment {#creating-fragment}
 
-Att skapa ett innehållsfragment påminner mycket om det. Du använder bara alternativet **Innehållsfragment** i stället:
+Att skapa ett innehållsfragment är mycket likt - du använder bara **Innehållsfragment** i stället:
 
 ![Alternativet Skapa innehållsfragment](/help/journey-headless/author/assets/headless-journey-author-content-fragment-01.png)
 
@@ -147,11 +144,11 @@ Den här gången öppnas en guide. Det första steget är att välja den innehå
 
 ![Skapa innehållsfragment - välj modell](/help/journey-headless/author/assets/headless-journey-author-content-fragment-02.png)
 
-När du har fortsätter med **Nästa** kan du ange information (**Basic** och **Advanced**) för fragmentet:
+Efter att du fortsätter med **Nästa** du kan ange information (**Grundläggande** och **Avancerat**) för ditt fragment:
 
 ![Skapa innehållsfragment - ange namn](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-Bekräfta med **Skapa** och du kan sedan **öppna** fragmentet i redigeraren.
+Bekräfta med **Skapa** så kan du **Öppna** ditt fragment i redigeraren.
 
 ### Redigera ett fragment {#editing-fragment}
 
@@ -159,7 +156,7 @@ Du kan öppna ett fragment omedelbart efter att du har skapat det, eller genom a
 
 När redigeraren öppnas ser du:
 
-* En lista med ikoner till vänster - det ger dig tillgång till olika funktionsområden. Redigeraren öppnas på fliken **Variationer**, det är här som det mesta av redigeringen görs. Du kan också vara intresserad av flikarna **Anteckningar** och **Metadata**.
+* En lista med ikoner till vänster - det ger dig tillgång till olika funktionsområden. Redigeraren öppnas i **Variationer** är det här den mesta redigeringen görs. Du kan också vara intresserad av **Anteckningar** och **Metadata** -tabbar.
 
 * En rubrik med information om fragmentet och åtkomst till olika åtgärder.
 
@@ -181,7 +178,7 @@ Exempel:
 >
 >Se Modeller för innehållsfragment - Datatyper och egenskaper för allmän information.
 
-Bekräfta uppdateringarna med antingen **Spara** eller **Spara och stäng**.
+Bekräfta dina uppdateringar med antingen **Spara** eller **Spara och stäng**.
 
 >[!NOTE]
 >
@@ -212,27 +209,27 @@ Modeller för innehållsfragment är faktiskt viktiga för dina innehållsfragme
 
 * **Uppdatera sidreferenser**
 
-   Den här åtgärden är tillgänglig från **..** (ellipser) listruta. Det är inte intressant för skribenter utan rubrik när det gäller att skapa sidor.
+   Den här åtgärden är tillgänglig från **...** (ellipser) listruta. Det är inte intressant för skribenter utan rubrik när det gäller att skapa sidor.
 
 ### Publicering {#publishing}
 
 <!-- needs more details -->
 
-När du har slutfört fragmentet kan du **publicera** det så att det blir tillgängligt för de headless-program som använder det.
+När du är klar med fragmentet kan du **Publicera** så att den blir tillgänglig för headless-applikationer.
 
-Publiceringsåtgärderna är tillgängliga i redigeraren (eller från verktygsfältet i konsolen **Assets**):
+Publiceringsåtgärderna är tillgängliga i redigeraren (eller från verktygsfältet i **Resurser** konsol):
 
 ![Content Fragment Editor - My Fragment](/help/journey-headless/author/assets/headless-journey-author-content-fragment-06.png)
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig grunderna är nästa steg att [Lär dig mer om referenser](references.md). Här presenteras och diskuteras de olika referenser som finns tillgängliga och hur du skapar strukturnivåer med Fragment References - en viktig del i utvecklingen för headless.
+Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](references.md). Här presenteras och diskuteras de olika referenser som finns tillgängliga och hur du skapar strukturnivåer med Fragment References - en viktig del i utvecklingen för headless.
 
 ## Ytterligare resurser {#additional-resources}
 
 * [Redigeringsbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
 
-* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md)  - Den här sidan är i första hand baserad på  **** webbplatskonsolen, men många/de flesta funktioner är också relevanta för att skapa  **innehållfragment** under  **** Resurskonsolen.
+* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för redigering **Innehållsfragment** under **Resurser** konsol.
 
    * [Navigeringspanel](/help/sites-cloud/authoring/getting-started/basic-handling.md#navigation-panel)
 

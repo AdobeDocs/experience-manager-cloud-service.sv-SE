@@ -1,22 +1,19 @@
 ---
 title: Läs om hur du definierar metadata och taggar för innehållsfragment
 description: Läs om hur du definierar metadata och taggar för innehållsfragment
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 6605349c698325d432479fac0253a6fd53d7f175
+exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
+source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 2%
 
 ---
 
-
 # Läs om hur du definierar metadata och taggar för innehållsfragment {#author-headless-metadata-tagging}
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
+I början av [AEM Headless Content Author Journey](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 I föregående steg introducerades du att använda referenser för Headless CMS Authoring. Du lärde dig vilka typer av referenser som är tillgängliga och vad som är deras syften: Innehållsreferenser, Resurs-/mediereferenser och Fragmentreferenser.
 
@@ -25,7 +22,7 @@ Den här artikeln bygger på dessa så att du förstår hur du använder metadat
 ## Syfte {#objective}
 
 * **Målgrupp**: Avancerat
-* **Mål**: Introduktion till användning av metadata och taggning för Headless CMS Authoring.
+* **Syfte**: Introduktion till användning av metadata och taggning för Headless CMS Authoring.
 
 ## Lägga till metadata och taggar {#adding-metadata-and-tags}
 
@@ -35,11 +32,11 @@ Det finns tre metoder som du kan använda för att lägga till metadata och tagg
 
    ![Skapa innehållsfragment - ange namn](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-* På fliken **Metadata** i redigeraren för innehållsfragment kan du lägga till båda olika metadatafält och fördefinierade **taggar** från ditt projekt:
+* The **Metadata** kan du lägga till olika metadatafält och fördefinierade **Taggar** från ditt projekt:
 
    ![Content Fragment Editor - Metadata](/help/journey-headless/author/assets/headless-journey-author-metadata-01.png)
 
-   * Det här är även direkt tillgängligt med alternativet **Egenskaper** i verktygsfältet i resurskonsolen.
+   * Detta är också tillgängligt via **Egenskaper** i verktygsfältet i Resurskonsolen.
 
 ## What&#39;s Next {#whats-next}
 
