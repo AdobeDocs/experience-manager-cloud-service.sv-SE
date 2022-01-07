@@ -2,9 +2,9 @@
 title: Föråldrade API:er
 description: Versionsinformation om borttagna och borttagna API:er i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: fbd8c60a-3e2b-4696-aaba-f4db97923184
-source-git-commit: e613ba71347d60dd9c4a2cdd6da8bd0696b00070
+source-git-commit: d7fc88481ab0d85f62ad0b9891c286cee92edfae
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '855'
 ht-degree: 4%
 
 ---
@@ -109,16 +109,16 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>7/30/21</td>
   </tr>
   <tr>
-    <td>org.apache.felix.metatype<br>org.apache.felix.scr<br>org.apache.felix.scr.info</td>
+    <td>org.apache.felix.metatype<br>org.apache.felix.scr<br>org.apache.felix.scr.info<br>org.apache.felix.scr.component</td>
     <td>Apache Felix-metatypen och SCR-API:erna är föråldrade.  Använd OSGi-metatypen och deklarativa tjänstens API:er i stället.</td>
     <td>5/27/21</td>
-    <td>8/26/21</td>
+    <td>borttagen</td>
   </tr>
   <tr>
-    <td>oorg.slf4j.impl</td>
+    <td>org.slf4j.impl</td>
     <td>Loggimplementeringsklasser är inte kompatibla med AEM as a Cloud Service.</td>
     <td>7/4/21</td>
-    <td>8/26/21</td>
+    <td>removed</td>
   </tr>
   <tr>
     <td>org.apache.abdera<br>org.apache.abdera.model<br>org.apache.abdera.factory<br>org.apache.abdera.ext.media<br>org.apache.abdera.util<br>org.apache.abdera.i18n.iri<br>org.apache.abdera.writer<br>org.apache.abdera.i18n.rfc4646<br>org.apache.abdera.i18n.rfc4646.enums<br>org.apache.abdera.i18n.text<br>org.apache.abdera.filter<br>org.apache.abdera.xpath<br>org.apache.abdera.i18n.text.io<br>org.apache.abdera.i18n.text.data<br>org.apache.abdera.parser</td>
@@ -136,19 +136,19 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>org.apache.sling.startupfilter<br>com.adobe.granite.crypto.spi<br>com.adobe.granite.crpyto.spi.base<br>com.adobe.agl.impl.data.icudt40b<br>com.adobe.agl.impl.data.icudt40b.brkitr<br>com.adobe.agl.impl.data.icudt40b.coll<br>com.adobe.agl.impl.data.icudt40b.rbnf<br>com.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
     <td>Äldre AEM 6.x API.</td>
     <td>4/8/19</td>
-    <td>09/29/21</td>
+    <td>borttagen</td>
   </tr>
   <tr>
     <td>org.apache.sling.discovery.commons<br>org.apache.sling.discovery.commons.providers<br>org.apache.sling.discovery.commons.providers.base<br>org.apache.sling.discovery.commons.providers.spi<br>org.apache.sling.discovery.commons.providers.spi.base<br>org.apache.sling.discovery.commons.providers.util</td>
     <td>Detta API stöds inte i Cloud Servicen.</td>
     <td>9/30/21</td>
-    <td>10/30/21</td>
+    <td>borttagen</td>
   </tr>
   <tr>
     <td>org.apache.jackrabbit.vault.util.xml<br>org.apache.jackrabbit.vault.util.xml.serialize</td>
     <td>Util-klasser som är relaterade till Apache Xerces tas bort i efterföljande versioner, vilket orsakar en större versionsändring. Eftersom de här verktygen är avsedda för internt bruk i Filevault är API-gränssnittet föråldrat från den offentliga API-ytan.</td>
     <td>9/1/21</td>
-    <td>10/30/21</td>
+    <td>removed</td>
   <tr>
     <td>org.apache.sling.atom.taglib<br>org.apache.sling.atom.taglib.media</td>
     <td>Legacy AEM 6.x API.</td>
