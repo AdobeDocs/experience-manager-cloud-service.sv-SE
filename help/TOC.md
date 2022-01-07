@@ -7,7 +7,7 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: f6b9a8d09ae0bbc57ec2ba30694f3c1b0b163379
+source-git-commit: 98862df8b69657cf3a8a4a0f54d1285b3cab526f
 workflow-type: tm+mt
 source-wordcount: '3441'
 ht-degree: 24%
@@ -664,7 +664,7 @@ ht-degree: 24%
             + [Komponenter - översikt](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)
             + [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-            + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-prerelease/sites/authoring/features/style-system.html)
+            + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)
             + [JSON-exporterare för innehållstjänster](/help/implementing/developing/components/json-exporter.md)
             + [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md)
             + [Bildredigeraren](/help/implementing/developing/components/image-editor.md)
@@ -724,7 +724,7 @@ ht-degree: 24%
             + [Autentisering för AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-authentication-content-fragments.html)
       + Hybrid- och SPA {#hybrid}
          + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-prerelease/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
+         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
          + [SPA introduktion och genomgång](/help/implementing/developing/hybrid/introduction.md)
          + [SPA WKND - självstudiekurs](/help/implementing/developing/hybrid/wknd-tutorial.md)
          + [Komma igång med React](/help/implementing/developing/hybrid/getting-started-react.md)
@@ -740,7 +740,7 @@ ht-degree: 24%
          + [Redigera en extern SPA i AEM](/help/implementing/developing/hybrid/editing-external-spa.md)
          + [Sammansatta komponenter i SPA](/help/implementing/developing/hybrid/composite-components.md)
          + [Återgivning på serversidan](/help/implementing/developing/hybrid/ssr.md)
-         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-prerelease/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
+         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
          + [Starta integrering](/help/implementing/developing/hybrid/launch-integration.md)
          + [SPA referensdokument](/help/implementing/developing/hybrid/reference-materials.md)
    + Utvecklarverktyg {#developer-tools}
@@ -760,7 +760,7 @@ ht-degree: 24%
       + [ContextHub Diagnostics](/help/implementing/developing/personalization/contexthub-diagnostics.md)
       + [Utökar ContextHub](/help/implementing/developing/personalization/extending-contexthub.md)
       + [ContextHub API](/help/implementing/developing/personalization/contexthub-api.md)
-      + [Konfigurera segmentering med ContextHub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-prerelease/sites/authoring/personalization/contexthub-segmentation.html)
+      + [Konfigurera segmentering med ContextHub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/personalization/contexthub-segmentation.html)
    + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
       + Utöka AEM med App Builder{#app-builder}
          + [Utöka AEM med Adobe Developer App Builder](/help/implementing/developing/extending/app-builder/extending-aem-with-app-builder.md)
