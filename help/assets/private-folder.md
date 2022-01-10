@@ -4,9 +4,9 @@ description: Lär dig hur du skapar en privat mapp i [!DNL Adobe Experience Mana
 contentOwner: Vishabh Gupta
 role: User
 feature: Collaboration
-source-git-commit: ac8dc2a765aba5be45017cf4adbc8f64b20ff7f3
+source-git-commit: 103bf8a477fb851e093bfde8e2c0535f49a01566
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Du kan skapa en privat mapp i [!DNL Adobe Experience Manager Assets] användargr
 >
 >Den privata mappen har minst en medlem med ägarrollen.
 >
->Om du vill skapa en privat mapp måste du `Read` och `Modify` behörigheter för den överordnade mappen som du vill skapa en privat mapp i. Om du inte är administratör är dessa behörigheter inte aktiverade för dig som standard `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar.
+>Om du vill skapa en privat mapp måste du `Read` och `Modify` behörigheter för den överordnade mappen som du skapar en privat mapp i. Om du inte är administratör är dessa behörigheter inte aktiverade som standard `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar.
 
 ## Skapa och dela privat mapp  {#create-share-private-folder}
 
