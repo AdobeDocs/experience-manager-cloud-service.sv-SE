@@ -9,9 +9,9 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: a4d28786-cffa-42ab-98d3-90a15313e401
-source-git-commit: a7ae5e7bd9de4762e8f9a560e327b3f1358155b7
+source-git-commit: cca950b0a4eed60f82d65779766405ed216111e3
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2301'
 ht-degree: 0%
 
 ---
@@ -72,9 +72,13 @@ När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de til
 
    Adobe Dynamic Media tillåter inte att två filer har samma namn. Varje objekts Adobe Dynamic Media-ID (bildnamn minus filnamnstillägg) måste vara unikt. På grund av den här regeln **[!UICONTROL Upload to Application]** har en överskrivning. Den exakta effekten av det här alternativet beror på det angivna alternativet Skriv över bilder som du har valt. De här alternativen anger hur ersättningsbilder överförs: om de ersätter originalbilderna eller blir dubblettbilder. Namnet på duplicerade bilder ändras med ett `-1`. Till exempel: `chair.tif` har bytt namn `chair-1.tif`. De här alternativen påverkar bilder som har överförts till en annan mapp än den ursprungliga eller bilder med ett annat filnamnstillägg än den ursprungliga, till exempel JPG, TIF eller PNG.
 
+   >[!NOTE]
+   >
+   >Om du vill behålla konsekvensen med Experience Manager markerar du alternativet Skriv över bilder **[!UICONTROL Overwrite in current folder, same base name/extension]**.
+
    | Skriv över bilder, alternativ | Beskrivning |
    | --- | --- |
-   | **[!UICONTROL Overwrite in current folder, same base name/extension]** | Standard för nya Dynamic Media-konton.<br>Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett. |
+   | **[!UICONTROL Overwrite in current folder, same base name/extension]** | *Standard* endast för nya Dynamic Media-konton.<br>Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett.<br>*Välj det här alternativet om du vill att Experience Manager ska vara konsekvent*. |
    | **[!UICONTROL Overwrite in current folder, same base name regardless of extension]** | Kräver att du överför ersättningsbilden till samma mapp som originalet, men filnamnstillägget kan skilja sig från originalet. Till exempel ersätter stol.tif stol.jpg. |
    | **[!UICONTROL Overwrite in any folder, same base asset name/extension]** | Kräver att ersättningsbilden har samma filnamnstillägg som den ursprungliga bilden (t.ex. måste stol.jpg ersätta stol.jpg, inte stol.tif). Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats. |
    | **[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** | Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till. |
