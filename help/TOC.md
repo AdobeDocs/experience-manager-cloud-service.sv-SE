@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: c136703a14af8a0366fb39c00b7b73f2d320a448
+source-git-commit: 95e3a8f163c0f66212cfb50b30323f63a2292ce1
 workflow-type: tm+mt
-source-wordcount: '3447'
+source-wordcount: '3453'
 ht-degree: 24%
 
 ---
@@ -347,6 +347,7 @@ ht-degree: 24%
       + [Valfritt - Konfigurera Dynamic Media, allmänna inställningar](/help/assets/dynamic-media/dm-general-settings.md)
       + [Valfritt - Konfigurera Dynamic Media, publiceringsinställningar](/help/assets/dynamic-media/dm-publish-settings.md)
       + [Felsöka Dynamic Media](/help/assets/dynamic-media/troubleshoot-dm.md)
+      + [Konfigurera ett Dynamic Media Alias-konto](/help/assets/dynamic-media/dm-alias-account.md)
       + [Tillgänglighet i Dynamic Media](/help/assets/dynamic-media/accessibility-dm.md)
       + [Hantera Dynamic Media-resurser](/help/assets/dynamic-media/managing-assets.md)
       + [Bästa tillvägagångssätt för att optimera bildkvalitet](/help/assets/dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
