@@ -1,9 +1,9 @@
 ---
 title: 'Använda anpassade teckensnitt '
 description: 'Använda anpassade teckensnitt '
-source-git-commit: 7dd3785206b6d79caa500a155d3a6f3597303e65
+source-git-commit: 10fe582edc8ffc93ea3f8564a64259882bba1d6f
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,11 @@ ht-degree: 0%
 
 **Cloud Service Communications-dokumentationen finns i betaversionen**
 
-Du kan använda Forms as a Cloud Service Communications för att kombinera XDP-mallar, XDP-baserade PDF-dokument eller Acrobat Forms (AcroForm) med XML-data för att generera PDF-dokument. Du kan använda systemteckensnitt (teckensnitt som ingår i Cloud Servicen) eller anpassade teckensnitt (teckensnitt som godkänts av organisationen) för att återge de genererade PDF-dokumenten.
-
-Systemteckensnitt finns redan i Cloud Servicen. Du kan använda utvecklingsprojektet för Cloud Service för att lägga till anpassade teckensnitt i din Cloud Service.
+Du kan använda Forms as a Cloud Service Communications för att kombinera en XDP-mall, ett XDP-baserat PDF-dokument eller ett Acrobat-formulär (AcroForm) med XML-data för att generera PDF-dokument. Du kan använda teckensnitt som ingår i Cloud Service eller anpassade teckensnitt (typsnitt som godkänts av organisationen) för att återge de genererade PDF-dokumenten. Du kan använda utvecklingsprojektet för Cloud Service för att lägga till anpassade teckensnitt i din Cloud Service.
 
 ## PDF-dokument
 
-Du kan [bädda in ett teckensnitt](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/sync/#tag/PDFOutputOptions) till ett PDF-dokument eller bara ange namnet på ett teckensnitt. När ett teckensnitt är inbäddat visas PDF-dokumentet (Looks) identiskt på alla plattformar. Det har använt inbäddade teckensnitt för att få ett konsekvent utseende och känsla. När ett teckensnitt inte är inbäddat söker PDF-renderingsklienten efter teckensnittet på klientdatorn. Om teckensnittet är tillgängligt på klientdatorn använder PDF det angivna teckensnittet, annars återges PDF med ett reservteckensnitt.
+Du kan [bädda in ett teckensnitt](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/sync/#tag/PDFOutputOptions) till ett PDF-dokument. När ett teckensnitt är inbäddat visas PDF-dokumentet (Looks) identiskt på alla plattformar. Det har använt inbäddade teckensnitt för att få ett konsekvent utseende och känsla. När ett teckensnitt inte är inbäddat beror teckensnittsåtergivningen på återgivningsinställningarna för PDF-visningsprogrammet. Om teckensnittet är tillgängligt på klientdatorn använder PDF det angivna teckensnittet, annars återges PDF med ett reservteckensnitt.
 
 ## Lägga till anpassade teckensnitt i din as a Cloud Service Forms-miljö
 
