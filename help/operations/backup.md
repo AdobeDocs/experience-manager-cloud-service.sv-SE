@@ -2,9 +2,9 @@
 title: Säkerhetskopiera och återställ i AEM as a Cloud Service
 description: Säkerhetskopiera och återställ i AEM as a Cloud Service
 exl-id: 469fb1a1-7426-4379-9fe3-f5b0ebf64d74
-source-git-commit: 7b4eaa18b57ea6d18f517ffd0e1934d6c5e8b2f8
+source-git-commit: 7778430b409bdd6f30530d34f2e8cd10d63df153
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,7 @@ Kunderna ska lämna in en supportanmälan som beskriver det problem som uppstår
 
 AEM as a Cloud Service stöder:
 
+* Säkerhetskopiera och återställ för scen-, produktions- och utvecklingsmiljöer.
 * 24 timmars tidsåterställning, vilket innebär att systemet kan återställas till valfri punkt under de senaste 24 timmarna.
 * Återställ från en viss, Adobe-definierad tidsstämpel som tagits två gånger dagligen de senaste 7 dagarna.  Alla replikeringsmeddelanden (som tas bort, uppdateras, skapas) bevaras.
 
