@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 8ec0ce3425e7cade0a6774a4452d4f47ab971375
+source-git-commit: df914527b61bcf0f9dcdff09c0a7086ee16c7ba4
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -33,16 +33,45 @@ Du kan hämta Experience Manager-resurser på följande sätt:
 
 ## Hämta resurser med [!DNL Experience Manager] gränssnitt {#download-assets}
 
-Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Mindre filer hämtas från användargränssnittet i realtid. [!DNL Experience Manager] arkiverar inte enskilda hämtningar av resurser där originalfilen hämtas. Med den här funktionen går det snabbare att ladda ned. De stora filerna hämtas asynkront och [!DNL Experience Manager] meddelar om slutförandet via meddelanden i Inkorgen. Se [förstå [!DNL Experience Manager] Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md).
+Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Mindre filer hämtas från användargränssnittet i realtid. [!DNL Experience Manager] arkiverar inte enskilda hämtningar av resurser där originalfilen hämtas. Med den här funktionen går det snabbare att ladda ned.
 
-![Hämta meddelande](assets/download-notification.png)
+Som standard utlöser Experience Manager ett meddelande när hämtningsarbetsflödet har slutförts. Hämtningsmeddelandet visas i  [[!DNL Experience Manager] Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md).
 
-*Bild: Hämta meddelande via [!DNL Experience Manager] Inkorgen.*
+![Inkorgsmeddelande](assets/inbox-notification-for-large-downloads.png)
 
-Asynkrona nedladdningar aktiveras i något av följande fall:
+<!--
+The large files are downloaded asynchronously and [!DNL Experience Manager] notifies of the completion via notifications in the Inbox. See [understand [!DNL Experience Manager] Inbox](/help/sites-cloud/authoring/getting-started/inbox.md).
 
-* Om det finns mer än 10 resurser eller mer än 100 MB att hämta.
-* Om nedladdningen tar mer än 30 sekunder att förbereda.
+![Download notification](assets/download-notification.png)
+
+*Figure: Download notification via [!DNL Experience Manager] Inbox.*
+
+Asynchronous downloads are triggered in either of the following case:
+
+* If there are more than 10 assets or more than 100 MB to be downloaded.
+* If the download takes more than 30 seconds to prepare.
+-->
+
+### Aktivera e-postmeddelanden för stora nedladdningar {#enable-emails-for-large-downloads}
+
+Asynkrona nedladdningar aktiveras i följande fall:
+
+* Om det finns fler än 10 resurser
+* Om hämtningsstorleken är större än 100 MB
+* Om nedladdningen tar mer än 30 sekunder att förbereda
+
+Medan nedladdningen går i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Det krävs en färdig mekanism som meddelar användaren när nedladdningen är klar. För att uppnå detta kan administratörer konfigurera e-posttjänsten genom att konfigurera en SMTP-server. Se [konfigurera e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
+
+När e-posttjänsten har konfigurerats kan administratörer och användare aktivera e-postmeddelanden från Experience Manager-gränssnittet.
+
+Så här aktiverar du e-postmeddelanden:
+
+1. Logga in på [!DNL Experience Manager Assets].
+1. Klicka på användarikonen i det övre högra hörnet och klicka sedan på **[!UICONTROL My Preferences]**. Fönstret Användarinställningar öppnas.
+1. Välj **[!UICONTROL Asset Download email notifications]** kryssruta och klicka **[!UICONTROL Accept]**.
+
+   ![enable-email-notifications-for-large-downloads](/help/assets/assets/enable-email-for-large-downloads.png)
+
 
 Så här hämtar du resurser:
 
@@ -50,8 +79,6 @@ Så här hämtar du resurser:
 1. Navigera till de resurser du vill hämta. Markera mappen eller välj en eller flera resurser i mappen. I verktygsfältet klickar du på **[!UICONTROL Download]**.
 
    ![Tillgängliga alternativ vid hämtning av resurser från [!DNL Experience Manager Assets]](/help/assets/assets/asset-download1.png)
-
-   *Bild: Alternativ i dialogrutan Hämta.*
 
 1. I hämtningsdialogrutan väljer du de hämtningsalternativ som du vill ha.
 
@@ -66,13 +93,23 @@ Så här hämtar du resurser:
 
 1. Klicka på **[!UICONTROL Download]**.
 
+   Om e-postmeddelanden har aktiverats för stora nedladdningar visas ett e-postmeddelande med en nedladdnings-URL för den arkiverade zip-mappen i inkorgen. Klicka på nedladdningslänken från e-postmeddelandet för att hämta zip-mappen.
+
+   ![e-postmeddelanden-för-stora nedladdningar](/help/assets/assets/email-for-large-notification.png)
+
+   Du kan även visa meddelandet i [!DNL Experience Manager] Inkorgen.
+
+   ![inbox-notifications-for-large-downloads](/help/assets/assets/inbox-notification-for-large-downloads.png)
+
 ## Hämta resurser som delas via länkdelning {#link-share-download}
 
+<!--
 >[!NOTE]
 >
->Den här funktionen är tillgänglig i prerelease-kanalen i Experience Manager.
+>This functionality is available in the Experience Manager prerelease channel.
+-->
 
-Att dela resurser via en länk är ett bekvämt sätt att göra det tillgängligt för intresserade utan att de först behöver logga in på [!DNL Assets]. Om du vill generera en URL för att dela resurser använder du [Funktionen för delning av länkar](/help/assets/share-assets.md#sharelink).
+Att dela resurser via en länk är ett bekvämt sätt att göra det tillgängligt för intresserade utan att de först behöver logga in på [!DNL Assets]. Se [Funktionen för delning av länkar](/help/assets/share-assets.md#sharelink).
 
 När användare hämtar resurser från delade länkar, [!DNL Assets] använder en asynkron tjänst som ger snabbare och oavbruten nedladdning. De resurser som ska laddas ned köas i bakgrunden i en inkorg i ZIP-arkiv med hanterbar filstorlek. Vid mycket stora nedladdningar delas nedladdningen in i filer som är 100 GB stora.
 

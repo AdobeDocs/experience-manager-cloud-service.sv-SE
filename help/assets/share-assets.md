@@ -1,13 +1,13 @@
 ---
 title: Distribuera och dela resurser, mappar och samlingar
-description: Distribuera dina digitala resurser med metoder som att dela som en länk, hämta och via [!DNL Brand Portal], [!DNL desktop app], and [!DNL Asset Link].
+description: Distribuera digitala resurser med metoder som att dela som en länk, ladda ned och via [!DNL Brand Portal], [!DNL desktop app]och [!DNL Asset Link].
 contentOwner: AG
-feature: Resurshantering,Samarbete,Resursdistribution
+feature: Asset Management,Collaboration,Asset Distribution
 role: User,Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: df914527b61bcf0f9dcdff09c0a7086ee16c7ba4
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -16,30 +16,43 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager Assets] Med kan du dela resurser, mappar och samlingar med medlemmar i din organisation och externa enheter, inklusive partners och leverantörer. Använd följande metoder för att dela resurser från [!DNL Experience Manager Assets] som [!DNL Cloud Service]:
 
-* [Dela som en länk](#sharelink).
-* [Ladda ned ](/help/assets/download-assets-from-aem.md) resurser och dela dem separat.
-* Dela med [[!DNL Experience Manager] datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
+* [Dela som länk](#sharelink).
+* [Hämta resurser](/help/assets/download-assets-from-aem.md) och dela separat.
+* Dela med [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
 * Dela med [[!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
 * Dela med [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html).
 
 ## Dela resurser som en länk {#sharelink}
 
-Använd dialogrutan Länkdelning för att generera URL:en för resurser som du vill dela med användare. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` plats kan visa de länkar som delas med dem. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på [!DNL Assets].
+Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på [!DNL Assets]. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` platsen kan visa de länkar som delas med dem.
 
 ![Dialogrutan Länkdelning](assets/link-share-dialog.png)
 
 >[!NOTE]
 >
 >* Du behöver behörigheten Redigera åtkomstkontrollista för mappen eller resursen som du vill dela som en länk.
->* Innan du delar en länk med användarna måste du [aktivera utgående e-post](/help/implementing/developing/introduction/development-guidelines.md#sending-email). Annars inträffar ett fel.
+>* Innan du delar en länk med användarna, [aktivera utgående e-post](/help/implementing/developing/introduction/development-guidelines.md#sending-email). Annars inträffar ett fel.
 
 
-1. I [!DNL Assets]-användargränssnittet väljer du resursen som ska delas som en länk.
-1. Klicka på **[!UICONTROL Share Link]** i verktygsfältet. En resurslänk skapas automatiskt i fältet **[!UICONTROL Share Link]**. Kopiera den här länken och dela den med användarna. Länkens standardförfallotid är en dag.
+1. I [!DNL Assets] i användargränssnittet väljer du den resurs som ska delas som en länk.
+1. I verktygsfältet klickar du på **[!UICONTROL Share Link]**. The [!UICONTROL Link Sharing] som innehåller en autogenererad resurslänk i dialogrutan **[!UICONTROL Share Link]** fält.
 
-   >[!NOTE]
-   >
-   >Om en delad resurs flyttas till en annan plats slutar länken att fungera. Återskapa länken och dela den på nytt med användarna.
+   * I rutan E-postadress skriver du e-post-ID för den användare som du vill dela länken med. Du kan dela länken med flera användare. Om användaren är medlem i din organisation väljer du användarens e-post-ID bland förslagen som visas i listrutan. Om användaren är extern skriver du det fullständiga e-post-ID:t och trycker på **[!UICONTROL Enter]**; e-post-ID:t läggs till i listan över användare.
+
+   * I **[!UICONTROL Subject]** anger du ett ämne för resursen som du vill dela.
+   * I **[!UICONTROL Message]** skriver du ett meddelande om det behövs.
+   * I **[!UICONTROL Expiration]** använder du datumväljaren för att ange ett förfallodatum och en förfallotid för länken. Som standard är förfallodatumet 7 dagar från det datum då du delar länken.
+   * Aktivera **[!UICONTROL Allow downlod of original file]** om du vill tillåta mottagarna att hämta den ursprungliga återgivningen.
+
+1. Klicka på **[!UICONTROL Share]**. Ett meddelande bekräftar att länken delas med användarna. Användarna får ett e-postmeddelande med den delade länken.
+
+<!--
+You can also copy the auto-generated link and share it with the users. The default expiration time for the link is one day.
+-->
+
+>[!NOTE]
+>
+>Om en delad resurs flyttas till en annan plats slutar länken att fungera. Återskapa länken och dela den på nytt med användarna.
 
 <!--
 ## Share assets as a link {#sharelink}
@@ -110,15 +123,15 @@ A message confirms that you unshared the asset. In addition, the entry for the a
 
 ## Hämta och dela resurser {#download-and-share-assets}
 
-Användare kan hämta de nödvändiga resurserna och dela dem utanför [!DNL Experience Manager]. Mer information finns i [söka efter resurser](/help/assets/search-assets.md), [hämta resurser](/help/assets/download-assets-from-aem.md) och [hämta samlingar](manage-collections.md#download-a-collection)
+Användarna kan hämta de nödvändiga resurserna och dela dem utanför [!DNL Experience Manager]. Mer information finns i [söka efter resurser](/help/assets/search-assets.md), [hur du hämtar resurser](/help/assets/download-assets-from-aem.md)och [ladda ned samlingar](manage-collections.md#download-a-collection)
 
 ## Dela material med kreatörer {#share-with-creatives}
 
 Marknadsförare och andra användare kan enkelt dela godkänt material med sina kreatörer genom att
 
-* **Experience Manager-datorprogram**: Appen fungerar i Windows och Mac. Se [Översikt över skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna läser du [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är Experience Manager, till exempel genom att överföra nya bilder. Se [överföra resurser med skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
+* **Experience Manager**: Appen fungerar i Windows och Mac. Se [översikt över datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna kan du gå till [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är Experience Manager, till exempel genom att överföra nya bilder. Se [överföra resurser med datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
 
-* **Adobe Asset Link**: Kreatörerna kan söka efter och använda resurser direkt inifrån  [!DNL Adobe InDesign],  [!DNL Adobe Illustrator]och  [!DNL Adobe Photoshop].
+* **Adobe Asset Link**: Kreatörer kan söka efter och använda resurser direkt inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator]och [!DNL Adobe Photoshop].
 
 ## Konfigurera materialdelning {#configure-sharing}
 
@@ -128,11 +141,11 @@ De olika alternativen för att dela resurserna kräver specifik konfiguration oc
 
 <!-- TBD: Web Console is not there so how to configure Day CQ email service? Or is it not required now? -->
 
-Använd dialogrutan Länkdelning för att generera URL:en för resurser som du vill dela med användare. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` plats kan visa de länkar som delas med dem. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på [!DNL Assets].
+Använd dialogrutan Länkdelning för att generera URL:en för resurser som du vill dela med användare. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` platsen kan visa de länkar som delas med dem. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på [!DNL Assets].
 
 >[!NOTE]
 >
->Om du vill dela länkar från författarinstansen till externa entiteter måste du se till att du bara visar följande URL:er för `GET`-begäranden. Blockera andra URL:er för att säkerställa att din författarinstans är säker.
+>Om du vill dela länkar från författarinstansen till externa entiteter måste du se till att du bara visar följande URL:er för `GET` förfrågningar. Blockera andra URL:er för att säkerställa att din författarinstans är säker.
 >* `[aem_server]:[port]/linkshare.html`
 >* `[aem_server]:[port]/linksharepreview.html`
 >* `[aem_server]:[port]/linkexpired.html`
@@ -172,22 +185,22 @@ Add content or link about how to configure sharing via BP, DA, AAL, etc.
 
 ### Aktivera skrivbordsåtgärder som ska användas med skrivbordsappen {#desktop-actions}
 
-I [!DNL Assets]-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i skrivbordsprogrammet. Dessa alternativ kallas skrivbordsåtgärder och om du vill aktivera dem läser du [aktivera skrivbordsåtgärder i [!DNL Assets] webbgränssnittet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
+Från [!DNL Assets] -användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i datorprogrammet. De här alternativen kallas skrivbordsåtgärder och för att aktivera dem går du till [aktivera skrivbordsåtgärder i [!DNL Assets] webbgränssnitt](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
 
 ![Aktivera skrivbordsåtgärder som ska användas som genväg när du arbetar med skrivbordsappen](assets/enable_desktop_actions.png)
 
-### Konfigurationer som ska använda [!DNL Adobe Asset Link] {#configure-asset-link}
+### Konfigurationer som ska användas [!DNL Adobe Asset Link] {#configure-asset-link}
 
-Adobe Asset Link effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Den ansluter [!DNL Adobe Experience Manager Assets] till [!DNL Creative Cloud]-skrivbordsappar [!DNL Adobe InDesign], [!DNL Adobe Photoshop] och [!DNL Adobe Illustrator]. Med panelen [!DNL Adobe Asset Link] kan kreativa användare komma åt och ändra innehåll som lagras i [!DNL Assets] utan att lämna de kreativa program de är mest bekanta med.
+Adobe Asset Link effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Den ansluts [!DNL Adobe Experience Manager Assets] med [!DNL Creative Cloud] datorprogram [!DNL Adobe InDesign], [!DNL Adobe Photoshop]och [!DNL Adobe Illustrator]. The [!DNL Adobe Asset Link] ger kreatörerna tillgång till och kan ändra innehåll som lagras i [!DNL Assets] utan att lämna de kreativa program de är mest bekanta med.
 
-Se [hur du konfigurerar [!DNL Assets] att använda det med [!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
+Se [konfigurera [!DNL Assets] för att använda den med [!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
 
 ## Bästa praxis och felsökning {#bestpractices}
 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
-* Om användare inte kan hämta de delade resurserna, bör du fråga din Experience Manager-administratör om vilka hämtningsgränser [som finns](#maxdatasize).
-* För att en användare ska kunna förhandsgranska en video som delas via länkdelning måste videon ha en statisk videoåtergivning tillgänglig på `/jcr:content/renditions`-platsen i videons nod i databasen. Förhandsgranskningen är inte beroende av om det finns en [!DNL Dynamic Media]-rendering tillgänglig.
-* När du hämtar en videoresurs via länkresurs inkluderas inte återgivningarna [!DNL Dynamic Media] i det hämtade arkivet.
+* Om användarna inte kan hämta de delade resurserna, bör du fråga Experience Manager-administratören om [hämtningsgränser](#maxdatasize) är.
+* För att en användare ska kunna förhandsgranska en video som delas via länkdelning måste videon ha en statisk videoåtergivning tillgänglig på `/jcr:content/renditions` plats i videons nod i databasen. Förhandsgranskningen är inte beroende av om en [!DNL Dynamic Media] återgivning.
+* När du hämtar en videoresurs via en länkresurs visas [!DNL Dynamic Media] renderingar ingår inte i det hämtade arkivet.
 
 <!--
 * If you cannot send email with links to shared assets or if the other users cannot receive your email, check with your Experience Manager administrator if the [email service](/help/assets/configure-asset-sharing.md#configmailservice) is configured or not. 
