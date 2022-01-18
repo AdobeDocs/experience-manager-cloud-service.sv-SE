@@ -1,13 +1,13 @@
 ---
 title: Hämta resurser
 description: Hämta resurser från [!DNL Adobe Experience Manager Assets] och aktivera eller inaktivera nedladdningsfunktionen.
-contentOwner: AG
+contentOwner: VG
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: df914527b61bcf0f9dcdff09c0a7086ee16c7ba4
+source-git-commit: 6ca6d06d48782f9a03d6b1b948c82b02ff7302ab
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
@@ -56,11 +56,11 @@ Asynchronous downloads are triggered in either of the following case:
 
 Asynkrona nedladdningar aktiveras i följande fall:
 
-* Om det finns fler än 10 resurser
+* Om det finns fler än tio resurser
 * Om hämtningsstorleken är större än 100 MB
 * Om nedladdningen tar mer än 30 sekunder att förbereda
 
-Medan nedladdningen går i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Det krävs en färdig mekanism som meddelar användaren när nedladdningen är klar. För att uppnå detta kan administratörer konfigurera e-posttjänsten genom att konfigurera en SMTP-server. Se [konfigurera e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
+Medan den asynkrona nedladdningen körs i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Det krävs en färdig mekanism som meddelar användaren när nedladdningen är klar. För att uppnå detta kan administratörer konfigurera e-posttjänsten genom att konfigurera en SMTP-server. Se [konfigurera e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
 
 När e-posttjänsten har konfigurerats kan administratörer och användare aktivera e-postmeddelanden från Experience Manager-gränssnittet.
 

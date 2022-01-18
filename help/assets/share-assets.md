@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Collaboration,Asset Distribution
 role: User,Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: df914527b61bcf0f9dcdff09c0a7086ee16c7ba4
+source-git-commit: 505fde14e02f79dcf950fb4bdb6a74b6a7ba40e6
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgä
 
    * I **[!UICONTROL Subject]** anger du ett ämne för resursen som du vill dela.
    * I **[!UICONTROL Message]** skriver du ett meddelande om det behövs.
-   * I **[!UICONTROL Expiration]** använder du datumväljaren för att ange ett förfallodatum och en förfallotid för länken. Som standard är förfallodatumet 7 dagar från det datum då du delar länken.
+   * I **[!UICONTROL Expiration]** använder du datumväljaren för att ange ett förfallodatum och en förfallotid för länken. Länkens standardförfallotid är en dag.
    * Aktivera **[!UICONTROL Allow downlod of original file]** om du vill tillåta mottagarna att hämta den ursprungliga återgivningen.
 
 1. Klicka på **[!UICONTROL Share]**. Ett meddelande bekräftar att länken delas med användarna. Användarna får ett e-postmeddelande med den delade länken.
