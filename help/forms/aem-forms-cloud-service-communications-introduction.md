@@ -2,9 +2,9 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 0673aa4f2f0ad2f0a5205bf929de3f26aea0d879
+source-git-commit: 8e20383a03f157f01da66bab930a3eccf674dde7
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1840'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Kommunikationen utnyttjar [PDF och XFA-mallar](#supported-document-types) med [X
 
 Ett kommunikations-API hjälper till att kombinera en mall (XFA eller PDF) med kunddata ([XML-data](#form-data)) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL.
 
-Vanligtvis skapar du en mall med Designer och använder API:er för kommunikation för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
+Vanligtvis skapar du en mall med [Designer](use-forms-designer.md) och använda API:er för kommunikation för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
 
 ![Kommunikationsarbetsflöde](assets/communicaions-workflow.png)
 
@@ -44,9 +44,9 @@ Beroende på hur de används kan du även göra dessa dokument tillgängliga fö
 
 Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentgenerering:
 
-* **Synkrona API:er** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
+* **[Synkrona API:er](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/sync/)** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
 
-* **Batch-API:er (asynkrona API:er)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
+* **[Batch-API:er (asynkrona API:er)](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/batch/)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
 
 ## Onboarding
 
@@ -143,7 +143,7 @@ Innan du börjar generera dokument med API:er för kommunikation bör du tänka 
 
 ### Formulärdata {#form-data}
 
-Kommunikations-API:er accepterar en formulärdesign som vanligtvis skapas i Designer och XML-formulärdata som indata. Om du vill fylla i ett dokument med data måste det finnas ett XML-element i XML-formulärdata för varje formulärfält som du vill fylla i. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas. Den viktiga faktorn är att XML-elementen anges med motsvarande värden.
+Kommunikations-API:er accepterar en formulärdesign som vanligtvis skapas i [Designer](use-forms-designer.md) och XML som indata. Om du vill fylla i ett dokument med data måste det finnas ett XML-element i XML-formulärdata för varje formulärfält som du vill fylla i. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas. Den viktiga faktorn är att XML-elementen anges med motsvarande värden.
 
 Ta följande exempel på låneansökningsformulär:
 
@@ -186,13 +186,13 @@ Om du vill sammanfoga data i den här formulärdesignen skapar du en XML-datakä
 
 Du bör använda en XDP-fil som indata för att få fullständig åtkomst till återgivningsfunktionerna i API:erna för kommunikation. Ibland kan en PDF-fil användas. Att använda en PDF-fil som indata har dock följande begränsningar:
 
-Ett PDF-dokument som inte innehåller en XFA-ström kan inte återges som PostScript, PCL eller ZPL. Kommunikations-API:er kan återge PDF-dokument med XFA-strömmar (d.v.s. formulär skapade i Designer) till laser- och etikettformat. Om PDF-dokumentet är signerat, certifierat eller innehåller användarrättigheter (som används med tjänsten AEM Forms Reader Extensions) kan det inte återges i dessa utskriftsformat.
+Ett PDF-dokument som inte innehåller en XFA-ström kan inte återges som PostScript, PCL eller ZPL. Kommunikations-API:er kan återge PDF-dokument med XFA-strömmar (d.v.s. formulär skapade i [Designer](use-forms-designer.md)) i laser- och etikettformat. Om PDF-dokumentet är signerat, certifierat eller innehåller användarrättigheter (som används med tjänsten AEM Forms Reader Extensions) kan det inte återges i dessa utskriftsformat.
 
-&lt;!-* * Körningsalternativ som PDF och taggad PDF stöds inte för Acrobat-formulär. De gäller för PDF forms som innehåller XFA-strömmar. Dessa formulär kan dock inte signeras eller certifieras.
+<!-- Run-time options such as PDF version and tagged PDF are not supported for Acrobat forms. They are valid for PDF forms that contain XFA streams; however, these forms cannot be signed or certified. 
 
-### E-postsupport {#email-support}
+### Email support {#email-support}
 
-För e-postfunktioner kan du skapa en process i arbetsflöden i Experience Manager som använder e-poststeget. Ett arbetsflöde representerar en affärsprocess som du automatiserar. —>
+For email functionality, you can create a process in Experience Manager Workflows that uses the Email Step. A workflow represents a business process that you are automating. -->
 
 ### Utskrivbara områden {#printable-areas}
 
@@ -202,9 +202,10 @@ Se alltid till att du använder rätt XDC-fil för skrivaren. Undvik till exempe
 
 ### Skript {#scripts}
 
-En formulärdesign som används med kommunikations-API:erna kan innehålla skript som körs på servern. Kontrollera att en formulärdesign inte innehåller skript som körs på klienten. Mer information om hur du skapar formulärdesignskript finns i Designer-hjälpen.
+En formulärdesign som används med kommunikations-API:erna kan innehålla skript som körs på servern. Kontrollera att en formulärdesign inte innehåller skript som körs på klienten. Mer information om hur du skapar formulärdesignskript finns i [Designer - hjälp](use-forms-designer.md).
 
-&lt;!-* ### Arbeta med teckensnittsdokument Att tänka på när du arbetar med teckensnitt> —>
+<!-- #### Working with Fonts
+ Document Considerations for Working with Fonts>> -->
 
 ### Teckensnittsmappning {#font-mapping}
 
@@ -255,7 +256,7 @@ Dessa filer är XDC-referensfiler som har stöd för funktioner på vissa skriva
 
 ### Arbeta med XCI-konfigurationsfilen {#working-with-xci-files}
 
-Kommunikations-API:er använder en XCI-konfigurationsfil för att utföra åtgärder, till exempel kontrollera om utdata är en enskild panel eller sidnumrerad. Även om den här filen innehåller inställningar som kan anges är det normalt inte att ändra det här värdet. &lt;!-* Filen default.xci finns i mappen svcdata\XMLFormService. —>
+Kommunikations-API:er använder en XCI-konfigurationsfil för att utföra åtgärder, till exempel kontrollera om utdata är en enskild panel eller sidnumrerad. Även om den här filen innehåller inställningar som kan anges är det normalt inte att ändra det här värdet. <!-- The default.xci file is located in the svcdata\XMLFormService folder. -->
 
 Du kan skicka en ändrad XCI-fil när du använder ett kommunikations-API. När du gör det skapar du en kopia av standardfilen, ändrar bara de värden som behöver ändras för att uppfylla dina affärskrav och använder den ändrade XCI-filen.
 
