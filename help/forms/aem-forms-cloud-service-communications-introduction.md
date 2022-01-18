@@ -2,9 +2,9 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 8e20383a03f157f01da66bab930a3eccf674dde7
+source-git-commit: c0305e030d351962d34f314cdd35ac7c79774b5a
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1869'
 ht-degree: 1%
 
 ---
@@ -20,13 +20,12 @@ Du kan generera ett dokument på begäran eller skapa ett batchjobb för att gen
 
 * smidiga funktioner för att generera on demand- och batchdokumentation
 
-* tillhandahålla HTTP-API:er för enklare integrering med befintliga system
+* HTTP-API:er för enklare integrering med befintliga system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår. Det gör dokumentgenereringen till en effektiv uppgift.
 
 * säker åtkomst till data. Kommunikations-API:er ansluter till och får endast åtkomst till data från kundutsedda datalager, gör inga lokala kopior av data, vilket gör kommunikationen mycket säker.
 
-* separata API:er för åtgärder med låg fördröjning och hög genomströmning gör dokumentgenerering till en effektiv uppgift.
-
 ![Exempel på kreditkortsutdrag](assets/statement.png)
+Ett exempel på kreditkortsutdrag kan skapas med hjälp av kommunikationsAPI:er. Satsen använder samma mall men separata data för varje kund beroende på hur de använder kreditkortet.
 
 ## Hur fungerar det?
 
@@ -143,16 +142,15 @@ Innan du börjar generera dokument med API:er för kommunikation bör du tänka 
 
 ### Formulärdata {#form-data}
 
-Kommunikations-API:er accepterar en formulärdesign som vanligtvis skapas i [Designer](use-forms-designer.md) och XML som indata. Om du vill fylla i ett dokument med data måste det finnas ett XML-element i XML-formulärdata för varje formulärfält som du vill fylla i. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas. Den viktiga faktorn är att XML-elementen anges med motsvarande värden.
+Kommunikations-API:er accepterar en formulärdesign som vanligtvis skapas i [Designer](use-forms-designer.md) och XML som indata. Om du vill fylla i ett dokument med data måste det finnas ett XML-element i XML-formulärdata för varje formulärfält som du vill fylla i. XML-elementnamnet måste matcha fältnamnet. Om ett XML-element inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet, ignoreras XML-elementet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas. Den viktiga faktorn är att XML-elementen anges med motsvarande värden.
 
 Ta följande exempel på låneansökningsformulär:
 
 ![Låneansökningsformulär](assets/loanFormData.png)
 
-Om du vill sammanfoga data i den här formulärdesignen skapar du en XML-datakälla som motsvarar formuläret. Följande XML representerar en XML-datakälla som motsvarar exempelformuläret för låneansökan.
+Om du vill sammanfoga data i den här formulärdesignen skapar du en XML-datakälla som motsvarar formulärhierarkin, fältnamngivning och datatyper. Följande XML representerar en XML-datakälla som motsvarar exempelformuläret för låneansökan.
 
 ```XML
-<?xml version="1.0" encoding="UTF-8" ?>
 * <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
 * <xfa:data>
 * <data>
@@ -196,11 +194,11 @@ For email functionality, you can create a process in Experience Manager Workflow
 
 ### Utskrivbara områden {#printable-areas}
 
-Den icke utskrivbara standardmarginalen på 0,25 tum är inte exakt för etikettskrivare och varierar från skrivare till skrivare och från etikettstorlek till etikettstorlek. Vi rekommenderar att du behåller marginalen på 0,25 tum eller minskar den. Du bör dock inte öka marginalen som inte går att skriva ut. Annars skrivs inte informationen i det utskrivbara området ut korrekt.
+Den icke utskrivbara standardmarginalen på 0,25 tum är inte exakt för etikettskrivare och varierar från skrivare till skrivare och från etikettstorlek till etikettstorlek. Du bör emellertid behålla marginalen på 0,25 tum eller minska den. Du bör dock inte öka marginalen som inte går att skriva ut. Annars skrivs inte informationen i det utskrivbara området ut korrekt.
 
 Se alltid till att du använder rätt XDC-fil för skrivaren. Undvik till exempel att välja en XDC-fil för en skrivare med 300 dpi och skicka dokumentet till en skrivare med 200 dpi.
 
-### Skript {#scripts}
+### Skript för XFA-formulär (XDP/PDF) {#scripts}
 
 En formulärdesign som används med kommunikations-API:erna kan innehålla skript som körs på servern. Kontrollera att en formulärdesign inte innehåller skript som körs på klienten. Mer information om hur du skapar formulärdesignskript finns i [Designer - hjälp](use-forms-designer.md).
 
@@ -250,7 +248,7 @@ En enhetsprofil (XDC-fil) är en skrivarbeskrivningsfil i XML-format. Den här f
 * dpl600.xdc
 
 Du kan använda de medföljande XDC-filerna för att generera utskriftsdokument eller ändra dem efter behov.
-&lt;!-* Du behöver inte ändra dessa filer för att skapa dokument. Du kan dock ändra dem så att de passar dina behov. —>
+<!-- It is not necessary to modify these files to create documents. However, you can modify them to meet your business requirements. -->
 
 Dessa filer är XDC-referensfiler som har stöd för funktioner på vissa skrivare, t.ex. inbyggda teckensnitt, pappersfack och häftare. Syftet med dessa referenser är att hjälpa dig att förstå hur du konfigurerar egna skrivare med hjälp av enhetsprofiler. Referensen är också en utgångspunkt för liknande skrivare i samma produktserie.
 
