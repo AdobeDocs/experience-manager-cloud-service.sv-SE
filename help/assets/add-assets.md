@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 98249e838f1434ae6f4a40fefee4ca78f0812457
+source-git-commit: 9edc50957f17a3839bae47058f4043853ad19ed8
 workflow-type: tm+mt
-source-wordcount: '2631'
+source-wordcount: '2647'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,11 @@ If you upload many assets to [!DNL Experience Manager], the I/O requests to serv
 Du kan överföra en resurs med samma sökväg (samma namn och plats) som en befintlig resurs. En varningsdialogruta med följande alternativ visas:
 
 * Ersätt befintlig resurs: Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar, beskärning och så vidare) som du har gjort för den befintliga resursen bort.
+
+   >[!NOTE]
+   >
+   >Alternativet att ersätta resurser är inte tillgängligt om resursen är låst eller utcheckad.
+
 * Skapa en ny version: En ny version av den befintliga resursen skapas i databasen. Du kan visa de två versionerna i [!UICONTROL Timeline] och kan vid behov återgå till den tidigare versionen.
 * Behåll båda: Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn.
 
