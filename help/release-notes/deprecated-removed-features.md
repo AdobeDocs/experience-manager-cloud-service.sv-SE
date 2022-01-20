@@ -2,9 +2,9 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: e613ba71347d60dd9c4a2cdd6da8bd0696b00070
+source-git-commit: bbd8277fc5ed81bc656900ec3a993630aa5ffad5
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '592'
 ht-degree: 5%
 
 ---
@@ -55,6 +55,7 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 | [!DNL Assets] | [!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud. | För integrering med [!DNL Adobe Creative Cloud], använda [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html). |
 | [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt |
 | [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt |
+| [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard |
 
 ## Java API {#java-api}
 
