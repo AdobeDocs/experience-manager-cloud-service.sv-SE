@@ -3,7 +3,7 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 03fa3601c7819d469bf4d532ff5020aad0ea7ed9
+source-git-commit: 2f4fcb2f70bc19053cf11d97dc0e021a95e782ed
 workflow-type: tm+mt
 source-wordcount: '2413'
 ht-degree: 1%
@@ -350,7 +350,7 @@ Den här fasen kontrollerar apachesyntaxen genom att starta Docker i en bild. Do
 >
 >Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta är en förutsättning för att du ska kunna köra och felsöka Dispatcher på en lokal dator.
 
-Denna fas kan också köras oberoende av varandra `bin/docker_run.sh src/dispatcher host.internal.docker:4503 8080`.
+Denna fas kan också köras oberoende av varandra `bin/docker_run.sh src/dispatcher host.docker.internal:4503 8080`.
 
 Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också att utföras och eventuella fel kommer att inkluderas i felloggen för stegen i Cloud Manager Build Images.
 
