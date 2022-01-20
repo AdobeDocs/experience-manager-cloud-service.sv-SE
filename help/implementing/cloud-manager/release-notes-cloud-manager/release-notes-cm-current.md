@@ -1,18 +1,18 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.12.0
-description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2021.12.0.
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2022.01.0
+description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2022.01.0.
 feature: Release Information
-source-git-commit: 6389dfaf1e4569a0e7bf2c6dbfa30bb003c4db5b
+source-git-commit: 8da3976250c94d5858d07a83b0eb395fab9a3eda
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.12.0 {#release-notes}
+# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2022.01.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.12.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2022.01.0.
 
 >[!NOTE]
 >
@@ -20,31 +20,18 @@ På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a 
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager i AEM as a Cloud Service 2021.12.0 är 16 december 2021. Nästa version är planerad till januari 2022.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.01.0 är 20 januari 2022. Nästa version är planerad till den 10 februari 2022.
 
-### Nyheter {#what-is-new}
+## Nyheter {#what-is-new}
 
-* Den implementerade hashen, som redan är synlig i användargränssnittet, finns nu även i API:t.
-* På sidan Activity (Aktivitet) finns nu ett popup-fönster för rörledningar som ger en översikt över pipelineinformationen.
-* Uppdateringar för att inkludera ytterligare information som presenteras på aktivitetssidan lades till.
-* Fliken Lär dig i Cloud Manager innehåller nu snabb åtkomst till API-guider och associerade resurser.
-* En användare med rollen Distributionshanterare kan nu initiera guiden Skapa projekt/gren för en databas utan grenar från åtgärdsmenyn på databassidan.
-* Distributionshanteraren, som är i arbetsflödet för att lägga till eller redigera pipeline, får nu information om hur du skapar en gren eller ett projekt om den valda databasen inte har några grenar.
-* En ny självbetjäningsfunktion för Cloud Manager har lagts till för att tillåta [lägga till frihandsvariabler och hemligheter på miljönivå.](/help/implementing/cloud-manager/environment-variables.md)
-* Med nya [Tilläggsprogram för referensdemonstrationer](/help/journey-sites/demos-add-on/overview.md) (tillgängligt den 17 december 2021) kan de senaste demokodsbaserna för AEM installeras och vara klara att driftsättas via den nya [snabbverktyg för att skapa webbplatser](/help/journey-sites/quick-site/overview.md) i Sites.
-* Framtidsrörledningar har nu stöd för rörliga variabler.
-* Skärmar kan nu aktiveras i dialogrutan Programredigering för alla sandlådor.
-* Vägledningen från anropskortet på översiktssidan har uppdaterats för att korrekt återge dess koppling till produktionsflödet för hela stacken.
-* Förbättringar av aktivitetssidan har lagts till i ytterligare information som gäller för rörledningar, inklusive källkod, ID för genomförande osv.
-* Mindre uppdateringar gjordes i användargränssnittet när TXT-poster kopierades (&quot;TXT-värde&quot; istället för&quot;TXT-post&quot;) för att undanröja eventuella förvirringar.
-* [Dokumentationen som rör certifikatfel](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md#certificate-errors) har uppdaterats för att omfatta ytterligare exempel tillsammans med felsökningssteg.
-* Det finns nu ett alternativ för att avvisa eller godkänna i den främre pipeline-körningen innan distributionen till produktionen.
-* Den version av AEM Project Archettype som används av Cloud Manager har uppdaterats till version 32.
+* Cloud Manager kommer att [undvika att återskapa kodbasen när den upptäcker att samma Git-implementering används](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) i flera fullständiga pipeline-körningar.
+* För att få åtkomst till AEM måste du **Distributionshanteraren** produktprofil. Användare utan den här profilen ser en inaktiverad knapp i användargränssnittet.
+* Gränssnittet tillåter inte konfiguration av pipeline i gränssnittet för ett program där Sites inte är aktiverat som en lösning.
+* När du genererar ett Git-lösenord visas förfallodatumet.
 
+## Felkorrigeringar {#bug-fixes}
 
-### Felkorrigeringar {#bug-fixes}
-
-* Funktionella och gränssnittstestartefakter inkluderades inte i byggstegsloggen.
-* Loggarna för teststegen för produkten, funktionen och användargränssnittet kunde inte nås via det publika API:t.
-* I sällsynta fall är länken från sidan med miljöinformation till publicerings- eller förhandsgranskningstjänsten icke-funktionell.
-* Kompletta produktionsledningar för stackproduktion förblir namngivna&quot;Production Pipeline&quot; även när användaren anger ett annat namn i namnfältet.
+* Null-pekarundantag som påträffades i vissa frontendsdistributioner har korrigerats.
+* Miljövariabler kan nu läggas till, uppdateras och tas bort när en miljö kör en gammal version av AEM.
+* Steget för att skapa bilder markeras inte längre som FEL för rörledningar som i vissa sällsynta fall använde det schemalagda steget.
+* För program med endast en databas visas databasens namn på körningsskärmen för pipeline.

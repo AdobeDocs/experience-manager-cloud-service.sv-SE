@@ -1,10 +1,10 @@
 ---
 title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.11.0
-description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.11.0
+description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2021.11.0
 feature: Release Information
-source-git-commit: d6aa3097e558d4e78f20493f214167db57f1a013
+source-git-commit: e402578fc95fd97f808fde01a860d4c583af4c9b
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,15 @@ ht-degree: 0%
 På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.11.0.
 
 >[!NOTE]
->Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+>
+>Se [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md) för den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.11.0 är 4 november 2021.
+Lanseringsdatumet för Cloud Manager i AEM as a Cloud Service 2021.11.0 är 4 november 2021.
 Nästa version är planerad till den 16 december 2021.
 
-### Nyheter {#what-is-new}
+## Nyheter {#what-is-new}
 
 * Användare kan nu utnyttja nya frontledningslinjer för att exklusivt distribuera frontendkod snabbare. Se [Front End Pipelines för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill veta mer.
 
@@ -50,7 +51,7 @@ Nästa version är planerad till den 16 december 2021.
 
 * CSV-filen för kvalitetsutgåva kommer nu att innehålla tidsstämpeln för varje kvalitetsproblem.
 
-### Felkorrigeringar {#bug-fixes}
+## Felkorrigeringar {#bug-fixes}
 
 * Vissa oortodoxa byggkonfigurationer resulterade i att onödiga filer sparades i Pipelins Maven-artefaktcache, vilket resulterade i överflödig nätverks-I/O när byggbehållaren startades och stoppades.
 
@@ -61,4 +62,3 @@ Nästa version är planerad till den 16 december 2021.
 * Felmeddelandet när det maximala antalet databaser har uppnåtts specificerade inte orsaken till felet.
 
 * I sällsynta fall misslyckades rörledningar på grund av olämplig hantering av vissa svarskoder.
-
