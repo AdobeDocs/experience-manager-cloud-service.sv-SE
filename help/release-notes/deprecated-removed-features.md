@@ -2,9 +2,9 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: bbd8277fc5ed81bc656900ec3a993630aa5ffad5
+source-git-commit: d55e2aec4718e752cfc0dfa610abf1a1d36a583f
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '603'
 ht-degree: 5%
 
 ---
@@ -46,16 +46,16 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience Manager] med [!DNL Experience Manager] som [!DNL Cloud Service].
 
-| Yta | Funktion | Ersättning |
-| ------------ | ------------------ | ----------- |
-| Användargränssnitt | Klassiskt användargränssnitt har tagits bort från produktanvändargränssnittet. Det finns ett fåtal klassiska användargränssnittsdialogrutor för vissa funktioner, som Länkkontroll, Rensa version och vissa Cloud Service. Kommande [produktuppdateringar](/help/release-notes/home.md) kan ta bort Classic UI-tillgängligheten ytterligare. | Standardgränssnitt |
-| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/scene7.html#integration) och [Dynamic Media hybridläge](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dynamic.html#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. |
-| [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. |
-| [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort som oföränderliga avsnitt i [!DNL Experience Manager] databasen är inte tillgänglig vid körning. |
-| [!DNL Assets] | [!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud. | För integrering med [!DNL Adobe Creative Cloud], använda [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html). |
-| [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt |
-| [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt |
-| [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard |
+| Yta | Funktion | Ersättning | Borttagningsdatum för mål |
+| ------------ | ------------------ | ----------- | ------------------- |
+| Användargränssnitt | Klassiskt användargränssnitt har tagits bort från produktanvändargränssnittet. Det finns ett fåtal klassiska användargränssnittsdialogrutor för vissa funktioner, som Länkkontroll, Rensa version och vissa Cloud Service. Kommande [produktuppdateringar](/help/release-notes/home.md) kan ta bort Classic UI-tillgängligheten ytterligare. | Standardgränssnitt | Borttagen |
+| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/scene7.html#integration) och [Dynamic Media hybridläge](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dynamic.html#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
+| [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. | Borttagen |
+| [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort som oföränderliga avsnitt i [!DNL Experience Manager] databasen är inte tillgänglig vid körning. | Borttagen |
+| [!DNL Assets] | [!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud. | För integrering med [!DNL Adobe Creative Cloud], använda [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html). | Borttagen |
+| [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt | Borttagen |
+| [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt | Borttagen |
+| [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard | Mars 2022 |
 
 ## Java API {#java-api}
 
