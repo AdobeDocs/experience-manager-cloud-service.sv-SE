@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 7c247f5080c59f07bc9ba549fb746bf62cca80ba
+source-git-commit: 6c223af722c24e96148146da9a2aa1c055486407
 workflow-type: tm+mt
-source-wordcount: '2150'
+source-wordcount: '2224'
 ht-degree: 1%
 
 ---
@@ -43,17 +43,27 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 Att definiera index kan omfatta följande tre användningsområden:
 
-1. Lägga till en ny kundindexdefinition
-1. Uppdaterar en befintlig indexdefinition. Detta innebär att en ny version av en befintlig indexdefinition läggs till
+1. Lägga till en ny kundindexdefinition.
+1. Uppdaterar en befintlig indexdefinition. Det innebär att en ny version av en befintlig indexdefinition läggs till.
 1. Tar bort ett befintligt index som är överflödigt eller föråldrat.
 
 För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM as a Cloud Service dokumentation](/help/implementing/deploying/overview.md).
+
+## Indexnamn {#index-names}
+
+En indexdefinition kan vara:
+
+1. Ett körklart index. Ett exempel är `/oak:index/cqPageLucene-2`.
+1. En anpassning av ett körklart index. Sådana anpassningar definieras av kunden. Ett exempel är `/oak:index/cqPageLucene-2-custom-1`.
+1. Ett helt anpassat index. Ett exempel är `/oak:index/acme.product-1-custom-2`. För att undvika namnkonflikter kräver vi att helt anpassade index har ett prefix, t.ex. `acme.`
+
+Observera att både anpassning av ett körklart index och helt anpassade index måste innehålla `-custom-`. Endast helt anpassade index får börja med ett prefix.
 
 ### Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
 
 >[!NOTE]
 >
->Om du t.ex. anpassar ett index utanför rutan `damAssetLucene-6`, please copy the latest out out of the box index definition from a *Cloud Service* och lägger till dina anpassningar överst säkerställer detta att nödvändiga konfigurationer inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-6/tika` är en obligatorisk nod och ska ingå i ditt anpassade index och inte finnas i molnet-SDK.
+>Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-6`, please copy the latest out-of-box index definition from a *Cloud Service* och lägger till dina anpassningar överst säkerställer detta att nödvändiga konfigurationer inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-6/tika` är en obligatorisk nod och ska ingå i ditt anpassade index och inte finnas i molnet-SDK.
 
 Du måste förbereda ett nytt indexdefinitionspaket som innehåller den faktiska indexdefinitionen, enligt namnmönstret:
 
@@ -154,7 +164,7 @@ Indexhantering stöds för närvarande bara för index av typen `lucene`.
 
 ### Lägga till ett index {#adding-an-index}
 
-Lägga till ett index med namnet `/oak:index/acme.product-custom-1` för att kunna användas i en ny version av programmet och senare, måste indexet konfigureras på följande sätt:
+Lägga till ett helt anpassat index med namnet `/oak:index/acme.product-custom-1` för att kunna användas i en ny version av programmet och senare, måste indexet konfigureras på följande sätt:
 
 `acme.product-1-custom-1`
 
