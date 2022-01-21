@@ -5,9 +5,9 @@ contentOwner: VG
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 6ca6d06d48782f9a03d6b1b948c82b02ff7302ab
+source-git-commit: 462fd68ce4a33e14464256be4f4e9fdfe8d34aab
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,11 @@ ht-degree: 0%
 
 Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan även skicka e-postmeddelanden med länkar till resurser direkt från [!DNL Adobe Experience Manager Assets]. Hämtade resurser paketeras i en ZIP-fil. <!-- The compressed ZIP file has a maximum file size of 1 GB for the export job. A maximum of 500 total assets per export job are allowed. -->
 
+<!--
 >[!NOTE]
 >
->Mottagarna av e-postmeddelanden måste vara medlemmar i `dam-users` grupp för att komma åt länken för ZIP-nedladdning i e-postmeddelandet. För att kunna hämta resurserna måste medlemmarna ha behörighet att starta arbetsflöden som utlöser hämtning av resurser.
+>Recipients of emails must be members of the `dam-users` group to access the ZIP download link in the email message. To be able to download the assets, the members must have permissions to launch workflows that trigger downloading of assets.
+-->
 
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
@@ -33,9 +35,9 @@ Du kan hämta Experience Manager-resurser på följande sätt:
 
 ## Hämta resurser med [!DNL Experience Manager] gränssnitt {#download-assets}
 
-Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Mindre filer hämtas från användargränssnittet i realtid. [!DNL Experience Manager] arkiverar inte enskilda hämtningar av resurser där originalfilen hämtas. Med den här funktionen går det snabbare att ladda ned.
+Asynkron nedladdningstjänst ger ett ramverk för smidig nedladdning av stora resurser. Nedladdningsarkivet är större än 100 GB och delas upp i flera ZIP-arkiv med en maximal storlek på 100 GB vardera. Dessa kan laddas ned separat. Mindre filer hämtas från användargränssnittet i realtid. [!DNL Experience Manager] arkiverar inte enskilda hämtningar av resurser där originalfilen hämtas. Med den här funktionen går det snabbare att ladda ned.
 
-Som standard utlöser Experience Manager ett meddelande när hämtningsarbetsflödet har slutförts. Hämtningsmeddelandet visas i  [[!DNL Experience Manager] Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md).
+Som standard [!DNL Experience Manager] utlöser ett meddelande när hämtningsarbetsflödet har slutförts. Hämtningsmeddelandet visas i  [[!DNL Experience Manager] Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md).
 
 ![Inkorgsmeddelande](assets/inbox-notification-for-large-downloads.png)
 
@@ -85,7 +87,7 @@ Så här hämtar du resurser:
    | Hämtningsalternativ | Beskrivning |
    |---|---|
    | **[!UICONTROL Create separate folder for each asset]** | Välj det här alternativet om du vill inkludera varje resurs som du hämtar, inklusive resurser, i underordnade mappar som är kapslade under resursens överordnade mapp i en mapp på den lokala datorn. När det här alternativet är *not* som standard ignoreras mapphierarkin och alla resurser hämtas till en mapp på den lokala datorn. |
-   | **[!UICONTROL Email]** | Välj det här alternativet om du vill att ett e-postmeddelande ska skickas till mottagaren. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> Mallar som du anpassar under distributionen finns på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
+   | **[!UICONTROL Email]** | Välj det här alternativet om du vill skicka ett e-postmeddelande (som innehåller en länk till din hämtning) till en annan användare. Mottagaranvändaren måste vara medlem i `dam-users` grupp. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> Mallar som du anpassar under distributionen finns på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
    | **[!UICONTROL Asset(s)]** | Välj det här alternativet om du vill hämta resursen i dess ursprungliga form utan några återgivningar.<br>Alternativet Delresurser är tillgängligt om den ursprungliga tillgången har delresurser. |
    | **[!UICONTROL Rendition(s)]** | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka återgivningar som är tillgängliga beror på vilken resurs du har valt. |
    | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar för den valda resursen inifrån [!DNL Experience Manager]. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
