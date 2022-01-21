@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 3455
 thumbnail: 28969.jpg
 exl-id: 06417775-1a0b-4487-86f3-83f2fe12458e,8c611756-5719-488d-a519-a12c5c90c614
-source-git-commit: c70adb5ea781057b478b529774c4e51786e6c9fa
+source-git-commit: f45021ff09a4874d19fa7d8d40405cfd52bf8434
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,11 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/28969/?quality=12)
 
+Du kan välja specifika produktsidor med en sku eller en produkts kategori. Den senare stöds bara av vissa av de tillgängliga URL-formaten för standardproduktsidor, eftersom det kräver att kategoriinformation kodas i produkt-URL:en.
+
 Mer information om det här avsnittet finns i följande resurser:
 
+- [Avancerade URL-konfigurationer](../configuring/advanced-url-configuration.md)
 - [AEM CIF Core Components - Konfiguration av flera katalogsidor](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-catalog-page-template-configuration)
 
 ## Relaterade resurser {#related}
