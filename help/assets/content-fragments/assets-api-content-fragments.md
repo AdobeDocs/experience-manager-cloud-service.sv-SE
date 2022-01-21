@@ -3,7 +3,7 @@ title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments 
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: 88f43d2f1acaa4e00bc9ce06d188e4b9312a1c08
+source-git-commit: ad51218652d3e7fbe90abb1fc02cce7212394c21
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 1%
@@ -18,21 +18,21 @@ Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del A
 
 >[!NOTE]
 >
->[Resursens HTTP API](/help/assets/mac-api-assets.md) omfattar:
+>The [Resurser för HTTP API](/help/assets/mac-api-assets.md) Innefattar:
 >
 >* Resurser REST API
 >* inklusive stöd för innehållsfragment
 
 >
->Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen [REST](https://en.wikipedia.org/wiki/Representational_state_transfer).
+>Den aktuella implementeringen av Assets HTTP API baseras på [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) arkitekturstil.
 
-Med [Resursens REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Experience Manager as a Cloud Service komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
+The [Resurser REST API](/help/assets/mac-api-assets.md) ger utvecklare av Adobe Experience Manager as a Cloud Service tillgång till innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Create, Read, Update, Delete).
 
 Med API kan du använda Adobe Experience Manager as a Cloud Service som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
-Exempelvis kräver [Single Page Applications (SPA)](/help/implementing/developing/hybrid/introduction.md), framework-based eller custom, innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
+Till exempel: [Single Page Applications (SPA)](/help/implementing/developing/hybrid/introduction.md), ramverksbaserade eller anpassade, kräver innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 
-Även om [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en mycket omfattande, flexibel och anpassningsbar API som kan hantera nödvändiga läsåtgärder i detta syfte, och vars JSON-utdata kan anpassas, kräver de AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Det är inte varje SPA utvecklingsorganisation som har direkt tillgång till sådan kunskap.
+while [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) tillhandahåller ett mycket omfattande, flexibelt och anpassningsbart API som kan tillhandahålla de läsoperationer som krävs för detta, och vars JSON-utdata kan anpassas, kräver de AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Det är inte varje SPA utvecklingsorganisation som har direkt tillgång till sådan kunskap.
 
 Detta är när REST API:t för resurser kan användas. Med det kan utvecklare komma åt resurser (till exempel bilder och innehållsfragment) direkt, utan att först behöva bädda in dem på en sida, och leverera innehållet i serialiserat JSON-format.
 
@@ -54,42 +54,42 @@ Resursens REST API är tillgängligt för varje körklar installation av en nyli
 
 ## Viktiga begrepp {#key-concepts}
 
-Resursens REST API ger [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-åtkomst till resurser som lagras i en AEM.
+Resurser REST API erbjuder [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-liknande åtkomst till resurser som lagras i en AEM.
 
-Slutpunkten `/api/assets` används och resursens sökväg krävs för att komma åt den (utan inledande `/content/dam`).
+Den använder `/api/assets` slutpunkten och kräver att sökvägen till resursen har åtkomst till den (utan radavståndet) `/content/dam`).
 
 * Det innebär att du kan få tillgång till resursen på:
    * `/content/dam/path/to/asset`
 * Du måste begära:
    * `/api/assets/path/to/asset`
 
-Om du till exempel vill komma åt `/content/dam/wknd/en/adventures/cycling-tuscany` begär du `/api/assets/wknd/en/adventures/cycling-tuscany.json`
+Till exempel för att komma åt `/content/dam/wknd/en/adventures/cycling-tuscany`, begäran `/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
 >[!NOTE]
 >Åtkomst över:
 >
->* `/api/assets` **använder** inte  `.model` väljaren.
->* `/content/path/to/page` **** kräver att  `.model` väljaren används.
+>* `/api/assets` **inte** behöver du använda `.model` väljare.
+>* `/content/path/to/page` **gör** kräver att `.model` väljare.
 
 
 HTTP-metoden avgör vilken åtgärd som ska utföras:
 
-* **GET**  - för att hämta en JSON-representation av en resurs eller en mapp
-* **POST**  - för att skapa nya resurser eller mappar
+* **GET** - för att hämta en JSON-representation av en resurs eller en mapp
+* **POST** - för att skapa nya resurser eller mappar
 * **PUT** - för att uppdatera egenskaperna för en resurs eller mapp
-* **DELETE** - för att ta bort en resurs eller mapp
+* **DELETE** - ta bort en resurs eller mapp
 
 >[!NOTE]
 >
->Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Ange till exempel att en mapp eller en resurs ska skapas med en **POST**-begäran.
+>Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Definiera till exempel att en mapp eller en resurs ska skapas av en **POST** begäran.
 
-Det exakta formatet för begäranden som stöds definieras i [API Reference](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference)-dokumentationen.
+Det exakta formatet för begäranden som stöds definieras i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference) dokumentation.
 
 ### Transaktionsbeteende {#transactional-behavior}
 
 Alla förfrågningar är atomiska.
 
-Det innebär att efterföljande (`write`)-begäranden inte kan kombineras till en enda transaktion som kan lyckas eller misslyckas som en enskild enhet.
+Detta innebär att följande (`write`) kan inte kombineras till en enda transaktion som kan lyckas eller misslyckas som en enskild enhet.
 
 ### AEM (Resurser) REST API jämfört med AEM komponenter {#aem-assets-rest-api-versus-aem-components}
 
@@ -114,10 +114,10 @@ Det innebär att efterföljande (`write`)-begäranden inte kan kombineras till e
   </tr>
   <tr>
    <td>Åtkomst</td>
-   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkten, mappad till <code>/content/dam</code> (i databasen).</p> 
+   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkt, mappad till <code>/content/dam</code> (i databasen).</p> 
    <p>En exempelsökväg skulle se ut så här: <code>/api/assets/wknd/en/adventures/cycling-tuscany.json</code></p>
    </td>
-    <td><p>Måste refereras via en AEM på en AEM.</p> <p>Använder <code>.model</code>-väljaren för att skapa JSON-representationen.</p> <p>En exempelsökväg skulle se ut så här:<br/> <code>/content/wknd/language-masters/en/adventures/cycling-tuscany.model.json</code></p> 
+    <td><p>Måste refereras via en AEM på en AEM.</p> <p>Använder <code>.model</code> för att skapa JSON-representationen.</p> <p>En exempelsökväg skulle se ut så här:<br/> <code>/content/wknd/language-masters/en/adventures/cycling-tuscany.model.json</code></p> 
    </td>
   </tr>
   <tr>
@@ -160,8 +160,8 @@ Innehållsfragment är en specifik typ av resurs, se [Arbeta med innehållsfragm
 
 Mer information om funktioner som är tillgängliga via API finns i:
 
-* [Resursens REST API](/help/assets/mac-api-assets.md)
-* [Enhetstyper](/help/assets/content-fragments/assets-api-content-fragments.md#entity-types), där funktioner som är specifika för varje typ som stöds (som är relevant för innehållsfragment) förklaras
+* The [Resurser REST API](/help/assets/mac-api-assets.md)
+* [Enhetstyper](/help/assets/content-fragments/assets-api-content-fragments.md#entity-types), där de funktioner som är specifika för varje typ som stöds (som är relevant för innehållsfragment) förklaras
 
 ### Sidindelning {#paging}
 
@@ -170,7 +170,7 @@ Resursens REST API stöder sidindelning (för GET-begäranden) via URL-parametra
 * `offset` - numret på den första (underordnade) entiteten som ska hämtas
 * `limit` - det maximala antalet returnerade enheter
 
-Svaret kommer att innehålla växlingsinformation som en del av `properties`-avsnittet i SIREN-utdata. Den här `srn:paging`-egenskapen innehåller det totala antalet (underordnade) entiteter ( `total`), förskjutningen och gränsen ( `offset`, `limit`) som anges i begäran.
+Svaret kommer att innehålla sidindelningsinformation som en del av `properties` i SIREN-utdata. Detta `srn:paging` egenskapen innehåller det totala antalet (underordnade) entiteter ( `total`), förskjutningen och gränsen ( `offset`, `limit`) enligt begäran.
 
 >[!NOTE]
 >
@@ -210,28 +210,28 @@ Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, tit
 
 Om en resurs begärs returneras dess metadata. som titel, namn och annan information som definieras av respektive resursschema.
 
-Binära data för en resurs visas som en SIREN-länk av typen `content`.
+Den binära informationen för en resurs visas som en SIREN-länk av typen `content`.
 
-Resurser kan ha flera renderingar. Dessa visas vanligtvis som underordnade enheter, ett undantag är en miniatyrrendering som visas som en länk av typen `thumbnail` ( `rel="thumbnail"`).
+Resurser kan ha flera renderingar. Dessa visas vanligtvis som underordnade enheter, och ett undantag är en miniatyrrendering, som visas som en länk av typen `thumbnail` ( `rel="thumbnail"`).
 
 ### Innehållsfragment {#content-fragments}
 
-Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en speciell typ av resurs. De kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum.
+A [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en särskild typ av tillgång. De kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum.
 
-Eftersom det finns flera skillnader mellan *standardobjekt*-resurser (t.ex. bilder eller ljud) gäller vissa ytterligare regler för att hantera dem.
+Som det finns flera skillnader mellan *standard* resurser (t.ex. bilder eller ljud), kan vissa andra regler gälla för att hantera dem.
 
 #### Representation {#representation}
 
 Innehållsfragment:
 
 * Visa inga binära data.
-* Finns helt i JSON-utdata (inom egenskapen `properties`).
+* Finns helt i JSON-utdata (i `properties` egenskap).
 
 * betraktas också som atomiska, dvs. elementen och variationerna exponeras som en del av fragmentets egenskaper jämfört med som länkar eller underordnade enheter. Detta ger effektiv åtkomst till nyttolasten för ett fragment.
 
 #### Innehållsmodeller och innehållsfragment {#content-models-and-content-fragments}
 
-För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför måste *konsumenten* känna till modellen för ett fragment (åtminstone ett minimum), även om den mesta informationen kan härledas från nyttolasten. som datatyper, osv. är en del av definitionen.
+För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför *konsument* behöver känna till modellen för ett fragment (minst ett minimum), men den mesta informationen kan härledas från nyttolasten, som datatyper, osv. är en del av definitionen.
 
 Om du vill skapa ett nytt innehållsfragment måste modellens (interna databas) sökväg anges.
 
@@ -243,7 +243,7 @@ Associerat innehåll visas för närvarande inte.
 
 Användningen kan variera beroende på om du använder en AEM författare eller publiceringsmiljö, tillsammans med ditt specifika användningsexempel.
 
-* Vi rekommenderar att skapandet binds till en författarinstans ([och att det för närvarande inte finns något sätt att replikera ett fragment för publicering med denna API](/help/assets/content-fragments/assets-api-content-fragments.md#limitations)).
+* Vi rekommenderar starkt att skapandet är bundet till en författarinstans ([och det finns för närvarande inget sätt att replikera ett fragment som ska publiceras med detta API](/help/assets/content-fragments/assets-api-content-fragments.md#limitations)).
 * Leverans är möjlig från båda, eftersom AEM endast skickar begärt innehåll i JSON-format.
 
    * Lagring och leverans från en AEM författarinstans bör räcka för program som ligger bakom brandväggen och mediabibliotek.
@@ -252,11 +252,11 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
 >[!CAUTION]
 >
->Dispatcher-konfigurationen på AEM molninstanser kan blockera åtkomsten till `/api`.
+>Dispatcher-konfigurationen på AEM molninstanser kan blockera åtkomst till `/api`.
 
 >[!NOTE]
 >
->Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
+>Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). I synnerhet [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
 
 ### Läsning/leverans {#read-delivery}
 
@@ -281,7 +281,7 @@ Användning sker via:
 
 `POST /{cfParentPath}/{cfName}`
 
-Brödtexten måste innehålla en JSON-representation av det innehållsfragment som ska skapas, inklusive allt ursprungligt innehåll som ska anges för elementen i innehållsfragmentet. Det är obligatoriskt att ange egenskapen `cq:model` och den måste peka på en giltig innehållsfragmentmodell. Om du inte gör det uppstår ett fel. Du måste också lägga till en rubrik `Content-Type` som är inställd på `application/json`.
+Brödtexten måste innehålla en JSON-representation av det innehållsfragment som ska skapas, inklusive allt ursprungligt innehåll som ska anges för elementen i innehållsfragmentet. Det är obligatoriskt att ange `cq:model` och måste peka på en giltig innehållsfragmentmodell. Om du inte gör det uppstår ett fel. Du måste också lägga till en rubrik `Content-Type` som är inställd på `application/json`.
 
 ### Uppdatera {#update}
 
@@ -303,24 +303,30 @@ Användning sker via:
 
 Det finns några begränsningar:
 
-* **Modeller för innehållsfragment stöds** inte för närvarande: kan inte läsas eller skapas. För att kunna skapa ett nytt, eller uppdatera ett befintligt, innehållsfragment, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
+* **Modeller för innehållsfragment stöds för närvarande inte**: kan inte läsas eller skapas. För att kunna skapa ett nytt, eller uppdatera ett befintligt, innehållsfragment, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
 * **Referenser ignoreras**. För närvarande finns det inga kontroller för om ett befintligt innehållsfragment refereras. Om du t.ex. tar bort ett innehållsfragment kan det leda till problem på en sida som innehåller en referens till det borttagna innehållsfragmentet.
-* **JSON-** datatypREST API-utdata för  *JSON-* datatypen är för närvarande  *strängbaserade utdata*.
+* **JSON-datatyp** REST API-utdata för *JSON-datatyp* är för närvarande *strängbaserade utdata*.
 
 ## Statuskoder och felmeddelanden {#status-codes-and-error-messages}
 
-Följande statuskoder kan ses under de relevanta omständigheterna:
+Följande statuskoder kan visas under de relevanta omständigheterna:
 
-* **200** (OK) returnerades när:
+* **200** (OK)
+
+   Returneras när:
 
    * begära ett innehållsfragment via `GET`
    * uppdaterar ett innehållsfragment via `PUT`
 
-* **201** (Skapad) returnerades:
+* **201** (Skapad)
+
+   Returneras när:
 
    * har skapat ett innehållsfragment via `POST`
 
-* **404** (Hittades inte) returnerades när:
+* **404** (Hittades inte)
+
+   Returneras när:
 
    * det begärda innehållsfragmentet inte finns
 
@@ -336,7 +342,7 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
 
    I följande exempel visas vanliga scenarier när den här felstatusen returneras, tillsammans med felmeddelandet (monospace) som genereras:
 
-   * Den överordnade mappen finns inte (när du skapar ett innehållsfragment via `POST`)
+   * Överordnad mapp finns inte (när ett innehållsfragment skapas via `POST`)
    * Ingen innehållsfragmentmodell har angetts (cq:model saknas), kan inte läsas (på grund av en ogiltig sökväg eller ett behörighetsproblem) eller så finns det ingen giltig fragmentmodell:
 
       * `No content fragment model specified`
