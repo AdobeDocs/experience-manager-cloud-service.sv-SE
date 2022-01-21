@@ -2,14 +2,20 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 86802ae7063f4eec1193fee4b9eaefbb460a7785
+source-git-commit: 1c27862b64fff24f85f314502be467d18c9aa0f4
 workflow-type: tm+mt
-source-wordcount: '2180'
-ht-degree: 1%
+source-wordcount: '2222'
+ht-degree: 2%
 
 ---
 
 # Utvecklingsriktlinjer för AEM as a Cloud Service {#aem-as-a-cloud-service-development-guidelines}
+
+>[!CONTEXTUALHELP]
+>id="development_guidelines"
+>title="Utvecklingsriktlinjer för AEM as a Cloud Service"
+>abstract="På den här fliken kan du visa de rekommenderade bästa metoderna för kodning på AEM as a Cloud Service. Kodning kan skilja sig avsevärt från AMS- och On-Prem-driftsättningar."
+>additional-url="https://video.tv.adobe.com/v/330555/" text="Demo av paketstruktur"
 
 Kod som körs AEM as a Cloud Service måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs. Koden måste vara flexibel, särskilt eftersom en instans kan stoppas när som helst.
 
