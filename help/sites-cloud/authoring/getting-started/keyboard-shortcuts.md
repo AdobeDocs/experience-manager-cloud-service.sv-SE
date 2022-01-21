@@ -1,14 +1,13 @@
 ---
 title: Kortkommandon för konsoler
 description: Spara tid när du redigerar med dessa kortkommandon
-translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+exl-id: 68508d05-a98d-483a-aa6d-f743ee29c284
+source-git-commit: 9fe87a61315019c23d90b85154af6c89e1528b0d
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 2%
 
 ---
-
 
 # Kortkommandon för konsoler {#keyboard-shortcuts-for-consoles}
 
@@ -24,9 +23,9 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 | Konsol - kolumnvy | `Shift-Up/Down Arrow` | Flytta upp en lista med sidor på samma nivå |
 |  | `Esc` | Flytta upp en lista med sidor på samma nivå |
 | Konsoler | `?` | Hjälp för kortkommandon |
-|  | `/` | Anropa [sökning](/help/sites-cloud/authoring/getting-started/search.md) |
-|  | `Alt+`&lt;`Number`> | Växla vilken [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) som ska visas |
-|  | &grave; | Göm rälsstöd |
+|  | `/` | Anropa [sök](/help/sites-cloud/authoring/getting-started/search.md) |
+|  | `Alt+`&lt;`Number`> | Växla vilket [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) alternativ att visa |
+|  | ``` ` ``` | Göm rälsstöd |
 |  | `e` | Redigera |
 |  | `p` | Egenskaper |
 |  | `m` | Flytta |
@@ -35,7 +34,7 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 |  | `Backspace` | Ta bort |
 | Egenskapssidor | `Ctrl+s` | Spara |
 
-Tangentkombinationerna visas med Windows [modifieringstangenterna](#os-specific-modifier-keys).
+Tangentkombinationerna visas i Windows [modifieringstangenter](#os-specific-modifier-keys).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 
@@ -62,7 +61,7 @@ Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 >
 >AEM kortkommandon kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
 >
->Adobe rekommenderar [att du inaktiverar AEM kortkommandon](#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
+>Adobe rekommenderar [inaktivera AEM kortkommandon](#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
@@ -73,7 +72,7 @@ För användare som inte använder kortkommandon eller har vissa tillgänglighet
 Du kan inaktivera kortkommandon på två platser:
 
 * [Mina inställningar](/help/sites-cloud/authoring/getting-started/account-environment.md#my-preferences)
-* [hjälpmenyn](/help/sites-cloud/authoring/getting-started/basic-handling.md#accessing-help)
+* The [hjälpmeny](/help/sites-cloud/authoring/getting-started/basic-handling.md#accessing-help)
 
 >[!NOTE]
 >
@@ -81,4 +80,4 @@ Du kan inaktivera kortkommandon på två platser:
 
 ## Kortkommandon för sidredigeraren {#keyboard-shortcuts-for-the-page-editor}
 
-Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller användning av konsoler, andra för [sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
