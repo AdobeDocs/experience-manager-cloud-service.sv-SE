@@ -5,9 +5,9 @@ contentOwner: VG
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 462fd68ce4a33e14464256be4f4e9fdfe8d34aab
+source-git-commit: 797f0e6585666196acf7972f93d936fc54359c4a
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -54,26 +54,29 @@ Asynchronous downloads are triggered in either of the following case:
 * If the download takes more than 30 seconds to prepare.
 -->
 
-### Aktivera e-postmeddelanden för stora nedladdningar {#enable-emails-for-large-downloads}
 
-Asynkrona nedladdningar aktiveras i följande fall:
+<!-- Go live is on 27th Jan 2022
+### Enable email notifications for large downloads {#enable-emails-for-large-downloads}
 
-* Om det finns fler än tio resurser
-* Om hämtningsstorleken är större än 100 MB
-* Om nedladdningen tar mer än 30 sekunder att förbereda
+Asynchronous downloads are triggered in any of the following cases:
 
-Medan den asynkrona nedladdningen körs i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Det krävs en färdig mekanism som meddelar användaren när nedladdningen är klar. För att uppnå detta kan administratörer konfigurera e-posttjänsten genom att konfigurera en SMTP-server. Se [konfigurera e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
+* If there are more than ten assets 
+* If the download size is more than 100 MB
+* If the download takes more than 30 seconds to prepare
 
-När e-posttjänsten har konfigurerats kan administratörer och användare aktivera e-postmeddelanden från Experience Manager-gränssnittet.
+While the asynchronous download runs at the backend, the user can continue to explore and work further in Experience Manager. An out-of-the-box mechanism is required to notify the user upon completion of the download process. To achieve this objective, the administrators can configure email service by setting up an SMTP server. See [configure Mail Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
 
-Så här aktiverar du e-postmeddelanden:
+Once the email service is configured, the administrators and users can enable email notifications from the Experience Manager interface. 
 
-1. Logga in på [!DNL Experience Manager Assets].
-1. Klicka på användarikonen i det övre högra hörnet och klicka sedan på **[!UICONTROL My Preferences]**. Fönstret Användarinställningar öppnas.
-1. Välj **[!UICONTROL Asset Download email notifications]** kryssruta och klicka **[!UICONTROL Accept]**.
+To enable email notifications:
+
+1. Log in to [!DNL Experience Manager Assets].
+1. Click the user icon from the upper-right corner and then click **[!UICONTROL My Preferences]**. The User Preferences window opens.
+1. Select the **[!UICONTROL Asset Download email notifications]** check box and click **[!UICONTROL Accept]**.
 
    ![enable-email-notifications-for-large-downloads](/help/assets/assets/enable-email-for-large-downloads.png)
 
+-->
 
 Så här hämtar du resurser:
 
