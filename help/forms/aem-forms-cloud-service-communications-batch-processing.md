@@ -2,9 +2,9 @@
 title: Experience Manager [!DNL Forms] Batchbearbetning av as a Cloud Service Communications
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: d136062ed0851b89f954e5485c2cfac64afeda2d
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2297'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ En gruppåtgärd är en process för att generera flera dokument av liknande typ
 
 Du kan använda gruppåtgärder för att generera flera dokument med schemalagda intervall.
 
->[!VIDEO](https://video.tv.adobe.com/v/337425)
+>[!VIDEO](https://video.tv.adobe.com/v/338349)
 
 Du kan titta på videon eller följa instruktionerna nedan för att lära dig hur du genererar dokument med gruppåtgärder. API-referensdokumentationen som används i video är tillgänglig i formatet .yaml. Du kan ladda ned [Grupp-API:er](assets/batch-api.yaml) och ladda upp den till Postman för att kontrollera API:ernas funktionalitet och följa med i videon.
 
@@ -100,7 +100,7 @@ Med batchdatakonfigurationen kan du konfigurera behållare och mappar för indat
 
 Så här skapar du konfigurationen:
 
-1. Gå till Verktyg > Forms > Output Batch - Unified Storage Connector.
+1. Gå till Verktyg > Forms > Unified Storage Connector.
 1. Öppna en mapp som är värd för konfigurationen och klicka på Skapa. Du använder mappen Global eller skapar en mapp.
 1. Ange namn och namn på konfigurationen. I Lagring väljer du Microsoft Azure Storage.
 1. I Sökväg till lagringskonfiguration bläddrar du till och väljer den molnkonfiguration som innehåller autentiseringsuppgifter för det kundägda Azure-lagringskontot.

@@ -2,7 +2,7 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: c0305e030d351962d34f314cdd35ac7c79774b5a
+source-git-commit: d136062ed0851b89f954e5485c2cfac64afeda2d
 workflow-type: tm+mt
 source-wordcount: '1869'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Du kan generera ett dokument på begäran eller skapa ett batchjobb för att gen
 * säker åtkomst till data. Kommunikations-API:er ansluter till och får endast åtkomst till data från kundutsedda datalager, gör inga lokala kopior av data, vilket gör kommunikationen mycket säker.
 
 ![Exempel på kreditkortsutdrag](assets/statement.png)
-Ett exempel på kreditkortsutdrag kan skapas med hjälp av kommunikationsAPI:er. Satsen använder samma mall men separata data för varje kund beroende på hur de använder kreditkortet.
+Du kan skapa ett kreditkortsutdrag med API:er för kommunikation. Det här exempelkontoutdraget använder samma mall men separata data för varje kund beroende på hur de använder kreditkortet.
 
 ## Hur fungerar det?
 
