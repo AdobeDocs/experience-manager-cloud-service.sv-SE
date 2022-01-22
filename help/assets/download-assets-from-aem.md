@@ -5,9 +5,9 @@ contentOwner: VG
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 797f0e6585666196acf7972f93d936fc54359c4a
+source-git-commit: b4d661bcafb874749b5da436bf2fd16ebeba773e
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,10 @@ Asynchronous downloads are triggered in either of the following case:
 
 <!-- Go live is on 27th Jan 2022
 ### Enable email notifications for large downloads {#enable-emails-for-large-downloads}
+
+>[!NOTE]
+>
+>This functionality is available in the Experience Manager prerelease channel.
 
 Asynchronous downloads are triggered in any of the following cases:
 
@@ -114,13 +118,13 @@ Så här hämtar du resurser:
 >This functionality is available in the Experience Manager prerelease channel.
 -->
 
-Att dela resurser via en länk är ett bekvämt sätt att göra det tillgängligt för intresserade utan att de först behöver logga in på [!DNL Assets]. Se [Funktionen för delning av länkar](/help/assets/share-assets.md#sharelink).
+Att dela resurser via en länk är ett bekvämt sätt att göra det tillgängligt för intresserade utan att de behöver logga in på [!DNL Assets]. Se [Funktionen för delning av länkar](/help/assets/share-assets.md#sharelink).
 
 När användare hämtar resurser från delade länkar, [!DNL Assets] använder en asynkron tjänst som ger snabbare och oavbruten nedladdning. De resurser som ska laddas ned köas i bakgrunden i en inkorg i ZIP-arkiv med hanterbar filstorlek. Vid mycket stora nedladdningar delas nedladdningen in i filer som är 100 GB stora.
 
-I inkorgen visas bearbetningsstatus för varje arkiv. När bearbetningen är klar kan du hämta arkiven från inkorgen.
+The [!UICONTROL Download Inbox] visar status för varje arkiv. När bearbetningen är klar kan du hämta arkiven från inkorgen.
 
-![Hämta inkorg](assets/download-inbox.png)
+![Hämta inkorg](assets/link-sharing-download-inbox.png)
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 

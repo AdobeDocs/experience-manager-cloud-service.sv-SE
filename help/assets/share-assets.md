@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Collaboration,Asset Distribution
 role: User,Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 505fde14e02f79dcf950fb4bdb6a74b6a7ba40e6
+source-git-commit: b4d661bcafb874749b5da436bf2fd16ebeba773e
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '1254'
 ht-degree: 0%
 
 ---
@@ -24,27 +24,72 @@ ht-degree: 0%
 
 ## Dela resurser som en länk {#sharelink}
 
-Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på [!DNL Assets]. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` platsen kan visa de länkar som delas med dem.
+Att dela resurser via en länk är ett bekvämt sätt att göra resurserna tillgängliga för externa parter utan att de behöver logga in på [!DNL Assets]. Med den här funktionen kan anonyma användare få åtkomst till och hämta de resurser som delas med dem. När användare hämtar resurser från delade länkar, [!DNL Assets] använder en asynkron tjänst som ger snabbare och oavbruten nedladdning. De resurser som ska laddas ned köas i bakgrunden i en inkorg i ZIP-arkiv med hanterbar filstorlek. För mycket stora nedladdningar paketeras nedladdningen i filer som är 100 GB stora.
 
-![Dialogrutan Länkdelning](assets/link-share-dialog.png)
+<!--
+Users with administrator privileges or with read permissions at `/var/dam/share` location are able to view the links shared with them. 
+-->
 
 >[!NOTE]
 >
 >* Du behöver behörigheten Redigera åtkomstkontrollista för mappen eller resursen som du vill dela som en länk.
->* Innan du delar en länk med användarna, [aktivera utgående e-post](/help/implementing/developing/introduction/development-guidelines.md#sending-email). Annars inträffar ett fel.
+>* [Aktivera utgående e-post](/help/implementing/developing/introduction/development-guidelines.md#sending-email) innan du delar en länk med användarna.
 
 
-1. I [!DNL Assets] i användargränssnittet väljer du den resurs som ska delas som en länk.
-1. I verktygsfältet klickar du på **[!UICONTROL Share Link]**. The [!UICONTROL Link Sharing] som innehåller en autogenererad resurslänk i dialogrutan **[!UICONTROL Share Link]** fält.
+Det finns två sätt att dela resurserna med hjälp av länkdelningsfunktionen:
+
+1. Skapa en delad länk, [kopiera och dela resurslänken](#copy-and-share-assets-link) med andra användare. Länkens standardförfallotid är en dag. Du kan inte ändra förfallotiden när du delar den kopierade länken med andra användare.
+
+1. Generera en delad länk och [dela resurslänken via e-post](#share-assets-link-through-email). I det här fallet kan du ändra standardvärdena, t.ex. utgångsdatum och -tid, och tillåta hämtning av originalresurserna och dess återgivningar. Du kan skicka e-post till flera användare genom att lägga till deras e-postadresser.
+
+![Dialogrutan Länkdelning](assets/link-sharing-dialog.png)
+
+### Kopiera och dela resurslänken{#copy-and-share-asset-link}
+
+Så här delar du resurser som en offentlig URL:
+
+1. Logga in på [!DNL Experience Manager Assets] och navigera till **[!UICONTROL Files]**.
+1. Markera resursen eller mappen som innehåller resurser. Klicka på **[!UICONTROL Share Link]** i verktygsfältet.
+1. The **[!UICONTROL Link Sharing]** som innehåller en autogenererad resurslänk i dialogrutan **[!UICONTROL Share Link]** fält.
+1. Kopiera resurslänken och dela den med användarna.
+
+### Dela resurslänk via e-postmeddelande {#share-assets-link-through-email}
+
+Så här delar du resurser via e-post:
+
+1. Markera resursen eller mappen som innehåller resurser. Klicka på **[!UICONTROL Share Link]** i verktygsfältet.
+1. The **[!UICONTROL Link Sharing]** som innehåller en autogenererad resurslänk i dialogrutan **[!UICONTROL Share Link]** fält.
 
    * I rutan E-postadress skriver du e-post-ID för den användare som du vill dela länken med. Du kan dela länken med flera användare. Om användaren är medlem i din organisation väljer du användarens e-post-ID bland förslagen som visas i listrutan. Om användaren är extern skriver du det fullständiga e-post-ID:t och trycker på **[!UICONTROL Enter]**; e-post-ID:t läggs till i listan över användare.
 
-   * I **[!UICONTROL Subject]** anger du ett ämne för resursen som du vill dela.
+   * I **[!UICONTROL Subject]** anger du ett ämne för att ange syftet med de delade resurserna.
    * I **[!UICONTROL Message]** skriver du ett meddelande om det behövs.
-   * I **[!UICONTROL Expiration]** använder du datumväljaren för att ange ett förfallodatum och en förfallotid för länken. Länkens standardförfallotid är en dag.
+   * I **[!UICONTROL Expiration]** använder du datumväljaren för att ange ett förfallodatum och en förfallotid för länken.
    * Aktivera **[!UICONTROL Allow downlod of original file]** om du vill tillåta mottagarna att hämta den ursprungliga återgivningen.
 
 1. Klicka på **[!UICONTROL Share]**. Ett meddelande bekräftar att länken delas med användarna. Användarna får ett e-postmeddelande med den delade länken.
+
+![E-post för länkdelning](assets/link-sharing-email-notification.png)
+
+### Hämta resurser via resurslänken
+
+Alla användare som har tillgång till länken för delade resurser kan hämta de resurser som paketerats i en zip-mapp. Hämtningsprocessen är densamma oavsett om en användare använder länken för det kopierade objektet eller resurslänken som delas via e-postmeddelandet.
+
+* Klicka på resurslänken eller klistra in URL-adressen i webbläsaren. The [!UICONTROL Link Share] öppnas där du kan växla till [!UICONTROL Card View] eller [!UICONTROL List View].
+
+* I [!UICONTROL Card View]kan du föra musen över den delade resursen eller delade resursmappen för att antingen välja resurser eller placera dem i kö för hämtning.
+
+* Som standard visas **[!UICONTROL Download Inbox]** alternativ. Den visar en lista över alla delade resurser eller mappar som är köade för hämtning tillsammans med deras status.
+
+* När du väljer resurser eller mapp visas en **[!UICONTROL Queue Download]** visas på skärmen. Klicka på **[!UICONTROL Queue Download]** för att starta nedladdningsprocessen.
+
+   ![Hämta kö](assets/queue-download.png)
+
+* Klicka på **[!UICONTROL Download Inbox]** om du vill visa status för nedladdningen. För stora nedladdningar klickar du på **[!UICONTROL Refresh]** för att uppdatera statusen.
+
+   ![Hämta inkorg](assets/link-sharing-download-inbox.png)
+
+* När bearbetningen är klar klickar du på **[!UICONTROL Download]** för att ladda ned zip-filen.
 
 <!--
 You can also copy the auto-generated link and share it with the users. The default expiration time for the link is one day.
@@ -146,6 +191,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 >[!NOTE]
 >
 >Om du vill dela länkar från författarinstansen till externa entiteter måste du se till att du bara visar följande URL:er för `GET` förfrågningar. Blockera andra URL:er för att säkerställa att din författarinstans är säker.
+>
 >* `[aem_server]:[port]/linkshare.html`
 >* `[aem_server]:[port]/linksharepreview.html`
 >* `[aem_server]:[port]/linkexpired.html`
