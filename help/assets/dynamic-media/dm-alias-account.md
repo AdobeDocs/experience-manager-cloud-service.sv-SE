@@ -10,9 +10,9 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: 886063d4-71dd-48c8-a342-884ad2c111ca
-source-git-commit: 3023fda4543328a0feda259ca58adb95fa4b1317
+source-git-commit: 5e33aa9c18cb79d2e263224e92f866c3280b59bc
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,13 @@ ht-degree: 0%
 >
 >Funktionen för att skapa ett Dynamic Media-företagskonto finns i Prerelease Channel för januari 2022. Funktionen kommer att vara allmänt tillgänglig i februari 2022-versionen.
 
-Dynamic Media URL:er och visningsprogrammets inbäddningskod innehåller ditt företagskontonamn. Det här kontonamnet skapades när Dynamic Media etablerades. Det kan finnas scenarier där ditt företag har genomgått ett förvärv, en omprofilering eller där du bara vill använda ett mer minnesvärt namn. I sådana fall är det inte enkelt att manuellt uppdatera företagskontots namn i alla URL:er och visningsprogrammets inbäddningskod som kommer ut ur kartongen. Dessutom finns det en risk att du påverkar din befintliga Dynamic Media-databas eller påverkar direktinnehåll. Du kan lösa det här problemet genom att konfigurera ett Dynamic Media-företagskonto för alias.
+Dynamic Media URL:er och visningsprogrammets inbäddningskod innehåller ditt företagskontonamn. Det här kontonamnet skapades när Dynamic Media etablerades. Det kan finnas scenarier där ditt företag har genomgått ett förvärv, en omprofilering eller där du bara vill använda ett mer minnesvärt namn. I sådana fall är det inte enkelt att manuellt uppdatera företagskontots namn i alla URL:er och visningsprogrammets inbäddningskod som kommer ut ur kartongen. Dessutom finns det en möjlighet att du kan påverka din befintliga Dynamic Media-databas eller påverka direktinnehåll. Du kan lösa det här problemet genom att konfigurera ett Dynamic Media-företagskonto för alias.
 
 Ett Dynamic Media-företagskonto som alias ser till att alla färdiga Dynamic Media-URL:er och visningsprograminbäddningskod i användargränssnittet återspeglar alla uppdateringar som görs i ditt företagskontext, till exempel omprofilering. Ett aliaskonto har också en positiv effekt på SEO (sökmotoroptimering) eftersom Dynamic Media URL:er och visningsprogrammets inbäddningskod återspeglar det nya företagskontots namn.
 
 Tänk på följande när du konfigurerar ett Dynamic Media-företagskonto:
 
+* När du konfigurerar ett företagalias-konto på **[!UICONTROL Edit Dynamic Media Configuration]** sida, för att cacheminnet ska kunna ogiltigförklaras måste du göra URL:er ogiltiga för *båda* den **[!UICONTROL Company]** konto och **[!UICONTROL Company Alias]** samtidigt.
 * Alla befintliga Dynamic Media-URL:er eller visningsprogramkod på din *live* digitala egenskaper måste uppdateras manuellt för att återspegla det nya aliasnamnet. Alla URL-adresser och visningsprogram som bäddar in kod med ditt ursprungliga Dynamic Media-företagsnamn fortsätter dock att fungera för befintliga eller nya resurser.
 * Dynamic Media aliaskonto är begränsat till Experience Manager Assets redigeringsläge och leverans. Företagets aliasnamn fungerar inte med Experience Manager Sites. WCM-komponenter (Web Content Management) har inte uppdaterats för den här ändringen. Dessa komponenter fortsätter att fungera med Dynamic Media ursprungliga företagsnamn för hämtning av Dynamic Media-resurser.
 * Du kan bara konfigurera ett företagalias-konto på **[!UICONTROL Edit Dynamic Media Configuration]** sida. Du kan dock skapa så många alias-konton som ett supportärende och manuellt spegla det nödvändiga aliasnamnet i Dynamic Media URL:er eller visningsprogrammets inbäddningskod.
