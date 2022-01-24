@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 48efd852c990238661177bc40e2be7971b7d4949
+source-git-commit: 7b39a97983c5ec338b587a0fae85e28a3bcc0319
 workflow-type: tm+mt
 source-wordcount: '3242'
 ht-degree: 22%
@@ -139,7 +139,7 @@ Så här konfigurerar du anslutningen:
 1. Konfigurera [!DNL Dynamic Media] på lokal [!DNL Sites] och fjärranslutning [!DNL Assets] distributioner. Följ instruktionerna för att [konfigurera [!DNL Dynamic Media]](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
 
    * Använd samma företagsnamn i alla konfigurationer.
-   * På lokal [!DNL Sites], in [!UICONTROL Dynamic Media sync mode], markera **[!UICONTROL Disabled by default]**. The [!DNL Sites] distributionen endast behöver skrivskyddad åtkomst till [!DNL Dynamic Media] konto.
+   * På lokal [!DNL Sites], in [!UICONTROL Dynamic Media sync mode], markera **[!UICONTROL Disabled by default]**. The [!DNL Sites] distributionen måste ha skrivskyddad åtkomst till [!DNL Dynamic Media] konto.
    * På lokal [!DNL Sites], i **[!UICONTROL Publish Assets]** alternativ, markera **[!UICONTROL Selective Publish]**. Markera inte **[!UICONTROL Sync All Content]**.
    * På fjärrkontrollen [!DNL Assets] distribution, in [!UICONTROL Dynamic Media sync mode], markera **[!UICONTROL Enabled by default]**.
 
