@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: 78fa346cd2d6ed64c9700b7b2e611db58f7b3d11
+source-git-commit: 8c3a1366d076c009262eeab8129e4e589dc4f7c5
 workflow-type: tm+mt
-source-wordcount: '2043'
+source-wordcount: '2046'
 ht-degree: 3%
 
 ---
@@ -61,7 +61,7 @@ Med exempeldata ovan ser en produktvariant-URL som är formaterad med standardfo
 
 ### URL-format för kategorisida {#product-list}
 
-Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder följande alternativ:
+Detta konfigurerar URL:erna för kategori- eller produktlistsidorna och stöder följande alternativ:
 
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`
@@ -170,6 +170,8 @@ Specifika produktsidor väljs antingen av produktens sku eller kategori. Den sen
 | `{{page}}.html/{{sku}}/{{url_key}}.html` | ja | nej |
 | `{{page}}.html/{{sku}}/{{category}}/{{url_key}}.html` | ja | endast exakt matchning |
 | `{{page}}.html/{{sku}}/{{url_path}}.html` | ja | ja |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
