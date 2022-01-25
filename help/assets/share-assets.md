@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 3eb12e6e6a539a8f6b3cb4ccddba9d1971268c13
+source-git-commit: 1bef3ed7ba12e872dd8f478b13d14b459eb9495b
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## Dela resurser som en länk {#sharelink}
 
-Att dela resurser via en länk är ett bekvämt sätt att göra resurserna tillgängliga för externa parter utan att de behöver logga in på [!DNL Assets]. Med den här funktionen kan anonyma användare få åtkomst till och hämta de resurser som delas med dem. När användare hämtar resurser från delade länkar, [!DNL Assets] använder en asynkron tjänst som ger snabbare och oavbruten nedladdning. De resurser som ska laddas ned köas i bakgrunden i en inkorg i ZIP-arkiv med hanterbar filstorlek. Vid stora nedladdningar paketeras nedladdningen i filer på 100 GB.
+Att dela resurser via en länk är ett bekvämt sätt att göra resurserna tillgängliga för externa parter, marknadsförare och andra [!DNL Experience Manager] -användare. Med den här funktionen kan anonyma användare få åtkomst till och hämta de resurser som delas med dem. När du hämtar resurser från en delad länk, [!DNL Experience Manager Assets] använder en asynkron tjänst som ger snabbare och oavbruten nedladdning. De resurser som ska laddas ned köas i bakgrunden i en inkorg i ZIP-arkiv med hanterbar filstorlek. Vid stora nedladdningar paketeras nedladdningen i flera filer på 100 GB per filstorlek.
 
 <!--
 Users with administrator privileges or with read permissions at `/var/dam/share` location are able to view the links shared with them. 
