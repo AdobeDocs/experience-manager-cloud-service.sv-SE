@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 7dd57c6e161b7276d3796d64cd37fddc60e7a5b0
+source-git-commit: 72ddcbcc714bcd33de8f4f681db57872f5ca69ac
 workflow-type: tm+mt
-source-wordcount: '3456'
+source-wordcount: '3460'
 ht-degree: 24%
 
 ---
@@ -400,6 +400,7 @@ ht-degree: 24%
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
       + [Installera och konfigurera Forms Designer](/help/forms/installing-configuring-designer.md)
+      + [Konfigurera anslutning för enhetlig lagring](/help/forms/configure-unified-storage-connector.md)
    + Hantera användargrupper, formulär och relaterade resurser {#manage-forms-and-related-assets}
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)

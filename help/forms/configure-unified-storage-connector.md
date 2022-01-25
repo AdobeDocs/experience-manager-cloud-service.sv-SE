@@ -1,9 +1,9 @@
 ---
 title: Hur konfigurerar jag Unified Storage Connector för AEM Forms?
 description: Lär dig hur du hanterar anslutningsprogrammet för enhetlig lagring för AEM Forms. Använd Unified Storage Connector för att ansluta AEM Forms till externa datalager.
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: da3cef0a0a28dd16e627a157f02bbe6a84f59da5
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '544'
 ht-degree: 1%
 
 ---
@@ -53,16 +53,16 @@ Utför följande steg för att konfigurera en AEM arbetsflödesmodell för en ex
 
 >[!NOTE]
 >
->Alternativen för att spara steget Tilldela uppgift som utkast och för att hämta historiken för steget Tilldela uppgift är inte tillgängliga när du konfigurerar en AEM arbetsflödesmodell för extern datalagring.
+>Alternativen för att spara steget Tilldela uppgift som utkast och för att hämta historiken för steget Tilldela uppgift inaktiveras när du konfigurerar en AEM arbetsflödesmodell för extern datalagring.
 
 ### Riktlinjer för AEM arbetsflöden för extern datalagring {#guidelines-workflows-external-data-storage}
 
 Nedan följer några riktlinjer när du använder AEM arbetsflöden och lagrar data till externa datalager, som Microsoft Azure-lagringsservern:
 
-* Använd variabler för att lagra data när du definierar in- och utdatafiler och bilagor i arbetsflödesmodellstegen. Markera inte **[!UICONTROL Relative to Payload]** och **[!UICONTROL Available at an absolute path]** alternativ. The **[!UICONTROL Relative to Payload]** och **Tillgängligt på en absolut sökväg** visas inte automatiskt när du [konfigurera en AEM arbetsflödesmodell för extern datalagring](#configure-workflow-external-data-storage).
+* Använd variabler för att lagra data när du definierar in- och utdatafiler och bilagor i arbetsflödesmodellstegen. Markera inte **[!UICONTROL Relative to Payload]** och **[!UICONTROL Available at an absolute path]** alternativ. The **[!UICONTROL Relative to Payload]** och **[!UICONTROL Available at an absolute path]** visas inte automatiskt när du [konfigurera en AEM arbetsflödesmodell för extern datalagring](#configure-workflow-external-data-storage).
 
 * Använd variabler för att lagra datafiler och bilagor när du skickar ett anpassat formulär till ett AEM arbetsflöde. Markera inte **[!UICONTROL Relative to Payload]** när du skickar ett anpassat formulär till ett AEM arbetsflöde. The **[!UICONTROL Relative to Payload]** alternativet visas inte automatiskt när du [konfigurera en AEM arbetsflödesmodell för extern datalagring](#configure-workflow-external-data-storage).
 
 * Använd inte ett anpassat AEM arbetsflödessteg i en arbetsflödesmodell för att lagra data i CRX DE-databasen.
 
-* När du [konfigurera en AEM arbetsflödesmodell för extern datalagring](#configure-workflow-external-data-storage)skapar du inte anpassade kolumner för AEM Inkorg baserat på data i ett arbetsflöde.
+* När du [konfigurera en AEM arbetsflödesmodell för extern datalagring](#configure-workflow-external-data-storage)ska du inte skapa anpassade kolumner för AEM Inkorg eftersom värdena för de anpassade kolumnerna inte hämtas om arbetsobjektet i AEM Inkorg tillhör ett arbetsflöde som är markerat för extern lagring.

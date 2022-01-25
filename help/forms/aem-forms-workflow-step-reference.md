@@ -2,9 +2,9 @@
 title: 'Hur tilldelar man ett arbetsflöde till en annan användare, skickar e-post, använder Adobe Sign i ett arbetsflöde? '
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 895290aa0080e159549cd2de70f0e710c4a0ee34
 workflow-type: tm+mt
-source-wordcount: '4849'
+source-wordcount: '4939'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Forms-baserade arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM
 * Koppla samman en arbetsflödesmodell med olika datakällor för att enkelt spara och hämta data.
 
 * Använd e-poststeget för att skicka e-postmeddelanden och andra bilagor när en åtgärd har slutförts och när arbetsflödet har påbörjats eller slutförts.
+
+>[!NOTE]
+>
+>Om arbetsflödesmodellen är markerad för ett externt lagringsutrymme kan du bara välja variabelalternativet för lagring eller hämtning av datafiler och bilagor för alla Forms-arbetsflödessteg.
 
 
 ## Tilldela aktivitetssteg {#assign-task-step}
@@ -66,7 +70,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **[!UICONTROL Pre-populated]**: Följande fält i listan nedan fungerar som indata för uppgiften:
 
    * **[!UICONTROL Select input data file using]**: Sökväg till indatafil (.json, .xml, .doc eller formulärdatamodell). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som har skickats för formuläret via ett AEM Inkorgsprogram. En exempelsökväg är [Payload_Directory]/workflow/data.
-   * **[!UICONTROL Select input attachments using]**: Bifogade filer som är tillgängliga på platsen bifogas till formuläret som är kopplat till uppgiften. Sökvägen är alltid relativ till nyttolasten. En exempelsökväg är [Payload_Directory]/attachments/. Du kan ange bifogade filer som placeras i förhållande till nyttolasten eller använda en dokumenttypsvariabel (Array list > Document) för att ange en bifogad indatafil för det adaptiva formuläret
+   * **[!UICONTROL Select input attachments using]**: Bifogade filer som är tillgängliga på platsen bifogas till formuläret som är kopplat till uppgiften. Sökvägen kan vara relativ till nyttolasten eller hämta den bifogade filen som lagras i en variabel i ett dokument. En exempelsökväg är [Payload_Directory]/attachments/. Du kan ange bifogade filer som placeras i förhållande till nyttolasten eller använda en dokumenttypsvariabel (Array list > Document) för att ange en bifogad indatafil för det adaptiva formuläret.
 
    <!-- * **[!UICONTROL Choose input JSON]**: Select an input JSON file using a path that is relative to payload or stored in a variable of Document, JSON, or Form Data Model data type. This option is available if you select Interactive Communication Agent UI or Interactive Communication Web Channel Document from the Type drop-down list.
 
@@ -88,7 +92,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
     <!-- * **[!UICONTROL Save layout template using]**: Save the layout template using a path that is relative to the payload or store it in a variable of Document data type. The [layout template](layout-design-details.md) refers to an XDP file that you create using Forms Designer. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list. -->
 
 * **[!UICONTROL Assignee]** > **[!UICONTROL Assign options]**: Ange vilken metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM användare eller grupp.
-* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när **[!UICONTROL Dynamically to a user or group]** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Tilldela användare ett arbetsflöde dynamiskt](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när **[!UICONTROL Dynamically to a user or group]** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Tilldela användare ett arbetsflöde dynamiskt](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?CID=RedirectAEMCommunityKautuk)
 
 * **[!UICONTROL Participants]**: Fältet är tillgängligt när **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** alternativet är markerat i **[!UICONTROL Participant Chooser]** fält. I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
 
@@ -130,6 +134,10 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **[!UICONTROL Show Data from Previous Steps]**: Välj det här alternativet om du vill att tilldelningar ska kunna visa tidigare tilldelningar, åtgärder som redan har vidtagits för uppgiften, kommentarer som har lagts till i uppgiften samt Dokument för registrering för den slutförda uppgiften, om tillgängligt.
 * **[!UICONTROL Show Data from Subsequent Steps]**: Välj det här alternativet om du vill att den som är tilldelad ska kunna visa den åtgärd som har vidtagits och de kommentarer som har lagts till i uppgiften av efterföljande tilldelningar. Den aktuella tilldelaren kan även visa en dokumentfil för den slutförda uppgiften, om en sådan finns.
 * **[!UICONTROL Visibility of data type]**: Som standard kan en tilldelad visa ett dokument för registrering, tilldelningar, åtgärd och kommentarer som tidigare och efterföljande tilldelningar har lagt till. Använd datatypsalternativet för synlighet för att begränsa vilken typ av data som är synlig för de tilldelade.
+
+>[!NOTE]
+>
+>Alternativen för att spara steget Tilldela uppgift som utkast och för att hämta historiken för steget Tilldela uppgift inaktiveras när du konfigurerar en AEM arbetsflödesmodell för extern datalagring. I Inkorgen är dessutom alternativet att spara inaktiverat.
 
 ## Skicka e-poststeg {#send-email-step}
 
