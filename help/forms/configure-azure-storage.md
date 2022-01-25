@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag Azure-lagring?
 description: Lär dig hur du integrerar formulär med Azure-lagringsservern.
 exl-id: 606383b3-293c-43d2-9ba0-5843c4e0caa8
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 10284b1ac6fbad2e7f6231603c3dd60b6e404299
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -93,4 +93,8 @@ Så här definierar du en objektegenskap för datamodell som en söknyckel:
 1. Byt **[!UICONTROL Search Key]** växla till ON-läge. Det här alternativet är bara tillgängligt för primära datatyper.
 1. Tryck **[!UICONTROL Done]** och sedan trycka **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
-När du har definierat objektegenskaper för datamodell som söknycklar sparas nycklarna som metadata i Azure-lagringen.
+När du har definierat egenskaper för datamodellsobjekt som söknycklar lagras hash-värdena i Azure-indextaggar och Base64-kodade värden lagras i Azure-metadata.
+
+>[!NOTE]
+>
+>Endast 10 söknycklar tillåts per Azure-enhet eftersom Azure bara tillåter 10 taggar per blob och egenskapsvärden som markerats som söknycklar lagras i Azure-indextaggar efter hashning.
