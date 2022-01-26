@@ -8,7 +8,7 @@ content-type: reference
 feature: 3D Assets
 role: User
 exl-id: 82084ba7-1302-4cbd-8626-d77b3aaa4ed1
-source-git-commit: b31fa5af7bcaa944d8bd7b0bb7d7b8deb36906a8
+source-git-commit: 251975b825adb5748b6f76c0fdf9d0b7262b2d35
 workflow-type: tm+mt
 source-wordcount: '2148'
 ht-degree: 2%
@@ -38,11 +38,15 @@ Se även [3D-format som stöds i Experience Manager Assets](/help/assets/file-fo
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
 | GLB | Binär GL-överföring | model/gltf-binary | Materialen och texturerna inkluderas som en enda resurs. |
-| OBJ | WaveFront 3D Object File | application/x-tgif |  |
+| OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
 | STL | Stereolitografi | application/vnd.ms-pki.stl |  |
 | USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd endast för förtäring. ingen visning eller interaktion är tillgänglig.* USDZ är ett tillverkarspecifikt 3D-format som kan visas direkt av Safari eller iOS. |
 
-## Quick Start: 3D assets in Dynamic Media {#quick-start-three-d}
+<!-- >[!NOTE]
+>
+>The 3D Media WCM component and 3D preview on an asset's Details page is not compatible with the latest version of Chrome (97.x). Instead, to work with 3D assets, use Firefox or Safari, or use an earlier version of Chrome (96.x). CQDOC-18921-->
+
+## Snabbstart: 3D-resurser i Dynamic Media {#quick-start-three-d}
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med 3D-resurser i Dynamic Media.
 
@@ -55,11 +59,11 @@ Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/dynamic-media/config-
    * [Överför dina 3D-resurser för användning i Dynamic Media](/help/assets/add-assets.md#upload-assets)
    * [3D-filformat som stöds för överföring i Dynamic Media](#supported-three-d-file-formats-in-dm)
 
-1. **Manage 3D assets**
+1. **Hantera 3D-resurser**
 
    * Ordna och söka i 3D-resurser
 
-      * [Organizing digital assets](/help/assets/organize-assets.md)
+      * [Organisera digitala resurser](/help/assets/organize-assets.md)
       * [Söka efter 3D-resurser](/help/assets/search-assets.md)
    * Visa 3D-resurser
 
@@ -116,7 +120,7 @@ Se även [Förhandsgranska resurser med hjälp av programgränssnittet](/help/as
    | Visa | Beskrivning | Musåtgärd | Åtgärd på pekskärmen |
    | --- | --- | --- | --- |
    | **Vrid kameran** | Ordna vyn runt 3D-scenen och objekt. | Vänsterklicka och dra. | Tryck med ett finger och dra. |
-   | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Right click + drag. | Tryck med två fingrar och dra. |
+   | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
    | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
    | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
    | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
@@ -175,7 +179,7 @@ Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använd
 
 1. Om du vill markera ett tomt område och öppna det tillhörande verktygsfältet markerar du det tomma området i **[!UICONTROL Layout Container]** region.
 1. I verktygsfältet väljer du **[!UICONTROL Policy]** -ikonen för att öppna **[!UICONTROL Policy Editor]**.
-1. In the **[!UICONTROL Properties]** section, under the **[!UICONTROL Allowed Components]** tab, scroll to **[!UICONTROL Dynamic Media]**, then expand the list and check **[!UICONTROL 3D Media]**.
+1. I **[!UICONTROL Properties]** -avsnittet, under **[!UICONTROL Allowed Components]** flik, rulla till **[!UICONTROL Dynamic Media]** och sedan expandera listan och kontrollera **[!UICONTROL 3D Media]**.
 1. Tryck **[!UICONTROL Done]** för att spara ändringarna och stänga **[!UICONTROL Policy Editor]**.
 
    Nu kan du placera Dynamic Media 3D Media-komponenten på alla sidor som använder den här mallen.
