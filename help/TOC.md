@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 9dc34e7e9e69fa5d5a6fc30c380a506cdbc0234a
+source-git-commit: 6d38886bf3f87be09dd897f615a471c4b8ddd6b7
 workflow-type: tm+mt
-source-wordcount: '3469'
+source-wordcount: '3472'
 ht-degree: 24%
 
 ---
@@ -172,7 +172,6 @@ ht-degree: 24%
          + [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md)
          + [Innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
          + [Experience Fragments](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)
-         + [Experience Fragments - Exportera](/help/sites-cloud/authoring/fundamentals/experience-fragments-target.md)
          + [Exportera till CSV](/help/sites-cloud/authoring/fundamentals/csv-export.md)
          + [Komponenter](/help/sites-cloud/authoring/fundamentals/components.md)
          + [Skapa för mobila enheter](/help/sites-cloud/authoring/fundamentals/mobile.md)
@@ -270,6 +269,7 @@ ht-degree: 24%
       + [Integrera med Adobe Analytics](/help/sites-cloud/integrating/integrating-adobe-analytics.md)
       + [Integrering med Adobe Analytics Automated Setup](/help/sites-cloud/integrating/adobe-analytics-exc-setup-automation.md)
       + [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md)
+      + [Exportera Experience Fragments till Adobe Target](/help/sites-cloud/integrating/experience-fragments-target.md)
 + Assets {#assets}
    + [[!DNL Assets] som [!DNL Cloud Service]](/help/assets/home.md)
    + [Översikt och nyheter](/help/assets/overview.md)
