@@ -1,18 +1,18 @@
 ---
-title: AEM och Adobe Commerce (Magento)-integrering med Commerce Integration Framework
-description: AEM och Adobe Commerce (Magento) är helintegrerade med Commerce Integration Framework (CIF). Med CIF kan AEM få åtkomst till en Magento-instans och kommunicera med Magento via GraphQL. AEM Authors kan också använda produkt- och kategoriväljare och produktkonsolen för att bläddra bland produkt- och kategoridata som hämtats on demand från Magento. Dessutom erbjuder CIF en färdig butik som kan snabba upp affärsprojekt.
+title: AEM och Adobe Commerce Integration med Commerce Integration Framework
+description: AEM och Adobe Commerce integreras smidigt med Commerce Integration Framework (CIF). Med CIF kan AEM få åtkomst till en Adobe Commerce-instans och kommunicera med Adobe Commerce via GraphQL. AEM Authors kan också använda produkt- och kategoriväljare och produktkonsolen för att bläddra bland produkt- och kategoridata som hämtas on demand från Adobe Commerce. Dessutom erbjuder CIF en färdig butik som kan snabba upp affärsprojekt.
 thumbnail: aem-magento-architecture.jpg
 exl-id: 110ceef5-2c35-4b81-8e89-26929c0da91b,1cdfda88-a728-432f-b24a-f81347572bcf
-source-git-commit: 96e7a7c38dd1275c9b0d291d12a0f768ab183c38
+source-git-commit: 05a412519a2d2d0cba0a36c658b8fed95e59a0f7
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
 
-# Integrering med AEM och Adobe Commerce (Magento) med Commerce Integration Framework {#aem-magento-framework}
+# AEM och Adobe Commerce Integration Using Commerce Integration Framework {#aem-framework}
 
-Experience Manager och Adobe Commerce (Magento) är helintegrerade med Commerce Integration Framework (CIF). CIF gör det möjligt för AEM att komma åt och kommunicera direkt med handelsinstansen med hjälp av Adobe Commerce [GraphQL API:er](https://devdocs.magento.com/guides/v2.4/graphql/).
+Experience Manager och Adobe Commerce integreras smidigt med Commerce Integration Framework (CIF). CIF gör det möjligt för AEM att komma åt och kommunicera direkt med handelsinstansen med hjälp av Adobe Commerce [GraphQL API:er](https://devdocs.magento.com/guides/v2.4/graphql/).
 
 >[!NOTE]
 >

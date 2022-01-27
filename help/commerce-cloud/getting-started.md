@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: 2afeb12ec7b99da056652fc869da5bc82db30754
+source-git-commit: 05a412519a2d2d0cba0a36c658b8fed95e59a0f7
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ När du har etablerats med CIF-tillägget kommer det att tillämpas på alla bef
 
 Det andra steget är självbetjäning för varje AEM as a Cloud Service miljö. Det finns ytterligare konfigurationer du behöver göra efter den första etableringen av CIF-tillägget.
 
-## Ansluta AEM till en Commerce Solution {#magento}
+## Ansluta AEM till en Commerce Solution {#solution}
 
 Ansluta CIF-tillägget och [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange URL:en för GraphQL-slutpunkten via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
 
@@ -81,7 +81,7 @@ Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/
 
    Se [CLI-dokument](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) för mer information.
 
-   Slutpunktens URL för Commerce GraphQL måste peka på e-handelns GraphQl-tjänst och använda en säker HTTPS-anslutning. Till exempel: `https://<yourmagentosystem>/graphql`.
+   Slutpunktens URL för Commerce GraphQL måste peka på e-handelns GraphQl-tjänst och använda en säker HTTPS-anslutning. Till exempel: `https://<yourcommercesystem>/graphql`.
 
 4. Aktivera mellanlagrade katalogfunktioner som kräver autentisering (valfritt)
 
@@ -103,7 +103,7 @@ Detta gör att du kan använda AEM Commerce as a Cloud Service och driftsätta d
 
 ## Konfigurera butiker och kataloger {#catalog}
 
-CIF-tillägget och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer osv.). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog (Magento).
+CIF-tillägget och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer osv.). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
 
 Den här konfigurationen kan justeras för projektet via CIF-Cloud Servicens konfiguration enligt följande steg:
 
@@ -118,7 +118,7 @@ Den här konfigurationen kan justeras för projektet via CIF-Cloud Servicens kon
 Följande egenskaper kan konfigureras:
 
 - GraphQL-klient - Välj den konfigurerade GraphQL-klienten för e-handel med serverdelskommunikation. Detta bör normalt vara kvar som standard.
-- Butiksvy - (Magento) butiksvyns identifierare. Om den är tom används standardbutiksvyn.
+- Butiksvy - butiksvyns identifierare. Om den är tom används standardbutiksvyn.
 - Proxysökväg för GraphQL - URL-sökvägen för GraphQL-proxy som används AEM proxybegäranden till GraphQL-slutpunkten för handel.
    >[!NOTE]
    >
@@ -126,7 +126,7 @@ Följande egenskaper kan konfigureras:
 - Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsbackend-GraphQL-anropen.
    >[!NOTE]
    >
-   > Stöd för UID introducerades i Adobe Commerce (Magento) 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
+   > Stöd för UID introducerades i Adobe Commerce 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
 - Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogroten
    >[!CAUTION]
    >

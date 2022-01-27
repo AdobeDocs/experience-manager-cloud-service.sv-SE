@@ -2,9 +2,9 @@
 title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: 283bef84f2d5973150be8f62bd6f86193252d4f4
+source-git-commit: 05a412519a2d2d0cba0a36c658b8fed95e59a0f7
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 ## 1. Används CIF GraphQL endast för handel eller kommer det att vara tillgängligt för frågor som har skapats i AEM JCR?
 
-Adobe har antagit Magento&#39;s GraphQL API:er som dess officiella e-handels-API för alla handelsrelaterade data. Därför använder AEM GraphQL för att utbyta affärsdata med Magento och med valfri e-handelsmotor via I/O Runtime. Detta GraphQL-API är oberoende av AEM GraphQL-API för åtkomst till innehållsfragment.
+Adobe har antagit Adobe Commerce GraphQL API:er som sitt officiella e-handels-API för alla e-handelsrelaterade data. Därför använder AEM GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Detta GraphQL-API är oberoende av AEM GraphQL-API för åtkomst till innehållsfragment.
 
-## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce-administratören (Magento)? Hur kan resurser från Dynamic Media förbrukas?
+## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce Admin? Hur kan resurser från Dynamic Media förbrukas?
 
-Det finns ingen officiell integrering mellan AEM Assets och Magento. Det finns en partnerkoppling på [marknadsplats](https://marketplace.magento.com/bounteous-dam.html).
+Det finns ingen officiell integrering med AEM Assets - Adobe Commerce. Det finns en partnerkoppling på [marknadsplats](https://marketplace.magento.com/bounteous-dam.html).
 
-Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL:er manuellt i Magento. Dynamic Media är nu en del av AEM Assets och kommer att fungera på samma sätt.
+Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL:er manuellt i Adobe Commerce. Dynamic Media är nu en del av AEM Assets och kommer att fungera på samma sätt.
 
 ## 3. Spelar det någon roll var e-handelslösningen används? (Lokalt eller i molnet)
 
@@ -39,7 +39,7 @@ Detta beror på några ytterligare aspekter du måste tänka på. Hur stor är c
 
 ## 7. Hur spelar PIM in i detta ramverk?
 
-PIM-data exponeras för AEM och klienter via GraphQL-begäranden. Vi rekommenderar att PIM integreras med e-handelsmotorn (Magento eller andra) så att PIM-data kan hämtas från handelsmotorn.
+PIM-data exponeras för AEM och klienter via GraphQL-begäranden. Vi rekommenderar att PIM integreras med e-handelsmotorn (Adobe Commerce eller andra) så att PIM-data kan hämtas från e-handelsmotorn.
 
 ## 8. Cachelagra även priser och andra data via Dispatcher. Blir det ofta en cachedomål?
 
@@ -59,7 +59,7 @@ CIF innehåller komponenterna Sökfält och Sökresultat. Sökfältskomponenten 
 
 ## 12. Hur kan produktdata användas i MSM eller översättningar?
 
-Produktdata är vanligtvis redan översatta i PIM eller Magento. AEM - Magento-integrering stöder anslutningen till flera Magento butiker och butiksvyer. I en MSM-konfiguration är vanligtvis en AEM plats länkad till en Magento store-vy.
+Produktdata är vanligtvis redan översatta i PIM eller Adobe Commerce. AEM - Adobe Commerce Integration har stöd för anslutning till flera Adobe Commerce butiker och butiksvyer. I en MSM-konfiguration är vanligtvis en AEM länkad till en Adobe Commerce Store-vy.
 
 ## 13. Finns det något sätt att förbättra produktdata med kommersiell text? Var gör du det här? I AEM eller i e-handelslösningen?
 
@@ -67,12 +67,12 @@ Vi rekommenderar att ni hanterar marknadsföringsrelaterade data och innehåll i
 
 ## 14. Hur kan vi säkerställa PCI-kompatibilitet när vi använder AEM för hela presentationslagret?
 
-Vi rekommenderar att du använder abstrakta betalningsmetoder. Detta innebär att webbläsarklienten kommunicerar direkt med betalgatewayleverantören så att varken Adobe eller e-handelslösningarna lagrar eller skickar kortinnehavardata. Den här metoden kräver endast en nivå 3 PCI-kompatibilitet. Det finns dock ytterligare saker att tänka på som helt PCI-kompatibla, till exempel hur medarbetarna interagerar med systemet och data. Mer information om Magento PCI-kompatibilitet finns i [Krav för PCI-kompatibilitet](https://magento.com/pci-compliance).
+Vi rekommenderar att du använder abstrakta betalningsmetoder. Detta innebär att webbläsarklienten kommunicerar direkt med betalgatewayleverantören så att varken Adobe eller e-handelslösningarna lagrar eller skickar kortinnehavardata. Den här metoden kräver endast en nivå 3 PCI-kompatibilitet. Det finns dock ytterligare saker att tänka på som helt PCI-kompatibla, till exempel hur medarbetarna interagerar med systemet och data. Mer information om Adobe Commerce PCI-kompatibilitet finns i [Krav för PCI-kompatibilitet](https://business.adobe.com/products/magento/pci-compliance.html).
 
-## 15. Om jag använder AEM och Magento molnversioner, är denna gemensamma lösning PCI-kompatibel?
+## 15. Om jag använder AEM och Adobe Commerce molnversioner, är denna gemensamma lösning PCI-kompatibel?
 
 Ja, självutvärderingsformulär D och försäkran om överensstämmelse finns tillgängliga på begäran.
 
 ## 16. Hur begär jag en I/O Runtime-testlicens?
 
-Du kan begära en testlicens för att använda I/O Runtime [här](https://adobeio.typeform.com/to/obqgRm).
+Du kan begära en testlicens för att använda I/O Runtime [här](https://developer.adobe.com/app-builder/trial/).

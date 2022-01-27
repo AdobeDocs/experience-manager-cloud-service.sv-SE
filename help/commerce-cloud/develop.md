@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 exl-id: 6f28a52b-52f8-4b30-95cd-0f9cb521de62
-source-git-commit: 3e2e7fa875e17235b4e47083b564882bb4950d0d
+source-git-commit: 3778ed83453ab3e1e01e662a43d4f86988da1668
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1004'
 ht-degree: 4%
 
 ---
@@ -68,25 +68,25 @@ För lokal utveckling av CIF-tillägg med AEM as a Cloud Service SDK:
 
    CIF-tilläggsfilen för zip-filen innehåller två Sling-funktionsarkiv `.far` filer. Se till att använda rätt för AEM Author eller AEM Publish, beroende på hur du tänker köra den lokala AEM as a Cloud Service SDK:n.
 
-1. Skapa en lokal systemmiljövariabel med namnet `COMMERCE_ENDPOINT` håller Magento GraphQL-slutpunkten.
+1. Skapa en lokal systemmiljövariabel med namnet `COMMERCE_ENDPOINT` håller Adobe Commerce GraphQL-slutpunkten.
 
    Exempel på Mac OSX:
 
    ```bash
-   export COMMERCE_ENDPOINT=https://<yourmagentosystem>/graphql
+   export COMMERCE_ENDPOINT=https://<yourcommercesystem>/graphql
    ```
 
    Exempelfönster:
 
    ```bash
-   set COMMERCE_ENDPOINT=https://<yourmagentosystem>/graphql
+   set COMMERCE_ENDPOINT=https://<yourcommercesystem>/graphql
    ```
 
    Den här variabeln används av AEM för att ansluta till ditt handelssystem. Dessutom innehåller CIF-tillägget en lokal omvänd proxy som gör Commerce GraphQL-slutpunkten tillgänglig lokalt. Detta används av CIF-redigeringsverktygen (produktkonsol och väljare) och för CIF-komponenter på klientsidan som gör direkta GraphQL-anrop.
 
    Den här variabeln måste även ställas in för den AEM as a Cloud Service miljön. Mer information om variabler finns i [Konfigurera OSGi för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development).
 
-1. (Valfritt) Om du vill aktivera mellanlagrade katalogfunktioner måste du skapa en integreringstoken för din Magento-instans. Följ stegen på [Komma igång](./getting-started.md#staging) för att skapa token.
+1. (Valfritt) Om du vill aktivera funktioner för mellanlagrade kataloger måste du skapa en integreringstoken för din Adobe Commerce-instans. Följ stegen på [Komma igång](./getting-started.md#staging) för att skapa token.
 
    Ange en OSGi-hemlighet med namnet `COMMERCE_AUTH_HEADER` till följande värde:
 

@@ -11,16 +11,16 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
-source-git-commit: a30006b7eedbe2bc6993f47b7e8433af6df17a07
+source-git-commit: 05a412519a2d2d0cba0a36c658b8fed95e59a0f7
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2598'
 ht-degree: 0%
 
 ---
 
 # Anpassa AEM CIF-kärnkomponenter {#customize-cif-components}
 
-The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen kommer du att utöka [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Magento. Du får också lära dig mer om GraphQL-integreringen mellan AEM och Magento och de tilläggskopplingar som finns i CIF Core Components.
+The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen kommer du att utöka [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du får också lära dig mer om GraphQL-integreringen mellan AEM och Adobe Commerce och de tilläggskopplingar som finns i CIF Core Components.
 
 >[!TIP]
 >
@@ -28,13 +28,13 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 ## Vad du ska bygga
 
-Varumärket Venia började nyligen tillverka vissa produkter med hjälp av hållbara material och företaget skulle vilja visa en **Miljövänlig** som en del av Product Teaser. Ett nytt anpassat attribut skapas i Magento för att ange om en produkt använder **Miljövänlig** material. Det här anpassade attributet läggs sedan till som en del av GraphQL-frågan och visas i Product Teaser för angivna produkter.
+Varumärket Venia började nyligen tillverka vissa produkter med hjälp av hållbara material och företaget skulle vilja visa en **Miljövänlig** som en del av Product Teaser. Ett nytt anpassat attribut skapas i Adobe Commerce för att ange om en produkt använder **Miljövänlig** material. Det här anpassade attributet läggs sedan till som en del av GraphQL-frågan och visas i Product Teaser för angivna produkter.
 
 ![Slutlig implementering av miljöanpassade märken](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
 ## Förutsättningar {#prerequisites}
 
-Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudiekursen. Detta inkluderar en instans av AEM som körs och som är konfigurerad och ansluten till en Magento-instans. Granska kraven och stegen för [konfigurera en lokal utveckling med AEM as a Cloud Service SDK](../develop.md). Om du vill följa självstudiekursen fullständigt måste du ha behörighet att lägga till [Attribut till en produkt](https://docs.magento.com/user-guide/catalog/product-attributes-add.html) i Magento.
+Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudiekursen. Detta inkluderar en instans av AEM som körs och som är konfigurerad och ansluten till en Adobe Commerce-instans. Granska kraven och stegen för [konfigurera en lokal utveckling med AEM as a Cloud Service SDK](../develop.md). Om du vill följa självstudiekursen fullständigt måste du ha behörighet att lägga till [Attribut till en produkt](https://docs.magento.com/user-guide/catalog/product-attributes-add.html) i Adobe Commerce.
 
 Du behöver också GraphQL IDE, till exempel [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det går att ange begäranrubriker. På Google Chrome [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) är ett tillägg som kan utföra jobbet.
 
@@ -59,11 +59,11 @@ Vi klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
    $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
-1. Lägg till nödvändiga OSGi-konfigurationer för att ansluta AEM till en Magento-instans eller lägga till konfigurationerna i det nyskapade projektet.
+1. Lägg till nödvändiga OSGi-konfigurationer för att ansluta AEM till en Adobe Commerce-instans eller lägga till konfigurationerna i det nyskapade projektet.
 
-1. Nu bör du ha en fungerande version av en storefront som är ansluten till en Magento-instans. Navigera till `US` > `Home` sida vid: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
+1. Nu bör du ha en fungerande version av en storefront som är ansluten till en Adobe Commerce-instans. Navigera till `US` > `Home` sida vid: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
 
-   Du ser att butiken för närvarande använder temat Venia. När du expanderar huvudmenyn för butiken bör du se olika kategorier som anger att anslutningen Magento fungerar.
+   Du ser att butiken för närvarande använder temat Venia. När du expanderar huvudmenyn för butiken bör du se olika kategorier som anger att anslutningen till Adobe Commerce fungerar.
 
    ![Storefront konfigurerat med Venia-tema](../assets/customize-cif-components/venia-store-configured.png)
 
@@ -77,7 +77,7 @@ Product Teaser Component kommer att byggas ut genom hela kursen. Som ett första
 
    ![Insert Product Teaser](../assets/customize-cif-components/product-teaser-add-component.png)
 
-3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för resurssökning **Produkter**. Här visas en lista över tillgängliga produkter från en ansluten Magento-instans. Välj en produkt och **dra och släpp** på **Product Teaser** på sidan.
+3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för resurssökning **Produkter**. Här visas en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** på **Product Teaser** på sidan.
 
    ![Dra och släpp Product Teaser](../assets/customize-cif-components/drag-drop-product-teaser.png)
 
@@ -89,15 +89,15 @@ Product Teaser Component kommer att byggas ut genom hela kursen. Som ett första
 
    ![Product Teaser - standardstil](../assets/customize-cif-components/product-teaser-default-style.png)
 
-## Lägg till ett anpassat attribut i Magento {#add-custom-attribute}
+## Lägg till ett anpassat attribut i Adobe Commerce {#add-custom-attribute}
 
-De produkter och produktdata som visas i AEM lagras i Magento. Lägg sedan till ett nytt attribut för **Miljövänlig** som en del av produktattributet som anges med användargränssnittet i Magento.
+De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg sedan till ett nytt attribut för **Miljövänlig** som en del av produktattributet som anges med Adobe Commerce användargränssnitt.
 
 >[!TIP]
 >
 > Har redan en anpassad **Ja/Nej** som en del av din produktattributuppsättning? Du kan använda den och hoppa över det här avsnittet.
 
-1. Logga in på din Magento-instans.
+1. Logga in på din Adobe Commerce-instans.
 1. Navigera till **Katalog** > **Produkter**.
 1. Uppdatera sökfiltret för att hitta **Konfigurerbar produkt** används när de läggs till Teaser-komponenten i föregående övning. Öppna produkten i redigeringsläge.
 
@@ -124,24 +124,24 @@ De produkter och produktdata som visas i AEM lagras i Magento. Lägg sedan till 
 
    >[!TIP]
    >
-   > Mer information om hantering [Produktattribut finns i användarhandboken för Magento](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html).
+   > Mer information om hantering [Produktattribut finns i användarhandboken för Adobe Commerce](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html).
 
-1. Navigera till **System** > **verktyg** > **Cachehantering**. Eftersom en uppdatering av dataschemat har gjorts måste vissa cachetyper i Magento ogiltigförklaras.
+1. Navigera till **System** > **verktyg** > **Cachehantering**. Eftersom en uppdatering har gjorts av dataschemat måste vissa cachetyper i Adobe Commerce göras ogiltiga.
 1. Markera rutan bredvid **Konfiguration** och skicka cachetypen för **Uppdatera**
 
    ![Uppdatera cachetyp för konfiguration](../assets/customize-cif-components/refresh-configuration-cache-type.png)
 
    >[!TIP]
    >
-   > Mer information om [Cachehantering finns i användarhandboken för Magento](https://docs.magento.com/user-guide/system/cache-management.html).
+   > Mer information om [Cachehantering finns i användarhandboken för Adobe Commerce](https://docs.magento.com/user-guide/system/cache-management.html).
 
 ## Använd en GraphQL IDE för att verifiera attribut {#use-graphql-ide}
 
-Innan du börjar använda AEM kod är det praktiskt att utforska [Magento GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) med GraphQL IDE. Integreringen med AEM i Magento görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF Core-komponenterna.
+Innan du börjar använda AEM kod är det praktiskt att utforska [GraphQL - översikt](https://devdocs.magento.com/guides/v2.4/graphql/) med GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF Core-komponenterna.
 
 Använd sedan en GraphQL IDE för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
 
-1. Öppna GraphQL IDE och ange URL:en `http://<magento-server>/graphql` i URL-fältet för den utvecklingsmiljö eller det tillägg du använder.
+1. Öppna GraphQL IDE och ange URL:en `http://<commerce-server>/graphql` i URL-fältet för den utvecklingsmiljö eller det tillägg du använder.
 2. Lägg till följande [produktfråga](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html) där `YOUR_SKU` är **SKU** av den produkt som använts i föregående undersökning:
 
    ```json
@@ -182,7 +182,7 @@ Använd sedan en GraphQL IDE för att verifiera att `eco_friendly` har lagts til
 
    >[!TIP]
    >
-   > Mer detaljerad dokumentation om [Magento GraphQL finns här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
+   > Mer detaljerad dokumentation om [Adobe Commerce GraphQL finns här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
 ## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
@@ -285,7 +285,7 @@ Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/
 
    Lägga till i `extendProductQueryWith` är ett kraftfullt sätt att säkerställa att ytterligare produktattribut är tillgängliga för resten av modellen. Det minimerar även antalet frågor som körs.
 
-   I ovanstående kod`addCustomSimpleField` används för att hämta `eco_friendly` -attribut. Detta visar hur du kan söka efter anpassade attribut som ingår i Magento-schemat.
+   I ovanstående kod`addCustomSimpleField` används för att hämta `eco_friendly` -attribut. Detta visar hur du kan söka efter anpassade attribut som ingår i Adobe Commerce-schemat.
 
    >[!NOTE]
    >

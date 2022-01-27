@@ -2,9 +2,9 @@
 title: Cachelagring och prestanda
 description: Lär dig mer om de olika konfigurationer som är tillgängliga för att aktivera GraphQL och innehållscachning för att optimera prestanda för implementeringen av din e-handel.
 exl-id: 21ccdab8-4a2d-49ce-8700-2cbe129debc6,8b969821-5073-4540-a997-95c74a11e4f0
-source-git-commit: 11ad29835688b5a6f79ee16760cc03a6ee82d6a3
+source-git-commit: 05a412519a2d2d0cba0a36c658b8fed95e59a0f7
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ När cachen har konfigurerats för en viss komponent börjar GraphQL-frågor och
 
 När cachelagring konfigureras för komponenter måste cachenamnet vara namnet på **proxy** komponenter som du definierar i ditt projekt.
 
-Innan klienten skickar en GraphQL-begäran kommer den att kontrollera om det **exakt** samma GraphQL-begäran är redan cachelagrad och returnerar eventuellt det cachelagrade svaret. För att matcha måste GraphQL-begäran matcha exakt, d.v.s. frågan, åtgärdsnamnet (om det finns något), variablerna (om sådana finns) MÅSTE alla vara lika med den cachelagrade begäran, och alla anpassade HTTP-rubriker som kan anges MÅSTE också vara desamma. Magento `Store` sidhuvudet MÅSTE matcha.
+Innan klienten skickar en GraphQL-begäran kommer den att kontrollera om det **exakt** samma GraphQL-begäran är redan cachelagrad och returnerar eventuellt det cachelagrade svaret. För att matcha måste GraphQL-begäran matcha exakt, d.v.s. frågan, åtgärdsnamnet (om det finns något), variablerna (om sådana finns) MÅSTE alla vara lika med den cachelagrade begäran, och alla anpassade HTTP-rubriker som kan anges MÅSTE också vara desamma. Adobe Commerce `Store` sidhuvudet MÅSTE matcha.
 
 ### Exempel {#examples}
 
@@ -49,7 +49,7 @@ Cachelagring för andra komponenter bör definieras på projektbasis, vanligtvis
 
 Cachelagra AEM sidor eller fragment i [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är den bästa metoden för alla AEM projekt. Oftast bygger det på invalideringstekniker som säkerställer att allt innehåll som ändras i AEM uppdateras korrekt i Dispatcher. Detta är en viktig egenskap i AEM Dispatcher-cachningsstrategi.
 
-Förutom rent AEM hanterat innehåll-CIF kan en sida vanligtvis visa handelsdata som hämtas dynamiskt från Magento via GraphQL. Även om sidstrukturen i sig kanske aldrig ändras kan e-handelsinnehållet ändras, till exempel om vissa produktdata (namn, pris, osv.) förändringar i Magento.
+Förutom rent AEM hanterat innehåll-CIF kan en sida vanligtvis visa e-handelsdata som hämtas dynamiskt från Adobe Commerce via GraphQL. Även om sidstrukturen i sig kanske aldrig ändras kan e-handelsinnehållet ändras, till exempel om vissa produktdata (namn, pris, osv.) förändringar i Adobe Commerce.
 
 För att CIF-sidor ska kunna cachelagras under en begränsad tid i AEM dispatcher rekommenderar vi därför att du använder [Invalidering av tidsbaserad cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl) (kallas även TTL-baserad cachelagring) när CIF-sidor cachelagras i AEM Dispatcher. Den här funktionen kan konfigureras i AEM med den extra [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) paket.
 
