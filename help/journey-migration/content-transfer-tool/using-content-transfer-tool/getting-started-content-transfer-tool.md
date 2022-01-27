@@ -1,9 +1,9 @@
 ---
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
-source-git-commit: a6d225943c5d23ebd960fda0b0912a81f1f80014
+source-git-commit: bec7e01a6f192a9b65a038b2e990c2c285743793
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '859'
 ht-degree: 25%
 
 ---
@@ -88,7 +88,7 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
    1. **Access Token**: Ange åtkomsttoken.
 
       >[!NOTE]
-      >Du kan hämta åtkomsttoken med **Öppen åtkomsttoken** -knappen. Du måste kontrollera att du tillhör gruppen AEM administratörer i målinstansen av Cloud Service.
+      >Du kan hämta åtkomsttoken med **Öppen åtkomsttoken** -knappen. Du måste kontrollera att du tillhör gruppen Administratörer i målserverinstansen.
 
    1. **Parameters**: Välj följande parametrar för att skapa migreringsuppsättningen:
 

@@ -1,13 +1,13 @@
 ---
 title: Utvecklarreferenser för [!DNL Assets]
-description: '[!DNL Assets] APIs and developer reference content lets you manage assets, including binary files, metadata, renditions, comments, and [!DNL Content Fragments].'
+description: '[!DNL Assets] Med API:er och referensinnehåll för utvecklare kan du hantera resurser, inklusive binära filer, metadata, återgivningar, kommentarer och [!DNL Content Fragments].'
 contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: bd00cd19852affd24d732c15b03dbf8248f2ff38
+source-git-commit: 2f0521831383c11e1edee8c5d719ec42f7bcfd5e
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1444'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 | x | Stöds inte. Skall ej användas. |
 | - | Inte tillgängligt |
 
-| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [Experience Manager / Sling / JCR](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) Java API:er | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html) servlets | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) _(Förhandsgranska)_ |
+| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [Experience Manager / Sling / JCR](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) Java API:er | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html) servlets | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) |
 | ----------------|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Ursprunglig binär** |  |  |  |  |  |  |
 | Skapa original | ✓ | x | - | x | x | - |
