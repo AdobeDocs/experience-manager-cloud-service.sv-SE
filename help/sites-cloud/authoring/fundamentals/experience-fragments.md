@@ -2,9 +2,9 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 229e2d8252a9efe1e303e926bde6719387833fa9
+source-git-commit: 848c0090565db7a93243c7215ef159204597360e
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1494'
 ht-degree: 7%
 
 ---
@@ -353,6 +353,4 @@ Använda `.plain.` -väljaren i URL-adressen kan du komma åt den vanliga HTML-�
 
 Som standard levereras Experience Fragments i HTML-format. Detta kan användas av både AEM och tredjepartskanaler.
 
-För export till Adobe Target, se [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
-
-<!--For export to Adobe Target, JSON can also be used. See [Target Integration with Experience Fragments](/help/sites-administering/experience-fragments-target.md) for full information.-->
+För export till Adobe Target, se [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md). JSON kan också användas, se [Målintegrering med upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments-target.md).
