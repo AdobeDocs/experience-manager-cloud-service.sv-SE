@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: b9829a033b99da10217ede18b1591e4bb04762c0
+source-git-commit: 265999e5e92fc7b0f78f41bee4545ca6cee618a5
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1547'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,8 @@ I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i ställe
 
 ### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
 
-Precis som i tidigare versioner av AEM rensas innehållet från dispatcherns cache när du publicerar eller avpublicerar sidor. Om ett problem med cachning misstänks bör kunderna publicera om sidorna i fråga.
+Precis som i tidigare versioner av AEM rensas innehållet från dispatcherns cache när du publicerar eller avpublicerar sidor. Om ett problem med cachelagring misstänks bör kunderna publicera om sidorna i fråga och se till att det finns en virtuell värd som matchar den lokala värden för ServerAlias, vilket krävs för att inaktivera dispatchercachen.
+
 
 När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatchercachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilernivå](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level).
 
