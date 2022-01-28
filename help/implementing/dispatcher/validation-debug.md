@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 5a586e99febac6ee2f0f566e508028812bf89372
+source-git-commit: 7306afb0ff2e84077673bbd9c728028e0933ebb1
 workflow-type: tm+mt
-source-wordcount: '2433'
+source-wordcount: '2432'
 ht-degree: 1%
 
 ---
@@ -127,7 +127,7 @@ Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer 
 
 Innehåller ett exempel på en virtuell värd. Skapa en kopia av den här filen för din egen virtuella värd, anpassa den, gå till `conf.d/enabled_vhosts` och skapa en symbolisk länk till en egen kopia.
 
-Kontrollera att det alltid finns en virtuell värd som matchar ServerAlias &quot;\*.local&quot; och även localhost, som behövs för interna Adobe-processer.
+Kontrollera att det alltid finns ett virtuellt värdsystem som matchar ServerAlias `\*.local` och även localhost, som behövs för interna Adobe-processer.
 
 * `conf.d/dispatcher_vhost.conf`
 
