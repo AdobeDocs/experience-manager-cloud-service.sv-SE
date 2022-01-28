@@ -1,9 +1,9 @@
 ---
 title: 'Använda anpassade teckensnitt '
 description: 'Använda anpassade teckensnitt '
-source-git-commit: 10fe582edc8ffc93ea3f8564a64259882bba1d6f
+source-git-commit: f435751c9c4da8aa90ad0c6705476466bde33afc
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Du kan använda Forms as a Cloud Service Communications för att kombinera en XD
 
 Du kan [bädda in ett teckensnitt](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/sync/#tag/PDFOutputOptions) till ett PDF-dokument. När ett teckensnitt är inbäddat visas PDF-dokumentet (Looks) identiskt på alla plattformar. Det har använt inbäddade teckensnitt för att få ett konsekvent utseende och känsla. När ett teckensnitt inte är inbäddat beror teckensnittsåtergivningen på återgivningsinställningarna för PDF-visningsprogrammet. Om teckensnittet är tillgängligt på klientdatorn använder PDF det angivna teckensnittet, annars återges PDF med ett reservteckensnitt.
 
-## Lägga till anpassade teckensnitt i din as a Cloud Service Forms-miljö
+## Lägga till anpassade teckensnitt i din as a Cloud Service Forms-miljö {#custom-fonts-cloud-service}
 
 Så här lägger du till anpassade teckensnitt i Cloud Servicen:
 
-1. Konfigurera och öppna det lokala utvecklingsprojektet. Du kan använda vilken IDE som helst.
+1. Konfigurera och öppna [lokalt utvecklingsprojekt](setup-local-development-environment.md). Du kan använda vilken IDE som helst.
 1. I mappstrukturen på den översta nivån i projektet skapar du en mapp där du kan spara anpassade teckensnitt och lägga till anpassade teckensnitt i mappen. Till exempel typsnitt/src/main/resources
    ![Mappen Teckensnitt](assets/fonts.png)
 
@@ -71,3 +71,21 @@ Så här lägger du till anpassade teckensnitt i Cloud Servicen:
    ```
 
 1. Checka in den uppdaterade koden och [köra pipeline](/help/implementing/cloud-manager/deploy-code.md) för att distribuera teckensnitten i Cloud Servicen.
+
+1. Öppna kommandotolken, navigera till den lokala projektmappen och kör kommandot nedan. Ett paket med teckensnitten skapas i en .jar-fil. Du kan använda .jar-filen för den lokala distributionen av projektet.
+
+```shell
+mvn clean install
+```
+
+## Lägga till anpassade teckensnitt i den lokala Forms Cloud Service-utvecklingsmiljön {#custom-fonts-cloud-service-sdk}
+
+1. Starta den lokala utvecklingsmiljön.
+1. Navigera till [crx-databas]\installationsmapp
+1. Placera .jar-filen som innehåller anpassade teckensnitt och tillhörande distributionskod i installationsmappen. Om du inte har .jar-filen följer du anvisningarna i [Lägga till anpassade teckensnitt i din as a Cloud Service Forms-miljö](#custom-fonts-cloud-service) för att generera filen.
+1. Kör [Dörrbaserad SDK-miljö](setup-local-development-environment.md#docker-microservices)
+
+
+   >[!NOTE]
+   >
+   >När du distribuerar en uppdaterad .jar-fil för att lägga till eller ta bort anpassade teckensnitt i den lokala driftsättningsmiljön ska du stoppa och starta den dockningsbaserade SDK-miljön.

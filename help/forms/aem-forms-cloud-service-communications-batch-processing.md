@@ -2,9 +2,9 @@
 title: Experience Manager [!DNL Forms] Batchbearbetning av as a Cloud Service Communications
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: d136062ed0851b89f954e5485c2cfac64afeda2d
+source-git-commit: f435751c9c4da8aa90ad0c6705476466bde33afc
 workflow-type: tm+mt
-source-wordcount: '2297'
+source-wordcount: '2250'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ Kommunikationen tillhandahåller API:er för on demand- och schemalagd dokumentg
 
 En gruppåtgärd är en process för att generera flera dokument av liknande typ för en uppsättning poster med schemalagda intervall. En gruppåtgärd består av två delar: Konfiguration (definition) och körning.
 
-* **Konfiguration (definition)**: I en batchkonfiguration lagras information om olika resurser och egenskaper som ska anges för genererade dokument. Det innehåller till exempel information om XDP- eller PDF-mallen och platsen för kunddata som ska användas tillsammans med att ange olika egenskaper för utdata-PDF-dokument.
+* **Konfiguration (definition)**: I en batchkonfiguration lagras information om olika resurser och egenskaper som ska anges för genererade dokument. Det innehåller till exempel information om XDP- eller PDF-mallen och platsen för kunddata som ska användas tillsammans med att ange olika egenskaper för utdatadokument.
 
-* **Körning**: Om du vill starta en gruppåtgärd anger du körningen och skickar gruppkonfigurationsnamnet till API:t för batchkörning.
+* **Körning**: Om du vill starta en gruppåtgärd skickar du gruppkonfigurationsnamnet till API:t för batchkörning.
 
 ### Komponenter i en gruppåtgärd {#components-of-a-batch-operations}
 
@@ -42,7 +42,7 @@ En gruppåtgärd är en process för att generera flera dokument av liknande typ
 
 **Konfiguration av batchdatalager (USC)**: Med batchdatakonfigurationen kan du konfigurera en specifik instans av Blob Storage för API:er för grupper. Här kan du ange in- och utdataplatser i kundägd Microsoft Azure Blob-lagring.
 
-**Grupp-API:er**: Gör att du kan skapa en gruppkonfiguration och köra batchkörningar baserat på dessa konfigurationer för att skapa och köra en batchåtgärd för att sammanfoga en PDF- eller XDP-mall med data och generera utdata i formaten PDF, PS, PCL, DPL, IPL och ZPL. Kommunikationen innehåller batch-API:er för att skapa, läsa, uppdatera och ta bort åtgärder.
+**Grupp-API:er**: Gör att du kan skapa en gruppkonfiguration och köra batchkörningar baserat på dessa konfigurationer för att sammanfoga en PDF- eller XDP-mall med data och generera utdata i formaten PDF, PS, PCL, DPL, IPL och ZPL. Kommunikationen innehåller batch-API:er för konfigurationshantering och batchkörning.
 
 ![data-merge-table](assets/communications-batch-structure.png)
 
@@ -125,12 +125,11 @@ Om du vill använda ett batch-API skapar du en batchkonfiguration och kör en k�
 
 ### Skapa en batch {#create-a-batch}
 
-Om du vill skapa en grupp använder du `GET /config` API. Inkludera följande obligatoriska egenskaper i HTTP-begärans innehåll:
-
+Om du vill skapa en grupp använder du `POST /config` API. Inkludera följande obligatoriska egenskaper i HTTP-begärans innehåll:
 
 * **configName**: Ange gruppens unika namn. Till exempel, `wknd-job`
 * **dataSourceConfigUri**: Ange plats för konfigurationen för batchdatalagret. Den kan vara en relativ eller absolut sökväg till konfigurationen. Till exempel: `/conf/global/settings/forms/usc/batch/wknd-batch`
-* **outputTypes**: Ange utdataformat: PDF eller TRYCK. Om du använder utdatatypen PRINT, `printedOutputOptionsList` anger du minst ett utskriftsalternativ. Utskriftsalternativen identifieras av sin renderingstyp, så för närvarande tillåts inte flera utskriftsalternativ med samma renderingstyp. De format som stöds är PS, PCL, DPL, IPL och ZPL.
+* **outputTypes**: Ange utdataformat: PDF och TRYCK. Om du använder utdatatypen PRINT, `printedOutputOptionsList` anger du minst ett utskriftsalternativ. Utskriftsalternativen identifieras av sin renderingstyp, så för närvarande tillåts inte flera utskriftsalternativ med samma renderingstyp. De format som stöds är PS, PCL, DPL, IPL och ZPL.
 
 * **mall**: Ange en absolut eller relativ sökväg för mallen. Till exempel, `crx:///content/dam/formsanddocuments/wknd/statements.xdp`
 
@@ -138,7 +137,7 @@ Om du anger en relativ sökväg anger du även en innehållsrot. Mer information
 
 <!-- For example, you include the following JSON in the body of HTTP APIs to create a batch named wknd-job: -->
 
-När du har skapat en grupp kan du använda `GET /config /[configName]/execution/[execution-identifier]` om du vill se information om gruppen.
+Du kan använda `GET /config /[configName]` för att se information om batchkonfigurationen.
 
 ### Kör en batch {#run-a-batch}
 
@@ -150,14 +149,14 @@ Om du vill köra (köra) en batch använder du `POST /config /[configName]/execu
 
 ### Kontrollera status för en batch {#status-of-a-batch}
 
-Om du vill hämta status för en batch använder du `GET /config /[configName]/execution/[execution-identifier]`. Körnings-ID:t inkluderas i rubriken för HTTP-svar för gruppkörningsbegäran.  Följande bild visar till exempel körningsidentifieraren för ett batchjobb.
+Om du vill hämta status för en batch använder du `GET /config /[configName]/execution/[execution-identifier]`. Körnings-ID:t inkluderas i rubriken för HTTP-svar för gruppkörningsbegäran.
 
 Svaret på statusbegäran innehåller statusavsnittet. Den innehåller information om batchjobbets status, antalet poster som redan är i pipeline (som redan har lästs och bearbetats) och status för varje outputType/renderType(antal pågående, slutförda och misslyckade objekt). Status omfattar även start- och sluttid för batchjobb tillsammans med information om eventuella fel. Sluttiden är -1 tills batchkörningen faktiskt har slutförts.
 
 >[!NOTE]
 >
 >* När du begär flera PRINT-format innehåller statusen flera poster. Exempel: PRINT/ZPL, PRINT/IPL.
->* Ett batchjobb läser inte alla poster samtidigt, utan jobbet fortsätter att läsa och öka antalet poster. Statusen returnerar alltså olika antal poster för varje körning.
+>* Ett batchjobb läser inte alla poster samtidigt, utan jobbet fortsätter att läsa och öka antalet poster. Statusen returnerar alltså -1 tills alla poster har lästs.
 
 
 ### Visa genererade dokument {#view-generated-documents}
@@ -224,8 +223,6 @@ Ett PDF-dokument som inte innehåller en XFA-ström kan inte återges som PostSc
 API-referensdokumentationen innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns i .yaml-format. Du kan ladda ned [Grupp-API:er](assets/batch-api.yaml) och ladda upp den till Postman för att kontrollera API:ernas funktionalitet.
 
 ## Kända fel {#known-issues}
-
-* Kontrollera att XML-datafilen inte innehåller XML-deklarationshuvudet. Till exempel, `<?xml version="1.0" encoding="UTF-8"?>`
 
 * När PRINT har angetts kan en viss återgivningstyp bara anges en gång i listan med utskriftsalternativ. Du kan t.ex. inte ha två utskriftsalternativ där var och en anger en PCL-renderingstyp.
 
