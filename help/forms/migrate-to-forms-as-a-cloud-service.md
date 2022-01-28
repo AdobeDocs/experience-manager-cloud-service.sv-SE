@@ -1,15 +1,15 @@
 ---
 title: Migrera från en AEM 6.5 Forms och AEM 6.4 Forms till [!DNL AEM Forms] as a Cloud Service miljö?
-description: Migrera från en [!DNL AEM Forms] On-Premise environment to [!DNL AEM Forms] as a Cloud Service miljö
+description: Migrera från en [!DNL AEM Forms] Lokal miljö till [!DNL AEM Forms] as a Cloud Service miljö
 contentOwner: khsingh
 feature: Adaptive Forms
 role: User, Developer
 level: Intermediate
 topic: Migration
 exl-id: 090e77ff-62ec-40cb-8263-58720f3b7558
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: ea9d8714dca0d30ba2ff33cef220c8b3f8b3c429
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1146'
 ht-degree: 1%
 
 ---
@@ -30,6 +30,10 @@ Du kan migrera dina adaptiva Forms, teman, mallar och molnkonfigurationer från 
 * (Endast för AEM 6.3 Forms eller en tidigare version som uppgraderats till AEM 6.4 Forms eller AEM 6.5 Forms) Adaptiv Forms baserad på färdiga mallar och teman som finns i AEM 6.3 Forms eller tidigare versioner stöds inte i [!DNL [!DNL AEM Forms]] as a Cloud Service.
 
 ## Förutsättningar {#prerequisites}
+
+* [Aktivera Forms - digital registrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/setting-up-program.html?#editing-program) för Forms Cloud Service och [köra pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html).
+
+![Resultat för torr körning](assets/enable-add-on.png)
 
 * I en Cloud Service-miljö fungerar migreringsverktyget tillsammans med verktyget för användarmappning och verktyget för innehållsöverföring. Migreringsverktyget gör [!DNL AEM Forms] resurser som är kompatibla med Cloud Service och innehållsöverföringsverktyget migrerar innehållet från [!DNL AEM Forms] miljö till [!DNL AEM] as a Cloud Service miljö. Läs om processen för migreringsverktyget innan du använder det [flytta till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/home.html). Processen har två verktyg:
    * [Verktyg för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration): Med verktyget för användarmappning kan du mappa dina användare med motsvarande Adobe IMS-användarkonton.
