@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 1c27862b64fff24f85f314502be467d18c9aa0f4
+source-git-commit: 68c9ae2c79fa3d328d31d8653db3ebc9bb9e575a
 workflow-type: tm+mt
-source-wordcount: '2222'
+source-wordcount: '2288'
 ht-degree: 2%
 
 ---
@@ -105,15 +105,34 @@ Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging O
 
 **Aktivera felsökningsloggnivån**
 
-Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
-Om du vill aktivera DEBUG-loggnivån anger du
+Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte. Om du vill aktivera DEBUG-loggnivån uppdaterar du följande egenskap till felsökningsläge.
 
-``` /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level ```
+`/libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level`
 
-egenskap som ska felsökas. Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom den genererar många loggar.
+Ange till exempel `/apps/<example>/config/org.apache.sling.commons.log.LogManager.factory.config~<example>.cfg.json` med följande värde.
+
+```json
+{
+   "org.apache.sling.commons.log.names": [
+      "com.example"
+   ],
+   "org.apache.sling.commons.log.level": "DEBUG",
+   "org.apache.sling.commons.log.file": "logs/error.log",
+   "org.apache.sling.commons.log.additiv": "false"
+}
+```
+
+Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom detta genererar många poster.
+
+Du kan ange diskreta loggnivåer för olika AEM miljöer med hjälp av OSGi-konfigurationsinriktning som baseras på körningsläge om det är önskvärt att alltid logga in `DEBUG` under utvecklingen. Till exempel:
+
+| Miljö | OSGi-konfigurationsplats via körningsläge | `org.apache.sling.commons.log.level` egenskapsvärde | | - | - | - | | Utveckling | /apps/example/config/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | FELSÖKNING | | Scen | /apps/example/config.stage/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | VARNING | | Produktion | /apps/example/config.prod/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | FEL |
+
 En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
-``` DEBUG 3 WebApp Panel: WebApp successfully deployed ```
+```text
+DEBUG 3 WebApp Panel: WebApp successfully deployed
+```
 
 Loggnivåerna är följande:
 
