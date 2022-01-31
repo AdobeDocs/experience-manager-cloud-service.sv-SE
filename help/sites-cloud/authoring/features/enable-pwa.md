@@ -1,14 +1,13 @@
 ---
 title: Aktivera progressiva webbprogramfunktioner
 description: AEM Sites gör det möjligt för innehållsförfattaren att aktivera progressiva webbprogramfunktioner för alla webbplatser genom enkel konfiguration istället för kodning.
-translation-type: tm+mt
-source-git-commit: f130fe34e5c57b9fc78697374a5a9772da3c4c17
+exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
+source-git-commit: 3910b47c5d25679d03409380d91afaa6ff5ab265
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera progressiva webbprogramfunktioner {#enabling-pwa}
 
@@ -24,34 +23,29 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 >* Support från ditt utvecklingsteam
 
 >
->
-Innan du använder den här funktionen bör du diskutera detta med utvecklingsteamet för att definiera det bästa sättet att utnyttja den i ditt projekt.
-
->[!NOTE]
->
->Funktionerna som beskrivs i det här dokumentet kommer att göras tillgängliga i [mars 2021-versionen av AEM som en Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html)
+>Innan du använder den här funktionen bör du diskutera detta med utvecklingsteamet för att definiera det bästa sättet att utnyttja den i ditt projekt.
 
 ## Introduktion {#introduction}
 
-[Progressiva webbappar (PWA) ](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) möjliggör engagerande appliknande upplevelser för AEM sajter genom att de kan lagras lokalt på användarens dator och vara tillgängliga offline. Användaren kan surfa på en webbplats när han/hon är på språng även om han/hon förlorar en internetanslutning. PWA tillåter sömlösa upplevelser även om nätverket förloras eller är instabilt.
+[Progressiva webbprogram (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) möjliggör engagerande appliknande upplevelser för AEM sajter genom att de kan lagras lokalt på användarens dator och vara tillgängliga offline. Användaren kan surfa på en webbplats när han/hon är på språng även om han/hon förlorar en internetanslutning. PWA tillåter sömlösa upplevelser även om nätverket förloras eller är instabilt.
 
-I stället för att kräva omkodning av webbplatsen kan en innehållsförfattare konfigurera PWA-egenskaper som en extra flik i [sidegenskaperna](/help/sites-cloud/authoring/fundamentals/page-properties.md) för en plats.
+I stället för att kräva omkodning av webbplatsen kan en innehållsförfattare konfigurera PWA-egenskaper som en extra flik i [sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md) för en webbplats.
 
-* När konfigurationen sparas eller publiceras utlöses en händelsehanterare som skriver ut [manifestfilerna](https://developer.mozilla.org/en-US/docs/Web/Manifest) och [servicearbetaren](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) som aktiverar PWA-funktioner på platsen.
+* När konfigurationen sparas eller publiceras utlöses en händelsehanterare som skriver ut [manifestfiler](https://developer.mozilla.org/en-US/docs/Web/Manifest) och [servicearbetare](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) som möjliggör funktioner i PWA på webbplatsen.
 * Samlingsmappningar upprätthålls också för att säkerställa att servicearbetaren hanteras från programmets rot för att aktivera proxinginnehåll som tillåter offlinefunktioner i appen.
 
 Med PWA har användaren en lokal kopia av webbplatsen, vilket ger en appliknande upplevelse även utan internetanslutning.
 
 >[!NOTE]
 >
->Progressiva webbprogram är en teknik som utvecklas och stöd för installation av lokala appar och andra funktioner [beror på vilken webbläsare du använder.](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installable_PWAs#Summary)
+>Progressiva webbprogram är en teknik som utvecklas och har stöd för installation av lokala appar och andra funktioner [beroende på vilken webbläsare du använder.](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installable_PWAs#Summary)
 
 ## Förutsättningar {#prerequisites}
 
 För att du ska kunna använda PWA-funktioner för din webbplats finns det två krav för din projektmiljö:
 
-1. [Använd Core ](#adjust-components) Components för att utnyttja den här funktionen
-1. [Justera ](#adjust-dispatcher) skickade regler för att visa de filer som behövs
+1. [Använd kärnkomponenter](#adjust-components) för att utnyttja den här funktionen
+1. [Justera din dispatcher](#adjust-dispatcher) regler för att visa de filer som krävs
 
 Detta är tekniska steg som författaren måste samordna med utvecklingsteamet. Dessa steg krävs bara en gång per plats.
 
@@ -61,7 +55,7 @@ Core Components version 2.15.0 och senare har fullt stöd för PWA-funktionerna 
 
 >[!NOTE]
 >
->Adobe rekommenderar inte att du använder PWA-funktionerna i anpassade komponenter eller komponenter som inte är [utökade från malmkomponenterna.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
+>Adobe rekommenderar inte att du använder PWA-funktionerna i anpassade komponenter eller komponenter som inte [utökas från kärnkomponenterna.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
 <!--
 Your components need to include the [manifest files](https://developer.mozilla.org/en-US/docs/Web/Manifest) and [service worker,](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) which supports the PWA features.
 
@@ -87,9 +81,9 @@ The developer will also need to add the following link to the `customfooterlibs.
 ```
 -->
 
-### Justera din Dispatcher {#adjust-dispatcher}
+### Justera utskickaren {#adjust-dispatcher}
 
-Funktionen PWA genererar och använder `/content/<sitename>/manifest.webmanifest`-filer. Som standard visar [dispatchern](/help/implementing/dispatcher/overview.md) inte sådana filer. För att dessa filer ska kunna visas måste utvecklaren lägga till följande konfiguration i platsprojektet.
+Funktionen PWA genererar och använder `/content/<sitename>/manifest.webmanifest` filer. Som standard [avsändare](/help/implementing/dispatcher/overview.md) sådana filer visas inte i . För att dessa filer ska kunna visas måste utvecklaren lägga till följande konfiguration i platsprojektet.
 
 ```text
 File location: [project directory]/dispatcher/src/conf.dispatcher.d/filters/filters.any >
@@ -98,7 +92,7 @@ File location: [project directory]/dispatcher/src/conf.dispatcher.d/filters/filt
 /0102 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
 ```
 
-Beroende på vilket projekt du arbetar med kanske du vill inkludera olika typer av tillägg till reglerna för omskrivning. Tillägget `webmanifest` kan vara användbart om du vill inkludera det i omskrivningsvillkoren när du introducerar en regel som döljer och omdirigerar begäranden till `/content/<projectName>`.
+Beroende på vilket projekt du arbetar med kanske du vill inkludera olika typer av tillägg till reglerna för omskrivning. The `webmanifest` tillägg kan vara användbart för att inkludera i omskrivningsvillkoren när du introducerar en regel som döljer och omdirigerar begäranden till `/content/<projectName>`.
 
 ```text
 RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.webmanifest)$
@@ -106,14 +100,14 @@ RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.webmanifest)$
 
 ## Aktivera PWA för din webbplats {#enabling-pwa-for-your-site}
 
-När [förutsättningarna](#prerequisites) är uppfyllda är det mycket enkelt för en innehållsförfattare att aktivera PWA-funktioner för en webbplats. Här följer en grundläggande beskrivning av hur du gör detta. Enskilda alternativ beskrivs i avsnittet [Detaljerade alternativ.](#detailed-options)
+Med [förutsättningarna](#prerequisites) är det mycket enkelt för en innehållsförfattare att aktivera PWA-funktioner för en webbplats. Här följer en grundläggande beskrivning av hur du gör detta. Enskilda alternativ beskrivs i avsnittet [Detaljerade alternativ.](#detailed-options)
 
 1. Logga in i AEM.
-1. Tryck eller klicka på **Navigering** -> **Platser** på huvudmenyn.
-1. Välj ditt webbplatsprojekt och tryck eller klicka på [**Egenskaper**](/help/sites-cloud/authoring/fundamentals/page-properties.md) eller använd snabbtangenten `p`.
-1. Välj fliken **Progressiv webbapp** och konfigurera tillämpliga egenskaper. Du vill åtminstone:
-   1. Markera alternativet **Aktivera PWA**.
-   1. Definiera **start-URL**.
+1. Tryck eller klicka på huvudmenyn **Navigering** -> **Webbplatser**.
+1. Välj ditt webbplatsprojekt och tryck eller klicka [**Egenskaper**](/help/sites-cloud/authoring/fundamentals/page-properties.md) eller använda snabbtangenten `p`.
+1. Välj **Progressiv webbapp** och konfigurera tillämpliga egenskaper. Du vill åtminstone:
+   1. Välj alternativet **Aktivera PWA**.
+   1. Definiera **Start-URL**.
 
       ![Aktivera PWA](../assets/pwa-enable.png)
 
@@ -131,15 +125,15 @@ När [förutsättningarna](#prerequisites) är uppfyllda är det mycket enkelt f
       ![Definiera offlinesökvägar för PWA](../assets/pwa-offline.png)
 
 
-1. Tryck eller klicka på **Spara och stäng**.
+1. Tryck eller klicka **Spara och stäng**.
 
-Platsen är nu konfigurerad och du kan [installera den som en lokal app.](#using-pwa-enabled-site)
+Din plats har nu konfigurerats och du kan [installera det som en lokal app.](#using-pwa-enabled-site)
 
 ## Använda din PWA-aktiverade webbplats {#using-pwa-enabled-site}
 
-Nu när du har [konfigurerat din webbplats för att stödja PWA](#enabling-pwa-for-your-site) kan du uppleva den själv.
+Nu när du har [konfigurerade din webbplats för stöd för PWA,](#enabling-pwa-for-your-site) kan du uppleva det själv.
 
-1. Gå till webbplatsen i en [webbläsare som stöds.](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installable_PWAs#Summary)
+1. Åtkomst till webbplatsen i en [webbläsare som stöds.](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installable_PWAs#Summary)
 1. En ny ikon visas i webbläsarens adressfält, vilket anger att webbplatsen kan installeras som en lokal app.
    * Ikonen kan variera beroende på webbläsaren och webbläsaren kan även visa ett meddelande (t.ex. en banderoll eller dialogruta) som anger att det går att installera som en lokal app.
 1. Installera programmet.
@@ -148,55 +142,55 @@ Nu när du har [konfigurerat din webbplats för att stödja PWA](#enabling-pwa-f
 
 ## Detaljerade alternativ {#detailed-options}
 
-Följande avsnitt innehåller mer information om de alternativ som är tillgängliga när du konfigurerar platsen för PWA.](#enabling-pwa-for-your-site)[
+I följande avsnitt beskrivs alternativen mer ingående när [konfigurerar webbplatsen för PWA.](#enabling-pwa-for-your-site)
 
 ### Konfigurera installerbar upplevelse {#configure-installable-experience}
 
 Med de här inställningarna kan din webbplats bete sig som ett systemspecifikt program genom att göra den installerbar på besökarens hemskärm och tillgänglig offline.
 
-* **Aktivera PWA**  - Det här är huvudreglaget för att aktivera PWA för webbplatsen.
-* **Start-URL**  - Detta är den  [rekommenderade start-](https://developer.mozilla.org/en-US/docs/Web/Manifest/start_url) URL:en som programmet öppnas när användaren läser in det lokalt installerade programmet.
+* **Aktivera PWA** - Det här är huvudväxeln för att aktivera PWA för webbplatsen.
+* **Start-URL** - Det här är [önskad start-URL](https://developer.mozilla.org/en-US/docs/Web/Manifest/start_url) som programmet öppnas när användaren läser in det lokalt installerade programmet.
    * Detta kan vara vilken sökväg som helst i innehållsstrukturen.
    * Detta behöver inte vara roten och är ofta en dedikerad välkomstsida för programmet.
    * Om den här URL:en är relativ används manifest-URL:en som bas-URL:en för att matcha den.
    * När funktionen är tom används adressen till webbsidan som webbappen installerades från.
    * Vi rekommenderar att du anger ett värde.
-* **Visningsläge**  - En app med stöd för PWA är fortfarande en AEM webbplats som levereras via en webbläsare. [Dessa ](https://developer.mozilla.org/en-US/docs/Web/Manifest/display) visningsalternativ definierar hur webbläsaren ska döljas eller på annat sätt visas för användaren på den lokala enheten.
-   * **Fristående**  - Webbläsaren är helt dold för användaren och ser ut som en inbyggd app. Detta är standardvärdet.
+* **Visningsläge** - En app med stöd för PWA är fortfarande en AEM webbplats som levereras via en webbläsare. [Dessa visningsalternativ](https://developer.mozilla.org/en-US/docs/Web/Manifest/display) definierar hur webbläsaren ska döljas eller på annat sätt visas för användaren på den lokala enheten.
+   * **Fristående** - Webbläsaren är helt dold för användaren och den ser ut som ett inbyggt program. Detta är standardvärdet.
       * Med det här alternativet måste appnavigering vara möjlig helt och hållet via ditt innehåll med hjälp av länkar och komponenter på webbplatsens sidor, utan att webbläsarens navigeringskontroller används.
-   * **Webbläsare**  - Webbläsaren ser ut som vanligt när du besöker webbplatsen.
-   * **Minimalt användargränssnitt**  - Webbläsaren är oftast dold, som ett systemspecifikt program, men grundläggande navigeringskontroller visas.
-   * **Helskärm**  - Webbläsaren är helt dold, som ett inbyggt program, men den återges i helskärmsläge.
+   * **Webbläsare** - Webbläsaren ser ut som vanligt när du besöker webbplatsen.
+   * **Minimalt användargränssnitt** - Webbläsaren är oftast dold, som ett inbyggt program, men grundläggande navigeringskontroller visas.
+   * **Helskärm** - Webbläsaren är helt dold, precis som ett inbyggt program, men återges i helskärmsläge.
       * Med det här alternativet måste appnavigering vara möjlig helt och hållet via ditt innehåll med hjälp av länkar och komponenter på webbplatsens sidor, utan att webbläsarens navigeringskontroller används.
-* **Skärmorientering**  - Som lokal app behöver PWA veta hur man hanterar  [enhetsorienteringar.](https://developer.mozilla.org/en-US/docs/Web/Manifest/orientation)
-   * **Valfritt**  - Appen justeras efter orienteringen för användarens enhet. Detta är standardvärdet.
-   * **Stående**  - Detta tvingar programmet att öppnas i stående format oavsett orientering för användarens enhet.
-   * **Liggande**  - Detta medför att programmet öppnas i liggande format oavsett orientering för användarens enhet.
-* **Temafärg**  - Detta definierar  [färgen på ](https://developer.mozilla.org/en-US/docs/Web/Manifest/theme_color) appen som påverkar hur den lokala användarens operativsystem visar det inbyggda verktygsfältet och navigeringskontrollerna. Beroende på webbläsaren kan det påverka andra presentationselement i programmet.
+* **Skärmorientering** - Som lokal app behöver PWA kunna hantera [enhetsorienteringar.](https://developer.mozilla.org/en-US/docs/Web/Manifest/orientation)
+   * **Alla** - Appen justeras efter orienteringen för användarens enhet. Detta är standardvärdet.
+   * **Stående** - Detta tvingar programmet att öppnas i stående format oavsett orientering för användarens enhet.
+   * **Liggande** - Detta tvingar programmet att öppnas i liggande format oavsett orientering för användarens enhet.
+* **Temafärg** - Detta definierar [appens färg](https://developer.mozilla.org/en-US/docs/Web/Manifest/theme_color) som påverkar hur den lokala användarens operativsystem visar det inbyggda verktygsfältet och navigeringskontrollerna. Beroende på webbläsaren kan det påverka andra presentationselement i programmet.
    * Använd popup-fönstret för färgbrunn för att välja en färg.
-   * Färgen kan också definieras med hex- eller RGB-värden.
-* **Bakgrundsfärg**  - Detta definierar  [bakgrundsfärgen för programmet, ](https://developer.mozilla.org/en-US/docs/Web/Manifest/background_color) som visas när programmet läses in.
+   * Färgen kan också definieras med hex- eller RGB-värde.
+* **Bakgrundsfärg** - Detta definierar [appens bakgrundsfärg,](https://developer.mozilla.org/en-US/docs/Web/Manifest/background_color) som visas när appen läses in.
    * Använd popup-fönstret för färgbrunn för att välja en färg.
-   * Färgen kan också definieras med hex- eller RGB-värden.
-   * I vissa webbläsare [skapas en välkomstskärm automatiskt](https://developer.mozilla.org/en-US/docs/Web/Manifest#Splash_screens) från programnamnet, bakgrundsfärgen och ikonen.
-* **Ikon**  - Detta definierar  [den ](https://developer.mozilla.org/en-US/docs/Web/Manifest/icons) ikon som representerar appen på användarens enhet.
+   * Färgen kan också definieras med hex- eller RGB-värde.
+   * Vissa webbläsare [skapa en startskärm automatiskt](https://developer.mozilla.org/en-US/docs/Web/Manifest#Splash_screens) från programnamnet, bakgrundsfärgen och ikonen.
+* **Ikon** - Detta definierar [ikonen](https://developer.mozilla.org/en-US/docs/Web/Manifest/icons) som representerar appen på användarens enhet.
    * Ikonen måste vara en PNG-fil med storleken 512x512 pixlar.
-   * Ikonen måste vara [lagrad i DAM.](/help/assets/overview.md)
+   * Ikonen måste vara [lagras i DAM.](/help/assets/overview.md)
 
 ### Cachehantering (avancerat) {#offline-configuration}
 
 Dessa inställningar gör delar av den här webbplatsen tillgängliga offline och lokalt på besökarens enhet. På så sätt kan du styra cacheminnet för webbprogrammet för att optimera nätverksförfrågningar och stödja offlineupplevelser.
 
-* **Cachelagringsstrategi och frekvens för innehållsuppdatering**  - Den här inställningen definierar cachningsmodellen för PWA.
-   * **Måttligt**  -  [Den här ](https://web.dev/stale-while-revalidate/) inställningen gäller de flesta webbplatser och är standardvärdet.
+* **Cachelagringsstrategi och uppdateringsfrekvens för innehåll** - Den här inställningen definierar cachningsmodellen för PWA.
+   * **Måttligt** - [Den här inställningen](https://web.dev/stale-while-revalidate/) är ett standardvärde för de flesta webbplatser.
       * Med den här inställningen läses det innehåll som först visas av användaren in från cacheminnet, och medan användaren konsumerar det innehållet kommer resten av innehållet i cacheminnet att omvalideras.
-   * **Ofta**  - Detta är fallet för webbplatser som behöver uppdateras mycket snabbt, till exempel auktionslokaler.
-      * Med den här inställningen söker programmet först efter det senaste innehållet via nätverket och om det inte är tillgängligt återgår det till den lokala cachen.
-   * **Sällan**  - Detta gäller webbplatser som är nästan statiska, t.ex. referenssidor.
+   * **Ofta** - Detta gäller webbplatser som behöver uppdateras mycket snabbt, till exempel auktionslokaler.
+      * Med den här inställningen söker programmet först efter det senaste innehållet via nätverket och om det inte är tillgängligt återgår det till det lokala cacheminnet.
+   * **Sällan** - Detta gäller för webbplatser som är nästan statiska, t.ex. referenssidor.
       * Med den här inställningen söker programmet först efter innehållet i cachen och om det inte är tillgängligt återställs det till nätverket för att hämta det.
-* **Förcachelagring**  av filer - Dessa filer som lagras på AEM sparas i den lokala webbläsarcachen när servicearbetaren installerar och innan de används. Detta garanterar att webbprogrammet fungerar fullt ut offline.
-* **Sökvägar omfattar**  - Nätverksbegäranden för de definierade sökvägarna fångas upp och det cachelagrade innehållet returneras i enlighet med den konfigurerade  **cachelagringsstrategin och frekvensen för innehållsuppdatering**.
-* **Cacheundantag**  - Dessa filer kommer aldrig att cachelagras oavsett inställningarna under  **Inkludering av filer före** cachelagring och  **sökväg**.
+* **Förcachelagring av filer** - Dessa filer som lagras på AEM sparas i den lokala webbläsarcachen när servicearbetaren installeras och innan de används. Detta garanterar att webbprogrammet fungerar fullt ut offline.
+* **Baninkluderingar** - Nätverksförfrågningar för de definierade sökvägarna fångas upp och cachelagrat innehåll returneras i enlighet med den konfigurerade **Cachelagringsstrategi och uppdateringsfrekvens för innehåll**.
+* **Cacheundantag** - Dessa filer kommer aldrig att cachelagras oavsett inställningarna under **Förcachelagring av filer** och **Inkluderingar av banor**.
 
 >[!TIP]
 >
@@ -225,7 +219,7 @@ Klientbibliotek levereras med en cacheväljare som har följande mönster `lc-<c
 
 Bildkomponenten för AEM Core Components avgör den översta delen av den bästa återgivningen som ska hämtas. Den här mekanismen innehåller också en tidsstämpel som motsvarar den senaste ändringstiden för resursen. Den här mekanismen komplicerar konfigurationen av förcache-minnet för PWA.
 
-När användaren konfigurerar pre-cache måste han/hon lista alla sökvägsvariationer som kan hämtas. Dessa variationer består av parametrar som kvalitet och bredd. Vi anmodar er att minska antalet av dessa variationer till högst tre - liten, medelstor, stor. Det kan du göra via dialogrutan för innehållsprincip i [bildkomponenten.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)
+När användaren konfigurerar pre-cache måste han/hon lista alla sökvägsvariationer som kan hämtas. Dessa variationer består av parametrar som kvalitet och bredd. Vi anmodar er att minska antalet av dessa variationer till högst tre - liten, medelstor, stor. Det kan du göra via dialogrutan för innehållspolicy i [Bildkomponent.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)
 
 Om den inte konfigureras noggrant kan minnes- och nätverkskonsumtionen påverka PWA prestanda negativt. Om du tänker skapa t.ex. 50 bilder framför varandra och har 3 bredder per bild, måste användaren som underhåller webbplatsen ha en lista med upp till 150 poster i PWA-avsnittet för förhandscache i sidegenskaperna.
 
