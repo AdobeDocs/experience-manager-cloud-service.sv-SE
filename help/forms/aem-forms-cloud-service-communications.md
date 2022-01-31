@@ -2,9 +2,9 @@
 title: AEM Forms as a Cloud Service - kommunikation
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: ed46b0be25dabcea69be29e54000a4eab55e2836
 workflow-type: tm+mt
-source-wordcount: '2369'
+source-wordcount: '2247'
 ht-degree: 0%
 
 ---
@@ -267,24 +267,8 @@ I följande tabell anges XCI-alternativ.
 | config/present/pdf/tagged | Styr om taggar ska tas med i utdatadokumentet för PDF. Taggar i PDF är ytterligare information som ingår i ett dokument för att visa dokumentets logiska struktur. Taggar underlättar hjälpmedelsanvändningen och formateringen. Ett sidnummer kan till exempel taggas som en artefakt så att skärmläsaren inte omsluter den mitt i texten. Även om märkord gör ett dokument mer användbart, ökar de även storleken på dokumentet och bearbetningstiden för att skapa det. |
 | config/present/pdf/version | Anger vilken version av PDF-dokument som ska genereras. |
 
-### Kända fel
-
-- Kontrollera att mallens och XCI-konfigurationsfilernas storlek är större än 16 kB.
-
-- Kontrollera att XML-datafilen inte innehåller XML-deklarationshuvudet. Till exempel, `<?xml version="1.0" encoding="UTF-8"?>`
-
-- För en gruppkonfiguration är det bara en instans av en kombination av värden av OutputType (PDF, PRINT) och RenderType(PostScript, PCL, IPL, ZPL, osv.) är tillåtet.
-
-- Ändra inte den USC-konfiguration/Azure Cloud-konfiguration för datakälla som används i en batchkonfiguration när batchen körs. Även efter körning, om det krävs någon uppdatering, skapar du en kopia av konfigurationen i stället för att uppdatera den som används i en befintlig batchkonfiguration.
-
-### Bästa praxis
-
-- Adobe rekommenderar att du använder blobbbehållarlagring för datafiler i molnregionen som används av AEM Cloud Service.
-
 <!-- Using API
 
  There are two main Communications APIs. The _generatePDFOutput_ generates PDFs, while the _generatePrintedOutput_ generates PostScript, ZPL, and PCL formats. These APIs are available as HTTP endpoints on your environment, both on author and publish instances. Since the publish instances are configured to scale faster than the author instances, it is recommended use these APIs via publish instances.
 
 The first parameter of both the operations accept the path and name of the template file (for example ExpenseClaim.xdp). You can specify a fully qualified path, reference path of your AEM Repository, or path of a binary file. The second parameter accepts an XML document that is merged with the template while generating the output document. -->
-
-

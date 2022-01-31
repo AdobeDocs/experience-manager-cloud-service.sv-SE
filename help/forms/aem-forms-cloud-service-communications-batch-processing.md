@@ -2,9 +2,9 @@
 title: Experience Manager [!DNL Forms] Batchbearbetning av as a Cloud Service Communications
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: f435751c9c4da8aa90ad0c6705476466bde33afc
+source-git-commit: ed46b0be25dabcea69be29e54000a4eab55e2836
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '1957'
 ht-degree: 0%
 
 ---
@@ -221,44 +221,3 @@ Ett PDF-dokument som inte innehåller en XFA-ström kan inte återges som PostSc
 ## API-referensdokumentation
 
 API-referensdokumentationen innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns i .yaml-format. Du kan ladda ned [Grupp-API:er](assets/batch-api.yaml) och ladda upp den till Postman för att kontrollera API:ernas funktionalitet.
-
-## Kända fel {#known-issues}
-
-* När PRINT har angetts kan en viss återgivningstyp bara anges en gång i listan med utskriftsalternativ. Du kan t.ex. inte ha två utskriftsalternativ där var och en anger en PCL-renderingstyp.
-
-* Ändra inte den USC-konfiguration/Azure Cloud-konfiguration för datakälla som används i en batchkonfiguration när batchen körs. Även efter körning, om det krävs någon uppdatering, skapar du en kopia av konfigurationen i stället för att uppdatera den som används i en befintlig batchkonfiguration.
-
-## Bästa praxis {#best-practices}
-
-* Adobe rekommenderar att du lagrar värddatafiler i blobbehållaren i molnregionen som används av Experience Manager Cloud Servicen.
-
-## Vanliga frågor {#faq}
-
-**Kan jag använda en bevakad mapp eller andra lagringsmekanismer för att lagra indata och utdata?**
-
-För tillfället kan du använda Microsoft Azure Storage för att spara indata och genererade dokument. Microsoft Azure-lagring ger olika alternativ för att [automatisera dataförflyttningar](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10).
-
-**Ingår ett Microsoft Azure Storage-konto i Experience Manager Forms Cloud Service-licensen?**
-
-Microsoft Azure Storage-kontot är oberoende av Experience Manager Forms Cloud Service-licensen.
-
-**Lagrar kommunikations-API:er data på Experience Manager Forms Cloud Service-servrar?**
-
-Indata och utdata sparas endast på Microsoft Azure Storage.
-
-**Finns bara API:er för kommunikation för Experience Manager Forms Cloud Service? Kan jag få liknande funktionalitet i en lokal miljö?**
-
-Du kan använda AEM Forms Output-tjänsten för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i PDF, PS-, PCL- och ZPL-format.
-
-Jämfört med en lokal miljö ger Cloud Servicen ytterligare fördelar med automatisk skalning och kostnadseffektivitet.
-
-<!--**Where is data processed?**
-
-**Who has access to data?**
-
-**Is data encrypted?**
-
-**Where is data hosted?** -->
-
-**Kan jag köra flera gruppåtgärder samtidigt?**
-Ja, du kan köra flera batchåtgärder samtidigt. Använd alltid olika käll- och målmappar för varje åtgärd för att undvika konflikter.

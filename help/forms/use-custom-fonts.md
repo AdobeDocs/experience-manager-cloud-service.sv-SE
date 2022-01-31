@@ -1,9 +1,9 @@
 ---
 title: 'Använda anpassade teckensnitt '
 description: 'Använda anpassade teckensnitt '
-source-git-commit: f435751c9c4da8aa90ad0c6705476466bde33afc
+source-git-commit: 0bfd75e517e03110d58575b21551d1d553fa36bf
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ Du kan [bädda in ett teckensnitt](https://adobedocs.github.io/experience-manage
 Så här lägger du till anpassade teckensnitt i Cloud Servicen:
 
 1. Konfigurera och öppna [lokalt utvecklingsprojekt](setup-local-development-environment.md). Du kan använda vilken IDE som helst.
-1. I mappstrukturen på den översta nivån i projektet skapar du en mapp där du kan spara anpassade teckensnitt och lägga till anpassade teckensnitt i mappen. Till exempel typsnitt/src/main/resources
+1. I mappstrukturen på den översta nivån i projektet skapar du en mapp (modul) där du kan spara anpassade teckensnitt och lägga till anpassade teckensnitt i mappen. Till exempel typsnitt/src/main/resources
    ![Mappen Teckensnitt](assets/fonts.png)
 
-1. Öppna filen pom.xml på den översta nivån i utvecklingsprojektet.
+1. Öppna filen pom.xml för teckensnittsmodulen i utvecklingsprojektet.
 1. Lägg till `<Font-Archive-Version>` manifest entry to the .pom file and set value of version to 1:
 
    ```xml
@@ -72,11 +72,11 @@ Så här lägger du till anpassade teckensnitt i Cloud Servicen:
 
 1. Checka in den uppdaterade koden och [köra pipeline](/help/implementing/cloud-manager/deploy-code.md) för att distribuera teckensnitten i Cloud Servicen.
 
-1. Öppna kommandotolken, navigera till den lokala projektmappen och kör kommandot nedan. Ett paket med teckensnitten skapas i en .jar-fil. Du kan använda .jar-filen för den lokala distributionen av projektet.
+1. (Valfritt) Öppna kommandotolken, navigera till den lokala projektmappen och kör kommandot nedan. Teckensnitten paketeras i en .jar-fil tillsammans med relevant information. Du kan använda .jar-filen för att lägga till anpassade teckensnitt i en lokal utvecklingsmiljö i Forms Cloud Service.
 
-```shell
-mvn clean install
-```
+   ```shell
+   mvn clean install
+   ```
 
 ## Lägga till anpassade teckensnitt i den lokala Forms Cloud Service-utvecklingsmiljön {#custom-fonts-cloud-service-sdk}
 
@@ -88,4 +88,4 @@ mvn clean install
 
    >[!NOTE]
    >
-   >När du distribuerar en uppdaterad .jar-fil för att lägga till eller ta bort anpassade teckensnitt i den lokala driftsättningsmiljön ska du stoppa och starta den dockningsbaserade SDK-miljön.
+   >När du distribuerar en uppdaterad .jar-fil med anpassade teckensnitt i den lokala driftsättningsmiljön startar du om den dockningsbaserade SDK-miljön.
