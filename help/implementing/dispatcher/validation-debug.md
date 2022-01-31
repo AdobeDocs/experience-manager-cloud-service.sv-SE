@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: ddc49ef1eed491a4464d17b6a47f924c42381e7f
+source-git-commit: dc25b243c2d64d735e553e7ea2fb990fb34cb4cb
 workflow-type: tm+mt
-source-wordcount: '2518'
+source-wordcount: '2508'
 ht-degree: 1%
 
 ---
@@ -442,7 +442,7 @@ I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik
 }
 ```
 
-Du kan också använda Cloud Manager-miljövariabler i din httpd/dispatcher-konfiguration. Den här metoden är särskilt viktig om ett program har flera dev-miljöer och vissa av dessa dev-miljöer har olika värden för httpd/dispatcher-konfigurationen. Samma ${VIRTUALHOST}-syntax används som i exemplet ovan, men Define-deklarationerna i ovanstående variabelfil används inte. Läs [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en) för instruktioner om hur du konfigurerar Cloud Manager-miljövariabler.
+Du kan också använda Cloud Manager-miljövariabler i din httpd/dispatcher-konfiguration. Den här metoden är särskilt viktig om ett program har flera dev-miljöer och vissa av dessa dev-miljöer har olika värden för httpd/dispatcher-konfigurationen. Samma ${VIRTUALHOST}-syntax används som i exemplet ovan, men Define-deklarationerna i ovanstående variabelfil används inte. Läs [Dokumentation för Cloud Manager](/help/implementing/cloud-manager/environment-variables.md) för instruktioner om hur du konfigurerar Cloud Manager-miljövariabler.
 
 När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till `docker_run.sh` skript direkt:
 
