@@ -3,9 +3,9 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager as a Cloud Service.
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: a7ae5e7bd9de4762e8f9a560e327b3f1358155b7
+source-git-commit: 446edfd83affb062585dca81052575b73c2e796f
 workflow-type: tm+mt
-source-wordcount: '3279'
+source-wordcount: '3199'
 ht-degree: 2%
 
 ---
@@ -115,14 +115,15 @@ To migrate any custom viewer presets and configurations that you have created fr
    >Det här inkorgsmeddelandet informerar dig om konfigurationen lyckades eller inte.
    > Se [Felsöka en ny Dynamic Media-konfiguration](#troubleshoot-dm-config) och [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) för mer information.
 
-1. För att på ett säkert sätt förhandsgranska Dynamic Media-innehåll innan det publiceras använder Experience Manager as a Cloud Service tokenbaserad validering som standard. Du kan även tillåtslista fler IP-adresser för att ge användarna tillgång till säkert förhandsgranskningsmaterial. Så här konfigurerar du den här åtgärden: <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
+1. För att på ett säkert sätt förhandsgranska Dynamic Media-innehåll innan det publiceras använder Experience Manager as a Cloud Service tokenbaserad validering och Experience Manager Author förhandsgranskar därmed Dynamic Media-innehåll som standard. Du kan dock *tillåtelselista* fler IP-adresser för att ge användarna tillgång till säkert förhandsgranskningsmaterial. Information om hur du konfigurerar den här åtgärden på Experience Manager as a Cloud Service finns i [Konfigurera Dynamic Media Publish Setup för Image Server - fliken Säkerhet](/help/assets/dynamic-media/dm-publish-settings.md#security-tab). <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
 
-   * Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
-   * I navigeringsfältet uppe till höger på sidan går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
-   * På sidan Image Server Publish (Image Server Publish) i **[!UICONTROL Publish Context]** nedrullningsbar lista, välja **[!UICONTROL Test Image Serving]**.
-   * För klientadressfiltret väljer du **[!UICONTROL Add]**.
-   * Om du vill aktivera (aktivera) adressen markerar du kryssrutan och anger IP-adressen för Experience Manager-författarinstansen (inte Dispatcher IP).
-   * Välj **[!UICONTROL Save]**.
+<!--
+    * Open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account. Your credentials and sign-in details were provided by Adobe at the time of provisioning. If you do not have this information, contact Adobe Customer Support.
+    * On the navigation bar near the upper right corner of the page, go to **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
+    * On the Image Server Publish page, in the **[!UICONTROL Publish Context]** drop-down list, select **[!UICONTROL Test Image Serving]**.
+    * For the Client Address Filter, select **[!UICONTROL Add]**.
+    * To enable (turn on) the address, select the check box, then enter the IP address of the Experience Manager Author instance (not Dispatcher IP).
+    * Select **[!UICONTROL Save]**. -->
 
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media.
 

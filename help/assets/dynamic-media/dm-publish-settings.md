@@ -9,7 +9,7 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: b0891095-e4a9-4dd5-8dfd-a576bc47d082
-source-git-commit: a7ae5e7bd9de4762e8f9a560e327b3f1358155b7
+source-git-commit: 446edfd83affb062585dca81052575b73c2e796f
 workflow-type: tm+mt
 source-wordcount: '3205'
 ht-degree: 0%
@@ -43,11 +43,11 @@ Se även [Valfritt - Konfigurera och konfigurera Dynamic Media-inställningar](/
 1. Ange din Image Server - publiceringskontext på sidan Image Server och använd sedan de fem flikarna för att konfigurera standardpubliceringsinställningarna.
 
    * [Bildserver](#image-server)
-   * [Säkerhet](#security-tab) tab
-   * [Kataloghantering](#catalog-management-tab) tab
-   * [Attribut för begäran](#request-attributes-tab) tab
-   * [Vanliga miniatyrattribut](#common-thumbnail-attributes-tab) tab
-   * [Färghanteringsattribut](#color-management-attributes-tab) tab
+      * [Säkerhet](#security-tab) tab
+      * [Kataloghantering](#catalog-management-tab) tab
+      * [Attribut för begäran](#request-attributes-tab) tab
+      * [Vanliga miniatyrattribut](#common-thumbnail-attributes-tab) tab
+      * [Färghanteringsattribut](#color-management-attributes-tab) tab
 
    ![Dynamic Media Publish Setup page](/help/assets/assets-dm/dm-publish-setup.png)
    *Dynamic Media Publish Setup-sidan med **[!UICONTROL Request Attributes]**har valts.*<br><br>
