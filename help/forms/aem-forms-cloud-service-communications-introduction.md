@@ -2,9 +2,9 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: dbc0ef92b0b61945ee195971aacab3bc8781b01c
+source-git-commit: d4372e7f5766c6fadea6ca25edc7bfa2aeba10b9
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -18,9 +18,9 @@ Med kommunikationsfunktioner kan ni skapa varumärkesorienterade, personaliserad
 
 Du kan generera ett dokument på begäran eller skapa ett batchjobb för att generera flera dokument med definierade intervall. Kommunikations-API:er ger:
 
-* smidiga funktioner för att generera on demand- och batchdokumentation
+* smidiga funktioner för att generera on demand- och batchdokumentation.
 
-* HTTP-API:er för enklare integrering med befintliga system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår. Det gör dokumentgenereringen till en effektiv uppgift.
+* HTTP-API:er för enklare integrering med externa system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår. Det gör dokumentgenereringen till en effektiv uppgift.
 
 * säker åtkomst till data. Kommunikations-API:er ansluter till och får endast åtkomst till data från kundutsedda datalager, gör inga lokala kopior av data, vilket gör kommunikationen mycket säker.
 
@@ -31,7 +31,7 @@ Du kan skapa ett kreditkortsutdrag med API:er för kommunikation. Det här exemp
 
 Kommunikationen utnyttjar [PDF och XFA-mallar](#supported-document-types) med [XML-data](#form-data) för att generera ett enda dokument on demand eller flera dokument med hjälp av ett batchjobb vid angivet intervall.
 
-Ett kommunikations-API hjälper till att kombinera en mall (XFA eller PDF) med kunddata ([XML-data](#form-data)) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL.
+Kommunikations-API:erna hjälper till att kombinera en mall (XFA eller PDF) med kunddata ([XML-data](#form-data)) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL.
 
 Vanligtvis skapar du en mall med [Designer](use-forms-designer.md) och använda API:er för kommunikation för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
 
@@ -43,9 +43,9 @@ Beroende på hur de används kan du även göra dessa dokument tillgängliga fö
 
 Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentgenerering:
 
-* **[Synkrona API:er](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/sync/)** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
+* **[Synkrona API:er](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/)** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
 
-* **[Batch-API:er (asynkrona API:er)](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/batch/)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
+* **[Batch-API:er (asynkrona API:er)](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
 
 Några av de viktigaste användningsområdena för API:er för kommunikation är:
 
@@ -100,7 +100,6 @@ Om du försöker förenkla ett icke-interaktivt PDF-dokument inträffar ett unda
 Ett interaktivt PDF-dokument innehåller olika element som utgör ett formulär. Dessa element kan innehålla fält (för att acceptera eller visa data), knappar (för att utlösa händelser) och skript (kommandon som utför en viss åtgärd). Om du klickar på en knapp kan det utlösa en händelse som ändrar tillståndet för ett fält. Om du t.ex. väljer ett genusalternativ kan du ändra färgen på ett fält eller formulärets utseende. Detta är ett exempel på en manuell händelse som gör att formulärtillståndet ändras.
 
 När ett sådant interaktivt PDF-dokument förenklas med API:erna för kommunikation behålls inte formulärets status. Ange det booleska värdet för att se till att formulärets status bevaras även efter att formuläret har förenklats _keepFormState_ till True för att spara och behålla formulärets status.
-
 
 ## Onboarding
 
