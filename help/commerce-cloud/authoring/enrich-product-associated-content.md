@@ -10,7 +10,7 @@ feature: Commerce Integration Framework
 kt: 7065
 thumbnail: 333205.jpg
 exl-id: d0062779-7e90-4f09-8878-eded877580ef
-source-git-commit: 0194c7edebfc49fd0cf98779100424e3c5272981
+source-git-commit: aaac412148d1499476c99a15fd1eed45d29fc29b
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Läs om hur marknadsförare kan förbättra produktdata med tillhörande innehå
 
 >[!VIDEO](https://video.tv.adobe.com/v/339121/?quality=12&learn=on)
 
-Digitala resurser kan kopplas till en eller flera produkt-SKU:er. När den digitala resursen är associerad kan den upptäckas med nyckelordssökningar som baseras på SKU:n. Resursen visas också automatiskt som tillhörande innehåll när du redigerar en sida som innehåller den relevanta produkten, vilket gör det ännu enklare att skapa nästa digitala upplevelse
+Digitala resurser kan kopplas till en eller flera produkt-SKU:er. När den digitala resursen är associerad kan den upptäckas med nyckelordssökningar som baseras på SKU:n. Materialet visas automatiskt som tillhörande innehåll när du redigerar en sida som innehåller den relevanta produkten, vilket gör det ännu enklare att skapa nästa digitala upplevelse.
 
 ## Experience Fragments
 
