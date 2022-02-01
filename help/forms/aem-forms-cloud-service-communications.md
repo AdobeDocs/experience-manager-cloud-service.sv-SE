@@ -2,7 +2,7 @@
 title: AEM Forms as a Cloud Service - kommunikation
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: c38a34519822449ff2577a9474b1294d5d45d3ae
+source-git-commit: 8cfc645d714e135391675c6d5d30e765ead4179f
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 0%
@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Använda AEM Forms as a Cloud Service Communications API:er - Synkron bearbetning {#frequently-asked-questions}
+# Använda AEM Forms as a Cloud Service Communications API:er - synkron bearbetning {#frequently-asked-questions}
 
 **Kommunikationsfunktionen är i betaversion.**
 
@@ -27,7 +27,7 @@ Kommunikationen tillhandahåller API:er för on demand- och schemalagd dokumentg
 
 ## Använd synkrona åtgärder {#batch-operations}
 
-En synkron åtgärd är en process för att generera dokument på ett linjärt sätt. Det stöder två typer av autentisering:
+En synkron åtgärd är en process där dokument genereras linjärt. Det stöder två typer av autentisering:
 
 * **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och en base64-kodad sträng med användarnamn:password. Om du till exempel vill auktorisera som administratör/administratör skickar klienten Basic [base64-kodad stränganvändarnamn]: [base64-kodat stränglösenord].
 
@@ -61,7 +61,7 @@ En organisation har vanligtvis flera mallar. Till exempel en mall var för kredi
 1. Klicka på Skapa > Mapp och skapa en mapp. Öppna mappen.
 1. Klicka på Skapa > Filöverföring och överför mallarna.
 
-### Använd synkron API för att generera dokument
+### Använd synkront API för att generera dokument
 
 Separata API:er är tillgängliga för:
 

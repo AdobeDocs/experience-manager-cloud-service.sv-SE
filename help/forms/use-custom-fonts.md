@@ -1,9 +1,9 @@
 ---
 title: 'Använda anpassade teckensnitt '
 description: 'Använda anpassade teckensnitt '
-source-git-commit: 0bfd75e517e03110d58575b21551d1d553fa36bf
+source-git-commit: 94fe397d6ce08380ef08b65b47fe2c1aeb015ca3
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,13 @@ ht-degree: 0%
 
 **Cloud Service Communications-dokumentationen finns i betaversionen**
 
-Du kan använda Forms as a Cloud Service Communications för att kombinera en XDP-mall, ett XDP-baserat PDF-dokument eller ett Acrobat-formulär (AcroForm) med XML-data för att generera PDF-dokument. Du kan använda teckensnitt som ingår i Cloud Service eller anpassade teckensnitt (typsnitt som godkänts av organisationen) för att återge de genererade PDF-dokumenten. Du kan använda utvecklingsprojektet för Cloud Service för att lägga till anpassade teckensnitt i din Cloud Service.
+Du kan använda Forms as a Cloud Service Communications för att kombinera en XDP-mall, ett XDP-baserat PDF-dokument eller ett Acrobat-formulär (AcroForm) med XML-data för att generera PDF-dokument. Du kan också använda Communications för att kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument.
+
+Tillsammans med tidigare nämnda åtgärder kan du använda teckensnitt som ingår i Cloud Service eller anpassade teckensnitt (typsnitt som godkänts av organisationen) för att återge de genererade PDF-dokumenten. Du kan använda utvecklingsprojektet för Cloud Service för att lägga till anpassade teckensnitt i din Cloud Service.
 
 ## PDF-dokument
 
-Du kan [bädda in ett teckensnitt](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/sync/#tag/PDFOutputOptions) till ett PDF-dokument. När ett teckensnitt är inbäddat visas PDF-dokumentet (Looks) identiskt på alla plattformar. Det har använt inbäddade teckensnitt för att få ett konsekvent utseende och känsla. När ett teckensnitt inte är inbäddat beror teckensnittsåtergivningen på återgivningsinställningarna för PDF-visningsprogrammet. Om teckensnittet är tillgängligt på klientdatorn använder PDF det angivna teckensnittet, annars återges PDF med ett reservteckensnitt.
+Du kan [bädda in ett teckensnitt](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/api/sync/#tag/PDFOutputOptions) till ett PDF-dokument. När ett teckensnitt är inbäddat visas (ser ut) PDF-dokumentet som identiskt på alla plattformar. Det använder inbäddade teckensnitt för att säkerställa ett konsekvent utseende och känsla. När ett teckensnitt inte är inbäddat beror teckensnittsåtergivningen på återgivningsinställningarna för PDF-visningsprogram som Acrobat eller Acrobat Reader. Om teckensnittet är tillgängligt på klientdatorn använder PDF det angivna teckensnittet, annars återges PDF med ett standardteckensnitt.
 
 ## Lägga till anpassade teckensnitt i din as a Cloud Service Forms-miljö {#custom-fonts-cloud-service}
 
@@ -28,7 +30,7 @@ Så här lägger du till anpassade teckensnitt i Cloud Servicen:
    ![Mappen Teckensnitt](assets/fonts.png)
 
 1. Öppna filen pom.xml för teckensnittsmodulen i utvecklingsprojektet.
-1. Lägg till `<Font-Archive-Version>` manifest entry to the .pom file and set value of version to 1:
+1. Lägg till jar-plugin-program i pom-filen:
 
    ```xml
    <plugin>
@@ -38,8 +40,27 @@ Så här lägger du till anpassade teckensnitt i Cloud Servicen:
        <configuration>
            <archive>
                <manifest>
-                   </addDefaultEntries>
-                   </addDefaultImplementationEntries>
+                   <addDefaultEntries/>
+                   <addDefaultImplementationEntries/>
+               </manifest>
+           </archive>
+       </configuration>
+   </plugin>
+   ```
+
+
+1. Lägg till `<Font-Archive-Version>` manifest entry the .pom file and set value of version to 1:
+
+   ```xml
+   <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-jar-plugin</artifactId>
+       <version>3.1.2</version>
+       <configuration>
+           <archive>
+               <manifest>
+                   <addDefaultEntries/>
+                   <addDefaultImplementationEntries/>
                </manifest>
                <manifestEntries>
                    <Font-Archive-Version>1</Font-Archive-Version>
@@ -70,6 +91,8 @@ Så här lägger du till anpassade teckensnitt i Cloud Servicen:
    </modules>
    ```
 
+   Mappen Fonts innehåller alla anpassade teckensnitt.
+
 1. Checka in den uppdaterade koden och [köra pipeline](/help/implementing/cloud-manager/deploy-code.md) för att distribuera teckensnitten i Cloud Servicen.
 
 1. (Valfritt) Öppna kommandotolken, navigera till den lokala projektmappen och kör kommandot nedan. Teckensnitten paketeras i en .jar-fil tillsammans med relevant information. Du kan använda .jar-filen för att lägga till anpassade teckensnitt i en lokal utvecklingsmiljö i Forms Cloud Service.
@@ -81,11 +104,11 @@ Så här lägger du till anpassade teckensnitt i Cloud Servicen:
 ## Lägga till anpassade teckensnitt i den lokala Forms Cloud Service-utvecklingsmiljön {#custom-fonts-cloud-service-sdk}
 
 1. Starta den lokala utvecklingsmiljön.
-1. Navigera till [crx-databas]\installationsmapp
-1. Placera .jar-filen som innehåller anpassade teckensnitt och tillhörande distributionskod i installationsmappen. Om du inte har .jar-filen följer du anvisningarna i [Lägga till anpassade teckensnitt i din as a Cloud Service Forms-miljö](#custom-fonts-cloud-service) för att generera filen.
+1. Navigera till `<aem install directory>/crx-quickstart/install` mapp.
+1. Placera `<jar file contaning custom fonts and relevant deployment code>.jar` till installationsmappen. Om du inte har .jar-filen följer du anvisningarna i [Lägga till anpassade teckensnitt i din as a Cloud Service Forms-miljö](#custom-fonts-cloud-service) för att generera filen.
 1. Kör [Dörrbaserad SDK-miljö](setup-local-development-environment.md#docker-microservices)
 
 
    >[!NOTE]
    >
-   >När du distribuerar en uppdaterad .jar-fil med anpassade teckensnitt i den lokala driftsättningsmiljön startar du om den dockningsbaserade SDK-miljön.
+   >När du distribuerar en uppdaterad .jar-fil med anpassade teckensnitt till den lokala utvecklingsmiljön startar du om den dockningsbaserade SDK-miljön.
