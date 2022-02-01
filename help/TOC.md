@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 634644b55f9fbe7d0abe4038da8b8ebb37cd7892
+source-git-commit: 80483d812d8f8ee6a942d21a87a281a98feddbdd
 workflow-type: tm+mt
-source-wordcount: '3480'
+source-wordcount: '3485'
 ht-degree: 24%
 
 ---
@@ -461,9 +461,9 @@ ht-degree: 24%
       + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
       + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
    + Använda kommunikation {#using-communications}
-      + [Introduktion](/help/forms/aem-forms-cloud-service-communications-introduction.md)
-      + [Kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications.md)
-      + [Batchbearbetning av kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+      + [Introduktion till kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)
+      + [Kommunikations-API:er - synkron bearbetning](/help/forms/aem-forms-cloud-service-communications.md)
+      + [Kommunikations-API:er - gruppbearbetning](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
       + [Använda anpassade teckensnitt i PDF-dokument](/help/forms/use-custom-fonts.md)
       + [Kända fel, bästa praxis och vanliga frågor](/help/forms/communications-known-issues-limitations.md)
    + [Migrera till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
