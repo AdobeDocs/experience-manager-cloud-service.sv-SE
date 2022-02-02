@@ -2,9 +2,9 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: fcde70f424d8e798469563397ba091547163bd77
+source-git-commit: c934eba98a9dcb74687739ccbaaedff3c0228561
 workflow-type: tm+mt
-source-wordcount: '1287'
+source-wordcount: '1401'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade 
 
 * Effektivare dokumentationsgenerering on demand och batch.
 
-* Kombinera, ordna om och förstärka dokument från PDF och XDP och få information om PDF
+* Kombinera, ordna om och validera PDF-dokument.
 
 * HTTP-API:er för enklare integrering med externa system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår. Det gör dokumentgenereringen till en effektiv uppgift.
 
@@ -26,33 +26,22 @@ Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade 
 ![Exempel på kreditkortsutdrag](assets/statement.png)
 Du kan skapa ett kreditkortsutdrag med API:er för kommunikation. Det här exempelkontoutdraget använder samma mall men separata data för varje kund beroende på hur de använder kreditkortet.
 
-## Hur fungerar det?
+## Dokumentgenerering
 
-Kommunikationen utnyttjar [PDF och XFA-mallar](#supported-document-types) med [XML-data](#form-data) för att generera ett enda dokument on demand eller flera dokument med hjälp av ett batchjobb vid angivet intervall.
-
-Kommunikations-API:erna hjälper till att kombinera en mall (XFA eller PDF) med kunddata ([XML-data](#form-data)) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL.
+API:er för generering av kommunikationsdokument hjälper till att kombinera en mall (XFA eller PDF) med kunddata ([XML-data](#form-data)) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder [PDF och XFA-mallar](#supported-document-types) med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument on demand eller flera dokument med hjälp av ett batchjobb vid angivet intervall.
 
 Vanligtvis skapar du en mall med [Designer](use-forms-designer.md) och använda API:er för kommunikation för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
 
-![Kommunikationsarbetsflöde](assets/communicaions-workflow.png)
+![Arbetsflöde för generering av kommunikationsdokument](assets/communicaions-workflow.png)
 
-Beroende på hur de används kan du även göra dessa dokument tillgängliga för hämtning via din webbplats eller en lagringsserver.
-
-## Kommunikations-API:er
-
-Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentgenerering:
-
-* **[Synkrona API:er](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/)** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
-
-* **[Batch-API:er (asynkrona API:er)](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
-
-Några av de viktigaste användningsområdena för API:er för kommunikation är:
+Beroende på hur de används kan du även göra dessa dokument tillgängliga för hämtning via din webbplats eller en lagringsserver. Några exempel på API:er för dokumentgenerering är:
 
 ### Skapa PDF-dokument {#create-pdf-documents}
 
 Du kan använda API:erna för dokumentgenerering för att skapa ett PDF-dokument som baseras på en formulärdesign och XML-formulärdata. Utdata är ett icke-interaktivt PDF-dokument. Användarna kan alltså inte ange eller ändra formulärdata. Ett grundläggande arbetsflöde är att sammanfoga XML-formulärdata med en formulärdesign för att skapa ett PDF-dokument. Följande bild visar hur du sammanfogar en formulärdesign och XML-formulärdata för att skapa ett PDF-dokument.
 
 ![Skapa PDF-dokument](assets/outPutPDF_popup.png)
+Bild: Normalt arbetsflöde för att skapa ett PDF-dokument
 
 ### Skapa PostScript-dokument (PS), skrivarkommandodokument (PCL), ZPL-dokument (Zebra Printing Language) {#create-PS-PCL-ZPL-documents}
 
@@ -70,7 +59,11 @@ The following illustration shows Communications APIs processing an XML data file
 
 ### Bearbeta gruppdata för att skapa flera dokument {#processing-batch-data-to-create-multiple-documents}
 
-Du kan använda API:er för dokumentgenerering för att skapa separata dokument för varje post i en XML-batchdatakälla. Du kan generera dokument i både gruppläge och asynkront läge. Du kan konfigurera olika parametrar för konverteringen och sedan starta gruppbearbetningen. <!-- You can can also create a single document that contains all records (this functionality is the default).  Assume that an XML data source contains ten records and you have a requirement to create a separate document for each record (for example, PDF documents). You can use the Communication APIs to generate ten PDF documents. -->
+Du kan använda API:er för dokumentgenerering för att skapa separata dokument för varje post i en XML-batchdatakälla. Du kan generera dokument i både gruppläge och asynkront läge. Du kan konfigurera olika parametrar för konverteringen och sedan starta gruppbearbetningen.
+
+![Skapa PDF-dokument](assets/ou_OutputBatchMany_popup.png)
+
+<!-- You can can also create a single document that contains all records (this functionality is the default).  Assume that an XML data source contains ten records and you have a requirement to create a separate document for each record (for example, PDF documents). You can use the Communication APIs to generate ten PDF documents. -->
 
 <!-- The following illustration shows the Communication APIs processing an XML data file that contains multiple records. However, assume that you instruct the Communication APIs to create a single PDF document that contains all data records. In this situation, the Communication APIs generate one document that contains all of the records.
 
@@ -100,6 +93,11 @@ Ett interaktivt PDF-dokument innehåller olika element som utgör ett formulär.
 
 När ett sådant interaktivt PDF-dokument förenklas med API:erna för kommunikation behålls inte formulärets status. Ange det booleska värdet för att se till att formulärets status bevaras även efter att formuläret har förenklats _keepFormState_ till True för att spara och behålla formulärets status.
 
+
+## Dokumenthantering
+
+API:er för dokumentbearbetning i kommunikation hjälper dig att kombinera, ordna om och validera PDF-dokument. Vanligtvis skapar du en DX och skickar den till API:er för dokumentgenerering för att montera eller ordna om ett dokument. DDX-dokumentet innehåller anvisningar om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds. Några exempel på dokumentbearbetning är:
+
 ### Sammanställa dokument från PDF
 
 Du kan använda API:erna för dokumentframställning för att samla ihop två eller flera PDF-dokument till ett enda PDF-dokument eller PDF Portfolio. Du kan även använda funktioner i PDF-dokumentet som underlättar navigering eller förbättrar säkerheten. Här är några sätt att sammanställa PDF-dokument:
@@ -110,6 +108,9 @@ Du kan använda API:erna för dokumentframställning för att samla ihop två el
 * Sammanställa dokument med Bates-numrering
 * Förenkla och sammanställ dokument
 
+![Sammanställa ett enkelt PDF-dokument från flera PDF-dokument](assets/as_document_assembly.png)
+Bild: Sammanställa ett enkelt PDF-dokument från flera PDF-dokument
+
 ### Dela upp PDF-dokument
 
 Du kan använda API:erna för dokumentframställning för att demontera ett PDF-dokument. Tjänsten kan extrahera sidor från källdokumentet eller dela upp ett källdokument baserat på bokmärken. Vanligtvis är den här uppgiften användbar om PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser.
@@ -117,9 +118,21 @@ Du kan använda API:erna för dokumentframställning för att demontera ett PDF-
 * Extrahera sidor från ett källdokument
 * Dela upp ett källdokument baserat på bokmärken
 
+![Dela upp ett källdokument baserat på bokmärken i flera dokument](assets/as_intro_pdfsfrombookmarks.png)
+Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
+
 ### Konvertera till och validera dokument som följer PDF/A
 
 Du kan använda API:erna för dokumentproduktion för att konvertera ett PDF-dokument till en PDF/A-kompatibel version och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
+
+
+## Typer av API:er för kommunikation
+
+Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentgenerering:
+
+* **[Synkrona API:er](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/)** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
+
+* **[Batch-API:er (asynkrona API:er)](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
 
 ## Onboarding
 
