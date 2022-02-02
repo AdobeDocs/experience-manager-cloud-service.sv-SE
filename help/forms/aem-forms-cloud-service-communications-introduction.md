@@ -2,22 +2,24 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: c934eba98a9dcb74687739ccbaaedff3c0228561
+source-git-commit: 2f934bb63796599d6c3cca47498c1799388a9923
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1395'
 ht-degree: 1%
 
 ---
 
 # Använd AEM Forms as a Cloud Service Communications {#frequently-asked-questions}
 
-**AEM Forms as a Cloud Service Communications-API:er för dokumentbearbetning är betaversioner och kan ändras avsevärt före den faktiska versionen.**
+**AEM Forms as a Cloud Service - API:er för dokumentredigering finns i betaversionen och kan ändras avsevärt före den faktiska versionen.**
 
-Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskontakter, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga fakturor eller välkomstpaket. Funktionen ger API:er för att generera och hantera dokument. Du kan generera eller ändra ett dokument on demand eller skapa ett batchjobb för att generera flera dokument med definierade intervall. Kommunikations-API:er ger:
+Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskontakter, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga fakturor eller välkomstpaket.
 
-* Effektivare dokumentationsgenerering on demand och batch.
+Funktionen ger API:er för att generera och hantera dokument. Du kan generera eller ändra ett dokument on demand eller skapa ett batchjobb för att generera flera dokument med definierade intervall. Kommunikations-API:er ger:
 
-* Kombinera, ordna om och validera PDF-dokument.
+* smidiga funktioner för att generera on demand- och batchdokumentation.
+
+* möjlighet att kombinera, ordna om och validera PDF-dokument on-demand.
 
 * HTTP-API:er för enklare integrering med externa system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår. Det gör dokumentgenereringen till en effektiv uppgift.
 
@@ -28,13 +30,15 @@ Du kan skapa ett kreditkortsutdrag med API:er för kommunikation. Det här exemp
 
 ## Dokumentgenerering
 
-API:er för generering av kommunikationsdokument hjälper till att kombinera en mall (XFA eller PDF) med kunddata ([XML-data](#form-data)) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder [PDF och XFA-mallar](#supported-document-types) med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument on demand eller flera dokument med hjälp av ett batchjobb vid angivet intervall.
+API:er för generering av kommunikationsdokument hjälper till att kombinera en mall (XFA eller PDF) med kunddata ([XML-data](#form-data)) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder [PDF och XFA-mallar](#supported-document-types) med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument on demand eller flera dokument med hjälp av ett batchjobb.
 
 Vanligtvis skapar du en mall med [Designer](use-forms-designer.md) och använda API:er för kommunikation för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
 
 ![Arbetsflöde för generering av kommunikationsdokument](assets/communicaions-workflow.png)
 
-Beroende på hur de används kan du även göra dessa dokument tillgängliga för hämtning via din webbplats eller en lagringsserver. Några exempel på API:er för dokumentgenerering är:
+Beroende på hur de används kan du även göra dessa dokument tillgängliga för hämtning via din webbplats eller en lagringsserver.
+
+Några exempel på API:er för dokumentgenerering är:
 
 ### Skapa PDF-dokument {#create-pdf-documents}
 
@@ -96,11 +100,11 @@ När ett sådant interaktivt PDF-dokument förenklas med API:erna för kommunika
 
 ## Dokumenthantering
 
-API:er för dokumentbearbetning i kommunikation hjälper dig att kombinera, ordna om och validera PDF-dokument. Vanligtvis skapar du en DX och skickar den till API:er för dokumentgenerering för att montera eller ordna om ett dokument. DDX-dokumentet innehåller anvisningar om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds. Några exempel på dokumentbearbetning är:
+API:er för dokumentbearbetning i kommunikation hjälper dig att kombinera, ordna om och validera PDF-dokument. Vanligtvis skapar du en DX och skickar den till API:er för dokumentbearbetning för att montera eller ordna om ett dokument. DDX-dokumentet innehåller anvisningar om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds. Några exempel på dokumentbearbetning är:
 
 ### Sammanställa dokument från PDF
 
-Du kan använda API:erna för dokumentframställning för att samla ihop två eller flera PDF-dokument till ett enda PDF-dokument eller PDF Portfolio. Du kan även använda funktioner i PDF-dokumentet som underlättar navigering eller förbättrar säkerheten. Här är några sätt att sammanställa PDF-dokument:
+Du kan använda API:erna för dokumentframställning för att samla ihop två eller flera PDF-dokument till ett enda PDF-dokument eller PDF Portfolio. Här är några sätt att sammanställa PDF-dokument:
 
 * Sammanställa ett enkelt PDF-dokument
 * Skapa en PDF Portfolio
@@ -113,7 +117,7 @@ Bild: Sammanställa ett enkelt PDF-dokument från flera PDF-dokument
 
 ### Dela upp PDF-dokument
 
-Du kan använda API:erna för dokumentframställning för att demontera ett PDF-dokument. Tjänsten kan extrahera sidor från källdokumentet eller dela upp ett källdokument baserat på bokmärken. Vanligtvis är den här uppgiften användbar om PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser.
+Du kan använda API:erna för dokumentframställning för att demontera ett PDF-dokument. API:erna kan extrahera sidor från källdokumentet eller dela upp ett källdokument baserat på bokmärken. Vanligtvis är den här uppgiften användbar om PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser.
 
 * Extrahera sidor från ett källdokument
 * Dela upp ett källdokument baserat på bokmärken
@@ -123,7 +127,7 @@ Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
 
 ### Konvertera till och validera dokument som följer PDF/A
 
-Du kan använda API:erna för dokumentproduktion för att konvertera ett PDF-dokument till en PDF/A-kompatibel version och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
+Du kan använda API:erna för dokumentproduktion för att konvertera ett PDF-dokument till ett PDF/A-kompatibelt dokument och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
 
 
 ## Typer av API:er för kommunikation
@@ -136,9 +140,9 @@ Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentge
 
 ## Onboarding
 
-Kommunikation finns som fristående modul och tilläggsmodul för as a Cloud Service användare av Forms. Du kan kontakta Adobe säljteam eller din Adobe-representant för att begära åtkomst. Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge AEM Forms-utvecklare (användare) i organisationen åtkomst till API:erna.
+Kommunikationskapaciteten är tillgänglig som en fristående modul och tilläggsmodul för as a Cloud Service Forms-användare. Du kan kontakta Adobe säljteam eller din Adobe-representant för att begära åtkomst. Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge Forms as a Cloud Service utvecklare (användare) tillgång till organisationens API:er.
 
-Efter introduktionen, för att aktivera kommunikation för din as a Cloud Service Forms-miljö:
+Efter introduktionen, för att aktivera kommunikationsfunktioner för din as a Cloud Service Forms-miljö:
 
 1. Logga in på Cloud Manager och öppna din as a Cloud Service AEM Forms-instans.
 
@@ -152,9 +156,7 @@ Efter introduktionen, för att aktivera kommunikation för din as a Cloud Servic
 
 1. Klicka på **[!UICONTROL Update]**.
 
-1. Kör byggprocessen.
-
-När byggpiplexin är klar aktiveras kommunikations-API:er för din miljö.
+1. Kör byggprocessen. När byggprocessen är klar aktiveras API:er för kommunikation för din miljö.
 
 
 <!--
