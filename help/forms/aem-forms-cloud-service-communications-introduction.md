@@ -2,23 +2,22 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: d4372e7f5766c6fadea6ca25edc7bfa2aeba10b9
+source-git-commit: fcde70f424d8e798469563397ba091547163bd77
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 2%
+source-wordcount: '1287'
+ht-degree: 1%
 
 ---
 
 # Använd AEM Forms as a Cloud Service Communications {#frequently-asked-questions}
 
-**AEM Forms as a Cloud Service Communications-funktionen är i betaversion.**
+**AEM Forms as a Cloud Service Communications-API:er för dokumentbearbetning är betaversioner och kan ändras avsevärt före den faktiska versionen.**
 
-Med kommunikationsfunktioner kan ni skapa varumärkesorienterade, personaliserade och standardiserade dokument som affärskontakter, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga räkningar eller välkomstpaket.
+Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskontakter, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga fakturor eller välkomstpaket. Funktionen ger API:er för att generera och hantera dokument. Du kan generera eller ändra ett dokument on demand eller skapa ett batchjobb för att generera flera dokument med definierade intervall. Kommunikations-API:er ger:
 
+* Effektivare dokumentationsgenerering on demand och batch.
 
-Du kan generera ett dokument på begäran eller skapa ett batchjobb för att generera flera dokument med definierade intervall. Kommunikations-API:er ger:
-
-* smidiga funktioner för att generera on demand- och batchdokumentation.
+* Kombinera, ordna om och förstärka dokument från PDF och XDP och få information om PDF
 
 * HTTP-API:er för enklare integrering med externa system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår. Det gör dokumentgenereringen till en effektiv uppgift.
 
@@ -51,13 +50,13 @@ Några av de viktigaste användningsområdena för API:er för kommunikation är
 
 ### Skapa PDF-dokument {#create-pdf-documents}
 
-Du kan använda kommunikations-API:er för att skapa ett PDF-dokument som baseras på en formulärdesign och XML-formulärdata. Utdata är ett icke-interaktivt PDF-dokument. Användarna kan alltså inte ange eller ändra formulärdata. Ett grundläggande arbetsflöde är att sammanfoga XML-formulärdata med en formulärdesign för att skapa ett PDF-dokument. Följande bild visar hur du sammanfogar en formulärdesign och XML-formulärdata för att skapa ett PDF-dokument.
+Du kan använda API:erna för dokumentgenerering för att skapa ett PDF-dokument som baseras på en formulärdesign och XML-formulärdata. Utdata är ett icke-interaktivt PDF-dokument. Användarna kan alltså inte ange eller ändra formulärdata. Ett grundläggande arbetsflöde är att sammanfoga XML-formulärdata med en formulärdesign för att skapa ett PDF-dokument. Följande bild visar hur du sammanfogar en formulärdesign och XML-formulärdata för att skapa ett PDF-dokument.
 
 ![Skapa PDF-dokument](assets/outPutPDF_popup.png)
 
 ### Skapa PostScript-dokument (PS), skrivarkommandodokument (PCL), ZPL-dokument (Zebra Printing Language) {#create-PS-PCL-ZPL-documents}
 
-Du kan använda API:er för kommunikation för att skapa dokument i formaten PostScript (PS), Printer Command Language (PCL) och Zebra Printing Language (ZPL) som baseras på en XDP-formulärdesign eller ett PDF-dokument. Dessa API:er hjälper till att sammanfoga en formulärdesign med formulärdata för att generera ett dokument. Du kan spara dokumentet i en fil och utveckla en anpassad process för att skicka det till en skrivare.
+Du kan använda API:er för dokumentgenerering för att skapa dokument i formaten PostScript (PS), Printer Command Language (PCL) och Zebra Printing Language (ZPL) som baseras på en XDP-formulärdesign eller ett PDF-dokument. Dessa API:er hjälper till att sammanfoga en formulärdesign med formulärdata för att generera ett dokument. Du kan spara dokumentet i en fil och utveckla en anpassad process för att skicka det till en skrivare.
 
 <!-- ### Processing batch data to create multiple documents
 
@@ -71,7 +70,7 @@ The following illustration shows Communications APIs processing an XML data file
 
 ### Bearbeta gruppdata för att skapa flera dokument {#processing-batch-data-to-create-multiple-documents}
 
-Du kan skapa separata dokument för varje post i en XML-batchdatakälla. Du kan generera dokument i både gruppläge och asynkront läge. Du kan konfigurera olika parametrar för konverteringen och sedan starta gruppbearbetningen. <!-- You can can also create a single document that contains all records (this functionality is the default).  Assume that an XML data source contains ten records and you have a requirement to create a separate document for each record (for example, PDF documents). You can use the Communication APIs to generate ten PDF documents. -->
+Du kan använda API:er för dokumentgenerering för att skapa separata dokument för varje post i en XML-batchdatakälla. Du kan generera dokument i både gruppläge och asynkront läge. Du kan konfigurera olika parametrar för konverteringen och sedan starta gruppbearbetningen. <!-- You can can also create a single document that contains all records (this functionality is the default).  Assume that an XML data source contains ten records and you have a requirement to create a separate document for each record (for example, PDF documents). You can use the Communication APIs to generate ten PDF documents. -->
 
 <!-- The following illustration shows the Communication APIs processing an XML data file that contains multiple records. However, assume that you instruct the Communication APIs to create a single PDF document that contains all data records. In this situation, the Communication APIs generate one document that contains all of the records.
 
@@ -85,7 +84,7 @@ For detailed information on using Batch APIs, see Communication APIs: Processing
 
 ### Förenkla interaktiva PDF-dokument {#flatten-interactive-pdf-documents}
 
-Du kan använda API:erna för kommunikation för att omvandla ett interaktivt PDF-dokument (till exempel ett formulär) till ett icke-interaktivt PDF-dokument. Med ett interaktivt PDF-dokument kan användare ange eller ändra data som finns i dokumentfälten i PDF. Processen att omforma ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas för förenkling. När ett PDF-dokument förenklas kan användaren inte ändra de data som finns i dokumentets fält. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras.
+Du kan använda API:er för dokumentgenerering för att omvandla ett interaktivt PDF-dokument (till exempel ett formulär) till ett icke-interaktivt PDF-dokument. Med ett interaktivt PDF-dokument kan användare ange eller ändra data som finns i dokumentfälten i PDF. Processen att omforma ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas för förenkling. När ett PDF-dokument förenklas kan användaren inte ändra de data som finns i dokumentets fält. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras.
 
 Du kan förenkla följande typer av PDF-dokument:
 
@@ -101,11 +100,30 @@ Ett interaktivt PDF-dokument innehåller olika element som utgör ett formulär.
 
 När ett sådant interaktivt PDF-dokument förenklas med API:erna för kommunikation behålls inte formulärets status. Ange det booleska värdet för att se till att formulärets status bevaras även efter att formuläret har förenklats _keepFormState_ till True för att spara och behålla formulärets status.
 
+### Sammanställa dokument från PDF
+
+Du kan använda API:erna för dokumentframställning för att samla ihop två eller flera PDF-dokument till ett enda PDF-dokument eller PDF Portfolio. Du kan även använda funktioner i PDF-dokumentet som underlättar navigering eller förbättrar säkerheten. Här är några sätt att sammanställa PDF-dokument:
+
+* Sammanställa ett enkelt PDF-dokument
+* Skapa en PDF Portfolio
+* Sammanställa krypterade dokument
+* Sammanställa dokument med Bates-numrering
+* Förenkla och sammanställ dokument
+
+### Dela upp PDF-dokument
+
+Du kan använda API:erna för dokumentframställning för att demontera ett PDF-dokument. Tjänsten kan extrahera sidor från källdokumentet eller dela upp ett källdokument baserat på bokmärken. Vanligtvis är den här uppgiften användbar om PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser.
+
+* Extrahera sidor från ett källdokument
+* Dela upp ett källdokument baserat på bokmärken
+
+### Konvertera till och validera dokument som följer PDF/A
+
+Du kan använda API:erna för dokumentproduktion för att konvertera ett PDF-dokument till en PDF/A-kompatibel version och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
+
 ## Onboarding
 
-Kommunikation finns som fristående modul och tilläggsmodul för as a Cloud Service användare av Forms. Du kan kontakta Adobe säljteam eller din Adobe-representant för att begära åtkomst.
-
-Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge AEM Forms-utvecklare (användare) i organisationen åtkomst till API:erna.
+Kommunikation finns som fristående modul och tilläggsmodul för as a Cloud Service användare av Forms. Du kan kontakta Adobe säljteam eller din Adobe-representant för att begära åtkomst. Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge AEM Forms-utvecklare (användare) i organisationen åtkomst till API:erna.
 
 Efter introduktionen, för att aktivera kommunikation för din as a Cloud Service Forms-miljö:
 
