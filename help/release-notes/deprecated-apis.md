@@ -2,10 +2,10 @@
 title: Föråldrade API:er
 description: Versionsinformation om borttagna och borttagna API:er i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: fbd8c60a-3e2b-4696-aaba-f4db97923184
-source-git-commit: bbd8277fc5ed81bc656900ec3a993630aa5ffad5
+source-git-commit: 8e205c92b1d3ca14988b7ae9187cd708428774a9
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +16,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
 
 <table>
 <thead>
+<table style="table-layout:auto">
   <tr>
     <th>Paket/klass</th>
     <th>Kommentarer</th>
