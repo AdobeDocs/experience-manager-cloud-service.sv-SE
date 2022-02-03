@@ -1,9 +1,9 @@
 ---
 title: Skapa demowebbplats
 description: Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mallar.
-source-git-commit: 52d65251744ce0ae5cf7a7e0a45b39d8fe78f13a
+source-git-commit: df9b777e24e56ed0329895f833f50b45ecf2defa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '844'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mal
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet från den AEM snabbplatsgenereringsresan [Create Program,](create-program.md) du tog det första konfigurationssteget för att skapa ett program för testning och använde en pipeline för att distribuera tilläggsinnehållet. Nu bör du:
+I det föregående dokumentet om AEM Reference Demos Add-On-resan, [Create Program,](create-program.md) du tog det första konfigurationssteget för att skapa ett program för testning och använde en pipeline för att distribuera tilläggsinnehållet. Nu bör du:
 
 * Lär dig hur du använder Cloud Manager för att skapa ett nytt program.
 * Lär dig hur du aktiverar tillägget Referensdemonstrationer för det nya programmet.
 * Du kan köra en pipeline för att distribuera tilläggsinnehållet.
 
-I den här artikeln beskrivs nästa steg i processen genom att skapa en ny plats i AEM baserat på mallarna i tillägget Referensdemo.
+I den här artikeln beskrivs nästa steg i processen genom att skapa en ny webbplats eller ett AEM Screens-projekt i AEM baserat på mallarna i tillägget Referensdemo.
 
 ## Syfte {#objective}
 
@@ -31,7 +31,7 @@ Det här dokumentet hjälper dig att förstå hur du skapar en ny plats baserat 
 * Lär dig hur du skapar en webbplats baserad på en mall.
 * Förstå grunderna för navigering i webbplatsstrukturen och redigering av en sida.
 
-## Skapa en demowebbplats {#create-site}
+## Skapa en demowebbplats eller ett skärmsprojekt {#create-site}
 
 När pipeline har distribuerat tillägget för referensdemo kan du komma åt AEM redigeringsmiljö och skapa demowebbplatser baserat på tilläggsinnehållet.
 
@@ -47,11 +47,11 @@ När pipeline har distribuerat tillägget för referensdemo kan du komma åt AEM
 
    ![Skapa webbplats från mall](assets/create-site-from-template.png)
 
-1. Guiden Skapa webbplats startar. I den vänstra kolumnen ser du demomallarna som pipeline distribuerade till din redigeringsinstans. Tryck eller klicka på en för att markera den och visa information i den högra kolumnen. Tryck eller klicka **Nästa**.
+1. Guiden Skapa webbplats startar. I den vänstra kolumnen ser du demomallarna som pipeline distribuerade till din redigeringsinstans. Tryck eller klicka på en för att markera den och visa information i den högra kolumnen. Om du vill testa eller demonstrera AEM Screens ska du välja **Webbplatsmall för We.Cafe**. Tryck eller klicka **Nästa**.
 
    ![Guiden Skapa webbplats](assets/site-creation-wizard.png)
 
-1. Ange en rubrik för webbplatsen på nästa skärm. Ett platsnamn kan anges eller genereras från titeln om det utelämnas. Tryck eller klicka **Skapa**.
+1. På nästa skärm anger du en rubrik för webbplatsen eller skärmsprojektet. Ett platsnamn kan anges eller genereras från titeln om det utelämnas. Tryck eller klicka **Skapa**.
 
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.
@@ -101,7 +101,10 @@ Nu när du har slutfört den här delen av AEM Reference Demo Add-On-resan bör 
 * Lär dig hur du skapar en webbplats baserad på en mall.
 * Förstå grunderna för navigering i webbplatsstrukturen och redigering av en sida.
 
-Nu kan du testa funktionerna i AEM med tilläggsinnehåll. Om du vill veta hur du hanterar det här demoinnehållet kan du fortsätta din AEM Reference Demo Add-On-resa genom att granska dokumentet nästa gång [Hantera dina demosajter,](manage.md) där du får lära dig mer om de verktyg som finns för att hantera dina demowebbplatser och hur du tar bort dem.
+Nu kan du testa funktionerna i AEM med tilläggsinnehåll. Du har två alternativ för att fortsätta din resa:
+
+* Om du vill göra en fullständig demonstration och testa AEM Screens-innehåll måste du se till att du har distribuerat en webbplats som är baserad på **Webbplatsmall för We.Cafe** enligt beskrivningen ovan och fortsätta [Aktivera AEM Screens för din demowebbplats.](screens.md)
+* Om du bara har tillgång till demowebbplatsinnehåll kan du fortsätta [Hantera dina demosajter,](manage.md) där du får lära dig mer om de verktyg som finns för att hantera dina demowebbplatser och hur du tar bort dem.
 
 ## Ytterligare resurser {#additional-resources}
 

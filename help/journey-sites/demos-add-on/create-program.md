@@ -1,9 +1,9 @@
 ---
 title: Skapa program
 description: Lär dig hur du konfigurerar ett nytt program och en ny pipeline för att distribuera tillägget.
-source-git-commit: 52d65251744ce0ae5cf7a7e0a45b39d8fe78f13a
+source-git-commit: df9b777e24e56ed0329895f833f50b45ecf2defa
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Lär dig hur du konfigurerar ett nytt program och en ny pipeline för att distri
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet från den AEM snabbplatsgenereringsresan [Förstå installationen av tillägget för referensdemo,](installation.md) du har lärt dig hur installationsprocessen för tillägget Referensdemonstrationer fungerar, vilket visar hur de olika delarna fungerar tillsammans. Nu bör du:
+I det föregående dokumentet om AEM Reference Demos Add-On-resan, [Förstå installationen av tillägget för referensdemo,](installation.md) du har lärt dig hur installationsprocessen för tillägget Referensdemonstrationer fungerar, vilket visar hur de olika delarna fungerar tillsammans. Nu bör du:
 
 * Få en grundläggande förståelse för Cloud Manager.
 * Förstå hur rörledningar levererar innehåll och konfigurationer till AEM.
@@ -76,7 +76,7 @@ När du har loggat in på Cloud Manager kan du skapa ett nytt sandlådeprogram f
 
    ![Redigera programdialogruta](assets/edit-program-dialog.png)
 
-1. På **Lösningar och tillägg** -fliken, expandera **Webbplatser** i listan och kontrollera sedan **Referensdemonstrationer**. Tryck eller klicka **Uppdatera**.
+1. På **Lösningar och tillägg** -fliken, expandera **Webbplatser** i listan och kontrollera sedan **Referensdemonstrationer**. Om du även vill skapa demos för AEM Screens ska du kontrollera **Skärmar** i listan också. Tryck eller klicka **Uppdatera**.
 
    ![Alternativet Kontrollera referensdemos](assets/edit-program-add-on.png)
 

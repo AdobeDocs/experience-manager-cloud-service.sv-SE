@@ -1,9 +1,9 @@
 ---
 title: Hantera dina demowebbplatser
 description: Lär dig mer om de verktyg du kan använda för att hantera demowebbplatser och hur du tar bort dem.
-source-git-commit: cb04570664188635d6dc0237eb4ab0a9d347aaf2
+source-git-commit: df9b777e24e56ed0329895f833f50b45ecf2defa
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,17 @@ Lär dig mer om de verktyg du kan använda för att hantera demowebbplatser och 
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet från den AEM snabbplatsgenereringsresan [Skapa webbplats,](create-site.md) du har skapat en ny demowebbplats baserad på mallarna för tillägget Referensdemo. Nu bör du:
+I det föregående dokumentet om AEM Reference Demos Add-On-resan, [Skapa webbplats,](create-site.md) du har skapat en ny demowebbplats baserad på mallarna för tillägget Referensdemo. Nu bör du:
 
 * Lär dig hur du kommer åt AEM.
 * Lär dig hur du skapar en webbplats baserad på en mall.
 * Förstå grunderna för navigering i webbplatsstrukturen och redigering av en sida.
+
+Om du också [har AEM Screens aktiverat för din demosajt,](screens.md) Du bör också:
+
+* Lär dig grunderna i AEM Screens.
+* Förstå demoinnehållet för We.Cafe.
+* Lär dig hur du konfigurerar AEM Screens för We.Cafe.
 
 Nu när du har en egen demosajt att utforska beskriver den här artikeln de verktyg som finns för att hantera dina demosajter och hur du tar bort dem.
 
