@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: 8c3a1366d076c009262eeab8129e4e589dc4f7c5
+source-git-commit: 92cb864f71b5e98bf98519a3f5be6469802be0e4
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2039'
 ht-degree: 3%
 
 ---
@@ -92,27 +92,27 @@ Om du ändrar URL-formatet för en aktiv webbplats kan det påverka webbplatsens
 >
 > Den butiksspecifika konfigurationen för URL-formaten kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) och den senaste versionen av tillägget Adobe Experience Manager Content and Commerce.
 
-## Kategorimedvetna produkt-URL:er {#context-aware-pdps}
+## Kategorimedvetna produktsid-URL:er {#context-aware-pdps}
 
 Eftersom det är möjligt att koda kategoriinformation i en produkt-URL kan produkter som finns i flera kategorier även adresseras med flera produkt-URL:er.
 
-I standardkonfigurationen väljer URL-standardformaten ett av de möjliga alternativen med följande schema:
+Standardformatet för URL väljer ett av de möjliga alternativen med följande schema:
 
 * om `url_path` definieras av e-handelns serverdel som använder den (borttagen)
 * från `url_rewrites` använda de URL:er som slutar med produktens `url_key` som alternativ
 * de här alternativen använder det som har flest bansegment
 * om det finns flera, ta den första i den ordning som e-handelsbackend ger den
 
-Schemat väljer `url_path` som har de flesta överordnade, baserat på antagandet att en underordnad kategori är mer specifik än den överordnade kategorin. Den så markerade `url_path` beaktas _kanoniskt_ och kommer alltid att användas för den kanoniska länken på produktsidor eller i produktwebbplatskartan.
+Schemat väljer `url_path` med de flesta överordnade, baserat på antagandet att en underordnad kategori är mer specifik än den överordnade kategorin. Den så markerade `url_path` beaktas _kanoniskt_ och kommer alltid att användas som en kanonisk länk på produktsidor eller i produktwebbplatskartan.
 
 Men när en kund går från en kategorisida till en produktsida, eller från en produktsida till en annan relaterad produktsida i samma kategori, är det värt att behålla den aktuella kategorikontexten. I detta fall `url_path` markeringen föredrar alternativ, som finns inom den aktuella kategorikontexten framför _kanoniskt_ markeringen som beskrivs ovan.
 
 Den här funktionen måste aktiveras i _CIF URL-providerkonfiguration_. Om det här alternativet är aktiverat blir alternativen bättre när
 
-* de matchar delar i en viss kategori `url_paths` från början (luddig prefixmatchning)
+* de matchar delar av en viss kategori `url_path` från början (luddig prefixmatchning)
 * eller de matchar en viss kategori `url_key` var som helst (exakt partiell matchning)
 
-Ta till exempel svaret på en [produktfråga](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html) nedan. Eftersom användaren befinner sig på kategorisidan&quot;New Products / New in Sommaren 2022&quot; och butiken använder standardsidformatet för kategorimappens URL, matchar alternativet&quot;new-products/new-in-summer-2022/gold-cirque-earrings.html&quot; två av kontextens sökvägssegment från början: &quot;new-products&quot; och &quot;new-in-sommar-2022&quot;. Om butiken skulle använda ett URL-format för kategorisida som bara innehåller `url_key`, skulle samma alternativ fortfarande vara markerat eftersom det matchar kontextens `url_key` var som helst. I båda fallen skapas produktsidans URL-adress för&quot;new-products/new-in-summer-2022/gold-cirque-earrings.html&quot; `url_path`.
+Ta till exempel svaret på en [produktfråga](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html) nedan. Eftersom användaren befinner sig på kategorisidan&quot;New Products / New in Sommaren 2022&quot; och butiken använder standardformatet för kategorimappens sidadress, matchar alternativet&quot;new-products/new-in-summer-2022/gold-cirque-earrings.html&quot; två av kontextens sökvägssegment från början: &quot;new-products&quot; och &quot;new-in-sommar-2022&quot;. Om butiken använder ett URL-format för kategorisida som bara innehåller kategorin `url_key`, skulle samma alternativ fortfarande vara markerat eftersom det matchar kontextens `url_key` var som helst. I båda fallen skapas produktsidans URL-adress för&quot;new-products/new-in-summer-2022/gold-cirque-earrings.html&quot; `url_path`.
 
 ```
 {
@@ -207,7 +207,7 @@ Som vi nämnt innan du väljer ett av de tillgängliga standardformaten, eller t
 
 _**Använd ett URL-format för produktsidan som innehåller sku:n.**_
 
-CIF Core-komponenterna använder sku som primär identifierare i alla komponenter. Om produktsidans URL-format inte innehåller sku-objektet krävs en GraphQL-fråga för att matcha den från `url_key`, vilket kan påverka tiden till första byte-måttet. Det kan också vara önskvärt för kunderna att hitta produkterna efter kunden i sökmotorerna.
+CIF Core-komponenterna använder sku som primär identifierare i alla komponenter. Om produktsidans URL-format inte innehåller sku-objektet krävs en GraphQL-fråga för att den ska kunna lösas. Detta kan påverka tiden till första byten. Det kan också vara önskvärt att kunderna kan hitta produkter genom att sku med sökmotorer.
 
 _**Använd ett URL-format för produktsidan som innehåller kategorisammanhanget.**_
 
@@ -215,17 +215,17 @@ Vissa funktioner i CIF URL-providern är bara tillgängliga när du använder pr
 
 _**Balansera URL-längden och kodad information.**_
 
-Beroende på katalogstorleken, särskilt storleken och djupet på kategoriträdet, är det kanske inte rimligt att koda hela `url_path` av kategorier i URL:en. I så fall kan URL-längden minskas genom att kategorins `url_key` i stället. Detta aktiverar nästan alla funktioner som är tillgängliga när du använder kategorin `url_path`.
+Beroende på katalogstorleken, särskilt storleken och djupet på kategoriträdet, är det kanske inte rimligt att koda hela `url_path` av kategorier i URL:en. I så fall kan URL-längden minskas genom att endast kategorins `url_key` i stället. Detta har stöd för de flesta funktioner som är tillgängliga när du använder kategorin `url_path`.
 
 Dessutom kan du använda [Samlingsmappningar](#sling-mapping) för att kombinera sku med produkten `url_key`. I de flesta e-handelssystem följer sku ett visst format och separerar sku från `url_key` för inkommande förfrågningar bör enkelt vara möjligt. Med detta i åtanke bör det vara möjligt att skriva om en produktsidas URL till `/p/{{category}}/{{sku}}-{{url_key}}.html`och en kategori-URL till `/c/{{url_key}}.html` respektive. The `/p` och `/c` -prefix krävs fortfarande för att skilja produkt- och kategorisidor från andra innehållssidor.
 
-### Migrera från ett URL-format till ett annat {#migrate-url-formats}
+### Migrera till ett nytt URL-format {#migrate-url-formats}
 
-Många av de förvalda URL-formaten är på något sätt kompatibla med varandra, vilket innebär att URL:er som formaterats av en kan tolkas av en annan. Det gör det enklare att migrera mellan URL-formaten.
+Många av de förvalda URL-formaten är på något sätt kompatibla med varandra, vilket innebär att URL:er som formaterats av en kan tolkas av en annan. Det gör det lättare att migrera mellan olika URL-format.
 
 Å andra sidan behöver sökmotorer lite tid för att kunna crawla alla katalogsidor med det nya URL-formatet. För att stödja den här processen och även för att förbättra slutanvändarupplevelsen bör du tillhandahålla omdirigeringar som vidarebefordrar användaren från de gamla URL:erna till de nya.
 
-Ett sätt att göra det är att ansluta en scenmiljö till e-handelslösningen för produktion och konfigurera den så att den använder det nya URL-formatet. Efteråt får du [produktwebbplatskarta som genererats av CIF-produkter för webbplatskartor](../../overview/seo-and-url-management.md) för både fas- och produktionsmiljö, och använda dem för att skapa en [Omskrivningskarta för Apache httpd](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html). Denna omskrivningskarta kan användas i stället för att distribueras till dispatchern tillsammans med utrullningen av det nya URL-formatet.
+Ett sätt att göra detta kan vara att ansluta en scenmiljö till e-handelsservern för produktion och konfigurera den så att den använder det nya URL-formatet. Efteråt får du [produktwebbplatskarta som genererats av CIF-produkter för webbplatskartor](../../overview/seo-and-url-management.md) för både scenen och produktionsmiljön, och använda dem för att skapa en [Omskrivningskarta för Apache httpd](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html). Denna omskrivningskarta kan användas i stället för att distribueras till dispatchern tillsammans med utrullningen av det nya URL-formatet.
 
 ## Exempel {#example}
 
