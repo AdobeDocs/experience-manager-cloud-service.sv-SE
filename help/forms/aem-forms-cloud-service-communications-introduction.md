@@ -2,16 +2,16 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 2f934bb63796599d6c3cca47498c1799388a9923
+source-git-commit: 6b546f551957212614e8b7a383c38797cc21fba1
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1135'
 ht-degree: 1%
 
 ---
 
 # Använd AEM Forms as a Cloud Service Communications {#frequently-asked-questions}
 
-**AEM Forms as a Cloud Service - API:er för dokumentredigering finns i betaversionen och kan ändras avsevärt före den faktiska versionen.**
+**API:er för dokumentredigering är i förhandsversionsfasen och kan ändras före den faktiska versionen.**
 
 Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskontakter, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga fakturor eller välkomstpaket.
 
@@ -21,9 +21,9 @@ Funktionen ger API:er för att generera och hantera dokument. Du kan generera el
 
 * möjlighet att kombinera, ordna om och validera PDF-dokument on-demand.
 
-* HTTP-API:er för enklare integrering med externa system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår. Det gör dokumentgenereringen till en effektiv uppgift.
+* HTTP-API:er för enklare integrering med externa system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår.
 
-* säker åtkomst till data. Kommunikations-API:er ansluter till och får endast åtkomst till data från kundutsedda datalager, gör inga lokala kopior av data, vilket gör kommunikationen mycket säker.
+* säker åtkomst till data. Kommunikations-API:er ansluter till och får endast åtkomst till data från kundutsedda datalager, vilket gör kommunikationen mycket säker.
 
 ![Exempel på kreditkortsutdrag](assets/statement.png)
 Du kan skapa ett kreditkortsutdrag med API:er för kommunikation. Det här exempelkontoutdraget använder samma mall men separata data för varje kund beroende på hur de använder kreditkortet.
@@ -42,7 +42,7 @@ Några exempel på API:er för dokumentgenerering är:
 
 ### Skapa PDF-dokument {#create-pdf-documents}
 
-Du kan använda API:erna för dokumentgenerering för att skapa ett PDF-dokument som baseras på en formulärdesign och XML-formulärdata. Utdata är ett icke-interaktivt PDF-dokument. Användarna kan alltså inte ange eller ändra formulärdata. Ett grundläggande arbetsflöde är att sammanfoga XML-formulärdata med en formulärdesign för att skapa ett PDF-dokument. Följande bild visar hur du sammanfogar en formulärdesign och XML-formulärdata för att skapa ett PDF-dokument.
+Du kan använda API:erna för dokumentgenerering för att skapa ett PDF-dokument som baseras på en formulärdesign och XML-formulärdata. Utdata är ett icke-interaktivt PDF-dokument. Användarna kan alltså inte ange eller ändra formulärdata. Ett grundläggande arbetsflöde är att sammanfoga XML-formulärdata med en formulärdesign för att skapa ett PDF-dokument. I följande bild visas sammanslagningen av en formulärdesign och XML-formulärdata för att skapa ett PDF-dokument.
 
 ![Skapa PDF-dokument](assets/outPutPDF_popup.png)
 Bild: Normalt arbetsflöde för att skapa ett PDF-dokument
@@ -57,7 +57,7 @@ Communications APIs can create separate documents for each record within an XML 
 
 The following illustration also shows Communications APIs processing an XML data file that contains multiple records. However, assume that you instruct the APIs to create a single PDF document that contains all data records. In this situation, the APIs generate one document that contains all of the records.
 
-The following illustration shows Communications APIs processing an XML data file that contains multiple records. Assume that you instruct the Communications APIs to create a separate PDF document for each data record. In this situation, the APIs generates a separate PDF document for each data record.
+The following illustration shows Communications APIs processing an XML data file that con tains multiple records. Assume that you instruct the Communications APIs to create a separate PDF document for each data record. In this situation, the APIs generates a separate PDF document for each data record.
 
  -->
 
@@ -77,34 +77,34 @@ The following illustration shows the Communication APIs processing an XML data f
 
 ![Create PDF Documents](assets/ou_OutputBatchMany_popup.png)
 
-For detailed information on using Batch APIs, see Communication APIs: Processing batch data to create multiple documents. -->
+For detailed information on using Batch APIs, see Communication APIs: Processing batch data to create multiple documents. 
 
-### Förenkla interaktiva PDF-dokument {#flatten-interactive-pdf-documents}
+### Flatten interactive PDF documents {#flatten-interactive-pdf-documents}
 
-Du kan använda API:er för dokumentgenerering för att omvandla ett interaktivt PDF-dokument (till exempel ett formulär) till ett icke-interaktivt PDF-dokument. Med ett interaktivt PDF-dokument kan användare ange eller ändra data som finns i dokumentfälten i PDF. Processen att omforma ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas för förenkling. När ett PDF-dokument förenklas kan användaren inte ändra de data som finns i dokumentets fält. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras.
+You can use document generation APIs to transform an interactive PDF document (for example, a form) to a non-interactive PDF document. An interactive PDF document lets users enter or modify data located in the PDF document fields. The process of transforming an interactive PDF document to a non-interactive PDF document is called flattening. When a PDF document is flattened, a user cannot modify the data located in the document’s fields. One reason to flatten a PDF document is to ensure that data cannot be modified.
 
-Du kan förenkla följande typer av PDF-dokument:
+You can flatten the following types of PDF documents:
 
-* Interaktiva PDF-dokument skapade i Designer (som innehåller XFA-strömmar).
+* Interactive PDF documents created in Designer (that contain XFA streams).
 
 * Acrobat PDF forms
 
-Om du försöker förenkla ett icke-interaktivt PDF-dokument inträffar ett undantag.
+If you attempt to flatten a non-interactive PDF document, an exception occurs.
 
-### Behåll formulärstatus {#retain-form-state}
+### Retain Form State {#retain-form-state}
 
-Ett interaktivt PDF-dokument innehåller olika element som utgör ett formulär. Dessa element kan innehålla fält (för att acceptera eller visa data), knappar (för att utlösa händelser) och skript (kommandon som utför en viss åtgärd). Om du klickar på en knapp kan det utlösa en händelse som ändrar tillståndet för ett fält. Om du t.ex. väljer ett genusalternativ kan du ändra färgen på ett fält eller formulärets utseende. Detta är ett exempel på en manuell händelse som gör att formulärtillståndet ändras.
+An interactive PDF document contains various elements that constitute a form. These elements may include fields (to accept or display data), buttons (to trigger events), and scripts (commands to perform a specific action). Clicking a button may trigger an event that changes the state of a field. For example, choosing a gender option may change the color of a field or the appearance of the form. This is an example of a manual event causing the form state to change.
 
-När ett sådant interaktivt PDF-dokument förenklas med API:erna för kommunikation behålls inte formulärets status. Ange det booleska värdet för att se till att formulärets status bevaras även efter att formuläret har förenklats _keepFormState_ till True för att spara och behålla formulärets status.
+When such an interactive PDF document is flattened using the Communications APIs, the state of the form is not retained. To ensure that the state of the form is retained even after the form is flattened, set the Boolean value _retainFormState_ to True to save and retain the state of the form. -->
 
 
-## Dokumenthantering
+## (Förhandsversion) Dokumentredigering
 
 API:er för dokumentbearbetning i kommunikation hjälper dig att kombinera, ordna om och validera PDF-dokument. Vanligtvis skapar du en DX och skickar den till API:er för dokumentbearbetning för att montera eller ordna om ett dokument. DDX-dokumentet innehåller anvisningar om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds. Några exempel på dokumentbearbetning är:
 
 ### Sammanställa dokument från PDF
 
-Du kan använda API:erna för dokumentframställning för att samla ihop två eller flera PDF-dokument till ett enda PDF-dokument eller PDF Portfolio. Här är några sätt att sammanställa PDF-dokument:
+Du kan använda API:erna för dokumentframställning för att samla ihop två eller flera PDF- eller XDP-dokument till ett enda PDF-dokument eller PDF Portfolio. Här är några sätt att sammanställa PDF-dokument:
 
 * Sammanställa ett enkelt PDF-dokument
 * Skapa en PDF Portfolio
@@ -128,6 +128,11 @@ Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
 ### Konvertera till och validera dokument som följer PDF/A
 
 Du kan använda API:erna för dokumentproduktion för att konvertera ett PDF-dokument till ett PDF/A-kompatibelt dokument och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
+
+>!![Note]
+Om du vill aktivera och konfigurera API:er för dokumentbearbetning lägger du till följande regel i [Dispatcher-konfiguration](setup-local-development-environment.md#forms-specific-rules-to-dispatcher):
+`# Allow Forms Doc Generation requests`
+`/0062 { /type "allow" /method "POST" /url "/adobe/forms/assembler/*" }`
 
 
 ## Typer av API:er för kommunikation

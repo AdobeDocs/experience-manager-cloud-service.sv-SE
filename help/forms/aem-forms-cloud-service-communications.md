@@ -2,17 +2,15 @@
 title: AEM Forms as a Cloud Service - kommunikation
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: 78cf7d29d6a42f330ba22135c892ce9af5df403f
+source-git-commit: 6b546f551957212614e8b7a383c38797cc21fba1
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
 
 
-# Använd AEM Forms as a Cloud Service kommunikations-API:er - synkron bearbetning {#frequently-asked-questions}
-
-**Kommunikationsfunktionen är i betaversion.**
+# Använd synkron bearbetning {#sync-processing-introduction}
 
 Med kommunikation kan ni skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation som affärskontakter, dokument, kontoutdrag, kravbrev, förmånsbesked, kravbrev, månatliga räkningar och välkomstpaket. Du kan använda API:er för kommunikation för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i formaten PDF, PS, PCL, DPL, IPL och ZPL.
 

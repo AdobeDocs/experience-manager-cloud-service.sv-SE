@@ -2,14 +2,14 @@
 title: Experience Manager [!DNL Forms] Batchbearbetning av as a Cloud Service Communications
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: f8f9aeb12d7a988deaf1ceed2cdf29519f8102dd
+source-git-commit: 6b546f551957212614e8b7a383c38797cc21fba1
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
 
-# Forms as a Cloud Service Communications - gruppbearbetning
+# Använd batchbearbetning
 
 Med kommunikation kan ni skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation som affärskontakter, dokument, kontoutdrag, kravbrev, förmånsbesked, kravbrev, månatliga räkningar och välkomstpaket. Du kan använda API:er för kommunikation för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i formaten PDF, PS, PCL, DPL, IPL och ZPL.
 
@@ -38,7 +38,7 @@ En gruppåtgärd är en process för att generera flera dokument av liknande typ
 
 ### Komponenter i en gruppåtgärd {#components-of-a-batch-operations}
 
-**Cloud configuration**: Experience Manger Cloud configuration helps you connect an Experience Manager instance to customer owned Microsoft Azure Storage. Här kan du ange autentiseringsuppgifter för ett kundägt Microsoft Azure-konto som du kan ansluta till.
+**Molnkonfiguration**: Med Experience Manager Cloud-konfigurationen kan du ansluta en Experience Manager-instans till kundägd Microsoft Azure Storage. Här kan du ange autentiseringsuppgifter för ett kundägt Microsoft Azure-konto som du kan ansluta till.
 
 **Konfiguration av batchdatalager (USC)**: Med batchdatakonfigurationen kan du konfigurera en specifik instans av Blob Storage för API:er för grupper. Här kan du ange in- och utdataplatser i kundägd Microsoft Azure Blob-lagring.
 
@@ -46,13 +46,13 @@ En gruppåtgärd är en process för att generera flera dokument av liknande typ
 
 ![data-merge-table](assets/communications-batch-structure.png)
 
-**Storage**: Communication APIs use customer owned Microsoft Azure Cloud storage to fetch customer records and store generated documents. Du konfigurerar Microsoft Azure Storage i Experience Manager Cloud Service Configuration.
+**Lagring**: Kommunikations-API:er använder kundägd Microsoft Azure Cloud-lagring för att hämta kundposter och lagra genererade dokument. Du konfigurerar Microsoft Azure Storage i Experience Manager Cloud Service Configuration.
 
 **App**: Ditt anpassade program som använder API:erna för grupper för att generera och använda dokument.
 
 ## Generera flera dokument med gruppåtgärder {#generate-multiple-documents-using-batch-operations}
 
-You can use batch operations to generate multiple documents at scheduled intervals.
+Du kan använda gruppåtgärder för att generera flera dokument med schemalagda intervall.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338349)
 
@@ -123,17 +123,17 @@ En organisation har vanligtvis flera mallar. Till exempel en mall var för kredi
 
 Om du vill använda ett batch-API skapar du en batchkonfiguration och kör en körning som baseras på den konfigurationen. API-dokumentationen innehåller information om API:er för att skapa och köra en batch, motsvarande parametrar och eventuella fel. Du kan ladda ned [API-definitionsfil](assets/batch-api.yaml) och ladda upp den till [Postman](https://go.postman.co/home) eller liknande program för att testa API:erna för att skapa och köra en gruppåtgärd.
 
-### Create a batch {#create-a-batch}
+### Skapa en batch {#create-a-batch}
 
-Om du vill skapa en grupp använder du `POST /config` API. Include the following mandatory properties in the body of the HTTP request:
+Om du vill skapa en grupp använder du `POST /config` API. Inkludera följande obligatoriska egenskaper i HTTP-begärans innehåll:
 
 * **configName**: Ange gruppens unika namn. Till exempel, `wknd-job`
 * **dataSourceConfigUri**: Ange plats för konfigurationen för batchdatalagret. Den kan vara en relativ eller absolut sökväg till konfigurationen. Till exempel: `/conf/global/settings/forms/usc/batch/wknd-batch`
 * **outputTypes**: Ange utdataformat: PDF och TRYCK. Om du använder utdatatypen PRINT, `printedOutputOptionsList` anger du minst ett utskriftsalternativ. Utskriftsalternativen identifieras av sin renderingstyp, så för närvarande tillåts inte flera utskriftsalternativ med samma renderingstyp. De format som stöds är PS, PCL, DPL, IPL och ZPL.
 
-* **template**: Specify absolute or relative path of the template. Till exempel, `crx:///content/dam/formsanddocuments/wknd/statements.xdp`
+* **mall**: Ange en absolut eller relativ sökväg för mallen. Till exempel, `crx:///content/dam/formsanddocuments/wknd/statements.xdp`
 
-If you specify relative path, also provide a content root. Mer information om innehållsroten finns i API-dokumentationen.
+Om du anger en relativ sökväg anger du även en innehållsrot. Mer information om innehållsroten finns i API-dokumentationen.
 
 <!-- For example, you include the following JSON in the body of HTTP APIs to create a batch named wknd-job: -->
 
@@ -156,12 +156,12 @@ Svaret på statusbegäran innehåller statusavsnittet. Den innehåller informati
 >[!NOTE]
 >
 >* När du begär flera PRINT-format innehåller statusen flera poster. Exempel: PRINT/ZPL, PRINT/IPL.
->* Ett batchjobb läser inte alla poster samtidigt, utan jobbet fortsätter att läsa och öka antalet poster. So, the status returns -1 until all the records have been read.
+>* Ett batchjobb läser inte alla poster samtidigt, utan jobbet fortsätter att läsa och öka antalet poster. Statusen returnerar alltså -1 tills alla poster har lästs.
 
 
 ### Visa genererade dokument {#view-generated-documents}
 
-On completion of job, the generated documents are stored to the `success` folder at the destination location specified in the Batch Data Store configuration. If there are any errors, the service creates a `failure` folder. Här finns information om typ och orsak till fel.
+När jobbet är klart lagras de genererade dokumenten i `success` på den målplats som anges i konfigurationen för batchdatalagret. Om några fel uppstår skapar tjänsten en `failure` mapp. Här finns information om typ och orsak till fel.
 
 Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Sedan innehåller målplatsen två undermappar `pdf` och `pcl`, en för varje utdatatyp. Låt oss anta att genereringen av PDF har slutförts och sedan `pdf` undermappen innehåller `success` undermapp som i sin tur innehåller det genererade PDF-dokumentet `record1.pdf`. Låt oss anta att PCL-genereringen misslyckades, sedan `pcl` undermappen innehåller en `failure` undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Dessutom innehåller målplatsen en tillfällig mapp med namnet `__tmp__` som innehåller vissa filer som krävs vid batchkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
 
