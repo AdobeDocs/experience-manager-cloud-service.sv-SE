@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 35f153a6f094f558b6a5e1d880dde9f33dcd92fb
+source-git-commit: 3c6b25bdcc626946ae7bd4b98da65f4ccfd963f7
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -25,119 +25,113 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.11.0) är 16 december 2021.
-Följande version (2022.1.0) är den 3 februari 2022.
+Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.1.0) är 3 februari 2022.
+Följande version (202.2.0) är den 24 februari 2022.
 
 ## Släpp video {#release-video}
 
-Ta en titt på [Versionsöversikt december 2021](https://video.tv.adobe.com/v/339278) video med en sammanfattning av funktioner som lagts till i version 2021.11.0 (november 2021).
+Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340120) video med en sammanfattning av funktioner som lagts till i version 2022.1.0.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* Dynamic Media Image Smart Crop och Swatch drivs nu av de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom bevaras alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
-
-### Nya funktioner i [!DNL Assets] prerelease channel {#assets-prerelease-features}
-
 * [!DNL Dynamic Media] - Du kan nu använda AEM Dynamic Media gränssnitt för att konfigurera allmänna inställningar och publiceringsinställningar i stället för att behöva gå igenom Dynamic Media Classic datorprogram.
 
 * [!DNL Dynamic Media] har nu stöd för inhämtning, förhandsgranskning, uppspelning och publicering av MXF-videor. Anteckningar och videor som kan köpas för MXF-videor stöds ännu inte.
 
-* När du har konfigurerat en anslutning mellan distributioner av fjärr-DAM och platser, blir resurserna på fjärr-DAM tillgängliga i Sites-distributionen. Nu kan du utföra [uppdatera, ta bort, byta namn på och flytta åtgärder](../../assets/use-assets-across-connected-assets-instances.md) på DAM-fjärrresurserna eller -mapparna. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen.
+* När du har konfigurerat en anslutning mellan distributioner av fjärr-DAM och platser, blir resurserna på fjärr-DAM tillgängliga i Sites-distributionen. Nu kan du utföra [uppdatera, ta bort, byta namn på och flytta åtgärder](/help/assets/use-assets-across-connected-assets-instances.md) på DAM-fjärrresurserna eller -mapparna. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen.
+
+### Nya funktioner i [!DNL Assets] prerelease channel {#assets-prerelease-features}
+
+* [!DNL AEM Dynamic Media] ger nu flexibilitet att [konfigurera ett aliaskonto](../../assets/dynamic-media/dm-alias-account.md) i användargränssnittet, vilket säkerställer att färdiga Dynamic Media-URL:er och inbäddningskod för visningsprogram uppdateras. Detta påverkar SEO positivt för att återspegla uppdateringar som gjorts i ert företagskontext, t.ex. omprofilering.
+
+* Nu kan du använda [!DNL Experience Manager Assets] till
+
+   * Konfigurera identifiering av dubblettresurser i en databas.
+
+   * Konfigurera tillägg av digitala vattenstämplar till bilder.
+
+* Administratörerna kan nu konfigurera e-posttjänsten för stora hämtningar. Det gör att användarna kan aktivera e-postmeddelanden för stora nedladdningar från [!DNL Experience Manager Assets] gränssnitt. Användaren får ett e-postmeddelande med nedladdningslänken för den arkiverade zip-mappen när nedladdningen är klar.
+
+
+* Funktionen Hantera publikation har förbättrats med ett förbättrat användargränssnitt. Användarna kan publicera eller avpublicera innehåll till och från det valda målet, lägga till innehåll i publiceringslistan från hela DAM-databasen, inkludera mappinställningar för att publicera innehållet i de valda mapparna och tillämpa filter samt schemalägga publicering till ett senare datum eller en senare tidpunkt.
+
+### Felkorrigeringar {#bug-fixes}
+
+* Obearbetade resurser utan ursprunglig återgivning skickas till Asset compute för bearbetning när resurser migreras från AEM lokalt till molntjänster.
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra AEM arbetsflödesdata (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
-
-### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
-
 * **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera en mall och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge och gruppläge. Med API:erna kan du skapa program som gör att du kan:
 
-   * Generera dokument genom att fylla i mallfiler (PDF och XDP) med XML-data.
-   * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
+   * Generera dokument genom att fylla i mallfiler med XML-data.
+   * Generera formulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
+   * Generera PDF från XFA-PDF.
+   * Generera PDF-, PostScript-, PCL- och ZPL-dokument genom att sammanfoga flera datauppsättningar med källmallar.
 
 * **Anpassade teckensnitt för dokument i dokumentformat och PDF som skapats med kommunikationsAPI:er**: Nu kan du använda typsnitt som är godkända av varumärket i PDF-dokument som genererats med kommunikations-API:er för att anpassa dig till organisationens krav.
 
-* **Forms Portal**: Du kan använda [Forms Portal](/help/forms/configure-forms-portal.md) för att lista dina publicerade adaptiva formulär på en AEM Sites-sida. Det hjälper en besökare att hitta alla tillgängliga formulär. Dessutom kan besökaren använda formulärportalen för att spara och komma åt utkast av ett adaptivt formulär och titta på PDF-versionen av ett skickat adaptivt formulär.
+### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
+
+* **[Assembler API](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/references/assembler-sync/)**: Sammanställ API:er för att kombinera, ordna om, förbättra och få information om PDF-dokument.
+
 
 ## CIF-tillägg {#cloud-services-cif}
 
 ### Vad är nytt? {#what-is-new-cif}
 
-* Utökade myAccount-komponenter som baseras på Commerce:s utökningsbara Premiere-komponenter
+* Förbättrade komponenter för myAccount
+* Produktrekommendationskomponenten stöder ytterligare sidtyper (hemsida, kundvagn, orderbekräftelse)
+* **Önsklista**
+   * Inloggade besökare kan lägga till produkter i en önskelista
+   * Du kan hantera önskelistan och dess produkter via mitt konto
+   * Knappen&quot;Lägg till i önskelista&quot; kan aktiveras/inaktiveras på komponentnivå via en policy (exempel produktnivå, produktinformation)
+   * Finns som kärnkomponent och i AEM Venia Storefront
 
-![Utökade komponenter för myAccount](/help/assets/CIF/extended-myAccount-components.png)
-
-* Författare kan skapa ad hoc-Commerce Product Recommendations med hjälp av ytterligare rekommendationstyper
-
-* Stöd för presentkort i AEM Storefront
+![Önsklista](/help/assets/CIF/wishlist.png)
 
 ## Cloud Manager {#cloud-manager}
 
-I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.11.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2022.01.0.
 
-### Releasedatum {#release-date-cm-nov}
+>[!NOTE]
+>
+>Se [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md) för den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
 
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.11.0 är 4 november 2021.
-Nästa version är planerad till 9 december 2021.
+### Releasedatum {#release-date-cm}
 
-### Nyheter {#what-is-new-cm-nov}
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.01.0 är 20 januari 2022. Nästa version är planerad till den 10 februari 2022.
 
-* Användare kan nu utnyttja nya frontledningslinjer för att exklusivt distribuera frontendkod snabbare. Se [Front End Pipelines för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill veta mer.
+### Nyheter {#what-is-new-cm}
 
-   >[!IMPORTANT]
-   >Du måste ha AEM version `2021.10.5933.20211012T154732Z` eller högre för att utnyttja nya frontendrörledningar.
+* Cloud Manager kommer att [undvika att återskapa kodbasen när den upptäcker att samma Git-implementering används](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) i flera fullständiga pipeline-körningar.
+* För att få åtkomst till AEM måste du **Distributionshanteraren** produktprofil. Användare utan den här profilen ser en inaktiverad knapp i användargränssnittet.
+* Gränssnittet tillåter inte konfiguration av pipeline i gränssnittet för ett program där Sites inte är aktiverat som en lösning.
+* När du genererar ett Git-lösenord visas förfallodatumet.
 
-* Varaktigheten i bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett mer effektivt sätt utan att behöva skapa en hel AEM. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
+### Felkorrigeringar {#bug-fixes-cm}
 
-* Git-implementerings-ID visas nu i körningsinformationen för pipeline, vilket gör det enklare att spåra koden som skapades.
-
-* Nu kan du skapa program via offentligt exponerade API:er.
-
-* Miljöskapande är nu tillgängligt via offentligt exponerade API.
-
-* The `x-request-id` svarshuvudet är nu synligt i API-uppspelningen på [www.adobe.io](https://www.adobe.io/). Det här huvudet är användbart när du skickar in kundvårdsproblem för felsökning.
-
-* Som användare ser jag att Pipeline-kortet med noll rörledningar ger mig lämplig vägledning.
-
-* Det finns nu en ny aktivitetssida där aktiviteter som pipeline och kodkörningar kan visas tillsammans med tillhörande information. Med tiden kommer de aktiviteter som listas på den här sidan att utvidgas tillsammans med de angivna detaljerna.
-
-* Nu finns det en ny sida med Pipelines (Pipelines) med en statuspekare som du kan använda när du hovrar för att enkelt visa sammanfattningen av detaljer. Pipeline-körningar kan visas tillsammans med tillhörande information.
-
-* API:t Redigera pipeline har nu stöd för att ändra miljön som används i distributionsfaserna.
-
-* En optimering i OakPal-skanningsprocessen har införts för stora paket.
-
-* CSV-filen för kvalitetsutgåva kommer nu att innehålla tidsstämpeln för varje kvalitetsproblem.
-
-### Felkorrigeringar {#bug-fixes-nov}
-
-* Vissa oortodoxa byggkonfigurationer resulterade i att onödiga filer sparades i Pipelins Maven-artefaktcache, vilket resulterade i överflödig nätverks-I/O när byggbehållaren startades och stoppades.
-
-* Pipeline PATCH API misslyckas om det inte finns någon distributionsfas.
-
-* The `ClientlibProxyResourceCheck` kvalitetsregeln genererade falskt positiva problem när det fanns klientbibliotek med gemensamma grundsökvägar.
-
-* Felmeddelandet när det maximala antalet databaser har uppnåtts specificerade inte orsaken till felet.
-
-* I sällsynta fall misslyckades rörledningar på grund av olämplig hantering av vissa svarskoder.
+* Null-pekarundantag som påträffades i vissa frontendsdistributioner har korrigerats.
+* Miljövariabler kan nu läggas till, uppdateras och tas bort när en miljö kör en gammal version av AEM.
+* Steget för att skapa bilder markeras inte längre som FEL för rörledningar som i vissa sällsynta fall använde det schemalagda steget.
+* För program med endast en databas visas databasens namn på körningsskärmen för pipeline.
 
 ## Best Practices Analyzer {#bpa-release}
 
 ### Releasedatum {#release-date-bpa}
 
-Releasedatum för Best Practices Analyzer v2.1.22 är 1 december 2021.
+Releasedatum för Best Practices Analyzer v2.1.24 är 1 februari 2022.
 
 ### Nyheter {#what-is-new-bpa}
 
-* Möjlighet att upptäcka och rapportera vilken version av ACS-kommandon som används.
-* Möjlighet att identifiera och rapportera antalet användare och undergrupper i en grupp.
-* Möjlighet att identifiera och rapportera om egenskapsvärden för noder i MongoDB som överstiger 16 MB.
+* Möjlighet att identifiera och rapportera antalet resurser med och utan smarta taggar.
+* Möjlighet att identifiera och rapportera vilken version av Core Component som används.
+* Möjlighet att identifiera och rapportera om typen av källnivå (författare eller publicering) där BPA utfördes.
 
 ### Felkorrigeringar {#bug-fixes-bpa}
 
-* Identifieringen av Foundation-komponenter förfinades för att minska falska negativ.
-* För AEM Forms-kunder gäller BPA-meddelanden `EMAIL_PDF_SUBMIT_ACTION` som inte är tillgänglig på AEM as a Cloud Service har åtgärdats.
+* Logiken för BPA-storleksändring gjordes snabbare och effektivare.
+* I vissa scenarier ökade inte BPA antalet analyserade när det kördes. Den här har åtgärdats.

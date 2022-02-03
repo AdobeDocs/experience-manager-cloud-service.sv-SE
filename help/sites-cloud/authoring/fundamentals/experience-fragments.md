@@ -2,16 +2,17 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 45da72dc39a4c2a66957dbbe26f563b00100488e
+source-git-commit: 5c907a26a976b55f1e2850650057d907d358aa07
 workflow-type: tm+mt
-source-wordcount: '1494'
-ht-degree: 7%
+source-wordcount: '1522'
+ht-degree: 6%
 
 ---
 
 # Upplevelsefragment {#experience-fragments}
 
 Inom Adobe Experience Manager as a Cloud Service, en Experience Fragment:
+
 * är en grupp med en eller flera komponenter
 * innehåller både innehåll och layout
 * kan refereras inom sidor
@@ -22,10 +23,12 @@ An Experience Fragment:
 * Är en del av en upplevelse (sida).
 * Kan användas på flera sidor.
 * Är baserad på en mall (endast redigerbar) för att definiera struktur och komponenter.
+* Den här mallen används för att skapa *rotsida* av Experience Fragment.
 * Består av en eller flera komponenter, med layout, i ett styckesystem.
 * Kan innehålla andra upplevelsefragment.
 * Kan kombineras med andra komponenter (inklusive andra Experience Fragments) för att skapa en komplett sida (upplevelse).
-* Kan ha olika variationer, som kan dela innehåll och/eller komponenter.
+* En eller flera varianter kan skapas baserat på rotsidan.
+* Dessa variationer kan dela innehåll och/eller komponenter.
 * Kan delas upp i byggstenar som kan användas i flera varianter av fragmentet.
 
 Du kan använda Experience Fragments:
@@ -57,7 +60,6 @@ Experience Fragments ska användas:
    * Kanal- eller kontextspecifika varianter.
    * upplevelser som är begripliga att gruppera, till exempel en kampanj med olika upplevelser i olika kanaler.
 * När ni använder Omnichannel Commerce.
-   * Dela e-handelsrelaterat innehåll på [sociala medier](/help/implementing/developing/extending/experience-fragments.md#social-variations) kanaler i stor skala.
    * Göra kontaktytor transaktionella.
 
 ## Organisera dina upplevelsefragment {#organizing-your-experience-fragments}
@@ -151,7 +153,6 @@ Om du vill skapa och konfigurera en mapp för dina Experience Fragments bör du:
 
 1. Välj **Spara**.
 
-
 ## Skapa ett upplevelsefragment {#creating-an-experience-fragment}
 
 Så här skapar du ett Experience Fragment:
@@ -176,6 +177,12 @@ Så här skapar du ett Experience Fragment:
    A **Titel** är obligatoriskt. Om **Namn** är tom kommer den att härledas från **Titel**.
 
    ![Experience Fragment-egenskaper](/help/sites-cloud/authoring/assets/xf-04.png)
+
+   >[!NOTE]
+   >
+   >Taggar från Experience Fragment-mallen kommer inte att sammanfogas med taggar på den här Experience Fragment-rotsidan.
+   >
+   >De här är helt separata.
 
 1. Klicka **Skapa**.
 
@@ -232,6 +239,7 @@ Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 
    ![Variantegenskaper](/help/sites-cloud/authoring/assets/xf-07.png)
 
+
 1. Bekräfta med **Klar** visas den nya varianten på panelen.
 
 ## Använda ditt Experience Fragment {#using-your-experience-fragment}
@@ -283,7 +291,7 @@ Så här skapar du ett nytt byggblock:
 
 Byggblocket visas i **Byggblock** -fliken. Följande åtgärder är tillgängliga för varje block:
 
-* **Gå till master**: öppna mastervarianten på en ny flik
+* **Gå till överordnad**: öppna rotsidvarianten på en ny flik
 * **Byt namn på**
 * **Ta bort**
 
@@ -338,8 +346,6 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn** vi
       * **Pinterest board**
    * **Referenser**
       * En lista med referenser
-   * **Status för sociala medier**
-      * Information om variationer i sociala medier
 
 ## The Plain HTML Rendition {#the-plain-html-rendition}
 
