@@ -2,13 +2,13 @@
 title: Vattenstämpel för resurserna
 description: Lägg till vattenstämpel i era digitala resurser.
 contentOwner: AG
-feature: Resurshantering,publicering
+feature: Asset Management,Publishing
 role: User,Admin
 exl-id: 210f8925-bd15-4b4a-8714-5a1486eeb49e
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 8f7dc67a8335822b51e4c7796ab55244199fb214
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 0%
+source-wordcount: '262'
+ht-degree: 1%
 
 ---
 
@@ -16,24 +16,38 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager Assets] Med kan du lägga till en digital vattenstämpel i bilder. [!DNL Assets] har stöd för att använda en bild som vattenstämpel på andra bildfiler. Vattenstämplar kan hjälpa användare att verifiera autenticitet och upphovsrättsskydd för resurserna. En vattenstämpel kan också användas för att ange ett dokuments status, t.ex. konfidentiellt, utkast, giltighet.
 
-Så här konfigurerar du [!DNL Experience Manager] till vattenstämpelresurser:
+>[!NOTE]
+>
+>Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
+
+Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
 
 1. En PNG-fil används som en vattenstämpel. Överför den här filen till DAM-databasen.
 
-1. Använd den [!DNL Cloud Manager] Git-databas som är kopplad till din miljö. Spara en fil med namnet `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json` i databasen med följande innehåll. Instruktioner finns i [Så här gör du OSGi-konfiguration i [!DNL Experience Manager] som en [!DNL Cloud Service]](/help/implementing/deploying/configuring-osgi.md).
+1. Navigera till **[!UICONTROL Tools > Assets > Assets Configurations]**.
 
-   ```json
-   {
-   "watermark": "/content/dam/<path-to-watermark-image.png>",
-    "width": 100
-   }
-   ```
+1. Klicka på **[!UICONTROL System Watermarking Profile]**.
 
-1. [Skapa en ](/help/assets/asset-microservices-configure-and-use.md#create-custom-profile) bearbetningsprofil för att använda resursmikrotjänsterna för vattenstämpeln.
+1. På [!UICONTROL System Watermarking Profile page]anger du bildsökvägen som ska överföras till DAM-databasen i steg 1.
+
+1. Ange vattenstämpelskalan (från 0,0 till 1,0) i förhållande till återgivningsbredden i dialogrutan **[!UICONTROL Scale]** fält.
+
+1. Klicka på **[!UICONTROL Save]**.
+
+   ![Identifierare för resursduplicering](assets/system-watermarking-profile.png)
+
+   >[!NOTE]
+   >
+   >Om du har konfigurerat systemprofilen för vattenstämplar med `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json` konfigurationsfilen (OSGi-konfiguration) kan du fortsätta att använda den, men Adobe rekommenderar att du använder den nya metoden.
+
+
+1. [Skapa en bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-custom-profile) för att utnyttja tillgångsmikrotjänster för att använda vattenstämpeln.
 
    ![Resursbearbetningsprofil för att skapa vattenstämpel](assets/watermark-processing-profile.png)
 
-1. [Använd bearbetningsprofilerna på en ](/help/assets/asset-microservices-configure-and-use.md#use-profiles) mapp för att skapa material med vattenstämpel.
+   Se till att du aktiverar **[!UICONTROL Watermark]** växla när du skapar bearbetningsprofilen.
+
+1. [Använda bearbetningsprofilerna på en mapp](/help/assets/asset-microservices-configure-and-use.md#use-profiles) för att skapa material med vattenstämpel.
 
 ## Tips och begränsningar {#tips-limitations-bestpractices}
 
@@ -44,5 +58,5 @@ Så här konfigurerar du [!DNL Experience Manager] till vattenstämpelresurser:
 >[!MORELIKETHIS]
 >
 >* [Resursmikrotjänster - översikt](/help/assets/asset-microservices-overview.md).
->* [Använd resursmikrotjänster med bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
+>* [Använda resursmikrotjänster med bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
 

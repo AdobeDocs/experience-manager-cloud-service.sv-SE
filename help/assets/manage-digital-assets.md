@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: c49352926c67587096b8c60840e00bf379b92075
+source-git-commit: 8f7dc67a8335822b51e4c7796ab55244199fb214
 workflow-type: tm+mt
-source-wordcount: '3924'
+source-wordcount: '4199'
 ht-degree: 10%
 
 ---
@@ -44,16 +44,30 @@ Se [lägga till digitala resurser i Experience Manager](add-assets.md).
 
 <!-- TBD: This feature may not work as documented. See CQ-4283718. Get PM review done. -->
 
-Om en DAM-användare överför en eller flera resurser som redan finns i databasen, [!DNL Experience Manager] identifierar dupliceringen och meddelar användaren. Dubblettidentifiering är inaktiverat som standard eftersom det kan påverka prestanda beroende på databasens storlek och antalet överförda resurser. Aktivera funktionen genom att konfigurera [!UICONTROL Adobe AEM Cloud Asset Duplication Detector]. Se [Så här gör du OSGi-konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html). Dubblettidentifieringen baseras på den unika `dam:sha1` värde lagrat på `jcr:content/metadata/dam:sha1`. Det innebär att duplicerade resurser identifieras även om filnamnen är olika.
+Om en DAM-användare överför en eller flera resurser som redan finns i databasen, [!DNL Experience Manager] identifierar dupliceringen och meddelar användaren. Dubblettidentifiering är inaktiverat som standard eftersom det kan påverka prestanda beroende på databasens storlek och antalet överförda resurser.
 
-Du kan lägga till konfigurationsfilen `/apps/example/config.author/com.adobe.cq.assetcompute.impl.assetprocessor.AssetDuplicationDetector.cfg.json` i egen kod och filen kan innehålla följande:
+>[!NOTE]
+>
+>Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
-```json
-{
-  "enabled":true,
-  "detectMetadataField":"dam:sha1"
-}
-```
+Så här aktiverar du funktionen:
+
+1. Navigera till **[!UICONTROL Tools > Assets > Assets Configurations]**.
+
+1. Klicka på **[!UICONTROL Asset Duplication Detector]**.
+
+1. På [!UICONTROL Asset Duplication Detector page], klicka **[!UICONTROL Enabled]**.
+
+   `dam:sha1` värdet för fältet Identifiera metadata ser till att duplicerade resurser identifieras även om filnamnen är olika.
+
+1. Klicka på **[!UICONTROL Save]**.
+
+   ![Identifierare för resursduplicering](assets/asset-duplication-detector.png)
+
+>[!NOTE]
+>
+>Om du har konfigurerat dupliceringsavkännaren med `/apps/example/config.author/com.adobe.cq.assetcompute.impl.assetprocessor.AssetDuplicationDetector.cfg.json` konfigurationsfilen (OSGi-konfiguration) kan du fortsätta att använda den, men Adobe rekommenderar att du använder den nya metoden.
+
 
 När den är aktiverad skickar Experience Manager meddelanden om duplicerade resurser till Inkorgen Experience Manager. Det är ett aggregerat resultat för flera dubbletter. Användarna kan välja att ta bort resurserna baserat på resultatet.
 
@@ -278,35 +292,27 @@ Se [hämta resurser från [!DNL Experience Manager]](/help/assets/download-asset
 
 ## Publicera eller avpublicera resurser {#publish-assets}
 
-Du kan publicera resurser och mappar som innehåller resurser från författarinstansen till [!DNL Experience Manager Assets], [!DNL Dynamic Media]och [!DNL Brand Portal]. Du kan publicera eller avpublicera resurser på resurs- eller mappnivå med antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]** finns i [!DNL Experience Manager Assets] gränssnitt.
+1. Navigera till platsen för resursen eller resursmappen som du vill publicera eller som du vill ta bort från publiceringsmiljön (avpublicera).
 
-Se [hantera publikation från [!DNL Experience Manager]](/help/assets/manage-publication.md)
+1. Markera resursen eller mappen som ska publiceras eller avpubliceras och välj **[!UICONTROL Manage Publication]** ![hantera publikationsalternativ](assets/do-not-localize/globe-publication.png) i verktygsfältet. Om du snabbt vill publicera väljer du **[!UICONTROL Quick Publish]** i verktygsfältet. Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
 
-<!--
+1. Välj **[!UICONTROL Publish]** eller **[!UICONTROL Unpublish]** efter behov.
 
-1. Navigate to the location of the asset or the asset folder that you want to publish or that you want to remove from the publish environment (unpublish).
+   ![Avpubliceringsåtgärd](assets/unpublish_action.png)
+   *Bild: Alternativ för publicering och avpublicering samt schemaläggning.*
 
-1. Select the asset or the folder to publish or unpublish and select **[!UICONTROL Manage Publication]** ![manage publication option](assets/do-not-localize/globe-publication.png) option from the toolbar. Alternatively, to publish quickly, select the **[!UICONTROL Quick Publish]** option from the toolbar. If the folder you want to publish includes an empty folder, the empty folder is not published.
+1. Välj **[!UICONTROL Now]** för att agera på resursen direkt eller välja **[!UICONTROL Later]** för att schemalägga åtgärden. Välj ett datum och en tid om du väljer **[!UICONTROL Later]** alternativ. Klicka på **[!UICONTROL Next]**.
 
-1. Select the **[!UICONTROL Publish]** or **[!UICONTROL Unpublish]** option as required.
+1. Om en resurs refererar till andra resurser vid publicering visas dess referenser i guiden. Endast de referenser som inte har publicerats eller ändrats sedan den senaste publiceringen visas. Välj de referenser som du vill publicera.
 
-   ![Unpublish action](assets/unpublish_action.png)
-   *Figure: Publish and unpublish options and the scheduling option.*
+1. Om en resurs refererar till andra resurser vid avpublicering väljer du de referenser som du vill avpublicera. Klicka på **[!UICONTROL Unpublish]**. Klicka på **[!UICONTROL Cancel]** för att stoppa funktionsmakrot eller klicka **[!UICONTROL Unpublish]** för att bekräfta att resurserna ska avpubliceras vid det angivna datumet.
 
-1. Select **[!UICONTROL Now]** to act on the asset right away or select **[!UICONTROL Later]** to schedule the action. Select a date and time if you choose the **[!UICONTROL Later]** option. Click **[!UICONTROL Next]**.
+Förstå följande begränsningar och tips för publicering eller avpublicering av resurser och mappar:
 
-1. When publishing, if an asset references other assets, its references are listed in the wizard. Only those references are displayed, that are either unpublished or modified since last publish. Choose the references that you want to publish.
-
-1. When unpublishing, if an asset references other assets, choose the references that you want to unpublish. Click **[!UICONTROL Unpublish]**. In the confirmation dialog, click **[!UICONTROL Cancel]** to stop the action or click **[!UICONTROL Unpublish]** to confirm that the assets are to be unpublished at the specified date.
-
-Understand the following limitations and tips related to publishing or unpublishing assets or folders:
-
-* The option to [!UICONTROL Manage Publication] is available only to the user accounts that have replication permissions.
-* While unpublishing a complex asset, unpublish the asset only. Avoid unpublishing the references because those may be referenced by other published assets.
-* Empty folders are not published.
-* If you publish an assets that is being processed, only the original content is published. The renditions are missing. Either wait for processing to complete and then publish or re-publish the asset once the processing completes.
-
--->
+* Alternativet att [!UICONTROL Manage Publication] är bara tillgängligt för användarkonton som har replikeringsbehörigheter.
+* När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
+* Tomma mappar publiceras inte.
+* Om du publicerar ett material som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Antingen väntar du på att bearbetningen ska slutföras och publicerar eller publicerar om resursen när bearbetningen är klar.
 
 ## Stängd användargrupp {#closed-user-group}
 

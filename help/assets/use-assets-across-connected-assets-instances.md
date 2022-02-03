@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 7b39a97983c5ec338b587a0fae85e28a3bcc0319
+source-git-commit: 8f7dc67a8335822b51e4c7796ab55244199fb214
 workflow-type: tm+mt
-source-wordcount: '3242'
+source-wordcount: '3212'
 ht-degree: 22%
 
 ---
@@ -213,10 +213,6 @@ Så här visar och hanterar du referenser på [!DNL Assets] -distribution, följ
    ![varning om force delete](assets/delete-referenced-asset.png)
 
 ### Hantera uppdateringar av resurser i fjärr-DAM {#handling-updates-to-remote-assets}
-
->[!NOTE]
->
->Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 Efter [konfigurera en anslutning](#configure-a-connection-between-sites-and-assets-deployments) mellan distributioner av fjärranslutna DAM och platser är resurserna på fjärr-DAM tillgängliga i Sites-distributionen. Du kan sedan uppdatera, ta bort, byta namn på och flytta åtgärder på fjärr-DAM-resurser eller -mappar. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen. Om en resurs på en fjärransluten DAM används på en lokal Experience Manager Sites-sida visas dessutom uppdateringarna av resursen på fjärr-DAM på sidan Platser.
 
