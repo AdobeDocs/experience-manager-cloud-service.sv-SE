@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 3c6b25bdcc626946ae7bd4b98da65f4ccfd963f7
+source-git-commit: 0ad1218ceb486a5b0feebebecece741eea2148cd
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -52,10 +52,10 @@ Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340
 
    * Konfigurera tillägg av digitala vattenstämplar till bilder.
 
-* Administratörerna kan nu konfigurera e-posttjänsten för stora hämtningar. Det gör att användarna kan aktivera e-postmeddelanden för stora nedladdningar från [!DNL Experience Manager Assets] gränssnitt. Användaren får ett e-postmeddelande med nedladdningslänken för den arkiverade zip-mappen när nedladdningen är klar.
+* Administratörerna kan nu konfigurera e-posttjänsten för stora hämtningar. Det gör att användarna kan [aktivera e-postmeddelanden för stora nedladdningar](/help/assets/download-assets-from-aem.md#enable-email-notifications-for-large-downloads) från [!DNL Experience Manager Assets] gränssnitt. Användaren får ett e-postmeddelande med nedladdningslänken för den arkiverade zip-mappen när nedladdningen är klar.
 
 
-* Funktionen Hantera publikation har förbättrats med ett förbättrat användargränssnitt. Användarna kan publicera eller avpublicera innehåll till och från det valda målet, lägga till innehåll i publiceringslistan från hela DAM-databasen, inkludera mappinställningar för att publicera innehållet i de valda mapparna och tillämpa filter samt schemalägga publicering till ett senare datum eller en senare tidpunkt.
+* The [Hantera publikation](/help/assets/manage-publication.md) har förbättrats med ett förbättrat användargränssnitt. Användarna kan publicera eller avpublicera innehåll till och från det valda målet, [Lägg till innehåll](/help/assets/manage-publication.md#add-content) till publiceringslistan från DAM-databasen, [Inkludera mappinställningar](/help/assets/manage-publication.md#include-folder-settings) för att publicera innehållet i de valda mapparna och tillämpa filter, och [schemaläggning](/help/assets/manage-publication.md#publish-assets-later) till ett senare datum eller en senare tid.
 
 ### Felkorrigeringar {#bug-fixes}
 
