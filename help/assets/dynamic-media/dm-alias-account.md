@@ -8,9 +8,9 @@ feature: Image Profiles
 role: User,Admin
 mini-toc-levels: 4
 exl-id: 886063d4-71dd-48c8-a342-884ad2c111ca
-source-git-commit: 924331ced6a3966a0705dae857f5e7e5af3c9664
+source-git-commit: 1932476a2ca8f46c1f73214c15982d7baa6c56ff
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ hidefromtoc: yes -->
 
 >[!NOTE]
 >
->Funktionen för att skapa ett Dynamic Media-företagskonto finns i Prerelease Channel för januari 2022. Funktionen kommer att vara allmänt tillgänglig i februari 2022-versionen.
+>Den här funktionen för att skapa ett Dynamic Media-företagskonto finns i Prerelease Channel i januari 2022. Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö. Funktionen kommer att vara allmänt tillgänglig i februari 2022-versionen.
 
 Dynamic Media URL:er och visningsprogrammets inbäddningskod innehåller ditt företagskontonamn. Det här kontonamnet skapades när Dynamic Media etablerades. Det kan finnas scenarier där ditt företag har genomgått ett förvärv, en omprofilering eller där du bara vill använda ett mer minnesvärt namn. I sådana fall är det inte enkelt att manuellt uppdatera företagskontots namn i alla URL:er och visningsprogrammets inbäddningskod som kommer ut ur kartongen. Dessutom finns det en möjlighet att du kan påverka din befintliga Dynamic Media-databas eller påverka direktinnehåll. Du kan lösa det här problemet genom att konfigurera ett Dynamic Media-företagskonto för alias.
 
