@@ -3,10 +3,10 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 0ad1218ceb486a5b0feebebecece741eea2148cd
+source-git-commit: 5731337ff0edf5825860e6f76ed919b90402d88b
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 0%
+source-wordcount: '1024'
+ht-degree: 1%
 
 ---
 
@@ -95,12 +95,6 @@ Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340
 
 ## Cloud Manager {#cloud-manager}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2022.01.0.
-
->[!NOTE]
->
->Se [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md) för den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
-
 ### Releasedatum {#release-date-cm}
 
 Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.01.0 är 20 januari 2022. Nästa version är planerad till den 10 februari 2022.
@@ -118,6 +112,20 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.01.0 är 20 januar
 * Miljövariabler kan nu läggas till, uppdateras och tas bort när en miljö kör en gammal version av AEM.
 * Steget för att skapa bilder markeras inte längre som FEL för rörledningar som i vissa sällsynta fall använde det schemalagda steget.
 * För program med endast en databas visas databasens namn på körningsskärmen för pipeline.
+
+## Content Transfer Tool {#ctt-release}
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för Content Transfer Tool v1.8.6 är 3 februari 2022.
+
+### Nyheter {#what-is-new-ctt}
+
+* Innehållsvalidering - Användare kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats med verktyget Innehållsöverföring har importerats till målinstansen. Om du vill använda den här funktionen måste du aktivera den i `System Console` i AEM. Se [Verifierar innehållsöverföringar - Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html?lang=en#getting-started) för mer information.
+
+### Felkorrigeringar {#bug-fixes-ctt}
+
+* Vissa användare mappades inte eftersom användarmappningen var skiftlägeskänslig. Den här har åtgärdats. Användarmappning är inte längre skiftlägeskänslig.
 
 ## Best Practices Analyzer {#bpa-release}
 
