@@ -2,9 +2,9 @@
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
-source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
+source-git-commit: b1a1ef0021499872a712c1e4450af9765e46a1a9
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1698'
 ht-degree: 1%
 
 ---
@@ -242,6 +242,12 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
    * [Visa och välja resurser](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)
 
    * [Järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector)
+
+   * Publicering
+
+      * [Snabbpublicering](/help/assets/manage-publication.md#quick-publish)
+
+      * [Hantera publikation](/help/assets/manage-publication.md#manage-publication)
 
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
 
