@@ -2,7 +2,7 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: a6b6a190a59d1c2f0001fe1f28d8d7bc8353d464
+source-git-commit: 319f92e04998c484c4b1834973c231be28aa23c7
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 1%
@@ -129,14 +129,6 @@ Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
 
 Du kan använda API:erna för dokumentproduktion för att konvertera ett PDF-dokument till ett PDF/A-kompatibelt dokument och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
 
->[!NOTE]
->
-> Om du vill aktivera och konfigurera API:er för dokumentbearbetning lägger du till följande regel i [Dispatcher-konfiguration](setup-local-development-environment.md#forms-specific-rules-to-dispatcher):
->
-> `# Allow Forms Doc Generation requests`
-> `/0062 { /type "allow" /method "POST" /url "/adobe/forms/assembler/*" }`
-
-
 ## Typer av API:er för kommunikation
 
 Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentgenerering:
@@ -164,6 +156,13 @@ Efter introduktionen, för att aktivera kommunikationsfunktioner för din as a C
 1. Klicka på **[!UICONTROL Update]**.
 
 1. Kör byggprocessen. När byggprocessen är klar aktiveras API:er för kommunikation för din miljö.
+
+>[!NOTE]
+>
+> Om du vill aktivera och konfigurera API:er för dokumentbearbetning lägger du till följande regel i [Dispatcher-konfiguration](setup-local-development-environment.md#forms-specific-rules-to-dispatcher):
+>
+> `# Allow Forms Doc Generation requests`
+> `/0062 { /type "allow" /method "POST" /url "/adobe/forms/assembler/*" }`
 
 
 <!--
