@@ -2,9 +2,9 @@
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM as a Cloud Service genom att generera en säker JWT-token
 exl-id: 20deaf8f-328e-4cbf-ac68-0a6dd4ebf0c9
-source-git-commit: 1b2f1f50832bb06fa5d4cc9a540ebc68cbebf7c8
+source-git-commit: c4f4ce968c17db1f1185ce7be9cad833eaf0b91b
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1415'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Flödet server-till-server beskrivs nedan tillsammans med ett förenklat utveckl
 
 ## Server-till-server-flödet {#the-server-to-server-flow}
 
-En användare med en IMS-organisationsadministratörsroll, och som även är medlem i produktprofilen AEM användare eller AEM administratörer på AEM Author, kan generera en AEM as a Cloud Service autentiseringsuppgift. Autentiseringsuppgifterna kan sedan hämtas av en användare med AEM as a Cloud Service miljöadministratörsroll och bör installeras på servern och måste behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som behövs för att integrera med ett AEM as a Cloud Service API. Data används för att skapa en signerad JWT-token, som byts ut mot IMS för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra förfrågningar till AEM as a Cloud Service. Autentiseringsuppgifterna upphör att gälla efter ett år som standard, men de kan uppdateras vid behov och genereras enligt beskrivningen [här](#refresh-credentials).
+En användare med en IMS-organisationsadministratörsroll, och som även är medlem i produktprofilen AEM användare eller AEM administratörer på AEM Author, kan generera en AEM as a Cloud Service autentiseringsuppgift. Autentiseringsuppgifterna kan sedan hämtas av en användare med AEM as a Cloud Service miljöadministratörsroll och bör installeras på servern och måste behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som behövs för att integrera med ett AEM as a Cloud Service API. Data används för att skapa en signerad JWT-token, som byts ut mot IMS för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra förfrågningar till AEM as a Cloud Service. Autentiseringsuppgifterna går ut om ett år som standard, men de kan uppdateras vid behov enligt beskrivningen [här](#refresh-credentials).
 
 Flödet server-till-server omfattar följande steg:
 
