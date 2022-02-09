@@ -1,9 +1,9 @@
 ---
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
-source-git-commit: 9705af35d4a6064c0b4ad35086d98f4b43158dec
+source-git-commit: c542b631a94b9fcbda4790ca9ca5a461d104c790
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '948'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extr
 
 >[!INFO]
 >
->Den här funktionen är tillgänglig från och med version 1.8.x av verktyget för innehållsöverföring (CTT). AEM Cloud Service målmiljö måste köra minst version 6158 eller senare.
+>Den här funktionen är tillgänglig från och med version 1.8.x av verktyget för innehållsöverföring (CTT). AEM Cloud Service målmiljö måste köra minst version 6158 eller senare. Källmiljön måste också vara konfigurerad för att kunna köras [förkopia](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#setting-up-pre-copy-step). Valideringsfunktionen söker efter filen azcopy.config i källan. Om filen inte hittas körs inte valideringen. Mer information om hur du konfigurerar en azcopy.config-fil finns i [den här sidan](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#configure-azcopy-config-file).
 
 Det är valfritt att validera en innehållsöverföring. Om du aktiverar den här funktionen ökar både tiden det tar att utföra en extrahering och ett intag. Om du vill använda funktionen aktiverar du den i systemkonsolen för AEM genom att följa dessa steg:
 
