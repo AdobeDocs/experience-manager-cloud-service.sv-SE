@@ -9,9 +9,9 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: b0891095-e4a9-4dd5-8dfd-a576bc47d082
-source-git-commit: 446edfd83affb062585dca81052575b73c2e796f
+source-git-commit: 1730efd1fddd119f2b7950a0e7638ba5624fbb44
 workflow-type: tm+mt
-source-wordcount: '3205'
+source-wordcount: '3213'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,9 @@ Sidan Image Server används för att ange standardinställningar för att levere
 ### Fliken Säkerhet {#security-tab}
 
 **[!UICONTROL Client address]** - Gör att du kan ange en eller flera IP-adresser eller IP-adressintervall. När det anges avvisas begäranden till den här bildkatalogen som kommer från en klient till en IP-adress som inte finns med i listan. Den här regeln gäller både för leverans av bilder och återgivna bilder.
+
+![Fliken Säkerhet ](/help/assets/assets-dm/dm-ipallowlist.png)<br>*Fliken Säkerhet som visar IP-fältet&quot;allow&quot;.*
+
 
 ### Fliken Kataloghantering {#catalog-management-tab}
 
