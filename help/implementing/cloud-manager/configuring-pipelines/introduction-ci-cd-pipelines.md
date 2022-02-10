@@ -2,9 +2,9 @@
 title: CI/CD-rör
 description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
-source-git-commit: a8649f639eb173cdc1869a27c8f2d4b6b8026fb1
+source-git-commit: d1fe713f0c35a96cf6ba3172ea11986fd9d42fd6
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1364'
 ht-degree: 0%
 
 ---
@@ -147,16 +147,18 @@ Mer information om hur du konfigurerar rörledningar i full hög finns i följan
 
 Med konfigurationspipelines på webbnivå kan du exklusiv distribution av HTTPD/Dispatcher-konfiguration till AEM genom att koppla loss den från andra kodändringar. Det är en smidig pipeline som ger användare som bara vill distribuera ändringar i dispatcherkonfigurationen, ett accelererat sätt att göra det på bara några minuter.
 
->[!IMPORTANT]
+>[!TIP]
 >
->Du måste ha AEM version `X` eller senare för att utnyttja konfigurationsförloppet på webbnivå.
+>Med konfigurationspipelinjer för webbnivå kan du välja mellan att lagra webbkonfigurationen på samma källplats som för hela stackpipelinen eller på en annan plats, beroende på vilken struktur som passar ditt projekt bäst.
 
 Följande begränsningar gäller.
 
+* Du måste ha AEM version `2021.12.6151.20211217T120950Z` eller nyare för att utnyttja konfigurationspipelines på webbnivå.
+* Du måste [välja det flexibla läget för dispatcherverktygen](/help/implementing/dispatcher/disp-overview.md#validation-debug) för att utnyttja konfigurationsrörledningar på webbnivå.
 * En användare måste vara inloggad med **Distributionshanteraren** roll för att konfigurera eller driva rörledningar.
 * Det kan bara finnas en konfigurationspipeline för webbskikt per miljö.
 * Användaren kan inte konfigurera en konfigurationspipeline för ett webbskikt när motsvarande pipeline för en hel hög körs.
-* Webbnivåstrukturen måste följa strukturen för det flexibla läget, enligt definitionen i dokumentet [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md#validation-debug)
+* Webbnivåstrukturen måste följa strukturen för det flexibla läget, enligt definitionen i dokumentet [Dispatcher i molnet.](/help/implementing/dispatcher/disp-overview.md#validation-debug)
 
 Var dessutom medveten om hur [fullständigt stackflöde](#full-stack-pipeline) kommer att fungera när en webbskiktspipeline introduceras.
 

@@ -2,9 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2022.02.0
 description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2022.02.0.
 feature: Release Information
-source-git-commit: 22a08a0cb80052485309ce3d33537e9fe303c6f5
+source-git-commit: d1fe713f0c35a96cf6ba3172ea11986fd9d42fd6
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,8 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.0 är 10 februari 
 
 ## Nyheter {#what-is-new}
 
-* Ny accelererad [Rörledningar för Web Tier Config](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) har introducerats för att exklusivt distribuera HTTPD/dispatcher-konfiguration
-   * Du måste ha AEM version `2021.12.6151.20211217T120950Z` om du vill använda den här funktionen.
+* Ny accelererad [Rörledningar för Web Tier Config](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) har introducerats för att exklusivt distribuera HTTPD/dispatcher-konfiguration.
+   * Du måste ha AEM version `2021.12.6151.20211217T120950Z` eller nyare och [välja det flexibla läget för dispatcherverktygen](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill använda den här funktionen.
    * Den här funktionen kommer att introduceras stegvis under de två veckorna efter version 2022.02.0.
 * Molnhanterarens landningssida har uppdaterats för att ge förbättrad navigering, enkel växling mellan rutnät-/rutvyer och popup-fönster för snabb programsammanfattning.
 * Ett nytt tröskelvärde för misslyckande (`< D`) har lagts till i [tillförlitlighetsmått.](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules)
