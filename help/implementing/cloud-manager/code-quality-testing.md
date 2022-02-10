@@ -15,7 +15,10 @@ Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan för
 
 >[!CONTEXTUALHELP]
 >
->
+>id="aemcloud_nonbpa_codequalitytests"
+>title="Code Quality Testing"
+>abstract="Code quality testing evaluates your application code based on a set of quality rules. It is the primary purpose of a code-quality only pipeline and is executed immediately following the build step in all production and non-production pipelines."
+
 ## Introduktion {#introduction}
 
 Kodkvalitetstestningen utvärderar din programkod baserat på en uppsättning kvalitetsregler. Det är det främsta syftet med en rörledning av kodkvalitet och genomförs omedelbart efter byggsteget i alla rörledningar för produktion och icke-produktion.
