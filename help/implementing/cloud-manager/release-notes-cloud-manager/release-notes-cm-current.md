@@ -1,18 +1,18 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2022.01.0
-description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2022.01.0.
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2022.02.0
+description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2022.02.0.
 feature: Release Information
-source-git-commit: 8da3976250c94d5858d07a83b0eb395fab9a3eda
+source-git-commit: 22a08a0cb80052485309ce3d33537e9fe303c6f5
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2022.01.0 {#release-notes}
+# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2022.02.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2022.01.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2022.02.0.
 
 >[!NOTE]
 >
@@ -20,18 +20,20 @@ På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a 
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.01.0 är 20 januari 2022. Nästa version är planerad till den 10 februari 2022.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.0 är 10 februari 2022. Nästa version är planerad till den 10 mars 2022.
 
 ## Nyheter {#what-is-new}
 
-* Cloud Manager kommer att [undvika att återskapa kodbasen när den upptäcker att samma Git-implementering används](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) i flera fullständiga pipeline-körningar.
-* För att få åtkomst till AEM måste du **Distributionshanteraren** produktprofil. Användare utan den här profilen ser en inaktiverad knapp i användargränssnittet.
-* Gränssnittet tillåter inte konfiguration av pipeline i gränssnittet för ett program där Sites inte är aktiverat som en lösning.
-* När du genererar ett Git-lösenord visas förfallodatumet.
+* Ny accelererad [Rörledningar för Web Tier Config](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) har introducerats för att exklusivt distribuera HTTPD/dispatcher-konfiguration
+   * Du måste ha AEM version `2021.12.6151.20211217T120950Z` om du vill använda den här funktionen.
+   * Den här funktionen kommer att introduceras stegvis under de två veckorna efter version 2022.02.0.
+* Molnhanterarens landningssida har uppdaterats för att ge förbättrad navigering, enkel växling mellan rutnät-/rutvyer och popup-fönster för snabb programsammanfattning.
+* Ett nytt tröskelvärde för misslyckande (`< D`) har lagts till i [tillförlitlighetsmått.](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules)
+   * Kunder med allvarliga kvalitetsproblem som påverkar systemstabiliteten, främst relaterade till ogiltiga index och arbetsflödesprocesser, kommer inte att kunna distribuera förrän dessa problem har lösts.
+* Allvarlighetsgraden i `BannedPath` [kvalitetsregel](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules) har ändrats från blockerare till kritiskt.
+* Pipeline-guiden informerar användaren om när en AEM behöver uppdateras innan du konfigurerar en [Rörledningar för Web Tier Config](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) som är kopplade till den.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* Null-pekarundantag som påträffades i vissa frontendsdistributioner har korrigerats.
-* Miljövariabler kan nu läggas till, uppdateras och tas bort när en miljö kör en gammal version av AEM.
-* Steget för att skapa bilder markeras inte längre som FEL för rörledningar som i vissa sällsynta fall använde det schemalagda steget.
-* För program med endast en databas visas databasens namn på körningsskärmen för pipeline.
+* Gamla Git-databaslösenord blir nu alltid ogiltiga när ett nytt lösenord skapas.
+* Uppdatering av miljövariabler via API:t stör inte längre en pipeline-körning i sällsynta fall.

@@ -1,113 +1,174 @@
 ---
-title: CI-CD-rör
-description: Följ den här sidan för att lära dig mer om Cloud Manager CI-CD-förgreningar
+title: CI/CD-rör
+description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
-source-git-commit: 3d48bd507305e7a1d3efa2b61123afdae1f52ced
+source-git-commit: a8649f639eb173cdc1869a27c8f2d4b6b8026fb1
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
 
 
-# Cloud Manager CI-CD-pipeline {#intro-cicd}
+# Cloud Manager CI/CD Pipelines {#intro-cicd}
+
+Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 
 ## Introduktion {#introduction}
 
-En CI/CD-pipeline i Cloud Manager kan utlösas av någon typ av händelse, till exempel en pull-begäran från en källkodsdatabas, d.v.s. en kodändring eller någon typ av regelbundet schema som matchar en releasedatans.
+En CI/CD-pipeline i Cloud Manager är en mekanism som bygger kod från en källdatabas och distribuerar den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (dvs. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecadence.
 
->[!NOTE]
->Om du vill konfigurera din pipeline måste du:
->* definiera den utlösare som ska starta pipelinen
->* definiera parametrarna som styr produktionsdistributionen
->* konfigurera parametrar för prestandatestning
+Om du vill konfigurera en pipeline måste du:
 
+* Definiera utlösaren som ska starta pipelinen.
+* Definiera parametrarna som styr produktionsdistributionen.
+* Konfigurera prestandatestparametrarna.
 
-I Cloud Manager finns det två typer av pipelines:
+Det finns två typer av pipelines i Cloud Manager:
 
-* [Produktionspipeline](#prod-pipeline)
+* [Produktionsförlopp](#prod-pipeline)
 * [Icke-produktionsförlopp](#non-prod-pipeline)
 
-   ![](/help/implementing/cloud-manager/assets/configure-pipeline/ci-cd-config1.png)
+![Typer av rörledningar](/help/implementing/cloud-manager/assets/configure-pipeline/ci-cd-config1.png)
 
+## Produktionsförlopp {#prod-pipeline}
 
-## Produktionspipeline {#prod-pipeline}
+En produktionspipeline är en konstruerad pipeline som innehåller en serie samordnade steg för att distribuera källkod för produktionsanvändning. Stegen är att först bygga, paketera, testa, validera och driftsätta i alla miljöer. Därför kan en produktionspipeline bara läggas till när en uppsättning produktions- och stagningsmiljöer har skapats.
 
-En produktionspipeline är en konstruerad pipeline som innehåller en serie samordnade steg för att ta källkod hela vägen in i produktionen. Stegen omfattar att först bygga, paketera, testa, validera och distribuera till alla scenmiljöer. Det behöver väl inte sägas att en produktionspipeline bara kan läggas till när en produktions- och scenmiljöuppsättning skapas.
-
-Se [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för mer information.
-
+>[!TIP]
+>
+>Se dokumentet [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för mer information.
 
 ## Icke-produktionsförlopp {#non-prod-pipeline}
 
-En icke-produktionspipeline syftar till att köra kodkvalitetssökningar eller att distribuera källkod i en utvecklingsmiljö.
+En icke-produktionspipeline används främst för att köra kodkvalitetssökningar eller för att distribuera källkod till en utvecklingsmiljö.
 
-Se [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
+>[!TIP]
+>
+>Se dokumentet [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
 
-## Förstå CI-CD-pipeline i Cloud Manager {#understand-pipelines}
+## Kodkällor {#code-sources}
 
-I följande tabell sammanfattas alla pipelines i Cloud Manager tillsammans med deras användning.
+Förutom produktion och icke-produktion kan rörledningar differentieras efter vilken typ av kod de använder.
 
-| Typ av pipeline | Driftsättnings- eller kodkvalitet | Källkod | När ska användas | När eller varför ska jag använda? |
+* **[Kompletta stackrör](#full-stack-pipeline)** - Driftsätt samtidigt kodbyggen i bakände och framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationer
+* **[Front-End Pipelines](#front-end)** - Distribuera kodsbyggen som innehåller ett eller flera gränssnittsprogram på klientsidan
+* **[Konfigurationsrör för webbnivå](#web-tier-config-pipelines)** - Distribuerar konfigurationer för HTTPD/Dispatcher
+
+Dessa beskrivs senare i detalj i det här dokumentet.
+
+### Förstå CI-CD-pipeline i Cloud Manager {#understand-pipelines}
+
+I följande tabell sammanfattas alla rörledningar som är tillgängliga i Cloud Manager och deras användning.
+
+| Typ av pipeline | Driftsättnings- eller kodkvalitet | Källkod | Syfte | Anteckningar |
 |--- |--- |--- |---|---|
-| Produktion eller icke-produktion | Distribution | Front End | Snabba driftsättningstider.<br>Flera frontledningar kan konfigureras och köras samtidigt per miljö.<br>Front End-pipeline-bygget spolar ut ur bygget till ett lagringsutrymme. När en HTML-sida hanteras kan den referera till statiska Frontend Code-filer som hanteras av CDN med detta lagringsutrymme som ursprung. | För exklusiv driftsättning av klientslutkod som innehåller ett eller flera användargränssnittsprogram. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar.<br>Måste vara i AEM version 2021.10.5933.20211012T154732Z<br>Webbplatser måste vara aktiverade. |
-| Produktion eller icke-produktion | Distribution | Hel hög | När frontledningarna ännu inte har anammats.<br>I de fall där Front End-koden måste distribueras exakt samtidigt som AEM Server-koden. | Distribuera AEM Server-kod (oföränderligt innehåll, Java-kod, OSGi-konfigurationer, HTTPD/dispatcher-konfiguration, återanvisning, ändringsbart innehåll, teckensnitt) som innehåller ett eller flera AEM serverprogram samtidigt. |
-| Icke-produktion | Kodkvalitet | Front End | Om du vill att Cloud Manager ska utvärderas. din programutveckling och kodkvalitet utan driftsättning.<br>Flera rörledningar kan konfigureras och köras. | Kör kodkvalitetsgenomsökningar på slutkoden. |
-| Icke-produktion | Kodkvalitet | Hel hög | Om du vill att Cloud Manager ska utvärderas. din programutveckling och kodkvalitet utan driftsättning.<br>Flera rörledningar kan konfigureras och köras. | Kör kodkvalitetssökning på den fullständiga stackkoden. |
+| Produktion eller icke-produktion | Distribution | Full-Stack | Distribuerar samtidigt kodbyggen i bakände och framände tillsammans med konfigurationer för HTTPD/Dispatcher | När slutkoden måste distribueras samtidigt med AEM serverkod.<br>När rörledningar i frontendsystemet eller konfigurationsledningar i webbskiktet ännu inte har antagits. |
+| Produktion eller icke-produktion | Distribution | Front-End | Distribuerar frontkodbygge som innehåller ett eller flera gränssnittsprogram på klientsidan | Stöd för flera samtidiga rörledningar<br>Mycket snabbare än driftsättningar i fullstacksformat |
+| Produktion eller icke-produktion | Distribution | Webbnivåkonfiguration | Distribuerar konfigurationer för HTTPD/Dispatcher | Distribuerar på några minuter |
+| Icke-produktion | Kodkvalitet | Full-Stack | Kör kodkvalitetsgenomsökningar på kod i full stack utan distribution | Stöd för flera rörledningar |
+| Icke-produktion | Kodkvalitet | Front-End | Kör kodkvalitetsgenomsökningar på slutkod utan distribution | Stöd för flera rörledningar |
+| Icke-produktion | Kodkvalitet | Webbnivåkonfiguration | Kör kodkvalitetsgenomsökningar på dispatcherkonfigurationer utan distribution | Stöd för flera rörledningar |
 
+I följande diagram visas Cloud Managers pipeline-konfigurationer med traditionella, enskilda databaser eller oberoende databasinställningar för front-end.
 
-I följande diagram visas molnhanterarens pipeline-konfigurationer med traditionella, enskilda front end-databaser eller oberoende front end-databaskonfigurationer:
+![pipelinekonfigurationer för Cloud Manager](/help/implementing/cloud-manager/assets/configure-pipeline/cm-setup.png)
 
-![](/help/implementing/cloud-manager/assets/configure-pipeline/cm-setup.png)
+## Pipelines i fullhög {#full-stack-pipeline}
 
-## Front End Pipelines för Cloud Manager {#front-end}
+I rörledningar i fullhög distribueras back-end-kod, front-end-kod och webbskiktskonfigurationer till AEM runtime-modulen samtidigt.
 
-Front End-pipelines hjälper era team att effektivisera design- och utvecklingsprocessen genom att aktivera snabbredigerade front end-pipelines för implementering av front end-kod. Denna differentierade pipeline distribuerar JavaScript och CSS till AEM distributionslager som ett tema, vilket resulterar i en ny temaversion som kan refereras från sidor som levereras från AEM. Front end-kod är kod som används som statisk fil. Den är skild från den gränssnittskod som AEM använder. Här ingår webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar.
+* Back-End-kod - oföränderligt innehåll som Java-kod, OSGi-konfigurationer, återanvisning och ändringsbart innehåll
+* Front-End-kod - programgränssnittsresurser som JavaScript, CSS, teckensnitt
+* Webbnivåkonfiguration - HTTPD/Dispatcher-konfigurationer
+
+Pipelinen i full hög representerar en rörledning som gör allt på en gång, samtidigt som användarna får möjlighet att exklusivt distribuera sin frontkodkonfiguration eller Dispatcher-konfigurationer via frontendpipelines respektive webbskiktskonfigurationspipelines.
+
+Kompletta rörledningar paketerar slutkod (JavaScript/CSS) som [AEM klientbibliotek.](/help/implementing/developing/introduction/clientlibs.md)
+
+I rörledningar med hel hög kan webbnivåkonfigurationer distribueras om en [pipeline för konfiguration av webbnivå](#web-tier-config-pipelines) har inte konfigurerats.
+
+Följande begränsningar gäller.
+
+* En användare måste vara inloggad med **Distributionshanteraren** roll för att konfigurera eller driva rörledningar.
+* Det kan bara finnas en pipeline i full hög per miljö.
+
+Du bör dessutom vara medveten om hur helstackspipelinen kommer att fungera om du väljer att introducera en [konfigurationsflöde för webbnivå.](#web-tier-config-pipelines)
+
+* I en helgrupps-pipeline för en miljö ignoreras Dispatcher-konfigurationen om motsvarande konfigurationsflöde för webbnivån finns.
+* Om motsvarande konfigurationsflöde för webbskiktet för miljön inte finns kan användaren konfigurera pipelinen för hela stacken som innehåller eller ignorerar Dispatcher-konfigurationen.
+
+Fullspaltig rörledning kan vara pipelines med kodkvalitet eller driftsättning.
+
+## Front-End Pipelines {#front-end}
+
+Front-end-kod är kod som används som statiska filer. Den är skild från gränssnittskod som hanteras av AEM och kan innehålla webbplatsteman, kunddefinierade SPA, Firefoly SPA och andra lösningar.
+
+Med rörledningar kan era team effektivisera design- och utvecklingsprocessen genom att möjliggöra snabbare driftsättning av frontkodasynkron backend-utveckling. Detta dedikerade tillvägagångssätt distribuerar JavaScript och CSS till AEM distributionslager som ett tema, vilket resulterar i en ny temaversion som kan refereras från sidor som levereras av AEM.
 
 >[!IMPORTANT]
->Du måste ha AEM version `2021.10.5933.20211012T154732Z ` för att utnyttja frontledningarna.
+>
+>Du måste ha AEM version `2021.10.5933.20211012T154732Z ` eller senare med AEM Sites aktiverat för att utnyttja rörledningar för frontservrar.
 
 >[!NOTE]
->En användare som är inloggad som rollen Distributionshanterare kan skapa och köra flera frontendpipelines samtidigt. Det finns dock en högsta gräns på 300 rörledningar per program (för alla typer).
+>
+>En användare med **Distributionshanteraren** kan skapa och köra flera rörledningar samtidigt.
+>
+>Det finns dock en högsta gräns på 300 rörledningar per program (för alla typer). Dessa kan vara frontkodens eller frontendens pipelines för driftsättning.
 
-Dessa kan vara av typen frontslutskodens kvalitet eller frontslutets distributionsrör.
+Frontrörledningar kan vara pipelines med kodkvalitet eller driftsättning.
 
 ### Innan du konfigurerar frontmatriser {#before-start}
 
-Innan du börjar konfigurera frontledningarna finns mer information i [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) för ett komplett arbetsflöde med det lättanvända AEM för att skapa en webbplats. På den här dokumentationswebbplatsen kan du effektivisera utvecklingen av AEM och snabbt anpassa webbplatsen utan AEM kunskaper om bakomliggande funktioner.
+Läs igenom [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) för att få en komplett guide genom det lättanvända AEM för att skapa webbplatser. Den här resan hjälper er att effektivisera utvecklingen på frontend och göra det möjligt att snabbt anpassa webbplatsen utan kunskaper om AEM.
 
 ### Konfigurera en frontpipeline {#configure-front-end}
 
-Mer information om hur du konfigurerar frontendpipeline finns i:
+Läs följande dokument om du vill veta hur du konfigurerar rörledningar för frontservrar:
 
 * [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline)
 * [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)
 
 ### Developing Sites with the Front-End Pipeline {#developing-with-front-end-pipeline}
 
-Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan gå mycket snabbare.
+Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
 
-Se [det här dokumentet](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) för hur denna process fungerar tillsammans med vissa överväganden som måste beaktas för att man ska få ut mesta möjliga av denna process.
+Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) för hur denna process fungerar tillsammans med vissa överväganden som måste beaktas för att man ska få ut mesta möjliga av denna process.
 
-## Kompletta stackrör {#full-stack-pipeline}
+### Konfigurera rörledningar i helhög {#configure-full-stack}
 
-Med en fullständig stackpipeline kan användaren välja att distribuera back-end-, front-end- och HTTPD/dispatcher-konfiguration samtidigt.  Den distribuerar kod och innehåll till AEM, inklusive klientkod (JavaScript/CSS) som paketerats som AEM klientbibliotek. Den kan distribuera webbnivåkonfiguration om en webbnivåpipeline inte har konfigurerats. Detta representerar rörledningen&quot;uber&quot;, samtidigt som användarna får möjlighet att exklusivt distribuera sin Front End-kod eller dispatcherkonfiguration via Front End-pipeline respektive Web Tier Config-pipeline.
-De kan vara av typen Full Stack - Kodkvalitet eller Full Stack - Deployment.
+Mer information om hur du konfigurerar rörledningar i full hög finns i följande dokument.
 
-Följande begränsningar gäller:
-
-1. En användare måste vara inloggad som Deployment Manager för att kunna konfigurera eller köra pipelines.
-
-1. Det kan bara finnas en fullständig stackpipeline per miljö.
-
-1. Användaren kan konfigurera pipelinen Full stack för en miljö så att den ignorerar eller inte ignorerar dispatcherkonfigurationen, om motsvarande pipeline för Web Tier Config för miljön inte finns.
-
-1. Komplett stapel-pipeline för en miljö ignorerar dispatcherkonfigurationen om motsvarande Web Tier Config-pipeline för miljön finns.
+* [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline)
+* [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)
 
 
-### Konfigurera en hel stackpipeline {#configure-full-stack}
+## Konfigurationsrör för webbnivå {#web-tier-config-pipelines}
 
-Mer information om hur du konfigurerar en hel stackpipeline finns i:
+Med konfigurationspipelines på webbnivå kan du exklusiv distribution av HTTPD/Dispatcher-konfiguration till AEM genom att koppla loss den från andra kodändringar. Det är en smidig pipeline som ger användare som bara vill distribuera ändringar i dispatcherkonfigurationen, ett accelererat sätt att göra det på bara några minuter.
+
+>[!IMPORTANT]
+>
+>Du måste ha AEM version `X` eller senare för att utnyttja konfigurationsförloppet på webbnivå.
+
+Följande begränsningar gäller.
+
+* En användare måste vara inloggad med **Distributionshanteraren** roll för att konfigurera eller driva rörledningar.
+* Det kan bara finnas en konfigurationspipeline för webbskikt per miljö.
+* Användaren kan inte konfigurera en konfigurationspipeline för ett webbskikt när motsvarande pipeline för en hel hög körs.
+* Webbnivåstrukturen måste följa strukturen för det flexibla läget, enligt definitionen i dokumentet [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md#validation-debug)
+
+Var dessutom medveten om hur [fullständigt stackflöde](#full-stack-pipeline) kommer att fungera när en webbskiktspipeline introduceras.
+
+* Om en konfigurationspipeline för ett webbskikt inte har konfigurerats för en miljö, kan användaren göra ett val när han/hon konfigurerar sin motsvarande pipeline för hela stacken för att inkludera eller ignorera Dispatcher-konfigurationen under körning och distribution.
+* När en konfigurationspipeline för ett webbskikt har konfigurerats för en miljö, ignorerar dess motsvarande pipeline för hela stacken (om det finns en sådan) dispatcherkonfigurationen under körning och distribution.
+* När en konfigurationspipeline för ett webbskikt tas bort återställs dess motsvarande pipeline för hela stacken för att distribuera Dispatcher-konfigurationer under körningen.
+
+Rörledningar för webbnivåkonfiguration kan vara av typen kodkvalitet eller distribution.
+
+### Konfigurera konfigurationsförlopp för webbnivå {#configure-web-tier-config-pipelines}
+
+Mer information om hur du konfigurerar pipelines för webbnivåkonfiguration finns i följande dokument.
 
 * [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline)
 * [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)
