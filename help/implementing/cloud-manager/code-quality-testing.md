@@ -2,9 +2,9 @@
 title: Testning av kodkvalitet
 description: Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan förbättra kvaliteten på dina distributioner.
 exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
-source-git-commit: ca3c1f255b8441a8d376a55a5353d58848384b8b
+source-git-commit: 15fb2823d231048885a140edfaa904527a026aae
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1145'
 ht-degree: 1%
 
 ---
@@ -14,10 +14,9 @@ ht-degree: 1%
 Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan förbättra kvaliteten på dina distributioner.
 
 >[!CONTEXTUALHELP]
->
 >id="aemcloud_nonbpa_codequalitytests"
->title="Code Quality Testing"
->abstract="Code quality testing evaluates your application code based on a set of quality rules. It is the primary purpose of a code-quality only pipeline and is executed immediately following the build step in all production and non-production pipelines."
+>title="Testning av kodkvalitet"
+>abstract="Kodkvalitetstestningen utvärderar din programkod baserat på en uppsättning kvalitetsregler. Det är det främsta syftet med en rörledning av kodkvalitet och genomförs omedelbart efter byggsteget i alla rörledningar för produktion och icke-produktion."
 
 ## Introduktion {#introduction}
 
@@ -30,7 +29,8 @@ Se dokumentet [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/conf
 Kodkvalitetstestning söker igenom källkoden för att säkerställa att den uppfyller vissa kvalitetskriterier. Detta implementeras genom en kombination av SonarQube och granskning på innehållspaketnivå med OakPAL. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa av de AEM specifika reglerna har skapats baserat på bästa praxis från AEM och kallas för [regler för anpassad kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
 
 >[!NOTE]
-Du kan hämta den fullständiga listan med regler [med den här länken.](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx)
+>
+>Du kan hämta den fullständiga listan med regler [med den här länken.](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx)
 
 ### Tre nivåindelade omdömen {#three-tiered-gate}
 
@@ -58,10 +58,12 @@ I följande tabell sammanfattas klassificerings- och feltrösklarna för var och
 | Cloud Service-kompatibilitet | Antal identifierade kompatibilitetsproblem med molntjänster | Information | > 0 |
 
 >[!NOTE]
-Se [SonarQube måttdefinitioner](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) för mer detaljerade definitioner.
+>
+>Se [SonarQube måttdefinitioner](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) för mer detaljerade definitioner.
 
 >[!NOTE]
-Mer information om anpassade regler för kodkvalitet som körs av [!UICONTROL Cloud Manager], se dokumentet [Anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
+>
+>Mer information om anpassade regler för kodkvalitet som körs av [!UICONTROL Cloud Manager], se dokumentet [Anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
 
 ## Hantera med falskt positiva {#dealing-with-false-positives}
 
@@ -94,10 +96,11 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 Den rätta lösningen är sedan att ta bort det hårdkodade lösenordet.
 
 >[!NOTE]
-Även om det är en bra rutin att göra `@SuppressWarnings` Anteckningen är så specifik som möjligt, d.v.s. kommenterar bara den specifika programsats eller det block som orsakar problemet. Det går att anteckna på klassnivå.
+>
+>Även om det är en bra rutin att göra `@SuppressWarnings` Anteckningen är så specifik som möjligt, d.v.s. kommenterar bara den specifika programsats eller det block som orsakar problemet. Det går att anteckna på klassnivå.
 
 >[!NOTE]
-Även om det inte finns något uttryckligt steg för säkerhetstestning finns det säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Se dokumentet [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md) om du vill veta mer om säkerhet i Cloud Service.
+>Även om det inte finns något uttryckligt steg för säkerhetstestning finns det säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Se dokumentet [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md) om du vill veta mer om säkerhet i Cloud Service.
 
 ## Optimering av skanning av innehållspaket {#content-package-scanning-optimization}
 
@@ -114,6 +117,7 @@ För projekt som producerar dussintals inbäddade paket har den här optimeringe
 Ett specialfall kan inträffa när innehållspaketet &quot;all&quot; innehåller en kombination av överhoppade innehållspaket och OSGi-paket. Om `myco-all-1.0.0-SNAPSHOT.zip` innehåller de två inbäddade paketen som tidigare nämnts samt ett eller flera OSGi-paket, och sedan konstrueras ett nytt, minimalt innehållspaket med endast OSGi-paketen. Det här paketet har alltid namnet `cloudmanager-synthetic-jar-package` och de medföljande paketen placeras i `/apps/cloudmanager-synthetic-installer/install`.
 
 >[!NOTE]
-* Optimeringen påverkar inte de paket som distribueras till AEM.
-* Eftersom matchningen mellan det inbäddade innehållspaketet och det överhoppade innehållspaketet baseras på filnamn, kan optimeringen inte utföras om flera överhoppade innehållspaket har exakt samma filnamn eller om filnamnet ändras vid inbäddning.
+>
+>* Optimeringen påverkar inte de paket som distribueras till AEM.
+>* Eftersom matchningen mellan det inbäddade innehållspaketet och det överhoppade innehållspaketet baseras på filnamn, kan optimeringen inte utföras om flera överhoppade innehållspaket har exakt samma filnamn eller om filnamnet ändras vid inbäddning.
 

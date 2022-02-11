@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet
 description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av [kodkvalitetstestning. De bygger på god praxis från AEM Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: 4567581eb02c928f1493defdab667cc713fc222a
+source-git-commit: ee45ba3a03f9ab5461a09188888694ca22a11b20
 workflow-type: tm+mt
-source-wordcount: '3464'
+source-wordcount: '3495'
 ht-degree: 3%
 
 ---
@@ -12,15 +12,15 @@ ht-degree: 3%
 # Anpassade regler för kodkvalitet {#custom-code-quality-rules}
 
 >[!CONTEXTUALHELP]
->
 >id="aemcloud_nonbpa_customcodequalityrules"
->title="Custom Code Quality Rules"
->abstract="This page describes the custom code quality rules executed by Cloud Manager as part of code quality testing. They are based on best practices from AEM Engineering."
+>title="Anpassade regler för kodkvalitet"
+>abstract="Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från AEM Engineering."
 
 Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av [kodkvalitetstestning.](/help/implementing/cloud-manager/code-quality-testing.md) De bygger på god praxis från AEM Engineering.
 
 >[!NOTE]
-De kodexempel som anges här är endast avsedda som illustrationer. Se SonarQube [Konceptdokumentation](https://docs.sonarqube.org/7.4/user-guide/concepts/) om du vill veta mer om SonarQube-koncept och kvalitetsregler.
+>
+>De kodexempel som anges här är endast avsedda som illustrationer. Se SonarQube [Konceptdokumentation](https://docs.sonarqube.org/7.4/user-guide/concepts/) om du vill veta mer om SonarQube-koncept och kvalitetsregler.
 
 ## SonarQube-regler {#sonarqube-rules}
 
@@ -315,7 +315,8 @@ public void doThis() throws Exception {
 I allmänhet bör INFO-loggnivån användas för att avgränsa viktiga åtgärder och AEM är som standard konfigurerad för att logga på INFO-nivå eller högre. Metoderna GET och HEAD bör aldrig vara skrivskyddade och därför inte utgöra några viktiga åtgärder. Loggning på INFO-nivå som svar på GET- eller HEAD-förfrågningar skapar troligen avsevärt loggbrus, vilket gör det svårare att identifiera användbar information i loggfiler. Loggning vid hantering av GET- eller HEAD-begäranden bör finnas antingen på WARN- eller FEL-nivå när något har gått fel eller på DEBUG- eller TRACE-nivå om mer detaljerad felsökningsinformation skulle vara till hjälp.
 
 >[!NOTE]
-Detta gäller inte för `access.log`loggning av -typ för varje begäran.
+>
+>Detta gäller inte för `access.log`loggning av -typ för varje begäran.
 
 #### Icke-kompatibel kod {#non-compliant-code-8}
 
@@ -520,7 +521,8 @@ Det finns dock fall där ett API är inaktuellt i AEM men inte i andra sammanhan
 Följande avsnitt innehåller information om de OakPAL-kontroller som körs av Cloud Manager.
 
 >[!NOTE]
-OakPAL är ett ramverk som validerar innehållspaket med en fristående Oak-databas. Den utvecklades av en AEM partner och vinnare av 2019 AEM Rockstar North America-priset.
+>
+>OakPAL är ett ramverk som validerar innehållspaket med en fristående Oak-databas. Den utvecklades av en AEM partner och vinnare av 2019 AEM Rockstar North America-priset.
 
 ### Produkt-API:er som antecknas med @ProviderType ska inte implementeras eller utökas av kunder {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
@@ -681,9 +683,12 @@ Det har länge varit en god praxis att `/libs` innehållsträdet i AEM innehåll
 Ett vanligt problem som inträffar i komplexa projekt är när samma OSGi-komponent konfigureras flera gånger. Detta skapar en tvetydighet om vilken konfiguration som ska användas. Den här regeln är&quot;körningsmedveten&quot; eftersom den bara identifierar problem där samma komponent har konfigurerats flera gånger i samma körningsläge eller en kombination av körningslägen.
 
 >[!NOTE]
-Den här regeln ger problem där samma konfiguration, med samma sökväg, definieras i flera paket, inklusive fall där samma paket dupliceras i den övergripande listan över inbyggda paket.
-Om till exempel bygget skapar paket med namnet `com.myco:com.myco.ui.apps` och `com.myco:com.myco.all` där `com.myco:com.myco.all` inbäddade `com.myco:com.myco.ui.apps`, sedan alla konfigurationer i `com.myco:com.myco.ui.apps` rapporteras som dubbletter.
-Detta är vanligtvis ett fall där man inte följer [Riktlinjer för innehållspaketets struktur.](/help/implementing/developing/introduction/aem-project-content-package-structure.md). I det här specifika exemplet `com.myco:com.myco.ui.apps` saknar `<cloudManagerTarget>none</cloudManagerTarget>` -egenskap.
+>
+>Den här regeln ger problem där samma konfiguration, med samma sökväg, definieras i flera paket, inklusive fall där samma paket dupliceras i den övergripande listan över inbyggda paket.
+>
+>Om till exempel bygget skapar paket med namnet `com.myco:com.myco.ui.apps` och `com.myco:com.myco.all` där `com.myco:com.myco.all` inbäddade `com.myco:com.myco.ui.apps`, sedan alla konfigurationer i `com.myco:com.myco.ui.apps` rapporteras som dubbletter.
+>
+>Detta är vanligtvis ett fall där man inte följer [Riktlinjer för innehållspaketets struktur.](/help/implementing/developing/introduction/aem-project-content-package-structure.md). I det här specifika exemplet `com.myco:com.myco.ui.apps` saknar `<cloudManagerTarget>none</cloudManagerTarget>` -egenskap.
 
 #### Icke-kompatibel kod {#non-compliant-code-osgi}
 
@@ -779,7 +784,8 @@ Dokumentationen för AEM Moderniseringsverktyg innehåller dokumentation och ver
 För att vara kompatibel med databasens distributionsmodell måste enskilda innehållspaket innehålla antingen innehåll för databasens oföränderliga områden (dvs. `/apps` och `/libs`) eller det muterbara området (det vill säga allt som inte finns i `/apps` eller `/libs`), men inte båda. Ett paket som innehåller både `/apps/myco/components/text and /etc/clientlibs/myco` är inte kompatibelt med Cloud Service och kommer att orsaka ett problem som rapporteras.
 
 >[!NOTE]
-Regeln [Kundpaket får inte skapa eller ändra noder under /libs](#oakpal-customer-package) gäller alltid.
+>
+>Regeln [Kundpaket får inte skapa eller ändra noder under /libs](#oakpal-customer-package) gäller alltid.
 
 Se [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md) för mer information.
 
