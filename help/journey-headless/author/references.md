@@ -2,9 +2,9 @@
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
 exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
-source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
+source-git-commit: e81b852dc90e3cc5abc8b9f218f48d0fc1cc66eb
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '729'
 ht-degree: 1%
 
 ---
@@ -127,7 +127,7 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
 
 
 * Komma igång-guider
-   * [Skapa en startguide för en resursmapp utan rubrik](/help/implementing/developing/headless/getting-started/create-assets-folder.md)
+   * [Skapa en resursmapp - Headless-konfiguration](/help/headless/setup/create-assets-folder.md)
 
 * AEM Headless Content Architect Journey
 

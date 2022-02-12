@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: ad49f5896680f191cd667b2e17ee8e81b7c424a5
+source-git-commit: 7076b5b7db75ebe4f6b381ab2330769f7dcd6904
 workflow-type: tm+mt
-source-wordcount: '3494'
+source-wordcount: '3444'
 ht-degree: 24%
 
 ---
@@ -158,12 +158,7 @@ ht-degree: 24%
          + [Konfigurera kontomiljön](/help/sites-cloud/authoring/getting-started/account-environment.md)
          + [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md)
          + [Kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
-      + Headless Content Author Journey {#headless-journey}
-         + [AEM Headless Content Author Journey - översikt](/help/journey-headless/author/overview.md)
-         + [Om du skriver för Headless med AEM - en introduktion](/help/journey-headless/author/introduction.md)
-         + [Grundläggande om redigering för Headless med AEM](/help/journey-headless/author/basics.md)
-         + [Läs om hur du använder referenser i innehållsfragment](/help/journey-headless/author/references.md)
-         + [Läs om hur du definierar metadata och taggar för innehållsfragment](/help/journey-headless/author/metadata-tagging.md)
+      + [Headless Content Author Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/author/overview.html)
       + Grundläggande om redigering {#fundamentals}
          + [Miljö och verktyg](/help/sites-cloud/authoring/fundamentals/environment-tools.md)
          + [Lägga till sidanteckningar](/help/sites-cloud/authoring/fundamentals/annotations.md)
@@ -253,14 +248,7 @@ ht-degree: 24%
                + [Konfigurera översättningsregler](/help/journey-sites/translation/translation-rules.md)
                + [Översätta innehåll](/help/journey-sites/translation/translate-content.md)
                + [Publicera översatt innehåll](/help/journey-sites/translation/publish-content.md)
-            + Headless Translation Journey {#headless}
-               + [Förstå headlessöversättning i AEM](/help/journey-headless/translation/overview.md)
-               + [Kom igång med AEM headless translation](/help/journey-headless/translation/getting-started.md)
-               + [Lär dig mer om headless-innehåll och hur du översätter i AEM](/help/journey-headless/translation/learn-about.md)
-               + [Konfigurera översättningskoppling](/help/journey-headless/translation/configure-connector.md)
-               + [Konfigurera översättningsregler](/help/journey-headless/translation/translation-rules.md)
-               + [Översätta innehåll](/help/journey-headless/translation/translate-content.md)
-               + [Publicera översatt innehåll](/help/journey-headless/translation/publish-content.md)
+            + [Headless Translation Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html)
             + [Översätta innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md)
             + [Förbereder innehåll för översättning](/help/sites-cloud/administering/translation/preparation.md)
             + [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md)
@@ -319,9 +307,6 @@ ht-degree: 24%
       + [Söka efter fasetter](/help/assets/search-facets.md)
       + [HTTP API för Assets](/help/assets/mac-api-assets.md)
       + [Content Fragments support in Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
-      + [GraphQL API för innehållsfragment](/help/assets/content-fragments/graphql-api-content-fragments.md)
-      + [Autentisering för fjärrGraphQL-frågor för innehållsfragment](/help/assets/content-fragments/graphql-authentication-content-fragments.md)
-      + [GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
       + [Anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md)
       + [Generera renderingar endast för placering](/help/assets/configure-fpo-renditions.md)
       + [Materialrapporter](/help/assets/asset-reports.md)
@@ -547,6 +532,73 @@ ht-degree: 24%
    + [Adobe Commerce PWA Studio](/help/commerce-cloud/pwa-studio/getting-started.md)
    + [Migrering](/help/commerce-cloud/migration.md)
    + [Vanliga frågor](/help/commerce-cloud/faq.md)
++ Headless {#headless}
+   + [Introduktion till AEM Headless](/help/headless/introduction.md)
+   + Inställningar {#setup}
+      + [Introduktion](/help/headless/setup/introduction.md)
+      + [Konfiguration](/help/headless/setup/create-configuration.md)
+      + [Content Fragment Model](/help/headless/setup/create-content-model.md)
+      + [Resursmapp](/help/headless/setup/create-assets-folder.md)
+      + [Innehållsfragment](/help/headless/setup/create-content-fragment.md)
+      + [GraphQL-slutpunkt](/help/headless/setup/create-api-request.md)
+   + Innehållsfragment {#content-fragments}
+      + [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments.html)
+      + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-models.html)
+      + [Hantera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-managing.html)
+      + Redigering{#authoring}
+         + [Redigering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-variations.html)
+         + [Textredigerare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-markdown.html)
+         + [Associerat innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-assoc-content.html)
+         + [Variationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-variations.html#managing-variations)
+      + [Metadata](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-metadata.html)
+      + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-structure-tree.html)
+      + [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-json-preview.html)
+   + GraphQL API {#graphql-api}
+      + [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md)
+      + [Hantera GraphQL-slutpunkter](/help/headless/graphql-api/graphql-endpoint.md)
+      + [GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md)
+      + [Exempelfrågor för GraphQL](/help/headless/graphql-api/sample-queries.md)
+      + [Beständiga GraphQL-frågor](/help/headless/graphql-api/persisted-queries.md)
+   + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
+   + Dokumentskydd {#security}
+      + [Behörigheter](/help/headless/security/permissions.md)
+      + [Autentisering](/help/headless/security/authentication.md)
+   + Distribution {#deployment}
+      + [Arkitektur](/help/headless/deployment/architecture.md)
+      + [Dispatcher](/help/headless/deployment/dispatcher.md)
+      + [CORS-konfiguration](/help/headless/deployment/cross-origin-resource-sharing.md)
+      + [Referensfilter](/help/headless/deployment/referrer-filter.md)
+   + Huvudlösa resor {#journeys}
+      + Headless Developer Journey {#developer}
+         + [Förstå Headless i AEM](/help/journey-headless/developer/overview.md)
+         + [Läs om CMS Headless Development](/help/journey-headless/developer/learn-about.md)
+         + [Komma igång med AEM Headless as a Cloud Service](/help/journey-headless/developer/getting-started.md)
+         + [Vägen till din första upplevelse med AEM Headless](/help/journey-headless/developer/path-to-first-experience.md)
+         + [Modellera innehåll som AEM innehållsmodeller](/help/journey-headless/developer/model-your-content.md)
+         + [Få åtkomst till ditt innehåll via AEM-API:er](/help/journey-headless/developer/access-your-content.md)
+         + [Så här uppdaterar du innehåll via AEM Assets API:er](/help/journey-headless/developer/update-your-content.md)
+         + [Hur man sammanför allt](/help/journey-headless/developer/put-it-all-together.md)
+         + [Så här lever du med ditt headless-program](/help/journey-headless/developer/go-live.md)
+         + [Valfritt - Så här skapar du enkelsidiga program med AEM](/help/journey-headless/developer/create-spa.md)
+      + Headless Content Architect Journey {#architect}
+         + [AEM Headless Content Architect Journey Overview](/help/journey-headless/architect/overview.md)
+         + [Innehållsmodellering för Headless med AEM - en introduktion](/help/journey-headless/architect/introduction.md)
+         + [Lär dig grunderna i innehållsmodellering för Headless med AEM](/help/journey-headless/architect/basics.md)
+         + [Läs om hur du skapar modeller för innehållsfragment i AEM](/help/journey-headless/architect/model-structure.md)
+      + Headless Translation Journey {#translation}
+         + [Förstå headlessöversättning i AEM](/help/journey-headless/translation/overview.md)
+         + [Kom igång med AEM headless translation](/help/journey-headless/translation/getting-started.md)
+         + [Lär dig mer om headless-innehåll och hur du översätter i AEM](/help/journey-headless/translation/learn-about.md)
+         + [Konfigurera översättningskoppling](/help/journey-headless/translation/configure-connector.md)
+         + [Konfigurera översättningsregler](/help/journey-headless/translation/translation-rules.md)
+         + [Översätta innehåll](/help/journey-headless/translation/translate-content.md)
+         + [Publicera översatt innehåll](/help/journey-headless/translation/publish-content.md)
+      + Headless Content Author Journey {#author}
+         + [AEM Headless Content Author Journey - översikt](/help/journey-headless/author/overview.md)
+         + [Om du skriver för Headless med AEM - en introduktion](/help/journey-headless/author/introduction.md)
+         + [Grundläggande om redigering för Headless med AEM](/help/journey-headless/author/basics.md)
+         + [Läs om hur du använder referenser i innehållsfragment](/help/journey-headless/author/references.md)
+         + [Läs om hur du definierar metadata och taggar för innehållsfragment](/help/journey-headless/author/metadata-tagging.md)
 + Implementera {#implementing}
    + [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
    + Använda Cloud Manager {#using-cloud-manager}
@@ -690,49 +742,7 @@ ht-degree: 24%
             + [Implementera en anpassad predikatutvärderare](/help/implementing/developing/introduction/query-builder-custom-predicate.md)
          + [Anpassade felsidor](/help/implementing/developing/introduction/custom-error-page.md)
          + [AEM](/help/implementing/developing/introduction/node-types.md)
-      + Headless Experience Management {#headless}
-         + [Headless och AEM](/help/implementing/developing/headless/introduction.md)
-         + Huvudlösa resor {#journeys}
-            + Headless Developer Journey {#developer}
-               + [Förstå Headless i AEM](/help/journey-headless/developer/overview.md)
-               + [Läs om CMS Headless Development](/help/journey-headless/developer/learn-about.md)
-               + [Komma igång med AEM Headless as a Cloud Service](/help/journey-headless/developer/getting-started.md)
-               + [Vägen till din första upplevelse med AEM Headless](/help/journey-headless/developer/path-to-first-experience.md)
-               + [Modellera innehåll som AEM innehållsmodeller](/help/journey-headless/developer/model-your-content.md)
-               + [Få åtkomst till ditt innehåll via AEM-API:er](/help/journey-headless/developer/access-your-content.md)
-               + [Så här uppdaterar du innehåll via AEM Assets API:er](/help/journey-headless/developer/update-your-content.md)
-               + [Hur man sammanför allt](/help/journey-headless/developer/put-it-all-together.md)
-               + [Så här lever du med ditt headless-program](/help/journey-headless/developer/go-live.md)
-               + [Valfritt - Så här skapar du enkelsidiga program med AEM](/help/journey-headless/developer/create-spa.md)
-            + AEM Headless Content Architect Journey {#architect}
-               + [AEM Headless Content Architect Journey Overview](/help/journey-headless/architect/overview.md)
-               + [Innehållsmodellering för Headless med AEM - en introduktion](/help/journey-headless/architect/introduction.md)
-               + [Lär dig grunderna i innehållsmodellering för Headless med AEM](/help/journey-headless/architect/basics.md)
-               + [Läs om hur du skapar modeller för innehållsfragment i AEM](/help/journey-headless/architect/model-structure.md)
-         + Starthandbok för Headless {#getting-started}
-            + [Introduktion](/help/implementing/developing/headless/getting-started/introduction.md)
-            + [Skapa en konfiguration](/help/implementing/developing/headless/getting-started/create-configuration.md)
-            + [Skapa en innehållsfragmentmodell](/help/implementing/developing/headless/getting-started/create-content-model.md)
-            + [Skapa en resursmapp](/help/implementing/developing/headless/getting-started/create-assets-folder.md)
-            + [Skapa ett innehållsfragment](/help/implementing/developing/headless/getting-started/create-content-fragment.md)
-            + [Åtkomst och leverans av innehållsfragment](/help/implementing/developing/headless/getting-started/create-api-request.md)
-         + Innehållsfragment {#content-fragments}
-            + [Headless Delivery with Content Fragments and GraphQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
-            + [Arbeta med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments.html)
-            + [Aktivera funktionen för innehållsfragment för instansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-configuration-browser.html)
-            + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-models.html)
-            + [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-managing.html)
-            + [Variationer – redigera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-variations.html)
-            + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-markdown.html)
-            + [Använda associerat innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-assoc-content.html)
-            + [Metadata – fragmentegenskaper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-metadata.html)
-            + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-structure-tree.html)
-            + [Förhandsgranska - JSON-representation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-json-preview.html)
-         + Leverans-API {#delivery-api}
-            + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
-            + [Content Fragments GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
-            + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)
-            + [Autentisering för AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-authentication-content-fragments.html)
+      + [Headless Experience Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html)
       + Hybrid- och SPA {#hybrid}
          + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
          + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)

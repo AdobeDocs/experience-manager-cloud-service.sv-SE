@@ -4,7 +4,7 @@ description: Lär dig hur du aktiverar vissa Content Fragment-funktioner i Confi
 feature: Content Fragments
 role: User
 exl-id: 9fc911de-1d33-4811-8f58-ea21ce94bedb
-source-git-commit: 2e6f59fe663a3c93fc612b888f151d75dc5821f6
+source-git-commit: e304b49b44cf871f3c47120fad7899407c573234
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 17%
@@ -27,7 +27,7 @@ Innan du använder innehållsfragment måste du använda **Konfigurationsläsare
 >Om du inte aktiverar **Modeller för innehållsfragment**:
 >
 >* den **Skapa** kan inte användas för att skapa nya modeller.
->* kommer du inte att kunna [välj platskonfigurationen för att skapa den relaterade slutpunkten](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint).
+>* kommer du inte att kunna [välj platskonfigurationen för att skapa den relaterade slutpunkten](/help/headless/graphql-api/graphql-endpoint.md).
 
 
 Om du vill aktivera funktioner för innehållsfragment måste du:

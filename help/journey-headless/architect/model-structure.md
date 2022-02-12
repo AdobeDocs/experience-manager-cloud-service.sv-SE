@@ -2,9 +2,9 @@
 title: Läs om hur du skapar modeller för innehållsfragment i AEM
 description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
 exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
-source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
+source-git-commit: e81b852dc90e3cc5abc8b9f218f48d0fc1cc66eb
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '688'
 ht-degree: 2%
 
 ---
@@ -132,4 +132,4 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
 * Komma igång-guider
 
-   * [Skapa innehållsfragmentmodeller Headless Quick Start Guide](/help/implementing/developing/headless/getting-started/create-content-model.md)
+   * [Skapa rubrikfria innehållsfragmentsmodeller](/help/headless/setup/create-content-model.md)

@@ -2,9 +2,9 @@
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
-source-git-commit: b1a1ef0021499872a712c1e4450af9765e46a1a9
+source-git-commit: e304b49b44cf871f3c47120fad7899407c573234
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1696'
 ht-degree: 1%
 
 ---
@@ -268,7 +268,7 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
 
 
 * Komma igång-guider
-   * [Skapa en startguide för en resursmapp utan rubrik](/help/implementing/developing/headless/getting-started/create-assets-folder.md)
+   * [Skapa en huvudlös konfiguration för resursmapp](/help/headless/setup/create-assets-folder.md)
 
 * AEM Headless Content Architect Journey
 

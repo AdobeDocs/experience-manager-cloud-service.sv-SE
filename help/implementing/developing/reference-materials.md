@@ -2,7 +2,7 @@
 title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som ni kan använda för ert digitala upplevelseprojekt.
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
-source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
+source-git-commit: e592dd7a3a717259493f23943933fe3d0e71b7ab
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 3%
@@ -53,7 +53,7 @@ Om ett API tillhandahålls av AEM bör du föredra det framför Sling, JCR och O
 
 >[!TIP]
 >
->Mer information om de här riktlinjerna finns i dokumentet [Förstå bästa praxis för Java API.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+>Mer information om dessa riktlinjer finns i dokumentet [Förstå Java API-metodtips.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ## AEM Delivery and Content Management Services and APIs {#delivery-apis}
 
@@ -66,7 +66,7 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 | [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md) | Generera JSON-export av komponentinnehåll baserat på ett modellramverk |
 | [Resurs-API](/help/assets/mac-api-assets.md) | Möjliggör åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se AEM Assets HTTP API |
 | [HTTP API för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md) | Få åtkomst till innehåll i innehållsfragment direkt via HTTP API via CRUD-åtgärder |
-| [Content Fragment GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) | Möjliggör effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementationer |
+| [Content Fragment GraphQL API](/help/headless/graphql-api/content-fragments.md) | Möjliggör effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementationer |
 | [Content Fragments Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
 
 ## SPA-specifika API:er {#spa-apis}
@@ -82,4 +82,4 @@ AEM SDK-ramverket (Single-Page Application (SPA) Editor innehåller specifika Ja
 
 >[!TIP]
 >
->Läs [SPA Introduction and Walkthrough](/help/implementing/developing/hybrid/introduction.md) om du vill ha mer information om enkelsidiga program.
+>Kolla in [SPA introduktion och genomgång](/help/implementing/developing/hybrid/introduction.md) för mer information om enkelsidiga program.
