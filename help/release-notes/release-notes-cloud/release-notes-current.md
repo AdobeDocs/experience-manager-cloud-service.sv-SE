@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 5731337ff0edf5825860e6f76ed919b90402d88b
+source-git-commit: 7935ed5c332934cf1824ef8e6b52b6a7f451dc34
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1083'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,10 @@ Följande version (202.2.0) är den 24 februari 2022.
 ## Släpp video {#release-video}
 
 Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340120) video med en sammanfattning av funktioner som lagts till i version 2022.1.0.
+
+## Adobe Experience Manager Sites as a Cloud Service {#sites}
+
+* The **[Aktivera frontdelspipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md)** finns i **Plats** i Sites-konsolen för platser som använder v2 för Page Core-komponenten. Med den här knappen konfigureras webbplatsen så att de teman som distribueras med Front End Pipeline läses in ovanpå befintliga klientbibliotek.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
