@@ -3,9 +3,9 @@ title: Aktivera frontpipeline
 description: Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser för att utnyttja webbplatsteman för att snabbare anpassa din webbplats.
 feature: Administering
 role: Admin
-source-git-commit: dc7e89c601bb02c78f65ca58eff34c15092b5561
+source-git-commit: 4771bb075e41f420d0d51d8cb1a4809dc72e55e5
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,18 @@ Webbplatser som är baserade på webbplatsmallar kan utnyttja frontendspipelinen
 >Om du inte känner till produktionsflödet och hur du snabbt distribuerar webbplatser med hjälp av det och webbplatsmallar kan du läsa [Snabbskapande av webbplats - resa](/help/journey-sites/quick-site/overview.md) för en introduktion.
 
 Om du inte har skapat din befintliga webbplats baserat på webbplatsmallar och teman, kan AEM konfigurera din webbplats så att den läser in de teman som distribueras med Front End Pipeline ovanpå befintliga klientbibliotek.
+
+## Teknisk information {#technical-details}
+
+När du aktiverar frontend-flödet för en webbplats gör AEM följande ändringar i platsstrukturen.
+
+* Alla sidor på webbplatsen kommer att innehålla ytterligare en CSS- och JS-fil, som kan ändras genom att distribuera uppdateringar via en dedikerad molnhanterare.
+* De tillagda CSS- och JS-filerna kommer från början att vara tomma, men en temakällsmapp kan laddas ned för att starta mappstrukturen som gör det möjligt att distribuera CSS- och JS-koduppdateringar via den pipeline som läggs till.
+* Den här ändringen kan bara ångras av en utvecklare genom att ta bort `SiteConfig` och `HtmlPageItemsConfig` noder som skapas nedan med den här åtgärden `/conf/<site-name>/sling:configs`.
+
+>[!NOTE]
+>
+>Den här åtgärden konverterar inte automatiskt befintliga klientbibliotek på webbplatsen till att använda teckensnittsslutsflödet. Att flytta de här källorna från klientbiblioteksmappen till frontendmappen är en uppgift som kräver manuellt arbete av en frontendutvecklare.
 
 ## Krav {#requirements}
 
