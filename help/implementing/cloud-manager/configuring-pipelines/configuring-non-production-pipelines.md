@@ -2,7 +2,7 @@
 title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
-source-git-commit: 536740f8bb5e54a3a831a22f4e6d237863aea324
+source-git-commit: e2031cabfa06a4d55dfa3ec0a77d3d3b0f835f5b
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 0%
@@ -124,7 +124,7 @@ En konfigurationspipeline för webbskikt Distribuerar konfigurationer för HTTPD
 >
 >Om det redan finns en kodrapport på webbnivå för den valda miljön inaktiveras den här markeringen.
 
-Följ de här stegen för att slutföra konfigurationen av icke-produktionsflödet för kod i helhög.
+Följ de här stegen för att slutföra konfigurationen av icke-produktionsflödet för kod på webbnivå.
 
 1. På **Källkod** måste du definiera följande alternativ.
 
