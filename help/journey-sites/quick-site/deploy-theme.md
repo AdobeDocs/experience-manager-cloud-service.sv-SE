@@ -1,9 +1,9 @@
 ---
 title: Driftsätt ditt anpassade tema
 description: Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.
-source-git-commit: 3d48bd507305e7a1d3efa2b61123afdae1f52ced
+source-git-commit: 97c7590fd7b77e78cf2d465454fac80906d37803
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,7 @@ AEM är ett kraftfullt verktyg och det finns många andra alternativ. Se vilka y
 
 Nedan följer ytterligare resurser som ger en djupdykning i några koncept som nämns i det här dokumentet.
 
+* [Använda webbplatsservern för att hantera ditt webbplatstema](/help/sites-cloud/administering/site-creation/site-rail.md) - Lär dig de kraftfulla funktionerna i webbplatsspåret så att du enkelt kan anpassa och hantera ditt webbplatstema, inklusive nedladdning av temakällor och hantering av temaversioner.
 * [AEM as a Cloud Service teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM kan du behöva läsa de detaljerade tekniska dokumenten direkt.
 * [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html) - Om du vill ha mer information om funktionerna i Cloud Manager kan du läsa de detaljerade tekniska dokumenten direkt.
 * [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html) - Molnhanteraren har förkonfigurerade roller med lämplig behörighet. Mer information om rollerna och hur du administrerar dem finns i det här dokumentet.

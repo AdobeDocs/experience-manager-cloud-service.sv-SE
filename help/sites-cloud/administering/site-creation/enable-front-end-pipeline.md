@@ -1,17 +1,17 @@
 ---
-title: Aktivera frontpipeline
+title: Aktivera frontendspipelinen
 description: Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser för att utnyttja webbplatsteman för att snabbare anpassa din webbplats.
 feature: Administering
 role: Admin
-source-git-commit: 4771bb075e41f420d0d51d8cb1a4809dc72e55e5
+source-git-commit: 002b95212d682c41a601a483df9b4365a553b669
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
 
-# Aktivera frontpipeline {#enable-front-end-pipeline}
+# Aktivera frontendspipelinen {#enable-front-end-pipeline}
 
 Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser för att utnyttja webbplatsteman för att snabbare anpassa din webbplats.
 
@@ -47,7 +47,7 @@ AEM kan automatiskt anpassa din befintliga webbplats så att den använder front
 
 ## Aktivera frontendspipeline {#enabling}
 
-Du aktiverar din plats via webbplatskonsolen.
+Du aktiverar din plats från Sites-konsolen med hjälp av [Platsjärnvägar.](site-rail.md)
 
 1. Logga in AEM och navigera till webbplatsen via **Global navigering** > **Webbplatser**.
 1. Välj din plats i konsolen. Du måste markera platsens rot och inte underordnade sidor.
@@ -58,7 +58,8 @@ Du aktiverar din plats via webbplatskonsolen.
 
 1. AEM ber dig bekräfta med en översikt över de ändringar som kommer att göras. Bekräfta att webbplatsen har anpassats.
 
-Nu är webbplatsen redo att använda frontendriet. Mer information om frontendriet finns i:
+Nu är webbplatsen redo att använda frontendriet. Om du vill veta mer om frontend-flödet och hur du hanterar ditt webbplatstema kan du läsa:
 
+* [Använda webbplatsservern för att hantera ditt webbplatstema](site-rail.md)
 * [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md) - Den här dokumentationsresan ger dig och en heltäckande översikt över processen att snabbt distribuera en webbplats med hjälp av pipeline i gränssnittet och verktyget för att skapa snabbwebbplatser.
 * [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) - I det här dokumentet beskrivs frontendjörledningen i samband med rörledningar i full hög och på webbnivå.
