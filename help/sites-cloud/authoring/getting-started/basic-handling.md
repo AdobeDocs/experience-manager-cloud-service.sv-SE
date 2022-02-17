@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 9047274a100a8e1b3e49e52ad4124bbbef7b3db2
+source-git-commit: 03c5da7217a765e7a5254a4cb47bdc9d3c19b14b
 workflow-type: tm+mt
-source-wordcount: '2939'
+source-wordcount: '2954'
 ht-degree: 4%
 
 ---
@@ -229,7 +229,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 I [Kortvy](#card-view) vissa åtgärder är tillgängliga både som snabbikoner och i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
 
-Snabbåtgärderna visas när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
+Snabbåtgärderna är synliga när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
 
 ![Ytterligare alternativ](/help/sites-cloud/authoring/assets/quick-actions.png)
 
@@ -465,7 +465,7 @@ De här alternativen är tillgängliga via markören bredvid **Kommentar** fält
 
 ![Site rail](../assets/site-rail.png)
 
-Tryck eller klicka på **Hämta temakällor** för att anpassa [temat för din webbplats.](/help/sites-cloud/administering/site-creation/site-themes.md)
+Se dokumentet [Använda webbplatsservern för att hantera ditt webbplatstema](/help/sites-cloud/administering/site-creation/site-rail.md) om du vill ha mer information om hur du kan använda järnvägen för att hantera [temat för din webbplats.](/help/sites-cloud/administering/site-creation/site-themes.md)
 
 >[!TIP]
 >
