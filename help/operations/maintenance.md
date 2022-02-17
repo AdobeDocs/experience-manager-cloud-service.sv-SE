@@ -2,9 +2,9 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Underhållsaktiviteter på AEM as a Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: 7ff9cabe239c8e474b03c4ecce6d32bf659665a7
+source-git-commit: a5e4f4617e16e0f7ee36623b41fdd5197eca7178
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -28,17 +28,17 @@ I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med under
 
 I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as a Cloud Service släpps.
 
-| Underhållsaktivitet | Vem äger konfigurationen | Konfigurera (valfritt) |
+<!--| Maintenance Task | Who owns the configuration | How to configure (optional)  |
 |---|---|---|
-| Skräpsamling för datastaarkiv | Adobe | Ej tillämpligt - ägs till fullo av Adobe |
-| Rensa version | Adobe | Helägd av Adobe, men i framtiden kommer kunderna att kunna konfigurera vissa parametrar. |
-| Rensa granskningslogg | Adobe | Helägd av Adobe, men i framtiden kommer kunderna att kunna konfigurera vissa parametrar. |
-| Lucene Binaries Cleanup | Adobe | Oanvänd och därför inaktiverad av Adobe. |
-| Ad hoc-aktivitetsrensning | Kund | Måste göras i github. <br> Åsidosätt den färdiga konfigurationsnoden för underhållsperioden under `/libs` genom att skapa egenskaper under mappen `/apps/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den) `granite_TaskPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaperna i [AEM 6.5 Maintenance Task - dokumentation](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
-| Rensa arbetsflöde | Kund | Måste göras i github. <br> Åsidosätt den färdiga konfigurationsnoden för underhållsperioden under `/libs` genom att skapa egenskaper under mappen`/apps/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den) `granite_WorkflowPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaperna finns i [AEM 6.5 Maintenance Task - dokumentation](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
-| Rensa projekt | Kund | Måste göras i github. <br> Åsidosätt den färdiga konfigurationsnoden för underhållsperioden under `/libs` genom att skapa egenskaper under mappen `/apps/settings/granite/operations/maintenance/granite_weekly` eller `granite_daily`. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. <br> Aktivera underhållsaktiviteten genom att lägga till en nod under noden ovan (namnge den) `granite_ProjectPurgeTask`) med lämpliga egenskaper. <br> Konfigurera OSGI-egenskaper se [AEM 6.5 Maintenance Task - dokumentation](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
+| Datastore garbage collection | Adobe | N/A - fully Adobe owned |
+| Version Purge | Adobe | Fully owned by Adobe, but in the future, customers will be able to configure certain parameters. |
+| Audit Log Purge  | Adobe | Fully owned by Adobe, but in the future, customers will be able to configure certain parameters. |
+| Lucene Binaries Cleanup | Adobe | Unused and therefore disabled by Adobe. |
+| Ad-hoc Task Purge | Customer | Must be done in github. <br> Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the the folder `/apps/settings/granite/operations/maintenance/granite_weekly` or `granite_daily`. See the Maintenance Window table below for additional configuration details. <br> Enable the maintenance task by adding another node under the node above (name it `granite_TaskPurgeTask`) with the appropriate properties. <br> Configure the OSGI properties see the [AEM 6.5 Maintenance Task documentation](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html)|
+| Workflow Purge | Customer |  Must be done in github. <br> Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the the folder`/apps/settings/granite/operations/maintenance/granite_weekly` or `granite_daily`. See the Maintenance Window table below for additional configuration details. <br> Enable the maintenance task by adding another node under the node above (name it `granite_WorkflowPurgeTask`) with the appropriate properties. <br> Configure the OSGI properties see [AEM 6.5 Maintenance Task documentation](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
+| Project Purge | Customer |  Must be done in github. <br> Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the the folder `/apps/settings/granite/operations/maintenance/granite_weekly` or `granite_daily`. See the Maintenance Window table below for additional configuration details. <br> Enable the maintenance task by adding a node under the node above (name it `granite_ProjectPurgeTask`) with the appropriate properties. <br> Configure OSGI properties see [AEM 6.5 Maintenance Task documentation](https://helpx.adobe.com/experience-manager/kb/AEM6-Maintenance-Guide.html) |
 
-Kunderna kan schemalägga underhållsaktiviteter för arbetsflödestömning, Ad-hoc-aktivitetsrensning och projekttömning som ska utföras under underhållsperioden varje dag, vecka eller månad. Dessa konfigurationer bör redigeras direkt i källkontrollen. Tabellen nedan beskriver de konfigurationsparametrar som är tillgängliga för varje fönster. Se även platserna och kodexemplen som finns efter tabellen.
+Customers can schedule each of the Workflow Purge, Ad-hoc Task Purge and Project Purge Maintenance tasks to be executed during the daily, weekly, or monthly maintenance windows. These configurations should be edited directly in source control. The table below describes the configuration parameters available for each of the window. Also, see the locations and code samples provided after the table.-->
 
 <table style="table-layout:auto">
  <tbody>
