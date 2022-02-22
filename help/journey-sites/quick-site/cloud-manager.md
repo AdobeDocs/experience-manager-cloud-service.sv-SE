@@ -1,9 +1,9 @@
 ---
 title: Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser
 description: Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.
-source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
+source-git-commit: 74e17ccb93c97dd6881c9b63d9a2d784d3add430
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -82,11 +82,17 @@ För den här resan behövs ingen fullständig förståelse för Cloud Manager. 
 
 ![Cloud Manager-struktur](assets/cloud-manager-structure.png)
 
-* **TENANT** - Alla kunder tillhandahålls med en klient. **WKND Resor- och äventyföretag** kanske är en hyresgäst.
-* **PROGRAM** - Varje innehavare har ett eller flera program. The **WKND Resor- och äventyföretag** en innehavare kan ha **WKND Nightlife** och **WKND-eftermiddagsprojekt** program.
-* **MILJÖ** - Varje program har flera miljöer, t.ex. produktion för live-innehåll samt staging och dev för utvecklingsändamål. **WKND Nightlife** och **WKND-eftermiddagsprojekt** skulle båda ha utvecklings-, scen- och produktionsmiljöer.
+* **TENANT** - Alla kunder tillhandahålls med en klient.
+* **PROGRAM** - Varje innehavare har ett eller flera program som ofta återspeglar kundens licensierade lösningar.
+* **MILJÖ** - Varje program har flera miljöer, t.ex. produktion för direktinnehåll, en för mellanlagring och en för utvecklingsändamål.
 * **DATABAS** - Miljöerna har Git-databaser där program- och front end-kod underhålls.
 * **VERKTYG OCH ARBETSFLÖDEN** - Pipelines hanterar distributionen av kod från databaserna till miljöerna.
+
+Ett exempel är ofta användbart när hierarkin ska sammanställas.
+
+* WKND Travel and Adventure Enterprises kan vara en **tenant** som fokuserar på reserelaterade medier.
+* Innehavare av WKND Travel och Adventure Enterprises kan ha två **program**: ett Sites-program för WKND Magazine och ett Assets-program för WKND Media.
+* Programmen WKND Magazine och WKND Media skulle ha både utveckling, scen och produktion **miljöer**.
 
 ## Det snabba utvecklingsflödet för att skapa webbplatsen {#flow}
 

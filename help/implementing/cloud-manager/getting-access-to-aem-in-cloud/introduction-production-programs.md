@@ -1,31 +1,35 @@
 ---
 title: 'Introduktion till produktionsprogram '
-description: Introduktion till produktionsprogram
+description: Lär dig vilka produktionsprogram som är och förslag på hur du konfigurerar dem.
 exl-id: bb8d4a5a-b26a-4718-9327-149fedb87e6a
-source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
+source-git-commit: a6152a1529b5c70bcf056857204e7ff97fc614e4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
+
 # Introduktion till produktionsprogram {#production-programs}
 
-Ett *Production*-program är avsett för en användare som känner till AEM och Cloud Manager och som är redo att börja skriva, bygga och testa kod i syfte att distribuera den till Production.
+Ett produktionsprogram är avsett för ett team som är redo att börja skriva, bygga och testa kod i syfte att distribuera den för att hantera livstrafik.
+
+Efter [skapa produktionsprogram,](creating-production-programs.md) a [guide för att skapa program](using-the-wizard.md) guidar användaren genom de val som görs beroende på vad användaren vill skapa programmet.
+
+## Alternativ för att skapa program {#program-creation-options}
+
+Ditt avtalsavtal med Adobe definierar antalet och typerna av lösningar som är tillgängliga för just er organisation när ni skapar produktionsprogram. Du har kontroll över hur du mappar tillgängliga lösningar till Cloud Manager-program.
+
+I följande tabell beskrivs vanliga scenarier för tillgängliga lösningar och de typiska produktionsprogram som skapas utifrån dem.
+
+| Tillgängliga lösningar | Programalternativ | Vad ingår? | När ska användas | Exempel |
+|--- |--- |--- |--- |---|
+| 1 Platslösning | Skapa ett program som bara innehåller en plats | 1 produktion + 1 fas, 1 utveckling | Ej tillämpligt | Ej tillämpligt |
+| 1 Resurslösning | Skapa ett program som bara innehåller 1 resurser | 1 produktion + 1 fas, 1 utveckling | Ej tillämpligt | Ej tillämpligt |
+| 1 platser +1 resurser | Skapa ett program: <br>1 Sites &amp; Assets-program | 1 produktion + 1 fas, 2 utveckling | När en majoritet av de digitala resurserna används som stöd för webbplatsimplementeringen.<br>I sådana fall är de flesta digitala resurser i ett färdigt tillstånd och klara att användas för upplevelser över flera kanaler via Sites.<br>Vanligtvis ansvarar ett team för att hantera innehåll för både platser och resurser. | Bilder som främst används för en webbplats.<br>PDF som ska distribueras via en intern portal som är inbyggd i AEM Sites. |
+| 1 platser +1 resurser | Skapa separata program:<br>1 Endast site-program och 1 Endast Assets-program | 1 produktion + 1 fas, 1 utveckling<br> 1 produktion + 1 fas, 1 utveckling | När många digitala resurser inte har direkt stöd för implementering av webbplatser.<br> I sådana fall finns resurserna i olika lägen, inklusive råfilstyper och pågående arbeten.<br>Ett dedikerat kreativt team hanterar digitalt material under sin egen livscykel och har separata arbetsflöden och releasecykler än Sites content management-teamet. | Raw-bilder från en fototagning lagras i Assets-programmet och endast ett fåtal används i Sites-implementeringen.<br>Ett stort antal filtyper i Creative Cloud, som Photoshop och Illustrator, hanteras i AEM Assets och genomgår ett eget arbetsflöde för godkännande innan en färdig resurs genereras.<br>Överväg att använda [Anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md#overview-of-connected-assets) i sådana fall. |
+| 1 plats + 1 plats | Skapa separata program:<br>1 Endast webbplatser och 1 Endast webbplatser | 1 produktion + 1 fas, 1 utveckling<br>1 produktion + 1 fas, 1 utveckling | För implementering av multi-tenant-platser.<br>I sådana fall måste flera webbplatser med ett eget releaseschema och särskilda utvecklings- och innehållsteam hanteras. | Två varumärken med dedikerade webbplatser och separata utvecklingsteam |
 
 >[!NOTE]
->Du kan inte ta bort ett produktionsprogram.
-
-En guide hjälper användaren att göra val beroende på vad användaren vill med att skapa programmet. Baserat på de outnyttjade lösningsberättiganden som är tillgängliga för den specifika kunden eller organisationen, har användaren kontroll över hur man mappar tillgängliga (oanvända) lösningsberättiganden till Cloud Manager-program.
-
-## Att tänka på när du skapar program {#program-creation-considerations}
-
-I tabellen nedan beskrivs vanliga scenarier som ska beaktas när du skapar program i Cloud Manager:
-
-| Oanvända lösningsberättiganden i organisationen | Skapa programalternativ | Vad ingår? | När du ska använda och andra överväganden |
-|--- |--- |--- |--- |
-| 1 Platslösning | Skapa 1 Sites only-program | 1 produktion + 1 fas, 1 utveckling | NA |
-| 1 Resurslösning | Skapa ett program med endast 1 Assets | 1 produktion + 1 fas, 1 utveckling | NA |
-| 1 platser +1 resurser | Skapa ett program: 1 Sites &amp; Assets-program | 1 produktion + 1 fas, 2 utveckling | En majoritet av de digitala resurserna används för att stödja implementeringen av webbplatser. De flesta digitala resurser är färdiga och klara att användas för upplevelser över flera kanaler via Sites. Vanligtvis ansvarar ett team för att hantera innehåll för både Sites och Assets. **Vanliga exempel**: Bilder som främst används för en webbplats. PDF-filer som ska distribueras via en intern portal som byggts in i AEM Sites. |
-| 1 platser +1 resurser | Skapa separata program: 1 Endast site-program och 1 Endast Assets-program | 1 produktion + 1 fas, 1 utveckling<br> 1 produktion + 1 fas, 1 utveckling | Många digitala resurser har inte direkt stöd för implementering av webbplatser. Resurser som hanteras är i olika lägen, inklusive råfilstyper och pågående arbeten. Ett dedikerat kreativt team hanterar digitalt material under sin egen livscykel och har separata arbetsflöden och releasecykler än Sites content management-teamet. *Vanliga exempel*: Råbilder från en fotografering lagras i Assets-programmet och endast ett fåtal används i Sites-implementeringen. Ett stort antal filtyper i Creative Cloud, som Photoshop och Illustrator, hanteras i AEM Assets och genomgår ett eget arbetsflöde för godkännande innan en färdig resurs genereras. Funktioner att utnyttja: [Anslutna resurser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html?lang=en#overview-of-connected-assets) |
-| 1 plats + 1 plats | Skapa separata program: 1 Endast webbplatser och 1 Endast webbplatser | 1 produktion + 1 fas, 1 utveckling<br>1 produktion + 1 fas, 1 utveckling | Implementering av multi-tenant-sajter. Flera sajter med ett eget releaseschema och särskilda utvecklings- och innehållsteam. *Vanliga exempel*: Två varumärken med dedikerade webbplatser och separata utvecklingsteam |
+>
+>Produktionsprogram [kan inte redigeras och inte tas bort.](editing-programs.md)

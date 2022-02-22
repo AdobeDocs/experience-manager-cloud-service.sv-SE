@@ -2,7 +2,7 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: cf688addd731d7a7107a648b40fbbdd149fef503
+source-git-commit: b74a0dbb1c9fdb74941f7b71bed9215853b63666
 workflow-type: tm+mt
 source-wordcount: '1906'
 ht-degree: 84%
@@ -112,7 +112,7 @@ Antal och typer av AEM-program som kan skapas via Cloud Manager beror på:
 
 Cloud Manager har utvecklats till en självbetjäningsportal där huvudkomponenterna i AEM as a Cloud Service kan skapas och konfigureras:
 
-* Skapa och hantera nya program. Se [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/understand-program-types.md) för mer information.
+* Skapa och hantera nya program. Se [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) för mer information.
 
 * Skapa och hantera AEM-miljöer i dessa program. Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) för mer information.
 

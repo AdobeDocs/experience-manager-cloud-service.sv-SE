@@ -3,7 +3,7 @@ title: Konfigurera molnresurser via Cloud Manager
 description: Lär dig hur du använder Cloud Manager för att konfigurera och hantera dina egna molnresurser.
 role: Admin, User, Developer
 exl-id: de3a33b7-b459-4e47-b232-a0f88e2ce22e
-source-git-commit: 22a08a0cb80052485309ce3d33537e9fe303c6f5
+source-git-commit: 0db24518610fccf0d2ea5e0620a0c6a5f8009ea8
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Följ avsnitten nedan för att lära dig hur du skapar [molntjänstprogram](#cre
 
 * Du bör känna till [Produktprofiler för Cloud Manager.](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md#cloud-manager-product-profiles)
 
-* Du bör förstå begreppen i Cloud Manager [program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/understand-program-types.md) och [miljöer.](/help/implementing/cloud-manager/manage-environments.md)
+* Du bör förstå begreppen i Cloud Manager [program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) och [miljöer.](/help/implementing/cloud-manager/manage-environments.md)
 
 ## Använd Cloud Manager som systemadministratör och företagsägare {#access-sysadmin-bo}
 
@@ -141,7 +141,7 @@ Nu när du har säkerställt att du har rätt åtkomst kan du skapa ditt första
 
    >[!TIP]
    >
-   >Stegvisa instruktioner om hur du använder guiden Lägg till program finns i dokumentet [Skapa produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-program.md) eller se detta [video](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html) om du vill lära dig att skapa AEM som ett molnprogram och lära dig mer om viktiga saker innan du skapar ditt program.
+   >Stegvisa instruktioner om hur du använder guiden Lägg till program finns i dokumentet [Skapa produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md) eller se detta [video](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html) om du vill lära dig att skapa AEM som ett molnprogram och lära dig mer om viktiga saker innan du skapar ditt program.
 
 
 1. När ditt molnprogram har skapats kan du navigera till programmet från Cloud Managers landningssida för att se **Översikt** sidan med ditt program.
