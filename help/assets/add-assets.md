@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 9edc50957f17a3839bae47058f4043853ad19ed8
+source-git-commit: ab3d31051c8de59010bb6dd93258daad70b1ca06
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -149,7 +149,11 @@ Följande bild visar de olika faserna när du importerar resurser till Experienc
 
 #### Förutsättningar {#prerequisites-bulk-ingestion}
 
-Du måste ha information om blobblagring för att kunna ansluta din Experience Manager-instans till ett datalagringsutrymme.
+Det krävs ett externt lagringskonto eller en bucket från Azure eller AWS för att den här funktionen ska kunna användas.
+
+>[!NOTE]
+>
+>Skapa lagringskontobehållaren eller lagringskassetten som privat och acceptera anslutningar endast från auktoriserade begäranden. Ytterligare begränsningar för inkommande nätverksanslutningar stöds dock inte.
 
 #### Konfigurera verktyget Massimport {#configure-bulk-ingestor-tool}
 
