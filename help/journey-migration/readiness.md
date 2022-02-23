@@ -1,9 +1,9 @@
 ---
 title: Beredskapsfas
 description: Lär dig mer om vad du behöver göra för att se till att AEM är redo att flyttas till molnet
-source-git-commit: 2b2b18993d2782f01cc9361e1d558fb0d1a8c530
+source-git-commit: 8988f184b7a2153ff32aa3bdc26283f9a7b414b8
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1975'
 ht-degree: 5%
 
 ---
@@ -114,7 +114,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   <tr>
     <td>Starta arbetsflöden</td>
     <td></td>
-    <td>Ta bort alla Workflow Launcher som utlöser antingen OOTB eller ett anpassat arbetsflöde för DAM-uppdatering från koden.</br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av tjänsten för tillgångsbearbetning. Det finns ett arbetsflöde efter bearbetning av OSGi-konfiguration som kan användas för att utlösa ytterligare anpassade bearbetningssteg.</td>
+    <td>Ta bort alla Workflow Launcher som utlöser antingen OOTB eller ett anpassat arbetsflöde för DAM-uppdatering från koden.</br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av tjänsten för tillgångsbearbetning. För anpassade steg, se <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=en#post-processing-workflows"> Arbetsflöden för efterbearbetning</a> om hur du konfigurerar och konfigurerar efterbearbetningsarbetsflöden.</td>
   </tr>
   <tr>
     <td>Anpassade återgivningssteg</td>
