@@ -5,9 +5,9 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
+source-git-commit: daa26a9e4e3d9f2ce13e37477a512a3e92d52351
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1739'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 ```json
 {
     "completeURI": "(string)",
-    "folderPath": (string)",
+    "folderPath": "(string)",
     "files": [
         {
             "fileName": "(string)",
@@ -107,7 +107,9 @@ En enda begäran kan användas för att initiera överföringar för flera binä
             "uploadToken": "(string)",
             "uploadURIs": [
                 "(string)"
-            ]
+            ],
+            "minPartSize": (number),
+            "maxPartSize": (number)
         }
     ]
 }
@@ -125,15 +127,30 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 
 ### Ladda upp binärt {#upload-binary}
 
-Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges delar klienten upp binärfilen i delar och gör PUT-förfrågningar av varje del till varje URI, i ordning. Använd alla URI:er. Se till att storleken på varje del ligger inom de minimi- och maximistorlekar som anges i initieringssvaret. CDN-kantnoder snabbar upp begärd överföring av binärfiler.
+Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges kan klienten dela upp binärfilen i delar och göra PUT-förfrågningar för varje del till de angivna överförings-URI:erna, i ordning. Om du väljer att dela upp binärfilen i delar måste du följa följande riktlinjer:
+* Varje del, med undantag för den sista, måste ha en storlek som är större än eller lika med `minPartSize`.
+* Varje del måste ha en storlek som är mindre än eller lika med `maxPartSize`.
+* Om binärfilens storlek överskrider `maxPartSize`måste du dela upp binärfilen i delar för att kunna överföra den.
+* Du behöver inte använda alla URI:er.
 
-En möjlig metod för att uppnå detta är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. Anta till exempel att binärfilens totala storlek är 20 000 byte och att antalet överförda URI är 2. Följ sedan dessa steg:
+Om binärfilens storlek är mindre än eller lika med `maxPartSize`kan du istället överföra hela binärfilen till en enda överförings-URI. Om mer än en överförings-URI anges, ska du använda den första och ignorera resten. Du behöver inte använda alla URI:er.
 
-* Beräkna delstorlek genom att dividera den totala storleken med antalet URI:er: 20 000 / 2 = 10 000.
-* POSTENS byteintervall är 0-9 999 för binärfilen till den första URI:n i listan över överförda URI:er.
-* POSTENS byteintervall 10 000 - 19 999 för binärfilen till den andra URI:n i listan över överförda URI:er.
+CDN-kantnoder snabbar upp begärd överföring av binärfiler.
+
+Det enklaste sättet att uppnå detta är att använda värdet för `maxPartSize` som delstorlek. API-kontraktet garanterar att det finns tillräckligt med överförda URI:er för att överföra din binära fil om du använder det här värdet som delstorlek. Det gör du genom att dela binärfilen i delar av storleken `maxPartSize`, med en URI för varje del, i ordning. Den sista delen kan ha en storlek som är mindre än eller lika med `maxPartSize`. Anta till exempel att binärfilens totala storlek är 20 000 byte, `minPartSize` är 5 000 byte, `maxPartSize` är 8 000 byte och antalet överförings-URI är 5. Följ sedan dessa steg:
+* Överför de första 8 000 byten i binärfilen med den första överförings-URI:n.
+* Överför de andra 8 000 byten i binärfilen med den andra överförings-URI:n.
+* Överför de sista 4 000 byten i binärfilen med den tredje överförings-URI:n. Eftersom det här är den sista delen behöver den inte vara större än `minPartSize`.
+* Du behöver inte använda de två sista överförings-URI:erna. Strunta i dem bara.
+
+Ett vanligt misstag är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. API-avtalet garanterar inte att den här metoden fungerar och kan i själva verket resultera i delstorlekar som ligger utanför intervallet mellan `minPartSize` och `maxPartSize`. Detta kan leda till binära överföringsfel.
+
+Det enklaste och säkraste sättet är att helt enkelt använda delar som är lika stora `maxPartSize`.
 
 Om överföringen lyckas svarar servern på varje begäran med en `201` statuskod.
+
+>[!NOTE]
+Mer information om överföringsalgoritmen finns i [officiell funktionsdokumentation](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html#Upload) och [API-dokumentation](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html) i projektet Apache Jackrabbit Oak.
 
 ### fullständig överföring {#complete-upload}
 
@@ -175,6 +192,7 @@ Den nya överföringsmetoden stöds endast för [!DNL Adobe Experience Manager] 
 >[!MORELIKETHIS]
 * [Open-source aem-upload library](https://github.com/adobe/aem-upload).
 * [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem).
+* [Apache Jackrabbit Oak-dokumentation för direkt överföring](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html#Upload).
 
 
 ## Resurshantering och efterbearbetning {#post-processing-workflows}
@@ -259,7 +277,7 @@ Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller 
 * `com.day.cq.dam.core.process.SendDownloadAssetEmailProcess`
 -->
 
-<!-- PPTX source: slide in add-assets.md - overview of direct binary upload section of 
+<!-- PPTX source: slide in add-assets.md - overview of direct binary upload section of
 https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestaccess.aspx?guestaccesstoken=jexDC5ZnepXSt6dTPciH66TzckS1BPEfdaZuSgHugL8%3D&docid=2_1ec37f0bd4cc74354b4f481cd420e07fc&rev=1&e=CdgElS
 -->
 
