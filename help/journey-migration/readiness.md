@@ -1,10 +1,10 @@
 ---
 title: Beredskapsfas
 description: Lär dig mer om vad du behöver göra för att se till att AEM är redo att flyttas till molnet
-source-git-commit: 8988f184b7a2153ff32aa3bdc26283f9a7b414b8
+source-git-commit: d851ca19070232e1d43f5c5e546d4174e2c310a2
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 5%
+source-wordcount: '2078'
+ht-degree: 6%
 
 ---
 
@@ -145,6 +145,11 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
     <td>Säkerhetskopiering och återställning</td>
     <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/backup.html?lang=en">AEM as a Cloud Service säkerhetskopiering och återställning</a></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>Ändringar i autentisering</td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=en">IMS-stöd för AEM as a Cloud Service</td>
+    <td>Om du tidigare har använt SAML 2.0-integrering på både författare och publicering innan du går till Cloud Service är den största förändringen att AEM as a Cloud Service Author bara kan integreras med Adobe IMS. AEM as a Cloud Service Publish-nivå kan dock fortfarande utnyttja SAML eller andra autentiseringsintegreringar. AEM as a Cloud Service har bara stöd för IMS-autentisering för författare, administratörer och utvecklare. IMS-autentiseringen ger inte stöd för externa slutanvändare på kundsajter som webbplatsbesökare.</td>
   </tr>
 </tbody>
 </table>
