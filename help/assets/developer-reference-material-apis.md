@@ -5,9 +5,9 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: daa26a9e4e3d9f2ce13e37477a512a3e92d52351
+source-git-commit: 37a54fdc1c78350cd1c45e6ec4c0674d5b73c0f8
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1732'
 ht-degree: 1%
 
 ---
@@ -127,23 +127,25 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 
 ### Ladda upp binärt {#upload-binary}
 
-Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges kan klienten dela upp binärfilen i delar och göra PUT-förfrågningar för varje del till de angivna överförings-URI:erna, i ordning. Om du väljer att dela upp binärfilen i delar måste du följa följande riktlinjer:
+Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges kan klienten dela upp binärfilen i delar och göra PUT-förfrågningar för varje del till de angivna överförings-URI:erna, i ordning. Om du väljer att dela upp binärfilen i delar ska du följa följande riktlinjer:
+
 * Varje del, med undantag för den sista, måste ha en storlek som är större än eller lika med `minPartSize`.
 * Varje del måste ha en storlek som är mindre än eller lika med `maxPartSize`.
-* Om binärfilens storlek överskrider `maxPartSize`måste du dela upp binärfilen i delar för att kunna överföra den.
+* Om binärfilens storlek överskrider `maxPartSize`, delar upp binärfilen i delar för att ladda upp den.
 * Du behöver inte använda alla URI:er.
 
 Om binärfilens storlek är mindre än eller lika med `maxPartSize`kan du istället överföra hela binärfilen till en enda överförings-URI. Om mer än en överförings-URI anges, ska du använda den första och ignorera resten. Du behöver inte använda alla URI:er.
 
 CDN-kantnoder snabbar upp begärd överföring av binärfiler.
 
-Det enklaste sättet att uppnå detta är att använda värdet för `maxPartSize` som delstorlek. API-kontraktet garanterar att det finns tillräckligt med överförda URI:er för att överföra din binära fil om du använder det här värdet som delstorlek. Det gör du genom att dela binärfilen i delar av storleken `maxPartSize`, med en URI för varje del, i ordning. Den sista delen kan ha en storlek som är mindre än eller lika med `maxPartSize`. Anta till exempel att binärfilens totala storlek är 20 000 byte, `minPartSize` är 5 000 byte, `maxPartSize` är 8 000 byte och antalet överförings-URI är 5. Följ sedan dessa steg:
+Det enklaste sättet att uppnå detta är att använda värdet för `maxPartSize` som delstorlek. API-kontraktet garanterar att det finns tillräckligt med överförda URI:er för att överföra din binära fil om du använder det här värdet som delstorlek. Det gör du genom att dela binärfilen i delar av storleken `maxPartSize`, med en URI för varje del, i ordning. Den sista delen kan ha en storlek som är mindre än eller lika med `maxPartSize`. Anta till exempel att binärfilens totala storlek är 20 000 byte, `minPartSize` är 5 000 byte, `maxPartSize` är 8 000 byte och antalet överförings-URI är 5. Utför följande steg:
+
 * Överför de första 8 000 byten i binärfilen med den första överförings-URI:n.
 * Överför de andra 8 000 byten i binärfilen med den andra överförings-URI:n.
 * Överför de sista 4 000 byten i binärfilen med den tredje överförings-URI:n. Eftersom det här är den sista delen behöver den inte vara större än `minPartSize`.
-* Du behöver inte använda de två sista överförings-URI:erna. Strunta i dem bara.
+* Du behöver inte använda de två sista överförings-URI:erna. Du kan ignorera dem.
 
-Ett vanligt misstag är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. API-avtalet garanterar inte att den här metoden fungerar och kan i själva verket resultera i delstorlekar som ligger utanför intervallet mellan `minPartSize` och `maxPartSize`. Detta kan leda till binära överföringsfel.
+Ett vanligt fel är att beräkna delstorleken baserat på antalet överförings-URI:er som tillhandahålls av API:t. API-avtalet garanterar inte att den här metoden fungerar och kan i själva verket resultera i delstorlekar som ligger utanför intervallet mellan `minPartSize` och `maxPartSize`. Detta kan leda till binära överföringsfel.
 
 Det enklaste och säkraste sättet är att helt enkelt använda delar som är lika stora `maxPartSize`.
 
